@@ -4,6 +4,42 @@ Chronologisches Protokoll der Arbeitssitzungen mit Entscheidungen, Ergebnissen u
 
 ---
 
+## 2026-04-01 (Session 10): Repository audit, English translation, Haiku vs Sonnet experiment
+
+**Branch:** `main`
+
+### What happened
+
+1. **Repository audit against paper:** Systematic comparison of all claims in the paper (Google Docs) against the actual repository state. Found and fixed: stale merge-bug data never committed (210->291), wrong provider name (Elicit->correct 4 providers), unbacked causal claims ("primarily paywalls" with no OA analysis), inconsistent terminology ("LLM-Pipeline" vs paper's "workflow"/"distillation pipeline").
+
+2. **All documentation translated to English:** CLAUDE.md (rewritten with Core Argument + Key Terminology sections), status.md, project.md, methods-and-pipeline.md, paper-integrity.md, README.md, quickstart.md. Root README.md also updated.
+
+3. **Paper text verified against code:** Discovered that the paper falsely claimed Stage 1 "splits the document into semantic sections" -- the code (`distill_knowledge.py`) processes the full text as a whole (up to 45k chars). Corrected passage provided to paper author.
+
+4. **Haiku 4.5 vs Sonnet 4.6 experiment:** Ran 10K assessment with claude-sonnet-4-6 (~$12). Same prompt, same data, same human baseline. Result: Sonnet does NOT close the gap -- it shifts it. Include rate rises to 82.5% (vs Haiku 71.5%, Human 46%). Gender kappa drops sharply (0.407->0.284). Feministisch improves to 0.819.
+
+5. **Gender-Feministisch split discovered:** Sonnet systematically separates "Feministisch" from "Gender". Papers like "Data Feminism for AI" get Feministisch=Yes, Gender=No. Sonnet follows the category definition literally ("explicit gender focus"), while experts read feminist theory as inherently gender-relevant. Of 21 cases where the models disagree on Gender, Haiku matches Human in 20/21. This is an operationalization gap in the category definition, not a model quality issue.
+
+### Key learnings
+
+- **Divergence is structural, not performance-based:** A more capable model shifts the divergence pattern rather than closing it. This strengthens the paper's core argument.
+- **Category definitions matter more than model quality:** The Gender definition ("explicit gender focus") excludes what experts consider relevant (feminist theory treating gender implicitly). The infrastructure makes this visible.
+- **Pipeline description must match code:** The paper claimed sectionization that doesn't exist in the code. Every factual claim needs verification against the implementation.
+- **Context Rot motivates the pipeline, not sectionization within it:** The distillation pipeline exists because full texts are too long, but it doesn't address this through section-splitting.
+
+### Commits
+
+| Commit | Description |
+|--------|-------------|
+| `595a94f` | Merge-bug correction published + all frontend numbers updated |
+| `783b530` | Remaining fallbacks, pattern percentages, vault hints |
+| `b940cc4` | Deep Research providers corrected (Elicit -> correct 4) |
+| `3567022` | All docs translated to English, terminology aligned with paper |
+| `125c6a8` | Root README.md to English, delete stale new-paper.md |
+| `e5169fa` | Haiku vs Sonnet experiment results |
+
+---
+
 ## 2026-03-27 (Session 9): Human Assessment abgeschlossen, Merge-Bug behoben
 
 **Branch:** `main`

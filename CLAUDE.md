@@ -56,6 +56,19 @@ The project has three layers:
 | Category Kappas | 0.39--0.82 (Soziale_Arbeit highest, Gender lowest) |
 | Divergence patterns | Semantic Expansion (52%), Implicit Field Membership (30%), Keyword Inclusion (18%) |
 
+### Model Comparison: Haiku 4.5 vs. Sonnet 4.6 (2026-04-01)
+
+Controlled experiment: same prompt, same data, same human baseline, different model (~$12).
+
+| Metric | Haiku 4.5 | Sonnet 4.6 | Human |
+|--------|-----------|------------|-------|
+| Include Rate | 71.5% | 82.5% | 46.0% |
+| Decision Kappa | 0.056 | 0.098 | -- |
+| Gender Kappa | 0.407 | **0.284** | -- |
+| Feministisch Kappa | 0.753 | **0.819** | -- |
+
+Key finding: Sonnet separates "Feministisch" from "Gender" -- it classifies feminist papers (e.g. "Data Feminism for AI") as Feministisch=Yes, Gender=No. The divergence is an operationalization gap in the Gender category definition, not a model quality issue. Details: `knowledge/status.md`.
+
 ### Assessment Tracks
 
 | Track | Method | Schema | Status |
@@ -273,6 +286,7 @@ Each piece of information has exactly ONE canonical location. Other files refere
 | `human_yes_rate` / `agent_yes_rate` | Scale 0-100 (e.g. 32.7 = 32.7%), NOT 0-1 |
 | Vault divergences | 111 files in vault but 142 disagreements in data (vault regeneration pending) |
 | Knowledge doc linking | 236 linked in JSON but 249 on disk (title matching gap in generator) |
+| Gender category definition | Definition says "explicit gender focus" but experts read feminist theory as gender-relevant. Sonnet follows definition literally, Haiku is looser. Consider broadening definition. |
 
 ---
 
@@ -309,6 +323,7 @@ Each piece of information has exactly ONE canonical location. Other files refere
 9. **Knowledge Document tab** -- LLM-extracted sections (core finding, methodology, arguments) browseable in paper detail
 10. **Curated Markdown export** -- Filtered knowledge documents as ZIP with system prompt for LLM reuse
 11. **Obsidian Vault v2** -- 505 interlinked Markdown files with LLM-extracted concepts
+12. **Controlled model comparison** -- Haiku 4.5 vs. Sonnet 4.6 on same data/prompt. Reveals that a more capable model shifts divergence rather than closing it (Gender-Feministisch split)
 
 ---
 

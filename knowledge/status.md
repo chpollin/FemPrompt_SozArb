@@ -123,7 +123,35 @@ Controlled experiment: same prompt, same data, same human baseline, different mo
 | Gender | 0.407 | **0.284** | **-0.123** |
 | Fairness | 0.388 | 0.378 | -0.010 |
 
-**Key finding:** A more capable model does not close the gap -- it shifts it. Sonnet includes even more aggressively (82.5% vs. 71.5%), widening the asymmetry with expert judgment (46%). Gender kappa drops sharply (0.407 -> 0.284), while Feministisch improves to near-perfect agreement (0.819). The divergence is structural-epistemic, not performance-based. The infrastructure is necessary regardless of model quality.
+**When Haiku and Sonnet disagree, who matches Human?**
+
+On decision level: 36 papers differ. Sonnet matches Human in 20 cases, Haiku in 16. Sonnet is slightly better overall.
+
+On category level (where they disagree on a category, who matches the expert?):
+
+| Category | Differ | Haiku=Human | Sonnet=Human |
+|----------|--------|-------------|--------------|
+| Gender | 21 | **20** | 1 |
+| Fairness | 33 | 17 | 16 |
+| AI_Literacies | 30 | 12 | **18** |
+| Feministisch | 15 | 4 | **11** |
+| Bias_Ungleichheit | 11 | 6 | 5 |
+
+**Gender-Feministisch Split:** The sharpest finding. Sonnet systematically separates "Feministisch" from "Gender": it classifies papers like "Data Feminism for AI" (D'Ignazio & Klein), "Feminist AI: Critical Perspectives", and "Intersectional Fairness in ML" as Feministisch=Yes but Gender=No. It follows the category definition literally ("explicit gender focus"), while experts read feminist theory as inherently gender-relevant. Sonnet sees Gender in only 22.7% of papers (vs. Haiku 31.6%, Human 61.1%).
+
+This is not a performance gap but an operationalization gap: the category definition of Gender ("explicit gender focus, gender perspective, gender bias analysis") excludes feminist theory that treats gender implicitly. Sonnet follows this definition more strictly than Haiku, which accidentally lands closer to the expert judgment through less analytical precision.
+
+Of the 91 papers where Human says Gender=Yes but Sonnet says No:
+- **71 cases:** Both LLMs say No -- experts see gender relevance that no LLM recognizes (interpretive co-reasoning with domain knowledge)
+- **20 cases:** Haiku says Yes, Sonnet says No -- Haiku matches experts in 20/21 cases. These are mostly explicitly feminist papers where Sonnet correctly identifies the feminist framework but refuses to infer gender relevance from it.
+
+**Key findings:**
+
+1. A more capable model does not close the gap -- it shifts it. Sonnet includes even more aggressively (82.5% vs. 71.5%), widening the asymmetry with expert judgment (46%).
+2. Gender kappa drops sharply (0.407 -> 0.284) because Sonnet interprets category definitions more strictly, not because it understands less.
+3. Feministisch improves to near-perfect (0.753 -> 0.819) -- Sonnet is better at recognizing feminist frameworks.
+4. The divergence is structural-epistemic, not performance-based. The infrastructure is necessary regardless of model quality.
+5. The Gender category definition needs revision if it should capture what experts mean: "Gender perspective, including implicit gender relevance through feminist theory, intersectional analysis, or power-structural approaches."
 
 ### M7: Benchmark Results Documentation -- COMPLETED
 
