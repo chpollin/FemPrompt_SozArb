@@ -9,7 +9,7 @@ tags: [pipeline, identifikation]
 
 ## Methode
 
-Deep Research mit 4 Anbietern (Perplexity, Elicit, Consensus, Google Scholar).
+Deep Research mit 4 Anbietern (OpenAI, Google, Perplexity, Anthropic).
 Manuelle Ergaenzung ueber Schneeballverfahren und Expert:innen-Empfehlungen.
 
 ## Ergebnis
