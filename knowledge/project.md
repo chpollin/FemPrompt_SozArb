@@ -293,7 +293,7 @@ Verantwortung bedeutet die Faehigkeit zu antworten und Beziehungen zu pflegen. I
 
 ### Drei systematische Einschraenkungen des Benchmarks
 
-1. **Benchmark-Basis:** 210 von 326 Papers -- 116 ohne vollstaendiges Human Assessment bleiben aussen vor
+1. **Benchmark-Basis:** 291 von 326 Papers mit beiden Assessments (303 Human, 326 LLM, 291 Overlap per Zotero_Key)
 2. **Overlap-Analyse:** Nur fuer Stichprobe von 34 Papers belegbar (93.8% Unikate)
 3. **PDF-Beschaffungsrate:** 79% erzeugt systematische Unterrepraesentation paywall-gesicherter Literatur
 

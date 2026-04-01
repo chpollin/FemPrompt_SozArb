@@ -24,10 +24,7 @@ Zentrale Dokumentation fuer den systematischen Literature Review zu AI Literacy 
 
 ## Paper
 
-| Datei | Inhalt |
-|-------|--------|
-| [paper/paper-draft.md](paper/paper-draft.md) | **Paper-Entwurf** (Forum Wissenschaft, 18.000 Zeichen) -- iterativ im Repo bearbeitet |
-| [paper/Referenzliteratur-Benchmark-Design.md](paper/Referenzliteratur-Benchmark-Design.md) | Detailanalyse der Referenzstudien (Woelfle, Hanegraaf, Sandner) |
+Das Paper wird auf Google Docs bearbeitet (Forum Wissenschaft 2/2026, Deadline 4. Mai 2026).
 
 ## Externe Ressourcen
 
@@ -41,4 +38,4 @@ Zentrale Dokumentation fuer den systematischen Literature Review zu AI Literacy 
 
 ---
 
-*Aktualisiert: 2026-03-19*
+*Aktualisiert: 2026-04-01*

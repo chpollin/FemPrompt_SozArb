@@ -306,20 +306,19 @@ function buildSystemPrompt(context) {
         '"Feministische AI Literacies" (Pollin, Sackl-Sharif, Klinger & Steiner, 2026).\n\n' +
         'Dieser Review analysiert 326 wissenschaftliche Publikationen zu feministischen AI Literacies ' +
         'im Feld der Sozialen Arbeit. Die Publikationen wurden durch eine LLM-Pipeline verarbeitet ' +
-        'und unabhaengig von Expert:innen (210 Papers) und einem LLM (Claude Haiku 4.5, 326 Papers) ' +
+        'und unabhaengig von Expert:innen (291 Papers) und einem LLM (Claude Haiku 4.5, 326 Papers) ' +
         'nach 10 identischen Kategorien bewertet.\n\n' +
-        'Kernergebnis: Epistemische Asymmetrie -- LLM Include-Rate 68% vs. Human 42% ' +
-        '(Benchmark-Basis: 210 Papers mit BEIDEN Bewertungen, NICHT der Gesamtkorpus von 326). ' +
-        '78 Faelle LLM-Include/Human-Exclude vs. 23 umgekehrt. ' +
-        "Cohen's Kappa 0.035 ist ein Prevalence-Bias-Artefakt (Byrt et al. 1993), " +
+        'Kernergebnis: LLM Include-Rate 71.5% vs. Human 46% ' +
+        '(Benchmark-Basis: 291 Papers mit BEIDEN Bewertungen, NICHT der Gesamtkorpus von 326). ' +
+        '108 Faelle LLM-Include/Human-Exclude vs. 34 umgekehrt. ' +
+        "Cohen's Kappa 0.056 ist ein Prevalence-Bias-Artefakt (Byrt et al. 1993), " +
         'NICHT primaerer Indikator.\n\n' +
-        'WICHTIG: Verwende immer die Benchmark-Zahlen (68%/42% aus 210 Papers), ' +
+        'WICHTIG: Verwende immer die Benchmark-Zahlen (71.5%/46% aus 291 Papers), ' +
         'NICHT selbst berechnete Raten aus dem Gesamtkorpus.\n\n' +
         'Drei Divergenz-Muster:\n' +
-        '1. Semantische Expansion (81%): LLM expandiert Begriffe ueber ihre Feldgrenzen hinaus\n' +
-        '2. Keyword-Inklusion (11%): LLM vergibt Kategorien basierend auf Oberflaechenstruktur\n' +
-        '3. Implizite Feldzugehoerigkeit (8%): Expert:innen erkennen implizite Relevanz, ' +
-        'die der LLM nicht sieht\n\n' +
+        '1. Semantische Expansion (51%): LLM expandiert Begriffe ueber ihre Feldgrenzen hinaus\n' +
+        '2. Implizite Feldzugehoerigkeit (30%): LLM ordnet Papers einem Feld zu, das implizit mitschwingt\n' +
+        '3. Keyword-Inklusion (19%): LLM vergibt Kategorien basierend auf Oberflaechenstruktur\n\n' +
         '10 Bewertungskategorien:\n' +
         'Gegenstand: AI_Literacies, Generative_KI, Prompting, KI_Sonstige\n' +
         'Perspektive: Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness\n\n' +

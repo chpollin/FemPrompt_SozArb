@@ -190,7 +190,7 @@ Das Benchmark vergleicht Human- und LLM-Assessment und adaptiert den Ansatz von 
 
 **Erwartungshorizont fuer dieses Projekt:** Die 10-Kategorien-Aufgabe liegt auf der Komplexitaetsskala zwischen AMSTAR und PRECIS-2 (kontextabhaengige Zuordnung, nicht Checklisten-Items). Erwartbare Kappa-Werte: Human-Human 0.5-0.8 (kategorienabhaengig), Human-LLM 0.3-0.7.
 
-**Primaere Metriken:** Konfusionsmatrix, Basisraten-Vergleich (Ja-Raten pro Kategorie und Pfad), Disagreement-Analyse. Cohen's Kappa wird als Vergleichsanker zur Referenzliteratur berichtet, ist aber durch den Prevalence-Bias-Paradox eingeschraenkt (Byrt et al. 1993): Bei 26 Prozentpunkten Basisraten-Differenz (LLM 68% vs. Human 42% Include) kollabiert Kappa auf 0,035, unabhaengig von der Bewertungsqualitaet. Details: `knowledge/status.md` M6-Interpretation (Prevalence-Bias-Analyse)
+**Primaere Metriken:** Konfusionsmatrix, Basisraten-Vergleich (Ja-Raten pro Kategorie und Pfad), Disagreement-Analyse. Cohen's Kappa wird als Vergleichsanker zur Referenzliteratur berichtet. Basis: 291 Papers mit beiden Assessments, Kappa 0,056 ("slight"), Kategorie-Kappas 0,39--0,82. Details: `knowledge/status.md` M6.
 
 **Benchmark-Scripts:**
 
@@ -198,9 +198,9 @@ Das Benchmark vergleicht Human- und LLM-Assessment und adaptiert den Ansatz von 
 |--------|----------|
 | `benchmark/scripts/generate_papers_csv.py` | Zotero JSON -> papers_full.csv (326 Zeilen) |
 | `benchmark/scripts/run_llm_assessment.py` | Benchmark-Assessment (10K, 326/326) |
-| `benchmark/scripts/merge_assessments.py` | Human + LLM zusammenfuehren (304 Papers, 210 mit Decision) |
-| `benchmark/scripts/calculate_agreement.py` | Cohen's Kappa berechnen |
-| `benchmark/scripts/analyze_disagreements.py` | Qualitative Analyse (111 Disagreements) |
+| `benchmark/scripts/merge_assessments.py` | Human + LLM zusammenfuehren (per Zotero_Key, 291 Overlap) |
+| `benchmark/scripts/calculate_agreement.py` | Cohen's Kappa + Konfusionsmatrix berechnen |
+| `benchmark/scripts/analyze_disagreements.py` | Disagreement-Identifikation (142 Faelle) |
 
 Ergebnisse: siehe `status.md`, Abschnitt M6
 

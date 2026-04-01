@@ -1,10 +1,9 @@
-# Status (2026-03-24)
+# Status (2026-03-27)
 
-## Aktueller Fokus: M13 (Wissensnetz-Redesign) + Kategorien-Explorer abgeschlossen
+## Aktueller Fokus: Human Assessment abgeschlossen, Benchmark korrigiert
 
-M1-M13 abgeschlossen. Evidence Companion mit 4 Views (Wissens-Chat, Wissensnetz, Kategorien, Korpus) + 3 Unterseiten (About, Methoden, Hilfe).
-Bewertungsvergleich wurde durch Kategorien-Explorer ersetzt. Wissensnetz hat Cluster-Layout + Divergenz-Modus.
-Naechster Fokus: M8 Paper finalisieren (Deadline 4. Mai).
+Human Assessment fertig (303/303). Kritischer Merge-Bug in benchmark/scripts/merge_assessments.py gefunden und behoben (matchte per sequentieller ID statt Zotero_Key). Benchmark komplett neu berechnet mit korrekter Paarung.
+Naechster Fokus: M8 Paper finalisieren (Deadline 4. Mai). Divergenz-Klassifikation muss mit neuen Disagreements neu laufen.
 
 ---
 
@@ -56,54 +55,43 @@ Naechster Fokus: M8 Paper finalisieren (Deadline 4. Mai).
 - [x] Ergebnisse in `benchmark/results/` dokumentiert
 - Commit: `07c4ac6`
 
-**Kernergebnisse (primaere Metriken: Konfusionsmatrix + Basisraten):**
+**Kernergebnisse (Konfusionsmatrix + Basisraten):**
 
-| Metrik | Wert | Interpretation |
-|--------|------|----------------|
-| Papers mit beiden Assessments | 210 (mit Decision) | Benchmark-Basis |
-| **LLM Include-Rate** | **68 % (143/210)** | vs. Human 42 % |
-| **Human Include-Rate** | **42 % (88/210)** | Differenz: 26 Prozentpunkte |
-| Disagreements gesamt | 111 | 78 LLM-Include/Human-Exclude |
-| Cohen's Kappa (Vergleichsanker) | 0,035 | Eingeschraenkte Aussagekraft (Prevalence-Bias-Paradox) |
+| Metrik | Wert |
+|--------|------|
+| Papers mit beiden Assessments | 291 (von 303 Human, 326 LLM) |
+| **Human Include-Rate** | **46,0 % (134/291)** |
+| **LLM Include-Rate** | **71,5 % (208/291)** |
+| Differenz | 25,5 Prozentpunkte |
+| Disagreements gesamt | 142 |
+| Cohen's Kappa | 0,056 ("slight") |
 
 **Konfusionsmatrix:**
 
 ```
                     LLM Include    LLM Exclude
-Human Include           65              23
-Human Exclude           78              34
+Human Include          100              34
+Human Exclude          108              49
 ```
 
-**Kategoriespezifische Divergenz (Basisraten + Kappa als Vergleichswert):**
+**Kategorie-Agreement (korrekte Zotero_Key-Paarung):**
 
-| Kategorie | Human Ja | LLM Ja | Differenz | Richtung | Kappa |
-|-----------|----------|--------|-----------|----------|-------|
-| Gender | 63,2 % | 36,2 % | -27pp | LLM unterschaetzt | -0,098 |
-| Fairness | 52,5 % | 73,5 % | +21pp | LLM ueberschaetzt | -0,163 |
-| Soziale_Arbeit | 24,4 % | 7,3 % | -17pp | LLM unterschaetzt | -0,083 |
-| KI_Sonstige | 66,3 % | 47,2 % | -19pp | LLM unterschaetzt | +0,048 |
-| Feministisch | 22,2 % | 29,6 % | +7pp | Aehnlich | +0,075 |
-| Bias_Ungleichheit | 79,8 % | 76,7 % | -3pp | Aehnlich | -0,097 |
-| Diversitaet | -- | -- | -- | -- | +0,024 |
-| Prompting | -- | -- | -- | -- | -0,066 |
-| AI_Literacies | -- | -- | -- | -- | -0,018 |
-| Generative_KI | -- | -- | -- | -- | -0,004 |
+| Kategorie | Agreement | Kappa | Interpretation | Human Ja | LLM Ja |
+|-----------|-----------|-------|----------------|----------|--------|
+| Soziale_Arbeit | 93,2% | 0,816 | almost perfect | 23,8% | 24,7% |
+| Feministisch | 91,0% | 0,753 | substantial | 21,4% | 26,1% |
+| Prompting | 80,1% | 0,533 | moderate | 36,9% | 22,0% |
+| Bias_Ungleichheit | 79,5% | 0,439 | moderate | 78,6% | 73,5% |
+| KI_Sonstige | 77,0% | 0,535 | moderate | 63,8% | 51,9% |
+| AI_Literacies | 76,0% | 0,488 | moderate | 26,1% | 43,3% |
+| Generative_KI | 75,8% | 0,538 | moderate | 57,2% | 38,1% |
+| Diversitaet | 70,1% | 0,432 | moderate | 62,4% | 39,3% |
+| Fairness | 69,2% | 0,388 | fair | 49,1% | 63,7% |
+| Gender | 68,0% | 0,407 | moderate | 61,1% | 31,6% |
 
-**Interpretation:** Die Konfusionsmatrix zeigt das asymmetrische Divergenzmuster: 78 Faelle LLM-Include/Human-Exclude gegenueber nur 23 in umgekehrter Richtung. Die Basisraten-Differenz (26 Prozentpunkte) verweist auf fundamental verschiedene Operationsweisen. Cohen's Kappa (0,035) ist primaer ein Artefakt des Prevalence-Bias-Paradoxes (Byrt et al. 1993): Bei stark unterschiedlichen Basisraten kollabiert Kappa, unabhaengig von der Bewertungsqualitaet. Die inhaltliche Analyse stuetzt sich daher auf Konfusionsmatrix, Basisraten und die qualitative Disagreement-Analyse.
+**Hinweis zum Merge-Bug (behoben 2026-03-27):** Die vorherigen Benchmark-Ergebnisse (Kappa 0,035, Konfusionsmatrix 65/23/78/34) basierten auf einem fehlerhaften Merge per sequentieller ID statt Zotero_Key. 301 von 304 Paarungen verglichen verschiedene Papers. Die Kategorie-Kappas waren teils negativ -- das war Rauschen, keine inhaltliche Divergenz. Mit korrekter Paarung liegen alle Kategorie-Kappas im Bereich 0,39--0,82.
 
-**Prevalence-Bias-Analyse (Byrt et al. 1993, Feinstein & Cicchetti 1990):**
-
-Cohen's Kappa ist durch den Prevalence-Bias-Paradox eingeschraenkt: Bei 26 Prozentpunkten Basisraten-Differenz (LLM 68% vs. Human 42% Include) kollabiert Kappa auf 0,035. Der Wert reflektiert primaer die Schwellenwert-Differenz, nicht die inhaltliche Uebereinstimmung. Die Referenzliteratur (Woelfle, Hanegraaf, Sandner) verwendet Kappa fuer Human-Human-Vergleiche, wo Basisraten aehnlich sind. Fuer Human-LLM-Vergleiche mit systematischer Basisraten-Divergenz ist Kappa als primaerer Indikator irrefuehrend. Primaere Metriken sind daher Konfusionsmatrix und Basisraten.
-
-**Divergenz-Muster (qualitative Analyse, 111 Disagreements):**
-
-| Muster | Anteil | Beispiel |
-|--------|--------|----------|
-| Semantische Expansion | 81% (90 Faelle) | van Toorn et al. (2024): LLM weist "Fairness = Ja" zu, obwohl algorithmische Fairness-Metriken nicht thematisiert werden. LLM expandiert "Fairness" auf alle Gleichbehandlungsfragen. |
-| Keyword-Inklusion | 11% (12 Faelle) | Meilvang & Dahler (2024): LLM vergibt 5 positive Kategorien basierend auf thematischer Oberflaechenstruktur. Expert:innen schliessen aus: Kontext ist Verwaltungsinformatik, nicht sozialarbeiterische Praxis. |
-| Implizite Feldzugehoerigkeit | 8% (9 Faelle) | Pinski & Benlian (2024): Expert:innen klassifizieren "Gender = Ja", weil AI Literacy Frameworks historisch genderblind konstruiert sind. LLM liest "Gender" an expliziten Begriffsmarken fest. |
-
-**Epistemische Marker:** LLM-Unterstuetzung ist am hoechsten, wo Kategorien durch explizite Fachterminologie abgegrenzt sind ("Feministisch", kappa = +0,075); am niedrigsten, wo semantische Expansion verhindert werden muss ("Fairness", kappa = -0,163) oder implizites Feldwissen erforderlich ist ("Gender", kappa = -0,098).
+**Divergenz-Muster:** 142 Disagreements identifiziert (108 LLM-Include/Human-Exclude, 34 umgekehrt). Die qualitative Klassifikation in Muster (Semantische Expansion, Keyword-Inklusion, Implizite Feldzugehoerigkeit) muss mit den korrekt gepaarten Disagreements neu durchgefuehrt werden.
 
 ### M7: Benchmark-Ergebnisse dokumentieren -- ABGESCHLOSSEN
 
@@ -253,18 +241,19 @@ Die HA-CSV wurde aus einem aelteren Zotero-Snapshot generiert. Seitdem hat sich 
 
 | Track | Methode | Schema | Status |
 |-------|---------|--------|--------|
-| **Human** | Google Sheets | 10 binaere Kategorien | 210/326 mit Decision |
+| **Human** | Google Sheets | 10 binaere Kategorien | **Fertig (303/303, 142 Include, 161 Exclude)** |
 | **LLM (5D)** | Claude Haiku 4.5 | 5 Dimensionen (0-3) | Fertig (325/325) |
 | **LLM (10K)** | Claude Haiku 4.5 | 10 binaere Kategorien | **Fertig (326/326)** |
 
-### Human Assessment
+### Human Assessment -- ABGESCHLOSSEN
 
 | Aspekt | Stand |
 |--------|-------|
-| Papers in CSV | 305 (292 auch in aktuellem Zotero, 13 nur in HA) |
-| Decisions getroffen | 210/326 mit Decision |
+| Papers in CSV | 303 (1 defekte Zeile entfernt) |
+| Decisions getroffen | 303/303 (142 Include, 161 Exclude) |
 | Schema | 10 binaere Kategorien (Technik + Sozial) |
-| Bearbeiter | Susi Sackl-Sharif (aktiv), Sabine Klinger (spaeter) |
+| Bearbeiter | Susi Sackl-Sharif, Christopher Pollin (27 Korrekturen/Ergaenzungen) |
+| Korrekturen | 27 Zeilen: 16 Unclear aufgeloest, 9 ohne Decision ergaenzt, 1 Fehlerkorrektur, 1 Kategorie-Update |
 
 ### LLM Assessment (5 Dimensionen - abgeschlossen)
 
@@ -412,4 +401,4 @@ Die RIS-Dateien in `deep-research/restored/` decken 34 von 254 Deep-Research-Pap
 
 ---
 
-*Aktualisiert: 2026-03-24*
+*Aktualisiert: 2026-03-27*

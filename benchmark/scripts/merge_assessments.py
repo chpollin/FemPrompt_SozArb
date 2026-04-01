@@ -52,7 +52,7 @@ def normalize_decision(value: str) -> str:
 
 def load_assessment(filepath: str, prefix: str) -> dict:
     """
-    Lädt Assessment CSV und gibt Dictionary mit ID als Key zurück.
+    Lädt Assessment CSV und gibt Dictionary mit Zotero_Key als Key zurück.
     Prefix wird den Spalten vorangestellt (human_ oder agent_).
     """
     data = {}
@@ -61,11 +61,12 @@ def load_assessment(filepath: str, prefix: str) -> dict:
         reader = csv.DictReader(f)
 
         for row in reader:
-            # ID extrahieren (verschiedene mögliche Spaltennamen)
-            paper_id = row.get('ID') or row.get('id') or row.get('Zotero_Key') or row.get('zotero_key')
+            # Merge-Key ist IMMER Zotero_Key (nicht sequentielle ID)
+            paper_id = row.get('Zotero_Key') or row.get('zotero_key')
 
-            if not paper_id:
+            if not paper_id or not paper_id.strip():
                 continue
+            paper_id = paper_id.strip()
 
             entry = {
                 f'{prefix}_id': paper_id,
@@ -73,9 +74,15 @@ def load_assessment(filepath: str, prefix: str) -> dict:
                 f'{prefix}_author_year': row.get('Author_Year', ''),
             }
 
-            # Kategorien mit Prefix
+            # Kategorien mit Prefix (handle column name variants)
             for cat in CATEGORIES:
-                entry[f'{prefix}_{cat}'] = normalize_value(row.get(cat, ''))
+                # Try exact match first, then common variants
+                val = row.get(cat, '')
+                if not val and cat == 'Diversitaet':
+                    val = row.get('Diversitaet / Intersektionalität', '')
+                    if not val:
+                        val = row.get('Diversitaet / Intersektionalitaet', '')
+                entry[f'{prefix}_{cat}'] = normalize_value(val)
 
             # Decision
             entry[f'{prefix}_decision'] = normalize_decision(row.get('Decision', ''))
@@ -183,10 +190,10 @@ def main():
     human_only = sum(1 for r in merged if r['has_human'] == 'Ja' and r['has_agent'] == 'Nein')
     agent_only = sum(1 for r in merged if r['has_human'] == 'Nein' and r['has_agent'] == 'Ja')
 
-    print(f"  → {len(merged)} Papers total")
-    print(f"  → {both_present} mit beiden Assessments")
-    print(f"  → {human_only} nur Human")
-    print(f"  → {agent_only} nur LLM")
+    print(f"  -> {len(merged)} Papers total")
+    print(f"  -> {both_present} mit beiden Assessments")
+    print(f"  -> {human_only} nur Human")
+    print(f"  -> {agent_only} nur LLM")
 
     # Output schreiben
     output_path = Path(args.output)

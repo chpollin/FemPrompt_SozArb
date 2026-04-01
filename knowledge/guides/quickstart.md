@@ -74,10 +74,10 @@ Erzeugt `docs/data/research_vault_v2.json` fuer die Single-Page Application.
 
 | Track | Methode | Schema | Status |
 |-------|---------|--------|--------|
-| **Human** | Google Sheets -> CSV Export | 10 binaere Kategorien | 210/326 mit Decision |
+| **Human** | Google Sheets -> CSV Export | 10 binaere Kategorien | Fertig (303/303, 142 Include, 161 Exclude) |
 | **LLM** | Claude Haiku 4.5 | 10 binaere Kategorien | 326/326 (100%) |
 
-Benchmark-Ergebnisse: Konfusionsmatrix (65/23/78/34), Basisraten (LLM 68% vs. Human 42% Include), Cohen's Kappa = 0.035 (Prevalence-Bias-Artefakt).
+Benchmark-Ergebnisse (291 Papers, Zotero_Key-Merge): Konfusionsmatrix (100/34/108/49), Basisraten (LLM 71,5% vs. Human 46,0% Include), Cohen's Kappa = 0,056.
 
 ---
 

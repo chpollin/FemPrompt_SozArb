@@ -4,6 +4,58 @@ Chronologisches Protokoll der Arbeitssitzungen mit Entscheidungen, Ergebnissen u
 
 ---
 
+## 2026-03-27 (Session 9): Human Assessment abgeschlossen, Merge-Bug behoben
+
+**Branch:** `main`
+
+### Was passiert ist
+
+1. **Human Assessment abgeschlossen:** Google Spreadsheet importiert (304 Zeilen). 27 Korrekturen/Ergaenzungen angewendet: 5 Christopher-Papers reviewed (Chisca, Garg, Gohar, Hayati, He), 16 Unclear aufgeloest (13 Include, 3 Exclude), 4 leere Decisions ergaenzt, 1 Fehlerkorrektur (Kaneko war faelschlich Exclude), 1 Kategorie-Update (Gohar: Feministisch Nein->Ja wg. Crenshaw). 1 defekte Zeile entfernt. Ergebnis: 303 Papers, 142 Include, 161 Exclude, 0 Unclear.
+
+2. **Kritischen Merge-Bug entdeckt und behoben:** `merge_assessments.py` matchte Human- und LLM-Assessment per sequentieller ID statt Zotero_Key. Die beiden CSVs haben komplett unterschiedliche ID-Reihenfolgen (301 von 304 IDs zeigten auf verschiedene Papers). Alle bisherigen Benchmark-Ergebnisse (Kappa 0,035, Konfusionsmatrix 65/23/78/34, 111 Divergenzen) basierten auf falschen Paarungen. Fix: Zeile 65 in merge_assessments.py auf Zotero_Key umgestellt.
+
+3. **Benchmark komplett neu berechnet:** 291 Papers mit beiden Assessments (korrekt per Zotero_Key gepaart). Konfusionsmatrix: 100/34/108/49. Kappa: 0,056. Kategorie-Kappas jetzt alle 0,39--0,82 (vorher teils negativ -- das war Rauschen). 142 Disagreements (108 LLM-Inc/Human-Exc, 34 umgekehrt).
+
+4. **Divergenz-Klassifikation mit Sonnet 4.6:** Alten Divergenz-Cache invalidiert (.vault_cache/divergences/). 142 Faelle neu klassifiziert mit Claude Sonnet 4.6 (statt Haiku 4.5). Ergebnis: Semantische Expansion 51% (73), Implizite Feldzugehoerigkeit 30% (42), Keyword-Inklusion 19% (27). Sonnet differenziert deutlich staerker als Haiku -- weniger pauschale "Semantische Expansion", mehr Erkennung von implizitem Feldwissen.
+
+5. **JSON-Daten regeneriert:** research_vault_v2.json und promptotyping_v2.json mit korrekten Metriken und Divergenz-Mustern neu generiert. Alle Wissensdokumente (methods-and-pipeline, paper-integrity, project, quickstart) aktualisiert.
+
+### Was wir gelernt haben
+
+**Merge-Key ist kritisch:** Ein Merge per sequentieller ID statt stabiler Identifier (Zotero_Key) produziert plausibel aussehende aber voellig falsche Ergebnisse. Die alten Zahlen (78:23 Ratio, Kappa 0,035) sahen inhaltlich sinnvoll aus, weil die Marginalverteilungen (Basisraten) korrekt blieben -- nur die Zellwerte der Konfusionsmatrix waren Zufall.
+
+**Kategorie-Kappas als Validierungsindikator:** Die alten Kategorie-Kappas waren teils negativ (Gender -0,098, Fairness -0,163). Negative Kappas bei binaeren Kategorien sind ein Warnsignal fuer fehlerhaftes Matching. Die korrekten Werte (0,39--0,82) zeigen echte Uebereinstimmungssignale.
+
+**Sonnet 4.6 vs Haiku 4.5 bei Klassifikation:** Sonnet produziert differenziertere Divergenz-Klassifikationen. Haiku hatte 81% als "Semantische Expansion" eingestuft (Catch-all). Sonnet verteilt 51/30/19 -- die Muster sind ausgeglichener und die Begruendungen inhaltlich praeziser.
+
+### Was entstanden ist
+
+| Datei | Aenderung |
+|-------|-----------|
+| `benchmark/scripts/merge_assessments.py` | Bug-Fix: Zotero_Key statt sequentielle ID |
+| `benchmark/data/human_assessment.csv` | Neu: 303 Zeilen, 27 Korrekturen, komplett |
+| `benchmark/data/merged_comparison.csv` | Neu: 291 korrekt gepaarte Papers |
+| `benchmark/results/agreement_metrics.json` | Neu: korrekte Metriken |
+| `benchmark/results/disagreements.csv` | Neu: 142 korrekt gepaarte Disagreements |
+| `docs/data/research_vault_v2.json` | Regeneriert mit korrekten Metriken |
+| `docs/data/promptotyping_v2.json` | Regeneriert mit Sonnet-4.6-Divergenzmustern |
+| `scripts/generate_vault_v2.py` | Modell fuer Divergenz-Klassifikation: Sonnet 4.6 |
+| `knowledge/status.md` | Benchmark-Ergebnisse aktualisiert |
+| `knowledge/methods-and-pipeline.md` | Script-Referenzen + Metriken aktualisiert |
+| `knowledge/paper-integrity.md` | Merge-Bug + neue Werte dokumentiert |
+| `knowledge/project.md` | Benchmark-Basis aktualisiert |
+| `knowledge/guides/quickstart.md` | Benchmark-Zahlen aktualisiert |
+| `CLAUDE.md` | HA-Status, Leitkonzepte, Known Issues aktualisiert |
+
+### Offene Punkte
+
+- [ ] Vault-Notes regenerieren (142 Divergenz-Notes mit neuen Mustern) + Vault-ZIP
+- [ ] Evidence Companion: Stats im Header pruefen (326 Papers, 249 WD, 291 Bewertungen)
+- [ ] Paper-Zahlen aktualisieren (Konfusionsmatrix, Raten, Divergenz-Muster)
+- [ ] M8: Paper finalisieren (Deadline 4. Mai)
+
+---
+
 ## 2026-03-24 (Session 8): Kategorien-Explorer, Wissensnetz-Redesign, Methoden-Seite
 
 **Branch:** `main`

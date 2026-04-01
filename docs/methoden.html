@@ -73,9 +73,9 @@
                 </div>
                 <div class="pipeline-arrow"><i class="fas fa-arrow-right"></i></div>
                 <div class="pipeline-stage">
-                    <span class="pipeline-num">326 + 210</span>
+                    <span class="pipeline-num">326 + 291</span>
                     <span class="pipeline-label">Assessment</span>
-                    <span class="pipeline-detail">LLM (326/326) + Expert:innen (210/326)</span>
+                    <span class="pipeline-detail">LLM (326/326) + Expert:innen (291/326)</span>
                 </div>
             </div>
             <p style="font-size:var(--text-sm);color:var(--gray-500);margin-top:0.5rem;">Gesamtverlust: 77/326 (23.6%), primaer durch Paywalls und korrupte PDFs.</p>
@@ -105,29 +105,29 @@
             <p>Zwei unabhaengige Bewertungspfade klassifizieren nach identischem Schema:</p>
             <ul>
                 <li><strong>LLM (Claude Haiku 4.5)</strong> -- 326/326 Papers, automatisiert, $1.44 Gesamtkosten</li>
-                <li><strong>Expert:innen</strong> -- 210/326 Papers, manuelle Bewertung durch Fachwissenschaftler:innen</li>
+                <li><strong>Expert:innen</strong> -- 291/326 Papers, manuelle Bewertung durch Fachwissenschaftler:innen</li>
             </ul>
-            <p>Die Schnittmenge (210 Papers mit beiden Bewertungen) bildet die Benchmark-Basis.</p>
+            <p>Die Schnittmenge (291 Papers mit beiden Bewertungen) bildet die Benchmark-Basis.</p>
 
             <h3>Kernergebnis</h3>
             <table class="methoden-table">
                 <thead><tr><th>Metrik</th><th>Wert</th></tr></thead>
                 <tbody>
-                    <tr><td>LLM Include-Rate</td><td>68% (143/210)</td></tr>
-                    <tr><td>Human Include-Rate</td><td>42% (88/210)</td></tr>
-                    <tr><td>LLM-Include / Human-Exclude</td><td>78 Faelle</td></tr>
-                    <tr><td>Human-Include / LLM-Exclude</td><td>23 Faelle</td></tr>
-                    <tr><td>Cohen's Kappa</td><td>0.035 (Prevalence-Bias-Artefakt)</td></tr>
+                    <tr><td>LLM Include-Rate</td><td>71.5% (208/291)</td></tr>
+                    <tr><td>Human Include-Rate</td><td>46.0% (134/291)</td></tr>
+                    <tr><td>LLM-Include / Human-Exclude</td><td>108 Faelle</td></tr>
+                    <tr><td>Human-Include / LLM-Exclude</td><td>34 Faelle</td></tr>
+                    <tr><td>Cohen's Kappa</td><td>0.056 (Prevalence-Bias-Artefakt)</td></tr>
                 </tbody>
             </table>
-            <p>Cohen's Kappa (0.035) ist bei stark ungleichen Basisraten kein valider Indikator fuer Uebereinstimmung (Byrt et al. 1993). Primaere Metriken sind die Konfusionsmatrix und die Basisraten.</p>
+            <p>Cohen's Kappa (0.056) ist bei stark ungleichen Basisraten kein valider Indikator fuer Uebereinstimmung (Byrt et al. 1993). Primaere Metriken sind die Konfusionsmatrix und die Basisraten.</p>
 
             <h3>Divergenz-Klassifikation</h3>
-            <p>111 Faelle, in denen LLM und Expert:innen unterschiedlich entscheiden, wurden in drei epistemische Muster klassifiziert:</p>
+            <p>142 Faelle, in denen LLM und Expert:innen unterschiedlich entscheiden, wurden in drei epistemische Muster klassifiziert:</p>
             <ul>
-                <li><strong>Semantische Expansion (81%)</strong> -- Das LLM interpretiert Kategorien breiter. Es erkennt Relevanz, wo disziplinaeres Fachwissen engere Grenzen zieht.</li>
-                <li><strong>Keyword-Inklusion (11%)</strong> -- Das LLM schliesst von Schluesselwoertern auf Relevanz, ohne den inhaltlichen Kontext zu pruefen.</li>
-                <li><strong>Implizite Feldzugehoerigkeit (8%)</strong> -- Das LLM ordnet Papers einem Feld zu, das implizit mitschwingt, aber nicht explizit adressiert wird.</li>
+                <li><strong>Semantische Expansion (51%)</strong> -- Das LLM interpretiert Kategorien breiter. Es erkennt Relevanz, wo disziplinaeres Fachwissen engere Grenzen zieht.</li>
+                <li><strong>Implizite Feldzugehoerigkeit (30%)</strong> -- Das LLM ordnet Papers einem Feld zu, das implizit mitschwingt, aber nicht explizit adressiert wird.</li>
+                <li><strong>Keyword-Inklusion (19%)</strong> -- Das LLM schliesst von Schluesselwoertern auf Relevanz, ohne den inhaltlichen Kontext zu pruefen.</li>
             </ul>
 
             <h3>Transparenz</h3>
@@ -147,7 +147,7 @@
             <ul>
                 <li>23.6% Verlustrate bei PDF-Akquise (primaer Paywalls)</li>
                 <li>LLM-Bewertung basiert auf extrahiertem Wissen, nicht auf Volltexten -- doppelte Vermittlung</li>
-                <li>Human-Bewertung umfasst 210/326 Papers (nicht vollstaendig)</li>
+                <li>Human-Bewertung umfasst 291/326 Papers (nicht vollstaendig)</li>
                 <li>Konzept-Extraktion ist LLM-abhaengig und nicht extern validiert</li>
                 <li>Divergenz-Muster-Klassifikation ist LLM-gestuetzt (Claude Sonnet)</li>
             </ul>

@@ -108,7 +108,7 @@ Diese Probleme wurden im fertigen Paper-Text gegenueber frueheren Versionen beho
 
 **Urspruengliches Problem (v12):** Nur 50-Paper-Test, nie voll ausgefuehrt.
 
-**Aktueller Stand:** `run_llm_assessment.py` wurde auf allen 326 Papers ausgefuehrt ($1.44, Commit M5). Ergebnis: `benchmark/data/llm_assessment_10k.csv` (232 Include, 94 Exclude). Benchmark-Ergebnisse (κ = 0,035, Konfusionsmatrix, Kategorie-Kappas) liegen in `benchmark/results/agreement_metrics.json`. Paper v0.4 beschreibt diese Ergebnisse korrekt in Abschnitt 5.
+**Aktueller Stand:** `run_llm_assessment.py` wurde auf allen 326 Papers ausgefuehrt ($1.44, Commit M5). Ergebnis: `benchmark/data/llm_assessment_10k.csv` (232 Include, 94 Exclude). Benchmark-Ergebnisse (korrekt seit 2026-03-27: κ = 0,056, Konfusionsmatrix 100/34/108/49, Kategorie-Kappas 0,39--0,82) liegen in `benchmark/results/agreement_metrics.json`. Frueherer Merge-Bug (per sequentieller ID statt Zotero_Key) wurde behoben -- alle Werte vor 2026-03-27 waren falsch.
 
 **Status:** BELEGT
 
@@ -146,9 +146,9 @@ Das Paper verwendet bewusst Groessenordnungen ("mehrere hundert Papers"), was ko
 
 **Paper sagt (v0.4):** "Die primaere Vergleichsmetrik ist Cohen's Kappa" und "kappa = 0,035 ('slight' nach Landis & Koch)"
 
-**Analyse (2026-02-22):** Cohen's Kappa ist durch den Prevalence-Bias-Paradox (Byrt et al. 1993, Feinstein & Cicchetti 1990) in diesem Anwendungsfall als Leitmetrik ungeeignet. Die Basisraten divergieren um 26 Prozentpunkte (LLM 68% Include vs. Human 42% Include). Bei derart unterschiedlichen Basisraten kollabiert Kappa kuenstlich -- der Wert 0,035 reflektiert primaer die Schwellenwert-Differenz, nicht die inhaltliche Uebereinstimmung.
+**Analyse (2026-02-22, aktualisiert 2026-03-27):** Der alte Kappa-Wert 0,035 basierte auf einem Merge-Bug (sequentielle ID statt Zotero_Key). Der korrekte Wert ist 0,056 ("slight"). Die Prevalence-Bias-Argumentation bleibt gueltig: Die Basisraten divergieren um 25,5 Prozentpunkte (LLM 71,5% Include vs. Human 46,0% Include). Kategorie-Kappas liegen im Bereich 0,39--0,82 (alle positiv, vorher teils negativ durch falsches Matching).
 
-**Handlungsbedarf:** Paper-Revision (v0.5) muss Konfusionsmatrix und Basisraten ins Zentrum ruecken, Kappa als Vergleichsanker mit Prevalence-Paradox-Erklaerung in Fussnote. Kategorie-Tabelle mit Ja-Raten und Richtung statt Kappa-Werten. Details: `knowledge/status.md` M6-Interpretation (Prevalence-Bias-Erklaerung)
+**Handlungsbedarf:** Paper muss alle Benchmark-Zahlen aktualisieren: Konfusionsmatrix 100/34/108/49, Kappa 0,056, Basis 291 Papers, 142 Disagreements. Details: `knowledge/status.md` M6.
 
 ---
 

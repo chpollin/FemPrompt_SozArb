@@ -1,7 +1,7 @@
 # Working Rules for Claude AI Assistant
 
 **Project:** FemPrompt SozArb -- Systematischer Literature Review zu AI Literacy & LLM-Bias im Kontext Sozialer Arbeit
-**Last Updated:** 2026-03-24
+**Last Updated:** 2026-04-01
 
 ---
 
@@ -12,20 +12,20 @@
 Das Projekt hat drei Schichten:
 1. **Obsidian Vault** -- 505 Markdown-Dateien (248 Papers, 136 Konzepte, 111 Divergenzen, 5 Pipeline-Stufen, MOCs)
 2. **Evidence Companion** -- `docs/index.html` + Unterseiten (`about.html`, `help.html`). 4 Views: Wissens-Chat, Wissensnetz, Bewertungsvergleich, Korpus. Live: https://chpollin.github.io/FemPrompt_SozArb/
-3. **Paper** -- Forum Wissenschaft 2/2026, 18.000 Zeichen, Deadline 4. Mai 2026
+3. **Paper** -- Forum Wissenschaft 2/2026, Deadline 4. Mai 2026 (auf Google Docs, nicht im Repo)
 
 ### Leitkonzepte
 
-- **Epistemische Asymmetrie:** LLM Include-Rate 68% vs. Human 42% = 26 Prozentpunkte Differenz. 78x LLM-Include/Human-Exclude vs. 23x umgekehrt.
+- **Benchmark-Ergebnisse (korrekt seit 2026-03-27):** LLM Include-Rate 71,5% vs. Human 46,0% = 25,5 Prozentpunkte Differenz. 108x LLM-Include/Human-Exclude vs. 34x umgekehrt. Basis: 291 Papers.
 - **Drei epistemische Haltungen:** Zeigen was ist (blau, Ergebnis) / Zeigen wie es entstanden ist (gruen, Prozess) / Zeigen was nicht geht (orange, Grenze)
-- **Kappa-Prevalence-Bias:** Cohen's Kappa 0.035 ist Artefakt, NICHT primaerer Indikator. Primaere Metriken: Konfusionsmatrix + Basisraten.
-- **Divergenz-Muster:** 90 Semantische Expansion (81%), 12 Keyword-Inklusion (11%), 9 Implizite Feldzugehoerigkeit (8%)
+- **Kappa:** Decision-Kappa 0,056 ("slight"). Kategorie-Kappas 0,39--0,82 (Soziale_Arbeit am hoechsten, Gender am niedrigsten).
+- **Divergenz-Muster:** 142 Disagreements identifiziert. Qualitative Muster-Klassifikation muss mit korrekt gepaarten Daten neu laufen.
 
 ### Assessment-Tracks
 
 | Track | Methode | Schema | Status |
 |-------|---------|--------|--------|
-| **Human** | Google Sheets | 10 binaere Kategorien | 210/326 mit Decision |
+| **Human** | Google Sheets | 10 binaere Kategorien | Fertig (303/303, 142 Include, 161 Exclude) |
 | **LLM (5D)** | Claude Haiku 4.5 | 5 Dimensionen (0-3) | Fertig (archiviert) |
 | **LLM (10K)** | Claude Haiku 4.5 | 10 binaere Kategorien | Fertig (326/326, Benchmark) |
 
@@ -38,7 +38,6 @@ Das Projekt hat drei Schichten:
 | Verzeichnis | Inhalt | Aendern? |
 |-------------|--------|----------|
 | `knowledge/` | **Single Source of Truth** fuer alle Projektdokumentation | Ja, mit Vorsicht |
-| `knowledge/paper/` | Paper-Entwurf + Referenzliteratur | Nur auf Anfrage |
 | `pipeline/knowledge/distilled/` | 249 Knowledge-Dokumente (NICHT "vault") | Read-only |
 | `pipeline/knowledge/_stage1_json/` | Rohe JSON-Extraktionen (Kategorien als Booleans) | Read-only |
 | `pipeline/knowledge/_stage2_draft/` | Markdown-Drafts | Read-only |
@@ -61,9 +60,8 @@ Das Projekt hat drei Schichten:
 | `knowledge/journal.md` | Arbeitsjournal (chronologisch) | Ja |
 | `knowledge/methods-and-pipeline.md` | Methodik, Script-Referenz, Kosten | Selten |
 | `knowledge/README.md` | Dokumentations-Index | Ja |
-| `knowledge/paper/paper-draft.md` | **DAS PAPER** (Single Source of Truth, 17.975 Zeichen) | Nur auf Anfrage |
 | `knowledge/FORSCHUNGSPROJEKT-PROMPTOTYPING.md` | Konzeptdokument Promptotyping | Selten |
-| `knowledge/paper-integrity.md` | Paper vs. Repo Abgleich | Selten |
+| `knowledge/paper-integrity.md` | Paper vs. Repo Abgleich (Paper auf Google Docs) | Selten |
 | `docs/index.html` | **Evidence Companion** (4-View SPA, Default: Wissens-Chat) | **Aktiv** |
 | `docs/about.html` | Unterseite: Projekt, Zitationsvorschlag | Aktiv |
 | `docs/methoden.html` | Unterseite: Pipeline, Kategorie-System, Nachnutzung | **Aktiv** |
@@ -259,8 +257,9 @@ Jede Information hat genau EINEN kanonischen Ort. Andere Dateien referenzieren, 
 |---------|---------|
 | Windows `nul` Datei | Ignorieren (reservierter Geraetename, nicht git-tracked) |
 | Knowledge Doc "Kernaussage" vs "Kernbefund" | Korrekt ist "Kernbefund" |
-| 326 Zotero vs 305 HA Papers | Temporale Divergenz, Merge via Zotero_Key + DOI/Titel |
-| Kappa 0.035 | Prevalence-Bias-Artefakt (Byrt et al. 1993), NICHT primaerer Indikator |
+| 326 Zotero vs 303 HA Papers | 291 Overlap per Zotero_Key, 12 nur Human, 35 nur LLM |
+| Merge-Bug (behoben 2026-03-27) | merge_assessments.py matchte per sequentieller ID statt Zotero_Key. Alle alten Benchmark-Werte (Kappa 0,035, Matrix 65/23/78/34) waren falsch. Neu: Kappa 0,056, Matrix 100/34/108/49 |
+| Kappa 0,056 | Decision-Kappa "slight", Kategorie-Kappas 0,39--0,82 |
 | Source_Tool Feld leer | 290/326 leer, "254 DR / 50 Manual" aus Zotero Collections |
 | D3 Sankey Links nicht sichtbar | `fill: none` + `stroke-width` verwenden (NICHT `fill`) |
 | Titel-Matching | 5-Strategie-Kaskade (Stage1-JSON, KD-YAML, Filename-Prefix, Autor+Jahr, Fuzzy) |

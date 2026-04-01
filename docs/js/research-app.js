@@ -928,7 +928,7 @@ function buildDetailContent(paper) {
     } else {
         html += '<div class="assessment-panel assessment-panel--empty">' +
             '<div class="panel-header">Expert:innen</div>' +
-            '<p class="empty-note">Nicht bewertet. Human Assessment deckt 210 von 326 Papers ab.</p>' +
+            '<p class="empty-note">Nicht bewertet. Human Assessment deckt 291 von 326 Papers ab.</p>' +
         '</div>';
     }
 
