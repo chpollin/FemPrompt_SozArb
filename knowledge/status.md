@@ -93,6 +93,38 @@ Human Exclude          108              49
 
 **Divergence Patterns:** 142 disagreements identified (108 LLM-Include/Human-Exclude, 34 reversed). The qualitative classification into patterns (Semantic Expansion, Keyword Inclusion, Implicit Field Membership) must be rerun with the correctly paired disagreements.
 
+### Model Comparison: Haiku 4.5 vs. Sonnet 4.6 (2026-04-01)
+
+Controlled experiment: same prompt, same data, same human baseline, different model.
+
+**Decision-Level:**
+
+| Metric | Haiku 4.5 | Sonnet 4.6 | Human |
+|--------|-----------|------------|-------|
+| Include Rate | 71.5% | 82.5% | 46.0% |
+| Decision Kappa | 0.056 | 0.098 | -- |
+| LLM-Incl/Human-Excl | 108 | 122 | -- |
+| Human-Incl/LLM-Excl | 34 | 16 | -- |
+| Disagreements total | 142 | 138 | -- |
+| Cost | $1.44 | ~$12 | -- |
+
+**Category-Level Kappa:**
+
+| Category | Haiku κ | Sonnet κ | Delta |
+|----------|---------|----------|-------|
+| Soziale_Arbeit | 0.816 | 0.821 | +0.005 |
+| Feministisch | 0.753 | **0.819** | **+0.066** |
+| Generative_KI | 0.538 | 0.556 | +0.018 |
+| Prompting | 0.533 | 0.555 | +0.022 |
+| KI_Sonstige | 0.535 | 0.551 | +0.016 |
+| AI_Literacies | 0.488 | 0.479 | -0.009 |
+| Bias_Ungleichheit | 0.439 | 0.460 | +0.021 |
+| Diversitaet | 0.432 | 0.425 | -0.007 |
+| Gender | 0.407 | **0.284** | **-0.123** |
+| Fairness | 0.388 | 0.378 | -0.010 |
+
+**Key finding:** A more capable model does not close the gap -- it shifts it. Sonnet includes even more aggressively (82.5% vs. 71.5%), widening the asymmetry with expert judgment (46%). Gender kappa drops sharply (0.407 -> 0.284), while Feministisch improves to near-perfect agreement (0.819). The divergence is structural-epistemic, not performance-based. The infrastructure is necessary regardless of model quality.
+
 ### M7: Benchmark Results Documentation -- COMPLETED
 
 - [x] Benchmark metrics documented (confusion matrix, base rates, category kappas)
