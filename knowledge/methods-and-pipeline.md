@@ -506,8 +506,9 @@ Der Vault v2 (`scripts/generate_vault_v2.py`) ersetzt den flachen Paper-Index (v
 
 ### LLM-basierte Divergenz-Klassifikation
 
-- 111 API-Calls an Claude Haiku 4.5 (~$0.22)
-- 3 Muster: Semantische Expansion (81%), Keyword-Inklusion (11%), Implizite Feldzugehoerigkeit (8%)
+- 111 API-Calls an Claude Haiku 4.5 (~$0.22), Reklassifikation mit Sonnet 4.6
+- 3 Muster (nach Reklassifikation): Semantische Expansion (52%), Implizite Feldzugehoerigkeit (30%), Keyword-Inklusion (18%)
+- Hinweis: 142 Disagreements gesamt (nach Merge-Bug-Fix), Vault enthaelt 111 Divergenz-Dateien (Regeneration offen)
 - Cache: `.vault_cache/divergences/` (JSON)
 
 ### Titel-Matching (5 Strategien)

@@ -220,10 +220,10 @@ function buildContext(question) {
     // Build meta text
     var metaText = 'Korpus-Statistik:\n' +
         '- Gesamt: ' + (meta.total_papers || 326) + ' Papers\n' +
-        '- LLM bewertet: ' + (meta.total_papers || 326) + ', Expert:innen bewertet: ' + (meta.papers_with_human || 210) + '\n' +
-        '- LLM Include-Rate: ' + (meta.llm_include_rate || 68) + '% (' + (meta.llm_include_count || 143) + ')\n' +
-        '- Human Include-Rate: ' + (meta.human_include_rate || 42) + '% (' + (meta.human_include_count || 88) + ')\n' +
-        '- Cohen\'s Kappa: ' + (meta.kappa_overall || 0.035) + ' (Prevalence-Bias-Artefakt)\n';
+        '- LLM bewertet: ' + (meta.total_papers || 326) + ', Expert:innen bewertet: ' + (meta.papers_with_human || 291) + '\n' +
+        '- LLM Include-Rate: ' + (meta.llm_include_rate || 71.5) + '% (' + (meta.llm_include_count || 208) + ')\n' +
+        '- Human Include-Rate: ' + (meta.human_include_rate || 46) + '% (' + (meta.human_include_count || 134) + ')\n' +
+        '- Cohen\'s Kappa: ' + (meta.kappa_overall || 0.056) + ' (Prevalence-Bias-Artefakt)\n';
 
     if (kappas) {
         metaText += '\nKappa pro Kategorie:\n';

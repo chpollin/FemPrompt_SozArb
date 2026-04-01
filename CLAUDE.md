@@ -10,7 +10,7 @@
 326 wissenschaftliche Papers werden durch eine 5-stufige LLM-Pipeline verarbeitet (Identifikation -> PDF-Akquise -> Markdown-Konversion -> Wissensextraktion -> Assessment). Kernfrage: **Was passiert mit Wissen, wenn es durch eine LLM-Pipeline fliesst?**
 
 Das Projekt hat drei Schichten:
-1. **Obsidian Vault** -- 505 Markdown-Dateien (248 Papers, 136 Konzepte, 111 Divergenzen, 5 Pipeline-Stufen, MOCs)
+1. **Obsidian Vault** -- 505 Markdown-Dateien (248 Papers, 136 Konzepte, 111 Divergenzen [142 nach Bug-Fix, Vault-Regeneration offen], 5 Pipeline-Stufen, MOCs)
 2. **Evidence Companion** -- `docs/index.html` + Unterseiten (`about.html`, `help.html`). 4 Views: Wissens-Chat, Wissensnetz, Bewertungsvergleich, Korpus. Live: https://chpollin.github.io/FemPrompt_SozArb/
 3. **Paper** -- Forum Wissenschaft 2/2026, Deadline 4. Mai 2026 (auf Google Docs, nicht im Repo)
 
@@ -19,7 +19,7 @@ Das Projekt hat drei Schichten:
 - **Benchmark-Ergebnisse (korrekt seit 2026-03-27):** LLM Include-Rate 71,5% vs. Human 46,0% = 25,5 Prozentpunkte Differenz. 108x LLM-Include/Human-Exclude vs. 34x umgekehrt. Basis: 291 Papers.
 - **Drei epistemische Haltungen:** Zeigen was ist (blau, Ergebnis) / Zeigen wie es entstanden ist (gruen, Prozess) / Zeigen was nicht geht (orange, Grenze)
 - **Kappa:** Decision-Kappa 0,056 ("slight"). Kategorie-Kappas 0,39--0,82 (Soziale_Arbeit am hoechsten, Gender am niedrigsten).
-- **Divergenz-Muster:** 142 Disagreements identifiziert. Qualitative Muster-Klassifikation muss mit korrekt gepaarten Daten neu laufen.
+- **Divergenz-Muster:** 142 Disagreements identifiziert. 3 Muster: Semantische Expansion (52%), Implizite Feldzugehoerigkeit (30%), Keyword-Inklusion (18%). Vault enthaelt 111 Divergenz-Dateien (Regeneration offen).
 
 ### Assessment-Tracks
 
@@ -42,7 +42,7 @@ Das Projekt hat drei Schichten:
 | `pipeline/knowledge/_stage1_json/` | Rohe JSON-Extraktionen (Kategorien als Booleans) | Read-only |
 | `pipeline/knowledge/_stage2_draft/` | Markdown-Drafts | Read-only |
 | `pipeline/knowledge/_verification/` | 219 Verifikationsdateien | Read-only |
-| `vault/` | Obsidian Vault v2 (248 Papers, 136 Concepts, 111 Divergenzen) | Generiert |
+| `vault/` | Obsidian Vault v2 (248 Papers, 136 Concepts, 111 Divergenzen [142 nach Bug-Fix]) | Generiert |
 | `docs/` | GitHub Pages: Web-Interfaces + Daten + Downloads | Aktiv bearbeitet |
 | `docs/data/` | JSON-Daten fuer Web-Interfaces | Generiert |
 | `benchmark/` | Benchmark-Scripts + Ergebnisse + Konfiguration | Fertig |
@@ -294,7 +294,7 @@ Jede Information hat genau EINEN kanonischen Ort. Andere Dateien referenzieren, 
 2. **5-dimensionale Relevanz-Bewertung** -- Parametrisch, adaptierbar
 3. **Hierarchische PDF-Akquise** -- 4 Fallback-Strategien, 79% Erfolgsrate
 4. **Human-LLM Benchmark** -- Konfusionsmatrix + Basisraten als primaere Metriken
-5. **Epistemische Divergenz-Analyse** -- 111 Disagreements in 3 Muster klassifiziert (LLM-basiert)
+5. **Epistemische Divergenz-Analyse** -- 142 Disagreements in 3 Muster klassifiziert (52/30/18%, Sonnet 4.6)
 6. **Wissens-Chat** -- Gemini 3 Flash ueber LLM-synthetisiertem Wissen, Inline-Zitationen mit Cross-View-Navigation
 7. **Kategorien-Explorer** -- 10 Kategorien als interaktives Spektrum, Rate-Vergleich Human/LLM, Divergenz-Papers mit Reasoning
 8. **Wissensnetz** -- D3 Cluster-Layout (Bridge/Sozial), Divergenz-Modus mit Pattern-Faerbung, Hover-Glow
