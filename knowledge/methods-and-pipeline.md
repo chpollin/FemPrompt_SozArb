@@ -1,584 +1,387 @@
-# Methodik und Pipeline
+# Methods and Pipeline
 
-Dieses Dokument beschreibt **wie** der systematische Literature Review durchgefuehrt wurde -- von der methodischen Begruendung bis zur technischen Implementierung. Theoretische Grundlagen und Operationalisierung: siehe `project.md`.
+This document describes **how** the systematic literature review was conducted -- from methodological rationale to technical implementation. For theoretical foundations and operationalization, see `project.md`.
 
 ---
 
-## System-Anforderungen
+## System Requirements
 
 ### Software
 
 - Python 3.8+
 - Windows 10/11, macOS 10.14+, Linux
 
-### Python-Pakete
+### Python Packages
 
-Installation via `pip install -r requirements.txt`. Kern-Pakete:
+Install via `pip install -r requirements.txt`. Core packages:
 
-| Paket | Version | Zweck |
-|-------|---------|-------|
+| Package | Version | Purpose |
+|---------|---------|---------|
 | anthropic | >=0.68.0 | Claude API |
-| pandas, openpyxl | - | Excel-Verarbeitung |
+| pandas, openpyxl | - | Excel processing |
 | pyzotero | >=1.5.0 | Zotero API |
-| docling | >=2.60.0 | PDF-Konversion |
-| pdfplumber | >=0.10.0 | PDF-Analyse |
+| docling | >=2.60.0 | PDF conversion |
+| pdfplumber | >=0.10.0 | PDF analysis |
 | python-dotenv | >=1.0.0 | Environment |
 
-### Umgebungsvariablen
+### Environment Variables
 
-In `.env` Datei (nicht committen):
-- `ANTHROPIC_API_KEY` - Claude API-Schluessel
-- `ZOTERO_API_KEY` - Zotero API-Schluessel
+In `.env` file (do not commit):
+- `ANTHROPIC_API_KEY` -- Claude API key
+- `ZOTERO_API_KEY` -- Zotero API key
 
 ---
 
 ## PRISMA 2020 Framework
 
-Der Workflow folgt PRISMA 2020 Standards fuer systematische Reviews:
-- 27-Item-Checkliste strukturiert Identifikation, Screening, Eligibility-Assessment
-- Flow-Diagramm dokumentiert Selektionsprozess mit Quantifizierung jeder Phase
-- Explizite Benennung von Ausschlussgruenden
+The workflow follows PRISMA 2020 standards for systematic reviews:
+- 27-item checklist structures identification, screening, and eligibility assessment
+- Flow diagram documents the selection process with quantification at each phase
+- Explicit specification of exclusion reasons
 
-### Abweichung von Standard-Datenbanksuchen
+### Deviation from Standard Database Searches
 
-Die Identifikationsphase nutzt KI-gestuetzte Deep Research statt traditioneller Datenbanksuchen:
-- 4 Modelle (ChatGPT, Claude, Gemini, Perplexity) erhalten identische kontextparametrisierte Anweisungen
-- Ergaenzt durch eine begrenzte Zahl manuell identifizierter Studien (50 von 305 Papers im Human-Assessment)
-- Abweichung wird explizit dokumentiert und begruendet
-- Motivation: Erprobung einer neuen Technologie, nicht Aufwandsreduktion
+The identification phase uses AI-assisted deep research instead of traditional database searches:
+- 4 models (ChatGPT, Claude, Gemini, Perplexity) receive identical context-parameterized instructions
+- Supplemented by a limited number of manually identified studies (50 of 305 papers in the human assessment)
+- The deviation is explicitly documented and justified
+- Motivation: testing a new technology, not reducing effort
 
-**Hinweis:** Die Deep-Research-Prompts wurden im Oktober 2025 aus dem Repository geloescht. Wiederherstellung aus Git-History vor Einreichung erforderlich (siehe `paper-integrity.md`, Abschnitt 3.1).
-
----
-
-## Phase 1: Identifikation (Deep Research + Manuelle Recherche)
-
-### Parametrischer Prompt
-
-Alle 4 Modelle erhalten identische Prompts mit:
-
-1. **Rolle:** Literature Review Spezialist fuer feministische KI-Forschung
-2. **Aufgabe:** Annotierte Bibliographie mit strukturierten Metadaten
-3. **Kontext:** Forschungsziele, zeitlicher Scope, geografischer Fokus
-4. **Analyseschritte:** 20-30 Publikationen, peer-reviewed priorisiert
-5. **Output-Format:** APA 7, 150-200 Woerter Summary, Relevanz-Score
-
-### Ausfuehrung
-
-- Manuelles Copy-Paste in 4 Deep Research Interfaces
-- Ergebnisse in Zotero-Collections mit Praefix "_DEEPRESEARCH"
-- Typisch 3-15 Empfehlungen pro Modell
-
-### RIS-Standardisierung
-
-Heterogene Modell-Outputs werden in RIS-Format konvertiert.
-
-**Standard-Felder:** Dokumenttyp (TY), Autoren (AU), Titel (TI), Journal (JO), Volume (VL), Issue (IS), Seiten (SP/EP), Jahr (PY), DOI (DO), Abstract (AB), Keywords (KW)
-
-**Qualitaetssicherung:**
-- DOI-Validierung gegen CrossRef-Muster
-- Unsichere Angaben mit N1-Note markiert
-- Temporaere Konversion via Claude-Projekt
-
-### Zotero-Integration
-
-**Import:** Sequenzieller Import der RIS-Dateien, modellspezifische Collections (claude_, gemini_, openai_, perplexity_), Provenienz-Information bleibt erhalten
-
-**Qualitaetskontrolle:** Duplikaterkennung via Title-Matching und DOI-Vergleich, Metadaten-Korrektur (ORCID, Journal-Namen), PDF-Attachment via Browser-Integration
-
-**Export:** `corpus/zotero_export.json` fuer Pipeline-Input, `corpus/papers_metadata.csv` fuer Metadaten-Analyse, `corpus/source_tool_mapping.json` fuer Provenienz-Tracking
+**Note:** The deep research prompts were deleted from the repository in October 2025. Recovery from Git history required before submission (see `paper-integrity.md`, Section 3.1).
 
 ---
 
-## Phase 2: Assessment (Dualer Bewertungspfad)
+## Phase 1: Identification (Deep Research + Manual Search)
 
-### Epistemische Begruendung
+### Parametric Prompt
 
-Der duale Bewertungspfad ist das methodische Kernstueck des Workflows. Die Entscheidung fuer den Parallelmodus (nicht sequentiell) ist bewusst: Eine sequentielle Anordnung haette den LLM-Pfad auf eine vorbereitende Funktion begrenzt. Der Parallelmodus ermoeglicht den systematischen Vergleich und macht sichtbar, wo die epistemischen Beitraege konvergieren und wo sie divergieren.
+All 4 models receive identical prompts containing:
 
-**Dual** bezieht sich auf zwei Merkmale zugleich:
-1. Zwei unabhaengige Bewertungsinstanzen (Expert:innen und LLM)
-2. Zwei verschiedene epistemische Grundlagen der Bewertung
+1. **Role:** Literature review specialist for feminist AI research
+2. **Task:** Annotated bibliography with structured metadata
+3. **Context:** Research objectives, temporal scope, geographic focus
+4. **Analysis steps:** 20-30 publications, peer-reviewed prioritized
+5. **Output format:** APA 7, 150-200 word summary, relevance score
 
-Beide Pfade arbeiten auf Grundlage der PRISMA-Richtlinien: identische Kriterien bei verschiedenen epistemischen Grundlagen. Die Trennung schuetzt die Expert:innen davor, dass LLM-Ergebnisse ihre eigene Bewertung beeinflussen.
+### Execution
 
-### Human Assessment (10 binaere Kategorien)
+- Manual copy-paste into 4 deep research interfaces
+- Results stored in Zotero collections with prefix "_DEEPRESEARCH"
+- Typically 3-15 recommendations per model
 
-**Forschungsfrage:**
-> Inwiefern kommen die Themen oder die Verknuepfung der Bereiche feministische AI Literacies, generative KI / Prompting und Soziale Arbeit in wissenschaftlicher Literatur vor?
+### RIS Standardization
 
-**Technik-Dimensionen (Ja/Nein):**
+Heterogeneous model outputs are converted to RIS format.
 
-| Kategorie | Beschreibung |
-|-----------|--------------|
-| AI_Literacies | KI-Kompetenzen, kritische Reflexion, Anwendungskompetenz |
-| Generative_KI | LLMs, ChatGPT, Bildgeneratoren |
-| Prompting | Prompt-Engineering, Eingabegestaltung |
-| KI_Sonstige | Klassisches ML, algorithmische Systeme, Predictive Analytics |
+**Standard fields:** Document type (TY), Authors (AU), Title (TI), Journal (JO), Volume (VL), Issue (IS), Pages (SP/EP), Year (PY), DOI (DO), Abstract (AB), Keywords (KW)
 
-**Sozial-Dimensionen (Ja/Nein):**
+**Quality assurance:**
+- DOI validation against CrossRef patterns
+- Uncertain entries marked with N1 note
+- Temporary conversion via Claude project
 
-| Kategorie | Beschreibung |
-|-----------|--------------|
-| Soziale_Arbeit | Praxis, Theorie, Ausbildung, Zielgruppen |
-| Bias_Ungleichheit | Diskriminierung, algorithmischer Bias, strukturelle Benachteiligung |
-| Gender | Geschlechterperspektive, Gender-Bias |
-| Diversitaet | Diversitaet, Inklusion, Repraesentation |
-| Feministisch | Feministische Theorie, Methodik, Perspektive (auch implizit) |
-| Fairness | Algorithmische Fairness, faire ML-Systeme |
+### Zotero Integration
 
-**Inklusions-Logik:** Ein Paper wird eingeschlossen, wenn **mindestens eine Technik-Dimension** UND **mindestens eine Sozial-Dimension** zutrifft. KI_Sonstige wurde in v1.1 zur Inklusions-Logik hinzugefuegt, da algorithmische Systeme im Sozialbereich hochrelevant sind.
+**Import:** Sequential import of RIS files, model-specific collections (claude_, gemini_, openai_, perplexity_), provenance information preserved
 
-**Exclusion Reasons:** Duplicate, Not_relevant_topic, Wrong_publication_type, No_full_text, Language
+**Quality control:** Duplicate detection via title matching and DOI comparison, metadata correction (ORCID, journal names), PDF attachment via browser integration
 
-**Studientypen:** Empirisch, Experimentell, Theoretisch, Konzept, Literaturreview, Unclear
+**Export:** `corpus/zotero_export.json` for pipeline input, `corpus/papers_metadata.csv` for metadata analysis, `corpus/source_tool_mapping.json` for provenance tracking
 
-**Konfigurationsdatei:** `benchmark/config/categories.yaml`
+---
 
-### Expert:innen-Pfad (epistemisch verbindlich)
+## Phase 2: Assessment (Dual Assessment Track)
 
-Wissenschaftler:innen aus der Sozialarbeitsforschung, der Gender- und Diversitaetsforschung sowie der Technikforschung bewerten jede Studie nach 10 binaeren Kategorien. Dieser Pfad ist der epistemisch verbindliche Referenzpfad, weil Verantwortung und Rechenschaftsfaehigkeit nur hier liegen.
+### Epistemological Rationale
 
-**Asymmetrie-Beispiele aus dem Paper:**
+The dual assessment track is the methodological centerpiece of the workflow. The decision for parallel mode (not sequential) is deliberate: a sequential arrangement would have limited the LLM track to a preparatory function. Parallel mode enables systematic comparison and reveals where the epistemic contributions converge and where they diverge.
 
-| Entscheidungstyp | Beschreibung | Warum LLM das nicht kann |
-|---|---|---|
-| KI-Definitionsabgrenzung | Undefinierte vs. regelbasierte vs. generative KI | Expert:innen erschliessen aus Kontext, welche KI-Form gemeint ist |
-| Interpretatives Mitdenken | "Diversitaet" selten als Begriff, "Intersektionalitaet" haeufiger, "Fairness" mitgemeint | Verwandte Konzepte kontextabhaengig mitzufuehren setzt Feldkenntnis voraus |
-| Implizite theoretische Zugehoerigkeit | Paper zu "algorithmic fairness" ohne den Begriff "feministisch", aber mit intersektionalen Gerechtigkeitskategorien | LLM operiert auf Ebene expliziter Muster, Expertin auf Ebene impliziter Zugehoerigkeit |
+**Dual** refers to two characteristics simultaneously:
+1. Two independent assessment instances (expert reviewers and LLM)
+2. Two different epistemic foundations for assessment
 
-### LLM-Pfad (zwei Assessment-Systeme)
+Both tracks operate on the basis of PRISMA guidelines: identical criteria with different epistemic foundations. The separation protects the expert reviewers from having LLM results influence their own assessment.
 
-| System | Schema | Skala | Zweck | Status |
-|--------|--------|-------|-------|--------|
-| **5D** | 5 Relevanz-Dimensionen | Ordinal (0-3) | Exploratives Screening und Priorisierung | Fertig (325/325) |
-| **10K** | 10 binaere Kategorien | Ja/Nein | Benchmark gegen Human-Assessment (Cohen's Kappa) | Fertig (326/326, $1.44) |
+### Human Assessment (10 Binary Categories)
 
-**Warum zwei Systeme?** Das 5D-System wurde zuerst entwickelt, um das Korpus parametrisch zu screenen. Das 10K-System wurde spaeter eingefuehrt, als das Human-Assessment-Schema feststand. Nur das 10K-System ist direkt mit dem Human-Assessment vergleichbar -- es verwendet das identische Schema.
+**Research question:**
+> To what extent do the topics or the intersection of feminist AI literacies, generative AI / prompting, and social work appear in the scientific literature?
 
-#### 5D-Relevanz-Dimensionen (0-3 Skala)
+**Technology dimensions (Yes/No):**
 
-| Dimension | 0 | 1 | 2 | 3 |
-|-----------|---|---|---|---|
-| AI_Komp | Keine Erwaehnung | Oberflaechlich | Substantiell | Framework-Entwicklung |
-| Vulnerable | Keine Erwaehnung | Erwaehnt | Fokus | Intersektional |
-| Bias | Keine Erwaehnung | Erwaehnt | Analysiert | Bias-Detection-Studie |
-| Praxis | Rein theoretisch | Konzepte | Anwendung | Evaluiertes Tool |
-| Prof | Kein Kontext | Allgemein | Human Services | Soziale Arbeit |
+| Category | Description |
+|----------|-------------|
+| AI_Literacies | AI competencies, critical reflection, applied competence |
+| Generative_KI | LLMs, ChatGPT, image generators |
+| Prompting | Prompt engineering, input design |
+| KI_Sonstige | Classical ML, algorithmic systems, predictive analytics |
 
-**Script:** `assessment/llm-5d/scripts/assess_papers.py`
-**Performance:** 325 Papers in 24 Minuten, 100% Erfolgsrate, $1.15
+**Social dimensions (Yes/No):**
 
-#### 10K-Assessment (Benchmark)
+| Category | Description |
+|----------|-------------|
+| Soziale_Arbeit | Practice, theory, education, target populations |
+| Bias_Ungleichheit | Discrimination, algorithmic bias, structural disadvantage |
+| Gender | Gender perspective, gender bias |
+| Diversitaet | Diversity, inclusion, representation |
+| Feministisch | Feminist theory, methodology, perspective (including implicit) |
+| Fairness | Algorithmic fairness, fair ML systems |
 
-**Script:** `benchmark/scripts/run_llm_assessment.py`
-**Performance:** 326 Papers, $1.44, 232 Include, 94 Exclude
+**Inclusion logic:** A paper is included if **at least one technology dimension** AND **at least one social dimension** apply.
+
+**Exclusion reasons:** Duplicate, Not_relevant_topic, Wrong_publication_type, No_full_text, Language
+
+**Configuration file:** `benchmark/config/categories.yaml`
+
+### Expert Track (Epistemically Authoritative)
+
+Researchers from social work, gender/diversity studies, and technology studies assess each study according to 10 binary categories. This track is the epistemically authoritative reference track, because accountability and responsibility reside only here.
+
+### LLM Track (Two Assessment Systems)
+
+| System | Schema | Scale | Purpose | Status |
+|--------|--------|-------|---------|--------|
+| **5D** | 5 relevance dimensions | Ordinal (0-3) | Exploratory screening and prioritization | Complete (325/325) |
+| **10K** | 10 binary categories | Yes/No | Benchmark against human assessment (Cohen's Kappa) | Complete (326/326, $1.44) |
 
 ### Human-LLM Benchmark
 
-Das Benchmark vergleicht Human- und LLM-Assessment und adaptiert den Ansatz von Woelfle et al. (2024).
+The benchmark compares human and LLM assessment and adapts the approach of Woelfle et al. (2024).
 
-**Referenzliteratur:**
+**Reference literature:**
 
-| Studie | Design | Zentrale Kappa-Werte | Relevanz |
-|--------|--------|---------------------|----------|
-| Woelfle et al. (2024) | Paralleles Human-AI Assessment, 5 LLMs, 3 Instrumente (PRISMA/AMSTAR/PRECIS-2) | Human IRR: kappa 0.84 (PRISMA), 0.77 (AMSTAR), 0.29 (PRECIS-2). Bestes LLM (Claude-3-Opus): 70% (PRISMA), 74% (AMSTAR), 55% (PRECIS-2) | Methodische Vorlage, Komplexitaetsabhaengigkeit der LLM-Leistung |
-| Hanegraaf et al. (2024) | Systematischer Review (45 SLRs) + Survey (37 SLR-Autoren) | Human IRR: kappa 0.82 (Abstract), 0.77 (Full-Text). 91% der SLRs: AMSTAR 2 "critically low". Doppelstandard: ML-Akzeptanzschwelle hoeher als Human-Leistung | Menschliche Baseline, imperfekte menschliche Uebereinstimmung als Norm |
-| Sandner et al. (2025) | 54 Studierende, 10 Teams, 30 Papers pro Team (TU Graz) | Fleiss kappa 0.39 (Novizen). Cohen's kappa Human-LLM: 0.52. LLM-Sensitivity 80% vs. Human 84% | Hypothese: LLM weicht nicht staerker ab als Menschen voneinander |
+| Study | Design | Key Kappa values | Relevance |
+|-------|--------|-------------------|-----------|
+| Woelfle et al. (2024) | Parallel human-AI assessment, 5 LLMs, 3 instruments | Human IRR: kappa 0.84 (PRISMA), 0.77 (AMSTAR), 0.29 (PRECIS-2) | Methodological template |
+| Hanegraaf et al. (2024) | Systematic review (45 SLRs) + survey | Human IRR: kappa 0.82 (Abstract), 0.77 (Full-Text) | Human baseline |
+| Sandner et al. (2025) | 54 students, 10 teams, 30 papers per team | Fleiss kappa 0.39 (novices), Cohen's kappa human-LLM: 0.52 | LLM deviates no more than humans |
 
-**Konvergierende Befunde:** (1) Menschliche Uebereinstimmung variiert stark mit Aufgabenkomplexitaet (kappa 0.29-0.84). (2) LLMs allein liegen unter erfahrener menschlicher Leistung, aber auf Novizen-Niveau. (3) Human-AI-Kollaboration verbessert individuelle Leistung nur bei strukturierten Aufgaben.
+**Primary metrics:** Confusion matrix, base rate comparison, disagreement analysis. Cohen's Kappa reported as comparison anchor. Basis: 291 papers with both assessments, kappa 0.056 ("slight"), category kappas 0.39-0.82. Details: `knowledge/status.md` M6.
 
-**Erwartungshorizont fuer dieses Projekt:** Die 10-Kategorien-Aufgabe liegt auf der Komplexitaetsskala zwischen AMSTAR und PRECIS-2 (kontextabhaengige Zuordnung, nicht Checklisten-Items). Erwartbare Kappa-Werte: Human-Human 0.5-0.8 (kategorienabhaengig), Human-LLM 0.3-0.7.
+**Benchmark scripts:**
 
-**Primaere Metriken:** Konfusionsmatrix, Basisraten-Vergleich (Ja-Raten pro Kategorie und Pfad), Disagreement-Analyse. Cohen's Kappa wird als Vergleichsanker zur Referenzliteratur berichtet. Basis: 291 Papers mit beiden Assessments, Kappa 0,056 ("slight"), Kategorie-Kappas 0,39--0,82. Details: `knowledge/status.md` M6.
-
-**Benchmark-Scripts:**
-
-| Script | Funktion |
+| Script | Function |
 |--------|----------|
-| `benchmark/scripts/generate_papers_csv.py` | Zotero JSON -> papers_full.csv (326 Zeilen) |
-| `benchmark/scripts/run_llm_assessment.py` | Benchmark-Assessment (10K, 326/326) |
-| `benchmark/scripts/merge_assessments.py` | Human + LLM zusammenfuehren (per Zotero_Key, 291 Overlap) |
-| `benchmark/scripts/calculate_agreement.py` | Cohen's Kappa + Konfusionsmatrix berechnen |
-| `benchmark/scripts/analyze_disagreements.py` | Disagreement-Identifikation (142 Faelle) |
-
-Ergebnisse: siehe `status.md`, Abschnitt M6
+| `benchmark/scripts/generate_papers_csv.py` | Zotero JSON -> papers_full.csv (326 rows) |
+| `benchmark/scripts/run_llm_assessment.py` | Benchmark assessment (10K, 326/326) |
+| `benchmark/scripts/merge_assessments.py` | Merge human + LLM (by Zotero_Key, 291 overlap) |
+| `benchmark/scripts/calculate_agreement.py` | Compute Cohen's Kappa + confusion matrix |
+| `benchmark/scripts/analyze_disagreements.py` | Disagreement identification (142 cases) |
 
 ---
 
-## Phase 3: Synthese (PDF -> Markdown -> Knowledge Documents)
+## Phase 3: Synthesis (PDF -> Markdown -> Knowledge Documents)
 
-### Pipeline-Workflow
+### Pipeline Workflow
 
-| Schritt | Script | Input | Output | Wichtige Parameter |
-|---------|--------|-------|--------|-------------------|
-| 1. PDF-Download | `download_zotero_pdfs.py` | Zotero Group | `pipeline/pdfs/` | `--output` |
-| 2. Markdown-Konversion | `convert_to_markdown.py` | PDFs | `pipeline/markdown/` | `--input`, `--output`, `--no-page-markers` |
-| 3. Validierung | `validate_markdown_enhanced.py` | Markdown + PDFs | `pipeline/validation_reports/` | `--md-dir`, `--pdf-dir`, `--output-dir` |
-| 4. Post-Processing | `postprocess_markdown.py` | Markdown | `pipeline/markdown_clean/` | `--input-dir`, `--output-dir` |
-| 5. Human Review | `markdown_reviewer.html` | Markdown + PDFs | JSON-Export | Via Live Server oeffnen |
-| 6. Knowledge Distillation | `distill_knowledge.py` | Markdown | `pipeline/knowledge/distilled/` | `--input`, `--output`, `--limit` |
-| 7. Vault-Building | `generate_vault.py` | Knowledge Docs + Assessment CSVs + Zotero | `vault/` + `docs/downloads/vault.zip` | `--path`, `--vault-name`, `--clean` |
+| Step | Script | Input | Output | Key parameters |
+|------|--------|-------|--------|----------------|
+| 1. PDF download | `download_zotero_pdfs.py` | Zotero Group | `pipeline/pdfs/` | `--output` |
+| 2. Markdown conversion | `convert_to_markdown.py` | PDFs | `pipeline/markdown/` | `--input`, `--output` |
+| 3. Validation | `validate_markdown_enhanced.py` | Markdown + PDFs | `pipeline/validation_reports/` | `--md-dir`, `--pdf-dir` |
+| 4. Post-processing | `postprocess_markdown.py` | Markdown | `pipeline/markdown_clean/` | `--input-dir`, `--output-dir` |
+| 5. Human review | `markdown_reviewer.html` | Markdown + PDFs | JSON export | Via Live Server |
+| 6. Knowledge distillation | `distill_knowledge.py` | Markdown | `pipeline/knowledge/distilled/` | `--input`, `--output`, `--limit` |
+| 7. Vault building | `generate_vault.py` | Knowledge docs + assessment CSVs | `vault/` | `--path`, `--clean` |
 
-Alle Scripts befinden sich in `pipeline/scripts/`. Vollstaendige Parameter via `--help`.
+All scripts in `pipeline/scripts/`. Full parameters via `--help`.
 
-### PDF-Akquise
+### PDF Acquisition
 
-**Script:** `acquire_pdfs.py` -- 4 Fallback-Strategien: Zotero, DOI, Unpaywall, ArXiv
+**Script:** `acquire_pdfs.py` -- 4 fallback strategies: Zotero, DOI, Unpaywall, ArXiv
 
-**Script:** `download_zotero_pdfs.py` -- PDFs von Zotero herunterladen
+**Result:** 257/326 PDFs downloaded (78.8%)
 
-**Ergebnis:** 257/326 PDFs heruntergeladen (78.8%)
+### Markdown Conversion
 
-### Markdown-Konversion
+**Script:** `convert_to_markdown.py` -- PDF to Markdown with Docling
 
-**Script:** `convert_to_markdown.py` -- PDF zu Markdown mit Docling (inkl. optionale Seiten-Marker)
+**Result:** 252/257 converted (98.1%), 5 failed (corrupt formats), 9 duplicates removed
 
-**Ergebnis:** 252/257 konvertiert (98.1%), 5 fehlgeschlagen (korrupte Formate), 9 Dubletten entfernt
+### Validation
 
-### Validierung
+**Script:** `validate_markdown_enhanced.py` -- Multi-layer validation:
 
-**Script:** `validate_markdown_enhanced.py` -- Multi-Layer Validierungssystem:
-
-| Layer | Pruefung | Schwellwert |
-|-------|----------|-------------|
-| 1. Syntaktisch | GLYPH-Placeholder, Unicode-Fehler | max 50 / max 5% |
-| 2. Strukturell | Character-Ratio (MD/PDF) | min 0.7 |
-| 3. Semantisch | LLM Spot-Check | Optional, 10% Sample |
-| 4. Manual | Review Queue | Priorisiert nach Konfidenz |
+| Layer | Check | Threshold |
+|-------|-------|-----------|
+| 1. Syntactic | GLYPH placeholders, Unicode errors | max 50 / max 5% |
+| 2. Structural | Character ratio (MD/PDF) | min 0.7 |
+| 3. Semantic | LLM spot-check | Optional, 10% sample |
+| 4. Manual | Review queue | Prioritized by confidence |
 
 ### Post-Processing
 
-**Script:** `postprocess_markdown.py` -- Konservative Bereinigung:
-
-| Operation | Beschreibung | Sicherheit |
-|-----------|--------------|------------|
-| Hyphenation-Fix | Silbentrennungen zusammenfuegen | Sicher |
-| Page Number Removal | Verwaiste Seitenzahlen entfernen | Sicher |
-| Header Removal | Journal-Header (>10x + Pattern) | Konservativ |
-| Newline Normalization | Max 2 Leerzeilen | Sicher |
-| All-Caps Removal | **DEAKTIVIERT** | Zu riskant |
+**Script:** `postprocess_markdown.py` -- Conservative cleanup (hyphenation fix, page numbers, header removal)
 
 ### Human Review Tool
 
-**Tool:** `pipeline/tools/markdown_reviewer.html` -- Browser-Tool fuer Human-in-the-Loop Review
+**Tool:** `pipeline/tools/markdown_reviewer.html` -- Browser tool for human-in-the-loop review
 
-**Features:** Seiten-Ansicht (PDF + Markdown pro Seite), Split-Ansicht, PASS/WARN/FAIL Bewertung, Export/Import als JSON, LocalStorage-Persistenz
-
-**Keyboard-Shortcuts:** `1` PASS | `2` WARN | `3` FAIL | `0` Reset | `<-` `->` Navigation | `L` Liste | `V` Ansicht
+**Keyboard shortcuts:** `1` PASS | `2` WARN | `3` FAIL | `0` Reset | `<-` `->` Navigation
 
 ### Knowledge Distillation (3-Stage SKE)
 
-**Script:** `distill_knowledge.py` -- Dreistufiger Workflow:
+**Script:** `distill_knowledge.py` -- Three-stage workflow:
 
-| Stage | Funktion | Input | Output | API-Call |
+| Stage | Function | Input | Output | API call |
 |-------|----------|-------|--------|----------|
-| 1 | Extract & Classify | Markdown | JSON | Ja |
-| 2 | Format Markdown | JSON | Markdown | Nein (lokal) |
-| 3 | Verify | Markdown + Original | JSON | Ja |
+| 1 | Extract & classify | Markdown | JSON | Yes |
+| 2 | Format Markdown | JSON | Markdown | No (local) |
+| 3 | Verify | Markdown + original | JSON | Yes |
 
-**Output-Format (Markdown mit YAML-Frontmatter):**
+**Key parameters:**
 
-```markdown
----
-title: "Paper Titel"
-authors: ["Autor1", "Autor2"]
-year: 2024
-type: journalArticle
-categories:
-  - AI_Literacies
-  - Soziale_Arbeit
-confidence: 95
-processed: 2026-02-04
-source_file: paper.md
----
-
-# Paper Titel
-
-## Kernbefund
-[1-2 Saetze]
-
-## Forschungsfrage
-[1 Satz]
-
-## Methodik
-[Kurzbeschreibung]
-
-## Hauptargumente
-- Argument 1
-
-## Kategorie-Evidenz
-### AI_Literacies
-[Evidenz-Zitat]
-
-## Schluesselreferenzen
-- [[Autor_Jahr]] - Kurztitel
-```
-
-**Wichtige Parameter:**
-
-| Parameter | Standard | Beschreibung |
-|-----------|----------|--------------|
-| `--input` | `pipeline/markdown` | Input-Verzeichnis |
-| `--output` | `pipeline/knowledge/distilled` | Output-Verzeichnis |
-| `--limit` | - | Anzahl Dokumente begrenzen |
-| `--delay` | 1.0 | Sekunden zwischen API-Calls |
-| `--no-skip` | False | Bereits verarbeitete nicht ueberspringen |
+| Parameter | Default | Description |
+|-----------|---------|-------------|
+| `--input` | `pipeline/markdown` | Input directory |
+| `--output` | `pipeline/knowledge/distilled` | Output directory |
+| `--limit` | - | Limit number of documents |
+| `--delay` | 1.0 | Seconds between API calls |
 
 ---
 
-## Qualitaetsbewertung
+## Quality Assessment
 
-### Bibliographische Validierung
+### Bibliographic Validation
 
-- DOI-Validierung ueber CrossRef API
-- Autoren-Disambiguierung via ORCID
-- Journal-Verifikation gegen DOAJ und Beall's List
+- DOI validation via CrossRef API
+- Author disambiguation via ORCID
+- Journal verification against DOAJ and Beall's List
 
-### Methodische Rigorositaet
+### Alternative Review Standards
 
-**Empirische Studien:** Stichprobengroesse und Repraesentativitaet, Methodentransparenz und Reproduzierbarkeit, Statistische Power und Effektstaerken
-
-**Theoretische Arbeiten:** Konzeptuelle Klarheit, Argumentationslogik, Integration bestehender Literatur
-
-### Alternative Review-Standards
-
-| Standard | Fokus | Anwendung |
-|----------|-------|-----------|
-| JBI Manual | Pluralistische Evidenz | 13 Checklisten fuer verschiedene Studientypen |
-| Cochrane 6.5 | Gesundheitsinterventionen | RoB 2, ROBINS-I |
-| ENTREQ | Qualitative Synthesen | 21 Items fuer Reflexivitaet |
-| MMAT | Mixed-Methods | 5 studientypspezifische Kriterien |
+| Standard | Focus | Application |
+|----------|-------|-------------|
+| JBI Manual | Pluralistic evidence | 13 checklists for different study types |
+| Cochrane 6.5 | Health interventions | RoB 2, ROBINS-I |
+| ENTREQ | Qualitative syntheses | 21 items for reflexivity |
+| MMAT | Mixed methods | 5 study-type-specific criteria |
 
 ---
 
-## Zirkularitaet als Feldbedingung
+## Circularity as a Field Condition
 
-LLMs werden eingesetzt, um Literatur ueber den Einsatz von LLMs zu untersuchen. Feministische AI Literacies sind zugleich Gegenstand des Reviews und Voraussetzung des Workflows. Die Qualitaet des Prompts, der die Deep-Research-Abfrage steuert, haengt von Kompetenzen ab, die im Review selbst erst untersucht werden.
-
-Diese Zirkularitaet ist nicht aufloesbar und wird nicht als methodischer Mangel, sondern als Bedingung des Feldes behandelt. Die Dokumentation dieser Abhaengigkeit im Workflow und im Repository ist die epistemische Infrastruktur, die an die Stelle einer nicht erreichbaren Neutralitaet tritt.
+LLMs are used to examine literature on the use of LLMs. Feminist AI literacies are simultaneously the subject of the review and a prerequisite of the workflow. This circularity cannot be resolved and is treated not as a methodological flaw but as a condition of the field.
 
 ---
 
-## Verzeichnisstruktur
+## Directory Structure
 
-| Verzeichnis | Inhalt | Dateien |
-|-------------|--------|---------|
-| `pipeline/scripts/` | Python-Scripts | download_zotero_pdfs.py, convert_to_markdown.py, validate_markdown_enhanced.py, postprocess_markdown.py, distill_knowledge.py, generate_vault.py, utils.py |
-| `pipeline/tools/` | Browser-Tools | markdown_reviewer.html |
-| `pipeline/pdfs/` | Heruntergeladene PDFs | 257 Dateien |
-| `pipeline/markdown/` | Konvertierte Dokumente | 252 Dateien |
-| `pipeline/markdown_clean/` | Post-Processed Dokumente | Bereinigt |
-| `pipeline/validation_reports/` | Validierungsberichte | JSON, CSV, MD Reports |
-| `pipeline/knowledge/distilled/` | Destillierte Wissensdokumente | 249 Dateien |
-| `pipeline/knowledge/_stage1_json/` | Stage 1 Zwischenergebnisse | JSON |
-| `pipeline/knowledge/_verification/` | Verifikationsberichte | JSON |
-| `benchmark/config/` | Benchmark-Konfiguration | categories.yaml |
-| `benchmark/scripts/` | Benchmark-Scripts | run_llm_assessment, merge, calculate, analyze |
-| `benchmark/data/` | Assessment-Daten | human_assessment.csv, llm_assessment_10k.csv, papers_full.csv |
-| `benchmark/results/` | Ergebnisse | agreement_metrics.json, disagreements.csv |
-| `corpus/` | Korpus-Metadaten | zotero_export.json, papers_metadata.csv, source_tool_mapping.json |
-| `deep-research/restored/` | Deep-Research-Artefakte | 4 RIS-Dateien, 3 Raw-Outputs, ris-template.md |
-| `docs/` | GitHub Pages SPA + Promptotyping-Interface | index.html (Research Vault), promptotyping.html (Promptotyping v2) |
-| `docs/data/` | Generierte JSON-Daten fuer SPAs | research_vault_v2.json, promptotyping_v2.json |
-| `docs/css/` | Stylesheets | research.css (Design-System), promptotyping.css (pt-* Namespace) |
-| `docs/js/` | JavaScript | app.js, features.js (SPA), promptotyping-app.js (Promptotyping v2) |
-| `scripts/` | Projekt-uebergreifende Scripts | generate_vault_v2.py, generate_promptotyping_data_v2.py |
-| `.vault_cache/` | LLM-API-Ergebnis-Cache (nicht committet) | concepts/ (249 JSON), divergences/ (111 JSON) |
+| Directory | Contents | Files |
+|-----------|----------|-------|
+| `pipeline/scripts/` | Python scripts | All pipeline scripts |
+| `pipeline/tools/` | Browser tools | markdown_reviewer.html |
+| `pipeline/pdfs/` | Downloaded PDFs | 257 files |
+| `pipeline/markdown/` | Converted documents | 252 files |
+| `pipeline/markdown_clean/` | Post-processed documents | Cleaned |
+| `pipeline/knowledge/distilled/` | Distilled knowledge documents | 249 files |
+| `pipeline/knowledge/_stage1_json/` | Stage 1 intermediate results | JSON |
+| `pipeline/knowledge/_verification/` | Verification reports | JSON |
+| `benchmark/config/` | Benchmark configuration | categories.yaml |
+| `benchmark/scripts/` | Benchmark scripts | merge, calculate, analyze |
+| `benchmark/data/` | Assessment data | human_assessment.csv, llm_assessment_10k.csv |
+| `benchmark/results/` | Results | agreement_metrics.json, disagreements.csv |
+| `corpus/` | Corpus metadata | zotero_export.json, papers_metadata.csv |
+| `docs/` | GitHub Pages SPA | index.html, about.html, methoden.html, help.html |
+| `docs/data/` | Generated JSON data | research_vault_v2.json, promptotyping_v2.json |
+| `scripts/` | Project-wide scripts | generate_vault_v2.py, generate_promptotyping_data_v2.py |
+| `.vault_cache/` | LLM API result cache (not committed) | concepts/ (249 JSON), divergences/ (111 JSON) |
 
 ---
 
-## Script-Referenz (alle Scripts)
+## Script Reference
 
 ### Pipeline Scripts (pipeline/scripts/)
 
-| Script | Funktion | Status |
+| Script | Function | Status |
 |--------|----------|--------|
-| `download_zotero_pdfs.py` | PDFs von Zotero herunterladen | Getestet |
-| `acquire_pdfs.py` | PDF-Akquise mit 4 Fallback-Strategien | Getestet |
-| `convert_to_markdown.py` | PDF zu Markdown mit Docling (inkl. Seiten-Marker) | Getestet |
-| `validate_markdown_enhanced.py` | Multi-Layer Validierung + PDF-Vergleich | Getestet |
-| `postprocess_markdown.py` | Konservative Artefakt-Bereinigung | Getestet |
-| `pdf_to_images.py` | PDF-Seiten als Bilder extrahieren (fuer Reviewer) | Getestet |
-| `summarize_documents.py` | Dokument-Zusammenfassungen | Getestet |
-| `distill_knowledge.py` | Knowledge Distillation (3-Stage) | Abgeschlossen (249 Docs) |
-| `validate_knowledge_docs.py` | Knowledge-Dokument-Validierung | Getestet |
-| `verify_knowledge_quality.py` | Qualitaetspruefung Knowledge Docs | Abgeschlossen |
-| `validate_pipeline.py` | Pipeline-Validierung (End-to-End) | Getestet |
-| `generate_vault.py` | Obsidian Vault v1 (flacher Index, Keyword-basiert) | Archiviert (ersetzt durch scripts/generate_vault_v2.py) |
-| `generate_docs_data.py` | SPA-Daten generieren (research_vault_v2.json) | Getestet |
-| `utils.py` | Zentrale Hilfsfunktionen (Logging, API, Config) | Aktiv |
+| `download_zotero_pdfs.py` | Download PDFs from Zotero | Tested |
+| `acquire_pdfs.py` | PDF acquisition with 4 fallback strategies | Tested |
+| `convert_to_markdown.py` | PDF to Markdown with Docling | Tested |
+| `validate_markdown_enhanced.py` | Multi-layer validation + PDF comparison | Tested |
+| `postprocess_markdown.py` | Conservative artifact cleanup | Tested |
+| `distill_knowledge.py` | Knowledge distillation (3-stage) | Complete (249 docs) |
+| `generate_vault.py` | Obsidian Vault v1 (archived, replaced by v2) | Archived |
+| `generate_docs_data.py` | Generate SPA data (research_vault_v2.json) | Tested |
 
-### Dokumentations-Scripts (scripts/)
+### Project Scripts (scripts/)
 
-| Script | Funktion | Status |
+| Script | Function | Status |
 |--------|----------|--------|
-| `generate_vault_v2.py` | Vault v2 Generator: LLM-Konzept-Extraktion, Divergenz-Klassifikation, 4 Dokumenttypen | Abgeschlossen |
-| `generate_promptotyping_data_v2.py` | Promptotyping v2 JSON generieren (Paper-Journeys, Konzept-Graph, Divergenzen, Sankey-Flow) | Abgeschlossen |
-| `generate_promptotyping_data.py` | Promptotyping v1 Daten (veraltet, ersetzt durch v2) | Archiviert |
-
-### Corpus Scripts (corpus/)
-
-| Script | Funktion |
-|--------|----------|
-| `extract_metadata.py` | Metadaten aus Zotero-Export extrahieren |
-
-### Assessment Scripts
-
-| Script | Funktion |
-|--------|----------|
-| `assessment/llm-5d/scripts/assess_papers.py` | LLM-basiertes PRISMA-Assessment (5D) |
-| `assessment/llm-5d/scripts/write_llm_tags_to_zotero.py` | LLM-Tags in Zotero schreiben |
-| `assessment/human/create_thematic_assessment.py` | Excel fuer manuelles Assessment |
-| `assessment/human/excel_to_zotero_tags.py` | Excel-Tags in Zotero uebertragen |
+| `generate_vault_v2.py` | Vault v2 generator: LLM concept extraction, divergence classification | Complete |
+| `generate_promptotyping_data_v2.py` | Generate Promptotyping v2 JSON | Complete |
 
 ---
 
-## Performance & Kosten
+## Performance & Costs
 
-### PDF->Markdown Pipeline (2026-02-03)
+### API Costs
 
-| Phase | Ergebnis | Dauer |
-|-------|----------|-------|
-| PDF-Download | 257/326 PDFs | ~10 min |
-| Markdown-Konversion | 252/257 (98.1%) | ~45 min |
-| Dubletten-Bereinigung | 9 entfernt | - |
-| **Finale Dokumente** | **252 Markdown, 257 PDFs** | - |
-| Post-Processing | 107k Zeichen bereinigt | ~2 min |
+| Operation | Cost | Status |
+|-----------|------|--------|
+| PDF acquisition | $0 | Complete |
+| Markdown conversion | $0 | Complete |
+| Knowledge distillation (249 papers) | ~$7.00 | Complete |
+| 5D LLM assessment (325 papers) | $1.15 | Complete |
+| 10K LLM assessment (326 papers) | $1.44 | Complete |
+| Vault v2 concept extraction (249 papers) | ~$0.75 | Complete |
+| Vault v2 divergence classification (111 cases) | ~$0.22 | Complete |
+| **Total** | **~$11.14** | |
 
-### Human Review (Stichprobe)
-
-| Metrik | Wert |
-|--------|------|
-| Geprueft | 25/252 (~10%) |
-| PASS | 20 (80%) |
-| WARN | 4 (16%) |
-| FAIL | 1 (4%) |
-
-### Knowledge Distillation (Abgeschlossen)
-
-| Metrik | Wert |
-|--------|------|
-| Dokumente verarbeitet | 249/252 (98.8%) |
-| Verifizierte Qualitaet | 242/249 (97.2% Score >= 75) |
-| Kosten (gesamt) | ~$7 |
-| API-Calls pro Paper | 2 (Stage 2 lokal) |
-
-### API-Kosten
-
-| Operation | Kosten | Status |
-|-----------|--------|--------|
-| PDF-Akquise | $0 | Abgeschlossen |
-| Markdown-Konversion | $0 | Abgeschlossen |
-| Validierung | $0 | Abgeschlossen |
-| Post-Processing | $0 | Abgeschlossen |
-| 5D LLM-Assessment (325 Papers) | $1.15 | Abgeschlossen |
-| Knowledge Distillation (249 Papers) | ~$7.00 | Abgeschlossen |
-| 10K LLM-Assessment (326 Papers) | $1.44 | Abgeschlossen |
-| Vault v2 Konzept-Extraktion (249 Papers) | ~$0.75 | Abgeschlossen |
-| Vault v2 Divergenz-Klassifikation (111 Faelle) | ~$0.22 | Abgeschlossen |
-| **Gesamt** | **~$11.14** | |
-
-**Modell:** Claude Haiku 4.5 ($1.00/MTok Input, $5.00/MTok Output, Preise Stand Feb 2026)
+**Model:** Claude Haiku 4.5 ($1.00/MTok input, $5.00/MTok output, prices as of Feb 2026)
 
 ---
 
-## Vault v2 (Promptotyping)
+## Vault v2
 
-### Architektur
+### Architecture
 
-Der Vault v2 (`scripts/generate_vault_v2.py`) ersetzt den flachen Paper-Index (v1) durch ein epistemisches Netzwerk mit 4 Dokumenttypen:
+Vault v2 (`scripts/generate_vault_v2.py`) replaces the flat paper index (v1) with an epistemic network comprising 4 document types:
 
-| Typ | Anzahl | Inhalt |
-|-----|--------|--------|
-| **Paper Notes** | 248 | YAML-Frontmatter (Assessment-Daten), Transformation-Trail (Stage1 -> Stage3 -> Assessment), Konzept-Wikilinks, Wissensdokument-Volltext |
-| **Concept Notes** | 136 | LLM-extrahierte Definitionen, Frequency, Co-Occurrence-Tabelle, Paper-Backlinks, Assessment-Divergenz-Stats |
-| **Pipeline Notes** | 5 | Stufen-Beschreibung, Prompts (aus Code extrahiert), Konfiguration, Limitationen |
-| **Divergenz Notes** | 111 | Pattern-Klassifikation, Kategorie-Vergleichstabelle, LLM-Reasoning, betroffene Konzepte |
+| Type | Count | Contents |
+|------|-------|----------|
+| **Paper Notes** | 248 | YAML frontmatter (assessment data), transformation trail, concept wikilinks, knowledge document full text |
+| **Concept Notes** | 136 | LLM-extracted definitions, frequency, co-occurrence table, paper backlinks |
+| **Pipeline Notes** | 5 | Stage descriptions, prompts (extracted from code), configuration |
+| **Divergence Notes** | 111 | Pattern classification, category comparison table, LLM reasoning |
 
-### LLM-basierte Konzept-Extraktion
+### LLM-Based Concept Extraction
 
-- 249 API-Calls an Claude Haiku 4.5 (~$0.75)
-- 3-8 Fachkonzepte pro Paper (englische kanonische Form)
-- Post-Processing: Synonym-Merge (~35 manuelle Eintraege), Frequency-Filter (>= 2)
-- Ergebnis: 136 konsolidierte Konzepte mit Co-Occurrence-Matrix
-- Cache: `.vault_cache/concepts/` (JSON)
+- 249 API calls to Claude Haiku 4.5 (~$0.75)
+- 3-8 domain concepts per paper (English canonical form)
+- Post-processing: synonym merge (~35 manual entries), frequency filter (>= 2)
+- Result: 136 consolidated concepts with co-occurrence matrix
 
-### LLM-basierte Divergenz-Klassifikation
+### LLM-Based Divergence Classification
 
-- 111 API-Calls an Claude Haiku 4.5 (~$0.22), Reklassifikation mit Sonnet 4.6
-- 3 Muster (nach Reklassifikation): Semantische Expansion (52%), Implizite Feldzugehoerigkeit (30%), Keyword-Inklusion (18%)
-- Hinweis: 142 Disagreements gesamt (nach Merge-Bug-Fix), Vault enthaelt 111 Divergenz-Dateien (Regeneration offen)
-- Cache: `.vault_cache/divergences/` (JSON)
+- 111 API calls to Claude Haiku 4.5 (~$0.22), reclassification with Sonnet 4.6
+- 3 patterns (after reclassification): Semantic Expansion (52%), Implicit Field Affiliation (30%), Keyword Inclusion (18%)
+- Note: 142 disagreements total (after merge bug fix), Vault contains 111 divergence files (regeneration pending)
 
-### Titel-Matching (5 Strategien)
+### Title Matching (5 Strategies)
 
-| Strategie | Beschreibung | Treffer |
-|-----------|-------------|---------|
-| 1 | Stage1-JSON `metadata.title` -> Zotero-Title | Primaer |
-| 2 | KD-YAML-Frontmatter `title` -> Zotero-Title | Sekundaer |
-| 3 | Filename-Prefix-Matching | Tertiaer |
-| 4 | Autor+Jahr aus Filename vs. Zotero `creators[0]` + `date` | Quartaer |
-| 5 | `difflib.SequenceMatcher` (Schwelle 0.65) | Fallback |
+| Strategy | Description | Matches |
+|----------|-------------|---------|
+| 1 | Stage1-JSON `metadata.title` -> Zotero title | Primary |
+| 2 | KD YAML frontmatter `title` -> Zotero title | Secondary |
+| 3 | Filename prefix matching | Tertiary |
+| 4 | Author+year from filename vs. Zotero | Quaternary |
+| 5 | `difflib.SequenceMatcher` (threshold 0.65) | Fallback |
 
-Ergebnis: 237/249 (vs. 226/249 in v1). 12 ungematchte = echte Datenqualitaetsprobleme (halluzinierte Titel, nicht-standardisierte Autorennamen).
-
-### Web-Interface (4 Views)
-
-**Datei:** `docs/promptotyping.html` + `docs/css/promptotyping.css` + `docs/js/promptotyping-app.js`
-**Daten:** `docs/data/promptotyping_v2.json` (1.0 MB)
-**CDN:** D3 v7.9.0, d3-sankey v0.12.3, Chart.js 4.4.0, FontAwesome 6.5.1
-
-| View | Technologie | Funktion |
-|------|-------------|----------|
-| Pipeline-Durchlicht | D3 Sankey | 326 Papers durch 5 Stufen, Dropout-Baender, Stufen-Detail mit Prompts |
-| Paper Journey | Vanilla JS | Suche, horizontale Timeline, expandierbare Stage-Details |
-| Konzept-Explorer | D3 Force Graph | Frequency-Slider, Zoom/Pan/Drag, Co-Occurrence-Edges |
-| Divergenz-Navigator | Vanilla JS | Summary-Karten, Pattern/Typ-Filter, Kategorie-Vergleichstabelle |
+Result: 237/249 (vs. 226/249 in v1).
 
 ---
 
-## Fehlerbehandlung
+## Error Handling
 
-### Windows-Encoding
+### Windows Encoding
 
-Die Funktion `setup_windows_encoding()` in `utils.py` konfiguriert UTF-8 Encoding fuer Windows-Konsolen.
+`setup_windows_encoding()` in `utils.py` configures UTF-8 encoding for Windows consoles.
 
 ### HTTP 429 (Rate Limit)
 
-Bei Rate-Limit-Fehlern den Delay zwischen API-Calls erhoehen (Standard: 2 Sekunden, empfohlen: 5 Sekunden).
-
-### Fehlgeschlagene Konvertierungen (5)
-
-- `British_Association_of_Social_Workers_2025_Generat.pdf` - Data format error
-- `Browne_2023_Feminist_AI_Critical_Perspectives_on_Algorithms,.pdf` - Page dimension error
-- `Ulnicane_2024_Intersectionality_in_Artificial_Intelligence.pdf` - Conversion failure
-- `UNESCO__IRCAI_2024_Challenging.pdf` - Not valid
-- `Workers_2025_Generative.pdf` - Not valid
+Increase delay between API calls (default: 2 seconds, recommended: 5 seconds).
 
 ---
 
-## Dokumentierte LLM-Probleme
-
-Im bisherigen Durchlauf lieferte Deep Research ueberpruefbare Quellen. Dokumentierte Probleme:
-
-| Typ | Beschreibung | Quelle |
-|---|---|---|
-| Nicht verifizierbarer Eintrag | Ein Deep-Research-Eintrag konnte nicht verifiziert werden | Paper-Text, Abschnitt "LLM-gestuetzter Pfad" |
-| PDF-Upstream-Probleme | 5 Dokumente mit korrupten/falschen PDFs (kein LLM-Problem) | `pipeline/knowledge/_verification/` |
-| Niedrige Uebereinstimmung | 2 Dokumente mit niedrigem Score bei kurzen Texten (inhaltlich korrekt) | Verifikations-Report |
-
-**Wichtig:** Die Pipeline-Fehler (PDF-Upstream) sind Probleme in der Datenbeschaffung, keine LLM-Fehler. Der einzige nicht verifizierbare Eintrag betrifft die Deep-Research-Phase (Identifikation), nicht die Pipeline-Verarbeitung.
-
----
-
-## Bekannte Dokumentationsfehler (korrigiert)
-
-| Datei | Fehler | Korrektur | Datum |
-|---|---|---|---|
-| CLAUDE.md | "8 fallback strategies" | Korrigiert auf 4 (Zotero, DOI, Unpaywall, ArXiv) | 2026-02-18 |
-| 03-status.md (alt) | "303 (254 DeepResearch + 49 Human 1 Collection)" | Tatsaechlich 305 in CSV (254 DR + 50 Manual + 1 leer) | 2026-02-14 |
-
----
-
-*Aktualisiert: 2026-02-23*
+*Updated: 2026-04-01*

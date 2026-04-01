@@ -1,33 +1,68 @@
 # Working Rules for Claude AI Assistant
 
-**Project:** FemPrompt SozArb -- Systematischer Literature Review zu AI Literacy & LLM-Bias im Kontext Sozialer Arbeit
+**Project:** FemPrompt SozArb -- Systematic Literature Review on Feminist AI Literacies in Social Work
 **Last Updated:** 2026-04-01
+
+---
+
+## Core Argument
+
+This project builds an **epistemic infrastructure** for an LLM-assisted literature review. The central thesis: reliability cannot be presupposed as a property of the system but must be established as a property of the research process. The workflow is organized around **verification checkpoints** -- defined points after each AI-assisted step where human or rule-based control checks results before they flow into the next stage.
+
+326 scientific papers were identified via 4 proprietary Deep Research systems (OpenAI, Google, Perplexity, Anthropic) and processed through a five-step workflow. A **dual assessment track** runs expert and LLM evaluation in parallel on the same 10-category schema, without mutual knowledge. The result: substantial divergence (LLM include rate 71.5% vs. expert 46.0%), asymmetrically distributed (108 cases LLM-Include/Expert-Exclude vs. 34 reversed). This divergence is the empirical core -- it demonstrates why the infrastructure is necessary.
+
+The paper (Forum Wissenschaft 2/2026, deadline May 4) is being written on Google Docs, not in this repo.
+
+---
+
+## Key Terminology
+
+Use these terms consistently. They are defined in `knowledge/project.md` (glossary).
+
+| Term | Definition |
+|------|------------|
+| Epistemic infrastructure | Systematic arrangement of tools, decision rules, verification checkpoints, and responsibility assignments that establishes reliability in a research process |
+| Distillation pipeline | 3-stage knowledge extraction from full texts: (1) LLM extract + classify, (2) deterministic formatting, (3) LLM verification against original |
+| Dual assessment track | Parallel, independent evaluation by experts and LLM using identical 10-category schema |
+| Verification checkpoint | Defined point where human or rule-based control checks AI-generated results |
+| Knowledge document | Structured summary of a paper with core finding, methodology, arguments, category evidence, confidence score |
+| Confabulation | Generation of coherent but factually unsupported claims (preferred over "hallucination") |
+| Context rot | Degradation of LLM processing quality with increasing input length (Hong et al. 2025) |
+| Sycophancy | LLM tendency to over-agree with prompt presuppositions |
+| Deep Research | Agent-based LLM systems for iterative, autonomous literature search |
+| Evidence Companion | The web-based academic companion publication at chpollin.github.io/FemPrompt_SozArb |
 
 ---
 
 ## Project Overview
 
-326 wissenschaftliche Papers werden durch eine 5-stufige LLM-Pipeline verarbeitet (Identifikation -> PDF-Akquise -> Markdown-Konversion -> Wissensextraktion -> Assessment). Kernfrage: **Was passiert mit Wissen, wenn es durch eine LLM-Pipeline fliesst?**
+326 papers are processed through a five-step workflow (Identification -> PDF Acquisition -> Markdown Conversion -> Knowledge Extraction -> Assessment). Core question: **What happens to knowledge when it flows through a distillation pipeline?**
 
-Das Projekt hat drei Schichten:
-1. **Obsidian Vault** -- 505 Markdown-Dateien (248 Papers, 136 Konzepte, 111 Divergenzen [142 nach Bug-Fix, Vault-Regeneration offen], 5 Pipeline-Stufen, MOCs)
-2. **Evidence Companion** -- `docs/index.html` + Unterseiten (`about.html`, `help.html`). 4 Views: Wissens-Chat, Wissensnetz, Bewertungsvergleich, Korpus. Live: https://chpollin.github.io/FemPrompt_SozArb/
-3. **Paper** -- Forum Wissenschaft 2/2026, Deadline 4. Mai 2026 (auf Google Docs, nicht im Repo)
+The project has three layers:
+1. **Obsidian Vault** -- 505 Markdown files (248 Papers, 136 Concepts, 111 Divergences [142 after bug fix, vault regeneration pending], 5 Pipeline stages, MOCs)
+2. **Evidence Companion** -- `docs/index.html` + subpages. 4 Views: Knowledge Chat, Knowledge Graph, Categories, Corpus. Live: https://chpollin.github.io/FemPrompt_SozArb/
+3. **Paper** -- Forum Wissenschaft 2/2026, deadline May 4, 2026 (on Google Docs, not in repo)
 
-### Leitkonzepte
+### Benchmark Results (correct since 2026-03-27)
 
-- **Benchmark-Ergebnisse (korrekt seit 2026-03-27):** LLM Include-Rate 71,5% vs. Human 46,0% = 25,5 Prozentpunkte Differenz. 108x LLM-Include/Human-Exclude vs. 34x umgekehrt. Basis: 291 Papers.
-- **Drei epistemische Haltungen:** Zeigen was ist (blau, Ergebnis) / Zeigen wie es entstanden ist (gruen, Prozess) / Zeigen was nicht geht (orange, Grenze)
-- **Kappa:** Decision-Kappa 0,056 ("slight"). Kategorie-Kappas 0,39--0,82 (Soziale_Arbeit am hoechsten, Gender am niedrigsten).
-- **Divergenz-Muster:** 142 Disagreements identifiziert. 3 Muster: Semantische Expansion (52%), Implizite Feldzugehoerigkeit (30%), Keyword-Inklusion (18%). Vault enthaelt 111 Divergenz-Dateien (Regeneration offen).
+| Metric | Value |
+|--------|-------|
+| LLM Include Rate | 71.5% (208/291) |
+| Human Include Rate | 46.0% (134/291) |
+| Difference | 25.5 percentage points |
+| LLM-Include/Human-Exclude | 108 cases |
+| Human-Include/LLM-Exclude | 34 cases |
+| Cohen's Kappa (decision) | 0.056 ("slight") |
+| Category Kappas | 0.39--0.82 (Soziale_Arbeit highest, Gender lowest) |
+| Divergence patterns | Semantic Expansion (52%), Implicit Field Membership (30%), Keyword Inclusion (18%) |
 
-### Assessment-Tracks
+### Assessment Tracks
 
-| Track | Methode | Schema | Status |
-|-------|---------|--------|--------|
-| **Human** | Google Sheets | 10 binaere Kategorien | Fertig (303/303, 142 Include, 161 Exclude) |
-| **LLM (5D)** | Claude Haiku 4.5 | 5 Dimensionen (0-3) | Fertig (archiviert) |
-| **LLM (10K)** | Claude Haiku 4.5 | 10 binaere Kategorien | Fertig (326/326, Benchmark) |
+| Track | Method | Schema | Status |
+|-------|--------|--------|--------|
+| **Human** | Google Sheets | 10 binary categories | Complete (303/303, 142 Include, 161 Exclude) |
+| **LLM (5D)** | Claude Haiku 4.5 | 5 dimensions (0-3) | Complete (archived) |
+| **LLM (10K)** | Claude Haiku 4.5 | 10 binary categories | Complete (326/326, Benchmark) |
 
 ---
 
@@ -35,125 +70,101 @@ Das Projekt hat drei Schichten:
 
 ### Directories
 
-| Verzeichnis | Inhalt | Aendern? |
-|-------------|--------|----------|
-| `knowledge/` | **Single Source of Truth** fuer alle Projektdokumentation | Ja, mit Vorsicht |
-| `pipeline/knowledge/distilled/` | 249 Knowledge-Dokumente (NICHT "vault") | Read-only |
-| `pipeline/knowledge/_stage1_json/` | Rohe JSON-Extraktionen (Kategorien als Booleans) | Read-only |
-| `pipeline/knowledge/_stage2_draft/` | Markdown-Drafts | Read-only |
-| `pipeline/knowledge/_verification/` | 219 Verifikationsdateien | Read-only |
-| `vault/` | Obsidian Vault v2 (248 Papers, 136 Concepts, 111 Divergenzen [142 nach Bug-Fix]) | Generiert |
-| `docs/` | GitHub Pages: Web-Interfaces + Daten + Downloads | Aktiv bearbeitet |
-| `docs/data/` | JSON-Daten fuer Web-Interfaces | Generiert |
-| `benchmark/` | Benchmark-Scripts + Ergebnisse + Konfiguration | Fertig |
-| `assessment/` | LLM-Assessment (5D) + Human-Assessment | Fertig |
-| `scripts/` | Generatoren (Vault v2, Promptotyping-Daten) | Aktiv bearbeitet |
-| `config/` | `defaults.yaml` -- einzige Config-Datei | Nicht aendern |
-| `.vault_cache/` | LLM-API-Cache (360 JSON-Dateien, reproduzierbar) | Nicht aendern |
-| `prompts/` | Prompt-Governance + CHANGELOG | Read-only |
+| Directory | Contents | Edit? |
+|-----------|----------|-------|
+| `knowledge/` | **Single source of truth** for all project documentation | Yes, with care |
+| `pipeline/knowledge/distilled/` | 249 knowledge documents | Read-only |
+| `pipeline/knowledge/_stage1_json/` | Raw JSON extractions (categories as booleans) | Read-only |
+| `pipeline/knowledge/_stage2_draft/` | Markdown drafts | Read-only |
+| `pipeline/knowledge/_verification/` | 219 verification files | Read-only |
+| `vault/` | Obsidian Vault v2 (248 Papers, 136 Concepts, 111 Divergences [142 after bug fix]) | Generated |
+| `docs/` | GitHub Pages: web interfaces + data + downloads | Actively edited |
+| `docs/data/` | JSON data for web interfaces | Generated |
+| `benchmark/` | Benchmark scripts + results + configuration | Complete |
+| `assessment/` | LLM Assessment (5D) + Human Assessment | Complete |
+| `scripts/` | Generators (Vault v2, Promptotyping data) | Actively edited |
+| `config/` | `defaults.yaml` -- single config file | Do not change |
+| `.vault_cache/` | LLM API cache (360 JSON files, reproducible) | Do not change |
+| `prompts/` | Prompt governance + CHANGELOG | Read-only |
 
 ### Key Files
 
-| Datei | Zweck | Aendern? |
-|-------|-------|----------|
-| `knowledge/status.md` | **Aktueller Stand, Meilensteine, Benchmark-Ergebnisse** | Ja |
-| `knowledge/journal.md` | Arbeitsjournal (chronologisch) | Ja |
-| `knowledge/methods-and-pipeline.md` | Methodik, Script-Referenz, Kosten | Selten |
-| `knowledge/README.md` | Dokumentations-Index | Ja |
-| `knowledge/FORSCHUNGSPROJEKT-PROMPTOTYPING.md` | Konzeptdokument Promptotyping | Selten |
-| `knowledge/paper-integrity.md` | Paper vs. Repo Abgleich (Paper auf Google Docs) | Selten |
-| `docs/index.html` | **Evidence Companion** (4-View SPA, Default: Wissens-Chat) | **Aktiv** |
-| `docs/about.html` | Unterseite: Projekt, Zitationsvorschlag | Aktiv |
-| `docs/methoden.html` | Unterseite: Pipeline, Kategorie-System, Nachnutzung | **Aktiv** |
-| `docs/help.html` | Unterseite: Bedienungshilfe fuer alle Views | Aktiv |
-| `docs/js/research-app.js` | Haupt-IIFE: Daten, Tabelle, Modal-Tabs, Navigation, Export (~1100 Zeilen) | **Aktiv** |
-| `docs/js/wissenschat.js` | Wissens-Chat: Gemini 3 Flash, Streaming, Zitationen (~620 Zeilen) | **Aktiv** |
-| `docs/js/wissensnetz.js` | Wissensnetz: D3 Force-Graph, Cluster-Layout, Divergenz-Modus (~780 Zeilen) | **Aktiv** |
-| `docs/js/kategorien.js` | Kategorien-Explorer: Spektrum, Detail, Cross-View (~300 Zeilen) | **Aktiv** |
-| `docs/css/research.css` | Alle Styles (~1600 Zeilen, refactored) | **Aktiv** |
-| `scripts/generate_vault_v2.py` | Vault v2 Generator (~1660 Zeilen, LLM-Calls) | Selten |
-| `benchmark/results/agreement_metrics.json` | Kanonische Benchmark-Metriken | Read-only |
-| `benchmark/config/categories.yaml` | Kanonische Kategorie-Definitionen | Read-only |
-
-### Branches
-
-| Branch | Zweck | Status |
-|--------|-------|--------|
-| `main` | **Aktiv**, M1-M13 abgeschlossen, Evidence Companion live | **Aktiv** |
-| `FemPrompt_SozArb_promptotyping-interface` | Feature-Branch (gemerged) | Archiviert |
+| File | Purpose | Edit? |
+|------|---------|-------|
+| `knowledge/status.md` | **Current state, milestones, benchmark results** | Yes |
+| `knowledge/journal.md` | Work journal (chronological) | Yes |
+| `knowledge/methods-and-pipeline.md` | Methods, script reference, costs | Rarely |
+| `knowledge/project.md` | Theory, research questions, glossary | Rarely |
+| `knowledge/README.md` | Documentation index | Yes |
+| `knowledge/paper-integrity.md` | Paper vs. repo comparison (paper on Google Docs) | Rarely |
+| `docs/index.html` | **Evidence Companion** (4-view SPA, default: Knowledge Chat) | **Active** |
+| `docs/about.html` | Subpage: project, citation suggestion | Active |
+| `docs/methoden.html` | Subpage: pipeline, category system, reuse | **Active** |
+| `docs/help.html` | Subpage: user guide for all views | Active |
+| `docs/js/research-app.js` | Main IIFE: data, table, modal tabs, navigation, export (~1100 lines) | **Active** |
+| `docs/js/wissenschat.js` | Knowledge Chat: Gemini 3 Flash, streaming, citations (~620 lines) | **Active** |
+| `docs/js/wissensnetz.js` | Knowledge Graph: D3 force graph, cluster layout, divergence mode (~780 lines) | **Active** |
+| `docs/js/kategorien.js` | Categories Explorer: spectrum, detail, cross-view (~300 lines) | **Active** |
+| `docs/css/research.css` | All styles (~1600 lines, refactored) | **Active** |
+| `scripts/generate_vault_v2.py` | Vault v2 generator (~1660 lines, LLM calls) | Rarely |
+| `benchmark/results/agreement_metrics.json` | Canonical benchmark metrics | Read-only |
+| `benchmark/config/categories.yaml` | Canonical category definitions | Read-only |
 
 ---
 
-## Web-Interfaces (docs/)
+## Evidence Companion (`docs/index.html`)
 
-### Promptotyping-Interface (`docs/promptotyping.html`)
-
-**ARCHIVIERT (ersetzt durch Evidence Companion, M12)**
-
-Das Promptotyping-Interface (5 Views: Landing, Pipeline-Sankey, Paper Journey, Konzept-Explorer, Divergenz-Navigator) wird nicht mehr weiterentwickelt. Die Dateien existieren noch im Repo, werden aber nicht mehr von `index.html` geladen.
-
-### Evidence Companion (`docs/index.html`) -- AKTIV
-
-Akademische Begleitpublikation zum Paper. Vanilla JS + Chart.js + D3 via CDN.
+Academic companion publication to the paper. Vanilla JS + Chart.js + D3 via CDN.
 
 **Live:** https://chpollin.github.io/FemPrompt_SozArb/
 
-| View | Inhalt | JS-Datei |
-|------|--------|----------|
-| **Wissens-Chat** (Default) | Gemini 3 Flash Q&A, Inline-Zitationen → Korpus, Referenzliste | `wissenschat.js` |
-| **Wissensnetz** | D3 Force-Graph, Cluster-Layout (Bridge/Sozial), Divergenz-Modus, Hover-Glow, Full-width, Always-visible Sidebar | `wissensnetz.js` |
-| **Kategorien** | 10-Kategorien-Spektrum (Gegenstand→Perspektive), Rate-Vergleich, Divergenz-Papers mit LLM-Reasoning, Konzept-Links | `kategorien.js` |
-| **Korpus** (Referenzschicht) | Sortierbare Tabelle, Filter, Detail-Modal mit Tabs (Bewertung + Wissensdokument), CSV/Markdown/Vault-Export | `research-app.js` |
+| View | Content | JS File |
+|------|---------|---------|
+| **Knowledge Chat** (default) | Gemini 3 Flash Q&A, inline citations -> Corpus, reference list | `wissenschat.js` |
+| **Knowledge Graph** | D3 force graph, cluster layout (Bridge/Social), divergence mode, hover glow | `wissensnetz.js` |
+| **Categories** | 10-category spectrum (Object->Perspective), rate comparison, divergence papers with LLM reasoning | `kategorien.js` |
+| **Corpus** (reference layer) | Sortable table, filters, detail modal with tabs (Assessment + Knowledge Document), CSV/Markdown/Vault export | `research-app.js` |
 
-**Unterseiten:** `about.html` (Projekt, Zitation), `methoden.html` (Pipeline, Kategorie-System, Nachnutzung mit LLMs), `help.html` (Bedienungshilfe)
+**Subpages:** `about.html` (project, citation), `methoden.html` (pipeline, categories, LLM reuse), `help.html` (user guide)
 
-**Exports:**
-- CSV: Gefilterte Papers als Tabelle
-- Markdown-ZIP: Wissensdokumente der Auswahl + README mit System-Prompt fuer Claude Code, NotebookLM, ChatGPT
-- Vault-ZIP: Vollstaendiger Obsidian Vault (505 Dateien)
-
-**Navigation:** Header mit direkten View-Buttons + About/Hilfe Links. `switchView()` global.
-
-**Architektur-Regeln:**
-- Kein Build-Tool, kein Framework, kein npm. Nur CDN (D3, Chart.js, Fuse.js, FontAwesome).
-- IIFE-Pattern fuer alle JS-Dateien, Kommunikation ueber `window.EC` API
-- IBM Plex Serif (Headings) + Inter (Body)
-- 10 Kategorien als Spektrum-Farbsystem (genderneutral, Regenbogen-Gradient im Header)
-- Detail-Panel als Seitenpanel (slide-in, 480px, Tabellenkomprimierung)
-- Rich Data Tooltips (JS-basiert, Mini-Barcharts aus JSON-Daten)
-- Chat: API-Key lokal (localStorage + `config.local.js`, gitignored). Modell: `gemini-3-flash-preview`
-- Daten: `docs/data/research_vault_v2.json` + `docs/data/concept_graph.json` + `docs/data/promptotyping_v2.json` (Divergenz-Patterns, Knowledge-Sections)
-- Exports: JSZip via CDN fuer Markdown-ZIP-Export mit System-Prompt
-- Detail-Modal: Zwei Tabs (Bewertung, Wissensdokument) -- Knowledge-Sections aus promptotyping_v2.json
+**Architecture rules:**
+- No build tool, no framework, no npm. CDN only (D3, Chart.js, Fuse.js, FontAwesome).
+- IIFE pattern for all JS files, communication via `window.EC` API
+- IBM Plex Serif (headings) + Inter (body)
+- 10 categories as spectrum color system (gender-neutral, rainbow gradient in header)
+- Detail panel as side panel (slide-in, 480px, table compression)
+- Chat: API key local (localStorage + `config.local.js`, gitignored). Model: `gemini-3-flash-preview`
+- Data: `docs/data/research_vault_v2.json` + `docs/data/concept_graph.json` + `docs/data/promptotyping_v2.json`
+- Exports: JSZip via CDN for Markdown-ZIP export with system prompt
 
 ---
 
-## Pipeline-Details
+## Pipeline
 
-### PDF-Akquise -> Knowledge
+### Workflow
 
 ```
-326 Zotero Papers -> 257 PDFs (4 Fallback-Strategien) -> 252 Markdown (Docling)
--> 249 Knowledge Docs (3-Stage: Extract JSON -> Format MD -> Verify)
+326 Zotero Papers -> 257 PDFs (4 fallback strategies) -> 252 Markdown (Docling)
+-> 249 Knowledge Docs (3-stage distillation: Extract JSON -> Format MD -> Verify)
 ```
 
-Verlustrate: 77/326 (23.6%) -- primaer Paywalls und korrupte PDFs.
+Loss rate: 77/326 (23.6%) -- predominantly in PDF acquisition.
 
-### Knowledge-Dokument-Struktur
+### Knowledge Document Structure
 
-- YAML-Frontmatter: title, authors, year, type, language, processed, source_file, confidence
-- Sektionen: Kernbefund, Forschungsfrage, Methodik, Hauptargumente, Kategorie-Evidenz, Assessment-Relevanz, Schluesselreferenzen
-- **Kategorien sind in `_stage1_json/`** als Booleans, NICHT in MD-Frontmatter
+- YAML frontmatter: title, authors, year, type, language, processed, source_file, confidence
+- Sections: Core Finding, Research Question, Methodology, Main Arguments, Category Evidence, Assessment Relevance, Key References
+- **Categories are in `_stage1_json/`** as booleans, NOT in MD frontmatter
 
-### LLM-Kosten (gesamt)
+### LLM Costs (total)
 
-| Komponente | Kosten |
-|-----------|--------|
-| Knowledge Distillation (249 Papers) | ~$7 |
-| 5D Assessment (325 Papers) | $1.15 |
-| 10K Assessment (326 Papers) | $1.44 |
-| Vault v2 (Konzepte + Divergenzen) | ~$1 |
-| **Gesamt** | **~$10.59** |
+| Component | Cost |
+|-----------|------|
+| Knowledge Distillation (249 papers) | ~$7 |
+| 5D Assessment (325 papers) | $1.15 |
+| 10K Assessment (326 papers) | $1.44 |
+| Vault v2 (concepts + divergences) | ~$1 |
+| **Total** | **~$10.59** |
 
 ---
 
@@ -161,44 +172,39 @@ Verlustrate: 77/326 (23.6%) -- primaer Paywalls und korrupte PDFs.
 
 ### promptotyping_v2.json
 
-Generiert durch `scripts/generate_promptotyping_data_v2.py`. Struktur:
+Generated by `scripts/generate_promptotyping_data_v2.py`. Structure:
 
 ```
 {
   "meta": { total_papers, disagreements, kappa, confusion_matrix, rates,
             pattern_distribution, asymmetry },
-  "pipeline": { stages: [...], flow: { nodes, links } },
-  "papers": [{ id, stem, title, author_year, featured?,
-               stages: { identification, conversion, ske, assessment },
-               concepts: [...], knowledge_summary }],
+  "papers": [{ id, stem, title, author_year, stages, concepts, knowledge_summary }],
   "concepts": { nodes: [{ id, label, frequency, cluster, definition }],
                 edges: [{ source, target, weight }] },
-  "divergences": [{ paper_id, title, author_year, human_decision, llm_decision,
-                    pattern, justification, severity, n_affected, category_comparison,
-                    llm_reasoning }]
+  "divergences": [{ paper_id, title, human_decision, llm_decision,
+                    pattern, justification, severity, category_comparison, llm_reasoning }]
 }
 ```
 
 ### research_vault_v2.json
 
-Generiert durch `pipeline/scripts/generate_docs_data.py`. Fuer Research Dashboard.
+Generated by `pipeline/scripts/generate_docs_data.py`. For Evidence Companion.
 
 ---
 
-## Redundancy Rules (kanonische Orte)
+## Canonical Locations (Redundancy Rules)
 
-Jede Information hat genau EINEN kanonischen Ort. Andere Dateien referenzieren, duplizieren nicht.
+Each piece of information has exactly ONE canonical location. Other files reference, never duplicate.
 
-| Information | Kanonischer Ort |
-|-------------|-----------------|
-| Benchmark-Ergebnisse | `knowledge/status.md` (M6) + `benchmark/results/agreement_metrics.json` |
-| Kappa-Revision | `knowledge/paper-integrity.md` Abschnitt 3.6 + `knowledge/status.md` M6-Interpretation |
-| Script-Referenz | `knowledge/methods-and-pipeline.md` |
-| Pipeline-Statistiken | `knowledge/status.md` + `knowledge/methods-and-pipeline.md` |
-| Kategorie-Definitionen | `benchmark/config/categories.yaml` |
-| Theorie + Operationalisierung | `knowledge/project.md` |
-| Promptotyping-Konzept | `knowledge/FORSCHUNGSPROJEKT-PROMPTOTYPING.md` |
-| Arbeitsjournal | `knowledge/journal.md` |
+| Information | Canonical Location |
+|-------------|-------------------|
+| Benchmark results | `knowledge/status.md` (M6) + `benchmark/results/agreement_metrics.json` |
+| Kappa revision | `knowledge/paper-integrity.md` section 3.6 + `knowledge/status.md` M6 |
+| Script reference | `knowledge/methods-and-pipeline.md` |
+| Pipeline statistics | `knowledge/status.md` + `knowledge/methods-and-pipeline.md` |
+| Category definitions | `benchmark/config/categories.yaml` |
+| Theory + operationalization | `knowledge/project.md` |
+| Work journal | `knowledge/journal.md` |
 
 ---
 
@@ -206,101 +212,103 @@ Jede Information hat genau EINEN kanonischen Ort. Andere Dateien referenzieren, 
 
 ### Session Start
 
-1. Read `knowledge/status.md` (aktueller Stand)
-2. Check `git status` + `git log -3` (Branch + letzte Commits)
-3. Read `knowledge/journal.md` (letzte Session, offene Punkte)
+1. Read `knowledge/status.md` (current state)
+2. Check `git status` + `git log -3` (branch + recent commits)
+3. Read `knowledge/journal.md` (last session, open items)
 4. Create TodoWrite for multi-step tasks
 
 ### Documentation Rules
 
-- **Sprache:** Deutsch fuer Dokumentation, English fuer Code/Variablen/Kommentare
-- **Keine Emojis** in Dokumentationsdateien
-- **Datum-Footer:** `*Aktualisiert: YYYY-MM-DD*` (kein Versionsnummer)
-- **Tabellen** fuer Vergleiche, Listen fuer Aufzaehlungen
-- **Journal updaten** bei jeder substantiellen Session
+- **Language:** English for all documentation and code
+- **No emojis** in documentation files
+- **Date footer:** `*Updated: YYYY-MM-DD*` (no version numbers)
+- **Tables** for comparisons, lists for enumerations
+- **Update journal** for every substantive session
 
 ### Git Workflow
 
-- **Commit-Format:** `[type]: [description]` (feat, fix, docs, refactor, test, chore)
-- **Commit haeufig** nach jeder logischen Aenderung
+- **Commit format:** `[type]: [description]` (feat, fix, docs, refactor, test, chore)
+- **Commit frequently** after each logical change
 - **Push:** `git push -u origin <branch-name>`
 - **NEVER** force push to main
-- **Aktueller Branch:** `main`
+- **Current branch:** `main`
 
-**Nicht committen:** `.env`, generierte Daten (PDFs, Knowledge Docs), Test-Artefakte, `.vault_cache/`
+**Do not commit:** `.env`, generated data (PDFs, Knowledge Docs), test artifacts, `.vault_cache/`
 
 ### Code Rules
 
-- **Immer lesen vor editieren** -- keine Aenderungen an Code, der nicht gelesen wurde
-- **Existierende Dateien bevorzugen** -- keine neuen Dateien erstellen, wenn editieren reicht
-- **IIFE-Pattern** fuer Vanilla JS (`(function() { 'use strict'; ... })();`)
-- **CSS:** Variables aus `research.css` erben, `pt-*` Namespace fuer eigene Variablen
-- **Python:** `pathlib.Path` fuer Dateipfade, UTF-8 erzwingen, Windows MAX_PATH beachten (Titel auf 100 Zeichen kuerzen)
+- **Always read before editing** -- no changes to code not read first
+- **Prefer existing files** -- do not create new files when editing suffices
+- **IIFE pattern** for vanilla JS (`(function() { 'use strict'; ... })();`)
+- **CSS:** Inherit variables from `research.css`, `pt-*` namespace for custom variables
+- **Python:** `pathlib.Path` for file paths, force UTF-8, respect Windows MAX_PATH (truncate titles to 100 chars)
 
 ### TodoWrite
 
-**IMMER nutzen** bei:
-- Multi-Step-Tasks (3+ Schritte)
-- Lange Operationen
-- User-Requests mit mehreren Items
+**ALWAYS use** for:
+- Multi-step tasks (3+ steps)
+- Long operations
+- User requests with multiple items
 
-**Real-time updaten:**
-- `in_progress` BEVOR Arbeit beginnt
-- `completed` SOFORT nach Abschluss
-- Nur EIN Task gleichzeitig `in_progress`
+**Update in real-time:**
+- `in_progress` BEFORE work begins
+- `completed` IMMEDIATELY after completion
+- Only ONE task `in_progress` at a time
 
 ---
 
 ## Known Issues & Gotchas
 
-| Problem | Loesung |
-|---------|---------|
-| Windows `nul` Datei | Ignorieren (reservierter Geraetename, nicht git-tracked) |
-| Knowledge Doc "Kernaussage" vs "Kernbefund" | Korrekt ist "Kernbefund" |
-| 326 Zotero vs 303 HA Papers | 291 Overlap per Zotero_Key, 12 nur Human, 35 nur LLM |
-| Merge-Bug (behoben 2026-03-27) | merge_assessments.py matchte per sequentieller ID statt Zotero_Key. Alle alten Benchmark-Werte (Kappa 0,035, Matrix 65/23/78/34) waren falsch. Neu: Kappa 0,056, Matrix 100/34/108/49 |
-| Kappa 0,056 | Decision-Kappa "slight", Kategorie-Kappas 0,39--0,82 |
-| Source_Tool Feld leer | 290/326 leer, "254 DR / 50 Manual" aus Zotero Collections |
-| D3 Sankey Links nicht sichtbar | `fill: none` + `stroke-width` verwenden (NICHT `fill`) |
-| Titel-Matching | 5-Strategie-Kaskade (Stage1-JSON, KD-YAML, Filename-Prefix, Autor+Jahr, Fuzzy) |
-| Windows MAX_PATH | Dateinamen auf 100 Zeichen kuerzen vor Suffix |
-| `human_yes_rate` / `agent_yes_rate` | Skala 0-100 (z.B. 32.7 = 32.7%), NICHT 0-1 |
+| Problem | Solution |
+|---------|----------|
+| Windows `nul` file | Ignore (reserved device name, not git-tracked) |
+| Knowledge Doc "Kernaussage" vs "Kernbefund" | Correct is "Kernbefund" (Core Finding) |
+| 326 Zotero vs 303 HA papers | 291 overlap by Zotero_Key, 12 human-only, 35 LLM-only |
+| Merge bug (fixed 2026-03-27) | merge_assessments.py matched by sequential ID instead of Zotero_Key. All old benchmark values (Kappa 0.035, Matrix 65/23/78/34) were wrong. New: Kappa 0.056, Matrix 100/34/108/49 |
+| Kappa 0.056 | Decision kappa "slight", category kappas 0.39--0.82 |
+| Source_Tool field empty | 290/326 empty, "254 DR / 50 Manual" from Zotero Collections |
+| D3 Sankey links invisible | Use `fill: none` + `stroke-width` (NOT `fill`) |
+| Title matching | 5-strategy cascade (Stage1-JSON, KD-YAML, Filename-Prefix, Author+Year, Fuzzy) |
+| Windows MAX_PATH | Truncate filenames to 100 chars before suffix |
+| `human_yes_rate` / `agent_yes_rate` | Scale 0-100 (e.g. 32.7 = 32.7%), NOT 0-1 |
+| Vault divergences | 111 files in vault but 142 disagreements in data (vault regeneration pending) |
+| Knowledge doc linking | 236 linked in JSON but 249 on disk (title matching gap in generator) |
 
 ---
 
-## Meilenstein-Status (Kurzfassung)
+## Milestone Status (Summary)
 
 | M | Name | Status |
 |---|------|--------|
-| M1 | Knowledge-Konsolidierung | Abgeschlossen |
-| M2 | Paper im Repo | Abgeschlossen |
-| M3 | Deep-Research-Prompts | Abgeschlossen |
-| M4 | Korpus-Bereinigung | Abgeschlossen |
-| M5 | 10K LLM Assessment | Abgeschlossen |
-| M6 | Teilmengen-Benchmark | Abgeschlossen |
-| M7 | Ergebnisse ins Paper | Abgeschlossen |
-| M8 | Paper finalisieren | **Offen** (Review-Runde, Einreichung 4. Mai) |
-| M9 | Vault + GitHub Pages | Abgeschlossen |
-| M10 | Promptotyping v1 | Archiviert (ersetzt durch M12) |
-| M11 | Promptotyping v2/v2.1 | Archiviert (ersetzt durch M12) |
-| M12 | Evidence Companion | **Abgeschlossen** (4 Views, Chat, Modals, merged) |
-| M13 | Wissensnetz + Kategorien | **Abgeschlossen** (Cluster-Layout, Divergenz-Modus, Kategorien-Explorer, Methoden-Seite) |
+| M1 | Knowledge consolidation | Completed |
+| M2 | Epistemic infrastructure concept | Completed |
+| M3 | Deep Research prompts | Completed |
+| M4 | Corpus cleanup | Completed |
+| M5 | 10K LLM Assessment | Completed |
+| M6 | Subset benchmark | Completed |
+| M7 | Results documented | Completed |
+| M8 | Paper finalization | **Open** (review round, submission May 4) |
+| M9 | Vault + GitHub Pages | Completed |
+| M10 | Promptotyping v1 | Archived (replaced by M12) |
+| M11 | Promptotyping v2 | Archived (replaced by M12) |
+| M12 | Evidence Companion | **Completed** (4 views, chat, modals, merged) |
+| M13 | Knowledge Graph + Categories | **Completed** (cluster layout, divergence mode, categories explorer) |
 
 ---
 
 ## Key Innovations
 
-1. **LLM-basiertes PRISMA Assessment** -- 326/326, 100% Erfolgsrate, $1.44
-2. **5-dimensionale Relevanz-Bewertung** -- Parametrisch, adaptierbar
-3. **Hierarchische PDF-Akquise** -- 4 Fallback-Strategien, 79% Erfolgsrate
-4. **Human-LLM Benchmark** -- Konfusionsmatrix + Basisraten als primaere Metriken
-5. **Epistemische Divergenz-Analyse** -- 142 Disagreements in 3 Muster klassifiziert (52/30/18%, Sonnet 4.6)
-6. **Wissens-Chat** -- Gemini 3 Flash ueber LLM-synthetisiertem Wissen, Inline-Zitationen mit Cross-View-Navigation
-7. **Kategorien-Explorer** -- 10 Kategorien als interaktives Spektrum, Rate-Vergleich Human/LLM, Divergenz-Papers mit Reasoning
-8. **Wissensnetz** -- D3 Cluster-Layout (Bridge/Sozial), Divergenz-Modus mit Pattern-Faerbung, Hover-Glow
-9. **Wissensdokument-Tab** -- LLM-extrahierte Sektionen (Kernbefund, Methodik, Argumente) direkt im Paper-Detail browsebar
-10. **Kuratierter Markdown-Export** -- Gefilterte Wissensdokumente als ZIP mit System-Prompt fuer LLM-Nachnutzung
-11. **Obsidian Vault v2** -- 505 interlinked Markdown-Dateien mit LLM-extrahierten Konzepten
+1. **LLM-based PRISMA assessment** -- 326/326, 100% success rate, $1.44
+2. **5-dimensional relevance scoring** -- Parametric, adaptable
+3. **Hierarchical PDF acquisition** -- 4 fallback strategies, 79% success rate
+4. **Human-LLM benchmark** -- Confusion matrix + base rates as primary metrics
+5. **Epistemic divergence analysis** -- 142 disagreements classified into 3 patterns (52/30/18%, Sonnet 4.6)
+6. **Knowledge Chat** -- Gemini 3 Flash over LLM-synthesized knowledge, inline citations with cross-view navigation
+7. **Categories Explorer** -- 10 categories as interactive spectrum, rate comparison Human/LLM, divergence papers with reasoning
+8. **Knowledge Graph** -- D3 cluster layout (Bridge/Social), divergence mode with pattern coloring, hover glow
+9. **Knowledge Document tab** -- LLM-extracted sections (core finding, methodology, arguments) browseable in paper detail
+10. **Curated Markdown export** -- Filtered knowledge documents as ZIP with system prompt for LLM reuse
+11. **Obsidian Vault v2** -- 505 interlinked Markdown files with LLM-extracted concepts
 
 ---
 

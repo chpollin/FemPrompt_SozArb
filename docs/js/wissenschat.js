@@ -305,7 +305,7 @@ function buildSystemPrompt(context) {
     return 'Du bist ein Forschungsassistent fuer den systematischen Review ' +
         '"Feministische AI Literacies" (Pollin, Sackl-Sharif, Klinger & Steiner, 2026).\n\n' +
         'Dieser Review analysiert 326 wissenschaftliche Publikationen zu feministischen AI Literacies ' +
-        'im Feld der Sozialen Arbeit. Die Publikationen wurden durch eine LLM-Pipeline verarbeitet ' +
+        'im Feld der Sozialen Arbeit. Die Publikationen wurden durch einen fuenfstufigen Workflow verarbeitet ' +
         'und unabhaengig von Expert:innen (291 Papers) und einem LLM (Claude Haiku 4.5, 326 Papers) ' +
         'nach 10 identischen Kategorien bewertet.\n\n' +
         'Kernergebnis: LLM Include-Rate 71.5% vs. Human 46% ' +

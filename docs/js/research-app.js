@@ -726,7 +726,7 @@ function buildTooltipContent() {
     var pdfRate = Math.round(257 / 326 * 100);
     var kdRate = Math.round(kdCount / 326 * 100);
 
-    var tipWD = '<div class="tip-title">LLM-Pipeline</div>' +
+    var tipWD = '<div class="tip-title">Destillationspipeline</div>' +
         '<div class="tip-pipeline">' +
             '<span class="tip-step">326 Papers</span> <i class="fas fa-arrow-right tip-arrow"></i> ' +
             '<span class="tip-step">257 PDFs <small>(' + pdfRate + '%)</small></span> <i class="fas fa-arrow-right tip-arrow"></i> ' +

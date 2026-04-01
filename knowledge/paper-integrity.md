@@ -1,287 +1,286 @@
-# Abgleich: Paper-Text vs. Repository
+# Paper Text vs. Repository: Integrity Check
 
-Systematischer Abgleich zwischen dem fertigen Paper-Text (Forum Wissenschaft, basierend auf Wissensdokument v12) und dem tatsaechlichen Stand im Repository. Synthetisiert aus drei Pruefungen: v8-Abgleich, v12-Abgleich und Satz-fuer-Satz-Pruefung des fertigen Texts. Der fruehere v8-Abgleich (ehemals `PAPER_VS_REPO.md` im Root) ist vollstaendig in dieses Dokument integriert.
+Systematic comparison between the paper text (Forum Wissenschaft, based on knowledge document v12) and the actual repository state. Synthesized from three checks: v8, v12, and sentence-level verification of the final text. The earlier v8 check (formerly `PAPER_VS_REPO.md` in root) is fully integrated here.
 
-**Grundprinzip:** Das Repository ist Ground Truth. Wo Paper und Repo sich widersprechen, muss das Paper angepasst werden.
-
----
-
-## Methodik
-
-Jede inhaltliche Aussage im Paper-Text wurde gegen Code, Daten und Dokumentation geprueft. Ergebnis in fuenf Kategorien:
-
-| Kategorie | Bedeutung |
-|---|---|
-| BELEGT | Paper und Repo stimmen ueberein |
-| KORRIGIERT | Paper v12 hat ein v8-Problem behoben |
-| ABWEICHUNG | Paper behauptet etwas, das im Repo anders ist |
-| NICHT VERIFIZIERBAR | Aussage laesst sich am Repo nicht pruefen |
-| FEHLEND IM PAPER | Repo hat Relevantes, das im Paper fehlt |
+**Core principle:** The repository is ground truth. Where paper and repo contradict, the paper must be adjusted.
 
 ---
 
-## 1. Belegte Aussagen
+## Methodology
 
-### 1.1 Workflow-Architektur
+Every substantive claim in the paper was checked against code, data, and documentation. Results in five categories:
 
-| Paper-Aussage | Repo-Beleg | Status |
-|---|---|---|
-| 3-stufige Knowledge Distillation (LLM Extract, Deterministisch Format, LLM Verify) | `pipeline/scripts/distill_knowledge.py`: Stage 1 = `STAGE1_EXTRACT_CLASSIFY_PROMPT`, Stage 2 = Template-Rendering (kein API-Call), Stage 3 = `STAGE3_VERIFY_PROMPT` | BELEGT |
-| Stufe 2 deterministisch, keine LLM-Beteiligung | `stage2_format_markdown()` enthaelt keinen API-Call, nur lokale String-Formatierung | BELEGT |
-| Confidence-Score: Completeness 40%, Correctness 40%, Categories 20%, Schwelle < 75 | `distill_knowledge.py` Zeile 276 bestaetigt exakt | BELEGT |
-| "Bei niedrigem Confidence-Score wird markiert, Signal an Mensch" | `needs_correction: true` bei Score < 75, Code bestaetigt | BELEGT |
-| Docling fuer PDF-zu-Markdown-Konversion | `pipeline/scripts/convert_to_markdown.py` nutzt Docling (>=2.60.0) | BELEGT |
-| Browser-Tool fuer visuelle Validierung (PDF links, Markdown rechts) | `pipeline/tools/markdown_reviewer.html` (667 Zeilen): Dual-Pane mit Seiten-Alignment, PASS/WARN/FAIL, Keyboard-Shortcuts | BELEGT |
-| PDF-Akquise: hierarchische Fallback-Strategie (Zotero, DOI, Unpaywall, ArXiv) | `pipeline/scripts/acquire_pdfs.py`: exakt 4 Prioritaetsstufen | BELEGT |
-| "Paywall-geschuetzte Literatur fehlt systematisch" | Verlustquote 69/326 (21.2%) bei PDF-Akquise | BELEGT |
-
-### 1.2 Assessment-System
-
-| Paper-Aussage | Repo-Beleg | Status |
-|---|---|---|
-| Dualer Bewertungspfad (Human parallel zu LLM) | Beide Systeme existieren als konzeptuell parallele Pfade | BELEGT |
-| 10 binaere Kategorien (4 Technik + 6 Sozial) | `benchmark/config/categories.yaml` bestaetigt exakt | BELEGT |
-| Inklusions-Logik: min. 1 Technik UND min. 1 Sozial | Im YAML und in `run_llm_assessment.py` implementiert | BELEGT |
-| LLM-Assessment (5D): 325 Papers, 100% Erfolgsrate | `assessment-llm/output/assessment_llm.xlsx`: 325 Zeilen | BELEGT |
-| Ergebnis 5D: 222 Include, 83 Exclude, 20 Unclear | Assessment-Report bestaetigt | BELEGT |
-| Expert:innen-Pfad: Sackl-Sharif und Klinger | README, Status-Dokumente | BELEGT |
-| PRISMA als gemeinsamer Rahmen fuer beide Pfade | Beide Assessment-Systeme referenzieren PRISMA | BELEGT |
-| Benchmark ausgefuehrt (M6 komplett) | `merge_assessments.py`, `calculate_agreement.py`, `analyze_disagreements.py` ausgefuehrt, Ergebnisse in `benchmark/results/` | BELEGT |
-
-### 1.3 Zahlen und Mengen
-
-| Paper-Aussage | Repo-Beleg | Status |
-|---|---|---|
-| 326 Papers im Korpus | `corpus/zotero_export.json`: 326 Eintraege | BELEGT |
-| 257 PDFs heruntergeladen | `pipeline/pdfs/`: 257 Dateien | BELEGT |
-| 252 Markdown-Dateien | `pipeline/markdown/`: 252 Dateien | BELEGT |
-| 5 fehlgeschlagene PDF-Konvertierungen | `knowledge/status.md` dokumentiert | BELEGT |
-| 249 Knowledge Documents | `pipeline/knowledge/distilled/`: 249 Dateien | BELEGT |
-| 97.2% Verifikationsqualitaet (242/249 perfekt) | 219+ Verifikations-JSONs in `pipeline/knowledge/_verification/` | BELEGT |
-| "Kritische Faelle ungesicherter LLM-Outputs traten im bisherigen Durchlauf nicht auf" (Knowledge Distillation) | Verifikationsberichte zeigen keine solchen Faelle; 7 Probleme sind PDF-Upstream | BELEGT |
-
-### 1.4 Theoretischer Rahmen
-
-| Paper-Aussage | Repo-Beleg | Status |
-|---|---|---|
-| Repository unter github.com/chpollin/FemPrompt_SozArb | Existiert | BELEGT |
-| Knowledge-Verzeichnis dokumentiert epistemische Entscheidungen | `knowledge/` mit 5 Dokumentationsdateien + Paper-Materialien | BELEGT |
+| Category | Meaning |
+|----------|---------|
+| VERIFIED | Paper and repo agree |
+| CORRECTED | Paper v12 fixed a v8 problem |
+| DEVIATION | Paper claims something different from repo |
+| NOT VERIFIABLE | Claim cannot be checked against repo |
+| MISSING IN PAPER | Repo has relevant content not in paper |
 
 ---
 
-## 2. Korrekturen gegenueber v8/v12
+## 1. Verified Claims
 
-Diese Probleme wurden im fertigen Paper-Text gegenueber frueheren Versionen behoben:
+### 1.1 Workflow Architecture
 
-| Problem (v8/v12) | Korrektur im Paper-Text | Status |
-|---|---|---|
-| v12 sagte "keine ergaenzende manuelle Recherche" | Paper sagt jetzt "ergaenzt durch eine begrenzte Zahl manuell identifizierter Studien" | KORRIGIERT |
-| v8 bemaengelte Vault als "existent" dargestellt | Paper sagt jetzt "sollen abschliessend einfliesssen [...] Dieser Schritt befindet sich in der Umsetzung" | KORRIGIERT |
-| v12 sagte "Keine ungesicherten LLM-Outputs im bisherigen Durchlauf" (absolut) | Paper sagt jetzt "Expert:innen stiessen auf Eintraege, die sich nicht verifizieren liessen" (differenzierter) | KORRIGIERT |
-| v8 bemaengelte "MCP-Kanal" ohne Implementierung | Im Paper-Text nicht mehr erwaehnt | KORRIGIERT (entfernt) |
+| Paper Claim | Repo Evidence | Status |
+|-------------|---------------|--------|
+| 3-stage knowledge distillation (LLM Extract, Deterministic Format, LLM Verify) | `pipeline/scripts/distill_knowledge.py`: Stage 1 = `STAGE1_EXTRACT_CLASSIFY_PROMPT`, Stage 2 = template rendering (no API call), Stage 3 = `STAGE3_VERIFY_PROMPT` | VERIFIED |
+| Stage 2 deterministic, no LLM involvement | `stage2_format_markdown()` contains no API call, only local string formatting | VERIFIED |
+| Confidence score: Completeness 40%, Correctness 40%, Categories 20%, threshold < 75 | `distill_knowledge.py` line 276 confirms exactly | VERIFIED |
+| "Low confidence score triggers marking, signal to human" | `needs_correction: true` at score < 75, confirmed in code | VERIFIED |
+| Docling for PDF-to-Markdown conversion | `pipeline/scripts/convert_to_markdown.py` uses Docling (>=2.60.0) | VERIFIED |
+| Browser tool for visual validation (PDF left, Markdown right) | `pipeline/tools/markdown_reviewer.html` (667 lines): dual-pane with page alignment, PASS/WARN/FAIL, keyboard shortcuts | VERIFIED |
+| PDF acquisition: hierarchical fallback strategy (Zotero, DOI, Unpaywall, ArXiv) | `pipeline/scripts/acquire_pdfs.py`: exactly 4 priority levels | VERIFIED |
+| "Paywall-protected literature is systematically missing" | Loss rate 69/326 (21.2%) at PDF acquisition | VERIFIED |
 
----
+### 1.2 Assessment System
 
-## 3. Abweichungen (Paper muss korrigiert werden)
+| Paper Claim | Repo Evidence | Status |
+|-------------|---------------|--------|
+| Dual assessment track (Human parallel to LLM) | Both systems exist as conceptually parallel tracks | VERIFIED |
+| 10 binary categories (4 technical + 6 social) | `benchmark/config/categories.yaml` confirms exactly | VERIFIED |
+| Inclusion logic: min. 1 technical AND min. 1 social | Implemented in YAML and `run_llm_assessment.py` | VERIFIED |
+| LLM Assessment (5D): 325 papers, 100% success rate | `assessment-llm/output/assessment_llm.xlsx`: 325 rows | VERIFIED |
+| Result 5D: 222 Include, 83 Exclude, 20 Unclear | Assessment report confirms | VERIFIED |
+| Expert track: Sackl-Sharif and Klinger | README, status documents | VERIFIED |
+| PRISMA as shared framework for both tracks | Both assessment systems reference PRISMA | VERIFIED |
+| Benchmark executed (M6 complete) | `merge_assessments.py`, `calculate_agreement.py`, `analyze_disagreements.py` executed, results in `benchmark/results/` | VERIFIED |
 
-### 3.1 Deep-Research-Prompts -- KORRIGIERT
+### 1.3 Numbers and Quantities
 
-**Paper sagt (aktualisiert):** "Die Prompt-Templates sind im Repository dokumentiert."
+| Paper Claim | Repo Evidence | Status |
+|-------------|---------------|--------|
+| 326 papers in corpus | `corpus/zotero_export.json`: 326 entries | VERIFIED |
+| 257 PDFs downloaded | `pipeline/pdfs/`: 257 files | VERIFIED |
+| 252 Markdown files | `pipeline/markdown/`: 252 files | VERIFIED |
+| 5 failed PDF conversions | `knowledge/status.md` documents | VERIFIED |
+| 249 knowledge documents | `pipeline/knowledge/distilled/`: 249 files | VERIFIED |
+| 97.2% verification quality (242/249 perfect) | 219+ verification JSONs in `pipeline/knowledge/_verification/` | VERIFIED |
+| "No critical cases of ungrounded LLM outputs in current run" (Knowledge Distillation) | Verification reports show none; 7 issues are PDF upstream | VERIFIED |
 
-**Repo zeigt:** Das parametrische Prompt-Template wurde aus der Git-History (Commit `0a98f49`, `knowledge/Operativ.md`) restauriert und liegt in `prompts/deep-research-template.md`. Es enthaelt die 5-Komponenten-Struktur (Rolle, Aufgabe, Kontext, Analyseschritte, Output-Format), den RIS-Konvertierungs-Prompt und den Dokumenten-Zusammenfassungs-Prompt. Die meisten Placeholder-Werte wurden rekonstruiert (mit Quellenangabe und Sicherheits-Bewertung). Genuinely verloren sind: der exakt instanziierte Prompt-Text, einige Placeholder-Werte (Autorenliste, Region, spezifische Kompetenzen) und der OpenAI-Raw-Output.
+### 1.4 Theoretical Framework
 
-**Status:** Paper-Text (Fussnoten [^7] und [^13]) und `prompts/CHANGELOG.md` wurden aktualisiert. Die Formulierung ist jetzt ehrlich: "Template dokumentiert, instanziierter Prompt rekonstruiert".
-
----
-
-### 3.2 Visuelle Validierung -- UEBERTRIEBEN
-
-**Paper sagt:** "Ein eigens gebautes Browser-Tool ermoeglicht die visuelle Ueberpruefung jeder Konversion."
-
-**Repo zeigt:** Das Tool existiert und funktioniert. Aber laut `knowledge/methods-and-pipeline.md` wurden nur 25/252 (~10%) der Konversionen tatsaechlich geprueft (PASS 20, WARN 4, FAIL 1). "Jeder Konversion" suggeriert vollstaendige Abdeckung.
-
-**Handlungsbedarf:** Formulierung praezisieren. Vorschlag: "ermoeglicht die visuelle Ueberpruefung der Konversionen" (ohne "jeder") oder "eine Stichprobe von rund zehn Prozent wurde visuell geprueft".
-
----
-
-### 3.3 10K-System als operativer Pfad -- GELOEST (v0.4)
-
-**Urspruengliches Problem (v12):** Nur 50-Paper-Test, nie voll ausgefuehrt.
-
-**Aktueller Stand:** `run_llm_assessment.py` wurde auf allen 326 Papers ausgefuehrt ($1.44, Commit M5). Ergebnis: `benchmark/data/llm_assessment_10k.csv` (232 Include, 94 Exclude). Benchmark-Ergebnisse (korrekt seit 2026-03-27: κ = 0,056, Konfusionsmatrix 100/34/108/49, Kategorie-Kappas 0,39--0,82) liegen in `benchmark/results/agreement_metrics.json`. Frueherer Merge-Bug (per sequentieller ID statt Zotero_Key) wurde behoben -- alle Werte vor 2026-03-27 waren falsch.
-
-**Status:** BELEGT
-
----
-
-### 3.4 Befund zu nicht verifizierbaren Eintraegen -- WIDERSPRUCH ZUM WISSENSDOKUMENT
-
-**Paper sagt:** "Im bisherigen Durchlauf stiessen die Expert:innen auf Eintraege, die sich nicht verifizieren liessen."
-
-**Wissensdokument v12 sagt:** "Keine ungesicherten LLM-Outputs im bisherigen Durchlauf. Positiver Befund."
-
-**Repo zeigt:** In `human_assessment.csv` gibt es genau 1 Eintrag mit "KEINE QUELLE GEFUNDEN!" (ID 1, EJEFPZGA). Keine systematische Kategorie fuer nicht verifizierbare Eintraege in den Exclusion Reasons. Die 5 dokumentierten Upstream-Probleme (Debnath, Tun, D'Ignazio, Statistics, Naescher) sind PDF-Qualitaetsprobleme, keine LLM-Fehler.
-
-**Handlungsbedarf:** Paper-Text und Wissensdokument harmonisieren. Der Paper-Text ist vorsichtiger formuliert als das v12-Dokument, aber die Evidenz im Repo stuetzt weder eine starke Behauptung noch deren kategorische Verneinung. Empfehlung: Beim 1 dokumentierten Fall bleiben und praezise formulieren.
+| Paper Claim | Repo Evidence | Status |
+|-------------|---------------|--------|
+| Repository at github.com/chpollin/FemPrompt_SozArb | Exists | VERIFIED |
+| Knowledge directory documents epistemic decisions | `knowledge/` with 5 documentation files + paper materials | VERIFIED |
 
 ---
 
-### 3.5 Korpus-Zahlen -- INKONSISTENT (intern)
+## 2. Corrections from v8/v12
 
-Das Paper verwendet bewusst Groessenordnungen ("mehrere hundert Papers"), was korrekt ist. Aber die internen Dokumente widersprechen sich:
+Problems fixed in the final paper text compared to earlier versions:
 
-| Quelle | Zahl |
-|---|---|
-| Zotero-Export | 326 |
-| LLM-Assessment (5D) | 325 (1 fehlt) |
-| Human-Assessment CSV | 305 Zeilen (davon 50 Manual) |
-| Status-Doc | "303 (254 DeepResearch + 49 Human 1 Collection)" |
-| Human-Assessment CSV Source_Tool | 254 DR + 50 Manual + 1 leer |
-
-**Handlungsbedarf:** Die Differenz 326 minus 305 = 21 Papers erklaeren. Status-Doc von 303 auf 305 korrigieren. 49 vs. 50 Manual klaeren.
+| Problem (v8/v12) | Correction in Paper Text | Status |
+|-------------------|--------------------------|--------|
+| v12 said "no supplementary manual research" | Paper now says "supplemented by a limited number of manually identified studies" | CORRECTED |
+| v8 flagged Vault as presented "as existing" | Paper now says "to be integrated [...] This step is in progress" | CORRECTED |
+| v12 said "No ungrounded LLM outputs in current run" (absolute) | Paper now says "Experts encountered entries that could not be verified" (more nuanced) | CORRECTED |
+| v8 flagged "MCP channel" without implementation | No longer mentioned in paper text | CORRECTED (removed) |
 
 ---
 
-### 3.6 Kappa als Leitmetrik -- METHODISCH PROBLEMATISCH
+## 3. Deviations (Paper Must Be Corrected)
 
-**Paper sagt (v0.4):** "Die primaere Vergleichsmetrik ist Cohen's Kappa" und "kappa = 0,035 ('slight' nach Landis & Koch)"
+### 3.1 Deep Research Prompts — CORRECTED
 
-**Analyse (2026-02-22, aktualisiert 2026-03-27):** Der alte Kappa-Wert 0,035 basierte auf einem Merge-Bug (sequentielle ID statt Zotero_Key). Der korrekte Wert ist 0,056 ("slight"). Die Prevalence-Bias-Argumentation bleibt gueltig: Die Basisraten divergieren um 25,5 Prozentpunkte (LLM 71,5% Include vs. Human 46,0% Include). Kategorie-Kappas liegen im Bereich 0,39--0,82 (alle positiv, vorher teils negativ durch falsches Matching).
+**Paper says (updated):** "The prompt templates are documented in the repository."
 
-**Handlungsbedarf:** Paper muss alle Benchmark-Zahlen aktualisieren: Konfusionsmatrix 100/34/108/49, Kappa 0,056, Basis 291 Papers, 142 Disagreements. Details: `knowledge/status.md` M6.
+**Repo shows:** The parametric prompt template was restored from Git history (commit `0a98f49`, `knowledge/Operativ.md`) and is at `prompts/deep-research-template.md`. It contains the 5-component structure (Role, Task, Context, Analysis Steps, Output Format), the RIS conversion prompt, and the document summary prompt. Most placeholder values were reconstructed (with source attribution and confidence rating). Genuinely lost: the exact instantiated prompt text, some placeholder values (author list, region, specific competencies), and the OpenAI raw output.
 
----
-
-### 3.7 Vault-Script integriert Assessment-Daten -- GELOEST
-
-**Paper sagt:** "Beide Bewertungsstroeme sollen abschliessend in eine vernetzte Wissensrepaesentation einfliessen."
-
-**Repo zeigt:** `generate_vault.py` liest jetzt `benchmark/data/llm_assessment_10k.csv` und `benchmark/data/human_assessment.csv`. Assessment-Daten werden ueber den Zotero-Key gematcht und ins YAML-Frontmatter geschrieben: `llm_decision`, `human_decision`, `llm_categories`, `human_categories`, `llm_confidence`, `agreement`. 205/249 Papers haben Assessment-Daten erhalten.
-
-**Status:** BELEGT
+**Status:** Paper text (footnotes) and `prompts/CHANGELOG.md` updated. Wording is now honest: "Template documented, instantiated prompt reconstructed."
 
 ---
 
-### 3.8 RIS-Konversion -- NICHT REPRODUZIERBAR
+### 3.2 Visual Validation — OVERSTATED
 
-**Paper sagt:** "Ein LLM konvertiert die heterogenen Outputs in RIS-Format."
+**Paper says:** "A custom browser tool enables visual review of every conversion."
 
-**Repo zeigt:** RIS-Dateien existieren in `deep-research/restored/` (4 Dateien, untracked), aber:
-- Kein Script fuer die Konversion
-- Kein dokumentierter Prompt oder Prozess
-- `ris-template.md` ist ein Struktur-Template, keine Anleitung
+**Repo shows:** The tool exists and works. But per `knowledge/methods-and-pipeline.md`, only 25/252 (~10%) of conversions were actually reviewed (PASS 20, WARN 4, FAIL 1). "Every conversion" suggests complete coverage.
 
-**Handlungsbedarf:** Konversionsprozess dokumentieren oder im Paper als externen Schritt kennzeichnen.
+**Action needed:** Precise wording. Suggestion: "enables visual review of conversions" (without "every") or "a sample of approximately ten percent was visually reviewed."
 
 ---
 
-## 4. Nicht am Repo verifizierbar
+### 3.3 10K System as Operational Track — RESOLVED (v0.4)
 
-| Aussage im Paper | Warum nicht pruefbar |
-|---|---|
-| "Die Ueberschneidung der Ergebnisse erwies sich als gering" | Provenienz nur fuer 36/326 Papers dokumentiert. `source_tool_mapping.json` zeigt 30/34 als Unikate, aber das deckt nur 13% des Korpus ab. Keine systematische Ueberlappungsanalyse. |
-| "Manche Studien wurden nur von einem einzigen Anbieter identifiziert" | Gleiche Datenlage. Fuer 34 Papers belegbar, fuer den Rest nicht. |
-| "Identische, strukturiert parametrisierte Anweisungen" | Prompts nicht im Repo (siehe 3.1). |
-| Zeitliche Instabilitaet ("nicht reproduzierbare Treffer bei wiederholter Abfrage") | Kein Experiment im Repo dokumentiert. Paper markiert korrekt als Platzhalter. |
-| "Studienassistentin fuehrte Ergebnisse zusammen, bereinigte Metadaten" | Kein Pruefprotokoll. Christina als "Zotero-Kuratierung" im Repo, nicht als "Studienassistentin". |
-| Expert:innen-Entscheidungstypen (bibliographische Urteilskraft, KI-Abgrenzung, interpretatives Mitdenken) | Analytische Kategorisierung aus Reflexion ueber den Bewertungsprozess. Nicht als Log oder Annotation im Repo. Paper kennzeichnet korrekt als "aus der Reflexion gewonnen, nicht aus systematischer Auswertung". |
-| "Qualitaet haengt wesentlich von Prompt-Gestaltung ab" | Konzeptuell plausibel, aber keine A/B-Tests oder Prompt-Varianten im Repo. |
+**Original problem (v12):** Only 50-paper test, never fully executed.
+
+**Current status:** `run_llm_assessment.py` executed on all 326 papers ($1.44, Commit M5). Result: `benchmark/data/llm_assessment_10k.csv` (232 Include, 94 Exclude). Benchmark results (correct since 2026-03-27: κ = 0.056, confusion matrix 100/34/108/49, category kappas 0.39–0.82) in `benchmark/results/agreement_metrics.json`. Earlier merge bug (sequential ID instead of Zotero_Key) was fixed — all values before 2026-03-27 were incorrect.
+
+**Status:** VERIFIED
 
 ---
 
-## 5. Fehlend im Paper (im Repo vorhanden, potenziell nuetzlich)
+### 3.4 Finding on Non-Verifiable Entries — CONTRADICTION WITH KNOWLEDGE DOCUMENT
+
+**Paper says:** "In the current run, experts encountered entries that could not be verified."
+
+**Knowledge document v12 says:** "No ungrounded LLM outputs in current run. Positive finding."
+
+**Repo shows:** In `human_assessment.csv` there is exactly 1 entry with "KEINE QUELLE GEFUNDEN!" (ID 1, EJEFPZGA). No systematic category for non-verifiable entries in exclusion reasons. The 5 documented upstream problems (Debnath, Tun, D'Ignazio, Statistics, Näscher) are PDF quality issues, not LLM errors.
+
+**Action needed:** Harmonize paper text and knowledge document. Paper is more cautiously worded than v12, but repo evidence supports neither a strong claim nor its categorical denial. Recommendation: Stay with the 1 documented case and formulate precisely.
+
+---
+
+### 3.5 Corpus Numbers — INTERNALLY INCONSISTENT
+
+The paper deliberately uses magnitudes ("several hundred papers"), which is correct. But internal documents contradict:
+
+| Source | Number |
+|--------|--------|
+| Zotero export | 326 |
+| LLM Assessment (5D) | 325 (1 missing) |
+| Human Assessment CSV | 305 rows (including 50 manual) |
+| Status doc | "303 (254 DeepResearch + 49 Human 1 Collection)" |
+| Human Assessment CSV Source_Tool | 254 DR + 50 Manual + 1 empty |
+
+**Action needed:** Explain difference 326 minus 305 = 21 papers. Correct status doc from 303 to 305. Clarify 49 vs. 50 manual.
+
+---
+
+### 3.6 Kappa as Lead Metric — METHODOLOGICALLY PROBLEMATIC
+
+**Paper says (v0.4):** "The primary comparison metric is Cohen's Kappa" and "kappa = 0.035 ('slight' per Landis & Koch)"
+
+**Analysis (2026-02-22, updated 2026-03-27):** The old Kappa value 0.035 was based on a merge bug (sequential ID instead of Zotero_Key). The correct value is 0.056 ("slight"). The prevalence-bias argument remains valid: base rates diverge by 25.5 percentage points (LLM 71.5% Include vs. Human 46.0% Include). Category kappas range 0.39–0.82 (all positive, previously some negative due to incorrect matching).
+
+**Action needed:** Paper must update all benchmark numbers: confusion matrix 100/34/108/49, Kappa 0.056, basis 291 papers, 142 disagreements. Details: `knowledge/status.md` M6.
+
+---
+
+### 3.7 Vault Script Integrates Assessment Data — RESOLVED
+
+**Paper says:** "Both assessment streams are to be integrated into an interlinked knowledge representation."
+
+**Repo shows:** `generate_vault.py` now reads `benchmark/data/llm_assessment_10k.csv` and `benchmark/data/human_assessment.csv`. Assessment data matched via Zotero key and written to YAML frontmatter: `llm_decision`, `human_decision`, `llm_categories`, `human_categories`, `llm_confidence`, `agreement`. 205/249 papers received assessment data.
+
+**Status:** VERIFIED
+
+---
+
+### 3.8 RIS Conversion — NOT REPRODUCIBLE
+
+**Paper says:** "An LLM converts the heterogeneous outputs to RIS format."
+
+**Repo shows:** RIS files exist in `deep-research/restored/` (4 files, untracked), but:
+- No conversion script
+- No documented prompt or process
+- `ris-template.md` is a structure template, not instructions
+
+**Action needed:** Document conversion process or mark as external step in paper.
+
+---
+
+## 4. Not Verifiable from Repo
+
+| Paper Claim | Why Not Verifiable |
+|-------------|-------------------|
+| "The overlap of results proved to be low" | Provenance documented for only 36/326 papers. `source_tool_mapping.json` shows 30/34 as unique, covering only 13% of corpus. No systematic overlap analysis. |
+| "Some studies were identified by only a single provider" | Same data situation. Verifiable for 34 papers, not the rest. |
+| "Identical, structurally parameterized instructions" | Prompts not in repo (see 3.1). |
+| Temporal instability ("non-reproducible results on repeated queries") | No experiment documented in repo. Paper correctly marks as placeholder. |
+| "Research assistant merged results, cleaned metadata" | No audit trail. Christina listed as "Zotero curation" in repo, not as "research assistant." |
+| Expert decision types (bibliographic judgment, AI demarcation, interpretive inference) | Analytical categorization from reflection on assessment process. Not logged or annotated in repo. Paper correctly marks as "derived from reflection, not systematic analysis." |
+| "Quality depends substantially on prompt design" | Conceptually plausible, but no A/B tests or prompt variants in repo. |
+
+---
+
+## 5. Missing in Paper (Available in Repo, Potentially Useful)
 
 ### 5.1 Post-Processing
 
-`pipeline/scripts/postprocess_markdown.py` bereinigt deterministisch: 230 Silbentrennungen, 341 Seitenzahlen, 2.263 Header-Wiederholungen, 107.545 Zeichen entfernt. Weiteres Beispiel fuer bewussten Wechsel zwischen probabilistischen und deterministischen Stufen.
+`pipeline/scripts/postprocess_markdown.py` deterministically cleans: 230 hyphenations, 341 page numbers, 2,263 header repetitions, 107,545 characters removed. Another example of deliberate alternation between probabilistic and deterministic stages.
 
-### 5.2 4-Layer-Validierungssystem
+### 5.2 4-Layer Validation System
 
-`pipeline/scripts/validate_markdown_enhanced.py` prueft syntaktisch (GLYPH-Placeholder, Unicode), strukturell (Character-Ratio MD/PDF), semantisch (LLM Spot-Check optional), manuell (Review-Queue). Geht ueber das im Paper beschriebene Browser-Tool hinaus.
+`pipeline/scripts/validate_markdown_enhanced.py` checks syntactic (GLYPH placeholders, Unicode), structural (character ratio MD/PDF), semantic (optional LLM spot-check), manual (review queue). Goes beyond the browser tool described in paper.
 
-### 5.3 Bereinigte Markdown-Dateien
+### 5.3 Cleaned Markdown Files
 
-`pipeline/markdown_clean/` enthaelt 232 von 252 Dateien. 20 Dateien fielen durch die Qualitaetspruefung. Zeigt, dass der Workflow tatsaechlich selektiert.
+`pipeline/markdown_clean/` contains 232 of 252 files. 20 files failed quality checks. Shows the workflow actually selects.
 
-### 5.4 Konkrete Kosten
+### 5.4 Concrete Costs
 
-LLM-Assessment (5D): $1.15. Knowledge Distillation: ~$7. Gesamt-Pipeline < $10. Stuetzt die oekonomische Asymmetrie-Argumentation ("fuer wenige Euro").
+LLM Assessment (5D): $1.15. Knowledge Distillation: ~$7. Total pipeline < $10. Supports the economic asymmetry argument ("for a few euros").
 
-### 5.5 Upstream-Probleme als Befund
+### 5.5 Upstream Problems as Finding
 
-7 Knowledge-Dokumente mit Problemen, alle PDF-Upstream: korruptes Markdown (Debnath_2024), falsches Dokument im PDF (D'Ignazio_2024 enthielt Cabnal 2010), PDF war nur Titelseite (Naescher_2025), thematisch irrelevant (Statistics_2023). Konkreter Beleg fuer Paywall- und Qualitaetsprobleme.
+7 knowledge documents with problems, all PDF upstream: corrupt Markdown (Debnath_2024), wrong document in PDF (D'Ignazio_2024 contained Cabnal 2010), PDF was title page only (Näscher_2025), topically irrelevant (Statistics_2023). Concrete evidence of access barrier and quality problems.
 
-### 5.6 Source-Tool-Verteilung (aus human_assessment.csv)
+### 5.6 Source Tool Distribution (from human_assessment.csv)
 
-Perplexity 75, Claude 63, ChatGPT 62, Gemini 54, Manual 50. Zeigt ungleiche Beitraege der Anbieter, aber keine Ueberlappungsanalyse.
+Perplexity 75, Claude 63, ChatGPT 62, Gemini 54, Manual 50. Shows unequal provider contributions but no overlap analysis.
 
-### 5.7 Human-Assessment-Stand
+### 5.7 Human Assessment Status
 
-171/305 Decisions (56.3%): 55 Include, 102 Exclude, 14 Unclear, 134 offen. 115/305 (37.7%) mit Kategorien befuellt. Exclusion Reasons: 60 Duplicate, 24 Not relevant topic, 10 Wrong publication type.
-
----
-
-## 6. Handlungsbedarf (priorisiert)
-
-### Prioritaet 1 -- Vor Einreichung zwingend
-
-| Nr. | Problem | Aktion | Betrifft |
-|---|---|---|---|
-| 1 | Prompts teilweise im Repo | Template restauriert (`prompts/deep-research-template.md`), instanziierte Versionen verloren. Paper-Entwurf formuliert korrekt: "Template versioniert, instanziierte Versionen verloren" | Teilweise geloest |
-| 2 | "jeder Konversion" uebertrieben | Formulierung praezisieren (Stichprobe ~10%) | Paper Abschnitt 3 |
-| 3 | Befund zu nicht verifizierbaren Eintraegen widerspruechlich | Paper-Text und Wissensdokument harmonisieren | Paper Abschnitt 1 + v12-Dokument |
-
-### Prioritaet 2 -- Research Integrity
-
-| Nr. | Problem | Aktion | Betrifft |
-|---|---|---|---|
-| 4 | RIS-Konversion nicht reproduzierbar | Prozess dokumentieren | Repo + Paper Abschnitt 1 |
-| 5 | ~~Vault-Script integriert keine Assessment-Daten~~ | GELOEST: `generate_vault.py` erweitert, 205/249 Papers mit Assessment-Daten | ~~Paper Abschnitt 3~~ |
-| 6 | Source-Tool-Mapping unvollstaendig (89% unbekannt) | Mapping vervollstaendigen aus human_assessment.csv | Repo |
-
-### Prioritaet 3 -- Konsistenz
-
-| Nr. | Problem | Aktion | Betrifft |
-|---|---|---|---|
-| 7 | Korpus-Zahlen inkonsistent (326/325/305/303) | Differenzen erklaeren, Status-Doc korrigieren | Interne Dokumente |
-| ~~8~~ | ~~CLAUDE.md sagt "8 fallback strategies"~~ | GELOEST: CLAUDE.md sagt bereits korrekt "4 fallback strategies" | ~~Repo-Dokumentation~~ |
-| 8 | Rolle Christina (Zotero-Kuratierung vs. Studienassistentin) | Abgleichen | Repo + Paper |
+171/305 decisions (56.3%): 55 Include, 102 Exclude, 14 Unclear, 134 open. 115/305 (37.7%) with categories filled. Exclusion reasons: 60 Duplicate, 24 Not relevant topic, 10 Wrong publication type.
 
 ---
 
-## 7. Theoretischer Rahmen: Repo-Verankerung
+## 6. Action Items (Prioritized)
 
-Der theoretische Ueberbau des Papers (epistemische Asymmetrie, Hauswald, Co-Intelligence, epistemische Infrastruktur) existiert ausschliesslich im Paper-Entwurf und im Wissensdokument. Kein Projektdokument im Repository verwendet diese Begriffe. Das ist an sich nicht problematisch -- ein Paper muss seinen theoretischen Rahmen nicht im Code verankern. Aber einige "Befunde", die als empirische Belege fuer die Theorie dienen, sind im Repo duenn belegt:
+### Priority 1 — Must Fix Before Submission
 
-| "Befund" im Paper | Repo-Evidenz |
-|---|---|
-| Anbieter-Divergenz als strukturelles Merkmal | Nur fuer 34/326 Papers quantifizierbar |
-| Expert:innen-Entscheidungstypen | Analytische Reflexion, nicht aus Repo-Daten ableitbar |
-| Nicht verifizierbarer Eintrag | 1 dokumentierter Fall |
-| Epistemische Asymmetrie im feministischen Feld | Konzeptuell plausibel, nicht operationalisiert |
+| # | Problem | Action | Affects |
+|---|---------|--------|---------|
+| 1 | Prompts partially in repo | Template restored (`prompts/deep-research-template.md`), instantiated versions lost. Paper draft correctly states: "Template versioned, instantiated versions lost" | Partially resolved |
+| 2 | "Every conversion" overstated | Precise wording (sample ~10%) | Paper section 3 |
+| 3 | Finding on non-verifiable entries contradictory | Harmonize paper text and knowledge document | Paper section 1 + v12 document |
 
-Das Paper kennzeichnet seinen Status als "laufendes Experiment" und verwendet Zahlen nur als Groessenordnung (Leitplanken 3 und 6). Diese Rahmung schuetzt vor den meisten Problemen, solange die konkreten Abweichungen (Abschnitt 3) korrigiert werden.
+### Priority 2 — Research Integrity
 
----
+| # | Problem | Action | Affects |
+|---|---------|--------|---------|
+| 4 | RIS conversion not reproducible | Document process | Repo + Paper section 1 |
+| 5 | ~~Vault script doesn't integrate assessment data~~ | RESOLVED: `generate_vault.py` extended, 205/249 papers with assessment data | ~~Paper section 3~~ |
+| 6 | Source tool mapping incomplete (89% unknown) | Complete mapping from human_assessment.csv | Repo |
 
-## 8. Gesamtbewertung
+### Priority 3 — Consistency
 
-### Stark gestuetzt
-
-Der technische Workflow (Knowledge Distillation, Docling-Konversion, Validierungs-Tool, 5D-Assessment, deterministische Stufe 2) ist praezise und korrekt beschrieben. Die Zahlen stimmen. Die 3-Stage-Pipeline ist exakt so implementiert wie im Paper beschrieben. Die Confidence-Formel ist bis auf die Zeile belegbar.
-
-### Korrigiert (v8/v12 zu Paper-Text)
-
-Vier wichtige Probleme aus frueheren Versionen wurden behoben: manuelle Papers jetzt erwaehnt, Vault als "in Umsetzung" statt abgeschlossen, MCP-Kanal entfernt, Aussage zu nicht verifizierbaren Eintraegen differenzierter.
-
-### Offen
-
-Zwei Aussagen im Paper-Text stimmen nicht mit dem Repo ueberein und muessen vor Einreichung korrigiert werden: Prompts im Repo (teilweise rekonstruiert), "jeder Konversion" (uebertrieben). Assessment-Daten im Vault: GELOEST (generate_vault.py erweitert, 205/249 Papers mit Daten). Keine dieser Korrekturen erfordert groessere Umschreibungen.
-
-### Operativer Stand (aktualisiert 2026-02-22)
-
-10K-LLM-Assessment auf vollem Korpus abgeschlossen (326/326). Human-Assessment: 210/326 mit Decision (Benchmark-Basis). Benchmark berechnet: Konfusionsmatrix (78 LLM-Include/Human-Exclude vs. 23 umgekehrt), Basisraten (LLM 68% vs. Human 42% Include), 111 Disagreements analysiert. Cohen's Kappa (0,035) als Vergleichsanker berichtet, aber durch Prevalence-Bias-Paradox eingeschraenkt (Abschnitt 3.6). Paper v0.4 muss in v0.5 ueberarbeitet werden: Kappa runterdimmen, Konfusionsmatrix + Basisraten ins Zentrum.
+| # | Problem | Action | Affects |
+|---|---------|--------|---------|
+| 7 | Corpus numbers inconsistent (326/325/305/303) | Explain differences, correct status doc | Internal documents |
+| 8 | Christina's role (Zotero curation vs. research assistant) | Align | Repo + Paper |
 
 ---
 
-*Aktualisiert: 2026-02-22*
+## 7. Theoretical Framework: Repo Anchoring
+
+The theoretical superstructure of the paper (epistemic asymmetry, Hauswald, Co-Intelligence, epistemic infrastructure) exists exclusively in the paper draft and knowledge document. No project document in the repository uses these terms. This is not inherently problematic — a paper need not anchor its theoretical framework in code. But some "findings" serving as empirical evidence for the theory are thinly evidenced in the repo:
+
+| "Finding" in Paper | Repo Evidence |
+|--------------------|---------------|
+| Provider divergence as structural feature | Quantifiable for only 34/326 papers |
+| Expert decision types | Analytical reflection, not derivable from repo data |
+| Non-verifiable entry | 1 documented case |
+| Epistemic asymmetry in the feminist field | Conceptually plausible, not operationalized |
+
+The paper frames its status as an "ongoing experiment" and uses numbers only as magnitudes (guardrails 3 and 6). This framing protects against most issues as long as the concrete deviations (section 3) are corrected.
+
+---
+
+## 8. Overall Assessment
+
+### Well Supported
+
+The technical workflow (knowledge distillation, Docling conversion, validation tool, 5D assessment, deterministic stage 2) is precisely and correctly described. Numbers are accurate. The 3-stage pipeline is implemented exactly as described in the paper. The confidence formula is verifiable down to the line.
+
+### Corrected (v8/v12 to Paper Text)
+
+Four important problems from earlier versions were fixed: manual papers now mentioned, Vault as "in progress" not completed, MCP channel removed, statement on non-verifiable entries more nuanced.
+
+### Open
+
+Two claims in the paper text do not match the repo and must be corrected before submission: prompts in repo (partially reconstructed), "every conversion" (overstated). Assessment data in Vault: RESOLVED (generate_vault.py extended, 205/249 papers with data). None of these corrections require major rewrites.
+
+### Operational Status (updated 2026-03-27)
+
+10K LLM Assessment completed on full corpus (326/326). Human Assessment: 303/326 with decision. Benchmark calculated: confusion matrix (108 LLM-Include/Human-Exclude vs. 34 reverse), base rates (LLM 71.5% vs. Human 46.0% Include), 142 disagreements analyzed. Cohen's Kappa (0.056) reported as comparison anchor but limited by prevalence-bias paradox (section 3.6).
+
+---
+
+*Updated: 2026-04-01*

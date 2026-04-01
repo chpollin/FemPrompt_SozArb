@@ -1,72 +1,72 @@
 # Status (2026-03-27)
 
-## Aktueller Fokus: Human Assessment abgeschlossen, Benchmark korrigiert
+## Current Focus: Human Assessment Completed, Benchmark Corrected
 
-Human Assessment fertig (303/303). Kritischer Merge-Bug in benchmark/scripts/merge_assessments.py gefunden und behoben (matchte per sequentieller ID statt Zotero_Key). Benchmark komplett neu berechnet mit korrekter Paarung.
-Naechster Fokus: M8 Paper finalisieren (Deadline 4. Mai). Divergenz-Klassifikation muss mit neuen Disagreements neu laufen.
+Human Assessment complete (303/303). Critical merge bug in benchmark/scripts/merge_assessments.py found and fixed (matched by sequential ID instead of Zotero_Key). Benchmark fully recalculated with correct pairing.
+Next focus: M8 Paper finalization (deadline May 4). Divergence classification must be rerun with the new disagreements.
 
 ---
 
-## Meilenstein-Plan (bis 4. Mai 2026)
+## Milestone Plan (through May 4, 2026)
 
-### M1: Knowledge-Konsolidierung -- ABGESCHLOSSEN
+### M1: Knowledge Consolidation -- COMPLETED
 
-- [x] Dateien umbenannt (Nummern-Praefixe entfernt)
-- [x] Redundanzen eliminiert (PAPER_VS_REPO.md, WORKFLOW.md, index.md)
-- [x] CLAUDE.md korrigiert
-- [x] Alle Querverweise aktualisiert
+- [x] Files renamed (numeric prefixes removed)
+- [x] Redundancies eliminated (PAPER_VS_REPO.md, WORKFLOW.md, index.md)
+- [x] CLAUDE.md corrected
+- [x] All cross-references updated
 - Commit: `ff558e2`
 
-### M2: Epistemische Infrastruktur als Leitkonzept -- ABGESCHLOSSEN
+### M2: Epistemic Infrastructure as Guiding Concept -- COMPLETED
 
-- [x] Epistemische Infrastruktur als Leitkonzept etabliert
-- [x] Theoretischer Rahmen dokumentiert (project.md)
+- [x] Epistemic infrastructure established as guiding concept
+- [x] Theoretical framework documented (project.md)
 - Commit: `d7d4557`
 
-### M3: Deep-Research-Prompts restaurieren -- ABGESCHLOSSEN
+### M3: Deep Research Prompts Restored -- COMPLETED
 
-- [x] Prompt-Template aus Git-History (`knowledge/Operativ.md`) in `prompts/deep-research-template.md` wiederherstellen
-- [x] Rekonstruierte Parametrisierung dokumentieren (was bekannt, was verloren)
-- Commit: (siehe Git-Log)
+- [x] Prompt template from Git history (`knowledge/Operativ.md`) restored to `prompts/deep-research-template.md`
+- [x] Reconstructed parameterization documented (what is known, what is lost)
+- Commit: (see Git log)
 
-### M4: Korpus-Bereinigung (326 vs 305) -- ABGESCHLOSSEN
+### M4: Corpus Cleanup (326 vs 305) -- COMPLETED
 
-- [x] HA-CSV mit aktuellem Zotero-Export abgleichen (292 gemeinsam, 34 nur Zotero, 13 nur HA)
-- [x] Duplikate markieren (95 gesamt: 76 Titel-basiert in Zotero + 60 in HA, Ueberlappung)
-- [x] `papers_full.csv` generiert (326 Zeilen, Has_HA-Spalte fuer Mapping)
-- [x] Generator-Script: `benchmark/scripts/generate_papers_csv.py`
-- Benchmark-Basis: 326 Papers, Schnittmenge mit HA fuer Kappa-Berechnung
-- Commit: (siehe Git-Log)
+- [x] HA CSV aligned with current Zotero export (292 shared, 34 Zotero-only, 13 HA-only)
+- [x] Duplicates flagged (95 total: 76 title-based in Zotero + 60 in HA, with overlap)
+- [x] `papers_full.csv` generated (326 rows, Has_HA column for mapping)
+- [x] Generator script: `benchmark/scripts/generate_papers_csv.py`
+- Benchmark basis: 326 papers, intersection with HA for kappa calculation
+- Commit: (see Git log)
 
-### M5: 10K LLM Assessment ausfuehren -- ABGESCHLOSSEN
+### M5: 10K LLM Assessment Execution -- COMPLETED
 
-- [x] `assessment_prompt.md` mit Code synchronisieren (3 Inkonsistenzen behoben: Rolle, KI_Sonstige, negative Constraints)
-- [x] Beispiele fuer alle 10 Kategorien in `categories.yaml` ergaenzt (v1.2)
-- [x] Assessment ausgefuehrt: 326/326 Papers, ~$1.44, Haiku 4.5
-- [x] Ergebnis: `benchmark/data/llm_assessment_10k.csv` (232 Include, 94 Exclude)
-- Commit: (siehe Git-Log)
+- [x] `assessment_prompt.md` synchronized with code (3 inconsistencies fixed: role, KI_Sonstige, negative constraints)
+- [x] Examples added for all 10 categories in `categories.yaml` (v1.2)
+- [x] Assessment executed: 326/326 papers, ~$1.44, Haiku 4.5
+- [x] Result: `benchmark/data/llm_assessment_10k.csv` (232 Include, 94 Exclude)
+- Commit: (see Git log)
 
-### M6: Teilmengen-Benchmark ausfuehren -- ABGESCHLOSSEN
+### M6: Subset Benchmark Execution -- COMPLETED
 
-- [x] Human Assessment CSV exportiert (`benchmark/data/human_assessment.csv`, 304 Papers, 210 mit Decision)
-- [x] `merge_assessments.py` ausgefuehrt: 304 Papers mit beiden Assessments, 22 LLM-only
-- [x] `calculate_agreement.py` ausgefuehrt: Cohen's Kappa berechnet
-- [x] `analyze_disagreements.py` ausgefuehrt: 111 Disagreements identifiziert
-- [x] Ergebnisse in `benchmark/results/` dokumentiert
+- [x] Human Assessment CSV exported (`benchmark/data/human_assessment.csv`, 304 papers, 210 with Decision)
+- [x] `merge_assessments.py` executed: 304 papers with both assessments, 22 LLM-only
+- [x] `calculate_agreement.py` executed: Cohen's Kappa calculated
+- [x] `analyze_disagreements.py` executed: 111 disagreements identified
+- [x] Results documented in `benchmark/results/`
 - Commit: `07c4ac6`
 
-**Kernergebnisse (Konfusionsmatrix + Basisraten):**
+**Core Results (Confusion Matrix + Base Rates):**
 
-| Metrik | Wert |
-|--------|------|
-| Papers mit beiden Assessments | 291 (von 303 Human, 326 LLM) |
-| **Human Include-Rate** | **46,0 % (134/291)** |
-| **LLM Include-Rate** | **71,5 % (208/291)** |
-| Differenz | 25,5 Prozentpunkte |
-| Disagreements gesamt | 142 |
-| Cohen's Kappa | 0,056 ("slight") |
+| Metric | Value |
+|--------|-------|
+| Papers with both assessments | 291 (of 303 Human, 326 LLM) |
+| **Human Include Rate** | **46.0% (134/291)** |
+| **LLM Include Rate** | **71.5% (208/291)** |
+| Difference | 25.5 percentage points |
+| Total disagreements | 142 |
+| Cohen's Kappa | 0.056 ("slight") |
 
-**Konfusionsmatrix:**
+**Confusion Matrix:**
 
 ```
                     LLM Include    LLM Exclude
@@ -74,324 +74,142 @@ Human Include          100              34
 Human Exclude          108              49
 ```
 
-**Kategorie-Agreement (korrekte Zotero_Key-Paarung):**
+**Category Agreement (correct Zotero_Key pairing):**
 
-| Kategorie | Agreement | Kappa | Interpretation | Human Ja | LLM Ja |
-|-----------|-----------|-------|----------------|----------|--------|
-| Soziale_Arbeit | 93,2% | 0,816 | almost perfect | 23,8% | 24,7% |
-| Feministisch | 91,0% | 0,753 | substantial | 21,4% | 26,1% |
-| Prompting | 80,1% | 0,533 | moderate | 36,9% | 22,0% |
-| Bias_Ungleichheit | 79,5% | 0,439 | moderate | 78,6% | 73,5% |
-| KI_Sonstige | 77,0% | 0,535 | moderate | 63,8% | 51,9% |
-| AI_Literacies | 76,0% | 0,488 | moderate | 26,1% | 43,3% |
-| Generative_KI | 75,8% | 0,538 | moderate | 57,2% | 38,1% |
-| Diversitaet | 70,1% | 0,432 | moderate | 62,4% | 39,3% |
-| Fairness | 69,2% | 0,388 | fair | 49,1% | 63,7% |
-| Gender | 68,0% | 0,407 | moderate | 61,1% | 31,6% |
+| Category | Agreement | Kappa | Interpretation | Human Yes | LLM Yes |
+|----------|-----------|-------|----------------|-----------|---------|
+| Soziale_Arbeit | 93.2% | 0.816 | almost perfect | 23.8% | 24.7% |
+| Feministisch | 91.0% | 0.753 | substantial | 21.4% | 26.1% |
+| Prompting | 80.1% | 0.533 | moderate | 36.9% | 22.0% |
+| Bias_Ungleichheit | 79.5% | 0.439 | moderate | 78.6% | 73.5% |
+| KI_Sonstige | 77.0% | 0.535 | moderate | 63.8% | 51.9% |
+| AI_Literacies | 76.0% | 0.488 | moderate | 26.1% | 43.3% |
+| Generative_KI | 75.8% | 0.538 | moderate | 57.2% | 38.1% |
+| Diversitaet | 70.1% | 0.432 | moderate | 62.4% | 39.3% |
+| Fairness | 69.2% | 0.388 | fair | 49.1% | 63.7% |
+| Gender | 68.0% | 0.407 | moderate | 61.1% | 31.6% |
 
-**Hinweis zum Merge-Bug (behoben 2026-03-27):** Die vorherigen Benchmark-Ergebnisse (Kappa 0,035, Konfusionsmatrix 65/23/78/34) basierten auf einem fehlerhaften Merge per sequentieller ID statt Zotero_Key. 301 von 304 Paarungen verglichen verschiedene Papers. Die Kategorie-Kappas waren teils negativ -- das war Rauschen, keine inhaltliche Divergenz. Mit korrekter Paarung liegen alle Kategorie-Kappas im Bereich 0,39--0,82.
+**Note on the Merge Bug (fixed 2026-03-27):** The previous benchmark results (Kappa 0.035, confusion matrix 65/23/78/34) were based on a faulty merge by sequential ID instead of Zotero_Key. 301 of 304 pairings compared different papers. The category kappas were partly negative -- this was noise, not substantive divergence. With correct pairing, all category kappas fall in the range 0.39--0.82.
 
-**Divergenz-Muster:** 142 Disagreements identifiziert (108 LLM-Include/Human-Exclude, 34 umgekehrt). Die qualitative Klassifikation in Muster (Semantische Expansion, Keyword-Inklusion, Implizite Feldzugehoerigkeit) muss mit den korrekt gepaarten Disagreements neu durchgefuehrt werden.
+**Divergence Patterns:** 142 disagreements identified (108 LLM-Include/Human-Exclude, 34 reversed). The qualitative classification into patterns (Semantic Expansion, Keyword Inclusion, Implicit Field Membership) must be rerun with the correctly paired disagreements.
 
-### M7: Benchmark-Ergebnisse dokumentieren -- ABGESCHLOSSEN
+### M7: Benchmark Results Documentation -- COMPLETED
 
-- [x] Benchmark-Metriken dokumentiert (Konfusionsmatrix, Basisraten, Kategorie-Kappas)
-- [x] Divergenz-Analyse: 3 Muster mit konkreten Beispielen
-- [x] Jagged-Frontier-Konzept (Mollick) integriert
-- Commit: (siehe Git-Log)
+- [x] Benchmark metrics documented (confusion matrix, base rates, category kappas)
+- [x] Divergence analysis: 3 patterns with concrete examples
+- [x] Jagged-Frontier concept (Mollick) integrated
+- Commit: (see Git log)
 
 ### M9 (Nice-to-Have): Vault + GitHub Pages
 
-- [x] Statische GitHub-Pages-Seite fuer Wissensexploration -- **UMGESETZT**
-  - `docs/` SPA rebuilt: 4-Tab-Layout (Papers, Benchmark, Dashboard, Graph)
-  - Daten-Pipeline: `pipeline/scripts/generate_docs_data.py` -> `docs/data/research_vault_v2.json`
-  - Bugfix: Observable Plot durch Chart.js ersetzt (Commit `d22a22f`)
-  - Logging verbessert: kompaktes grouped init summary, Filter/Tab/Benchmark state (Commit `1f3092b`)
-  - Commits: `5d8bd36`, `d22a22f`, `1f3092b`
-  - GitHub Pages aktiviert: https://chpollin.github.io/FemPrompt_SozArb/
-- [x] Visualisierungen umgebaut: epistemisches Framing (Commit `bb258f6`)
-  - Divergenz-Scatter (Bug-Fix: Achsen 0-100%, Diagonale korrekt)
-  - Slope Chart ersetzt Radar (10 Linien, Steigung = epistemische Divergenz)
-  - Overlap-Treemap (additives Framing, Klick filtert Papers-Tab)
-  - Coverage Map (LLM=326 vs. Human=210)
-- [x] Vault-Building (Obsidian): `pipeline/scripts/generate_vault.py` mit Assessment-Integration
-  - 249 Papers, 205 mit Assessment-Daten (LLM + Human), 79 Concept Notes
-  - YAML-Frontmatter: llm_decision, human_decision, llm_categories, human_categories, agreement
-  - ZIP fuer Download: `docs/downloads/vault.zip`
-- Abhaengigkeit: M6 (Assessment-Daten) -- erledigt
+- [x] Static GitHub Pages site for knowledge exploration -- **IMPLEMENTED**
+  - `docs/` SPA rebuilt: 4-tab layout (Papers, Benchmark, Dashboard, Graph)
+  - Data pipeline: `pipeline/scripts/generate_docs_data.py` -> `docs/data/research_vault_v2.json`
+  - GitHub Pages: https://chpollin.github.io/FemPrompt_SozArb/
+- [x] Vault building (Obsidian): `pipeline/scripts/generate_vault.py` with assessment integration
+  - 249 papers, 205 with assessment data (LLM + Human), 79 Concept Notes
+  - ZIP for download: `docs/downloads/vault.zip`
 
-### M10: Research-Promptotyping-Interface v1 -- ERSETZT DURCH M11
+### M10: Promptotyping v1 -- ARCHIVED (replaced by M12)
 
-- [x] v1: 5-Schritte-Dashboard (Trichter, Prozess-Diagramme, Statistiken) -- `bb147c0`
-- Erkenntnis: Dashboard *beschreibt* den Prozess, macht ihn aber nicht *navigierbar*
-- Ersetzt durch M11 (Promptotyping v2)
+### M11: Promptotyping v2 -- ARCHIVED (replaced by M12)
 
-### M11: Promptotyping v2 -- UMGESETZT
+- Vault v2 Generator (`scripts/generate_vault_v2.py`, ~1660 lines)
+  - LLM concept extraction: 249 papers -> 136 consolidated concepts (freq >= 2)
+  - LLM divergence classification: 111 cases in vault (142 total, vault regeneration pending) -> 3 patterns (52% Semantic, 30% Implicit, 18% Keyword; Sonnet 4.6 reclassification)
+  - 4 vault document types: Papers (248), Concepts (136), Pipeline (5), Divergences (111; 142 after bugfix, regeneration pending)
 
-- [x] Konzeptdokument: `knowledge/FORSCHUNGSPROJEKT-PROMPTOTYPING.md` (Promptotyping als epistemische Praxis)
-- [x] Phase 1: Vault v2 Generator (`scripts/generate_vault_v2.py`, ~1660 Zeilen)
-  - LLM-basierte Konzept-Extraktion: 249 Papers -> 136 konsolidierte Konzepte (Freq >= 2)
-  - LLM-basierte Divergenz-Klassifikation: 111 Faelle im Vault (142 Disagreements gesamt, Vault-Regeneration offen) -> 3 Muster (52% Semantisch, 30% Implizit, 18% Keyword; Sonnet 4.6 Reklassifikation)
-  - 5-Strategie-Titel-Matching: 237/249 (vs. 226/249 in v1)
-  - 4 Vault-Dokumenttypen: Papers (248), Concepts (136), Pipeline (5), Divergenzen (111; 142 nach Bug-Fix, Vault-Regeneration offen)
-  - LLM-Caching in `.vault_cache/` (reproduzierbar ohne erneute API-Calls)
-  - LLM-Kosten: ~$1 (Haiku 4.5)
-- [x] Phase 2: Datengenerator (`scripts/generate_promptotyping_data_v2.py`, ~580 Zeilen)
-  - Reine Datentransformation (kein LLM)
-  - Output: `docs/data/promptotyping_v2.json` (1.0 MB)
-  - 249 Paper-Journeys, 136 Konzept-Nodes, 79 Co-Occurrence-Edges, 111 Divergenzen
-  - **v2.1:** Featured Papers (3 handverlesen), Konzept-Cluster (Technik/Sozial/Bridge), Pattern-Distribution in Meta
-- [x] Phase 3: Web-Interface (5 Views, Neubau)
-  - View 0: **Landing** -- Leitfrage, 3 Kennzahlen, 3 Featured Papers als Einstiegspunkte
-  - View 1: Pipeline-Durchlicht (D3 Sankey) -- 326 Papers durch 5 Stufen, Stufen-Detail mit Stance-Sektionen
-  - View 2: Paper Journey -- Featured-Picks + Suche, horizontale Timeline mit Stance-Indicators, 3-Sektionen-Detail
-  - View 3: Konzept-Explorer (D3 Force Graph) -- Cluster-Farben (Technik/Sozial/Bridge), Divergenz-Ring-Overlay, Legende
-  - View 4: Divergenz-Navigator -- Exemplarische Faelle, Narrative Cards mit Justification, enriched Detail mit Knowledge-Summary
-  - Cross-View-Navigation: Konzept-Klick -> Explorer, Paper-Klick -> Journey, Divergenz -> Journey
-- [x] **Epistemische Haltungen durchgehend:** Jede Detail-Ansicht hat Stance-Sektionen (blau=Ergebnis, gruen=Prozess, orange=Grenze)
-- [x] Design: CSS-Variablen aus `research.css`, `pt-*` Namespace, responsive (768px Breakpoint)
-- [x] CDN-Dependencies: D3 v7.9.0, d3-sankey v0.12.3, Chart.js 4.4.0, FontAwesome 6.5.1
-- [x] Vault ZIP: `docs/downloads/vault.zip` (1.1 MB, 505 Dateien)
-- Branch: `FemPrompt_SozArb_promptotyping-interface`, Commits: `3476437` (v2), `963c08d` (v2.1)
-- **Status: ARCHIVIERT** -- Promptotyping-Interface wird nicht weiterentwickelt. Ersetzt durch M12 (Evidence Companion).
-- Erkenntnis: Promptotyping ging ueber das Paper-Versprechen hinaus. Das Paper referenziert eine "publizierte Wissensumgebung" -- das ist das Research Dashboard, nicht Promptotyping.
+### M12: Evidence Companion -- COMPLETED
 
-### M12: Evidence Companion -- ABGESCHLOSSEN
+Complete redesign as academic companion publication. 4 views: Knowledge Chat (default) > Knowledge Graph > Categories > Corpus.
 
-Komplettes Redesign des Research-Frontends als akademische Begleitpublikation zum Paper.
+### M13: Knowledge Taxonomy -- PLANNED
 
-**4 Tabs:** Wissens-Chat (Default) > Wissensnetz > Bewertungsvergleich > Korpus (Referenzschicht)
-
-- [x] Korpus-Tab: Sortierbare Tabelle, Filter, Suche, Detail-Panel (Side Panel mit Komprimierung)
-- [x] Wissensnetz-Tab: D3 Force-Graph, Ego-Netzwerk, Legende, Suche, Frequenz-Filter
-- [x] Bewertungsvergleich-Tab: Callout "78 vs. 23", Slope Chart, Konfusionsmatrix, Kappa, Divergenz-Tabelle
-- [x] Wissens-Chat: Gemini 3 Flash, SSE-Streaming, Inline-Zitationen, Referenzliste, Cross-View-Navigation
-- [x] About + Help Modals
-- [x] Spektrum-Farbsystem (10 Kategorien), akademische Typographie (IBM Plex Serif + Inter)
-- [x] Chat als eigenstaendiges Fenster mit Spektrum-Gradient
-- [x] Stats-Bar statt Intro-Absatz
-- [x] Merge zu main
-
-### M13: Wissenstaxonomie -- GEPLANT
-
-Wissensnetz-Redesign: Von flachem Konzept-Graph zu navigierbarer Wissenstaxonomie.
-
-- [ ] Konzepte in Hierarchie/Taxonomie organisieren (Ueber-/Unterkategorien)
-- [ ] Aufklappbare Navigation (abstrakt -> konkret)
-- [ ] Definitionen aus den Quell-Papers (nicht LLM-generiert), mit Quellenangabe
-- [ ] 10 Kategorien als Farbsystem (Regenbogen-Spektrum) statt 3 Cluster
-- [ ] Neuer Datengenerator fuer Hierarchie + Quell-Definitionen
-- [ ] Weniger Nodes (Top 30-40 statt 136), dichtere Verbindungen
-
----
-
-## Untersuchungsergebnisse (2026-02-18)
-
-### 21 fehlende Papers: Temporale Divergenz
-
-Die HA-CSV wurde aus einem aelteren Zotero-Snapshot generiert. Seitdem hat sich die Bibliothek in beide Richtungen veraendert:
-
-| | Anzahl |
-|---|---|
-| In beiden vorhanden | 292 |
-| Nur in Zotero (neu hinzugefuegt) | 34 |
-| Nur in HA (spaeter geloescht) | 13 |
-| Netto-Differenz | 21 |
-
-**Muster:** 30 der 34 Zotero-only-Papers haben keine Collection-Zugehoerigkeit (Bulk-Import nach HA-Erstellung). 6 der 34 sind Duplikate von Papers, die bereits in HA unter anderem Key existieren.
-
-**Empfehlung:** HA mit aktuellem Zotero-Export neu synchronisieren, bestehende Bewertungen ueber DOI/Titel-Matching uebernehmen.
-
-### Deep-Research-Prompts: Teilweise rekonstruierbar
-
-**Gefunden:**
-- Parametrisches Prompt-Template (5-Komponenten-Struktur: Rolle, Aufgabe, Kontext, Analyseschritte, Output-Format) in Git-History (`knowledge/Operativ.md`, Commit `0a98f49`)
-- 3 von 4 Raw-Outputs (Claude, Gemini, Perplexity) in `deep-research/restored/`
-- Alle 4 RIS-Dateien
-- Meiste Placeholder-Werte rekonstruierbar
-
-**Verloren:**
-- Der exakt instanziierte Prompt-Text (wie er in die 4 Modelle eingefuegt wurde)
-- Einige Placeholder-Werte (Autorenliste, spezifische Kompetenzen, Region)
-- OpenAI/ChatGPT Raw-Output (war nur als binaere PDF committed)
-
-**Status:** Template rekonstruiert (`prompts/deep-research-template.md`), instanziierter Prompt nicht persistent gespeichert.
-
-### 10K Assessment-Prompt: Funktionsbereit
-
-**Staerken:**
-- Alle 10 Kategorien stimmen exakt mit Knowledge-Doc-Frontmatter ueberein
-- Negative Constraints gegen Sycophancy implementiert
-- Inklusions-Logik korrekt (TECHNIK_OK AND SOZIAL_OK)
-- Neutrale Rollen-Beschreibung
-
-**Schwaechen:**
-- `assessment_prompt.md` (Doku) veraltet vs. tatsaechlicher Code-Prompt
-- Keine Calibration Items implementiert (empfohlen, nicht Blocker)
-- Keine Retry-Logik fuer API-Fehler
-- 4 von 10 Kategorien ohne Positiv/Negativ-Beispiele
-
-**Urteil:** Kann so ausgefuehrt werden. Doku-Sync und optionale Calibration Items sind empfohlen.
+Knowledge Graph redesign: from flat concept graph to navigable taxonomy.
 
 ---
 
 ## Assessment
 
-**Ein Korpus (326 Papers), zwei Assessment-Tracks:**
+**One corpus (326 papers), two assessment tracks:**
 
-| Track | Methode | Schema | Status |
-|-------|---------|--------|--------|
-| **Human** | Google Sheets | 10 binaere Kategorien | **Fertig (303/303, 142 Include, 161 Exclude)** |
-| **LLM (5D)** | Claude Haiku 4.5 | 5 Dimensionen (0-3) | Fertig (325/325) |
-| **LLM (10K)** | Claude Haiku 4.5 | 10 binaere Kategorien | **Fertig (326/326)** |
+| Track | Method | Schema | Status |
+|-------|--------|--------|--------|
+| **Human** | Google Sheets | 10 binary categories | **Complete (303/303, 142 Include, 161 Exclude)** |
+| **LLM (5D)** | Claude Haiku 4.5 | 5 dimensions (0-3) | Complete (325/325) |
+| **LLM (10K)** | Claude Haiku 4.5 | 10 binary categories | **Complete (326/326)** |
 
-### Human Assessment -- ABGESCHLOSSEN
+### Human Assessment -- COMPLETED
 
-| Aspekt | Stand |
-|--------|-------|
-| Papers in CSV | 303 (1 defekte Zeile entfernt) |
-| Decisions getroffen | 303/303 (142 Include, 161 Exclude) |
-| Schema | 10 binaere Kategorien (Technik + Sozial) |
-| Bearbeiter | Susi Sackl-Sharif, Christopher Pollin (27 Korrekturen/Ergaenzungen) |
-| Korrekturen | 27 Zeilen: 16 Unclear aufgeloest, 9 ohne Decision ergaenzt, 1 Fehlerkorrektur, 1 Kategorie-Update |
+| Aspect | Status |
+|--------|--------|
+| Papers in CSV | 303 (1 defective row removed) |
+| Decisions made | 303/303 (142 Include, 161 Exclude) |
+| Schema | 10 binary categories (Technical + Social) |
+| Assessors | Susi Sackl-Sharif, Christopher Pollin (27 corrections/additions) |
 
-### LLM Assessment (5 Dimensionen - abgeschlossen)
+### LLM Assessment (5D - Complete)
 
-| Aspekt | Stand |
-|--------|-------|
-| Papers bewertet | 325/325 (100% Erfolgsrate) |
-| Ergebnis | 222 Include, 83 Exclude, 20 Unclear |
-| Kosten | $1.15 |
-| Output | `assessment/llm-5d/output/assessment_llm.xlsx` |
+325/325 papers, 222 Include, 83 Exclude, 20 Unclear, $1.15
 
-### LLM Assessment (10 Kategorien - abgeschlossen)
+### LLM Assessment (10K - Complete)
 
-| Aspekt | Stand |
-|--------|-------|
-| Script | `benchmark/scripts/run_llm_assessment.py` |
-| Prompt-Status | Code-Prompt und Doku synchronisiert (v2.1) |
-| Tatsaechliche Kosten | $1.44 |
-| Status | **Fertig** -- 326/326 Papers, 232 Include, 94 Exclude |
-| Output | `benchmark/data/llm_assessment_10k.csv` |
+326/326 papers, 232 Include, 94 Exclude, $1.44
 
 ---
 
 ## Pipeline
 
-### PDF-Akquise und Konvertierung (Fertig)
+### PDF Acquisition and Conversion (Complete)
 
-| Phase | Ergebnis |
-|-------|----------|
-| PDFs gesamt | 257/326 (78.8%) |
-| Markdown-Konversion | 252/257 (98.1%) |
-| Markdown bereinigt | 232/252 (markdown_clean/) |
-| Fehlgeschlagen | 5 (korrupte PDFs) |
-| Dubletten entfernt | 9 |
-| Quality-Score (Durchschnitt) | 93.1/100 |
+| Phase | Result |
+|-------|--------|
+| Total PDFs | 257/326 (78.8%) |
+| Markdown conversion | 252/257 (98.1%) |
+| Failed | 5 (corrupt PDFs) |
+| Quality score (average) | 93.1/100 |
 
-### Post-Processing (Fertig)
+### Knowledge Distillation (Complete + Verified)
 
-| Operation | Anzahl |
-|-----------|--------|
-| Silbentrennungen korrigiert | 230 |
-| Seitenzahlen entfernt | 341 |
-| Header-Wiederholungen entfernt | 2,263 |
-| Zeichen insgesamt entfernt | 107,545 |
-
-### Knowledge Distillation (Fertig + Verifiziert)
-
-| Aspekt | Stand |
-|--------|-------|
-| Verarbeitete Dokumente | 249/252 (98.8%) |
-| Verifizierte Qualitaet | 242/249 perfekt (97.2%) |
-| API-Kosten | ~$7 (gesamt) |
-| Output | `pipeline/knowledge/distilled/` |
+| Aspect | Status |
+|--------|--------|
+| Documents processed | 249/252 (98.8%) |
+| Verified quality | 242/249 perfect (97.2%) |
+| API costs | ~$7 (total) |
 
 ---
 
----
+## Selection Audit
 
-## Offene Punkte
+### Provider Distribution (from `human_assessment.csv`, 305 papers)
 
-- [x] Dubletten bereinigen (9 entfernt)
-- [x] Seiten-Alignment im Review-Tool implementieren
-- [x] 32 fehlende PDFs integriert
-- [x] Knowledge Distillation (249 Dokumente)
-- [x] Knowledge-Doc Verifikation (97.2% perfekt)
-- [x] Repository-Bereinigung (analysis/, pipeline/summaries/, Redundanzen)
-- [x] Knowledge-Base konsolidieren (Dateien umbenannt, Redundanzen eliminiert)
-- [x] 21 fehlende Papers untersucht (temporale Divergenz, 6 Duplikate identifiziert)
-- [x] Deep-Research-Prompts untersucht (Template in Git-History, instanziierter Prompt verloren)
-- [x] 10K Assessment-Prompt geprueft und synchronisiert (3 Inkonsistenzen behoben, v2.1)
-- [x] Deep-Research-Prompt-Template im Repo wiederhergestellt (`prompts/deep-research-template.md`)
-- [x] Korpus-CSV generiert (`benchmark/data/papers_full.csv`, 326 Zeilen, Is_Duplicate + Has_HA Flags)
-- [x] 10K LLM Assessment ausgefuehrt (326/326, $1.44, `benchmark/data/llm_assessment_10k.csv`)
-- [x] Assessment-Ordner restrukturiert (`assessment/human/`, `assessment/llm-5d/`, Altdateien in `benchmark/` bereinigt)
-- [x] **Google Sheets Export** (Human Assessment CSV, 304 Papers, 210 mit Decision)
-- [x] Teilmengen-Benchmark ausgefuehrt (merge + kappa + disagreements, κ = 0,035)
-- [x] Vault-Building (Obsidian) mit Assessment-Integration + GitHub Pages aktiviert
-
----
-
-## Selektions-Audit
-
-### Provider-Verteilung (aus `human_assessment.csv`, 305 Papers)
-
-| Provider | Papers | Anteil (DR) | DOI verfuegbar |
-|----------|--------|-------------|----------------|
+| Provider | Papers | Share (DR) | DOI available |
+|----------|--------|------------|---------------|
 | Perplexity | 75 | 29.5% | 22 (29%) |
 | Claude | 63 | 24.8% | 37 (59%) |
 | ChatGPT | 62 | 24.4% | 42 (68%) |
 | Gemini | 54 | 21.3% | 22 (41%) |
-| **Deep Research gesamt** | **254** | **100%** | **123 (48%)** |
-| Manual (ergaenzend) | 50 | -- | 40 (80%) |
-| **Gesamt** | **305** | -- | **163 (53%)** |
+| **Deep Research total** | **254** | **100%** | **123 (48%)** |
+| Manual (supplementary) | 50 | -- | 40 (80%) |
 
-**Befund DOI-Verfuegbarkeit:** Manuelle Recherche liefert deutlich hoehere DOI-Raten (80%) als Deep Research (48%). Perplexity hat die niedrigste DOI-Rate (29%), was auf mehr graue Literatur hindeutet.
+### Missingness Indicators
 
-### Publikationstypen
+| Indicator | Value |
+|-----------|-------|
+| PDF acquisition rate | 257/326 (79%) |
+| Not acquirable | 69/326 (21%) -- access barriers |
+| Markdown conversion rate | 252/257 (98%) |
+| Knowledge document rate | 249/252 (99%) |
+| **Total loss rate** (Zotero -> knowledge document) | 77/326 (23.6%) |
 
-| Typ | Anzahl | Anteil |
-|-----|--------|--------|
-| journalArticle | 182 | 59.7% |
-| report | 60 | 19.7% |
-| conferencePaper | 42 | 13.8% |
-| bookSection | 9 | 3.0% |
-| book | 6 | 2.0% |
-| webpage | 4 | 1.3% |
-| thesis | 1 | 0.3% |
+### Pending
 
-### Overlap-Analyse (aus RIS-Dateien, 34 Papers)
-
-Die RIS-Dateien in `deep-research/restored/` decken 34 von 254 Deep-Research-Papers ab (13.4%). Fuer diese Stichprobe:
-
-| Metrik | Wert |
-|--------|------|
-| Total unique Papers in RIS | 32 |
-| Davon nur von 1 Provider gefunden | 30 (93.8%) |
-| Davon von 2+ Providern gefunden | 2 (6.2%) |
-| **Overlap-Rate** | **6.2%** |
-
-**Einschraenkung:** Diese Zahlen gelten nur fuer die 34 Papers der ersten RIS-Runde. Eine Gesamt-Overlap-Analyse auf Korpus-Ebene ist mit den vorhandenen Daten nicht moeglich, da `human_assessment.csv` jedes Paper nur einem einzigen Provider zuordnet.
-
-### Missingness-Indikatoren
-
-| Indikator | Wert |
-|-----------|------|
-| PDF-Beschaffungsrate | 257/326 (79%) |
-| Nicht beschaffbar | 69/326 (21%) -- primaer Paywall |
-| Markdown-Konversionsrate | 252/257 (98%) |
-| Knowledge-Doc-Rate | 249/252 (99%) |
-| **Gesamte Verlustrate** (Zotero -> Knowledge Doc) | 77/326 (23.6%) |
-
-### Ausstehend
-
-- [ ] OA-Analyse: Open-Access-Status der 326 Papers via Unpaywall-API (DOI-basiert, daher nur fuer 53% moeglich)
-- [ ] Gesamt-Overlap: Nicht berechenbar mit vorhandenen Daten (s.o.)
+- [ ] OA analysis: Open Access status of the 326 papers via Unpaywall API (DOI-based, only possible for 53%)
+- [ ] Overall overlap: not computable with available data
 
 ---
 
-## Fehlgeschlagene PDF-Konvertierungen (5)
+## Failed PDF Conversions (5)
 
 1. `British_Association_of_Social_Workers_2025_Generat.pdf` - Data format error
 2. `Browne_2023_Feminist_AI_Critical_Perspectives_on_Algorithms,.pdf` - Page dimension error
@@ -401,4 +219,4 @@ Die RIS-Dateien in `deep-research/restored/` decken 34 von 254 Deep-Research-Pap
 
 ---
 
-*Aktualisiert: 2026-03-27*
+*Updated: 2026-04-01*

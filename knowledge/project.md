@@ -1,333 +1,325 @@
 # Literature Review: AI Literacy & Bias in Social Work
 
-## Projektziel
+## Project Goal
 
-Systematischer Literature Review zu **feministischer AI Literacy** und **LLM-Bias** (Gender, Race, Intersektionalitaet) im Kontext Sozialer Arbeit. Teil des Elisabeth-List-Fellowship-Projekts "Diversitaetssensibler Umgang mit Kuenstlicher Intelligenz" (Universitaet Graz, 2025-2026).
+Systematic literature review on **feminist AI literacy** and **LLM bias** (gender, race, intersectionality) in the context of social work. Part of the Elisabeth List Fellowship project "Diversity-Sensitive Engagement with Artificial Intelligence" (University of Graz, 2025--2026).
 
-**Primaeres Ziel:** Epistemische Infrastruktur fuer LLM-gestuetzte Literature Reviews beschreiben und operationalisieren -- am Beispiel eines systematischen Reviews zu feministischer AI Literacy und LLM-Bias in der Sozialen Arbeit. Kernfrage: Welche Verfahren, Dokumentationsstrukturen und Workflow-Entscheidungen sind noetig, damit LLM-Beitraege in der Forschung ueberpruefbar, nachvollziehbar und verantwortbar bleiben?
+**Primary goal:** Describe and operationalize epistemic infrastructure for LLM-assisted literature reviews -- using the case of a systematic review on feminist AI literacy and LLM bias in social work. Core question: What procedures, documentation structures, and workflow decisions are needed to ensure that LLM contributions in research remain verifiable, traceable, and accountable?
 
-**Sekundaeres Ziel (Grundlage):** Konzeptuelle Basis fuer eine Benchmark ("Fair Bench") fuer die Soziale Arbeit schaffen. Der Review identifiziert relevante Begriffe, Konzepte und Diskurspositionen, die in Testszenarien ueberfuehrt werden koennen.
+**Secondary goal (foundation):** Create a conceptual basis for a benchmark ("Fair Bench") for social work. The review identifies relevant terms, concepts, and discourse positions that can be transferred into test scenarios.
 
-**Arbeitsdefinition feministischer AI Literacies:** Diversitaetssensible, intersektionale und Bias-erkennende Faehigkeiten, die Fachkraefte der Sozialen Arbeit im Umgang mit generativer KI benoetigen, mit Fokus auf Prompting, kritische Output-Bewertung und Kontext-/Anwendungssensitivitaet.
-
----
-
-## Forschungsfragen
-
-### Hauptfrage
-
-Welche epistemische Infrastruktur braucht ein LLM-gestuetzter Literature Review, um der Asymmetrie zwischen maschineller Musterkennung und fachlicher Urteilskraft methodisch gerecht zu werden?
-
-### Review (Inhaltliche Fragen, nachgelagert)
-
-1. Wie manifestiert sich Bias in Frontier-LLMs kontextabhaengig?
-2. Welche Prompt-Strategien ermoeglichen diskriminierungssensible KI-Nutzung?
-3. Wie koennen Sozialarbeitende AI-Literacy entwickeln, die der Systemkomplexitaet gerecht wird?
+**Working definition of feminist AI literacies:** Diversity-sensitive, intersectional, and bias-aware competencies that social work professionals need when engaging with generative AI, with a focus on prompting, critical output evaluation, and context/application sensitivity.
 
 ---
 
-## Zielgruppe
+## Research Questions
 
-| Zielgruppe | Nutzen |
-|------------|--------|
-| Forscher:innen (Soziale Arbeit + KI) | Strukturierte Literaturuebersicht, Forschungsluecken |
-| Praktiker:innen (Soziale Arbeit) | Evidenzbasis fuer LLM-Nutzung in der Praxis |
-| Lehrende (AI Literacy) | Kursmaterial, Konzepte, Fallbeispiele |
+### Main Question
 
-**Primaere Zielgruppe:** Wissenschaftler:innen mit wenig KI-Vorwissen
+What epistemic infrastructure does an LLM-assisted literature review require to methodologically address the asymmetry between machine pattern recognition and expert judgment?
+
+### Review (Content Questions, Secondary)
+
+1. How does bias manifest context-dependently in frontier LLMs?
+2. What prompting strategies enable discrimination-sensitive AI use?
+3. How can social workers develop AI literacy that does justice to the system's complexity?
 
 ---
 
-## Erfolgskriterien
+## Target Audience
+
+| Audience | Benefit |
+|----------|---------|
+| Researchers (social work + AI) | Structured literature overview, research gaps |
+| Practitioners (social work) | Evidence base for LLM use in practice |
+| Educators (AI literacy) | Course material, concepts, case studies |
+
+**Primary audience:** Researchers with limited AI expertise
+
+---
+
+## Success Criteria
 
 ### Must-Have (Minimum)
 
-| Kriterium | Messbar | Status |
-|-----------|---------|--------|
-| Workflow vollstaendig dokumentiert | Repository auditierbar | Umgesetzt |
-| Epistemische Infrastruktur dokumentiert | Repository auditierbar, Prompts versioniert | Umgesetzt |
-| Dualer Bewertungspfad ausgefuehrt | Human + LLM Assessment komplett | Abgeschlossen |
-| Benchmark-Metriken berechnet | Konfusionsmatrix, Basisraten, Disagreement-Analyse (Kappa als Vergleichsanker) | Abgeschlossen (Details: `status.md`) |
+| Criterion | Measurable | Status |
+|-----------|------------|--------|
+| Workflow fully documented | Repository auditable | Implemented |
+| Epistemic infrastructure documented | Repository auditable, prompts versioned | Implemented |
+| Dual assessment track executed | Human + LLM assessment complete | Completed |
+| Benchmark metrics computed | Confusion matrix, base rates, divergence analysis (kappa as comparative anchor) | Completed (details: `status.md`) |
 
 ### Should-Have
 
-| Kriterium | Messbar | Status |
-|-----------|---------|--------|
-| 249 Knowledge Documents | Strukturierte Volltext-Extraktion | Abgeschlossen (97.2% verifiziert) |
-| Disagreement-Analyse | 111 Faelle kategorisiert | Abgeschlossen |
-| Obsidian Vault | Vernetzte Wissensbasis | Erledigt (249 Papers, 205 mit Assessment-Daten) |
+| Criterion | Measurable | Status |
+|-----------|------------|--------|
+| 249 knowledge documents | Structured full-text extraction | Completed (97.2% verified) |
+| Divergence analysis | 111 cases categorized | Completed |
+| Obsidian Vault | Interlinked knowledge base | Done (249 papers, 205 with assessment data) |
 
 ### Nice-to-Have
 
-| Kriterium | Messbar | Status |
-|-----------|---------|--------|
-| GitHub Pages | Statische Dokumentationsseite | Erledigt (https://chpollin.github.io/FemPrompt_SozArb/) |
-| OA-Analyse | Open-Access-Rate des Korpus | Ausstehend |
+| Criterion | Measurable | Status |
+|-----------|------------|--------|
+| GitHub Pages | Static documentation site | Done (https://chpollin.github.io/FemPrompt_SozArb/) |
+| OA analysis | Open access rate of the corpus | Pending |
 
 ---
 
-## Nicht-Ziele
+## Non-Goals
 
-| Was NICHT Teil des Projekts ist | Warum |
-|---------------------------------|-------|
-| Fertiger Prompting-Leitfaden | Kommt in nachgelagerter Phase |
-| Empirische Validierung von Prompting-Strategien | Ausserhalb Scope |
-| Tool fuer Endnutzer:innen | Fokus ist Forschung, nicht Produkt |
-| Vollstaendige Automatisierung | Expert-in-the-Loop bleibt zentral |
-| Training eigener Modelle | Nutzung bestehender Frontier-LLMs |
+| What is NOT part of the project | Why |
+|---------------------------------|-----|
+| Finished prompting guide | Planned for subsequent phase |
+| Empirical validation of prompting strategies | Out of scope |
+| End-user tool | Focus is research, not product |
+| Full automation | Expert-in-the-loop remains central |
+| Training custom models | Uses existing frontier LLMs |
 
 ---
 
-## Zwei Ebenen des Projekts
+## Two Levels of the Project
 
-### Ebene 2: Methodisch -- KERNBEITRAG
+### Level 2: Methodological -- CORE CONTRIBUTION
 
-**Frage:** Welche epistemische Infrastruktur braucht ein LLM-gestuetzter Literature Review, um der Asymmetrie zwischen maschineller Musterkennung und fachlicher Urteilskraft methodisch gerecht zu werden?
+**Question:** What epistemic infrastructure does an LLM-assisted literature review require to methodologically address the asymmetry between machine pattern recognition and expert judgment?
 
 **Output:**
-- Konzept der epistemischen Infrastruktur (vier Ebenen: Workflow, Research Integrity, Institutionell, Community)
-- Dualer Bewertungspfad als Operationalisierung (Human + LLM, parallel, unabhaengig)
-- Benchmark-Ergebnisse als Illustration: Divergenz ist messbar und informationshaltig (Ergebnisse: siehe `status.md`)
-- Dokumentierter, reproduzierbarer Workflow im Repository (github.com/chpollin/FemPrompt_SozArb)
+- Concept of epistemic infrastructure (four layers: workflow, research integrity, institutional, community)
+- Dual assessment track as operationalization (human + LLM, parallel, independent)
+- Benchmark results as illustration: divergence is measurable and informationally productive (results: see `status.md`)
+- Documented, reproducible workflow in the repository (github.com/chpollin/FemPrompt_SozArb)
 
-### Ebene 1: Inhaltlich (Literature Review -- Anwendungsfall)
+### Level 1: Substantive (Literature Review -- Use Case)
 
-**Frage:** Was sagt die Forschung zu LLM-Bias und feministischer AI Literacy?
+**Question:** What does the research say about LLM bias and feminist AI literacy?
 
 **Output:**
-- Thematisch kategorisierter Korpus (326 Papers, 10 binaere Kategorien)
-- 249 destillierte Knowledge Documents (Volltext-Extraktion, 3-Stage SKE)
-- Obsidian Vault (in Umsetzung)
-- Konzeptuelle Grundlage fuer Fair Bench (nachgelagerte Phase)
+- Thematically categorized corpus (326 papers, 10 binary categories)
+- 249 distilled knowledge documents (full-text extraction, 3-stage SKE)
+- Obsidian Vault (in progress)
+- Conceptual foundation for Fair Bench (subsequent phase)
 
 ---
 
-## Korpus
+## Corpus
 
-| Aspekt | Wert |
-|--------|------|
-| Papers gesamt | 326 (Zotero Group 6080294) |
-| Herkunft | 254 Deep Research (4 Modelle) + 50 manuell identifiziert + 22 nur in Zotero |
-| Deep Research Modelle | Gemini, Claude, ChatGPT, Perplexity |
-| DR-Verteilung | Perplexity 75, Claude 63, ChatGPT 62, Gemini 54 |
-| Fokus | Feministische AI Literacies, generative KI, Prompting, Soziale Arbeit |
-| Sprachen | Englisch, Deutsch |
-| Zeitraum | 2017-2025 |
+| Aspect | Value |
+|--------|-------|
+| Total papers | 326 (Zotero Group 6080294) |
+| Origin | 254 Deep Research (4 models) + 50 manually identified + 22 Zotero only |
+| Deep Research models | Gemini, Claude, ChatGPT, Perplexity |
+| DR distribution | Perplexity 75, Claude 63, ChatGPT 62, Gemini 54 |
+| Focus | Feminist AI literacies, generative AI, prompting, social work |
+| Languages | English, German |
+| Time span | 2017--2025 |
 
 ---
 
 ## Team
 
-| Person | Rolle |
-|--------|-------|
-| Christopher Pollin | Technische Infrastruktur, Pipeline |
-| Susi Sackl-Sharif | Human-Assessment, Forschungsleitung |
-| Sabine Klinger | Human-Assessment |
-| Christina | Zotero-Kuratierung, Metadaten |
-| Christian Steiner | Paper-Review |
+| Person | Role |
+|--------|------|
+| Christopher Pollin | Technical infrastructure, pipeline |
+| Susi Sackl-Sharif | Human assessment, research lead |
+| Sabine Klinger | Human assessment |
+| Christina | Zotero curation, metadata |
+| Christian Steiner | Paper review |
 
 ---
 
-## Theoretischer Rahmen
+## Theoretical Framework
 
-### Epistemische Asymmetrie (Leitbegriff des Papers)
+### Epistemic Asymmetry (Guiding Concept of the Paper)
 
-Epistemische Asymmetrie beschreibt eine Arbeitsteilung, in der die beteiligten Instanzen auf grundsaetzlich verschiedene Weise Wissen verarbeiten, wobei keine Seite die epistemischen Beitraege der anderen vollstaendig bewerten kann. LLMs verarbeiten grosse Textmengen und erkennen Muster ueber Hunderte von Texten. Expert:innen bewerten die epistemische Qualitaet von Quellen und erkennen Nuancen, die nur mit Feldkenntnis sichtbar werden.
+Epistemic asymmetry describes a division of labor in which the involved agents process knowledge in fundamentally different ways, where neither side can fully evaluate the epistemic contributions of the other. LLMs process large volumes of text and recognize patterns across hundreds of documents. Experts assess the epistemic quality of sources and recognize nuances visible only through domain knowledge.
 
-Die Asymmetrie ist wechselseitig und kontextabhaengig. Sie laesst sich mit gegenwaertigen Systemen nicht aufloesen, sondern nur durch Workflow-Design produktiv bearbeiten (Mollick: Co-Intelligence).
+The asymmetry is reciprocal and context-dependent. It cannot be resolved with current systems but can only be productively managed through workflow design (Mollick: Co-Intelligence).
 
-**Zentrale These:** Die Verantwortungsasymmetrie bindet die anderen Dimensionen. Ohne zurechenbare Verantwortung gibt es keine Instanz, die Intransparenz, Zugangsbedingungen und Kompetenzunterschiede methodisch bearbeiten kann.
+**Central thesis:** The responsibility asymmetry binds the other dimensions. Without attributable responsibility, there is no agent capable of methodologically addressing opacity, access conditions, and competence differentials.
 
-#### Mapping-Tabelle: Asymmetrie -> Risiko -> Massnahme -> Artefakt
+#### Mapping Table: Asymmetry -> Risk -> Measure -> Artifact
 
-| Asymmetrie-Dimension | Risiko | Infrastruktur-Massnahme | Pruefbares Artefakt | Status |
+| Asymmetry Dimension | Risk | Infrastructure Measure | Verifiable Artifact | Status |
 |---|---|---|---|---|
-| **Intransparenz** (justifikatorische Esoterik) | Unueberpruefbare Selektion durch Deep-Research-Modelle | Multi-Provider-Strategie (4 Modelle) + Selektions-Logging | `corpus/source_tool_mapping.json`, `deep-research/restored/` | Teilweise (Logging vorhanden, Audit ausstehend) |
-| **Ungesicherte LLM-Outputs** | LLMs koennen faktuell ungesicherte Aussagen erzeugen | 3-Stage SKE mit deterministischer Stufe 2 + Verifikation Stufe 3 | `pipeline/knowledge/_verification/`, Confidence-Scores in Frontmatter | Umgesetzt |
-| **Sycophancy** | Prompt-induzierte Ueberattribuierung von Kategorien | Negative Constraints in Prompts, Calibration Items, Prompt-Versionierung | `prompts/CHANGELOG.md`, negative Constraints in `benchmark/scripts/run_llm_assessment.py` | Umgesetzt (v2.1: 5 negative Constraints, neutrale Rolle, Restriktivitaetsregel) |
-| **Paywall-Bias** | Systematische Unterrepraesentation kostenpflichtiger Literatur | Hierarchische Beschaffungsstrategie + OA-Disclosure | PRISMA Flow-Diagramm, Beschaffungsrate (257/326 = 79%) | Teilweise (Rate dokumentiert, OA-Analyse ausstehend) |
-| **Prompt-Kompetenz** | Ergebnisabhaengigkeit von Prompt-Qualitaet | Prompt-Governance: Versionierung, Review, Dokumentation | `prompts/CHANGELOG.md`, `prompts/deep-research-template.md` | Umgesetzt (5 Prompts versioniert, Deep-Research-Template restauriert) |
-| **Verantwortungsasymmetrie** | Keine zurechenbare Instanz auf LLM-Seite | Expert:innen-Pfad als epistemisch verbindlicher Referenzpfad | Human Assessment (Google Sheets), auditierbare Bewertungsdaten | Umgesetzt (Assessment laufend) |
-| **Anbieter-Divergenz** | Verschiedene Modelle liefern verschiedene Evidenzbasen | Multi-Provider-Vergleich, Overlap-Analyse | `corpus/papers_metadata.csv` (Source_Tool-Spalte), Provider-Statistiken | Teilweise (Verteilung dokumentiert, Overlap-Analyse ausstehend) |
-| **Ressourcenasymmetrie** | Ungleich verteilter Zugang zu Frontier-Modellen und Infrastruktur | Kosten-Transparenz, Open-Source-Pipeline wo moeglich | Kosten-Dokumentation ($10.17 gesamt), Docling (Open Source) | Dokumentiert |
+| **Opacity** (justificatory esotericism) | Unverifiable selection by Deep Research models | Multi-provider strategy (4 models) + selection logging | `corpus/source_tool_mapping.json`, `deep-research/restored/` | Partial (logging in place, audit pending) |
+| **Unsecured LLM outputs** | LLMs can generate factually unsupported claims | 3-stage SKE with deterministic stage 2 + verification stage 3 | `pipeline/knowledge/_verification/`, confidence scores in frontmatter | Implemented |
+| **Sycophancy** | Prompt-induced over-attribution of categories | Negative constraints in prompts, calibration items, prompt versioning | `prompts/CHANGELOG.md`, negative constraints in `benchmark/scripts/run_llm_assessment.py` | Implemented (v2.1) |
+| **Paywall bias** | Systematic underrepresentation of paywalled literature | Hierarchical acquisition strategy + OA disclosure | PRISMA flow diagram, acquisition rate (257/326 = 79%) | Partial (rate documented, OA analysis pending) |
+| **Prompt competence** | Result dependence on prompt quality | Prompt governance: versioning, review, documentation | `prompts/CHANGELOG.md`, `prompts/deep-research-template.md` | Implemented |
+| **Responsibility asymmetry** | No attributable agent on the LLM side | Expert track as epistemically binding reference track | Human assessment (Google Sheets), auditable assessment data | Implemented |
+| **Provider divergence** | Different models yield different evidence bases | Multi-provider comparison, overlap analysis | `corpus/papers_metadata.csv` (Source_Tool column), provider statistics | Partial |
+| **Resource asymmetry** | Unequal access to frontier models and infrastructure | Cost transparency, open-source pipeline where possible | Cost documentation ($10.17 total), Docling (open source) | Documented |
 
-### Epistemische Infrastruktur
+### Epistemic Infrastructure
 
-Epistemische Infrastruktur bezeichnet die Gesamtheit derjenigen Verfahren, Dokumentationsstrukturen, institutionellen Regelungen und Community-Praktiken, die sicherstellen, dass LLM-Beitraege in der Forschung ueberpruefbar, nachvollziehbar und verantwortbar bleiben.
+Epistemic infrastructure denotes the totality of procedures, documentation structures, institutional regulations, and community practices that ensure LLM contributions in research remain verifiable, traceable, and accountable.
 
-**Kernprinzip:** Verlaesslichkeit kann nicht als Eigenschaft des Systems vorausgesetzt, sondern muss als Eigenschaft des Prozesses hergestellt werden. Die systematische Anordnung von Werkzeugen, Entscheidungsregeln, Verifikationspunkten und Verantwortungszuweisungen stellt diese Verlaesslichkeit her.
+**Core principle:** Reliability cannot be presupposed as a property of the system but must be established as a property of the process.
 
-**Operatives Designprinzip (Verifikationspunkte):** Nach jedem KI-gestuetzten Arbeitsschritt folgt ein Verifikationspunkt -- eine definierte Stelle im Prozess, an der menschliche oder regelbasierte Kontrolle die Ergebnisse prueft. Kein einzelnes Element gewaehrleistet fuer sich Verlaesslichkeit; diese entsteht aus dem systematischen Zusammenspiel.
+**Operative design principle (verification checkpoints):** Each AI-assisted work step is followed by a verification checkpoint -- a defined point in the process where human or rule-based control checks the results.
 
-**Diagnostische Funktion von LLM-Begruendungen:** LLM-Bewertungen enthalten textuelle Begruendungen. Diese sind selbst konfabulationsanfaellige Outputs, deren Verhaeltnis zum tatsaechlichen Verarbeitungsprozess ungeklaert bleibt. Als Prompting-Strategie erfuellen sie eine diagnostische Funktion: Inkonsistenzen zwischen Klassifikation und Begruendung weisen auf instabile Zuordnungen hin und liefern den Expert:innen gezielt Ansatzpunkte fuer die Ueberpruefung.
+**Diagnostic function of LLM justifications:** LLM assessments contain textual justifications. These are themselves confabulation-prone outputs. As a prompting strategy, they serve a diagnostic function: inconsistencies between classification and justification indicate unstable assignments.
 
-**Vier Ebenen:**
+**Four layers:**
 
-| Ebene | Beschreibung | Projekt-Umsetzung |
-|-------|--------------|-------------------|
-| Workflow | Dualer Bewertungspfad, deterministische Verarbeitungsstufen | 3-Stage SKE, paralleles Assessment |
-| Research Integrity | Dokumentation, nachvollziehbare Designentscheidungen | Repository, Prompt-Changelog, Verifikationspunkte |
-| Institutionell | KI-Richtlinien | Noch nicht vorhanden |
-| Community | Peer-Review-Praktiken, die Workflows einschliessen | Paper-Forderung |
+| Layer | Description | Project Implementation |
+|-------|-------------|----------------------|
+| Workflow | Dual assessment track, deterministic processing stages | 3-stage SKE, parallel assessment |
+| Research Integrity | Documentation, traceable design decisions | Repository, prompt changelog, verification checkpoints |
+| Institutional | AI guidelines | Not yet in place |
+| Community | Peer review practices that include workflows | Paper demand |
 
-#### Designprinzip: Wer entscheidet wo was, und warum?
+#### Design Principle: Who Decides What, Where, and Why?
 
-**Phase 1: Identifikation (Deep Research)**
+**Phase 1: Identification (Deep Research)**
 
-| Entscheidung | Wer entscheidet | Warum | Artefakt |
+| Decision | Who Decides | Why | Artifact |
 |---|---|---|---|
-| Welche Literatur wird gefunden? | 4 LLM-Modelle | Automatisierte Suche ueber Disziplinen | RIS-Dateien, Zotero-Collections |
-| Welche Literatur wird ergaenzt? | Studienassistentin + Forschende | Manuelle Recherche schliesst Luecken | 50 Manual-Papers in `papers_metadata.csv` |
-| Welche Duplikate werden entfernt? | Studienassistentin | Metadaten-Abgleich (DOI, Titel) | Zotero-Duplikaterkennung |
+| Which literature is found? | 4 LLM models | Automated cross-disciplinary search | RIS files, Zotero collections |
+| Which literature is supplemented? | Research assistant + researchers | Manual search closes gaps | 50 manual papers in `papers_metadata.csv` |
+| Which duplicates are removed? | Research assistant | Metadata matching (DOI, title) | Zotero duplicate detection |
 
-**Phase 2: Bewertung (Dual Assessment)**
+**Phase 2: Assessment (Dual Assessment)**
 
-| Entscheidung | Wer entscheidet | Warum | Artefakt |
+| Decision | Who Decides | Why | Artifact |
 |---|---|---|---|
-| Include/Exclude (verbindlich) | Expert:innen (Sackl-Sharif, Klinger) | Feldkenntnis, interpretative Urteilskraft | Google Sheets, `human_assessment.csv` |
-| Include/Exclude (explorativ) | LLM (Haiku 4.5) | Skalierbarkeit, Muster-Erkennung | `assessment_llm.xlsx` (5D), 10K-Output |
-| Kategorie-Zuordnung | Beide (parallel, unabhaengig) | Vergleich ermoeglicht Divergenz-Analyse | Konfusionsmatrix, Basisraten, Disagreement-Analyse |
+| Include/exclude (binding) | Experts (Sackl-Sharif, Klinger) | Domain knowledge, interpretive judgment | Google Sheets, `human_assessment.csv` |
+| Include/exclude (exploratory) | LLM (Haiku 4.5) | Scalability, pattern recognition | `assessment_llm.xlsx` (5D), 10K output |
+| Category assignment | Both (parallel, independent) | Comparison enables divergence analysis | Confusion matrix, base rates, divergence analysis |
 
-**Phase 3: Synthese (SKE)**
+**Phase 3: Synthesis (SKE)**
 
-| Entscheidung | Wer entscheidet | Warum | Artefakt |
+| Decision | Who Decides | Why | Artifact |
 |---|---|---|---|
-| Extraktion (Stufe 1) | LLM (probabilistisch) | Skalierung ueber 249 Dokumente | `_stage1_json/` |
-| Formatierung (Stufe 2) | Deterministische Software | Reproduzierbarkeit, keine LLM-Beteiligung | `_stage2_draft/` |
-| Verifikation (Stufe 3) | LLM (probabilistisch mit Pruefauftrag) | Pruefung gegen Original-Volltext | `_verification/`, Confidence-Score |
-| Eskalation bei niedrigem Confidence | Software-Regel (< 75) | Schwellenwert-basierte Weiterleitung | `needs_correction`-Markierung |
+| Extraction (stage 1) | LLM (probabilistic) | Scaling across 249 documents | `_stage1_json/` |
+| Formatting (stage 2) | Deterministic software | Reproducibility, no LLM involvement | `_stage2_draft/` |
+| Verification (stage 3) | LLM (probabilistic with verification mandate) | Checking against original full text | `_verification/`, confidence score |
+| Escalation at low confidence | Software rule (< 75) | Threshold-based forwarding | `needs_correction` flag |
 
-### Kuenstliche epistemische Autoritaeten (Hauswald 2025)
+### Artificial Epistemic Authorities (Hauswald 2025)
 
-Rico Hauswald argumentiert, dass epistemische Deferenz nicht an Ueberzeugungen oder kommunikative Intentionen gebunden sein muss. Entscheidend ist, ob die Outputs eines Systems als zuverlaessige Wahrheitsindikatoren fungieren. Das erlaubt es, LLM-Beitraege als epistemisch relevant zu behandeln, ohne dem System menschliches Verstehen zuzuschreiben.
+Rico Hauswald argues that epistemic deference need not be tied to beliefs or communicative intentions. What matters is whether a system's outputs function as reliable truth indicators.
 
-Hauswald beschreibt eine justifikatorische Esoterik: nicht der Inhalt, sondern die Begruendung bleibt unzugaenglich. Trainingsdaten, Modellarchitekturen und Selektionslogiken werden nicht offengelegt.
+Hauswald describes a justificatory esotericism: not the content but the justification remains inaccessible.
 
-**Ergaenzung (Ferrario/Facchini/Termine 2024):** Selbst empirisch nachweisbare Ueberlegenheit eines KI-Systems begruendet keine epistemische Autoritaet, weil Autoritaet epistemische Tugenden und normative Ansprechbarkeit voraussetzt, die Maschinen nicht besitzen.
+**Supplement (Ferrario/Facchini/Termine 2024):** Even empirically demonstrable superiority of an AI system does not establish epistemic authority, because authority presupposes epistemic virtues and normative answerability that machines do not possess.
 
-### Doppelte Unkontrollierbarkeit
+### Double Uncontrollability
 
-Vor dem Einsatz laesst sich nicht eingrenzen, bei welchen Aufgaben ein Modell verlaesslich arbeitet. Nach dem Einsatz laesst sich nicht erklaeren, warum ein bestimmter Output so und nicht anders ausgefallen ist. Diese doppelte Unkontrollierbarkeit wird durch AI Agents weiter verschaerft, bei denen Ketten von Verarbeitungsschritten ablaufen, deren Zwischenergebnisse und Entscheidungslogik zusaetzlich verborgen bleiben.
+Before deployment, it cannot be delimited for which tasks a model works reliably. After deployment, it cannot be explained why a particular output turned out as it did. This is further intensified by AI agents, where chains of processing steps run whose intermediate results and decision logic remain additionally hidden.
 
-### Kompetenzanforderungen fuer epistemische Infrastruktur
+### Competency Requirements for Epistemic Infrastructure
 
-| Kompetenz | Beschreibung |
-|-----------|--------------|
-| Technische Grundkompetenz | Code, Repositories und dokumentierte Prozesse nachvollziehen |
-| KI-spezifische Literacy | Phaenomene wie Konfabulation und Sycophancy im Prozessdesign adressieren |
-| Reflexive Literacy | Epistemische Konsequenzen der eingesetzten Technologien kritisch beurteilen |
+| Competency | Description |
+|------------|-------------|
+| Basic technical competency | Understanding code, repositories, and documented processes |
+| AI-specific literacy | Addressing phenomena such as confabulation and sycophancy in process design |
+| Reflective literacy | Critically assessing the epistemic consequences of the technologies deployed |
 
-Diese Kompetenzen gehen weit ueber klassische Informationskompetenz hinaus und sind derzeit ungleich verteilt.
+These competencies go far beyond traditional information literacy and are currently unevenly distributed.
 
-### LLMs als "Exotic Mind-Like Entities" (Shanahan 2024)
+### LLMs as "Exotic Mind-Like Entities" (Shanahan 2024)
 
-Shanahan (2024, *Strange New Minds*) praegt den Begriff "Exotic Mind-Like Entities" fuer Frontier-LLMs: Systeme, die anders als Menschen operieren, auch wenn ihr Verhalten oft menschenaehnlich erscheint. LLMs "lack the means to exercise concepts" wie Verstehen oder Glauben "in anything like the way we do" (S. 71) -- sie produzieren statistisch wahrscheinliche Fortsetzungen durch Next-Token-Prediction mit emergenten, kognitionsaehnlichen Mustern. Wenn Praktizierende diesen Systemen Einsicht in Klient:innensituationen zuschreiben, uebersehen sie, dass LLMs ohne das Weltverstaendnis oder die kritische Reflexionsfaehigkeit operieren, die professionelle Sozialarbeit erfordert.
+Shanahan (2024, *Strange New Minds*) coins the term for frontier LLMs: systems that operate differently from humans, even when their behavior often appears human-like. LLMs "lack the means to exercise concepts" like understanding or belief "in anything like the way we do" (p. 71). When practitioners attribute insight into client situations to these systems, they overlook that LLMs operate without the world understanding or critical reflective capacity that professional social work requires.
 
-Drei Aspekte sind fuer das Projekt relevant:
-1. **Emergente Capabilities** ohne explizites Training (In-Context Learning, Domainuebertragung)
-2. **Alignment-Spannungen** zwischen Constitutional AI ("helpful, harmless, honest") und professionsspezifischen Werten der Sozialen Arbeit
-3. **Persona-Effekte** (Chen et al. 2025): Konsistente Charaktereigenschaften, die sich durch Finetuning verschieben und unvorhersehbare Cross-Trait-Effekte erzeugen
+Three aspects relevant to the project:
+1. **Emergent capabilities** without explicit training (in-context learning, domain transfer)
+2. **Alignment tensions** between Constitutional AI ("helpful, harmless, honest") and profession-specific values of social work
+3. **Persona effects** (Chen et al. 2025): Consistent character traits that shift through fine-tuning and produce unpredictable cross-trait effects
 
-### Sycophancy (Prompt-Konformitaet)
+### Sycophancy (Prompt Conformity)
 
-Empirisch belegte Tendenz von LLMs, den Vorannahmen eines Prompts uebermaeessig zuzustimmen. Malmqvist (2024) dokumentiert Error Introduction Rates von bis zu 40% bei suggestiven Anfragen.
+Empirically documented tendency of LLMs to excessively agree with prompt presuppositions. Malmqvist (2024) documents error introduction rates of up to 40% for suggestive queries.
 
-**Relevanz fuer das Projekt:** Wenn der Assessment-Prompt Kategorien wie "feministisch" oder "intersektional" betont, koennte das Modell diese Kategorien grosszuegiger zuweisen. Qualitaet des LLM-Beitrags haengt damit nicht nur von der Modell-Kompetenz ab, sondern auch von der Prompt-Gestaltung.
+**Measures in the project:**
 
-**Massnahmen im Projekt:**
+1. **Negative constraints** (in assessment prompts, v2.1):
+   - "Classify as 'Feminist' only if the text explicitly uses feminist theory, methods, or perspectives OR refers to feminist authors. Implicit proximity to gender topics is insufficient."
+   - "When uncertain: 'No' rather than 'Yes'. When in doubt, choose the more restrictive value."
+   - "Do not assign more than 3-4 categories per paper unless the text genuinely addresses more."
 
-1. **Negative Constraints** (in Assessment-Prompts, v2.1):
-   - "Klassifiziere nur als 'Feministisch', wenn der Text explizit feministische Theorie, Methoden oder Perspektiven verwendet ODER sich auf feministische Autor:innen bezieht. Implizite Naehe zu Gender-Themen reicht nicht."
-   - "Bei Unsicherheit: 'Nein' statt 'Ja'. Im Zweifel fuer den restriktiveren Wert."
-   - "Vergib nicht mehr als 3-4 Kategorien pro Paper, es sei denn, der Text adressiert tatsaechlich mehr."
+2. **Calibration items:** 3-5 papers with known correct classification as a control group
 
-2. **Calibration Items:** 3-5 Papers mit bekannter korrekter Klassifikation als Kontrollgruppe:
+3. **Prompt versioning:** Every change documented in `prompts/CHANGELOG.md`
 
-   | Paper (Beispiel) | Erwartete Klassifikation | Prueft |
-   |---|---|---|
-   | Rein technisches ML-Paper ohne Sozialbezug | Alle Sozial-Kategorien = Nein | False-Positive-Rate |
-   | Explizit feministisches Paper | Feministisch = Ja | True-Positive-Rate |
-   | Fairness-Paper ohne Gender-Bezug | Feministisch = Nein, Fairness = Ja | Trennschaerfe |
+### Situated Knowledge (Haraway)
 
-3. **Prompt-Versionierung:** Jede Aenderung in `prompts/CHANGELOG.md` dokumentiert mit Versionsnummer, Datum, Aenderung, Begruendung und Auswirkung.
+All knowledge arises from specific social, cultural, and material contexts. Objectivity means explicit positioning, not a "view from nowhere."
 
-### Situiertes Wissen (Haraway)
+**Operationalization:**
+- Multi-model strategy: 4 LLMs with different training data
+- Divergence between models is documented, not harmonized
+- Own positioning (feminist, social-work-scientific) made transparent
 
-Alle Erkenntnisse entstehen aus spezifischen sozialen, kulturellen und materiellen Kontexten. Objektivitaet bedeutet explizite Positionierung, nicht "View from Nowhere".
+### Intersectionality (Crenshaw)
 
-**Operationalisierung:**
-- Multi-Modell-Strategie: 4 LLMs mit unterschiedlichen Trainingsdaten
-- Divergenz zwischen Modellen wird dokumentiert, nicht harmonisiert
-- Eigene Positionierung (feministisch, sozialarbeitswissenschaftlich) transparent
+Oppression does not operate along single axes (gender, race) but through their mutual constitution.
 
-### Intersektionalitaet (Crenshaw)
+**Operationalization:**
+- Multi-dimensional categorization schemas (10 binary categories)
+- Prompt templates focus on intersectional perspectives
+- Concept extraction preserves intersectional specificity
 
-Unterdrueckung erfolgt nicht entlang einzelner Achsen (Gender, Race), sondern durch deren wechselseitige Konstitution.
+### Response-Ability (Haraway) / Responsibility Asymmetry
 
-**Operationalisierung:**
-- Mehrdimensionale Kategorisierungsschemata (10 binaere Kategorien)
-- Prompt-Templates fokussieren auf intersektionale Perspektiven
-- Konzeptextraktion behaelt intersektionale Spezifitaet bei
+Responsibility means the capacity to respond and to maintain relationships. Responsibility for all results remains with the researchers, even when LLMs provide epistemically relevant contributions.
 
-### Response-Ability (Haraway) / Verantwortungsasymmetrie
-
-Verantwortung bedeutet die Faehigkeit zu antworten und Beziehungen zu pflegen. Im Kontext des dualen Bewertungspfads: Die Verantwortung fuer alle Ergebnisse bleibt bei den Forscher:innen, auch wenn LLMs epistemisch relevante Beitraege liefern.
-
-**Operationalisierung:**
-- Expert-in-the-Loop-Validierung an kritischen Entscheidungspunkten
-- Explizite Begruendungen fuer Einschluss/Ausschluss-Entscheidungen
-- Transparente Dokumentation methodischer Grenzen
-- Expert:innen-Pfad als epistemisch verbindlicher Referenzpfad
+**Operationalization:**
+- Expert-in-the-loop validation at critical decision points
+- Explicit justifications for inclusion/exclusion decisions
+- Transparent documentation of methodological limitations
+- Expert track as epistemically binding reference track
 
 ---
 
-## Methodische Grenzen
+## Methodological Limitations
 
-- **Zirkularitaet:** LLMs werden eingesetzt, um Literatur ueber den Einsatz von LLMs zu untersuchen. Diese Zirkularitaet ist kein Defekt, sondern eine Bedingung des Feldes -- es gibt keinen externen Standpunkt, von dem aus feministische AI Literacies untersucht werden koennten, ohne selbst auf AI Literacies angewiesen zu sein
-- **Justifikatorische Esoterik (Hauswald):** Trainingsdaten, Modellarchitekturen und Selektionslogiken werden nicht offengelegt. Nicht der Inhalt, sondern die Begruendung bleibt unzugaenglich
-- **Ungesicherte LLM-Outputs:** LLMs koennen faktuell ungesicherte Aussagen erzeugen (adressiert durch 3-Stage SKE mit deterministischer Stufe 2 und Verifikation)
-- **Sycophancy-Risiko:** Prompt-induzierte Ueberattribuierung (adressiert durch Negative Constraints, Calibration Items)
-- **Paywall-Bias:** Systematische Unterrepraesentation kostenpflichtiger Literatur im Korpus (79% Beschaffungsrate, Rest hinter Paywalls)
-- **Ressourcenasymmetrie:** Gruppen, die Bias und Ungleichheit untersuchen, verfuegen haeufig ueber geringere Ressourcen fuer den Aufbau epistemischer Infrastruktur
-- **Abhaengigkeit von proprietaeren Systemen**
+- **Circularity:** LLMs are used to examine literature about the use of LLMs. This circularity is not a defect but a condition of the field
+- **Justificatory esotericism (Hauswald):** Training data, model architectures, and selection logics are not disclosed
+- **Unsecured LLM outputs:** Addressed by 3-stage SKE with deterministic stage 2 and verification
+- **Sycophancy risk:** Addressed by negative constraints, calibration items
+- **Paywall bias:** 79% acquisition rate, remainder behind access barriers
+- **Resource asymmetry:** Groups studying bias and inequality frequently have fewer resources for building epistemic infrastructure
+- **Dependence on proprietary systems**
 
-### Drei systematische Einschraenkungen des Benchmarks
+### Three Systematic Limitations of the Benchmark
 
-1. **Benchmark-Basis:** 291 von 326 Papers mit beiden Assessments (303 Human, 326 LLM, 291 Overlap per Zotero_Key)
-2. **Overlap-Analyse:** Nur fuer Stichprobe von 34 Papers belegbar (93.8% Unikate)
-3. **PDF-Beschaffungsrate:** 79% erzeugt systematische Unterrepraesentation paywall-gesicherter Literatur
-
----
-
-## Glossar (Kernbegriffe)
-
-| Begriff | Definition |
-|---------|------------|
-| Epistemische Asymmetrie | Arbeitsteilung, in der beteiligte Instanzen auf grundsaetzlich verschiedene Weise Wissen verarbeiten |
-| Epistemische Infrastruktur | Verfahren, Dokumentationsstrukturen, Regelungen, die LLM-Beitraege ueberpruefbar machen |
-| Sycophancy | Tendenz von LLMs, Prompt-Vorannahmen uebermaeessig zuzustimmen |
-| Jagged Frontier | Ungleichmaessige Kompetenzverteilung von KI-Systemen (Mollick) |
-| Structured Knowledge Extraction (SKE) | 3-stufige Verarbeitung von Volltexten zu Wissensdokumenten |
-| Dualer Bewertungspfad | Parallele Anordnung von Expert:innen- und LLM-Pfad |
-| Verantwortungsasymmetrie | Verantwortung bleibt bei Forscher:innen, obwohl LLMs epistemisch relevante Beitraege liefern |
-| Deep Research | Agentenbasierte LLM-Systeme fuer iterative Recherche und zitierte Synthese |
-| Wissensdokument | Strukturierte Zusammenfassung einer Studie mit Metadaten, Kernbefunden, Kategorien und Confidence-Score |
-| Konfabulation | Erzeugung kohaerenter, aber faktuell ungesicherter Aussagen ohne interne Verifikationsinstanz. Begriff aus klinischer Neuropsychologie (Fuellen von Gedaechtnisluecken). Praeziser als "Halluzination", da der Erzeugungsmechanismus beschrieben wird, nicht ein Sinneserleben. Konfabulierte Outputs weisen hoehere Narrativitaet auf als veridikale -- sie sind gerade dann ueberzeugend, wenn sie falsch sind. |
-| Doppelte Unkontrollierbarkeit | Vor dem Einsatz nicht eingrenzbar, bei welchen Aufgaben ein Modell verlaesslich arbeitet; nach dem Einsatz nicht erklaerbar, warum ein Output so ausgefallen ist. Verschaerft durch AI Agents. |
-| Verifikationspunkt | Definierte Stelle im Prozess, an der menschliche oder regelbasierte Kontrolle prueft, ob Ergebnisse die Anforderungen fuer den naechsten Arbeitsschritt erfuellen. Designprinzip des Workflows. |
-| Context Window | Begrenzte Textmenge, die ein LLM pro Anfrage verarbeiten kann. |
-| Context Rot | Abnahme der Verarbeitungsqualitaet mit zunehmender Eingabelaenge. |
-| Nachnutzbarkeit | Prinzip, dass Workflows so dokumentiert sein sollen, dass sie fuer andere Fragestellungen adaptiert werden koennen. |
+1. **Benchmark basis:** 291 of 326 papers with both assessments (303 human, 326 LLM, 291 overlap by Zotero key)
+2. **Overlap analysis:** Verifiable only for a sample of 34 papers (93.8% unique)
+3. **PDF acquisition rate:** 79% creates systematic underrepresentation of paywalled literature
 
 ---
 
-## Offene Punkte (Theorie/Rahmung)
+## Glossary (Core Terms)
 
-- [ ] OA-Analyse durchfuehren (Unpaywall-API)
-- [ ] Overlap-Analyse auf vollem Korpus (ueber `papers_metadata.csv`, nicht nur RIS)
-- [ ] Eskalationsregel fuer Expert:innen-Review formalisieren
-- [ ] Institutional-Level: KI-Richtlinien-Bezug dokumentieren
+| Term | Definition |
+|------|------------|
+| Epistemic asymmetry | Division of labor in which involved agents process knowledge in fundamentally different ways |
+| Epistemic infrastructure | Procedures, documentation structures, and regulations that make LLM contributions verifiable |
+| Sycophancy | Tendency of LLMs to excessively agree with prompt presuppositions |
+| Jagged frontier | Uneven competence distribution of AI systems (Mollick) |
+| Structured Knowledge Extraction (SKE) | 3-stage processing of full texts into knowledge documents |
+| Dual assessment track | Parallel arrangement of expert and LLM tracks |
+| Responsibility asymmetry | Responsibility remains with researchers even though LLMs provide epistemically relevant contributions |
+| Deep Research | Agent-based LLM systems for iterative search and cited synthesis |
+| Knowledge document | Structured summary of a study with metadata, key findings, categories, and confidence score |
+| Confabulation | Generation of coherent but factually unsupported claims without internal verification. More precise than "hallucination" because it describes the generative mechanism rather than a sensory experience. |
+| Double uncontrollability | Before deployment, it cannot be delimited for which tasks a model works reliably; after deployment, it cannot be explained why an output turned out as it did. Intensified by AI agents. |
+| Verification checkpoint | Defined point in the process where human or rule-based control checks whether results meet requirements for the next step. |
+| Context window | Limited amount of text that an LLM can process per request. |
+| Context rot | Degradation of processing quality with increasing input length (Hong et al. 2025). |
+| Reusability | Principle that workflows should be documented such that they can be adapted for other research questions. |
 
 ---
 
-*Aktualisiert: 2026-03-13*
+## Open Items (Theory/Framing)
+
+- [ ] Conduct OA analysis (Unpaywall API)
+- [ ] Overlap analysis on full corpus (via `papers_metadata.csv`, not just RIS)
+- [ ] Formalize escalation rule for expert review
+- [ ] Institutional level: document AI guidelines reference
+
+---
+
+*Updated: 2026-04-01*

@@ -1,38 +1,38 @@
 # Quickstart Guide
 
-10-Minuten-Einstieg in die Literature Review Pipeline.
+10-minute introduction to the literature review pipeline.
 
 ---
 
 ## Installation
 
-1. Repository klonen
-2. `pip install -r requirements.txt` ausfuehren
-3. API-Keys in `.env` Datei setzen:
-   - `ANTHROPIC_API_KEY` fuer Claude API
-   - `ZOTERO_API_KEY` fuer Zotero API (optional)
+1. Clone repository
+2. Run `pip install -r requirements.txt`
+3. Set API keys in `.env` file:
+   - `ANTHROPIC_API_KEY` for Claude API
+   - `ZOTERO_API_KEY` for Zotero API (optional)
 
 ---
 
-## Pipeline-Uebersicht
+## Pipeline Overview
 
-Die Pipeline hat 7 Stufen. Alle Scripts befinden sich in `pipeline/scripts/`.
+The pipeline has 7 stages. All scripts are in `pipeline/scripts/`.
 
-| Stufe | Script | Input | Output | Kosten |
-|-------|--------|-------|--------|--------|
-| 1. PDF-Akquise | `download_zotero_pdfs.py` | Zotero API | `pipeline/pdfs/` | $0 |
-| 2. Markdown-Konversion | `convert_to_markdown.py` | PDFs | `pipeline/markdown/` | $0 |
-| 3. Validierung | `validate_markdown_enhanced.py` | Markdown + PDFs | Validation Reports | $0 |
+| Stage | Script | Input | Output | Cost |
+|-------|--------|-------|--------|------|
+| 1. PDF Acquisition | `download_zotero_pdfs.py` | Zotero API | `pipeline/pdfs/` | $0 |
+| 2. Markdown Conversion | `convert_to_markdown.py` | PDFs | `pipeline/markdown/` | $0 |
+| 3. Validation | `validate_markdown_enhanced.py` | Markdown + PDFs | Validation Reports | $0 |
 | 4. Post-Processing | `postprocess_markdown.py` | Markdown | `pipeline/markdown_clean/` | $0 |
 | 5. Knowledge Distillation | `distill_knowledge.py` | Markdown | `pipeline/knowledge/distilled/` | ~$7 |
-| 6. LLM-Assessment (10K) | `benchmark/scripts/run_llm_assessment.py` | Knowledge Docs | `benchmark/data/llm_assessment_10k.csv` | $1.44 |
-| 7. Vault-Generierung | `generate_vault.py` | Knowledge Docs + Assessment CSVs | `vault/` + `docs/downloads/vault.zip` | $0 |
+| 6. LLM Assessment (10K) | `benchmark/scripts/run_llm_assessment.py` | Knowledge Docs | `benchmark/data/llm_assessment_10k.csv` | $1.44 |
+| 7. Vault Generation | `generate_vault.py` | Knowledge Docs + Assessment CSVs | `vault/` + `docs/downloads/vault.zip` | $0 |
 
-**Gesamtkosten:** ~$10.17 (Claude Haiku 4.5)
+**Total cost:** ~$10.17 (Claude Haiku 4.5)
 
 ---
 
-## Wichtige Befehle
+## Key Commands
 
 ### Knowledge Distillation (3-Stage)
 
@@ -40,78 +40,78 @@ Die Pipeline hat 7 Stufen. Alle Scripts befinden sich in `pipeline/scripts/`.
 python pipeline/scripts/distill_knowledge.py --input pipeline/markdown --output pipeline/knowledge/distilled --limit 5
 ```
 
-Drei Stufen: (1) LLM extrahiert JSON, (2) deterministisches Formatting, (3) LLM-as-a-Judge Verifikation. Ergebnis: 249 Knowledge-Dokumente, 97.2% mit Score >= 75.
+Three stages: (1) LLM extracts JSON, (2) deterministic formatting, (3) LLM-as-a-Judge verification. Result: 249 knowledge documents, 97.2% with score ≥ 75.
 
-### LLM-Assessment (10K-Benchmark)
+### LLM Assessment (10K Benchmark)
 
 ```bash
 python benchmark/scripts/run_llm_assessment.py
 ```
 
-10 binaere Kategorien (4 Technik + 6 Sozial), Include-Logik (min. 1 Technik UND min. 1 Sozial). 326/326 Papers, $1.44.
+10 binary categories (4 technical + 6 social), inclusion logic (min. 1 technical AND min. 1 social). 326/326 papers, $1.44.
 
-### Vault-Generierung (mit Assessment-Integration)
+### Vault Generation (with Assessment Integration)
 
 ```bash
 python pipeline/scripts/generate_vault.py --clean
 ```
 
-Liest Knowledge-Dokumente, Zotero-Metadaten und beide Assessment-CSVs (LLM + Human). Erzeugt Obsidian-Vault mit YAML-Frontmatter inkl. `llm_decision`, `human_decision`, `agreement`. 249 Papers, 205 mit Assessment-Daten, 79 Concept Notes.
+Reads knowledge documents, Zotero metadata, and both assessment CSVs (LLM + Human). Generates Obsidian vault with YAML frontmatter including `llm_decision`, `human_decision`, `agreement`. 249 papers, 205 with assessment data, 79 concept notes.
 
-### SPA-Daten generieren
+### SPA Data Generation
 
 ```bash
 python pipeline/scripts/generate_docs_data.py
 ```
 
-Erzeugt `docs/data/research_vault_v2.json` fuer die Single-Page Application.
+Generates `docs/data/research_vault_v2.json` for the single-page application.
 
 **GitHub Pages:** https://chpollin.github.io/FemPrompt_SozArb/
 
 ---
 
-## Duales Assessment-System
+## Dual Assessment System
 
-| Track | Methode | Schema | Status |
-|-------|---------|--------|--------|
-| **Human** | Google Sheets -> CSV Export | 10 binaere Kategorien | Fertig (303/303, 142 Include, 161 Exclude) |
-| **LLM** | Claude Haiku 4.5 | 10 binaere Kategorien | 326/326 (100%) |
+| Track | Method | Schema | Status |
+|-------|--------|--------|--------|
+| **Human** | Google Sheets → CSV Export | 10 binary categories | Complete (303/303, 142 Include, 161 Exclude) |
+| **LLM** | Claude Haiku 4.5 | 10 binary categories | 326/326 (100%) |
 
-Benchmark-Ergebnisse (291 Papers, Zotero_Key-Merge): Konfusionsmatrix (100/34/108/49), Basisraten (LLM 71,5% vs. Human 46,0% Include), Cohen's Kappa = 0,056.
+Benchmark results (291 papers, Zotero_Key merge): Confusion matrix (100/34/108/49), base rates (LLM 71.5% vs. Human 46.0% include), Cohen's Kappa = 0.056.
 
 ---
 
 ## Performance
 
-| Operation | Dauer | Kosten | Erfolgsrate |
-|-----------|-------|--------|-------------|
-| PDF-Akquise | 1-2 h | $0 | 78.8% (257/326) |
-| Markdown-Konversion | 2-3 h | $0 | 98% (252/257) |
-| Knowledge Distillation | 6-7 h | ~$7 | 100% (249/249) |
-| LLM-Assessment (10K) | ~30 min | $1.44 | 100% (326/326) |
-| Vault-Generierung | <1 min | $0 | 100% |
-| **Gesamt** | **~10 h** | **~$10.17** | -- |
+| Operation | Duration | Cost | Success Rate |
+|-----------|----------|------|--------------|
+| PDF Acquisition | 1–2 h | $0 | 78.8% (257/326) |
+| Markdown Conversion | 2–3 h | $0 | 98% (252/257) |
+| Knowledge Distillation | 6–7 h | ~$7 | 100% (249/249) |
+| LLM Assessment (10K) | ~30 min | $1.44 | 100% (326/326) |
+| Vault Generation | <1 min | $0 | 100% |
+| **Total** | **~10 h** | **~$10.17** | — |
 
 ---
 
 ## Troubleshooting
 
-| Problem | Loesung |
-|---------|---------|
-| HTTP 429 (Rate Limit) | Delay zwischen API-Calls erhoehen |
-| Fehlende PDFs | Logs pruefen: `acquisition_log.json` |
-| Memory Error | Kleinere Batches (`--limit 5`) |
-| NaN-Fehler | `isinstance(value, str)` pruefen vor Regex |
+| Problem | Solution |
+|---------|----------|
+| HTTP 429 (Rate Limit) | Increase delay between API calls |
+| Missing PDFs | Check logs: `acquisition_log.json` |
+| Memory Error | Use smaller batches (`--limit 5`) |
+| NaN Error | Check `isinstance(value, str)` before regex |
 
 ---
 
-## Naechste Schritte
+## Next Steps
 
-1. **Methodik:** [methods-and-pipeline.md](../methods-and-pipeline.md)
+1. **Methods:** [methods-and-pipeline.md](../methods-and-pipeline.md)
 2. **Status:** [status.md](../status.md)
-3. **Projektkontext:** [project.md](../project.md)
-4. **Paper-Abgleich:** [paper-integrity.md](../paper-integrity.md)
+3. **Project context:** [project.md](../project.md)
+4. **Paper integrity:** [paper-integrity.md](../paper-integrity.md)
 
 ---
 
-*Aktualisiert: 2026-02-22*
+*Updated: 2026-04-01*
