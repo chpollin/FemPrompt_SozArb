@@ -117,9 +117,11 @@ function loadLocal() {
     } catch (e) { console.warn('[PRISMA] local load failed:', e.message); }
 }
 
+var writeChain = Promise.resolve();
 function save() {
     saveLocal();
-    if (dirHandle) writeCurrentReviewer().catch(function(e) { console.warn('[PRISMA] repo write failed:', e); });
+    // serialize repo writes so rapid screening cannot overlap createWritable on the same file
+    if (dirHandle) writeChain = writeChain.then(writeCurrentReviewer).catch(function(e) { console.warn('[PRISMA] repo write failed:', e); });
 }
 
 function reviewerPayload(key) {
