@@ -1,8 +1,20 @@
 /* PRISMA Screening Tool -- fifth Evidence Companion view.
    Inherits variables from research.css; all classes namespaced pt-*. */
 
-#view-prisma { padding: var(--space-lg, 1rem) 0; }
-#prisma-root { max-width: 1100px; margin: 0 auto; }
+/* Standalone fullscreen page (prisma.html) */
+body.pt-fullscreen { margin: 0; background: var(--gray-50); font-family: var(--font-body); color: var(--gray-800); }
+.pt-app-header {
+    display: flex; align-items: center; gap: 1rem;
+    padding: 0.6rem 1.5rem; background: white; border-bottom: 1px solid var(--gray-200);
+    position: sticky; top: 0; z-index: 20;
+}
+.pt-app-header .pt-back { color: var(--primary); text-decoration: none; font-size: var(--text-sm); white-space: nowrap; }
+.pt-app-title { font-family: var(--font-display); font-size: var(--text-lg); }
+.pt-app-sub { color: var(--gray-500); font-size: var(--text-sm); }
+.pt-app-spacer { flex: 1; }
+.pt-app-conn { font-size: var(--text-xs); color: var(--gray-500); white-space: nowrap; }
+.pt-app-conn.connected { color: var(--decision-include); }
+#prisma-root { max-width: 1400px; margin: 0 auto; padding: 1.25rem 1.5rem; }
 
 /* Sub-navigation */
 .pt-subnav {
