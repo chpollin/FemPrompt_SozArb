@@ -69,21 +69,21 @@ The dual assessment track and benchmark already satisfy most demanding requireme
 
 | Requirement | Project artefact | Status |
 |---|---|---|
-| trAIce M2 — tool identity | Claude Haiku 4.5 and Sonnet 4.6 (model IDs); four Deep Research models (ChatGPT, Claude, Gemini, Perplexity) for identification | Satisfied |
-| trAIce M3 — stage + task | Identification (deep research), Screening (10K assessment), Synthesis (3-stage SKE), each documented | Satisfied |
-| trAIce M4 — input data | Title+Abstract vs Knowledge Docs, tracked per paper (`Input_Source`); 2x2 experiment | Satisfied |
-| trAIce M5 — output format + post-processing | Structured JSON, per-category booleans, confidence scores; deterministic stage 2 | Satisfied |
-| trAIce M6 — prompts + parameters | `prompts/` governance, `CHANGELOG.md`, negative constraints v2.1 — but decoding parameters (temperature, top-p, max tokens) and confidence thresholds not yet disclosed | **Partial** |
-| trAIce M8 — human oversight | Full dual track: 100% human screening (303/303) and 100% LLM screening (326/326), parallel and independent; expert decision binding | Satisfied (gold standard) |
-| trAIce M9 + R2 — AI performance evaluation | Confusion matrix, Cohen's kappa (decision + 10 categories), base rates, 142-case divergence analysis (3 patterns); human consensus as reference standard | Satisfied (project strength) |
+| trAIce M2: tool identity | Claude Haiku 4.5 and Sonnet 4.6 (model IDs); four Deep Research models (ChatGPT, Claude, Gemini, Perplexity) for identification | Satisfied |
+| trAIce M3: stage + task | Identification (deep research), Screening (10K assessment), Synthesis (3-stage SKE), each documented | Satisfied |
+| trAIce M4: input data | Title+Abstract vs Knowledge Docs, tracked per paper (`Input_Source`); 2x2 experiment | Satisfied |
+| trAIce M5: output format + post-processing | Structured JSON, per-category booleans, confidence scores; deterministic stage 2 | Satisfied |
+| trAIce M6: prompts + parameters | `prompts/` governance, `CHANGELOG.md`, negative constraints v2.1, but decoding parameters (temperature, top-p, max tokens) and confidence thresholds not yet disclosed | **Partial** |
+| trAIce M8: human oversight | Full dual track: 100% human screening (303/303) and 100% LLM screening (326/326), parallel and independent; expert decision binding | Satisfied (gold standard) |
+| trAIce M9 + R2: AI performance evaluation | Confusion matrix, Cohen's kappa (decision + 10 categories), base rates, 142-case divergence analysis (3 patterns); human consensus as reference standard | Satisfied (project strength) |
 | trAIce R1 (flow diagram, AI vs human split) | Data exists (matrix 100/34/108/49); the tool renders the adapted flow diagram on its PRISMA & Report surface (commit c909e50) | **Built (tool); paper text pending** |
-| trAIce M10 — data governance | `.vault_cache/` (reproducible API cache), open repository | Satisfied |
-| trAIce M1 — protocol pre-registration of AI use | No PROSPERO/OSF protocol on record | **Gap** |
-| RAISE P1 — accountability | Expert track epistemically binding; responsibility-asymmetry framing in [[project]] | Satisfied |
-| RAISE P2 — human oversight | Dual track, human decision binding | Satisfied |
-| RAISE P3 — transparent reporting of AI judgements | Repo + prompt governance, but no single consolidated AI-disclosure section yet | **Partial** |
-| RAISE Table 1 — justification + validation evidence | The benchmark *is* the validation evidence; needs explicit framing as such | **Partial** |
-| RAISE Table 1 — conflicts of interest in AI tool | Not yet declared | **Gap** |
+| trAIce M10: data governance | `.vault_cache/` (reproducible API cache), open repository | Satisfied |
+| trAIce M1: protocol pre-registration of AI use | No PROSPERO/OSF protocol on record | **Gap** |
+| RAISE P1: accountability | Expert track epistemically binding; responsibility-asymmetry framing in [[project]] | Satisfied |
+| RAISE P2: human oversight | Dual track, human decision binding | Satisfied |
+| RAISE P3: transparent reporting of AI judgements | Repo + prompt governance, but no single consolidated AI-disclosure section yet | **Partial** |
+| RAISE Table 1: justification + validation evidence | The benchmark *is* the validation evidence; needs explicit framing as such | **Partial** |
+| RAISE Table 1: conflicts of interest in AI tool | Not yet declared | **Gap** |
 
 ## Concrete improvements (the to-do list this yields)
 
@@ -96,7 +96,7 @@ The dual assessment track and benchmark already satisfy most demanding requireme
 
 ## How this legitimises the workflow
 
-The project does not merely comply, it exceeds the baseline on the hard items. PRISMA-trAIce M8 asks "what proportion of AI outputs were manually verified" — here the answer is effectively 100%, because every paper was screened independently by both an expert and the LLM (full dual screening rather than AI-first with human spot-checks). M9/R2 asks for an AI performance evaluation against a reference standard — the confusion matrix, kappa, and divergence analysis already are that evaluation. RAISE's accountability principle is the project's pre-existing thesis (responsibility remains with the experts). The divergence (LLM 71.5% vs expert 46.0% include rate) is not a compliance failure but the empirical product of exactly the transparency these standards demand: it is only visible *because* AI and human decisions were recorded separately, which is what R1 asks for.
+The project does not merely comply, it exceeds the baseline on the hard items. PRISMA-trAIce M8 asks "what proportion of AI outputs were manually verified": here the answer is effectively 100%, because every paper was screened independently by both an expert and the LLM (full dual screening rather than AI-first with human spot-checks). M9/R2 asks for an AI performance evaluation against a reference standard: the confusion matrix, kappa, and divergence analysis already are that evaluation. RAISE's accountability principle is the project's pre-existing thesis (responsibility remains with the experts). The divergence (LLM 71.5% vs expert 46.0% include rate) is not a compliance failure but the empirical product of exactly the transparency these standards demand: it is only visible *because* AI and human decisions were recorded separately, which is what R1 asks for.
 
 ## Sources
 
