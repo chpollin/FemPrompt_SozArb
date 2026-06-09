@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <link rel="stylesheet" href="css/research.css">
+    <link rel="stylesheet" href="css/prisma.css">
 </head>
 <body>
     <!-- Header with Navigation -->
@@ -48,6 +49,7 @@
                     <button class="nav-view-btn has-tip" data-view="wissensnetz" data-tip-key="wissensnetz">Wissensnetz</button>
                     <button class="nav-view-btn has-tip" data-view="vergleich" data-tip-key="vergleich">Kategorien</button>
                     <button class="nav-view-btn has-tip" data-view="korpus" data-tip-key="korpus">Korpus</button>
+                    <button class="nav-view-btn" data-view="prisma">PRISMA</button>
                     <span class="nav-sep"></span>
                     <a href="about.html" class="nav-link">About</a>
                     <a href="methoden.html" class="nav-link">Methoden</a>
@@ -190,6 +192,11 @@
             <div class="kategorie-spektrum" id="kategorie-spektrum"></div>
             <div class="kategorie-detail" id="kategorie-detail"></div>
         </section>
+
+        <!-- View: PRISMA Screening -->
+        <section class="content-section view-content" id="view-prisma" role="tabpanel" aria-labelledby="tab-prisma" style="display:none;">
+            <div id="prisma-root"></div>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -223,5 +230,6 @@
     <script src="js/kategorien.js"></script>
     <script src="js/wissensnetz.js"></script>
     <script src="js/wissenschat.js"></script>
+    <script src="js/prisma.js"></script>
 </body>
 </html>

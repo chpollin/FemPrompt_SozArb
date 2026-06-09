@@ -49,6 +49,7 @@ var activeCategories = new Set();
 var benchmarkInitialized = false;
 var wissensnetzInitialized = false;
 var chatInitialized = true; // chat is default tab, initialized on load
+var prismaInitialized = false;
 var conceptData = null;
 var divergencePatterns = null;
 var divergencesList = [];
@@ -120,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Handle hash-based navigation (from about/help links)
         var hash = window.location.hash.replace('#', '');
-        if (hash && ['chat', 'wissensnetz', 'vergleich', 'korpus'].indexOf(hash) >= 0) {
+        if (hash && ['chat', 'wissensnetz', 'vergleich', 'korpus', 'prisma'].indexOf(hash) >= 0) {
             switchView(hash);
         }
     }).catch(function(error) {
@@ -848,6 +849,10 @@ function switchView(viewId) {
     if (viewId === 'chat' && !chatInitialized) {
         chatInitialized = true;
         if (window.initWissensChat) window.initWissensChat();
+    }
+    if (viewId === 'prisma' && !prismaInitialized) {
+        prismaInitialized = true;
+        if (window.initializePrisma) window.initializePrisma();
     }
 }
 
