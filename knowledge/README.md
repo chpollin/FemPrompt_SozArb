@@ -15,6 +15,19 @@ Central documentation for the systematic literature review on AI literacy and LL
 | [journal.md](journal.md) | Work journal: chronological session log with decisions, results, and learnings |
 | [FORSCHUNGSPROJEKT-PROMPTOTYPING.md](FORSCHUNGSPROJEKT-PROMPTOTYPING.md) | Concept document: Promptotyping as epistemic practice, 3 layers (Vault, Web Interface, Paper) |
 
+## PRISMA Screening Tool (Promptotyping knowledge base)
+
+New Promptotyping document set for the prospective PRISMA screening tool (planned fifth Evidence Companion view). Follows the Promptotyping document convention (frontmatter Pflichtkern, Obsidian wikilinks, function-named files).
+
+| File | Function | Content |
+|------|----------|---------|
+| [prisma-methodology.md](prisma-methodology.md) | Reference | PRISMA 2020 as reporting standard, flow diagram, 27-item checklist, extension family, reporting-vs-conduct boundary |
+| [ai-assisted-review-standards.md](ai-assisted-review-standards.md) | Reference | PRISMA-trAIce (14 items) + RAISE (3 principles), item-by-item mapping onto the dual assessment track, gap analysis |
+| [specification.md](specification.md) | Substance (formal) | FR-01..10, NFR-01..07, six modules, seven ADRs |
+| [user-stories.md](user-stories.md) | Substance (narrative) | 12 screening scenarios with Ableitung into the knowledge base |
+| [data.md](data.md) | Material | ScreeningRecord (separate AI/human decisions), FlowModel, DisclosureMetadata, Session envelope |
+| [design.md](design.md) | Gestalt | Self-contained UI/design brief: screens, wireframes, design system, epistemic principles, open questions |
+
 ## Guides
 
 | File | Content |
