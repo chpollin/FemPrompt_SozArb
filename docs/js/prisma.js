@@ -218,6 +218,7 @@ function updateConnStatus() {
 window.initializePrisma = function() {
     if (initialized) return;
     initialized = true;
+    EC = window.EC; // bind now: prisma-data.js (or the companion) has defined the shim by call time
     papers = (EC && EC.getAllPapers) ? (EC.getAllPapers() || []) : [];
     loadLocal();
     renderShell();
