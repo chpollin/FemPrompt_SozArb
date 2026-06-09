@@ -1,10 +1,17 @@
-// PRISMA Screening Tool -- standalone, Git-based screening instrument.
+// PRISMA Screening Tool (PRISM) -- standalone, Git-based screening instrument.
+// v4 (evidence-grounded screening): the screening view is built around reading and
+// searching the knowledge document and pinning found passages as Belege (evidence)
+// on categories. AI is strongly reduced to an optional collapsed suggestion; the
+// human-AI comparison (kappa, matrix, flow) lives in the "PRISMA & Report" surface,
+// computed but not foregrounded (knowledge/specification.md ADR-012).
+//
+// Three surfaces: Screening | PRISMA & Report | Daten & Repo.
 // Human decision is binding (RAISE); the AI proposal is advisory and stored separately
 // so the flow diagram splits AI from human decisions (PRISMA-trAIce R1).
-// Persistence: File System Access API writes one JSON per reviewer into the repo
-// (docs/data/screening/<reviewer>.json), committed with Git; export/import fallback.
-// Runs on prisma.html via the window.EC shim from prisma-data.js.
-// See knowledge/design.md, knowledge/data.md, knowledge/ai-assisted-review-standards.md.
+// Persistence: File System Access writes one JSON per reviewer (schema 0.2, with an
+// evidence map) into docs/data/screening/<reviewer>.json, committed with Git;
+// export/import fallback. Runs on prisma.html via the window.EC shim from prisma-data.js.
+// See knowledge/design.md, knowledge/data.md, knowledge/specification.md.
 
 (function() {
 'use strict';
@@ -72,15 +79,21 @@ var TRAICE = [
 ];
 
 var LS_KEY = 'femprompt-prisma-state/0.2';
+var REVIEWER_SCHEMA = 'femprompt-prisma-reviewer/0.2'; // bumped for the evidence map (FR-13)
 var SEED = 'seed'; // built-in reviewer = the existing expert assessment (paper.human)
+
+var SURFACES = [
+    { id: 'screening', label: 'Screening', intro: 'Volltext lesen und durchsuchen, Belege an Kategorien anheften, Include/Exclude entscheiden.' },
+    { id: 'report', label: 'PRISMA & Report', intro: 'PRISMA-2020-Fluss, Mensch-KI-Vergleich, Checkliste und Disclosure, aus dem Screening erzeugt.' },
+    { id: 'data', label: 'Daten & Repo', intro: 'Mit dem Repo-Ordner verbinden, eine Datei pro Reviewer:in, Export/Import, Reviewer:innen abgleichen.' }
+];
 
 // ============================================================
 // State
 // ============================================================
 
 var state = {
-    surface: 'workspace',
-    blind: false,          // off by default: the tool opens on the seed case study (fix A2)
+    surface: 'screening',
     reviewer: 'reviewer1', // who is editing; drives the per-reviewer file name
     perspective: SEED,     // whose decisions drive Flow/Agreement (default: seed = benchmark)
     index: 0,
@@ -90,12 +103,25 @@ var state = {
 };
 
 var papers = [];
-var dirHandle = null;      // connected File System Access directory handle
+var dirHandle = null;          // connected File System Access directory handle
+var corpusIndex = null;        // id -> { t, ay, kd, src, n, x } for corpus full-text search
+var corpusIndexPromise = null;
+var corpusQuery = '';          // current corpus-wide search (left pane)
+var textCache = {};            // paperId -> raw knowledge-doc markdown (or null)
+var docHtmlCurrent = '';       // rendered HTML of the open document (for re-highlight)
+var docMarks = [], docMarkIdx = 0;
+var pendingInText = null;      // in-text query to apply once the document has loaded
+var pinTerm = '', pinSnippet = '';
+
+// the in-progress (pre-commit) decision for the open paper
+var work = { pid: null, cats: {}, override: false, reason: null, evidence: {} };
 
 function curDec() {
     if (!state.reviewers[state.reviewer]) state.reviewers[state.reviewer] = {};
     return state.reviewers[state.reviewer];
 }
+
+function resetWork(p) { work = { pid: p.id, cats: {}, override: false, reason: null, evidence: {} }; }
 
 // ============================================================
 // Persistence: localStorage cache + File System Access (repo files)
@@ -104,7 +130,7 @@ function curDec() {
 function serializeAll() {
     return {
         schema: LS_KEY,
-        config: { blind: state.blind, reviewer: state.reviewer, perspective: state.perspective, disclosure: state.disclosure },
+        config: { reviewer: state.reviewer, perspective: state.perspective, disclosure: state.disclosure },
         reviewers: state.reviewers,
         checklist: state.checklist
     };
@@ -121,7 +147,6 @@ function loadLocal() {
         if (!raw) return;
         var o = JSON.parse(raw);
         if (o.config) {
-            if (typeof o.config.blind === 'boolean') state.blind = o.config.blind;
             if (o.config.reviewer) state.reviewer = o.config.reviewer;
             if (o.config.perspective) state.perspective = o.config.perspective;
             if (o.config.disclosure) state.disclosure = o.config.disclosure;
@@ -139,7 +164,7 @@ function save() {
 }
 
 function reviewerPayload(key) {
-    return { schema: 'femprompt-prisma-reviewer/0.1', reviewer: key,
+    return { schema: REVIEWER_SCHEMA, reviewer: key,
              updated: new Date().toISOString(), decisions: state.reviewers[key] || {} };
 }
 
@@ -200,7 +225,7 @@ async function loadAllReviewers() {
                 var f = await entry.getFile();
                 var obj = JSON.parse(await f.text());
                 var key = obj.reviewer || entry.name.replace(/\.json$/, '');
-                found[key] = obj.decisions || {};
+                found[key] = obj.decisions || {}; // 0.1 records simply lack `evidence`
             } catch (e) { console.warn('[PRISMA] could not read', entry.name, e); }
         }
     }
@@ -226,34 +251,114 @@ function updateConnStatus() {
 }
 
 // ============================================================
+// Corpus full-text index (FR-12 corpus search) + document fetch (FR-11)
+// ============================================================
+
+function loadCorpusIndex() {
+    if (corpusIndexPromise) return corpusIndexPromise;
+    corpusIndexPromise = fetch('data/fulltext_index.json')
+        .then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+        .then(function(d) { corpusIndex = d.papers || {}; return corpusIndex; })
+        .catch(function(e) { console.warn('[PRISMA] corpus index load failed:', e.message); corpusIndex = {}; return corpusIndex; });
+    return corpusIndexPromise;
+}
+
+// Fetch the served knowledge document for a paper (FR-11). Single pluggable seam:
+// swapping in raw local full text (copyright-gated) only changes this function.
+function fetchPaperText(p) {
+    if (!p.knowledge_doc) return Promise.resolve(null);
+    if (textCache[p.id] !== undefined) return Promise.resolve(textCache[p.id]);
+    return fetch(encodeURI(p.knowledge_doc))
+        .then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
+        .then(function(t) { textCache[p.id] = t; return t; })
+        .catch(function() { textCache[p.id] = null; return null; });
+}
+
+function countOcc(hay, needle) {
+    if (!needle) return 0;
+    var n = 0, pos = 0, idx;
+    while ((idx = hay.indexOf(needle, pos)) !== -1) { n++; pos = idx + needle.length; }
+    return n;
+}
+
+// ---- minimal Markdown renderer (no dependency, NFR-01/architecture rule) ----
+function stripFrontmatter(md) { return md.replace(/^---\s*\n[\s\S]*?\n---\s*\n/, ''); }
+
+function inlineMd(s) {
+    s = EC.escapeHtml(s);
+    s = s.replace(/\[\[([^\]|]+)\|([^\]]+)\]\]/g, '$2').replace(/\[\[([^\]]+)\]\]/g, '$1');
+    s = s.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '$1');
+    s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    s = s.replace(/(^|[^*])\*([^*]+)\*(?!\*)/g, '$1<em>$2</em>');
+    s = s.replace(/`([^`]+)`/g, '<code>$1</code>');
+    return s;
+}
+
+function renderMarkdown(md) {
+    md = stripFrontmatter(md);
+    var lines = md.split(/\r?\n/);
+    var out = [], i = 0, inList = false;
+    function closeList() { if (inList) { out.push('</ul>'); inList = false; } }
+    while (i < lines.length) {
+        var ln = lines[i];
+        if (/^---\s*$/.test(ln)) {
+            // skip an embedded yaml block (the note repeats a frontmatter inside "## Full Text")
+            var k = i + 1;
+            while (k < lines.length && !/^---\s*$/.test(lines[k])) k++;
+            if (k < lines.length && k > i + 1) {
+                var block = lines.slice(i + 1, k);
+                var yamlish = block.every(function(b) {
+                    return b.trim() === '' || /^[A-Za-z_][\w "'().\/:-]*:/.test(b) || /^-\s/.test(b);
+                });
+                if (yamlish) { i = k + 1; continue; }
+            }
+            closeList(); out.push('<hr class="pt-doc-hr">'); i++; continue;
+        }
+        if (/^\s*$/.test(ln)) { closeList(); i++; continue; }
+        var hm = ln.match(/^(#{1,6})\s+(.*)$/);
+        if (hm) { closeList(); var lvl = Math.min(hm[1].length, 4); out.push('<h' + lvl + ' class="pt-doc-h' + lvl + '">' + inlineMd(hm[2]) + '</h' + lvl + '>'); i++; continue; }
+        var lm = ln.match(/^\s*[-*]\s+(.*)$/);
+        if (lm) { if (!inList) { out.push('<ul class="pt-doc-ul">'); inList = true; } out.push('<li>' + inlineMd(lm[1]) + '</li>'); i++; continue; }
+        var bm = ln.match(/^>\s?(.*)$/);
+        if (bm) { closeList(); out.push('<blockquote class="pt-doc-q">' + inlineMd(bm[1]) + '</blockquote>'); i++; continue; }
+        closeList();
+        var para = [ln]; i++;
+        while (i < lines.length && !/^\s*$/.test(lines[i]) && !/^#{1,6}\s/.test(lines[i]) &&
+               !/^\s*[-*]\s/.test(lines[i]) && !/^---\s*$/.test(lines[i]) && !/^>\s?/.test(lines[i])) { para.push(lines[i]); i++; }
+        out.push('<p class="pt-doc-p">' + inlineMd(para.join(' ')) + '</p>');
+    }
+    closeList();
+    return out.join('');
+}
+
+// ============================================================
 // Init
 // ============================================================
 
 window.initializePrisma = function() {
     if (initialized) return;
     initialized = true;
-    EC = window.EC; // bind now: prisma-data.js (or the companion) has defined the shim by call time
+    EC = window.EC;
     papers = (EC && EC.getAllPapers) ? (EC.getAllPapers() || []) : [];
     loadLocal();
+    normalizeSurface();
+    loadCorpusIndex(); // background: ready by the time the user runs a corpus search
     renderShell();
-    showSurface(state.surface || 'workspace');
+    showSurface(state.surface || 'screening');
     updateConnStatus();
     console.log('[PRISMA] initialized, ' + papers.length + ' papers, FS ' + (FS_SUPPORTED ? 'supported' : 'fallback'));
 };
 
+// map any persisted v3 surface id onto the three v4 surfaces
+function normalizeSurface() {
+    var map = { workspace: 'screening', flow: 'report', agreement: 'report', reviewers: 'data', checklist: 'report', report: 'report', data: 'data' };
+    if (map[state.surface]) state.surface = map[state.surface];
+    if (['screening', 'report', 'data'].indexOf(state.surface) === -1) state.surface = 'screening';
+}
+
 // ============================================================
 // Shell + sub-navigation
 // ============================================================
-
-var SURFACES = [
-    { id: 'workspace', label: 'Workspace' },
-    { id: 'flow', label: 'Flow' },
-    { id: 'agreement', label: 'Agreement' },
-    { id: 'reviewers', label: 'Reviewers' },
-    { id: 'checklist', label: 'Checklist' },
-    { id: 'report', label: 'Report' },
-    { id: 'data', label: 'Daten & Repo' }
-];
 
 function renderShell() {
     var root = document.getElementById('prisma-root');
@@ -263,28 +368,22 @@ function renderShell() {
         html += '<button class="pt-subnav-btn' + (s.id === state.surface ? ' active' : '') +
             '" data-surface="' + s.id + '">' + s.label + '</button>';
     });
-    html += '<span class="pt-subnav-spacer"></span>';
-    html += '<label class="pt-blind-toggle" title="KI-Vorschlag erst nach eigener Entscheidung zeigen (Anti-Anchoring). Für unabhängiges Screening einschalten.">' +
-        '<input type="checkbox" id="pt-blind"' + (state.blind ? ' checked' : '') + '> Blind-Modus</label>';
     html += '</div>';
+    html += '<div class="pt-surface-intro" id="pt-surface-intro"></div>';
     html += '<div class="pt-surface" id="pt-surface"></div>';
     root.innerHTML = html;
-
     root.querySelectorAll('.pt-subnav-btn').forEach(function(btn) {
         btn.addEventListener('click', function() { showSurface(btn.dataset.surface); });
-    });
-    var blind = document.getElementById('pt-blind');
-    if (blind) blind.addEventListener('change', function() {
-        state.blind = blind.checked; save();
-        if (state.surface === 'workspace') renderWorkspace();
     });
 }
 
 function showSurface(name) {
     state.surface = name; saveLocal();
     document.querySelectorAll('.pt-subnav-btn').forEach(function(b) { b.classList.toggle('active', b.dataset.surface === name); });
-    var fn = { workspace: renderWorkspace, flow: renderFlow, agreement: renderAgreement,
-              reviewers: renderReviewers, checklist: renderChecklist, report: renderReport, data: renderData }[name];
+    var intro = document.getElementById('pt-surface-intro');
+    var meta = SURFACES.filter(function(s) { return s.id === name; })[0];
+    if (intro && meta) intro.textContent = meta.intro;
+    var fn = { screening: renderScreening, report: renderReportSurface, data: renderData }[name];
     if (fn) fn();
 }
 
@@ -299,7 +398,6 @@ function aiProposal(paper) {
     return { decision: paper.llm.decision, categories: paper.llm.all_categories || {}, reasoning: paper.llm.reasoning || '' };
 }
 
-// human decision under a perspective: SEED = paper.human, otherwise a reviewer file
 function humanDecision(paper, persp) {
     persp = persp || state.perspective;
     if (persp === SEED) {
@@ -323,20 +421,29 @@ function deriveDecision(cats) {
     return (tech && soc) ? 'Include' : 'Exclude';
 }
 
+function finalDecisionOf(cats, override) {
+    if (deriveDecision(cats) === 'Exclude') return 'Exclude';
+    return override ? 'Exclude' : 'Include';
+}
+
 function divergent(h, a) { return h && a && h.decision !== a.decision; }
 
-// Heuristic flag for low-quality / boilerplate abstracts (fix A1)
 function abstractQuality(p) {
     var a = (p.abstract || '').trim();
-    if (!a) return { ok: false, note: 'Kein Abstract vorhanden, bitte Quelle oder Wissensdokument prüfen.' };
+    if (!a) return { ok: false, note: 'Kein Abstract vorhanden, bitte Volltext (Wissensdokument) oder Quelle pruefen.' };
     if (/National Bureau of Economic Research|Founded in 1920, the NBER|private, non-profit, non-partisan organization/i.test(a))
-        return { ok: false, note: 'Wirkt wie Verlags-Boilerplate (NBER), nicht das Paper-Abstract. Quelle oder Wissensdokument prüfen.' };
-    if (a.length < 120) return { ok: false, note: 'Sehr kurzes Abstract, evtl. unvollständig.' };
+        return { ok: false, note: 'Wirkt wie Verlags-Boilerplate (NBER), nicht das Paper-Abstract.' };
+    if (a.length < 120) return { ok: false, note: 'Sehr kurzes Abstract, evtl. unvollstaendig.' };
     return { ok: true };
 }
 
+function evidenceCount(rec) {
+    if (!rec || !rec.evidence) return 0;
+    return ALL_CATS.reduce(function(s, c) { return s + ((rec.evidence[c] || []).length); }, 0);
+}
+
 // ============================================================
-// Aggregation
+// Aggregation (computed quietly for the report layer)
 // ============================================================
 
 function computeMatrix(persp) {
@@ -391,10 +498,6 @@ function reviewerKeys() {
 
 function reviewerLabel(k) { return k === SEED ? 'Seed (Expert:innen)' : k; }
 
-// ============================================================
-// Perspective selector (shared by Flow / Agreement)
-// ============================================================
-
 function perspectiveBar() {
     var keys = reviewerKeys();
     var html = '<div class="pt-persp">Perspektive Mensch: <select class="pt-persp-sel">';
@@ -411,10 +514,10 @@ function attachPerspective(el, rerender) {
 }
 
 // ============================================================
-// Surface: Screening Workspace
+// Surface: Screening (read + search + pin evidence)
 // ============================================================
 
-function renderWorkspace() {
+function renderScreening() {
     var el = surfaceEl(); if (!el) return;
     if (!papers.length) { el.innerHTML = '<p class="pt-empty">Keine Paper geladen.</p>'; return; }
     if (state.index < 0) state.index = 0;
@@ -422,116 +525,249 @@ function renderWorkspace() {
 
     var p = papers[state.index];
     var dec = curDec()[p.id];
+    if (!dec && work.pid !== p.id) resetWork(p);
+
     var screened = Object.keys(curDec()).length;
     var pct = papers.length ? Math.round(screened / papers.length * 100) : 0;
 
-    var html = '';
-    html += '<div class="pt-ws-bar">';
+    var html = '<div class="pt-ws-bar">';
     html += '<span class="pt-ws-pos">Paper ' + (state.index + 1) + ' / ' + papers.length + '</span>';
     html += '<span class="pt-ws-progressbar"><span class="pt-ws-progressfill" style="width:' + pct + '%"></span></span>';
     html += '<span class="pt-ws-prog mono">' + screened + ' / ' + papers.length + ' &middot; ' + EC.escapeHtml(state.reviewer) + '</span>';
     html += '</div>';
 
-    html += '<div class="pt-ws">';
-    html += navigatorHtml();
-    html += readingHtml(p, dec);
-    html += railHtml(p, dec);
+    html += '<div class="pt-ws pt-ws-screen">';
+    html += corpusHtml();
+    html += readingShellHtml(p, dec);
+    html += '<aside class="pt-rail" id="pt-assess-col">' + assessInnerHtml(p, dec) + '</aside>';
+    html += '<div class="pt-pinmenu" id="pt-pinmenu" hidden></div>';
     html += '</div>';
 
     el.innerHTML = html;
-    attachWorkspace(p);
+    attachScreening(p, dec);
+    loadReadingInto(p);
 }
 
-// ---- decision model helpers (derived rule + explicit override) ----
-function finalDecisionOf(cats, dec, override) {
-    if (deriveDecision(cats) === 'Exclude') return 'Exclude';
-    var ov = (override != null) ? override : (dec ? !!dec.override : false);
-    return ov ? 'Exclude' : 'Include';
-}
-
-// ---- left: paper navigator ----
-function navigatorHtml() {
+// ---- left: corpus navigator with full-text search ----
+function corpusHtml() {
     var d = curDec();
-    var h = '<aside class="pt-nav"><div class="pt-nav-head"><span class="pt-nav-title-main">Batch</span>' +
-        '<span class="pt-tag-mono">' + Object.keys(d).length + ' / ' + papers.length + '</span></div><div class="pt-nav-list">';
-    papers.forEach(function(p, i) {
-        var rec = d[p.id];
-        var st = rec ? rec.decision.toLowerCase() : 'none';
-        h += '<button class="pt-nav-item' + (i === state.index ? ' active' : '') + '" data-i="' + i + '">' +
-            '<span class="pt-nav-dot pt-dot-' + st + '"></span>' +
-            '<span class="pt-nav-text"><span class="pt-nav-t">' + EC.escapeHtml(p.title || '(ohne Titel)') + '</span>' +
-            '<span class="pt-nav-m mono">' + EC.escapeHtml(p.author_year || p.id) + '</span></span></button>';
-    });
-    h += '</div></aside>';
+    var h = '<aside class="pt-nav"><div class="pt-nav-head"><span class="pt-nav-title-main">Korpus</span>' +
+        '<span class="pt-tag-mono">' + Object.keys(d).length + ' / ' + papers.length + '</span></div>';
+    h += '<div class="pt-corpus-search"><input id="pt-corpus-q" placeholder="Volltext-Suche ueber alle Paper" value="' + EC.escapeHtml(corpusQuery) + '">' +
+        '<span class="pt-corpus-hint" id="pt-corpus-hint"></span></div>';
+    h += '<div class="pt-nav-list" id="pt-corpus-list">' + corpusListHtml() + '</div></aside>';
     return h;
 }
 
-// ---- center: reading column + assessment ----
-function readingHtml(p, dec) {
-    var aq = abstractQuality(p);
-    var locked = !!dec;
-    var h = '<div class="pt-read"><div class="pt-read-inner">';
+function corpusListHtml() {
+    var d = curDec();
+    var q = corpusQuery.trim().toLowerCase();
+    var rows = papers, match = null;
+    if (q) {
+        if (!corpusIndex) return '<p class="pt-muted pt-corpus-empty">Such-Index laedt…</p>';
+        match = {};
+        rows = papers.filter(function(p) {
+            var e = corpusIndex[p.id]; if (!e || !e.x) return false;
+            var c = countOcc(e.x, q); if (c) { match[p.id] = c; return true; } return false;
+        });
+        if (!rows.length) return '<p class="pt-muted pt-corpus-empty">Keine Treffer fuer &bdquo;' + EC.escapeHtml(corpusQuery) + '&ldquo;.</p>';
+    }
+    return rows.map(function(p) {
+        var i = papers.indexOf(p);
+        var rec = d[p.id];
+        var st = rec ? rec.decision.toLowerCase() : 'none';
+        var badge = match ? '<span class="pt-hit-badge mono">' + match[p.id] + '</span>' : '';
+        return '<button class="pt-nav-item' + (i === state.index ? ' active' : '') + '" data-i="' + i + '">' +
+            '<span class="pt-nav-dot pt-dot-' + st + '"></span>' +
+            '<span class="pt-nav-text"><span class="pt-nav-t">' + EC.escapeHtml(p.title || '(ohne Titel)') + '</span>' +
+            '<span class="pt-nav-m mono">' + EC.escapeHtml(p.author_year || p.id) + '</span></span>' + badge + '</button>';
+    }).join('');
+}
 
+function refreshCorpusList() {
+    var list = document.getElementById('pt-corpus-list');
+    if (list) { list.innerHTML = corpusListHtml(); bindCorpusItems(); }
+    var hint = document.getElementById('pt-corpus-hint');
+    if (hint) {
+        var q = corpusQuery.trim();
+        if (!q) hint.textContent = '';
+        else if (!corpusIndex) hint.textContent = '';
+        else hint.textContent = papers.filter(function(p) { var e = corpusIndex[p.id]; return e && e.x && e.x.indexOf(q.toLowerCase()) !== -1; }).length + ' Paper';
+    }
+}
+
+function bindCorpusItems() {
+    var list = document.getElementById('pt-corpus-list'); if (!list) return;
+    list.querySelectorAll('.pt-nav-item').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            state.index = parseInt(btn.dataset.i, 10);
+            if (corpusQuery.trim()) pendingInText = corpusQuery.trim(); // carry the term into the open paper
+            renderScreening();
+        });
+    });
+}
+
+// ---- center: reading column (full text + in-text search) ----
+function readingShellHtml(p, dec) {
+    var aq = abstractQuality(p);
+    var h = '<div class="pt-read pt-read-screen"><div class="pt-read-inner">';
     h += '<div class="pt-read-meta">';
     h += '<span class="pt-pill pt-pill-ghost mono">' + EC.escapeHtml(p.id) + '</span>';
     if (p.item_type) h += '<span class="pt-tag-mono">' + EC.escapeHtml(p.item_type) + '</span>';
-    if (p.knowledge_doc) h += '<span class="pt-pill pt-pill-ghost" title="' + EC.escapeHtml(p.knowledge_doc) + '">Wissensdokument</span>';
-    if (locked) h += '<span class="pt-pill pt-pill-human pt-pill-right">erfasst</span>';
+    if (p.knowledge_doc) h += '<span class="pt-pill pt-pill-ghost">Wissensdokument</span>';
+    else h += '<span class="pt-pill pt-pill-warn">nur Abstract</span>';
+    if (dec) h += '<span class="pt-pill pt-pill-human pt-pill-right">erfasst</span>';
     h += '</div>';
-
     h += '<h1 class="pt-paper-title">' + EC.escapeHtml(p.title || '(ohne Titel)') + '</h1>';
     h += '<div class="pt-paper-authors">' + EC.escapeHtml(p.author_year || p.authors || '') +
         (p.journal ? ' &middot; <span class="pt-muted">' + EC.escapeHtml(p.journal) + '</span>' : '') + '</div>';
-    if (!aq.ok) h += '<div class="pt-aq-warn">Achtung: ' + EC.escapeHtml(aq.note) + '</div>';
-    if (p.abstract && p.abstract.trim()) h += '<p class="pt-paper-abstract">' + EC.escapeHtml(p.abstract) + '</p>';
-    else h += '<p class="pt-muted">Kein Abstract vorhanden, bitte Wissensdokument oder Quelle pruefen.</p>';
+    if (!aq.ok && !p.knowledge_doc) h += '<div class="pt-aq-warn">Achtung: ' + EC.escapeHtml(aq.note) + '</div>';
 
-    h += '<hr class="pt-divider">';
-    h += assessmentHtml(p, dec);
+    h += '<div class="pt-intext-bar">' +
+        '<input id="pt-intext" placeholder="Im Text suchen (Enter = naechster Treffer)">' +
+        '<span class="pt-tag-mono" id="pt-intext-count"></span>' +
+        '<button class="pt-intext-nav" id="pt-intext-prev" title="vorheriger Treffer">&lsaquo;</button>' +
+        '<button class="pt-intext-nav" id="pt-intext-next" title="naechster Treffer">&rsaquo;</button>' +
+        '<button class="pt-btn pt-pin-hit" id="pt-pin-hit" disabled title="Aktuellen Treffer als Beleg anheften">Treffer anheften</button>' +
+        '</div>';
+    h += '<p class="pt-read-help">Text markieren und als Beleg an eine Kategorie anheften, oder einen Treffer der Suche anheften.</p>';
+    h += '<div class="pt-doc" id="pt-doc"><p class="pt-muted">Volltext laedt…</p></div>';
     h += '</div></div>';
     return h;
 }
 
-function assessmentHtml(p, dec) {
-    var locked = !!dec;
-    var cats = dec ? (dec.categories || {}) : {};
+function loadReadingInto(p) {
+    var doc = document.getElementById('pt-doc'); if (!doc) return;
+    fetchPaperText(p).then(function(md) {
+        if (md) docHtmlCurrent = renderMarkdown(md);
+        else if (p.abstract && p.abstract.trim()) docHtmlCurrent = '<p class="pt-doc-p">' + inlineMd(p.abstract) + '</p>';
+        else docHtmlCurrent = '';
+        var d2 = document.getElementById('pt-doc');
+        if (!d2) return;
+        d2.innerHTML = docHtmlCurrent || '<p class="pt-muted">Kein Volltext und kein Abstract vorhanden. Quelle pruefen.</p>';
+        docMarks = []; docMarkIdx = 0;
+        if (pendingInText) {
+            var box = document.getElementById('pt-intext');
+            if (box) box.value = pendingInText;
+            applyInText(pendingInText);
+            pendingInText = null;
+        }
+    });
+}
+
+function applyInText(q) {
+    var doc = document.getElementById('pt-doc'); if (!doc) return;
+    doc.innerHTML = docHtmlCurrent || '<p class="pt-muted">Kein Text.</p>';
+    docMarks = []; docMarkIdx = 0;
+    var cnt = document.getElementById('pt-intext-count');
+    var pinBtn = document.getElementById('pt-pin-hit');
+    q = (q || '').trim();
+    if (q.length < 2) { if (cnt) cnt.textContent = ''; if (pinBtn) pinBtn.disabled = true; return; }
+    var ql = q.toLowerCase();
+    var walker = document.createTreeWalker(doc, NodeFilter.SHOW_TEXT, null);
+    var nodes = [], n;
+    while ((n = walker.nextNode())) nodes.push(n);
+    nodes.forEach(function(node) {
+        var text = node.nodeValue, lower = text.toLowerCase();
+        if (lower.indexOf(ql) === -1) return;
+        var frag = document.createDocumentFragment(), pos = 0, idx;
+        while ((idx = lower.indexOf(ql, pos)) !== -1) {
+            if (idx > pos) frag.appendChild(document.createTextNode(text.slice(pos, idx)));
+            var mk = document.createElement('mark'); mk.className = 'pt-hit'; mk.textContent = text.slice(idx, idx + ql.length);
+            frag.appendChild(mk); docMarks.push(mk); pos = idx + ql.length;
+        }
+        if (pos < text.length) frag.appendChild(document.createTextNode(text.slice(pos)));
+        node.parentNode.replaceChild(frag, node);
+    });
+    if (pinBtn) pinBtn.disabled = docMarks.length === 0;
+    if (docMarks.length) setActiveMark(0);
+    else if (cnt) cnt.textContent = '0 Treffer';
+}
+
+function setActiveMark(i) {
+    if (!docMarks.length) return;
+    docMarks.forEach(function(m) { m.classList.remove('active'); });
+    docMarkIdx = (i + docMarks.length) % docMarks.length;
+    var m = docMarks[docMarkIdx];
+    m.classList.add('active');
+    if (typeof m.scrollIntoView === 'function') m.scrollIntoView({ block: 'center' });
+    var cnt = document.getElementById('pt-intext-count');
+    if (cnt) cnt.textContent = (docMarkIdx + 1) + '/' + docMarks.length;
+}
+
+function snippetAround(el, term) {
+    var ctx = el && el.parentNode ? (el.parentNode.textContent || '') : term;
+    var i = ctx.toLowerCase().indexOf(term.toLowerCase());
+    if (i === -1) return term;
+    var start = Math.max(0, i - 90), end = Math.min(ctx.length, i + term.length + 90);
+    return (start > 0 ? '…' : '') + ctx.slice(start, end).trim() + (end < ctx.length ? '…' : '');
+}
+
+// ---- evidence pinning (FR-13) ----
+function pinEvidence(cat, term, snippet) {
+    term = (term || '').trim().slice(0, 80);
+    snippet = (snippet || term).trim().slice(0, 260);
+    if (!term) return;
+    if (!work.evidence[cat]) work.evidence[cat] = [];
+    work.evidence[cat].push({ term: term, snippet: snippet, ts: new Date().toISOString() });
+    work.cats[cat] = true; // pinning a Beleg sets the category (decision: evidence implies the category)
+    refreshAssess();
+}
+
+function unpinEvidence(cat, idx) {
+    if (work.evidence[cat]) {
+        work.evidence[cat].splice(idx, 1);
+        if (!work.evidence[cat].length) delete work.evidence[cat];
+    }
+    refreshAssess();
+}
+
+// ---- right: assessment (categories + evidence + derived decision + collapsed AI) ----
+function assessInnerHtml(p, dec) {
+    if (dec) return assessLockedHtml(p, dec);
+    var cats = work.cats;
+    var h = '<div class="pt-rail-head"><span class="pt-rail-title">Deine Bewertung</span>' +
+        '<span class="pt-spacer"></span><span class="pt-pill pt-pill-human">bindend</span></div>';
+    h += '<div class="pt-rail-body">';
+    h += '<p class="pt-assess-hint">Markiere jede Kategorie, die du am Text belegen kannst, oder hefte einen Beleg aus dem Text an.</p>';
     var seed = seedDecision(p);
-    var h = '<div class="pt-assess">';
-    h += '<div class="pt-assess-head"><span class="pt-assess-title">Deine Bewertung</span><span class="pt-pill pt-pill-human">bindend</span>';
-    if (state.blind && !locked) h += '<span class="pt-pill pt-pill-warn">blind</span>';
-    h += '</div>';
-    h += '<p class="pt-assess-hint">Markiere jede Kategorie, die du am Text belegen kannst. Hover zeigt die Definition.</p>';
-
-    if (seed && !locked) h += '<div class="pt-seed-ref">Seed-Bewertung (Expert:innen): <strong class="pt-dec-' +
+    if (seed) h += '<div class="pt-seed-ref">Seed-Bewertung (Expert:innen): <strong class="pt-dec-' +
         seed.decision.toLowerCase() + '">' + seed.decision + '</strong>. Du entscheidest unabhaengig.</div>';
-
-    h += dimHtml('Technik', TECH_CATS, cats, locked);
-    h += dimHtml('Sozial', SOCIAL_CATS, cats, locked);
-
-    h += '<div class="pt-logic" id="pt-logic">' + logicInner(cats, dec) + '</div>';
-
-    var showReason = finalDecisionOf(cats, dec) === 'Exclude';
+    h += dimHtml('Technik', TECH_CATS, cats, false);
+    h += dimHtml('Sozial', SOCIAL_CATS, cats, false);
+    h += evidenceListHtml(work.evidence, false);
+    h += '<div class="pt-logic" id="pt-logic">' + logicInner(cats, work.override) + '</div>';
+    var showReason = finalDecisionOf(cats, work.override) === 'Exclude';
     h += '<div class="pt-reason-block" id="pt-reason-block" style="display:' + (showReason ? 'block' : 'none') + ';">';
     h += '<div class="pt-tag-mono pt-reason-label">Ausschlussgrund &middot; erforderlich</div><div class="pt-reason-chips">';
     EXCLUSION_REASONS.forEach(function(r) {
-        var sel = dec ? dec.reason === r : false;
-        h += '<button class="pt-reason-chip' + (sel ? ' sel' : '') + '" data-reason="' + r + '"' + (locked ? ' disabled' : '') + '>' +
-            r.replace(/_/g, ' ') + '</button>';
+        h += '<button class="pt-reason-chip' + (work.reason === r ? ' sel' : '') + '" data-reason="' + r + '">' + r.replace(/_/g, ' ') + '</button>';
     });
     h += '</div></div>';
-
     h += '<div class="pt-actions">';
-    if (!locked) {
-        h += '<button class="pt-record-btn" id="pt-record">Entscheidung erfassen (bindend)</button>';
-        h += '<span class="pt-actions-hint" id="pt-actions-hint"></span>';
-    } else {
-        h += '<span class="pt-pill pt-pill-' + (dec.decision === 'Include' ? 'include' : 'exclude') + ' pt-pill-lg">' + dec.decision + '</span>';
-        if (dec.decision === 'Exclude' && dec.reason) h += '<span class="pt-pill pt-pill-ghost mono">' + dec.reason.replace(/_/g, ' ') + '</span>';
-        h += '<button class="pt-revise-btn" id="pt-revise">Ueberarbeiten</button>';
-        h += '<span class="pt-spacer"></span>';
-        h += '<button class="pt-next-btn" id="pt-next">' + (state.index < papers.length - 1 ? 'Naechstes offen' : 'Zum ersten offenen') + ' &rarr;</button>';
-    }
-    h += '</div></div>';
+    h += '<button class="pt-record-btn" id="pt-record">Entscheidung erfassen (bindend)</button>';
+    h += '<span class="pt-actions-hint" id="pt-actions-hint"></span>';
+    h += '</div>';
+    h += aiCollapsedHtml(p);
+    h += '</div>';
+    return h;
+}
+
+function assessLockedHtml(p, dec) {
+    var cats = dec.categories || {};
+    var h = '<div class="pt-rail-head"><span class="pt-rail-title">Deine Bewertung</span>' +
+        '<span class="pt-spacer"></span><span class="pt-pill pt-pill-' + (dec.decision === 'Include' ? 'include' : 'exclude') + ' pt-pill-lg">' + dec.decision + '</span></div>';
+    h += '<div class="pt-rail-body">';
+    if (dec.decision === 'Exclude' && dec.reason) h += '<div class="pt-seed-ref">Ausschlussgrund: <strong>' + EC.escapeHtml(dec.reason.replace(/_/g, ' ')) + '</strong></div>';
+    h += dimHtml('Technik', TECH_CATS, cats, true);
+    h += dimHtml('Sozial', SOCIAL_CATS, cats, true);
+    h += evidenceListHtml(dec.evidence || {}, true);
+    h += '<div class="pt-actions">';
+    h += '<button class="pt-revise-btn" id="pt-revise">Ueberarbeiten</button><span class="pt-spacer"></span>';
+    h += '<button class="pt-next-btn" id="pt-next">' + (state.index < papers.length - 1 ? 'Naechstes offen' : 'Zum ersten offenen') + ' &rarr;</button>';
+    h += '</div>';
+    h += aiCollapsedHtml(p);
+    h += '</div>';
     return h;
 }
 
@@ -551,12 +787,30 @@ function chipHtml(cat, on, locked) {
         '<span class="pt-chip-tip"><b class="mono">' + cat + '</b><span>' + EC.escapeHtml(CAT_DEFS[cat] || '') + '</span></span></button>';
 }
 
-function logicInner(cats, dec, override) {
+function evidenceListHtml(evidence, locked) {
+    var cats = ALL_CATS.filter(function(c) { return (evidence[c] || []).length; });
+    if (!cats.length) {
+        return locked ? '' : '<div class="pt-evid pt-evid-empty"><span class="pt-tag-mono">Belege</span>' +
+            '<p class="pt-muted">Noch keine Belege angeheftet. Markiere im Text die Stelle, die eine Kategorie traegt.</p></div>';
+    }
+    var h = '<div class="pt-evid"><span class="pt-tag-mono">Belege</span>';
+    cats.forEach(function(c) {
+        h += '<div class="pt-evid-cat"><div class="pt-evid-cat-h"><span class="pt-evid-dot" style="background:' +
+            ((EC.CAT_COLORS && EC.CAT_COLORS[c]) || 'var(--pt-human)') + '"></span>' + EC.escapeHtml(CAT_LABELS[c]) + '</div>';
+        (evidence[c] || []).forEach(function(ev, i) {
+            h += '<div class="pt-evid-item"><span class="pt-evid-snip">' + EC.escapeHtml(ev.snippet || ev.term) + '</span>' +
+                (locked ? '' : '<button class="pt-evid-x" data-cat="' + c + '" data-i="' + i + '" title="Beleg entfernen">&times;</button>') + '</div>';
+        });
+        h += '</div>';
+    });
+    h += '</div>';
+    return h;
+}
+
+function logicInner(cats, override) {
     var tech = TECH_CATS.some(function(c) { return cats[c]; });
     var soc = SOCIAL_CATS.some(function(c) { return cats[c]; });
     var derived = deriveDecision(cats);
-    var locked = !!dec;
-    var ov = (override != null) ? override : (dec ? !!dec.override : false);
     var h = '<div class="pt-logic-row">';
     h += '<span class="pt-logic-term' + (tech ? ' on' : '') + '">&ge;1 Technik</span>';
     h += '<span class="pt-logic-and mono">UND</span>';
@@ -567,234 +821,206 @@ function logicInner(cats, dec, override) {
     if (derived === 'Include') {
         h += '<span class="pt-spacer"></span>';
         h += '<label class="pt-override"><span class="pt-switch"><input type="checkbox" id="pt-override"' +
-            (ov ? ' checked' : '') + (locked ? ' disabled' : '') + '><span class="pt-switch-track"></span></span> Override zu Exclude</label>';
+            (override ? ' checked' : '') + '><span class="pt-switch-track"></span></span> Override zu Exclude</label>';
     }
     h += '</div>';
     return h;
 }
 
-// ---- right: agreement rail (blind / preview / revealed) ----
-function railHtml(p, dec) {
+function aiCollapsedHtml(p) {
     var a = aiProposal(p);
-    var mode = dec ? 'revealed' : (state.blind ? 'blind' : 'preview');
-    var h = '<aside class="pt-rail"><div class="pt-rail-head"><span class="pt-rail-title">Agreement</span>' +
-        '<span class="pt-spacer"></span><span class="pt-pill pt-pill-ai">advisory</span></div>';
-    if (!a) {
-        h += '<div class="pt-rail-body"><p class="pt-muted">Kein KI-Vorschlag fuer dieses Paper.</p></div>';
-    } else if (mode === 'blind') {
-        h += '<div class="pt-rail-body pt-blind-state">' +
-            '<div class="pt-blind-lock">' + lockSvg() + '</div>' +
-            '<div class="pt-blind-title">KI-Vorschlag verborgen</div>' +
-            '<p class="pt-blind-text">Erfasse zuerst deine eigene Entscheidung, damit dein Urteil unabhaengig bleibt und der Mensch-KI-Vergleich aussagekraeftig ist.</p>' +
-            '<span class="pt-tag-mono">RAISE &middot; menschliche Aufsicht (FR-02)</span></div>';
-    } else if (mode === 'preview') {
-        h += '<div class="pt-rail-body pt-fade">' +
-            '<div class="pt-preview-note">Blind-Modus aus, KI vor deiner Entscheidung sichtbar.</div>' +
-            decisionCardHtml('KI', 'advisory', 'ai', a.decision) + aiCatsHtml(a) + provHtml(a) + '</div>';
-    } else {
-        h += '<div class="pt-rail-body pt-rise">' + revealHtml(p, dec, a) + '</div>';
-    }
-    h += '</aside>';
-    return h;
-}
-
-function revealHtml(p, dec, a) {
-    var human = { decision: dec.decision, categories: dec.categories || {} };
-    var decDiv = human.decision !== a.decision;
-    var catDiffs = ALL_CATS.filter(function(c) { return !!human.categories[c] !== !!a.categories[c]; });
-    var isDiv = decDiv || catDiffs.length > 0;
-    var h = '';
-    if (isDiv) {
-        h += '<div class="pt-verdict pt-verdict-diverge"><div class="pt-verdict-head">Divergenz' +
-            '<span class="pt-pill pt-pill-warn">' + (decDiv ? 'Entscheidung' : 'Kategorie') + '</span></div>';
-        var pat = p.benchmark && p.benchmark.disagreement_type;
-        if (pat) h += '<div class="pt-verdict-pat mono">Referenzmuster (Seed vs KI): ' + EC.escapeHtml(pat) + '</div>';
-        h += '</div>';
-    } else {
-        h += '<div class="pt-verdict pt-verdict-agree"><div class="pt-verdict-head">Volle Uebereinstimmung</div></div>';
-    }
-
-    h += '<div class="pt-decision-cards">' +
-        decisionCardHtml('Mensch', 'bindend', 'human', human.decision) +
-        decisionCardHtml('KI', 'advisory', 'ai', a.decision) + '</div>';
-
-    var union = ALL_CATS.filter(function(c) { return human.categories[c] || a.categories[c]; });
-    h += '<div class="pt-compare-head"><span class="pt-tag-mono">Kategorie-Vergleich</span><span class="pt-spacer"></span>' +
-        '<span class="pt-tag-mono"><span class="pt-legend pt-legend-h"></span>du<span class="pt-legend pt-legend-a"></span>KI</span></div>';
-    if (!union.length) h += '<p class="pt-muted">Keine Kategorie gesetzt.</p>';
-    union.forEach(function(c) {
-        var hh = !!human.categories[c], aa = !!a.categories[c], diff = hh !== aa;
-        h += '<div class="pt-compare-row' + (diff ? ' diff' : '') + '"><span class="pt-compare-label">' + CAT_LABELS[c] + '</span>' +
-            '<span class="pt-mark' + (hh ? ' on pt-mark-h' : '') + '"></span>' +
-            '<span class="pt-mark' + (aa ? ' on pt-mark-a' : '') + '"></span></div>';
-    });
-
-    if (a.reasoning) {
-        h += '<details class="pt-reasoning"><summary>KI-Begruendung <span class="pt-tag-mono">diagnostisch, konfabulationsanfaellig</span></summary>' +
-            '<p>' + EC.escapeHtml(a.reasoning) + '</p></details>';
-    }
-    h += provHtml(a);
-    return h;
-}
-
-function decisionCardHtml(who, sub, kind, decision) {
-    var inc = decision === 'Include';
-    return '<div class="pt-decision-card pt-card-' + kind + '"><div class="pt-card-top">' +
-        '<span class="pt-card-who">' + who + '</span><span class="pt-tag-mono">' + sub + '</span></div>' +
-        '<div class="pt-card-dec"><span class="pt-dot-' + (inc ? 'include' : 'exclude') + '"></span>' +
-        '<span class="pt-dec-' + (inc ? 'include' : 'exclude') + '">' + decision + '</span></div></div>';
-}
-
-function aiCatsHtml(a) {
+    if (!a) return '';
     var on = ALL_CATS.filter(function(c) { return a.categories[c]; });
-    var h = '<div class="pt-ai-cats"><span class="pt-tag-mono">KI-Kategorien</span><div class="pt-chips-static">';
-    if (!on.length) h += '<span class="pt-muted">keine</span>';
-    on.forEach(function(c) { h += '<span class="pt-pill pt-pill-ai">' + CAT_LABELS[c] + '</span>'; });
-    h += '</div></div>';
+    var h = '<details class="pt-ai-collapse"><summary><span class="pt-tag-mono">KI-Vorschlag</span>' +
+        '<span class="pt-pill pt-pill-ai">advisory</span><span class="pt-spacer"></span>' +
+        '<span class="pt-dec-' + (a.decision === 'Include' ? 'include' : 'exclude') + '">' + a.decision + '</span></summary>';
+    h += '<div class="pt-ai-collapse-body">';
+    h += '<div class="pt-tag-mono">KI-Kategorien</div><div class="pt-chips-static">';
+    h += on.length ? on.map(function(c) { return '<span class="pt-pill pt-pill-ai">' + CAT_LABELS[c] + '</span>'; }).join('') : '<span class="pt-muted">keine</span>';
+    h += '</div>';
+    if (a.reasoning) h += '<p class="pt-ai-reason">' + EC.escapeHtml(a.reasoning) + '</p>';
+    h += '<p class="pt-ai-foot pt-tag-mono">diagnostisch, konfabulationsanfaellig. Mensch-KI-Vergleich im Tab PRISMA &amp; Report.</p>';
+    h += '</div></details>';
     return h;
 }
 
-function provHtml(a) {
-    var M = MODEL_DEFAULT;
-    return '<div class="pt-prov"><span class="pt-tag-mono pt-prov-title">KI-Provenienz</span>' +
-        provRow('Modell', M.name) + provRow('Prompt', M.prompt) +
-        provRow('Parameter', 'temp ' + M.temperature + ' &middot; ' + M.maxTokens + ' tok') +
-        provRow('Datum', M.date) + '</div>';
-}
-
-function provRow(k, v) {
-    return '<div class="pt-prov-row"><span class="pt-tag-mono">' + k + '</span><span class="mono pt-prov-v">' + v + '</span></div>';
-}
-
-function lockSvg() {
-    return '<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" ' +
-        'stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"></rect>' +
-        '<path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>';
+function refreshAssess() {
+    var col = document.getElementById('pt-assess-col');
+    if (!col) return;
+    var p = papers[state.index];
+    col.innerHTML = assessInnerHtml(p, curDec()[p.id]);
+    bindAssess(p, curDec()[p.id]);
 }
 
 // ---- handlers ----
-function attachWorkspace(p) {
+function attachScreening(p, dec) {
     var el = surfaceEl(); if (!el) return;
-    var dec = curDec()[p.id];
 
-    el.querySelectorAll('.pt-nav-item').forEach(function(btn) {
-        btn.addEventListener('click', function() { state.index = parseInt(btn.dataset.i, 10); renderWorkspace(); });
+    bindCorpusItems();
+    var cq = document.getElementById('pt-corpus-q');
+    if (cq) {
+        cq.addEventListener('input', function() {
+            corpusQuery = cq.value;
+            if (corpusQuery.trim() && !corpusIndex) loadCorpusIndex().then(refreshCorpusList);
+            else refreshCorpusList();
+        });
+    }
+    refreshCorpusList();
+
+    // in-text search
+    var intext = document.getElementById('pt-intext');
+    if (intext) {
+        intext.addEventListener('input', function() { applyInText(intext.value); });
+        intext.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') { e.preventDefault(); if (docMarks.length) setActiveMark(docMarkIdx + 1); }
+        });
+    }
+    var prev = document.getElementById('pt-intext-prev');
+    if (prev) prev.addEventListener('click', function() { if (docMarks.length) setActiveMark(docMarkIdx - 1); });
+    var next = document.getElementById('pt-intext-next');
+    if (next) next.addEventListener('click', function() { if (docMarks.length) setActiveMark(docMarkIdx + 1); });
+    var pinHit = document.getElementById('pt-pin-hit');
+    if (pinHit) pinHit.addEventListener('click', function() {
+        if (!docMarks.length || dec) return;
+        var m = docMarks[docMarkIdx];
+        var term = (intext && intext.value || '').trim();
+        openPinMenu(term, snippetAround(m, term));
     });
 
+    // text-selection pinning in the reading column
+    var doc = document.getElementById('pt-doc');
+    if (doc && !dec) {
+        doc.addEventListener('mouseup', function() {
+            var sel = window.getSelection ? window.getSelection() : null;
+            if (!sel || sel.isCollapsed) return;
+            var text = (sel.toString() || '').trim();
+            if (text.length < 2 || text.length > 400) return;
+            openPinMenu(text.slice(0, 80), text);
+        });
+    }
+
+    bindAssess(p, dec);
+}
+
+function bindAssess(p, dec) {
+    var col = document.getElementById('pt-assess-col'); if (!col) return;
+
     if (dec) {
-        var rev = el.querySelector('#pt-revise');
+        var rev = col.querySelector('#pt-revise');
         if (rev) rev.addEventListener('click', function() { editRecord(p); });
-        var nx = el.querySelector('#pt-next');
+        var nx = col.querySelector('#pt-next');
         if (nx) nx.addEventListener('click', gotoNextOpen);
         return;
     }
 
-    var working = {};
-    var override = false;
-    var reason = null;
-
-    function refreshDimPills() {
-        var dims = el.querySelectorAll('.pt-dim');
-        updateDimPill(dims[0], TECH_CATS);
-        updateDimPill(dims[1], SOCIAL_CATS);
-    }
-    function updateDimPill(dimEl, keys) {
-        if (!dimEl) return;
-        var pill = dimEl.querySelector('.pt-dim-pill'); if (!pill) return;
-        var anyOn = keys.some(function(c) { return working[c]; });
-        pill.className = 'pt-pill pt-dim-pill ' + (anyOn ? 'pt-pill-include' : 'pt-pill-ghost');
-        pill.innerHTML = anyOn ? '&ge;1 gesetzt' : 'keine';
-    }
-    function bindOverride() {
-        var ov = el.querySelector('#pt-override');
-        if (ov) ov.addEventListener('change', function() { override = ov.checked; refreshLogic(); });
-    }
-    function refreshLogic() {
-        var logic = el.querySelector('#pt-logic');
-        if (logic) logic.innerHTML = logicInner(working, null, override);
-        bindOverride();
-        var fin = finalDecisionOf(working, null, override);
-        var rb = el.querySelector('#pt-reason-block');
-        if (rb) rb.style.display = fin === 'Exclude' ? 'block' : 'none';
-        refreshRecordHint();
-    }
-    function refreshRecordHint() {
-        var fin = finalDecisionOf(working, null, override);
-        var can = fin !== 'Exclude' || !!reason;
-        var rec = el.querySelector('#pt-record');
-        var hint = el.querySelector('#pt-actions-hint');
-        if (rec) rec.disabled = !can;
-        if (hint) hint.textContent = can ? 'Deine Entscheidung ist verbindlich, KI erscheint danach.' : 'Bitte einen Ausschlussgrund waehlen.';
-    }
-
-    el.querySelectorAll('.pt-chip').forEach(function(btn) {
+    col.querySelectorAll('.pt-chip').forEach(function(btn) {
         btn.addEventListener('click', function() {
-            var c = btn.dataset.cat; working[c] = !working[c]; btn.classList.toggle('on', working[c]);
-            if (deriveDecision(working) === 'Exclude') override = false;
-            refreshDimPills();
-            refreshLogic();
+            var c = btn.dataset.cat;
+            work.cats[c] = !work.cats[c];
+            if (deriveDecision(work.cats) === 'Exclude') work.override = false;
+            refreshAssess();
         });
     });
-    el.querySelectorAll('.pt-reason-chip').forEach(function(btn) {
-        btn.addEventListener('click', function() {
-            reason = btn.dataset.reason;
-            el.querySelectorAll('.pt-reason-chip').forEach(function(b) { b.classList.remove('sel'); });
-            btn.classList.add('sel');
-            refreshRecordHint();
-        });
+    col.querySelectorAll('.pt-evid-x').forEach(function(btn) {
+        btn.addEventListener('click', function() { unpinEvidence(btn.dataset.cat, parseInt(btn.dataset.i, 10)); });
     });
+    col.querySelectorAll('.pt-reason-chip').forEach(function(btn) {
+        btn.addEventListener('click', function() { work.reason = btn.dataset.reason; refreshAssess(); });
+    });
+    var ov = col.querySelector('#pt-override');
+    if (ov) ov.addEventListener('change', function() { work.override = ov.checked; refreshAssess(); });
 
-    bindOverride();
-    refreshRecordHint();
+    var rec = col.querySelector('#pt-record');
+    var hint = col.querySelector('#pt-actions-hint');
+    var fin = finalDecisionOf(work.cats, work.override);
+    var can = fin !== 'Exclude' || !!work.reason;
+    if (rec) rec.disabled = !can;
+    if (hint) hint.textContent = can ? 'Deine Entscheidung ist verbindlich. KI bleibt nur als Vorschlag.' : 'Bitte einen Ausschlussgrund waehlen.';
+    if (rec) rec.addEventListener('click', commit);
+}
 
-    function commit() {
-        var fin = finalDecisionOf(working, null, override);
-        if (fin === 'Exclude' && !reason) {
-            var rb = el.querySelector('#pt-reason-block'); if (rb) rb.style.display = 'block';
-            refreshRecordHint();
-            return;
-        }
-        curDec()[p.id] = { categories: working, decision: fin, override: !!override,
-            reason: fin === 'Exclude' ? reason : null, ts: new Date().toISOString(), reviewer: state.reviewer };
-        save();
-        gotoNextOpen();
-    }
-
-    var recBtn = el.querySelector('#pt-record');
-    if (recBtn) recBtn.addEventListener('click', commit);
-    el.onkeydown = function(e) {
-        if (e.key === 'Enter' && e.target.tagName !== 'BUTTON' && e.target.tagName !== 'SELECT') {
-            e.preventDefault(); if (recBtn && !recBtn.disabled) commit();
-        }
+function commit() {
+    var p = papers[state.index];
+    var fin = finalDecisionOf(work.cats, work.override);
+    if (fin === 'Exclude' && !work.reason) { refreshAssess(); return; }
+    curDec()[p.id] = {
+        categories: work.cats, decision: fin, override: !!work.override,
+        reason: fin === 'Exclude' ? work.reason : null,
+        evidence: work.evidence, ts: new Date().toISOString(), reviewer: state.reviewer
     };
+    save();
+    gotoNextOpen();
 }
 
 function editRecord(p) {
     if (!curDec()[p.id]) return;
     delete curDec()[p.id];
+    resetWork(p);
     save();
-    renderWorkspace();
+    renderScreening();
 }
 
 function gotoNextOpen() {
     var d = curDec();
     for (var i = 0; i < papers.length; i++) {
         var j = (state.index + 1 + i) % papers.length;
-        if (!d[papers[j].id]) { state.index = j; renderWorkspace(); return; }
+        if (!d[papers[j].id]) { state.index = j; renderScreening(); return; }
     }
     if (state.index < papers.length - 1) state.index++;
-    renderWorkspace();
+    renderScreening();
+}
+
+// ---- pin menu (category picker for a selected passage / search hit) ----
+function openPinMenu(term, snippet) {
+    pinTerm = term; pinSnippet = snippet;
+    var menu = document.getElementById('pt-pinmenu'); if (!menu) return;
+    var h = '<div class="pt-pinmenu-head"><span class="pt-tag-mono">Als Beleg anheften an</span>' +
+        '<button class="pt-pinmenu-x" id="pt-pinmenu-x">&times;</button></div>';
+    h += '<div class="pt-pinmenu-snip">' + EC.escapeHtml((snippet || term).slice(0, 160)) + '</div>';
+    h += '<div class="pt-pinmenu-cats">';
+    ALL_CATS.forEach(function(c) {
+        h += '<button class="pt-pinmenu-cat" data-cat="' + c + '"><span class="pt-evid-dot" style="background:' +
+            ((EC.CAT_COLORS && EC.CAT_COLORS[c]) || 'var(--pt-human)') + '"></span>' + EC.escapeHtml(CAT_LABELS[c]) + '</button>';
+    });
+    h += '</div>';
+    menu.innerHTML = h;
+    menu.hidden = false;
+    menu.querySelector('#pt-pinmenu-x').addEventListener('click', closePinMenu);
+    menu.querySelectorAll('.pt-pinmenu-cat').forEach(function(btn) {
+        btn.addEventListener('click', function() { pinEvidence(btn.dataset.cat, pinTerm, pinSnippet); closePinMenu(); });
+    });
+}
+
+function closePinMenu() {
+    var menu = document.getElementById('pt-pinmenu');
+    if (menu) { menu.hidden = true; menu.innerHTML = ''; }
 }
 
 // ============================================================
-// Surface: Flow
+// Surface: PRISMA & Report (flow + agreement + checklist + disclosure)
 // ============================================================
 
-function renderFlow() {
+function renderReportSurface() {
     var el = surfaceEl(); if (!el) return;
+    var html = '';
+    html += '<div class="pt-report-top">' + perspectiveBar() +
+        '<p class="pt-muted">Diese Ansicht wird aus dem Screening berechnet. Der Mensch-KI-Vergleich ist Forschungsmaterial fuer Paper und Companion, nicht Teil der Screening-Arbeit.</p></div>';
+    html += '<section class="pt-rsec"><h3 class="pt-rsec-h">PRISMA-2020-Fluss (trAIce R1)</h3><div id="pt-sec-flow"></div></section>';
+    html += '<section class="pt-rsec"><h3 class="pt-rsec-h">Mensch-KI-Uebereinstimmung (trAIce M9/R2)</h3><div id="pt-sec-agree"></div></section>';
+    html += '<section class="pt-rsec"><h3 class="pt-rsec-h">PRISMA-trAIce Checkliste</h3><div id="pt-sec-check"></div></section>';
+    html += '<section class="pt-rsec"><h3 class="pt-rsec-h">AI-Disclosure</h3><div id="pt-sec-report"></div></section>';
+    el.innerHTML = html;
+    attachPerspective(el, renderReportSurface);
+    renderFlowInto(document.getElementById('pt-sec-flow'));
+    renderAgreementInto(document.getElementById('pt-sec-agree'));
+    renderChecklistInto(document.getElementById('pt-sec-check'));
+    renderReportInto(document.getElementById('pt-sec-report'));
+}
+
+function renderFlowInto(el) {
+    if (!el) return;
     var f = computeFlow();
-    var html = perspectiveBar();
-    html += '<div class="pt-flow">';
+    var html = '<div class="pt-flow">';
     html += '<div class="pt-flow-box pt-flow-id"><div class="pt-flow-h">Identification</div>' +
         '<div class="pt-flow-n">Records identified&nbsp; n = ' + f.total + '</div>' +
         '<div class="pt-flow-sub">Seed-Korpus (Deep Research + manuell + Zotero)</div></div>';
@@ -807,93 +1033,60 @@ function renderFlow() {
         '<div class="pt-lane-n">gescreent ' + f.humanScreened + '</div><div class="pt-lane-r">Include ' + f.humanIncl + ' &middot; Exclude ' + f.humanExcl + '</div><div class="pt-lane-note">bindend</div></div>';
     html += '</div>';
     if (Object.keys(f.humanReasons).length) {
-        html += '<div class="pt-flow-reasons"><strong>Ausschlussgründe (Mensch):</strong> ' +
+        html += '<div class="pt-flow-reasons"><strong>Ausschlussgruende (Mensch):</strong> ' +
             Object.keys(f.humanReasons).map(function(r) { return r.replace(/_/g, ' ') + ' ' + f.humanReasons[r]; }).join(' &middot; ') + '</div>';
     }
     html += '<div class="pt-flow-arrow">&darr;</div>';
     html += '<div class="pt-flow-box pt-flow-incl"><div class="pt-flow-h">Included</div>' +
         '<div class="pt-flow-n">Mensch (bindend) ' + f.humanIncl + '</div><div class="pt-flow-sub">KI (advisory) ' + f.aiIncl + '</div></div>';
     html += '</div>';
-    html += '<p class="pt-flow-caption">PRISMA-2020-Fluss mit PRISMA-trAIce-R1-Split: KI- und Mensch-Entscheidungen getrennt. Perspektive Mensch oben wählbar.</p>';
+    html += '<p class="pt-flow-caption">KI- und Mensch-Entscheidungen getrennt (PRISMA-trAIce R1). Perspektive Mensch oben waehlbar.</p>';
     el.innerHTML = html;
-    attachPerspective(el, renderFlow);
 }
 
-// ============================================================
-// Surface: Agreement
-// ============================================================
-
-function renderAgreement() {
-    var el = surfaceEl(); if (!el) return;
+function renderAgreementInto(el) {
+    if (!el) return;
     var m = computeMatrix();
     var k = cohenKappa(m);
     var kappas = (EC && EC.getKappas) ? EC.getKappas() : {};
     var hRate = m.n ? Math.round((m.II + m.IE) / m.n * 1000) / 10 : 0;
     var aRate = m.n ? Math.round((m.II + m.EI) / m.n * 1000) / 10 : 0;
-
-    var html = perspectiveBar();
-    html += '<div class="pt-agree">';
+    var html = '<div class="pt-agree">';
     html += '<div class="pt-matrix-wrap">';
-    html += '<div class="pt-matrix-title">Konfusionsmatrix &middot; <span class="pt-kappa">&kappa; = ' + k.toFixed(3) + ' &ldquo;' + kappaLabel(k) + '&rdquo;</span> &middot; n = ' + m.n + '</div>';
+    html += '<div class="pt-matrix-title">Konfusionsmatrix &middot; <span class="pt-kappa">&kappa; = ' + k.toFixed(3) + ' &bdquo;' + kappaLabel(k) + '&ldquo;</span> &middot; n = ' + m.n + '</div>';
     html += '<table class="pt-matrix"><thead><tr><th></th><th>KI Include</th><th>KI Exclude</th></tr></thead><tbody>';
     html += '<tr><th>Mensch Include</th><td class="pt-cell" data-cell="II">' + m.II + '</td><td class="pt-cell" data-cell="IE">' + m.IE + '</td></tr>';
     html += '<tr><th>Mensch Exclude</th><td class="pt-cell" data-cell="EI">' + m.EI + '</td><td class="pt-cell" data-cell="EE">' + m.EE + '</td></tr>';
     html += '</tbody></table>';
     html += '<div class="pt-rates">Mensch Include-Rate <strong>' + hRate + '%</strong> &middot; KI Include-Rate <strong>' + aRate + '%</strong></div>';
-    html += '<p class="pt-muted">Zelle anklicken filtert den Workspace.</p>';
+    html += '<p class="pt-muted">Zelle anklicken oeffnet ein Paper aus dieser Zelle im Screening.</p>';
     html += '</div>';
     html += '<div class="pt-catkappa"><h4>Kategorie-Kappas (Korpus-Benchmark, Seed gegen KI)</h4>';
     ALL_CATS.forEach(function(c) {
         var d = kappas[c]; if (!d) return;
         var kv = (d.kappa != null) ? d.kappa : 0;
-        var color = (EC.CAT_COLORS && EC.CAT_COLORS[c]) || 'var(--primary)';
+        var color = (EC.CAT_COLORS && EC.CAT_COLORS[c]) || 'var(--pt-human)';
         html += '<div class="pt-kbar-row"><span class="pt-kbar-label">' + CAT_LABELS[c] + '</span>' +
             '<span class="pt-kbar-track"><span class="pt-kbar-fill" style="width:' + Math.max(0, kv * 100) + '%;background:' + color + ';"></span></span>' +
             '<span class="pt-kbar-val">' + kv.toFixed(2) + '</span></div>';
     });
     html += '</div></div>';
     el.innerHTML = html;
-    attachPerspective(el, renderAgreement);
-    el.querySelectorAll('.pt-cell').forEach(function(td) { td.addEventListener('click', function() { filterWorkspaceByCell(td.dataset.cell); }); });
+    el.querySelectorAll('.pt-cell').forEach(function(td) { td.addEventListener('click', function() { filterScreeningByCell(td.dataset.cell); }); });
 }
 
-function filterWorkspaceByCell(cell) {
+function filterScreeningByCell(cell) {
     for (var i = 0; i < papers.length; i++) {
         var h = humanDecision(papers[i]), a = aiProposal(papers[i]);
         if (!h || !a) continue;
         var key = (h.decision === 'Include' ? 'I' : 'E') + (a.decision === 'Include' ? 'I' : 'E');
-        if (key === cell) { state.index = i; showSurface('workspace'); return; }
+        if (key === cell) { state.index = i; showSurface('screening'); return; }
     }
 }
 
-// ============================================================
-// Surface: Reviewers (reconciliation)
-// ============================================================
-
-function renderReviewers() {
-    var el = surfaceEl(); if (!el) return;
-    var keys = reviewerKeys();
-    var html = '<div class="pt-rev"><p class="pt-check-intro">Jede:r Reviewer:in screent unabhängig in eine eigene Datei. ' +
-        'Hier der Vergleich aller geladenen Reviewer:innen plus Seed gegen die KI (PRISMA-trAIce M8/M9).</p>';
-    html += '<table class="pt-matrix pt-rev-table"><thead><tr><th>Reviewer</th><th>gescreent</th><th>Include</th><th>Exclude</th><th>&kappa; vs KI</th></tr></thead><tbody>';
-    keys.forEach(function(k) {
-        var m = computeMatrix(k);
-        var incl = m.II + m.IE, excl = m.EI + m.EE;
-        html += '<tr><th>' + EC.escapeHtml(reviewerLabel(k)) + '</th><td>' + m.n + '</td><td>' + incl + '</td><td>' + excl + '</td><td>' + cohenKappa(m).toFixed(3) + '</td></tr>';
-    });
-    html += '</tbody></table>';
-    if (keys.length <= 1) html += '<p class="pt-muted">Noch keine eigenen Reviewer-Dateien geladen. Verbinde im Tab "Daten & Repo" den Ordner docs/data/screening/ oder importiere eine Datei.</p>';
-    html += '</div>';
-    el.innerHTML = html;
-}
-
-// ============================================================
-// Surface: Checklist
-// ============================================================
-
-function renderChecklist() {
-    var el = surfaceEl(); if (!el) return;
-    var html = '<div class="pt-check"><p class="pt-check-intro">PRISMA-trAIce (Holst et al. 2025), 14 Items. Auto-markierte erfüllt das Dual-Assessment-Setup bereits. PRISMA-2020-Vollcheckliste (27 Items): offizielle Vorlage.</p>';
+function renderChecklistInto(el) {
+    if (!el) return;
+    var html = '<p class="pt-check-intro">PRISMA-trAIce (Holst et al. 2025), 14 Items. Auto-markierte erfuellt das Dual-Assessment-Setup bereits.</p>';
     var lastSec = '';
     TRAICE.forEach(function(it) {
         if (it.sec !== lastSec) { html += '<div class="pt-check-sec">' + it.sec + '</div>'; lastSec = it.sec; }
@@ -907,17 +1100,16 @@ function renderChecklist() {
             '<p class="pt-check-text">' + EC.escapeHtml(it.text) + '</p>' +
             '<input class="pt-check-note" data-id="' + it.id + '" placeholder="Notiz" value="' + EC.escapeHtml(st.note || '') + '"></div>';
     });
-    html += '<button class="pt-btn pt-check-export">Checkliste exportieren (.md)</button></div>';
+    html += '<button class="pt-btn pt-check-export">Checkliste exportieren (.md)</button>';
     el.innerHTML = html;
-
     el.querySelectorAll('.pt-check-status').forEach(function(btn) {
         btn.addEventListener('click', function() {
             var id = btn.dataset.id;
-            var it = TRAICE.find(function(t) { return t.id === id; });
+            var it = TRAICE.filter(function(t) { return t.id === id; })[0];
             var cur = (state.checklist[id] && state.checklist[id].status) || (it.auto ? 'satisfied' : 'open');
-            var next = cur === 'open' ? 'satisfied' : cur === 'satisfied' ? 'na' : 'open';
-            state.checklist[id] = state.checklist[id] || {}; state.checklist[id].status = next;
-            save(); renderChecklist();
+            var nx = cur === 'open' ? 'satisfied' : cur === 'satisfied' ? 'na' : 'open';
+            state.checklist[id] = state.checklist[id] || {}; state.checklist[id].status = nx;
+            save(); renderChecklistInto(el);
         });
     });
     el.querySelectorAll('.pt-check-note').forEach(function(inp) {
@@ -939,14 +1131,10 @@ function exportChecklist() {
     download('prisma-traice-checklist.md', lines.join('\n'), 'text/markdown');
 }
 
-// ============================================================
-// Surface: Report
-// ============================================================
-
 function disc(f) { return (state.disclosure[f] != null) ? state.disclosure[f] : (MODEL_DEFAULT[f] || ''); }
 
-function renderReport() {
-    var el = surfaceEl(); if (!el) return;
+function renderReportInto(el) {
+    if (!el) return;
     if (state.disclosure.stage == null) state.disclosure.stage = 'Screening';
     if (state.disclosure.conflicts == null) state.disclosure.conflicts = 'none';
     var fields = [['name', 'Modell'], ['date', 'Datum'], ['prompt', 'Prompt-Version'], ['temperature', 'Temperature'],
@@ -983,7 +1171,7 @@ function disclosureMarkdown() {
 }
 
 // ============================================================
-// Surface: Daten & Repo
+// Surface: Daten & Repo (sync + reviewers reconciliation)
 // ============================================================
 
 function renderData() {
@@ -991,13 +1179,13 @@ function renderData() {
     var n = Object.keys(curDec()).length;
     var html = '<div class="pt-data">';
 
-    html += '<div class="pt-data-block"><h4>Reviewer-Identität</h4>' +
-        '<label class="pt-field"><span>Dein Kürzel (Dateiname &lt;kürzel&gt;.json)</span>' +
+    html += '<div class="pt-data-block"><h4>Reviewer-Identitaet</h4>' +
+        '<label class="pt-field"><span>Dein Kuerzel (Dateiname &lt;kuerzel&gt;.json)</span>' +
         '<input class="pt-rev-id" value="' + EC.escapeHtml(state.reviewer) + '"></label></div>';
 
     html += '<div class="pt-data-block"><h4>Git-Workflow (File System Access)</h4>';
     if (FS_SUPPORTED) {
-        html += '<p class="pt-muted">Ordner docs/data/screening/ im lokalen Klon verbinden. Das Tool liest alle Reviewer-Dateien und schreibt deine bei jeder Entscheidung direkt hinein. Danach committest du selbst.</p>';
+        html += '<p class="pt-muted">Ordner docs/data/screening/ im lokalen Klon verbinden. Das Tool liest alle Reviewer-Dateien und schreibt deine bei jeder Entscheidung direkt hinein (Schema 0.2 mit Belegen). Danach committest du selbst.</p>';
         html += '<div class="pt-data-actions">' +
             '<button class="pt-btn pt-connect">Mit Repo-Ordner verbinden</button>' +
             '<button class="pt-btn pt-reconnect">Erneut verbinden</button>' +
@@ -1014,9 +1202,19 @@ function renderData() {
         '<button class="pt-btn pt-exp-csv">Decision-Log (.csv)</button>' +
         '<button class="pt-btn pt-clear">Eigene Session leeren</button></div></div>';
 
+    // reviewers reconciliation, folded in (was a separate surface in v3)
     var keys = reviewerKeys();
-    html += '<div class="pt-data-block"><h4>Geladene Reviewer:innen</h4><p class="pt-muted">' +
-        keys.map(function(k) { return EC.escapeHtml(reviewerLabel(k)) + ' (' + (k === SEED ? '291 Seed' : Object.keys(state.reviewers[k] || {}).length) + ')'; }).join(' &middot; ') + '</p></div>';
+    html += '<div class="pt-data-block"><h4>Reviewer:innen-Abgleich</h4>' +
+        '<p class="pt-muted">Jede:r screent unabhaengig in eine eigene Datei. Vergleich aller geladenen Reviewer:innen plus Seed gegen die KI (PRISMA-trAIce M8/M9).</p>';
+    html += '<table class="pt-matrix pt-rev-table"><thead><tr><th>Reviewer</th><th>gescreent</th><th>Include</th><th>Exclude</th><th>&kappa; vs KI</th></tr></thead><tbody>';
+    keys.forEach(function(k) {
+        var m = computeMatrix(k);
+        var incl = m.II + m.IE, excl = m.EI + m.EE;
+        html += '<tr><th>' + EC.escapeHtml(reviewerLabel(k)) + '</th><td>' + m.n + '</td><td>' + incl + '</td><td>' + excl + '</td><td>' + cohenKappa(m).toFixed(3) + '</td></tr>';
+    });
+    html += '</tbody></table>';
+    if (keys.length <= 1) html += '<p class="pt-muted">Noch keine eigenen Reviewer-Dateien geladen. Verbinde den Ordner oder importiere eine Datei.</p>';
+    html += '</div>';
 
     html += '</div>';
     el.innerHTML = html;
@@ -1033,7 +1231,7 @@ function renderData() {
     el.querySelector('.pt-exp-csv').addEventListener('click', exportCsv);
     el.querySelector('.pt-clear').addEventListener('click', function() {
         if (!confirm('Eigene Entscheidungen (' + state.reviewer + ') verwerfen?')) return;
-        state.reviewers[state.reviewer] = {}; state.index = 0; save(); showSurface('workspace');
+        state.reviewers[state.reviewer] = {}; state.index = 0; save(); showSurface('screening');
     });
     el.querySelector('.pt-imp').addEventListener('change', function(e) {
         var file = e.target.files[0]; if (!file) return;
@@ -1047,10 +1245,12 @@ function renderData() {
 }
 
 function exportCsv() {
-    var rows = [['id', 'title', 'human_decision', 'human_source', 'ai_decision', 'divergent', 'reason']];
+    var rows = [['id', 'title', 'human_decision', 'human_source', 'ai_decision', 'divergent', 'reason', 'evidence_count']];
     papers.forEach(function(p) {
         var h = humanDecision(p), a = aiProposal(p);
-        rows.push([p.id, '"' + (p.title || '').replace(/"/g, '""') + '"', h ? h.decision : '', h ? h.source : '', a ? a.decision : '', divergent(h, a) ? 'yes' : 'no', (h && h.reason) ? h.reason : '']);
+        var rec = (state.reviewers[state.perspective] && state.reviewers[state.perspective][p.id]) || curDec()[p.id];
+        rows.push([p.id, '"' + (p.title || '').replace(/"/g, '""') + '"', h ? h.decision : '', h ? h.source : '',
+            a ? a.decision : '', divergent(h, a) ? 'yes' : 'no', (h && h.reason) ? h.reason : '', evidenceCount(rec)]);
     });
     download('prisma-decision-log.csv', rows.map(function(r) { return r.join(','); }).join('\n'), 'text/csv');
 }
@@ -1066,5 +1266,16 @@ function download(filename, content, mime) {
     a.href = url; a.download = filename; document.body.appendChild(a); a.click();
     document.body.removeChild(a); URL.revokeObjectURL(url);
 }
+
+// test hook (headless harness); no effect in the browser beyond exposing internals
+window.__PRISMA_TEST__ = {
+    setPapers: function(p) { papers = p; },
+    state: state, work: work,
+    resetWork: resetWork, pinEvidence: pinEvidence, unpinEvidence: unpinEvidence,
+    deriveDecision: deriveDecision, finalDecisionOf: finalDecisionOf, commit: commit,
+    renderMarkdown: renderMarkdown, computeMatrix: computeMatrix, cohenKappa: cohenKappa,
+    curDec: curDec, getWork: function() { return work; }, reviewerPayload: reviewerPayload,
+    showSurface: function(s) { showSurface(s); }
+};
 
 })();

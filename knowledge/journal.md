@@ -4,6 +4,81 @@ Chronologisches Protokoll der Arbeitssitzungen mit Entscheidungen, Ergebnissen u
 
 ---
 
+## 2026-06-09 (Session 12): PRISM v4, evidence-grounded screening tool
+
+**Branch:** `feat/prisma-screening-tool`
+
+### What happened
+
+Implemented the v4 redesign of the screening tool (ADR-012) in code. The tool was rebuilt around the way the reviewing colleagues actually worked: reading and searching the text, and grounding each category in concrete words found in it. The human-AI divergence apparatus (blind/reveal, kappa, matrix) moved out of the working view into a report layer.
+
+1. **Seven surfaces collapsed to three:** Screening, PRISMA & Report (flow, agreement matrix, checklist, disclosure in one place), Daten & Repo (File System Access, per-reviewer files, export/import, reviewer reconciliation folded in). The blind-mode toggle was removed; AI is now an optional collapsed suggestion.
+2. **Evidence-grounded Screening view (FR-11/12/13):** three panes, a corpus navigator with full-text search across all papers (left), the formatted, searchable document (centre) with in-text highlight and hit stepping, and categories plus pinned Belege with the derived Include/Exclude (right). Selecting a passage or a search hit pins it as a Beleg on a category, which sets that category. The reviewer file schema was bumped to 0.2 with an `evidence[category] = [{term, snippet, ts}]` map (backward compatible: 0.1 files load without evidence).
+3. **Minimal Markdown renderer**, no new dependency (architecture rule), strips the note's leading and embedded frontmatter, wikilinks, and HTML comments; escapes before inline formatting so no document text can inject markup.
+
+### Full-text source finding (important, for the joint evaluation)
+
+The served `docs/vault/Papers/*.md` files are NOT raw full text. They are the distilled knowledge documents (English abstract plus the German Kernbefund / Methodik / Hauptargumente / Kategorie-Evidenz, the last of which already carries real per-category quotes). The raw Docling full texts (232 files, e.g. 100k chars) live in `pipeline/markdown_clean/`, which is not served and holds copyrighted, paywalled papers. Publishing those to the public Pages site is outward-facing and hard to reverse, so this iteration builds the whole read/search/pin mechanic over the already-published knowledge documents. The text source is a single pluggable seam (`fetchPaperText`), so swapping in raw local full text (read from the clone, never published) is a one-function change, gated on a copyright decision.
+
+### Data layer
+
+New `scripts/build_screening_index.py` extracts plain searchable text from the served knowledge documents (and abstracts for papers without one) into `docs/data/fulltext_index.json` for instant corpus search. Coverage: 326 papers, 236 with a knowledge document, 75 abstract-only, 15 with no text. Index 1.55 MB (gzips to roughly 400 KB, loaded once, lazily). It publishes nothing new.
+
+### Verification
+
+`node --check` clean. A headless jsdom harness (kept in a throwaway dir, not committed) passes 43 behaviour checks (three surfaces, corpus search, in-text highlight and stepping, evidence pin and unpin, derived decision, commit writing schema 0.2 with evidence, locked-record view, the report and data surfaces) plus 11 real-data checks (init on the real 326-paper corpus, rendering a real, messy vault note: frontmatter stripped, no wikilink leak, no script injection). The File System Access write path stays Chromium-only and is not headless-verifiable, unchanged from v3.
+
+### Open items (next)
+
+- Sync the spec docs to the built reality: rewrite `design.md` section 5 for the three v4 surfaces, write the evidence behaviour and the corrected full-text contract into `data.md`, reconcile the FR/ADR text in `specification.md`.
+- Knowledge-base consolidation: one canonical number set (111 vs 142, 303 vs 305, costs, pipeline stages), fix stale footers, remove the epistemic-asymmetry evaluation frame, add a tool-build milestone, update README.
+- Decide the full-text source (publish raw texts, read-local-only, or keep distilled).
+
+---
+
+## 2026-04-01 (Session 11): 2x2 Information Basis Experiment + Paper Integrity Check
+
+**Branch:** `main`
+
+### Paper vs. Repo Comparison
+
+Systematic comparison of the paper text (Forum Wissenschaft draft) against the complete repository. 42 claims checked. Key findings:
+- **1 factual error:** Paper said LLM assessment uses "extrahierte Wissensdokumente" -- actually uses Title + Abstract from papers_full.csv. The knowledge documents are NOT used as input.
+- **1 deviation:** "deterministisch aus den Wissensdokumenten abgeleitet" for the knowledge graph -- concept extraction is LLM-based, not deterministic. Fixed in revised draft.
+- **5 not verifiable:** Phase 1 (RIS conversion, metadata import, expert verification) has no audit trail.
+- **24 verified:** Pipeline, benchmark numbers, categories, assessment system all correct.
+
+### 2x2 Experiment: Information Basis x Model
+
+**Motivation:** The discovery that the 10K assessment uses only abstracts raised the question: would knowledge documents improve LLM assessment quality?
+
+**Implementation:**
+- New module `benchmark/scripts/kd_mapping.py`: Maps 209/249 KDs to Zotero_Keys via 3-strategy matching (exact title, author+year, fuzzy). No Zotero API dependency.
+- Refactored `benchmark/scripts/run_llm_assessment.py`: New `--kd-dir` flag enriches prompt with KD sections (Kernbefund, Forschungsfrage, Methodik, Hauptargumente, Kategorie-Evidenz). Excludes Assessment-Relevanz (would leak pre-made judgments). New `Input_Source` column tracks KD vs Abstract per paper.
+- New `benchmark/scripts/compare_conditions.py`: 4-way comparison with delta analysis.
+
+**Results (2x2 design, all on 291 benchmark papers):**
+
+| Condition | Include% | Decision K | Gender K | Feministisch K |
+|-----------|----------|-----------|----------|----------------|
+| Haiku+Abs | 71.5% | 0.056 | 0.407 | 0.753 |
+| Haiku+KD | 88.7% | 0.054 | **0.530** | 0.753 |
+| Sonnet+Abs | 82.5% | 0.098 | 0.284 | 0.819 |
+| Sonnet+KD | 91.4% | **0.110** | **0.449** | **0.841** |
+
+**Key findings:**
+1. Sonnet + KD is the best condition (Decision K +0.012, Mean Cat K +0.026, Gender +0.166)
+2. Haiku is overwhelmed by richer context -- mean category kappa drops (-0.06)
+3. Inclusion bias intensifies with more context across ALL conditions
+4. Fairness degrades in both KD conditions (ubiquitous fairness language in KDs)
+5. **The divergence is NOT information deficit** -- structural inclusion bias persists even with full-text extractions
+
+**Cost:** Haiku+KD ~$2.50, Sonnet+KD ~$15. Total experiment ~$17.50.
+
+**Interpretation for paper:** More context improves category-specific recognition (especially Gender, Prompting, Generative_KI for Sonnet) but amplifies the inclusion bias. This strengthens the paper's central argument: reliability requires process design, not just better models or more data.
+
+---
+
 ## 2026-04-01 (Session 10): Repository audit, English translation, Haiku vs Sonnet experiment
 
 **Branch:** `main`
@@ -500,4 +575,4 @@ Chronologisches Protokoll der Arbeitssitzungen mit Entscheidungen, Ergebnissen u
 
 ---
 
-*Aktualisiert: 2026-02-22*
+*Aktualisiert: 2026-06-09*
