@@ -124,7 +124,6 @@ What epistemic infrastructure does an LLM-assisted literature review require to 
 | Susi Sackl-Sharif | Human assessment, research lead |
 | Sabine Klinger | Human assessment |
 | Christina | Zotero curation, metadata |
-| Christian Steiner | Paper review |
 
 ---
 

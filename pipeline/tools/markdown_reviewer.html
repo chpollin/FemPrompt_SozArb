@@ -260,7 +260,7 @@
 
                 const csv = await response.text();
                 const lines = csv.trim().split('\n').slice(1);
-                fileNames = lines.map(line => line.split(',')[0].replace('.md', '')).filter(Boolean);
+                fileNames = lines.map(line => line.split(',')[0].replace('.md', '').trim()).filter(Boolean);
 
                 // Check if images are available
                 if (fileNames.length > 0) {
