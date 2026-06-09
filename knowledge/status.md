@@ -153,6 +153,63 @@ Of the 91 papers where Human says Gender=Yes but Sonnet says No:
 4. The divergence is structural-epistemic, not performance-based. The infrastructure is necessary regardless of model quality.
 5. The Gender category definition needs revision if it should capture what experts mean: "Gender perspective, including implicit gender relevance through feminist theory, intersectional analysis, or power-structural approaches."
 
+### 2x2 Experiment: Information Basis x Model (2026-04-01)
+
+Controlled experiment: same prompt, same human baseline, 2 models x 2 input modes.
+
+**Discovery:** The original 10K assessment used only Title + Abstract + Author_Year (from papers_full.csv), NOT the knowledge documents as previously documented. The `run_llm_assessment.py` script was refactored to support an optional `--kd-dir` parameter that enriches the prompt with KD sections (Kernbefund, Forschungsfrage, Methodik, Hauptargumente, Kategorie-Evidenz). Papers without KDs (77/326) fall back to abstract-only. A new `Input_Source` column tracks which mode was used per paper.
+
+**KD Mapping:** 209/249 KDs matched to Zotero_Keys via 3-strategy matching (187 exact title, 46 author+year, 4 fuzzy). 12 KDs unmatched (edge cases with truncated titles or special characters). Module: `benchmark/scripts/kd_mapping.py`.
+
+**Decision-Level (all on 291 benchmark papers):**
+
+| Condition | Include Rate | Decision Kappa | Mean Cat Kappa | Cost |
+|-----------|-------------|---------------|----------------|------|
+| Haiku + Abstract | 71.5% | 0.056 | 0.533 | $1.44 |
+| Haiku + KD | 88.7% | 0.054 | 0.473 | ~$2.50 |
+| Sonnet + Abstract | 82.5% | 0.098 | 0.533 | ~$12 |
+| **Sonnet + KD** | **91.4%** | **0.110** | **0.559** | ~$15 |
+| Human | 46.0% | -- | -- | -- |
+
+**Category-Level Kappa (all 4 conditions):**
+
+| Category | Haiku+Abs | Haiku+KD | Sonnet+Abs | Sonnet+KD |
+|----------|-----------|----------|------------|-----------|
+| Soziale_Arbeit | 0.816 | 0.689 | 0.821 | 0.795 |
+| Feministisch | 0.753 | 0.753 | 0.819 | **0.841** |
+| Prompting | 0.533 | **0.677** | 0.555 | **0.651** |
+| Generative_KI | 0.538 | **0.634** | 0.556 | **0.660** |
+| KI_Sonstige | 0.535 | 0.439 | 0.551 | **0.603** |
+| AI_Literacies | 0.488 | 0.287 | 0.479 | 0.451 |
+| Gender | 0.407 | **0.530** | 0.284 | **0.449** |
+| Bias_Ungleichheit | 0.439 | 0.307 | 0.460 | 0.444 |
+| Diversitaet | 0.432 | 0.256 | 0.425 | 0.452 |
+| Fairness | 0.388 | 0.156 | 0.378 | 0.246 |
+
+**Delta: KD vs Abstract (Sonnet):**
+
+| Category | Delta | Interpretation |
+|----------|-------|---------------|
+| Gender | **+0.166** | KDs provide evidence for gender relevance invisible in abstracts |
+| Generative_KI | +0.104 | KDs clarify whether generative AI is central topic |
+| Prompting | +0.096 | KDs reveal prompting methodology details |
+| KI_Sonstige | +0.052 | |
+| Diversitaet | +0.027 | |
+| Feministisch | +0.021 | Already near-perfect, marginal improvement |
+| Bias_Ungleichheit | -0.016 | |
+| Soziale_Arbeit | -0.027 | |
+| AI_Literacies | -0.028 | |
+| Fairness | **-0.132** | KDs contain ubiquitous fairness language, LLM over-assigns |
+
+**Key findings:**
+
+1. **Sonnet + KD is the best condition overall** -- only condition with improved Decision Kappa (+0.012 over abstract), improved Mean Category Kappa (+0.026), and strongest Gender recovery (+0.166).
+2. **Haiku is overwhelmed by richer context** -- KDs improve Gender (+0.12) and Prompting (+0.14) but degrade AI_Literacies (-0.20), Diversitaet (-0.18), and Fairness (-0.23). Mean Category Kappa drops (-0.06).
+3. **Inclusion bias intensifies with more context** -- all KD conditions include more aggressively (Haiku 88.7%, Sonnet 91.4% vs. Human 46%). More evidence = more reasons to include.
+4. **Fairness is the systematic problem** -- degrades in BOTH KD conditions. Knowledge documents contain ubiquitous fairness language, causing LLMs to assign Fairness nearly universally.
+5. **The divergence is NOT information deficit** -- even with rich full-text extractions, the LLM-Human gap remains. The structural inclusion bias persists across all conditions. This confirms the paper's thesis: reliability must be established as a property of the process, not the system.
+6. **Category-specific benefits** -- KDs help most for categories requiring deep-text evidence (Gender, Prompting, Generative_KI) but hurt for categories with ubiquitous language (Fairness, AI_Literacies).
+
 ### M7: Benchmark Results Documentation -- COMPLETED
 
 - [x] Benchmark metrics documented (confusion matrix, base rates, category kappas)
@@ -193,11 +250,14 @@ Knowledge Graph redesign: from flat concept graph to navigable taxonomy.
 
 **One corpus (326 papers), two assessment tracks:**
 
-| Track | Method | Schema | Status |
-|-------|--------|--------|--------|
-| **Human** | Google Sheets | 10 binary categories | **Complete (303/303, 142 Include, 161 Exclude)** |
-| **LLM (5D)** | Claude Haiku 4.5 | 5 dimensions (0-3) | Complete (325/325) |
-| **LLM (10K)** | Claude Haiku 4.5 | 10 binary categories | **Complete (326/326)** |
+| Track | Method | Input | Schema | Status |
+|-------|--------|-------|--------|--------|
+| **Human** | Google Sheets | Full texts | 10 binary categories | **Complete (303/303, 142 Include, 161 Exclude)** |
+| **LLM (5D)** | Claude Haiku 4.5 | Abstract | 5 dimensions (0-3) | Complete (325/325) |
+| **LLM (10K)** | Claude Haiku 4.5 | Abstract | 10 binary categories | **Complete (326/326)** |
+| **LLM (10K Sonnet)** | Claude Sonnet 4.6 | Abstract | 10 binary categories | **Complete (326/326)** |
+| **LLM (10K Haiku+KD)** | Claude Haiku 4.5 | Knowledge Docs | 10 binary categories | **Complete (326/326)** |
+| **LLM (10K Sonnet+KD)** | Claude Sonnet 4.6 | Knowledge Docs | 10 binary categories | **Complete (326/326)** |
 
 ### Human Assessment -- COMPLETED
 

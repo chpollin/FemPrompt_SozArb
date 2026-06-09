@@ -3,11 +3,16 @@
 LLM-based Assessment for Literature Review
 
 Führt automatisiertes Assessment von Papers durch, basierend auf dem
-Kategorienschema in categories.yaml. Verwendet Claude Haiku 4.5 für
-kosteneffiziente Bewertung.
+Kategorienschema in categories.yaml. Unterstützt zwei Input-Modi:
+- Abstract-only (default): Titel + Abstract aus CSV
+- Knowledge-Document-enriched (--kd-dir): Zusätzlich destillierte Wissensdokumente
 
 Usage:
-    python run_llm_assessment.py --input data/papers.csv --config config/categories.yaml --output data/llm_assessment.csv
+    # Abstract-only (original)
+    python run_llm_assessment.py --input data/papers_full.csv --config config/categories.yaml --output data/llm_assessment.csv
+
+    # Knowledge-Document-enriched
+    python run_llm_assessment.py --input data/papers_full.csv --config config/categories.yaml --output data/llm_assessment_haiku_kd.csv --kd-dir ../../pipeline/knowledge/distilled
 """
 
 import argparse
@@ -112,15 +117,36 @@ Antworte NUR mit diesem JSON-Objekt:
     return prompt
 
 
-def assess_paper(client: anthropic.Anthropic, system_prompt: str, paper: dict, model: str = "claude-haiku-4-5-20251001") -> Optional[dict]:
-    """Bewertet ein einzelnes Paper mit dem LLM."""
+def assess_paper(client: anthropic.Anthropic, system_prompt: str, paper: dict, model: str = "claude-haiku-4-5-20251001", kd_content: Optional[str] = None) -> Optional[dict]:
+    """Bewertet ein einzelnes Paper mit dem LLM.
+
+    Args:
+        kd_content: Optional Knowledge Document content (extracted sections).
+                    If provided, the LLM receives richer context from full-text extraction.
+    """
 
     # Baue Paper-Text
     title = paper.get('Title', 'Unbekannt')
     abstract = paper.get('Abstract', '')
     author_year = paper.get('Author_Year', '')
 
-    user_message = f"""## Paper zur Bewertung
+    if kd_content:
+        user_message = f"""## Paper zur Bewertung
+
+**Titel:** {title}
+**Autor/Jahr:** {author_year}
+
+**Abstract:**
+{abstract if abstract else '[Kein Abstract verfuegbar]'}
+
+**Detaillierte Analyse (aus Volltext-Extraktion):**
+
+{kd_content}
+
+Bewerte dieses Paper gemaess den definierten Kategorien. Stuetze deine Bewertung primaer auf die detaillierte Analyse, nutze den Abstract als Kontext.
+"""
+    else:
+        user_message = f"""## Paper zur Bewertung
 
 **Titel:** {title}
 **Autor/Jahr:** {author_year}
@@ -175,6 +201,8 @@ def main():
     parser.add_argument('--limit', type=int, help='Limit Anzahl Papers (für Tests)')
     parser.add_argument('--delay', type=float, default=0.5, help='Delay zwischen API calls (Sekunden)')
     parser.add_argument('--resume', action='store_true', help='Setze von letztem Checkpoint fort')
+    parser.add_argument('--kd-dir', type=str, default=None,
+                        help='Knowledge Documents Verzeichnis (aktiviert KD-enriched Modus)')
     args = parser.parse_args()
 
     # API Key prüfen (Umgebungsvariable oder .env Datei)
@@ -210,6 +238,18 @@ def main():
 
     print(f"Gefunden: {len(papers)} Papers")
 
+    # KD-Mapping laden (optional)
+    kd_mapping = {}
+    if args.kd_dir:
+        from kd_mapping import build_kd_mapping, load_kd_sections
+        kd_dir = Path(args.kd_dir)
+        papers_csv = Path(args.input)
+        print(f"\nLade KD-Mapping aus {kd_dir}...")
+        kd_mapping_raw, kd_unmatched, kd_stats = build_kd_mapping(papers_csv, kd_dir)
+        kd_mapping = kd_mapping_raw  # {zotero_key: Path}
+        print(f"  KD verfuegbar fuer {len(kd_mapping)} / {len(papers)} Papers")
+        print(f"  Unmatched KDs: {len(kd_unmatched)}")
+
     if args.limit:
         papers = papers[:args.limit]
         print(f"Limitiert auf: {len(papers)} Papers")
@@ -234,7 +274,7 @@ def main():
         'AI_Literacies', 'Generative_KI', 'Prompting', 'KI_Sonstige',
         'Soziale_Arbeit', 'Bias_Ungleichheit', 'Gender', 'Diversitaet', 'Feministisch', 'Fairness',
         'Decision', 'Exclusion_Reason', 'Studientyp',
-        'LLM_Confidence', 'LLM_Reasoning'
+        'LLM_Confidence', 'LLM_Reasoning', 'Input_Source'
     ]
 
     # Sammle Ergebnisse
@@ -252,14 +292,27 @@ def main():
             continue
 
         title = paper.get('Title', 'Unbekannt')[:60]
-        print(f"[{i+1}/{len(papers)}] {title}...")
+        zotero_key = paper.get('Zotero_Key', '')
 
-        assessment = assess_paper(client, system_prompt, paper, args.model)
+        # Load KD content if available
+        paper_kd_content = None
+        input_source = 'Abstract'
+        if kd_mapping and zotero_key in kd_mapping:
+            try:
+                paper_kd_content = load_kd_sections(kd_mapping[zotero_key])
+                input_source = 'KD'
+            except Exception as e:
+                print(f"  KD-Ladefehler: {e}")
+
+        src_tag = '[KD]' if input_source == 'KD' else '[Ab]'
+        print(f"[{i+1}/{len(papers)}] {src_tag} {title}...")
+
+        assessment = assess_paper(client, system_prompt, paper, args.model, kd_content=paper_kd_content)
 
         if assessment:
             result = {
                 'ID': paper_id,
-                'Zotero_Key': paper.get('Zotero_Key', ''),
+                'Zotero_Key': zotero_key,
                 'Author_Year': paper.get('Author_Year', ''),
                 'Title': paper.get('Title', ''),
                 'AI_Literacies': assessment.get('AI_Literacies', ''),
@@ -276,7 +329,8 @@ def main():
                 'Exclusion_Reason': assessment.get('Exclusion_Reason', ''),
                 'Studientyp': assessment.get('Studientyp', ''),
                 'LLM_Confidence': assessment.get('Confidence', ''),
-                'LLM_Reasoning': assessment.get('Reasoning', '')
+                'LLM_Reasoning': assessment.get('Reasoning', ''),
+                'Input_Source': input_source
             }
             results.append(result)
 
@@ -305,16 +359,27 @@ def main():
         writer.writeheader()
         writer.writerows(results)
 
-    # Kosten berechnen (Haiku 4.5 Preise: $1/MTok input, $5/MTok output)
-    input_cost = (total_input_tokens / 1_000_000) * 1.00
-    output_cost = (total_output_tokens / 1_000_000) * 5.00
+    # Kosten berechnen (modellabhaengig)
+    COST_PER_MTOK = {
+        'claude-haiku-4-5-20251001': (0.80, 4.00),
+        'claude-sonnet-4-6-20250514': (3.00, 15.00),
+    }
+    input_rate, output_rate = COST_PER_MTOK.get(args.model, (1.00, 5.00))
+    input_cost = (total_input_tokens / 1_000_000) * input_rate
+    output_cost = (total_output_tokens / 1_000_000) * output_rate
     total_cost = input_cost + output_cost
+
+    # Input-Source Statistik
+    kd_count = sum(1 for r in results if r.get('Input_Source') == 'KD')
+    abstract_count = len(results) - kd_count
 
     print(f"\n=== Zusammenfassung ===")
     print(f"Papers verarbeitet: {len(results)}")
+    print(f"  davon KD-basiert:      {kd_count}")
+    print(f"  davon Abstract-basiert: {abstract_count}")
     print(f"Input Tokens:  {total_input_tokens:,}")
     print(f"Output Tokens: {total_output_tokens:,}")
-    print(f"Geschätzte Kosten: ${total_cost:.4f}")
+    print(f"Geschaetzte Kosten: ${total_cost:.4f} ({args.model})")
 
     # Cleanup checkpoint
     if checkpoint_file.exists():

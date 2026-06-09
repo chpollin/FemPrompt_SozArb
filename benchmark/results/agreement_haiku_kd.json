@@ -1,0 +1,132 @@
+{
+  "metadata": {
+    "total_papers": 338,
+    "papers_with_both_assessments": 291,
+    "papers_human_only": 12,
+    "papers_agent_only": 35
+  },
+  "decision": {
+    "n": 291,
+    "overall_agreement": 0.4983,
+    "cohens_kappa": 0.0544,
+    "kappa_interpretation": "slight",
+    "confusion_matrix": {
+      "Include_Include": 123,
+      "Include_Exclude": 11,
+      "Include_Unclear": 0,
+      "Exclude_Include": 135,
+      "Exclude_Exclude": 22,
+      "Exclude_Unclear": 0,
+      "Unclear_Include": 0,
+      "Unclear_Exclude": 0,
+      "Unclear_Unclear": 0
+    }
+  },
+  "categories": {
+    "AI_Literacies": {
+      "n": 238,
+      "agreement": 0.6092,
+      "kappa": 0.2873,
+      "kappa_interpretation": "fair",
+      "human_yes_count": 62,
+      "human_yes_rate": 0.2605,
+      "agent_yes_count": 143,
+      "agent_yes_rate": 0.6008
+    },
+    "Generative_KI": {
+      "n": 236,
+      "agreement": 0.8136,
+      "kappa": 0.6335,
+      "kappa_interpretation": "substantial",
+      "human_yes_count": 135,
+      "human_yes_rate": 0.572,
+      "agent_yes_count": 111,
+      "agent_yes_rate": 0.4703
+    },
+    "Prompting": {
+      "n": 236,
+      "agreement": 0.8559,
+      "kappa": 0.6766,
+      "kappa_interpretation": "substantial",
+      "human_yes_count": 87,
+      "human_yes_rate": 0.3686,
+      "agent_yes_count": 69,
+      "agent_yes_rate": 0.2924
+    },
+    "KI_Sonstige": {
+      "n": 235,
+      "agreement": 0.7574,
+      "kappa": 0.439,
+      "kappa_interpretation": "moderate",
+      "human_yes_count": 150,
+      "human_yes_rate": 0.6383,
+      "agent_yes_count": 175,
+      "agent_yes_rate": 0.7447
+    },
+    "Soziale_Arbeit": {
+      "n": 235,
+      "agreement": 0.8723,
+      "kappa": 0.689,
+      "kappa_interpretation": "substantial",
+      "human_yes_count": 56,
+      "human_yes_rate": 0.2383,
+      "agent_yes_count": 76,
+      "agent_yes_rate": 0.3234
+    },
+    "Bias_Ungleichheit": {
+      "n": 234,
+      "agreement": 0.8162,
+      "kappa": 0.3067,
+      "kappa_interpretation": "fair",
+      "human_yes_count": 184,
+      "human_yes_rate": 0.7863,
+      "agent_yes_count": 213,
+      "agent_yes_rate": 0.9103
+    },
+    "Gender": {
+      "n": 234,
+      "agreement": 0.7692,
+      "kappa": 0.5295,
+      "kappa_interpretation": "moderate",
+      "human_yes_count": 143,
+      "human_yes_rate": 0.6111,
+      "agent_yes_count": 127,
+      "agent_yes_rate": 0.5427
+    },
+    "Diversitaet": {
+      "n": 234,
+      "agreement": 0.688,
+      "kappa": 0.2563,
+      "kappa_interpretation": "fair",
+      "human_yes_count": 146,
+      "human_yes_rate": 0.6239,
+      "agent_yes_count": 193,
+      "agent_yes_rate": 0.8248
+    },
+    "Feministisch": {
+      "n": 234,
+      "agreement": 0.906,
+      "kappa": 0.7526,
+      "kappa_interpretation": "substantial",
+      "human_yes_count": 50,
+      "human_yes_rate": 0.2137,
+      "agent_yes_count": 68,
+      "agent_yes_rate": 0.2906
+    },
+    "Fairness": {
+      "n": 234,
+      "agreement": 0.5726,
+      "kappa": 0.1564,
+      "kappa_interpretation": "slight",
+      "human_yes_count": 115,
+      "human_yes_rate": 0.4915,
+      "agent_yes_count": 207,
+      "agent_yes_rate": 0.8846
+    }
+  },
+  "summary": {
+    "mean_category_agreement": 0.766,
+    "best_agreement_category": "Feministisch",
+    "worst_agreement_category": "Fairness"
+  }
+}

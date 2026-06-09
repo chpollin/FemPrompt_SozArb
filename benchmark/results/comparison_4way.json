@@ -1,0 +1,316 @@
+{
+  "conditions": {
+    "Haiku + Abstract": {
+      "decision_kappa": 0.0561,
+      "decision_agreement": 0.512,
+      "include_rate": 71.5,
+      "n": 291,
+      "categories": {
+        "AI_Literacies": {
+          "kappa": 0.488,
+          "agreement": 0.7605,
+          "human_yes_rate": 0.2605,
+          "agent_yes_rate": 0.4328
+        },
+        "Generative_KI": {
+          "kappa": 0.5376,
+          "agreement": 0.7585,
+          "human_yes_rate": 0.572,
+          "agent_yes_rate": 0.3814
+        },
+        "Prompting": {
+          "kappa": 0.5331,
+          "agreement": 0.8008,
+          "human_yes_rate": 0.3686,
+          "agent_yes_rate": 0.2203
+        },
+        "KI_Sonstige": {
+          "kappa": 0.5355,
+          "agreement": 0.7702,
+          "human_yes_rate": 0.6383,
+          "agent_yes_rate": 0.5191
+        },
+        "Soziale_Arbeit": {
+          "kappa": 0.8163,
+          "agreement": 0.9319,
+          "human_yes_rate": 0.2383,
+          "agent_yes_rate": 0.2468
+        },
+        "Bias_Ungleichheit": {
+          "kappa": 0.4386,
+          "agreement": 0.7949,
+          "human_yes_rate": 0.7863,
+          "agent_yes_rate": 0.735
+        },
+        "Gender": {
+          "kappa": 0.4074,
+          "agreement": 0.6795,
+          "human_yes_rate": 0.6111,
+          "agent_yes_rate": 0.3162
+        },
+        "Diversitaet": {
+          "kappa": 0.4318,
+          "agreement": 0.7009,
+          "human_yes_rate": 0.6239,
+          "agent_yes_rate": 0.3932
+        },
+        "Feministisch": {
+          "kappa": 0.7527,
+          "agreement": 0.9103,
+          "human_yes_rate": 0.2137,
+          "agent_yes_rate": 0.2607
+        },
+        "Fairness": {
+          "kappa": 0.3875,
+          "agreement": 0.6923,
+          "human_yes_rate": 0.4915,
+          "agent_yes_rate": 0.6368
+        }
+      },
+      "mean_category_kappa": 0.5329
+    },
+    "Haiku + KD": {
+      "decision_kappa": 0.0544,
+      "decision_agreement": 0.4983,
+      "include_rate": 88.7,
+      "n": 291,
+      "categories": {
+        "AI_Literacies": {
+          "kappa": 0.2873,
+          "agreement": 0.6092,
+          "human_yes_rate": 0.2605,
+          "agent_yes_rate": 0.6008
+        },
+        "Generative_KI": {
+          "kappa": 0.6335,
+          "agreement": 0.8136,
+          "human_yes_rate": 0.572,
+          "agent_yes_rate": 0.4703
+        },
+        "Prompting": {
+          "kappa": 0.6766,
+          "agreement": 0.8559,
+          "human_yes_rate": 0.3686,
+          "agent_yes_rate": 0.2924
+        },
+        "KI_Sonstige": {
+          "kappa": 0.439,
+          "agreement": 0.7574,
+          "human_yes_rate": 0.6383,
+          "agent_yes_rate": 0.7447
+        },
+        "Soziale_Arbeit": {
+          "kappa": 0.689,
+          "agreement": 0.8723,
+          "human_yes_rate": 0.2383,
+          "agent_yes_rate": 0.3234
+        },
+        "Bias_Ungleichheit": {
+          "kappa": 0.3067,
+          "agreement": 0.8162,
+          "human_yes_rate": 0.7863,
+          "agent_yes_rate": 0.9103
+        },
+        "Gender": {
+          "kappa": 0.5295,
+          "agreement": 0.7692,
+          "human_yes_rate": 0.6111,
+          "agent_yes_rate": 0.5427
+        },
+        "Diversitaet": {
+          "kappa": 0.2563,
+          "agreement": 0.688,
+          "human_yes_rate": 0.6239,
+          "agent_yes_rate": 0.8248
+        },
+        "Feministisch": {
+          "kappa": 0.7526,
+          "agreement": 0.906,
+          "human_yes_rate": 0.2137,
+          "agent_yes_rate": 0.2906
+        },
+        "Fairness": {
+          "kappa": 0.1564,
+          "agreement": 0.5726,
+          "human_yes_rate": 0.4915,
+          "agent_yes_rate": 0.8846
+        }
+      },
+      "mean_category_kappa": 0.4727
+    },
+    "Sonnet + Abstract": {
+      "decision_kappa": 0.0979,
+      "decision_agreement": 0.5258,
+      "include_rate": 82.5,
+      "n": 291,
+      "categories": {
+        "AI_Literacies": {
+          "kappa": 0.4792,
+          "agreement": 0.7857,
+          "human_yes_rate": 0.2605,
+          "agent_yes_rate": 0.3151
+        },
+        "Generative_KI": {
+          "kappa": 0.556,
+          "agreement": 0.7669,
+          "human_yes_rate": 0.572,
+          "agent_yes_rate": 0.3644
+        },
+        "Prompting": {
+          "kappa": 0.5548,
+          "agreement": 0.8136,
+          "human_yes_rate": 0.3686,
+          "agent_yes_rate": 0.1907
+        },
+        "KI_Sonstige": {
+          "kappa": 0.5506,
+          "agreement": 0.7787,
+          "human_yes_rate": 0.6383,
+          "agent_yes_rate": 0.5277
+        },
+        "Soziale_Arbeit": {
+          "kappa": 0.8214,
+          "agreement": 0.9362,
+          "human_yes_rate": 0.2383,
+          "agent_yes_rate": 0.2213
+        },
+        "Bias_Ungleichheit": {
+          "kappa": 0.4595,
+          "agreement": 0.7906,
+          "human_yes_rate": 0.7863,
+          "agent_yes_rate": 0.6966
+        },
+        "Gender": {
+          "kappa": 0.2837,
+          "agreement": 0.5983,
+          "human_yes_rate": 0.6111,
+          "agent_yes_rate": 0.2265
+        },
+        "Diversitaet": {
+          "kappa": 0.4249,
+          "agreement": 0.7009,
+          "human_yes_rate": 0.6239,
+          "agent_yes_rate": 0.4188
+        },
+        "Feministisch": {
+          "kappa": 0.8193,
+          "agreement": 0.9402,
+          "human_yes_rate": 0.2137,
+          "agent_yes_rate": 0.2051
+        },
+        "Fairness": {
+          "kappa": 0.3776,
+          "agreement": 0.688,
+          "human_yes_rate": 0.4915,
+          "agent_yes_rate": 0.5726
+        }
+      },
+      "mean_category_kappa": 0.5327
+    },
+    "Sonnet + KD": {
+      "decision_kappa": 0.1098,
+      "decision_agreement": 0.5258,
+      "include_rate": 91.4,
+      "n": 291,
+      "categories": {
+        "AI_Literacies": {
+          "kappa": 0.4512,
+          "agreement": 0.7521,
+          "human_yes_rate": 0.2605,
+          "agent_yes_rate": 0.3992
+        },
+        "Generative_KI": {
+          "kappa": 0.6598,
+          "agreement": 0.8263,
+          "human_yes_rate": 0.572,
+          "agent_yes_rate": 0.4576
+        },
+        "Prompting": {
+          "kappa": 0.6506,
+          "agreement": 0.8475,
+          "human_yes_rate": 0.3686,
+          "agent_yes_rate": 0.2585
+        },
+        "KI_Sonstige": {
+          "kappa": 0.6027,
+          "agreement": 0.817,
+          "human_yes_rate": 0.6383,
+          "agent_yes_rate": 0.6426
+        },
+        "Soziale_Arbeit": {
+          "kappa": 0.7946,
+          "agreement": 0.9234,
+          "human_yes_rate": 0.2383,
+          "agent_yes_rate": 0.2511
+        },
+        "Bias_Ungleichheit": {
+          "kappa": 0.4438,
+          "agreement": 0.8376,
+          "human_yes_rate": 0.7863,
+          "agent_yes_rate": 0.8632
+        },
+        "Gender": {
+          "kappa": 0.4493,
+          "agreement": 0.7137,
+          "human_yes_rate": 0.6111,
+          "agent_yes_rate": 0.4103
+        },
+        "Diversitaet": {
+          "kappa": 0.452,
+          "agreement": 0.7521,
+          "human_yes_rate": 0.6239,
+          "agent_yes_rate": 0.6923
+        },
+        "Feministisch": {
+          "kappa": 0.8405,
+          "agreement": 0.9444,
+          "human_yes_rate": 0.2137,
+          "agent_yes_rate": 0.235
+        },
+        "Fairness": {
+          "kappa": 0.2458,
+          "agreement": 0.6197,
+          "human_yes_rate": 0.4915,
+          "agent_yes_rate": 0.7521
+        }
+      },
+      "mean_category_kappa": 0.559
+    }
+  },
+  "deltas": {
+    "Haiku: KD vs Abstract": {
+      "decision_kappa": -0.0017,
+      "include_rate": 17.2,
+      "mean_category_kappa": -0.0602,
+      "categories": {
+        "AI_Literacies": -0.2007,
+        "Generative_KI": 0.0959,
+        "Prompting": 0.1435,
+        "KI_Sonstige": -0.0965,
+        "Soziale_Arbeit": -0.1273,
+        "Bias_Ungleichheit": -0.1319,
+        "Gender": 0.1221,
+        "Diversitaet": -0.1755,
+        "Feministisch": -0.0001,
+        "Fairness": -0.2311
+      }
+    },
+    "Sonnet: KD vs Abstract": {
+      "decision_kappa": 0.0119,
+      "include_rate": 8.9,
+      "mean_category_kappa": 0.0263,
+      "categories": {
+        "AI_Literacies": -0.028,
+        "Generative_KI": 0.1038,
+        "Prompting": 0.0958,
+        "KI_Sonstige": 0.0521,
+        "Soziale_Arbeit": -0.0268,
+        "Bias_Ungleichheit": -0.0157,
+        "Gender": 0.1656,
+        "Diversitaet": 0.0271,
+        "Feministisch": 0.0212,
+        "Fairness": -0.1318
+      }
+    }
+  }
+}
