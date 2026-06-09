@@ -38,6 +38,11 @@ This document is the substance layer for the **PRISMA screening tool**, a new fi
 - FR-08: Persist the session in localStorage; export and import the full session as JSON; export the decision log as CSV. Acceptance: reload restores state; an export/import round-trip is lossless.
 - FR-09: Seed the tool with the existing FemPrompt corpus (326 papers, dual assessment) as a read-only case-study dataset. Acceptance: loads from `docs/data/` JSON without an import step.
 - FR-10 (secondary): Provide an optional live-LLM on-ramp. With a local API key, request an AI proposal for a paper that lacks one, reusing the versioned assessment prompt. Acceptance: the proposal is stored as an AI decision, visibly labelled as live-generated, and never overrides the human decision.
+- FR-11: Read the paper in full text. Where a paper has a converted full text (`vault/Papers/*.md`, servable under `docs/`), render it formatted and readable in the screening view, not only the abstract (50 of 326 papers have no abstract in the corpus). Acceptance: opening a paper whose `knowledge_doc` path resolves shows its full text; papers without one fall back to abstract or knowledge summary.
+- FR-12: Search the full text. Provide an in-text search that highlights and steps through matches in the open paper, and a corpus-wide search that lists papers whose full text contains a term. Acceptance: a query highlights every hit in the open text and returns the set of papers containing it across the corpus.
+- FR-13: Pin a hit as evidence for a category. From a search hit or a selected passage, attach the term plus its surrounding snippet to one of the ten categories as a stored Beleg; evidence is saved with the decision and is citable in the report. Acceptance: a category can carry one or more evidence snippets; they persist in the reviewer file and appear in the decision log and disclosure.
+
+The AI-forward requirements are demoted by ADR-012: FR-03 (blind mode) becomes an optional, off-by-default switch rather than the core flow; FR-05 (agreement metrics) and the human-AI comparison move out of the working view into the report layer (computed, not foregrounded); FR-10 (live LLM) stays optional and minimal. The screening view centers on FR-11 to FR-13 (read, search, pin evidence).
 
 ### Nicht-funktionale Anforderungen
 
@@ -53,7 +58,17 @@ Anwendungsszenarien siehe [[user-stories]].
 
 ## Funktionsumfang
 
-Modules are listed in application order: data in, screen, see the picture, report out.
+### Information architecture (v4, current)
+
+Per ADR-012 the seven surfaces collapse into three, AI is strongly reduced, and the screening view is rebuilt around full-text reading, search, and evidence:
+
+1. **Screening** (the work): a corpus overview with full-text search across all papers, plus a single-paper full-text working view with in-text search, evidence pinning per category, the derived include/exclude, and an optional collapsed AI suggestion. Subsumes the old Screening Workspace.
+2. **PRISMA & Report** (the outputs): the PRISMA 2020 flow diagram, the checklist, and the disclosure generator in one place, generated from the screening; the agreement matrix and kappa live here, computed quietly, not in the working view. Subsumes Flow, Agreement, Checklist, Disclosure.
+3. **Daten & Repo** (sync): File System Access connect, per-reviewer files, Git workflow, export/import; the Reviewers reconciliation folds in here as a section.
+
+Each view carries a one-line "what is this, what do I do here" header. The module descriptions below are the v3 shape, retained for the report and data parts; the Screening Workspace block is superseded by the v4 Screening view and the evidence model in [[data]].
+
+The modules below are listed in application order: data in, screen, see the picture, report out.
 
 ### Screening Workspace
 
@@ -226,6 +241,16 @@ Wahl. Blind mode defaults off; a reviewer turns it on for independent fresh scre
 Begründung. The tool opens on the seed, where seeing the AI is the point; independence is a deliberate per-session choice, not a default that confuses first contact.
 
 Effekt. Implemented (rebuild stage 3), together with: exclusion reason now required (no silent default), seed assessment shown as reference, derived decision suppressed until a category is set, and a boilerplate-abstract warning.
+
+### ADR-012 Evidence-grounded screening, three views, reduced AI (supersedes the AI-forward parts of ADR-003/004 and the seven-surface IA)
+
+Kontext. In use, the tool foregrounded the human-AI divergence study (blind reveal, kappa, matrix, divergence patterns, reconciliation) that is really the content of the paper and the Evidence Companion. The expert in the loop needs to work through literature fast, the way the reviewing colleagues actually did: by reading and searching the full text and grounding each category in concrete words found in the text. 50 of 326 papers also have no abstract in the corpus, so abstract-only reading is insufficient.
+
+Wahl. Recenter the tool on evidence-grounded screening. (1) The screening view is rebuilt around full-text reading and search (FR-11, FR-12), with found terms pinned as evidence to categories (FR-13). (2) AI is strongly reduced to an optional, collapsed suggestion; the human-AI comparison, kappa, and matrix move to the report layer, computed but not foregrounded; blind mode becomes optional and off by default. (3) The seven surfaces collapse into three: Screening, PRISMA & Report, Daten & Repo.
+
+Begründung. Matches how the review was conducted, makes the tool legible (each view has one job and a what-do-I-do-here line), and removes apparatus the working user does not need, while still producing the PRISMA-trAIce R1/R2 data quietly for the report. The divergence research stays the property of the paper and the Companion, not a burden on the screening UI. Decided with the user 2026-06-09 after the v3 design port.
+
+Effekt. Knowledge docs updated; implementation is the next iteration. The agreement and reconciliation logic is kept (moved, not deleted), so PRISMA-trAIce reporting is preserved.
 
 ## Was nicht reingehört
 

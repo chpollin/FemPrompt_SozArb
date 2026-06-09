@@ -146,21 +146,44 @@ Round-trip must be lossless (FR-08 acceptance). The `schema` string is versioned
 The shipped tool persists not as one session blob but as **one JSON per reviewer** under `docs/data/screening/`, so Git is the sync layer and reviewers never conflict (see ADR-009, ADR-010). The File System Access API writes the current reviewer's file directly into the repo on every decision; localStorage mirrors it as a cache; export/import is the fallback.
 
 ```json
-// docs/data/screening/<reviewer>.json
+// docs/data/screening/<reviewer>.json  (schema bumped to 0.2 with evidence)
 {
-  "schema": "femprompt-prisma-reviewer/0.1",
+  "schema": "femprompt-prisma-reviewer/0.2",
   "reviewer": "sss",
   "updated": "2026-06-09T12:00:00.000Z",
   "decisions": {
-    "<paperId>": { "categories": { "Gender": true }, "decision": "Include",
-                   "reason": null, "ts": "...", "reviewer": "sss" }
+    "<paperId>": {
+      "categories": { "Gender": true, "Soziale_Arbeit": true },
+      "decision": "Include",
+      "reason": null,
+      "evidence": {
+        "Gender": [
+          { "term": "gendered scripts", "snippet": "...agents reproduce gendered scripts of care...", "ts": "..." }
+        ]
+      },
+      "ts": "...", "reviewer": "sss"
+    }
   }
 }
 ```
 
+The `evidence` map (added in schema 0.2, FR-13) is the v4 core: per category, a list of pinned Belege, each a `term` plus the surrounding `snippet` taken from the full text at screening time. Backward compatible: a 0.1 record without `evidence` loads as a record with no evidence. Evidence is the reviewer's textual justification; it is never written by the AI.
+
 Aggregation: the tool loads every `*.json` in the folder into `reviewers[key]`, plus the built-in `seed` reviewer (the existing expert assessment, `paper.human`). A **perspective** selector chooses whose decisions count as the human side in the Flow and Agreement (default `seed`, which reproduces the benchmark). The **Reviewers** surface computes, per reviewer, n / include / exclude and kappa against the AI (PRISMA-trAIce M8/M9). The AI proposal is always `paper.llm` from the corpus, never stored in a reviewer file.
 
 Git workflow: `git add docs/data/screening/<reviewer>.json && git commit -m "screening: N papers (<reviewer>)" && git push`; collaborators pull and reconnect the folder. Documented in `docs/data/screening/README.md`.
+
+## Full-text source and evidence (v4)
+
+The v4 screening view reads and searches the **full text**, not just the abstract. The converted full texts already exist and are servable:
+
+| What | Where | Count |
+|---|---|---|
+| Full-text Markdown (Docling) | `docs/vault/Papers/<title>.md` | 226 files; all 236 `knowledge_doc` paths resolve under `docs/` |
+| Path on the paper record | `paper.knowledge_doc` (e.g. `vault/Papers/<title>.md`) | relative to `docs/`, so `fetch(knowledge_doc)` works from `prisma.html` |
+| Abstract | `paper.abstract` in `research_vault_v2.json` | empty for 50 of 326 papers, which is why full text is needed |
+
+The screening view fetches `paper.knowledge_doc` on demand, renders the Markdown readably, and runs search over the fetched text. A corpus-wide search either fetches lazily or uses a prebuilt lightweight index (a `generate_*` step may add `docs/data/fulltext_index.json` of stemmed tokens to paper ids; to be added if lazy fetch is too slow over 326 files). Each search hit can be pinned as a `evidence[category]` entry (see the reviewer file above). The AI proposal (`paper.llm`) stays available but collapsed; it is not part of the evidence.
 
 ## Seed dataset (read-only case study)
 

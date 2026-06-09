@@ -24,6 +24,32 @@ related: [specification, user-stories, data, ai-assisted-review-standards, prism
 
 This is the self-contained UI/design working document for the PRISMA screening tool, the new fifth view of the Evidence Companion. It is written so that UI and design work can proceed **from this document alone**: it consolidates the PRISMA essentials that drive the interface (section 1-2), the people and scenarios it serves (3-4), each screen specified with layout, components, data, states, interactions and an ASCII wireframe (5), the design system to inherit (6), the epistemic design principles specific to this tool (7), the concrete tokens (8), and the open design questions left for the design work (9). Full domain detail lives in [[prisma-methodology]] and [[ai-assisted-review-standards]]; formal requirements in [[specification]]; the data model in [[data]]; the scenarios in [[user-stories]]. Where this document repeats those, it does so deliberately, because its purpose is hand-off.
 
+> Read section 0 first. It is the current (v4) direction and supersedes the AI-forward, seven-surface specifics in sections 1, 4 to 7. Those sections are kept as background on the standards and the reasoning, not as the build target.
+
+## 0. Redesign v4 (current direction)
+
+Decided with the user on 2026-06-09 (see [[specification]] ADR-012). The v3 design port revealed the tool was over-built for its actual user: it foregrounded the human-AI divergence study (blind reveal, kappa, matrix, reconciliation), which is really the content of the paper and the Evidence Companion. The person using this tool is the expert in the loop who wants to work through literature fast, the way the reviewing colleagues did: read and search the full text, and ground each category in concrete words found in the text.
+
+Three principles:
+
+1. **Evidence-grounded screening is the core.** The screening view is built around the full text (`docs/vault/Papers/*.md`, see [[data]]), an in-text and corpus-wide search, and pinning a search hit as a Beleg on a category. A category is not a bare checkbox, it carries the words that justify it. This is reproducible and matches the colleagues' method.
+2. **AI is strongly reduced.** The AI proposal becomes an optional, collapsed suggestion, off by default. No blind reveal, no kappa, no matrix in the working view. The comparison machinery is kept but moves to the report layer, computed quietly for PRISMA-trAIce R1/R2.
+3. **Seven surfaces collapse to three**, each with a one-line "what is this, what do I do here" header:
+   - **Screening**: corpus overview with full-text search; single-paper full-text view with in-text search, evidence pinning, derived decision, optional collapsed AI.
+   - **PRISMA & Report**: flow diagram + checklist + disclosure in one place, generated from the screening; agreement metrics computed here, not foregrounded.
+   - **Daten & Repo**: File System Access connect, per-reviewer files, Git, export/import; the old Reviewers reconciliation folds in as a section.
+
+```
+SCREENING  ┌ corpus list + full-text search ┐  ┌ full text (formatted, searchable) ┐  ┌ categories + evidence ┐
+           │ filter: status / category      │  │ <mark>gender</mark> ... hits 3/7   │  │ Gender  ✓             │
+           │ search all texts: "gender"      │  │ "...gendered scripts of care..."   │  │  └ pin: "gendered..."  │
+           │ [paper 13/87]                   │  │ [next hit ↵]  [pin as evidence]    │  │ derived: INCLUDE       │
+           └─────────────────────────────────┘  └────────────────────────────────────┘  └───────────────────────┘
+PRISMA & REPORT   flow diagram · checklist · disclosure (auto)        DATEN & REPO   connect · reviewer file · git · export
+```
+
+The evidence data model is in [[data]] (reviewer file schema 0.2, `evidence[category] = [{term, snippet, ts}]`). The new requirements are FR-11 (read full text), FR-12 (search), FR-13 (pin evidence) in [[specification]].
+
 ## 1. What the tool is, in one paragraph
 
 A prospective, PRISMA-conformant **screening instrument** built into the existing Evidence Companion single-page app as a fifth view next to Knowledge Chat, Knowledge Graph, Categories, and Corpus. Domain experts screen papers against ten binary categories to an include/exclude decision; an AI proposal for the same paper is recorded **separately** and never overrides the human; a live PRISMA 2020 flow diagram shows the selection process with the AI and human decisions split apart; an agreement panel quantifies the divergence; a checklist tracks reporting completeness; a generator emits the AI-disclosure text and the assembled PRISMA record. It is a static web app (vanilla JS, CDN libraries, no backend); sessions live in localStorage and travel as JSON.

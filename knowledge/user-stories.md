@@ -24,6 +24,35 @@ related: [specification, data, ai-assisted-review-standards]
 
 Usage scenarios for the PRISMA screening tool, in the form "As [role], who [context], I want [goal], so that [benefit]." Stories are grouped by intent: core screening operations, scholarly assurance (PRISMA/PRISMA-trAIce/RAISE conformance and reproducibility), and conceptual orientation. The roles are the review lead (Susi Sackl-Sharif), the reviewing experts (Sackl-Sharif, Klinger), the technical lead (Christopher Pollin), and an external reviewer/auditor (a journal referee or FFG reviewer). Each story carries an Ableitung that links it into the knowledge base. Formal requirements are in [[specification]].
 
+## v4 core stories (current, evidence-grounded)
+
+These three are the heart of the v4 redesign (see [[specification]] ADR-012, [[design]] section 0). They supersede the AI-anchoring stories below as the primary scenarios; those are kept as background.
+
+### Read and move through the full text fast
+
+*As a reviewing expert, who has 326 papers to get through, I want each paper as a readable, formatted full text (not only an abstract, since 50 papers have none), so that I can scan it quickly and judge it on the actual content.*
+
+Ableitung:
+- Requirement [[specification#Anforderungen]] FR-11
+- Material [[data]] (full-text source, `docs/vault/Papers/*.md`)
+
+### Search the text for the words that matter
+
+*As a reviewing expert, who knows which terms signal a category, I want to search within the open paper and across all papers, so that I can jump straight to the relevant passages and find candidate studies fast.*
+
+Ableitung:
+- Requirement [[specification#Anforderungen]] FR-12
+- Component [[design]] section 0 (Screening view)
+
+### Pin a found word as evidence for a category
+
+*As a reviewing expert, who must justify each inclusion, I want to pin a search hit and its surrounding passage as a Beleg on a category, so that every category I set points at the exact words that justify it and the decision is reproducible and citable in the report.*
+
+Ableitung:
+- Requirement [[specification#Anforderungen]] FR-13
+- Material [[data]] (reviewer file schema 0.2, `evidence[category]`)
+- Concept [[prisma-methodology]] (transparent, auditable selection)
+
 ## Core screening operations
 
 ### Screen a paper without being anchored by the AI

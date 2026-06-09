@@ -88,4 +88,14 @@ Verification: `node --check` clean; a headless jsdom harness executes init, rend
 
 The earlier fork (port in place vs separate page vs hold) is resolved by the decision above. Remaining design questions live in `[[design]]` section 9; formal constraints in `[[specification]]` ADRs.
 
+## Follow-up: v4 redesign (decided 2026-06-09)
+
+Seeing v3 in use surfaced that the tool was over-built for its actual user. The human-AI divergence apparatus (blind reveal, kappa, matrix, reconciliation) belongs to the paper and the Companion, not to the expert who just wants to screen literature fast. New direction (see `[[specification]]` ADR-012, `[[design]]` section 0):
+
+- Evidence-grounded screening as the core: full-text reading and search, with found terms pinned as Belege on categories (the reviewing colleagues' actual method). Full texts are already servable under `docs/vault/Papers/`.
+- AI strongly reduced to an optional collapsed suggestion; comparison metrics move to the report layer.
+- Seven surfaces collapse to three: Screening, PRISMA & Report, Daten & Repo.
+
+Knowledge docs updated accordingly (`specification` FR-11..13 + ADR-012, `data` evidence model + full-text source, `design` section 0, `user-stories` v4 stories). Implementation (full-text view + search + evidence pinning + consolidation) is the next iteration.
+
 *Updated: 2026-06-09*
