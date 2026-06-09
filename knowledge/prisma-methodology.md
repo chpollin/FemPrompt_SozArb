@@ -17,7 +17,7 @@ topics: ["[[Systematic Review]]", "[[Reporting Guidelines]]", "[[PRISMA]]"]
 related: [ai-assisted-review-standards, methods-and-pipeline, specification, project]
 ---
 
-This note distills the PRISMA framework as the reporting backbone for the PRISMA screening tool (the fifth view of the Evidence Companion). It covers what PRISMA is, the 2020 revision, the flow diagram and 27-item checklist, the extension family, and the boundary between PRISMA (reporting) and conduct standards such as Cochrane. The AI-specific layer (PRISMA-trAIce, RAISE, PRISMA 2020 items 8/9) is treated separately in [[ai-assisted-review-standards]], because that is where this project's methodological contribution sits. All claims are sourced; see the Sources section.
+This note distills the PRISMA framework as the reporting backbone for the PRISMA screening tool (the standalone PRISM page; under the v4 pivot, ADR-012, PRISMA reporting lives on its "PRISMA & Report" surface, not the working Screening view). It covers what PRISMA is, the 2020 revision, the flow diagram and 27-item checklist, the extension family, and the boundary between PRISMA (reporting) and conduct standards such as Cochrane. The AI-specific layer (PRISMA-trAIce, RAISE, PRISMA 2020 items 8/9) is treated separately in [[ai-assisted-review-standards]], because that is where this project's methodological contribution sits. All claims are sourced; see the Sources section.
 
 ## What PRISMA is
 

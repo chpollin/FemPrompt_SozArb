@@ -22,17 +22,17 @@ topics: ["[[Information Visualisation]]", "[[Scholar-Centered Design]]"]
 related: [specification, user-stories, data, ai-assisted-review-standards, prisma-methodology]
 ---
 
-This is the self-contained UI/design working document for the PRISMA screening tool, the new fifth view of the Evidence Companion. It is written so that UI and design work can proceed **from this document alone**: it consolidates the PRISMA essentials that drive the interface (section 1-2), the people and scenarios it serves (3-4), each screen specified with layout, components, data, states, interactions and an ASCII wireframe (5), the design system to inherit (6), the epistemic design principles specific to this tool (7), the concrete tokens (8), and the open design questions left for the design work (9). Full domain detail lives in [[prisma-methodology]] and [[ai-assisted-review-standards]]; formal requirements in [[specification]]; the data model in [[data]]; the scenarios in [[user-stories]]. Where this document repeats those, it does so deliberately, because its purpose is hand-off.
+This is the self-contained UI/design working document for the PRISMA screening tool, a standalone page (`docs/prisma.html`, ADR-008) linked from the Evidence Companion. It is written so that UI and design work can proceed **from this document alone**: it consolidates the PRISMA essentials that drive the interface (section 1-2), the people and scenarios it serves (3-4), each screen specified with layout, components, data, states, interactions and an ASCII wireframe (5), the design system to inherit (6), the epistemic design principles specific to this tool (7), the concrete tokens (8), and the open design questions left for the design work (9). Full domain detail lives in [[prisma-methodology]] and [[ai-assisted-review-standards]]; formal requirements in [[specification]]; the data model in [[data]]; the scenarios in [[user-stories]]. Where this document repeats those, it does so deliberately, because its purpose is hand-off.
 
 > Read section 0 first. It is the current (v4) direction and supersedes the AI-forward, seven-surface specifics in sections 1, 4 to 7. Those sections are kept as background on the standards and the reasoning, not as the build target.
 
 ## 0. Redesign v4 (current direction)
 
-Decided with the user on 2026-06-09 (see [[specification]] ADR-012). The v3 design port revealed the tool was over-built for its actual user: it foregrounded the human-AI divergence study (blind reveal, kappa, matrix, reconciliation), which is really the content of the paper and the Evidence Companion. The person using this tool is the expert in the loop who wants to work through literature fast, the way the reviewing colleagues did: read and search the full text, and ground each category in concrete words found in the text.
+Decided with the user on 2026-06-09 (see [[specification]] ADR-012). The v3 design port revealed the tool was over-built for its actual user: it foregrounded the human-AI divergence study (blind reveal, kappa, matrix, reconciliation), which is really the content of the paper and the Evidence Companion. The person using this tool is the expert in the loop who wants to work through literature fast, the way the reviewing colleagues did: read and search the document, and ground each category in concrete words found in it.
 
 Three principles:
 
-1. **Evidence-grounded screening is the core.** The screening view is built around the full text (`docs/vault/Papers/*.md`, see [[data]]), an in-text and corpus-wide search, and pinning a search hit as a Beleg on a category. A category is not a bare checkbox, it carries the words that justify it. This is reproducible and matches the colleagues' method.
+1. **Evidence-grounded screening is the core.** The screening view is built around the served knowledge document (`paper.knowledge_doc`, the distilled per-paper summary under `docs/vault/Papers/*.md`, not raw full text; see [[data]]), an in-text and corpus-wide search, and pinning a search hit as a Beleg on a category. A category is not a bare checkbox, it carries the words that justify it. This is reproducible and matches the colleagues' method.
 2. **AI is strongly reduced.** The AI proposal becomes an optional, collapsed suggestion, off by default. No blind reveal, no kappa, no matrix in the working view. The comparison machinery is kept but moves to the report layer, computed quietly for PRISMA-trAIce R1/R2.
 3. **Seven surfaces collapse to three**, each with a one-line "what is this, what do I do here" header:
    - **Screening**: corpus overview with full-text search; single-paper full-text view with in-text search, evidence pinning, derived decision, optional collapsed AI.
@@ -95,7 +95,57 @@ Conceptual orientation
 - Look up what a category means -> Screening Workspace (category definition on demand).
 - Understand a checklist item -> Checklist Tracker (verbatim item + level).
 
-## 5. Screens
+## 5. Screens (v4, as built)
+
+This section specifies the three v4 surfaces as implemented in `docs/js/prisma.js` and `docs/css/prisma.css` (commit c909e50). It replaces the v3 seven-surface design. The subsections 5.0a to 5.6 below it are kept as v3 background only (they describe the superseded AI-forward layout and the blind/reveal rail).
+
+### 5A. Page shell
+
+Standalone fullscreen page `docs/prisma.html` (ADR-008). A slim header carries brand, subtitle, and the repo-connection status (`#pt-conn-status`). `js/prisma-data.js` provides the `window.EC` shim over `research_vault_v2.json`. Below the header, a sub-navigation with exactly three buttons, each followed by a one-line "what do I do here" intro:
+
+- **Screening** -- Volltext lesen und durchsuchen, Belege an Kategorien anheften, Include/Exclude entscheiden.
+- **PRISMA & Report** -- PRISMA-2020-Fluss, Mensch-KI-Vergleich, Checkliste und Disclosure, aus dem Screening erzeugt.
+- **Daten & Repo** -- Mit dem Repo verbinden, eine Datei pro Reviewer:in, Export/Import, Reviewer:innen abgleichen.
+
+There is no blind-mode toggle (removed in v4). A persisted v3 surface id is normalised onto these three on load.
+
+### 5B. Screening (default surface)
+
+Purpose. The per-paper working surface. Optimised for reading the document, finding the words that carry a category, and pinning them as evidence. Three panes in one grid (`--pt-nav-w | 1fr | --pt-rail-w`).
+
+Layout and data.
+- **Left, corpus navigator.** A full-text search box over the whole corpus (FR-12 corpus search, backed by `docs/data/fulltext_index.json`) plus the paper list with status dots (none / include / exclude) and a hit-count badge when a corpus query is active. Selecting a paper opens it; if a corpus query is active, that term is carried into the in-text search of the opened paper.
+- **Centre, reading column.** Title and authors, then a sticky in-text search bar (highlight all matches, step previous/next, hit counter, "Treffer anheften"), then the rendered document. The document is `paper.knowledge_doc` fetched on demand and rendered by the built-in minimal Markdown renderer (FR-11). Papers without a `knowledge_doc` fall back to the abstract; papers with neither show an empty state. A `nur Abstract` pill marks the fallback.
+- **Right, assessment.** The ten category chips in two dimension groups (definitions on hover), the pinned Belege grouped by category (each a snippet with a remove control), the derived `(>=1 Technik) UND (>=1 Sozial)` decision with the override-to-exclude switch, the exclusion-reason picker when the decision is Exclude, the binding "Entscheidung erfassen" action, and an optional collapsed AI suggestion (`KI-Vorschlag (advisory)`, off by default).
+
+Evidence pinning (FR-13). Selecting a passage in the reading column, or pressing "Treffer anheften" on the active in-text hit, opens a small category menu. Choosing a category stores `{term, snippet, ts}` under `evidence[category]` and sets that category on (pinning a Beleg implies the category). Belege are removable before the decision is recorded. The behaviour contract is in [[data]] (reviewer schema 0.2).
+
+States. editing (no record yet, chips and pins live, derived decision updates), excluded (reason picker required), recorded (read-only summary with the recorded categories, decision, reason, and Belege, plus revise and next-open).
+
+```
+SCREENING  ┌ Korpus + Volltext-Suche ┐  ┌ Titel · In-Text-Suche · Dokument ┐  ┌ Kategorien · Belege ┐
+           │ [Suche: "gender"] 184    │  │ ...gendered <mark>scripts</mark>  │  │ Technik  Sozial      │
+           │ ● Paper A      3×         │  │  of care...   [‹ 3/7 ›][anheften] │  │  Gender ✓            │
+           │ ○ Paper B                 │  │  Text markieren → Beleg anheften  │  │   └ "gendered..."  ✕ │
+           │ ● Paper C      1×         │  │                                   │  │ abgeleitet: INCLUDE  │
+           └───────────────────────────┘  └───────────────────────────────────┘  │ [Entscheidung] ↵     │
+                                                                                   │ ▸ KI-Vorschlag (adv) │
+                                                                                   └──────────────────────┘
+```
+
+### 5C. PRISMA & Report
+
+Purpose. The outputs, computed from the screening, not part of the working loop. One scroll with a perspective selector (whose decisions count as the human side) and four sections: the PRISMA 2020 flow with the trAIce R1 AI-vs-human split, the agreement matrix with decision kappa and per-category kappas (clicking a matrix cell opens a paper from that cell in Screening), the PRISMA-trAIce checklist (14 items, auto-satisfied where the setup already meets them), and the AI-disclosure generator (Markdown preview, copy, export). A one-line note states that the human-AI comparison is research material for the paper and Companion, not the screening work itself.
+
+### 5D. Daten & Repo
+
+Purpose. Sync and reconciliation. Reviewer identity (the `<kuerzel>.json` filename), the File System Access Git workflow (connect, reconnect, reload, with a copy-paste `git add/commit/push` hint), export/import as the all-browser fallback, the decision-log CSV, and the reviewer reconciliation table (each reviewer plus Seed, with n / include / exclude / kappa-vs-AI, PRISMA-trAIce M8/M9), folded in from the old separate surface.
+
+---
+
+The remainder of this section (5.0a to 5.6) is **v3 background**, retained for the standards reasoning. It describes the superseded seven-surface, AI-forward, blind/reveal layout; the build target is 5A to 5D above.
+
+### 5.0a Page shell and navigation (v3, superseded)
 
 The view has one shell and six functional surfaces. Within the SPA the PRISMA view can present these as a left sub-nav or tabs (Workspace, Flow, Agreement, Checklist, Report, Data); the Workspace is the default landing surface.
 

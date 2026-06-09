@@ -22,7 +22,7 @@ topics: ["[[Data Modelling]]"]
 related: [specification, ai-assisted-review-standards, methods-and-pipeline]
 ---
 
-This document describes the substrate the PRISMA screening tool consumes and produces. The tool is built so that its data model is, by construction, a PRISMA-trAIce-conformant screening record: every screening decision stores the AI decision and the human decision separately, which is exactly what item R1 needs to render an AI-vs-human flow split. The model has four parts: the per-paper `ScreeningRecord`, the aggregated `FlowModel`, the `DisclosureMetadata`, and the `Session` envelope (export/import). The category schema and inclusion logic are reused verbatim from the benchmark (`benchmark/config/categories.yaml`); the seed dataset is the existing corpus. What the data *means* lives here; what is *done* with it lives in [[specification]].
+This document describes the substrate the PRISMA screening tool consumes and produces. The tool is built so that its data model is, by construction, a PRISMA-trAIce-conformant screening record: every screening decision stores the AI decision and the human decision separately, which is exactly what item R1 needs to render an AI-vs-human flow split. The model has the per-paper `ScreeningRecord`, the aggregated `FlowModel`, and the `DisclosureMetadata`. The canonical persisted unit in the built tool is one file per reviewer (schema `femprompt-prisma-reviewer/0.2`, with the evidence map, see below); the single-blob `Session` envelope is the superseded v3 export shape. The category schema and inclusion logic are reused verbatim from the benchmark (`benchmark/config/categories.yaml`); the seed dataset is the existing corpus. What the data *means* lives here; what is *done* with it lives in [[specification]].
 
 ## Category schema (reused, not redefined)
 
@@ -75,7 +75,7 @@ The atomic unit. AI and human decisions are sibling objects so they never overwr
   "divergence": {
     "is_divergent": true,
     "axis": "decision | category",
-    "pattern": "Semantic Expansion | Implicit Field Affiliation | Keyword Inclusion"
+    "pattern": "Semantic Expansion | Implicit Field Membership | Keyword Inclusion"
   }
 }
 ```
@@ -123,15 +123,15 @@ The fields the disclosure generator (FR-06) needs. Most come from `ai_decision`;
 | limitations | session notes | trAIce D1, RAISE Table 1 |
 | conflicts of interest | session config | RAISE Table 1 |
 
-## Session (export / import envelope)
+## Session (export / import envelope, v3 single-blob, superseded)
 
-The full persisted state, autosaved to localStorage and exportable as JSON (FR-08).
+The v3 single-blob format, kept only as a description of the earlier export shape. The built tool does not write this; it persists one file per reviewer (schema 0.2, see "Per-reviewer files" below) and exports that file plus a decision-log CSV.
 
 ```json
 {
   "schema": "femprompt-prisma-session/0.1",
   "created": "2026-06-09",
-  "config": { "blind_mode": true, "reviewer": "CP", "stage": "screening",
+  "config": { "reviewer": "CP", "stage": "screening",
               "disclosure": { "threshold": 0.5, "conflicts_of_interest": "none" } },
   "records": [ /* ScreeningRecord[] */ ],
   "checklist": { "prisma_2020": { "…": "status+notes" },
@@ -173,17 +173,31 @@ Aggregation: the tool loads every `*.json` in the folder into `reviewers[key]`, 
 
 Git workflow: `git add docs/data/screening/<reviewer>.json && git commit -m "screening: N papers (<reviewer>)" && git push`; collaborators pull and reconnect the folder. Documented in `docs/data/screening/README.md`.
 
-## Full-text source and evidence (v4)
+## Reading text source and corpus search (v4, as built)
 
-The v4 screening view reads and searches the **full text**, not just the abstract. The converted full texts already exist and are servable:
+What the screening view reads and searches, and what it deliberately does not.
 
 | What | Where | Count |
 |---|---|---|
-| Full-text Markdown (Docling) | `docs/vault/Papers/<title>.md` | 226 files; all 236 `knowledge_doc` paths resolve under `docs/` |
-| Path on the paper record | `paper.knowledge_doc` (e.g. `vault/Papers/<title>.md`) | relative to `docs/`, so `fetch(knowledge_doc)` works from `prisma.html` |
-| Abstract | `paper.abstract` in `research_vault_v2.json` | empty for 50 of 326 papers, which is why full text is needed |
+| Reading text (served) | `docs/vault/Papers/<title>.md` via `paper.knowledge_doc` | 236 of 326 papers; all 236 resolve under `docs/`, so `fetch(knowledge_doc)` works from `prisma.html` |
+| Abstract fallback | `paper.abstract` in `research_vault_v2.json` | non-empty for 276, empty for 50; used when no `knowledge_doc` |
+| Corpus search index | `docs/data/fulltext_index.json` (built by `scripts/build_screening_index.py`) | 326 papers (236 from the knowledge doc, 75 abstract-only, 15 with no text); ~1.55 MB |
 
-The screening view fetches `paper.knowledge_doc` on demand, renders the Markdown readably, and runs search over the fetched text. A corpus-wide search either fetches lazily or uses a prebuilt lightweight index (a `generate_*` step may add `docs/data/fulltext_index.json` of stemmed tokens to paper ids; to be added if lazy fetch is too slow over 326 files). Each search hit can be pinned as a `evidence[category]` entry (see the reviewer file above). The AI proposal (`paper.llm`) stays available but collapsed; it is not part of the evidence.
+Important: the served `docs/vault/Papers/*.md` are **not** raw full text. They are the distilled knowledge documents (an English abstract plus the German Kernbefund, Methodik, Hauptargumente, and Kategorie-Evidenz, the last of which already carries real per-category quotes). The raw Docling full texts (232 files, e.g. 100k chars) live in `pipeline/markdown_clean/`, which is **not served** and holds copyrighted, paywalled papers. Publishing those to the public Pages site is outward-facing and not done by default.
+
+The screening view fetches `paper.knowledge_doc` on demand through a single seam (`fetchPaperText` in `prisma.js`) and renders it with a built-in minimal Markdown renderer (no dependency). In-text search runs over the rendered document; corpus-wide search runs over the prebuilt `fulltext_index.json` (instant, one lazy load, no 236-file fetch storm). The AI proposal (`paper.llm`) stays available but collapsed; it is not part of the evidence.
+
+Text-source options (a copyright decision, not yet taken): (1) keep the served knowledge documents, current and publishable; (2) read the raw local full text from the connected clone (`pipeline/markdown_clean/`), never published, public fallback to the knowledge document; (3) publish the raw full texts. Because the source is one function, switching to (2) or (3) is a one-function change.
+
+## Evidence behaviour (FR-13 contract, as built)
+
+How a pinned Beleg is created, stored, and surfaced. This is the contract the reviewer-file writer and the UI both follow.
+
+- Trigger: selecting a passage in the reading column (2 to 400 chars), or pressing "Treffer anheften" on the active in-text search hit. A category menu opens; choosing a category pins.
+- Stored shape: `evidence[category]` is a list of `{ term, snippet, ts }`. `term` is the selected text or the search query, trimmed to 80 chars. `snippet` is the surrounding context (for a search hit, roughly +/-90 chars around the term), trimmed to 260 chars. `ts` is an ISO timestamp.
+- Coupling: pinning a Beleg on a category sets `categories[category] = true` (evidence implies the category). Toggling the category chip off does not delete its Belege; removing all Belege does not toggle the category off. The reviewer stays in control of both.
+- Edit/remove: a Beleg can be removed individually before the decision is recorded (the small remove control next to the snippet). There is no dedup; pinning the same passage twice stores two entries (the reviewer can remove one).
+- Surfacing: Belege are saved with the decision in the reviewer file. The decision-log CSV reports an `evidence_count` per paper. Evidence is the reviewer's textual justification; it is never written by the AI.
 
 ## Seed dataset (read-only case study)
 

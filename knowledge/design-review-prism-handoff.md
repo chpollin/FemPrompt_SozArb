@@ -92,10 +92,23 @@ The earlier fork (port in place vs separate page vs hold) is resolved by the dec
 
 Seeing v3 in use surfaced that the tool was over-built for its actual user. The human-AI divergence apparatus (blind reveal, kappa, matrix, reconciliation) belongs to the paper and the Companion, not to the expert who just wants to screen literature fast. New direction (see `[[specification]]` ADR-012, `[[design]]` section 0):
 
-- Evidence-grounded screening as the core: full-text reading and search, with found terms pinned as Belege on categories (the reviewing colleagues' actual method). Full texts are already servable under `docs/vault/Papers/`.
+- Evidence-grounded screening as the core: reading and search over the served distilled knowledge documents (`docs/vault/Papers/`), with found terms pinned as Belege on categories (the reviewing colleagues' actual method). Raw full texts are copyrighted and not served; raw-full-text reading is a copyright-gated follow-up.
 - AI strongly reduced to an optional collapsed suggestion; comparison metrics move to the report layer.
 - Seven surfaces collapse to three: Screening, PRISMA & Report, Daten & Repo.
 
-Knowledge docs updated accordingly (`specification` FR-11..13 + ADR-012, `data` evidence model + full-text source, `design` section 0, `user-stories` v4 stories). Implementation (full-text view + search + evidence pinning + consolidation) is the next iteration.
+Knowledge docs updated accordingly (`specification` FR-11..13 + ADR-012, `data` evidence model + reading-text source, `design` section 0 and 5A-5D, `user-stories` v4 stories).
+
+Implementation shipped 2026-06-09 (commit c909e50): the three v4 surfaces, full-text reading and in-text/corpus search, evidence pinning (reviewer schema 0.2), AI reduced to a collapsed suggestion. How the v3/PRISM elements map onto v4:
+
+| v3 / PRISM element | v4 fate |
+|---|---|
+| Three-pane workspace, OKLCH tokens, IBM Plex tri-family | Kept; the panes are now corpus search, reading, categories+evidence |
+| Blind / preview / revealed agreement rail | Removed from the working view; no blind/reveal |
+| Derived decision + override + required reason | Kept in the Screening assessment pane |
+| Agreement matrix, kappa, flow diagram, checklist, disclosure | Moved into the PRISMA & Report surface, computed, not foregrounded |
+| Reviewers reconciliation (perspective selector) | Folded into Daten & Repo |
+| (new in v4) full-text read, in-text + corpus search, pin Beleg | The Screening core, FR-11..13 |
+
+Full-text finding: the served `docs/vault/Papers/*.md` are the distilled knowledge documents, not raw full text; the raw Docling texts in `pipeline/markdown_clean/` are copyrighted and not served, so v4 reads and searches the served knowledge document (one pluggable seam for a later raw-full-text upgrade). See [[data]] (reading text source).
 
 *Updated: 2026-06-09*

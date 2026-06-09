@@ -22,7 +22,7 @@ topics: ["[[Requirements Engineering]]", "[[Decision Records]]"]
 related: [project, data, user-stories, ai-assisted-review-standards, prisma-methodology]
 ---
 
-This document is the substance layer for the **PRISMA screening tool**, a new fifth view of the Evidence Companion that turns the existing reference application into a prospective, PRISMA-conformant screening instrument. It has three sections with different update rhythms: Requirements (static, what the tool must do and for whom), Funktionsumfang (refactored per release, the current shape of the view and its modules), and Decisions (monotonically growing ADRs). Narrative usage scenarios live separately in [[user-stories]]; the data model lives in [[data]]; the standards being implemented are in [[ai-assisted-review-standards]]. The four existing views (Knowledge Chat, Knowledge Graph, Categories, Corpus) are the reference layer documented in `CLAUDE.md`; this spec covers only the new working layer.
+This document is the substance layer for the **PRISMA screening tool**, a standalone, Git-backed, PRISMA-conformant screening instrument (`docs/prisma.html`, see ADR-008) linked from the Evidence Companion. It has three sections with different update rhythms: Requirements (static, what the tool must do and for whom), Funktionsumfang (refactored per release, the current shape of the view and its modules), and Decisions (monotonically growing ADRs). Narrative usage scenarios live separately in [[user-stories]]; the data model lives in [[data]]; the standards being implemented are in [[ai-assisted-review-standards]]. The four existing views (Knowledge Chat, Knowledge Graph, Categories, Corpus) are the reference layer documented in `CLAUDE.md`; this spec covers only the new working layer.
 
 ## Anforderungen
 
@@ -42,7 +42,11 @@ This document is the substance layer for the **PRISMA screening tool**, a new fi
 - FR-12: Search the full text. Provide an in-text search that highlights and steps through matches in the open paper, and a corpus-wide search that lists papers whose full text contains a term. Acceptance: a query highlights every hit in the open text and returns the set of papers containing it across the corpus.
 - FR-13: Pin a hit as evidence for a category. From a search hit or a selected passage, attach the term plus its surrounding snippet to one of the ten categories as a stored Beleg; evidence is saved with the decision and is citable in the report. Acceptance: a category can carry one or more evidence snippets; they persist in the reviewer file and appear in the decision log and disclosure.
 
-The AI-forward requirements are demoted by ADR-012: FR-03 (blind mode) becomes an optional, off-by-default switch rather than the core flow; FR-05 (agreement metrics) and the human-AI comparison move out of the working view into the report layer (computed, not foregrounded); FR-10 (live LLM) stays optional and minimal. The screening view centers on FR-11 to FR-13 (read, search, pin evidence).
+The AI-forward requirements are demoted by ADR-012. As built (commit c909e50): FR-03 (blind mode) is removed from the working view, there is no blind/reveal and no blind toggle; FR-05 (agreement metrics) and the human-AI comparison live only in the PRISMA & Report surface, computed, not foregrounded; FR-10 (live LLM) is not implemented (optional, minimal, deferred). The screening view centers on FR-11 to FR-13 (read, search, pin evidence).
+
+FR-11 to FR-13 acceptance, as built: FR-11 renders `paper.knowledge_doc` (the served distilled knowledge document, see [[data]]) with a built-in Markdown renderer, falling back to the abstract, then to an empty state. FR-12 highlights and steps through in-text matches in the open document and filters the corpus via the prebuilt `docs/data/fulltext_index.json`. FR-13 pins a selected passage or a search hit as `evidence[category] = {term, snippet, ts}` in the reviewer file (schema 0.2), sets the category, and reports an `evidence_count` in the decision log. The behaviour contract is in [[data]] (Evidence behaviour). Note: "full text" here is the served knowledge document, not the raw paper text; reading the raw local full text is a copyright-gated follow-up via the single `fetchPaperText` seam.
+
+Acceptance (three-surface IA): the sub-navigation has exactly three entries (Screening, PRISMA & Report, Daten & Repo); the seven v3 surfaces are gone; kappa, matrix, and flow are reachable only from PRISMA & Report; a persisted v3 surface id is normalised onto the three on load.
 
 ### Nicht-funktionale Anforderungen
 
@@ -66,7 +70,7 @@ Per ADR-012 the seven surfaces collapse into three, AI is strongly reduced, and 
 2. **PRISMA & Report** (the outputs): the PRISMA 2020 flow diagram, the checklist, and the disclosure generator in one place, generated from the screening; the agreement matrix and kappa live here, computed quietly, not in the working view. Subsumes Flow, Agreement, Checklist, Disclosure.
 3. **Daten & Repo** (sync): File System Access connect, per-reviewer files, Git workflow, export/import; the Reviewers reconciliation folds in here as a section.
 
-Each view carries a one-line "what is this, what do I do here" header. The module descriptions below are the v3 shape, retained for the report and data parts; the Screening Workspace block is superseded by the v4 Screening view and the evidence model in [[data]].
+Each view carries a one-line "what is this, what do I do here" header. The three surfaces are specified screen by screen in [[design]] section 5 (5A to 5D), matching the build. The module descriptions below are the v3 shape, retained for the report and data parts; the Screening Workspace block is superseded by the v4 Screening view and the evidence model in [[data]].
 
 The modules below are listed in application order: data in, screen, see the picture, report out.
 
@@ -254,6 +258,6 @@ Effekt. Knowledge docs updated; implementation is the next iteration. The agreem
 
 ## Was nicht reingehört
 
-Architecture (stack, data flow, module boundaries) belongs in a future `architecture.md`; the data model belongs in [[data]]; design tokens and UI patterns belong in a future `design.md`; the standards themselves belong in [[ai-assisted-review-standards]] and [[prisma-methodology]].
+Architecture (stack, data flow, module boundaries) belongs in a future `architecture.md`; the data model belongs in [[data]]; design tokens and UI patterns belong in [[design]]; the standards themselves belong in [[ai-assisted-review-standards]] and [[prisma-methodology]].
 
 *Updated: 2026-06-09*

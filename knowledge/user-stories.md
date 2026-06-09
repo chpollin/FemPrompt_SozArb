@@ -30,11 +30,13 @@ These three are the heart of the v4 redesign (see [[specification]] ADR-012, [[d
 
 ### Read and move through the full text fast
 
-*As a reviewing expert, who has 326 papers to get through, I want each paper as a readable, formatted full text (not only an abstract, since 50 papers have none), so that I can scan it quickly and judge it on the actual content.*
+*As a reviewing expert, who has 326 papers to get through, I want each paper rendered as a readable, formatted document (the served knowledge document where one exists, for 236 of 326 papers, the abstract otherwise), so that I can scan it quickly and judge it on the content rather than the metadata.*
+
+Acceptance: delegated to [[specification#Anforderungen]] FR-11 (knowledge document, then abstract, then empty state).
 
 Ableitung:
 - Requirement [[specification#Anforderungen]] FR-11
-- Material [[data]] (full-text source, `docs/vault/Papers/*.md`)
+- Material [[data]] (reading text source, `docs/vault/Papers/*.md` via `paper.knowledge_doc`; raw full text is a copyright-gated follow-up)
 
 ### Search the text for the words that matter
 
@@ -55,23 +57,23 @@ Ableitung:
 
 ## Core screening operations
 
-### Screen a paper without being anchored by the AI
+### Screen a paper without being anchored by the AI (v3 background, superseded)
 
 *As a reviewing expert, who must judge each study on its own merits, I want the AI's proposal hidden until I have recorded my own decision, so that my judgement stays independent and the comparison with the AI remains meaningful.*
 
 Ableitung:
-- Requirement [[specification#Anforderungen]] FR-02, FR-03
+- Requirement [[specification#Anforderungen]] FR-02, FR-03 (blind mode, removed from the working view by ADR-012)
 - Component [[specification#Screening Workspace]]
 - Concepts [[ai-assisted-review-standards]] (dual track, RAISE human oversight), [[data#ScreeningRecord]]
 
-### See where I diverge from the AI
+### See where I diverge from the AI (v3 background, superseded; now in PRISMA & Report)
 
 *As a reviewing expert, who has just decided on a paper, I want to see the AI's decision and where it differs from mine, so that I can notice category interpretations I might have missed and the team can study the divergence.*
 
 Ableitung:
 - Requirement [[specification#Anforderungen]] FR-03, FR-05
 - Component [[specification#Agreement Panel]]
-- Concepts [[data#divergence]] (Semantic Expansion, Implicit Field Affiliation, Keyword Inclusion)
+- Concepts [[data#divergence]] (Semantic Expansion, Implicit Field Membership, Keyword Inclusion)
 
 ### Record an exclusion with a reason
 

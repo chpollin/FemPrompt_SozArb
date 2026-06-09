@@ -49,7 +49,7 @@ Status caveat (cite accordingly): the authors call it a **"well-founded proposal
 
 ### Adapted flow diagram
 
-The core modification is the addition of **separate fields to distinguish exclusions made by human reviewers from those made by AI systems** at each screening stage, while preserving the familiar PRISMA layout. It also separates rule-based administrative tools (e.g. deduplication) from evaluative AI systems. This is item R1 made visual, and it is the central artefact the tool must render.
+The core modification is the addition of **separate fields to distinguish exclusions made by human reviewers from those made by AI systems** at each screening stage, while preserving the familiar PRISMA layout. It also separates rule-based administrative tools (e.g. deduplication) from evaluative AI systems. This is item R1 made visual, and it is the signature artefact of the tool's report layer. Under the v4 pivot (see [[specification]] ADR-012) this flow diagram, the agreement matrix, and kappa live on the "PRISMA & Report" surface, computed but not foregrounded; the working Screening view is centred on reading, searching, and pinning evidence (FR-11 to FR-13), not on the divergence apparatus.
 
 ## RAISE (Cochrane, Campbell, JBI, CEE, Nov 2025)
 
@@ -76,7 +76,7 @@ The dual assessment track and benchmark already satisfy most demanding requireme
 | trAIce M6 — prompts + parameters | `prompts/` governance, `CHANGELOG.md`, negative constraints v2.1 — but decoding parameters (temperature, top-p, max tokens) and confidence thresholds not yet disclosed | **Partial** |
 | trAIce M8 — human oversight | Full dual track: 100% human screening (303/303) and 100% LLM screening (326/326), parallel and independent; expert decision binding | Satisfied (gold standard) |
 | trAIce M9 + R2 — AI performance evaluation | Confusion matrix, Cohen's kappa (decision + 10 categories), base rates, 142-case divergence analysis (3 patterns); human consensus as reference standard | Satisfied (project strength) |
-| trAIce R1 — flow diagram AI vs human split | Data exists (matrix 100/34/108/49); the new tool renders the adapted flow diagram | **In progress (the tool)** |
+| trAIce R1 (flow diagram, AI vs human split) | Data exists (matrix 100/34/108/49); the tool renders the adapted flow diagram on its PRISMA & Report surface (commit c909e50) | **Built (tool); paper text pending** |
 | trAIce M10 — data governance | `.vault_cache/` (reproducible API cache), open repository | Satisfied |
 | trAIce M1 — protocol pre-registration of AI use | No PROSPERO/OSF protocol on record | **Gap** |
 | RAISE P1 — accountability | Expert track epistemically binding; responsibility-asymmetry framing in [[project]] | Satisfied |
@@ -91,7 +91,7 @@ The dual assessment track and benchmark already satisfy most demanding requireme
 2. **Auto-generate a consolidated AI-disclosure section / supplementary table** from the screening data: model name + version + date, stage, task, prompt version, decoding parameters, confidence threshold, validation metrics (kappa), known limitations. This is a tool feature and closes trAIce M6 (parameters), RAISE Table 1, and P3 at once.
 3. **Disclose decoding parameters and any confidence threshold** in the assessment prompt config so M6b is explicit and reproducible.
 4. **Declare conflicts of interest** regarding the AI tools used (RAISE Table 1, final row).
-5. **Render the PRISMA-trAIce adapted flow diagram** (AI vs human split) as the tool's centrepiece. Closes trAIce R1.
+5. **Render the PRISMA-trAIce adapted flow diagram** (AI vs human split) on the tool's PRISMA & Report surface (the report layer, not the working Screening view, per ADR-012). Closes trAIce R1.
 6. **Frame the benchmark explicitly as the trAIce M9/R2 performance evaluation**, naming the human-consensus reference standard and the metrics, in the methods text the tool emits.
 
 ## How this legitimises the workflow

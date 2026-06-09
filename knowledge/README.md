@@ -17,17 +17,17 @@ Central documentation for the systematic literature review on AI literacy and LL
 
 ## PRISMA Screening Tool (Promptotyping knowledge base)
 
-New Promptotyping document set for the prospective PRISMA screening tool (planned fifth Evidence Companion view). Follows the Promptotyping document convention (frontmatter Pflichtkern, Obsidian wikilinks, function-named files).
+Promptotyping document set for the PRISMA screening tool **PRISM**, a standalone, Git-backed page (`docs/prisma.html`, `docs/js/prisma.js`, `docs/css/prisma.css`) linked from the Evidence Companion. Since the v4 pivot (ADR-012) it is centred on **evidence-grounded screening**: read and search the document, pin found passages as Belege on categories, decide Include/Exclude. The human-AI comparison (kappa, matrix, flow) is research material that lives in the report layer plus the paper and Companion, not the working loop. Follows the Promptotyping document convention (frontmatter Pflichtkern, Obsidian wikilinks, function-named files).
 
 | File | Function | Content |
 |------|----------|---------|
 | [prisma-methodology.md](prisma-methodology.md) | Reference | PRISMA 2020 as reporting standard, flow diagram, 27-item checklist, extension family, reporting-vs-conduct boundary |
 | [ai-assisted-review-standards.md](ai-assisted-review-standards.md) | Reference | PRISMA-trAIce (14 items) + RAISE (3 principles), item-by-item mapping onto the dual assessment track, gap analysis |
-| [specification.md](specification.md) | Substance (formal) | FR-01..10, NFR-01..07, six modules, seven ADRs |
-| [user-stories.md](user-stories.md) | Substance (narrative) | 12 screening scenarios with Ableitung into the knowledge base |
-| [data.md](data.md) | Material | ScreeningRecord (separate AI/human decisions), FlowModel, DisclosureMetadata, Session envelope |
-| [design.md](design.md) | Gestalt | Self-contained UI/design brief: screens, wireframes, design system, epistemic principles, open questions |
-| [design-review-prism-handoff.md](design-review-prism-handoff.md) | Review | Analysis of the PRISM Claude Design handoff: interaction model, design system, what to port into the shipped tool |
+| [specification.md](specification.md) | Substance (formal) | FR-01..13 (FR-11..13 = read, search, pin evidence), NFR-01..07, three v4 surfaces, ADR-001..012 (ADR-012 = the v4 pivot) |
+| [user-stories.md](user-stories.md) | Substance (narrative) | 3 v4 core stories (read, search, pin) + the v3 scenarios as background, each with Ableitung |
+| [data.md](data.md) | Material | ScreeningRecord, FlowModel, DisclosureMetadata, per-reviewer file schema 0.2 (evidence map), reading-text source + corpus index, evidence behaviour |
+| [design.md](design.md) | Gestalt | UI/design brief; section 5 (5A-5D) specifies the three v4 surfaces as built |
+| [design-review-prism-handoff.md](design-review-prism-handoff.md) | Review | Analysis of the PRISM Claude Design handoff: interaction model, design system, what was ported, v4 follow-up |
 
 ## Guides
 
@@ -52,4 +52,4 @@ The paper is being edited on Google Docs (Forum Wissenschaft 2/2026, deadline Ma
 
 ---
 
-*Updated: 2026-04-01*
+*Updated: 2026-06-09*
