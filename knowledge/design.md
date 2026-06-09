@@ -73,9 +73,9 @@ Conceptual orientation
 
 The view has one shell and six functional surfaces. Within the SPA the PRISMA view can present these as a left sub-nav or tabs (Workspace, Flow, Agreement, Checklist, Report, Data); the Workspace is the default landing surface.
 
-### 5.0 View shell and navigation
+### 5.0 Page shell and navigation
 
-Sits in `docs/index.html` as a fifth `nav-view-btn` (`data-view="prisma"`, label "PRISMA") and a `<section class="content-section view-content" id="view-prisma">`. Lazy-initialised by `window.initializePrisma()` on first activation, mirroring the other views. Internal sub-navigation switches among the six surfaces below without leaving the view.
+Implemented as a standalone fullscreen page `docs/prisma.html` (the companion's PRISMA nav links to it), not an embedded view (see ADR-008). A small data layer (`js/prisma-data.js`) provides a `window.EC` shim over `research_vault_v2.json`, so `js/prisma.js` runs without the full companion app. A slim app header carries the repo-connection status. The sub-navigation switches among **seven** surfaces: Workspace, Flow, Agreement, **Reviewers** (the multi-reviewer reconciliation added for the Git workflow), Checklist, Report, and Daten & Repo (reviewer identity, File System Access connect, export/import).
 
 ```
 HEADER  Wissens-Chat | Wissensnetz | Kategorien | Korpus | [PRISMA] | About Methoden Hilfe

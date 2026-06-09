@@ -187,6 +187,46 @@ Begründung. They legitimise the existing dual track and give a concrete checkli
 
 Effekt. To be observed; the disclosure generator (FR-06) and checklist tracker (FR-07) are the direct consequences.
 
+### ADR-008 Standalone fullscreen page (supersedes ADR-005)
+
+Kontext. The tool grew into a Git-based working instrument; an embedded companion view cramped it into a reading-column layout.
+
+Wahl. Promote it to a dedicated fullscreen page `docs/prisma.html`; the companion's PRISMA nav links to it. A small data layer (`prisma-data.js`) provides a `window.EC` shim over `research_vault_v2.json` so the screening logic runs without the full companion app.
+
+Begründung. A working screening tool needs full width and its own chrome, and a clean separation from the reference/exploration companion.
+
+Effekt. Implemented (rebuild stage 1). Supersedes ADR-005.
+
+### ADR-009 File System Access persistence with Git (supersedes ADR-006)
+
+Kontext. Collaborators must download the repo, screen in the browser, write into the data, and commit; localStorage alone is not shareable.
+
+Wahl. The File System Access API writes per-reviewer JSON files into `docs/data/screening/`, committed with Git by the user; export/import is the fallback; localStorage stays as a live cache.
+
+Begründung. Git becomes the sync layer with no backend, matching the described "write into the data, commit, the other pulls" workflow.
+
+Effekt. Implemented (rebuild stage 2). Direct write is Chromium-only; the fallback covers Firefox/Safari. Supersedes ADR-006.
+
+### ADR-010 One file per reviewer
+
+Kontext. Two reviewers editing one shared file would produce Git merge conflicts.
+
+Wahl. One JSON per reviewer (`<reviewer>.json`); the tool reads all of them to aggregate, and writes only the current reviewer's file. The existing expert assessment is a built-in `seed` reviewer.
+
+Begründung. Conflict-free in Git, matches independent dual review (PRISMA-trAIce M8), and enables the Reviewers reconciliation surface.
+
+Effekt. Implemented (rebuild stage 2/4).
+
+### ADR-011 Blind mode defaults off (resolves the design Q1)
+
+Kontext. Blind-on by default hid the AI proposal on the seed case study, making screened papers look blank.
+
+Wahl. Blind mode defaults off; a reviewer turns it on for independent fresh screening.
+
+Begründung. The tool opens on the seed, where seeing the AI is the point; independence is a deliberate per-session choice, not a default that confuses first contact.
+
+Effekt. Implemented (rebuild stage 3), together with: exclusion reason now required (no silent default), seed assessment shown as reference, derived decision suppressed until a category is set, and a boilerplate-abstract warning.
+
 ## Was nicht reingehört
 
 Architecture (stack, data flow, module boundaries) belongs in a future `architecture.md`; the data model belongs in [[data]]; design tokens and UI patterns belong in a future `design.md`; the standards themselves belong in [[ai-assisted-review-standards]] and [[prisma-methodology]].

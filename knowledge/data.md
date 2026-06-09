@@ -141,6 +141,27 @@ The full persisted state, autosaved to localStorage and exportable as JSON (FR-0
 
 Round-trip must be lossless (FR-08 acceptance). The `schema` string is versioned so future tool versions can migrate older sessions.
 
+## Per-reviewer files and Git persistence (implemented model)
+
+The shipped tool persists not as one session blob but as **one JSON per reviewer** under `docs/data/screening/`, so Git is the sync layer and reviewers never conflict (see ADR-009, ADR-010). The File System Access API writes the current reviewer's file directly into the repo on every decision; localStorage mirrors it as a cache; export/import is the fallback.
+
+```json
+// docs/data/screening/<reviewer>.json
+{
+  "schema": "femprompt-prisma-reviewer/0.1",
+  "reviewer": "sss",
+  "updated": "2026-06-09T12:00:00.000Z",
+  "decisions": {
+    "<paperId>": { "categories": { "Gender": true }, "decision": "Include",
+                   "reason": null, "ts": "...", "reviewer": "sss" }
+  }
+}
+```
+
+Aggregation: the tool loads every `*.json` in the folder into `reviewers[key]`, plus the built-in `seed` reviewer (the existing expert assessment, `paper.human`). A **perspective** selector chooses whose decisions count as the human side in the Flow and Agreement (default `seed`, which reproduces the benchmark). The **Reviewers** surface computes, per reviewer, n / include / exclude and kappa against the AI (PRISMA-trAIce M8/M9). The AI proposal is always `paper.llm` from the corpus, never stored in a reviewer file.
+
+Git workflow: `git add docs/data/screening/<reviewer>.json && git commit -m "screening: N papers (<reviewer>)" && git push`; collaborators pull and reconnect the folder. Documented in `docs/data/screening/README.md`.
+
 ## Seed dataset (read-only case study)
 
 The tool ships seeded with the existing review so colleagues see a worked example before importing their own batch:
