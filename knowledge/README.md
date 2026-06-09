@@ -27,6 +27,7 @@ New Promptotyping document set for the prospective PRISMA screening tool (planne
 | [user-stories.md](user-stories.md) | Substance (narrative) | 12 screening scenarios with Ableitung into the knowledge base |
 | [data.md](data.md) | Material | ScreeningRecord (separate AI/human decisions), FlowModel, DisclosureMetadata, Session envelope |
 | [design.md](design.md) | Gestalt | Self-contained UI/design brief: screens, wireframes, design system, epistemic principles, open questions |
+| [design-review-prism-handoff.md](design-review-prism-handoff.md) | Review | Analysis of the PRISM Claude Design handoff: interaction model, design system, what to port into the shipped tool |
 
 ## Guides
 
