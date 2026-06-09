@@ -194,6 +194,18 @@ body.pt-fullscreen { margin: 0; background: var(--gray-50); font-family: var(--f
 .pt-data-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
 .pt-imp-label { display: inline-flex; align-items: center; }
 
+/* ---- v2: perspective, seed reference, warnings, repo block ---- */
+.pt-persp { margin-bottom: 1rem; font-size: var(--text-sm); color: var(--gray-600); }
+.pt-persp-sel { padding: 0.3rem 0.5rem; border: 1px solid var(--gray-300); border-radius: var(--radius-sm, 6px); font-size: var(--text-sm); margin-left: 0.4rem; font-family: var(--font-body); }
+.pt-seed-ref { font-size: var(--text-sm); background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius-sm, 6px); padding: 0.4rem 0.6rem; margin-bottom: 0.6rem; color: var(--gray-600); }
+.pt-aq-warn { font-size: var(--text-sm); background: rgba(212,148,58,0.12); border-left: 3px solid var(--warning); border-radius: 3px; padding: 0.4rem 0.6rem; margin-bottom: 0.75rem; color: var(--gray-700); }
+.pt-data-block { background: white; border: 1px solid var(--gray-200); border-radius: var(--radius-sm, 6px); padding: 1rem 1.25rem; margin-bottom: 1rem; }
+.pt-data-block h4 { margin: 0 0 0.5rem; font-size: var(--text-sm); }
+.pt-git-hint { background: var(--gray-900); color: var(--gray-100); padding: 0.75rem 1rem; border-radius: var(--radius-sm, 6px); font-size: var(--text-xs); white-space: pre; overflow-x: auto; margin-top: 0.6rem; }
+.pt-rev-table { width: 100%; margin-top: 0.5rem; }
+.pt-rev-table th, .pt-rev-table td { text-align: center; }
+.pt-rev-table tbody th { text-align: left; }
+
 @media (max-width: 820px) {
     .pt-ws, .pt-agree, .pt-report { grid-template-columns: 1fr; }
     .pt-flow-split { grid-template-columns: 1fr; }
