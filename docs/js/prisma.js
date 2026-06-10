@@ -1278,4 +1278,37 @@ window.__PRISMA_TEST__ = {
     showSurface: function(s) { showSurface(s); }
 };
 
+// ============================================================
+// Test exposure (P1). Appended block: no existing line above is changed
+// and no runtime behaviour changes. tests/run-tests.html loads
+// js/prisma-data.js first (so window.EC exists here), then this file, and
+// reads the closure-scoped pure functions through window.EC._test.
+// In prisma.html (prisma.js before prisma-data.js) the data layer replaces
+// window.EC afterwards, so this hook is absent on the production page.
+// ============================================================
+window.EC = window.EC || {};
+window.EC._test = {
+    // constants
+    TECH_CATS: TECH_CATS, SOCIAL_CATS: SOCIAL_CATS, ALL_CATS: ALL_CATS,
+    EXCLUSION_REASONS: EXCLUSION_REASONS, SEED: SEED, REVIEWER_SCHEMA: REVIEWER_SCHEMA,
+    // decision logic
+    deriveDecision: deriveDecision, finalDecisionOf: finalDecisionOf, divergent: divergent,
+    abstractQuality: abstractQuality, evidenceCount: evidenceCount,
+    aiProposal: aiProposal, humanDecision: humanDecision, seedDecision: seedDecision,
+    // aggregation
+    computeMatrix: computeMatrix, cohenKappa: cohenKappa, kappaLabel: kappaLabel,
+    computeFlow: computeFlow,
+    // parsing and rendering helpers
+    countOcc: countOcc, stripFrontmatter: stripFrontmatter, inlineMd: inlineMd,
+    renderMarkdown: renderMarkdown,
+    // generated report text and persistence payload
+    disclosureMarkdown: disclosureMarkdown, reviewerPayload: reviewerPayload,
+    // stateful seams for inline fixtures
+    setPapers: function(p) { papers = p; },
+    getState: function() { return state; },
+    getWork: function() { return work; },
+    curDec: curDec, resetWork: resetWork,
+    pinEvidence: pinEvidence, unpinEvidence: unpinEvidence, commit: commit
+};
+
 })();

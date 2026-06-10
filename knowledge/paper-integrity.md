@@ -102,6 +102,8 @@ Problems fixed in the final paper text compared to earlier versions:
 
 **Action needed:** Precise wording. Suggestion: "enables visual review of conversions" (without "every") or "a sample of approximately ten percent was visually reviewed."
 
+**Update 2026-06-09:** RESOLVED in the submitted version: "wurden die Konvertierungsergebnisse in einem eigens entwickelten Tool stichprobenartig auf strukturelle und inhaltliche Vollstaendigkeit geprueft."
+
 ---
 
 ### 3.3 10K System as Operational Track — RESOLVED (v0.4)
@@ -123,6 +125,8 @@ Problems fixed in the final paper text compared to earlier versions:
 **Repo shows:** In `human_assessment.csv` there is exactly 1 entry with "KEINE QUELLE GEFUNDEN!" (ID 1, EJEFPZGA). No systematic category for non-verifiable entries in exclusion reasons. The 5 documented upstream problems (Debnath, Tun, D'Ignazio, Statistics, Näscher) are PDF quality issues, not LLM errors.
 
 **Action needed:** Harmonize paper text and knowledge document. Paper is more cautiously worded than v12, but repo evidence supports neither a strong claim nor its categorical denial. Recommendation: Stay with the 1 documented case and formulate precisely.
+
+**Update 2026-06-09:** RESOLVED in the submitted version: the contested sentence was removed entirely; the verification point now states only that experts check all entries against original sources.
 
 ---
 
@@ -150,6 +154,8 @@ The paper deliberately uses magnitudes ("several hundred papers"), which is corr
 
 **Action needed:** Paper must update all benchmark numbers: confusion matrix 100/34/108/49, Kappa 0.056, basis 291 papers, 142 disagreements. Details: `knowledge/status.md` M6.
 
+**Update 2026-06-09:** RESOLVED by removal in the submitted version: the paper carries no benchmark numbers at all, only the qualitative statement that LLMs consistently included more papers; all quantitative claims are deferred to the announced separate publication, which will report the decomposed analysis (see [[verification-empirical-core]]).
+
 ---
 
 ### 3.7 Vault Script Integrates Assessment Data — RESOLVED
@@ -172,6 +178,36 @@ The paper deliberately uses magnitudes ("several hundred papers"), which is corr
 - `ris-template.md` is a structure template, not instructions
 
 **Action needed:** Document conversion process or mark as external step in paper.
+
+---
+
+### 3.9 LLM Path Input Basis — WRONG IN SUBMITTED VERSION
+
+**Paper says (submitted version, checked 2026-06-09 against the text provided by the author):** "Im LLM-gestützten Pfad bewertet ein LLM dieselbe Literatur auf Basis der extrahierten Wissensdokumente."
+
+**Repo shows:** The primary LLM assessment ran on title plus abstract (`benchmark/data/llm_assessment_10k.csv`, produced by `benchmark/scripts/run_llm_assessment.py`); this is the run that feeds the published web tool the paper links (`scripts/generate_vault_v2.py` line 375) and the benchmark comparison announced as the "separate Publikation". Knowledge documents were the input only in the supplementary 2x2 experiment arm, and even there as a mixed condition: 209 of 326 papers assessed on knowledge documents, 117 fell back to abstract (`Input_Source` column; see [[verification-empirical-core]], 2x2 section).
+
+**Proposed correction for the editorial office:** Replace the sentence with: "Im LLM-gestuetzten Pfad bewertet ein LLM dieselbe Literatur auf Basis von Titel und Abstract; in einem ergaenzenden Durchlauf zusaetzlich auf Basis der extrahierten Wissensdokumente, soweit diese vorlagen." Minimal variant if space is constrained: "Im LLM-gestuetzten Pfad bewertet ein LLM dieselbe Literatur auf Basis von Titel und Abstract."
+
+**Status:** DEVIATION, confirmed in submitted version. Issue 2/2026 not yet printed at the time of this entry; correction request to the editorial office is possible and recommended. Decision with the author.
+
+---
+
+### 3.10 Research Question Quoted in Shortened Form — MINOR
+
+**Paper says:** "Die leitende Forschungsfrage ist im angefuehrten Beispiel: 'Wie koennen feministische KI-Literacies und intersektional informiertes Prompting als kritische Praxis dazu beitragen, Diskriminierungsformen in KI-Systemen sichtbar zu machen?'"
+
+**Repo shows:** The template the paper cites in its footnote (`deep-research/literature-review-prompt.md`, pinned at commit 3a74c3c) carries the long form: "... die Ko-Konstitution von Diskriminierungsformen in KI-Systemen sichtbar zu machen, waehrend gleichzeitig die Grenzen individueller Kompetenzansaetze gegenueber strukturellen Machtasymmetrien in der KI-Entwicklung reflektiert werden?"
+
+**Assessment:** The quotation marks and italics imply a verbatim quote, but the text is an abridgment of the footnoted source. Low severity; if a correction note goes to the editorial office anyway (3.9), consider adding an ellipsis or the full question. Otherwise document here and quote correctly in the follow-up paper.
+
+**Status:** DEVIATION (minor), confirmed in submitted version.
+
+---
+
+### Note on 3.1 (prompt provenance, follow-up)
+
+The submitted version cites `deep-research/literature-review-prompt.md` (commit 3a74c3c) explicitly as "Prompt-Template" in a footnote, not as the executed prompt. This is consistent with `prompts/CHANGELOG.md` (executed prompt genuinely lost) and settles the wording question for the round 2 protocol: the update protocol may cite the same file as the documented template, with the loss of the instantiated round 1 prompt stated as a known gap.
 
 ---
 
@@ -228,8 +264,9 @@ Perplexity 75, Claude 63, ChatGPT 62, Gemini 54, Manual 50. Shows unequal provid
 | # | Problem | Action | Affects |
 |---|---------|--------|---------|
 | 1 | Prompts partially in repo | Template restored (`prompts/deep-research-template.md`), instantiated versions lost. Paper draft correctly states: "Template versioned, instantiated versions lost" | Partially resolved |
-| 2 | "Every conversion" overstated | Precise wording (sample ~10%) | Paper section 3 |
-| 3 | Finding on non-verifiable entries contradictory | Harmonize paper text and knowledge document | Paper section 1 + v12 document |
+| 2 | ~~"Every conversion" overstated~~ | RESOLVED in submitted version ("stichprobenartig") | ~~Paper section 3~~ |
+| 3 | ~~Finding on non-verifiable entries contradictory~~ | RESOLVED in submitted version (sentence removed) | ~~Paper section 1 + v12 document~~ |
+| 9 | ~~LLM path input basis wrong in submitted version (3.9)~~ | CLOSED by author decision 2026-06-09: corrections are handled on the author side, no further action from the repo. The follow-up paper states the input bases precisely (abstract main run, KD experiment arm) | ~~Submitted paper~~ |
 
 ### Priority 2 — Research Integrity
 
@@ -283,4 +320,4 @@ Two claims in the paper text do not match the repo and must be corrected before 
 
 ---
 
-*Updated: 2026-04-01*
+*Updated: 2026-06-09. New: 3.9 (LLM path input basis, wrong in submitted version, correction proposed), 3.10 (research question quoted in shortened form, minor), note on 3.1 (template citation in submitted version settles round 2 protocol wording), action item 9. Check basis: submitted version as provided by the author on 2026-06-09, verified against verification-empirical-core.md and generate_vault_v2.py.*

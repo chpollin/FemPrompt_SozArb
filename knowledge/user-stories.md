@@ -24,6 +24,10 @@ related: [specification, data, ai-assisted-review-standards]
 
 Usage scenarios for the PRISMA screening tool, in the form "As [role], who [context], I want [goal], so that [benefit]." Stories are grouped by intent: core screening operations, scholarly assurance (PRISMA/PRISMA-trAIce/RAISE conformance and reproducibility), and conceptual orientation. The roles are the review lead (Susi Sackl-Sharif), the reviewing experts (Sackl-Sharif, Klinger), the technical lead (Christopher Pollin), and an external reviewer/auditor (a journal referee or FFG reviewer). Each story carries an Ableitung that links it into the knowledge base. Formal requirements are in [[specification]].
 
+## Validation status
+
+All stories in this document were written by the technical lead, a user proxy in Cohn's sense (Cohn 2004, ch. 5), and have not been validated by the named users. They are hypotheses about the users until confirmed. One usage model has already been partially falsified: the v3 stories assumed the reviewing experts would screen inside the tool, while their actual workflow keeps category capture in Excel, with PRISM as the downstream PRISMA layer (decided 2026-06-09, see `plan.md`). Open observation point for every story below: the validation session with the reviewing experts (meeting on 1 July 2026), at which each story is resolved as confirmed, revised, or dropped. Stories for the technical-lead role are self-validated by use.
+
 ## v4 core stories (current, evidence-grounded)
 
 These three are the heart of the v4 redesign (see [[specification]] ADR-012, [[design]] section 0). They supersede the AI-anchoring stories below as the primary scenarios; those are kept as background.

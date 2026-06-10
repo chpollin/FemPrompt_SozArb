@@ -1,0 +1,358 @@
+{
+  "generated": "2026-06-09",
+  "method": "Each PRISMA 2020 and PRISMA-trAIce item was judged against the repository working tree on 2026-06-09: reconstructable means named files contain the data or text needed to fill the item in a retrospective record, partial means required content exists with named holes, missing means nothing in the repository can fill it; all counts were computed from the cited files.",
+  "items": [
+    {
+      "id": "1",
+      "standard": "prisma2020",
+      "title": "Title",
+      "status": "reconstructable",
+      "sources": ["knowledge/project.md", "README.md"],
+      "note": "The review identifies itself as a literature review in knowledge/project.md (title and Project Goal) and the README title names the deep-research method. A generated record can state the review type and AI assistance."
+    },
+    {
+      "id": "2",
+      "standard": "prisma2020",
+      "title": "Abstract",
+      "status": "reconstructable",
+      "sources": ["knowledge/status.md", "knowledge/methods-and-pipeline.md", "knowledge/project.md"],
+      "note": "No abstract text exists in the repository, but every element a structured abstract needs (objectives, methods, corpus, dual-track results, limitations) is documented and the numbers are derivable from the data files."
+    },
+    {
+      "id": "3",
+      "standard": "prisma2020",
+      "title": "Rationale",
+      "status": "reconstructable",
+      "sources": ["knowledge/project.md", "knowledge/methods-and-pipeline.md"],
+      "note": "knowledge/project.md states the project goal and theoretical framework; knowledge/methods-and-pipeline.md documents and justifies the deviation from standard database searches (testing a new technology, not reducing effort)."
+    },
+    {
+      "id": "4",
+      "standard": "prisma2020",
+      "title": "Objectives",
+      "status": "reconstructable",
+      "sources": ["knowledge/project.md", "knowledge/methods-and-pipeline.md"],
+      "note": "Explicit main research question and three secondary content questions in knowledge/project.md; the operationalized review question is quoted in knowledge/methods-and-pipeline.md."
+    },
+    {
+      "id": "5",
+      "standard": "prisma2020",
+      "title": "Eligibility criteria",
+      "status": "reconstructable",
+      "sources": ["benchmark/config/categories.yaml", "knowledge/methods-and-pipeline.md"],
+      "note": "categories.yaml v1.2 defines all ten binary categories with definitions and positive and negative examples, the inclusion rule (at least one technology and one social category), five controlled exclusion reasons, and study types. Time span and languages are stated in knowledge/project.md but were not enforced as recorded screening criteria."
+    },
+    {
+      "id": "6",
+      "standard": "prisma2020",
+      "title": "Information sources",
+      "status": "partial",
+      "sources": ["knowledge/methods-and-pipeline.md", "knowledge/project.md", "deep-research/restored", "corpus/source_tool_mapping.json"],
+      "note": "The four deep research providers (ChatGPT, Claude, Gemini, Perplexity), the manual search, and the Zotero group are named. The dates on which each source was queried are not recorded anywhere, and the provider-side model versions are unknown."
+    },
+    {
+      "id": "7",
+      "standard": "prisma2020",
+      "title": "Search strategy",
+      "status": "partial",
+      "sources": ["deep-research/literature-review-prompt.md", "prompts/deep-research-template.md", "prompts/CHANGELOG.md"],
+      "note": "The prompt context block and the generic analysis prompt are preserved and the template was restored from Git history, but prompts/CHANGELOG.md states the exact instantiated prompt text as executed was never committed. The RIS conversion step has no script or documented prompt (knowledge/paper-integrity.md section 3.8)."
+    },
+    {
+      "id": "8",
+      "standard": "prisma2020",
+      "title": "Selection process",
+      "status": "partial",
+      "sources": ["knowledge/methods-and-pipeline.md", "benchmark/data/human_assessment.csv", "benchmark/scripts/run_llm_assessment.py", "assessment/README.md", "knowledge/status.md"],
+      "note": "The dual independent screening design and the automation tool are fully documented. The human CSV has no per-row reviewer column, so how many reviewers screened each record and who decided what is not reconstructable per record; assessors are named only collectively in knowledge/status.md (including 27 corrections by a second assessor that are not traceable)."
+    },
+    {
+      "id": "9",
+      "standard": "prisma2020",
+      "title": "Data collection process",
+      "status": "reconstructable",
+      "sources": ["knowledge/methods-and-pipeline.md", "pipeline/knowledge/distilled", "prompts/CHANGELOG.md"],
+      "note": "Data collection in this review is the three-stage knowledge distillation (LLM extract, deterministic format, LLM verify) with per-document verification reports; scripts, prompts, and parameters are documented in prompts/CHANGELOG.md."
+    },
+    {
+      "id": "10",
+      "standard": "prisma2020",
+      "title": "Data items",
+      "status": "reconstructable",
+      "sources": ["benchmark/config/categories.yaml", "benchmark/data/human_assessment.csv", "benchmark/data/llm_assessment_10k.csv"],
+      "note": "The variables are the ten categories plus decision, exclusion reason, and study type, defined in categories.yaml and present as columns in both assessment CSVs; the LLM track additionally records LLM_Confidence and LLM_Reasoning."
+    },
+    {
+      "id": "11",
+      "standard": "prisma2020",
+      "title": "Study risk of bias assessment",
+      "status": "missing",
+      "sources": [],
+      "note": "No risk-of-bias instrument was applied to included studies. knowledge/methods-and-pipeline.md lists alternative standards (JBI, Cochrane, ENTREQ, MMAT) without applying any of them."
+    },
+    {
+      "id": "12",
+      "standard": "prisma2020",
+      "title": "Effect measures",
+      "status": "missing",
+      "sources": [],
+      "note": "No effect measures exist; the review is a screening and mapping review without meta-analysis. A conformant record must state this non-applicability explicitly, which no repository file currently does."
+    },
+    {
+      "id": "13",
+      "standard": "prisma2020",
+      "title": "Synthesis methods",
+      "status": "partial",
+      "sources": ["knowledge/methods-and-pipeline.md", "scripts/generate_vault_v2.py", "docs/data/concept_graph.json"],
+      "note": "The qualitative aggregation (knowledge distillation, LLM concept extraction, divergence classification) is documented and scripted, but no synthesis-method specification in the sense of PRISMA items 13a to 13f (synthesis eligibility, data preparation, statistical methods) exists."
+    },
+    {
+      "id": "14",
+      "standard": "prisma2020",
+      "title": "Reporting bias assessment",
+      "status": "missing",
+      "sources": ["knowledge/status.md"],
+      "note": "No assessment of bias due to missing results in syntheses. The related but distinct acquisition missingness is documented (knowledge/status.md: 69 of 326 PDFs not acquirable because of access barriers), which is an access bias audit, not a reporting bias assessment."
+    },
+    {
+      "id": "15",
+      "standard": "prisma2020",
+      "title": "Certainty assessment",
+      "status": "missing",
+      "sources": [],
+      "note": "No GRADE or equivalent certainty assessment exists anywhere in the repository."
+    },
+    {
+      "id": "16",
+      "standard": "prisma2020",
+      "title": "Study selection (Results)",
+      "status": "reconstructable",
+      "sources": ["benchmark/data/papers_full.csv", "benchmark/data/human_assessment.csv", "benchmark/data/llm_assessment_10k.csv", "benchmark/results/agreement_metrics.json"],
+      "note": "The flow is derivable: 326 corpus records (papers_full.csv), 303 human decisions (142 Include, 161 Exclude), 326 LLM decisions (232 Include, 94 Exclude), 95 records flagged as duplicates. Human exclusion reasons: 67 Duplicate, 54 Not relevant topic, 32 across Wrong publication type, No full text, Language, and Other, 7 empty; the value Other and the empty cells fall outside the controlled vocabulary in categories.yaml."
+    },
+    {
+      "id": "17",
+      "standard": "prisma2020",
+      "title": "Study characteristics",
+      "status": "reconstructable",
+      "sources": ["benchmark/data/papers_full.csv", "corpus/papers_metadata.csv", "docs/data/research_vault_v2.json", "docs/vault/Papers"],
+      "note": "Bibliographic metadata for all 326 papers plus distilled per-paper characteristics (research question, methodology, key finding) for the 236 papers with a served knowledge document."
+    },
+    {
+      "id": "18",
+      "standard": "prisma2020",
+      "title": "Risk of bias in studies (Results)",
+      "status": "missing",
+      "sources": [],
+      "note": "Follows from item 11: no risk-of-bias assessment was performed, so no results can be reported."
+    },
+    {
+      "id": "19",
+      "standard": "prisma2020",
+      "title": "Results of individual studies",
+      "status": "partial",
+      "sources": ["docs/vault/Papers", "pipeline/knowledge/distilled", "docs/data/fulltext_index.json"],
+      "note": "No per-study effect estimates exist (none apply to this review type). Per-paper key findings exist as distilled knowledge documents for 236 of 326 papers (verified marker counts in fulltext_index.json: 236 kd, 75 abstract only, 15 no text)."
+    },
+    {
+      "id": "20",
+      "standard": "prisma2020",
+      "title": "Results of syntheses",
+      "status": "partial",
+      "sources": ["benchmark/results/agreement_metrics.json", "benchmark/results/comparison_4way.json", "docs/data/concept_graph.json"],
+      "note": "The project's synthesis results are the dual-assessment comparison (kappa 0.0561 on 291 pairs, confusion matrix 100/34/108/49) and the concept network, not statistical syntheses; a record can report them as such only with explicit reframing."
+    },
+    {
+      "id": "21",
+      "standard": "prisma2020",
+      "title": "Reporting biases (Results)",
+      "status": "missing",
+      "sources": [],
+      "note": "Follows from item 14: no reporting bias assessment, no results."
+    },
+    {
+      "id": "22",
+      "standard": "prisma2020",
+      "title": "Certainty of evidence (Results)",
+      "status": "missing",
+      "sources": [],
+      "note": "Follows from item 15: no certainty assessment, no results."
+    },
+    {
+      "id": "23",
+      "standard": "prisma2020",
+      "title": "Discussion",
+      "status": "partial",
+      "sources": ["knowledge/project.md", "knowledge/status.md", "knowledge/ai-assisted-review-standards.md"],
+      "note": "Limitations of the review processes are richly documented (methodological limitations, three systematic benchmark limitations, standards gap analysis). The interpretation of the substantive literature findings exists only in the external paper draft, not in the repository."
+    },
+    {
+      "id": "24",
+      "standard": "prisma2020",
+      "title": "Registration and protocol",
+      "status": "missing",
+      "sources": ["knowledge/ai-assisted-review-standards.md"],
+      "note": "No registration, no protocol, no amendment record exists anywhere in the repository; knowledge/ai-assisted-review-standards.md itself names the missing PROSPERO/OSF protocol as a gap. This cannot be reconstructed retrospectively by definition."
+    },
+    {
+      "id": "25",
+      "standard": "prisma2020",
+      "title": "Support",
+      "status": "missing",
+      "sources": [],
+      "note": "No statement of financial or non-financial support for the review exists in the repository."
+    },
+    {
+      "id": "26",
+      "standard": "prisma2020",
+      "title": "Competing interests",
+      "status": "missing",
+      "sources": ["knowledge/ai-assisted-review-standards.md"],
+      "note": "No competing-interest declaration exists; knowledge/ai-assisted-review-standards.md flags the undeclared conflicts of interest regarding the AI tools (RAISE Table 1) as an open gap."
+    },
+    {
+      "id": "27",
+      "standard": "prisma2020",
+      "title": "Availability of data, code and other materials",
+      "status": "reconstructable",
+      "sources": ["README.md", "benchmark", "corpus", "prompts", "docs", "knowledge/data.md"],
+      "note": "Public repository with assessment data, scripts, prompts, and the Evidence Companion. Two documented exceptions: raw full texts are not published for copyright reasons (knowledge/data.md) and the .vault_cache API cache is not committed."
+    },
+    {
+      "id": "T1",
+      "standard": "traice",
+      "title": "Title: indicate AI assistance",
+      "status": "reconstructable",
+      "sources": ["README.md", "knowledge/project.md"],
+      "note": "The README title (Deep-Research-Assisted Literature Reviews) already signals the substantial AI role; a generated record title can carry the same statement."
+    },
+    {
+      "id": "A1",
+      "standard": "traice",
+      "title": "Abstract: summarise AI tools, stages, roles",
+      "status": "reconstructable",
+      "sources": ["knowledge/status.md", "knowledge/methods-and-pipeline.md"],
+      "note": "The assessment table in knowledge/status.md enumerates every AI track with model, input, schema, and status; the abstract text itself must be drafted from it."
+    },
+    {
+      "id": "I1",
+      "standard": "traice",
+      "title": "Introduction: rationale for AI use",
+      "status": "reconstructable",
+      "sources": ["knowledge/methods-and-pipeline.md", "knowledge/project.md"],
+      "note": "The rationale is explicit: testing a new technology rather than reducing effort, and the research question itself targets the epistemic asymmetry between machine and expert judgment."
+    },
+    {
+      "id": "M1",
+      "standard": "traice",
+      "title": "Methods: AI use pre-specified in protocol",
+      "status": "missing",
+      "sources": ["knowledge/ai-assisted-review-standards.md"],
+      "note": "No protocol exists and AI use was not pre-specified anywhere; the gap is acknowledged in knowledge/ai-assisted-review-standards.md and is structurally non-reconstructable after the fact."
+    },
+    {
+      "id": "M2",
+      "standard": "traice",
+      "title": "Methods: tool name, version, provider, access",
+      "status": "partial",
+      "sources": ["benchmark/scripts/run_llm_assessment.py", "knowledge/status.md", "prompts/CHANGELOG.md"],
+      "note": "The assessment models are fully identified, including the dated snapshot id claude-haiku-4-5-20251001 in run_llm_assessment.py and the Sonnet 4.6 comparison in knowledge/status.md. The four identification providers are named as products only, without model versions or run dates."
+    },
+    {
+      "id": "M3",
+      "standard": "traice",
+      "title": "Methods: SLR stages and tasks of the AI",
+      "status": "reconstructable",
+      "sources": ["knowledge/methods-and-pipeline.md", "prompts/CHANGELOG.md"],
+      "note": "Stage-task mapping is explicit: identification (deep research), screening (5D and 10K assessments), synthesis (three-stage knowledge distillation, concept extraction), each with its script and prompt."
+    },
+    {
+      "id": "M4",
+      "standard": "traice",
+      "title": "Methods: input data provided to the tool",
+      "status": "reconstructable",
+      "sources": ["benchmark/data/papers_full.csv", "knowledge/status.md", "docs/data/fulltext_index.json"],
+      "note": "The 10K run used title plus abstract from papers_full.csv; the 2x2 experiment introduced an Input_Source column and knowledge-document conditions. That the original run did not use knowledge documents is itself documented as a discovery in knowledge/status.md."
+    },
+    {
+      "id": "M5",
+      "standard": "traice",
+      "title": "Methods: output data format and post-processing",
+      "status": "reconstructable",
+      "sources": ["benchmark/data/llm_assessment_10k.csv", "benchmark/data/llm_assessment_10k.checkpoint.json", "knowledge/methods-and-pipeline.md"],
+      "note": "Structured JSON output with per-category booleans, decision, confidence, and reasoning, persisted as CSV plus checkpoint; the deterministic stage 2 of the distillation is documented as containing no API call."
+    },
+    {
+      "id": "M6",
+      "standard": "traice",
+      "title": "Methods: prompts and key parameters",
+      "status": "partial",
+      "sources": ["prompts/CHANGELOG.md", "benchmark/scripts/run_llm_assessment.py", "deep-research/literature-review-prompt.md"],
+      "note": "The assessment prompt is versioned (v1.0 to v2.1 with documented rationale) and max_tokens=1024 is pinned in code, but temperature and top-p were never set, so the effective values are unrecorded API defaults. The executed deep-research prompt instantiation is partly lost, and the 5D prompt file referenced as assessment-llm/prompt_template.md does not exist in the working tree."
+    },
+    {
+      "id": "M7",
+      "standard": "traice",
+      "title": "Methods: non-LLM tools, algorithms, settings",
+      "status": "partial",
+      "sources": ["knowledge/methods-and-pipeline.md", "requirements.txt", "knowledge/paper-integrity.md"],
+      "note": "Pipeline tool settings are documented (Docling >=2.60.0, validation thresholds, post-processing rules). The Zotero deduplication (title and DOI matching) has no recorded parameters and the RIS conversion step is not reproducible."
+    },
+    {
+      "id": "M8",
+      "standard": "traice",
+      "title": "Methods: human-AI interaction and oversight",
+      "status": "reconstructable",
+      "sources": ["benchmark/data/human_assessment.csv", "benchmark/data/llm_assessment_10k.csv", "knowledge/methods-and-pipeline.md", "benchmark/results/disagreements.csv"],
+      "note": "Full parallel dual screening with the human decision binding; the proportion of AI outputs with an independent human sibling decision is 291 of 326 by pairing. Reviewer qualifications are in knowledge/project.md; per-record reviewer identity is not recorded (see PRISMA item 8)."
+    },
+    {
+      "id": "M9",
+      "standard": "traice",
+      "title": "Methods: AI performance evaluation methods",
+      "status": "reconstructable",
+      "sources": ["benchmark/scripts/calculate_agreement.py", "benchmark/results/agreement_metrics.json", "benchmark/results/comparison_4way.json"],
+      "note": "Reference standard is the human decision set; metrics are agreement, Cohen's kappa (decision and per category), base rates, and confusion matrix, plus a controlled 2x2 model-by-input experiment."
+    },
+    {
+      "id": "M10",
+      "standard": "traice",
+      "title": "Methods: data governance",
+      "status": "reconstructable",
+      "sources": ["knowledge/data.md", "scripts/build_screening_index.py", "knowledge/methods-and-pipeline.md"],
+      "note": "The copyright boundary is explicit and enforced in code: raw full texts in pipeline/markdown_clean/ are never published, the search index is built only from served documents and abstracts, and the API cache is kept out of the repository."
+    },
+    {
+      "id": "R1",
+      "standard": "traice",
+      "title": "Results: flow distinguishes AI vs human decisions",
+      "status": "reconstructable",
+      "sources": ["benchmark/data/papers_full.csv", "benchmark/data/human_assessment.csv", "benchmark/data/llm_assessment_10k.csv", "benchmark/results/agreement_metrics.json", "docs/js/prisma.js"],
+      "note": "AI and human decisions are stored in separate files and never merged destructively, so the split flow is derivable, and the tool renders it. Two named ambiguities: 34 corpus papers have no human decision, and papers_full.csv marks 292 papers as having a human assessment while the benchmark pairs only 291."
+    },
+    {
+      "id": "R2",
+      "standard": "traice",
+      "title": "Results: AI performance evaluation results",
+      "status": "reconstructable",
+      "sources": ["benchmark/results/agreement_metrics.json", "benchmark/results/disagreements.csv", "knowledge/status.md"],
+      "note": "Kappa 0.0561 on 291 pairs, confusion matrix 100/34/108/49, per-category kappas 0.39 to 0.82, 142 disagreement cases in disagreements.csv, plus the Haiku-Sonnet and abstract-knowledge-document comparisons."
+    },
+    {
+      "id": "D1",
+      "standard": "traice",
+      "title": "Discussion: limitations of AI use",
+      "status": "reconstructable",
+      "sources": ["knowledge/project.md", "knowledge/status.md", "knowledge/paper-integrity.md"],
+      "note": "Documented limitations include the structural inclusion bias across all conditions, the Gender operationalization gap, the Fairness over-assignment under richer context, sycophancy mitigation, circularity, and paywall bias."
+    },
+    {
+      "id": "D2",
+      "standard": "traice",
+      "title": "Discussion: experience of using AI",
+      "status": "reconstructable",
+      "sources": ["knowledge/journal.md", "knowledge/status.md"],
+      "note": "The session journal and the milestone narrative record the practical experience, including the merge bug discovery and the prompt version iterations; this optional item is fillable from them."
+    }
+  ]
+}

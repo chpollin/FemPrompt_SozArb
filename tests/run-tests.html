@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>PRISM tests: not yet run</title>
+<style>
+  body { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; margin: 2rem; background: #fafaf7; color: #222; }
+  h1 { font-size: 1.1rem; }
+  p.note { color: #777; max-width: 62rem; font-size: 0.85rem; }
+  .summary { font-size: 1rem; }
+  .summary.pass { color: #2e7d32; font-weight: bold; }
+  .summary.fail { color: #c62828; font-weight: bold; }
+  .case { white-space: pre-wrap; padding: 1px 0; font-size: 0.82rem; }
+  .case.bad { color: #c62828; }
+  .case.ok { color: #555; }
+</style>
+</head>
+<body>
+<h1>PRISM pure-function tests (plan P1, zero-dependency browser runner)</h1>
+<p class="note">
+Open this file directly over file:// or from any static server; no build step, no framework.
+All fixtures are inline in tests.js. The only network attempt is prisma-data.js trying to load
+the research vault, which fails here and is caught; the tests do not depend on it.
+Results render below, into document.title (PASS n/n or FAIL k/n), and into window.__TEST_RESULTS__,
+so a browser agent can read the outcome from the title alone.
+Expected agreement values come from knowledge/verification-empirical-core.md.
+</p>
+<div id="results"></div>
+<!-- hidden stub: prisma-data.js writes its fetch-failure note here instead of throwing -->
+<div id="prisma-root" hidden></div>
+<!-- load order matters: prisma-data.js first so window.EC exists when prisma.js attaches window.EC._test -->
+<script src="../docs/js/prisma-data.js"></script>
+<script src="../docs/js/prisma.js"></script>
+<script src="tests.js"></script>
+</body>
+</html>

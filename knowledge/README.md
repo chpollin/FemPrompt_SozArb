@@ -13,6 +13,7 @@ Central documentation for the systematic literature review on AI literacy and LL
 | [status.md](status.md) | Milestones (M1–M13), benchmark results, selection audit, open items |
 | [paper-integrity.md](paper-integrity.md) | Systematic comparison of paper text vs. repository (VERIFIED / DEVIATION / MISSING) |
 | [journal.md](journal.md) | Work journal: chronological session log with decisions, results, and learnings |
+| [plan.md](plan.md) | Process: Zielbild and staged plan for the whole project (A: tool v1.0 to 1 July 2026, R: retrospective PRISMA replay and evaluation, B: update cycle through the tool, C: closure and reuse) |
 | [FORSCHUNGSPROJEKT-PROMPTOTYPING.md](FORSCHUNGSPROJEKT-PROMPTOTYPING.md) | Concept document: Promptotyping as epistemic practice, 3 layers (Vault, Web Interface, Paper) |
 
 ## PRISMA Screening Tool (Promptotyping knowledge base)
@@ -29,6 +30,25 @@ Promptotyping document set for the PRISMA screening tool **PRISM**, a standalone
 | [design.md](design.md) | Gestalt | UI/design brief; section 5 (5A-5D) specifies the three v4 surfaces as built |
 | [design-review-prism-handoff.md](design-review-prism-handoff.md) | Review | Analysis of the PRISM Claude Design handoff: interaction model, design system, what was ported, v4 follow-up |
 
+The pure-function test suite for the tool lives in `tests/` (zero-dependency browser runner, see `tests/README.md`).
+
+## Review Record and Verification
+
+Deliverables of the plan stages V and R and of the Teilprojekte TP3, TP5, TP7 (see [plan.md](plan.md)). Every number in these documents traces to the raw files in `benchmark/data/` or to a named source.
+
+| File | Content |
+|------|---------|
+| [verification-empirical-core.md](verification-empirical-core.md) | V1: adversarial recomputation of the central empirical claims from the raw assessment files; decomposed reading of the human-AI divergence (workflow vs. content disagreement), full metric set, content-only sensitivity |
+| [verification-novelty.md](verification-novelty.md) | V2: web verification of the methodological novelty claim; holds partially, the defensible contribution is conformance by construction at the report-artifact level; related-work list |
+| [conformance-audit.md](conformance-audit.md) | R1: every PRISMA 2020 and PRISMA-trAIce item judged against the repository (reconstructable / partial / missing); machine-readable map in `docs/data/conformance_map.json` |
+| [prisma-record-round1.md](prisma-record-round1.md) | Retrospective PRISMA record of review round 1 (Stage R): identification, both screening lanes, named gaps; companion data `docs/data/flow_model.json`; agent recount, scripted replay pending |
+| [analysis-divergence.md](analysis-divergence.md) | TP3 deliverable: the decomposed human-AI divergence finding, licensed source for the empirical section of the follow-up paper |
+| [update-protocol-draft.md](update-protocol-draft.md) | TP5: pre-registration protocol draft for literature update round 2, with paste-ready prompts; to be finalized and committed before the first round 2 search; rehearsal runs in `deep-research/update-rehearsal/` |
+| [reuse-setup.md](reuse-setup.md) | TP7 / Stage C3: setup path for running a foreign review on the PRISM machinery; draft until a third-party dry run |
+| [analysis-design.md](analysis-design.md) | TP4 deliverable (DRAFT): sub-questions SQ1 to SQ3, seven analysis fields with closed vocabularies, coding instructions, Excel schema extension, eight decisions for the 1 July 2026 meeting |
+| [simulation-ledger.md](simulation-ledger.md) | All simulated stakeholder decisions (TP4, TP5, user-story validation) with rationale; every entry pending ratification at the next real contact; simulation rule of 2026-06-09 |
+| [ris-conversion.md](ris-conversion.md) | Closes paper-integrity 3.8: round 1 RIS conversion documented as performed but not reproducible; binding documented procedure plus conversion prompt for round 2 |
+
 ## Guides
 
 | File | Content |
@@ -38,7 +58,7 @@ Promptotyping document set for the PRISMA screening tool **PRISM**, a standalone
 
 ## Paper
 
-The paper is being edited on Google Docs (Forum Wissenschaft 2/2026, deadline May 4, 2026).
+The Forum Wissenschaft paper (2/2026) is submitted and editorially closed; the integrity check of the submitted text against the repository is in [paper-integrity.md](paper-integrity.md). The follow-up paper is results-led (narrative decision 2026-06-09: the research question leads, the workflow lives in the methods section): outline with claims inventory in `paper/outline.md`, register probes in `paper/style-probes/` (register 2 chosen, both judges), full draft in `paper/draft.md` with pending sections marked; synthesis numbers follow the TP4 analysis coding.
 
 ## External Resources
 
