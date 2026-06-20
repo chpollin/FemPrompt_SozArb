@@ -54,7 +54,7 @@ What epistemic infrastructure does an LLM-assisted literature review require to 
 | Criterion | Measurable | Status |
 |-----------|------------|--------|
 | 249 knowledge documents | Structured full-text extraction | Completed (97.2% verified) |
-| Divergence analysis | 111 cases categorized | Completed |
+| Divergence analysis | 142 disagreements identified (recompute-verified 2026-06-20); pattern categorization to be rerun on the corrected pairing | Partial |
 | Obsidian Vault | Interlinked knowledge base | Done (249 papers, 205 with assessment data) |
 
 ### Nice-to-Have

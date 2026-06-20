@@ -23,7 +23,7 @@ Systematic literature review on **feminist AI literacy** and **LLM bias** in the
 
 Archived: LLM 5D assessment (325/325, 5 ordinal dimensions, $1.15).
 
-**Benchmark results (corrected 2026-03-27):** Confusion matrix (100 Include-Include, 108 LLM-Include/Human-Exclude, 34 reversed, 49 Exclude-Exclude), base rates (LLM 71.5% vs. Human 46.0% Include), Cohen's Kappa = 0.056 (prevalence-bias artifact per Byrt et al. 1993). Basis: 291 papers. Details: `knowledge/status.md`, section M6.
+**Benchmark results (corrected 2026-03-27, recompute-verified 2026-06-20):** Confusion matrix (100 Include-Include, 108 LLM-Include/Human-Exclude, 34 reversed, 49 Exclude-Exclude), base rates (LLM 71.5% vs. Human 46.0% Include), Cohen's Kappa = 0.056. The observed agreement is genuinely near chance (PABAK 0.024), not merely a prevalence artifact. The headline divergence is dominated by human workflow exclusions (Duplicate, No full text, Wrong publication type) that a single-paper LLM cannot see; on content-only decisions (n=199) the include rates converge and kappa rises to 0.194. Basis: 291 papers. Details: `knowledge/verification-empirical-core.md` (V1) and `knowledge/status.md`. Numbers reproducible via `benchmark/scripts/verify_femprompt.py`.
 
 ## Repository Structure
 
@@ -39,7 +39,7 @@ benchmark/                 # Human vs. LLM benchmark (10K)
 pipeline/                  # PDF -> Markdown -> Knowledge
   scripts/                 # Python scripts (incl. generate_vault.py)
   knowledge/distilled/     # 249 knowledge documents
-vault/                     # Obsidian Vault (248 papers, 136 concepts, 111 divergences)
+vault/                     # Obsidian Vault (248 papers, 136 concepts, 142 divergences after regeneration)
 config/                    # Configuration (defaults.yaml)
 prompts/                   # Prompt changelog and governance
 deep-research/restored/    # Deep Research artifacts (RIS, raw outputs)
