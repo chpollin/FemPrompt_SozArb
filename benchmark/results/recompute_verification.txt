@@ -1,0 +1,135 @@
+HUMAN cols: ['ID', 'Zotero_Key', 'Author_Year', 'Title', 'DOI', 'Item_Type', 'Publication_Year', 'Language', 'Source_Tool', 'Abstract', 'URL', 'AI_Literacies', 'Generative_KI', 'Prompting', 'KI_Sonstige', 'Soziale_Arbeit', 'Bias_Ungleichheit', 'Gender', 'Diversitaet / Intersektionalität', 'Feministisch', 'Fairness', 'Studientyp', 'Decision', 'Exclusion_Reason', 'Notes']
+HUMAN data rows: 303
+HUMAN unique keys: 303 | duplicate keys: [] | empty-key rows: 0
+HUMAN raw Decision values: {'Exclude': 161, 'Include': 142}
+HUMAN columns possibly reviewer-related: []
+
+=== Haiku + Abstract (10k) (llm_assessment_10k.csv) ===
+rows: 326 unique keys: 326 dup keys: [] empty-key rows: 0
+raw Decision values: {'Exclude': 94, 'Include': 232}
+paired by Zotero_Key: 291 | human-only: 12 | llm-only: 35
+decision pairs (both decisions present): 291 | dropped (missing decision): 0
+confusion: II=100 IE=34 EI=108 EE=49 others={}
+human include: 134/291 = 0.4605 | llm include: 208/291 = 0.7148
+observed agreement po = 0.5120
+Cohen kappa = 0.0561 | PABAK = 0.0241
+human Exclusion_Reason in Human-Exclude/LLM-Include cell: {'Duplicate': 50, 'Not relevant topic': 28, 'Wrong publication type': 14, 'No full text': 8, 'Other': 4, '(empty)': 3, 'No relevant topic': 1}
+human Exclusion_Reason among all paired human Excludes: {'Duplicate': 66, 'Not relevant topic': 54, 'Wrong publication type': 17, 'No full text': 9, '(empty)': 5, 'Other': 5, 'No relevant topic': 1}
+LLM Input_Source distribution among paired papers: {'(none)': 291}
+prevalence index = 0.1753 | bias index = -0.2543
+kappa_max given marginals = 0.5081 (po_max=0.7457, pe=0.4830)
+SENSITIVITY (non-content human excludes removed): n=199
+  confusion: II=100 IE=34 EI=36 EE=29
+  human include rate=0.6734 llm include rate=0.6834
+  kappa=0.1940 PABAK=0.2965 po=0.6482
+category kappas (n, kappa, agreement, human-yes-rate, llm-yes-rate):
+  AI_Literacies      n=238 kappa=0.4880 agree=0.7605 hYes=0.2605 lYes=0.4328 
+  Generative_KI      n=234 kappa=0.5460 agree=0.7650 hYes=0.5769 lYes=0.3846 WEIRD:{('OTHER:?', 'Nein'): 2}
+  Prompting          n=236 kappa=0.5331 agree=0.8008 hYes=0.3686 lYes=0.2203 
+  KI_Sonstige        n=235 kappa=0.5355 agree=0.7702 hYes=0.6383 lYes=0.5191 
+  Soziale_Arbeit     n=234 kappa=0.8250 agree=0.9359 hYes=0.2393 lYes=0.2436 WEIRD:{('OTHER:?', 'Ja'): 1}
+  Bias_Ungleichheit  n=234 kappa=0.4386 agree=0.7949 hYes=0.7863 lYes=0.7350 
+  Gender             n=234 kappa=0.4074 agree=0.6795 hYes=0.6111 lYes=0.3162 
+  Diversitaet        n=234 kappa=0.4318 agree=0.7009 hYes=0.6239 lYes=0.3932 
+  Feministisch       n=234 kappa=0.7527 agree=0.9103 hYes=0.2137 lYes=0.2607 
+  Fairness           n=234 kappa=0.3875 agree=0.6923 hYes=0.4915 lYes=0.6368 
+
+=== Haiku + KD (llm_assessment_haiku_kd.csv) ===
+rows: 326 unique keys: 326 dup keys: [] empty-key rows: 0
+raw Decision values: {'Exclude': 45, 'Include': 281}
+paired by Zotero_Key: 291 | human-only: 12 | llm-only: 35
+decision pairs (both decisions present): 291 | dropped (missing decision): 0
+confusion: II=123 IE=11 EI=135 EE=22 others={}
+human include: 134/291 = 0.4605 | llm include: 258/291 = 0.8866
+observed agreement po = 0.4983
+Cohen kappa = 0.0544 | PABAK = -0.0034
+human Exclusion_Reason in Human-Exclude/LLM-Include cell: {'Duplicate': 55, 'Not relevant topic': 45, 'Wrong publication type': 16, 'No full text': 9, 'Other': 5, '(empty)': 4, 'No relevant topic': 1}
+human Exclusion_Reason among all paired human Excludes: {'Duplicate': 66, 'Not relevant topic': 54, 'Wrong publication type': 17, 'No full text': 9, '(empty)': 5, 'Other': 5, 'No relevant topic': 1}
+LLM Input_Source distribution among paired papers: {'KD': 202, 'Abstract': 89}
+prevalence index = 0.3471 | bias index = -0.4261
+kappa_max given marginals = 0.1968 (po_max=0.5739, pe=0.4694)
+SENSITIVITY (non-content human excludes removed): n=199
+  confusion: II=123 IE=11 EI=55 EE=10
+  human include rate=0.6734 llm include rate=0.8945
+  kappa=0.0869 PABAK=0.3367 po=0.6683
+category kappas (n, kappa, agreement, human-yes-rate, llm-yes-rate):
+  AI_Literacies      n=238 kappa=0.2873 agree=0.6092 hYes=0.2605 lYes=0.6008 
+  Generative_KI      n=234 kappa=0.6438 agree=0.8205 hYes=0.5769 lYes=0.4744 WEIRD:{('OTHER:?', 'Nein'): 2}
+  Prompting          n=236 kappa=0.6766 agree=0.8559 hYes=0.3686 lYes=0.2924 
+  KI_Sonstige        n=235 kappa=0.4390 agree=0.7574 hYes=0.6383 lYes=0.7447 
+  Soziale_Arbeit     n=234 kappa=0.6951 agree=0.8761 hYes=0.2393 lYes=0.3205 WEIRD:{('OTHER:?', 'Ja'): 1}
+  Bias_Ungleichheit  n=234 kappa=0.3067 agree=0.8162 hYes=0.7863 lYes=0.9103 
+  Gender             n=234 kappa=0.5295 agree=0.7692 hYes=0.6111 lYes=0.5427 
+  Diversitaet        n=234 kappa=0.2563 agree=0.6880 hYes=0.6239 lYes=0.8248 
+  Feministisch       n=234 kappa=0.7526 agree=0.9060 hYes=0.2137 lYes=0.2906 
+  Fairness           n=234 kappa=0.1564 agree=0.5726 hYes=0.4915 lYes=0.8846 
+
+=== Sonnet + Abstract (llm_assessment_sonnet.csv) ===
+rows: 326 unique keys: 326 dup keys: [] empty-key rows: 0
+raw Decision values: {'Exclude': 60, 'Include': 266}
+paired by Zotero_Key: 291 | human-only: 12 | llm-only: 35
+decision pairs (both decisions present): 291 | dropped (missing decision): 0
+confusion: II=118 IE=16 EI=122 EE=35 others={}
+human include: 134/291 = 0.4605 | llm include: 240/291 = 0.8247
+observed agreement po = 0.5258
+Cohen kappa = 0.0979 | PABAK = 0.0515
+human Exclusion_Reason in Human-Exclude/LLM-Include cell: {'Duplicate': 57, 'Not relevant topic': 31, 'Wrong publication type': 17, 'No full text': 9, 'Other': 4, '(empty)': 3, 'No relevant topic': 1}
+human Exclusion_Reason among all paired human Excludes: {'Duplicate': 66, 'Not relevant topic': 54, 'Wrong publication type': 17, 'No full text': 9, '(empty)': 5, 'Other': 5, 'No relevant topic': 1}
+LLM Input_Source distribution among paired papers: {'(none)': 291}
+prevalence index = 0.2852 | bias index = -0.3643
+kappa_max given marginals = 0.3070 (po_max=0.6357, pe=0.4743)
+SENSITIVITY (non-content human excludes removed): n=199
+  confusion: II=118 IE=16 EI=39 EE=26
+  human include rate=0.6734 llm include rate=0.7889
+  kappa=0.3087 PABAK=0.4472 po=0.7236
+category kappas (n, kappa, agreement, human-yes-rate, llm-yes-rate):
+  AI_Literacies      n=238 kappa=0.4792 agree=0.7857 hYes=0.2605 lYes=0.3151 
+  Generative_KI      n=234 kappa=0.5648 agree=0.7735 hYes=0.5769 lYes=0.3675 WEIRD:{('OTHER:?', 'Nein'): 2}
+  Prompting          n=236 kappa=0.5548 agree=0.8136 hYes=0.3686 lYes=0.1907 
+  KI_Sonstige        n=235 kappa=0.5506 agree=0.7787 hYes=0.6383 lYes=0.5277 
+  Soziale_Arbeit     n=234 kappa=0.8316 agree=0.9402 hYes=0.2393 lYes=0.2222 WEIRD:{('OTHER:?', 'Nein'): 1}
+  Bias_Ungleichheit  n=234 kappa=0.4595 agree=0.7906 hYes=0.7863 lYes=0.6966 
+  Gender             n=234 kappa=0.2837 agree=0.5983 hYes=0.6111 lYes=0.2265 
+  Diversitaet        n=234 kappa=0.4249 agree=0.7009 hYes=0.6239 lYes=0.4188 
+  Feministisch       n=234 kappa=0.8193 agree=0.9402 hYes=0.2137 lYes=0.2051 
+  Fairness           n=234 kappa=0.3776 agree=0.6880 hYes=0.4915 lYes=0.5726 
+
+=== Sonnet + KD (llm_assessment_sonnet_kd.csv) ===
+rows: 326 unique keys: 326 dup keys: [] empty-key rows: 0
+raw Decision values: {'Exclude': 33, 'Include': 293}
+paired by Zotero_Key: 291 | human-only: 12 | llm-only: 35
+decision pairs (both decisions present): 291 | dropped (missing decision): 0
+confusion: II=131 IE=3 EI=135 EE=22 others={}
+human include: 134/291 = 0.4605 | llm include: 266/291 = 0.9141
+observed agreement po = 0.5258
+Cohen kappa = 0.1098 | PABAK = 0.0515
+human Exclusion_Reason in Human-Exclude/LLM-Include cell: {'Duplicate': 59, 'Not relevant topic': 40, 'Wrong publication type': 17, 'No full text': 9, 'Other': 5, '(empty)': 4, 'No relevant topic': 1}
+human Exclusion_Reason among all paired human Excludes: {'Duplicate': 66, 'Not relevant topic': 54, 'Wrong publication type': 17, 'No full text': 9, '(empty)': 5, 'Other': 5, 'No relevant topic': 1}
+LLM Input_Source distribution among paired papers: {'KD': 202, 'Abstract': 89}
+prevalence index = 0.3746 | bias index = -0.4536
+kappa_max given marginals = 0.1485 (po_max=0.5464, pe=0.4673)
+SENSITIVITY (non-content human excludes removed): n=199
+  confusion: II=131 IE=3 EI=50 EE=15
+  human include rate=0.6734 llm include rate=0.9095
+  kappa=0.2560 PABAK=0.4673 po=0.7337
+category kappas (n, kappa, agreement, human-yes-rate, llm-yes-rate):
+  AI_Literacies      n=238 kappa=0.4512 agree=0.7521 hYes=0.2605 lYes=0.3992 
+  Generative_KI      n=234 kappa=0.6706 agree=0.8333 hYes=0.5769 lYes=0.4615 WEIRD:{('OTHER:?', 'Nein'): 2}
+  Prompting          n=236 kappa=0.6506 agree=0.8475 hYes=0.3686 lYes=0.2585 
+  KI_Sonstige        n=235 kappa=0.6027 agree=0.8170 hYes=0.6383 lYes=0.6426 
+  Soziale_Arbeit     n=234 kappa=0.8041 agree=0.9274 hYes=0.2393 lYes=0.2521 WEIRD:{('OTHER:?', 'Nein'): 1}
+  Bias_Ungleichheit  n=234 kappa=0.4438 agree=0.8376 hYes=0.7863 lYes=0.8632 
+  Gender             n=234 kappa=0.4493 agree=0.7137 hYes=0.6111 lYes=0.4103 
+  Diversitaet        n=234 kappa=0.4520 agree=0.7521 hYes=0.6239 lYes=0.6923 
+  Feministisch       n=234 kappa=0.8405 agree=0.9444 hYes=0.2137 lYes=0.2350 
+  Fairness           n=234 kappa=0.2458 agree=0.6197 hYes=0.4915 lYes=0.7521 
+
+human-only keys (in human CSV, not in 10k LLM CSV): ['6JAZXKEB', '7WMD5JQ6', '9MDIBETZ', 'CLADZZKS', 'DZ39L7GC', 'E35KJFXB', 'H8WRNPP7', 'JJLSMEQA', 'MQJEES7J', 'R2LPR3VD', 'UY65LIAI', 'WGVC7FQ5']
+papers_full rows: 326 unique keys: 326 dups: []
+papers_full Has_HA=Yes: 292
+Has_HA=Yes but key not in human CSV: ['2YS85B49']
+human CSV key not in papers_full at all: ['6JAZXKEB', '7WMD5JQ6', '9MDIBETZ', 'CLADZZKS', 'DZ39L7GC', 'E35KJFXB', 'H8WRNPP7', 'JJLSMEQA', 'MQJEES7J', 'R2LPR3VD', 'UY65LIAI', 'WGVC7FQ5']
+LLM 10k keys not in papers_full: []
+
+llm_assessment_haiku.csv rows: 326 unique keys: 326
+haiku.csv vs 10k.csv: common keys: 326 decision diffs: 0
