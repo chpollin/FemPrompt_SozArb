@@ -68,3 +68,6 @@ pipeline/validation_reports_clean/
 *_old.*
 *_backup.*
 *_copy.*
+
+# Node (test harness dev dependency only; the app under docs/ stays vanilla)
+node_modules/

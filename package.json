@@ -1,0 +1,13 @@
+{
+  "name": "femprompt-prisma-tests",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Headless test harness for the PRISM screening tool. The app under docs/ stays framework-free and dependency-free; jsdom is a dev dependency of the test harness only, never shipped (plan P1).",
+  "type": "module",
+  "scripts": {
+    "test": "node tests/run.mjs"
+  },
+  "devDependencies": {
+    "jsdom": "^29.1.1"
+  }
+}

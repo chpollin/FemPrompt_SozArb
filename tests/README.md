@@ -1,10 +1,14 @@
 # tests/
 
-Test fundament for the PRISM screening tool (plan P1, browser leg). A zero-dependency test runner locks down the pure functions of `docs/js/prisma.js`: decision derivation, agreement metrics, flow aggregation, markdown escaping and parsing helpers, evidence handling, the commit guard, and the generated disclosure text.
+Test fundament for the PRISM screening tool (plan P1). A zero-dependency test suite locks down the pure functions of `docs/js/prisma.js`: decision derivation, agreement metrics, flow aggregation, markdown escaping and parsing helpers, evidence handling, the commit guard, and the generated disclosure text.
 
 ## How to run
 
-Open `tests/run-tests.html` in any browser, directly over `file://` or from a static server serving the repo root. There is no build step, no framework, and no test data to fetch; all fixtures are inline in `tests.js`.
+Two legs, same suite (`tests.js`), same inline fixtures.
+
+Headless (node, the committed harness): run `npm install` once, then `npm test`. The runner `tests/run.mjs` injects the same three scripts into a jsdom window in the same order as the browser page, prints `PASS n/n` to stdout, and sets the process exit code (non-zero on any failure). jsdom is a dev dependency of this harness only; the app under `docs/` stays framework-free and dependency-free.
+
+Browser: open `tests/run-tests.html` directly over `file://` or from a static server serving the repo root. No build step, no framework, no test data to fetch.
 
 Results appear in three places so both humans and browser agents can read them:
 
@@ -12,13 +16,14 @@ Results appear in three places so both humans and browser agents can read them:
 - `document.title` (`PASS n/n PRISM tests` or `FAIL k/n PRISM tests`),
 - `window.__TEST_RESULTS__` (machine-readable object with the full result list).
 
-The only network activity is `docs/js/prisma-data.js` attempting to load the research vault JSON; over `file://` this fails, is caught by that script, and has no effect on the tests.
+The only network activity is `docs/js/prisma-data.js` attempting to load the research vault JSON; over `file://` and in the headless runner this fails, is caught by that script, and has no effect on the tests.
 
 ## Files
 
 | File | Purpose |
 |---|---|
-| `run-tests.html` | Runner page. Loads `../docs/js/prisma-data.js` (real `window.EC.escapeHtml`), then `../docs/js/prisma.js` (whose appended exposure block attaches `window.EC._test`), then `tests.js`. Load order matters: the data layer must come first so `window.EC` exists when the exposure block runs. |
+| `run-tests.html` | Browser runner page. Loads `../docs/js/prisma-data.js` (real `window.EC.escapeHtml`), then `../docs/js/prisma.js` (whose appended exposure block attaches `window.EC._test`), then `tests.js`. Load order matters: the data layer must come first so `window.EC` exists when the exposure block runs. |
+| `run.mjs` | Headless node runner. Injects the same three scripts into a jsdom window, reads `window.__TEST_RESULTS__`, and exits non-zero on failure. Run with `npm test`. |
 | `tests.js` | The suite: assert helpers, inline fixtures, all test cases, result rendering. |
 
 ## What is covered
@@ -35,7 +40,7 @@ Reviewer keys in fixtures are neutral ids (`r1`, `r2`).
 
 ## Test exposure block in prisma.js
 
-The pure functions are closure-scoped inside the IIFE of `docs/js/prisma.js`. A single appended block at the end of that closure (directly before the final `})();`) exposes them as `window.EC._test`; no existing line was changed and the block has no runtime effect on the tool. On the production page `prisma.html`, where `prisma.js` loads before `prisma-data.js`, the data layer replaces `window.EC` afterwards, so the hook does not exist there. The older `window.__PRISMA_TEST__` hook (for the jsdom harness) is untouched.
+The pure functions are closure-scoped inside the IIFE of `docs/js/prisma.js`. A single appended block at the end of that closure (directly before the final `})();`) exposes them as `window.EC._test`; no existing line was changed and the block has no runtime effect on the tool. On the production page `prisma.html`, where `prisma.js` loads before `prisma-data.js`, the data layer replaces `window.EC` afterwards, so the hook does not exist there. The older `window.__PRISMA_TEST__` hook is untouched.
 
 ## State hygiene
 
@@ -43,8 +48,8 @@ The pure functions are closure-scoped inside the IIFE of `docs/js/prisma.js`. A 
 
 ## Status
 
-The suite was written without an executable shell or browser in the authoring session and has not been executed yet. First execution (open `run-tests.html`, read `document.title`) is the immediate next step; any failures will be assertion-level and visible per test on the page.
+Executed and green: `npm test` reports PASS 56/56 headless under jsdom (jsdom is a dev dependency, pinned in `package.json`). The browser leg (`run-tests.html`) runs the identical suite.
 
 ## Relation to plan P1
 
-Plan P1 names two test layers: the committed jsdom harness (node-based, dev dependencies allowed) and this browser runner. This directory currently contains only the browser leg; the jsdom harness and its `package.json` are a separate commitment.
+Plan P1 names two test layers: the committed jsdom harness (node-based, dev dependencies allowed) and the browser runner. Both are now present and share one suite (`tests.js`): `run.mjs` plus `package.json` is the headless harness, `run-tests.html` the browser leg. Still open from P1: the additional acceptance checks remain a separate work item, namely export/import round-trip losslessness (FR-08), the seed reproducing the canonical benchmark from the real `research_vault_v2.json` rather than synthetic fixtures (FR-05), and the reviewer schema 0.1 to 0.2 migration. The current suite covers the pure functions, including the canonical kappa and matrix on synthetic fixtures.
