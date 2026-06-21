@@ -575,6 +575,28 @@ Systematic comparison of the paper text (Forum Wissenschaft draft) against the c
 
 ---
 
+## Session 2026-06-21: Verifikation PRISM-Frontend (Forschungsleitstelle-Lane femprompt-prism)
+
+**Branch:** `feat/prisma-screening-tool` (HEAD `1c1217a`, synchron mit origin)
+
+### Was passiert ist
+
+- Testfundament gegen echten Lauf verifiziert: `npm test` (headless jsdom-Harness `tests/run.mjs`) meldet PASS 56/56. Damit ist die in der Welle vom 2026-06-09 geschriebene, zunaechst ungelaufene Suite belegt lauffaehig, nicht nur per Commit-Behauptung.
+- Alle drei Oberflaechen im Browser durchgeklickt (lokaler Static-Server auf `docs/`, prisma.html). App laedt sauber: Konsole meldet `326 papers loaded` und `initialized, 326 papers, FS supported`, keine Fehler.
+  - **Screening mit Beleg-Pinning:** Volltextsuche findet Treffer, "Treffer anheften" oeffnet das Kategorie-Menue, `pinEvidence` setzt Kategorie plus Beleg (Term, Snippet, Timestamp). Ableitungslogik bestaetigt: >=1 Technik UND >=1 Sozial kippt die abgeleitete Entscheidung von Exclude auf Include.
+  - **PRISMA & Report:** PRISMA-2020-Fluss (n=326, getrennte KI-/Mensch-Spuren, advisory/bindend), Konfusionsmatrix 100/34/108/49 mit kappa=0.056 und n=291, zehn Kategorie-Kappas, 14-Item-trAIce-Checkliste (Holst et al. 2025), AI-Disclosure mit Markdown-Vorschau, die kanonische Kappa und Matrix tragend. Zahlen stimmen mit `knowledge/verification-empirical-core.md` und README ueberein.
+  - **Daten & Repo:** File-System-Access-Git-Workflow (Ordner `docs/data/screening/` verbinden, eine JSON pro Reviewer:in, Schema 0.2), Export/Import-Fallback fuer alle Browser, Reviewer:innen-Abgleichstabelle, Excel-CSV-Bruecke mit Pruefbericht und Kollisionsschutz.
+- Speicher- und Sync-Pfad inkl. Fallback verifiziert: Entscheidung wird nach localStorage (`femprompt-prisma-state/0.2`) geschrieben und ueberlebt einen Reload (Erledigt-Zaehler 1/326, Beleg erhalten). Verbindungsstatus bleibt "nicht mit Repo verbunden", also greift der localStorage-Fallback. Export-Payload `femprompt-prisma-reviewer/0.2` ueber `__PRISMA_TEST__.reviewerPayload` als wohlgeformt geprueft. Testentscheid danach wieder entfernt, Vorfuehrzustand pristin (0/326).
+- Kein Secret-Leak: `docs/js/config.local.js` (Gemini-Key) und `.env` sind gitignored und nie committet; der Key taucht nicht in der History auf. Die PRISM-Dateien referenzieren den Key nicht, nur `docs/index.html` laedt `config.local.js` mit `onerror=""` (graceful), das Tool deployt also sicher ohne Key.
+
+### Was wir gelernt haben
+
+- **Der jsdom-Harness ist die belastbare Spur, nicht der Screenshot:** Das Chrome-Fenster ist mit den parallelen Frontend-Lanes geteilt und wird laufend resized, Pixel-Klicks und Screenshots werden dadurch unzuverlaessig. Aufloesungsunabhaengig bleiben Element-Referenzen (`find`) und `javascript_tool` gegen `window.__PRISMA_TEST__`.
+- **Blockierende Dialoge meiden:** "Eigene Session leeren" ruft `confirm()` (prisma.js:1233), die FS-Access-Fehlerpfade `alert()` (194/209/211). Im Browser-Automationslauf nicht klicken; Cleanup stattdessen direkt ueber localStorage.
+- **Merge-Scope ist breiter als das Tool:** Der Feature-Branch unterscheidet sich in 62 Dateien von main, davon nur 10 unter `docs/`; der Rest ist Paper-Strang (`paper/`, ratifizierbar erst 1. Juli), Benchmark-Experimente und knowledge. Ein Voll-Merge braechte den Paper-Strang mit auf main. Operator-Entscheidung.
+
+---
+
 ## Wiederkehrende Muster
 
 ### Was immer wieder hilft
@@ -593,4 +615,4 @@ Systematic comparison of the paper text (Forum Wissenschaft draft) against the c
 
 ---
 
-*Aktualisiert: 2026-06-09*
+*Aktualisiert: 2026-06-21*
