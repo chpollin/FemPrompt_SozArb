@@ -455,6 +455,9 @@ body.pt-fullscreen *, body.pt-fullscreen *::before, body.pt-fullscreen *::after 
 .pt-evid-dot { width: 9px; height: 9px; border-radius: 50%; flex: none; }
 .pt-evid-item { display: flex; align-items: flex-start; gap: 0.4rem; padding: 0.35rem 0.5rem; margin-bottom: 0.25rem; background: var(--pt-surface-2); border: 1px solid var(--pt-border); border-radius: var(--pt-r-sm); }
 .pt-evid-snip { flex: 1; font-size: var(--pt-xs); line-height: 1.5; color: var(--pt-ink-2); font-family: var(--pt-serif); }
+.pt-evid-origin { flex: none; align-self: flex-start; font-family: var(--pt-mono); font-size: var(--pt-2xs); letter-spacing: 0.04em; text-transform: uppercase; padding: 0.06rem 0.32rem; border: 1px solid var(--pt-border); border-radius: var(--pt-r-sm); color: var(--pt-ink-3); }
+.pt-evid-origin-human { color: var(--pt-human); }
+.pt-evid-origin-ai { color: var(--pt-ai); }
 .pt-evid-x { flex: none; border: none; background: none; color: var(--pt-ink-4); cursor: pointer; font-size: var(--pt-md); line-height: 1; padding: 0 2px; }
 .pt-evid-x:hover { color: var(--pt-exclude); }
 

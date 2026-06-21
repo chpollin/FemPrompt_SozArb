@@ -1,7 +1,8 @@
 // Headless test runner for the PRISM pure-function suite (plan P1).
 // Mirrors tests/run-tests.html: it loads docs/js/prisma-data.js, then
 // docs/js/prisma.js (which appends the window.EC._test exposure hook), then
-// tests/tests.js into one jsdom window, then reports window.__TEST_RESULTS__
+// docs/js/prisma-import.js (window.__PRISMA_IMPORT_TEST__, the bridge suite),
+// then tests/tests.js into one jsdom window, then reports window.__TEST_RESULTS__
 // and sets the process exit code. The app stays framework-free; jsdom is a
 // dev dependency of this harness only and is never shipped from docs/.
 import { JSDOM } from 'jsdom';
@@ -33,6 +34,7 @@ function inject(rel) {
 try {
   inject('docs/js/prisma-data.js');
   inject('docs/js/prisma.js');
+  inject('docs/js/prisma-import.js'); // exposes window.__PRISMA_IMPORT_TEST__ for the bridge suite
   inject('tests/tests.js');
 } catch (e) {
   console.error('inject failed:', e && e.message ? e.message : e);

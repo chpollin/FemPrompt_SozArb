@@ -553,6 +553,96 @@ test('disclosureMarkdown reports the canonical kappa and matrix on the benchmark
 });
 
 // ============================================================
+// KI2: per-Beleg provenance (origin), neutral, no valuation
+// ============================================================
+
+test('pinEvidence stamps human provenance on a reviewer Beleg', function() {
+    T.resetWork({ id: 'provPaper' });
+    T.pinEvidence('Gender', 'gendered language', 'a snippet about gendered language');
+    assertEqual(T.getWork().evidence.Gender[0].origin, 'human');
+});
+test('evidenceListHtml marks a human Beleg as Mensch and an AI Beleg as KI', function() {
+    var ev = {
+        Gender: [{ term: 'h', snippet: 'human snippet', origin: 'human' }],
+        Prompting: [{ term: 'a', snippet: 'ai snippet', origin: 'ai' }]
+    };
+    var html = T.evidenceListHtml(ev, true);
+    assertContains(html, 'pt-evid-origin-human">Mensch');
+    assertContains(html, 'pt-evid-origin-ai">KI');
+    assertContains(html, 'human snippet');
+    assertContains(html, 'ai snippet');
+});
+test('evidenceListHtml defaults a Beleg without origin to human (legacy records)', function() {
+    var html = T.evidenceListHtml({ Fairness: [{ term: 'x', snippet: 'legacy snippet' }] }, true);
+    assertContains(html, 'pt-evid-origin-human">Mensch');
+    assertNotContains(html, 'pt-evid-origin-ai');
+});
+test('evidenceListHtml renders both origins through the same neutral marker class', function() {
+    var ev = {
+        Gender: [{ term: 'h', snippet: 's1', origin: 'human' }],
+        Prompting: [{ term: 'a', snippet: 's2', origin: 'ai' }]
+    };
+    var html = T.evidenceListHtml(ev, true);
+    // both Belege carry the shared base class; only the identity modifier differs (no better/worse)
+    assertEqual(html.split('class="pt-evid-origin ').length - 1, 2, 'both Belege share the pt-evid-origin marker');
+});
+
+// ============================================================
+// P3 import bridge: the data-hygiene validation report (R1 lesson)
+// ============================================================
+
+var IMP = window.__PRISMA_IMPORT_TEST__;
+var IMP_HEADER = 'Zotero_Key,AI_Literacies,Generative_KI,Prompting,KI_Sonstige,' +
+    'Soziale_Arbeit,Bias_Ungleichheit,Gender,Diversitaet,Feministisch,Fairness,Decision,Exclusion_Reason';
+
+function runImport(body, existing, overwrite) {
+    var rows = IMP.parseCsv(IMP_HEADER + '\n' + body);
+    var header = IMP.mapHeader(rows[0]);
+    assertEqual(header.missing.length, 0, 'fixture header maps all required columns');
+    return IMP.convert(rows.slice(1), header, 'R1', existing || {}, !!overwrite, 'fixture.csv');
+}
+function reportKinds(res) { return res.report.map(function(it) { return it.kind; }).join('|'); }
+
+test('import bridge test hook is exposed (harness loads prisma-import.js)', function() {
+    assert(IMP && IMP.convert && IMP.parseCsv && IMP.mapHeader, 'window.__PRISMA_IMPORT_TEST__ present');
+});
+test('import: a clean Include row is added with no error-level findings', function() {
+    var res = runImport('P1,Nein,Ja,Nein,Nein,Ja,Nein,Nein,Nein,Nein,Nein,Include,');
+    assertEqual(res.stats.added, 1);
+    assert(res.payload.decisions.P1, 'P1 recorded');
+    assertEqual(res.payload.decisions.P1.decision, 'Include');
+    assertEqual(res.report.filter(function(it) { return it.level === 'error'; }).length, 0, 'no error-level findings');
+});
+test('import: an out-of-vocabulary exclusion reason is flagged and preserved verbatim', function() {
+    var res = runImport('P2,Nein,Ja,Nein,Nein,Nein,Nein,Nein,Nein,Nein,Nein,Exclude,Other');
+    assertContains(reportKinds(res), 'Ausschlussgrund ausserhalb des Vokabulars');
+    assertEqual(res.payload.decisions.P2.reason, 'Other', 'unknown reason preserved verbatim');
+});
+test('import: an empty exclusion reason on Exclude is flagged', function() {
+    var res = runImport('P3,Nein,Ja,Nein,Nein,Nein,Nein,Nein,Nein,Nein,Nein,Exclude,');
+    assertContains(reportKinds(res), 'leerer Ausschlussgrund');
+});
+test('import: a duplicate Zotero key is reported and the second row skipped', function() {
+    var res = runImport(
+        'P4,Nein,Ja,Nein,Nein,Ja,Nein,Nein,Nein,Nein,Nein,Include,\n' +
+        'P4,Nein,Ja,Nein,Nein,Ja,Nein,Nein,Nein,Nein,Nein,Include,');
+    assertContains(reportKinds(res), 'doppelte Paper-ID');
+    assertEqual(res.stats.added, 1, 'only the first P4 added');
+    assert(res.stats.skipped >= 1, 'the duplicate row is skipped');
+});
+test('import: an Unclear decision is not representable and is skipped', function() {
+    var res = runImport('P5,Nein,Ja,Nein,Nein,Ja,Nein,Nein,Nein,Nein,Nein,Unclear,');
+    assertContains(reportKinds(res), 'Decision Unclear');
+    assertEqual(res.payload.decisions.P5, undefined, 'Unclear row not recorded');
+});
+test('import: re-importing the same row is idempotent (unchanged, not re-added)', function() {
+    var first = runImport('P6,Nein,Ja,Nein,Nein,Ja,Nein,Nein,Nein,Nein,Nein,Include,');
+    var second = runImport('P6,Nein,Ja,Nein,Nein,Ja,Nein,Nein,Nein,Nein,Nein,Include,', first.payload.decisions);
+    assertEqual(second.stats.added, 0, 'no new record on re-import');
+    assertEqual(second.stats.unchanged, 1, 'the existing record is kept unchanged');
+});
+
+// ============================================================
 // Restore localStorage and report
 // ============================================================
 

@@ -4,6 +4,35 @@ Chronologisches Protokoll der Arbeitssitzungen mit Entscheidungen, Ergebnissen u
 
 ---
 
+## 2026-06-21 (Session 14): two milestones, per-Beleg provenance and the import bridge under test
+
+**Branch:** `main` (base `74dd183`; this entry's milestone commit secures both units)
+
+### What happened
+
+A milestone session as the Forschungsleitstelle lane `femprompt-prism`, from the screening-methodologist persona. Two self-contained, verified units were built and secured; the headless harness went from 56 to 67 green.
+
+1. **KI2, per-Beleg provenance (decided order item, now built).** Each Beleg records its origin as first-class data. `pinEvidence` stamps `origin: 'human'` on every reviewer pin; `evidenceListHtml` renders a neutral Mensch/KI marker per Beleg and defaults legacy Belege (no origin field) to human. The marker reuses the established human/ai identity hues (`--pt-human`/`--pt-ai`), same shape and weight for both, no valuation. This is the provenance plumbing the synthesis surface (KI1) needs: when human and AI evidence are brought together, each Beleg already carries where it came from. Today every Beleg in the list is a human pin, so the live change is the Mensch tag; the KI rendering is test-verified for when machine evidence (R2 Kategorie-Evidenz) feeds the same list. Files: `docs/js/prisma.js` (pinEvidence, evidenceListHtml, the `_test` exposure), `docs/css/prisma.css` (the neutral marker rules).
+2. **The Excel-to-PRISM import bridge brought under the test harness.** `docs/js/prisma-import.js` builds the full data-hygiene validation report (out-of-vocabulary category/decision/exclusion-reason values, duplicate Zotero keys, Unclear rows, collision guard, idempotent re-import) and already exposed `window.__PRISMA_IMPORT_TEST__`, but the harness never loaded it: the auditability backbone of the R1 lesson was committed yet untested. `tests/run.mjs` and `tests/run-tests.html` now inject the module; seven tests lock the validation behaviour against crafted CSV fixtures (clean Include, out-of-vocab reason preserved verbatim, empty reason flagged, duplicate key skipped, Unclear skipped, idempotent re-import unchanged).
+
+### Verification
+
+- `node tests/run.mjs` reports PASS 67/67 (was 56/56): four KI2 provenance tests plus seven import-bridge tests, all headless jsdom. Green criterion met for both milestones.
+- The KI2 marker is verified by render assertion, not by pixel screenshot: the shared Chrome window makes screenshots unreliable here (Session 13 learning), so the trace is the deterministic rendered markup `pt-evid-origin-human">Mensch` and `pt-evid-origin-ai">KI` asserted in the suite.
+
+### Decisions (from the persona, autonomous)
+
+- Provenance is a stored field (`origin`) on each Beleg, not an inference from the render container, so it survives the future human/AI merge. Backward-compatible: legacy Belege without the field render as human.
+- The marker is neutral by construction: identical shape and size for both origins, only the established identity hue differs, no better/worse styling.
+
+### Open items (next)
+
+- Milestone 3 (scoped, not built): machine-extracted Kategorie-Evidenz as AI-origin Belege (R2), feeding the same provenance-marked list; independent of KI1.
+- KI1 (synthesis level) stays at the operator; it gates the synthesis surface, not the provenance plumbing, which is now ready for it.
+- The trAIce disclosure kappa/matrix line stays or falls (operator); on fall, retire `computeMatrix`/`cohenKappa`/`kappaLabel` and their test.
+
+---
+
 ## 2026-06-21 (Session 13): verified runnable, then synthesis over comparison, Git and comparison surfaces removed, design unified, consolidated to main
 
 **Branch:** `feat/prisma-screening-tool` -> consolidated into `main` (verification at `1c1217a`, consolidation through `8f6580b`)

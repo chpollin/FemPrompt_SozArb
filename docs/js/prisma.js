@@ -706,12 +706,16 @@ function snippetAround(el, term) {
 }
 
 // ---- evidence pinning (FR-13) ----
+// Each Beleg records its provenance (origin: 'human' or 'ai') so human and AI
+// evidence stay distinguishable when brought together, neutrally, without
+// valuation (KI-Kennzeichnung). A reviewer pin is always human; machine or AI
+// Belege carry origin 'ai' wherever they are constructed.
 function pinEvidence(cat, term, snippet) {
     term = (term || '').trim().slice(0, 80);
     snippet = (snippet || term).trim().slice(0, 260);
     if (!term) return;
     if (!work.evidence[cat]) work.evidence[cat] = [];
-    work.evidence[cat].push({ term: term, snippet: snippet, ts: new Date().toISOString() });
+    work.evidence[cat].push({ term: term, snippet: snippet, ts: new Date().toISOString(), origin: 'human' });
     work.cats[cat] = true; // pinning a Beleg sets the category (decision: evidence implies the category)
     refreshAssess();
 }
@@ -800,7 +804,10 @@ function evidenceListHtml(evidence, locked) {
         h += '<div class="pt-evid-cat"><div class="pt-evid-cat-h"><span class="pt-evid-dot" style="background:' +
             ((EC.CAT_COLORS && EC.CAT_COLORS[c]) || 'var(--pt-human)') + '"></span>' + EC.escapeHtml(CAT_LABELS[c]) + '</div>';
         (evidence[c] || []).forEach(function(ev, i) {
-            h += '<div class="pt-evid-item"><span class="pt-evid-snip">' + EC.escapeHtml(ev.snippet || ev.term) + '</span>' +
+            var origin = ev.origin === 'ai' ? 'ai' : 'human'; // legacy Belege without origin are human pins
+            h += '<div class="pt-evid-item">' +
+                '<span class="pt-evid-origin pt-evid-origin-' + origin + '">' + (origin === 'ai' ? 'KI' : 'Mensch') + '</span>' +
+                '<span class="pt-evid-snip">' + EC.escapeHtml(ev.snippet || ev.term) + '</span>' +
                 (locked ? '' : '<button class="pt-evid-x" data-cat="' + c + '" data-i="' + i + '" title="Beleg entfernen">&times;</button>') + '</div>';
         });
         h += '</div>';
@@ -1253,7 +1260,8 @@ window.EC._test = {
     getState: function() { return state; },
     getWork: function() { return work; },
     curDec: curDec, resetWork: resetWork,
-    pinEvidence: pinEvidence, unpinEvidence: unpinEvidence, commit: commit
+    pinEvidence: pinEvidence, unpinEvidence: unpinEvidence, commit: commit,
+    evidenceListHtml: evidenceListHtml
 };
 
 })();
