@@ -25,6 +25,10 @@ A milestone session as the Forschungsleitstelle lane `femprompt-prism`, from the
 - Provenance is a stored field (`origin`) on each Beleg, not an inference from the render container, so it survives the future human/AI merge. Backward-compatible: legacy Belege without the field render as human.
 - The marker is neutral by construction: identical shape and size for both origins, only the established identity hue differs, no better/worse styling.
 
+### Documentation sync (same session)
+
+After the build, the knowledge docs were aligned to the new code (the round's Doku-am-Code-nachziehen). `specification.md` gained ADR-015 (per-Beleg `origin` field, neutral marker, backward-compatible), and ADR-014's open line now points to it. `data.md` updated the evidence stored shape to `{ term, snippet, ts, origin }` with the provenance note and reconciled the "never written by the AI" line. `plan.md` P1 and P3 status lines were refreshed (harness committed and green 67/67; the import validation now under test, the browser S4 path still open). `tests/README.md` was updated (four injected scripts, PASS 67/67, the provenance and import-bridge coverage bullets).
+
 ### Open items (next)
 
 - Milestone 3 (scoped, not built): machine-extracted Kategorie-Evidenz as AI-origin Belege (R2), feeding the same provenance-marked list; independent of KI1.

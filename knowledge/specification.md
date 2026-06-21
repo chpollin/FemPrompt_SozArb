@@ -276,7 +276,17 @@ Wahl. (1) Remove the human-AI comparison surface from the tool: the Mensch-KI-Ue
 
 Begründung. The synthesis direction makes the tool produce a joint, evidence-grounded judgement instead of an adversarial human-vs-AI score; the divergence research stays the property of the paper and the Evidence Companion, not a burden on the screening UI. Removing the Git surface matches how versioning actually happens (GitHub Desktop) and cuts apparatus. One design across all pages makes the tool read as part of the Companion, not a bolt-on. Decided with the operator 2026-06-21.
 
-Effekt. Implementiert und nach main konsolidiert. Offen, vom Operator zu klären: die Synthese-Ebene (pro Artikel / über den Bestand / beides), die der noch zu bauenden Synthese-Oberfläche zugrunde liegt; die Beleg-Herkunft (KI/Mensch) bleibt je Beleg gekennzeichnet (entschieden). Offen ferner, ob die Disclosure-Zeile mit Kappa/Matrix bleibt; bei Fall entfallen `computeMatrix`/`cohenKappa`/`kappaLabel` samt Test.
+Effekt. Implementiert und nach main konsolidiert. Offen, vom Operator zu klären: die Synthese-Ebene (pro Artikel / über den Bestand / beides), die der noch zu bauenden Synthese-Oberfläche zugrunde liegt; die Beleg-Herkunft (KI/Mensch) bleibt je Beleg gekennzeichnet (entschieden, umgesetzt in ADR-015). Offen ferner, ob die Disclosure-Zeile mit Kappa/Matrix bleibt; bei Fall entfallen `computeMatrix`/`cohenKappa`/`kappaLabel` samt Test.
+
+### ADR-015 Per-Beleg-Herkunft als gespeichertes Feld, neutral, ohne Wertung
+
+Kontext. ADR-014 entschied, Mensch- und KI-Bewertung zusammenzuführen statt zu vergleichen, und hielt fest, dass die Herkunft jedes Belegs (KI oder Mensch) erhalten bleibt. Die Synthese-Oberfläche (Ebene offen, KI1) bringt menschliche und maschinelle Belege später in eine Ansicht; dann muss je Beleg ablesbar sein, woher er stammt.
+
+Wahl. Die Herkunft ist ein gespeichertes Feld `origin` (`human` oder `ai`) auf jedem Beleg, nicht eine Ableitung aus dem Render-Kontext. `pinEvidence` setzt `origin: 'human'` auf jeden Reviewer-Pin; maschinelle oder KI-Belege tragen `origin: 'ai'` dort, wo sie erzeugt werden. `evidenceListHtml` rendert je Beleg einen neutralen Marker (Mensch oder KI), gleiche Form und Größe für beide, nur die etablierte Identitätsfarbe (`--pt-human`, `--pt-ai`) unterscheidet, keine Wertung. Abwärtskompatibel: ein Beleg ohne `origin` rendert als Mensch (Alt-Belege sind Reviewer-Pins).
+
+Begründung. Ein gespeichertes Feld überlebt die spätere Zusammenführung, eine Kontext-Ableitung nicht. Neutralität durch Konstruktion verhindert, dass die Darstellung eine Quelle über die andere stellt, konsistent zur KI-Kennzeichnungsregel. Heute sind alle Belege in der Liste Reviewer-Pins, der KI-Marker ist test-belegt für die kommende Maschinen-Evidenz (R2). Entschieden mit dem Operator 2026-06-21 (order femprompt-prism, Punkt 2).
+
+Effekt. Implementiert (`docs/js/prisma.js` pinEvidence und evidenceListHtml, `docs/css/prisma.css`), test-abgedeckt (vier Provenienz-Tests, `tests/tests.js`). Die Synthese-Ebene (KI1) bleibt offen; das Provenienz-Feld ist dafür bereit. Nächster Schritt R2, maschinell extrahierte Kategorie-Evidenz als KI-Herkunft-Belege im selben Pfad, getrennt vom bindenden Mensch-Record.
 
 ## Was nicht reingehört
 

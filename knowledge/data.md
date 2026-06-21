@@ -194,10 +194,10 @@ Text-source options (a copyright decision, not yet taken): (1) keep the served k
 How a pinned Beleg is created, stored, and surfaced. This is the contract the reviewer-file writer and the UI both follow.
 
 - Trigger: selecting a passage in the reading column (2 to 400 chars), or pressing "Treffer anheften" on the active in-text search hit. A category menu opens; choosing a category pins.
-- Stored shape: `evidence[category]` is a list of `{ term, snippet, ts }`. `term` is the selected text or the search query, trimmed to 80 chars. `snippet` is the surrounding context (for a search hit, roughly +/-90 chars around the term), trimmed to 260 chars. `ts` is an ISO timestamp.
+- Stored shape: `evidence[category]` is a list of `{ term, snippet, ts, origin }`. `term` is the selected text or the search query, trimmed to 80 chars. `snippet` is the surrounding context (for a search hit, roughly +/-90 chars around the term), trimmed to 260 chars. `ts` is an ISO timestamp. `origin` records the provenance, `human` for a reviewer pin, `ai` for machine-extracted evidence; it renders as a neutral Mensch/KI marker, and a record without `origin` loads as `human` (backward compatible, ADR-015).
 - Coupling: pinning a Beleg on a category sets `categories[category] = true` (evidence implies the category). Toggling the category chip off does not delete its Belege; removing all Belege does not toggle the category off. The reviewer stays in control of both.
 - Edit/remove: a Beleg can be removed individually before the decision is recorded (the small remove control next to the snippet). There is no dedup; pinning the same passage twice stores two entries (the reviewer can remove one).
-- Surfacing: Belege are saved with the decision in the reviewer file. The decision-log CSV reports an `evidence_count` per paper. Evidence is the reviewer's textual justification; it is never written by the AI.
+- Surfacing: Belege are saved with the decision in the reviewer file. The decision-log CSV reports an `evidence_count` per paper. A reviewer pin is human evidence (`origin: human`) and is the reviewer's textual justification. The `origin` field anticipates machine-extracted evidence (`origin: ai`, planned R2) sharing the same list as a distinct, labelled class that is never counted as a reviewer Beleg and never enters the binding human record.
 
 ## Seed dataset (read-only case study)
 

@@ -120,7 +120,7 @@ Done when: the branch is on GitHub; after merge, `prisma.html` is live on the Ev
 
 Done when: a fresh clone runs the full suite green with one command.
 
-Status (2026-06-09): the browser leg is written (`tests/run-tests.html`, `tests/tests.js`, `tests/README.md`, plus a test exposure block inside `docs/js/prisma.js`) but unexecuted; no shell or browser was available in the session. First step for the next session: open `tests/run-tests.html` and read `document.title`. The committed jsdom harness with `package.json` and the FR-05, FR-08, and migration acceptance checks remains a separate open work item.
+Status (2026-06-21): the committed jsdom harness runs green from a clean clone (`npm test`, PASS 67/67); the browser leg (`run-tests.html`) shares the same suite. The harness injects `prisma-data.js`, `prisma.js`, `prisma-import.js`, then `tests.js`. Still open from P1: the additional acceptance checks remain a separate work item, namely export/import round-trip losslessness (FR-08), the seed reproducing the canonical benchmark from the real `research_vault_v2.json` rather than synthetic fixtures (FR-05), and the reviewer schema 0.1 to 0.2 migration.
 
 ### P2: Raw full-text reading (the methodological upgrade)
 
@@ -146,7 +146,7 @@ The established capture workflow stays as it is: the colleagues record categorie
 
 Done when: an Excel export of the established format imports cleanly, the validation report flags vocabulary violations, and the imported track appears in flow, agreement, and record.
 
-Status (2026-06-09): the bridge is built (`docs/js/prisma-import.js`, mounted in `docs/prisma.html`) and statically reviewed, but unexecuted; the FileReader flow, the MutationObserver mounting, the File System Access write, and the download path need the browser click-test (P5 S4) before P3 can be marked done. After the P2 connect-target move the bridge must write into the `docs/data/screening/` subpath instead of the handle root.
+Status (2026-06-21): the pure conversion and validation report (controlled-vocabulary checks on category, decision and exclusion reason, duplicate Zotero keys, Unclear skip, collision guard, idempotent re-import) is now under the headless harness (seven tests, `tests/tests.js`, via `window.__PRISMA_IMPORT_TEST__`). Still unexecuted in a browser: the FileReader flow, the MutationObserver mounting, the File System Access write, and the download path need the browser click-test (P5 S4) before P3 can be marked done. After the P2 connect-target move the bridge must write into the `docs/data/screening/` subpath instead of the handle root.
 
 ### P4: UI completion
 

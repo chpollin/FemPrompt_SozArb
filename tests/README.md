@@ -6,7 +6,7 @@ Test fundament for the PRISM screening tool (plan P1). A zero-dependency test su
 
 Two legs, same suite (`tests.js`), same inline fixtures.
 
-Headless (node, the committed harness): run `npm install` once, then `npm test`. The runner `tests/run.mjs` injects the same three scripts into a jsdom window in the same order as the browser page, prints `PASS n/n` to stdout, and sets the process exit code (non-zero on any failure). jsdom is a dev dependency of this harness only; the app under `docs/` stays framework-free and dependency-free.
+Headless (node, the committed harness): run `npm install` once, then `npm test`. The runner `tests/run.mjs` injects the same four scripts (`prisma-data.js`, `prisma.js`, `prisma-import.js`, `tests.js`) into a jsdom window in the same order as the browser page, prints `PASS n/n` to stdout, and sets the process exit code (non-zero on any failure). jsdom is a dev dependency of this harness only; the app under `docs/` stays framework-free and dependency-free.
 
 Browser: open `tests/run-tests.html` directly over `file://` or from a static server serving the repo root. No build step, no framework, no test data to fetch.
 
@@ -22,8 +22,8 @@ The only network activity is `docs/js/prisma-data.js` attempting to load the res
 
 | File | Purpose |
 |---|---|
-| `run-tests.html` | Browser runner page. Loads `../docs/js/prisma-data.js` (real `window.EC.escapeHtml`), then `../docs/js/prisma.js` (whose appended exposure block attaches `window.EC._test`), then `tests.js`. Load order matters: the data layer must come first so `window.EC` exists when the exposure block runs. |
-| `run.mjs` | Headless node runner. Injects the same three scripts into a jsdom window, reads `window.__TEST_RESULTS__`, and exits non-zero on failure. Run with `npm test`. |
+| `run-tests.html` | Browser runner page. Loads `../docs/js/prisma-data.js` (real `window.EC.escapeHtml`), then `../docs/js/prisma.js` (whose appended exposure block attaches `window.EC._test`), then `../docs/js/prisma-import.js` (the import bridge, which exposes `window.__PRISMA_IMPORT_TEST__`), then `tests.js`. Load order matters: the data layer must come first so `window.EC` exists when the exposure block runs. |
+| `run.mjs` | Headless node runner. Injects the same four scripts into a jsdom window, reads `window.__TEST_RESULTS__`, and exits non-zero on failure. Run with `npm test`. |
 | `tests.js` | The suite: assert helpers, inline fixtures, all test cases, result rendering. |
 
 ## What is covered
@@ -35,6 +35,8 @@ The only network activity is `docs/js/prisma-data.js` attempting to load the res
 - Markdown escaping and parsing: `EC.escapeHtml`, `inlineMd`, and `renderMarkdown` against script-tag and attribute-injection input; frontmatter stripping; embedded yaml-block skipping; list, blockquote, paragraph-joining, and heading-cap behaviour; `countOcc` including the non-overlapping-match property.
 - Evidence and quality helpers: `pinEvidence` (category set by pinning, term and snippet truncation, empty-term no-op), `unpinEvidence`, `evidenceCount`, `abstractQuality` (empty, boilerplate, short, acceptable).
 - Persistence and commit: `reviewerPayload` schema `femprompt-prisma-reviewer/0.2`, the commit guard (Exclude requires a reason, override-Exclude likewise), the controlled exclusion-reason vocabulary, and `disclosureMarkdown` containing the canonical kappa and matrix.
+- Evidence provenance (KI2, ADR-015): `pinEvidence` stamps `origin: human`; `evidenceListHtml` renders a neutral Mensch/KI marker per Beleg, defaults a Beleg without `origin` to human, and uses the same marker class for both origins (no valuation).
+- Import bridge validation (`window.__PRISMA_IMPORT_TEST__`, plan P3): the data-hygiene report on crafted CSV fixtures, a clean Include with no error-level findings, an out-of-vocabulary exclusion reason flagged and preserved verbatim, an empty reason on Exclude flagged, a duplicate Zotero key reported and the second row skipped, an Unclear decision skipped, and an idempotent re-import counted as unchanged.
 
 Reviewer keys in fixtures are neutral ids (`r1`, `r2`).
 
@@ -48,7 +50,7 @@ The pure functions are closure-scoped inside the IIFE of `docs/js/prisma.js`. A 
 
 ## Status
 
-Executed and green: `npm test` reports PASS 56/56 headless under jsdom (jsdom is a dev dependency, pinned in `package.json`). The browser leg (`run-tests.html`) runs the identical suite.
+Executed and green: `npm test` reports PASS 67/67 headless under jsdom (jsdom is a dev dependency, pinned in `package.json`). The browser leg (`run-tests.html`) runs the identical suite.
 
 ## Relation to plan P1
 
