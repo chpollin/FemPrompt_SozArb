@@ -61,7 +61,7 @@
 
 /* ============================ BASE ============================ */
 body.pt-fullscreen {
-  margin: 0; background: var(--pt-bg); color: var(--pt-ink);
+  margin: 0; background: #fff; color: var(--pt-ink);
   font-family: var(--pt-sans); font-size: var(--pt-base);
   -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
 }
@@ -74,24 +74,10 @@ body.pt-fullscreen *, body.pt-fullscreen *::before, body.pt-fullscreen *::after 
 .pt-fullscreen ::-webkit-scrollbar-thumb:hover { background: var(--pt-ink-4); background-clip: padding-box; }
 .pt-fullscreen ::-webkit-scrollbar-track { background: transparent; }
 
-/* ============================ HEADER ============================ */
-.pt-app-header {
-  display: flex; align-items: center; gap: 0.85rem;
-  padding: 0.55rem 1.5rem; background: var(--pt-surface);
-  border-bottom: 1px solid var(--pt-border);
-  position: sticky; top: 0; z-index: 30;
-}
-.pt-app-header .pt-back { color: var(--pt-ink-3); text-decoration: none; font-size: var(--pt-sm); white-space: nowrap; }
-.pt-app-header .pt-back:hover { color: var(--pt-human); }
-.pt-brand-mark {
-  width: 24px; height: 24px; border-radius: 6px; flex: none;
-  background: linear-gradient(135deg, var(--pt-human), var(--pt-ai));
-}
-.pt-app-title { font-size: var(--pt-md); font-weight: 700; letter-spacing: -0.01em; }
-.pt-app-sub { color: var(--pt-ink-3); font-size: var(--pt-xs); font-family: var(--pt-mono); }
-.pt-app-spacer { flex: 1; }
+/* ============================ STATUS ============================ */
 .pt-app-conn { font-size: var(--pt-xs); color: var(--pt-ink-3); white-space: nowrap; font-family: var(--pt-mono); }
 .pt-app-conn.connected { color: var(--pt-include); }
+.pt-conn-bar { text-align: right; margin-top: 0.3rem; }
 
 /* ============================ SUBNAV ============================ */
 .pt-subnav {

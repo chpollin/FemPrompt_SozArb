@@ -13,21 +13,51 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/research.css">
     <link rel="stylesheet" href="css/prisma.css">
 </head>
 <body class="pt-fullscreen">
-    <header class="pt-app-header">
-        <a href="index.html" class="pt-back">&larr; Companion</a>
-        <span class="pt-brand-mark" aria-hidden="true"></span>
-        <strong class="pt-app-title">PRISM</strong>
-        <span class="pt-app-sub">Volltext-Screening mit Belegen &middot; PRISMA 2020 / PRISMA-trAIce</span>
-        <span class="pt-app-spacer"></span>
-        <span class="pt-app-conn" id="pt-conn-status">nicht mit Repo verbunden</span>
+    <header>
+        <div class="header-content">
+            <div class="header-top">
+                <div class="header-brand">
+                    <a href="index.html" class="brand-link">
+                        <h1>Feministische AI Literacies</h1>
+                        <p class="subtitle">Systematischer Review -- Interaktive Evidenz</p>
+                    </a>
+                    <p class="header-authors">Pollin, Sackl-Sharif, Klinger &amp; Steiner (2026)</p>
+                </div>
+                <nav class="header-nav" aria-label="Hauptnavigation">
+                    <a href="index.html#chat" class="nav-link">Wissens-Chat</a>
+                    <a href="index.html#wissensnetz" class="nav-link">Wissensnetz</a>
+                    <a href="index.html#vergleich" class="nav-link">Kategorien</a>
+                    <a href="index.html#korpus" class="nav-link">Korpus</a>
+                    <span class="nav-sep"></span>
+                    <a href="prisma.html" class="nav-link nav-link-active">PRISM</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="methoden.html" class="nav-link">Methoden</a>
+                    <a href="help.html" class="nav-link">Hilfe</a>
+                    <span class="nav-sep"></span>
+                    <a href="https://github.com/chpollin/FemPrompt_SozArb" class="nav-link nav-link-ext" target="_blank" rel="noopener"><i class="fas fa-code-branch"></i></a>
+                    <a href="downloads/vault.zip" class="nav-link nav-link-ext" title="Obsidian Vault (.zip)"><i class="fas fa-download"></i></a>
+                </nav>
+            </div>
+            <div class="pt-conn-bar"><span class="pt-app-conn" id="pt-conn-status">nicht mit Repo verbunden</span></div>
+        </div>
     </header>
 
     <main id="prisma-root"></main>
     <div id="pt-import-root" hidden></div>
+
+    <footer class="site-footer">
+        <p>Teil der epistemischen Infrastruktur zu: Pollin, Sackl-Sharif, Klinger &amp; Steiner (2026).
+        Deep-Research-gestuetzte Literature-Reviews. Forum Wissenschaft 2/2026.</p>
+        <p class="footer-links">
+            <a href="https://github.com/chpollin/FemPrompt_SozArb">Repository</a> &middot;
+            <a href="downloads/vault.zip">Obsidian Vault (.zip)</a>
+        </p>
+    </footer>
 
     <script src="js/prisma.js"></script>
     <script src="js/prisma-data.js"></script>
