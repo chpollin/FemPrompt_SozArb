@@ -84,8 +84,8 @@ var SEED = 'seed'; // built-in reviewer = the existing expert assessment (paper.
 
 var SURFACES = [
     { id: 'screening', label: 'Screening', intro: 'Volltext lesen und durchsuchen, Belege an Kategorien anheften, Include/Exclude entscheiden.' },
-    { id: 'report', label: 'PRISMA & Report', intro: 'PRISMA-2020-Fluss, Mensch-KI-Vergleich, Checkliste und Disclosure, aus dem Screening erzeugt.' },
-    { id: 'data', label: 'Daten & Repo', intro: 'Mit dem Repo-Ordner verbinden, eine Datei pro Reviewer:in, Export/Import, Reviewer:innen abgleichen.' }
+    { id: 'report', label: 'PRISMA & Report', intro: 'PRISMA-2020-Fluss, Checkliste und Disclosure, aus dem Screening erzeugt.' },
+    { id: 'data', label: 'Daten & Repo', intro: 'Mit dem Projektordner verbinden, eine Datei pro Reviewer:in, Export und Import.' }
 ];
 
 // ============================================================
@@ -839,7 +839,7 @@ function aiCollapsedHtml(p) {
     h += on.length ? on.map(function(c) { return '<span class="pt-pill pt-pill-ai">' + CAT_LABELS[c] + '</span>'; }).join('') : '<span class="pt-muted">keine</span>';
     h += '</div>';
     if (a.reasoning) h += '<p class="pt-ai-reason">' + EC.escapeHtml(a.reasoning) + '</p>';
-    h += '<p class="pt-ai-foot pt-tag-mono">diagnostisch, konfabulationsanfaellig. Mensch-KI-Vergleich im Tab PRISMA &amp; Report.</p>';
+    h += '<p class="pt-ai-foot pt-tag-mono">diagnostisch, konfabulationsanfaellig.</p>';
     h += '</div></details>';
     return h;
 }
@@ -1004,15 +1004,13 @@ function renderReportSurface() {
     var el = surfaceEl(); if (!el) return;
     var html = '';
     html += '<div class="pt-report-top">' + perspectiveBar() +
-        '<p class="pt-muted">Diese Ansicht wird aus dem Screening berechnet. Der Mensch-KI-Vergleich ist Forschungsmaterial fuer Paper und Companion, nicht Teil der Screening-Arbeit.</p></div>';
+        '<p class="pt-muted">Diese Ansicht wird aus dem Screening berechnet.</p></div>';
     html += '<section class="pt-rsec"><h3 class="pt-rsec-h">PRISMA-2020-Fluss (trAIce R1)</h3><div id="pt-sec-flow"></div></section>';
-    html += '<section class="pt-rsec"><h3 class="pt-rsec-h">Mensch-KI-Uebereinstimmung (trAIce M9/R2)</h3><div id="pt-sec-agree"></div></section>';
     html += '<section class="pt-rsec"><h3 class="pt-rsec-h">PRISMA-trAIce Checkliste</h3><div id="pt-sec-check"></div></section>';
     html += '<section class="pt-rsec"><h3 class="pt-rsec-h">AI-Disclosure</h3><div id="pt-sec-report"></div></section>';
     el.innerHTML = html;
     attachPerspective(el, renderReportSurface);
     renderFlowInto(document.getElementById('pt-sec-flow'));
-    renderAgreementInto(document.getElementById('pt-sec-agree'));
     renderChecklistInto(document.getElementById('pt-sec-check'));
     renderReportInto(document.getElementById('pt-sec-report'));
 }
@@ -1044,45 +1042,6 @@ function renderFlowInto(el) {
     el.innerHTML = html;
 }
 
-function renderAgreementInto(el) {
-    if (!el) return;
-    var m = computeMatrix();
-    var k = cohenKappa(m);
-    var kappas = (EC && EC.getKappas) ? EC.getKappas() : {};
-    var hRate = m.n ? Math.round((m.II + m.IE) / m.n * 1000) / 10 : 0;
-    var aRate = m.n ? Math.round((m.II + m.EI) / m.n * 1000) / 10 : 0;
-    var html = '<div class="pt-agree">';
-    html += '<div class="pt-matrix-wrap">';
-    html += '<div class="pt-matrix-title">Konfusionsmatrix &middot; <span class="pt-kappa">&kappa; = ' + k.toFixed(3) + ' &bdquo;' + kappaLabel(k) + '&ldquo;</span> &middot; n = ' + m.n + '</div>';
-    html += '<table class="pt-matrix"><thead><tr><th></th><th>KI Include</th><th>KI Exclude</th></tr></thead><tbody>';
-    html += '<tr><th>Mensch Include</th><td class="pt-cell" data-cell="II">' + m.II + '</td><td class="pt-cell" data-cell="IE">' + m.IE + '</td></tr>';
-    html += '<tr><th>Mensch Exclude</th><td class="pt-cell" data-cell="EI">' + m.EI + '</td><td class="pt-cell" data-cell="EE">' + m.EE + '</td></tr>';
-    html += '</tbody></table>';
-    html += '<div class="pt-rates">Mensch Include-Rate <strong>' + hRate + '%</strong> &middot; KI Include-Rate <strong>' + aRate + '%</strong></div>';
-    html += '<p class="pt-muted">Zelle anklicken oeffnet ein Paper aus dieser Zelle im Screening.</p>';
-    html += '</div>';
-    html += '<div class="pt-catkappa"><h4>Kategorie-Kappas (Korpus-Benchmark, Seed gegen KI)</h4>';
-    ALL_CATS.forEach(function(c) {
-        var d = kappas[c]; if (!d) return;
-        var kv = (d.kappa != null) ? d.kappa : 0;
-        var color = (EC.CAT_COLORS && EC.CAT_COLORS[c]) || 'var(--pt-human)';
-        html += '<div class="pt-kbar-row"><span class="pt-kbar-label">' + CAT_LABELS[c] + '</span>' +
-            '<span class="pt-kbar-track"><span class="pt-kbar-fill" style="width:' + Math.max(0, kv * 100) + '%;background:' + color + ';"></span></span>' +
-            '<span class="pt-kbar-val">' + kv.toFixed(2) + '</span></div>';
-    });
-    html += '</div></div>';
-    el.innerHTML = html;
-    el.querySelectorAll('.pt-cell').forEach(function(td) { td.addEventListener('click', function() { filterScreeningByCell(td.dataset.cell); }); });
-}
-
-function filterScreeningByCell(cell) {
-    for (var i = 0; i < papers.length; i++) {
-        var h = humanDecision(papers[i]), a = aiProposal(papers[i]);
-        if (!h || !a) continue;
-        var key = (h.decision === 'Include' ? 'I' : 'E') + (a.decision === 'Include' ? 'I' : 'E');
-        if (key === cell) { state.index = i; showSurface('screening'); return; }
-    }
-}
 
 function renderChecklistInto(el) {
     if (!el) return;
@@ -1199,20 +1158,6 @@ function renderData() {
         '<label class="pt-btn pt-imp-label">Reviewer-Datei importieren<input type="file" accept=".json" class="pt-imp" hidden></label>' +
         '<button class="pt-btn pt-exp-csv">Decision-Log (.csv)</button>' +
         '<button class="pt-btn pt-clear">Eigene Session leeren</button></div></div>';
-
-    // reviewers reconciliation, folded in (was a separate surface in v3)
-    var keys = reviewerKeys();
-    html += '<div class="pt-data-block"><h4>Reviewer:innen-Abgleich</h4>' +
-        '<p class="pt-muted">Jede:r screent unabhaengig in eine eigene Datei. Vergleich aller geladenen Reviewer:innen plus Seed gegen die KI (PRISMA-trAIce M8/M9).</p>';
-    html += '<table class="pt-matrix pt-rev-table"><thead><tr><th>Reviewer</th><th>gescreent</th><th>Include</th><th>Exclude</th><th>&kappa; vs KI</th></tr></thead><tbody>';
-    keys.forEach(function(k) {
-        var m = computeMatrix(k);
-        var incl = m.II + m.IE, excl = m.EI + m.EE;
-        html += '<tr><th>' + EC.escapeHtml(reviewerLabel(k)) + '</th><td>' + m.n + '</td><td>' + incl + '</td><td>' + excl + '</td><td>' + cohenKappa(m).toFixed(3) + '</td></tr>';
-    });
-    html += '</tbody></table>';
-    if (keys.length <= 1) html += '<p class="pt-muted">Noch keine eigenen Reviewer-Dateien geladen. Verbinde den Ordner oder importiere eine Datei.</p>';
-    html += '</div>';
 
     html += '</div>';
     el.innerHTML = html;

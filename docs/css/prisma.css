@@ -367,29 +367,9 @@ body.pt-fullscreen *, body.pt-fullscreen *::before, body.pt-fullscreen *::after 
 .pt-flow-incl { border-left: 3px solid var(--pt-include); }
 .pt-flow-caption { font-size: var(--pt-xs); color: var(--pt-ink-3); margin-top: 1.1rem; line-height: 1.5; text-align: center; }
 
-/* ============================ AGREEMENT ============================ */
+/* ============================ PERSPECTIVE ============================ */
 .pt-persp { margin-bottom: 1rem; font-size: var(--pt-sm); color: var(--pt-ink-2); }
 .pt-persp-sel { padding: 0.3rem 0.5rem; border: 1px solid var(--pt-border-2); border-radius: var(--pt-r-sm); font-size: var(--pt-sm); margin-left: 0.4rem; font-family: var(--pt-sans); background: var(--pt-surface); }
-.pt-agree { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; align-items: start; }
-.pt-matrix-title { font-size: var(--pt-sm); margin-bottom: 0.8rem; color: var(--pt-ink-2); }
-.pt-kappa { color: var(--pt-human); font-weight: 600; }
-.pt-matrix { border-collapse: collapse; width: 100%; }
-.pt-matrix th, .pt-matrix td { border: 1px solid var(--pt-border); padding: 0.6rem; text-align: center; font-size: var(--pt-sm); }
-.pt-matrix th { background: var(--pt-surface-2); color: var(--pt-ink-2); font-weight: 600; }
-.pt-cell { cursor: pointer; font-weight: 700; font-size: var(--pt-lg); font-family: var(--pt-mono); transition: background .12s; }
-.pt-cell:hover { background: var(--pt-surface-3); }
-.pt-rates { font-size: var(--pt-sm); color: var(--pt-ink-2); margin-top: 0.7rem; }
-.pt-catkappa h4 { font-size: var(--pt-sm); margin: 0 0 0.7rem; }
-.pt-kbar-row { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem; }
-.pt-kbar-label { width: 124px; font-size: var(--pt-xs); color: var(--pt-ink-2); }
-.pt-kbar-track { flex: 1; height: 8px; background: var(--pt-surface-3); border-radius: 4px; overflow: hidden; }
-.pt-kbar-fill { display: block; height: 100%; }
-.pt-kbar-val { width: 34px; text-align: right; font-size: var(--pt-xs); color: var(--pt-ink-3); font-family: var(--pt-mono); }
-
-/* ============================ REVIEWERS ============================ */
-.pt-rev-table { width: 100%; margin-top: 0.6rem; }
-.pt-rev-table th, .pt-rev-table td { text-align: center; }
-.pt-rev-table tbody th { text-align: left; }
 
 /* ============================ CHECKLIST ============================ */
 .pt-check-intro { font-size: var(--pt-sm); color: var(--pt-ink-2); margin-bottom: 1rem; line-height: 1.5; }
