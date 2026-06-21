@@ -43,7 +43,7 @@ The workflow follows PRISMA 2020 standards for systematic reviews:
 
 The identification phase uses AI-assisted deep research instead of traditional database searches:
 - 4 models (ChatGPT, Claude, Gemini, Perplexity) receive identical context-parameterized instructions
-- Supplemented by a limited number of manually identified studies (50 of 305 papers in the human assessment)
+- Supplemented by a limited number of manually identified studies (50 of 303 papers in the human assessment)
 - The deviation is explicitly documented and justified
 - Motivation: testing a new technology, not reducing effort
 
@@ -384,4 +384,4 @@ Increase delay between API calls (default: 2 seconds, recommended: 5 seconds).
 
 ---
 
-*Updated: 2026-04-01*
+*Updated: 2026-06-21*

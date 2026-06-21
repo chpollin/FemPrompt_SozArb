@@ -422,7 +422,6 @@ body.pt-fullscreen *, body.pt-fullscreen *::before, body.pt-fullscreen *::after 
 .pt-imp-label { display: inline-flex; align-items: center; }
 .pt-data-block { background: var(--pt-surface); border: 1px solid var(--pt-border); border-radius: var(--pt-r-lg); padding: 1rem 1.25rem; margin-bottom: 1rem; }
 .pt-data-block h4 { margin: 0 0 0.6rem; font-size: var(--pt-md); }
-.pt-git-hint { background: oklch(0.22 0.02 262); color: oklch(0.86 0.02 230); padding: 0.75rem 1rem; border-radius: var(--pt-r); font-size: var(--pt-xs); font-family: var(--pt-mono); white-space: pre; overflow-x: auto; margin-top: 0.6rem; }
 
 /* ============================ V4: SURFACE INTRO ============================ */
 .pt-surface-intro { font-size: var(--pt-sm); color: var(--pt-ink-3); margin: -0.3rem 0 0.9rem; line-height: 1.4; }

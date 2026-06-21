@@ -1176,23 +1176,21 @@ function disclosureMarkdown() {
 
 function renderData() {
     var el = surfaceEl(); if (!el) return;
-    var n = Object.keys(curDec()).length;
     var html = '<div class="pt-data">';
 
     html += '<div class="pt-data-block"><h4>Reviewer-Identitaet</h4>' +
         '<label class="pt-field"><span>Dein Kuerzel (Dateiname &lt;kuerzel&gt;.json)</span>' +
         '<input class="pt-rev-id" value="' + EC.escapeHtml(state.reviewer) + '"></label></div>';
 
-    html += '<div class="pt-data-block"><h4>Git-Workflow (File System Access)</h4>';
+    html += '<div class="pt-data-block"><h4>Direkt in den Projektordner speichern</h4>';
     if (FS_SUPPORTED) {
-        html += '<p class="pt-muted">Ordner docs/data/screening/ im lokalen Klon verbinden. Das Tool liest alle Reviewer-Dateien und schreibt deine bei jeder Entscheidung direkt hinein (Schema 0.2 mit Belegen). Danach committest du selbst.</p>';
+        html += '<p class="pt-muted">Ordner docs/data/screening/ im lokalen Projektordner verbinden. Das Tool liest alle Reviewer-Dateien und schreibt deine bei jeder Entscheidung direkt hinein (Schema 0.2 mit Belegen). Die geschriebene Datei sicherst du danach mit deinem ueblichen Werkzeug.</p>';
         html += '<div class="pt-data-actions">' +
-            '<button class="pt-btn pt-connect">Mit Repo-Ordner verbinden</button>' +
+            '<button class="pt-btn pt-connect">Mit Projektordner verbinden</button>' +
             '<button class="pt-btn pt-reconnect">Erneut verbinden</button>' +
             '<button class="pt-btn pt-reload">Reviewer-Dateien neu laden</button></div>';
-        html += '<pre class="pt-git-hint">git add docs/data/screening/' + EC.escapeHtml(state.reviewer) + '.json\ngit commit -m "screening: ' + n + ' Paper (' + EC.escapeHtml(state.reviewer) + ')"\ngit push</pre>';
     } else {
-        html += '<p class="pt-aq-warn">Dieser Browser (Firefox/Safari) kann nicht direkt schreiben. Nutze Export/Import unten und committe die Datei manuell.</p>';
+        html += '<p class="pt-aq-warn">Dieser Browser (Firefox/Safari) kann nicht direkt schreiben. Nutze Export/Import unten und lege die Datei manuell ab.</p>';
     }
     html += '</div>';
 

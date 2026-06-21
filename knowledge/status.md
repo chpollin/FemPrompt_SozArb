@@ -301,7 +301,7 @@ Knowledge Graph redesign: from flat concept graph to navigable taxonomy.
 
 ## Selection Audit
 
-### Provider Distribution (from `human_assessment.csv`, 305 papers)
+### Provider Distribution (from `human_assessment.csv`, 303 papers)
 
 | Provider | Papers | Share (DR) | DOI available |
 |----------|--------|------------|---------------|
@@ -339,4 +339,4 @@ Knowledge Graph redesign: from flat concept graph to navigable taxonomy.
 
 ---
 
-*Updated: 2026-04-01*
+*Updated: 2026-06-21*

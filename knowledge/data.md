@@ -7,7 +7,7 @@ status: active
 language: en
 version: "0.1"
 created: 2026-06-09
-updated: 2026-06-09
+updated: 2026-06-21
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 4.8)
 method:
@@ -105,7 +105,7 @@ Derived from all `ScreeningRecord`s; the data behind the flow diagram. It keeps 
 }
 ```
 
-Note the two include counts: the binding human count and the advisory AI count are both reported (PRISMA-trAIce R1 asks for the AI-processed numbers and outcomes alongside the human ones). The 2020 three-phase structure is used; there is no standalone Eligibility box.
+Note the two include counts: the binding human count and the advisory AI count are both reported (PRISMA-trAIce R1 asks for the AI-processed numbers and outcomes alongside the human ones). The 2020 three-phase structure is used; there is no standalone Eligibility box. The AI figures in this illustrative block are on the 291 paired papers (`n_included_ai` 208, `excluded_by_ai` 83); the shipped tool reports the AI track over all 326 identified records (Include 232, Exclude 94), while the human track stays on the 291 it covers. Both are correct for their reference set; the matrix and kappa are always on the 291 pairs.
 
 ## DisclosureMetadata (trAIce M2/M3/M6 + RAISE Table 1)
 
@@ -216,4 +216,4 @@ A small build step (a `generate_*` script, to be added) maps these into the `Ses
 
 Category definitions (canonical in `categories.yaml`), the pipeline that produces the offline AI assessments (in [[methods-and-pipeline]]), and the UI that renders this data (in [[specification]] and a future `design.md`). This note describes the substrate, not the behaviour.
 
-*Updated: 2026-06-09*
+*Updated: 2026-06-21*

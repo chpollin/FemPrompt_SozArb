@@ -29,6 +29,7 @@ Promptotyping document set for the PRISMA screening tool **PRISM**, a standalone
 | [data.md](data.md) | Material | ScreeningRecord, FlowModel, DisclosureMetadata, per-reviewer file schema 0.2 (evidence map), reading-text source + corpus index, evidence behaviour |
 | [design.md](design.md) | Gestalt | UI/design brief; section 5 (5A-5D) specifies the three v4 surfaces as built |
 | [design-review-prism-handoff.md](design-review-prism-handoff.md) | Review | Analysis of the PRISM Claude Design handoff: interaction model, design system, what was ported, v4 follow-up |
+| [frontend-assessment.md](frontend-assessment.md) | Assessment | Critical assessment of the shipped frontend against requirements, the real Excel-then-tool workflow, and the repository storage model; five storage findings, recommendations (2026-06-21) |
 
 The pure-function test suite for the tool lives in `tests/` (zero-dependency browser runner, see `tests/README.md`).
 
@@ -72,4 +73,4 @@ The Forum Wissenschaft paper (2/2026) is submitted and editorially closed; the i
 
 ---
 
-*Updated: 2026-06-09*
+*Updated: 2026-06-21*

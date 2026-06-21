@@ -7,7 +7,7 @@ status: active
 language: en
 version: "0.1"
 created: 2026-06-09
-updated: 2026-06-09
+updated: 2026-06-21
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 4.8)
 method:
@@ -256,8 +256,18 @@ Begründung. Matches how the review was conducted, makes the tool legible (each 
 
 Effekt. Knowledge docs updated; implementation is the next iteration. The agreement and reconciliation logic is kept (moved, not deleted), so PRISMA-trAIce reporting is preserved.
 
+### ADR-013 Raw full-text reading with recorded text source (planned, not yet implemented)
+
+Kontext. The screening view currently reads the served distilled knowledge document (`docs/vault/Papers/*.md`), not the raw paper text. Evidence pinned on a distillate inherits the distillate's framing; the 2x2 experiment (journal session 11) showed knowledge documents amplify inclusion bias and degrade the Fairness kappa. The raw Docling texts live in `pipeline/markdown_clean/`, copyrighted and not served.
+
+Wahl. Read the raw local full text from the connected clone through the single `fetchPaperText` seam (option 2 in [[data]]); raw texts are never published; the public Pages site falls back to the served knowledge document, then the abstract. Every decision records which text source was read (`text_source`: `raw`, `kd`, `abstract`) in the reviewer file (schema bump to 0.3, backward compatible) and in the decision-log CSV; the disclosure reports per-source counts (PRISMA-trAIce M4).
+
+Begründung. A Beleg should come from the paper, not from an LLM summary of it; recording the text source makes the evidence basis auditable, the actor-text-evidence triple the round-1 audit could not reconstruct.
+
+Effekt. Geplant, noch nicht implementiert (plan.md P2). Bis dahin liest die Screening-Oberfläche das Wissensdokument, und In-Tool-Belege tragen dessen Färbung; diese Grenze ist in [[data]] benannt.
+
 ## Was nicht reingehört
 
 Architecture (stack, data flow, module boundaries) belongs in a future `architecture.md`; the data model belongs in [[data]]; design tokens and UI patterns belong in [[design]]; the standards themselves belong in [[ai-assisted-review-standards]] and [[prisma-methodology]].
 
-*Updated: 2026-06-09*
+*Updated: 2026-06-21*
