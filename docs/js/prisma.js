@@ -1,16 +1,18 @@
-// PRISMA Screening Tool (PRISM) -- standalone, Git-based screening instrument.
-// v4 (evidence-grounded screening): the screening view is built around reading and
-// searching the knowledge document and pinning found passages as Belege (evidence)
-// on categories. AI is strongly reduced to an optional collapsed suggestion; the
-// human-AI comparison (kappa, matrix, flow) lives in the "PRISMA & Report" surface,
-// computed but not foregrounded (knowledge/specification.md ADR-012).
+// PRISMA Screening Tool (PRISM) -- standalone evidence-grounded screening instrument.
+// The screening view is built around reading and searching the knowledge document and
+// pinning found passages as Belege (evidence) on categories. AI is reduced to an optional
+// collapsed suggestion; human and AI assessment are brought together, not scored against
+// each other -- the human-AI comparison surface (matrix, kappa, divergence) was removed
+// (knowledge/specification.md ADR-014). Cohen kappa and the confusion matrix are still
+// computed for the AI-disclosure line only (PRISMA-trAIce M9/R2).
 //
 // Three surfaces: Screening | PRISMA & Report | Daten & Repo.
 // Human decision is binding (RAISE); the AI proposal is advisory and stored separately
 // so the flow diagram splits AI from human decisions (PRISMA-trAIce R1).
 // Persistence: File System Access writes one JSON per reviewer (schema 0.2, with an
-// evidence map) into docs/data/screening/<reviewer>.json, committed with Git;
-// export/import fallback. Runs on prisma.html via the window.EC shim from prisma-data.js.
+// evidence map) into docs/data/screening/<reviewer>.json; versioning happens outside the
+// tool (GitHub Desktop), export/import fallback. Runs on prisma.html via the window.EC
+// shim from prisma-data.js.
 // See knowledge/design.md, knowledge/data.md, knowledge/specification.md.
 
 (function() {
@@ -997,7 +999,7 @@ function closePinMenu() {
 }
 
 // ============================================================
-// Surface: PRISMA & Report (flow + agreement + checklist + disclosure)
+// Surface: PRISMA & Report (flow + checklist + disclosure)
 // ============================================================
 
 function renderReportSurface() {
