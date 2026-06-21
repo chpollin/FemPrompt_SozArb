@@ -43,7 +43,7 @@ Reviewer keys in fixtures are neutral ids (`r1`, `r2`).
 
 ## Test exposure block in prisma.js
 
-The pure functions are closure-scoped inside the IIFE of `docs/js/prisma.js`. A single appended block at the end of that closure (directly before the final `})();`) exposes them as `window.EC._test`; no existing line was changed and the block has no runtime effect on the tool. On the production page `prisma.html`, where `prisma.js` loads before `prisma-data.js`, the data layer replaces `window.EC` afterwards, so the hook does not exist there. The older `window.__PRISMA_TEST__` hook is untouched.
+The pure functions are closure-scoped inside the IIFE of `docs/js/prisma.js`. A single appended block at the end of that closure (directly before the final `})();`) builds one `TEST_HOOK` object and exposes it under two names; no existing line was changed and the block has no runtime effect on the tool. `window.EC._test` is the name the headless harness reads, present on `run-tests.html` because `prisma-data.js` loads first so `window.EC` already exists. `window.__PRISMA_TEST__` is the same object under a standalone global; it survives on the production page `prisma.html`, where `prisma.js` loads before `prisma-data.js` and the data layer then replaces `window.EC` (dropping `EC._test`). Because both names point at the same object, a browser-agent trace on the real page reaches the full surface, including the surface driver `showSurface` and the M3 reading-layer seams `setReadMode` and `splitDocLayers`. `state` and `work` are getters (`getState`, `getWork`), not direct references, since `work` is reassigned by `resetWork`.
 
 ## State hygiene
 

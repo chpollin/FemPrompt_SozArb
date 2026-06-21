@@ -1297,27 +1297,21 @@ function download(filename, content, mime) {
     document.body.removeChild(a); URL.revokeObjectURL(url);
 }
 
-// test hook (headless harness); no effect in the browser beyond exposing internals
-window.__PRISMA_TEST__ = {
-    setPapers: function(p) { papers = p; },
-    state: state, work: work,
-    resetWork: resetWork, pinEvidence: pinEvidence, unpinEvidence: unpinEvidence,
-    deriveDecision: deriveDecision, finalDecisionOf: finalDecisionOf, commit: commit,
-    renderMarkdown: renderMarkdown, computeMatrix: computeMatrix, cohenKappa: cohenKappa,
-    curDec: curDec, getWork: function() { return work; }, reviewerPayload: reviewerPayload,
-    showSurface: function(s) { showSurface(s); }
-};
-
 // ============================================================
-// Test exposure (P1). Appended block: no existing line above is changed
-// and no runtime behaviour changes. tests/run-tests.html loads
-// js/prisma-data.js first (so window.EC exists here), then this file, and
-// reads the closure-scoped pure functions through window.EC._test.
-// In prisma.html (prisma.js before prisma-data.js) the data layer replaces
-// window.EC afterwards, so this hook is absent on the production page.
+// Test hook (P1). One definition exposed under two names, no line above is
+// changed and no runtime behaviour changes:
+//   window.EC._test        headless harness. run-tests.html loads prisma-data.js
+//                          first, so window.EC exists here; tests.js reads this.
+//   window.__PRISMA_TEST__  survives on the production page prisma.html, where
+//                          prisma.js loads before prisma-data.js and the data
+//                          layer then replaces window.EC (dropping EC._test).
+//                          Browser-agent traces use this name.
+// Both point at the same object, so a trace on the real page can also drive the
+// surfaces (showSurface) and the M3 reading layers (setReadMode, splitDocLayers).
+// state and work are getters, never stale direct references (work is reassigned
+// by resetWork, so a captured reference would go dead after a paper change).
 // ============================================================
-window.EC = window.EC || {};
-window.EC._test = {
+var TEST_HOOK = {
     // constants
     TECH_CATS: TECH_CATS, SOCIAL_CATS: SOCIAL_CATS, ALL_CATS: ALL_CATS,
     EXCLUSION_REASONS: EXCLUSION_REASONS, SEED: SEED, REVIEWER_SCHEMA: REVIEWER_SCHEMA,
@@ -1339,7 +1333,14 @@ window.EC._test = {
     getWork: function() { return work; },
     curDec: curDec, resetWork: resetWork,
     pinEvidence: pinEvidence, unpinEvidence: unpinEvidence, commit: commit,
-    evidenceListHtml: evidenceListHtml
+    evidenceListHtml: evidenceListHtml,
+    // surface + reading-layer drivers (browser-agent traces on the real page)
+    showSurface: function(s) { showSurface(s); },
+    setReadMode: function(m) { setReadMode(m); },
+    activeLayerHtml: activeLayerHtml
 };
+window.EC = window.EC || {};
+window.EC._test = TEST_HOOK;
+window.__PRISMA_TEST__ = TEST_HOOK;
 
 })();
