@@ -29,12 +29,11 @@ The only network activity is `docs/js/prisma-data.js` attempting to load the res
 ## What is covered
 
 - Decision derivation truth table: `deriveDecision` (at least one technical AND one social category yields Include), `finalDecisionOf` (override only demotes a derived Include), `divergent`.
-- Agreement metrics on the canonical benchmark matrix: `computeMatrix` reproduces 100/34/108/49 on a synthetic 291-paper corpus; `cohenKappa` yields 0.0561; PABAK (0.0241), kappa-max (0.5081), prevalence (0.175) and bias index (0.254) are recomputed in-test from the matrix, since they are not implemented in `prisma.js`. The content-only sensitivity matrix 100/34/36/29 (n 199) yields kappa 0.194 and PABAK 0.296. All expected values are taken from `knowledge/verification-empirical-core.md` (Benchmark core table and content-only sensitivity table).
-- Kappa edge cases: empty matrix (n = 0), degenerate marginals (pe = 1 guard), `kappaLabel` band boundaries.
+- Agreement metrics (removed with ADR-017): the human-AI agreement section (`computeMatrix`, `cohenKappa`, `kappaLabel` and the canonical-benchmark tests) left the tool. The canonical kappa 0.0561 and matrix 100/34/108/49 are now reproduced from the raw CSVs by `benchmark/replay_selftest.py` (PASS 18/18), not over the tool's loaded corpus.
 - Flow aggregation: `computeFlow` for the seed perspective (no exclusion reasons on the seed track) and a reviewer perspective (reason counting), empty corpus, papers missing one or both tracks.
 - Markdown escaping and parsing: `EC.escapeHtml`, `inlineMd`, and `renderMarkdown` against script-tag and attribute-injection input; frontmatter stripping; embedded yaml-block skipping; list, blockquote, paragraph-joining, and heading-cap behaviour; `countOcc` including the non-overlapping-match property.
 - Evidence and quality helpers: `pinEvidence` (category set by pinning, term and snippet truncation, empty-term no-op), `unpinEvidence`, `evidenceCount`, `abstractQuality` (empty, boilerplate, short, acceptable).
-- Persistence and commit: `reviewerPayload` schema `femprompt-prisma-reviewer/0.2`, the commit guard (Exclude requires a reason, override-Exclude likewise), the controlled exclusion-reason vocabulary, and `disclosureMarkdown` containing the canonical kappa and matrix.
+- Persistence and commit: `reviewerPayload` schema `femprompt-prisma-reviewer/0.2`, the commit guard (Exclude requires a reason, override-Exclude likewise), the controlled exclusion-reason vocabulary, and `disclosureMarkdown` carrying the screening count and the external M9/R2 reference (no in-tool kappa or matrix, ADR-017).
 - Evidence provenance (KI2, ADR-015): `pinEvidence` stamps `origin: human`; `evidenceListHtml` renders a neutral Mensch/KI marker per Beleg, defaults a Beleg without `origin` to human, and uses the same marker class for both origins (no valuation).
 - Reading-column layer split and binding separation (M3, ADR-016): `splitDocLayers` separates the paper layer from the machine-extraction layer at the first `## Kernbefund` heading (and yields no AI layer for an abstract-only doc); a human-origin Beleg sets the binding category while an AI-origin Beleg does not, so AI-sourced evidence alone never flips the derived decision to Include, yet is still stored and rendered as KI.
 - Import bridge validation (`window.__PRISMA_IMPORT_TEST__`, plan P3): the data-hygiene report on crafted CSV fixtures, a clean Include with no error-level findings, an out-of-vocabulary exclusion reason flagged and preserved verbatim, an empty reason on Exclude flagged, a duplicate Zotero key reported and the second row skipped, an Unclear decision skipped, and an idempotent re-import counted as unchanged.
@@ -51,7 +50,7 @@ The pure functions are closure-scoped inside the IIFE of `docs/js/prisma.js`. A 
 
 ## Status
 
-Executed and green: `npm test` reports PASS 73/73 headless under jsdom (jsdom is a dev dependency, pinned in `package.json`). The browser leg (`run-tests.html`) runs the identical suite.
+Executed and green: `npm test` reports PASS 58/58 headless under jsdom (jsdom is a dev dependency, pinned in `package.json`). The browser leg (`run-tests.html`) runs the identical suite. The count dropped from 73 when ADR-017 removed the agreement section.
 
 ## Relation to plan P1
 

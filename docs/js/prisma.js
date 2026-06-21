@@ -3,8 +3,9 @@
 // pinning found passages as Belege (evidence) on categories. AI is reduced to an optional
 // collapsed suggestion; human and AI assessment are brought together, not scored against
 // each other -- the human-AI comparison surface (matrix, kappa, divergence) was removed
-// (knowledge/specification.md ADR-014). Cohen kappa and the confusion matrix are still
-// computed for the AI-disclosure line only (PRISMA-trAIce M9/R2).
+// (knowledge/specification.md ADR-014), and with ADR-017 its last vestige is gone too:
+// the in-tool kappa and confusion matrix of the AI-disclosure line. AI-human agreement
+// is evaluated outside the tool on the benchmark corpus (PRISMA-trAIce M9/R2 by reference).
 //
 // Three surfaces: Screening | PRISMA & Report | Daten & Repo.
 // Human decision is binding (RAISE); the AI proposal is advisory and stored separately
@@ -470,32 +471,12 @@ function evidenceCount(rec) {
 // Aggregation (computed quietly for the report layer)
 // ============================================================
 
-function computeMatrix(persp) {
-    var m = { II: 0, IE: 0, EI: 0, EE: 0, n: 0 };
-    papers.forEach(function(p) {
-        var h = humanDecision(p, persp), a = aiProposal(p);
-        if (!h || !a) return;
-        m.n++;
-        if (h.decision === 'Include' && a.decision === 'Include') m.II++;
-        else if (h.decision === 'Include' && a.decision === 'Exclude') m.IE++;
-        else if (h.decision === 'Exclude' && a.decision === 'Include') m.EI++;
-        else m.EE++;
-    });
-    return m;
-}
-
-function cohenKappa(m) {
-    var n = m.n; if (!n) return 0;
-    var po = (m.II + m.EE) / n;
-    var ph = (m.II + m.IE) / n, pa = (m.II + m.EI) / n;
-    var pe = ph * pa + (1 - ph) * (1 - pa);
-    return pe === 1 ? 1 : (po - pe) / (1 - pe);
-}
-
-function kappaLabel(k) {
-    if (k < 0) return 'poor'; if (k <= 0.20) return 'slight'; if (k <= 0.40) return 'fair';
-    if (k <= 0.60) return 'moderate'; if (k <= 0.80) return 'substantial'; return 'almost perfect';
-}
+// The human-AI agreement metrics (computeMatrix, cohenKappa, kappaLabel) were
+// removed with ADR-017: the tool computed kappa over its own loaded corpus, a
+// different set from the benchmark CSVs the canonical kappa rests on, so an
+// in-tool number could only diverge from the reference. Agreement is evaluated
+// outside the tool (benchmark/replay_selftest.py). The disclosure keeps M9/R2 by
+// reference. computeFlow stays: the flow diagram needs the per-track counts.
 
 function computeFlow(persp) {
     var f = { total: papers.length, aiScreened: 0, aiIncl: 0, aiExcl: 0,
@@ -1204,12 +1185,12 @@ function renderReportInto(el) {
 function updatePreview() { var pre = document.getElementById('pt-prev'); if (pre) pre.textContent = disclosureMarkdown(); }
 
 function disclosureMarkdown() {
-    var m = computeMatrix(); var k = cohenKappa(m);
+    var n = papers.filter(function(p) { return aiProposal(p); }).length;
     var L = [];
     L.push('## AI use disclosure (PRISMA-trAIce / RAISE)', '');
-    L.push('Screening of ' + m.n + ' records used ' + disc('name') + ' (prompt ' + disc('prompt') + ', temperature ' + disc('temperature') + '), date ' + disc('date') + '.');
+    L.push('Screening of ' + n + ' records used ' + disc('name') + ' (prompt ' + disc('prompt') + ', temperature ' + disc('temperature') + '), date ' + disc('date') + '.');
     L.push('Stage: ' + disc('stage') + '. The AI proposal is advisory; every record was screened independently by a human reviewer, whose decision is binding (RAISE).');
-    L.push('Performance evaluation against the human reference standard (PRISMA-trAIce M9/R2): Cohen kappa ' + k.toFixed(3) + ' (' + kappaLabel(k) + '); confusion matrix ' + m.II + '/' + m.IE + '/' + m.EI + '/' + m.EE + ' (H-Incl/AI-Incl, H-Incl/AI-Excl, H-Excl/AI-Incl, both-Exclude).');
+    L.push('Performance evaluation (PRISMA-trAIce M9/R2): AI-human agreement is evaluated outside this tool, on the benchmark corpus in the repository (benchmark/, replay self-test), not recomputed here over the loaded corpus.');
     L.push('Confidence threshold: ' + disc('threshold') + '. Conflicts of interest: ' + disc('conflicts') + '.');
     if (disc('limitations')) L.push('Limitations: ' + disc('limitations'));
     L.push('', 'Flow diagram distinguishes AI from human decisions (PRISMA-trAIce R1). Tool identity, prompt, and parameters disclosed per M2/M6.');
@@ -1320,7 +1301,6 @@ var TEST_HOOK = {
     abstractQuality: abstractQuality, evidenceCount: evidenceCount,
     aiProposal: aiProposal, humanDecision: humanDecision, seedDecision: seedDecision,
     // aggregation
-    computeMatrix: computeMatrix, cohenKappa: cohenKappa, kappaLabel: kappaLabel,
     computeFlow: computeFlow,
     // parsing and rendering helpers
     countOcc: countOcc, stripFrontmatter: stripFrontmatter, inlineMd: inlineMd,

@@ -91,27 +91,6 @@ var lsBackup = null, lsReadable = false;
 try { lsBackup = localStorage.getItem(LS_KEY); lsReadable = true; } catch (e) {}
 
 // ============================================================
-// Fixtures
-// ============================================================
-
-// Synthetic corpus realizing a given human-by-LLM confusion matrix when read
-// from the seed perspective (paper.human binding, paper.llm advisory).
-function matrixFixture(II, IE, EI, EE) {
-    var ps = [], n = 0, i;
-    function mk(h, a) {
-        n++;
-        return { id: 'fx' + n, title: 'Fixture paper ' + n,
-                 human: { decision: h, all_categories: {} },
-                 llm: { decision: a, all_categories: {} } };
-    }
-    for (i = 0; i < II; i++) ps.push(mk('Include', 'Include'));
-    for (i = 0; i < IE; i++) ps.push(mk('Include', 'Exclude'));
-    for (i = 0; i < EI; i++) ps.push(mk('Exclude', 'Include'));
-    for (i = 0; i < EE; i++) ps.push(mk('Exclude', 'Exclude'));
-    return ps;
-}
-
-// ============================================================
 // Section A: decision derivation truth table
 // ============================================================
 
@@ -154,119 +133,11 @@ test('divergent: differing decisions are divergent, equal or missing tracks are 
 });
 
 // ============================================================
-// Section B: agreement metrics on the canonical benchmark matrix
-// Expected values: knowledge/verification-empirical-core.md, Benchmark core table.
+// Section B removed with ADR-017: the human-AI agreement metrics
+// (computeMatrix, cohenKappa, kappaLabel) and their canonical-benchmark tests
+// left the tool. The canonical kappa now lives in benchmark/replay_selftest.py
+// (PASS 18/18), computed from the raw CSVs rather than the tool's loaded corpus.
 // ============================================================
-
-var bench = matrixFixture(100, 34, 108, 49);
-
-test('benchmark fixture has 291 papers (100+34+108+49)', function() {
-    assertEqual(bench.length, 291);
-});
-test('computeMatrix reproduces the canonical matrix 100/34/108/49, n 291', function() {
-    T.setPapers(bench);
-    var m = T.computeMatrix(T.SEED);
-    assertEqual(m.II, 100, 'II'); assertEqual(m.IE, 34, 'IE');
-    assertEqual(m.EI, 108, 'EI'); assertEqual(m.EE, 49, 'EE');
-    assertEqual(m.n, 291, 'n');
-});
-test('marginals: human include 134, LLM include 208 (rates 46.0 / 71.5 percent)', function() {
-    T.setPapers(bench);
-    var m = T.computeMatrix(T.SEED);
-    assertEqual(m.II + m.IE, 134, 'human includes');
-    assertEqual(m.II + m.EI, 208, 'LLM includes');
-    assertEqual((Math.round((m.II + m.IE) / m.n * 1000) / 10), 46, 'human include rate');
-    assertEqual((Math.round((m.II + m.EI) / m.n * 1000) / 10), 71.5, 'LLM include rate');
-});
-test('observed agreement po = 149/291 = 0.5120', function() {
-    T.setPapers(bench);
-    var m = T.computeMatrix(T.SEED);
-    assertEqual((((m.II + m.EE) / m.n)).toFixed(4), '0.5120');
-});
-test('Cohen kappa on the benchmark matrix is 0.0561', function() {
-    T.setPapers(bench);
-    var k = T.cohenKappa(T.computeMatrix(T.SEED));
-    assertEqual(k.toFixed(4), '0.0561');
-    assertEqual(k.toFixed(3), '0.056');
-});
-test('PABAK (2po - 1, derived in-test) on the benchmark matrix is 0.0241', function() {
-    // PABAK is not implemented in prisma.js; recomputed here from the verified
-    // matrix with the formula documented in verification-empirical-core.md.
-    T.setPapers(bench);
-    var m = T.computeMatrix(T.SEED);
-    var po = (m.II + m.EE) / m.n;
-    assertEqual((2 * po - 1).toFixed(4), '0.0241');
-});
-test('kappa-max given the marginals (derived in-test) is 0.5081', function() {
-    T.setPapers(bench);
-    var m = T.computeMatrix(T.SEED);
-    var ph = (m.II + m.IE) / m.n, pa = (m.II + m.EI) / m.n;
-    var pe = ph * pa + (1 - ph) * (1 - pa);
-    var poMax = 1 - Math.abs(ph - pa);
-    assertEqual(((poMax - pe) / (1 - pe)).toFixed(4), '0.5081');
-});
-test('prevalence index 0.175 and bias index 0.254 (derived in-test)', function() {
-    T.setPapers(bench);
-    var m = T.computeMatrix(T.SEED);
-    assertEqual((Math.abs(m.II - m.EE) / m.n).toFixed(3), '0.175', 'prevalence index');
-    assertEqual((Math.abs(m.IE - m.EI) / m.n).toFixed(3), '0.254', 'bias index');
-});
-test('content-only sensitivity matrix 100/34/36/29 (n 199): kappa 0.194, PABAK 0.296', function() {
-    var contentOnly = matrixFixture(100, 34, 36, 29);
-    T.setPapers(contentOnly);
-    var m = T.computeMatrix(T.SEED);
-    assertEqual(m.n, 199, 'n');
-    assertEqual(T.cohenKappa(m).toFixed(3), '0.194', 'kappa');
-    var po = (m.II + m.EE) / m.n;
-    assertEqual((2 * po - 1).toFixed(3), '0.296', 'PABAK');
-});
-test('computeMatrix skips papers missing either track', function() {
-    var ps = matrixFixture(1, 0, 0, 0);
-    ps.push({ id: 'onlyAI', llm: { decision: 'Include' } });
-    ps.push({ id: 'onlyHuman', human: { decision: 'Include' } });
-    ps.push({ id: 'neither', title: 'no tracks' });
-    T.setPapers(ps);
-    var m = T.computeMatrix(T.SEED);
-    assertEqual(m.n, 1);
-    assertEqual(m.II, 1);
-});
-test('computeMatrix with a reviewer-track perspective', function() {
-    var ps = [
-        { id: 'rv1', llm: { decision: 'Include' } },
-        { id: 'rv2', llm: { decision: 'Exclude' } }
-    ];
-    T.setPapers(ps);
-    T.getState().reviewers.r1 = {
-        rv1: { decision: 'Exclude', reason: 'Duplicate', categories: {} },
-        rv2: { decision: 'Exclude', reason: 'Not_relevant_topic', categories: {} }
-    };
-    var m = T.computeMatrix('r1');
-    assertEqual(m.n, 2); assertEqual(m.EI, 1); assertEqual(m.EE, 1);
-    delete T.getState().reviewers.r1;
-});
-
-// kappa edge cases (division-by-zero and degenerate-marginal guards)
-test('cohenKappa: empty matrix (n = 0) returns 0', function() {
-    assertEqual(T.cohenKappa({ II: 0, IE: 0, EI: 0, EE: 0, n: 0 }), 0);
-});
-test('cohenKappa: all both-include (pe = 1 guard) returns 1', function() {
-    assertEqual(T.cohenKappa({ II: 5, IE: 0, EI: 0, EE: 0, n: 5 }), 1);
-});
-test('cohenKappa: all both-exclude (pe = 1 guard) returns 1', function() {
-    assertEqual(T.cohenKappa({ II: 0, IE: 0, EI: 0, EE: 5, n: 5 }), 1);
-});
-test('kappaLabel boundaries (Landis-Koch bands as implemented)', function() {
-    assertEqual(T.kappaLabel(-0.01), 'poor');
-    assertEqual(T.kappaLabel(0), 'slight');
-    assertEqual(T.kappaLabel(0.20), 'slight');
-    assertEqual(T.kappaLabel(0.21), 'fair');
-    assertEqual(T.kappaLabel(0.40), 'fair');
-    assertEqual(T.kappaLabel(0.41), 'moderate');
-    assertEqual(T.kappaLabel(0.60), 'moderate');
-    assertEqual(T.kappaLabel(0.61), 'substantial');
-    assertEqual(T.kappaLabel(0.80), 'substantial');
-    assertEqual(T.kappaLabel(0.81), 'almost perfect');
-});
 
 // ============================================================
 // Section C: flow aggregation
@@ -543,13 +414,17 @@ test('exclusion reason vocabulary is the controlled five-value set', function() 
     assertEqual(T.EXCLUSION_REASONS.join('|'),
         'Duplicate|Not_relevant_topic|Wrong_publication_type|No_full_text|Language');
 });
-test('disclosureMarkdown reports the canonical kappa and matrix on the benchmark fixture', function() {
-    T.setPapers(bench);
-    T.getState().perspective = T.SEED;
+test('disclosureMarkdown covers the screening count and references external M9/R2 evaluation (ADR-017)', function() {
+    T.setPapers([
+        { id: 'd1', llm: { decision: 'Include' } },
+        { id: 'd2', llm: { decision: 'Exclude' } },
+        { id: 'd3', human: { decision: 'Include' } }
+    ]);
     var md = T.disclosureMarkdown();
-    assertContains(md, 'Screening of 291 records');
-    assertContains(md, 'Cohen kappa 0.056');
-    assertContains(md, '100/34/108/49');
+    assertContains(md, 'Screening of 2 records'); // only the two AI-proposal records
+    assertContains(md, 'M9/R2');
+    assert(md.indexOf('Cohen kappa') === -1, 'no in-tool kappa remains in the disclosure');
+    assert(md.indexOf('100/34/108/49') === -1, 'no in-tool confusion matrix remains in the disclosure');
 });
 
 // ============================================================

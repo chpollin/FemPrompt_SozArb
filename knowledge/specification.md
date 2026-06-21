@@ -276,7 +276,7 @@ Wahl. (1) Remove the human-AI comparison surface from the tool: the Mensch-KI-Ue
 
 Begründung. The synthesis direction makes the tool produce a joint, evidence-grounded judgement instead of an adversarial human-vs-AI score; the divergence research stays the property of the paper and the Evidence Companion, not a burden on the screening UI. Removing the Git surface matches how versioning actually happens (GitHub Desktop) and cuts apparatus. One design across all pages makes the tool read as part of the Companion, not a bolt-on. Decided with the operator 2026-06-21.
 
-Effekt. Implementiert und nach main konsolidiert. Offen, vom Operator zu klären: die Synthese-Ebene (pro Artikel / über den Bestand / beides), die der noch zu bauenden Synthese-Oberfläche zugrunde liegt; die Beleg-Herkunft (KI/Mensch) bleibt je Beleg gekennzeichnet (entschieden, umgesetzt in ADR-015). Offen ferner, ob die Disclosure-Zeile mit Kappa/Matrix bleibt; bei Fall entfallen `computeMatrix`/`cohenKappa`/`kappaLabel` samt Test.
+Effekt. Implementiert und nach main konsolidiert. Offen, vom Operator zu klären: die Synthese-Ebene (pro Artikel / über den Bestand / beides), die der noch zu bauenden Synthese-Oberfläche zugrunde liegt; die Beleg-Herkunft (KI/Mensch) bleibt je Beleg gekennzeichnet (entschieden, umgesetzt in ADR-015). Die Disclosure-Zeile mit Kappa/Matrix ist mit ADR-017 entfernt, `computeMatrix`/`cohenKappa`/`kappaLabel` samt Test entfallen, Agreement wird extern bewertet.
 
 ### ADR-015 Per-Beleg-Herkunft als gespeichertes Feld, neutral, ohne Wertung
 
@@ -297,6 +297,16 @@ Wahl. `splitDocLayers` trennt das geladene Dokument an der ersten `## Kernbefund
 Begründung. Die Trennung ist damit nicht nur sichtbar, sondern im Datenfluss erzwungen. Der bindende Record (`work.cats`, daraus `deriveDecision`) speist sich ausschließlich aus paper-belegten Kategorien, maschinelle Evidenz kann ihn nicht kippen. Das löst das in ADR-015 offen gebliebene Woher ein und realisiert für das servierte Dokument, was ADR-013 für den Rohtext plant, einen auditierbaren Evidenz-Ursprung. ADR-013 (Rohtext aus dem lokalen Clone, `text_source`) bleibt davon unberührt und weiter offen.
 
 Effekt. Implementiert (`docs/js/prisma.js` splitDocLayers, pinEvidence mit origin-Parameter, readingShellHtml-Umschalter, setReadMode, paintActiveLayer; `docs/css/prisma.css` Umschalter, Band, Pin-Menü-Hinweis), test-abgedeckt (sechs Tests für Schicht-Trennung und bindende Separierung, `tests/tests.js`), auf allen 226 servierten Dokumenten greift die Grenze sauber. Offen bleiben die Synthese-Ebene (KI1) und das proaktive Laden der `## Kategorie-Evidenz` als vorbelegte KI-Belege (R2-Fortsetzung).
+
+### ADR-017 Kappa/Matrix-Disclosure-Zeile entfernt, Agreement extern bewertet
+
+Kontext. ADR-014 entfernte die Mensch-KI-Vergleichsfläche aus dem Werkzeug. Ein Rest blieb, die Disclosure-Zeile berechnete weiter eine Cohen-Kappa und die Konfusionsmatrix über `computeMatrix`/`cohenKappa`/`kappaLabel`. Diese Rechnung lief über den im Werkzeug geladenen Korpus (`research_vault_v2.json`), eine andere Menge als die Benchmark-CSVs, auf denen die kanonische Kappa 0.0561 beruht. Eine im Werkzeug angezeigte Zahl konnte von der Referenz also nur abweichen.
+
+Wahl. `computeMatrix`, `cohenKappa` und `kappaLabel` samt ihren Tests entfallen. Die Disclosure behält das trAIce-Item M9/R2, aber als Verweis, die AI-Mensch-Übereinstimmung wird außerhalb des Werkzeugs auf dem Benchmark-Korpus bewertet (`benchmark/replay_selftest.py`, PASS 18/18), nicht im Screening-Tool nachgerechnet. Die Entscheidung ist orchestratorseitig, reversibel und betrifft nur das Werkzeug. Eine etwaige Inter-Rater-Agreement-Aussage des Begleitpapers bleibt davon unberührt und ist eine separate Paper-Entscheidung des Operators.
+
+Begründung. Das Werkzeug ist damit konsistent, es ist ein evidenzgestütztes Screening-Instrument, kein Agreement-Messgerät über einem zufällig geladenen Korpus. Die kanonische Kappa lebt seit dem R2-Replay an genau einer Stelle, dem committeten Selbsttest über den Roh-CSVs. M9/R2 wird nicht verschwiegen, sondern an diese Quelle verwiesen, die trAIce-Konformität bleibt gewahrt.
+
+Effekt. Implementiert (`docs/js/prisma.js`, computeMatrix/cohenKappa/kappaLabel entfernt, disclosureMarkdown auf den M9/R2-Verweis umgestellt, TEST_HOOK bereinigt), test-abgedeckt (Section B der Suite entfernt, der Disclosure-Test prüft jetzt die Abwesenheit der Tool-Kappa und den externen Verweis, `tests/tests.js`). Headless grün nach der Entfernung.
 
 ## Was nicht reingehört
 
