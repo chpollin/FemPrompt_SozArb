@@ -4,6 +4,30 @@ Chronologisches Protokoll der Arbeitssitzungen mit Entscheidungen, Ergebnissen u
 
 ---
 
+## 2026-06-21 (Session 15): review session, the reading column fuses two epistemic layers, M3 reframed, distance to the overall goal
+
+**Branch:** `main` (no code change; an architectural finding and an assessment, documentation only)
+
+### What happened
+
+A review session as the lane `femprompt-prism`, triggered by an operator walkthrough of the screening surface. Verifying what the reading column actually renders surfaced a gap that reshapes the next milestone, and prompted an honest verdict on how far the lane is from its overall goal.
+
+1. **The reading column silently fuses verbatim text and AI extraction.** Verified against all 226 served knowledge docs (`docs/vault/Papers/*.md`): each is one document concatenating a paper layer (`## Abstract`, `## Key Concepts`, `## Full Text`) and an AI layer (`## Kernbefund`, `## Forschungsfrage`, `## Methodik`, `## Hauptargumente`, `## Kategorie-Evidenz` with `### Evidenz 1..5`, `## Assessment-Relevanz`, `## Schlüsselreferenzen`). `fetchPaperText` loads it and `renderMarkdown` dumps the whole thing into one scroll. There is no toggle and no boundary marker. A reviewer scrolls from the real paper straight into a machine summary with nothing separating them.
+2. **The provenance gap this creates.** KI2 records who pinned a Beleg (human), not where the snippet came from. A Beleg lifted out of the `## Kategorie-Evidenz` (AI) section still renders as a clean Mensch pin. The separation the tool promises is now visibly marked but not enforced in the live flow, which is exactly the contamination path the project means to close.
+3. **M3 reframed.** From "load machine-extracted Kategorie-Evidenz as AI-origin Belege" to "split the reading column into Volltext and KI-Extraktion, mark the boundary, and bind Beleg-Herkunft to the layer the snippet came from". Same R2 source material (`## Kategorie-Evidenz`), but the work now lands where the provenance promise is actually kept. Three concrete steps, ranked: a labelled boundary band at `## Kernbefund` (cheap), a Volltext / KI-Extraktion view toggle over the loaded document, and automatic `origin: ai` on snippets pinned from the AI layer. KI1-independent.
+
+### Assessment: distance to the overall goal
+
+The overall goal is an auditable instrument that runs a real FemPrompt screening pass with every decision backed by Kategorie-Evidenz, human and AI cleanly separated and disclosed, the result reproducible and published as the Companion. Verdict: the load-bearing foundation is reached (three surfaces, harness green 67/67, provenance plumbing as a stored field, import bridge under test), the overall goal is clearly not. Four things stand between here and there, the first only surfaced this session: the human/AI separation is not yet enforced in the reading flow (M3), the synthesis surface is unbuilt and gated on KI1, the kappa/matrix replay is asserted but not scriptable from real data, and no real screening pass, record bundle, or publication exists yet. The methodologically hardest part lies ahead of the lane, not behind it.
+
+### Open at the operator
+
+- M3 go (build the reframed reading-column split and provenance binding).
+- KI1 (synthesis level), gating the synthesis surface.
+- The trAIce disclosure kappa/matrix line, stays or falls with the comparison logic.
+
+---
+
 ## 2026-06-21 (Session 14): two milestones, per-Beleg provenance and the import bridge under test
 
 **Branch:** `main` (base `74dd183`; this entry's milestone commit secures both units)
