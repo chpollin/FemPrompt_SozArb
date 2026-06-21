@@ -4,19 +4,29 @@ Chronologisches Protokoll der Arbeitssitzungen mit Entscheidungen, Ergebnissen u
 
 ---
 
-## 2026-06-21 (Session 13): synthesis over comparison, Git surface removed, design unified, consolidated to main
+## 2026-06-21 (Session 13): verified runnable, then synthesis over comparison, Git and comparison surfaces removed, design unified, consolidated to main
 
-**Branch:** `feat/prisma-screening-tool` -> consolidated into `main`
+**Branch:** `feat/prisma-screening-tool` -> consolidated into `main` (verification at `1c1217a`, consolidation through `8f6580b`)
 
 ### What happened
 
-A verification-and-direction session as the Forschungsleitstelle lane `femprompt-prism`. The tool went from built-but-unverified to verified-runnable, and then through three operator-driven direction changes that reshaped what the tool is.
+A verification-and-direction session as the Forschungsleitstelle lane `femprompt-prism`. The tool went from built-but-unverified to verified-runnable, then through three operator-driven direction changes that reshaped what the tool is, before the lane was consolidated onto main.
 
-1. **Verification.** The never-run test suite was started and brought green (56 of 56, headless jsdom). All three surfaces were exercised, the storage path including the export/import fallback was checked. A critical assessment of the shipped frontend was written ([[frontend-assessment]]), and two real number errors were corrected (305 -> 303, recompute-backed).
-2. **Git surface removed from the tool** (operator order). The `git add/commit/push` hint block and the Git language left the Daten & Repo surface; "Git-based" left the page description; dead `.pt-git-hint` CSS was removed. The direct File System Access write stays: it lands the file in a GitHub Desktop working copy, where versioning now happens outside the tool. The internal `commit()` (records a decision, not a Git commit) is untouched.
-3. **Human-AI comparison surface removed** (operator order: synthesis over comparison). The leitmotif changed: human and AI assessment are never to be compared but always brought together into a synthesis. Removed from the working tool: the Mensch-KI-Uebereinstimmung section, the confusion-matrix view, the kappa display, the divergence filter, the reviewer reconciliation table, and the comparison intros and footer. Kept: the flow, the checklist, the disclosure, and the pure functions `computeMatrix`/`cohenKappa`/`kappaLabel`, because the disclosure line (PRISMA-trAIce M9) and the tests still use them. The divergence finding stays the property of the paper and the Evidence Companion, not the screening UI.
-4. **Design unified across all pages.** The tool page (`docs/prisma.html`) was lifted onto the Companion design: white background, the rainbow accent bar under the header, the shared header with title and navigation, the shared footer, Font Awesome. The navigation is now identical on all five pages (the PRISM link everywhere, one label). The slim tool header and dead `pt-app-header` CSS are gone. Tool logic and tests untouched.
-5. **Consolidated to main.** On the Leitstelle order, `feat/prisma-screening-tool` was fast-forwarded into `main` and pushed; the lane works on main from here, no own branches (the post-refactor rule). Tests stay green on main.
+1. **Verification.** The never-run test suite was started and brought green (56 of 56, headless jsdom). All three surfaces were exercised, the storage path including the export/import fallback was checked, and the absence of secret leaks confirmed (detail below). A critical assessment of the shipped frontend was written ([[frontend-assessment]]), and two real number errors were corrected (305 -> 303, recompute-backed).
+2. **Git surface removed from the tool** (operator order, `21059ba`). The `git add/commit/push` hint block and the Git language left the Daten & Repo surface; "Git-based" left the page description; dead `.pt-git-hint` CSS was removed. The direct File System Access write stays: it lands the file in a GitHub Desktop working copy, where versioning now happens outside the tool. The internal `commit()` (records a decision, not a Git commit) is untouched.
+3. **Human-AI comparison surface removed** (operator order: synthesis over comparison, `ba4db2f`). The leitmotif changed: human and AI assessment are never to be compared but always brought together into a synthesis. Removed from the working tool: the Mensch-KI-Uebereinstimmung section, the confusion-matrix view, the kappa display, the divergence filter, the reviewer reconciliation table, and the comparison intros and footer. Kept: the flow, the checklist, the disclosure, and the pure functions `computeMatrix`/`cohenKappa`/`kappaLabel`, because the disclosure line (PRISMA-trAIce M9) and the tests still use them. The divergence finding stays the property of the paper and the Evidence Companion, not the screening UI.
+4. **Design unified across all pages** (`c42bcc5`). The tool page (`docs/prisma.html`) was lifted onto the Companion design: white background, the rainbow accent bar under the header, the shared header with title and navigation, the shared footer, Font Awesome. The navigation is now identical on all five pages (the PRISM link everywhere, one label). The slim tool header and dead `pt-app-header` CSS are gone. Tool logic and tests untouched.
+5. **Consolidated to main** (`5a09be4`, `8f6580b`). On the Leitstelle order, `feat/prisma-screening-tool` was fast-forwarded into `main` and pushed; the lane works on main from here, no own branches (the post-refactor rule). The knowledge docs were synced to the new reality as ADR-014 (`5a09be4`: specification, design, README, data, frontend-assessment, plan, the screening README), keeping the research findings intact and only correcting the tool-describing parts. The `prisma.js` file header and a stale section comment were aligned to ADR-014 (`8f6580b`, comment-only). Tests stay green on main.
+
+### Verification (detail, HEAD `1c1217a`)
+
+- Test foundation verified against a real run: `npm test` (headless jsdom harness `tests/run.mjs`) reports PASS 56/56. The suite written in the 2026-06-09 wave, first shipped unrun, is now proven runnable, not just commit-claimed.
+- All three surfaces clicked through in the browser (local static server on `docs/`, prisma.html). The app loads cleanly: the console reports `326 papers loaded` and `initialized, 326 papers, FS supported`, no errors.
+  - **Screening with Beleg pinning:** full-text search finds hits, "Treffer anheften" opens the category menu, `pinEvidence` sets category plus Beleg (term, snippet, timestamp). Derivation confirmed: >=1 Technik AND >=1 Sozial flips the derived decision from Exclude to Include.
+  - **PRISMA & Report:** the PRISMA-2020 flow (n=326, separate AI/human lanes, advisory/binding), the confusion matrix 100/34/108/49 with kappa=0.056 at n=291, ten category kappas, the 14-item trAIce checklist (Holst et al. 2025), the AI disclosure with Markdown preview carrying the canonical kappa and matrix. The numbers match `knowledge/verification-empirical-core.md` and the README. The matrix/kappa view seen here was the comparison surface later removed in `ba4db2f`; the disclosure line keeps the numbers.
+  - **Daten & Repo:** the File System Access workflow (connect `docs/data/screening/`, one JSON per reviewer, schema 0.2), the export/import fallback for all browsers, the reviewer reconciliation table, the Excel-CSV bridge with a check report and collision guard. The reconciliation table and the Git workflow seen here were later removed in `21059ba`/`ba4db2f`.
+- Storage and sync path including fallback verified: a decision is written to localStorage (`femprompt-prisma-state/0.2`) and survives a reload (done counter 1/326, Beleg kept). Connection status stays "nicht mit Repo verbunden", so the localStorage fallback applies. The export payload `femprompt-prisma-reviewer/0.2` checked well-formed via `__PRISMA_TEST__.reviewerPayload`. The test decision was removed afterwards, demo state pristine (0/326).
+- No secret leak: `docs/js/config.local.js` (Gemini key) and `.env` are gitignored and never committed; the key is absent from history. The PRISM files do not reference the key, only `docs/index.html` loads `config.local.js` with `onerror=""` (graceful), so the tool deploys safely without a key.
 
 ### Operator decisions recorded this session
 
@@ -30,12 +40,35 @@ A verification-and-direction session as the Forschungsleitstelle lane `femprompt
 
 - In the shared Forschungsleitstelle report repo, a plain `git commit` swept a foreign already-staged file into the lane commit. Use `git commit -- <path>` there, the working tree is shared with parallel instances.
 - Most "old" numbers in the knowledge base are legitimate intermediate states (208 on 291 pairs vs 232 on 326), not errors. Verify against the recompute before "correcting".
+- The jsdom harness is the reliable trace, not the screenshot: the Chrome window is shared with the parallel frontend lanes and is resized continuously, so pixel clicks and screenshots are unreliable. Resolution-independent are element references (`find`) and `javascript_tool` against `window.__PRISMA_TEST__`.
+- Avoid blocking dialogs: "Eigene Session leeren" calls `confirm()`, the FS Access error paths `alert()`. Do not click these in a browser automation run; clean up directly via localStorage instead.
+- Merge scope was wider than the tool: the feature branch differed from main in 62 files, only 10 under `docs/`, the rest the paper strand, benchmark experiments, and knowledge. The full merge brought the paper strand onto main, which the operator accepted before the fast-forward consolidation.
 
 ### Open items (next)
 
 - Decide the synthesis level (KI1), then design and build the synthesis surface with per-Beleg provenance (KI2).
 - Decide whether the disclosure kappa/matrix line (trAIce M9) stays or falls with the comparison logic; on fall, retire `computeMatrix`/`cohenKappa`/`kappaLabel` and their test (the last code-consolidation remainder).
 - Decide whether the tool's inner widgets also move onto the Companion typography (the frame is unified, the inner screening panels still use the tool font).
+
+---
+
+## 2026-06-09 (Session 12b, Abend): Gesamtumsetzungs-Welle und Solo-Abschluss
+
+**Branch:** `feat/prisma-screening-tool`
+
+### Was passiert ist
+
+- Parallel-Welle (23 Agenten, Schreiber plus adversariale Verifizierer, disjunkte Datei-Territorien, ohne Shell): Excel-Import-Bruecke (`docs/js/prisma-import.js`), Browser-Testfundament (`tests/`, ungelaufen), Retro-Record Runde 1 plus `flow_model.json`, Divergenz-Analyse (TP3), Update-Protokoll mit paste-ready Prompts (TP5), Reuse-Pfad (TP7), Paper-Outline plus drei Stilproben mit Juroren-Panel.
+- TP4-Analysedesign vom Subagenten-Schreib-Guard blockiert (Dateinamen mit "analysis"); vom Orchestrator aus dem woertlichen Agenten-Inhalt mit vier Verifizierer-Fixes geschrieben.
+- Solo danach: `simulation-ledger.md` (alle Stakeholder-Entscheidungen simuliert, markiert, ratifizierbar), `ris-conversion.md` (schliesst paper-integrity 3.8), `paper/draft.md` (Register 2, ergebnisgefuehrt, offene Stellen als PENDING markiert), Vault-Dokumente nachgezogen.
+- Paper-Integritaets-Abgleich der eingereichten Forum-Fassung: alte Korrekturrunde verifiziert eingearbeitet; ein neuer Befund (LLM-Pfad-Input-Basis, 3.9) dokumentiert, vom Autor entschieden: keine Korrektur an die Redaktion, Praezisierung im Folgepaper.
+
+### Was wir gelernt haben
+
+- **Exklusive Datei-Territorien tragen Parallel-Wellen:** 23 Agenten im selben Working Tree ohne Konflikt, weil jede Datei genau einen Besitzer hatte und README/plan einem finalen Konsolidierer gehoerten.
+- **Schreib-Guards treffen Dateinamen, nicht Inhalte:** Subagenten koennen keine .md-Dateien mit "analysis" im Namen schreiben; Workarounds: Inhalt woertlich im Strukturfeld zurueckgeben (Orchestrator schreibt) oder NTFS-`::$DATA`-Pfadform.
+- **Simulierte Stakeholder-Entscheidungen brauchen ein Ledger:** als simuliert markiert, mit Begruendung aus realistischer Perspektive, Ratifikationspunkt definiert; lizenzieren Arbeit, nie Aussenaussagen.
+- **Die Verifikationskette zahlt sich doppelt:** Die Nachrechnung korrigierte nicht nur den Kernbefund (Divergenz-Zerlegung), sondern fing auch einen Faktenfehler in der bereits eingereichten Publikation.
 
 ---
 
@@ -235,8 +268,6 @@ Systematic comparison of the paper text (Forum Wissenschaft draft) against the c
 | `docs/js/kategorien.js` | Neu: Kategorien-Explorer IIFE (~300 Zeilen) |
 | `docs/js/wissensnetz.js` | Komplett neu: Cluster-Layout, Divergenz-Modus, Glow, Sidebar |
 | `docs/js/research-app.js` | Divergenz-Daten laden, EC API, Modal-Tabs, Markdown-Export (~1100 Zeilen) |
-| `docs/js/kategorien.js` | Neu: Kategorien-Explorer IIFE (~300 Zeilen) |
-| `docs/js/wissensnetz.js` | Komplett neu: Cluster-Layout, Divergenz-Modus, Glow, Sidebar |
 | `docs/js/wissenschat.js` | Heading geaendert |
 | `docs/js/features.js` | Entfernt (war nur noch No-Op Stubs) |
 | `docs/index.html` | Kategorien-Explorer, Wissensnetz Toolbar, Stats in Header, Modal-Tabs |
@@ -589,46 +620,6 @@ Systematic comparison of the paper text (Forum Wissenschaft draft) against the c
 - **Observable Plot ist fuer Static Hosting ungeeignet:** Braucht ESM-Imports, die auf `file://` und einfachen Hosts Probleme machen. Chart.js via CDN funktioniert ueberall.
 - **Visualisierungen brauchen epistemische Funktion:** Ein Radar-Chart zeigt Daten. Ein Slope Chart zeigt *Divergenz* -- die Steigung ist die Aussage. Das ist der Unterschied zwischen "Daten darstellen" und "Wissen zeigen".
 - **Confusion-Matrix-Bug:** `generate_docs_data.py` hatte eine fehlende Guard-Clause fuer Papers ohne Human-Assessment. Zeigte sich erst bei 326 Papers (vorher nur 210 getestet).
-
----
-
-## Session 2026-06-09 (Abend): Gesamtumsetzungs-Welle und Solo-Abschluss
-
-### Was passiert ist
-
-- Parallel-Welle (23 Agenten, Schreiber plus adversariale Verifizierer, disjunkte Datei-Territorien, ohne Shell): Excel-Import-Bruecke (`docs/js/prisma-import.js`), Browser-Testfundament (`tests/`, ungelaufen), Retro-Record Runde 1 plus `flow_model.json`, Divergenz-Analyse (TP3), Update-Protokoll mit paste-ready Prompts (TP5), Reuse-Pfad (TP7), Paper-Outline plus drei Stilproben mit Juroren-Panel.
-- TP4-Analysedesign vom Subagenten-Schreib-Guard blockiert (Dateinamen mit "analysis"); vom Orchestrator aus dem woertlichen Agenten-Inhalt mit vier Verifizierer-Fixes geschrieben.
-- Solo danach: `simulation-ledger.md` (alle Stakeholder-Entscheidungen simuliert, markiert, ratifizierbar), `ris-conversion.md` (schliesst paper-integrity 3.8), `paper/draft.md` (Register 2, ergebnisgefuehrt, offene Stellen als PENDING markiert), Vault-Dokumente nachgezogen.
-- Paper-Integritaets-Abgleich der eingereichten Forum-Fassung: alte Korrekturrunde verifiziert eingearbeitet; ein neuer Befund (LLM-Pfad-Input-Basis, 3.9) dokumentiert, vom Autor entschieden: keine Korrektur an die Redaktion, Praezisierung im Folgepaper.
-
-### Was wir gelernt haben
-
-- **Exklusive Datei-Territorien tragen Parallel-Wellen:** 23 Agenten im selben Working Tree ohne Konflikt, weil jede Datei genau einen Besitzer hatte und README/plan einem finalen Konsolidierer gehoerten.
-- **Schreib-Guards treffen Dateinamen, nicht Inhalte:** Subagenten koennen keine .md-Dateien mit "analysis" im Namen schreiben; Workarounds: Inhalt woertlich im Strukturfeld zurueckgeben (Orchestrator schreibt) oder NTFS-`::$DATA`-Pfadform.
-- **Simulierte Stakeholder-Entscheidungen brauchen ein Ledger:** als simuliert markiert, mit Begruendung aus realistischer Perspektive, Ratifikationspunkt definiert; lizenzieren Arbeit, nie Aussenaussagen.
-- **Die Verifikationskette zahlt sich doppelt:** Die Nachrechnung korrigierte nicht nur den Kernbefund (Divergenz-Zerlegung), sondern fing auch einen Faktenfehler in der bereits eingereichten Publikation.
-
----
-
-## Session 2026-06-21: Verifikation PRISM-Frontend (Forschungsleitstelle-Lane femprompt-prism)
-
-**Branch:** `feat/prisma-screening-tool` (HEAD `1c1217a`, synchron mit origin)
-
-### Was passiert ist
-
-- Testfundament gegen echten Lauf verifiziert: `npm test` (headless jsdom-Harness `tests/run.mjs`) meldet PASS 56/56. Damit ist die in der Welle vom 2026-06-09 geschriebene, zunaechst ungelaufene Suite belegt lauffaehig, nicht nur per Commit-Behauptung.
-- Alle drei Oberflaechen im Browser durchgeklickt (lokaler Static-Server auf `docs/`, prisma.html). App laedt sauber: Konsole meldet `326 papers loaded` und `initialized, 326 papers, FS supported`, keine Fehler.
-  - **Screening mit Beleg-Pinning:** Volltextsuche findet Treffer, "Treffer anheften" oeffnet das Kategorie-Menue, `pinEvidence` setzt Kategorie plus Beleg (Term, Snippet, Timestamp). Ableitungslogik bestaetigt: >=1 Technik UND >=1 Sozial kippt die abgeleitete Entscheidung von Exclude auf Include.
-  - **PRISMA & Report:** PRISMA-2020-Fluss (n=326, getrennte KI-/Mensch-Spuren, advisory/bindend), Konfusionsmatrix 100/34/108/49 mit kappa=0.056 und n=291, zehn Kategorie-Kappas, 14-Item-trAIce-Checkliste (Holst et al. 2025), AI-Disclosure mit Markdown-Vorschau, die kanonische Kappa und Matrix tragend. Zahlen stimmen mit `knowledge/verification-empirical-core.md` und README ueberein.
-  - **Daten & Repo:** File-System-Access-Git-Workflow (Ordner `docs/data/screening/` verbinden, eine JSON pro Reviewer:in, Schema 0.2), Export/Import-Fallback fuer alle Browser, Reviewer:innen-Abgleichstabelle, Excel-CSV-Bruecke mit Pruefbericht und Kollisionsschutz.
-- Speicher- und Sync-Pfad inkl. Fallback verifiziert: Entscheidung wird nach localStorage (`femprompt-prisma-state/0.2`) geschrieben und ueberlebt einen Reload (Erledigt-Zaehler 1/326, Beleg erhalten). Verbindungsstatus bleibt "nicht mit Repo verbunden", also greift der localStorage-Fallback. Export-Payload `femprompt-prisma-reviewer/0.2` ueber `__PRISMA_TEST__.reviewerPayload` als wohlgeformt geprueft. Testentscheid danach wieder entfernt, Vorfuehrzustand pristin (0/326).
-- Kein Secret-Leak: `docs/js/config.local.js` (Gemini-Key) und `.env` sind gitignored und nie committet; der Key taucht nicht in der History auf. Die PRISM-Dateien referenzieren den Key nicht, nur `docs/index.html` laedt `config.local.js` mit `onerror=""` (graceful), das Tool deployt also sicher ohne Key.
-
-### Was wir gelernt haben
-
-- **Der jsdom-Harness ist die belastbare Spur, nicht der Screenshot:** Das Chrome-Fenster ist mit den parallelen Frontend-Lanes geteilt und wird laufend resized, Pixel-Klicks und Screenshots werden dadurch unzuverlaessig. Aufloesungsunabhaengig bleiben Element-Referenzen (`find`) und `javascript_tool` gegen `window.__PRISMA_TEST__`.
-- **Blockierende Dialoge meiden:** "Eigene Session leeren" ruft `confirm()` (prisma.js:1233), die FS-Access-Fehlerpfade `alert()` (194/209/211). Im Browser-Automationslauf nicht klicken; Cleanup stattdessen direkt ueber localStorage.
-- **Merge-Scope ist breiter als das Tool:** Der Feature-Branch unterscheidet sich in 62 Dateien von main, davon nur 10 unter `docs/`; der Rest ist Paper-Strang (`paper/`, ratifizierbar erst 1. Juli), Benchmark-Experimente und knowledge. Ein Voll-Merge braechte den Paper-Strang mit auf main. Operator-Entscheidung.
 
 ---
 
