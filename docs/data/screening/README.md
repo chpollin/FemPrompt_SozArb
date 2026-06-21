@@ -1,12 +1,12 @@
-# Screening decisions (Git-based PRISMA tool)
+# Screening decisions (PRISMA screening tool)
 
 This folder holds the working data of the PRISMA screening tool (`docs/prisma.html`).
 
 ## How it works
 
 - Each reviewer screens independently into **their own file**: `<reviewer>.json` (e.g. `sss.json`, `sk.json`).
-- The tool reads every `*.json` here to aggregate the flow diagram, agreement, and reviewer reconciliation; it writes only the current reviewer's file.
-- Per-reviewer files keep Git **conflict-free** (each person edits only their file) and match independent dual review (PRISMA-trAIce M8).
+- The tool reads every `*.json` here to aggregate the flow diagram and the disclosure figures; it writes only the current reviewer's file.
+- Per-reviewer files keep version control **conflict-free** (each person edits only their file) and match independent dual review (PRISMA-trAIce M8).
 
 ## Workflow
 

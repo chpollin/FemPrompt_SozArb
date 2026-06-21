@@ -1130,7 +1130,7 @@ function disclosureMarkdown() {
 }
 
 // ============================================================
-// Surface: Daten & Repo (sync + reviewers reconciliation)
+// Surface: Daten & Repo (sync: connect, per-reviewer files, export/import)
 // ============================================================
 
 function renderData() {

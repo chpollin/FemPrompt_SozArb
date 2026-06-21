@@ -22,7 +22,7 @@ topics: ["[[Requirements Engineering]]", "[[Decision Records]]"]
 related: [project, data, user-stories, ai-assisted-review-standards, prisma-methodology]
 ---
 
-This document is the substance layer for the **PRISMA screening tool**, a standalone, Git-backed, PRISMA-conformant screening instrument (`docs/prisma.html`, see ADR-008) linked from the Evidence Companion. It has three sections with different update rhythms: Requirements (static, what the tool must do and for whom), Funktionsumfang (refactored per release, the current shape of the view and its modules), and Decisions (monotonically growing ADRs). Narrative usage scenarios live separately in [[user-stories]]; the data model lives in [[data]]; the standards being implemented are in [[ai-assisted-review-standards]]. The four existing views (Knowledge Chat, Knowledge Graph, Categories, Corpus) are the reference layer documented in `CLAUDE.md`; this spec covers only the new working layer.
+This document is the substance layer for the **PRISMA screening tool**, a standalone, PRISMA-conformant screening instrument (`docs/prisma.html`, see ADR-008) linked from the Evidence Companion. The tool writes its data files directly into the connected project folder (File System Access); versioning happens outside the tool in GitHub Desktop (ADR-014, supersedes the in-tool Git surface of ADR-009). It has three sections with different update rhythms: Requirements (static, what the tool must do and for whom), Funktionsumfang (refactored per release, the current shape of the view and its modules), and Decisions (monotonically growing ADRs). Narrative usage scenarios live separately in [[user-stories]]; the data model lives in [[data]]; the standards being implemented are in [[ai-assisted-review-standards]]. The four existing views (Knowledge Chat, Knowledge Graph, Categories, Corpus) are the reference layer documented in `CLAUDE.md`; this spec covers only the new working layer.
 
 ## Anforderungen
 
@@ -42,11 +42,11 @@ This document is the substance layer for the **PRISMA screening tool**, a standa
 - FR-12: Search the full text. Provide an in-text search that highlights and steps through matches in the open paper, and a corpus-wide search that lists papers whose full text contains a term. Acceptance: a query highlights every hit in the open text and returns the set of papers containing it across the corpus.
 - FR-13: Pin a hit as evidence for a category. From a search hit or a selected passage, attach the term plus its surrounding snippet to one of the ten categories as a stored Beleg; evidence is saved with the decision and is citable in the report. Acceptance: a category can carry one or more evidence snippets; they persist in the reviewer file and appear in the decision log and disclosure.
 
-The AI-forward requirements are demoted by ADR-012. As built (commit c909e50): FR-03 (blind mode) is removed from the working view, there is no blind/reveal and no blind toggle; FR-05 (agreement metrics) and the human-AI comparison live only in the PRISMA & Report surface, computed, not foregrounded; FR-10 (live LLM) is not implemented (optional, minimal, deferred). The screening view centers on FR-11 to FR-13 (read, search, pin evidence).
+The AI-forward requirements are demoted by ADR-012 and then by ADR-014. As built: FR-03 (blind mode) is removed from the working view, there is no blind/reveal and no blind toggle; FR-05 (agreement metrics) no longer has a surface at all, ADR-014 removed the human-AI comparison view (matrix, kappa, divergence filter, reviewer reconciliation) from the tool entirely. The pure functions `computeMatrix`/`cohenKappa`/`kappaLabel` survive only because the disclosure line (PRISMA-trAIce M9) and the tests still use them. FR-10 (live LLM) is not implemented (optional, minimal, deferred). The screening view centers on FR-11 to FR-13 (read, search, pin evidence).
 
 FR-11 to FR-13 acceptance, as built: FR-11 renders `paper.knowledge_doc` (the served distilled knowledge document, see [[data]]) with a built-in Markdown renderer, falling back to the abstract, then to an empty state. FR-12 highlights and steps through in-text matches in the open document and filters the corpus via the prebuilt `docs/data/fulltext_index.json`. FR-13 pins a selected passage or a search hit as `evidence[category] = {term, snippet, ts}` in the reviewer file (schema 0.2), sets the category, and reports an `evidence_count` in the decision log. The behaviour contract is in [[data]] (Evidence behaviour). Note: "full text" here is the served knowledge document, not the raw paper text; reading the raw local full text is a copyright-gated follow-up via the single `fetchPaperText` seam.
 
-Acceptance (three-surface IA): the sub-navigation has exactly three entries (Screening, PRISMA & Report, Daten & Repo); the seven v3 surfaces are gone; kappa, matrix, and flow are reachable only from PRISMA & Report; a persisted v3 surface id is normalised onto the three on load.
+Acceptance (three-surface IA): the sub-navigation has exactly three entries (Screening, PRISMA & Report, Daten & Repo); the seven v3 surfaces are gone; the flow, the checklist, and the disclosure are reachable from PRISMA & Report, while kappa and the matrix have no surface (ADR-014, they feed only the disclosure line); a persisted v3 surface id is normalised onto the three on load.
 
 ### Nicht-funktionale Anforderungen
 
@@ -67,8 +67,8 @@ Anwendungsszenarien siehe [[user-stories]].
 Per ADR-012 the seven surfaces collapse into three, AI is strongly reduced, and the screening view is rebuilt around full-text reading, search, and evidence:
 
 1. **Screening** (the work): a corpus overview with full-text search across all papers, plus a single-paper full-text working view with in-text search, evidence pinning per category, the derived include/exclude, and an optional collapsed AI suggestion. Subsumes the old Screening Workspace.
-2. **PRISMA & Report** (the outputs): the PRISMA 2020 flow diagram, the checklist, and the disclosure generator in one place, generated from the screening; the agreement matrix and kappa live here, computed quietly, not in the working view. Subsumes Flow, Agreement, Checklist, Disclosure.
-3. **Daten & Repo** (sync): File System Access connect, per-reviewer files, Git workflow, export/import; the Reviewers reconciliation folds in here as a section.
+2. **PRISMA & Report** (the outputs): the PRISMA 2020 flow diagram, the checklist, and the disclosure generator in one place, generated from the screening. ADR-014 removed the agreement matrix and kappa as a surface; they survive only as functions feeding the disclosure line. Subsumes Flow, Checklist, Disclosure.
+3. **Daten & Repo** (sync): File System Access connect (write into the project folder), per-reviewer files, export/import. ADR-014 removed the in-tool Git workflow (versioning is in GitHub Desktop) and the Reviewers reconciliation section.
 
 Each view carries a one-line "what is this, what do I do here" header. The three surfaces are specified screen by screen in [[design]] section 5 (5A to 5D), matching the build. The module descriptions below are the v3 shape, retained for the report and data parts; the Screening Workspace block is superseded by the v4 Screening view and the evidence model in [[data]].
 
@@ -94,15 +94,17 @@ Interaktion. Live redraw as decisions accrue; separate AI-decision and human-dec
 
 Grenzen. It visualises the recorded process; it does not infer counts the data does not support, and it follows the PRISMA 2020 three-phase structure (Identification, Screening, Included), not the 2009 four-phase one.
 
-### Agreement Panel
+### Agreement Panel (removed by ADR-014)
 
-Zweck. Make the human-AI divergence measurable in place (this is the PRISMA-trAIce M9/R2 performance evaluation).
+This module is no longer a surface in the tool. ADR-014 removed the human-AI comparison view (confusion matrix, decision and per-category kappa, base-rate comparison, cell-to-workspace filtering) in favour of synthesis over comparison. The underlying functions remain only to feed the disclosure line (PRISMA-trAIce M9); the divergence finding itself lives in the paper and the Evidence Companion, see [[analysis-divergence]] and [[verification-empirical-core]]. The block below is kept as the record of what the surface was.
+
+Zweck (historisch). Make the human-AI divergence measurable in place (this was the PRISMA-trAIce M9/R2 performance evaluation).
 
 Datengrundlage. Paired human and AI decisions across the session.
 
-Interaktion. Confusion matrix, decision and per-category kappa, base-rate comparison; clicking a cell filters the workspace to those papers.
+Interaktion. Confusion matrix, decision and per-category kappa, base-rate comparison; clicking a cell filtered the workspace to those papers.
 
-Grenzen. Kappa is reported as a comparison anchor, not a quality verdict; the panel describes divergence, it does not adjudicate it.
+Grenzen. Kappa was reported as a comparison anchor, not a quality verdict; the panel described divergence, it did not adjudicate it.
 
 ### Checklist Tracker
 
@@ -216,7 +218,7 @@ Begründung. A working screening tool needs full width and its own chrome, and a
 
 Effekt. Implemented (rebuild stage 1). Supersedes ADR-005.
 
-### ADR-009 File System Access persistence with Git (supersedes ADR-006)
+### ADR-009 File System Access persistence with Git (Git surface later removed by ADR-014)
 
 Kontext. Collaborators must download the repo, screen in the browser, write into the data, and commit; localStorage alone is not shareable.
 
@@ -224,7 +226,7 @@ Wahl. The File System Access API writes per-reviewer JSON files into `docs/data/
 
 Begründung. Git becomes the sync layer with no backend, matching the described "write into the data, commit, the other pulls" workflow.
 
-Effekt. Implemented (rebuild stage 2). Direct write is Chromium-only; the fallback covers Firefox/Safari. Supersedes ADR-006.
+Effekt. Implemented (rebuild stage 2). Direct write is Chromium-only; the fallback covers Firefox/Safari. Supersedes ADR-006. ADR-014 later removed the in-tool Git surface (the add/commit/push hint and the Git language): the direct write stays, but versioning moved to GitHub Desktop outside the tool. The persistence mechanism is unchanged; only the in-tool Git affordance is gone.
 
 ### ADR-010 One file per reviewer
 
@@ -265,6 +267,16 @@ Wahl. Read the raw local full text from the connected clone through the single `
 Begründung. A Beleg should come from the paper, not from an LLM summary of it; recording the text source makes the evidence basis auditable, the actor-text-evidence triple the round-1 audit could not reconstruct.
 
 Effekt. Geplant, noch nicht implementiert (plan.md P2). Bis dahin liest die Screening-Oberfläche das Wissensdokument, und In-Tool-Belege tragen dessen Färbung; diese Grenze ist in [[data]] benannt.
+
+### ADR-014 Synthesis over comparison, Git surface removed, design unified (supersedes the comparison parts of ADR-003/004/012 and the Git surface of ADR-009)
+
+Kontext. Three operator decisions on 2026-06-21 reshaped the tool. (1) The leitmotif changed: human and AI assessment are never to be compared but always brought together into a synthesis; the built comparison surface (matrix, kappa, divergence, reconciliation) ran against that. (2) The in-tool Git surface duplicated what GitHub Desktop does and added a command block the working user does not need. (3) The tool page carried its own slim header and design, out of step with the four-view Companion.
+
+Wahl. (1) Remove the human-AI comparison surface from the tool: the Mensch-KI-Uebereinstimmung section, the confusion-matrix view, the kappa display, the divergence filter, and the reviewer reconciliation table are gone. The pure functions (`computeMatrix`, `cohenKappa`, `kappaLabel`) and the PRISMA-trAIce R1/R2 reporting data stay, feeding only the disclosure line. (2) Remove the in-tool Git surface (add/commit/push hint, Git language); keep the direct File System Access write into the project folder; versioning is GitHub Desktop, outside the tool. (3) Lift the tool page onto the Companion design (white background, rainbow accent bar, shared header, navigation, and footer, Font Awesome); unify the navigation across all five pages.
+
+Begründung. The synthesis direction makes the tool produce a joint, evidence-grounded judgement instead of an adversarial human-vs-AI score; the divergence research stays the property of the paper and the Evidence Companion, not a burden on the screening UI. Removing the Git surface matches how versioning actually happens (GitHub Desktop) and cuts apparatus. One design across all pages makes the tool read as part of the Companion, not a bolt-on. Decided with the operator 2026-06-21.
+
+Effekt. Implementiert und nach main konsolidiert. Offen, vom Operator zu klären: die Synthese-Ebene (pro Artikel / über den Bestand / beides), die der noch zu bauenden Synthese-Oberfläche zugrunde liegt; die Beleg-Herkunft (KI/Mensch) bleibt je Beleg gekennzeichnet (entschieden). Offen ferner, ob die Disclosure-Zeile mit Kappa/Matrix bleibt; bei Fall entfallen `computeMatrix`/`cohenKappa`/`kappaLabel` samt Test.
 
 ## Was nicht reingehört
 

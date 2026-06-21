@@ -141,9 +141,9 @@ The v3 single-blob format, kept only as a description of the earlier export shap
 
 Round-trip must be lossless (FR-08 acceptance). The `schema` string is versioned so future tool versions can migrate older sessions.
 
-## Per-reviewer files and Git persistence (implemented model)
+## Per-reviewer files and version-controlled persistence (implemented model)
 
-The shipped tool persists not as one session blob but as **one JSON per reviewer** under `docs/data/screening/`, so Git is the sync layer and reviewers never conflict (see ADR-009, ADR-010). The File System Access API writes the current reviewer's file directly into the repo on every decision; localStorage mirrors it as a cache; export/import is the fallback.
+The shipped tool persists not as one session blob but as **one JSON per reviewer** under `docs/data/screening/`, so version control is the sync layer and reviewers never conflict (see ADR-009, ADR-010). The File System Access API writes the current reviewer's file directly into the connected project folder on every decision; localStorage mirrors it as a cache; export/import is the fallback. Versioning happens in GitHub Desktop outside the tool (ADR-014 removed the in-tool Git surface; the write path is unchanged).
 
 ```json
 // docs/data/screening/<reviewer>.json  (schema bumped to 0.2 with evidence)
@@ -169,9 +169,9 @@ The shipped tool persists not as one session blob but as **one JSON per reviewer
 
 The `evidence` map (added in schema 0.2, FR-13) is the v4 core: per category, a list of pinned Belege, each a `term` plus the surrounding `snippet` taken from the full text at screening time. Backward compatible: a 0.1 record without `evidence` loads as a record with no evidence. Evidence is the reviewer's textual justification; it is never written by the AI.
 
-Aggregation: the tool loads every `*.json` in the folder into `reviewers[key]`, plus the built-in `seed` reviewer (the existing expert assessment, `paper.human`). A **perspective** selector chooses whose decisions count as the human side in the Flow and Agreement (default `seed`, which reproduces the benchmark). The **Reviewers** surface computes, per reviewer, n / include / exclude and kappa against the AI (PRISMA-trAIce M8/M9). The AI proposal is always `paper.llm` from the corpus, never stored in a reviewer file.
+Aggregation: the tool loads every `*.json` in the folder into `reviewers[key]`, plus the built-in `seed` reviewer (the existing expert assessment, `paper.human`). A **perspective** selector chooses whose decisions count as the human side in the Flow (default `seed`, which reproduces the benchmark). ADR-014 removed the **Reviewers** surface (per-reviewer n / include / exclude and kappa against the AI); that aggregation now feeds only the disclosure line. The AI proposal is always `paper.llm` from the corpus, never stored in a reviewer file.
 
-Git workflow: `git add docs/data/screening/<reviewer>.json && git commit -m "screening: N papers (<reviewer>)" && git push`; collaborators pull and reconnect the folder. Documented in `docs/data/screening/README.md`.
+Versioning: the reviewer files are committed in GitHub Desktop outside the tool (ADR-014 removed the in-tool `git add/commit/push` hint); collaborators pull and reconnect the folder. Documented in `docs/data/screening/README.md`.
 
 ## Reading text source and corpus search (v4, as built)
 

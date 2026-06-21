@@ -7,7 +7,7 @@ status: active
 language: en
 version: "0.1"
 created: 2026-06-09
-updated: 2026-06-09
+updated: 2026-06-21
 authors: [Christopher Pollin]
 generated-with: Claude Code
 method:
@@ -300,7 +300,7 @@ Status (2026-06-09): the setup path is drafted as `knowledge/reuse-setup.md` (st
 |---|---|---|
 | Decision logic, kappa/flow aggregation, schema migration, renderer escaping, export/import round-trip | committed jsdom harness | `tests/` |
 | Visual and interaction reality: reading flow, search stepping, pinning, downloads, keyboard, responsive | agent click-tests S1 to S6 | protocols in [[journal]] |
-| File System Access dialogs and writes, Git workflow, real onboarding | human | `tests/manual-checklist.md` |
+| File System Access dialogs and writes, GitHub Desktop versioning of the reviewer files, real onboarding | human | `tests/manual-checklist.md` |
 
 ## What this plan does not cover
 

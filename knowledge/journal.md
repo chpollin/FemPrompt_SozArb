@@ -4,6 +4,41 @@ Chronologisches Protokoll der Arbeitssitzungen mit Entscheidungen, Ergebnissen u
 
 ---
 
+## 2026-06-21 (Session 13): synthesis over comparison, Git surface removed, design unified, consolidated to main
+
+**Branch:** `feat/prisma-screening-tool` -> consolidated into `main`
+
+### What happened
+
+A verification-and-direction session as the Forschungsleitstelle lane `femprompt-prism`. The tool went from built-but-unverified to verified-runnable, and then through three operator-driven direction changes that reshaped what the tool is.
+
+1. **Verification.** The never-run test suite was started and brought green (56 of 56, headless jsdom). All three surfaces were exercised, the storage path including the export/import fallback was checked. A critical assessment of the shipped frontend was written ([[frontend-assessment]]), and two real number errors were corrected (305 -> 303, recompute-backed).
+2. **Git surface removed from the tool** (operator order). The `git add/commit/push` hint block and the Git language left the Daten & Repo surface; "Git-based" left the page description; dead `.pt-git-hint` CSS was removed. The direct File System Access write stays: it lands the file in a GitHub Desktop working copy, where versioning now happens outside the tool. The internal `commit()` (records a decision, not a Git commit) is untouched.
+3. **Human-AI comparison surface removed** (operator order: synthesis over comparison). The leitmotif changed: human and AI assessment are never to be compared but always brought together into a synthesis. Removed from the working tool: the Mensch-KI-Uebereinstimmung section, the confusion-matrix view, the kappa display, the divergence filter, the reviewer reconciliation table, and the comparison intros and footer. Kept: the flow, the checklist, the disclosure, and the pure functions `computeMatrix`/`cohenKappa`/`kappaLabel`, because the disclosure line (PRISMA-trAIce M9) and the tests still use them. The divergence finding stays the property of the paper and the Evidence Companion, not the screening UI.
+4. **Design unified across all pages.** The tool page (`docs/prisma.html`) was lifted onto the Companion design: white background, the rainbow accent bar under the header, the shared header with title and navigation, the shared footer, Font Awesome. The navigation is now identical on all five pages (the PRISM link everywhere, one label). The slim tool header and dead `pt-app-header` CSS are gone. Tool logic and tests untouched.
+5. **Consolidated to main.** On the Leitstelle order, `feat/prisma-screening-tool` was fast-forwarded into `main` and pushed; the lane works on main from here, no own branches (the post-refactor rule). Tests stay green on main.
+
+### Operator decisions recorded this session
+
+- Publication, merge strategy, and project management are out of the lane scope.
+- Leitmotif: synthesis, not comparison.
+- Standing rule: self-commit at every milestone and push to main without asking.
+- Evidence provenance (KI2): each Beleg stays marked as AI- or human-sourced, a plain provenance tag without judgement.
+- Open at the operator (KI1): the synthesis level (per article / corpus-wide / both). This gates the next content milestone, the synthesis surface that replaces the removed comparison.
+
+### Learnings
+
+- In the shared Forschungsleitstelle report repo, a plain `git commit` swept a foreign already-staged file into the lane commit. Use `git commit -- <path>` there, the working tree is shared with parallel instances.
+- Most "old" numbers in the knowledge base are legitimate intermediate states (208 on 291 pairs vs 232 on 326), not errors. Verify against the recompute before "correcting".
+
+### Open items (next)
+
+- Decide the synthesis level (KI1), then design and build the synthesis surface with per-Beleg provenance (KI2).
+- Decide whether the disclosure kappa/matrix line (trAIce M9) stays or falls with the comparison logic; on fall, retire `computeMatrix`/`cohenKappa`/`kappaLabel` and their test (the last code-consolidation remainder).
+- Decide whether the tool's inner widgets also move onto the Companion typography (the frame is unified, the inner screening panels still use the tool font).
+
+---
+
 ## 2026-06-09 (Session 12): PRISM v4, evidence-grounded screening tool
 
 **Branch:** `feat/prisma-screening-tool`

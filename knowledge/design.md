@@ -7,7 +7,7 @@ status: active
 language: en
 version: "0.1"
 created: 2026-06-09
-updated: 2026-06-09
+updated: 2026-06-21
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 4.8)
 method:
@@ -24,7 +24,9 @@ related: [specification, user-stories, data, ai-assisted-review-standards, prism
 
 This is the self-contained UI/design working document for the PRISMA screening tool, a standalone page (`docs/prisma.html`, ADR-008) linked from the Evidence Companion. It is written so that UI and design work can proceed **from this document alone**: it consolidates the PRISMA essentials that drive the interface (section 1-2), the people and scenarios it serves (3-4), each screen specified with layout, components, data, states, interactions and an ASCII wireframe (5), the design system to inherit (6), the epistemic design principles specific to this tool (7), the concrete tokens (8), and the open design questions left for the design work (9). Full domain detail lives in [[prisma-methodology]] and [[ai-assisted-review-standards]]; formal requirements in [[specification]]; the data model in [[data]]; the scenarios in [[user-stories]]. Where this document repeats those, it does so deliberately, because its purpose is hand-off.
 
-> Read section 0 first. It is the current (v4) direction and supersedes the AI-forward, seven-surface specifics in sections 1, 4 to 7. Those sections are kept as background on the standards and the reasoning, not as the build target.
+> Read section 0 first. It is the current direction and supersedes the AI-forward, seven-surface specifics in sections 1, 4 to 7. Those sections are kept as background on the standards and the reasoning, not as the build target.
+
+> **v5 update (2026-06-21, [[specification]] ADR-014).** Three changes layer onto the v4 direction below. (1) **Synthesis over comparison.** The human-AI comparison surface (matrix, kappa, divergence filter, reviewer reconciliation) is removed from the tool; human and AI assessment are to be brought together into a synthesis, not scored against each other. The next build is a synthesis surface (level open: per article / corpus-wide / both); each Beleg keeps a provenance tag (AI or human). (2) **No Git surface.** The in-tool `git add/commit/push` hint and Git language are gone; the direct File System Access write stays, versioning is GitHub Desktop outside the tool. (3) **Unified design.** The tool page now wears the Companion design (white background, rainbow accent bar, shared header, navigation, and footer); the navigation is identical on all five pages. Section 7 principle 1 ("AI and human, never merged") is reversed by this direction and reads as historical. Where section 0 below still says "agreement metrics computed here" or "Git", read it through this banner.
 
 ## 0. Redesign v4 (current direction)
 
@@ -36,8 +38,8 @@ Three principles:
 2. **AI is strongly reduced.** The AI proposal becomes an optional, collapsed suggestion, off by default. No blind reveal, no kappa, no matrix in the working view. The comparison machinery is kept but moves to the report layer, computed quietly for PRISMA-trAIce R1/R2.
 3. **Seven surfaces collapse to three**, each with a one-line "what is this, what do I do here" header:
    - **Screening**: corpus overview with full-text search; single-paper full-text view with in-text search, evidence pinning, derived decision, optional collapsed AI.
-   - **PRISMA & Report**: flow diagram + checklist + disclosure in one place, generated from the screening; agreement metrics computed here, not foregrounded.
-   - **Daten & Repo**: File System Access connect, per-reviewer files, Git, export/import; the old Reviewers reconciliation folds in as a section.
+   - **PRISMA & Report**: flow diagram + checklist + disclosure in one place, generated from the screening (ADR-014 removed the agreement-metrics section; the figures feed only the disclosure line).
+   - **Daten & Repo**: File System Access connect (write into the project folder), per-reviewer files, export/import (ADR-014 removed the in-tool Git workflow and the Reviewers reconciliation).
 
 ```
 SCREENING  ┌ corpus list + full-text search ┐  ┌ full text (formatted, searchable) ┐  ┌ categories + evidence ┐
@@ -45,7 +47,7 @@ SCREENING  ┌ corpus list + full-text search ┐  ┌ full text (formatted, sea
            │ search all texts: "gender"      │  │ "...gendered scripts of care..."   │  │  └ pin: "gendered..."  │
            │ [paper 13/87]                   │  │ [next hit ↵]  [pin as evidence]    │  │ derived: INCLUDE       │
            └─────────────────────────────────┘  └────────────────────────────────────┘  └───────────────────────┘
-PRISMA & REPORT   flow diagram · checklist · disclosure (auto)        DATEN & REPO   connect · reviewer file · git · export
+PRISMA & REPORT   flow diagram · checklist · disclosure (auto)        DATEN & REPO   connect · reviewer file · export
 ```
 
 The evidence data model is in [[data]] (reviewer file schema 0.2, `evidence[category] = [{term, snippet, ts}]`). The new requirements are FR-11 (read full text), FR-12 (search), FR-13 (pin evidence) in [[specification]].
@@ -101,13 +103,13 @@ This section specifies the three v4 surfaces as implemented in `docs/js/prisma.j
 
 ### 5A. Page shell
 
-Standalone fullscreen page `docs/prisma.html` (ADR-008). A slim header carries brand, subtitle, and the repo-connection status (`#pt-conn-status`). `js/prisma-data.js` provides the `window.EC` shim over `research_vault_v2.json`. Below the header, a sub-navigation with exactly three buttons, each followed by a one-line "what do I do here" intro:
+Standalone page `docs/prisma.html` (ADR-008). Since ADR-014 the page wears the Companion design: the shared header (title, subtitle, authors, the rainbow accent bar) and the navigation that is identical on all five pages, plus the shared footer; the repo-connection status (`#pt-conn-status`) sits in a thin connection bar. `js/prisma-data.js` provides the `window.EC` shim over `research_vault_v2.json`. Below the header, a sub-navigation with exactly three buttons, each followed by a one-line "what do I do here" intro:
 
 - **Screening** -- Volltext lesen und durchsuchen, Belege an Kategorien anheften, Include/Exclude entscheiden.
-- **PRISMA & Report** -- PRISMA-2020-Fluss, Mensch-KI-Vergleich, Checkliste und Disclosure, aus dem Screening erzeugt.
-- **Daten & Repo** -- Mit dem Repo verbinden, eine Datei pro Reviewer:in, Export/Import, Reviewer:innen abgleichen.
+- **PRISMA & Report** -- PRISMA-2020-Fluss, Checkliste und Disclosure, aus dem Screening erzeugt.
+- **Daten & Repo** -- Mit dem Projektordner verbinden, eine Datei pro Reviewer:in, Export/Import.
 
-There is no blind-mode toggle (removed in v4). A persisted v3 surface id is normalised onto these three on load.
+There is no blind-mode toggle (removed in v4) and no comparison surface (removed by ADR-014). A persisted v3 surface id is normalised onto these three on load.
 
 ### 5B. Screening (default surface)
 
@@ -135,11 +137,11 @@ SCREENING  ┌ Korpus + Volltext-Suche ┐  ┌ Titel · In-Text-Suche · Dokume
 
 ### 5C. PRISMA & Report
 
-Purpose. The outputs, computed from the screening, not part of the working loop. One scroll with a perspective selector (whose decisions count as the human side) and four sections: the PRISMA 2020 flow with the trAIce R1 AI-vs-human split, the agreement matrix with decision kappa and per-category kappas (clicking a matrix cell opens a paper from that cell in Screening), the PRISMA-trAIce checklist (14 items, auto-satisfied where the setup already meets them), and the AI-disclosure generator (Markdown preview, copy, export). A one-line note states that the human-AI comparison is research material for the paper and Companion, not the screening work itself.
+Purpose. The outputs, computed from the screening, not part of the working loop. One scroll with a perspective selector (whose decisions count as the human side) and three sections (ADR-014 removed the agreement-matrix section): the PRISMA 2020 flow with the trAIce R1 AI-vs-human split, the PRISMA-trAIce checklist (14 items, auto-satisfied where the setup already meets them), and the AI-disclosure generator (Markdown preview, copy, export). The disclosure text still reports the kappa and matrix figures (trAIce M9), computed from the functions that survive without a surface; the divergence itself is research material for the paper and Companion, not the screening work.
 
 ### 5D. Daten & Repo
 
-Purpose. Sync and reconciliation. Reviewer identity (the `<kuerzel>.json` filename), the File System Access Git workflow (connect, reconnect, reload, with a copy-paste `git add/commit/push` hint), export/import as the all-browser fallback, the decision-log CSV, and the reviewer reconciliation table (each reviewer plus Seed, with n / include / exclude / kappa-vs-AI, PRISMA-trAIce M8/M9), folded in from the old separate surface.
+Purpose. Sync. Reviewer identity (the `<kuerzel>.json` filename), the File System Access connect/reconnect/reload that writes each reviewer file directly into the project folder, export/import as the all-browser fallback, and the decision-log CSV. ADR-014 removed the in-tool Git workflow (the copy-paste `git add/commit/push` hint is gone; versioning is GitHub Desktop outside the tool) and the reviewer reconciliation table (part of the removed human-AI comparison).
 
 ---
 
@@ -376,4 +378,4 @@ This document does not specify the technical architecture (a future `architectur
 - [[ai-assisted-review-standards]]
 - [[prisma-methodology]]
 
-*Updated: 2026-06-09*
+*Updated: 2026-06-21*
