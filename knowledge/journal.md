@@ -4,6 +4,36 @@ Chronologisches Protokoll der Arbeitssitzungen mit Entscheidungen, Ergebnissen u
 
 ---
 
+## 2026-06-21 (Session 17): R2 replay executed, benchmark core reproduced by execution, 292-vs-291 resolved
+
+**Branch:** `main` (this entry's milestone commit secures the unit)
+
+### What happened
+
+The benchmark core that V1 (`verification-empirical-core.md`) could only verify by execution-free hand counting was reproduced by running code, and the one discrepancy V1 left open is resolved. V1 had no shell channel; this session does.
+
+1. **Re-pairing script executed.** `benchmark/scripts/verify_femprompt.py` (the adversarial recompute moved into the repo earlier) runs and reproduces every V1 figure exactly: the 291-pair confusion matrix 100/34/108/49, Cohen kappa 0.0561, PABAK 0.0241, kappa-max 0.5081, the content-only sensitivity (n=199, matrix 100/34/36/29, kappa 0.1940), and all four 2x2 conditions. The committed output `benchmark/results/recompute_verification.txt` matches the fresh run line for line.
+2. **292-vs-291 resolved.** `papers_full.csv` flags 292 papers Has_HA=Yes; the surplus key `2YS85B49` is absent from `human_assessment.csv`. It is a stray metadata flag, not a missing human decision, so the 291 real pairings stand. This was the open item V1 named as "the first thing to check when it runs".
+3. **Self-test added.** `benchmark/scripts/replay_selftest.py` is a regression guard, independent of the diagnostic script: it re-pairs the raw CSVs itself and asserts the canonical numbers plus the 292 resolution, exiting non-zero on any drift. PASS 18/18. This closes the replay-script self-test that R2 named as open.
+
+### Verification
+
+- `python replay_selftest.py` reports PASS 18/18, exit 0: row counts (303/142/161, 326/232/94), pairing (291/12/35), matrix 100/34/108/49, kappa 0.0561, po 0.5120, sensitivity (199, 100/34/36/29, kappa 0.1940), and the Has_HA surplus resolving to the single key 2YS85B49.
+- `python verify_femprompt.py` output matches the committed `recompute_verification.txt`.
+
+### Decisions (from the persona, autonomous, inside the boundary)
+
+- The self-test re-implements the pairing and kappa independently rather than importing the diagnostic script. An adversarial recompute should not reuse the logic it guards, and two independent implementations agreeing on the number is the stronger statement.
+- The numbers were verified, not changed. No raw CSV, no merge artifact, no documented figure was touched; the work makes the existing claim reproducible by execution, which the plan's claims discipline requires.
+
+### Open items (next)
+
+- Proactive R2: load the `## Kategorie-Evidenz` quotes as pre-filled `origin: ai` Belege (the provenance class and the binding exclusion are in place since M3).
+- R4 record bundle generation supersedes the hand-drafted FlowModel counts before any Companion publication (R5).
+- KI1 (synthesis level) and the disclosure kappa/matrix line stay operator gates.
+
+---
+
 ## 2026-06-21 (Session 16): M3 built, the reading column now enforces the human/AI layer separation
 
 **Branch:** `main` (this entry's milestone commit secures the unit)

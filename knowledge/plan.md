@@ -65,6 +65,8 @@ Verification: every figure in the analysis document traces to committed script o
 
 Status (2026-06-09): step 3 done, `knowledge/analysis-divergence.md` written and independently re-verified against the merged CSVs; steps 1 and 2 (committed re-pairing and analysis scripts) pending shell access; step 4 corrections still queued for P6.
 
+Update (2026-06-21): step 1 done. The re-pairing script `benchmark/scripts/verify_femprompt.py` was executed (shell now available) and reproduces every V1 figure exactly; the 292-vs-291 discrepancy is resolved as a stray Has_HA flag on `2YS85B49` in `papers_full.csv` (a key absent from the human CSV, no missing human decision). A regression guard `replay_selftest.py` asserts the canonical numbers and that resolution (PASS 18/18). Step 2 (a committed script emitting the full per-category analysis set) and step 4 corrections remain.
+
 ### TP4 work plan: operationalizing the analysis question
 
 1. A structured working session turns "how must prompt engineering adapt for social work, gender, and bias" into answerable sub-questions (with the colleagues where possible).
@@ -197,7 +199,7 @@ The demonstrable core of the project: the PRISMA methodology executed on exactly
 
 Shaping decisions (taken 2026-06-09): replay plus interactive agent pass; knowledge-document category evidence enters the replay as clearly labelled machine-extracted evidence, separate from reviewer evidence; the record is published on the Companion. Claim line: the first review round (326 papers) is rendered retrospectively and honestly, with named gaps (34 corpus papers without a human decision plus one unresolved pairing discrepancy, see [[conformance-audit]]; the missing pre-specified protocol M1); no conformance claim is made for it. Full conformance is enforced by the tool for the update (Stage B). The follow-up paper tells exactly this two-round story.
 
-Status (2026-06-09): the retrospective record is drafted ahead of the replay script: `knowledge/prisma-record-round1.md` plus `docs/data/flow_model.json`, every count an agent recount flagged `agent_recount_scripted_replay_pending`. The committed R2 replay script must supersede these counts before the record is published on the Companion (R5); the 292-vs-291 pairing discrepancy stays open until that run.
+Status (2026-06-09): the retrospective record is drafted ahead of the replay script: `knowledge/prisma-record-round1.md` plus `docs/data/flow_model.json`, every count an agent recount flagged `agent_recount_scripted_replay_pending`. The committed R2 replay script must supersede these counts before the record is published on the Companion (R5). Update (2026-06-21): the 292-vs-291 pairing discrepancy is resolved (a stray Has_HA flag on `2YS85B49` in `papers_full.csv`, no missing human decision); the replay self-test reproduces the benchmark core, but the full FlowModel generation (R4) still supersedes the hand-drafted counts before R5.
 
 ### V: Claim verification (added 2026-06-09 after the meta review)
 
@@ -221,7 +223,9 @@ Done when: every checklist item points at data or at a named gap.
 - A script builds the full retrospective FlowModel from the actual files (identification, duplicates, screening with the AI/human split, included), not hand-entered; the seed reproduces the canonical benchmark, kappa 0.056 and matrix 100/34/108/49, as self-test.
 - Machine-extracted evidence: the Kategorie-Evidenz quotes from the knowledge documents are imported per paper and category as a separate, labelled provenance class (new ADR; schema field distinct from reviewer evidence; rendered visually distinct; never counted as reviewer Belege).
 
-Status (2026-06-21): the provenance-class half is built and verified (M3, ADR-016). The reading column now splits the served document into a paper layer and a machine-extraction layer (`splitDocLayers`), a Volltext / KI-Extraktion toggle switches between them, and a Beleg pinned from the KI-Extraktion layer carries `origin: ai` and never sets `work.cats`, so AI-sourced text cannot enter the binding decision. Six headless tests cover the split and the binding separation; the boundary lands cleanly on all 226 served documents. Still open here: proactively loading the `## Kategorie-Evidenz` quotes as pre-filled `origin: ai` Belege, and the replay-script self-test (kappa 0.056, matrix 100/34/108/49).
+Status (2026-06-21): the provenance-class half is built and verified (M3, ADR-016). The reading column now splits the served document into a paper layer and a machine-extraction layer (`splitDocLayers`), a Volltext / KI-Extraktion toggle switches between them, and a Beleg pinned from the KI-Extraktion layer carries `origin: ai` and never sets `work.cats`, so AI-sourced text cannot enter the binding decision. Six headless tests cover the split and the binding separation; the boundary lands cleanly on all 226 served documents.
+
+Update (2026-06-21, Session 17): the replay-script self-test is built and green. `benchmark/scripts/replay_selftest.py` independently re-pairs the raw CSVs and asserts the matrix 100/34/108/49, kappa 0.0561, the content-only sensitivity (n=199, matrix 100/34/36/29, kappa 0.1940), and the 292-vs-291 resolution (PASS 18/18, exit 0). The diagnostic `verify_femprompt.py` was executed and reproduces every V1 figure, its output matching the committed `recompute_verification.txt`. Still open here: proactively loading the `## Kategorie-Evidenz` quotes as pre-filled `origin: ai` Belege.
 
 Done when: the report surface shows the complete retrospective review from data alone.
 
