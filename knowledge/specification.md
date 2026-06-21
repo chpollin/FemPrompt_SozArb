@@ -286,7 +286,17 @@ Wahl. Die Herkunft ist ein gespeichertes Feld `origin` (`human` oder `ai`) auf j
 
 Begründung. Ein gespeichertes Feld überlebt die spätere Zusammenführung, eine Kontext-Ableitung nicht. Neutralität durch Konstruktion verhindert, dass die Darstellung eine Quelle über die andere stellt, konsistent zur KI-Kennzeichnungsregel. Heute sind alle Belege in der Liste Reviewer-Pins, der KI-Marker ist test-belegt für die kommende Maschinen-Evidenz (R2). Entschieden mit dem Operator 2026-06-21 (order femprompt-prism, Punkt 2).
 
-Effekt. Implementiert (`docs/js/prisma.js` pinEvidence und evidenceListHtml, `docs/css/prisma.css`), test-abgedeckt (vier Provenienz-Tests, `tests/tests.js`). Die Synthese-Ebene (KI1) bleibt offen; das Provenienz-Feld ist dafür bereit. Nächster Schritt R2, maschinell extrahierte Kategorie-Evidenz als KI-Herkunft-Belege im selben Pfad, getrennt vom bindenden Mensch-Record.
+Effekt. Implementiert (`docs/js/prisma.js` pinEvidence und evidenceListHtml, `docs/css/prisma.css`), test-abgedeckt (vier Provenienz-Tests, `tests/tests.js`). Die Synthese-Ebene (KI1) bleibt offen; das Provenienz-Feld ist dafür bereit. Die Herkunft je Schicht (woher der Schnipsel stammt) und ihre bindende Wirkung regelt ADR-016.
+
+### ADR-016 Lese-Schichten getrennt, Beleg-Herkunft an die Quellschicht gebunden
+
+Kontext. Das servierte Wissensdokument (`docs/vault/Papers/*.md`) fügt zwei epistemisch verschiedene Schichten aneinander, die Paper-Schicht (Abstract, Key Concepts, Full Text) und die Maschinen-Extraktion (Kernbefund, Forschungsfrage, Methodik, Hauptargumente, Kategorie-Evidenz, Assessment-Relevanz, Schlüsselreferenzen). Die Leseansicht rendert beide in einem Scroll ohne Grenze. ADR-015 hält fest, wer pinnt (Mensch), nicht, aus welcher Schicht der Schnipsel stammt. Ein aus der Kategorie-Evidenz herauskopierter Beleg trug damit Mensch, obwohl der Text maschinell ist. Das ist die Kontaminationsspur, die ADR-003 (Mensch bindend, KI advisory) verhindern soll.
+
+Wahl. `splitDocLayers` trennt das geladene Dokument an der ersten `## Kernbefund`-Überschrift in Paper-Schicht und KI-Schicht. Die Leseansicht erhält einen Umschalter (Volltext, KI-Extraktion) und blendet über der KI-Schicht ein Band ein, das sie als Extraktion ausweist. Die Beleg-Herkunft wird an die gerade gelesene Schicht gebunden, ein Schnipsel aus der KI-Schicht bekommt `origin: 'ai'`. Entscheidend, ein KI-Beleg setzt nie `work.cats`, bindet also nie die abgeleitete menschliche Entscheidung; er wird als KI angezeigt und bleibt advisory.
+
+Begründung. Die Trennung ist damit nicht nur sichtbar, sondern im Datenfluss erzwungen. Der bindende Record (`work.cats`, daraus `deriveDecision`) speist sich ausschließlich aus paper-belegten Kategorien, maschinelle Evidenz kann ihn nicht kippen. Das löst das in ADR-015 offen gebliebene Woher ein und realisiert für das servierte Dokument, was ADR-013 für den Rohtext plant, einen auditierbaren Evidenz-Ursprung. ADR-013 (Rohtext aus dem lokalen Clone, `text_source`) bleibt davon unberührt und weiter offen.
+
+Effekt. Implementiert (`docs/js/prisma.js` splitDocLayers, pinEvidence mit origin-Parameter, readingShellHtml-Umschalter, setReadMode, paintActiveLayer; `docs/css/prisma.css` Umschalter, Band, Pin-Menü-Hinweis), test-abgedeckt (sechs Tests für Schicht-Trennung und bindende Separierung, `tests/tests.js`), auf allen 226 servierten Dokumenten greift die Grenze sauber. Offen bleiben die Synthese-Ebene (KI1) und das proaktive Laden der `## Kategorie-Evidenz` als vorbelegte KI-Belege (R2-Fortsetzung).
 
 ## Was nicht reingehört
 

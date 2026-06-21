@@ -99,6 +99,7 @@ var state = {
     reviewer: 'reviewer1', // who is editing; drives the per-reviewer file name
     perspective: SEED,     // whose decisions drive Flow/Agreement (default: seed = benchmark)
     index: 0,
+    readMode: 'full',      // reading column layer: 'full' (paper text) or 'ai' (machine extraction)
     reviewers: {},         // reviewerKey -> { paperId -> decision }
     checklist: {},
     disclosure: {}
@@ -110,10 +111,12 @@ var corpusIndex = null;        // id -> { t, ay, kd, src, n, x } for corpus full
 var corpusIndexPromise = null;
 var corpusQuery = '';          // current corpus-wide search (left pane)
 var textCache = {};            // paperId -> raw knowledge-doc markdown (or null)
-var docHtmlCurrent = '';       // rendered HTML of the open document (for re-highlight)
+var docHtmlCurrent = '';       // rendered HTML of the active layer (for re-highlight)
+var docHtmlPaper = '';         // rendered paper layer (verbatim text)
+var docHtmlAi = '';            // rendered AI-extraction layer (machine knowledge doc), '' when absent
 var docMarks = [], docMarkIdx = 0;
 var pendingInText = null;      // in-text query to apply once the document has loaded
-var pinTerm = '', pinSnippet = '';
+var pinTerm = '', pinSnippet = '', pinOrigin = 'human'; // pinOrigin = source layer of the staged snippet
 
 // the in-progress (pre-commit) decision for the open paper
 var work = { pid: null, cats: {}, override: false, reason: null, evidence: {} };
@@ -281,6 +284,25 @@ function countOcc(hay, needle) {
     var n = 0, pos = 0, idx;
     while ((idx = hay.indexOf(needle, pos)) !== -1) { n++; pos = idx + needle.length; }
     return n;
+}
+
+// Split a served knowledge document into its two epistemic layers (M3, ADR-016).
+// Every served doc concatenates a paper layer (Abstract, Key Concepts, Full Text)
+// and a machine-extraction layer that starts at "## Kernbefund" (Forschungsfrage,
+// Methodik, Kategorie-Evidenz, ...). The boundary is the first Kernbefund heading,
+// pulled up over a repeated H1 title that heads the extraction. A doc without that
+// heading (abstract-only fallback) has no AI layer.
+function splitDocLayers(md) {
+    var lines = (md || '').split(/\r?\n/);
+    var b = -1;
+    for (var i = 0; i < lines.length; i++) {
+        if (/^##\s+Kernbefund\b/.test(lines[i])) { b = i; break; }
+    }
+    if (b === -1) return { paper: md || '', ai: '' };
+    var s = b, k = b - 1;
+    while (k >= 0 && /^\s*$/.test(lines[k])) k--;
+    if (k >= 0 && /^#\s+/.test(lines[k])) s = k;
+    return { paper: lines.slice(0, s).join('\n'), ai: lines.slice(s).join('\n') };
 }
 
 // ---- minimal Markdown renderer (no dependency, NFR-01/architecture rule) ----
@@ -625,6 +647,10 @@ function readingShellHtml(p, dec) {
         (p.journal ? ' &middot; <span class="pt-muted">' + EC.escapeHtml(p.journal) + '</span>' : '') + '</div>';
     if (!aq.ok && !p.knowledge_doc) h += '<div class="pt-aq-warn">Achtung: ' + EC.escapeHtml(aq.note) + '</div>';
 
+    h += '<div class="pt-layer-toggle" id="pt-layer-toggle" hidden>' +
+        '<button class="pt-layer-btn active" data-mode="full">Volltext</button>' +
+        '<button class="pt-layer-btn" data-mode="ai">KI-Extraktion</button>' +
+        '</div>';
     h += '<div class="pt-intext-bar">' +
         '<input id="pt-intext" placeholder="Im Text suchen (Enter = naechster Treffer)">' +
         '<span class="pt-tag-mono" id="pt-intext-count"></span>' +
@@ -633,6 +659,7 @@ function readingShellHtml(p, dec) {
         '<button class="pt-btn pt-pin-hit" id="pt-pin-hit" disabled title="Aktuellen Treffer als Beleg anheften">Treffer anheften</button>' +
         '</div>';
     h += '<p class="pt-read-help">Text markieren und als Beleg an eine Kategorie anheften, oder einen Treffer der Suche anheften.</p>';
+    h += '<div class="pt-layer-band" id="pt-layer-band" hidden>KI-Extraktion, nicht der Originaltext. Belege von hier gelten als KI und gehen nicht in den bindenden Record ein.</div>';
     h += '<div class="pt-doc" id="pt-doc"><p class="pt-muted">Volltext laedt…</p></div>';
     h += '</div></div>';
     return h;
@@ -641,12 +668,19 @@ function readingShellHtml(p, dec) {
 function loadReadingInto(p) {
     var doc = document.getElementById('pt-doc'); if (!doc) return;
     fetchPaperText(p).then(function(md) {
-        if (md) docHtmlCurrent = renderMarkdown(md);
-        else if (p.abstract && p.abstract.trim()) docHtmlCurrent = '<p class="pt-doc-p">' + inlineMd(p.abstract) + '</p>';
-        else docHtmlCurrent = '';
-        var d2 = document.getElementById('pt-doc');
-        if (!d2) return;
-        d2.innerHTML = docHtmlCurrent || '<p class="pt-muted">Kein Volltext und kein Abstract vorhanden. Quelle pruefen.</p>';
+        if (md) {
+            var layers = splitDocLayers(md);
+            docHtmlPaper = renderMarkdown(layers.paper);
+            docHtmlAi = layers.ai ? renderMarkdown(layers.ai) : '';
+        } else if (p.abstract && p.abstract.trim()) {
+            docHtmlPaper = '<p class="pt-doc-p">' + inlineMd(p.abstract) + '</p>';
+            docHtmlAi = '';
+        } else {
+            docHtmlPaper = ''; docHtmlAi = '';
+        }
+        if (state.readMode === 'ai' && !docHtmlAi) state.readMode = 'full';
+        updateLayerToggle();
+        paintActiveLayer();
         docMarks = []; docMarkIdx = 0;
         if (pendingInText) {
             var box = document.getElementById('pt-intext');
@@ -655,6 +689,39 @@ function loadReadingInto(p) {
             pendingInText = null;
         }
     });
+}
+
+function activeLayerHtml() { return state.readMode === 'ai' ? docHtmlAi : docHtmlPaper; }
+
+function paintActiveLayer() {
+    var d = document.getElementById('pt-doc'); if (!d) return;
+    docHtmlCurrent = activeLayerHtml();
+    d.innerHTML = docHtmlCurrent || '<p class="pt-muted">Kein Volltext und kein Abstract vorhanden. Quelle pruefen.</p>';
+    var band = document.getElementById('pt-layer-band');
+    if (band) band.hidden = !(state.readMode === 'ai' && docHtmlAi);
+}
+
+function updateLayerToggle() {
+    var tg = document.getElementById('pt-layer-toggle');
+    if (tg) tg.hidden = !docHtmlAi; // the toggle only appears when a paper has an AI layer
+    document.querySelectorAll('.pt-layer-btn').forEach(function(b) {
+        b.classList.toggle('active', b.dataset.mode === state.readMode);
+    });
+}
+
+function setReadMode(mode) {
+    if (mode === 'ai' && !docHtmlAi) return;
+    if (mode !== 'ai') mode = 'full';
+    state.readMode = mode; saveLocal();
+    updateLayerToggle();
+    paintActiveLayer();
+    docMarks = []; docMarkIdx = 0;
+    var box = document.getElementById('pt-intext');
+    var cnt = document.getElementById('pt-intext-count');
+    if (box && box.value.trim()) applyInText(box.value);
+    else if (cnt) cnt.textContent = '';
+    var pinBtn = document.getElementById('pt-pin-hit');
+    if (pinBtn && (!box || !box.value.trim())) pinBtn.disabled = true;
 }
 
 function applyInText(q) {
@@ -706,17 +773,20 @@ function snippetAround(el, term) {
 }
 
 // ---- evidence pinning (FR-13) ----
-// Each Beleg records its provenance (origin: 'human' or 'ai') so human and AI
-// evidence stay distinguishable when brought together, neutrally, without
-// valuation (KI-Kennzeichnung). A reviewer pin is always human; machine or AI
-// Belege carry origin 'ai' wherever they are constructed.
-function pinEvidence(cat, term, snippet) {
+// Each Beleg records the source layer it came from (origin: 'human' or 'ai',
+// M3/ADR-016). A snippet taken from the verbatim paper layer is 'human' and
+// sets the binding category; a snippet taken from the AI-extraction layer is
+// 'ai', is shown marked KI, and never sets work.cats, so AI-sourced text can
+// never flip the binding human decision. origin defaults to 'human' for legacy
+// and three-argument calls.
+function pinEvidence(cat, term, snippet, origin) {
+    origin = origin === 'ai' ? 'ai' : 'human';
     term = (term || '').trim().slice(0, 80);
     snippet = (snippet || term).trim().slice(0, 260);
     if (!term) return;
     if (!work.evidence[cat]) work.evidence[cat] = [];
-    work.evidence[cat].push({ term: term, snippet: snippet, ts: new Date().toISOString(), origin: 'human' });
-    work.cats[cat] = true; // pinning a Beleg sets the category (decision: evidence implies the category)
+    work.evidence[cat].push({ term: term, snippet: snippet, ts: new Date().toISOString(), origin: origin });
+    if (origin === 'human') work.cats[cat] = true; // only a paper-sourced Beleg enters the binding record
     refreshAssess();
 }
 
@@ -866,6 +936,12 @@ function attachScreening(p, dec) {
     var el = surfaceEl(); if (!el) return;
 
     bindCorpusItems();
+
+    // reading-column layer toggle (Volltext / KI-Extraktion)
+    el.querySelectorAll('.pt-layer-btn').forEach(function(b) {
+        b.addEventListener('click', function() { setReadMode(b.dataset.mode); });
+    });
+
     var cq = document.getElementById('pt-corpus-q');
     if (cq) {
         cq.addEventListener('input', function() {
@@ -982,9 +1058,11 @@ function gotoNextOpen() {
 // ---- pin menu (category picker for a selected passage / search hit) ----
 function openPinMenu(term, snippet) {
     pinTerm = term; pinSnippet = snippet;
+    pinOrigin = state.readMode === 'ai' ? 'ai' : 'human'; // bind the Beleg to the layer the snippet was taken from
     var menu = document.getElementById('pt-pinmenu'); if (!menu) return;
     var h = '<div class="pt-pinmenu-head"><span class="pt-tag-mono">Als Beleg anheften an</span>' +
         '<button class="pt-pinmenu-x" id="pt-pinmenu-x">&times;</button></div>';
+    if (pinOrigin === 'ai') h += '<div class="pt-pinmenu-ai">Dieser Beleg stammt aus der KI-Extraktion. Er wird als KI markiert und bindet die Entscheidung nicht.</div>';
     h += '<div class="pt-pinmenu-snip">' + EC.escapeHtml((snippet || term).slice(0, 160)) + '</div>';
     h += '<div class="pt-pinmenu-cats">';
     ALL_CATS.forEach(function(c) {
@@ -996,7 +1074,7 @@ function openPinMenu(term, snippet) {
     menu.hidden = false;
     menu.querySelector('#pt-pinmenu-x').addEventListener('click', closePinMenu);
     menu.querySelectorAll('.pt-pinmenu-cat').forEach(function(btn) {
-        btn.addEventListener('click', function() { pinEvidence(btn.dataset.cat, pinTerm, pinSnippet); closePinMenu(); });
+        btn.addEventListener('click', function() { pinEvidence(btn.dataset.cat, pinTerm, pinSnippet, pinOrigin); closePinMenu(); });
     });
 }
 
@@ -1252,7 +1330,7 @@ window.EC._test = {
     computeFlow: computeFlow,
     // parsing and rendering helpers
     countOcc: countOcc, stripFrontmatter: stripFrontmatter, inlineMd: inlineMd,
-    renderMarkdown: renderMarkdown,
+    renderMarkdown: renderMarkdown, splitDocLayers: splitDocLayers,
     // generated report text and persistence payload
     disclosureMarkdown: disclosureMarkdown, reviewerPayload: reviewerPayload,
     // stateful seams for inline fixtures

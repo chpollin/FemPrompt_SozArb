@@ -410,6 +410,20 @@ body.pt-fullscreen *, body.pt-fullscreen *::before, body.pt-fullscreen *::after 
 
 /* ============================ V4: READING COLUMN (centre) ============================ */
 .pt-read-screen .pt-read-inner { max-width: 720px; }
+.pt-layer-toggle { display: inline-flex; gap: 0; margin-bottom: 0.5rem; border: 1px solid var(--pt-border-2); border-radius: var(--pt-r-sm); overflow: hidden; }
+.pt-layer-btn {
+  border: none; background: var(--pt-surface); color: var(--pt-ink-3); cursor: pointer;
+  font-family: var(--pt-sans); font-size: var(--pt-xs); font-weight: 600; padding: 0.3rem 0.7rem;
+}
+.pt-layer-btn + .pt-layer-btn { border-left: 1px solid var(--pt-border-2); }
+.pt-layer-btn:hover { color: var(--pt-ink-2); }
+.pt-layer-btn[data-mode="full"].active { background: var(--pt-human-bg); color: var(--pt-human); }
+.pt-layer-btn[data-mode="ai"].active { background: var(--pt-ai-bg); color: var(--pt-ai); }
+.pt-layer-band {
+  border: 1px solid var(--pt-ai-line); background: var(--pt-ai-bg); color: var(--pt-ai);
+  font-size: var(--pt-xs); font-weight: 600; line-height: 1.45; padding: 0.45rem 0.6rem;
+  border-radius: var(--pt-r-sm); margin-bottom: 0.8rem;
+}
 .pt-intext-bar {
   position: sticky; top: 0; z-index: 5; display: flex; align-items: center; gap: 0.45rem;
   padding: 0.55rem 0; margin-bottom: 0.6rem; background: var(--pt-surface);
@@ -482,6 +496,7 @@ body.pt-fullscreen *, body.pt-fullscreen *::before, body.pt-fullscreen *::after 
 .pt-pinmenu-head .pt-tag-mono { color: var(--pt-ink-2); font-weight: 600; }
 .pt-pinmenu-x { margin-left: auto; border: none; background: none; cursor: pointer; font-size: var(--pt-lg); line-height: 1; color: var(--pt-ink-4); }
 .pt-pinmenu-x:hover { color: var(--pt-ink); }
+.pt-pinmenu-ai { font-size: var(--pt-xs); font-weight: 600; line-height: 1.45; color: var(--pt-ai); background: var(--pt-ai-bg); border: 1px solid var(--pt-ai-line); border-radius: var(--pt-r-sm); padding: 0.4rem 0.55rem; margin-bottom: 0.6rem; }
 .pt-pinmenu-snip { font-family: var(--pt-serif); font-size: var(--pt-sm); line-height: 1.5; color: var(--pt-ink-2); background: var(--pt-surface-2); border: 1px solid var(--pt-border); border-radius: var(--pt-r-sm); padding: 0.45rem 0.6rem; margin-bottom: 0.7rem; }
 .pt-pinmenu-cats { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .pt-pinmenu-cat {

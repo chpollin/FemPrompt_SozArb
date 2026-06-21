@@ -4,6 +4,41 @@ Chronologisches Protokoll der Arbeitssitzungen mit Entscheidungen, Ergebnissen u
 
 ---
 
+## 2026-06-21 (Session 16): M3 built, the reading column now enforces the human/AI layer separation
+
+**Branch:** `main` (this entry's milestone commit secures the unit)
+
+### What happened
+
+The reframed M3 from Session 15, built and verified as the lane `femprompt-prism` on the operator's release to implement what falls inside the decision boundary. The contamination path the review session found is now closed in code, not just marked.
+
+1. **Layer split.** `splitDocLayers(md)` separates the served knowledge document into its paper layer (Abstract, Key Concepts, Full Text) and its machine-extraction layer (Kernbefund, Forschungsfrage, Methodik, Hauptargumente, Kategorie-Evidenz, Assessment-Relevanz, Schlüsselreferenzen), cutting at the first `## Kernbefund` heading and pulling the boundary up over a repeated H1 title. Verified on all 226 served documents (a throwaway jsdom trace over the real corpus, boundary clean 226 of 226).
+2. **Toggle and band.** The reading column gains a Volltext / KI-Extraktion toggle (`setReadMode`, `paintActiveLayer`, `updateLayerToggle`); the toggle appears only when a paper has an AI layer. The KI-Extraktion view shows a band marking it as non-verbatim, and the pin menu warns when a snippet comes from that layer.
+3. **Binding separation.** `pinEvidence` takes an `origin` argument bound to the read layer. A paper-layer pin is `origin: human` and sets `work.cats`, the binding category. A KI-Extraktion-layer pin is `origin: ai`, is stored and rendered marked KI, but never sets `work.cats`, so AI-sourced text can never flip the derived human decision. This realizes ADR-003 (human binding, AI advisory) at the evidence level, and the woher that ADR-015 left open.
+
+### Verification
+
+- `node tests/run.mjs` reports PASS 73/73 (was 67/67): six new tests cover the split (paper keeps Full Text, AI layer holds Kernbefund and Kategorie-Evidenz, abstract-only yields no AI layer) and the binding separation (human pin sets the category, AI pin does not, AI evidence alone stays Exclude, both-human derives Include, AI Beleg stored and rendered KI yet advisory).
+- Real-data trace: `splitDocLayers` lands the boundary cleanly on all 226 served knowledge documents (paper layer never contains Kernbefund, AI layer always holds Kernbefund and Kategorie-Evidenz). The scratch script was deleted, working tree clean.
+
+### Decisions (from the persona, autonomous, inside the boundary)
+
+- Origin reflects the source layer of the text, not who clicked. A human reading the AI extraction and pinning from it produces an `origin: ai` Beleg, because the text is machine-authored. This keeps AI output from being laundered into a clean human Beleg.
+- The binding record is `work.cats`; only a paper-layer pin writes to it. AI evidence is visible and advisory but structurally excluded from the derived decision. ADR-016 records this.
+- KI1 (synthesis level) and the disclosure kappa/matrix line stayed untouched, both are operator direction calls outside the boundary.
+
+### Documentation sync (same session)
+
+`specification.md` gained ADR-016 (layer split, origin bound to layer, binding separation) and ADR-015 now points to it. `data.md` updated the evidence shape and the coupling and surfacing rules to the layer-source semantics, and added the layer-split paragraph. `plan.md` R2 status records the provenance-class half as built (still open: proactive Kategorie-Evidenz preload, replay self-test); P2 got a note distinguishing it from M3. `tests/README.md` went to 73/73 with an M3 coverage bullet.
+
+### Open items (next)
+
+- Proactive R2: load the `## Kategorie-Evidenz` quotes as pre-filled `origin: ai` Belege in the same list; the provenance class and the binding exclusion are already in place.
+- KI1 (synthesis level) at the operator, gating the synthesis surface.
+- The trAIce disclosure kappa/matrix line stays or falls (operator).
+
+---
+
 ## 2026-06-21 (Session 15): review session, the reading column fuses two epistemic layers, M3 reframed, distance to the overall goal
 
 **Branch:** `main` (no code change; an architectural finding and an assessment, documentation only)

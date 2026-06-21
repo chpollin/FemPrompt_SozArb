@@ -135,6 +135,8 @@ Motivation: evidence pinned on a knowledge document inherits the distillate's fr
 
 Done when: with a connected clone, a paper with a raw text renders it and its Belege carry `text_source: raw`; on Pages without a connection, behaviour is unchanged except the visible source label.
 
+Note (2026-06-21): M3 (ADR-016) realized the layer-source provenance for the already-served document, splitting paper text from machine extraction and binding `origin` to the layer. That is distinct from P2, which still adds the raw Docling text from the local clone and the `text_source` field. P2 remains open; M3 closed the contamination path inside the served distillate.
+
 ### P3: Excel-to-PRISM bridge (reframed 2026-06-09)
 
 The established capture workflow stays as it is: the colleagues record categories and decisions in the known Excel format, as in the first round. PRISM does not replace that capture; it is where the Excel result goes afterwards for the rest of the PRISMA method. P3 therefore builds the bridge, not an onboarding path.
@@ -218,6 +220,8 @@ Done when: every checklist item points at data or at a named gap.
 
 - A script builds the full retrospective FlowModel from the actual files (identification, duplicates, screening with the AI/human split, included), not hand-entered; the seed reproduces the canonical benchmark, kappa 0.056 and matrix 100/34/108/49, as self-test.
 - Machine-extracted evidence: the Kategorie-Evidenz quotes from the knowledge documents are imported per paper and category as a separate, labelled provenance class (new ADR; schema field distinct from reviewer evidence; rendered visually distinct; never counted as reviewer Belege).
+
+Status (2026-06-21): the provenance-class half is built and verified (M3, ADR-016). The reading column now splits the served document into a paper layer and a machine-extraction layer (`splitDocLayers`), a Volltext / KI-Extraktion toggle switches between them, and a Beleg pinned from the KI-Extraktion layer carries `origin: ai` and never sets `work.cats`, so AI-sourced text cannot enter the binding decision. Six headless tests cover the split and the binding separation; the boundary lands cleanly on all 226 served documents. Still open here: proactively loading the `## Kategorie-Evidenz` quotes as pre-filled `origin: ai` Belege, and the replay-script self-test (kappa 0.056, matrix 100/34/108/49).
 
 Done when: the report surface shows the complete retrospective review from data alone.
 

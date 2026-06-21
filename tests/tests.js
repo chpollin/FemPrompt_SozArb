@@ -588,6 +588,67 @@ test('evidenceListHtml renders both origins through the same neutral marker clas
 });
 
 // ============================================================
+// M3: reading-column layer split and binding separation (ADR-016)
+// ============================================================
+
+var M3_DOC = [
+    '---', 'title: Sample', 'type: literature', '---',
+    '# Sample Paper Title',
+    '## Abstract', 'This is the verbatim abstract of the paper.',
+    '## Key Concepts', 'concept one, concept two.',
+    '## Full Text', 'The real paper body discusses prompting and gender in detail.',
+    '# Sample Paper Title',
+    '## Kernbefund', 'Machine summary of the central finding.',
+    '## Forschungsfrage', 'The reconstructed research question.',
+    '## Kategorie-Evidenz', '### Evidenz 1', '> An AI-extracted quote mapped to a category.'
+].join('\n');
+
+test('splitDocLayers keeps the paper layer (Full Text) and drops the AI block', function() {
+    var L = T.splitDocLayers(M3_DOC);
+    assertContains(L.paper, 'Full Text');
+    assertContains(L.paper, 'verbatim abstract');
+    assertNotContains(L.paper, 'Kernbefund');
+    assertNotContains(L.paper, 'Kategorie-Evidenz');
+});
+test('splitDocLayers isolates the AI layer (Kernbefund and Kategorie-Evidenz)', function() {
+    var L = T.splitDocLayers(M3_DOC);
+    assertContains(L.ai, 'Kernbefund');
+    assertContains(L.ai, 'Kategorie-Evidenz');
+    assertNotContains(L.ai, '## Abstract');
+});
+test('splitDocLayers returns no AI layer when the doc has no Kernbefund (abstract-only)', function() {
+    var L = T.splitDocLayers('# Title\n## Abstract\nonly an abstract, no knowledge extraction.');
+    assertEqual(L.ai, '');
+    assertContains(L.paper, 'only an abstract');
+});
+test('a human-origin Beleg sets the binding category, an AI-origin Beleg does not', function() {
+    var tc = T.TECH_CATS[0], sc = T.SOCIAL_CATS[0];
+    T.resetWork({ id: 'm3Paper' });
+    T.pinEvidence(tc, 'tech term', 'tech snippet', 'human');
+    assertEqual(T.getWork().cats[tc], true, 'paper-sourced Beleg sets the binding category');
+    T.pinEvidence(sc, 'soc term', 'soc snippet', 'ai');
+    assert(!T.getWork().cats[sc], 'AI-sourced Beleg leaves the binding category unset');
+});
+test('AI-sourced evidence alone never flips the binding decision to Include', function() {
+    var tc = T.TECH_CATS[0], sc = T.SOCIAL_CATS[0];
+    T.resetWork({ id: 'm3Paper2' });
+    T.pinEvidence(tc, 'tech term', 'tech snippet', 'human'); // one technical dimension, human
+    T.pinEvidence(sc, 'soc term', 'soc snippet', 'ai');      // social dimension AI-sourced only
+    assertEqual(T.finalDecisionOf(T.getWork().cats, false), 'Exclude', 'tech human + social AI stays Exclude');
+    T.pinEvidence(sc, 'soc term 2', 'soc snippet 2', 'human'); // now a human social Beleg
+    assertEqual(T.finalDecisionOf(T.getWork().cats, false), 'Include', 'tech + social both human derive Include');
+});
+test('an AI-origin Beleg is stored, rendered as KI, and stays advisory', function() {
+    var sc = T.SOCIAL_CATS[0];
+    T.resetWork({ id: 'm3Paper3' });
+    T.pinEvidence(sc, 'ai soc', 'ai social snippet', 'ai');
+    var w = T.getWork();
+    assertEqual(w.evidence[sc][0].origin, 'ai');
+    assert(!w.cats[sc], 'AI Beleg does not set the category');
+    assertContains(T.evidenceListHtml(w.evidence, false), 'pt-evid-origin-ai">KI');
+});
+
+// ============================================================
 // P3 import bridge: the data-hygiene validation report (R1 lesson)
 // ============================================================
 

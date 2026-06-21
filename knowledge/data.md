@@ -167,7 +167,7 @@ The shipped tool persists not as one session blob but as **one JSON per reviewer
 }
 ```
 
-The `evidence` map (added in schema 0.2, FR-13) is the v4 core: per category, a list of pinned Belege, each a `term` plus the surrounding `snippet` taken from the full text at screening time. Backward compatible: a 0.1 record without `evidence` loads as a record with no evidence. Evidence is the reviewer's textual justification; it is never written by the AI.
+The `evidence` map (added in schema 0.2, FR-13) is the v4 core: per category, a list of pinned Belege, each a `term` plus the surrounding `snippet` taken from the read document at screening time. Backward compatible: a 0.1 record without `evidence` loads as a record with no evidence. A Beleg taken from the verbatim paper layer is human-sourced (`origin: human`) and is the reviewer's binding justification; a Beleg taken from the machine-extraction layer is marked `origin: ai` and stays advisory (ADR-016).
 
 Aggregation: the tool loads every `*.json` in the folder into `reviewers[key]`, plus the built-in `seed` reviewer (the existing expert assessment, `paper.human`). A **perspective** selector chooses whose decisions count as the human side in the Flow (default `seed`, which reproduces the benchmark). ADR-014 removed the **Reviewers** surface (per-reviewer n / include / exclude and kappa against the AI); that aggregation now feeds only the disclosure line. The AI proposal is always `paper.llm` from the corpus, never stored in a reviewer file.
 
@@ -187,6 +187,8 @@ Important: the served `docs/vault/Papers/*.md` are **not** raw full text. They a
 
 The screening view fetches `paper.knowledge_doc` on demand through a single seam (`fetchPaperText` in `prisma.js`) and renders it with a built-in minimal Markdown renderer (no dependency). In-text search runs over the rendered document; corpus-wide search runs over the prebuilt `fulltext_index.json` (instant, one lazy load, no 236-file fetch storm). The AI proposal (`paper.llm`) stays available but collapsed; it is not part of the evidence.
 
+Layer split (ADR-016): because the served document concatenates the paper layer (Abstract, Key Concepts, Full Text) and the machine-extraction layer (Kernbefund onward), the reading view splits it at the first `## Kernbefund` heading (`splitDocLayers`) and offers a Volltext / KI-Extraktion toggle; the KI-Extraktion view carries a band marking it as non-verbatim. The split lands cleanly on all 236 served documents. The layer a snippet is pinned from sets its `origin`, binding the provenance of a Beleg to its actual source.
+
 Text-source options (a copyright decision, not yet taken): (1) keep the served knowledge documents, current and publishable; (2) read the raw local full text from the connected clone (`pipeline/markdown_clean/`), never published, public fallback to the knowledge document; (3) publish the raw full texts. Because the source is one function, switching to (2) or (3) is a one-function change.
 
 ## Evidence behaviour (FR-13 contract, as built)
@@ -195,9 +197,9 @@ How a pinned Beleg is created, stored, and surfaced. This is the contract the re
 
 - Trigger: selecting a passage in the reading column (2 to 400 chars), or pressing "Treffer anheften" on the active in-text search hit. A category menu opens; choosing a category pins.
 - Stored shape: `evidence[category]` is a list of `{ term, snippet, ts, origin }`. `term` is the selected text or the search query, trimmed to 80 chars. `snippet` is the surrounding context (for a search hit, roughly +/-90 chars around the term), trimmed to 260 chars. `ts` is an ISO timestamp. `origin` records the provenance, `human` for a reviewer pin, `ai` for machine-extracted evidence; it renders as a neutral Mensch/KI marker, and a record without `origin` loads as `human` (backward compatible, ADR-015).
-- Coupling: pinning a Beleg on a category sets `categories[category] = true` (evidence implies the category). Toggling the category chip off does not delete its Belege; removing all Belege does not toggle the category off. The reviewer stays in control of both.
+- Coupling: pinning a paper-layer Beleg (`origin: human`) on a category sets `categories[category] = true` (evidence implies the category). A Beleg taken from the KI-Extraktion layer (`origin: ai`) is stored and shown marked KI but never sets the category, so AI-sourced text cannot enter the binding decision (ADR-016). Toggling the category chip off does not delete its Belege; removing all Belege does not toggle the category off. The reviewer stays in control of both.
 - Edit/remove: a Beleg can be removed individually before the decision is recorded (the small remove control next to the snippet). There is no dedup; pinning the same passage twice stores two entries (the reviewer can remove one).
-- Surfacing: Belege are saved with the decision in the reviewer file. The decision-log CSV reports an `evidence_count` per paper. A reviewer pin is human evidence (`origin: human`) and is the reviewer's textual justification. The `origin` field anticipates machine-extracted evidence (`origin: ai`, planned R2) sharing the same list as a distinct, labelled class that is never counted as a reviewer Beleg and never enters the binding human record.
+- Surfacing: Belege are saved with the decision in the reviewer file. The decision-log CSV reports an `evidence_count` per paper. A paper-layer pin is human evidence (`origin: human`) and the reviewer's binding justification; a KI-Extraktion-layer pin is `origin: ai`, shown marked KI, advisory, and excluded from the binding record because it never sets a category (ADR-016). Machine-extracted evidence proactively loaded into the same list (`origin: ai`, planned R2 continuation) is the same labelled class, never counted as a reviewer Beleg and never entering the binding human record.
 
 ## Seed dataset (read-only case study)
 

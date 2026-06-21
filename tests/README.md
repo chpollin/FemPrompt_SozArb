@@ -36,6 +36,7 @@ The only network activity is `docs/js/prisma-data.js` attempting to load the res
 - Evidence and quality helpers: `pinEvidence` (category set by pinning, term and snippet truncation, empty-term no-op), `unpinEvidence`, `evidenceCount`, `abstractQuality` (empty, boilerplate, short, acceptable).
 - Persistence and commit: `reviewerPayload` schema `femprompt-prisma-reviewer/0.2`, the commit guard (Exclude requires a reason, override-Exclude likewise), the controlled exclusion-reason vocabulary, and `disclosureMarkdown` containing the canonical kappa and matrix.
 - Evidence provenance (KI2, ADR-015): `pinEvidence` stamps `origin: human`; `evidenceListHtml` renders a neutral Mensch/KI marker per Beleg, defaults a Beleg without `origin` to human, and uses the same marker class for both origins (no valuation).
+- Reading-column layer split and binding separation (M3, ADR-016): `splitDocLayers` separates the paper layer from the machine-extraction layer at the first `## Kernbefund` heading (and yields no AI layer for an abstract-only doc); a human-origin Beleg sets the binding category while an AI-origin Beleg does not, so AI-sourced evidence alone never flips the derived decision to Include, yet is still stored and rendered as KI.
 - Import bridge validation (`window.__PRISMA_IMPORT_TEST__`, plan P3): the data-hygiene report on crafted CSV fixtures, a clean Include with no error-level findings, an out-of-vocabulary exclusion reason flagged and preserved verbatim, an empty reason on Exclude flagged, a duplicate Zotero key reported and the second row skipped, an Unclear decision skipped, and an idempotent re-import counted as unchanged.
 
 Reviewer keys in fixtures are neutral ids (`r1`, `r2`).
@@ -50,7 +51,7 @@ The pure functions are closure-scoped inside the IIFE of `docs/js/prisma.js`. A 
 
 ## Status
 
-Executed and green: `npm test` reports PASS 67/67 headless under jsdom (jsdom is a dev dependency, pinned in `package.json`). The browser leg (`run-tests.html`) runs the identical suite.
+Executed and green: `npm test` reports PASS 73/73 headless under jsdom (jsdom is a dev dependency, pinned in `package.json`). The browser leg (`run-tests.html`) runs the identical suite.
 
 ## Relation to plan P1
 
