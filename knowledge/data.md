@@ -3,11 +3,11 @@ title: Data
 project:
   name: FemPrompt SozArb
   repository: https://github.com/chpollin/FemPrompt_SozArb
-status: active
+status: complete
 language: en
-version: "0.1"
+version: "0.2"
 created: 2026-06-09
-updated: 2026-06-21
+updated: 2026-06-29
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 4.8)
 method:
@@ -19,14 +19,14 @@ template:
   url: https://dhcraft.org/Promptotyping/promptotyping-document/data
   alias: https://dhcraft.org/Promptotyping/#promptotyping-document-data
 topics: ["[[Data Modelling]]"]
-related: [specification, ai-assisted-review-standards, methods-and-pipeline]
+related: [specification, methods, standards]
 ---
 
 This document describes the substrate the PRISMA screening tool consumes and produces. The tool is built so that its data model is, by construction, a PRISMA-trAIce-conformant screening record: every screening decision stores the AI decision and the human decision separately, which is exactly what item R1 needs to render an AI-vs-human flow split. The model has the per-paper `ScreeningRecord`, the aggregated `FlowModel`, and the `DisclosureMetadata`. The canonical persisted unit in the built tool is one file per reviewer (schema `femprompt-prisma-reviewer/0.2`, with the evidence map, see below); the single-blob `Session` envelope is the superseded v3 export shape. The category schema and inclusion logic are reused verbatim from the benchmark (`benchmark/config/categories.yaml`); the seed dataset is the existing corpus. What the data *means* lives here; what is *done* with it lives in [[specification]].
 
 ## Category schema (reused, not redefined)
 
-Ten binary categories, split into two dimensions, with the inclusion rule from [[methods-and-pipeline]]:
+Ten binary categories, split into two dimensions, with the inclusion rule from [[methods]]:
 
 - Technology: `AI_Literacies`, `Generative_KI`, `Prompting`, `KI_Sonstige`
 - Social: `Soziale_Arbeit`, `Bias_Ungleichheit`, `Gender`, `Diversitaet`, `Feministisch`, `Fairness`
@@ -87,25 +87,26 @@ Rules: `human_decision.binding` is always true and is the record of truth (NFR-0
 Derived from all `ScreeningRecord`s; the data behind the flow diagram. It keeps AI and human exclusions in separate fields, which is the core PRISMA-trAIce modification.
 
 ```json
+// counts are placeholders; the canonical figures live in [[verification]]
 {
   "identification": {
-    "n_identified": 326,
-    "by_source": { "DeepResearch": 254, "Manual": 50, "Zotero_only": 22 },
+    "n_identified": 0,
+    "by_source": { "DeepResearch": 0, "Manual": 0, "Zotero_only": 0 },
     "duplicates_removed": 0,
     "tool": "rule-based (deduplication) vs evaluative AI are reported separately"
   },
   "screening": {
-    "n_screened": 291,
-    "excluded_by_ai": { "total": 83, "by_reason": { "Not_relevant_topic": 60, "…": 23 } },
-    "excluded_by_human": { "total": 157, "by_reason": { "Not_relevant_topic": 120, "…": 37 } },
-    "ai_vs_human_matrix": { "both_include": 100, "human_incl_ai_excl": 34,
-                            "ai_incl_human_excl": 108, "both_exclude": 49 }
+    "n_screened": 0,
+    "excluded_by_ai": { "total": 0, "by_reason": { "Not_relevant_topic": 0, "…": 0 } },
+    "excluded_by_human": { "total": 0, "by_reason": { "Not_relevant_topic": 0, "…": 0 } },
+    "ai_vs_human_matrix": { "both_include": 0, "human_incl_ai_excl": 0,
+                            "ai_incl_human_excl": 0, "both_exclude": 0 }
   },
-  "included": { "n_included_human": 134, "n_included_ai": 208 }
+  "included": { "n_included_human": 0, "n_included_ai": 0 }
 }
 ```
 
-Note the two include counts: the binding human count and the advisory AI count are both reported (PRISMA-trAIce R1 asks for the AI-processed numbers and outcomes alongside the human ones). The 2020 three-phase structure is used; there is no standalone Eligibility box. The AI figures in this illustrative block are on the 291 paired papers (`n_included_ai` 208, `excluded_by_ai` 83); the shipped tool reports the AI track over all 326 identified records (Include 232, Exclude 94), while the human track stays on the 291 it covers. Both are correct for their reference set; the matrix and kappa are always on the 291 pairs.
+Note the two include counts: the binding human count and the advisory AI count are both reported (PRISMA-trAIce R1 asks for the AI-processed numbers and outcomes alongside the human ones). The 2020 three-phase structure is used; there is no standalone Eligibility box. The AI figures in this illustrative block are on the paired papers; the shipped tool reports the AI track over all identified records, while the human track stays on the paired subset it covers. Both are correct for their reference set, and the matrix and kappa are always on the paired subset. The actual figures live in [[verification]].
 
 ## DisclosureMetadata (trAIce M2/M3/M6 + RAISE Table 1)
 
@@ -119,7 +120,7 @@ The fields the disclosure generator (FR-06) needs. Most come from `ai_decision`;
 | decoding parameters | `ai_decision.parameters` | trAIce M6b |
 | confidence threshold | session config | trAIce M7 |
 | human oversight | derived (proportion verified = 100% dual screening) | trAIce M8 |
-| validation metrics | `FlowModel` agreement (kappa, matrix) | trAIce M9/R2, RAISE Table 1 |
+| validation metrics | external benchmark evaluation (see [[verification]]) | trAIce M9/R2, RAISE Table 1 |
 | limitations | session notes | trAIce D1, RAISE Table 1 |
 | conflicts of interest | session config | RAISE Table 1 |
 
@@ -179,15 +180,15 @@ What the screening view reads and searches, and what it deliberately does not.
 
 | What | Where | Count |
 |---|---|---|
-| Reading text (served) | `docs/vault/Papers/<title>.md` via `paper.knowledge_doc` | 236 of 326 papers; all 236 resolve under `docs/`, so `fetch(knowledge_doc)` works from `prisma.html` |
-| Abstract fallback | `paper.abstract` in `research_vault_v2.json` | non-empty for 276, empty for 50; used when no `knowledge_doc` |
-| Corpus search index | `docs/data/fulltext_index.json` (built by `scripts/build_screening_index.py`) | 326 papers (236 from the knowledge doc, 75 abstract-only, 15 with no text); ~1.55 MB |
+| Reading text (served) | `docs/vault/Papers/<title>.md` via `paper.knowledge_doc` | most papers; the served ones resolve under `docs/`, so `fetch(knowledge_doc)` works from `prisma.html` (counts in [[verification]]) |
+| Abstract fallback | `paper.abstract` in `research_vault_v2.json` | used when no `knowledge_doc`; not every paper has an abstract |
+| Corpus search index | `docs/data/fulltext_index.json` (built by `scripts/build_screening_index.py`) | every paper, its text drawn from the knowledge doc, else the abstract, else none; figures from the build script |
 
-Important: the served `docs/vault/Papers/*.md` are **not** raw full text. They are the distilled knowledge documents (an English abstract plus the German Kernbefund, Methodik, Hauptargumente, and Kategorie-Evidenz, the last of which already carries real per-category quotes). The raw Docling full texts (232 files, e.g. 100k chars) live in `pipeline/markdown_clean/`, which is **not served** and holds copyrighted, paywalled papers. Publishing those to the public Pages site is outward-facing and not done by default.
+Important: the served `docs/vault/Papers/*.md` are **not** raw full text. They are the distilled knowledge documents (an English abstract plus the German Kernbefund, Methodik, Hauptargumente, and Kategorie-Evidenz, the last of which already carries real per-category quotes). The raw Docling full texts live in `pipeline/markdown_clean/`, which is **not served** and holds copyrighted, paywalled papers. Publishing those to the public Pages site is outward-facing and not done by default.
 
-The screening view fetches `paper.knowledge_doc` on demand through a single seam (`fetchPaperText` in `prisma.js`) and renders it with a built-in minimal Markdown renderer (no dependency). In-text search runs over the rendered document; corpus-wide search runs over the prebuilt `fulltext_index.json` (instant, one lazy load, no 236-file fetch storm). The AI proposal (`paper.llm`) stays available but collapsed; it is not part of the evidence.
+The screening view fetches `paper.knowledge_doc` on demand through a single seam (`fetchPaperText` in `prisma.js`) and renders it with a built-in minimal Markdown renderer (no dependency). In-text search runs over the rendered document; corpus-wide search runs over the prebuilt `fulltext_index.json` (instant, one lazy load, no per-document fetch storm). The AI proposal (`paper.llm`) stays available but collapsed; it is not part of the evidence.
 
-Layer split (ADR-016): because the served document concatenates the paper layer (Abstract, Key Concepts, Full Text) and the machine-extraction layer (Kernbefund onward), the reading view splits it at the first `## Kernbefund` heading (`splitDocLayers`) and offers a Volltext / KI-Extraktion toggle; the KI-Extraktion view carries a band marking it as non-verbatim. The split lands cleanly on all 236 served documents. The layer a snippet is pinned from sets its `origin`, binding the provenance of a Beleg to its actual source.
+Layer split (ADR-016): because the served document concatenates the paper layer (Abstract, Key Concepts, Full Text) and the machine-extraction layer (Kernbefund onward), the reading view splits it at the first `## Kernbefund` heading (`splitDocLayers`) and offers a Volltext / KI-Extraktion toggle; the KI-Extraktion view carries a band marking it as non-verbatim. The split lands cleanly on all served documents. The layer a snippet is pinned from sets its `origin`, binding the provenance of a Beleg to its actual source.
 
 Text-source options (a copyright decision, not yet taken): (1) keep the served knowledge documents, current and publishable; (2) read the raw local full text from the connected clone (`pipeline/markdown_clean/`), never published, public fallback to the knowledge document; (3) publish the raw full texts. Because the source is one function, switching to (2) or (3) is a one-function change.
 
@@ -208,14 +209,13 @@ The tool ships seeded with the existing review so colleagues see a worked exampl
 | Source file | Provides |
 |---|---|
 | `docs/data/research_vault_v2.json` | paper metadata, assessment, knowledge summaries |
-| `benchmark/data/human_assessment.csv` | binding human decisions (303) |
-| `benchmark/data/llm_assessment_10k.csv` | advisory AI decisions (326, Haiku) |
+| `benchmark/data/human_assessment.csv` | binding human decisions |
+| `benchmark/data/llm_assessment_10k.csv` | advisory AI decisions (Haiku) |
 | `benchmark/results/agreement_metrics.json` | reference agreement figures |
 
-A small build step (a `generate_*` script, to be added) maps these into the `Session` schema as a read-only seed; the seed reproduces the canonical benchmark (kappa 0.056, matrix 100/34/108/49) as a self-test for FR-05.
+A small build step (a `generate_*` script, to be added) maps these into the `Session` schema as a read-only seed; the seed reproduces the canonical benchmark (the figures are in [[verification]]) as a self-test.
 
 ## Was nicht reingehört
 
-Category definitions (canonical in `categories.yaml`), the pipeline that produces the offline AI assessments (in [[methods-and-pipeline]]), and the UI that renders this data (in [[specification]] and a future `design.md`). This note describes the substrate, not the behaviour.
+Category definitions (canonical in `categories.yaml`), the pipeline that produces the offline AI assessments (in [[methods]]), and the UI that renders this data (in [[specification]] and a future `design.md`). This note describes the substrate, not the behaviour.
 
-*Updated: 2026-06-21*

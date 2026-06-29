@@ -3,11 +3,11 @@ title: Specification
 project:
   name: FemPrompt SozArb
   repository: https://github.com/chpollin/FemPrompt_SozArb
-status: active
+status: complete
 language: en
-version: "0.1"
+version: "0.2"
 created: 2026-06-09
-updated: 2026-06-21
+updated: 2026-06-29
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 4.8)
 method:
@@ -19,10 +19,10 @@ template:
   url: https://dhcraft.org/Promptotyping/promptotyping-document/specification
   alias: https://dhcraft.org/Promptotyping/#promptotyping-document-specification
 topics: ["[[Requirements Engineering]]", "[[Decision Records]]"]
-related: [project, data, user-stories, ai-assisted-review-standards, prisma-methodology]
+related: [project, data, design, standards, verification, plan]
 ---
 
-This document is the substance layer for the **PRISMA screening tool**, a standalone, PRISMA-conformant screening instrument (`docs/prisma.html`, see ADR-008) linked from the Evidence Companion. The tool writes its data files directly into the connected project folder (File System Access); versioning happens outside the tool in GitHub Desktop (ADR-014, supersedes the in-tool Git surface of ADR-009). It has three sections with different update rhythms: Requirements (static, what the tool must do and for whom), Funktionsumfang (refactored per release, the current shape of the view and its modules), and Decisions (monotonically growing ADRs). Narrative usage scenarios live separately in [[user-stories]]; the data model lives in [[data]]; the standards being implemented are in [[ai-assisted-review-standards]]. The four existing views (Knowledge Chat, Knowledge Graph, Categories, Corpus) are the reference layer documented in `CLAUDE.md`; this spec covers only the new working layer.
+This document is the substance layer for the **PRISMA screening tool**, a standalone, PRISMA-conformant screening instrument (`docs/prisma.html`, see ADR-008) linked from the Evidence Companion. The tool writes its data files directly into the connected project folder (File System Access); versioning happens outside the tool in GitHub Desktop (ADR-014, supersedes the in-tool Git surface of ADR-009). It has three sections with different update rhythms: Requirements (static, what the tool must do and for whom), Funktionsumfang (refactored per release, the current shape of the view and its modules), and Decisions (monotonically growing ADRs). Narrative usage scenarios are the Anwendungsszenarien section below; the data model lives in [[data]]; the standards being implemented are in [[standards]]. The four existing views (Knowledge Chat, Knowledge Graph, Categories, Corpus) are the reference layer documented in `CLAUDE.md`; this spec covers only the new working layer.
 
 ## Anforderungen
 
@@ -32,17 +32,17 @@ This document is the substance layer for the **PRISMA screening tool**, a standa
 - FR-02: Record an independent human screening decision per paper: ten binary categories, an include/exclude decision derived as (>=1 technology dimension AND >=1 social dimension), and, on exclude, one reason from a controlled list. Acceptance: the decision persists with reviewer id and timestamp; the derived decision matches the category logic.
 - FR-03: Offer a blind independent mode that hides the AI proposal until the human decision is recorded, then reveals it and flags divergence. Acceptance: with blind mode on, no AI field is rendered before the human decision; divergence is computed and shown after.
 - FR-04: Render a PRISMA 2020 flow diagram with the PRISMA-trAIce R1 split, identified -> screened -> included, with separate tallies for AI-tool decisions and human-reviewer decisions and a breakdown of exclusion reasons. Acceptance: counts reconcile with the decision log; the diagram exports as SVG.
-- FR-05: Compute agreement metrics live as decisions accrue: confusion matrix (human x AI), Cohen's kappa for the decision and per category, and base rates. Acceptance: on the seed dataset the figures reproduce the offline benchmark (kappa 0.056, matrix 100/34/108/49).
+- FR-05 (superseded by ADR-014/017): Compute agreement metrics live as decisions accrue: confusion matrix (human x AI), Cohen's kappa for the decision and per category, and base rates. As built, the in-tool agreement surface and the kappa computation are removed; agreement is evaluated externally on the benchmark corpus, where the figures live with their provenance (see [[verification]]).
 - FR-06: Generate a PRISMA-trAIce / RAISE disclosure section from the session: tool name, version, date; stage and task; prompt version; decoding parameters; confidence threshold; validation metrics (kappa); known limitations; conflicts of interest. Acceptance: emitted as Markdown, copyable and exportable.
 - FR-07: Track reporting completeness against both the PRISMA 2020 checklist (27 items) and the PRISMA-trAIce checklist (14 items), with per-item status and notes. Acceptance: status persists across reloads and exports.
 - FR-08: Persist the session in localStorage; export and import the full session as JSON; export the decision log as CSV. Acceptance: reload restores state; an export/import round-trip is lossless.
-- FR-09: Seed the tool with the existing FemPrompt corpus (326 papers, dual assessment) as a read-only case-study dataset. Acceptance: loads from `docs/data/` JSON without an import step.
+- FR-09: Seed the tool with the existing FemPrompt corpus (the full dual-assessment corpus, see [[verification]]) as a read-only case-study dataset. Acceptance: loads from `docs/data/` JSON without an import step.
 - FR-10 (secondary): Provide an optional live-LLM on-ramp. With a local API key, request an AI proposal for a paper that lacks one, reusing the versioned assessment prompt. Acceptance: the proposal is stored as an AI decision, visibly labelled as live-generated, and never overrides the human decision.
-- FR-11: Read the paper in full text. Where a paper has a converted full text (`vault/Papers/*.md`, servable under `docs/`), render it formatted and readable in the screening view, not only the abstract (50 of 326 papers have no abstract in the corpus). Acceptance: opening a paper whose `knowledge_doc` path resolves shows its full text; papers without one fall back to abstract or knowledge summary.
+- FR-11: Read the paper in full text. Where a paper has a converted full text (`vault/Papers/*.md`, servable under `docs/`), render it formatted and readable in the screening view, not only the abstract (a number of papers have no abstract in the corpus, see [[verification]]). Acceptance: opening a paper whose `knowledge_doc` path resolves shows its full text; papers without one fall back to abstract or knowledge summary.
 - FR-12: Search the full text. Provide an in-text search that highlights and steps through matches in the open paper, and a corpus-wide search that lists papers whose full text contains a term. Acceptance: a query highlights every hit in the open text and returns the set of papers containing it across the corpus.
 - FR-13: Pin a hit as evidence for a category. From a search hit or a selected passage, attach the term plus its surrounding snippet to one of the ten categories as a stored Beleg; evidence is saved with the decision and is citable in the report. Acceptance: a category can carry one or more evidence snippets; they persist in the reviewer file and appear in the decision log and disclosure.
 
-The AI-forward requirements are demoted by ADR-012 and then by ADR-014. As built: FR-03 (blind mode) is removed from the working view, there is no blind/reveal and no blind toggle; FR-05 (agreement metrics) no longer has a surface at all, ADR-014 removed the human-AI comparison view (matrix, kappa, divergence filter, reviewer reconciliation) from the tool entirely. The pure functions `computeMatrix`/`cohenKappa`/`kappaLabel` survive only because the disclosure line (PRISMA-trAIce M9) and the tests still use them. FR-10 (live LLM) is not implemented (optional, minimal, deferred). The screening view centers on FR-11 to FR-13 (read, search, pin evidence).
+The AI-forward requirements are demoted by ADR-012 and then by ADR-014. As built: FR-03 (blind mode) is removed from the working view, there is no blind/reveal and no blind toggle; FR-05 (agreement metrics) no longer has a surface at all, ADR-014 removed the human-AI comparison view (matrix, kappa, divergence filter, reviewer reconciliation) from the tool entirely. ADR-017 then removed the in-tool kappa computation itself (`computeMatrix`/`cohenKappa`/`kappaLabel` and their tests are gone); agreement is evaluated externally on the benchmark corpus (see [[verification]]), and the disclosure carries the trAIce M9/R2 item as a reference to that source. FR-10 (live LLM) is not implemented (optional, minimal, deferred). The screening view centers on FR-11 to FR-13 (read, search, pin evidence).
 
 FR-11 to FR-13 acceptance, as built: FR-11 renders `paper.knowledge_doc` (the served distilled knowledge document, see [[data]]) with a built-in Markdown renderer, falling back to the abstract, then to an empty state. FR-12 highlights and steps through in-text matches in the open document and filters the corpus via the prebuilt `docs/data/fulltext_index.json`. FR-13 pins a selected passage or a search hit as `evidence[category] = {term, snippet, ts}` in the reviewer file (schema 0.2), sets the category, and reports an `evidence_count` in the decision log. The behaviour contract is in [[data]] (Evidence behaviour). Note: "full text" here is the served knowledge document, not the raw paper text; reading the raw local full text is a copyright-gated follow-up via the single `fetchPaperText` seam.
 
@@ -58,7 +58,29 @@ Acceptance (three-surface IA): the sub-navigation has exactly three entries (Scr
 - NFR-06: Keyboard-first screening. Category toggles and include/exclude reachable by keyboard, echoing the `markdown_reviewer.html` shortcut model. Maßstab: a full paper can be screened without the mouse.
 - NFR-07: Performance. Smooth interaction for at least 500 papers in one session. Maßstab: no perceptible lag on decision entry or diagram redraw at that size.
 
-Anwendungsszenarien siehe [[user-stories]].
+## Anwendungsszenarien (Epics und User Stories)
+
+Usage scenarios in the form "As [role], who [context], I want [goal], so that [benefit]". Roles: the review lead (Sackl-Sharif), the reviewing experts (Sackl-Sharif, Klinger), the technical lead (Pollin), and an external reviewer or auditor. The stories were written by the technical lead as a user proxy and stay hypotheses until validated against how the colleagues actually work; the v3 in-tool-screening usage model was already partially falsified, because the colleagues capture categories in Excel and PRISM is the downstream PRISMA layer (see [[plan]]). The simulated validation verdicts on these stories live in [[plan]] (simulated decisions).
+
+### v4 core (current, evidence-grounded)
+
+- Read and move through the full text fast. As a reviewing expert with many papers to get through, I want each paper rendered as a readable document (the served knowledge document where one exists, the abstract otherwise), so that I judge it on content, not metadata. (FR-11; reading-text source in [[data]].)
+- Search the text for the words that matter. As a reviewing expert who knows which terms signal a category, I want to search within the open paper and across all papers, so that I jump straight to the relevant passages and find candidate studies fast. (FR-12.)
+- Pin a found word as evidence for a category. As a reviewing expert who must justify each inclusion, I want to pin a search hit and its surrounding passage as a Beleg on a category, so that every category points at the exact words that justify it and the decision is reproducible and citable. (FR-13; reviewer schema 0.2 in [[data]].)
+
+### Scholarly assurance
+
+- Generate a PRISMA-conformant record (FR-04, FR-07): export the flow diagram, the checklist, and the disclosure as one record ready for a methods section.
+- Produce the AI-disclosure text automatically (FR-06): a generated disclosure naming model, version, prompt, parameters, limitations, and conflicts, satisfying PRISMA-trAIce and RAISE without hand-assembly.
+- Verify the review is conformant (FR-04, FR-07): as an external reviewer, see the AI-versus-human split in the flow and a checklist of which PRISMA and trAIce items are met.
+- Run a literature update on a fresh batch (FR-01, FR-09): import a new set with its offline AI assessment and screen only what is new, the round-2 path in [[update-protocol]].
+
+### Conceptual orientation
+
+- Look up what a category means (FR-02): the category definition at hand while screening, so the schema is applied consistently and the Gender-Feministisch operationalisation gap stays visible.
+- Understand a checklist item (FR-07): each PRISMA-trAIce item shows its verbatim text and priority level before it is marked.
+
+Superseded v3 stories, kept only as decision context: screening behind a blind AI proposal and an in-tool see-where-I-diverge view were the v3 anchor scenarios; ADR-012 and ADR-014 removed the blind/reveal and the comparison surface, and the divergence is now research material in [[verification]] and the Companion, not a screening-view feature.
 
 ## Funktionsumfang
 
@@ -96,7 +118,7 @@ Grenzen. It visualises the recorded process; it does not infer counts the data d
 
 ### Agreement Panel (removed by ADR-014)
 
-This module is no longer a surface in the tool. ADR-014 removed the human-AI comparison view (confusion matrix, decision and per-category kappa, base-rate comparison, cell-to-workspace filtering) in favour of synthesis over comparison. The underlying functions remain only to feed the disclosure line (PRISMA-trAIce M9); the divergence finding itself lives in the paper and the Evidence Companion, see [[analysis-divergence]] and [[verification-empirical-core]]. The block below is kept as the record of what the surface was.
+This module is no longer a surface in the tool. ADR-014 removed the human-AI comparison view (confusion matrix, decision and per-category kappa, base-rate comparison, cell-to-workspace filtering) in favour of synthesis over comparison. The underlying functions remain only to feed the disclosure line (PRISMA-trAIce M9); the divergence finding itself lives in the paper and the Evidence Companion, see [[verification]]. The block below is kept as the record of what the surface was.
 
 Zweck (historisch). Make the human-AI divergence measurable in place (this was the PRISMA-trAIce M9/R2 performance evaluation).
 
@@ -114,7 +136,7 @@ Datengrundlage. A per-item status/notes store plus auto-derived hints (e.g. R1 s
 
 Interaktion. Mark items, attach notes, see which are auto-satisfied by the session data; export the filled checklist.
 
-Grenzen. It tracks reporting completeness, not methodological quality (AMSTAR 2 / ROBIS remain separate, see [[prisma-methodology]]).
+Grenzen. It tracks reporting completeness, not methodological quality (AMSTAR 2 / ROBIS remain separate, see [[standards]]).
 
 ### Disclosure / Report Generator
 
@@ -146,7 +168,7 @@ Wahl. Build a working, prospective screening tool; treat the existing corpus as 
 
 Begründung. The stated need is that colleagues work better with the instrument, and a literature update with the same prompts is planned for the SocialAI strand. A viewer would not support that; a working tool does and still subsumes the retrospective view via the seed dataset.
 
-Effekt. To be observed after the first meeting (1 July 2026).
+Effekt. To be observed.
 
 ### ADR-002 Batch-import canonical, live-LLM optional
 
@@ -204,7 +226,7 @@ Kontext. PRISMA 2020 alone does not operationalise the AI-vs-human split; two 20
 
 Wahl. Implement PRISMA-trAIce (14 items, esp. R1) as the reporting target and treat RAISE (three principles, Table 1) as the governance frame; cite PRISMA-trAIce as a proposed, not yet formally endorsed, extension.
 
-Begründung. They legitimise the existing dual track and give a concrete checklist to close gaps (protocol pre-registration, parameter disclosure, conflict-of-interest declaration). See [[ai-assisted-review-standards]].
+Begründung. They legitimise the existing dual track and give a concrete checklist to close gaps (protocol pre-registration, parameter disclosure, conflict-of-interest declaration). See [[standards]].
 
 Effekt. To be observed; the disclosure generator (FR-06) and checklist tracker (FR-07) are the direct consequences.
 
@@ -226,7 +248,7 @@ Wahl. The File System Access API writes per-reviewer JSON files into `docs/data/
 
 Begründung. Git becomes the sync layer with no backend, matching the described "write into the data, commit, the other pulls" workflow.
 
-Effekt. Implemented (rebuild stage 2). Direct write is Chromium-only; the fallback covers Firefox/Safari. Supersedes ADR-006. ADR-014 later removed the in-tool Git surface (the add/commit/push hint and the Git language): the direct write stays, but versioning moved to GitHub Desktop outside the tool. The persistence mechanism is unchanged; only the in-tool Git affordance is gone.
+Effekt. Implemented (rebuild stage 2). Direct write is Chromium-only; the fallback covers Firefox/Safari. Supersedes ADR-006. ADR-014 later removed the in-tool Git surface (the add/commit/push hint and the Git language); the direct write stays, but versioning moved to GitHub Desktop outside the tool. The persistence mechanism is unchanged; only the in-tool Git affordance is gone.
 
 ### ADR-010 One file per reviewer
 
@@ -250,7 +272,7 @@ Effekt. Implemented (rebuild stage 3), together with: exclusion reason now requi
 
 ### ADR-012 Evidence-grounded screening, three views, reduced AI (supersedes the AI-forward parts of ADR-003/004 and the seven-surface IA)
 
-Kontext. In use, the tool foregrounded the human-AI divergence study (blind reveal, kappa, matrix, divergence patterns, reconciliation) that is really the content of the paper and the Evidence Companion. The expert in the loop needs to work through literature fast, the way the reviewing colleagues actually did: by reading and searching the full text and grounding each category in concrete words found in the text. 50 of 326 papers also have no abstract in the corpus, so abstract-only reading is insufficient.
+Kontext. In use, the tool foregrounded the human-AI divergence study (blind reveal, kappa, matrix, divergence patterns, reconciliation) that is really the content of the paper and the Evidence Companion. The expert in the loop needs to work through literature fast, the way the reviewing colleagues actually did: by reading and searching the full text and grounding each category in concrete words found in the text. A number of papers also have no abstract in the corpus, so abstract-only reading is insufficient.
 
 Wahl. Recenter the tool on evidence-grounded screening. (1) The screening view is rebuilt around full-text reading and search (FR-11, FR-12), with found terms pinned as evidence to categories (FR-13). (2) AI is strongly reduced to an optional, collapsed suggestion; the human-AI comparison, kappa, and matrix move to the report layer, computed but not foregrounded; blind mode becomes optional and off by default. (3) The seven surfaces collapse into three: Screening, PRISMA & Report, Daten & Repo.
 
@@ -296,13 +318,13 @@ Wahl. `splitDocLayers` trennt das geladene Dokument an der ersten `## Kernbefund
 
 Begründung. Die Trennung ist damit nicht nur sichtbar, sondern im Datenfluss erzwungen. Der bindende Record (`work.cats`, daraus `deriveDecision`) speist sich ausschließlich aus paper-belegten Kategorien, maschinelle Evidenz kann ihn nicht kippen. Das löst das in ADR-015 offen gebliebene Woher ein und realisiert für das servierte Dokument, was ADR-013 für den Rohtext plant, einen auditierbaren Evidenz-Ursprung. ADR-013 (Rohtext aus dem lokalen Clone, `text_source`) bleibt davon unberührt und weiter offen.
 
-Effekt. Implementiert (`docs/js/prisma.js` splitDocLayers, pinEvidence mit origin-Parameter, readingShellHtml-Umschalter, setReadMode, paintActiveLayer; `docs/css/prisma.css` Umschalter, Band, Pin-Menü-Hinweis), test-abgedeckt (sechs Tests für Schicht-Trennung und bindende Separierung, `tests/tests.js`), auf allen 226 servierten Dokumenten greift die Grenze sauber. Offen bleiben die Synthese-Ebene (KI1) und das proaktive Laden der `## Kategorie-Evidenz` als vorbelegte KI-Belege (R2-Fortsetzung).
+Effekt. Implementiert (`docs/js/prisma.js` splitDocLayers, pinEvidence mit origin-Parameter, readingShellHtml-Umschalter, setReadMode, paintActiveLayer; `docs/css/prisma.css` Umschalter, Band, Pin-Menü-Hinweis), test-abgedeckt (sechs Tests für Schicht-Trennung und bindende Separierung, `tests/tests.js`), auf allen servierten Dokumenten greift die Grenze sauber. Offen bleiben die Synthese-Ebene (KI1) und das proaktive Laden der `## Kategorie-Evidenz` als vorbelegte KI-Belege (R2-Fortsetzung).
 
 ### ADR-017 Kappa/Matrix-Disclosure-Zeile entfernt, Agreement extern bewertet
 
-Kontext. ADR-014 entfernte die Mensch-KI-Vergleichsfläche aus dem Werkzeug. Ein Rest blieb, die Disclosure-Zeile berechnete weiter eine Cohen-Kappa und die Konfusionsmatrix über `computeMatrix`/`cohenKappa`/`kappaLabel`. Diese Rechnung lief über den im Werkzeug geladenen Korpus (`research_vault_v2.json`), eine andere Menge als die Benchmark-CSVs, auf denen die kanonische Kappa 0.0561 beruht. Eine im Werkzeug angezeigte Zahl konnte von der Referenz also nur abweichen.
+Kontext. ADR-014 entfernte die Mensch-KI-Vergleichsfläche aus dem Werkzeug. Ein Rest blieb, die Disclosure-Zeile berechnete weiter eine Cohen-Kappa und die Konfusionsmatrix über `computeMatrix`/`cohenKappa`/`kappaLabel`. Diese Rechnung lief über den im Werkzeug geladenen Korpus (`research_vault_v2.json`), eine andere Menge als die Benchmark-CSVs, auf denen die kanonische Kappa beruht (siehe [[verification]]). Eine im Werkzeug angezeigte Zahl konnte von der Referenz also nur abweichen.
 
-Wahl. `computeMatrix`, `cohenKappa` und `kappaLabel` samt ihren Tests entfallen. Die Disclosure behält das trAIce-Item M9/R2, aber als Verweis, die AI-Mensch-Übereinstimmung wird außerhalb des Werkzeugs auf dem Benchmark-Korpus bewertet (`benchmark/replay_selftest.py`, PASS 18/18), nicht im Screening-Tool nachgerechnet. Die Entscheidung ist orchestratorseitig, reversibel und betrifft nur das Werkzeug. Eine etwaige Inter-Rater-Agreement-Aussage des Begleitpapers bleibt davon unberührt und ist eine separate Paper-Entscheidung des Operators.
+Wahl. `computeMatrix`, `cohenKappa` und `kappaLabel` samt ihren Tests entfallen. Die Disclosure behält das trAIce-Item M9/R2, aber als Verweis, die AI-Mensch-Übereinstimmung wird außerhalb des Werkzeugs auf dem Benchmark-Korpus bewertet (`benchmark/replay_selftest.py`), nicht im Screening-Tool nachgerechnet. Die Entscheidung ist orchestratorseitig, reversibel und betrifft nur das Werkzeug. Eine etwaige Inter-Rater-Agreement-Aussage des Begleitpapers bleibt davon unberührt und ist eine separate Paper-Entscheidung des Operators.
 
 Begründung. Das Werkzeug ist damit konsistent, es ist ein evidenzgestütztes Screening-Instrument, kein Agreement-Messgerät über einem zufällig geladenen Korpus. Die kanonische Kappa lebt seit dem R2-Replay an genau einer Stelle, dem committeten Selbsttest über den Roh-CSVs. M9/R2 wird nicht verschwiegen, sondern an diese Quelle verwiesen, die trAIce-Konformität bleibt gewahrt.
 
@@ -310,6 +332,5 @@ Effekt. Implementiert (`docs/js/prisma.js`, computeMatrix/cohenKappa/kappaLabel 
 
 ## Was nicht reingehört
 
-Architecture (stack, data flow, module boundaries) belongs in a future `architecture.md`; the data model belongs in [[data]]; design tokens and UI patterns belong in [[design]]; the standards themselves belong in [[ai-assisted-review-standards]] and [[prisma-methodology]].
+Architecture (stack, data flow, module boundaries) belongs in a future `architecture.md`; the data model belongs in [[data]]; design tokens and UI patterns belong in [[design]]; the standards themselves belong in [[standards]].
 
-*Updated: 2026-06-21*

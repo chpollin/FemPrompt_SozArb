@@ -179,6 +179,9 @@ def main():
     # === Ergebnis zusammenstellen ===
     results = {
         'metadata': {
+            # NB: this is the UNION of the two assessment tracks (human + agent),
+            # not the 326-paper corpus. len(rows) over the merged file = 291 paired
+            # + papers_human_only + papers_agent_only. Do not read it as corpus size.
             'total_papers': len(rows),
             'papers_with_both_assessments': len(complete_rows),
             'papers_human_only': sum(1 for r in rows if r.get('has_human') == 'Ja' and r.get('has_agent') == 'Nein'),

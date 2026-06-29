@@ -5,15 +5,15 @@ project:
   repository: https://github.com/chpollin/FemPrompt_SozArb
 status: draft
 language: en
-version: "0.1"
+version: "0.2"
 created: 2026-06-09
-updated: 2026-06-09
+updated: 2026-06-29
 authors: [Christopher Pollin]
 generated-with: Claude Code
 method:
   name: Promptotyping
   url: https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin
-related: [plan, data, specification, prisma-methodology]
+related: [plan, data, specification, verification]
 ---
 
 This document is the setup path for reusing this project's review machinery for a different systematic review: a different topic, different categories, different corpus, different prompts. It implements Stage C3 of [[plan]] (reuse extraction). The target reader is a third party who has never worked in this repository and should reach a first screened paper from this document alone.
@@ -85,6 +85,7 @@ Create your repository and copy these files, keeping the relative layout:
 docs/prisma.html
 docs/js/prisma.js
 docs/js/prisma-data.js
+docs/js/prisma-import.js
 docs/css/prisma.css
 docs/css/research.css
 docs/data/screening/README.md
@@ -99,14 +100,14 @@ prompts/CHANGELOG.md                    (as template, you empty it)
 requirements.txt
 ```
 
-`docs/prisma.html` loads only the two JS files and the two CSS files above plus Google Fonts; there is no build step and no framework. The Python scripts need the packages in `requirements.txt` (the assessment runner needs `anthropic` and `yaml`).
+`docs/prisma.html` loads three JS files (`prisma.js`, `prisma-data.js`, `prisma-import.js`) and the two CSS files above, plus Google Fonts and Font Awesome via CDN; there is no build step and no framework. The Python scripts need the packages in `requirements.txt` (the assessment runner needs `anthropic` and `yaml`).
 
 ### Step 2: Define your categories
 
 Rewrite `benchmark/config/categories.yaml`. This file is the single source of truth for the assessment prompt and the import validation. For each category: `name` (the technical key, no spaces, used everywhere downstream), `definition`, `type: binary`, `group`, positive and negative examples. Then:
 
 - `decision.include_criteria`: your inclusion rule in prose. The original rule is two-pool: include if at least one category from the technik group and at least one from the sozial group is yes.
-- `exclusion_reasons`: your controlled vocabulary. The tool refuses free-text reasons; the import validation (planned P3 bridge, see [[plan]]) flags out-of-vocabulary values. The data hygiene lesson from this project's first round, recorded in [[conformance-audit]], is that uncontrolled capture produces out-of-vocabulary values and empty cells, so fix the vocabulary before anyone screens.
+- `exclusion_reasons`: your controlled vocabulary. The tool refuses free-text reasons; the import validation (planned P3 bridge, see [[plan]]) flags out-of-vocabulary values. The data hygiene lesson from this project's first round, recorded in [[verification]], is that uncontrolled capture produces out-of-vocabulary values and empty cells, so fix the vocabulary before anyone screens.
 - `study_types`: optional list if you capture study type.
 
 ### Step 3: Mirror the categories in the tool
@@ -135,7 +136,7 @@ If your corpus comes from deep-research prompts: version the prompt in `prompts/
 
 ### Step 5: Optional LLM batch assessment
 
-If you want the advisory AI track from the start, write a pre-specified protocol first (sample, prompt version, model id, parameters, stopping criteria) and commit it before the run. This is PRISMA-trAIce item M1; the retrospective audit of this project's first round ([[conformance-audit]]) names the missing pre-specified protocol as a gap that cannot be repaired afterwards.
+If you want the advisory AI track from the start, write a pre-specified protocol first (sample, prompt version, model id, parameters, stopping criteria) and commit it before the run. This is PRISMA-trAIce item M1; the retrospective audit of this project's first round ([[verification]]) names the missing pre-specified protocol as a gap that cannot be repaired afterwards.
 
 Then run:
 
@@ -143,7 +144,7 @@ Then run:
 python benchmark/scripts/run_llm_assessment.py --input benchmark/data/papers_full.csv --config benchmark/config/categories.yaml --output benchmark/data/llm_assessment.csv
 ```
 
-The prompt is assembled at runtime from your `categories.yaml` (definitions, examples, include rule), so replacing the categories replaces the prompt. Record model id, temperature, max tokens and prompt version; they go into `MODEL_DEFAULT` (Step 3) and the disclosure. Cost figures, if you report them, are factual disclosure, nothing more.
+The prompt is assembled at runtime from your `categories.yaml` (definitions, examples, include rule), so replacing the categories replaces the prompt. Record model id, temperature, max tokens and prompt version; they go into `MODEL_DEFAULT` (Step 3) and the disclosure.
 
 The human track is captured wherever your reviewers work; in this project that is an Excel sheet whose column shape is `benchmark/data/human_assessment.csv`, imported downstream (the P3 bridge in [[plan]]).
 
@@ -206,4 +207,4 @@ Discrepancies found in the rehearsal are fixed here, not worked around.
 - [[plan]], Stage C3: the reuse decision and the done criterion this document serves
 - [[data]]: data architecture of the original review
 - [[specification]]: ADRs that explain why the machinery is shaped this way
-- [[conformance-audit]]: the gaps a review accumulates when the record discipline starts too late
+- [[verification]]: the gaps a review accumulates when the record discipline starts too late

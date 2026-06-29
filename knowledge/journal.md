@@ -1,3 +1,21 @@
+---
+title: Journal
+project:
+  name: FemPrompt SozArb
+  repository: https://github.com/chpollin/FemPrompt_SozArb
+method:
+  name: Promptotyping
+  url: https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin
+status: complete
+language: de
+version: "0.2"
+created: 2026-02-18
+updated: 2026-06-29
+authors: [Christopher Pollin]
+generated-with: Claude Code
+related: [INDEX, plan, specification, design, verification]
+---
+
 # Arbeitsjournal
 
 Chronologisches Protokoll der Arbeitssitzungen mit Entscheidungen, Ergebnissen und Learnings.
@@ -21,7 +39,7 @@ The benchmark core that V1 (`verification-empirical-core.md`) could only verify 
 - `python replay_selftest.py` reports PASS 18/18, exit 0: row counts (303/142/161, 326/232/94), pairing (291/12/35), matrix 100/34/108/49, kappa 0.0561, po 0.5120, sensitivity (199, 100/34/36/29, kappa 0.1940), and the Has_HA surplus resolving to the single key 2YS85B49.
 - `python verify_femprompt.py` output matches the committed `recompute_verification.txt`.
 
-### Decisions (from the persona, autonomous, inside the boundary)
+### Decisions
 
 - The self-test re-implements the pairing and kappa independently rather than importing the diagnostic script. An adversarial recompute should not reuse the logic it guards, and two independent implementations agreeing on the number is the stronger statement.
 - The numbers were verified, not changed. No raw CSV, no merge artifact, no documented figure was touched; the work makes the existing claim reproducible by execution, which the plan's claims discipline requires.
@@ -40,7 +58,7 @@ The benchmark core that V1 (`verification-empirical-core.md`) could only verify 
 
 ### What happened
 
-The reframed M3 from Session 15, built and verified as the lane `femprompt-prism` on the operator's release to implement what falls inside the decision boundary. The contamination path the review session found is now closed in code, not just marked.
+The reframed M3 from Session 15, built and verified . The contamination path the review session found is now closed in code, not just marked.
 
 1. **Layer split.** `splitDocLayers(md)` separates the served knowledge document into its paper layer (Abstract, Key Concepts, Full Text) and its machine-extraction layer (Kernbefund, Forschungsfrage, Methodik, Hauptargumente, Kategorie-Evidenz, Assessment-Relevanz, Schlüsselreferenzen), cutting at the first `## Kernbefund` heading and pulling the boundary up over a repeated H1 title. Verified on all 226 served documents (a throwaway jsdom trace over the real corpus, boundary clean 226 of 226).
 2. **Toggle and band.** The reading column gains a Volltext / KI-Extraktion toggle (`setReadMode`, `paintActiveLayer`, `updateLayerToggle`); the toggle appears only when a paper has an AI layer. The KI-Extraktion view shows a band marking it as non-verbatim, and the pin menu warns when a snippet comes from that layer.
@@ -51,7 +69,7 @@ The reframed M3 from Session 15, built and verified as the lane `femprompt-prism
 - `node tests/run.mjs` reports PASS 73/73 (was 67/67): six new tests cover the split (paper keeps Full Text, AI layer holds Kernbefund and Kategorie-Evidenz, abstract-only yields no AI layer) and the binding separation (human pin sets the category, AI pin does not, AI evidence alone stays Exclude, both-human derives Include, AI Beleg stored and rendered KI yet advisory).
 - Real-data trace: `splitDocLayers` lands the boundary cleanly on all 226 served knowledge documents (paper layer never contains Kernbefund, AI layer always holds Kernbefund and Kategorie-Evidenz). The scratch script was deleted, working tree clean.
 
-### Decisions (from the persona, autonomous, inside the boundary)
+### Decisions
 
 - Origin reflects the source layer of the text, not who clicked. A human reading the AI extraction and pinning from it produces an `origin: ai` Beleg, because the text is machine-authored. This keeps AI output from being laundered into a clean human Beleg.
 - The binding record is `work.cats`; only a paper-layer pin writes to it. AI evidence is visible and advisory but structurally excluded from the derived decision. ADR-016 records this.
@@ -75,7 +93,7 @@ The reframed M3 from Session 15, built and verified as the lane `femprompt-prism
 
 ### What happened
 
-A review session as the lane `femprompt-prism`, triggered by an operator walkthrough of the screening surface. Verifying what the reading column actually renders surfaced a gap that reshapes the next milestone, and prompted an honest verdict on how far the lane is from its overall goal.
+A review session , triggered by a walkthrough of the screening surface. Verifying what the reading column actually renders surfaced a gap that reshapes the next milestone, and prompted an honest verdict on how far the work is from its overall goal.
 
 1. **The reading column silently fuses verbatim text and AI extraction.** Verified against all 226 served knowledge docs (`docs/vault/Papers/*.md`): each is one document concatenating a paper layer (`## Abstract`, `## Key Concepts`, `## Full Text`) and an AI layer (`## Kernbefund`, `## Forschungsfrage`, `## Methodik`, `## Hauptargumente`, `## Kategorie-Evidenz` with `### Evidenz 1..5`, `## Assessment-Relevanz`, `## Schlüsselreferenzen`). `fetchPaperText` loads it and `renderMarkdown` dumps the whole thing into one scroll. There is no toggle and no boundary marker. A reviewer scrolls from the real paper straight into a machine summary with nothing separating them.
 2. **The provenance gap this creates.** KI2 records who pinned a Beleg (human), not where the snippet came from. A Beleg lifted out of the `## Kategorie-Evidenz` (AI) section still renders as a clean Mensch pin. The separation the tool promises is now visibly marked but not enforced in the live flow, which is exactly the contamination path the project means to close.
@@ -83,7 +101,7 @@ A review session as the lane `femprompt-prism`, triggered by an operator walkthr
 
 ### Assessment: distance to the overall goal
 
-The overall goal is an auditable instrument that runs a real FemPrompt screening pass with every decision backed by Kategorie-Evidenz, human and AI cleanly separated and disclosed, the result reproducible and published as the Companion. Verdict: the load-bearing foundation is reached (three surfaces, harness green 67/67, provenance plumbing as a stored field, import bridge under test), the overall goal is clearly not. Four things stand between here and there, the first only surfaced this session: the human/AI separation is not yet enforced in the reading flow (M3), the synthesis surface is unbuilt and gated on KI1, the kappa/matrix replay is asserted but not scriptable from real data, and no real screening pass, record bundle, or publication exists yet. The methodologically hardest part lies ahead of the lane, not behind it.
+The overall goal is an auditable instrument that runs a real FemPrompt screening pass with every decision backed by Kategorie-Evidenz, human and AI cleanly separated and disclosed, the result reproducible and published as the Companion. Verdict: the load-bearing foundation is reached (three surfaces, harness green 67/67, provenance plumbing as a stored field, import bridge under test), the overall goal is clearly not. Four things stand between here and there, the first only surfaced this session: the human/AI separation is not yet enforced in the reading flow (M3), the synthesis surface is unbuilt and gated on KI1, the kappa/matrix replay is asserted but not scriptable from real data, and no real screening pass, record bundle, or publication exists yet. The methodologically hardest part lies ahead, not behind it.
 
 ### Open at the operator
 
@@ -99,7 +117,7 @@ The overall goal is an auditable instrument that runs a real FemPrompt screening
 
 ### What happened
 
-A milestone session as the Forschungsleitstelle lane `femprompt-prism`, from the screening-methodologist persona. Two self-contained, verified units were built and secured; the headless harness went from 56 to 67 green.
+A milestone session . Two self-contained, verified units were built and secured; the headless harness went from 56 to 67 green.
 
 1. **KI2, per-Beleg provenance (decided order item, now built).** Each Beleg records its origin as first-class data. `pinEvidence` stamps `origin: 'human'` on every reviewer pin; `evidenceListHtml` renders a neutral Mensch/KI marker per Beleg and defaults legacy Belege (no origin field) to human. The marker reuses the established human/ai identity hues (`--pt-human`/`--pt-ai`), same shape and weight for both, no valuation. This is the provenance plumbing the synthesis surface (KI1) needs: when human and AI evidence are brought together, each Beleg already carries where it came from. Today every Beleg in the list is a human pin, so the live change is the Mensch tag; the KI rendering is test-verified for when machine evidence (R2 Kategorie-Evidenz) feeds the same list. Files: `docs/js/prisma.js` (pinEvidence, evidenceListHtml, the `_test` exposure), `docs/css/prisma.css` (the neutral marker rules).
 2. **The Excel-to-PRISM import bridge brought under the test harness.** `docs/js/prisma-import.js` builds the full data-hygiene validation report (out-of-vocabulary category/decision/exclusion-reason values, duplicate Zotero keys, Unclear rows, collision guard, idempotent re-import) and already exposed `window.__PRISMA_IMPORT_TEST__`, but the harness never loaded it: the auditability backbone of the R1 lesson was committed yet untested. `tests/run.mjs` and `tests/run-tests.html` now inject the module; seven tests lock the validation behaviour against crafted CSV fixtures (clean Include, out-of-vocab reason preserved verbatim, empty reason flagged, duplicate key skipped, Unclear skipped, idempotent re-import unchanged).
@@ -109,7 +127,7 @@ A milestone session as the Forschungsleitstelle lane `femprompt-prism`, from the
 - `node tests/run.mjs` reports PASS 67/67 (was 56/56): four KI2 provenance tests plus seven import-bridge tests, all headless jsdom. Green criterion met for both milestones.
 - The KI2 marker is verified by render assertion, not by pixel screenshot: the shared Chrome window makes screenshots unreliable here (Session 13 learning), so the trace is the deterministic rendered markup `pt-evid-origin-human">Mensch` and `pt-evid-origin-ai">KI` asserted in the suite.
 
-### Decisions (from the persona, autonomous)
+### Decisions
 
 - Provenance is a stored field (`origin`) on each Beleg, not an inference from the render container, so it survives the future human/AI merge. Backward-compatible: legacy Belege without the field render as human.
 - The marker is neutral by construction: identical shape and size for both origins, only the established identity hue differs, no better/worse styling.
@@ -132,27 +150,27 @@ After the build, the knowledge docs were aligned to the new code (the round's Do
 
 ### What happened
 
-A verification-and-direction session as the Forschungsleitstelle lane `femprompt-prism`. The tool went from built-but-unverified to verified-runnable, then through three operator-driven direction changes that reshaped what the tool is, before the lane was consolidated onto main.
+A verification-and-direction session . The tool went from built-but-unverified to verified-runnable, then through three operator-driven direction changes that reshaped what the tool is, before the work was consolidated onto main.
 
-1. **Verification.** The never-run test suite was started and brought green (56 of 56, headless jsdom). All three surfaces were exercised, the storage path including the export/import fallback was checked, and the absence of secret leaks confirmed (detail below). A critical assessment of the shipped frontend was written ([[frontend-assessment]]), and two real number errors were corrected (305 -> 303, recompute-backed).
+1. **Verification.** The never-run test suite was started and brought green (56 of 56, headless jsdom). All three surfaces were exercised, the storage path including the export/import fallback was checked, and the absence of secret leaks confirmed (detail below). A critical assessment of the shipped frontend was written ([[design]]), and two real number errors were corrected (305 -> 303, recompute-backed).
 2. **Git surface removed from the tool** (operator order, `21059ba`). The `git add/commit/push` hint block and the Git language left the Daten & Repo surface; "Git-based" left the page description; dead `.pt-git-hint` CSS was removed. The direct File System Access write stays: it lands the file in a GitHub Desktop working copy, where versioning now happens outside the tool. The internal `commit()` (records a decision, not a Git commit) is untouched.
 3. **Human-AI comparison surface removed** (operator order: synthesis over comparison, `ba4db2f`). The leitmotif changed: human and AI assessment are never to be compared but always brought together into a synthesis. Removed from the working tool: the Mensch-KI-Uebereinstimmung section, the confusion-matrix view, the kappa display, the divergence filter, the reviewer reconciliation table, and the comparison intros and footer. Kept: the flow, the checklist, the disclosure, and the pure functions `computeMatrix`/`cohenKappa`/`kappaLabel`, because the disclosure line (PRISMA-trAIce M9) and the tests still use them. The divergence finding stays the property of the paper and the Evidence Companion, not the screening UI.
 4. **Design unified across all pages** (`c42bcc5`). The tool page (`docs/prisma.html`) was lifted onto the Companion design: white background, the rainbow accent bar under the header, the shared header with title and navigation, the shared footer, Font Awesome. The navigation is now identical on all five pages (the PRISM link everywhere, one label). The slim tool header and dead `pt-app-header` CSS are gone. Tool logic and tests untouched.
-5. **Consolidated to main** (`5a09be4`, `8f6580b`). On the Leitstelle order, `feat/prisma-screening-tool` was fast-forwarded into `main` and pushed; the lane works on main from here, no own branches (the post-refactor rule). The knowledge docs were synced to the new reality as ADR-014 (`5a09be4`: specification, design, README, data, frontend-assessment, plan, the screening README), keeping the research findings intact and only correcting the tool-describing parts. The `prisma.js` file header and a stale section comment were aligned to ADR-014 (`8f6580b`, comment-only). Tests stay green on main.
+5. **Consolidated to main** (`5a09be4`, `8f6580b`). On the operator's instruction, `feat/prisma-screening-tool` was fast-forwarded into `main` and pushed; work continues on main from here, no own branches (the post-refactor rule). The knowledge docs were synced to the new reality as ADR-014 (`5a09be4`: specification, design, README, data, frontend-assessment, plan, the screening README), keeping the research findings intact and only correcting the tool-describing parts. The `prisma.js` file header and a stale section comment were aligned to ADR-014 (`8f6580b`, comment-only). Tests stay green on main.
 
 ### Verification (detail, HEAD `1c1217a`)
 
 - Test foundation verified against a real run: `npm test` (headless jsdom harness `tests/run.mjs`) reports PASS 56/56. The suite written in the 2026-06-09 wave, first shipped unrun, is now proven runnable, not just commit-claimed.
 - All three surfaces clicked through in the browser (local static server on `docs/`, prisma.html). The app loads cleanly: the console reports `326 papers loaded` and `initialized, 326 papers, FS supported`, no errors.
   - **Screening with Beleg pinning:** full-text search finds hits, "Treffer anheften" opens the category menu, `pinEvidence` sets category plus Beleg (term, snippet, timestamp). Derivation confirmed: >=1 Technik AND >=1 Sozial flips the derived decision from Exclude to Include.
-  - **PRISMA & Report:** the PRISMA-2020 flow (n=326, separate AI/human lanes, advisory/binding), the confusion matrix 100/34/108/49 with kappa=0.056 at n=291, ten category kappas, the 14-item trAIce checklist (Holst et al. 2025), the AI disclosure with Markdown preview carrying the canonical kappa and matrix. The numbers match `knowledge/verification-empirical-core.md` and the README. The matrix/kappa view seen here was the comparison surface later removed in `ba4db2f`; the disclosure line keeps the numbers.
+  - **PRISMA & Report:** the PRISMA-2020 flow (n=326, separate AI/human tracks, advisory/binding), the confusion matrix 100/34/108/49 with kappa=0.056 at n=291, ten category kappas, the 14-item trAIce checklist (Holst et al. 2025), the AI disclosure with Markdown preview carrying the canonical kappa and matrix. The numbers match `knowledge/verification-empirical-core.md` and the README. The matrix/kappa view seen here was the comparison surface later removed in `ba4db2f`; the disclosure line keeps the numbers.
   - **Daten & Repo:** the File System Access workflow (connect `docs/data/screening/`, one JSON per reviewer, schema 0.2), the export/import fallback for all browsers, the reviewer reconciliation table, the Excel-CSV bridge with a check report and collision guard. The reconciliation table and the Git workflow seen here were later removed in `21059ba`/`ba4db2f`.
 - Storage and sync path including fallback verified: a decision is written to localStorage (`femprompt-prisma-state/0.2`) and survives a reload (done counter 1/326, Beleg kept). Connection status stays "nicht mit Repo verbunden", so the localStorage fallback applies. The export payload `femprompt-prisma-reviewer/0.2` checked well-formed via `__PRISMA_TEST__.reviewerPayload`. The test decision was removed afterwards, demo state pristine (0/326).
 - No secret leak: `docs/js/config.local.js` (Gemini key) and `.env` are gitignored and never committed; the key is absent from history. The PRISM files do not reference the key, only `docs/index.html` loads `config.local.js` with `onerror=""` (graceful), so the tool deploys safely without a key.
 
 ### Operator decisions recorded this session
 
-- Publication, merge strategy, and project management are out of the lane scope.
+- Publication, merge strategy, and project management are out of scope for this work.
 - Leitmotif: synthesis, not comparison.
 - Standing rule: self-commit at every milestone and push to main without asking.
 - Evidence provenance (KI2): each Beleg stays marked as AI- or human-sourced, a plain provenance tag without judgement.
@@ -160,9 +178,9 @@ A verification-and-direction session as the Forschungsleitstelle lane `femprompt
 
 ### Learnings
 
-- In the shared Forschungsleitstelle report repo, a plain `git commit` swept a foreign already-staged file into the lane commit. Use `git commit -- <path>` there, the working tree is shared with parallel instances.
+- In a shared report repo, a plain `git commit` swept a foreign already-staged file into the commit. Use `git commit, <path>` there, the working tree is shared with parallel instances.
 - Most "old" numbers in the knowledge base are legitimate intermediate states (208 on 291 pairs vs 232 on 326), not errors. Verify against the recompute before "correcting".
-- The jsdom harness is the reliable trace, not the screenshot: the Chrome window is shared with the parallel frontend lanes and is resized continuously, so pixel clicks and screenshots are unreliable. Resolution-independent are element references (`find`) and `javascript_tool` against `window.__PRISMA_TEST__`.
+- The jsdom harness is the reliable trace, not the screenshot: the Chrome window is shared with the parallel frontend sessions and is resized continuously, so pixel clicks and screenshots are unreliable. Resolution-independent are element references (`find`) and `javascript_tool` against `window.__PRISMA_TEST__`.
 - Avoid blocking dialogs: "Eigene Session leeren" calls `confirm()`, the FS Access error paths `alert()`. Do not click these in a browser automation run; clean up directly via localStorage instead.
 - Merge scope was wider than the tool: the feature branch differed from main in 62 files, only 10 under `docs/`, the rest the paper strand, benchmark experiments, and knowledge. The full merge brought the paper strand onto main, which the operator accepted before the fast-forward consolidation.
 
@@ -233,8 +251,8 @@ New `scripts/build_screening_index.py` extracts plain searchable text from the s
 ### Paper vs. Repo Comparison
 
 Systematic comparison of the paper text (Forum Wissenschaft draft) against the complete repository. 42 claims checked. Key findings:
-- **1 factual error:** Paper said LLM assessment uses "extrahierte Wissensdokumente" -- actually uses Title + Abstract from papers_full.csv. The knowledge documents are NOT used as input.
-- **1 deviation:** "deterministisch aus den Wissensdokumenten abgeleitet" for the knowledge graph -- concept extraction is LLM-based, not deterministic. Fixed in revised draft.
+- **1 factual error:** Paper said LLM assessment uses "extrahierte Wissensdokumente", actually uses Title + Abstract from papers_full.csv. The knowledge documents are NOT used as input.
+- **1 deviation:** "deterministisch aus den Wissensdokumenten abgeleitet" for the knowledge graph, concept extraction is LLM-based, not deterministic. Fixed in revised draft.
 - **5 not verifiable:** Phase 1 (RIS conversion, metadata import, expert verification) has no audit trail.
 - **24 verified:** Pipeline, benchmark numbers, categories, assessment system all correct.
 
@@ -258,12 +276,10 @@ Systematic comparison of the paper text (Forum Wissenschaft draft) against the c
 
 **Key findings:**
 1. Sonnet + KD is the best condition (Decision K +0.012, Mean Cat K +0.026, Gender +0.166)
-2. Haiku is overwhelmed by richer context -- mean category kappa drops (-0.06)
+2. Haiku is overwhelmed by richer context, mean category kappa drops (-0.06)
 3. Inclusion bias intensifies with more context across ALL conditions
 4. Fairness degrades in both KD conditions (ubiquitous fairness language in KDs)
-5. **The divergence is NOT information deficit** -- structural inclusion bias persists even with full-text extractions
-
-**Cost:** Haiku+KD ~$2.50, Sonnet+KD ~$15. Total experiment ~$17.50.
+5. **The divergence is NOT information deficit**, structural inclusion bias persists even with full-text extractions
 
 **Interpretation for paper:** More context improves category-specific recognition (especially Gender, Prompting, Generative_KI for Sonnet) but amplifies the inclusion bias. This strengthens the paper's central argument: reliability requires process design, not just better models or more data.
 
@@ -279,9 +295,9 @@ Systematic comparison of the paper text (Forum Wissenschaft draft) against the c
 
 2. **All documentation translated to English:** CLAUDE.md (rewritten with Core Argument + Key Terminology sections), status.md, project.md, methods-and-pipeline.md, paper-integrity.md, README.md, quickstart.md. Root README.md also updated.
 
-3. **Paper text verified against code:** Discovered that the paper falsely claimed Stage 1 "splits the document into semantic sections" -- the code (`distill_knowledge.py`) processes the full text as a whole (up to 45k chars). Corrected passage provided to paper author.
+3. **Paper text verified against code:** Discovered that the paper falsely claimed Stage 1 "splits the document into semantic sections", the code (`distill_knowledge.py`) processes the full text as a whole (up to 45k chars). Corrected passage provided to paper author.
 
-4. **Haiku 4.5 vs Sonnet 4.6 experiment:** Ran 10K assessment with claude-sonnet-4-6 (~$12). Same prompt, same data, same human baseline. Result: Sonnet does NOT close the gap -- it shifts it. Include rate rises to 82.5% (vs Haiku 71.5%, Human 46%). Gender kappa drops sharply (0.407->0.284). Feministisch improves to 0.819.
+4. **Haiku 4.5 vs Sonnet 4.6 experiment:** Ran 10K assessment with claude-sonnet-4-6. Same prompt, same data, same human baseline. Result: Sonnet does NOT close the gap, it shifts it. Include rate rises to 82.5% (vs Haiku 71.5%, Human 46%). Gender kappa drops sharply (0.407->0.284). Feministisch improves to 0.819.
 
 5. **Gender-Feministisch split discovered:** Sonnet systematically separates "Feministisch" from "Gender". Papers like "Data Feminism for AI" get Feministisch=Yes, Gender=No. Sonnet follows the category definition literally ("explicit gender focus"), while experts read feminist theory as inherently gender-relevant. Of 21 cases where the models disagree on Gender, Haiku matches Human in 20/21. This is an operationalization gap in the category definition, not a model quality issue.
 
@@ -315,19 +331,19 @@ Systematic comparison of the paper text (Forum Wissenschaft draft) against the c
 
 2. **Kritischen Merge-Bug entdeckt und behoben:** `merge_assessments.py` matchte Human- und LLM-Assessment per sequentieller ID statt Zotero_Key. Die beiden CSVs haben komplett unterschiedliche ID-Reihenfolgen (301 von 304 IDs zeigten auf verschiedene Papers). Alle bisherigen Benchmark-Ergebnisse (Kappa 0,035, Konfusionsmatrix 65/23/78/34, 111 Divergenzen) basierten auf falschen Paarungen. Fix: Zeile 65 in merge_assessments.py auf Zotero_Key umgestellt.
 
-3. **Benchmark komplett neu berechnet:** 291 Papers mit beiden Assessments (korrekt per Zotero_Key gepaart). Konfusionsmatrix: 100/34/108/49. Kappa: 0,056. Kategorie-Kappas jetzt alle 0,39--0,82 (vorher teils negativ -- das war Rauschen). 142 Disagreements (108 LLM-Inc/Human-Exc, 34 umgekehrt).
+3. **Benchmark komplett neu berechnet:** 291 Papers mit beiden Assessments (korrekt per Zotero_Key gepaart). Konfusionsmatrix: 100/34/108/49. Kappa: 0,056. Kategorie-Kappas jetzt alle 0,39 bis 0,82 (vorher teils negativ, das war Rauschen). 142 Disagreements (108 LLM-Inc/Human-Exc, 34 umgekehrt).
 
-4. **Divergenz-Klassifikation mit Sonnet 4.6:** Alten Divergenz-Cache invalidiert (.vault_cache/divergences/). 142 Faelle neu klassifiziert mit Claude Sonnet 4.6 (statt Haiku 4.5). Ergebnis: Semantische Expansion 51% (73), Implizite Feldzugehoerigkeit 30% (42), Keyword-Inklusion 19% (27). Sonnet differenziert deutlich staerker als Haiku -- weniger pauschale "Semantische Expansion", mehr Erkennung von implizitem Feldwissen.
+4. **Divergenz-Klassifikation mit Sonnet 4.6:** Alten Divergenz-Cache invalidiert (.vault_cache/divergences/). 142 Faelle neu klassifiziert mit Claude Sonnet 4.6 (statt Haiku 4.5). Ergebnis: Semantische Expansion 51% (73), Implizite Feldzugehoerigkeit 30% (42), Keyword-Inklusion 19% (27). Sonnet differenziert deutlich staerker als Haiku, weniger pauschale "Semantische Expansion", mehr Erkennung von implizitem Feldwissen.
 
 5. **JSON-Daten regeneriert:** research_vault_v2.json und promptotyping_v2.json mit korrekten Metriken und Divergenz-Mustern neu generiert. Alle Wissensdokumente (methods-and-pipeline, paper-integrity, project, quickstart) aktualisiert.
 
 ### Was wir gelernt haben
 
-**Merge-Key ist kritisch:** Ein Merge per sequentieller ID statt stabiler Identifier (Zotero_Key) produziert plausibel aussehende aber voellig falsche Ergebnisse. Die alten Zahlen (78:23 Ratio, Kappa 0,035) sahen inhaltlich sinnvoll aus, weil die Marginalverteilungen (Basisraten) korrekt blieben -- nur die Zellwerte der Konfusionsmatrix waren Zufall.
+**Merge-Key ist kritisch:** Ein Merge per sequentieller ID statt stabiler Identifier (Zotero_Key) produziert plausibel aussehende aber voellig falsche Ergebnisse. Die alten Zahlen (78:23 Ratio, Kappa 0,035) sahen inhaltlich sinnvoll aus, weil die Marginalverteilungen (Basisraten) korrekt blieben, nur die Zellwerte der Konfusionsmatrix waren Zufall.
 
-**Kategorie-Kappas als Validierungsindikator:** Die alten Kategorie-Kappas waren teils negativ (Gender -0,098, Fairness -0,163). Negative Kappas bei binaeren Kategorien sind ein Warnsignal fuer fehlerhaftes Matching. Die korrekten Werte (0,39--0,82) zeigen echte Uebereinstimmungssignale.
+**Kategorie-Kappas als Validierungsindikator:** Die alten Kategorie-Kappas waren teils negativ (Gender -0,098, Fairness -0,163). Negative Kappas bei binaeren Kategorien sind ein Warnsignal fuer fehlerhaftes Matching. Die korrekten Werte (0,39 bis 0,82) zeigen echte Uebereinstimmungssignale.
 
-**Sonnet 4.6 vs Haiku 4.5 bei Klassifikation:** Sonnet produziert differenziertere Divergenz-Klassifikationen. Haiku hatte 81% als "Semantische Expansion" eingestuft (Catch-all). Sonnet verteilt 51/30/19 -- die Muster sind ausgeglichener und die Begruendungen inhaltlich praeziser.
+**Sonnet 4.6 vs Haiku 4.5 bei Klassifikation:** Sonnet produziert differenziertere Divergenz-Klassifikationen. Haiku hatte 81% als "Semantische Expansion" eingestuft (Catch-all). Sonnet verteilt 51/30/19, die Muster sind ausgeglichener und die Begruendungen inhaltlich praeziser.
 
 ### Was entstanden ist
 
@@ -377,11 +393,11 @@ Systematic comparison of the paper text (Forum Wissenschaft draft) against the c
 
 ### Was wir gelernt haben
 
-**Kein Dashboard, sondern Exploration:** Der Bewertungsvergleich war ein Bericht -- man scrollt und schaut. Der Kategorien-Explorer ist ein Werkzeug -- man waehlt eine Dimension und sieht die konkrete Evidenz. Das ist der Unterschied zwischen "Zeigen was ist" und "Explorierbar machen".
+**Kein Dashboard, sondern Exploration:** Der Bewertungsvergleich war ein Bericht, man scrollt und schaut. Der Kategorien-Explorer ist ein Werkzeug, man waehlt eine Dimension und sieht die konkrete Evidenz. Das ist der Unterschied zwischen "Zeigen was ist" und "Explorierbar machen".
 
 **Force Layout + Cluster:** Cluster-separierendes Layout funktioniert nur, wenn die Cluster-Force dominant ist (0.4) und die Link-Force schwach (0.06). Sonst zieht die Link-Force alles in einen Blob zurueck.
 
-**Fehlende Dimension:** 27 ungenutzte Datenfelder identifiziert. Kein fuenfter View noetig -- stattdessen Knowledge-Sections und Verification-Scores in bestehende Views integrieren.
+**Fehlende Dimension:** 27 ungenutzte Datenfelder identifiziert. Kein fuenfter View noetig, stattdessen Knowledge-Sections und Verification-Scores in bestehende Views integrieren.
 
 ### Was entstanden ist
 
@@ -414,11 +430,11 @@ Systematic comparison of the paper text (Forum Wissenschaft draft) against the c
 
 1. **Panel-Optimierung:** Side Panel von 680px auf `min(480px, 45vw)` verkleinert. Bei offenem Panel werden Tabellenspalten (Jahr, Status, Kategorien) ausgeblendet, Overlay transparent, Tabelle bleibt klickbar. Aktive Zeile wird hervorgehoben. Kein Scroll-Lock mehr.
 
-2. **Vault-Download aufgewertet:** "Vault (.zip)" umbenannt zu "Wissensdokumente (.zip)" mit Tooltip und Erklaertext ("505 Markdown-Dateien -- nutzbar in Obsidian oder als LLM-Kontext").
+2. **Vault-Download aufgewertet:** "Vault (.zip)" umbenannt zu "Wissensdokumente (.zip)" mit Tooltip und Erklaertext ("505 Markdown-Dateien, nutzbar in Obsidian oder als LLM-Kontext").
 
 3. **Wissens-Chat (neuer 4. Tab):** Gemini 2.5 Flash-basierter Q&A-Chat ueber den Forschungskorpus. RAG-lite: Keyword-Suche ueber 326 Papers + 136 Konzepte, Top 30 als Kontext. SSE-Streaming. API-Key lokal im Browser (localStorage). 3 Vorschlagsfragen als Einstieg.
 
-4. **Quellenleiste mit Cross-View-Navigation:** Nach jeder Chat-Antwort erscheint eine klickbare Quellenleiste. Papers werden per Autoren-/Titel-Matching als "zitiert" erkannt. Klick navigiert zum Korpus-Tab und oeffnet das Detail-Panel -- der epistemische Kreislauf: Chat-Antwort → Quelle → LLM-Begruendung pruefen → zurueck.
+4. **Quellenleiste mit Cross-View-Navigation:** Nach jeder Chat-Antwort erscheint eine klickbare Quellenleiste. Papers werden per Autoren-/Titel-Matching als "zitiert" erkannt. Klick navigiert zum Korpus-Tab und oeffnet das Detail-Panel, der epistemische Kreislauf: Chat-Antwort → Quelle → LLM-Begruendung pruefen → zurueck.
 
 5. **Bug-Fix:** Quellenleisten bleiben bei Re-Render erhalten (complete-Flag + Event Delegation statt direkter Listener).
 
@@ -449,7 +465,7 @@ Systematic comparison of the paper text (Forum Wissenschaft draft) against the c
 
 ### Was passiert ist
 
-1. **Inline-Zitationen:** Gemini-Antworten werden post-processed -- Autor (Jahr) Muster werden erkannt und als klickbare Links zum Korpus-Tab gerendert. Referenzliste unter jeder Antwort zeigt nur tatsaechlich zitierte Papers.
+1. **Inline-Zitationen:** Gemini-Antworten werden post-processed, Autor (Jahr) Muster werden erkannt und als klickbare Links zum Korpus-Tab gerendert. Referenzliste unter jeder Antwort zeigt nur tatsaechlich zitierte Papers.
 
 2. **Chat-Redesign:** Chat als eigenstaendiges Fenster (weiss, Border, Shadow). Subtiler Primary-Akzent oben statt doppeltem Regenbogen. API-Key-Bar kompakt. User-Bubble dunkelgrau statt teal.
 
@@ -471,7 +487,7 @@ Systematic comparison of the paper text (Forum Wissenschaft draft) against the c
 
 **Tooltips als Datenschicht:** Statt Beschreibungstext zeigen die Tooltips echte Statistiken (Barcharts, Pipeline-Viz). Das macht die Stats-Bar zu einer interaktiven Datenebene statt nur einer Zahlenleiste.
 
-**Navigation flach halten:** Dropdown war ein Schritt zu viel. Direkte Buttons sind besser fuer 4 Views -- man sieht sofort alle Optionen.
+**Navigation flach halten:** Dropdown war ein Schritt zu viel. Direkte Buttons sind besser fuer 4 Views, man sieht sofort alle Optionen.
 
 ### Offene Punkte
 
@@ -481,19 +497,19 @@ Systematic comparison of the paper text (Forum Wissenschaft draft) against the c
 
 ---
 
-## 2026-03-19 (Session 5): Evidence Companion -- Richtungswechsel
+## 2026-03-19 (Session 5): Evidence Companion, Richtungswechsel
 
 **Branch:** `FemPrompt_SozArb_promptotyping-interface`
 **Commits:** `1d54c46`, `895d791`, `a7703e4`
 
 ### Was passiert ist
 
-1. **Gesamtanalyse:** Paper-Text vs. Repository vs. Web-Frontend abgeglichen. Identifiziert: Das Paper referenziert eine "publizierte Wissensumgebung" (Abb. 3) -- das ist das Research Dashboard, nicht Promptotyping.
+1. **Gesamtanalyse:** Paper-Text vs. Repository vs. Web-Frontend abgeglichen. Identifiziert: Das Paper referenziert eine "publizierte Wissensumgebung" (Abb. 3), das ist das Research Dashboard, nicht Promptotyping.
 
 2. **Richtungswechsel:** Promptotyping-Interface wird nicht weiterentwickelt. Entscheidung: Ein einziges Frontend als akademische Begleitpublikation ("Evidence Companion").
 
 3. **Komplettes Redesign von `docs/index.html`:**
-   - Name: "Feministische AI Literacies -- Systematischer Review"
+   - Name: "Feministische AI Literacies, Systematischer Review"
    - IBM Plex Serif fuer Headings (akademische Seriositaet)
    - Weisser Header, Spektrum-Farbsystem (10 Kategorien als Regenbogen)
    - Tabelle statt Cards (sortierbar, 50/Seite, Pagination)
@@ -510,7 +526,7 @@ Systematic comparison of the paper text (Forum Wissenschaft draft) against the c
 
 **Promptotyping vs. Evidence Companion:**
 - Promptotyping ging ueber das Paper-Versprechen hinaus. Das Paper beschreibt eine Wissensumgebung zum Explorieren, Vergleichen, Identifizieren, Nachvollziehen. Das ist ein Evidence Browser, kein Pipeline-Explorer.
-- **Learning:** Das Interface muss das einloesen, was das Paper verspricht -- nicht mehr. Zusaetzliche Features (Pipeline-Sankey, Konzept-Force-Graph) sind interessant, aber nicht das, was Reviewer:innen oder Kolleg:innen brauchen.
+- **Learning:** Das Interface muss das einloesen, was das Paper verspricht, nicht mehr. Zusaetzliche Features (Pipeline-Sankey, Konzept-Force-Graph) sind interessant, aber nicht das, was Reviewer:innen oder Kolleg:innen brauchen.
 
 **Design-Professionalitaet:**
 - Das alte Dashboard wirkte wie ein Tech-Startup (dunkler Header, KPI-Tiles, bunte Zahlen). Akademische Interfaces brauchen: Serif-Headings, Whitespace, zurueckhaltende Farben, Journal-Style Tabellen.
@@ -521,7 +537,7 @@ Systematic comparison of the paper text (Forum Wissenschaft draft) against the c
 - **Learning:** Jede Zahl im Interface muss pruefbar sein. Pseudoquantitative Werte (LLM-Confidence, Sycophancy-Scores) sind irrefuehrend.
 
 **Farbcodierung und Gender:**
-- Blau (Technik) / Warm (Sozial) reproduziert Gender-Stereotypen -- inakzeptabel fuer ein feministisches Forschungsprojekt.
+- Blau (Technik) / Warm (Sozial) reproduziert Gender-Stereotypen, inakzeptabel fuer ein feministisches Forschungsprojekt.
 - **Learning:** Farbsysteme sind politisch. Ein Regenbogen-Spektrum ohne hierarchische Zuordnung ist die bessere Wahl.
 
 **"Gegenstand" und "Perspektive" statt "Technik" und "Sozial":**
@@ -549,24 +565,24 @@ Systematic comparison of the paper text (Forum Wissenschaft draft) against the c
 
 ---
 
-## 2026-02-22 (Session 4): Promptotyping v2.1 -- Epistemische Tiefe
+## 2026-02-22 (Session 4): Promptotyping v2.1, Epistemische Tiefe
 
 **Branch:** `FemPrompt_SozArb_promptotyping-interface`
 **Dauer:** ~3h (2 Claude-Sessions, davon 1 Context-Kompression)
 
 ### Was passiert ist
 
-1. **Kritische Evaluation von v2** -- 4 Screenshots im Browser betrachtet. Erkenntnis: Das Interface ist ein Daten-Explorer, kein epistemisches Werkzeug. 5 Probleme identifiziert: Haltungen nur dekorativ, Paper Journey startet leer, Konzept-Graph monochrom, Divergenzen zeigen Karten statt Geschichten, kein roter Faden.
+1. **Kritische Evaluation von v2**, 4 Screenshots im Browser betrachtet. Erkenntnis: Das Interface ist ein Daten-Explorer, kein epistemisches Werkzeug. 5 Probleme identifiziert: Haltungen nur dekorativ, Paper Journey startet leer, Konzept-Graph monochrom, Divergenzen zeigen Karten statt Geschichten, kein roter Faden.
 
-2. **Plan geschrieben und genehmigt** -- 4-Phasen-Plan (Datengenerator, HTML, JS, CSS) mit detaillierten Code-Snippets. Ziel: Interface soll die Frage beantworten "Was passiert mit Wissen, wenn es durch eine LLM-Pipeline fliesst?" -- nicht durch Zahlen, sondern durch navigierbare Erfahrung.
+2. **Plan geschrieben und genehmigt**, 4-Phasen-Plan (Datengenerator, HTML, JS, CSS) mit detaillierten Code-Snippets. Ziel: Interface soll die Frage beantworten "Was passiert mit Wissen, wenn es durch eine LLM-Pipeline fliesst?", nicht durch Zahlen, sondern durch navigierbare Erfahrung.
 
-3. **Phase A: Datengenerator erweitert** -- 3 Featured Papers handverlesen (Ahmed_2024: Semantische Expansion, Shafie_2025: Keyword-Inklusion, Kaneko_2024: Uebereinstimmung). Konzept-Cluster berechnet (1 Technik, 55 Sozial, 80 Bridge). Pattern-Distribution + Asymmetrie-Daten in Meta.
+3. **Phase A: Datengenerator erweitert**, 3 Featured Papers handverlesen (Ahmed_2024: Semantische Expansion, Shafie_2025: Keyword-Inklusion, Kaneko_2024: Uebereinstimmung). Konzept-Cluster berechnet (1 Technik, 55 Sozial, 80 Bridge). Pattern-Distribution + Asymmetrie-Daten in Meta.
 
-4. **Phase B: HTML umgebaut** -- 5 Views statt 4 (Landing als Default). Stances-Legend kompakt. Container fuer Featured Papers in Journey + Concept Legend.
+4. **Phase B: HTML umgebaut**, 5 Views statt 4 (Landing als Default). Stances-Legend kompakt. Container fuer Featured Papers in Journey + Concept Legend.
 
-5. **Phase C: JS komplett neu geschrieben** (~1090 Zeilen) -- Landing View mit Kennzahlen + Featured Cards. Paper Journey mit Pre-Populated Picks + Stance-basierte Timeline. Concept Explorer mit Cluster-Farben + Divergenz-Ring. Divergenz-Navigator mit Narrative Cards + Exemplarische Faelle + Knowledge Summary in Detail. Alle Detail-Panels mit 3 Stance-Sektionen (Ergebnis/Prozess/Grenze).
+5. **Phase C: JS komplett neu geschrieben** (~1090 Zeilen), Landing View mit Kennzahlen + Featured Cards. Paper Journey mit Pre-Populated Picks + Stance-basierte Timeline. Concept Explorer mit Cluster-Farben + Divergenz-Ring. Divergenz-Navigator mit Narrative Cards + Exemplarische Faelle + Knowledge Summary in Detail. Alle Detail-Panels mit 3 Stance-Sektionen (Ergebnis/Prozess/Grenze).
 
-6. **Phase D: CSS komplett neu geschrieben** (~650 Zeilen) -- Stance-Sektionen als Kern-Pattern (farbige linke Raender). Landing-Layout. Featured Cards mit Stance-Bars. Journey Picks als Pills. Narrative Divergenz-Cards mit Story-Bars. Konzept-Legende. Responsive Breakpoints.
+6. **Phase D: CSS komplett neu geschrieben** (~650 Zeilen), Stance-Sektionen als Kern-Pattern (farbige linke Raender). Landing-Layout. Featured Cards mit Stance-Bars. Journey Picks als Pills. Narrative Divergenz-Cards mit Story-Bars. Konzept-Legende. Responsive Breakpoints.
 
 ### Was wir gelernt haben
 
@@ -604,23 +620,23 @@ Systematic comparison of the paper text (Forum Wissenschaft draft) against the c
 
 ---
 
-## 2026-02-22 (Session 3): Promptotyping v2 -- Vom Dashboard zum Forschungsartefakt
+## 2026-02-22 (Session 3): Promptotyping v2, Vom Dashboard zum Forschungsartefakt
 
 **Branch:** `FemPrompt_SozArb_promptotyping-interface`
 **Commits:** `bb147c0` (v1), `3476437` (v2)
 **Dauer:** ~6h (3 Claude-Sessions)
-**LLM-Kosten:** ~$1 (249 Konzept-Extraktionen + 111 Divergenz-Klassifikationen, Haiku 4.5)
+Aufwand: 249 Konzept-Extraktionen und 111 Divergenz-Klassifikationen (Haiku 4.5)
 
 ### Was passiert ist
 
-1. **Promptotyping v1 gebaut und verworfen** -- Erstes Interface war ein 5-Schritte-Dashboard, das den Forschungsprozess *beschreibt* (Trichter, Prozess-Diagramme, Statistiken). Problem erkannt: Ein Dashboard zeigt Zahlen, kein Wissen. Committed als `bb147c0`, sofort als Ausgangspunkt fuer v2 verwendet.
+1. **Promptotyping v1 gebaut und verworfen**, Erstes Interface war ein 5-Schritte-Dashboard, das den Forschungsprozess *beschreibt* (Trichter, Prozess-Diagramme, Statistiken). Problem erkannt: Ein Dashboard zeigt Zahlen, kein Wissen. Committed als `bb147c0`, sofort als Ausgangspunkt fuer v2 verwendet.
 
-2. **Konzeptdokument geschrieben** -- `knowledge/FORSCHUNGSPROJEKT-PROMPTOTYPING.md` definiert Promptotyping als epistemische Praxis: "Der Forschungsprozess wird zum Forschungsgegenstand." Drei Haltungen operationalisiert: Zeigen was ist / Zeigen wie / Zeigen was nicht geht.
+2. **Konzeptdokument geschrieben**, `knowledge/FORSCHUNGSPROJEKT-PROMPTOTYPING.md` definiert Promptotyping als epistemische Praxis: "Der Forschungsprozess wird zum Forschungsgegenstand." Drei Haltungen operationalisiert: Zeigen was ist / Zeigen wie / Zeigen was nicht geht.
 
 3. **3-Phasen-Plan erstellt und umgesetzt:**
-   - Phase 1: Vault v2 (`scripts/generate_vault_v2.py`, ~1660 Zeilen) -- LLM-basierte Konzept-Extraktion (249 Papers -> 136 konsolidierte Konzepte), Divergenz-Klassifikation (111 Faelle in 3 Muster), 5-Strategie-Titel-Matching (237/249 vs. vorher 226/249)
-   - Phase 2: Datengenerator (`scripts/generate_promptotyping_data_v2.py`, ~500 Zeilen) -- Reine Datentransformation, kein LLM
-   - Phase 3: Web-Interface (HTML + CSS + JS Neubau) -- 4 Views statt 5 Steps: Pipeline-Sankey, Paper Journey, Konzept-Explorer (Force Graph), Divergenz-Navigator
+   - Phase 1: Vault v2 (`scripts/generate_vault_v2.py`, ~1660 Zeilen), LLM-basierte Konzept-Extraktion (249 Papers -> 136 konsolidierte Konzepte), Divergenz-Klassifikation (111 Faelle in 3 Muster), 5-Strategie-Titel-Matching (237/249 vs. vorher 226/249)
+   - Phase 2: Datengenerator (`scripts/generate_promptotyping_data_v2.py`, ~500 Zeilen), Reine Datentransformation, kein LLM
+   - Phase 3: Web-Interface (HTML + CSS + JS Neubau), 4 Views statt 5 Steps: Pipeline-Sankey, Paper Journey, Konzept-Explorer (Force Graph), Divergenz-Navigator
 
 ### Was wir gelernt haben
 
@@ -644,7 +660,7 @@ Systematic comparison of the paper text (Forum Wissenschaft draft) against the c
 **Divergenz-Muster-Verteilung ueberrascht:**
 - Erwartet: ~50% Keyword, ~30% Semantisch, ~20% Implizit
 - Tatsaechlich: 81% Semantische Expansion, 11% Keyword-Inklusion, 8% Implizite Feldzugehoerigkeit
-- Interpretation: Der LLM expandiert Bedeutung viel staerker als erwartet. Er findet "Fairness" wo nur "Gerechtigkeit" steht, "Soziale Arbeit" wo nur "Community Services" steht. Das ist kein Bug -- es ist das Kernphaenomen der epistemischen Asymmetrie.
+- Interpretation: Der LLM expandiert Bedeutung viel staerker als erwartet. Er findet "Fairness" wo nur "Gerechtigkeit" steht, "Soziale Arbeit" wo nur "Community Services" steht. Das ist kein Bug, es ist das Kernphaenomen der epistemischen Asymmetrie.
 - **Learning:** Die drei Muster aus dem Paper sind empirisch bestaetigt, aber die Gewichtung ist anders als theoretisch vermutet. Das Paper sollte das reflektieren.
 
 **IIFE-Pattern fuer Vanilla JS bleibt solide:**
@@ -740,7 +756,7 @@ Systematic comparison of the paper text (Forum Wissenschaft draft) against the c
 ### Was wir gelernt haben
 
 - **Observable Plot ist fuer Static Hosting ungeeignet:** Braucht ESM-Imports, die auf `file://` und einfachen Hosts Probleme machen. Chart.js via CDN funktioniert ueberall.
-- **Visualisierungen brauchen epistemische Funktion:** Ein Radar-Chart zeigt Daten. Ein Slope Chart zeigt *Divergenz* -- die Steigung ist die Aussage. Das ist der Unterschied zwischen "Daten darstellen" und "Wissen zeigen".
+- **Visualisierungen brauchen epistemische Funktion:** Ein Radar-Chart zeigt Daten. Ein Slope Chart zeigt *Divergenz*, die Steigung ist die Aussage. Das ist der Unterschied zwischen "Daten darstellen" und "Wissen zeigen".
 - **Confusion-Matrix-Bug:** `generate_docs_data.py` hatte eine fehlende Guard-Clause fuer Papers ohne Human-Assessment. Zeigte sich erst bei 326 Papers (vorher nur 210 getestet).
 
 ---
@@ -750,7 +766,7 @@ Systematic comparison of the paper text (Forum Wissenschaft draft) against the c
 ### Was immer wieder hilft
 
 1. **Mehrstrategie-Matching:** Nie auf ein einzelnes Signal verlassen (Titel, DOI, Autor). Immer Kaskade mit Fallbacks.
-2. **LLM-Caching:** API-Ergebnisse sofort als JSON cachen. Erlaubt Vault-Regeneration ohne erneute API-Calls ($0 statt $1).
+2. **LLM-Caching:** API-Ergebnisse sofort als JSON cachen. Erlaubt Vault-Regeneration ohne erneute API-Calls.
 3. **Redundanzregeln:** Jede Information hat genau einen kanonischen Ort. Andere Stellen referenzieren, duplizieren nicht.
 4. **Vanilla JS + CDN:** Fuer statische Seiten kein Build-Tool. D3 und Chart.js per CDN, IIFE-Pattern, fertig.
 5. **TodoWrite konsequent nutzen:** Hilft nicht nur beim Tracking, sondern beim Denken. Aufgaben formulieren zwingt zur Klarheit.
@@ -760,7 +776,3 @@ Systematic comparison of the paper text (Forum Wissenschaft draft) against the c
 1. **Windows-Pfade:** `MAX_PATH`, `nul`-Datei (reservierter Geraetename), CP1252 statt UTF-8.
 2. **Datenqualitaet in externen Quellen:** Zotero-Titel koennen HTML enthalten, Autorennamen sind nicht normalisiert, Jahreszahlen fehlen.
 3. **Kappa-Interpretation:** Cohen's Kappa ist fuer symmetrische Vergleiche (Human-Human) entwickelt. Fuer asymmetrische Vergleiche (Human-LLM mit verschiedenen Basisraten) ist es irrefuehrend.
-
----
-
-*Aktualisiert: 2026-06-21*
