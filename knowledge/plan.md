@@ -122,7 +122,7 @@ Done when: the branch is on GitHub; after merge, `prisma.html` is live on the Ev
 
 Done when: a fresh clone runs the full suite green with one command.
 
-Status (2026-06-21): the committed jsdom harness runs green from a clean clone (`npm test`, PASS 67/67); the browser leg (`run-tests.html`) shares the same suite. The harness injects `prisma-data.js`, `prisma.js`, `prisma-import.js`, then `tests.js`. Still open from P1: the additional acceptance checks remain a separate work item, namely export/import round-trip losslessness (FR-08), the seed reproducing the canonical benchmark from the real `research_vault_v2.json` rather than synthetic fixtures (FR-05), and the reviewer schema 0.1 to 0.2 migration.
+Status: the committed jsdom harness runs green from a clean clone (`npm test`); the browser leg (`run-tests.html`) shares the same suite. The harness injects `prisma-data.js`, `prisma.js`, `prisma-import.js`, then `tests.js`. The additional P1 acceptance checks are now in the suite (Section G): export/import round-trip losslessness (FR-08), the reviewer schema 0.1 to 0.2 migration, and the seed reproducing the canonical benchmark marginals from the real `research_vault_v2.json` (the runner injects it; the paired confusion matrix and kappa are asserted out-of-tool by `replay_selftest.py` and `build_flow_model.py`, since ADR-017 removed the in-tool kappa and matrix).
 
 ### P2: Raw full-text reading (the methodological upgrade)
 

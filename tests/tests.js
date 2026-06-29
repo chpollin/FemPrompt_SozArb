@@ -4,14 +4,13 @@
 // docs/js/prisma.js (whose appended exposure block provides window.EC._test).
 // All fixtures are inline; nothing here fetches anything.
 //
-// Expected agreement values are taken from knowledge/verification-empirical-core.md:
-//   "Benchmark core (Haiku 4.5, abstract input)" table:
-//     confusion matrix 100/34/108/49 (II/IE/EI/EE), n 291,
-//     human include 134/291 = 0.4605, LLM include 208/291 = 0.7148,
-//     po 149/291 = 0.5120, Cohen kappa 0.0561, PABAK 0.0241,
-//     kappa-max 0.5081, prevalence index 0.175, bias index 0.254.
-//   "Sensitivity: content-only benchmark" table, Haiku + Abstract row:
-//     n 199, cells 100/34/36/29, kappa 0.194, PABAK 0.296.
+// Benchmark expectations trace to knowledge/verification.md (Part 1). The served seed
+// (docs/data/research_vault_v2.json) carries the human track on the 291 paired papers
+// (134 Include / 157 Exclude) and the AI track on all 326 (232 Include / 94 Exclude);
+// Section G asserts the flow aggregation reproduces these marginals from the real seed.
+// The paired confusion matrix 100/34/108/49 and Cohen kappa 0.0561 are asserted
+// out-of-tool by benchmark/scripts/replay_selftest.py and build_flow_model.py;
+// ADR-017 removed the in-tool kappa/matrix, so no JS test recomputes them.
 
 (function() {
 'use strict';
@@ -577,6 +576,102 @@ test('import: re-importing the same row is idempotent (unchanged, not re-added)'
     assertEqual(second.stats.added, 0, 'no new record on re-import');
     assertEqual(second.stats.unchanged, 1, 'the existing record is kept unchanged');
 });
+
+// ============================================================
+// Section G: P1 acceptance checks (round-trip, schema migration, seed
+// benchmark) and the ADR-018 machine-evidence injection
+// ============================================================
+
+test('FR-08: a reviewer export survives a JSON round-trip and reloads losslessly', function() {
+    T.setPapers([{ id: 'rt1' }, { id: 'rt2' }]);
+    var S = T.getState();
+    S.reviewers.rtSrc = {
+        rt1: { decision: 'Include', reason: null, override: false,
+               categories: { Prompting: true, Gender: true },
+               evidence: { Prompting: [{ term: 'prompt', snippet: 'a prompt snippet', origin: 'human' }],
+                           Gender: [{ term: 'gender', snippet: 'machine note', origin: 'ai' }] },
+               reviewer: 'rtSrc', ts: '2026-06-29T00:00:00.000Z' },
+        rt2: { decision: 'Exclude', reason: 'Duplicate', override: false,
+               categories: {}, evidence: {}, reviewer: 'rtSrc', ts: '2026-06-29T00:00:00.000Z' }
+    };
+    var flowSrc = T.computeFlow('rtSrc');
+    var payload = T.reviewerPayload('rtSrc');
+    assertEqual(payload.schema, T.REVIEWER_SCHEMA, 'export carries the current schema');
+    // the on-disk export/import form: serialize to JSON and parse back
+    var file = JSON.parse(JSON.stringify(payload));
+    // reload into a fresh slot via the documented load path (assign decisions)
+    S.reviewers.rtDst = file.decisions;
+    assertEqual(JSON.stringify(T.computeFlow('rtDst')), JSON.stringify(flowSrc),
+        'flow aggregation identical after the round-trip');
+    var ev = S.reviewers.rtDst.rt1.evidence;
+    assertEqual(ev.Prompting[0].origin, 'human', 'human origin preserved');
+    assertEqual(ev.Gender[0].origin, 'ai', 'ai origin preserved');
+    assertEqual(ev.Prompting[0].snippet, 'a prompt snippet', 'snippet text preserved');
+    assertEqual(S.reviewers.rtDst.rt2.reason, 'Duplicate', 'exclusion reason preserved');
+    assertEqual(JSON.stringify(file.decisions), JSON.stringify(S.reviewers.rtSrc),
+        'decisions are byte-for-byte identical after the round-trip');
+    delete S.reviewers.rtSrc; delete S.reviewers.rtDst;
+});
+
+test('reviewer schema 0.1 to 0.2: a pre-evidence file loads and behaves as 0.2', function() {
+    T.setPapers([{ id: 'mg1' }, { id: 'mg2' }]);
+    var S = T.getState();
+    // a 0.1 reviewer file: decisions without an evidence map; a legacy Beleg without origin
+    var v01 = {
+        schema: 'femprompt-prisma-reviewer/0.1', reviewer: 'old',
+        decisions: {
+            mg1: { decision: 'Include', categories: { Prompting: true, Gender: true } },
+            mg2: { decision: 'Exclude', reason: 'Duplicate', categories: {},
+                   evidence: { Gender: [{ term: 'g', snippet: 'legacy beleg, no origin' }] } }
+        }
+    };
+    var file = JSON.parse(JSON.stringify(v01));
+    S.reviewers.old = file.decisions;                              // load path
+    assertEqual(T.humanDecision({ id: 'mg1' }, 'old').decision, 'Include', '0.1 decision loads');
+    assertEqual(T.computeFlow('old').humanScreened, 2, 'both 0.1 decisions counted');
+    assertEqual(T.evidenceCount(file.decisions.mg1), 0, 'missing evidence map reads as zero, no throw');
+    // a legacy Beleg without origin renders as a human pin (ADR-015 backward compatibility)
+    var html = T.evidenceListHtml(file.decisions.mg2.evidence, true);
+    assertContains(html, 'pt-evid-origin-human">Mensch');
+    assertNotContains(html, 'pt-evid-origin-ai');
+    // re-exporting stamps the current schema, completing the upgrade to 0.2
+    assertEqual(T.reviewerPayload('old').schema, 'femprompt-prisma-reviewer/0.2');
+    delete S.reviewers.old;
+});
+
+test('injectMachineEvidence pre-loads machine category evidence as advisory AI Belege (ADR-018)', function() {
+    T.setMachineEvidence({ mePaper: { Gender: [{ term: 'KI-Assessment', snippet: 'model reasoning for Gender' }] } });
+    T.resetWork({ id: 'mePaper' });
+    T.injectMachineEvidence({ id: 'mePaper' });
+    var w = T.getWork();
+    assert(w.evidence.Gender && w.evidence.Gender.length === 1, 'machine evidence injected');
+    assertEqual(w.evidence.Gender[0].origin, 'ai', 'injected evidence is AI-origin');
+    assert(!w.cats.Gender, 'injected machine evidence does not set the binding category');
+    assertEqual(T.finalDecisionOf(w.cats, false), 'Exclude', 'machine evidence alone cannot derive Include');
+    // idempotent: a second call on the same opened paper does not double-inject
+    T.injectMachineEvidence({ id: 'mePaper' });
+    assertEqual(w.evidence.Gender.length, 1, 'injection is once per opened paper');
+    T.setMachineEvidence(null);
+});
+
+// FR-05: the real served seed reproduces the canonical benchmark marginals. The
+// headless runner injects docs/data/research_vault_v2.json as window.__SEED_PAPERS__
+// (the app fetches it at runtime; headless has no network). kappa and the matrix are
+// asserted out-of-tool (replay_selftest.py, build_flow_model.py), not here.
+if (window.__SEED_PAPERS__ && window.__SEED_PAPERS__.length) {
+    test('FR-05: the real seed reproduces the canonical benchmark marginals', function() {
+        T.setPapers(window.__SEED_PAPERS__);
+        var f = T.computeFlow(T.SEED);
+        assertEqual(f.total, 326, 'corpus size');
+        assertEqual(f.aiScreened, 326, 'AI track covers all identified records');
+        assertEqual(f.aiIncl, 232, 'AI Include');
+        assertEqual(f.aiExcl, 94, 'AI Exclude');
+        assertEqual(f.humanScreened, 291, 'human track on the paired subset');
+        assertEqual(f.humanIncl, 134, 'human Include within the paired subset');
+        assertEqual(f.humanExcl, 157, 'human Exclude within the paired subset');
+        T.setPapers([]);
+    });
+}
 
 // ============================================================
 // Restore localStorage and report

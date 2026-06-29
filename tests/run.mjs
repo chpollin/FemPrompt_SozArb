@@ -35,6 +35,15 @@ try {
   inject('docs/js/prisma-data.js');
   inject('docs/js/prisma.js');
   inject('docs/js/prisma-import.js'); // exposes window.__PRISMA_IMPORT_TEST__ for the bridge suite
+  // FR-05 seed reproduction (plan P1): the app fetches the served seed at runtime, but
+  // headless has no network, so the runner reads it from disk and hands the papers to
+  // the suite as window.__SEED_PAPERS__. The flow test asserts the benchmark marginals.
+  try {
+    const seed = JSON.parse(readFileSync(join(root, 'docs/data/research_vault_v2.json'), 'utf8'));
+    window.__SEED_PAPERS__ = Array.isArray(seed) ? seed : (seed.papers || []);
+  } catch (e) {
+    console.warn('seed not injected (FR-05 flow test skipped):', e && e.message ? e.message : e);
+  }
   inject('tests/tests.js');
 } catch (e) {
   console.error('inject failed:', e && e.message ? e.message : e);
