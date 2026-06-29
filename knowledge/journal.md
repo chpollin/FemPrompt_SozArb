@@ -22,6 +22,26 @@ Chronologisches Protokoll der Arbeitssitzungen mit Entscheidungen, Ergebnissen u
 
 ---
 
+## 2026-06-29 (Session 18): refactor completeness, the R4/P1/R1 deliverables, trAIce 17, the no-self-description rule
+
+**Branch:** `refactor/knowledge-vault` (unpushed)
+
+### What happened
+
+1. **Refactor completeness.** A second audit (a 15-document workflow) over the consolidated knowledge base found the residue the first pass missed: scheduling and meeting-date framing, remaining `lane` usages, volatile quantities still in prose, ten stale pointers to deleted files in `plan.md`, and colon-as-connector. All folded into the single refactor commit.
+2. **Four follow-on deliverables, one commit each.** ADR-018 recorded in [[specification]] (the machine category-evidence layer shipped in code but undocumented). `benchmark/scripts/build_flow_model.py`, the committed generator that computes the retrospective FlowModel from the raw CSVs, self-verifies the canonical invariants, and supersedes the agent-recounted `docs/data/flow_model.json` (R4). Section G of the jsdom suite: export/import round-trip losslessness (FR-08), the reviewer schema 0.1 to 0.2 migration, the seed reproducing the benchmark marginals (FR-05), and an `injectMachineEvidence` test (P1). The R1 conformance map repointed onto the consolidated structure.
+3. **trAIce item count corrected.** The checklist has 17 items (14 non-optional, 3 optional), confirmed against the trAIce single source of truth; the recurring "14" in [[standards]], [[specification]], [[design]], `prisma.js`, and the paper was the non-optional count mislabelled as the total.
+4. **The no-self-description rule.** A document does not state what it omits, defers, or that material lives elsewhere; no "what is missing" or "was nicht reingehört" sections. Established in the global `CLAUDE.md` and the vault convention (which previously prescribed the opposite as "Negative Selbstdefinition"). About 25 instances across the FemPrompt docs are inventoried; the cut is pending.
+5. **`reuse-setup.md` removed** (12 docs now). It documented a never-executed, self-admittedly buggy reuse path; the intent stays in [[plan]] Stage C3, the validated path gets written when reuse is run.
+
+### Open items
+
+- The branch is unpushed; push and merge to `main` are the operator's call.
+- Pending style work: cut the inventoried "X is not here" instances; decide whether the "This document is/describes X" openers are reworked to lead with the subject.
+- Project forward work: render the retrospective PRISMA record on the Companion (Stage R5, now unblocked by the scripted FlowModel and the conformance map); the raw full-text reading upgrade (P2); the divergence-finding sharpening (TP3).
+
+---
+
 ## 2026-06-21 (Session 17): R2 replay executed, benchmark core reproduced by execution, 292-vs-291 resolved
 
 **Branch:** `main` (this entry's milestone commit secures the unit)
