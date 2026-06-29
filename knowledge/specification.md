@@ -196,7 +196,7 @@ Kontext. The dual assessment track's value is that expert and LLM judge independ
 
 Wahl. Offer a blind mode that withholds the AI proposal until the human decision is saved, then reveals it and computes divergence.
 
-Begründung. Preserves the parallel-independent design that produces the divergence finding, and yields clean AI-vs-human tallies for the R1 diagram.
+Begründung. Preserves the parallel-independent design that produces the human-AI divergence, and yields clean AI-vs-human tallies for the R1 diagram.
 
 Effekt. To be observed; blind mode is expected to be the default for new screening, off for reviewing the seed dataset.
 

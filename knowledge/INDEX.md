@@ -35,9 +35,8 @@ In function order, not alphabetical.
 | [[data]] | The data substrate the PRISM tool consumes and produces | per schema change |
 | [[design]] | UI and design system of the PRISM tool | per design iteration |
 | [[plan]] | Forward steering: the staged roadmap, current status, and simulated decisions | per phase |
-| [[refactor-frontend]] | Phased plan for refactoring the `docs/` frontend: verified findings across HTML, CSS, and JS with per-item acceptance checks | until executed |
 | [[journal]] | Genesis: the chronological session log with decisions and learnings | per session |
-| [[verification]] | Audit and the numbers home: the empirical recompute and divergence finding, PRISMA/trAIce conformance with the round-1 record carried through PRISM and novelty survey, paper versus repository | when a claim is re-verified |
+| [[verification]] | Audit and the numbers home: the recompute and the divergence used as illustration, PRISMA/trAIce conformance with the round-1 record carried through PRISM and novelty survey, paper versus repository | when a claim is re-verified |
 | [[standards]] | The reporting standards implemented: PRISMA 2020, PRISMA-trAIce, RAISE | rarely |
 | [[update-protocol]] | The round-2 pre-registration protocol, the analysis-field design, the RIS procedure | until round 2 starts |
 | [[guides/manual-review-checklist]] | The human-in-the-loop markdown review checklist | rarely |
@@ -47,7 +46,7 @@ In function order, not alphabetical.
 - Onboarding a new collaborator: [[project]], [[methods]], [[specification]].
 - Reproduce the benchmark: [[verification]], then run `benchmark/scripts/replay_selftest.py`.
 - Understand a tool decision: [[specification]] (the Entscheidungen / ADR section), [[journal]], [[design]].
-- Understand the divergence finding: [[verification]] (part 1).
+- Understand the divergence (the motivating illustration): [[verification]] (part 1).
 - Prepare the literature update: [[plan]] (Stage B), [[update-protocol]], [[standards]].
 
 ## Convention
@@ -77,7 +76,7 @@ Agent-based LLM systems for iterative, autonomous literature search with cited s
 The three-stage extraction of full texts into knowledge documents: an LLM extracts and classifies (stage 1), deterministic software formats (stage 2, no LLM), and an LLM verifies against the original (stage 3). The deterministic middle stage and the verification stage are the epistemic-infrastructure measures against unsecured LLM output.
 
 ### Divergence
-A disagreement between the human and the LLM assessment of a paper, on the decision or on a category. The project's empirical core; classified into three patterns (Semantic Expansion, Implicit Field Membership, Keyword Inclusion). Divergence is reported as divergence, never as an error rate, because the human track has no independent inter-human baseline. The figures and the decomposition are in [[verification]].
+A disagreement between the human and the LLM assessment of a paper, on the decision or on a category. The motivating illustration for the infrastructure; classified into three patterns (Semantic Expansion, Implicit Field Membership, Keyword Inclusion). Divergence is reported as divergence, never as an error rate, because the human track has no independent inter-human baseline. The figures and the decomposition are in [[verification]].
 
 ### Dual assessment track
 The parallel, independent arrangement of an expert track and an LLM track on the same ten-category schema, without mutual knowledge. The methodological centerpiece, designed so the comparison reveals where the two epistemic foundations converge and diverge.

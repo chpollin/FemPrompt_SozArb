@@ -22,7 +22,7 @@ A corpus identified via four Deep Research systems, screened in two parallel, in
 | LLM (10K) | 10 binary categories | Complete (the benchmark track) |
 | LLM (5D) | 5 ordinal dimensions | Complete (archived) |
 
-The benchmark result is a substantial, asymmetric divergence between the LLM and the expert judgments. The decomposition shows that the headline gap is dominated by human workflow exclusions (duplicates, no full text, wrong publication type) that a single-paper LLM cannot see; on content-only decisions the include rates converge. The full figures, the decomposition, and the provenance are in [`knowledge/verification.md`](knowledge/verification.md), reproducible via `benchmark/scripts/replay_selftest.py`.
+The benchmark serves as a motivating illustration of why reliability cannot be presupposed. It records a substantial, asymmetric divergence between the LLM and the expert judgments; the decomposition shows that the headline gap is dominated by human workflow exclusions (duplicates, no full text, wrong publication type) that a single-paper LLM cannot see, and on content-only decisions the include rates converge. The full figures, the decomposition, and the provenance are in [`knowledge/verification.md`](knowledge/verification.md), reproducible via `benchmark/scripts/replay_selftest.py`.
 
 ## Screening Tool (PRISM)
 
@@ -57,7 +57,7 @@ Full project documentation is in [`knowledge/`](knowledge/INDEX.md); start at th
 | [INDEX.md](knowledge/INDEX.md) | Navigation and glossary |
 | [project.md](knowledge/project.md) | Project goal, theoretical framework |
 | [methods.md](knowledge/methods.md) | PRISMA, assessment design, pipeline, scripts |
-| [verification.md](knowledge/verification.md) | Benchmark, divergence finding, conformance, paper integrity |
+| [verification.md](knowledge/verification.md) | Benchmark and decomposition, conformance audit, paper integrity |
 | [plan.md](knowledge/plan.md) | Roadmap, current status, next steps |
 
 **Evidence Companion:** https://chpollin.github.io/FemPrompt_SozArb/

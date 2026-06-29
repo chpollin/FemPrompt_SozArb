@@ -46,7 +46,7 @@ The vault-side programme plan ("Gesamtplan FemPrompt Forschungsprogramm", Projec
 |---|---|---|
 | TP1 | PRISM working instrument | Stage A (P0 to P7, with P3 as the Excel import seam) |
 | TP2 | First-round pass through PRISM, round one | Stage R |
-| TP3 | Sharpening the human-AI divergence finding | own work item; source [[verification]]; feeds R4 and the paper; elaboration session pending |
+| TP3 | Characterizing the human-AI divergence (illustration) | own work item; source [[verification]]; feeds R4 and the paper; elaboration session pending |
 | TP4 | Operationalizing the analysis question (prompt engineering for social work, gender, bias) | own work item; MUST precede the B2 schema freeze so the Excel captures the analysis fields; deliverable: the analysis design in [[update-protocol]] plus schema extension |
 | TP5 | Literature update, round two | Stage B |
 | TP6 | Follow-up paper and FFG report | outside the repo; fed by R4, B3, TP3 |
@@ -54,7 +54,7 @@ The vault-side programme plan ("Gesamtplan FemPrompt Forschungsprogramm", Projec
 
 Division of labour between the two layers: the vault carries the programme view and decisions history for the human; this document steers the repo work. A change in one layer that affects the other is mirrored in the same session.
 
-### TP3 work plan: sharpening the divergence finding
+### TP3 work plan: characterizing the divergence (illustration)
 
 1. Harden the pairing: run the prepared re-pairing script (`C:\tmp\verify_femprompt.py`, move it into `benchmark/scripts/` on first run), resolve the 292-vs-291 discrepancy, commit the script and its output.
 2. Canonical analysis set, computed by committed script, not by hand: full matrix plus the content-only subset (workflow-criteria exclusions Duplicate / No full text / Wrong publication type separated out), per category; metrics po, kappa, PABAK, kappa max, bias index; the KD-input contrast (where the inclusion bias survives); the 2x2 with the content-only sensitivity.
@@ -205,10 +205,10 @@ Status (2026-06-09): the first-round record is drafted ahead of the replay scrip
 
 Two claims the project leans on were asserted, not verified; both are being checked before they may carry anything.
 
-- V1, empirical core (done, see [[verification]]): all published numbers reproduce, but the interpretation changes. Most of the LLM-include/human-exclude papers are human exclusions for Duplicate, No full text, or Wrong publication type, criteria a one-paper-at-a-time LLM cannot see; on the content-only subset the include rates converge and kappa rises (figures in [[verification]]). The README's prevalence-artifact framing is backwards, agreement is genuinely near chance. "Sonnet+KD best condition" flips under the content-only sensitivity. No inter-human reliability baseline exists.
+- V1, the benchmark check (done, see [[verification]]): all published numbers reproduce, but the interpretation changes. Most of the LLM-include/human-exclude papers are human exclusions for Duplicate, No full text, or Wrong publication type, criteria a one-paper-at-a-time LLM cannot see; on the content-only subset the include rates converge and kappa rises (figures in [[verification]]). The README's prevalence-artifact framing is backwards, agreement is genuinely near chance. "Sonnet+KD best condition" flips under the content-only sensitivity. No inter-human reliability baseline exists.
 - V2, methodological novelty (done, see [[verification]]): claim holds partially. Separate advisory AI records are established practice (EPPI-Reviewer, Nested Knowledge, DistillerSR); novel are the generated trAIce R1 flow artifact, session-derived disclosure generation, and the retrospective trAIce rendering. trAIce is a proposal (Holst et al. 2025, JMIR AI), RAISE is Cochrane-carried (Flemyng et al. 2025); related-work list in the document.
 
-Consequence ledger (binding for R4 and the paper): the divergence finding must be reported decomposed (workflow-criteria disagreement vs content disagreement), with po, kappa, PABAK, kappa_max, bias index, category kappas, and the content-only sensitivity; the inclusion-bias claim survives only for the KD-input condition. The contribution claim is conformance by construction at the report-artifact level plus retrospective rendering, not AI-human separation as such. Corrections queued into P6: the README Byrt sentence and the Sonnet+KD best-condition qualifier (see [[verification]]). Tool implication for the agreement panel: report content-only agreement alongside the full matrix, since recorded exclusion reasons make the decomposition possible.
+Consequence ledger (binding for R4 and the paper): the divergence must be reported decomposed (as illustration, not as a finding) (workflow-criteria disagreement vs content disagreement), with po, kappa, PABAK, kappa_max, bias index, category kappas, and the content-only sensitivity; the inclusion-bias claim survives only for the KD-input condition. The contribution claim is conformance by construction at the report-artifact level plus retrospective rendering, not AI-human separation as such. Corrections queued into P6: the README Byrt sentence and the Sonnet+KD best-condition qualifier (see [[verification]]). Tool implication for the agreement panel: report content-only agreement alongside the full matrix, since recorded exclusion reasons make the decomposition possible.
 
 ### R1: Data completeness audit
 

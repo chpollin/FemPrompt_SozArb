@@ -9,9 +9,9 @@
 
 This project builds an **epistemic infrastructure** for an LLM-assisted literature review. The central thesis is that reliability cannot be presupposed as a property of the system but must be established as a property of the research process. The workflow is organized around **verification checkpoints**, defined points after each AI-assisted step where human or rule-based control checks results before they flow into the next stage. PRISM (`docs/prisma.html`) is the binding screening surface this runs through; per ADR-019 the review counts complete only once all of its data has passed through PRISM under PRISMA 2020 and PRISMA-trAIce, with the items unrepairable in retrospect (the absent round-1 protocol above all) named, not hidden.
 
-A corpus of papers identified via four proprietary Deep Research systems was processed through a five-step workflow. A **dual assessment track** runs expert and LLM evaluation in parallel on the same ten-category schema, without mutual knowledge. The result is a substantial, asymmetric divergence between the LLM and the expert judgments. This divergence, decomposed and verified in `knowledge/verification.md`, is the empirical core and demonstrates why the infrastructure is necessary.
+A corpus of papers identified via four proprietary Deep Research systems was processed through a five-step workflow. A **dual assessment track** runs expert and LLM evaluation in parallel on the same ten-category schema, without mutual knowledge. The result is a substantial, asymmetric divergence between the LLM and the expert judgments. This divergence, decomposed and verified in `knowledge/verification.md`, is a motivating illustration of why reliability cannot be presupposed as a property of the system; it is not a finding the review defends but a worked example of why the epistemic infrastructure is needed.
 
-The Forum Wissenschaft 2/2026 paper is submitted and editorially closed (it was written on Google Docs, not in this repo). The active work is the PRISM screening tool and the results-led follow-up paper, tracked in `knowledge/plan.md`.
+The Forum Wissenschaft 2/2026 paper is submitted and editorially closed (it was written on Google Docs, not in this repo). The active work is the PRISM screening tool and the follow-up paper on the epistemic infrastructure and the LLM-assisted review process, tracked in `knowledge/plan.md`.
 
 ---
 
@@ -48,9 +48,9 @@ The corpus is processed through a five-step workflow (Identification, PDF acquis
 Three layers:
 1. **Obsidian Vault** (`vault/`): interlinked Markdown of Papers, Concepts, Divergences, and Pipeline stages, generated.
 2. **Evidence Companion** (`docs/index.html` plus subpages): four views (Knowledge Chat, Knowledge Graph, Categories, Corpus), live at https://chpollin.github.io/FemPrompt_SozArb/.
-3. **Paper**: Forum Wissenschaft 2/2026, submitted and closed (on Google Docs). The follow-up paper is results-led.
+3. **Paper**: Forum Wissenschaft 2/2026, submitted and closed (on Google Docs). The follow-up paper is led by the infrastructure and the review method, not by a results claim.
 
-The benchmark result (the human-LLM divergence and its decomposition) and all figures live in `knowledge/verification.md` and the data; do not restate them here.
+The benchmark (the human-LLM divergence and its decomposition, used as a motivating illustration) and all figures live in `knowledge/verification.md` and the data; do not restate them here.
 
 ### Assessment tracks
 
@@ -142,7 +142,7 @@ Each piece of information has exactly ONE canonical location. Other files refere
 
 | Information | Canonical Location |
 |-------------|-------------------|
-| Benchmark results, kappa revision, divergence finding, conformance, novelty, paper integrity | `knowledge/verification.md` + `benchmark/results/agreement_metrics.json` |
+| Benchmark figures, kappa revision, the divergence and its decomposition, conformance, novelty, paper integrity | `knowledge/verification.md` + `benchmark/results/agreement_metrics.json` |
 | Script reference, pipeline method | `knowledge/methods.md` |
 | Category definitions | `benchmark/config/categories.yaml` |
 | Theory and operationalization | `knowledge/project.md` |

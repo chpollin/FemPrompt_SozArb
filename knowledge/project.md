@@ -17,7 +17,7 @@ topics: ["[[Epistemic Infrastructure]]", "[[Feminist AI]]"]
 related: [INDEX, methods, standards, verification, journal]
 ---
 
-This is the identity of the project: what it is, why it exists, and the theory it stands on. FemPrompt SozArb is a systematic literature review on feminist AI literacy and LLM bias in social work, and an epistemic infrastructure built around it. Part of the Elisabeth List Fellowship project "Diversity-Sensitive Engagement with Artificial Intelligence" (University of Graz, 2025 to 2026). The constitutive terms are defined in [[INDEX]]; the conducted methods are in [[methods]]; the empirical results are in [[verification]].
+This is the identity of the project: what it is, why it exists, and the theory it stands on. FemPrompt SozArb is a systematic literature review on feminist AI literacy and LLM bias in social work, and an epistemic infrastructure built around it. Part of the Elisabeth List Fellowship project "Diversity-Sensitive Engagement with Artificial Intelligence" (University of Graz, 2025 to 2026). The constitutive terms are defined in [[INDEX]]; the conducted methods are in [[methods]]; the divergence analysis that illustrates why the infrastructure is needed is in [[verification]].
 
 ## Project goal
 

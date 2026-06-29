@@ -21,7 +21,7 @@ This is the project's self-audit and the one place its numbers live. Every bench
 
 ---
 
-# Part 1. Empirical core and divergence finding
+# Part 1. The human-LLM divergence as a motivating illustration
 
 The benchmark condition is Claude Haiku 4.5 on title and abstract against the consolidated human track, paired by Zotero key. The figures were first reproduced by an execution-free chain of anchored pattern counts and exact hand arithmetic over the raw and merged CSVs, then reproduced again by running the re-pairing script end to end (2026-06-21).
 
@@ -130,7 +130,7 @@ What may be stated as verified fact: the corpus and assessment counts; the confu
 
 What must be phrased carefully: drop the prevalence-bias-artifact sentence for the po/PABAK/kappa-max decomposition; every "LLM over-includes against expert judgment" sentence needs the duplicate confound named, with the content-only numbers beside the headline; "Sonnet + KD is the best condition" becomes "Sonnet is the better model at decision level in both input conditions, and which Sonnet condition is best depends on the treatment of non-content exclusions"; the human track is "a consolidated expert annotation without independent double coding", and divergence quantities are divergence, not error rates; the 2x2 is exploratory, one run per cell, mixed KD condition, LLM-distilled input texts.
 
-What would still harden the empirical core, in ascending cost: subgroup the KD conditions by `Input_Source` so the KD effect is estimated on actually-KD papers; bootstrap the papers and ideally repeat the LLM runs at recorded decoding settings before any condition ranking is claimed; have a second human independently re-screen a stratified sample (the confusion-matrix cells as strata, Stage R3 of [[plan]]) to estimate the missing inter-human baseline, which converts divergence into an interpretable quantity; and resolve duplicates before comparison in the update round (Stage B), where the protocol can require it prospectively.
+What would still harden the benchmark, in ascending cost: subgroup the KD conditions by `Input_Source` so the KD effect is estimated on actually-KD papers; bootstrap the papers and ideally repeat the LLM runs at recorded decoding settings before any condition ranking is claimed; have a second human independently re-screen a stratified sample (the confusion-matrix cells as strata, Stage R3 of [[plan]]) to estimate the missing inter-human baseline, which converts divergence into an interpretable quantity; and resolve duplicates before comparison in the update round (Stage B), where the protocol can require it prospectively.
 
 ## 1.9 The pattern classification
 
