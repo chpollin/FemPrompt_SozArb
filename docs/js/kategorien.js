@@ -1,151 +1,112 @@
-// Kategorien-Explorer -- Category-based exploration of the review's analytical framework
-// Each of the 10 categories becomes an interactive entry point into the data
+// Kategorien-Explorer -- each of the 10 categories is an entry point into the
+// review's divergence data: rates, divergent papers, and linked concepts.
 
 (function() {
 'use strict';
 
-var EC = window.EC;
-var initialized = false;
-var activeCategory = null;
+const EC = window.EC;
+let initialized = false;
+let activeCategory = null;
+let nodeLabelMap = null; // conceptId -> label, built once on first detail render
 
-// Category order: Gegenstand -> Perspektive (matching the spectrum)
-var CAT_ORDER = [
-    'AI_Literacies', 'Generative_KI', 'Prompting', 'KI_Sonstige',
-    'Soziale_Arbeit', 'Bias_Ungleichheit', 'Gender',
-    'Diversitaet', 'Feministisch', 'Fairness'
-];
-
-var CAT_LABELS = {
-    'AI_Literacies': 'AI Literacies',
-    'Generative_KI': 'Generative KI',
-    'Prompting': 'Prompting',
-    'KI_Sonstige': 'KI Sonstige',
-    'Soziale_Arbeit': 'Soziale Arbeit',
-    'Bias_Ungleichheit': 'Bias & Ungleichheit',
-    'Gender': 'Gender',
-    'Diversitaet': 'Diversitaet',
-    'Feministisch': 'Feministisch',
-    'Fairness': 'Fairness'
-};
-
-var CAT_GROUP = {
-    'AI_Literacies': 'technik', 'Generative_KI': 'technik',
-    'Prompting': 'technik', 'KI_Sonstige': 'technik',
-    'Soziale_Arbeit': 'sozial', 'Bias_Ungleichheit': 'sozial',
-    'Gender': 'sozial', 'Diversitaet': 'sozial',
-    'Feministisch': 'sozial', 'Fairness': 'sozial'
-};
-
-// ============================================================
-// Init
-// ============================================================
+// catLabel turns Bias_Ungleichheit into "Bias Ungleichheit"; only the ampersand
+// form is a genuine override, the rest match the underscore-to-space default.
+const LABEL_OVERRIDE = { Bias_Ungleichheit: 'Bias & Ungleichheit' };
+function label(cat) { return LABEL_OVERRIDE[cat] || EC.catLabel(cat); }
+function isTechnik(cat) { return EC.CATEGORIES.indexOf(cat) < 4; }
 
 window.initializeKategorien = function() {
     if (initialized) return;
     initialized = true;
 
-    var kappas = EC.getKappas();
-    if (!kappas) { console.warn('[Kategorien] no data'); return; }
+    if (!EC.getKappas()) { console.warn('[Kategorien] no data'); return; }
 
     renderSpektrum();
-    // Open the most interesting category by default
-    selectCategory('Gender');
 
+    // One delegated listener per stable container instead of rebinding on every
+    // detail render.
+    document.getElementById('kategorie-spektrum').addEventListener('click', function(e) {
+        const card = e.target.closest('.kategorie-card');
+        if (card) selectCategory(card.dataset.cat);
+    });
+    document.getElementById('kategorie-detail').addEventListener('click', function(e) {
+        const paper = e.target.closest('.kdetail-paper');
+        if (paper) { EC.navigateToPaper(paper.dataset.paperId); return; }
+        const concept = e.target.closest('.kdetail-concept');
+        if (concept) { EC.focusConcept(concept.dataset.concept); return; }
+        const expand = e.target.closest('#kdetail-expand');
+        if (expand) {
+            document.getElementById('kategorie-detail')
+                .querySelectorAll('[data-expandable]').forEach(function(el) { el.style.display = ''; });
+            expand.style.display = 'none';
+        }
+    });
+
+    selectCategory('Gender');
     console.log('[Kategorien] initialized, 10 categories');
 };
 
-// ============================================================
-// Spektrum Rendering
-// ============================================================
-
 function renderSpektrum() {
-    var container = document.getElementById('kategorie-spektrum');
+    const container = document.getElementById('kategorie-spektrum');
     if (!container) return;
 
-    var kappas = EC.getKappas();
-    var html = '';
+    const kappas = EC.getKappas();
+    let html = '<p class="spektrum-intro">10 Kategorien, zwei Perspektiven -- waehlen Sie eine Kategorie, um die Divergenz zwischen LLM und Expert:innen zu explorieren.</p>';
 
-    // Bug 6 fix: context line
-    html += '<p class="spektrum-intro">10 Kategorien, zwei Perspektiven -- waehlen Sie eine Kategorie, um die Divergenz zwischen LLM und Expert:innen zu explorieren.</p>';
-
-    // Group labels
     html += '<div class="spektrum-groups">';
     html += '<span class="spektrum-group-label">Gegenstand</span>';
     html += '<span class="spektrum-group-label" style="text-align:right;">Perspektive</span>';
     html += '</div>';
 
-    // Bug 5 fix: connected spectrum with gradient border
     html += '<div class="spektrum-cards">';
-    CAT_ORDER.forEach(function(cat) {
-        var d = kappas[cat];
+    EC.CATEGORIES.forEach(function(cat) {
+        const d = kappas[cat];
         if (!d) return;
-        var color = EC.CAT_COLORS[cat] || '#999';
-        var diff = d.agent_yes_rate - d.human_yes_rate;
-        var diffLabel = (diff > 0 ? '+' : '') + Math.round(diff) + 'pp';
-        var direction = Math.abs(diff) < 5 ? 'neutral' : diff > 0 ? 'llm-more' : 'human-more';
+        const color = EC.CAT_COLORS[cat] || '#999';
+        const diff = d.agent_yes_rate - d.human_yes_rate;
+        const diffLabel = (diff > 0 ? '+' : '') + Math.round(diff) + 'pp';
+        const direction = Math.abs(diff) < 5 ? 'neutral' : diff > 0 ? 'llm-more' : 'human-more';
 
         html += '<button class="kategorie-card" data-cat="' + cat + '" style="--cat-color:' + color + ';">';
         html += '<span class="kcard-color" style="background:' + color + ';"></span>';
-        html += '<span class="kcard-name">' + CAT_LABELS[cat] + '</span>';
+        html += '<span class="kcard-name">' + label(cat) + '</span>';
         html += '<span class="kcard-diff ' + direction + '">' + diffLabel + '</span>';
         html += '</button>';
     });
     html += '</div>';
 
     container.innerHTML = html;
-
-    // Click handlers
-    container.querySelectorAll('.kategorie-card').forEach(function(btn) {
-        btn.addEventListener('click', function() {
-            selectCategory(btn.dataset.cat);
-        });
-    });
 }
 
 function selectCategory(cat) {
     activeCategory = cat;
-
-    // Update active state
     document.querySelectorAll('.kategorie-card').forEach(function(btn) {
         btn.classList.toggle('active', btn.dataset.cat === cat);
     });
-
     renderDetail(cat);
 }
 
-// ============================================================
-// Detail Rendering
-// ============================================================
-
 function renderDetail(cat) {
-    var container = document.getElementById('kategorie-detail');
+    const container = document.getElementById('kategorie-detail');
     if (!container) return;
 
-    var kappas = EC.getKappas();
-    var d = kappas[cat];
+    const d = EC.getKappas()[cat];
     if (!d) return;
 
-    var color = EC.CAT_COLORS[cat] || '#999';
-    var diff = d.agent_yes_rate - d.human_yes_rate;
-    var absDiff = Math.abs(diff);
-    var direction = diff > 0 ? 'LLM sieht mehr' : 'Expert:innen sehen mehr';
+    const color = EC.CAT_COLORS[cat] || '#999';
+    const diff = d.agent_yes_rate - d.human_yes_rate;
+    const absDiff = Math.abs(diff);
+    let direction = diff > 0 ? 'LLM sieht mehr' : 'Expert:innen sehen mehr';
     if (absDiff < 5) direction = 'Aehnliche Raten';
 
-    // Get divergent papers for this category
-    var catDivergences = EC.getCategoryDivergences(cat);
+    const catDivergences = EC.getCategoryDivergences(cat);
+    const catConcepts = getCategoryConceptCounts(cat);
 
-    // Get concepts linked to papers in this category
-    var catConcepts = getCategoryConceptCounts(cat);
-
-    var html = '';
-
-    // Header with rates
-    html += '<div class="kdetail-header" style="border-left-color:' + color + ';">';
-    html += '<h3 style="color:' + color + ';">' + CAT_LABELS[cat] + '</h3>';
-    html += '<p class="kdetail-group">' + (CAT_GROUP[cat] === 'technik' ? 'Gegenstandsdimension' : 'Perspektivendimension') + '</p>';
+    let html = '<div class="kdetail-header" style="border-left-color:' + color + ';">';
+    html += '<h3 style="color:' + color + ';">' + label(cat) + '</h3>';
+    html += '<p class="kdetail-group">' + (isTechnik(cat) ? 'Gegenstandsdimension' : 'Perspektivendimension') + '</p>';
     html += '</div>';
 
-    // Rate comparison
     html += '<div class="kdetail-rates">';
     html += renderRateBar('Expert:innen', d.human_yes_rate, '#d4943a');
     html += renderRateBar('LLM', d.agent_yes_rate, '#4b7bab');
@@ -160,7 +121,7 @@ function renderDetail(cat) {
     html += '</div>';
     html += '</div>';
 
-    // Bug 4 fix: Concepts BEFORE papers (more compact, immediately visible)
+    // Concepts before papers: more compact and immediately visible.
     if (catConcepts.length > 0) {
         html += '<div class="kdetail-section">';
         html += '<h4>Haeufige Konzepte</h4>';
@@ -173,27 +134,26 @@ function renderDetail(cat) {
         html += '</div>';
     }
 
-    // Bug 2 fix: Sort by severity, limit to 8, expandable
     catDivergences.sort(function(a, b) {
         return (b.divergence.severity || 0) - (a.divergence.severity || 0);
     });
-    var INITIAL_SHOW = 8;
+    const INITIAL_SHOW = 8;
 
     if (catDivergences.length > 0) {
         html += '<div class="kdetail-section">';
         html += '<h4>Divergenz in dieser Kategorie <span class="kdetail-count">' + catDivergences.length + '</span></h4>';
         html += '<div class="kdetail-papers" id="kdetail-papers-list">';
         catDivergences.forEach(function(p, idx) {
-            var cc = p.divergence.category_comparison || {};
-            var catComp = cc[cat] || cc[cat.replace(/_/g, ' ')] || {};
-            var humanVal = catComp.human === 'Ja' ? 'Ja' : catComp.human === 'Nein' ? 'Nein' : '\u2013';
-            var llmVal = catComp.llm === 'Ja' ? 'Ja' : catComp.llm === 'Nein' ? 'Nein' : '\u2013';
-            var pattern = p.divergence.pattern || '';
-            var patClass = pattern === 'Semantische Expansion' ? 'pattern-badge-semantic'
+            const cc = p.divergence.category_comparison || {};
+            const catComp = cc[cat] || cc[cat.replace(/_/g, ' ')] || {};
+            const humanVal = catComp.human === 'Ja' ? 'Ja' : catComp.human === 'Nein' ? 'Nein' : '–';
+            const llmVal = catComp.llm === 'Ja' ? 'Ja' : catComp.llm === 'Nein' ? 'Nein' : '–';
+            const pattern = p.divergence.pattern || '';
+            const patClass = pattern === 'Semantische Expansion' ? 'pattern-badge-semantic'
                          : pattern === 'Keyword-Inklusion' ? 'pattern-badge-keyword'
                          : 'pattern-badge-implicit';
 
-            var hidden = idx >= INITIAL_SHOW ? ' style="display:none;" data-expandable' : '';
+            const hidden = idx >= INITIAL_SHOW ? ' style="display:none;" data-expandable' : '';
 
             html += '<div class="kdetail-paper" data-paper-id="' + EC.escapeHtml(p.id) + '"' + hidden + '>';
             html += '<div class="kdetail-paper-title">' + EC.escapeHtml(p.title.substring(0, 70)) + (p.title.length > 70 ? '...' : '') + '</div>';
@@ -209,7 +169,6 @@ function renderDetail(cat) {
             }
             html += '</div>';
 
-            // Bug 3 fix: Better readable reasoning (250 chars, darker, not italic)
             if (p.divergence.llm_reasoning) {
                 html += '<p class="kdetail-reasoning">' +
                     EC.escapeHtml(p.divergence.llm_reasoning.substring(0, 250)) +
@@ -228,42 +187,11 @@ function renderDetail(cat) {
     }
 
     container.innerHTML = html;
-
-    // Click handlers: papers -> korpus detail
-    container.querySelectorAll('.kdetail-paper').forEach(function(el) {
-        el.addEventListener('click', function() {
-            var paperId = el.dataset.paperId;
-            var paper = EC.getAllPapers().find(function(p) { return p.id === paperId; });
-            if (paper) {
-                if (window.switchView) window.switchView('korpus');
-                EC.showPaperDetail(paper);
-            }
-        });
-    });
-
-    // Click handlers: concepts -> wissensnetz
-    container.querySelectorAll('.kdetail-concept').forEach(function(el) {
-        el.addEventListener('click', function() {
-            var conceptId = el.dataset.concept;
-            EC.focusConcept(conceptId);
-        });
-    });
-
-    // Expand button handler
-    var expandBtn = document.getElementById('kdetail-expand');
-    if (expandBtn) {
-        expandBtn.addEventListener('click', function() {
-            container.querySelectorAll('[data-expandable]').forEach(function(el) {
-                el.style.display = '';
-            });
-            expandBtn.style.display = 'none';
-        });
-    }
 }
 
-function renderRateBar(label, rate, color) {
+function renderRateBar(rowLabel, rate, color) {
     return '<div class="kdetail-rate-row">' +
-        '<span class="kdetail-rate-label">' + label + '</span>' +
+        '<span class="kdetail-rate-label">' + rowLabel + '</span>' +
         '<div class="kdetail-rate-track">' +
             '<div class="kdetail-rate-fill" style="width:' + rate + '%;background:' + color + ';"></div>' +
         '</div>' +
@@ -271,35 +199,30 @@ function renderRateBar(label, rate, color) {
     '</div>';
 }
 
-// ============================================================
-// Helpers
-// ============================================================
-
 function getCategoryConceptCounts(cat) {
-    var conceptData = EC.getConceptData();
+    const conceptData = EC.getConceptData();
     if (!conceptData || !conceptData.papers) return [];
 
-    // Find papers where this category is true (from LLM or human)
-    var catPaperIds = new Set();
+    if (!nodeLabelMap) {
+        nodeLabelMap = {};
+        (conceptData.nodes || []).forEach(function(n) { nodeLabelMap[n.id] = n.label; });
+    }
+
+    const catPaperIds = new Set();
     EC.getAllPapers().forEach(function(p) {
-        var llmYes = p.llm && p.llm.all_categories && p.llm.all_categories[cat];
-        var humanYes = p.human && p.human.all_categories && p.human.all_categories[cat];
+        const llmYes = p.llm && p.llm.all_categories && p.llm.all_categories[cat];
+        const humanYes = p.human && p.human.all_categories && p.human.all_categories[cat];
         if (llmYes || humanYes) catPaperIds.add(p.id);
     });
 
-    // Count concepts in those papers
-    var counts = {};
+    const counts = {};
     conceptData.papers.forEach(function(p) {
         if (!catPaperIds.has(p.id)) return;
-        (p.concepts || []).forEach(function(c) {
-            counts[c] = (counts[c] || 0) + 1;
-        });
+        (p.concepts || []).forEach(function(c) { counts[c] = (counts[c] || 0) + 1; });
     });
 
-    // Sort by count
     return Object.keys(counts).map(function(c) {
-        var node = conceptData.nodes ? conceptData.nodes.find(function(n) { return n.id === c; }) : null;
-        return { id: c, label: node ? node.label : c, count: counts[c] };
+        return { id: c, label: nodeLabelMap[c] || c, count: counts[c] };
     }).sort(function(a, b) { return b.count - a.count; });
 }
 

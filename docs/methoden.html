@@ -6,6 +6,9 @@
     <title>Methoden -- Feministische AI Literacies</title>
     <meta name="description" content="Methodik des systematischen Reviews: Pipeline, Kategorie-System, duale Bewertung, Divergenz-Analyse.">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%231e3a5f'/><text x='50' y='68' font-size='60' font-family='serif' font-weight='bold' fill='white' text-anchor='middle'>F</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/research.css">
 </head>
@@ -32,7 +35,7 @@
                     <a href="help.html" class="nav-link">Hilfe</a>
                     <span class="nav-sep"></span>
                     <a href="https://github.com/chpollin/FemPrompt_SozArb" class="nav-link nav-link-ext" target="_blank" rel="noopener"><i class="fas fa-code-branch"></i></a>
-                    <a href="downloads/vault.zip" class="nav-link nav-link-ext" title="505 Wissensdokumente (.zip)"><i class="fas fa-download"></i></a>
+                    <a href="downloads/vault.zip" class="nav-link nav-link-ext" title="Obsidian Vault (.zip)"><i class="fas fa-download"></i></a>
                 </nav>
             </div>
         </div>
@@ -43,43 +46,37 @@
             <h2>Methoden</h2>
 
             <h3>Forschungsfrage</h3>
-            <p>Was passiert mit Wissen, wenn es durch eine LLM-gestuetzte Pipeline fliesst? Dieser systematische Review untersucht 326 Publikationen zu feministischen AI Literacies im Feld der Sozialen Arbeit und vergleicht maschinelle mit menschlicher Wissensklassifikation.</p>
+            <p>Was passiert mit Wissen, wenn es durch eine LLM-gestuetzte Pipeline fliesst? Dieser qualitative, LLM-gestuetzte Review untersucht Publikationen zu feministischen AI Literacies in der Sozialen Arbeit. Der Vergleich maschineller und menschlicher Klassifikation dient als Pruefpunkt der Verlaesslichkeit, nicht als eigenes Forschungsziel.</p>
 
             <h3>Pipeline</h3>
-            <p>326 Publikationen durchlaufen fuenf Verarbeitungsstufen. Jede Stufe transformiert das Material und produziert messbare Verluste.</p>
+            <p>Die Publikationen durchlaufen fuenf Verarbeitungsstufen. Jede Stufe transformiert das Material und kann Verluste erzeugen, ueberwiegend in der PDF-Akquise; die quantifizierte Verlustkette steht im <a href="index.html#korpus">Korpus</a> und in der Verifikation des Repositorys.</p>
 
             <div class="pipeline-flow">
                 <div class="pipeline-stage">
-                    <span class="pipeline-num">326</span>
                     <span class="pipeline-label">Identifikation</span>
                     <span class="pipeline-detail">Deep Research, 4 Provider (OpenAI, Google, Perplexity, Anthropic)</span>
                 </div>
-                <div class="pipeline-arrow"><i class="fas fa-arrow-right"></i><span class="pipeline-loss">-69</span></div>
+                <div class="pipeline-arrow"><i class="fas fa-arrow-right"></i></div>
                 <div class="pipeline-stage">
-                    <span class="pipeline-num">257</span>
                     <span class="pipeline-label">PDF-Akquise</span>
                     <span class="pipeline-detail">4 Fallback-Strategien (DOI, Unpaywall, Crossref, Manual)</span>
                 </div>
-                <div class="pipeline-arrow"><i class="fas fa-arrow-right"></i><span class="pipeline-loss">-5</span></div>
+                <div class="pipeline-arrow"><i class="fas fa-arrow-right"></i></div>
                 <div class="pipeline-stage">
-                    <span class="pipeline-num">252</span>
                     <span class="pipeline-label">Markdown</span>
                     <span class="pipeline-detail">Docling PDF-zu-Markdown-Konversion</span>
                 </div>
-                <div class="pipeline-arrow"><i class="fas fa-arrow-right"></i><span class="pipeline-loss">-3</span></div>
+                <div class="pipeline-arrow"><i class="fas fa-arrow-right"></i></div>
                 <div class="pipeline-stage">
-                    <span class="pipeline-num">249</span>
                     <span class="pipeline-label">Wissensextraktion</span>
                     <span class="pipeline-detail">Claude Haiku 4.5, 3-stufig (JSON, Markdown, Verifikation)</span>
                 </div>
                 <div class="pipeline-arrow"><i class="fas fa-arrow-right"></i></div>
                 <div class="pipeline-stage">
-                    <span class="pipeline-num">326 + 291</span>
                     <span class="pipeline-label">Assessment</span>
-                    <span class="pipeline-detail">LLM (326/326) + Expert:innen (291/326)</span>
+                    <span class="pipeline-detail">LLM und Expert:innen, identisches 10-Kategorien-Schema</span>
                 </div>
             </div>
-            <p style="font-size:var(--text-sm);color:var(--gray-500);margin-top:0.5rem;">Gesamtverlust: 77/326 (23.6%), ueberwiegend in der PDF-Akquise.</p>
 
             <h3>Kategorie-System</h3>
             <p>Jedes Paper wird nach 10 binaeren Kategorien bewertet. Inklusion erfordert mindestens eine Technik- UND eine Sozial-Kategorie.</p>
@@ -89,74 +86,54 @@
                     <tr><th>Kategorie</th><th>Dimension</th><th>Definition</th></tr>
                 </thead>
                 <tbody>
-                    <tr><td><span style="color:#5b8c5a;font-weight:600;">AI Literacies</span></td><td>Technik</td><td>KI-Kompetenzen, Faehigkeiten, kritisches Verstaendnis von KI-Systemen</td></tr>
-                    <tr><td><span style="color:#3a7d7e;font-weight:600;">Generative KI</span></td><td>Technik</td><td>LLMs, ChatGPT, Bildgeneratoren, generative Modelle</td></tr>
-                    <tr><td><span style="color:#4b7bab;font-weight:600;">Prompting</span></td><td>Technik</td><td>Prompt-Engineering, Prompt-Strategien, Eingabegestaltung</td></tr>
-                    <tr><td><span style="color:#7c6fae;font-weight:600;">KI Sonstige</span></td><td>Technik</td><td>ML, algorithmische Entscheidungssysteme, Predictive Analytics, Robotik</td></tr>
-                    <tr><td><span style="color:#b0546e;font-weight:600;">Soziale Arbeit</span></td><td>Sozial</td><td>Praxis, Theorie, Ausbildung, Zielgruppen Sozialer Arbeit</td></tr>
-                    <tr><td><span style="color:#c2694e;font-weight:600;">Bias &amp; Ungleichheit</span></td><td>Sozial</td><td>Algorithmischer Bias, Diskriminierung, soziale Ungleichheit</td></tr>
-                    <tr><td><span style="color:#d4943a;font-weight:600;">Gender</span></td><td>Sozial</td><td>Expliziter Gender-Fokus, Geschlechterperspektive, Gender-Bias-Analyse</td></tr>
-                    <tr><td><span style="color:#8a7542;font-weight:600;">Diversitaet</span></td><td>Sozial</td><td>Inklusion, Repraesentation verschiedener Gruppen</td></tr>
-                    <tr><td><span style="color:#a24b7a;font-weight:600;">Feministisch</span></td><td>Sozial</td><td>Feministische Theorie/Methodologie, implizite feministische Ansaetze</td></tr>
-                    <tr><td><span style="color:#6a8e4e;font-weight:600;">Fairness</span></td><td>Sozial</td><td>Algorithmische Fairness, Fairness-Metriken, faire ML-Systeme</td></tr>
+                    <tr><td><span class="cat-name" style="color:var(--cat-ai-lit)">AI Literacies</span></td><td>Technik</td><td>KI-Kompetenzen, Faehigkeiten, kritisches Verstaendnis von KI-Systemen</td></tr>
+                    <tr><td><span class="cat-name" style="color:var(--cat-gen-ki)">Generative KI</span></td><td>Technik</td><td>LLMs, ChatGPT, Bildgeneratoren, generative Modelle</td></tr>
+                    <tr><td><span class="cat-name" style="color:var(--cat-prompt)">Prompting</span></td><td>Technik</td><td>Prompt-Engineering, Prompt-Strategien, Eingabegestaltung</td></tr>
+                    <tr><td><span class="cat-name" style="color:var(--cat-ki-sonst)">KI Sonstige</span></td><td>Technik</td><td>ML, algorithmische Entscheidungssysteme, Predictive Analytics, Robotik</td></tr>
+                    <tr><td><span class="cat-name" style="color:var(--cat-soz-arb)">Soziale Arbeit</span></td><td>Sozial</td><td>Praxis, Theorie, Ausbildung, Zielgruppen Sozialer Arbeit</td></tr>
+                    <tr><td><span class="cat-name" style="color:var(--cat-bias)">Bias &amp; Ungleichheit</span></td><td>Sozial</td><td>Algorithmischer Bias, Diskriminierung, soziale Ungleichheit</td></tr>
+                    <tr><td><span class="cat-name" style="color:var(--cat-gender)">Gender</span></td><td>Sozial</td><td>Expliziter Gender-Fokus, Geschlechterperspektive, Gender-Bias-Analyse</td></tr>
+                    <tr><td><span class="cat-name" style="color:var(--cat-divers)">Diversitaet</span></td><td>Sozial</td><td>Inklusion, Repraesentation verschiedener Gruppen</td></tr>
+                    <tr><td><span class="cat-name" style="color:var(--cat-femin)">Feministisch</span></td><td>Sozial</td><td>Feministische Theorie/Methodologie, implizite feministische Ansaetze</td></tr>
+                    <tr><td><span class="cat-name" style="color:var(--cat-fairness)">Fairness</span></td><td>Sozial</td><td>Algorithmische Fairness, Fairness-Metriken, faire ML-Systeme</td></tr>
                 </tbody>
             </table>
 
             <h3>Duale Bewertung</h3>
             <p>Zwei unabhaengige Bewertungspfade klassifizieren nach identischem Schema:</p>
             <ul>
-                <li><strong>LLM (Claude Haiku 4.5)</strong> -- 326/326 Papers, automatisiert, $1.44 Gesamtkosten</li>
-                <li><strong>Expert:innen</strong> -- 291/326 Papers, manuelle Bewertung durch Fachwissenschaftler:innen</li>
+                <li><strong>LLM (Claude Haiku 4.5)</strong> -- automatisierte Bewertung des gesamten Korpus</li>
+                <li><strong>Expert:innen</strong> -- manuelle Bewertung durch Fachwissenschaftler:innen, ohne vollstaendige Abdeckung</li>
             </ul>
-            <p>Die Schnittmenge (291 Papers mit beiden Bewertungen) bildet die Benchmark-Basis.</p>
+            <p>Die Schnittmenge der beidseitig bewerteten Papers bildet die Benchmark-Basis.</p>
 
-            <h3>Kernergebnis</h3>
-            <table class="methoden-table">
-                <thead><tr><th>Metrik</th><th>Wert</th></tr></thead>
-                <tbody>
-                    <tr><td>LLM Include-Rate</td><td>71.5% (208/291)</td></tr>
-                    <tr><td>Human Include-Rate</td><td>46.0% (134/291)</td></tr>
-                    <tr><td>LLM-Include / Human-Exclude</td><td>108 Faelle</td></tr>
-                    <tr><td>Human-Include / LLM-Exclude</td><td>34 Faelle</td></tr>
-                    <tr><td>Cohen's Kappa</td><td>0.056 (Prevalence-Bias-Artefakt)</td></tr>
-                </tbody>
-            </table>
-            <p>Cohen's Kappa (0.056) ist bei stark ungleichen Basisraten kein valider Indikator fuer Uebereinstimmung (Byrt et al. 1993). Primaere Metriken sind die Konfusionsmatrix und die Basisraten.</p>
+            <h3>Beobachtete Divergenz (motivierende Illustration)</h3>
+            <p>Als Illustration, warum Verlaesslichkeit nicht vorausgesetzt werden kann, nicht als Befund des Reviews, schliesst das LLM deutlich mehr Publikationen ein als die Expert:innen; die Divergenz ist asymmetrisch, das LLM ueberinkludiert oefter als umgekehrt. Cohen's Kappa ist bei stark ungleichen Basisraten kein valider Indikator fuer Uebereinstimmung (Byrt et al. 1993); primaere Metriken sind die Konfusionsmatrix und die Basisraten. Die konkreten Raten, Fallzahlen und die Konfusionsmatrix zeigt der <a href="index.html#vergleich">Kategorien-Explorer</a> direkt aus den Daten.</p>
 
             <h3>Divergenz-Klassifikation</h3>
-            <p>142 Faelle, in denen LLM und Expert:innen unterschiedlich entscheiden, wurden in drei epistemische Muster klassifiziert:</p>
+            <p>Die Faelle, in denen LLM und Expert:innen unterschiedlich entscheiden, wurden in drei epistemische Muster klassifiziert:</p>
             <ul>
-                <li><strong>Semantische Expansion (51%)</strong> -- Das LLM interpretiert Kategorien breiter. Es erkennt Relevanz, wo disziplinaeres Fachwissen engere Grenzen zieht.</li>
-                <li><strong>Implizite Feldzugehoerigkeit (30%)</strong> -- Das LLM ordnet Papers einem Feld zu, das implizit mitschwingt, aber nicht explizit adressiert wird.</li>
-                <li><strong>Keyword-Inklusion (19%)</strong> -- Das LLM schliesst von Schluesselwoertern auf Relevanz, ohne den inhaltlichen Kontext zu pruefen.</li>
+                <li><strong>Semantische Expansion</strong> -- Das LLM interpretiert Kategorien breiter. Es erkennt Relevanz, wo disziplinaeres Fachwissen engere Grenzen zieht.</li>
+                <li><strong>Implizite Feldzugehoerigkeit</strong> -- Das LLM ordnet Papers einem Feld zu, das implizit mitschwingt, aber nicht explizit adressiert wird.</li>
+                <li><strong>Keyword-Inklusion</strong> -- Das LLM schliesst von Schluesselwoertern auf Relevanz, ohne den inhaltlichen Kontext zu pruefen.</li>
             </ul>
 
             <h3>Transparenz</h3>
-            <table class="methoden-table">
-                <thead><tr><th>Komponente</th><th>Kosten</th></tr></thead>
-                <tbody>
-                    <tr><td>Wissensextraktion (249 Papers)</td><td>~$7.00</td></tr>
-                    <tr><td>LLM Assessment 5D (325 Papers)</td><td>$1.15</td></tr>
-                    <tr><td>LLM Assessment 10K (326 Papers)</td><td>$1.44</td></tr>
-                    <tr><td>Vault v2 (Konzepte + Divergenzen)</td><td>~$1.00</td></tr>
-                    <tr><td><strong>Gesamt</strong></td><td><strong>~$10.59</strong></td></tr>
-                </tbody>
-            </table>
             <p>Alle LLM-Aufrufe sind im Repository gecacht (.vault_cache/) und reproduzierbar. Prompts sind versioniert (prompts/CHANGELOG.md). Der gesamte Quellcode ist offen: <a href="https://github.com/chpollin/FemPrompt_SozArb" style="color:var(--primary);">github.com/chpollin/FemPrompt_SozArb</a></p>
 
             <h3>Limitationen</h3>
             <ul>
-                <li>23.6% Verlustrate bei PDF-Akquise (Zugangsbarrieren)</li>
+                <li>Substanzielle Verlustrate bei der PDF-Akquise (Zugangsbarrieren)</li>
                 <li>LLM-Bewertung basiert auf extrahiertem Wissen, nicht auf Volltexten -- doppelte Vermittlung</li>
-                <li>Human-Bewertung umfasst 291/326 Papers (nicht vollstaendig)</li>
+                <li>Human-Bewertung deckt nicht den gesamten Korpus ab</li>
                 <li>Konzept-Extraktion ist LLM-abhaengig und nicht extern validiert</li>
                 <li>Divergenz-Muster-Klassifikation ist LLM-gestuetzt (Claude Sonnet)</li>
             </ul>
             <h3>Nachnutzung</h3>
-            <p>Die 249 Wissensdokumente und der vollstaendige Obsidian Vault koennen als Kontext fuer eigene Forschung mit LLMs genutzt werden.</p>
+            <p>Die Wissensdokumente und der vollstaendige Obsidian Vault koennen als Kontext fuer eigene Forschung mit LLMs genutzt werden.</p>
 
             <h4>Obsidian</h4>
-            <p><a href="downloads/vault.zip" style="color:var(--primary);">Vault-ZIP herunterladen</a> und entpacken. In Obsidian als Vault oeffnen. 505 verlinkte Dokumente (Papers, Konzepte, Divergenzen, Pipeline-Stufen). Graph View zeigt das Wissensnetz.</p>
+            <p><a href="downloads/vault.zip" style="color:var(--primary);">Vault-ZIP herunterladen</a> und entpacken. In Obsidian als Vault oeffnen. Die verlinkten Dokumente (Papers, Konzepte, Divergenzen, Pipeline-Stufen) ergeben im Graph View das Wissensnetz.</p>
 
             <h4>Claude Code</h4>
             <p>Im <a href="index.html#korpus" style="color:var(--primary);">Korpus</a> Papers filtern und per "Markdown-Export" herunterladen. Im Exportordner <code>claude</code> starten. Der Export enthaelt einen System-Prompt in der README.md.</p>

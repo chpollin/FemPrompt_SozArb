@@ -4,31 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feministische AI Literacies -- Systematischer Review</title>
-
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Interaktive Evidenz zu 326 Publikationen: Systematischer Literature Review zu feministischen AI Literacies im Feld der Sozialen Arbeit. Duale Bewertung durch Expert:innen und LLM.">
+    <meta name="description" content="Interaktive Evidenz zum systematischen Literature Review zu feministischen AI Literacies im Feld der Sozialen Arbeit. Duale Bewertung durch Expert:innen und LLM.">
     <meta name="keywords" content="AI literacy, social work, systematic review, feminist AI, LLM assessment, epistemische Infrastruktur">
     <meta name="author" content="Christopher Pollin, Susanne Sackl-Sharif, Sabine Klinger, Christian Steiner">
     <meta name="robots" content="index, follow">
-
-    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://chpollin.github.io/FemPrompt_SozArb/">
     <meta property="og:title" content="Feministische AI Literacies -- Systematischer Review">
-    <meta property="og:description" content="Interaktive Evidenz zu 326 Publikationen. Duale Bewertung durch Expert:innen und LLM mit 142 Divergenzfaellen.">
-
-    <!-- Favicon -->
+    <meta property="og:description" content="Interaktive Evidenz zum systematischen Literature Review zu feministischen AI Literacies im Feld der Sozialen Arbeit.">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%231e3a5f'/><text x='50' y='68' font-size='60' font-family='serif' font-weight='bold' fill='white' text-anchor='middle'>F</text></svg>">
-
-    <!-- Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
-
-    <!-- FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
     <link rel="stylesheet" href="css/research.css">
 </head>
 <body>
@@ -44,10 +35,10 @@
                     <p class="header-authors">Pollin, Sackl-Sharif, Klinger &amp; Steiner (2026)</p>
                 </div>
                 <nav class="header-nav" aria-label="Hauptnavigation">
-                    <button class="nav-view-btn active has-tip" data-view="chat" data-tip-key="chat">Wissens-Chat</button>
-                    <button class="nav-view-btn has-tip" data-view="wissensnetz" data-tip-key="wissensnetz">Wissensnetz</button>
-                    <button class="nav-view-btn has-tip" data-view="vergleich" data-tip-key="vergleich">Kategorien</button>
-                    <button class="nav-view-btn has-tip" data-view="korpus" data-tip-key="korpus">Korpus</button>
+                    <button class="nav-view-btn active has-tip" id="tab-chat" role="tab" aria-controls="view-chat" aria-selected="true" data-view="chat" data-tip-key="chat">Wissens-Chat</button>
+                    <button class="nav-view-btn has-tip" id="tab-wissensnetz" role="tab" aria-controls="view-wissensnetz" aria-selected="false" data-view="wissensnetz" data-tip-key="wissensnetz">Wissensnetz</button>
+                    <button class="nav-view-btn has-tip" id="tab-vergleich" role="tab" aria-controls="view-vergleich" aria-selected="false" data-view="vergleich" data-tip-key="vergleich">Kategorien</button>
+                    <button class="nav-view-btn has-tip" id="tab-korpus" role="tab" aria-controls="view-korpus" aria-selected="false" data-view="korpus" data-tip-key="korpus">Korpus</button>
                     <span class="nav-sep"></span>
                     <a href="prisma.html" class="nav-link">PRISM</a>
                     <a href="about.html" class="nav-link">About</a>
@@ -175,7 +166,7 @@
                     <div class="graph-detail-placeholder">
                         <p class="placeholder-icon"><i class="fas fa-project-diagram"></i></p>
                         <p class="placeholder-text">Konzept anklicken</p>
-                        <p class="placeholder-hint">136 Konzepte aus 249 Wissensdokumenten. Groesse = Haeufigkeit, Verbindung = gemeinsame Papers.</p>
+                        <p class="placeholder-hint">Konzepte aus den Wissensdokumenten. Groesse = Haeufigkeit, Verbindung = gemeinsame Papers.</p>
                     </div>
                 </div>
             </div>

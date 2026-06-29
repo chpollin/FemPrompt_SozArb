@@ -1,7 +1,6 @@
 /* Evidence Companion - Academic Research Interface */
 /* Inspired by Our World in Data, Distill.pub, eLife */
-
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap');
+/* Fonts are loaded via <link> in each page head (scripts/build_pages.py), not @import. */
 
 :root {
     /* Academic Palette -- derived from category spectrum */
@@ -94,8 +93,8 @@
     --transition-base: all 0.2s ease;
     --transition-slow: all 0.3s ease;
 
-    /* Focus Ring */
-    --focus-ring: 0 0 0 3px rgba(30, 64, 175, 0.1);
+    /* Focus Ring (teal primary, matching --primary) */
+    --focus-ring: 0 0 0 3px rgba(58, 125, 126, 0.18);
 }
 
 /* Rich Tooltips (JS-driven, HTML content) */
@@ -387,16 +386,6 @@ header::after {
     background: var(--gray-50);
 }
 
-.nav-view-korpus {
-    color: var(--gray-400);
-    font-size: var(--text-xs);
-    margin-left: 0.25rem;
-}
-
-.nav-view-korpus.active {
-    color: var(--gray-700);
-}
-
 .nav-sep {
     width: 1px;
     height: 1rem;
@@ -541,6 +530,8 @@ header::after {
     font-size: var(--text-sm);
     margin: 0.75rem 0 1rem;
 }
+
+.methoden-table .cat-name { font-weight: 600; }
 
 .methoden-table th {
     text-align: left;
@@ -985,23 +976,6 @@ main {
     padding: 0 0.25rem;
     color: var(--gray-400);
 }
-
-.decision-badge {
-    padding: var(--space-xs) var(--space-md);
-    border-radius: var(--radius-sm);
-    font-size: var(--text-xs);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    white-space: nowrap;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.375rem;
-}
-
-/* (decision-include/exclude/unclear classes removed -- JS uses inline styles) */
-
-/* (relevance bars, dimension pills, paper-title removed -- unused) */
 
 /* Results Row (counter + exports) */
 .results-row {
@@ -2604,8 +2578,14 @@ main {
         border-radius: var(--radius-md);
     }
 
-    .chat-msg-user .chat-msg-content {
-        max-width: 90%;
+    .chat-messages {
+        max-height: 50vh;
+        min-height: 300px;
+    }
+
+    .chat-msg-user .chat-msg-content,
+    .chat-msg-model .chat-msg-content {
+        max-width: 95%;
     }
 
     .chat-setup {
@@ -2751,37 +2731,15 @@ main {
     transform: translateX(2px);
 }
 
-@media (max-width: 768px) {
-    .chat-messages {
-        max-height: 50vh;
-        min-height: 300px;
-    }
-
-    .chat-msg-user .chat-msg-content,
-    .chat-msg-model .chat-msg-content {
-        max-width: 95%;
-    }
-
-    .chat-key-row input {
-        max-width: 100%;
-    }
-
-    .chat-suggestions {
-        grid-template-columns: 1fr;
-        max-width: 100%;
-    }
-}
-
 /* Print Styles */
 @media print {
-    .view-nav,
+    .header-nav,
     .search-filters,
     .category-filter-row,
     .export-button,
     .modal,
-    .graph-controls,
+    .graph-toolbar,
     .pagination,
-    .header-links,
     .detail-nav {
         display: none !important;
     }

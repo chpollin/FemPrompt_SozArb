@@ -22,6 +22,34 @@ Chronologisches Protokoll der Arbeitssitzungen mit Entscheidungen, Ergebnissen u
 
 ---
 
+## 2026-06-29 (Session 20): docs/ frontend refactor, shared EC helpers, security and stream robustness, const/let migration, chrome generator
+
+### What changed
+
+1. **Shared helpers consolidated on `window.EC`.** `catLabel`, `download`, `paperStatus`, `navigateToPaper`, `isHttpUrl` now have one definition; the concept graph got a local `endId`/`nodeById`, the category explorer a node-label index. Per-render listener rebinding was replaced by delegated handlers on the stable containers (corpus table, category detail, chat messages, paper modal), and the corpus tooltips compute their aggregates in one pass.
+2. **Security and correctness.** `href` is validated against `^https?:` so a `javascript:` URL in the data can no longer execute; the interpolated `onclick` download was replaced by a delegated `data-action`; the chat's partial `escapeAttr` gave way to `EC.escapeHtml`; the chat stream got an AbortController, a timeout, a stop control, and state reset on a broken read, and its error path uses `insertAdjacentHTML`; PRISM's CSV quotes every cell, and reviewer import validates the structure and sanitizes the key before touching persistent state.
+3. **Performance.** Streamed-markdown re-render is coalesced to one paint per frame, the graph frequency slider is debounced through `requestAnimationFrame`, and dead state (`_sizeScale`, a double divergence-toggle) was removed.
+4. **Volatile numbers.** Tooltip, chat-prompt, and content-page figures are now derived from the data or stated qualitatively; the chat system prompt recomputes the benchmark marginals from the confusion matrix. The content pages (about, methoden, help, index meta) had their hard-coded rates, kappa, cost table, and counts removed outright per the operator's call, pointing to the Kategorien-Explorer instead.
+5. **const/let migration.** Every `docs/js` module dropped `var`; a conservative codemod (default `let`, `const` only for a single, never-reassigned binding) handled the four edited-in-place files, the four rewritten files were done by hand, and decorative banner comments were stripped throughout. Verified against the PRISM test harness and per-module syntax checks; an independent pass found no `const` placed on a reassigned binding.
+6. **CSS and index.** Focus-ring recolored to the teal primary, dead selectors and a print block that named non-existent classes fixed, the duplicate mobile chat media block merged; `index.html` dropped the unused Chart.js, deferred its libraries, and gave the view tabs `role`/`aria-controls`/`aria-selected` (the section `aria-labelledby` were dangling before).
+7. **`scripts/build_pages.py`.** New generator holds the single source for the shared document head (favicon, font links, the common meta, FontAwesome and research.css), the footer on every page, and the content-subpage header (about, help, methoden, prisma, active state parameterized). `index.html` keeps its bespoke tab-and-stats in-body header and its own SEO and Open Graph metas; PRISM keeps its `noindex`, `prisma.css`, and repo-connection bar through per-page slots. The font load moved from an `@import` inside `research.css` to a `<link>` in each head, which also retired the double font load PRISM carried. The methoden category-name cells now reference the `--cat-*` tokens instead of repeating their hex.
+8. **Verification.** A jsdom smoke harness for the Companion modules joined the PRISM pure-function harness under `npm test`, driving data load, the corpus table, delegated clicks, the category explorer, the chat UI, and the chat error path; the D3 graph and live streaming stay a browser check. An adversarial multi-agent audit over every changed code file then caught two regressions the smoke tests had missed, both in the new chat-stream handling: a real API error re-rendered the message list after appending its error banner and so wiped it, and an aborted partial answer was finalized without its `complete` flag and lost its citations on the next re-render. Both fixed, with a regression test left behind for the error banner.
+
+### Decided (global working rules, the operator's)
+
+- const by default, `let` when reassigned, `var` only for genuine function-scoped hoisting, with file consistency outranking the preference.
+- Comments record the why, never the what; no banner art or decorative separators.
+- A project `journal.md` is kept compact, precise, and conceptual, one entry per substantive session, written to read the same a month later.
+- On the content pages, volatile numbers are removed rather than data-bound; the document head, header, and footer are deduplicated through a `scripts/` generator rather than a runtime inject or a build tool.
+- For web and programming work, the operator's curated coding knowledge in the Obsidian vault (`Coding/`, indexed by Coding MOC) is consulted before writing code, so output follows those standards.
+
+### Open items
+
+- The Companion's cross-view coordination is a shared-object-with-getters (`window.EC`) plus direct navigation calls, not the operator's preferred central State Manager with `subscribe`/`setState`, an event bus, and URL-state serialization. Moving to that architecture, including shareable, citable URL state for filters and selections, is a larger separate piece, noted not started.
+- The smoke harness covers the non-graph Companion paths; the D3 concept graph and live chat streaming are exercised only in a real browser.
+
+---
+
 ## 2026-06-29 (Session 19): ADR-019, PRISM the binding screening gate, the documentation realigned
 
 **Branch:** `refactor/knowledge-vault` (unpushed)

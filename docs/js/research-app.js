@@ -4,11 +4,9 @@
 (function() {
 'use strict';
 
-// ============================================================
 // Shared Constants & Utilities (exposed via window.EC)
-// ============================================================
 
-var CATEGORIES = [
+const CATEGORIES = [
     'AI_Literacies', 'Generative_KI', 'Prompting', 'KI_Sonstige',
     'Soziale_Arbeit', 'Bias_Ungleichheit', 'Gender',
     'Diversitaet', 'Feministisch', 'Fairness'
@@ -16,7 +14,7 @@ var CATEGORIES = [
 
 // Category colors: 10 distinct hues across a spectrum (Gegenstand -> Perspektive)
 // No gendered color coding. Perceptually distinct, works for colorblind users.
-var CAT_COLORS = {
+const CAT_COLORS = {
     'AI_Literacies':    '#5b8c5a', // sage green
     'Generative_KI':    '#3a7d7e', // teal
     'Prompting':        '#4b7bab', // steel blue
@@ -31,40 +29,74 @@ var CAT_COLORS = {
 
 function escapeHtml(text) {
     if (!text) return '';
-    var div = document.createElement('div');
+    const div = document.createElement('div');
     div.textContent = String(text);
     return div.innerHTML;
 }
 
-// ============================================================
+// Human-readable category label from the underscore key.
+function catLabel(cat) {
+    return String(cat || '').replace(/_/g, ' ');
+}
+
+// Only http(s) links are safe to emit into an href; blocks javascript: and data:.
+function isHttpUrl(u) {
+    return /^https?:\/\//i.test(String(u || '').trim());
+}
+
+// Single download helper: builds a blob (or uses a ready URL), clicks, revokes.
+function download(filename, content, mime) {
+    let url, revoke = false;
+    if (content instanceof Blob) {
+        url = URL.createObjectURL(content); revoke = true;
+    } else if (mime) {
+        url = URL.createObjectURL(new Blob([content], { type: mime })); revoke = true;
+    } else {
+        url = content; // already a URL (e.g. a static asset path)
+    }
+    const a = document.createElement('a');
+    a.href = url; a.download = filename; a.click();
+    if (revoke) URL.revokeObjectURL(url);
+}
+
+// Agreement status of a paper as a {cls, label} pair, shared across views.
+function paperStatus(paper) {
+    if (!paper.benchmark || !paper.benchmark.has_human || !paper.human || !paper.human.decision) {
+        return { cls: 'llmonly', label: 'nur LLM' };
+    }
+    if (paper.benchmark.agreement === true) return { cls: 'agree', label: 'Konsens' };
+    return { cls: 'diverge', label: 'Divergenz' };
+}
+
 // Application State (private)
-// ============================================================
 
-var allPapers = [];
-var filteredPapers = [];
-var vaultMeta = {};
-var kappas = {};
-var fuse = null;
-var activeCategories = new Set();
-var benchmarkInitialized = false;
-var wissensnetzInitialized = false;
-var chatInitialized = true; // chat is default tab, initialized on load
-var conceptData = null;
-var divergencePatterns = null;
-var divergencesList = [];
-var currentPage = 1;
-var currentSort = 'relevance';
-var PAGE_SIZE = 50;
-var currentDetailPaper = null;
-var currentDetailList = null;
+let allPapers = [];
+let filteredPapers = [];
+let vaultMeta = {};
+let kappas = {};
+let fuse = null;
+const activeCategories = new Set();
+let benchmarkInitialized = false;
+let wissensnetzInitialized = false;
+let chatInitialized = true; // chat is default tab, initialized on load
+let conceptData = null;
+let divergencePatterns = null;
+const divergencesList = [];
+let currentPage = 1;
+let currentSort = 'relevance';
+const PAGE_SIZE = 50;
+let currentDetailPaper = null;
+let currentDetailList = null;
+let renderedPapers = []; // the list currently shown in the table (for delegated clicks)
 
-// ============================================================
 // Public API (window.EC)
-// ============================================================
 
 window.EC = {
     // Shared utilities
     escapeHtml: escapeHtml,
+    catLabel: catLabel,
+    download: download,
+    paperStatus: paperStatus,
     CAT_COLORS: CAT_COLORS,
     CATEGORIES: CATEGORIES,
     // State getters
@@ -93,19 +125,22 @@ window.EC = {
     // Cross-view navigation
     focusConcept: function(id) { if (window.focusWissensnetzConcept) window.focusWissensnetzConcept(id); },
     filterDivergencePattern: function(pat) { if (window.filterDivergencePattern) window.filterDivergencePattern(pat); },
+    navigateToPaper: function(id) {
+        let paper = allPapers.find(function(p) { return p.id === id; });
+        if (!paper) return false;
+        switchView('korpus');
+        showPaperDetail(paper, allPapers);
+        return true;
+    },
 };
 
-// HTML onclick aliases
+// HTML onclick aliases (static export/close buttons in index.html)
 window.closePaperModal = function() { closePaperModal(); };
 window.exportFilteredPapers = function() { exportFilteredPapers(); };
-window.downloadKnowledgeDoc = function(p, t) { downloadKnowledgeDoc(p, t); };
 window.downloadVaultZip = function() { downloadVaultZip(); };
 window.exportFilteredMarkdown = function() { exportFilteredMarkdown(); };
-window.showPaperDetail = function(p, l) { showPaperDetail(p, l); };
 
-// ============================================================
 // Initialize
-// ============================================================
 
 document.addEventListener('DOMContentLoaded', function() {
     loadData().then(function() {
@@ -119,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (window.initWissensChat) window.initWissensChat();
 
         // Handle hash-based navigation (from about/help links)
-        var hash = window.location.hash.replace('#', '');
+        const hash = window.location.hash.replace('#', '');
         if (hash && ['chat', 'wissensnetz', 'vergleich', 'korpus'].indexOf(hash) >= 0) {
             switchView(hash);
         }
@@ -131,20 +166,18 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function logInit() {
-    var withDecision = allPapers.filter(function(p) {
+    let withDecision = allPapers.filter(function(p) {
         return p.benchmark.has_human && p.human && p.human.decision;
     }).length;
-    var disagreements = allPapers.filter(function(p) {
+    const disagreements = allPapers.filter(function(p) {
         return p.benchmark.agreement === false;
     }).length;
-    var kappa = (vaultMeta.kappa_overall || 0).toFixed(3);
+    let kappa = (vaultMeta.kappa_overall || 0).toFixed(3);
     console.log('[Evidence] ' + allPapers.length + ' papers | ' + withDecision +
         ' human decisions | ' + disagreements + ' divergences | kappa=' + kappa);
 }
 
-// ============================================================
 // Data Loading
-// ============================================================
 
 function loadData() {
     return fetch('data/research_vault_v2.json').then(function(res) {
@@ -163,11 +196,11 @@ function loadData() {
         });
 
         // Load concept data + divergence patterns in parallel
-        var cgFetch = fetch('data/concept_graph.json').then(function(cgRes) {
+        const cgFetch = fetch('data/concept_graph.json').then(function(cgRes) {
             if (!cgRes.ok) return;
             return cgRes.json().then(function(cgData) {
-                var conceptPapers = allPapers.map(function(p) {
-                    var concepts = cgData.paper_concepts[p.id] || [];
+                const conceptPapers = allPapers.map(function(p) {
+                    const concepts = cgData.paper_concepts[p.id] || [];
                     return {
                         id: p.id,
                         title: p.title,
@@ -188,26 +221,26 @@ function loadData() {
             console.warn('[Evidence] Concept data not available:', e.message);
         });
 
-        var divFetch = fetch('data/promptotyping_v2.json').then(function(ptRes) {
+        const divFetch = fetch('data/promptotyping_v2.json').then(function(ptRes) {
             if (!ptRes.ok) return;
             return ptRes.json().then(function(ptData) {
-                var ptMeta = ptData.meta || {};
+                const ptMeta = ptData.meta || {};
                 divergencePatterns = {
                     pattern_distribution: ptMeta.pattern_distribution || {},
                     asymmetry: ptMeta.asymmetry || {}
                 };
 
                 // Match divergences to allPapers by normalized title
-                var titleMap = {};
+                const titleMap = {};
                 allPapers.forEach(function(p) {
-                    var key = (p.title || '').toLowerCase().substring(0, 80).trim();
+                    let key = (p.title || '').toLowerCase().substring(0, 80).trim();
                     if (key) titleMap[key] = p;
                 });
 
-                var matched = 0;
+                let matched = 0;
                 (ptData.divergences || []).forEach(function(div) {
-                    var key = (div.title || '').toLowerCase().substring(0, 80).trim();
-                    var paper = titleMap[key];
+                    let key = (div.title || '').toLowerCase().substring(0, 80).trim();
+                    let paper = titleMap[key];
                     if (!paper && div.author_year) {
                         paper = allPapers.find(function(p) {
                             return p.author_year === div.author_year;
@@ -232,11 +265,11 @@ function loadData() {
                     (ptData.divergences || []).length + ' matched');
 
                 // Enrich papers with knowledge sections
-                var kMatched = 0;
+                let kMatched = 0;
                 (ptData.papers || []).forEach(function(ptPaper) {
                     if (!ptPaper.knowledge_sections && !ptPaper.knowledge_summary) return;
-                    var key = (ptPaper.title || '').toLowerCase().substring(0, 80).trim();
-                    var paper = titleMap[key];
+                    let key = (ptPaper.title || '').toLowerCase().substring(0, 80).trim();
+                    let paper = titleMap[key];
                     if (!paper && ptPaper.author_year) {
                         paper = allPapers.find(function(p) { return p.author_year === ptPaper.author_year; });
                     }
@@ -258,9 +291,7 @@ function loadData() {
     });
 }
 
-// ============================================================
 // UI Initialization
-// ============================================================
 
 function initializeUI() {
     document.getElementById('search-box').addEventListener('input', handleSearch);
@@ -275,6 +306,38 @@ function initializeUI() {
     // Dropdown navigation
     setupDropdownNav();
 
+    // Delegated clicks for the corpus table (rows, pagination, sortable headers),
+    // attached once on the stable container instead of rebound on every render.
+    document.getElementById('papers-grid').addEventListener('click', function(e) {
+        const pageBtn = e.target.closest('.page-btn[data-page]');
+        if (pageBtn) {
+            e.stopPropagation();
+            currentPage = parseInt(pageBtn.dataset.page, 10);
+            renderPapers(renderedPapers);
+            document.getElementById('view-korpus').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            return;
+        }
+        const th = e.target.closest('.sortable');
+        if (th) {
+            currentSort = th.dataset.sort;
+            const sel = document.getElementById('sort-by');
+            if (sel.querySelector('option[value="' + currentSort + '"]')) sel.value = currentSort;
+            applyFilters();
+            return;
+        }
+        let row = e.target.closest('tr[data-idx]');
+        if (row) showPaperDetail(renderedPapers[parseInt(row.dataset.idx, 10)], renderedPapers);
+    });
+
+    // Delegated download from the detail panel (.md link), reads the current paper.
+    document.getElementById('modal-body').addEventListener('click', function(e) {
+        const dl = e.target.closest('[data-action="download-doc"]');
+        if (dl && currentDetailPaper) {
+            e.preventDefault();
+            downloadKnowledgeDoc(currentDetailPaper.knowledge_doc, currentDetailPaper.title);
+        }
+    });
+
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') closePaperModal();
         if (e.key === '/' && !e.target.matches('input, textarea')) {
@@ -284,47 +347,43 @@ function initializeUI() {
         // Arrow keys for detail panel navigation
         if (document.getElementById('paper-modal').classList.contains('active')) {
             if (e.key === 'ArrowLeft') {
-                var prev = document.getElementById('detail-prev');
+                const prev = document.getElementById('detail-prev');
                 if (prev) prev.click();
             }
             if (e.key === 'ArrowRight') {
-                var next = document.getElementById('detail-next');
+                const next = document.getElementById('detail-next');
                 if (next) next.click();
             }
         }
     });
 }
 
-// ============================================================
 // Intro Numbers
-// ============================================================
 
 function renderIntroNumbers() {
-    var withDecision = allPapers.filter(function(p) {
+    let withDecision = allPapers.filter(function(p) {
         return p.human && p.human.decision && (p.human.decision === 'Include' || p.human.decision === 'Exclude');
     }).length;
-    var el = function(id) { return document.getElementById(id); };
+    const el = function(id) { return document.getElementById(id); };
     if (el('total-count-intro')) el('total-count-intro').textContent = allPapers.length;
     if (el('human-count-intro')) el('human-count-intro').textContent = withDecision;
     if (el('llm-count-intro')) el('llm-count-intro').textContent = allPapers.length;
     if (el('kd-count-intro')) {
-        var kdCount = allPapers.filter(function(p) { return p.knowledge_doc; }).length;
+        let kdCount = allPapers.filter(function(p) { return p.knowledge_doc; }).length;
         el('kd-count-intro').textContent = kdCount;
     }
 }
 
-// ============================================================
 // Category Chips
-// ============================================================
 
 function renderCategoryChips() {
-    var container = document.getElementById('category-chips');
-    var technik = CATEGORIES.slice(0, 4);
-    var sozial = CATEGORIES.slice(4);
+    let container = document.getElementById('category-chips');
+    const technik = CATEGORIES.slice(0, 4);
+    const sozial = CATEGORIES.slice(4);
 
     function chipHtml(cat) {
-        var label = cat.replace(/_/g, ' ');
-        var color = CAT_COLORS[cat];
+        const label = catLabel(cat);
+        let color = CAT_COLORS[cat];
         return '<button class="category-chip" data-cat="' + cat + '">' +
             '<span class="chip-dot" style="background:' + color + '"></span>' + label +
         '</button>';
@@ -338,9 +397,9 @@ function renderCategoryChips() {
         sozial.map(chipHtml).join('');
 
     container.addEventListener('click', function(e) {
-        var chip = e.target.closest('.category-chip');
+        const chip = e.target.closest('.category-chip');
         if (!chip) return;
-        var cat = chip.dataset.cat;
+        let cat = chip.dataset.cat;
         if (activeCategories.has(cat)) {
             activeCategories.delete(cat);
         } else {
@@ -353,12 +412,10 @@ function renderCategoryChips() {
     });
 }
 
-// ============================================================
 // Search & Filter
-// ============================================================
 
 function handleSearch(e) {
-    var query = e.target.value.trim();
+    const query = e.target.value.trim();
     if (query.length === 0) {
         filteredPapers = allPapers.slice();
     } else {
@@ -368,12 +425,12 @@ function handleSearch(e) {
 }
 
 function sortPapers(papers, sortBy) {
-    var sorted = papers.slice();
+    const sorted = papers.slice();
     switch (sortBy) {
         case 'relevance':
             sorted.sort(function(a, b) {
-                var aInc = a.llm.decision === 'Include' ? 0 : 1;
-                var bInc = b.llm.decision === 'Include' ? 0 : 1;
+                let aInc = a.llm.decision === 'Include' ? 0 : 1;
+                let bInc = b.llm.decision === 'Include' ? 0 : 1;
                 if (aInc !== bInc) return aInc - bInc;
                 return (b.year || 0) - (a.year || 0);
             });
@@ -389,23 +446,23 @@ function sortPapers(papers, sortBy) {
             break;
         case 'llm':
             sorted.sort(function(a, b) {
-                var aInc = a.llm.decision === 'Include' ? 0 : 1;
-                var bInc = b.llm.decision === 'Include' ? 0 : 1;
+                let aInc = a.llm.decision === 'Include' ? 0 : 1;
+                let bInc = b.llm.decision === 'Include' ? 0 : 1;
                 return aInc - bInc;
             });
             break;
         case 'human':
             sorted.sort(function(a, b) {
-                var aVal = !a.human || !a.human.decision ? 2 : (a.human.decision === 'Include' ? 0 : 1);
-                var bVal = !b.human || !b.human.decision ? 2 : (b.human.decision === 'Include' ? 0 : 1);
+                let aVal = !a.human || !a.human.decision ? 2 : (a.human.decision === 'Include' ? 0 : 1);
+                let bVal = !b.human || !b.human.decision ? 2 : (b.human.decision === 'Include' ? 0 : 1);
                 return aVal - bVal;
             });
             break;
         case 'status':
             sorted.sort(function(a, b) {
-                var order = { 'false': 0, 'true': 1, 'null': 2 };
-                var aVal = order[String(a.benchmark.agreement)] || 2;
-                var bVal = order[String(b.benchmark.agreement)] || 2;
+                const order = { 'false': 0, 'true': 1, 'null': 2 };
+                let aVal = order[String(a.benchmark.agreement)] || 2;
+                let bVal = order[String(b.benchmark.agreement)] || 2;
                 return aVal - bVal;
             });
             break;
@@ -414,11 +471,11 @@ function sortPapers(papers, sortBy) {
 }
 
 function applyFilters() {
-    var decision = document.getElementById('filter-decision').value;
-    var humanStatus = document.getElementById('filter-human').value;
-    var year = document.getElementById('filter-year').value;
+    const decision = document.getElementById('filter-decision').value;
+    const humanStatus = document.getElementById('filter-human').value;
+    const year = document.getElementById('filter-year').value;
 
-    var filtered = filteredPapers.slice();
+    let filtered = filteredPapers.slice();
 
     if (decision !== 'all') {
         filtered = filtered.filter(function(p) { return p.llm.decision === decision; });
@@ -453,15 +510,14 @@ function applyFilters() {
     renderPapers(filtered);
 }
 
-// ============================================================
 // Table Rendering
-// ============================================================
 
 function renderPapers(papers) {
     if (!papers) papers = filteredPapers;
-    var container = document.getElementById('papers-grid');
-    var resultsCount = document.getElementById('results-count');
-    var totalCount = document.getElementById('total-count');
+    renderedPapers = papers;
+    let container = document.getElementById('papers-grid');
+    const resultsCount = document.getElementById('results-count');
+    const totalCount = document.getElementById('total-count');
     if (resultsCount) resultsCount.textContent = papers.length;
     if (totalCount) totalCount.textContent = allPapers.length;
 
@@ -470,16 +526,16 @@ function renderPapers(papers) {
         return;
     }
 
-    var totalPages = Math.ceil(papers.length / PAGE_SIZE);
+    const totalPages = Math.ceil(papers.length / PAGE_SIZE);
     if (currentPage > totalPages) currentPage = 1;
-    var start = (currentPage - 1) * PAGE_SIZE;
-    var pageItems = papers.slice(start, start + PAGE_SIZE);
+    const start = (currentPage - 1) * PAGE_SIZE;
+    const pageItems = papers.slice(start, start + PAGE_SIZE);
 
-    var rows = pageItems.map(function(p, i) {
-        var idx = start + i;
-        var titleShort = p.title.length > 80 ? p.title.substring(0, 77) + '...' : p.title;
-        var authorShort = (p.author_year || '').length > 22 ? (p.author_year || '').substring(0, 20) + '...' : (p.author_year || '');
-        var divergeClass = p.benchmark.agreement === false ? ' row--diverge' : '';
+    let rows = pageItems.map(function(p, i) {
+        let idx = start + i;
+        const titleShort = p.title.length > 80 ? p.title.substring(0, 77) + '...' : p.title;
+        const authorShort = (p.author_year || '').length > 22 ? (p.author_year || '').substring(0, 20) + '...' : (p.author_year || '');
+        const divergeClass = p.benchmark.agreement === false ? ' row--diverge' : '';
 
         return '<tr class="paper-row' + divergeClass + '" data-idx="' + idx + '">' +
             '<td class="col-title" title="' + escapeHtml(p.title) + '">' + escapeHtml(titleShort) + '</td>' +
@@ -496,7 +552,7 @@ function renderPapers(papers) {
         return currentSort === col ? ' <span class="sort-arrow">&#9660;</span>' : '';
     }
 
-    var html = '<table class="papers-table">' +
+    let html = '<table class="papers-table">' +
         '<thead><tr>' +
             '<th class="col-title sortable" data-sort="title">Titel' + sortArrow('title') + '</th>' +
             '<th class="col-author sortable" data-sort="author">Autor' + sortArrow('author') + '</th>' +
@@ -511,7 +567,7 @@ function renderPapers(papers) {
     if (totalPages > 1) {
         html += '<div class="pagination">';
         if (currentPage > 1) html += '<button class="page-btn" data-page="' + (currentPage - 1) + '">&laquo;</button>';
-        for (var i = 1; i <= totalPages; i++) {
+        for (let i = 1; i <= totalPages; i++) {
             if (i === 1 || i === totalPages || Math.abs(i - currentPage) <= 2) {
                 html += '<button class="page-btn' + (i === currentPage ? ' active' : '') + '" data-page="' + i + '">' + i + '</button>';
             } else if (i === 2 || i === totalPages - 1) {
@@ -523,32 +579,8 @@ function renderPapers(papers) {
     }
 
     container.innerHTML = html;
-
-    container.querySelectorAll('tr[data-idx]').forEach(function(row) {
-        row.addEventListener('click', function() {
-            showPaperDetail(papers[parseInt(row.dataset.idx)], papers);
-        });
-    });
-
-    container.querySelectorAll('.page-btn[data-page]').forEach(function(btn) {
-        btn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            currentPage = parseInt(btn.dataset.page);
-            renderPapers(papers);
-            document.getElementById('view-korpus').scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
-    });
-
-    container.querySelectorAll('.sortable').forEach(function(th) {
-        th.addEventListener('click', function() {
-            currentSort = th.dataset.sort;
-            var sel = document.getElementById('sort-by');
-            if (sel.querySelector('option[value="' + currentSort + '"]')) {
-                sel.value = currentSort;
-            }
-            applyFilters();
-        });
-    });
+    // Row, pagination, and sort clicks are handled by one delegated listener
+    // attached to #papers-grid in initializeUI.
 }
 
 // Table cell helpers
@@ -559,42 +591,35 @@ function decBadge(decision) {
 }
 
 function statusBadge(paper) {
-    if (!paper.benchmark.has_human || !paper.human || !paper.human.decision) {
-        return '<span class="status-pill status-pill--llmonly">nur LLM</span>';
-    }
-    if (paper.benchmark.agreement === true) {
-        return '<span class="status-pill status-pill--agree">Konsens</span>';
-    }
-    return '<span class="status-pill status-pill--diverge">Divergenz</span>';
+    const s = paperStatus(paper);
+    return '<span class="status-pill status-pill--' + s.cls + '">' + s.label + '</span>';
 }
 
 function catLabels(paper) {
-    var html = '';
+    let html = '';
     CATEGORIES.forEach(function(cat, i) {
         if (i === 4) html += '<span class="cat-dot-sep"></span>';
-        var active = paper.llm.all_categories[cat] === 1;
-        var color = active ? CAT_COLORS[cat] : '#e0ddd9';
-        html += '<span class="cat-dot-color" style="background:' + color + '" title="' + cat.replace(/_/g, ' ') + (active ? ': Ja' : ': Nein') + '"></span>';
+        let active = paper.llm.all_categories[cat] === 1;
+        let color = active ? CAT_COLORS[cat] : '#e0ddd9';
+        html += '<span class="cat-dot-color" style="background:' + color + '" title="' + catLabel(cat) + (active ? ': Ja' : ': Nein') + '"></span>';
     });
     return html;
 }
 
-// ============================================================
 // Paper Detail Panel
-// ============================================================
 
 function showPaperDetail(paper, paperList) {
     currentDetailPaper = paper;
     if (paperList) currentDetailList = paperList;
-    var modal = document.getElementById('paper-modal');
+    const modal = document.getElementById('paper-modal');
     document.getElementById('modal-title').textContent = paper.title;
     document.getElementById('modal-author').textContent =
         (paper.author_year || '') + (paper.year ? ' | ' + paper.year : '') + (paper.item_type ? ' | ' + paper.item_type : '');
 
-    var bodyHtml = buildDetailContent(paper);
+    let bodyHtml = buildDetailContent(paper);
 
     if (currentDetailList && currentDetailList.length > 1) {
-        var idx = currentDetailList.indexOf(paper);
+        let idx = currentDetailList.indexOf(paper);
         bodyHtml += '<div class="detail-nav">';
         if (idx > 0) {
             bodyHtml += '<button class="detail-nav-btn" id="detail-prev"><i class="fas fa-arrow-left"></i> Vorheriges</button>';
@@ -614,7 +639,7 @@ function showPaperDetail(paper, paperList) {
     // Detail tab switching
     document.querySelectorAll('.detail-tab').forEach(function(tab) {
         tab.addEventListener('click', function() {
-            var target = tab.dataset.detailTab;
+            let target = tab.dataset.detailTab;
             document.querySelectorAll('.detail-tab').forEach(function(t) { t.classList.toggle('active', t === tab); });
             document.querySelectorAll('.detail-tab-content').forEach(function(c) {
                 c.style.display = c.id === 'dtab-' + target ? '' : 'none';
@@ -623,25 +648,23 @@ function showPaperDetail(paper, paperList) {
         });
     });
 
-    var prevBtn = document.getElementById('detail-prev');
-    var nextBtn = document.getElementById('detail-next');
+    const prevBtn = document.getElementById('detail-prev');
+    const nextBtn = document.getElementById('detail-next');
     if (prevBtn) {
         prevBtn.addEventListener('click', function() {
-            var idx = currentDetailList.indexOf(currentDetailPaper);
+            let idx = currentDetailList.indexOf(currentDetailPaper);
             if (idx > 0) showPaperDetail(currentDetailList[idx - 1]);
         });
     }
     if (nextBtn) {
         nextBtn.addEventListener('click', function() {
-            var idx = currentDetailList.indexOf(currentDetailPaper);
+            let idx = currentDetailList.indexOf(currentDetailPaper);
             if (idx < currentDetailList.length - 1) showPaperDetail(currentDetailList[idx + 1]);
         });
     }
 }
 
-// ============================================================
 // Dropdown Navigation
-// ============================================================
 
 function setupDropdownNav() {
     // Direct view buttons in header nav
@@ -652,28 +675,25 @@ function setupDropdownNav() {
     });
 }
 
-// Exposed globally for cross-view navigation (from chat, wissensnetz, etc.)
-// ============================================================
 // Rich Tooltips (data-driven, HTML content)
-// ============================================================
 
 function initRichTooltips() {
     // Create tooltip container
-    var tip = document.createElement('div');
+    const tip = document.createElement('div');
     tip.className = 'rich-tooltip';
     tip.style.display = 'none';
     document.body.appendChild(tip);
 
     // Build tooltip content from real data
-    var tipContent = buildTooltipContent();
+    const tipContent = buildTooltipContent();
 
     // Attach to all .has-tip elements
     document.querySelectorAll('.has-tip').forEach(function(el) {
-        var key = el.dataset.tipKey;
+        let key = el.dataset.tipKey;
         if (!key) return;
 
         el.addEventListener('mouseenter', function(e) {
-            var html = tipContent[key];
+            let html = tipContent[key];
             if (!html) return;
             tip.innerHTML = html;
             tip.style.display = 'block';
@@ -687,10 +707,10 @@ function initRichTooltips() {
 }
 
 function positionTooltip(tip, anchor) {
-    var rect = anchor.getBoundingClientRect();
-    var tipRect = tip.getBoundingClientRect();
-    var left = rect.left + rect.width / 2 - tipRect.width / 2;
-    var top = rect.bottom + 10;
+    const rect = anchor.getBoundingClientRect();
+    const tipRect = tip.getBoundingClientRect();
+    let left = rect.left + rect.width / 2 - tipRect.width / 2;
+    let top = rect.bottom + 10;
 
     // Keep within viewport
     if (left < 8) left = 8;
@@ -702,53 +722,48 @@ function positionTooltip(tip, anchor) {
 }
 
 function buildTooltipContent() {
-    var papers = allPapers;
-    var meta = vaultMeta;
-    var cats = kappas;
+    let papers = allPapers;
+
+    // Single pass over the corpus for every aggregate the tooltips need.
+    let total = papers.length;
+    let yearCounts = {}, catCounts = {};
+    let kdCount = 0, withDecision = 0, humanInclude = 0, divergences = 0, llmInclude = 0;
+    CATEGORIES.forEach(function(c) { catCounts[c] = 0; });
+    papers.forEach(function(p) {
+        if (p.year) yearCounts[p.year] = (yearCounts[p.year] || 0) + 1;
+        if (p.knowledge_doc) kdCount++;
+        if (p.llm && p.llm.decision === 'Include') llmInclude++;
+        if (p.llm && p.llm.all_categories) {
+            CATEGORIES.forEach(function(c) { if (p.llm.all_categories[c] === 1) catCounts[c]++; });
+        }
+        if (p.human && p.human.decision) { withDecision++; if (p.human.decision === 'Include') humanInclude++; }
+        if (p.benchmark && p.benchmark.agreement === false) divergences++;
+    });
+    const humanExclude = withDecision - humanInclude;
+    const inclPct = withDecision ? Math.round(humanInclude / withDecision * 100) : 0;
 
     // --- Papers ---
-    var yearCounts = {};
-    papers.forEach(function(p) { if (p.year) yearCounts[p.year] = (yearCounts[p.year] || 0) + 1; });
-    var topYears = Object.keys(yearCounts).sort(function(a, b) { return yearCounts[b] - yearCounts[a]; }).slice(0, 5);
-    var yearBars = topYears.map(function(y) {
-        var pct = Math.round(yearCounts[y] / papers.length * 100);
+    const topYears = Object.keys(yearCounts).sort(function(a, b) { return yearCounts[b] - yearCounts[a]; }).slice(0, 5);
+    const yearBars = topYears.map(function(y) {
+        let pct = Math.round(yearCounts[y] / total * 100);
         return '<div class="tip-bar-row"><span class="tip-bar-label">' + y + '</span>' +
             '<div class="tip-bar"><div class="tip-bar-fill" style="width:' + pct + '%"></div></div>' +
             '<span class="tip-bar-val">' + yearCounts[y] + '</span></div>';
     }).join('');
 
-    var tipPapers = '<div class="tip-title">Korpus-Zusammensetzung</div>' +
+    const tipPapers = '<div class="tip-title">Korpus-Zusammensetzung</div>' +
         '<div class="tip-text">Identifiziert via Deep Research (4 KI-Provider) + manuelle Ergaenzung.</div>' +
         '<div class="tip-section">Jahrgaenge</div>' + yearBars;
 
     // --- Wissensdokumente ---
-    var kdCount = papers.filter(function(p) { return p.knowledge_doc; }).length;
-    var pdfRate = Math.round(257 / 326 * 100);
-    var kdRate = Math.round(kdCount / 326 * 100);
-
-    var tipWD = '<div class="tip-title">Destillationspipeline</div>' +
+    const tipWD = '<div class="tip-title">Destillationspipeline</div>' +
         '<div class="tip-pipeline">' +
-            '<span class="tip-step">326 Papers</span> <i class="fas fa-arrow-right tip-arrow"></i> ' +
-            '<span class="tip-step">257 PDFs <small>(' + pdfRate + '%)</small></span> <i class="fas fa-arrow-right tip-arrow"></i> ' +
-            '<span class="tip-step">252 Markdown</span> <i class="fas fa-arrow-right tip-arrow"></i> ' +
+            '<span class="tip-step">' + total + ' Papers</span> <i class="fas fa-arrow-right tip-arrow"></i> ' +
             '<span class="tip-step tip-step-hl">' + kdCount + ' Wissensdok.</span>' +
         '</div>' +
-        '<div class="tip-text">Jedes Wissensdokument: Kernbefund, Forschungsfrage, Methodik, Kategorie-Evidenz. Qualitaet: 97.2% verifiziert.</div>';
+        '<div class="tip-text">Dreistufige Extraktion je Volltext: LLM-Extraktion und Klassifikation, deterministische Formatierung, LLM-Verifikation gegen das Original. Jedes Wissensdokument enthaelt Kernbefund, Forschungsfrage, Methodik und Kategorie-Evidenz.</div>';
 
-    // --- Expert:innen-Bewertungen ---
-    var withDecision = papers.filter(function(p) {
-        return p.human && p.human.decision;
-    }).length;
-    var humanInclude = papers.filter(function(p) {
-        return p.human && p.human.decision === 'Include';
-    }).length;
-    var humanExclude = withDecision - humanInclude;
-    var divergences = papers.filter(function(p) {
-        return p.benchmark.agreement === false;
-    }).length;
-    var inclPct = withDecision ? Math.round(humanInclude / withDecision * 100) : 0;
-
-    var tipHuman = '<div class="tip-title">Duale Bewertung</div>' +
+    const tipHuman = '<div class="tip-title">Duale Bewertung</div>' +
         '<div class="tip-grid">' +
             '<div class="tip-stat"><span class="tip-stat-val" style="color:var(--success)">' + humanInclude + '</span><span class="tip-stat-lbl">Include (' + inclPct + '%)</span></div>' +
             '<div class="tip-stat"><span class="tip-stat-val" style="color:var(--gray-500)">' + humanExclude + '</span><span class="tip-stat-lbl">Exclude</span></div>' +
@@ -757,53 +772,48 @@ function buildTooltipContent() {
         '<div class="tip-text">Fachwissenschaftler:innen (Sackl-Sharif, Klinger) bewerten nach identischem 10-Kategorien-Schema wie das LLM.</div>';
 
     // --- 10 Kategorien ---
-    var catNames = CATEGORIES;
-    var catBars = catNames.map(function(cat, i) {
-        var count = papers.filter(function(p) { return p.llm.all_categories[cat] === 1; }).length;
-        var pct = Math.round(count / papers.length * 100);
-        var color = CAT_COLORS[cat];
-        var groupLabel = i < 4 ? '' : (i === 4 ? '<div class="tip-section" style="margin-top:0.375rem;">Perspektive</div>' : '');
-        return groupLabel + '<div class="tip-bar-row"><span class="tip-bar-label">' + cat.replace(/_/g, ' ') + '</span>' +
+    const catBars = CATEGORIES.map(function(cat, i) {
+        let pct = Math.round(catCounts[cat] / total * 100);
+        let color = CAT_COLORS[cat];
+        const groupLabel = i < 4 ? '' : (i === 4 ? '<div class="tip-section" style="margin-top:0.375rem;">Perspektive</div>' : '');
+        return groupLabel + '<div class="tip-bar-row"><span class="tip-bar-label">' + catLabel(cat) + '</span>' +
             '<div class="tip-bar"><div class="tip-bar-fill" style="width:' + pct + '%;background:' + color + '"></div></div>' +
             '<span class="tip-bar-val">' + pct + '%</span></div>';
     }).join('');
 
-    var tipCats = '<div class="tip-title">10 Bewertungskategorien</div>' +
+    const tipCats = '<div class="tip-title">10 Bewertungskategorien</div>' +
         '<div class="tip-section">Gegenstand</div>' + catBars;
 
     // --- Nav buttons ---
-    var llmInclude = papers.filter(function(p) { return p.llm.decision === 'Include'; }).length;
-    var conceptCount = (conceptData && conceptData.nodes) ? conceptData.nodes.length : 136;
-    var topConcepts = (conceptData && conceptData.nodes)
+    const conceptCount = (conceptData && conceptData.nodes) ? conceptData.nodes.length : null;
+    const topConcepts = (conceptData && conceptData.nodes)
         ? conceptData.nodes.slice().sort(function(a, b) { return b.frequency - a.frequency; }).slice(0, 5)
         : [];
 
-    var tipChat = '<div class="tip-title">Wissens-Chat</div>' +
+    const tipChat = '<div class="tip-title">Wissens-Chat</div>' +
         '<div class="tip-text">Fragen Sie das synthetisierte Wissen. Ein LLM (Gemini 3 Flash) antwortet mit Inline-Zitationen, die direkt zum Korpus verlinken.</div>' +
         '<div class="tip-text tip-muted">Zweifach LLM-vermittelt: Wissensextraktion + Antwortgenerierung.</div>';
 
-    var tipNetz = '<div class="tip-title">Wissensnetz</div>' +
-        '<div class="tip-text">' + conceptCount + ' Konzepte aus ' + kdCount + ' Wissensdokumenten.</div>';
+    let tipNetz = '<div class="tip-title">Wissensnetz</div>' +
+        '<div class="tip-text">' + (conceptCount != null ? conceptCount + ' Konzepte' : 'Konzepte') +
+        ' aus ' + kdCount + ' Wissensdokumenten.</div>';
     if (topConcepts.length > 0) {
         tipNetz += '<div class="tip-section">Haeufigste Konzepte</div>';
         topConcepts.forEach(function(c) {
-            var pct = Math.round(c.frequency / papers.length * 100);
+            let pct = Math.round(c.frequency / papers.length * 100);
             tipNetz += '<div class="tip-bar-row"><span class="tip-bar-label">' + escapeHtml(c.label) + '</span>' +
                 '<div class="tip-bar"><div class="tip-bar-fill" style="width:' + pct + '%;background:var(--primary)"></div></div>' +
                 '<span class="tip-bar-val">' + c.frequency + '</span></div>';
         });
     }
 
-    var tipVergleich = '<div class="tip-title">Kategorien-Explorer</div>' +
+    const tipVergleich = '<div class="tip-title">Kategorien-Explorer</div>' +
         '<div class="tip-text">10 Kategorien als interaktives Spektrum. Waehlen Sie eine Kategorie, um Human- und LLM-Raten, Divergenz-Papers und Konzepte zu explorieren.</div>' +
-        '<div class="tip-grid">' +
-            '<div class="tip-stat"><span class="tip-stat-val" style="color:var(--warning)">Gender</span><span class="tip-stat-lbl">-27pp</span></div>' +
-            '<div class="tip-stat"><span class="tip-stat-val" style="color:var(--info)">Fairness</span><span class="tip-stat-lbl">+21pp</span></div>' +
-        '</div>';
+        '<div class="tip-text tip-muted">Die Raten je Kategorie weichen unterschiedlich stark ab; die Auswahl zeigt Richtung und Ausmass pro Kategorie.</div>';
 
-    var tipKorpus = '<div class="tip-title">Korpus</div>' +
+    const tipKorpus = '<div class="tip-title">Korpus</div>' +
         '<div class="tip-grid">' +
-            '<div class="tip-stat"><span class="tip-stat-val">' + papers.length + '</span><span class="tip-stat-lbl">Papers</span></div>' +
+            '<div class="tip-stat"><span class="tip-stat-val">' + total + '</span><span class="tip-stat-lbl">Papers</span></div>' +
             '<div class="tip-stat"><span class="tip-stat-val" style="color:var(--success)">' + llmInclude + '</span><span class="tip-stat-lbl">LLM Include</span></div>' +
             '<div class="tip-stat"><span class="tip-stat-val">' + withDecision + '</span><span class="tip-stat-lbl">Human bewertet</span></div>' +
         '</div>' +
@@ -826,12 +836,14 @@ window.switchView = function(viewId) { switchView(viewId); };
 function switchView(viewId) {
     // Update nav button active state
     document.querySelectorAll('.nav-view-btn').forEach(function(btn) {
-        btn.classList.toggle('active', btn.dataset.view === viewId);
+        const on = btn.dataset.view === viewId;
+        btn.classList.toggle('active', on);
+        btn.setAttribute('aria-selected', on ? 'true' : 'false');
     });
 
     // Show/hide view sections
     document.querySelectorAll('.view-content').forEach(function(v) {
-        var isActive = v.id === 'view-' + viewId;
+        const isActive = v.id === 'view-' + viewId;
         v.classList.toggle('active', isActive);
         v.style.display = isActive ? '' : 'none';
     });
@@ -862,18 +874,18 @@ function highlightActiveRow(paper) {
         r.classList.remove('row--active');
     });
     if (!paper || !currentDetailList) return;
-    var idx = currentDetailList.indexOf(paper);
+    let idx = currentDetailList.indexOf(paper);
     if (idx >= 0) {
-        var row = document.querySelector('tr[data-idx="' + idx + '"]');
+        let row = document.querySelector('tr[data-idx="' + idx + '"]');
         if (row) row.classList.add('row--active');
     }
 }
 
 function buildDetailContent(paper) {
-    var hasKnowledge = paper.knowledge && paper.knowledge.sections &&
+    const hasKnowledge = paper.knowledge && paper.knowledge.sections &&
         Object.keys(paper.knowledge.sections).length > 0;
 
-    var html = '';
+    let html = '';
 
     // Tabs
     html += '<div class="detail-tabs">';
@@ -891,15 +903,15 @@ function buildDetailContent(paper) {
         '</div>';
     }
 
-    var links = [];
+    const links = [];
     if (paper.doi && paper.doi !== 'nan') {
         links.push('<a href="https://doi.org/' + escapeHtml(paper.doi) + '" target="_blank" rel="noopener" class="detail-link"><i class="fas fa-external-link-alt"></i> DOI</a>');
     }
-    if (paper.url && paper.url !== 'nan' && paper.url !== '') {
+    if (paper.url && paper.url !== 'nan' && paper.url !== '' && isHttpUrl(paper.url)) {
         links.push('<a href="' + escapeHtml(paper.url) + '" target="_blank" rel="noopener" class="detail-link"><i class="fas fa-globe"></i> Quelle</a>');
     }
     if (paper.knowledge_doc) {
-        links.push('<a href="#" onclick="downloadKnowledgeDoc(\'' + escapeHtml(paper.knowledge_doc) + '\', \'' + escapeHtml(paper.title).replace(/'/g, "\\'") + '\'); return false;" class="detail-link"><i class="fas fa-download"></i> .md</a>');
+        links.push('<a href="#" data-action="download-doc" class="detail-link"><i class="fas fa-download"></i> .md</a>');
     }
     if (links.length) {
         html += '<div class="detail-links">' + links.join('') + '</div>';
@@ -907,7 +919,7 @@ function buildDetailContent(paper) {
 
     html += '<div class="detail-section"><h3>Bewertung</h3><div class="assessment-grid">';
 
-    var llmDecColor = paper.llm.decision === 'Include' ? 'var(--success)' : 'var(--gray-500)';
+    const llmDecColor = paper.llm.decision === 'Include' ? 'var(--success)' : 'var(--gray-500)';
     html += '<div class="assessment-panel">' +
         '<div class="panel-header">LLM (Claude Haiku 4.5)</div>' +
         '<div class="assessment-decision" style="color:' + llmDecColor + '">' + paper.llm.decision + '</div>' +
@@ -919,16 +931,18 @@ function buildDetailContent(paper) {
     html += '</div>';
 
     if (paper.benchmark.has_human && paper.human && paper.human.decision) {
-        var hDecColor = paper.human.decision === 'Include' ? 'var(--success)' : 'var(--gray-500)';
+        const hDecColor = paper.human.decision === 'Include' ? 'var(--success)' : 'var(--gray-500)';
         html += '<div class="assessment-panel">' +
             '<div class="panel-header">Expert:innen</div>' +
             '<div class="assessment-decision" style="color:' + hDecColor + '">' + paper.human.decision + '</div>' +
             catGridColored(paper.human.all_categories) +
         '</div>';
     } else {
+        let total = vaultMeta.total_papers || allPapers.length;
+        const withHuman = vaultMeta.papers_with_human != null ? vaultMeta.papers_with_human : '';
         html += '<div class="assessment-panel assessment-panel--empty">' +
             '<div class="panel-header">Expert:innen</div>' +
-            '<p class="empty-note">Nicht bewertet. Human Assessment deckt 291 von 326 Papers ab.</p>' +
+            '<p class="empty-note">Nicht bewertet. Human Assessment deckt ' + withHuman + ' von ' + total + ' Papers ab.</p>' +
         '</div>';
     }
 
@@ -936,7 +950,7 @@ function buildDetailContent(paper) {
 
     if (paper.benchmark.has_human && paper.human && paper.human.decision) {
         if (paper.benchmark.agreement === false) {
-            var affectedCats = paper.benchmark.affected_categories || [];
+            const affectedCats = paper.benchmark.affected_categories || [];
             html += '<div class="divergence-panel">' +
                 '<strong>Divergenz</strong>';
             if (paper.benchmark.disagreement_type) {
@@ -947,8 +961,8 @@ function buildDetailContent(paper) {
             }
             if (affectedCats.length) {
                 html += '<p class="affected-cats">Betroffene Kategorien: ' + affectedCats.map(function(c) {
-                    var color = CAT_COLORS[c] || 'var(--gray-400)';
-                    return '<span style="color:' + color + ';font-weight:600;">' + c.replace(/_/g, ' ') + '</span>';
+                    let color = CAT_COLORS[c] || 'var(--gray-400)';
+                    return '<span style="color:' + color + ';font-weight:600;">' + catLabel(c) + '</span>';
                 }).join(', ') + '</p>';
             }
             html += '</div>';
@@ -963,7 +977,7 @@ function buildDetailContent(paper) {
     // Tab: Wissensdokument
     html += '<div class="detail-tab-content" id="dtab-wissen" style="display:none;">';
     if (hasKnowledge) {
-        var ks = paper.knowledge.sections;
+        const ks = paper.knowledge.sections;
         if (ks.kernbefund) {
             html += '<div class="kd-section kd-kernbefund">';
             html += '<h4>Kernbefund</h4>';
@@ -990,14 +1004,16 @@ function buildDetailContent(paper) {
         }
         if (paper.knowledge_doc) {
             html += '<div style="margin-top:1rem;">';
-            html += '<a href="#" onclick="downloadKnowledgeDoc(\'' + escapeHtml(paper.knowledge_doc) + '\', \'' + escapeHtml(paper.title).replace(/'/g, "\\'") + '\'); return false;" class="export-button"><i class="fas fa-download"></i> Vollstaendiges Wissensdokument (.md)</a>';
+            html += '<a href="#" data-action="download-doc" class="export-button"><i class="fas fa-download"></i> Vollstaendiges Wissensdokument (.md)</a>';
             html += '</div>';
         }
     } else {
+        const totalKd = vaultMeta.total_papers || allPapers.length;
+        const withoutKd = totalKd - allPapers.filter(function(p) { return p.knowledge_doc; }).length;
         html += '<div class="kd-empty">';
         html += '<p><i class="fas fa-file-alt" style="font-size:1.5rem;color:var(--gray-300);"></i></p>';
         html += '<p>Kein Wissensdokument verfuegbar.</p>';
-        html += '<p style="font-size:var(--text-xs);color:var(--gray-400);">Fuer dieses Paper konnte kein PDF akquiriert werden (77 von 326 Papers betroffen).</p>';
+        html += '<p style="font-size:var(--text-xs);color:var(--gray-400);">Fuer dieses Paper konnte kein PDF akquiriert werden (' + withoutKd + ' von ' + totalKd + ' Papers betroffen).</p>';
         html += '</div>';
     }
     html += '</div>'; // close dtab-wissen
@@ -1006,44 +1022,38 @@ function buildDetailContent(paper) {
 }
 
 function catGridColored(allCategories) {
-    var html = '<div class="category-grid-10">';
+    let html = '<div class="category-grid-10">';
     CATEGORIES.forEach(function(cat) {
-        var active = allCategories[cat] === 1;
-        var color = active ? CAT_COLORS[cat] : 'var(--gray-300)';
-        var textColor = active ? 'var(--gray-800)' : 'var(--gray-400)';
-        var fontWeight = active ? '600' : '400';
+        let active = allCategories[cat] === 1;
+        let color = active ? CAT_COLORS[cat] : 'var(--gray-300)';
+        const textColor = active ? 'var(--gray-800)' : 'var(--gray-400)';
+        const fontWeight = active ? '600' : '400';
         html += '<div class="cat-grid-item" style="color:' + textColor + ';font-weight:' + fontWeight + '">' +
             '<span class="cat-dot" style="background:' + color + '"></span>' +
-            '<span>' + cat.replace(/_/g, ' ') + '</span>' +
+            '<span>' + catLabel(cat) + '</span>' +
         '</div>';
     });
     html += '</div>';
     return html;
 }
 
-// ============================================================
 // Export & Download
-// ============================================================
 
 function exportFilteredPapers() {
-    var papers = filteredPapers.length > 0 ? filteredPapers : allPapers;
-    var headers = ['ID', 'Title', 'Author_Year', 'Year', 'Item_Type', 'DOI',
+    let papers = filteredPapers.length > 0 ? filteredPapers : allPapers;
+    const headers = ['ID', 'Title', 'Author_Year', 'Year', 'Item_Type', 'DOI',
         'LLM_Decision', 'LLM_Categories',
         'Human_Decision', 'Has_Human', 'Agreement'];
-    var rows = papers.map(function(p) {
+    let rows = papers.map(function(p) {
         return [p.id, p.title, p.author_year, p.year, p.item_type, p.doi,
             p.llm.decision, p.llm.categories.join(';'),
             p.human ? p.human.decision : '', p.benchmark.has_human,
             p.benchmark.agreement === null ? '' : p.benchmark.agreement];
     });
-    var csv = [headers].concat(rows).map(function(r) {
+    const csv = [headers].concat(rows).map(function(r) {
         return r.map(function(v) { return '"' + String(v || '').replace(/"/g, '""') + '"'; }).join(',');
     }).join('\n');
-    var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-    var url = URL.createObjectURL(blob);
-    var a = document.createElement('a');
-    a.href = url; a.download = 'fem_prompt_papers.csv'; a.click();
-    URL.revokeObjectURL(url);
+    download('fem_prompt_papers.csv', csv, 'text/csv;charset=utf-8;');
 }
 
 function downloadKnowledgeDoc(docPath, title) {
@@ -1051,21 +1061,15 @@ function downloadKnowledgeDoc(docPath, title) {
         if (!response.ok) throw new Error('HTTP ' + response.status);
         return response.blob();
     }).then(function(blob) {
-        var safeName = title.replace(/[<>:"/\\|?*]/g, '-').substring(0, 100) + '.md';
-        var url = URL.createObjectURL(blob);
-        var a = document.createElement('a');
-        a.href = url; a.download = safeName; a.click();
-        URL.revokeObjectURL(url);
+        let safeName = title.replace(/[<>:"/\\|?*]/g, '-').substring(0, 100) + '.md';
+        download(safeName, blob);
     }).catch(function(err) {
         console.error('[Download]', err);
     });
 }
 
 function downloadVaultZip() {
-    var a = document.createElement('a');
-    a.href = 'downloads/vault.zip';
-    a.download = 'FemPrompt_Research_Vault.zip';
-    a.click();
+    download('FemPrompt_Research_Vault.zip', 'downloads/vault.zip');
 }
 
 function exportFilteredMarkdown() {
@@ -1074,23 +1078,23 @@ function exportFilteredMarkdown() {
         return;
     }
 
-    var papers = filteredPapers.length ? filteredPapers : allPapers;
-    var withDocs = papers.filter(function(p) { return p.knowledge_doc; });
+    let papers = filteredPapers.length ? filteredPapers : allPapers;
+    const withDocs = papers.filter(function(p) { return p.knowledge_doc; });
 
     if (withDocs.length === 0) {
         alert('Keine Wissensdokumente fuer die aktuelle Auswahl verfuegbar.');
         return;
     }
 
-    var zip = new JSZip();
-    var fetches = [];
+    const zip = new JSZip();
+    const fetches = [];
 
     withDocs.forEach(function(p) {
-        var promise = fetch(p.knowledge_doc)
+        const promise = fetch(p.knowledge_doc)
             .then(function(res) { return res.ok ? res.text() : null; })
             .then(function(text) {
                 if (text) {
-                    var safeName = (p.author_year || p.id).replace(/[<>:"/\\|?*]/g, '-').substring(0, 80) + '.md';
+                    let safeName = (p.author_year || p.id).replace(/[<>:"/\\|?*]/g, '-').substring(0, 80) + '.md';
                     zip.file(safeName, text);
                 }
             })
@@ -1100,7 +1104,7 @@ function exportFilteredMarkdown() {
 
     Promise.all(fetches).then(function() {
         // Generate README with system prompt
-        var readme = '# Forschungskorpus-Auswahl (' + withDocs.length + ' Wissensdokumente)\n\n';
+        let readme = '# Forschungskorpus-Auswahl (' + withDocs.length + ' Wissensdokumente)\n\n';
         readme += 'Exportiert aus: Feministische AI Literacies -- Evidence Companion\n';
         readme += 'Datum: ' + new Date().toISOString().split('T')[0] + '\n';
         readme += 'Quelle: https://chpollin.github.io/FemPrompt_SozArb/\n\n';
@@ -1132,12 +1136,7 @@ function exportFilteredMarkdown() {
 
         return zip.generateAsync({ type: 'blob' });
     }).then(function(blob) {
-        var url = URL.createObjectURL(blob);
-        var a = document.createElement('a');
-        a.href = url;
-        a.download = 'fem_prompt_auswahl_' + withDocs.length + '_papers.zip';
-        a.click();
-        URL.revokeObjectURL(url);
+        download('fem_prompt_auswahl_' + withDocs.length + '_papers.zip', blob);
     });
 }
 

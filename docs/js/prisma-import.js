@@ -61,40 +61,36 @@
 (function() {
 'use strict';
 
-// ============================================================
 // Vocabularies. docs/data/ carries no categories JSON, so these are derived
 // from benchmark/config/categories.yaml (v1.2), the same source prisma.js
 // mirrors in its own constants.
-// ============================================================
 
-var TECH_CATS = ['AI_Literacies', 'Generative_KI', 'Prompting', 'KI_Sonstige'];
-var SOCIAL_CATS = ['Soziale_Arbeit', 'Bias_Ungleichheit', 'Gender', 'Diversitaet', 'Feministisch', 'Fairness'];
-var ALL_CATS = TECH_CATS.concat(SOCIAL_CATS);
+const TECH_CATS = ['AI_Literacies', 'Generative_KI', 'Prompting', 'KI_Sonstige'];
+const SOCIAL_CATS = ['Soziale_Arbeit', 'Bias_Ungleichheit', 'Gender', 'Diversitaet', 'Feministisch', 'Fairness'];
+const ALL_CATS = TECH_CATS.concat(SOCIAL_CATS);
 
 // decision.options in categories.yaml; only Include/Exclude are representable
 // in the reviewer schema, Unclear rows are reported and skipped.
-var DECISION_VOCAB = ['Include', 'Exclude', 'Unclear'];
+const DECISION_VOCAB = ['Include', 'Exclude', 'Unclear'];
 
 // exclusion_reasons codes in categories.yaml; the Excel writes them with
 // spaces ("No full text"), the canonical codes use underscores.
-var REASON_VOCAB = ['Duplicate', 'Not_relevant_topic', 'Wrong_publication_type', 'No_full_text', 'Language'];
+const REASON_VOCAB = ['Duplicate', 'Not_relevant_topic', 'Wrong_publication_type', 'No_full_text', 'Language'];
 
 // accepted binary category cell values in the Excel export (case-insensitive);
 // an empty cell means "not assessed" and maps to false without a flag.
-var CAT_TRUE = 'ja', CAT_FALSE = 'nein';
+let CAT_TRUE = 'ja', CAT_FALSE = 'nein';
 
-var REVIEWER_SCHEMA = 'femprompt-prisma-reviewer/0.2';
-var LS_KEY = 'femprompt-prisma-state/0.2'; // read-only here: collision base
-var DEFAULT_REVIEWER = 'R1';
+const REVIEWER_SCHEMA = 'femprompt-prisma-reviewer/0.2';
+const LS_KEY = 'femprompt-prisma-state/0.2'; // read-only here: collision base
+const DEFAULT_REVIEWER = 'R1';
 
-// ============================================================
 // CSV parser (RFC-4180-ish): quoted fields, "" escapes, commas and line
 // breaks inside quotes, CRLF and LF and lone CR, BOM. No library.
-// ============================================================
 
 function parseCsv(text) {
     if (text.charCodeAt(0) === 0xFEFF) text = text.slice(1);
-    var rows = [], field = '', row = [], inQ = false, i = 0, c;
+    let rows = [], field = '', row = [], inQ = false, i = 0, c;
     while (i < text.length) {
         c = text[i];
         if (inQ) {
@@ -118,14 +114,12 @@ function parseCsv(text) {
     return rows;
 }
 
-// ============================================================
 // Header mapping (column shape of benchmark/data/human_assessment.csv)
-// ============================================================
 
 function mapHeader(headerRow) {
-    var idx = {};
+    let idx = {};
     headerRow.forEach(function(h, i) {
-        var n = (h || '').trim();
+        const n = (h || '').trim();
         if (n === 'ID') idx.rowId = i;
         else if (n === 'Zotero_Key') idx.key = i;
         else if (n === 'Title') idx.title = i;
@@ -134,16 +128,14 @@ function mapHeader(headerRow) {
         else if (/^Diversit/.test(n)) idx['cat_Diversitaet'] = i; // "Diversitaet / Intersektionalität"
         else if (ALL_CATS.indexOf(n) !== -1) idx['cat_' + n] = i;
     });
-    var missing = [];
+    let missing = [];
     if (idx.key == null) missing.push('Zotero_Key');
     if (idx.decision == null) missing.push('Decision');
     ALL_CATS.forEach(function(c) { if (idx['cat_' + c] == null) missing.push(c); });
     return { idx: idx, missing: missing };
 }
 
-// ============================================================
 // Conversion + validation
-// ============================================================
 
 function esc(s) {
     if (window.EC && window.EC.escapeHtml) return window.EC.escapeHtml(s);
@@ -153,24 +145,24 @@ function esc(s) {
 }
 
 function deriveDecision(cats) {
-    var tech = TECH_CATS.some(function(c) { return cats[c]; });
-    var soc = SOCIAL_CATS.some(function(c) { return cats[c]; });
+    const tech = TECH_CATS.some(function(c) { return cats[c]; });
+    const soc = SOCIAL_CATS.some(function(c) { return cats[c]; });
     return (tech && soc) ? 'Include' : 'Exclude';
 }
 
 function normalizeReason(raw) {
-    var t = (raw || '').trim();
+    let t = (raw || '').trim();
     if (!t) return { code: null, known: true, empty: true };
-    var norm = t.replace(/[\s/]+/g, '_').toLowerCase();
-    for (var i = 0; i < REASON_VOCAB.length; i++) {
+    const norm = t.replace(/[\s/]+/g, '_').toLowerCase();
+    for (let i = 0; i < REASON_VOCAB.length; i++) {
         if (REASON_VOCAB[i].toLowerCase() === norm) return { code: REASON_VOCAB[i], known: true, empty: false };
     }
     return { code: t, known: false, empty: false }; // preserved verbatim, flagged
 }
 
 function normalizeDecision(raw) {
-    var t = (raw || '').trim();
-    for (var i = 0; i < DECISION_VOCAB.length; i++) {
+    let t = (raw || '').trim();
+    for (let i = 0; i < DECISION_VOCAB.length; i++) {
         if (DECISION_VOCAB[i].toLowerCase() === t.toLowerCase()) return DECISION_VOCAB[i];
     }
     return t === '' ? null : undefined; // null = missing, undefined = unknown value
@@ -180,8 +172,8 @@ function sameDecision(a, b) {
     if (!a || !b) return false;
     if (a.decision !== b.decision) return false;
     if ((a.reason || null) !== (b.reason || null)) return false;
-    for (var i = 0; i < ALL_CATS.length; i++) {
-        var c = ALL_CATS[i];
+    for (let i = 0; i < ALL_CATS.length; i++) {
+        let c = ALL_CATS[i];
         if (!!(a.categories && a.categories[c]) !== !!(b.categories && b.categories[c])) return false;
     }
     return true;
@@ -192,27 +184,27 @@ function sameDecision(a, b) {
 // committed reviewer file; the file wins, mirroring prisma.js semantics.
 function loadExistingLocal(rid) {
     try {
-        var raw = localStorage.getItem(LS_KEY);
+        const raw = localStorage.getItem(LS_KEY);
         if (!raw) return null;
-        var o = JSON.parse(raw);
+        let o = JSON.parse(raw);
         return (o.reviewers && o.reviewers[rid]) ? o.reviewers[rid] : null;
     } catch (e) { return null; }
 }
 
 function convert(rows, header, rid, existing, overwrite, fileName) {
-    var idx = header.idx;
-    var nowIso = new Date().toISOString();
-    var corpus = {};
-    var papers = (window.EC && window.EC.getAllPapers) ? (window.EC.getAllPapers() || []) : [];
+    let idx = header.idx;
+    const nowIso = new Date().toISOString();
+    const corpus = {};
+    const papers = (window.EC && window.EC.getAllPapers) ? (window.EC.getAllPapers() || []) : [];
     papers.forEach(function(p) { corpus[p.id] = true; });
-    var corpusLoaded = papers.length > 0;
+    const corpusLoaded = papers.length > 0;
 
-    var report = [];          // { row, id, kind, level, detail }
-    var decisions = {};       // the generated payload's decision map
+    const report = [];          // { row, id, kind, level, detail }
+    const decisions = {};       // the generated payload's decision map
     Object.keys(existing || {}).forEach(function(k) { decisions[k] = existing[k]; });
 
-    var seen = {};
-    var stats = { rows: 0, added: 0, unchanged: 0, collisionsKept: 0, collisionsOverwritten: 0,
+    const seen = {};
+    const stats = { rows: 0, added: 0, unchanged: 0, collisionsKept: 0, collisionsOverwritten: 0,
                   skipped: 0, keptExistingOnly: 0, flags: 0 };
 
     function flag(row, id, kind, level, detail) {
@@ -221,11 +213,11 @@ function convert(rows, header, rid, existing, overwrite, fileName) {
     }
 
     rows.forEach(function(r, n) {
-        var rowNo = n + 2; // 1-based, after header row
+        let rowNo = n + 2; // 1-based, after header row
         // interior blank line: ignore without counting, numbering stays aligned
         if (!r.some(function(f) { return (f || '').trim() !== ''; })) return;
         stats.rows++;
-        var id = (r[idx.key] || '').trim();
+        let id = (r[idx.key] || '').trim();
 
         if (!id) {
             flag(rowNo, '(leer)', 'fehlende Paper-ID', 'error', 'Zotero_Key ist leer, Zeile uebersprungen.');
@@ -244,9 +236,9 @@ function convert(rows, header, rid, existing, overwrite, fileName) {
         }
 
         // categories
-        var cats = {}, unknownVals = [];
+        let cats = {}, unknownVals = [];
         ALL_CATS.forEach(function(c) {
-            var v = (r[idx['cat_' + c]] || '').trim().toLowerCase();
+            let v = (r[idx['cat_' + c]] || '').trim().toLowerCase();
             if (v === CAT_TRUE) cats[c] = true;
             else if (v === CAT_FALSE || v === '') cats[c] = false;
             else { cats[c] = false; unknownVals.push(c + '="' + (r[idx['cat_' + c]] || '').trim() + '"'); }
@@ -257,7 +249,7 @@ function convert(rows, header, rid, existing, overwrite, fileName) {
         }
 
         // decision
-        var dec = normalizeDecision(r[idx.decision]);
+        const dec = normalizeDecision(r[idx.decision]);
         if (dec === null) { flag(rowNo, id, 'fehlende Decision', 'error', 'Keine Decision, Zeile uebersprungen.'); stats.skipped++; return; }
         if (dec === undefined) {
             flag(rowNo, id, 'unbekannte Decision', 'error',
@@ -271,9 +263,9 @@ function convert(rows, header, rid, existing, overwrite, fileName) {
         }
 
         // exclusion reason
-        var reason = null;
+        let reason = null;
         if (dec === 'Exclude') {
-            var nr = normalizeReason(idx.reason != null ? r[idx.reason] : '');
+            const nr = normalizeReason(idx.reason != null ? r[idx.reason] : '');
             if (nr.empty) {
                 flag(rowNo, id, 'leerer Ausschlussgrund', 'warn',
                      'Exclude ohne Ausschlussgrund (Vokabular: ' + REASON_VOCAB.join(', ') + ').');
@@ -287,8 +279,8 @@ function convert(rows, header, rid, existing, overwrite, fileName) {
         }
 
         // consistency between categories and decision (Include rule of categories.yaml)
-        var derived = deriveDecision(cats);
-        var override = dec === 'Exclude' && derived === 'Include';
+        const derived = deriveDecision(cats);
+        let override = dec === 'Exclude' && derived === 'Include';
         if (override && reason !== 'Duplicate') {
             // Duplicate excludes regularly carry the full category set of the
             // original record; flagging them all would flood the report.
@@ -300,7 +292,7 @@ function convert(rows, header, rid, existing, overwrite, fileName) {
                  'Decision Include, aber die Kategorien ergeben Exclude (Technik UND Sozial noetig); Decision bleibt bindend.');
         }
 
-        var rec = {
+        const rec = {
             categories: cats, decision: dec, override: override,
             reason: dec === 'Exclude' ? reason : null,
             evidence: {},
@@ -308,17 +300,17 @@ function convert(rows, header, rid, existing, overwrite, fileName) {
             imported: { source: fileName || 'csv', row: rowNo, raw_reason: idx.reason != null ? (r[idx.reason] || '').trim() : '' }
         };
 
-        var ex = existing && existing[id];
+        const ex = existing && existing[id];
         if (!ex) {
             decisions[id] = rec; stats.added++;
         } else if (sameDecision(ex, rec)) {
             stats.unchanged++; // idempotent re-import: keep the existing record (and its evidence)
         } else {
-            var exDesc = ex.decision + (ex.reason ? ' (' + ex.reason + ')' : '');
-            var newDesc = dec + (reason ? ' (' + reason + ')' : '');
+            const exDesc = ex.decision + (ex.reason ? ' (' + ex.reason + ')' : '');
+            const newDesc = dec + (reason ? ' (' + reason + ')' : '');
             if (overwrite) {
                 decisions[id] = rec; stats.collisionsOverwritten++;
-                var hadEvidence = ex.evidence && Object.keys(ex.evidence).some(function(c) { return (ex.evidence[c] || []).length; });
+                const hadEvidence = ex.evidence && Object.keys(ex.evidence).some(function(c) { return (ex.evidence[c] || []).length; });
                 flag(rowNo, id, 'Kollision (ueberschrieben)', 'warn',
                      'Bestehend: ' + exDesc + '; CSV: ' + newDesc + '. Auf ausdrueckliche Wahl ueberschrieben.' +
                      (hadEvidence ? ' Die angehefteten Belege der bestehenden Entscheidung sind damit verworfen.' : ''));
@@ -337,26 +329,24 @@ function convert(rows, header, rid, existing, overwrite, fileName) {
              'Korpus-Pruefung uebersprungen, da keine Paper geladen sind.');
     }
 
-    var payload = { schema: REVIEWER_SCHEMA, reviewer: rid, updated: nowIso, decisions: decisions };
+    const payload = { schema: REVIEWER_SCHEMA, reviewer: rid, updated: nowIso, decisions: decisions };
     return { payload: payload, report: report, stats: stats };
 }
 
-// ============================================================
 // File System Access: reuse the handle prisma.js persisted in IndexedDB
 // ('femprompt-prisma' / 'handles' / 'dir'). prisma.js does not expose the
 // handle on window.EC; if a future version does (EC.getScreeningDirHandle),
 // that takes precedence.
-// ============================================================
 
 function idbGetDir() {
     return new Promise(function(res) {
         try {
-            var r = indexedDB.open('femprompt-prisma', 1);
+            const r = indexedDB.open('femprompt-prisma', 1);
             r.onupgradeneeded = function() { try { r.result.createObjectStore('handles'); } catch (e) {} };
             r.onsuccess = function() {
                 try {
-                    var t = r.result.transaction('handles', 'readonly');
-                    var rq = t.objectStore('handles').get('dir');
+                    let t = r.result.transaction('handles', 'readonly');
+                    const rq = t.objectStore('handles').get('dir');
                     rq.onsuccess = function() { res(rq.result || null); };
                     rq.onerror = function() { res(null); };
                 } catch (e) { res(null); }
@@ -386,7 +376,7 @@ function readReviewerFile(handle, rid) {
     return handle.getFileHandle(rid + '.json').then(function(fh) {
         return fh.getFile();
     }).then(function(f) { return f.text(); }).then(function(t) {
-        var o = JSON.parse(t);
+        let o = JSON.parse(t);
         return o && o.decisions ? o.decisions : null;
     }).catch(function() { return null; });
 }
@@ -399,13 +389,11 @@ function writeReviewerFile(handle, rid, payload) {
     });
 }
 
-// ============================================================
 // UI: one block, mounted into the "Daten & Repo" surface
-// ============================================================
 
-var block = null;
-var lastResult = null;   // { payload, report, stats, rid, sources }
-var FS_SUPPORTED = typeof window.showDirectoryPicker === 'function';
+let block = null;
+let lastResult = null;   // { payload, report, stats, rid, sources }
+const FS_SUPPORTED = typeof window.showDirectoryPicker === 'function';
 
 function buildBlock() {
     block = document.createElement('div');
@@ -438,42 +426,42 @@ function buildBlock() {
         if (!lastResult) return;
         downloadJson(lastResult.rid + '.json', lastResult.payload);
     });
-    var wbtn = block.querySelector('#pt-imp-write');
+    let wbtn = block.querySelector('#pt-imp-write');
     if (wbtn) wbtn.addEventListener('click', writeToRepo);
 }
 
 function setStatus(msg) {
-    var el = block && block.querySelector('#pt-imp-status');
+    const el = block && block.querySelector('#pt-imp-status');
     if (el) el.innerHTML = msg;
 }
 
 function readerRid() {
-    var inp = block.querySelector('#pt-imp-rev');
-    var v = (inp.value || '').trim().replace(/[^a-zA-Z0-9_-]/g, '') || DEFAULT_REVIEWER;
+    const inp = block.querySelector('#pt-imp-rev');
+    let v = (inp.value || '').trim().replace(/[^a-zA-Z0-9_-]/g, '') || DEFAULT_REVIEWER;
     inp.value = v;
     return v;
 }
 
 function runImport() {
-    var fileInp = block.querySelector('#pt-imp-file');
-    var file = fileInp.files && fileInp.files[0];
+    const fileInp = block.querySelector('#pt-imp-file');
+    const file = fileInp.files && fileInp.files[0];
     if (!file) { setStatus('Bitte zuerst eine CSV-Datei waehlen.'); return; }
-    var rid = readerRid();
-    var overwrite = block.querySelector('#pt-imp-overwrite').checked;
+    const rid = readerRid();
+    const overwrite = block.querySelector('#pt-imp-overwrite').checked;
 
     // invalidate the previous result first: a failed run must not leave the
     // download/write buttons pointing at a stale payload from an earlier file
     lastResult = null;
     block.querySelector('#pt-imp-dl').disabled = true;
-    var wprev = block.querySelector('#pt-imp-write');
+    const wprev = block.querySelector('#pt-imp-write');
     if (wprev) wprev.disabled = true;
     block.querySelector('#pt-imp-report').innerHTML = '';
 
-    var reader = new FileReader();
+    const reader = new FileReader();
     reader.onload = function() {
-        var rows = parseCsv(String(reader.result || ''));
+        let rows = parseCsv(String(reader.result || ''));
         if (!rows.length) { setStatus('Datei ist leer oder nicht lesbar.'); return; }
-        var header = mapHeader(rows[0]);
+        const header = mapHeader(rows[0]);
         if (header.missing.length) {
             setStatus('Fehlende Spalten: ' + esc(header.missing.join(', ')) +
                       '. Erwartet wird die Spaltenform von benchmark/data/human_assessment.csv.');
@@ -481,16 +469,16 @@ function runImport() {
         }
         // collision base: localStorage cache, then the committed reviewer file
         // from an already connected repo folder (no permission prompt here).
-        var local = loadExistingLocal(rid);
+        const local = loadExistingLocal(rid);
         getDirHandle(false).then(function(h) {
             return h ? readReviewerFile(h, rid).then(function(fileDec) {
                 return { existing: fileDec || local, src: fileDec ? (rid + '.json im verbundenen Ordner') : (local ? 'lokaler Zwischenstand (Browser)' : null) };
             }) : { existing: local, src: local ? 'lokaler Zwischenstand (Browser)' : null };
         }).then(function(base) {
-            var res = convert(rows.slice(1), header, rid, base.existing || {}, overwrite, file.name);
+            const res = convert(rows.slice(1), header, rid, base.existing || {}, overwrite, file.name);
             lastResult = { payload: res.payload, report: res.report, stats: res.stats, rid: rid, base: base.src };
             block.querySelector('#pt-imp-dl').disabled = false;
-            var wbtn = block.querySelector('#pt-imp-write');
+            let wbtn = block.querySelector('#pt-imp-write');
             if (wbtn) wbtn.disabled = false;
             renderReport(res, base.src, file.name);
         }).catch(function(e) {
@@ -502,8 +490,8 @@ function runImport() {
 }
 
 function renderReport(res, baseSrc, fileName) {
-    var s = res.stats;
-    var parts = [];
+    const s = res.stats;
+    const parts = [];
     parts.push(s.rows + ' Datenzeilen aus ' + esc(fileName));
     parts.push(s.added + ' neu uebernommen');
     parts.push(s.unchanged + ' unveraendert (idempotent)');
@@ -515,10 +503,10 @@ function renderReport(res, baseSrc, fileName) {
         (baseSrc ? '<br>Kollisions-Basis: ' + esc(baseSrc) + '.' : '<br>Keine bestehenden Entscheidungen fuer dieses Kuerzel gefunden.') +
         '<br>Danach: JSON herunterladen und ueber &bdquo;Reviewer-Datei importieren&ldquo; laden, oder direkt in den Ordner schreiben und &bdquo;Reviewer-Dateien neu laden&ldquo; ausfuehren.');
 
-    var rep = block.querySelector('#pt-imp-report');
+    const rep = block.querySelector('#pt-imp-report');
     if (!res.report.length) { rep.innerHTML = '<p class="pt-muted">Keine Befunde: alle Werte im kontrollierten Vokabular.</p>'; return; }
-    var MAX = 400;
-    var h = '<table class="pt-matrix"><thead><tr><th>Zeile</th><th>ID</th><th>Befund</th><th>Detail</th></tr></thead><tbody>';
+    const MAX = 400;
+    let h = '<table class="pt-matrix"><thead><tr><th>Zeile</th><th>ID</th><th>Befund</th><th>Detail</th></tr></thead><tbody>';
     res.report.slice(0, MAX).forEach(function(it) {
         h += '<tr><td>' + it.row + '</td><td class="mono">' + esc(it.id) + '</td><td>' + esc(it.kind) + '</td><td>' + esc(it.detail) + '</td></tr>';
     });
@@ -546,33 +534,31 @@ function writeToRepo() {
 }
 
 function downloadJson(filename, obj) {
-    var blob = new Blob([JSON.stringify(obj, null, 2)], { type: 'application/json' });
-    var url = URL.createObjectURL(blob);
-    var a = document.createElement('a');
+    const blob = new Blob([JSON.stringify(obj, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
     a.href = url; a.download = filename; document.body.appendChild(a); a.click();
     document.body.removeChild(a); URL.revokeObjectURL(url);
 }
 
-// ============================================================
 // Mounting: prisma.js re-renders the surface via innerHTML, so the block is
 // re-appended whenever the "Daten & Repo" surface appears. The hook element
 // in prisma.html (#pt-import-root) is the parking position.
-// ============================================================
 
 function ensureMounted() {
     if (!block) return;
-    var host = document.querySelector('#pt-surface .pt-data');
+    const host = document.querySelector('#pt-surface .pt-data');
     if (host) {
         if (!host.contains(block)) host.appendChild(block);
         block.hidden = false;
     } else {
-        var park = document.getElementById('pt-import-root');
+        const park = document.getElementById('pt-import-root');
         if (park && !park.contains(block)) { park.appendChild(block); block.hidden = true; }
     }
 }
 
 function init() {
-    var root = document.getElementById('prisma-root');
+    const root = document.getElementById('prisma-root');
     if (!root) return;
     buildBlock();
     ensureMounted();

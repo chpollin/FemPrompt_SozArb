@@ -19,19 +19,17 @@
 (function() {
 'use strict';
 
-var EC = window.EC;
-var initialized = false;
-var FS_SUPPORTED = typeof window.showDirectoryPicker === 'function';
+let EC = window.EC;
+let initialized = false;
+const FS_SUPPORTED = typeof window.showDirectoryPicker === 'function';
 
-// ============================================================
 // Constants
-// ============================================================
 
-var TECH_CATS = ['AI_Literacies', 'Generative_KI', 'Prompting', 'KI_Sonstige'];
-var SOCIAL_CATS = ['Soziale_Arbeit', 'Bias_Ungleichheit', 'Gender', 'Diversitaet', 'Feministisch', 'Fairness'];
-var ALL_CATS = TECH_CATS.concat(SOCIAL_CATS);
+const TECH_CATS = ['AI_Literacies', 'Generative_KI', 'Prompting', 'KI_Sonstige'];
+const SOCIAL_CATS = ['Soziale_Arbeit', 'Bias_Ungleichheit', 'Gender', 'Diversitaet', 'Feministisch', 'Fairness'];
+const ALL_CATS = TECH_CATS.concat(SOCIAL_CATS);
 
-var CAT_LABELS = {
+const CAT_LABELS = {
     'AI_Literacies': 'AI Literacies', 'Generative_KI': 'Generative KI',
     'Prompting': 'Prompting', 'KI_Sonstige': 'KI Sonstige',
     'Soziale_Arbeit': 'Soziale Arbeit', 'Bias_Ungleichheit': 'Bias & Ungleichheit',
@@ -40,7 +38,7 @@ var CAT_LABELS = {
 };
 
 // Category definitions (hover tooltips on the chips), ported from the design seed.
-var CAT_DEFS = {
+const CAT_DEFS = {
     'AI_Literacies': 'Kompetenzen, um KI-Systeme zu verstehen, zu nutzen und kritisch zu reflektieren.',
     'Generative_KI': 'Generative KI / LLMs, die Text, Bild oder Code erzeugen (ChatGPT, Claude, Gemini).',
     'Prompting': 'Gestaltung, Engineering oder Untersuchung von Prompts als Schnittstelle zu generativen Modellen.',
@@ -53,15 +51,15 @@ var CAT_DEFS = {
     'Fairness': 'Fairness, Gerechtigkeit oder Equity als normatives Kriterium fuer Systeme.'
 };
 
-var EXCLUSION_REASONS = ['Duplicate', 'Not_relevant_topic', 'Wrong_publication_type', 'No_full_text', 'Language'];
+const EXCLUSION_REASONS = ['Duplicate', 'Not_relevant_topic', 'Wrong_publication_type', 'No_full_text', 'Language'];
 
-var MODEL_DEFAULT = {
+const MODEL_DEFAULT = {
     name: 'Claude Haiku 4.5', id: 'claude-haiku-4-5', date: '2026-03-15',
     prompt: 'v2.1', temperature: '0.0', maxTokens: '1024', threshold: '0.5'
 };
 
 // PRISMA-trAIce 17 items (Holst et al. 2025, JMIR AI; abridged verbatim). 14 non-optional, 3 optional.
-var TRAICE = [
+const TRAICE = [
     { id: 'T1', sec: 'Title', lvl: 'optional', auto: false, text: 'Indicate AI assistance in the title/subtitle if AI played a substantial role (e.g. primary screening, data extraction).' },
     { id: 'A1', sec: 'Abstract', lvl: 'optional', auto: false, text: 'Summarise the AI tool(s) used, the SLR stage(s) applied, and their primary role.' },
     { id: 'I1', sec: 'Introduction', lvl: 'recommended', auto: false, text: 'State the rationale for using AI tools for specific tasks (volume, efficiency, novel methods).' },
@@ -81,21 +79,19 @@ var TRAICE = [
     { id: 'D2', sec: 'Discussion', lvl: 'optional', auto: false, text: 'The experience of using AI: benefits, challenges, usability, implications for future reviews.' }
 ];
 
-var LS_KEY = 'femprompt-prisma-state/0.2';
-var REVIEWER_SCHEMA = 'femprompt-prisma-reviewer/0.2'; // bumped for the evidence map (FR-13)
-var SEED = 'seed'; // built-in reviewer = the existing expert assessment (paper.human)
+const LS_KEY = 'femprompt-prisma-state/0.2';
+const REVIEWER_SCHEMA = 'femprompt-prisma-reviewer/0.2'; // bumped for the evidence map (FR-13)
+const SEED = 'seed'; // built-in reviewer = the existing expert assessment (paper.human)
 
-var SURFACES = [
+const SURFACES = [
     { id: 'screening', label: 'Screening', intro: 'Volltext lesen und durchsuchen, Belege an Kategorien anheften, Include/Exclude entscheiden.' },
     { id: 'report', label: 'PRISMA & Report', intro: 'PRISMA-2020-Fluss, Checkliste und Disclosure, aus dem Screening erzeugt.' },
     { id: 'data', label: 'Daten & Repo', intro: 'Mit dem Projektordner verbinden, eine Datei pro Reviewer:in, Export und Import.' }
 ];
 
-// ============================================================
 // State
-// ============================================================
 
-var state = {
+const state = {
     surface: 'screening',
     reviewer: 'reviewer1', // who is editing; drives the per-reviewer file name
     perspective: SEED,     // whose decisions drive Flow/Agreement (default: seed = benchmark)
@@ -106,23 +102,23 @@ var state = {
     disclosure: {}
 };
 
-var papers = [];
-var dirHandle = null;          // connected File System Access directory handle
-var corpusIndex = null;        // id -> { t, ay, kd, src, n, x } for corpus full-text search
-var corpusIndexPromise = null;
-var machineEvidence = null;    // id -> { category -> [ {term, snippet} ] }, AI-origin (R2, ADR-018)
-var machineEvidencePromise = null;
-var corpusQuery = '';          // current corpus-wide search (left pane)
-var textCache = {};            // paperId -> raw knowledge-doc markdown (or null)
-var docHtmlCurrent = '';       // rendered HTML of the active layer (for re-highlight)
-var docHtmlPaper = '';         // rendered paper layer (verbatim text)
-var docHtmlAi = '';            // rendered AI-extraction layer (machine knowledge doc), '' when absent
-var docMarks = [], docMarkIdx = 0;
-var pendingInText = null;      // in-text query to apply once the document has loaded
-var pinTerm = '', pinSnippet = '', pinOrigin = 'human'; // pinOrigin = source layer of the staged snippet
+let papers = [];
+let dirHandle = null;          // connected File System Access directory handle
+let corpusIndex = null;        // id -> { t, ay, kd, src, n, x } for corpus full-text search
+let corpusIndexPromise = null;
+let machineEvidence = null;    // id -> { category -> [ {term, snippet} ] }, AI-origin (R2, ADR-018)
+let machineEvidencePromise = null;
+let corpusQuery = '';          // current corpus-wide search (left pane)
+const textCache = {};            // paperId -> raw knowledge-doc markdown (or null)
+let docHtmlCurrent = '';       // rendered HTML of the active layer (for re-highlight)
+let docHtmlPaper = '';         // rendered paper layer (verbatim text)
+let docHtmlAi = '';            // rendered AI-extraction layer (machine knowledge doc), '' when absent
+let docMarks = [], docMarkIdx = 0;
+let pendingInText = null;      // in-text query to apply once the document has loaded
+let pinTerm = '', pinSnippet = '', pinOrigin = 'human'; // pinOrigin = source layer of the staged snippet
 
 // the in-progress (pre-commit) decision for the open paper
-var work = { pid: null, cats: {}, override: false, reason: null, evidence: {}, machineInjected: false };
+let work = { pid: null, cats: {}, override: false, reason: null, evidence: {}, machineInjected: false };
 
 function curDec() {
     if (!state.reviewers[state.reviewer]) state.reviewers[state.reviewer] = {};
@@ -131,9 +127,7 @@ function curDec() {
 
 function resetWork(p) { work = { pid: p.id, cats: {}, override: false, reason: null, evidence: {}, machineInjected: false }; }
 
-// ============================================================
 // Persistence: localStorage cache + File System Access (repo files)
-// ============================================================
 
 function serializeAll() {
     return {
@@ -151,9 +145,9 @@ function saveLocal() {
 
 function loadLocal() {
     try {
-        var raw = localStorage.getItem(LS_KEY);
+        const raw = localStorage.getItem(LS_KEY);
         if (!raw) return;
-        var o = JSON.parse(raw);
+        const o = JSON.parse(raw);
         if (o.config) {
             if (o.config.reviewer) state.reviewer = o.config.reviewer;
             if (o.config.perspective) state.perspective = o.config.perspective;
@@ -164,7 +158,7 @@ function loadLocal() {
     } catch (e) { console.warn('[PRISMA] local load failed:', e.message); }
 }
 
-var writeChain = Promise.resolve();
+let writeChain = Promise.resolve();
 function save() {
     saveLocal();
     // serialize repo writes so rapid screening cannot overlap createWritable on the same file
@@ -179,7 +173,7 @@ function reviewerPayload(key) {
 // --- IndexedDB: persist the directory handle so reconnect is one click ---
 function idb() {
     return new Promise(function(res, rej) {
-        var r = indexedDB.open('femprompt-prisma', 1);
+        let r = indexedDB.open('femprompt-prisma', 1);
         r.onupgradeneeded = function() { r.result.createObjectStore('handles'); };
         r.onsuccess = function() { res(r.result); };
         r.onerror = function() { rej(r.error); };
@@ -187,13 +181,13 @@ function idb() {
 }
 function idbSet(k, v) {
     return idb().then(function(db) { return new Promise(function(res, rej) {
-        var t = db.transaction('handles', 'readwrite'); t.objectStore('handles').put(v, k);
+        let t = db.transaction('handles', 'readwrite'); t.objectStore('handles').put(v, k);
         t.oncomplete = function() { res(); }; t.onerror = function() { rej(t.error); };
     }); });
 }
 function idbGet(k) {
     return idb().then(function(db) { return new Promise(function(res, rej) {
-        var t = db.transaction('handles', 'readonly'); var rq = t.objectStore('handles').get(k);
+        let t = db.transaction('handles', 'readonly'); var rq = t.objectStore('handles').get(k);
         rq.onsuccess = function() { res(rq.result); }; rq.onerror = function() { rej(rq.error); };
     }); });
 }
@@ -201,7 +195,7 @@ function idbGet(k) {
 async function connectRepo() {
     if (!FS_SUPPORTED) { alert('Dieser Browser schreibt nicht direkt auf die Platte. Nutze Export/Import (Firefox/Safari).'); return; }
     try {
-        var handle = await window.showDirectoryPicker({ mode: 'readwrite' });
+        let handle = await window.showDirectoryPicker({ mode: 'readwrite' });
         dirHandle = handle;
         await idbSet('dir', handle);
         await loadAllReviewers();
@@ -213,9 +207,9 @@ async function connectRepo() {
 async function reconnectRepo() {
     if (!FS_SUPPORTED) return;
     try {
-        var handle = await idbGet('dir');
+        let handle = await idbGet('dir');
         if (!handle) { alert('Kein gespeicherter Ordner. Erst "Mit Repo-Ordner verbinden".'); return; }
-        var perm = await handle.requestPermission({ mode: 'readwrite' });
+        const perm = await handle.requestPermission({ mode: 'readwrite' });
         if (perm !== 'granted') { alert('Schreibrecht nicht erteilt.'); return; }
         dirHandle = handle;
         await loadAllReviewers();
@@ -226,13 +220,13 @@ async function reconnectRepo() {
 
 async function loadAllReviewers() {
     if (!dirHandle) return;
-    var found = {};
+    const found = {};
     for await (var entry of dirHandle.values()) {
         if (entry.kind === 'file' && /\.json$/.test(entry.name)) {
             try {
-                var f = await entry.getFile();
-                var obj = JSON.parse(await f.text());
-                var key = obj.reviewer || entry.name.replace(/\.json$/, '');
+                let f = await entry.getFile();
+                let obj = JSON.parse(await f.text());
+                let key = obj.reviewer || entry.name.replace(/\.json$/, '');
                 found[key] = obj.decisions || {}; // 0.1 records simply lack `evidence`
             } catch (e) { console.warn('[PRISMA] could not read', entry.name, e); }
         }
@@ -244,23 +238,21 @@ async function loadAllReviewers() {
 
 async function writeCurrentReviewer() {
     if (!dirHandle) return false;
-    var fh = await dirHandle.getFileHandle(state.reviewer + '.json', { create: true });
-    var w = await fh.createWritable();
+    const fh = await dirHandle.getFileHandle(state.reviewer + '.json', { create: true });
+    const w = await fh.createWritable();
     await w.write(JSON.stringify(reviewerPayload(state.reviewer), null, 2));
     await w.close();
     return true;
 }
 
 function updateConnStatus() {
-    var el = document.getElementById('pt-conn-status');
+    let el = document.getElementById('pt-conn-status');
     if (!el) return;
     if (dirHandle) { el.textContent = 'verbunden, schreibt ' + state.reviewer + '.json'; el.classList.add('connected'); }
     else { el.textContent = FS_SUPPORTED ? 'nicht mit Repo verbunden' : 'Browser ohne Direktschreiben (Export nutzen)'; el.classList.remove('connected'); }
 }
 
-// ============================================================
 // Corpus full-text index (FR-12 corpus search) + document fetch (FR-11)
-// ============================================================
 
 function loadCorpusIndex() {
     if (corpusIndexPromise) return corpusIndexPromise;
@@ -295,7 +287,7 @@ function fetchPaperText(p) {
 
 function countOcc(hay, needle) {
     if (!needle) return 0;
-    var n = 0, pos = 0, idx;
+    let n = 0, pos = 0, idx;
     while ((idx = hay.indexOf(needle, pos)) !== -1) { n++; pos = idx + needle.length; }
     return n;
 }
@@ -307,13 +299,13 @@ function countOcc(hay, needle) {
 // pulled up over a repeated H1 title that heads the extraction. A doc without that
 // heading (abstract-only fallback) has no AI layer.
 function splitDocLayers(md) {
-    var lines = (md || '').split(/\r?\n/);
-    var b = -1;
-    for (var i = 0; i < lines.length; i++) {
+    let lines = (md || '').split(/\r?\n/);
+    let b = -1;
+    for (let i = 0; i < lines.length; i++) {
         if (/^##\s+Kernbefund\b/.test(lines[i])) { b = i; break; }
     }
     if (b === -1) return { paper: md || '', ai: '' };
-    var s = b, k = b - 1;
+    let s = b, k = b - 1;
     while (k >= 0 && /^\s*$/.test(lines[k])) k--;
     if (k >= 0 && /^#\s+/.test(lines[k])) s = k;
     return { paper: lines.slice(0, s).join('\n'), ai: lines.slice(s).join('\n') };
@@ -334,18 +326,18 @@ function inlineMd(s) {
 
 function renderMarkdown(md) {
     md = stripFrontmatter(md);
-    var lines = md.split(/\r?\n/);
-    var out = [], i = 0, inList = false;
+    let lines = md.split(/\r?\n/);
+    let out = [], i = 0, inList = false;
     function closeList() { if (inList) { out.push('</ul>'); inList = false; } }
     while (i < lines.length) {
-        var ln = lines[i];
+        const ln = lines[i];
         if (/^---\s*$/.test(ln)) {
             // skip an embedded yaml block (the note repeats a frontmatter inside "## Full Text")
-            var k = i + 1;
+            let k = i + 1;
             while (k < lines.length && !/^---\s*$/.test(lines[k])) k++;
             if (k < lines.length && k > i + 1) {
-                var block = lines.slice(i + 1, k);
-                var yamlish = block.every(function(b) {
+                const block = lines.slice(i + 1, k);
+                const yamlish = block.every(function(b) {
                     return b.trim() === '' || /^[A-Za-z_][\w "'().\/:-]*:/.test(b) || /^-\s/.test(b);
                 });
                 if (yamlish) { i = k + 1; continue; }
@@ -353,14 +345,14 @@ function renderMarkdown(md) {
             closeList(); out.push('<hr class="pt-doc-hr">'); i++; continue;
         }
         if (/^\s*$/.test(ln)) { closeList(); i++; continue; }
-        var hm = ln.match(/^(#{1,6})\s+(.*)$/);
+        const hm = ln.match(/^(#{1,6})\s+(.*)$/);
         if (hm) { closeList(); var lvl = Math.min(hm[1].length, 4); out.push('<h' + lvl + ' class="pt-doc-h' + lvl + '">' + inlineMd(hm[2]) + '</h' + lvl + '>'); i++; continue; }
-        var lm = ln.match(/^\s*[-*]\s+(.*)$/);
+        const lm = ln.match(/^\s*[-*]\s+(.*)$/);
         if (lm) { if (!inList) { out.push('<ul class="pt-doc-ul">'); inList = true; } out.push('<li>' + inlineMd(lm[1]) + '</li>'); i++; continue; }
-        var bm = ln.match(/^>\s?(.*)$/);
+        const bm = ln.match(/^>\s?(.*)$/);
         if (bm) { closeList(); out.push('<blockquote class="pt-doc-q">' + inlineMd(bm[1]) + '</blockquote>'); i++; continue; }
         closeList();
-        var para = [ln]; i++;
+        const para = [ln]; i++;
         while (i < lines.length && !/^\s*$/.test(lines[i]) && !/^#{1,6}\s/.test(lines[i]) &&
                !/^\s*[-*]\s/.test(lines[i]) && !/^---\s*$/.test(lines[i]) && !/^>\s?/.test(lines[i])) { para.push(lines[i]); i++; }
         out.push('<p class="pt-doc-p">' + inlineMd(para.join(' ')) + '</p>');
@@ -369,9 +361,7 @@ function renderMarkdown(md) {
     return out.join('');
 }
 
-// ============================================================
 // Init
-// ============================================================
 
 window.initializePrisma = function() {
     if (initialized) return;
@@ -384,7 +374,7 @@ window.initializePrisma = function() {
     loadMachineEvidence().then(function() {
         // a paper opened before the map arrived gets its machine evidence now
         if (state.surface === 'screening' && papers.length) {
-            var p = papers[state.index];
+            let p = papers[state.index];
             if (p && !curDec()[p.id]) { injectMachineEvidence(p); refreshAssess(); }
         }
     });
@@ -396,19 +386,17 @@ window.initializePrisma = function() {
 
 // map any persisted v3 surface id onto the three v4 surfaces
 function normalizeSurface() {
-    var map = { workspace: 'screening', flow: 'report', agreement: 'report', reviewers: 'data', checklist: 'report', report: 'report', data: 'data' };
+    const map = { workspace: 'screening', flow: 'report', agreement: 'report', reviewers: 'data', checklist: 'report', report: 'report', data: 'data' };
     if (map[state.surface]) state.surface = map[state.surface];
     if (['screening', 'report', 'data'].indexOf(state.surface) === -1) state.surface = 'screening';
 }
 
-// ============================================================
 // Shell + sub-navigation
-// ============================================================
 
 function renderShell() {
-    var root = document.getElementById('prisma-root');
+    const root = document.getElementById('prisma-root');
     if (!root) return;
-    var html = '<div class="pt-subnav">';
+    let html = '<div class="pt-subnav">';
     SURFACES.forEach(function(s) {
         html += '<button class="pt-subnav-btn' + (s.id === state.surface ? ' active' : '') +
             '" data-surface="' + s.id + '">' + s.label + '</button>';
@@ -425,18 +413,16 @@ function renderShell() {
 function showSurface(name) {
     state.surface = name; saveLocal();
     document.querySelectorAll('.pt-subnav-btn').forEach(function(b) { b.classList.toggle('active', b.dataset.surface === name); });
-    var intro = document.getElementById('pt-surface-intro');
-    var meta = SURFACES.filter(function(s) { return s.id === name; })[0];
+    const intro = document.getElementById('pt-surface-intro');
+    const meta = SURFACES.filter(function(s) { return s.id === name; })[0];
     if (intro && meta) intro.textContent = meta.intro;
-    var fn = { screening: renderScreening, report: renderReportSurface, data: renderData }[name];
+    const fn = { screening: renderScreening, report: renderReportSurface, data: renderData }[name];
     if (fn) fn();
 }
 
 function surfaceEl() { return document.getElementById('pt-surface'); }
 
-// ============================================================
 // Decision helpers
-// ============================================================
 
 function aiProposal(paper) {
     if (!paper || !paper.llm || !paper.llm.decision) return null;
@@ -450,7 +436,7 @@ function humanDecision(paper, persp) {
             return { decision: paper.human.decision, categories: paper.human.all_categories || {}, source: SEED };
         return null;
     }
-    var d = state.reviewers[persp] && state.reviewers[persp][paper.id];
+    let d = state.reviewers[persp] && state.reviewers[persp][paper.id];
     return d ? { decision: d.decision, categories: d.categories || {}, reason: d.reason, source: persp } : null;
 }
 
@@ -461,8 +447,8 @@ function seedDecision(paper) {
 }
 
 function deriveDecision(cats) {
-    var tech = TECH_CATS.some(function(c) { return cats[c]; });
-    var soc = SOCIAL_CATS.some(function(c) { return cats[c]; });
+    let tech = TECH_CATS.some(function(c) { return cats[c]; });
+    let soc = SOCIAL_CATS.some(function(c) { return cats[c]; });
     return (tech && soc) ? 'Include' : 'Exclude';
 }
 
@@ -474,7 +460,7 @@ function finalDecisionOf(cats, override) {
 function divergent(h, a) { return h && a && h.decision !== a.decision; }
 
 function abstractQuality(p) {
-    var a = (p.abstract || '').trim();
+    let a = (p.abstract || '').trim();
     if (!a) return { ok: false, note: 'Kein Abstract vorhanden, bitte Volltext (Wissensdokument) oder Quelle pruefen.' };
     if (/National Bureau of Economic Research|Founded in 1920, the NBER|private, non-profit, non-partisan organization/i.test(a))
         return { ok: false, note: 'Wirkt wie Verlags-Boilerplate (NBER), nicht das Paper-Abstract.' };
@@ -491,9 +477,7 @@ function evidenceCount(rec) {
     }, 0);
 }
 
-// ============================================================
 // Aggregation (computed quietly for the report layer)
-// ============================================================
 
 // The human-AI agreement metrics (computeMatrix, cohenKappa, kappaLabel) were
 // removed with ADR-017: the tool computed kappa over its own loaded corpus, a
@@ -503,10 +487,10 @@ function evidenceCount(rec) {
 // reference. computeFlow stays: the flow diagram needs the per-track counts.
 
 function computeFlow(persp) {
-    var f = { total: papers.length, aiScreened: 0, aiIncl: 0, aiExcl: 0,
+    let f = { total: papers.length, aiScreened: 0, aiIncl: 0, aiExcl: 0,
               humanScreened: 0, humanIncl: 0, humanExcl: 0, humanReasons: {} };
     papers.forEach(function(p) {
-        var a = aiProposal(p), h = humanDecision(p, persp);
+        let a = aiProposal(p), h = humanDecision(p, persp);
         if (a) { f.aiScreened++; if (a.decision === 'Include') f.aiIncl++; else f.aiExcl++; }
         if (h) {
             f.humanScreened++;
@@ -518,7 +502,7 @@ function computeFlow(persp) {
 }
 
 function reviewerKeys() {
-    var keys = [SEED];
+    let keys = [SEED];
     Object.keys(state.reviewers).forEach(function(k) {
         if (Object.keys(state.reviewers[k] || {}).length) keys.push(k);
     });
@@ -528,8 +512,8 @@ function reviewerKeys() {
 function reviewerLabel(k) { return k === SEED ? 'Seed (Expert:innen)' : k; }
 
 function perspectiveBar() {
-    var keys = reviewerKeys();
-    var html = '<div class="pt-persp">Perspektive Mensch: <select class="pt-persp-sel">';
+    let keys = reviewerKeys();
+    let html = '<div class="pt-persp">Perspektive Mensch: <select class="pt-persp-sel">';
     keys.forEach(function(k) {
         html += '<option value="' + k + '"' + (k === state.perspective ? ' selected' : '') + '>' + EC.escapeHtml(reviewerLabel(k)) + '</option>';
     });
@@ -538,29 +522,27 @@ function perspectiveBar() {
 }
 
 function attachPerspective(el, rerender) {
-    var sel = el.querySelector('.pt-persp-sel');
+    let sel = el.querySelector('.pt-persp-sel');
     if (sel) sel.addEventListener('change', function() { state.perspective = sel.value; saveLocal(); rerender(); });
 }
 
-// ============================================================
 // Surface: Screening (read + search + pin evidence)
-// ============================================================
 
 function renderScreening() {
-    var el = surfaceEl(); if (!el) return;
+    let el = surfaceEl(); if (!el) return;
     if (!papers.length) { el.innerHTML = '<p class="pt-empty">Keine Paper geladen.</p>'; return; }
     if (state.index < 0) state.index = 0;
     if (state.index >= papers.length) state.index = papers.length - 1;
 
-    var p = papers[state.index];
-    var dec = curDec()[p.id];
+    let p = papers[state.index];
+    const dec = curDec()[p.id];
     if (!dec && work.pid !== p.id) resetWork(p);
     if (!dec) injectMachineEvidence(p);
 
-    var screened = Object.keys(curDec()).length;
-    var pct = papers.length ? Math.round(screened / papers.length * 100) : 0;
+    const screened = Object.keys(curDec()).length;
+    const pct = papers.length ? Math.round(screened / papers.length * 100) : 0;
 
-    var html = '<div class="pt-ws-bar">';
+    let html = '<div class="pt-ws-bar">';
     html += '<span class="pt-ws-pos">Paper ' + (state.index + 1) + ' / ' + papers.length + '</span>';
     html += '<span class="pt-ws-progressbar"><span class="pt-ws-progressfill" style="width:' + pct + '%"></span></span>';
     html += '<span class="pt-ws-prog mono">' + screened + ' / ' + papers.length + ' &middot; ' + EC.escapeHtml(state.reviewer) + '</span>';
@@ -580,8 +562,8 @@ function renderScreening() {
 
 // ---- left: corpus navigator with full-text search ----
 function corpusHtml() {
-    var d = curDec();
-    var h = '<aside class="pt-nav"><div class="pt-nav-head"><span class="pt-nav-title-main">Korpus</span>' +
+    let d = curDec();
+    let h = '<aside class="pt-nav"><div class="pt-nav-head"><span class="pt-nav-title-main">Korpus</span>' +
         '<span class="pt-tag-mono">' + Object.keys(d).length + ' / ' + papers.length + '</span></div>';
     h += '<div class="pt-corpus-search"><input id="pt-corpus-q" placeholder="Volltext-Suche ueber alle Paper" value="' + EC.escapeHtml(corpusQuery) + '">' +
         '<span class="pt-corpus-hint" id="pt-corpus-hint"></span></div>';
@@ -590,23 +572,23 @@ function corpusHtml() {
 }
 
 function corpusListHtml() {
-    var d = curDec();
-    var q = corpusQuery.trim().toLowerCase();
-    var rows = papers, match = null;
+    let d = curDec();
+    let q = corpusQuery.trim().toLowerCase();
+    let rows = papers, match = null;
     if (q) {
         if (!corpusIndex) return '<p class="pt-muted pt-corpus-empty">Such-Index laedt…</p>';
         match = {};
         rows = papers.filter(function(p) {
-            var e = corpusIndex[p.id]; if (!e || !e.x) return false;
-            var c = countOcc(e.x, q); if (c) { match[p.id] = c; return true; } return false;
+            let e = corpusIndex[p.id]; if (!e || !e.x) return false;
+            let c = countOcc(e.x, q); if (c) { match[p.id] = c; return true; } return false;
         });
         if (!rows.length) return '<p class="pt-muted pt-corpus-empty">Keine Treffer fuer &bdquo;' + EC.escapeHtml(corpusQuery) + '&ldquo;.</p>';
     }
     return rows.map(function(p) {
-        var i = papers.indexOf(p);
-        var rec = d[p.id];
-        var st = rec ? rec.decision.toLowerCase() : 'none';
-        var badge = match ? '<span class="pt-hit-badge mono">' + match[p.id] + '</span>' : '';
+        let i = papers.indexOf(p);
+        let rec = d[p.id];
+        let st = rec ? rec.decision.toLowerCase() : 'none';
+        const badge = match ? '<span class="pt-hit-badge mono">' + match[p.id] + '</span>' : '';
         return '<button class="pt-nav-item' + (i === state.index ? ' active' : '') + '" data-i="' + i + '">' +
             '<span class="pt-nav-dot pt-dot-' + st + '"></span>' +
             '<span class="pt-nav-text"><span class="pt-nav-t">' + EC.escapeHtml(p.title || '(ohne Titel)') + '</span>' +
@@ -615,11 +597,11 @@ function corpusListHtml() {
 }
 
 function refreshCorpusList() {
-    var list = document.getElementById('pt-corpus-list');
+    let list = document.getElementById('pt-corpus-list');
     if (list) { list.innerHTML = corpusListHtml(); bindCorpusItems(); }
-    var hint = document.getElementById('pt-corpus-hint');
+    let hint = document.getElementById('pt-corpus-hint');
     if (hint) {
-        var q = corpusQuery.trim();
+        let q = corpusQuery.trim();
         if (!q) hint.textContent = '';
         else if (!corpusIndex) hint.textContent = '';
         else hint.textContent = papers.filter(function(p) { var e = corpusIndex[p.id]; return e && e.x && e.x.indexOf(q.toLowerCase()) !== -1; }).length + ' Paper';
@@ -627,7 +609,7 @@ function refreshCorpusList() {
 }
 
 function bindCorpusItems() {
-    var list = document.getElementById('pt-corpus-list'); if (!list) return;
+    let list = document.getElementById('pt-corpus-list'); if (!list) return;
     list.querySelectorAll('.pt-nav-item').forEach(function(btn) {
         btn.addEventListener('click', function() {
             state.index = parseInt(btn.dataset.i, 10);
@@ -639,8 +621,8 @@ function bindCorpusItems() {
 
 // ---- center: reading column (full text + in-text search) ----
 function readingShellHtml(p, dec) {
-    var aq = abstractQuality(p);
-    var h = '<div class="pt-read pt-read-screen"><div class="pt-read-inner">';
+    const aq = abstractQuality(p);
+    let h = '<div class="pt-read pt-read-screen"><div class="pt-read-inner">';
     h += '<div class="pt-read-meta">';
     h += '<span class="pt-pill pt-pill-ghost mono">' + EC.escapeHtml(p.id) + '</span>';
     if (p.item_type) h += '<span class="pt-tag-mono">' + EC.escapeHtml(p.item_type) + '</span>';
@@ -672,10 +654,10 @@ function readingShellHtml(p, dec) {
 }
 
 function loadReadingInto(p) {
-    var doc = document.getElementById('pt-doc'); if (!doc) return;
+    let doc = document.getElementById('pt-doc'); if (!doc) return;
     fetchPaperText(p).then(function(md) {
         if (md) {
-            var layers = splitDocLayers(md);
+            const layers = splitDocLayers(md);
             docHtmlPaper = renderMarkdown(layers.paper);
             docHtmlAi = layers.ai ? renderMarkdown(layers.ai) : '';
         } else if (p.abstract && p.abstract.trim()) {
@@ -689,7 +671,7 @@ function loadReadingInto(p) {
         paintActiveLayer();
         docMarks = []; docMarkIdx = 0;
         if (pendingInText) {
-            var box = document.getElementById('pt-intext');
+            let box = document.getElementById('pt-intext');
             if (box) box.value = pendingInText;
             applyInText(pendingInText);
             pendingInText = null;
@@ -700,15 +682,15 @@ function loadReadingInto(p) {
 function activeLayerHtml() { return state.readMode === 'ai' ? docHtmlAi : docHtmlPaper; }
 
 function paintActiveLayer() {
-    var d = document.getElementById('pt-doc'); if (!d) return;
+    let d = document.getElementById('pt-doc'); if (!d) return;
     docHtmlCurrent = activeLayerHtml();
     d.innerHTML = docHtmlCurrent || '<p class="pt-muted">Kein Volltext und kein Abstract vorhanden. Quelle pruefen.</p>';
-    var band = document.getElementById('pt-layer-band');
+    const band = document.getElementById('pt-layer-band');
     if (band) band.hidden = !(state.readMode === 'ai' && docHtmlAi);
 }
 
 function updateLayerToggle() {
-    var tg = document.getElementById('pt-layer-toggle');
+    const tg = document.getElementById('pt-layer-toggle');
     if (tg) tg.hidden = !docHtmlAi; // the toggle only appears when a paper has an AI layer
     document.querySelectorAll('.pt-layer-btn').forEach(function(b) {
         b.classList.toggle('active', b.dataset.mode === state.readMode);
@@ -722,33 +704,33 @@ function setReadMode(mode) {
     updateLayerToggle();
     paintActiveLayer();
     docMarks = []; docMarkIdx = 0;
-    var box = document.getElementById('pt-intext');
-    var cnt = document.getElementById('pt-intext-count');
+    let box = document.getElementById('pt-intext');
+    let cnt = document.getElementById('pt-intext-count');
     if (box && box.value.trim()) applyInText(box.value);
     else if (cnt) cnt.textContent = '';
-    var pinBtn = document.getElementById('pt-pin-hit');
+    let pinBtn = document.getElementById('pt-pin-hit');
     if (pinBtn && (!box || !box.value.trim())) pinBtn.disabled = true;
 }
 
 function applyInText(q) {
-    var doc = document.getElementById('pt-doc'); if (!doc) return;
+    let doc = document.getElementById('pt-doc'); if (!doc) return;
     doc.innerHTML = docHtmlCurrent || '<p class="pt-muted">Kein Text.</p>';
     docMarks = []; docMarkIdx = 0;
-    var cnt = document.getElementById('pt-intext-count');
-    var pinBtn = document.getElementById('pt-pin-hit');
+    let cnt = document.getElementById('pt-intext-count');
+    let pinBtn = document.getElementById('pt-pin-hit');
     q = (q || '').trim();
     if (q.length < 2) { if (cnt) cnt.textContent = ''; if (pinBtn) pinBtn.disabled = true; return; }
-    var ql = q.toLowerCase();
-    var walker = document.createTreeWalker(doc, NodeFilter.SHOW_TEXT, null);
-    var nodes = [], n;
+    const ql = q.toLowerCase();
+    const walker = document.createTreeWalker(doc, NodeFilter.SHOW_TEXT, null);
+    let nodes = [], n;
     while ((n = walker.nextNode())) nodes.push(n);
     nodes.forEach(function(node) {
-        var text = node.nodeValue, lower = text.toLowerCase();
+        let text = node.nodeValue, lower = text.toLowerCase();
         if (lower.indexOf(ql) === -1) return;
-        var frag = document.createDocumentFragment(), pos = 0, idx;
+        let frag = document.createDocumentFragment(), pos = 0, idx;
         while ((idx = lower.indexOf(ql, pos)) !== -1) {
             if (idx > pos) frag.appendChild(document.createTextNode(text.slice(pos, idx)));
-            var mk = document.createElement('mark'); mk.className = 'pt-hit'; mk.textContent = text.slice(idx, idx + ql.length);
+            const mk = document.createElement('mark'); mk.className = 'pt-hit'; mk.textContent = text.slice(idx, idx + ql.length);
             frag.appendChild(mk); docMarks.push(mk); pos = idx + ql.length;
         }
         if (pos < text.length) frag.appendChild(document.createTextNode(text.slice(pos)));
@@ -763,18 +745,18 @@ function setActiveMark(i) {
     if (!docMarks.length) return;
     docMarks.forEach(function(m) { m.classList.remove('active'); });
     docMarkIdx = (i + docMarks.length) % docMarks.length;
-    var m = docMarks[docMarkIdx];
+    let m = docMarks[docMarkIdx];
     m.classList.add('active');
     if (typeof m.scrollIntoView === 'function') m.scrollIntoView({ block: 'center' });
-    var cnt = document.getElementById('pt-intext-count');
+    let cnt = document.getElementById('pt-intext-count');
     if (cnt) cnt.textContent = (docMarkIdx + 1) + '/' + docMarks.length;
 }
 
 function snippetAround(el, term) {
-    var ctx = el && el.parentNode ? (el.parentNode.textContent || '') : term;
-    var i = ctx.toLowerCase().indexOf(term.toLowerCase());
+    const ctx = el && el.parentNode ? (el.parentNode.textContent || '') : term;
+    let i = ctx.toLowerCase().indexOf(term.toLowerCase());
     if (i === -1) return term;
-    var start = Math.max(0, i - 90), end = Math.min(ctx.length, i + term.length + 90);
+    let start = Math.max(0, i - 90), end = Math.min(ctx.length, i + term.length + 90);
     return (start > 0 ? '…' : '') + ctx.slice(start, end).trim() + (end < ctx.length ? '…' : '');
 }
 
@@ -812,7 +794,7 @@ function unpinEvidence(cat, idx) {
 function injectMachineEvidence(p) {
     if (!p || work.pid !== p.id || work.machineInjected || !machineEvidence) return;
     work.machineInjected = true;
-    var rec = machineEvidence[p.id];
+    let rec = machineEvidence[p.id];
     if (!rec) return;
     ALL_CATS.forEach(function(cat) {
         (rec[cat] || []).forEach(function(ev) {
@@ -825,19 +807,19 @@ function injectMachineEvidence(p) {
 // ---- right: assessment (categories + evidence + derived decision + collapsed AI) ----
 function assessInnerHtml(p, dec) {
     if (dec) return assessLockedHtml(p, dec);
-    var cats = work.cats;
-    var h = '<div class="pt-rail-head"><span class="pt-rail-title">Deine Bewertung</span>' +
+    let cats = work.cats;
+    let h = '<div class="pt-rail-head"><span class="pt-rail-title">Deine Bewertung</span>' +
         '<span class="pt-spacer"></span><span class="pt-pill pt-pill-human">bindend</span></div>';
     h += '<div class="pt-rail-body">';
     h += '<p class="pt-assess-hint">Markiere jede Kategorie, die du am Text belegen kannst, oder hefte einen Beleg aus dem Text an.</p>';
-    var seed = seedDecision(p);
+    let seed = seedDecision(p);
     if (seed) h += '<div class="pt-seed-ref">Seed-Bewertung (Expert:innen): <strong class="pt-dec-' +
         seed.decision.toLowerCase() + '">' + seed.decision + '</strong>. Du entscheidest unabhaengig.</div>';
     h += dimHtml('Technik', TECH_CATS, cats, false);
     h += dimHtml('Sozial', SOCIAL_CATS, cats, false);
     h += evidenceListHtml(work.evidence, false);
     h += '<div class="pt-logic" id="pt-logic">' + logicInner(cats, work.override) + '</div>';
-    var showReason = finalDecisionOf(cats, work.override) === 'Exclude';
+    const showReason = finalDecisionOf(cats, work.override) === 'Exclude';
     h += '<div class="pt-reason-block" id="pt-reason-block" style="display:' + (showReason ? 'block' : 'none') + ';">';
     h += '<div class="pt-tag-mono pt-reason-label">Ausschlussgrund &middot; erforderlich</div><div class="pt-reason-chips">';
     EXCLUSION_REASONS.forEach(function(r) {
@@ -854,8 +836,8 @@ function assessInnerHtml(p, dec) {
 }
 
 function assessLockedHtml(p, dec) {
-    var cats = dec.categories || {};
-    var h = '<div class="pt-rail-head"><span class="pt-rail-title">Deine Bewertung</span>' +
+    let cats = dec.categories || {};
+    let h = '<div class="pt-rail-head"><span class="pt-rail-title">Deine Bewertung</span>' +
         '<span class="pt-spacer"></span><span class="pt-pill pt-pill-' + (dec.decision === 'Include' ? 'include' : 'exclude') + ' pt-pill-lg">' + dec.decision + '</span></div>';
     h += '<div class="pt-rail-body">';
     if (dec.decision === 'Exclude' && dec.reason) h += '<div class="pt-seed-ref">Ausschlussgrund: <strong>' + EC.escapeHtml(dec.reason.replace(/_/g, ' ')) + '</strong></div>';
@@ -872,8 +854,8 @@ function assessLockedHtml(p, dec) {
 }
 
 function dimHtml(label, keys, cats, locked) {
-    var anyOn = keys.some(function(c) { return cats[c]; });
-    var h = '<div class="pt-dim"><div class="pt-dim-head"><span class="pt-tag-mono">' + label + '</span>' +
+    const anyOn = keys.some(function(c) { return cats[c]; });
+    let h = '<div class="pt-dim"><div class="pt-dim-head"><span class="pt-tag-mono">' + label + '</span>' +
         '<span class="pt-dim-rule"></span><span class="pt-pill pt-dim-pill ' + (anyOn ? 'pt-pill-include' : 'pt-pill-ghost') + '">' +
         (anyOn ? '&ge;1 gesetzt' : 'keine') + '</span></div><div class="pt-chips">';
     keys.forEach(function(c) { h += chipHtml(c, cats[c], locked); });
@@ -888,17 +870,17 @@ function chipHtml(cat, on, locked) {
 }
 
 function evidenceListHtml(evidence, locked) {
-    var cats = ALL_CATS.filter(function(c) { return (evidence[c] || []).length; });
+    let cats = ALL_CATS.filter(function(c) { return (evidence[c] || []).length; });
     if (!cats.length) {
         return locked ? '' : '<div class="pt-evid pt-evid-empty"><span class="pt-tag-mono">Belege</span>' +
             '<p class="pt-muted">Noch keine Belege angeheftet. Markiere im Text die Stelle, die eine Kategorie traegt.</p></div>';
     }
-    var h = '<div class="pt-evid"><span class="pt-tag-mono">Belege</span>';
+    let h = '<div class="pt-evid"><span class="pt-tag-mono">Belege</span>';
     cats.forEach(function(c) {
         h += '<div class="pt-evid-cat"><div class="pt-evid-cat-h"><span class="pt-evid-dot" style="background:' +
             ((EC.CAT_COLORS && EC.CAT_COLORS[c]) || 'var(--pt-human)') + '"></span>' + EC.escapeHtml(CAT_LABELS[c]) + '</div>';
         (evidence[c] || []).forEach(function(ev, i) {
-            var origin = ev.origin === 'ai' ? 'ai' : 'human'; // legacy Belege without origin are human pins
+            let origin = ev.origin === 'ai' ? 'ai' : 'human'; // legacy Belege without origin are human pins
             h += '<div class="pt-evid-item">' +
                 '<span class="pt-evid-origin pt-evid-origin-' + origin + '">' + (origin === 'ai' ? 'KI' : 'Mensch') + '</span>' +
                 '<span class="pt-evid-snip">' + EC.escapeHtml(ev.snippet || ev.term) + '</span>' +
@@ -911,10 +893,10 @@ function evidenceListHtml(evidence, locked) {
 }
 
 function logicInner(cats, override) {
-    var tech = TECH_CATS.some(function(c) { return cats[c]; });
-    var soc = SOCIAL_CATS.some(function(c) { return cats[c]; });
-    var derived = deriveDecision(cats);
-    var h = '<div class="pt-logic-row">';
+    let tech = TECH_CATS.some(function(c) { return cats[c]; });
+    let soc = SOCIAL_CATS.some(function(c) { return cats[c]; });
+    const derived = deriveDecision(cats);
+    let h = '<div class="pt-logic-row">';
     h += '<span class="pt-logic-term' + (tech ? ' on' : '') + '">&ge;1 Technik</span>';
     h += '<span class="pt-logic-and mono">UND</span>';
     h += '<span class="pt-logic-term' + (soc ? ' on' : '') + '">&ge;1 Sozial</span>';
@@ -931,10 +913,10 @@ function logicInner(cats, override) {
 }
 
 function aiCollapsedHtml(p) {
-    var a = aiProposal(p);
+    let a = aiProposal(p);
     if (!a) return '';
-    var on = ALL_CATS.filter(function(c) { return a.categories[c]; });
-    var h = '<details class="pt-ai-collapse"><summary><span class="pt-tag-mono">KI-Vorschlag</span>' +
+    const on = ALL_CATS.filter(function(c) { return a.categories[c]; });
+    let h = '<details class="pt-ai-collapse"><summary><span class="pt-tag-mono">KI-Vorschlag</span>' +
         '<span class="pt-pill pt-pill-ai">advisory</span><span class="pt-spacer"></span>' +
         '<span class="pt-dec-' + (a.decision === 'Include' ? 'include' : 'exclude') + '">' + a.decision + '</span></summary>';
     h += '<div class="pt-ai-collapse-body">';
@@ -948,16 +930,16 @@ function aiCollapsedHtml(p) {
 }
 
 function refreshAssess() {
-    var col = document.getElementById('pt-assess-col');
+    let col = document.getElementById('pt-assess-col');
     if (!col) return;
-    var p = papers[state.index];
+    let p = papers[state.index];
     col.innerHTML = assessInnerHtml(p, curDec()[p.id]);
     bindAssess(p, curDec()[p.id]);
 }
 
 // ---- handlers ----
 function attachScreening(p, dec) {
-    var el = surfaceEl(); if (!el) return;
+    let el = surfaceEl(); if (!el) return;
 
     bindCorpusItems();
 
@@ -966,7 +948,7 @@ function attachScreening(p, dec) {
         b.addEventListener('click', function() { setReadMode(b.dataset.mode); });
     });
 
-    var cq = document.getElementById('pt-corpus-q');
+    const cq = document.getElementById('pt-corpus-q');
     if (cq) {
         cq.addEventListener('input', function() {
             corpusQuery = cq.value;
@@ -977,32 +959,32 @@ function attachScreening(p, dec) {
     refreshCorpusList();
 
     // in-text search
-    var intext = document.getElementById('pt-intext');
+    const intext = document.getElementById('pt-intext');
     if (intext) {
         intext.addEventListener('input', function() { applyInText(intext.value); });
         intext.addEventListener('keydown', function(e) {
             if (e.key === 'Enter') { e.preventDefault(); if (docMarks.length) setActiveMark(docMarkIdx + 1); }
         });
     }
-    var prev = document.getElementById('pt-intext-prev');
+    const prev = document.getElementById('pt-intext-prev');
     if (prev) prev.addEventListener('click', function() { if (docMarks.length) setActiveMark(docMarkIdx - 1); });
-    var next = document.getElementById('pt-intext-next');
+    const next = document.getElementById('pt-intext-next');
     if (next) next.addEventListener('click', function() { if (docMarks.length) setActiveMark(docMarkIdx + 1); });
-    var pinHit = document.getElementById('pt-pin-hit');
+    const pinHit = document.getElementById('pt-pin-hit');
     if (pinHit) pinHit.addEventListener('click', function() {
         if (!docMarks.length || dec) return;
-        var m = docMarks[docMarkIdx];
-        var term = (intext && intext.value || '').trim();
+        let m = docMarks[docMarkIdx];
+        let term = (intext && intext.value || '').trim();
         openPinMenu(term, snippetAround(m, term));
     });
 
     // text-selection pinning in the reading column
-    var doc = document.getElementById('pt-doc');
+    let doc = document.getElementById('pt-doc');
     if (doc && !dec) {
         doc.addEventListener('mouseup', function() {
-            var sel = window.getSelection ? window.getSelection() : null;
+            let sel = window.getSelection ? window.getSelection() : null;
             if (!sel || sel.isCollapsed) return;
-            var text = (sel.toString() || '').trim();
+            let text = (sel.toString() || '').trim();
             if (text.length < 2 || text.length > 400) return;
             openPinMenu(text.slice(0, 80), text);
         });
@@ -1012,19 +994,19 @@ function attachScreening(p, dec) {
 }
 
 function bindAssess(p, dec) {
-    var col = document.getElementById('pt-assess-col'); if (!col) return;
+    let col = document.getElementById('pt-assess-col'); if (!col) return;
 
     if (dec) {
-        var rev = col.querySelector('#pt-revise');
+        const rev = col.querySelector('#pt-revise');
         if (rev) rev.addEventListener('click', function() { editRecord(p); });
-        var nx = col.querySelector('#pt-next');
+        let nx = col.querySelector('#pt-next');
         if (nx) nx.addEventListener('click', gotoNextOpen);
         return;
     }
 
     col.querySelectorAll('.pt-chip').forEach(function(btn) {
         btn.addEventListener('click', function() {
-            var c = btn.dataset.cat;
+            let c = btn.dataset.cat;
             work.cats[c] = !work.cats[c];
             if (deriveDecision(work.cats) === 'Exclude') work.override = false;
             refreshAssess();
@@ -1036,27 +1018,27 @@ function bindAssess(p, dec) {
     col.querySelectorAll('.pt-reason-chip').forEach(function(btn) {
         btn.addEventListener('click', function() { work.reason = btn.dataset.reason; refreshAssess(); });
     });
-    var ov = col.querySelector('#pt-override');
+    const ov = col.querySelector('#pt-override');
     if (ov) ov.addEventListener('change', function() { work.override = ov.checked; refreshAssess(); });
 
-    var rec = col.querySelector('#pt-record');
-    var hint = col.querySelector('#pt-actions-hint');
-    var fin = finalDecisionOf(work.cats, work.override);
-    var can = fin !== 'Exclude' || !!work.reason;
+    let rec = col.querySelector('#pt-record');
+    let hint = col.querySelector('#pt-actions-hint');
+    let fin = finalDecisionOf(work.cats, work.override);
+    const can = fin !== 'Exclude' || !!work.reason;
     if (rec) rec.disabled = !can;
     if (hint) hint.textContent = can ? 'Deine Entscheidung ist verbindlich. KI bleibt nur als Vorschlag.' : 'Bitte einen Ausschlussgrund waehlen.';
     if (rec) rec.addEventListener('click', commit);
 }
 
 function commit() {
-    var p = papers[state.index];
-    var fin = finalDecisionOf(work.cats, work.override);
+    let p = papers[state.index];
+    let fin = finalDecisionOf(work.cats, work.override);
     if (fin === 'Exclude' && !work.reason) { refreshAssess(); return; }
     // the persisted record holds only human Belege; AI-origin evidence stays
     // advisory and session-only, never written to the reviewer file (ADR-018)
-    var humanEvidence = {};
+    const humanEvidence = {};
     ALL_CATS.forEach(function(c) {
-        var items = (work.evidence[c] || []).filter(function(ev) { return (ev.origin || 'human') !== 'ai'; });
+        const items = (work.evidence[c] || []).filter(function(ev) { return (ev.origin || 'human') !== 'ai'; });
         if (items.length) humanEvidence[c] = items;
     });
     curDec()[p.id] = {
@@ -1077,9 +1059,9 @@ function editRecord(p) {
 }
 
 function gotoNextOpen() {
-    var d = curDec();
-    for (var i = 0; i < papers.length; i++) {
-        var j = (state.index + 1 + i) % papers.length;
+    let d = curDec();
+    for (let i = 0; i < papers.length; i++) {
+        const j = (state.index + 1 + i) % papers.length;
         if (!d[papers[j].id]) { state.index = j; renderScreening(); return; }
     }
     if (state.index < papers.length - 1) state.index++;
@@ -1090,8 +1072,8 @@ function gotoNextOpen() {
 function openPinMenu(term, snippet) {
     pinTerm = term; pinSnippet = snippet;
     pinOrigin = state.readMode === 'ai' ? 'ai' : 'human'; // bind the Beleg to the layer the snippet was taken from
-    var menu = document.getElementById('pt-pinmenu'); if (!menu) return;
-    var h = '<div class="pt-pinmenu-head"><span class="pt-tag-mono">Als Beleg anheften an</span>' +
+    let menu = document.getElementById('pt-pinmenu'); if (!menu) return;
+    let h = '<div class="pt-pinmenu-head"><span class="pt-tag-mono">Als Beleg anheften an</span>' +
         '<button class="pt-pinmenu-x" id="pt-pinmenu-x">&times;</button></div>';
     if (pinOrigin === 'ai') h += '<div class="pt-pinmenu-ai">Dieser Beleg stammt aus der KI-Extraktion. Er wird als KI markiert und bindet die Entscheidung nicht.</div>';
     h += '<div class="pt-pinmenu-snip">' + EC.escapeHtml((snippet || term).slice(0, 160)) + '</div>';
@@ -1110,17 +1092,15 @@ function openPinMenu(term, snippet) {
 }
 
 function closePinMenu() {
-    var menu = document.getElementById('pt-pinmenu');
+    let menu = document.getElementById('pt-pinmenu');
     if (menu) { menu.hidden = true; menu.innerHTML = ''; }
 }
 
-// ============================================================
 // Surface: PRISMA & Report (flow + checklist + disclosure)
-// ============================================================
 
 function renderReportSurface() {
-    var el = surfaceEl(); if (!el) return;
-    var html = '';
+    let el = surfaceEl(); if (!el) return;
+    let html = '';
     html += '<div class="pt-report-top">' + perspectiveBar() +
         '<p class="pt-muted">Diese Ansicht wird aus dem Screening berechnet.</p></div>';
     html += '<section class="pt-rsec"><h3 class="pt-rsec-h">PRISMA-2020-Fluss (trAIce R1)</h3><div id="pt-sec-flow"></div></section>';
@@ -1135,8 +1115,8 @@ function renderReportSurface() {
 
 function renderFlowInto(el) {
     if (!el) return;
-    var f = computeFlow();
-    var html = '<div class="pt-flow">';
+    let f = computeFlow();
+    let html = '<div class="pt-flow">';
     html += '<div class="pt-flow-box pt-flow-id"><div class="pt-flow-h">Identification</div>' +
         '<div class="pt-flow-n">Records identified&nbsp; n = ' + f.total + '</div>' +
         '<div class="pt-flow-sub">Seed-Korpus (Deep Research + manuell + Zotero)</div></div>';
@@ -1163,12 +1143,12 @@ function renderFlowInto(el) {
 
 function renderChecklistInto(el) {
     if (!el) return;
-    var html = '<p class="pt-check-intro">PRISMA-trAIce (Holst et al. 2025), 17 Items. Auto-markierte erfuellt das Dual-Assessment-Setup bereits.</p>';
-    var lastSec = '';
+    let html = '<p class="pt-check-intro">PRISMA-trAIce (Holst et al. 2025), 17 Items. Auto-markierte erfuellt das Dual-Assessment-Setup bereits.</p>';
+    let lastSec = '';
     TRAICE.forEach(function(it) {
         if (it.sec !== lastSec) { html += '<div class="pt-check-sec">' + it.sec + '</div>'; lastSec = it.sec; }
-        var st = state.checklist[it.id] || {};
-        var status = st.status || (it.auto ? 'satisfied' : 'open');
+        let st = state.checklist[it.id] || {};
+        let status = st.status || (it.auto ? 'satisfied' : 'open');
         html += '<div class="pt-check-item"><div class="pt-check-row">' +
             '<button class="pt-check-status pt-st-' + status + '" data-id="' + it.id + '">' + status + '</button>' +
             '<span class="pt-check-id">' + it.id + '</span>' +
@@ -1181,28 +1161,28 @@ function renderChecklistInto(el) {
     el.innerHTML = html;
     el.querySelectorAll('.pt-check-status').forEach(function(btn) {
         btn.addEventListener('click', function() {
-            var id = btn.dataset.id;
-            var it = TRAICE.filter(function(t) { return t.id === id; })[0];
-            var cur = (state.checklist[id] && state.checklist[id].status) || (it.auto ? 'satisfied' : 'open');
-            var nx = cur === 'open' ? 'satisfied' : cur === 'satisfied' ? 'na' : 'open';
+            let id = btn.dataset.id;
+            const it = TRAICE.filter(function(t) { return t.id === id; })[0];
+            const cur = (state.checklist[id] && state.checklist[id].status) || (it.auto ? 'satisfied' : 'open');
+            let nx = cur === 'open' ? 'satisfied' : cur === 'satisfied' ? 'na' : 'open';
             state.checklist[id] = state.checklist[id] || {}; state.checklist[id].status = nx;
             save(); renderChecklistInto(el);
         });
     });
     el.querySelectorAll('.pt-check-note').forEach(function(inp) {
         inp.addEventListener('change', function() {
-            var id = inp.dataset.id; state.checklist[id] = state.checklist[id] || {}; state.checklist[id].note = inp.value; save();
+            let id = inp.dataset.id; state.checklist[id] = state.checklist[id] || {}; state.checklist[id].note = inp.value; save();
         });
     });
-    var exp = el.querySelector('.pt-check-export');
+    const exp = el.querySelector('.pt-check-export');
     if (exp) exp.addEventListener('click', exportChecklist);
 }
 
 function exportChecklist() {
-    var lines = ['# PRISMA-trAIce checklist', ''];
+    let lines = ['# PRISMA-trAIce checklist', ''];
     TRAICE.forEach(function(it) {
-        var st = state.checklist[it.id] || {};
-        var status = st.status || (it.auto ? 'satisfied' : 'open');
+        let st = state.checklist[it.id] || {};
+        let status = st.status || (it.auto ? 'satisfied' : 'open');
         lines.push('- [' + (status === 'satisfied' ? 'x' : ' ') + '] ' + it.id + ' (' + it.lvl + '): ' + it.text + (st.note ? ' -- ' + st.note : ''));
     });
     download('prisma-traice-checklist.md', lines.join('\n'), 'text/markdown');
@@ -1214,11 +1194,11 @@ function renderReportInto(el) {
     if (!el) return;
     if (state.disclosure.stage == null) state.disclosure.stage = 'Screening';
     if (state.disclosure.conflicts == null) state.disclosure.conflicts = 'none';
-    var fields = [['name', 'Modell'], ['date', 'Datum'], ['prompt', 'Prompt-Version'], ['temperature', 'Temperature'],
+    const fields = [['name', 'Modell'], ['date', 'Datum'], ['prompt', 'Prompt-Version'], ['temperature', 'Temperature'],
                   ['threshold', 'Confidence-Schwelle'], ['stage', 'Stage'], ['conflicts', 'Conflicts of Interest'], ['limitations', 'Limitationen']];
-    var html = '<div class="pt-report"><div class="pt-report-form">';
+    let html = '<div class="pt-report"><div class="pt-report-form">';
     fields.forEach(function(f) {
-        var big = f[0] === 'limitations';
+        const big = f[0] === 'limitations';
         html += '<label class="pt-field"><span>' + f[1] + '</span>' +
             (big ? '<textarea class="pt-rin" data-f="' + f[0] + '" rows="2">' + EC.escapeHtml(disc(f[0])) + '</textarea>'
                  : '<input class="pt-rin" data-f="' + f[0] + '" value="' + EC.escapeHtml(disc(f[0])) + '">') + '</label>';
@@ -1235,8 +1215,8 @@ function renderReportInto(el) {
 function updatePreview() { var pre = document.getElementById('pt-prev'); if (pre) pre.textContent = disclosureMarkdown(); }
 
 function disclosureMarkdown() {
-    var n = papers.filter(function(p) { return aiProposal(p); }).length;
-    var L = [];
+    let n = papers.filter(function(p) { return aiProposal(p); }).length;
+    const L = [];
     L.push('## AI use disclosure (PRISMA-trAIce / RAISE)', '');
     L.push('Screening of ' + n + ' records used ' + disc('name') + ' (prompt ' + disc('prompt') + ', temperature ' + disc('temperature') + '), date ' + disc('date') + '.');
     L.push('Stage: ' + disc('stage') + '. The AI proposal is advisory; every record was screened independently by a human reviewer, whose decision is binding (RAISE).');
@@ -1247,13 +1227,11 @@ function disclosureMarkdown() {
     return L.join('\n');
 }
 
-// ============================================================
 // Surface: Daten & Repo (sync: connect, per-reviewer files, export/import)
-// ============================================================
 
 function renderData() {
-    var el = surfaceEl(); if (!el) return;
-    var html = '<div class="pt-data">';
+    let el = surfaceEl(); if (!el) return;
+    let html = '<div class="pt-data">';
 
     html += '<div class="pt-data-block"><h4>Reviewer-Identitaet</h4>' +
         '<label class="pt-field"><span>Dein Kuerzel (Dateiname &lt;kuerzel&gt;.json)</span>' +
@@ -1280,14 +1258,14 @@ function renderData() {
     html += '</div>';
     el.innerHTML = html;
 
-    var rid = el.querySelector('.pt-rev-id');
+    const rid = el.querySelector('.pt-rev-id');
     if (rid) rid.addEventListener('change', function() {
-        var v = (rid.value || '').trim().replace(/[^a-zA-Z0-9_-]/g, '') || 'reviewer1';
+        const v = (rid.value || '').trim().replace(/[^a-zA-Z0-9_-]/g, '') || 'reviewer1';
         state.reviewer = v; save(); updateConnStatus(); renderData();
     });
-    var conn = el.querySelector('.pt-connect'); if (conn) conn.addEventListener('click', connectRepo);
-    var recon = el.querySelector('.pt-reconnect'); if (recon) recon.addEventListener('click', reconnectRepo);
-    var reload = el.querySelector('.pt-reload'); if (reload) reload.addEventListener('click', function() { loadAllReviewers().then(function() { renderData(); }); });
+    const conn = el.querySelector('.pt-connect'); if (conn) conn.addEventListener('click', connectRepo);
+    const recon = el.querySelector('.pt-reconnect'); if (recon) recon.addEventListener('click', reconnectRepo);
+    const reload = el.querySelector('.pt-reload'); if (reload) reload.addEventListener('click', function() { loadAllReviewers().then(function() { renderData(); }); });
     el.querySelector('.pt-exp-rev').addEventListener('click', function() { download(state.reviewer + '.json', JSON.stringify(reviewerPayload(state.reviewer), null, 2), 'application/json'); });
     el.querySelector('.pt-exp-csv').addEventListener('click', exportCsv);
     el.querySelector('.pt-clear').addEventListener('click', function() {
@@ -1295,40 +1273,54 @@ function renderData() {
         state.reviewers[state.reviewer] = {}; state.index = 0; save(); showSurface('screening');
     });
     el.querySelector('.pt-imp').addEventListener('change', function(e) {
-        var file = e.target.files[0]; if (!file) return;
-        var r = new FileReader();
+        const file = e.target.files[0]; if (!file) return;
+        let r = new FileReader();
         r.onload = function() {
-            try { var obj = JSON.parse(r.result); var key = obj.reviewer || file.name.replace(/\.json$/, ''); state.reviewers[key] = obj.decisions || {}; save(); renderData(); }
-            catch (err) { alert('Import fehlgeschlagen: ' + err.message); }
+            let obj;
+            try { obj = JSON.parse(r.result); }
+            catch (err) { alert('Import fehlgeschlagen: ' + err.message); return; }
+            // A foreign or corrupt file must not poison the persistent state.
+            if (!obj || typeof obj !== 'object' || !obj.decisions || typeof obj.decisions !== 'object') {
+                alert('Import fehlgeschlagen: keine gueltige Reviewer-Datei (Feld "decisions" fehlt).');
+                return;
+            }
+            const rawKey = obj.reviewer || file.name.replace(/\.json$/, '');
+            let key = String(rawKey).trim().replace(/[^a-zA-Z0-9_-]/g, '') || 'import';
+            state.reviewers[key] = obj.decisions;
+            save(); renderData();
         };
         r.readAsText(file);
     });
 }
 
-function exportCsv() {
-    var rows = [['id', 'title', 'human_decision', 'human_source', 'ai_decision', 'divergent', 'reason', 'evidence_count']];
-    papers.forEach(function(p) {
-        var h = humanDecision(p), a = aiProposal(p);
-        var rec = (state.reviewers[state.perspective] && state.reviewers[state.perspective][p.id]) || curDec()[p.id];
-        rows.push([p.id, '"' + (p.title || '').replace(/"/g, '""') + '"', h ? h.decision : '', h ? h.source : '',
-            a ? a.decision : '', divergent(h, a) ? 'yes' : 'no', (h && h.reason) ? h.reason : '', evidenceCount(rec)]);
-    });
-    download('prisma-decision-log.csv', rows.map(function(r) { return r.join(','); }).join('\n'), 'text/csv');
+// Quote a CSV cell only when it carries a comma, quote, or newline; any of those
+// in reason/source/title would otherwise shift the columns.
+function csvCell(v) {
+    let s = v == null ? '' : String(v);
+    return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
 }
 
-// ============================================================
+function exportCsv() {
+    let rows = [['id', 'title', 'human_decision', 'human_source', 'ai_decision', 'divergent', 'reason', 'evidence_count']];
+    papers.forEach(function(p) {
+        let h = humanDecision(p), a = aiProposal(p);
+        let rec = (state.reviewers[state.perspective] && state.reviewers[state.perspective][p.id]) || curDec()[p.id];
+        rows.push([p.id, p.title || '', h ? h.decision : '', h ? h.source : '',
+            a ? a.decision : '', divergent(h, a) ? 'yes' : 'no', (h && h.reason) ? h.reason : '', evidenceCount(rec)]);
+    });
+    download('prisma-decision-log.csv', rows.map(function(r) { return r.map(csvCell).join(','); }).join('\n'), 'text/csv');
+}
+
 // Utilities
-// ============================================================
 
 function download(filename, content, mime) {
-    var blob = new Blob([content], { type: mime || 'text/plain' });
-    var url = URL.createObjectURL(blob);
-    var a = document.createElement('a');
+    const blob = new Blob([content], { type: mime || 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    let a = document.createElement('a');
     a.href = url; a.download = filename; document.body.appendChild(a); a.click();
     document.body.removeChild(a); URL.revokeObjectURL(url);
 }
 
-// ============================================================
 // Test hook (P1). One definition exposed under two names, no line above is
 // changed and no runtime behaviour changes:
 //   window.EC._test        headless harness. run-tests.html loads prisma-data.js
@@ -1341,8 +1333,7 @@ function download(filename, content, mime) {
 // surfaces (showSurface) and the M3 reading layers (setReadMode, splitDocLayers).
 // state and work are getters, never stale direct references (work is reassigned
 // by resetWork, so a captured reference would go dead after a paper change).
-// ============================================================
-var TEST_HOOK = {
+const TEST_HOOK = {
     // constants
     TECH_CATS: TECH_CATS, SOCIAL_CATS: SOCIAL_CATS, ALL_CATS: ALL_CATS,
     EXCLUSION_REASONS: EXCLUSION_REASONS, SEED: SEED, REVIEWER_SCHEMA: REVIEWER_SCHEMA,
