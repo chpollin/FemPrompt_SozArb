@@ -330,6 +330,16 @@ Begründung. Das Werkzeug ist damit konsistent, es ist ein evidenzgestütztes Sc
 
 Effekt. Implementiert (`docs/js/prisma.js`, computeMatrix/cohenKappa/kappaLabel entfernt, disclosureMarkdown auf den M9/R2-Verweis umgestellt, TEST_HOOK bereinigt), test-abgedeckt (Section B der Suite entfernt, der Disclosure-Test prüft jetzt die Abwesenheit der Tool-Kappa und den externen Verweis, `tests/tests.js`). Headless grün nach der Entfernung.
 
+### ADR-018 Maschinen-Kategorie-Evidenz als vorgeladene KI-Provenienzklasse (R2)
+
+Kontext. ADR-016 trennt die Leseschichten und bindet die Beleg-Herkunft an die Quellschicht; ein aus der KI-Schicht gepinnter Beleg trägt `origin: 'ai'` und bindet nie die Entscheidung. Offen blieb der proaktive Teil von R2, die maschinelle Kategoriezuordnung soll je Paper schon beim Öffnen als KI-Beleg sichtbar sein, nicht erst wenn der Reviewer von Hand aus der KI-Schicht pinnt. Das servierte Wissensdokument trägt einen `## Kategorie-Evidenz`-Block aus unkategorisierten `### Evidenz N`-Schnipseln; eine Quelle-zu-Kategorie-Zuordnung existiert in den Daten nicht.
+
+Wahl. Ein Build-Schritt (`scripts/build_screening_index.py`, `build_machine_evidence`) emittiert `docs/data/machine_evidence.json`, je Paper und je LLM-geflaggter Kategorie ein Evidenz-Item, dessen Snippet die Modell-Begründung (`reasoning`) für dieses Paper ist. Die detaillierten Evidenz-Zitate bleiben in der KI-Extraktions-Leseschicht (M3), sie auf einzelne Kategorien zu lokalisieren würde Provenienz erfinden, genau das, was die Mensch/KI-Trennung verhindern soll. Im Werkzeug lädt `loadMachineEvidence` die Datei, und `injectMachineEvidence` legt die Items beim Öffnen eines noch nicht entschiedenen Papers als `origin: 'ai'`-Belege vor. Sie sind advisory, als KI markiert, setzen nie `work.cats`, zählen nicht in den bindenden Beleg-Count und werden nie in die Reviewer-Datei geschrieben.
+
+Begründung. Damit ist die in ADR-016 angelegte Provenienz-Bindung nicht nur reaktiv (wer aus der KI-Schicht pinnt), sondern proaktiv erfüllt, der Reviewer sieht die maschinelle Einschätzung je Kategorie von Anfang an, klar als KI gekennzeichnet, ohne dass sie die abgeleitete menschliche Entscheidung kippen kann. Die Wahl der Modell-Begründung statt der Roh-Zitate hält die Daten ehrlich, ein unkategorisierter Schnipsel wird nicht künstlich einer Kategorie zugeschrieben.
+
+Effekt. Implementiert (`scripts/build_screening_index.py` build_machine_evidence, `docs/data/machine_evidence.json`; `docs/js/prisma.js` loadMachineEvidence, injectMachineEvidence, Ausschluss aus dem bindenden Count, kein Schreiben in die Reviewer-Datei). Die Provenienz-Kennzeichnung und die bindende Separierung sind test-abgedeckt (`tests/tests.js`). Schließt den proaktiven R2-Punkt (Maschinen-Evidenz vorladen), der nach ADR-016 offen blieb. Die Synthese-Ebene (KI1) bleibt davon unberührt und weiter offen.
+
 ## Was nicht reingehört
 
 Architecture (stack, data flow, module boundaries) belongs in a future `architecture.md`; the data model belongs in [[data]]; design tokens and UI patterns belong in [[design]]; the standards themselves belong in [[standards]].
