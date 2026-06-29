@@ -64,6 +64,9 @@ pipeline/validation_reports_clean/
 # LLM cache (vault generation)
 .vault_cache/
 
+# Obsidian per-machine workspace config (layout, plugins, open panes)
+vault/.obsidian/
+
 # Backup files
 *_old.*
 *_backup.*
