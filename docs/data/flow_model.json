@@ -1,67 +1,68 @@
 {
-  "schema": "femprompt-prisma-flow-round1/0.1",
-  "generated": "2026-06-09",
+  "schema": "femprompt-prisma-flow-round1/0.2",
   "round": 1,
   "standards": [
     "PRISMA 2020 (Page et al. 2021, BMJ 372:n71): Identification, Screening, Included",
-    "PRISMA-trAIce R1 (Holst et al. 2025, JMIR AI 4:e80247, proposed extension): flow distinguishes AI decisions from human decisions"
+    "PRISMA-trAIce R1 (Holst et al. 2025, JMIR AI 4:e80247, proposed extension): the flow distinguishes AI decisions from human decisions"
   ],
-  "evidence": "agent_recount_scripted_replay_pending",
-  "method": "Every count in this file was recomputed on 2026-06-09 by an agent running anchored regular-expression counts (ripgrep) over the raw CSVs in benchmark/data/, which are CRLF files; patterns that anchor at line end use \\r?$. Each count carries a source object naming the file and the counting rule. Counts that could not be recomputed from benchmark/data/ are taken from knowledge/conformance-audit.md or knowledge/verification-empirical-core.md and say so in their source. The scripted, committed replay (Stage R2 of knowledge/plan.md) that supersedes this agent recount is pending; until it exists, the evidence flag above applies to every number here.",
-  "consistency_checks": [
-    "papers_full.csv: the four (Is_Duplicate, Has_HA) flag combinations count 200 + 92 + 31 + 3 = 326, equal to the row-marker count, so every data row matched exactly once.",
-    "human_assessment.csv: 142 Include + 161 Exclude = 303, equal to the row-marker count.",
-    "llm_assessment_10k.csv: 232 Include + 94 Exclude = 326, equal to the row-marker count.",
-    "merged_comparison.csv: 338 rows total; the four confusion cells sum to 291; 338 - 326 = 12 human-only and 338 - 303 = 35 AI-only, matching benchmark/results/agreement_metrics.json metadata (291 / 12 / 35).",
-    "Exclusion reasons sum to 160 of 161 Exclude rows; the residual row is not attributable by per-line pattern matching (multiline quoted field), the same remainder knowledge/conformance-audit.md records."
-  ],
+  "evidence": "scripted_committed_replay",
+  "method": "Every count flagged source.kind 'scripted' is computed by benchmark/scripts/build_flow_model.py from the raw CSVs in benchmark/data/. Counts flagged 'external' are pipeline or audit figures not present under benchmark/data/ and are sourced to knowledge/verification.md. The script asserts the canonical benchmark invariants before writing and refuses to write on any mismatch; regenerate with: python benchmark/scripts/build_flow_model.py.",
   "identification": {
     "records_identified_total": {
       "value": 326,
       "source": {
-        "file": "benchmark/data/papers_full.csv",
-        "how": "data rows counted with the row-start regex ^\\d+,[A-Z0-9]{8}, (sequential ID, then 8-character Zotero key); agent recount 2026-06-09"
+        "kind": "scripted",
+        "by": "benchmark/scripts/build_flow_model.py",
+        "rule": "rows of papers_full.csv keyed by Zotero_Key"
       }
     },
     "claimed_source_tool_distribution": {
-      "scope": "only the 303 records of the human assessment track carry a Source_Tool value; the column predates the repository record and is not auditable (knowledge/conformance-audit.md, non-auditable acquisition section)",
       "values": {
-        "Perplexity": 74,
-        "Claude": 63,
-        "ChatGPT": 62,
         "Gemini": 54,
+        "Claude": 63,
+        "Perplexity": 74,
+        "ChatGPT": 62,
         "Manual": 50
       },
-      "sum": 303,
+      "scope": "Source_Tool is carried only by the human assessment track and is not auditable; the column predates the repository record (knowledge/verification.md, acquisition).",
       "source": {
-        "file": "benchmark/data/human_assessment.csv",
-        "how": "rows matching ^\\d+,[A-Z0-9]{8},.*,<tool>, per tool name; the five counts sum exactly to the 303 row count; agent recount 2026-06-09, matching the CSV-parsed counts in knowledge/conformance-audit.md"
+        "kind": "scripted",
+        "by": "benchmark/scripts/build_flow_model.py",
+        "rule": "Source_Tool column of human_assessment.csv, value counts"
       }
     },
     "corroborated_provenance_records": {
       "value": 34,
-      "breakdown": { "Claude": 15, "Gemini": 3, "OpenAI": 6, "Perplexity": 10 },
+      "breakdown": {
+        "Claude": 15,
+        "Gemini": 3,
+        "OpenAI": 6,
+        "Perplexity": 10
+      },
       "source": {
-        "file": "knowledge/conformance-audit.md",
-        "how": "taken from the audit, which counted the restored RIS files in deep-research/restored/ mapped via corpus/source_tool_mapping.json; not recomputable from benchmark/data/"
+        "kind": "external",
+        "source": "knowledge/verification.md",
+        "rule": "restored RIS files mapped via corpus/source_tool_mapping.json; not under benchmark/data/"
       }
     },
     "records_flagged_duplicate": {
       "value": 95,
       "source": {
-        "file": "benchmark/data/papers_full.csv",
-        "how": "lines ending ,Yes,Yes\\r?$ (92) plus ,Yes,No\\r?$ (3) for the trailing Is_Duplicate,Has_HA column pair; agent recount 2026-06-09"
+        "kind": "scripted",
+        "by": "benchmark/scripts/build_flow_model.py",
+        "rule": "Is_Duplicate = Yes in papers_full.csv"
       }
     },
     "duplicates_removed_before_screening": {
       "value": 0,
-      "note": "deduplication was not a separate identification-phase step; it happened inside human screening as 67 exclusions with reason Duplicate (see human lane below). The flow is recorded as it happened, per knowledge/conformance-audit.md.",
+      "note": "no identification-phase removal step exists; deduplication happened inside human screening as Duplicate exclusions. The flow is recorded as it happened.",
       "source": {
-        "file": "benchmark/data/papers_full.csv",
-        "how": "no removal step exists in the data; all 326 records, including the 95 flagged duplicates, enter the screening files"
+        "kind": "scripted",
+        "by": "benchmark/scripts/build_flow_model.py",
+        "rule": "no removal step in the data; all identified records enter the screening files"
       }
     },
-    "non_auditable": "Query dates per provider, provider-side model versions, the executed deep-research prompt instantiations, and the merging and metadata cleaning step are not reconstructable from the repository (knowledge/conformance-audit.md; knowledge/paper-integrity.md section 4)."
+    "non_auditable": "Query dates per provider, provider-side model versions, the executed deep-research prompt instantiations, and the merge/cleaning step are not reconstructable from the repository (knowledge/verification.md)."
   },
   "screening": {
     "human_lane": {
@@ -69,95 +70,113 @@
       "records_screened": {
         "value": 303,
         "source": {
-          "file": "benchmark/data/human_assessment.csv",
-          "how": "data rows counted with ^\\d+,[A-Z0-9]{8},; agent recount 2026-06-09"
+          "kind": "scripted",
+          "by": "benchmark/scripts/build_flow_model.py",
+          "rule": "rows of human_assessment.csv keyed by Zotero_Key"
         }
       },
       "included": {
         "value": 142,
         "source": {
-          "file": "benchmark/data/human_assessment.csv",
-          "how": "lines containing ,Include, (the decision token is the only such occurrence outside quoted prose; 142 + 161 = 303 closes against the row count); agent recount 2026-06-09"
+          "kind": "scripted",
+          "by": "benchmark/scripts/build_flow_model.py",
+          "rule": "Decision = Include in human_assessment.csv"
         }
       },
       "excluded": {
         "value": 161,
         "source": {
-          "file": "benchmark/data/human_assessment.csv",
-          "how": "lines containing ,Exclude,; agent recount 2026-06-09"
+          "kind": "scripted",
+          "by": "benchmark/scripts/build_flow_model.py",
+          "rule": "Decision = Exclude in human_assessment.csv"
         }
       },
       "exclusion_reasons": {
         "values": {
+          "No full text": 10,
+          "Other": 5,
           "Duplicate": 67,
           "Not relevant topic": 54,
           "Wrong publication type": 17,
-          "No full text": 10,
-          "Other": 5,
-          "Language": 0,
-          "empty": 7,
-          "unattributable_residual": 1
+          "(empty)": 7,
+          "No relevant topic": 1
         },
-        "sum": 161,
-        "vocabulary_note": "the value Other (5) is outside the controlled vocabulary of benchmark/config/categories.yaml and the 7 empty cells violate it; documented as a hygiene finding in knowledge/conformance-audit.md",
+        "vocabulary_note": "values outside benchmark/config/categories.yaml (e.g. Other) and empty cells are a documented hygiene finding (knowledge/verification.md).",
         "source": {
-          "file": "benchmark/data/human_assessment.csv",
-          "how": "lines matching ,Exclude,<reason>, per controlled reason and ,Exclude,, for empty; per-line counts sum to 160 of 161, the residual row sits in a multiline quoted field and is not pattern-attributable, matching the remainder in knowledge/conformance-audit.md; agent recount 2026-06-09"
+          "kind": "scripted",
+          "by": "benchmark/scripts/build_flow_model.py",
+          "rule": "Exclusion_Reason column over Exclude rows in human_assessment.csv, value counts"
         }
       },
       "corpus_papers_without_human_decision": {
         "value": 34,
         "source": {
-          "file": "benchmark/data/papers_full.csv",
-          "how": "lines ending ,No,No\\r?$ (31) plus ,Yes,No\\r?$ (3) for Has_HA=No; agent recount 2026-06-09"
+          "kind": "scripted",
+          "by": "benchmark/scripts/build_flow_model.py",
+          "rule": "Has_HA != Yes in papers_full.csv"
         }
       },
       "corpus_papers_flagged_human_assessed": {
         "value": 292,
         "source": {
-          "file": "benchmark/data/papers_full.csv",
-          "how": "lines ending ,No,Yes\\r?$ (200) plus ,Yes,Yes\\r?$ (92) for Has_HA=Yes; agent recount 2026-06-09"
+          "kind": "scripted",
+          "by": "benchmark/scripts/build_flow_model.py",
+          "rule": "Has_HA = Yes in papers_full.csv"
         }
       },
       "human_records_not_in_ai_corpus": {
         "value": 12,
         "source": {
-          "file": "benchmark/data/merged_comparison.csv",
-          "how": "derived: 338 merged rows (counted with ^[A-Z0-9]{8},) minus the 326 AI-track rows; matches papers_human_only in benchmark/results/agreement_metrics.json; agent recount 2026-06-09"
+          "kind": "scripted",
+          "by": "benchmark/scripts/build_flow_model.py",
+          "rule": "Zotero_Keys in human_assessment.csv absent from llm_assessment_10k.csv"
         }
       },
-      "per_record_reviewer_identity": "absent; the CSV has no reviewer column. The track is one consolidated annotation by a primary assessor (R1) with corrections or additions by a second assessor (R2) that are not traceable per record; no inter-human reliability statistic exists (knowledge/conformance-audit.md; knowledge/verification-empirical-core.md)."
+      "per_record_reviewer_identity": "absent; the CSV has no reviewer column. The track is one consolidated annotation; no inter-human reliability statistic exists (knowledge/verification.md)."
     },
     "ai_lane": {
       "binding": false,
-      "role": "advisory sibling assessment, stored separately from the human track and never merged destructively",
+      "role": "advisory sibling assessment, stored separately and never merged destructively",
       "model": {
         "value": "claude-haiku-4-5-20251001",
+        "max_tokens": 1024,
         "source": {
-          "file": "knowledge/conformance-audit.md",
-          "how": "taken from the audit, which cites the pinned snapshot id in benchmark/scripts/run_llm_assessment.py; max_tokens 1024 pinned, temperature and top-p unrecorded API defaults"
+          "kind": "external",
+          "source": "knowledge/verification.md",
+          "rule": "model snapshot pinned in benchmark/scripts/run_llm_assessment.py; temperature and top-p unrecorded API defaults"
         }
       },
-      "input": "title plus abstract per paper from papers_full.csv (knowledge document conditions belong to the separate 2x2 experiment, not to this round-1 flow)",
+      "input": "title plus abstract per paper",
       "records_assessed": {
         "value": 326,
         "source": {
-          "file": "benchmark/data/llm_assessment_10k.csv",
-          "how": "data rows counted with ^\\d+,[A-Z0-9]{8},; agent recount 2026-06-09"
+          "kind": "scripted",
+          "by": "benchmark/scripts/build_flow_model.py",
+          "rule": "rows of llm_assessment_10k.csv keyed by Zotero_Key"
         }
       },
       "advisory_include": {
         "value": 232,
         "source": {
-          "file": "benchmark/data/llm_assessment_10k.csv",
-          "how": "lines matching (Ja|Nein),Include, (the decision column directly follows the ten Ja/Nein category columns); 232 + 94 = 326 closes against the row count; agent recount 2026-06-09"
+          "kind": "scripted",
+          "by": "benchmark/scripts/build_flow_model.py",
+          "rule": "Decision = Include in llm_assessment_10k.csv"
         }
       },
       "advisory_exclude": {
         "value": 94,
         "source": {
-          "file": "benchmark/data/llm_assessment_10k.csv",
-          "how": "lines matching (Ja|Nein),Exclude,; agent recount 2026-06-09"
+          "kind": "scripted",
+          "by": "benchmark/scripts/build_flow_model.py",
+          "rule": "Decision = Exclude in llm_assessment_10k.csv"
+        }
+      },
+      "ai_records_not_in_human_track": {
+        "value": 35,
+        "source": {
+          "kind": "scripted",
+          "by": "benchmark/scripts/build_flow_model.py",
+          "rule": "Zotero_Keys in llm_assessment_10k.csv absent from human_assessment.csv"
         }
       }
     },
@@ -165,125 +184,155 @@
       "records_with_both_decisions": {
         "value": 291,
         "source": {
-          "file": "benchmark/data/merged_comparison.csv",
-          "how": "sum of the four confusion cells below; matches papers_with_both_assessments in benchmark/results/agreement_metrics.json; agent recount 2026-06-09"
+          "kind": "scripted",
+          "by": "benchmark/scripts/build_flow_model.py",
+          "rule": "intersection of human and AI Zotero_Keys with a decision on both sides"
         }
       },
       "confusion_matrix_human_x_ai": {
         "both_include": {
           "value": 100,
           "source": {
-            "file": "benchmark/data/merged_comparison.csv",
-            "how": "lines matching ,Include,Include,Ja, (adjacent columns human_decision, agent_decision, agree_decision); agent recount 2026-06-09"
+            "kind": "scripted",
+            "by": "benchmark/scripts/build_flow_model.py",
+            "rule": "re-paired by Zotero_Key: human Include, AI Include"
           }
         },
         "human_include_ai_exclude": {
           "value": 34,
           "source": {
-            "file": "benchmark/data/merged_comparison.csv",
-            "how": "lines matching ,Include,Exclude,Nein,; agent recount 2026-06-09"
+            "kind": "scripted",
+            "by": "benchmark/scripts/build_flow_model.py",
+            "rule": "re-paired by Zotero_Key: human Include, AI Exclude"
           }
         },
         "human_exclude_ai_include": {
           "value": 108,
           "source": {
-            "file": "benchmark/data/merged_comparison.csv",
-            "how": "lines matching ,Exclude,Include,Nein,; agent recount 2026-06-09"
+            "kind": "scripted",
+            "by": "benchmark/scripts/build_flow_model.py",
+            "rule": "re-paired by Zotero_Key: human Exclude, AI Include"
           }
         },
         "both_exclude": {
           "value": 49,
           "source": {
-            "file": "benchmark/data/merged_comparison.csv",
-            "how": "lines matching ,Exclude,Exclude,Ja,; agent recount 2026-06-09"
+            "kind": "scripted",
+            "by": "benchmark/scripts/build_flow_model.py",
+            "rule": "re-paired by Zotero_Key: human Exclude, AI Exclude"
           }
         }
       },
       "cohens_kappa_decision": {
         "value": 0.0561,
         "source": {
-          "file": "knowledge/verification-empirical-core.md",
-          "how": "taken from the verification document, which recomputed it by hand from the verified cell counts; also reported in benchmark/results/agreement_metrics.json. Interpretation constraints (PABAK 0.0241, kappa-max 0.5081, content-only sensitivity) live in that document and bind any use of this number."
+          "kind": "scripted",
+          "by": "benchmark/scripts/build_flow_model.py",
+          "rule": "Cohen kappa over the re-paired decisions; interpretation constraints (PABAK, kappa-max, content-only sensitivity) in knowledge/verification.md"
         }
       },
-      "open_discrepancy": "papers_full.csv flags 292 records as humanly assessed while only 291 pair in the benchmark merge; which record fails to pair cannot be determined without re-running the merge (knowledge/conformance-audit.md). Recorded as an open inconsistency, not smoothed over."
+      "open_discrepancy": {
+        "note": "papers_full.csv flags one more humanly assessed record than the benchmark pairs; the surplus key is a stray Has_HA flag absent from the human CSV, so the real pairings stand and no paper is missing.",
+        "has_ha_yes": 292,
+        "paired": 291,
+        "phantom_key": [
+          "2YS85B49"
+        ],
+        "source": {
+          "kind": "scripted",
+          "by": "benchmark/scripts/build_flow_model.py",
+          "rule": "Has_HA = Yes keys minus human_assessment.csv keys"
+        }
+      }
     }
   },
   "included": {
     "human_lane_included_binding": {
       "value": 142,
       "source": {
-        "file": "benchmark/data/human_assessment.csv",
-        "how": "identical to the human lane Include count above; the human decision is the binding record"
+        "kind": "scripted",
+        "by": "benchmark/scripts/build_flow_model.py",
+        "rule": "human Include count; the human decision is the binding record"
       }
     },
     "human_included_within_paired_corpus": {
       "value": 134,
       "source": {
-        "file": "benchmark/data/merged_comparison.csv",
-        "how": "derived: both_include (100) plus human_include_ai_exclude (34); the remaining 8 human includes sit among the 12 human-only records outside the AI corpus file (marginal closure: 134 + 8 = 142)"
+        "kind": "scripted",
+        "by": "benchmark/scripts/build_flow_model.py",
+        "rule": "both_include + human_include_ai_exclude; the remaining human includes sit among the human-only records"
       }
     },
     "ai_lane_included_advisory": {
       "value": 232,
       "source": {
-        "file": "benchmark/data/llm_assessment_10k.csv",
-        "how": "identical to the AI lane advisory_include count above; advisory only, never binding"
+        "kind": "scripted",
+        "by": "benchmark/scripts/build_flow_model.py",
+        "rule": "AI Include count; advisory only, never binding"
       }
     },
     "both_lanes_include": {
       "value": 100,
       "source": {
-        "file": "benchmark/data/merged_comparison.csv",
-        "how": "identical to the both_include confusion cell above"
+        "kind": "scripted",
+        "by": "benchmark/scripts/build_flow_model.py",
+        "rule": "the both_include confusion cell"
       }
     }
   },
   "reports_and_text_basis": {
-    "note": "PRISMA 2020 asks for reports sought and retrieved. In this round, human screening decisions were not conditioned on retrieval; decisions exist for papers whose text was never acquired. The chain below is the documented acquisition and serving state, not a screening gate.",
+    "note": "PRISMA 2020 asks for reports sought and retrieved. Human screening was not conditioned on retrieval; decisions exist for papers whose text was never acquired. The chain below is the documented acquisition and serving state, not a screening gate, and is not under benchmark/data/.",
     "pdfs_acquired": {
       "value": 257,
       "source": {
-        "file": "knowledge/conformance-audit.md",
-        "how": "taken from the audit, which cites knowledge/status.md (257 of 326 PDFs acquired); not recomputable from benchmark/data/"
+        "kind": "external",
+        "source": "knowledge/verification.md",
+        "rule": "acquisition loss chain"
       }
     },
     "pdfs_not_acquired_access_barriers": {
       "value": 69,
       "source": {
-        "file": "knowledge/conformance-audit.md",
-        "how": "taken from the audit, citing knowledge/status.md"
+        "kind": "external",
+        "source": "knowledge/verification.md",
+        "rule": "acquisition loss chain"
       }
     },
     "converted": {
       "value": 252,
       "source": {
-        "file": "knowledge/conformance-audit.md",
-        "how": "taken from the audit, citing knowledge/status.md"
+        "kind": "external",
+        "source": "knowledge/verification.md",
+        "rule": "acquisition loss chain"
       }
     },
     "distilled": {
       "value": 249,
       "source": {
-        "file": "knowledge/conformance-audit.md",
-        "how": "taken from the audit, citing knowledge/status.md"
+        "kind": "external",
+        "source": "knowledge/verification.md",
+        "rule": "acquisition loss chain"
       }
     },
     "served_text_per_paper": {
-      "values": { "knowledge_document": 236, "abstract_only": 75, "no_text": 15 },
-      "sum": 326,
+      "values": {
+        "knowledge_document": 236,
+        "abstract_only": 75,
+        "no_text": 15
+      },
       "source": {
-        "file": "knowledge/conformance-audit.md",
-        "how": "taken from the audit, which verified the per-paper source markers in docs/data/fulltext_index.json; not under benchmark/data/, therefore not recounted here"
+        "kind": "external",
+        "source": "knowledge/verification.md",
+        "rule": "per-paper source markers in docs/data/fulltext_index.json, summarised in knowledge/verification.md"
       }
     }
   },
   "named_gaps": [
     "No pre-registered protocol and no pre-specified AI use exist (PRISMA 2020 item 24, trAIce M1); non-reconstructable by definition.",
-    "34 corpus papers carry no human decision; the AI lane covers all 326, so for these 34 only an advisory assessment exists.",
-    "Acquisition provenance is non-auditable beyond 34 RIS-corroborated records; the executed deep-research prompts were never committed.",
-    "One-record discrepancy between papers_full.csv (292 flagged humanly assessed) and the benchmark pairing (291).",
-    "No per-record reviewer identity inside the human lane (assessors R1 and R2 named only collectively).",
-    "Exclusion-reason vocabulary was documented but not enforced: 5 Other, 7 empty cells."
+    "Corpus papers without a human decision (Has_HA = No); for these only an advisory AI assessment exists.",
+    "Acquisition provenance is non-auditable beyond the RIS-corroborated records; the executed deep-research prompts were never committed.",
+    "A one-record discrepancy between papers_full.csv Has_HA and the benchmark pairing, resolved as a stray flag (see open_discrepancy).",
+    "No per-record reviewer identity inside the human track.",
+    "Exclusion-reason vocabulary was documented but not enforced (Other values, empty cells)."
   ]
 }

@@ -11,13 +11,13 @@ Has_HA flag on one key in papers_full.csv, not a missing human decision).
 This is a regression guard, not the human-readable recomputation: verify_femprompt.py
 prints the full adversarial recompute, this file fails loudly (exit 1) the moment
 a raw-CSV edit moves a canonical number. Expectations trace to
-knowledge/verification-empirical-core.md (V1). Run: python replay_selftest.py
+knowledge/verification.md (Part 1, V1). Run: python replay_selftest.py
 """
 import csv, os, sys
 
 DATA = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data"))
 
-# canonical expectations (knowledge/verification-empirical-core.md, V1)
+# canonical expectations (knowledge/verification.md, Part 1, V1)
 EXPECT = {
     'human_rows': 303, 'human_incl': 142, 'human_excl': 161,
     'llm_rows': 326, 'llm_incl': 232, 'llm_excl': 94,
