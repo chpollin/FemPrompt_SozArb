@@ -34,7 +34,7 @@ This document is the substance layer for the **PRISMA screening tool**, a standa
 - FR-04: Render a PRISMA 2020 flow diagram with the PRISMA-trAIce R1 split, identified -> screened -> included, with separate tallies for AI-tool decisions and human-reviewer decisions and a breakdown of exclusion reasons. Acceptance: counts reconcile with the decision log; the diagram exports as SVG.
 - FR-05 (superseded by ADR-014/017): Compute agreement metrics live as decisions accrue: confusion matrix (human x AI), Cohen's kappa for the decision and per category, and base rates. As built, the in-tool agreement surface and the kappa computation are removed; agreement is evaluated externally on the benchmark corpus, where the figures live with their provenance (see [[verification]]).
 - FR-06: Generate a PRISMA-trAIce / RAISE disclosure section from the session: tool name, version, date; stage and task; prompt version; decoding parameters; confidence threshold; validation metrics (kappa); known limitations; conflicts of interest. Acceptance: emitted as Markdown, copyable and exportable.
-- FR-07: Track reporting completeness against both the PRISMA 2020 checklist (27 items) and the PRISMA-trAIce checklist (14 items), with per-item status and notes. Acceptance: status persists across reloads and exports.
+- FR-07: Track reporting completeness against both the PRISMA 2020 checklist (27 items) and the PRISMA-trAIce checklist (17 items), with per-item status and notes. Acceptance: status persists across reloads and exports.
 - FR-08: Persist the session in localStorage; export and import the full session as JSON; export the decision log as CSV. Acceptance: reload restores state; an export/import round-trip is lossless.
 - FR-09: Seed the tool with the existing FemPrompt corpus (the full dual-assessment corpus, see [[verification]]) as a read-only case-study dataset. Acceptance: loads from `docs/data/` JSON without an import step.
 - FR-10 (secondary): Provide an optional live-LLM on-ramp. With a local API key, request an AI proposal for a paper that lacks one, reusing the versioned assessment prompt. Acceptance: the proposal is stored as an AI decision, visibly labelled as live-generated, and never overrides the human decision.
@@ -130,7 +130,7 @@ Grenzen. Kappa was reported as a comparison anchor, not a quality verdict; the p
 
 ### Checklist Tracker
 
-Zweck. Track reporting completeness against PRISMA 2020 (27 items) and PRISMA-trAIce (14 items).
+Zweck. Track reporting completeness against PRISMA 2020 (27 items) and PRISMA-trAIce (17 items).
 
 Datengrundlage. A per-item status/notes store plus auto-derived hints (e.g. R1 satisfied once the split diagram has counts).
 
@@ -224,7 +224,7 @@ Effekt. To be observed; concurrent multi-reviewer editing is explicitly out of s
 
 Kontext. PRISMA 2020 alone does not operationalise the AI-vs-human split; two 2025 frameworks now do.
 
-Wahl. Implement PRISMA-trAIce (14 items, esp. R1) as the reporting target and treat RAISE (three principles, Table 1) as the governance frame; cite PRISMA-trAIce as a proposed, not yet formally endorsed, extension.
+Wahl. Implement PRISMA-trAIce (17 items, esp. R1) as the reporting target and treat RAISE (three principles, Table 1) as the governance frame; cite PRISMA-trAIce as a proposed, not yet formally endorsed, extension.
 
 Begründung. They legitimise the existing dual track and give a concrete checklist to close gaps (protocol pre-registration, parameter disclosure, conflict-of-interest declaration). See [[standards]].
 

@@ -60,14 +60,14 @@ Claims inventory:
 Bullets:
 
 - PRISMA 2020 as the baseline reporting framework; what its 27 items cover and where AI involvement is invisible in it.
-- PRISMA-trAIce: Holst et al. 2025, JMIR AI, 14-item checklist along the PRISMA 2020 section structure, items graded Mandatory to Optional; explicitly a foundational proposal without formal consensus process, not EQUATOR-registered; living-guideline governance via GitHub repository; the adapted flow diagram with separate fields for records screened by AI systems versus human reviewers (trAIce item R1). Cited as a proposal throughout.
+- PRISMA-trAIce: Holst et al. 2025, JMIR AI, 17-item checklist along the PRISMA 2020 section structure (14 non-optional, 3 optional), items graded Mandatory to Optional; explicitly a foundational proposal without formal consensus process, not EQUATOR-registered; living-guideline governance via GitHub repository; the adapted flow diagram with separate fields for records screened by AI systems versus human reviewers (trAIce item R1). Cited as a proposal throughout.
 - RAISE, two layers cited separately: the position statement (Flemyng et al. 2025, co-published across Cochrane, Campbell, JBI, CEE; carries the mandatory reporting elements of Table 1: system names, versions, dates, purpose and stages, methodological justification, validation evidence, limitations, interests) and the three guidance documents (Thomas et al., OSF, revised 2026-03-13, under journal review; preprint-level, cited with version date).
 - Uptake status as context for the contribution window: minimal citation uptake of trAIce so far; vendors respond to RAISE with compliance documentation rather than conformant report generation.
 
 Claims inventory:
 
-- All bibliographic facts on PRISMA-trAIce (authors, venue, DOI 10.2196/80247, 14 items, proposal status, governance, trAIce item R1 description): knowledge/verification-novelty.md, section "Verified bibliographic status of the standards, PRISMA-trAIce".
-- "5 citing papers on Semantic Scholar as of 2026-06-09; none implements the checklist as software": knowledge/verification-novelty.md, same section (citation uptake bullet).
+- All bibliographic facts on PRISMA-trAIce (authors, venue, DOI 10.2196/80247, 17 items, proposal status, governance, trAIce item R1 description): knowledge/verification.md (Part 2.3, novelty verification).
+- "5 citing papers on Semantic Scholar as of 2026-06-09; none implements the checklist as software": knowledge/verification.md (Part 2.3, novelty verification; citation uptake).
 - All bibliographic facts on RAISE (position statement co-publication, Table 1 elements, OSF guidance status and revision date): knowledge/verification-novelty.md, section "Verified bibliographic status of the standards, RAISE".
 - "Vendors respond with compliance documentation, not conformant report generation": knowledge/verification-novelty.md, section "Operationalization of the standards as tools" (conclusion) and "Tool landscape" (Covidence and Nested Knowledge rows).
 

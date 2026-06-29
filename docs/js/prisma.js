@@ -60,7 +60,7 @@ var MODEL_DEFAULT = {
     prompt: 'v2.1', temperature: '0.0', maxTokens: '1024', threshold: '0.5'
 };
 
-// PRISMA-trAIce 14 items (Holst et al. 2025, JMIR AI; abridged verbatim).
+// PRISMA-trAIce 17 items (Holst et al. 2025, JMIR AI; abridged verbatim). 14 non-optional, 3 optional.
 var TRAICE = [
     { id: 'T1', sec: 'Title', lvl: 'optional', auto: false, text: 'Indicate AI assistance in the title/subtitle if AI played a substantial role (e.g. primary screening, data extraction).' },
     { id: 'A1', sec: 'Abstract', lvl: 'optional', auto: false, text: 'Summarise the AI tool(s) used, the SLR stage(s) applied, and their primary role.' },
@@ -1163,7 +1163,7 @@ function renderFlowInto(el) {
 
 function renderChecklistInto(el) {
     if (!el) return;
-    var html = '<p class="pt-check-intro">PRISMA-trAIce (Holst et al. 2025), 14 Items. Auto-markierte erfuellt das Dual-Assessment-Setup bereits.</p>';
+    var html = '<p class="pt-check-intro">PRISMA-trAIce (Holst et al. 2025), 17 Items. Auto-markierte erfuellt das Dual-Assessment-Setup bereits.</p>';
     var lastSec = '';
     TRAICE.forEach(function(it) {
         if (it.sec !== lastSec) { html += '<div class="pt-check-sec">' + it.sec + '</div>'; lastSec = it.sec; }

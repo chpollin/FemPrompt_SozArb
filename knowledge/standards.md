@@ -64,11 +64,11 @@ PRISMA answers whether the report is complete and transparent. It does not answe
 
 ## PRISMA-trAIce (Holst et al. 2025, JMIR AI)
 
-PRISMA-trAIce (Transparent Reporting of Artificial Intelligence in Comprehensive Evidence-synthesis) is a discipline-agnostic extension to PRISMA 2020 that closes a specific gap. PRISMA-AI (announced 2022, unpublished) targets reviews about AI; PRISMA-trAIce targets AI used as a tool within the review process. It is a 14-item checklist mapped onto the PRISMA 2020 section structure. It does not replace PRISMA; it sharpens PRISMA 2020 items 8 (selection process) and 9 (data collection), which already ask that automation tools be disclosed.
+PRISMA-trAIce (Transparent Reporting of Artificial Intelligence in Comprehensive Evidence-synthesis) is a discipline-agnostic extension to PRISMA 2020 that closes a specific gap. PRISMA-AI (announced 2022, unpublished) targets reviews about AI; PRISMA-trAIce targets AI used as a tool within the review process. It is a 17-item checklist mapped onto the PRISMA 2020 section structure (14 non-optional, that is 10 mandatory plus 3 recommended plus 1 highly recommended, and 3 optional). It does not replace PRISMA; it sharpens PRISMA 2020 items 8 (selection process) and 9 (data collection), which already ask that automation tools be disclosed.
 
 A status caveat governs how to cite it. The authors call it a "well-founded proposal," not a formally endorsed extension. It has not undergone a Delphi or consensus process and is governed as a living guideline (GitHub single source of truth at https://github.com/cqh4046/PRISMA-trAIce, MIT license, plus a Discord community and planned annual reviews). In writing, reference it as a proposed extension.
 
-### The 14 items (verbatim, with priority level)
+### The 17 items (verbatim, with priority level)
 
 | ID | Section | Level | Item (abridged where long) |
 |---|---|---|---|
