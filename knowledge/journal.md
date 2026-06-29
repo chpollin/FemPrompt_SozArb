@@ -41,6 +41,10 @@ Chronologisches Protokoll der Arbeitssitzungen mit Entscheidungen, Ergebnissen u
 - The per-story validation verdicts in [[plan]] stay simulated until the stakeholder meeting ratifies them in person; the capture-locus question itself is settled, in-tool screening with Excel as the seam.
 - No new code is required, the build already encodes in-tool capture. Forward work is unchanged, the Stage R5 publication and the round-2 update carried through the same gate.
 
+### Follow-up, dead-reference sweep
+
+A repo-wide reference inventory then ran against the actual files. The follow-up paper's whole provenance apparatus ([[draft]], [[outline]], the three style probes) cited three knowledge docs that the earlier consolidation had folded into [[verification]] (the empirical core, the conformance audit, and the novelty verification), plus an analysis-design and a simulation-ledger that had moved into [[update-protocol]] and [[plan]]. Every pointer was repointed to the consolidated file and each old section name remapped to the current Part or subsection of [[verification]], with an adversarial audit catching three claim-level routing errors (dedup and pipeline counts belong to 2.1, the divergence-not-error framing to 1.6) and four phantom anchors left by Oxford-comma and parenthetical citation forms. Two stray path errors were fixed in [[plan]] and [[specification]]. Left by design: the concept topic-tags (Obsidian links, not file refs), the journal's historical file pointers (rewriting them would falsify the record), and the forward-reference to the planned `analysis-divergence.md` (TP3). Two items surfaced but not changed, both content rather than references in the superseded [[outline]]: the 292-versus-291 record is described as an open discrepancy though [[verification]] 1.10 resolved it on 2026-06-21, and a "5 citing papers on Semantic Scholar" figure no longer has a home in [[verification]] after consolidation.
+
 ---
 
 ## 2026-06-29 (Session 18): refactor completeness, the R4/P1/R1 deliverables, trAIce 17, the no-self-description rule
