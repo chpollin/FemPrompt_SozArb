@@ -22,6 +22,36 @@ Chronologisches Protokoll der Arbeitssitzungen mit Entscheidungen, Ergebnissen u
 
 ---
 
+## 2026-06-29 (Session 21): Companion URL-state, a lean central store, shareable citable views
+
+### What changed
+
+1. **A central store coordinates the views.** `EC.store` (get/set/subscribe) is the Observer pattern the DH-interface standard prescribes for coordinated framework-free views. It holds the navigational state the URL serializes: active view, corpus filters, selected paper. The four views keep their internals and gained sync hooks (switchView, applyFilters, showPaperDetail, closePaperModal write the store); one subscriber mirrors the store into the location hash.
+2. **A view is now a shareable, citable link.** The corpus filtered to one category with a paper open reproduces exactly when the link is opened. Only keys that differ from the defaults reach the hash, so a clean view stays a clean URL. View and paper changes are history steps (Back undoes them); filter and search churn replaces the current entry in place rather than flooding history. Restore runs on load, on Back/Forward, and on manual hash edits; the old bare `#view` links from the about and help pages stay compatible.
+3. **The vault working tree was settled.** The Obsidian per-machine config (`vault/.obsidian/`) is gitignored, a stray empty paper note was dropped, and a paper note flagged as modified turned out to be a line-ending-only diff and was restored.
+
+### Decided (the operator's)
+
+- The store depth is the lean middle path, URL-state plus a minimal store, not the full event-bus rearchitecture. The functional driver is citable views, a genuine scholarly need, not pattern-matching, which keeps the change within YAGNI on working, tested code.
+
+### Audit and fixes
+
+An adversarial three-lens audit (correctness and loops, history and UX, security) over the new code confirmed several defects, all fixed and each guarded by a regression test verified red without its fix:
+
+- Restore opened the paper against the full corpus, so the row highlight and detail prev/next walked the wrong index space; it now passes the rendered list.
+- An unknown `cat=` key silently emptied the corpus; category keys are now validated against the category set at the deserialize trust boundary.
+- A stale or unknown `paper=` id lingered in store and hash; restore now mirrors the state that was actually applied, cleaning a dead selection in place.
+- A crafted `sort=` aborted the whole restore through an invalid selector; the value is assigned directly, since a select ignores an unknown option.
+- Closing the modal left a spurious history entry that Back reopened, and one cross-view navigation wrote two entries; both are collapsed to a single intentional history step.
+
+### Open items
+
+- The full architecture, a typed event bus carrying semantic navigation intents and partitioned state, is the larger residual; the lean store already covers the cross-view coordination and the citable-URL goal.
+- Detail prev/next arrowing pushes one history entry per paper, left as intended: each arrow is a deliberate navigation, so Back steps back through the papers viewed.
+- The D3 concept graph and live chat streaming stay browser-only checks.
+
+---
+
 ## 2026-06-29 (Session 20): docs/ frontend refactor, shared EC helpers, security and stream robustness, const/let migration, chrome generator
 
 ### What changed

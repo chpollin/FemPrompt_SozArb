@@ -88,6 +88,30 @@ const PAGE_SIZE = 50;
 let currentDetailPaper = null;
 let currentDetailList = null;
 let renderedPapers = []; // the list currently shown in the table (for delegated clicks)
+let currentView = 'chat';
+let applyingFromUrl = false; // suppresses UI->store sync while a URL is being applied
+
+// Central store for the navigational state the URL serializes: active view, corpus
+// filters, selected paper. Views write it through syncUrl and read it through
+// applyStateToUI; one subscriber mirrors it into the location hash, so any view is a
+// shareable, citable link. subscribe/set are the Observer pattern the DH-interface
+// standard prescribes for coordinated framework-free views.
+const DEFAULT_STATE = { view: 'chat', q: '', dec: 'all', hum: 'all', year: 'all', sort: 'relevance', cat: [], paper: null };
+
+function createStore(initial) {
+    let state = initial;
+    const subs = new Set();
+    return {
+        get: function() { return state; },
+        set: function(patch) {
+            state = Object.assign({}, state, patch);
+            subs.forEach(function(fn) { fn(state); });
+        },
+        subscribe: function(fn) { subs.add(fn); return function() { subs.delete(fn); }; },
+    };
+}
+
+const store = createStore(DEFAULT_STATE);
 
 // Public API (window.EC)
 
@@ -99,6 +123,8 @@ window.EC = {
     paperStatus: paperStatus,
     CAT_COLORS: CAT_COLORS,
     CATEGORIES: CATEGORIES,
+    // Central store (subscribe/set/get) holding the URL-serialized view state
+    store: store,
     // State getters
     getAllPapers: function() { return allPapers; },
     getFilteredPapers: function() { return filteredPapers; },
@@ -128,8 +154,13 @@ window.EC = {
     navigateToPaper: function(id) {
         let paper = allPapers.find(function(p) { return p.id === id; });
         if (!paper) return false;
-        switchView('korpus');
-        showPaperDetail(paper, allPapers);
+        // Suppress the intermediate URL writes so one cross-view navigation is one
+        // history entry, and pass the rendered list so row highlight and prev/next
+        // share the table's index space.
+        applyingFromUrl = true;
+        try { switchView('korpus'); showPaperDetail(paper, renderedPapers); }
+        finally { applyingFromUrl = false; }
+        syncUrl();
         return true;
     },
 };
@@ -147,17 +178,13 @@ document.addEventListener('DOMContentLoaded', function() {
         initializeUI();
         renderIntroNumbers();
         renderCategoryChips();
-        applyFilters();
         logInit();
         initRichTooltips();
-        // Always initialize chat (default tab)
+        // Chat is the default tab; initialize it up front.
         if (window.initWissensChat) window.initWissensChat();
-
-        // Handle hash-based navigation (from about/help links)
-        const hash = window.location.hash.replace('#', '');
-        if (hash && ['chat', 'wissensnetz', 'vergleich', 'korpus'].indexOf(hash) >= 0) {
-            switchView(hash);
-        }
+        // The hash carries view, corpus filters and selected paper. Restoring it
+        // renders the table, so the standalone applyFilters is folded into this.
+        initUrlState();
     }).catch(function(error) {
         console.error('[Evidence] init failed:', error);
         document.getElementById('papers-grid').innerHTML =
@@ -508,6 +535,7 @@ function applyFilters() {
     filtered = sortPapers(filtered, currentSort);
     currentPage = 1;
     renderPapers(filtered);
+    syncUrl();
 }
 
 // Table Rendering
@@ -662,6 +690,7 @@ function showPaperDetail(paper, paperList) {
             if (idx < currentDetailList.length - 1) showPaperDetail(currentDetailList[idx + 1]);
         });
     }
+    syncUrl();
 }
 
 // Dropdown Navigation
@@ -834,6 +863,7 @@ function buildTooltipContent() {
 window.switchView = function(viewId) { switchView(viewId); };
 
 function switchView(viewId) {
+    currentView = viewId;
     // Update nav button active state
     document.querySelectorAll('.nav-view-btn').forEach(function(btn) {
         const on = btn.dataset.view === viewId;
@@ -861,12 +891,15 @@ function switchView(viewId) {
         chatInitialized = true;
         if (window.initWissensChat) window.initWissensChat();
     }
+    syncUrl();
 }
 
 function closePaperModal() {
     document.getElementById('paper-modal').classList.remove('active');
     document.body.classList.remove('panel-open');
     highlightActiveRow(null);
+    currentDetailPaper = null;
+    syncUrl();
 }
 
 function highlightActiveRow(paper) {
@@ -879,6 +912,148 @@ function highlightActiveRow(paper) {
         let row = document.querySelector('tr[data-idx="' + idx + '"]');
         if (row) row.classList.add('row--active');
     }
+}
+
+// URL State (shareable, citable views)
+
+const URL_VIEWS = ['chat', 'wissensnetz', 'vergleich', 'korpus'];
+
+// The navigational state read from the current DOM, categories, view and modal.
+function stateFromUI() {
+    return {
+        view: currentView,
+        q: document.getElementById('search-box').value.trim(),
+        dec: document.getElementById('filter-decision').value,
+        hum: document.getElementById('filter-human').value,
+        year: document.getElementById('filter-year').value,
+        sort: currentSort,
+        cat: Array.from(activeCategories),
+        paper: currentDetailPaper ? currentDetailPaper.id : null,
+    };
+}
+
+// Push the current UI into the store (and thus the URL). A no-op while a URL is
+// being applied, so restoring a link does not immediately rewrite it.
+function syncUrl() {
+    if (applyingFromUrl) return;
+    store.set(stateFromUI());
+}
+
+// Apply a full state object to the DOM, categories, view and modal, then re-render.
+function applyStateToUI(s) {
+    applyingFromUrl = true;
+    try {
+        document.getElementById('search-box').value = s.q || '';
+        document.getElementById('filter-decision').value = s.dec || 'all';
+        document.getElementById('filter-human').value = s.hum || 'all';
+        document.getElementById('filter-year').value = s.year || 'all';
+        currentSort = s.sort || 'relevance';
+        // A select silently ignores an unknown value, so assign directly rather than
+        // probe with querySelector (a crafted sort= would otherwise be an invalid selector).
+        const sortSel = document.getElementById('sort-by');
+        if (sortSel) sortSel.value = currentSort;
+
+        activeCategories.clear();
+        (s.cat || []).forEach(function(c) { activeCategories.add(c); });
+        const chipBox = document.getElementById('category-chips');
+        if (chipBox) chipBox.querySelectorAll('.category-chip').forEach(function(c) {
+            c.classList.toggle('active', activeCategories.has(c.dataset.cat));
+        });
+
+        // Reproduce the search base the same way handleSearch does.
+        const q = s.q || '';
+        filteredPapers = (q.length === 0 || !fuse) ? allPapers.slice() : fuse.search(q).map(function(r) { return r.item; });
+
+        switchView(s.view || 'chat');
+        applyFilters();
+
+        if (s.paper) {
+            const paper = allPapers.find(function(p) { return p.id === s.paper; });
+            if (paper) showPaperDetail(paper, renderedPapers);
+            else closePaperModal();
+        } else {
+            closePaperModal();
+        }
+    } finally {
+        applyingFromUrl = false;
+    }
+}
+
+// Only the keys that differ from the defaults reach the hash, so a clean view stays a clean URL.
+function serializeState(s) {
+    const p = new URLSearchParams();
+    if (s.view && s.view !== 'chat') p.set('view', s.view);
+    if (s.q) p.set('q', s.q);
+    if (s.dec && s.dec !== 'all') p.set('dec', s.dec);
+    if (s.hum && s.hum !== 'all') p.set('hum', s.hum);
+    if (s.year && s.year !== 'all') p.set('year', s.year);
+    if (s.sort && s.sort !== 'relevance') p.set('sort', s.sort);
+    if (s.cat && s.cat.length) p.set('cat', s.cat.join(','));
+    if (s.paper) p.set('paper', s.paper);
+    const qs = p.toString();
+    return qs ? '#' + qs : '';
+}
+
+function deserializeState(hashStr) {
+    let h = String(hashStr || '').replace(/^#/, '');
+    if (h && h.indexOf('=') < 0) {
+        // Back-compat: a bare view hash like #korpus from about/help links.
+        return Object.assign({}, DEFAULT_STATE, { view: URL_VIEWS.indexOf(h) >= 0 ? h : 'chat', cat: [] });
+    }
+    const p = new URLSearchParams(h);
+    const view = p.get('view');
+    return {
+        view: URL_VIEWS.indexOf(view) >= 0 ? view : 'chat',
+        q: p.get('q') || '',
+        dec: p.get('dec') || 'all',
+        hum: p.get('hum') || 'all',
+        year: p.get('year') || 'all',
+        sort: p.get('sort') || 'relevance',
+        // Drop unknown category keys at this trust boundary; otherwise an every()
+        // over a non-existent column would silently empty the corpus.
+        cat: p.get('cat') ? p.get('cat').split(',').filter(function(c) { return CATEGORIES.indexOf(c) >= 0; }) : [],
+        paper: p.get('paper') || null,
+    };
+}
+
+// The store's one subscriber: mirror state into the location hash. A view or paper
+// change is a navigation step (pushState, so Back undoes it); filter churn updates the
+// current entry in place (replaceState, so typing never floods the history).
+let lastView = null, lastPaper = null, urlReady = false;
+function writeUrl(s) {
+    const hash = serializeState(s);
+    const url = window.location.pathname + window.location.search + hash;
+    if (url === window.location.pathname + window.location.search + window.location.hash) {
+        lastView = s.view; lastPaper = s.paper || null; urlReady = true;
+        return; // already current; also avoids appending a bare '#' to a clean URL
+    }
+    // Opening a paper or switching view is a navigation step (pushState, so Back
+    // undoes it); clearing the paper or filter churn replaces the entry in place.
+    const navStep = urlReady && (s.view !== lastView || (s.paper && s.paper !== lastPaper));
+    try {
+        if (navStep) window.history.pushState(null, '', url);
+        else window.history.replaceState(null, '', url);
+    } catch (e) {
+        // file:// or a sandboxed origin rejects history writes; URL state is a nicety.
+    }
+    lastView = s.view; lastPaper = s.paper || null; urlReady = true;
+}
+
+function restoreFromUrl() {
+    applyStateToUI(deserializeState(window.location.hash));
+    // Mirror what actually got applied, not the raw hash: an unknown paper closed the
+    // modal and unknown categories dropped out. Presetting lastView/lastPaper makes the
+    // store write a replaceState, correcting a stale hash in place without a new entry.
+    const applied = stateFromUI();
+    lastView = applied.view; lastPaper = applied.paper || null; urlReady = true;
+    store.set(applied);
+}
+
+function initUrlState() {
+    store.subscribe(writeUrl);
+    window.addEventListener('popstate', restoreFromUrl);
+    window.addEventListener('hashchange', restoreFromUrl);
+    restoreFromUrl();
 }
 
 function buildDetailContent(paper) {
