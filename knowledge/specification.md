@@ -36,7 +36,7 @@ This document is the substance layer for the **PRISMA screening tool**, a standa
 - FR-06: Generate a PRISMA-trAIce / RAISE disclosure section from the session: tool name, version, date; stage and task; prompt version; decoding parameters; confidence threshold; validation metrics (kappa); known limitations; conflicts of interest. Acceptance: emitted as Markdown, copyable and exportable.
 - FR-07: Track reporting completeness against both the PRISMA 2020 checklist (27 items) and the PRISMA-trAIce checklist (17 items), with per-item status and notes. Acceptance: status persists across reloads and exports.
 - FR-08: Persist the session in localStorage; export and import the full session as JSON; export the decision log as CSV. Acceptance: reload restores state; an export/import round-trip is lossless.
-- FR-09: Seed the tool with the existing FemPrompt corpus (the full dual-assessment corpus, see [[verification]]) as a read-only case-study dataset. Acceptance: loads from `docs/data/` JSON without an import step.
+- FR-09: Seed the tool with the existing FemPrompt corpus (the full dual-assessment corpus, see [[verification]]) as the Stage R seeded session, the round-1 data carried through PRISM (ADR-019). Acceptance: loads from `docs/data/` JSON without an import step.
 - FR-10 (secondary): Provide an optional live-LLM on-ramp. With a local API key, request an AI proposal for a paper that lacks one, reusing the versioned assessment prompt. Acceptance: the proposal is stored as an AI decision, visibly labelled as live-generated, and never overrides the human decision.
 - FR-11: Read the paper in full text. Where a paper has a converted full text (`vault/Papers/*.md`, servable under `docs/`), render it formatted and readable in the screening view, not only the abstract (a number of papers have no abstract in the corpus, see [[verification]]). Acceptance: opening a paper whose `knowledge_doc` path resolves shows its full text; papers without one fall back to abstract or knowledge summary.
 - FR-12: Search the full text. Provide an in-text search that highlights and steps through matches in the open paper, and a corpus-wide search that lists papers whose full text contains a term. Acceptance: a query highlights every hit in the open text and returns the set of papers containing it across the corpus.
@@ -60,7 +60,7 @@ Acceptance (three-surface IA): the sub-navigation has exactly three entries (Scr
 
 ## Anwendungsszenarien (Epics und User Stories)
 
-Usage scenarios in the form "As [role], who [context], I want [goal], so that [benefit]". Roles: the review lead (Sackl-Sharif), the reviewing experts (Sackl-Sharif, Klinger), the technical lead (Pollin), and an external reviewer or auditor. The stories were written by the technical lead as a user proxy and stay hypotheses until validated against how the colleagues actually work; the v3 in-tool-screening usage model was already partially falsified, because the colleagues capture categories in Excel and PRISM is the downstream PRISMA layer (see [[plan]]). The simulated validation verdicts on these stories live in [[plan]] (simulated decisions).
+Usage scenarios in the form "As [role], who [context], I want [goal], so that [benefit]". Roles: the review lead (Sackl-Sharif), the reviewing experts (Sackl-Sharif, Klinger), the technical lead (Pollin), and an external reviewer or auditor. The stories were written by the technical lead as a user proxy and stay hypotheses until validated against how the colleagues actually work; ADR-019 ratifies in-tool screening as the binding path and keeps the Excel import bridge only as an entry seam, superseding the earlier reading that the in-tool model had been falsified (see [[plan]]). The simulated validation verdicts on these stories live in [[plan]] (simulated decisions).
 
 ### v4 core (current, evidence-grounded)
 
@@ -152,7 +152,7 @@ Grenzen. It drafts reporting text from recorded facts; the author edits and rema
 
 Zweck. Get batches in and PRISMA records out without a backend.
 
-Datengrundlage. Session JSON (full state), decision-log CSV, the read-only seed dataset.
+Datengrundlage. Session JSON (full state), decision-log CSV, the Stage R seed dataset (the round-1 data carried through PRISM).
 
 Interaktion. Import JSON/CSV, export session/log, load the seed corpus, autosave to localStorage.
 
@@ -168,7 +168,7 @@ Wahl. Build a working, prospective screening tool; treat the existing corpus as 
 
 Begründung. The stated need is that colleagues work better with the instrument, and a literature update with the same prompts is planned for the SocialAI strand. A viewer would not support that; a working tool does and still subsumes the retrospective view via the seed dataset.
 
-Effekt. To be observed.
+Effekt. Superseded by ADR-019. PRISM is the binding screening gate and the existing corpus is carried through it as a real pass, not held as a read-only seeded case study; the prospective-tool choice itself stands.
 
 ### ADR-002 Batch-import canonical, live-LLM optional
 
@@ -339,6 +339,16 @@ Wahl. Ein Build-Schritt (`scripts/build_screening_index.py`, `build_machine_evid
 Begründung. Damit ist die in ADR-016 angelegte Provenienz-Bindung nicht nur reaktiv (wer aus der KI-Schicht pinnt), sondern proaktiv erfüllt, der Reviewer sieht die maschinelle Einschätzung je Kategorie von Anfang an, klar als KI gekennzeichnet, ohne dass sie die abgeleitete menschliche Entscheidung kippen kann. Die Wahl der Modell-Begründung statt der Roh-Zitate hält die Daten ehrlich, ein unkategorisierter Schnipsel wird nicht künstlich einer Kategorie zugeschrieben.
 
 Effekt. Implementiert (`scripts/build_screening_index.py` build_machine_evidence, `docs/data/machine_evidence.json`; `docs/js/prisma.js` loadMachineEvidence, injectMachineEvidence, Ausschluss aus dem bindenden Count, kein Schreiben in die Reviewer-Datei). Die Provenienz-Kennzeichnung und die bindende Separierung sind test-abgedeckt (`tests/tests.js`). Schließt den proaktiven R2-Punkt (Maschinen-Evidenz vorladen), der nach ADR-016 offen blieb. Die Synthese-Ebene (KI1) bleibt davon unberührt und weiter offen.
+
+### ADR-019 PRISM the binding screening gate; the review complete only once all data has passed through it (supersedes the seed-case-study framing of ADR-001, the simulated Excel-capture path, and the no-conformance reading of round 1)
+
+Kontext. Two framings had drifted apart from each other and from the build. The simulated P3 decisions ([[plan]], 2026-06-09, pending ratification) cast the colleagues' Excel as the capture path and PRISM as a downstream layer that ingests it, and recorded the in-tool screening usage model as partially falsified. The requirements and the data model were built the other way, every screening decision captured in the tool as the binding record (FR-02, FR-04, FR-11 to FR-13; the `ScreeningRecord` in [[data]]), with the existing corpus treated only as a read-only seed and rendered after the fact, no conformance claimed for round 1 ([[verification]] part 2, [[plan]] Stage R). The operator has now ratified one direction.
+
+Wahl. PRISM is the binding screening surface for the project, and the literature review counts as complete only once all of its data has passed through PRISM under PRISMA 2020 and PRISMA-trAIce, the screening decision, the evidence grounding, the flow, the agreement reference, the checklist, the disclosure, and the record. The first-round corpus is carried through PRISM as a real pass, not merely rendered; the Stage R replay becomes the seed of that pass, and the interactive screening pass (R3) and the published record (R5) are completion steps rather than optional overlays. The Excel import bridge (P3) survives only as an entry and migration seam for batches captured elsewhere, no longer as the canonical capture path. The earlier claim that in-tool screening was falsified is withdrawn; it rested on a partial, unexecuted usage assumption, not on an observed test.
+
+Begründung. The build already encodes this direction, so the ratification closes the gap between the documentation and the instrument rather than commissioning new code. One binding surface makes every decision auditable in one place and lets the conformant artifacts fall out of the data model by construction, which is the project's standing novelty claim ([[INDEX]] glossary, [[data]]). Routing the first round through the same gate as the update makes reproducibility a property the tool enforces rather than a claim asserted twice. The honest limits of the first round survive the change unchanged. The absent pre-registered protocol (PRISMA 2020 item 24 and trAIce M1) cannot be repaired by passing the data through the tool, because pre-specification is by definition prior; the corpus papers without a human decision, the papers with no served text, and the lost acquisition provenance stay named in [[verification]]. Conformance therefore means full conformance for everything the gate now governs and an honestly gapped record for the items that are structurally unrepairable in retrospect.
+
+Effekt. Supersedes ADR-001 (the existing review is no longer a seeded case study but data carried through the gate) and the simulated Excel-capture and falsified-in-tool-screening decisions in [[plan]]. [[plan]] Stage R is reframed from a retrospective replay to the first real pass, and the Zielbild completion test is restated against the gate. [[verification]] part 2 drops the no-conformance-for-round-1 sentence for the gate-plus-named-gaps framing. [[standards]], [[methods]], [[design]], [[INDEX]], [[data]], and [[update-protocol]] are aligned in the same pass. The round-2 update ([[update-protocol]], Stage B) is unchanged in substance; it now reads as the second pass of one rule rather than the first conformant one. The colleague-facing capture question (do reviewers screen in the tool or import from Excel) is settled in favour of in-tool screening, with import as the seam; the per-story validation verdicts in [[plan]] stay simulated until the stakeholder meeting ratifies them in person.
 
 ## Was nicht reingehört
 

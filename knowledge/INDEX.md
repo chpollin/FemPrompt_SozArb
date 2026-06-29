@@ -21,7 +21,7 @@ generated-with: Claude Code
 related: [project, methods, specification, data, design, plan, journal, verification, standards, update-protocol]
 ---
 
-This is the knowledge base of FemPrompt SozArb, a systematic literature review on feminist AI literacy and LLM bias in social work and the epistemic infrastructure built around it. It documents the conducted review and its benchmark, the PRISM screening tool, and the plan for the literature update. Concrete numbers do not live here: the benchmark figures live in `benchmark/results/` and in [[verification]], the corpus and screening data in `docs/data/` and `benchmark/data/`, and the Evidence Companion (https://chpollin.github.io/FemPrompt_SozArb/) renders them. This index shows where each piece of knowledge lives, in what order to read, and what the constitutive terms mean.
+This is the knowledge base of FemPrompt SozArb, a systematic literature review on feminist AI literacy and LLM bias in social work and the epistemic infrastructure built around it. It documents the conducted review and its benchmark, the PRISM screening tool, which is the binding screening surface the review is carried through (ADR-019), and the plan for the literature update. Concrete numbers do not live here: the benchmark figures live in `benchmark/results/` and in [[verification]], the corpus and screening data in `docs/data/` and `benchmark/data/`, and the Evidence Companion (https://chpollin.github.io/FemPrompt_SozArb/) renders them. This index shows where each piece of knowledge lives, in what order to read, and what the constitutive terms mean.
 
 ## Documents
 
@@ -35,8 +35,9 @@ In function order, not alphabetical.
 | [[data]] | The data substrate the PRISM tool consumes and produces | per schema change |
 | [[design]] | UI and design system of the PRISM tool | per design iteration |
 | [[plan]] | Forward steering: the staged roadmap, current status, and simulated decisions | per phase |
+| [[refactor-frontend]] | Phased plan for refactoring the `docs/` frontend: verified findings across HTML, CSS, and JS with per-item acceptance checks | until executed |
 | [[journal]] | Genesis: the chronological session log with decisions and learnings | per session |
-| [[verification]] | Audit and the numbers home: the empirical recompute and divergence finding, PRISMA/trAIce conformance with the retrospective record and novelty survey, paper versus repository | when a claim is re-verified |
+| [[verification]] | Audit and the numbers home: the empirical recompute and divergence finding, PRISMA/trAIce conformance with the round-1 record carried through PRISM and novelty survey, paper versus repository | when a claim is re-verified |
 | [[standards]] | The reporting standards implemented: PRISMA 2020, PRISMA-trAIce, RAISE | rarely |
 | [[update-protocol]] | The round-2 pre-registration protocol, the analysis-field design, the RIS procedure | until round 2 starts |
 | [[guides/manual-review-checklist]] | The human-in-the-loop markdown review checklist | rarely |

@@ -17,7 +17,7 @@ topics: ["[[Inter-Rater Reliability]]", "[[Benchmark]]", "[[Conformance]]"]
 related: [methods, standards, plan, project]
 ---
 
-This is the project's self-audit and the one place its numbers live. Every benchmark figure here was recomputed from the raw assessment files and is held by a committed regression guard, `benchmark/scripts/replay_selftest.py` (PASS 18/18), with the diagnostic recompute in `benchmark/scripts/verify_femprompt.py` and the committed output `benchmark/results/recompute_verification.txt`. Other knowledge documents state findings qualitatively and link here for the figures; the Evidence Companion renders the same numbers from the data. The document has three parts: the empirical recompute and the decomposed divergence finding (part 1), the conformance audit with the retrospective round-1 record and the novelty verification (part 2), and the integrity check of the submitted paper against the repository (part 3).
+This is the project's self-audit and the one place its numbers live. Every benchmark figure here was recomputed from the raw assessment files and is held by a committed regression guard, `benchmark/scripts/replay_selftest.py` (PASS 18/18), with the diagnostic recompute in `benchmark/scripts/verify_femprompt.py` and the committed output `benchmark/results/recompute_verification.txt`. Other knowledge documents state findings qualitatively and link here for the figures; the Evidence Companion renders the same numbers from the data. The document has three parts: the empirical recompute and the decomposed divergence finding (part 1), the conformance audit of the round-1 record carried through PRISM and the novelty verification (part 2), and the integrity check of the submitted paper against the repository (part 3).
 
 ---
 
@@ -142,11 +142,11 @@ The re-pairing script was executed end to end. `verify_femprompt.py` reproduces 
 
 ---
 
-# Part 2. Conformance, retrospective record, and novelty
+# Part 2. Conformance, the round-1 record through PRISM, and novelty
 
-This part renders the conducted first review round into the PRISMA 2020 plus PRISMA-trAIce structure, audits how far it conforms, and verifies the novelty claim the project makes for its instrument. The standards themselves (PRISMA 2020, trAIce, RAISE, with item counts and citations) are in [[standards]]. No conformance claim is made for round 1; conformance is enforced prospectively for the update round (Stage B of [[plan]]). The machine-readable companions are `docs/data/flow_model.json` (per-count sources) and `docs/data/conformance_map.json` (item-level status). Each record section below ends with what a reader can and cannot verify.
+This part carries the conducted first review round through PRISM into the PRISMA 2020 plus PRISMA-trAIce structure, audits how far it conforms, and verifies the novelty claim the project makes for its instrument. The standards themselves (PRISMA 2020, trAIce, RAISE, with item counts and citations) are in [[standards]]. Under ADR-019 round 1 is carried through PRISM as the first real pass, with the published record (R5) as its completion step; conformance holds for the items the recorded data supports, and the items unrepairable in retrospect (the absent pre-registered protocol M1 above all, the lost acquisition provenance, the papers with no served text) stay named as permanent limits, since pre-specification cannot be created after the fact. The update round (Stage B of [[plan]]) runs the same gate prospectively. The machine-readable companions are `docs/data/flow_model.json` (per-count sources) and `docs/data/conformance_map.json` (item-level status). Each record section below ends with what a reader can and cannot verify.
 
-## 2.1 The retrospective PRISMA record of round 1
+## 2.1 The first-round PRISMA record carried through PRISM
 
 ### Identification
 

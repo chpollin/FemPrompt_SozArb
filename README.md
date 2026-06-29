@@ -24,6 +24,10 @@ A corpus identified via four Deep Research systems, screened in two parallel, in
 
 The benchmark result is a substantial, asymmetric divergence between the LLM and the expert judgments. The decomposition shows that the headline gap is dominated by human workflow exclusions (duplicates, no full text, wrong publication type) that a single-paper LLM cannot see; on content-only decisions the include rates converge. The full figures, the decomposition, and the provenance are in [`knowledge/verification.md`](knowledge/verification.md), reproducible via `benchmark/scripts/replay_selftest.py`.
 
+## Screening Tool (PRISM)
+
+Screening runs through **PRISM** ([`docs/prisma.html`](docs/prisma.html)), the project's binding PRISMA-trAIce screening instrument, distinct from the PRISMA reporting standard. The review's data is carried through PRISM (the first-round corpus and the planned literature update), and the review counts complete only once that pass is done. The roadmap is in [`knowledge/plan.md`](knowledge/plan.md).
+
 ## Repository Structure
 
 ```

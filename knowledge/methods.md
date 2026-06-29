@@ -25,7 +25,7 @@ Python 3.8 or later, on Windows, macOS, or Linux. Core packages installed via `p
 
 ## PRISMA 2020 framework
 
-The workflow follows PRISMA 2020 for systematic reviews: the 27-item checklist structures identification, screening, and eligibility assessment; the flow diagram documents the selection process with quantification at each phase; exclusion reasons are specified explicitly. The reporting standard and its AI extensions are detailed in [[standards]].
+The workflow follows PRISMA 2020 for systematic reviews: the 27-item checklist structures identification, screening, and eligibility assessment; the flow diagram documents the selection process with quantification at each phase; exclusion reasons are specified explicitly. The reporting standard and its AI extensions are detailed in [[standards]]. Under ADR-019 in [[specification]], PRISM is now the binding screening surface through which the review data is carried, with the round-1 corpus replayed and screened in the tool and the published record completing that pass; the staged completion is tracked in [[plan]].
 
 Deviation from standard database searches. Identification uses AI-assisted deep research instead of traditional database searches: four models (ChatGPT, Claude, Gemini, Perplexity) receive identical context-parameterized instructions, supplemented by a limited manual search. The deviation is explicitly documented and justified; the motivation is testing a new technology, not reducing effort. The executed deep-research prompts were not committed at run time and are partly lost; only the parametric template was restored from Git history (see [[verification]], acquisition findings, and `prompts/CHANGELOG.md`).
 

@@ -24,7 +24,7 @@ This document is the pre-registration protocol for the second literature round (
 1. Update the existing first-round corpus with literature published since the round 1 search execution, using the same identification instrument: parallel deep research queries with an identical prompt across systems, followed by deduplication, dual assessment, and human-binding screening.
 2. Conduct the round under full PRISMA 2020 plus PRISMA-trAIce conformance by construction: pre-specified protocol (this document), executed prompts committed verbatim with run metadata, enforced controlled vocabulary at capture, per-record reviewer identity, separate AI and human decision tracks, generated flow and disclosure artifacts.
 3. Capture the analysis fields (prompt techniques, bias axes, harm types, mitigation, population; see the Analysis fields section) at screening time, so the round 2 corpus can carry the analysis of how prompt engineering must adapt for social work, gender, and bias contexts.
-4. Produce the data for the two-round comparison: round 1 is rendered retrospectively with named gaps (Stage R, see [[verification]]), round 2 demonstrates the same record machinery under prospective conformance.
+4. Produce the data for the two-round comparison: round 1 is carried through PRISM with named gaps (Stage R, see [[verification]]), round 2 demonstrates the same record machinery under prospective conformance.
 
 ## 2. Eligibility criteria
 
@@ -78,16 +78,16 @@ Deduplication against the existing corpus and within the new batch happens as a 
 
 ## 5. Screening procedure
 
-Capture stays where it works ([[plan]], Zielbild): the reviewing colleagues record categories and decisions in the established Excel format, the column shape of `benchmark/data/human_assessment.csv`, extended for round 2 by:
+PRISM is the binding screening surface for round 2 ([[plan]] Stage B2, ADR-019 in [[specification]]). The reviewing colleagues screen the new batch in the tool, where every category points at the words that justify it and the human decision is the binding record. The screening record carries, for round 2, the same shape the established capture format does, the column shape of `benchmark/data/human_assessment.csv`, extended by:
 
 1. the analysis-field extension (frozen before screening starts, see the Analysis fields section), and
-2. a reviewer column carrying neutral reviewer ids (R1, R2), closing the round 1 gap of per-record reviewer identity (see [[verification]]).
+2. a per-record reviewer identity through neutral reviewer ids (R1, R2), closing the round 1 gap of per-record reviewer identity (see [[verification]]).
 
-The Excel template enforces the controlled vocabulary at input time (dropdown validation for Decision, Exclusion_Reason, category values, and the analysis fields): values like Other or empty reason cells, which round 1 admitted, are impossible by construction.
+The tool enforces the controlled vocabulary at input time (validated values for Decision, Exclusion_Reason, category values, and the analysis fields); values like Other or empty reason cells, which round 1 admitted, are impossible by construction.
 
-The completed Excel imports into PRISM over the P3 bridge ([[plan]] Stage A P3): idempotent re-import, import report (added, changed, skipped), validation of vocabulary, category completeness, duplicate Zotero keys, and the analysis fields. Violations are a visible import report, never silent acceptance.
+A batch captured in Excel elsewhere enters over the P3 import bridge ([[plan]] Stage A P3), which survives as an entry and migration seam rather than the canonical capture path, with idempotent re-import, an import report (added, changed, skipped), and validation of vocabulary, category completeness, duplicate Zotero keys, and the analysis fields. Violations are a visible import report, never silent acceptance.
 
-Downstream of the import, the more precise PRISMA steps happen in PRISM: machine-extracted evidence enters as a clearly labelled separate provenance class, human verification of evidence on samples, recording of the text source actually read (raw, knowledge document, abstract), reconciliation of divergent human decisions on the Daten und Repo surface with the consensus decision and process recorded (PRISMA-trAIce M8), and generation of flow, agreement, checklist, and disclosure artifacts from the data.
+In PRISM the more precise PRISMA steps happen, where machine-extracted evidence enters as a clearly labelled separate provenance class, human verification of evidence runs on samples, the text source actually read is recorded (raw, knowledge document, abstract), divergent human decisions are reconciled on the Daten und Repo surface with the consensus decision and process recorded (PRISMA-trAIce M8), and flow, agreement, checklist, and disclosure artifacts are generated from the data.
 
 The dual track runs as in round 1: the offline LLM assessment processes the new batch with the versioned 10K assessment prompt (`benchmark/scripts/run_llm_assessment.py`, governed by `prompts/CHANGELOG.md`) and recorded parameters. Decoding parameters are set explicitly and recorded this round; round 1 left temperature and top-p as unrecorded API defaults (see [[verification]]). The human decision is the binding record; the LLM track is advisory and kept separate. An interactive agent screening lane (as in Stage R3) may run as a third track under its own pre-specified sub-protocol.
 
@@ -128,7 +128,7 @@ The pre-registration is complete when the following are in the repository, in th
 1. This protocol, finalized (open items of section 10 resolved, status no longer draft).
 2. The exact paste-ready prompt texts per lane (Appendix A) as a versioned prompt file under `prompts/`, with a `prompts/CHANGELOG.md` entry for the round 2 prompt version.
 3. `benchmark/config/categories.yaml` in the version in force, with the analysis-field extension merged and frozen, eligibility content unchanged from v1.2.
-4. The Excel capture template with the analysis fields, the reviewer column, and enforced vocabulary (dropdown validation), as the file the colleagues will actually use.
+4. The Excel import template with the analysis fields, the reviewer column, and enforced vocabulary (dropdown validation), as the seam for a batch captured elsewhere; the colleagues screen in PRISM.
 5. The P3 bridge import validation extended to the analysis fields and the reviewer column.
 6. The 10K assessment prompt version and the run configuration with explicitly set decoding parameters.
 7. The metrics pre-specification as committed, runnable scripts, including the content-only computation.

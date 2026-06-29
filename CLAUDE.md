@@ -7,7 +7,7 @@
 
 ## Core Argument
 
-This project builds an **epistemic infrastructure** for an LLM-assisted literature review. The central thesis is that reliability cannot be presupposed as a property of the system but must be established as a property of the research process. The workflow is organized around **verification checkpoints**, defined points after each AI-assisted step where human or rule-based control checks results before they flow into the next stage.
+This project builds an **epistemic infrastructure** for an LLM-assisted literature review. The central thesis is that reliability cannot be presupposed as a property of the system but must be established as a property of the research process. The workflow is organized around **verification checkpoints**, defined points after each AI-assisted step where human or rule-based control checks results before they flow into the next stage. PRISM (`docs/prisma.html`) is the binding screening surface this runs through; per ADR-019 the review counts complete only once all of its data has passed through PRISM under PRISMA 2020 and PRISMA-trAIce, with the items unrepairable in retrospect (the absent round-1 protocol above all) named, not hidden.
 
 A corpus of papers identified via four proprietary Deep Research systems was processed through a five-step workflow. A **dual assessment track** runs expert and LLM evaluation in parallel on the same ten-category schema, without mutual knowledge. The result is a substantial, asymmetric divergence between the LLM and the expert judgments. This divergence, decomposed and verified in `knowledge/verification.md`, is the empirical core and demonstrates why the infrastructure is necessary.
 
@@ -209,7 +209,7 @@ Use for multi-step tasks (three or more steps) and long operations. Mark `in_pro
 
 ## Milestones
 
-The research strand (the conducted review, the benchmark, the Evidence Companion, and the vault) is complete. The active work, the PRISM tool and the round-2 update, is tracked in `knowledge/plan.md` under Stage A/R/B/C and TP1 to TP7. The Forum paper is submitted and closed.
+The research artifacts (the identified corpus, the benchmark, the Evidence Companion, and the vault) are produced. Per ADR-019 the review counts complete only once all of its data is carried through PRISM; the active work is that pass, the PRISM tool, the first-round record (Stage R), and the round-2 update, tracked in `knowledge/plan.md` under Stage A/R/B/C and TP1 to TP7. The Forum paper is submitted and closed.
 
 ---
 

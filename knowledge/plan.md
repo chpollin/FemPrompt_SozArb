@@ -16,14 +16,14 @@ method:
 related: [specification, design, data, journal, verification, update-protocol]
 ---
 
-Phased plan for completing the whole project: PRISM v1.0 (Stage A), the retrospective PRISMA replay and evaluation on the existing review data (Stage R, the demonstrable core), the real review cycle through the tool (Stage B), and closure plus reuse (Stage C). This is a process document; it is updated as phases close (mark done with date), and decisions made along the way go into [[specification]] as ADRs, not here.
+Phased plan for completing the whole project: PRISM v1.0 (Stage A), the first-round pass of the existing review data through PRISM and its evaluation (Stage R, the demonstrable core), the real review cycle through the tool (Stage B), and closure plus reuse (Stage C). This is a process document; it is updated as phases close (mark done with date), and decisions made along the way go into [[specification]] as ADRs, not here.
 
 ## Zielbild (what "done" means)
 
 The tool is not the goal; the goal is a review whose every decision is auditable, demonstrated on this project's own data. The project is finished when four things are true:
 
-1. **The completed review is rendered as a generated PRISMA record.** The existing dual-track data (the full corpus, human decisions, LLM assessments, divergences, category evidence; counts in [[verification]]) is replayed into a PRISMA 2020 plus trAIce record, public on the Evidence Companion, together with an honest conformance evaluation: which items the recorded data can satisfy, which only partially, which not at all. The gaps are a finding, not a flaw; they show what epistemic infrastructure must record from the start.
-2. **The instrument works on top of the established workflow.** Capture stays where it works: the colleagues record categories and decisions in the known Excel format (the Vorstufe, decided 2026-06-09). PRISM is the downstream layer where the more precise PRISMA steps happen: import of the Excel result, evidence grounding, flow, agreement, checklist, disclosure, record. Every category can point at the words that justify it, every AI involvement is disclosed, the human decision is always the binding record.
+1. **The review is carried through PRISM, and only then complete.** All of the review's dual-track data (the full corpus, human decisions, LLM assessments, divergences, category evidence; counts in [[verification]]) passes through PRISM into a PRISMA 2020 plus trAIce record, public on the Evidence Companion, together with an honest conformance evaluation, which items the recorded data satisfies, which only partially, which not at all. The items unrepairable in retrospect (the absent pre-registered protocol above all) are named, not hidden; they show what epistemic infrastructure must record from the start.
+2. **The instrument is the binding screening surface.** Per ADR-019 the colleagues screen in PRISM, where the more precise PRISMA steps happen, the screening decision, evidence grounding, flow, agreement, checklist, disclosure, and record. The Excel import bridge stays only as an entry seam for a batch captured elsewhere. Every category can point at the words that justify it, every AI involvement is disclosed, and the human decision is always the binding record.
 3. **The cycle is repeatable.** The planned literature update (same versioned deep-research prompts, new batch, dual assessment, reconciliation) is executed inside the tool with the same record machinery. Reproducibility is proven by execution, not asserted.
 4. **The infrastructure outlives the case.** The paper and the Evidence Companion publish the review; the repo documents how a third party sets up the same instrument for a different review (own categories, own corpus). That cashes out the project's claim, epistemic infrastructure as practice, beyond the single study.
 
@@ -44,8 +44,8 @@ The vault-side programme plan ("Gesamtplan FemPrompt Forschungsprogramm", Projec
 
 | TP | Name | Lives where |
 |---|---|---|
-| TP1 | PRISM working instrument | Stage A (P0 to P7, with P3 as the Excel bridge) |
-| TP2 | Retrospective record, round one | Stage R |
+| TP1 | PRISM working instrument | Stage A (P0 to P7, with P3 as the Excel import seam) |
+| TP2 | First-round pass through PRISM, round one | Stage R |
 | TP3 | Sharpening the human-AI divergence finding | own work item; source [[verification]]; feeds R4 and the paper; elaboration session pending |
 | TP4 | Operationalizing the analysis question (prompt engineering for social work, gender, bias) | own work item; MUST precede the B2 schema freeze so the Excel captures the analysis fields; deliverable: the analysis design in [[update-protocol]] plus schema extension |
 | TP5 | Literature update, round two | Stage B |
@@ -139,14 +139,14 @@ Done when: with a connected clone, a paper with a raw text renders it and its Be
 
 Note (2026-06-21): M3 (ADR-016) realized the layer-source provenance for the already-served document, splitting paper text from machine extraction and binding `origin` to the layer. That is distinct from P2, which still adds the raw Docling text from the local clone and the `text_source` field. P2 remains open; M3 closed the contamination path inside the served distillate.
 
-### P3: Excel-to-PRISM bridge (reframed 2026-06-09)
+### P3: Excel-to-PRISM import seam (reframed by ADR-019)
 
-The established capture workflow stays as it is: the colleagues record categories and decisions in the known Excel format, as in the first round. PRISM does not replace that capture; it is where the Excel result goes afterwards for the rest of the PRISMA method. P3 therefore builds the bridge, not an onboarding path.
+Under ADR-019 PRISM is the binding screening surface and the colleagues screen in the tool. The Excel import bridge stays as an entry and migration seam for a batch captured elsewhere, not as the canonical capture path. P3 therefore builds and validates that seam.
 
 - Import bridge: ingest the established Excel/CSV export (the column shape of `benchmark/data/human_assessment.csv`) as a human decision track; idempotent re-import; the import reports what was added, changed, and skipped.
 - Validation at import, the data-hygiene lesson from R1: controlled-vocabulary check on exclusion reasons (the audit found the out-of-vocabulary value Other and 7 empty cells), category completeness, duplicate Zotero keys; violations become a visible import report, never silent acceptance.
-- The per-reviewer Git files stay as persistence for in-tool work (the agent track, verification passes); they are no longer the colleagues' capture path. In-tool screening keeps working but is not polished further.
-- ADR to record this (it supersedes the colleague-capture rationale in ADR-001 and ADR-009): written into [[specification]] in the next documentation pass.
+- The per-reviewer files are the persistence for in-tool screening, the binding capture path under ADR-019; a batch captured in Excel enters over the import seam.
+- ADR-019 records this, superseding the colleague-capture rationale in ADR-001 and the simulated Excel-capture path; written into [[specification]].
 
 Done when: an Excel export of the established format imports cleanly, the validation report flags vocabulary violations, and the imported track appears in flow, agreement, and record.
 
@@ -193,13 +193,13 @@ Done when: searching the retired numbers hits only journal and archive contexts.
 
 Done when: the quickstart works without help from the builder.
 
-## Stage R: Retrospective PRISMA replay and evaluation (the simulation)
+## Stage R: The first-round pass through PRISM and its evaluation
 
 The demonstrable core of the project: the PRISMA methodology executed on exactly this review's data and shown in the frontend. R1 and R2 are data work and can start immediately, in parallel with Stage A; R3 needs the deployed tool (after P0) and doubles as its hardest usability test; R4 and R5 close the loop. Stage B later reuses this machinery for the update.
 
-Shaping decisions (taken 2026-06-09): replay plus interactive agent pass; knowledge-document category evidence enters the replay as clearly labelled machine-extracted evidence, separate from reviewer evidence; the record is published on the Companion. Claim line: the first review round (the full corpus) is rendered retrospectively and honestly, with named gaps (the corpus papers without a human decision plus one unresolved pairing discrepancy, see [[verification]]; the missing pre-specified protocol M1); no conformance claim is made for it. Full conformance is enforced by the tool for the update (Stage B). The follow-up paper tells exactly this two-round story.
+Shaping decisions (taken 2026-06-09): replay plus interactive agent pass; knowledge-document category evidence enters the replay as clearly labelled machine-extracted evidence, separate from reviewer evidence; the record is published on the Companion. Claim line: the first review round (the full corpus) is carried through PRISM as the first real pass and reported honestly, with the items unrepairable in retrospect named (the corpus papers without a human decision plus one unresolved pairing discrepancy, see [[verification]]; the missing pre-specified protocol M1). The same gate is enforced for the update (Stage B). The follow-up paper tells exactly this two-round story.
 
-Status (2026-06-09): the retrospective record is drafted ahead of the replay script (now folded into [[verification]]) plus `docs/data/flow_model.json`, every count an agent recount flagged `agent_recount_scripted_replay_pending`. The committed R2 replay script must supersede these counts before the record is published on the Companion (R5). Update (2026-06-21): the 292-vs-291 pairing discrepancy is resolved (a stray Has_HA flag on `2YS85B49` in `papers_full.csv`, no missing human decision); the replay self-test reproduces the benchmark core, but the full FlowModel generation (R4) still supersedes the hand-drafted counts before R5.
+Status (2026-06-09): the first-round record is drafted ahead of the replay script (now folded into [[verification]]) plus `docs/data/flow_model.json`, every count an agent recount flagged `agent_recount_scripted_replay_pending`. The committed R2 replay script must supersede these counts before the record is published on the Companion (R5). Update (2026-06-21): the 292-vs-291 pairing discrepancy is resolved (a stray Has_HA flag on `2YS85B49` in `papers_full.csv`, no missing human decision); the replay self-test reproduces the benchmark core, but the full FlowModel generation (R4) still supersedes the hand-drafted counts before R5.
 
 ### V: Claim verification (added 2026-06-09 after the meta review)
 
@@ -269,7 +269,7 @@ Done when: no ADR carries an unobserved effect; v1.1 is deployed and the colleag
 - Re-run the versioned deep-research prompts (`prompts/CHANGELOG.md` governance); export RIS; deduplicate against the existing corpus.
 - Run the offline LLM assessment on the new batch with the versioned assessment prompt and recorded parameters (existing pipeline scripts; this is the disclosure's input).
 - Pipeline the new papers: PDF to `pipeline/markdown_clean/` (raw, unpublished), knowledge documents where wanted, rebuild the full-text index and the raw-text manifest.
-- The colleagues screen the new papers in the established Excel workflow (this time with a pre-specified protocol, enforced vocabulary, and a reviewer column); the result imports over the P3 bridge; evidence grounding happens downstream in PRISM (machine evidence, agent pass, human verification of samples); the flow diagram shows the update cycle with the AI/human split.
+- The colleagues screen the new papers in PRISM, the binding surface (this time with a pre-specified protocol, enforced vocabulary, and a reviewer column); a batch captured in Excel enters over the P3 import seam; evidence grounding happens in PRISM (machine evidence, agent pass, human verification of samples); the flow diagram shows the update cycle with the AI/human split.
 
 Done when: every new paper has a binding human decision with evidence, recorded text source, and a sibling AI decision; the update is reproducible from the repo alone.
 
@@ -316,7 +316,7 @@ Writing the Forum Wissenschaft paper itself (the plan delivers its methods input
 
 ## Simulated decisions (pending ratification)
 
-Every decision in this section is simulated. The project decided on 2026-06-09 not to block on external feedback: stakeholder decisions are simulated from a realistic perspective, explicitly marked, and ratified, revised, or dropped at the next real contact (the stakeholder meeting, or earlier written feedback). A simulated decision licenses work, never an outward claim: nothing here may appear in a publication, record, or report as a stakeholder decision until ratified. The simulated perspectives are grounded in the documented roles, the review lead and the second reviewing expert, both working in the established Excel environment under real time constraints; the simulation weights coding burden and workflow continuity high, because the one already-falsified usage assumption (screening inside the tool) failed exactly there.
+Every decision in this section is simulated. The project decided on 2026-06-09 not to block on external feedback: stakeholder decisions are simulated from a realistic perspective, explicitly marked, and ratified, revised, or dropped at the next real contact (the stakeholder meeting, or earlier written feedback). A simulated decision licenses work, never an outward claim: nothing here may appear in a publication, record, or report as a stakeholder decision until ratified. The simulated perspectives are grounded in the documented roles, the review lead and the second reviewing expert, both working in the established Excel environment under real time constraints; the simulation weights coding burden and workflow continuity high. ADR-019 has since ratified in-tool screening as the binding path and retired the earlier reading that screening inside the tool had been falsified; the Excel environment remains an entry seam, not the capture path.
 
 ### Analysis fields (the [[update-protocol]] TP4 open decisions)
 
@@ -343,7 +343,7 @@ Every decision in this section is simulated. The project decided on 2026-06-09 n
 
 ### User-story validation (the stories in [[specification]])
 
-The v4 core stories (read, search, pin) are confirmed in substance with a role correction: the heavy in-tool reader is the review lead and technical lead during reconciliation, and pinning is primarily a reconciliation activity, not a per-decision duty of the reviewing experts (mandatory per-decision pinning would re-import the falsified in-tool screening model). Record-an-exclusion is confirmed but lives in Excel; generate-record, produce-disclosure, verify-conformance, look-up-category, and understand-checklist are confirmed. The v3 blind and divergence stories are confirmed superseded. Share-a-session is dropped for round 2, since the Excel-plus-bridge path replaces session hand-off, and retained only as background for foreign reuse.
+The v4 core stories (read, search, pin) are confirmed in substance, with a role correction. ADR-019 makes in-tool screening the binding path; whether evidence pinning is required per decision or concentrated at reconciliation stays a workflow choice for the stakeholder meeting, and the heavy in-tool reader during reconciliation is the review lead and technical lead. Record-an-exclusion is confirmed but lives in Excel; generate-record, produce-disclosure, verify-conformance, look-up-category, and understand-checklist are confirmed. The v3 blind and divergence stories are confirmed superseded. Share-a-session is dropped for round 2, since the Excel-plus-bridge path replaces session hand-off, and retained only as background for foreign reuse.
 
 ### Ratification
 

@@ -202,9 +202,9 @@ How a pinned Beleg is created, stored, and surfaced. This is the contract the re
 - Edit/remove: a Beleg can be removed individually before the decision is recorded (the small remove control next to the snippet). There is no dedup; pinning the same passage twice stores two entries (the reviewer can remove one).
 - Surfacing: Belege are saved with the decision in the reviewer file. The decision-log CSV reports an `evidence_count` per paper. A paper-layer pin is human evidence (`origin: human`) and the reviewer's binding justification; a KI-Extraktion-layer pin is `origin: ai`, shown marked KI, advisory, and excluded from the binding record because it never sets a category (ADR-016). Machine-extracted evidence proactively loaded into the same list (`origin: ai`, planned R2 continuation) is the same labelled class, never counted as a reviewer Beleg and never entering the binding human record.
 
-## Seed dataset (read-only case study)
+## Seed dataset (the round-1 data carried through PRISM)
 
-The tool ships seeded with the existing review so colleagues see a worked example before importing their own batch:
+The tool is seeded with the existing review, the round-1 data carried through PRISM as Stage R. The Stage R replay populates the session that the interactive screening pass (R3) continues, so the seed is the first real pass through the gate. A batch captured elsewhere enters over the import seam, a migration path and not the capture default:
 
 | Source file | Provides |
 |---|---|
@@ -213,7 +213,7 @@ The tool ships seeded with the existing review so colleagues see a worked exampl
 | `benchmark/data/llm_assessment_10k.csv` | advisory AI decisions (Haiku) |
 | `benchmark/results/agreement_metrics.json` | reference agreement figures |
 
-A small build step (a `generate_*` script, to be added) maps these into the `Session` schema as a read-only seed; the seed reproduces the canonical benchmark (the figures are in [[verification]]) as a self-test.
+A small build step (a `generate_*` script, to be added) maps these into the `Session` schema as the Stage R seeded session, the first-round decision data carried through PRISM; that it reproduces the canonical benchmark (the figures are in [[verification]]) is the conformance self-test on that pass.
 
 ## Was nicht reingehört
 

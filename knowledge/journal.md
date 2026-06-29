@@ -22,6 +22,27 @@ Chronologisches Protokoll der Arbeitssitzungen mit Entscheidungen, Ergebnissen u
 
 ---
 
+## 2026-06-29 (Session 19): ADR-019, PRISM the binding screening gate, the documentation realigned
+
+**Branch:** `refactor/knowledge-vault` (unpushed)
+
+### What happened
+
+1. **Round-one framing wrong and internally inconsistent.** Two audits over the knowledge base found that the documentation encoded the opposite of the operator's intent. Round one was described as a completed review rendered retrospectively, held as a read-only seeded case study with no conformance claim, while the colleagues' Excel was cast as the capture path and PRISM as a downstream PRISMA layer that ingests it. The requirements and the data model were built the other way, every screening decision captured in the tool as the binding record (FR-02, FR-04, FR-11 to FR-13, the `ScreeningRecord` in [[data]]). The "in-tool screening partially falsified" reading rested on a single unexecuted usage assumption inside the pending-ratification simulated decisions, not on an observed test.
+2. **The operator ratified one direction.** Through two forks: PRISM is the binding screening surface and Excel is only an entry seam, not a co-equal capture path; and "everything goes through PRISMA" holds retroactively for round one, so the literature review counts complete only once all of its data has passed through PRISM.
+3. **ADR-019 the anchor.** Recorded in [[specification]], it makes PRISM the binding screening gate, carries the first-round corpus through PRISM as a real pass (the Stage R replay seeds it, R3 and R5 are completion steps), demotes the Excel import bridge to an entry and migration seam, withdraws the falsification reading, and supersedes ADR-001's seeded-case-study framing together with the simulated Excel-capture path. PRISMA stays a reporting standard, not a conduct standard.
+4. **Gate plus named gaps replaces no-conformance-for-round-one.** Conformance holds for everything the recorded data supports; the items unrepairable in retrospect stay named as permanent limits, the absent pre-registered protocol (PRISMA 2020 item 24, trAIce M1) above all, with the lost acquisition provenance, the papers with no served text, and the corpus papers without a human decision. Pre-specification cannot be created after the fact.
+5. **Propagated across the documentation.** [[specification]] as the anchor, then [[verification]] part 2, [[plan]] (the Zielbild completion test, Stage R, the P3 seam, the retired simulated decisions), [[methods]], [[INDEX]], [[design]], [[data]], [[update-protocol]], the project `CLAUDE.md`, and the root `README.md`. [[standards]] needed no change, its per-item conformance map already named M1 as a gap and framed PRISMA as a reporting standard. A read-only verification pass over the whole set flagged the seed-dataset section in [[data]] still calling the corpus a read-only case study (fixed), and the same residue in FR-09 and the Data-I/O Datengrundlage of [[specification]] (fixed).
+6. **The paper realigned too.** `paper/draft.md` (section 3.6) and `paper/outline.md` still described Excel as the capture path with PRISM downstream and cited the withdrawn falsification as a limitation. Aligned to ADR-019 with minimal edits, preserving the per-item conformance figures and the genuine proxy-written-user-stories limitation. The novelty contribution stays the retrospective trAIce rendering of an already-conducted review, which is reporting-side and unchanged by the gate.
+
+### Open items
+
+- The branch is unpushed; push and merge to `main` are the operator's call.
+- The per-story validation verdicts in [[plan]] stay simulated until the stakeholder meeting ratifies them in person; the capture-locus question itself is settled, in-tool screening with Excel as the seam.
+- No new code is required, the build already encodes in-tool capture. Forward work is unchanged, the Stage R5 publication and the round-2 update carried through the same gate.
+
+---
+
 ## 2026-06-29 (Session 18): refactor completeness, the R4/P1/R1 deliverables, trAIce 17, the no-self-description rule
 
 **Branch:** `refactor/knowledge-vault` (unpushed)
