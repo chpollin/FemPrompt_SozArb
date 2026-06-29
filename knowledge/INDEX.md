@@ -18,10 +18,10 @@ created: 2026-06-29
 updated: 2026-06-29
 authors: [Christopher Pollin]
 generated-with: Claude Code
-related: [project, methods, specification, data, design, plan, journal, verification, standards, update-protocol, reuse-setup]
+related: [project, methods, specification, data, design, plan, journal, verification, standards, update-protocol]
 ---
 
-This is the knowledge base of FemPrompt SozArb, a systematic literature review on feminist AI literacy and LLM bias in social work and the epistemic infrastructure built around it. It documents the conducted review and its benchmark, the PRISM screening tool, and the plan for the literature update, written so a collaborator or a coding agent can re-derive the project context without reading the code or the Git history. Concrete numbers do not live here: the benchmark figures live in `benchmark/results/` and in [[verification]], the corpus and screening data in `docs/data/` and `benchmark/data/`, and the Evidence Companion (https://chpollin.github.io/FemPrompt_SozArb/) renders them. This index shows where each piece of knowledge lives, in what order to read, and what the constitutive terms mean.
+This is the knowledge base of FemPrompt SozArb, a systematic literature review on feminist AI literacy and LLM bias in social work and the epistemic infrastructure built around it. It documents the conducted review and its benchmark, the PRISM screening tool, and the plan for the literature update. Concrete numbers do not live here: the benchmark figures live in `benchmark/results/` and in [[verification]], the corpus and screening data in `docs/data/` and `benchmark/data/`, and the Evidence Companion (https://chpollin.github.io/FemPrompt_SozArb/) renders them. This index shows where each piece of knowledge lives, in what order to read, and what the constitutive terms mean.
 
 ## Documents
 
@@ -39,7 +39,6 @@ In function order, not alphabetical.
 | [[verification]] | Audit and the numbers home: the empirical recompute and divergence finding, PRISMA/trAIce conformance with the retrospective record and novelty survey, paper versus repository | when a claim is re-verified |
 | [[standards]] | The reporting standards implemented: PRISMA 2020, PRISMA-trAIce, RAISE | rarely |
 | [[update-protocol]] | The round-2 pre-registration protocol, the analysis-field design, the RIS procedure | until round 2 starts |
-| [[reuse-setup]] | The setup path for running a foreign review on the PRISM machinery | until a third-party dry run |
 | [[guides/manual-review-checklist]] | The human-in-the-loop markdown review checklist | rarely |
 
 ## Reading paths
@@ -49,7 +48,6 @@ In function order, not alphabetical.
 - Understand a tool decision: [[specification]] (the Entscheidungen / ADR section), [[journal]], [[design]].
 - Understand the divergence finding: [[verification]] (part 1).
 - Prepare the literature update: [[plan]] (Stage B), [[update-protocol]], [[standards]].
-- Reuse the instrument for a different review: [[reuse-setup]], [[specification]], [[data]].
 
 ## Convention
 

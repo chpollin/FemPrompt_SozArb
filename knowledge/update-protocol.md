@@ -14,7 +14,7 @@ updated: 2026-06-29
 authors: [Christopher Pollin]
 generated-with: Claude Code
 topics: ["[[Pre-Registration]]", "[[Coding Scheme]]"]
-related: [plan, verification, data, specification, methods, reuse-setup]
+related: [plan, verification, data, specification, methods]
 ---
 
 This document is the pre-registration protocol for the second literature round (TP5 and Stage B2 of [[plan]]). It exists because the first round had no pre-specified protocol, the one gap of the conducted review that cannot be repaired retrospectively (PRISMA-trAIce M1 and PRISMA 2020 item 24, see [[verification]]). The protocol closes that gap prospectively, carries the analysis-field design the round must capture at screening time (the Analysis fields section), and binds the RIS conversion to a reproducible procedure (the RIS conversion section). It is committed, in finalized form, before the first round 2 search runs; any change after the first run is recorded as a dated amendment, never as a silent edit. The protocol describes the workflow and how large language models are used within it; it makes no efficiency claims. It is a draft until the open items of section 10 and the analysis-field decisions are resolved.
@@ -323,4 +323,3 @@ Identical prompt text to A.2. The execution environment differs from round 1 (an
 - [[verification]]
 - [[specification]]
 - [[data]]
-- [[reuse-setup]]

@@ -13,7 +13,7 @@ generated-with: Claude Code
 method:
   name: Promptotyping
   url: https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin
-related: [specification, design, data, journal, verification, update-protocol, reuse-setup]
+related: [specification, design, data, journal, verification, update-protocol]
 ---
 
 Phased plan for completing the whole project: PRISM v1.0 (Stage A), the retrospective PRISMA replay and evaluation on the existing review data (Stage R, the demonstrable core), the real review cycle through the tool (Stage B), and closure plus reuse (Stage C). This is a process document; it is updated as phases close (mark done with date), and decisions made along the way go into [[specification]] as ADRs, not here.
@@ -300,7 +300,7 @@ Done when: the record bundle exists, the paper cites it, and the integrity check
 
 Done when: a third party could run their own review from the documentation alone, without reading this repo's history.
 
-Status (2026-06-09): the setup path is drafted as `knowledge/reuse-setup.md` (status draft until a third-party dry run); the in-repo versus standalone decision above is still open and the document follows it.
+Status: the in-repo versus standalone decision above is still open; the setup path is written from the validated procedure when reuse is actually executed, not pre-drafted ahead of a dry run.
 
 ## Test responsibility matrix
 
@@ -343,7 +343,7 @@ Every decision in this section is simulated. The project decided on 2026-06-09 n
 
 ### User-story validation (the stories in [[specification]])
 
-The v4 core stories (read, search, pin) are confirmed in substance with a role correction: the heavy in-tool reader is the review lead and technical lead during reconciliation, and pinning is primarily a reconciliation activity, not a per-decision duty of the reviewing experts (mandatory per-decision pinning would re-import the falsified in-tool screening model). Record-an-exclusion is confirmed but lives in Excel; generate-record, produce-disclosure, verify-conformance, look-up-category, and understand-checklist are confirmed. The v3 blind and divergence stories are confirmed superseded. Share-a-session is dropped for round 2, since the Excel-plus-bridge path replaces session hand-off, and retained only as background for foreign reuse ([[reuse-setup]]).
+The v4 core stories (read, search, pin) are confirmed in substance with a role correction: the heavy in-tool reader is the review lead and technical lead during reconciliation, and pinning is primarily a reconciliation activity, not a per-decision duty of the reviewing experts (mandatory per-decision pinning would re-import the falsified in-tool screening model). Record-an-exclusion is confirmed but lives in Excel; generate-record, produce-disclosure, verify-conformance, look-up-category, and understand-checklist are confirmed. The v3 blind and divergence stories are confirmed superseded. Share-a-session is dropped for round 2, since the Excel-plus-bridge path replaces session hand-off, and retained only as background for foreign reuse.
 
 ### Ratification
 

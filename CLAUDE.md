@@ -68,7 +68,7 @@ The benchmark result (the human-LLM divergence and its decomposition) and all fi
 
 | Directory | Contents | Edit? |
 |-----------|----------|-------|
-| `knowledge/` | **Single source of truth** for all project documentation (13 docs, see `knowledge/INDEX.md`) | Yes, with care |
+| `knowledge/` | **Single source of truth** for all project documentation (12 docs, see `knowledge/INDEX.md`) | Yes, with care |
 | `pipeline/knowledge/distilled/` | Distilled knowledge documents | Read-only |
 | `pipeline/knowledge/_stage1_json/`, `_verification/` | Stage-1 JSON extractions, verification reports | Read-only |
 | `vault/` | Obsidian Vault v2 (Papers, Concepts, Divergences, Pipeline) | Generated |
@@ -80,9 +80,9 @@ The benchmark result (the human-LLM divergence and its decomposition) and all fi
 | `.vault_cache/` | LLM API cache (reproducible) | Do not change |
 | `prompts/` | Prompt governance and CHANGELOG | Read-only |
 
-### Knowledge documents (the 13)
+### Knowledge documents (the 12)
 
-`INDEX.md` (navigation and glossary), `project.md` (identity and theory), `methods.md` (review method and pipeline), `specification.md` (PRISM requirements, ADRs, user stories), `data.md` (tool data substrate), `design.md` (UI and design system), `plan.md` (roadmap, status, simulated decisions), `journal.md` (session log), `verification.md` (audit and the numbers home), `standards.md` (PRISMA, trAIce, RAISE), `update-protocol.md` (round-2 protocol, analysis fields, RIS), `reuse-setup.md` (reuse path), `guides/manual-review-checklist.md`. Start at `INDEX.md`.
+`INDEX.md` (navigation and glossary), `project.md` (identity and theory), `methods.md` (review method and pipeline), `specification.md` (PRISM requirements, ADRs, user stories), `data.md` (tool data substrate), `design.md` (UI and design system), `plan.md` (roadmap, status, simulated decisions), `journal.md` (session log), `verification.md` (audit and the numbers home), `standards.md` (PRISMA, trAIce, RAISE), `update-protocol.md` (round-2 protocol, analysis fields, RIS), `guides/manual-review-checklist.md`. Start at `INDEX.md`.
 
 ### Key web files
 
