@@ -13,10 +13,10 @@ generated-with: Claude Code
 method:
   name: Promptotyping
   url: https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin
-related: [outline, plan, verification-empirical-core, verification-novelty, conformance-audit]
+related: [outline, plan, verification]
 ---
 
-Probe for the style decision on the follow-up paper (TP6 in [[plan]]). Register: infrastructure register. The epistemic infrastructure is the protagonist, the design rationale leads, the review appears as the case the infrastructure carries. Models: tool and infrastructure papers in digital humanities and meta-research. Content limits follow the claims discipline of [[outline]]; every number below is licensed by knowledge/verification-empirical-core.md, knowledge/verification-novelty.md, or knowledge/conformance-audit.md.
+Probe for the style decision on the follow-up paper (TP6 in [[plan]]). Register: infrastructure register. The epistemic infrastructure is the protagonist, the design rationale leads, the review appears as the case the infrastructure carries. Models: tool and infrastructure papers in digital humanities and meta-research. Content limits follow the claims discipline of [[outline]]; every number below is licensed by knowledge/verification.md, knowledge/verification.md, or knowledge/verification.md.
 
 ## Working title
 
@@ -34,8 +34,8 @@ This paper presents PRISM, a screening infrastructure that treats the standards 
 
 ## Claims licensing notes
 
-- Fourteen trAIce items, proposal status, item R1 description, RAISE co-publication and Table 1 scope, guidance under journal review, operationalization gap, vendor response, single early-stage prototype: knowledge/verification-novelty.md.
-- 326 papers, 303 human records (142 Include, 161 Exclude), 326 LLM records: knowledge/verification-empirical-core.md, section "Recomputation, Benchmark core".
-- 27 PRISMA 2020 items, 17 trAIce items as encoded, tallies 10 of 27 and 13 of 17 reconstructable, M1 missing and non-reconstructable by definition: knowledge/conformance-audit.md, section "Tally" and "No pre-registered protocol".
+- Fourteen trAIce items, proposal status, item R1 description, RAISE co-publication and Table 1 scope, guidance under journal review, operationalization gap, vendor response, single early-stage prototype: knowledge/verification.md.
+- 326 papers, 303 human records (142 Include, 161 Exclude), 326 LLM records: knowledge/verification.md, section "1.1 (The benchmark core)".
+- 27 PRISMA 2020 items, 17 trAIce items as encoded, tallies 10 of 27 and 13 of 17 reconstructable, M1 missing and non-reconstructable by definition: knowledge/verification.md, sections "2.2 (Conformance tally and findings)" and "2.1 (the round-1 record, Protocol and pre-specification)".
 - "Honest retrospective record, no conformance claim for round one": knowledge/plan.md, section "Stage R" (claim line).
 - Register constraints observed: no efficiency, time-saving, or cost-benefit claims; no error-rate language; survey-date hedge carried in the introduction.

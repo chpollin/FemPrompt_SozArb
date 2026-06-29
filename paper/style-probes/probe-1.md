@@ -13,10 +13,10 @@ generated-with: Claude Code
 method:
   name: Promptotyping
   url: https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin
-related: [outline, plan, verification-empirical-core, verification-novelty, conformance-audit]
+related: [outline, plan, verification]
 ---
 
-Style probe for the follow-up paper ([[outline]], TP6 in [[plan]]): the opening written in one register only, as input for the style decision. Register of this probe: structured empirical methods register. Declarative, sober, IMRaD discipline, claims front-loaded; models are JMIR and PLOS methods papers. Every number is licensed by knowledge/verification-empirical-core.md, knowledge/verification-novelty.md, or knowledge/conformance-audit.md; the mapping is listed under Claims sources at the end. The register rules of the outline apply: no efficiency or cost framing, divergence reported as divergence and not as error, trAIce checklist items fully qualified ("trAIce item R1") to avoid collision with reviewer ids.
+Style probe for the follow-up paper ([[outline]], TP6 in [[plan]]): the opening written in one register only, as input for the style decision. Register of this probe: structured empirical methods register. Declarative, sober, IMRaD discipline, claims front-loaded; models are JMIR and PLOS methods papers. Every number is licensed by knowledge/verification.md, knowledge/verification.md, or knowledge/verification.md; the mapping is listed under Claims sources at the end. The register rules of the outline apply: no efficiency or cost framing, divergence reported as divergence and not as error, trAIce checklist items fully qualified ("trAIce item R1") to avoid collision with reviewer ids.
 
 ## Working title
 
@@ -42,11 +42,11 @@ This paper reports a literature review on generative AI, gender, bias, and socia
 
 ## Claims sources
 
-- 326 papers, 303 human records (142 Include, 161 Exclude), 326 LLM records: knowledge/verification-empirical-core.md, section "Recomputation, Benchmark core (Haiku 4.5, abstract input)".
-- 27 PRISMA 2020 items, 17 trAIce items as encoded, tallies 10/7/10 and 13/3/1, trAIce item M1 missing and non-reconstructable by definition: knowledge/conformance-audit.md, opening section, section "Tally", and section "No pre-registered protocol".
-- Cohen kappa 0.056, near-chance characterization, 72 of 108 divergent records attributable to Duplicate, No full text, or Wrong publication type, content-only kappa 0.194: knowledge/verification-empirical-core.md, sections "Verdict", "Recomputation, Benchmark core", and "Sensitivity: content-only benchmark".
-- Ten category criteria: knowledge/verification-empirical-core.md, section "Category kappas (claim e)".
-- PRISMA-trAIce bibliographic facts (Holst et al. 2025, 14-item checklist, foundational proposal without formal consensus process, trAIce item R1 description), RAISE position statement facts (Flemyng et al. 2025, co-publication, Table 1 elements), 5 citing papers on Semantic Scholar with none implementing the checklist as software, vendor response as compliance documentation and static templates, prior-art status of EPPI-Reviewer, Nested Knowledge, and DistillerSR, "documented for no surveyed tool", C1 to C3 phrasings with the "to our knowledge, as of June 2026" hedge: knowledge/verification-novelty.md, sections "Verified bibliographic status of the standards", "Operationalization of the standards as tools", "Tool landscape", "Retrospective PRISMA rendering", "Verdict", and "Consequences for phrasing the contribution".
-- C4 framing (divergence, not error): knowledge/verification-empirical-core.md, section "Divergence is not proof of LLM error, and the data shows it".
+- 326 papers, 303 human records (142 Include, 161 Exclude), 326 LLM records: knowledge/verification.md, section "1.1 (The benchmark core)".
+- 27 PRISMA 2020 items, 17 trAIce items as encoded, tallies 10/7/10 and 13/3/1, trAIce item M1 missing and non-reconstructable by definition: knowledge/verification.md, opening section, section "2.2 (Conformance tally and findings)", and section "2.1 (the round-1 record, Protocol and pre-specification)".
+- Cohen kappa 0.056, near-chance characterization, 72 of 108 divergent records attributable to Duplicate, No full text, or Wrong publication type, content-only kappa 0.194: knowledge/verification.md, sections "1.1 (The benchmark core)" and "1.4 (Decomposition, task artifacts versus content)".
+- Ten category criteria: knowledge/verification.md, section "1.2 (Category agreement)".
+- PRISMA-trAIce bibliographic facts (Holst et al. 2025, 14-item checklist, foundational proposal without formal consensus process, trAIce item R1 description), RAISE position statement facts (Flemyng et al. 2025, co-publication, Table 1 elements), 5 citing papers on Semantic Scholar with none implementing the checklist as software, vendor response as compliance documentation and static templates, prior-art status of EPPI-Reviewer, Nested Knowledge, and DistillerSR, "documented for no surveyed tool", C1 to C3 phrasings with the "to our knowledge, as of June 2026" hedge: knowledge/verification.md, sections "2.3 (Novelty verification, related work)", "2.3 (Novelty verification)", "2.3 (Novelty verification, Tool landscape)" and "2.3 (Novelty verification, the defensible contribution)".
+- C4 framing (divergence, not error): knowledge/verification.md, section "1.6 (The human track, one consolidated annotation)".
 
 *Updated: 2026-06-09*

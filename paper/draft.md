@@ -13,10 +13,10 @@ generated-with: Claude Code
 method:
   name: Promptotyping
   url: https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin
-related: [outline, analysis-divergence, analysis-design, prisma-record-round1, update-protocol-draft, verification-empirical-core, verification-novelty, conformance-audit, simulation-ledger]
+related: [outline, verification, update-protocol, plan]
 ---
 
-**DRAFT, register 2 (methodological narrative), results-led structure per the narrative decision of 2026-06-09.** Every number in this draft is licensed by the verification documents in `knowledge/`; unfilled values are marked `[PENDING: ...]` and name the computation or decision that fills them. Sections whose content depends on the analysis coding (TP4) or the round 2 update (TP5) carry a frame and placeholders, not invented findings. Author order and the working title are co-author decisions. The simulated decisions this draft relies on (coding scheme details, screening split) are marked in `knowledge/simulation-ledger.md` and require ratification before submission.
+**DRAFT, register 2 (methodological narrative), results-led structure per the narrative decision of 2026-06-09.** Every number in this draft is licensed by the verification documents in `knowledge/`; unfilled values are marked `[PENDING: ...]` and name the computation or decision that fills them. Sections whose content depends on the analysis coding (TP4) or the round 2 update (TP5) carry a frame and placeholders, not invented findings. Author order and the working title are co-author decisions. The simulated decisions this draft relies on (coding scheme details, screening split) are marked in `knowledge/plan.md` and require ratification before submission.
 
 # Generative AI, Gender, and Bias in Social Work: Findings and a Transparent Methodological Account of a Two-Round LLM-Assisted Literature Review
 
@@ -58,7 +58,7 @@ In the human track, the reviewing experts recorded category judgments and decisi
 
 ### 3.5 Analysis coding
 
-The synthesis along SQ1 to SQ3 rests on per-paper analysis fields coded over the included corpus: prompting technique families (vocabulary from The Prompt Report taxonomy, Schulhoff et al. 2025), bias axes, harm types (Gallegos et al. 2024, optional field), mitigation stage (Gallegos et al. 2024, extended by two practice-side codes) and status, population and practice field, and the coding text basis as an audit field. Coding follows written instructions with closed vocabularies, a never-empty rule, and import-time validation; the full design, including the staged retro-coding of round one includes, is committed in the repository (`knowledge/analysis-design.md`). [PENDING RATIFICATION: the coding-scheme decisions are simulated pending the team meeting; see knowledge/simulation-ledger.md.] [PENDING: coding execution; all synthesis numbers in section 5.3 and 5.4 follow from it by committed script.]
+The synthesis along SQ1 to SQ3 rests on per-paper analysis fields coded over the included corpus: prompting technique families (vocabulary from The Prompt Report taxonomy, Schulhoff et al. 2025), bias axes, harm types (Gallegos et al. 2024, optional field), mitigation stage (Gallegos et al. 2024, extended by two practice-side codes) and status, population and practice field, and the coding text basis as an audit field. Coding follows written instructions with closed vocabularies, a never-empty rule, and import-time validation; the full design, including the staged retro-coding of round one includes, is committed in the repository (`knowledge/update-protocol.md`). [PENDING RATIFICATION: the coding-scheme decisions are simulated pending the team meeting; see knowledge/plan.md.] [PENDING: coding execution; all synthesis numbers in section 5.3 and 5.4 follow from it by committed script.]
 
 ### 3.6 Instrument and record generation
 
@@ -128,6 +128,6 @@ Round one has named, unrepairable gaps: no pre-specified protocol, no per-decisi
 - Pollin, C., Sackl-Sharif, S., Klinger, S. (2026). Deep-Research-gestützte Literature-Reviews. Epistemische Infrastruktur als Praxis. Forum Wissenschaft 2/2026.
 - Schulhoff, S., et al. (2025). The Prompt Report: A Systematic Survey of Prompt Engineering Techniques. arXiv:2406.06608v6.
 - Thomas, J., et al. (2025, rev. 2026). RAISE guidance documents. OSF. DOI: 10.17605/OSF.IO/FWAUD.
-- [PENDING: prior-art tool citations (EPPI-Reviewer, Nested Knowledge, DistillerSR, AIscreenR/Vembye et al.) with the exact references from knowledge/verification-novelty.md during venue formatting.]
+- [PENDING: prior-art tool citations (EPPI-Reviewer, Nested Knowledge, DistillerSR, AIscreenR/Vembye et al.) with the exact references from knowledge/verification.md during venue formatting.]
 
 *Updated: 2026-06-09. Draft status: sections 1 to 5, 7 (methods part), 8 to 10 written; sections 5.3, 6, and parts of 7 and 10 are frames pending analysis coding (TP4/TP5); flow figure pending scripted replay. Word count of written prose roughly in the lower half of the 6000 to 8000 corridor, leaving room for the synthesis sections.*

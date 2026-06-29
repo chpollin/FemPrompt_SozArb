@@ -13,7 +13,7 @@ generated-with: Claude Code
 method:
   name: Promptotyping
   url: https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin
-related: [plan, verification-empirical-core, verification-novelty, conformance-audit, paper-integrity]
+related: [plan, verification]
 ---
 
 **SUPERSEDED IN STRUCTURE (2026-06-09, narrative decision): the paper is results-led.** The research question (prompt engineering for social work, gender, and bias) leads; the workflow moves into the methods section; the divergence analysis becomes the validation subsection of the results; the deep methodological material lives on the Evidence Companion as citable supplement. The current draft implementing this structure is `paper/draft.md` (register 2, chosen by both style judges). This outline remains valid as the claims inventory: every claim-to-source mapping below still licenses the draft's numbers, and the section content carries over into the new structure (sections 4 to 6 into methods, section 7 into results-validation, sections 2 to 3 compressed into background and discussion).
@@ -23,12 +23,12 @@ Original lead: Full outline of the follow-up paper (TP6 in [[plan]]). The paper 
 ## Register and claims discipline (binding for the draft)
 
 - The paper describes the workflow and the LLM use. It makes no efficiency, time-saving, or cost-benefit claims anywhere. Cost and token figures appear only as factual disclosure in the AI use section. Source: [[plan]], section "Zielbild" (narrative register decision, 2026-06-09).
-- Every empirical number cites a committed, recomputable source. Until `knowledge/analysis-divergence.md` (TP3) exists, the licensing source for all benchmark numbers is `knowledge/verification-empirical-core.md`; once TP3 lands, the paper cites the committed analysis document and this outline's inventory entries are re-pointed. Source: [[plan]], section "TP3 work plan".
-- The contribution is phrased exactly as licensed by `knowledge/verification-novelty.md`: generated PRISMA-trAIce flow artifact (checklist item R1), session-derived disclosure generation, and retrospective trAIce rendering. The paper does not claim novelty for AI-human decision separation as such; EPPI-Reviewer, Nested Knowledge, and DistillerSR are named as prior art in related work. Source: knowledge/verification-novelty.md, sections "Verdict" and "Consequences for phrasing the contribution".
-- Novelty statements carry the qualifier "to our knowledge, as of June 2026" and state the survey date. Source: knowledge/verification-novelty.md, section "Consequences for phrasing the contribution".
-- Divergence framing rules: no error-rate language (no inter-human baseline exists), divergence is decomposed before it is interpreted, the inclusion-bias claim survives only for the knowledge-document input condition. Source: [[plan]], section "V: Claim verification" (consequence ledger); knowledge/verification-empirical-core.md, section "Consequences for the paper".
+- Every empirical number cites a committed, recomputable source. Until `knowledge/analysis-divergence.md` (TP3) exists, the licensing source for all benchmark numbers is `knowledge/verification.md`; once TP3 lands, the paper cites the committed analysis document and this outline's inventory entries are re-pointed. Source: [[plan]], section "TP3 work plan".
+- The contribution is phrased exactly as licensed by `knowledge/verification.md`: generated PRISMA-trAIce flow artifact (checklist item R1), session-derived disclosure generation, and retrospective trAIce rendering. The paper does not claim novelty for AI-human decision separation as such; EPPI-Reviewer, Nested Knowledge, and DistillerSR are named as prior art in related work. Source: knowledge/verification.md, sections "2.3 (Novelty verification)" and "2.3 (Novelty verification, the defensible contribution)".
+- Novelty statements carry the qualifier "to our knowledge, as of June 2026" and state the survey date. Source: knowledge/verification.md, section "2.3 (Novelty verification, the defensible contribution)".
+- Divergence framing rules: no error-rate language (no inter-human baseline exists), divergence is decomposed before it is interpreted, the inclusion-bias claim survives only for the knowledge-document input condition. Source: [[plan]], section "V: Claim verification" (consequence ledger); knowledge/verification.md, section "1.8 (Consequences for the paper)".
 - Reviewer identities appear as neutral ids (R1, R2); no personal names in data, figures, or examples. To avoid collision, trAIce checklist items are always written fully qualified ("trAIce item R1") and plan phases as "phase R1 of the plan".
-- Before submission: paper-integrity check of every claim against the repository ([[plan]], Programme verification and validation matrix, row TP6); re-check whether the RAISE guidance papers have appeared in Research Synthesis Methods and whether the varlet99 prototype has evolved (knowledge/verification-novelty.md, sections "RAISE" and "What could not be verified").
+- Before submission: paper-integrity check of every claim against the repository ([[plan]], Programme verification and validation matrix, row TP6); re-check whether the RAISE guidance papers have appeared in Research Synthesis Methods and whether the varlet99 prototype has evolved (knowledge/verification.md, sections "2.3 (Novelty verification, related work)" and "2.3 (Novelty verification)").
 
 ## Working title and format
 
@@ -48,12 +48,12 @@ Bullets:
 
 Claims inventory:
 
-- "326 papers, dual human and LLM assessment from the start" and "303 human records (142 Include, 161 Exclude), 326 LLM records": knowledge/verification-empirical-core.md, section "Recomputation, Benchmark core"; knowledge/conformance-audit.md, section "Papers without a human decision".
+- "326 papers, dual human and LLM assessment from the start" and "303 human records (142 Include, 161 Exclude), 326 LLM records": knowledge/verification.md, section "1.1 (The benchmark core)"; knowledge/verification.md, section "2.1 (the round-1 record, Screening)".
 - "Round one rendered retrospectively and honestly, with named gaps; no conformance claim": [[plan]], section "Stage R" (shaping decisions and claim line).
-- C1 and C2 as "first tool documented to", with hedge and survey date: knowledge/verification-novelty.md, section "Consequences for phrasing the contribution", items 1 and 2.
-- C3 "unpublished framing as of 2026-06-09": knowledge/verification-novelty.md, section "Retrospective PRISMA rendering".
-- C4 framing (divergence, not error): knowledge/verification-empirical-core.md, section "Divergence is not proof of LLM error, and the data shows it".
-- "PRISMA-trAIce and RAISE barely operationalized as tools" and "vendors respond with compliance documentation rather than conformant report generation": knowledge/verification-novelty.md, section "Operationalization of the standards as tools" (conclusion paragraph).
+- C1 and C2 as "first tool documented to", with hedge and survey date: knowledge/verification.md, section "2.3 (Novelty verification, the defensible contribution)", items 1 and 2.
+- C3 "unpublished framing as of 2026-06-09": knowledge/verification.md, section "2.3 (Novelty verification, the defensible contribution)".
+- C4 framing (divergence, not error): knowledge/verification.md, section "1.6 (The human track, one consolidated annotation)".
+- "PRISMA-trAIce and RAISE barely operationalized as tools" and "vendors respond with compliance documentation rather than conformant report generation": knowledge/verification.md, section "2.3 (Novelty verification)" (conclusion paragraph).
 
 ## 2. Background: reporting standards for AI-assisted evidence synthesis (500 to 650 words)
 
@@ -68,8 +68,8 @@ Claims inventory:
 
 - All bibliographic facts on PRISMA-trAIce (authors, venue, DOI 10.2196/80247, 17 items, proposal status, governance, trAIce item R1 description): knowledge/verification.md (Part 2.3, novelty verification).
 - "5 citing papers on Semantic Scholar as of 2026-06-09; none implements the checklist as software": knowledge/verification.md (Part 2.3, novelty verification; citation uptake).
-- All bibliographic facts on RAISE (position statement co-publication, Table 1 elements, OSF guidance status and revision date): knowledge/verification-novelty.md, section "Verified bibliographic status of the standards, RAISE".
-- "Vendors respond with compliance documentation, not conformant report generation": knowledge/verification-novelty.md, section "Operationalization of the standards as tools" (conclusion) and "Tool landscape" (Covidence and Nested Knowledge rows).
+- All bibliographic facts on RAISE (position statement co-publication, Table 1 elements, OSF guidance status and revision date): knowledge/verification.md, section "2.3 (Novelty verification, related work)".
+- "Vendors respond with compliance documentation, not conformant report generation": knowledge/verification.md, section "2.3 (Novelty verification)" (conclusion) and section "2.3 (Novelty verification, Tool landscape)" (Covidence and Nested Knowledge rows).
 
 ## 3. Related work: tools and prior art (600 to 750 words)
 
@@ -85,14 +85,14 @@ Bullets:
 
 Claims inventory:
 
-- Prior-art characterizations of EPPI-Reviewer, Nested Knowledge, DistillerSR (criterion ii yes) and the non-claim consequence: knowledge/verification-novelty.md, sections "Tool landscape" and "Consequences for phrasing the contribution" (first paragraph).
-- Covidence partial status (automated step in flow, static templates, RAISE alignment): knowledge/verification-novelty.md, section "Tool landscape", Covidence row.
-- Elicit "claimed, not documented": knowledge/verification-novelty.md, section "Tool landscape", Elicit row, and section "What could not be verified".
-- varlet99 prototype facts (creation date, scope, undocumented properties): knowledge/verification-novelty.md, sections "Operationalization of the standards as tools" and "What could not be verified".
-- AIscreenR as methodological prior art: knowledge/verification-novelty.md, section "Related work the paper must cite", item 8.
-- AITDI as adjacent retrospective assessment: knowledge/verification-novelty.md, sections "Operationalization of the standards as tools" and "Retrospective PRISMA rendering".
-- "No surveyed tool emits the trAIce item R1 split or session-derived disclosure": knowledge/verification-novelty.md, section "Verdict".
-- Adapted-flow-diagram genre: knowledge/verification-novelty.md, section "Retrospective PRISMA rendering".
+- Prior-art characterizations of EPPI-Reviewer, Nested Knowledge, DistillerSR (criterion ii yes) and the non-claim consequence: knowledge/verification.md, sections "2.3 (Novelty verification, Tool landscape)" and "2.3 (Novelty verification, the defensible contribution)" (first paragraph).
+- Covidence partial status (automated step in flow, static templates, RAISE alignment): knowledge/verification.md, section "2.3 (Novelty verification, Tool landscape)", Covidence row.
+- Elicit "claimed, not documented": knowledge/verification.md, section "2.3 (Novelty verification, Tool landscape)", Elicit row, and section "2.3 (Novelty verification)".
+- varlet99 prototype facts (creation date, scope, undocumented properties): knowledge/verification.md, section "2.3 (Novelty verification)".
+- AIscreenR as methodological prior art: knowledge/verification.md, section "2.3 (Novelty verification, related work)", item 8.
+- AITDI as adjacent retrospective assessment: knowledge/verification.md, sections "2.3 (Novelty verification)" and "2.3 (Novelty verification, the defensible contribution)".
+- "No surveyed tool emits the trAIce item R1 split or session-derived disclosure": knowledge/verification.md, section "2.3 (Novelty verification)".
+- Adapted-flow-diagram genre: knowledge/verification.md, section "2.3 (Novelty verification, the defensible contribution)".
 
 ## 4. Round one: the conducted review and its workflow (700 to 900 words)
 
@@ -106,13 +106,13 @@ Bullets:
 
 Claims inventory:
 
-- Source_Tool distribution and 303-record count: knowledge/conformance-audit.md, section "Papers without a human decision" (drift paragraph; the CSV is named as ground truth).
-- Non-auditable acquisition claims and the 34 corroborated records (15 Claude, 3 Gemini, 6 OpenAI, 10 Perplexity): knowledge/conformance-audit.md, section "Non-auditable acquisition steps".
-- No reviewer column, consolidated annotation, corrections by a second person: knowledge/conformance-audit.md, section "Per-record reviewer identity absent"; knowledge/verification-empirical-core.md, section "The human track is one consolidated annotation, not a measured standard".
-- Deduplication inside screening; 67 Duplicate exclusions; 95 records flagged as duplicates in papers_full.csv: knowledge/conformance-audit.md, section "Vocabulary and hygiene findings".
-- Model snapshot, max_tokens, unrecorded temperature: knowledge/conformance-audit.md, section "Prompt and parameter record incomplete".
+- Source_Tool distribution and 303-record count: knowledge/verification.md, section "2.1 (the round-1 record, Screening)" (drift paragraph; the CSV is named as ground truth).
+- Non-auditable acquisition claims and the 34 corroborated records (15 Claude, 3 Gemini, 6 OpenAI, 10 Perplexity): knowledge/verification.md, section "2.2 (Conformance tally and findings)".
+- No reviewer column, consolidated annotation, corrections by a second person: knowledge/verification.md, section "2.2 (Conformance tally and findings)"; knowledge/verification.md, section "1.6 (The human track, one consolidated annotation)".
+- Deduplication inside screening; 67 Duplicate exclusions; 95 records flagged as duplicates in papers_full.csv: knowledge/verification.md, section "2.1 (the round-1 record, Identification)".
+- Model snapshot, max_tokens, unrecorded temperature: knowledge/verification.md, section "2.2 (Conformance tally and findings)".
 - Versioned assessment prompt (the 10K assessment prompt, version history v1.0 to v2.1, embedded in `benchmark/scripts/run_llm_assessment.py`): prompts/CHANGELOG.md, sections "Prompt-Inventar" and "10K Assessment".
-- Pipeline counts (257/69/252/249) and text availability (236/75/15): knowledge/conformance-audit.md, section "Papers without any text".
+- Pipeline counts (257/69/252/249) and text availability (236/75/15): knowledge/verification.md, section "2.1 (the round-1 record, Included)".
 
 ## 5. The instrument: PRISM (600 to 800 words)
 
@@ -129,9 +129,9 @@ Bullets:
 Claims inventory:
 
 - Excel-Vorstufe design position and bridge scope: [[plan]], sections "Zielbild" (point 2) and "P3: Excel-to-PRISM bridge".
-- Import-validation rationale (Other, 7 empty cells): knowledge/conformance-audit.md, section "Vocabulary and hygiene findings".
-- C1/C2 phrasing ("first screening tool documented to emit", "first tool documented to auto-generate", with hedge): knowledge/verification-novelty.md, section "Consequences for phrasing the contribution", items 1 to 3.
-- "Numbers in prose drifted, derived counts were exact" (305 versus 303, 75 versus 74, 292 versus 291): knowledge/conformance-audit.md, section "What the infrastructure must record from the start" (fifth point) and "Papers without a human decision".
+- Import-validation rationale (Other, 7 empty cells): knowledge/verification.md, section "2.2 (Conformance tally and findings)".
+- C1/C2 phrasing ("first screening tool documented to emit", "first tool documented to auto-generate", with hedge): knowledge/verification.md, section "2.3 (Novelty verification, the defensible contribution)", items 1 to 3.
+- "Numbers in prose drifted, derived counts were exact" (305 versus 303, 75 versus 74, 292 versus 291): knowledge/verification.md, section "2.2 (Conformance tally and findings)" (fifth point) and "Papers without a human decision".
 - Content-only agreement in the panel as tool implication: [[plan]], section "V: Claim verification" (consequence ledger, tool implication sentence).
 
 ## 6. Rendering round one retrospectively: the conformance audit (600 to 800 words)
@@ -147,13 +147,13 @@ Bullets:
 
 Claims inventory:
 
-- Audit method and conformance map: knowledge/conformance-audit.md, opening section and section "Tally".
-- PRISMA 2020 tally (10/7/10) with item groups: knowledge/conformance-audit.md, section "Tally".
-- trAIce tally (13/3/1) and the explanation of the stronger profile: knowledge/conformance-audit.md, section "Tally".
-- M1 missing and non-reconstructable by definition: knowledge/conformance-audit.md, section "No pre-registered protocol".
-- 34 papers without human decision; 292 versus 291 open discrepancy: knowledge/conformance-audit.md, section "Papers without a human decision"; knowledge/verification-empirical-core.md, section "Claim g: the merge-bug fix" (the discrepancy restated as open).
-- 15 papers without any text: knowledge/conformance-audit.md, section "Papers without any text".
-- Prompt and parameter gaps: knowledge/conformance-audit.md, section "Prompt and parameter record incomplete".
+- Audit method and conformance map: knowledge/verification.md, opening section and section "2.2 (Conformance tally and findings)".
+- PRISMA 2020 tally (10/7/10) with item groups: knowledge/verification.md, section "2.2 (Conformance tally and findings)".
+- trAIce tally (13/3/1) and the explanation of the stronger profile: knowledge/verification.md, section "2.2 (Conformance tally and findings)".
+- M1 missing and non-reconstructable by definition: knowledge/verification.md, section "2.1 (the round-1 record, Protocol and pre-specification)".
+- 34 papers without human decision; 292 versus 291 open discrepancy: knowledge/verification.md, section "2.1 (the round-1 record, Screening)"; knowledge/verification.md, section "1.10 (Execution follow-up)" (the discrepancy restated as open).
+- 15 papers without any text: knowledge/verification.md, section "2.2 (Conformance tally and findings)".
+- Prompt and parameter gaps: knowledge/verification.md, section "2.2 (Conformance tally and findings)".
 - "Honest retrospective record, no conformance claim": [[plan]], section "Stage R" (claim line).
 
 ## 7. Empirical core: the decomposed divergence finding (1100 to 1400 words)
@@ -172,20 +172,20 @@ Bullets:
 
 Claims inventory (all numbers in this section):
 
-- Pairing, matrix, include rates, po, kappa: knowledge/verification-empirical-core.md, section "Recomputation, Benchmark core (Haiku 4.5, abstract input)".
+- Pairing, matrix, include rates, po, kappa: knowledge/verification.md, section "1.1 (The benchmark core)".
 - PABAK 0.024, kappa-max 0.508, prevalence and bias index (0.175, 0.254): same section (rows marked new).
-- Dropping the prevalence-artifact framing: knowledge/verification-empirical-core.md, section "How to report kappa 0.056 so it cannot be dismissed".
-- Reason split of the divergence cell (50/8/14, plus 28 Not relevant topic and small residues) and of the both-exclude cell: knowledge/verification-empirical-core.md, section "Sensitivity: content-only benchmark".
+- Dropping the prevalence-artifact framing: knowledge/verification.md, section "1.5 (The defensible metric set)".
+- Reason split of the divergence cell (50/8/14, plus 28 Not relevant topic and small residues) and of the both-exclude cell: knowledge/verification.md, section "1.4 (Decomposition, task artifacts versus content)".
 - Content-only table (n=199; cells; kappas 0.194 / 0.087 / 0.309 / 0.256; PABAKs) and the milder-cut variant (n=216, kappa 0.142): same section.
-- Defensible phrasing and the worked duplicate example: knowledge/verification-empirical-core.md, section "Divergence is not proof of LLM error, and the data shows it".
-- Category kappas (all ten values, range, subsample n=234 to 238, the `?` cell quirk if mentioned): knowledge/verification-empirical-core.md, section "Category kappas (claim e)".
-- 2x2 condition table (include rates, kappas) and raw marginals: knowledge/verification-empirical-core.md, section "2x2 experiment (claim f)".
+- Defensible phrasing and the worked duplicate example: knowledge/verification.md, section "1.4 (Decomposition, task artifacts versus content)".
+- Category kappas (all ten values, range, subsample n=234 to 238, the `?` cell quirk if mentioned): knowledge/verification.md, section "1.2 (Category agreement)".
+- 2x2 condition table (include rates, kappas) and raw marginals: knowledge/verification.md, section "1.3 (The model-by-input experiment)".
 - KD mixed-condition fact (209 of 326): same section (design fact paragraph).
-- KD include-rate effect (17.2 and 8.9 points on the headline; content-only over-inclusion against the human track above 20 points in both models): knowledge/verification-empirical-core.md, sections "Limits of the 2x2" and "Divergence is not proof of LLM error, and the data shows it".
-- Ranking flip and identical raw agreement count (153/291) behind the Sonnet kappa difference: knowledge/verification-empirical-core.md, section "Sensitivity: content-only benchmark".
-- Exploratory status of the 2x2 (one run per cell, no dispersion, unrecorded decoding): knowledge/verification-empirical-core.md, section "Limits of the 2x2"; knowledge/conformance-audit.md, section "Prompt and parameter record incomplete".
-- Fairness degradation values and yes-rates: knowledge/verification-empirical-core.md, sections "2x2 experiment (claim f)" and "Limits of the 2x2".
-- Human-track framing and external reference kappas: knowledge/verification-empirical-core.md, section "The human track is one consolidated annotation, not a measured standard".
+- KD include-rate effect (17.2 and 8.9 points on the headline; content-only over-inclusion against the human track above 20 points in both models): knowledge/verification.md, sections "1.3 (The model-by-input experiment)" and "1.4 (Decomposition, task artifacts versus content)".
+- Ranking flip and identical raw agreement count (153/291) behind the Sonnet kappa difference: knowledge/verification.md, section "1.4 (Decomposition, task artifacts versus content)".
+- Exploratory status of the 2x2 (one run per cell, no dispersion, unrecorded decoding): knowledge/verification.md, section "1.3 (The model-by-input experiment)"; knowledge/verification.md, section "2.2 (Conformance tally and findings)".
+- Fairness degradation values and yes-rates: knowledge/verification.md, section "1.3 (The model-by-input experiment)".
+- Human-track framing and external reference kappas: knowledge/verification.md, section "1.6 (The human track, one consolidated annotation)".
 - Re-pointing note: when `knowledge/analysis-divergence.md` (TP3) is committed, every entry above cites it instead; the analysis document must reproduce these values from committed script output before the paper draft freezes. Source for this process: [[plan]], section "TP3 work plan".
 
 ## 8. Round two: the enforced prospective protocol (550 to 700 words)
@@ -203,7 +203,7 @@ Bullets:
 Claims inventory:
 
 - All bullets in this section are design statements, licensed by [[plan]], sections "Stage B" (B1 to B3) and "R3: Interactive agent screening pass". No empirical numbers may appear in this section until the Stage B record bundle and the R3/R4 outputs exist in the repo; every future number cites the committed bundle files.
-- "Closes M1 prospectively": knowledge/conformance-audit.md, section "No pre-registered protocol" (the update as the opportunity to close it).
+- "Closes M1 prospectively": knowledge/verification.md, section "2.1 (the round-1 record, Protocol and pre-specification)" (the update as the opportunity to close it).
 
 ## 9. Discussion: what the infrastructure must record from the start (550 to 700 words)
 
@@ -217,11 +217,11 @@ Bullets:
 
 Claims inventory:
 
-- The five lessons and the repairable/unrepairable boundary: knowledge/conformance-audit.md, section "What the infrastructure must record from the start".
-- Post-hoc recovery ceiling (34 of 326): knowledge/conformance-audit.md, section "Non-auditable acquisition steps".
-- Contribution placement at report-artifact level and the established advisory-record pattern: knowledge/verification-novelty.md, sections "Verdict" and "Consequences for phrasing the contribution".
-- Proposal status hedge and short novelty window: knowledge/verification-novelty.md, section "Consequences for phrasing the contribution" (required hedges).
-- Decomposition requires recorded reasons (infrastructure-corrects-itself): knowledge/verification-empirical-core.md, section "Sensitivity: content-only benchmark"; [[plan]], section "TP3 work plan" (framing rules).
+- The five lessons and the repairable/unrepairable boundary: knowledge/verification.md, section "2.2 (Conformance tally and findings)".
+- Post-hoc recovery ceiling (34 of 326): knowledge/verification.md, section "2.2 (Conformance tally and findings)".
+- Contribution placement at report-artifact level and the established advisory-record pattern: knowledge/verification.md, sections "2.3 (Novelty verification)" and "2.3 (Novelty verification, the defensible contribution)".
+- Proposal status hedge and short novelty window: knowledge/verification.md, section "2.3 (Novelty verification, the defensible contribution)" (required hedges).
+- Decomposition requires recorded reasons (infrastructure-corrects-itself): knowledge/verification.md, section "1.4 (Decomposition, task artifacts versus content)"; [[plan]], section "TP3 work plan" (framing rules).
 - Reuse path: [[plan]], section "C3: Reuse extraction" (design statement, no execution claim before it happens).
 
 ## 10. Limitations (350 to 500 words)
@@ -237,12 +237,12 @@ Bullets:
 
 Claims inventory:
 
-- Missing inter-human baseline and its consequence: knowledge/verification-empirical-core.md, section "The human track is one consolidated annotation, not a measured standard".
-- 34 papers without human decision; 292 versus 291 discrepancy: knowledge/conformance-audit.md, section "Papers without a human decision".
-- Exploratory 2x2: knowledge/verification-empirical-core.md, section "Limits of the 2x2".
-- Proxy-written user stories and the falsified usage assumption: knowledge/user-stories.md, section "Validation status".
-- Standards status hedges: knowledge/verification-novelty.md, sections "Verified bibliographic status of the standards" and "Consequences for phrasing the contribution".
-- Survey coverage limits: knowledge/verification-novelty.md, section "What could not be verified".
+- Missing inter-human baseline and its consequence: knowledge/verification.md, section "1.6 (The human track, one consolidated annotation)".
+- 34 papers without human decision; 292 versus 291 discrepancy: knowledge/verification.md, section "2.1 (the round-1 record, Screening)".
+- Exploratory 2x2: knowledge/verification.md, section "1.3 (The model-by-input experiment)".
+- Proxy-written user stories and the in-tool-versus-Excel usage assumption settled by ADR-019: knowledge/specification.md, ADR-019; per-story validation status in knowledge/plan.md.
+- Standards status hedges: knowledge/verification.md, sections "2.3 (Novelty verification, related work)" and "2.3 (Novelty verification, the defensible contribution)".
+- Survey coverage limits: knowledge/verification.md, section "2.3 (Novelty verification)".
 
 ## 11. AI use disclosure (250 to 350 words)
 
@@ -255,8 +255,8 @@ Bullets:
 
 Claims inventory:
 
-- Disclosure generation from session data and author editing: [[plan]], section "B3: Reconciliation and the PRISMA record"; novelty phrasing for the generated disclosure: knowledge/verification-novelty.md, section "Consequences for phrasing the contribution", item 2.
-- Model snapshot, max_tokens, unrecorded temperature for round one: knowledge/conformance-audit.md, section "Prompt and parameter record incomplete".
+- Disclosure generation from session data and author editing: [[plan]], section "B3: Reconciliation and the PRISMA record"; novelty phrasing for the generated disclosure: knowledge/verification.md, section "2.3 (Novelty verification, the defensible contribution)", item 2.
+- Model snapshot, max_tokens, unrecorded temperature for round one: knowledge/verification.md, section "2.2 (Conformance tally and findings)".
 - Register rule (cost figures factual only): [[plan]], section "Zielbild" (narrative register).
 
 ## 12. Conclusion (150 to 250 words)
@@ -269,14 +269,14 @@ Bullets:
 
 Claims inventory:
 
-- "Lowest agreement on the contested categories" (Fairness, Gender at the bottom of the category range): knowledge/verification-empirical-core.md, section "Category kappas (claim e)".
+- "Lowest agreement on the contested categories" (Fairness, Gender at the bottom of the category range): knowledge/verification.md, section "1.2 (Category agreement)".
 - Two-round claim line: [[plan]], section "Stage R" (shaping decisions).
 
 ## Open dependencies before drafting can finish
 
 1. TP3 analysis document (`knowledge/analysis-divergence.md`) committed, with script-derived numbers; section 7 inventory re-pointed to it. Source: [[plan]], section "TP3 work plan".
-2. The 292-versus-291 pairing discrepancy resolved by the re-pairing script, or reported as open in the limitations with its current wording. Source: knowledge/conformance-audit.md, section "Papers without a human decision".
+2. The 292-versus-291 pairing discrepancy resolved by the re-pairing script, or reported as open in the limitations with its current wording. Source: knowledge/verification.md, section "2.1 (the round-1 record, Screening)".
 3. Stage R outputs (conformance map published, record page live) for figure F1 and F2 sources. Source: [[plan]], sections "R4" and "R5".
 4. Stage B execution for section 8 numbers and the generated methods/disclosure inputs; until then section 8 stays design-register. Source: [[plan]], section "Stage B".
 5. TP4 schema freeze if the paper reports the analysis fields of the update round. Source: [[plan]], section "TP4 work plan".
-6. Pre-submission re-checks: RAISE journal publication status, varlet99 prototype status, Semantic Scholar citation count refresh, paper-integrity check of the full text against the repository. Source: knowledge/verification-novelty.md, sections "RAISE" and "What could not be verified"; [[plan]], Programme verification and validation matrix, row TP6.
+6. Pre-submission re-checks: RAISE journal publication status, varlet99 prototype status, Semantic Scholar citation count refresh, paper-integrity check of the full text against the repository. Source: knowledge/verification.md, sections "2.3 (Novelty verification, related work)" and "2.3 (Novelty verification)"; [[plan]], Programme verification and validation matrix, row TP6.

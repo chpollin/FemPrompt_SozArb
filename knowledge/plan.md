@@ -181,7 +181,7 @@ Done when: all six scenarios protocolled, findings fixed or explicitly deferred.
 - One canonical number set (benchmark pairs, disagreements, confusion matrix, human decisions; the values in [[verification]]) applied across `README.md`, [[plan]], [[project]]; the superseded earlier figures survive only in journal and archive contexts.
 - [[plan]]: new header date and a tool milestone (the PRISM build), milestone plan extended past 4 May.
 - [[specification]]: superseded requirements (FR-03, FR-10, the placement of FR-05) marked inline instead of the trailing demotion paragraph; the v3 module descriptions pruned to v4 reality (genesis stays in [[journal]] and [[design]]).
-- `knowledge/README.md` and root `README.md` updated (tool section, plan row, costs).
+- `knowledge/INDEX.md` and root `README.md` updated (tool section, plan row, costs).
 
 Done when: searching the retired numbers hits only journal and archive contexts.
 

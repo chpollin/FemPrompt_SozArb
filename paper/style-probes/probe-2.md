@@ -13,10 +13,10 @@ generated-with: Claude Code
 method:
   name: Promptotyping
   url: https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin
-related: [outline, verification-empirical-core, verification-novelty]
+related: [outline, verification]
 ---
 
-Style probe for the follow-up paper (TP6, see [[outline]]). Register: methodological narrative, argument-led, the workflow told as a sequence of methodological decisions and corrections, first person plural, honest about failures. Venue models: Research Synthesis Methods, DHQ. All numbers licensed by knowledge/verification-empirical-core.md, knowledge/verification-novelty.md, and knowledge/conformance-audit.md; no efficiency or cost framing.
+Style probe for the follow-up paper (TP6, see [[outline]]). Register: methodological narrative, argument-led, the workflow told as a sequence of methodological decisions and corrections, first person plural, honest about failures. Venue models: Research Synthesis Methods, DHQ. All numbers licensed by knowledge/verification.md, knowledge/verification.md, and knowledge/verification.md; no efficiency or cost framing.
 
 ## Working title
 
@@ -34,6 +34,6 @@ The answer is the useful part of this paper. The retrospective rendering succeed
 
 ## Claims sources
 
-- 326 corpus papers, 291 paired decisions, kappa 0.056, PABAK 0.024, 72 of 108 (Duplicate, No full text, Wrong publication type), content-only n = 199 with include rates 68.3 and 67.3 percent and kappa 0.194, consolidated human annotation without per-record reviewer identity: knowledge/verification-empirical-core.md, sections "Recomputation, Benchmark core", "Sensitivity: content-only benchmark", "How to report kappa 0.056 so it cannot be dismissed", "The human track is one consolidated annotation, not a measured standard".
-- 34 of 326 records with corroborated search provenance; no pre-registered protocol; prompts not committed at run time: knowledge/conformance-audit.md, sections "Non-auditable acquisition steps" and "No pre-registered protocol".
-- PRISMA-trAIce (Holst et al. 2025) and RAISE position statement (Flemyng et al. 2025) as 2025 proposals; trAIce flow artifact and session-derived disclosure as the licensed contribution carriers: knowledge/verification-novelty.md, sections "Verified bibliographic status of the standards" and "Consequences for phrasing the contribution".
+- 326 corpus papers, 291 paired decisions, kappa 0.056, PABAK 0.024, 72 of 108 (Duplicate, No full text, Wrong publication type), content-only n = 199 with include rates 68.3 and 67.3 percent and kappa 0.194, consolidated human annotation without per-record reviewer identity: knowledge/verification.md, sections "1.1 (The benchmark core)", "1.4 (Decomposition, task artifacts versus content)", "1.5 (The defensible metric set)" and "1.6 (The human track, one consolidated annotation)".
+- 34 of 326 records with corroborated search provenance; no pre-registered protocol; prompts not committed at run time: knowledge/verification.md, sections "2.2 (Conformance tally and findings)" and "2.1 (the round-1 record, Protocol and pre-specification)".
+- PRISMA-trAIce (Holst et al. 2025) and RAISE position statement (Flemyng et al. 2025) as 2025 proposals; trAIce flow artifact and session-derived disclosure as the licensed contribution carriers: knowledge/verification.md, sections "2.3 (Novelty verification, related work)" and "2.3 (Novelty verification, the defensible contribution)".
