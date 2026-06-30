@@ -44,11 +44,11 @@ const CAT_DEFS = {
     'Prompting': 'Gestaltung, Engineering oder Untersuchung von Prompts als Schnittstelle zu generativen Modellen.',
     'KI_Sonstige': 'Andere KI/ML-Verfahren: Klassifikatoren, Empfehlungssysteme, Computer Vision.',
     'Soziale_Arbeit': 'Soziale Arbeit als Profession, Praxis, Ausbildung oder Institution.',
-    'Bias_Ungleichheit': 'Bias, Ungleichheit oder Diskriminierung, durch soziotechnische Systeme erzeugt oder verstaerkt.',
-    'Gender': 'Gender als analytische Kategorie: geschlechtsbezogene Effekte, Repraesentation, Identitaet.',
-    'Diversitaet': 'Diversitaet jenseits von Gender: Race, Klasse, Behinderung, Migration.',
+    'Bias_Ungleichheit': 'Bias, Ungleichheit oder Diskriminierung, durch soziotechnische Systeme erzeugt oder verstärkt.',
+    'Gender': 'Gender als analytische Kategorie: geschlechtsbezogene Effekte, Repräsentation, Identität.',
+    'Diversitaet': 'Diversität jenseits von Gender: Race, Klasse, Behinderung, Migration.',
     'Feministisch': 'Explizit feministische Theorie, Epistemologie oder Methodologie.',
-    'Fairness': 'Fairness, Gerechtigkeit oder Equity als normatives Kriterium fuer Systeme.'
+    'Fairness': 'Fairness, Gerechtigkeit oder Equity als normatives Kriterium für Systeme.'
 };
 
 const EXCLUSION_REASONS = ['Duplicate', 'Not_relevant_topic', 'Wrong_publication_type', 'No_full_text', 'Language'];
@@ -108,6 +108,8 @@ let docHtmlAi = '';            // rendered AI-extraction layer (machine knowledg
 let docMarks = [], docMarkIdx = 0;
 let pendingInText = null;      // in-text query to apply once the document has loaded
 let pinTerm = '', pinSnippet = '', pinOrigin = 'human'; // pinOrigin = source layer of the staged snippet
+let pinReturnFocus = null, pinKeyHandler = null; // pin-menu dialog focus restore + keydown trap
+let focusReadingOnRender = false; // move focus to the paper heading after a paper switch (a11y)
 
 // the in-progress (pre-commit) decision for the open paper
 let work = { pid: null, cats: {}, override: false, reason: null, evidence: {} };
@@ -192,7 +194,7 @@ function commitMessage() {
     const lines = ['screening: ' + ids.length + ' Paper bewertet (' + incl + ' Include, ' + excl + ' Exclude)', ''];
     lines.push('Reviewer-Datei: ' + state.reviewer + '.json');
     const rk = Object.keys(reasons).sort();
-    if (rk.length) lines.push('Ausschlussgruende: ' + rk.map(function(r) { return r.replace(/_/g, ' ') + ' ' + reasons[r]; }).join(', '));
+    if (rk.length) lines.push('Ausschlussgründe: ' + rk.map(function(r) { return r.replace(/_/g, ' ') + ' ' + reasons[r]; }).join(', '));
     return lines.join('\n');
 }
 
@@ -385,6 +387,7 @@ window.initializePrisma = function() {
     papers = (EC && EC.getAllPapers) ? (EC.getAllPapers() || []) : [];
     loadLocal();
     normalizeSurface();
+    state.index = firstEntryIndex(); // O4: open on a screenable paper, not on boilerplate
     loadCorpusIndex(); // background: ready by the time the user runs a corpus search
     renderShell();
     showSurface(state.surface || 'screening');
@@ -413,7 +416,7 @@ function renderShell() {
         '<div class="pt-overlay-backdrop"></div>' +
         '<div class="pt-overlay-panel" role="dialog" aria-modal="true" aria-labelledby="pt-overlay-title" tabindex="-1">' +
         '<div class="pt-overlay-head"><span class="pt-overlay-title" id="pt-overlay-title"></span>' +
-        '<button class="pt-overlay-x" id="pt-overlay-x" type="button" aria-label="Schliessen">&times;</button></div>' +
+        '<button class="pt-overlay-x" id="pt-overlay-x" type="button" aria-label="Schließen">&times;</button></div>' +
         '<div class="pt-overlay-body" id="pt-overlay-body"></div></div></div>';
     root.innerHTML = html;
     root.querySelector('.pt-tool-record').addEventListener('click', function() { openPanel('report'); });
@@ -506,11 +509,27 @@ function divergent(h, a) { return h && a && h.decision !== a.decision; }
 
 function abstractQuality(p) {
     let a = (p.abstract || '').trim();
-    if (!a) return { ok: false, note: 'Kein Abstract vorhanden, bitte Volltext (Wissensdokument) oder Quelle pruefen.' };
+    if (!a) return { ok: false, note: 'Kein Abstract vorhanden, bitte Volltext (Wissensdokument) oder Quelle prüfen.' };
     if (/National Bureau of Economic Research|Founded in 1920, the NBER|private, non-profit, non-partisan organization/i.test(a))
         return { ok: false, note: 'Wirkt wie Verlags-Boilerplate (NBER), nicht das Paper-Abstract.' };
-    if (a.length < 120) return { ok: false, note: 'Sehr kurzes Abstract, evtl. unvollstaendig.' };
+    if (a.length < 120) return { ok: false, note: 'Sehr kurzes Abstract, evtl. unvollständig.' };
     return { ok: true };
+}
+
+// A paper is screenable when there is substantive text to ground a decision on:
+// a served knowledge document, or an abstract that is not boilerplate. The tool
+// opens on the first such (unscreened) paper rather than on the corpus's first
+// record when that is publisher boilerplate (browser-agent O4 finding: default
+// entry landed on paper 1, an NBER boilerplate with no usable text).
+function isScreenable(p) {
+    return !!(p && (p.knowledge_doc || abstractQuality(p).ok));
+}
+
+function firstEntryIndex() {
+    const d = curDec();
+    for (let i = 0; i < papers.length; i++) { if (!d[papers[i].id] && isScreenable(papers[i])) return i; }
+    for (let i = 0; i < papers.length; i++) { if (isScreenable(papers[i])) return i; }
+    return 0;
 }
 
 // Counts human Belege only; AI-origin evidence (pinned from the KI-Extraktion
@@ -566,7 +585,7 @@ function renderScreening() {
     let html = '<div class="pt-ws-bar">';
     html += '<span class="pt-ws-pos">Paper ' + (state.index + 1) + ' / ' + papers.length + '</span>';
     html += '<span class="pt-ws-progressbar"><span class="pt-ws-progressfill" style="width:' + pct + '%"></span></span>';
-    html += '<span class="pt-ws-prog mono">' + screened + ' / ' + papers.length + ' &middot; ' + EC.escapeHtml(state.reviewer) + '</span>';
+    html += '<span class="pt-ws-prog mono">' + screened + ' / ' + papers.length + ' Paper &middot; Reviewer ' + EC.escapeHtml(state.reviewer) + '</span>';
     html += '</div>';
 
     html += '<div class="pt-ws pt-ws-screen">';
@@ -579,6 +598,14 @@ function renderScreening() {
     el.innerHTML = html;
     attachScreening(p, dec);
     loadReadingInto(p);
+
+    // keyboard flow: after a paper switch (corpus pick, next-open), move focus to the
+    // paper heading so the reader does not lose its place to document body (a11y).
+    if (focusReadingOnRender) {
+        focusReadingOnRender = false;
+        const title = document.getElementById('pt-paper-title');
+        if (title && typeof title.focus === 'function') title.focus();
+    }
 }
 
 // ---- left: corpus navigator with full-text search ----
@@ -586,10 +613,16 @@ function corpusHtml() {
     let d = curDec();
     let h = '<aside class="pt-nav"><div class="pt-nav-head"><span class="pt-nav-title-main">Korpus</span>' +
         '<span class="pt-tag-mono">' + Object.keys(d).length + ' / ' + papers.length + '</span></div>';
-    h += '<div class="pt-corpus-search"><input id="pt-corpus-q" placeholder="Volltext-Suche ueber alle Paper" value="' + EC.escapeHtml(corpusQuery) + '">' +
+    h += '<div class="pt-corpus-search"><input id="pt-corpus-q" placeholder="Volltext-Suche über alle Paper" value="' + EC.escapeHtml(corpusQuery) + '">' +
         '<span class="pt-corpus-hint" id="pt-corpus-hint"></span></div>';
     h += '<div class="pt-nav-list" id="pt-corpus-list">' + corpusListHtml() + '</div></aside>';
     return h;
+}
+
+// Text equivalent for the colour-only status dot in the corpus list (a screen reader
+// otherwise hears nothing for the decision state), browser-agent a11y finding.
+function statusLabel(st) {
+    return st === 'include' ? 'eingeschlossen' : st === 'exclude' ? 'ausgeschlossen' : 'offen';
 }
 
 function corpusListHtml() {
@@ -597,13 +630,13 @@ function corpusListHtml() {
     let q = corpusQuery.trim().toLowerCase();
     let rows = papers, match = null;
     if (q) {
-        if (!corpusIndex) return '<p class="pt-muted pt-corpus-empty">Such-Index laedt…</p>';
+        if (!corpusIndex) return '<p class="pt-muted pt-corpus-empty">Such-Index lädt…</p>';
         match = {};
         rows = papers.filter(function(p) {
             let e = corpusIndex[p.id]; if (!e || !e.x) return false;
             let c = countOcc(e.x, q); if (c) { match[p.id] = c; return true; } return false;
         });
-        if (!rows.length) return '<p class="pt-muted pt-corpus-empty">Keine Treffer fuer &bdquo;' + EC.escapeHtml(corpusQuery) + '&ldquo;.</p>';
+        if (!rows.length) return '<p class="pt-muted pt-corpus-empty">Keine Treffer für &bdquo;' + EC.escapeHtml(corpusQuery) + '&ldquo;.</p>';
     }
     return rows.map(function(p) {
         let i = papers.indexOf(p);
@@ -611,7 +644,8 @@ function corpusListHtml() {
         let st = rec ? rec.decision.toLowerCase() : 'none';
         const badge = match ? '<span class="pt-hit-badge mono">' + match[p.id] + '</span>' : '';
         return '<button class="pt-nav-item' + (i === state.index ? ' active' : '') + '" data-i="' + i + '">' +
-            '<span class="pt-nav-dot pt-dot-' + st + '"></span>' +
+            '<span class="pt-nav-dot pt-dot-' + st + '" aria-hidden="true"></span>' +
+            '<span class="pt-sr-only">' + statusLabel(st) + '</span>' +
             '<span class="pt-nav-text"><span class="pt-nav-t">' + EC.escapeHtml(p.title || '(ohne Titel)') + '</span>' +
             '<span class="pt-nav-m mono">' + EC.escapeHtml(p.author_year || p.id) + '</span></span>' + badge + '</button>';
     }).join('');
@@ -635,6 +669,7 @@ function bindCorpusItems() {
         btn.addEventListener('click', function() {
             state.index = parseInt(btn.dataset.i, 10);
             if (corpusQuery.trim()) pendingInText = corpusQuery.trim(); // carry the term into the open paper
+            focusReadingOnRender = true;
             renderScreening();
         });
     });
@@ -651,7 +686,7 @@ function readingShellHtml(p, dec) {
     else h += '<span class="pt-pill pt-pill-warn">nur Abstract</span>';
     if (dec) h += '<span class="pt-pill pt-pill-human pt-pill-right">erfasst</span>';
     h += '</div>';
-    h += '<h1 class="pt-paper-title">' + EC.escapeHtml(p.title || '(ohne Titel)') + '</h1>';
+    h += '<h1 class="pt-paper-title" id="pt-paper-title" tabindex="-1">' + EC.escapeHtml(p.title || '(ohne Titel)') + '</h1>';
     h += '<div class="pt-paper-authors">' + EC.escapeHtml(p.author_year || p.authors || '') +
         (p.journal ? ' &middot; <span class="pt-muted">' + EC.escapeHtml(p.journal) + '</span>' : '') + '</div>';
     if (!aq.ok && !p.knowledge_doc) h += '<div class="pt-aq-warn">Achtung: ' + EC.escapeHtml(aq.note) + '</div>';
@@ -661,15 +696,15 @@ function readingShellHtml(p, dec) {
         '<button class="pt-layer-btn" data-mode="ai">KI-Extraktion</button>' +
         '</div>';
     h += '<div class="pt-intext-bar">' +
-        '<input id="pt-intext" placeholder="Im Text suchen (Enter = naechster Treffer)">' +
+        '<input id="pt-intext" placeholder="Im Text suchen (Enter = nächster Treffer)">' +
         '<span class="pt-tag-mono" id="pt-intext-count"></span>' +
         '<button class="pt-intext-nav" id="pt-intext-prev" title="vorheriger Treffer">&lsaquo;</button>' +
-        '<button class="pt-intext-nav" id="pt-intext-next" title="naechster Treffer">&rsaquo;</button>' +
+        '<button class="pt-intext-nav" id="pt-intext-next" title="nächster Treffer">&rsaquo;</button>' +
         '<button class="pt-btn pt-pin-hit" id="pt-pin-hit" disabled title="Aktuellen Treffer als Beleg anheften">Treffer anheften</button>' +
         '</div>';
     h += '<p class="pt-read-help">Text markieren und als Beleg an eine Kategorie anheften, oder einen Treffer der Suche anheften.</p>';
     h += '<div class="pt-layer-band" id="pt-layer-band" hidden>KI-Extraktion, nicht der Originaltext. Belege von hier gelten als KI und gehen nicht in den bindenden Record ein.</div>';
-    h += '<div class="pt-doc" id="pt-doc"><p class="pt-muted">Volltext laedt…</p></div>';
+    h += '<div class="pt-doc" id="pt-doc"><p class="pt-muted">Volltext lädt…</p></div>';
     h += '</div></div>';
     return h;
 }
@@ -705,7 +740,9 @@ function activeLayerHtml() { return state.readMode === 'ai' ? docHtmlAi : docHtm
 function paintActiveLayer() {
     let d = document.getElementById('pt-doc'); if (!d) return;
     docHtmlCurrent = activeLayerHtml();
-    d.innerHTML = docHtmlCurrent || '<p class="pt-muted">Kein Volltext und kein Abstract vorhanden. Quelle pruefen.</p>';
+    d.innerHTML = docHtmlCurrent || '<div class="pt-notext"><strong>Kein lesbarer Text.</strong> ' +
+        'Für dieses Paper liegt weder Volltext noch Abstract vor. Eine am Text belegbare Bewertung ist hier nicht möglich; ' +
+        'Quelle prüfen oder als No full text ausschließen.</div>';
     const band = document.getElementById('pt-layer-band');
     if (band) band.hidden = !(state.readMode === 'ai' && docHtmlAi);
 }
@@ -817,7 +854,7 @@ function assessInnerHtml(p, dec) {
     h += '<p class="pt-assess-hint">Markiere jede Kategorie, die du am Text belegen kannst, oder hefte einen Beleg aus dem Text an.</p>';
     let seed = seedDecision(p);
     if (seed) h += '<div class="pt-seed-ref">Seed-Bewertung (Expert:innen): <strong class="pt-dec-' +
-        seed.decision.toLowerCase() + '">' + seed.decision + '</strong>. Du entscheidest unabhaengig.</div>';
+        seed.decision.toLowerCase() + '">' + seed.decision + '</strong>. Du entscheidest unabhängig.</div>';
     h += dimHtml('Gegenstand', TECH_CATS, cats, false);
     h += dimHtml('Perspektive', SOCIAL_CATS, cats, false);
     h += evidenceListHtml(work.evidence, false);
@@ -826,7 +863,8 @@ function assessInnerHtml(p, dec) {
     h += '<div class="pt-reason-block" id="pt-reason-block" style="display:' + (showReason ? 'block' : 'none') + ';">';
     h += '<div class="pt-tag-mono pt-reason-label">Ausschlussgrund &middot; erforderlich</div><div class="pt-reason-chips">';
     EXCLUSION_REASONS.forEach(function(r) {
-        h += '<button class="pt-reason-chip' + (work.reason === r ? ' sel' : '') + '" data-reason="' + r + '">' + r.replace(/_/g, ' ') + '</button>';
+        h += '<button class="pt-reason-chip' + (work.reason === r ? ' sel' : '') + '" data-reason="' + r + '"' +
+            ' aria-pressed="' + (work.reason === r ? 'true' : 'false') + '">' + r.replace(/_/g, ' ') + '</button>';
     });
     h += '</div></div>';
     h += '<div class="pt-actions">';
@@ -848,8 +886,8 @@ function assessLockedHtml(p, dec) {
     h += dimHtml('Perspektive', SOCIAL_CATS, cats, true);
     h += evidenceListHtml(dec.evidence || {}, true);
     h += '<div class="pt-actions">';
-    h += '<button class="pt-revise-btn" id="pt-revise">Ueberarbeiten</button><span class="pt-spacer"></span>';
-    h += '<button class="pt-next-btn" id="pt-next">' + (state.index < papers.length - 1 ? 'Naechstes offen' : 'Zum ersten offenen') + ' &rarr;</button>';
+    h += '<button class="pt-revise-btn" id="pt-revise">Überarbeiten</button><span class="pt-spacer"></span>';
+    h += '<button class="pt-next-btn" id="pt-next">' + (state.index < papers.length - 1 ? 'Nächstes offen' : 'Zum ersten offenen') + ' &rarr;</button>';
     h += '</div>';
     h += aiCollapsedHtml(p);
     h += '</div>';
@@ -866,17 +904,23 @@ function dimHtml(label, keys, cats, locked) {
     return h;
 }
 
+// The chip's accessible name is just its visible label: the internal slug and the
+// definition are decorative (slug in the hover tip, definition carried as the button's
+// description via title), so a screen reader announces "AI Literacies, eingeschaltet",
+// not the slug and full definition (browser-agent a11y finding, 2026-06-30).
 function chipHtml(cat, on, locked) {
-    return '<button class="pt-chip' + (on ? ' on' : '') + '" data-cat="' + cat + '"' + (locked ? ' disabled' : '') + '>' +
-        '<span class="pt-chip-box"></span>' + EC.escapeHtml(CAT_LABELS[cat]) +
-        '<span class="pt-chip-tip"><b class="mono">' + cat + '</b><span>' + EC.escapeHtml(CAT_DEFS[cat] || '') + '</span></span></button>';
+    return '<button class="pt-chip' + (on ? ' on' : '') + '" data-cat="' + cat + '"' +
+        ' aria-pressed="' + (on ? 'true' : 'false') + '"' +
+        ' title="' + EC.escapeHtml(CAT_DEFS[cat] || '') + '"' + (locked ? ' disabled' : '') + '>' +
+        '<span class="pt-chip-box" aria-hidden="true"></span>' + EC.escapeHtml(CAT_LABELS[cat]) +
+        '<span class="pt-chip-tip" aria-hidden="true"><b class="mono">' + cat + '</b><span>' + EC.escapeHtml(CAT_DEFS[cat] || '') + '</span></span></button>';
 }
 
 function evidenceListHtml(evidence, locked) {
     let cats = ALL_CATS.filter(function(c) { return (evidence[c] || []).length; });
     if (!cats.length) {
         return locked ? '' : '<div class="pt-evid pt-evid-empty"><span class="pt-tag-mono">Belege</span>' +
-            '<p class="pt-muted">Noch keine Belege angeheftet. Markiere im Text die Stelle, die eine Kategorie traegt.</p></div>';
+            '<p class="pt-muted">Noch keine Belege angeheftet. Markiere im Text die Stelle, die eine Kategorie trägt.</p></div>';
     }
     let h = '<div class="pt-evid"><span class="pt-tag-mono">Belege</span>';
     cats.forEach(function(c) {
@@ -927,7 +971,7 @@ function aiCollapsedHtml(p) {
     h += on.length ? on.map(function(c) { return '<span class="pt-pill pt-pill-ai">' + CAT_LABELS[c] + '</span>'; }).join('') : '<span class="pt-muted">keine</span>';
     h += '</div>';
     if (a.reasoning) h += '<p class="pt-ai-reason">' + EC.escapeHtml(a.reasoning) + '</p>';
-    h += '<p class="pt-ai-foot pt-tag-mono">diagnostisch, konfabulationsanfaellig.</p>';
+    h += '<p class="pt-ai-foot pt-tag-mono">diagnostisch, konfabulationsanfällig.</p>';
     h += '</div></details>';
     return h;
 }
@@ -1029,7 +1073,7 @@ function bindAssess(p, dec) {
     let fin = finalDecisionOf(work.cats, work.override);
     const can = fin !== 'Exclude' || !!work.reason;
     if (rec) rec.disabled = !can;
-    if (hint) hint.textContent = can ? 'Deine Entscheidung ist verbindlich. KI bleibt nur als Vorschlag.' : 'Bitte einen Ausschlussgrund waehlen.';
+    if (hint) hint.textContent = can ? 'Deine Entscheidung ist verbindlich. KI bleibt nur als Vorschlag.' : 'Bitte einen Ausschlussgrund wählen.';
     if (rec) rec.addEventListener('click', commit);
 }
 
@@ -1062,6 +1106,7 @@ function editRecord(p) {
 }
 
 function gotoNextOpen() {
+    focusReadingOnRender = true;
     let d = curDec();
     for (let i = 0; i < papers.length; i++) {
         const j = (state.index + 1 + i) % papers.length;
@@ -1072,17 +1117,24 @@ function gotoNextOpen() {
 }
 
 // ---- pin menu (category picker for a selected passage / search hit) ----
+// The pin menu is a modal dialog: it takes focus on open, traps Tab inside, closes
+// on Escape, and restores focus to the trigger on close (browser-agent a11y finding).
 function openPinMenu(term, snippet) {
     pinTerm = term; pinSnippet = snippet;
     pinOrigin = state.readMode === 'ai' ? 'ai' : 'human'; // bind the Beleg to the layer the snippet was taken from
     let menu = document.getElementById('pt-pinmenu'); if (!menu) return;
+    pinReturnFocus = document.activeElement;
+    menu.setAttribute('role', 'dialog');
+    menu.setAttribute('aria-modal', 'true');
+    menu.setAttribute('aria-label', 'Beleg an eine Kategorie anheften');
+    menu.setAttribute('tabindex', '-1');
     let h = '<div class="pt-pinmenu-head"><span class="pt-tag-mono">Als Beleg anheften an</span>' +
-        '<button class="pt-pinmenu-x" id="pt-pinmenu-x">&times;</button></div>';
+        '<button class="pt-pinmenu-x" id="pt-pinmenu-x" aria-label="Schließen">&times;</button></div>';
     if (pinOrigin === 'ai') h += '<div class="pt-pinmenu-ai">Dieser Beleg stammt aus der KI-Extraktion. Er wird als KI markiert und bindet die Entscheidung nicht.</div>';
     h += '<div class="pt-pinmenu-snip">' + EC.escapeHtml((snippet || term).slice(0, 160)) + '</div>';
     h += '<div class="pt-pinmenu-cats">';
     ALL_CATS.forEach(function(c) {
-        h += '<button class="pt-pinmenu-cat" data-cat="' + c + '"><span class="pt-evid-dot" style="background:' +
+        h += '<button class="pt-pinmenu-cat" data-cat="' + c + '"><span class="pt-evid-dot" aria-hidden="true" style="background:' +
             ((EC.CAT_COLORS && EC.CAT_COLORS[c]) || 'var(--pt-human)') + '"></span>' + EC.escapeHtml(CAT_LABELS[c]) + '</button>';
     });
     h += '</div>';
@@ -1092,18 +1144,37 @@ function openPinMenu(term, snippet) {
     menu.querySelectorAll('.pt-pinmenu-cat').forEach(function(btn) {
         btn.addEventListener('click', function() { pinEvidence(btn.dataset.cat, pinTerm, pinSnippet, pinOrigin); closePinMenu(); });
     });
+    pinKeyHandler = function(e) {
+        if (e.key === 'Escape') { e.preventDefault(); closePinMenu(); return; }
+        if (e.key !== 'Tab') return;
+        const f = menu.querySelectorAll('button');
+        if (!f.length) return;
+        const first = f[0], last = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    };
+    menu.addEventListener('keydown', pinKeyHandler);
+    const firstCat = menu.querySelector('.pt-pinmenu-cat');
+    if (firstCat && typeof firstCat.focus === 'function') firstCat.focus();
+    else if (typeof menu.focus === 'function') menu.focus();
 }
 
 function closePinMenu() {
     let menu = document.getElementById('pt-pinmenu');
-    if (menu) { menu.hidden = true; menu.innerHTML = ''; }
+    if (menu) {
+        if (pinKeyHandler) { menu.removeEventListener('keydown', pinKeyHandler); pinKeyHandler = null; }
+        menu.hidden = true; menu.innerHTML = '';
+        ['role', 'aria-modal', 'aria-label', 'tabindex'].forEach(function(a) { menu.removeAttribute(a); });
+    }
+    if (pinReturnFocus && typeof pinReturnFocus.focus === 'function') pinReturnFocus.focus();
+    pinReturnFocus = null;
 }
 
 // Surface: PRISMA & Report (flow + checklist + disclosure)
 
 function renderReportSurface(targetEl) {
     let el = targetEl || surfaceEl(); if (!el) return;
-    let html = '<p class="pt-muted pt-panel-lead">Aus dem Screening erzeugt: Fluss, Checkliste und Disclosure fuer den Methodenteil.</p>';
+    let html = '<p class="pt-muted pt-panel-lead">Aus dem Screening erzeugt: Fluss, Checkliste und Disclosure für den Methodenteil.</p>';
     html += '<section class="pt-rsec"><h3 class="pt-rsec-h">PRISMA-2020-Fluss (trAIce R1)</h3><div id="pt-sec-flow"></div></section>';
     html += '<section class="pt-rsec"><h3 class="pt-rsec-h">PRISMA-trAIce Checkliste</h3><div id="pt-sec-check"></div></section>';
     html += '<section class="pt-rsec"><h3 class="pt-rsec-h">AI-Disclosure</h3><div id="pt-sec-report"></div></section>';
@@ -1129,7 +1200,7 @@ function renderFlowInto(el) {
         '<div class="pt-lane-n">gescreent ' + f.humanScreened + '</div><div class="pt-lane-r">Include ' + f.humanIncl + ' &middot; Exclude ' + f.humanExcl + '</div><div class="pt-lane-note">bindend</div></div>';
     html += '</div>';
     if (Object.keys(f.humanReasons).length) {
-        html += '<div class="pt-flow-reasons"><strong>Ausschlussgruende (Mensch):</strong> ' +
+        html += '<div class="pt-flow-reasons"><strong>Ausschlussgründe (Mensch):</strong> ' +
             Object.keys(f.humanReasons).map(function(r) { return r.replace(/_/g, ' ') + ' ' + f.humanReasons[r]; }).join(' &middot; ') + '</div>';
     }
     html += '<div class="pt-flow-arrow">&darr;</div>';
@@ -1143,7 +1214,7 @@ function renderFlowInto(el) {
 
 function renderChecklistInto(el) {
     if (!el) return;
-    let html = '<p class="pt-check-intro">PRISMA-trAIce (Holst et al. 2025), 17 Items. Auto-markierte erfuellt das Dual-Assessment-Setup bereits.</p>';
+    let html = '<p class="pt-check-intro">PRISMA-trAIce (Holst et al. 2025), 17 Items. Auto-markierte erfüllt das Dual-Assessment-Setup bereits.</p>';
     let lastSec = '';
     TRAICE.forEach(function(it) {
         if (it.sec !== lastSec) { html += '<div class="pt-check-sec">' + it.sec + '</div>'; lastSec = it.sec; }
@@ -1233,11 +1304,11 @@ function renderData(targetEl) {
     let el = targetEl || surfaceEl(); if (!el) return;
     let html = '<div class="pt-data">';
 
-    html += '<div class="pt-data-block"><p class="pt-muted pt-panel-lead">Provenienz ueber Git. Deine Entscheidungen liegen als eine Datei pro Reviewer:in in docs/data/screening/; wer was entschieden hat, traegt der Commit-Autor, kein Feld im Tool.</p></div>';
+    html += '<div class="pt-data-block"><p class="pt-muted pt-panel-lead">Provenienz über Git. Deine Entscheidungen liegen als eine Datei pro Reviewer:in in docs/data/screening/; wer was entschieden hat, trägt der Commit-Autor, kein Feld im Tool.</p></div>';
 
     html += '<div class="pt-data-block"><h4>In den Projektordner speichern</h4>';
     if (FS_SUPPORTED) {
-        html += '<p class="pt-muted">Ordner docs/data/screening/ im lokalen Klon verbinden. Das Tool liest alle Reviewer-Dateien und schreibt deine bei jeder Entscheidung diff-stabil hinein (Schema 0.2, nach Paper-ID sortiert). Danach committest du sie mit deinem ueblichen Werkzeug.</p>';
+        html += '<p class="pt-muted">Ordner docs/data/screening/ im lokalen Klon verbinden. Das Tool liest alle Reviewer-Dateien und schreibt deine bei jeder Entscheidung diff-stabil hinein (Schema 0.2, nach Paper-ID sortiert). Danach committest du sie mit deinem üblichen Werkzeug.</p>';
         html += '<div class="pt-data-actions">' +
             '<button class="pt-btn pt-connect">Mit Projektordner verbinden</button>' +
             '<button class="pt-btn pt-reconnect">Erneut verbinden</button>' +
@@ -1248,7 +1319,7 @@ function renderData(targetEl) {
     html += '</div>';
 
     html += '<div class="pt-data-block"><h4>Commit vorbereiten</h4>' +
-        '<p class="pt-muted">Eine fertige Commit-Nachricht, die deine Session dokumentiert. Uebernimm sie in deinen Commit.</p>' +
+        '<p class="pt-muted">Eine fertige Commit-Nachricht, die deine Session dokumentiert. Übernimm sie in deinen Commit.</p>' +
         '<div class="pt-data-actions"><button class="pt-btn pt-commitmsg">Commit-Nachricht erzeugen</button>' +
         '<button class="pt-btn pt-commitmsg-copy" hidden>Kopieren</button></div>' +
         '<pre class="pt-commitmsg-out" id="pt-commitmsg-out" hidden></pre></div>';
@@ -1291,7 +1362,7 @@ function renderData(targetEl) {
             catch (err) { alert('Import fehlgeschlagen: ' + err.message); return; }
             // A foreign or corrupt file must not poison the persistent state.
             if (!obj || typeof obj !== 'object' || !obj.decisions || typeof obj.decisions !== 'object') {
-                alert('Import fehlgeschlagen: keine gueltige Reviewer-Datei (Feld "decisions" fehlt).');
+                alert('Import fehlgeschlagen: keine gültige Reviewer-Datei (Feld "decisions" fehlt).');
                 return;
             }
             const rawKey = obj.reviewer || file.name.replace(/\.json$/, '');
@@ -1365,7 +1436,8 @@ const TEST_HOOK = {
     getWork: function() { return work; },
     curDec: curDec, resetWork: resetWork,
     pinEvidence: pinEvidence, unpinEvidence: unpinEvidence, commit: commit,
-    evidenceListHtml: evidenceListHtml,
+    evidenceListHtml: evidenceListHtml, chipHtml: chipHtml, statusLabel: statusLabel,
+    corpusListHtml: corpusListHtml, isScreenable: isScreenable, firstEntryIndex: firstEntryIndex,
     // surface + reading-layer drivers (browser-agent traces on the real page)
     showSurface: function(s) { showSurface(s); },
     setReadMode: function(m) { setReadMode(m); },

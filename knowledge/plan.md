@@ -222,29 +222,31 @@ The adversarial review (56 of 57 findings confirmed) maps onto the cuts below, n
 - Technik/Sozial labels reproduce the framing the project retired: O3.
 - Default entry on a boilerplate paper, thin-text substrate for a large share of the corpus: P2/ADR-013 (O4).
 
+A second interactive pass (browser agent, 2026-06-30) ran a real screening on a local server and confirmed these at the live tool, with two refinements. It had loaded a stale build (one commit behind HEAD), so its O1 confirmation describes the pre-removal state, already fixed in HEAD; and it surfaced one finding not on the list, the category chip's accessible name carried the internal slug and the full definition, now fixed by moving the slug to a decorative tip (`aria-hidden`) and the definition to the button's description (`title`). The core mechanic (read, search, pin, derive, bind, persist, reload) was confirmed sound, and the deterministic decision record (ADR-021) was validated end to end.
+
 ### Sequenced cuts
 
-Decided and unblocked first, gated cuts after their decision resolves. Each keeps the harness green (baseline 62/62) and is recorded as an ADR.
+Decided and unblocked first, gated cuts after their decision resolves. Each keeps the harness green (baseline 68/68 after this batch) and is recorded as an ADR.
 
-1. **One workspace** (decided) -- ADR-020. Screening is the permanent surface; the PRISMA record and the data functions become on-demand affordances; academic references leave the work surface. Files: `docs/prisma.html`, `docs/js/prisma.js` (renderShell, showSurface, renderData), `docs/css/prisma.css`.
-2. **Git provenance** (decided, fork O5 open) -- ADR-021. Drop the identity form and the perspective switcher; write the decisions file deterministically (stable order, one paper block); generate a session commit message. Files: `docs/js/prisma.js`, a deterministic serializer with its own test.
-3. **Accessibility and keyboard flow** (decided) -- P4 NFR-06. Focus restoration after a paper switch, visible focus rings, `aria-pressed` on chips, dialog semantics and focus trap for the pin menu, contrast, keyboard-only screening.
-4. **Machine evidence** (gated O1) -- reopens ADR-018. Remove from the evidence list into the collapsed suggestion, or replace with verbatim per-category Kategorie-Evidenz quotes.
-5. **Inclusion logic** (gated O2). A reason-gated override toward Include, or the AND-rule shown as a derivation aid.
-6. **Feminist language** (gated O3). Technik/Sozial to Gegenstand/Perspektive on the work surface; the internal constants stay.
-7. **Text substrate** (gated O4, already P2/ADR-013). Thin-text handling and a readable default entry.
+1. **One workspace** (done 2026-06-30) -- ADR-020. Screening is the permanent surface; the PRISMA record and the data functions become on-demand affordances; academic references leave the work surface. Files: `docs/prisma.html`, `docs/js/prisma.js` (renderShell, showSurface, renderData), `docs/css/prisma.css`.
+2. **Git provenance** (done 2026-06-30, O5 resolved: one file per reviewer) -- ADR-021. Drop the identity form and the perspective switcher; write the decisions file deterministically (stable order, one paper block); generate a session commit message. Files: `docs/js/prisma.js`, a deterministic serializer with its own test.
+3. **Accessibility and keyboard flow** (done 2026-06-30) -- P4 NFR-06. Focus restoration after a paper switch, visible focus rings on inputs and controls, `aria-pressed` on category and exclusion chips, dialog semantics with focus move, Escape, and Tab trap for the pin menu, text equivalent for the colour-only status dot, slug and definition out of the chip's accessible name, keyboard-focus tooltips, darkened muted-text tokens for contrast.
+4. **Machine evidence** (done 2026-06-30) -- ADR-022 supersedes ADR-018: removed from the evidence list; the model's per-paper reasoning stays only in the collapsed KI-Vorschlag.
+5. **Inclusion logic** (gated O2, open). A reason-gated override toward Include, or the AND-rule shown as a derivation aid. The only open operator decision; empirically reproduced at the live tool but not yet decided.
+6. **Feminist language** (done 2026-06-30) -- O3: Technik/Sozial to Gegenstand/Perspektive on the work surface; the internal constants stay.
+7. **Text substrate** (partial 2026-06-30) -- O4/P2/ADR-013: the tool opens on the first screenable paper (not boilerplate) and a textless paper shows a prominent notice instead of going silent; loading raw local full text remains the larger P2/ADR-013 work.
 
 ### Open gates
 
-| ID | Question | Gates |
+| ID | Question | Status |
 |---|---|---|
-| O1 | Machine evidence: remove from the evidence list, or replace with verbatim category quotes | cut 4 |
-| O2 | Inclusion AND-rule: keep rigid, or reason-gated override to Include | cut 5 |
-| O3 | Technik/Sozial to Gegenstand/Perspektive | cut 6 |
-| O4 | Thin-text papers: block, warn, or load raw local text | cut 7 |
-| O5 | Decisions file: one shared file, or one per person | cut 2 |
+| O1 | Machine evidence: remove from the evidence list, or replace with verbatim category quotes | resolved: removed (ADR-022, cut 4 done) |
+| O2 | Inclusion AND-rule: keep rigid, or reason-gated override to Include | **open, operator decision** (cut 5) |
+| O3 | Technik/Sozial to Gegenstand/Perspektive | resolved: renamed (cut 6 done) |
+| O4 | Thin-text papers: block, warn, or load raw local text | partial: warn + screenable entry done; raw local text is P2 (cut 7) |
+| O5 | Decisions file: one shared file, or one per person | resolved: one per reviewer (ADR-021, cut 2 done) |
 
-Cuts 1 to 3 are unblocked by the decisions above and build immediately. The gated cuts wait on their row, decided when the cut is reached, not all at once.
+Cuts 1 to 4, 6, and the warn-and-entry half of 7 are built and on the branch; only O2 (cut 5) waits on the operator, decided when reached, not pre-empted.
 
 ## Stage R: The first-round pass through PRISM and its evaluation
 

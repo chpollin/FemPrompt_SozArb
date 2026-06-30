@@ -24,6 +24,13 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## PRISM and the epistemic infrastructure (June 2026)
 
+### 2026-06-30 (Session 26): Cut 3 bis O4 gebaut, der zweite Agentenlauf eingearbeitet
+
+- **Ziel:** Die im Redesign entscheidungsfreien Schnitte umsetzen und den zweiten, am laufenden Tool geführten Browser-Agentenlauf einarbeiten, bis zu einem stabilen Commit und Push auf dem Branch.
+- **Verlauf:** Der Agent hatte einen Build eine Position hinter HEAD geprüft, weshalb sein O1-Blocker den schon entfernten Stand beschreibt; das wurde gegen die Git-Historie und einen grep verifiziert und nicht erneut behoben. Gebaut wurden Cut 3 (aria-pressed auf Kategorie- und Ausschlussgrund-Chips, der Slug und die Definition aus dem zugänglichen Chip-Namen heraus in Tooltip und title, Textäquivalent zum farbcodierten Statuspunkt, Pin-Menü als Dialog mit Fokuswechsel, Escape und Tab-Falle, Fokus-Wiederherstellung auf den Paper-Titel nach Paperwechsel, sichtbare Fokus-Ringe auf Suchfeldern und Bedienelementen, Tastatur-Tooltips, abgedunkelte Muted-Tokens für Kontrast), O4 in Teilen (Einstieg auf dem ersten lesbaren Paper statt auf der Boilerplate, prominenter Hinweis bei textlosen Papern), und der Polish-Sweep (Umlaute toolweit zurückgebaut, der Doppelbindestrich-Platzhalter im Untertitel auf einen Mittelpunkt über alle Companion-Seiten, Reviewer-Schlüssel in der Fortschrittsleiste gelabelt). Der einzige neue Agentenbefund, der aufgeblähte zugängliche Chip-Name, ist Teil von Cut 3.
+- **Ergebnis:** Die Schnitte 1 bis 4, 6 und die Warn-und-Einstieg-Hälfte von 7 sind auf dem Branch, der Harness blieb grün und ist um eine Sektion erweitert (Section I), ein Render-Smoke bestätigte Init, Panel und Fokusziele ohne Wurf. Offen bleibt allein O2, das Einschlusslogik-Modell, als Operatorentscheidung. Branch committet und gepusht, der Merge nach `main` bleibt die Menschenentscheidung.
+- **Dead Ends:** Der vom Agenten gemeldete Header-Statusüberlauf wurde nicht gefixt, weder Header noch Statusleiste tragen eine Höhen- oder Overflow-Begrenzung, das war ein Capture-Artefakt seiner Screenshot-Engine. Der gemeldete tote KI-Extraktion-Schalter wurde nicht als Bug behandelt, der Toggle ist korrekt ausgeblendet, wenn kein KI-Layer existiert; ein positiver Abwesenheitshinweis wurde als Rauschen verworfen.
+
 ### 2026-06-30 (Session 25): Stand gesichtet, Stage R begonnen mit der R1-Konformanzkarte
 
 - **Ziel:** Nach dem Umzug den Stand sichten, das offene Werk priorisieren, und vor einem Rechnerwechsel die Arbeit mit echtem Vorlauf sichern statt nur zu pushen.

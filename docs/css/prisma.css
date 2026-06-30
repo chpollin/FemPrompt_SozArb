@@ -13,8 +13,8 @@
   --pt-border-2:  oklch(0.86 0.008 255);
   --pt-ink:       oklch(0.27 0.02 262);
   --pt-ink-2:     oklch(0.46 0.018 262);
-  --pt-ink-3:     oklch(0.62 0.012 262);
-  --pt-ink-4:     oklch(0.75 0.008 262);
+  --pt-ink-3:     oklch(0.55 0.014 262);   /* darkened for AA contrast of muted text (a11y) */
+  --pt-ink-4:     oklch(0.63 0.011 262);   /* darkened for AA contrast of fine meta text (a11y) */
 
   /* functional accents -- hue carries meaning */
   --pt-human:     oklch(0.50 0.14 264);   /* binding / human / primary */
@@ -567,3 +567,44 @@ body.pt-fullscreen *, body.pt-fullscreen *::before, body.pt-fullscreen *::after 
 .pt-fullscreen .pt-btn:focus-visible,
 .pt-overlay-x:focus-visible,
 .pt-overlay-panel:focus-visible { outline: 2px solid var(--pt-human); outline-offset: 2px; }
+
+/* ============================ ACCESSIBILITY (Cut 3 / NFR-06) ============================ */
+/* screen-reader-only text: carries the status the colour dot conveys visually */
+.pt-sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+/* visible keyboard focus on the search inputs and every interactive control */
+.pt-corpus-search input:focus-visible,
+.pt-intext-bar input:focus-visible,
+.pt-check-note:focus-visible,
+.pt-rin:focus-visible,
+.pt-chip:focus-visible,
+.pt-reason-chip:focus-visible,
+.pt-layer-btn:focus-visible,
+.pt-intext-nav:focus-visible,
+.pt-pinmenu-cat:focus-visible,
+.pt-pinmenu-x:focus-visible,
+.pt-nav-item:focus-visible,
+.pt-record-btn:focus-visible,
+.pt-revise-btn:focus-visible,
+.pt-next-btn:focus-visible,
+.pt-check-status:focus-visible,
+.pt-evid-x:focus-visible {
+  outline: 2px solid var(--pt-human); outline-offset: 2px;
+}
+.pt-paper-title:focus-visible { outline: 2px solid var(--pt-human); outline-offset: 4px; border-radius: var(--pt-r-sm); }
+
+/* a category chip reveals its definition tooltip on keyboard focus, not only on hover */
+.pt-chip:focus-visible .pt-chip-tip { opacity: 1; }
+
+/* prominent notice when a paper has no readable text (O4): a decision cannot be
+   grounded in evidence here, so the empty reading column says so rather than going silent */
+.pt-notext {
+  font-size: var(--pt-md); line-height: 1.6; color: var(--pt-warn-ink);
+  background: var(--pt-warn-bg); border: 1px solid var(--pt-warn-line);
+  border-left: 3px solid var(--pt-warn); border-radius: var(--pt-r);
+  padding: 0.9rem 1.1rem; margin: 0.6rem 0;
+}
+.pt-notext strong { color: var(--pt-warn-ink); }

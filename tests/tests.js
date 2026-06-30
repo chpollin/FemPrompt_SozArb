@@ -686,6 +686,55 @@ test('commitMessage summarizes the session counts and exclusion reasons', functi
 });
 
 // ============================================================
+// Section I: accessibility (Cut 3) and screenable entry (O4)
+// ============================================================
+
+test('chipHtml exposes aria-pressed and keeps the slug and definition out of the accessible name', function() {
+    var on = T.chipHtml('AI_Literacies', true, false);
+    assertContains(on, 'aria-pressed="true"');
+    var off = T.chipHtml('AI_Literacies', false, false);
+    assertContains(off, 'aria-pressed="false"');
+    // the slug-and-definition tooltip and the checkbox are decorative for a screen reader
+    assertContains(off, 'class="pt-chip-tip" aria-hidden="true"');
+    assertContains(off, 'class="pt-chip-box" aria-hidden="true"');
+    // the definition still reaches assistive tech, as a description (title), not as the name
+    assertContains(off, 'title="');
+});
+
+test('statusLabel maps the colour-coded decision state to a text equivalent', function() {
+    assertEqual(T.statusLabel('include'), 'eingeschlossen');
+    assertEqual(T.statusLabel('exclude'), 'ausgeschlossen');
+    assertEqual(T.statusLabel('none'), 'offen');
+});
+
+test('corpusListHtml hides the colour dot from AT and gives the status a text equivalent', function() {
+    T.setPapers([{ id: 'pCL', title: 'X', author_year: 'A 2020' }]);
+    var prevRev = T.getState().reviewer;
+    T.getState().reviewer = 'rCL'; T.getState().reviewers.rCL = {};
+    var html = T.corpusListHtml();
+    assertContains(html, 'pt-nav-dot pt-dot-none" aria-hidden="true"');
+    assertContains(html, '<span class="pt-sr-only">offen</span>');
+    delete T.getState().reviewers.rCL;
+    T.getState().reviewer = prevRev;
+});
+
+test('firstEntryIndex skips a boilerplate first paper and opens on a screenable one (O4)', function() {
+    T.setPapers([
+        { id: 'b1', abstract: 'Founded in 1920, the NBER is a private, non-profit, non-partisan organization.' },
+        { id: 'g1', knowledge_doc: 'data/x.md', abstract: '' }
+    ]);
+    assert(!T.isScreenable({ id: 'b1', abstract: 'Founded in 1920, the NBER is a private, non-profit, non-partisan organization.' }), 'NBER boilerplate is not screenable');
+    assert(T.isScreenable({ id: 'g1', knowledge_doc: 'data/x.md' }), 'a paper with a knowledge document is screenable');
+    var prevRev = T.getState().reviewer;
+    T.getState().reviewer = 'rFE'; T.getState().reviewers.rFE = {};
+    assertEqual(T.firstEntryIndex(), 1, 'lands on the screenable paper, not the boilerplate');
+    T.getState().reviewers.rFE = { g1: { decision: 'Include' } };
+    assertEqual(T.firstEntryIndex(), 1, 'falls back to the only screenable paper when it is already decided');
+    delete T.getState().reviewers.rFE;
+    T.getState().reviewer = prevRev;
+});
+
+// ============================================================
 // Restore localStorage and report
 // ============================================================
 
