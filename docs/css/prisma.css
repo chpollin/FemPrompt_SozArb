@@ -608,3 +608,15 @@ body.pt-fullscreen *, body.pt-fullscreen *::before, body.pt-fullscreen *::after 
   padding: 0.9rem 1.1rem; margin: 0.6rem 0;
 }
 .pt-notext strong { color: var(--pt-warn-ink); }
+
+/* override-to-Include justification (O2, ADR-023): the human overrides the rule's
+   derived Exclude and records why, since the human decision is binding (RAISE P1/P2)
+   and any such judgement must be transparently recorded (RAISE P3) */
+.pt-override-block { margin-top: 0.9rem; }
+.pt-override-label { color: var(--pt-human); margin-bottom: 0.5rem; }
+.pt-override-input {
+  width: 100%; padding: 0.5rem 0.65rem; border: 1px solid var(--pt-human-line);
+  border-radius: var(--pt-r-sm); font-size: var(--pt-sm); font-family: var(--pt-sans);
+  line-height: 1.5; resize: vertical; background: var(--pt-human-bg); color: var(--pt-ink);
+}
+.pt-override-input:focus-visible { outline: 2px solid var(--pt-human); outline-offset: 1px; }

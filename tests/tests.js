@@ -116,10 +116,10 @@ test('finalDecisionOf: derived Include without override stays Include', function
 test('finalDecisionOf: derived Include with override becomes Exclude', function() {
     assertEqual(T.finalDecisionOf({ Prompting: true, Gender: true }, true), 'Exclude');
 });
-test('finalDecisionOf: derived Exclude stays Exclude regardless of override', function() {
+test('finalDecisionOf: from a derived Exclude, override flips to Include (O2, ADR-023)', function() {
     assertEqual(T.finalDecisionOf({ Prompting: true }, false), 'Exclude');
-    assertEqual(T.finalDecisionOf({ Prompting: true }, true), 'Exclude');
-    assertEqual(T.finalDecisionOf({}, true), 'Exclude');
+    assertEqual(T.finalDecisionOf({ Prompting: true }, true), 'Include');
+    assertEqual(T.finalDecisionOf({}, true), 'Include');
 });
 test('divergent: differing decisions are divergent, equal or missing tracks are not', function() {
     assert(T.divergent({ decision: 'Include' }, { decision: 'Exclude' }) === true, 'Include vs Exclude');
@@ -749,6 +749,45 @@ test('editRecord rehydrates work and keeps the committed decision until re-commi
     assertEqual((w.evidence.AI_Literacies || []).length, 1, 'evidence is rehydrated into work');
     assert(!!T.curDec().pED, 'the committed decision survives the edit (no eager delete)');
     delete T.getState().reviewers.rED;
+    T.getState().reviewer = prevRev;
+});
+
+test('finalDecisionOf: override flips the derived decision in both directions (O2, ADR-023)', function() {
+    var inc = { AI_Literacies: true, Soziale_Arbeit: true }; // >=1 Gegenstand AND >=1 Perspektive
+    assertEqual(T.finalDecisionOf(inc, false), 'Include');
+    assertEqual(T.finalDecisionOf(inc, true), 'Exclude', 'override flips Include to Exclude');
+    var exc = { AI_Literacies: true }; // only one group -> derived Exclude
+    assertEqual(T.finalDecisionOf(exc, false), 'Exclude');
+    assertEqual(T.finalDecisionOf(exc, true), 'Include', 'override flips Exclude to Include');
+});
+
+test('commit records the trimmed override justification on an override to Include (O2)', function() {
+    T.setPapers([{ id: 'pO2', title: 'X', knowledge_doc: 'd.md' }]);
+    var prevRev = T.getState().reviewer;
+    T.getState().reviewer = 'rO2'; T.getState().reviewers.rO2 = {}; T.getState().index = 0;
+    T.resetWork({ id: 'pO2' });
+    var w = T.getWork();
+    w.cats = { AI_Literacies: true }; w.override = true; w.overrideReason = '  relevant trotz duennem Text  ';
+    T.commit();
+    var rec = T.getState().reviewers.rO2.pO2;
+    assert(!!rec, 'a decision was committed');
+    assertEqual(rec.decision, 'Include', 'override produced Include');
+    assertEqual(rec.override, true);
+    assertEqual(rec.override_reason, 'relevant trotz duennem Text', 'justification stored, trimmed');
+    delete T.getState().reviewers.rO2;
+    T.getState().reviewer = prevRev;
+});
+
+test('commit is blocked on an override to Include without a justification (O2 gate)', function() {
+    T.setPapers([{ id: 'pO2b', title: 'X' }]);
+    var prevRev = T.getState().reviewer;
+    T.getState().reviewer = 'rO2b'; T.getState().reviewers.rO2b = {}; T.getState().index = 0;
+    T.resetWork({ id: 'pO2b' });
+    var w = T.getWork();
+    w.cats = { AI_Literacies: true }; w.override = true; w.overrideReason = '';
+    T.commit();
+    assert(!T.getState().reviewers.rO2b.pO2b, 'no decision committed without a justification');
+    delete T.getState().reviewers.rO2b;
     T.getState().reviewer = prevRev;
 });
 

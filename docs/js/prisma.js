@@ -113,14 +113,14 @@ let focusReadingOnRender = false; // move focus to the paper heading after a pap
 let editingPid = null; // a committed paper reopened for editing; its record stays until re-commit
 
 // the in-progress (pre-commit) decision for the open paper
-let work = { pid: null, cats: {}, override: false, reason: null, evidence: {} };
+let work = { pid: null, cats: {}, override: false, reason: null, overrideReason: null, evidence: {} };
 
 function curDec() {
     if (!state.reviewers[state.reviewer]) state.reviewers[state.reviewer] = {};
     return state.reviewers[state.reviewer];
 }
 
-function resetWork(p) { work = { pid: p.id, cats: {}, override: false, reason: null, evidence: {} }; }
+function resetWork(p) { work = { pid: p.id, cats: {}, override: false, reason: null, overrideReason: null, evidence: {} }; }
 
 // Persistence: localStorage cache + File System Access (repo files)
 
@@ -501,9 +501,12 @@ function deriveDecision(cats) {
     return (tech && soc) ? 'Include' : 'Exclude';
 }
 
+// The human decision is binding (RAISE P1/P2); the AND-rule only derives a default.
+// override flips the derived decision either way: Include->Exclude, or Exclude->Include,
+// the latter requiring a recorded justification at commit (RAISE P3, ADR-023).
 function finalDecisionOf(cats, override) {
-    if (deriveDecision(cats) === 'Exclude') return 'Exclude';
-    return override ? 'Exclude' : 'Include';
+    const derived = deriveDecision(cats);
+    return override ? (derived === 'Include' ? 'Exclude' : 'Include') : derived;
 }
 
 function divergent(h, a) { return h && a && h.decision !== a.decision; }
@@ -869,6 +872,11 @@ function assessInnerHtml(p, dec) {
             ' aria-pressed="' + (work.reason === r ? 'true' : 'false') + '">' + r.replace(/_/g, ' ') + '</button>';
     });
     h += '</div></div>';
+    const showOverrideJust = work.override && finalDecisionOf(cats, work.override) === 'Include';
+    h += '<div class="pt-override-block" id="pt-override-block" style="display:' + (showOverrideJust ? 'block' : 'none') + ';">';
+    h += '<div class="pt-tag-mono pt-override-label">Begruendung Override zu Include &middot; erforderlich</div>';
+    h += '<textarea id="pt-override-reason" class="pt-override-input" rows="2" placeholder="Warum einschliessen, obwohl die Regel auf Exclude steht? Wird im Record dokumentiert.">' + EC.escapeHtml(work.overrideReason || '') + '</textarea>';
+    h += '</div>';
     h += '<div class="pt-actions">';
     h += '<button class="pt-record-btn" id="pt-record">Entscheidung erfassen (bindend)</button>';
     h += '<span class="pt-actions-hint" id="pt-actions-hint"></span>';
@@ -884,6 +892,7 @@ function assessLockedHtml(p, dec) {
         '<span class="pt-spacer"></span><span class="pt-pill pt-pill-' + (dec.decision === 'Include' ? 'include' : 'exclude') + ' pt-pill-lg">' + dec.decision + '</span></div>';
     h += '<div class="pt-rail-body">';
     if (dec.decision === 'Exclude' && dec.reason) h += '<div class="pt-seed-ref">Ausschlussgrund: <strong>' + EC.escapeHtml(dec.reason.replace(/_/g, ' ')) + '</strong></div>';
+    if (dec.decision === 'Include' && dec.override && dec.override_reason) h += '<div class="pt-seed-ref">Override zu Include &middot; Begruendung: <strong>' + EC.escapeHtml(dec.override_reason) + '</strong></div>';
     h += dimHtml('Gegenstand', TECH_CATS, cats, true);
     h += dimHtml('Perspektive', SOCIAL_CATS, cats, true);
     h += evidenceListHtml(dec.evidence || {}, true);
@@ -952,11 +961,10 @@ function logicInner(cats, override) {
     h += '<span class="pt-logic-arrow">&rarr;</span>';
     h += '<span class="pt-tag-mono">abgeleitet</span>';
     h += '<span class="pt-pill pt-pill-' + (derived === 'Include' ? 'include' : 'exclude') + '">' + derived + '</span>';
-    if (derived === 'Include') {
-        h += '<span class="pt-spacer"></span>';
-        h += '<label class="pt-override"><span class="pt-switch"><input type="checkbox" id="pt-override"' +
-            (override ? ' checked' : '') + '><span class="pt-switch-track"></span></span> Override zu Exclude</label>';
-    }
+    h += '<span class="pt-spacer"></span>';
+    h += '<label class="pt-override"><span class="pt-switch"><input type="checkbox" id="pt-override"' +
+        (override ? ' checked' : '') + '><span class="pt-switch-track"></span></span> ' +
+        (derived === 'Include' ? 'Override zu Exclude' : 'Override zu Include') + '</label>';
     h += '</div>';
     return h;
 }
@@ -1056,8 +1064,11 @@ function bindAssess(p, dec) {
     col.querySelectorAll('.pt-chip').forEach(function(btn) {
         btn.addEventListener('click', function() {
             let c = btn.dataset.cat;
+            const before = deriveDecision(work.cats);
             work.cats[c] = !work.cats[c];
-            if (deriveDecision(work.cats) === 'Exclude') work.override = false;
+            // an override opposes the current derivation; if a toggle flips the derived
+            // decision, the override and its justification no longer apply
+            if (deriveDecision(work.cats) !== before) { work.override = false; work.overrideReason = null; }
             refreshAssess();
         });
     });
@@ -1068,14 +1079,26 @@ function bindAssess(p, dec) {
         btn.addEventListener('click', function() { work.reason = btn.dataset.reason; refreshAssess(); });
     });
     const ov = col.querySelector('#pt-override');
-    if (ov) ov.addEventListener('change', function() { work.override = ov.checked; refreshAssess(); });
+    if (ov) ov.addEventListener('change', function() { work.override = ov.checked; if (!ov.checked) work.overrideReason = null; refreshAssess(); });
 
     let rec = col.querySelector('#pt-record');
     let hint = col.querySelector('#pt-actions-hint');
-    let fin = finalDecisionOf(work.cats, work.override);
-    const can = fin !== 'Exclude' || !!work.reason;
-    if (rec) rec.disabled = !can;
-    if (hint) hint.textContent = can ? 'Deine Entscheidung ist verbindlich. KI bleibt nur als Vorschlag.' : 'Bitte einen Ausschlussgrund wählen.';
+    // A derived Exclude needs an exclusion reason; an override to Include needs a recorded
+    // justification (RAISE P3). The justification textarea updates without re-rendering so
+    // the cursor is not lost, so the commit gate is re-checked on each keystroke.
+    function syncRecord() {
+        const fin = finalDecisionOf(work.cats, work.override);
+        const needExcl = fin === 'Exclude';
+        const needJust = work.override && fin === 'Include';
+        const can = (!needExcl || !!work.reason) &&
+            (!needJust || !!(work.overrideReason && work.overrideReason.trim()));
+        if (rec) rec.disabled = !can;
+        if (hint) hint.textContent = can ? 'Deine Entscheidung ist verbindlich. KI bleibt nur als Vorschlag.'
+            : (needExcl ? 'Bitte einen Ausschlussgrund wählen.' : 'Bitte den Override zu Include begründen.');
+    }
+    const ovr = col.querySelector('#pt-override-reason');
+    if (ovr) ovr.addEventListener('input', function() { work.overrideReason = ovr.value; syncRecord(); });
+    syncRecord();
     if (rec) rec.addEventListener('click', commit);
 }
 
@@ -1083,6 +1106,7 @@ function commit() {
     let p = papers[state.index];
     let fin = finalDecisionOf(work.cats, work.override);
     if (fin === 'Exclude' && !work.reason) { refreshAssess(); return; }
+    if (work.override && fin === 'Include' && !(work.overrideReason && work.overrideReason.trim())) { refreshAssess(); return; }
     // the persisted record holds only human Belege; AI-origin evidence stays
     // advisory and session-only, never written to the reviewer file (ADR-016)
     const humanEvidence = {};
@@ -1093,6 +1117,7 @@ function commit() {
     curDec()[p.id] = {
         categories: work.cats, decision: fin, override: !!work.override,
         reason: fin === 'Exclude' ? work.reason : null,
+        override_reason: (work.override && fin === 'Include') ? work.overrideReason.trim() : null,
         evidence: humanEvidence, ts: new Date().toISOString(), reviewer: state.reviewer
     };
     editingPid = null; // the edit (if any) is now re-committed
@@ -1113,6 +1138,7 @@ function editRecord(p) {
         cats: JSON.parse(JSON.stringify(dec.categories || {})),
         override: !!dec.override,
         reason: dec.reason || null,
+        overrideReason: dec.override_reason || null,
         evidence: JSON.parse(JSON.stringify(dec.evidence || {}))
     };
     editingPid = p.id;
