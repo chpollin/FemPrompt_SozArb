@@ -470,6 +470,8 @@ def build_paper_journeys(
     papers = []
     for stem_path in sorted(knowledge_dir.glob("*.md")):
         stem = stem_path.stem
+        if stem not in kd_to_zotero:
+            continue  # excluded distillate (duplicate, wrong-content, mis-bind, or unmatched)
 
         match_data = kd_to_zotero.get(stem, {})
         zotero_item = match_data.get("zotero_item", {})
@@ -884,6 +886,22 @@ def main():
     print("  [3/7] Loading concept + divergence caches...")
     concept_cache = load_concept_cache(REPO_ROOT / ".vault_cache")
     divergence_cache = load_divergence_cache(REPO_ROOT / ".vault_cache")
+
+    # The LLM concept cache under .vault_cache is local-only and gitignored, so it is
+    # absent on a fresh clone. The extraction is persisted reproducibly in
+    # concept_graph.json; reuse it rather than emit an empty graph. Per-paper concepts
+    # there are keyed by Zotero key, so remap them onto the matched stems.
+    persisted_graph = None
+    if not concept_cache:
+        cg_path = REPO_ROOT / "docs" / "data" / "concept_graph.json"
+        if cg_path.exists():
+            persisted_graph = json.loads(cg_path.read_text(encoding="utf-8"))
+            pc_by_key = persisted_graph.get("paper_concepts", {})
+            for stem, m in kd_to_zotero.items():
+                names = pc_by_key.get(m.get("zotero_key", ""), [])
+                if names:
+                    concept_cache[stem] = [{"concept": n} for n in names]
+            print(f"    Concept cache empty; reused concept_graph.json ({len(pc_by_key)} paper maps)")
     print(f"    Concepts: {len(concept_cache)} papers, Divergences: {len(divergence_cache)} cases")
 
     print("  [4/7] Loading verification scores...")
@@ -905,7 +923,10 @@ def main():
     print(f"    Papers: {len(papers)}")
 
     print("  [6/7] Building concept graph + divergences + pipeline...")
-    concept_graph = build_concept_graph(concept_cache)
+    if persisted_graph:
+        concept_graph = {"nodes": persisted_graph["nodes"], "edges": persisted_graph["edges"]}
+    else:
+        concept_graph = build_concept_graph(concept_cache)
     assign_concept_clusters(concept_graph, papers)
     divergences_list = build_divergences_list(REPO_ROOT, divergence_cache)
     pipeline_stages = build_pipeline_stages(REPO_ROOT)

@@ -48,6 +48,27 @@ def normalize_for_matching(text: str) -> str:
     return text
 
 
+_TITLE_STOPWORDS = frozenset(
+    'a an the of and or for to in on with from as at by is are was were be its their '
+    'through via using toward towards into about this that these those it'.split()
+)
+
+
+def title_token_overlap(candidate_title: str, key_title: str) -> float:
+    """Fraction of the key title's content words that appear in the candidate title.
+
+    Character-level ratios reward incidental letter overlap (a K-12 education paper
+    scores high against an unrelated discrimination title). Token containment of the
+    key's content words is the meaningful signal for telling the right distillate
+    from a fuzzy mis-bind.
+    """
+    cand = set(normalize_for_matching(candidate_title).split()) - _TITLE_STOPWORDS
+    key = set(normalize_for_matching(key_title).split()) - _TITLE_STOPWORDS
+    if not key or not cand:
+        return 0.0
+    return len(cand & key) / len(key)
+
+
 def extract_author_year_from_stem(stem: str) -> Tuple[Optional[str], Optional[str]]:
     """Extract (first_author_surname, year) from a knowledge-doc filename stem.
     Pattern: AuthorSurname_YYYY_Title_words...
@@ -89,6 +110,23 @@ def _read_kd_yaml_title(knowledge_dir: Path, stem: str) -> str:
             except Exception:
                 pass
     return ''
+
+
+def _distillate_own_title(knowledge_dir: Path, stage1_dir: Path, stem: str) -> str:
+    """The title the distillate itself claims: stage1 metadata.title, else KD frontmatter.
+
+    This is the distillate's content identity, used to tell a genuine match from a
+    file that only landed on a Zotero key through a loose fuzzy fallback.
+    """
+    s1 = stage1_dir / f'{stem}.json'
+    if s1.exists():
+        try:
+            t = json.loads(s1.read_text(encoding='utf-8')).get('metadata', {}).get('title', '')
+            if t and t != 'nicht angegeben':
+                return t
+        except (json.JSONDecodeError, OSError):
+            pass
+    return _read_kd_yaml_title(knowledge_dir, stem)
 
 
 def build_knowledge_doc_to_zotero_index(
@@ -224,6 +262,60 @@ def build_knowledge_doc_to_zotero_index(
             }
         else:
             unmatched.append(stem)
+
+    # Collision and mis-bind resolution: exactly one distillate per Zotero key.
+    # When several distillates resolve to one key, keep the one whose own title
+    # best matches the key's title; the rest are duplicates or wrong-content and
+    # are dropped. A distillate that reached a key only through the loose fuzzy
+    # fallback (its own title does not match and author/year disagree) is a
+    # mis-bind and is rejected, so a genuinely different paper is never merged in.
+    def _key_sim(stem: str, item: dict) -> float:
+        own = _distillate_own_title(knowledge_dir, stage1_dir, stem)
+        kt = item.get('title', '') if item else ''
+        if not own or not kt:
+            return 0.0
+        return title_token_overlap(own, kt)
+
+    def _author_year_ok(stem: str, item: dict) -> bool:
+        sa, sy = extract_author_year_from_stem(stem)
+        za, zy = extract_author_year_from_zotero(item or {})
+        a_ok = bool(sa and za and (sa[:4] == za[:4] or sa in za or za in sa))
+        y_ok = bool(sy and zy and sy == zy)
+        return a_ok or y_ok
+
+    excluded: Dict[str, str] = {}
+    by_key: Dict[str, list] = defaultdict(list)
+    for stem, m in result.items():
+        by_key[m['zotero_key']].append(stem)
+
+    for key, stems in by_key.items():
+        if len(stems) < 2:
+            continue
+        item = result[stems[0]]['zotero_item']
+        # Canonical = best title match to the key (content correctness), then the
+        # name-consistent file, then the longer descriptive stem.
+        ranked = sorted(
+            stems,
+            key=lambda s: (_key_sim(s, item), _author_year_ok(s, item), len(s)),
+            reverse=True,
+        )
+        for loser in ranked[1:]:
+            excluded[loser] = 'duplicate' if _key_sim(loser, item) >= 0.6 else 'wrong-content'
+
+    for stem, m in result.items():
+        if stem in excluded:
+            continue
+        if _key_sim(stem, m['zotero_item']) < 0.5 and not _author_year_ok(stem, m['zotero_item']):
+            excluded[stem] = 'mis-bind'
+
+    for stem in excluded:
+        del result[stem]
+        unmatched.append(stem)
+
+    if excluded:
+        from collections import Counter
+        summary = ', '.join(f'{r}:{n}' for r, n in sorted(Counter(excluded.values()).items()))
+        print(f"  Collision/mis-bind resolution: excluded {len(excluded)} distillate(s) ({summary})")
 
     return result, unmatched
 
@@ -661,6 +753,8 @@ Antworte NUR mit diesem JSON-Array:
 
         for i, kd_path in enumerate(knowledge_files, 1):
             stem = kd_path.stem
+            if stem not in self.knowledge_to_zotero:
+                continue  # excluded distillate; no concepts from duplicates or wrong-content
             content = kd_path.read_text(encoding='utf-8')
 
             if skip_llm:
@@ -1562,6 +1656,8 @@ Jede Note in diesem Vault operiert auf drei Ebenen:
         knowledge_files = sorted(self.knowledge_dir.glob('*.md'))
         for kd_path in knowledge_files:
             stem = kd_path.stem
+            if stem not in self.knowledge_to_zotero:
+                continue  # excluded distillate (duplicate, wrong-content, mis-bind, or unmatched)
             note = self.create_paper_note(stem)
 
             # Filename from Zotero title (with collision handling)
