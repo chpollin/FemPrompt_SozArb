@@ -41,22 +41,22 @@ acquisition_log.json
 missing_pdfs.csv
 
 # Pipeline generated images (too large for Git, ~2-3 GB)
-pipeline/pdf_images/
+generated/pdf_images/
 
 # Pipeline runtime/test artifacts
 .pipeline_status.json
-pipeline/conversion_report_*.json
-pipeline/validation_*.json
-pipeline/markdown_test/
+generated/conversion_report_*.json
+generated/validation_*.json
+generated/markdown_test/
 conversion_metadata.json
 
 # Benchmark test data
-benchmark/data/test_*.csv
-benchmark/data/phase2_test/
+assessment/test_*.csv
+assessment/phase2_test/
 
 # Validation reports (generated artifacts)
-pipeline/validation_reports/
-pipeline/validation_reports_clean/
+generated/validation_reports/
+generated/validation_reports_clean/
 
 # API call logs
 *.jsonl
@@ -65,7 +65,7 @@ pipeline/validation_reports_clean/
 .vault_cache/
 
 # Obsidian per-machine workspace config (layout, plugins, open panes)
-vault/.obsidian/
+generated/vault/.obsidian/
 
 # Backup files
 *_old.*
