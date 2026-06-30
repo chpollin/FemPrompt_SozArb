@@ -83,12 +83,6 @@ const LS_KEY = 'femprompt-prisma-state/0.2';
 const REVIEWER_SCHEMA = 'femprompt-prisma-reviewer/0.2'; // bumped for the evidence map (FR-13)
 const SEED = 'seed'; // built-in reviewer = the existing expert assessment (paper.human)
 
-const SURFACES = [
-    { id: 'screening', label: 'Screening', intro: 'Volltext lesen und durchsuchen, Belege an Kategorien anheften, Include/Exclude entscheiden.' },
-    { id: 'report', label: 'PRISMA & Report', intro: 'PRISMA-2020-Fluss, Checkliste und Disclosure, aus dem Screening erzeugt.' },
-    { id: 'data', label: 'Daten & Repo', intro: 'Mit dem Projektordner verbinden, eine Datei pro Reviewer:in, Export und Import.' }
-];
-
 // State
 
 const state = {
@@ -170,6 +164,40 @@ function reviewerPayload(key) {
              updated: new Date().toISOString(), decisions: state.reviewers[key] || {} };
 }
 
+// Deterministic on-disk form of a reviewer file: decisions sorted by paper id so a
+// git diff shows exactly which decisions changed and git blame attributes each to
+// its commit (the Git-provenance model, ADR-021). The in-memory shape is untouched;
+// only the serialized file is ordered.
+function sortedDecisions(d) {
+    const out = {};
+    Object.keys(d || {}).sort().forEach(function(k) { out[k] = d[k]; });
+    return out;
+}
+function reviewerFileText(key) {
+    const pl = reviewerPayload(key);
+    pl.decisions = sortedDecisions(pl.decisions);
+    return JSON.stringify(pl, null, 2);
+}
+
+// A paste-ready commit message summarizing the current session, so the reviewer's
+// commit documents the work and the commit author carries the provenance (ADR-021).
+function commitMessage() {
+    const d = curDec();
+    const ids = Object.keys(d);
+    let incl = 0, excl = 0;
+    const reasons = {};
+    ids.forEach(function(id) {
+        if (d[id].decision === 'Include') incl++; else excl++;
+        const r = d[id].reason;
+        if (r) reasons[r] = (reasons[r] || 0) + 1;
+    });
+    const lines = ['screening: ' + ids.length + ' Paper bewertet (' + incl + ' Include, ' + excl + ' Exclude)', ''];
+    lines.push('Reviewer-Datei: ' + state.reviewer + '.json');
+    const rk = Object.keys(reasons).sort();
+    if (rk.length) lines.push('Ausschlussgruende: ' + rk.map(function(r) { return r.replace(/_/g, ' ') + ' ' + reasons[r]; }).join(', '));
+    return lines.join('\n');
+}
+
 // --- IndexedDB: persist the directory handle so reconnect is one click ---
 function idb() {
     return new Promise(function(res, rej) {
@@ -240,7 +268,7 @@ async function writeCurrentReviewer() {
     if (!dirHandle) return false;
     const fh = await dirHandle.getFileHandle(state.reviewer + '.json', { create: true });
     const w = await fh.createWritable();
-    await w.write(JSON.stringify(reviewerPayload(state.reviewer), null, 2));
+    await w.write(reviewerFileText(state.reviewer));
     await w.close();
     return true;
 }
@@ -384,11 +412,10 @@ window.initializePrisma = function() {
     console.log('[PRISMA] initialized, ' + papers.length + ' papers, FS ' + (FS_SUPPORTED ? 'supported' : 'fallback'));
 };
 
-// map any persisted v3 surface id onto the three v4 surfaces
+// The tool is one workspace; the record and data functions open as panels, never
+// as a persisted surface, so load always lands on screening (ADR-020).
 function normalizeSurface() {
-    const map = { workspace: 'screening', flow: 'report', agreement: 'report', reviewers: 'data', checklist: 'report', report: 'report', data: 'data' };
-    if (map[state.surface]) state.surface = map[state.surface];
-    if (['screening', 'report', 'data'].indexOf(state.surface) === -1) state.surface = 'screening';
+    state.surface = 'screening';
 }
 
 // Shell + sub-navigation
@@ -396,31 +423,69 @@ function normalizeSurface() {
 function renderShell() {
     const root = document.getElementById('prisma-root');
     if (!root) return;
-    let html = '<div class="pt-subnav">';
-    SURFACES.forEach(function(s) {
-        html += '<button class="pt-subnav-btn' + (s.id === state.surface ? ' active' : '') +
-            '" data-surface="' + s.id + '">' + s.label + '</button>';
-    });
-    html += '</div>';
-    html += '<div class="pt-surface-intro" id="pt-surface-intro"></div>';
+    let html = '<div class="pt-wsbar-top"><span class="pt-wsbar-title">Screening</span>' +
+        '<span class="pt-spacer"></span><div class="pt-ws-tools">' +
+        '<button class="pt-btn pt-tool-record" type="button"><i class="fas fa-file-lines"></i> PRISMA-Record erzeugen</button>' +
+        '<button class="pt-btn pt-tool-data" type="button"><i class="fas fa-folder-open"></i> Daten &amp; Sync</button>' +
+        '</div></div>';
     html += '<div class="pt-surface" id="pt-surface"></div>';
+    html += '<div class="pt-overlay" id="pt-overlay" hidden>' +
+        '<div class="pt-overlay-backdrop"></div>' +
+        '<div class="pt-overlay-panel" role="dialog" aria-modal="true" aria-labelledby="pt-overlay-title" tabindex="-1">' +
+        '<div class="pt-overlay-head"><span class="pt-overlay-title" id="pt-overlay-title"></span>' +
+        '<button class="pt-overlay-x" id="pt-overlay-x" type="button" aria-label="Schliessen">&times;</button></div>' +
+        '<div class="pt-overlay-body" id="pt-overlay-body"></div></div></div>';
     root.innerHTML = html;
-    root.querySelectorAll('.pt-subnav-btn').forEach(function(btn) {
-        btn.addEventListener('click', function() { showSurface(btn.dataset.surface); });
+    root.querySelector('.pt-tool-record').addEventListener('click', function() { openPanel('report'); });
+    root.querySelector('.pt-tool-data').addEventListener('click', function() { openPanel('data'); });
+    root.querySelector('.pt-overlay-backdrop').addEventListener('click', closePanel);
+    root.querySelector('#pt-overlay-x').addEventListener('click', closePanel);
+    document.addEventListener('keydown', function(e) {
+        const ov = document.getElementById('pt-overlay');
+        if (e.key === 'Escape' && ov && !ov.hidden) closePanel();
     });
 }
 
+// One workspace: 'screening' is the permanent surface; 'report' and 'data' open as
+// on-demand panels (the record is a generated output, the data functions an edge
+// affordance), ADR-020. showSurface keeps its name for the test hook and browser
+// traces, and routes the two panel ids to the overlay.
 function showSurface(name) {
-    state.surface = name; saveLocal();
-    document.querySelectorAll('.pt-subnav-btn').forEach(function(b) { b.classList.toggle('active', b.dataset.surface === name); });
-    const intro = document.getElementById('pt-surface-intro');
-    const meta = SURFACES.filter(function(s) { return s.id === name; })[0];
-    if (intro && meta) intro.textContent = meta.intro;
-    const fn = { screening: renderScreening, report: renderReportSurface, data: renderData }[name];
-    if (fn) fn();
+    if (name === 'report' || name === 'data') { openPanel(name); return; }
+    state.surface = 'screening'; saveLocal();
+    renderScreening();
 }
 
 function surfaceEl() { return document.getElementById('pt-surface'); }
+
+// --- on-demand panels (report, data) over the screening workspace (ADR-020) ---
+let panelKind = null;
+let panelReturnFocus = null;
+
+function openPanel(kind) {
+    const ov = document.getElementById('pt-overlay'); if (!ov) return;
+    panelKind = kind;
+    panelReturnFocus = document.activeElement;
+    const title = document.getElementById('pt-overlay-title');
+    if (title) title.textContent = kind === 'report' ? 'PRISMA-Record' : 'Daten & Sync';
+    renderPanel();
+    ov.hidden = false;
+    const panel = ov.querySelector('.pt-overlay-panel');
+    if (panel && typeof panel.focus === 'function') panel.focus();
+}
+
+function renderPanel() {
+    const body = document.getElementById('pt-overlay-body'); if (!body) return;
+    if (panelKind === 'report') renderReportSurface(body);
+    else if (panelKind === 'data') renderData(body);
+}
+
+function closePanel() {
+    const ov = document.getElementById('pt-overlay'); if (ov) ov.hidden = true;
+    panelKind = null;
+    if (panelReturnFocus && typeof panelReturnFocus.focus === 'function') panelReturnFocus.focus();
+    panelReturnFocus = null;
+}
 
 // Decision helpers
 
@@ -501,30 +566,7 @@ function computeFlow(persp) {
     return f;
 }
 
-function reviewerKeys() {
-    let keys = [SEED];
-    Object.keys(state.reviewers).forEach(function(k) {
-        if (Object.keys(state.reviewers[k] || {}).length) keys.push(k);
-    });
-    return keys;
-}
-
 function reviewerLabel(k) { return k === SEED ? 'Seed (Expert:innen)' : k; }
-
-function perspectiveBar() {
-    let keys = reviewerKeys();
-    let html = '<div class="pt-persp">Perspektive Mensch: <select class="pt-persp-sel">';
-    keys.forEach(function(k) {
-        html += '<option value="' + k + '"' + (k === state.perspective ? ' selected' : '') + '>' + EC.escapeHtml(reviewerLabel(k)) + '</option>';
-    });
-    html += '</select></div>';
-    return html;
-}
-
-function attachPerspective(el, rerender) {
-    let sel = el.querySelector('.pt-persp-sel');
-    if (sel) sel.addEventListener('change', function() { state.perspective = sel.value; saveLocal(); rerender(); });
-}
 
 // Surface: Screening (read + search + pin evidence)
 
@@ -1098,16 +1140,13 @@ function closePinMenu() {
 
 // Surface: PRISMA & Report (flow + checklist + disclosure)
 
-function renderReportSurface() {
-    let el = surfaceEl(); if (!el) return;
-    let html = '';
-    html += '<div class="pt-report-top">' + perspectiveBar() +
-        '<p class="pt-muted">Diese Ansicht wird aus dem Screening berechnet.</p></div>';
+function renderReportSurface(targetEl) {
+    let el = targetEl || surfaceEl(); if (!el) return;
+    let html = '<p class="pt-muted pt-panel-lead">Aus dem Screening erzeugt: Fluss, Checkliste und Disclosure fuer den Methodenteil.</p>';
     html += '<section class="pt-rsec"><h3 class="pt-rsec-h">PRISMA-2020-Fluss (trAIce R1)</h3><div id="pt-sec-flow"></div></section>';
     html += '<section class="pt-rsec"><h3 class="pt-rsec-h">PRISMA-trAIce Checkliste</h3><div id="pt-sec-check"></div></section>';
     html += '<section class="pt-rsec"><h3 class="pt-rsec-h">AI-Disclosure</h3><div id="pt-sec-report"></div></section>';
     el.innerHTML = html;
-    attachPerspective(el, renderReportSurface);
     renderFlowInto(document.getElementById('pt-sec-flow'));
     renderChecklistInto(document.getElementById('pt-sec-check'));
     renderReportInto(document.getElementById('pt-sec-report'));
@@ -1136,7 +1175,7 @@ function renderFlowInto(el) {
     html += '<div class="pt-flow-box pt-flow-incl"><div class="pt-flow-h">Included</div>' +
         '<div class="pt-flow-n">Mensch (bindend) ' + f.humanIncl + '</div><div class="pt-flow-sub">KI (advisory) ' + f.aiIncl + '</div></div>';
     html += '</div>';
-    html += '<p class="pt-flow-caption">KI- und Mensch-Entscheidungen getrennt (PRISMA-trAIce R1). Perspektive Mensch oben waehlbar.</p>';
+    html += '<p class="pt-flow-caption">KI- und Mensch-Entscheidungen getrennt (PRISMA-trAIce R1).</p>';
     el.innerHTML = html;
 }
 
@@ -1229,17 +1268,15 @@ function disclosureMarkdown() {
 
 // Surface: Daten & Repo (sync: connect, per-reviewer files, export/import)
 
-function renderData() {
-    let el = surfaceEl(); if (!el) return;
+function renderData(targetEl) {
+    let el = targetEl || surfaceEl(); if (!el) return;
     let html = '<div class="pt-data">';
 
-    html += '<div class="pt-data-block"><h4>Reviewer-Identitaet</h4>' +
-        '<label class="pt-field"><span>Dein Kuerzel (Dateiname &lt;kuerzel&gt;.json)</span>' +
-        '<input class="pt-rev-id" value="' + EC.escapeHtml(state.reviewer) + '"></label></div>';
+    html += '<div class="pt-data-block"><p class="pt-muted pt-panel-lead">Provenienz ueber Git. Deine Entscheidungen liegen als eine Datei pro Reviewer:in in docs/data/screening/; wer was entschieden hat, traegt der Commit-Autor, kein Feld im Tool.</p></div>';
 
-    html += '<div class="pt-data-block"><h4>Direkt in den Projektordner speichern</h4>';
+    html += '<div class="pt-data-block"><h4>In den Projektordner speichern</h4>';
     if (FS_SUPPORTED) {
-        html += '<p class="pt-muted">Ordner docs/data/screening/ im lokalen Projektordner verbinden. Das Tool liest alle Reviewer-Dateien und schreibt deine bei jeder Entscheidung direkt hinein (Schema 0.2 mit Belegen). Die geschriebene Datei sicherst du danach mit deinem ueblichen Werkzeug.</p>';
+        html += '<p class="pt-muted">Ordner docs/data/screening/ im lokalen Klon verbinden. Das Tool liest alle Reviewer-Dateien und schreibt deine bei jeder Entscheidung diff-stabil hinein (Schema 0.2, nach Paper-ID sortiert). Danach committest du sie mit deinem ueblichen Werkzeug.</p>';
         html += '<div class="pt-data-actions">' +
             '<button class="pt-btn pt-connect">Mit Projektordner verbinden</button>' +
             '<button class="pt-btn pt-reconnect">Erneut verbinden</button>' +
@@ -1248,6 +1285,12 @@ function renderData() {
         html += '<p class="pt-aq-warn">Dieser Browser (Firefox/Safari) kann nicht direkt schreiben. Nutze Export/Import unten und lege die Datei manuell ab.</p>';
     }
     html += '</div>';
+
+    html += '<div class="pt-data-block"><h4>Commit vorbereiten</h4>' +
+        '<p class="pt-muted">Eine fertige Commit-Nachricht, die deine Session dokumentiert. Uebernimm sie in deinen Commit.</p>' +
+        '<div class="pt-data-actions"><button class="pt-btn pt-commitmsg">Commit-Nachricht erzeugen</button>' +
+        '<button class="pt-btn pt-commitmsg-copy" hidden>Kopieren</button></div>' +
+        '<pre class="pt-commitmsg-out" id="pt-commitmsg-out" hidden></pre></div>';
 
     html += '<div class="pt-data-block"><h4>Export / Import (Fallback, alle Browser)</h4><div class="pt-data-actions">' +
         '<button class="pt-btn pt-exp-rev">Eigene Datei exportieren (' + EC.escapeHtml(state.reviewer) + '.json)</button>' +
@@ -1258,19 +1301,25 @@ function renderData() {
     html += '</div>';
     el.innerHTML = html;
 
-    const rid = el.querySelector('.pt-rev-id');
-    if (rid) rid.addEventListener('change', function() {
-        const v = (rid.value || '').trim().replace(/[^a-zA-Z0-9_-]/g, '') || 'reviewer1';
-        state.reviewer = v; save(); updateConnStatus(); renderData();
-    });
     const conn = el.querySelector('.pt-connect'); if (conn) conn.addEventListener('click', connectRepo);
     const recon = el.querySelector('.pt-reconnect'); if (recon) recon.addEventListener('click', reconnectRepo);
-    const reload = el.querySelector('.pt-reload'); if (reload) reload.addEventListener('click', function() { loadAllReviewers().then(function() { renderData(); }); });
-    el.querySelector('.pt-exp-rev').addEventListener('click', function() { download(state.reviewer + '.json', JSON.stringify(reviewerPayload(state.reviewer), null, 2), 'application/json'); });
+    const reload = el.querySelector('.pt-reload'); if (reload) reload.addEventListener('click', function() { loadAllReviewers().then(function() { renderPanel(); }); });
+
+    const cm = el.querySelector('.pt-commitmsg');
+    const cmOut = el.querySelector('#pt-commitmsg-out');
+    const cmCopy = el.querySelector('.pt-commitmsg-copy');
+    if (cm) cm.addEventListener('click', function() {
+        cmOut.textContent = commitMessage();
+        cmOut.hidden = false;
+        if (cmCopy) cmCopy.hidden = false;
+    });
+    if (cmCopy) cmCopy.addEventListener('click', function() { if (navigator.clipboard) navigator.clipboard.writeText(cmOut.textContent); });
+
+    el.querySelector('.pt-exp-rev').addEventListener('click', function() { download(state.reviewer + '.json', reviewerFileText(state.reviewer), 'application/json'); });
     el.querySelector('.pt-exp-csv').addEventListener('click', exportCsv);
     el.querySelector('.pt-clear').addEventListener('click', function() {
         if (!confirm('Eigene Entscheidungen (' + state.reviewer + ') verwerfen?')) return;
-        state.reviewers[state.reviewer] = {}; state.index = 0; save(); showSurface('screening');
+        state.reviewers[state.reviewer] = {}; state.index = 0; save(); closePanel(); renderScreening();
     });
     el.querySelector('.pt-imp').addEventListener('change', function(e) {
         const file = e.target.files[0]; if (!file) return;
@@ -1287,7 +1336,7 @@ function renderData() {
             const rawKey = obj.reviewer || file.name.replace(/\.json$/, '');
             let key = String(rawKey).trim().replace(/[^a-zA-Z0-9_-]/g, '') || 'import';
             state.reviewers[key] = obj.decisions;
-            save(); renderData();
+            save(); renderPanel();
         };
         r.readAsText(file);
     });
@@ -1348,6 +1397,7 @@ const TEST_HOOK = {
     renderMarkdown: renderMarkdown, splitDocLayers: splitDocLayers,
     // generated report text and persistence payload
     disclosureMarkdown: disclosureMarkdown, reviewerPayload: reviewerPayload,
+    reviewerFileText: reviewerFileText, sortedDecisions: sortedDecisions, commitMessage: commitMessage,
     // stateful seams for inline fixtures
     setPapers: function(p) { papers = p; },
     getState: function() { return state; },

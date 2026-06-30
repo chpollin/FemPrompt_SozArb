@@ -669,6 +669,39 @@ if (window.__SEED_PAPERS__ && window.__SEED_PAPERS__.length) {
 }
 
 // ============================================================
+// Section H: Git provenance (ADR-021): deterministic file, commit message
+// ============================================================
+
+test('sortedDecisions orders decision keys for a stable diff', function() {
+    const d = { c: { decision: 'Include' }, a: { decision: 'Exclude' }, b: { decision: 'Include' } };
+    assertEqual(Object.keys(T.sortedDecisions(d)).join(','), 'a,b,c');
+    assertEqual(Object.keys(T.sortedDecisions(null)).length, 0, 'null is safe');
+});
+test('reviewerFileText sorts decisions by paper id and is body-stable', function() {
+    T.getState().reviewers.rDet = { z9: { decision: 'Include', categories: {} }, a1: { decision: 'Exclude', categories: {} } };
+    const txt = T.reviewerFileText('rDet');
+    assert(txt.indexOf('"a1"') < txt.indexOf('"z9"'), 'a1 block precedes z9 block');
+    assertContains(txt, '"schema": "' + T.REVIEWER_SCHEMA + '"');
+    const strip = function(s) { return s.replace(/"updated": "[^"]*",/, ''); };
+    assertEqual(strip(txt), strip(T.reviewerFileText('rDet')), 'same state serializes identically (modulo timestamp)');
+    delete T.getState().reviewers.rDet;
+});
+test('commitMessage summarizes the session counts and exclusion reasons', function() {
+    T.getState().reviewers.rCM = {
+        p1: { decision: 'Include' }, p2: { decision: 'Include' },
+        p3: { decision: 'Exclude', reason: 'Duplicate' }, p4: { decision: 'Exclude', reason: 'Duplicate' }
+    };
+    const prevReviewer = T.getState().reviewer;
+    T.getState().reviewer = 'rCM';
+    const msg = T.commitMessage();
+    assertContains(msg, '4 Paper bewertet (2 Include, 2 Exclude)');
+    assertContains(msg, 'Reviewer-Datei: rCM.json');
+    assertContains(msg, 'Duplicate 2');
+    delete T.getState().reviewers.rCM;
+    T.getState().reviewer = prevReviewer;
+});
+
+// ============================================================
 // Restore localStorage and report
 // ============================================================
 

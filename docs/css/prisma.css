@@ -526,3 +526,44 @@ body.pt-fullscreen *, body.pt-fullscreen *::before, body.pt-fullscreen *::after 
   .pt-agree, .pt-report { grid-template-columns: 1fr; }
   .pt-flow-split { grid-template-columns: 1fr; }
 }
+
+/* ============================ WORKSPACE TOOLBAR + PANELS (ADR-020) ============================ */
+.pt-wsbar-top {
+  display: flex; align-items: center; gap: 0.6rem;
+  padding: 0.2rem 0.1rem 0.7rem;
+}
+.pt-wsbar-title { font-family: var(--pt-serif); font-size: var(--pt-lg); font-weight: 600; color: var(--pt-ink); }
+.pt-ws-tools { display: inline-flex; gap: 0.4rem; }
+
+.pt-overlay { position: fixed; inset: 0; z-index: 60; }
+.pt-overlay[hidden] { display: none; }
+.pt-overlay-backdrop { position: absolute; inset: 0; background: oklch(0.3 0.02 262 / 0.28); }
+.pt-overlay-panel {
+  position: absolute; top: 0; right: 0; height: 100%; width: min(620px, 94vw);
+  background: var(--pt-surface); box-shadow: var(--pt-shadow-lg);
+  display: flex; flex-direction: column; outline: none;
+  animation: pt-slidein 0.16s ease;
+}
+@keyframes pt-slidein { from { transform: translateX(18px); opacity: 0.6; } to { transform: none; opacity: 1; } }
+.pt-overlay-head {
+  display: flex; align-items: center; gap: 0.6rem;
+  padding: 0.85rem 1.1rem; border-bottom: 1px solid var(--pt-border);
+}
+.pt-overlay-title { font-family: var(--pt-serif); font-size: var(--pt-lg); font-weight: 600; color: var(--pt-ink); flex: 1; }
+.pt-overlay-x {
+  border: none; background: none; font-size: 22px; line-height: 1; color: var(--pt-ink-2);
+  cursor: pointer; padding: 0 0.35rem; border-radius: var(--pt-r-sm);
+}
+.pt-overlay-x:hover { background: var(--pt-surface-3); color: var(--pt-ink); }
+.pt-overlay-body { flex: 1; overflow-y: auto; padding: 1.1rem 1.2rem; }
+.pt-panel-lead { margin-top: 0; }
+.pt-commitmsg-out {
+  margin-top: 0.6rem; padding: 0.7rem 0.85rem; background: var(--pt-surface-3);
+  border: 1px solid var(--pt-border); border-radius: var(--pt-r-sm);
+  font-family: var(--pt-mono); font-size: var(--pt-sm); white-space: pre-wrap; color: var(--pt-ink);
+}
+
+/* a visible keyboard focus indicator (WCAG 2.4.7) */
+.pt-fullscreen .pt-btn:focus-visible,
+.pt-overlay-x:focus-visible,
+.pt-overlay-panel:focus-visible { outline: 2px solid var(--pt-human); outline-offset: 2px; }
