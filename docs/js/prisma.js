@@ -100,8 +100,6 @@ let papers = [];
 let dirHandle = null;          // connected File System Access directory handle
 let corpusIndex = null;        // id -> { t, ay, kd, src, n, x } for corpus full-text search
 let corpusIndexPromise = null;
-let machineEvidence = null;    // id -> { category -> [ {term, snippet} ] }, AI-origin (R2, ADR-018)
-let machineEvidencePromise = null;
 let corpusQuery = '';          // current corpus-wide search (left pane)
 const textCache = {};            // paperId -> raw knowledge-doc markdown (or null)
 let docHtmlCurrent = '';       // rendered HTML of the active layer (for re-highlight)
@@ -112,14 +110,14 @@ let pendingInText = null;      // in-text query to apply once the document has l
 let pinTerm = '', pinSnippet = '', pinOrigin = 'human'; // pinOrigin = source layer of the staged snippet
 
 // the in-progress (pre-commit) decision for the open paper
-let work = { pid: null, cats: {}, override: false, reason: null, evidence: {}, machineInjected: false };
+let work = { pid: null, cats: {}, override: false, reason: null, evidence: {} };
 
 function curDec() {
     if (!state.reviewers[state.reviewer]) state.reviewers[state.reviewer] = {};
     return state.reviewers[state.reviewer];
 }
 
-function resetWork(p) { work = { pid: p.id, cats: {}, override: false, reason: null, evidence: {}, machineInjected: false }; }
+function resetWork(p) { work = { pid: p.id, cats: {}, override: false, reason: null, evidence: {} }; }
 
 // Persistence: localStorage cache + File System Access (repo files)
 
@@ -291,17 +289,6 @@ function loadCorpusIndex() {
     return corpusIndexPromise;
 }
 
-// Machine category evidence (R2, ADR-018): per paper and LLM-flagged category, the
-// model's reasoning as an AI-origin Beleg. Advisory, never binding, never persisted.
-function loadMachineEvidence() {
-    if (machineEvidencePromise) return machineEvidencePromise;
-    machineEvidencePromise = fetch('data/machine_evidence.json')
-        .then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-        .then(function(d) { machineEvidence = d.papers || {}; return machineEvidence; })
-        .catch(function(e) { console.warn('[PRISMA] machine evidence load failed:', e.message); machineEvidence = {}; return machineEvidence; });
-    return machineEvidencePromise;
-}
-
 // Fetch the served knowledge document for a paper (FR-11). Single pluggable seam:
 // swapping in raw local full text (copyright-gated) only changes this function.
 function fetchPaperText(p) {
@@ -399,13 +386,6 @@ window.initializePrisma = function() {
     loadLocal();
     normalizeSurface();
     loadCorpusIndex(); // background: ready by the time the user runs a corpus search
-    loadMachineEvidence().then(function() {
-        // a paper opened before the map arrived gets its machine evidence now
-        if (state.surface === 'screening' && papers.length) {
-            let p = papers[state.index];
-            if (p && !curDec()[p.id]) { injectMachineEvidence(p); refreshAssess(); }
-        }
-    });
     renderShell();
     showSurface(state.surface || 'screening');
     updateConnStatus();
@@ -533,8 +513,8 @@ function abstractQuality(p) {
     return { ok: true };
 }
 
-// Counts human Belege only; AI-origin evidence (machine-preloaded or pinned from
-// the KI-Extraktion layer) is advisory and excluded from the count (ADR-018).
+// Counts human Belege only; AI-origin evidence (pinned from the KI-Extraktion
+// reading layer, ADR-016) is advisory and excluded from the count.
 function evidenceCount(rec) {
     if (!rec || !rec.evidence) return 0;
     return ALL_CATS.reduce(function(s, c) {
@@ -579,7 +559,6 @@ function renderScreening() {
     let p = papers[state.index];
     const dec = curDec()[p.id];
     if (!dec && work.pid !== p.id) resetWork(p);
-    if (!dec) injectMachineEvidence(p);
 
     const screened = Object.keys(curDec()).length;
     const pct = papers.length ? Math.round(screened / papers.length * 100) : 0;
@@ -828,24 +807,6 @@ function unpinEvidence(cat, idx) {
     refreshAssess();
 }
 
-// Pre-load the machine's category assessment as AI-origin Belege (R2, ADR-018).
-// They render marked KI next to the human Belege, but never set work.cats (so they
-// cannot bind the decision), never raise evidence_count, and never enter the
-// reviewer payload. Injected once per opened, unscreened paper; a no-op if the map
-// has not loaded yet, so a later refresh injects.
-function injectMachineEvidence(p) {
-    if (!p || work.pid !== p.id || work.machineInjected || !machineEvidence) return;
-    work.machineInjected = true;
-    let rec = machineEvidence[p.id];
-    if (!rec) return;
-    ALL_CATS.forEach(function(cat) {
-        (rec[cat] || []).forEach(function(ev) {
-            if (!work.evidence[cat]) work.evidence[cat] = [];
-            work.evidence[cat].push({ term: ev.term || 'KI-Assessment', snippet: ev.snippet || '', origin: 'ai' });
-        });
-    });
-}
-
 // ---- right: assessment (categories + evidence + derived decision + collapsed AI) ----
 function assessInnerHtml(p, dec) {
     if (dec) return assessLockedHtml(p, dec);
@@ -1077,7 +1038,7 @@ function commit() {
     let fin = finalDecisionOf(work.cats, work.override);
     if (fin === 'Exclude' && !work.reason) { refreshAssess(); return; }
     // the persisted record holds only human Belege; AI-origin evidence stays
-    // advisory and session-only, never written to the reviewer file (ADR-018)
+    // advisory and session-only, never written to the reviewer file (ADR-016)
     const humanEvidence = {};
     ALL_CATS.forEach(function(c) {
         const items = (work.evidence[c] || []).filter(function(ev) { return (ev.origin || 'human') !== 'ai'; });
@@ -1405,7 +1366,6 @@ const TEST_HOOK = {
     curDec: curDec, resetWork: resetWork,
     pinEvidence: pinEvidence, unpinEvidence: unpinEvidence, commit: commit,
     evidenceListHtml: evidenceListHtml,
-    setMachineEvidence: function(m) { machineEvidence = m; }, injectMachineEvidence: injectMachineEvidence,
     // surface + reading-layer drivers (browser-agent traces on the real page)
     showSurface: function(s) { showSurface(s); },
     setReadMode: function(m) { setReadMode(m); },

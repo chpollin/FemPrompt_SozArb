@@ -574,8 +574,7 @@ test('import: re-importing the same row is idempotent (unchanged, not re-added)'
 });
 
 // ============================================================
-// Section G: P1 acceptance checks (round-trip, schema migration, seed
-// benchmark) and the ADR-018 machine-evidence injection
+// Section G: P1 acceptance checks (round-trip, schema migration, seed benchmark)
 // ============================================================
 
 test('FR-08: a reviewer export survives a JSON round-trip and reloads losslessly', function() {
@@ -633,21 +632,6 @@ test('reviewer schema 0.1 to 0.2: a pre-evidence file loads and behaves as 0.2',
     // re-exporting stamps the current schema, completing the upgrade to 0.2
     assertEqual(T.reviewerPayload('old').schema, 'femprompt-prisma-reviewer/0.2');
     delete S.reviewers.old;
-});
-
-test('injectMachineEvidence pre-loads machine category evidence as advisory AI Belege (ADR-018)', function() {
-    T.setMachineEvidence({ mePaper: { Gender: [{ term: 'KI-Assessment', snippet: 'model reasoning for Gender' }] } });
-    T.resetWork({ id: 'mePaper' });
-    T.injectMachineEvidence({ id: 'mePaper' });
-    var w = T.getWork();
-    assert(w.evidence.Gender && w.evidence.Gender.length === 1, 'machine evidence injected');
-    assertEqual(w.evidence.Gender[0].origin, 'ai', 'injected evidence is AI-origin');
-    assert(!w.cats.Gender, 'injected machine evidence does not set the binding category');
-    assertEqual(T.finalDecisionOf(w.cats, false), 'Exclude', 'machine evidence alone cannot derive Include');
-    // idempotent: a second call on the same opened paper does not double-inject
-    T.injectMachineEvidence({ id: 'mePaper' });
-    assertEqual(w.evidence.Gender.length, 1, 'injection is once per opened paper');
-    T.setMachineEvidence(null);
 });
 
 // FR-05: the real served seed reproduces the benchmark marginals. The headless runner
