@@ -61,7 +61,7 @@ FEATURED_PAPERS = {
 
 
 # ---------------------------------------------------------------------------
-# Reusable loaders (from generate_promptotyping_data.py)
+# Reusable loaders
 # ---------------------------------------------------------------------------
 
 def extract_prompt_constants(py_path: Path) -> dict:

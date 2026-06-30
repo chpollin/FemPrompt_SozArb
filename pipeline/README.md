@@ -19,7 +19,7 @@ corpus/zotero_export.json
         |
 6. distill_knowledge.py        → pipeline/knowledge/distilled/
         |
-7. generate_vault.py           → vault/
+7. scripts/generate_vault_v2.py → vault/, docs/vault/Papers/
 ```
 
 ## Scripts (pipeline/scripts/)
@@ -30,8 +30,7 @@ corpus/zotero_export.json
 | `convert_to_markdown.py` | PDF→Markdown mit Docling | Fertig |
 | `validate_markdown_enhanced.py` | Multi-Layer Validierung | Fertig |
 | `postprocess_markdown.py` | Artefakt-Bereinigung | Fertig |
-| `distill_knowledge.py` | Knowledge Distillation (3-Stage) | Fertig (249 Docs) |
-| `generate_vault.py` | Obsidian Vault generieren | Ausstehend |
+| `distill_knowledge.py` | Knowledge Distillation (3-Stage) | Fertig |
 | `validate_knowledge_docs.py` | Knowledge-Dokumente verifizieren | Fertig |
 | `utils.py` | Hilfsfunktionen (Logging, API, Config) | Aktiv |
 

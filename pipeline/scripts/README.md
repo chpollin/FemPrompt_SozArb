@@ -15,7 +15,7 @@ Scripts fuer die Verarbeitungspipeline: PDF → Markdown → Knowledge → Vault
          |
 5. distill_knowledge.py         # Knowledge Distillation (3-Stage)
          |
-6. generate_vault.py            # Obsidian Vault erstellen
+6. scripts/generate_vault_v2.py # Obsidian Vault erstellen
 ```
 
 ## Scripts
@@ -26,8 +26,7 @@ Scripts fuer die Verarbeitungspipeline: PDF → Markdown → Knowledge → Vault
 | `convert_to_markdown.py` | PDFs zu Markdown (Docling) | Fertig |
 | `validate_markdown_enhanced.py` | Multi-Layer Validierung + PDF-Vergleich | Fertig |
 | `postprocess_markdown.py` | Konservative Artefakt-Bereinigung | Fertig |
-| `distill_knowledge.py` | Knowledge Distillation (3-Stage) | Fertig (249 Docs) |
-| `generate_vault.py` | Obsidian Vault generieren | Ausstehend |
+| `distill_knowledge.py` | Knowledge Distillation (3-Stage) | Fertig |
 | `validate_knowledge_docs.py` | Knowledge-Dokumente verifizieren | Fertig |
 | `utils.py` | Hilfsfunktionen (Logging, API, Config) | Aktiv |
 
@@ -51,8 +50,8 @@ python pipeline/scripts/postprocess_markdown.py --input-dir pipeline/markdown --
 # Knowledge Distillation
 python pipeline/scripts/distill_knowledge.py --input pipeline/markdown --output pipeline/knowledge/distilled
 
-# Vault generieren
-python pipeline/scripts/generate_vault.py --input pipeline/knowledge/distilled --output vault/
+# Vault generieren (Generator liegt in scripts/, nicht pipeline/scripts/)
+python scripts/generate_vault_v2.py --skip-llm
 ```
 
 ## Konfiguration

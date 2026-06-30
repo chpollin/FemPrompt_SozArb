@@ -52,7 +52,7 @@ VAULT_PAPERS_DIR = os.path.join(REPO_ROOT, "docs", "vault", "Papers")
 
 
 def safe_title(title):
-    """Convert title to safe filename, matching generate_vault.py logic."""
+    """Convert title to safe filename, matching generate_vault_v2.py logic."""
     return re.sub(r'[<>:"/\\|?*\n\r]', '-', title).strip('. ')
 
 

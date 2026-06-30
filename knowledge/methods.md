@@ -70,7 +70,7 @@ Pipeline workflow, all scripts in `pipeline/scripts/`, full parameters via `--he
 | 4. Post-processing | `postprocess_markdown.py` | Markdown | `pipeline/markdown_clean/` |
 | 5. Human review | `markdown_reviewer.html` | Markdown and PDFs | JSON export |
 | 6. Knowledge distillation | `distill_knowledge.py` | Markdown | `pipeline/knowledge/distilled/` |
-| 7. Vault building | `generate_vault.py` / `scripts/generate_vault_v2.py` | Knowledge docs and assessment CSVs | `vault/` |
+| 7. Vault building | `scripts/generate_vault_v2.py` | Knowledge docs and assessment CSVs | `vault/` |
 
 PDF acquisition uses four fallback strategies in priority order (Zotero, DOI, Unpaywall, ArXiv). A substantial fraction of PDFs sits behind access barriers; the acquisition, conversion, and distillation loss chain is quantified in [[verification]]. Five conversions failed on corrupt or invalid source files and are documented so the gap is named:
 

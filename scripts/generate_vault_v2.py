@@ -229,7 +229,7 @@ def build_knowledge_doc_to_zotero_index(
 
 
 # ---------------------------------------------------------------------------
-# Step 1.6: Pipeline prompt extraction (reused from generate_promptotyping_data.py)
+# Step 1.6: Pipeline prompt extraction (reused from generate_promptotyping_data_v2.py)
 # ---------------------------------------------------------------------------
 
 def extract_prompt_constants(py_path: Path) -> dict:
