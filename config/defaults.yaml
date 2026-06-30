@@ -15,12 +15,12 @@ api:
 
 # Pipeline Paths (relative to project root)
 paths:
-  pdfs: "pipeline/pdfs"
-  markdown: "pipeline/markdown"
-  markdown_clean: "pipeline/markdown_clean"
-  knowledge_distilled: "pipeline/knowledge/distilled"
-  validation_reports: "pipeline/validation_reports"
-  vault: "vault"
+  pdfs: "generated/pdfs"
+  markdown: "generated/markdown"
+  markdown_clean: "generated/markdown_clean"
+  knowledge_distilled: "generated/distilled"
+  validation_reports: "generated/validation_reports"
+  vault: "generated/vault"
 
 # Knowledge Distillation
 knowledge:

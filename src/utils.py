@@ -48,7 +48,7 @@ def load_env_file(env_path: Optional[Path] = None) -> Dict[str, str]:
         Dictionary of environment variables loaded
     """
     if env_path is None:
-        env_path = get_project_root().parent / '.env'
+        env_path = get_project_root() / '.env'
 
     loaded = {}
 
@@ -199,7 +199,7 @@ def simplify_title(title: str, max_length: int = 50) -> str:
 
 def get_project_root() -> Path:
     """
-    Get project root directory (parent of pipeline/)
+    Get project root directory (parent of src/)
 
     Returns:
         Path to project root
@@ -459,8 +459,8 @@ def load_config(config_path: Optional[Path] = None) -> Dict[str, Any]:
 
     # Determine config file path
     if config_path is None:
-        # Try project root first (pipeline/scripts -> pipeline -> project root)
-        project_root = get_project_root().parent
+        # src/utils.py -> src/ -> project root
+        project_root = get_project_root()
         config_path = project_root / 'config' / 'defaults.yaml'
 
     if not config_path.exists():
