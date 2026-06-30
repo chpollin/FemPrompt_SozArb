@@ -453,9 +453,9 @@ def get_default_config() -> Dict[str, Any]:
             'delay': 1.0
         },
         'paths': {
-            'input': 'pipeline/markdown',
-            'output': 'pipeline/knowledge/distilled',
-            'pdfs': 'pipeline/pdfs'
+            'input': 'generated/markdown',
+            'output': 'generated/distilled',
+            'pdfs': 'generated/pdfs'
         },
         'quality': {
             'min_confidence': 70,

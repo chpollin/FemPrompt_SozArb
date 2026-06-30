@@ -6,7 +6,7 @@ Downloads PDF attachments from Zotero and creates a report of
 which papers have PDFs and which don't.
 
 Usage:
-    python download_zotero_pdfs.py --output pipeline/pdfs/
+    python src/acquire/download_zotero_pdfs.py --output generated/pdfs/
 """
 
 import argparse
@@ -75,9 +75,9 @@ def extract_author_year(item: dict) -> str:
 
 def main():
     parser = argparse.ArgumentParser(description='Download PDFs from Zotero Group')
-    parser.add_argument('--output', '-o', default='pipeline/pdfs',
+    parser.add_argument('--output', '-o', default='generated/pdfs',
                         help='Output directory for PDFs')
-    parser.add_argument('--report', '-r', default='pipeline/pdf_acquisition_report.json',
+    parser.add_argument('--report', '-r', default='generated/pdf_acquisition_report.json',
                         help='Report file path')
     parser.add_argument('--limit', type=int, help='Limit number of items (for testing)')
     parser.add_argument('--delay', type=float, default=0.5,

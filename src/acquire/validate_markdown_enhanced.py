@@ -10,8 +10,8 @@ Extends basic validation with:
 - Confidence scoring and review queue generation
 
 Usage:
-    python validate_markdown_enhanced.py --md-dir pipeline/markdown --pdf-dir pipeline/pdfs
-    python validate_markdown_enhanced.py --md-dir pipeline/markdown --pdf-dir pipeline/pdfs --llm-check
+    python validate_markdown_enhanced.py --md-dir generated/markdown --pdf-dir generated/pdfs
+    python validate_markdown_enhanced.py --md-dir generated/markdown --pdf-dir generated/pdfs --llm-check
 """
 
 import argparse
@@ -280,7 +280,7 @@ class MarkdownAnalyzer:
 class LLMSemanticValidator:
     """LLM-based semantic completeness checking"""
 
-    def __init__(self, api_key: str, model: str = "claude-haiku-4-5-20241022"):
+    def __init__(self, api_key: str, model: str = "claude-haiku-4-5-20251001"):
         self.client = Anthropic(api_key=api_key)
         self.model = model
 
@@ -862,7 +862,7 @@ def main():
         help="Directory containing source PDF files"
     )
     parser.add_argument(
-        "--output-dir", default="pipeline/validation_reports",
+        "--output-dir", default="generated/validation_reports",
         help="Directory for output reports"
     )
     parser.add_argument(

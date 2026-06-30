@@ -10,7 +10,6 @@ Scripts für den Human vs. Agent Assessment Benchmark.
 | `merge_assessments.py` | Human + Agent Assessments zusammenführen | 2x CSV | Merged CSV |
 | `calculate_agreement.py` | Agreement-Metriken berechnen (Kappa) | Merged CSV | Metriken-JSON |
 | `analyze_disagreements.py` | Divergenzen qualitativ analysieren | Merged CSV | Disagreements-CSV |
-| `run_phase2_pipeline.py` | Phase 2 Pipeline orchestrieren | - | - |
 
 ## Workflow
 
@@ -33,40 +32,40 @@ analyze_disagreements.py
 ### LLM-Assessment durchführen
 
 ```bash
-python benchmark/scripts/run_llm_assessment.py \
+python src/assess/run_llm_assessment.py \
   --input corpus/papers_metadata.csv \
-  --config benchmark/config/categories.yaml \
-  --output benchmark/data/llm_assessment.csv
+  --config assessment/categories.yaml \
+  --output assessment/llm_assessment.csv
 ```
 
 ### Assessments zusammenführen
 
 ```bash
-python benchmark/scripts/merge_assessments.py \
-  --human benchmark/data/human_assessment.csv \
-  --agent benchmark/data/llm_assessment.csv \
-  --output benchmark/data/merged_comparison.csv
+python src/assess/merge_assessments.py \
+  --human assessment/human_assessment.csv \
+  --agent assessment/llm_assessment.csv \
+  --output assessment/merged_comparison.csv
 ```
 
 ### Agreement berechnen
 
 ```bash
-python benchmark/scripts/calculate_agreement.py \
-  --input benchmark/data/merged_comparison.csv \
-  --output benchmark/results/agreement_metrics.json
+python src/assess/calculate_agreement.py \
+  --input assessment/merged_comparison.csv \
+  --output generated/benchmark-results/agreement_metrics.json
 ```
 
 ### Disagreements analysieren
 
 ```bash
-python benchmark/scripts/analyze_disagreements.py \
-  --input benchmark/data/merged_comparison.csv \
-  --output benchmark/results/disagreement_cases.csv
+python src/assess/analyze_disagreements.py \
+  --input assessment/merged_comparison.csv \
+  --output generated/benchmark-results/disagreement_cases.csv
 ```
 
 ## Konfiguration
 
-Assessment-Schema: `benchmark/config/categories.yaml`
+Assessment-Schema: `assessment/categories.yaml`
 
 Enthält:
 - die zehn Kategorien (Technik und Sozial)

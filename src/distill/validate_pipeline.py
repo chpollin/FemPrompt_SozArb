@@ -32,7 +32,7 @@ if hasattr(sys.stdout, 'reconfigure'):
 
 
 def get_project_root() -> Path:
-    """Get project root (two levels up from pipeline/scripts/)."""
+    """Get project root (three levels up from src/distill/)."""
     return Path(__file__).parent.parent.parent
 
 
@@ -87,7 +87,7 @@ class PipelineValidator:
         self.stat("pdfs", len(pdfs))
 
         if len(pdfs) == 0:
-            self.error(1, "No PDFs found in pipeline/pdfs/")
+            self.error(1, f"No PDFs found in {pdf_dir}")
         elif len(pdfs) < corpus_count * 0.5:
             self.warn(1, f"Only {len(pdfs)}/{corpus_count} PDFs ({len(pdfs)/corpus_count*100:.0f}%) - expected at least 50%")
 

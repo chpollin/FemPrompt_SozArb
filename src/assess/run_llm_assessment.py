@@ -362,7 +362,7 @@ def main():
     # Kosten berechnen (modellabhaengig)
     COST_PER_MTOK = {
         'claude-haiku-4-5-20251001': (0.80, 4.00),
-        'claude-sonnet-4-6-20250514': (3.00, 15.00),
+        'claude-sonnet-4-6': (3.00, 15.00),
     }
     input_rate, output_rate = COST_PER_MTOK.get(args.model, (1.00, 5.00))
     input_cost = (total_input_tokens / 1_000_000) * input_rate
