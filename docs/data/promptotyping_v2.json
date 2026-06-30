@@ -69,14 +69,14 @@
         }
       },
       "concepts": [
-        "Gender-Based Violence Intervention Technologies",
-        "Feminist AI",
         "Capacity Building in AI Literacy",
+        "Feminist AI",
+        "Gender-Based Violence Intervention Technologies",
+        "Intersectional Analysis in AI Systems",
         "Paper-to-Prototype-to-Pilot Methodology",
-        "Regional Hub-Based Implementation",
-        "Design Justice Principles",
         "Algorithmic Bias Assessment",
-        "Intersectional Analysis in AI Systems"
+        "Regional Hub-Based Implementation",
+        "Design Justice Principles"
       ],
       "knowledge_summary": "Das f<a+i>r Netzwerk hat über 2021-2024 nachgewiesen, dass eine kombinierte Strategie aus Forschung, Prototyping und Pilotierung mit echter Community-Beteiligung zu transformativen KI-Anwendungen führt, die Geschlechtergerechtigkeit, Sicherheit und Zugang zu Justiz für marginalisierte Gruppen verbessern.",
       "knowledge_sections": {
@@ -154,14 +154,14 @@
         }
       },
       "concepts": [
-        "Intersectional Feminism in Technology",
-        "AI Team Diversity and Representation",
-        "Participatory Design in AI Development",
         "Algorithmic Bias",
         "Feminist Ethics in AI",
+        "AI Team Diversity and Representation",
+        "Explainable AI (XAI)",
         "Gender Bias in Algorithmic Decision-Making",
+        "Intersectional Feminism in Technology",
         "Facial Recognition Disparities",
-        "Explainable AI (XAI)"
+        "Participatory Design in AI Development"
       ],
       "knowledge_summary": "Empirische Analyse zeigt signifikante geschlechtsspezifische und rassifizierte Verzerrungen in KI-Systemen: männliche Kandidaten erhalten höhere Hiring-Scores als gleich qualifizierte Frauen (p=0.001), und Black Women erleben 34,5% Fehlerrate in Facial-Recognition-Systemen gegenüber 1,2% bei White Men. Allerdings zeigt sich eine Lücke zwischen Awareness für Fairness-Probleme und deren praktischer ",
       "knowledge_sections": {
@@ -232,14 +232,14 @@
         }
       },
       "concepts": [
-        "Predictive Analytics in Social Services",
-        "Human-Centered AI Practice",
-        "Algorithmic Bias",
-        "Ethical AI Governance",
-        "AI Literacy",
-        "Digital Divide",
         "Social Work Core Competencies Integration",
-        "Algorithmic Fairness"
+        "Algorithmic Bias",
+        "AI Literacy",
+        "Algorithmic Fairness",
+        "Ethical AI Governance",
+        "Human-Centered AI Practice",
+        "Digital Divide",
+        "Predictive Analytics in Social Services"
       ],
       "knowledge_summary": "AI-Literatur sollte in alle neun Kernkompetenzen der Sozialen Arbeit integriert werden, um Fachkräfte in die Lage zu versetzen, AI-getriebene Ungleichheiten zu adressieren, ethische Governance von AI-Systemen zu fördern und AI-Anwendungen verantwortungsvoll in die Praxis zu integrieren.",
       "knowledge_sections": {
@@ -315,13 +315,13 @@
         }
       },
       "concepts": [
-        "Vulnerable Population Inclusion",
-        "Cross-Cultural AI Governance",
         "Context-Dependent Fairness Criteria",
         "Participatory Artificial Intelligence",
         "Algorithmic Bias in Public Administration",
+        "Vulnerable Population Inclusion",
+        "Automated Decision-Making in Welfare Systems",
         "Algorithmic Fairness in Social Services",
-        "Automated Decision-Making in Welfare Systems"
+        "Cross-Cultural AI Governance"
       ],
       "knowledge_summary": "Gerechtigkeitskriterien für staatliche Leistungen sind kultur- und kontextabhängig, daher reicht ein standardisiertes KI-System nicht aus. Stattdessen sind flexible, adaptive Systeme notwendig, die unter Einbeziehung aller gesellschaftlichen Akteure, besonders vulnerabler Gruppen, entwickelt werden.",
       "knowledge_sections": {
@@ -393,13 +393,13 @@
         }
       },
       "concepts": [
-        "Epistemic Injustice in Algorithmic Systems",
-        "Rights-Based Framework for AI Governance",
-        "Ethical AI Literacy",
         "Participatory Governance in Digital Social Services",
         "Automation Bias and Algorithm Aversion",
-        "Differential Impact Assessment",
-        "Algorithmic Discrimination in Social Services"
+        "Algorithmic Discrimination in Social Services",
+        "Rights-Based Framework for AI Governance",
+        "Epistemic Injustice in Algorithmic Systems",
+        "Ethical AI Literacy",
+        "Differential Impact Assessment"
       ],
       "knowledge_summary": "Ein umfassendes rechtsbasiertes Framework wurde entwickelt, das vier Komponenten integriert (Ethical AI Literacy, Participatory Governance, Continuous Impact Assessment, Community-Centered Advocacy) und AI-Integration in der sozialen Arbeit mit sozialen Psychologie-, Gruppendynamik- und institutionellen Erkenntnissen verbindet.",
       "knowledge_sections": {
@@ -469,13 +469,13 @@
         }
       },
       "concepts": [
-        "Distribution Shift and Monitoring",
-        "Causal Fairness",
-        "Intersectionality in AI",
-        "Value-Laden AI Systems",
-        "Multi-Stakeholder Participation",
         "Human-Centered AI",
         "Representation Bias",
+        "Multi-Stakeholder Participation",
+        "Distribution Shift and Monitoring",
+        "Causal Fairness",
+        "Value-Laden AI Systems",
+        "Intersectionality in AI",
         "Algorithmic Fairness"
       ],
       "knowledge_summary": "The paper provides a comprehensive bird's-eye overview of fair-AI state-of-the-art and identifies critical gaps including the need for multi-stakeholder participatory design, intersectionality awareness, causal approaches to bias, knowledge-informed models, and bias monitoring across different domains and data types.",
@@ -547,14 +547,14 @@
         }
       },
       "concepts": [
-        "Corporate Accountability in Algorithmic Systems",
-        "Digital Exclusion in Welfare Access",
-        "Automated Welfare Systems",
-        "Automation Bias in Casework",
-        "Intersectional Technology Harms",
         "Mass Surveillance in Social Services",
+        "Automation Bias in Casework",
+        "Digital Exclusion in Welfare Access",
+        "Corporate Accountability in Algorithmic Systems",
+        "Algorithmic Fairness Testing",
+        "Intersectional Technology Harms",
         "Algorithmic Discrimination",
-        "Algorithmic Fairness Testing"
+        "Automated Welfare Systems"
       ],
       "knowledge_summary": "Dänemarks automatisiertes Wohlfahrtssystem nutzt diskriminierende Algorithmen zur Betrugserkennung, die systematisch gegen marginalisierte Gruppen (Migranten, Menschen mit Behinderungen, Frauen, Arme) diskriminieren und fundamentale Menschenrechte verletzen, während gleichzeitig Transparenz und Rechenschaftspflicht völlig fehlen.",
       "knowledge_sections": {
@@ -630,14 +630,14 @@
         }
       },
       "concepts": [
-        "Intersectional Algorithmic Bias",
         "Labor Market Discrimination via Automated Systems",
-        "Large Language Model Bias Measurement",
-        "Synthetic Resume Testing",
         "Gender Bias in Large Language Models",
-        "Racial Bias in Hiring Algorithms",
         "Debiasing Mitigation Paradox",
-        "Algorithmic Fairness in High-Stakes Decision Making"
+        "Racial Bias in Hiring Algorithms",
+        "Intersectional Algorithmic Bias",
+        "Algorithmic Fairness in High-Stakes Decision Making",
+        "Synthetic Resume Testing",
+        "Large Language Model Bias Measurement"
       ],
       "knowledge_summary": "LLMs bevorzugen systematisch weibliche Kandidaten und benachteiligen schwarze männliche Kandidaten bei ansonsten ähnlichen Qualifikationen. Diese Verzerrungen führen zu Unterschieden in der Einstellungswahrscheinlichkeit von 1-3 Prozentpunkten und sind konsistent über verschiedene Modelle und Jobpositionen hinweg.",
       "knowledge_sections": {
@@ -704,12 +704,12 @@
       },
       "concepts": [
         "Intersectional Digital Health Disparities",
-        "eHealth Literacy Scale (eHEALS)",
-        "Super Social Determinant of Health",
-        "Digital Health Literacy",
-        "Digital Health Intervention",
         "Health Equity in Digital Access",
-        "Digital Divide"
+        "Digital Health Intervention",
+        "eHealth Literacy Scale (eHEALS)",
+        "Digital Divide",
+        "Super Social Determinant of Health",
+        "Digital Health Literacy"
       ],
       "knowledge_summary": "Digital health literacy is identified as a 'super social determinant of health' that significantly impacts health outcomes including self-management, quality of life, mental health, and disease control. Effective interventions include education/training and social support, though evidence remains limited.",
       "knowledge_sections": {
@@ -787,12 +787,12 @@
       },
       "concepts": [
         "AI Literacy for Content Creators",
-        "Training Data Bias",
+        "Identity-Conscious Specification",
         "Algorithmic Bias in Image Generation",
+        "Training Data Bias",
         "Inclusive Prompt Engineering",
         "Stereotype Defaults in Generative AI",
-        "Representational Fairness",
-        "Identity-Conscious Specification"
+        "Representational Fairness"
       ],
       "knowledge_summary": "AI-Bildgeneratoren reproduzieren durch unverzerrte Trainingsdaten bedingte stereotype Standardausgaben (weiß, männlich, jung, schlank). Durch spezifische, intentionale Prompt-Engineering-Techniken können Nutzer diese Defaults unterbrechen und inklusivere Darstellungen erreichen.",
       "knowledge_sections": {
@@ -862,13 +862,13 @@
         }
       },
       "concepts": [
-        "Relational Ethics in AI",
         "Prompt Engineering Techniques",
         "Orientalism in AI Systems",
-        "Layered Bias in Transformer Architectures",
+        "Relational Ethics in AI",
+        "Cultural Bias in Large Language Models",
         "AI Literacy for Practitioners",
-        "Algorithmic Fairness Metrics",
-        "Cultural Bias in Large Language Models"
+        "Layered Bias in Transformer Architectures",
+        "Algorithmic Fairness Metrics"
       ],
       "knowledge_summary": "Fünf primäre Prompt-Engineering-Ansätze identifiziert (kulturelle Prompting, affektive Priming, Self-Debiasing, strukturierte Multi-Step-Pipelines, parameter-optimierte kontinuierliche Prompts); strukturierte Multi-Step-Pipelines zeigen höchste Effektivität (bis zu 87,7% Bias-Reduktion), während kulturelles Prompting bessere Zugänglichkeit bietet (71-81% Verbesserung der kulturellen Ausrichtung); ",
       "knowledge_sections": {
@@ -940,13 +940,13 @@
         }
       },
       "concepts": [
-        "Algorithmic Bias in Biometric Systems",
-        "Algorithmic Harm Definition",
         "Risk-Tiered Regulation",
-        "Multi-Stakeholder Policy Engagement",
-        "Regulatory Gap in Public Sector AI",
         "Algorithmic Accountability in Public Services",
-        "Regulatory Independence"
+        "Regulatory Independence",
+        "Algorithmic Harm Definition",
+        "Algorithmic Bias in Biometric Systems",
+        "Regulatory Gap in Public Sector AI",
+        "Multi-Stakeholder Policy Engagement"
       ],
       "knowledge_summary": "Das kanadische AIDA weist fünf kritische Regulierungslücken auf: unzureichende Definition von 'High-Impact Systems', zu enge Regulierungsweise auf nur High-Impact-Systeme, fehlende Anwendung auf öffentliche Institutionen, zu enge Definition von Schaden (nur Einzelpersonen statt Gemeinschaften), und problematische Regulatory Independence des Commissioners.",
       "knowledge_sections": {
@@ -1020,13 +1020,13 @@
         }
       },
       "concepts": [
-        "Value Alignment vs. Implicit Discrimination",
-        "Discrimination in Contextual Decision-Making",
-        "Implicit Bias in Large Language Models",
-        "Algorithmic Fairness in Generative AI",
         "Stereotype Association",
         "Prompt-Based Bias Measurement",
-        "Bias Benchmark Insufficiency"
+        "Bias Benchmark Insufficiency",
+        "Implicit Bias in Large Language Models",
+        "Discrimination in Contextual Decision-Making",
+        "Algorithmic Fairness in Generative AI",
+        "Value Alignment vs. Implicit Discrimination"
       ],
       "knowledge_summary": "Alle 8 untersuchten, als unbiased geltenden LLMs zeigen weitverbreitete stereotypische Assoziationen und subtile Diskriminierungen in Entscheidungen über 4 soziale Kategorien hinweg (Rasse, Geschlecht, Religion, Gesundheit), die an 21 gesellschaftliche Stereotype gebunden sind.",
       "knowledge_sections": {
@@ -1099,14 +1099,14 @@
         }
       },
       "concepts": [
-        "Algorithmic Bias in Large Language Models",
-        "Explainable Artificial Intelligence (XAI)",
-        "Prompt Engineering",
-        "Responsible AI Use",
-        "Misinformation Risks in LLM Outputs",
-        "AI Literacy",
         "User-Centered LLM Guidelines",
-        "Contextual AI Governance"
+        "Explainable Artificial Intelligence (XAI)",
+        "Responsible AI Use",
+        "AI Literacy",
+        "Misinformation Risks in LLM Outputs",
+        "Contextual AI Governance",
+        "Algorithmic Bias in Large Language Models",
+        "Prompt Engineering"
       ],
       "knowledge_summary": "Aktuelle Fokussierung auf Transparenz und Explainability reicht nicht aus; stattdessen sollten kontextspezifische, praktische Nutzerrichtlinien zur Schulung, Risikominderung und ethischen Verwendung von LLMs im Vordergrund stehen, da Nutzer primär praktische Anleitung statt technischer Erklärungen benötigen.",
       "knowledge_sections": {
@@ -1178,13 +1178,13 @@
         }
       },
       "concepts": [
-        "Role-Specific AI Competencies",
         "Organizational Learning",
-        "Algorithmic Bias",
         "AI Governance Compliance",
-        "AI Literacy",
+        "Algorithmic Bias",
         "Generative AI Adoption",
-        "Algorithmic Fairness"
+        "AI Literacy",
+        "Algorithmic Fairness",
+        "Role-Specific AI Competencies"
       ],
       "knowledge_summary": "AI-Literacy muss multidimensional (konzeptuell, ethisch, praktisch) und rollenspezifisch sein. Die vorgestellte AI Literacy Assessment Matrix und AI Literacy Development Canvas bieten Organisationen ein strukturiertes Rahmenwerk zur Diagnose von Kompetenzlücken und zur Umsetzung gezielter Upskilling-Programme auf allen Organisationsebenen.",
       "knowledge_sections": {
@@ -1253,12 +1253,12 @@
       },
       "concepts": [
         "AI Ethics Education",
-        "Overconfidence Bias in Technology Adoption",
-        "AI-Related Decision Automation",
         "Critical AI Literacy",
-        "Algorithmic Fairness and Equity",
         "Digital Inequality and Data Privacy",
-        "Dunning-Kruger Effect in AI"
+        "AI-Related Decision Automation",
+        "Algorithmic Fairness and Equity",
+        "Dunning-Kruger Effect in AI",
+        "Overconfidence Bias in Technology Adoption"
       ],
       "knowledge_summary": "Teilnehmende mit geringem KI-Wissen zeigen paradoxerweise höheres Vertrauen in KI-Fähigkeiten über alle getesteten Aufgaben hinweg, was auf den Dunning-Kruger-Effekt hindeutet und die Notwendigkeit umfassender KI-Literalität betont, die ethische und kritische Reflexion einschließt.",
       "knowledge_sections": {
@@ -1329,13 +1329,13 @@
         }
       },
       "concepts": [
-        "Inclusive AI Design",
-        "Digital Sovereignty",
+        "AI Governance in Public Administration",
         "AI Impact Assessment",
         "AI Literacy",
         "Ethics by Design",
-        "AI Governance in Public Administration",
-        "Algorithmic Fairness"
+        "Digital Sovereignty",
+        "Algorithmic Fairness",
+        "Inclusive AI Design"
       ],
       "knowledge_summary": "Ein menschenzentriertes KI-Governance-Modell für die öffentliche Verwaltung, das Rechtmäßigkeit als Minimalbedingung, aber ethische Prinzipien (Transparenz, Fairness, Sicherheit, Inklusion, Rechenschaftspflicht) als zentral für vertrauenswürdige KI positioniert.",
       "knowledge_sections": {
@@ -1400,14 +1400,14 @@
         }
       },
       "concepts": [
-        "Intrinsic vs. Perceived Trustworthiness",
         "Trust Propensity",
-        "AI Transparency",
-        "AI Trustworthiness",
-        "Human Oversight in Autonomous Systems",
         "Agency Locus",
-        "Stakeholder Heterogeneity",
-        "Algorithmic Fairness"
+        "Human Oversight in Autonomous Systems",
+        "AI Trustworthiness",
+        "AI Transparency",
+        "Intrinsic vs. Perceived Trustworthiness",
+        "Algorithmic Fairness",
+        "Stakeholder Heterogeneity"
       ],
       "knowledge_summary": "Vertrauenswürdigkeit ist ein relationales Attribut, das durch die Übereinstimmung zwischen beobachtetem Systemverhalten und mentalen Modellen von Beobachtern entsteht. Die Arbeit formalisiert dies durch mathematische Funktionen, die Transparenz, Agency Locus und menschliche Überwachung als zentrale Faktoren der wahrgenommenen Vertrauenswürdigkeit identifizieren.",
       "knowledge_sections": {
@@ -1477,14 +1477,14 @@
         }
       },
       "concepts": [
+        "Data Sovereignty and Colonial Knowledge Reproduction",
         "EPIC Model for AI Integration",
-        "Human-Technology Complementarity in Social Work",
+        "Intersectional AI Governance",
+        "Algorithmic Bias in Social Work",
         "Generative AI Risks in Child Protection",
         "AI Literacy and Community Empowerment",
-        "Algorithmic Bias in Social Work",
-        "Data Sovereignty and Colonial Knowledge Reproduction",
         "Algorithmic Fairness in Social Services",
-        "Intersectional AI Governance"
+        "Human-Technology Complementarity in Social Work"
       ],
       "knowledge_summary": "Das EPIC-Modell (Ethics and Justice, Policy Development and Advocacy, Intersectoral Collaboration, Community Engagement and Empowerment) bietet einen strukturierten Rahmen für die ethische Integration von KI in die Soziale Arbeit unter Berücksichtigung von Bias, Gerechtigkeit und Empowerment marginalisierter Gruppen.",
       "knowledge_sections": {
@@ -1559,14 +1559,14 @@
         }
       },
       "concepts": [
-        "AI Hallucinations in Clinical Documentation",
-        "Administrative Burden Reduction via Generative AI",
-        "Employer Responsibility for AI Governance",
         "Professional Judgment in AI-Augmented Practice",
-        "Equalities Impact Assessment for AI Deployment",
-        "Algorithmic Bias in Social Work",
+        "AI Hallucinations in Clinical Documentation",
+        "Transparency and Accountability in AI-Assisted Social Care",
         "GDPR Compliance in Generative AI",
-        "Transparency and Accountability in AI-Assisted Social Care"
+        "Algorithmic Bias in Social Work",
+        "Administrative Burden Reduction via Generative AI",
+        "Equalities Impact Assessment for AI Deployment",
+        "Employer Responsibility for AI Governance"
       ],
       "knowledge_summary": "GenAI bietet Potenzial zur Reduzierung administrativer Lasten in der Sozialen Arbeit, erfordert aber strenge Überprüfung durch professionelle Urteile, um Risiken wie algorithmischen Bias, Halluzinationen und GDPR-Verstöße zu vermeiden.",
       "knowledge_sections": {
@@ -1638,14 +1638,14 @@
         }
       },
       "concepts": [
-        "Algorithmic Accountability in Fluid AI Ecosystems",
-        "Response-Ability as Relational Responsibility",
-        "Black Box Problem and Algorithmic Explainability",
-        "Organizational Culture and Ethical AI Implementation",
-        "Feminist Science and Technology Studies (Feminist STS) Approach",
         "Feminist Care Ethics in AI Development",
+        "Feminist Science and Technology Studies (Feminist STS) Approach",
+        "Algorithmic Bias and Discriminatory AI Outcomes",
+        "Algorithmic Accountability in Fluid AI Ecosystems",
+        "Organizational Culture and Ethical AI Implementation",
+        "Response-Ability as Relational Responsibility",
         "Gendered and Racialized Labor in AI Systems",
-        "Algorithmic Bias and Discriminatory AI Outcomes"
+        "Black Box Problem and Algorithmic Explainability"
       ],
       "knowledge_summary": "Verantwortung sollte nicht als statisches individuelles Merkmal verstanden werden, sondern als 'response-ability' – eine dynamische, kollektive Fähigkeit zur Rechenschaft, die durch organisationale Kulturen ermöglicht wird, die Care- und Wartungsarbeit wertschätzen und strukturelle Barrieren abbaut.",
       "knowledge_sections": {
@@ -1720,12 +1720,12 @@
         }
       },
       "concepts": [
-        "Diversity, Equity and Inclusion Integration Gap",
-        "Feminist Approaches to AI Ethics",
-        "AI System Lifecycle Management",
-        "Tech Worker Ethical Knowledge Gaps",
         "Algorithmic Fairness in Practice",
+        "AI System Lifecycle Management",
         "Data Positionality and Situated Knowledges",
+        "Feminist Approaches to AI Ethics",
+        "Diversity, Equity and Inclusion Integration Gap",
+        "Tech Worker Ethical Knowledge Gaps",
         "Algorithmic Bias Conceptualization"
       ],
       "knowledge_summary": "Der Begriff 'Bias' verursacht Verwirrung unter Tech-Workern und kann seine beabsichtigte ethische Funktion nicht erfüllen; Tech-Worker sehen keinen direkten Zusammenhang zwischen DEI-Agenden und KI-Entwicklung; Legacy-Systeme stellen erhebliche Herausforderungen für ethische KI-Entwicklung dar.",
@@ -1797,12 +1797,12 @@
       },
       "concepts": [
         "Machine Learning Literacy",
-        "AI-driven Socioeconomic Inequality",
-        "Curriculum Coherence in AI Education",
         "AI Literacy",
-        "Gender Equity in Computing Education",
+        "TPACK (Technological Pedagogical Content Knowledge)",
         "Algorithmic Fairness",
-        "TPACK (Technological Pedagogical Content Knowledge)"
+        "Curriculum Coherence in AI Education",
+        "AI-driven Socioeconomic Inequality",
+        "Gender Equity in Computing Education"
       ],
       "knowledge_summary": "AI-Literacyförderung in K-12 konzentriert sich auf technische, konzeptuelle und angewandte Kompetenzen, allerdings gibt es kaum Assessments von Lernoutcomes und wenig Aufmerksamkeit für unerwünschte Konsequenzen von AI. Ein kohärenter Kompetenzrahmen ist erforderlich, um Curricula zu strukturieren und Geschlechterparität zu adressieren.",
       "knowledge_sections": {
@@ -1875,13 +1875,13 @@
         }
       },
       "concepts": [
-        "Word Embeddings Bias",
         "Representation Invisibility",
+        "Intersectional Stereotype Extraction",
         "Gender Bias in Language Representations",
         "Class-Based Stereotype Dominance",
-        "Training Data Bias Propagation",
-        "Intersectional Stereotype Extraction",
-        "Algorithmic Fairness"
+        "Word Embeddings Bias",
+        "Algorithmic Fairness",
+        "Training Data Bias Propagation"
       ],
       "knowledge_summary": "59% der Traits in der englischen Sprache sind mit weißen Männern assoziiert, während nur 5% mit schwarzen Frauen assoziiert sind. Diese Imbalancen in der Sprachrepräsentation führen zu systematischen Verzerrungen in KI-Systemen, wobei Klassenzugehörigkeit ein übergeordneter Faktor ist.",
       "knowledge_sections": {
@@ -1953,14 +1953,14 @@
         }
       },
       "concepts": [
-        "Educational Equity in AI",
+        "Ethical AI Awareness",
+        "Disciplinary Variation in AI Competencies",
         "Machine Learning Literacy",
         "AI Literacy",
+        "Educational Equity in AI",
         "Algorithmic Decision Systems",
         "Competency Framework",
-        "Disciplinary Variation in AI Competencies",
-        "Lifelong Learning Pathway",
-        "Ethical AI Awareness"
+        "Lifelong Learning Pathway"
       ],
       "knowledge_summary": "Entwicklung eines umfassenden AI-Literacy-Kompetenzrahmens mit 8 Kompetenzen und 18 Sub-Kompetenzen, die sich je nach Bildungsstufe (K-12, Hochschule, Arbeitswelt) und Disziplin systematisch unterscheiden und zu einem Lernpfad über die Lebensspanne führen.",
       "knowledge_sections": {
@@ -2026,11 +2026,11 @@
       },
       "concepts": [
         "Embedding-based Explanation Clustering",
-        "Explainable AI for Mental Health Informatics",
-        "Comorbidity Detection via Social Media Mining",
-        "Natural Language Processing for Clinical Hypothesis Generation",
         "Algorithmic Fairness in Mental Health Classification",
-        "Digital Health Equity and Underserved Populations"
+        "Natural Language Processing for Clinical Hypothesis Generation",
+        "Comorbidity Detection via Social Media Mining",
+        "Digital Health Equity and Underserved Populations",
+        "Explainable AI for Mental Health Informatics"
       ],
       "knowledge_summary": "Das Paper demonstriert eine Pipeline zur Extraktion von Erkenntnissen aus Social-Media-Texten durch explainbare KI. Erste Ergebnisse zeigen, dass Lyme-Disease-Posts mit Mold-Erwähnungen signifikant häufiger mental-health-bezogen sind als in Referenzdatensätzen (44% vs. 19,7%), was auf eine bisher unterexplorierten Drei-Wege-Interaktion hindeutet.",
       "knowledge_sections": {
@@ -2101,13 +2101,13 @@
         }
       },
       "concepts": [
-        "Data Privacy Protection for Vulnerable Populations",
         "Explainable Artificial Intelligence (XAI)",
         "Ethical Governance Frameworks",
         "Human-AI Collaboration in Social Work",
         "AI Literacy in Professional Practice",
-        "Predictive Analytics in Case Management",
-        "Algorithmic Bias in Social Services"
+        "Algorithmic Bias in Social Services",
+        "Data Privacy Protection for Vulnerable Populations",
+        "Predictive Analytics in Case Management"
       ],
       "knowledge_summary": "KI kann die Effizienz in der Sozialen Arbeit erheblich verbessern (90% der Sozialarbeiter), erfordert aber robuste ethische Richtlinien, Transparenzverbesserungen und erweiterte KI-Kompetenzen der Fachkräfte zur Wahrung humanistischer Werte.",
       "knowledge_sections": {
@@ -2177,13 +2177,13 @@
         }
       },
       "concepts": [
-        "Algorithmic Fairness Auditing",
-        "Predictive Analytics in Child Welfare",
         "True Positive Rate (TPR) Parity",
         "Placement Stabilization Programs",
-        "Model Interpretability and Explainability",
         "Racial Bias in Decision Support Systems",
-        "Data-Driven Caseworker Decision-Making"
+        "Model Interpretability and Explainability",
+        "Data-Driven Caseworker Decision-Making",
+        "Algorithmic Fairness Auditing",
+        "Predictive Analytics in Child Welfare"
       ],
       "knowledge_summary": "Random-Forest-Modelle erreichten eine 10-fach höhere Präzision als Baseline und identifizierten zuverlässig Jugendliche mit hohem Risiko für Platzierungszerfall, während alle Modelle auf Fairness und Equity überprüft wurden.",
       "knowledge_sections": {
@@ -2258,13 +2258,13 @@
         }
       },
       "concepts": [
-        "Prompt Tuning for Debiasing",
-        "Bias Measurement Benchmarks",
-        "Gender Bias in NLP",
-        "Algorithmic Bias in Language Models",
         "Fairness-aware Loss Functions",
+        "Prompt Tuning for Debiasing",
+        "Gender Bias in NLP",
         "Parameter-Efficient Fine-Tuning",
-        "Representational Harms"
+        "Algorithmic Bias in Language Models",
+        "Representational Harms",
+        "Bias Measurement Benchmarks"
       ],
       "knowledge_summary": "Die vorgeschlagene Prompt-Tuning-Methode erreicht state-of-the-art Debiasing-Performance bei BERT und konkurrenzfähige Ergebnisse bei RoBERTa, während sie eine minimale Auswirkung auf die Sprachmodellierungsfähigkeit hat. Die Methode trainiert nur kleine, wiederverwendbare Token-Embeddings, die zu beliebigen Eingabesequenzen hinzugefügt werden können.",
       "knowledge_sections": {
@@ -2335,14 +2335,14 @@
         }
       },
       "concepts": [
-        "Practitioner-Centered Co-Design",
-        "Prompt Engineering",
-        "AI Ethics Principles",
+        "Inclusive STEM Education",
         "Algorithmic Fairness and Bias",
         "Machine Learning Literacy",
+        "Practitioner-Centered Co-Design",
         "AI Literacy",
+        "AI Ethics Principles",
         "AI Competency Framework",
-        "Inclusive STEM Education"
+        "Prompt Engineering"
       ],
       "knowledge_summary": "AI-Kompetenz umfasst fünf Schlüsselkomponenten (Technologie, Impact, Ethik, Kollaboration, Selbstreflexion) und sollte Vertrauen sowie selbstreflektive Mindsets integrieren, nicht nur technisches Wissen.",
       "knowledge_sections": {
@@ -2414,13 +2414,13 @@
         }
       },
       "concepts": [
-        "Ethical AI Literacy",
-        "AI Competency",
         "Culturally Responsive AI Competency",
-        "Prompt Engineering",
         "Algorithmic Bias",
+        "Interdisciplinary AI Foundations",
         "AI Literacy",
-        "Interdisciplinary AI Foundations"
+        "AI Competency",
+        "Ethical AI Literacy",
+        "Prompt Engineering"
       ],
       "knowledge_summary": "AI Literacy (Wissen und kritisches Verständnis) und AI Competency (praktische Anwendungsfähigkeit) sind verwandte aber distinkte Konzepte, wobei zehn interdisziplinäre Literacies (mathematisch, data, ethisch, media, computational, linguistisch, visuell, domänenspezifisch, wissenschaftlich, design) eine integrative Grundlage bilden.",
       "knowledge_sections": {
@@ -2486,12 +2486,12 @@
         }
       },
       "concepts": [
-        "Automation Bias",
         "Self-Referential Learning Loop",
         "User Trust in Large Language Models",
+        "Automation Bias",
         "Algorithmic Bias Amplification",
-        "Professional Deskilling",
         "AI Accountability in Clinical Practice",
+        "Professional Deskilling",
         "Algorithmic Transparency in Healthcare"
       ],
       "knowledge_summary": "LLMs können in selbstreferenziellen Lernschleifen geraten, in denen KI-generierte Inhalte zur Trainierung führen, was zu Bias-Verstärkung, reduzierter Datenvielfalt und Deskilling von Klinikern führt. Diese Risiken erfordern proaktive Maßnahmen zur Aufrechterhaltung von Fachkompetenz und kritischer Überwachung.",
@@ -2566,14 +2566,14 @@
         }
       },
       "concepts": [
-        "Intersectional Artificial Intelligence",
-        "Algorithmic Bias",
-        "Community-Centered AI Design",
-        "Data Provenance and Reflexivity",
+        "Queer Methodologies in Computing",
         "Criminal Risk Assessment AI",
+        "Algorithmic Bias",
+        "Intersectional Artificial Intelligence",
         "Black Feminist Theory in Technology",
         "Feminist Data Visualization",
-        "Queer Methodologies in Computing"
+        "Data Provenance and Reflexivity",
+        "Community-Centered AI Design"
       ],
       "knowledge_summary": "Intersektionale Strategien auf allen Ebenen der KI (von Daten bis Design bis Implementierung) können durch polyvokale, multimodale und experimentelle Ansätze strukturelle Verzerrungen adressieren und alternative Ethiken enthüllen. Community-fokussierte und künstlerische Praktiken sind entscheidend für die Entwicklung intersektionaler KI-Möglichkeiten.",
       "knowledge_sections": {
@@ -2646,14 +2646,14 @@
         }
       },
       "concepts": [
-        "Bias Measurement and Metrics",
         "Fairness in Computer Vision",
-        "Intersectional Representation",
-        "Proportional Learning Rate Adjustment",
-        "Automatic Prompt Engineering",
         "Large Language Model Fine-Tuning",
+        "Proportional Learning Rate Adjustment",
         "Text-to-Image Generation",
-        "Demographic Bias in Generative AI"
+        "Automatic Prompt Engineering",
+        "Bias Measurement and Metrics",
+        "Demographic Bias in Generative AI",
+        "Intersectional Representation"
       ],
       "knowledge_summary": "PreciseDebias erreicht eine 97,6%ige Erfolgsquote bei der Generierung ethnisch diverser Bilder und 99,9% bei geschlechtsspezifischen Bildern durch proportionale Lernraten-Anpassung basierend auf gemessenen Bias-Differenzen.",
       "knowledge_sections": {
@@ -2720,13 +2720,13 @@
         }
       },
       "concepts": [
+        "Calibrated Trust in AI",
         "Intelligence Attribution vs. Experience Attribution",
         "Human-AI Interaction Design",
-        "Calibrated Trust in AI",
-        "Anthropomorphism in AI Systems",
-        "Behavioral Trust Measurement",
         "Mental State Attribution",
-        "Consciousness Attribution to Large Language Models"
+        "Behavioral Trust Measurement",
+        "Consciousness Attribution to Large Language Models",
+        "Anthropomorphism in AI Systems"
       ],
       "knowledge_summary": "Attributionen von Intelligenz-Merkmalen erhöhen signifikant die Annahme von KI-Ratschlägen, während Attributionen von Erfahrungs-Merkmalen (Emotionen, Empfindungen) diese reduzieren. Bewusstseinszuschreibungen zeigen keine positive, sondern eine schwache negative Korrelation mit Ratsannahmen.",
       "knowledge_sections": {
@@ -2795,14 +2795,14 @@
         }
       },
       "concepts": [
-        "Data Privacy and Confidentiality",
-        "Two-Tiered Service Model",
-        "Healthcare Equity",
-        "Algorithmic Bias in Healthcare",
-        "Technology Acceptance Model (TAM)",
         "AI Literacy in Social Work",
+        "Data Privacy and Confidentiality",
+        "Healthcare Equity",
+        "Generative AI in Clinical Documentation",
+        "Two-Tiered Service Model",
         "Professional Autonomy in Clinical Practice",
-        "Generative AI in Clinical Documentation"
+        "Technology Acceptance Model (TAM)",
+        "Algorithmic Bias in Healthcare"
       ],
       "knowledge_summary": "Klinische Sozialarbeiter erkennen das Potenzial von LLMs für Dokumentation, klinische Entscheidungsfindung und Klientenunterstützung, äußern aber erhebliche Bedenken bezüglich Datensicherheit, algorithmischen Verzerrungen, beruflicher Normen und des Risikos einer Verschärfung von Ungleichheiten, was ihre Akzeptanz begrenzt.",
       "knowledge_sections": {
@@ -2881,14 +2881,14 @@
         }
       },
       "concepts": [
-        "Consent and Agency in AI",
+        "Invisible Labor in AI Systems",
+        "Colonial Hierarchies in AI Development",
+        "Gender-Based AI Harms",
         "Data Feminism Principles",
         "Algorithmic Bias and Structural Inequality",
         "Large Language Models (LLMs) and Generative AI Ethics",
-        "Invisible Labor in AI Systems",
-        "Gender-Based AI Harms",
-        "Colonial Hierarchies in AI Development",
-        "Intersectional Feminism in AI"
+        "Intersectional Feminism in AI",
+        "Consent and Agency in AI"
       ],
       "knowledge_summary": "Feministische Prinzipien - insbesondere die Fokussierung auf Machtverhältnisse, Pluralismus, Sichtbarmachung von Arbeit und Kontext - sind essentiell zur Entwicklung gerechter, ethischer und nachhaltiger KI-Systeme. Die Autor:innen schlagen zudem zwei neue Prinzipien vor: Berücksichtigung von Umweltauswirkungen und intersektionales Verständnis von Konsens.",
       "knowledge_sections": {
@@ -2959,14 +2959,14 @@
         }
       },
       "concepts": [
-        "LLM-Simulated Validity",
-        "Affective-Cognitive Trust Dimensions",
-        "Gender Bias in AI Trust",
-        "Natural Language Human-Computer Interaction Trust",
         "Age-Related Digital Divide in AI Adoption",
         "AI Literacy and Critical LLM Competence",
+        "Gender Bias in AI Trust",
+        "LLM-Simulated Validity",
         "Ethical AI Governance and Vulnerability Protection",
-        "Human-AI Trust Measurement"
+        "Human-AI Trust Measurement",
+        "Affective-Cognitive Trust Dimensions",
+        "Natural Language Human-Computer Interaction Trust"
       ],
       "knowledge_summary": "Vertrauen in LLMs teilt sich in zwei empirisch distinkte aber korrelierte Dimensionen: 'Closeness with LLMs' (affektiv-emotional) und 'Reliance on LLMs' (kognitiv-rational), ähnlich wie in der Organisationspsychologie. Jüngere männliche Nutzer zeigen signifikant höheres Vertrauen als ältere weibliche Nutzer.",
       "knowledge_sections": {
@@ -3024,13 +3024,13 @@
         }
       },
       "concepts": [
-        "AI Reasoning Capability Evaluation",
-        "Structured Prompt-Based Reasoning Cycle",
-        "Large Language Model Hallucination",
         "Model Performance Fairness Disparity",
+        "Human-Computer-Mediated Social Interaction",
+        "AI Reasoning Capability Evaluation",
         "Socio-Cognitive Trust Reasoning",
+        "Structured Prompt-Based Reasoning Cycle",
         "Trust-Building Through Strategic Planning",
-        "Human-Computer-Mediated Social Interaction"
+        "Large Language Model Hallucination"
       ],
       "knowledge_summary": "LLMs zeigen grundsätzliche Fähigkeit, Vertrauen anhand von Willingness, Competence und Safety zu analysieren und strategische Aktionspläne zu entwickeln; GPT-4o performt am besten, aber alle Modelle zeigen Halluzinationen und Fehlurteile bei komplexen Szenarien.",
       "knowledge_sections": {
@@ -3102,12 +3102,12 @@
       },
       "concepts": [
         "Algorithmic Fairness and Auditability",
-        "Street-Level Bureaucracy Automation",
-        "Political Technology",
+        "Algorithmic Bias in Social Services",
         "Administrative Suspicion toward the Poor",
-        "Algorithmic Decision-Making (ADM) in Welfare Administration",
         "Welfare Surveillance",
-        "Algorithmic Bias in Social Services"
+        "Political Technology",
+        "Street-Level Bureaucracy Automation",
+        "Algorithmic Decision-Making (ADM) in Welfare Administration"
       ],
       "knowledge_summary": "Die zentralen Probleme automatisierter Wohlfahrtsüberwachung sind nicht technologisch neuartig, sondern wiederholen historisch dokumentierte Muster von Verdacht gegenüber Armen, opaker Entscheidungsfindung und strafender Maßnahmen gegen marginalisierte Gruppen, die bereits vor der KI-Ära bestanden.",
       "knowledge_sections": {
@@ -3174,13 +3174,13 @@
         }
       },
       "concepts": [
-        "Critical Algorithm Awareness",
+        "Journalistic Autonomy",
         "Algorithmic Bias",
         "AI Literacy",
-        "Technology Mythologization",
-        "Journalistic Autonomy",
+        "Critical Algorithm Awareness",
         "Imaginative AI Application",
-        "Algorithmic Fairness"
+        "Algorithmic Fairness",
+        "Technology Mythologization"
       ],
       "knowledge_summary": "AI-Literalität für Journalismus erfordert nicht nur technisches Wissen, sondern auch kritisches Verständnis der normativen Dimensionen von KI, die Fähigkeit zur Reflexion über Einsatzmöglichkeiten, und eine Kultur der Imagination statt bloßer instrumenteller Anwendung. Ein großes Wissensdefizit in der Nachrichtenindustrie gefährdet deren Autonomie gegenüber Tech-Konzernen.",
       "knowledge_sections": {
@@ -3249,14 +3249,14 @@
         }
       },
       "concepts": [
-        "Gender Bias in AI",
         "Technological Determinism",
-        "Cultural Representation in AI",
+        "Gender Bias in AI",
         "Algorithmic Bias",
-        "Critical Co-Discovery",
         "AI Literacy",
+        "Cultural Representation in AI",
         "Algorithmic Fairness",
-        "Educator Agency"
+        "Educator Agency",
+        "Critical Co-Discovery"
       ],
       "knowledge_summary": "Durch kritische Co-Discovery-Aktivitäten konnten Pädagogen umfassende Verständigungsprozesse zu KI-Konzepten, ethischen Überlegungen und kontextspezifischen Anwendungen ko-konstruieren. Der Ansatz zeigt, dass prolongiertes Engagement mit KI-Literalität notwendig ist und in Lehrerausbildungsprogramme integriert werden sollte.",
       "knowledge_sections": {
@@ -3328,14 +3328,14 @@
         }
       },
       "concepts": [
-        "False Positive Bias",
         "Pinned AUC Metric",
-        "Equality of Odds in Classification",
-        "Bias Mitigation through Data Balancing",
-        "Synthetic Test Set Design with Identity Terms",
         "Unintended Bias in Text Classification",
+        "False Positive Bias",
+        "Model Bias versus Application Unfairness",
+        "Bias Mitigation through Data Balancing",
         "Identity Terms Representation Disparity",
-        "Model Bias versus Application Unfairness"
+        "Equality of Odds in Classification",
+        "Synthetic Test Set Design with Identity Terms"
       ],
       "knowledge_summary": "Durch strategisches Hinzufügen von nicht-toxischen Trainingsbeispielen mit bestimmten Identitätstermen lässt sich unbeabsichtigte Verzerrung in Textklassifikatoren reduzieren, ohne die Gesamtmodellleistung zu beeinträchtigen. Die neu eingeführte 'Pinned AUC'-Metrik ermöglicht schwellenwertunabhängige Erkennung von Verzerrungen.",
       "knowledge_sections": {
@@ -3408,14 +3408,14 @@
         }
       },
       "concepts": [
-        "Responsible AI Deployment",
-        "Reflexive Prompt Engineering",
-        "Inclusive Design Through Participatory Engagement",
-        "AI Literacy",
-        "Prompt Management and Documentation",
         "Algorithmic Fairness Evaluation",
         "Model Bias Mitigation",
-        "Chain-of-Thought Reasoning"
+        "Inclusive Design Through Participatory Engagement",
+        "AI Literacy",
+        "Reflexive Prompt Engineering",
+        "Prompt Management and Documentation",
+        "Chain-of-Thought Reasoning",
+        "Responsible AI Deployment"
       ],
       "knowledge_summary": "Reflexive Prompt Engineering ist ein umfassendes Framework mit fünf verbundenen Komponenten (Design, Systemauswahl, Konfiguration, Evaluierung, Management), das verantwortungsvolle KI-Deployment durch Alignment mit ethischen, rechtlichen und sozialen Prinzipien ermöglicht, ohne zugrunde liegende Modellarchitekturen zu modifizieren.",
       "knowledge_sections": {
@@ -3484,14 +3484,14 @@
         }
       },
       "concepts": [
-        "Algorithmic Bias Mitigation",
-        "AI Literacy and Patient Engagement",
         "Participatory Design in AI Healthcare",
+        "Translational Gap in Healthcare AI",
         "Value-Sensitive AI Design",
         "Health Equity and AI Systems",
-        "Translational Gap in Healthcare AI",
-        "Algorithmic Fairness",
-        "Workforce Diversity in AI Development"
+        "Algorithmic Bias Mitigation",
+        "Workforce Diversity in AI Development",
+        "AI Literacy and Patient Engagement",
+        "Algorithmic Fairness"
       ],
       "knowledge_summary": "Technische Bias-Mitigationsstrategien sind notwendig aber unzureichend; ein wertsensibler, partizipativer Ansatz, der Stakeholder in alle Entwicklungsphasen einbezieht, ist erforderlich, um echte Fairness zu erreichen.",
       "knowledge_sections": {
@@ -3562,13 +3562,13 @@
         }
       },
       "concepts": [
-        "Data Literacy in Social Work Education",
-        "Algorithmic Bias in Social Service Systems",
-        "Digital Inclusivity in Higher Education",
-        "Generative AI as Non-Human Actor",
         "AI Ethics in Professional Social Work",
+        "Generative AI as Non-Human Actor",
+        "Algorithmic Bias in Social Service Systems",
         "Prompting Competence",
-        "Curriculum Transformation through Generative AI"
+        "Digital Inclusivity in Higher Education",
+        "Curriculum Transformation through Generative AI",
+        "Data Literacy in Social Work Education"
       ],
       "knowledge_summary": "Generative KI sollte nicht nur als Werkzeug, sondern als kooperativer nicht-menschlicher Akteur verstanden werden, der transformativ in Hochschulbildung einschreitet und neue curriculare sowie didaktische Anforderungen schafft.",
       "knowledge_sections": {
@@ -3628,12 +3628,12 @@
         }
       },
       "concepts": [
-        "Competency Contextualization",
-        "Proficiency Level Scaling",
-        "Cultural and Generational Diversity in Digital Environments",
-        "Digital Citizenship",
         "Digital Competence Framework",
-        "Digital Inclusion"
+        "Digital Inclusion",
+        "Digital Citizenship",
+        "Competency Contextualization",
+        "Cultural and Generational Diversity in Digital Environments",
+        "Proficiency Level Scaling"
       ],
       "knowledge_summary": "DigComp 2.1 erweitert das Framework von drei auf acht differenzierte Proficiency-Level pro Kompetenz (insgesamt 21 Kompetenzen), mit 168 einzelnen Deskriptoren basierend auf Lernzielen, Knowledge, Skills und Attitudes sowie kontextualisierten Beispielen aus Beschäftigungs- und Lernszenarien.",
       "knowledge_sections": {
@@ -3708,14 +3708,14 @@
         }
       },
       "concepts": [
-        "Explainable Artificial Intelligence (XAI)",
-        "Human-Centric AI Design",
-        "Black Box Problem",
-        "Algorithmic Bias",
-        "GDPR Compliance and Data Protection",
         "Interpretability vs. Explainability",
+        "GDPR Compliance and Data Protection",
+        "Explainable Artificial Intelligence (XAI)",
+        "Algorithmic Bias",
+        "Human-Centric AI Design",
         "Algorithmic Fairness",
-        "XAI Implementation Risks"
+        "XAI Implementation Risks",
+        "Black Box Problem"
       ],
       "knowledge_summary": "XAI ist ein essentielles Mittel zur Förderung von Transparenz, Rechenschaftspflicht und Fairness bei KI-Systemen, kann aber selbst neue Risiken schaffen und muss durch menschenzentrierte Design-Ansätze und kritische Reflexion flankiert werden.",
       "knowledge_sections": {
@@ -3785,13 +3785,13 @@
         }
       },
       "concepts": [
-        "Digitality as Everyday Practice",
         "AI Literacy for Child Welfare Professionals",
-        "AI Agency in Social Work Practice",
         "Responsible AI Implementation",
+        "AI Agency in Social Work Practice",
+        "Digitality as Everyday Practice",
         "Natural Language Processing in Child Welfare Assessment",
-        "Algorithmic Bias in Child Welfare",
-        "Diversity Gap in AI Development"
+        "Diversity Gap in AI Development",
+        "Algorithmic Bias in Child Welfare"
       ],
       "knowledge_summary": "KI-Systeme sind nicht neutrale Werkzeuge sondern Akteure, die die sozialpädagogische Praxis grundlegend transformieren. Ein verantwortungsvoller Einsatz erfordert kritische Reflexion von Bias, Transparenz und das Primat des Kindeswohls.",
       "knowledge_sections": {
@@ -3865,13 +3865,13 @@
         }
       },
       "concepts": [
-        "Feminist Socio-Technical Approaches",
-        "Responsible AI Development",
-        "Intersectionality in AI",
-        "Social Opinion Mining",
         "Gender Bias in AI Systems",
         "Women's Entrepreneurial Activism in AI Ethics",
-        "Algorithmic Fairness"
+        "Social Opinion Mining",
+        "Intersectionality in AI",
+        "Algorithmic Fairness",
+        "Responsible AI Development",
+        "Feminist Socio-Technical Approaches"
       ],
       "knowledge_summary": "Weibliche Nutzer konzentrieren sich primär auf die Zukunft von KI-Technologien und die aktive Rolle von Frauen zur Gewährleistung geschlechtergerechter Systeme; algorithmischer Bias beeinflusst weibliches Verhalten als Reaktion auf Ungerechtigkeit, wobei Frauen verstärkt unternehmerische Lösungen vorantreiben.",
       "knowledge_sections": {
@@ -3940,12 +3940,12 @@
       },
       "concepts": [
         "PCRR-Framework",
-        "Prompt Engineering",
+        "Generative AI Models",
         "Responsible AI Use",
+        "Prompting Techniques",
         "AI Literacy",
         "Digital Equity in Education",
-        "Prompting Techniques",
-        "Generative AI Models"
+        "Prompt Engineering"
       ],
       "knowledge_summary": "Das PCRR-Framework (Plan-Create-Review-Reflect) erhöht die Effizienz und Qualität der Prompterstellung signifikant: Mit Framework benötigten 64,5% der Schüler:innen nur einen Prompt für zufriedenstellendes Ergebnis vs. 30,8% ohne Framework. 86,9% bewerteten die Methode als hilfreich.",
       "knowledge_sections": {
@@ -4012,13 +4012,13 @@
         }
       },
       "concepts": [
-        "Digital Equity and Access Barriers",
         "Intersectional Analysis of Refugee Youth",
-        "Artifact-Mediated Educational Practices",
-        "Post-Migration Everyday Coping and Social Connection",
-        "Digital Literacy and Competence Development",
         "Educational Participation under Conditions of Structural Inequality",
-        "Multilocal Ethnographic Methodology"
+        "Multilocal Ethnographic Methodology",
+        "Digital Equity and Access Barriers",
+        "Digital Literacy and Competence Development",
+        "Artifact-Mediated Educational Practices",
+        "Post-Migration Everyday Coping and Social Connection"
       ],
       "knowledge_summary": "Digitale Medien ermöglichen Bildungsteilhabe junger Geflüchteter nur unter Bedingungen von gelingenden Passungsverhältnissen zwischen individuellen Fähigkeiten, artefaktgebundenen Potenzialitäten und institutionellen Rahmungen. Ohne angemessene strukturelle und soziale Unterstützung entstehen Exklusionsrisiken trotz Mediennutzung.",
       "knowledge_sections": {
@@ -4088,13 +4088,13 @@
         }
       },
       "concepts": [
-        "Mixed-Methods User Research for AI Evaluation",
-        "Gendered Prompt Engineering",
-        "Perceived Trustworthiness in AI Systems",
-        "Non-Binary Representation in AI",
         "Gender Bias in Large Language Models",
+        "Non-Binary Representation in AI",
         "Intersectional AI Auditing",
-        "Algorithmic Fairness"
+        "Perceived Trustworthiness in AI Systems",
+        "Algorithmic Fairness",
+        "Mixed-Methods User Research for AI Evaluation",
+        "Gendered Prompt Engineering"
       ],
       "knowledge_summary": "Gendered Prompts führen zu identitätsspezifischeren Reaktionen; non-binäre Teilnehmende berichten von herablassenden und stereotypischen Darstellungen, während Männer höheres Vertrauen zeigen und Frauen traditionelle emotionale Stereotypen kritisieren.",
       "knowledge_sections": {
@@ -4168,13 +4168,13 @@
         }
       },
       "concepts": [
-        "Instruction Tuning for Bias Mitigation",
-        "Fairness Metrics Taxonomy",
         "Intersectional Fairness",
-        "Algorithmic Bias in Language Models",
         "Structural Inequity Reproduction",
         "Bias Mitigation Staging Framework",
-        "Gender Bias in NLP"
+        "Instruction Tuning for Bias Mitigation",
+        "Gender Bias in NLP",
+        "Algorithmic Bias in Language Models",
+        "Fairness Metrics Taxonomy"
       ],
       "knowledge_summary": "Der Survey konsolidiert und vereinheitlicht fragmentiertes Wissen über Bias-Evaluation und Mitigation in LLMs durch drei intuitive Taxonomien, die Evaluierungsmetriken (nach Operationalisierungsebenen: Embeddings, Wahrscheinlichkeiten, generierter Text), Evaluierungsdatensätze und Mitigationstechniken (nach Interventionsstadium: Pre-, In-, Intra-, Post-Processing) strukturieren.",
       "knowledge_sections": {
@@ -4242,13 +4242,13 @@
         }
       },
       "concepts": [
-        "Asymmetric Counterfactuals",
-        "Algorithmic Bias in Toxicity Detection",
         "Counterfactual Fairness",
-        "Counterfactual Token Fairness (CTF)",
         "Counterfactual Logit Pairing (CLP)",
+        "Asymmetric Counterfactuals",
         "Fairness-Accuracy Tradeoff",
-        "Equality of Odds vs. Counterfactual Fairness"
+        "Equality of Odds vs. Counterfactual Fairness",
+        "Counterfactual Token Fairness (CTF)",
+        "Algorithmic Bias in Toxicity Detection"
       ],
       "knowledge_summary": "Counterfactual Logit Pairing (CLP) und Blindness adressieren erfolgreich kontrafaktische Fairness ohne Beeinträchtigung der Gesamtgenauigkeit, zeigen aber Tradeoffs mit gruppenbasierter Fairness. CLP generalisiert besser zu ungesehenen Identitätstokens als Blindness.",
       "knowledge_sections": {
@@ -4316,13 +4316,13 @@
         }
       },
       "concepts": [
-        "Predictive Analytics in Child Welfare",
-        "Human Rights-Based Approach to AI",
-        "AI Governance in Social Work Organizations",
         "AI Literacy in Social Work",
-        "Participatory Design for AI Systems",
+        "Human Rights-Based Approach to AI",
+        "Algorithmic Bias in Social Services",
         "Artificial Intelligence Enhanced Social Work",
-        "Algorithmic Bias in Social Services"
+        "AI Governance in Social Work Organizations",
+        "Participatory Design for AI Systems",
+        "Predictive Analytics in Child Welfare"
       ],
       "knowledge_summary": "Die Literatur zeigt einen signifikanten Mangel an empirischer Forschung zu AI-Implementierungen in der Sozialen Arbeit. Die Autoren entwickeln ein integriertes Modell der 'Artificial Intelligence Enhanced Social Work' basierend auf Menschenrechtsrahmen und dem Tripelmandat der Sozialen Arbeit.",
       "knowledge_sections": {
@@ -4399,14 +4399,14 @@
         }
       },
       "concepts": [
-        "Fair Prompt Engineering",
         "AI Governance and Organizational Values",
         "Feminist AI",
-        "Stereotype Reproduction in Generative AI",
         "AI Literacy for SMEs",
-        "Algorithmic Fairness in Generative AI",
+        "AI Hallucination and Reliability",
+        "Stereotype Reproduction in Generative AI",
         "Gender-Data-Gap",
-        "AI Hallucination and Reliability"
+        "Fair Prompt Engineering",
+        "Algorithmic Fairness in Generative AI"
       ],
       "knowledge_summary": "Ein strukturiertes KI-FAIRNESS-Framework (Kontext, Input, Fokus, Ausschnitt, Iterationen, Repertoire, Nachbessern, Eignung, Sprache, Sinn) ermöglicht es Nutzer:innen, faire und diverse Ergebnisse aus Generativer KI zu gestalten. Organisationales Mindset, klare KI-Strategie und Werteorientierung sind grundlegend für fairen KI-Einsatz.",
       "knowledge_sections": {
@@ -4482,14 +4482,14 @@
         }
       },
       "concepts": [
-        "LLM-as-Judge Evaluation",
-        "Representational Harm",
-        "Narrow Representation",
-        "Discursive Othering",
-        "Allocation Harm",
-        "Topic Divergence Bias",
+        "LGBTQ+ Representation in Language Models",
         "AI Ethics for Healthcare Applications",
-        "LGBTQ+ Representation in Language Models"
+        "Discursive Othering",
+        "Topic Divergence Bias",
+        "LLM-as-Judge Evaluation",
+        "Narrow Representation",
+        "Allocation Harm",
+        "Representational Harm"
       ],
       "knowledge_summary": "LLMs generieren für queere Personas signifikant häufiger Begriffe der Diversität und Inklusion, fokussieren überproportional auf identitätsbezogene Themen und zeigen eine systematische Topic-Divergenz gegenüber nicht-queeren Personas, was als subtile Form der diskursiven Othering und Repräsentationseinengung wirkt.",
       "knowledge_sections": {
@@ -4562,13 +4562,13 @@
         }
       },
       "concepts": [
-        "Algorithmic Fairness",
-        "Subgroup Fairness",
-        "Multicalibration",
-        "Fairness Gerrymandering",
         "Intersectional Fairness",
+        "Subgroup Fairness",
+        "Gender Bias in Facial Recognition",
+        "Multicalibration",
         "Data Sparsity in Intersectional Contexts",
-        "Gender Bias in Facial Recognition"
+        "Algorithmic Fairness",
+        "Fairness Gerrymandering"
       ],
       "knowledge_summary": "Der Survey präsentiert die erste umfassende Taxonomie für intersektionale Fairness-Notionen und Fair-Learning-Methoden und identifiziert zentrale Herausforderungen wie Data Sparsity bei kleineren Subgruppen und die Unzulänglichkeit von Mittigationstechniken, die auf unabhängige Gruppen optimiert sind.",
       "knowledge_sections": {
@@ -4638,12 +4638,12 @@
       },
       "concepts": [
         "Natural Language Processing (NLP)",
-        "Professional Competency and Ethical Accountability",
-        "Training Data Bias in Language Models",
+        "Automation of Social Work Tasks",
         "AI Literacy for Social Workers",
-        "Algorithmic Fairness in Vulnerable Populations",
         "Algorithmic Bias in Social Services",
-        "Automation of Social Work Tasks"
+        "Algorithmic Fairness in Vulnerable Populations",
+        "Training Data Bias in Language Models",
+        "Professional Competency and Ethical Accountability"
       ],
       "knowledge_summary": "ChatGPT bietet sowohl Chancen (Effizienzsteigerung) als auch Risiken für die Soziale Arbeit, erfordert aber kritische Auseinandersetzung der Profession mit ethischen, justizialen und kompetenzbezogenen Fragen, um vulnerable Populationen vor algorithmengestützter Marginalisierung zu schützen.",
       "knowledge_sections": {
@@ -4719,14 +4719,14 @@
         }
       },
       "concepts": [
-        "Feminist AI Development",
-        "Tequiología",
-        "Design Justice",
-        "Intersectional Fairness",
-        "Algorithmic Bias",
-        "Decolonial Feminism in Technology",
         "Care Infrastructure Visibility",
-        "Gender Bias in Datasets"
+        "Intersectional Fairness",
+        "Decolonial Feminism in Technology",
+        "Algorithmic Bias",
+        "Design Justice",
+        "Gender Bias in Datasets",
+        "Tequiología",
+        "Feminist AI Development"
       ],
       "knowledge_summary": "Feministische KI-Entwicklung erfordert nicht nur technische Lösungen, sondern eine Transformation von Praktiken in Design, Produktion, Deployment und Governance unter Berücksichtigung lokaler Kontexte, Care-Arbeit und intersektionaler Machtdynamiken in Lateinamerika.",
       "knowledge_sections": {
@@ -4797,14 +4797,14 @@
         }
       },
       "concepts": [
+        "Predictive Risk Models in Social Services",
         "Disproportionality in Child Welfare Systems",
         "Calibration Fairness",
         "Algorithm-Assisted Human Decision Making",
-        "Racial Disparities in Algorithmic Decision-Making",
         "Selective Labels Problem",
-        "Fairness-Accuracy Trade-offs in Machine Learning",
+        "Racial Disparities in Algorithmic Decision-Making",
         "Algorithmic Fairness in Child Welfare",
-        "Predictive Risk Models in Social Services"
+        "Fairness-Accuracy Trade-offs in Machine Learning"
       ],
       "knowledge_summary": "Weniger als die Hälfte der Studien befasst sich mit Ethik, Equity oder Bias; nur ein Drittel der Projektteams ist interdisziplinär zusammengesetzt; es fehlt ein einheitlicher Standard zur Vermeidung von Bias und Ungleichheit in algorithmierten Kinderschutzentscheidungen.",
       "knowledge_sections": {
@@ -4878,14 +4878,14 @@
         }
       },
       "concepts": [
-        "Metacognitive Competencies in AI Contexts",
-        "Epistemic Injustice in AI Systems",
-        "Large Language Model (LLM) Literacy",
-        "EDIA-Prinzipien in KI-Kontexten",
         "Critical AI Literacy",
-        "Critical Digital Literacy",
+        "EDIA-Prinzipien in KI-Kontexten",
         "AI Tool Evaluation Framework",
-        "Algorithmic Bias Detection"
+        "Large Language Model (LLM) Literacy",
+        "Metacognitive Competencies in AI Contexts",
+        "Algorithmic Bias Detection",
+        "Critical Digital Literacy",
+        "Epistemic Injustice in AI Systems"
       ],
       "knowledge_summary": "Ein umfassendes Framework für Critical AI Literacy, das technische KI-Konzepte mit kritischer Reflexion, ethischen Überlegungen und EDIA-Prinzipien verbindet und konkrete Handlungsempfehlungen für Lehrende bietet.",
       "knowledge_sections": {
@@ -4956,13 +4956,13 @@
         }
       },
       "concepts": [
-        "Semantic Diversity Measurement",
-        "Algorithmic Fairness through Pluralism",
-        "In-Context Prompting",
         "Criteria-Based Diversity Prompting",
-        "Parametric Knowledge Compression",
+        "Perspective Diversity Extraction",
         "Diversity Saturation Point",
-        "Perspective Diversity Extraction"
+        "In-Context Prompting",
+        "Parametric Knowledge Compression",
+        "Semantic Diversity Measurement",
+        "Algorithmic Fairness through Pluralism"
       ],
       "knowledge_summary": "LLMs können diverse Meinungen gemäß dem Grad der Aufgabensubjektivität generieren und erreichen dabei eine ähnliche Diversitätsleistung wie einzelne Menschen, aber weniger als mehrere Menschen zusammen. Kriterienbasiertes Prompting ermöglicht bessere Grundierung diverse Perspektiven.",
       "knowledge_sections": {
@@ -5034,13 +5034,13 @@
         }
       },
       "concepts": [
-        "Baseline Personality Bias",
-        "Prompt Steerability",
-        "In-Context Learning via Persona Statements",
-        "Asymmetric Steerability",
         "Steerability Benchmark",
+        "Prompt Steerability",
+        "Algorithmic Fairness in Value Representation",
+        "Baseline Personality Bias",
+        "Asymmetric Steerability",
         "AI Pluralism",
-        "Algorithmic Fairness in Value Representation"
+        "In-Context Learning via Persona Statements"
       ],
       "knowledge_summary": "Datengesteuerte Personas, die durch kollaboratives Filtern definiert werden, ermöglichen eine 57-77% bessere Steuerung von LLMs gegenüber Baseline-Methoden und erfassen nuanciertere soziale Gruppen als demografische Merkmale allein.",
       "knowledge_sections": {
@@ -5104,14 +5104,14 @@
         }
       },
       "concepts": [
-        "Therapeutic Alliance in AI-Mediated Interactions",
-        "Healthcare Accessibility and Scalability",
-        "Generative AI-Based Psychotherapy",
-        "Long-Term Treatment Durability and Follow-Up Assessment",
-        "Third-Wave Cognitive-Behavioral Therapy",
+        "Safety Guardrails in Clinical AI Systems",
         "Selection Bias in Digital Health Recruitment",
         "Digital Therapeutics for Mental Health",
-        "Safety Guardrails in Clinical AI Systems"
+        "Healthcare Accessibility and Scalability",
+        "Generative AI-Based Psychotherapy",
+        "Third-Wave Cognitive-Behavioral Therapy",
+        "Long-Term Treatment Durability and Follow-Up Assessment",
+        "Therapeutic Alliance in AI-Mediated Interactions"
       ],
       "knowledge_summary": "Therabot-Nutzer zeigten signifikant größere Symptomreduktionen für MDD (d=0.845-0.903), GAD (d=0.794-0.840) und CHR-FED (d=0.627-0.819) mit hoher Engagement-Rate (>6 Stunden durchschnittliche Nutzung) und therapeutischer Allianz vergleichbar mit menschlichen Therapeuten.",
       "knowledge_sections": {
@@ -5185,14 +5185,14 @@
         }
       },
       "concepts": [
-        "Substantive Responsibility",
-        "Ethics Washing",
-        "Diversity, Equity, and Inclusion (DEI)",
-        "Algorithmic Bias in Healthcare",
-        "Structural Injustice",
         "AI Governance",
         "Racial Bias in AI",
-        "Algorithmic Fairness"
+        "Ethics Washing",
+        "Diversity, Equity, and Inclusion (DEI)",
+        "Algorithmic Fairness",
+        "Structural Injustice",
+        "Substantive Responsibility",
+        "Algorithmic Bias in Healthcare"
       ],
       "knowledge_summary": "Strukturelle Ungerechtigkeit bietet sowohl ein analytisches als auch ein normatives Rahmenwerk für KI-Governance und ermöglicht es, systemische Bias-Muster zu identifizieren, die Harm-and-Benefits-Ansätze übersehen würden. Ein struktureller Gerechtigkeitsansatz basiert auf Iris Marion Youngs Theorie und liefert tiefere Grundlagen für Diversity, Equity und Inclusion als alternative governance-Ansät",
       "knowledge_sections": {
@@ -5264,14 +5264,14 @@
         }
       },
       "concepts": [
-        "Domain-Specific AI for Education",
-        "Neural-Symbolic AI",
-        "Stakeholder-Centered AI Design",
-        "Knowledge Tracing",
-        "Algorithmic Fairness in Education",
         "Learner Modelling",
+        "Responsible AI in Education",
+        "Neural-Symbolic AI",
         "Explainable AI (XAI)",
-        "Responsible AI in Education"
+        "Knowledge Tracing",
+        "Domain-Specific AI for Education",
+        "Stakeholder-Centered AI Design",
+        "Algorithmic Fairness in Education"
       ],
       "knowledge_summary": "Neural-Symbolic AI und hybrid human-AI Methoden bieten einen vielversprechenden Weg zur Entwicklung verantwortungsvoller KI-Systeme im Bildungsbereich, indem sie Domain-Wissen mit datengesteuerten Ansätzen kombinieren und damit Fairness, Transparenz und Kontextangemessenheit verbessern.",
       "knowledge_sections": {
@@ -5342,14 +5342,14 @@
         }
       },
       "concepts": [
-        "Positive-Constructive Pedagogy",
-        "Perception-Reality Gap in AI",
         "Structural Awareness in Technology Adoption",
-        "AI Literacy",
-        "Media Representation Gap in AI Discourse",
         "Algorithmic Bias in Generative Systems",
+        "Prompt Engineering Literacy",
+        "Media Representation Gap in AI Discourse",
+        "AI Literacy",
         "3E Model (Enter-Experience-Exit)",
-        "Prompt Engineering Literacy"
+        "Positive-Constructive Pedagogy",
+        "Perception-Reality Gap in AI"
       ],
       "knowledge_summary": "Das 3E-Modell (Enter-Experience-Exit) bietet einen praktischen pädagogischen Rahmen zur Operationalisierung positive-konstruktiver Pädagogik für AI-Adoption, indem es Lernende durch persönliche Erfahrung, Experimentiertätigkeit und reflektierte Praxis führt.",
       "knowledge_sections": {
@@ -5420,13 +5420,13 @@
       },
       "concepts": [
         "Social Work Pedagogy and Curriculum Development",
-        "Algorithmic Fairness in Social Work",
-        "Black Box Transparency in Algorithmic Systems",
-        "Algorithmic Decision-Making (ADM) Systems",
-        "Competency/Critique Dilemma",
         "Intersectional Vulnerability and ADM",
         "Algorithmic Bias in Welfare Systems",
-        "Algorithmic Literacy"
+        "Algorithmic Decision-Making (ADM) Systems",
+        "Black Box Transparency in Algorithmic Systems",
+        "Competency/Critique Dilemma",
+        "Algorithmic Literacy",
+        "Algorithmic Fairness in Social Work"
       ],
       "knowledge_summary": "Sozialarbeitseducation muss ein Spannungsverhältnis zwischen technischer Kompetenz und kritischer Analyse auflösen, indem sie theoriegeleitet und praxisorientiert ADM-Systeme als Werkzeuge (nicht als Rahmen) behandelt, um sowohl ihre positiven als auch ihre diskriminierenden Potenziale zu adressieren.",
       "knowledge_sections": {
@@ -5499,14 +5499,14 @@
         }
       },
       "concepts": [
-        "Human-in-the-Loop Validation",
         "Multilingual Fairness in Generative AI",
-        "Prompt Engineering",
-        "Role-Differentiated AI Practices",
         "Adversarial Prompting and Jailbreaking",
+        "Role-Differentiated AI Practices",
+        "Recommender System for Responsible AI",
         "Algorithmic Bias in Language Models",
+        "Human-in-the-Loop Validation",
         "Responsible Prompting",
-        "Recommender System for Responsible AI"
+        "Prompt Engineering"
       ],
       "knowledge_summary": "Responsible Prompting Recommendations haben das Potenzial, anfängliche Prompt-Engineers zu unterstützen und Bewusstsein für Responsible AI zu schärfen, sollten aber gleichzeitig Prompt-Ähnlichkeit und Diversität sozialer Werte maximieren.",
       "knowledge_sections": {
@@ -5572,12 +5572,12 @@
       },
       "concepts": [
         "Invisible Data Labour",
+        "Data Quality as Organizational Achievement",
         "Feminist Science and Technology Studies (STS)",
         "Competing Care Obligations",
-        "Data Care Arrangements",
         "Data Valuation Practices",
-        "Data Quality as Organizational Achievement",
-        "Care Ethics in Data Management"
+        "Care Ethics in Data Management",
+        "Data Care Arrangements"
       ],
       "knowledge_summary": "Datenpflege ist nicht selbstverständlich, sondern ein soziomaterielles Accomplishment, das durch zugeschriebene Datenwerte und konkrete Pflegearbeiten in stabilen Datenpflegearrangements konfiguriert wird. Heterogene Arrangements entstehen, wenn Akteure unterschiedliche Werte (discovery, truthiness, actionability, self-evidence) Daten zuschreiben.",
       "knowledge_sections": {
@@ -5651,13 +5651,13 @@
         }
       },
       "concepts": [
-        "Feminist Care Ethics in Technology Design",
-        "Regimes of Anticipation",
-        "Ageism in Data-Driven Systems",
-        "Intersectional Digital Justice",
         "Discursive Closure",
-        "Algorithmic Surveillance and Control",
-        "Participatory Futuring"
+        "Ageism in Data-Driven Systems",
+        "Feminist Care Ethics in Technology Design",
+        "Intersectional Digital Justice",
+        "Regimes of Anticipation",
+        "Participatory Futuring",
+        "Algorithmic Surveillance and Control"
       ],
       "knowledge_summary": "Partizipative Futuring-Methoden ermöglichen es Teilnehmenden, ihre eigenen Antizipationen zu hinterfragen und kritisch zu reflektieren, führen aber aufgrund von 'diskursiver Schließung' nicht automatisch zu radikal anderen Zukunftsimaginären. Die Herausforderung liegt darin, über etablierte ageistische und technologiedeterministische Narrationen hinauszudenken.",
       "knowledge_sections": {
@@ -5730,11 +5730,11 @@
         }
       },
       "concepts": [
-        "Prompt Engineering Competency",
-        "Algorithmic Bias in Hiring Systems",
-        "AI Interpretability and Trustworthiness",
         "Psychometric Validation (IRT/CFA)",
         "Performance-Based Assessment",
+        "Algorithmic Bias in Hiring Systems",
+        "AI Interpretability and Trustworthiness",
+        "Prompt Engineering Competency",
         "Generative AI Literacy",
         "Critical AI Output Evaluation"
       ],
@@ -5809,13 +5809,13 @@
         }
       },
       "concepts": [
-        "Cultural Bias in Training Data",
+        "Representation Gaps in Generative AI",
+        "Reparative Justice Approach",
         "Feminist Science and Technology Studies (STS)",
+        "Cultural Bias in Training Data",
         "Intersectionality",
         "Coded Gaze in AI Systems",
-        "Representation Gaps in Generative AI",
-        "Algorithmic Bias in Visual Generative AI",
-        "Reparative Justice Approach"
+        "Algorithmic Bias in Visual Generative AI"
       ],
       "knowledge_summary": "Stable Diffusion perpetuiert systematisch bestehende Machtstrukturen (Sexismus, Rassismus, Heteronormativität, Ableismus) durch die Annahme eines standardisierten Individuums als weiß, nicht-behindert und maskulin präsentierend. Die Technologie reproduziert kontinuierlich schädliche Bilder durch ihre Euro- und Nordamerika-zentrische kulturelle Ausrichtung.",
       "knowledge_sections": {
@@ -5890,13 +5890,13 @@
         }
       },
       "concepts": [
-        "Intersectional Bias Assessment",
-        "Chain-of-Thought Prompting Limitations",
         "Dual-Process Theory in NLP",
-        "Stereotyping in Language Models",
-        "Algorithmic Bias Reduction",
         "Prompt Engineering for Fairness",
-        "Self-Distancing Effects"
+        "Chain-of-Thought Prompting Limitations",
+        "Intersectional Bias Assessment",
+        "Self-Distancing Effects",
+        "Algorithmic Bias Reduction",
+        "Stereotyping in Language Models"
       ],
       "knowledge_summary": "Human Persona kombiniert mit System 2 Prompting reduziert stereotypische Urteile von LLMs am effektivsten (bis zu 13% Reduktion), während CoT-Prompting entgegen bisheriger Annahmen nicht dem System 2 Denken entspricht, sondern dem System 1 ähnlicher ist.",
       "knowledge_sections": {
@@ -5968,13 +5968,13 @@
         }
       },
       "concepts": [
-        "Stereotype Occupational Associations",
         "Debiasing Prompt Strategies",
         "Gender Bias in Large Language Models",
-        "Multi-step Gender Bias Reasoning Benchmark",
-        "Intrinsic vs. Extrinsic Bias Measurement",
         "Algorithmic Fairness Evaluation",
-        "Chain-of-Thought Prompting"
+        "Stereotype Occupational Associations",
+        "Chain-of-Thought Prompting",
+        "Intrinsic vs. Extrinsic Bias Measurement",
+        "Multi-step Gender Bias Reasoning Benchmark"
       ],
       "knowledge_summary": "CoT-Prompting reduziert Geschlechtsbias in LLMs signifikant, indem es Modelle zwingt, ihre Vorhersageprozesse explizit zu artikulieren, auch wenn einfache Debiasing-Prompts allein ineffektiv sind. Der MGBR-Benchmark zeigt hohe Korrelation mit downstream-Task-Bias (BBQ, BNLI) aber niedrige Korrelation mit intrinsischen Bias-Metriken.",
       "knowledge_sections": {
@@ -6048,14 +6048,14 @@
         }
       },
       "concepts": [
-        "Gender-based AI Violence",
-        "Decolonial Feminist Epistemology in AI Ethics",
-        "Feminist Impact Assessment",
-        "Epistemic Injustice in AI Governance",
         "Algorithmic Gender Bias",
-        "AI-driven Misgendering",
+        "Gender-based AI Violence",
+        "Epistemic Injustice in AI Governance",
+        "Decolonial Feminist Epistemology in AI Ethics",
+        "Intersectional Algorithmic Discrimination",
         "Structural Gender Bias in AI Regulation",
-        "Intersectional Algorithmic Discrimination"
+        "Feminist Impact Assessment",
+        "AI-driven Misgendering"
       ],
       "knowledge_summary": "Obwohl die AI Act Massnahmen zur Mitigation geschlechterspezifischer Risiken vorsieht, adressiert sie nicht die strukturellen Biase in KI-Technologien, die marginalisierte Gruppen überproportional schädigen. Eine intersektionale feministische Perspektive enthüllt formale Gleichheitskonzepte, die substantive Ungleichheiten perpetuieren.",
       "knowledge_sections": {
@@ -6130,13 +6130,13 @@
         }
       },
       "concepts": [
-        "Algorithmic Fairness Auditing",
+        "Gender Bias in AI Systems",
         "Intersectionality in AI Governance",
         "Gender-Neutral Language in AI Policy",
         "Feminist Legal Analysis of AI Regulation",
+        "Feminist Data Protection",
         "High-Risk AI Systems Regulation",
-        "Gender Bias in AI Systems",
-        "Feminist Data Protection"
+        "Algorithmic Fairness Auditing"
       ],
       "knowledge_summary": "Das EU-AI-Gesetz enthält zwar Verweise auf Nicht-Diskriminierung, verfügt aber über kritische Lücken bei der expliziten Behandlung von Geschlechtergerechtigkeit und feministischen Perspektiven. Eine intersektionale, geschlechtersensible Überarbeitung ist notwendig, um marginalisierte Gruppen effektiv zu schützen.",
       "knowledge_sections": {
@@ -6206,13 +6206,13 @@
         }
       },
       "concepts": [
-        "Group Fairness",
-        "Procedural Fairness",
-        "Bias Mitigation",
         "Algorithmic Bias",
         "AI Literacy",
+        "Group Fairness",
         "Automated Decision-Making Systems",
-        "Algorithmic Fairness"
+        "Algorithmic Fairness",
+        "Bias Mitigation",
+        "Procedural Fairness"
       ],
       "knowledge_summary": "Obwohl zahlreiche technische Methoden zur Bias-Mitigation existieren, erfüllen nur wenige die bestehenden EU-Rechtsanforderungen. Eine interdisziplinäre Herangehensweise ist notwendig, um die Kluft zwischen technischen und rechtlichen Konzepten von Fairness zu überbrücken.",
       "knowledge_sections": {
@@ -6285,14 +6285,14 @@
         }
       },
       "concepts": [
-        "Human-AI Collaboration",
-        "Contextual Information in Professional Decision-Making",
-        "Goal Misalignment Between Algorithms and Practitioners",
-        "Algorithmic Decision Support Systems",
-        "Mental Models of AI Systems",
         "Algorithmic Transparency and Explainability",
+        "Organizational Pressures on Algorithmic Override",
+        "Mental Models of AI Systems",
+        "Contextual Information in Professional Decision-Making",
+        "Human-AI Collaboration",
         "Algorithmic Fairness in Child Welfare",
-        "Organizational Pressures on Algorithmic Override"
+        "Algorithmic Decision Support Systems",
+        "Goal Misalignment Between Algorithms and Practitioners"
       ],
       "knowledge_summary": "Obwohl das AFST seit fünf Jahren im Einsatz ist, bleibt es eine Spannungsquelle für Arbeiter, die das System als verpasste Gelegenheit zur wirksamen Ergänzung ihrer Fähigkeiten wahrnehmen. Die Abhängigkeit der Arbeiter vom AFST wird durch vier Faktoren gesteuert: kontextuelle Informationen jenseits des Modells, Überzeugungen über die Modellleistung, organisatorische Drücke und Misalignments zwisch",
       "knowledge_sections": {
@@ -6360,13 +6360,13 @@
         }
       },
       "concepts": [
-        "Stereotype Strength Quantification",
         "Linguistic Stereotype Indicators",
-        "Algorithmic Fairness in NLP",
-        "Interpretable AI for Bias Mitigation",
-        "Representational Harm Prevention",
         "In-Context Learning for Bias Detection",
-        "Social Category Bias in Language Models"
+        "Stereotype Strength Quantification",
+        "Representational Harm Prevention",
+        "Algorithmic Fairness in NLP",
+        "Social Category Bias in Language Models",
+        "Interpretable AI for Bias Mitigation"
       ],
       "knowledge_summary": "Linguistische Indikatoren aus dem SCSC-Framework ermöglichen eine objektive, interpretierbare und feingranulare Bewertung von Stereotypstärke. Größere Modelle (Llama-3.3-70B, GPT-4) zeigen bessere Performance, und mehr Few-Shot-Beispiele verbessern die Erkennung signifikant.",
       "knowledge_sections": {
@@ -6443,13 +6443,13 @@
         }
       },
       "concepts": [
+        "Intersectional Resistance",
+        "Digital Underclass Construction",
+        "Trustworthy AI",
+        "Epistemic Injustice in Machine Learning",
         "Rational Distrust",
         "Algorithmic Injustice",
-        "Digital Underclass Construction",
-        "Epistemic Injustice in Machine Learning",
-        "Care Ethics in AI",
-        "Intersectional Resistance",
-        "Trustworthy AI"
+        "Care Ethics in AI"
       ],
       "knowledge_summary": "Distrust von KI durch marginalisierte Gruppen ist rational und gerechtfertigt, nicht irrational. Aktuelle Trustworthy AI Ansätze ignorieren die strukturellen Gründe für dieses Misstrauen und können dadurch öffentliches Misstrauen sogar verstärken.",
       "knowledge_sections": {
@@ -6515,12 +6515,12 @@
         }
       },
       "concepts": [
-        "In-Context Learning",
-        "Prompt Engineering",
-        "Large Language Model Reasoning Capabilities",
-        "Model Scaling Laws",
         "Benchmark Evaluation Across Task Domains",
-        "Zero-Shot Chain-of-Thought Prompting"
+        "Large Language Model Reasoning Capabilities",
+        "In-Context Learning",
+        "Zero-Shot Chain-of-Thought Prompting",
+        "Model Scaling Laws",
+        "Prompt Engineering"
       ],
       "knowledge_summary": "Ein einfaches Single-Prompt-Template ('Let's think step by step') aktiviert Multi-Step-Reasoning in großen Sprachmodellen ohne Few-Shot-Beispiele und zeigt erhebliche Leistungssteigerungen über diverse Reasoning-Aufgaben hinweg (z.B. 17.7% → 78.7% auf MultiArith), was auf bislang wenig erforschte Zero-Shot-Fähigkeiten von LLMs hindeutet.",
       "knowledge_sections": {
@@ -6590,13 +6590,13 @@
         }
       },
       "concepts": [
-        "Conceptual Understanding of Machine Learning",
-        "Flipped Classroom Learning Design",
         "Gender Stereotypes in STEM Self-Efficacy",
+        "Conceptual Understanding of Machine Learning",
         "AI Literacy",
+        "Flipped Classroom Learning Design",
+        "Inclusive AI Education Across Disciplines",
         "AI-related Societal Concerns",
-        "AI Empowerment",
-        "Inclusive AI Education Across Disciplines"
+        "AI Empowerment"
       ],
       "knowledge_summary": "120 Studierende aus verschiedenen Studienrichtungen machten signifikante Fortschritte beim Verständnis von KI-Konzepten (von 6.31 auf 9.71 Punkte), bei selbstwahrgenommener KI-Literacy (von 2.93 auf 3.98) und beim Gefühl der Empowerment (von 3.93 auf 4.06), unabhängig von Vorkenntnissen in Programmierung.",
       "knowledge_sections": {
@@ -6671,12 +6671,12 @@
       "concepts": [
         "Geographic Disparity",
         "Representation Parity",
-        "Self-Supervised Learning",
-        "Fairness Indicators",
-        "Visual Feature Extractors",
-        "Harmful Label Associations",
         "Intersectional Bias",
-        "Algorithmic Auditing"
+        "Self-Supervised Learning",
+        "Visual Feature Extractors",
+        "Algorithmic Auditing",
+        "Fairness Indicators",
+        "Harmful Label Associations"
       ],
       "knowledge_summary": "Self-Supervised Learning auf großen, diversen Internetdatensätzen (z.B. Instagram mit 1 Milliarde Bildern) führt zu deutlich besseren Fairness-Ergebnissen als Supervised Learning auf ImageNet, besonders für unterrepräsentierte Gruppen bezüglich Geschlecht, Hautton und geografische Regionen.",
       "knowledge_sections": {
@@ -6747,12 +6747,12 @@
       },
       "concepts": [
         "AI Ethics Education",
-        "AI Literacy Framework",
         "Project-Based Learning Approach",
-        "Metacognitive Development in AI Learning",
+        "AI Literacy Framework",
+        "AI Literacy for All Citizens",
         "Machine Learning Fundamentals",
         "Teacher-Guided Ethical Reflection",
-        "AI Literacy for All Citizens"
+        "Metacognitive Development in AI Learning"
       ],
       "knowledge_summary": "Der projektbasierte KI-Literaturkurs führte zu signifikanten Verbesserungen in der Fähigkeit der Schüler:innen, KI-Konzepte zur Problemlösung anzuwenden, sowie in ihren metakognitiven Strategien und ihrem ethischen Bewusstsein bezüglich KI-Einsatz.",
       "knowledge_sections": {
@@ -6818,13 +6818,13 @@
         }
       },
       "concepts": [
-        "Sustainable Development through AI",
-        "AI-Enhanced Personalized Learning",
-        "Algorithmic Transparency",
-        "Educational Equity",
         "Skills-Workforce Gap",
+        "Ethical AI Awareness",
         "AI Literacy",
-        "Ethical AI Awareness"
+        "AI-Enhanced Personalized Learning",
+        "Sustainable Development through AI",
+        "Algorithmic Transparency",
+        "Educational Equity"
       ],
       "knowledge_summary": "AI-Literalität ist essentiell für alle Lernenden und die zukünftige Arbeitskraft, um AI aktiv und ethisch verantwortungsvoll zur Lösung gesellschaftlicher Herausforderungen einzusetzen. AI kann durch personalisierte Lernpfade Chancengleichheit, Inklusion und lebenslanges Lernen fördern.",
       "knowledge_sections": {
@@ -6901,13 +6901,13 @@
         }
       },
       "concepts": [
-        "Gender and Algorithmic Decision Systems",
-        "AI Fairness and Inclusivity",
-        "Intersectional Discrimination in AI",
-        "Sociotechnical Perspective",
         "Algorithmic Bias",
+        "AI Fairness and Inclusivity",
         "Feminist AI Literacy",
-        "Power Structures in AI Systems"
+        "Gender and Algorithmic Decision Systems",
+        "Power Structures in AI Systems",
+        "Sociotechnical Perspective",
+        "Intersectional Discrimination in AI"
       ],
       "knowledge_summary": "Eine feministische und interdisziplinäre Perspektive ist essentiell, um in KI-Systemen eingeschriebene Bias, Sexismen, Rassismen und Normierungen aufzudecken und damit gerechter, vielfältiger und inklusiver gestaltete KI-Systeme zu ermöglichen.",
       "knowledge_sections": {
@@ -6984,13 +6984,13 @@
         }
       },
       "concepts": [
-        "Algorithmic Misgendering",
-        "Intersectionality in AI Systems",
-        "AI Hype",
+        "AI Literacy Gap in Policymaking",
         "Queer Theoretical Critique of Technology",
+        "Algorithmic Misgendering",
         "Algorithmic Bias",
         "Cisnormativity and Heteronormativity",
-        "AI Literacy Gap in Policymaking"
+        "AI Hype",
+        "Intersectionality in AI Systems"
       ],
       "knowledge_summary": "AI-Hype verschleiert reale Probleme von Bias, Schaden und Ausbeutung, die marginalisierte Communities am stärksten treffen, während er eine Cishet-Baseline und heteronormative Strukturen in AI-Systemen verfestigt.",
       "knowledge_sections": {
@@ -7052,13 +7052,13 @@
         }
       },
       "concepts": [
-        "Assistive and Social Robotics in Care",
         "Algorithmic Governance in Social Services",
-        "Media Pedagogical Competence",
-        "Data Protection and Informational Self-Determination",
+        "Assistive and Social Robotics in Care",
         "Digital Inclusion and Empowerment",
-        "Digital Divide",
-        "Mediatization in Social Work"
+        "Mediatization in Social Work",
+        "Data Protection and Informational Self-Determination",
+        "Media Pedagogical Competence",
+        "Digital Divide"
       ],
       "knowledge_summary": "Ein sechsdimensionales Modell der Medienpädagogischen Kompetenz für Sozialarbeiter*innen wird entwickelt, das Orientierungswissen, handlungsfeldspezifisches Wissen, eigene Medienkompetenz, analytisches Handlungswissen, Gestaltungskompetenzen und organisationales Handlungswissen umfasst.",
       "knowledge_sections": {
@@ -7128,13 +7128,13 @@
         }
       },
       "concepts": [
-        "Algorithmic Fairness in Social Work",
         "Media Literacy in Professional Social Work",
-        "Digital Inequality",
-        "Algorithmic Discrimination",
+        "Digitalization of Youth Services",
         "Algorithmic Transparency and Data Protection",
+        "Digital Inequality",
         "Mediatization of Social Work Practice",
-        "Digitalization of Youth Services"
+        "Algorithmic Discrimination",
+        "Algorithmic Fairness in Social Work"
       ],
       "knowledge_summary": "Digitalisierung in der Sozialen Arbeit erfordert eine kritische Reflexion von Algorithmen, ethischen Fragen und strukturellen Ungleichheiten, insbesondere bezüglich algorithmischer Entscheidungssysteme und deren Auswirkungen auf vulnerable Gruppen.",
       "knowledge_sections": {
@@ -7204,13 +7204,13 @@
         }
       },
       "concepts": [
-        "Diversity Metrics (Entropy and Max-Gap)",
+        "Collective-Critique and Self-Voting (CCSV)",
+        "Self-Improvement Capabilities in LLMs",
+        "Algorithmic Fairness in Language Generation",
         "Zero-Shot Prompting for Diversity",
         "Demographic Representation Diversity in LLMs",
-        "Collective-Critique and Self-Voting (CCSV)",
-        "Demographic Homogenization Problem",
-        "Algorithmic Fairness in Language Generation",
-        "Self-Improvement Capabilities in LLMs"
+        "Diversity Metrics (Entropy and Max-Gap)",
+        "Demographic Homogenization Problem"
       ],
       "knowledge_summary": "LLMs können Diversitätsmängel in ihren Antworten selbst erkennen und kritisieren. Die CCSV-Methode (Collective-Critique and Self-Voting) verbessert Menschen- und Kulturdiversität dramatisch, wobei Zero-Shot-Prompting überraschenderweise besser und robuster ist als Few-Shot-Ansätze.",
       "knowledge_sections": {
@@ -7279,14 +7279,14 @@
         }
       },
       "concepts": [
-        "Prompt Engineering",
-        "Algorithmic Bias",
         "Ethical AI Integration",
-        "AI Literacy",
-        "Data Literacy",
+        "Algorithmic Bias",
         "Digital Inclusion",
+        "AI Literacy",
+        "Critical AI Thinking",
         "Algorithmic Fairness",
-        "Critical AI Thinking"
+        "Data Literacy",
+        "Prompt Engineering"
       ],
       "knowledge_summary": "Jugendarbeiter:innen benötigen ein Spektrum technischer, analytischer und sozialer Kompetenzen (AI-Literalität, kritisches Denken, Datenkompetenz, ethische Verantwortung), wobei erhebliche Kompetenzlücken und Herausforderungen bei der Integration von KI-Tools bestehen.",
       "knowledge_sections": {
@@ -7360,14 +7360,14 @@
         }
       },
       "concepts": [
-        "Equalized Odds (EO) Metric",
+        "Gender Bias in AI Systems",
+        "Algorithmic Fairness in Automated Assessment",
         "Pseudo-AI Bias",
+        "Equalized Odds (EO) Metric",
         "Mean Score Gap (MSG)",
         "Diversity in Machine Learning",
-        "Gender Bias in AI Systems",
-        "Natural Language Processing for Educational Assessment",
-        "Algorithmic Fairness in Automated Assessment",
-        "Training Data Composition"
+        "Training Data Composition",
+        "Natural Language Processing for Educational Assessment"
       ],
       "knowledge_summary": "Mixed-trained Modelle zeigen keinen signifikanten geschlechtsspezifischen Bias und erzeugen geringere geschlechtsspezifische Disparitäten im Vergleich zu humans, während gender-spezifisch trainierte Modelle größere MSG aufweisen und Disparitäten vergrößern können.",
       "knowledge_sections": {
@@ -7436,13 +7436,13 @@
         }
       },
       "concepts": [
-        "Submodular Function Maximization",
-        "LLM-based Response Aggregation",
-        "Mathematical Reasoning Benchmarks",
         "Inference-Time Optimization",
+        "Mathematical Reasoning Benchmarks",
         "Large Language Model Ensembles",
         "Prompt Diversity Optimization",
-        "Chain-of-Thought Reasoning"
+        "Submodular Function Maximization",
+        "Chain-of-Thought Reasoning",
+        "LLM-based Response Aggregation"
       ],
       "knowledge_summary": "Ein Ensemble aus drei kleinen Modellen (Qwen2-MATH-1.5B) mit optimierten, diversen Prompts kann die Leistung eines größeren Modells (Qwen2-MATH-7B) erreichen oder übertreffen, mit etwa 10%-Punkt Accuracy-Verbesserung gegenüber dem einzelnen Modell.",
       "knowledge_sections": {
@@ -7507,13 +7507,13 @@
         }
       },
       "concepts": [
-        "Exploratory Factor Analysis",
         "Psychometric Scale Development",
-        "Explainable AI",
         "Algorithmic Bias",
         "Machine Learning Literacy",
         "AI Literacy",
-        "Gender-Stratified Sampling"
+        "Exploratory Factor Analysis",
+        "Gender-Stratified Sampling",
+        "Explainable AI"
       ],
       "knowledge_summary": "Ein Drei-Faktoren-Modell (TUCAPA: Technical Understanding, Critical Appraisal, Practical Application) erklärt die AI-Literacy-Struktur bei Laien am besten. Die finale SNAIL-Skala mit 31 Items zeigt exzellente interne Konsistenz (α=0.93-0.94).",
       "knowledge_sections": {
@@ -7583,14 +7583,14 @@
         }
       },
       "concepts": [
+        "Social Connection Model",
         "Gender Bias in AI",
+        "Algorithmic Bias",
         "Collective Responsibility in AI Systems",
         "Racial Bias in Algorithmic Decision Systems",
-        "Structural Injustice",
-        "Social Connection Model",
-        "Algorithmic Bias",
         "Healthcare AI Equity",
-        "Algorithmic Fairness"
+        "Algorithmic Fairness",
+        "Structural Injustice"
       ],
       "knowledge_summary": "KI-Bias sollte als Form struktureller Ungerechtigkeit verstanden werden, die auftritt, wenn KI-Systeme mit anderen sozialen Faktoren interagieren und bestehende Ungleichheiten verschärfen. Dies erfordert kollektive Verantwortung aller Beteiligten, nicht nur von Technik-Entwickler:innen.",
       "knowledge_sections": {
@@ -7662,13 +7662,13 @@
         }
       },
       "concepts": [
+        "Interdisciplinary AI Development",
+        "Professional Deskilling and Modularization",
         "Natural Language Processing in Social Work",
         "Algorithmic Bias in Social Services",
         "Algorithmic Transparency and Interpretability",
         "AI Ethics in Human Rights-Based Practice",
-        "Digital Divide in Social Services",
-        "Interdisciplinary AI Development",
-        "Professional Deskilling and Modularization"
+        "Digital Divide in Social Services"
       ],
       "knowledge_summary": "NLP bietet sowohl Chancen (niederschwelliger Zugang, Teilhabe, erweiterte Wissensbasis) als auch erhebliche Risiken (Modularisierung der Profession, Reproduktion von Stereotypen und Diskriminierung, ethische Probleme) für die Soziale Arbeit; ein kritisch begleiteter Einsatz unter Wahrung von Menschenrechten und Transparenz ist erforderlich.",
       "knowledge_sections": {
@@ -7743,13 +7743,13 @@
         }
       },
       "concepts": [
-        "Inclusive AI Design",
-        "Automation Bias",
-        "Predictive Analytics in Child Welfare",
         "Professional Ethics in AI Deployment",
-        "Gender Bias in AI Development",
         "AI Literacy in Social Work",
-        "Algorithmic Bias in Social Services"
+        "Automation Bias",
+        "Algorithmic Bias in Social Services",
+        "Gender Bias in AI Development",
+        "Inclusive AI Design",
+        "Predictive Analytics in Child Welfare"
       ],
       "knowledge_summary": "KI birgt sowohl erhebliche Chancen (Inklusion, Assistenz, Dokumentation) als auch Risiken (Bias, Automatisierungsfehler, Marginalisierung) für die Soziale Arbeit; ein reflexierter, an Fachlichkeit und Ethik orientierter Umgang erfordert systematische KI-Kompetenzentwicklung in Studium, Praxis und Organisationen sowie kritische Inklusionsperspektiven.",
       "knowledge_sections": {
@@ -7814,14 +7814,14 @@
         }
       },
       "concepts": [
-        "Explainable AI",
         "Algorithmic Bias",
-        "Computational Literacy",
+        "Workforce Diversity in AI",
         "AI Literacy",
-        "Digital Divide",
-        "Inclusive AI Education Design",
         "Algorithmic Fairness",
-        "Workforce Diversity in AI"
+        "Digital Divide",
+        "Explainable AI",
+        "Inclusive AI Education Design",
+        "Computational Literacy"
       ],
       "knowledge_summary": "Definition von AI Literacy als Satz von Kompetenzen, die Individuen befähigen, KI-Technologien kritisch zu bewerten, effektiv mit KI zu kommunizieren und zu kollaborieren, sowie KI als Werkzeug online, zu Hause und am Arbeitsplatz zu nutzen. Ein konzeptuelles Framework mit 16 Kern-Kompetenzen und 12 Design-Überlegungen wird präsentiert.",
       "knowledge_sections": {
@@ -7892,12 +7892,12 @@
         }
       },
       "concepts": [
-        "Computational Thinking in K-12",
-        "Machine Learning Fundamentals for K-12",
-        "AI Literacy",
-        "Digital Equity in Education",
         "AI Ethics and Safety Integration",
+        "Computational Thinking in K-12",
+        "AI Literacy",
         "Scaffolded Curriculum Design",
+        "Digital Equity in Education",
+        "Machine Learning Fundamentals for K-12",
         "Inclusive AI Education Design"
       ],
       "knowledge_summary": "Das EAD Act ist zwar auf algorithmische Diskriminierung anwendbar, weist aber erhebliche Lücken auf. Eine spezifische Gesetzesbestimmung zu algorithmischer Differenzialbehandlung ist erforderlich, um präzisere Schutzstandards etablieren zu können und rechtliche Sicherheit für alle beteiligten Akteure zu schaffen.",
@@ -7969,13 +7969,13 @@
         }
       },
       "concepts": [
-        "Bias Auditing and Compliance",
-        "AI Governance Institutional Framework",
         "Algorithmic Gender Bias",
-        "Algorithmic Fairness Metrics",
         "Fundamental Rights Impact Assessment",
+        "Developer Diversity and Inclusive Design",
         "High-Risk AI Classification",
-        "Developer Diversity and Inclusive Design"
+        "AI Governance Institutional Framework",
+        "Bias Auditing and Compliance",
+        "Algorithmic Fairness Metrics"
       ],
       "knowledge_summary": "Der AI Act bietet einige Mechanismen zur Adressierung von Geschlechtergleichstellung und Diskriminierung durch Fundamental Rights Impact Assessments und Bias Audits, bleibt aber durch Ausnahmen und begrenzte Reichweite insuffizient. Eine umfassendere Zusammenarbeit zwischen AI Office, nationalen Gleichstellungsbehörden und internationalen Institutionen ist notwendig.",
       "knowledge_sections": {
@@ -8048,13 +8048,13 @@
         }
       },
       "concepts": [
-        "Intersectional Bias in Large Language Models",
-        "Prompt Engineering for Data Generation",
-        "Demographic Category Intersectionality",
         "Annotation Consensus Validation",
+        "Intersectional Bias in Large Language Models",
         "Stereotype Degree Measurement",
         "Algorithmic Fairness Evaluation",
-        "Model-Specific Debiasing Strategies"
+        "Model-Specific Debiasing Strategies",
+        "Demographic Category Intersectionality",
+        "Prompt Engineering for Data Generation"
       ],
       "knowledge_summary": "Trotz Debiasing-Maßnahmen zeigen moderne LLMs (GPT-3, ChatGPT) komplexe intersektionale Stereotypen gegenüber 106 verschiedenen Gruppen, mit unterschiedlichen Stereotypisierungsmustern pro Modell, was spezifische Mitigationsmaßnahmen erfordert.",
       "knowledge_sections": {
@@ -8127,13 +8127,13 @@
         }
       },
       "concepts": [
-        "Substantive Equality vs. Formal Equality",
-        "Feminist Policy Analysis Framework",
-        "Epistemic Justice in AI Policy Development",
-        "Algorithmic Bias in Gender Classification",
         "Algorithmic Harm to Marginalized Communities",
+        "Algorithmic Bias in Gender Classification",
+        "Intersectional AI Governance",
+        "Epistemic Justice in AI Policy Development",
         "AI Safety Governance Evaluation",
-        "Intersectional AI Governance"
+        "Feminist Policy Analysis Framework",
+        "Substantive Equality vs. Formal Equality"
       ],
       "knowledge_summary": "Keine der sieben analysierten KI-Sicherheits-Initiativen erfüllt die intersektionalen und feministischen Standards des Frameworks; die KI-Sicherheitsbewegung versäumt es, aktuelle Schäden für marginalisierte Gruppen zu adressieren und diese mit zukünftigen existenziellen Risiken zu verbinden.",
       "knowledge_sections": {
@@ -8203,13 +8203,13 @@
         }
       },
       "concepts": [
+        "Cultural Essentialism in AI Outputs",
+        "Algorithmic Fairness Measurement Reliability",
+        "Psychophobia in AI Systems",
         "Stigmatization in Large Language Models",
         "Nationality Prejudice in Language Models",
-        "Intersectional Algorithmic Bias",
-        "Psychophobia in AI Systems",
         "Prompt Engineering for Bias Assessment",
-        "Algorithmic Fairness Measurement Reliability",
-        "Cultural Essentialism in AI Outputs"
+        "Intersectional Algorithmic Bias"
       ],
       "knowledge_summary": "GPT-Modelle zeigen systematisch stärkere negative Vorurteile gegenüber Nordkoreaner:innen im Vergleich zu Amerikaner:innen, insbesondere bei Kombination mit psychischen Erkrankungen. Die Modelle zeigen zudem Inkonsistenzen bei invertierten Skalen und treffen implizite kulturelle Annahmen.",
       "knowledge_sections": {
@@ -8282,12 +8282,12 @@
         }
       },
       "concepts": [
-        "Algorithmic Fairness",
         "Algorithmic Bias in Social Work",
-        "Algorithmic Transparency in Public Administration",
         "Algorithmic Decision Support",
-        "Professional Discretion",
+        "Algorithmic Transparency in Public Administration",
         "Technological Determinism in Welfare Governance",
+        "Algorithmic Fairness",
+        "Professional Discretion",
         "Datification of Social Work"
       ],
       "knowledge_summary": "Algorithms in Danish social work create an ambivalent and undecided relationship with professional discretion: they are designed to constrain subjective judgment through standardization and objectification, yet fundamentally depend on professional discretion for contextual information, data provision, and bias assessment.",
@@ -8364,14 +8364,14 @@
         }
       },
       "concepts": [
-        "Algorithmic Audit and Reverse Engineering",
-        "Proxy Variables for Social Harm",
-        "Algorithmic Accountability in Social Work Practice",
         "Information Leakage in Machine Learning",
         "Self-Validating Prediction Systems",
-        "AI Literacy in Public Sector Implementation",
+        "Protected Attributes and Discrimination",
+        "Proxy Variables for Social Harm",
+        "Algorithmic Audit and Reverse Engineering",
+        "Algorithmic Accountability in Social Work Practice",
         "Algorithmic Fairness in Child Protection",
-        "Protected Attributes and Discrimination"
+        "AI Literacy in Public Sector Implementation"
       ],
       "knowledge_summary": "Der DSS-Algorithmus weist erhebliche Mängel auf, darunter Informationslecks zwischen Test- und Trainings-Sets, unangemessene Proxies für Kindesmisshandlung, inkonsistente Risikoscores und signifikante altersbasierte Diskriminierung, die Kinder systematisch unterschiedlich bewertet.",
       "knowledge_sections": {
@@ -8448,14 +8448,14 @@
         }
       },
       "concepts": [
-        "Training Data Bias",
-        "Intersectionality",
-        "Feminist Net Politics",
-        "Algorithmic Bias",
         "Critical AI Literacy",
-        "Gender Bias in AI Design",
+        "Algorithmic Bias",
+        "Feminist Net Politics",
+        "Training Data Bias",
         "Digital Colonialism",
-        "Feminist Data Set"
+        "Feminist Data Set",
+        "Intersectionality",
+        "Gender Bias in AI Design"
       ],
       "knowledge_summary": "Diskriminierende Stereotype und koloniale Strukturen sind bereits in der technischen Infrastruktur und den Trainingsdaten von KI-Systemen eingeschrieben; feministische Netzpolitik und kritische politische Bildung sind notwendig, um diese Mechanismen aufzudecken und emanzipatorische Alternativen zu schaffen.",
       "knowledge_sections": {
@@ -8527,12 +8527,12 @@
         }
       },
       "concepts": [
-        "Fairness Metrics",
         "Corpus-Driven Bias Amplification",
-        "Data Selection Bias",
         "Algorithmic Bias in High-Stakes Decisions",
-        "Intersectional Bias",
         "Social Bias Inventory",
+        "Fairness Metrics",
+        "Intersectional Bias",
+        "Data Selection Bias",
         "Gender Bias in Language Models"
       ],
       "knowledge_summary": "Die meisten Verzerrungen in Sprachmodellen entstehen durch Data Selection Bias bei der Wahl der Trainingstexte; das Paper inventarisiert elf Typen sozialer Bias (Gender, Alter, sexuelle Orientierung, Ethnizität, Religion, Kultur, Nationalität, Behinderung, Sprache und intersektionale Bias) und argumentiert für präventive Ansätze bei der Datenkurierung statt nachträglicher Debiasingmaßnahmen.",
@@ -8601,13 +8601,13 @@
         }
       },
       "concepts": [
-        "Social Inclusion and Diversity in AI Adoption",
-        "K-12 AI Curriculum Design",
-        "TPACK Model (Technological Pedagogical Content Knowledge)",
         "Ethical AI in Education",
+        "Social Inclusion and Diversity in AI Adoption",
         "Algorithmic Fairness and Transparency",
-        "AI Literacy",
         "Teacher Professional Development in AI",
+        "TPACK Model (Technological Pedagogical Content Knowledge)",
+        "AI Literacy",
+        "K-12 AI Curriculum Design",
         "Gender Bias in AI Automation"
       ],
       "knowledge_summary": "Das Paper schlägt vier zentrale Aspekte zur Konzeptualisierung von AI Literacy vor: (1) Know and Understand, (2) Use and Apply, (3) Evaluate and Create, und (4) Ethical Issues. Dabei wird AI Literacy als essenzielle Kompetenz für alle Menschen in der digitalen Ära definiert, mit spezifischem Fokus auf K-12 Bildung und ethische Verantwortung.",
@@ -8682,13 +8682,13 @@
         }
       },
       "concepts": [
+        "Ethical Governance of AI in Social Services",
+        "Algorithmic Fairness and Transparency",
+        "Algorithmic Bias in Social Services",
+        "Inclusive Dataset Design and Representation",
         "AI Literacy in Social Work Education",
         "Automation of Routine Tasks in Case Management",
-        "Algorithmic Fairness and Transparency",
-        "Ethical Governance of AI in Social Services",
-        "Algorithmic Bias in Social Services",
-        "Predictive Analytics in Social Work",
-        "Inclusive Dataset Design and Representation"
+        "Predictive Analytics in Social Work"
       ],
       "knowledge_summary": "AI und ML bieten erhebliches Potenzial zur Verbesserung der sozialen Arbeitspraxis durch Automatisierung, Predictive Analytics und bessere Ressourcenallokation, erfordern aber strikte ethische Richtlinien, Transparenz und ein proaktives Vorgehen gegen algorithmische Vorurteile, um Gerechtigkeit und Gleichheit zu gewährleisten.",
       "knowledge_sections": {
@@ -8760,12 +8760,12 @@
       },
       "concepts": [
         "Information Asymmetry",
-        "Multi-Principal Problem",
-        "Governance in IT Implementation",
-        "Bounded Rationality",
         "Intra-Governmental Collaboration",
+        "Governance in IT Implementation",
         "Organizational Culture Differences",
-        "Agency Theory"
+        "Agency Theory",
+        "Multi-Principal Problem",
+        "Bounded Rationality"
       ],
       "knowledge_summary": "Herausforderungen bei intra-gouvernementaler Zusammenarbeit lassen sich in drei Kategorien einteilen: interpersonelle und individuelle Dynamiken, strukturelle und systemische Herausforderungen sowie vertragliche und risikobezogene Herausforderungen. Die Sättigung wurde nach zehn Interviews erreicht.",
       "knowledge_sections": {
@@ -8835,14 +8835,14 @@
         }
       },
       "concepts": [
-        "AI Lifecycle Risk Management",
-        "Stakeholder Inclusivity in AI Governance",
-        "Algorithmic Accountability",
-        "AI Robustness and Safety",
-        "Organizational Risk Culture",
         "Algorithmic Transparency and Explainability",
+        "AI Lifecycle Risk Management",
+        "AI Robustness and Safety",
+        "Trustworthy AI",
+        "Stakeholder Inclusivity in AI Governance",
+        "Organizational Risk Culture",
         "Algorithmic Fairness",
-        "Trustworthy AI"
+        "Algorithmic Accountability"
       ],
       "knowledge_summary": "Das Papier präsentiert ein strukturiertes DEFINE-ASSESS-TREAT-GOVERN Rahmenwerk, das zeigt, wie Risikomanagement-Praktiken über den gesamten KI-Lebenszyklus (Planung, Datenerfassung, Modellentwicklung, Validierung, Deployment, Betrieb) konkrete technische und prozessuale Maßnahmen zur Umsetzung der OECD-KI-Prinzipien ermöglichen kann.",
       "knowledge_sections": {
@@ -8918,14 +8918,14 @@
         }
       },
       "concepts": [
-        "Intersectionality in AI Fairness",
-        "Matrix of Domination",
-        "Subgroup Fairness Metrics",
-        "Design Justice",
         "Algorithmic Bias",
         "Epistemological Colonialism in AI Research",
+        "Black Feminist Epistemology",
+        "Intersectionality in AI Fairness",
+        "Design Justice",
+        "Matrix of Domination",
         "Citational Praxis",
-        "Black Feminist Epistemology"
+        "Subgroup Fairness Metrics"
       ],
       "knowledge_summary": "AI-Fairness-Forscher reduzieren Intersektionalität primär auf Fairness-Metriken für demographische Subgruppen und ignorieren dabei zentrale intersektionale Prinzipien wie Machtrelationen, soziale Kontexte und kritisches Handeln für Gerechtigkeit.",
       "knowledge_sections": {
@@ -9001,13 +9001,13 @@
         }
       },
       "concepts": [
-        "Algorithmic Bias in Large Language Models",
-        "Fairness Metrics for LLM Evaluation",
+        "Knowledge Boundary Problem",
+        "Cultural Context Bias Measurement",
         "Automated Bias Dataset Construction",
         "Marginalized Community Representation",
-        "Cultural Context Bias Measurement",
-        "Knowledge Boundary Problem",
-        "Low-Resource Language Bias"
+        "Low-Resource Language Bias",
+        "Fairness Metrics for LLM Evaluation",
+        "Algorithmic Bias in Large Language Models"
       ],
       "knowledge_summary": "Lokale Wörter (besonders Te Reo Māori) liegen außerhalb der Wissensgrenzen der meisten LLMs; Llama-3 zeigt besseres Verständnis für kulturelle Kontexte, aber alle getesteten Modelle zeigen erhebliche Bias - insbesondere gilt: linguistisch kompetentere Modelle sind stärker verzerrt.",
       "knowledge_sections": {
@@ -9076,13 +9076,13 @@
         }
       },
       "concepts": [
-        "Algorithm Transparency",
-        "Issue Involvement",
         "Algorithmic Bias",
+        "Trust Pipeline Model",
+        "Issue Involvement",
         "AI Literacy",
         "Organizational Accountability Signaling",
-        "General Negative Attitudes toward AI",
-        "Trust Pipeline Model"
+        "Algorithm Transparency",
+        "General Negative Attitudes toward AI"
       ],
       "knowledge_summary": "Algorithmen-Transparenz vermindert signifikant die negative Beziehung zwischen allgemeiner negativer Einstellung gegenüber KI und Vertrauen in das Mutterunternehmen, besonders bei hohem Issue-Involvement. Transparenz funktioniert als Signalisierungsmechanismus für Organisationsverantwortung und nicht nur als Prism-Modell der Reputation.",
       "knowledge_sections": {
@@ -9154,14 +9154,14 @@
         }
       },
       "concepts": [
-        "Representational Harm",
-        "Bias Benchmark Construction",
-        "Intersectional Bias Measurement",
-        "Gender Bias in NLP Models",
-        "Algorithmic Bias in Question Answering",
         "Context-Dependent Bias Manifestation",
+        "Bias Benchmark Construction",
+        "Algorithmic Bias in Question Answering",
         "Fairness Auditing in NLP Systems",
-        "Protected Class Discrimination in AI"
+        "Protected Class Discrimination in AI",
+        "Gender Bias in NLP Models",
+        "Intersectional Bias Measurement",
+        "Representational Harm"
       ],
       "knowledge_summary": "NLP-Modelle zeigen starke Abhängigkeit von Stereotypen in unterinformativen Kontexten und wählen in 77% der Fälle stereotype Antworten; auch mit informativem Kontext reduziert sich die Genauigkeit um bis zu 3,4 Prozentpunkte, wenn die korrekte Antwort mit sozialen Vorurteilen kollidiert.",
       "knowledge_sections": {
@@ -9235,13 +9235,13 @@
         }
       },
       "concepts": [
-        "Explainability-Based Bias Mitigation",
-        "Intersectional Social Groups",
         "Algorithmic Fairness in Black-Box Systems",
-        "Zero-Shot Prompt Engineering",
+        "Intersectional Social Groups",
         "Self-Debiasing via Prompting",
+        "Explainability-Based Bias Mitigation",
         "Social Bias in Language Models",
-        "Stereotype Benchmark Evaluation"
+        "Stereotype Benchmark Evaluation",
+        "Zero-Shot Prompt Engineering"
       ],
       "knowledge_summary": "Both self-debiasing techniques significantly reduce stereotyping across nine diverse social groups (age, disability, gender identity, nationality, physical appearance, race/ethnicity, religion, sexual orientation, socioeconomic status), with reprompting showing the greatest bias reduction while relying only on simple prompts and the LLM itself.",
       "knowledge_sections": {
@@ -9313,14 +9313,14 @@
         }
       },
       "concepts": [
-        "Scientific Integrity and Source Verification",
         "Algorithmic Fairness and Social Justice",
+        "Scientific Integrity and Source Verification",
         "Equitable Access to AI Tools for Researchers",
-        "Algorithmic Bias in Large Language Models",
-        "Antiracist Research Framework",
-        "Data Privacy and Informed Consent in AI Systems",
         "AI Literacy in Professional Practice",
-        "Prompt Engineering for Inclusive Research"
+        "Prompt Engineering for Inclusive Research",
+        "Data Privacy and Informed Consent in AI Systems",
+        "Antiracist Research Framework",
+        "Algorithmic Bias in Large Language Models"
       ],
       "knowledge_summary": "ChatGPT bietet innovative Möglichkeiten für die Sozialarbeitswissenschaft (Forschungsdesign, Qualitative Datenanalyse, Textbearbeitung), erfordert jedoch strenge ethische Richtlinien bezüglich Bias, Datenschutz, Transparenz und sozialer Gerechtigkeit. Die Profession muss ein umfassendes ethisches Framework entwickeln.",
       "knowledge_sections": {
@@ -9382,13 +9382,13 @@
         }
       },
       "concepts": [
-        "Technostress",
+        "Digital Literacy",
         "Critical Digital Thinking",
         "Socioeconomic Status and Digital Competence",
-        "Digital Divide",
         "Digital Equity in Education",
-        "Gender Differences in Digital Literacy",
-        "Digital Literacy"
+        "Technostress",
+        "Digital Divide",
+        "Gender Differences in Digital Literacy"
       ],
       "knowledge_summary": "Digitale Literalität wird in zwei Hauptrichtungen definiert (technische Fähigkeiten vs. konzeptuelle/kritische Kompetenzen); Familie und elterliche Bildung sind konsistent wichtige Einflussfaktoren, während Alter und Geschlecht inkonsistente Ergebnisse zeigen; verbesserte digitale Literalität reduziert Technostress, erhöht Selbstkontrolle und Engagement.",
       "knowledge_sections": {
@@ -9458,13 +9458,13 @@
         }
       },
       "concepts": [
-        "AI Literacy and Behavioral Intentions",
-        "Implicit Bias and Intersectionality",
-        "Trustworthiness in AI Systems",
         "Algorithmic Bias",
         "Differential Impact of AI Fairness Interventions",
+        "Trustworthiness in AI Systems",
         "Digital Divide and Technology Adoption",
-        "Algorithmic Justice in Employment and Education"
+        "AI Literacy and Behavioral Intentions",
+        "Algorithmic Justice in Employment and Education",
+        "Implicit Bias and Intersectionality"
       ],
       "knowledge_summary": "Mitglieder stigmatisierter Gruppen (Black Americans, Frauen) berichten höheres Vertrauen in LLMs nach unvoreingenommenen Interaktionen; Vertrauen erklärt erhöhte Nutzungsabsichten bei stigmatisierten Gruppen. Umgekehrt nutzen White Americans und Männer LLMs vermehrt, wenn KI-generierte Vorurteile ihre impliziten Biases bestätigen.",
       "knowledge_sections": {
@@ -9529,13 +9529,13 @@
         }
       },
       "concepts": [
-        "AI Properties Framework",
-        "AI Ethics and Fairness Evaluation",
         "Tacit Knowledge in AI Contexts",
-        "Human-AI Collaboration",
         "Measurement Instrument Development",
+        "AI Properties Framework",
         "AI Literacy",
-        "Socio-Technical Competencies"
+        "Human-AI Collaboration",
+        "Socio-Technical Competencies",
+        "AI Ethics and Fairness Evaluation"
       ],
       "knowledge_summary": "Entwicklung und Validierung eines 13-Item-Messinstruments für allgemeine AI Literacy mit 5 Dimensionen, das sowohl explizites Wissen als auch tacit knowledge und Erfahrung (Nutzung und Design) erfasst",
       "knowledge_sections": {
@@ -9608,13 +9608,13 @@
         }
       },
       "concepts": [
-        "Responsible AI",
-        "AI Tool Inscrutability",
-        "Human-AI Collaboration",
         "Algorithmic Bias",
+        "Explainable AI (XAI)",
         "AI Literacy",
         "Differentiated AI Literacy Requirements",
-        "Explainable AI (XAI)"
+        "Human-AI Collaboration",
+        "AI Tool Inscrutability",
+        "Responsible AI"
       ],
       "knowledge_summary": "AI Literacy ist ein fragmentiertes Forschungsfeld, das durch ein overarching conceptual framework strukturiert werden kann, das fünf Kernbereiche (AI Models, Data for AI, AI Interfaces, AI Tools, Humans/Organizations/Society) und differentielle Anforderungen für Expert- vs. Non-Expert-Nutzer aufzeigt.",
       "knowledge_sections": {
@@ -9679,14 +9679,14 @@
         }
       },
       "concepts": [
-        "Culturally Localized Solutions",
         "Holistic Fairness Design",
         "Intersectional Algorithmic Bias",
-        "Participatory Machine Learning",
         "AI Literacy",
-        "Data Feminism",
         "Organizational Accountability Frameworks",
-        "Gender Bias in Algorithmic Systems"
+        "Participatory Machine Learning",
+        "Data Feminism",
+        "Gender Bias in Algorithmic Systems",
+        "Culturally Localized Solutions"
       ],
       "knowledge_summary": "Intersektionale Vorurteile in KI entstehen durch Überlagerung mehrerer Diskriminierungsformen und erfordern ganzheitliche, disziplinübergreifende Strategien zur Mitigation, die über isolierte Bias-Ansätze hinausgehen.",
       "knowledge_sections": {
@@ -9761,13 +9761,13 @@
         }
       },
       "concepts": [
-        "Robustness Testing",
-        "Model Editing",
         "Bias Localization",
-        "Gender Bias in Language Models",
         "Stereotype Bias",
-        "Debiasing-Effectiveness Trade-off",
-        "Algorithmic Fairness"
+        "Robustness Testing",
+        "Algorithmic Fairness",
+        "Gender Bias in Language Models",
+        "Model Editing",
+        "Debiasing-Effectiveness Trade-off"
       ],
       "knowledge_summary": "DR.GAP reduziert Gender-Bias um durchschnittlich 44,98% (GPT-3.5), 36,32% (Llama3) und 39,32% (Llama2-Alpaca) in Coreference-Resolution-Tasks, während die Modellnützlichkeit erhalten bleibt und das Verfahren auf Vision-Language Models generalisiert.",
       "knowledge_sections": {
@@ -9845,14 +9845,14 @@
         }
       },
       "concepts": [
-        "Algorithmic Fairness and Justice",
         "Algorithmic Bias in Social Work",
         "AI Transparency and Explainability",
-        "Predictive Analytics in Risk Assessment",
         "Informed Consent in AI-Mediated Social Services",
-        "Professional Ethics Standards for AI Integration",
+        "Data Privacy and Confidentiality in AI Systems",
+        "Predictive Analytics in Risk Assessment",
         "AI Literacy for Social Work Practitioners",
-        "Data Privacy and Confidentiality in AI Systems"
+        "Professional Ethics Standards for AI Integration",
+        "Algorithmic Fairness and Justice"
       ],
       "knowledge_summary": "Sozialarbeiter müssen sich mit neun zentralen ethischen Herausforderungen auseinandersetzen (informierte Zustimmung, Datenschutz, Transparenz, Fehldiagnose, Patientenabbruch, Überwachung, Plagiarismus, algorithmischer Bias), und es existiert derzeit keine umfassende berufsethische Reflexion dieser Themen in der Sozialarbeits-Literatur.",
       "knowledge_sections": {
@@ -9925,13 +9925,13 @@
       },
       "concepts": [
         "Gender Bias in AI",
-        "Inclusive AI Design",
-        "Substantive Equality",
         "AI Literacy and Capacity Building",
-        "Algorithmic Oppression",
-        "Meaningful Participation of Marginalized Groups",
         "Intersectional Feminism in AI",
-        "AI Governance and Accountability"
+        "Meaningful Participation of Marginalized Groups",
+        "AI Governance and Accountability",
+        "Inclusive AI Design",
+        "Algorithmic Oppression",
+        "Substantive Equality"
       ],
       "knowledge_summary": "KI-Systeme sind nicht neutral und reproduzieren strukturelle Ungleichheiten. Eine transformative Gleichstellungspolitik muss systembezogene Nachteile adressieren, demokratische Defizite überbrücken und Fehlrepräsentation umkehren durch inklusives Design, sinnvolle Partizipation und Accountability über den gesamten KI-Lebenszyklus.",
       "knowledge_sections": {
@@ -10002,13 +10002,13 @@
         }
       },
       "concepts": [
+        "Care Ethics in Technology Design",
         "Algorithmic Bias in Global South Contexts",
         "Feminist AI Governance",
+        "Gender Representation in AI Ecosystems",
         "Algorithmic Assemblages",
         "Intersectional AI Literacy",
-        "Participatory Design Justice",
-        "Care Ethics in Technology Design",
-        "Gender Representation in AI Ecosystems"
+        "Participatory Design Justice"
       ],
       "knowledge_summary": "Feminist AI Governance adressiert Machtungleichgewichte im KI-Ökosystem durch systemic-strukturelle Ansätze und erkennt algorithmische Systeme als soziotechnische Assemblierungen an, die von Machtverhältnissen geprägt sind. Drei implementierte Initiativen demonstrieren die Machbarkeit und Notwendigkeit, KI-Systeme auf Basis von sozialer Gerechtigkeit, Menschenrechten und Care-Prinzipien zu entwick",
       "knowledge_sections": {
@@ -10083,13 +10083,13 @@
         }
       },
       "concepts": [
-        "Large Language Model (LLM) Applications in Practice",
-        "AI Hallucination Mitigation",
-        "Generative AI Literacy in Social Work",
         "Social Work Education Policy Integration",
-        "Prompt Engineering",
+        "AI Hallucination Mitigation",
         "Algorithmic Bias in Generative AI",
-        "Narrow AI in Social Work Practice"
+        "Narrow AI in Social Work Practice",
+        "Large Language Model (LLM) Applications in Practice",
+        "Generative AI Literacy in Social Work",
+        "Prompt Engineering"
       ],
       "knowledge_summary": "Die Autor:innen schlagen eine neue EPAS-Kompetenzindikator vor: Sozialarbeiter demonstrieren Wissen, Fähigkeiten und Verständnis für verantwortungsvolle Nutzung generativer KI-Tools. Vier Kernfähigkeiten werden identifiziert: konzeptionelles Verständnis von KI-Modellen, effektives Prompting, Output-Bewertung und kontinuierliches Lernen.",
       "knowledge_sections": {
@@ -10160,12 +10160,12 @@
       },
       "concepts": [
         "Digital Professional Boundaries in Social Work",
-        "Digital Ethics in Social Work",
-        "Data Protection and Client Privacy in Digital Practice",
-        "Digital Divide and Inclusive Online Services",
         "Digital Literacy in Social Work Education",
-        "Cultural Competence and Technological Accessibility",
-        "Algorithmic Decision-Making in Social Services"
+        "Data Protection and Client Privacy in Digital Practice",
+        "Algorithmic Decision-Making in Social Services",
+        "Digital Ethics in Social Work",
+        "Digital Divide and Inclusive Online Services",
+        "Cultural Competence and Technological Accessibility"
       ],
       "knowledge_summary": "Die Analyse von 15 Studien zeigt drei Hauptkategorien ethischer Herausforderungen: Auswirkungen der Digitalisierung auf die berufliche Praxis, Implikationen für Bildung und Forschung, sowie spezifische ethische Probleme der digitalen Praxis. Es besteht Bedarf für verbindliche ethische Grundsätze und regulatorische Standards zum Schutz persönlicher digitaler Daten.",
       "knowledge_sections": {
@@ -10238,13 +10238,13 @@
         }
       },
       "concepts": [
-        "Data Privacy Literacy",
-        "Tech Justice",
-        "Computational Thinking",
+        "Algorithmic Fairness Evaluation",
         "Algorithmic Bias",
+        "Tech Justice",
         "AI Literacy",
         "Generative AI Literacy",
-        "Algorithmic Fairness Evaluation"
+        "Data Privacy Literacy",
+        "Computational Thinking"
       ],
       "knowledge_summary": "Ein integriertes AI Literacy Framework mit drei Modes of Engagement (Understand, Evaluate, Use), sechs AI Literacy Practices und zwei Core Values (Human Judgment, Centering Justice), das Schulleitern bei der Gestaltung von KI-Kompetenzvermittlung hilft und Risiken wie Bias, Datenschutz und Desinformation adressiert.",
       "knowledge_sections": {
@@ -10316,13 +10316,13 @@
         }
       },
       "concepts": [
-        "Training Data-Induced Bias in Narratives",
-        "Intersectional Bias Analysis",
-        "Fairness Metrics (TVD and DPR)",
         "Gender and Ethnicity Bias Mitigation",
         "Prompt Engineering for Bias Reduction",
-        "Model-Generated Explanations as Feedback Mechanism",
-        "Explainable AI (XAI) for Fairness"
+        "Explainable AI (XAI) for Fairness",
+        "Intersectional Bias Analysis",
+        "Training Data-Induced Bias in Narratives",
+        "Fairness Metrics (TVD and DPR)",
+        "Model-Generated Explanations as Feedback Mechanism"
       ],
       "knowledge_summary": "Die Integration von modellgenerierten Erklärungen in Prompts reduziert Bias um 2%-20% und verbessert die demografische Repräsentation signifikant. Alle drei Modelle zeigen konsistente Muster bei den Stereotypen-Erklärungen, die auf zugrundeliegende Bias-Strukturen hinweisen.",
       "knowledge_sections": {
@@ -10395,13 +10395,13 @@
         }
       },
       "concepts": [
-        "Algorithmic Bias in Large Language Models",
         "Name-Based Discrimination",
-        "Bias Mitigation Strategies",
-        "Intersectional Bias",
         "AI Auditing",
+        "Stereotype Embedding in Language Models",
+        "Intersectional Bias",
+        "Bias Mitigation Strategies",
         "Disparate Impact Assessment",
-        "Stereotype Embedding in Language Models"
+        "Algorithmic Bias in Large Language Models"
       ],
       "knowledge_summary": "LLMs zeigen systematische Biase, die Namen benachteiligen, die mit rassischen Minderheiten und Frauen assoziiert sind, wobei Black Women die am meisten benachteiligten Ergebnisse erhalten. Diese Biase sind konsistent über Modelle und Szenarien hinweg und können durch numerische Anker, nicht aber durch qualitative Details reduziert werden.",
       "knowledge_sections": {
@@ -10476,13 +10476,13 @@
         }
       },
       "concepts": [
-        "Neural Machine Translation vs. Large Language Models",
         "Gender Bias in Machine Translation",
-        "Prompt Engineering for Bias Mitigation",
         "Gender Coreference Resolution in NLP",
-        "Representational and Allocational Harm",
         "Algorithmic Fairness Evaluation",
-        "Chain-of-Thought Reasoning"
+        "Prompt Engineering for Bias Mitigation",
+        "Chain-of-Thought Reasoning",
+        "Neural Machine Translation vs. Large Language Models",
+        "Representational and Allocational Harm"
       ],
       "knowledge_summary": "Base LLMs zeigen signifikant höheren Geschlechterbias als NMT-Modelle; durch gezielte Prompt-Strukturen mit Chain-of-Thought kann Gender-Bias bei instruktionsgestimmten LLMs um bis zu 12% reduziert werden, wodurch die Lücke zu NMT-Systemen deutlich verkleinert wird.",
       "knowledge_sections": {
@@ -10554,11 +10554,11 @@
       },
       "concepts": [
         "AI Explainability",
-        "Macro-Systematicity",
         "Epistemological Quality Control",
         "Large Language Model Consistency",
-        "Interpretability in Neural Networks",
         "AI Accountability",
+        "Interpretability in Neural Networks",
+        "Macro-Systematicity",
         "Algorithmic Fairness"
       ],
       "knowledge_summary": "Explainability ist nur eine Facette eines breiteren Ideals der Systematizität. Die angemessene Forderung an KI-Systeme ist nicht nur Mikro-Systematizität (Kompositionialität), sondern Makro-Systematizität: ein integriertes, konsistentes, kohärentes und parsimonisch prinzipiertes Gedankensystem. Diese Forderung wird durch fünf identifizierbare Rationales (kognitiv, hermeneutisch, epistemologisch, k",
@@ -10631,13 +10631,13 @@
       },
       "concepts": [
         "Indirect Reciprocity",
+        "Algorithmic Fairness in Cooperative Systems",
         "LLM Social Norm Internalization",
         "Prompt Engineering for Norm Steering",
-        "AI-Mediated Social Decision-Making",
-        "Algorithmic Bias in Social Judgment",
         "LLM Model Variability in Norm Judgment",
-        "Algorithmic Fairness in Cooperative Systems",
-        "Evolutionary Game Theory in Cooperation Dynamics"
+        "Algorithmic Bias in Social Judgment",
+        "Evolutionary Game Theory in Cooperation Dynamics",
+        "AI-Mediated Social Decision-Making"
       ],
       "knowledge_summary": "LLMs zeigen Übereinstimmung bei der Beurteilung von Kooperation mit wohlreputablen Personen, aber erhebliche Varianz bei der Beurteilung von Kooperation mit Personen mit schlechtem Ruf; diese Unterschiede können Kooperationsniveaus signifikant beeinflussen, und gezielte Prompt-Interventionen können LLM-Normen lenken.",
       "knowledge_sections": {
@@ -10709,14 +10709,14 @@
         }
       },
       "concepts": [
-        "Data Literacy in Professional Practice",
-        "Machine Learning on Unstructured Data",
-        "Algorithmic Fairness and Decision Support Systems",
-        "Algorithmic Bias in Social Work",
-        "Transparency and Objectivity in AI Systems",
-        "De-Professionalization Through Standardization",
+        "Privacy Protection in Algorithmic Social Services",
         "Formalization Gap Theory",
-        "Privacy Protection in Algorithmic Social Services"
+        "Machine Learning on Unstructured Data",
+        "Algorithmic Bias in Social Work",
+        "Algorithmic Fairness and Decision Support Systems",
+        "Data Literacy in Professional Practice",
+        "De-Professionalization Through Standardization",
+        "Transparency and Objectivity in AI Systems"
       ],
       "knowledge_summary": "Big Data und KI verkleinern die von Rolf beschriebene 'vorläufige Formalisierungslücke' erheblich, führen aber zu neuen Herausforderungen hinsichtlich vermeintlicher Objektivität, Bias-Reproduktion und Ermessensspielraum-Einschränkung. Neue Anforderungen an Fachlichkeit entstehen durch erforderliche 'data literacy' und konsistenten Persönlichkeitsschutz.",
       "knowledge_sections": {
@@ -10788,13 +10788,13 @@
         }
       },
       "concepts": [
-        "Data Literacy in Professional Practice",
         "Decision Support Systems (DSS) in Social Work",
-        "Professional Judgment and AI Transparency",
-        "Participatory Decision-Making with Service Users",
-        "Technology Assessment in Social Care",
+        "Data Literacy in Professional Practice",
         "Algorithmic Bias in Professional Documentation",
-        "Algorithmic Fairness in Vulnerable Populations"
+        "Algorithmic Fairness in Vulnerable Populations",
+        "Technology Assessment in Social Care",
+        "Professional Judgment and AI Transparency",
+        "Participatory Decision-Making with Service Users"
       ],
       "knowledge_summary": "DSSs mit Visualisierungen der Klient*innen-Entwicklung werden als unterstützend wahrgenommen; es besteht Bedarf für partizipative Entscheidungsfindung; technische und professionelle Zuverlässigkeit dürfen nicht verwechselt werden.",
       "knowledge_sections": {
@@ -10863,13 +10863,13 @@
       },
       "concepts": [
         "Technology Assessment",
+        "Explainability in AI Systems",
         "Discrimination in Border Control Systems",
         "Algorithmic Bias in Decision Support",
-        "Explainability in AI Systems",
-        "Stakeholder Perspectives on AI Governance",
         "Automated Decision-Making Systems",
+        "Algorithmic Fairness",
         "Trust in AI Systems",
-        "Algorithmic Fairness"
+        "Stakeholder Perspectives on AI Governance"
       ],
       "knowledge_summary": "Die Erklärbarkeit von KI-Systemen ist zentral für deren legitime Verwendung, muss aber situativ ausgestaltet werden und darf professionelle Rollen nicht infrage stellen. Vertrauen wird durch funktionale Legitimation als Zweitmeinung aufgebaut, nicht primär durch technische Transparenz.",
       "knowledge_sections": {
@@ -10936,14 +10936,14 @@
         }
       },
       "concepts": [
-        "Trust in Human-AI Collaborative Care",
         "Stakeholder-Inclusive Algorithm Design",
         "Algorithmic Fairness in Clinical Decision Support",
         "Dehumanization Risk in Algorithmic Care",
         "Informed Patient Autonomy",
-        "AI Literacy in Healthcare",
+        "Trust in Human-AI Collaborative Care",
         "Responsibility Distribution in AI-CDSS Systems",
-        "Shared Decision-Making with AI Integration"
+        "Shared Decision-Making with AI Integration",
+        "AI Literacy in Healthcare"
       ],
       "knowledge_summary": "Patienten zeigen erhebliche Unsicherheit gegenüber AI-CDSS-Implementierung. Die Wahrnehmung oszilliert zwischen supportivem Werkzeug und Zweitmeinung, wobei enge Verflechtungen zwischen Vertrauen, Verantwortung und Selbstbestimmung bestehen, die durch unzureichendes Verständnis der KI-Funktionalität gefährdet sind.",
       "knowledge_sections": {
@@ -11012,14 +11012,14 @@
         }
       },
       "concepts": [
-        "Participatory Technology Design",
-        "Large Language Models in Human Services",
         "Data Protection and Privacy in Social Work",
-        "Organizational Change Management for Digital Implementation",
-        "Technology Acceptance in Professional Practice",
         "AI Literacy in Social Work",
-        "Algorithmic Fairness in Social Services",
-        "Relational Care and Human Empathy"
+        "Participatory Technology Design",
+        "Technology Acceptance in Professional Practice",
+        "Large Language Models in Human Services",
+        "Organizational Change Management for Digital Implementation",
+        "Relational Care and Human Empathy",
+        "Algorithmic Fairness in Social Services"
       ],
       "knowledge_summary": "Während digitale Technologien im administrativen Bereich positiv bewertet werden, zeigt sich bei KI eine kritischere Haltung: Nicht einmal ein Drittel der Befragten bewerten KI-Einsatz positiv. Die Akzeptanz hängt stark von digitalen Kompetenzen und praktischen Erfahrungen ab, wobei hauptsächlich Bedenken bezüglich Datenschutz und der Unersetzbarkeit menschlicher Empathie bestehen.",
       "knowledge_sections": {
@@ -11096,11 +11096,11 @@
       "concepts": [
         "Framing Effects in LLMs",
         "LLM Bias Benchmarking",
+        "Chain-of-Thought Prompting Limitations",
         "Grounded Reasoning Tasks",
         "Directional Reasoning Bias",
-        "Demographic Fairness Disparities",
-        "Chain-of-Thought Prompting Limitations",
-        "Protected Attributes Interaction"
+        "Protected Attributes Interaction",
+        "Demographic Fairness Disparities"
       ],
       "knowledge_summary": "LLMs zeigen konsistente und richtungsabhängige Reasoning-Verzerrungen, wobei die Wahl und Position von Vergleichsbegriffen zu systematischen Vorhersagen in Richtung des Framing-Terms führt, unabhängig von der korrekten Antwort. Diese Effekte werden durch demografische Identitätsmarker (Geschlecht, Rasse) verstärkt.",
       "knowledge_sections": {
@@ -11175,13 +11175,13 @@
         }
       },
       "concepts": [
-        "Inclusive AI Design",
-        "Digital Literacy Programs",
-        "Women Underrepresentation in AI",
-        "AI Literacy",
         "Gender Bias in AI Systems",
         "Gender-Responsive Education Policy",
-        "Algorithmic Fairness"
+        "Women Underrepresentation in AI",
+        "AI Literacy",
+        "Digital Literacy Programs",
+        "Algorithmic Fairness",
+        "Inclusive AI Design"
       ],
       "knowledge_summary": "Digitale Literaturprogramme sind ein vielversprechendes Instrument zur Bekämpfung von Geschlechtsbias in KI, indem sie kritisches Denken fördern, Frauen zum Verfolgen von KI-Karrieren ermutigen und frauengeführte KI-Projekte katalysieren. Systemische Veränderungen in KI-Entwicklung, Design und Bildungspolitik sind jedoch notwendig.",
       "knowledge_sections": {
@@ -11254,13 +11254,13 @@
         }
       },
       "concepts": [
-        "Proxy Bias in Machine Learning",
         "Algorithmic Bias Workarounds",
-        "Technological Naivety",
+        "Proxy Bias in Machine Learning",
         "HAII-TIME Theory (Human-AI Interaction Theory of Interactive Media Effects)",
-        "Algorithmic Fairness Metrics",
         "Algorithmic Literacy",
-        "Intersectional Algorithmic Discrimination"
+        "Intersectional Algorithmic Discrimination",
+        "Technological Naivety",
+        "Algorithmic Fairness Metrics"
       ],
       "knowledge_summary": "Das Paper entwickelt einen theoretischen Rahmen, der zeigt, wie Nutzer:innen durch Cue-Routes (Wahrnehmung) und Action-Routes (Verhalten) unterschiedliche Workaround-Strategien entwickeln, um mit algorithmischem Bias umzugehen. Die vier Kategorien von Bias führen zu verschiedenen Ergebnissen: von Empowerment bei erfolgreichen Workarounds bis zu technologischer Naivität bei unwahrgenommenen Bias.",
       "knowledge_sections": {
@@ -11331,13 +11331,13 @@
         }
       },
       "concepts": [
+        "Prompt Sequencing Effects",
+        "Representation Bias in Text-to-Image Models",
+        "Gender Bias in Generative Models",
         "AI Fairness Metrics",
-        "Algorithmic Bias Taxonomy",
         "Prompt Engineering for Bias Mitigation",
         "AI Literacy and Critical Reflection",
-        "Gender Bias in Generative Models",
-        "Prompt Sequencing Effects",
-        "Representation Bias in Text-to-Image Models"
+        "Algorithmic Bias Taxonomy"
       ],
       "knowledge_summary": "Prompt-Modifizierer können Verzerrungen teilweise reduzieren, zeigen aber inkonsistente Ergebnisse. Prompt-Sequenzierung hat signifikante Auswirkungen, und mehrere Verzerrungen sind resistent gegen einfache Modifier-basierte Interventionen.",
       "knowledge_sections": {
@@ -11407,12 +11407,12 @@
         }
       },
       "concepts": [
-        "Intersectional Feminism in Technology",
-        "Data Politics",
-        "Gender Recognition Systems Bias",
         "Algorithmic Bias",
+        "Gender Recognition Systems Bias",
         "Technology as Political Object",
+        "Data Politics",
         "Algorithmic Fairness",
+        "Intersectional Feminism in Technology",
         "Hermeneutic Reverse Engineering"
       ],
       "knowledge_summary": "AI-Systeme als Boundary Objects zu betrachten und durch hermeneutisches Reverse Engineering kritisch zu untersuchen ermöglicht es, versteckte Bias in Daten und Algorithmen aufzudecken und alternative, inklusivere Futures zu imaginieren. Bias ist kein Fehler sondern systemische Kodierung der dominanten sozialen Struktur.",
@@ -11484,13 +11484,13 @@
         }
       },
       "concepts": [
-        "Feminist Metaethics of AI",
-        "Ethics Washing",
         "Contextual and Narrative AI Ethics Methods",
+        "Ethics Washing",
         "Data Colonialism",
+        "Intersectional AI Governance",
+        "Feminist Metaethics of AI",
         "Algorithmic Fairness and Power Relations",
-        "Epistemic Injustice in AI Systems",
-        "Intersectional AI Governance"
+        "Epistemic Injustice in AI Systems"
       ],
       "knowledge_summary": "Eine feministische Metaethik des AI sollte sich systematisch mit vier Dimensionen befassen: (i) der Kontinuität zwischen Theorie und Handlung in der AI-Ethik, (ii) den realen Effekten von AI-Ethik, (iii) der Rolle und dem Profil der in AI-Ethik involvierten Akteure, und (iv) den Auswirkungen von AI auf Machtbeziehungen durch kontextuelle, emotionale und narrative Methoden.",
       "knowledge_sections": {
@@ -11557,13 +11557,13 @@
         }
       },
       "concepts": [
+        "AI Safety Guardrails in Mental Health",
+        "Conversational Memory in Therapeutic AI",
         "Generative AI Chatbots for Mental Health",
         "Algorithmic Hallucination and Transparency",
         "Therapeutic Safe Space",
-        "AI Safety Guardrails in Mental Health",
         "Digital Mental Health Accessibility Gap",
-        "Contextual Design of AI Safety",
-        "Conversational Memory in Therapeutic AI"
+        "Contextual Design of AI Safety"
       ],
       "knowledge_summary": "Generative KI-Chatbots werden von Nutzern als emotionaler Schutzraum erlebt und bieten bedeutungsvolle psychische Unterstützung mit Berichten über positive Auswirkungen einschließlich verbesserter Beziehungen und Heilung von Trauma, erfordern aber bessere Sicherheitsvorkehrungen und menschenähnliches Gedächtnis.",
       "knowledge_sections": {
@@ -11637,13 +11637,13 @@
         }
       },
       "concepts": [
-        "Fair Labor Practices in Data Annotation",
+        "Gender Bias in AI Systems",
         "Community-Based Data Governance",
         "Algorithmic Bias",
-        "Critical Design and Technological Democratization",
+        "Intersectional Feminism in AI Development",
+        "Fair Labor Practices in Data Annotation",
         "Data Feminism",
-        "Gender Bias in AI Systems",
-        "Intersectional Feminism in AI Development"
+        "Critical Design and Technological Democratization"
       ],
       "knowledge_summary": "Ein kritisches Kunstprojekt demonstriert, dass feministische und intersektionale Perspektiven auf jeden Schritt der maschinellen Lernentwicklung angewendet werden können – von der gemeinschaftlichen Datenerfassung über ethische Arbeitsmodelle bis zur Gestaltung von Benutzeroberflächen – um Bias abzubauen und gerechtere KI-Systeme zu schaffen.",
       "knowledge_sections": {
@@ -11716,12 +11716,12 @@
         }
       },
       "concepts": [
+        "Technological Justice in Social Work",
         "Natural Language Processing (NLP)",
         "Large Language Models (LLMs) for Social Work Practice",
         "Prompt Engineering for Social Work",
         "Algorithmic Bias in Social Work",
         "Technology-Mediated Social Work Education",
-        "Technological Justice in Social Work",
         "AI Ethics Curriculum Integration"
       ],
       "knowledge_summary": "Sozialarbeitende haben eine ethische Verantwortung, sich mit KI-Technologien auseinanderzusetzen und diese in Lehre und Praxis zu integrieren, während gleichzeitig Bias, Datenschutz und technologische Gerechtigkeit kritisch reflektiert werden müssen.",
@@ -11791,13 +11791,13 @@
         }
       },
       "concepts": [
+        "AI Governance Frameworks",
         "Reparative Justice in AI",
         "Algorithmic Accountability",
         "Algorithmic Harm Documentation",
-        "AI Governance Frameworks",
+        "Transformative Justice Framework",
         "Affected Community Participation",
-        "Disparate Impact in AI Systems",
-        "Transformative Justice Framework"
+        "Disparate Impact in AI Systems"
       ],
       "knowledge_summary": "Reparationsbemühungen konzentrieren sich stark auf symbolische, frühe Phasen (Ankündigung, Attribution), während Maßnahmen zur Rechenschaftspflicht und Systemreform deutlich seltener sind. Nur 10,75% der Fälle zeigen Strafen und 6,13% Kompensationen, was auf ein erhebliches Verantwortungsdefizit hindeutet.",
       "knowledge_sections": {
@@ -11870,13 +11870,13 @@
         }
       },
       "concepts": [
-        "Inclusive Prompt Engineering",
-        "AI Literacy for Content Designers",
-        "Toxic Positivity in AI Systems",
-        "Iterative Prompt Refinement",
-        "Visual Representation and Social Justice",
         "Generative AI Content Moderation",
-        "Algorithmic Representation Bias"
+        "Algorithmic Representation Bias",
+        "Visual Representation and Social Justice",
+        "Inclusive Prompt Engineering",
+        "Iterative Prompt Refinement",
+        "AI Literacy for Content Designers",
+        "Toxic Positivity in AI Systems"
       ],
       "knowledge_summary": "DALL-E betreibt sogenannte 'Toxic Positivity', die durch Content-Filter verursacht wird und dazu führt, dass der KI-Generator bei der Darstellung menschlicher Subjekte standardmäßig zu jungen, dünnen, schönen und weißen Menschen greift. Durch iteratives Prompt Engineering mit positiver Umformulierung von sensiblen Begriffen können Nutzer diese Verzerrungen umgehen und vielfältigere Darstellungen e",
       "knowledge_sections": {
@@ -11950,14 +11950,14 @@
         }
       },
       "concepts": [
-        "Gender Bias in Generative AI Systems",
-        "Multi-Modal Bias Detection in AI",
-        "Vulnerability-Centered AI Design",
         "Algorithmic Bias in Socio-Technical Systems",
+        "Vulnerability-Centered AI Design",
         "Ethics-Washing in AI Governance",
-        "AI Literacy Through Co-Creation Training",
+        "Gender Bias in Generative AI Systems",
         "Participatory Design for AI Fairness",
-        "Intersectional Bias in AI"
+        "Intersectional Bias in AI",
+        "Multi-Modal Bias Detection in AI",
+        "AI Literacy Through Co-Creation Training"
       ],
       "knowledge_summary": "Training in Co-Creation Prozessen kann technische Barrieren reduzieren und nicht-technische Stakeholder befähigen, informiert über AI-Bias zu diskutieren, erfordert aber sorgfältige Kalibrierung des Inhalts und kritische Reflexion zur Vermeidung von instrumentalisierendem 'Ethics-Washing'.",
       "knowledge_sections": {
@@ -12029,13 +12029,13 @@
       },
       "concepts": [
         "Gender Bias in AI",
-        "Epistemology and Standpoint Theory",
         "Algorithmic Bias",
-        "Feminist Pedagogy",
         "Surveillance in Educational Technology",
+        "Critical Citation Practices",
         "AI Literacy",
-        "Community Engagement in Education",
-        "Critical Citation Practices"
+        "Feminist Pedagogy",
+        "Epistemology and Standpoint Theory",
+        "Community Engagement in Education"
       ],
       "knowledge_summary": "Generative AI kann für transformative feministische Pädagogik genutzt werden, indem Lehrende Studierende zur kritischen Auseinandersetzung mit Wissensentstehung, Epistemologie und Community-Engagement ermutigen, statt Überwachung zu verstärken.",
       "knowledge_sections": {
@@ -12102,14 +12102,14 @@
         }
       },
       "concepts": [
-        "Teacher Education Gap in AI Integration",
-        "Professional Knowledge Framework (Episteme-Techne-Phronesis)",
         "Ethical AI in Education",
-        "Computer Science-Centric Epistemology in AI Education",
         "Contextual Diversity in AI Literacy Design",
+        "Teacher Education Gap in AI Integration",
         "Algorithmic Bias in Educational Assessment",
         "AI Literacy",
-        "Algorithmic Fairness"
+        "Professional Knowledge Framework (Episteme-Techne-Phronesis)",
+        "Algorithmic Fairness",
+        "Computer Science-Centric Epistemology in AI Education"
       ],
       "knowledge_summary": "AI literacy ist ein global emergierendes Forschungsthema, aber kaum in Teacher Education verankert. Die Literatur ist computer-science-zentriert und konzeptualisiert AI literacy implizit und überwiegend durch technische und praktische Dimensionen, während ethische und kontextgebundene professionelle Urteile unterrepräsentiert sind.",
       "knowledge_sections": {
@@ -12173,13 +12173,13 @@
         }
       },
       "concepts": [
+        "Trust-Adaptive Interventions",
+        "Algorithmic Decision Support",
+        "Explainable AI (XAI)",
+        "AI Literacy",
         "Human-AI Collaboration",
         "Trust Calibration",
-        "Algorithmic Decision Support",
-        "Appropriate Reliance",
-        "AI Literacy",
-        "Trust-Adaptive Interventions",
-        "Explainable AI (XAI)"
+        "Appropriate Reliance"
       ],
       "knowledge_summary": "Vertrauensadaptive Interventionen – unterstützende Erklärungen bei niedrigem Vertrauen und Gegenargumente bei hohem Vertrauen – reduzieren unangemessene Abhängigkeit um bis zu 38% und verbessern die Entscheidungsgenauigkeit um 20%.",
       "knowledge_sections": {
@@ -12250,13 +12250,13 @@
         }
       },
       "concepts": [
-        "Corporate Accountability Mechanisms",
         "Private Authority",
-        "Algorithmic Governance",
-        "Algorithmic Discrimination",
-        "Algorithmic Legitimacy Crisis",
+        "Algorithmic Opacity",
+        "Corporate Accountability Mechanisms",
         "State-Corporate Relations",
-        "Algorithmic Opacity"
+        "Algorithmic Governance",
+        "Algorithmic Legitimacy Crisis",
+        "Algorithmic Discrimination"
       ],
       "knowledge_summary": "Algorithmic governance by Big Tech creates unprecedented forms of private authority that challenge existing IR frameworks of legitimacy, and requires new conceptualizations of corporate international responsibility that account for opacity, scale, and the complex oscillation between state-corporate collaboration and contestation.",
       "knowledge_sections": {
@@ -12312,12 +12312,12 @@
         }
       },
       "concepts": [
-        "Occupational Wage Inequality",
-        "Structural Labor Market Inequality",
         "Geographic Employment Concentration",
-        "Occupational Employment Statistics Survey (OEWS)",
+        "Structural Labor Market Inequality",
         "Labor Market Segmentation",
-        "Care Work and Service Sector Precarity"
+        "Occupational Wage Inequality",
+        "Care Work and Service Sector Precarity",
+        "Occupational Employment Statistics Survey (OEWS)"
       ],
       "knowledge_summary": "Produktionsberufe beschäftigen 8,7 Millionen Menschen (5,7% der Gesamtbeschäftigung) mit Durchschnittslöhnen von 50.090 USD, deutlich unter dem nationalen Durchschnitt von 67.920 USD. Gebäudereinigungs- und Instandhaltungsberufe mit 4,5 Millionen Beschäftigten haben noch niedrigere Durchschnittslöhne von 39.540 USD.",
       "knowledge_sections": {
@@ -12390,13 +12390,13 @@
         }
       },
       "concepts": [
-        "Predictive Risk Modeling",
-        "Automated Social Exclusion",
-        "Black-Box Problem in AI Systems",
-        "AI Literacy in Social Work",
-        "Neoliberal Instrumentalization of AI",
         "Relationship-Centered Social Work Practice",
+        "AI Literacy in Social Work",
         "Algorithmic Bias in Social Services",
+        "Automated Social Exclusion",
+        "Predictive Risk Modeling",
+        "Neoliberal Instrumentalization of AI",
+        "Black-Box Problem in AI Systems",
         "Algorithmic Fairness"
       ],
       "knowledge_summary": "Während KI-Technologien wie Predictive Risk Modeling und Chatbots vielversprechende Potenziale für die Soziale Arbeit bieten, bestehen erhebliche Risiken durch Algorithmen-Bias, Datenschutzproblematiken und die Gefahr der Automatisierung sozialer Exklusion, insbesondere wenn KI zu Kosteneinsparungen statt professioneller Unterstützung eingesetzt wird.",
@@ -12462,14 +12462,14 @@
         }
       },
       "concepts": [
-        "Human-AI Alignment in Decision-Making",
-        "Calibration Gap",
-        "Prompt Engineering for Confidence Alignment",
+        "AI Literacy in Uncertainty Interpretation",
         "Uncertainty Communication in LLMs",
         "Discrimination Gap",
+        "Human-AI Alignment in Decision-Making",
         "Length Bias in AI Trust",
-        "AI Literacy in Uncertainty Interpretation",
-        "Internal Model Confidence"
+        "Internal Model Confidence",
+        "Prompt Engineering for Confidence Alignment",
+        "Calibration Gap"
       ],
       "knowledge_summary": "Nutzer überschätzen systematisch die Genauigkeit von LLM-Ausgaben mit Standarderklärungen; längere Erklärungen erhöhen das Vertrauen ohne die Antwortgenauigkeit zu verbessern. Durch Anpassung der Erklärungen an die interne Modellkonfidenz können Kalibrierungs- und Diskriminierungslücken erheblich reduziert werden.",
       "knowledge_sections": {
@@ -12535,12 +12535,12 @@
         }
       },
       "concepts": [
-        "Algorithmic Fairness in Workplace Contexts",
-        "Technology Literacy Assessment",
+        "Adaptive Automation Systems",
         "Critical AI Literacy",
         "Digital Divide in AI Adoption",
+        "Technology Literacy Assessment",
+        "Algorithmic Fairness in Workplace Contexts",
         "Deep Automation Bias",
-        "Adaptive Automation Systems",
         "Socio-technical System Design"
       ],
       "knowledge_summary": "KI-basierte Automatisierung unterscheidet sich durch höhere Dynamik, Volatilität und Intransparenz von klassischen Automatisierungsformen. Das Risiko von Deep Automation Bias stellt ein Meta-Risiko dar, das durch kritische KI-Kompetenzen und bewusstes, zweckorientiertes System-Design reduziert werden kann.",
@@ -12613,13 +12613,13 @@
         }
       },
       "concepts": [
+        "Digital Power Asymmetries",
+        "Digital Nudging",
         "Digital Sovereignty",
         "Algorithmic Transparency",
-        "Digital Power Asymmetries",
-        "Algorithmic Discrimination",
-        "Technology-Mediated Power in Social Work",
         "Digital Divide",
-        "Digital Nudging"
+        "Algorithmic Discrimination",
+        "Technology-Mediated Power in Social Work"
       ],
       "knowledge_summary": "Digitale Systeme sind nicht neutral und verstärken bestehende Machvasymmetrien durch unsichtbare Kontrolle, algorithmische Diskriminierung und Ausgrenzung, während sie gleichzeitig professionelle Autonomie und Klient:innen-Selbstbestimmung untergraben. Soziale Arbeit muss diese Dynamiken kritisch reflektieren und sich politisch für digitale Gerechtigkeit einsetzen.",
       "knowledge_sections": {
@@ -12692,14 +12692,14 @@
         }
       },
       "concepts": [
-        "Automation Bias",
-        "Intersectional Algorithmic Fairness",
-        "Media-Pedagogical Intervention",
-        "AI Literacy",
-        "Algorithmic Discrimination",
-        "Sample Bias",
         "Digital Resignation",
-        "Proxy Variables"
+        "Media-Pedagogical Intervention",
+        "Sample Bias",
+        "Automation Bias",
+        "Proxy Variables",
+        "AI Literacy",
+        "Intersectional Algorithmic Fairness",
+        "Algorithmic Discrimination"
       ],
       "knowledge_summary": "KI-bezogene Kompetenzen müssen drei Dimensionen umfassen (kognitiv, affektiv, handlungsbezogen), um algorithmen-basierte Diskriminierung zu erkennen und zu adressieren. Es besteht ein erhebliches Kompetenzdefizit und eine 'digitale Resignation' bei betroffenen Gruppen.",
       "knowledge_sections": {
@@ -12770,12 +12770,12 @@
       },
       "concepts": [
         "Intellectual Property Rights Reform for Generative AI",
+        "Participatory AI Governance",
         "Algorithmic Bias Amplification",
         "AI Literacy for Policymakers",
         "Generative AI Risk Taxonomy",
         "Generative AI Governance",
-        "Tech Corporate Power Concentration",
-        "Participatory AI Governance"
+        "Tech Corporate Power Concentration"
       ],
       "knowledge_summary": "Traditionelle IT-Governance-Modelle und Regulierungsrahmen sind unzureichend für generative KI; es bedarf innovativer, inklusiver und komplexitätsbasierter Governance-Ansätze, die Stakeholder-Partizipation, Datenschutz, IPR, Bias-Reduktion und internationale Kooperation adressieren.",
       "knowledge_sections": {
@@ -12847,13 +12847,13 @@
       },
       "concepts": [
         "Vulnerable Population Protection in AI",
-        "Algorithmic Fairness in Social Services",
-        "Human-in-the-Loop Decision Support",
-        "Data Quality Design for Social Systems",
+        "Explainable AI (XAI)",
         "Organizational Change Management for AI",
         "AI Implementation Science",
-        "Explainable AI (XAI)",
-        "Sustainable Service Team as R&D (SSTRD)"
+        "Sustainable Service Team as R&D (SSTRD)",
+        "Data Quality Design for Social Systems",
+        "Algorithmic Fairness in Social Services",
+        "Human-in-the-Loop Decision Support"
       ],
       "knowledge_summary": "Soziale Implementierung von KI erfordert nicht nur technische Lösungen, sondern umfassende Systemveränderungen in Dateninfrastruktur, Organisationskultur und stakeholder-engagement. Der entwickelte SSTRD-Modell (Sustainable Service Team as R&D) zeigt, dass KI-Implementierung im Sozialbereich nur durch langfristige Zusammenarbeit von Wissenschaft, Industrie und Behörden erfolgreich ist.",
       "knowledge_sections": {
@@ -12915,13 +12915,13 @@
         }
       },
       "concepts": [
+        "Digital Competencies",
+        "Digital Literacy",
         "Industry 4.0 Digital Skills",
         "Critical Digital Thinking",
         "Digital Inequalities",
-        "Digital Competencies",
         "Vulnerable Population Digital Equity",
-        "Digital Divide",
-        "Digital Literacy"
+        "Digital Divide"
       ],
       "knowledge_summary": "Die Analyse identifizierte vier Hauptthemen: Digital Literacy, Digital Competencies, Digital Skills und Digital Thinking. Der Forschungstrend zeigt steigende Publikationszahlen ab 2013, mit dominantem qualitativem Forschungsansatz.",
       "knowledge_sections": {
@@ -12994,13 +12994,13 @@
         }
       },
       "concepts": [
-        "LGBTQ+ Linguistic Representation",
         "Emotional Content Classification in NLP",
-        "Safety Mechanisms and Fairness Trade-offs",
         "Queerphobic Bias Detection",
         "Algorithmic Bias in Language Models",
-        "Embedding-Based Cluster Analysis with Mahalanobis Distance",
-        "Inclusive NLP Systems"
+        "Safety Mechanisms and Fairness Trade-offs",
+        "LGBTQ+ Linguistic Representation",
+        "Inclusive NLP Systems",
+        "Embedding-Based Cluster Analysis with Mahalanobis Distance"
       ],
       "knowledge_summary": "Safety-Mechanismen neutralisieren offene heteronormative Bias durch neutrale/korrektive Antworten, versagen aber bei systemischen Verzerrungen gegenüber LGBTQ+-Slang, das überproportional negative emotionale Labels auslöst.",
       "knowledge_sections": {
@@ -13070,13 +13070,13 @@
         }
       },
       "concepts": [
-        "Intersectional Algorithmic Bias",
-        "Feminist Data Practices",
         "Situated Knowledge in AI Development",
+        "Feminist Data Practices",
+        "Feminist Artificial Intelligence",
         "Participatory AI Design",
-        "Algorithmic Fairness in Legal AI",
         "Decolonial AI",
-        "Feminist Artificial Intelligence"
+        "Algorithmic Fairness in Legal AI",
+        "Intersectional Algorithmic Bias"
       ],
       "knowledge_summary": "FAI ist ein plurales Konzept mit multiplen Bedeutungen und Manifestationen, das sich in sechs Typologien manifestiert (als Modell, Design, Policy, Kultur, Diskurs und Wissenschaft), jedoch bleibt es bislang in der technoliberalen Sphäre der Inklusion stecken und stellt keine transformative Politik dar, die kapitalistische Ungleichheitsstrukturen fundamental herausfordert.",
       "knowledge_sections": {
@@ -13142,13 +13142,13 @@
       },
       "concepts": [
         "Ethical Fairness in Clinical AI",
-        "Algorithmic Bias in Healthcare",
-        "Algorithmic Transparency",
         "Human-Centered AI Design",
-        "Clinical Decision Support Systems (CDSS)",
-        "Trust in Human-AI Interaction",
         "Clinical AI Literacy",
-        "Explainable AI (XAI) in Medicine"
+        "Explainable AI (XAI) in Medicine",
+        "Algorithmic Transparency",
+        "Trust in Human-AI Interaction",
+        "Algorithmic Bias in Healthcare",
+        "Clinical Decision Support Systems (CDSS)"
       ],
       "knowledge_summary": "Acht zentrale Themen prägen das Vertrauen von Gesundheitsfachkräften in AI-CDSSs: Systemtransparenz, Training und Vertrautheit, Usability, klinische Zuverlässigkeit, Glaubwürdigkeit und Validierung, ethische Überlegungen, Human-Centric Design und Customization mit Kontrolle. Algorithmische Intransparenz und unzureichendes Training gelten als Hauptbarrieren.",
       "knowledge_sections": {
@@ -13224,13 +13224,13 @@
         }
       },
       "concepts": [
+        "Gender Bias in AI Systems",
         "Algorithmic Bias",
-        "Intersectionality in AI",
-        "AI Governance and Policy Analysis",
         "Diversity Crisis in AI Development",
         "Systemic Inequality and Power Asymmetries",
-        "Gender Bias in AI Systems",
-        "Sociotechnical Framing of Bias"
+        "Sociotechnical Framing of Bias",
+        "Intersectionality in AI",
+        "AI Governance and Policy Analysis"
       ],
       "knowledge_summary": "AI amplifiziert und verstärkt menschliche Vorurteile und reflektiert tiefgreifende historische und systemische Ungleichheiten; ein breiter intersektionaler Ansatz ist notwendig, der über reine Diversitätszahlen hinausgeht und strukturelle sowie kulturelle Probleme in der Tech-Branche adressiert.",
       "knowledge_sections": {
@@ -13292,13 +13292,13 @@
         }
       },
       "concepts": [
-        "Gender Digital Divide",
-        "Intersectional AI Bias",
-        "Gender-Sensitive AI Governance",
-        "Women STEM Education Access",
-        "Generative AI Bias Reproduction",
         "Gender Bias in AI Systems",
-        "Women Underrepresentation in AI Development"
+        "Women STEM Education Access",
+        "Gender-Sensitive AI Governance",
+        "Generative AI Bias Reproduction",
+        "Women Underrepresentation in AI Development",
+        "Intersectional AI Bias",
+        "Gender Digital Divide"
       ],
       "knowledge_summary": "Etwa 44% der analysierten AI-Systeme zeigen Geschlechterbias, und nur 30% der AI-Fachkräfte sind Frauen. Diese Unterrepräsentation von Frauen in der AI-Entwicklung perpetuiert vorhandene gesellschaftliche Stereotypen in Trainingsdaten und führt zu diskriminierenden Konsequenzen in kritischen Bereichen wie Gesundheit, Kredite und Beschäftigung.",
       "knowledge_sections": {
@@ -13373,12 +13373,12 @@
       "concepts": [
         "Multi-Stakeholder Inclusion and Participation",
         "AI Ethics Governance Framework",
-        "AI Literacy and Democratic Engagement",
-        "Gender Equality in AI Systems",
         "Algorithmic Fairness and Equity",
         "AI System Lifecycle Governance",
+        "Cultural Diversity and Ethical Pluralism in AI",
         "Protection of Vulnerable Populations in AI Contexts",
-        "Cultural Diversity and Ethical Pluralism in AI"
+        "AI Literacy and Democratic Engagement",
+        "Gender Equality in AI Systems"
       ],
       "knowledge_summary": "UNESCO etabliert ein umfassendes, multikulturelles Ethical Framework für KI, das Menschenwürde, Menschenrechte, Fairness, Diversität und Umweltschutz als zentrale Leitwerte definiert und konkrete Policy-Maßnahmen für alle Lebensphasen von KI-Systemen vorsieht.",
       "knowledge_sections": {
@@ -13440,14 +13440,14 @@
         }
       },
       "concepts": [
-        "Reinforcement Learning from Human Feedback (RLHF)",
-        "Intersectional AI Ethics and Representation",
-        "Technology-Facilitated Gender-Based Violence (TF-GBV)",
-        "Word Embedding Association Testing",
+        "Multi-Stage Bias Accumulation in AI Development",
         "Gender Bias in Large Language Models",
         "Sentiment and Regard Analysis for Bias Measurement",
-        "Multi-Stage Bias Accumulation in AI Development",
-        "Stereotype Amplification Through Training Data"
+        "Stereotype Amplification Through Training Data",
+        "Reinforcement Learning from Human Feedback (RLHF)",
+        "Word Embedding Association Testing",
+        "Technology-Facilitated Gender-Based Violence (TF-GBV)",
+        "Intersectional AI Ethics and Representation"
       ],
       "knowledge_summary": "State-of-the-art LLMs (GPT-2, Llama 2, ChatGPT) perpetuieren persistente Geschlechterstereotypen, wobei nicht-optimierte Modelle in ~20% der Fälle sexistische Inhalte generieren und LGBTQ+-Themen in 60-70% negativ darstellen, während RLHF-gesteuerte Modelle wie ChatGPT diese Biases teilweise reduzieren.",
       "knowledge_sections": {
@@ -13518,13 +13518,13 @@
         }
       },
       "concepts": [
-        "Algorithmic Fairness and Human Rights Protection",
-        "Women's Representation in AI Leadership",
-        "Multi-Stakeholder Accountability Mechanisms",
         "Gender Bias in AI Systems",
+        "AI Regulatory Framework",
+        "Multi-Stakeholder Accountability Mechanisms",
         "AI-Driven Discrimination and Marginalization",
+        "Women's Representation in AI Leadership",
         "Gender-Inclusive AI Governance",
-        "AI Regulatory Framework"
+        "Algorithmic Fairness and Human Rights Protection"
       ],
       "knowledge_summary": "Eine geschlechtergerechte KI-Governance erfordert ex-ante und ex-post Assessments, starke Regulierung, Datenschutz, Haftungsmechanismen und gezielte Maßnahmen zur Erhöhung der Frauenbeteiligung als Entscheidungsträgerinnen und Gründerinnen im KI-Sektor.",
       "knowledge_sections": {
@@ -13585,13 +13585,13 @@
       },
       "concepts": [
         "Regulatory Framework for Generative AI",
-        "Generative AI Ethics in Human Services",
-        "Human-Centered Social Work Practice",
-        "Data Security in Social Work Institutions",
-        "Algorithmic Fairness and Transparency",
         "AI Literacy for Social Workers",
+        "Algorithmic Fairness and Transparency",
+        "Algorithmic Bias in Social Services",
+        "Generative AI Ethics in Human Services",
         "Representation and Diversity in Training Data",
-        "Algorithmic Bias in Social Services"
+        "Data Security in Social Work Institutions",
+        "Human-Centered Social Work Practice"
       ],
       "knowledge_summary": "ChatGPT und generative KI-Systeme präsentieren erhebliche Risiken für die Soziale Arbeit in den Bereichen Datensicherheit, algorithmischer Bias und ethische Herausforderungen. Diese Risiken erfordern robuste regulatorische Rahmenwerke, technische Schutzmaßnahmen und eine Neuorientierung der Fachkräfte zur Bewahrung humanistischer Werte.",
       "knowledge_sections": {
@@ -13664,11 +13664,11 @@
         }
       },
       "concepts": [
-        "Critical AI User Competency",
+        "AI Ethics Competency",
+        "Human-Centred AI Design",
         "AI Literacy Framework",
         "Inclusive AI Education",
-        "Human-Centred AI Design",
-        "AI Ethics Competency",
+        "Critical AI User Competency",
         "Machine Learning Techniques Literacy",
         "Algorithmic Fairness in Education"
       ],
@@ -13742,12 +13742,12 @@
         }
       },
       "concepts": [
-        "Data Privacy and Surveillance Risk in Human Services",
         "Natural Language Processing for Sentiment Analysis",
-        "Inclusive AI Design for Vulnerable Populations",
-        "AI Ethics Governance Frameworks",
         "Human-in-the-Loop Decision Making",
+        "AI Ethics Governance Frameworks",
         "Algorithmic Bias in Social Services",
+        "Data Privacy and Surveillance Risk in Human Services",
+        "Inclusive AI Design for Vulnerable Populations",
         "Predictive Analytics in Social Work"
       ],
       "knowledge_summary": "KI bietet erhebliche Chancen zur Verbesserung der Forschungseffizienz, Ressourcenallokation und Entscheidungsfindung in sozialen Diensten, wirft aber kritische ethische Bedenken hinsichtlich algorithmischer Verzerrung, Datenschutz, Überwachung und Erosion menschenzentrierter Betreuung auf.",
@@ -13823,13 +13823,13 @@
         }
       },
       "concepts": [
-        "AI Literacy for Social Work Professionals",
-        "Human-Centered Social Work Ethics",
-        "Predictive Modeling for Risk Assessment",
-        "Structural Inequality Reinforcement through AI",
-        "AI-Enhanced Administrative Automation",
         "Informed Consent and Transparency in AI Systems",
-        "Algorithmic Bias in Social Services"
+        "AI-Enhanced Administrative Automation",
+        "Human-Centered Social Work Ethics",
+        "Algorithmic Bias in Social Services",
+        "Structural Inequality Reinforcement through AI",
+        "Predictive Modeling for Risk Assessment",
+        "AI Literacy for Social Work Professionals"
       ],
       "knowledge_summary": "AI bietet bedeutende Potenziale für die Soziale Arbeit (Datenanalyse, Ressourcenallokation, administrative Automatisierung), birgt aber erhebliche ethische Risiken (Bias, Datenschutz, Verlust von Menschlichkeit), die durch multidisziplinäre Ansätze und ethische Standards adressiert werden müssen.",
       "knowledge_sections": {
@@ -13899,13 +13899,13 @@
         }
       },
       "concepts": [
-        "Automated Decision-Making Systems (ADM)",
-        "Change Within Continuity Framework",
-        "Intersectional Algorithmic Bias",
-        "Digital Welfare Surveillance",
-        "Ableist and Racialized Classification Systems",
         "Algorithmic Discrimination in Welfare Systems",
-        "Governmentality and Digital Codification"
+        "Digital Welfare Surveillance",
+        "Governmentality and Digital Codification",
+        "Change Within Continuity Framework",
+        "Automated Decision-Making Systems (ADM)",
+        "Ableist and Racialized Classification Systems",
+        "Intersectional Algorithmic Bias"
       ],
       "knowledge_summary": "Digitalisierung des Wohlfahrtsstaates verstärkt bestehende Ungleichheitsmuster und reproduziert historische Machtdynamiken, anstatt transformativ zu wirken; sie ist nicht technologisch neutral sondern durch neoliberale Gouvernanzlogiken und rassifizierte, geschlechtliche und ableistische Klassifikationssysteme geprägt.",
       "knowledge_sections": {
@@ -13979,13 +13979,13 @@
         }
       },
       "concepts": [
-        "AI Expert Positionality Reflexivity",
-        "Intersectional AI Fairness",
-        "Fairness Metrics Limitation",
-        "Community Co-Ownership in AI Design",
         "Socio-Technical Frame",
+        "AI Expert Positionality Reflexivity",
         "Algorithmic Bias in Welfare Systems",
-        "Interdisciplinary Knowledge Integration in AI"
+        "Community Co-Ownership in AI Design",
+        "Interdisciplinary Knowledge Integration in AI",
+        "Fairness Metrics Limitation",
+        "Intersectional AI Fairness"
       ],
       "knowledge_summary": "Die aktuelle AI-Fairness-Forschung reduziert Intersektionalität auf einen engen technischen Rahmen (Fairness-Metriken für Subgruppen), während ein echter intersektionaler Ansatz strukturelle Ungleichheit, Machtdynamiken und marginalisierte Stimmen zentralstellen muss. Das Paper identifiziert fünf konkrete Handlungsempfehlungen für AI-Expert:innen, die über den algorithmischen Rahmen hinausgehen.",
       "knowledge_sections": {
@@ -14057,14 +14057,14 @@
         }
       },
       "concepts": [
-        "Algorithmic Bias in Academic Research",
-        "Peer Review Quality Control for AI-Generated Content",
-        "Large Language Model Hallucinations",
-        "Research Ethics in Vulnerable Populations",
         "Disruptive-Disrupting Framework",
         "AI Literacy in Academic Practice",
+        "Peer Review Quality Control for AI-Generated Content",
+        "Generative AI in Research",
         "Research Transparency and Accountability",
-        "Generative AI in Research"
+        "Algorithmic Bias in Academic Research",
+        "Research Ethics in Vulnerable Populations",
+        "Large Language Model Hallucinations"
       ],
       "knowledge_summary": "Generative KI und LLMs bieten sowohl transformatives Potenzial als auch erhebliche Risiken für die Sozialarbeitsforschung; es werden spezifische Empfehlungen für Forscher und Herausgeber entwickelt, die Chancen maximieren und Risiken (Bias, Datenschutz, Qualität) minimieren.",
       "knowledge_sections": {
@@ -14139,14 +14139,14 @@
         }
       },
       "concepts": [
-        "Prompt-Dependent Bias Activation",
-        "Algorithmic Literacy and User Participation",
-        "Androcentric Design Bias",
-        "Intersectional AI Fairness",
-        "Feminist Ethics in AI Design",
         "Algorithmic Gender Bias",
+        "Androcentric Design Bias",
         "Large Language Model Bias Propagation",
-        "Algorithmic Governance"
+        "Prompt-Dependent Bias Activation",
+        "Feminist Ethics in AI Design",
+        "Algorithmic Governance",
+        "Algorithmic Literacy and User Participation",
+        "Intersectional AI Fairness"
       ],
       "knowledge_summary": "KI-Tools integrieren genderspezifische Bedürfnisse (Menstruationshygiene, Sicherheit, Kinderbetreuung, thermischer Komfort) nur dann in Politikempfehlungen, wenn Gender explizit im Prompt erwähnt wird; ansonsten wird eine androzentristische Standardperspektive angewandt.",
       "knowledge_sections": {
@@ -14213,11 +14213,11 @@
       },
       "concepts": [
         "Professional Practice Transformation",
+        "Non-Trivial Machine Systems",
+        "Asymmetry Intensification through Digitalization",
         "Digitalization and Rationalization Critique",
         "Interactive Labour in Social Work",
-        "Asymmetry Intensification through Digitalization",
         "Sociotechnical Interaction Systems",
-        "Non-Trivial Machine Systems",
         "Coordination Problem Management"
       ],
       "knowledge_summary": "Die Nutzung digitaler Technologien führt nicht zu einer Rationalisierung der Sozialen Arbeit, sondern begünstigt die Entstehung soziotechnischer Interaktionssysteme, die neue und andersartige Abstimmungsprobleme hervorbringen statt bestehende zu reduzieren.",
@@ -14290,13 +14290,13 @@
         }
       },
       "concepts": [
+        "Feminist STS (Science and Technology Studies)",
         "Technofeminism",
-        "Fairness in Algorithmic Systems",
         "Algorithmic Bias",
-        "Masculine Defaults in Technoculture",
-        "Intersectional Bias",
+        "Fairness in Algorithmic Systems",
         "Gender Representation in AI",
-        "Feminist STS (Science and Technology Studies)"
+        "Intersectional Bias",
+        "Masculine Defaults in Technoculture"
       ],
       "knowledge_summary": "Die Dominanz von Männern in AI- und Datenwissenschaftsteams führt zu einem Feedback-Loop, in dem geschlechtliche und rassistische Bias in algorithmische Systeme eingebettet und verstärkt werden. Dies ist nicht das Resultat unbewusster Diskriminierung, sondern das Ergebnis einer Technokultur, die Frauen und marginalisierte Gruppen systematisch aus Führungs- und Gestaltungspositionen ausgeschlossen ",
       "knowledge_sections": {
@@ -14361,13 +14361,13 @@
         }
       },
       "concepts": [
-        "Psychometric Validation",
+        "Human-AI Interaction (HAII)",
+        "Digital Literacy",
         "Artificial Intelligence Literacy Scale (AILS)",
         "AI Literacy",
-        "Human-AI Interaction (HAII)",
         "User Competence Assessment",
-        "Algorithmic Ethics",
-        "Digital Literacy"
+        "Psychometric Validation",
+        "Algorithmic Ethics"
       ],
       "knowledge_summary": "Entwicklung und Validierung einer 12-Item-Skala (AILS - Artificial Intelligence Literacy Scale) mit vier stabilen Konstrukten (Awareness, Usage, Evaluation, Ethics), die Benutzer:innenkompetenz in KI-Nutzung reliabel und valide misst.",
       "knowledge_sections": {
@@ -14441,13 +14441,13 @@
         }
       },
       "concepts": [
-        "Prompt-Based Fairness Evaluation",
-        "Fairness Metrics in Machine Learning",
-        "Intrinsic vs. Extrinsic Bias",
         "Debiasing Methods for LLMs",
+        "Fairness Metrics in Machine Learning",
         "Marginalized Demographic Representation",
-        "Social Bias in Language Models",
         "Gender Bias in NLP Systems",
+        "Intrinsic vs. Extrinsic Bias",
+        "Prompt-Based Fairness Evaluation",
+        "Social Bias in Language Models",
         "Algorithmic Fairness in Large Language Models"
       ],
       "knowledge_summary": "Der Survey zeigt, dass Fairness-Forschung in LLMs je nach Modellgröße und Trainingsparadigma unterschiedliche Ansätze erfordert: Medium-sized LLMs benötigen intrinsische und extrinsische Debiasing-Methoden, während Large-sized LLMs im Prompting-Paradigma neue Evaluations- und Debiasing-Strategien brauchen.",
@@ -14516,14 +14516,14 @@
         }
       },
       "concepts": [
-        "US Legal and Regulatory Framework for Algorithmic Systems",
+        "Algorithmic Auditing and Impact Assessment",
         "Algorithmic Decision-Making in Criminal Justice",
         "Algorithmic Transparency and Accountability",
-        "Algorithmic Discrimination",
-        "Algorithmic Auditing and Impact Assessment",
         "Proxy Discrimination",
+        "US Legal and Regulatory Framework for Algorithmic Systems",
+        "Algorithmic Fairness",
         "Disparate Impact",
-        "Algorithmic Fairness"
+        "Algorithmic Discrimination"
       ],
       "knowledge_summary": "Das Paper identifiziert fünf primäre Typen algorithmischer Voreingenommenheit (Bias durch algorithmische Agenten, diskriminierende Feature-Selektion, Proxy-Diskriminierung, Disparate Impact, zielgerichtete Werbung) und kategorisiert US-Regulierungsrahmen in fünf Ansätze (principled regulation, preventive controls, consequential liability, self-regulation, heteronomy regulation).",
       "knowledge_sections": {
@@ -14593,13 +14593,13 @@
         }
       },
       "concepts": [
-        "Demographic Representation Bias",
-        "Algorithmic Fairness in Content Generation",
-        "Language-Specific Knowledge Encoding",
-        "Cultural Cue Integration",
-        "Generative Monoculturalism",
         "Multilingual Prompting",
-        "Perspective Diversity in LLM Generation"
+        "Perspective Diversity in LLM Generation",
+        "Demographic Representation Bias",
+        "Cultural Cue Integration",
+        "Algorithmic Fairness in Content Generation",
+        "Generative Monoculturalism",
+        "Language-Specific Knowledge Encoding"
       ],
       "knowledge_summary": "Multilingual Prompting übertrifft bestehende Diversitäts-Techniken konsistent und erhöht demografische, kulturelle und perspektivische Vielfalt in LLM-Outputs, während die Genauigkeit bei faktischen Aufgaben erhalten bleibt.",
       "knowledge_sections": {
@@ -14659,14 +14659,14 @@
         }
       },
       "concepts": [
-        "Gender Bias in AI",
         "Foundation Models",
-        "WEIRD Value Embedding",
+        "Gender Bias in AI",
         "Algorithmic Bias",
         "AI Fairness and Responsible AI Design",
         "Linguistic Representation and Low-Resource Languages",
-        "AI Governance and Accountability",
-        "Participatory AI Development"
+        "Participatory AI Development",
+        "WEIRD Value Embedding",
+        "AI Governance and Accountability"
       ],
       "knowledge_summary": "Foundation models are trained on uncurated, biased internet data and sustained by business models that prioritize profit over safety, resulting in systems that reinforce historical inequalities and fail vulnerable populations. Alternative approaches—computational, participatory, data-sourced, and collaborative—demonstrate that responsible foundation models aligned with public interest are possible",
       "knowledge_sections": {
@@ -14731,13 +14731,13 @@
         }
       },
       "concepts": [
-        "Subjective-Objective Competency Gap",
-        "Socio-Technical Competency Framework",
-        "Mixed Methods Scale Validation",
         "Measurement Instrument Development",
+        "Mixed Methods Scale Validation",
+        "Socio-Technical Competency Framework",
+        "Human-AI Interaction",
         "AI Literacy",
-        "Digital Divide",
-        "Human-AI Interaction"
+        "Subjective-Objective Competency Gap",
+        "Digital Divide"
       ],
       "knowledge_summary": "Es besteht keine eindeutige Korrelation zwischen subjektiver und objektiver AI Literacy, was die Notwendigkeit objektiver Messinstrumente unterstreicht. Das entwickelte 25-Item-Messinstrument diskriminiert erfolgreich zwischen verschiedenen Populationen mit unterschiedlicher AI Literacy.",
       "knowledge_sections": {
@@ -14812,13 +14812,13 @@
         }
       },
       "concepts": [
-        "Algorithmic Fairness",
-        "Gender Classification Systems",
-        "Structural Inequality in Tech Workforce",
         "Algorithmic Bias",
         "Pipeline Problem in Diversity",
+        "Intersectional Feminism in AI",
+        "Structural Inequality in Tech Workforce",
         "Surveillance Capitalism and Marginalized Communities",
-        "Intersectional Feminism in AI"
+        "Algorithmic Fairness",
+        "Gender Classification Systems"
       ],
       "knowledge_summary": "Die Diversity-Krise in der AI-Industrie und der Bias in AI-Systemen sind zwei Manifestationen desselben Problems struktureller Ungleichheit. Die herrschende Pipeline-Fokus-Strategie hat nach Jahrzehnten kein substantielles Fortschritt gebracht, weil sie tiefere Probleme wie Workplace-Kultur, Machtasymmetrien und Ausschlusslogiken ignoriert.",
       "knowledge_sections": {
@@ -14890,12 +14890,12 @@
         }
       },
       "concepts": [
-        "Language Model Bias Propagation",
         "Resume Audit Study Methodology",
-        "Intersectional Bias Analysis",
         "Algorithmic Bias in Hiring Systems",
         "Algorithmic Fairness in Automated Decision-Making",
+        "Intersectional Bias Analysis",
         "Name-Based Demographic Inference",
+        "Language Model Bias Propagation",
         "Massive Text Embedding Models (MTE)"
       ],
       "knowledge_summary": "Massive Text Embedding Models zeigen signifikante Bias: Weiße Namen werden in 85,1% der Fälle bevorzugt, während schwarze männliche Namen in bis zu 100% der Fälle benachteiligt werden. Dokument-Länge und Namenhäufigkeit beeinflussen die Bias-Messung erheblich.",
@@ -14965,14 +14965,14 @@
         }
       },
       "concepts": [
-        "Algorithmic Bias in Low-Income Contexts",
-        "Inclusive Data Representation",
-        "Organizational Readiness",
-        "Gender Gap in AI Adoption",
-        "PRISM Framework",
         "Algorithmic Transparency and Explainability",
         "AI for Social Impact",
-        "Algorithmic Fairness"
+        "Organizational Readiness",
+        "Inclusive Data Representation",
+        "Gender Gap in AI Adoption",
+        "Algorithmic Bias in Low-Income Contexts",
+        "Algorithmic Fairness",
+        "PRISM Framework"
       ],
       "knowledge_summary": "Das PRISM Framework bietet einen iterativen, schichtenweisen Ansatz zur verantwortungsvollen KI-Einführung, der Organisationsbereitschaft über technologische Fähigkeit priorisiert und fünf kritische Capabilites and Risks (Ethics, Data, Business/Organization, Technology, Costs/Metrics) identifiziert.",
       "knowledge_sections": {
@@ -15044,13 +15044,13 @@
         }
       },
       "concepts": [
-        "Intersectional Discrimination",
-        "Ethical Decision-Making in AI Systems",
-        "Algorithmic Bias in Large Language Models",
         "Protected Attribute Analysis",
+        "Intersectional Discrimination",
         "Model Transparency and Accountability",
         "Linguistic Framing Effects",
-        "Algorithmic Fairness"
+        "Algorithmic Fairness",
+        "Ethical Decision-Making in AI Systems",
+        "Algorithmic Bias in Large Language Models"
       ],
       "knowledge_summary": "Beide LLMs zeigen signifikante Biases bei geschützten Attributen in ethischen Entscheidungen: GPT-3.5 Turbo bevorzugt stereotypisch dominante Gruppen (nicht-behinderte, männliche, hellhäutige, mittelaltrige Personen), während Claude 3.5 Sonnet ausgewogenere Präferenzen zeigt. Beide Modelle bevorzugen stark 'Good-looking' Personen, und die ethische Sensibilität sinkt drastisch in komplexeren inters",
       "knowledge_sections": {
@@ -15126,14 +15126,14 @@
         }
       },
       "concepts": [
+        "Gender Bias in AI Systems",
+        "Feminist AI",
         "Equitable Healthcare AI",
         "Algorithmic Bias in Marginalized Populations",
-        "Feminist Methodology in AI Design",
-        "Feminist AI",
         "Theory-Practice Feedback Loops",
+        "Intersectional Feminism",
         "Multi-Stakeholder Participation in AI Governance",
-        "Gender Bias in AI Systems",
-        "Intersectional Feminism"
+        "Feminist Methodology in AI Design"
       ],
       "knowledge_summary": "Feminist AI (FAI) stellt einen paradigmatischen Paradigmenwechsel dar, der systematische Machtstrukturen als Wurzel von Ungleichheiten adressiert, im Gegensatz zu Responsible AI, das einzelne 'bad actors' fokussiert. FAI operationalisiert feministische Prinzipien durch iterative Theorie-Praxis-Schleifen, interdisziplinäre Teams und Multi-Stakeholder-Beteiligung.",
       "knowledge_sections": {
@@ -15200,13 +15200,13 @@
         }
       },
       "concepts": [
-        "Trust in Social AI Systems",
-        "AI Transparency",
-        "Algorithmic Fairness in User Perception",
-        "AI Literacy",
-        "Social Chatbot Design",
         "Algorithmic Opacity",
-        "Anthropomorphism in Human-AI Interaction"
+        "Social Chatbot Design",
+        "AI Literacy",
+        "Anthropomorphism in Human-AI Interaction",
+        "AI Transparency",
+        "Trust in Social AI Systems",
+        "Algorithmic Fairness in User Perception"
       ],
       "knowledge_summary": "Transparenz führt zu positiven Wahrnehmungsveränderungen: Nutzer finden den Chatbot weniger gruselig, fühlen größere Nähe und nehmen ihn als sozial intelligenter wahr, wobei die Effektgrößen jedoch klein sind.",
       "knowledge_sections": {
@@ -15277,13 +15277,13 @@
         }
       },
       "concepts": [
-        "Evidence-Based Evaluation of GenAI Learning Impact",
-        "Gender Stereotype Reduction in STEAM Education",
-        "Multimodal Learning Resource Diversification",
         "Digital Divide in AI-Enhanced Education",
-        "AI Literacy",
+        "Evidence-Based Evaluation of GenAI Learning Impact",
         "Algorithmic Fairness in Educational Assessment",
-        "Generative AI for Personalized Learning"
+        "AI Literacy",
+        "Generative AI for Personalized Learning",
+        "Multimodal Learning Resource Diversification",
+        "Gender Stereotype Reduction in STEAM Education"
       ],
       "knowledge_summary": "GenAI bietet erhebliches Potenzial zur Transformation von Lernprozessen durch personalisierte Unterstützung, diversifizierte Ressourcen und innovative Bewertungsmethoden, erfordert aber eine kritische Auseinandersetzung mit ethischen Fragen, Modellmängeln und dem Digital Divide sowie die Kultivierung von AI Literacy.",
       "knowledge_sections": {
@@ -15356,12 +15356,12 @@
       },
       "concepts": [
         "Predictive Analytics in Child Maltreatment Risk Assessment",
-        "Automation Bias in Social Work Practice",
+        "Algorithmic Fairness in Child Welfare",
+        "Implementation Science Framework for Algorithm Deployment",
         "Algorithmic Transparency and Interpretability",
         "Racial Disparities in Algorithmic Decision-Making",
-        "Implementation Science Framework for Algorithm Deployment",
-        "Community Engagement in Algorithm Governance",
-        "Algorithmic Fairness in Child Welfare"
+        "Automation Bias in Social Work Practice",
+        "Community Engagement in Algorithm Governance"
       ],
       "knowledge_summary": "Algorithmisch unterstützte Entscheidungshilfen zeigen Potenzial für den Kinderschutz, erfordern aber systematische Aufmerksamkeit für ethische Implementierung und Fairness, insbesondere bezüglich rassischer Disparitäten und Datenqualität. Bedeutende methodische und empirische Lücken bleiben bestehen.",
       "knowledge_sections": {
@@ -15433,12 +15433,12 @@
         }
       },
       "concepts": [
-        "Model Version Bias Divergence",
         "Prompt-Based Bias Mitigation",
         "Representational Similarity Analysis in AI Auditing",
-        "AI Transparency and Cultural Accountability",
         "Algorithmic Fairness in Cross-Cultural Contexts",
         "Cultural Value Dimensions in AI Systems",
+        "AI Transparency and Cultural Accountability",
+        "Model Version Bias Divergence",
         "Cultural Stereotyping in Large Language Models"
       ],
       "knowledge_summary": "ChatGPT 3.5 zeigt signifikante kulturelle Stereotype in 8 von 13 Aufgaben und Vorurteile in Fairness-Aufgaben, während ChatGPT 4.0 Stereotype auf mehr Aufgaben ausweitet, aber in weniger Aufgaben Vorurteile zeigt. Vier Prompt-Strategien reduzieren erfolgreich Stereotype und Bias.",
@@ -15512,13 +15512,13 @@
         }
       },
       "concepts": [
-        "Inclusive Content Generation",
-        "Textual Diversity Metrics",
-        "Mirror Stories",
-        "Personalized Narrative Generation",
-        "Identity Element Integration",
-        "Algorithmic Bias in LLM Evaluation",
         "Reader Engagement Evaluation",
+        "Algorithmic Bias in LLM Evaluation",
+        "Identity Element Integration",
+        "Mirror Stories",
+        "Textual Diversity Metrics",
+        "Inclusive Content Generation",
+        "Personalized Narrative Generation",
         "Cultural Representation in Generative AI"
       ],
       "knowledge_summary": "Personalisierte LLM-generierte Geschichten erzielen signifikant höhere Bewertungen bei Engagement und Zufriedenheit (4,22 vs. 3,37 auf 5-Punkte-Skala) als generische Narrative, während sie gleichzeitig textuelle Diversität erhöhen und die vermittelte Moral bewahren.",
@@ -15587,12 +15587,12 @@
         }
       },
       "concepts": [
-        "Digital Justice in Public Services",
-        "Digital Welfare Technology Infrastructure",
-        "Intersectional Digital Discrimination",
         "Feminist Care Ethics in Digital Systems",
-        "Care-Control Tension",
+        "Digital Justice in Public Services",
+        "Intersectional Digital Discrimination",
+        "Digital Welfare Technology Infrastructure",
         "Invisible Care Labor",
+        "Care-Control Tension",
         "Algorithmic Welfare Administration"
       ],
       "knowledge_summary": "Digitale Wohlfahrtstechnologien verschieben das Gleichgewicht zwischen Care und Kontrolle zugunsten der Kontrolle und transformieren Care-Praktiken potenziell in schädliche Kontrollmaßnahmen. Ein analytisches Framework auf drei Ebenen (Werte, Infrastrukturen, Datenarbeit) ermöglicht die Analyse dieser Spannungen.",
@@ -15665,13 +15665,13 @@
         }
       },
       "concepts": [
-        "Fairness Gerrymandering",
-        "Fairness Propagation",
-        "Intersectional Fairness",
-        "Hypercube Geometric Modeling",
-        "Intersectional Statistical Parity",
+        "VarRatio Fairness Metrics",
         "Algorithmic Bias in Protected Subgroups",
-        "VarRatio Fairness Metrics"
+        "Intersectional Fairness",
+        "Intersectional Statistical Parity",
+        "Hypercube Geometric Modeling",
+        "Fairness Gerrymandering",
+        "Fairness Propagation"
       ],
       "knowledge_summary": "Fairness propagiert 'aufwärts' durch Intersektionalitätsebenen (von spezifischsten zu allgemeineren Gruppen), aber nicht 'abwärts'. Die Varianz der empirischen Erfolgsquoten folgt unter perfekter Fairness einem exponentiellen Skalierungsgesetz, das als Benchmark für Intersektionale Statistische Parität verwendet werden kann.",
       "knowledge_sections": {
@@ -15746,13 +15746,13 @@
         }
       },
       "concepts": [
-        "Algorithmic Fairness in NLP",
         "Word Embedding Association Test (WEAT)",
+        "Implicit Bias in Language Models",
+        "Algorithmic Fairness in NLP",
         "Prompt Engineering for Bias Mitigation",
         "Transformer Model Scaling Effects",
-        "Multi-Scale Bias Measurement",
-        "Implicit Bias in Language Models",
-        "Gender Bias in Text Representation"
+        "Gender Bias in Text Representation",
+        "Multi-Scale Bias Measurement"
       ],
       "knowledge_summary": "Prompt Engineering reduziert Genre-Bias durchschnittlich um über 37% in Basismodellen, während Skalierung nur etwa 29% Reduktion erreicht. Größere Modelle zeigen tendenziell geringere Biase als kleinere, aber gezieltes Prompt-Engineering ist die wirksamere Mitigation.",
       "knowledge_sections": {
@@ -15823,14 +15823,14 @@
         }
       },
       "concepts": [
-        "Cross-Platform and Cross-Cultural Auditing",
-        "Fairness in Generative AI Systems",
-        "Conversational AI Refusal Mechanisms",
-        "Algorithmic Bias in Conversational AI",
-        "Training Data Bias Perpetuation",
         "Vulnerable Group Representation in AI",
+        "Training Data Bias Perpetuation",
+        "Algorithmic Bias in Conversational AI",
+        "Cross-Platform and Cross-Cultural Auditing",
+        "Conversational AI Refusal Mechanisms",
+        "Content Moderation Governance",
         "Regulatory Framework Divergence",
-        "Content Moderation Governance"
+        "Fairness in Generative AI Systems"
       ],
       "knowledge_summary": "Erhebliche Unterschiede in Refusal-Raten zwischen Systemen (0,54%-21,70%) und Sprachen; identifiziert vier typische Antwortstrategien bei diskriminatorischen Fragen: Moral arbiter, Know-it-all expert, Non-confrontational fence-sitter, Local values ideologue.",
       "knowledge_sections": {
@@ -15906,13 +15906,13 @@
         }
       },
       "concepts": [
-        "Reinforcement Learning from Human Feedback (RLHF)",
-        "LLM-Based Data Annotation",
-        "Responsible AI Development",
         "Gender Bias in Large Language Models",
         "Alignment Dataset",
+        "Responsible AI Development",
+        "Reinforcement Learning from Human Feedback (RLHF)",
+        "Algorithmic Fairness",
         "Bias Categorization",
-        "Algorithmic Fairness"
+        "LLM-Based Data Annotation"
       ],
       "knowledge_summary": "Das GenderAlign-Dataset mit 8k Dialogpaaren reduziert Gender-Bias in LLMs signifikant effektiver als das bestehende HH-RLHF-Dataset und zeigt konsistent bessere Performance über verschiedene Modelle (Llama2-7B und Llama2-13B).",
       "knowledge_sections": {
@@ -15977,13 +15977,13 @@
         }
       },
       "concepts": [
-        "AI Assessment Standardization",
-        "Digital Divide in AI Education",
         "Ethical AI Integration",
+        "AI Assessment Standardization",
         "AI Literacy",
-        "AI Pedagogy",
+        "Algorithmic Fairness",
+        "Digital Divide in AI Education",
         "AI Competency Framework",
-        "Algorithmic Fairness"
+        "AI Pedagogy"
       ],
       "knowledge_summary": "The field shows consensus on AI literacy definition and availability of effective teaching tools and pedagogical approaches, but significant gaps remain in standardized assessment, integration of ethical considerations, interdisciplinary approaches, and policy guidance.",
       "knowledge_sections": {
@@ -16054,13 +16054,13 @@
         }
       },
       "concepts": [
-        "Explorable Explanations",
+        "Critical AI Literacy",
+        "Scientific Thinking in AI Education",
+        "Knowledge Generalization in AI Learning",
         "Algorithmic Fairness",
         "Engagement Quality vs. Engagement Quantity",
-        "Critical AI Literacy",
         "Dataset Representativeness",
-        "Knowledge Generalization in AI Learning",
-        "Scientific Thinking in AI Education"
+        "Explorable Explanations"
       ],
       "knowledge_summary": "Interaktive Simulationen verbessern KI-Literalität signifikant und unterstützen stärkere Wissensgeneralisierung über Themen hinweg. Die Menge der Interaktion korreliert jedoch schwach mit Lerngewinnen – Qualität der Engagement ist entscheidender als Quantität.",
       "knowledge_sections": {

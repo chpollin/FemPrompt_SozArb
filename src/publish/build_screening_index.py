@@ -28,7 +28,7 @@ import re
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 DOCS = ROOT / "docs"
 DATA_IN = DOCS / "data" / "research_vault_v2.json"
 INDEX_OUT = DOCS / "data" / "fulltext_index.json"
@@ -148,7 +148,7 @@ def main() -> int:
 
     payload = {
         "meta": {
-            "generated_by": "scripts/build_screening_index.py",
+            "generated_by": "src/publish/build_screening_index.py",
             "n_papers": len(out),
             "n_with_knowledge_doc": n_kd,
             "n_abstract_only": n_abs,

@@ -39,10 +39,10 @@ CATEGORIES = [
     "Diversitaet", "Feministisch", "Fairness"
 ]
 
-INPUT_LLM = os.path.join(REPO_ROOT, "benchmark", "data", "llm_assessment_10k.csv")
-INPUT_HUMAN = os.path.join(REPO_ROOT, "benchmark", "data", "human_assessment.csv")
-INPUT_DISAGREEMENTS = os.path.join(REPO_ROOT, "benchmark", "results", "disagreements.csv")
-INPUT_METRICS = os.path.join(REPO_ROOT, "benchmark", "results", "agreement_metrics.json")
+INPUT_LLM = os.path.join(REPO_ROOT, "assessment", "llm_assessment_10k.csv")
+INPUT_HUMAN = os.path.join(REPO_ROOT, "assessment", "human_assessment.csv")
+INPUT_DISAGREEMENTS = os.path.join(REPO_ROOT, "generated", "benchmark-results", "disagreements.csv")
+INPUT_METRICS = os.path.join(REPO_ROOT, "generated", "benchmark-results", "agreement_metrics.json")
 INPUT_METADATA = os.path.join(REPO_ROOT, "corpus", "papers_metadata.csv")
 
 OUTPUT_VAULT = os.path.join(REPO_ROOT, "docs", "data", "research_vault_v2.json")

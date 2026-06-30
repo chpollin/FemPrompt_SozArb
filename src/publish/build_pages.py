@@ -13,7 +13,7 @@ header (the view-tab buttons and the stats bar); its head and footer are shared.
 import re
 from pathlib import Path
 
-DOCS = Path(__file__).resolve().parent.parent / "docs"
+DOCS = Path(__file__).resolve().parents[2] / "docs"
 
 # Fonts. The Companion pages need Inter (body) and IBM Plex Serif (display); the
 # PRISM page additionally needs IBM Plex Sans and Mono for its own design system.

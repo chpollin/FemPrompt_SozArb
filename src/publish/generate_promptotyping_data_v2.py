@@ -22,7 +22,7 @@ import yaml
 from pathlib import Path
 from collections import defaultdict
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
+REPO_ROOT = Path(__file__).resolve().parents[2]
 OUTPUT_PATH = REPO_ROOT / "docs" / "data" / "promptotyping_v2.json"
 
 ASSESSMENT_CATEGORIES = [
@@ -174,7 +174,7 @@ def load_assessments(repo_root: Path):
     llm_assessments = {}
     human_assessments = {}
 
-    llm_path = repo_root / "benchmark" / "data" / "llm_assessment_10k.csv"
+    llm_path = repo_root / "assessment" / "llm_assessment_10k.csv"
     if llm_path.exists():
         with open(llm_path, "r", encoding="utf-8-sig", newline="") as f:
             for row in csv.DictReader(f):
@@ -197,7 +197,7 @@ def load_assessments(repo_root: Path):
                     "title": row.get("Title", "").strip(),
                 }
 
-    human_path = repo_root / "benchmark" / "data" / "human_assessment.csv"
+    human_path = repo_root / "assessment" / "human_assessment.csv"
     if human_path.exists():
         with open(human_path, "r", encoding="utf-8-sig", newline="") as f:
             for row in csv.DictReader(f):
@@ -259,10 +259,10 @@ def build_knowledge_to_zotero_mapping(repo_root: Path) -> dict:
     """Use the vault generator's matching logic to build stem -> zotero_key mapping."""
     # Import and use the matching from generate_vault_v2
     import sys
-    sys.path.insert(0, str(repo_root / "scripts"))
+    sys.path.insert(0, str(repo_root / "src" / "publish"))
     from generate_vault_v2 import build_knowledge_doc_to_zotero_index
 
-    knowledge_dir = repo_root / "pipeline" / "knowledge" / "distilled"
+    knowledge_dir = repo_root / "generated" / "distilled"
     zotero_path = repo_root / "corpus" / "zotero_export.json"
     stage1_dir = knowledge_dir / "_stage1_json"
 
@@ -448,7 +448,7 @@ def build_paper_journeys(
     disagreements: list,
 ) -> list:
     """Build transformation journey for each of the 249 knowledge docs."""
-    knowledge_dir = repo_root / "pipeline" / "knowledge" / "distilled"
+    knowledge_dir = repo_root / "generated" / "distilled"
     stage1_dir = knowledge_dir / "_stage1_json"
 
     # Build disagreement lookup by Zotero key
@@ -732,7 +732,7 @@ def build_pipeline_flow() -> dict:
 
 def build_divergences_list(repo_root: Path, divergence_cache: dict) -> list:
     """Build the 111 divergence items with classification."""
-    disagree_path = repo_root / "benchmark" / "results" / "disagreements.csv"
+    disagree_path = repo_root / "generated" / "benchmark-results" / "disagreements.csv"
     if not disagree_path.exists():
         return []
 
@@ -780,8 +780,8 @@ def build_divergences_list(repo_root: Path, divergence_cache: dict) -> list:
 
 def build_pipeline_stages(repo_root: Path) -> list:
     """Build pipeline stage metadata with prompts."""
-    distill_path = repo_root / "pipeline" / "scripts" / "distill_knowledge.py"
-    categories_path = repo_root / "benchmark" / "config" / "categories.yaml"
+    distill_path = repo_root / "src" / "distill" / "distill_knowledge.py"
+    categories_path = repo_root / "assessment" / "categories.yaml"
 
     ske_prompts = extract_prompt_constants(distill_path)
     assessment_prompt = build_assessment_prompt_from_code(categories_path)
@@ -905,12 +905,12 @@ def main():
     print(f"    Concepts: {len(concept_cache)} papers, Divergences: {len(divergence_cache)} cases")
 
     print("  [4/7] Loading verification scores...")
-    verif_dir = REPO_ROOT / "pipeline" / "knowledge" / "distilled" / "_verification"
+    verif_dir = REPO_ROOT / "generated" / "distilled" / "_verification"
     verif_scores = load_verification_scores(verif_dir)
     print(f"    Verification: {len(verif_scores)} files")
 
     print("  [5/7] Building paper journeys...")
-    disagree_path = REPO_ROOT / "benchmark" / "results" / "disagreements.csv"
+    disagree_path = REPO_ROOT / "generated" / "benchmark-results" / "disagreements.csv"
     disagreements = []
     if disagree_path.exists():
         with open(disagree_path, "r", encoding="utf-8-sig", newline="") as f:
@@ -931,7 +931,7 @@ def main():
     divergences_list = build_divergences_list(REPO_ROOT, divergence_cache)
     pipeline_stages = build_pipeline_stages(REPO_ROOT)
     pipeline_flow = build_pipeline_flow()
-    categories = load_categories(REPO_ROOT / "benchmark" / "config" / "categories.yaml")
+    categories = load_categories(REPO_ROOT / "assessment" / "categories.yaml")
 
     # Cluster distribution
     cluster_counts = defaultdict(int)
@@ -954,7 +954,7 @@ def main():
     print(f"    Featured: {featured_count}/3")
 
     print("  [7/7] Loading agreement metrics...")
-    agreement_path = REPO_ROOT / "benchmark" / "results" / "agreement_metrics.json"
+    agreement_path = REPO_ROOT / "generated" / "benchmark-results" / "agreement_metrics.json"
     agreement_metrics = {}
     if agreement_path.exists():
         agreement_metrics = json.loads(agreement_path.read_text(encoding="utf-8"))

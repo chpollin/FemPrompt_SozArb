@@ -453,23 +453,23 @@ class VaultV2Generator:
 
     def __init__(self, base_path: Path = None, cache_dir: str = '.vault_cache'):
         if base_path is None:
-            self.base_path = Path(__file__).resolve().parent.parent
+            self.base_path = Path(__file__).resolve().parents[2]
         else:
             self.base_path = Path(base_path)
 
-        self.vault_path = self.base_path / 'vault'
+        self.vault_path = self.base_path / 'generated' / 'vault'
         self.cache_dir = self.base_path / cache_dir
-        self.knowledge_dir = self.base_path / 'pipeline' / 'knowledge' / 'distilled'
+        self.knowledge_dir = self.base_path / 'generated' / 'distilled'
         self.stage1_dir = self.knowledge_dir / '_stage1_json'
         self.stage2_dir = self.knowledge_dir / '_stage2_draft'
         self.verification_dir = self.knowledge_dir / '_verification'
         self.zotero_path = self.base_path / 'corpus' / 'zotero_export.json'
-        self.llm_csv_path = self.base_path / 'benchmark' / 'data' / 'llm_assessment_10k.csv'
-        self.human_csv_path = self.base_path / 'benchmark' / 'data' / 'human_assessment.csv'
-        self.disagreements_csv_path = self.base_path / 'benchmark' / 'results' / 'disagreements.csv'
-        self.agreement_json_path = self.base_path / 'benchmark' / 'results' / 'agreement_metrics.json'
-        self.categories_yaml_path = self.base_path / 'benchmark' / 'config' / 'categories.yaml'
-        self.distill_py_path = self.base_path / 'pipeline' / 'scripts' / 'distill_knowledge.py'
+        self.llm_csv_path = self.base_path / 'assessment' / 'llm_assessment_10k.csv'
+        self.human_csv_path = self.base_path / 'assessment' / 'human_assessment.csv'
+        self.disagreements_csv_path = self.base_path / 'generated' / 'benchmark-results' / 'disagreements.csv'
+        self.agreement_json_path = self.base_path / 'generated' / 'benchmark-results' / 'agreement_metrics.json'
+        self.categories_yaml_path = self.base_path / 'assessment' / 'categories.yaml'
+        self.distill_py_path = self.base_path / 'src' / 'distill' / 'distill_knowledge.py'
 
         # Data stores
         self.zotero_items: list = []
@@ -1253,9 +1253,9 @@ PDF-Akquisition: 4 Fallback-Strategien (Zotero-Attachment, DOI-Resolver, Unpaywa
 
         # Truncate prompts for readability
         if len(stage1_prompt) > 2000:
-            stage1_prompt = stage1_prompt[:2000] + '\n\n[... gekuerzt, siehe pipeline/scripts/distill_knowledge.py]'
+            stage1_prompt = stage1_prompt[:2000] + '\n\n[... gekuerzt, siehe src/distill/distill_knowledge.py]'
         if len(stage3_prompt) > 2000:
-            stage3_prompt = stage3_prompt[:2000] + '\n\n[... gekuerzt, siehe pipeline/scripts/distill_knowledge.py]'
+            stage3_prompt = stage3_prompt[:2000] + '\n\n[... gekuerzt, siehe src/distill/distill_knowledge.py]'
 
         # Verification stats
         verif_count = len(list(self.verification_dir.glob('*.json')))
