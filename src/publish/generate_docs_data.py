@@ -1,22 +1,20 @@
 """
 generate_docs_data.py
 
-Generates docs/data/research_vault_v2.json and docs/data/graph_data.json
-from the 10K benchmark assessment results.
+Generates docs/data/research_vault_v2.json from the 10K benchmark assessment results.
 
 Input files:
-  benchmark/data/llm_assessment_10k.csv
-  benchmark/data/human_assessment.csv
-  benchmark/results/disagreements.csv
-  benchmark/results/agreement_metrics.json
+  assessment/llm_assessment_10k.csv
+  assessment/human_assessment.csv
+  generated/benchmark-results/disagreements.csv
+  generated/benchmark-results/agreement_metrics.json
   corpus/papers_metadata.csv
 
 Output files:
   docs/data/research_vault_v2.json
-  docs/data/graph_data.json
 
 Usage:
-  PYTHONIOENCODING=utf-8 python pipeline/scripts/generate_docs_data.py
+  PYTHONIOENCODING=utf-8 python src/publish/generate_docs_data.py
 """
 
 import csv
@@ -25,7 +23,6 @@ import os
 import re
 import sys
 from datetime import date
-from collections import defaultdict
 
 # Ensure UTF-8 output on Windows
 sys.stdout.reconfigure(encoding="utf-8")
@@ -46,7 +43,6 @@ INPUT_METRICS = os.path.join(REPO_ROOT, "generated", "benchmark-results", "agree
 INPUT_METADATA = os.path.join(REPO_ROOT, "corpus", "papers_metadata.csv")
 
 OUTPUT_VAULT = os.path.join(REPO_ROOT, "docs", "data", "research_vault_v2.json")
-OUTPUT_GRAPH = os.path.join(REPO_ROOT, "docs", "data", "graph_data.json")
 
 VAULT_PAPERS_DIR = os.path.join(REPO_ROOT, "docs", "vault", "Papers")
 
@@ -187,53 +183,6 @@ def load_disagreements(filepath):
     return result
 
 
-def compute_category_graph(papers):
-    """Compute category co-occurrence network for vis-network."""
-    # Count co-occurrences among LLM-positive categories
-    co_occur = defaultdict(int)
-    cat_counts = defaultdict(int)
-
-    for p in papers:
-        pos_cats = p["llm"]["categories"]
-        for cat in pos_cats:
-            cat_counts[cat] += 1
-        # pairwise co-occurrence
-        for i, c1 in enumerate(pos_cats):
-            for c2 in pos_cats[i + 1:]:
-                pair = tuple(sorted([c1, c2]))
-                co_occur[pair] += 1
-
-    # Build nodes with kappa info placeholder (filled from metrics)
-    nodes = []
-    for i, cat in enumerate(CATEGORIES):
-        nodes.append({
-            "id": i,
-            "label": cat.replace("_", " "),
-            "category": cat,
-            "size": cat_counts.get(cat, 0),
-            "value": cat_counts.get(cat, 1),  # vis-network uses value for size
-        })
-
-    # Build edges (only co-occurrences >= 2)
-    edges = []
-    edge_id = 0
-    for (c1, c2), weight in co_occur.items():
-        if weight < 2:
-            continue
-        i1 = CATEGORIES.index(c1)
-        i2 = CATEGORIES.index(c2)
-        edges.append({
-            "id": edge_id,
-            "from": i1,
-            "to": i2,
-            "value": weight,
-            "title": f"{c1} + {c2}: {weight} Papers",
-        })
-        edge_id += 1
-
-    return {"nodes": nodes, "edges": edges}
-
-
 def main():
     print("Loading input files...")
 
@@ -268,9 +217,6 @@ def main():
             "human_yes_rate": round(data["human_yes_rate"] * 100, 1),
             "agent_yes_rate": round(data["agent_yes_rate"] * 100, 1),
         }
-
-    # Build kappa lookup dict for graph coloring
-    kappa_lookup = {cat: kappa_by_category.get(cat, {}).get("kappa", 0) for cat in CATEGORIES}
 
     print("\nBuilding paper records...")
     papers = []
@@ -341,24 +287,6 @@ def main():
     }
     print(f"  Confusion matrix (canonical): {confusion}")
 
-    # Compute category graph
-    graph_data = compute_category_graph(papers)
-
-    # Add kappa coloring to graph nodes
-    for node in graph_data["nodes"]:
-        cat = node["category"]
-        kappa = kappa_lookup.get(cat, 0)
-        node["kappa"] = round(kappa, 4)
-        # Color: green (positive kappa) to red (negative kappa)
-        if kappa > 0.05:
-            node["color"] = "#10b981"  # green
-        elif kappa > 0:
-            node["color"] = "#84cc16"  # lime
-        elif kappa > -0.05:
-            node["color"] = "#f59e0b"  # amber
-        else:
-            node["color"] = "#ef4444"  # red
-
     # LLM include/exclude stats
     llm_include = sum(1 for p in papers if p["llm"]["decision"] == "Include")
     llm_exclude = sum(1 for p in papers if p["llm"]["decision"] == "Exclude")
@@ -395,12 +323,6 @@ def main():
         json.dump(output, f, ensure_ascii=False, indent=2)
     size_kb = os.path.getsize(OUTPUT_VAULT) / 1024
     print(f"  Done: {size_kb:.0f} KB")
-
-    print(f"Writing {OUTPUT_GRAPH}...")
-    with open(OUTPUT_GRAPH, "w", encoding="utf-8") as f:
-        json.dump(graph_data, f, ensure_ascii=False, indent=2)
-    graph_size_kb = os.path.getsize(OUTPUT_GRAPH) / 1024
-    print(f"  Done: {graph_size_kb:.0f} KB ({len(graph_data['nodes'])} nodes, {len(graph_data['edges'])} edges)")
 
     print("\nDone.")
 

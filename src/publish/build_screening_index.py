@@ -12,7 +12,7 @@ Source of the searchable text, in order:
      index publishes nothing new.
   2. the abstract from research_vault_v2.json, for papers without a knowledge_doc.
 
-It deliberately does NOT read pipeline/markdown_clean/ (the raw copyrighted full
+It deliberately does NOT read generated/markdown_clean/ (the raw copyrighted full
 texts): those are not served and must not be published. Swapping the reading/search
 source to the raw local full text is a separate, copyright-gated step.
 
@@ -20,7 +20,7 @@ Output: docs/data/fulltext_index.json
   { "meta": {...}, "papers": { "<id>": { "t": title, "ay": author_year,
     "kd": knowledge_doc, "src": "kd"|"abstract"|"none", "n": chars, "x": lowered_text } } }
 
-Run: python scripts/build_screening_index.py
+Run: python src/publish/build_screening_index.py
 """
 
 import json
@@ -32,14 +32,6 @@ ROOT = Path(__file__).resolve().parents[2]
 DOCS = ROOT / "docs"
 DATA_IN = DOCS / "data" / "research_vault_v2.json"
 INDEX_OUT = DOCS / "data" / "fulltext_index.json"
-MACHINE_EVIDENCE_OUT = DOCS / "data" / "machine_evidence.json"
-
-CATEGORIES = [
-    "AI_Literacies", "Generative_KI", "Prompting", "KI_Sonstige",
-    "Soziale_Arbeit", "Bias_Ungleichheit", "Gender", "Diversitaet",
-    "Feministisch", "Fairness",
-]
-EVIDENCE_SNIPPET_CHARS = 220
 
 FRONTMATTER_RE = re.compile(r"^---\s*\n.*?\n---\s*\n", re.DOTALL)
 # embedded yaml blocks (the note repeats a frontmatter inside "## Full Text")
@@ -67,42 +59,6 @@ def to_plain(md: str) -> str:
     md = EMPH_RE.sub("", md)
     md = WS_RE.sub(" ", md)
     return md.strip().lower()
-
-
-def build_machine_evidence(papers: list) -> dict:
-    """Machine category evidence as an AI-origin provenance class (plan R2, ADR-018).
-
-    The served knowledge documents carry a `## Kategorie-Evidenz` block of
-    uncategorized `### Evidenz N` snippets, so no quote-to-category mapping exists
-    in the data. The reliable per-category signal is the LLM's own `all_categories`
-    flags plus its `reasoning`. We therefore emit, per paper and per LLM-flagged
-    category, one machine evidence item whose snippet is the model's reasoning for
-    that paper. The detailed Evidenz quotes stay in the KI-Extraktion reading layer
-    (M3); localizing them to single categories would fabricate provenance, the very
-    thing the human/AI separation exists to prevent.
-
-    Shape: { "<paper_id>": { "<Category>": [ {"term": ..., "snippet": ...} ] } }
-    Sourced only from the already-served research_vault_v2.json; publishes nothing new.
-    """
-    out = {}
-    n_papers = n_items = 0
-    for p in papers:
-        pid = p.get("id")
-        llm = p.get("llm") or {}
-        cats = llm.get("all_categories") or {}
-        reasoning = (llm.get("reasoning") or "").strip()
-        snippet = WS_RE.sub(" ", reasoning)[:EVIDENCE_SNIPPET_CHARS].strip()
-        if not pid or not snippet:
-            continue
-        entry = {}
-        for cat in CATEGORIES:
-            if cats.get(cat):
-                entry[cat] = [{"term": "KI-Assessment", "snippet": snippet}]
-                n_items += 1
-        if entry:
-            out[pid] = entry
-            n_papers += 1
-    return {"_meta": {"n_papers": n_papers, "n_items": n_items}, "papers": out}
 
 
 def main() -> int:
@@ -164,13 +120,6 @@ def main() -> int:
     print(f"  papers: {len(out)}  (kd={n_kd}, abstract={n_abs}, none={n_none})")
     print(f"  searchable chars: {total_chars:,}")
     print(f"  index size: {size_kb:.0f} KB")
-
-    me = build_machine_evidence(papers)
-    MACHINE_EVIDENCE_OUT.write_text(json.dumps(me, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
-    me_kb = MACHINE_EVIDENCE_OUT.stat().st_size / 1024
-    print(f"Wrote {MACHINE_EVIDENCE_OUT.relative_to(ROOT)}")
-    print(f"  papers with machine evidence: {me['_meta']['n_papers']}  items: {me['_meta']['n_items']}")
-    print(f"  machine-evidence size: {me_kb:.0f} KB")
     return 0
 
 

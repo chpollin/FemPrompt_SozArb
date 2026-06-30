@@ -207,49 +207,6 @@ def get_project_root() -> Path:
     return Path(__file__).parent.parent
 
 
-def ensure_analysis_dirs() -> Dict[str, Path]:
-    """
-    Ensure all required analysis directories exist
-
-    Returns:
-        Dictionary of directory paths
-    """
-    root = get_project_root()
-
-    dirs = {
-        'pdfs': root / 'analysis' / 'pdfs',
-        'markdown_papers': root / 'analysis' / 'markdown_papers',
-        'summaries_final': root / 'analysis' / 'summaries_final'
-    }
-
-    for dir_path in dirs.values():
-        dir_path.mkdir(parents=True, exist_ok=True)
-
-    return dirs
-
-
-def ensure_pipeline_dirs() -> Dict[str, Path]:
-    """
-    Ensure all required pipeline directories exist
-
-    Returns:
-        Dictionary of directory paths
-    """
-    root = get_project_root()
-
-    dirs = {
-        'pdfs': root / 'pdfs',
-        'markdown': root / 'markdown',
-        'summaries': root / 'summaries',
-        'vault': root / 'vault'
-    }
-
-    for dir_path in dirs.values():
-        dir_path.mkdir(parents=True, exist_ok=True)
-
-    return dirs
-
-
 # =============================================================================
 # LOGGING
 # =============================================================================
