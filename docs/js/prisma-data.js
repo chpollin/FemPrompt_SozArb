@@ -19,22 +19,21 @@ function escapeHtml(s) {
     });
 }
 
-let papers = [], kappas = {}, meta = {};
+let papers = [];
 
+// prisma.js reads only getAllPapers, escapeHtml, and CAT_COLORS; the kappa/meta
+// surface this shim used to carry was never read on prisma.html (getKappas/getMeta
+// belong to the Companion data layer for wissenschat.js and kategorien.js).
 window.EC = {
     escapeHtml: escapeHtml,
     CAT_COLORS: CAT_COLORS,
-    getAllPapers: function() { return papers; },
-    getKappas: function() { return kappas; },
-    getMeta: function() { return meta; }
+    getAllPapers: function() { return papers; }
 };
 
 fetch('data/research_vault_v2.json')
     .then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
     .then(function(d) {
         papers = d.papers || [];
-        kappas = d.kappa_by_category || {};
-        meta = d.meta || {};
         console.log('[PRISMA data] ' + papers.length + ' papers loaded');
         if (window.initializePrisma) window.initializePrisma();
     })

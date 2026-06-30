@@ -2,7 +2,7 @@
 //
 // The established capture workflow stays in the colleagues' Excel; PRISM is the
 // downstream PRISMA layer. This module ingests a CSV exported from that Excel
-// (column shape of benchmark/data/human_assessment.csv), converts it into a
+// (column shape of assessment/human_assessment.csv), converts it into a
 // per-reviewer JSON file (schema femprompt-prisma-reviewer/0.2) and produces a
 // validation report: out-of-vocabulary category and decision values, empty or
 // out-of-vocabulary exclusion reasons on Exclude (the data-hygiene lesson from
@@ -19,7 +19,7 @@
 //
 // ------------------------------------------------------------------
 // Hand trace (adversarial static review, 2026-06-09): one real CSV row,
-// end to end. Source row: benchmark/data/human_assessment.csv, file line 2
+// end to end. Source row: assessment/human_assessment.csv, file line 2
 // (first data row), Zotero_Key EJEFPZGA. The line ends in CRLF and carries
 // quoted commas in Title and Abstract.
 //
@@ -62,7 +62,7 @@
 'use strict';
 
 // Vocabularies. docs/data/ carries no categories JSON, so these are derived
-// from benchmark/config/categories.yaml (v1.2), the same source prisma.js
+// from assessment/categories.yaml (v1.2), the same source prisma.js
 // mirrors in its own constants.
 
 const TECH_CATS = ['AI_Literacies', 'Generative_KI', 'Prompting', 'KI_Sonstige'];
@@ -114,15 +114,13 @@ function parseCsv(text) {
     return rows;
 }
 
-// Header mapping (column shape of benchmark/data/human_assessment.csv)
+// Header mapping (column shape of assessment/human_assessment.csv)
 
 function mapHeader(headerRow) {
     let idx = {};
     headerRow.forEach(function(h, i) {
         const n = (h || '').trim();
-        if (n === 'ID') idx.rowId = i;
-        else if (n === 'Zotero_Key') idx.key = i;
-        else if (n === 'Title') idx.title = i;
+        if (n === 'Zotero_Key') idx.key = i;
         else if (n === 'Decision') idx.decision = i;
         else if (n === 'Exclusion_Reason') idx.reason = i;
         else if (/^Diversit/.test(n)) idx['cat_Diversitaet'] = i; // "Diversitaet / Intersektionalität"
@@ -392,7 +390,7 @@ function writeReviewerFile(handle, rid, payload) {
 // UI: one block, mounted into the "Daten & Repo" surface
 
 let block = null;
-let lastResult = null;   // { payload, report, stats, rid, sources }
+let lastResult = null;   // { payload, rid }
 const FS_SUPPORTED = typeof window.showDirectoryPicker === 'function';
 
 function buildBlock() {
@@ -402,7 +400,7 @@ function buildBlock() {
     block.innerHTML =
         '<h4>Excel-Import (CSV-Bruecke)</h4>' +
         '<p class="pt-muted">Die Erfassung bleibt in der bekannten Excel der Kolleg:innen. Hier wird der CSV-Export ' +
-        '(Spaltenform von benchmark/data/human_assessment.csv) geprueft und in eine Reviewer-Datei (Schema 0.2) umgewandelt. ' +
+        '(Spaltenform von assessment/human_assessment.csv) geprueft und in eine Reviewer-Datei (Schema 0.2) umgewandelt. ' +
         'Der Pruefbericht zeigt Vokabular-Verstoesse, doppelte IDs, fehlende Ausschlussgruende und Kollisionen mit schon ' +
         'erfassten Entscheidungen. Bestehende Entscheidungen werden nie stillschweigend ueberschrieben.</p>' +
         '<div class="pt-data-actions">' +
@@ -464,7 +462,7 @@ function runImport() {
         const header = mapHeader(rows[0]);
         if (header.missing.length) {
             setStatus('Fehlende Spalten: ' + esc(header.missing.join(', ')) +
-                      '. Erwartet wird die Spaltenform von benchmark/data/human_assessment.csv.');
+                      '. Erwartet wird die Spaltenform von assessment/human_assessment.csv.');
             return;
         }
         // collision base: localStorage cache, then the committed reviewer file
@@ -476,7 +474,7 @@ function runImport() {
             }) : { existing: local, src: local ? 'lokaler Zwischenstand (Browser)' : null };
         }).then(function(base) {
             const res = convert(rows.slice(1), header, rid, base.existing || {}, overwrite, file.name);
-            lastResult = { payload: res.payload, report: res.report, stats: res.stats, rid: rid, base: base.src };
+            lastResult = { payload: res.payload, rid: rid };
             block.querySelector('#pt-imp-dl').disabled = false;
             let wbtn = block.querySelector('#pt-imp-write');
             if (wbtn) wbtn.disabled = false;
