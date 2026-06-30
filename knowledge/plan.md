@@ -352,3 +352,4 @@ At the next stakeholder meeting (or earlier written feedback), walk this ledger 
 - Reviewer identity in public files: are the current short keys acceptable in a public repo, or pseudonyms? Decide before P3.
 - Do the colleagues screen the full corpus or a split? Affects only the onboarding text, not the tool.
 - Pages source setting (branch/folder) to verify at the P0 merge.
+- Folder restructure: the worked migration proposal lives in [[restructure-plan]], gated behind the distillate repair. Transient, removed once executed.

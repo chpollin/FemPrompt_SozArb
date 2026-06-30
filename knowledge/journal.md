@@ -24,6 +24,13 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## PRISM and the epistemic infrastructure (June 2026)
 
+### 2026-06-30 (Session 23): the distillate matcher deduplicated at the root, folder restructure planned
+
+- **Ziel:** Make every corpus paper carry exactly one correct distillate, at the pipeline level rather than by hand, and work out how the folders could mirror the project's input-to-output logic.
+- **Verlauf:** The distillate-to-Zotero matcher bound several distillates to one key without ever noticing the collision, so the companion data carried duplicate ids, wrong-content copies (a MirrorStories file holding the word2vec paper, a Mosene file holding Haraway), and genuine mis-binds where two different papers were merged onto one key. Two earlier classifications, a search agent's and a hand bash check, both proved unreliable and contradicted each other; the authoritative source turned out to be the production matcher itself, run and inverted to expose its real collisions and non-matches. The fix resolves collisions to one canonical distillate per key, chosen by how well the distillate's own title covers the key title, rejects a distillate that reached a key only through the loose fuzzy fallback, and has the generators skip every excluded stem instead of emitting it as a stray. The restructure question was answered with a worked migration proposal ([[restructure-plan]]), code into one `src/` tree, source against generated made legible, gated behind this repair and left unexecuted.
+- **Ergebnis:** The regenerated companion data carries one entry per paper with no duplicate ids and the wrong-content copies gone, the concept graph preserved through a fallback, and the test harness green. The matcher fix is the durable root-cause repair; a full vault regeneration is deferred to an environment that still holds the local LLM concept cache.
+- **Dead Ends:** Character-level similarity (`SequenceMatcher`) as the canonical-selection metric was wrong, it rewards incidental letter overlap and kept a K-12 education paper over the discrimination paper that actually matched the key; token overlap of the key's content words fixed it. The first instinct to hand-delete a list of files was abandoned, a blind delete would have destroyed real papers caught in mis-binds (a K-12 paper merged under a discrimination key); the repair belongs in the matcher, not in a deletion list.
+
 ### 2026-06-30 (Session 22): repo cleanup, journal condensed, the unverified audit layer removed
 
 - **Ziel:** Declutter the repository and remove the AI-generated audit layer that was never human-verified.
