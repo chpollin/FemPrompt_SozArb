@@ -110,6 +110,7 @@ let pendingInText = null;      // in-text query to apply once the document has l
 let pinTerm = '', pinSnippet = '', pinOrigin = 'human'; // pinOrigin = source layer of the staged snippet
 let pinReturnFocus = null, pinKeyHandler = null; // pin-menu dialog focus restore + keydown trap
 let focusReadingOnRender = false; // move focus to the paper heading after a paper switch (a11y)
+let editingPid = null; // a committed paper reopened for editing; its record stays until re-commit
 
 // the in-progress (pre-commit) decision for the open paper
 let work = { pid: null, cats: {}, override: false, reason: null, evidence: {} };
@@ -576,7 +577,8 @@ function renderScreening() {
     if (state.index >= papers.length) state.index = papers.length - 1;
 
     let p = papers[state.index];
-    const dec = curDec()[p.id];
+    if (editingPid && editingPid !== p.id) editingPid = null; // navigating away abandons the edit; the record stays
+    const dec = editingPid === p.id ? null : curDec()[p.id]; // while editing, render the form, not the locked record
     if (!dec && work.pid !== p.id) resetWork(p);
 
     const screened = Object.keys(curDec()).length;
@@ -1093,15 +1095,27 @@ function commit() {
         reason: fin === 'Exclude' ? work.reason : null,
         evidence: humanEvidence, ts: new Date().toISOString(), reviewer: state.reviewer
     };
+    editingPid = null; // the edit (if any) is now re-committed
     save();
     gotoNextOpen();
 }
 
+// "Ueberarbeiten" reopens a committed decision for editing. It rehydrates the saved
+// categories, evidence, reason, and override into the working state and marks the paper
+// as being edited; the committed record stays in curDec untouched until re-commit, so
+// abandoning the edit (navigating away) loses nothing. Only human Belege were persisted,
+// so AI-origin evidence is not restored. (Browser-agent finding: revise was data loss.)
 function editRecord(p) {
-    if (!curDec()[p.id]) return;
-    delete curDec()[p.id];
-    resetWork(p);
-    save();
+    const dec = curDec()[p.id];
+    if (!dec) return;
+    work = {
+        pid: p.id,
+        cats: JSON.parse(JSON.stringify(dec.categories || {})),
+        override: !!dec.override,
+        reason: dec.reason || null,
+        evidence: JSON.parse(JSON.stringify(dec.evidence || {}))
+    };
+    editingPid = p.id;
     renderScreening();
 }
 
@@ -1291,7 +1305,7 @@ function disclosureMarkdown() {
     L.push('## AI use disclosure (PRISMA-trAIce / RAISE)', '');
     L.push('Screening of ' + n + ' records used ' + disc('name') + ' (prompt ' + disc('prompt') + ', temperature ' + disc('temperature') + '), date ' + disc('date') + '.');
     L.push('Stage: ' + disc('stage') + '. The AI proposal is advisory; every record was screened independently by a human reviewer, whose decision is binding (RAISE).');
-    L.push('Performance evaluation (PRISMA-trAIce M9/R2): AI-human agreement is evaluated outside this tool, on the benchmark corpus in the repository (benchmark/, replay self-test), not recomputed here over the loaded corpus.');
+    L.push('Performance evaluation (PRISMA-trAIce M9/R2): AI-human agreement is evaluated outside this tool, on the benchmark corpus in the repository (generated/benchmark-results/, replay self-test), not recomputed here over the loaded corpus.');
     L.push('Confidence threshold: ' + disc('threshold') + '. Conflicts of interest: ' + disc('conflicts') + '.');
     if (disc('limitations')) L.push('Limitations: ' + disc('limitations'));
     L.push('', 'Flow diagram distinguishes AI from human decisions (PRISMA-trAIce R1). Tool identity, prompt, and parameters disclosed per M2/M6.');
@@ -1435,7 +1449,7 @@ const TEST_HOOK = {
     getState: function() { return state; },
     getWork: function() { return work; },
     curDec: curDec, resetWork: resetWork,
-    pinEvidence: pinEvidence, unpinEvidence: unpinEvidence, commit: commit,
+    pinEvidence: pinEvidence, unpinEvidence: unpinEvidence, commit: commit, editRecord: editRecord,
     evidenceListHtml: evidenceListHtml, chipHtml: chipHtml, statusLabel: statusLabel,
     corpusListHtml: corpusListHtml, isScreenable: isScreenable, firstEntryIndex: firstEntryIndex,
     // surface + reading-layer drivers (browser-agent traces on the real page)

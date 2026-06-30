@@ -734,6 +734,24 @@ test('firstEntryIndex skips a boilerplate first paper and opens on a screenable 
     T.getState().reviewer = prevRev;
 });
 
+test('editRecord rehydrates work and keeps the committed decision until re-commit (no data loss on revise)', function() {
+    T.setPapers([{ id: 'pED', title: 'X', knowledge_doc: 'd.md' }]);
+    var prevRev = T.getState().reviewer;
+    T.getState().reviewer = 'rED'; T.getState().reviewers.rED = {}; T.getState().index = 0;
+    T.curDec().pED = {
+        categories: { AI_Literacies: true, Soziale_Arbeit: true }, decision: 'Include',
+        override: false, reason: null, evidence: { AI_Literacies: [{ term: 't', snippet: 's', origin: 'human' }] }
+    };
+    T.editRecord({ id: 'pED' });
+    var w = T.getWork();
+    assertEqual(w.pid, 'pED', 'work is bound to the edited paper');
+    assert(w.cats.AI_Literacies && w.cats.Soziale_Arbeit, 'categories are rehydrated into work, not blanked');
+    assertEqual((w.evidence.AI_Literacies || []).length, 1, 'evidence is rehydrated into work');
+    assert(!!T.curDec().pED, 'the committed decision survives the edit (no eager delete)');
+    delete T.getState().reviewers.rED;
+    T.getState().reviewer = prevRev;
+});
+
 // ============================================================
 // Restore localStorage and report
 // ============================================================
