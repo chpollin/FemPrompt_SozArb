@@ -105,12 +105,12 @@ def main():
     )
     parser.add_argument(
         "--ha",
-        default=str(project_root / "benchmark" / "data" / "human_assessment.csv"),
+        default=str(project_root / "assessment" / "human_assessment.csv"),
         help="Path to human assessment CSV",
     )
     parser.add_argument(
         "--output",
-        default=str(project_root / "benchmark" / "data" / "papers_full.csv"),
+        default=str(project_root / "assessment" / "papers_full.csv"),
         help="Output CSV path",
     )
     args = parser.parse_args()

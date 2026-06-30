@@ -16,7 +16,7 @@ from pathlib import Path
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-RESULTS_DIR = Path(__file__).parent.parent / 'results'
+RESULTS_DIR = Path(__file__).resolve().parents[2] / 'generated' / 'benchmark-results'
 
 CONDITIONS = {
     'Haiku + Abstract': 'agreement_haiku.json',

@@ -210,7 +210,7 @@ def main():
 
     # Versuche .env zu laden wenn kein Key in Umgebung
     if not api_key:
-        env_file = Path(__file__).parent.parent.parent / '.env'
+        env_file = Path(__file__).parent.parent / '.env'
         if env_file.exists():
             with open(env_file, 'r') as f:
                 for line in f:
