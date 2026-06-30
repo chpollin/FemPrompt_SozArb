@@ -15,10 +15,10 @@ status: complete
 language: en
 version: "0.2"
 created: 2026-06-29
-updated: 2026-06-29
+updated: 2026-06-30
 authors: [Christopher Pollin]
 generated-with: Claude Code
-related: [project, methods, specification, data, design, plan, journal, standards, update-protocol]
+related: [project, methods, specification, data, design, plan, journal, standards, conformance-map, update-protocol]
 ---
 
 This is the knowledge base of FemPrompt SozArb, a systematic literature review on feminist AI literacy and LLM bias in social work and the epistemic infrastructure built around it. It documents the conducted review and its benchmark, the PRISM screening tool, which is the binding screening surface the review is carried through (ADR-019), and the plan for the literature update. Concrete numbers do not live here. The benchmark figures live in the data (`generated/benchmark-results/`, `docs/data/`), the corpus and screening data in `docs/data/` and `assessment/`, and the Evidence Companion (https://chpollin.github.io/FemPrompt_SozArb/) renders them. This index shows where each piece of knowledge lives, in what order to read, and what the constitutive terms mean.
@@ -37,6 +37,7 @@ In function order, not alphabetical.
 | [[plan]] | Forward steering: the staged roadmap, current status, and simulated decisions | per phase |
 | [[journal]] | Genesis: the chronological session log with decisions and learnings | per session |
 | [[standards]] | The reporting standards implemented: PRISMA 2020, PRISMA-trAIce, RAISE | rarely |
+| [[conformance-map]] | Per-item conformance of this review against PRISMA 2020 and trAIce, with source paths and named gaps (R1) | per Stage R step |
 | [[update-protocol]] | The round-2 pre-registration protocol, the analysis-field design, the RIS procedure | until round 2 starts |
 | [[guides/manual-review-checklist]] | The human-in-the-loop markdown review checklist | rarely |
 
@@ -46,6 +47,7 @@ In function order, not alphabetical.
 - Inspect the benchmark: the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion.
 - Understand a tool decision: [[specification]] (the Entscheidungen / ADR section), [[journal]], [[design]].
 - Understand the divergence (the motivating illustration): [[methods]].
+- Evaluate conformance: [[standards]] (the criterion), [[conformance-map]] (this review's per-item status).
 - Prepare the literature update: [[plan]] (Stage B), [[update-protocol]], [[standards]].
 
 ## Convention

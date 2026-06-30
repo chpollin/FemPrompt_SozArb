@@ -10,11 +10,11 @@ status: complete
 language: en
 version: "0.2"
 created: 2026-06-09
-updated: 2026-06-29
+updated: 2026-06-30
 authors: [Christopher Pollin]
 generated-with: Claude Code, deep-research web synthesis and full-text extraction of the primary sources
 topics: ["[[PRISMA]]", "[[Reporting Standards]]", "[[AI in Evidence Synthesis]]"]
-related: [specification, methods]
+related: [specification, methods, conformance-map]
 ---
 
 This note is the reporting-standards reference for the project. It covers PRISMA 2020 as the reporting backbone and the two 2025 frameworks that govern AI-assisted reviews, PRISMA-trAIce (how to document AI use) and RAISE (under what conditions AI use is permissible). It is the criterion the conducted review and the PRISM tool report against, and the canonical home for the standards' item counts and citations. All claims are sourced in the Sources section below.
@@ -108,7 +108,7 @@ The mandatory reporting elements (RAISE Table 1) are the AI system name(s), vers
 
 ## Mapping onto this project's workflow
 
-The dual assessment track and benchmark already satisfy most of the demanding requirements. The figures that back the "Satisfied" judgements live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion; this table states only the mapping and the status. Status values are Satisfied, Partial, or Gap.
+The dual assessment track and benchmark already satisfy most of the demanding requirements. The figures that back the "Satisfied" judgements live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion; this table states only the mapping and the status. Status values are Satisfied, Partial, or Gap. The full per-item conformance of this review, the complete PRISMA 2020 27-item checklist and all 17 trAIce items with source paths and named gaps, is in [[conformance-map]] (the R1 deliverable); this section is the AI-layer summary.
 
 | Requirement | Project artefact | Status |
 |---|---|---|

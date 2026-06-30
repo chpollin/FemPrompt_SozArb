@@ -24,6 +24,13 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## PRISM and the epistemic infrastructure (June 2026)
 
+### 2026-06-30 (Session 25): Stand gesichtet, Stage R begonnen mit der R1-Konformanzkarte
+
+- **Ziel:** Nach dem Umzug den Stand sichten, das offene Werk priorisieren, und vor einem Rechnerwechsel die Arbeit mit echtem Vorlauf sichern statt nur zu pushen.
+- **Verlauf:** Die Sichtung ergab, dass Restructure und Doc-Konsolidierung (P6) im Wesentlichen stehen und der eigentliche offene Kern Stage R ist, der erste Durchlauf der Reviewdaten durch PRISM. Als sofort machbarer Stage-R-Schritt wurde R1, das Datenvollständigkeits-Audit, ausgearbeitet: eine Konformanzkarte, die jedes PRISMA-2020-Item und alle 17 trAIce-Items plus RAISE auf ihre Quelle im Repo oder auf eine benannte Lücke abbildet. Geerdet an den realen Items aus [[standards]] und den echten Pfaden nach dem Umzug, Status reconstructable, partial, gap oder N/A, ohne Zahlen, weil die der R2-Replay liefert. Quer verlinkt aus [[INDEX]], [[standards]], [[plan]] und CLAUDE.md.
+- **Ergebnis:** [[conformance-map]] als R1-Deliverable, das Done-Kriterium erfüllt (jedes Item zeigt auf Daten oder eine benannte Lücke). Die zentrale retrospektiv unreparierbare Lücke, das fehlende vorab registrierte Runde-1-Protokoll (M1), ist benannt, nicht versteckt; die meta-analytischen PRISMA-Items (Risk of Bias, Effektmaße, Synthese, Certainty) sind als N/A für diesen Reviewtyp markiert. Branch committet und gepusht vor dem Rechnerwechsel; der Merge nach `main` bleibt die offene Menschenentscheidung (P0).
+- **Dead Ends:** Den Auftrag "bis zu einem Commit" mit Datumspflege und Journaleintrag zu füllen, wurde zugunsten eines echten Stage-R-Deliverables verworfen; R1 ist reine Daten- und Synthesearbeit, jetzt machbar, ohne auf Stakeholder oder einen LLM-Lauf zu warten. Die machine-readable JSON-Emission wurde nicht vorgebaut, sie wird in R4 aus der Karte abgeleitet, sonst entstünde eine verwaiste Datei (YAGNI).
+
 ### 2026-06-30 (Session 24): the folder restructure executed, code into src/, generated artifacts into generated/
 
 - **Ziel:** Carry out the planned restructure so the folders mirror the input-to-output logic, with all runnable code in one place.

@@ -1,7 +1,7 @@
 # Working Rules for Claude AI Assistant
 
 **Project:** FemPrompt SozArb, a systematic literature review on feminist AI literacies in social work
-**Last Updated:** 2026-06-29
+**Last Updated:** 2026-06-30
 
 ---
 
@@ -82,7 +82,7 @@ The benchmark (the human-LLM divergence and its decomposition, used as a motivat
 
 ### Knowledge documents
 
-`INDEX.md` (navigation and glossary), `project.md` (identity and theory), `methods.md` (review method and pipeline), `specification.md` (PRISM requirements, ADRs, user stories), `data.md` (tool data substrate), `design.md` (UI and design system), `plan.md` (roadmap, status, simulated decisions), `journal.md` (session log), `standards.md` (PRISMA, trAIce, RAISE), `update-protocol.md` (round-2 protocol, analysis fields, RIS), `guides/manual-review-checklist.md`. Start at `INDEX.md`.
+`INDEX.md` (navigation and glossary), `project.md` (identity and theory), `methods.md` (review method and pipeline), `specification.md` (PRISM requirements, ADRs, user stories), `data.md` (tool data substrate), `design.md` (UI and design system), `plan.md` (roadmap, status, simulated decisions), `journal.md` (session log), `standards.md` (PRISMA, trAIce, RAISE), `conformance-map.md` (per-item PRISMA/trAIce conformance with source paths and named gaps, the R1 deliverable), `update-protocol.md` (round-2 protocol, analysis fields, RIS), `guides/manual-review-checklist.md`. Start at `INDEX.md`.
 
 ### Key web files
 

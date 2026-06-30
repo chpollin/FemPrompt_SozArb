@@ -7,7 +7,7 @@ status: complete
 language: en
 version: "0.2"
 created: 2026-06-09
-updated: 2026-06-29
+updated: 2026-06-30
 authors: [Christopher Pollin]
 generated-with: Claude Code
 method:
@@ -215,6 +215,8 @@ Consequence ledger (binding for R4 and the paper): the divergence must be report
 - Output: a machine-readable conformance map (per item: reconstructable, partial, missing, with source path), the data behind the checklist surface and the evaluation in R4.
 
 Done when: every checklist item points at data or at a named gap.
+
+Status (2026-06-30): the per-item map is drafted as [[conformance-map]], the full PRISMA 2020 27-item checklist and all 17 trAIce items plus RAISE, each with status (reconstructable, partial, gap, N/A) and a source path, the named gaps consolidated (no round-1 protocol M1 above all). The count-bearing items are marked reconstructable; the committed R2 replay still has to supersede any hand recount before R4. A machine-readable emission for R4 is derived from the map when R4 builds the record bundle.
 
 ### R2: Replay seed completion
 
