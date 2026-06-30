@@ -3,9 +3,9 @@ title: Plan
 project:
   name: FemPrompt SozArb
   repository: https://github.com/chpollin/FemPrompt_SozArb
-status: complete
+status: active
 language: en
-version: "0.2"
+version: "0.3"
 created: 2026-06-09
 updated: 2026-06-30
 authors: [Christopher Pollin]
@@ -190,6 +190,61 @@ Done when: searching the retired numbers hits only journal and archive contexts.
 - Freeze for the stakeholder validation.
 
 Done when: the quickstart works without help from the builder.
+
+## Stage A revision: the working-instrument redesign (decided 2026-06-30)
+
+Stage A above was planned with the three-surface IA (ADR-012) and the colleague-capture framing that ADR-019 later narrowed. An operator session on 2026-06-30 brought two strands together: this branch (the folder restructure, the consolidated knowledge vault, the reframing of the divergence as illustration, trAIce at 17 items) and a separate working session that fixed the tool's direction and ran an independent, adversarially verified review of the shipped frontend. This section integrates both. It revises, not discards, the phase work above: the cuts below re-sequence P4 (UI completion) and parts of P2/P3 around a single decision, the tool is one workspace, identity is Git, the record is a generated output.
+
+### What the consolidation teaches
+
+1. The mission is now singular. ADR-019 (in-tool screening is binding) and the reframing (divergence is illustration, not the empirical core) together leave the tool one job: a clean, binding, evidence-grounded screening instrument. The comparison and demonstration apparatus earlier versions carried is research material for the Companion, not a tool surface. This makes the one-workspace redesign central, not polish.
+2. Decisions live as ADRs in the vault, not as standalone plan documents. A redesign-plan document drafted on `main` in the same session was the anti-pattern and was removed; the vault is convention-conformant and stays so.
+3. A shipped decision can still be wrong. ADR-018 (machine category evidence as `origin: ai` Belege) was committed on this branch; the independent review found the loaded snippets are the model's per-paper screening reasoning, not paper evidence, duplicated verbatim across every flagged category, with exclusionary text pinned as category support. The verification checkpoint applies to our own output: O1 below reopens ADR-018.
+4. The three-surface IA and the reviewer-identity form are residue of the older downstream-layer framing. The instrument-for-active-research goal plus Git provenance let us simplify both.
+
+### Redesign decisions (operator, 2026-06-30)
+
+| Decision | New ADR | Revises |
+|---|---|---|
+| Tool purpose is an instrument for active research, not a one-shot demonstrator | ADR-020 | sharpens ADR-019 |
+| The three surfaces merge into one workspace; the PRISMA record becomes a generated output, the data functions an edge affordance | ADR-020 | ADR-008, ADR-012 (three-surface IA) |
+| Reviewer identity is the Git commit author; the in-tool identity form and the multi-reviewer perspective are dropped; the decisions file is written diff-able | ADR-021 | ADR-010 (one file per reviewer), the reviewer-identity open item, the simulated reviewer-identifiers row |
+| Academic references leave the work surface; standard names live only in the generated record and disclosure | ADR-020 | P4/P6 design and reference placement |
+| The divergence stays out of the tool (synthesis-only screening) | confirms ADR-014 | -- |
+
+### Verified review findings folded in
+
+The adversarial review (56 of 57 findings confirmed) maps onto the cuts below, not a separate list:
+
+- Machine evidence is broken by design (blocker): O1, reopens ADR-018.
+- Accessibility gaps (no focus ring on the search inputs, pin menu without dialog role or focus trap, category chips without `aria-pressed`, status by colour alone, focus lost on paper switch, hover-only tooltips, muted-text contrast): the accessibility cut, folds into P4 NFR-06.
+- The hard inclusion AND-rule has no path to Include by judgement: O2.
+- Technik/Sozial labels reproduce the framing the project retired: O3.
+- Default entry on a boilerplate paper, thin-text substrate for a large share of the corpus: P2/ADR-013 (O4).
+
+### Sequenced cuts
+
+Decided and unblocked first, gated cuts after their decision resolves. Each keeps the harness green (baseline 62/62) and is recorded as an ADR.
+
+1. **One workspace** (decided) -- ADR-020. Screening is the permanent surface; the PRISMA record and the data functions become on-demand affordances; academic references leave the work surface. Files: `docs/prisma.html`, `docs/js/prisma.js` (renderShell, showSurface, renderData), `docs/css/prisma.css`.
+2. **Git provenance** (decided, fork O5 open) -- ADR-021. Drop the identity form and the perspective switcher; write the decisions file deterministically (stable order, one paper block); generate a session commit message. Files: `docs/js/prisma.js`, a deterministic serializer with its own test.
+3. **Accessibility and keyboard flow** (decided) -- P4 NFR-06. Focus restoration after a paper switch, visible focus rings, `aria-pressed` on chips, dialog semantics and focus trap for the pin menu, contrast, keyboard-only screening.
+4. **Machine evidence** (gated O1) -- reopens ADR-018. Remove from the evidence list into the collapsed suggestion, or replace with verbatim per-category Kategorie-Evidenz quotes.
+5. **Inclusion logic** (gated O2). A reason-gated override toward Include, or the AND-rule shown as a derivation aid.
+6. **Feminist language** (gated O3). Technik/Sozial to Gegenstand/Perspektive on the work surface; the internal constants stay.
+7. **Text substrate** (gated O4, already P2/ADR-013). Thin-text handling and a readable default entry.
+
+### Open gates
+
+| ID | Question | Gates |
+|---|---|---|
+| O1 | Machine evidence: remove from the evidence list, or replace with verbatim category quotes | cut 4 |
+| O2 | Inclusion AND-rule: keep rigid, or reason-gated override to Include | cut 5 |
+| O3 | Technik/Sozial to Gegenstand/Perspektive | cut 6 |
+| O4 | Thin-text papers: block, warn, or load raw local text | cut 7 |
+| O5 | Decisions file: one shared file, or one per person | cut 2 |
+
+Cuts 1 to 3 are unblocked by the decisions above and build immediately. The gated cuts wait on their row, decided when the cut is reached, not all at once.
 
 ## Stage R: The first-round pass through PRISM and its evaluation
 
