@@ -58,7 +58,7 @@ class PipelineValidator:
     def validate_stage1(self):
         """Check that Zotero export exists and PDFs match corpus entries."""
         zotero_path = self.root / "corpus" / "zotero_export.json"
-        pdf_dir = self.root / "pipeline" / "pdfs"
+        pdf_dir = self.root / "generated" / "pdfs"
 
         if not zotero_path.exists():
             self.error(1, f"Zotero export not found: {zotero_path}")
@@ -113,8 +113,8 @@ class PipelineValidator:
     # ------------------------------------------------------------------
     def validate_stage2(self):
         """Check that Markdown files exist for PDFs."""
-        pdf_dir = self.root / "pipeline" / "pdfs"
-        md_dir = self.root / "pipeline" / "markdown"
+        pdf_dir = self.root / "generated" / "pdfs"
+        md_dir = self.root / "generated" / "markdown"
 
         if not md_dir.exists():
             self.error(2, f"Markdown directory not found: {md_dir}")
@@ -142,8 +142,8 @@ class PipelineValidator:
     # ------------------------------------------------------------------
     def validate_stage3(self):
         """Check that clean markdown files exist and are valid."""
-        md_dir = self.root / "pipeline" / "markdown"
-        clean_dir = self.root / "pipeline" / "markdown_clean"
+        md_dir = self.root / "generated" / "markdown"
+        clean_dir = self.root / "generated" / "markdown_clean"
 
         if not clean_dir.exists():
             self.warn(3, f"Clean markdown directory not found: {clean_dir}")
@@ -163,8 +163,8 @@ class PipelineValidator:
     # ------------------------------------------------------------------
     def validate_stage4(self):
         """Check knowledge docs structure and consistency."""
-        clean_dir = self.root / "pipeline" / "markdown_clean"
-        knowledge_dir = self.root / "pipeline" / "knowledge" / "distilled"
+        clean_dir = self.root / "generated" / "markdown_clean"
+        knowledge_dir = self.root / "generated" / "distilled"
 
         if not knowledge_dir.exists():
             self.error(4, f"Knowledge directory not found: {knowledge_dir}")
@@ -263,9 +263,9 @@ class PipelineValidator:
     # ------------------------------------------------------------------
     def validate_stage5(self):
         """Check that assessment data is consistent with corpus."""
-        knowledge_dir = self.root / "pipeline" / "knowledge" / "distilled"
-        assessment_5d = self.root / "assessment-llm" / "output"
-        benchmark_data = self.root / "benchmark" / "data"
+        knowledge_dir = self.root / "generated" / "distilled"
+        assessment_5d = self.root / "assessment" / "llm-5d" / "output"
+        benchmark_data = self.root / "assessment"
 
         # Check 5D assessment
         if assessment_5d.exists():
@@ -275,7 +275,7 @@ class PipelineValidator:
             else:
                 self.warn(5, "No 5D assessment output files found")
         else:
-            self.warn(5, "assessment-llm/output/ directory not found")
+            self.warn(5, "assessment/llm-5d/output/ directory not found")
 
         # Check benchmark data
         if benchmark_data.exists():
@@ -291,12 +291,12 @@ class PipelineValidator:
                     rows = list(reader)
                 self.stat("human_assessment_rows", len(rows))
             else:
-                self.warn(5, "No human_assessment.csv in benchmark/data/")
+                self.warn(5, "No human_assessment.csv in assessment/")
         else:
-            self.warn(5, "benchmark/data/ directory not found")
+            self.warn(5, "assessment/ directory not found")
 
         # Check categories config consistency
-        categories_path = self.root / "benchmark" / "config" / "categories.yaml"
+        categories_path = self.root / "assessment" / "categories.yaml"
         if categories_path.exists():
             try:
                 import yaml

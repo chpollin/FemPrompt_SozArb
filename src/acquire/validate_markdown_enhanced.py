@@ -27,6 +27,7 @@ from collections import Counter
 from datetime import datetime
 
 # Import shared utilities
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))  # src/ on path for utils
 from utils import setup_windows_encoding, load_env_file, get_env_var
 
 # Fix encoding for Windows console

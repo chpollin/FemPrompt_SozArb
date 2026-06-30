@@ -10,7 +10,7 @@ Validates Knowledge Documents after distillation to ensure:
 
 Usage:
     python validate_knowledge_docs.py
-    python validate_knowledge_docs.py --input pipeline/knowledge/distilled
+    python validate_knowledge_docs.py --input generated/distilled
     python validate_knowledge_docs.py --output validation_report.json
 """
 
@@ -23,8 +23,8 @@ from pathlib import Path
 from typing import Dict, List, Any, Tuple
 from datetime import datetime
 
-# Add parent directory to path for utils import
-sys.path.insert(0, str(Path(__file__).parent))
+# Add src/ to path for utils import
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from utils import setup_windows_encoding, setup_logging
 
@@ -344,7 +344,7 @@ def main():
     )
     parser.add_argument(
         "--input", "-i",
-        default="pipeline/knowledge/distilled",
+        default="generated/distilled",
         help="Input directory with Knowledge Documents"
     )
     parser.add_argument(

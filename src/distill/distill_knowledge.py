@@ -11,7 +11,7 @@ Stages:
 3. Verify & Finalize - Verifikation gegen Original und Confidence-Score
 
 Usage:
-    python distill_knowledge.py --input pipeline/markdown --output pipeline/knowledge/distilled
+    python distill_knowledge.py --input generated/markdown --output generated/distilled
     python distill_knowledge.py --limit 10  # Test mit 10 Dokumenten
     python distill_knowledge.py --single "path/to/paper.md"
 """
@@ -30,8 +30,8 @@ from datetime import datetime
 from dotenv import load_dotenv
 load_dotenv(Path(__file__).parent.parent.parent / '.env')
 
-# Add parent directory to path for utils import
-sys.path.insert(0, str(Path(__file__).parent))
+# Add src/ to path for utils import
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from utils import (
     setup_windows_encoding,
@@ -305,8 +305,8 @@ class KnowledgeDistillerV2:
 
         # Use config defaults, allow overrides
         self.client = create_anthropic_client(api_key)
-        self.input_dir = Path(input_dir or paths_config.get('markdown', 'pipeline/markdown'))
-        self.output_dir = Path(output_dir or paths_config.get('knowledge_distilled', 'pipeline/knowledge/distilled'))
+        self.input_dir = Path(input_dir or paths_config.get('markdown', 'generated/markdown'))
+        self.output_dir = Path(output_dir or paths_config.get('knowledge_distilled', 'generated/distilled'))
         self.output_dir.mkdir(exist_ok=True, parents=True)
         self.model = model or api_config.get('model', 'claude-haiku-4-5-20251001')
         self.delay = delay if delay is not None else api_config.get('delay', 1.0)
@@ -749,12 +749,12 @@ def main():
     )
     parser.add_argument(
         "--input", "-i",
-        default=paths_config.get('markdown', 'pipeline/markdown'),
+        default=paths_config.get('markdown', 'generated/markdown'),
         help="Input directory with markdown files"
     )
     parser.add_argument(
         "--output", "-o",
-        default=paths_config.get('knowledge_distilled', 'pipeline/knowledge/distilled'),
+        default=paths_config.get('knowledge_distilled', 'generated/distilled'),
         help="Output directory for knowledge documents"
     )
     parser.add_argument(

@@ -24,6 +24,8 @@ from typing import Dict, List, Tuple, Optional
 from dataclasses import dataclass, asdict
 from collections import Counter
 
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))  # src/ on path for utils
 from utils import setup_windows_encoding
 
 setup_windows_encoding()
