@@ -25,7 +25,7 @@ Python 3.8 or later, on Windows, macOS, or Linux. Core packages installed via `p
 
 ## PRISMA 2020 framework
 
-The workflow follows PRISMA 2020 for systematic reviews: the 27-item checklist structures identification, screening, and eligibility assessment; the flow diagram documents the selection process with quantification at each phase; exclusion reasons are specified explicitly. The reporting standard and its AI extensions are detailed in [[standards]]. Under ADR-019 in [[specification]], PRISM is now the binding screening surface through which the review data is carried, with the round-1 corpus replayed and screened in the tool and the published record completing that pass; the staged completion is tracked in [[plan]].
+The workflow follows PRISMA 2020 for systematic reviews: the checklist structures identification, screening, and eligibility assessment; the flow diagram documents the selection process with quantification at each phase; exclusion reasons are specified explicitly. The reporting standard and its AI extensions are detailed in [[standards]]. Under ADR-019 in [[specification]], PRISM is now the binding screening surface through which the review data is carried, with the round-1 corpus replayed and screened in the tool and the published record completing that pass; the staged completion is tracked in [[plan]].
 
 Deviation from standard database searches. Identification uses AI-assisted deep research instead of traditional database searches: four models (ChatGPT, Claude, Gemini, Perplexity) receive identical context-parameterized instructions, supplemented by a limited manual search. The deviation is explicitly documented and justified; the motivation is testing a new technology, not reducing effort. The executed deep-research prompts were not committed at run time and are partly lost; only the parametric template was restored from Git history (see `prompts/CHANGELOG.md`).
 
@@ -54,7 +54,7 @@ Expert track (epistemically authoritative). Researchers from social work, gender
 
 LLM track (two assessment systems). A 5D system (five relevance dimensions, ordinal 0 to 3) for exploratory screening and prioritization, and a 10K system (the ten binary categories, Yes/No) for the benchmark against the human assessment. Both run on Claude Haiku 4.5; the 10K run is the benchmark basis.
 
-Human-LLM benchmark. The benchmark compares the human and LLM assessment and adapts the approach of Woelfle et al. (2024). Reference literature for the human inter-rater baseline: Woelfle et al. (2024, parallel human-AI assessment, human IRR kappa 0.84 PRISMA / 0.77 AMSTAR / 0.29 PRECIS-2), Hanegraaf et al. (2024, human IRR kappa 0.82 abstract / 0.77 full-text), and Sandner et al. (2025, Fleiss kappa 0.39 for novices, human-LLM Cohen's kappa 0.52, the LLM deviating no more than humans). The project's own confusion matrix, base rates, and divergence live in the data (`benchmark/results/`, `docs/data/`) and the Evidence Companion; the primary metrics are the confusion matrix and the base-rate comparison, with Cohen's kappa reported only as a comparison anchor.
+Human-LLM benchmark. The benchmark compares the human and LLM assessment and adapts the approach of Woelfle et al. (2024). Reference literature for the human inter-rater baseline: Woelfle et al. (2024, parallel human-AI assessment), Hanegraaf et al. (2024, human IRR across abstract and full-text screening), and Sandner et al. (2025, the LLM deviating from the human reference no more than human raters deviate from each other). The project's own confusion matrix, base rates, and divergence live in the data (`benchmark/results/`, `docs/data/`) and the Evidence Companion; the primary metrics are the confusion matrix and the base-rate comparison, with Cohen's kappa reported only as a comparison anchor.
 
 Benchmark scripts (in `benchmark/scripts/`): `generate_papers_csv.py` (Zotero JSON to papers_full.csv), `run_llm_assessment.py` (the 10K assessment), `merge_assessments.py` (merge human and LLM by Zotero_Key), `calculate_agreement.py` (Cohen's kappa and confusion matrix), `analyze_disagreements.py` (disagreement identification).
 
@@ -72,7 +72,7 @@ Pipeline workflow, all scripts in `pipeline/scripts/`, full parameters via `--he
 | 6. Knowledge distillation | `distill_knowledge.py` | Markdown | `pipeline/knowledge/distilled/` |
 | 7. Vault building | `scripts/generate_vault_v2.py` | Knowledge docs and assessment CSVs | `vault/` |
 
-PDF acquisition uses four fallback strategies in priority order (Zotero, DOI, Unpaywall, ArXiv). A substantial fraction of PDFs sits behind access barriers, and the acquisition, conversion, and distillation chain loses material at each step. Five conversions failed on corrupt or invalid source files and are documented so the gap is named:
+PDF acquisition uses four fallback strategies in priority order (Zotero, DOI, Unpaywall, ArXiv). A substantial fraction of PDFs sits behind access barriers, and the acquisition, conversion, and distillation chain loses material at each step. Some conversions failed on corrupt or invalid source files and are documented so the gap is named:
 
 - `British_Association_of_Social_Workers_2025_Generat.pdf` (data format error)
 - `Browne_2023_Feminist_AI_Critical_Perspectives_on_Algorithms.pdf` (page dimension error)

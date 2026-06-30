@@ -119,7 +119,7 @@ The fields the disclosure generator (FR-06) needs. Most come from `ai_decision`;
 | prompt reference | `prompt_version` -> `prompts/CHANGELOG.md` | trAIce M6a |
 | decoding parameters | `ai_decision.parameters` | trAIce M6b |
 | confidence threshold | session config | trAIce M7 |
-| human oversight | derived (proportion verified = 100% dual screening) | trAIce M8 |
+| human oversight | derived (proportion verified under dual screening) | trAIce M8 |
 | validation metrics | external benchmark evaluation (the data and the Evidence Companion) | trAIce M9/R2, RAISE Table 1 |
 | limitations | session notes | trAIce D1, RAISE Table 1 |
 | conflicts of interest | session config | RAISE Table 1 |

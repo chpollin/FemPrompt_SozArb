@@ -107,14 +107,14 @@ Validation resolves every "Effekt: to be observed" in [[specification]].
 
 ### P0: Secure and make visible
 
-- Push `feat/prisma-screening-tool`. The entire tool (v1 to v4, 12 commits) currently exists on one disk only.
+- Push `feat/prisma-screening-tool`. The entire tool (v1 to v4) currently exists on one disk only.
 - Merge to `main` once P1 is green. Pages serves `docs/` from `main`, so the merge is the deploy (verify the Pages source setting on merge).
 
 Done when: the branch is on GitHub; after merge, `prisma.html` is live on the Evidence Companion.
 
 ### P1: Test foundation
 
-- Commit the existing jsdom harness (43 behaviour checks plus 11 real-data checks, journal session 12) as `tests/`, with a `package.json` (jsdom as dev dependency) and a README. The no-framework rule stays scoped to `docs/`; the boundary (app vanilla, tests may use dev dependencies) is documented in the repo `CLAUDE.md`.
+- Commit the existing jsdom harness (behaviour checks plus real-data checks, journal session 12) as `tests/`, with a `package.json` (jsdom as dev dependency) and a README. The no-framework rule stays scoped to `docs/`; the boundary (app vanilla, tests may use dev dependencies) is documented in the repo `CLAUDE.md`.
 - All checks pass from a clean clone with one documented command.
 - Add the acceptance checks that exist in [[specification]] but not yet in the harness: export/import round-trip losslessness (FR-08), seed reproduces the canonical benchmark marginals (FR-05), reviewer schema 0.1 to 0.2 migration.
 
@@ -142,18 +142,18 @@ Note (2026-06-21): M3 (ADR-016) realized the layer-source provenance for the alr
 Under ADR-019 PRISM is the binding screening surface and the colleagues screen in the tool. The Excel import bridge stays as an entry and migration seam for a batch captured elsewhere, not as the canonical capture path. P3 therefore builds and validates that seam.
 
 - Import bridge: ingest the established Excel/CSV export (the column shape of `benchmark/data/human_assessment.csv`) as a human decision track; idempotent re-import; the import reports what was added, changed, and skipped.
-- Validation at import, the data-hygiene lesson from R1: controlled-vocabulary check on exclusion reasons (the audit found the out-of-vocabulary value Other and 7 empty cells), category completeness, duplicate Zotero keys; violations become a visible import report, never silent acceptance.
+- Validation at import, the data-hygiene lesson from R1: controlled-vocabulary check on exclusion reasons (the audit found the out-of-vocabulary value Other and empty cells), category completeness, duplicate Zotero keys; violations become a visible import report, never silent acceptance.
 - The per-reviewer files are the persistence for in-tool screening, the binding capture path under ADR-019; a batch captured in Excel enters over the import seam.
 - ADR-019 records this, superseding the colleague-capture rationale in ADR-001 and the simulated Excel-capture path; written into [[specification]].
 
 Done when: an Excel export of the established format imports cleanly, the validation report flags vocabulary violations, and the imported track appears in flow, agreement, and record.
 
-Status (2026-06-21): the pure conversion and validation report (controlled-vocabulary checks on category, decision and exclusion reason, duplicate Zotero keys, Unclear skip, collision guard, idempotent re-import) is now under the headless harness (seven tests, `tests/tests.js`, via `window.__PRISMA_IMPORT_TEST__`). Still unexecuted in a browser: the FileReader flow, the MutationObserver mounting, the File System Access write, and the download path need the browser click-test (P5 S4) before P3 can be marked done. After the P2 connect-target move the bridge must write into the `docs/data/screening/` subpath instead of the handle root.
+Status (2026-06-21): the pure conversion and validation report (controlled-vocabulary checks on category, decision and exclusion reason, duplicate Zotero keys, Unclear skip, collision guard, idempotent re-import) is now under the headless harness (`tests/tests.js`, via `window.__PRISMA_IMPORT_TEST__`). Still unexecuted in a browser: the FileReader flow, the MutationObserver mounting, the File System Access write, and the download path need the browser click-test (P5 S4) before P3 can be marked done. After the P2 connect-target move the bridge must write into the `docs/data/screening/` subpath instead of the handle root.
 
 ### P4: UI completion
 
 - Keyboard-first screening (NFR-06): verify a full paper can be screened mouse-free; visible shortcut hints.
-- Edge and empty states: the 15 papers without any text, boilerplate abstracts, zero-hit searches, very long titles.
+- Edge and empty states: the papers without any text, boilerplate abstracts, zero-hit searches, very long titles.
 - The OKLCH/Plex design system applied consistently to the PRISMA & Report and Daten & Repo surfaces (the screening view already has it).
 - Resolve the [[design]] section 9 questions that survive v4 (chip layout under repetition, responsive three-pane behaviour at laptop widths); record outcomes in [[design]].
 
@@ -221,7 +221,7 @@ Done when: every checklist item points at data or at a named gap.
 - A script builds the full retrospective FlowModel from the actual files (identification, duplicates, screening with the AI/human split, included), not hand-entered; the seed reproduces the canonical benchmark (kappa and confusion matrix as held in the offline benchmark data) as self-test, by a human-checked path.
 - Machine-extracted evidence: the Kategorie-Evidenz quotes from the knowledge documents are imported per paper and category as a separate, labelled provenance class (new ADR; schema field distinct from reviewer evidence; rendered visually distinct; never counted as reviewer Belege).
 
-Status (2026-06-21): the provenance-class half is built and verified (M3, ADR-016). The reading column now splits the served document into a paper layer and a machine-extraction layer (`splitDocLayers`), a Volltext / KI-Extraktion toggle switches between them, and a Beleg pinned from the KI-Extraktion layer carries `origin: ai` and never sets `work.cats`, so AI-sourced text cannot enter the binding decision. Six headless tests cover the split and the binding separation; the boundary lands cleanly on all served documents.
+Status (2026-06-21): the provenance-class half is built and verified (M3, ADR-016). The reading column now splits the served document into a paper layer and a machine-extraction layer (`splitDocLayers`), a Volltext / KI-Extraktion toggle switches between them, and a Beleg pinned from the KI-Extraktion layer carries `origin: ai` and never sets `work.cats`, so AI-sourced text cannot enter the binding decision. Headless tests cover the split and the binding separation; the boundary lands cleanly on all served documents.
 
 Update (2026-06-21, Session 17): the residual pairing discrepancy is resolved (the stray Has_HA flag on `2YS85B49`, no missing human decision). A committed, human-checked replay that re-pairs the raw CSVs and reproduces the canonical matrix, the content-only sensitivity, and that resolution still has to be (re)built; the figures it would assert live in the data (`benchmark/results/`, `docs/data/`), not in this plan. Done since (ADR-018): the machine's per-category assessment is pre-loaded as `origin: ai` Belege (`injectMachineEvidence` from `docs/data/machine_evidence.json`), using the model's per-category reasoning rather than the uncategorized raw `Evidenz` quotes, so no quote-to-category provenance is fabricated; the items are advisory, never bind `work.cats`, and are never written to the reviewer file.
 

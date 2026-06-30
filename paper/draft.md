@@ -130,4 +130,4 @@ Round one has named, unrepairable gaps: no pre-specified protocol, no per-decisi
 - Thomas, J., et al. (2025, rev. 2026). RAISE guidance documents. OSF. DOI: 10.17605/OSF.IO/FWAUD.
 - [PENDING: prior-art tool citations (EPPI-Reviewer, Nested Knowledge, DistillerSR, AIscreenR/Vembye et al.) with the exact references during venue formatting.]
 
-*Updated: 2026-06-09. Draft status: sections 1 to 5, 7 (methods part), 8 to 10 written; sections 5.3, 6, and parts of 7 and 10 are frames pending analysis coding (TP4/TP5); flow figure pending scripted replay. Word count of written prose roughly in the lower half of the 6000 to 8000 corridor, leaving room for the synthesis sections.*
+*Updated: 2026-06-09. Draft status: sections 1 to 5, 7 (methods part), 8 to 10 written; sections 5.3, 6, and parts of 7 and 10 are frames pending analysis coding (TP4/TP5); flow figure pending scripted replay. The written prose sits well inside the target length, leaving room for the synthesis sections.*

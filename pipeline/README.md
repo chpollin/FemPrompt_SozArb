@@ -46,21 +46,14 @@ corpus/zotero_export.json
 pipeline/
 ├── scripts/                # Python-Scripts
 ├── tools/                  # Browser-Tools
-├── pdfs/                   # 257 PDFs
-├── markdown/               # 252 Markdown-Dateien
+├── pdfs/                   # akquirierte PDFs
+├── markdown/               # konvertierte Markdown-Dateien
 ├── markdown_clean/         # Bereinigte Markdowns
-├── knowledge/distilled/    # 249 destillierte Wissensdokumente
+├── knowledge/distilled/    # destillierte Wissensdokumente
 └── validation_reports/     # Validierungsberichte
 ```
 
-## Kosten
-
-| Schritt | Kosten pro Paper |
-|---------|------------------|
-| PDF-Akquise | $0 |
-| Markdown-Konversion | $0 |
-| Knowledge Distillation | ~$0.028 |
-| Vault-Generierung | $0 |
+Die Verlustkette ueber Akquise, Konversion und Distillation sowie die zugehoerigen Zaehlungen liegen in den Daten (`benchmark/results/`, `docs/data/`) und im Evidence Companion, der sie rendert.
 
 ---
 

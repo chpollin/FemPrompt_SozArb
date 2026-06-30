@@ -44,7 +44,7 @@ This document is the substance layer for the **PRISMA screening tool**, a standa
 
 The AI-forward requirements are demoted by ADR-012 and then by ADR-014. As built: FR-03 (blind mode) is removed from the working view, there is no blind/reveal and no blind toggle; FR-05 (agreement metrics) no longer has a surface at all, ADR-014 removed the human-AI comparison view (matrix, kappa, divergence filter, reviewer reconciliation) from the tool entirely. ADR-017 then removed the in-tool kappa computation itself (`computeMatrix`/`cohenKappa`/`kappaLabel` and their tests are gone); agreement is evaluated externally on the benchmark corpus, with the figures in the data (`benchmark/results/`, `docs/data/`) and the Evidence Companion, and the disclosure carries the trAIce M9/R2 item as a reference to that source. FR-10 (live LLM) is not implemented (optional, minimal, deferred). The screening view centers on FR-11 to FR-13 (read, search, pin evidence).
 
-FR-11 to FR-13 acceptance, as built: FR-11 renders `paper.knowledge_doc` (the served distilled knowledge document, see [[data]]) with a built-in Markdown renderer, falling back to the abstract, then to an empty state. FR-12 highlights and steps through in-text matches in the open document and filters the corpus via the prebuilt `docs/data/fulltext_index.json`. FR-13 pins a selected passage or a search hit as `evidence[category] = {term, snippet, ts}` in the reviewer file (schema 0.2), sets the category, and reports an `evidence_count` in the decision log. The behaviour contract is in [[data]] (Evidence behaviour). Note: "full text" here is the served knowledge document, not the raw paper text; reading the raw local full text is a copyright-gated follow-up via the single `fetchPaperText` seam.
+FR-11 to FR-13 acceptance, as built: FR-11 renders `paper.knowledge_doc` (the served distilled knowledge document, see [[data]]) with a built-in Markdown renderer, falling back to the abstract, then to an empty state. FR-12 highlights and steps through in-text matches in the open document and filters the corpus via the prebuilt `docs/data/fulltext_index.json`. FR-13 pins a selected passage or a search hit as `evidence[category] = {term, snippet, ts}` in the reviewer file (schema 0.2), sets the category, and reports an `evidence_count` in the decision log. The behaviour contract is in [[data]] (Evidence behaviour). "Full text" here is the served distilled knowledge document, not the raw paper text (see [[data]]); reading the raw local full text is a copyright-gated follow-up via the single `fetchPaperText` seam.
 
 Acceptance (three-surface IA): the sub-navigation has exactly three entries (Screening, PRISMA & Report, Daten & Repo); the seven v3 surfaces are gone; the flow, the checklist, and the disclosure are reachable from PRISMA & Report, while kappa and the matrix have no surface (ADR-014, they feed only the disclosure line); a persisted v3 surface id is normalised onto the three on load.
 
@@ -92,19 +92,9 @@ Per ADR-012 the seven surfaces collapse into three, AI is strongly reduced, and 
 2. **PRISMA & Report** (the outputs): the PRISMA 2020 flow diagram, the checklist, and the disclosure generator in one place, generated from the screening. ADR-014 removed the agreement matrix and kappa as a surface; they survive only as functions feeding the disclosure line. Subsumes Flow, Checklist, Disclosure.
 3. **Daten & Repo** (sync): File System Access connect (write into the project folder), per-reviewer files, export/import. ADR-014 removed the in-tool Git workflow (versioning is in GitHub Desktop) and the Reviewers reconciliation section.
 
-Each view carries a one-line "what is this, what do I do here" header. The three surfaces are specified screen by screen in [[design]] section 5 (5A to 5D), matching the build. The module descriptions below are the v3 shape, retained for the report and data parts; the Screening Workspace block is superseded by the v4 Screening view and the evidence model in [[data]].
+Each view carries a one-line "what is this, what do I do here" header. The three surfaces are specified screen by screen in [[design]] section 5 (5A to 5D), matching the build.
 
-The modules below are listed in application order: data in, screen, see the picture, report out.
-
-### Screening Workspace
-
-Zweck. The per-paper triage surface where an expert reads a study and records a decision.
-
-Datengrundlage. The `ScreeningRecord` per paper (see [[data]]): metadata, abstract, optional Knowledge Document, optional AI proposal.
-
-Interaktion. Read title/abstract (and Knowledge Document tab if present), toggle the ten categories, confirm the auto-derived include/exclude, pick an exclusion reason on exclude. In blind mode the AI proposal stays hidden until the decision is saved, then divergence is shown.
-
-Grenzen. It does not fetch papers, run a full-text search, or replace the expert's reading. One reviewer at a time; multi-reviewer reconciliation is via export/import, not concurrent editing.
+The modules below describe the report and data parts (PRISMA Flow, Checklist, Disclosure, Data I/O) of the three-surface IA in application order. The Screening view is specified by FR-11 to FR-13 and the evidence model in [[data]]; its old v3 "Screening Workspace" and "Agreement Panel" modules were superseded by ADR-012/014 and survive only in the ADR log below.
 
 ### PRISMA Flow Diagram
 
@@ -116,21 +106,9 @@ Interaktion. Live redraw as decisions accrue; separate AI-decision and human-dec
 
 Grenzen. It visualises the recorded process; it does not infer counts the data does not support, and it follows the PRISMA 2020 three-phase structure (Identification, Screening, Included), not the 2009 four-phase one.
 
-### Agreement Panel (removed by ADR-014)
-
-This module is no longer a surface in the tool. ADR-014 removed the human-AI comparison view (confusion matrix, decision and per-category kappa, base-rate comparison, cell-to-workspace filtering) in favour of synthesis over comparison. The underlying functions remain only to feed the disclosure line (PRISMA-trAIce M9); the divergence finding itself lives in the paper and the Evidence Companion. The block below is kept as the record of what the surface was.
-
-Zweck (historisch). Make the human-AI divergence measurable in place (this was the PRISMA-trAIce M9/R2 performance evaluation).
-
-Datengrundlage. Paired human and AI decisions across the session.
-
-Interaktion. Confusion matrix, decision and per-category kappa, base-rate comparison; clicking a cell filtered the workspace to those papers.
-
-Grenzen. Kappa was reported as a comparison anchor, not a quality verdict; the panel described divergence, it did not adjudicate it.
-
 ### Checklist Tracker
 
-Zweck. Track reporting completeness against PRISMA 2020 (27 items) and PRISMA-trAIce (17 items).
+Zweck. Track reporting completeness against PRISMA 2020 and PRISMA-trAIce.
 
 Datengrundlage. A per-item status/notes store plus auto-derived hints (e.g. R1 satisfied once the split diagram has counts).
 
@@ -142,7 +120,7 @@ Grenzen. It tracks reporting completeness, not methodological quality (AMSTAR 2 
 
 Zweck. Emit the AI-disclosure text and the assembled PRISMA record for a paper or report.
 
-Datengrundlage. `DisclosureMetadata` plus the flow and agreement results (see [[data]]).
+Datengrundlage. `DisclosureMetadata` plus the flow results (see [[data]]).
 
 Interaktion. Generate a Markdown disclosure section (PRISMA-trAIce M2/M3/M6/M8/M9 + RAISE Table 1), preview, copy, export; bundle with the SVG flow diagram and the decision-log CSV.
 

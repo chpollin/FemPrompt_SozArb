@@ -68,7 +68,7 @@ The benchmark (the human-LLM divergence and its decomposition, used as a motivat
 
 | Directory | Contents | Edit? |
 |-----------|----------|-------|
-| `knowledge/` | **Single source of truth** for all project documentation (12 docs, see `knowledge/INDEX.md`) | Yes, with care |
+| `knowledge/` | **Single source of truth** for all project documentation (see `knowledge/INDEX.md`) | Yes, with care |
 | `pipeline/knowledge/distilled/` | Distilled knowledge documents | Read-only |
 | `pipeline/knowledge/_stage1_json/`, `_verification/` | Stage-1 JSON extractions, verification reports | Read-only |
 | `vault/` | Obsidian Vault v2 (Papers, Concepts, Divergences, Pipeline) | Generated |

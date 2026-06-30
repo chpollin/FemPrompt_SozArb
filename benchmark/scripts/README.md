@@ -69,6 +69,6 @@ python benchmark/scripts/analyze_disagreements.py \
 Assessment-Schema: `benchmark/config/categories.yaml`
 
 Enthält:
-- 10 Kategorien (4 Technik, 6 Sozial)
+- die zehn Kategorien (Technik und Sozial)
 - Definitionen und Beispiele
 - Inklusions-Logik
