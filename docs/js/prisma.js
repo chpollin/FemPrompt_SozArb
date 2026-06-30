@@ -857,8 +857,8 @@ function assessInnerHtml(p, dec) {
     let seed = seedDecision(p);
     if (seed) h += '<div class="pt-seed-ref">Seed-Bewertung (Expert:innen): <strong class="pt-dec-' +
         seed.decision.toLowerCase() + '">' + seed.decision + '</strong>. Du entscheidest unabhaengig.</div>';
-    h += dimHtml('Technik', TECH_CATS, cats, false);
-    h += dimHtml('Sozial', SOCIAL_CATS, cats, false);
+    h += dimHtml('Gegenstand', TECH_CATS, cats, false);
+    h += dimHtml('Perspektive', SOCIAL_CATS, cats, false);
     h += evidenceListHtml(work.evidence, false);
     h += '<div class="pt-logic" id="pt-logic">' + logicInner(cats, work.override) + '</div>';
     const showReason = finalDecisionOf(cats, work.override) === 'Exclude';
@@ -883,8 +883,8 @@ function assessLockedHtml(p, dec) {
         '<span class="pt-spacer"></span><span class="pt-pill pt-pill-' + (dec.decision === 'Include' ? 'include' : 'exclude') + ' pt-pill-lg">' + dec.decision + '</span></div>';
     h += '<div class="pt-rail-body">';
     if (dec.decision === 'Exclude' && dec.reason) h += '<div class="pt-seed-ref">Ausschlussgrund: <strong>' + EC.escapeHtml(dec.reason.replace(/_/g, ' ')) + '</strong></div>';
-    h += dimHtml('Technik', TECH_CATS, cats, true);
-    h += dimHtml('Sozial', SOCIAL_CATS, cats, true);
+    h += dimHtml('Gegenstand', TECH_CATS, cats, true);
+    h += dimHtml('Perspektive', SOCIAL_CATS, cats, true);
     h += evidenceListHtml(dec.evidence || {}, true);
     h += '<div class="pt-actions">';
     h += '<button class="pt-revise-btn" id="pt-revise">Ueberarbeiten</button><span class="pt-spacer"></span>';
@@ -939,9 +939,9 @@ function logicInner(cats, override) {
     let soc = SOCIAL_CATS.some(function(c) { return cats[c]; });
     const derived = deriveDecision(cats);
     let h = '<div class="pt-logic-row">';
-    h += '<span class="pt-logic-term' + (tech ? ' on' : '') + '">&ge;1 Technik</span>';
+    h += '<span class="pt-logic-term' + (tech ? ' on' : '') + '">&ge;1 Gegenstand</span>';
     h += '<span class="pt-logic-and mono">UND</span>';
-    h += '<span class="pt-logic-term' + (soc ? ' on' : '') + '">&ge;1 Sozial</span>';
+    h += '<span class="pt-logic-term' + (soc ? ' on' : '') + '">&ge;1 Perspektive</span>';
     h += '<span class="pt-logic-arrow">&rarr;</span>';
     h += '<span class="pt-tag-mono">abgeleitet</span>';
     h += '<span class="pt-pill pt-pill-' + (derived === 'Include' ? 'include' : 'exclude') + '">' + derived + '</span>';
