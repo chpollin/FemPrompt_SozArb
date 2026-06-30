@@ -7,7 +7,7 @@ status: complete
 language: en
 version: "0.2"
 created: 2026-06-09
-updated: 2026-06-29
+updated: 2026-06-30
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 4.8)
 method:
@@ -157,6 +157,8 @@ The shipped tool persists not as one session blob but as **one JSON per reviewer
       "categories": { "Gender": true, "Soziale_Arbeit": true },
       "decision": "Include",
       "reason": null,
+      "override": false,
+      "override_reason": null,
       "evidence": {
         "Gender": [
           { "term": "gendered scripts", "snippet": "...agents reproduce gendered scripts of care...", "ts": "..." }
@@ -169,6 +171,8 @@ The shipped tool persists not as one session blob but as **one JSON per reviewer
 ```
 
 The `evidence` map (added in schema 0.2, FR-13) is the v4 core: per category, a list of pinned Belege, each a `term` plus the surrounding `snippet` taken from the read document at screening time. Backward compatible: a 0.1 record without `evidence` loads as a record with no evidence. A Beleg taken from the verbatim paper layer is human-sourced (`origin: human`) and is the reviewer's binding justification; a Beleg taken from the machine-extraction layer is marked `origin: ai` and stays advisory (ADR-016).
+
+The `decision` is the inclusion rule's default (at least one Gegenstand and at least one Perspektive yields Include); the human binds and may override it either way. An override to Include records a free-text `override_reason`, so the deviation from the rule is documented (O2, ADR-023; RAISE P3); an override to Exclude carries the exclusion `reason`. A category toggle that flips the derivation clears a now-stale override.
 
 Aggregation: the tool loads every `*.json` in the folder into `reviewers[key]`, plus the built-in `seed` reviewer (the existing expert assessment, `paper.human`). A **perspective** selector chooses whose decisions count as the human side in the Flow (default `seed`, which reproduces the benchmark). ADR-014 removed the **Reviewers** surface (per-reviewer n / include / exclude and kappa against the AI); that aggregation now feeds only the disclosure line. The AI proposal is always `paper.llm` from the corpus, never stored in a reviewer file.
 

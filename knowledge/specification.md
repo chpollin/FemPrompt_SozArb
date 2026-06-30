@@ -7,7 +7,7 @@ status: complete
 language: en
 version: "0.2"
 created: 2026-06-09
-updated: 2026-06-29
+updated: 2026-06-30
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 4.8)
 method:
@@ -356,7 +356,7 @@ Wahl. The machine-evidence preload is removed in full: `injectMachineEvidence`, 
 
 Begründung. The collapsed suggestion already carries the model's decision and reasoning, so removing the per-category injection loses no information; it removes a false per-category structure and stops include/exclude reasoning being laundered into the evidence panel. Deletion beats a marked-but-misleading display.
 
-Effekt. Implementiert (`docs/js/prisma.js`: loadMachineEvidence, injectMachineEvidence, die machineEvidence-Variablen, der Init-Vorlauf, die renderScreening-Injektion und die Test-Hook-Nähte entfernt; die ADR-018-Injection-Test entfernt; evidenceCount/commit-Kommentare auf ADR-016 umgestellt). Harness 64/64. Supersedes ADR-018. Der Generator `src/publish/build_screening_index.py` build_machine_evidence und `docs/data/machine_evidence.json` sind damit ungenutzt und können in einem späteren Aufräumschritt entfallen. Die echten `## Kategorie-Evidenz`-Zitate bleiben in der KI-Extraktions-Leseschicht (ADR-016) verfügbar; sie als reale Pro-Kategorie-Provenienzklasse zu importieren (das ursprüngliche R2-Ziel) bleibt offen und bräuchte eine verifizierte Zitat-zu-Kategorie-Zuordnung, die die Daten noch nicht tragen.
+Effekt. Implementiert (`docs/js/prisma.js`: loadMachineEvidence, injectMachineEvidence, die machineEvidence-Variablen, der Init-Vorlauf, die renderScreening-Injektion und die Test-Hook-Nähte entfernt; die ADR-018-Injection-Test entfernt; evidenceCount/commit-Kommentare auf ADR-016 umgestellt). Harness 64/64. Supersedes ADR-018. Der Generator-Teil `src/publish/build_screening_index.py` build_machine_evidence und `docs/data/machine_evidence.json` wurden damit ungenutzt und am 2026-06-30 im Audit-getriebenen Cleanup entfernt. Die echten `## Kategorie-Evidenz`-Zitate bleiben in der KI-Extraktions-Leseschicht (ADR-016) verfügbar; sie als reale Pro-Kategorie-Provenienzklasse zu importieren (das ursprüngliche R2-Ziel) bleibt offen und bräuchte eine verifizierte Zitat-zu-Kategorie-Zuordnung, die die Daten noch nicht tragen.
 
 ### ADR-023 Reason-gated override to Include; the rule derives, the human binds (resolves O2)
 

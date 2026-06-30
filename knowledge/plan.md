@@ -232,7 +232,7 @@ Decided and unblocked first, gated cuts after their decision resolves. Each keep
 2. **Git provenance** (done 2026-06-30, O5 resolved: one file per reviewer) -- ADR-021. Drop the identity form and the perspective switcher; write the decisions file deterministically (stable order, one paper block); generate a session commit message. Files: `docs/js/prisma.js`, a deterministic serializer with its own test.
 3. **Accessibility and keyboard flow** (done 2026-06-30) -- P4 NFR-06. Focus restoration after a paper switch, visible focus rings on inputs and controls, `aria-pressed` on category and exclusion chips, dialog semantics with focus move, Escape, and Tab trap for the pin menu, text equivalent for the colour-only status dot, slug and definition out of the chip's accessible name, keyboard-focus tooltips, darkened muted-text tokens for contrast.
 4. **Machine evidence** (done 2026-06-30) -- ADR-022 supersedes ADR-018: removed from the evidence list; the model's per-paper reasoning stays only in the collapsed KI-Vorschlag.
-5. **Inclusion logic** (gated O2, open). A reason-gated override toward Include, or the AND-rule shown as a derivation aid. The only open operator decision; empirically reproduced at the live tool but not yet decided.
+5. **Inclusion logic** (done 2026-06-30) -- ADR-023 resolves O2: a reason-gated override to Include. The AND-rule derives a default; the human binds and may override it either way, an override to Include recording a free-text justification (RAISE P3). Grounded in [[standards]] and the RAISE primary source.
 6. **Feminist language** (done 2026-06-30) -- O3: Technik/Sozial to Gegenstand/Perspektive on the work surface; the internal constants stay.
 7. **Text substrate** (partial 2026-06-30) -- O4/P2/ADR-013: the tool opens on the first screenable paper (not boilerplate) and a textless paper shows a prominent notice instead of going silent; loading raw local full text remains the larger P2/ADR-013 work.
 
@@ -241,12 +241,12 @@ Decided and unblocked first, gated cuts after their decision resolves. Each keep
 | ID | Question | Status |
 |---|---|---|
 | O1 | Machine evidence: remove from the evidence list, or replace with verbatim category quotes | resolved: removed (ADR-022, cut 4 done) |
-| O2 | Inclusion AND-rule: keep rigid, or reason-gated override to Include | **open, operator decision** (cut 5) |
+| O2 | Inclusion AND-rule: keep rigid, or reason-gated override to Include | resolved: reason-gated override to Include (ADR-023, cut 5 done) |
 | O3 | Technik/Sozial to Gegenstand/Perspektive | resolved: renamed (cut 6 done) |
 | O4 | Thin-text papers: block, warn, or load raw local text | partial: warn + screenable entry done; raw local text is P2 (cut 7) |
 | O5 | Decisions file: one shared file, or one per person | resolved: one per reviewer (ADR-021, cut 2 done) |
 
-Cuts 1 to 4, 6, and the warn-and-entry half of 7 are built and on the branch; only O2 (cut 5) waits on the operator, decided when reached, not pre-empted.
+All seven cuts are built and on the branch: cuts 1 to 6 complete (O1, O3, O5 resolved; O2 resolved by ADR-023) and the warn-and-entry half of 7 done, the raw-local-text half remaining as the larger P2/ADR-013 work. The Stage A redesign is closed; no gate waits on the operator.
 
 ## Stage R: The first-round pass through PRISM and its evaluation
 
@@ -282,7 +282,7 @@ Status (2026-06-30): the per-item map is drafted as [[conformance-map]], the ful
 
 Status (2026-06-21): the provenance-class half is built and verified (M3, ADR-016). The reading column now splits the served document into a paper layer and a machine-extraction layer (`splitDocLayers`), a Volltext / KI-Extraktion toggle switches between them, and a Beleg pinned from the KI-Extraktion layer carries `origin: ai` and never sets `work.cats`, so AI-sourced text cannot enter the binding decision. Headless tests cover the split and the binding separation; the boundary lands cleanly on all served documents.
 
-Update (2026-06-21, Session 17): the residual pairing discrepancy is resolved (the stray Has_HA flag on `2YS85B49`, no missing human decision). A committed, human-checked replay that re-pairs the raw CSVs and reproduces the canonical matrix, the content-only sensitivity, and that resolution still has to be (re)built; the figures it would assert live in the data (`generated/benchmark-results/`, `docs/data/`), not in this plan. Done since (ADR-018): the machine's per-category assessment is pre-loaded as `origin: ai` Belege (`injectMachineEvidence` from `docs/data/machine_evidence.json`), using the model's per-category reasoning rather than the uncategorized raw `Evidenz` quotes, so no quote-to-category provenance is fabricated; the items are advisory, never bind `work.cats`, and are never written to the reviewer file.
+Update (2026-06-21, Session 17): the residual pairing discrepancy is resolved (the stray Has_HA flag on `2YS85B49`, no missing human decision). A committed, human-checked replay that re-pairs the raw CSVs and reproduces the canonical matrix, the content-only sensitivity, and that resolution still has to be (re)built; the figures it would assert live in the data (`generated/benchmark-results/`, `docs/data/`), not in this plan. Reversed since (ADR-022, 2026-06-30): the ADR-018 machine-evidence preload (`injectMachineEvidence` from `docs/data/machine_evidence.json`) was removed; the loaded snippets were whole-paper reasoning duplicated verbatim across categories, not per-category quotes, so the per-category structure was fabricated. The machine assessment stays in the collapsed KI-Vorschlag, and the R2 goal of a real per-category provenance class still needs a verified quote-to-category mapping the data does not yet carry. The generator part and `machine_evidence.json` were deleted in the same audit-driven cleanup.
 
 Done when: the report surface shows the complete retrospective review from data alone.
 
