@@ -181,6 +181,7 @@ class PipelineValidator:
         valid = 0
         invalid_yaml = 0
         missing_sections = 0
+        corrupt_titles = []
         required_sections = ["Kernbefund", "Forschungsfrage", "Methodik"]
 
         for doc in knowledge_docs:
@@ -203,6 +204,17 @@ class PipelineValidator:
                 if f"{field}:" not in frontmatter:
                     self.warn(4, f"{doc.name}: missing frontmatter field '{field}'")
 
+            # Guard: a distillate whose title never extracted ("nicht angegeben"
+            # or empty) is corrupt and must not flow into the vault and Companion
+            # as a phantom paper. The generators glob *.md indiscriminately, so
+            # this is the chokepoint that catches the class.
+            for fm_line in frontmatter.splitlines():
+                if fm_line.strip().lower().startswith("title:"):
+                    value = fm_line.split(":", 1)[1].strip().strip('"').strip("'").lower()
+                    if not value or value in ("nicht angegeben", "not specified", "n/a"):
+                        corrupt_titles.append(doc.name)
+                    break
+
             # Check required sections
             body = parts[2]
             for section in required_sections:
@@ -218,6 +230,25 @@ class PipelineValidator:
             self.error(4, f"{invalid_yaml} knowledge docs with invalid YAML frontmatter")
         if missing_sections > 0:
             self.warn(4, f"{missing_sections} knowledge docs missing required sections")
+        if corrupt_titles:
+            self.error(4, f"{len(corrupt_titles)} distilled docs with an empty or 'nicht angegeben' title (corrupt extraction, must not enter the vault): {', '.join(sorted(corrupt_titles)[:10])}")
+
+        # Guard: a short-name distillate that shadows a long descriptive-name
+        # sibling for the same Author_Year is a legacy duplicate (both become
+        # papers because the generators glob *.md). Flag for curation, do not
+        # auto-resolve, since some pairs are genuinely different papers.
+        stems = sorted(k.stem for k in knowledge_docs)
+        by_prefix = {}
+        for s in stems:
+            prefix = "_".join(s.split("_")[:2])
+            by_prefix.setdefault(prefix, []).append(s)
+        shadow = [
+            min(g, key=len)
+            for g in by_prefix.values()
+            if any(len(s.split("_")) <= 3 for s in g) and any(len(s.split("_")) > 3 for s in g)
+        ]
+        if shadow:
+            self.warn(4, f"{len(shadow)} short-name distillates shadow a long-name sibling (legacy duplicates, curate before regeneration): {', '.join(sorted(shadow)[:10])}")
 
         # Cross-check: knowledge docs should have corresponding markdown_clean
         if clean_dir.exists():
