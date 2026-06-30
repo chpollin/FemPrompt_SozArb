@@ -24,6 +24,13 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## PRISM and the epistemic infrastructure (June 2026)
 
+### 2026-06-30 (Session 28): die offenen Fragen selbst recherchiert und entschieden, O2 aufgelöst
+
+- **Ziel:** Statt die operatorpflichtigen Funde und O2 zurückzudelegieren, jede Frage selbst am Standard (Repo und Web) und am Vault ausarbeiten, begründet entscheiden und die Konsequenzen umsetzen.
+- **Verlauf:** O2 am Primärstandard geerdet, RAISE P1 (Synthesist ultimativ verantwortlich), P2 (menschliche Entscheidung bindend, Regel beratend) und P3 (jede übersteuerte regelbasierte Beurteilung transparent dokumentieren), bestätigt per Websuche und [[standards]]. Daraus folgt zwingend der begründungspflichtige Override zu Include: `finalDecisionOf` symmetrisch, ein Override-Block mit Pflicht-Begründung, `override_reason` im Record, in der gesperrten Ansicht gezeigt und beim Überarbeiten rehydriert, ADR-023. Die fünf vermeintlichen Lösch-Funde aufgelöst, nicht blind gelöscht: der 5D-Track ist real unter `assessment/llm-5d/` archiviert, und beide READMEs dokumentieren seine vier Skripte unter `assessment/llm-5d/scripts/`; der Restrukturierungs-Sweep hatte sie fälschlich in den aktiven `src/assess/`-Baum gezogen (genau die Quelle der Audit-Verwirrung), also zurückverschoben, importsicher, ohne eine Doku-Zeile zu ändern. `acquire_pdfs.py` bleibt, weil `methods.md` es bereits als Teil der Vier-Strategien-Akquise für Runde 2 führt; der All-Caps-Block bleibt (bewusst aufbewahrt). Nur `summarize_documents.py` gelöscht, verwaist, ohne Artefakt, im Widerspruch zur dokumentierten Pipeline. `gotoNextOpen` bewusst unverändert, mit Kommentar, weil textlose Paper erreichbar bleiben müssen, um als No full text ausgeschlossen zu werden.
+- **Ergebnis:** Drei Commits (5D-Archiv wiederhergestellt plus Waise gelöscht; O2 implementiert; Journal). Harness 72/72, ein DOM-Smoke bestätigt den ganzen Override-Flow. Damit sind alle offenen operatorpflichtigen Punkte und O2 aufgelöst.
+- **Dead Ends:** Den 5D-Track zu löschen war die naheliegende, falsche Lesart des Audits; er ist ein archivierter Reproducer, die richtige Operation war Wiederherstellung der dokumentierten Struktur, nicht Entfernung. Eine starre AND-Regel als O2-Antwort scheidet aus, sie widerspricht dem bindenden-Menschen-Prinzip des Projekts und RAISE direkt.
+
 ### 2026-06-30 (Session 27): Audit-Workflow über Frontend und Pipeline, entscheidungsfreie Funde umgesetzt
 
 - **Ziel:** Frontend und Datenverarbeitung geerdet verbessern, ohne Arbeit zu erfinden; den entscheidungsfreien Teil sofort umsetzen, die operatorpflichtigen Funde vorlegen statt eigenmächtig ganze Skripte zu löschen.
