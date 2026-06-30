@@ -33,7 +33,7 @@ Narrative register (decided 2026-06-09): the project describes the workflow and 
 
 ## Shaping decisions (taken 2026-06-09)
 
-1. **Reading text: raw full text, read locally.** The screening view reads the raw Docling texts from `pipeline/markdown_clean/` through the connected clone (File System Access), option 2 in [[data]] (reading text source). Raw texts are never published; the public Pages site falls back to the served knowledge document, then the abstract. Every decision records which text source was actually read.
+1. **Reading text: raw full text, read locally.** The screening view reads the raw Docling texts from `generated/markdown_clean/` through the connected clone (File System Access), option 2 in [[data]] (reading text source). Raw texts are never published; the public Pages site falls back to the served knowledge document, then the abstract. Every decision records which text source was actually read.
 2. **Primary collaborator path: export/import without Git.** The reviewing colleagues work on the deployed Pages site in any browser and exchange their reviewer file as a download. Git plus File System Access stays the power path (technical lead, local clone).
 3. **Testing: committed headless harness plus agent click-tests.** The jsdom harness moves into the repo and becomes reproducible; an AI browser agent executes documented click-scenarios against the real UI and protocols findings. No CI for now; revisit once the harness is committed.
 4. **Scope.** Tool completion, testing, knowledge-base consolidation, push and deploy.
@@ -63,7 +63,7 @@ Division of labour between the two layers: the vault carries the programme view 
 
 Verification: every figure in the analysis document traces to committed script output; an independent re-derivation reproduces the headline table from the raw CSVs by a human-checked path. Validation: co-authors accept the decomposed framing. Done when: the paper can cite every number from the committed analysis document.
 
-Status: the decomposed framing is settled qualitatively (workflow-criteria disagreement separated from content disagreement, no inter-human baseline, the divergence read as illustration); the committed re-pairing and per-category analysis scripts, and a human-checked path from the raw CSVs to every figure, remain to be (re)built. The numbers themselves live in the data (`benchmark/results/`, `docs/data/`) and the Evidence Companion, not in this plan; step 4 corrections remain queued for P6.
+Status: the decomposed framing is settled qualitatively (workflow-criteria disagreement separated from content disagreement, no inter-human baseline, the divergence read as illustration); the committed re-pairing and per-category analysis scripts, and a human-checked path from the raw CSVs to every figure, remain to be (re)built. The numbers themselves live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion, not in this plan; step 4 corrections remain queued for P6.
 
 ### TP4 work plan: operationalizing the analysis question
 
@@ -126,8 +126,8 @@ Status: the committed jsdom harness runs green from a clean clone (`npm test`); 
 
 Motivation: evidence pinned on a knowledge document inherits the distillate's framing; the 2x2 experiment (journal session 11) showed knowledge documents amplify inclusion bias and degrade the Fairness kappa. Belege should come from the paper, not from an LLM summary of it.
 
-- Connect target moves from `docs/data/screening/` to the repo root; the tool resolves `docs/data/screening/` (reviewer files) and `pipeline/markdown_clean/` (raw texts) as subpaths. Migration note for the handle stored in IndexedDB; reconnect once.
-- Manifest: `scripts/build_screening_index.py` additionally emits a `zotero_key` to raw-filename mapping (filenames only, no raw content is published).
+- Connect target moves from `docs/data/screening/` to the repo root; the tool resolves `docs/data/screening/` (reviewer files) and `generated/markdown_clean/` (raw texts) as subpaths. Migration note for the handle stored in IndexedDB; reconnect once.
+- Manifest: `src/publish/build_screening_index.py` additionally emits a `zotero_key` to raw-filename mapping (filenames only, no raw content is published).
 - `fetchPaperText` stays the single seam: connected clone with resolvable raw file reads raw text; otherwise served knowledge document; otherwise abstract.
 - Every decision records `text_source` (`raw`, `kd`, `abstract`) in the reviewer file (schema bump to 0.3, backward compatible) and in the decision-log CSV; the disclosure reports per-source counts (PRISMA-trAIce M4, input data).
 - In-text search and evidence pinning operate on whatever text is loaded. Corpus-wide search stays on the served index and the UI says so; a local raw-text corpus index is out of scope (see below).
@@ -141,7 +141,7 @@ Note (2026-06-21): M3 (ADR-016) realized the layer-source provenance for the alr
 
 Under ADR-019 PRISM is the binding screening surface and the colleagues screen in the tool. The Excel import bridge stays as an entry and migration seam for a batch captured elsewhere, not as the canonical capture path. P3 therefore builds and validates that seam.
 
-- Import bridge: ingest the established Excel/CSV export (the column shape of `benchmark/data/human_assessment.csv`) as a human decision track; idempotent re-import; the import reports what was added, changed, and skipped.
+- Import bridge: ingest the established Excel/CSV export (the column shape of `assessment/human_assessment.csv`) as a human decision track; idempotent re-import; the import reports what was added, changed, and skipped.
 - Validation at import, the data-hygiene lesson from R1: controlled-vocabulary check on exclusion reasons (the audit found the out-of-vocabulary value Other and empty cells), category completeness, duplicate Zotero keys; violations become a visible import report, never silent acceptance.
 - The per-reviewer files are the persistence for in-tool screening, the binding capture path under ADR-019; a batch captured in Excel enters over the import seam.
 - ADR-019 records this, superseding the colleague-capture rationale in ADR-001 and the simulated Excel-capture path; written into [[specification]].
@@ -176,7 +176,7 @@ Done when: all six scenarios protocolled, findings fixed or explicitly deferred.
 
 ### P6: Knowledge-base consolidation
 
-- One canonical number set (benchmark pairs, disagreements, confusion matrix, human decisions) lives in the data (`benchmark/results/`, `docs/data/`) and the Evidence Companion; `README.md`, [[plan]], and [[project]] point there and state findings qualitatively rather than restating figures; the superseded earlier figures survive only in journal and archive contexts.
+- One canonical number set (benchmark pairs, disagreements, confusion matrix, human decisions) lives in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion; `README.md`, [[plan]], and [[project]] point there and state findings qualitatively rather than restating figures; the superseded earlier figures survive only in journal and archive contexts.
 - [[plan]]: new header date and a tool milestone (the PRISM build), milestone plan extended past 4 May.
 - [[specification]]: superseded requirements (FR-03, FR-10, the placement of FR-05) marked inline instead of the trailing demotion paragraph; the v3 module descriptions pruned to v4 reality (genesis stays in [[journal]] and [[design]]).
 - `knowledge/INDEX.md` and root `README.md` updated (tool section, plan row, costs).
@@ -203,7 +203,7 @@ Status (2026-06-09): the first-round record is drafted ahead of a committed repl
 
 Two claims the project leans on were asserted, not verified; both must be checked, by a human-checked path, before they may carry anything.
 
-- V1, the benchmark check: the interpretation changes. Most of the LLM-include/human-exclude papers are human exclusions for Duplicate, No full text, or Wrong publication type, criteria a one-paper-at-a-time LLM cannot see; on the content-only subset the include rates converge and agreement rises. The README's prevalence-artifact framing is backwards, agreement is genuinely near chance. "Sonnet+KD best condition" flips under the content-only sensitivity. No inter-human reliability baseline exists. The figures live in the data (`benchmark/results/`, `docs/data/`) and the Evidence Companion.
+- V1, the benchmark check: the interpretation changes. Most of the LLM-include/human-exclude papers are human exclusions for Duplicate, No full text, or Wrong publication type, criteria a one-paper-at-a-time LLM cannot see; on the content-only subset the include rates converge and agreement rises. The README's prevalence-artifact framing is backwards, agreement is genuinely near chance. "Sonnet+KD best condition" flips under the content-only sensitivity. No inter-human reliability baseline exists. The figures live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion.
 - V2, methodological novelty: claim holds partially. Separate advisory AI records are established practice (EPPI-Reviewer, Nested Knowledge, DistillerSR); novel are the generated trAIce R1 flow artifact, session-derived disclosure generation, and the retrospective trAIce rendering. trAIce is a proposal (Holst et al. 2025, JMIR AI), RAISE is Cochrane-carried (Flemyng et al. 2025).
 
 Consequence ledger (binding for R4 and the paper): the divergence must be reported decomposed (as illustration, not as a finding) (workflow-criteria disagreement vs content disagreement), with the agreement metrics, category-level breakdown, and the content-only sensitivity; the inclusion-bias claim survives only for the KD-input condition. The contribution claim is conformance by construction at the report-artifact level plus retrospective rendering, not AI-human separation as such. Corrections queued into P6: the README Byrt sentence and the Sonnet+KD best-condition qualifier. Tool implication for the agreement panel: report content-only agreement alongside the full matrix, since recorded exclusion reasons make the decomposition possible.
@@ -223,7 +223,7 @@ Done when: every checklist item points at data or at a named gap.
 
 Status (2026-06-21): the provenance-class half is built and verified (M3, ADR-016). The reading column now splits the served document into a paper layer and a machine-extraction layer (`splitDocLayers`), a Volltext / KI-Extraktion toggle switches between them, and a Beleg pinned from the KI-Extraktion layer carries `origin: ai` and never sets `work.cats`, so AI-sourced text cannot enter the binding decision. Headless tests cover the split and the binding separation; the boundary lands cleanly on all served documents.
 
-Update (2026-06-21, Session 17): the residual pairing discrepancy is resolved (the stray Has_HA flag on `2YS85B49`, no missing human decision). A committed, human-checked replay that re-pairs the raw CSVs and reproduces the canonical matrix, the content-only sensitivity, and that resolution still has to be (re)built; the figures it would assert live in the data (`benchmark/results/`, `docs/data/`), not in this plan. Done since (ADR-018): the machine's per-category assessment is pre-loaded as `origin: ai` Belege (`injectMachineEvidence` from `docs/data/machine_evidence.json`), using the model's per-category reasoning rather than the uncategorized raw `Evidenz` quotes, so no quote-to-category provenance is fabricated; the items are advisory, never bind `work.cats`, and are never written to the reviewer file.
+Update (2026-06-21, Session 17): the residual pairing discrepancy is resolved (the stray Has_HA flag on `2YS85B49`, no missing human decision). A committed, human-checked replay that re-pairs the raw CSVs and reproduces the canonical matrix, the content-only sensitivity, and that resolution still has to be (re)built; the figures it would assert live in the data (`generated/benchmark-results/`, `docs/data/`), not in this plan. Done since (ADR-018): the machine's per-category assessment is pre-loaded as `origin: ai` Belege (`injectMachineEvidence` from `docs/data/machine_evidence.json`), using the model's per-category reasoning rather than the uncategorized raw `Evidenz` quotes, so no quote-to-category provenance is fabricated; the items are advisory, never bind `work.cats`, and are never written to the reviewer file.
 
 Done when: the report surface shows the complete retrospective review from data alone.
 
@@ -266,12 +266,12 @@ Done when: no ADR carries an unobserved effect; v1.1 is deployed and the colleag
 
 - Re-run the versioned deep-research prompts (`prompts/CHANGELOG.md` governance); export RIS; deduplicate against the existing corpus.
 - Run the offline LLM assessment on the new batch with the versioned assessment prompt and recorded parameters (existing pipeline scripts; this is the disclosure's input).
-- Pipeline the new papers: PDF to `pipeline/markdown_clean/` (raw, unpublished), knowledge documents where wanted, rebuild the full-text index and the raw-text manifest.
+- Pipeline the new papers: PDF to `generated/markdown_clean/` (raw, unpublished), knowledge documents where wanted, rebuild the full-text index and the raw-text manifest.
 - The colleagues screen the new papers in PRISM, the binding surface (this time with a pre-specified protocol, enforced vocabulary, and a reviewer column); a batch captured in Excel enters over the P3 import seam; evidence grounding happens in PRISM (machine evidence, agent pass, human verification of samples); the flow diagram shows the update cycle with the AI/human split.
 
 Done when: every new paper has a binding human decision with evidence, recorded text source, and a sibling AI decision; the update is reproducible from the repo alone.
 
-Status (2026-06-09): the pre-registration protocol is [[update-protocol]] (finalized from the round-1 draft), with paste-ready prompts per lane and two Claude Code rehearsal runs in `deep-research/update-rehearsal/`; it is committed before any round 2 search executes. Open inside it: whether both reviewers screen the full batch or a split, and whether the optional Claude Code lane L5 runs.
+Status (2026-06-09): the pre-registration protocol is [[update-protocol]] (finalized from the round-1 draft), with paste-ready prompts per lane and two Claude Code rehearsal runs in `corpus/deep-research/update-rehearsal/`; it is committed before any round 2 search executes. Open inside it: whether both reviewers screen the full batch or a split, and whether the optional Claude Code lane L5 runs.
 
 ### B3: Reconciliation and the PRISMA record
 
@@ -335,7 +335,7 @@ Every decision in this section is simulated. The project decided on 2026-06-09 n
 |---|---|---|
 | Screening split | the two reviewers split the new batch with a double-screened overlap sample; the overlap yields the project's first inter-human agreement figures | workload-realistic; addresses the named baseline gap |
 | Claude Code lane L5 | runs as a documented fifth lane | the rehearsal runs showed it works; an extra documented lane strengthens the multi-system design |
-| Prompt provenance | cite `deep-research/literature-review-prompt.md` as the documented template, with the loss of the instantiated round-1 prompt stated as a known gap | settled by the submitted paper's own citation practice |
+| Prompt provenance | cite `corpus/deep-research/literature-review-prompt.md` as the documented template, with the loss of the instantiated round-1 prompt stated as a known gap | settled by the submitted paper's own citation practice |
 | Reviewer identifiers | neutral ids `reviewer-1` / `reviewer-2` repo-wide (avoids the R1 collision with the trAIce item id and the plan phase) | privacy-clean, PRISMA-sufficient, collision-free |
 | Unclear decisions at import | imported as report items, not decisions; visible until resolved in Excel | the schema keeps two-valued decisions; Unclear is a work state |
 
@@ -352,4 +352,4 @@ At the next stakeholder meeting (or earlier written feedback), walk this ledger 
 - Reviewer identity in public files: are the current short keys acceptable in a public repo, or pseudonyms? Decide before P3.
 - Do the colleagues screen the full corpus or a split? Affects only the onboarding text, not the tool.
 - Pages source setting (branch/folder) to verify at the P0 merge.
-- Folder restructure: the worked migration proposal lives in [[restructure-plan]], gated behind the distillate repair. Transient, removed once executed.
+- Folder restructure executed 2026-06-30 (code into `src/`, generated data into `generated/`, deep-research into `corpus/`, assessment unified); see [[journal]] Session 24.

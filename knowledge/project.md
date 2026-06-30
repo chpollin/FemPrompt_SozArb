@@ -79,7 +79,7 @@ Level 1, substantive, the literature review as use case. What does the research 
 
 ## Corpus
 
-The corpus was identified via four proprietary Deep Research systems (ChatGPT, Claude, Gemini, Perplexity) plus a limited manual search, curated in a Zotero group. It is English and German, spanning the late 2010s to 2025, focused on feminist AI literacies, generative AI, prompting, and social work. The exact counts, the provider distribution, and the acquisition loss chain are derivations from the data and live in the files under `benchmark/data/` and `corpus/`.
+The corpus was identified via four proprietary Deep Research systems (ChatGPT, Claude, Gemini, Perplexity) plus a limited manual search, curated in a Zotero group. It is English and German, spanning the late 2010s to 2025, focused on feminist AI literacies, generative AI, prompting, and social work. The exact counts, the provider distribution, and the acquisition loss chain are derivations from the data and live in the files under `assessment/` and `corpus/`.
 
 ## Team
 
@@ -174,10 +174,10 @@ Responsibility means the capacity to respond and to maintain relationships. Resp
 - Justificatory esotericism (Hauswald): training data, model architectures, and selection logics are not disclosed.
 - Unsecured LLM outputs: addressed by the 3-stage SKE with deterministic stage 2 and verification.
 - Sycophancy risk: addressed by negative constraints and calibration items.
-- Paywall bias: a substantial fraction of literature sits behind access barriers; the acquisition rate and its consequences are derivable from the data (benchmark/results/, docs/data/) and the Evidence Companion.
+- Paywall bias: a substantial fraction of literature sits behind access barriers; the acquisition rate and its consequences are derivable from the data (generated/benchmark-results/, docs/data/) and the Evidence Companion.
 - Resource asymmetry: groups studying bias and inequality frequently have fewer resources for building epistemic infrastructure.
 - Dependence on proprietary systems.
-- Benchmark limitations: the benchmark rests on the overlap of the human and LLM tracks, the provider overlap is verifiable only for a sample, and the acquisition barrier underrepresents paywalled literature. The exact subset sizes and the decomposed reading of the divergence are derivable from the data (benchmark/results/, docs/data/) and the Evidence Companion.
+- Benchmark limitations: the benchmark rests on the overlap of the human and LLM tracks, the provider overlap is verifiable only for a sample, and the acquisition barrier underrepresents paywalled literature. The exact subset sizes and the decomposed reading of the divergence are derivable from the data (generated/benchmark-results/, docs/data/) and the Evidence Companion.
 
 ## Open items (theory and framing)
 

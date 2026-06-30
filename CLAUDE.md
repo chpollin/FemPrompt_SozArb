@@ -17,7 +17,7 @@ The Forum Wissenschaft 2/2026 paper is submitted and editorially closed (it was 
 
 ## No volatile quantities
 
-Costs and metrics (dollar totals, token counts, kappas, confusion-matrix cells, include rates, corpus and pipeline counts) are NOT hand-maintained in the prose of this file or the knowledge docs. They drift and contradict each other. Numbers live in the data (`benchmark/results/`, `docs/data/`) and in the Evidence Companion that renders them. State findings qualitatively and point there. This file names structural constants (ten categories, four Deep Research models, three pipeline stages) but not run statistics.
+Costs and metrics (dollar totals, token counts, kappas, confusion-matrix cells, include rates, corpus and pipeline counts) are NOT hand-maintained in the prose of this file or the knowledge docs. They drift and contradict each other. Numbers live in the data (`generated/benchmark-results/`, `docs/data/`) and in the Evidence Companion that renders them. State findings qualitatively and point there. This file names structural constants (ten categories, four Deep Research models, three pipeline stages) but not run statistics.
 
 ---
 
@@ -46,11 +46,11 @@ Use these terms consistently. They are defined in `knowledge/INDEX.md` (glossary
 The corpus is processed through a five-step workflow (Identification, PDF acquisition, Markdown conversion, knowledge extraction, assessment). The core question is what happens to knowledge when it flows through a distillation pipeline.
 
 Three layers:
-1. **Obsidian Vault** (`vault/`): interlinked Markdown of Papers, Concepts, Divergences, and Pipeline stages, generated.
+1. **Obsidian Vault** (`generated/vault/`): interlinked Markdown of Papers, Concepts, Divergences, and Pipeline stages, generated.
 2. **Evidence Companion** (`docs/index.html` plus subpages): four views (Knowledge Chat, Knowledge Graph, Categories, Corpus), live at https://chpollin.github.io/FemPrompt_SozArb/.
 3. **Paper**: Forum Wissenschaft 2/2026, submitted and closed (on Google Docs). The follow-up paper is led by the infrastructure and the review method, not by a results claim.
 
-The benchmark (the human-LLM divergence and its decomposition, used as a motivating illustration) and all figures live in the data (`benchmark/results/`, `docs/data/`) and the Evidence Companion; do not restate them here.
+The benchmark (the human-LLM divergence and its decomposition, used as a motivating illustration) and all figures live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion; do not restate them here.
 
 ### Assessment tracks
 
@@ -69,14 +69,14 @@ The benchmark (the human-LLM divergence and its decomposition, used as a motivat
 | Directory | Contents | Edit? |
 |-----------|----------|-------|
 | `knowledge/` | **Single source of truth** for all project documentation (see `knowledge/INDEX.md`) | Yes, with care |
-| `pipeline/knowledge/distilled/` | Distilled knowledge documents | Read-only |
-| `pipeline/knowledge/_stage1_json/`, `_verification/` | Stage-1 JSON extractions, verification reports | Read-only |
-| `vault/` | Obsidian Vault v2 (Papers, Concepts, Divergences, Pipeline) | Generated |
+| `generated/distilled/` | Distilled knowledge documents | Read-only |
+| `generated/distilled/_stage1_json/`, `_verification/` | Stage-1 JSON extractions, verification reports | Read-only |
+| `generated/vault/` | Obsidian Vault v2 (Papers, Concepts, Divergences, Pipeline) | Generated |
 | `docs/`, `docs/data/` | GitHub Pages web interfaces and generated JSON | Actively edited |
-| `benchmark/` | Benchmark scripts, results, configuration | Complete |
+| `generated/benchmark-results/` | Benchmark results | Complete |
 | `assessment/` | LLM 5D and human assessment | Complete |
-| `scripts/` | Generators (Vault v2, Promptotyping data) | Actively edited |
-| `config/` | `defaults.yaml` | Do not change |
+| `src/publish/` | Generators (Vault v2, Promptotyping data) | Actively edited |
+| `config/` | `defaults.yaml` (now lists `generated/` paths; the restructure superseded its do-not-change note) | Yes, with care |
 | `.vault_cache/` | LLM API cache (reproducible) | Do not change |
 | `prompts/` | Prompt governance and CHANGELOG | Read-only |
 
@@ -96,8 +96,8 @@ The benchmark (the human-LLM divergence and its decomposition, used as a motivat
 | `docs/js/kategorien.js` | Categories Explorer |
 | `docs/js/prisma.js`, `prisma-data.js`, `prisma-import.js` | PRISM logic, data shim, Excel bridge |
 | `docs/css/research.css`, `prisma.css` | Styles |
-| `benchmark/results/agreement_metrics.json` | Canonical benchmark metrics |
-| `benchmark/config/categories.yaml` | Canonical category definitions |
+| `generated/benchmark-results/agreement_metrics.json` | Canonical benchmark metrics |
+| `assessment/categories.yaml` | Canonical category definitions |
 
 ---
 
@@ -122,7 +122,7 @@ Architecture rules: no build tool, no framework, no npm, CDN only (D3, Chart.js,
 
 ## Pipeline
 
-Workflow: Zotero papers, PDF acquisition (four fallback strategies), Markdown conversion (Docling), three-stage distillation (extract JSON, format Markdown, verify). The acquisition, conversion, and distillation loss chain is quantified in the data (`benchmark/results/`, `docs/data/`) and the Evidence Companion, not here.
+Workflow: Zotero papers, PDF acquisition (four fallback strategies), Markdown conversion (Docling), three-stage distillation (extract JSON, format Markdown, verify). The acquisition, conversion, and distillation loss chain is quantified in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion, not here.
 
 Knowledge document structure: YAML frontmatter (title, authors, year, type, language, processed, source_file, confidence); sections Core Finding, Research Question, Methodology, Main Arguments, Category Evidence, Assessment Relevance, Key References. Categories live in `_stage1_json/` as booleans, not in the Markdown frontmatter.
 
@@ -130,9 +130,9 @@ Knowledge document structure: YAML frontmatter (title, authors, year, type, lang
 
 ## Data Flow (JSON)
 
-`promptotyping_v2.json` (generated by `scripts/generate_promptotyping_data_v2.py`): `meta` (totals, disagreements, kappa, confusion_matrix, rates, pattern_distribution, asymmetry), `papers`, `concepts` (nodes and edges), `divergences`. Note: `meta.total_papers` in the agreement JSONs is the union of the two assessment tracks, not the corpus (see the comment in `benchmark/scripts/calculate_agreement.py`).
+`promptotyping_v2.json` (generated by `src/publish/generate_promptotyping_data_v2.py`): `meta` (totals, disagreements, kappa, confusion_matrix, rates, pattern_distribution, asymmetry), `papers`, `concepts` (nodes and edges), `divergences`. Note: `meta.total_papers` in the agreement JSONs is the union of the two assessment tracks, not the corpus (see the comment in `src/assess/calculate_agreement.py`).
 
-`research_vault_v2.json` (generated by `pipeline/scripts/generate_docs_data.py`): for the Evidence Companion.
+`research_vault_v2.json` (generated by `src/publish/generate_docs_data.py`): for the Evidence Companion.
 
 ---
 
@@ -142,9 +142,9 @@ Each piece of information has exactly ONE canonical location. Other files refere
 
 | Information | Canonical Location |
 |-------------|-------------------|
-| Benchmark figures, the divergence and its decomposition | the data (`benchmark/results/`, `docs/data/`) and the Evidence Companion |
+| Benchmark figures, the divergence and its decomposition | the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion |
 | Script reference, pipeline method | `knowledge/methods.md` |
-| Category definitions | `benchmark/config/categories.yaml` |
+| Category definitions | `assessment/categories.yaml` |
 | Theory and operationalization | `knowledge/project.md` |
 | Glossary | `knowledge/INDEX.md` |
 | Roadmap, current status, simulated decisions | `knowledge/plan.md` |
@@ -197,7 +197,7 @@ Use for multi-step tasks (three or more steps) and long operations. Mark `in_pro
 |---------|----------|
 | Windows `nul` file | Ignore (reserved device name, not git-tracked) |
 | "Kernaussage" vs "Kernbefund" | Correct is "Kernbefund" (Core Finding) |
-| Benchmark numbers | The merge bug (sequential ID instead of Zotero_Key, fixed 2026-03-27) made all pre-fix figures wrong. The canonical figures live in the data (`benchmark/results/`, `docs/data/`) and the Evidence Companion; the union-vs-corpus and disagreement-count caveats apply. Do not resurrect old numbers from history. |
+| Benchmark numbers | The merge bug (sequential ID instead of Zotero_Key, fixed 2026-03-27) made all pre-fix figures wrong. The canonical figures live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion; the union-vs-corpus and disagreement-count caveats apply. Do not resurrect old numbers from history. |
 | Source_Tool field | Mostly empty; the provider split is a Zotero-Collections estimate |
 | D3 Sankey links invisible | Use `fill: none` plus `stroke-width`, not `fill` |
 | Title matching | Five-strategy cascade (Stage1-JSON, KD-YAML, filename prefix, author+year, fuzzy) |

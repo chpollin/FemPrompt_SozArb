@@ -9,10 +9,10 @@ Versionierte Dokumentation aller Prompts, die in der Pipeline und im Assessment 
 | Prompt | Datei | Zeilen | Version | Status |
 |--------|-------|--------|---------|--------|
 | Deep-Research-Prompt | `prompts/deep-research-template.md` | -- | v1.0 (restauriert) | Template wiederhergestellt, instanziierter Prompt rekonstruiert |
-| SKE Stage 1: Extract & Classify | `pipeline/scripts/distill_knowledge.py` | 53-143 | v1.0 | Aktiv, 249 Docs produziert |
-| SKE Stage 3: Verify | `pipeline/scripts/distill_knowledge.py` | 223-282 | v1.0 | Aktiv, 249 Docs verifiziert |
+| SKE Stage 1: Extract & Classify | `src/distill/distill_knowledge.py` | 53-143 | v1.0 | Aktiv, 249 Docs produziert |
+| SKE Stage 3: Verify | `src/distill/distill_knowledge.py` | 223-282 | v1.0 | Aktiv, 249 Docs verifiziert |
 | 5D Assessment | `assessment-llm/prompt_template.md` | 1-124 | v1.0 | Aktiv, 325/325 bewertet |
-| 10K Assessment | `benchmark/scripts/run_llm_assessment.py` | 37-111 | v2.1 | Aktiv (negative Constraints, Beispiele fuer alle Kategorien) |
+| 10K Assessment | `src/assess/run_llm_assessment.py` | 37-111 | v2.1 | Aktiv (negative Constraints, Beispiele fuer alle Kategorien) |
 
 ---
 
@@ -37,7 +37,7 @@ Versionierte Dokumentation aller Prompts, die in der Pipeline und im Assessment 
 
 ## SKE Stage 1: Extract & Classify (v1.0)
 
-**Datei:** `pipeline/scripts/distill_knowledge.py`, Zeilen 53-143
+**Datei:** `src/distill/distill_knowledge.py`, Zeilen 53-143
 **Variable:** `STAGE1_EXTRACT_CLASSIFY_PROMPT`
 **Modell:** Claude Haiku 4.5
 **max_tokens:** 3000
@@ -62,7 +62,7 @@ Versionierte Dokumentation aller Prompts, die in der Pipeline und im Assessment 
 
 ## SKE Stage 3: Verify (v1.0)
 
-**Datei:** `pipeline/scripts/distill_knowledge.py`, Zeilen 223-282
+**Datei:** `src/distill/distill_knowledge.py`, Zeilen 223-282
 **Variable:** `STAGE3_VERIFY_PROMPT`
 **Modell:** Claude Haiku 4.5
 **max_tokens:** 1500
@@ -102,7 +102,7 @@ Versionierte Dokumentation aller Prompts, die in der Pipeline und im Assessment 
 
 ## 10K Assessment (v2.0)
 
-**Datei:** `benchmark/scripts/run_llm_assessment.py`, Zeilen 37-102
+**Datei:** `src/assess/run_llm_assessment.py`, Zeilen 37-102
 **Funktion:** `build_assessment_prompt(categories: dict)`
 **Modell:** Claude Haiku 4.5
 **max_tokens:** 1024
@@ -111,7 +111,7 @@ Versionierte Dokumentation aller Prompts, die in der Pipeline und im Assessment 
 
 **Kernstruktur:**
 - Rolle: "wissenschaftlicher Reviewer" (neutral, kein thematischer Bias)
-- Dynamisch generiert aus `benchmark/config/categories.yaml`
+- Dynamisch generiert aus `assessment/categories.yaml`
 - 10 binaere Kategorien (Ja/Nein) mit Definitionen, positiven und negativen Beispielen
 - Strikte Entscheidungslogik: TECHNIK_OK UND SOZIAL_OK -> Include
 - Konsistenzregel: "Du darfst die Logik NICHT mit eigenem Judgment ueberschreiben!"

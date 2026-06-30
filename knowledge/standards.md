@@ -108,7 +108,7 @@ The mandatory reporting elements (RAISE Table 1) are the AI system name(s), vers
 
 ## Mapping onto this project's workflow
 
-The dual assessment track and benchmark already satisfy most of the demanding requirements. The figures that back the "Satisfied" judgements live in the data (`benchmark/results/`, `docs/data/`) and the Evidence Companion; this table states only the mapping and the status. Status values are Satisfied, Partial, or Gap.
+The dual assessment track and benchmark already satisfy most of the demanding requirements. The figures that back the "Satisfied" judgements live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion; this table states only the mapping and the status. Status values are Satisfied, Partial, or Gap.
 
 | Requirement | Project artefact | Status |
 |---|---|---|

@@ -129,15 +129,15 @@ Die folgenden Werte wurden aus verschiedenen Repo-Quellen rekonstruiert. Sie sin
 
 | Artefakt | Pfad | Status |
 |---|---|---|
-| Raw Output Claude | `deep-research/restored/raw/Claude_deep-research.md` | Vorhanden |
-| Raw Output Gemini | `deep-research/restored/raw/Gemini_deep-research.md` | Vorhanden |
-| Raw Output Perplexity | `deep-research/restored/raw/Perplexity_deep-research.md` | Vorhanden |
+| Raw Output Claude | `corpus/deep-research/raw/Claude_deep-research.md` | Vorhanden |
+| Raw Output Gemini | `corpus/deep-research/raw/Gemini_deep-research.md` | Vorhanden |
+| Raw Output Perplexity | `corpus/deep-research/raw/Perplexity_deep-research.md` | Vorhanden |
 | Raw Output OpenAI | -- | Verloren (nur binaere PDF existierte) |
-| RIS Claude | `deep-research/restored/Claude.ris` | Vorhanden |
-| RIS Gemini | `deep-research/restored/Gemini.ris` | Vorhanden |
-| RIS OpenAI | `deep-research/restored/OpenAI.ris` | Vorhanden |
-| RIS Perplexity | `deep-research/restored/Perplexity.ris` | Vorhanden |
-| RIS Template | `deep-research/restored/ris-template.md` | Vorhanden |
+| RIS Claude | `corpus/deep-research/Claude.ris` | Vorhanden |
+| RIS Gemini | `corpus/deep-research/Gemini.ris` | Vorhanden |
+| RIS OpenAI | `corpus/deep-research/OpenAI.ris` | Vorhanden |
+| RIS Perplexity | `corpus/deep-research/Perplexity.ris` | Vorhanden |
+| RIS Template | `corpus/deep-research/ris-template.md` | Vorhanden |
 
 ---
 

@@ -28,15 +28,15 @@ This document is the pre-registration protocol for the second literature round (
 
 ## 2. Eligibility criteria
 
-Eligibility is defined by `benchmark/config/categories.yaml`, version 1.2, and is used unchanged: the ten binary categories, the inclusion logic (at least one technology dimension AND at least one social dimension), and the controlled exclusion vocabulary are not restated here; the YAML file is the single source of truth.
+Eligibility is defined by `assessment/categories.yaml`, version 1.2, and is used unchanged: the ten binary categories, the inclusion logic (at least one technology dimension AND at least one social dimension), and the controlled exclusion vocabulary are not restated here; the YAML file is the single source of truth.
 
-The analysis-field extension adds capture fields for the analysis question. These are descriptive coding fields, not eligibility criteria. If merging the extension into `categories.yaml` bumps the file version, the eligibility-relevant content remains identical to v1.2; any change to eligibility-relevant content would be a protocol amendment.
+The analysis-field extension adds capture fields for the analysis question. These are descriptive coding fields, not eligibility criteria. If merging the extension into `assessment/categories.yaml` bumps the file version, the eligibility-relevant content remains identical to v1.2; any change to eligibility-relevant content would be a protocol amendment.
 
 Additional time restriction for this round: only records published in or after October 2025 enter screening (section 4 derives the cutoff). Earlier records are out of scope for round 2 because round 1 covered them; if a search returns earlier records, they are removed at deduplication or excluded with the existing vocabulary, not silently dropped.
 
 ## 3. Information sources
 
-The same deep research systems as round 1, named as the repository documents them (`prompts/deep-research-template.md`, four Deep Research interfaces; [[methods]], Phase 1; RIS artifacts in `deep-research/restored/`).
+The same deep research systems as round 1, named as the repository documents them (`prompts/deep-research-template.md`, four Deep Research interfaces; [[methods]], Phase 1; RIS artifacts in `corpus/deep-research/`).
 
 | Lane | System | Status |
 |---|---|---|
@@ -48,7 +48,7 @@ The same deep research systems as round 1, named as the repository documents the
 
 L5 is an optional fifth lane: a Claude Code session with web search tools executes the identical prompt agentically and writes its raw output to a file. It is documented exactly like the other lanes (executed prompt verbatim, provider and model version, run date, raw output committed at run time) and its results carry their own Source_Tool value so the lane stays separable in every analysis. Whether L5 runs is a human decision recorded before the first search. Manual identification remains permitted, as in round 1, recorded with Source_Tool Manual.
 
-For every lane, the round 1 provenance lesson applies, what the infrastructure must record: the executed prompt verbatim, the provider and model version, the run date, and the raw output are stored as files under `deep-research/round2/` at run time. The RIS conversion of raw outputs is documented and committed this round (round 1 left it unreproducible); the procedure is in the RIS conversion section below.
+For every lane, the round 1 provenance lesson applies, what the infrastructure must record: the executed prompt verbatim, the provider and model version, the run date, and the raw output are stored as files under `corpus/deep-research/round2/` at run time. The RIS conversion of raw outputs is documented and committed this round (round 1 left it unreproducible); the procedure is in the RIS conversion section below.
 
 ## 4. Search strategy
 
@@ -56,7 +56,7 @@ For every lane, the round 1 provenance lesson applies, what the infrastructure m
 
 Round 2 uses the same prompt as round 1, with exactly one added sentence (the time restriction). The full paste-ready text per lane is Appendix A; the identical text is used for all lanes, as in round 1.
 
-Provenance caveat, stated openly: the repository carries two accounts of the round 1 prompt. `deep-research/literature-review-prompt.md` presents a two-part prompt (a KONTEXT block with the research question plus a generic analysis prompt) as the prompt that generated the round 1 outputs. `prompts/CHANGELOG.md` records that the exactly instantiated round 1 prompt was never committed and is genuinely lost, with only the parametric template restored from Git history. This protocol uses the text of `deep-research/literature-review-prompt.md` as the documented round 1 prompt, because it is the only complete, instantiable prompt text in the repository and is already the referenced basis for the paper. The claim is therefore "round 2 uses the documented round 1 prompt", not "round 2 uses the verbatim executed round 1 prompt"; the latter is unprovable for round 1. Resolving the status of that file is an open item for finalization.
+Provenance caveat, stated openly: the repository carries two accounts of the round 1 prompt. `corpus/deep-research/literature-review-prompt.md` presents a two-part prompt (a KONTEXT block with the research question plus a generic analysis prompt) as the prompt that generated the round 1 outputs. `prompts/CHANGELOG.md` records that the exactly instantiated round 1 prompt was never committed and is genuinely lost, with only the parametric template restored from Git history. This protocol uses the text of `corpus/deep-research/literature-review-prompt.md` as the documented round 1 prompt, because it is the only complete, instantiable prompt text in the repository and is already the referenced basis for the paper. The claim is therefore "round 2 uses the documented round 1 prompt", not "round 2 uses the verbatim executed round 1 prompt"; the latter is unprovable for round 1. Resolving the status of that file is an open item for finalization.
 
 ### 4.2 The round 1 cutoff and the time restriction sentence
 
@@ -78,7 +78,7 @@ Deduplication against the existing corpus and within the new batch happens as a 
 
 ## 5. Screening procedure
 
-PRISM is the binding screening surface for round 2 ([[plan]] Stage B2, ADR-019 in [[specification]]). The reviewing colleagues screen the new batch in the tool, where every category points at the words that justify it and the human decision is the binding record. The screening record carries, for round 2, the same shape the established capture format does, the column shape of `benchmark/data/human_assessment.csv`, extended by:
+PRISM is the binding screening surface for round 2 ([[plan]] Stage B2, ADR-019 in [[specification]]). The reviewing colleagues screen the new batch in the tool, where every category points at the words that justify it and the human decision is the binding record. The screening record carries, for round 2, the same shape the established capture format does, the column shape of `assessment/human_assessment.csv`, extended by:
 
 1. the analysis-field extension (frozen before screening starts, see the Analysis fields section), and
 2. a per-record reviewer identity through neutral reviewer ids (R1, R2), closing the round 1 gap of per-record reviewer identity.
@@ -89,7 +89,7 @@ A batch captured in Excel elsewhere enters over the P3 import bridge ([[plan]] S
 
 In PRISM the more precise PRISMA steps happen, where machine-extracted evidence enters as a clearly labelled separate provenance class, human verification of evidence runs on samples, the text source actually read is recorded (raw, knowledge document, abstract), divergent human decisions are reconciled on the Daten und Repo surface with the consensus decision and process recorded (PRISMA-trAIce M8), and flow, agreement, checklist, and disclosure artifacts are generated from the data.
 
-The dual track runs as in round 1: the offline LLM assessment processes the new batch with the versioned 10K assessment prompt (`benchmark/scripts/run_llm_assessment.py`, governed by `prompts/CHANGELOG.md`) and recorded parameters. Decoding parameters are set explicitly and recorded this round; round 1 left temperature and top-p as unrecorded API defaults. The human decision is the binding record; the LLM track is advisory and kept separate. An interactive agent screening lane (as in Stage R3) may run as a third track under its own pre-specified sub-protocol.
+The dual track runs as in round 1: the offline LLM assessment processes the new batch with the versioned 10K assessment prompt (`src/assess/run_llm_assessment.py`, governed by `prompts/CHANGELOG.md`) and recorded parameters. Decoding parameters are set explicitly and recorded this round; round 1 left temperature and top-p as unrecorded API defaults. The human decision is the binding record; the LLM track is advisory and kept separate. An interactive agent screening lane (as in Stage R3) may run as a third track under its own pre-specified sub-protocol.
 
 ## 6. Pre-specified metrics
 
@@ -101,7 +101,7 @@ All agreement reporting for round 2 is fixed in advance, taking the round 1 repo
 4. Per-category kappas over the ten categories.
 5. The content-only analysis, pre-specified this time instead of post hoc: pairs whose human exclusion reason is a workflow criterion (Duplicate, No full text, Wrong publication type) are separated out, and metrics 1 to 4 are reported for the content-only subset alongside the full matrix. With deduplication moved before screening (section 4.4), the Duplicate stratum should be near empty in round 2; its size is itself a reported check on the deduplication step.
 
-The round 1 baseline values for comparison are taken from the data (benchmark/results/, docs/data/) and the Evidence Companion; no baseline number is restated here, and the comparison script reads them from the committed source. No error-rate language: divergence quantities are divergence against a consolidated human annotation, not error, and round 1 has no inter-human baseline.
+The round 1 baseline values for comparison are taken from the data (generated/benchmark-results/, docs/data/) and the Evidence Companion; no baseline number is restated here, and the comparison script reads them from the committed source. No error-rate language: divergence quantities are divergence against a consolidated human annotation, not error, and round 1 has no inter-human baseline.
 
 If both reviewers screen a shared subset (or the full batch) independently, inter-human agreement is computed from the reviewer column with the same decomposition; this supplies the inter-human baseline round 1 lacks. Whether the colleagues screen the full batch or a split is an open decision ([[plan]], Open items) and must be fixed before screening starts; the metric set does not change either way.
 
@@ -127,7 +127,7 @@ The pre-registration is complete when the following are in the repository, in th
 
 1. This protocol, finalized (open items of section 10 resolved, status no longer draft).
 2. The exact paste-ready prompt texts per lane (Appendix A) as a versioned prompt file under `prompts/`, with a `prompts/CHANGELOG.md` entry for the round 2 prompt version.
-3. `benchmark/config/categories.yaml` in the version in force, with the analysis-field extension merged and frozen, eligibility content unchanged from v1.2.
+3. `assessment/categories.yaml` in the version in force, with the analysis-field extension merged and frozen, eligibility content unchanged from v1.2.
 4. The Excel import template with the analysis fields, the reviewer column, and enforced vocabulary (dropdown validation), as the seam for a batch captured elsewhere; the colleagues screen in PRISM.
 5. The P3 bridge import validation extended to the analysis fields and the reviewer column.
 6. The 10K assessment prompt version and the run configuration with explicitly set decoding parameters.
@@ -144,7 +144,7 @@ None yet. Format: date, what changed, why, which runs were affected.
 
 ## 10. Open items before finalization
 
-1. Status of `deep-research/literature-review-prompt.md` versus the lost-prompt record (section 4.1): human decision on how the provenance is described in the final protocol.
+1. Status of `corpus/deep-research/literature-review-prompt.md` versus the lost-prompt record (section 4.1): human decision on how the provenance is described in the final protocol.
 2. Round 1 cutoff precision (section 4.2): confirm October 2025 or correct by amendment if a precise execution date exists outside the repository.
 3. Analysis-field extension not yet frozen; items 3 to 5 of section 8 depend on it. The freeze must precede the B2 screening start; this protocol requires it before the first search so the pre-registration is complete in one commit state. Confirm or relax that stricter ordering.
 4. Full-batch versus split screening for R1 and R2 (affects the inter-human baseline, section 6).
@@ -210,7 +210,7 @@ Per field, the salient rules: a technique group is assigned only when the paper 
 
 ## D. Excel schema extension
 
-The established capture format is the column shape of `benchmark/data/human_assessment.csv`. The extension appends columns after `Notes`, so every existing parser and the P3 bridge see an unchanged prefix. New columns in order: `AN_Prompt_Techniques`, `AN_Bias_Axes`, `AN_Harm_Types` (optional), `AN_Mitigation_Stage`, `AN_Mitigation_Status`, `AN_Population`, `AN_Coding_Basis`, `AN_Notes` (free text). Additionally `Studientyp` becomes required for `Decision = Include`.
+The established capture format is the column shape of `assessment/human_assessment.csv`. The extension appends columns after `Notes`, so every existing parser and the P3 bridge see an unchanged prefix. New columns in order: `AN_Prompt_Techniques`, `AN_Bias_Axes`, `AN_Harm_Types` (optional), `AN_Mitigation_Stage`, `AN_Mitigation_Status`, `AN_Population`, `AN_Coding_Basis`, `AN_Notes` (free text). Additionally `Studientyp` becomes required for `Decision = Include`.
 
 Mechanics: a `Legend` sheet lists every column, its codes, and one-line definitions; single-select columns get Excel data-validation dropdowns; multi-select columns are typed as semicolon lists, which Excel cannot validate natively, so enforcement happens at the P3 import bridge (split on `;`, trim, match against the closed list; empty-cell check on all `AN_` columns for included papers; a visible import report). The freeze writes the vocabularies into `categories.yaml` as a new `analysis_fields` block, so tool, bridge, and template read one source. An alternative encoding goes to the meeting (open decision 3): one binary column per code, matching the established one-column-per-category pattern and giving full dropdown validation, at the price of one column per code across all fields. The semicolon encoding is proposed as primary because it keeps the sheet readable; the bridge can ingest either.
 
@@ -247,7 +247,7 @@ This section closes the RIS-conversion gap by documenting what is known about th
 
 ## Round 1: what happened, what survives
 
-The deep research outputs of round 1 were converted to RIS with the help of an LLM and imported into Zotero, the systems' generated summaries carried along as metadata. What survives in the repository: four restored RIS files in `deep-research/restored/` and the structure template `ris-template.md`. What does not survive: the conversion prompt as executed, the model and version used, and the raw pre-conversion outputs for all but the restored set. The step is documented as performed but not reproducible; this is one of the named acquisition gaps, and the submitted paper's wording (conversion happened, by an LLM) is accurate but unverifiable in detail.
+The deep research outputs of round 1 were converted to RIS with the help of an LLM and imported into Zotero, the systems' generated summaries carried along as metadata. What survives in the repository: four restored RIS files in `corpus/deep-research/` and the structure template `ris-template.md`. What does not survive: the conversion prompt as executed, the model and version used, and the raw pre-conversion outputs for all but the restored set. The step is documented as performed but not reproducible; this is one of the named acquisition gaps, and the submitted paper's wording (conversion happened, by an LLM) is accurate but unverifiable in detail.
 
 ## Round 2: binding procedure
 
@@ -278,7 +278,7 @@ Any deviation from this template at run time is flagged in the run record, mirro
 
 # Appendix A: Paste-ready prompts per lane
 
-The prompt text is identical for all lanes, as in round 1. Source text: `deep-research/literature-review-prompt.md` (KONTEXT block plus analysis prompt). Hard line wraps of the source file are unwrapped for pasting; wording is unchanged. The structured deviations from the round 1 text are flagged in A.1.
+The prompt text is identical for all lanes, as in round 1. Source text: `corpus/deep-research/literature-review-prompt.md` (KONTEXT block plus analysis prompt). Hard line wraps of the source file are unwrapped for pasting; wording is unchanged. The structured deviations from the round 1 text are flagged in A.1.
 
 ## A.1 Annotated master prompt (deviations flagged inline)
 
@@ -315,7 +315,7 @@ The paste-ready text is A.1 with the two `[DEVIATION]` markers removed and the r
 
 ## A.3 Lane L5 (Claude Code web research lane, optional)
 
-Identical prompt text to A.2. The execution environment differs from round 1 (an agentic Claude Code session with web search tools instead of a deep research product interface); the prompt wording is unchanged. The lane is documented like the others: executed prompt verbatim, model version, run date, raw output written to `deep-research/round2/raw/ClaudeCode_deep-research.md` and committed at run time.
+Identical prompt text to A.2. The execution environment differs from round 1 (an agentic Claude Code session with web search tools instead of a deep research product interface); the prompt wording is unchanged. The lane is documented like the others: executed prompt verbatim, model version, run date, raw output written to `corpus/deep-research/round2/raw/ClaudeCode_deep-research.md` and committed at run time.
 
 ## Related
 

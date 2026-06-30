@@ -22,7 +22,7 @@ topics: ["[[Data Modelling]]"]
 related: [specification, methods, standards]
 ---
 
-This document describes the substrate the PRISMA screening tool consumes and produces. The tool is built so that its data model is, by construction, a PRISMA-trAIce-conformant screening record: every screening decision stores the AI decision and the human decision separately, which is exactly what item R1 needs to render an AI-vs-human flow split. The model has the per-paper `ScreeningRecord`, the aggregated `FlowModel`, and the `DisclosureMetadata`. The canonical persisted unit in the built tool is one file per reviewer (schema `femprompt-prisma-reviewer/0.2`, with the evidence map, see below); the single-blob `Session` envelope is the superseded v3 export shape. The category schema and inclusion logic are reused verbatim from the benchmark (`benchmark/config/categories.yaml`); the seed dataset is the existing corpus. What the data *means* lives here; what is *done* with it lives in [[specification]].
+This document describes the substrate the PRISMA screening tool consumes and produces. The tool is built so that its data model is, by construction, a PRISMA-trAIce-conformant screening record: every screening decision stores the AI decision and the human decision separately, which is exactly what item R1 needs to render an AI-vs-human flow split. The model has the per-paper `ScreeningRecord`, the aggregated `FlowModel`, and the `DisclosureMetadata`. The canonical persisted unit in the built tool is one file per reviewer (schema `femprompt-prisma-reviewer/0.2`, with the evidence map, see below); the single-blob `Session` envelope is the superseded v3 export shape. The category schema and inclusion logic are reused verbatim from the benchmark (`assessment/categories.yaml`); the seed dataset is the existing corpus. What the data *means* lives here; what is *done* with it lives in [[specification]].
 
 ## Category schema (reused, not redefined)
 
@@ -33,7 +33,7 @@ Ten binary categories, split into two dimensions, with the inclusion rule from [
 - Inclusion: a paper is included iff (>=1 technology) AND (>=1 social).
 - Exclusion reasons (controlled): `Duplicate`, `Not_relevant_topic`, `Wrong_publication_type`, `No_full_text`, `Language`.
 
-Canonical definitions stay in `benchmark/config/categories.yaml`; the tool reads them, it does not fork them.
+Canonical definitions stay in `assessment/categories.yaml`; the tool reads them, it does not fork them.
 
 ## ScreeningRecord (per paper)
 
@@ -87,7 +87,7 @@ Rules: `human_decision.binding` is always true and is the record of truth (NFR-0
 Derived from all `ScreeningRecord`s; the data behind the flow diagram. It keeps AI and human exclusions in separate fields, which is the core PRISMA-trAIce modification.
 
 ```json
-// counts are placeholders; the figures live in the data (benchmark/results/, docs/data/) and the Evidence Companion
+// counts are placeholders; the figures live in the data (generated/benchmark-results/, docs/data/) and the Evidence Companion
 {
   "identification": {
     "n_identified": 0,
@@ -106,7 +106,7 @@ Derived from all `ScreeningRecord`s; the data behind the flow diagram. It keeps 
 }
 ```
 
-Note the two include counts: the binding human count and the advisory AI count are both reported (PRISMA-trAIce R1 asks for the AI-processed numbers and outcomes alongside the human ones). The 2020 three-phase structure is used; there is no standalone Eligibility box. The AI figures in this illustrative block are on the paired papers; the shipped tool reports the AI track over all identified records, while the human track stays on the paired subset it covers. Both are correct for their reference set, and the matrix and kappa are always on the paired subset. The actual figures live in the data (benchmark/results/, docs/data/) and the Evidence Companion.
+Note the two include counts: the binding human count and the advisory AI count are both reported (PRISMA-trAIce R1 asks for the AI-processed numbers and outcomes alongside the human ones). The 2020 three-phase structure is used; there is no standalone Eligibility box. The AI figures in this illustrative block are on the paired papers; the shipped tool reports the AI track over all identified records, while the human track stays on the paired subset it covers. Both are correct for their reference set, and the matrix and kappa are always on the paired subset. The actual figures live in the data (generated/benchmark-results/, docs/data/) and the Evidence Companion.
 
 ## DisclosureMetadata (trAIce M2/M3/M6 + RAISE Table 1)
 
@@ -182,15 +182,15 @@ What the screening view reads and searches, and what it deliberately does not.
 |---|---|---|
 | Reading text (served) | `docs/vault/Papers/<title>.md` via `paper.knowledge_doc` | most papers; the served ones resolve under `docs/`, so `fetch(knowledge_doc)` works from `prisma.html` |
 | Abstract fallback | `paper.abstract` in `research_vault_v2.json` | used when no `knowledge_doc`; not every paper has an abstract |
-| Corpus search index | `docs/data/fulltext_index.json` (built by `scripts/build_screening_index.py`) | every paper, its text drawn from the knowledge doc, else the abstract, else none; figures from the build script |
+| Corpus search index | `docs/data/fulltext_index.json` (built by `src/publish/build_screening_index.py`) | every paper, its text drawn from the knowledge doc, else the abstract, else none; figures from the build script |
 
-Important: the served `docs/vault/Papers/*.md` are **not** raw full text. They are the distilled knowledge documents (an English abstract plus the German Kernbefund, Methodik, Hauptargumente, and Kategorie-Evidenz, the last of which already carries real per-category quotes). The raw Docling full texts live in `pipeline/markdown_clean/`, which is **not served** and holds copyrighted, paywalled papers. Publishing those to the public Pages site is outward-facing and not done by default.
+Important: the served `docs/vault/Papers/*.md` are **not** raw full text. They are the distilled knowledge documents (an English abstract plus the German Kernbefund, Methodik, Hauptargumente, and Kategorie-Evidenz, the last of which already carries real per-category quotes). The raw Docling full texts live in `generated/markdown_clean/`, which is **not served** and holds copyrighted, paywalled papers. Publishing those to the public Pages site is outward-facing and not done by default.
 
 The screening view fetches `paper.knowledge_doc` on demand through a single seam (`fetchPaperText` in `prisma.js`) and renders it with a built-in minimal Markdown renderer (no dependency). In-text search runs over the rendered document; corpus-wide search runs over the prebuilt `fulltext_index.json` (instant, one lazy load, no per-document fetch storm). The AI proposal (`paper.llm`) stays available but collapsed; it is not part of the evidence.
 
 Layer split (ADR-016): because the served document concatenates the paper layer (Abstract, Key Concepts, Full Text) and the machine-extraction layer (Kernbefund onward), the reading view splits it at the first `## Kernbefund` heading (`splitDocLayers`) and offers a Volltext / KI-Extraktion toggle; the KI-Extraktion view carries a band marking it as non-verbatim. The split lands cleanly on all served documents. The layer a snippet is pinned from sets its `origin`, binding the provenance of a Beleg to its actual source.
 
-Text-source options (a copyright decision, not yet taken): (1) keep the served knowledge documents, current and publishable; (2) read the raw local full text from the connected clone (`pipeline/markdown_clean/`), never published, public fallback to the knowledge document; (3) publish the raw full texts. Because the source is one function, switching to (2) or (3) is a one-function change.
+Text-source options (a copyright decision, not yet taken): (1) keep the served knowledge documents, current and publishable; (2) read the raw local full text from the connected clone (`generated/markdown_clean/`), never published, public fallback to the knowledge document; (3) publish the raw full texts. Because the source is one function, switching to (2) or (3) is a one-function change.
 
 ## Evidence behaviour (FR-13 contract, as built)
 
@@ -209,11 +209,11 @@ The tool is seeded with the existing review, the round-1 data carried through PR
 | Source file | Provides |
 |---|---|
 | `docs/data/research_vault_v2.json` | paper metadata, assessment, knowledge summaries |
-| `benchmark/data/human_assessment.csv` | binding human decisions |
-| `benchmark/data/llm_assessment_10k.csv` | advisory AI decisions (Haiku) |
-| `benchmark/results/agreement_metrics.json` | reference agreement figures |
+| `assessment/human_assessment.csv` | binding human decisions |
+| `assessment/llm_assessment_10k.csv` | advisory AI decisions (Haiku) |
+| `generated/benchmark-results/agreement_metrics.json` | reference agreement figures |
 
-A small build step (a `generate_*` script, to be added) maps these into the `Session` schema as the Stage R seeded session, the first-round decision data carried through PRISM; that it reproduces the benchmark in the data (benchmark/results/, docs/data/) and the Evidence Companion is the conformance self-test on that pass.
+A small build step (a `generate_*` script, to be added) maps these into the `Session` schema as the Stage R seeded session, the first-round decision data carried through PRISM; that it reproduces the benchmark in the data (generated/benchmark-results/, docs/data/) and the Evidence Companion is the conformance self-test on that pass.
 
 ## Was nicht reingehört
 

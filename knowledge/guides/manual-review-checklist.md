@@ -16,7 +16,7 @@ generated-with: Claude Code
 related: [methods]
 ---
 
-The human-in-the-loop quality check for converted Markdown documents, used with the review tool `pipeline/tools/markdown_reviewer.html` (see [[methods]], the human review step). Fill one checklist per document.
+The human-in-the-loop quality check for converted Markdown documents, used with the review tool `src/distill/markdown_reviewer.html` (see [[methods]], the human review step). Fill one checklist per document.
 
 ## Document information
 
@@ -81,8 +81,8 @@ Free-text notes for specific observations, context, or recommendations.
 
 ## Appendix: review tool workflow
 
-Tool: `pipeline/tools/markdown_reviewer.html`. Start it via VS Code Live Server (right-click the file, Open with Live Server) or `npx live-server pipeline/tools/`.
+Tool: `src/distill/markdown_reviewer.html`. Start it via VS Code Live Server (right-click the file, Open with Live Server) or `npx live-server src/distill/`.
 
 Keyboard shortcuts: `1` PASS, `2` WARN, `3` FAIL, `0` reset, the arrow keys for navigation, `L` to toggle the list, `S` to toggle sync-scroll.
 
-Persistence: localStorage (automatic, across sessions), export to JSON (manual, the Export button), import from JSON (manual, the Import button). The export JSON carries the export timestamp, a summary counter (pass, warn, fail, pending), the total document count, and a filename-to-status map. Save exports as `pipeline/validation_reports/human_review_YYYY-MM-DD.json`. Claude can read the exported JSON to identify problematic documents, compute statistics, and recommend reconversion.
+Persistence: localStorage (automatic, across sessions), export to JSON (manual, the Export button), import from JSON (manual, the Import button). The export JSON carries the export timestamp, a summary counter (pass, warn, fail, pending), the total document count, and a filename-to-status map. Save exports as `generated/validation_reports/human_review_YYYY-MM-DD.json`. Claude can read the exported JSON to identify problematic documents, compute statistics, and recommend reconversion.

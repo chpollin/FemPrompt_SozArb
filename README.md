@@ -22,7 +22,7 @@ A corpus identified via four Deep Research systems, screened in two parallel, in
 | LLM (10K) | 10 binary categories | Complete (the benchmark track) |
 | LLM (5D) | 5 ordinal dimensions | Complete (archived) |
 
-The benchmark serves as a motivating illustration of why reliability cannot be presupposed. It records a substantial, asymmetric divergence between the LLM and the expert judgments; the decomposition shows that the headline gap is dominated by human workflow exclusions (duplicates, no full text, wrong publication type) that a single-paper LLM cannot see, and on content-only decisions the include rates converge. The figures live in the data (`benchmark/results/`, `docs/data/`) and the Evidence Companion.
+The benchmark serves as a motivating illustration of why reliability cannot be presupposed. It records a substantial, asymmetric divergence between the LLM and the expert judgments; the decomposition shows that the headline gap is dominated by human workflow exclusions (duplicates, no full text, wrong publication type) that a single-paper LLM cannot see, and on content-only decisions the include rates converge. The figures live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion.
 
 ## Screening Tool (PRISM)
 
@@ -31,19 +31,18 @@ Screening runs through **PRISM** ([`docs/prisma.html`](docs/prisma.html)), the p
 ## Repository Structure
 
 ```
-corpus/                    # Corpus metadata (Zotero export)
-assessment/                # Assessment systems (human, llm-5d archived)
-benchmark/                 # Human vs. LLM benchmark (10K)
-  config/                  # categories.yaml (the 10 categories, single source of truth)
-  data/                    # llm_assessment_10k.csv, human_assessment.csv
-  results/                 # agreement_metrics.json, disagreements.csv
-  scripts/                 # benchmark scripts
-pipeline/                  # PDF -> Markdown -> Knowledge
-  knowledge/distilled/     # distilled knowledge documents
-vault/                     # Obsidian Vault (Papers, Concepts, Divergences, Pipeline)
+corpus/                    # Corpus metadata (Zotero export) and Deep Research artifacts (RIS, raw outputs)
+assessment/                # Assessment systems (human, llm-5d archived), categories.yaml (the 10 categories, single source of truth)
+generated/                 # Generated artifacts
+  benchmark-results/       # agreement_metrics.json, disagreements.csv
+  pdfs/                    # acquired PDFs
+  markdown/                # PDF -> Markdown
+  markdown_clean/          # cleaned Markdown (the raw-text source PRISM resolves)
+  distilled/               # distilled knowledge documents
+  vault/                   # Obsidian Vault (Papers, Concepts, Divergences, Pipeline)
+src/                       # Pipeline and publishing scripts (acquire, distill, assess, publish)
 config/                    # Configuration (defaults.yaml)
 prompts/                   # Prompt changelog and governance
-deep-research/restored/    # Deep Research artifacts (RIS, raw outputs)
 docs/                      # Evidence Companion and PRISM tool (GitHub Pages)
 knowledge/                 # Project documentation (single source of truth)
 ```

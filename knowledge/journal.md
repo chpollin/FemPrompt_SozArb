@@ -24,6 +24,13 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## PRISM and the epistemic infrastructure (June 2026)
 
+### 2026-06-30 (Session 24): the folder restructure executed, code into src/, generated artifacts into generated/
+
+- **Ziel:** Carry out the planned restructure so the folders mirror the input-to-output logic, with all runnable code in one place.
+- **Verlauf:** A first workflow ground out and adversarially verified the migration before a single file moved. The critic earned its keep, catching traps a naive move would have shipped broken: three acquire scripts that imported the shared utils only through their own auto-added directory and needed an explicit path bootstrap; the utils root-semantics flip, where the same `parent.parent` returned `pipeline/` at the old depth but the real repo root at the new one, so the compensating `.parent` in the callers had to be dropped; `generate_docs_data.py`, which is depth-invariant between the old and new homes and therefore a deliberate non-edit; a pre-existing `.env` path that climbed above the repo root; and three colliding READMEs. The move then ran in six commit-sized steps, data first so the corrected scripts could run against real inputs, then utils alone, then acquire and distill, assess, and publish, each gated by an import smoke and the test harness. The publish step regenerated the Companion data from the new layout. A second workflow rewrote the documentation paths across CLAUDE.md, the knowledge docs, and the readmes in parallel, one agent per file group.
+- **Ergebnis:** Code lives under `src/` by stage (`acquire`, `distill`, `assess`, `publish`), generated artifacts under `generated/`, the assessment inputs unified, deep-research folded into `corpus/`. `docs/` stays fixed because GitHub Pages serves it. The harness stayed green through every step and the full regeneration runs from `src/`. The migration plan document, transient by design, was removed once executed.
+- **Dead Ends:** The critic's own spec mis-stated one depth fix (the distill `.env` line, which actually needed no change at equal depth) and one documentation agent mis-mapped the served `docs/vault/Papers` to `generated/vault/Papers`; both were caught by verifying every edit against the real file and a final repo-wide path grep, not by trusting the plan.
+
 ### 2026-06-30 (Session 23): the distillate matcher deduplicated at the root, folder restructure planned
 
 - **Ziel:** Make every corpus paper carry exactly one correct distillate, at the pipeline level rather than by hand, and work out how the folders could mirror the project's input-to-output logic.

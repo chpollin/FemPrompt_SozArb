@@ -17,7 +17,7 @@ topics: ["[[Systematic Review]]", "[[PRISMA]]"]
 related: [project, data, standards]
 ---
 
-This document describes how the systematic literature review was conducted, from methodological rationale to technical implementation. The theoretical foundations are in [[project]] and the reporting standards in [[standards]]. The corpus and pipeline figures live in the data (`benchmark/results/`, `docs/data/`) and the Evidence Companion. Concrete quantities are not restated here; the method is described by its structure, not by its run statistics.
+This document describes how the systematic literature review was conducted, from methodological rationale to technical implementation. The theoretical foundations are in [[project]] and the reporting standards in [[standards]]. The corpus and pipeline figures live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion. Concrete quantities are not restated here; the method is described by its structure, not by its run statistics.
 
 ## System requirements
 
@@ -43,7 +43,7 @@ Zotero integration. Sequential import of RIS files into model-specific collectio
 
 Epistemological rationale. The dual assessment track is the methodological centerpiece. The decision for parallel mode, not sequential, is deliberate: a sequential arrangement would have limited the LLM track to a preparatory function, while parallel mode enables systematic comparison and reveals where the epistemic contributions converge and diverge. Dual refers to two characteristics at once, two independent assessment instances (expert reviewers and LLM) and two different epistemic foundations. Both tracks operate on PRISMA guidelines, identical criteria with different epistemic foundations; the separation protects the expert reviewers from having LLM results influence their assessment.
 
-Categories. Ten binary categories in two dimensions, defined canonically in `benchmark/config/categories.yaml` and not redefined here:
+Categories. Ten binary categories in two dimensions, defined canonically in `assessment/categories.yaml` and not redefined here:
 
 - Technology: AI_Literacies, Generative_KI, Prompting, KI_Sonstige.
 - Social: Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness.
@@ -54,23 +54,23 @@ Expert track (epistemically authoritative). Researchers from social work, gender
 
 LLM track (two assessment systems). A 5D system (five relevance dimensions, ordinal 0 to 3) for exploratory screening and prioritization, and a 10K system (the ten binary categories, Yes/No) for the benchmark against the human assessment. Both run on Claude Haiku 4.5; the 10K run is the benchmark basis.
 
-Human-LLM benchmark. The benchmark compares the human and LLM assessment and adapts the approach of Woelfle et al. (2024). Reference literature for the human inter-rater baseline: Woelfle et al. (2024, parallel human-AI assessment), Hanegraaf et al. (2024, human IRR across abstract and full-text screening), and Sandner et al. (2025, the LLM deviating from the human reference no more than human raters deviate from each other). The project's own confusion matrix, base rates, and divergence live in the data (`benchmark/results/`, `docs/data/`) and the Evidence Companion; the primary metrics are the confusion matrix and the base-rate comparison, with Cohen's kappa reported only as a comparison anchor.
+Human-LLM benchmark. The benchmark compares the human and LLM assessment and adapts the approach of Woelfle et al. (2024). Reference literature for the human inter-rater baseline: Woelfle et al. (2024, parallel human-AI assessment), Hanegraaf et al. (2024, human IRR across abstract and full-text screening), and Sandner et al. (2025, the LLM deviating from the human reference no more than human raters deviate from each other). The project's own confusion matrix, base rates, and divergence live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion; the primary metrics are the confusion matrix and the base-rate comparison, with Cohen's kappa reported only as a comparison anchor.
 
-Benchmark scripts (in `benchmark/scripts/`): `generate_papers_csv.py` (Zotero JSON to papers_full.csv), `run_llm_assessment.py` (the 10K assessment), `merge_assessments.py` (merge human and LLM by Zotero_Key), `calculate_agreement.py` (Cohen's kappa and confusion matrix), `analyze_disagreements.py` (disagreement identification).
+Benchmark scripts (in `src/assess/`): `generate_papers_csv.py` (Zotero JSON to papers_full.csv), `run_llm_assessment.py` (the 10K assessment), `merge_assessments.py` (merge human and LLM by Zotero_Key), `calculate_agreement.py` (Cohen's kappa and confusion matrix), `analyze_disagreements.py` (disagreement identification).
 
 ## Phase 3: Synthesis (PDF to Markdown to knowledge documents)
 
-Pipeline workflow, all scripts in `pipeline/scripts/`, full parameters via `--help`:
+Pipeline workflow, acquisition scripts in `src/acquire/` and distillation scripts in `src/distill/`, full parameters via `--help`:
 
 | Step | Script | Input | Output |
 |---|---|---|---|
-| 1. PDF download | `download_zotero_pdfs.py` / `acquire_pdfs.py` | Zotero group | `pipeline/pdfs/` |
-| 2. Markdown conversion | `convert_to_markdown.py` | PDFs | `pipeline/markdown/` |
-| 3. Validation | `validate_markdown_enhanced.py` | Markdown and PDFs | `pipeline/validation_reports/` |
-| 4. Post-processing | `postprocess_markdown.py` | Markdown | `pipeline/markdown_clean/` |
-| 5. Human review | `markdown_reviewer.html` | Markdown and PDFs | JSON export |
-| 6. Knowledge distillation | `distill_knowledge.py` | Markdown | `pipeline/knowledge/distilled/` |
-| 7. Vault building | `scripts/generate_vault_v2.py` | Knowledge docs and assessment CSVs | `vault/` |
+| 1. PDF download | `src/acquire/download_zotero_pdfs.py` / `src/acquire/acquire_pdfs.py` | Zotero group | `generated/pdfs/` |
+| 2. Markdown conversion | `src/acquire/convert_to_markdown.py` | PDFs | `generated/markdown/` |
+| 3. Validation | `src/acquire/validate_markdown_enhanced.py` | Markdown and PDFs | `generated/validation_reports/` |
+| 4. Post-processing | `src/acquire/postprocess_markdown.py` | Markdown | `generated/markdown_clean/` |
+| 5. Human review | `src/distill/markdown_reviewer.html` | Markdown and PDFs | JSON export |
+| 6. Knowledge distillation | `src/distill/distill_knowledge.py` | Markdown | `generated/distilled/` |
+| 7. Vault building | `src/publish/generate_vault_v2.py` | Knowledge docs and assessment CSVs | `generated/vault/` |
 
 PDF acquisition uses four fallback strategies in priority order (Zotero, DOI, Unpaywall, ArXiv). A substantial fraction of PDFs sits behind access barriers, and the acquisition, conversion, and distillation chain loses material at each step. Some conversions failed on corrupt or invalid source files and are documented so the gap is named:
 
@@ -80,7 +80,7 @@ PDF acquisition uses four fallback strategies in priority order (Zotero, DOI, Un
 - `UNESCO__IRCAI_2024_Challenging.pdf` (not valid)
 - `Workers_2025_Generative.pdf` (not valid)
 
-Validation runs in four layers: syntactic (GLYPH placeholders, Unicode errors), structural (the character ratio between Markdown and PDF), semantic (an optional LLM spot-check), and manual (a review queue prioritized by confidence). Post-processing is a conservative cleanup (hyphenation fix, page-number and header removal). The human review tool `pipeline/tools/markdown_reviewer.html` is a dual-pane browser tool with PASS, WARN, and FAIL keyboard shortcuts.
+Validation runs in four layers: syntactic (GLYPH placeholders, Unicode errors), structural (the character ratio between Markdown and PDF), semantic (an optional LLM spot-check), and manual (a review queue prioritized by confidence). Post-processing is a conservative cleanup (hyphenation fix, page-number and header removal). The human review tool `src/distill/markdown_reviewer.html` is a dual-pane browser tool with PASS, WARN, and FAIL keyboard shortcuts.
 
 Knowledge distillation (3-stage SKE). Stage 1 extracts and classifies (Markdown to JSON, an API call); stage 2 formats Markdown from the JSON locally with no API call; stage 3 verifies the formatted document against the original (an API call) and writes a confidence score, with a `needs_correction` flag below the threshold. Key parameters of `distill_knowledge.py`: `--input`, `--output`, `--limit`, `--delay`.
 
@@ -94,23 +94,23 @@ LLMs are used to examine literature on the use of LLMs; feminist AI literacies a
 
 ## Vault v2
 
-`scripts/generate_vault_v2.py` replaces the flat v1 paper index with an epistemic network of four document types: Paper Notes (assessment frontmatter, transformation trail, concept wikilinks, the knowledge-document full text), Concept Notes (LLM-extracted definitions, frequency, a co-occurrence table, paper backlinks), Pipeline Notes (stage descriptions, prompts extracted from code, configuration), and Divergence Notes (pattern classification, category comparison, LLM reasoning). Concepts are extracted by an LLM call per paper, post-processed by synonym merge and a frequency filter; divergences are classified by an LLM (the canonical classification is Sonnet 4.6). Title matching from the distilled documents to the Zotero records runs a five-strategy cascade (Stage1-JSON title, knowledge-document YAML title, filename prefix, author and year, then `difflib.SequenceMatcher` as fallback). The exact node, concept, and divergence counts are derivations and live in the generated JSON.
+`src/publish/generate_vault_v2.py` replaces the flat v1 paper index with an epistemic network of four document types: Paper Notes (assessment frontmatter, transformation trail, concept wikilinks, the knowledge-document full text), Concept Notes (LLM-extracted definitions, frequency, a co-occurrence table, paper backlinks), Pipeline Notes (stage descriptions, prompts extracted from code, configuration), and Divergence Notes (pattern classification, category comparison, LLM reasoning). Concepts are extracted by an LLM call per paper, post-processed by synonym merge and a frequency filter; divergences are classified by an LLM (the canonical classification is Sonnet 4.6). Title matching from the distilled documents to the Zotero records runs a five-strategy cascade (Stage1-JSON title, knowledge-document YAML title, filename prefix, author and year, then `difflib.SequenceMatcher` as fallback). The exact node, concept, and divergence counts are derivations and live in the generated JSON.
 
 ## Directory structure
 
 | Directory | Contents |
 |---|---|
-| `pipeline/scripts/` | Python pipeline scripts |
-| `pipeline/tools/` | `markdown_reviewer.html` |
-| `pipeline/pdfs/`, `pipeline/markdown/`, `pipeline/markdown_clean/` | Downloaded PDFs, converted and post-processed Markdown |
-| `pipeline/knowledge/distilled/`, `_stage1_json/`, `_verification/` | Distilled documents and intermediate results |
-| `benchmark/config/` | `categories.yaml` |
-| `benchmark/scripts/`, `benchmark/data/`, `benchmark/results/` | Benchmark scripts, assessment data, results |
+| `src/acquire/`, `src/distill/` | Python pipeline scripts |
+| `src/distill/` | `markdown_reviewer.html` |
+| `generated/pdfs/`, `generated/markdown/`, `generated/markdown_clean/` | Downloaded PDFs, converted and post-processed Markdown |
+| `generated/distilled/`, `_stage1_json/`, `_verification/` | Distilled documents and intermediate results |
+| `assessment/` | `categories.yaml` |
+| `src/assess/`, `assessment/`, `generated/benchmark-results/` | Benchmark scripts, assessment data, results |
 | `corpus/` | `zotero_export.json`, `papers_metadata.csv`, `source_tool_mapping.json` |
 | `docs/`, `docs/data/` | The Evidence Companion and its generated JSON |
-| `scripts/` | `generate_vault_v2.py`, `generate_promptotyping_data_v2.py` |
+| `src/publish/` | `generate_vault_v2.py`, `generate_promptotyping_data_v2.py` |
 | `.vault_cache/` | LLM API result cache (not committed, reproducible) |
 
 ## Error handling
 
-Windows encoding: `setup_windows_encoding()` in `utils.py` configures UTF-8 for Windows consoles. HTTP 429 (rate limit): increase the delay between API calls.
+Windows encoding: `setup_windows_encoding()` in `src/utils.py` configures UTF-8 for Windows consoles. HTTP 429 (rate limit): increase the delay between API calls.
