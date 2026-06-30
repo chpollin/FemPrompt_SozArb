@@ -13,7 +13,7 @@ generated-with: Claude Code
 method:
   name: Promptotyping
   url: https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin
-related: [specification, design, data, journal, verification, update-protocol]
+related: [specification, design, data, journal, update-protocol]
 ---
 
 Phased plan for completing the whole project: PRISM v1.0 (Stage A), the first-round pass of the existing review data through PRISM and its evaluation (Stage R, the demonstrable core), the real review cycle through the tool (Stage B), and closure plus reuse (Stage C). This is a process document; it is updated as phases close (mark done with date), and decisions made along the way go into [[specification]] as ADRs, not here.
@@ -22,14 +22,14 @@ Phased plan for completing the whole project: PRISM v1.0 (Stage A), the first-ro
 
 The tool is not the goal; the goal is a review whose every decision is auditable, demonstrated on this project's own data. The project is finished when four things are true:
 
-1. **The review is carried through PRISM, and only then complete.** All of the review's dual-track data (the full corpus, human decisions, LLM assessments, divergences, category evidence; counts in [[verification]]) passes through PRISM into a PRISMA 2020 plus trAIce record, public on the Evidence Companion, together with an honest conformance evaluation, which items the recorded data satisfies, which only partially, which not at all. The items unrepairable in retrospect (the absent pre-registered protocol above all) are named, not hidden; they show what epistemic infrastructure must record from the start.
+1. **The review is carried through PRISM, and only then complete.** All of the review's dual-track data (the full corpus, human decisions, LLM assessments, divergences, category evidence) passes through PRISM into a PRISMA 2020 plus trAIce record, public on the Evidence Companion, together with an honest conformance evaluation, which items the recorded data satisfies, which only partially, which not at all. The items unrepairable in retrospect (the absent pre-registered protocol above all) are named, not hidden; they show what epistemic infrastructure must record from the start.
 2. **The instrument is the binding screening surface.** Per ADR-019 the colleagues screen in PRISM, where the more precise PRISMA steps happen, the screening decision, evidence grounding, flow, agreement, checklist, disclosure, and record. The Excel import bridge stays only as an entry seam for a batch captured elsewhere. Every category can point at the words that justify it, every AI involvement is disclosed, and the human decision is always the binding record.
 3. **The cycle is repeatable.** The planned literature update (same versioned deep-research prompts, new batch, dual assessment, reconciliation) is executed inside the tool with the same record machinery. Reproducibility is proven by execution, not asserted.
 4. **The infrastructure outlives the case.** The paper and the Evidence Companion publish the review; the repo documents how a third party sets up the same instrument for a different review (own categories, own corpus). That cashes out the project's claim, epistemic infrastructure as practice, beyond the single study.
 
 Research chain and priority (decided 2026-06-09): the primary product is the **working instrument**. The chain runs: tool, then the updated, methodologically grounded corpus (Stage B), then the analysis of how prompt engineering must adapt for social work, gender, and bias contexts. A follow-up paper describes the extended review's results and the method; the Forum Wissenschaft paper is its precursor. When effort competes, colleague usability and the update cycle win over Companion polish; the record machinery serves the follow-up paper's methods section.
 
-Narrative register (decided 2026-06-09): the project describes the workflow and how a large language model is used to build it out. It makes no efficiency or cost-benefit claims. Claims discipline: any empirical or novelty claim that reaches a paper, the Companion, or a report must be either recomputed from the raw data or verified against published sources; the verification documents (below) are the ledger for this.
+Narrative register (decided 2026-06-09): the project describes the workflow and how a large language model is used to build it out. It makes no efficiency or cost-benefit claims. Claims discipline: any empirical or novelty claim that reaches a paper, the Companion, or a report must be either recomputed from the raw data or verified against published sources, and no AI-generated figure may be presented as human-checked.
 
 ## Shaping decisions (taken 2026-06-09)
 
@@ -46,7 +46,7 @@ The vault-side programme plan ("Gesamtplan FemPrompt Forschungsprogramm", Projec
 |---|---|---|
 | TP1 | PRISM working instrument | Stage A (P0 to P7, with P3 as the Excel import seam) |
 | TP2 | First-round pass through PRISM, round one | Stage R |
-| TP3 | Characterizing the human-AI divergence (illustration) | own work item; source [[verification]]; feeds R4 and the paper; elaboration session pending |
+| TP3 | Characterizing the human-AI divergence (illustration) | own work item; feeds R4 and the paper; elaboration session pending |
 | TP4 | Operationalizing the analysis question (prompt engineering for social work, gender, bias) | own work item; MUST precede the B2 schema freeze so the Excel captures the analysis fields; deliverable: the analysis design in [[update-protocol]] plus schema extension |
 | TP5 | Literature update, round two | Stage B |
 | TP6 | Follow-up paper and FFG report | outside the repo; fed by R4, B3, TP3 |
@@ -56,16 +56,14 @@ Division of labour between the two layers: the vault carries the programme view 
 
 ### TP3 work plan: characterizing the divergence (illustration)
 
-1. Harden the pairing: run the prepared re-pairing script (`C:\tmp\verify_femprompt.py`, move it into `benchmark/scripts/` on first run), resolve the 292-vs-291 discrepancy, commit the script and its output.
+1. Harden the pairing from the raw CSVs, resolve the residual pairing discrepancy, and keep the re-pairing reproducible by committed script rather than by hand.
 2. Canonical analysis set, computed by committed script, not by hand: full matrix plus the content-only subset (workflow-criteria exclusions Duplicate / No full text / Wrong publication type separated out), per category; metrics po, kappa, PABAK, kappa max, bias index; the KD-input contrast (where the inclusion bias survives); the 2x2 with the content-only sensitivity.
-3. Write up the decomposed finding as the licensed source for the paper's empirical section (now in [[verification]]). Framing rules: no error-rate language (no inter-human baseline), divergence decomposed before interpreted, the infrastructure-corrects-itself narrative explicit.
-4. Apply the queued corrections: the README Byrt sentence and the Sonnet+KD best-condition qualifier (see [[verification]]).
+3. Write up the decomposed finding as the licensed source for the paper's empirical section. Framing rules: no error-rate language (no inter-human baseline), divergence decomposed before interpreted, the infrastructure-corrects-itself narrative explicit.
+4. Apply the queued corrections: the README Byrt sentence and the Sonnet+KD best-condition qualifier.
 
-Verification: every figure in the analysis document traces to committed script output; an independent agent re-derives the headline table from the raw CSVs. Validation: co-authors accept the decomposed framing. Done when: the paper can cite every number from the committed analysis document.
+Verification: every figure in the analysis document traces to committed script output; an independent re-derivation reproduces the headline table from the raw CSVs by a human-checked path. Validation: co-authors accept the decomposed framing. Done when: the paper can cite every number from the committed analysis document.
 
-Status (2026-06-09): step 3 done, the decomposed finding written and independently re-verified against the merged CSVs (now in [[verification]]); steps 1 and 2 (committed re-pairing and analysis scripts) pending shell access; step 4 corrections still queued for P6.
-
-Update (2026-06-21): step 1 done. The re-pairing script `benchmark/scripts/verify_femprompt.py` was executed (shell now available) and reproduces every V1 figure exactly; the 292-vs-291 discrepancy is resolved as a stray Has_HA flag on `2YS85B49` in `papers_full.csv` (a key absent from the human CSV, no missing human decision). A regression guard `replay_selftest.py` asserts the canonical numbers and that resolution (PASS 18/18). Step 2 (a committed script emitting the full per-category analysis set) and step 4 corrections remain.
+Status: the decomposed framing is settled qualitatively (workflow-criteria disagreement separated from content disagreement, no inter-human baseline, the divergence read as illustration); the committed re-pairing and per-category analysis scripts, and a human-checked path from the raw CSVs to every figure, remain to be (re)built. The numbers themselves live in the data (`benchmark/results/`, `docs/data/`) and the Evidence Companion, not in this plan; step 4 corrections remain queued for P6.
 
 ### TP4 work plan: operationalizing the analysis question
 
@@ -85,11 +83,11 @@ Verification means technically correct (automated or recomputed wherever possibl
 | TP | Verification | Validation | Result criterion |
 |---|---|---|---|
 | TP1 Tool | committed harness green from clean clone; node checks; agent click-tests S1 to S6 | Excel round-trip with a real export; colleagues' workflow untouched | established workflow flows losslessly through the bridge |
-| TP2 Retro-record | replay self-test reproduces the canonical benchmark; every conformance item sourced | human review of the record page before publishing | citable record page live on the Companion |
-| TP3 Divergence | all figures from committed script output; independent re-derivation; sensitivity analyses documented | co-authors accept the decomposed framing | paper-ready analysis document, every number licensed |
+| TP2 Retro-record | the replay reproduces the canonical benchmark by a human-checked path; every conformance item sourced | human review of the record page before publishing | citable record page live on the Companion |
+| TP3 Divergence | all figures from committed script output; independent, human-checked re-derivation; sensitivity analyses documented | co-authors accept the decomposed framing | paper-ready analysis document, every number licensed |
 | TP4 Analysis fields | pilot coding shows fields answerable | colleagues confirm fields serve the analysis | schema frozen before update screening |
 | TP5 Update | protocol committed before any run; import validation reports; flow reconciles with decision log | reconciliation of divergences with the reviewers | updated corpus with complete audit trail |
-| TP6 Paper/FFG | paper-integrity check against the repo before submission; claims only as licensed by the verification documents | co-author review; venue peer review | submission with generated, verifiable methods section |
+| TP6 Paper/FFG | paper-integrity check against the repo before submission; claims only as licensed by a human-checked recomputation or published source | co-author review; venue peer review | submission with generated, verifiable methods section |
 | TP7 Reuse | third-party dry run from documentation alone | an external person succeeds without help | documented setup path |
 
 ## Promptotyping operating loop
@@ -118,11 +116,11 @@ Done when: the branch is on GitHub; after merge, `prisma.html` is live on the Ev
 
 - Commit the existing jsdom harness (43 behaviour checks plus 11 real-data checks, journal session 12) as `tests/`, with a `package.json` (jsdom as dev dependency) and a README. The no-framework rule stays scoped to `docs/`; the boundary (app vanilla, tests may use dev dependencies) is documented in the repo `CLAUDE.md`.
 - All checks pass from a clean clone with one documented command.
-- Add the acceptance checks that exist in [[specification]] but not yet in the harness: export/import round-trip losslessness (FR-08), seed reproduces the canonical benchmark (kappa and confusion matrix as fixed in [[verification]]) (FR-05), reviewer schema 0.1 to 0.2 migration.
+- Add the acceptance checks that exist in [[specification]] but not yet in the harness: export/import round-trip losslessness (FR-08), seed reproduces the canonical benchmark marginals (FR-05), reviewer schema 0.1 to 0.2 migration.
 
 Done when: a fresh clone runs the full suite green with one command.
 
-Status: the committed jsdom harness runs green from a clean clone (`npm test`); the browser leg (`run-tests.html`) shares the same suite. The harness injects `prisma-data.js`, `prisma.js`, `prisma-import.js`, then `tests.js`. The additional P1 acceptance checks are now in the suite (Section G): export/import round-trip losslessness (FR-08), the reviewer schema 0.1 to 0.2 migration, and the seed reproducing the canonical benchmark marginals from the real `research_vault_v2.json` (the runner injects it; the paired confusion matrix and kappa are asserted out-of-tool by `replay_selftest.py` and `build_flow_model.py`, since ADR-017 removed the in-tool kappa and matrix).
+Status: the committed jsdom harness runs green from a clean clone (`npm test`); the browser leg (`run-tests.html`) shares the same suite. The harness injects `prisma-data.js`, `prisma.js`, `prisma-import.js`, then `tests.js`. The additional P1 acceptance checks are now in the suite (Section G): export/import round-trip losslessness (FR-08), the reviewer schema 0.1 to 0.2 migration, and the seed reproducing the canonical benchmark marginals from the real `research_vault_v2.json` (the runner injects it). ADR-017 removed the in-tool kappa and matrix, so the paired confusion matrix and kappa are not asserted in the harness; they belong to the offline benchmark data, not the tool.
 
 ### P2: Raw full-text reading (the methodological upgrade)
 
@@ -178,7 +176,7 @@ Done when: all six scenarios protocolled, findings fixed or explicitly deferred.
 
 ### P6: Knowledge-base consolidation
 
-- One canonical number set (benchmark pairs, disagreements, confusion matrix, human decisions; the values in [[verification]]) applied across `README.md`, [[plan]], [[project]]; the superseded earlier figures survive only in journal and archive contexts.
+- One canonical number set (benchmark pairs, disagreements, confusion matrix, human decisions) lives in the data (`benchmark/results/`, `docs/data/`) and the Evidence Companion; `README.md`, [[plan]], and [[project]] point there and state findings qualitatively rather than restating figures; the superseded earlier figures survive only in journal and archive contexts.
 - [[plan]]: new header date and a tool milestone (the PRISM build), milestone plan extended past 4 May.
 - [[specification]]: superseded requirements (FR-03, FR-10, the placement of FR-05) marked inline instead of the trailing demotion paragraph; the v3 module descriptions pruned to v4 reality (genesis stays in [[journal]] and [[design]]).
 - `knowledge/INDEX.md` and root `README.md` updated (tool section, plan row, costs).
@@ -197,35 +195,35 @@ Done when: the quickstart works without help from the builder.
 
 The demonstrable core of the project: the PRISMA methodology executed on exactly this review's data and shown in the frontend. R1 and R2 are data work and can start immediately, in parallel with Stage A; R3 needs the deployed tool (after P0) and doubles as its hardest usability test; R4 and R5 close the loop. Stage B later reuses this machinery for the update.
 
-Shaping decisions (taken 2026-06-09): replay plus interactive agent pass; knowledge-document category evidence enters the replay as clearly labelled machine-extracted evidence, separate from reviewer evidence; the record is published on the Companion. Claim line: the first review round (the full corpus) is carried through PRISM as the first real pass and reported honestly, with the items unrepairable in retrospect named (the corpus papers without a human decision plus one unresolved pairing discrepancy, see [[verification]]; the missing pre-specified protocol M1). The same gate is enforced for the update (Stage B). The follow-up paper tells exactly this two-round story.
+Shaping decisions (taken 2026-06-09): replay plus interactive agent pass; knowledge-document category evidence enters the replay as clearly labelled machine-extracted evidence, separate from reviewer evidence; the record is published on the Companion. Claim line: the first review round (the full corpus) is carried through PRISM as the first real pass and reported honestly, with the items unrepairable in retrospect named (the corpus papers without a human decision plus one unresolved pairing discrepancy; the missing pre-specified protocol M1). The same gate is enforced for the update (Stage B). The follow-up paper tells exactly this two-round story.
 
-Status (2026-06-09): the first-round record is drafted ahead of the replay script (now folded into [[verification]]) plus `docs/data/flow_model.json`, every count an agent recount flagged `agent_recount_scripted_replay_pending`. The committed R2 replay script must supersede these counts before the record is published on the Companion (R5). Update (2026-06-21): the 292-vs-291 pairing discrepancy is resolved (a stray Has_HA flag on `2YS85B49` in `papers_full.csv`, no missing human decision); the replay self-test reproduces the benchmark core, but the full FlowModel generation (R4) still supersedes the hand-drafted counts before R5.
+Status (2026-06-09): the first-round record is drafted ahead of a committed replay, every count flagged as a hand recount pending a scripted replay. A committed replay must supersede these counts, by a human-checked path, before the record is published on the Companion (R5). Update (2026-06-21): the residual pairing discrepancy is resolved (a stray Has_HA flag on `2YS85B49` in `papers_full.csv`, a key absent from the human CSV, no missing human decision); the full FlowModel generation (R4) still supersedes the hand-drafted counts before R5.
 
 ### V: Claim verification (added 2026-06-09 after the meta review)
 
-Two claims the project leans on were asserted, not verified; both are being checked before they may carry anything.
+Two claims the project leans on were asserted, not verified; both must be checked, by a human-checked path, before they may carry anything.
 
-- V1, the benchmark check (done, see [[verification]]): all published numbers reproduce, but the interpretation changes. Most of the LLM-include/human-exclude papers are human exclusions for Duplicate, No full text, or Wrong publication type, criteria a one-paper-at-a-time LLM cannot see; on the content-only subset the include rates converge and kappa rises (figures in [[verification]]). The README's prevalence-artifact framing is backwards, agreement is genuinely near chance. "Sonnet+KD best condition" flips under the content-only sensitivity. No inter-human reliability baseline exists.
-- V2, methodological novelty (done, see [[verification]]): claim holds partially. Separate advisory AI records are established practice (EPPI-Reviewer, Nested Knowledge, DistillerSR); novel are the generated trAIce R1 flow artifact, session-derived disclosure generation, and the retrospective trAIce rendering. trAIce is a proposal (Holst et al. 2025, JMIR AI), RAISE is Cochrane-carried (Flemyng et al. 2025); related-work list in the document.
+- V1, the benchmark check: the interpretation changes. Most of the LLM-include/human-exclude papers are human exclusions for Duplicate, No full text, or Wrong publication type, criteria a one-paper-at-a-time LLM cannot see; on the content-only subset the include rates converge and agreement rises. The README's prevalence-artifact framing is backwards, agreement is genuinely near chance. "Sonnet+KD best condition" flips under the content-only sensitivity. No inter-human reliability baseline exists. The figures live in the data (`benchmark/results/`, `docs/data/`) and the Evidence Companion.
+- V2, methodological novelty: claim holds partially. Separate advisory AI records are established practice (EPPI-Reviewer, Nested Knowledge, DistillerSR); novel are the generated trAIce R1 flow artifact, session-derived disclosure generation, and the retrospective trAIce rendering. trAIce is a proposal (Holst et al. 2025, JMIR AI), RAISE is Cochrane-carried (Flemyng et al. 2025).
 
-Consequence ledger (binding for R4 and the paper): the divergence must be reported decomposed (as illustration, not as a finding) (workflow-criteria disagreement vs content disagreement), with po, kappa, PABAK, kappa_max, bias index, category kappas, and the content-only sensitivity; the inclusion-bias claim survives only for the KD-input condition. The contribution claim is conformance by construction at the report-artifact level plus retrospective rendering, not AI-human separation as such. Corrections queued into P6: the README Byrt sentence and the Sonnet+KD best-condition qualifier (see [[verification]]). Tool implication for the agreement panel: report content-only agreement alongside the full matrix, since recorded exclusion reasons make the decomposition possible.
+Consequence ledger (binding for R4 and the paper): the divergence must be reported decomposed (as illustration, not as a finding) (workflow-criteria disagreement vs content disagreement), with the agreement metrics, category-level breakdown, and the content-only sensitivity; the inclusion-bias claim survives only for the KD-input condition. The contribution claim is conformance by construction at the report-artifact level plus retrospective rendering, not AI-human separation as such. Corrections queued into P6: the README Byrt sentence and the Sonnet+KD best-condition qualifier. Tool implication for the agreement panel: report content-only agreement alongside the full matrix, since recorded exclusion reasons make the decomposition possible.
 
 ### R1: Data completeness audit
 
 - Map every PRISMA 2020 phase and every trAIce item to its source in the repo: identification by source (deep research, manual, Zotero-only), duplicate handling, the dual screening tracks, the included sets.
-- Name the holes explicitly: papers without a human decision, the non-auditable acquisition steps ([[verification]]: five claims without audit trail), no pre-registered protocol (M1), papers without any text.
+- Name the holes explicitly: papers without a human decision, the non-auditable acquisition steps (the acquisition claims that carry no audit trail), no pre-registered protocol (M1), papers without any text.
 - Output: a machine-readable conformance map (per item: reconstructable, partial, missing, with source path), the data behind the checklist surface and the evaluation in R4.
 
 Done when: every checklist item points at data or at a named gap.
 
 ### R2: Replay seed completion
 
-- A script builds the full retrospective FlowModel from the actual files (identification, duplicates, screening with the AI/human split, included), not hand-entered; the seed reproduces the canonical benchmark (kappa and confusion matrix as fixed in [[verification]]) as self-test.
+- A script builds the full retrospective FlowModel from the actual files (identification, duplicates, screening with the AI/human split, included), not hand-entered; the seed reproduces the canonical benchmark (kappa and confusion matrix as held in the offline benchmark data) as self-test, by a human-checked path.
 - Machine-extracted evidence: the Kategorie-Evidenz quotes from the knowledge documents are imported per paper and category as a separate, labelled provenance class (new ADR; schema field distinct from reviewer evidence; rendered visually distinct; never counted as reviewer Belege).
 
 Status (2026-06-21): the provenance-class half is built and verified (M3, ADR-016). The reading column now splits the served document into a paper layer and a machine-extraction layer (`splitDocLayers`), a Volltext / KI-Extraktion toggle switches between them, and a Beleg pinned from the KI-Extraktion layer carries `origin: ai` and never sets `work.cats`, so AI-sourced text cannot enter the binding decision. Six headless tests cover the split and the binding separation; the boundary lands cleanly on all served documents.
 
-Update (2026-06-21, Session 17): the replay-script self-test is built and green. `benchmark/scripts/replay_selftest.py` independently re-pairs the raw CSVs and asserts the canonical matrix, kappa, the content-only sensitivity, and the 292-vs-291 resolution (self-test green, exit 0; the asserted values are the canonical set in [[verification]]). The diagnostic `verify_femprompt.py` was executed and reproduces every V1 figure, its output matching the committed `recompute_verification.txt`. Done since (ADR-018): the machine's per-category assessment is pre-loaded as `origin: ai` Belege (`injectMachineEvidence` from `docs/data/machine_evidence.json`), using the model's per-category reasoning rather than the uncategorized raw `Evidenz` quotes, so no quote-to-category provenance is fabricated; the items are advisory, never bind `work.cats`, and are never written to the reviewer file.
+Update (2026-06-21, Session 17): the residual pairing discrepancy is resolved (the stray Has_HA flag on `2YS85B49`, no missing human decision). A committed, human-checked replay that re-pairs the raw CSVs and reproduces the canonical matrix, the content-only sensitivity, and that resolution still has to be (re)built; the figures it would assert live in the data (`benchmark/results/`, `docs/data/`), not in this plan. Done since (ADR-018): the machine's per-category assessment is pre-loaded as `origin: ai` Belege (`injectMachineEvidence` from `docs/data/machine_evidence.json`), using the model's per-category reasoning rather than the uncategorized raw `Evidenz` quotes, so no quote-to-category provenance is fabricated; the items are advisory, never bind `work.cats`, and are never written to the reviewer file.
 
 Done when: the report surface shows the complete retrospective review from data alone.
 
@@ -279,7 +277,7 @@ Status (2026-06-09): the pre-registration protocol is [[update-protocol]] (final
 
 - Reconcile divergent human decisions on the Daten & Repo surface; the consensus decision and the process are recorded (PRISMA-trAIce M8).
 - Export the complete PRISMA record as one bundle with the Stage R machinery (R2, R4), now over the updated corpus: flow SVG, agreement metrics, both filled checklists, disclosure text, decision-log CSV; the bundle lives in the repo.
-- The paper's methods and disclosure sections are generated from the bundle, then edited by the authors; [[verification]] checks the final paper text against the repository.
+- The paper's methods and disclosure sections are generated from the bundle, then edited by the authors; a human-checked integrity pass checks the final paper text against the repository.
 
 Done when: the record bundle exists, the paper cites it, and the integrity check reports no unexplained deviation.
 

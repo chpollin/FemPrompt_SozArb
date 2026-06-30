@@ -14,10 +14,10 @@ updated: 2026-06-29
 authors: [Christopher Pollin]
 generated-with: Claude Code
 topics: ["[[Epistemic Infrastructure]]", "[[Feminist AI]]"]
-related: [INDEX, methods, standards, verification, journal]
+related: [INDEX, methods, standards, journal]
 ---
 
-This is the identity of the project: what it is, why it exists, and the theory it stands on. FemPrompt SozArb is a systematic literature review on feminist AI literacy and LLM bias in social work, and an epistemic infrastructure built around it. Part of the Elisabeth List Fellowship project "Diversity-Sensitive Engagement with Artificial Intelligence" (University of Graz, 2025 to 2026). The constitutive terms are defined in [[INDEX]]; the conducted methods are in [[methods]]; the divergence analysis that illustrates why the infrastructure is needed is in [[verification]].
+This is the identity of the project: what it is, why it exists, and the theory it stands on. FemPrompt SozArb is a systematic literature review on feminist AI literacy and LLM bias in social work, and an epistemic infrastructure built around it. Part of the Elisabeth List Fellowship project "Diversity-Sensitive Engagement with Artificial Intelligence" (University of Graz, 2025 to 2026). The constitutive terms are defined in [[INDEX]]; the conducted methods are in [[methods]]. The divergence between the LLM and expert tracks illustrates why the infrastructure is needed.
 
 ## Project goal
 
@@ -54,9 +54,9 @@ Primary audience: researchers with limited AI expertise.
 | Workflow fully documented, repository auditable | Implemented |
 | Epistemic infrastructure documented, prompts versioned | Implemented |
 | Dual assessment track executed (human and LLM) | Complete |
-| Benchmark metrics computed (confusion matrix, base rates, divergence analysis) | Complete (see [[verification]]) |
+| Benchmark metrics computed (confusion matrix, base rates, divergence analysis) | Complete |
 | Distilled knowledge documents from full texts | Complete |
-| Divergence analysis classified into patterns | Complete (see [[verification]]) |
+| Divergence analysis classified into patterns | Complete |
 | Obsidian Vault, interlinked knowledge base | Complete |
 | GitHub Pages documentation site | Complete (the Evidence Companion) |
 | Open Access analysis of the corpus | Pending |
@@ -73,13 +73,13 @@ Primary audience: researchers with limited AI expertise.
 
 ## Two levels of the project
 
-Level 2, methodological, the core contribution. What epistemic infrastructure does an LLM-assisted review require to address the asymmetry between machine pattern recognition and expert judgment? Output: the concept of epistemic infrastructure (four layers, below), the dual assessment track as its operationalization, the benchmark results as illustration that divergence is measurable and informationally productive (see [[verification]]), and a documented, reproducible workflow in the repository.
+Level 2, methodological, the core contribution. What epistemic infrastructure does an LLM-assisted review require to address the asymmetry between machine pattern recognition and expert judgment? Output: the concept of epistemic infrastructure (four layers, below), the dual assessment track as its operationalization, the benchmark results as illustration that divergence is measurable and informationally productive, and a documented, reproducible workflow in the repository.
 
 Level 1, substantive, the literature review as use case. What does the research say about LLM bias and feminist AI literacy? Output: a thematically categorized corpus under the ten binary categories, the distilled knowledge documents, the Obsidian vault, and the conceptual foundation for Fair Bench.
 
 ## Corpus
 
-The corpus was identified via four proprietary Deep Research systems (ChatGPT, Claude, Gemini, Perplexity) plus a limited manual search, curated in a Zotero group. It is English and German, spanning the late 2010s to 2025, focused on feminist AI literacies, generative AI, prompting, and social work. The exact counts, the provider distribution, and the acquisition loss chain are derivations from the data and live in [[verification]] and the files under `benchmark/data/` and `corpus/`.
+The corpus was identified via four proprietary Deep Research systems (ChatGPT, Claude, Gemini, Perplexity) plus a limited manual search, curated in a Zotero group. It is English and German, spanning the late 2010s to 2025, focused on feminist AI literacies, generative AI, prompting, and social work. The exact counts, the provider distribution, and the acquisition loss chain are derivations from the data and live in the files under `benchmark/data/` and `corpus/`.
 
 ## Team
 
@@ -174,10 +174,10 @@ Responsibility means the capacity to respond and to maintain relationships. Resp
 - Justificatory esotericism (Hauswald): training data, model architectures, and selection logics are not disclosed.
 - Unsecured LLM outputs: addressed by the 3-stage SKE with deterministic stage 2 and verification.
 - Sycophancy risk: addressed by negative constraints and calibration items.
-- Paywall bias: a substantial fraction of literature sits behind access barriers; the acquisition rate and its consequences are quantified in [[verification]].
+- Paywall bias: a substantial fraction of literature sits behind access barriers; the acquisition rate and its consequences are derivable from the data (benchmark/results/, docs/data/) and the Evidence Companion.
 - Resource asymmetry: groups studying bias and inequality frequently have fewer resources for building epistemic infrastructure.
 - Dependence on proprietary systems.
-- Benchmark limitations: the benchmark rests on the overlap of the human and LLM tracks, the provider overlap is verifiable only for a sample, and the acquisition barrier underrepresents paywalled literature. The exact subset sizes and the decomposed reading of the divergence are in [[verification]].
+- Benchmark limitations: the benchmark rests on the overlap of the human and LLM tracks, the provider overlap is verifiable only for a sample, and the acquisition barrier underrepresents paywalled literature. The exact subset sizes and the decomposed reading of the divergence are derivable from the data (benchmark/results/, docs/data/) and the Evidence Companion.
 
 ## Open items (theory and framing)
 

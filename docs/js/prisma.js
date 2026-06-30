@@ -481,10 +481,10 @@ function evidenceCount(rec) {
 
 // The human-AI agreement metrics (computeMatrix, cohenKappa, kappaLabel) were
 // removed with ADR-017: the tool computed kappa over its own loaded corpus, a
-// different set from the benchmark CSVs the canonical kappa rests on, so an
-// in-tool number could only diverge from the reference. Agreement is evaluated
-// outside the tool (benchmark/replay_selftest.py). The disclosure keeps M9/R2 by
-// reference. computeFlow stays: the flow diagram needs the per-track counts.
+// different set from the benchmark CSVs, so an in-tool number could only diverge
+// from the data. Agreement lives in the benchmark data and the Evidence Companion,
+// not in this tool. The disclosure keeps M9/R2 by reference. computeFlow stays:
+// the flow diagram needs the per-track counts.
 
 function computeFlow(persp) {
     let f = { total: papers.length, aiScreened: 0, aiIncl: 0, aiExcl: 0,

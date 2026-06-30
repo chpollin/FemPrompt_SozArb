@@ -14,10 +14,10 @@ updated: 2026-06-29
 authors: [Christopher Pollin]
 generated-with: Claude Code, deep-research web synthesis and full-text extraction of the primary sources
 topics: ["[[PRISMA]]", "[[Reporting Standards]]", "[[AI in Evidence Synthesis]]"]
-related: [specification, verification, methods]
+related: [specification, methods]
 ---
 
-This note is the reporting-standards reference for the project. It covers PRISMA 2020 as the reporting backbone and the two 2025 frameworks that govern AI-assisted reviews, PRISMA-trAIce (how to document AI use) and RAISE (under what conditions AI use is permissible). It is the criterion the conducted review and the PRISM tool report against, and the canonical home for the standards' item counts and citations; the assessment of how far the project conforms, and the benchmark numbers that serve as its validation evidence, live in [[verification]]. All claims are sourced in the Sources section below.
+This note is the reporting-standards reference for the project. It covers PRISMA 2020 as the reporting backbone and the two 2025 frameworks that govern AI-assisted reviews, PRISMA-trAIce (how to document AI use) and RAISE (under what conditions AI use is permissible). It is the criterion the conducted review and the PRISM tool report against, and the canonical home for the standards' item counts and citations. All claims are sourced in the Sources section below.
 
 ## What PRISMA is
 
@@ -108,7 +108,7 @@ The mandatory reporting elements (RAISE Table 1) are the AI system name(s), vers
 
 ## Mapping onto this project's workflow
 
-The dual assessment track and benchmark already satisfy most of the demanding requirements. The figures that back the "Satisfied" judgements (the confusion matrix, the kappas, the include rates, the divergence analysis) live in [[verification]]; this table states only the mapping and the status. Status values are Satisfied, Partial, or Gap.
+The dual assessment track and benchmark already satisfy most of the demanding requirements. The figures that back the "Satisfied" judgements live in the data (`benchmark/results/`, `docs/data/`) and the Evidence Companion; this table states only the mapping and the status. Status values are Satisfied, Partial, or Gap.
 
 | Requirement | Project artefact | Status |
 |---|---|---|
@@ -118,7 +118,7 @@ The dual assessment track and benchmark already satisfy most of the demanding re
 | trAIce M5: output format and post-processing | Structured JSON, per-category booleans, confidence scores; deterministic stage 2 | Satisfied |
 | trAIce M6: prompts and parameters | `prompts/` governance, `CHANGELOG.md`, negative constraints; decoding parameters (temperature, top-p, max tokens) and confidence thresholds not yet disclosed | Partial |
 | trAIce M8: human oversight | Full dual track, both human and LLM screening run parallel and independent across the corpus; the expert decision is binding | Satisfied (gold standard) |
-| trAIce M9 and R2: AI performance evaluation | Confusion matrix, Cohen's kappa for the decision and the ten categories, base rates, and the divergence analysis, with human consensus as the reference standard (see [[verification]]) | Satisfied (project strength) |
+| trAIce M9 and R2: AI performance evaluation | Confusion matrix, Cohen's kappa for the decision and the ten categories, base rates, and the divergence analysis, with human consensus as the reference standard | Satisfied (project strength) |
 | trAIce R1: flow diagram, AI vs human split | The recorded AI and human decisions exist; the tool renders the adapted flow diagram on its PRISMA & Report surface | Built (tool); paper text pending |
 | trAIce M10: data governance | `.vault_cache/` (reproducible API cache), open repository | Satisfied |
 | trAIce M1: protocol pre-registration of AI use | No PROSPERO or OSF protocol on record | Gap |
@@ -139,7 +139,7 @@ The dual assessment track and benchmark already satisfy most of the demanding re
 
 ## How this legitimises the workflow
 
-The project does not merely comply, it exceeds the baseline on the hard items. PRISMA-trAIce M8 asks what proportion of AI outputs were manually verified; here the answer is effectively complete, because every paper was screened independently by both an expert and the LLM, full dual screening rather than AI-first with human spot-checks. M9/R2 asks for an AI performance evaluation against a reference standard; the confusion matrix, kappa, and divergence analysis already are that evaluation (see [[verification]]). RAISE's accountability principle is the project's pre-existing thesis, that responsibility remains with the experts. The divergence between the LLM and the expert include rates is not a compliance failure but the empirical product of exactly the transparency these standards demand; it is visible only because AI and human decisions were recorded separately, which is what R1 asks for.
+The project does not merely comply, it exceeds the baseline on the hard items. PRISMA-trAIce M8 asks what proportion of AI outputs were manually verified; here the answer is effectively complete, because every paper was screened independently by both an expert and the LLM, full dual screening rather than AI-first with human spot-checks. M9/R2 asks for an AI performance evaluation against a reference standard; the confusion matrix, kappa, and divergence analysis already are that evaluation. RAISE's accountability principle is the project's pre-existing thesis, that responsibility remains with the experts. The divergence between the LLM and the expert include rates is not a compliance failure but the empirical product of exactly the transparency these standards demand; it is visible only because AI and human decisions were recorded separately, which is what R1 asks for.
 
 ## Sources
 
@@ -157,11 +157,10 @@ AI layer:
 
 ## What this note does not cover
 
-It does not reproduce the full 27-item PRISMA checklist text (see the official statement) or the full RAISE 1/2/3 guidance documents (tool-selection and tool-building recommendations are out of scope here). It is a reference note, not a conduct manual; the methodological how-to stays in [[methods]], the tool's data model and UI in [[data]] and [[specification]], and the conformance assessment in [[verification]].
+It does not reproduce the full 27-item PRISMA checklist text (see the official statement) or the full RAISE 1/2/3 guidance documents (tool-selection and tool-building recommendations are out of scope here). It is a reference note, not a conduct manual; the methodological how-to stays in [[methods]], the tool's data model and UI in [[data]] and [[specification]].
 
 ## Related
 
 - [[specification]]
-- [[verification]]
 - [[methods]]
 - [[project]]

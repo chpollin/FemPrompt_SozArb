@@ -87,7 +87,7 @@ Rules: `human_decision.binding` is always true and is the record of truth (NFR-0
 Derived from all `ScreeningRecord`s; the data behind the flow diagram. It keeps AI and human exclusions in separate fields, which is the core PRISMA-trAIce modification.
 
 ```json
-// counts are placeholders; the canonical figures live in [[verification]]
+// counts are placeholders; the figures live in the data (benchmark/results/, docs/data/) and the Evidence Companion
 {
   "identification": {
     "n_identified": 0,
@@ -106,7 +106,7 @@ Derived from all `ScreeningRecord`s; the data behind the flow diagram. It keeps 
 }
 ```
 
-Note the two include counts: the binding human count and the advisory AI count are both reported (PRISMA-trAIce R1 asks for the AI-processed numbers and outcomes alongside the human ones). The 2020 three-phase structure is used; there is no standalone Eligibility box. The AI figures in this illustrative block are on the paired papers; the shipped tool reports the AI track over all identified records, while the human track stays on the paired subset it covers. Both are correct for their reference set, and the matrix and kappa are always on the paired subset. The actual figures live in [[verification]].
+Note the two include counts: the binding human count and the advisory AI count are both reported (PRISMA-trAIce R1 asks for the AI-processed numbers and outcomes alongside the human ones). The 2020 three-phase structure is used; there is no standalone Eligibility box. The AI figures in this illustrative block are on the paired papers; the shipped tool reports the AI track over all identified records, while the human track stays on the paired subset it covers. Both are correct for their reference set, and the matrix and kappa are always on the paired subset. The actual figures live in the data (benchmark/results/, docs/data/) and the Evidence Companion.
 
 ## DisclosureMetadata (trAIce M2/M3/M6 + RAISE Table 1)
 
@@ -120,7 +120,7 @@ The fields the disclosure generator (FR-06) needs. Most come from `ai_decision`;
 | decoding parameters | `ai_decision.parameters` | trAIce M6b |
 | confidence threshold | session config | trAIce M7 |
 | human oversight | derived (proportion verified = 100% dual screening) | trAIce M8 |
-| validation metrics | external benchmark evaluation (see [[verification]]) | trAIce M9/R2, RAISE Table 1 |
+| validation metrics | external benchmark evaluation (the data and the Evidence Companion) | trAIce M9/R2, RAISE Table 1 |
 | limitations | session notes | trAIce D1, RAISE Table 1 |
 | conflicts of interest | session config | RAISE Table 1 |
 
@@ -180,7 +180,7 @@ What the screening view reads and searches, and what it deliberately does not.
 
 | What | Where | Count |
 |---|---|---|
-| Reading text (served) | `docs/vault/Papers/<title>.md` via `paper.knowledge_doc` | most papers; the served ones resolve under `docs/`, so `fetch(knowledge_doc)` works from `prisma.html` (counts in [[verification]]) |
+| Reading text (served) | `docs/vault/Papers/<title>.md` via `paper.knowledge_doc` | most papers; the served ones resolve under `docs/`, so `fetch(knowledge_doc)` works from `prisma.html` |
 | Abstract fallback | `paper.abstract` in `research_vault_v2.json` | used when no `knowledge_doc`; not every paper has an abstract |
 | Corpus search index | `docs/data/fulltext_index.json` (built by `scripts/build_screening_index.py`) | every paper, its text drawn from the knowledge doc, else the abstract, else none; figures from the build script |
 
@@ -213,7 +213,7 @@ The tool is seeded with the existing review, the round-1 data carried through PR
 | `benchmark/data/llm_assessment_10k.csv` | advisory AI decisions (Haiku) |
 | `benchmark/results/agreement_metrics.json` | reference agreement figures |
 
-A small build step (a `generate_*` script, to be added) maps these into the `Session` schema as the Stage R seeded session, the first-round decision data carried through PRISM; that it reproduces the canonical benchmark (the figures are in [[verification]]) is the conformance self-test on that pass.
+A small build step (a `generate_*` script, to be added) maps these into the `Session` schema as the Stage R seeded session, the first-round decision data carried through PRISM; that it reproduces the benchmark in the data (benchmark/results/, docs/data/) and the Evidence Companion is the conformance self-test on that pass.
 
 ## Was nicht reingehört
 

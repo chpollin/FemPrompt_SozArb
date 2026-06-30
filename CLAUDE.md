@@ -9,7 +9,7 @@
 
 This project builds an **epistemic infrastructure** for an LLM-assisted literature review. The central thesis is that reliability cannot be presupposed as a property of the system but must be established as a property of the research process. The workflow is organized around **verification checkpoints**, defined points after each AI-assisted step where human or rule-based control checks results before they flow into the next stage. PRISM (`docs/prisma.html`) is the binding screening surface this runs through; per ADR-019 the review counts complete only once all of its data has passed through PRISM under PRISMA 2020 and PRISMA-trAIce, with the items unrepairable in retrospect (the absent round-1 protocol above all) named, not hidden.
 
-A corpus of papers identified via four proprietary Deep Research systems was processed through a five-step workflow. A **dual assessment track** runs expert and LLM evaluation in parallel on the same ten-category schema, without mutual knowledge. The result is a substantial, asymmetric divergence between the LLM and the expert judgments. This divergence, decomposed and verified in `knowledge/verification.md`, is a motivating illustration of why reliability cannot be presupposed as a property of the system; it is not a finding the review defends but a worked example of why the epistemic infrastructure is needed.
+A corpus of papers identified via four proprietary Deep Research systems was processed through a five-step workflow. A **dual assessment track** runs expert and LLM evaluation in parallel on the same ten-category schema, without mutual knowledge. The result is a substantial, asymmetric divergence between the LLM and the expert judgments. This divergence is a motivating illustration of why reliability cannot be presupposed as a property of the system; it is not a finding the review defends but a worked example of why the epistemic infrastructure is needed.
 
 The Forum Wissenschaft 2/2026 paper is submitted and editorially closed (it was written on Google Docs, not in this repo). The active work is the PRISM screening tool and the follow-up paper on the epistemic infrastructure and the LLM-assisted review process, tracked in `knowledge/plan.md`.
 
@@ -17,7 +17,7 @@ The Forum Wissenschaft 2/2026 paper is submitted and editorially closed (it was 
 
 ## No volatile quantities
 
-Costs and metrics (dollar totals, token counts, kappas, confusion-matrix cells, include rates, corpus and pipeline counts) are NOT hand-maintained in the prose of this file or the knowledge docs. They drift and contradict each other. Numbers live in the data (`benchmark/results/`, `docs/data/`), in the Evidence Companion that renders them, and in `knowledge/verification.md`, which re-derives them from a committed script. State findings qualitatively and point there. This file names structural constants (ten categories, four Deep Research models, three pipeline stages) but not run statistics.
+Costs and metrics (dollar totals, token counts, kappas, confusion-matrix cells, include rates, corpus and pipeline counts) are NOT hand-maintained in the prose of this file or the knowledge docs. They drift and contradict each other. Numbers live in the data (`benchmark/results/`, `docs/data/`) and in the Evidence Companion that renders them. State findings qualitatively and point there. This file names structural constants (ten categories, four Deep Research models, three pipeline stages) but not run statistics.
 
 ---
 
@@ -50,7 +50,7 @@ Three layers:
 2. **Evidence Companion** (`docs/index.html` plus subpages): four views (Knowledge Chat, Knowledge Graph, Categories, Corpus), live at https://chpollin.github.io/FemPrompt_SozArb/.
 3. **Paper**: Forum Wissenschaft 2/2026, submitted and closed (on Google Docs). The follow-up paper is led by the infrastructure and the review method, not by a results claim.
 
-The benchmark (the human-LLM divergence and its decomposition, used as a motivating illustration) and all figures live in `knowledge/verification.md` and the data; do not restate them here.
+The benchmark (the human-LLM divergence and its decomposition, used as a motivating illustration) and all figures live in the data (`benchmark/results/`, `docs/data/`) and the Evidence Companion; do not restate them here.
 
 ### Assessment tracks
 
@@ -80,9 +80,9 @@ The benchmark (the human-LLM divergence and its decomposition, used as a motivat
 | `.vault_cache/` | LLM API cache (reproducible) | Do not change |
 | `prompts/` | Prompt governance and CHANGELOG | Read-only |
 
-### Knowledge documents (the 12)
+### Knowledge documents
 
-`INDEX.md` (navigation and glossary), `project.md` (identity and theory), `methods.md` (review method and pipeline), `specification.md` (PRISM requirements, ADRs, user stories), `data.md` (tool data substrate), `design.md` (UI and design system), `plan.md` (roadmap, status, simulated decisions), `journal.md` (session log), `verification.md` (audit and the numbers home), `standards.md` (PRISMA, trAIce, RAISE), `update-protocol.md` (round-2 protocol, analysis fields, RIS), `guides/manual-review-checklist.md`. Start at `INDEX.md`.
+`INDEX.md` (navigation and glossary), `project.md` (identity and theory), `methods.md` (review method and pipeline), `specification.md` (PRISM requirements, ADRs, user stories), `data.md` (tool data substrate), `design.md` (UI and design system), `plan.md` (roadmap, status, simulated decisions), `journal.md` (session log), `standards.md` (PRISMA, trAIce, RAISE), `update-protocol.md` (round-2 protocol, analysis fields, RIS), `guides/manual-review-checklist.md`. Start at `INDEX.md`.
 
 ### Key web files
 
@@ -122,7 +122,7 @@ Architecture rules: no build tool, no framework, no npm, CDN only (D3, Chart.js,
 
 ## Pipeline
 
-Workflow: Zotero papers, PDF acquisition (four fallback strategies), Markdown conversion (Docling), three-stage distillation (extract JSON, format Markdown, verify). The acquisition, conversion, and distillation loss chain is quantified in `knowledge/verification.md`, not here.
+Workflow: Zotero papers, PDF acquisition (four fallback strategies), Markdown conversion (Docling), three-stage distillation (extract JSON, format Markdown, verify). The acquisition, conversion, and distillation loss chain is quantified in the data (`benchmark/results/`, `docs/data/`) and the Evidence Companion, not here.
 
 Knowledge document structure: YAML frontmatter (title, authors, year, type, language, processed, source_file, confidence); sections Core Finding, Research Question, Methodology, Main Arguments, Category Evidence, Assessment Relevance, Key References. Categories live in `_stage1_json/` as booleans, not in the Markdown frontmatter.
 
@@ -142,7 +142,7 @@ Each piece of information has exactly ONE canonical location. Other files refere
 
 | Information | Canonical Location |
 |-------------|-------------------|
-| Benchmark figures, kappa revision, the divergence and its decomposition, conformance, novelty, paper integrity | `knowledge/verification.md` + `benchmark/results/agreement_metrics.json` |
+| Benchmark figures, the divergence and its decomposition | the data (`benchmark/results/`, `docs/data/`) and the Evidence Companion |
 | Script reference, pipeline method | `knowledge/methods.md` |
 | Category definitions | `benchmark/config/categories.yaml` |
 | Theory and operationalization | `knowledge/project.md` |
@@ -197,13 +197,13 @@ Use for multi-step tasks (three or more steps) and long operations. Mark `in_pro
 |---------|----------|
 | Windows `nul` file | Ignore (reserved device name, not git-tracked) |
 | "Kernaussage" vs "Kernbefund" | Correct is "Kernbefund" (Core Finding) |
-| Benchmark numbers | The merge bug (sequential ID instead of Zotero_Key, fixed 2026-03-27) made all pre-fix figures wrong; the canonical, recompute-verified figures and the union-vs-corpus and disagreement-count caveats are in `knowledge/verification.md`. Do not resurrect old numbers from history. |
-| Source_Tool field | Mostly empty; the provider split is a Zotero-Collections estimate, see `knowledge/verification.md` |
+| Benchmark numbers | The merge bug (sequential ID instead of Zotero_Key, fixed 2026-03-27) made all pre-fix figures wrong. The canonical figures live in the data (`benchmark/results/`, `docs/data/`) and the Evidence Companion; the union-vs-corpus and disagreement-count caveats apply. Do not resurrect old numbers from history. |
+| Source_Tool field | Mostly empty; the provider split is a Zotero-Collections estimate |
 | D3 Sankey links invisible | Use `fill: none` plus `stroke-width`, not `fill` |
 | Title matching | Five-strategy cascade (Stage1-JSON, KD-YAML, filename prefix, author+year, fuzzy) |
 | Windows MAX_PATH | Truncate filenames to 100 chars before the suffix |
 | `human_yes_rate` / `agent_yes_rate` | Scale 0 to 100, not 0 to 1 |
-| Gender category definition | The definition says "explicit gender focus" but experts read feminist theory as gender-relevant; Sonnet follows it literally, Haiku looser. Consider broadening it (see `knowledge/verification.md`). |
+| Gender category definition | The definition says "explicit gender focus" but experts read feminist theory as gender-relevant; Sonnet follows it literally, Haiku looser. Consider broadening it. |
 
 ---
 

@@ -4,13 +4,10 @@
 // docs/js/prisma.js (whose appended exposure block provides window.EC._test).
 // All fixtures are inline; nothing here fetches anything.
 //
-// Benchmark expectations trace to knowledge/verification.md (Part 1). The served seed
-// (docs/data/research_vault_v2.json) carries the human track on the 291 paired papers
-// (134 Include / 157 Exclude) and the AI track on all 326 (232 Include / 94 Exclude);
-// Section G asserts the flow aggregation reproduces these marginals from the real seed.
-// The paired confusion matrix 100/34/108/49 and Cohen kappa 0.0561 are asserted
-// out-of-tool by benchmark/scripts/replay_selftest.py and build_flow_model.py;
-// ADR-017 removed the in-tool kappa/matrix, so no JS test recomputes them.
+// The served seed (docs/data/research_vault_v2.json) carries a human track on the paired
+// subset and an AI track on all identified records; Section G asserts the flow aggregation
+// reproduces those marginals from the real seed. ADR-017 removed the in-tool kappa/matrix,
+// so no JS test recomputes them.
 
 (function() {
 'use strict';
@@ -133,9 +130,8 @@ test('divergent: differing decisions are divergent, equal or missing tracks are 
 
 // ============================================================
 // Section B removed with ADR-017: the human-AI agreement metrics
-// (computeMatrix, cohenKappa, kappaLabel) and their canonical-benchmark tests
-// left the tool. The canonical kappa now lives in benchmark/replay_selftest.py
-// (PASS 18/18), computed from the raw CSVs rather than the tool's loaded corpus.
+// (computeMatrix, cohenKappa, kappaLabel) and their tests left the tool.
+// Agreement is no longer computed in-tool; it belongs to the data, not this suite.
 // ============================================================
 
 // ============================================================
@@ -654,10 +650,9 @@ test('injectMachineEvidence pre-loads machine category evidence as advisory AI B
     T.setMachineEvidence(null);
 });
 
-// FR-05: the real served seed reproduces the canonical benchmark marginals. The
-// headless runner injects docs/data/research_vault_v2.json as window.__SEED_PAPERS__
-// (the app fetches it at runtime; headless has no network). kappa and the matrix are
-// asserted out-of-tool (replay_selftest.py, build_flow_model.py), not here.
+// FR-05: the real served seed reproduces the benchmark marginals. The headless runner
+// injects docs/data/research_vault_v2.json as window.__SEED_PAPERS__ (the app fetches it
+// at runtime; headless has no network). kappa and the matrix are not asserted here.
 if (window.__SEED_PAPERS__ && window.__SEED_PAPERS__.length) {
     test('FR-05: the real seed reproduces the canonical benchmark marginals', function() {
         T.setPapers(window.__SEED_PAPERS__);

@@ -13,7 +13,7 @@ generated-with: Claude Code
 method:
   name: Promptotyping
   url: https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin
-related: [plan, verification-empirical-core, verification-novelty]
+related: [plan]
 ---
 
 # REHEARSAL RUN, Claude Code lane

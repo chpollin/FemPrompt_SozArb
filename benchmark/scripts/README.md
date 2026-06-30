@@ -11,8 +11,6 @@ Scripts für den Human vs. Agent Assessment Benchmark.
 | `calculate_agreement.py` | Agreement-Metriken berechnen (Kappa) | Merged CSV | Metriken-JSON |
 | `analyze_disagreements.py` | Divergenzen qualitativ analysieren | Merged CSV | Disagreements-CSV |
 | `run_phase2_pipeline.py` | Phase 2 Pipeline orchestrieren | - | - |
-| `verify_femprompt.py` | Adversariale Nachrechnung aller Kernzahlen aus den Roh-CSVs (V1) | Roh-CSVs | Konsolen-Recompute |
-| `replay_selftest.py` | Regression-Guard, asserted die kanonischen Benchmark-Zahlen samt 292-Auflösung (plan R2) | Roh-CSVs | PASS/FAIL, Exit-Code |
 
 ## Workflow
 

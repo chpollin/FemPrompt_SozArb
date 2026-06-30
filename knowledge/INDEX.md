@@ -18,10 +18,10 @@ created: 2026-06-29
 updated: 2026-06-29
 authors: [Christopher Pollin]
 generated-with: Claude Code
-related: [project, methods, specification, data, design, plan, journal, verification, standards, update-protocol]
+related: [project, methods, specification, data, design, plan, journal, standards, update-protocol]
 ---
 
-This is the knowledge base of FemPrompt SozArb, a systematic literature review on feminist AI literacy and LLM bias in social work and the epistemic infrastructure built around it. It documents the conducted review and its benchmark, the PRISM screening tool, which is the binding screening surface the review is carried through (ADR-019), and the plan for the literature update. Concrete numbers do not live here: the benchmark figures live in `benchmark/results/` and in [[verification]], the corpus and screening data in `docs/data/` and `benchmark/data/`, and the Evidence Companion (https://chpollin.github.io/FemPrompt_SozArb/) renders them. This index shows where each piece of knowledge lives, in what order to read, and what the constitutive terms mean.
+This is the knowledge base of FemPrompt SozArb, a systematic literature review on feminist AI literacy and LLM bias in social work and the epistemic infrastructure built around it. It documents the conducted review and its benchmark, the PRISM screening tool, which is the binding screening surface the review is carried through (ADR-019), and the plan for the literature update. Concrete numbers do not live here. The benchmark figures live in the data (`benchmark/results/`, `docs/data/`), the corpus and screening data in `docs/data/` and `benchmark/data/`, and the Evidence Companion (https://chpollin.github.io/FemPrompt_SozArb/) renders them. This index shows where each piece of knowledge lives, in what order to read, and what the constitutive terms mean.
 
 ## Documents
 
@@ -36,7 +36,6 @@ In function order, not alphabetical.
 | [[design]] | UI and design system of the PRISM tool | per design iteration |
 | [[plan]] | Forward steering: the staged roadmap, current status, and simulated decisions | per phase |
 | [[journal]] | Genesis: the chronological session log with decisions and learnings | per session |
-| [[verification]] | Audit and the numbers home: the recompute and the divergence used as illustration, PRISMA/trAIce conformance with the round-1 record carried through PRISM and novelty survey, paper versus repository | when a claim is re-verified |
 | [[standards]] | The reporting standards implemented: PRISMA 2020, PRISMA-trAIce, RAISE | rarely |
 | [[update-protocol]] | The round-2 pre-registration protocol, the analysis-field design, the RIS procedure | until round 2 starts |
 | [[guides/manual-review-checklist]] | The human-in-the-loop markdown review checklist | rarely |
@@ -44,14 +43,14 @@ In function order, not alphabetical.
 ## Reading paths
 
 - Onboarding a new collaborator: [[project]], [[methods]], [[specification]].
-- Reproduce the benchmark: [[verification]], then run `benchmark/scripts/replay_selftest.py`.
+- Inspect the benchmark: the data (`benchmark/results/`, `docs/data/`) and the Evidence Companion.
 - Understand a tool decision: [[specification]] (the Entscheidungen / ADR section), [[journal]], [[design]].
-- Understand the divergence (the motivating illustration): [[verification]] (part 1).
+- Understand the divergence (the motivating illustration): [[methods]].
 - Prepare the literature update: [[plan]] (Stage B), [[update-protocol]], [[standards]].
 
 ## Convention
 
-This knowledge base follows the convention for Promptotyping documents. It fixes the frontmatter schema (the Pflichtkern `title, project, method, status, created, updated`, with `version` shared repo-wide), the reading heuristic by function, and the structure principles every document is read against. The convention also forbids volatile quantities in the prose, which is why the numbers live in the data and in [[verification]], not here.
+This knowledge base follows the convention for Promptotyping documents. It fixes the frontmatter schema (the Pflichtkern `title, project, method, status, created, updated`, with `version` shared repo-wide), the reading heuristic by function, and the structure principles every document is read against. The convention also forbids volatile quantities in the prose, which is why the numbers live in the data (`benchmark/results/`, `docs/data/`) and the Evidence Companion, not here.
 
 ## Glossary
 
@@ -64,7 +63,7 @@ A pinned piece of evidence in the PRISM tool: a search hit or selected passage a
 The generation of coherent but factually unsupported claims without internal verification. Preferred over "hallucination" because it names the generative mechanism rather than a sensory metaphor.
 
 ### Conformance by construction
-The property that the screening record satisfies a reporting standard (PRISMA-trAIce R1, the AI-versus-human split; the disclosure) because the data model records AI and human decisions as separate first-class records, so the conformant artifacts fall out of the data rather than being written after the fact. The defensible novelty claim of the tool, see [[verification]].
+The property that the screening record satisfies a reporting standard (PRISMA-trAIce R1, the AI-versus-human split; the disclosure) because the data model records AI and human decisions as separate first-class records, so the conformant artifacts fall out of the data rather than being written after the fact. The defensible novelty claim of the tool.
 
 ### Context rot
 The degradation of an LLM's processing quality as the input grows longer (Hong et al. 2025). The motivation for the distillation pipeline, which shortens full texts into knowledge documents before assessment.
@@ -76,7 +75,7 @@ Agent-based LLM systems for iterative, autonomous literature search with cited s
 The three-stage extraction of full texts into knowledge documents: an LLM extracts and classifies (stage 1), deterministic software formats (stage 2, no LLM), and an LLM verifies against the original (stage 3). The deterministic middle stage and the verification stage are the epistemic-infrastructure measures against unsecured LLM output.
 
 ### Divergence
-A disagreement between the human and the LLM assessment of a paper, on the decision or on a category. The motivating illustration for the infrastructure; classified into three patterns (Semantic Expansion, Implicit Field Membership, Keyword Inclusion). Divergence is reported as divergence, never as an error rate, because the human track has no independent inter-human baseline. The figures and the decomposition are in [[verification]].
+A disagreement between the human and the LLM assessment of a paper, on the decision or on a category. The motivating illustration for the infrastructure; classified into three patterns (Semantic Expansion, Implicit Field Membership, Keyword Inclusion). Divergence is reported as divergence, never as an error rate, because the human track has no independent inter-human baseline. The figures and the decomposition live in the data (`benchmark/results/`, `docs/data/`) and the Evidence Companion.
 
 ### Dual assessment track
 The parallel, independent arrangement of an expert track and an LLM track on the same ten-category schema, without mutual knowledge. The methodological centerpiece, designed so the comparison reveals where the two epistemic foundations converge and diverge.
@@ -111,6 +110,6 @@ A defined point in the workflow where human or rule-based control checks AI-gene
 ## What is missing and why
 
 - No `architecture.md`. The tool is a static vanilla-JS page with no backend; its construction is covered by [[specification]], [[data]], and [[design]], and the research pipeline by [[methods]].
-- No `testing.md`. The tool's behaviour tests live in `tests/` (a zero-dependency jsdom harness) and the empirical and conformance audits in [[verification]].
+- No `testing.md`. The tool's behaviour tests live in `tests/` (a zero-dependency jsdom harness).
 - No `report.md` (a status report for an external recipient). The current state lives in [[plan]] and this index; a formal external report is deferred to the FFG report and the follow-up paper.
-- No numbers in the prose. Volatile quantities live in `benchmark/results/`, `docs/data/`, the Evidence Companion, and [[verification]], by convention.
+- No numbers in the prose. Volatile quantities live in the data (`benchmark/results/`, `docs/data/`) and the Evidence Companion, by convention.
