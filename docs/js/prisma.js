@@ -1122,6 +1122,10 @@ function editRecord(p) {
 function gotoNextOpen() {
     focusReadingOnRender = true;
     let d = curDec();
+    // Visit every undecided paper, including textless ones (unlike firstEntryIndex, which
+    // only avoids opening *on* boilerplate): a paper without usable text must still be
+    // reachable so the reviewer can exclude it as No full text. Skipping it here would
+    // leave it permanently unscreened.
     for (let i = 0; i < papers.length; i++) {
         const j = (state.index + 1 + i) % papers.length;
         if (!d[papers[j].id]) { state.index = j; renderScreening(); return; }
