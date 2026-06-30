@@ -259,15 +259,20 @@ function loadData() {
 
                 // Match divergences to allPapers by normalized title
                 const titleMap = {};
+                const idMap = {};
                 allPapers.forEach(function(p) {
                     let key = (p.title || '').toLowerCase().substring(0, 80).trim();
                     if (key) titleMap[key] = p;
+                    if (p.id) idMap[p.id] = p;
                 });
 
                 let matched = 0;
                 (ptData.divergences || []).forEach(function(div) {
                     let key = (div.title || '').toLowerCase().substring(0, 80).trim();
-                    let paper = titleMap[key];
+                    // Match on the stable Zotero-key id first. The title/author_year cascade is a
+                    // fallback only: distinct papers can share an author_year (several "Reamer (2023)"),
+                    // and last-write-wins on that key collapsed them onto one object and duplicated cards.
+                    let paper = (div.paper_id && idMap[div.paper_id]) || titleMap[key];
                     if (!paper && div.author_year) {
                         paper = allPapers.find(function(p) {
                             return p.author_year === div.author_year;
@@ -296,7 +301,7 @@ function loadData() {
                 (ptData.papers || []).forEach(function(ptPaper) {
                     if (!ptPaper.knowledge_sections && !ptPaper.knowledge_summary) return;
                     let key = (ptPaper.title || '').toLowerCase().substring(0, 80).trim();
-                    let paper = titleMap[key];
+                    let paper = (ptPaper.id && idMap[ptPaper.id]) || titleMap[key];
                     if (!paper && ptPaper.author_year) {
                         paper = allPapers.find(function(p) { return p.author_year === ptPaper.author_year; });
                     }
@@ -394,7 +399,6 @@ function renderIntroNumbers() {
     const el = function(id) { return document.getElementById(id); };
     if (el('total-count-intro')) el('total-count-intro').textContent = allPapers.length;
     if (el('human-count-intro')) el('human-count-intro').textContent = withDecision;
-    if (el('llm-count-intro')) el('llm-count-intro').textContent = allPapers.length;
     if (el('kd-count-intro')) {
         let kdCount = allPapers.filter(function(p) { return p.knowledge_doc; }).length;
         el('kd-count-intro').textContent = kdCount;
@@ -488,8 +492,11 @@ function sortPapers(papers, sortBy) {
         case 'status':
             sorted.sort(function(a, b) {
                 const order = { 'false': 0, 'true': 1, 'null': 2 };
-                let aVal = order[String(a.benchmark.agreement)] || 2;
-                let bVal = order[String(b.benchmark.agreement)] || 2;
+                // explicit lookup: order['false'] is 0, and `0 || 2` would push divergences
+                // (the rows this sort exists to surface) to the bottom instead of the top
+                const rank = function(v) { let k = String(v); return order.hasOwnProperty(k) ? order[k] : 2; };
+                let aVal = rank(a.benchmark.agreement);
+                let bVal = rank(b.benchmark.agreement);
                 return aVal - bVal;
             });
             break;

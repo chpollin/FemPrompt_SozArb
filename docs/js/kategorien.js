@@ -145,7 +145,7 @@ function renderDetail(cat) {
         html += '<div class="kdetail-papers" id="kdetail-papers-list">';
         catDivergences.forEach(function(p, idx) {
             const cc = p.divergence.category_comparison || {};
-            const catComp = cc[cat] || cc[cat.replace(/_/g, ' ')] || {};
+            const catComp = cc[cat] || {};
             const humanVal = catComp.human === 'Ja' ? 'Ja' : catComp.human === 'Nein' ? 'Nein' : '–';
             const llmVal = catComp.llm === 'Ja' ? 'Ja' : catComp.llm === 'Nein' ? 'Nein' : '–';
             const pattern = p.divergence.pattern || '';
