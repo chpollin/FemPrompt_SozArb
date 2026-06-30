@@ -24,6 +24,13 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## PRISM and the epistemic infrastructure (June 2026)
 
+### 2026-06-30 (Session 27): Audit-Workflow über Frontend und Pipeline, entscheidungsfreie Funde umgesetzt
+
+- **Ziel:** Frontend und Datenverarbeitung geerdet verbessern, ohne Arbeit zu erfinden; den entscheidungsfreien Teil sofort umsetzen, die operatorpflichtigen Funde vorlegen statt eigenmächtig ganze Skripte zu löschen.
+- **Verlauf:** Ein Acht-Wege-Audit-Workflow (lesende Auditoren je Subsystem, jeder Fund adversarisch verifiziert) lieferte 17 bestätigte Funde, 21 low, 2 vom Verify verworfen, darunter ein vermeintlicher f-string-Crash in compare_conditions.py, der valides Python ist (Fill-Zeichen `:` mit Linksausrichtung). Umgesetzt in vier Commits: (C1) Companion-Korrektheit, Divergenzen über die stabile paper_id statt Titel plus author_year matchen, weil distinct Paper mit gleichem author_year unter last-write-wins zu doppelten Karten und Datenverlust kollabierten, Status-Sortierung repariert (order['false'] ist 0, und 0 || 2 versenkte die Divergenzen ans Ende), tote Schreibzugriffe entfernt; (C2) tote kappa/meta-Fläche im prisma-data-Shim und veraltete benchmark/-Pfade plus tote Felder in der Import-Bridge; (C3) toter Generatorcode, build_machine_evidence und machine_evidence.json nach ADR-022, compute_category_graph und graph_data.json (vis-network, von keinem JS gelesen), die ensure_*-Funktionen in utils, beide Waisen-JSONs git-entfernt; (C4) zwei echte Pipeline-Bugs (ungültige Haiku-Snapshot-ID, fehlgeleiteter Sonnet-Kostenschlüssel) und der behaviorale Stale-Path-Sweep über Defaults, Fehlermeldung und src/assess/README.
+- **Ergebnis:** Vier Commits auf dem Branch, Harness durchgehend 69/69, Companion- und Python-Syntax geprüft. Die fünf operatorpflichtigen Funde (ganze archivierte Skripte oder Alternativpfade löschen) und der gotoNextOpen-Screenable-Guard bleiben als Entscheidung offen, ebenso O2.
+- **Dead Ends:** Den rein dekorativen Docstring-Pfad-Sweep über rund zehn weitere Dateien bewusst zurückgestellt, reine Copy-paste-Beispiele ohne Funktionswirkung; jede Datei dafür einzeln zu lesen ist Fehlkalibrierung, benannt statt still abgeschnitten. utils.get_default_config strukturell nicht angetastet (Fallback-Config), nur die Stale-Strings korrigiert.
+
 ### 2026-06-30 (Session 26): Cut 3 bis O4 gebaut, der zweite Agentenlauf eingearbeitet
 
 - **Ziel:** Die im Redesign entscheidungsfreien Schnitte umsetzen und den zweiten, am laufenden Tool geführten Browser-Agentenlauf einarbeiten, bis zu einem stabilen Commit und Push auf dem Branch.
