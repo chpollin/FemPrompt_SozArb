@@ -10,7 +10,7 @@ status: complete
 language: en
 version: "0.2"
 created: 2026-02-21
-updated: 2026-06-29
+updated: 2026-07-01
 authors: [Christopher Pollin]
 generated-with: Claude Code
 topics: ["[[Systematic Review]]", "[[PRISMA]]"]
@@ -43,12 +43,12 @@ Zotero integration. Sequential import of RIS files into model-specific collectio
 
 Epistemological rationale. The dual assessment track is the methodological centerpiece. The decision for parallel mode, not sequential, is deliberate: a sequential arrangement would have limited the LLM track to a preparatory function, while parallel mode enables systematic comparison and reveals where the epistemic contributions converge and diverge. Dual refers to two characteristics at once, two independent assessment instances (expert reviewers and LLM) and two different epistemic foundations. Both tracks operate on PRISMA guidelines, identical criteria with different epistemic foundations; the separation protects the expert reviewers from having LLM results influence their assessment.
 
-Categories. Ten binary categories in two dimensions, defined canonically in `assessment/categories.yaml` and not redefined here:
+Categories. Ten categories in two dimensions, defined canonically in `assessment/categories.yaml` and not redefined here:
 
 - Technology: AI_Literacies, Generative_KI, Prompting, KI_Sonstige.
 - Social: Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness.
 
-Inclusion logic: a paper is included if at least one technology dimension AND at least one social dimension apply. Exclusion reasons (controlled): Duplicate, Not_relevant_topic, Wrong_publication_type, No_full_text, Language.
+Scoring. The completed benchmark tracks scored the categories binary (Yes/No). The PRISM screening (ADR-024, [[specification]]) scores them three-level, nein/teilweise/ja, and derives a three-way decision: both dimensions ja yields Include, both at least teilweise yields Unclear, any dimension entirely nein yields Exclude. The existing binary annotations are read as-is. Exclusion reasons (controlled): Duplicate, Not_relevant_topic, Wrong_publication_type, No_full_text, Language.
 
 Expert track (epistemically authoritative). Researchers from social work, gender and diversity studies, and technology studies assess each study against the ten categories. This is the epistemically authoritative reference track, because accountability and responsibility reside only here.
 

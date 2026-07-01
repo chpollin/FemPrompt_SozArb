@@ -7,7 +7,7 @@ status: active
 language: en
 version: "0.3"
 created: 2026-06-09
-updated: 2026-06-30
+updated: 2026-07-01
 authors: [Christopher Pollin]
 generated-with: Claude Code
 method:
@@ -396,7 +396,7 @@ Every decision in this section is simulated. The project decided on 2026-06-09 n
 | Claude Code lane L5 | runs as a documented fifth lane | the rehearsal runs showed it works; an extra documented lane strengthens the multi-system design |
 | Prompt provenance | cite `corpus/deep-research/literature-review-prompt.md` as the documented template, with the loss of the instantiated round-1 prompt stated as a known gap | settled by the submitted paper's own citation practice |
 | Reviewer identifiers | neutral ids `reviewer-1` / `reviewer-2` repo-wide (avoids the R1 collision with the trAIce item id and the plan phase) | privacy-clean, PRISMA-sufficient, collision-free |
-| Unclear decisions at import | imported as report items, not decisions; visible until resolved in Excel | the schema keeps two-valued decisions; Unclear is a work state |
+| Unclear decisions in the tool vs at import | in PRISM, Unclear is now a first-class derived decision from the three-level categories (ADR-024); the Excel import bridge still treats an Unclear row as a report item pending a bridge update (Batch 5) | the three category levels map onto Include/Unclear/Exclude, so Unclear is the honest resting state for partial coverage, not merely a work state |
 
 ### User-story validation (the stories in [[specification]])
 

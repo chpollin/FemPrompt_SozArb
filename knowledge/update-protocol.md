@@ -10,7 +10,7 @@ status: draft
 language: en
 version: "0.2"
 created: 2026-06-09
-updated: 2026-06-29
+updated: 2026-07-01
 authors: [Christopher Pollin]
 generated-with: Claude Code
 topics: ["[[Pre-Registration]]", "[[Coding Scheme]]"]
@@ -28,11 +28,11 @@ This document is the pre-registration protocol for the second literature round (
 
 ## 2. Eligibility criteria
 
-Eligibility is defined by `assessment/categories.yaml`, version 1.2, and is used unchanged: the ten binary categories, the inclusion logic (at least one technology dimension AND at least one social dimension), and the controlled exclusion vocabulary are not restated here; the YAML file is the single source of truth.
+Eligibility is defined by `assessment/categories.yaml`, version 1.2, and is used unchanged: the ten categories in two dimensions (technology and social) and the controlled exclusion vocabulary are not restated here; the YAML file is the single source of truth. PRISM scores the categories three-level and derives the decision (both dimensions ja yields Include, both at least teilweise yields Unclear, any dimension entirely nein yields Exclude; ADR-024, [[specification]]); the requirement that both a technology and a social dimension be present is unchanged from round 1.
 
 The analysis-field extension adds capture fields for the analysis question. These are descriptive coding fields, not eligibility criteria. If merging the extension into `assessment/categories.yaml` bumps the file version, the eligibility-relevant content remains identical to v1.2; any change to eligibility-relevant content would be a protocol amendment.
 
-Additional time restriction for this round: only records published in or after October 2025 enter screening (section 4 derives the cutoff). Earlier records are out of scope for round 2 because round 1 covered them; if a search returns earlier records, they are removed at deduplication or excluded with the existing vocabulary, not silently dropped.
+Additional time restriction for this round: only records published from July 2025 up to and including June 2026 enter screening (section 4 derives the window). Earlier records are out of scope for round 2 because round 1 covered them; if a search returns earlier records, they are removed at deduplication or excluded with the existing vocabulary, not silently dropped.
 
 ## 3. Information sources
 
@@ -58,13 +58,13 @@ Round 2 uses the same prompt as round 1, with exactly one added sentence (the ti
 
 Provenance caveat, stated openly: the repository carries two accounts of the round 1 prompt. `corpus/deep-research/literature-review-prompt.md` presents a two-part prompt (a KONTEXT block with the research question plus a generic analysis prompt) as the prompt that generated the round 1 outputs. `prompts/CHANGELOG.md` records that the exactly instantiated round 1 prompt was never committed and is genuinely lost, with only the parametric template restored from Git history. This protocol uses the text of `corpus/deep-research/literature-review-prompt.md` as the documented round 1 prompt, because it is the only complete, instantiable prompt text in the repository and is already the referenced basis for the paper. The claim is therefore "round 2 uses the documented round 1 prompt", not "round 2 uses the verbatim executed round 1 prompt"; the latter is unprovable for round 1. Resolving the status of that file is an open item for finalization.
 
-### 4.2 The round 1 cutoff and the time restriction sentence
+### 4.2 The round 2 window and the time restriction sentence
 
-The round 1 search execution date was not recorded at run time. The repository bounds it to October 2025: the prompt existed and was deleted in October 2025 (`prompts/CHANGELOG.md`); the restored template's source commit `0a98f49` is dated 31.10.2025; the corpus built from the searches was assessed by the 5D track on 2025-11-02. The cutoff is therefore set to October 2025, and the restriction includes the cutoff month itself ("in or after October 2025"), deliberately overlapping the round 1 search period; overlap duplicates are removed by the pre-specified deduplication step, which is cheaper than risking a coverage gap. If a precise execution date emerges from sources outside the repository, the cutoff is corrected by amendment before the first run.
+The round 1 search execution date was not recorded at run time; the repository bounds it to October 2025 (the prompt existed and was deleted in October 2025, `prompts/CHANGELOG.md`; the restored template's source commit `0a98f49` is dated 31.10.2025; the corpus was assessed by the 5D track on 2025-11-02). Round 2 sets the window to July 2025 through June 2026. The lower bound is pulled back from the October execution date to July deliberately: round 1's late-October run may have missed mid-2025 papers not yet indexed at search time, so the wider window is safer for coverage, and the overlap with the round 1 period (July to October 2025) is removed by the pre-specified deduplication step (section 4.4), which is cheaper than risking a gap. The upper bound is June 2026, the end of the fellowship search period. This is the recorded default; a narrower lower bound (October 2025) or a precise round 1 execution date would be a dated amendment before the first run.
 
 The single added sentence, appended at the end of the prompt:
 
-> Only include literature published in or after October 2025, because work published before October 2025 was already covered by the first search round executed in October 2025, and this time restriction supersedes the year range 2023-2025 stated in task 1.
+> Only include literature published from July 2025 up to and including June 2026, because work published before July 2025 was already covered by the first search round, and this time restriction supersedes the year range 2023-2025 stated in task 1.
 
 No other wording of the round 1 prompt is changed. Appendix A flags every deviation inline.
 
@@ -145,7 +145,7 @@ None yet. Format: date, what changed, why, which runs were affected.
 ## 10. Open items before finalization
 
 1. Status of `corpus/deep-research/literature-review-prompt.md` versus the lost-prompt record (section 4.1): human decision on how the provenance is described in the final protocol.
-2. Round 1 cutoff precision (section 4.2): confirm October 2025 or correct by amendment if a precise execution date exists outside the repository.
+2. Round 2 window (section 4.2): the recorded default is July 2025 to June 2026; confirm, or narrow the lower bound to October 2025, or correct by amendment if a precise round 1 execution date exists outside the repository.
 3. Analysis-field extension not yet frozen; items 3 to 5 of section 8 depend on it. The freeze must precede the B2 screening start; this protocol requires it before the first search so the pre-registration is complete in one commit state. Confirm or relax that stricter ordering.
 4. Full-batch versus split screening for R1 and R2 (affects the inter-human baseline, section 6).
 5. Decision on running L5 (Claude Code web research lane), with model version recording if yes.
@@ -188,7 +188,7 @@ Seven new fields plus one reused field. Each field exists because at least one s
 Closed value lists:
 
 - `AN_Prompt_Techniques` (multi): `ICL`, `Thought_Generation`, `Decomposition`, `Ensembling`, `Self_Criticism`, `Role_Persona`, `General_Guidance`, `None`. Grounded in The Prompt Report's five top-level groups; `Role_Persona` is promoted out of the zero-shot family to its own code because role and persona prompts are the form in which prompting most often appears in professional-practice guidance (a proposal, open decision 6).
-- `AN_Bias_Axes` (multi): `Gender`, `Race_Ethnicity`, `Intersectional`, `Disability`, `Age`, `Socioeconomic`, `Language_Culture`, `Sexual_Orientation_Identity`, `Other_Axis`, `None`. Deliberately internal, refining the corpus's social dimension and the project's intersectional framework; no external taxonomy was verified as canonical for axis enumeration. `Intersectional` requires at least two axes treated in their interaction, not merely co-mentioned.
+- `AN_Bias_Axes` (multi): `Gender`, `Race_Ethnicity`, `Intersectional`, `Disability`, `Age`, `Socioeconomic`, `Language_Culture`, `Sexual_Orientation_Identity`, `Religion`, `Physical_Appearance`, `Nationality_Migration`, `Other_Axis`, `None`. Deliberately internal, refining the corpus's social dimension and the project's intersectional framework; no external taxonomy was verified as canonical for axis enumeration. `Religion`, `Physical_Appearance`, and `Nationality_Migration` were added after the corpus mine found each independently evidenced (benchmark axes in BBQ/StereoSet/LIBRA, migration and coloniality in the social-work subset) rather than folded into `Other_Axis`. `Intersectional` requires at least two axes treated in their interaction, not merely co-mentioned.
 - `AN_Harm_Types` (multi, optional): the Gallegos et al. 2024 Table 1 taxonomy verbatim, `Derogatory_Language`, `Disparate_Performance`, `Erasure`, `Exclusionary_Norms`, `Misrepresentation`, `Stereotyping`, `Toxicity`, `Direct_Discrimination`, `Indirect_Discrimination`, plus `None`. Proposed as optional (open decision 2) because it is the hardest field to code reliably; SQ2 survives without it at reduced resolution.
 - `AN_Mitigation_Stage` (multi): the four Gallegos et al. model-side stages `Pre_Processing`, `In_Training`, `Intra_Processing`, `Post_Processing`, plus two project additions, `Prompt_Practice` (user-side prompt formulation at use time) and `Organisational_Process` (guidelines, training, oversight, workflow), plus `None`.
 - `AN_Mitigation_Status` (single ordinal): `Evaluated`, `Demonstrated`, `Proposed`, `None`.
@@ -306,7 +306,7 @@ The results serve as a comprehensive scientific review and must be written in a 
 2. Concise summary of the key statements
 3. Critical quality assessment including explicit justification
 
-Only include literature published in or after October 2025, because work published before October 2025 was already covered by the first search round executed in October 2025, and this time restriction supersedes the year range 2023-2025 stated in task 1. [DEVIATION: the single time restriction added for round 2, required by section 4.2]
+Only include literature published from July 2025 up to and including June 2026, because work published before July 2025 was already covered by the first search round, and this time restriction supersedes the year range 2023-2025 stated in task 1. [DEVIATION: the single time restriction added for round 2, required by section 4.2]
 ```
 
 ## A.2 Lanes L1 to L4 (ChatGPT, Claude, Gemini, Perplexity)

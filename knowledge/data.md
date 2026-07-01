@@ -7,7 +7,7 @@ status: complete
 language: en
 version: "0.2"
 created: 2026-06-09
-updated: 2026-06-30
+updated: 2026-07-01
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 4.8)
 method:
@@ -26,11 +26,11 @@ This document describes the substrate the PRISMA screening tool consumes and pro
 
 ## Category schema (reused, not redefined)
 
-Ten binary categories, split into two dimensions, with the inclusion rule from [[methods]]:
+Ten three-level categories (nein/teilweise/ja = 0/1/2), split into two dimensions, with the three-way derivation from [[methods]] (ADR-024). The existing benchmark annotations (human and LLM `all_categories`) stay binary 0/1 and are read as-is; a legacy boolean and a pinned human Beleg coerce to ja.
 
 - Technology: `AI_Literacies`, `Generative_KI`, `Prompting`, `KI_Sonstige`
 - Social: `Soziale_Arbeit`, `Bias_Ungleichheit`, `Gender`, `Diversitaet`, `Feministisch`, `Fairness`
-- Inclusion: a paper is included iff (>=1 technology) AND (>=1 social).
+- Derivation: both dimensions ja yields Include; both at least teilweise yields Unclear; any dimension entirely nein yields Exclude.
 - Exclusion reasons (controlled): `Duplicate`, `Not_relevant_topic`, `Wrong_publication_type`, `No_full_text`, `Language`.
 
 Canonical definitions stay in `assessment/categories.yaml`; the tool reads them, it does not fork them.
@@ -182,17 +182,16 @@ Versioning: the reviewer files are committed in GitHub Desktop outside the tool 
 
 What the screening view reads and searches, and what it deliberately does not.
 
-| What | Where | Count |
+| What | Where | Note |
 |---|---|---|
-| Reading text (served) | `docs/vault/Papers/<title>.md` via `paper.knowledge_doc` | most papers; the served ones resolve under `docs/`, so `fetch(knowledge_doc)` works from `prisma.html` |
-| Abstract fallback | `paper.abstract` in `research_vault_v2.json` | used when no `knowledge_doc`; not every paper has an abstract |
-| Corpus search index | `docs/data/fulltext_index.json` (built by `src/publish/build_screening_index.py`) | every paper, its text drawn from the knowledge doc, else the abstract, else none; figures from the build script |
+| Reading text (Volltext layer) | `docs/data/fulltext/{id}.md` via `fetchFullText`, listed in `fulltext_manifest.json` | the cleaned Docling full text, built by `src/publish/build_fulltext.py`; local clone only, gitignored (ADR-025). 283 of 326 papers carry one |
+| KI-Extraktion layer | the distillation from `paper.knowledge_doc` (`## Kernbefund` onward) | shown as a separate, clearly marked AI layer (ADR-016) |
+| Abstract fallback | `paper.abstract` in `research_vault_v2.json` | used when no full text exists; not every paper has an abstract |
+| Corpus search index | `docs/data/fulltext_index.json` (built by `src/publish/build_screening_index.py`) | stays distillation-based, not the full text, for the same copyright reason |
 
-Important: the served `docs/vault/Papers/*.md` are **not** raw full text. They are the distilled knowledge documents (an English abstract plus the German Kernbefund, Methodik, Hauptargumente, and Kategorie-Evidenz, the last of which already carries real per-category quotes). The raw Docling full texts live in `generated/markdown_clean/`, which is **not served** and holds copyrighted, paywalled papers. Publishing those to the public Pages site is outward-facing and not done by default.
+The raw Docling full texts live in `generated/markdown_clean/` and hold copyrighted, paywalled papers. `build_fulltext.py` cleans them (frontmatter, image comments, GLYPH artefacts) into `docs/data/fulltext/`, which is gitignored and never pushed; the public Pages site keeps only the fallback. Publishing the full texts publicly is outward-facing and a separate, rights-gated decision (ADR-025).
 
-The screening view fetches `paper.knowledge_doc` on demand through a single seam (`fetchPaperText` in `prisma.js`) and renders it with a built-in minimal Markdown renderer (no dependency). In-text search runs over the rendered document; corpus-wide search runs over the prebuilt `fulltext_index.json` (instant, one lazy load, no per-document fetch storm). The AI proposal (`paper.llm`) stays available but collapsed; it is not part of the evidence.
-
-Layer split (ADR-016): because the served document concatenates the paper layer (Abstract, Key Concepts, Full Text) and the machine-extraction layer (Kernbefund onward), the reading view splits it at the first `## Kernbefund` heading (`splitDocLayers`) and offers a Volltext / KI-Extraktion toggle; the KI-Extraktion view carries a band marking it as non-verbatim. The split lands cleanly on all served documents. The layer a snippet is pinned from sets its `origin`, binding the provenance of a Beleg to its actual source.
+The screening view fetches the full text and the knowledge doc together (`loadReadingInto`): the Volltext layer renders the full text with a built-in minimal Markdown renderer, the KI-Extraktion layer renders the distillation (`splitDocLayers` takes the `## Kernbefund` onward). In-text search runs over the rendered document (debounced); corpus-wide search runs over `fulltext_index.json` (instant, one lazy load). The AI proposal (`paper.llm`) stays collapsed and is not evidence. The layer a snippet is pinned from sets its `origin`, binding a Beleg's provenance to its source (ADR-016).
 
 Text-source options (a copyright decision, not yet taken): (1) keep the served knowledge documents, current and publishable; (2) read the raw local full text from the connected clone (`generated/markdown_clean/`), never published, public fallback to the knowledge document; (3) publish the raw full texts. Because the source is one function, switching to (2) or (3) is a one-function change.
 

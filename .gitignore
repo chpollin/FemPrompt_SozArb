@@ -78,3 +78,10 @@ generated/vault/.obsidian/
 
 # Node (test harness dev dependency only; the app under docs/ stays vanilla)
 node_modules/
+
+# Local-only full texts for the PRISM reading pane (built by src/publish/build_fulltext.py
+# from generated/markdown_clean/). Mostly copyrighted paywalled papers, so the reading pane
+# reads them from a local clone but they are NEVER published to the public GitHub Pages site.
+# Publishing publicly is a separate, rights-gated decision.
+docs/data/fulltext/
+docs/data/fulltext_manifest.json

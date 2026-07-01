@@ -4,9 +4,17 @@
 
 metadata:
   project: Literature Review (AI Literacy & Bias in Social Work)
-  last_updated: 2026-02-18
+  last_updated: 2026-07-01
   status: active
+  # The category "type: binary" below describes the completed benchmark tracks (human and
+  # LLM 10K). The PRISM screening tool scores the same categories three-level and derives a
+  # three-way decision (ADR-024, knowledge/specification.md); the benchmark annotations are
+  # read as-is.
+  screening_scale:
+    levels: [nein, teilweise, ja]   # 0 / 1 / 2
+    derivation: "both dimensions ja => Include; both at least teilweise => Unclear; any dimension entirely nein => Exclude"
   changelog:
+    - "2026-07-01: three-level PRISM screening scale documented (ADR-024); benchmark type stays binary."
     - "v1.2: Beispiele fuer Bias_Ungleichheit, Gender, Diversitaet, Fairness ergaenzt. Doku synchronisiert."
     - "v1.1: KI_Sonstige zur Inklusions-Logik hinzugefügt (algorithmische Systeme in Sozialer Arbeit)"
 

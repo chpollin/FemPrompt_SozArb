@@ -1,13 +1,15 @@
 // PRISMA Screening Tool (PRISM) -- standalone evidence-grounded screening instrument.
-// The screening view is built around reading and searching the knowledge document and
-// pinning found passages as Belege (evidence) on categories. AI is reduced to an optional
+// The screening view is built around reading and searching the paper's original full text
+// (the Volltext layer; the AI distillation is a separate KI-Extraktion layer) and pinning
+// found passages as Belege (evidence) on categories. AI is reduced to an optional
 // collapsed suggestion; human and AI assessment are brought together, not scored against
 // each other -- the human-AI comparison surface (matrix, kappa, divergence) was removed
 // (knowledge/specification.md ADR-014), and with ADR-017 its last vestige is gone too:
 // the in-tool kappa and confusion matrix of the AI-disclosure line. AI-human agreement
 // is evaluated outside the tool on the benchmark corpus (PRISMA-trAIce M9/R2 by reference).
 //
-// Three surfaces: Screening | PRISMA & Report | Daten & Repo.
+// One screening workspace (ADR-020); the report and data functions remain in code as
+// on-demand panels, not surfaced in the toolbar.
 // Human decision is binding (RAISE); the AI proposal is advisory and stored separately
 // so the flow diagram splits AI from human decisions (PRISMA-trAIce R1).
 // Persistence: File System Access writes one JSON per reviewer (schema 0.2, with an
@@ -102,6 +104,8 @@ let corpusIndex = null;        // id -> { t, ay, kd, src, n, x } for corpus full
 let corpusIndexPromise = null;
 let corpusQuery = '';          // current corpus-wide search (left pane)
 const textCache = {};            // paperId -> raw knowledge-doc markdown (or null)
+const fullTextCache = {};        // paperId -> cleaned Docling full text (or null)
+let fulltextManifest = null;     // id -> { src, chars }; null until loaded, {} if absent
 let docHtmlCurrent = '';       // rendered HTML of the active layer (for re-highlight)
 let docHtmlPaper = '';         // rendered paper layer (verbatim text)
 let docHtmlAi = '';            // rendered AI-extraction layer (machine knowledge doc), '' when absent
@@ -216,7 +220,7 @@ function idbSet(k, v) {
 }
 function idbGet(k) {
     return idb().then(function(db) { return new Promise(function(res, rej) {
-        let t = db.transaction('handles', 'readonly'); var rq = t.objectStore('handles').get(k);
+        let t = db.transaction('handles', 'readonly'); const rq = t.objectStore('handles').get(k);
         rq.onsuccess = function() { res(rq.result); }; rq.onerror = function() { rej(rq.error); };
     }); });
 }
@@ -250,7 +254,7 @@ async function reconnectRepo() {
 async function loadAllReviewers() {
     if (!dirHandle) return;
     const found = {};
-    for await (var entry of dirHandle.values()) {
+    for await (const entry of dirHandle.values()) {
         if (entry.kind === 'file' && /\.json$/.test(entry.name)) {
             try {
                 let f = await entry.getFile();
@@ -278,7 +282,7 @@ function updateConnStatus() {
     let el = document.getElementById('pt-conn-status');
     if (!el) return;
     if (dirHandle) { el.textContent = 'verbunden, schreibt ' + state.reviewer + '.json'; el.classList.add('connected'); }
-    else { el.textContent = FS_SUPPORTED ? 'nicht mit Repo verbunden' : 'Browser ohne Direktschreiben (Export nutzen)'; el.classList.remove('connected'); }
+    else { el.textContent = FS_SUPPORTED ? '' : 'Browser ohne Direktschreiben (Export nutzen)'; el.classList.remove('connected'); }
 }
 
 // Corpus full-text index (FR-12 corpus search) + document fetch (FR-11)
@@ -301,6 +305,30 @@ function fetchPaperText(p) {
         .then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
         .then(function(t) { textCache[p.id] = t; return t; })
         .catch(function() { textCache[p.id] = null; return null; });
+}
+
+// The Docling full texts live in docs/data/fulltext/ (gitignored, local clone only, mostly
+// copyrighted). The manifest says which papers have one, so abstract-only papers show that
+// state and no 404 is fired for them.
+function loadFulltextManifest() {
+    if (fulltextManifest !== null) return Promise.resolve(fulltextManifest);
+    return fetch('data/fulltext_manifest.json')
+        .then(function(r) { return r.ok ? r.json() : {}; })
+        .then(function(d) { fulltextManifest = d || {}; return fulltextManifest; })
+        .catch(function() { fulltextManifest = {}; return fulltextManifest; });
+}
+
+function hasFullText(p) {
+    return !!(fulltextManifest && fulltextManifest[p.id] && fulltextManifest[p.id].src !== 'none');
+}
+
+function fetchFullText(p) {
+    if (fullTextCache[p.id] !== undefined) return Promise.resolve(fullTextCache[p.id]);
+    if (fulltextManifest && !hasFullText(p)) { fullTextCache[p.id] = null; return Promise.resolve(null); }
+    return fetch('data/fulltext/' + encodeURIComponent(p.id) + '.md')
+        .then(function(r) { return r.ok ? r.text() : null; })
+        .then(function(t) { fullTextCache[p.id] = t; return t; })
+        .catch(function() { fullTextCache[p.id] = null; return null; });
 }
 
 function countOcc(hay, needle) {
@@ -364,7 +392,7 @@ function renderMarkdown(md) {
         }
         if (/^\s*$/.test(ln)) { closeList(); i++; continue; }
         const hm = ln.match(/^(#{1,6})\s+(.*)$/);
-        if (hm) { closeList(); var lvl = Math.min(hm[1].length, 4); out.push('<h' + lvl + ' class="pt-doc-h' + lvl + '">' + inlineMd(hm[2]) + '</h' + lvl + '>'); i++; continue; }
+        if (hm) { closeList(); const lvl = Math.min(hm[1].length, 4); out.push('<h' + lvl + ' class="pt-doc-h' + lvl + '">' + inlineMd(hm[2]) + '</h' + lvl + '>'); i++; continue; }
         const lm = ln.match(/^\s*[-*]\s+(.*)$/);
         if (lm) { if (!inList) { out.push('<ul class="pt-doc-ul">'); inList = true; } out.push('<li>' + inlineMd(lm[1]) + '</li>'); i++; continue; }
         const bm = ln.match(/^>\s?(.*)$/);
@@ -390,6 +418,7 @@ window.initializePrisma = function() {
     normalizeSurface();
     state.index = firstEntryIndex(); // O4: open on a screenable paper, not on boilerplate
     loadCorpusIndex(); // background: ready by the time the user runs a corpus search
+    loadFulltextManifest(); // background: full-text availability for the reading pane
     renderShell();
     showSurface(state.surface || 'screening');
     updateConnStatus();
@@ -407,11 +436,7 @@ function normalizeSurface() {
 function renderShell() {
     const root = document.getElementById('prisma-root');
     if (!root) return;
-    let html = '<div class="pt-wsbar-top"><span class="pt-wsbar-title">Screening</span>' +
-        '<span class="pt-spacer"></span><div class="pt-ws-tools">' +
-        '<button class="pt-btn pt-tool-record" type="button"><i class="fas fa-file-lines"></i> PRISMA-Record erzeugen</button>' +
-        '<button class="pt-btn pt-tool-data" type="button"><i class="fas fa-folder-open"></i> Daten &amp; Sync</button>' +
-        '</div></div>';
+    let html = '<div class="pt-wsbar-top"><span class="pt-wsbar-title">Screening</span></div>';
     html += '<div class="pt-surface" id="pt-surface"></div>';
     html += '<div class="pt-overlay" id="pt-overlay" hidden>' +
         '<div class="pt-overlay-backdrop"></div>' +
@@ -420,8 +445,6 @@ function renderShell() {
         '<button class="pt-overlay-x" id="pt-overlay-x" type="button" aria-label="Schließen">&times;</button></div>' +
         '<div class="pt-overlay-body" id="pt-overlay-body"></div></div></div>';
     root.innerHTML = html;
-    root.querySelector('.pt-tool-record').addEventListener('click', function() { openPanel('report'); });
-    root.querySelector('.pt-tool-data').addEventListener('click', function() { openPanel('data'); });
     root.querySelector('.pt-overlay-backdrop').addEventListener('click', closePanel);
     root.querySelector('#pt-overlay-x').addEventListener('click', closePanel);
     document.addEventListener('keydown', function(e) {
@@ -495,10 +518,24 @@ function seedDecision(paper) {
     return null;
 }
 
+// Categories are three-level (nein/teilweise/ja = 0/1/2). Legacy boolean and a pinned
+// human Beleg coerce to ja; anything falsy is nein.
+const CAT_STATE = ['nein', 'teilweise', 'ja'];
+function catLevel(v) { return v === true || v === 2 ? 2 : (v === 1 ? 1 : 0); }
+function dimLevel(keys, cats) {
+    return keys.reduce(function(m, c) { const l = catLevel(cats[c]); return l > m ? l : m; }, 0);
+}
+function decCls(d) { return d === 'Include' ? 'include' : (d === 'Unclear' ? 'unclear' : 'exclude'); }
+
+// The three levels map to a three-way derived decision: both dimensions with a "ja" ->
+// Include; both at least "teilweise" but not both "ja" -> Unclear; any dimension entirely
+// "nein" -> Exclude (ADR: three-level screening).
 function deriveDecision(cats) {
-    let tech = TECH_CATS.some(function(c) { return cats[c]; });
-    let soc = SOCIAL_CATS.some(function(c) { return cats[c]; });
-    return (tech && soc) ? 'Include' : 'Exclude';
+    const tech = dimLevel(TECH_CATS, cats);
+    const soc = dimLevel(SOCIAL_CATS, cats);
+    if (Math.min(tech, soc) === 0) return 'Exclude';
+    if (tech === 2 && soc === 2) return 'Include';
+    return 'Unclear';
 }
 
 // The human decision is binding (RAISE P1/P2); the AND-rule only derives a default.
@@ -590,7 +627,6 @@ function renderScreening() {
     let html = '<div class="pt-ws-bar">';
     html += '<span class="pt-ws-pos">Paper ' + (state.index + 1) + ' / ' + papers.length + '</span>';
     html += '<span class="pt-ws-progressbar"><span class="pt-ws-progressfill" style="width:' + pct + '%"></span></span>';
-    html += '<span class="pt-ws-prog mono">' + screened + ' / ' + papers.length + ' Paper &middot; Reviewer ' + EC.escapeHtml(state.reviewer) + '</span>';
     html += '</div>';
 
     html += '<div class="pt-ws pt-ws-screen">';
@@ -618,7 +654,7 @@ function corpusHtml() {
     let d = curDec();
     let h = '<aside class="pt-nav"><div class="pt-nav-head"><span class="pt-nav-title-main">Korpus</span>' +
         '<span class="pt-tag-mono">' + Object.keys(d).length + ' / ' + papers.length + '</span></div>';
-    h += '<div class="pt-corpus-search"><input id="pt-corpus-q" placeholder="Volltext-Suche über alle Paper" value="' + EC.escapeHtml(corpusQuery) + '">' +
+    h += '<div class="pt-corpus-search"><input id="pt-corpus-q" aria-label="Volltext-Suche über alle Paper" placeholder="Volltext-Suche über alle Paper" value="' + EC.escapeHtml(corpusQuery) + '">' +
         '<span class="pt-corpus-hint" id="pt-corpus-hint"></span></div>';
     h += '<div class="pt-nav-list" id="pt-corpus-list">' + corpusListHtml() + '</div></aside>';
     return h;
@@ -627,7 +663,7 @@ function corpusHtml() {
 // Text equivalent for the colour-only status dot in the corpus list (a screen reader
 // otherwise hears nothing for the decision state), browser-agent a11y finding.
 function statusLabel(st) {
-    return st === 'include' ? 'eingeschlossen' : st === 'exclude' ? 'ausgeschlossen' : 'offen';
+    return st === 'include' ? 'eingeschlossen' : st === 'exclude' ? 'ausgeschlossen' : st === 'unclear' ? 'unklar' : 'offen';
 }
 
 function corpusListHtml() {
@@ -664,7 +700,7 @@ function refreshCorpusList() {
         let q = corpusQuery.trim();
         if (!q) hint.textContent = '';
         else if (!corpusIndex) hint.textContent = '';
-        else hint.textContent = papers.filter(function(p) { var e = corpusIndex[p.id]; return e && e.x && e.x.indexOf(q.toLowerCase()) !== -1; }).length + ' Paper';
+        else hint.textContent = papers.filter(function(p) { const e = corpusIndex[p.id]; return e && e.x && e.x.indexOf(q.toLowerCase()) !== -1; }).length + ' Paper';
     }
 }
 
@@ -685,9 +721,8 @@ function readingShellHtml(p, dec) {
     const aq = abstractQuality(p);
     let h = '<div class="pt-read pt-read-screen"><div class="pt-read-inner">';
     h += '<div class="pt-read-meta">';
-    h += '<span class="pt-pill pt-pill-ghost mono">' + EC.escapeHtml(p.id) + '</span>';
-    if (p.item_type) h += '<span class="pt-tag-mono">' + EC.escapeHtml(p.item_type) + '</span>';
-    if (p.knowledge_doc) h += '<span class="pt-pill pt-pill-ghost">Wissensdokument</span>';
+    if (hasFullText(p)) h += '<span class="pt-pill pt-pill-ghost">Volltext</span>';
+    else if (p.knowledge_doc) h += '<span class="pt-pill pt-pill-warn">nur Destillat</span>';
     else h += '<span class="pt-pill pt-pill-warn">nur Abstract</span>';
     if (dec) h += '<span class="pt-pill pt-pill-human pt-pill-right">erfasst</span>';
     h += '</div>';
@@ -701,7 +736,7 @@ function readingShellHtml(p, dec) {
         '<button class="pt-layer-btn" data-mode="ai">KI-Extraktion</button>' +
         '</div>';
     h += '<div class="pt-intext-bar">' +
-        '<input id="pt-intext" placeholder="Im Text suchen (Enter = nächster Treffer)">' +
+        '<input id="pt-intext" aria-label="Im Text suchen" placeholder="Im Text suchen (Enter = nächster Treffer)">' +
         '<span class="pt-tag-mono" id="pt-intext-count"></span>' +
         '<button class="pt-intext-nav" id="pt-intext-prev" title="vorheriger Treffer">&lsaquo;</button>' +
         '<button class="pt-intext-nav" id="pt-intext-next" title="nächster Treffer">&rsaquo;</button>' +
@@ -714,18 +749,19 @@ function readingShellHtml(p, dec) {
     return h;
 }
 
+// Two epistemic layers by source (M3, ADR-016): the human "Volltext" layer is the original
+// Docling full text; the "KI-Extraktion" layer is the distillation from the knowledge doc.
 function loadReadingInto(p) {
     let doc = document.getElementById('pt-doc'); if (!doc) return;
-    fetchPaperText(p).then(function(md) {
-        if (md) {
-            const layers = splitDocLayers(md);
-            docHtmlPaper = renderMarkdown(layers.paper);
-            docHtmlAi = layers.ai ? renderMarkdown(layers.ai) : '';
+    Promise.all([fetchFullText(p), fetchPaperText(p)]).then(function(res) {
+        const full = res[0], kdmd = res[1];
+        docHtmlAi = kdmd ? renderMarkdown(splitDocLayers(kdmd).ai || '') : '';
+        if (full && full.trim()) {
+            docHtmlPaper = renderMarkdown(full);
         } else if (p.abstract && p.abstract.trim()) {
             docHtmlPaper = '<p class="pt-doc-p">' + inlineMd(p.abstract) + '</p>';
-            docHtmlAi = '';
         } else {
-            docHtmlPaper = ''; docHtmlAi = '';
+            docHtmlPaper = '';
         }
         if (state.readMode === 'ai' && !docHtmlAi) state.readMode = 'full';
         updateLayerToggle();
@@ -849,6 +885,28 @@ function unpinEvidence(cat, idx) {
     refreshAssess();
 }
 
+// The existing annotations on a paper, shown as reference (never binding): the expert seed
+// decision with its set categories, and a Mensch/KI divergence badge from the benchmark.
+// These are the binary track (human all_categories, benchmark.agreement); the reviewer's own
+// three-level input is separate.
+function seedRefHtml(p) {
+    const seed = seedDecision(p);
+    if (!seed) return '';
+    const setCats = ALL_CATS.filter(function(c) { return seed.categories[c]; });
+    let h = '<div class="pt-seed-ref">Seed-Bewertung (Expert:innen): <strong class="pt-dec-' +
+        seed.decision.toLowerCase() + '">' + seed.decision + '</strong>. Du entscheidest unabhängig.';
+    if (setCats.length) h += '<div class="pt-seed-cats">' + setCats.map(function(c) {
+        return '<span class="pt-pill pt-pill-human">' + EC.escapeHtml(CAT_LABELS[c]) + '</span>';
+    }).join('') + '</div>';
+    const bm = p.benchmark;
+    if (bm && bm.agreement === 'disagree') {
+        const aff = (bm.affected_categories || []).map(function(c) { return CAT_LABELS[c] || c; });
+        h += '<div class="pt-diverg"><span class="pt-pill pt-pill-warn">Divergenz Mensch/KI</span>' +
+            (aff.length ? '<span class="pt-muted">' + EC.escapeHtml(aff.join(', ')) + '</span>' : '') + '</div>';
+    }
+    return h + '</div>';
+}
+
 // ---- right: assessment (categories + evidence + derived decision + collapsed AI) ----
 function assessInnerHtml(p, dec) {
     if (dec) return assessLockedHtml(p, dec);
@@ -856,10 +914,7 @@ function assessInnerHtml(p, dec) {
     let h = '<div class="pt-rail-head"><span class="pt-rail-title">Deine Bewertung</span>' +
         '<span class="pt-spacer"></span><span class="pt-pill pt-pill-human">bindend</span></div>';
     h += '<div class="pt-rail-body">';
-    h += '<p class="pt-assess-hint">Markiere jede Kategorie, die du am Text belegen kannst, oder hefte einen Beleg aus dem Text an.</p>';
-    let seed = seedDecision(p);
-    if (seed) h += '<div class="pt-seed-ref">Seed-Bewertung (Expert:innen): <strong class="pt-dec-' +
-        seed.decision.toLowerCase() + '">' + seed.decision + '</strong>. Du entscheidest unabhängig.</div>';
+    h += seedRefHtml(p);
     h += dimHtml('Gegenstand', TECH_CATS, cats, false);
     h += dimHtml('Perspektive', SOCIAL_CATS, cats, false);
     h += evidenceListHtml(work.evidence, false);
@@ -889,7 +944,7 @@ function assessInnerHtml(p, dec) {
 function assessLockedHtml(p, dec) {
     let cats = dec.categories || {};
     let h = '<div class="pt-rail-head"><span class="pt-rail-title">Deine Bewertung</span>' +
-        '<span class="pt-spacer"></span><span class="pt-pill pt-pill-' + (dec.decision === 'Include' ? 'include' : 'exclude') + ' pt-pill-lg">' + dec.decision + '</span></div>';
+        '<span class="pt-spacer"></span><span class="pt-pill pt-pill-' + decCls(dec.decision) + ' pt-pill-lg">' + dec.decision + '</span></div>';
     h += '<div class="pt-rail-body">';
     if (dec.decision === 'Exclude' && dec.reason) h += '<div class="pt-seed-ref">Ausschlussgrund: <strong>' + EC.escapeHtml(dec.reason.replace(/_/g, ' ')) + '</strong></div>';
     if (dec.decision === 'Include' && dec.override && dec.override_reason) h += '<div class="pt-seed-ref">Override zu Include &middot; Begruendung: <strong>' + EC.escapeHtml(dec.override_reason) + '</strong></div>';
@@ -906,25 +961,30 @@ function assessLockedHtml(p, dec) {
 }
 
 function dimHtml(label, keys, cats, locked) {
-    const anyOn = keys.some(function(c) { return cats[c]; });
+    const lvl = dimLevel(keys, cats);
+    const pillCls = lvl === 2 ? 'pt-pill-include' : (lvl === 1 ? 'pt-pill-warn' : 'pt-pill-ghost');
     let h = '<div class="pt-dim"><div class="pt-dim-head"><span class="pt-tag-mono">' + label + '</span>' +
-        '<span class="pt-dim-rule"></span><span class="pt-pill pt-dim-pill ' + (anyOn ? 'pt-pill-include' : 'pt-pill-ghost') + '">' +
-        (anyOn ? '&ge;1 gesetzt' : 'keine') + '</span></div><div class="pt-chips">';
+        '<span class="pt-dim-rule"></span><span class="pt-pill pt-dim-pill ' + pillCls + '">' +
+        (lvl ? CAT_STATE[lvl] : 'keine') + '</span></div><div class="pt-chips">';
     keys.forEach(function(c) { h += chipHtml(c, cats[c], locked); });
     h += '</div></div>';
     return h;
 }
 
-// The chip's accessible name is just its visible label: the internal slug and the
-// definition are decorative (slug in the hover tip, definition carried as the button's
-// description via title), so a screen reader announces "AI Literacies, eingeschaltet",
-// not the slug and full definition (browser-agent a11y finding, 2026-06-30).
-function chipHtml(cat, on, locked) {
-    return '<button class="pt-chip' + (on ? ' on' : '') + '" data-cat="' + cat + '"' +
-        ' aria-pressed="' + (on ? 'true' : 'false') + '"' +
-        ' title="' + EC.escapeHtml(CAT_DEFS[cat] || '') + '"' + (locked ? ' disabled' : '') + '>' +
+// A three-state cycling chip (nein -> teilweise -> ja -> nein). The accessible name is the
+// visible label plus the current state ("AI Literacies, teilweise"); the slug and definition
+// stay decorative in the hover tip. The native title is gone (it doubled the styled tip);
+// the definition reaches assistive tech via aria-describedby to the tip.
+function chipHtml(cat, level, locked) {
+    const lvl = catLevel(level);
+    const stateCls = lvl === 2 ? ' on' : (lvl === 1 ? ' partial' : '');
+    const tipId = 'pt-chip-tip-' + cat;
+    return '<button class="pt-chip' + stateCls + '" data-cat="' + cat + '" data-level="' + lvl + '"' +
+        ' aria-label="' + EC.escapeHtml(CAT_LABELS[cat]) + ', ' + CAT_STATE[lvl] + '"' +
+        ' aria-describedby="' + tipId + '"' + (locked ? ' disabled' : '') + '>' +
         '<span class="pt-chip-box" aria-hidden="true"></span>' + EC.escapeHtml(CAT_LABELS[cat]) +
-        '<span class="pt-chip-tip" aria-hidden="true"><b class="mono">' + cat + '</b><span>' + EC.escapeHtml(CAT_DEFS[cat] || '') + '</span></span></button>';
+        (lvl ? '<span class="pt-chip-state" aria-hidden="true">' + CAT_STATE[lvl] + '</span>' : '') +
+        '<span class="pt-chip-tip" id="' + tipId + '"><b class="mono">' + cat + '</b><span>' + EC.escapeHtml(CAT_DEFS[cat] || '') + '</span></span></button>';
 }
 
 function evidenceListHtml(evidence, locked) {
@@ -960,7 +1020,7 @@ function logicInner(cats, override) {
     h += '<span class="pt-logic-term' + (soc ? ' on' : '') + '">&ge;1 Perspektive</span>';
     h += '<span class="pt-logic-arrow">&rarr;</span>';
     h += '<span class="pt-tag-mono">abgeleitet</span>';
-    h += '<span class="pt-pill pt-pill-' + (derived === 'Include' ? 'include' : 'exclude') + '">' + derived + '</span>';
+    h += '<span class="pt-pill pt-pill-' + decCls(derived) + '">' + derived + '</span>';
     h += '<span class="pt-spacer"></span>';
     h += '<label class="pt-override"><span class="pt-switch"><input type="checkbox" id="pt-override"' +
         (override ? ' checked' : '') + '><span class="pt-switch-track"></span></span> ' +
@@ -1005,20 +1065,28 @@ function attachScreening(p, dec) {
         b.addEventListener('click', function() { setReadMode(b.dataset.mode); });
     });
 
+    // debounce the two searches: each keystroke otherwise re-scans the full corpus index
+    // or rebuilds the whole reading document, which janks on long full texts.
+    const debounce = function(fn, ms) {
+        let t;
+        return function() { clearTimeout(t); t = setTimeout(fn, ms); };
+    };
+
     const cq = document.getElementById('pt-corpus-q');
     if (cq) {
-        cq.addEventListener('input', function() {
-            corpusQuery = cq.value;
+        const runCorpus = debounce(function() {
             if (corpusQuery.trim() && !corpusIndex) loadCorpusIndex().then(refreshCorpusList);
             else refreshCorpusList();
-        });
+        }, 150);
+        cq.addEventListener('input', function() { corpusQuery = cq.value; runCorpus(); });
     }
     refreshCorpusList();
 
     // in-text search
     const intext = document.getElementById('pt-intext');
     if (intext) {
-        intext.addEventListener('input', function() { applyInText(intext.value); });
+        const runIntext = debounce(function() { applyInText(intext.value); }, 120);
+        intext.addEventListener('input', runIntext);
         intext.addEventListener('keydown', function(e) {
             if (e.key === 'Enter') { e.preventDefault(); if (docMarks.length) setActiveMark(docMarkIdx + 1); }
         });
@@ -1065,8 +1133,8 @@ function bindAssess(p, dec) {
         btn.addEventListener('click', function() {
             let c = btn.dataset.cat;
             const before = deriveDecision(work.cats);
-            work.cats[c] = !work.cats[c];
-            // an override opposes the current derivation; if a toggle flips the derived
+            work.cats[c] = (catLevel(work.cats[c]) + 1) % 3; // cycle nein -> teilweise -> ja
+            // an override opposes the current derivation; if a step flips the derived
             // decision, the override and its justification no longer apply
             if (deriveDecision(work.cats) !== before) { work.override = false; work.overrideReason = null; }
             refreshAssess();
@@ -1214,7 +1282,7 @@ function closePinMenu() {
     pinReturnFocus = null;
 }
 
-// Surface: PRISMA & Report (flow + checklist + disclosure)
+// Report panel (flow + checklist + disclosure), rendered on demand, not in the toolbar
 
 function renderReportSurface(targetEl) {
     let el = targetEl || surfaceEl(); if (!el) return;
@@ -1327,7 +1395,7 @@ function renderReportInto(el) {
     updatePreview();
 }
 
-function updatePreview() { var pre = document.getElementById('pt-prev'); if (pre) pre.textContent = disclosureMarkdown(); }
+function updatePreview() { const pre = document.getElementById('pt-prev'); if (pre) pre.textContent = disclosureMarkdown(); }
 
 function disclosureMarkdown() {
     let n = papers.filter(function(p) { return aiProposal(p); }).length;
@@ -1342,7 +1410,7 @@ function disclosureMarkdown() {
     return L.join('\n');
 }
 
-// Surface: Daten & Repo (sync: connect, per-reviewer files, export/import)
+// Data panel (sync: connect, per-reviewer files, export/import), rendered on demand
 
 function renderData(targetEl) {
     let el = targetEl || surfaceEl(); if (!el) return;
@@ -1478,7 +1546,7 @@ const TEST_HOOK = {
     setPapers: function(p) { papers = p; },
     getState: function() { return state; },
     getWork: function() { return work; },
-    curDec: curDec, resetWork: resetWork,
+    curDec: curDec, resetWork: resetWork, refreshAssess: refreshAssess,
     pinEvidence: pinEvidence, unpinEvidence: unpinEvidence, commit: commit, editRecord: editRecord,
     evidenceListHtml: evidenceListHtml, chipHtml: chipHtml, statusLabel: statusLabel,
     corpusListHtml: corpusListHtml, isScreenable: isScreenable, firstEntryIndex: firstEntryIndex,

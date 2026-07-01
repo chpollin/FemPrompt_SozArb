@@ -10,7 +10,7 @@ status: complete
 language: en
 version: "0.2"
 created: 2026-02-21
-updated: 2026-06-29
+updated: 2026-07-01
 authors: [Christopher Pollin]
 generated-with: Claude Code
 topics: ["[[Epistemic Infrastructure]]", "[[Feminist AI]]"]
@@ -29,13 +29,15 @@ Working definition of feminist AI literacies: diversity-sensitive, intersectiona
 
 ## Research questions
 
-Main question: what epistemic infrastructure does an LLM-assisted literature review require to methodologically address the asymmetry between machine pattern recognition and expert judgment?
+The review carries three co-equal main questions, one methodological and two substantive.
 
-Content questions (secondary):
+M (method). What epistemic infrastructure does an LLM-assisted literature review require to methodologically address the asymmetry between machine pattern recognition and expert judgment?
 
-1. How does bias manifest context-dependently in frontier LLMs?
-2. What prompting strategies enable discrimination-sensitive AI use?
-3. How can social workers develop AI literacy that does justice to the system's complexity?
+Q1 (bias and its reduction). Which biases in AI systems are documented, which methods and approaches reduce them, and where are the research gaps? Bias is read along its axes as the corpus carries them (gender, race and ethnicity, intersectional, socioeconomic class, sexual orientation, disability, nationality and migration, religion, age, language, physical appearance, and further), reduction across the recurring approaches (AI literacy, participatory co-design, auditing and evaluation, governance and regulation, data debiasing, prompting, transparency and documentation, human-in-the-loop, tool literacy).
+
+Q2 (AI in social work). How is AI used in social work, across which practice fields and functions, at what degree of maturity, and how is the division of labour between human judgment and tool drawn?
+
+M is the core methodological contribution; Q1 and Q2 are what the review answers from the corpus. The three hold together, the infrastructure (M) is what makes the answers to Q1 and Q2 verifiable rather than presupposed. Q1 and Q2 are the organizing axis for the knowledge documents and the analysis fields ([[update-protocol]]).
 
 ## Target audience
 
@@ -66,16 +68,16 @@ Primary audience: researchers with limited AI expertise.
 | What is not part of the project | Why |
 |---|---|
 | A finished prompting guide | Planned for a subsequent phase |
-| Empirical validation of prompting strategies | Out of scope |
+| Empirical validation of prompting strategies | Out of scope; Q1 describes what the literature reports and tests, it runs no experiments of its own |
 | An end-user tool | The focus is research, not product |
 | Full automation | Expert-in-the-loop remains central |
 | Training custom models | Uses existing frontier LLMs |
 
-## Two levels of the project
+## Two strands of the project
 
-Level 2, methodological, the core contribution. What epistemic infrastructure does an LLM-assisted review require to address the asymmetry between machine pattern recognition and expert judgment? Output: the concept of epistemic infrastructure (four layers, below), the dual assessment track as its operationalization, the benchmark results as illustration that divergence is measurable and informationally productive, and a documented, reproducible workflow in the repository.
+The methodological strand (M), the core contribution. What epistemic infrastructure does an LLM-assisted review require to address the asymmetry between machine pattern recognition and expert judgment? Output: the concept of epistemic infrastructure (four layers, below), the dual assessment track as its operationalization, the benchmark results as illustration that divergence is measurable and informationally productive, and a documented, reproducible workflow in the repository.
 
-Level 1, substantive, the literature review as use case. What does the research say about LLM bias and feminist AI literacy? Output: a thematically categorized corpus under the ten binary categories, the distilled knowledge documents, the Obsidian vault, and the conceptual foundation for Fair Bench.
+The substantive strand (Q1 and Q2), the review's own findings, co-equal with the method. Which biases are documented and how are they reduced (Q1), and how is AI used in social work (Q2)? Output: a thematically coded corpus under the ten three-level categories, the distilled knowledge documents carrying per-paper bias axes, reduction approaches, and social-work use, the Obsidian vault, and the conceptual foundation for Fair Bench.
 
 ## Corpus
 
@@ -162,7 +164,7 @@ All knowledge arises from specific social, cultural, and material contexts. Obje
 
 ### Intersectionality (Crenshaw)
 
-Oppression does not operate along single axes (gender, race) but through their mutual constitution. Operationalization: multi-dimensional categorization schemas (the ten binary categories), prompt templates focused on intersectional perspectives, and concept extraction that preserves intersectional specificity.
+Oppression does not operate along single axes (gender, race) but through their mutual constitution. Operationalization: multi-dimensional categorization schemas (the ten three-level categories), prompt templates focused on intersectional perspectives, and concept extraction that preserves intersectional specificity.
 
 ### Response-ability (Haraway) and responsibility asymmetry
 

@@ -7,7 +7,7 @@ status: complete
 language: en
 version: "0.2"
 created: 2026-06-09
-updated: 2026-06-30
+updated: 2026-07-01
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 4.8)
 method:
@@ -29,7 +29,7 @@ This document is the substance layer for the **PRISMA screening tool**, a standa
 ### Funktionale Anforderungen
 
 - FR-01: Import a screening batch (papers, optionally with a pre-computed LLM assessment per paper) from JSON or CSV. Acceptance: a valid export loads a session of N papers, each with `zotero_key`, title, abstract, and, where present, the AI proposal per category plus an include/exclude suggestion.
-- FR-02: Record an independent human screening decision per paper: ten binary categories, an include/exclude decision derived as (>=1 technology dimension AND >=1 social dimension), and, on exclude, one reason from a controlled list. Acceptance: the decision persists with reviewer id and timestamp; the derived decision matches the category logic.
+- FR-02: Record an independent human screening decision per paper: ten three-level categories (nein/teilweise/ja), a three-way decision derived as (both dimensions ja yields Include; both at least teilweise yields Unclear; any dimension entirely nein yields Exclude), and, on exclude, one reason from a controlled list. Acceptance: the decision persists with reviewer id and timestamp; the derived decision matches the three-level category logic (ADR-024).
 - FR-03: Offer a blind independent mode that hides the AI proposal until the human decision is recorded, then reveals it and flags divergence. Acceptance: with blind mode on, no AI field is rendered before the human decision; divergence is computed and shown after.
 - FR-04: Render a PRISMA 2020 flow diagram with the PRISMA-trAIce R1 split, identified -> screened -> included, with separate tallies for AI-tool decisions and human-reviewer decisions and a breakdown of exclusion reasons. Acceptance: counts reconcile with the decision log; the diagram exports as SVG.
 - FR-05 (superseded by ADR-014/017): Compute agreement metrics live as decisions accrue: confusion matrix (human x AI), Cohen's kappa for the decision and per category, and base rates. As built, the in-tool agreement surface and the kappa computation are removed; agreement is evaluated externally on the benchmark corpus, where the figures live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion.
@@ -38,7 +38,7 @@ This document is the substance layer for the **PRISMA screening tool**, a standa
 - FR-08: Persist the session in localStorage; export and import the full session as JSON; export the decision log as CSV. Acceptance: reload restores state; an export/import round-trip is lossless.
 - FR-09: Seed the tool with the existing FemPrompt corpus (the full dual-assessment corpus) as the Stage R seeded session, the round-1 data carried through PRISM (ADR-019). Acceptance: loads from `docs/data/` JSON without an import step.
 - FR-10 (secondary): Provide an optional live-LLM on-ramp. With a local API key, request an AI proposal for a paper that lacks one, reusing the versioned assessment prompt. Acceptance: the proposal is stored as an AI decision, visibly labelled as live-generated, and never overrides the human decision.
-- FR-11: Read the paper in full text. Where a paper has a converted full text (`docs/vault/Papers/*.md`, servable under `docs/`), render it formatted and readable in the screening view, not only the abstract (a number of papers have no abstract in the corpus). Acceptance: opening a paper whose `knowledge_doc` path resolves shows its full text; papers without one fall back to abstract or knowledge summary.
+- FR-11: Read the paper in full text. Where a paper has a Docling conversion, serve it locally as `docs/data/fulltext/{id}.md` (gitignored, ADR-025) and render it formatted and readable in the screening view as the Volltext layer, with the distillation as the separate KI-Extraktion layer; the reading pane falls back to abstract where no full text exists (a number of papers have neither). Acceptance: opening a paper listed in `fulltext_manifest.json` shows its full text; the pill reflects Volltext, nur Destillat, or nur Abstract.
 - FR-12: Search the full text. Provide an in-text search that highlights and steps through matches in the open paper, and a corpus-wide search that lists papers whose full text contains a term. Acceptance: a query highlights every hit in the open text and returns the set of papers containing it across the corpus.
 - FR-13: Pin a hit as evidence for a category. From a search hit or a selected passage, attach the term plus its surrounding snippet to one of the ten categories as a stored Beleg; evidence is saved with the decision and is citable in the report. Acceptance: a category can carry one or more evidence snippets; they persist in the reviewer file and appear in the decision log and disclosure.
 
@@ -367,6 +367,26 @@ Wahl. The override is symmetric and the derived decision is a default, not a gat
 Begründung. RAISE P3 requires that any AI- or rule-based judgement that is overridden be transparently reported; gating the Include override on a justification records exactly the deviation from the rule rather than hiding it or forcing the reviewer to bend categories. The AND-rule becomes a derivation aid with a documented escape hatch, consistent with the epistemic-infrastructure thesis: the deviation is named, not smoothed over. The binding decision stays human while the rule remains the transparent default.
 
 Effekt. Implementiert (`docs/js/prisma.js`: finalDecisionOf symmetrisch, logicInner zeigt den richtungsabhängigen Override, die Begründungs-Textarea mit Commit-Gate, commit schreibt `override_reason`, assessLockedHtml zeigt sie, editRecord rehydriert sie; `docs/css/prisma.css` Override-Block). Mit Test (Section I). Resolves O2. Der reziproke Override zu Exclude trägt weiterhin den Ausschlussgrund, sodass beide Override-Richtungen dokumentiert sind.
+
+### ADR-024 Three-level screening categories; the derivation becomes three-way (supersedes the binary category type of ADR-012/023)
+
+Kontext. Categories were binary (ja/nein) and the AND-rule derived a two-way decision. Reviewers need an intermediate value: a paper can address a dimension partially, and the corpus shows graded relevance rather than presence/absence. The archived 5D track already carried ordinal dimensions; the binary 10K track flattened them.
+
+Wahl. Each category takes three levels, nein / teilweise / ja (0 / 1 / 2); a chip cycles through them. The derivation becomes three-way and reuses the existing, previously underused Unclear decision: both dimensions with a ja yields Include; both at least teilweise but not both ja yields Unclear; any dimension entirely nein yields Exclude. The reason-gated override (ADR-023) is unchanged and still lifts a derived Exclude or Unclear to Include with a recorded justification. The existing binary human and LLM annotations stay binary and are shown as-is (a pinned human Beleg and a legacy boolean coerce to ja); only the reviewer's own new input uses the three levels.
+
+Begründung. The three category levels map onto the three decision states the standard schema already offers, so Unclear stops being a dead value and becomes the honest resting state for partial coverage. Graded input records what a binary flag cannot, without a new decision vocabulary.
+
+Effekt. Implementiert (`docs/js/prisma.js`: catLevel/dimLevel/deriveDecision three-way, the cycling chip, decCls and the Unclear pill/dot/dec across logicInner, assessLockedHtml, statusLabel; `docs/css/prisma.css` the partial chip and the unclear colour). Mit Test (four deriveDecision cases for teilweise/Unclear, the chip contract). The canonical schema and analysis fields follow in `assessment/categories.yaml` ([[data]], [[update-protocol]]).
+
+### ADR-025 Local full-text reading layer, gitignored, never published (implements ADR-013)
+
+Kontext. ADR-013 planned raw full-text reading but it was never built; the served knowledge documents carried an empty `## Full Text` placeholder, so the human Volltext layer showed a stub while the real Docling conversions sat unshipped in `generated/markdown_clean/`. The screening premise, decide am Text, could not be met.
+
+Wahl. A generator (`src/publish/build_fulltext.py`) resolves each paper to its Docling conversion (via the knowledge doc's `source_file`, fallback first-author-year), cleans it (frontmatter, image comments, GLYPH artefacts) and writes one file per paper to `docs/data/fulltext/{id}.md` plus a `fulltext_manifest.json`. The reading pane loads that as the Volltext layer and keeps the distillation as the KI-Extraktion layer (ADR-016). The full texts are gitignored and never pushed: most are paywalled, so the public Pages site keeps only the fallback (abstract or distillation). Publishing publicly stays a separate, rights-gated decision.
+
+Begründung. The copyright boundary the index builder already drew (do not publish `markdown_clean`) is respected by construction, while the reviewer on a local clone reads the real text. This keeps ADR-013's intent and drops its per-decision `text_source` bump as unneeded once the layer is a first-class asset with a manifest.
+
+Effekt. Implementiert (`src/publish/build_fulltext.py`; `docs/js/prisma.js` fetchFullText/loadFulltextManifest/hasFullText, loadReadingInto combines the Volltext and KI layers, the availability pill; `.gitignore` fences the outputs). 283 of 326 papers carry a full text, the rest are named abstract-only. Corpus search stays on the committed distillation index for the same copyright reason.
 
 ## Was nicht reingehört
 

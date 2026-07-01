@@ -12,9 +12,12 @@ Source of the searchable text, in order:
      index publishes nothing new.
   2. the abstract from research_vault_v2.json, for papers without a knowledge_doc.
 
-It deliberately does NOT read generated/markdown_clean/ (the raw copyrighted full
-texts): those are not served and must not be published. Swapping the reading/search
-source to the raw local full text is a separate, copyright-gated step.
+It deliberately does NOT read the local full texts (docs/data/fulltext/, built by
+build_fulltext.py from generated/markdown_clean/): those are gitignored and mostly
+copyrighted, and THIS index is committed and served, so baking the full text into it
+would publish it. The reading pane reads the local full text directly (ADR-025); the
+committed corpus-search index stays on the distillation. Publishing full text is a
+separate, rights-gated step.
 
 Output: docs/data/fulltext_index.json
   { "meta": {...}, "papers": { "<id>": { "t": title, "ay": author_year,

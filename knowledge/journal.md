@@ -10,7 +10,7 @@ status: complete
 language: de
 version: "0.2"
 created: 2026-02-18
-updated: 2026-06-30
+updated: 2026-07-01
 authors: [Christopher Pollin]
 generated-with: Claude Code
 related: [INDEX, plan, specification, design]
@@ -22,7 +22,14 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ---
 
-## PRISM and the epistemic infrastructure (June 2026)
+## PRISM and the epistemic infrastructure (2026)
+
+### 2026-07-01 (Session 29): Volltext lokal verdrahtet, Kategorien dreistufig, Q1/Q2 als Hauptfragen
+
+- **Ziel:** Den echten Docling-Volltext im PRISM-Lesebereich sichtbar machen, die Kategorien von binär auf dreistufig heben, und die vier in dieser Sitzung gesetzten Entscheidungen durch Tool und Doku ziehen.
+- **Verlauf:** Zuerst der Befund, dass die servierten Wissensdokumente unter `## Full Text` leer sind und der Lesebereich nur einen Stumpf zeigte, während die echten Volltexte ungenutzt in `generated/markdown_clean/` lagen. Ein neuer Generator `build_fulltext.py` löst jedes Paper über `source_file` (Fallback Autor-Jahr) auf, bereinigt (Frontmatter, Bildkommentare, GLYPH-Artefakte) und schreibt `docs/data/fulltext/{id}.md` plus Manifest; 283 von 326 Papern tragen Volltext. Die Leseansicht lädt ihn als Volltext-Ebene, das Destillat bleibt KI-Extraktion (ADR-025). Der Copyright-Hinweis im Index-Builder ist bindend: die Volltexte sind gitignored und werden nie öffentlich, der öffentliche Suchindex bleibt destillatbasiert. Vier Entscheidungen gesetzt: dreistufige Kategorien (nein/teilweise/ja auf Exclude/Unclear/Include, ADR-024), Q1/Q2 als gleichrangige Hauptfragen, Volltext nur lokal, Umsetzung nach Liste. Das Tool umgebaut, der Chip zykelt drei Zustände, `deriveDecision` dreiwertig, die bisher tote Unclear-Entscheidung trägt jetzt die Teildeckung, der reason-gated Override (ADR-023) hebt Exclude oder Unclear zu Include. Dazu die Bestandsannotationen sichtbar (Seed-Kategorien, Mensch/KI-Divergenz-Badge) und die aufgeschobene UI-Politur (veraltete Kommentare, aria-label an den Suchfeldern, doppelter Chip-Tooltip aufgelöst, Such-Entprellung, CSS-Banner entdekoriert). project.md, specification.md, data.md, methods.md und plan.md auf die vier Entscheidungen gezogen.
+- **Ergebnis:** Harness 76/76 (vier neue Tests für Teilweise/Unclear und den Chip-Vertrag) plus 15/15 Companion, grün nach jedem Batch. Alles im Working Tree, nichts committet.
+- **Dead Ends:** Den Volltext in die servierten Wissensdokumente einzubetten wäre der naive Weg gewesen, hätte aber rund 23 MB Copyright-Material in das committete `docs/` gezogen; separat-fetch mit gitignore ist die richtige Grenze. Die Kategorie-Evidenz-Zitate im Text zu verankern scheitert an der Datenlage (deutsche KI-Paraphrasen über englischem Text), darum als Referenzliste statt In-Text-Markierung.
 
 ### 2026-06-30 (Session 28): die offenen Fragen selbst recherchiert und entschieden, O2 aufgelöst
 

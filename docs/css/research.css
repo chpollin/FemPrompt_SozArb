@@ -585,6 +585,9 @@ header::after {
 
 .footer-links {
     margin-top: 0.5rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .footer-links a {

@@ -110,6 +110,18 @@ test('deriveDecision: all ten categories set is Include', function() {
     T.ALL_CATS.forEach(function(c) { cats[c] = true; });
     assertEqual(T.deriveDecision(cats), 'Include');
 });
+test('deriveDecision: both dimensions at teilweise (level 1) is Unclear', function() {
+    assertEqual(T.deriveDecision({ Prompting: 1, Gender: 1 }), 'Unclear');
+});
+test('deriveDecision: one dimension ja and the other teilweise is Unclear', function() {
+    assertEqual(T.deriveDecision({ Prompting: 2, Gender: 1 }), 'Unclear');
+});
+test('deriveDecision: teilweise in one dimension, nein in the other is Exclude', function() {
+    assertEqual(T.deriveDecision({ Prompting: 1 }), 'Exclude');
+});
+test('deriveDecision: legacy boolean true coerces to ja (level 2)', function() {
+    assertEqual(T.deriveDecision({ Prompting: true, Gender: 2 }), 'Include');
+});
 test('finalDecisionOf: derived Include without override stays Include', function() {
     assertEqual(T.finalDecisionOf({ Prompting: true, Gender: true }, false), 'Include');
 });
@@ -689,16 +701,21 @@ test('commitMessage summarizes the session counts and exclusion reasons', functi
 // Section I: accessibility (Cut 3) and screenable entry (O4)
 // ============================================================
 
-test('chipHtml exposes aria-pressed and keeps the slug and definition out of the accessible name', function() {
-    var on = T.chipHtml('AI_Literacies', true, false);
-    assertContains(on, 'aria-pressed="true"');
-    var off = T.chipHtml('AI_Literacies', false, false);
-    assertContains(off, 'aria-pressed="false"');
-    // the slug-and-definition tooltip and the checkbox are decorative for a screen reader
-    assertContains(off, 'class="pt-chip-tip" aria-hidden="true"');
-    assertContains(off, 'class="pt-chip-box" aria-hidden="true"');
-    // the definition still reaches assistive tech, as a description (title), not as the name
-    assertContains(off, 'title="');
+test('chipHtml exposes the three-level state as the accessible name and keeps slug/definition decorative', function() {
+    var ja = T.chipHtml('AI_Literacies', true, false);
+    assertContains(ja, ', ja"');
+    assertContains(ja, 'data-level="2"');
+    var nein = T.chipHtml('AI_Literacies', false, false);
+    assertContains(nein, ', nein"');
+    assertContains(nein, 'data-level="0"');
+    var teil = T.chipHtml('AI_Literacies', 1, false);
+    assertContains(teil, ', teilweise"');
+    assertContains(teil, 'data-level="1"');
+    // the checkbox stays decorative; the definition reaches AT via the described-by tip,
+    // not a native title (which had doubled the styled tip)
+    assertContains(nein, 'class="pt-chip-box" aria-hidden="true"');
+    assertContains(nein, 'aria-describedby="pt-chip-tip-AI_Literacies"');
+    assert(nein.indexOf('title="') === -1, 'no native title on the chip');
 });
 
 test('statusLabel maps the colour-coded decision state to a text equivalent', function() {
@@ -788,6 +805,80 @@ test('commit is blocked on an override to Include without a justification (O2 ga
     T.commit();
     assert(!T.getState().reviewers.rO2b.pO2b, 'no decision committed without a justification');
     delete T.getState().reviewers.rO2b;
+    T.getState().reviewer = prevRev;
+});
+
+// ============================================================
+// Section J: reading-pane click chain (DOM integration, ADR-024)
+// The truth-table tests above prove the derivation in isolation; these prove the
+// wiring the render templates alone cannot: a real click on a chip cycles
+// work.cats, re-derives, voids a now-stale override, and re-renders the decision
+// pill. jsdom hosts the assess column the reading surface renders into.
+// ============================================================
+
+function mountAssessCol() {
+    var host = document.getElementById('pt-assess-col');
+    if (!host) { host = document.createElement('aside'); host.id = 'pt-assess-col'; document.body.appendChild(host); }
+    host.innerHTML = '';
+    return host;
+}
+
+test('a chip click cycles nein/teilweise/ja and re-renders the derived decision (ADR-024)', function() {
+    mountAssessCol();
+    var tech = T.TECH_CATS[0], soc = T.SOCIAL_CATS[0];
+    T.setPapers([{ id: 'pJ1', title: 'X' }]);
+    var prevRev = T.getState().reviewer;
+    T.getState().reviewer = 'rJ'; T.getState().reviewers.rJ = {}; T.getState().index = 0;
+    T.resetWork({ id: 'pJ1' });
+    T.refreshAssess(); // renders chips + the derived pill and binds the click handlers
+
+    function chip(cat) { return document.querySelector('#pt-assess-col .pt-chip[data-cat="' + cat + '"]'); }
+    function derived() { return document.querySelector('#pt-assess-col .pt-logic-row .pt-pill').textContent; }
+
+    assert(chip(tech), 'a technical chip is rendered and clickable');
+    assertEqual(derived(), 'Exclude', 'empty set derives Exclude');
+
+    chip(tech).click();                                  // tech -> teilweise (1)
+    assertEqual(T.getWork().cats[tech], 1, 'first click sets teilweise');
+    assertEqual(chip(tech).dataset.level, '1', 're-rendered chip shows level 1');
+    assertEqual(derived(), 'Exclude', 'one dimension teilweise is still Exclude');
+
+    chip(soc).click();                                   // soc -> teilweise (1)
+    assertEqual(derived(), 'Unclear', 'both dimensions teilweise derives Unclear');
+
+    chip(tech).click();                                  // tech -> ja (2)
+    assertEqual(T.getWork().cats[tech], 2, 'second click sets ja');
+    assertEqual(derived(), 'Unclear', 'ja plus teilweise is still Unclear');
+
+    chip(soc).click();                                   // soc -> ja (2)
+    assertEqual(derived(), 'Include', 'both dimensions ja derives Include');
+
+    chip(tech).click();                                  // tech -> nein (0), wraps
+    assertEqual(T.getWork().cats[tech], 0, 'third click wraps to nein');
+    assertEqual(derived(), 'Exclude', 'dropping a dimension to nein derives Exclude');
+
+    delete T.getState().reviewers.rJ;
+    T.getState().reviewer = prevRev;
+});
+
+test('a chip click that flips the derived decision clears a now-stale override (ADR-023 wiring)', function() {
+    mountAssessCol();
+    var tech = T.TECH_CATS[0], soc = T.SOCIAL_CATS[0];
+    T.setPapers([{ id: 'pJ2', title: 'X' }]);
+    var prevRev = T.getState().reviewer;
+    T.getState().reviewer = 'rJ2'; T.getState().reviewers.rJ2 = {}; T.getState().index = 0;
+    T.resetWork({ id: 'pJ2' });
+    var w = T.getWork();
+    w.cats[tech] = 2; w.cats[soc] = 2; w.override = true; w.overrideReason = 'trotzdem raus';
+    T.refreshAssess(); // derived Include, override to Exclude armed
+    assert(T.getWork().override, 'override is set before the flipping click');
+
+    // dropping tech to nein flips the derivation Include -> Exclude, so the override is void
+    document.querySelector('#pt-assess-col .pt-chip[data-cat="' + tech + '"]').click();
+    assertEqual(T.getWork().override, false, 'the flip clears the stale override');
+    assert(!T.getWork().overrideReason, 'and its justification');
+
+    delete T.getState().reviewers.rJ2;
     T.getState().reviewer = prevRev;
 });
 
