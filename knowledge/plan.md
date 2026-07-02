@@ -409,4 +409,7 @@ At the next stakeholder meeting (or earlier written feedback), walk this ledger 
 
 - Reviewer identity in public files: are the current short keys acceptable in a public repo, or pseudonyms? Decide before P3.
 - Do the colleagues screen the full corpus or a split? Affects only the onboarding text, not the tool.
+- O5, the decisions-file shape (one shared file or one per person): ADR-021 keeps the per-reviewer file as the default; the operator decision is pending and belongs to the ratification walk above.
+- [[conformance-map]] item 1 names `paper/` as the location of the Forum Wissenschaft paper, which lives on Google Docs outside the repo; decide the report of record (the external Forum paper or `paper/draft.md`) and align items 1/2/3/23.
+- Filesystem housekeeping: the acquired PDFs still sit in the gitignored `pipeline/pdfs/` instead of the declared `generated/pdfs` (`config/defaults.yaml`); move or delete the leftover.
 - Folder restructure executed 2026-06-30 (code into `src/`, generated data into `generated/`, deep-research into `corpus/`, assessment unified); see [[journal]] Session 24.
