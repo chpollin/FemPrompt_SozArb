@@ -82,7 +82,7 @@ The benchmark (the human-LLM divergence and its decomposition, used as a motivat
 
 ### Knowledge documents
 
-`INDEX.md` (navigation and glossary), `project.md` (identity and theory), `methods.md` (review method and pipeline), `specification.md` (PRISM requirements, ADRs, user stories), `data.md` (tool data substrate), `design.md` (UI and design system), `plan.md` (roadmap, status, simulated decisions), `journal.md` (session log), `standards.md` (PRISMA, trAIce, RAISE), `conformance-map.md` (per-item PRISMA/trAIce conformance with source paths and named gaps, the R1 deliverable), `update-protocol.md` (round-2 protocol, analysis fields, RIS), `guides/manual-review-checklist.md`. Start at `INDEX.md`.
+`INDEX.md` (navigation and glossary), `project.md` (identity and theory), `methods.md` (review method and pipeline), `specification.md` (PRISM requirements, ADRs, user stories), `data.md` (tool data substrate), `design.md` (UI and design system), `plan.md` (roadmap, status, decided questions), `journal.md` (session log), `standards.md` (PRISMA, trAIce, RAISE), `conformance-map.md` (per-item PRISMA/trAIce conformance with source paths and named gaps, the R1 deliverable), `update-protocol.md` (round-2 protocol, analysis fields, RIS), `guides/manual-review-checklist.md`. Start at `INDEX.md`.
 
 ### Key web files
 
@@ -147,7 +147,7 @@ Each piece of information has exactly ONE canonical location. Other files refere
 | Category definitions | `assessment/categories.yaml` |
 | Theory and operationalization | `knowledge/project.md` |
 | Glossary | `knowledge/INDEX.md` |
-| Roadmap, current status, simulated decisions | `knowledge/plan.md` |
+| Roadmap, current status, decided questions | `knowledge/plan.md` |
 | Standards (PRISMA, trAIce, RAISE) | `knowledge/standards.md` |
 | Work journal | `knowledge/journal.md` |
 

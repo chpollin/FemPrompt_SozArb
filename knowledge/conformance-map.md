@@ -10,7 +10,7 @@ status: draft
 language: en
 version: "0.2"
 created: 2026-06-30
-updated: 2026-07-02
+updated: 2026-07-03
 authors: [Christopher Pollin]
 generated-with: Claude Code
 related: [standards, plan, methods, specification, data]
@@ -33,7 +33,7 @@ The 2020 structure exposes three flow phases (Identification, Screening, Include
 
 | Item | Checklist item (abridged) | Status | Source or gap |
 |---|---|---|---|
-| 1 | Title identifies the report as a systematic review | Reconstructable | `paper/` (Forum Wissenschaft, submitted and closed) |
+| 1 | Title identifies the report as a systematic review | Reconstructable | The Forum Wissenschaft paper, the external round-1 report of record (written on Google Docs, submitted and closed, outside this repository); the in-repo follow-up draft is `paper/draft.md` |
 | 2 | Abstract, structured summary | Reconstructable | `paper/draft.md` |
 | 3 | Introduction, rationale | Reconstructable | [[project]], `paper/draft.md` |
 | 4 | Introduction, objectives and questions | Reconstructable | [[project]] (research questions), `assessment/categories.yaml` (eligibility operationalised) |

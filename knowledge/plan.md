@@ -7,7 +7,7 @@ status: active
 language: en
 version: "0.3"
 created: 2026-06-09
-updated: 2026-07-02
+updated: 2026-07-03
 authors: [Christopher Pollin]
 generated-with: Claude Code
 method:
@@ -74,7 +74,7 @@ Status: the decomposed framing is settled qualitatively (workflow-criteria disag
 
 Verification: the pilot shows the fields are answerable from the texts. Validation: the colleagues confirm the fields capture what the analysis needs, before the schema freeze. Done when: the update's Excel template carries the analysis fields and the bridge validates them. Hard ordering: TP4 freeze precedes the B2 screening start.
 
-Status: the analysis-design is written into [[update-protocol]] (sub-questions, candidate field set with closed vocabularies, the open decisions for ratification). Pilot and freeze wait on those decisions.
+Status: the analysis-design is written into [[update-protocol]] (sub-questions, field set with closed vocabularies); the field decisions were fixed on 2026-07-03 (see Decided questions below). Next are the pilot and the freeze.
 
 ## Programme verification and validation matrix
 
@@ -228,7 +228,7 @@ A second interactive pass (browser agent, 2026-06-30) ran a real screening on a 
 Decided and unblocked first, gated cuts after their decision resolves. Each keeps the harness green (the current count is whatever `node tests/run.mjs` prints) and is recorded as an ADR.
 
 1. **One workspace** (done 2026-06-30) -- ADR-020. Screening is the permanent surface; the PRISMA record and the data functions become on-demand affordances; academic references leave the work surface. Files: `docs/prisma.html`, `docs/js/prisma.js` (renderShell, showSurface, renderData), `docs/css/prisma.css`.
-2. **Git provenance** (done 2026-06-30; the per-reviewer file stays as the default, the O5 file-shape question stays open) -- ADR-021. Drop the identity form and the perspective switcher; write the decisions file deterministically (stable order, one paper block); generate a session commit message. Files: `docs/js/prisma.js`, a deterministic serializer with its own test.
+2. **Git provenance** (done 2026-06-30; O5 decided 2026-07-03: one file per reviewer) -- ADR-021. Drop the identity form and the perspective switcher; write the decisions file deterministically (stable order, one paper block); generate a session commit message. Files: `docs/js/prisma.js`, a deterministic serializer with its own test.
 3. **Accessibility and keyboard flow** (done 2026-06-30) -- P4 NFR-06. Focus restoration after a paper switch, visible focus rings on inputs and controls, `aria-pressed` on category and exclusion chips, dialog semantics with focus move, Escape, and Tab trap for the pin menu, text equivalent for the colour-only status dot, slug and definition out of the chip's accessible name, keyboard-focus tooltips, darkened muted-text tokens for contrast.
 4. **Machine evidence** (done 2026-06-30) -- ADR-022 supersedes ADR-018: removed from the evidence list; the model's per-paper reasoning stays only in the collapsed KI-Vorschlag.
 5. **Inclusion logic** (done 2026-06-30) -- ADR-023 resolves O2: a reason-gated override to Include. The AND-rule derives a default; the human binds and may override it either way, an override to Include recording a free-text justification (RAISE P3). Grounded in [[standards]] and the RAISE primary source.
@@ -243,9 +243,9 @@ Decided and unblocked first, gated cuts after their decision resolves. Each keep
 | O2 | Inclusion AND-rule: keep rigid, or reason-gated override to Include | resolved: reason-gated override to Include (ADR-023, cut 5 done) |
 | O3 | Technik/Sozial to Gegenstand/Perspektive | resolved: renamed (cut 6 done) |
 | O4 | Thin-text papers: block, warn, or load raw local text | partial: warn + screenable entry done; raw local text is P2 (cut 7) |
-| O5 | Decisions file: one shared file, or one per person | open: ADR-021 keeps the per-reviewer file as the default; the shared-vs-per-person question stays undecided |
+| O5 | Decisions file: one shared file, or one per person | resolved: one file per reviewer (operator decision 2026-07-03, confirming the ADR-021 default) |
 
-All seven cuts are built and on the branch: cuts 1 to 6 complete (O1 and O3 resolved; O2 resolved by ADR-023) and the warn-and-entry half of 7 done, the raw-local-text half remaining as the larger P2/ADR-013 work. The Stage A redesign is closed. O5 (the decisions-file shape) stays a deferred operator decision that does not block Stage A; ADR-021 keeps the per-reviewer file as the working default.
+All seven cuts are built and on the branch: cuts 1 to 6 complete (O1 and O3 resolved; O2 resolved by ADR-023) and the warn-and-entry half of 7 done, the raw-local-text half remaining as the larger P2/ADR-013 work. The Stage A redesign is closed. O5 was decided on 2026-07-03: one decisions file per reviewer, confirming the ADR-021 default; no gate waits on the operator.
 
 ## Stage R: The first-round pass through PRISM and its evaluation
 
@@ -370,13 +370,13 @@ Status: the in-repo versus standalone decision above is still open; the setup pa
 
 Writing the Forum Wissenschaft paper itself (the plan delivers its methods inputs: the PRISMA record and the disclosure, B3), a raw-text corpus search index, CI (revisit after P1), and v2 features beyond reuse extraction (live multi-reviewer merge, mobile screening).
 
-## Simulated decisions (pending ratification)
+## Decided questions (the former simulation ledger)
 
-Every decision in this section is simulated. The project decided on 2026-06-09 not to block on external feedback: stakeholder decisions are simulated from a realistic perspective, explicitly marked, and ratified, revised, or dropped at the next real contact (the stakeholder meeting, or earlier written feedback). A simulated decision licenses work, never an outward claim: nothing here may appear in a publication, record, or report as a stakeholder decision until ratified. The simulated perspectives are grounded in the documented roles, the review lead and the second reviewing expert, both working in the established Excel environment under real time constraints; the simulation weights coding burden and workflow continuity high. ADR-019 has since ratified in-tool screening as the binding path and retired the earlier reading that screening inside the tool had been falsified; the Excel environment remains an entry seam, not the capture path.
+These decisions were first simulated on 2026-06-09 to avoid blocking on external feedback. On 2026-07-03, after the stakeholder meeting of 2026-07-01, the operator retired the simulation-and-ratification mechanism entirely and fixed every row as a project decision; the project builds on them without a waiting state. The one revision against the simulated ledger is the screening mode (both reviewers screen everything, see below). Provenance of the simulation phase lives in the Git history and [[journal]].
 
-### Analysis fields (the [[update-protocol]] TP4 open decisions)
+### Analysis fields (the [[update-protocol]] TP4 decisions)
 
-| # | Decision | Simulated outcome | Rationale |
+| # | Decision | Outcome | Rationale |
 |---|---|---|---|
 | 1 | Sub-question set | SQ1 to SQ3 confirmed; the gap map (SQ3) serves both the follow-up paper and the Fair Bench preparation | producing it once for two uses matches the programme economy |
 | 2 | Field set, AN_Harm_Types | seven fields confirmed; AN_Harm_Types kept optional | the highest-burden field; SQ2 survives at reduced resolution without it |
@@ -387,11 +387,11 @@ Every decision in this section is simulated. The project decided on 2026-06-09 n
 | 7 | Pilot | stratified pilot on a small sample; revise a field when coders flag ambiguity on more than roughly a quarter of papers | concrete enough to run, loose enough to revise |
 | 8 | Studientyp | confirmed, existing column, vocabulary-enforced, no duplicate | no argument against it surfaced |
 
-### Round-2 protocol (the [[update-protocol]] open issues)
+### Round-2 protocol (the [[update-protocol]] decisions)
 
-| Decision | Simulated outcome | Rationale |
+| Decision | Outcome | Rationale |
 |---|---|---|
-| Screening split | the two reviewers split the new batch with a double-screened overlap sample; the overlap yields the project's first inter-human agreement figures | workload-realistic; addresses the named baseline gap |
+| Screening mode | both reviewers screen the full batch independently (decided 2026-07-03, revising the simulated split-plus-overlap); inter-human agreement is computed over the entire double-screened set | the full double screening yields the inter-human baseline over everything and needs no split logic anywhere |
 | Claude Code lane L5 | runs as a documented fifth lane | the rehearsal runs showed it works; an extra documented lane strengthens the multi-system design |
 | Prompt provenance | cite `corpus/deep-research/literature-review-prompt.md` as the documented template, with the loss of the instantiated round-1 prompt stated as a known gap | settled by the submitted paper's own citation practice |
 | Reviewer identifiers | neutral ids `reviewer-1` / `reviewer-2` repo-wide (avoids the R1 collision with the trAIce item id and the plan phase) | privacy-clean, PRISMA-sufficient, collision-free |
@@ -399,17 +399,11 @@ Every decision in this section is simulated. The project decided on 2026-06-09 n
 
 ### User-story validation (the stories in [[specification]])
 
-The v4 core stories (read, search, pin) are confirmed in substance, with a role correction. ADR-019 makes in-tool screening the binding path; whether evidence pinning is required per decision or concentrated at reconciliation stays a workflow choice for the stakeholder meeting, and the heavy in-tool reader during reconciliation is the review lead and technical lead. Record-an-exclusion is confirmed but lives in Excel; generate-record, produce-disclosure, verify-conformance, look-up-category, and understand-checklist are confirmed. The v3 blind and divergence stories are confirmed superseded. Share-a-session is dropped for round 2, since the Excel-plus-bridge path replaces session hand-off, and retained only as background for foreign reuse.
-
-### Ratification
-
-At the next stakeholder meeting (or earlier written feedback), walk this ledger top to bottom; per row record ratified, revised (how), or dropped, update the affected documents ([[update-protocol]], [[specification]]), and remove the simulation marker from each decision as it resolves. The ledger stays as provenance of which decisions were, for a time, simulated.
+The v4 core stories (read, search, pin) are confirmed in substance, with a role correction. ADR-019 makes in-tool screening the binding path; evidence pinning stays technically optional per decision (decided 2026-07-03), expected where a category is contested and at reconciliation, and the heavy in-tool reader during reconciliation is the review lead and technical lead. Record-an-exclusion is confirmed but lives in Excel; generate-record, produce-disclosure, verify-conformance, look-up-category, and understand-checklist are confirmed. The v3 blind and divergence stories are confirmed superseded. Share-a-session is dropped for round 2, since the Excel-plus-bridge path replaces session hand-off, and retained only as background for foreign reuse.
 
 ## Open items
 
-- Reviewer identity in public files: are the current short keys acceptable in a public repo, or pseudonyms? Decide before P3.
-- Do the colleagues screen the full corpus or a split? Affects only the onboarding text, not the tool.
-- O5, the decisions-file shape (one shared file or one per person): ADR-021 keeps the per-reviewer file as the default; the operator decision is pending and belongs to the ratification walk above.
-- [[conformance-map]] item 1 names `paper/` as the location of the Forum Wissenschaft paper, which lives on Google Docs outside the repo; decide the report of record (the external Forum paper or `paper/draft.md`) and align items 1/2/3/23.
 - Filesystem housekeeping: the acquired PDFs still sit in the gitignored `pipeline/pdfs/` instead of the declared `generated/pdfs` (`config/defaults.yaml`); move or delete the leftover.
 - Folder restructure executed 2026-06-30 (code into `src/`, generated data into `generated/`, deep-research into `corpus/`, assessment unified); see [[journal]] Session 24.
+
+Resolved 2026-07-03: reviewer identity in public files (neutral ids `reviewer-1`/`reviewer-2` repo-wide, acceptable in a public repo); screening mode (both reviewers screen the full batch, see the decided questions above); O5 (one decisions file per reviewer, ADR-021 default confirmed as the decision); the [[conformance-map]] item 1 report reference (the Forum Wissenschaft paper is the external round-1 report of record, marked as outside the repo).

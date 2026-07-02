@@ -34,7 +34,7 @@ In function order, not alphabetical.
 | [[specification]] | Substance of the PRISM tool: requirements, user stories, and the ADR decision log | per tool iteration |
 | [[data]] | The data substrate the PRISM tool consumes and produces | per schema change |
 | [[design]] | UI and design system of the PRISM tool | per design iteration |
-| [[plan]] | Forward steering: the staged roadmap, current status, and simulated decisions | per phase |
+| [[plan]] | Forward steering: the staged roadmap, current status, and the decided questions | per phase |
 | [[journal]] | Genesis: the chronological session log with decisions and learnings | per session |
 | [[standards]] | The reporting standards implemented: PRISMA 2020, PRISMA-trAIce, RAISE | rarely |
 | [[conformance-map]] | Per-item conformance of this review against PRISMA 2020 and trAIce, with source paths and named gaps (R1) | per Stage R step |

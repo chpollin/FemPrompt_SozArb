@@ -7,7 +7,7 @@ status: complete
 language: en
 version: "0.2"
 created: 2026-06-09
-updated: 2026-07-02
+updated: 2026-07-03
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 4.8)
 method:
@@ -60,7 +60,7 @@ Acceptance (one-workspace IA, per ADR-020): Screening is the only permanent surf
 
 ## Anwendungsszenarien (Epics und User Stories)
 
-Usage scenarios in the form "As [role], who [context], I want [goal], so that [benefit]". Roles: the review lead (Sackl-Sharif), the reviewing experts (Sackl-Sharif, Klinger), the technical lead (Pollin), and an external reviewer or auditor. The stories were written by the technical lead as a user proxy and stay hypotheses until validated against how the colleagues actually work; ADR-019 ratifies in-tool screening as the binding path and keeps the Excel import bridge only as an entry seam, superseding the earlier reading that the in-tool model had been falsified (see [[plan]]). The simulated validation verdicts on these stories live in [[plan]] (simulated decisions).
+Usage scenarios in the form "As [role], who [context], I want [goal], so that [benefit]". Roles: the review lead (Sackl-Sharif), the reviewing experts (Sackl-Sharif, Klinger), the technical lead (Pollin), and an external reviewer or auditor. The stories were written by the technical lead as a user proxy and stay hypotheses until validated against how the colleagues actually work; ADR-019 ratifies in-tool screening as the binding path and keeps the Excel import bridge only as an entry seam, superseding the earlier reading that the in-tool model had been falsified (see [[plan]]). The validation verdicts on these stories live in [[plan]] (Decided questions).
 
 ### v4 core (current, evidence-grounded)
 
@@ -342,11 +342,11 @@ Effekt. Implementiert (`docs/js/prisma.js` renderShell, showSurface, openPanel/r
 
 Kontext. ADR-010 stored one file per reviewer, named by an in-tool Kürzel, and the report carried a perspective switcher across reviewer tracks. The operator decided (2026-06-30) that reviewer identity is the Git commit author, not a field in the tool: editors keep separate commits, and `git blame` on the decisions file attributes each decision to its author. The web tool cannot read the Git identity itself (a static page, the File System Access permission is sandboxed to the picked folder), so the capture happens at commit time, by Git, not by the tool.
 
-Wahl. Drop the in-tool reviewer-identity form and the multi-reviewer perspective switcher. The decisions file is written deterministically, decisions sorted by paper id, one block per paper, so a git diff shows exactly which decisions changed and git blame is meaningful (`reviewerFileText`, `sortedDecisions`). The tool generates a paste-ready session commit message (counts, exclusion-reason breakdown) so the commit documents the work (`commitMessage`). O5, one shared decisions file versus one per person, stays open; the default keeps the existing per-reviewer file key unchanged, now a minimal filename rather than a managed identity surface.
+Wahl. Drop the in-tool reviewer-identity form and the multi-reviewer perspective switcher. The decisions file is written deterministically, decisions sorted by paper id, one block per paper, so a git diff shows exactly which decisions changed and git blame is meaningful (`reviewerFileText`, `sortedDecisions`). The tool generates a paste-ready session commit message (counts, exclusion-reason breakdown) so the commit documents the work (`commitMessage`). O5, one shared decisions file versus one per person, was decided on 2026-07-03: one file per reviewer, confirming the existing per-reviewer file key, now a minimal filename rather than a managed identity surface.
 
 Begründung. A self-typed identity field is fragile metadata nobody maintains, the standing default `reviewer1` was the proof; Git authorship is stronger, versioned, tamper-evident provenance, which is what a methods project needs to answer "who decided this". Removing the perspective switcher also removes the last in-tool comparison apparatus, consistent with ADR-014 (synthesis over comparison). The deterministic file is the precondition for Git-as-provenance: without stable ordering every save reshuffles the file and blame becomes noise.
 
-Effekt. Implementiert (`docs/js/prisma.js` sortedDecisions, reviewerFileText, commitMessage; writeCurrentReviewer und der Datei-Export nutzen die deterministische Form; das Daten-Panel auf Git-Provenienz umgestellt mit Commit-Helfer; perspectiveBar/attachPerspective und das Reviewer-Identitäts-Formular entfernt). Test-abgedeckt (drei Tests: sortedDecisions-Ordnung, reviewerFileText-Stabilität, commitMessage-Zusammenfassung; `tests/tests.js` Section H), Harness 65/65. Revises ADR-010 (the file key is no longer an identity surface) and removes the perspective UI of the ADR-014 report layer. O5 (file shape) and the public-repo reviewer-identity question in [[plan]] open items remain to be decided.
+Effekt. Implementiert (`docs/js/prisma.js` sortedDecisions, reviewerFileText, commitMessage; writeCurrentReviewer und der Datei-Export nutzen die deterministische Form; das Daten-Panel auf Git-Provenienz umgestellt mit Commit-Helfer; perspectiveBar/attachPerspective und das Reviewer-Identitäts-Formular entfernt). Test-abgedeckt (drei Tests: sortedDecisions-Ordnung, reviewerFileText-Stabilität, commitMessage-Zusammenfassung; `tests/tests.js` Section H), Harness 65/65. Revises ADR-010 (the file key is no longer an identity surface) and removes the perspective UI of the ADR-014 report layer. Both follow-up questions are decided (2026-07-03): O5 is one file per reviewer, and the public-repo reviewer identity is the neutral ids reviewer-1/reviewer-2.
 
 ### ADR-022 Machine category evidence removed from the evidence list (supersedes ADR-018)
 

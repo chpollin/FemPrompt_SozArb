@@ -10,7 +10,7 @@ status: complete
 language: de
 version: "0.2"
 created: 2026-02-18
-updated: 2026-07-02
+updated: 2026-07-03
 authors: [Christopher Pollin]
 generated-with: Claude Code
 related: [INDEX, plan, specification, design]
@@ -23,6 +23,13 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 ---
 
 ## PRISM and the epistemic infrastructure (June 2026)
+
+### 2026-07-03 (Session 30): Simulationsmechanismus abgeschafft, alle Ledger-Fragen als Projektentscheidungen fixiert
+
+- **Ziel:** Auf Operatoranweisung das Warten auf Reviewerinnen-Feedback vollständig aus dem Projekt entfernen; das Stakeholder-Treffen (01.07.) hat stattgefunden, der Ratifikationsmechanismus wird nicht mehr gebraucht, es wird implementiert.
+- **Verlauf:** Der Ledger "Simulated decisions (pending ratification)" in plan.md wurde zu "Decided questions" umgebaut; die simulierten Ergebnisse vom 09.06. gelten seit heute als getroffene Projektentscheidungen, mit einer inhaltlichen Revision: beide Reviewerinnen screenen den vollen Batch (statt Split plus Overlap-Sample), die Inter-Human-Baseline wird damit über den gesamten doppelt gescreenten Bestand berechnet. Nachgezogen wurden update-protocol.md (Abschnitt 6 Metriken, Rollen-Tabelle, Abschnitt 8 Punkt 10, Abschnitt 10 Punkte 4 und 5 resolved, Abschnitt F von Open decisions zu Decisions, alle Inline-Marker "open decision n" auf F.n), specification.md (ADR-021: O5 entschieden, eine Datei pro Reviewerin; Reviewer-Identität reviewer-1/reviewer-2 auch im öffentlichen Repo), conformance-map.md (Item 1 verweist auf das Forum-Paper als externen Report of Record statt auf `paper/`), INDEX.md und CLAUDE.md (Formulierung "simulated decisions" ersetzt). Der Pinning-Workflow ist entschieden: technisch optional pro Entscheidung, erwartet bei strittigen Kategorien und in der Reconciliation. Damit sind auch die beiden offenen Operatorfunde aus Session 29 (O5, Conformance-Item 1) geschlossen.
+- **Ergebnis:** Kein Gate im Projekt wartet mehr auf externes Feedback; die Bestätigung der Arbeitsregeln durch die Kolleginnen geschieht implizit beim Onboarding. Die Tool-Entwicklung war zu keinem Zeitpunkt blockiert und bleibt es nicht; die Screening-Modus-Entscheidung berührt nur Metrik-Prosa und kommendes Onboarding-Material, keine Zeile Tool-Code.
+- **Dead Ends:** Keine. Die Provenienz der Simulationsphase (welche Entscheidung wann simuliert war) bleibt über Git-Historie und dieses Journal rekonstruierbar; die Tabellen selbst tragen keine Simulationsmarker mehr.
 
 ### 2026-07-02 (Session 29): Audit der Wissensdokumente gegen den Repo-Stand, Drift nach ADR-020..023 geschlossen
 
