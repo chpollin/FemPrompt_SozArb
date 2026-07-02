@@ -15,14 +15,14 @@ status: complete
 language: en
 version: "0.2"
 created: 2026-06-09
-updated: 2026-06-29
+updated: 2026-07-02
 authors: [Christopher Pollin]
 generated-with: Claude Code
 topics: ["[[Information Visualisation]]", "[[Scholar-Centered Design]]"]
 related: [specification, data, journal]
 ---
 
-This is the self-contained UI and design working document for the PRISM screening tool, a standalone page (`docs/prisma.html`, ADR-008) linked from the Evidence Companion. UI work proceeds from this document alone; it carries the current direction, the PRISMA essentials that drive the interface, the people it serves, the three surfaces as built, the design system, the epistemic principles, the tokens, the genesis of the design, and the open questions. Full standards detail lives in [[standards]], the formal requirements in [[specification]], the data model in [[data]].
+This is the self-contained UI and design working document for the PRISM screening tool, a standalone page (`docs/prisma.html`, ADR-008) linked from the Evidence Companion. UI work proceeds from this document alone; it carries the current direction, the PRISMA essentials that drive the interface, the people it serves, the workspace as built, the design system, the epistemic principles, the tokens, the genesis of the design, and the open questions. Full standards detail lives in [[standards]], the formal requirements in [[specification]], the data model in [[data]].
 
 ## 1. Current direction
 
@@ -30,7 +30,7 @@ The tool is centred on evidence-grounded screening (ADR-012) and brings human an
 
 1. Evidence-grounded screening is the core. The screening view is built around the served knowledge document (`paper.knowledge_doc`, distilled, not raw full text, see [[data]]), an in-text and corpus-wide search, and pinning a search hit as a Beleg on a category. A category is not a bare checkbox, it carries the words that justify it, which is reproducible and matches the reviewing colleagues' method.
 2. AI is advisory and reduced. The AI proposal is an optional, collapsed suggestion, off by default; there is no blind reveal and no in-tool kappa or matrix. Each Beleg keeps a provenance tag, human or AI (ADR-015); the machine-extracted Kategorie-Evidenz from the knowledge document enters as a clearly labelled AI provenance class that is shown and advisory but never sets a category, so machine text cannot flip the binding human decision (ADR-016, ADR-018).
-3. Three surfaces, one Companion design. The seven v3 surfaces collapse to Screening, PRISMA & Report, and Daten & Repo, each with a one-line "what do I do here" header. The page wears the Companion design (white background, the rainbow accent bar, the shared header, navigation, and footer); versioning happens in GitHub Desktop, there is no in-tool Git surface.
+3. One workspace, one Companion design. The seven v3 surfaces collapsed to three (ADR-012); ADR-020 then merged those three into one permanent Screening workspace, whose toolbar opens the PRISMA record and the Daten & Sync functions as on-demand overlay panels. The page wears the Companion design (white background, the rainbow accent bar, the shared header, navigation, and footer); versioning happens in Git outside the tool, reviewer provenance travels with the commit author (ADR-021), and the data panel prepares a commit message instead of committing.
 
 ```
 SCREENING  ┌ corpus list + full-text search ┐  ┌ full text (formatted, searchable) ┐  ┌ categories + evidence ┐
@@ -38,7 +38,7 @@ SCREENING  ┌ corpus list + full-text search ┐  ┌ full text (formatted, sea
            │ search all texts: "gender"      │  │ "...gendered scripts of care..."   │  │  └ pin: "gendered..."  │
            │ [paper 13/87]                   │  │ [next hit ↵]  [pin as evidence]    │  │ derived: INCLUDE       │
            └─────────────────────────────────┘  └────────────────────────────────────┘  └───────────────────────┘
-PRISMA & REPORT   flow diagram · checklist · disclosure (auto)        DATEN & REPO   connect · reviewer file · export
+PANELS (on demand)   PRISMA-Record  flow · checklist · disclosure     Daten & Sync  connect · reviewer file · export
 ```
 
 The synthesis surface that brings human and AI Belege together is the next build; its level (per article, corpus-wide, or both) is the open KI1 decision (section 9).
@@ -63,19 +63,18 @@ PRISMA is a reporting standard (make the selection process transparent and audit
 | Technical lead | Pollin | Import batches, configure, generate disclosure, run the update | Data I/O and config |
 | External reviewer or auditor | Journal referee, FFG reviewer | Verify the AI use was reported responsibly | Read-only, checklist and flow |
 
-## 4. The three surfaces (as built)
+## 4. The workspace and its panels (as built)
 
-These are the surfaces implemented in `docs/js/prisma.js` and `docs/css/prisma.css`.
+This is the workspace implemented in `docs/js/prisma.js` and `docs/css/prisma.css`, one permanent Screening surface plus two on-demand overlay panels (ADR-020).
 
 ### 4A. Page shell
 
-Standalone page `docs/prisma.html` (ADR-008), wearing the Companion design since ADR-014: the shared header (title, subtitle, authors, the rainbow accent bar), the navigation identical on all five pages, and the shared footer, plus a thin repo-connection bar. `js/prisma-data.js` provides the `window.EC` shim over `research_vault_v2.json`. A sub-navigation with exactly three buttons, each followed by a one-line intro:
+Standalone page `docs/prisma.html` (ADR-008), wearing the Companion design since ADR-014: the shared header (title, subtitle, authors, the rainbow accent bar), the navigation identical on all five pages, and the shared footer, plus a thin repo-connection bar. `js/prisma-data.js` provides the `window.EC` shim over `research_vault_v2.json`. A workspace toolbar carries the fixed title Screening and two tool buttons that open the panels as overlay dialogs (focus moves into the dialog; Escape, the close button, and the backdrop close it):
 
-- Screening: Volltext lesen und durchsuchen, Belege an Kategorien anheften, Include/Exclude entscheiden.
-- PRISMA & Report: PRISMA-2020-Fluss, Checkliste und Disclosure, aus dem Screening erzeugt.
-- Daten & Repo: Mit dem Projektordner verbinden, eine Datei pro Reviewer:in, Export/Import.
+- PRISMA-Record erzeugen: PRISMA-2020-Fluss, Checkliste und Disclosure, aus dem Screening erzeugt.
+- Daten & Sync: Mit dem Projektordner verbinden, eine Datei pro Reviewer:in, Commit-Nachricht, Export/Import.
 
-There is no blind-mode toggle and no comparison surface. A persisted v3 surface id is normalised onto these three on load.
+There is no blind-mode toggle and no comparison surface. A persisted older surface id is normalised onto the screening workspace on load.
 
 ### 4B. Screening (default surface)
 
@@ -83,13 +82,13 @@ The per-paper working surface, optimised for reading the document, finding the w
 
 - Left, corpus navigator. A full-text search box over the whole corpus (FR-12, backed by `docs/data/fulltext_index.json`) plus the paper list with status dots (none, include, exclude) and a hit-count badge when a corpus query is active. Selecting a paper opens it; an active corpus term is carried into the in-text search.
 - Centre, reading column. Title and authors, a sticky in-text search bar (highlight all, step previous/next, hit counter, "Treffer anheften"), then the rendered document. The document is `paper.knowledge_doc` fetched on demand and rendered by the built-in minimal Markdown renderer (FR-11), splitting the paper layer from the machine-extraction layer at the first `## Kernbefund` heading with a Volltext / KI-Extraktion toggle (ADR-016). Papers without a `knowledge_doc` fall back to the abstract; a `nur Abstract` pill marks the fallback.
-- Right, assessment. The ten category chips in two dimension groups (definitions on hover), the pinned Belege grouped by category with a per-Beleg human/KI marker, the derived `(>=1 Technik) UND (>=1 Sozial)` decision with the override-to-exclude switch, the exclusion-reason picker when the decision is Exclude, the binding "Entscheidung erfassen" action, and an optional collapsed AI suggestion.
+- Right, assessment. The ten category chips in two dimension groups (definitions on hover), the pinned Belege grouped by category with a per-Beleg human/KI marker, the derived `(>=1 Gegenstand) UND (>=1 Perspektive)` decision with the symmetric override switch (ADR-023; overriding a derived Exclude to Include requires a recorded free-text justification), the exclusion-reason picker when the decision is Exclude, the binding "Entscheidung erfassen" action, and an optional collapsed AI suggestion.
 
 Evidence pinning (FR-13). Selecting a passage in the reading column, or pressing "Treffer anheften" on the active in-text hit, opens a category menu. A pin from the paper layer is `origin: human`, sets the category, and is the binding justification; a pin from the KI-Extraktion layer is `origin: ai`, is shown marked KI, and never sets a category (ADR-016). The contract is in [[data]].
 
 ```
 SCREENING  ┌ Korpus + Volltext-Suche ┐  ┌ Titel · In-Text-Suche · Dokument ┐  ┌ Kategorien · Belege ┐
-           │ [Suche: "gender"]        │  │ ...gendered <mark>scripts</mark>  │  │ Technik  Sozial      │
+           │ [Suche: "gender"]        │  │ ...gendered <mark>scripts</mark>  │  │Gegenstand Perspektive│
            │ ● Paper A      3×         │  │  of care...   [‹ 3/7 ›][anheften] │  │  Gender ✓            │
            │ ○ Paper B                 │  │  [Volltext | KI-Extraktion]       │  │   └ "gendered..." M │
            │ ● Paper C      1×         │  │  Text markieren → Beleg anheften  │  │ abgeleitet: INCLUDE  │
@@ -98,13 +97,13 @@ SCREENING  ┌ Korpus + Volltext-Suche ┐  ┌ Titel · In-Text-Suche · Dokume
                                                                                    └──────────────────────┘
 ```
 
-### 4C. PRISMA & Report
+### 4C. PRISMA-Record (panel)
 
-The outputs, computed from the screening, not part of the working loop. One scroll with a perspective selector (whose decisions count as the human side) and three sections: the PRISMA 2020 flow with the trAIce R1 AI-versus-human split, the PRISMA-trAIce checklist (auto-satisfied where the setup already meets an item), and the AI-disclosure generator (Markdown preview, copy, export). Since ADR-017 the disclosure no longer computes kappa or the matrix in-tool; it carries the trAIce M9/R2 item as a reference to an external benchmark evaluation. The divergence itself is research material for the paper and Companion, not screening work.
+The outputs, computed from the screening, opened on demand from the toolbar (ADR-020); they sit outside the working loop. One scroll with three sections: the PRISMA 2020 flow with the trAIce R1 AI-versus-human split (the human lane is labelled by the fixed perspective; ADR-021 removed the in-tool perspective switcher), the PRISMA-trAIce checklist (auto-satisfied where the setup already meets an item), and the AI-disclosure generator (Markdown preview, copy, export). Since ADR-017 the disclosure no longer computes kappa or the matrix in-tool; it carries the trAIce M9/R2 item as a reference to an external benchmark evaluation. The divergence itself is research material for the paper and Companion, not screening work.
 
-### 4D. Daten & Repo
+### 4D. Daten & Sync (panel)
 
-Sync. Reviewer identity (the `<kuerzel>.json` filename), the File System Access connect, reconnect, and reload that writes each reviewer file directly into the project folder, export and import as the all-browser fallback, and the decision-log CSV. ADR-014 removed the in-tool Git workflow (versioning is GitHub Desktop) and the reviewer reconciliation table.
+Sync, opened on demand from the toolbar (ADR-020). The File System Access connect, reconnect, and reload that writes the per-reviewer file (`<kuerzel>.json`, schema 0.2, diff-stable, sorted by paper id, ADR-021) directly into `docs/data/screening/`, a commit-message generator that documents the session, export and import as the all-browser fallback, and the decision-log CSV. Who decided what is carried by the Git commit author; ADR-021 dropped the in-tool identity form, and ADR-014 removed the in-tool Git workflow (versioning stays in Git tooling outside the tool) and the reviewer reconciliation table.
 
 ## 5. Design system
 
@@ -129,7 +128,7 @@ Each operationalises the project's thesis (reliability as a property of the proc
 
 The screening design language did not start from scratch. A second, independent high-fidelity prototype of the instrument was produced in Claude Design from the same [[data]] model and handed off as a bundle (README, transcript, React source, reference screens). It was a design reference, not the shipped tool, a clickable React prototype consuming the data substrate verbatim, with fabricated seed papers, that demonstrated the interaction model and a rigorous OKLCH-plus-IBM-Plex design system.
 
-The decision (iteration v3) was to port its design language and interaction model onto the existing vanilla, Git-backed `docs/prisma.html` and keep React out, computing every metric live from the real corpus and the real per-reviewer data rather than from the prototype's hardcoded constants. Ported: the OKLCH token system and the IBM Plex tri-family, the three-pane workspace, the derived-decision-plus-explicit-override pattern with a required exclusion reason, the disclosure generator, and the checklist tracker with verbatim item text and priority. The v4 redesign (ADR-012) then recentred the panes on corpus search, reading, and evidence, removed the blind/reveal Agreement rail from the working view, and moved the comparison apparatus to the report layer, where ADR-014 and ADR-017 later removed it entirely. The fuller genesis of these iterations is in [[journal]].
+The decision (iteration v3) was to port its design language and interaction model onto the existing vanilla, Git-backed `docs/prisma.html` and keep React out, computing every metric live from the real corpus and the real per-reviewer data rather than from the prototype's hardcoded constants. Ported: the OKLCH token system and the IBM Plex tri-family, the three-pane workspace, the derived-decision-plus-explicit-override pattern with a required exclusion reason, the disclosure generator, and the checklist tracker with verbatim item text and priority. The v4 redesign (ADR-012) then recentred the panes on corpus search, reading, and evidence, removed the blind/reveal Agreement rail from the working view, and moved the comparison apparatus to the report layer, where ADR-014 and ADR-017 later removed it entirely. The 2026-06-30 redesign (ADR-020 to ADR-023) merged the three surfaces into the single screening workspace with on-demand panels, moved reviewer provenance onto the Git commit author with a deterministic decisions file (ADR-021), removed machine evidence from the evidence list (ADR-022), and made the derived-decision override symmetric and reason-gated (ADR-023). The fuller genesis of these iterations is in [[journal]].
 
 ## 8. The screening surface and the open evidence-basis item
 

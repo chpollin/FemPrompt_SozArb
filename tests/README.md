@@ -50,7 +50,7 @@ The pure functions are closure-scoped inside the IIFE of `docs/js/prisma.js`. A 
 
 ## Status
 
-Executed and green: `npm test` reports PASS 58/58 headless under jsdom (jsdom is a dev dependency, pinned in `package.json`). The browser leg (`run-tests.html`) runs the identical suite. The count dropped from 73 when ADR-017 removed the agreement section.
+Executed and green: `npm test` reports `PASS n/n` headless under jsdom (jsdom is a dev dependency, pinned in `package.json`); the runner output is the source of truth for the current count. The browser leg (`run-tests.html`) runs the identical suite.
 
 ## Relation to plan P1
 

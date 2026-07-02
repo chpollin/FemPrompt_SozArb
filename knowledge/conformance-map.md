@@ -10,7 +10,7 @@ status: draft
 language: en
 version: "0.2"
 created: 2026-06-30
-updated: 2026-06-30
+updated: 2026-07-02
 authors: [Christopher Pollin]
 generated-with: Claude Code
 related: [standards, plan, methods, specification, data]
@@ -76,12 +76,12 @@ The AI-as-tool layer. Item text and priority levels are in [[standards]]; this c
 | M3 | Mandatory | Reconstructable | Identification, Screening, Synthesis, each with its task documented ([[methods]]) |
 | M4 | Mandatory | Reconstructable | Title-plus-abstract versus knowledge documents, tracked per paper (`Input_Source`); the 2x2 input experiment |
 | M5 | Mandatory | Reconstructable | Structured JSON, per-category booleans, confidence scores; deterministic stage 2 (`generated/distilled/_stage1_json/`, `src/distill/`) |
-| M6 | Mandatory | Partial | `prompts/` governance and `CHANGELOG.md`; decoding parameters (temperature, top-p, max tokens) and the confidence threshold are not yet disclosed |
+| M6 | Mandatory | Partial | `prompts/` governance and `CHANGELOG.md`, which discloses the per-prompt max_tokens; temperature, top-p, and the confidence threshold are not yet disclosed |
 | M7 | Highly recommended | N/A | No non-LLM evaluative classifier; deduplication is rule-based in Zotero and is reported as administrative, not evaluative |
 | M8 | Mandatory | Reconstructable | Full dual track, human and LLM screening parallel and independent across the corpus, the expert decision binding ([[methods]]); the project strength on this item |
 | M9 | Mandatory | Reconstructable | Confusion matrix, Cohen's kappa, base rates, divergence analysis, human consensus as the reference standard; figures in `generated/benchmark-results/` |
 | M10 | Recommended | Reconstructable | `.vault_cache/` (reproducible API cache), open repository; the copyright limitation on raw texts is named |
-| R1 | Mandatory | Partial | The recorded AI and human decisions exist and the tool renders the adapted flow diagram (AI versus human split) on its PRISMA & Report surface; the generated flow SVG and the paper text are produced by R4 |
+| R1 | Mandatory | Partial | The recorded AI and human decisions exist and the tool renders the adapted flow diagram (AI versus human split) in its on-demand PRISMA-Record panel; the exportable flow artefact and the paper text are produced by R4 |
 | R2 | Mandatory | Reconstructable | The benchmark is the performance evaluation (`generated/benchmark-results/`); the paper text is produced by R4 |
 | D1 | Recommended | Reconstructable | [[project]], [[methods]] (confabulation, context rot, sycophancy, the decomposed divergence as illustration) |
 | D2 | Optional | Reconstructable | The epistemic-infrastructure narrative across [[project]] and [[journal]] |

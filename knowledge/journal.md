@@ -10,7 +10,7 @@ status: complete
 language: de
 version: "0.2"
 created: 2026-02-18
-updated: 2026-06-30
+updated: 2026-07-02
 authors: [Christopher Pollin]
 generated-with: Claude Code
 related: [INDEX, plan, specification, design]
@@ -23,6 +23,13 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 ---
 
 ## PRISM and the epistemic infrastructure (June 2026)
+
+### 2026-07-02 (Session 29): Audit der Wissensdokumente gegen den Repo-Stand, Drift nach ADR-020..023 geschlossen
+
+- **Ziel:** Die Frage "ist alles im Knowledge-Ordner korrekt?" systematisch beantworten: jedes Wissensdokument gegen den realen Repo- und Tool-Zustand auditieren, bestätigte entscheidungsfreie Funde sofort korrigieren, operatorpflichtige vorlegen. Kein Struktur-Refactoring, die Struktur trägt seit den Konsolidierungssitzungen; das Problem war Inhaltsdrift.
+- **Verlauf:** Acht lesende Auditoren (plan / specification / methods+data / INDEX+project+standards / conformance-map+update-protocol / design+guides / journal strukturell / CLAUDE.md+README), jeder Fund einzeln adversarisch verifiziert. 24 Funde, 16 bestätigt, 4 vom Verify verworfen, 4 Verify-Agenten am Session-Limit gescheitert und von Hand nachverifiziert (alle vier bestätigt). Dominante Fehlerklasse: die Redesign-Sitzung vom 30.06. (ADR-020 bis ADR-023) hat die Dokumente überholt. design.md beschrieb noch die Drei-Flächen-IA mit Perspektiv-Selektor, Override nur Richtung Exclude und Technik/Sozial-Labels; specification.md führte die Drei-Flächen-Akzeptanz als "current" neben dem eigenen ADR-020; standards.md und conformance-map.md nannten die abgeschaffte "PRISMA & Report surface" und die in-tool berechnete Agreement-Matrix (seit ADR-014/017 extern). Dazu Einzelfunde: P0 stand als offen, obwohl Branch gemergt und das Tool live verifiziert ist; plan.md erklärte O5 für resolved, während ADR-021 es explizit offen lässt (Dokumente jetzt auf den ADR als Entscheidungsregister abgeglichen); FR-04/06/07 trugen SVG-Export, in-tool-Kappa und PRISMA-2020-Checkliste als gebaut; drei ADR-Effekt-Zeilen (004/005/006) hatten nie den Superseded-Marker erhalten; methods.md führte pdfplumber als Core-Dependency (tatsächlich optionaler try/except-Import); update-protocol nutzte R1/R2 als Reviewer-IDs entgegen der eigenen Kollisionsentscheidung in plan.md; M6 listete max_tokens als nicht offengelegt, obwohl der zitierte CHANGELOG es je Prompt trägt; veraltete, einander widersprechende Testzähler in Prosa (58/64/65/68 gegen den realen Runner-Output) durch qualitative Verweise ersetzt.
+- **Ergebnis:** Alle 17 entscheidungsfreien Funde umgesetzt (plan, specification, design, standards, methods, update-protocol, conformance-map, journal-Reihenfolge 2026-03-24, tests/README), Frontmatter-updated gesetzt. Offen als Operatorentscheidung: O5 (eine geteilte Decisions-Datei oder eine pro Person; ADR-021-Default ist pro Person) und der Report-Verweis in conformance-map Item 1 (externes Forum-Paper versus paper/draft.md).
+- **Dead Ends:** Vier Funde hat der adversariale Verify zu Recht verworfen und damit seinen Zweck erfüllt: journal status "complete" ist per CLAUDE.md Dokumentreife, kein Betriebszustand; tests/manual-checklist.md ist eine legitime Vorwärtsreferenz auf das P5-Deliverable; die README-Byrt-Korrektur ist bewusst hinter die P6-Re-Verifikation sequenziert; generated/pdfs ist der deklarierte kanonische Pfad, das eigentliche Housekeeping-Item ist der nicht umgezogene pipeline/pdfs-Rest auf der Platte.
 
 ### 2026-06-30 (Session 28): die offenen Fragen selbst recherchiert und entschieden, O2 aufgelöst
 
@@ -179,17 +186,17 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 - **Ergebnis:** Exploration statt Bericht, eine Dimension wählen und konkrete Evidenz sehen statt scrollen.
 - **Dead Ends:** Das cluster-separierende Force-Layout funktioniert nur, wenn die Cluster-Force dominant und die Link-Force schwach ist, sonst zieht die Link-Force alles in einen Blob zurück. Ein fünfter View wurde verworfen, die ungenutzten Datenfelder gehören in bestehende Views integriert.
 
-### 2026-03-24 (Session 6): Wissens-Chat, Panel-Optimierung, Quellenleiste
-
-- **Ziel:** Einen verifizierbaren Q&A-Chat über den Forschungskorpus als vierten Tab bauen.
-- **Verlauf:** Ein Gemini-Flash-Chat mit RAG-lite (Keyword-Suche über Korpus und Konzepte, SSE-Streaming, API-Key lokal im Browser) bekam eine klickbare Quellenleiste, die zitierte Papers erkennt und zum Korpus-Tab samt Detail-Panel navigiert, der epistemische Kreislauf von Antwort über Quelle zur LLM-Begründung und zurück. Das Side Panel wurde verkleinert und die Tabelle bei offenem Panel gezielt um Spalten reduziert statt pauschal komprimiert.
-- **Ergebnis:** Ein verifizierbares epistemisches Werkzeug statt einer Black Box; RAG-lite reicht für diesen Korpus, kein Embedding-Retrieval nötig.
-
 ### 2026-03-24 (Session 6b-7): UI Polish, Navigation, Tooltips, Merge
 
 - **Ziel:** Den Chat mit Inline-Zitationen veredeln, die Navigation abflachen und nach main mergen.
 - **Verlauf:** Gemini-Antworten werden post-processed, Autor-(Jahr)-Muster werden klickbare Links zum Korpus, die Referenzliste zeigt nur tatsächlich zitierte Papers; das Dropdown wich direkten View-Buttons, About und Hilfe wurden echte Unterseiten, und die Stats-Bar bekam datengetriebene Tooltips (Barcharts, Pipeline-Verlust). Merge nach main und GitHub-Pages-Deployment.
 - **Ergebnis:** Verifizierbarer Chat statt Black-Box-Chat; Navigation flach gehalten, für vier Views sind direkte Buttons besser als ein Dropdown.
+
+### 2026-03-24 (Session 6): Wissens-Chat, Panel-Optimierung, Quellenleiste
+
+- **Ziel:** Einen verifizierbaren Q&A-Chat über den Forschungskorpus als vierten Tab bauen.
+- **Verlauf:** Ein Gemini-Flash-Chat mit RAG-lite (Keyword-Suche über Korpus und Konzepte, SSE-Streaming, API-Key lokal im Browser) bekam eine klickbare Quellenleiste, die zitierte Papers erkennt und zum Korpus-Tab samt Detail-Panel navigiert, der epistemische Kreislauf von Antwort über Quelle zur LLM-Begründung und zurück. Das Side Panel wurde verkleinert und die Tabelle bei offenem Panel gezielt um Spalten reduziert statt pauschal komprimiert.
+- **Ergebnis:** Ein verifizierbares epistemisches Werkzeug statt einer Black Box; RAG-lite reicht für diesen Korpus, kein Embedding-Retrieval nötig.
 
 ### 2026-03-19 (Session 5): Evidence Companion, Richtungswechsel
 

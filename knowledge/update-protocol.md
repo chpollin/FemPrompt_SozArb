@@ -10,7 +10,7 @@ status: draft
 language: en
 version: "0.2"
 created: 2026-06-09
-updated: 2026-06-29
+updated: 2026-07-02
 authors: [Christopher Pollin]
 generated-with: Claude Code
 topics: ["[[Pre-Registration]]", "[[Coding Scheme]]"]
@@ -81,13 +81,13 @@ Deduplication against the existing corpus and within the new batch happens as a 
 PRISM is the binding screening surface for round 2 ([[plan]] Stage B2, ADR-019 in [[specification]]). The reviewing colleagues screen the new batch in the tool, where every category points at the words that justify it and the human decision is the binding record. The screening record carries, for round 2, the same shape the established capture format does, the column shape of `assessment/human_assessment.csv`, extended by:
 
 1. the analysis-field extension (frozen before screening starts, see the Analysis fields section), and
-2. a per-record reviewer identity through neutral reviewer ids (R1, R2), closing the round 1 gap of per-record reviewer identity.
+2. a per-record reviewer identity through neutral reviewer ids (reviewer-1, reviewer-2; the short form R1/R2 is avoided because R1 already names a PRISMA-trAIce item and a plan phase), closing the round 1 gap of per-record reviewer identity.
 
 The tool enforces the controlled vocabulary at input time (validated values for Decision, Exclusion_Reason, category values, and the analysis fields); values like Other or empty reason cells, which round 1 admitted, are impossible by construction.
 
 A batch captured in Excel elsewhere enters over the P3 import bridge ([[plan]] Stage A P3), which survives as an entry and migration seam rather than the canonical capture path, with idempotent re-import, an import report (added, changed, skipped), and validation of vocabulary, category completeness, duplicate Zotero keys, and the analysis fields. Violations are a visible import report, never silent acceptance.
 
-In PRISM the more precise PRISMA steps happen, where machine-extracted evidence enters as a clearly labelled separate provenance class, human verification of evidence runs on samples, the text source actually read is recorded (raw, knowledge document, abstract), divergent human decisions are reconciled on the Daten und Repo surface with the consensus decision and process recorded (PRISMA-trAIce M8), and flow, agreement, checklist, and disclosure artifacts are generated from the data.
+In PRISM the more precise PRISMA steps happen, where machine-extracted evidence enters as a clearly labelled separate provenance class, human verification of evidence runs on samples, the text source actually read is recorded (raw, knowledge document, abstract), divergent human decisions are reconciled from the per-reviewer files (Daten & Sync panel) with the consensus decision and process recorded (PRISMA-trAIce M8), and flow, agreement, checklist, and disclosure artifacts are generated from the data.
 
 The dual track runs as in round 1: the offline LLM assessment processes the new batch with the versioned 10K assessment prompt (`src/assess/run_llm_assessment.py`, governed by `prompts/CHANGELOG.md`) and recorded parameters. Decoding parameters are set explicitly and recorded this round; round 1 left temperature and top-p as unrecorded API defaults. The human decision is the binding record; the LLM track is advisory and kept separate. An interactive agent screening lane (as in Stage R3) may run as a third track under its own pre-specified sub-protocol.
 
@@ -113,8 +113,8 @@ Neutral ids; no personal names in committed files.
 
 | Id | Role |
 |---|---|
-| R1 | Reviewing colleague, human track, binding decisions |
-| R2 | Reviewing colleague, human track, binding decisions; second coder on the shared subset |
+| reviewer-1 | Reviewing colleague, human track, binding decisions |
+| reviewer-2 | Reviewing colleague, human track, binding decisions; second coder on the shared subset |
 | OP | Technical operator: runs searches, pipeline, LLM track, imports; does not screen |
 | LLM | Offline 10K assessment track, advisory |
 | AG | Optional interactive agent screening track, advisory |
@@ -147,7 +147,7 @@ None yet. Format: date, what changed, why, which runs were affected.
 1. Status of `corpus/deep-research/literature-review-prompt.md` versus the lost-prompt record (section 4.1): human decision on how the provenance is described in the final protocol.
 2. Round 1 cutoff precision (section 4.2): confirm October 2025 or correct by amendment if a precise execution date exists outside the repository.
 3. Analysis-field extension not yet frozen; items 3 to 5 of section 8 depend on it. The freeze must precede the B2 screening start; this protocol requires it before the first search so the pre-registration is complete in one commit state. Confirm or relax that stricter ordering.
-4. Full-batch versus split screening for R1 and R2 (affects the inter-human baseline, section 6).
+4. Full-batch versus split screening for reviewer-1 and reviewer-2 (affects the inter-human baseline, section 6).
 5. Decision on running L5 (Claude Code web research lane), with model version recording if yes.
 
 ---

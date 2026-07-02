@@ -7,7 +7,7 @@ status: complete
 language: en
 version: "0.2"
 created: 2026-06-09
-updated: 2026-06-30
+updated: 2026-07-02
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 4.8)
 method:
@@ -31,10 +31,10 @@ This document is the substance layer for the **PRISMA screening tool**, a standa
 - FR-01: Import a screening batch (papers, optionally with a pre-computed LLM assessment per paper) from JSON or CSV. Acceptance: a valid export loads a session of N papers, each with `zotero_key`, title, abstract, and, where present, the AI proposal per category plus an include/exclude suggestion.
 - FR-02: Record an independent human screening decision per paper: ten binary categories, an include/exclude decision derived as (>=1 technology dimension AND >=1 social dimension), and, on exclude, one reason from a controlled list. Acceptance: the decision persists with reviewer id and timestamp; the derived decision matches the category logic.
 - FR-03: Offer a blind independent mode that hides the AI proposal until the human decision is recorded, then reveals it and flags divergence. Acceptance: with blind mode on, no AI field is rendered before the human decision; divergence is computed and shown after.
-- FR-04: Render a PRISMA 2020 flow diagram with the PRISMA-trAIce R1 split, identified -> screened -> included, with separate tallies for AI-tool decisions and human-reviewer decisions and a breakdown of exclusion reasons. Acceptance: counts reconcile with the decision log; the diagram exports as SVG.
+- FR-04: Render a PRISMA 2020 flow diagram with the PRISMA-trAIce R1 split, identified -> screened -> included, with separate tallies for AI-tool decisions and human-reviewer decisions and a breakdown of exclusion reasons. Acceptance: counts reconcile with the decision log; the diagram exports as SVG. As built, the flow renders as an HTML diagram and the SVG export is not implemented.
 - FR-05 (superseded by ADR-014/017): Compute agreement metrics live as decisions accrue: confusion matrix (human x AI), Cohen's kappa for the decision and per category, and base rates. As built, the in-tool agreement surface and the kappa computation are removed; agreement is evaluated externally on the benchmark corpus, where the figures live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion.
-- FR-06: Generate a PRISMA-trAIce / RAISE disclosure section from the session: tool name, version, date; stage and task; prompt version; decoding parameters; confidence threshold; validation metrics (kappa); known limitations; conflicts of interest. Acceptance: emitted as Markdown, copyable and exportable.
-- FR-07: Track reporting completeness against both the PRISMA 2020 checklist (27 items) and the PRISMA-trAIce checklist (17 items), with per-item status and notes. Acceptance: status persists across reloads and exports.
+- FR-06: Generate a PRISMA-trAIce / RAISE disclosure section from the session: tool name, version, date; stage and task; prompt version; decoding parameters; confidence threshold; a performance reference to the external M9/R2 benchmark evaluation (the in-tool kappa was removed by ADR-017); known limitations; conflicts of interest. Acceptance: emitted as Markdown, copyable and exportable.
+- FR-07: Track reporting completeness against both the PRISMA 2020 checklist (27 items) and the PRISMA-trAIce checklist (17 items), with per-item status and notes. Acceptance: status persists across reloads and exports. As built, the tracker covers the PRISMA-trAIce 17 items only; the PRISMA 2020 checklist is not implemented.
 - FR-08: Persist the session in localStorage; export and import the full session as JSON; export the decision log as CSV. Acceptance: reload restores state; an export/import round-trip is lossless.
 - FR-09: Seed the tool with the existing FemPrompt corpus (the full dual-assessment corpus) as the Stage R seeded session, the round-1 data carried through PRISM (ADR-019). Acceptance: loads from `docs/data/` JSON without an import step.
 - FR-10 (secondary): Provide an optional live-LLM on-ramp. With a local API key, request an AI proposal for a paper that lacks one, reusing the versioned assessment prompt. Acceptance: the proposal is stored as an AI decision, visibly labelled as live-generated, and never overrides the human decision.
@@ -46,7 +46,7 @@ The AI-forward requirements are demoted by ADR-012 and then by ADR-014. As built
 
 FR-11 to FR-13 acceptance, as built: FR-11 renders `paper.knowledge_doc` (the served distilled knowledge document, see [[data]]) with a built-in Markdown renderer, falling back to the abstract, then to an empty state. FR-12 highlights and steps through in-text matches in the open document and filters the corpus via the prebuilt `docs/data/fulltext_index.json`. FR-13 pins a selected passage or a search hit as `evidence[category] = {term, snippet, ts}` in the reviewer file (schema 0.2), sets the category, and reports an `evidence_count` in the decision log. The behaviour contract is in [[data]] (Evidence behaviour). "Full text" here is the served distilled knowledge document, not the raw paper text (see [[data]]); reading the raw local full text is a copyright-gated follow-up via the single `fetchPaperText` seam.
 
-Acceptance (three-surface IA): the sub-navigation has exactly three entries (Screening, PRISMA & Report, Daten & Repo); the seven v3 surfaces are gone; the flow, the checklist, and the disclosure are reachable from PRISMA & Report, while kappa and the matrix have no surface (ADR-014, they feed only the disclosure line); a persisted v3 surface id is normalised onto the three on load.
+Acceptance (one-workspace IA, per ADR-020): Screening is the only permanent surface; the PRISMA record (flow, checklist, disclosure) and the Daten & Sync functions open as on-demand overlay panels from the workspace toolbar; kappa and the matrix have neither a surface nor an in-tool computation (ADR-014/017, the disclosure references the external benchmark evaluation); a persisted older surface id is normalised onto the screening workspace on load.
 
 ### Nicht-funktionale Anforderungen
 
@@ -84,17 +84,17 @@ Superseded v3 stories, kept only as decision context: screening behind a blind A
 
 ## Funktionsumfang
 
-### Information architecture (v4, current)
+### Information architecture (current)
 
-Per ADR-012 the seven surfaces collapse into three, AI is strongly reduced, and the screening view is rebuilt around full-text reading, search, and evidence:
+Per ADR-012 the seven surfaces collapsed into three, AI was strongly reduced, and the screening view was rebuilt around full-text reading, search, and evidence. ADR-020 then merged the three tabs into one workspace; Screening is the permanent surface, and the record and data functions open as on-demand overlay panels from the workspace toolbar:
 
-1. **Screening** (the work): a corpus overview with full-text search across all papers, plus a single-paper full-text working view with in-text search, evidence pinning per category, the derived include/exclude, and an optional collapsed AI suggestion. Subsumes the old Screening Workspace.
-2. **PRISMA & Report** (the outputs): the PRISMA 2020 flow diagram, the checklist, and the disclosure generator in one place, generated from the screening. ADR-014 removed the agreement matrix and kappa as a surface; they survive only as functions feeding the disclosure line. Subsumes Flow, Checklist, Disclosure.
-3. **Daten & Repo** (sync): File System Access connect (write into the project folder), per-reviewer files, export/import. ADR-014 removed the in-tool Git workflow (versioning is in GitHub Desktop) and the Reviewers reconciliation section.
+1. **Screening** (the permanent workspace): a corpus overview with full-text search across all papers, plus a single-paper full-text working view with in-text search, evidence pinning per category, the derived include/exclude with the reason-gated symmetric override (ADR-023), and an optional collapsed AI suggestion. Subsumes the old Screening Workspace.
+2. **PRISMA-Record panel** (the outputs, on demand): the PRISMA 2020 flow diagram, the checklist, and the disclosure generator in one overlay, generated from the screening. ADR-014 removed the agreement matrix and kappa as a surface; ADR-017 removed the in-tool computation entirely, the disclosure references the external benchmark evaluation.
+3. **Daten & Sync panel** (sync, on demand): File System Access connect (write into the project folder), per-reviewer files, export/import. ADR-014 removed the in-tool Git workflow (versioning is in GitHub Desktop) and the Reviewers reconciliation section.
 
-Each view carries a one-line "what is this, what do I do here" header. The three surfaces are specified screen by screen in [[design]] section 5 (5A to 5D), matching the build.
+The workspace carries a one-line intro; the panels open as overlay dialogs and close back onto the unchanged workspace. The build is specified screen by screen in [[design]].
 
-The modules below describe the report and data parts (PRISMA Flow, Checklist, Disclosure, Data I/O) of the three-surface IA in application order. The Screening view is specified by FR-11 to FR-13 and the evidence model in [[data]]; its old v3 "Screening Workspace" and "Agreement Panel" modules were superseded by ADR-012/014 and survive only in the ADR log below.
+The modules below describe the report and data parts (PRISMA Flow, Checklist, Disclosure, Data I/O) of the record and data panels in application order. The Screening view is specified by FR-11 to FR-13 and the evidence model in [[data]]; its old v3 "Screening Workspace" and "Agreement Panel" modules were superseded by ADR-012/014 and survive only in the ADR log below.
 
 ### PRISMA Flow Diagram
 
@@ -102,13 +102,13 @@ Zweck. The PRISMA-trAIce adapted flow diagram as the tool's signature artefact.
 
 Datengrundlage. The `FlowModel` aggregation over all decisions (see [[data]]).
 
-Interaktion. Live redraw as decisions accrue; separate AI-decision and human-decision tallies per screening stage; exclusion-reason breakdown; SVG export for the report.
+Interaktion. Live redraw as decisions accrue; separate AI-decision and human-decision tallies per screening stage; exclusion-reason breakdown. The diagram renders as HTML; the SVG export remains an unbuilt requirement (FR-04).
 
 Grenzen. It visualises the recorded process; it does not infer counts the data does not support, and it follows the PRISMA 2020 three-phase structure (Identification, Screening, Included), not the 2009 four-phase one.
 
 ### Checklist Tracker
 
-Zweck. Track reporting completeness against PRISMA 2020 and PRISMA-trAIce.
+Zweck. Track reporting completeness against PRISMA-trAIce (17 items); the PRISMA 2020 27-item checklist remains an unbuilt requirement (FR-07).
 
 Datengrundlage. A per-item status/notes store plus auto-derived hints (e.g. R1 satisfied once the split diagram has counts).
 
@@ -122,7 +122,7 @@ Zweck. Emit the AI-disclosure text and the assembled PRISMA record for a paper o
 
 Datengrundlage. `DisclosureMetadata` plus the flow results (see [[data]]).
 
-Interaktion. Generate a Markdown disclosure section (PRISMA-trAIce M2/M3/M6/M8/M9 + RAISE Table 1), preview, copy, export; bundle with the SVG flow diagram and the decision-log CSV.
+Interaktion. Generate a Markdown disclosure section (PRISMA-trAIce M2/M3/M6/M8/M9 + RAISE Table 1), preview, copy, export; the decision log exports separately as CSV.
 
 Grenzen. It drafts reporting text from recorded facts; the author edits and remains accountable. It does not submit, publish, or cite on the author's behalf.
 
@@ -176,7 +176,7 @@ Wahl. Offer a blind mode that withholds the AI proposal until the human decision
 
 Begründung. Preserves the parallel-independent design that produces the human-AI divergence, and yields clean AI-vs-human tallies for the R1 diagram.
 
-Effekt. To be observed; blind mode is expected to be the default for new screening, off for reviewing the seed dataset.
+Effekt. Superseded by ADR-011/012/014. ADR-011 set blind mode off by default, ADR-012 demoted the AI-forward parts, and ADR-014 removed blind/reveal from the tool entirely; the as-built view has no blind toggle (see FR-03 as built).
 
 ### ADR-005 Integrate as a fifth SPA view, not a subpage
 
@@ -186,7 +186,7 @@ Wahl. A fifth view inside `docs/index.html`, with its own IIFE module wired thro
 
 Begründung. Keeps one application, reuses the corpus data, navigation, and styling, and matches the user's stated preference. Lower friction than a separate entry point.
 
-Effekt. To be observed.
+Effekt. Superseded by ADR-008; the tool became the standalone `docs/prisma.html`.
 
 ### ADR-006 localStorage plus JSON export for persistence
 
@@ -196,7 +196,7 @@ Wahl. Autosave the session to localStorage; share via explicit JSON export/impor
 
 Begründung. The only backend-free option that preserves work and enables multi-reviewer reconciliation through files.
 
-Effekt. To be observed; concurrent multi-reviewer editing is explicitly out of scope (see Funktionsumfang, Data I/O).
+Effekt. Superseded by ADR-009; concurrent multi-reviewer editing is explicitly out of scope (see Funktionsumfang, Data I/O).
 
 ### ADR-007 Adopt PRISMA-trAIce as reporting target and RAISE as governance frame
 

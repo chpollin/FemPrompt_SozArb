@@ -10,7 +10,7 @@ status: complete
 language: en
 version: "0.2"
 created: 2026-06-09
-updated: 2026-06-30
+updated: 2026-07-02
 authors: [Christopher Pollin]
 generated-with: Claude Code, deep-research web synthesis and full-text extraction of the primary sources
 topics: ["[[PRISMA]]", "[[Reporting Standards]]", "[[AI in Evidence Synthesis]]"]
@@ -92,7 +92,7 @@ A status caveat governs how to cite it. The authors call it a "well-founded prop
 
 ### Adapted flow diagram
 
-The core modification is the addition of separate fields to distinguish exclusions made by human reviewers from those made by AI systems at each screening stage, while preserving the familiar PRISMA layout. It also separates rule-based administrative tools (e.g. deduplication) from evaluative AI systems. This is item R1 made visual, and it is the signature artefact of the tool's report layer. Under the v4 pivot (see [[specification]] ADR-012) the flow diagram, the agreement matrix, and kappa live on the "PRISMA & Report" surface, computed but not foregrounded; the working Screening view is centred on reading, searching, and pinning evidence (FR-11 to FR-13), not on the divergence apparatus.
+The core modification is the addition of separate fields to distinguish exclusions made by human reviewers from those made by AI systems at each screening stage, while preserving the familiar PRISMA layout. It also separates rule-based administrative tools (e.g. deduplication) from evaluative AI systems. This is item R1 made visual, and it is the signature artefact of the tool's report layer. Under the v4 pivot (see [[specification]] ADR-012, then ADR-020) the flow diagram lives with the checklist and the disclosure in the on-demand PRISMA-Record panel; the agreement matrix and kappa are no longer computed in the tool at all (ADR-014/017), agreement is evaluated externally on the benchmark corpus. The working Screening view is centred on reading, searching, and pinning evidence (FR-11 to FR-13), without the divergence apparatus.
 
 ## RAISE (Cochrane, Campbell, JBI, CEE, Nov 2025)
 
@@ -116,10 +116,10 @@ The dual assessment track and benchmark already satisfy most of the demanding re
 | trAIce M3: stage and task | Identification (deep research), Screening (10K assessment), Synthesis (3-stage SKE), each documented | Satisfied |
 | trAIce M4: input data | Title and abstract vs knowledge documents, tracked per paper (`Input_Source`); the 2x2 experiment | Satisfied |
 | trAIce M5: output format and post-processing | Structured JSON, per-category booleans, confidence scores; deterministic stage 2 | Satisfied |
-| trAIce M6: prompts and parameters | `prompts/` governance, `CHANGELOG.md`, negative constraints; decoding parameters (temperature, top-p, max tokens) and confidence thresholds not yet disclosed | Partial |
+| trAIce M6: prompts and parameters | `prompts/` governance, `CHANGELOG.md`, negative constraints, per-prompt max_tokens; temperature, top-p, and confidence thresholds not yet disclosed | Partial |
 | trAIce M8: human oversight | Full dual track, both human and LLM screening run parallel and independent across the corpus; the expert decision is binding | Satisfied (gold standard) |
 | trAIce M9 and R2: AI performance evaluation | Confusion matrix, Cohen's kappa for the decision and the ten categories, base rates, and the divergence analysis, with human consensus as the reference standard | Satisfied (project strength) |
-| trAIce R1: flow diagram, AI vs human split | The recorded AI and human decisions exist; the tool renders the adapted flow diagram on its PRISMA & Report surface | Built (tool); paper text pending |
+| trAIce R1: flow diagram, AI vs human split | The recorded AI and human decisions exist; the tool renders the adapted flow diagram in its on-demand PRISMA-Record panel | Built (tool); paper text pending |
 | trAIce M10: data governance | `.vault_cache/` (reproducible API cache), open repository | Satisfied |
 | trAIce M1: protocol pre-registration of AI use | No PROSPERO or OSF protocol on record | Gap |
 | RAISE P1: accountability | Expert track epistemically binding; the responsibility-asymmetry framing in [[project]] | Satisfied |
@@ -134,7 +134,7 @@ The dual assessment track and benchmark already satisfy most of the demanding re
 2. Auto-generate a consolidated AI-disclosure section or supplementary table from the screening data, covering model name, version, date, stage, task, prompt version, decoding parameters, confidence threshold, validation metrics, known limitations. This is a tool feature and closes trAIce M6 (parameters), RAISE Table 1, and P3 at once.
 3. Disclose decoding parameters and any confidence threshold in the assessment prompt config so M6b is explicit and reproducible.
 4. Declare conflicts of interest regarding the AI tools used (RAISE Table 1, final row).
-5. Render the PRISMA-trAIce adapted flow diagram (AI vs human split) on the tool's PRISMA & Report surface, the report layer, not the working Screening view, per ADR-012. Closes trAIce R1.
+5. Render the PRISMA-trAIce adapted flow diagram (AI vs human split) in the tool's on-demand PRISMA-Record panel, the report layer separate from the working Screening view, per ADR-020. Closes trAIce R1.
 6. Frame the benchmark explicitly as the trAIce M9/R2 performance evaluation, naming the human-consensus reference standard and the metrics, in the methods text the tool emits.
 
 ## How this legitimises the workflow

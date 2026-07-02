@@ -10,7 +10,7 @@ status: complete
 language: en
 version: "0.2"
 created: 2026-02-21
-updated: 2026-06-29
+updated: 2026-07-02
 authors: [Christopher Pollin]
 generated-with: Claude Code
 topics: ["[[Systematic Review]]", "[[PRISMA]]"]
@@ -21,7 +21,7 @@ This document describes how the systematic literature review was conducted, from
 
 ## System requirements
 
-Python 3.8 or later, on Windows, macOS, or Linux. Core packages installed via `pip install -r requirements.txt`: `anthropic` (Claude API), `pandas` and `openpyxl` (Excel processing), `pyzotero` (Zotero API), `docling` (PDF conversion), `pdfplumber` (PDF analysis), `python-dotenv` (environment). Environment variables in a `.env` file (not committed): `ANTHROPIC_API_KEY`, `ZOTERO_API_KEY`.
+Python 3.8 or later, on Windows, macOS, or Linux. Core packages installed via `pip install -r requirements.txt`: `anthropic` (Claude API), `pandas` and `openpyxl` (Excel processing), `pyzotero` (Zotero API), `docling` (PDF conversion), `python-dotenv` (environment). `pdfplumber` is an optional extra for the PDF-comparison validation layer (`src/acquire/validate_markdown_enhanced.py`), installed on demand with `pip install pdfplumber`; without it that comparison is disabled. Environment variables in a `.env` file (not committed): `ANTHROPIC_API_KEY`, `ZOTERO_API_KEY`.
 
 ## PRISMA 2020 framework
 

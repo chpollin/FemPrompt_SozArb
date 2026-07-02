@@ -7,7 +7,7 @@ status: active
 language: en
 version: "0.3"
 created: 2026-06-09
-updated: 2026-06-30
+updated: 2026-07-02
 authors: [Christopher Pollin]
 generated-with: Claude Code
 method:
@@ -107,10 +107,9 @@ Validation resolves every "Effekt: to be observed" in [[specification]].
 
 ### P0: Secure and make visible
 
-- Push `feat/prisma-screening-tool`. The entire tool (v1 to v4) currently exists on one disk only.
-- Merge to `main` once P1 is green. Pages serves `docs/` from `main`, so the merge is the deploy (verify the Pages source setting on merge).
+- Push `feat/prisma-screening-tool` and merge to `main`. Pages serves `docs/` from `main`, so the merge is the deploy.
 
-Done when: the branch is on GitHub; after merge, `prisma.html` is live on the Evidence Companion.
+Status: done 2026-06-30. The branch is on origin and fully merged into `main`; `prisma.html` is live on the Evidence Companion (fetch-verified 2026-07-02), which also confirms the Pages source setting.
 
 ### P1: Test foundation
 
@@ -226,10 +225,10 @@ A second interactive pass (browser agent, 2026-06-30) ran a real screening on a 
 
 ### Sequenced cuts
 
-Decided and unblocked first, gated cuts after their decision resolves. Each keeps the harness green (baseline 68/68 after this batch) and is recorded as an ADR.
+Decided and unblocked first, gated cuts after their decision resolves. Each keeps the harness green (the current count is whatever `node tests/run.mjs` prints) and is recorded as an ADR.
 
 1. **One workspace** (done 2026-06-30) -- ADR-020. Screening is the permanent surface; the PRISMA record and the data functions become on-demand affordances; academic references leave the work surface. Files: `docs/prisma.html`, `docs/js/prisma.js` (renderShell, showSurface, renderData), `docs/css/prisma.css`.
-2. **Git provenance** (done 2026-06-30, O5 resolved: one file per reviewer) -- ADR-021. Drop the identity form and the perspective switcher; write the decisions file deterministically (stable order, one paper block); generate a session commit message. Files: `docs/js/prisma.js`, a deterministic serializer with its own test.
+2. **Git provenance** (done 2026-06-30; the per-reviewer file stays as the default, the O5 file-shape question stays open) -- ADR-021. Drop the identity form and the perspective switcher; write the decisions file deterministically (stable order, one paper block); generate a session commit message. Files: `docs/js/prisma.js`, a deterministic serializer with its own test.
 3. **Accessibility and keyboard flow** (done 2026-06-30) -- P4 NFR-06. Focus restoration after a paper switch, visible focus rings on inputs and controls, `aria-pressed` on category and exclusion chips, dialog semantics with focus move, Escape, and Tab trap for the pin menu, text equivalent for the colour-only status dot, slug and definition out of the chip's accessible name, keyboard-focus tooltips, darkened muted-text tokens for contrast.
 4. **Machine evidence** (done 2026-06-30) -- ADR-022 supersedes ADR-018: removed from the evidence list; the model's per-paper reasoning stays only in the collapsed KI-Vorschlag.
 5. **Inclusion logic** (done 2026-06-30) -- ADR-023 resolves O2: a reason-gated override to Include. The AND-rule derives a default; the human binds and may override it either way, an override to Include recording a free-text justification (RAISE P3). Grounded in [[standards]] and the RAISE primary source.
@@ -244,9 +243,9 @@ Decided and unblocked first, gated cuts after their decision resolves. Each keep
 | O2 | Inclusion AND-rule: keep rigid, or reason-gated override to Include | resolved: reason-gated override to Include (ADR-023, cut 5 done) |
 | O3 | Technik/Sozial to Gegenstand/Perspektive | resolved: renamed (cut 6 done) |
 | O4 | Thin-text papers: block, warn, or load raw local text | partial: warn + screenable entry done; raw local text is P2 (cut 7) |
-| O5 | Decisions file: one shared file, or one per person | resolved: one per reviewer (ADR-021, cut 2 done) |
+| O5 | Decisions file: one shared file, or one per person | open: ADR-021 keeps the per-reviewer file as the default; the shared-vs-per-person question stays undecided |
 
-All seven cuts are built and on the branch: cuts 1 to 6 complete (O1, O3, O5 resolved; O2 resolved by ADR-023) and the warn-and-entry half of 7 done, the raw-local-text half remaining as the larger P2/ADR-013 work. The Stage A redesign is closed; no gate waits on the operator.
+All seven cuts are built and on the branch: cuts 1 to 6 complete (O1 and O3 resolved; O2 resolved by ADR-023) and the warn-and-entry half of 7 done, the raw-local-text half remaining as the larger P2/ADR-013 work. The Stage A redesign is closed. O5 (the decisions-file shape) stays a deferred operator decision that does not block Stage A; ADR-021 keeps the per-reviewer file as the working default.
 
 ## Stage R: The first-round pass through PRISM and its evaluation
 
@@ -334,7 +333,7 @@ Status (2026-06-09): the pre-registration protocol is [[update-protocol]] (final
 
 ### B3: Reconciliation and the PRISMA record
 
-- Reconcile divergent human decisions on the Daten & Repo surface; the consensus decision and the process are recorded (PRISMA-trAIce M8).
+- Reconcile divergent human decisions from the per-reviewer files (Daten & Sync panel); the consensus decision and the process are recorded (PRISMA-trAIce M8).
 - Export the complete PRISMA record as one bundle with the Stage R machinery (R2, R4), now over the updated corpus: flow SVG, agreement metrics, both filled checklists, disclosure text, decision-log CSV; the bundle lives in the repo.
 - The paper's methods and disclosure sections are generated from the bundle, then edited by the authors; a human-checked integrity pass checks the final paper text against the repository.
 
@@ -410,5 +409,4 @@ At the next stakeholder meeting (or earlier written feedback), walk this ledger 
 
 - Reviewer identity in public files: are the current short keys acceptable in a public repo, or pseudonyms? Decide before P3.
 - Do the colleagues screen the full corpus or a split? Affects only the onboarding text, not the tool.
-- Pages source setting (branch/folder) to verify at the P0 merge.
 - Folder restructure executed 2026-06-30 (code into `src/`, generated data into `generated/`, deep-research into `corpus/`, assessment unified); see [[journal]] Session 24.
