@@ -792,6 +792,123 @@ test('commit is blocked on an override to Include without a justification (O2 ga
 });
 
 // ============================================================
+// Section P2: raw-text mapping and recorded text_source (ADR-024)
+// ============================================================
+
+// The raw Docling files are <Author>_<Year>_<TitleSnippet>.md; the snippet is a truncated
+// title prefix. The mapping is title-prefix dominant (author unreliable across sources),
+// with a year tiebreak and longest-prefix wins.
+var RAW_FILES = [
+    'Ahn_2025_Artificial_Intelligence_(AI)_literacy_for_social.md',
+    'Reamer_2023_Artificial_Intelligence_in_Social_Work_Emerging.md',
+    'Chiu_2024_What_are_artificial_intelligence_literacy_and.md'
+];
+
+test('mapRawFilename matches a paper to its raw file by title prefix (author ignored)', function() {
+    // paper.authors names Singer first, but the file author is Ahn; the title prefix still binds
+    var f = T.mapRawFilename({ id: 'r1', title: 'Artificial Intelligence (AI) literacy for social work education',
+                               year: 2025, authors: 'Singer, J.' }, RAW_FILES);
+    assertEqual(f, 'Ahn_2025_Artificial_Intelligence_(AI)_literacy_for_social.md');
+});
+
+test('mapRawFilename returns null when no file title-prefix matches', function() {
+    assertEqual(T.mapRawFilename({ id: 'r2', title: 'A completely unrelated survey of network protocols', year: 2024 }, RAW_FILES), null);
+});
+
+test('mapRawFilename returns null for a title shorter than the minimum key', function() {
+    assertEqual(T.mapRawFilename({ id: 'r3', title: 'AI', year: 2025 }, RAW_FILES), null);
+});
+
+test('mapRawFilename breaks a shared prefix by the matching year', function() {
+    var files = ['A_2023_Prompt_engineering_for_bias_mitigation.md', 'A_2024_Prompt_engineering_for_bias_mitigation.md'];
+    assertEqual(T.mapRawFilename({ id: 'r4', title: 'Prompt engineering for bias mitigation in LLMs', year: 2024 }, files),
+        'A_2024_Prompt_engineering_for_bias_mitigation.md');
+});
+
+test('mapRawFilename prefers the longest (most specific) title prefix', function() {
+    var files = ['A_2024_Gender_bias_in_models.md', 'A_2024_Gender_bias_in_models_and_more_detail_here.md'];
+    assertEqual(T.mapRawFilename({ id: 'r5', title: 'Gender bias in models and more detail here across languages', year: 2024 }, files),
+        'A_2024_Gender_bias_in_models_and_more_detail_here.md');
+});
+
+test('parseRawName extracts year and title key, and falls back for a year-less name', function() {
+    var ok = T.parseRawName('Reamer_2023_Artificial_Intelligence_in_Social_Work_Emerging.md');
+    assertEqual(ok.year, '2023');
+    assertContains(ok.titleKey, 'artificialintelligenceinsocialwork');
+    var un = T.parseRawName('Unknown_AI_competency_framework_for_students.md');
+    assertEqual(un.year, '');
+    assertContains(un.titleKey, 'unknownaicompetency');
+});
+
+test('currentTextSource prefers the resolved source, then a synchronous fallback', function() {
+    var pRaw = { id: 'src1', title: 'X', knowledge_doc: 'd.md' };
+    T.setTextSource('src1', 'raw');
+    assertEqual(T.currentTextSource(pRaw), 'raw', 'resolved source wins');
+    T.clearTextSource('src1');
+    assertEqual(T.currentTextSource({ id: 'src2', title: 'X', knowledge_doc: 'd.md' }), 'knowledge_doc', 'kd fallback');
+    assertEqual(T.currentTextSource({ id: 'src3', title: 'X', abstract: 'a real abstract sentence here.' }), 'abstract', 'abstract fallback');
+    assertEqual(T.currentTextSource({ id: 'src4', title: 'X' }), 'none', 'none fallback');
+});
+
+test('commit records the resolved text_source on the decision', function() {
+    T.setPapers([{ id: 'tsRaw', title: 'X', knowledge_doc: 'd.md' }]);
+    var prevRev = T.getState().reviewer;
+    T.getState().reviewer = 'rTS'; T.getState().reviewers.rTS = {}; T.getState().index = 0;
+    T.resetWork({ id: 'tsRaw' });
+    T.getWork().cats.Prompting = true; T.getWork().cats.Gender = true;
+    T.setTextSource('tsRaw', 'raw');
+    T.commit();
+    assertEqual(T.getState().reviewers.rTS.tsRaw.text_source, 'raw');
+    delete T.getState().reviewers.rTS; T.clearTextSource('tsRaw'); T.getState().reviewer = prevRev;
+});
+
+test('commit falls back to a synchronous text_source when reading has not resolved', function() {
+    var prevRev = T.getState().reviewer;
+    // knowledge_doc paper with no resolved source records knowledge_doc
+    T.setPapers([{ id: 'tsKd', title: 'X', knowledge_doc: 'd.md' }]);
+    T.getState().reviewer = 'rTS2'; T.getState().reviewers.rTS2 = {}; T.getState().index = 0;
+    T.resetWork({ id: 'tsKd' }); T.getWork().cats.Prompting = true; T.getWork().cats.Gender = true;
+    T.clearTextSource('tsKd'); T.commit();
+    assertEqual(T.getState().reviewers.rTS2.tsKd.text_source, 'knowledge_doc');
+    // a textless paper records none
+    T.setPapers([{ id: 'tsNone', title: 'X' }]);
+    T.getState().reviewers.rTS2 = {}; T.getState().index = 0;
+    T.resetWork({ id: 'tsNone' }); T.getWork().cats.Prompting = true; T.getWork().cats.Gender = true;
+    T.commit();
+    assertEqual(T.getState().reviewers.rTS2.tsNone.text_source, 'none');
+    delete T.getState().reviewers.rTS2; T.getState().reviewer = prevRev;
+});
+
+test('editRecord rehydrates text_source and it survives a re-commit', function() {
+    T.setPapers([{ id: 'edTS', title: 'X', knowledge_doc: 'd.md' }]);
+    var prevRev = T.getState().reviewer;
+    T.getState().reviewer = 'rEDTS'; T.getState().reviewers.rEDTS = {}; T.getState().index = 0;
+    T.curDec().edTS = {
+        categories: { Prompting: true, Gender: true }, decision: 'Include',
+        override: false, reason: null, evidence: {}, text_source: 'raw'
+    };
+    T.editRecord({ id: 'edTS' });
+    assertEqual(T.getWork().textSource, 'raw', 'work rehydrates the recorded text source');
+    T.commit();
+    assertEqual(T.getState().reviewers.rEDTS.edTS.text_source, 'raw', 'the re-committed record keeps the source');
+    delete T.getState().reviewers.rEDTS; T.clearTextSource('edTS'); T.getState().reviewer = prevRev;
+});
+
+test('decisionLogRows adds a text_source column carrying the recorded value', function() {
+    T.setPapers([{ id: 'dlTS', title: 'Row', knowledge_doc: 'd.md' }]);
+    var prevRev = T.getState().reviewer;
+    T.getState().reviewer = 'rDLTS'; T.getState().reviewers.rDLTS = {}; T.getState().index = 0;
+    T.resetWork({ id: 'dlTS' }); T.getWork().cats.Prompting = true; T.getWork().cats.Gender = true;
+    T.setTextSource('dlTS', 'raw'); T.commit();
+    var rows = T.decisionLogRows();
+    assertContains(rows[0].join(','), 'text_source');
+    var row = rows.filter(function(r) { return r[0] === 'dlTS'; })[0];
+    assert(row, 'row for dlTS present');
+    assertEqual(row[row.length - 1], 'raw', 'text_source is the last column');
+    delete T.getState().reviewers.rDLTS; T.clearTextSource('dlTS'); T.getState().reviewer = prevRev;
+});
+
+// ============================================================
 // Restore localStorage and report
 // ============================================================
 

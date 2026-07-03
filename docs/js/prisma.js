@@ -53,6 +53,17 @@ const CAT_DEFS = {
 
 const EXCLUSION_REASONS = ['Duplicate', 'Not_relevant_topic', 'Wrong_publication_type', 'No_full_text', 'Language'];
 
+// Reading text source (P2, ADR-024). Which text the screening decision was grounded on:
+// 'raw' = raw local Docling full text read through the connected clone (never served),
+// 'knowledge_doc' = the served distilled knowledge document, 'abstract' = the abstract
+// fallback, 'none' = no readable text. The value is recorded per decision.
+const SOURCE_LABEL = {
+    raw: 'Rohtext (lokal)', knowledge_doc: 'Wissensdokument', abstract: 'nur Abstract', none: 'kein Text'
+};
+// Minimum normalized title-prefix length for a paper-to-rawfile match, so a short
+// generic prefix cannot bind a paper to the wrong raw file (P2 mapping, ADR-024).
+const RAW_MIN_KEY = 10;
+
 const MODEL_DEFAULT = {
     name: 'Claude Haiku 4.5', id: 'claude-haiku-4-5', date: '2026-03-15',
     prompt: 'v2.1', temperature: '0.0', maxTokens: '1024', threshold: '0.5'
@@ -97,11 +108,18 @@ const state = {
 };
 
 let papers = [];
-let dirHandle = null;          // connected File System Access directory handle
+let dirHandle = null;          // connected File System Access handle (repo root, or the screening folder in the backward-compatible connection)
+let screeningHandle = null;    // docs/data/screening handle: where reviewer files are read and written
+let rawHandle = null;          // generated/markdown_clean handle (root connection only), null when raw texts are unavailable
+let connectScope = null;       // 'root' | 'screening', set on connect for the UI hint
+let rawFileList = null;        // [{ name, year, titleKey }] parsed from rawHandle, built lazily
+const rawFileMap = {};         // paperId -> mapped raw filename (or null when no match), computed once
+const rawTextCache = {};       // paperId -> raw full-text markdown (or null on miss/error)
+const textSourceByPaper = {};  // paperId -> the text_source actually resolved for the loaded paper
 let corpusIndex = null;        // id -> { t, ay, kd, src, n, x } for corpus full-text search
 let corpusIndexPromise = null;
 let corpusQuery = '';          // current corpus-wide search (left pane)
-const textCache = {};            // paperId -> raw knowledge-doc markdown (or null)
+const textCache = {};            // paperId -> served knowledge-doc markdown (or null)
 let docHtmlCurrent = '';       // rendered HTML of the active layer (for re-highlight)
 let docHtmlPaper = '';         // rendered paper layer (verbatim text)
 let docHtmlAi = '';            // rendered AI-extraction layer (machine knowledge doc), '' when absent
@@ -113,14 +131,14 @@ let focusReadingOnRender = false; // move focus to the paper heading after a pap
 let editingPid = null; // a committed paper reopened for editing; its record stays until re-commit
 
 // the in-progress (pre-commit) decision for the open paper
-let work = { pid: null, cats: {}, override: false, reason: null, overrideReason: null, evidence: {} };
+let work = { pid: null, cats: {}, override: false, reason: null, overrideReason: null, evidence: {}, textSource: null };
 
 function curDec() {
     if (!state.reviewers[state.reviewer]) state.reviewers[state.reviewer] = {};
     return state.reviewers[state.reviewer];
 }
 
-function resetWork(p) { work = { pid: p.id, cats: {}, override: false, reason: null, overrideReason: null, evidence: {} }; }
+function resetWork(p) { work = { pid: p.id, cats: {}, override: false, reason: null, overrideReason: null, evidence: {}, textSource: null }; }
 
 // Persistence: localStorage cache + File System Access (repo files)
 
@@ -221,12 +239,41 @@ function idbGet(k) {
     }); });
 }
 
+// The picker connects the repo root of the local clone (P2, ADR-024). The reviewer
+// files (docs/data/screening/) and the raw full texts (generated/markdown_clean/) are
+// resolved as subpaths from the root, so the raw texts stay outside the served docs/
+// tree and are never published. Backward compatibility: a folder that has no docs/
+// child is treated as the screening folder itself (the pre-P2 connect target); then
+// raw text is simply unavailable and the data panel says so.
+async function resolveScopes(picked) {
+    let docs = null;
+    try { docs = await picked.getDirectoryHandle('docs'); } catch (e) { docs = null; }
+    if (docs) {
+        connectScope = 'root';
+        const data = await docs.getDirectoryHandle('data');
+        screeningHandle = await data.getDirectoryHandle('screening', { create: true });
+        try {
+            const gen = await picked.getDirectoryHandle('generated');
+            rawHandle = await gen.getDirectoryHandle('markdown_clean'); // no create: absent when the raw texts are not in the clone
+        } catch (e) { rawHandle = null; }
+    } else {
+        connectScope = 'screening';
+        screeningHandle = picked; // the picked folder is itself the screening folder (backward compatible)
+        rawHandle = null;
+    }
+    // a fresh clone means a fresh raw index and mapping
+    rawFileList = null;
+    Object.keys(rawFileMap).forEach(function(k) { delete rawFileMap[k]; });
+    Object.keys(rawTextCache).forEach(function(k) { delete rawTextCache[k]; });
+}
+
 async function connectRepo() {
     if (!FS_SUPPORTED) { alert('Dieser Browser schreibt nicht direkt auf die Platte. Nutze Export/Import (Firefox/Safari).'); return; }
     try {
         let handle = await window.showDirectoryPicker({ mode: 'readwrite' });
         dirHandle = handle;
         await idbSet('dir', handle);
+        await resolveScopes(handle);
         await loadAllReviewers();
         updateConnStatus();
         showSurface(state.surface);
@@ -237,10 +284,11 @@ async function reconnectRepo() {
     if (!FS_SUPPORTED) return;
     try {
         let handle = await idbGet('dir');
-        if (!handle) { alert('Kein gespeicherter Ordner. Erst "Mit Repo-Ordner verbinden".'); return; }
+        if (!handle) { alert('Kein gespeicherter Ordner. Erst "Mit Projektordner verbinden".'); return; }
         const perm = await handle.requestPermission({ mode: 'readwrite' });
         if (perm !== 'granted') { alert('Schreibrecht nicht erteilt.'); return; }
         dirHandle = handle;
+        await resolveScopes(handle);
         await loadAllReviewers();
         updateConnStatus();
         showSurface(state.surface);
@@ -248,9 +296,9 @@ async function reconnectRepo() {
 }
 
 async function loadAllReviewers() {
-    if (!dirHandle) return;
+    if (!screeningHandle) return;
     const found = {};
-    for await (var entry of dirHandle.values()) {
+    for await (var entry of screeningHandle.values()) {
         if (entry.kind === 'file' && /\.json$/.test(entry.name)) {
             try {
                 let f = await entry.getFile();
@@ -266,8 +314,8 @@ async function loadAllReviewers() {
 }
 
 async function writeCurrentReviewer() {
-    if (!dirHandle) return false;
-    const fh = await dirHandle.getFileHandle(state.reviewer + '.json', { create: true });
+    if (!screeningHandle) return false;
+    const fh = await screeningHandle.getFileHandle(state.reviewer + '.json', { create: true });
     const w = await fh.createWritable();
     await w.write(reviewerFileText(state.reviewer));
     await w.close();
@@ -277,8 +325,21 @@ async function writeCurrentReviewer() {
 function updateConnStatus() {
     let el = document.getElementById('pt-conn-status');
     if (!el) return;
-    if (dirHandle) { el.textContent = 'verbunden, schreibt ' + state.reviewer + '.json'; el.classList.add('connected'); }
+    if (dirHandle) {
+        const scope = connectScope === 'root' ? (rawHandle ? 'Repo-Wurzel, Rohtexte lokal' : 'Repo-Wurzel, ohne Rohtexte') : 'nur Screening-Ordner';
+        el.textContent = 'verbunden (' + scope + '), schreibt ' + state.reviewer + '.json';
+        el.classList.add('connected');
+    }
     else { el.textContent = FS_SUPPORTED ? 'nicht mit Repo verbunden' : 'Browser ohne Direktschreiben (Export nutzen)'; el.classList.remove('connected'); }
+}
+
+// A one-line status shown in the data panel after connecting, naming whether raw text
+// is available for the current connection (P2, ADR-024).
+function scopeHintText() {
+    if (!dirHandle) return '';
+    if (connectScope === 'root' && rawHandle) return 'Verbunden mit der Repo-Wurzel. Rohtexte aus generated/markdown_clean/ werden lokal gelesen.';
+    if (connectScope === 'root') return 'Verbunden mit der Repo-Wurzel, aber generated/markdown_clean/ liegt nicht im Klon. Es wird das Wissensdokument gelesen.';
+    return 'Nur der Screening-Ordner ist verbunden (kein docs/-Unterordner erkannt). Rohtexte sind nicht verfügbar; es wird das Wissensdokument gelesen. Zum Rohtext-Lesen die Repo-Wurzel verbinden.';
 }
 
 // Corpus full-text index (FR-12 corpus search) + document fetch (FR-11)
@@ -292,15 +353,111 @@ function loadCorpusIndex() {
     return corpusIndexPromise;
 }
 
-// Fetch the served knowledge document for a paper (FR-11). Single pluggable seam:
-// swapping in raw local full text (copyright-gated) only changes this function.
-function fetchPaperText(p) {
-    if (!p.knowledge_doc) return Promise.resolve(null);
+// Fetch the served knowledge document for a paper (FR-11). Served under docs/, so it
+// resolves from prisma.html by plain fetch and is available on public Pages.
+function fetchKd(p) {
+    if (!p || !p.knowledge_doc) return Promise.resolve(null);
     if (textCache[p.id] !== undefined) return Promise.resolve(textCache[p.id]);
     return fetch(encodeURI(p.knowledge_doc))
         .then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
         .then(function(t) { textCache[p.id] = t; return t; })
         .catch(function() { textCache[p.id] = null; return null; });
+}
+
+// ---- raw local full text (P2, ADR-024): read from generated/markdown_clean/ through
+// the connected clone. The raw Docling texts are copyrighted and never served; only a
+// root connection with the folder present can read them, so public Pages never sees
+// them and simply falls back to the knowledge document.
+function normKey(s) { return (s || '').toLowerCase().normalize('NFKD').replace(/[^a-z0-9]/g, ''); }
+
+// The raw filenames are <Author>_<Year>_<TitleSnippet>.md, where the snippet is a
+// truncated prefix of the title. The author differs from paper.authors in the corpus
+// (a different first author than the served metadata), so the title prefix plus the
+// year is the reliable key; the author is not used.
+function parseRawName(name) {
+    const base = String(name).replace(/\.md$/, '');
+    const m = base.match(/^(.+?)_(\d{4})_(.+)$/);
+    return m ? { name: name, year: m[2], titleKey: normKey(m[3]) }
+             : { name: name, year: '', titleKey: normKey(base) };
+}
+
+// Match a paper to a raw filename: the file's title snippet must be a prefix of the
+// paper's normalized title (both long enough to be specific); a year match and then the
+// longest snippet break ties. Near-duplicate corpus entries may resolve to the same
+// raw file, which is correct (they are the same underlying paper).
+function matchRawFile(p, parsedList) {
+    const pk = normKey(p && p.title);
+    if (pk.length < RAW_MIN_KEY) return null;
+    const py = String((p && p.year) || '');
+    let best = null;
+    for (let i = 0; i < parsedList.length; i++) {
+        const fp = parsedList[i];
+        if (fp.titleKey.length < RAW_MIN_KEY) continue;
+        if (pk.indexOf(fp.titleKey) !== 0) continue; // fp.titleKey must be a prefix of pk
+        if (!best) { best = fp; continue; }
+        const bY = best.year === py, fY = fp.year === py;
+        if (fY !== bY) { if (fY) best = fp; continue; }
+        if (fp.titleKey.length > best.titleKey.length) best = fp;
+    }
+    return best ? best.name : null;
+}
+
+// Convenience for the tests and callers that hold plain filename strings.
+function mapRawFilename(p, names) { return matchRawFile(p, (names || []).map(parseRawName)); }
+
+function ensureRawFileList() {
+    if (rawFileList) return Promise.resolve(rawFileList);
+    if (!rawHandle) return Promise.resolve(null);
+    const list = [];
+    return (async function() {
+        for await (const entry of rawHandle.values()) {
+            if (entry.kind === 'file' && /\.md$/.test(entry.name)) list.push(parseRawName(entry.name));
+        }
+        rawFileList = list;
+        return list;
+    })().catch(function() { rawFileList = []; return rawFileList; });
+}
+
+function fetchRawText(p) {
+    if (!rawHandle || !p || !p.title) return Promise.resolve(null);
+    if (rawTextCache[p.id] !== undefined) return Promise.resolve(rawTextCache[p.id]);
+    return ensureRawFileList().then(function(list) {
+        if (!list || !list.length) { rawTextCache[p.id] = null; return null; }
+        const name = (p.id in rawFileMap) ? rawFileMap[p.id] : (rawFileMap[p.id] = matchRawFile(p, list));
+        if (!name) { rawTextCache[p.id] = null; return null; }
+        return rawHandle.getFileHandle(name)
+            .then(function(fh) { return fh.getFile(); })
+            .then(function(f) { return f.text(); })
+            .then(function(t) { rawTextCache[p.id] = t; return t; })
+            .catch(function() { rawTextCache[p.id] = null; return null; });
+    }).catch(function() { rawTextCache[p.id] = null; return null; });
+}
+
+// The single pluggable seam (FR-11). Resolve the primary reading text and its source:
+// raw local full text first (connected clone), then the served knowledge document, then
+// the abstract, then none. Any miss or read error falls silently to the next link, so
+// screening never breaks. The knowledge document is fetched separately for the
+// KI-Extraktion layer (loadReadingInto), so the M3 provenance split survives raw mode.
+function fetchPaperText(p) {
+    return fetchRawText(p).then(function(raw) {
+        if (raw != null) return { text: raw, source: 'raw' };
+        return fetchKd(p).then(function(kd) {
+            if (kd != null) return { text: kd, source: 'knowledge_doc' };
+            if (p && p.abstract && p.abstract.trim()) return { text: p.abstract, source: 'abstract' };
+            return { text: null, source: 'none' };
+        });
+    });
+}
+
+// The text_source recorded with a decision. The resolved value (from the last reading
+// load) is authoritative; before it resolves, fall back to a synchronous best guess.
+// Raw cannot be detected synchronously, so the fallback names knowledge_doc/abstract/none.
+function currentTextSource(p) {
+    if (p && textSourceByPaper[p.id]) return textSourceByPaper[p.id];
+    if (p && work.pid === p.id && work.textSource) return work.textSource;
+    if (p && p.knowledge_doc) return 'knowledge_doc';
+    if (p && p.abstract && p.abstract.trim()) return 'abstract';
+    return 'none';
 }
 
 function countOcc(hay, needle) {
@@ -687,8 +844,9 @@ function readingShellHtml(p, dec) {
     h += '<div class="pt-read-meta">';
     h += '<span class="pt-pill pt-pill-ghost mono">' + EC.escapeHtml(p.id) + '</span>';
     if (p.item_type) h += '<span class="pt-tag-mono">' + EC.escapeHtml(p.item_type) + '</span>';
-    if (p.knowledge_doc) h += '<span class="pt-pill pt-pill-ghost">Wissensdokument</span>';
-    else h += '<span class="pt-pill pt-pill-warn">nur Abstract</span>';
+    // active reading-source pill; loadReadingInto corrects it to raw once the clone is read
+    const guess = currentTextSource(p);
+    h += '<span class="pt-pill ' + (guess === 'knowledge_doc' ? 'pt-pill-ghost' : 'pt-pill-warn') + '" id="pt-source-pill">' + SOURCE_LABEL[guess] + '</span>';
     if (dec) h += '<span class="pt-pill pt-pill-human pt-pill-right">erfasst</span>';
     h += '</div>';
     h += '<h1 class="pt-paper-title" id="pt-paper-title" tabindex="-1">' + EC.escapeHtml(p.title || '(ohne Titel)') + '</h1>';
@@ -716,28 +874,43 @@ function readingShellHtml(p, dec) {
 
 function loadReadingInto(p) {
     let doc = document.getElementById('pt-doc'); if (!doc) return;
-    fetchPaperText(p).then(function(md) {
-        if (md) {
-            const layers = splitDocLayers(md);
-            docHtmlPaper = renderMarkdown(layers.paper);
-            docHtmlAi = layers.ai ? renderMarkdown(layers.ai) : '';
-        } else if (p.abstract && p.abstract.trim()) {
-            docHtmlPaper = '<p class="pt-doc-p">' + inlineMd(p.abstract) + '</p>';
-            docHtmlAi = '';
-        } else {
-            docHtmlPaper = ''; docHtmlAi = '';
-        }
-        if (state.readMode === 'ai' && !docHtmlAi) state.readMode = 'full';
-        updateLayerToggle();
-        paintActiveLayer();
-        docMarks = []; docMarkIdx = 0;
-        if (pendingInText) {
-            let box = document.getElementById('pt-intext');
-            if (box) box.value = pendingInText;
-            applyInText(pendingInText);
-            pendingInText = null;
-        }
+    fetchPaperText(p).then(function(res) {
+        textSourceByPaper[p.id] = res.source;
+        if (work.pid === p.id) work.textSource = res.source; // keep the open decision's source fresh
+        // Volltext (paper) layer from the resolved primary source. Raw text is the whole
+        // paper and has no Kernbefund machine layer, so it renders verbatim without a split.
+        if (res.source === 'raw') docHtmlPaper = renderMarkdown(res.text);
+        else if (res.source === 'knowledge_doc') docHtmlPaper = renderMarkdown(splitDocLayers(res.text).paper);
+        else if (res.source === 'abstract') docHtmlPaper = '<p class="pt-doc-p">' + inlineMd(res.text) + '</p>';
+        else docHtmlPaper = '';
+        // KI-Extraktion layer always from the served knowledge document, so the provenance
+        // split (ADR-016) survives even when the paper layer is raw local text.
+        return fetchKd(p).then(function(kd) {
+            const ai = (kd != null) ? splitDocLayers(kd).ai : '';
+            docHtmlAi = ai ? renderMarkdown(ai) : '';
+            if (state.readMode === 'ai' && !docHtmlAi) state.readMode = 'full';
+            updateLayerToggle();
+            updateSourcePill(p);
+            paintActiveLayer();
+            docMarks = []; docMarkIdx = 0;
+            if (pendingInText) {
+                let box = document.getElementById('pt-intext');
+                if (box) box.value = pendingInText;
+                applyInText(pendingInText);
+                pendingInText = null;
+            }
+        });
     });
+}
+
+// Update the pill that names the active reading source (raw / knowledge doc / abstract).
+// Raw reuses the human pill colour as a deliberate visual for the locally-read, verbatim
+// source the reviewer grounds evidence on; it carries no Mensch/KI semantics.
+function updateSourcePill(p) {
+    const pill = document.getElementById('pt-source-pill'); if (!pill) return;
+    const src = (p && textSourceByPaper[p.id]) || 'none';
+    pill.textContent = SOURCE_LABEL[src] || SOURCE_LABEL.none;
+    pill.className = 'pt-pill ' + (src === 'raw' ? 'pt-pill-human' : src === 'knowledge_doc' ? 'pt-pill-ghost' : 'pt-pill-warn');
 }
 
 function activeLayerHtml() { return state.readMode === 'ai' ? docHtmlAi : docHtmlPaper; }
@@ -893,6 +1066,7 @@ function assessLockedHtml(p, dec) {
     h += '<div class="pt-rail-body">';
     if (dec.decision === 'Exclude' && dec.reason) h += '<div class="pt-seed-ref">Ausschlussgrund: <strong>' + EC.escapeHtml(dec.reason.replace(/_/g, ' ')) + '</strong></div>';
     if (dec.decision === 'Include' && dec.override && dec.override_reason) h += '<div class="pt-seed-ref">Override zu Include &middot; Begruendung: <strong>' + EC.escapeHtml(dec.override_reason) + '</strong></div>';
+    if (dec.text_source) h += '<div class="pt-seed-ref">Gelesen: <strong>' + EC.escapeHtml(SOURCE_LABEL[dec.text_source] || dec.text_source) + '</strong></div>';
     h += dimHtml('Gegenstand', TECH_CATS, cats, true);
     h += dimHtml('Perspektive', SOCIAL_CATS, cats, true);
     h += evidenceListHtml(dec.evidence || {}, true);
@@ -1118,7 +1292,8 @@ function commit() {
         categories: work.cats, decision: fin, override: !!work.override,
         reason: fin === 'Exclude' ? work.reason : null,
         override_reason: (work.override && fin === 'Include') ? work.overrideReason.trim() : null,
-        evidence: humanEvidence, ts: new Date().toISOString(), reviewer: state.reviewer
+        evidence: humanEvidence, text_source: currentTextSource(p),
+        ts: new Date().toISOString(), reviewer: state.reviewer
     };
     editingPid = null; // the edit (if any) is now re-committed
     save();
@@ -1139,8 +1314,12 @@ function editRecord(p) {
         override: !!dec.override,
         reason: dec.reason || null,
         overrideReason: dec.override_reason || null,
-        evidence: JSON.parse(JSON.stringify(dec.evidence || {}))
+        evidence: JSON.parse(JSON.stringify(dec.evidence || {})),
+        textSource: dec.text_source || null
     };
+    // rehydrate the recorded text source so a re-commit before the reload resolves keeps it;
+    // loadReadingInto overwrites it with the freshly read source when the reader re-reads
+    if (dec.text_source) textSourceByPaper[p.id] = dec.text_source;
     editingPid = p.id;
     renderScreening();
 }
@@ -1350,15 +1529,17 @@ function renderData(targetEl) {
 
     html += '<div class="pt-data-block"><p class="pt-muted pt-panel-lead">Provenienz über Git. Deine Entscheidungen liegen als eine Datei pro Reviewer:in in docs/data/screening/; wer was entschieden hat, trägt der Commit-Autor, kein Feld im Tool.</p></div>';
 
-    html += '<div class="pt-data-block"><h4>In den Projektordner speichern</h4>';
+    html += '<div class="pt-data-block"><h4>Mit dem Projektordner verbinden</h4>';
     if (FS_SUPPORTED) {
-        html += '<p class="pt-muted">Ordner docs/data/screening/ im lokalen Klon verbinden. Das Tool liest alle Reviewer-Dateien und schreibt deine bei jeder Entscheidung diff-stabil hinein (Schema 0.2, nach Paper-ID sortiert). Danach committest du sie mit deinem üblichen Werkzeug.</p>';
+        html += '<p class="pt-muted">Die <strong>Repo-Wurzel</strong> des lokalen Klons verbinden. Das Tool findet darin docs/data/screening/ (Reviewer-Dateien, diff-stabil geschrieben, Schema 0.2) und generated/markdown_clean/ (die lokalen Rohtexte, nie veröffentlicht). Wird stattdessen der Screening-Ordner selbst gewählt, funktioniert das Speichern weiter, aber ohne Rohtext-Lesen. Committen wie gewohnt mit deinem Werkzeug.</p>';
         html += '<div class="pt-data-actions">' +
             '<button class="pt-btn pt-connect">Mit Projektordner verbinden</button>' +
             '<button class="pt-btn pt-reconnect">Erneut verbinden</button>' +
             '<button class="pt-btn pt-reload">Reviewer-Dateien neu laden</button></div>';
+        var hint = scopeHintText();
+        if (hint) html += '<p class="pt-muted" id="pt-scope-hint">' + hint + '</p>';
     } else {
-        html += '<p class="pt-aq-warn">Dieser Browser (Firefox/Safari) kann nicht direkt schreiben. Nutze Export/Import unten und lege die Datei manuell ab.</p>';
+        html += '<p class="pt-aq-warn">Dieser Browser (Firefox/Safari) kann nicht direkt schreiben. Nutze Export/Import unten und lege die Datei manuell ab. Rohtext-Lesen ist nur mit Direktzugriff (Chromium) möglich.</p>';
     }
     html += '</div>';
 
@@ -1425,15 +1606,20 @@ function csvCell(v) {
     return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
 }
 
-function exportCsv() {
-    let rows = [['id', 'title', 'human_decision', 'human_source', 'ai_decision', 'divergent', 'reason', 'evidence_count']];
+function decisionLogRows() {
+    let rows = [['id', 'title', 'human_decision', 'human_source', 'ai_decision', 'divergent', 'reason', 'evidence_count', 'text_source']];
     papers.forEach(function(p) {
         let h = humanDecision(p), a = aiProposal(p);
         let rec = (state.reviewers[state.perspective] && state.reviewers[state.perspective][p.id]) || curDec()[p.id];
         rows.push([p.id, p.title || '', h ? h.decision : '', h ? h.source : '',
-            a ? a.decision : '', divergent(h, a) ? 'yes' : 'no', (h && h.reason) ? h.reason : '', evidenceCount(rec)]);
+            a ? a.decision : '', divergent(h, a) ? 'yes' : 'no', (h && h.reason) ? h.reason : '',
+            evidenceCount(rec), (rec && rec.text_source) ? rec.text_source : '']);
     });
-    download('prisma-decision-log.csv', rows.map(function(r) { return r.map(csvCell).join(','); }).join('\n'), 'text/csv');
+    return rows;
+}
+
+function exportCsv() {
+    download('prisma-decision-log.csv', decisionLogRows().map(function(r) { return r.map(csvCell).join(','); }).join('\n'), 'text/csv');
 }
 
 // Utilities
@@ -1474,6 +1660,12 @@ const TEST_HOOK = {
     // generated report text and persistence payload
     disclosureMarkdown: disclosureMarkdown, reviewerPayload: reviewerPayload,
     reviewerFileText: reviewerFileText, sortedDecisions: sortedDecisions, commitMessage: commitMessage,
+    decisionLogRows: decisionLogRows,
+    // raw-text mapping and recorded text source (P2, ADR-024)
+    parseRawName: parseRawName, matchRawFile: matchRawFile, mapRawFilename: mapRawFilename,
+    currentTextSource: currentTextSource,
+    setTextSource: function(pid, s) { textSourceByPaper[pid] = s; },
+    clearTextSource: function(pid) { delete textSourceByPaper[pid]; },
     // stateful seams for inline fixtures
     setPapers: function(p) { papers = p; },
     getState: function() { return state; },

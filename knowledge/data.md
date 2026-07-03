@@ -7,7 +7,7 @@ status: complete
 language: en
 version: "0.2"
 created: 2026-06-09
-updated: 2026-06-30
+updated: 2026-07-03
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 4.8)
 method:
@@ -159,6 +159,7 @@ The shipped tool persists not as one session blob but as **one JSON per reviewer
       "reason": null,
       "override": false,
       "override_reason": null,
+      "text_source": "raw",
       "evidence": {
         "Gender": [
           { "term": "gendered scripts", "snippet": "...agents reproduce gendered scripts of care...", "ts": "..." }
@@ -169,6 +170,8 @@ The shipped tool persists not as one session blob but as **one JSON per reviewer
   }
 }
 ```
+
+The `text_source` field (added additively in P2, ADR-024) records which text the decision was grounded on, one of `raw`, `knowledge_doc`, `abstract`, `none`; the schema stays 0.2, since a pre-P2 record without it loads unchanged and is treated as source-unknown. It is rehydrated on edit, shown in the locked view, and emitted as a `text_source` column in the decision-log CSV.
 
 The `evidence` map (added in schema 0.2, FR-13) is the v4 core: per category, a list of pinned Belege, each a `term` plus the surrounding `snippet` taken from the read document at screening time. Backward compatible: a 0.1 record without `evidence` loads as a record with no evidence. A Beleg taken from the verbatim paper layer is human-sourced (`origin: human`) and is the reviewer's binding justification; a Beleg taken from the machine-extraction layer is marked `origin: ai` and stays advisory (ADR-016).
 
@@ -184,7 +187,8 @@ What the screening view reads and searches, and what it deliberately does not.
 
 | What | Where | Count |
 |---|---|---|
-| Reading text (served) | `docs/vault/Papers/<title>.md` via `paper.knowledge_doc` | most papers; the served ones resolve under `docs/`, so `fetch(knowledge_doc)` works from `prisma.html` |
+| Raw full text (local, P2/ADR-024) | `generated/markdown_clean/<Author>_<Year>_<TitleSnippet>.md` via the connected clone | the preferred reading text under a repo-root connection; never served, so public Pages never sees it |
+| Reading text (served) | `docs/vault/Papers/<title>.md` via `paper.knowledge_doc` | the public fallback and the reading text without a connection; the served ones resolve under `docs/`, so `fetch(knowledge_doc)` works from `prisma.html` |
 | Abstract fallback | `paper.abstract` in `research_vault_v2.json` | used when no `knowledge_doc`; not every paper has an abstract |
 | Corpus search index | `docs/data/fulltext_index.json` (built by `src/publish/build_screening_index.py`) | every paper, its text drawn from the knowledge doc, else the abstract, else none; figures from the build script |
 
@@ -194,7 +198,7 @@ The screening view fetches `paper.knowledge_doc` on demand through a single seam
 
 Layer split (ADR-016): because the served document concatenates the paper layer (Abstract, Key Concepts, Full Text) and the machine-extraction layer (Kernbefund onward), the reading view splits it at the first `## Kernbefund` heading (`splitDocLayers`) and offers a Volltext / KI-Extraktion toggle; the KI-Extraktion view carries a band marking it as non-verbatim. The split lands cleanly on all served documents. The layer a snippet is pinned from sets its `origin`, binding the provenance of a Beleg to its actual source.
 
-Text-source options (a copyright decision, not yet taken): (1) keep the served knowledge documents, current and publishable; (2) read the raw local full text from the connected clone (`generated/markdown_clean/`), never published, public fallback to the knowledge document; (3) publish the raw full texts. Because the source is one function, switching to (2) or (3) is a one-function change.
+Text-source options: (1) keep the served knowledge documents, current and publishable; (2) read the raw local full text from the connected clone (`generated/markdown_clean/`), never published, public fallback to the knowledge document; (3) publish the raw full texts. The copyright decision is taken and option 2 is built (P2, ADR-024). Because the source is one function (`fetchPaperText`), the switch was a one-function change. The tool now connects the repo root, derives `docs/data/screening/` for reviewer files and `generated/markdown_clean/` for the raw texts, and resolves the reading text in order, the raw local full text first, then the served knowledge document, then the abstract. The paper-to-rawfile mapping is title-prefix dominant (the raw filename's truncated title snippet must be a prefix of the paper's normalized title, with a year tiebreak and the longest snippet winning; the author diverges between the corpus metadata and the Docling filenames and is not used). The Volltext layer takes the raw text while the KI-Extraktion layer keeps coming from the knowledge document, so the ADR-016 layer split survives raw mode, and each decision records `text_source` (see below).
 
 ## Evidence behaviour (FR-13 contract, as built)
 
