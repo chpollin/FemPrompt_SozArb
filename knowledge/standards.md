@@ -10,7 +10,7 @@ status: complete
 language: en
 version: "0.2"
 created: 2026-06-09
-updated: 2026-07-02
+updated: 2026-07-03
 authors: [Christopher Pollin]
 generated-with: Claude Code, deep-research web synthesis and full-text extraction of the primary sources
 topics: ["[[PRISMA]]", "[[Reporting Standards]]", "[[AI in Evidence Synthesis]]"]
@@ -134,7 +134,7 @@ The dual assessment track and benchmark already satisfy most of the demanding re
 2. Auto-generate a consolidated AI-disclosure section or supplementary table from the screening data, covering model name, version, date, stage, task, prompt version, decoding parameters, confidence threshold, validation metrics, known limitations. This is a tool feature and closes trAIce M6 (parameters), RAISE Table 1, and P3 at once.
 3. Disclose decoding parameters and any confidence threshold in the assessment prompt config so M6b is explicit and reproducible.
 4. Declare conflicts of interest regarding the AI tools used (RAISE Table 1, final row).
-5. Render the PRISMA-trAIce adapted flow diagram (AI vs human split) in the tool's on-demand PRISMA-Record panel, the report layer separate from the working Screening view, per ADR-020. Closes trAIce R1.
+5. Render the PRISMA-trAIce adapted flow diagram (AI vs human split) in the tool's on-demand PRISMA-Record panel, the report layer separate from the working Screening view, per ADR-020. Done on the tool side; the exportable flow artefact and the paper text come from R4, fed by the committed replay (`src/replay/`).
 6. Frame the benchmark explicitly as the trAIce M9/R2 performance evaluation, naming the human-consensus reference standard and the metrics, in the methods text the tool emits.
 
 ## How this legitimises the workflow

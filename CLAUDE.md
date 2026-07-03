@@ -73,9 +73,10 @@ The benchmark (the human-LLM divergence and its decomposition, used as a motivat
 | `generated/distilled/_stage1_json/`, `_verification/` | Stage-1 JSON extractions, verification reports | Read-only |
 | `generated/vault/` | Obsidian Vault v2 (Papers, Concepts, Divergences, Pipeline) | Generated |
 | `docs/`, `docs/data/` | GitHub Pages web interfaces and generated JSON | Actively edited |
-| `generated/benchmark-results/` | Benchmark results | Complete |
+| `generated/benchmark-results/` | Benchmark results; `replay/` holds the committed round-1 replay outputs | Complete |
 | `assessment/` | LLM 5D and human assessment | Complete |
 | `src/publish/` | Generators (Vault v2, Promptotyping data) | Actively edited |
+| `src/replay/` | Round-1 replay (`replay_round1.py`, self-test against the canonical benchmark) | Yes, with care |
 | `config/` | `defaults.yaml` (now lists `generated/` paths; the restructure superseded its do-not-change note) | Yes, with care |
 | `.vault_cache/` | LLM API cache (reproducible) | Do not change |
 | `prompts/` | Prompt governance and CHANGELOG | Read-only |
@@ -90,6 +91,7 @@ The benchmark (the human-LLM divergence and its decomposition, used as a motivat
 |------|---------|
 | `docs/index.html` | Evidence Companion (4-view SPA, default Knowledge Chat) |
 | `docs/prisma.html` | PRISM screening tool |
+| `docs/onboarding.html` | Reviewer onboarding (German walkthrough for the two colleagues) |
 | `docs/js/research-app.js` | Corpus table, modal tabs, navigation, export |
 | `docs/js/wissenschat.js` | Knowledge Chat (Gemini 3 Flash, streaming, citations) |
 | `docs/js/wissensnetz.js` | Knowledge Graph (D3 force graph, divergence mode) |
@@ -114,7 +116,7 @@ Academic companion publication. Vanilla JS plus Chart.js and D3 via CDN.
 | Categories | Ten-category spectrum, rate comparison, divergence papers | `kategorien.js` |
 | Corpus (reference layer) | Sortable table, filters, detail modal, export | `research-app.js` |
 
-Subpages: `about.html`, `methoden.html`, `help.html`.
+Subpages: `about.html`, `methoden.html`, `help.html`, `onboarding.html`.
 
 Architecture rules: no build tool, no framework, no npm, CDN only (D3, Chart.js, Fuse.js, FontAwesome); IIFE pattern for all JS, communication via the `window.EC` API; IBM Plex Serif (headings) and Inter (body); ten categories as a gender-neutral spectrum; detail as a slide-in side panel; the chat API key is local only (localStorage plus gitignored `config.local.js`); data in `docs/data/research_vault_v2.json`, `concept_graph.json`, `promptotyping_v2.json`; ZIP export via JSZip.
 

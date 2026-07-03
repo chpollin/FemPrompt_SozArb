@@ -10,7 +10,7 @@ status: complete
 language: en
 version: "0.2"
 created: 2026-02-21
-updated: 2026-07-02
+updated: 2026-07-03
 authors: [Christopher Pollin]
 generated-with: Claude Code
 topics: ["[[Systematic Review]]", "[[PRISMA]]"]
@@ -52,11 +52,13 @@ Inclusion logic: a paper is included if at least one technology dimension AND at
 
 Expert track (epistemically authoritative). Researchers from social work, gender and diversity studies, and technology studies assess each study against the ten categories. This is the epistemically authoritative reference track, because accountability and responsibility reside only here.
 
-LLM track (two assessment systems). A 5D system (five relevance dimensions, ordinal 0 to 3) for exploratory screening and prioritization, and a 10K system (the ten binary categories, Yes/No) for the benchmark against the human assessment. Both run on Claude Haiku 4.5; the 10K run is the benchmark basis.
+LLM track (two assessment systems). A 5D system (five relevance dimensions, ordinal 0 to 3) for exploratory screening and prioritization, and a 10K system (the ten binary categories, Yes/No) for the benchmark against the human assessment. Both run on Claude Haiku 4.5; the 10K run is the benchmark basis. A condition contrast additionally varies the assessment input (title and abstract versus knowledge document) and the model (Haiku 4.5 versus Sonnet 4.6), tracked per paper (`Input_Source`, trAIce M4); the replay reports the agreement per condition together with the content-only sensitivity.
 
 Human-LLM benchmark. The benchmark compares the human and LLM assessment and adapts the approach of Woelfle et al. (2024). Reference literature for the human inter-rater baseline: Woelfle et al. (2024, parallel human-AI assessment), Hanegraaf et al. (2024, human IRR across abstract and full-text screening), and Sandner et al. (2025, the LLM deviating from the human reference no more than human raters deviate from each other). The project's own confusion matrix, base rates, and divergence live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion; the primary metrics are the confusion matrix and the base-rate comparison, with Cohen's kappa reported only as a comparison anchor.
 
 Benchmark scripts (in `src/assess/`): `generate_papers_csv.py` (Zotero JSON to papers_full.csv), `run_llm_assessment.py` (the 10K assessment), `merge_assessments.py` (merge human and LLM by Zotero_Key), `calculate_agreement.py` (Cohen's kappa and confusion matrix), `analyze_disagreements.py` (disagreement identification).
+
+Round-1 replay (`src/replay/replay_round1.py`, documented in `src/replay/README.md`). The committed replay re-derives the retrospective PRISMA flow and the agreement figures from the raw assessment CSVs, pairing strictly by Zotero_Key, separates the workflow-criteria exclusions (Duplicate, No full text, Wrong publication type) for a content-only sensitivity, computes the pre-specified metric set per track, per category, and per condition, and reproduces the canonical `generated/benchmark-results/agreement_metrics.json` as a self-test before writing `generated/benchmark-results/replay/`. Every count-bearing claim in the record and the papers traces to these outputs ([[conformance-map]], [[plan]] Stage R).
 
 ## Phase 3: Synthesis (PDF to Markdown to knowledge documents)
 
@@ -106,6 +108,7 @@ LLMs are used to examine literature on the use of LLMs; feminist AI literacies a
 | `generated/distilled/`, `_stage1_json/`, `_verification/` | Distilled documents and intermediate results |
 | `assessment/` | `categories.yaml` |
 | `src/assess/`, `assessment/`, `generated/benchmark-results/` | Benchmark scripts, assessment data, results |
+| `src/replay/`, `generated/benchmark-results/replay/` | The committed round-1 replay and its outputs (FlowModel, agreement reproduction) |
 | `corpus/` | `zotero_export.json`, `papers_metadata.csv`, `source_tool_mapping.json` |
 | `docs/`, `docs/data/` | The Evidence Companion and its generated JSON |
 | `src/publish/` | `generate_vault_v2.py`, `generate_promptotyping_data_v2.py` |

@@ -16,7 +16,7 @@ generated-with: Claude Code
 related: [standards, plan, methods, specification, data]
 ---
 
-The R1 deliverable of Stage R in [[plan]]: every PRISMA 2020 checklist item and every PRISMA-trAIce item mapped to its source in the repository, or to a named gap. It is the data behind the tool's checklist surface and the input to the R4 record generation and conformance evaluation. The item text, priority levels, and citations live in [[standards]]; this document holds only the project-specific mapping. The corpus and benchmark figures live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion, never here; where an item asks for a count, the status records that the count is reconstructable and the R2 replay produces it by a human-checked path.
+The R1 deliverable of Stage R in [[plan]]: every PRISMA 2020 checklist item and every PRISMA-trAIce item mapped to its source in the repository, or to a named gap. It is the data behind the tool's checklist surface and the input to the R4 record generation and conformance evaluation. The item text, priority levels, and citations live in [[standards]]; this document holds only the project-specific mapping. The corpus and benchmark figures live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion, never here; where an item asks for a count, the committed R2 replay (`src/replay/replay_round1.py`) produces it, self-tested against the canonical benchmark.
 
 ## Status vocabulary
 
@@ -25,7 +25,7 @@ The R1 deliverable of Stage R in [[plan]]: every PRISMA 2020 checklist item and 
 - **Gap**: the item cannot be reconstructed from the recorded data; the hole is named, not hidden.
 - **N/A**: the item does not apply to this review type (a qualitative review of a field, screening and categorisation, with no meta-analysis, no per-study risk-of-bias appraisal, no effect measures, no certainty rating).
 
-A draft caveat governs the count-bearing items. The retrospective flow counts and the agreement figures are reconstructable but not yet asserted by a committed replay; R2 must supersede any hand recount before R4 publishes the record (see [[plan]] Stage R status).
+The count-bearing items are asserted by the committed replay (`src/replay/replay_round1.py`, outputs `flow_model.json` and `agreement_replay.json` under `generated/benchmark-results/replay/`), which re-pairs the raw CSVs by Zotero_Key and reproduces the canonical `agreement_metrics.json` as a self-test; R4 reads these outputs when it builds the record (see [[plan]] Stage R status).
 
 ## PRISMA 2020 (27 items)
 
@@ -48,7 +48,7 @@ The 2020 structure exposes three flow phases (Identification, Screening, Include
 | 13 | Synthesis methods | N/A | No meta-analytic synthesis; the synthesis is the distillation pipeline and the category mapping, reported under items 9 and 10 |
 | 14 | Reporting-bias assessment | N/A | No across-study reporting-bias assessment for this review type |
 | 15 | Certainty assessment | N/A | No GRADE or equivalent certainty rating |
-| 16a | Results, study selection flow | Reconstructable | The retrospective FlowModel from `assessment/papers_full.csv` and the screening CSVs; counts produced by the R2 replay |
+| 16a | Results, study selection flow | Reconstructable | The retrospective FlowModel from `assessment/papers_full.csv` and the screening CSVs; counts produced by the committed R2 replay (`generated/benchmark-results/replay/flow_model.json`) |
 | 16b | Results, excluded studies with reasons | Reconstructable | `assessment/human_assessment.csv` (exclusion reasons), the controlled vocabulary in [[methods]]; the data-hygiene caveat (out-of-vocabulary values) is handled at the P3 import |
 | 17 | Study characteristics | Reconstructable | `generated/distilled/`, `docs/data/research_vault_v2.json` |
 | 18 | Risk of bias in studies | N/A | See item 11 |
@@ -79,7 +79,7 @@ The AI-as-tool layer. Item text and priority levels are in [[standards]]; this c
 | M6 | Mandatory | Partial | `prompts/` governance and `CHANGELOG.md`, which discloses the per-prompt max_tokens; temperature, top-p, and the confidence threshold are not yet disclosed |
 | M7 | Highly recommended | N/A | No non-LLM evaluative classifier; deduplication is rule-based in Zotero and is reported as administrative, not evaluative |
 | M8 | Mandatory | Reconstructable | Full dual track, human and LLM screening parallel and independent across the corpus, the expert decision binding ([[methods]]); the project strength on this item |
-| M9 | Mandatory | Reconstructable | Confusion matrix, Cohen's kappa, base rates, divergence analysis, human consensus as the reference standard; figures in `generated/benchmark-results/` |
+| M9 | Mandatory | Reconstructable | Confusion matrix, Cohen's kappa, base rates, divergence analysis, human consensus as the reference standard; figures in `generated/benchmark-results/`, reproduced by the committed replay (`replay/agreement_replay.json`) |
 | M10 | Recommended | Reconstructable | `.vault_cache/` (reproducible API cache), open repository; the copyright limitation on raw texts is named |
 | R1 | Mandatory | Partial | The recorded AI and human decisions exist and the tool renders the adapted flow diagram (AI versus human split) in its on-demand PRISMA-Record panel; the exportable flow artefact and the paper text are produced by R4 |
 | R2 | Mandatory | Reconstructable | The benchmark is the performance evaluation (`generated/benchmark-results/`); the paper text is produced by R4 |

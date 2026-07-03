@@ -15,7 +15,7 @@ status: complete
 language: en
 version: "0.2"
 created: 2026-06-29
-updated: 2026-06-30
+updated: 2026-07-03
 authors: [Christopher Pollin]
 generated-with: Claude Code
 related: [project, methods, specification, data, design, plan, journal, standards, conformance-map, update-protocol]
@@ -43,8 +43,8 @@ In function order, not alphabetical.
 
 ## Reading paths
 
-- Onboarding a new collaborator: [[project]], [[methods]], [[specification]].
-- Inspect the benchmark: the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion.
+- Onboarding a new collaborator: [[project]], [[methods]], [[specification]]. The reviewing colleagues use `docs/onboarding.html` instead; nothing on their path requires this knowledge base.
+- Inspect the benchmark: the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion; the committed replay (`src/replay/`) re-derives and asserts the figures.
 - Understand a tool decision: [[specification]] (the Entscheidungen / ADR section), [[journal]], [[design]].
 - Understand the divergence (the motivating illustration): [[methods]].
 - Evaluate conformance: [[standards]] (the criterion), [[conformance-map]] (this review's per-item status).
@@ -100,6 +100,9 @@ A structured summary of a study produced by the distillation pipeline: metadata,
 ### PRISM and PRISMA
 PRISMA (with the final A) is the reporting standard (see [[standards]]). PRISM is this project's screening tool (`docs/prisma.html`). They are not the same; the names are kept distinct deliberately.
 
+### Replay (round 1)
+The committed script `src/replay/replay_round1.py` that re-derives the retrospective PRISMA flow and the agreement figures from the raw assessment CSVs, pairing by Zotero_Key, and reproduces the canonical benchmark file as a self-test before writing its outputs (`generated/benchmark-results/replay/`). The mechanism that lets count-bearing claims be asserted by script, superseding every hand recount; R4 builds the record from its outputs.
+
 ### Responsibility asymmetry
 Responsibility for all results remains with the researchers even when LLMs provide epistemically relevant contributions. The expert track is the epistemically binding reference track because accountability resides only there.
 
@@ -112,6 +115,6 @@ A defined point in the workflow where human or rule-based control checks AI-gene
 ## What is missing and why
 
 - No `architecture.md`. The tool is a static vanilla-JS page with no backend; its construction is covered by [[specification]], [[data]], and [[design]], and the research pipeline by [[methods]].
-- No `testing.md`. The tool's behaviour tests live in `tests/` (a zero-dependency jsdom harness).
+- No `testing.md`. The tool's behaviour tests live in `tests/` (a zero-dependency jsdom harness); the retrospective counts and agreement figures are asserted by the committed replay (`src/replay/`); the test responsibility matrix and the autonomous verification measures are in [[plan]].
 - No `report.md` (a status report for an external recipient). The current state lives in [[plan]] and this index; a formal external report is deferred to the FFG report and the follow-up paper.
 - No numbers in the prose. Volatile quantities live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion, by convention.

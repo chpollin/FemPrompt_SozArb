@@ -34,13 +34,13 @@ Screening runs through **PRISM** ([`docs/prisma.html`](docs/prisma.html)), the p
 corpus/                    # Corpus metadata (Zotero export) and Deep Research artifacts (RIS, raw outputs)
 assessment/                # Assessment systems (human, llm-5d archived), categories.yaml (the 10 categories, single source of truth)
 generated/                 # Generated artifacts
-  benchmark-results/       # agreement_metrics.json, disagreements.csv
+  benchmark-results/       # agreement_metrics.json, disagreements.csv, replay/ (committed round-1 replay outputs)
   pdfs/                    # acquired PDFs
   markdown/                # PDF -> Markdown
   markdown_clean/          # cleaned Markdown (the raw-text source PRISM resolves)
   distilled/               # distilled knowledge documents
   vault/                   # Obsidian Vault (Papers, Concepts, Divergences, Pipeline)
-src/                       # Pipeline and publishing scripts (acquire, distill, assess, publish)
+src/                       # Pipeline and publishing scripts (acquire, distill, assess, publish, replay)
 config/                    # Configuration (defaults.yaml)
 prompts/                   # Prompt changelog and governance
 docs/                      # Evidence Companion and PRISM tool (GitHub Pages)
@@ -59,7 +59,3 @@ Full project documentation is in [`knowledge/`](knowledge/INDEX.md); start at th
 | [plan.md](knowledge/plan.md) | Roadmap, current status, next steps |
 
 **Evidence Companion:** https://chpollin.github.io/FemPrompt_SozArb/
-
----
-
-*Updated: 2026-06-29*

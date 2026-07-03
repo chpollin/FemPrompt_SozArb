@@ -1,62 +1,34 @@
-# Pipeline: PDF → Markdown → Knowledge → Vault
+# src/
 
-Verarbeitungspipeline fuer den Literature Review.
+Pipeline and analysis scripts for the literature review. The canonical description of the method and every script's role is `knowledge/methods.md`; this file is only the directory index.
 
-## Workflow
+## Layout
+
+```
+src/
+├── acquire/   # PDF acquisition and Markdown conversion
+├── distill/   # 3-stage knowledge distillation and the human review tool
+├── assess/    # dual-track assessment and benchmark scripts (see assess/README.md)
+├── publish/   # generators for the Evidence Companion, vault, and screening index
+├── replay/    # committed round-1 replay (see replay/README.md)
+└── utils.py   # shared helpers (logging, API, config, Windows UTF-8)
+```
+
+## Main flow
 
 ```
 corpus/zotero_export.json
-        |
-1. src/acquire/download_zotero_pdfs.py     → generated/pdfs/
-        |
-2. src/acquire/convert_to_markdown.py      → generated/markdown/
-        |
-3. src/acquire/validate_markdown_enhanced.py  (Qualitaetspruefung)
-        |
-4. src/acquire/postprocess_markdown.py     → generated/markdown_clean/
-        |
-5. src/distill/markdown_reviewer.html      (Human Review)
-        |
-6. src/distill/distill_knowledge.py        → generated/distilled/
-        |
-7. src/publish/generate_vault_v2.py → generated/vault/, docs/vault/Papers/
+  → acquire/download_zotero_pdfs.py | acquire/acquire_pdfs.py   → generated/pdfs/
+  → acquire/convert_to_markdown.py (Docling)                    → generated/markdown/
+  → acquire/validate_markdown_enhanced.py                       → generated/validation_reports/
+  → acquire/postprocess_markdown.py                             → generated/markdown_clean/
+  → distill/markdown_reviewer.html (human review)
+  → distill/distill_knowledge.py (3-stage SKE)                  → generated/distilled/
+  → publish/generate_vault_v2.py                                → generated/vault/, docs/vault/Papers/
+  → publish/generate_docs_data.py, generate_promptotyping_data_v2.py,
+    build_screening_index.py                                    → docs/data/
 ```
 
-## Scripts (src/acquire/, src/distill/)
+Beside the pipeline: `assess/` produces and compares the assessment tracks (`assessment/`, `generated/benchmark-results/`), and `replay/replay_round1.py` re-derives the retrospective PRISMA flow and agreement figures from the raw CSVs with a self-test against the canonical benchmark (`generated/benchmark-results/replay/`).
 
-| Script | Beschreibung | Status |
-|--------|--------------|--------|
-| `src/acquire/download_zotero_pdfs.py` | PDFs von Zotero herunterladen | Fertig |
-| `src/acquire/convert_to_markdown.py` | PDF→Markdown mit Docling | Fertig |
-| `src/acquire/validate_markdown_enhanced.py` | Multi-Layer Validierung | Fertig |
-| `src/acquire/postprocess_markdown.py` | Artefakt-Bereinigung | Fertig |
-| `src/distill/distill_knowledge.py` | Knowledge Distillation (3-Stage) | Fertig |
-| `src/distill/validate_knowledge_docs.py` | Knowledge-Dokumente verifizieren | Fertig |
-| `src/utils.py` | Hilfsfunktionen (Logging, API, Config) | Aktiv |
-
-## Tools (src/distill/)
-
-| Tool | Beschreibung |
-|------|--------------|
-| `src/distill/markdown_reviewer.html` | Browser-Tool fuer Human-in-the-Loop Review |
-
-## Verzeichnisse
-
-```
-generated/
-├── pdfs/                   # akquirierte PDFs
-├── markdown/               # konvertierte Markdown-Dateien
-├── markdown_clean/         # Bereinigte Markdowns
-└── distilled/              # destillierte Wissensdokumente
-
-src/
-├── acquire/                # Akquise- und Konversions-Scripts
-├── distill/                # Distillations-Scripts und Browser-Tools
-└── utils.py                # Hilfsfunktionen
-```
-
-Die Verlustkette ueber Akquise, Konversion und Distillation sowie die zugehoerigen Zaehlungen liegen in den Daten (`generated/benchmark-results/`, `docs/data/`) und im Evidence Companion, der sie rendert.
-
----
-
-*Version: 2.0 (2026-02-06)*
+The loss chain across acquisition, conversion, and distillation is quantified in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion.

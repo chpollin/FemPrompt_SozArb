@@ -255,7 +255,7 @@ The demonstrable core of the project: the PRISMA methodology executed on exactly
 
 Shaping decisions (taken 2026-06-09): replay plus interactive agent pass; knowledge-document category evidence enters the replay as clearly labelled machine-extracted evidence, separate from reviewer evidence; the record is published on the Companion. Claim line: the first review round (the full corpus) is carried through PRISM as the first real pass and reported honestly, with the items unrepairable in retrospect named (the corpus papers without a human decision plus one unresolved pairing discrepancy; the missing pre-specified protocol M1). The same gate is enforced for the update (Stage B). The follow-up paper tells exactly this two-round story.
 
-Status (2026-06-09): the first-round record is drafted ahead of a committed replay, every count flagged as a hand recount pending a scripted replay. A committed replay must supersede these counts, by a human-checked path, before the record is published on the Companion (R5). Update (2026-06-21): the residual pairing discrepancy is resolved (a stray Has_HA flag on `2YS85B49` in `papers_full.csv`, a key absent from the human CSV, no missing human decision); the full FlowModel generation (R4) still supersedes the hand-drafted counts before R5.
+Status (2026-06-09): the first-round record is drafted ahead of a committed replay, every count flagged as a hand recount pending a scripted replay. A committed replay must supersede these counts, by a human-checked path, before the record is published on the Companion (R5). Update (2026-06-21): the residual pairing discrepancy is resolved (a stray Has_HA flag on `2YS85B49` in `papers_full.csv`, a key absent from the human CSV, no missing human decision); the full FlowModel generation (R4) still supersedes the hand-drafted counts before R5. Update (2026-07-03): the committed replay exists and passes its self-test (see R2); every hand recount is superseded, and R4 generates the record from its outputs.
 
 ### V: Claim verification (added 2026-06-09 after the meta review)
 
@@ -274,7 +274,7 @@ Consequence ledger (binding for R4 and the paper): the divergence must be report
 
 Done when: every checklist item points at data or at a named gap.
 
-Status (2026-06-30): the per-item map is drafted as [[conformance-map]], the full PRISMA 2020 27-item checklist and all 17 trAIce items plus RAISE, each with status (reconstructable, partial, gap, N/A) and a source path, the named gaps consolidated (no round-1 protocol M1 above all). The count-bearing items are marked reconstructable; the committed R2 replay still has to supersede any hand recount before R4. A machine-readable emission for R4 is derived from the map when R4 builds the record bundle.
+Status (2026-06-30): the per-item map is drafted as [[conformance-map]], the full PRISMA 2020 27-item checklist and all 17 trAIce items plus RAISE, each with status (reconstructable, partial, gap, N/A) and a source path, the named gaps consolidated (no round-1 protocol M1 above all). The count-bearing items are marked reconstructable; the committed R2 replay (2026-07-03) supersedes the hand recounts. A machine-readable emission for R4 is derived from the map when R4 builds the record bundle.
 
 ### R2: Replay seed completion
 
