@@ -1,0 +1,79 @@
+{
+  "provenance": {
+    "script": "src/replay/replay_round1.py",
+    "generated_at": "2026-07-03T05:44:04.898643+00:00",
+    "pairing_key": "Zotero_Key",
+    "input_files": {
+      "human": "assessment/human_assessment.csv",
+      "llm_10k": "assessment/llm_assessment_10k.csv",
+      "papers_full": "assessment/papers_full.csv",
+      "canonical_selftest": "generated/benchmark-results/agreement_metrics.json"
+    }
+  },
+  "identification": {
+    "source_file": "assessment/papers_full.csv",
+    "identified_records": 326,
+    "duplicates_flagged": 95,
+    "records_after_dedup": 231
+  },
+  "denominators": {
+    "note": "The benchmark meta counts the UNION of the two assessment tracks, not the corpus. Corpus (papers_full) and union differ.",
+    "corpus_papers_full": 326,
+    "union_of_tracks": 338,
+    "paired_both_tracks": 291,
+    "human_track_total": 303,
+    "llm_track_total": 326,
+    "human_only": 12,
+    "llm_only": 35
+  },
+  "screening_tracks": {
+    "human": {
+      "screened": 303,
+      "in_corpus": 291,
+      "human_only_outside_corpus": 12
+    },
+    "llm_10k": {
+      "screened": 326
+    }
+  },
+  "human_decisions": {
+    "include": 142,
+    "exclude": 161,
+    "total": 303
+  },
+  "human_exclusion_reasons": {
+    "controlled_vocabulary": {
+      "Duplicate": 67,
+      "No_full_text": 10,
+      "Not_relevant_topic": 54,
+      "Wrong_publication_type": 17
+    },
+    "out_of_vocabulary": {
+      "No relevant topic": 1,
+      "Other": 5
+    },
+    "empty_on_exclude": 7,
+    "workflow_criteria": [
+      "Duplicate",
+      "No_full_text",
+      "Wrong_publication_type"
+    ]
+  },
+  "llm_decisions": {
+    "include": 232,
+    "exclude": 94,
+    "total": 326
+  },
+  "included_per_track": {
+    "human": 142,
+    "llm_10k": 232
+  },
+  "known_resolved_issue": {
+    "key": "2YS85B49",
+    "description": "Stray Has_HA flag in papers_full.csv; the key is absent from the human CSV, so there is no missing human decision. papers_full Has_HA=Yes overcounts corpus human decisions by 1.",
+    "has_ha_in_papers_full": "Yes",
+    "present_in_human_csv": false,
+    "has_ha_yes_count": 292,
+    "human_decisions_on_corpus": 291
+  }
+}
