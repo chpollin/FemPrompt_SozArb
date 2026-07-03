@@ -63,7 +63,7 @@ Division of labour between the two layers: the vault carries the programme view 
 
 Verification: every figure in the analysis document traces to committed script output; an independent re-derivation reproduces the headline table from the raw CSVs by a human-checked path. Validation: co-authors accept the decomposed framing. Done when: the paper can cite every number from the committed analysis document.
 
-Status: the decomposed framing is settled qualitatively (workflow-criteria disagreement separated from content disagreement, no inter-human baseline, the divergence read as illustration); the committed re-pairing and per-category analysis scripts, and a human-checked path from the raw CSVs to every figure, remain to be (re)built. The numbers themselves live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion, not in this plan; step 4 corrections remain queued for P6.
+Status (2026-07-03): steps 1 and 2 are built as the committed replay (`src/replay/replay_round1.py`). It re-pairs the raw CSVs by Zotero_Key, separates the workflow-criteria exclusions for the content-only subset, computes the metric set per track and per category with the 2x2 content-only sensitivity, asserts the `2YS85B49` resolution, and reproduces the canonical `generated/benchmark-results/agreement_metrics.json` as a self-test before writing `generated/benchmark-results/replay/`. The human-checked path is the reviewed script plus its self-test; an independent re-derivation by a second person remains open. Step 3, the analysis write-up as the licensed source for the paper, is still to be written from the replay outputs. The step 4 corrections are applied in `README.md`. The numbers themselves live in the data and the Evidence Companion, never in this plan.
 
 ### TP4 work plan: operationalizing the analysis question
 
@@ -134,7 +134,9 @@ Motivation: evidence pinned on a knowledge document inherits the distillate's fr
 
 Done when: with a connected clone, a paper with a raw text renders it and its Belege carry `text_source: raw`; on Pages without a connection, behaviour is unchanged except the visible source label.
 
-Note (2026-06-21): M3 (ADR-016) realized the layer-source provenance for the already-served document, splitting paper text from machine extraction and binding `origin` to the layer. That is distinct from P2, which still adds the raw Docling text from the local clone and the `text_source` field. P2 remains open; M3 closed the contamination path inside the served distillate.
+Status (2026-07-03): built (ADR-024), pending human browser verification (File System Access cannot be exercised headless). Deviations from the sketch above: the paper-to-rawfile mapping is computed in the browser from the listed raw filenames (title-prefix dominant, with year and longest-prefix tiebreaks), so no manifest is emitted from `build_screening_index.py`; the reviewer schema stays 0.2 as an additive change rather than bumping to 0.3, since pre-P2 files load unchanged; the recorded `text_source` values are `raw`, `knowledge_doc`, `abstract`, `none`; the KI-Extraktion layer keeps coming from the knowledge document, so the ADR-016 split survives raw mode. The per-source disclosure counts (M4) remain open.
+
+Note (2026-06-21): M3 (ADR-016) realized the layer-source provenance for the already-served document, splitting paper text from machine extraction and binding `origin` to the layer. That is distinct from P2, which still adds the raw Docling text from the local clone and the `text_source` field. M3 closed the contamination path inside the served distillate; P2 (ADR-024) then added the raw local text and the recorded source on top of it.
 
 ### P3: Excel-to-PRISM import seam (reframed by ADR-019)
 
@@ -233,7 +235,7 @@ Decided and unblocked first, gated cuts after their decision resolves. Each keep
 4. **Machine evidence** (done 2026-06-30) -- ADR-022 supersedes ADR-018: removed from the evidence list; the model's per-paper reasoning stays only in the collapsed KI-Vorschlag.
 5. **Inclusion logic** (done 2026-06-30) -- ADR-023 resolves O2: a reason-gated override to Include. The AND-rule derives a default; the human binds and may override it either way, an override to Include recording a free-text justification (RAISE P3). Grounded in [[standards]] and the RAISE primary source.
 6. **Feminist language** (done 2026-06-30) -- O3: Technik/Sozial to Gegenstand/Perspektive on the work surface; the internal constants stay.
-7. **Text substrate** (partial 2026-06-30) -- O4/P2/ADR-013: the tool opens on the first screenable paper (not boilerplate) and a textless paper shows a prominent notice instead of going silent; loading raw local full text remains the larger P2/ADR-013 work.
+7. **Text substrate** (built 2026-07-03, pending human browser verification) -- O4/P2/ADR-013, ADR-024: the tool opens on the first screenable paper (not boilerplate) and a textless paper shows a prominent notice instead of going silent; loading raw local full text from the connected clone with a recorded `text_source` is now built (ADR-024), pending human browser verification (File System Access cannot be exercised headless).
 
 ### Open gates
 
@@ -242,10 +244,10 @@ Decided and unblocked first, gated cuts after their decision resolves. Each keep
 | O1 | Machine evidence: remove from the evidence list, or replace with verbatim category quotes | resolved: removed (ADR-022, cut 4 done) |
 | O2 | Inclusion AND-rule: keep rigid, or reason-gated override to Include | resolved: reason-gated override to Include (ADR-023, cut 5 done) |
 | O3 | Technik/Sozial to Gegenstand/Perspektive | resolved: renamed (cut 6 done) |
-| O4 | Thin-text papers: block, warn, or load raw local text | partial: warn + screenable entry done; raw local text is P2 (cut 7) |
+| O4 | Thin-text papers: block, warn, or load raw local text | resolved: warn + screenable entry done; raw local text built (ADR-024, cut 7), pending human browser verification |
 | O5 | Decisions file: one shared file, or one per person | resolved: one file per reviewer (operator decision 2026-07-03, confirming the ADR-021 default) |
 
-All seven cuts are built and on the branch: cuts 1 to 6 complete (O1 and O3 resolved; O2 resolved by ADR-023) and the warn-and-entry half of 7 done, the raw-local-text half remaining as the larger P2/ADR-013 work. The Stage A redesign is closed. O5 was decided on 2026-07-03: one decisions file per reviewer, confirming the ADR-021 default; no gate waits on the operator.
+All seven cuts are built and on the branch: cuts 1 to 6 complete (O1 and O3 resolved; O2 resolved by ADR-023), and cut 7 is now built in full (the warn-and-entry half plus the raw-local-text half, ADR-024), pending human browser verification. The Stage A redesign is closed. O5 was decided on 2026-07-03: one decisions file per reviewer, confirming the ADR-021 default; no gate waits on the operator.
 
 ## Stage R: The first-round pass through PRISM and its evaluation
 
@@ -282,6 +284,8 @@ Status (2026-06-30): the per-item map is drafted as [[conformance-map]], the ful
 Status (2026-06-21): the provenance-class half is built and verified (M3, ADR-016). The reading column now splits the served document into a paper layer and a machine-extraction layer (`splitDocLayers`), a Volltext / KI-Extraktion toggle switches between them, and a Beleg pinned from the KI-Extraktion layer carries `origin: ai` and never sets `work.cats`, so AI-sourced text cannot enter the binding decision. Headless tests cover the split and the binding separation; the boundary lands cleanly on all served documents.
 
 Update (2026-06-21, Session 17): the residual pairing discrepancy is resolved (the stray Has_HA flag on `2YS85B49`, no missing human decision). A committed, human-checked replay that re-pairs the raw CSVs and reproduces the canonical matrix, the content-only sensitivity, and that resolution still has to be (re)built; the figures it would assert live in the data (`generated/benchmark-results/`, `docs/data/`), not in this plan. Reversed since (ADR-022, 2026-06-30): the ADR-018 machine-evidence preload (`injectMachineEvidence` from `docs/data/machine_evidence.json`) was removed; the loaded snippets were whole-paper reasoning duplicated verbatim across categories, not per-category quotes, so the per-category structure was fabricated. The machine assessment stays in the collapsed KI-Vorschlag, and the R2 goal of a real per-category provenance class still needs a verified quote-to-category mapping the data does not yet carry. The generator part and `machine_evidence.json` were deleted in the same audit-driven cleanup.
+
+Update (2026-07-03): the committed replay exists (`src/replay/replay_round1.py`, documented in `src/replay/README.md`, outputs `flow_model.json` and `agreement_replay.json` under `generated/benchmark-results/replay/`). It rebuilds the retrospective FlowModel from the actual files, re-pairs by Zotero_Key, and passes its self-test against the canonical `agreement_metrics.json`; the V-section consequence ledger (the content-only decomposition and the best-condition sensitivity) is thereby script-backed. Open inside R2: the per-category machine-evidence provenance class still needs a verified quote-to-category mapping (see the ADR-022 reversal above). R4 consumes the replay outputs for the record bundle.
 
 Done when: the report surface shows the complete retrospective review from data alone.
 
@@ -365,6 +369,17 @@ Status: the in-repo versus standalone decision above is still open; the setup pa
 | Decision logic, kappa/flow aggregation, schema migration, renderer escaping, export/import round-trip | committed jsdom harness | `tests/` |
 | Visual and interaction reality: reading flow, search stepping, pinning, downloads, keyboard, responsive | agent click-tests S1 to S6 | protocols in [[journal]] |
 | File System Access dialogs and writes, GitHub Desktop versioning of the reviewer files, real onboarding | human | `tests/manual-checklist.md` |
+| Retrospective flow counts and agreement figures: pairing, FlowModel, metric reproduction | committed replay with self-test against the canonical benchmark | `src/replay/`, outputs in `generated/benchmark-results/replay/` |
+
+### Autonomous verification measures (added 2026-07-03)
+
+What the assistant verifies without a human in the loop, and what stays human-only. Every build strand passes an execution check and an independent adversarial diff review before it is committed; findings are fixed or recorded as open items.
+
+- Execution checks, both exit-code-gated: the jsdom harness from the working tree (`node tests/run.mjs`) and the replay self-test (`python src/replay/replay_round1.py`).
+- Count-bearing claims are asserted only through the replay self-test; a figure the replay does not reproduce is written nowhere.
+- Label consistency: UI strings quoted in `docs/onboarding.html` and `docs/help.html` must match the literals in `docs/js/prisma.js`; checkable by grep.
+- After the next deploy: the agent click-tests S1 to S6 against the deployed tool, and a persona walkthrough of the onboarding page (whether a non-technical reviewer can follow it end to end).
+- Human-only: File System Access connect and write in a real browser, the colleague dry run (P7), and the R5 publish decision.
 
 ## What this plan does not cover
 
@@ -403,6 +418,9 @@ The v4 core stories (read, search, pin) are confirmed in substance, with a role 
 
 ## Open items
 
+- PRISM has no in-UI reviewer switcher; every browser session defaults to `reviewer1.json`. With both reviewers screening the full batch, the second reviewer needs a defined path to work as `reviewer-2` (a UI switcher or a documented manual step); decide and build this before the colleagues start.
+- The P2 raw-file matching is title-prefix-based with year and longest-prefix tiebreaks; its behaviour under ambiguous collisions carries no test. Harden the matching or add that test before the disclosure relies on `text_source: raw`.
+- P2 race: committing a decision while the raw text is still loading records the synchronous source guess; guard the commit or re-resolve `text_source` when the read completes.
 - Filesystem housekeeping: the acquired PDFs still sit in the gitignored `pipeline/pdfs/` instead of the declared `generated/pdfs` (`config/defaults.yaml`); move or delete the leftover.
 - Folder restructure executed 2026-06-30 (code into `src/`, generated data into `generated/`, deep-research into `corpus/`, assessment unified); see [[journal]] Session 24.
 

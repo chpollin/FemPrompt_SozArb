@@ -22,7 +22,7 @@ A corpus identified via four Deep Research systems, screened in two parallel, in
 | LLM (10K) | 10 binary categories | Complete (the benchmark track) |
 | LLM (5D) | 5 ordinal dimensions | Complete (archived) |
 
-The benchmark serves as a motivating illustration of why reliability cannot be presupposed. It records a substantial, asymmetric divergence between the LLM and the expert judgments; the decomposition shows that the headline gap is dominated by human workflow exclusions (duplicates, no full text, wrong publication type) that a single-paper LLM cannot see, and on content-only decisions the include rates converge. The figures live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion.
+The benchmark serves as a motivating illustration of why reliability cannot be presupposed. It records a substantial, asymmetric divergence between the LLM and the expert judgments; the decomposition shows that the headline gap is dominated by human workflow exclusions (duplicates, no full text, wrong publication type) that a single-paper LLM cannot see, and on content-only decisions the include rates converge. The convergence is a base-rate statement, decision-level agreement remains near chance on the full set and weak even content-only, and the apparent best condition changes under the content-only sensitivity. The figures live in the data (`generated/benchmark-results/`, including the committed replay under `replay/`, and `docs/data/`) and the Evidence Companion.
 
 ## Screening Tool (PRISM)
 
