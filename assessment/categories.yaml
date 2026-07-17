@@ -1,10 +1,10 @@
 # Assessment Categories
-# Version: 1.2 (Examples added for all categories, synced with documentation)
+# Version: 1.3 (analysis_fields block frozen for round 2; eligibility content unchanged from v1.2)
 # Synchronized with Human-Assessment Google Sheets schema
 
 metadata:
   project: Literature Review (AI Literacy & Bias in Social Work)
-  last_updated: 2026-07-01
+  last_updated: 2026-07-17
   status: active
   # The category "type: binary" below describes the completed benchmark tracks (human and
   # LLM 10K). The PRISM screening tool scores the same categories three-level and derives a
@@ -14,6 +14,7 @@ metadata:
     levels: [nein, teilweise, ja]   # 0 / 1 / 2
     derivation: "both dimensions ja => Include; both at least teilweise => Unclear; any dimension entirely nein => Exclude"
   changelog:
+    - "v1.3 (2026-07-17): analysis_fields block frozen after the pilot and operator study-goal clarification (update-protocol B.1); Studientyp becomes required for Include; eligibility content unchanged from v1.2."
     - "2026-07-01: three-level PRISM screening scale documented (ADR-024); benchmark type stays binary."
     - "v1.2: Beispiele fuer Bias_Ungleichheit, Gender, Diversitaet, Fairness ergaenzt. Doku synchronisiert."
     - "v1.1: KI_Sonstige zur Inklusions-Logik hinzugefügt (algorithmische Systeme in Sozialer Arbeit)"
@@ -195,3 +196,49 @@ study_types:
   - Konzept
   - Literaturreview
   - Unclear
+
+# Analysis fields (TP4), frozen 2026-07-17 after the pilot (knowledge/analysis-fields-pilot.md)
+# and the operator study-goal clarification. Descriptive coding fields for included papers,
+# NOT eligibility criteria; eligibility content above is unchanged (v1.2). Design and rules
+# in knowledge/update-protocol.md sections B, B.1, C. Coded only for Decision = Include;
+# every field has a None code, an empty cell for an included paper is a validation error.
+analysis_fields:
+  - name: AN_Prompting_Role
+    multi: true
+    serves: study-goal (bias impact on prompting, all prompting evidence, not only techniques)
+    values: [Recommended_Practice, Research_Instrument, Object_of_Critique, Learning_Content, None]
+  - name: AN_Prompt_Techniques
+    multi: true
+    serves: SQ1
+    values: [ICL, Thought_Generation, Decomposition, Ensembling, Self_Criticism, Role_Persona, General_Guidance, None]
+    note: "None is legitimate with Prompting=Ja; the concrete strategy behind General_Guidance goes verbatim to AN_Notes."
+  - name: AN_Bias_Axes
+    multi: true
+    serves: SQ2
+    values: [Gender, Race_Ethnicity, Intersectional, Disability, Age, Socioeconomic, Language_Culture, Sexual_Orientation_Identity, Religion, Physical_Appearance, Nationality_Migration, Other_Axis, None]
+    note: "Intersectional requires at least two axes treated in their interaction, not merely co-mentioned."
+  - name: AN_Harm_Types
+    multi: true
+    optional: true
+    binding_when: AN_Coding_Basis = Fulltext
+    serves: SQ2
+    values: [Derogatory_Language, Disparate_Performance, Erasure, Exclusionary_Norms, Misrepresentation, Stereotyping, Toxicity, Direct_Discrimination, Indirect_Discrimination, None]
+  - name: AN_Mitigation_Stage
+    multi: true
+    serves: SQ2
+    values: [Pre_Processing, In_Training, Intra_Processing, Post_Processing, Prompt_Practice, Organisational_Process, None]
+  - name: AN_Mitigation_Status
+    multi: false
+    serves: [SQ1, SQ2]
+    values: [Evaluated, Demonstrated, Proposed, None]
+  - name: AN_Population
+    multi: true
+    serves: SQ3
+    values: [Child_Family_Welfare, Mental_Health, Health_Care, Homelessness_Youth, Social_Assistance_Admin, Education_Professional, General_Social_Work, Not_SW_Specific]
+    note: "Education_Professional restricted to professional or higher-education AI-literacy settings; general or unspecified context goes to Not_SW_Specific."
+  - name: AN_Coding_Basis
+    multi: false
+    serves: audit-trail
+    values: [Fulltext, Knowledge_Doc, Abstract]
+  - name: AN_Notes
+    free_text: true

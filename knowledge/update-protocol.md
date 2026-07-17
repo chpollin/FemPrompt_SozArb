@@ -144,11 +144,13 @@ None yet. Format: date, what changed, why, which runs were affected.
 
 ## 10. Open items before finalization
 
-1. Status of `corpus/deep-research/literature-review-prompt.md` versus the lost-prompt record (section 4.1): human decision on how the provenance is described in the final protocol.
-2. Round 2 window (section 4.2): the recorded default is July 2025 to June 2026; confirm, or narrow the lower bound to October 2025, or correct by amendment if a precise round 1 execution date exists outside the repository.
-3. Analysis-field extension not yet frozen; items 3 to 5 of section 8 depend on it. The freeze must precede the B2 screening start; this protocol requires it before the first search so the pre-registration is complete in one commit state. Confirm or relax that stricter ordering.
-4. Full-batch versus split screening for R1 and R2 (affects the inter-human baseline, section 6).
-5. Decision on running L5 (Claude Code web research lane), with model version recording if yes.
+All five resolved by dated operator amendment on 2026-07-17 (run protocol `corpus/deep-research/round2/LAUFPROTOKOLL.md`):
+
+1. Provenance confirmed as the documented round-1 prompt (not the unprovable verbatim execution); round-2 prompt committed.
+2. Window confirmed, July 2025 to June 2026.
+3. Analysis-field freeze relaxed to "before screening start" with a preceding pilot; frozen 2026-07-17 into `assessment/categories.yaml` (v1.3, `analysis_fields`).
+4. Full-batch screening.
+5. L5 lane ran (Claude Fable 5), 8 records, 5 new distinct candidates.
 
 ---
 
@@ -196,9 +198,9 @@ Closed value lists:
 - `AN_Coding_Basis` (single): `Fulltext`, `Knowledge_Doc`, `Abstract`. Every decision needs its evidence basis; text availability is uneven across the corpus (many papers served only as a knowledge document or an abstract, some with no served text), and several fields, notably `AN_Prompt_Techniques` and `AN_Harm_Types`, are unlikely to be codable from an abstract, which the pilot measures.
 - `Studientyp` (reused): the existing column with the controlled vocabulary `Empirisch`, `Experimentell`, `Theoretisch`, `Konzept`, `Literaturreview`, `Unclear` from `categories.yaml`; becomes required and vocabulary-validated for included papers in the update round. No duplicate column is added.
 
-## B.1 Revision after the pilot (2026-07-17, pre-freeze)
+## B.1 Revision after the pilot (2026-07-17, FROZEN)
 
-The advisory pilot ([[analysis-fields-pilot]], eight papers, stratified) and the operator's clarification of the study goal (everything the corpus says about prompting matters, not only technique families) produce the following revisions. They amend sections B to D; the freeze fixes B plus this block as one state.
+Frozen 2026-07-17 by operator decision, together with section B, into `assessment/categories.yaml` as the `analysis_fields` block (v1.3, eligibility content unchanged from v1.2). The advisory pilot ([[analysis-fields-pilot]], eight papers, stratified) and the operator's clarification of the study goal (everything the corpus says about prompting matters, not only technique families) produced the following revisions. They amend sections B to D and are now binding for the round-2 screening.
 
 1. **New field `AN_Prompting_Role`** (multi): captures in which role prompting figures in the paper, independent of whether a technique family is codable. Codes: `Recommended_Practice` (the paper recommends or teaches prompting), `Research_Instrument` (prompts are used to elicit or measure model behaviour, e.g. bias probes), `Object_of_Critique` (prompting itself is analysed or criticized as a practice), `Learning_Content` (prompting as taught AI-literacy content), `None`. Rationale: the pilot showed papers with a clear prompting focus but no codable technique (prompts as bias-elicitation instrument); under the study goal these carry signal that `AN_Prompt_Techniques` alone loses.
 2. **`AN_Prompt_Techniques: None` is explicitly legitimate with `Prompting: Ja`.** The human category codes topical focus, the technique field codes named technique families; they measure different things. The concrete strategy behind a `General_Guidance` coding is preserved verbatim in `AN_Notes`.
