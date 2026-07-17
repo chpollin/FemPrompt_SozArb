@@ -62,6 +62,9 @@ assessment/phase2_test/
 generated/validation_reports/
 generated/validation_reports_clean/
 
+# Distillate evidence audit (regenerable check artifact, distillate-check-plan.md)
+generated/distilled/_evidence_audit/
+
 # API call logs
 *.jsonl
 
