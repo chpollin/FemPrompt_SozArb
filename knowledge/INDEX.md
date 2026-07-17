@@ -18,7 +18,7 @@ created: 2026-06-29
 updated: 2026-06-30
 authors: [Christopher Pollin]
 generated-with: Claude Code
-related: [project, methods, specification, data, design, plan, journal, standards, conformance-map, update-protocol, research-vault-plan, distillate-check-plan]
+related: [project, methods, specification, data, design, plan, journal, standards, conformance-map, update-protocol, research-vault-plan, distillate-check-plan, analysis-fields-pilot]
 ---
 
 This is the knowledge base of FemPrompt SozArb, a systematic literature review on feminist AI literacy and LLM bias in social work and the epistemic infrastructure built around it. It documents the conducted review and its benchmark, the PRISM screening tool, which is the binding screening surface the review is carried through (ADR-019), and the plan for the literature update. Concrete numbers do not live here. The benchmark figures live in the data (`generated/benchmark-results/`, `docs/data/`), the corpus and screening data in `docs/data/` and `assessment/`, and the Evidence Companion (https://chpollin.github.io/FemPrompt_SozArb/) renders them. This index shows where each piece of knowledge lives, in what order to read, and what the constitutive terms mean.
@@ -41,6 +41,7 @@ In function order, not alphabetical.
 | [[update-protocol]] | The round-2 pre-registration protocol, the analysis-field design, the RIS procedure | until round 2 starts |
 | [[research-vault-plan]] | Operator-gated plan for a `research-vault/` top-level folder carrying the object knowledge after the Grounded-Vault model | until research-vault starts |
 | [[distillate-check-plan]] | Operator-gated audit plan checking the existing distillate stock for the model-paraphrase-instead-of-quote error class (ADR-018) | until the audit runs |
+| [[analysis-fields-pilot]] | Advisory LLM pilot of the analysis-field design on a stratified sample, feeding the freeze decision | until the freeze |
 | [[guides/manual-review-checklist]] | The human-in-the-loop markdown review checklist | rarely |
 
 ## Reading paths

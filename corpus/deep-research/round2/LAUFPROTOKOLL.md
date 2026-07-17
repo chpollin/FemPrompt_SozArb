@@ -44,17 +44,21 @@
 
 ### L5 Claude Code Web-Research (optional, §10 Punkt 5)
 
-- Läuft mit: ja/nein
-- Modellversion (Pflicht bei ja):
-- Datum und Uhrzeit:
-- Rohausgabe gesichert als: `raw/ClaudeCode_deep-research.md`
+- Läuft mit: ja (Operator-Entscheid im Amendment unten, 2026-07-17)
+- Modellversion: Claude Fable 5 (claude-fable-5), Web-Research-Agent in Claude Code, jeder Eintrag am Verlags- bzw. Crossref-Record verifiziert
+- Datum: 2026-07-17
+- Rohausgabe gesichert als: `raw/ClaudeCode_deep-research.md` (Agent-Ausgabe unverändert; die HTML-Entity `&amp;` in JO-Feldern ist ein Transport-Artefakt der Agent-Schnittstelle und wurde nur in der RIS-Datei zu `&` dekodiert)
+- Ausgabeformat: RIS direkt, 8 Records, N1 mit Lane-Präfix L5 und Datumsbasis je Record; `ClaudeCode_deep-research.ris`
+- Dedup (2026-07-17, per DOI und normalisiertem Titel gegen Runde-1-Korpus und Runde-2-RIS): kein Match gegen Runde 1; drei lane-übergreifende Duplikate innerhalb Runde 2 (Shieh et al. 2026 auch L2/L3; Kubes 2025 FAIF auch L2; Solyst et al. 2025 auch L2), bleiben mit Lane-Attribution stehen; fünf neue distinkte Kandidaten (Halm 2025, Weinmann et al. 2026, Autenrieth et al. 2026, Bouko et al. 2025, Shahi et al. 2026)
+- Auffälligkeiten: zwei Records mit eingeschränkter Verlagsseiten-Prüfung (Halm HTTP 403, per Crossref verifiziert; Bouko Abstract zugriffsbeschränkt, aus Metadaten), je im N1 vermerkt; Zotero-Import der L5-Datei steht aus
 
 ## Nachgelagerte Schritte (je Lane abhaken)
 
 - [x] RIS erzeugt für L1 und L2 (2026-07-17): `ChatGPT_deep-research.ris` (5 Records), `Claude_deep-research.ris` (8 Records); Inhalt identisch zur Rohausgabe bis auf das vorgeschriebene Lane-Präfix in N1 und getrimmte Zeilenenden. L3 in Konvertierung (siehe oben).
 - [x] Dedup aller drei Lanes gegen den Bestandskorpus (2026-07-17, per DOI und normalisiertem Titel gegen `corpus/deep-research/*.ris`, 17 DOIs / 32 Titel Bestand): kein Match gegen Runde 1, kein Record entfernt. Zwei lane-übergreifende Duplikate innerhalb Runde 2, Gengler/Wedel 2025 "Ethical AI through a Feminist Lens" (L1 und L2) und Shieh et al. 2026 "Intersectional biases in narratives" (L2 und L3); bleiben in den RIS-Dateien (Lane-Attribution), Zusammenführung beim Zotero-Import mit dokumentiertem Match-Grund.
 - [x] Spot-Check L1/L2 gegen die Rohausgabe (2026-07-17, Leitstelle): alle 13 Records, Autor/Jahr/Titel/DOI/URL unverändert übernommen, einzige Änderung das N1-Lane-Präfix. L3-Spot-Check im L3-Eintrag oben.
-- [x] Zotero-Import erledigt (Operator, 2026-07-17), aus den committeten RIS-Dateien in die Gruppenbibliothek FemPrompt_SozArb, Sammlung `deepresearch-Juni-2025-2026` mit drei Lane-Untersammlungen; alle 21 Einträge per lokaler Zotero-API gegen die RIS-Dateien abgeglichen (5/8/8, vollständig). `corpus/source_tool_mapping.json` regeneriert (Runde-2-Collections und 21 Item-Keys, Duplikat-Hinweis für den Merge-Fall). Anmerkung zur Sammlungs-Benennung, das präregistrierte Fenster ist Juli 2025 bis Juni 2026, der Sammlungsname sagt "Juni-2025-2026"; inhaltlich ohne Folgen, hier vermerkt statt umbenannt.
+- [ ] Zotero-Import L5 (`ClaudeCode_deep-research.ris`) in eine vierte Lane-Untersammlung, danach `source_tool_mapping.json` erneut regenerieren.
+- [x] Zotero-Import L1 bis L3 erledigt (Operator, 2026-07-17), aus den committeten RIS-Dateien in die Gruppenbibliothek FemPrompt_SozArb, Sammlung `deepresearch-Juni-2025-2026` mit drei Lane-Untersammlungen; alle 21 Einträge per lokaler Zotero-API gegen die RIS-Dateien abgeglichen (5/8/8, vollständig). `corpus/source_tool_mapping.json` regeneriert (Runde-2-Collections und 21 Item-Keys, Duplikat-Hinweis für den Merge-Fall). Anmerkung zur Sammlungs-Benennung, das präregistrierte Fenster ist Juli 2025 bis Juni 2026, der Sammlungsname sagt "Juni-2025-2026"; inhaltlich ohne Folgen, hier vermerkt statt umbenannt.
 
 ## Amendment zur Präregistrierung (update-protocol §10)
 
