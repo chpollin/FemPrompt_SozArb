@@ -196,6 +196,20 @@ Closed value lists:
 - `AN_Coding_Basis` (single): `Fulltext`, `Knowledge_Doc`, `Abstract`. Every decision needs its evidence basis; text availability is uneven across the corpus (many papers served only as a knowledge document or an abstract, some with no served text), and several fields, notably `AN_Prompt_Techniques` and `AN_Harm_Types`, are unlikely to be codable from an abstract, which the pilot measures.
 - `Studientyp` (reused): the existing column with the controlled vocabulary `Empirisch`, `Experimentell`, `Theoretisch`, `Konzept`, `Literaturreview`, `Unclear` from `categories.yaml`; becomes required and vocabulary-validated for included papers in the update round. No duplicate column is added.
 
+## B.1 Revision after the pilot (2026-07-17, pre-freeze)
+
+The advisory pilot ([[analysis-fields-pilot]], eight papers, stratified) and the operator's clarification of the study goal (everything the corpus says about prompting matters, not only technique families) produce the following revisions. They amend sections B to D; the freeze fixes B plus this block as one state.
+
+1. **New field `AN_Prompting_Role`** (multi): captures in which role prompting figures in the paper, independent of whether a technique family is codable. Codes: `Recommended_Practice` (the paper recommends or teaches prompting), `Research_Instrument` (prompts are used to elicit or measure model behaviour, e.g. bias probes), `Object_of_Critique` (prompting itself is analysed or criticized as a practice), `Learning_Content` (prompting as taught AI-literacy content), `None`. Rationale: the pilot showed papers with a clear prompting focus but no codable technique (prompts as bias-elicitation instrument); under the study goal these carry signal that `AN_Prompt_Techniques` alone loses.
+2. **`AN_Prompt_Techniques: None` is explicitly legitimate with `Prompting: Ja`.** The human category codes topical focus, the technique field codes named technique families; they measure different things. The concrete strategy behind a `General_Guidance` coding is preserved verbatim in `AN_Notes`.
+3. **`AN_Harm_Types` stays optional and becomes binding only where `AN_Coding_Basis = Fulltext`** (open decision 2 resolved as proposed): the pilot found the Gallegos mechanism rarely decidable from distillate or abstract; competing codes were frequent. From weaker text bases the field may be coded, but an empty value is not a validation error there.
+4. **Review rule** (amends coding rule 5): for `Studientyp` Literaturreview or Konzept, the techniques, harms, and mitigations the paper synthesizes as its own subject matter are codable; rule 5 excludes only incidental citation, not the review's object.
+5. **`AN_Population` sharpening:** `Education_Professional` is restricted to professional or higher-education AI-literacy settings (teaching professionals or students to work with AI); general-audience or unspecified contexts go to `Not_SW_Specific`. The fine-grained social-work practice codes stay unchanged and are re-examined after screening, when the corpus shows which fields actually occur (open decision 6 stays open for that part).
+6. **`Role_Persona` promotion is kept** (open decision 6, this part resolved): the pilot found it independently, as the technique form professional-practice guidance actually names.
+7. **Excel schema:** `AN_Prompting_Role` is appended after `AN_Population`; as a multi field it uses the semicolon encoding with a `Legend` entry, enforced at the P3 bridge like the other multi-select lists.
+
+The freeze decision reviews sections B and B.1 together; after the freeze the vocabularies are written into `categories.yaml` as the `analysis_fields` block and this revision block is folded into B.
+
 ## C. Coding instructions
 
 Written for the Excel workflow: the coders are the reviewing colleagues, the surface is the known spreadsheet, and the legend sheet carries the code lists in compact form. General rules:
