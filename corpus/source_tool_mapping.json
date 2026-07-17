@@ -8,7 +8,15 @@
       "Gemini": 3,
       "OpenAI": 6,
       "Perplexity": 10
-    }
+    },
+    "updated": "2026-07-17",
+    "update_method": "Round 2: keys read from the local Zotero API (group 6080294), collections matched 1:1 to committed round-2 RIS files",
+    "sources_round2": {
+      "OpenAI": 5,
+      "Claude": 8,
+      "Gemini": 8
+    },
+    "round2_note": "Two cross-lane duplicates exist as separate items (Gengler/Wedel 2025: 5DLTP2YA/9Y7H9WXQ; Shieh et al. 2026: H958FXZR/NJUBGV8X). After a Zotero merge the surviving key keeps its single-tool mapping; re-run the update or assign both tools to the surviving key then."
   },
   "collection_mapping": {
     "_note": "Collection names inferred from RIS-file correlation. Collections with confirmed Deep Research provenance are marked. Other collection names need manual verification from Zotero UI.",
@@ -36,6 +44,37 @@
         "source_tool": "Gemini",
         "confidence": "high",
         "evidence": "3/3 RIS-matched papers from Gemini"
+      },
+      "ICACN942": {
+        "name": "deepresearch-Juni-2025-2026",
+        "source_tool": null,
+        "round": 2,
+        "confidence": "high",
+        "evidence": "Elternsammlung des Runde-2-Imports (Fenster Juli 2025 bis Juni 2026)"
+      },
+      "ZUZBDYKS": {
+        "name": "ChatGPT_deep-research",
+        "source_tool": "OpenAI",
+        "round": 2,
+        "lane": "L1",
+        "confidence": "high",
+        "evidence": "Import aus committed corpus/deep-research/round2/ChatGPT_deep-research.ris, 5/5 Titel-Match"
+      },
+      "7RCYBJBZ": {
+        "name": "Claude_deep-research",
+        "source_tool": "Claude",
+        "round": 2,
+        "lane": "L2",
+        "confidence": "high",
+        "evidence": "Import aus committed corpus/deep-research/round2/Claude_deep-research.ris, 8/8 Titel-Match"
+      },
+      "GB8X9QZW": {
+        "name": "Gemini_deep-research",
+        "source_tool": "Gemini",
+        "round": 2,
+        "lane": "L3",
+        "confidence": "high",
+        "evidence": "Import aus committed corpus/deep-research/round2/Gemini_deep-research.ris, 8/8 Titel-Match"
       }
     },
     "thematic_collections": {
@@ -240,6 +279,69 @@
     ],
     "X7ZGW6CN": [
       "Perplexity"
+    ],
+    "5DLTP2YA": [
+      "OpenAI"
+    ],
+    "VYCF5NCB": [
+      "OpenAI"
+    ],
+    "8YZKPS42": [
+      "OpenAI"
+    ],
+    "6IU5JG5Y": [
+      "OpenAI"
+    ],
+    "MN2K9JW8": [
+      "OpenAI"
+    ],
+    "IYUPQPTA": [
+      "Claude"
+    ],
+    "BKYNQZHQ": [
+      "Claude"
+    ],
+    "DALR26DL": [
+      "Claude"
+    ],
+    "VXDH5KWP": [
+      "Claude"
+    ],
+    "9Y7H9WXQ": [
+      "Claude"
+    ],
+    "5G2VPZR8": [
+      "Claude"
+    ],
+    "7B6V8MN6": [
+      "Claude"
+    ],
+    "H958FXZR": [
+      "Claude"
+    ],
+    "NJUBGV8X": [
+      "Gemini"
+    ],
+    "PS8KVDVS": [
+      "Gemini"
+    ],
+    "EF9TQIRK": [
+      "Gemini"
+    ],
+    "UNGYENLB": [
+      "Gemini"
+    ],
+    "CCAKPEGY": [
+      "Gemini"
+    ],
+    "UIBZW4IK": [
+      "Gemini"
+    ],
+    "DL7G37W9": [
+      "Gemini"
+    ],
+    "YW3UAXFP": [
+      "Gemini"
     ]
   }
 }
