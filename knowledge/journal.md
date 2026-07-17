@@ -287,3 +287,7 @@ Bewährte Praxis aus den Sessions, verdichtet.
 - **Kappa-Interpretation:** Für asymmetrische Human-LLM-Vergleiche mit verschiedenen Basisraten ist Cohen's Kappa irreführend, es ist für symmetrische Vergleiche entwickelt.
 - **Merge per instabilem Identifier:** Eine Paarung per sequentieller ID statt stabilem Schlüssel produziert plausibel aussehende, völlig falsche Ergebnisse, gegen die Rohdaten prüfen, bevor man "korrigiert".
 - **Schreib-Guards und blockierende Dialoge:** Subagenten-Guards treffen Dateinamen, nicht Inhalte; `confirm()`/`alert()`-Pfade nicht in Browser-Automatisierung klicken.
+
+## 2026-07-17 Analysefeld-Freeze und Runde-2-Screening (advisory)
+
+Analysefelder eingefroren (categories.yaml v1.3, analysis_fields-Block mit neuem AN_Prompting_Role nach Operator-Klarstellung des Studienziels; Eligibility unverändert v1.2). Alle fünf §10-Präregistrierungspunkte per Amendment beantwortet. Beratender LLM-Screening-Durchgang über die 24 distinkten Runde-2-Kandidaten (vier Screening-Agenten, deterministischer Konsistenz-Check, ein adversarialer Prüfagent), Ergebnis 14 Include, 9 Unclear, 1 Exclude in assessment/round2-screening-advisory.md. Keine Konfabulation, eine Include-zu-Unclear-Korrektur. Verbindliche Entscheidung bleibt der menschliche PRISM-Track. Offen, Zotero-Import der L5-RIS und Mapping-Nachzug, Stufe-3-Sichtung der 192 Warteliste-Distillate.
