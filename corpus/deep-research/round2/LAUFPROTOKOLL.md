@@ -54,7 +54,7 @@
 - [x] RIS erzeugt für L1 und L2 (2026-07-17): `ChatGPT_deep-research.ris` (5 Records), `Claude_deep-research.ris` (8 Records); Inhalt identisch zur Rohausgabe bis auf das vorgeschriebene Lane-Präfix in N1 und getrimmte Zeilenenden. L3 in Konvertierung (siehe oben).
 - [x] Dedup aller drei Lanes gegen den Bestandskorpus (2026-07-17, per DOI und normalisiertem Titel gegen `corpus/deep-research/*.ris`, 17 DOIs / 32 Titel Bestand): kein Match gegen Runde 1, kein Record entfernt. Zwei lane-übergreifende Duplikate innerhalb Runde 2, Gengler/Wedel 2025 "Ethical AI through a Feminist Lens" (L1 und L2) und Shieh et al. 2026 "Intersectional biases in narratives" (L2 und L3); bleiben in den RIS-Dateien (Lane-Attribution), Zusammenführung beim Zotero-Import mit dokumentiertem Match-Grund.
 - [x] Spot-Check L1/L2 gegen die Rohausgabe (2026-07-17, Leitstelle): alle 13 Records, Autor/Jahr/Titel/DOI/URL unverändert übernommen, einzige Änderung das N1-Lane-Präfix. L3-Spot-Check im L3-Eintrag oben.
-- [ ] Zotero-Import nur aus committeten RIS-Dateien, `corpus/source_tool_mapping.json` regeneriert
+- [x] Zotero-Import erledigt (Operator, 2026-07-17), aus den committeten RIS-Dateien in die Gruppenbibliothek FemPrompt_SozArb, Sammlung `deepresearch-Juni-2025-2026` mit drei Lane-Untersammlungen; alle 21 Einträge per lokaler Zotero-API gegen die RIS-Dateien abgeglichen (5/8/8, vollständig). `corpus/source_tool_mapping.json` regeneriert (Runde-2-Collections und 21 Item-Keys, Duplikat-Hinweis für den Merge-Fall). Anmerkung zur Sammlungs-Benennung, das präregistrierte Fenster ist Juli 2025 bis Juni 2026, der Sammlungsname sagt "Juni-2025-2026"; inhaltlich ohne Folgen, hier vermerkt statt umbenannt.
 
 ## Amendment zur Präregistrierung (update-protocol §10)
 
