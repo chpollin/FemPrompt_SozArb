@@ -11,21 +11,21 @@
 
 ### L1 ChatGPT (Deep Research)
 
-- Produkt und Modellversion:
-- Datum und Uhrzeit des Laufs:
-- Prompt unverändert eingefügt: ja/nein (Abweichung benennen)
-- Rohausgabe gesichert als: `raw/ChatGPT_deep-research.md`
-- Ausgabeformat: RIS direkt / Prosa (Konvertierung nötig)
-- Auffälligkeiten:
+- Produkt und Modellversion: ChatGPT Deep Research, [Modellversion Operator]
+- Datum und Uhrzeit des Laufs: 2026-07-17, vor 18:31 (Download-Zeitstempel der Rohausgabe)
+- Prompt unverändert eingefügt: [Operator bestätigen]
+- Rohausgabe gesichert als: `raw/ChatGPT_deep-research.md` (unverändert übernommen aus `Downloads/deep-research-report.md`, 2026-07-17)
+- Ausgabeformat: RIS direkt, 5 Records; AB deutsch, N1 mit Qualitätsurteil, noch ohne Lane-Präfix
+- Auffälligkeiten: keine bei der Sicherung; Dedup und Spot-Check stehen aus
 
 ### L2 Claude (Research)
 
-- Produkt und Modellversion:
-- Datum und Uhrzeit des Laufs:
-- Prompt unverändert eingefügt: ja/nein
-- Rohausgabe gesichert als: `raw/Claude_deep-research.md`
-- Ausgabeformat: RIS direkt / Prosa
-- Auffälligkeiten:
+- Produkt und Modellversion: Claude Research, [Modellversion Operator]
+- Datum und Uhrzeit des Laufs: 2026-07-17, vor 18:31 (Download-Zeitstempel der Rohausgabe)
+- Prompt unverändert eingefügt: [Operator bestätigen]
+- Rohausgabe gesichert als: `raw/Claude_deep-research.md` (unverändert übernommen aus `Downloads/compass_artifact_wf-95833164-…_text_markdown.md`, 2026-07-17)
+- Ausgabeformat: RIS direkt, 8 Records; AB englisch, N1 mit begründetem Qualitätsurteil, noch ohne Lane-Präfix
+- Auffälligkeiten: ein Record mit PY 2026 (Shieh et al., Nature Communications, publiziert 08.01.2026, im Fenster); Dedup und Spot-Check stehen aus
 
 ### L3 Gemini (Deep Research)
 
