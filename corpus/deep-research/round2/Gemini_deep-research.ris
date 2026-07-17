@@ -1,0 +1,84 @@
+TY  - JOUR
+AU  - Shieh, E.
+AU  - Vassel, F.-M.
+AU  - Sugimoto, C. R.
+AU  - Monroe-White, T.
+PY  - 2026
+TI  - Intersectional biases in narratives produced by open-ended prompting of generative language models
+JO  - Nature Communications
+DO  - 10.1038/s41467-025-68004-9
+N1  - L3: Untersucht die Reproduktion sozialer Vorurteile durch generative Sprachmodelle in offenen Anwendungsfaellen ohne explizite Identitaetsvorgaben (Laissez-Faire-Umgebung). Analyse von 500.000 generierten Texten aus fuenf fuehrenden Modellen zeigt, dass Charaktere mit minorisierten intersektionalen Identitaeten (Ethnie, Geschlecht, sexuelle Orientierung) systematisch ausgelassen (Omission) oder in untergeordnete Rollen gedraengt (Subordination) werden. Diese Laissez-Faire-Schaeden belegen, dass Diskriminierung auch ohne explizite Erwaehnung von Identitaetsmerkmalen im Prompt stattfindet, und widerlegen die Annahme algorithmischer Neutralitaet.
+ER  -
+
+TY  - JOUR
+AU  - Boufaied, C.
+AU  - de Souza Santos, R.
+AU  - Barcomb, A.
+PY  - 2026
+TI  - Intersectional Fairness in Large Language Models
+JO  - ArXiv Preprint (cs.CL)
+DO  - 10.48550/arXiv.2604.20677
+N1  - L3: Evaluiert intersektionale Fairness in sechs LLMs mit Benchmark-Datensaetzen fuer ambigue und disambiguierte Kontexte. In disambiguierten Kontexten zeigt sich massives Stereotype Alignment: Modelle antworten praeziser, wenn die korrekte Antwort ein gesellschaftliches Stereotyp bestaetigt, als wenn sie ihm widerspricht. Das Phaenomen ist an der Schnittstelle von Ethnie und Geschlecht besonders stark. Kein evaluiertes Modell agiert ueber intersektionale Gruppen hinweg zuverlaessig fair. Peer-Review unbestaetigt (ArXiv Preprint, April 2026).
+ER  -
+
+TY  - JOUR
+AU  - Hu, T.
+PY  - 2026
+TI  - Unveiling gender bias in AI: A classroom reflection on media representation and AI literacy in postgraduate education
+JO  - Developing Academic Practice
+DO  - 10.3828/dap.2026.7
+N1  - L3: Praxisorientierte Unterrichtsreflexion im postgradualen Bereich. Studierende erstellten geschlechts- und identitaetsneutrale Prompts fuer KI-Bildgeneratoren; die Analyse offenbarte tiefe geschlechtsspezifische und rassistische Stereotype in den Outputs (asiatische Jungen beim Lernen, aeltere weisse Maenner als Professoren). Gestuetzt auf Technofeminismus und Intersektionalitaet zeigt der Artikel Prompting als diagnostische, kritische Praxis und demonstriert die Subtilitaet algorithmischer Unterdrueckung in der Medienproduktion.
+ER  -
+
+TY  - JOUR
+AU  - Shapiro, H.
+AU  - Souto Otero, M.
+AU  - Watermeyer, R. P.
+PY  - 2026
+TI  - Metacognitive AI literacy: going beyond the AI skills gap agenda
+JO  - Learning, Media and Technology
+DO  - 10.1080/17439884.2026.2652638
+N1  - L3: Theoretisch fundierter Artikel, der kritisiert, dass gaengige KI-Literacy-Rahmenwerke auf funktionale Kompetenzen beschraenkt bleiben und die epistemologischen Herausforderungen probabilistischer Systeme ignorieren. Fordert eine Rekonzeptualisierung von KI-Literacy als metakognitive soziale Praxis, die die kollektive Faehigkeit umfasst, sich kritisch mit Design, Einsatz und Governance von KI auseinanderzusetzen. Hochschulen sollen sich von Vermittlern digitaler Zertifikate zu Orten kollektiver Intelligenz wandeln; KI-Literacy als Infrastruktur demokratischer Resilienz und oeffentliches Gut.
+ER  -
+
+TY  - JOUR
+AU  - Pratono, A. H.
+AU  - Elgeka, H. W. S.
+AU  - Jeong, B. G.
+PY  - 2026
+TI  - Does being literate in AI make workplaces more equal? The mediating role of psychological capital
+JO  - International Journal of Sociology and Social Policy
+DO  - 10.1108/IJSSP-02-2026-0125
+N1  - L3: Quantitative Studie (N=467), die untersucht, wie KI-Literacy die Gleichberechtigung am Arbeitsplatz beeinflusst. KI-Literacy wirkt primaer indirekt ueber die Staerkung des psychologischen Kapitals (Selbstwirksamkeit, Resilienz); KI fungiert als sozialer Verstaerker, dessen Auswirkungen von menschlicher Handlungsfaehigkeit abhaengen. Explizite Warnung: Ein exklusiver Fokus auf individuelle Faehigkeiten birgt das Risiko, die institutionelle Verantwortung fuer diskriminierendes Design sowie Fragen von Macht, Repraesentation und demokratischer Kontrolle zu verdecken.
+ER  -
+
+TY  - BOOK
+AU  - Mills, K. A.
+AU  - Gutierrez, A.
+PY  - 2025
+TI  - Critical Literacy in an AI World
+PB  - Routledge
+UR  - https://www.routledge.com/Critical-Literacy-in-an-AI-World/Mills-Gutierrez/p/book/9781032886985
+N1  - L3: Nutzt Perspektiven der kritischen Alphabetisierung, um generative KI zu untersuchen, und analysiert, wie technologische Fortschritte in menschliche Entscheidungsprozesse verstrickt sind und diese veraendern. Betont die Dringlichkeit kritischer Kompetenzen, um die Machtdynamiken bei der sozialen Konstruktion menschlicher Erfahrung in KI-gesteuerten Texten zurueckzufordern. Draengt darauf, KI-generierte Texte nicht als neutrale Information, sondern als Manifestation algorithmischer Agency und gesellschaftlicher Werte zu lesen.
+ER  -
+
+TY  - CONF
+AU  - Chisca
+AU  - Jiang
+AU  - Weissburg
+AU  - An
+PY  - 2026
+TI  - Safety guardrails in large language models and selective refusal bias
+JO  - Findings of the Association for Computational Linguistics: ACL 2026
+UR  - https://aclanthology.org/2026.findings-acl.550.pdf
+N1  - L3: Zeigt, dass KI-Sicherheitsmechanismen (Guardrails), die toxische Inhalte blockieren sollen, unabsichtlich neue Vorurteile einfuehren (Selective Refusal Bias). LLMs verweigern schaedliche Inhalte fuer bestimmte demografische Gruppen, lassen sie aber fuer andere, insbesondere intersektionale Minderheiten, zu. Technologische Pflaster beheben die zugrunde liegenden Stereotype nicht, sondern verschieben und verschleiern sie. Autorennamen im Bericht nur als Nachnamen genannt.
+ER  -
+
+TY  - JOUR
+AU  - Singh, R.
+PY  - 2026
+TI  - Feminist AI: Confronting Bias, Power, and the Promise of Justice-Oriented Technology
+JO  - Journal Global Values
+DO  - 10.31995/jgv.2026.v17i01
+N1  - L3: Analysiert die Auswirkungen datengetriebener Technologien durch eine feministische Linse und fordert radikale Rechenschaftspflicht des KI-Sektors. Versteht feministische KI als politisches Projekt zur Bekaempfung ineinandergreifender Formen von Ungerechtigkeit und struktureller Macht. Diskutiert Datenkolonialismus und die algorithmische Kodierung von Diskriminierung (New Jim Code) und argumentiert, dass KI ohne radikale Interventionen wie Datensouveraenitaet und dezentrales Lernen hegemoniale Ordnungen aufrechterhaelt.
+ER  -

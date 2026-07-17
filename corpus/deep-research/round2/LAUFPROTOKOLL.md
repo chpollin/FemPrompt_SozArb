@@ -34,8 +34,8 @@
 - Prompt unverändert eingefügt: [Operator bestätigen]
 - Rohausgabe gesichert als: `raw/Gemini_deep-research.md` (unverändert übernommen aus `Downloads/gemini.txt`, 2026-07-17)
 - Ausgabeformat: Prosa (deutscher Fließtext-Bericht), Konvertierung nach der verbindlichen Prozedur des update-protocol (Abschnitt Round 2: binding procedure)
-- Konvertierung: Prompt verbatim in `Gemini_conversion-prompt.md`, Modell Claude Fable 5 (claude-fable-5), Laufdatum 2026-07-17; Ausgabe `Gemini_deep-research.ris`
-- Spot-Check: [wird nach Konvertierung eingetragen]
+- Konvertierung: Prompt verbatim in `Gemini_conversion-prompt.md`, Modell Claude Fable 5 (claude-fable-5), Laufdatum 2026-07-17; Ausgabe `Gemini_deep-research.ris`, 8 Records; nichts erfunden, fehlende Felder weggelassen (kein DOI bei zwei Records, ein Autorenteam nur mit Nachnamen im Quelltext)
+- Spot-Check (2026-07-17, Leitstelle): acht Stichproben (Titel, DOIs) zeichengenau in der Rohausgabe wiedergefunden; Vorbehalt des Konverters, die arXiv-DOI von Boufaied et al. steht so im Quelltext, wirkt aber fehlerhaft (ID-Jahresfolge 2604), unverändert übernommen und beim Screening zu prüfen
 - Auffälligkeiten: Prosa-Bericht statt Record-Liste; die Konvertierung erfasst alle referenzierten Publikationen, die Fensterprüfung (Juli 2025 bis Juni 2026) läuft wie präregistriert erst bei Dedup und Screening
 
 ### L4 Perplexity (Deep Research)
@@ -51,9 +51,9 @@
 
 ## Nachgelagerte Schritte (je Lane abhaken)
 
-- [ ] RIS geprüft bzw. per Konvertierungsprompt erzeugt (Modell, Version, Laufdatum im Eintrag oben)
-- [ ] Dedup als eigener Schritt gegen den Bestandskorpus (Zotero-Key, DOI, Titel); entfernte Records mit Match-Grund festgehalten
-- [ ] Spot-Check konvertierter Einträge gegen die Rohausgabe
+- [x] RIS erzeugt für L1 und L2 (2026-07-17): `ChatGPT_deep-research.ris` (5 Records), `Claude_deep-research.ris` (8 Records); Inhalt identisch zur Rohausgabe bis auf das vorgeschriebene Lane-Präfix in N1 und getrimmte Zeilenenden. L3 in Konvertierung (siehe oben).
+- [x] Dedup aller drei Lanes gegen den Bestandskorpus (2026-07-17, per DOI und normalisiertem Titel gegen `corpus/deep-research/*.ris`, 17 DOIs / 32 Titel Bestand): kein Match gegen Runde 1, kein Record entfernt. Zwei lane-übergreifende Duplikate innerhalb Runde 2, Gengler/Wedel 2025 "Ethical AI through a Feminist Lens" (L1 und L2) und Shieh et al. 2026 "Intersectional biases in narratives" (L2 und L3); bleiben in den RIS-Dateien (Lane-Attribution), Zusammenführung beim Zotero-Import mit dokumentiertem Match-Grund.
+- [x] Spot-Check L1/L2 gegen die Rohausgabe (2026-07-17, Leitstelle): alle 13 Records, Autor/Jahr/Titel/DOI/URL unverändert übernommen, einzige Änderung das N1-Lane-Präfix. L3-Spot-Check im L3-Eintrag oben.
 - [ ] Zotero-Import nur aus committeten RIS-Dateien, `corpus/source_tool_mapping.json` regeneriert
 
 ## Amendment zur Präregistrierung (update-protocol §10)
