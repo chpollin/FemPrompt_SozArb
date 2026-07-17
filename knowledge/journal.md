@@ -10,7 +10,7 @@ status: complete
 language: de
 version: "0.2"
 created: 2026-02-18
-updated: 2026-07-01
+updated: 2026-07-17
 authors: [Christopher Pollin]
 generated-with: Claude Code
 related: [INDEX, plan, specification, design]
@@ -23,6 +23,14 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 ---
 
 ## PRISM and the epistemic infrastructure (2026)
+
+### 2026-07-17: M3-Entscheide eingearbeitet, research-vault-Verhältnis geklärt, Plandateien nach knowledge/
+
+- **Ziel:** Die über die Forschungsleitstelle freigegebenen M3-Entscheide im Repo verankern, die zwei Plandokumente an ihren Wissensort ziehen und den offenen externen Rechercheschritt festhalten.
+- **Entscheid research-vault zu generated/distilled (Operator, 2026-07-17).** Das Verhältnis ist entschieden, beide Bestände bleiben. `generated/distilled/` bleibt Pipeline-Output, der maschinell erzeugte Rohstoff aus der Distillation-Pipeline. Der geplante `research-vault/` wird die kuratierte Quelle für Belegketten, in der jede Kernaussage über die Ankerschicht `00_representation/` an ihre zeichengenaue Fundstelle gebunden ist. Die Migration eines `generated/distilled/`-Distillats in `research-vault/10_distillates/` ist damit kein Kopieren, sondern die verankernde Prüfung gegen den Ursprung, deren Prüfplan in [[distillate-check-plan]] liegt. Der Aufbau des `research-vault/` folgt [[research-vault-plan]] und bleibt Operator-gated.
+- **Verlauf:** `research-vault-plan.md` und `distillate-check-plan.md` von `corpus/deep-research/` nach `knowledge/` verschoben, weil beide Steuerungswissen über die Arbeit tragen, nicht Deep-Research-Ausbeute. Beide waren untracked, daher normales Verschieben statt `git mv`. Die wechselseitigen Verweise der zwei Dateien sind dateiort-relativ und bleiben korrekt, da beide gemeinsam wandern; alle übrigen Pfadzeiger sind repo-root-relativ. `literature-review-prompt-round2.md` blieb bewusst in `corpus/deep-research/`. Beide Dokumente in [[INDEX]] registriert, in der Dokumententabelle, im `related`-Frontmatter und als eigener Lesepfad.
+- **Offen, externer Deep-Research-Durchgang.** Die zweite Deep-Research-Runde nach `corpus/deep-research/literature-review-prompt-round2.md` bleibt offen und wird durch den Operator ausgeführt, nicht durch die Leitstelle. Ihre Vorbedingungen sind die Präregistrierungs-Offenpunkte in [[update-protocol#10. Open items before finalization]], die vor dem ersten Round-2-Lauf aufgelöst sein müssen und hier nur referenziert, nicht beantwortet werden.
+- **Ergebnis:** Zwei Dateien verschoben, [[INDEX]] und dieses Journal aktualisiert. Working Tree, nichts committet, keine Branch-Operation. Die Ordner `_sources/` und `00_representation/` nicht angefasst.
 
 ### 2026-07-01 (Session 29): Volltext lokal verdrahtet, Kategorien dreistufig, Q1/Q2 als Hauptfragen
 
