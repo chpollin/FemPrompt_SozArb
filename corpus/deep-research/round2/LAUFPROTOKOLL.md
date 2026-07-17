@@ -60,8 +60,8 @@
 
 Die Läufe wurden vor der Fixierung der fünf §10-Offenpunkte gestartet. Damit die Präregistrierung konsistent bleibt, werden die fünf Punkte hier als datiertes Amendment beantwortet und anschließend ins update-protocol übernommen:
 
-1. **Prompt-Provenienz** (§4.1): [Antwort Operator]
-2. **Suchfenster** (§4.2, Default Juli 2025 bis Juni 2026): [bestätigt / geändert auf]
-3. **Analysefeld-Freeze vor erster Suche** (strengere Ordnung): [bestätigt / gelockert auf "vor Screening-Start", mit Begründung, da die Suche bereits lief]
-4. **Screening-Modus R1/R2** (full-batch / split): [Antwort Operator]
-5. **L5-Lane** (ja/nein, Modellversion): [Antwort Operator]
+1. **Prompt-Provenienz** (§4.1): bestätigt (Operator, 2026-07-17). Runde 2 nutzt den dokumentierten Round-1-Prompt als Grundlage; der Round-2-Prompt liegt committet als `../literature-review-prompt-round2.md`. Der Anspruch bleibt "dokumentierte Fassung", nicht "verbatim ausgeführte Runde-1-Fassung" (letztere ist unbeweisbar, siehe Provenienz-Hinweis im Prompt-Dokument).
+2. **Suchfenster** (§4.2): bestätigt (Operator, 2026-07-17), Juli 2025 bis einschließlich Juni 2026.
+3. **Analysefeld-Freeze** (§4.5): gelockert auf "vor Screening-Start" (Operator, 2026-07-17), Begründung: die Suchläufe waren zum Entscheidungszeitpunkt bereits ausgeführt, ein Freeze vor erster Suche ist nicht mehr erfüllbar. Zusätzlicher Operator-Entscheid: vor dem Freeze läuft ein Pilot der Analysefelder an einer stratifizierten Stichprobe bereits aufgenommener Papers (update-protocol, Validierungspfad vor Freeze); erst danach Fixierung, erst danach Screening.
+4. **Screening-Modus** (§5): full-batch (Operator, 2026-07-17); alle Runde-2-Kandidaten in einem Durchgang.
+5. **L5-Lane**: ja (Operator, 2026-07-17). Ausführung als Claude-Code-Web-Research mit demselben Prompt, Modellversion Claude Fable 5 (claude-fable-5); Protokollierung im L5-Eintrag oben.
