@@ -29,21 +29,18 @@
 
 ### L3 Gemini (Deep Research)
 
-- Produkt und Modellversion:
-- Datum und Uhrzeit des Laufs:
-- Prompt unverändert eingefügt: ja/nein
-- Rohausgabe gesichert als: `raw/Gemini_deep-research.md`
-- Ausgabeformat: RIS direkt / Prosa
-- Auffälligkeiten:
+- Produkt und Modellversion: Gemini Deep Research, [Modellversion Operator]
+- Datum und Uhrzeit des Laufs: 2026-07-17 (Ablage `Downloads/gemini.txt`)
+- Prompt unverändert eingefügt: [Operator bestätigen]
+- Rohausgabe gesichert als: `raw/Gemini_deep-research.md` (unverändert übernommen aus `Downloads/gemini.txt`, 2026-07-17)
+- Ausgabeformat: Prosa (deutscher Fließtext-Bericht), Konvertierung nach der verbindlichen Prozedur des update-protocol (Abschnitt Round 2: binding procedure)
+- Konvertierung: Prompt verbatim in `Gemini_conversion-prompt.md`, Modell Claude Fable 5 (claude-fable-5), Laufdatum 2026-07-17; Ausgabe `Gemini_deep-research.ris`
+- Spot-Check: [wird nach Konvertierung eingetragen]
+- Auffälligkeiten: Prosa-Bericht statt Record-Liste; die Konvertierung erfasst alle referenzierten Publikationen, die Fensterprüfung (Juli 2025 bis Juni 2026) läuft wie präregistriert erst bei Dedup und Screening
 
 ### L4 Perplexity (Deep Research)
 
-- Produkt und Modellversion:
-- Datum und Uhrzeit des Laufs:
-- Prompt unverändert eingefügt: ja/nein
-- Rohausgabe gesichert als: `raw/Perplexity_deep-research.md`
-- Ausgabeformat: RIS direkt / Prosa
-- Auffälligkeiten:
+- **Entfällt in Runde 2** (Operator, 2026-07-17): kein Perplexity-Zugang mehr vorhanden. Abweichung gegenüber Runde 1 (dort vier Lanes), als datiertes Amendment festgehalten; Runde 2 läuft mit den Lanes L1 bis L3. Konsequenz für die Auswertung, die Lane-Abdeckung der Rundenvergleiche ist entsprechend drei- statt vierspurig zu dokumentieren.
 
 ### L5 Claude Code Web-Research (optional, §10 Punkt 5)
 
