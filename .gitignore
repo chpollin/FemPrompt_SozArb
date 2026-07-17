@@ -88,3 +88,9 @@ node_modules/
 # Publishing publicly is a separate, rights-gated decision.
 docs/data/fulltext/
 docs/data/fulltext_manifest.json
+
+# research-vault protected layers. Third-party full texts and the anchor layer that
+# embeds them. Same rights-gated rationale as docs/data/fulltext/, never pushed to the
+# public repo. Releasing a single open-access source would be a separate per-source decision.
+research-vault/_sources/
+research-vault/00_representation/

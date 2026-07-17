@@ -1,0 +1,32 @@
+{
+  "id": "Chen_2024_Exploring_complex_mental_health_symptoms_via",
+  "type": "conferencePaper",
+  "title": "Exploring Complex Mental Health Symptoms via Classifying Social Media Data with Explainable LLMs",
+  "author": [
+    {
+      "family": "Chen",
+      "given": "Kexin"
+    },
+    {
+      "family": "Lim",
+      "given": "Noelle"
+    },
+    {
+      "family": "Lee",
+      "given": "Claire"
+    },
+    {
+      "family": "Guerzhoy",
+      "given": "Michael"
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2024
+      ]
+    ]
+  },
+  "language": "en",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Chen_2024_Exploring_complex_mental_health_symptoms_via.md. audit=P-pending."
+}

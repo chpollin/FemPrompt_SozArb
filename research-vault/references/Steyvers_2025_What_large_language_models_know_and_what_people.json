@@ -1,0 +1,48 @@
+{
+  "id": "Steyvers_2025_What_large_language_models_know_and_what_people",
+  "type": "article-journal",
+  "title": "What large language models know and what people think they know",
+  "author": [
+    {
+      "family": "Steyvers",
+      "given": "Mark"
+    },
+    {
+      "family": "Tejeda",
+      "given": "Heliodoro"
+    },
+    {
+      "family": "Kumar",
+      "given": "Aakriti"
+    },
+    {
+      "family": "Belem",
+      "given": "Catarina"
+    },
+    {
+      "family": "Karny",
+      "given": "Sheer"
+    },
+    {
+      "family": "Hu",
+      "given": "Xinyue"
+    },
+    {
+      "family": "Mayer",
+      "given": "Lukas W."
+    },
+    {
+      "family": "Smyth",
+      "given": "Padhraic"
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2025
+      ]
+    ]
+  },
+  "language": "en",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Steyvers_2025_What_large_language_models_know_and_what_people.md. audit=P-pending."
+}

@@ -1,0 +1,44 @@
+{
+  "id": "James_2025_Responsible_prompting_recommendation_Fostering",
+  "type": "conferencePaper",
+  "title": "Responsible Prompting Recommendation: Fostering Responsible AI Practices in Prompting-Time",
+  "author": [
+    {
+      "family": "Santana",
+      "given": "Vagner Figueredo de"
+    },
+    {
+      "family": "Berger",
+      "given": "Sara E"
+    },
+    {
+      "family": "Candello",
+      "given": "Heloísa Caroline"
+    },
+    {
+      "family": "Machado",
+      "given": "Tiago"
+    },
+    {
+      "family": "Sanctos",
+      "given": "Cassia Sampaio"
+    },
+    {
+      "family": "Su",
+      "given": "Tianyu"
+    },
+    {
+      "family": "Williams",
+      "given": "Lemara"
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2025
+      ]
+    ]
+  },
+  "language": "en",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/James_2025_Responsible_prompting_recommendation_Fostering.md. audit=P-pending."
+}

@@ -1,0 +1,24 @@
+{
+  "id": "Kamruzzaman_2024_Prompting_techniques_for_reducing_social_bias_in",
+  "type": "conferencePaper",
+  "title": "Prompting Techniques for Reducing Social Bias in LLMs through System 1 and System 2 Cognitive Processes",
+  "author": [
+    {
+      "family": "Kamruzzaman",
+      "given": "Mahammed"
+    },
+    {
+      "family": "Kim",
+      "given": "Gene Louis"
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2024
+      ]
+    ]
+  },
+  "language": "en",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Kamruzzaman_2024_Prompting_techniques_for_reducing_social_bias_in.md. audit=P-pending."
+}

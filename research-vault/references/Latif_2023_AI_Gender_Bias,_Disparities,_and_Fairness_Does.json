@@ -1,0 +1,28 @@
+{
+  "id": "Latif_2023_AI_Gender_Bias,_Disparities,_and_Fairness_Does",
+  "type": "article-journal",
+  "title": "AI Gender Bias, Disparities, and Fairness: Does Training Data Matter?",
+  "author": [
+    {
+      "family": "Latif",
+      "given": "Ehsan"
+    },
+    {
+      "family": "Zhai",
+      "given": "Xiaoming"
+    },
+    {
+      "family": "Liu",
+      "given": "Lei"
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2023
+      ]
+    ]
+  },
+  "language": "en",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Latif_2023_AI_Gender_Bias,_Disparities,_and_Fairness_Does.md. audit=P-pending."
+}

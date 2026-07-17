@@ -1,0 +1,20 @@
+{
+  "id": "Tint_2025_Guardrails,_not_guidance_Understanding_responses",
+  "type": "conferencePaper",
+  "title": "Guardrails, not Guidance: Understanding Responses to LGBTQ+ Language in Large Language Models",
+  "author": [
+    {
+      "family": "Tint",
+      "given": "Joshua"
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2025
+      ]
+    ]
+  },
+  "language": "en",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Tint_2025_Guardrails,_not_guidance_Understanding_responses.md. audit=clean."
+}

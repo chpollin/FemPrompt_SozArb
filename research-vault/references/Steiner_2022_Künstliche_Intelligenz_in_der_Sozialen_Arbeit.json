@@ -1,0 +1,24 @@
+{
+  "id": "Steiner_2022_Künstliche_Intelligenz_in_der_Sozialen_Arbeit",
+  "type": "article-journal",
+  "title": "Künstliche Intelligenz in der Sozialen Arbeit: Grundlagen, Entwicklungen, Herausforderungen",
+  "author": [
+    {
+      "family": "Steiner",
+      "given": "Olivier"
+    },
+    {
+      "family": "Tschopp",
+      "given": "Dominik"
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2022
+      ]
+    ]
+  },
+  "language": "de",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Steiner_2022_Künstliche_Intelligenz_in_der_Sozialen_Arbeit.md. audit=P-pending."
+}

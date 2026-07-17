@@ -1,0 +1,40 @@
+{
+  "id": "Kutscher_2020_Handbuch_Soziale_Arbeit_und_Digitalisierung",
+  "type": "book",
+  "title": "Handbuch Soziale Arbeit und Digitalisierung",
+  "author": [
+    {
+      "family": "Kutscher",
+      "given": "Nadia"
+    },
+    {
+      "family": "Ley",
+      "given": "Thomas"
+    },
+    {
+      "family": "Seelmeyer",
+      "given": "Udo"
+    },
+    {
+      "family": "Siller",
+      "given": "Friederike"
+    },
+    {
+      "family": "Tillmann",
+      "given": "Angela"
+    },
+    {
+      "family": "Zorn",
+      "given": "Isabel"
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2020
+      ]
+    ]
+  },
+  "language": "de",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Kutscher_2020_Handbuch_Soziale_Arbeit_und_Digitalisierung.md. audit=P-pending."
+}

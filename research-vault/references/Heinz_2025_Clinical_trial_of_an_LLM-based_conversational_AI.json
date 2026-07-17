@@ -1,0 +1,56 @@
+{
+  "id": "Heinz_2025_Clinical_trial_of_an_LLM-based_conversational_AI",
+  "type": "article-journal",
+  "title": "Randomized Trial of a Generative AI Chatbot for Mental Health Treatment",
+  "author": [
+    {
+      "family": "Heinz",
+      "given": "Michael V."
+    },
+    {
+      "family": "Mackin",
+      "given": "Daniel M."
+    },
+    {
+      "family": "Trudeau",
+      "given": "Brianna M."
+    },
+    {
+      "family": "Bhattacharya",
+      "given": "Sukanya"
+    },
+    {
+      "family": "Wang",
+      "given": "Yinzhou"
+    },
+    {
+      "family": "Banta",
+      "given": "Haley A."
+    },
+    {
+      "family": "Jewett",
+      "given": "Abi D."
+    },
+    {
+      "family": "Salzhauer",
+      "given": "Abigail J."
+    },
+    {
+      "family": "Griffin",
+      "given": "Tess Z."
+    },
+    {
+      "family": "Jacobson",
+      "given": "Nicholas C."
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2025
+      ]
+    ]
+  },
+  "language": "en",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Heinz_2025_Clinical_trial_of_an_LLM-based_conversational_AI.md. audit=P-pending."
+}

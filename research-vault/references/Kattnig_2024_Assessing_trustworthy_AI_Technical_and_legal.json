@@ -1,0 +1,32 @@
+{
+  "id": "Kattnig_2024_Assessing_trustworthy_AI_Technical_and_legal",
+  "type": "article-journal",
+  "title": "Assessing trustworthy AI: Technical and legal perspectives of fairness in AI",
+  "author": [
+    {
+      "family": "Kattnig",
+      "given": "Markus"
+    },
+    {
+      "family": "Angerschmid",
+      "given": "Alessa"
+    },
+    {
+      "family": "Reichel",
+      "given": "Thomas"
+    },
+    {
+      "family": "Kern",
+      "given": "Roman"
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2024
+      ]
+    ]
+  },
+  "language": "en",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Kattnig_2024_Assessing_trustworthy_AI_Technical_and_legal.md. audit=clean."
+}

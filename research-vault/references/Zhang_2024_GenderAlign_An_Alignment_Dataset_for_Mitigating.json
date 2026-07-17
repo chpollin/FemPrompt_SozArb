@@ -1,0 +1,44 @@
+{
+  "id": "Zhang_2024_GenderAlign_An_Alignment_Dataset_for_Mitigating",
+  "type": "conferencePaper",
+  "title": "GenderAlign: An Alignment Dataset for Mitigating Gender Bias in Large Language Models",
+  "author": [
+    {
+      "family": "Zhang",
+      "given": "Tao"
+    },
+    {
+      "family": "Zeng",
+      "given": "Ziqian"
+    },
+    {
+      "family": "Xiao",
+      "given": "Yuxiang"
+    },
+    {
+      "family": "Zhuang",
+      "given": "Huiping"
+    },
+    {
+      "family": "Chen",
+      "given": "Cen"
+    },
+    {
+      "family": "Foulds",
+      "given": "James"
+    },
+    {
+      "family": "Pan",
+      "given": "Shimei"
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2024
+      ]
+    ]
+  },
+  "language": "en",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Zhang_2024_GenderAlign_An_Alignment_Dataset_for_Mitigating.md. audit=P-pending."
+}

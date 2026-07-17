@@ -1,0 +1,24 @@
+{
+  "id": "Gohar_2023_A_Survey_on_Intersectional_Fairness_in_Machine",
+  "type": "conferencePaper",
+  "title": "A Survey on Intersectional Fairness in Machine Learning: Notions, Mitigation, and Challenges",
+  "author": [
+    {
+      "family": "Gohar",
+      "given": "Usman"
+    },
+    {
+      "family": "Cheng",
+      "given": "Lu"
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2023
+      ]
+    ]
+  },
+  "language": "en",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Gohar_2023_A_Survey_on_Intersectional_Fairness_in_Machine.md. audit=P-pending."
+}
