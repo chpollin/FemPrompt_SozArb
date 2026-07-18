@@ -1,7 +1,7 @@
 ---
 layer: distillate
-title: "Electronic Participation: 17th IFIP WG 8.5 International Conference, ePart 2025 Krems, Austria, August 31 - September 4, 2025 Proceedings"
-authors: ["Sara Hofmann", "Lieselot Danneels", "Roel Dobbe", "Anna-Sophie Novak", "Peter Parycek", "Gerhard Schwabe", "Vera Spitzer", "Jolien Ubacht"]
+title: "ReflectAI: Design and Evaluation of an AI Coach to Support Public Servants' Self-Reflection"
+authors: ["Hans-Henning Näscher", "Jan Schaffner", "Michael Koddebusch"]
 year: 2025
 type: conferencePaper
 language: en
@@ -9,11 +9,12 @@ source_distillate: "generated/distilled/Näscher_2025_ReflectAI_Design_and_evalu
 migrated: 2026-07-17
 audit: clean
 audit-stage1b: "bestätigt 2026-07-18, deterministisch (src/assess/waitlist_resolution.py)"
+identity-note: "Ursprünglicher Frontmatter-Titel war der Proceedings-Bandtitel 'Electronic Participation: 17th IFIP WG 8.5 International Conference, ePart 2025 ...'; korrigiert auf den Aufsatztitel laut Volltext-Heading in generated/markdown_clean/. Bandtitel in container-title des CSL-Records."
 reference: "research-vault/references/Näscher_2025_ReflectAI_Design_and_evaluation_of_an_AI_coach_to.json"
 status: migrated
 references-to: 00_representation/
 ---
-# Electronic Participation: 17th IFIP WG 8.5 International Conference, ePart 2025 Krems, Austria, August 31 - September 4, 2025 Proceedings
+# ReflectAI: Design and Evaluation of an AI Coach to Support Public Servants' Self-Reflection
 
 ## Kernbefund
 

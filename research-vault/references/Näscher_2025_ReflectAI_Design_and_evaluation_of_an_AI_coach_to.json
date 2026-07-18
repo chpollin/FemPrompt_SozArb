@@ -1,39 +1,20 @@
 {
   "id": "Näscher_2025_ReflectAI_Design_and_evaluation_of_an_AI_coach_to",
   "type": "paper-conference",
-  "title": "Electronic Participation: 17th IFIP WG 8.5 International Conference, ePart 2025 Krems, Austria, August 31 - September 4, 2025 Proceedings",
+  "title": "ReflectAI: Design and Evaluation of an AI Coach to Support Public Servants' Self-Reflection",
+  "container-title": "Electronic Participation: 17th IFIP WG 8.5 International Conference, ePart 2025 Krems, Austria, August 31 - September 4, 2025 Proceedings",
   "author": [
     {
-      "family": "Hofmann",
-      "given": "Sara"
+      "family": "Näscher",
+      "given": "Hans-Henning"
     },
     {
-      "family": "Danneels",
-      "given": "Lieselot"
+      "family": "Schaffner",
+      "given": "Jan"
     },
     {
-      "family": "Dobbe",
-      "given": "Roel"
-    },
-    {
-      "family": "Novak",
-      "given": "Anna-Sophie"
-    },
-    {
-      "family": "Parycek",
-      "given": "Peter"
-    },
-    {
-      "family": "Schwabe",
-      "given": "Gerhard"
-    },
-    {
-      "family": "Spitzer",
-      "given": "Vera"
-    },
-    {
-      "family": "Ubacht",
-      "given": "Jolien"
+      "family": "Koddebusch",
+      "given": "Michael"
     }
   ],
   "issued": {
@@ -44,5 +25,5 @@
     ]
   },
   "language": "en",
-  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Näscher_2025_ReflectAI_Design_and_evaluation_of_an_AI_coach_to.md. audit=clean. Stage-1b confirmed 2026-07-18."
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Näscher_2025_ReflectAI_Design_and_evaluation_of_an_AI_coach_to.md. audit=clean. Stage-1b confirmed 2026-07-18. Title corrected from Proceedings band title to actual paper title per Volltext-Heading."
 }

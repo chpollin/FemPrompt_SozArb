@@ -10,6 +10,7 @@ migrated: 2026-07-18
 audit: P-pending
 audit-stage1: "F"
 audit-stage1b: "aufgelöst 2026-07-18, deterministisch (src/assess/waitlist_resolution.py): alle Zitat-Ansprüche kontiguierlich im committeten Volltext aufgelöst; Rescue-Tiers: skeleton, skeleton-nocite"
+identity-note: "Dateiname und CSL-Record benennen Kong et al. 2022 'Are Intersectionally Fair AI Algorithms Really Fair to Women?'; Volltext und inhaltliche Angaben verweisen jedoch auf Goyal et al. 2022 'Fairness Indicators for Systematic Assessments of Visual Feature Extractors'. Volltext und CSL-Record gehören zum Goyal-Paper. Der Volltext des Kong-2022-Papers ist ungeflaggt nicht im Korpus; Acquisition-Fehlerklasse wie Kutscher_2023 und Ghosal_2024. Fehlender Kong-Volltext in waitlist.md registriert."
 reference: "research-vault/references/Kong_2022_Are_Intersectionally_Fair_AI_Algorithms_Really.json"
 status: migrated
 references-to: 00_representation/

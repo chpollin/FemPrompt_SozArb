@@ -10,7 +10,7 @@ contested: false
 
 # Prompt-basierte Bias-Mitigation erzielt messbare Reduktionen
 
-Prompt-seitige Verfahren, von kulturellem Prompting über strukturierte Multi-Step-Pipelines bis zu erklärungsgestützten Prompts, reduzieren gemessenen Bias in Text- und Bildgenerierung substanziell, ohne die Modelle selbst zu verändern; in Vergleichsstudien übertrifft gezieltes Prompt Engineering die Wirkung reiner Modellskalierung.
+Prompt-seitige Verfahren, von kulturellem Prompting über strukturierte Multi-Step-Pipelines bis zu erklärungsgestützten Prompts, reduzieren gemessenen Bias in Text- und Bildgenerierung substanziell, ohne die Modelle selbst zu verändern; in einer Vergleichsstudie (Zayed 2024) übertrifft gezieltes Prompt Engineering die Wirkung reiner Modellskalierung.
 
 ## Belege
 

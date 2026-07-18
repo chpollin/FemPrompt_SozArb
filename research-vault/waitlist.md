@@ -8,7 +8,7 @@ status: snapshot
 
 # Warteliste, nicht migrierte Distillate
 
-Diese Datei registriert die Distillate aus `generated/distilled/`, die nach der deterministischen Stufe-1b-Auflösung (`src/assess/waitlist_resolution.py`, Report `generated/distilled/_evidence_audit/stage1b_resolution.json`) nicht in `research-vault/10_distillates/` liegen. Die Stufe 1b hat jeden Stufe-1-Befund gegen die committeten Volltexte in `generated/markdown_clean/` nachgeprüft, mit einem kontiguierlich-wörtlichen Matcher, der die bekannten Artefaktklassen toleriert (Zitationsklammern, docling-Ligaturen, geschachtelte Anführungszeichen, Apostroph-Paarung, Satzzeichen-Differenzen) und zwei Zitierpraxis-Ausnahmen kennt, editorische Einschübe in eckigen Klammern und markierte Ellipsen mit geordneten, nah beieinanderliegenden Segmenten. Was dieser Matcher auflöst, ist zeichenfolgengenau im Volltext belegt und migriert. Was er nicht auflöst, bleibt hier und wartet auf die bindende menschliche Stufe-3-Verifikation. Kein Eintrag dieser Liste ist menschlich geprüft.
+Diese Datei registriert die Distillate aus `generated/distilled/`, die nach der deterministischen Stufe-1b-Auflösung (`src/assess/waitlist_resolution.py`, Report `generated/distilled/_evidence_audit/stage1b_resolution.json`) nicht in `research-vault/10_distillates/` liegen. Die Artefakte `stage1b_resolution.json`, `stage2_verdicts.json` und `AUDIT-SUMMARY.md` unter `generated/distilled/_evidence_audit/` sind gitignoriert und liegen nur lokal. Stufe 1b ist aus den committeten Inputs per `src/assess/waitlist_resolution.py` deterministisch regenerierbar. Die advisory Stufe-2-Urteile sind LLM-Urteile und nicht regenerierbar. Die Stufe 1b hat jeden Stufe-1-Befund gegen die committeten Volltexte in `generated/markdown_clean/` nachgeprüft, mit einem kontiguierlich-wörtlichen Matcher, der die bekannten Artefaktklassen toleriert (Zitationsklammern, docling-Ligaturen, geschachtelte Anführungszeichen, Apostroph-Paarung, Satzzeichen-Differenzen) und zwei Zitierpraxis-Ausnahmen kennt, editorische Einschübe in eckigen Klammern und markierte Ellipsen mit geordneten, nah beieinanderliegenden Segmenten. Was dieser Matcher auflöst, ist zeichenfolgengenau im Volltext belegt und migriert. Was er nicht auflöst, bleibt hier und wartet auf die bindende menschliche Stufe-3-Verifikation. Kein Eintrag dieser Liste ist menschlich geprüft.
 
 ## Befundklassen nach Stufe 1b
 
@@ -30,8 +30,8 @@ Reihenfolge nach Schärfe wie in `generated/distilled/_evidence_audit/AUDIT-SUMM
 | F (offen) | 116 |
 | G (davon 2 mit zusätzlichen offenen F) | 4 |
 | U | 23 |
-| Volltext-Fehlzuordnung | 2 |
-| Summe wartend | 145 |
+| Volltext-Fehlzuordnung | 3 |
+| Summe wartend | 146 |
 | dazu aufgelöst als Quellendublette, nicht migriert | 10 |
 
 ## G, Polaritätsfehler
@@ -45,6 +45,7 @@ Reihenfolge nach Schärfe wie in `generated/distilled/_evidence_audit/AUDIT-SUMM
 
 - `generated/distilled/Kutscher_2023_Positionings,_challenges,_and_ambivalences_in.md`, die Datei `generated/markdown_clean/Kutscher_2023_….md` enthält das Alvarez-Paper "Policy advice and best practices on bias and fairness in AI" (Volltext-Identität J=0.999 zur Alvarez-Datei). Der Volltext des Kutscher-Papers fehlt im Korpus.
 - `generated/distilled/Ghosal_2024_An_empirical_study_of_structural_social_and.md`, die Datei enthält das Paper "Intersectional analysis of visual generative AI" (Jääskeläinen et al., J=0.997). Der Volltext des Ghosal-Papers fehlt im Korpus.
+- `generated/distilled/Kong_2022_Are_Intersectionally_Fair_AI_Algorithms_Really.md`, die Datei `generated/markdown_clean/Kong_2022_….md` enthält Goyal et al. 2022 "Fairness Indicators for Systematic Assessments of Visual Feature Extractors"; Volltext und CSL-Record des migrierten Distillats gehören zum Goyal-Paper. Der Volltext von Kong et al. 2022 "Are Intersectionally Fair AI Algorithms Really Fair to Women?" fehlt im Korpus ungeflaggt.
 
 ## U, kein zuordenbarer Volltext
 
