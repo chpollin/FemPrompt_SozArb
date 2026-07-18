@@ -8,7 +8,7 @@ method:
   url: https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin
 status: draft
 language: de
-version: "0.1"
+version: "0.2"
 created: 2026-07-18
 updated: 2026-07-18
 authors: [Christopher Pollin]
@@ -18,7 +18,7 @@ related: [update-protocol, analysis-fields-pilot, plan, workflow, data]
 
 # Codierungskonzept für die qualitative Auswertung (Entwurf)
 
-Dieses Dokument ist ein Entwurf, keine Setzung. Es beschreibt, wie die qualitative Codierung der eingeschlossenen Literatur über den eingefrorenen Analysefeldern laufen soll, und dient der Operatorin und der Projektkollegin als Entscheidungsgrundlage. Verbindlich codieren Menschen; jeder maschinelle Beitrag bleibt advisory, konsistent mit der Verantwortungsasymmetrie des Projekts. Offene Entscheidungen sind im Text als markierte Fragen (E1 bis E8) geführt und am Ende gesammelt; nichts davon ist entschieden, bevor die dort genannte Instanz es entschieden hat.
+Dieses Dokument ist ein Entwurf, keine Setzung. Es beschreibt, wie die qualitative Codierung der eingeschlossenen Literatur über den eingefrorenen Analysefeldern laufen soll, und dient der Operatorin und der Projektkollegin als Entscheidungsgrundlage. Verbindlich codieren Menschen; jeder maschinelle Beitrag bleibt advisory, konsistent mit der Verantwortungsasymmetrie des Projekts. Die Entscheidungen sind im Text als markierte Fragen (E1 bis E8) geführt und am Ende gesammelt. Stand 2026-07-18 hat der Operator E2, E3, E4 und E8 entschieden, unter dem Leitprinzip, den Arbeitsaufwand der Codiererinnen niedrig zu halten, ein Werkzeug statt drei Orte; E6 ist zurückgestellt. Offen bleiben E1, E5 und E7 für die Abstimmung mit der Projektkollegin.
 
 Grundlage sind die am 2026-07-17 eingefrorenen Analysefelder (`assessment/categories.yaml` v1.3, `analysis_fields`-Block, inklusive `AN_Prompting_Role`), die Codierregeln in [[update-protocol]] Abschnitte B, B.1 und C, und die Pilot-Befunde aus [[analysis-fields-pilot]]. Eine Änderung an Felddefinitionen oder Vokabularen nach Codierstart wäre ein datiertes Amendment der Präregistrierung, keine stille Anpassung.
 
@@ -28,7 +28,7 @@ Codiert werden ausschließlich Paper mit bindender menschlicher Entscheidung Inc
 
 Die Codiereinheit ist das Paper je Analysefeld. Jedes Feld erhält je Paper genau einen Wert oder eine semikolonseparierte Werteliste aus dem geschlossenen Vokabular; eine feinere Segmentierung des Textes in codierte Passagen ist für die Auswertungsebenen der Präregistrierung (Frequenzen, Kookkurrenzen, qualitative Synthese über SQ1 bis SQ3) nicht erforderlich und würde den Excel-Workflow sprengen. Die Begründungseinheit ist davon getrennt die Textstelle. Wo eine Codierentscheidung strittig oder tragend ist, wird die stützende Stelle festgehalten, als Verbatim-Zitat oder präziser Verweis in `AN_Notes`, beziehungsweise als gepinnter Beleg, wo in PRISM gearbeitet wird. Für SQ3 verlangt das Protokoll ohnehin, explizite Adaptations-Aussagen verbatim über `AN_Notes` zu sammeln.
 
-**E8 (offen).** Braucht das Verbatim-Sammeln für SQ3 eine Fundstellen-Konvention (Abschnitts- oder Seitenangabe neben dem Zitat), damit die spätere Synthese die Stellen wiederfindet, oder genügt das reine Zitat in `AN_Notes`?
+**E8 (durch E4 aufgelöst, 2026-07-18).** Mit der Erfassung im PRISM-Tool führen gepinnte Belege ihre Fundstelle automatisch mit (markierte Stelle samt Umgebungs-Snippet); der Pin ist der Fundstellennachweis für SQ3-Verbatims, eine zusätzliche manuelle Konvention entfällt. Nur für außerhalb des Tools notierte Verbatims bleibt die Zitatform in `AN_Notes` die Rückfallebene.
 
 ## 2. Codiergrundlage, Volltext gegen Distillat
 
@@ -42,7 +42,7 @@ Die research-vault-Distillate sind Arbeitsgrundlage, nicht Codiergrundlage. Sie 
 
 Wo kein Volltext existiert, ist das Distillat oder der Abstract die ehrlich dokumentierte Basis, genau dafür gibt es `AN_Coding_Basis`.
 
-**E2 (offen).** Gilt für die verbindliche Codierung eine Vorrangregel der Form, Distillat als `Knowledge_Doc`-Basis nur dann, wenn es die geprüfte research-vault-Fassung ist, oder ist jedes Pipeline-Distillat aus `generated/distilled/` zulässig? Der Entwurf empfiehlt die engere Lesart, weil nur die research-vault-Fassung eine geprüfte Belegkette trägt.
+**E2 (entschieden 2026-07-18, Operator).** Es gilt die enge Lesart, als `Knowledge_Doc`-Basis zählt nur die geprüfte research-vault-Fassung, weil nur sie eine geprüfte Belegkette trägt. Der Fall bleibt selten, im Tool liegt für die meisten Paper der Volltext an.
 
 ## 3. Vorgehen je Analysefeld
 
@@ -72,7 +72,7 @@ Feld-Unclear. `None` bedeutet, das Paper behandelt den Gegenstand des Feldes wir
 
 Ambiguitäten werden gesammelt, nicht still entschieden. Die Ambiguitätenliste des Piloten (A1 bis A7) wird beim echten Codieren fortgeschrieben; wiederkehrende Ambiguität an einem Feld ist das Signal für eine Definitionsschärfung per Amendment.
 
-**E3 (offen).** Reicht die `AN_Notes`-Konvention für Nicht-Entscheidbarkeit, oder soll ein eigener Code (etwa `Undecidable`) in die Vokabulare? Letzteres wäre sauberer auszählbar, ist aber eine Vokabular-Änderung am eingefrorenen v1.3 und damit ein datiertes Amendment.
+**E3 (entschieden 2026-07-18, Operator).** Kein neuer Vokabular-Code und damit kein Amendment, das eingefrorene v1.3 bleibt unangetastet. Die Nicht-Entscheidbarkeit wird im PRISM-Analyse-Panel als eigene Erfassung je Feld festgehalten und maschinell auszählbar exportiert; die `AN_Notes`-Zeile der Form `Feldname: nicht entscheidbar aus <Basis>` bleibt die Rückfallebene für Erfassung außerhalb des Tools.
 
 **E7 (offen).** Der Pilot arbeitete mit der Faustregel, ein Feld zu revidieren, wenn Codiererinnen bei mehr als rund einem Viertel der Paper Ambiguität anmelden. Soll diese Schwelle für die Hauptcodierung verbindlich übernommen werden, und wer stellt sie fest?
 
@@ -91,34 +91,34 @@ Konkretes Verfahren im Entwurf:
 
 **E5 (offen).** Größe und Stratifizierung der Überlappungsstichprobe (Kandidaten-Strata analog zum Pilot, Prompting Ja/Nein und Textbasis) und der endgültige Berichts-Satz der Übereinstimmungsmaße je Feld.
 
-**E6 (offen).** Läuft ein advisory LLM-Codier-Track über dieselben Felder mit? Er würde das Dual-Track-Design auf die Analyseebene ausdehnen und bräuchte, wie im Protokoll benannt, ein eigenes vorab festgelegtes Sub-Protokoll (Modellversion, Prompt, Parameter, committed vor dem Lauf). Ohne Protokoll läuft er nicht.
+**E6 (zurückgestellt 2026-07-18).** Der advisory LLM-Codier-Track ist keine Voraussetzung der Hauptcodierung und läuft nur, wenn er den Codiererinnen nachweislich Arbeit abnimmt. Falls er kommt, braucht er das im Protokoll benannte, vorab festgelegte Sub-Protokoll (Modellversion, Prompt, Parameter, committed vor dem Lauf); ohne Protokoll läuft er nicht.
 
 ## 6. Dokumentationsform der Codierentscheidungen
 
-Erfassungsort ist die etablierte Excel im Spaltenschema von `assessment/human_assessment.csv`, erweitert um die `AN_`-Spalten nach `Notes` ([[update-protocol]] Abschnitt D), mit `Legend`-Sheet, Dropdown-Validierung für Single-Select-Felder und Semikolon-Listen für Multi-Select-Felder. Die Durchsetzung der geschlossenen Vokabulare geschieht an der P3-Import-Brücke (Split, Trim, Match gegen die Liste, Leerzellen-Prüfung für Includes, sichtbarer Import-Report, nie stille Annahme); `categories.yaml` v1.3 ist die eine Quelle, aus der Template, Brücke und Werkzeug lesen.
+Erfassungsort ist das PRISM-Tool (E4, entschieden 2026-07-18). Das Screening-Werkzeug wird um ein Analyse-Panel erweitert, das je Include-Paper die `AN_`-Felder als geschlossene Auswahl direkt aus `assessment/categories.yaml` v1.3 erfasst, mit Nicht-entscheidbar-Erfassung je Feld (E3), Notizfeld und Fundstellen aus den vorhandenen Beleg-Pins (E8). Die Vokabular-Durchsetzung geschieht damit zur Erfassungszeit, wie es die Präregistrierung erwartet, eine geschlossene Auswahl kann keinen ungültigen Wert erzeugen. Das Arbeitspaket ist in [[specification]] als ADR-026 mit FR-14 festgehalten; das Panel muss stehen, bevor die Codierung startet, damit das Werkzeug nicht mitten im Durchgang wechselt.
+
+Die Excel im Spaltenschema von `assessment/human_assessment.csv` (erweitert um die `AN_`-Spalten nach `Notes`, [[update-protocol]] Abschnitt D) bleibt als Export- und Rückfallformat erhalten; die P3-Import-Brücke (Split, Trim, Match gegen die Liste, Leerzellen-Prüfung für Includes, sichtbarer Import-Report, nie stille Annahme) bleibt die Eingangsnaht für außerhalb des Tools erfasste Bestände. `categories.yaml` v1.3 ist die eine Quelle, aus der Panel, Brücke und Export lesen.
 
 Der dokumentierte Bestand je Codierentscheidung:
 
-- der Feldwert selbst, vokabular-validiert in der committeten CSV,
+- der Feldwert selbst, vokabular-validiert zur Erfassungszeit, exportiert in die committete CSV,
 - die Textbasis in `AN_Coding_Basis`,
-- Begründungen, Verbatim-Material und Nicht-Entscheidbarkeit in `AN_Notes`,
+- Begründungen und Verbatim-Material in `AN_Notes`, Nicht-Entscheidbarkeit als eigene Erfassung je Feld,
 - bei Konsensfällen der Konsens-Record aus Abschnitt 5,
-- wo in PRISM gearbeitet wird, die gepinnten Belege mit Herkunft (`origin`) als Evidenzanker.
+- die gepinnten Belege mit Herkunft (`origin`) und Fundstelle als Evidenzanker.
 
-**E4 (offen).** Wird die Analysecodierung ausschließlich in der Excel erfasst, oder soll PRISM die `AN_`-Felder als Erfassungsoberfläche bekommen? Die Präregistrierung erwartet Vokabular-Durchsetzung zur Erfassungszeit; gebaut ist sie bisher an der Import-Brücke, eine PRISM-Erfassung der Analysefelder wäre ein eigenes Tool-Arbeitspaket ([[specification]]).
+## 7. Entscheidungen, gesammelt
 
-## 7. Offene Entscheidungen, gesammelt
-
-| Id | Frage | Entscheidet |
+| Id | Frage | Stand |
 |---|---|---|
-| E1 | Ratifikation der Codier-Aufstellung (Split, Retro-Codierung) | R1, R2, Operator |
-| E2 | Distillat-Basis nur in research-vault-geprüfter Fassung? | Operator mit R1, R2 |
-| E3 | Nicht-Entscheidbarkeit per `AN_Notes`-Konvention oder eigener Code (Amendment) | Operator |
-| E4 | Erfassungsort Excel allein oder PRISM-Erweiterung | Operator, Tool-Backlog |
-| E5 | Überlappungsgröße, Strata, Übereinstimmungs-Berichtssatz | R1, R2, Operator |
-| E6 | Advisory LLM-Codier-Track mit eigenem Sub-Protokoll | Operator |
-| E7 | Verbindliche Ambiguitätsschwelle für Definitionsrevisionen | R1, R2, Operator |
-| E8 | Fundstellen-Konvention für SQ3-Verbatims | R1, R2 |
+| E1 | Ratifikation der Codier-Aufstellung (Split, Retro-Codierung) | offen; R1, R2, Operator |
+| E2 | Distillat-Basis nur in research-vault-geprüfter Fassung? | entschieden 2026-07-18, enge Lesart |
+| E3 | Nicht-Entscheidbarkeit per Notes-Konvention oder eigener Code | entschieden 2026-07-18, Erfassung je Feld im Tool, kein Amendment |
+| E4 | Erfassungsort Excel allein oder PRISM-Erweiterung | entschieden 2026-07-18, PRISM-Analyse-Panel (ADR-026), Excel als Export |
+| E5 | Überlappungsgröße, Strata, Übereinstimmungs-Berichtssatz | offen; R1, R2, Operator |
+| E6 | Advisory LLM-Codier-Track mit eigenem Sub-Protokoll | zurückgestellt 2026-07-18 |
+| E7 | Verbindliche Ambiguitätsschwelle für Definitionsrevisionen | offen; R1, R2, Operator |
+| E8 | Fundstellen-Konvention für SQ3-Verbatims | durch E4 aufgelöst, Pins führen die Fundstelle mit |
 
 ## Related
 

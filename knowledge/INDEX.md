@@ -43,7 +43,7 @@ In function order, not alphabetical.
 | [[research-vault-plan]] | Plan for the `research-vault/` top-level folder carrying the object knowledge after the Grounded-Vault model; umgesetzt bis zur Claims-Ebene (`research-vault/README.md`, Register in den Ebenen) | until research-vault is grounded |
 | [[distillate-check-plan]] | Audit plan for the model-paraphrase-instead-of-quote error class (ADR-018); Stufe 1 und die deterministische Stufe 1b sind gelaufen (`src/assess/evidence_audit.py`, `src/assess/waitlist_resolution.py`), Stufe 3 steht aus | until stage 3 |
 | [[analysis-fields-pilot]] | Advisory LLM pilot of the analysis-field design on a stratified sample, feeding the freeze decision | until the freeze |
-| [[coding-concept]] | Draft of the qualitative coding concept over the frozen analysis fields (categories.yaml v1.3); decision basis for the coders, open questions marked E1 to E8 | until the coding decisions are ratified |
+| [[coding-concept]] | Qualitative coding concept over the frozen analysis fields (categories.yaml v1.3); E2, E3, E4, E8 decided 2026-07-18 (capture in the PRISM Analyse panel, ADR-026), E1, E5, E7 open with the coders | until the remaining coding decisions are ratified |
 | [[guides/manual-review-checklist]] | The human-in-the-loop markdown review checklist | rarely |
 
 ## Reading paths

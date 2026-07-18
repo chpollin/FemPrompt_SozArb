@@ -5,9 +5,9 @@ project:
   repository: https://github.com/chpollin/FemPrompt_SozArb
 status: complete
 language: en
-version: "0.2"
+version: "0.3"
 created: 2026-06-09
-updated: 2026-07-01
+updated: 2026-07-18
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 4.8)
 method:
@@ -41,6 +41,7 @@ This document is the substance layer for the **PRISMA screening tool**, a standa
 - FR-11: Read the paper in full text. Where a paper has a Docling conversion, serve it locally as `docs/data/fulltext/{id}.md` (gitignored, ADR-025) and render it formatted and readable in the screening view as the Volltext layer, with the distillation as the separate KI-Extraktion layer; the reading pane falls back to abstract where no full text exists (a number of papers have neither). Acceptance: opening a paper listed in `fulltext_manifest.json` shows its full text; the pill reflects Volltext, nur Destillat, or nur Abstract.
 - FR-12: Search the full text. Provide an in-text search that highlights and steps through matches in the open paper, and a corpus-wide search that lists papers whose full text contains a term. Acceptance: a query highlights every hit in the open text and returns the set of papers containing it across the corpus.
 - FR-13: Pin a hit as evidence for a category. From a search hit or a selected passage, attach the term plus its surrounding snippet to one of the ten categories as a stored Beleg; evidence is saved with the decision and is citable in the report. Acceptance: a category can carry one or more evidence snippets; they persist in the reviewer file and appear in the decision log and disclosure.
+- FR-14 (decided 2026-07-18, not yet implemented, ADR-026): Capture the qualitative analysis coding for included papers in an Analyse panel. Per include-decided paper, record the `AN_` analysis fields as closed selections fed from `assessment/categories.yaml` v1.3 (single/multi select, no free values), a per-field nicht-entscheidbar capture, `AN_Coding_Basis`, and `AN_Notes`; evidence pins carry their Fundstelle. Export in the `human_assessment.csv` column schema. Acceptance: no code path can write a value outside the frozen vocabulary; the screening logic and the binding screening record are unchanged by the panel; an export round-trips through the P3 import bridge.
 
 The AI-forward requirements are demoted by ADR-012 and then by ADR-014. As built: FR-03 (blind mode) is removed from the working view, there is no blind/reveal and no blind toggle; FR-05 (agreement metrics) no longer has a surface at all, ADR-014 removed the human-AI comparison view (matrix, kappa, divergence filter, reviewer reconciliation) from the tool entirely. ADR-017 then removed the in-tool kappa computation itself (`computeMatrix`/`cohenKappa`/`kappaLabel` and their tests are gone); agreement is evaluated externally on the benchmark corpus, with the figures in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion, and the disclosure carries the trAIce M9/R2 item as a reference to that source. FR-10 (live LLM) is not implemented (optional, minimal, deferred). The screening view centers on FR-11 to FR-13 (read, search, pin evidence).
 
@@ -387,6 +388,16 @@ Wahl. A generator (`src/publish/build_fulltext.py`) resolves each paper to its D
 Begründung. The copyright boundary the index builder already drew (do not publish `markdown_clean`) is respected by construction, while the reviewer on a local clone reads the real text. This keeps ADR-013's intent and drops its per-decision `text_source` bump as unneeded once the layer is a first-class asset with a manifest.
 
 Effekt. Implementiert (`src/publish/build_fulltext.py`; `docs/js/prisma.js` fetchFullText/loadFulltextManifest/hasFullText, loadReadingInto combines the Volltext and KI layers, the availability pill; `.gitignore` fences the outputs). 283 of 326 papers carry a full text, the rest are named abstract-only. Corpus search stays on the committed distillation index for the same copyright reason.
+
+### ADR-026 Analysis coding captured in PRISM; Excel demoted to export format (resolves E4)
+
+Kontext. The coding concept ([[coding-concept]]) drafted the analysis coding as an Excel workflow with vocabulary enforcement at the P3 import bridge and evidence separately in PRISM, three places for one act. The tool already renders the full text, searches it, pins evidence with provenance, and persists binding records; the operator's guiding principle for the coding phase is a low workload for the coders.
+
+Wahl. The analysis coding for included papers is captured in PRISM in a new Analyse panel (FR-14): the `AN_` fields as closed selections fed from `assessment/categories.yaml` v1.3 (unchanged, no amendment), a per-field nicht-entscheidbar capture (resolves E3 without a vocabulary change), notes, and Fundstellen from the existing evidence pins (resolves E8). The Excel in the `human_assessment.csv` schema remains the export and fallback format; the P3 bridge remains the entry seam for externally captured batches. The binding boundary is untouched: humans code, every machine contribution stays advisory (ADR-003).
+
+Begründung. Vocabulary enforcement moves to capture time, which the pre-registration expects; a closed selection cannot produce an invalid value. One instrument for reading, screening, and coding keeps the coders' workload low and the evidence chain in one place. Decided with the operator 2026-07-18.
+
+Effekt. Beschlossen, noch nicht implementiert. The build runs as a Leitstellen-Lane pass (one implementation agent; verification by the Leitstelle via diff, test re-run, and browser smoke test; the screening path must remain byte-identical). The panel must be complete before coding starts. [[coding-concept]] v0.2 records the decisions; E1, E5, and E7 remain open with the coders.
 
 ## Was nicht reingehört
 
