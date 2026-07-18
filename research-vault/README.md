@@ -39,7 +39,9 @@ Jedes Dokument der prüfbaren Ebenen trägt einen Status. Ein Status wird nur ge
 | `verified` | eine autorisierte menschliche Fachperson hat die Belegkette bestätigt | Mensch, allein, bindend |
 | `contested` | Quellen widersprechen einander, der Widerspruch wird festgehalten | Claim-Ebene |
 
-Die in dieser ersten Umsetzung migrierten Distillate tragen `status: migrated`, nicht `grounded`. Die Grounding-Prüfung setzt eine reale `00_representation/`-Ankerschicht voraus, die hier nicht angelegt wurde, weil sie geschütztes Material trägt und gitignored bleibt. `grounded` wird erst gesetzt, wenn die Ankerauflösung im lokalen Klon mit den Volltexten tatsächlich gelaufen ist.
+Die migrierten Distillate tragen `status: migrated`, nicht `grounded`. Die Grounding-Prüfung setzt eine reale `00_representation/`-Ankerschicht voraus, die hier nicht angelegt wurde, weil sie geschütztes Material trägt und gitignored bleibt. `grounded` wird erst gesetzt, wenn die Ankerauflösung im lokalen Klon mit den Volltexten tatsächlich gelaufen ist.
+
+Zusätzlich trägt jedes Distillat seine Zitat-Prüfhistorie im Frontmatter. `audit` hält den Stand der Evidenz-Prüfung (`clean`, jeder Evidenz-Eintrag trägt ein im committeten Volltext aufgelöstes Wörtlichzitat; `P-pending`, Paraphrase-Einträge ohne Ankeranspruch stehen noch zur menschlichen Deckungsprüfung). `audit-stage1` nennt die Befundklasse, mit der das Distillat auf der Warteliste stand, `audit-stage1b` das Ergebnis der deterministischen Auflösung (`src/assess/waitlist_resolution.py`, aufgelöst oder bestätigt, mit Datum und Rescue-Tiers), `reference` den bibliografischen Record. Das Register der Ebene liegt in `10_distillates/INDEX.md`.
 
 ## Tote Anker
 
@@ -47,7 +49,7 @@ Ein committed Distillat zeigt auf Anker in `00_representation/`, die im öffentl
 
 ## Präregistrierungs-Vorbedingung der Migration
 
-In `10_distillates/` ziehen nur Distillate ein, die der Evidence-Audit unter `generated/distilled/_evidence_audit/` als unauffällig ausweist. Ein Distillat ist migrierbar, wenn es keinen F-, D- oder G-Befund trägt. P-Befunde sind zulässig und im Frontmatter des migrierten Dokuments als `audit: P-pending` vermerkt, unauffällige tragen `audit: clean`. Distillate mit F-, D- oder G-Befund und die Distillate ohne auflösbaren Volltext sind in `waitlist.md` registriert und warten auf die bindende menschliche Stufe-3-Verifikation.
+In `10_distillates/` ziehen nur Distillate ein, deren Zitat-Ansprüche gegen die committeten Volltexte in `generated/markdown_clean/` aufgelöst sind und deren Quelle eindeutig zuordenbar ist, ein Distillat je Quelle. Erste Grundlage war der Evidence-Audit unter `generated/distilled/_evidence_audit/` (Stufe 1 deterministisch, Stufe 2 adversarial-advisory); die deterministische Stufe 1b (`src/assess/waitlist_resolution.py`) hat dessen F- und D-Kandidaten artefakt-tolerant nachgeprüft und die maschinell auflösbaren Befunde mit dokumentierter Belegkette migriert. P-Befunde sind zulässig und als `audit: P-pending` vermerkt, vollständig zitat-verankerte Distillate tragen `audit: clean`. Was offen bleibt (nicht auflösbare Zitat-Ansprüche, Polaritätsfehler, fehlender oder fehlzugeordneter Volltext), ist in `waitlist.md` mit Befundklasse und Grund registriert und wartet auf die bindende menschliche Stufe-3-Verifikation. Maschinell belegte Quellendubletten sind dort gesondert ausgewiesen und brauchen keine Stufe 3.
 
 ## Glossar
 
