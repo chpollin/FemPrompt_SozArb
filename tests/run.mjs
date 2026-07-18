@@ -44,6 +44,14 @@ try {
   } catch (e) {
     console.warn('seed not injected (FR-05 flow test skipped):', e && e.message ? e.message : e);
   }
+  // FR-14 analysis panel: the app fetches docs/data/analysis_fields.json at runtime
+  // (built from assessment/categories.yaml by src/publish/build_analysis_fields.py);
+  // headless has no network, so hand the built vocabulary to prisma.js and the suite.
+  try {
+    window.__ANALYSIS_FIELDS__ = JSON.parse(readFileSync(join(root, 'docs/data/analysis_fields.json'), 'utf8'));
+  } catch (e) {
+    console.warn('analysis_fields not injected (FR-14 tests skipped):', e && e.message ? e.message : e);
+  }
   inject('tests/tests.js');
 } catch (e) {
   console.error('inject failed:', e && e.message ? e.message : e);

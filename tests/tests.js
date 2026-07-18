@@ -883,6 +883,240 @@ test('a chip click that flips the derived decision clears a now-stale override (
 });
 
 // ============================================================
+// Section K: analysis coding panel (FR-14, ADR-026)
+// The panel captures the AN_ analysis fields for Include-decided papers only,
+// inline in the assessment column, from the frozen categories.yaml v1.3
+// vocabulary (served as docs/data/analysis_fields.json, injected here). It never
+// touches the binding screening record: these tests assert visibility gating,
+// closed vocabulary, the nicht-entscheidbar export line, reviewer-file
+// determinism and backward compatibility, and the export column order.
+// ============================================================
+
+// The headless runner injects the built vocabulary; hand it to prisma.js so the
+// panel functions have their one source (mirrors __SEED_PAPERS__).
+if (window.__ANALYSIS_FIELDS__ && T.setAnalysisFields) {
+    T.setAnalysisFields(window.__ANALYSIS_FIELDS__);
+}
+
+test('analysis vocabulary loaded from the built categories.yaml source (v1.3)', function() {
+    assert(window.__ANALYSIS_FIELDS__, 'the runner injected docs/data/analysis_fields.json');
+    assertEqual(T.anVersion(), '1.3', 'the frozen analysis_fields version');
+    // AN_Prompting_Role is captured first (coding-concept sec. 3)
+    assertEqual(T.anFieldNames()[0], 'AN_Prompting_Role', 'AN_Prompting_Role is the first field');
+    // spot-check a closed vocabulary against categories.yaml v1.3
+    assertEqual(T.anVocab('AN_Mitigation_Status').join('|'), 'Evaluated|Demonstrated|Proposed|None');
+    assertEqual(T.anVocab('AN_Coding_Basis').join('|'), 'Fulltext|Knowledge_Doc|Abstract');
+    assert(T.anField('AN_Harm_Types').optional === true, 'AN_Harm_Types is optional');
+    assert(T.anField('AN_Notes').free_text === true, 'AN_Notes is free text');
+});
+
+test('analysisPanelHtml renders only for an Include decision, hidden otherwise (FR-14)', function() {
+    assertEqual(T.analysisPanelHtml({ decision: 'Exclude' }), '', 'no panel on Exclude');
+    assertEqual(T.analysisPanelHtml({ decision: 'Unclear' }), '', 'no panel on Unclear');
+    var incl = T.analysisPanelHtml({ decision: 'Include' });
+    assertContains(incl, 'AN_Prompting_Role', 'the panel renders the AN fields on Include');
+    assertContains(incl, 'AN_Coding_Basis');
+    assertContains(incl, 'AN_Notes');
+    // an override-to-Include is still Include, so the panel shows
+    var ovr = T.analysisPanelHtml({ decision: 'Include', override: true, override_reason: 'x' });
+    assertContains(ovr, 'AN_Prompting_Role', 'the panel shows for an override-to-Include too');
+});
+
+test('analysisPanelHtml is fed only from the closed vocabulary (no free option values)', function() {
+    var html = T.analysisPanelHtml({ decision: 'Include' });
+    // every rendered option carries a data-an-value from the vocabulary; assert a
+    // representative set is present and that there is no text-input for coded fields
+    T.anVocab('AN_Bias_Axes').forEach(function(v) {
+        assertContains(html, 'data-an-value="' + v + '"', 'Bias axis option ' + v + ' present');
+    });
+    // only AN_Notes is a free field; there is exactly one free-text control
+    assertEqual(html.split('data-an-free="AN_Notes"').length - 1, 1, 'exactly one free-text control (AN_Notes)');
+});
+
+test('sanitizeAnalysis drops any value outside the frozen vocabulary', function() {
+    var clean = T.sanitizeAnalysis({
+        fields: {
+            AN_Prompting_Role: ['Recommended_Practice', 'NOT_A_CODE', 'Learning_Content'],
+            AN_Mitigation_Status: 'Evaluated',
+            AN_Coding_Basis: 'Nonsense_Basis',      // invalid single value dropped
+            AN_Notes: 'free text stays verbatim',
+            AN_Unknown_Field: ['x']                 // unknown field dropped whole
+        },
+        undecidable: { AN_Bias_Axes: true, AN_Not_A_Field: true }
+    });
+    assertEqual(clean.fields.AN_Prompting_Role.join('|'), 'Learning_Content|Recommended_Practice',
+        'invalid multi value removed, remainder sorted');
+    assertEqual(clean.fields.AN_Mitigation_Status, 'Evaluated', 'valid single value kept');
+    assert(!('AN_Coding_Basis' in clean.fields), 'invalid single value dropped');
+    assertEqual(clean.fields.AN_Notes, 'free text stays verbatim', 'free text kept verbatim');
+    assert(!('AN_Unknown_Field' in clean.fields), 'unknown field dropped');
+    assert(clean.undecidable.AN_Bias_Axes === true, 'undecidable toggle on a known field kept');
+    assert(!('AN_Not_A_Field' in clean.undecidable), 'undecidable toggle on an unknown field dropped');
+});
+
+test('setAnalysis on a paper stores only sanitized values (no code path writes outside the vocabulary)', function() {
+    T.setPapers([{ id: 'anP1', title: 'X' }]);
+    var prevRev = T.getState().reviewer;
+    T.getState().reviewer = 'rAN'; T.getState().reviewers.rAN = {};
+    T.curDec().anP1 = { decision: 'Include', categories: { Prompting: true, Gender: true } };
+    T.setAnalysis('anP1', {
+        fields: { AN_Bias_Axes: ['Gender', 'BOGUS'], AN_Coding_Basis: 'Fulltext' },
+        undecidable: {}
+    });
+    var stored = T.curDec().anP1.analysis;
+    assertEqual(stored.fields.AN_Bias_Axes.join('|'), 'Gender', 'bogus value never reaches the record');
+    assertEqual(stored.fields.AN_Coding_Basis, 'Fulltext');
+    delete T.getState().reviewers.rAN;
+    T.getState().reviewer = prevRev;
+});
+
+test('nicht-entscheidbar exports as an AN_Notes line "Feld: nicht entscheidbar aus <Basis>" (update-protocol C)', function() {
+    var notes = T.analysisNotes({
+        fields: { AN_Coding_Basis: 'Abstract', AN_Notes: 'base note.' },
+        undecidable: { AN_Prompt_Techniques: true, AN_Harm_Types: true }
+    });
+    assertContains(notes, 'base note.');
+    assertContains(notes, 'AN_Prompt_Techniques: nicht entscheidbar aus Abstract');
+    assertContains(notes, 'AN_Harm_Types: nicht entscheidbar aus Abstract');
+    // no vocabulary code was invented for the undecidable case
+    assertEqual(T.anVocab('AN_Prompt_Techniques').indexOf('nicht_entscheidbar'), -1, 'no new vocabulary code');
+    // with no basis recorded the line still exports, naming the basis as unbekannt
+    var noBasis = T.analysisNotes({ fields: {}, undecidable: { AN_Bias_Axes: true } });
+    assertContains(noBasis, 'AN_Bias_Axes: nicht entscheidbar aus unbekannt');
+});
+
+test('harmTypesHint fires only when the basis is Fulltext and Harm_Types is empty (B.1 point 3, soft)', function() {
+    assert(T.harmTypesHint({ fields: { AN_Coding_Basis: 'Fulltext', AN_Harm_Types: [] } }),
+        'Fulltext basis with empty Harm_Types shows a hint');
+    assert(!T.harmTypesHint({ fields: { AN_Coding_Basis: 'Fulltext', AN_Harm_Types: ['Stereotyping'] } }),
+        'a filled Harm_Types clears the hint');
+    assert(!T.harmTypesHint({ fields: { AN_Coding_Basis: 'Abstract', AN_Harm_Types: [] } }),
+        'no hint when the basis is not Fulltext (the field stays optional there)');
+    // the hint is advisory only: an Include with an empty Harm_Types is never blocked
+    assert(!T.harmTypesHint({ fields: {} }), 'no hint without a coding basis');
+});
+
+test('the analysis panel never alters the binding screening record (HARD boundary)', function() {
+    T.setPapers([{ id: 'anB1', title: 'X' }]);
+    var prevRev = T.getState().reviewer;
+    T.getState().reviewer = 'rANB'; T.getState().reviewers.rANB = {};
+    var rec = { decision: 'Include', categories: { Prompting: true, Gender: true },
+                override: false, reason: null, evidence: {}, ts: '2026-07-18T00:00:00.000Z', reviewer: 'rANB' };
+    T.curDec().anB1 = rec;
+    var before = JSON.stringify({ decision: rec.decision, categories: rec.categories, override: rec.override,
+                                  reason: rec.reason, evidence: rec.evidence, ts: rec.ts, reviewer: rec.reviewer });
+    T.setAnalysis('anB1', { fields: { AN_Population: ['Mental_Health'] }, undecidable: {} });
+    var after = T.curDec().anB1;
+    var afterCore = JSON.stringify({ decision: after.decision, categories: after.categories, override: after.override,
+                                     reason: after.reason, evidence: after.evidence, ts: after.ts, reviewer: after.reviewer });
+    assertEqual(afterCore, before, 'the screening fields are byte-identical after analysis capture');
+    assert(after.analysis, 'the analysis lives in its own sub-object, beside the record');
+    delete T.getState().reviewers.rANB;
+    T.getState().reviewer = prevRev;
+});
+
+test('reviewerFileText: a session that touches no analysis field is byte-identical to before (HARD boundary)', function() {
+    T.getState().reviewers.rDetAN = {
+        z9: { decision: 'Include', categories: { Prompting: true, Gender: true } },
+        a1: { decision: 'Exclude', reason: 'Duplicate', categories: {} }
+    };
+    // a record without an `analysis` key must serialize exactly as it did pre-FR-14:
+    // no analysis key is introduced, so the JSON body is unchanged
+    var txt = T.reviewerFileText('rDetAN');
+    assertNotContains(txt, '"analysis"', 'no analysis key appears when none was captured');
+    assert(txt.indexOf('"a1"') < txt.indexOf('"z9"'), 'deterministic paper-id order preserved');
+    delete T.getState().reviewers.rDetAN;
+});
+
+test('reviewerFileText: analysis fields serialize deterministically (stable diff, ADR-021)', function() {
+    T.getState().reviewers.rDetAN2 = {
+        p1: { decision: 'Include', categories: { Prompting: true, Gender: true },
+              analysis: T.sanitizeAnalysis({
+                  fields: { AN_Bias_Axes: ['Race_Ethnicity', 'Gender'], AN_Coding_Basis: 'Fulltext' },
+                  undecidable: { AN_Harm_Types: true }
+              }) }
+    };
+    var strip = function(s) { return s.replace(/"updated": "[^"]*",/, ''); };
+    var a = strip(T.reviewerFileText('rDetAN2'));
+    var b = strip(T.reviewerFileText('rDetAN2'));
+    assertEqual(a, b, 'same state serializes identically (modulo timestamp)');
+    // the multi list is sorted, so the on-disk order does not depend on click order
+    assertContains(a, '"Gender"');
+    assert(a.indexOf('"Gender"') < a.indexOf('"Race_Ethnicity"'), 'multi values sorted on disk');
+    delete T.getState().reviewers.rDetAN2;
+});
+
+test('backward compatibility: a reviewer file without an analysis part loads unchanged', function() {
+    T.setPapers([{ id: 'anC1' }, { id: 'anC2' }]);
+    var S = T.getState();
+    var legacy = {
+        schema: 'femprompt-prisma-reviewer/0.2', reviewer: 'legacyAN',
+        decisions: {
+            anC1: { decision: 'Include', categories: { Prompting: true, Gender: true } }, // no analysis key
+            anC2: { decision: 'Exclude', reason: 'Duplicate', categories: {} }
+        }
+    };
+    var file = JSON.parse(JSON.stringify(legacy));
+    S.reviewers.legacyAN = file.decisions;
+    assertEqual(T.humanDecision({ id: 'anC1' }, 'legacyAN').decision, 'Include', 'legacy Include loads');
+    // the panel reads a missing analysis part as empty, no throw
+    var html = T.analysisPanelHtml(file.decisions.anC1);
+    assertContains(html, 'AN_Prompting_Role', 'panel renders for a legacy Include with no analysis');
+    assertEqual(T.readAnalysis(file.decisions.anC1).fields.AN_Notes || '', '', 'missing analysis reads as empty');
+    delete S.reviewers.legacyAN;
+});
+
+test('analysis export uses the human_assessment.csv column schema with AN columns after Notes (update-protocol D, B.1 point 7)', function() {
+    var header = T.analysisCsvHeader();
+    var cols = header.split(',');
+    // the established prefix is unchanged and Notes precedes the AN block
+    var iNotes = cols.indexOf('Notes');
+    assert(iNotes !== -1, 'Notes column present');
+    assertEqual(cols[0], 'ID');
+    assertEqual(cols.indexOf('Studientyp') !== -1, true, 'Studientyp column present');
+    // AN order after Notes: techniques, bias, harms, mitigation stage, mitigation status,
+    // population, THEN prompting role (B.1 point 7), then coding basis, notes
+    var anOrder = cols.slice(iNotes + 1).join(',');
+    assertEqual(anOrder,
+        'AN_Prompt_Techniques,AN_Bias_Axes,AN_Harm_Types,AN_Mitigation_Stage,AN_Mitigation_Status,' +
+        'AN_Population,AN_Prompting_Role,AN_Coding_Basis,AN_Notes',
+        'AN columns in the update-protocol D order (Prompting_Role after Population)');
+});
+
+test('analysis export: multi-select values are semicolon-separated, undecidable folds into AN_Notes', function() {
+    T.setPapers([{ id: 'exP1', title: 'Paper, with comma', zotero_key: 'ZK1', author_year: 'A 2025' }]);
+    var prevRev = T.getState().reviewer;
+    T.getState().reviewer = 'rEX'; T.getState().reviewers.rEX = {};
+    T.curDec().exP1 = {
+        decision: 'Include', categories: { Prompting: true, Gender: true },
+        analysis: T.sanitizeAnalysis({
+            fields: {
+                AN_Prompting_Role: ['Recommended_Practice', 'Learning_Content'],
+                AN_Coding_Basis: 'Abstract', AN_Notes: 'a note'
+            },
+            undecidable: { AN_Harm_Types: true }
+        })
+    };
+    var csv = T.analysisCsv('rEX');
+    // the AN_Notes cell may carry newlines (base note + undecidable lines), a valid
+    // quoted CSV field, so assert against the whole export, not a naive line split
+    assert(csv.indexOf(T.analysisCsvHeader() + '\n') === 0, 'first line is the schema header');
+    assertContains(csv, 'Learning_Content;Recommended_Practice', 'multi values semicolon-joined (sorted)');
+    assertContains(csv, 'AN_Harm_Types: nicht entscheidbar aus Abstract', 'undecidable folded into AN_Notes');
+    assertContains(csv, '"Paper, with comma"', 'a title with a comma is CSV-quoted');
+    // only Include papers are exported for analysis (excluded papers get no AN codes)
+    T.curDec().exExcl = { decision: 'Exclude', reason: 'Duplicate', categories: {} };
+    T.setPapers([{ id: 'exP1', title: 't', zotero_key: 'ZK1' }, { id: 'exExcl', title: 'e', zotero_key: 'ZK2' }]);
+    var csv2 = T.analysisCsv('rEX');
+    // one Include data row after the header; the Exclude paper is not exported. Count
+    // ID cells at line starts (a data row begins with its running ID integer).
+    var dataRows = csv2.split('\n').filter(function(l) { return /^\d+,/.test(l); });
+    assertEqual(dataRows.length, 1, 'one Include row exported; the Exclude paper is not');
+    delete T.getState().reviewers.rEX;
+    T.getState().reviewer = prevRev;
+});
+
+// ============================================================
 // Restore localStorage and report
 // ============================================================
 

@@ -106,6 +106,13 @@ let corpusQuery = '';          // current corpus-wide search (left pane)
 const textCache = {};            // paperId -> raw knowledge-doc markdown (or null)
 const fullTextCache = {};        // paperId -> cleaned Docling full text (or null)
 let fulltextManifest = null;     // id -> { src, chars }; null until loaded, {} if absent
+// Analysis coding vocabulary (FR-14, ADR-026): the frozen categories.yaml v1.3
+// analysis_fields block, served as docs/data/analysis_fields.json (built by
+// src/publish/build_analysis_fields.py). anFields is the single source the panel's
+// closed selections read from; there is no hand-kept second list in this file.
+let anFields = [];               // [ { name, multi, values[, optional, binding_when, free_text] } ]
+let anStudyTypes = [];
+let anVocabVersion = '';
 let docHtmlCurrent = '';       // rendered HTML of the active layer (for re-highlight)
 let docHtmlPaper = '';         // rendered paper layer (verbatim text)
 let docHtmlAi = '';            // rendered AI-extraction layer (machine knowledge doc), '' when absent
@@ -338,6 +345,105 @@ function countOcc(hay, needle) {
     return n;
 }
 
+// Analysis coding vocabulary (FR-14, ADR-026) --------------------------------
+// The static app cannot read the YAML, so a committed build step emits it as JSON
+// (the single-source rule of ADR-026). Loaded once at init like the full-text
+// manifest; the headless harness injects window.__ANALYSIS_FIELDS__ instead.
+function applyAnalysisVocab(d) {
+    if (!d) return;
+    anFields = Array.isArray(d.fields) ? d.fields : [];
+    anStudyTypes = Array.isArray(d.study_types) ? d.study_types : [];
+    anVocabVersion = d.version || '';
+}
+function loadAnalysisFields() {
+    if (window.__ANALYSIS_FIELDS__) { applyAnalysisVocab(window.__ANALYSIS_FIELDS__); return Promise.resolve(anFields); }
+    if (anFields.length) return Promise.resolve(anFields);
+    return fetch('data/analysis_fields.json')
+        .then(function(r) { return r.ok ? r.json() : null; })
+        .then(function(d) { applyAnalysisVocab(d); return anFields; })
+        .catch(function(e) { console.warn('[PRISMA] analysis fields load failed:', e.message); return anFields; });
+}
+function anField(name) { for (let i = 0; i < anFields.length; i++) if (anFields[i].name === name) return anFields[i]; return null; }
+function anVocab(name) { const f = anField(name); return (f && f.values) || []; }
+function anCodedFields() { return anFields.filter(function(f) { return !f.free_text; }); }
+
+// The AN_ fields the coder fills, in capture order (AN_Prompting_Role first,
+// coding-concept sec. 3): that is already the order of the frozen block.
+function anFieldNames() { return anFields.map(function(f) { return f.name; }); }
+
+// Read the analysis sub-object off a decision record, tolerating a legacy record
+// with no analysis part (backward compatible): missing reads as empty.
+function readAnalysis(dec) {
+    const a = (dec && dec.analysis) || {};
+    return { fields: a.fields || {}, undecidable: a.undecidable || {} };
+}
+
+// Keep only values in the frozen vocabulary; a multi field becomes a sorted,
+// de-duplicated array, a single field a single valid string, free text verbatim.
+// This is the enforcement point: no value outside categories.yaml v1.3 survives,
+// on capture, import, or export. Unknown fields and undecidable toggles on
+// unknown fields are dropped.
+function sanitizeAnalysis(raw) {
+    raw = raw || {};
+    const inF = raw.fields || {}, inU = raw.undecidable || {};
+    const outF = {}, outU = {};
+    anFields.forEach(function(f) {
+        const v = inF[f.name];
+        if (f.free_text) {
+            if (v != null && String(v).trim() !== '') outF[f.name] = String(v);
+            return;
+        }
+        const vocab = f.values || [];
+        if (f.multi) {
+            const arr = (Array.isArray(v) ? v : (v != null ? [v] : []))
+                .filter(function(x) { return vocab.indexOf(x) !== -1; });
+            const uniq = arr.filter(function(x, i) { return arr.indexOf(x) === i; }).sort();
+            if (uniq.length) outF[f.name] = uniq;
+        } else {
+            if (vocab.indexOf(v) !== -1) outF[f.name] = v;
+        }
+        if (inU[f.name]) outU[f.name] = true;
+    });
+    return { fields: outF, undecidable: outU };
+}
+
+// Store the coder's analysis on the committed Include record, sanitized. This is
+// the only writer of the analysis sub-object; it never touches the binding
+// screening fields (categories, decision, override, reason, evidence), so the
+// screening record stays byte-identical (the HARD boundary of FR-14).
+function setAnalysis(pid, raw) {
+    const rec = curDec()[pid];
+    if (!rec || rec.decision !== 'Include') return;
+    rec.analysis = sanitizeAnalysis(raw);
+    save();
+}
+
+// The AN_Notes export value: the free note plus one machine-countable line per
+// nicht-entscheidbar field, "Feldname: nicht entscheidbar aus <Basis>"
+// (update-protocol C). No new vocabulary code is introduced; the frozen schema
+// stays untouched.
+function analysisNotes(analysis) {
+    const a = analysis || {}, f = a.fields || {}, u = a.undecidable || {};
+    const basis = f.AN_Coding_Basis || 'unbekannt';
+    const lines = [];
+    const note = (f.AN_Notes || '').trim();
+    if (note) lines.push(note);
+    anCodedFields().forEach(function(fd) {
+        if (u[fd.name]) lines.push(fd.name + ': nicht entscheidbar aus ' + basis);
+    });
+    return lines.join('\n');
+}
+
+// AN_Harm_Types is optional and only binding where the basis is Fulltext
+// (B.1 point 3). This is a soft hint, never a hard gate: an Include with an empty
+// Harm_Types is never blocked.
+function harmTypesHint(analysis) {
+    const f = (analysis && analysis.fields) || {};
+    if (f.AN_Coding_Basis !== 'Fulltext') return '';
+    if ((f.AN_Harm_Types || []).length) return '';
+    return 'Bei Volltext-Basis ist AN_Harm_Types erwartet (B.1 Punkt 3). Leer lassen nur, wenn kein Harm-Mechanismus benannt ist, oder als nicht entscheidbar markieren.';
+}
+
 // Split a served knowledge document into its two epistemic layers (M3, ADR-016).
 // Every served doc concatenates a paper layer (Abstract, Key Concepts, Full Text)
 // and a machine-extraction layer that starts at "## Kernbefund" (Forschungsfrage,
@@ -419,6 +525,9 @@ window.initializePrisma = function() {
     state.index = firstEntryIndex(); // O4: open on a screenable paper, not on boilerplate
     loadCorpusIndex(); // background: ready by the time the user runs a corpus search
     loadFulltextManifest(); // background: full-text availability for the reading pane
+    loadAnalysisFields().then(function() { // background: the frozen AN_ vocabulary for the Include analysis panel (FR-14)
+        if (initialized && state.surface === 'screening') refreshAssess();
+    });
     renderShell();
     showSurface(state.surface || 'screening');
     updateConnStatus();
@@ -951,6 +1060,7 @@ function assessLockedHtml(p, dec) {
     h += dimHtml('Gegenstand', TECH_CATS, cats, true);
     h += dimHtml('Perspektive', SOCIAL_CATS, cats, true);
     h += evidenceListHtml(dec.evidence || {}, true);
+    h += analysisPanelHtml(dec); // FR-14: analysis coding, inline, only on Include
     h += '<div class="pt-actions">';
     h += '<button class="pt-revise-btn" id="pt-revise">Überarbeiten</button><span class="pt-spacer"></span>';
     h += '<button class="pt-next-btn" id="pt-next">' + (state.index < papers.length - 1 ? 'Nächstes offen' : 'Zum ersten offenen') + ' &rarr;</button>';
@@ -1010,6 +1120,68 @@ function evidenceListHtml(evidence, locked) {
     return h;
 }
 
+// ---- analysis coding panel (FR-14, ADR-026) ----
+// Inline in the assessment column, beneath the decision block, and ONLY on a
+// binding Include (including an override to Include). Human capture only; every
+// value is a closed selection from the frozen vocabulary (anFields). The
+// vocabulary pins evidence keep their Fundstelle in the evidence list above; this
+// panel adds the descriptive analysis codes for the coding phase.
+function analysisPanelHtml(dec) {
+    if (!dec || dec.decision !== 'Include') return '';
+    if (!anFields.length) {
+        return '<div class="pt-anpanel"><div class="pt-anpanel-head"><span class="pt-tag-mono">Analyse-Codierung</span></div>' +
+            '<p class="pt-muted">Analysefeld-Vokabular nicht geladen (docs/data/analysis_fields.json). ' +
+            'Build ausführen: python src/publish/build_analysis_fields.py</p></div>';
+    }
+    const a = readAnalysis(dec), fv = a.fields, uv = a.undecidable;
+    let h = '<div class="pt-anpanel"><div class="pt-anpanel-head">' +
+        '<span class="pt-tag-mono">Analyse-Codierung</span>' +
+        '<span class="pt-spacer"></span><span class="pt-pill pt-pill-human">nur Include</span></div>';
+    h += '<p class="pt-anpanel-lead pt-muted">Geschlossene Auswahl aus categories.yaml v' + EC.escapeHtml(anVocabVersion) +
+        '. Menschliche Erfassung, KI bleibt Vorschlag.</p>';
+
+    anFields.forEach(function(f) {
+        h += anFieldHtml(f, fv[f.name], !!uv[f.name]);
+    });
+
+    const hint = harmTypesHint(a);
+    if (hint) h += '<div class="pt-an-hint">' + EC.escapeHtml(hint) + '</div>';
+    h += '</div>';
+    return h;
+}
+
+function anFieldHtml(f, value, undecidable) {
+    let h = '<div class="pt-an-field" data-an-field="' + f.name + '">';
+    h += '<div class="pt-an-field-head"><span class="pt-an-label">' + EC.escapeHtml(f.name) + '</span>';
+    if (f.optional) h += '<span class="pt-tag-mono pt-an-opt">optional</span>';
+    h += '<span class="pt-spacer"></span>';
+    if (!f.free_text) {
+        h += '<label class="pt-an-undec"><input type="checkbox" data-an-undec="' + f.name + '"' +
+            (undecidable ? ' checked' : '') + '> nicht entscheidbar</label>';
+    }
+    h += '</div>';
+
+    if (f.free_text) {
+        h += '<textarea class="pt-an-notes" data-an-free="' + f.name + '" rows="2" ' +
+            'placeholder="Begründungen, Verbatim-Strategien; Nicht-Entscheidbarkeit wird beim Export angehängt.">' +
+            EC.escapeHtml(value || '') + '</textarea>';
+        h += '</div>';
+        return h;
+    }
+
+    const sel = f.multi ? (Array.isArray(value) ? value : []) : (value ? [value] : []);
+    h += '<div class="pt-an-opts' + (undecidable ? ' pt-an-dimmed' : '') + '">';
+    (f.values || []).forEach(function(v) {
+        const on = sel.indexOf(v) !== -1;
+        h += '<button type="button" class="pt-an-opt' + (on ? ' sel' : '') + '"' +
+            ' data-an-field="' + f.name + '" data-an-value="' + v + '"' +
+            ' data-an-multi="' + (f.multi ? '1' : '0') + '"' +
+            ' aria-pressed="' + (on ? 'true' : 'false') + '">' + EC.escapeHtml(v.replace(/_/g, ' ')) + '</button>';
+    });
+    h += '</div></div>';
+    return h;
+}
+
 function logicInner(cats, override) {
     let tech = TECH_CATS.some(function(c) { return cats[c]; });
     let soc = SOCIAL_CATS.some(function(c) { return cats[c]; });
@@ -1052,6 +1224,54 @@ function refreshAssess() {
     let p = papers[state.index];
     col.innerHTML = assessInnerHtml(p, curDec()[p.id]);
     bindAssess(p, curDec()[p.id]);
+}
+
+// Wire the analysis coding panel of a locked Include record (FR-14). Each edit
+// mutates a working copy of the record's analysis, sanitizes, and persists via
+// setAnalysis; the binding screening fields are never touched. Option and toggle
+// changes re-render the panel in place; the free-text note updates without a
+// re-render so the caret is kept.
+function attachAnalysisPanel(p, dec, col) {
+    if (!dec || dec.decision !== 'Include' || !anFields.length) return;
+    const panel = col.querySelector('.pt-anpanel');
+    if (!panel) return;
+
+    function cur() {
+        const a = readAnalysis(curDec()[p.id]);
+        return { fields: JSON.parse(JSON.stringify(a.fields)), undecidable: JSON.parse(JSON.stringify(a.undecidable)) };
+    }
+    function persist(next) { setAnalysis(p.id, next); }
+    function rerender() { refreshAssess(); }
+
+    panel.querySelectorAll('.pt-an-opt').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            const name = btn.dataset.anField, val = btn.dataset.anValue, multi = btn.dataset.anMulti === '1';
+            const st = cur();
+            if (multi) {
+                const arr = Array.isArray(st.fields[name]) ? st.fields[name] : [];
+                const at = arr.indexOf(val);
+                if (at === -1) arr.push(val); else arr.splice(at, 1);
+                st.fields[name] = arr;
+            } else {
+                st.fields[name] = st.fields[name] === val ? undefined : val; // single-select toggles off on re-click
+            }
+            persist(st); rerender();
+        });
+    });
+    panel.querySelectorAll('[data-an-undec]').forEach(function(cb) {
+        cb.addEventListener('change', function() {
+            const name = cb.dataset.anUndec;
+            const st = cur();
+            if (cb.checked) st.undecidable[name] = true; else delete st.undecidable[name];
+            persist(st); rerender();
+        });
+    });
+    const notes = panel.querySelector('[data-an-free]');
+    if (notes) notes.addEventListener('input', function() {
+        const st = cur();
+        st.fields[notes.dataset.anFree] = notes.value;
+        persist(st); // no re-render: keep the caret in the textarea
+    });
 }
 
 // ---- handlers ----
@@ -1126,6 +1346,7 @@ function bindAssess(p, dec) {
         if (rev) rev.addEventListener('click', function() { editRecord(p); });
         let nx = col.querySelector('#pt-next');
         if (nx) nx.addEventListener('click', gotoNextOpen);
+        attachAnalysisPanel(p, dec, col);
         return;
     }
 
@@ -1440,6 +1661,7 @@ function renderData(targetEl) {
         '<button class="pt-btn pt-exp-rev">Eigene Datei exportieren (' + EC.escapeHtml(state.reviewer) + '.json)</button>' +
         '<label class="pt-btn pt-imp-label">Reviewer-Datei importieren<input type="file" accept=".json" class="pt-imp" hidden></label>' +
         '<button class="pt-btn pt-exp-csv">Decision-Log (.csv)</button>' +
+        '<button class="pt-btn pt-exp-analysis">Analyse-Export (human_assessment.csv-Schema)</button>' +
         '<button class="pt-btn pt-clear">Eigene Session leeren</button></div></div>';
 
     html += '</div>';
@@ -1461,6 +1683,9 @@ function renderData(targetEl) {
 
     el.querySelector('.pt-exp-rev').addEventListener('click', function() { download(state.reviewer + '.json', reviewerFileText(state.reviewer), 'application/json'); });
     el.querySelector('.pt-exp-csv').addEventListener('click', exportCsv);
+    el.querySelector('.pt-exp-analysis').addEventListener('click', function() {
+        download('prisma-analysis-' + state.reviewer + '.csv', analysisCsv(state.reviewer), 'text/csv');
+    });
     el.querySelector('.pt-clear').addEventListener('click', function() {
         if (!confirm('Eigene Entscheidungen (' + state.reviewer + ') verwerfen?')) return;
         state.reviewers[state.reviewer] = {}; state.index = 0; save(); closePanel(); renderScreening();
@@ -1502,6 +1727,61 @@ function exportCsv() {
             a ? a.decision : '', divergent(h, a) ? 'yes' : 'no', (h && h.reason) ? h.reason : '', evidenceCount(rec)]);
     });
     download('prisma-decision-log.csv', rows.map(function(r) { return r.map(csvCell).join(','); }).join('\n'), 'text/csv');
+}
+
+// Analysis export (FR-14): the human_assessment.csv column schema, extended by the
+// AN_ columns after Notes in the update-protocol D order (AN_Prompting_Role after
+// AN_Population, B.1 point 7). Multi-select values are semicolon-separated; the
+// nicht-entscheidbar toggles fold into AN_Notes as machine-countable lines. Only
+// Include papers carry analysis codes (coding rule 1). This is a separate export
+// from the decision-log CSV, which is unchanged.
+
+// established human_assessment.csv prefix, verbatim up to Notes
+const HA_PREFIX_COLS = ['ID', 'Zotero_Key', 'Author_Year', 'Title', 'DOI', 'Item_Type',
+    'Publication_Year', 'Language', 'Source_Tool', 'Abstract', 'URL',
+    'AI_Literacies', 'Generative_KI', 'Prompting', 'KI_Sonstige',
+    'Soziale_Arbeit', 'Bias_Ungleichheit', 'Gender', 'Diversitaet / Intersektionalität',
+    'Feministisch', 'Fairness', 'Studientyp', 'Decision', 'Exclusion_Reason', 'Notes'];
+// AN order after Notes (update-protocol D + B.1 point 7)
+const AN_EXPORT_ORDER = ['AN_Prompt_Techniques', 'AN_Bias_Axes', 'AN_Harm_Types',
+    'AN_Mitigation_Stage', 'AN_Mitigation_Status', 'AN_Population', 'AN_Prompting_Role',
+    'AN_Coding_Basis', 'AN_Notes'];
+
+function analysisCsvHeader() { return HA_PREFIX_COLS.concat(AN_EXPORT_ORDER).join(','); }
+
+// map a category slug to its Ja/Nein export cell from a three-level record
+function catCell(cats, c) { return catLevel((cats || {})[c]) === 2 ? 'Ja' : 'Nein'; }
+
+function analysisCsv(reviewerKey) {
+    const rows = [analysisCsvHeader()];
+    const dec = state.reviewers[reviewerKey] || {};
+    let idn = 0;
+    papers.forEach(function(p) {
+        const rec = dec[p.id];
+        if (!rec || rec.decision !== 'Include') return; // only Include papers carry AN codes
+        idn++;
+        const a = readAnalysis(rec), f = a.fields;
+        const anVal = function(name) {
+            if (name === 'AN_Notes') return analysisNotes(a);
+            const fld = anField(name), v = f[name];
+            if (fld && fld.multi) return (Array.isArray(v) ? v : []).slice().sort().join(';');
+            return v || '';
+        };
+        const cells = [
+            idn, p.zotero_key || p.id, p.author_year || '', p.title || '', p.doi || '',
+            p.item_type || '', p.publication_year || '', p.language || '', p.source_tool || '',
+            p.abstract || '', p.url || '',
+            catCell(rec.categories, 'AI_Literacies'), catCell(rec.categories, 'Generative_KI'),
+            catCell(rec.categories, 'Prompting'), catCell(rec.categories, 'KI_Sonstige'),
+            catCell(rec.categories, 'Soziale_Arbeit'), catCell(rec.categories, 'Bias_Ungleichheit'),
+            catCell(rec.categories, 'Gender'), catCell(rec.categories, 'Diversitaet'),
+            catCell(rec.categories, 'Feministisch'), catCell(rec.categories, 'Fairness'),
+            (f.Studientyp || ''), rec.decision, '', ''
+        ];
+        AN_EXPORT_ORDER.forEach(function(name) { cells.push(anVal(name)); });
+        rows.push(cells.map(csvCell).join(','));
+    });
+    return rows.join('\n');
 }
 
 // Utilities
@@ -1550,6 +1830,13 @@ const TEST_HOOK = {
     pinEvidence: pinEvidence, unpinEvidence: unpinEvidence, commit: commit, editRecord: editRecord,
     evidenceListHtml: evidenceListHtml, chipHtml: chipHtml, statusLabel: statusLabel,
     corpusListHtml: corpusListHtml, isScreenable: isScreenable, firstEntryIndex: firstEntryIndex,
+    // analysis coding panel (FR-14, ADR-026)
+    setAnalysisFields: function(d) { applyAnalysisVocab(d); },
+    anVersion: function() { return anVocabVersion; },
+    anFieldNames: anFieldNames, anField: anField, anVocab: anVocab,
+    readAnalysis: readAnalysis, sanitizeAnalysis: sanitizeAnalysis, setAnalysis: setAnalysis,
+    analysisNotes: analysisNotes, harmTypesHint: harmTypesHint, analysisPanelHtml: analysisPanelHtml,
+    analysisCsvHeader: analysisCsvHeader, analysisCsv: analysisCsv,
     // surface + reading-layer drivers (browser-agent traces on the real page)
     showSurface: function(s) { showSurface(s); },
     setReadMode: function(m) { setReadMode(m); },

@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "generated_by": "src/publish/build_analysis_fields.py",
+    "source": "assessment/categories.yaml",
+    "note": "Closed vocabulary for the PRISM analysis panel (FR-14/ADR-026); the one source, do not hand-edit."
+  },
+  "version": "1.3",
+  "fields": [
+    {
+      "name": "AN_Prompting_Role",
+      "multi": true,
+      "values": [
+        "Recommended_Practice",
+        "Research_Instrument",
+        "Object_of_Critique",
+        "Learning_Content",
+        "None"
+      ]
+    },
+    {
+      "name": "AN_Prompt_Techniques",
+      "multi": true,
+      "values": [
+        "ICL",
+        "Thought_Generation",
+        "Decomposition",
+        "Ensembling",
+        "Self_Criticism",
+        "Role_Persona",
+        "General_Guidance",
+        "None"
+      ]
+    },
+    {
+      "name": "AN_Bias_Axes",
+      "multi": true,
+      "values": [
+        "Gender",
+        "Race_Ethnicity",
+        "Intersectional",
+        "Disability",
+        "Age",
+        "Socioeconomic",
+        "Language_Culture",
+        "Sexual_Orientation_Identity",
+        "Religion",
+        "Physical_Appearance",
+        "Nationality_Migration",
+        "Other_Axis",
+        "None"
+      ]
+    },
+    {
+      "name": "AN_Harm_Types",
+      "multi": true,
+      "values": [
+        "Derogatory_Language",
+        "Disparate_Performance",
+        "Erasure",
+        "Exclusionary_Norms",
+        "Misrepresentation",
+        "Stereotyping",
+        "Toxicity",
+        "Direct_Discrimination",
+        "Indirect_Discrimination",
+        "None"
+      ],
+      "optional": true,
+      "binding_when": "AN_Coding_Basis = Fulltext"
+    },
+    {
+      "name": "AN_Mitigation_Stage",
+      "multi": true,
+      "values": [
+        "Pre_Processing",
+        "In_Training",
+        "Intra_Processing",
+        "Post_Processing",
+        "Prompt_Practice",
+        "Organisational_Process",
+        "None"
+      ]
+    },
+    {
+      "name": "AN_Mitigation_Status",
+      "multi": false,
+      "values": [
+        "Evaluated",
+        "Demonstrated",
+        "Proposed",
+        "None"
+      ]
+    },
+    {
+      "name": "AN_Population",
+      "multi": true,
+      "values": [
+        "Child_Family_Welfare",
+        "Mental_Health",
+        "Health_Care",
+        "Homelessness_Youth",
+        "Social_Assistance_Admin",
+        "Education_Professional",
+        "General_Social_Work",
+        "Not_SW_Specific"
+      ]
+    },
+    {
+      "name": "AN_Coding_Basis",
+      "multi": false,
+      "values": [
+        "Fulltext",
+        "Knowledge_Doc",
+        "Abstract"
+      ]
+    },
+    {
+      "name": "AN_Notes",
+      "free_text": true
+    }
+  ],
+  "study_types": [
+    "Empirisch",
+    "Experimentell",
+    "Theoretisch",
+    "Konzept",
+    "Literaturreview",
+    "Unclear"
+  ]
+}
