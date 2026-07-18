@@ -1116,6 +1116,75 @@ test('analysis export: multi-select values are semicolon-separated, undecidable 
     T.getState().reviewer = prevRev;
 });
 
+test('edit and re-commit preserves the analysis codes of an Include record; a change away from Include drops them deliberately', function() {
+    T.setPapers([{ id: 'cyc1', title: 'X' }]);
+    var prevRev = T.getState().reviewer;
+    T.getState().reviewer = 'rCYC'; T.getState().reviewers.rCYC = {}; T.getState().index = 0;
+    T.resetWork({ id: 'cyc1' });
+    T.getWork().cats = { Prompting: true, Gender: true };
+    T.commit();
+    T.setAnalysis('cyc1', { fields: { AN_Population: ['Mental_Health'], AN_Coding_Basis: 'Abstract' }, undecidable: { AN_Harm_Types: true } });
+    assert(T.curDec().cyc1.analysis, 'analysis captured on the committed Include');
+    // Ueberarbeiten + erneut erfassen, unchanged decision: the codes must survive the cycle
+    T.getState().index = 0;
+    T.editRecord({ id: 'cyc1' });
+    T.commit();
+    var rec = T.curDec().cyc1;
+    assertEqual(rec.decision, 'Include');
+    assert(rec.analysis, 'analysis survives edit -> re-commit');
+    assertEqual(rec.analysis.fields.AN_Population.join('|'), 'Mental_Health', 'field values intact');
+    assert(rec.analysis.undecidable.AN_Harm_Types === true, 'undecidable toggles intact');
+    // revising to Exclude drops the codes, deliberately: excluded papers carry no AN codes (coding rule 1)
+    T.getState().index = 0;
+    T.editRecord({ id: 'cyc1' });
+    T.getWork().cats = { Prompting: true }; // tech only -> derived Exclude
+    T.getWork().reason = 'Not_relevant_topic';
+    T.commit();
+    var rec2 = T.curDec().cyc1;
+    assertEqual(rec2.decision, 'Exclude');
+    assert(!rec2.analysis, 'a re-commit that leaves Include drops the analysis codes');
+    delete T.getState().reviewers.rCYC;
+    T.getState().reviewer = prevRev;
+});
+
+test('Studientyp: closed single select from study_types, persisted, exported (required for Include, update-protocol D)', function() {
+    assertEqual(T.anStudyTypes().join('|'), 'Empirisch|Experimentell|Theoretisch|Konzept|Literaturreview|Unclear',
+        'the study_types vocabulary travels with the built JSON');
+    // sanitize enforces the closed list with the same strictness as the AN_ fields
+    var clean = T.sanitizeAnalysis({ fields: { Studientyp: 'Empirisch' }, undecidable: {} });
+    assertEqual(clean.fields.Studientyp, 'Empirisch', 'valid Studientyp kept');
+    var dirty = T.sanitizeAnalysis({ fields: { Studientyp: 'Blogpost' }, undecidable: {} });
+    assert(!('Studientyp' in dirty.fields), 'a value outside study_types is dropped');
+    // the panel renders a Studientyp control; no nicht-entscheidbar toggle (Unclear is in-vocabulary)
+    var html = T.analysisPanelHtml({ decision: 'Include' });
+    assertContains(html, 'data-an-field="Studientyp"', 'Studientyp control rendered');
+    assertContains(html, 'data-an-value="Literaturreview"', 'options from study_types');
+    assertNotContains(html, 'data-an-undec="Studientyp"', 'no undecidable toggle on Studientyp');
+    // persistence and export: the required-for-Include column is filled from the capture
+    T.setPapers([{ id: 'stP1', title: 'T', zotero_key: 'ZKST' }]);
+    var prevRev = T.getState().reviewer;
+    T.getState().reviewer = 'rST'; T.getState().reviewers.rST = {};
+    T.curDec().stP1 = { decision: 'Include', categories: { Prompting: true, Gender: true } };
+    T.setAnalysis('stP1', { fields: { Studientyp: 'Konzept', AN_Coding_Basis: 'Abstract' }, undecidable: {} });
+    assertEqual(T.curDec().stP1.analysis.fields.Studientyp, 'Konzept', 'Studientyp survives persistence');
+    assertContains(T.analysisCsv('rST'), ',Konzept,Include,', 'Studientyp cell filled in the export row');
+    delete T.getState().reviewers.rST;
+    T.getState().reviewer = prevRev;
+});
+
+test('the export field set derives from the loaded vocabulary, no second list to drift (order D + B.1 point 7)', function() {
+    var order = T.anExportOrder();
+    // exactly the vocabulary fields: a field added to categories.yaml appears in
+    // panel AND export, or this comparison goes red
+    assertEqual(order.slice().sort().join('|'), T.anFieldNames().slice().sort().join('|'),
+        'export field set equals the vocabulary field set');
+    // the one reordering rule: AN_Prompting_Role sits directly after AN_Population
+    assertEqual(order[order.indexOf('AN_Population') + 1], 'AN_Prompting_Role', 'B.1 point 7 position rule');
+    // the header carries exactly the derived order after Notes
+    var cols = T.analysisCsvHeader().split(',');
+    assertEqual(cols.slice(cols.indexOf('Notes') + 1).join(','), order.join(','), 'header uses the derived order');
+});
+
 // ============================================================
 // Restore localStorage and report
 // ============================================================

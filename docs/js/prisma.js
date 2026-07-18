@@ -404,6 +404,11 @@ function sanitizeAnalysis(raw) {
         }
         if (inU[f.name]) outU[f.name] = true;
     });
+    // Studientyp travels with the analysis capture (required for Include,
+    // update-protocol D); its closed list is study_types from the same YAML source.
+    // Same strictness as the AN_ fields; no undecidable toggle, its vocabulary
+    // carries Unclear itself.
+    if (anStudyTypes.indexOf(inF.Studientyp) !== -1) outF.Studientyp = inF.Studientyp;
     return { fields: outF, undecidable: outU };
 }
 
@@ -1140,6 +1145,11 @@ function analysisPanelHtml(dec) {
     h += '<p class="pt-anpanel-lead pt-muted">Geschlossene Auswahl aus categories.yaml v' + EC.escapeHtml(anVocabVersion) +
         '. Menschliche Erfassung, KI bleibt Vorschlag.</p>';
 
+    // Studientyp is required for an Include (update-protocol D) and captured here as a
+    // closed single select from study_types; no nicht-entscheidbar toggle, because its
+    // vocabulary carries Unclear itself.
+    h += anFieldHtml({ name: 'Studientyp', multi: false, values: anStudyTypes, no_undec: true }, fv.Studientyp, false);
+
     anFields.forEach(function(f) {
         h += anFieldHtml(f, fv[f.name], !!uv[f.name]);
     });
@@ -1155,7 +1165,7 @@ function anFieldHtml(f, value, undecidable) {
     h += '<div class="pt-an-field-head"><span class="pt-an-label">' + EC.escapeHtml(f.name) + '</span>';
     if (f.optional) h += '<span class="pt-tag-mono pt-an-opt">optional</span>';
     h += '<span class="pt-spacer"></span>';
-    if (!f.free_text) {
+    if (!f.free_text && !f.no_undec) {
         h += '<label class="pt-an-undec"><input type="checkbox" data-an-undec="' + f.name + '"' +
             (undecidable ? ' checked' : '') + '> nicht entscheidbar</label>';
     }
@@ -1409,6 +1419,11 @@ function commit() {
         override_reason: (work.override && fin === 'Include') ? work.overrideReason.trim() : null,
         evidence: humanEvidence, ts: new Date().toISOString(), reviewer: state.reviewer
     };
+    // FR-14: an edited Include record keeps its analysis codes across the re-commit;
+    // a decision that leaves Include drops them (coding rule 1, excluded papers carry
+    // no AN codes). A record that never had an analysis part gets no key, so a session
+    // that touches no analysis field still serializes the pre-FR-14 file body.
+    if (fin === 'Include' && work.analysis) curDec()[p.id].analysis = work.analysis;
     editingPid = null; // the edit (if any) is now re-committed
     save();
     gotoNextOpen();
@@ -1428,7 +1443,10 @@ function editRecord(p) {
         override: !!dec.override,
         reason: dec.reason || null,
         overrideReason: dec.override_reason || null,
-        evidence: JSON.parse(JSON.stringify(dec.evidence || {}))
+        evidence: JSON.parse(JSON.stringify(dec.evidence || {})),
+        // FR-14: carry the analysis codes through the edit so a re-commit as Include
+        // keeps them; a record without an analysis part stays without (no key introduced)
+        analysis: dec.analysis ? JSON.parse(JSON.stringify(dec.analysis)) : undefined
     };
     editingPid = p.id;
     renderScreening();
@@ -1742,12 +1760,20 @@ const HA_PREFIX_COLS = ['ID', 'Zotero_Key', 'Author_Year', 'Title', 'DOI', 'Item
     'AI_Literacies', 'Generative_KI', 'Prompting', 'KI_Sonstige',
     'Soziale_Arbeit', 'Bias_Ungleichheit', 'Gender', 'Diversitaet / Intersektionalität',
     'Feministisch', 'Fairness', 'Studientyp', 'Decision', 'Exclusion_Reason', 'Notes'];
-// AN order after Notes (update-protocol D + B.1 point 7)
-const AN_EXPORT_ORDER = ['AN_Prompt_Techniques', 'AN_Bias_Axes', 'AN_Harm_Types',
-    'AN_Mitigation_Stage', 'AN_Mitigation_Status', 'AN_Population', 'AN_Prompting_Role',
-    'AN_Coding_Basis', 'AN_Notes'];
+// AN column order after Notes, derived from the loaded vocabulary so a field added
+// to categories.yaml reaches panel AND export from the one source (no second
+// hardcoded list to drift). The only reordering rule is update-protocol D with
+// B.1 point 7: capture order, but AN_Prompting_Role moves to directly after
+// AN_Population. That reproduces exactly: Techniques, Bias_Axes, Harm_Types,
+// Mitigation_Stage, Mitigation_Status, Population, Prompting_Role, Coding_Basis, Notes.
+function anExportOrder() {
+    const names = anFieldNames().filter(function(n) { return n !== 'AN_Prompting_Role'; });
+    const at = names.indexOf('AN_Population');
+    names.splice(at === -1 ? names.length : at + 1, 0, 'AN_Prompting_Role');
+    return names;
+}
 
-function analysisCsvHeader() { return HA_PREFIX_COLS.concat(AN_EXPORT_ORDER).join(','); }
+function analysisCsvHeader() { return HA_PREFIX_COLS.concat(anExportOrder()).join(','); }
 
 // map a category slug to its Ja/Nein export cell from a three-level record
 function catCell(cats, c) { return catLevel((cats || {})[c]) === 2 ? 'Ja' : 'Nein'; }
@@ -1778,7 +1804,7 @@ function analysisCsv(reviewerKey) {
             catCell(rec.categories, 'Feministisch'), catCell(rec.categories, 'Fairness'),
             (f.Studientyp || ''), rec.decision, '', ''
         ];
-        AN_EXPORT_ORDER.forEach(function(name) { cells.push(anVal(name)); });
+        anExportOrder().forEach(function(name) { cells.push(anVal(name)); });
         rows.push(cells.map(csvCell).join(','));
     });
     return rows.join('\n');
@@ -1834,6 +1860,7 @@ const TEST_HOOK = {
     setAnalysisFields: function(d) { applyAnalysisVocab(d); },
     anVersion: function() { return anVocabVersion; },
     anFieldNames: anFieldNames, anField: anField, anVocab: anVocab,
+    anStudyTypes: function() { return anStudyTypes; }, anExportOrder: anExportOrder,
     readAnalysis: readAnalysis, sanitizeAnalysis: sanitizeAnalysis, setAnalysis: setAnalysis,
     analysisNotes: analysisNotes, harmTypesHint: harmTypesHint, analysisPanelHtml: analysisPanelHtml,
     analysisCsvHeader: analysisCsvHeader, analysisCsv: analysisCsv,
