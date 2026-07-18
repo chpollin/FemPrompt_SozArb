@@ -39,8 +39,8 @@ In function order, not alphabetical.
 | [[standards]] | The reporting standards implemented: PRISMA 2020, PRISMA-trAIce, RAISE | rarely |
 | [[conformance-map]] | Per-item conformance of this review against PRISMA 2020 and trAIce, with source paths and named gaps (R1) | per Stage R step |
 | [[update-protocol]] | The round-2 pre-registration protocol, the analysis-field design, the RIS procedure | until round 2 starts |
-| [[research-vault-plan]] | Plan for the `research-vault/` top-level folder carrying the object knowledge after the Grounded-Vault model; in Umsetzung, das Skelett steht (`research-vault/README.md`) | until research-vault is grounded |
-| [[distillate-check-plan]] | Operator-gated audit plan checking the existing distillate stock for the model-paraphrase-instead-of-quote error class (ADR-018) | until the audit runs |
+| [[research-vault-plan]] | Plan for the `research-vault/` top-level folder carrying the object knowledge after the Grounded-Vault model; umgesetzt bis zur Claims-Ebene (`research-vault/README.md`, Register in den Ebenen) | until research-vault is grounded |
+| [[distillate-check-plan]] | Audit plan for the model-paraphrase-instead-of-quote error class (ADR-018); Stufe 1 und die deterministische Stufe 1b sind gelaufen (`src/assess/evidence_audit.py`, `src/assess/waitlist_resolution.py`), Stufe 3 steht aus | until stage 3 |
 | [[analysis-fields-pilot]] | Advisory LLM pilot of the analysis-field design on a stratified sample, feeding the freeze decision | until the freeze |
 | [[guides/manual-review-checklist]] | The human-in-the-loop markdown review checklist | rarely |
 
