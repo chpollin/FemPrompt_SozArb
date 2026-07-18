@@ -214,7 +214,7 @@ The freeze decision reviews sections B and B.1 together; after the freeze the vo
 
 ## C. Coding instructions
 
-Written for the Excel workflow: the coders are the reviewing colleagues, the surface is the known spreadsheet, and the legend sheet carries the code lists in compact form. General rules:
+The capture surface is the PRISM tool, inline in the screening assessment column (ADR-026 in [[specification]], decided 2026-07-18); the Excel in the schema of section D remains the export and fallback format, and the legend sheet carries the code lists for anyone working outside the tool. The rules below are surface-independent. In the tool, rule 2's not-decidable case is captured as a per-field click and exported as the `AN_Notes` line `Feldname: nicht entscheidbar aus <Basis>`, so the frozen schema is unchanged and the cases stay machine-countable. General rules:
 
 1. Code only papers with the binding decision Include. Excluded papers get no analysis codes.
 2. Code from the deepest text available and record it in `AN_Coding_Basis`. Use `None` only when the paper genuinely does not address the field's subject; when a field is not decidable from the available text, write that into `AN_Notes`.
@@ -226,7 +226,7 @@ Per field, the salient rules: a technique group is assigned only when the paper 
 
 ## D. Excel schema extension
 
-The established capture format is the column shape of `assessment/human_assessment.csv`. The extension appends columns after `Notes`, so every existing parser and the P3 bridge see an unchanged prefix. New columns in order: `AN_Prompt_Techniques`, `AN_Bias_Axes`, `AN_Harm_Types` (optional), `AN_Mitigation_Stage`, `AN_Mitigation_Status`, `AN_Population`, `AN_Coding_Basis`, `AN_Notes` (free text). Additionally `Studientyp` becomes required for `Decision = Include`.
+Since ADR-026 (2026-07-18) this schema is the export and bridge contract, no longer the capture surface; capture happens in PRISM (section C), and the PRISM export emits exactly this column shape. The established format is the column shape of `assessment/human_assessment.csv`. The extension appends columns after `Notes`, so every existing parser and the P3 bridge see an unchanged prefix. New columns in order: `AN_Prompt_Techniques`, `AN_Bias_Axes`, `AN_Harm_Types` (optional), `AN_Mitigation_Stage`, `AN_Mitigation_Status`, `AN_Population`, `AN_Coding_Basis`, `AN_Notes` (free text). Additionally `Studientyp` becomes required for `Decision = Include`.
 
 Mechanics: a `Legend` sheet lists every column, its codes, and one-line definitions; single-select columns get Excel data-validation dropdowns; multi-select columns are typed as semicolon lists, which Excel cannot validate natively, so enforcement happens at the P3 import bridge (split on `;`, trim, match against the closed list; empty-cell check on all `AN_` columns for included papers; a visible import report). The freeze writes the vocabularies into `categories.yaml` as a new `analysis_fields` block, so tool, bridge, and template read one source. An alternative encoding goes to the meeting (open decision 3): one binary column per code, matching the established one-column-per-category pattern and giving full dropdown validation, at the price of one column per code across all fields. The semicolon encoding is proposed as primary because it keeps the sheet readable; the bridge can ingest either.
 
