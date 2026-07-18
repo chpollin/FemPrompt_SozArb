@@ -10,7 +10,7 @@ status: complete
 language: de
 version: "0.2"
 created: 2026-02-18
-updated: 2026-07-17
+updated: 2026-07-18
 authors: [Christopher Pollin]
 generated-with: Claude Code
 related: [INDEX, plan, specification, design]
@@ -295,3 +295,7 @@ Analysefelder eingefroren (categories.yaml v1.3, analysis_fields-Block mit neuem
 ## 2026-07-18 research-vault Ausbau, Stufe 1b und Claims-Ebene
 
 Deterministische Stufe 1b über den gesamten Distillat-Bestand (src/assess/waitlist_resolution.py, Report lokal in generated/distilled/_evidence_audit/): artefakt-toleranter, kontiguierlich-wörtlicher Re-Match aller Stufe-1-Befunde gegen die committeten Volltexte, mit Extraktions-Fix für Apostroph-Paarung und zwei Zitierpraxis-Ausnahmen (editorische Klammern, markierte Ellipsen mit Segment-Ordnung und Abstandsschranke). Ergebnis: die D-Klasse vollständig aufgelöst, ein großer Teil der F-Kandidaten als Matcher- oder docling-Artefakte belegt, vier advisory Stufe-2-F-hart-Urteile deterministisch widerlegt (Zitate stehen wörtlich im Volltext). Vault-Umbau mit src/publish/build_research_vault.py: 45 Distillate mit dokumentierter Belegkette migriert, 8 de-migriert (7 ohne auflösbaren Volltext aus der ersten Welle, 1 Quellendublette), 2 Migrationskandidaten als maschinell belegte Quellendubletten zurückgehalten; jedes Vault-Distillat trägt jetzt audit, audit-stage1b und reference. Shingle-Jaccard-Scan über die Volltexte fand die Quellendubletten-Gruppen und zwei Acquisition-Fehler (Volltext-Datei enthält fremdes Paper, Kutscher_2023 und Ghosal_2024). Claims-Ebene aufgebaut, fünf Topic Maps und zwölf Claims auf Kernbefund-Anker, grounded per deterministischer Ankerprüfung (src/publish/check_claims.py), ein contested Claim (CoT-Debiasing, Kaneko gegen Kamruzzaman). Warteliste neu geschrieben nach Befundklassen mit Auflösungsgründen. Offen: Stufe-3-Sichtung der offenen F-, G- und U-Fälle, Zotero-Dubletten-Merge Operator-seitig, 00_representation/-Ankerschicht für den grounded-Status der Distillate, 30_deliverable leer bis Claims-Basis breiter.
+
+## 2026-07-18 Workflow-Dokumentation und Codierungskonzept-Entwurf (M6)
+
+Zwei Wissensbausteine in knowledge/ ergänzt und im INDEX registriert. workflow.md beschreibt den gelaufenen Gesamt-Workflow als Kette in neun Stufen, Identifikation Runde 1 bis research-vault, je Stufe Werkzeug, Artefaktorte (committed gegen lokal), datierte Entscheidungen und die bindenden menschlichen Stufen (Zotero-Pflege, Expert-Track/PRISM-Screening, Stufe-3-Verifikation, Operator-Gates); verbindende Übersicht mit Verweisen, ersetzt kein Einzeldokument, Zählstände nur als Verweis oder Stichtagsangabe. coding-concept.md ist der als Entwurf markierte Codierungskonzept-Entwurf über den eingefrorenen Analysefeldern (categories.yaml v1.3 samt AN_Prompting_Role und B.1-Revisionen), Codiereinheit Paper je Feld mit Textstelle als Begründungseinheit, Volltext als Codiergrundlage gegen research-vault-Distillate als Arbeitsgrundlage, Unclear-Behandlung auf Screening- und Feldebene, Doppelcodierung per Überlappungsstichprobe mit Konsensverfahren analog B3, Dokumentation in Excel plus P3-Brücke; acht offene Entscheidungen als markierte Fragen E1 bis E8 mit Entscheidungsinstanz, nichts gesetzt. Offen: Ratifikation der E-Fragen durch Operatorin und Codiererinnen.

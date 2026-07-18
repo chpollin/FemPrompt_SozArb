@@ -13,12 +13,12 @@ template:
   alias: https://dhcraft.org/Promptotyping/#promptotyping-document-index
 status: complete
 language: en
-version: "0.2"
+version: "0.3"
 created: 2026-06-29
-updated: 2026-06-30
+updated: 2026-07-18
 authors: [Christopher Pollin]
 generated-with: Claude Code
-related: [project, methods, specification, data, design, plan, journal, standards, conformance-map, update-protocol, research-vault-plan, distillate-check-plan, analysis-fields-pilot]
+related: [project, methods, specification, data, design, plan, journal, standards, conformance-map, update-protocol, research-vault-plan, distillate-check-plan, analysis-fields-pilot, workflow, coding-concept]
 ---
 
 This is the knowledge base of FemPrompt SozArb, a systematic literature review on feminist AI literacy and LLM bias in social work and the epistemic infrastructure built around it. It documents the conducted review and its benchmark, the PRISM screening tool, which is the binding screening surface the review is carried through (ADR-019), and the plan for the literature update. Concrete numbers do not live here. The benchmark figures live in the data (`generated/benchmark-results/`, `docs/data/`), the corpus and screening data in `docs/data/` and `assessment/`, and the Evidence Companion (https://chpollin.github.io/FemPrompt_SozArb/) renders them. This index shows where each piece of knowledge lives, in what order to read, and what the constitutive terms mean.
@@ -30,6 +30,7 @@ In function order, not alphabetical.
 | Document | Function | Update rhythm |
 |---|---|---|
 | [[project]] | Identity: goals, research questions, team, and the theoretical framework | rarely |
+| [[workflow]] | The conducted workflow as one chain, identification to research-vault, with tools, artifact locations, dated decisions, and the binding human stages | per stage completion |
 | [[methods]] | How the review was conducted: PRISMA deviation, dual assessment, the distillation pipeline | rarely |
 | [[specification]] | Substance of the PRISM tool: requirements, user stories, and the ADR decision log | per tool iteration |
 | [[data]] | The data substrate the PRISM tool consumes and produces | per schema change |
@@ -42,11 +43,14 @@ In function order, not alphabetical.
 | [[research-vault-plan]] | Plan for the `research-vault/` top-level folder carrying the object knowledge after the Grounded-Vault model; umgesetzt bis zur Claims-Ebene (`research-vault/README.md`, Register in den Ebenen) | until research-vault is grounded |
 | [[distillate-check-plan]] | Audit plan for the model-paraphrase-instead-of-quote error class (ADR-018); Stufe 1 und die deterministische Stufe 1b sind gelaufen (`src/assess/evidence_audit.py`, `src/assess/waitlist_resolution.py`), Stufe 3 steht aus | until stage 3 |
 | [[analysis-fields-pilot]] | Advisory LLM pilot of the analysis-field design on a stratified sample, feeding the freeze decision | until the freeze |
+| [[coding-concept]] | Draft of the qualitative coding concept over the frozen analysis fields (categories.yaml v1.3); decision basis for the coders, open questions marked E1 to E8 | until the coding decisions are ratified |
 | [[guides/manual-review-checklist]] | The human-in-the-loop markdown review checklist | rarely |
 
 ## Reading paths
 
-- Onboarding a new collaborator: [[project]], [[methods]], [[specification]].
+- Onboarding a new collaborator: [[project]], [[workflow]], [[methods]], [[specification]].
+- Describe the method in the follow-up paper: [[workflow]] (the chain), [[methods]] (the depth), [[conformance-map]] (the gaps).
+- Prepare the qualitative coding: [[update-protocol]] (fields and rules), [[analysis-fields-pilot]], [[coding-concept]].
 - Inspect the benchmark: the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion.
 - Understand a tool decision: [[specification]] (the Entscheidungen / ADR section), [[journal]], [[design]].
 - Understand the divergence (the motivating illustration): [[methods]].
