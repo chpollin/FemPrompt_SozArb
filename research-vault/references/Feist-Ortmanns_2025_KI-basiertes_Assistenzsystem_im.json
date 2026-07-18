@@ -4,7 +4,8 @@
   "title": "KI-basiertes Assistenzsystem in der Kinder- und Jugendhilfe: Digitalität, Kinderschutz und Hilfeplanung",
   "author": [
     {
-      "family": "Feist-Ortmanns"
+      "family": "Feist-Ortmanns",
+      "given": ""
     }
   ],
   "issued": {
@@ -15,5 +16,5 @@
     ]
   },
   "language": "de",
-  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Feist-Ortmanns_2025_KI-basiertes_Assistenzsystem_im.md. audit=P-pending."
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Feist-Ortmanns_2025_KI-basiertes_Assistenzsystem_im.md. audit=P-pending. Stage-1b confirmed 2026-07-18."
 }

@@ -5,23 +5,23 @@
   "author": [
     {
       "family": "Goldkind",
-      "given": "Lauri"
+      "given": "L."
     },
     {
       "family": "Wolf",
-      "given": "Lea"
+      "given": "L."
     },
     {
       "family": "Glennon",
-      "given": "Alexis"
+      "given": "A."
     },
     {
       "family": "Rios",
-      "given": "Juan"
+      "given": "J."
     },
     {
       "family": "Nissen",
-      "given": "Laura"
+      "given": "L."
     }
   ],
   "issued": {
@@ -32,5 +32,7 @@
     ]
   },
   "language": "en",
-  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Goldkind_2023_The_End_of_the_World_as_We_Know_It_ChatGPT_and.md. audit=P-pending."
+  "DOI": "10.1093/sw/swad044",
+  "URL": "https://doi.org/10.1093/sw/swad044",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Goldkind_2023_The_End_of_the_World_as_We_Know_It_ChatGPT_and.md. audit=P-pending. Stage-1b confirmed 2026-07-18. Zotero key: RAV6DAFQ."
 }

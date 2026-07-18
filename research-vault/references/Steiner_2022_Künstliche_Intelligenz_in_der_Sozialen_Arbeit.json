@@ -5,11 +5,11 @@
   "author": [
     {
       "family": "Steiner",
-      "given": "Olivier"
+      "given": "O."
     },
     {
       "family": "Tschopp",
-      "given": "Dominik"
+      "given": "D."
     }
   ],
   "issued": {
@@ -20,5 +20,6 @@
     ]
   },
   "language": "de",
-  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Steiner_2022_Künstliche_Intelligenz_in_der_Sozialen_Arbeit.md. audit=P-pending."
+  "DOI": "10.1007/s12054-022-00546-4",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Steiner_2022_Künstliche_Intelligenz_in_der_Sozialen_Arbeit.md. audit=P-pending. Stage-1b confirmed 2026-07-18. Zotero key: 4JN7NIS4."
 }

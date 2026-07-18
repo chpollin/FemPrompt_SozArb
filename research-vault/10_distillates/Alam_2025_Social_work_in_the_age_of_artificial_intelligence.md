@@ -8,6 +8,8 @@ language: en
 source_distillate: "generated/distilled/Alam_2025_Social_work_in_the_age_of_artificial_intelligence.md"
 migrated: 2026-07-17
 audit: P-pending
+audit-stage1b: "bestätigt 2026-07-18, deterministisch (src/assess/waitlist_resolution.py)"
+reference: "research-vault/references/Alam_2025_Social_work_in_the_age_of_artificial_intelligence.json"
 status: migrated
 references-to: 00_representation/
 ---

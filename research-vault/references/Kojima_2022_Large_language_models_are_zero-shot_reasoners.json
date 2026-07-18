@@ -1,0 +1,36 @@
+{
+  "id": "Kojima_2022_Large_language_models_are_zero-shot_reasoners",
+  "type": "paper-conference",
+  "title": "Large Language Models are Zero-Shot Reasoners",
+  "author": [
+    {
+      "family": "Kojima",
+      "given": "T."
+    },
+    {
+      "family": "Gu",
+      "given": "S. S."
+    },
+    {
+      "family": "Reid",
+      "given": "M."
+    },
+    {
+      "family": "Matsuo",
+      "given": "Y."
+    },
+    {
+      "family": "Iwasawa",
+      "given": "Y."
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2022
+      ]
+    ]
+  },
+  "language": "en",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Kojima_2022_Large_language_models_are_zero-shot_reasoners.md. audit=P-pending. Stage-1b resolved 2026-07-18. Zotero key: H3STST88."
+}

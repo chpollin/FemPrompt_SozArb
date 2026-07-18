@@ -1,0 +1,29 @@
+{
+  "id": "Clemmer_2024_PreciseDebias_An_automatic_prompt_engineering",
+  "type": "paper-conference",
+  "title": "PreciseDebias: An Automatic Prompt Engineering Approach for Generative AI to Mitigate Image Demographic Biases",
+  "author": [
+    {
+      "family": "Clemmer",
+      "given": "C."
+    },
+    {
+      "family": "Ding",
+      "given": "J."
+    },
+    {
+      "family": "Feng",
+      "given": "Y."
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2024
+      ]
+    ]
+  },
+  "language": "en",
+  "URL": "https://openaccess.thecvf.com/content/WACV2024/html/Clemmer_PreciseDebias_An_Automatic_Prompt_Engineering_Approach_for_Generative_AI_WACV_2024_paper.html",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Clemmer_2024_PreciseDebias_An_automatic_prompt_engineering.md. audit=P-pending. Stage-1b resolved 2026-07-18. Zotero key: MIT8HTC6."
+}

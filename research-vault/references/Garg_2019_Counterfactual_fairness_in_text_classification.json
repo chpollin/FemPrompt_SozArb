@@ -1,0 +1,32 @@
+{
+  "id": "Garg_2019_Counterfactual_fairness_in_text_classification",
+  "type": "paper-conference",
+  "title": "Counterfactual Fairness in Text Classification through Robustness",
+  "author": [
+    {
+      "family": "Garg",
+      "given": "S."
+    },
+    {
+      "family": "Perot",
+      "given": "V."
+    },
+    {
+      "family": "Lim",
+      "given": "T."
+    },
+    {
+      "family": "Lipton",
+      "given": "Z. C."
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2019
+      ]
+    ]
+  },
+  "language": "en",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Garg_2019_Counterfactual_fairness_in_text_classification.md. audit=clean. Stage-1b resolved 2026-07-18. Zotero key: ST9UCTJE."
+}

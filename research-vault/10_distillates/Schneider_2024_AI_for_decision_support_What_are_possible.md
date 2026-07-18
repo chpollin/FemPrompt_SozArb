@@ -8,6 +8,8 @@ language: de
 source_distillate: "generated/distilled/Schneider_2024_AI_for_decision_support_What_are_possible.md"
 migrated: 2026-07-17
 audit: P-pending
+audit-stage1b: "bestätigt 2026-07-18, deterministisch (src/assess/waitlist_resolution.py)"
+reference: "research-vault/references/Schneider_2024_AI_for_decision_support_What_are_possible.json"
 status: migrated
 references-to: 00_representation/
 ---

@@ -8,6 +8,8 @@ language: en
 source_distillate: "generated/distilled/Kattnig_2024_Assessing_trustworthy_AI_Technical_and_legal.md"
 migrated: 2026-07-17
 audit: clean
+audit-stage1b: "bestätigt 2026-07-18, deterministisch (src/assess/waitlist_resolution.py)"
+reference: "research-vault/references/Kattnig_2024_Assessing_trustworthy_AI_Technical_and_legal.json"
 status: migrated
 references-to: 00_representation/
 ---

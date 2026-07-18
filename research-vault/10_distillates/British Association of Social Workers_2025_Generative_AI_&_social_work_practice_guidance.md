@@ -8,6 +8,8 @@ language: en
 source_distillate: "generated/distilled/British Association of Social Workers_2025_Generative_AI_&_social_work_practice_guidance.md"
 migrated: 2026-07-17
 audit: P-pending
+audit-stage1b: "bestätigt 2026-07-18, deterministisch (src/assess/waitlist_resolution.py)"
+reference: "research-vault/references/British Association of Social Workers_2025_Generative_AI_&_social_work_practice_guidance.json"
 status: migrated
 references-to: 00_representation/
 ---

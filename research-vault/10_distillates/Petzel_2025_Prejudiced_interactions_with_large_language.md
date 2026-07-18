@@ -8,6 +8,8 @@ language: en
 source_distillate: "generated/distilled/Petzel_2025_Prejudiced_interactions_with_large_language.md"
 migrated: 2026-07-17
 audit: P-pending
+audit-stage1b: "bestätigt 2026-07-18, deterministisch (src/assess/waitlist_resolution.py)"
+reference: "research-vault/references/Petzel_2025_Prejudiced_interactions_with_large_language.json"
 status: migrated
 references-to: 00_representation/
 ---

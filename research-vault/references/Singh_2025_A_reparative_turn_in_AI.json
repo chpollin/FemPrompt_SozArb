@@ -1,6 +1,6 @@
 {
   "id": "Singh_2025_A_reparative_turn_in_AI",
-  "type": "conferencePaper",
+  "type": "paper-conference",
   "title": "What Comes After Harm? Mapping Reparative Actions in AI through Justice Frameworks",
   "author": [
     {
@@ -40,5 +40,5 @@
     ]
   },
   "language": "en",
-  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Singh_2025_A_reparative_turn_in_AI.md. audit=P-pending."
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Singh_2025_A_reparative_turn_in_AI.md. audit=P-pending. Stage-1b confirmed 2026-07-18."
 }

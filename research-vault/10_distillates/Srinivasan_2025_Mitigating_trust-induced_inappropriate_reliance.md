@@ -8,6 +8,8 @@ language: en
 source_distillate: "generated/distilled/Srinivasan_2025_Mitigating_trust-induced_inappropriate_reliance.md"
 migrated: 2026-07-17
 audit: P-pending
+audit-stage1b: "bestätigt 2026-07-18, deterministisch (src/assess/waitlist_resolution.py)"
+reference: "research-vault/references/Srinivasan_2025_Mitigating_trust-induced_inappropriate_reliance.json"
 status: migrated
 references-to: 00_representation/
 ---

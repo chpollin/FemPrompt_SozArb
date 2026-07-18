@@ -8,6 +8,8 @@ language: en
 source_distillate: "generated/distilled/Shah_2025_Gender_Bias_in_Artificial_Intelligence_Empowering.md"
 migrated: 2026-07-17
 audit: P-pending
+audit-stage1b: "bestätigt 2026-07-18, deterministisch (src/assess/waitlist_resolution.py)"
+reference: "research-vault/references/Shah_2025_Gender_Bias_in_Artificial_Intelligence_Empowering.json"
 status: migrated
 references-to: 00_representation/
 ---

@@ -8,6 +8,8 @@ language: en
 source_distillate: "generated/distilled/Hermann_2022_Artificial_intelligence_and_mass_personalization.md"
 migrated: 2026-07-17
 audit: P-pending
+audit-stage1b: "bestätigt 2026-07-18, deterministisch (src/assess/waitlist_resolution.py)"
+reference: "research-vault/references/Hermann_2022_Artificial_intelligence_and_mass_personalization.json"
 status: migrated
 references-to: 00_representation/
 ---

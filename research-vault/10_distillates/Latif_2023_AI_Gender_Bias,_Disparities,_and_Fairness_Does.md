@@ -8,6 +8,8 @@ language: en
 source_distillate: "generated/distilled/Latif_2023_AI_Gender_Bias,_Disparities,_and_Fairness_Does.md"
 migrated: 2026-07-17
 audit: P-pending
+audit-stage1b: "bestätigt 2026-07-18, deterministisch (src/assess/waitlist_resolution.py)"
+reference: "research-vault/references/Latif_2023_AI_Gender_Bias,_Disparities,_and_Fairness_Does.json"
 status: migrated
 references-to: 00_representation/
 ---

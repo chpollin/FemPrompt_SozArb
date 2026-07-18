@@ -8,6 +8,8 @@ language: en
 source_distillate: "generated/distilled/Heinz_2025_Clinical_trial_of_an_LLM-based_conversational_AI.md"
 migrated: 2026-07-17
 audit: P-pending
+audit-stage1b: "bestätigt 2026-07-18, deterministisch (src/assess/waitlist_resolution.py)"
+reference: "research-vault/references/Heinz_2025_Clinical_trial_of_an_LLM-based_conversational_AI.json"
 status: migrated
 references-to: 00_representation/
 ---

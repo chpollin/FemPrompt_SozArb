@@ -1,0 +1,33 @@
+{
+  "id": "Kaneko_2024_Debiasing_prompts_for_gender_bias_in_large",
+  "type": "paper-conference",
+  "title": "Evaluating Gender Bias in Large Language Models via Chain-of-Thought Prompting",
+  "author": [
+    {
+      "family": "Kaneko",
+      "given": "M."
+    },
+    {
+      "family": "Bollegala",
+      "given": "D."
+    },
+    {
+      "family": "Okazaki",
+      "given": "N."
+    },
+    {
+      "family": "Baldwin",
+      "given": "T."
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2024
+      ]
+    ]
+  },
+  "language": "en",
+  "URL": "https://arxiv.org/abs/2401.15585",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Kaneko_2024_Debiasing_prompts_for_gender_bias_in_large.md. audit=clean. Stage-1b resolved 2026-07-18. Zotero key: CYZQ6XPK."
+}

@@ -1,0 +1,41 @@
+{
+  "id": "Gaba_2025_Bias,_accuracy,_and_trust_Gender-diverse",
+  "type": "paper-conference",
+  "title": "Bias, Accuracy, and Trust: Gender-Diverse Perspectives on Large Language Models",
+  "author": [
+    {
+      "family": "Gaba",
+      "given": "A."
+    },
+    {
+      "family": "Wall",
+      "given": "E."
+    },
+    {
+      "family": "Babu",
+      "given": "T. R."
+    },
+    {
+      "family": "Brun",
+      "given": "Y."
+    },
+    {
+      "family": "Hall",
+      "given": "K. W."
+    },
+    {
+      "family": "Xiong",
+      "given": "C."
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2025
+      ]
+    ]
+  },
+  "language": "en",
+  "URL": "https://arxiv.org/abs/2506.21898",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Gaba_2025_Bias,_accuracy,_and_trust_Gender-diverse.md. audit=clean. Stage-1b resolved 2026-07-18. Zotero key: G53MCF3W."
+}

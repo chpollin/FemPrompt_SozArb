@@ -8,6 +8,8 @@ language: en
 source_distillate: "generated/distilled/Creswell Báez_2025_Clinical_Social_Workers’_Perceptions_of_Large.md"
 migrated: 2026-07-17
 audit: clean
+audit-stage1b: "bestätigt 2026-07-18, deterministisch (src/assess/waitlist_resolution.py); Rescue-Tiers: skeleton"
+reference: "research-vault/references/Creswell Báez_2025_Clinical_Social_Workers’_Perceptions_of_Large.json"
 status: migrated
 references-to: 00_representation/
 ---

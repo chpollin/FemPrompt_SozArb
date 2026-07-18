@@ -5,15 +5,15 @@
   "author": [
     {
       "family": "Singer",
-      "given": "Jonathan B."
+      "given": "J. B."
     },
     {
-      "family": "Báez",
-      "given": "Johanna Creswell"
+      "family": "Creswell Báez",
+      "given": "J."
     },
     {
       "family": "Rios",
-      "given": "Juan A."
+      "given": "J. A."
     }
   ],
   "issued": {
@@ -24,5 +24,7 @@
     ]
   },
   "language": "en",
-  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Singer_2023_AI_Creates_the_Message_Integrating_AI_Language.md. audit=P-pending."
+  "DOI": "10.1080/10437797.2023.2189878",
+  "URL": "https://doi.org/10.1080/10437797.2023.2189878",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Singer_2023_AI_Creates_the_Message_Integrating_AI_Language.md. audit=P-pending. Stage-1b confirmed 2026-07-18. Zotero key: VICS443I."
 }

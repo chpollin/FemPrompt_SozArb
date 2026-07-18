@@ -1,0 +1,20 @@
+{
+  "id": "European Data Protection Supervisor_2023_Explainable_Artificial_Intelligence",
+  "type": "report",
+  "title": "EDPS TechDispatch on Explainable Artificial Intelligence",
+  "author": [
+    {
+      "family": "Bernardo",
+      "given": "Vítor"
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2023
+      ]
+    ]
+  },
+  "language": "en",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/European Data Protection Supervisor_2023_Explainable_Artificial_Intelligence.md. audit=clean. Stage-1b resolved 2026-07-18."
+}

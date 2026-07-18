@@ -8,8 +8,8 @@
       "given": "Siu-Cheung"
     },
     {
-      "family": "Cheung",
-      "given": "William Man-Yin"
+      "family": "Man-Yin Cheung",
+      "given": "William"
     },
     {
       "family": "Zhang",
@@ -24,5 +24,7 @@
     ]
   },
   "language": "en",
-  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Kong_2021_Evaluation_of_an_artificial_intelligence_literacy.md. audit=P-pending."
+  "DOI": "10.1016/j.caeai.2021.100026",
+  "URL": "https://linkinghub.elsevier.com/retrieve/pii/S2666920X21000205",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Kong_2021_Evaluation_of_an_artificial_intelligence_literacy.md. audit=P-pending. Stage-1b confirmed 2026-07-18. Zotero key: 7VFNS5R3."
 }

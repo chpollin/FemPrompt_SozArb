@@ -5,11 +5,15 @@
   "author": [
     {
       "family": "Garkisch",
-      "given": "Michael"
+      "given": "M."
     },
     {
-      "family": "Goldkind",
-      "given": "Lauri"
+      "family": "Langer",
+      "given": "P. J."
+    },
+    {
+      "family": "Becher",
+      "given": "T."
     }
   ],
   "issued": {
@@ -20,5 +24,6 @@
     ]
   },
   "language": "en",
-  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Garkisch_2024_Considering_a_unified_model_of_artificial.md. audit=P-pending."
+  "DOI": "10.1007/s41134-024-00326-y",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Garkisch_2024_Considering_a_unified_model_of_artificial.md. audit=P-pending. Stage-1b confirmed 2026-07-18. Zotero key: UENFDPH9."
 }

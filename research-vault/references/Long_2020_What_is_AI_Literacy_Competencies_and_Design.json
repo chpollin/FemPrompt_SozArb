@@ -1,6 +1,6 @@
 {
   "id": "Long_2020_What_is_AI_Literacy_Competencies_and_Design",
-  "type": "conferencePaper",
+  "type": "paper-conference",
   "title": "What is AI Literacy? Competencies and Design Considerations",
   "author": [
     {
@@ -9,7 +9,7 @@
     },
     {
       "family": "Magerko",
-      "given": "Brian S"
+      "given": "Brian"
     }
   ],
   "issued": {
@@ -20,5 +20,7 @@
     ]
   },
   "language": "en",
-  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Long_2020_What_is_AI_Literacy_Competencies_and_Design.md. audit=clean."
+  "DOI": "10.1145/3313831.3376727",
+  "URL": "https://dl.acm.org/doi/10.1145/3313831.3376727",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Long_2020_What_is_AI_Literacy_Competencies_and_Design.md. audit=clean. Stage-1b confirmed 2026-07-18. Zotero key: UHEM78MX."
 }

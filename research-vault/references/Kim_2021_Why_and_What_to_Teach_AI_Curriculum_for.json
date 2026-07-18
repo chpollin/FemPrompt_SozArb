@@ -1,6 +1,6 @@
 {
   "id": "Kim_2021_Why_and_What_to_Teach_AI_Curriculum_for",
-  "type": "conferencePaper",
+  "type": "paper-conference",
   "title": "Why and What to Teach: AI Curriculum for Elementary School",
   "author": [
     {
@@ -40,5 +40,5 @@
     ]
   },
   "language": "en",
-  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Kim_2021_Why_and_What_to_Teach_AI_Curriculum_for.md. audit=P-pending."
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Kim_2021_Why_and_What_to_Teach_AI_Curriculum_for.md. audit=P-pending. Stage-1b confirmed 2026-07-18."
 }

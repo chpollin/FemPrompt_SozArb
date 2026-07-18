@@ -8,6 +8,8 @@ language: en
 source_distillate: "generated/distilled/Kamruzzaman_2024_Prompting_techniques_for_reducing_social_bias_in.md"
 migrated: 2026-07-17
 audit: P-pending
+audit-stage1b: "bestätigt 2026-07-18, deterministisch (src/assess/waitlist_resolution.py); Rescue-Tiers: skeleton"
+reference: "research-vault/references/Kamruzzaman_2024_Prompting_techniques_for_reducing_social_bias_in.json"
 status: migrated
 references-to: 00_representation/
 ---

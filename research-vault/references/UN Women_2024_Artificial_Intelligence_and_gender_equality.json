@@ -4,8 +4,8 @@
   "title": "Artificial Intelligence and gender equality",
   "author": [
     {
-      "family": "Women",
-      "given": "UN"
+      "family": "",
+      "given": ""
     }
   ],
   "issued": {
@@ -16,5 +16,6 @@
     ]
   },
   "language": "en",
-  "note": "Reference record for migrated distillate. Source distillate generated/distilled/UN Women_2024_Artificial_Intelligence_and_gender_equality.md. audit=P-pending."
+  "URL": "https://www.unwomen.org/en/articles/explainer/artificial-intelligence-and-gender-equality",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/UN Women_2024_Artificial_Intelligence_and_gender_equality.md. audit=P-pending. Stage-1b confirmed 2026-07-18. Zotero key: 9BDIJE9B."
 }

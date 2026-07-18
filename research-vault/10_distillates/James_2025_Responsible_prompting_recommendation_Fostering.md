@@ -8,6 +8,8 @@ language: en
 source_distillate: "generated/distilled/James_2025_Responsible_prompting_recommendation_Fostering.md"
 migrated: 2026-07-17
 audit: P-pending
+audit-stage1b: "bestätigt 2026-07-18, deterministisch (src/assess/waitlist_resolution.py)"
+reference: "research-vault/references/James_2025_Responsible_prompting_recommendation_Fostering.json"
 status: migrated
 references-to: 00_representation/
 ---

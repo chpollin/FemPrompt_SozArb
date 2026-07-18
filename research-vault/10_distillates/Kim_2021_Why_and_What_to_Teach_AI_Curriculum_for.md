@@ -8,6 +8,8 @@ language: en
 source_distillate: "generated/distilled/Kim_2021_Why_and_What_to_Teach_AI_Curriculum_for.md"
 migrated: 2026-07-17
 audit: P-pending
+audit-stage1b: "bestätigt 2026-07-18, deterministisch (src/assess/waitlist_resolution.py)"
+reference: "research-vault/references/Kim_2021_Why_and_What_to_Teach_AI_Curriculum_for.json"
 status: migrated
 references-to: 00_representation/
 ---

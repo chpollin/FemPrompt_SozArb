@@ -5,11 +5,11 @@
   "author": [
     {
       "family": "Petzel",
-      "given": "Zachary W."
+      "given": "Z. W."
     },
     {
       "family": "Sowerby",
-      "given": "Leanne"
+      "given": "M."
     }
   ],
   "issued": {
@@ -20,5 +20,7 @@
     ]
   },
   "language": "en",
-  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Petzel_2025_Prejudiced_interactions_with_large_language.md. audit=P-pending."
+  "DOI": "10.1016/j.chb.2025.108563",
+  "URL": "https://doi.org/10.1016/j.chb.2025.108563",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Petzel_2025_Prejudiced_interactions_with_large_language.md. audit=P-pending. Stage-1b confirmed 2026-07-18. Zotero key: 22XEFRWP."
 }

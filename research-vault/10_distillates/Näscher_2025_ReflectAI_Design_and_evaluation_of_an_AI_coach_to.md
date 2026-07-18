@@ -8,6 +8,8 @@ language: en
 source_distillate: "generated/distilled/Näscher_2025_ReflectAI_Design_and_evaluation_of_an_AI_coach_to.md"
 migrated: 2026-07-17
 audit: clean
+audit-stage1b: "bestätigt 2026-07-18, deterministisch (src/assess/waitlist_resolution.py)"
+reference: "research-vault/references/Näscher_2025_ReflectAI_Design_and_evaluation_of_an_AI_coach_to.json"
 status: migrated
 references-to: 00_representation/
 ---

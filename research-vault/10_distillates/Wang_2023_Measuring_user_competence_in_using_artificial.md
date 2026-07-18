@@ -8,6 +8,8 @@ language: en
 source_distillate: "generated/distilled/Wang_2023_Measuring_user_competence_in_using_artificial.md"
 migrated: 2026-07-17
 audit: P-pending
+audit-stage1b: "bestätigt 2026-07-18, deterministisch (src/assess/waitlist_resolution.py)"
+reference: "research-vault/references/Wang_2023_Measuring_user_competence_in_using_artificial.json"
 status: migrated
 references-to: 00_representation/
 ---

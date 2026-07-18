@@ -1,0 +1,36 @@
+{
+  "id": "Kong_2022_Are_Intersectionally_Fair_AI_Algorithms_Really",
+  "type": "paper-conference",
+  "title": "Fairness Indicators for Systematic Assessments of Visual Feature Extractors",
+  "author": [
+    {
+      "family": "Goyal",
+      "given": "Priya"
+    },
+    {
+      "family": "Soriano",
+      "given": "Adriana Romero"
+    },
+    {
+      "family": "Hazirbas",
+      "given": "Caner"
+    },
+    {
+      "family": "Sagun",
+      "given": "Levent"
+    },
+    {
+      "family": "Usunier",
+      "given": "Nicolas"
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2022
+      ]
+    ]
+  },
+  "language": "en",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Kong_2022_Are_Intersectionally_Fair_AI_Algorithms_Really.md. audit=P-pending. Stage-1b resolved 2026-07-18."
+}

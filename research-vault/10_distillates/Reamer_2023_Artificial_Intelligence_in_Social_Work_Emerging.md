@@ -8,6 +8,8 @@ language: en
 source_distillate: "generated/distilled/Reamer_2023_Artificial_Intelligence_in_Social_Work_Emerging.md"
 migrated: 2026-07-17
 audit: P-pending
+audit-stage1b: "bestätigt 2026-07-18, deterministisch (src/assess/waitlist_resolution.py); Rescue-Tiers: skeleton"
+reference: "research-vault/references/Reamer_2023_Artificial_Intelligence_in_Social_Work_Emerging.json"
 status: migrated
 references-to: 00_representation/
 ---

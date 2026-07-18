@@ -5,7 +5,7 @@
   "author": [
     {
       "family": "Reamer",
-      "given": "Frederic G."
+      "given": "F. G."
     }
   ],
   "issued": {
@@ -16,5 +16,7 @@
     ]
   },
   "language": "en",
-  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Reamer_2023_Artificial_Intelligence_in_Social_Work_Emerging.md. audit=P-pending."
+  "DOI": "10.55521/10-020-205",
+  "URL": "https://doi.org/10.55521/10-020-205",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Reamer_2023_Artificial_Intelligence_in_Social_Work_Emerging.md. audit=P-pending. Stage-1b confirmed 2026-07-18. Zotero key: EXVG7MQR."
 }

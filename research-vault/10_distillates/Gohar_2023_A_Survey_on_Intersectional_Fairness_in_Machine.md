@@ -8,6 +8,8 @@ language: en
 source_distillate: "generated/distilled/Gohar_2023_A_Survey_on_Intersectional_Fairness_in_Machine.md"
 migrated: 2026-07-17
 audit: P-pending
+audit-stage1b: "bestätigt 2026-07-18, deterministisch (src/assess/waitlist_resolution.py); Rescue-Tiers: skeleton, skeleton-nocite"
+reference: "research-vault/references/Gohar_2023_A_Survey_on_Intersectional_Fairness_in_Machine.json"
 status: migrated
 references-to: 00_representation/
 ---

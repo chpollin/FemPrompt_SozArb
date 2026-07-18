@@ -1,0 +1,28 @@
+{
+  "id": "Chen_2023_Ideology_Prediction_from_Scarce_and_Biased",
+  "type": "paper-conference",
+  "title": "Ideology Prediction from Scarce and Biased Supervision: Learn to Disregard the 'What' and Focus on the 'How'!",
+  "author": [
+    {
+      "family": "Chen",
+      "given": "Chen"
+    },
+    {
+      "family": "Walker",
+      "given": "Dylan"
+    },
+    {
+      "family": "Saligrama",
+      "given": "Venkatesh"
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2023
+      ]
+    ]
+  },
+  "language": "en",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Chen_2023_Ideology_Prediction_from_Scarce_and_Biased.md. audit=P-pending. Stage-1b resolved 2026-07-18."
+}

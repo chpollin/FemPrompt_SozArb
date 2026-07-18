@@ -8,6 +8,8 @@ language: en
 source_distillate: "generated/distilled/Zhang_2024_GenderAlign_An_Alignment_Dataset_for_Mitigating.md"
 migrated: 2026-07-17
 audit: P-pending
+audit-stage1b: "bestätigt 2026-07-18, deterministisch (src/assess/waitlist_resolution.py)"
+reference: "research-vault/references/Zhang_2024_GenderAlign_An_Alignment_Dataset_for_Mitigating.json"
 status: migrated
 references-to: 00_representation/
 ---

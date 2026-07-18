@@ -8,6 +8,8 @@ language: de
 source_distillate: "generated/distilled/Steiner_2022_Künstliche_Intelligenz_in_der_Sozialen_Arbeit.md"
 migrated: 2026-07-17
 audit: P-pending
+audit-stage1b: "bestätigt 2026-07-18, deterministisch (src/assess/waitlist_resolution.py)"
+reference: "research-vault/references/Steiner_2022_Künstliche_Intelligenz_in_der_Sozialen_Arbeit.json"
 status: migrated
 references-to: 00_representation/
 ---

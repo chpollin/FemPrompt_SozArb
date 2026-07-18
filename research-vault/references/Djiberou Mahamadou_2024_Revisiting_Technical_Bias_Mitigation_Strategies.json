@@ -4,12 +4,8 @@
   "title": "Revisiting Technical Bias Mitigation Strategies",
   "author": [
     {
-      "family": "Mahamadou",
-      "given": "Abdoul Jalil Djiberou"
-    },
-    {
-      "family": "Trotsyuk",
-      "given": "Artem A."
+      "family": "Djiberou Mahamadou",
+      "given": "A. J."
     }
   ],
   "issued": {
@@ -20,5 +16,6 @@
     ]
   },
   "language": "en",
-  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Djiberou Mahamadou_2024_Revisiting_Technical_Bias_Mitigation_Strategies.md. audit=P-pending."
+  "URL": "https://arxiv.org/abs/2410.17433",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Djiberou Mahamadou_2024_Revisiting_Technical_Bias_Mitigation_Strategies.md. audit=P-pending. Stage-1b confirmed 2026-07-18. Zotero key: K2KL8WH8."
 }

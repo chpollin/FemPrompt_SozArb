@@ -1,15 +1,15 @@
 {
   "id": "Gohar_2023_A_Survey_on_Intersectional_Fairness_in_Machine",
-  "type": "conferencePaper",
+  "type": "paper-conference",
   "title": "A Survey on Intersectional Fairness in Machine Learning: Notions, Mitigation, and Challenges",
   "author": [
     {
       "family": "Gohar",
-      "given": "Usman"
+      "given": "U."
     },
     {
       "family": "Cheng",
-      "given": "Lu"
+      "given": "L."
     }
   ],
   "issued": {
@@ -20,5 +20,6 @@
     ]
   },
   "language": "en",
-  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Gohar_2023_A_Survey_on_Intersectional_Fairness_in_Machine.md. audit=P-pending."
+  "URL": "https://arxiv.org/abs/2305.06969",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Gohar_2023_A_Survey_on_Intersectional_Fairness_in_Machine.md. audit=P-pending. Stage-1b confirmed 2026-07-18. Zotero key: VFD9ENG6."
 }

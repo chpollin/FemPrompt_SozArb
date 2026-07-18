@@ -8,6 +8,8 @@ language: en
 source_distillate: "generated/distilled/Tint_2025_Guardrails,_not_guidance_Understanding_responses.md"
 migrated: 2026-07-17
 audit: clean
+audit-stage1b: "bestätigt 2026-07-18, deterministisch (src/assess/waitlist_resolution.py)"
+reference: "research-vault/references/Tint_2025_Guardrails,_not_guidance_Understanding_responses.json"
 status: migrated
 references-to: 00_representation/
 ---

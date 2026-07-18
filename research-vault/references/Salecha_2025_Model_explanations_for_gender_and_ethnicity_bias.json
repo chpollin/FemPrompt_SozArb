@@ -4,8 +4,12 @@
   "title": "Model Explanations for Gender and Ethnicity Bias Mitigation in AI-Generated Narratives",
   "author": [
     {
-      "family": "Dimgba",
-      "given": "Martha Otisi"
+      "family": "Salecha",
+      "given": "A."
+    },
+    {
+      "family": "Srijith",
+      "given": "P. K."
     }
   ],
   "issued": {
@@ -16,5 +20,6 @@
     ]
   },
   "language": "en",
-  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Salecha_2025_Model_explanations_for_gender_and_ethnicity_bias.md. audit=P-pending."
+  "URL": "https://pdxscholar.library.pdx.edu/cgi/viewcontent.cgi?article=7888&context=open_access_etds",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Salecha_2025_Model_explanations_for_gender_and_ethnicity_bias.md. audit=P-pending. Stage-1b confirmed 2026-07-18. Zotero key: M7AGB7LI."
 }

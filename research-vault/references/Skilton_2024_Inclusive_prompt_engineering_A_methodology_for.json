@@ -1,0 +1,26 @@
+{
+  "id": "Skilton_2024_Inclusive_prompt_engineering_A_methodology_for",
+  "type": "paper-conference",
+  "title": "Inclusive Prompt Engineering: A Methodology for Hacking Biased AI Image Generation",
+  "author": [
+    {
+      "family": "Skilton",
+      "given": "R."
+    },
+    {
+      "family": "Cardinal",
+      "given": "A."
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2024
+      ]
+    ]
+  },
+  "language": "en",
+  "DOI": "10.1145/3641237.3691655",
+  "URL": "https://www.researchgate.net/publication/385325948_Inclusive_Prompt_Engineering_A_Methodology_for_Hacking_Biased_AI_Image_Generation",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Skilton_2024_Inclusive_prompt_engineering_A_methodology_for.md. audit=P-pending. Stage-1b resolved 2026-07-18. Zotero key: 6L85PRUW."
+}

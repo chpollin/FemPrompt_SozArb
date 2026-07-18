@@ -1,0 +1,36 @@
+{
+  "id": "Dixon_2018_Measuring_and_mitigating_unintended_bias_in_text",
+  "type": "paper-conference",
+  "title": "Measuring and Mitigating Unintended Bias in Text Classification",
+  "author": [
+    {
+      "family": "Dixon",
+      "given": "Lucas"
+    },
+    {
+      "family": "Li",
+      "given": "John"
+    },
+    {
+      "family": "Sorensen",
+      "given": "Jeffrey"
+    },
+    {
+      "family": "Thain",
+      "given": "Nithum"
+    },
+    {
+      "family": "Vasserman",
+      "given": "Lucy"
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2018
+      ]
+    ]
+  },
+  "language": "en",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Dixon_2018_Measuring_and_mitigating_unintended_bias_in_text.md. audit=P-pending. Stage-1b resolved 2026-07-18."
+}

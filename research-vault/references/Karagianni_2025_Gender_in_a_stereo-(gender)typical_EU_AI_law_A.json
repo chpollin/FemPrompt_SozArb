@@ -5,7 +5,7 @@
   "author": [
     {
       "family": "Karagianni",
-      "given": "Anastasia"
+      "given": "A."
     }
   ],
   "issued": {
@@ -16,5 +16,7 @@
     ]
   },
   "language": "en",
-  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Karagianni_2025_Gender_in_a_stereo-(gender)typical_EU_AI_law_A.md. audit=P-pending."
+  "DOI": "10.1017/cfl.2025.12",
+  "URL": "https://www.cambridge.org/core/journals/cambridge-forum-on-ai-law-and-governance/article/gender-in-astereogendertypical-eu-ai-law-a-feminist-reading-of-the-ai-act/E9DEFC1E114CBE577D737EC616610921",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Karagianni_2025_Gender_in_a_stereo-(gender)typical_EU_AI_law_A.md. audit=P-pending. Stage-1b confirmed 2026-07-18. Zotero key: 7L93JBLR."
 }

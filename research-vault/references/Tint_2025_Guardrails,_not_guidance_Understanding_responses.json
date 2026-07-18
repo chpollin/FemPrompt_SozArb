@@ -1,11 +1,11 @@
 {
   "id": "Tint_2025_Guardrails,_not_guidance_Understanding_responses",
-  "type": "conferencePaper",
+  "type": "paper-conference",
   "title": "Guardrails, not Guidance: Understanding Responses to LGBTQ+ Language in Large Language Models",
   "author": [
     {
       "family": "Tint",
-      "given": "Joshua"
+      "given": "J."
     }
   ],
   "issued": {
@@ -16,5 +16,6 @@
     ]
   },
   "language": "en",
-  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Tint_2025_Guardrails,_not_guidance_Understanding_responses.md. audit=clean."
+  "URL": "https://aclanthology.org/2025.queerinai-main.2.pdf",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Tint_2025_Guardrails,_not_guidance_Understanding_responses.md. audit=clean. Stage-1b confirmed 2026-07-18. Zotero key: WLV8L8PM."
 }

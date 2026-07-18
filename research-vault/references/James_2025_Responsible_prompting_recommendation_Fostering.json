@@ -1,35 +1,23 @@
 {
   "id": "James_2025_Responsible_prompting_recommendation_Fostering",
-  "type": "conferencePaper",
+  "type": "paper-conference",
   "title": "Responsible Prompting Recommendation: Fostering Responsible AI Practices in Prompting-Time",
   "author": [
     {
-      "family": "Santana",
-      "given": "Vagner Figueredo de"
+      "family": "James",
+      "given": "P."
     },
     {
-      "family": "Berger",
-      "given": "Sara E"
+      "family": "Meeussen",
+      "given": "M."
     },
     {
-      "family": "Candello",
-      "given": "Heloísa Caroline"
+      "family": "Matthes",
+      "given": "I."
     },
     {
-      "family": "Machado",
-      "given": "Tiago"
-    },
-    {
-      "family": "Sanctos",
-      "given": "Cassia Sampaio"
-    },
-    {
-      "family": "Su",
-      "given": "Tianyu"
-    },
-    {
-      "family": "Williams",
-      "given": "Lemara"
+      "family": "Siemon",
+      "given": "D."
     }
   ],
   "issued": {
@@ -40,5 +28,6 @@
     ]
   },
   "language": "en",
-  "note": "Reference record for migrated distillate. Source distillate generated/distilled/James_2025_Responsible_prompting_recommendation_Fostering.md. audit=P-pending."
+  "DOI": "10.1145/3706598.3713365",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/James_2025_Responsible_prompting_recommendation_Fostering.md. audit=P-pending. Stage-1b confirmed 2026-07-18. Zotero key: CLKAD87H."
 }

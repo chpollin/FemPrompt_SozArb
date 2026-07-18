@@ -5,19 +5,19 @@
   "author": [
     {
       "family": "Kattnig",
-      "given": "Markus"
+      "given": "M."
     },
     {
       "family": "Angerschmid",
-      "given": "Alessa"
+      "given": "A."
     },
     {
       "family": "Reichel",
-      "given": "Thomas"
+      "given": "T."
     },
     {
       "family": "Kern",
-      "given": "Roman"
+      "given": "R."
     }
   ],
   "issued": {
@@ -28,5 +28,7 @@
     ]
   },
   "language": "en",
-  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Kattnig_2024_Assessing_trustworthy_AI_Technical_and_legal.md. audit=clean."
+  "DOI": "10.1016/j.clsr.2024.106053",
+  "URL": "https://graz.elsevierpure.com/ws/portalfiles/portal/89954869/1-s2.0-S0267364924001195-main.pdf",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Kattnig_2024_Assessing_trustworthy_AI_Technical_and_legal.md. audit=clean. Stage-1b confirmed 2026-07-18. Zotero key: 3QUWCYVW."
 }

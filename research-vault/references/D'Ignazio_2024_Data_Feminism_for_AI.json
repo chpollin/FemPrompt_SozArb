@@ -1,0 +1,26 @@
+{
+  "id": "D'Ignazio_2024_Data_Feminism_for_AI",
+  "type": "paper-conference",
+  "title": "Data Feminism for AI",
+  "author": [
+    {
+      "family": "Klein",
+      "given": "L."
+    },
+    {
+      "family": "D'Ignazio",
+      "given": "C."
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2024
+      ]
+    ]
+  },
+  "language": "en",
+  "DOI": "10.1145/3630106.3658543",
+  "URL": "https://doi.org/10.1145/3630106.3658543",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/D'Ignazio_2024_Data_Feminism_for_AI.md. audit=P-pending. Stage-1b resolved 2026-07-18. Zotero key: YMYHLMFS."
+}

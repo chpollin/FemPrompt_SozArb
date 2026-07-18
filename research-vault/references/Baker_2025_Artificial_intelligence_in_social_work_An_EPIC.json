@@ -5,7 +5,7 @@
   "author": [
     {
       "family": "Boetto",
-      "given": "Heather"
+      "given": "H."
     }
   ],
   "issued": {
@@ -16,5 +16,7 @@
     ]
   },
   "language": "en",
-  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Baker_2025_Artificial_intelligence_in_social_work_An_EPIC.md. audit=P-pending."
+  "DOI": "10.1080/0312407X.2025.2488345",
+  "URL": "https://doi.org/10.1080/0312407X.2025.2488345",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Baker_2025_Artificial_intelligence_in_social_work_An_EPIC.md. audit=P-pending. Stage-1b confirmed 2026-07-18. Zotero key: GXZWBNJU."
 }

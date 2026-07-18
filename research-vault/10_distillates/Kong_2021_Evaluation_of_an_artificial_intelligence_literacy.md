@@ -8,6 +8,8 @@ language: en
 source_distillate: "generated/distilled/Kong_2021_Evaluation_of_an_artificial_intelligence_literacy.md"
 migrated: 2026-07-17
 audit: P-pending
+audit-stage1b: "bestätigt 2026-07-18, deterministisch (src/assess/waitlist_resolution.py)"
+reference: "research-vault/references/Kong_2021_Evaluation_of_an_artificial_intelligence_literacy.json"
 status: migrated
 references-to: 00_representation/
 ---

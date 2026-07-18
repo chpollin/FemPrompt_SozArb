@@ -8,6 +8,8 @@ language: en
 source_distillate: "generated/distilled/Pinski_2024_AI_Literacy_for_the_top_management_An_upper.md"
 migrated: 2026-07-17
 audit: P-pending
+audit-stage1b: "bestätigt 2026-07-18, deterministisch (src/assess/waitlist_resolution.py); Rescue-Tiers: skeleton"
+reference: "research-vault/references/Pinski_2024_AI_Literacy_for_the_top_management_An_upper.json"
 status: migrated
 references-to: 00_representation/
 ---

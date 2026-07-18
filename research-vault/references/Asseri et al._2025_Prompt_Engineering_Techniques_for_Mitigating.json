@@ -1,0 +1,30 @@
+{
+  "id": "Asseri et al._2025_Prompt_Engineering_Techniques_for_Mitigating",
+  "type": "report",
+  "title": "Prompt Engineering Techniques for Mitigating Cultural Bias Against Arabs and Muslims in Large Language Models: A Systematic Review",
+  "author": [
+    {
+      "family": "Asseri",
+      "given": "B."
+    },
+    {
+      "family": "Abdelaziz",
+      "given": "E."
+    },
+    {
+      "family": "Al-Wabil",
+      "given": "A."
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2025
+      ]
+    ]
+  },
+  "language": "en",
+  "DOI": "10.48550/arXiv.2506.18199",
+  "URL": "https://doi.org/10.48550/arXiv.2506.18199",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Asseri et al._2025_Prompt_Engineering_Techniques_for_Mitigating.md. audit=clean. Stage-1b resolved 2026-07-18. Zotero key: Y4BMCI2J."
+}

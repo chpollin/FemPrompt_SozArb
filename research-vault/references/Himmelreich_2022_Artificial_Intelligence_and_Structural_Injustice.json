@@ -1,6 +1,6 @@
 {
   "id": "Himmelreich_2022_Artificial_Intelligence_and_Structural_Injustice",
-  "type": "conferencePaper",
+  "type": "paper-conference",
   "title": "AI and Structural Injustice: Foundations for Equity, Values, and Responsibility",
   "author": [
     {
@@ -20,5 +20,5 @@
     ]
   },
   "language": "en",
-  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Himmelreich_2022_Artificial_Intelligence_and_Structural_Injustice.md. audit=clean."
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Himmelreich_2022_Artificial_Intelligence_and_Structural_Injustice.md. audit=clean. Stage-1b confirmed 2026-07-18."
 }

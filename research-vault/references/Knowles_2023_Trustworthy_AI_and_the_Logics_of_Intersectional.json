@@ -1,0 +1,34 @@
+{
+  "id": "Knowles_2023_Trustworthy_AI_and_the_Logics_of_Intersectional",
+  "type": "paper-conference",
+  "title": "Trustworthy AI and the Logics of Intersectional Resistance",
+  "author": [
+    {
+      "family": "Knowles",
+      "given": "B."
+    },
+    {
+      "family": "Fledderjohann",
+      "given": "J."
+    },
+    {
+      "family": "Richards",
+      "given": "J. T."
+    },
+    {
+      "family": "Varshney",
+      "given": "K. R."
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2023
+      ]
+    ]
+  },
+  "language": "en",
+  "DOI": "10.1145/3593013.3593986",
+  "URL": "https://doi.org/10.1145/3593013.3593986",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Knowles_2023_Trustworthy_AI_and_the_Logics_of_Intersectional.md. audit=P-pending. Stage-1b resolved 2026-07-18. Zotero key: XZ6Z8A9C."
+}

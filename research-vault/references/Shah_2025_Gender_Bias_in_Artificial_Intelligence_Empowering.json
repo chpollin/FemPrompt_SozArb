@@ -4,8 +4,12 @@
   "title": "Gender Bias in Artificial Intelligence: Empowering Women Through Digital Literacy",
   "author": [
     {
+      "family": "",
+      "given": ""
+    },
+    {
       "family": "Shah",
-      "given": "Syed Sibghatullah"
+      "given": "Syed"
     }
   ],
   "issued": {
@@ -16,5 +20,7 @@
     ]
   },
   "language": "en",
-  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Shah_2025_Gender_Bias_in_Artificial_Intelligence_Empowering.md. audit=P-pending."
+  "DOI": "10.70389/PJAI.1000088",
+  "URL": "https://premierscience.com/pjai-24-524/",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Shah_2025_Gender_Bias_in_Artificial_Intelligence_Empowering.md. audit=P-pending. Stage-1b confirmed 2026-07-18. Zotero key: BFG8VUK3."
 }

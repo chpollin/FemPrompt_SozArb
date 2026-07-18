@@ -5,15 +5,15 @@
   "author": [
     {
       "family": "Latif",
-      "given": "Ehsan"
+      "given": "E."
     },
     {
       "family": "Zhai",
-      "given": "Xiaoming"
+      "given": "X."
     },
     {
       "family": "Liu",
-      "given": "Lei"
+      "given": "L."
     }
   ],
   "issued": {
@@ -24,5 +24,6 @@
     ]
   },
   "language": "en",
-  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Latif_2023_AI_Gender_Bias,_Disparities,_and_Fairness_Does.md. audit=P-pending."
+  "URL": "https://arxiv.org/html/2312.10833v2",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Latif_2023_AI_Gender_Bias,_Disparities,_and_Fairness_Does.md. audit=P-pending. Stage-1b confirmed 2026-07-18. Zotero key: CSJS9JGH."
 }

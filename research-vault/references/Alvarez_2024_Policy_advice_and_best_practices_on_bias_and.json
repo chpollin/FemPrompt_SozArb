@@ -1,0 +1,50 @@
+{
+  "id": "Alvarez_2024_Policy_advice_and_best_practices_on_bias_and",
+  "type": "article-journal",
+  "title": "Policy advice and best practices on bias and fairness in AI",
+  "author": [
+    {
+      "family": "Alvarez",
+      "given": "J. M."
+    },
+    {
+      "family": "Bringas Colmenarejo",
+      "given": "A."
+    },
+    {
+      "family": "Elobaid",
+      "given": "A."
+    },
+    {
+      "family": "Fabbrizzi",
+      "given": "S."
+    },
+    {
+      "family": "Fahimi",
+      "given": "M."
+    },
+    {
+      "family": "Ferrara",
+      "given": "A."
+    },
+    {
+      "family": "",
+      "given": ""
+    },
+    {
+      "family": "Ruggieri",
+      "given": "S."
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2024
+      ]
+    ]
+  },
+  "language": "en",
+  "DOI": "10.1007/s10676-024-09746-w",
+  "URL": "https://link.springer.com/article/10.1007/s10676-024-09746-w",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Alvarez_2024_Policy_advice_and_best_practices_on_bias_and.md. audit=P-pending. Stage-1b resolved 2026-07-18. Zotero key: 5F7D9PEB."
+}

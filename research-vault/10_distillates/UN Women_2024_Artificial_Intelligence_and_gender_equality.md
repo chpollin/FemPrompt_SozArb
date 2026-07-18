@@ -8,6 +8,8 @@ language: en
 source_distillate: "generated/distilled/UN Women_2024_Artificial_Intelligence_and_gender_equality.md"
 migrated: 2026-07-17
 audit: P-pending
+audit-stage1b: "bestätigt 2026-07-18, deterministisch (src/assess/waitlist_resolution.py)"
+reference: "research-vault/references/UN Women_2024_Artificial_Intelligence_and_gender_equality.json"
 status: migrated
 references-to: 00_representation/
 ---

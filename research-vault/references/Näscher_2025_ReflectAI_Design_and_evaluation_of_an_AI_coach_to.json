@@ -1,6 +1,6 @@
 {
   "id": "Näscher_2025_ReflectAI_Design_and_evaluation_of_an_AI_coach_to",
-  "type": "conferencePaper",
+  "type": "paper-conference",
   "title": "Electronic Participation: 17th IFIP WG 8.5 International Conference, ePart 2025 Krems, Austria, August 31 - September 4, 2025 Proceedings",
   "author": [
     {
@@ -44,5 +44,5 @@
     ]
   },
   "language": "en",
-  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Näscher_2025_ReflectAI_Design_and_evaluation_of_an_AI_coach_to.md. audit=clean."
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Näscher_2025_ReflectAI_Design_and_evaluation_of_an_AI_coach_to.md. audit=clean. Stage-1b confirmed 2026-07-18."
 }

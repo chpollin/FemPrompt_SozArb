@@ -8,6 +8,8 @@ language: en
 source_distillate: "generated/distilled/Salecha_2025_Model_explanations_for_gender_and_ethnicity_bias.md"
 migrated: 2026-07-17
 audit: P-pending
+audit-stage1b: "bestätigt 2026-07-18, deterministisch (src/assess/waitlist_resolution.py)"
+reference: "research-vault/references/Salecha_2025_Model_explanations_for_gender_and_ethnicity_bias.json"
 status: migrated
 references-to: 00_representation/
 ---

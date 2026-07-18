@@ -5,7 +5,7 @@
   "author": [
     {
       "family": "Ulnicane",
-      "given": "Inga"
+      "given": "I."
     }
   ],
   "issued": {
@@ -16,5 +16,6 @@
     ]
   },
   "language": "en",
-  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Ulnicane_2024_Artificial_Intelligence_and_Intersectionality.md. audit=P-pending."
+  "URL": "https://ecpr.eu/news/news/details/749",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Ulnicane_2024_Artificial_Intelligence_and_Intersectionality.md. audit=P-pending. Stage-1b confirmed 2026-07-18. Zotero key: SSH3LVN6."
 }

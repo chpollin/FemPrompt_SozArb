@@ -8,6 +8,8 @@ language: en
 source_distillate: "generated/distilled/Pan_2025_AI_literacy_and_trust_A_multi-method_study_of.md"
 migrated: 2026-07-17
 audit: P-pending
+audit-stage1b: "bestätigt 2026-07-18, deterministisch (src/assess/waitlist_resolution.py)"
+reference: "research-vault/references/Pan_2025_AI_literacy_and_trust_A_multi-method_study_of.json"
 status: migrated
 references-to: 00_representation/
 ---

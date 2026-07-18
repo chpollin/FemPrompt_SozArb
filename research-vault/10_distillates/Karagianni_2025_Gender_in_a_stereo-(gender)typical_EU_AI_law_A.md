@@ -8,6 +8,8 @@ language: en
 source_distillate: "generated/distilled/Karagianni_2025_Gender_in_a_stereo-(gender)typical_EU_AI_law_A.md"
 migrated: 2026-07-17
 audit: P-pending
+audit-stage1b: "bestätigt 2026-07-18, deterministisch (src/assess/waitlist_resolution.py)"
+reference: "research-vault/references/Karagianni_2025_Gender_in_a_stereo-(gender)typical_EU_AI_law_A.json"
 status: migrated
 references-to: 00_representation/
 ---

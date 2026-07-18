@@ -5,35 +5,27 @@
   "author": [
     {
       "family": "Steyvers",
-      "given": "Mark"
+      "given": "M."
     },
     {
       "family": "Tejeda",
-      "given": "Heliodoro"
+      "given": "H."
     },
     {
       "family": "Kumar",
-      "given": "Aakriti"
+      "given": "A."
     },
     {
       "family": "Belem",
-      "given": "Catarina"
+      "given": "C."
     },
     {
       "family": "Karny",
-      "given": "Sheer"
-    },
-    {
-      "family": "Hu",
-      "given": "Xinyue"
-    },
-    {
-      "family": "Mayer",
-      "given": "Lukas W."
+      "given": "S."
     },
     {
       "family": "Smyth",
-      "given": "Padhraic"
+      "given": "P."
     }
   ],
   "issued": {
@@ -44,5 +36,7 @@
     ]
   },
   "language": "en",
-  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Steyvers_2025_What_large_language_models_know_and_what_people.md. audit=P-pending."
+  "DOI": "10.1038/s42256-024-00976-7",
+  "URL": "https://www.nature.com/articles/s42256-024-00976-7",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Steyvers_2025_What_large_language_models_know_and_what_people.md. audit=P-pending. Stage-1b confirmed 2026-07-18. Zotero key: RXNXJA8W."
 }

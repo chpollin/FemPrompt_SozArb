@@ -8,6 +8,8 @@ language: en
 source_distillate: "generated/distilled/Ulnicane_2024_Artificial_Intelligence_and_Intersectionality.md"
 migrated: 2026-07-17
 audit: P-pending
+audit-stage1b: "bestätigt 2026-07-18, deterministisch (src/assess/waitlist_resolution.py)"
+reference: "research-vault/references/Ulnicane_2024_Artificial_Intelligence_and_Intersectionality.json"
 status: migrated
 references-to: 00_representation/
 ---

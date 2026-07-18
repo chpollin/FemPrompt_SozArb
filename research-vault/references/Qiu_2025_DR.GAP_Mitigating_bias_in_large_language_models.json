@@ -1,0 +1,33 @@
+{
+  "id": "Qiu_2025_DR.GAP_Mitigating_bias_in_large_language_models",
+  "type": "paper-conference",
+  "title": "DR.GAP: Mitigating Bias in Large Language Models using Gender-Aware Prompting with Demonstration and Reasoning",
+  "author": [
+    {
+      "family": "Qiu",
+      "given": "H."
+    },
+    {
+      "family": "Xu",
+      "given": "Y."
+    },
+    {
+      "family": "Qiu",
+      "given": "M."
+    },
+    {
+      "family": "Wang",
+      "given": "W."
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2025
+      ]
+    ]
+  },
+  "language": "en",
+  "URL": "https://arxiv.org/html/2502.11603v1",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Qiu_2025_DR.GAP_Mitigating_bias_in_large_language_models.md. audit=clean. Stage-1b resolved 2026-07-18. Zotero key: MTMU9UPJ."
+}

@@ -8,6 +8,8 @@ language: en
 source_distillate: "generated/distilled/Baker_2025_Artificial_intelligence_in_social_work_An_EPIC.md"
 migrated: 2026-07-17
 audit: P-pending
+audit-stage1b: "bestätigt 2026-07-18, deterministisch (src/assess/waitlist_resolution.py)"
+reference: "research-vault/references/Baker_2025_Artificial_intelligence_in_social_work_An_EPIC.json"
 status: migrated
 references-to: 00_representation/
 ---

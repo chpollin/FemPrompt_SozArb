@@ -8,6 +8,8 @@ language: en
 source_distillate: "generated/distilled/Singer_2023_AI_Creates_the_Message_Integrating_AI_Language.md"
 migrated: 2026-07-17
 audit: P-pending
+audit-stage1b: "bestätigt 2026-07-18, deterministisch (src/assess/waitlist_resolution.py); Rescue-Tiers: skeleton"
+reference: "research-vault/references/Singer_2023_AI_Creates_the_Message_Integrating_AI_Language.json"
 status: migrated
 references-to: 00_representation/
 ---

@@ -8,6 +8,8 @@ language: en
 source_distillate: "generated/distilled/Goldkind_2023_The_End_of_the_World_as_We_Know_It_ChatGPT_and.md"
 migrated: 2026-07-17
 audit: P-pending
+audit-stage1b: "bestätigt 2026-07-18, deterministisch (src/assess/waitlist_resolution.py)"
+reference: "research-vault/references/Goldkind_2023_The_End_of_the_World_as_We_Know_It_ChatGPT_and.json"
 status: migrated
 references-to: 00_representation/
 ---

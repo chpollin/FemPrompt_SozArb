@@ -1,0 +1,57 @@
+{
+  "id": "Kawakami_2022_Improving_human-AI_partnerships_in_child_welfare",
+  "type": "paper-conference",
+  "title": "Improving Human-AI Partnerships in Child Welfare: Understanding Worker Practices, Challenges, and Desires for Algorithmic Decision Support",
+  "author": [
+    {
+      "family": "Kawakami",
+      "given": "A."
+    },
+    {
+      "family": "Sivaraman",
+      "given": "V."
+    },
+    {
+      "family": "Cheng",
+      "given": "H.-F."
+    },
+    {
+      "family": "Stapleton",
+      "given": "L."
+    },
+    {
+      "family": "Cheng",
+      "given": "Y."
+    },
+    {
+      "family": "Qing",
+      "given": "D."
+    },
+    {
+      "family": "Perer",
+      "given": "A."
+    },
+    {
+      "family": "Wu",
+      "given": "Z. S."
+    },
+    {
+      "family": "Zhu",
+      "given": "H."
+    },
+    {
+      "family": "Holstein",
+      "given": "K."
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2022
+      ]
+    ]
+  },
+  "language": "en",
+  "DOI": "10.1145/3491102.3517439",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Kawakami_2022_Improving_human-AI_partnerships_in_child_welfare.md. audit=P-pending. Stage-1b resolved 2026-07-18. Zotero key: JC7X3MM7."
+}

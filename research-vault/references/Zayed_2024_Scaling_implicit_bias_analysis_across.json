@@ -1,0 +1,21 @@
+{
+  "id": "Zayed_2024_Scaling_implicit_bias_analysis_across",
+  "type": "article-journal",
+  "title": "Scaling Implicit Bias Analysis across Transformer-Based Language Models through Embedding Association Test and Prompt Engineering",
+  "author": [
+    {
+      "family": "Zayed",
+      "given": "O."
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2024
+      ]
+    ]
+  },
+  "language": "en",
+  "URL": "https://www.mdpi.com/2076-3417/14/8/3483",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Zayed_2024_Scaling_implicit_bias_analysis_across.md. audit=P-pending. Stage-1b resolved 2026-07-18. Zotero key: UB9NK8KI."
+}

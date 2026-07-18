@@ -1,19 +1,19 @@
 {
   "id": "Ghosal_2025_Unequal_voices_How_LLMs_construct_constrained",
-  "type": "conferencePaper",
+  "type": "paper-conference",
   "title": "Unequal Voices: How LLMs Construct Constrained Queer Narratives",
   "author": [
     {
       "family": "Ghosal",
-      "given": "Atreya"
+      "given": "A."
     },
     {
       "family": "Gupta",
-      "given": "Ashim"
+      "given": "A."
     },
     {
       "family": "Srikumar",
-      "given": "Vivek"
+      "given": "V."
     }
   ],
   "issued": {
@@ -24,5 +24,6 @@
     ]
   },
   "language": "en",
-  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Ghosal_2025_Unequal_voices_How_LLMs_construct_constrained.md. audit=P-pending."
+  "URL": "https://arxiv.org/abs/2507.15585",
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Ghosal_2025_Unequal_voices_How_LLMs_construct_constrained.md. audit=P-pending. Stage-1b confirmed 2026-07-18. Zotero key: EMZ33KFH."
 }

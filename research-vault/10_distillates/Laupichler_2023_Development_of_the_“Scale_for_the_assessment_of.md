@@ -8,6 +8,8 @@ language: en
 source_distillate: "generated/distilled/Laupichler_2023_Development_of_the_“Scale_for_the_assessment_of.md"
 migrated: 2026-07-17
 audit: P-pending
+audit-stage1b: "bestätigt 2026-07-18, deterministisch (src/assess/waitlist_resolution.py)"
+reference: "research-vault/references/Laupichler_2023_Development_of_the_“Scale_for_the_assessment_of.json"
 status: migrated
 references-to: 00_representation/
 ---

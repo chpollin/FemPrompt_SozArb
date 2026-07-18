@@ -1,6 +1,6 @@
 {
   "id": "Srinivasan_2025_Mitigating_trust-induced_inappropriate_reliance",
-  "type": "conferencePaper",
+  "type": "paper-conference",
   "title": "Adjust for Trust: Mitigating Trust-Induced Inappropriate Reliance on AI Assistance",
   "author": [
     {
@@ -20,5 +20,5 @@
     ]
   },
   "language": "en",
-  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Srinivasan_2025_Mitigating_trust-induced_inappropriate_reliance.md. audit=P-pending."
+  "note": "Reference record for migrated distillate. Source distillate generated/distilled/Srinivasan_2025_Mitigating_trust-induced_inappropriate_reliance.md. audit=P-pending. Stage-1b confirmed 2026-07-18."
 }

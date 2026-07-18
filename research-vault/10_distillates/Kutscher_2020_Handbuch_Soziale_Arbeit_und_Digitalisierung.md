@@ -8,6 +8,8 @@ language: de
 source_distillate: "generated/distilled/Kutscher_2020_Handbuch_Soziale_Arbeit_und_Digitalisierung.md"
 migrated: 2026-07-17
 audit: P-pending
+audit-stage1b: "bestätigt 2026-07-18, deterministisch (src/assess/waitlist_resolution.py)"
+reference: "research-vault/references/Kutscher_2020_Handbuch_Soziale_Arbeit_und_Digitalisierung.json"
 status: migrated
 references-to: 00_representation/
 ---
