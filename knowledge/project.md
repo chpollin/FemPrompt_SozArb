@@ -88,9 +88,9 @@ The corpus was identified via four proprietary Deep Research systems (ChatGPT, C
 | Person | Role |
 |---|---|
 | Christopher Pollin | Technical infrastructure, pipeline |
-| Susi Sackl-Sharif | Human assessment, research lead |
-| Sabine Klinger | Human assessment |
-| Christina | Zotero curation, metadata |
+| Review lead (university partner) | Human assessment, research lead |
+| Reviewing expert (university partner) | Human assessment |
+| Research assistant (university partner) | Zotero curation, metadata |
 
 ## Theoretical framework
 
@@ -138,7 +138,7 @@ The design principle made concrete across the three phases:
 
 Phase 1, identification. The four LLM models decide which literature is found (automated cross-disciplinary search); the research assistant and researchers decide what is supplemented (manual search closes gaps); the research assistant decides duplicate removal (metadata matching).
 
-Phase 2, assessment. The experts (Sackl-Sharif, Klinger) make the binding include/exclude decision on domain knowledge and interpretive judgment; the LLM makes an exploratory decision for scalability and pattern recognition; both assign categories in parallel and independently, which is what enables the divergence analysis.
+Phase 2, assessment. The two reviewing experts make the binding include/exclude decision on domain knowledge and interpretive judgment; the LLM makes an exploratory decision for scalability and pattern recognition; both assign categories in parallel and independently, which is what enables the divergence analysis.
 
 Phase 3, synthesis. The LLM extracts (stage 1, probabilistic, scaling across the corpus); deterministic software formats (stage 2, no LLM, for reproducibility); the LLM verifies against the original full text (stage 3, with a verification mandate); a software rule escalates at low confidence (a threshold-based forward to a human).
 

@@ -61,7 +61,7 @@ Acceptance (three-surface IA): the sub-navigation has exactly three entries (Scr
 
 ## Anwendungsszenarien (Epics und User Stories)
 
-Usage scenarios in the form "As [role], who [context], I want [goal], so that [benefit]". Roles: the review lead (Sackl-Sharif), the reviewing experts (Sackl-Sharif, Klinger), the technical lead (Pollin), and an external reviewer or auditor. The stories were written by the technical lead as a user proxy and stay hypotheses until validated against how the colleagues actually work; ADR-019 ratifies in-tool screening as the binding path and keeps the Excel import bridge only as an entry seam, superseding the earlier reading that the in-tool model had been falsified (see [[plan]]). The simulated validation verdicts on these stories live in [[plan]] (simulated decisions).
+Usage scenarios in the form "As [role], who [context], I want [goal], so that [benefit]". Roles: the review lead, the reviewing experts (both university partners), the technical lead (Pollin), and an external reviewer or auditor. The stories were written by the technical lead as a user proxy and stay hypotheses until validated against how the colleagues actually work; ADR-019 ratifies in-tool screening as the binding path and keeps the Excel import bridge only as an entry seam, superseding the earlier reading that the in-tool model had been falsified (see [[plan]]). The simulated validation verdicts on these stories live in [[plan]] (simulated decisions).
 
 ### v4 core (current, evidence-grounded)
 
