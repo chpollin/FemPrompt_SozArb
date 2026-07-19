@@ -19,10 +19,10 @@ template:
   url: https://dhcraft.org/Promptotyping/promptotyping-document/specification
   alias: https://dhcraft.org/Promptotyping/#promptotyping-document-specification
 topics: ["[[Requirements Engineering]]", "[[Decision Records]]"]
-related: [project, data, design, standards, plan]
+related: [project, data, standards, plan, journal]
 ---
 
-This document is the substance layer for the **PRISMA screening tool**, a standalone, PRISMA-conformant screening instrument (`docs/prisma.html`, see ADR-008) linked from the Evidence Companion. The tool writes its data files directly into the connected project folder (File System Access); versioning happens outside the tool in GitHub Desktop (ADR-014, supersedes the in-tool Git surface of ADR-009). It has three sections with different update rhythms: Requirements (static, what the tool must do and for whom), Funktionsumfang (refactored per release, the current shape of the view and its modules), and Decisions (monotonically growing ADRs). Narrative usage scenarios are the Anwendungsszenarien section below; the data model lives in [[data]]; the standards being implemented are in [[standards]]. The four existing views (Knowledge Chat, Knowledge Graph, Categories, Corpus) are the reference layer documented in `CLAUDE.md`; this spec covers only the new working layer.
+This document is the substance layer for the **PRISMA screening tool**, a standalone, PRISMA-conformant screening instrument (`docs/prisma.html`, see ADR-008) linked from the Evidence Companion. It describes what the tool does, how it was decided, and how it looks. The tool writes its data files directly into the connected project folder (File System Access); versioning happens outside the tool in GitHub Desktop (ADR-014, supersedes the in-tool Git surface of ADR-009). It has these sections with different update rhythms: Requirements (static, what the tool must do and for whom), Anwendungsszenarien (the narrative usage scenarios), Funktionsumfang (refactored per release, the current shape of the view and its modules), the Designsystem (the UI and design language, tokens, epistemic principles, and open design questions), and Decisions (monotonically growing ADRs). The data model lives in [[data]]; the standards being implemented are in [[standards]]. The four existing views (Knowledge Chat, Knowledge Graph, Categories, Corpus) are the reference layer documented in `CLAUDE.md`; this spec covers only the new working layer.
 
 ## Anforderungen
 
@@ -93,7 +93,7 @@ Per ADR-012 the seven surfaces collapse into three, AI is strongly reduced, and 
 2. **PRISMA & Report** (the outputs): the PRISMA 2020 flow diagram, the checklist, and the disclosure generator in one place, generated from the screening. ADR-014 removed the agreement matrix and kappa as a surface; they survive only as functions feeding the disclosure line. Subsumes Flow, Checklist, Disclosure.
 3. **Daten & Repo** (sync): File System Access connect (write into the project folder), per-reviewer files, export/import. ADR-014 removed the in-tool Git workflow (versioning is in GitHub Desktop) and the Reviewers reconciliation section.
 
-Each view carries a one-line "what is this, what do I do here" header. The three surfaces are specified screen by screen in [[design]] section 5 (5A to 5D), matching the build.
+Each view carries a one-line "what is this, what do I do here" header. The three surfaces are specified screen by screen in the Designsystem section below (The three surfaces as built), matching the build. Note that ADR-020 supersedes this three-surface navigation: the record and the data functions become on-demand panels over a single Screening workspace; the surfaces' content is unchanged, only their placement and rank.
 
 The modules below describe the report and data parts (PRISMA Flow, Checklist, Disclosure, Data I/O) of the three-surface IA in application order. The Screening view is specified by FR-11 to FR-13 and the evidence model in [[data]]; its old v3 "Screening Workspace" and "Agreement Panel" modules were superseded by ADR-012/014 and survive only in the ADR log below.
 
@@ -136,6 +136,130 @@ Datengrundlage. Session JSON (full state), decision-log CSV, the Stage R seed da
 Interaktion. Import JSON/CSV, export session/log, load the seed corpus, autosave to localStorage.
 
 Grenzen. Sharing between colleagues is file-based (export then import), not live collaboration.
+
+## Designsystem
+
+The UI and design working layer for the tool. UI work proceeds from this section together with the Requirements above; it carries the current direction, the PRISMA essentials that drive the interface, the people it serves, the three surfaces as built, the design system proper, the epistemic principles, the tokens, the genesis of the design, and the open questions. Full standards detail lives in [[standards]], the data model in [[data]].
+
+### Current direction
+
+The tool is centred on evidence-grounded screening (ADR-012) and brings human and AI assessment together into a synthesis rather than scoring them against each other (ADR-014). Earlier iterations foregrounded the human-AI divergence study (blind reveal, kappa, matrix, reconciliation), which is the content of the paper and the Evidence Companion, not the work of the expert who wants to read literature fast. Three principles carry the current build.
+
+1. Evidence-grounded screening is the core. The screening view is built around the served knowledge document (`paper.knowledge_doc`, distilled, not raw full text, see [[data]]), an in-text and corpus-wide search, and pinning a search hit as a Beleg on a category. A category is not a bare checkbox, it carries the words that justify it, which is reproducible and matches the reviewing colleagues' method.
+2. AI is advisory and reduced. The AI proposal is an optional, collapsed suggestion, off by default; there is no blind reveal and no in-tool kappa or matrix. Each Beleg keeps a provenance tag, human or AI (ADR-015); the machine-extracted Kategorie-Evidenz preload was removed (ADR-022, supersedes ADR-018), and a reviewer pins from the KI-Extraktion layer as a clearly labelled AI provenance class that is shown and advisory but never sets a category, so machine text cannot flip the binding human decision (ADR-016).
+3. One workspace, the record and the data as on-demand panels. The seven v3 surfaces first collapsed to Screening, PRISMA & Report, and Daten & Repo (ADR-012), then merged into one Screening workspace with the record and the data functions as on-demand panels (ADR-020). The page wears the Companion design (white background, the rainbow accent bar, the shared header, navigation, and footer); versioning happens in GitHub Desktop, there is no in-tool Git surface.
+
+```
+SCREENING  ┌ corpus list + full-text search ┐  ┌ full text (formatted, searchable) ┐  ┌ categories + evidence ┐
+           │ filter: status / category      │  │ <mark>gender</mark> ... hits 3/7   │  │ Gender  ✓             │
+           │ search all texts: "gender"      │  │ "...gendered scripts of care..."   │  │  └ pin: "gendered..."  │
+           │ [paper 13/87]                   │  │ [next hit ↵]  [pin as evidence]    │  │ derived: INCLUDE       │
+           └─────────────────────────────────┘  └────────────────────────────────────┘  └───────────────────────┘
+PRISMA & REPORT   flow diagram · checklist · disclosure (auto)        DATEN & REPO   connect · reviewer file · export
+```
+
+The synthesis surface that brings human and AI Belege together is the next build; its level (per article, corpus-wide, or both) is the open KI1 decision (Open design questions below).
+
+### PRISMA essentials that drive the UI
+
+PRISMA is a reporting standard (make the selection process transparent and auditable), not a conduct standard, so the UI's job is to show the process honestly, not to automate judgement. The design-relevant distillation:
+
+- Flow diagram (PRISMA 2020). Three phases, Identification, Screening, Included. The 2009 standalone Eligibility box is gone, do not draw it. Each phase carries counts; exclusions carry reasons.
+- The signature requirement (PRISMA-trAIce R1). At every screening stage where AI was used, the flow diagram and text must distinguish records included or excluded by the AI tool from those decided by human reviewers, and report how many records the AI processed and with what outcome. This AI-versus-human split is the single most important visual in the tool. The adapted diagram adds separate fields for AI-excluded and human-excluded records and separates rule-based admin tools (deduplication) from evaluative AI.
+- Governance (RAISE). The UI embodies three principles. The human is accountable and their decision is binding; AI is used with human oversight; any AI that makes or suggests a judgement is fully disclosed. The binding human decision is always visually primary, the AI proposal visibly advisory and secondary, the provenance (model, version, prompt) shown.
+- Disclosure (PRISMA-trAIce M2/M3/M6/M8/M9 + RAISE Table 1). The tool emits a text block covering tool name, version, date, stage, task, prompt version, decoding parameters, confidence threshold, limitations, conflicts of interest. The agreement metrics it once carried are evaluated externally now (see The three surfaces as built, PRISMA & Report, and ADR-017).
+- Checklists. PRISMA 2020 and PRISMA-trAIce (each item with a priority level), a trackable list with per-item status and notes; some items auto-satisfy from session data.
+- The empirical heart. The project's finding is an asymmetric human-AI divergence, the LLM including more than the experts (the figures live in the data, `generated/benchmark-results/` and `docs/data/`, and the Evidence Companion that renders them). The UI treats this divergence as the product, not an error; it is visible only because AI and human decisions are recorded separately, which is exactly what R1 asks for. Divergence is a first-class, explorable state in the report layer, not the screening view.
+
+### Personas
+
+| Persona | Who | Primary need | Mode |
+|---|---|---|---|
+| Reviewing expert | reviewing experts | Screen each paper fast, independently, consistently | Keyboard-first, one paper at a time |
+| Review lead | review lead | Oversee the selection, see the flow, produce the report | Dashboard, read and export |
+| Technical lead | technical lead | Import batches, configure, generate disclosure, run the update | Data I/O and config |
+| External reviewer or auditor | journal referee, funder reviewer | Verify the AI use was reported responsibly | Read-only, checklist and flow |
+
+### The three surfaces as built
+
+These are the surfaces implemented in `docs/js/prisma.js` and `docs/css/prisma.css`. ADR-020 later merges them into one workspace with the record and the data as on-demand panels; the content described here is unchanged, only its placement and rank.
+
+#### Page shell
+
+Standalone page `docs/prisma.html` (ADR-008), wearing the Companion design since ADR-014: the shared header (title, subtitle, authors, the rainbow accent bar), the navigation identical on all five pages, and the shared footer, plus a thin repo-connection bar. `js/prisma-data.js` provides the `window.EC` shim over `research_vault_v2.json`. A sub-navigation with exactly three buttons, each followed by a one-line intro:
+
+- Screening: Volltext lesen und durchsuchen, Belege an Kategorien anheften, Include/Exclude entscheiden.
+- PRISMA & Report: PRISMA-2020-Fluss, Checkliste und Disclosure, aus dem Screening erzeugt.
+- Daten & Repo: Mit dem Projektordner verbinden, eine Datei pro Reviewer:in, Export/Import.
+
+There is no blind-mode toggle and no comparison surface. A persisted v3 surface id is normalised onto these three on load; ADR-020 further fixes the persisted surface id onto the single Screening workspace.
+
+#### Screening (default surface)
+
+The per-paper working surface, optimised for reading the document, finding the words that carry a category, and pinning them as evidence. Three panes in one grid.
+
+- Left, corpus navigator. A full-text search box over the whole corpus (FR-12, backed by `docs/data/fulltext_index.json`) plus the paper list with status dots (none, include, exclude) and a hit-count badge when a corpus query is active. Selecting a paper opens it; an active corpus term is carried into the in-text search.
+- Centre, reading column. Title and authors, a sticky in-text search bar (highlight all, step previous/next, hit counter, "Treffer anheften"), then the rendered document. The document is `paper.knowledge_doc` fetched on demand and rendered by the built-in minimal Markdown renderer (FR-11), splitting the paper layer from the machine-extraction layer at the first `## Kernbefund` heading with a Volltext / KI-Extraktion toggle (ADR-016). Where a local Docling conversion exists it is served as the Volltext layer (ADR-025); papers without either fall back to the abstract, marked by a `nur Abstract` pill.
+- Right, assessment. The ten category chips in two dimension groups (definitions on hover), the pinned Belege grouped by category with a per-Beleg human/KI marker, the derived three-way `(>=1 Technik) UND (>=1 Sozial)` decision with the reason-gated override (ADR-023, ADR-024), the exclusion-reason picker when the decision is Exclude, the binding "Entscheidung erfassen" action, an optional collapsed AI suggestion, and, on an Include record, the inline `AN_` analysis coding panel (FR-14, ADR-026).
+
+Evidence pinning (FR-13). Selecting a passage in the reading column, or pressing "Treffer anheften" on the active in-text hit, opens a category menu. A pin from the paper layer is `origin: human`, sets the category, and is the binding justification; a pin from the KI-Extraktion layer is `origin: ai`, is shown marked KI, and never sets a category (ADR-016). The contract is in [[data]].
+
+```
+SCREENING  ┌ Korpus + Volltext-Suche ┐  ┌ Titel · In-Text-Suche · Dokument ┐  ┌ Kategorien · Belege ┐
+           │ [Suche: "gender"]        │  │ ...gendered <mark>scripts</mark>  │  │ Technik  Sozial      │
+           │ ● Paper A      3×         │  │  of care...   [‹ 3/7 ›][anheften] │  │  Gender ✓            │
+           │ ○ Paper B                 │  │  [Volltext | KI-Extraktion]       │  │   └ "gendered..." M │
+           │ ● Paper C      1×         │  │  Text markieren → Beleg anheften  │  │ abgeleitet: INCLUDE  │
+           └───────────────────────────┘  └───────────────────────────────────┘  │ [Entscheidung] ↵     │
+                                                                                   │ ▸ KI-Vorschlag (adv) │
+                                                                                   └──────────────────────┘
+```
+
+#### PRISMA & Report
+
+The outputs, computed from the screening, not part of the working loop. Three sections: the PRISMA 2020 flow with the trAIce R1 AI-versus-human split, the PRISMA-trAIce checklist (auto-satisfied where the setup already meets an item), and the AI-disclosure generator (Markdown preview, copy, export). Since ADR-017 the disclosure no longer computes kappa or the matrix in-tool; it carries the trAIce M9/R2 item as a reference to an external benchmark evaluation. ADR-021 removed the perspective selector across reviewer tracks (reviewer identity is the Git commit author). The divergence itself is research material for the paper and Companion, not screening work. Under ADR-020 these three sections open as an on-demand record panel, not a coequal tab.
+
+#### Daten & Repo
+
+Sync. The `<kuerzel>.json` reviewer filename, the File System Access connect, reconnect, and reload that writes each reviewer file directly into the project folder, export and import as the all-browser fallback, and the decision-log CSV. ADR-014 removed the in-tool Git workflow (versioning is GitHub Desktop) and the reviewer reconciliation table; ADR-021 dropped the in-tool reviewer-identity form and moved provenance to the Git commit author, with a deterministic decisions file and a generated commit message. Under ADR-020 this opens as an on-demand data panel.
+
+### Design system proper
+
+The tool inherits the Companion frame and carries its own screening design language, ported from the PRISM design handoff (Design genesis below).
+
+- Typography. IBM Plex tri-family: Sans for the UI, Mono for ids and data, Serif for reading the document. The Companion uses IBM Plex Serif for headings and Inter for body; the tool page wears the Companion header.
+- Colour (OKLCH, semantic). Cool slate neutrals at very low chroma; functional accents at a shared chroma with hue carrying meaning, namely human and binding indigo, AI and advisory teal, include green, exclude red, divergence amber. Colour encodes the human-to-AI epistemic distinction consistently across components.
+- Structure and code. One IIFE module `docs/js/prisma.js`, `'use strict'`, talking to `window.EC`; the screening grid is `--pt-nav-w | 1fr | --pt-rail-w`; `pt-*` namespaced CSS variables; responsive collapse of the navigator to an icon rail; width tokens for a real fullscreen tool. No framework, no build tool, CDN libraries only.
+- Data access. `window.EC` over `research_vault_v2.json`; the corpus search index is `docs/data/fulltext_index.json`, loaded once and lazily.
+- Category system. The ten-category spectrum (`EC.CAT_COLORS`, the rainbow gradient in Gegenstand-to-Perspektive order); dimension grouping technology {AI_Literacies, Generative_KI, Prompting, KI_Sonstige}, social {Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness}.
+
+### Epistemic design principles
+
+Each operationalises the project's thesis (reliability as a property of the process) and the standards.
+
+1. Synthesis, not adversarial scoring. Human and AI assessment are brought together; the tool does not blend them into one number and no longer scores them against each other in the working view (ADR-014). Where they meet, each Beleg carries its provenance.
+2. The human decision is visually primary and binding. The binding decision is the loud element; the AI proposal is quiet, labelled, and advisory; a machine-sourced Beleg never enters the binding record (RAISE accountability, ADR-016).
+3. Provenance is always visible. Model, version, prompt version, and parameters travel with every AI proposal; each Beleg shows whether it is human or machine-sourced (PRISMA-trAIce M2/M6).
+4. Reporting is a by-product, not extra work. The flow, the checklist, and the disclosure assemble themselves from the act of screening; the user never feels they are doing PRISMA on the side.
+
+### Design genesis (the PRISM handoff)
+
+The screening design language did not start from scratch. A second, independent high-fidelity prototype of the instrument was produced in Claude Design from the same [[data]] model and handed off as a bundle (README, transcript, React source, reference screens). It was a design reference, not the shipped tool, a clickable React prototype consuming the data substrate verbatim, with fabricated seed papers, that demonstrated the interaction model and a rigorous OKLCH-plus-IBM-Plex design system.
+
+The decision (iteration v3) was to port its design language and interaction model onto the existing vanilla, Git-backed `docs/prisma.html` and keep React out, computing every metric live from the real corpus and the real per-reviewer data rather than from the prototype's hardcoded constants. Ported: the OKLCH token system and the IBM Plex tri-family, the three-pane workspace, the derived-decision-plus-explicit-override pattern with a required exclusion reason, the disclosure generator, and the checklist tracker with verbatim item text and priority. The v4 redesign (ADR-012) then recentred the panes on corpus search, reading, and evidence, removed the blind/reveal Agreement rail from the working view, and moved the comparison apparatus to the report layer, where ADR-014 and ADR-017 later removed it entirely. The fuller genesis of these iterations is in [[journal]].
+
+### The screening surface and the open evidence-basis item
+
+PRISM is the binding screening surface for the project (ADR-019), and the reviewing colleagues screen in the tool. The literature review counts as complete only once its data has passed through PRISM under PRISMA 2020 and PRISMA-trAIce, so the most built-out surface, evidence-grounded in-tool screening, is the colleagues' working path. The Excel import bridge (the P3 path, [[plan]]) survives as an entry and migration seam for a batch captured elsewhere, no longer as the canonical capture route. Two workflow questions stay open for the stakeholder meeting, the level of the synthesis surface (KI1, Open design questions below) and whether evidence pinning sits per decision or concentrates at reconciliation.
+
+The one substantive open methodological item is the evidence basis. What the screening surface renders and searches was originally the distilled knowledge document, not the raw text, and the project's own model-by-input experiment showed knowledge documents amplify the inclusion tendency. A Beleg pinned on a distillate inherits its framing. ADR-025 built the local full-text reading layer (gitignored, never published), so a reviewer on a local clone reads the real Docling text as the Volltext layer while the public site keeps the fallback; where only the distillate is read, the layer split (ADR-016) keeps the evidence basis auditable per Beleg.
+
+### Open design questions
+
+1. The synthesis surface level (KI1): per article, corpus-wide, or both. This gates the next build and is an operator decision.
+2. How loud divergence should be where it is shown in the report layer, a quiet badge or a deliberate pause.
+3. The ten category chips under repetition: two-row grid versus a compact dimension-split list, which reads faster.
+4. Responsive scope: is screening desktop-only, or is tablet review supported.
 
 ## Entscheidungen
 
@@ -327,7 +451,7 @@ Wahl. PRISM is the binding screening surface for the project, and the literature
 
 Begründung. The build already encodes this direction, so the ratification closes the gap between the documentation and the instrument rather than commissioning new code. One binding surface makes every decision auditable in one place and lets the conformant artifacts fall out of the data model by construction, which is the project's standing novelty claim ([[INDEX]] glossary, [[data]]). Routing the first round through the same gate as the update makes reproducibility a property the tool enforces rather than a claim asserted twice. The honest limits of the first round survive the change unchanged. The absent pre-registered protocol (PRISMA 2020 item 24 and trAIce M1) cannot be repaired by passing the data through the tool, because pre-specification is by definition prior; the corpus papers without a human decision, the papers with no served text, and the lost acquisition provenance stay named. Conformance therefore means full conformance for everything the gate now governs and an honestly gapped record for the items that are structurally unrepairable in retrospect.
 
-Effekt. Supersedes ADR-001 (the existing review is no longer a seeded case study but data carried through the gate) and the simulated Excel-capture and falsified-in-tool-screening decisions in [[plan]]. [[plan]] Stage R is reframed from a retrospective replay to the first real pass, and the Zielbild completion test is restated against the gate. The round-1 record is reframed from no-conformance to the gate-plus-named-gaps framing. [[standards]], [[methods]], [[design]], [[INDEX]], [[data]], and [[update-protocol]] are aligned in the same pass. The round-2 update ([[update-protocol]], Stage B) is unchanged in substance; it now reads as the second pass of one rule rather than the first conformant one. The colleague-facing capture question (do reviewers screen in the tool or import from Excel) is settled in favour of in-tool screening, with import as the seam; the per-story validation verdicts in [[plan]] stay simulated until the stakeholder meeting ratifies them in person.
+Effekt. Supersedes ADR-001 (the existing review is no longer a seeded case study but data carried through the gate) and the simulated Excel-capture and falsified-in-tool-screening decisions in [[plan]]. [[plan]] Stage R is reframed from a retrospective replay to the first real pass, and the Zielbild completion test is restated against the gate. The round-1 record is reframed from no-conformance to the gate-plus-named-gaps framing. [[standards]], [[methods]], [[INDEX]], [[data]], and [[update-protocol]] are aligned in the same pass. The round-2 update ([[update-protocol]], Stage B) is unchanged in substance; it now reads as the second pass of one rule rather than the first conformant one. The colleague-facing capture question (do reviewers screen in the tool or import from Excel) is settled in favour of in-tool screening, with import as the seam; the per-story validation verdicts in [[plan]] stay simulated until the stakeholder meeting ratifies them in person.
 
 ### ADR-020 One workspace, the record and the data functions as on-demand panels (supersedes the three-surface navigation of ADR-008/012)
 
@@ -391,15 +515,15 @@ Effekt. Implementiert (`src/publish/build_fulltext.py`; `docs/js/prisma.js` fetc
 
 ### ADR-026 Analysis coding captured in PRISM; Excel demoted to export format (resolves E4)
 
-Kontext. The coding concept ([[coding-concept]]) drafted the analysis coding as an Excel workflow with vocabulary enforcement at the P3 import bridge and evidence separately in PRISM, three places for one act. The tool already renders the full text, searches it, pins evidence with provenance, and persists binding records; the operator's guiding principle for the coding phase is a low workload for the coders.
+Kontext. The coding concept ([[update-protocol]]) drafted the analysis coding as an Excel workflow with vocabulary enforcement at the P3 import bridge and evidence separately in PRISM, three places for one act. The tool already renders the full text, searches it, pins evidence with provenance, and persists binding records; the operator's guiding principle for the coding phase is a low workload for the coders.
 
 Wahl. The analysis coding for included papers is captured in PRISM, inline in the existing single-workspace assessment column beneath the decision block, revealed on Include (FR-14, consistent with the one-workspace decision of ADR-020, no new tab or panel of coequal rank): the `AN_` fields as closed selections fed from `assessment/categories.yaml` v1.3 (unchanged, no amendment), a per-field nicht-entscheidbar capture (resolves E3 without a vocabulary change), notes, and Fundstellen from the existing evidence pins (resolves E8). The Excel in the `human_assessment.csv` schema remains the export and fallback format; the P3 bridge remains the entry seam for externally captured batches. The binding boundary is untouched: humans code, every machine contribution stays advisory (ADR-003).
 
 Begründung. Vocabulary enforcement moves to capture time, which the pre-registration expects; a closed selection cannot produce an invalid value. One instrument for reading, screening, and coding keeps the coders' workload low and the evidence chain in one place. Decided with the operator 2026-07-18.
 
-Effekt. Implementiert (2026-07-18, FR-14). `src/publish/build_analysis_fields.py` emits `docs/data/analysis_fields.json` from the frozen `analysis_fields` block, the single vocabulary source for the panel; `docs/js/prisma.js` adds the vocabulary loader and helpers (`sanitizeAnalysis`, `setAnalysis`, `analysisNotes`, `harmTypesHint`), the inline panel (`analysisPanelHtml`, rendered in `assessLockedHtml` only on Include and wired by `attachAnalysisPanel`), and the analysis export (`analysisCsv`, human_assessment.csv schema, `AN_` columns after Notes per update-protocol D); `docs/css/prisma.css` styles the panel; `tests/tests.js` Section K covers the acceptance, harness green (91 PRISM, up from 78). The build additions are pure, no existing prisma.js function changed, so the binding screening record is byte-identical: a session that codes nothing writes exactly the pre-FR-14 reviewer file. The Excel in the human_assessment.csv schema stays the export and fallback, the P3 bridge the entry seam. [[coding-concept]] v0.2 records the decisions; E1, E5, and E7 remain open with the coders.
+Effekt. Implementiert (2026-07-18, FR-14). `src/publish/build_analysis_fields.py` emits `docs/data/analysis_fields.json` from the frozen `analysis_fields` block, the single vocabulary source for the panel; `docs/js/prisma.js` adds the vocabulary loader and helpers (`sanitizeAnalysis`, `setAnalysis`, `analysisNotes`, `harmTypesHint`), the inline panel (`analysisPanelHtml`, rendered in `assessLockedHtml` only on Include and wired by `attachAnalysisPanel`), and the analysis export (`analysisCsv`, human_assessment.csv schema, `AN_` columns after Notes per update-protocol D); `docs/css/prisma.css` styles the panel; `tests/tests.js` Section K covers the acceptance, harness green (91 PRISM, up from 78). The build additions are pure, no existing prisma.js function changed, so the binding screening record is byte-identical: a session that codes nothing writes exactly the pre-FR-14 reviewer file. The Excel in the human_assessment.csv schema stays the export and fallback, the P3 bridge the entry seam. [[update-protocol]] v0.2 records the decisions; E1, E5, and E7 remain open with the coders.
 
 ## Was nicht reingehört
 
-Architecture (stack, data flow, module boundaries) belongs in a future `architecture.md`; the data model belongs in [[data]]; design tokens and UI patterns belong in [[design]]; the standards themselves belong in [[standards]].
+Architecture (stack, data flow, module boundaries) belongs in a future `architecture.md`; the data model belongs in [[data]]; the standards themselves belong in [[standards]]. The design tokens and UI patterns are carried in the Designsystem section of this document; it is the visual and interaction brief, the bridge from the standards and the requirements to a buildable interface, and it does not restate the full PRISMA or PRISMA-trAIce text (see [[standards]]) or redefine the data schema (see [[data]]).
 

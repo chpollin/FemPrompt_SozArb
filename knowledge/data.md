@@ -220,5 +220,5 @@ A small build step (a `generate_*` script, to be added) maps these into the `Ses
 
 ## Was nicht reingehört
 
-Category definitions (canonical in `categories.yaml`), the pipeline that produces the offline AI assessments (in [[methods]]), and the UI that renders this data (in [[specification]] and a future `design.md`). This note describes the substrate, not the behaviour.
+Category definitions (canonical in `categories.yaml`), the pipeline that produces the offline AI assessments (in [[methods]]), and the UI that renders this data (in [[specification]], including its design system). This note describes the substrate, not the behaviour.
 

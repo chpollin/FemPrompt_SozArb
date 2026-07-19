@@ -7,7 +7,7 @@ status: in-Umsetzung
 
 # research-vault
 
-Dieser Top-Level-Ordner trägt das Gegenstandswissen des Reviews nach dem fünfstufigen Grounded-Vault-Modell mit Statusleiter und strenger Abwärts-Referenz. Der verbindliche Bauplan liegt in `knowledge/research-vault-plan.md`. Der Ordner steht neben `knowledge/` mit einer anderen Aufgabe. `knowledge/` trägt Steuerungswissen über die Arbeit, dieser Ordner trägt Gegenstandswissen darüber, was die Literatur zur Forschungsfrage sagt, mit welcher Beleglage und in welchem Prüfstatus. Die beiden Wissensarten bleiben getrennt, keine Ebene übernimmt Inhalt aus der jeweils anderen.
+Dieser Top-Level-Ordner trägt das Gegenstandswissen des Reviews nach dem fünfstufigen Grounded-Vault-Modell mit Statusleiter und strenger Abwärts-Referenz. Der verbindliche Bauplan liegt in `knowledge/research-vault.md`. Der Ordner steht neben `knowledge/` mit einer anderen Aufgabe. `knowledge/` trägt Steuerungswissen über die Arbeit, dieser Ordner trägt Gegenstandswissen darüber, was die Literatur zur Forschungsfrage sagt, mit welcher Beleglage und in welchem Prüfstatus. Die beiden Wissensarten bleiben getrennt, keine Ebene übernimmt Inhalt aus der jeweils anderen.
 
 ## Ebenen und Referenzrichtung
 

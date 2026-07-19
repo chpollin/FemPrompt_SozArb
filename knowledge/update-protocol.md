@@ -10,7 +10,7 @@ status: draft
 language: en
 version: "0.2"
 created: 2026-06-09
-updated: 2026-07-01
+updated: 2026-07-18
 authors: [Christopher Pollin]
 generated-with: Claude Code
 topics: ["[[Pre-Registration]]", "[[Coding Scheme]]"]
@@ -200,7 +200,7 @@ Closed value lists:
 
 ## B.1 Revision after the pilot (2026-07-17, FROZEN)
 
-Frozen 2026-07-17 by operator decision, together with section B, into `assessment/categories.yaml` as the `analysis_fields` block (v1.3, eligibility content unchanged from v1.2). The advisory pilot ([[analysis-fields-pilot]], eight papers, stratified) and the operator's clarification of the study goal (everything the corpus says about prompting matters, not only technique families) produced the following revisions. They amend sections B to D and are now binding for the round-2 screening.
+Frozen 2026-07-17 by operator decision, together with section B, into `assessment/categories.yaml` as the `analysis_fields` block (v1.3, eligibility content unchanged from v1.2). The advisory pilot (section E.1, eight papers, stratified) and the operator's clarification of the study goal (everything the corpus says about prompting matters, not only technique families) produced the following revisions. They amend sections B to D and are now binding for the round-2 screening.
 
 1. **New field `AN_Prompting_Role`** (multi): captures in which role prompting figures in the paper, independent of whether a technique family is codable. Codes: `Recommended_Practice` (the paper recommends or teaches prompting), `Research_Instrument` (prompts are used to elicit or measure model behaviour, e.g. bias probes), `Object_of_Critique` (prompting itself is analysed or criticized as a practice), `Learning_Content` (prompting as taught AI-literacy content), `None`. Rationale: the pilot showed papers with a clear prompting focus but no codable technique (prompts as bias-elicitation instrument); under the study goal these carry signal that `AN_Prompt_Techniques` alone loses.
 2. **`AN_Prompt_Techniques: None` is explicitly legitimate with `Prompting: Ja`.** The human category codes topical focus, the technique field codes named technique families; they measure different things. The concrete strategy behind a `General_Guidance` coding is preserved verbatim in `AN_Notes`.
@@ -242,18 +242,187 @@ Qualitative synthesis. A structured synthesis along SQ1 to SQ3, written as a kno
 
 The validation path before freeze ([[plan]] TP4 step 3): pilot the draft fields on a small stratified sample of already-included papers (strata: text availability, and Prompting yes/no), measure fill rate, collect ambiguity notes, revise definitions, then freeze.
 
-## F. Open decisions
+## E.1 Pilot findings
 
-1. Sub-question set: confirm, sharpen, or replace SQ1 to SQ3, and whether the gap map (SQ3) is a deliverable of the follow-up paper, the Fair Bench preparation, or both.
-2. Field set and obligation: confirm the seven fields; decide whether `AN_Harm_Types` is kept (proposed optional), dropped, or required.
-3. Encoding: semicolon multi-select versus one binary column per code.
-4. Retro-coding scope: update batch only, or also the first round's included papers, and if so who codes and on which text basis.
-5. Coding setup: single coder with spot checks, full dual coding, or single human coding plus an advisory LLM track (which would extend the dual-track design to the analysis layer and need its own pre-specified protocol).
-6. Vocabulary details: keep or revert the `Role_Persona` promotion; finalize `AN_Population`; decide whether `Other_Axis` stays or the axes list is extended after the pilot.
-7. Pilot parameters: sample size and strata, and the answerability threshold that forces a definition revision.
-8. Studientyp reuse: confirm the existing column, vocabulary-enforced, is the evidence-type field and no duplicate is added.
+The advisory pilot that fed the B.1 freeze, model Claude Opus, run 2026-07-17. The coding here was advisory and not binding; the binding coding is done later by humans in the Excel and PRISM workflow. It measured fill rate and decidability of the seven fields plus Studientyp against already-Include-coded papers, collected ambiguities, and derived the revision proposals that section B.1 froze.
+
+Sampling. The population is the papers with `Decision = Include` in `assessment/human_assessment.csv`. Two strata along the validation path, Prompting yes/no from the `Prompting` category column and text availability. Text availability separates papers with a present distillate under `generated/distilled/` from papers without one, for which only the abstract from the CSV is available. Full texts under `_sources/` were not present on this machine, so the deepest available text base was either the distillate (`Knowledge_Doc`) or the abstract (`Abstract`). Cell occupancy (snapshot, run 2026-07-17):
+
+| Cell | Prompting | Distillate | n |
+|---|---|---|---|
+| A | yes | present | 65 |
+| B | yes | absent | 4 |
+| C | no | present | 67 |
+| D | no | absent | 6 |
+
+All four cells were occupied by at least two, so no fill-up from a neighbouring cell was needed. The draw was deterministic, per cell the two alphabetically first by `Zotero_Key`, which makes the run reproducible. The drawn sample, eight papers:
+
+| Cell | Zotero_Key | Author_Year | Text base |
+|---|---|---|---|
+| A | 22KJL3PC | Yuan 2025 | Knowledge_Doc |
+| A | 22XEFRWP | Petzel 2025 | Knowledge_Doc |
+| B | 64DQYVVB | Liu 2025 | Abstract |
+| B | 6MJYP7ZX | Prakash 2023 | Abstract |
+| C | 2SLISKSW | McCrory 2024 | Knowledge_Doc |
+| C | 2SNYUZG4 | Yan 2024 | Knowledge_Doc |
+| D | CHJQ52DC | Latif 2024 | Abstract |
+| D | DWS4KXBW | Ovalle 2024 | Abstract |
+
+Fill rate per field, measured as the share of the eight papers with a non-`None` value (snapshot, run 2026-07-17):
+
+| Field | non-None | Fill rate |
+|---|---|---|
+| AN_Prompt_Techniques | 3/8 | 0.38 |
+| AN_Bias_Axes | 8/8 | 1.00 |
+| AN_Harm_Types | 8/8 | 1.00 |
+| AN_Mitigation_Stage | 7/8 | 0.88 |
+| AN_Mitigation_Status | 7/8 | 0.88 |
+| AN_Population | 8/8 | 1.00 |
+| Studientyp | 8/8 | 1.00 |
+
+Decidability by text base. `AN_Bias_Axes`, `AN_Population`, and `Studientyp` were decidable from every text base, including the abstract. `AN_Prompt_Techniques` was the hardest and least often evidenceable field; it was assignable only where a technique was named explicitly (Liu chain-of-thought, Prakash five named approaches, Yuan four named strategies), and fell to `None` for the four papers without a prompting focus. `AN_Harm_Types` reached full fill rate formally but had the lowest assignment certainty; the boundaries between `Stereotyping`, `Misrepresentation`, and `Disparate_Performance` were repeatedly not cleanly drawable from distillate and abstract. `AN_Mitigation_Stage` from the abstract was only coarsely decidable for Latif.
+
+Ambiguity list (carried forward at real coding time; a recurring ambiguity at one field is the signal for a definition sharpening by amendment):
+
+- **A1 Prompting yes without a codable technique.** Several `Prompting: Ja` papers use prompts as an investigative instrument without recommending or evaluating a technique. The human `Prompting` category and the `AN_Prompt_Techniques` field measure different things. Without clarification a systematically low and hard-to-interpret fill rate arises.
+- **A2 Harm types overlap.** `Stereotyping`, `Misrepresentation`, `Disparate_Performance`, and `Exclusionary_Norms` competed in five of the eight codings. From distillate or abstract the Gallegos definition (the exact harm mechanism) is often not decidable, because the mechanism is named only in the full text. The field is the least reliable at the current text base.
+- **A3 Review papers and rule 5.** For Prakash (Literaturreview) the five prompt techniques are the subject of the paper, not something the paper itself does. Rule 5 (code what the paper does, not what it cites) and the study type Literaturreview stand in tension. Without a special rule for reviews either reviews vanish under `None` or rule 5 is violated.
+- **A4 General_Guidance as a catch-all.** Yuan's four strategies are concrete, named, and evaluated interventions, but fall to `General_Guidance` for lack of a Prompt Report family, the least specific code. The most informative prompting paper of the sample loses its resolution in the technique field.
+- **A5 AN_Population outside social work.** Six of the eight papers are not social-work-specific. `Not_SW_Specific` carries the main load, while the fine-grained SW practice fields (Child_Family_Welfare, Homelessness_Youth, Social_Assistance_Admin) were not assigned once. Whether this is the sample or the corpus is not decidable at eight papers.
+- **A6 Education_Professional stretches.** Latif (grading student answers) and Yan (GenAI for learning) are education papers, not papers on professional continuing education. `Education_Professional` was meant for where the AI literacy literature lives, but here captures every education context and blurs.
+- **A7 Intersectional as a label.** McCrory and Ovalle treat intersectionality as an analytic frame. The rule requires at least two axes in their interaction. For McCrory this holds; for Ovalle the assignment rests on the programmatic naming, not a worked two-axis analysis; the boundary between real intersectional analysis and intersectional vocabulary is barely drawable from the abstract.
+
+Revision proposals from the pilot (advisory, informing the freeze, not replacing it; all are folded into the B.1 freeze above):
+
+1. **AN_Harm_Types to optional or drop** (informs open decision 2). The pilot confirms this field's lowest assignment certainty and its full-text dependence. Recommendation: keep it optional and make it binding only at text base `Fulltext`. Under distillate- and abstract-only coding it yields more noise than signal.
+2. **Separate prompting focus from prompting technique.** A short field or a rule that allows `AN_Prompt_Techniques = None` at `Prompting: Ja` and carries it as its own class (prompt as investigative instrument versus prompt as recommended practice). This makes the low fill rate interpretable instead of suspect.
+3. **Special rule for review study types.** For `Literaturreview` and `Konzept`, rule 5 should be relaxed so the synthesized techniques are codable as what the review collects, with a mark in the basis or notes field. Otherwise the very survey works that map the technique inventory most densely go invisible under `None`.
+4. **Keep the Role_Persona promotion** (informs open decision 6). Prakash evidences role and persona prompts as a standalone, repeatedly named category in the practice literature. The sample supports the promotion out of the zero-shot family, at one case.
+5. **Sharpen AN_Population** (informs open decision 6). Two adjustments. Restrict `Education_Professional` to profession-related AI-literacy contexts and consider a separate value for general education, since Latif and Yan otherwise miscategorize. Finalize the fine-grained SW practice fields only after a larger sample, since they were not hit once in eight papers and their discrimination is not testable here.
+6. **Keep Other_Axis for now** (informs open decision 6). In the sample every needed axis was covered by the existing list, `Other_Axis` was never used. That does not argue for an extension, but the sample is too small to drop it; keep it as a catch value until full coding.
+7. **Supplement General_Guidance with free text.** Where a named, evaluated strategy falls to `General_Guidance` (the Yuan case), the concrete strategy should be held in `AN_Notes` so the resolution is not lost. Alternatively examine a later refinement of the technique vocabulary by framing- and constraint-based strategies.
+
+## F. Open decisions and their resolution
+
+The design's open decisions and the coding-workflow decisions (E1 to E8, section G) are one ledger, kept coherent here. Decisions marked "simulated, ratifiable" follow the project's simulation convention ([[plan]], Simulated decisions): they are resolved from the documented roles and binding only after the reviewing colleague confirms them at the next real contact. A full ratification pass of the simulation ledger is in [[plan]].
+
+1. Sub-question set: confirm, sharpen, or replace SQ1 to SQ3, and whether the gap map (SQ3) is a deliverable of the follow-up paper, the Fair Bench preparation, or both. **Open.**
+2. Field set and obligation: confirm the seven fields; decide whether `AN_Harm_Types` is kept, dropped, or required. **Resolved 2026-07-17 (freeze B.1 point 3):** kept, optional, binding only where `AN_Coding_Basis = Fulltext`.
+3. Encoding: semicolon multi-select versus one binary column per code. **Resolved (section D):** semicolon multi-select as primary, enforced at the P3 bridge; the bridge can ingest either encoding.
+4. Retro-coding scope: update batch only, or also the first round's included papers, and if so who codes and on which text basis. **Simulated, ratifiable (E1):** staggered, update batch first, retro-coding of the round 1 includes as a separate later run once the update pass has stabilized the definitions; SQ1 to SQ3 are answerable on the update batch alone.
+5. Coding setup: single coder with spot checks, full dual coding, or single human coding plus an advisory LLM track. **Simulated, ratifiable (E1, E5):** one human coder per paper with the corpus split between R1 and R2, plus a pre-fixed stratified overlap sample both code independently, plus the advisory LLM track deferred (E6). The advisory LLM track extends the dual-track design to the analysis layer and needs its own pre-specified sub-protocol.
+6. Vocabulary details: keep or revert the `Role_Persona` promotion; finalize `AN_Population`; decide whether `Other_Axis` stays or the axes list is extended. **Resolved 2026-07-17 (freeze B.1 points 5, 6):** promotion kept, `Education_Professional` sharpened, `Other_Axis` kept; the fine-grained SW practice codes stay open until screening shows which fields occur.
+7. Pilot parameters: sample size and strata, and the answerability threshold that forces a definition revision. **Pilot done (section E.1); threshold simulated, ratifiable (E7):** a field enters the revision agenda when its ambiguity entries exceed roughly a quarter of the Include papers coded so far; crossing the threshold forces attention, not change, and R1 and R2 decide the revision because it would be a dated amendment of the frozen v1.3.
+8. Studientyp reuse: confirm the existing column, vocabulary-enforced, is the evidence-type field and no duplicate is added. **Resolved (section B, D):** confirmed, `Studientyp` reused and required for Include, no duplicate column.
+
+Two further capture-surface decisions from the coding workflow (section G):
+
+- Coding basis where no full text exists. **Resolved 2026-07-18 (E2):** the narrow reading, only the verified research-vault distillate counts as `Knowledge_Doc` basis, because only it carries a verified evidence chain.
+- Not-decidable handling and capture surface. **Resolved 2026-07-18 (E3, E4, E8):** capture is in PRISM, the analysis fields inline in the assessment column, appearing only at Include (ADR-026, FR-14 in [[specification]]); not-decidability is a per-field capture exported machine-countable, no new vocabulary code and no amendment; pinned evidence carries its source location, so SQ3 verbatims need no extra convention. The Excel schema (section D) stays as export and fallback.
 
 Grounding sources (accessed 2026-06-09): Schulhoff et al., "The Prompt Report", arXiv:2406.06608v6; Gallegos et al., "Bias and Fairness in Large Language Models: A Survey", Computational Linguistics 50(3) 2024, arXiv:2309.00770v3; Gardiner, O'Donoghue, Yeung, Jewel, "Social work practice and artificial intelligence: A scoping review", Aotearoa New Zealand Social Work 38(1) 2026.
+
+## G. Coding procedure
+
+This section carries the coding method over the frozen analysis fields (`assessment/categories.yaml` v1.3, the `analysis_fields` block including `AN_Prompting_Role`), the operational form of sections B, B.1, and C. It is a draft, not a setting; humans code bindingly, every machine contribution stays advisory, consistent with the project's responsibility asymmetry. The decisions E1 to E8 are collected in section H. Any change to field definitions or vocabularies after coding start would be a dated amendment of the pre-registration, not a silent adjustment.
+
+### G.1 Object and coding unit
+
+Only papers with a binding human Include are coded (coding rule 1); excluded papers get no analysis codes. The analysis corpus is the round 1 Include set plus what round 2 adds; whether the round 1 includes are retro-coded is E1 (open decision 4), staggered, update batch first.
+
+The coding unit is the paper per analysis field. Each field takes exactly one value or a semicolon-separated list from the closed vocabulary per paper; a finer segmentation of the text into coded passages is not required for the pre-registration's analysis layers (frequencies, co-occurrence, qualitative synthesis over SQ1 to SQ3) and would overrun the Excel workflow. The justification unit, separately, is the text passage. Where a coding decision is contested or load-bearing, the supporting passage is held, as a verbatim quote or precise reference in `AN_Notes`, or as a pinned evidence snippet where work runs in PRISM. For SQ3 the protocol requires collecting explicit adaptation statements verbatim through `AN_Notes` anyway.
+
+### G.2 Coding basis, full text against distillate
+
+Coding runs from the deepest available text, and the base actually read is held per paper in `AN_Coding_Basis` (`Fulltext`, `Knowledge_Doc`, `Abstract`; coding rule 2). The full text is the coding basis of choice where it lies in `generated/markdown_clean/` or over the local PRISM reading layer. Two fields depend on it especially, `AN_Harm_Types` is binding only at `AN_Coding_Basis = Fulltext` (freeze B.1 point 3), and the pilot found `AN_Prompt_Techniques` often unresolvable from weaker bases.
+
+The research-vault distillates are working material, not coding basis. They serve as an entry, for orientation, for quickly finding evidence passages, because their quote claims are checked against the full text (documented evidence chain, `audit` frontmatter). Three constraints ground the separation:
+
+1. The project's 2x2 experiment showed that knowledge documents inherit the framing of the distillation and reinforce the inclusion bias; a coding that reads only the distillate inherits that bias.
+2. The distillates in `generated/distilled/` still on the waitlist are unverified; their category evidence can contain paraphrase with a quote claim (the error class from [[research-vault]]).
+3. Even migrated research-vault distillates carry `status: migrated`, not `verified`; the binding human confirmation of the evidence chain is outstanding.
+
+Where no full text exists, the distillate or the abstract is the honestly documented basis, which is exactly what `AN_Coding_Basis` records.
+
+**E2 (resolved 2026-07-18, operator).** The narrow reading holds, only the verified research-vault version counts as `Knowledge_Doc` basis, because only it carries a verified evidence chain. The case stays rare, in the tool the full text is present for most papers.
+
+### G.3 Procedure per analysis field
+
+Recommended coding order per paper, first `AN_Prompting_Role`, because it fixes in which role prompting figures in the paper at all, then the remaining fields. The field rules from section C and B.1, summarized operationally:
+
+| Field | Rule core |
+|---|---|
+| `AN_Prompting_Role` (multi) | In which role prompting appears (recommended practice, research instrument, object of critique, learning content), independent of whether a technique family is codable |
+| `AN_Prompt_Techniques` (multi) | Only at a named or recognizably described concrete technique; `None` is legitimate at `Prompting: Ja` (B.1 point 2); the concrete strategy behind `General_Guidance` verbatim to `AN_Notes` |
+| `AN_Bias_Axes` (multi) | An axis only when the paper analyses bias along it, not at a mere demographic mention; `Intersectional` requires at least two axes in their interaction |
+| `AN_Harm_Types` (multi, optional) | Only named or demonstrated mechanisms, matched against the Gallegos definitions; binding only at full-text basis |
+| `AN_Mitigation_Stage` (multi) | Where the mitigation actually intervenes, not where it could |
+| `AN_Mitigation_Status` (single) | The highest level reached (Evaluated over Demonstrated over Proposed) |
+| `AN_Population` (multi) | The addressed setting, not the speculatively mentioned; `Education_Professional` narrow, only professional or higher-education AI-literacy contexts (B.1 point 5) |
+| `AN_Coding_Basis` (single) | The deepest text base actually read |
+| `AN_Notes` (free) | Justifications, verbatim strategies and statements, non-decidability |
+
+Across fields the coding rules 1 to 5 hold, in particular no empty cell (every field has `None`, an empty cell is a validation error at the import bridge) and code what the paper does, not what it cites. For `Studientyp` Literaturreview or Konzept the review special rule holds (B.1 point 4), the technique, harm, and mitigation inventory the review synthesizes is codable as the review's object; only incidental citation stays excluded.
+
+### G.4 Handling of Unclear cases
+
+Two levels are separated.
+
+Screening-Unclear. A paper with derived decision Unclear (three-level categories, ADR-024) is not coded. It gets analysis codes only when the binding human pass resolves it to Include, where needed through the justified override (ADR-023). A provisional coding of Unclear papers only creates values that would have to be deleted again at Exclude.
+
+Field-Unclear. `None` means the paper genuinely does not address the field's subject. If a field is not decidable from the available text base, `None` is not set; the non-decidability is held in `AN_Notes` with the field name (coding rule 2). The convention: one line per non-decidable field of the form `Feldname: nicht entscheidbar aus <Basis>` in `AN_Notes`, so the cases stay machine-countable and the fill rates interpretable, as the pilot did for `AN_Prompt_Techniques`. Ambiguities are collected, not silently decided. The pilot's ambiguity list (A1 to A7, section E.1) is carried forward at real coding; a recurring ambiguity at a field is the signal for a definition sharpening by amendment.
+
+**E3 (resolved 2026-07-18, operator).** No new vocabulary code and thus no amendment, the frozen v1.3 stays untouched. Non-decidability is held in the PRISM analysis panel as a per-field capture and exported machine-countable; the `AN_Notes` line of the form `Feldname: nicht entscheidbar aus <Basis>` stays the fallback for capture outside the tool.
+
+**E7 (simulated, ratifiable, 2026-07-18).** The pilot rule of thumb is taken as a trigger, not an automatism. A field enters the revision agenda when the carried-forward ambiguity list (A1 to A7 plus additions) carries an ambiguity entry for that field at more than roughly a quarter of the Include papers coded so far. The reference set is the running coding stock, not the whole corpus, so the threshold bites early. It is established by counting the machine-countable non-decidable and ambiguity capture per field (E3), which the operator delivers; the substantive revision R1 and R2 decide together, because a definition sharpening would be a dated amendment of the frozen v1.3. Crossing the threshold forces attention, not change; a field may stay unchanged after a justified review, then the finding stands as a consciously carried ambiguity in the list.
+
+### G.5 Double coding and consensus procedure
+
+The setup is E1/E5 (open decision 5), one human coder per paper, plus the advisory LLM track (deferred, E6), plus a double-coded human-human overlap sample. The draft takes it as a working hypothesis, because full double coding for two busy scientists is unrealistic and the overlap sample closes the missing inter-human baseline at limited cost.
+
+Concrete procedure:
+
+1. Split of the papers to be coded between R1 and R2; a pre-fixed, stratified overlap set both code independently, without knowledge of the other's coding.
+2. Agreement on the overlap set is reported per field, with the same decomposition framing as in screening (observed agreement before coefficients, never as an error rate of one coder; at multi-select fields agreement per code). Computed by committed scripts, never by hand.
+3. Divergent codes are resolved in a consensus session, analogous to the reconciliation of divergent screening decisions ([[plan]] B3, PRISMA-trAIce M8); the consensus value, the path to it, and the date are held. The consensus value replaces the single codes in the analysis data set, the single codes remain as raw data.
+4. Unresolvable divergence is a finding, not a failure; it is documented as such and enters the ambiguity list.
+
+**E1 (simulated, ratifiable, 2026-07-18).** Setup, each coder codes each paper as sole human coder, the analysis corpus is split between R1 and R2, plus the pre-fixed stratified overlap set (E5) both code independently. Split rule, deterministic and documented like the pilot draw, assignment of a paper to R1 or R2 by the parity of the `Zotero_Key` in stable sort, so the split is reproducible and fixed per paper without per-paper coordination; the overlap set is drawn before the split and assigned to both. The split rule is a load division, not a content criterion, and may be replaced at real contact by any other load-equal rule. Retro-coding of the round 1 includes does not run along but staggered after the update batch (linked to ledger decision 4), only once the update pass has stabilized the field definitions under real conditions; SQ1 to SQ3 are answerable on the update batch alone, retro-coding raises coverage and sharpness of the gap map but doubles the load before proven definitions. Consequence for tool and protocol: PRISM captures one human coding per Include paper with a coder id (R1, R2) analogous to the screening reviewer id; the staggered retro-coding is carried as its own, later coding run in the protocol, not as a precondition of the update pass.
+
+**E5 (simulated, ratifiable, 2026-07-18).** Size as a share, not a drifting absolute, the overlap set spans roughly a fifth of the Include papers to be coded, with a lower bound of at least two papers per occupied stratum, so each stratum can carry an agreement at all. Strata analogous to the pilot, the cross of Prompting yes/no (`Prompting` category column) and text base (full text or deepest available distillate against abstract); the draw per stratum is deterministic by `Zotero_Key`, as in the pilot, and committed before coding start, so the overlap set is fixed in advance and not chosen retrospectively. Reporting set of the agreement measures per field, in the project's decomposition framing, observed agreement first, then the coefficients, never a coefficient alone and never as an error rate of one coder. At single-select fields observed agreement plus Cohen's kappa and PABAK; at multi-select fields agreement per code (pairwise yes/no per code over the overlap set), never over the field as a whole, because a multi-select field carries no single value per paper. Unresolvable divergence after the consensus session is a finding and enters the ambiguity list, not an error balance. Computed by committed scripts, never by hand, with the same discipline as the screening agreement metrics. Consequence for tool and protocol: PRISM holds R1's and R2's single codings on the overlap set separately, the consensus value from procedure step 3 replaces them in the analysis data set, the single codes remain as raw data; the agreement script reads the coder-separated exports.
+
+**E6 (deferred 2026-07-18).** The advisory LLM coding track is not a precondition of the main coding and runs only if it demonstrably takes work off the coders. If it comes, it needs the protocol-named, pre-fixed sub-protocol (model version, prompt, parameters, committed before the run); without a protocol it does not run.
+
+### G.6 Documentation form of the coding decisions
+
+The capture location is the PRISM tool (E4, resolved 2026-07-18). The coding fields sit directly in the existing assessment column of the one working view, below the decision block, and appear only once the binding decision Include has fallen; no separate tab, no separate page. Captured per Include paper are the `AN_` fields as a closed selection directly from `assessment/categories.yaml` v1.3, with per-field non-decidability capture (E3), a notes field, and evidence locations from the existing evidence pins (E8). Vocabulary enforcement thus happens at capture time, as the pre-registration expects, a closed selection cannot produce an invalid value. The work package is held in [[specification]] as ADR-026 with FR-14; the panel must stand before coding starts, so the tool does not switch mid-pass.
+
+The Excel in the column schema of `assessment/human_assessment.csv` (extended by the `AN_` columns after `Notes`, section D) stays as export and fallback format; the P3 import bridge (split, trim, match against the list, empty-cell check for includes, visible import report, never silent acceptance) stays the entry seam for stock captured outside the tool. `categories.yaml` v1.3 is the one source panel, bridge, and export read from.
+
+**E8 (resolved by E4, 2026-07-18).** With capture in the PRISM tool, pinned evidence carries its source location automatically (marked passage with surrounding snippet); the pin is the source record for SQ3 verbatims, an extra manual convention drops out. Only for verbatims noted outside the tool the quote form in `AN_Notes` stays the fallback.
+
+The documented stock per coding decision:
+
+- the field value itself, vocabulary-validated at capture, exported to the committed CSV,
+- the text base in `AN_Coding_Basis`,
+- justifications and verbatim material in `AN_Notes`, non-decidability as a per-field capture,
+- at consensus cases the consensus record from G.5,
+- the pinned evidence with origin (`origin`) and source location as evidence anchor.
+
+## H. Coding decisions, collected
+
+Marker legend: "resolved" is operator-decided and binding; "simulated, ratifiable" follows the simulation convention ([[plan]], Simulated decisions), binding only after the reviewing colleague confirms at the next real contact ([[plan]]).
+
+| Id | Question | Status |
+|---|---|---|
+| E1 | Ratification of the coding setup (split, retro-coding) | simulated, ratifiable 2026-07-18; split by Zotero_Key parity, retro-coding staggered |
+| E2 | Distillate basis only in research-vault-verified version? | resolved 2026-07-18, narrow reading |
+| E3 | Non-decidability by notes convention or own code | resolved 2026-07-18, per-field capture in the tool, no amendment |
+| E4 | Capture location Excel alone or PRISM extension | resolved 2026-07-18, PRISM analysis panel (ADR-026), Excel as export |
+| E5 | Overlap size, strata, agreement reporting set | simulated, ratifiable 2026-07-18; roughly a fifth, pilot strata, per-field decomposition reporting set |
+| E6 | Advisory LLM coding track with own sub-protocol | deferred 2026-07-18 |
+| E7 | Binding ambiguity threshold for definition revisions | simulated, ratifiable 2026-07-18; quarter threshold as trigger, R1/R2 decide revision |
+| E8 | Source-location convention for SQ3 verbatims | resolved by E4, pins carry the source location |
 
 ---
 

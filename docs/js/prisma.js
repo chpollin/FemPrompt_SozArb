@@ -16,7 +16,7 @@
 // evidence map) into docs/data/screening/<reviewer>.json; versioning happens outside the
 // tool (GitHub Desktop), export/import fallback. Runs on prisma.html via the window.EC
 // shim from prisma-data.js.
-// See knowledge/design.md, knowledge/data.md, knowledge/specification.md.
+// See knowledge/specification.md (requirements, ADRs, design system), knowledge/data.md.
 
 (function() {
 'use strict';

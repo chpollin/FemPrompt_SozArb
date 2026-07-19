@@ -18,7 +18,7 @@ created: 2026-06-29
 updated: 2026-07-18
 authors: [Christopher Pollin]
 generated-with: Claude Code
-related: [project, methods, specification, data, design, plan, journal, standards, conformance-map, update-protocol, research-vault-plan, distillate-check-plan, analysis-fields-pilot, workflow, coding-concept]
+related: [project, methods, specification, data, standards, plan, journal, update-protocol, research-vault]
 ---
 
 This is the knowledge base of FemPrompt SozArb, a systematic literature review on feminist AI literacy and LLM bias in social work and the epistemic infrastructure built around it. It documents the conducted review and its benchmark, the PRISM screening tool, which is the binding screening surface the review is carried through (ADR-019), and the plan for the literature update. Concrete numbers do not live here. The benchmark figures live in the data (`generated/benchmark-results/`, `docs/data/`), the corpus and screening data in `docs/data/` and `assessment/`, and the Evidence Companion (https://chpollin.github.io/FemPrompt_SozArb/) renders them. This index shows where each piece of knowledge lives, in what order to read, and what the constitutive terms mean.
@@ -30,33 +30,27 @@ In function order, not alphabetical.
 | Document | Function | Update rhythm |
 |---|---|---|
 | [[project]] | Identity: goals, research questions, team, and the theoretical framework | rarely |
-| [[workflow]] | The conducted workflow as one chain, identification to research-vault, with tools, artifact locations, dated decisions, and the binding human stages | per stage completion |
-| [[methods]] | How the review was conducted: PRISMA deviation, dual assessment, the distillation pipeline | rarely |
-| [[specification]] | Substance of the PRISM tool: requirements, user stories, and the ADR decision log | per tool iteration |
+| [[methods]] | How the review was conducted: the chain from identification to research-vault, the distillation pipeline, the dual assessment, the PRISMA deviation, and the replay verification | rarely |
+| [[specification]] | The PRISM tool at one place: requirements, user stories, the ADR decision log, and the design system | per tool iteration |
 | [[data]] | The data substrate the PRISM tool consumes and produces | per schema change |
-| [[design]] | UI and design system of the PRISM tool | per design iteration |
-| [[plan]] | Forward steering: the staged roadmap, current status, and simulated decisions | per phase |
+| [[standards]] | The reporting standards implemented (PRISMA 2020, PRISMA-trAIce, RAISE), and this review's conformance state against them | rarely |
+| [[plan]] | Forward steering: the staged roadmap, current status, and the simulated decisions with their ratification | per phase |
 | [[journal]] | Genesis: the chronological session log with decisions and learnings | per session |
-| [[standards]] | The reporting standards implemented: PRISMA 2020, PRISMA-trAIce, RAISE | rarely |
-| [[conformance-map]] | Per-item conformance of this review against PRISMA 2020 and trAIce, with source paths and named gaps (R1) | per Stage R step |
-| [[update-protocol]] | The round-2 pre-registration protocol, the analysis-field design, the RIS procedure | until round 2 starts |
-| [[research-vault-plan]] | Plan for the `research-vault/` top-level folder carrying the object knowledge after the Grounded-Vault model; umgesetzt bis zur Claims-Ebene (`research-vault/README.md`, Register in den Ebenen) | until research-vault is grounded |
-| [[distillate-check-plan]] | Audit plan for the model-paraphrase-instead-of-quote error class (ADR-018); Stufe 1 und die deterministische Stufe 1b sind gelaufen (`src/assess/evidence_audit.py`, `src/assess/waitlist_resolution.py`), Stufe 3 steht aus | until stage 3 |
-| [[analysis-fields-pilot]] | Advisory LLM pilot of the analysis-field design on a stratified sample, feeding the freeze decision | until the freeze |
-| [[coding-concept]] | Qualitative coding concept over the frozen analysis fields (categories.yaml v1.3); E2, E3, E4, E8 decided 2026-07-18 (capture in the PRISM Analyse panel, ADR-026), E1, E5, E7 open with the coders | until the remaining coding decisions are ratified |
+| [[update-protocol]] | The round-2 pre-registration, the analysis-field design, the pilot findings, the coding procedure, and the RIS procedure | until round 2 starts |
+| [[research-vault]] | The Grounded-Vault layer model and the distillate audit as its migration precondition | until the research-vault is grounded |
 | [[guides/manual-review-checklist]] | The human-in-the-loop markdown review checklist | rarely |
 
 ## Reading paths
 
-- Onboarding a new collaborator: [[project]], [[workflow]], [[methods]], [[specification]].
-- Describe the method in the follow-up paper: [[workflow]] (the chain), [[methods]] (the depth), [[conformance-map]] (the gaps).
-- Prepare the qualitative coding: [[update-protocol]] (fields and rules), [[analysis-fields-pilot]], [[coding-concept]].
-- Inspect the benchmark: the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion.
-- Understand a tool decision: [[specification]] (the Entscheidungen / ADR section), [[journal]], [[design]].
+- Onboarding a new collaborator: [[project]], [[methods]], [[specification]].
+- Describe the method in the follow-up paper: [[methods]] (the chain and the depth, including the replay verification), [[standards]] (the conformance state and the named gaps).
+- Prepare the qualitative coding: [[update-protocol]] (fields, pilot findings, and coding procedure).
+- Inspect the benchmark: the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion; the replay in [[methods]].
+- Understand a tool decision: [[specification]] (the Entscheidungen / ADR section and the design system), [[journal]].
 - Understand the divergence (the motivating illustration): [[methods]].
-- Evaluate conformance: [[standards]] (the criterion), [[conformance-map]] (this review's per-item status).
+- Evaluate conformance: [[standards]] (the criterion and the per-item status; the machine-readable item status in `generated/conformance/conformance_map.yaml`).
 - Prepare the literature update: [[plan]] (Stage B), [[update-protocol]], [[standards]].
-- Understand the research-vault: [[research-vault-plan]] (the layered model), `research-vault/README.md` (the built skeleton and its status), [[distillate-check-plan]] (the precondition audit).
+- Understand the research-vault: [[research-vault]] (the layer model and the audit precondition), `research-vault/README.md` (the built skeleton and its status).
 
 ## Convention
 
@@ -119,7 +113,7 @@ A defined point in the workflow where human or rule-based control checks AI-gene
 
 ## What is missing and why
 
-- No `architecture.md`. The tool is a static vanilla-JS page with no backend; its construction is covered by [[specification]], [[data]], and [[design]], and the research pipeline by [[methods]].
+- No `architecture.md`. The tool is a static vanilla-JS page with no backend; its construction is covered by [[specification]] (requirements, ADR log, and design system) and [[data]], and the research pipeline by [[methods]].
 - No `testing.md`. The tool's behaviour tests live in `tests/` (a zero-dependency jsdom harness).
 - No `report.md` (a status report for an external recipient). The current state lives in [[plan]] and this index; a formal external report is deferred to the FFG report and the follow-up paper.
 - No numbers in the prose. Volatile quantities live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion, by convention.

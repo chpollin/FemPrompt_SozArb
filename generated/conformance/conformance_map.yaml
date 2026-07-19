@@ -1,0 +1,334 @@
+# conformance_map.yaml
+#
+# Machine-readable conformance status of this review against three reporting
+# standards: PRISMA 2020, PRISMA-trAIce, and RAISE. One entry per checklist
+# item, each carrying its status and either a repository source path or a
+# named gap. This is the item-level status substrate; the standards prose,
+# item text, priority levels, and citations live in knowledge/standards.md.
+#
+# R4 (Stage R record generation in knowledge/plan.md) consumes this file: it
+# fills both checklists from the per-item status and source_path here, the R2
+# replay supplies count-bearing values, and the conformance evaluation reads
+# the partial and gap rows as its honest-conformance section.
+#
+# Status vocabulary:
+#   reconstructable  - fully backed by committed data or documentation; for
+#                      count-bearing items the value falls out of the R2 replay
+#   partial          - part of the item is backed, a stated portion is missing
+#                      or not yet consolidated
+#   gap              - cannot be reconstructed from the recorded data; named,
+#                      not hidden
+#   not_applicable   - does not apply to this review type (qualitative field
+#                      review, screening and categorisation, no meta-analysis,
+#                      no per-study risk-of-bias appraisal, no effect measures,
+#                      no certainty rating)
+#
+# Count-bearing caveat: the retrospective flow counts and agreement figures
+# are reconstructable but not yet asserted by a committed replay; R2 must
+# supersede any hand recount before R4 publishes the record.
+
+prisma_2020:
+  - standard: PRISMA-2020
+    item_id: "1"
+    item_short: Title identifies the report as a systematic review
+    status: reconstructable
+    source_path: paper/ (Forum Wissenschaft, submitted and closed)
+    notes: ""
+  - standard: PRISMA-2020
+    item_id: "2"
+    item_short: Abstract, structured summary
+    status: reconstructable
+    source_path: paper/draft.md
+    notes: ""
+  - standard: PRISMA-2020
+    item_id: "3"
+    item_short: Introduction, rationale
+    status: reconstructable
+    source_path: knowledge/project.md, paper/draft.md
+    notes: ""
+  - standard: PRISMA-2020
+    item_id: "4"
+    item_short: Introduction, objectives and questions
+    status: reconstructable
+    source_path: knowledge/project.md, assessment/categories.yaml
+    notes: project.md holds the research questions; categories.yaml operationalises eligibility.
+  - standard: PRISMA-2020
+    item_id: "5"
+    item_short: Eligibility criteria
+    status: reconstructable
+    source_path: assessment/categories.yaml, knowledge/methods.md
+    notes: categories.yaml holds the ten categories and inclusion logic; methods.md holds exclusion reasons.
+  - standard: PRISMA-2020
+    item_id: "6"
+    item_short: Information sources
+    status: reconstructable
+    source_path: knowledge/methods.md (Phase 1), corpus/source_tool_mapping.json, corpus/deep-research/*.ris
+    notes: Four Deep Research systems plus manual search.
+  - standard: PRISMA-2020
+    item_id: "7"
+    item_short: Search strategy, full
+    status: partial
+    source_path: corpus/deep-research/literature-review-prompt.md (parametric template); prompts/CHANGELOG.md
+    notes: The instantiated round-1 prompts were not committed at run time and are partly lost.
+  - standard: PRISMA-2020
+    item_id: "8"
+    item_short: Selection process
+    status: reconstructable
+    source_path: knowledge/methods.md (Phase 2), assessment/human_assessment.csv, assessment/llm_assessment_10k.csv
+    notes: Dual track. PRISM is the binding screening surface (ADR-019).
+  - standard: PRISMA-2020
+    item_id: "9"
+    item_short: Data collection process
+    status: reconstructable
+    source_path: knowledge/methods.md (Phase 3, 3-stage SKE), src/distill/distill_knowledge.py, generated/distilled/
+    notes: ""
+  - standard: PRISMA-2020
+    item_id: "10"
+    item_short: Data items
+    status: reconstructable
+    source_path: assessment/categories.yaml, knowledge/methods.md (knowledge-document schema)
+    notes: ""
+  - standard: PRISMA-2020
+    item_id: "11"
+    item_short: Study risk-of-bias assessment
+    status: not_applicable
+    source_path: knowledge/methods.md (Quality assessment)
+    notes: No per-study RoB appraisal was conducted; appraisal standards were consulted but not applied per study.
+  - standard: PRISMA-2020
+    item_id: "12"
+    item_short: Effect measures
+    status: not_applicable
+    source_path: named gap (not applicable)
+    notes: No quantitative effect synthesis; field review, not an intervention meta-analysis.
+  - standard: PRISMA-2020
+    item_id: "13"
+    item_short: Synthesis methods
+    status: not_applicable
+    source_path: named gap (not applicable)
+    notes: No meta-analytic synthesis; the synthesis is the distillation pipeline and the category mapping, reported under items 9 and 10.
+  - standard: PRISMA-2020
+    item_id: "14"
+    item_short: Reporting-bias assessment
+    status: not_applicable
+    source_path: named gap (not applicable)
+    notes: No across-study reporting-bias assessment for this review type.
+  - standard: PRISMA-2020
+    item_id: "15"
+    item_short: Certainty assessment
+    status: not_applicable
+    source_path: named gap (not applicable)
+    notes: No GRADE or equivalent certainty rating.
+  - standard: PRISMA-2020
+    item_id: "16a"
+    item_short: Results, study selection flow
+    status: reconstructable
+    source_path: assessment/papers_full.csv, the screening CSVs
+    notes: Retrospective FlowModel; counts produced by the R2 replay.
+  - standard: PRISMA-2020
+    item_id: "16b"
+    item_short: Results, excluded studies with reasons
+    status: reconstructable
+    source_path: assessment/human_assessment.csv, knowledge/methods.md (controlled vocabulary)
+    notes: The data-hygiene caveat (out-of-vocabulary values) is handled at the P3 import.
+  - standard: PRISMA-2020
+    item_id: "17"
+    item_short: Study characteristics
+    status: reconstructable
+    source_path: generated/distilled/, docs/data/research_vault_v2.json
+    notes: ""
+  - standard: PRISMA-2020
+    item_id: "18"
+    item_short: Risk of bias in studies
+    status: not_applicable
+    source_path: see item 11
+    notes: ""
+  - standard: PRISMA-2020
+    item_id: "19"
+    item_short: Results of individual studies
+    status: reconstructable
+    source_path: docs/data/research_vault_v2.json
+    notes: Per-paper core finding and category evidence.
+  - standard: PRISMA-2020
+    item_id: "20"
+    item_short: Results of syntheses
+    status: not_applicable
+    source_path: Evidence Companion (Categories view)
+    notes: No statistical synthesis; the category-level pattern is rendered in the Evidence Companion.
+  - standard: PRISMA-2020
+    item_id: "21"
+    item_short: Reporting biases
+    status: not_applicable
+    source_path: see item 14
+    notes: ""
+  - standard: PRISMA-2020
+    item_id: "22"
+    item_short: Certainty of evidence
+    status: not_applicable
+    source_path: see item 15
+    notes: ""
+  - standard: PRISMA-2020
+    item_id: "23"
+    item_short: Discussion (summary, limitations, conclusions)
+    status: reconstructable
+    source_path: knowledge/project.md, knowledge/methods.md (Circularity as a field condition), paper/draft.md
+    notes: ""
+  - standard: PRISMA-2020
+    item_id: "24a-c"
+    item_short: Registration and protocol
+    status: gap
+    source_path: named gap; forward closure in knowledge/update-protocol.md
+    notes: No PROSPERO or OSF registration and no pre-specified protocol for round 1; the round-2 protocol is committed before any round-2 run.
+  - standard: PRISMA-2020
+    item_id: "25"
+    item_short: Support and funding
+    status: reconstructable
+    source_path: README.md
+    notes: Elisabeth List Fellowship, University of Graz.
+  - standard: PRISMA-2020
+    item_id: "26"
+    item_short: Competing interests
+    status: partial
+    source_path: named gap (partial)
+    notes: No consolidated competing-interests statement; the AI-tool conflict-of-interest declaration (RAISE Table 1) is not yet written.
+  - standard: PRISMA-2020
+    item_id: "27"
+    item_short: Availability of data, code, materials
+    status: reconstructable
+    source_path: the public repository and the Evidence Companion
+    notes: Raw full texts in generated/markdown_clean/ are not published for copyright reasons, stated as a deliberate limitation.
+
+prisma_traice:
+  - standard: PRISMA-trAIce
+    item_id: T1
+    item_short: Indicate AI assistance in title/subtitle
+    status: partial
+    source_path: named gap (partial); addressable in the disclosure
+    notes: The conducted review foregrounds AI assistance in its framing, not in the title proper.
+  - standard: PRISMA-trAIce
+    item_id: A1
+    item_short: Abstract-level summary of AI tools and stages
+    status: partial
+    source_path: named gap (partial); addressable in the disclosure
+    notes: The AI tools and stages are documented; a single abstract-level summary is addressable in the disclosure.
+  - standard: PRISMA-trAIce
+    item_id: I1
+    item_short: Rationale for using AI tools
+    status: reconstructable
+    source_path: knowledge/methods.md, knowledge/project.md
+    notes: The rationale is testing the technology, not reducing effort.
+  - standard: PRISMA-trAIce
+    item_id: M1
+    item_short: AI use pre-specified in protocol
+    status: gap
+    source_path: named gap; forward closure in knowledge/update-protocol.md
+    notes: AI use was not pre-specified in a round-1 protocol; the round-2 protocol pre-specifies it, closing the gap forward, not retrospectively. The central unrepairable retrospective gap.
+  - standard: PRISMA-trAIce
+    item_id: M2
+    item_short: Tool identity (name, version, provider)
+    status: reconstructable
+    source_path: knowledge/standards.md, knowledge/methods.md
+    notes: Claude Haiku 4.5 and Sonnet 4.6 (model IDs); four Deep Research systems for identification.
+  - standard: PRISMA-trAIce
+    item_id: M3
+    item_short: SLR stage and precise task
+    status: reconstructable
+    source_path: knowledge/methods.md
+    notes: Identification, Screening, Synthesis, each with its task documented.
+  - standard: PRISMA-trAIce
+    item_id: M4
+    item_short: Input data provided to the tool
+    status: reconstructable
+    source_path: assessment (Input_Source field per paper)
+    notes: Title-plus-abstract versus knowledge documents, tracked per paper; the 2x2 input experiment.
+  - standard: PRISMA-trAIce
+    item_id: M5
+    item_short: Output data format and post-processing
+    status: reconstructable
+    source_path: generated/distilled/_stage1_json/, src/distill/
+    notes: Structured JSON, per-category booleans, confidence scores; deterministic stage 2.
+  - standard: PRISMA-trAIce
+    item_id: M6
+    item_short: Prompt engineering and parameters
+    status: partial
+    source_path: prompts/ governance and prompts/CHANGELOG.md
+    notes: Decoding parameters (temperature, top-p, max tokens) and the confidence threshold are not yet disclosed.
+  - standard: PRISMA-trAIce
+    item_id: M7
+    item_short: Non-LLM tools, algorithms and settings
+    status: not_applicable
+    source_path: named gap (not applicable)
+    notes: No non-LLM evaluative classifier; deduplication is rule-based in Zotero and is reported as administrative, not evaluative.
+  - standard: PRISMA-trAIce
+    item_id: M8
+    item_short: Human-AI interaction and oversight
+    status: reconstructable
+    source_path: knowledge/methods.md
+    notes: Full dual track, human and LLM screening parallel and independent across the corpus, the expert decision binding; the project strength on this item.
+  - standard: PRISMA-trAIce
+    item_id: M9
+    item_short: Methods to evaluate AI performance
+    status: reconstructable
+    source_path: generated/benchmark-results/
+    notes: Confusion matrix, Cohen's kappa, base rates, divergence analysis, human consensus as the reference standard.
+  - standard: PRISMA-trAIce
+    item_id: M10
+    item_short: Data governance
+    status: reconstructable
+    source_path: .vault_cache/ (reproducible API cache), open repository
+    notes: The copyright limitation on raw texts is named.
+  - standard: PRISMA-trAIce
+    item_id: R1
+    item_short: Flow diagram, AI versus human split
+    status: partial
+    source_path: PRISM & Report surface (docs/prisma.html)
+    notes: The recorded AI and human decisions exist and the tool renders the adapted flow diagram (AI versus human split); the generated flow SVG and the paper text are produced by R4.
+  - standard: PRISMA-trAIce
+    item_id: R2
+    item_short: Results of AI performance evaluations
+    status: reconstructable
+    source_path: generated/benchmark-results/
+    notes: The benchmark is the performance evaluation; the paper text is produced by R4.
+  - standard: PRISMA-trAIce
+    item_id: D1
+    item_short: Limitations of AI use
+    status: reconstructable
+    source_path: knowledge/project.md, knowledge/methods.md
+    notes: Confabulation, context rot, sycophancy, the decomposed divergence as illustration.
+  - standard: PRISMA-trAIce
+    item_id: D2
+    item_short: The experience of using AI
+    status: reconstructable
+    source_path: knowledge/project.md, knowledge/journal.md
+    notes: The epistemic-infrastructure narrative.
+
+raise:
+  - standard: RAISE
+    item_id: P1
+    item_short: Accountability
+    status: reconstructable
+    source_path: knowledge/project.md (responsibility-asymmetry framing)
+    notes: Expert track epistemically binding.
+  - standard: RAISE
+    item_id: P2
+    item_short: Human oversight
+    status: reconstructable
+    source_path: knowledge/methods.md (dual track)
+    notes: Dual track, human decision binding.
+  - standard: RAISE
+    item_id: P3
+    item_short: Transparent reporting of AI judgements
+    status: partial
+    source_path: named gap (partial)
+    notes: Repo and prompt governance exist; a single consolidated AI-disclosure section is not yet written.
+  - standard: RAISE
+    item_id: Table-1-justification
+    item_short: Table 1 justification and validation
+    status: partial
+    source_path: generated/benchmark-results/
+    notes: The benchmark is the validation evidence; it needs explicit framing as the trAIce M9/R2 evaluation in the emitted methods text.
+  - standard: RAISE
+    item_id: Table-1-conflicts
+    item_short: Table 1 conflicts of interest
+    status: gap
+    source_path: named gap
+    notes: Not yet declared.

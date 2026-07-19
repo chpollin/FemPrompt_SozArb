@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Stage 1 of the distillate check plan (knowledge/distillate-check-plan.md).
+"""Stage 1 of the distillate check plan (knowledge/research-vault.md, section 2).
 
 Deterministic pre-screen of the category evidence in generated/distilled/ against
 the fulltext in generated/markdown_clean/. Reads the authoritative category
@@ -295,7 +295,7 @@ def main() -> None:
     lines = []
     lines.append("# Stage 1 deterministic pre-screen, evidence audit")
     lines.append("")
-    lines.append("Ausgabe des Prüfscripts src/assess/evidence_audit.py nach knowledge/distillate-check-plan.md, Stufe 1. Kandidaten, keine endgültigen Befunde.")
+    lines.append("Ausgabe des Prüfscripts src/assess/evidence_audit.py nach knowledge/research-vault.md Abschnitt 2, Stufe 1. Kandidaten, keine endgültigen Befunde.")
     lines.append("")
     lines.append("## Zählung")
     lines.append("")

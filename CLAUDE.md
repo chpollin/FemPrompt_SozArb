@@ -82,7 +82,7 @@ The benchmark (the human-LLM divergence and its decomposition, used as a motivat
 
 ### Knowledge documents
 
-`INDEX.md` (navigation and glossary), `project.md` (identity and theory), `methods.md` (review method and pipeline), `specification.md` (PRISM requirements, ADRs, user stories), `data.md` (tool data substrate), `design.md` (UI and design system), `plan.md` (roadmap, status, simulated decisions), `journal.md` (session log), `standards.md` (PRISMA, trAIce, RAISE), `conformance-map.md` (per-item PRISMA/trAIce conformance with source paths and named gaps, the R1 deliverable), `update-protocol.md` (round-2 protocol, analysis fields, RIS), `guides/manual-review-checklist.md`. Start at `INDEX.md`.
+`INDEX.md` (navigation and glossary), `project.md` (identity and theory), `methods.md` (review method, the chain, pipeline, dual assessment, replay verification), `specification.md` (PRISM requirements, ADRs, user stories, design system), `data.md` (tool data substrate), `plan.md` (roadmap, status, simulated decisions with ratification), `journal.md` (session log), `standards.md` (PRISMA, trAIce, RAISE, and this review's conformance state), `update-protocol.md` (round-2 protocol, analysis fields, pilot, coding procedure, RIS), `research-vault.md` (Grounded-Vault model and the distillate audit precondition), `guides/manual-review-checklist.md`. The per-item PRISMA/trAIce conformance status is a machine-readable artifact at `generated/conformance/conformance_map.yaml`, fed by the R4 replay. Start at `INDEX.md`.
 
 ### Key web files
 

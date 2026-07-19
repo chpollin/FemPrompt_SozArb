@@ -10,11 +10,11 @@ status: complete
 language: en
 version: "0.2"
 created: 2026-06-09
-updated: 2026-06-30
+updated: 2026-07-18
 authors: [Christopher Pollin]
 generated-with: Claude Code, deep-research web synthesis and full-text extraction of the primary sources
 topics: ["[[PRISMA]]", "[[Reporting Standards]]", "[[AI in Evidence Synthesis]]"]
-related: [specification, methods, conformance-map]
+related: [specification, methods]
 ---
 
 This note is the reporting-standards reference for the project. It covers PRISMA 2020 as the reporting backbone and the two 2025 frameworks that govern AI-assisted reviews, PRISMA-trAIce (how to document AI use) and RAISE (under what conditions AI use is permissible). It is the criterion the conducted review and the PRISM tool report against, and the canonical home for the standards' item counts and citations. All claims are sourced in the Sources section below.
@@ -108,7 +108,7 @@ The mandatory reporting elements (RAISE Table 1) are the AI system name(s), vers
 
 ## Mapping onto this project's workflow
 
-The dual assessment track and benchmark already satisfy most of the demanding requirements. The figures that back the "Satisfied" judgements live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion; this table states only the mapping and the status. Status values are Satisfied, Partial, or Gap. The full per-item conformance of this review, the complete PRISMA 2020 27-item checklist and all 17 trAIce items with source paths and named gaps, is in [[conformance-map]] (the R1 deliverable); this section is the AI-layer summary.
+The dual assessment track and benchmark already satisfy most of the demanding requirements. The figures that back the "Satisfied" judgements live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion; this table states only the mapping and the status. Status values are Satisfied, Partial, or Gap. This section is the AI-layer summary; the full per-item conformance lives in the artefact named under "Konformanzstand dieses Reviews".
 
 | Requirement | Project artefact | Status |
 |---|---|---|
@@ -127,6 +127,14 @@ The dual assessment track and benchmark already satisfy most of the demanding re
 | RAISE P3: transparent reporting of AI judgements | Repo and prompt governance, but no single consolidated AI-disclosure section yet | Partial |
 | RAISE Table 1: justification and validation evidence | The benchmark is the validation evidence; it needs explicit framing as such | Partial |
 | RAISE Table 1: conflicts of interest in AI tool | Not yet declared | Gap |
+
+## Konformanzstand dieses Reviews
+
+Der Item-für-Item-Status dieses Reviews gegen PRISMA 2020, PRISMA-trAIce und RAISE liegt als maschinenlesbares Artefakt in `generated/conformance/conformance_map.yaml`. Jeder Eintrag trägt Standard, Item-Kennung, Kurzbezeichnung, Status (reconstructable, partial, gap, not_applicable), Quellpfad oder benannte Lücke und die Nuance, die nicht in die Felder passt. R4 (Stage R der Datensatzerzeugung in [[plan]]) speist sich aus dieser Datei; die R2-Wiedergabe liefert die zählenden Werte, die Konformanzbewertung liest die partial- und gap-Zeilen als ihren Abschnitt zur ehrlichen Konformanz.
+
+Die zentrale, retrospektiv unreparierbare Lücke ist das fehlende Runde-1-Protokoll (PRISMA-trAIce M1, PRISMA 24a-c). Der KI-Einsatz war in Runde 1 nicht vorab spezifiziert; das Runde-2-Protokoll in [[update-protocol]] spezifiziert ihn vor jedem Lauf und schliesst die Lücke vorwärts, nicht rückwirkend.
+
+Die meta-analytischen PRISMA-Items sind für diesen Reviewtyp not_applicable. Als qualitatives Feld-Review mit Screening und Kategorisierung, ohne Meta-Analyse, ohne studienweise Risk-of-Bias-Bewertung, ohne Effektmasse und ohne Gewissheitsbewertung, treffen die Items 11 bis 15 sowie 18, 20, 21 und 22 nicht zu.
 
 ## Concrete improvements (the to-do list this yields)
 

@@ -1,0 +1,183 @@
+{
+  "inputs": {
+    "human_assessment": "human_assessment.csv",
+    "llm_assessment": "llm_assessment_10k.csv",
+    "papers_full": "papers_full.csv",
+    "raw_row_counts": {
+      "human": 303,
+      "llm": 326,
+      "papers_full": 326
+    }
+  },
+  "flow": {
+    "identification": {
+      "corpus_records": 326,
+      "by_item_type": {
+        "report": 69,
+        "journalArticle": 190,
+        "book": 6,
+        "conferencePaper": 43,
+        "bookSection": 10,
+        "blogPost": 1,
+        "thesis": 1,
+        "webpage": 5,
+        "document": 1
+      }
+    },
+    "duplicates": {
+      "flagged_in_corpus": 95,
+      "human_marked_duplicate": 67
+    },
+    "screening": {
+      "human_track": 303,
+      "llm_track": 326,
+      "paired": 291,
+      "human_only": 12,
+      "llm_only_no_human_decision": 35
+    },
+    "excluded_human_with_reasons": {
+      "No full text": 10,
+      "Other": 5,
+      "Duplicate": 67,
+      "Not relevant topic": 54,
+      "Wrong publication type": 17,
+      "(none)": 7,
+      "No relevant topic": 1
+    },
+    "included": {
+      "human_binding": 142,
+      "llm_advisory": 232
+    }
+  },
+  "stray_ha_resolution": {
+    "key": "2YS85B49",
+    "in_corpus": true,
+    "in_llm_track": true,
+    "in_human_track": false,
+    "papers_full_has_ha": "Yes",
+    "resolved_as_stray_flag": true
+  },
+  "decision_full": {
+    "n": 291,
+    "overall_agreement": 0.512,
+    "cohens_kappa": 0.0561,
+    "pabak": 0.0241,
+    "kappa_max": 0.5081,
+    "kappa_over_kappa_max": 0.1104,
+    "bias_index": 0.2543,
+    "confusion_matrix": {
+      "Include_Include": 100,
+      "Include_Exclude": 34,
+      "Include_Unclear": 0,
+      "Exclude_Include": 108,
+      "Exclude_Exclude": 49,
+      "Exclude_Unclear": 0,
+      "Unclear_Include": 0,
+      "Unclear_Exclude": 0,
+      "Unclear_Unclear": 0
+    }
+  },
+  "decision_content_only": {
+    "workflow_exclusions_removed": [
+      "Duplicate",
+      "No full text",
+      "Wrong publication type"
+    ],
+    "n": 199,
+    "overall_agreement": 0.6482,
+    "cohens_kappa": 0.194,
+    "pabak": 0.2965,
+    "kappa_max": 0.977,
+    "kappa_over_kappa_max": 0.1985,
+    "bias_index": 0.0101,
+    "confusion_matrix": {
+      "Include_Include": 100,
+      "Include_Exclude": 34,
+      "Include_Unclear": 0,
+      "Exclude_Include": 36,
+      "Exclude_Exclude": 29,
+      "Exclude_Unclear": 0,
+      "Unclear_Include": 0,
+      "Unclear_Exclude": 0,
+      "Unclear_Unclear": 0
+    }
+  },
+  "categories": {
+    "AI_Literacies": {
+      "n": 238,
+      "agreement": 0.7605,
+      "kappa": 0.488,
+      "human_yes_rate": 0.2605,
+      "agent_yes_rate": 0.4328
+    },
+    "Generative_KI": {
+      "n": 236,
+      "agreement": 0.7585,
+      "kappa": 0.5376,
+      "human_yes_rate": 0.572,
+      "agent_yes_rate": 0.3814
+    },
+    "Prompting": {
+      "n": 236,
+      "agreement": 0.8008,
+      "kappa": 0.5331,
+      "human_yes_rate": 0.3686,
+      "agent_yes_rate": 0.2203
+    },
+    "KI_Sonstige": {
+      "n": 235,
+      "agreement": 0.7702,
+      "kappa": 0.5355,
+      "human_yes_rate": 0.6383,
+      "agent_yes_rate": 0.5191
+    },
+    "Soziale_Arbeit": {
+      "n": 235,
+      "agreement": 0.9319,
+      "kappa": 0.8163,
+      "human_yes_rate": 0.2383,
+      "agent_yes_rate": 0.2468
+    },
+    "Bias_Ungleichheit": {
+      "n": 234,
+      "agreement": 0.7949,
+      "kappa": 0.4386,
+      "human_yes_rate": 0.7863,
+      "agent_yes_rate": 0.735
+    },
+    "Gender": {
+      "n": 234,
+      "agreement": 0.6795,
+      "kappa": 0.4074,
+      "human_yes_rate": 0.6111,
+      "agent_yes_rate": 0.3162
+    },
+    "Diversitaet": {
+      "n": 234,
+      "agreement": 0.7009,
+      "kappa": 0.4318,
+      "human_yes_rate": 0.6239,
+      "agent_yes_rate": 0.3932
+    },
+    "Feministisch": {
+      "n": 234,
+      "agreement": 0.9103,
+      "kappa": 0.7527,
+      "human_yes_rate": 0.2137,
+      "agent_yes_rate": 0.2607
+    },
+    "Fairness": {
+      "n": 234,
+      "agreement": 0.6923,
+      "kappa": 0.3875,
+      "human_yes_rate": 0.4915,
+      "agent_yes_rate": 0.6368
+    }
+  },
+  "data_hygiene": {
+    "out_of_vocabulary_exclusion_reasons": [
+      "No relevant topic",
+      "Other"
+    ]
+  }
+}
