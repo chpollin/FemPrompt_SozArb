@@ -24,6 +24,16 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## PRISM and the epistemic infrastructure (June 2026)
 
+### 2026-07-21 (Session 32, Lane TP6/Paper): Advisory-Track über den Korpus, Draft v0.3, TP3-Analysedokument
+
+- **Ziel:** Das Folgepaper ausarbeiten, den beratenden LLM-Track des TP4 vorziehen (SQ1 bis SQ3 über die destillierten Wissensdokumente der Human-Includes) und die Ergebnisse in Draft, Fragenkatalog und Wissensdokumenten verankern.
+- **Verlauf:** `src/analysis/build_advisory_manifest.py` mappt die Human-Includes auf Destillate (Manifest mit benannten Lücken); ein 21-Agenten-Workflow kodierte alle gemappten Papers nach dem eingefrorenen Feldset, synthetisierte je SQ Kandidaten-Claims und prüfte sie adversarial (Artefakte unter `generated/analysis-advisory/`). Parallel entstand [[analysis-divergence]] als lizenzierte TP3-Quelle aus den Replay-Outputs, und der Draft lief über v0.2 (Merge aus Outline, methoden.html, Abstract- und Titelrevision) zu v0.3.
+- **Operator-Entscheide (2026-07-21):** Titel revidiert auf "An Account of a Traceable, Reproducible, LLM-Assisted Qualitative Literature Review" (Konzept-Alternativen im Draft notiert); Register nüchtern, das Selbstkorrektur- und Scheiterns-Narrativ ist entfernt, Lücken bleiben als Konformanz-Angaben; PRISM ist das führende Element der Contribution; Runde 2 wird eingeplant; Venue-Richtung englischsprachiges Fachjournal, Erstwahl Journal of Technology in Human Services; Advisory-Bericht englisch, Fragenkatalog deutsch.
+- **Ergebnis:** [[analysis-sq-advisory]] (advisory, ungeprüft) mit Kandidaten-Claims, Gap-Map und Abschnitt-6-Gliederung; `paper/expert-questions.md` mit 19 Fragen fürs Google Doc; Draft v0.3; Statusvermerk im README von FAIR-SW-Bench (committet und gepusht im Schwesterrepo).
+- **Dead Ends und Befunde:** Der Workflow-Args-Parameter kam als String an, JSON.parse-Guard nötig. Die Duplicate-Title-Zuordnung hängt einzelne Destillate an zwei Zotero-Keys, als benannte Lücke im Advisory-Dokument nachgetragen. `origin/main` liegt 31 Commits voraus (TP4-Freeze, Runde-2-Lanes, ADR-026, research-vault), die lokale Lane 9 Commits; `knowledge/plan.md` wurde deshalb hier bewusst nicht angefasst, die Zusammenführung ist Operator-Entscheid, die Lane ist als Branch gesichert.
+
+---
+
 ### 2026-07-03 (Session 31): Drei Baustränge parallel, Replay skriptgestützt, P2-Rohtext gebaut, Onboarding-Seite
 
 - **Ziel:** Die nach dem Wegfall des Ratifikationsmechanismus nächsten Schritte umsetzen (R2-Replay, P2-Rohtextlesen, Onboarding für die Reviewerinnen) und einen Verifikations- und Validierungsplan aufstellen, der autonome Prüfung von menschenpflichtiger trennt.
