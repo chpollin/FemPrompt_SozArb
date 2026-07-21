@@ -78,3 +78,7 @@ generated/vault/.obsidian/
 
 # Node (test harness dev dependency only; the app under docs/ stays vanilla)
 node_modules/
+
+# Advisory-track intermediates (regenerable via src/analysis/build_advisory_manifest.py; merged into sq_extraction.json)
+generated/analysis-advisory/inputs/
+generated/analysis-advisory/extract/

@@ -1,0 +1,766 @@
+{
+  "provenance": {
+    "track": "advisory LLM, unreviewed",
+    "model": "Claude Opus (workflow agents)",
+    "run_id": "wf_1ad57a95-e54",
+    "date": "2026-07-21",
+    "inputs": "generated/analysis-advisory/inputs/ (section-filtered distilled knowledge documents)",
+    "coding_basis": "Knowledge_Doc"
+  },
+  "syntheses": {
+    "SQ1": {
+      "claims": [
+        {
+          "claim": "Two-thirds of the corpus engages no prompting technique at all: 87 of 129 papers are coded T=None. Prompt engineering is not the field's centre of gravity; the dominant object is organisational and governance-level response, not prompt-level intervention.",
+          "support_keys": [
+            "5G2QTZYD",
+            "ZJS2J7E7",
+            "H59BNSX8",
+            "Z9BIKVS3",
+            "LXKXPD5H",
+            "SS5HTYY6",
+            "GJF776AY",
+            "7L93JBLR"
+          ],
+          "strength": "strong",
+          "evidence_note": "Frequency over the whole coded corpus (87/129 None). Corroborated by stages: Organisational_Process 80 vs Prompt_Practice 31. The None papers span all study types and include every SW-practice-population paper except the technique papers named below."
+        },
+        {
+          "claim": "Where a technique is coded, an unnamed catch-all dominates and the named prompt-engineering taxonomy reaches the literature only as a thin front end. General_Guidance accounts for 28 of 42 technique-bearing papers; the named repertoire tapers sharply (ICL 9, Thought_Generation 9, Role_Persona 6, Self_Criticism 5, Ensembling 3, Decomposition 1). The compositional and agentic end of the repertoire (Decomposition, most Ensembling) is effectively absent.",
+          "support_keys": [
+            "ACDF4FL9",
+            "CYZQ6XPK",
+            "MTMU9UPJ",
+            "KNQYFQ6B",
+            "6MJYP7ZX",
+            "DUV4TUG3",
+            "YUVR5YNQ",
+            "LBLF9BCW"
+          ],
+          "strength": "strong",
+          "evidence_note": "Direct technique-frequency counts. Only ICL, Thought_Generation (CoT/System-2) and Role_Persona appear with any breadth; Decomposition rests on a single review paper (6MJYP7ZX, multi-step pipelines) and Ensembling on three, only two of which are bias-relevant (DUV4TUG3 self-voting, 3AHQEHDF multilingual aggregation; LBLF9BCW is a reasoning-only paper with no bias axis)."
+        },
+        {
+          "claim": "The named techniques cluster in experimental and empirical benchmark studies and mark the one corner of the corpus where mitigation is actually evaluated rather than merely proposed. In the Prompt_Practice stage, Evaluated (18) outweighs Proposed (8) and Demonstrated (5); this inverts the corpus-wide pattern, where Organisational_Process is Proposed 61 against Evaluated 8.",
+          "support_keys": [
+            "ACDF4FL9",
+            "Z4YXX9PZ",
+            "CYZQ6XPK",
+            "64DQYVVB",
+            "MTMU9UPJ",
+            "KNQYFQ6B",
+            "YUVR5YNQ",
+            "M7AGB7LI"
+          ],
+          "strength": "strong",
+          "evidence_note": "stages_by_status crossing (Prompt_Practice: 18/8/5) versus Organisational_Process (61/11/8). Per-paper: the ICL/Thought_Generation/Self_Criticism papers are almost all Studientyp Experimentell/Empirisch with St=Evaluated against named benchmarks (StereoSet, BBQ, WinoMT, MGBR, OpinionQA)."
+        },
+        {
+          "claim": "The evaluated prompt-technique evidence sits almost entirely outside social work. Every named-technique paper is coded Not_SW_Specific except one Education_Professional instance each for ICL/Thought_Generation/Role_Persona; no named technique is coded to any core SW-practice population (Child_Family_Welfare, Mental_Health, Social_Assistance_Admin all zero). Transfer of prompting into SW proper is confined to General_Guidance in education/AI-literacy settings plus two General_Social_Work items, and those are proposed rather than evaluated.",
+          "support_keys": [
+            "LGYFN6JK",
+            "UDZLIJWX",
+            "DGLWM93D",
+            "YRBP6IEJ",
+            "MTMU9UPJ",
+            "6L6WSDC8",
+            "3AHQEHDF"
+          ],
+          "strength": "strong",
+          "evidence_note": "techniques_by_populations: ICL/TG/Role/SC/Ensembling/Decomposition rows contain only Not_SW_Specific and single Education_Professional cells. The SW-facing technique papers are LGYFN6JK (Theoretisch, Proposed, 'explicitly ask for BIPOC scholars') and UDZLIJWX (Empirisch, Evaluated but a children's-literature/education setting framed as SW-relevant); DGLWM93D is SW higher education but only discusses CoT conceptually."
+        },
+        {
+          "claim": "The evaluated techniques target primarily single-axis gender and race stereotyping (with some representational erasure) and barely touch the intersectional, disability, socioeconomic and sexual-orientation harms the wider corpus foregrounds. Gender leads every technique row; Intersectional, Disability and Socioeconomic are near-zero for the named techniques.",
+          "support_keys": [
+            "CYZQ6XPK",
+            "KNQYFQ6B",
+            "64DQYVVB",
+            "ACDF4FL9",
+            "YUVR5YNQ",
+            "M7AGB7LI",
+            "MTMU9UPJ",
+            "3AHQEHDF"
+          ],
+          "strength": "strong",
+          "evidence_note": "techniques_by_axes: ICL Gender 7 / Intersectional 0 / Disability 1 / Socioeconomic 1; Thought_Generation Gender 6 / Intersectional 0 / Disability 0; Self_Criticism Gender 4 / Intersectional 1. Per-paper harm codes for the evaluated techniques are overwhelmingly Stereotyping, with representational Erasure in the diversity-prompting cluster (DUV4TUG3, 6L6WSDC8, 3AHQEHDF). The allocative Indirect_Discrimination that dominates SW-adjacent governance papers is essentially untested at the prompt level."
+        },
+        {
+          "claim": "Reported effectiveness is real but heterogeneous and internally contested. Primary experiments report bias reductions from roughly 12% to 87.7% (KNQYFQ6B ~12% on WinoMT, ACDF4FL9/Z4YXX9PZ ~13%, UB9NK8KI ~37%, MTMU9UPJ ~45%, 6MJYP7ZX up to 87.7%), several report only partial effect, and the field survey judges prompt-modification effectiveness limited. Metrics, models and benchmarks differ, so the numbers cannot be pooled or ranked.",
+          "support_keys": [
+            "KNQYFQ6B",
+            "ACDF4FL9",
+            "UB9NK8KI",
+            "MTMU9UPJ",
+            "6MJYP7ZX",
+            "64DQYVVB",
+            "MS3CNU3S",
+            "M7AGB7LI"
+          ],
+          "strength": "moderate",
+          "evidence_note": "Effect sizes taken from each paper's status evidence. Tension: 64DQYVVB explicitly finds CoT reduces bias 'teilweise, aber nicht vollstaendig'; MS3CNU3S (the Gallegos-lineage survey) reports 'Prompt-Modifikationen zeigen begrenzte Effektivitaet'. Heterogeneous instruments prevent a comparative claim; rated moderate for that reason."
+        },
+        {
+          "claim": "The Self_Criticism sub-cluster is the most coherent evaluated evidence: all five papers are coded Evaluated and converge on self-debiasing / self-critique loops that need no model access. This is the technique family with the cleanest empirical footing, though still entirely outside SW and single-axis-dominated.",
+          "support_keys": [
+            "YUVR5YNQ",
+            "DUV4TUG3",
+            "M7AGB7LI",
+            "MTMU9UPJ",
+            "6MJYP7ZX"
+          ],
+          "strength": "moderate",
+          "evidence_note": "5/5 Self_Criticism papers St=Evaluated: zero-shot self-debiasing via explanation/reprompting (YUVR5YNQ), collective-critique-and-self-voting CCSV (DUV4TUG3), model-explanation feedback loop (M7AGB7LI), DR.GAP verification/refinement (MTMU9UPJ), and self-debiasing as one of five reviewed approaches (6MJYP7ZX). Rated moderate: small n, all Not_SW_Specific, mostly gender."
+        },
+        {
+          "claim": "The General_Guidance code conflates two distinct things and should be split before it enters the paper: generic 'prompting literacy' mentions in AI-literacy/education papers (proposed, never evaluated) versus concrete but unnamed prompt manipulations that were actually evaluated for bias reduction. The bucket's 28 papers therefore do not represent one phenomenon.",
+          "support_keys": [
+            "I78CL6R5",
+            "KPSF8EZE",
+            "JMAWNUEV",
+            "K3YCLBXK",
+            "MJDTRLAI",
+            "22KJL3PC",
+            "UB9NK8KI",
+            "YMABYPKF"
+          ],
+          "strength": "moderate",
+          "evidence_note": "Literacy-mention side (St=Proposed, no measurement): I78CL6R5, KPSF8EZE, JMAWNUEV, K3YCLBXK, AXEIVEW3, 7G73H3KM, YTDMY5W4. Evaluated concrete-manipulation side: MJDTRLAI (prompt modifiers/sequencing, T2I), 22KJL3PC (four cultural-stereotype strategies), UB9NK8KI (37% genre-bias reduction), YMABYPKF (numerical anchors), RXNXJA8W (confidence calibration). An analytical/coding observation, hence moderate."
+        },
+        {
+          "claim": "Several technique codings are training-side prompt methods, not use-time prompt practice, so the technique inventory partly overstates what a practitioner can do at the prompt. Soft-prompt/prefix-tuning and continuous-prompt methods are coded under Role_Persona, Decomposition and General_Guidance but sit at In_Training/Intra_Processing.",
+          "support_keys": [
+            "RM833D5N",
+            "MIT8HTC6",
+            "6MJYP7ZX",
+            "JZN2I6J5"
+          ],
+          "strength": "moderate",
+          "evidence_note": "RM833D5N (Role_Persona, but implemented as prefix-tuning soft prompts, S=In_Training;Intra_Processing), MIT8HTC6 (General_Guidance = automatic prompt engineering plus fine-tuning, S=In_Training;Pre_Processing), 6MJYP7ZX (Decomposition set includes 'parameter-optimierte kontinuierliche Prompts' = soft-prompt tuning, In_Training). JZN2I6J5 shows the boundary handled correctly (prompt-tuning coded T=None). Moderate: rests on reading the coder's own answerability notes."
+        }
+      ],
+      "gaps": [
+        {
+          "gap": "No named prompt-engineering technique is evaluated in any core social-work practice setting. Child_Family_Welfare, Mental_Health and Social_Assistance_Admin have zero named-technique codings; the evaluated evidence is imported wholesale from general NLP benchmarks.",
+          "basis": "techniques_by_populations: all named-technique rows contain only Not_SW_Specific and single Education_Professional cells."
+        },
+        {
+          "gap": "Intersectional harm and prompt-technique mitigation almost never co-occur, although intersectionality is the corpus's third-most-coded axis (42 papers). The techniques the field can evaluate address the harms it foregrounds least.",
+          "basis": "techniques_by_axes Intersectional cells: ICL 0, Thought_Generation 0, Self_Criticism 1, General_Guidance 3, Role_Persona 2; against axes.Intersectional 42 overall."
+        },
+        {
+          "gap": "No shared benchmark or replication links the evaluated technique papers within this corpus, so relative effectiveness of ICL vs CoT vs Self_Criticism vs Ensembling cannot be established from the data; each paper uses its own metric and model set.",
+          "basis": "Per-paper status evidence lists mutually non-comparable benchmarks (StereoSet, BBQ, MGBR, WinoMT, OpinionQA, WEAT, People-Diversity) and metrics (Kendall-tau, McNemar, TVD/DPR, entropy, AccGap)."
+        },
+        {
+          "gap": "The compositional/agentic end of the repertoire is unrepresented: Decomposition rests on one paper and Ensembling on two bias-relevant ones. Whether multi-step or ensemble prompting helps with SW-relevant harms is untested here.",
+          "basis": "techniques frequency: Decomposition 1 (6MJYP7ZX), Ensembling 3 (DUV4TUG3, 3AHQEHDF, LBLF9BCW; the last has no bias axis)."
+        },
+        {
+          "gap": "13 of 142 human-included papers have no distilled document and are absent from this coding, so any technique that appears only in those papers is invisible to the inventory.",
+          "basis": "Stated P2 limitation in the task brief; coding covers 129 knowledge docs."
+        }
+      ],
+      "interpretive_questions": [
+        "Do benchmark effect sizes for gender/race stereotyping (StereoSet, BBQ, WinoMT, MGBR) transfer to the text genres social work actually produces, such as case notes, risk assessments and referral letters? This requires a domain judgment about task similarity that the coding cannot supply.",
+        "Is user-side prompt practice an ethically adequate mitigation locus for the allocative harms that dominate SW-adjacent papers (child-welfare risk scoring, benefits-fraud detection), or is it only defensible for the representational harms it was actually tested against?",
+        "Given the contradiction between primary experiments (12-87.7% reductions) and the field survey's 'limited effectiveness' verdict, what counts as a meaningful bias reduction for practice, and against which fairness metric should it be judged?",
+        "Should 'General_Guidance' understood as prompting literacy be counted as a mitigation technique at all, or reclassified as a training/curriculum intervention, given that its education-side instances are never evaluated for bias reduction?",
+        "When the corpus's own governance and feminist-theory papers argue that these harms are structural and data-level, is recommending prompt-level techniques to social workers a category error, a stopgap, or a complement, and who bears responsibility if the prompt-level fix underperforms?",
+        "Do the training-side methods currently coded as prompt techniques (prefix-tuning, continuous prompts, automatic prompt engineering) belong in a technique inventory addressed to practitioners, or should the inventory separate what a practitioner can do at the prompt from what requires model access?"
+      ],
+      "section6_outline": [
+        "Framing the inventory: define 'technique' against the standard prompt-engineering taxonomy (ICL, Thought_Generation, Role_Persona, Self_Criticism, Ensembling, Decomposition) and state how the two boundary codes work, None for no technique and General_Guidance for unnamed prompting; name the LLM-advisory, unreviewed, distillation-inherited status up front.",
+        "Reach of the repertoire: two-thirds of the corpus is silent on technique (87/129); of the rest, an unnamed bucket dominates (28) and the named taxonomy reaches the literature only as a thin front end (ICL/CoT/personas), with the compositional end (Decomposition, most Ensembling) absent.",
+        "The evidence gradient: a technique x Studientyp x Status table showing that prompt-practice is the corpus's only evaluated corner (Evaluated 18 vs Proposed 8), against the proposed-heavy governance mass (Organisational_Process Proposed 61 vs Evaluated 8).",
+        "What the evidence covers and misses: axis concentration on single-axis gender/race stereotyping and representational erasure, set against the corpus's intersectional and allocative focus; and the population gap, with the evaluated evidence sitting almost entirely outside social work.",
+        "Reading effectiveness honestly: report the heterogeneous, non-poolable effect sizes and the partial/limited-effect findings side by side; highlight the Self_Criticism sub-cluster as the cleanest evaluated family while flagging its single-axis, non-SW scope.",
+        "Coding caveats that condition every claim above: the General_Guidance conflation (literacy mention vs evaluated manipulation), training-side methods mis-shelved as prompt techniques, and the 13 missing distilled docs.",
+        "Implication for the advisory-track argument: the prompt repertoire the review can responsibly surface to social work is narrow, externally validated only, and mismatched to the harms the field cares about; set up the handoff to the expert track and to SQ2/SQ3."
+      ]
+    },
+    "SQ2": {
+      "claims": [
+        {
+          "claim": "The corpus addresses bias along two dominant axes, Gender (88 of 129) and Race/Ethnicity (80), with every other axis trailing far behind (Intersectional 42, Socioeconomic 33, Disability 27, Sexual_Orientation 26, Age 25, Language_Culture 21). Bias-to-mitigation mapping in this literature is therefore effectively a mapping for gender and race; the other axes ride along as co-mentions on multi-axis papers rather than as primary subjects.",
+          "support_keys": [
+            "axes-frequency-aggregate",
+            "5G2QTZYD",
+            "GXZWBNJU",
+            "YLAKP7Z2",
+            "DWS4KXBW",
+            "QY6P4RGQ",
+            "7L78MV2V",
+            "JPUCNHNU"
+          ],
+          "strength": "strong",
+          "evidence_note": "Frequency field over all 129 coded papers; the two lead axes co-occur on most multi-axis papers, the tail axes rarely appear alone."
+        },
+        {
+          "claim": "Stereotyping is the most frequently named harm (51), ahead of Disparate_Performance (39) and Indirect_Discrimination (38), and it is the top harm for nearly every axis in the axes_by_harms table (Gender-Stereotyping 45, Race-Stereotyping 39). Toxicity (3) and Derogatory_Language (4) are marginal. The corpus frames GenAI bias primarily as a representational-harm problem rather than an allocative one.",
+          "support_keys": [
+            "harms-frequency-aggregate",
+            "axes_by_harms",
+            "4LY3SA4E",
+            "GP4JDSI8",
+            "YLAKP7Z2",
+            "QY6P4RGQ",
+            "ACDF4FL9",
+            "MJDTRLAI"
+          ],
+          "strength": "strong",
+          "evidence_note": "Stereotyping leads the harm frequency and dominates the per-axis harm profiles across the axes_by_harms table."
+        },
+        {
+          "claim": "Proposed mitigation sits overwhelmingly at the Organisational_Process stage (80 of 129 papers), covering guidelines, AI-literacy training, governance, and oversight, and this stage is overwhelmingly Proposed rather than tested (Organisational_Process: Proposed 61, Demonstrated 11, Evaluated only 8). The corpus's default answer to bias is organisational and normative, not a tested technical intervention.",
+          "support_keys": [
+            "stages_by_status",
+            "ZJS2J7E7",
+            "EXVG7MQR",
+            "GXZWBNJU",
+            "7L93JBLR",
+            "H59BNSX8",
+            "Y8J3HI9J",
+            "LT3D3ZQ2",
+            "GJF776AY",
+            "LXKXPD5H"
+          ],
+          "strength": "strong",
+          "evidence_note": "stages_by_status is unambiguous; the organisational cluster spans Konzept, Theoretisch, Literaturreview and some Empirisch, so proposal status is expected but the 8/80 evaluation rate is the load-bearing figure."
+        },
+        {
+          "claim": "The evidence gradient runs opposite to the attention gradient. Evaluated mitigation concentrates at user-side Prompt_Practice (18 of 35 Evaluated codes) and model-side In_Training (Evaluated 10 vs Proposed 3), while the most-proposed stage, Organisational_Process, is evaluated in only 8 cases. The most-recommended locus of mitigation is the least tested, and the least-recommended (technical) loci carry almost all the evaluation.",
+          "support_keys": [
+            "stages_by_status",
+            "ACDF4FL9",
+            "YUVR5YNQ",
+            "MTMU9UPJ",
+            "6MJYP7ZX",
+            "M7AGB7LI",
+            "KNQYFQ6B",
+            "JZN2I6J5",
+            "MIT8HTC6",
+            "55ZR64VU"
+          ],
+          "strength": "strong",
+          "evidence_note": "Derived directly from stages_by_status; Prompt_Practice and In_Training rows are evaluation-heavy, Organisational_Process is proposal-heavy."
+        },
+        {
+          "claim": "Where mitigation is actually evaluated as a technical intervention, it targets chiefly Stereotyping on Gender and Race at the Prompt_Practice stage. A cluster of roughly thirteen experimental and empirical papers tests prompting techniques (zero-shot debiasing, self-criticism/self-debiasing, chain-of-thought and System-2 reasoning, persona, cultural prompting, multi-step pipelines) and reports stereotyping reductions on general benchmarks. This is the one bias-axis-by-harm-by-mitigation cell with genuine evaluated evidence.",
+          "support_keys": [
+            "ACDF4FL9",
+            "Z4YXX9PZ",
+            "CYZQ6XPK",
+            "YUVR5YNQ",
+            "MTMU9UPJ",
+            "M7AGB7LI",
+            "KNQYFQ6B",
+            "UB9NK8KI",
+            "MJDTRLAI",
+            "22KJL3PC",
+            "64DQYVVB",
+            "6MJYP7ZX",
+            "YMABYPKF"
+          ],
+          "strength": "strong",
+          "evidence_note": "All thirteen carry H=Stereotyping (several with Misrepresentation/Disparate_Performance), S=Prompt_Practice, St=Evaluated; reported reductions e.g. ACDF4FL9 up to 13%, MTMU9UPJ ~45% gender bias, 6MJYP7ZX multi-step up to 87.7%."
+        },
+        {
+          "claim": "Socioeconomic bias appears in the corpus almost exclusively as Indirect_Discrimination through proxy variables (15 of 33 socioeconomic papers carry Indirect_Discrimination, only 1 Direct), and it is addressed only by proposed organisational mitigation. No evaluated intervention in the corpus targets socioeconomic proxy discrimination. The harm most directly tied to real social-work decision systems (welfare fraud detection, child-protection risk scoring) has the weakest mitigation evidence.",
+          "support_keys": [
+            "axes_by_harms",
+            "PYN6HB3E",
+            "JI24FQPV",
+            "LXDG4KQK",
+            "8MDXCTA6",
+            "SS5HTYY6",
+            "LXKXPD5H",
+            "H7E3N6VR",
+            "ZNHUCA4B",
+            "H59BNSX8"
+          ],
+          "strength": "strong",
+          "evidence_note": "The proxy-discrimination mechanism is grounded in Empirical cases (LXDG4KQK Denmark/Amnesty, PYN6HB3E Allegheny) plus reviews; the absence of any Evaluated socioeconomic-indirect cell is verifiable across the per-paper codes."
+        },
+        {
+          "claim": "Intersectional analysis, the framework's central commitment, is coded on 42 papers but sits overwhelmingly at Organisational_Process (30) and Proposed status, and reaches Prompt_Practice only 4 times and In_Training twice. Where intersectional papers are evaluated, they co-measure separate axes rather than test interaction effects. Intersectional harm is theorized and asserted but is not yet the target of any evaluated mitigation that treats axes in interaction.",
+          "support_keys": [
+            "axes_by_stages",
+            "M7AGB7LI",
+            "YMABYPKF",
+            "VFD9ENG6",
+            "Q4LK53XW",
+            "7L93JBLR",
+            "2SLISKSW",
+            "GP4JDSI8",
+            "L6PH7GDL",
+            "H7E3N6VR"
+          ],
+          "strength": "moderate",
+          "evidence_note": "The intersectional cluster is heavily Theoretisch/Konzept (caps strength at moderate); the interaction-versus-co-mention distinction rests partly on coder answerability notes (e.g. QY6P4RGQ, ACDF4FL9)."
+        },
+        {
+          "claim": "Every discrete prompting-technique group (ICL, Thought_Generation, Role_Persona, Self_Criticism, Ensembling, Decomposition) is coded almost exclusively Not_SW_Specific in the techniques_by_populations table; only the diffuse General_Guidance code reaches a social-work-adjacent population (Education_Professional 13). The evaluated harm-to-mitigation links therefore hold in general NLP settings and are severed from any social-work population, which hands the transfer question to SQ3.",
+          "support_keys": [
+            "techniques_by_populations",
+            "ACDF4FL9",
+            "MTMU9UPJ",
+            "YUVR5YNQ",
+            "6MJYP7ZX",
+            "M7AGB7LI",
+            "KNQYFQ6B",
+            "DUV4TUG3",
+            "3AHQEHDF",
+            "6L85PRUW"
+          ],
+          "strength": "strong",
+          "evidence_note": "techniques_by_populations shows the technique rows collapsing onto Not_SW_Specific; the one SW-domain evaluated fairness intervention is XQM6WRU2, and it uses no prompting technique."
+        },
+        {
+          "claim": "A substantial part of what the corpus offers as mitigation is generic AI-literacy and governance carried by papers that name no bias axis (axis None on 21 papers) and no harm mechanism (harm None on 22), almost all at Organisational_Process, Proposed, in Education_Professional settings. For this subset the bias-to-mitigation mapping is empty on the bias side: the mitigation is not attached to any specific harm.",
+          "support_keys": [
+            "J9IZDVTW",
+            "P82X89Q4",
+            "I78CL6R5",
+            "KPSF8EZE",
+            "7G78SADI",
+            "DGLWM93D",
+            "BBLJ4RG3",
+            "ERTJZW5M",
+            "3B87U5LN"
+          ],
+          "strength": "moderate",
+          "evidence_note": "Rests on Empirisch/Konzept/Literaturreview AI-literacy papers; coder notes repeatedly flag bias as a generic literacy component with no axis-specific analysis."
+        },
+        {
+          "claim": "Model-side stages (In_Training, Intra_Processing, Post_Processing) are the domain of experimental evaluation rather than proposal (In_Training Evaluated 10 vs Proposed 3; Intra_Processing 2 of 2 Evaluated), and they originate in the general NLP debiasing literature (prompt-tuning, self-debiasing, embedding interventions, benchmark auditing). This confirms a clean division of labour: social-work and literacy papers propose organisational mitigation, NLP papers evaluate model- and prompt-side mitigation.",
+          "support_keys": [
+            "stages_by_status",
+            "JZN2I6J5",
+            "MIT8HTC6",
+            "ST9UCTJE",
+            "RM833D5N",
+            "55ZR64VU",
+            "MS3CNU3S",
+            "VFD9ENG6",
+            "XY2WVKBY"
+          ],
+          "strength": "strong",
+          "evidence_note": "stages_by_status plus the per-paper study types (all Experimentell/Empirisch/Literaturreview from general NLP, all Not_SW_Specific)."
+        },
+        {
+          "claim": "Disability, Age, Language_Culture, and Sexual_Orientation are addressed mainly at organisational-proposed level and are largely absent from evaluated technical mitigation; where they appear in an evaluated study they are incidental co-axes rather than the primary target (Disability reaches Prompt_Practice 4 times, In_Training once; Sexual_Orientation concentrates on Exclusionary_Norms 9 and Stereotyping 14 but its evaluated appearances are model-side co-axis measurements).",
+          "support_keys": [
+            "axes_by_stages",
+            "axes_by_harms",
+            "ST9UCTJE",
+            "55ZR64VU",
+            "XY2WVKBY",
+            "YLAKP7Z2",
+            "GJF776AY",
+            "NHIZN4QJ"
+          ],
+          "strength": "moderate",
+          "evidence_note": "Co-occurrence pattern is clear but the 'incidental co-axis' reading leans on per-paper axis lists and coder notes; several supporting papers are Theoretisch."
+        },
+        {
+          "claim": "The corpus contains essentially one social-work-domain evaluated fairness intervention, a true-positive-rate audit of child-welfare predictive models by race and gender (XQM6WRU2, Post_Processing, Evaluated, Child_Family_Welfare), against Disparate_Performance and Indirect_Discrimination. It is the exception that marks the rule: allocative-harm mitigation is evaluated in exactly one social-work setting and audited rather than corrected.",
+          "support_keys": [
+            "XQM6WRU2",
+            "Y6SAPNT2",
+            "MT54YHER"
+          ],
+          "strength": "moderate",
+          "evidence_note": "Single-paper anchor for the SW-specific evaluated cell; Y6SAPNT2 (Social_Assistance_Admin, Demonstrated) and MT54YHER (Education, Evaluated org) are the nearest neighbours, neither a corrective intervention."
+        }
+      ],
+      "gaps": [
+        {
+          "gap": "The triple co-occurrence the sub-question asks for (bias-axis by harm-type by mitigation-stage/status) is not directly tabulated; only axes_by_harms, axes_by_stages, and stages_by_status are provided. The harm-to-mitigation and axis-to-status links were reconstructed from per-paper codes, which is reliable for the large clusters but weak for thin cells.",
+          "basis": "Provided co-occurrence tables lack any harm-by-stage, harm-by-status, or axis-by-status cross-tabulation; the harm side of the mapping is inferable only paper by paper."
+        },
+        {
+          "gap": "Harm_Types is the corpus's optional and hardest-to-code field (update-protocol section B, F.2). The Stereotyping dominance and the Toxicity/Derogatory_Language scarcity may partly reflect which Gallegos categories are easiest to read out of a German distilled knowledge document, not the underlying literature's true harm distribution.",
+          "basis": "knowledge/update-protocol.md marks AN_Harm_Types optional 'because it is the hardest field to code reliably'; coder answerability notes repeatedly hedge harm labels (e.g. QY6P4RGQ, 22XEFRWP, LGYFN6JK)."
+        },
+        {
+          "gap": "Socioeconomic proxy-discrimination mitigation and the broader FairML/algorithmic-decision-making literature may be under-represented because the review scope centres feminist AI literacies and prompting, not automated decision systems. The 'no evaluated socioeconomic intervention' pattern could be a scope boundary rather than a field-level gap.",
+          "basis": "The socioeconomic-indirect papers are predominantly welfare cases and reviews (LXDG4KQK, PYN6HB3E, SS5HTYY6); technical fairness-correction methods for allocation live in a literature this corpus samples thinly."
+        },
+        {
+          "gap": "13 of 142 human-included papers have no distilled document and are absent from the coding; the coding is LLM-advisory and unreviewed. Thin cells (Intra_Processing 2, Decomposition 1, Toxicity 3) are within the range that a handful of missing or miscoded papers could move.",
+          "basis": "Stated task limitations plus the small absolute counts in the frequency tables."
+        }
+      ],
+      "interpretive_questions": [
+        "Is the Stereotyping dominance a property of the literature, or an artifact of the Gallegos taxonomy and the distillation framing making representational harms easier to name than allocative ones? A bias researcher must judge whether the harm profile can be reported as a finding or only as a coding-sensitive description.",
+        "Does the socioeconomic proxy-discrimination cell (indirect discrimination, only proposed organisational mitigation, no evaluated intervention) represent a genuine gap in the field, or a boundary of this review's scope, given that corrective methods for allocative bias sit largely in the FairML/ADM literature? Social-work and bias experts must decide before the claim enters the paper.",
+        "Is Organisational_Process, Proposed the appropriate and expected locus of mitigation for social work, where the real intervention is professional judgment, governance, and oversight rather than a model tweak, so that the low evaluation rate is a category feature and not a deficiency? A social-work expert must rule on this before the attention-evidence inversion is framed as a shortfall.",
+        "For intersectional harm, is co-measurement of separate axes an acceptable operationalization of a mitigation's target, or does the field require demonstrated interaction effects before an intervention counts as addressing intersectionality? This governs whether Claim 7 is a gap or a definitional artefact.",
+        "Are the evaluated prompt-debiasing results, obtained on general benchmarks (StereoSet, GenAssocBias, coreference sets) in Not_SW_Specific settings, transferable to social-work text genres such as case notes, risk assessments, and intake documentation, or is that transfer itself the open empirical question the follow-up paper should name? Both expert communities must weigh in.",
+        "Which harm types matter most for social-work practice, so that the corpus's concentration on stereotyping and its relative neglect of indirect/allocative discrimination in decision systems can be judged against practice priorities rather than against the literature's own emphasis?"
+      ],
+      "section6_outline": [
+        "The bias landscape the corpus addresses: axis concentration on Gender and Race with a thin tail, and harm concentration on Stereotyping, framing GenAI bias as primarily representational (Claims 1, 2).",
+        "Where mitigation sits and how far it is carried: the Organisational_Process dominance and the Proposed-versus-Evaluated split, stated as the inversion in which the most-recommended stage is the least tested (Claims 3, 4).",
+        "What actually gets evaluated: prompt-practice and in-training technical debiasing against stereotyping on gender and race, drawn from general NLP, as the single well-evidenced axis-by-harm-by-mitigation cell (Claims 5, 10-model-side).",
+        "The under-mitigated harms: socioeconomic proxy/indirect discrimination and intersectional harm as proposed-only, and the allocative-harm gap in social-work decision systems, contrasted with the representational-harm focus (Claims 6, 7, 11-adjacent).",
+        "The population disconnect and the adaptation hinge to SQ3: evaluated mitigation severed from social-work populations, with the child-welfare fairness audit (XQM6WRU2) as the near-unique domain exception (Claims 8, 12).",
+        "Reading rules and limitations: advisory unreviewed coding, the optional and hardest harm field, the missing harm-by-stage/status tabulation reconstructed from per-paper codes, distillation framing, and the 13 absent papers, so every cell is read as descriptive co-occurrence and never as inference."
+      ]
+    },
+    "SQ3": {
+      "claims": [
+        {
+          "claim": "No concrete, evaluated prompting technique appears in any genuine social-work practice field. Every technique group beyond General_Guidance (ICL, Thought_Generation, Role_Persona, Self_Criticism, Ensembling, Decomposition) has a strict zero across Child_Family_Welfare, Mental_Health, Social_Assistance_Admin, Health_Care and General_Social_Work; the only prompt technique that ever touches a real SW field is General_Guidance, twice, both in General_Social_Work.",
+          "support_keys": [
+            "LGYFN6JK",
+            "UDZLIJWX",
+            "ACDF4FL9",
+            "Z4YXX9PZ",
+            "YUVR5YNQ",
+            "M7AGB7LI",
+            "MTMU9UPJ",
+            "CYZQ6XPK",
+            "KNQYFQ6B",
+            "64DQYVVB"
+          ],
+          "strength": "strong",
+          "evidence_note": "techniques_by_populations table: General_Guidance {Edu 13, Not_SW 14, GSW 2}; ICL/TG {Not_SW 8, Edu 1}; Role_Persona {Not_SW 5, Edu 1}; Self_Criticism/Ensembling/Decomposition {Not_SW only}. All 17 evaluated Prompt_Practice technique papers are P=Not_SW_Specific. All SW-practice-field papers carry T=None except LGYFN6JK and UDZLIJWX (both General_Guidance). Descriptive count over full corpus, no inference."
+        },
+        {
+          "claim": "The evaluated prompt techniques and the SW practice-field evidence target different harms. Prompt-level mitigation is evaluated almost exclusively against Stereotyping and representational harms in generic benchmark tasks (QA, translation, image generation), whereas SW practice-field papers document predominantly allocative Indirect_Discrimination and subgroup Disparate_Performance in statutory decision-support.",
+          "support_keys": [
+            "ACDF4FL9",
+            "Z4YXX9PZ",
+            "YUVR5YNQ",
+            "MTMU9UPJ",
+            "XQM6WRU2",
+            "8MDXCTA6",
+            "PAZJHB8J",
+            "Y6M97SWQ",
+            "LXKXPD5H",
+            "Y6SAPNT2"
+          ],
+          "strength": "strong",
+          "evidence_note": "Evaluated technique papers code H=Stereotyping (ACDF4FL9, Z4YXX9PZ, YUVR5YNQ, MTMU9UPJ). SW-field papers code H=Indirect_Discrimination / Disparate_Performance around proxy risk models (child-welfare flagging, welfare fraud detection, jobcenter scoring). Per-paper harm codes plus axes_by_harms; the two harm profiles barely overlap."
+        },
+        {
+          "claim": "The bias axis most central to SW clientele, socioeconomic status and poverty-as-proxy, sits almost entirely in no-technique conceptual papers. About 30 of 33 socioeconomic-axis papers apply no prompt technique, and none of the evaluated prompt-mitigation papers centers socioeconomic bias.",
+          "support_keys": [
+            "PYN6HB3E",
+            "LXDG4KQK",
+            "8MDXCTA6",
+            "LXKXPD5H",
+            "H7E3N6VR",
+            "SS5HTYY6",
+            "Y6SAPNT2",
+            "JI24FQPV"
+          ],
+          "strength": "strong",
+          "evidence_note": "techniques_by_axes: None x Socioeconomic = 30 of 33 total; General_Guidance x Socioeconomic = 2, ICL = 1, Self_Criticism = 1. Poverty-proxy discrimination is the recurring SW mechanism (Allegheny, Udbetaling Danmark, Robodebt, jobcenter) yet never enters an evaluated mitigation."
+        },
+        {
+          "claim": "Across all SW practice-field papers, mitigation status is overwhelmingly Proposed. The few Evaluated or Demonstrated items either audit bias in predictive tools or demonstrate a governance/audit framework; none evaluates the effectiveness of a mitigation applied in a SW setting.",
+          "support_keys": [
+            "XQM6WRU2",
+            "Y6SAPNT2",
+            "Z9BIKVS3",
+            "2SLISKSW",
+            "UDZLIJWX",
+            "PAZJHB8J",
+            "SS5HTYY6",
+            "LXKXPD5H"
+          ],
+          "strength": "strong",
+          "evidence_note": "SW-field Evaluated/Demonstrated cases: XQM6WRU2 (fairness audit of child-welfare predictive model), Y6SAPNT2 (community workshop, Demonstrated), Z9BIKVS3 and 2SLISKSW (feminist policy framework applied as audit tool, Demonstrated), UDZLIJWX (personalized narrative, Evaluated, but setting is children's literature/education). stages_by_status: Organisational_Process is 61 Proposed / 11 Demonstrated / 8 Evaluated; the Evaluated mass sits in Prompt_Practice (18), which is non-SW."
+        },
+        {
+          "claim": "SW states adaptation requirements that general prompting guidance does not cover: AI as decision-support rather than replacement to protect the relational/therapeutic core and clients who cannot contest an AI decision; expansion of professional ethics (NASW Code, institutional norms, research ethics for vulnerable groups); participatory co-design with affected service users and data sovereignty; and SW's political mandate for digital justice including a critique of Big-Tech dependency.",
+          "support_keys": [
+            "GXZWBNJU",
+            "L6PH7GDL",
+            "ZJS2J7E7",
+            "SS5HTYY6",
+            "RAV6DAFQ",
+            "EXVG7MQR",
+            "U3AJIXAJ",
+            "UENFDPH9",
+            "R5QQTD95",
+            "LXKXPD5H"
+          ],
+          "strength": "moderate",
+          "evidence_note": "Verbatim adaptation_statements. Non-replacement/relational: GXZWBNJU, ZJS2J7E7, L6PH7GDL ('Fachkraefte mit vulnerablen Gruppen, die sich oft nicht selbst gegen KI-Systeme wehren koennen'), SS5HTYY6, R5QQTD95. Ethics expansion: PYN6HB3E (NASW), RAV6DAFQ, U3AJIXAJ (SW research ethics for vulnerable groups). Participation/sovereignty: UENFDPH9, GXZWBNJU (First Nations data sovereignty), R5QQTD95. Political mandate: LXKXPD5H, H7E3N6VR. Strength capped at moderate: support is mostly Konzept/Theoretisch, though broad and convergent."
+        },
+        {
+          "claim": "Poverty and structural attributes acting as proxies for protected characteristics in statutory risk models is a SW-specific harm mechanism absent from the general guidance, and it is the SW theme with the most empirical (not merely conceptual) backing.",
+          "support_keys": [
+            "PYN6HB3E",
+            "LXDG4KQK",
+            "8MDXCTA6",
+            "XQM6WRU2",
+            "PAZJHB8J",
+            "Y6M97SWQ",
+            "Y6SAPNT2",
+            "LXKXPD5H"
+          ],
+          "strength": "moderate",
+          "evidence_note": "PYN6HB3E (Allegheny poverty-as-abuse-indicator), LXDG4KQK (proxies for race/migration/SES, Udbetaling Danmark), 8MDXCTA6 and Y6M97SWQ and PAZJHB8J (disproportionate flagging of Black/Maori children), Y6SAPNT2 (Dutch childcare scandal, French welfare fraud), LXKXPD5H (jobcenter scoring by Alter/Schulbildung/Stadtteil). Mix of empirical audits and reviews raises this above the purely conceptual SW themes, but it concerns predictive analytics, not promptable LLMs."
+        },
+        {
+          "claim": "Health_Care and Mental_Health are the thinnest SW-adjacent fields. Health_Care has five papers, two with no bias axis coded and none with an evaluated mitigation; Mental_Health has eight, all no-technique, and its only bias evaluations are diagnostic GPT-probing coded outside a care setting.",
+          "support_keys": [
+            "Y8J3HI9J",
+            "Q8YPNNKL",
+            "ERTJZW5M",
+            "NHIZN4QJ",
+            "7IVS7X63",
+            "YPYQ2TCL",
+            "3B87U5LN",
+            "JI24FQPV"
+          ],
+          "strength": "moderate",
+          "evidence_note": "HC (5): Q8YPNNKL and ERTJZW5M code A=None; Y8J3HI9J and NHIZN4QJ carry axes but T=None, St=Proposed/Demonstrated. MH (8): all T=None; 7IVS7X63 and YPYQ2TCL are diagnostic nationality-x-mental-illness GPT probes with no mitigation and debatable SW-setting; 3B87U5LN is a safety, not bias, study."
+        },
+        {
+          "claim": "SW's relational and involuntary-client dimension (the client who cannot exit the service and whose closeness to the technology raises rejection) is stated as a design constraint but has no operationalization in any prompt-mitigation study.",
+          "support_keys": [
+            "R5QQTD95",
+            "L6PH7GDL",
+            "JI24FQPV",
+            "HJ7BHX8J"
+          ],
+          "strength": "thin",
+          "evidence_note": "R5QQTD95: 'Je naeher eine Technologie der direkten Interaktions- und Beziehungsarbeit ... desto kritischer wird sie bewertet'; 'Technik an die Praxis anpassen muss statt umgekehrt'. HJ7BHX8J: gendered/racialized care work. Rests on few papers, all acceptance/conceptual; no bridging study exists."
+        }
+      ],
+      "gaps": [
+        {
+          "gap": "Technique-transfer gap: evaluated prompt-level bias mitigation exists only in non-SW benchmark settings; the technique-by-population table has strict zero cells for ICL, Thought_Generation, Role_Persona, Self_Criticism, Ensembling and Decomposition across all five SW practice fields.",
+          "basis": "techniques_by_populations co-occurrence; all 17 evaluated Prompt_Practice papers coded P=Not_SW_Specific; SW-field papers all T=None except two General_Guidance."
+        },
+        {
+          "gap": "Harm-type mismatch: the harm the evaluated techniques reduce (Stereotyping / representational) is not the harm SW documents (allocative Indirect_Discrimination and subgroup Disparate_Performance in predictive risk models). A mitigation validated against StereoSet/BBQ does not address a poverty-proxy risk score.",
+          "basis": "Per-paper harm codes; evaluated technique papers H=Stereotyping vs SW-field papers H=Indirect_Discrimination/Disparate_Performance."
+        },
+        {
+          "gap": "Axis gap: socioeconomic status / poverty-as-proxy, the axis most central to SW clientele, is confined to no-technique conceptual papers (30 of 33) and is centered by no evaluated mitigation.",
+          "basis": "techniques_by_axes None x Socioeconomic = 30/33."
+        },
+        {
+          "gap": "Status gap: SW-specific requirements are almost entirely Proposed. No study evaluates whether any mitigation actually reduces bias in a SW practice setting; Evaluated/Demonstrated SW items are audits or framework demonstrations.",
+          "basis": "populations x AN_Mitigation_Status per paper; stages_by_status (Organisational_Process = 61 Proposed vs 8 Evaluated)."
+        },
+        {
+          "gap": "Field-coverage gap (no evidence at all): within the coded scheme, Child_Family_Welfare, Mental_Health, Social_Assistance_Admin and Health_Care carry no technique-level evidence; beyond it, whole SW practice fields have no population bucket at all (disability services, elderly care, addiction, homelessness, migration/refugee work, probation/criminal-justice SW, domestic-violence shelters), so their absence cannot be distinguished from a coding-scheme limitation.",
+          "basis": "populations frequencies (only 5 SW-field buckets, HC=5, SAA=6, MH=8); the scheme has no category for the named fields; domestic-violence and disability appear only inside LXDG4KQK/7L93JBLR as descriptors."
+        },
+        {
+          "gap": "Substrate gap for Fair Bench: SW's dominant AI harm lives in predictive analytics (risk models the caseworker does not prompt), while the promptable-LLM evidence lives in generative tasks. A benchmark built on generative stereotyping benchmarks would not instrument the allocative decision the SW literature actually worries about.",
+          "basis": "SW-field harm/stage codes (Organisational_Process + predictive-tool audits) vs technique papers (Prompt_Practice, generative tasks)."
+        }
+      ],
+      "interpretive_questions": [
+        "Is prompt-level mitigation even the right lever for the SW harm that dominates the evidence? If SW's operative AI is predictive risk analytics rather than a generative LLM the practitioner prompts, the entire prompt-engineering evidence base may be categorically inapplicable to SW allocative decisions, not merely missing. A domain expert must decide whether Fair Bench targets generative-LLM stereotyping or predictive-model allocative fairness, because the two sit in different technical substrates.",
+        "Is the five-field SW population taxonomy (General, Child_Family_Welfare, Mental_Health, Social_Assistance_Admin, Health_Care) exhaustive for the profession's self-understanding? Its omission of disability services, elderly care, addiction, homelessness, migration/refugee work, probation and domestic-violence shelters means every 'no evidence at all' statement conflates true corpus absence with un-coded categories; an expert must separate the two.",
+        "Does the routing rule that sends AI-literacy education papers to Education_Professional legitimately place them outside SW, or does it hide SW-field evidence (e.g. youth work in AXEIVEW3, SW higher-education in DGLWM93D)? The rule inflates Education_Professional to 31 and may deflate the apparent SW signal.",
+        "Do the two General_Guidance items in General_Social_Work (LGYFN6JK antiracist prompting, UDZLIJWX identity-personalized narrative) constitute genuine SW-adapted prompting, or generic guidance relabeled by setting? This determines whether SW has any promptable evidence at all.",
+        "Which harm should a SW-grounded benchmark instrument first: generative stereotyping (well-tooled, non-SW-validated) or allocative proxy discrimination (SW-salient, empirically documented, but tied to non-generative predictive systems)? The claim that SW needs its own benchmark hinges on this.",
+        "How much of the SW-field signal and of the apparent zero cells is an artifact of the distillation framing (P2 limitation) and of the 13 human-included papers with no distilled document? A bias-and-SW domain expert should judge whether the missing 13 plausibly concentrate in the thin fields (Health_Care, Mental_Health) before the zero cells are reported as substantive."
+      ],
+      "section6_outline": [
+        "6.x SQ3 opening: the corpus splits into two literatures that do not meet, a non-SW prompt-engineering evidence base where mitigation is evaluated, and a SW conceptual/governance literature where it is only proposed; state this as the organizing finding.",
+        "6.x.1 What social work requires beyond general guidance: the adaptation-statement themes grouped as (a) decision-support not replacement / relational core, (b) poverty and structural attributes as proxies in statutory risk models, (c) professional-ethics and research-ethics expansion for vulnerable/involuntary clients, (d) participatory co-design and data sovereignty, (e) the political mandate for digital justice. Mark each theme's evidence type and strength.",
+        "6.x.2 Where the evidence is absent: the zero-cell map. Technique-by-population zeros, the socioeconomic-axis concentration in no-technique papers, the Stereotyping-vs-allocative harm mismatch, and the Proposed-not-Evaluated status gap, presented as a compact table with the descriptive-only caveat.",
+        "6.x.3 Practice fields with no evidence: the coded-thin fields (Child_Family_Welfare, Mental_Health, Social_Assistance_Admin, Health_Care carry no technique-level evidence) and the un-coded fields the scheme cannot even register, with an explicit statement that absence here is not proof of absence in the field.",
+        "6.x.4 Implication for Fair Bench: the substrate and harm-type mismatch, and a specification of what a SW-grounded benchmark must instrument (allocative proxy discrimination on involuntary clients) that existing benchmarks (StereoSet, BBQ, WinoMT, resume-screening) do not.",
+        "6.x.5 Limitations specific to SQ3: advisory unreviewed coding, distillation framing (P2), the 13 absent distilled documents possibly concentrated in the thin fields, and the Education_Professional routing rule that may mask SW-field signal."
+      ]
+    }
+  },
+  "critique": {
+    "verdicts": [
+      {
+        "sq": "SQ1",
+        "claim": "Two-thirds of the corpus engages no prompting (87/129 T=None)",
+        "verdict": "downgrade",
+        "reason": "Count is exact (87 papers T==['None'], Org_Process 80 vs Prompt_Practice 31 confirmed). But the corpus is a convenience sample assembled by four proprietary Deep Research systems (project CLAUDE.md); 'prompt engineering is not the field's centre of gravity' and 'the dominant object is organisational' generalize a retrieval-mix frequency to the field. The descriptive count holds, the field-level inference over-extends."
+      },
+      {
+        "sq": "SQ1",
+        "claim": "Unnamed catch-all dominates; General_Guidance 28 of 42",
+        "verdict": "holds",
+        "reason": "Verified: 42 technique-bearing papers, GG 28, ICL 9, TG 9, Role 6, SC 5, Ensembling 3, Decomposition 1. LBLF9BCW correctly excluded as bias-relevant (Ensembling, axis None, reasoning-only, confirmed in its evidence). Decomposition rests on 6MJYP7ZX only. Accurate."
+      },
+      {
+        "sq": "SQ1",
+        "claim": "Named techniques cluster in experimental/empirical; Prompt_Practice Evaluated 18 > Proposed 8",
+        "verdict": "holds",
+        "reason": "stages_by_status verified exactly: Prompt_Practice 18/8/5, Org_Process 61/11/8. Inversion holds."
+      },
+      {
+        "sq": "SQ1",
+        "claim": "Evaluated technique evidence sits almost entirely outside SW",
+        "verdict": "holds",
+        "reason": "techniques_by_populations verified: ICL/TG/Role/SC/Ensembling/Decomposition are strict zero on all core SW populations; only single Education_Professional cells. UDZLIJWX's SW-relevance is self-flagged by the coder as 'framed', matching the claim's hedge."
+      },
+      {
+        "sq": "SQ1",
+        "claim": "Evaluated techniques target single-axis gender/race, barely touch intersectional/disability/socioeconomic",
+        "verdict": "holds",
+        "reason": "techniques_by_axes verified: ICL Gender7/Intersectional0/Disab1/Socio1; TG Gender6/Intersectional0; SC Gender4/Intersectional1. Diversity-Erasure cluster (DUV4TUG3, 6L6WSDC8, 3AHQEHDF) all carry Erasure. Accurate."
+      },
+      {
+        "sq": "SQ1",
+        "claim": "Reported effectiveness heterogeneous (12% to 87.7%)",
+        "verdict": "downgrade",
+        "reason": "Individual figures verify from status evidence (KNQYFQ6B 12% WinoMT, MTMU9UPJ ~45%, UB9NK8KI 37%, 64DQYVVB 'teilweise', MS3CNU3S 'begrenzte Effektivitaet'). But the 87.7% ceiling comes from 6MJYP7ZX, a Literaturreview synthesizing reviewed studies, not a 'primary experiment' as the claim frames it. All figures are extracted from German knowledge-doc distillates, not raw papers. Already moderate; the ceiling misattribution warrants the downgrade."
+      },
+      {
+        "sq": "SQ1",
+        "claim": "Self_Criticism sub-cluster most coherent (5/5 Evaluated)",
+        "verdict": "holds",
+        "reason": "All five (YUVR5YNQ, DUV4TUG3, M7AGB7LI, MTMU9UPJ, 6MJYP7ZX) confirmed St=Evaluated. 'Most coherent' is an interpretive gloss (4 of 5 are multi-technique, one is a review) but the empirical claim (5/5 evaluated, outside SW, gender-dominated) holds. Rated moderate appropriately."
+      },
+      {
+        "sq": "SQ1",
+        "claim": "General_Guidance conflates literacy-mentions and evaluated manipulations",
+        "verdict": "holds",
+        "reason": "A coding recommendation, framed as such (moderate). The two exemplar lists are consistent with the data (literacy-side Proposed, manipulation-side Evaluated). Reasonable."
+      },
+      {
+        "sq": "SQ1",
+        "claim": "Some technique codings are training-side, not use-time prompt practice",
+        "verdict": "holds",
+        "reason": "Verified: RM833D5N Role_Persona implemented as soft-prompt/prefix-tuning, S=In_Training;Intra_Processing; 6MJYP7ZX Decomposition set includes 'parameter-optimierte kontinuierliche Prompts' at In_Training. Coder's own answerability notes carry both. Accurate, moderate."
+      },
+      {
+        "sq": "SQ2",
+        "claim": "Two dominant axes Gender 88, Race 80; tail axes ride along as co-mentions",
+        "verdict": "holds",
+        "reason": "Axis frequencies verified exactly (Intersectional 42, Socio 33, Disab 27, SexOr 26, Age 25, Lang 21). Solo-axis check confirms co-mention pattern: Socio solo 2/33, SexOr solo 1/26, Disability solo 0, Age solo 0, vs Gender solo 12. Support is strong."
+      },
+      {
+        "sq": "SQ2",
+        "claim": "Stereotyping top harm (51); corpus frames bias as representational rather than allocative",
+        "verdict": "downgrade",
+        "reason": "Frequencies verified (Stereotyping 51, Disparate 39, Indirect 38; Gender-Stereo 45, Race-Stereo 39; Toxicity 3, Derogatory 4). Stereotyping is genuinely the single top harm. But 'primarily representational rather than an allocative one' overstates: allocative/performance harms (Disparate 39 + Indirect 38 + Direct 10 = 87 instances) are substantial and, per SQ3, the SW-central ones. The 'rather than allocative' sharpening exceeds the balance."
+      },
+      {
+        "sq": "SQ2",
+        "claim": "Proposed mitigation overwhelmingly Organisational (80), 8/80 evaluated",
+        "verdict": "holds",
+        "reason": "Verified exactly: Org_Process 80 papers, 61 Proposed / 11 Demonstrated / 8 Evaluated. Load-bearing 8/80 figure correct."
+      },
+      {
+        "sq": "SQ2",
+        "claim": "Evidence gradient runs opposite to attention gradient; 18 of 35 Evaluated at Prompt_Practice",
+        "verdict": "holds",
+        "reason": "Verified: 35 Evaluated-status papers total; 18 distinct carry Prompt_Practice (coincides with stage-instance count, no double-count). In_Training Eval 10 vs Prop 3. Accurate."
+      },
+      {
+        "sq": "SQ2",
+        "claim": "Evaluated technical mitigation targets Stereotyping on Gender/Race; ~13 papers",
+        "verdict": "holds",
+        "reason": "All 13 support keys independently verified to carry H=Stereotyping, S=Prompt_Practice, St=Evaluated. Support list not padded. Only caveat: 6MJYP7ZX is a Literaturreview inside a set described as 'experimental and empirical' (1 of 13)."
+      },
+      {
+        "sq": "SQ2",
+        "claim": "Socioeconomic bias almost exclusively Indirect_Discrimination (15/33, 1 Direct); no evaluated proxy intervention",
+        "verdict": "holds",
+        "reason": "Verified: Socio Indirect 15, Direct 1. Socioeconomic+Indirect+Evaluated = empty set confirmed. The two Socio+Evaluated papers (Q4LK53XW, YUVR5YNQ) carry Disparate/Stereotyping, not proxy Indirect. Strong claim, well-grounded."
+      },
+      {
+        "sq": "SQ2",
+        "claim": "Intersectional coded on 42 but sits at Organisational (30), Prompt_Practice only 4",
+        "verdict": "holds",
+        "reason": "axes_by_stages verified: Intersectional Org_Process 30, Prompt_Practice 4, In_Training 2. Interaction-vs-co-mention distinction leans on coder notes, correctly rated moderate."
+      },
+      {
+        "sq": "SQ2",
+        "claim": "Every technique group Not_SW_Specific; sole SW evaluated fairness intervention XQM6WRU2 uses no prompting",
+        "verdict": "holds",
+        "reason": "techniques_by_populations verified; XQM6WRU2 confirmed T=None, Child_Family_Welfare, Post_Processing, Evaluated, fairness audit. Accurate."
+      },
+      {
+        "sq": "SQ2",
+        "claim": "Generic AI-literacy on papers with no axis (21) and no harm (22)",
+        "verdict": "holds",
+        "reason": "Axis None 21, harm None 22 verified. Moderate; rests on coder notes flagging generic literacy, consistent."
+      },
+      {
+        "sq": "SQ2",
+        "claim": "Model-side stages domain of experimental evaluation; clean division of labour",
+        "verdict": "holds",
+        "reason": "In_Training Eval 10 vs Prop 3, Intra_Processing 2/2 Evaluated verified. 'Clean division of labour' is interpretive but the counts support it."
+      },
+      {
+        "sq": "SQ2",
+        "claim": "Disability/Age/Lang/SexOr mainly organisational-proposed, incidental co-axis when evaluated",
+        "verdict": "holds",
+        "reason": "axes_by_stages verified: Disability Prompt_Practice 4/In_Training 1; SexOr Exclusionary 9/Stereotyping 14. 'Incidental co-axis' reading leans on per-paper notes, correctly rated moderate."
+      },
+      {
+        "sq": "SQ2",
+        "claim": "One SW-domain evaluated fairness intervention (XQM6WRU2), audited not corrected",
+        "verdict": "holds",
+        "reason": "Confirmed; coder's own note flags the Post_Processing coding as audit-not-transformation, matching 'audited rather than corrected'. Moderate, accurate."
+      },
+      {
+        "sq": "SQ3",
+        "claim": "No concrete evaluated prompting technique in any genuine SW practice field",
+        "verdict": "holds",
+        "reason": "techniques_by_populations strict zeros verified across all six technique groups on the five SW fields; only General_Guidance twice in General_Social_Work (UDZLIJWX, LGYFN6JK). Caveat: UDZLIJWX's 'real SW field' status is contested by the coder's own note (setting is children's-literature/education). Descriptive core holds."
+      },
+      {
+        "sq": "SQ3",
+        "claim": "Evaluated techniques and SW evidence target different harms",
+        "verdict": "holds",
+        "reason": "Evaluated technique papers H=Stereotyping/representational; SW-field papers H=Indirect_Discrimination/Disparate_Performance. Harm profiles verified to barely overlap. Accurate."
+      },
+      {
+        "sq": "SQ3",
+        "claim": "Socioeconomic axis in no-technique papers (30 of 33)",
+        "verdict": "holds",
+        "reason": "Verified exactly: None x Socioeconomic = 30, total Socio = 33; GG 2, ICL 1, SC 1. No evaluated prompt-mitigation centers socioeconomic bias. Accurate."
+      },
+      {
+        "sq": "SQ3",
+        "claim": "SW practice-field mitigation status overwhelmingly Proposed",
+        "verdict": "holds",
+        "reason": "Consistent with SW-population papers being almost all T=None and Org_Process Proposed-heavy; the few Evaluated/Demonstrated (XQM6WRU2 audit, Y6SAPNT2 workshop) evaluate no applied mitigation. Holds."
+      },
+      {
+        "sq": "SQ3",
+        "claim": "SW states adaptation requirements general guidance does not cover",
+        "verdict": "holds",
+        "reason": "Grounded in verbatim adaptation_statements (GXZWBNJU non-replacement + First Nations sovereignty confirmed; PYN6HB3E NASW Code; L6PH7GDL vulnerable-group non-contestation). Qualitative synthesis of Konzept/Theoretisch sources, correctly capped at moderate."
+      },
+      {
+        "sq": "SQ3",
+        "claim": "Poverty-as-proxy is SW-specific harm with most empirical backing",
+        "verdict": "holds",
+        "reason": "Empirical anchors verified (LXDG4KQK Udbetaling Danmark proxies, PYN6HB3E Allegheny poverty-as-abuse-indicator). Claim itself notes it concerns predictive analytics not promptable LLMs; moderate, honest."
+      },
+      {
+        "sq": "SQ3",
+        "claim": "Health_Care and Mental_Health thinnest SW-adjacent fields",
+        "verdict": "holds",
+        "reason": "HC=5, MH=8 verified; Q8YPNNKL/ERTJZW5M A=None; MH all T=None, MH-Evaluated empty. Minor imprecision: 'HC none with an evaluated mitigation' — Q8YPNNKL is St=Evaluated but harm=None (reliance intervention, not bias), so defensible; and 7IVS7X63 is coded Mental_Health not 'outside a care setting'. Moderate, holds with caveat."
+      },
+      {
+        "sq": "SQ3",
+        "claim": "SW relational/involuntary-client dimension stated but not operationalized",
+        "verdict": "holds",
+        "reason": "Verbatim R5QQTD95 statement confirmed; rests on few conceptual/acceptance papers, self-rated thin. No bridging study exists in the corpus; claim accurate about the absence."
+      }
+    ],
+    "general_findings": [
+      "Distillate provenance is unflagged across every claim: AN_Coding_Basis == 'Knowledge_Doc' for all 129 papers. Every code, every 'Evaluated' status, and every effect-size figure (12%, 45%, 87.7%) is extracted from a German LLM-generated summary, never the raw paper. The evidence fields are excerpts from those distillates. No claim surfaces this limit; the effect-size claims (SQ1 c6, SQ2 c5) inherit distillation and translation noise most directly.",
+      "Convenience-sample-to-field slippage: the corpus was assembled by four proprietary Deep Research systems (project CLAUDE.md), so frequency counts describe the retrieval, not 'the field' or 'the literature'. Several claims slide from corpus-counts to field-level generalizations (SQ1 c1 'the field's centre of gravity', SQ1 c2 'reaches the literature only as a thin front end'). The counts are robust; the generalizations are not carried by 129 retrieved papers.",
+      "Support-key lists are NOT padded. Direct spot-checks confirmed grounding: SQ2 c5's 13 keys all independently carry H=Stereotyping + Prompt_Practice + Evaluated; SQ1 c2 correctly excludes LBLF9BCW as bias-relevant; SQ3 c1's strict zeros reproduce exactly. Where a key is borderline (UDZLIJWX as 'SW field', 6MJYP7ZX as 'primary experiment', RM833D5N as Role_Persona), the coder's own answerability_notes already flag the ambiguity, and the claims mostly inherit that hedge.",
+      "All descriptive crosstabs reproduced exactly from the 129 batch records (technique/axis/harm/stage/status frequencies, stages_by_status, techniques_by_populations, techniques_by_axes, axes_by_harms, axes_by_stages). No count in any 'strong' SQ1/SQ2 claim was found wrong. The recurring weakness is inferential topspin on accurate tables ('centre of gravity', 'evidence gradient runs opposite to the attention gradient', 'clean division of labour'), not miscounting.",
+      "Multi-valued fields (axes, harms, stages, techniques are lists) make most frequencies instance-counts, not paper-counts. The analysis handles this consistently; SQ2 c4's '18 of 35' was checked and holds as both stage-instances and distinct papers (no evaluated paper carries Prompt_Practice twice). No inflation from list-flattening detected. 12 papers carry multiple techniques, which is why 129-87=42 technique-bearing papers spread across 61 technique-instances.",
+      "'Evaluated' status reflects that the distilled summary reported an evaluation, not independent verification of an effect. Cross-metric pooling is correctly refused (SQ1 c6). One structural artifact: MS3CNU3S and 6MJYP7ZX are Literaturreviews coded St=Evaluated, so 'evaluated' at Prompt_Practice mixes primary experiments with reviews reporting others' evaluations."
+    ]
+  }
+}
