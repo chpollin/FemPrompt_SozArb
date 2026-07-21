@@ -15,7 +15,7 @@ generated-with: Claude Code
 
 Arbeitsdokument zur Übertragung ins gemeinsame Google Doc. Die Fragen sammeln das fachliche Urteil der beiden Kolleginnen (Expertise Bias-Forschung und soziale Dimensionen der Sozialen Arbeit) für die Kapitel des Folgepapers, die inhaltliche Bewertung verlangen, vor allem Abschnitt 6 (Synthese SQ1 bis SQ3) sowie Teile von Abschnitt 5 und 7. Antworten können direkt unter den Fragen notiert werden, Stichworte genügen; die Einarbeitung in den Draft übernimmt die redaktionelle Seite.
 
-Grundlage der Abschnitts- und Fragenummern ist `paper/draft.md` (v0.2). Der beratende LLM-Track ist inzwischen über den Korpus gelaufen; die Fragen im Abschnitt „Aus der Advisory-Synthese" stammen aus seinen Kandidaten-Claims und verlangen fachliche Bestätigung oder Verwerfung.
+Grundlage der Abschnitts- und Fragenummern ist `paper/draft.md` (v0.4); die Nummern von Abschnitt 6 (Synthese SQ1 bis SQ3), Abschnitt 5 (Divergenz) und Abschnitt 7 (Discussion, mit den Unterabschnitten „The methodological yield" und „Integrating the workflow into a research process") gelten unverändert. Der beratende LLM-Track ist inzwischen über den Korpus gelaufen; die Fragen im Abschnitt „Aus der Advisory-Synthese" stammen aus seinen Kandidaten-Claims und verlangen fachliche Bestätigung oder Verwerfung.
 
 ## Zu SQ1, Prompting-Techniken (Abschnitt 6)
 

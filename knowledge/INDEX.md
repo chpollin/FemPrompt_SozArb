@@ -15,10 +15,10 @@ status: complete
 language: en
 version: "0.2"
 created: 2026-06-29
-updated: 2026-07-03
+updated: 2026-07-21
 authors: [Christopher Pollin]
 generated-with: Claude Code
-related: [project, methods, specification, data, design, plan, journal, standards, conformance-map, update-protocol]
+related: [project, methods, specification, data, design, plan, journal, standards, conformance-map, update-protocol, analysis-divergence, analysis-sq-advisory]
 ---
 
 This is the knowledge base of FemPrompt SozArb, a systematic literature review on feminist AI literacy and LLM bias in social work and the epistemic infrastructure built around it. It documents the conducted review and its benchmark, the PRISM screening tool, which is the binding screening surface the review is carried through (ADR-019), and the plan for the literature update. Concrete numbers do not live here. The benchmark figures live in the data (`generated/benchmark-results/`, `docs/data/`), the corpus and screening data in `docs/data/` and `assessment/`, and the Evidence Companion (https://chpollin.github.io/FemPrompt_SozArb/) renders them. This index shows where each piece of knowledge lives, in what order to read, and what the constitutive terms mean.
@@ -39,6 +39,8 @@ In function order, not alphabetical.
 | [[standards]] | The reporting standards implemented: PRISMA 2020, PRISMA-trAIce, RAISE | rarely |
 | [[conformance-map]] | Per-item conformance of this review against PRISMA 2020 and trAIce, with source paths and named gaps (R1) | per Stage R step |
 | [[update-protocol]] | The round-2 pre-registration protocol, the analysis-field design, the RIS procedure | until round 2 starts |
+| [[analysis-divergence]] | The licensed round-1 divergence analysis the follow-up paper's empirical section cites, decomposed and read off named replay keys | per replay change |
+| [[analysis-sq-advisory]] | The advisory, unreviewed SQ1 to SQ3 coding (TP4) feeding the paper's synthesis, pending human confirmation | per coding run |
 | [[guides/manual-review-checklist]] | The human-in-the-loop markdown review checklist | rarely |
 
 ## Reading paths
@@ -46,9 +48,10 @@ In function order, not alphabetical.
 - Onboarding a new collaborator: [[project]], [[methods]], [[specification]]. The reviewing colleagues use `docs/onboarding.html` instead; nothing on their path requires this knowledge base.
 - Inspect the benchmark: the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion; the committed replay (`src/replay/`) re-derives and asserts the figures.
 - Understand a tool decision: [[specification]] (the Entscheidungen / ADR section), [[journal]], [[design]].
-- Understand the divergence (the motivating illustration): [[methods]].
+- Understand the divergence (the motivating illustration and demonstration): [[methods]], [[analysis-divergence]].
 - Evaluate conformance: [[standards]] (the criterion), [[conformance-map]] (this review's per-item status).
 - Prepare the literature update: [[plan]] (Stage B), [[update-protocol]], [[standards]].
+- Prepare the follow-up paper's synthesis: [[analysis-divergence]] (section 5), [[analysis-sq-advisory]] (section 6, advisory).
 
 ## Convention
 
