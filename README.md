@@ -60,6 +60,12 @@ Full project documentation is in [`knowledge/`](knowledge/INDEX.md); start at th
 
 **Evidence Companion:** https://chpollin.github.io/FemPrompt_SozArb/
 
+## Licence
+
+- **Code** (pipeline, PRISM screening tool, publishing scripts): [MIT](LICENSE).
+- **Documentation, knowledge documents, and other textual content**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+- **Corpus and bibliographic sources**: rights in the underlying publications and third-party research data remain with their respective rights holders.
+
 ---
 
 *Updated: 2026-06-29*

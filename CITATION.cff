@@ -1,0 +1,13 @@
+# Note: this repository is a co-authored scholarly work. Additional authors
+# are listed in README.md and should be added to the authors block below.
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "Deep-Research-Assisted Literature Reviews: Epistemic Infrastructure as Practice"
+authors:
+  - family-names: Pollin
+    given-names: Christopher
+    affiliation: "Digital Humanities Craft OG"
+    orcid: "https://orcid.org/0000-0002-4879-129X"
+repository-code: "https://github.com/chpollin/FemPrompt_SozArb"
+license: MIT
