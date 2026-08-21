@@ -95,3 +95,7 @@ docs/data/fulltext_manifest.json
 research-vault/_sources/
 research-vault/00_representation/
 tests/browser/out/
+
+# Advisory-track intermediates (regenerable via src/analysis/build_advisory_manifest.py; merged into sq_extraction.json)
+generated/analysis-advisory/inputs/
+generated/analysis-advisory/extract/

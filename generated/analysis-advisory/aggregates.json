@@ -1,0 +1,465 @@
+{
+  "purpose": "Deterministic aggregation over sq_extraction.json (frequencies, co-occurrence, answerability)",
+  "provenance": {
+    "track": "advisory LLM, unreviewed",
+    "model": "Claude Opus (workflow agents)",
+    "run_id": "wf_1ad57a95-e54",
+    "date": "2026-07-21",
+    "inputs": "generated/analysis-advisory/inputs/ (section-filtered distilled knowledge documents)",
+    "coding_basis": "Knowledge_Doc"
+  },
+  "counts": {
+    "expected": 129,
+    "coded": 129,
+    "failed_batches": []
+  },
+  "frequencies": {
+    "n_coded": 129,
+    "studientyp": {
+      "Empirisch": 43,
+      "Konzept": 16,
+      "Literaturreview": 18,
+      "Experimentell": 25,
+      "Theoretisch": 27
+    },
+    "techniques": {
+      "None": 87,
+      "General_Guidance": 28,
+      "ICL": 9,
+      "Thought_Generation": 9,
+      "Role_Persona": 6,
+      "Self_Criticism": 5,
+      "Ensembling": 3,
+      "Decomposition": 1
+    },
+    "axes": {
+      "Gender": 88,
+      "Race_Ethnicity": 80,
+      "Intersectional": 42,
+      "Disability": 27,
+      "Socioeconomic": 33,
+      "Age": 25,
+      "None": 21,
+      "Sexual_Orientation_Identity": 26,
+      "Language_Culture": 21,
+      "Other_Axis": 21
+    },
+    "harms": {
+      "Disparate_Performance": 39,
+      "Direct_Discrimination": 10,
+      "Indirect_Discrimination": 38,
+      "None": 22,
+      "Erasure": 22,
+      "Stereotyping": 51,
+      "Exclusionary_Norms": 16,
+      "Misrepresentation": 22,
+      "Derogatory_Language": 4,
+      "Toxicity": 3
+    },
+    "stages": {
+      "Organisational_Process": 80,
+      "Post_Processing": 11,
+      "Pre_Processing": 17,
+      "None": 15,
+      "In_Training": 13,
+      "Prompt_Practice": 31,
+      "Intra_Processing": 2
+    },
+    "status": {
+      "Proposed": 66,
+      "Demonstrated": 14,
+      "None": 14,
+      "Evaluated": 35
+    },
+    "populations": {
+      "Not_SW_Specific": 74,
+      "Education_Professional": 31,
+      "General_Social_Work": 19,
+      "Child_Family_Welfare": 11,
+      "Mental_Health": 8,
+      "Social_Assistance_Admin": 6,
+      "Health_Care": 5
+    }
+  },
+  "cooccurrence": {
+    "techniques_by_axes": {
+      "None": {
+        "Gender": 60,
+        "Race_Ethnicity": 56,
+        "Intersectional": 37,
+        "Disability": 21,
+        "Socioeconomic": 30,
+        "Age": 17,
+        "None": 13,
+        "Sexual_Orientation_Identity": 21,
+        "Language_Culture": 13,
+        "Other_Axis": 9
+      },
+      "General_Guidance": {
+        "Gender": 18,
+        "Age": 3,
+        "Disability": 4,
+        "None": 7,
+        "Race_Ethnicity": 15,
+        "Sexual_Orientation_Identity": 4,
+        "Language_Culture": 6,
+        "Other_Axis": 6,
+        "Socioeconomic": 2,
+        "Intersectional": 3
+      },
+      "ICL": {
+        "Gender": 7,
+        "Race_Ethnicity": 4,
+        "Age": 2,
+        "Other_Axis": 3,
+        "None": 1,
+        "Language_Culture": 1,
+        "Disability": 1,
+        "Socioeconomic": 1
+      },
+      "Thought_Generation": {
+        "Gender": 6,
+        "Race_Ethnicity": 4,
+        "Age": 2,
+        "Other_Axis": 2,
+        "None": 2,
+        "Language_Culture": 1
+      },
+      "Role_Persona": {
+        "Gender": 4,
+        "Race_Ethnicity": 5,
+        "Age": 4,
+        "Other_Axis": 4,
+        "Intersectional": 2,
+        "Disability": 1,
+        "Sexual_Orientation_Identity": 1,
+        "Language_Culture": 1
+      },
+      "Self_Criticism": {
+        "Gender": 4,
+        "Race_Ethnicity": 4,
+        "Language_Culture": 2,
+        "Disability": 1,
+        "Age": 1,
+        "Socioeconomic": 1,
+        "Sexual_Orientation_Identity": 1,
+        "Other_Axis": 2,
+        "Intersectional": 1
+      },
+      "Ensembling": {
+        "Gender": 1,
+        "Race_Ethnicity": 2,
+        "Language_Culture": 2,
+        "None": 1
+      },
+      "Decomposition": {
+        "Race_Ethnicity": 1,
+        "Language_Culture": 1,
+        "Other_Axis": 1
+      }
+    },
+    "techniques_by_populations": {
+      "None": {
+        "Not_SW_Specific": 46,
+        "Education_Professional": 18,
+        "General_Social_Work": 17,
+        "Child_Family_Welfare": 11,
+        "Mental_Health": 8,
+        "Social_Assistance_Admin": 6,
+        "Health_Care": 5
+      },
+      "General_Guidance": {
+        "Education_Professional": 13,
+        "Not_SW_Specific": 14,
+        "General_Social_Work": 2
+      },
+      "ICL": {
+        "Not_SW_Specific": 8,
+        "Education_Professional": 1
+      },
+      "Thought_Generation": {
+        "Not_SW_Specific": 8,
+        "Education_Professional": 1
+      },
+      "Role_Persona": {
+        "Not_SW_Specific": 5,
+        "Education_Professional": 1
+      },
+      "Self_Criticism": {
+        "Not_SW_Specific": 5
+      },
+      "Ensembling": {
+        "Not_SW_Specific": 3
+      },
+      "Decomposition": {
+        "Not_SW_Specific": 1
+      }
+    },
+    "axes_by_harms": {
+      "Gender": {
+        "Disparate_Performance": 29,
+        "Direct_Discrimination": 9,
+        "Indirect_Discrimination": 26,
+        "Erasure": 16,
+        "None": 8,
+        "Stereotyping": 45,
+        "Exclusionary_Norms": 13,
+        "Misrepresentation": 17,
+        "Derogatory_Language": 4,
+        "Toxicity": 3
+      },
+      "Race_Ethnicity": {
+        "Disparate_Performance": 32,
+        "Direct_Discrimination": 9,
+        "Indirect_Discrimination": 29,
+        "Erasure": 17,
+        "None": 2,
+        "Stereotyping": 39,
+        "Exclusionary_Norms": 13,
+        "Misrepresentation": 16,
+        "Derogatory_Language": 3,
+        "Toxicity": 3
+      },
+      "Intersectional": {
+        "Disparate_Performance": 17,
+        "Direct_Discrimination": 5,
+        "Indirect_Discrimination": 16,
+        "Erasure": 9,
+        "Stereotyping": 20,
+        "None": 1,
+        "Misrepresentation": 10,
+        "Exclusionary_Norms": 7,
+        "Toxicity": 1,
+        "Derogatory_Language": 1
+      },
+      "Disability": {
+        "Indirect_Discrimination": 10,
+        "Direct_Discrimination": 5,
+        "Erasure": 7,
+        "Disparate_Performance": 7,
+        "Stereotyping": 12,
+        "Misrepresentation": 7,
+        "Exclusionary_Norms": 6,
+        "Toxicity": 2
+      },
+      "Socioeconomic": {
+        "Indirect_Discrimination": 15,
+        "Direct_Discrimination": 1,
+        "None": 2,
+        "Stereotyping": 13,
+        "Erasure": 7,
+        "Disparate_Performance": 10,
+        "Misrepresentation": 7,
+        "Exclusionary_Norms": 7,
+        "Toxicity": 1,
+        "Derogatory_Language": 1
+      },
+      "Age": {
+        "Indirect_Discrimination": 9,
+        "Direct_Discrimination": 4,
+        "Stereotyping": 13,
+        "None": 1,
+        "Erasure": 3,
+        "Disparate_Performance": 7,
+        "Derogatory_Language": 2,
+        "Misrepresentation": 4,
+        "Toxicity": 2,
+        "Exclusionary_Norms": 1
+      },
+      "None": {
+        "None": 14,
+        "Misrepresentation": 2,
+        "Indirect_Discrimination": 4,
+        "Erasure": 1,
+        "Stereotyping": 1,
+        "Disparate_Performance": 1
+      },
+      "Sexual_Orientation_Identity": {
+        "Disparate_Performance": 9,
+        "Erasure": 6,
+        "Stereotyping": 14,
+        "Misrepresentation": 7,
+        "Derogatory_Language": 3,
+        "Exclusionary_Norms": 9,
+        "Direct_Discrimination": 3,
+        "Indirect_Discrimination": 6,
+        "Toxicity": 2
+      },
+      "Language_Culture": {
+        "Disparate_Performance": 4,
+        "Stereotyping": 13,
+        "Erasure": 6,
+        "Misrepresentation": 6,
+        "Derogatory_Language": 1,
+        "Exclusionary_Norms": 4,
+        "Direct_Discrimination": 2,
+        "Indirect_Discrimination": 3,
+        "None": 1,
+        "Toxicity": 1
+      },
+      "Other_Axis": {
+        "Stereotyping": 15,
+        "Disparate_Performance": 6,
+        "Exclusionary_Norms": 2,
+        "Direct_Discrimination": 4,
+        "Misrepresentation": 7,
+        "Derogatory_Language": 2,
+        "Erasure": 5,
+        "Indirect_Discrimination": 3,
+        "Toxicity": 1
+      }
+    },
+    "axes_by_stages": {
+      "Gender": {
+        "Organisational_Process": 54,
+        "Post_Processing": 7,
+        "Pre_Processing": 11,
+        "None": 11,
+        "In_Training": 8,
+        "Prompt_Practice": 22,
+        "Intra_Processing": 1
+      },
+      "Race_Ethnicity": {
+        "Organisational_Process": 49,
+        "Post_Processing": 7,
+        "Pre_Processing": 13,
+        "None": 11,
+        "In_Training": 9,
+        "Prompt_Practice": 19,
+        "Intra_Processing": 1
+      },
+      "Intersectional": {
+        "Organisational_Process": 30,
+        "Post_Processing": 3,
+        "Pre_Processing": 6,
+        "None": 9,
+        "Prompt_Practice": 4,
+        "In_Training": 2
+      },
+      "Disability": {
+        "Organisational_Process": 18,
+        "Post_Processing": 2,
+        "Prompt_Practice": 4,
+        "None": 6,
+        "Pre_Processing": 2,
+        "In_Training": 1
+      },
+      "Socioeconomic": {
+        "Organisational_Process": 29,
+        "Post_Processing": 2,
+        "None": 2,
+        "Prompt_Practice": 3,
+        "Pre_Processing": 5,
+        "In_Training": 1
+      },
+      "Age": {
+        "Organisational_Process": 12,
+        "Post_Processing": 3,
+        "Prompt_Practice": 5,
+        "None": 6,
+        "In_Training": 4,
+        "Intra_Processing": 1,
+        "Pre_Processing": 3
+      },
+      "None": {
+        "Organisational_Process": 15,
+        "Prompt_Practice": 4,
+        "Pre_Processing": 2,
+        "In_Training": 2,
+        "Post_Processing": 3,
+        "None": 2
+      },
+      "Sexual_Orientation_Identity": {
+        "Organisational_Process": 17,
+        "Pre_Processing": 9,
+        "In_Training": 5,
+        "Intra_Processing": 1,
+        "Post_Processing": 3,
+        "None": 2,
+        "Prompt_Practice": 4
+      },
+      "Language_Culture": {
+        "Organisational_Process": 12,
+        "Pre_Processing": 3,
+        "In_Training": 3,
+        "Intra_Processing": 1,
+        "Post_Processing": 2,
+        "Prompt_Practice": 7,
+        "None": 2
+      },
+      "Other_Axis": {
+        "In_Training": 7,
+        "Prompt_Practice": 9,
+        "Pre_Processing": 3,
+        "Intra_Processing": 2,
+        "Post_Processing": 3,
+        "Organisational_Process": 3,
+        "None": 5
+      }
+    },
+    "stages_by_status": {
+      "Organisational_Process": {
+        "Proposed": 61,
+        "Demonstrated": 11,
+        "Evaluated": 8
+      },
+      "Post_Processing": {
+        "Proposed": 6,
+        "Evaluated": 5
+      },
+      "Pre_Processing": {
+        "Proposed": 11,
+        "Evaluated": 5,
+        "Demonstrated": 1
+      },
+      "None": {
+        "None": 14,
+        "Proposed": 1
+      },
+      "In_Training": {
+        "Evaluated": 10,
+        "Proposed": 3
+      },
+      "Prompt_Practice": {
+        "Evaluated": 18,
+        "Proposed": 8,
+        "Demonstrated": 5
+      },
+      "Intra_Processing": {
+        "Evaluated": 2
+      }
+    }
+  },
+  "answerability": {
+    "techniques": {
+      "grounded": 114,
+      "ambiguous": 15,
+      "not_codable": 0
+    },
+    "axes": {
+      "grounded": 90,
+      "ambiguous": 39,
+      "not_codable": 0
+    },
+    "harms": {
+      "grounded": 94,
+      "ambiguous": 35,
+      "not_codable": 0
+    },
+    "stages": {
+      "grounded": 99,
+      "ambiguous": 30,
+      "not_codable": 0
+    },
+    "status": {
+      "grounded": 106,
+      "ambiguous": 23,
+      "not_codable": 0
+    },
+    "populations": {
+      "grounded": 105,
+      "ambiguous": 24,
+      "not_codable": 0
+    }
+  }
+}

@@ -1,62 +1,27 @@
-# Human Assessment
+# Human assessment (expert track)
 
-Manuelles Assessment durch Fachexpert:innen (Susi Sackl-Sharif, Sabine Klinger).
+The manual assessment by the two reviewing experts (social work, gender and diversity studies). The track is complete and epistemically binding; its canonical CSV is `assessment/human_assessment.csv`. Round-2 screening runs through PRISM (`docs/prisma.html`), so this workflow is kept as the record of how the round-1 track was captured.
 
----
+Working copy of the round-1 capture: [results/assessment_20260218.xlsx](results/assessment_20260218.xlsx); the live sheet was on Google Sheets: [Link](https://docs.google.com/spreadsheets/d/1z-HQSwVFg-TtdP0xo1UH4GKLMAXNvvXSdySPSA7KUdM/).
 
-## Aktueller Stand
+## Schema
 
-| Metrik | Wert |
-|--------|------|
-| Papers gesamt | 305 (in CSV), 326 (in Zotero) |
-| Mit Decision | 210 |
-| Include | 88 |
-| Exclude | 108 |
-| Unclear | 14 |
+Category definitions live in [../categories.yaml](../categories.yaml) (single source of truth). Ten binary categories in two dimensions:
 
-Aktuelle Datei: [results/assessment_20260218.xlsx](results/assessment_20260218.xlsx)
+- Technology: AI_Literacies, Generative_KI, Prompting, KI_Sonstige
+- Social: Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
 
-Google Sheets (live): [Link](https://docs.google.com/spreadsheets/d/1z-HQSwVFg-TtdP0xo1UH4GKLMAXNvvXSdySPSA7KUdM/)
+Decision logic: Include when at least one technology AND at least one social category apply; Exclude otherwise; Unclear marks records needing discussion (they enter PRISM as report items, never as decisions).
 
----
+## Sheet-to-CSV export (round 1 procedure)
 
-## Assessment-Schema
+1. Open the Google Sheet.
+2. File, Download, Comma-separated values (.csv).
+3. Save as `assessment/human_assessment.csv`.
 
-Vollstaendige Kategorie-Definitionen: [../../benchmark/config/categories.yaml](../../benchmark/config/categories.yaml)
+### Column mapping
 
-### 10 Binaere Kategorien
-
-**Technik-Dimensionen:**
-- AI_Literacies
-- Generative_KI
-- Prompting
-- KI_Sonstige
-
-**Sozial-Dimensionen:**
-- Soziale_Arbeit
-- Bias_Ungleichheit
-- Gender
-- Diversitaet / Intersektionalitaet
-- Feministisch
-- Fairness
-
-### Entscheidungslogik
-
-- **Include:** Mindestens 1 Technik-Kategorie = Ja UND mindestens 1 Sozial-Kategorie = Ja
-- **Exclude:** Kriterien nicht erfuellt
-- **Unclear:** Unsicher, Diskussion noetig
-
----
-
-## Google Sheets Export fuer Benchmark
-
-1. [Google Sheets oeffnen](https://docs.google.com/spreadsheets/d/1z-HQSwVFg-TtdP0xo1UH4GKLMAXNvvXSdySPSA7KUdM/)
-2. Datei -> Herunterladen -> Comma-separated values (.csv)
-3. Speichern als `benchmark/data/human_assessment.csv`
-
-### Spalten-Mapping
-
-| Google Sheets Spalte | CSV Spalte |
+| Sheet column | CSV column |
 |---------------------|------------|
 | ID | ID |
 | Zotero Key | Zotero_Key |
@@ -77,49 +42,20 @@ Vollstaendige Kategorie-Definitionen: [../../benchmark/config/categories.yaml](.
 | Exclusion Reason | Exclusion_Reason |
 | Notes | Notes |
 
-Werte: Kategorien = `Ja` oder `Nein` (leer = Nein), Decision = `Include` / `Exclude` / `Unclear`
+Values: categories `Ja` or `Nein` (empty reads as Nein), Decision `Include` / `Exclude` / `Unclear`.
 
----
+## Scripts
 
-## Skripte
-
-### Excel aus Zotero generieren
-
-Erstellt eine neue formatierte Excel-Datei mit allen Papers (fuer Google Sheets Upload):
+The workflow scripts moved to `src/assess/` in the folder restructure:
 
 ```bash
-python assessment/human/create_thematic_assessment.py
+python src/assess/create_thematic_assessment.py   # generate the formatted Excel from Zotero
+python src/assess/excel_to_zotero_tags.py         # write final decisions back to Zotero as tags
 ```
 
-### Ergebnisse nach Zotero exportieren
+## Quality assurance (round 1)
 
-Schreibt die finalen Assessment-Entscheidungen als Tags zurueck in Zotero:
+- Disagreements were resolved in inter-rater discussion between the two reviewers; the consensus is documented in the Notes column.
+- Unclear marks papers that needed further discussion.
 
-```bash
-python assessment/human/excel_to_zotero_tags.py
-```
-
----
-
-## Qualitaetssicherung
-
-- Bei Uneinigkeit: Inter-Rater-Diskussion (Susi + Sabine)
-- Konsens-Entscheidung in Notes-Spalte dokumentieren
-- Unclear-Kategorie fuer Papers die weitere Diskussion benoetigen
-
----
-
-## Dateien
-
-```
-assessment/human/
-├── README.md                          # Diese Datei
-├── create_thematic_assessment.py      # Excel aus Zotero generieren
-├── excel_to_zotero_tags.py            # Ergebnisse -> Zotero Tags
-└── results/
-    └── assessment_20260218.xlsx       # Aktuelles Assessment (exportiert 2026-02-18)
-```
-
----
-
-*Aktualisiert: 2026-02-21*
+The counts of this track live in the data (`generated/benchmark-results/`, reproduced by `src/replay/`) and the Evidence Companion.

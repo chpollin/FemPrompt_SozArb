@@ -264,6 +264,44 @@ try {
   check('in-tool reconciliation export: schema and per-paper statuses', recon.schema === 'femprompt-prisma-reconciliation/0.1' && Object.entries(recon.papers).every(([pid, x]) => x.status === expectedStatus(pid)), recon.summary);
   await page.keyboard.press('Escape');
 
+  // 8b repo-root connect: the picker hands over a folder and the tool resolves the reviewer
+  // folder below it. The real picker cannot be automated, so a fake directory handle with the
+  // same surface is passed straight to the resolver (ported mechanics, operator decision 2026-08-21).
+  const scopes = await page.evaluate(async () => {
+    const mk = (children) => ({
+      _c: children || {},
+      async getDirectoryHandle(name, opts) {
+        if (this._c[name]) return this._c[name];
+        if (opts && opts.create) { this._c[name] = mk({}); return this._c[name]; }
+        throw new Error('NotFoundError: ' + name);
+      }
+    });
+    const T = window.__PRISMA_TEST__;
+    const screening = mk({});
+    const root = mk({ docs: mk({ data: mk({ screening }) }) });
+    await T.resolveScopes(root);
+    const asRoot = { scope: T.connectScope(), isScreening: T.screeningHandle() === screening };
+    const plain = mk({});
+    await T.resolveScopes(plain);
+    const asPlain = { scope: T.connectScope(), isPicked: T.screeningHandle() === plain };
+    const bare = mk({ docs: mk({}) });
+    let created = null;
+    try { await T.resolveScopes(bare); created = { scope: T.connectScope(), made: !!T.screeningHandle() }; } catch (e) { created = { error: String(e.message || e) }; }
+    // a resolution that fails below the docs level must not leave the previous connection
+    // writing: reconnect a valid root first, then hit one whose data level is refused
+    await T.resolveScopes(root);
+    const before = T.screeningHandle() === screening;
+    const failing = mk({ docs: { getDirectoryHandle() { throw new Error('permission denied'); } } });
+    let threw = false;
+    try { await T.resolveScopes(failing); } catch (e) { threw = true; }
+    const stale = { before, threw, handle: T.screeningHandle() };
+    return { asRoot, asPlain, created, stale };
+  });
+  check('connect: a picked repo root resolves docs/data/screening as the reviewer folder', scopes.asRoot.scope === 'root' && scopes.asRoot.isScreening, scopes.asRoot);
+  check('connect: a folder without a docs child stays the reviewer folder itself', scopes.asPlain.scope === 'screening' && scopes.asPlain.isPicked, scopes.asPlain);
+  check('connect: a clone without the data or screening folder gets them created, not an error', !scopes.created.error && scopes.created.made && scopes.created.scope === 'root', scopes.created);
+  check('connect: a failed resolution drops the previous connection instead of writing on', scopes.stale.before && scopes.stale.threw && scopes.stale.handle === null, scopes.stale);
+
   check('no page errors during the session', consoleErrors.length === 0, consoleErrors);
 
   // 9 the pending-reading gate and the out-of-order load, each in a fresh profile so the

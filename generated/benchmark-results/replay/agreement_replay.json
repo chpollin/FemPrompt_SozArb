@@ -1,0 +1,480 @@
+{
+  "provenance": {
+    "script": "src/replay/replay_round1.py",
+    "generated_at": "2026-07-03T05:44:04.898643+00:00",
+    "pairing_key": "Zotero_Key",
+    "input_files": {
+      "human": "assessment/human_assessment.csv",
+      "llm_10k": "assessment/llm_assessment_10k.csv",
+      "papers_full": "assessment/papers_full.csv",
+      "canonical_selftest": "generated/benchmark-results/agreement_metrics.json"
+    }
+  },
+  "paired_n": 291,
+  "full": {
+    "decision": {
+      "n": 291,
+      "confusion_matrix": {
+        "Include_Include": 100,
+        "Include_Exclude": 34,
+        "Include_Unclear": 0,
+        "Exclude_Include": 108,
+        "Exclude_Exclude": 49,
+        "Exclude_Unclear": 0,
+        "Unclear_Include": 0,
+        "Unclear_Exclude": 0,
+        "Unclear_Unclear": 0
+      },
+      "overall_agreement": 0.512027,
+      "cohens_kappa": 0.0561,
+      "two_by_two": {
+        "n": 291,
+        "dropped_non_binary": 0,
+        "cells": {
+          "Include_Include": 100,
+          "Include_Exclude": 34,
+          "Exclude_Include": 108,
+          "Exclude_Exclude": 49
+        },
+        "human_include": 134,
+        "human_exclude": 157,
+        "llm_include": 208,
+        "llm_exclude": 83,
+        "human_include_rate": 0.460481,
+        "llm_include_rate": 0.714777,
+        "po": 0.512027,
+        "kappa": 0.056101,
+        "pabak": 0.024055,
+        "kappa_max": 0.508109,
+        "prevalence_index": 0.175258,
+        "bias_index": 0.254296
+      }
+    },
+    "per_category": {
+      "AI_Literacies": {
+        "n": 238,
+        "kappa": 0.488,
+        "agreement": 0.760504,
+        "human_yes_count": 62,
+        "llm_yes_count": 103
+      },
+      "Generative_KI": {
+        "n": 236,
+        "kappa": 0.5376,
+        "agreement": 0.758475,
+        "human_yes_count": 135,
+        "llm_yes_count": 90
+      },
+      "Prompting": {
+        "n": 236,
+        "kappa": 0.5331,
+        "agreement": 0.800847,
+        "human_yes_count": 87,
+        "llm_yes_count": 52
+      },
+      "KI_Sonstige": {
+        "n": 235,
+        "kappa": 0.5355,
+        "agreement": 0.770213,
+        "human_yes_count": 150,
+        "llm_yes_count": 122
+      },
+      "Soziale_Arbeit": {
+        "n": 235,
+        "kappa": 0.8163,
+        "agreement": 0.931915,
+        "human_yes_count": 56,
+        "llm_yes_count": 58
+      },
+      "Bias_Ungleichheit": {
+        "n": 234,
+        "kappa": 0.4386,
+        "agreement": 0.794872,
+        "human_yes_count": 184,
+        "llm_yes_count": 172
+      },
+      "Gender": {
+        "n": 234,
+        "kappa": 0.4074,
+        "agreement": 0.679487,
+        "human_yes_count": 143,
+        "llm_yes_count": 74
+      },
+      "Diversitaet": {
+        "n": 234,
+        "kappa": 0.4318,
+        "agreement": 0.700855,
+        "human_yes_count": 146,
+        "llm_yes_count": 92
+      },
+      "Feministisch": {
+        "n": 234,
+        "kappa": 0.7527,
+        "agreement": 0.910256,
+        "human_yes_count": 50,
+        "llm_yes_count": 61
+      },
+      "Fairness": {
+        "n": 234,
+        "kappa": 0.3875,
+        "agreement": 0.692308,
+        "human_yes_count": 115,
+        "llm_yes_count": 149
+      }
+    }
+  },
+  "content_only": {
+    "removed_workflow_pairs": {
+      "Duplicate": 66,
+      "No_full_text": 9,
+      "Wrong_publication_type": 17
+    },
+    "n": 199,
+    "decision": {
+      "n": 199,
+      "confusion_matrix": {
+        "Include_Include": 100,
+        "Include_Exclude": 34,
+        "Include_Unclear": 0,
+        "Exclude_Include": 36,
+        "Exclude_Exclude": 29,
+        "Exclude_Unclear": 0,
+        "Unclear_Include": 0,
+        "Unclear_Exclude": 0,
+        "Unclear_Unclear": 0
+      },
+      "overall_agreement": 0.648241,
+      "cohens_kappa": 0.194,
+      "two_by_two": {
+        "n": 199,
+        "dropped_non_binary": 0,
+        "cells": {
+          "Include_Include": 100,
+          "Include_Exclude": 34,
+          "Exclude_Include": 36,
+          "Exclude_Exclude": 29
+        },
+        "human_include": 134,
+        "human_exclude": 65,
+        "llm_include": 136,
+        "llm_exclude": 63,
+        "human_include_rate": 0.673367,
+        "llm_include_rate": 0.683417,
+        "po": 0.648241,
+        "kappa": 0.193959,
+        "pabak": 0.296482,
+        "kappa_max": 0.97697,
+        "prevalence_index": 0.356784,
+        "bias_index": 0.01005
+      }
+    },
+    "per_category": {
+      "AI_Literacies": {
+        "n": 194,
+        "kappa": 0.5885,
+        "agreement": 0.809278,
+        "human_yes_count": 54,
+        "llm_yes_count": 81
+      },
+      "Generative_KI": {
+        "n": 194,
+        "kappa": 0.5784,
+        "agreement": 0.783505,
+        "human_yes_count": 112,
+        "llm_yes_count": 80
+      },
+      "Prompting": {
+        "n": 194,
+        "kappa": 0.5323,
+        "agreement": 0.798969,
+        "human_yes_count": 73,
+        "llm_yes_count": 42
+      },
+      "KI_Sonstige": {
+        "n": 193,
+        "kappa": 0.5165,
+        "agreement": 0.756477,
+        "human_yes_count": 116,
+        "llm_yes_count": 93
+      },
+      "Soziale_Arbeit": {
+        "n": 193,
+        "kappa": 0.7867,
+        "agreement": 0.92228,
+        "human_yes_count": 45,
+        "llm_yes_count": 46
+      },
+      "Bias_Ungleichheit": {
+        "n": 192,
+        "kappa": 0.4611,
+        "agreement": 0.791667,
+        "human_yes_count": 147,
+        "llm_yes_count": 137
+      },
+      "Gender": {
+        "n": 192,
+        "kappa": 0.4198,
+        "agreement": 0.692708,
+        "human_yes_count": 110,
+        "llm_yes_count": 57
+      },
+      "Diversitaet": {
+        "n": 192,
+        "kappa": 0.4174,
+        "agreement": 0.692708,
+        "human_yes_count": 118,
+        "llm_yes_count": 73
+      },
+      "Feministisch": {
+        "n": 192,
+        "kappa": 0.7116,
+        "agreement": 0.90625,
+        "human_yes_count": 34,
+        "llm_yes_count": 44
+      },
+      "Fairness": {
+        "n": 192,
+        "kappa": 0.4039,
+        "agreement": 0.697917,
+        "human_yes_count": 91,
+        "llm_yes_count": 121
+      }
+    }
+  },
+  "condition_contrast": {
+    "provenance": {
+      "script": "src/replay/replay_round1.py",
+      "generated_at": "2026-07-03T05:44:04.898643+00:00",
+      "pairing_key": "Zotero_Key",
+      "input_files": {
+        "human": "assessment/human_assessment.csv",
+        "llm_10k": "assessment/llm_assessment_10k.csv",
+        "papers_full": "assessment/papers_full.csv",
+        "canonical_selftest": "generated/benchmark-results/agreement_metrics.json"
+      }
+    },
+    "note": "plan.md V1: the Sonnet+KD advantage is expected to flip under content-only. Reported mechanically by kappa; no narrative.",
+    "best_condition_by_kappa_full": "sonnet_kd",
+    "best_condition_by_kappa_content_only": "sonnet",
+    "conditions": {
+      "haiku": {
+        "paired_n": 291,
+        "full": {
+          "n": 291,
+          "dropped_non_binary": 0,
+          "cells": {
+            "Include_Include": 100,
+            "Include_Exclude": 34,
+            "Exclude_Include": 108,
+            "Exclude_Exclude": 49
+          },
+          "human_include": 134,
+          "human_exclude": 157,
+          "llm_include": 208,
+          "llm_exclude": 83,
+          "human_include_rate": 0.460481,
+          "llm_include_rate": 0.714777,
+          "po": 0.512027,
+          "kappa": 0.056101,
+          "pabak": 0.024055,
+          "kappa_max": 0.508109,
+          "prevalence_index": 0.175258,
+          "bias_index": 0.254296
+        },
+        "content_only": {
+          "n": 199,
+          "dropped_non_binary": 0,
+          "cells": {
+            "Include_Include": 100,
+            "Include_Exclude": 34,
+            "Exclude_Include": 36,
+            "Exclude_Exclude": 29
+          },
+          "human_include": 134,
+          "human_exclude": 65,
+          "llm_include": 136,
+          "llm_exclude": 63,
+          "human_include_rate": 0.673367,
+          "llm_include_rate": 0.683417,
+          "po": 0.648241,
+          "kappa": 0.193959,
+          "pabak": 0.296482,
+          "kappa_max": 0.97697,
+          "prevalence_index": 0.356784,
+          "bias_index": 0.01005
+        },
+        "content_only_removed_workflow_pairs": {
+          "Duplicate": 66,
+          "No_full_text": 9,
+          "Wrong_publication_type": 17
+        }
+      },
+      "haiku_kd": {
+        "paired_n": 291,
+        "full": {
+          "n": 291,
+          "dropped_non_binary": 0,
+          "cells": {
+            "Include_Include": 123,
+            "Include_Exclude": 11,
+            "Exclude_Include": 135,
+            "Exclude_Exclude": 22
+          },
+          "human_include": 134,
+          "human_exclude": 157,
+          "llm_include": 258,
+          "llm_exclude": 33,
+          "human_include_rate": 0.460481,
+          "llm_include_rate": 0.886598,
+          "po": 0.498282,
+          "kappa": 0.054354,
+          "pabak": -0.003436,
+          "kappa_max": 0.196848,
+          "prevalence_index": 0.347079,
+          "bias_index": 0.426117
+        },
+        "content_only": {
+          "n": 199,
+          "dropped_non_binary": 0,
+          "cells": {
+            "Include_Include": 123,
+            "Include_Exclude": 11,
+            "Exclude_Include": 55,
+            "Exclude_Exclude": 10
+          },
+          "human_include": 134,
+          "human_exclude": 65,
+          "llm_include": 178,
+          "llm_exclude": 21,
+          "human_include_rate": 0.673367,
+          "llm_include_rate": 0.894472,
+          "po": 0.668342,
+          "kappa": 0.086902,
+          "pabak": 0.336683,
+          "kappa_max": 0.391268,
+          "prevalence_index": 0.567839,
+          "bias_index": 0.221106
+        },
+        "content_only_removed_workflow_pairs": {
+          "Duplicate": 66,
+          "No_full_text": 9,
+          "Wrong_publication_type": 17
+        }
+      },
+      "sonnet": {
+        "paired_n": 291,
+        "full": {
+          "n": 291,
+          "dropped_non_binary": 0,
+          "cells": {
+            "Include_Include": 118,
+            "Include_Exclude": 16,
+            "Exclude_Include": 122,
+            "Exclude_Exclude": 35
+          },
+          "human_include": 134,
+          "human_exclude": 157,
+          "llm_include": 240,
+          "llm_exclude": 51,
+          "human_include_rate": 0.460481,
+          "llm_include_rate": 0.824742,
+          "po": 0.525773,
+          "kappa": 0.097857,
+          "pabak": 0.051546,
+          "kappa_max": 0.307049,
+          "prevalence_index": 0.285223,
+          "bias_index": 0.364261
+        },
+        "content_only": {
+          "n": 199,
+          "dropped_non_binary": 0,
+          "cells": {
+            "Include_Include": 118,
+            "Include_Exclude": 16,
+            "Exclude_Include": 39,
+            "Exclude_Exclude": 26
+          },
+          "human_include": 134,
+          "human_exclude": 65,
+          "llm_include": 157,
+          "llm_exclude": 42,
+          "human_include_rate": 0.673367,
+          "llm_include_rate": 0.788945,
+          "po": 0.723618,
+          "kappa": 0.308722,
+          "pabak": 0.447236,
+          "kappa_max": 0.71092,
+          "prevalence_index": 0.462312,
+          "bias_index": 0.115578
+        },
+        "content_only_removed_workflow_pairs": {
+          "Duplicate": 66,
+          "No_full_text": 9,
+          "Wrong_publication_type": 17
+        }
+      },
+      "sonnet_kd": {
+        "paired_n": 291,
+        "full": {
+          "n": 291,
+          "dropped_non_binary": 0,
+          "cells": {
+            "Include_Include": 131,
+            "Include_Exclude": 3,
+            "Exclude_Include": 135,
+            "Exclude_Exclude": 22
+          },
+          "human_include": 134,
+          "human_exclude": 157,
+          "llm_include": 266,
+          "llm_exclude": 25,
+          "human_include_rate": 0.460481,
+          "llm_include_rate": 0.914089,
+          "po": 0.525773,
+          "kappa": 0.109816,
+          "pabak": 0.051546,
+          "kappa_max": 0.148519,
+          "prevalence_index": 0.37457,
+          "bias_index": 0.453608
+        },
+        "content_only": {
+          "n": 199,
+          "dropped_non_binary": 0,
+          "cells": {
+            "Include_Include": 131,
+            "Include_Exclude": 3,
+            "Exclude_Include": 50,
+            "Exclude_Exclude": 15
+          },
+          "human_include": 134,
+          "human_exclude": 65,
+          "llm_include": 181,
+          "llm_exclude": 18,
+          "human_include_rate": 0.673367,
+          "llm_include_rate": 0.909548,
+          "po": 0.733668,
+          "kappa": 0.256049,
+          "pabak": 0.467337,
+          "kappa_max": 0.340269,
+          "prevalence_index": 0.582915,
+          "bias_index": 0.236181
+        },
+        "content_only_removed_workflow_pairs": {
+          "Duplicate": 66,
+          "No_full_text": 9,
+          "Wrong_publication_type": 17
+        }
+      }
+    }
+  },
+  "self_test": {
+    "passed": true,
+    "canonical_source": "generated/benchmark-results/agreement_metrics.json",
+    "tolerance": 1e-09,
+    "checked": [
+      "decision_confusion_matrix",
+      "decision_cohens_kappa",
+      "ten_per_category_kappas"
+    ]
+  }
+}

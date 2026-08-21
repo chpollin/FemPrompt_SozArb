@@ -24,8 +24,10 @@
 #                      no certainty rating)
 #
 # Count-bearing caveat: the retrospective flow counts and agreement figures
-# are reconstructable but not yet asserted by a committed replay; R2 must
-# supersede any hand recount before R4 publishes the record.
+# are asserted by the committed replay src/replay/replay_round1.py, which pairs the raw
+# CSVs on Zotero_Key, reproduces generated/benchmark-results/agreement_metrics.json as a
+# self-test, and writes generated/benchmark-results/replay/. Every earlier hand recount is
+# superseded; R4 reads those outputs when it builds the record.
 
 prisma_2020:
   - standard: PRISMA-2020

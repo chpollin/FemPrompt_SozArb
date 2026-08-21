@@ -1,0 +1,1281 @@
+{
+  "purpose": "TP4 advisory LLM track inputs (SQ1-SQ3), human-included papers only",
+  "script": "src/analysis/build_advisory_manifest.py",
+  "sources": {
+    "human_decisions": "assessment/human_assessment.csv",
+    "papers_index": "assessment/papers_full.csv",
+    "kd_dir": "generated/distilled"
+  },
+  "counts": {
+    "human_decisions": 303,
+    "human_includes": 142,
+    "mapped": 129,
+    "unmapped_includes": 13
+  },
+  "papers": [
+    {
+      "zotero_key": "5G2QTZYD",
+      "author_year": "Ahmed (2024)",
+      "title": "Feminist perspectives on AI: Ethical considerations in algorithmic decision-making",
+      "studientyp": "Literaturreview",
+      "mapped_via": "duplicate_title",
+      "input_file": "generated/analysis-advisory/inputs/5G2QTZYD.md",
+      "kd_source": "generated/distilled/Ahmed_2024_Feminist_perspectives_on_AI_Ethical.md",
+      "chars": 4891
+    },
+    {
+      "zotero_key": "ZJS2J7E7",
+      "author_year": "Ahn et al (2025)",
+      "title": "Artificial Intelligence (AI) Literacy for Social Work: Implications for Core Competencies",
+      "studientyp": "Theoretisch",
+      "mapped_via": "duplicate_title",
+      "input_file": "generated/analysis-advisory/inputs/ZJS2J7E7.md",
+      "kd_source": "generated/distilled/Ahn_2025_Artificial_Intelligence_(AI)_literacy_for_social.md",
+      "chars": 3648
+    },
+    {
+      "zotero_key": "PYN6HB3E",
+      "author_year": "Alam (2025)",
+      "title": "Social work in the age of artificial intelligence: A rights-based framework for evidence-based practice through social psychology, group dynamics, and institutional analysis",
+      "studientyp": "Empirisch",
+      "input_file": "generated/analysis-advisory/inputs/PYN6HB3E.md",
+      "kd_source": "generated/distilled/Alam_2025_Social_work_in_the_age_of_artificial_intelligence.md",
+      "chars": 3477
+    },
+    {
+      "zotero_key": "LXDG4KQK",
+      "author_year": "Amnesty International (2024)",
+      "title": "Coded injustice: Surveillance and discrimination in Denmark's automated welfare state",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/LXDG4KQK.md",
+      "kd_source": "generated/distilled/Amnesty International_2024_Coded_injustice_Surveillance_and_discrimination.md",
+      "chars": 5122
+    },
+    {
+      "zotero_key": "VP6SXQHY",
+      "author_year": "Benlian (2025)",
+      "title": "The AI literacy development canvas: Assessing and building AI literacy in organizations",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/VP6SXQHY.md",
+      "kd_source": "generated/distilled/Benlian_2025_The_AI_literacy_development_canvas_Assessing_and.md",
+      "chars": 3474
+    },
+    {
+      "zotero_key": "J9IZDVTW",
+      "author_year": "Biagini (2024)",
+      "title": "Less knowledge, more trust? Exploring potentially uncritical attitudes towards AI in higher education",
+      "studientyp": "Konzept",
+      "input_file": "generated/analysis-advisory/inputs/J9IZDVTW.md",
+      "kd_source": "generated/distilled/Biagini_2024_Less_knowledge,_more_trust_Exploring_potentially.md",
+      "chars": 4031
+    },
+    {
+      "zotero_key": "GXZWBNJU",
+      "author_year": "Boetto (2025)",
+      "title": "Artificial Intelligence in Social Work: An EPIC Model for Practice",
+      "studientyp": "Literaturreview",
+      "mapped_via": "duplicate_title",
+      "input_file": "generated/analysis-advisory/inputs/GXZWBNJU.md",
+      "kd_source": "generated/distilled/Boetto_2025_Artificial_Intelligence_in_Social_Work_An_EPIC.md",
+      "chars": 4033
+    },
+    {
+      "zotero_key": "HJ7BHX8J",
+      "author_year": "Browne (2024)",
+      "title": "Engineers on responsibility: feminist approaches to who's responsible for ethical AI",
+      "studientyp": "Empirisch",
+      "input_file": "generated/analysis-advisory/inputs/HJ7BHX8J.md",
+      "kd_source": "generated/distilled/Browne_2024_Engineers_on_responsibility_feminist_approaches.md",
+      "chars": 3900
+    },
+    {
+      "zotero_key": "V4GTLMED",
+      "author_year": "Browne (2024)",
+      "title": "Tech workers' perspectives on ethical issues in AI development: Foregrounding feminist approaches",
+      "studientyp": "Empirisch",
+      "input_file": "generated/analysis-advisory/inputs/V4GTLMED.md",
+      "kd_source": "generated/distilled/Browne_2024_Tech_workers'_perspectives_on_ethical_issues_in.md",
+      "chars": 3210
+    },
+    {
+      "zotero_key": "UFE85SCV",
+      "author_year": "Casal-Otero (2023)",
+      "title": "AI literacy in K-12: a systematic literature review",
+      "studientyp": "Literaturreview",
+      "input_file": "generated/analysis-advisory/inputs/UFE85SCV.md",
+      "kd_source": "generated/distilled/Casal-Otero_2023_AI_literacy_in_K-12_a_systematic_literature_review.md",
+      "chars": 3341
+    },
+    {
+      "zotero_key": "4LY3SA4E",
+      "author_year": "Charlesworth (2024)",
+      "title": "Flexible intersectional stereotype extraction (FISE): Analyzing intersectional biases in large language models",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/4LY3SA4E.md",
+      "kd_source": "generated/distilled/Charlesworth_2024_Flexible_intersectional_stereotype_extraction.md",
+      "chars": 3605
+    },
+    {
+      "zotero_key": "P82X89Q4",
+      "author_year": "Chee (2025)",
+      "title": "A Competency Framework for AI Literacy: Variations by Different Learner Groups and an Implied Learning Pathway",
+      "studientyp": "Literaturreview",
+      "input_file": "generated/analysis-advisory/inputs/P82X89Q4.md",
+      "kd_source": "generated/distilled/Chee_2025_A_Competency_Framework_for_AI_Literacy_Variations.md",
+      "chars": 3018
+    },
+    {
+      "zotero_key": "79TL6HSB",
+      "author_year": "Chen (2025)",
+      "title": "Social work and artificial intelligence: Collaboration and challenges",
+      "studientyp": "Empirisch",
+      "input_file": "generated/analysis-advisory/inputs/79TL6HSB.md",
+      "kd_source": "generated/distilled/Chen_2025_Social_work_and_artificial_intelligence.md",
+      "chars": 3086
+    },
+    {
+      "zotero_key": "XQM6WRU2",
+      "author_year": "Cher (2024)",
+      "title": "Exploring machine learning to support decision-making for placement stabilization and preservation in child welfare",
+      "studientyp": "Empirisch",
+      "input_file": "generated/analysis-advisory/inputs/XQM6WRU2.md",
+      "kd_source": "generated/distilled/Cher_2024_Exploring_machine_learning_to_support.md",
+      "chars": 3957
+    },
+    {
+      "zotero_key": "JZN2I6J5",
+      "author_year": "Chisca (2024)",
+      "title": "Prompting fairness: Learning prompts for debiasing large language models",
+      "studientyp": "Empirisch",
+      "input_file": "generated/analysis-advisory/inputs/JZN2I6J5.md",
+      "kd_source": "generated/distilled/Chisca_2024_Prompting_fairness_Learning_prompts_for_debiasing.md",
+      "chars": 4009
+    },
+    {
+      "zotero_key": "ACDF4FL9",
+      "author_year": "Chisca (2024)",
+      "title": "Prompting techniques for reducing social bias in LLMs through System 1 and System 2 cognitive processes",
+      "studientyp": "Experimentell",
+      "mapped_via": "duplicate_title",
+      "input_file": "generated/analysis-advisory/inputs/ACDF4FL9.md",
+      "kd_source": "generated/distilled/Kamruzzaman_2024_Prompting_techniques_for_reducing_social_bias_in.md",
+      "chars": 3448
+    },
+    {
+      "zotero_key": "I78CL6R5",
+      "author_year": "Chiu (2024)",
+      "title": "What are artificial intelligence literacy and competency? A comprehensive framework to support them",
+      "studientyp": "Theoretisch",
+      "input_file": "generated/analysis-advisory/inputs/I78CL6R5.md",
+      "kd_source": "generated/distilled/Chiu_2024_What_are_artificial_intelligence_literacy_and.md",
+      "chars": 2794
+    },
+    {
+      "zotero_key": "KPSF8EZE",
+      "author_year": "Chiu (2025)",
+      "title": "AI literacy and competency: definitions, frameworks, development and future research directions",
+      "studientyp": "Theoretisch",
+      "input_file": "generated/analysis-advisory/inputs/KPSF8EZE.md",
+      "kd_source": "generated/distilled/Chiu_2025_AI_literacy_and_competency_definitions,.md",
+      "chars": 3314
+    },
+    {
+      "zotero_key": "X7ZGW6CN",
+      "author_year": "Ciston (2024)",
+      "title": "Intersectional Artificial Intelligence Is Essential: Polyvocal, Multimodal, Experimental Methods to Save AI",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/X7ZGW6CN.md",
+      "kd_source": "generated/distilled/Ciston_2024_Intersectional_Artificial_Intelligence_Is.md",
+      "chars": 3445
+    },
+    {
+      "zotero_key": "MIT8HTC6",
+      "author_year": "Clemmer (2024)",
+      "title": "PreciseDebias: An automatic prompt engineering approach for generative AI to mitigate image demographic biases",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/MIT8HTC6.md",
+      "kd_source": "generated/distilled/Clemmer_2024_PreciseDebias_An_automatic_prompt_engineering.md",
+      "chars": 3802
+    },
+    {
+      "zotero_key": "JI24FQPV",
+      "author_year": "Creswell Báez (2025)",
+      "title": "Clinical Social Workers’ Perceptions of Large Language Models in Practice: Resistance to Automation and Prospects for Integration",
+      "studientyp": "Literaturreview",
+      "input_file": "generated/analysis-advisory/inputs/JI24FQPV.md",
+      "kd_source": "generated/distilled/Creswell Báez_2025_Clinical_Social_Workers’_Perceptions_of_Large.md",
+      "chars": 3925
+    },
+    {
+      "zotero_key": "UFJ7ERFF",
+      "author_year": "D'Ignazio (2024)",
+      "title": "Data Feminism for AI",
+      "studientyp": "Theoretisch",
+      "mapped_via": "duplicate_title",
+      "input_file": "generated/analysis-advisory/inputs/UFJ7ERFF.md",
+      "kd_source": "generated/distilled/D'Ignazio_2024_Data_Feminism_for_AI.md",
+      "chars": 4053
+    },
+    {
+      "zotero_key": "F7WNRWIC",
+      "author_year": "De Duro (2025)",
+      "title": "Measuring and identifying factors of individuals' trust in large language models",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/F7WNRWIC.md",
+      "kd_source": "generated/distilled/De Duro_2025_Measuring_and_identifying_factors_of_individuals'.md",
+      "chars": 4306
+    },
+    {
+      "zotero_key": "EN6GNKL3",
+      "author_year": "Dilek (2025)",
+      "title": "AI literacy in teacher education: Empowering educators through critical co-discovery",
+      "studientyp": "Konzept",
+      "input_file": "generated/analysis-advisory/inputs/EN6GNKL3.md",
+      "kd_source": "generated/distilled/Dilek_2025_AI_literacy_in_teacher_education_Empowering.md",
+      "chars": 4265
+    },
+    {
+      "zotero_key": "8WBUGXRR",
+      "author_year": "Djeffal (2025)",
+      "title": "Reflexive prompt engineering: A framework for responsible prompt engineering and AI interaction design",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/8WBUGXRR.md",
+      "kd_source": "generated/distilled/Djeffal_2025_Reflexive_prompt_engineering_A_framework_for.md",
+      "chars": 3566
+    },
+    {
+      "zotero_key": "DGLWM93D",
+      "author_year": "Engelhardt (2025)",
+      "title": "Voll (dia)logisch? Ein Werkstattbericht über den Einsatz von generativer KI in der Hochschulbildung für Soziale Arbeit – Curriculare Überlegungen und veränderte Akteurskonstellationen",
+      "studientyp": "Theoretisch",
+      "input_file": "generated/analysis-advisory/inputs/DGLWM93D.md",
+      "kd_source": "generated/distilled/Engelhardt_2025_Voll_(dia)logisch_Ein_Werkstattbericht_über_den.md",
+      "chars": 3929
+    },
+    {
+      "zotero_key": "IDW7QSYG",
+      "author_year": "Fraile-Rojas (2025)",
+      "title": "Female perspectives on algorithmic bias: Implications for AI researchers and practitioners",
+      "studientyp": "Empirisch",
+      "input_file": "generated/analysis-advisory/inputs/IDW7QSYG.md",
+      "kd_source": "generated/distilled/Fraile-Rojas_2025_Female_perspectives_on_algorithmic_bias.md",
+      "chars": 3812
+    },
+    {
+      "zotero_key": "G53MCF3W",
+      "author_year": "Gaba (2025)",
+      "title": "Bias, accuracy, and trust: Gender-diverse perspectives on large language models",
+      "studientyp": "Experimentell",
+      "mapped_via": "duplicate_title",
+      "input_file": "generated/analysis-advisory/inputs/G53MCF3W.md",
+      "kd_source": "generated/distilled/Gaba_2025_Bias,_accuracy,_and_trust_Gender-diverse.md",
+      "chars": 3253
+    },
+    {
+      "zotero_key": "MS3CNU3S",
+      "author_year": "Gallegos (2024)",
+      "title": "Bias and fairness in large language models: A survey",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/MS3CNU3S.md",
+      "kd_source": "generated/distilled/Gallegos_2024_Bias_and_fairness_in_large_language_models_A.md",
+      "chars": 3553
+    },
+    {
+      "zotero_key": "ST9UCTJE",
+      "author_year": "Garg (2019)",
+      "title": "Counterfactual fairness in text classification through robustness",
+      "studientyp": "Empirisch",
+      "input_file": "generated/analysis-advisory/inputs/ST9UCTJE.md",
+      "kd_source": "generated/distilled/Garg_2019_Counterfactual_fairness_in_text_classification.md",
+      "chars": 3216
+    },
+    {
+      "zotero_key": "UENFDPH9",
+      "author_year": "Garkisch (2024)",
+      "title": "Considering a unified model of artificial intelligence enhanced social work: A systematic review",
+      "studientyp": "Literaturreview",
+      "input_file": "generated/analysis-advisory/inputs/UENFDPH9.md",
+      "kd_source": "generated/distilled/Garkisch_2024_Considering_a_unified_model_of_artificial.md",
+      "chars": 3853
+    },
+    {
+      "zotero_key": "YN9JAREI",
+      "author_year": "Gengler (2024)",
+      "title": "Faires KI-Prompting – Ein Leitfaden für Unternehmen",
+      "studientyp": "Theoretisch",
+      "input_file": "generated/analysis-advisory/inputs/YN9JAREI.md",
+      "kd_source": "generated/distilled/Gengler_2024_Faires_KI-Prompting_–_Ein_Leitfaden_für.md",
+      "chars": 4697
+    },
+    {
+      "zotero_key": "UBYTNGNV",
+      "author_year": "Giannoni Adielsson (2024)",
+      "title": "The AI Act, gender equality and non-discrimination: what role for the AI Office?",
+      "studientyp": "Theoretisch",
+      "input_file": "generated/analysis-advisory/inputs/UBYTNGNV.md",
+      "kd_source": "generated/distilled/Lütz_2024_The_AI_Act,_gender_equality_and.md",
+      "chars": 4156
+    },
+    {
+      "zotero_key": "VFD9ENG6",
+      "author_year": "Gohar (2023)",
+      "title": "A Survey on Intersectional Fairness in Machine Learning: Notions, Mitigation, and Challenges",
+      "studientyp": "Literaturreview",
+      "input_file": "generated/analysis-advisory/inputs/VFD9ENG6.md",
+      "kd_source": "generated/distilled/Gohar_2023_A_Survey_on_Intersectional_Fairness_in_Machine.md",
+      "chars": 3163
+    },
+    {
+      "zotero_key": "RAV6DAFQ",
+      "author_year": "Goldkind (2023)",
+      "title": "The End of the World as We Know It? ChatGPT and Social Work",
+      "studientyp": "Theoretisch",
+      "input_file": "generated/analysis-advisory/inputs/RAV6DAFQ.md",
+      "kd_source": "generated/distilled/Goldkind_2023_The_End_of_the_World_as_We_Know_It_ChatGPT_and.md",
+      "chars": 3539
+    },
+    {
+      "zotero_key": "8MDXCTA6",
+      "author_year": "Hall (2024)",
+      "title": "A systematic review of sophisticated predictive and prescriptive analytics in child welfare: Accuracy, equity, and bias",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/8MDXCTA6.md",
+      "kd_source": "generated/distilled/Hall_2024_A_systematic_review_of_sophisticated_predictive.md",
+      "chars": 3065
+    },
+    {
+      "zotero_key": "YTDMY5W4",
+      "author_year": "Hauck (2025)",
+      "title": "A framework for the learning and teaching of Critical AI Literacy skills (Version 0.1)",
+      "studientyp": "Konzept",
+      "input_file": "generated/analysis-advisory/inputs/YTDMY5W4.md",
+      "kd_source": "generated/distilled/Hauck_2025_A_framework_for_the_learning_and_teaching_of.md",
+      "chars": 3198
+    },
+    {
+      "zotero_key": "6L6WSDC8",
+      "author_year": "Hayati (2024)",
+      "title": "How Far Can We Extract Diverse Perspectives from Large Language Models?",
+      "studientyp": "Empirisch",
+      "input_file": "generated/analysis-advisory/inputs/6L6WSDC8.md",
+      "kd_source": "generated/distilled/Hayati_2024_How_Far_Can_We_Extract_Diverse_Perspectives_from.md",
+      "chars": 4318
+    },
+    {
+      "zotero_key": "RM833D5N",
+      "author_year": "He (2024)",
+      "title": "On the steerability of large language models",
+      "studientyp": "Empirisch",
+      "input_file": "generated/analysis-advisory/inputs/RM833D5N.md",
+      "kd_source": "generated/distilled/He_2024_On_the_steerability_of_large_language_models.md",
+      "chars": 3044
+    },
+    {
+      "zotero_key": "H59BNSX8",
+      "author_year": "James (2023)",
+      "title": "Algorithmic decision-making in social work practice and pedagogy: confronting the competency/critique dilemma",
+      "studientyp": "Empirisch",
+      "input_file": "generated/analysis-advisory/inputs/H59BNSX8.md",
+      "kd_source": "generated/distilled/James_2023_Algorithmic_decision-making_in_social_work.md",
+      "chars": 3299
+    },
+    {
+      "zotero_key": "CLKAD87H",
+      "author_year": "James (2025)",
+      "title": "Responsible prompting recommendation: Fostering responsible AI practices in prompting-time",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/CLKAD87H.md",
+      "kd_source": "generated/distilled/James_2025_Responsible_prompting_recommendation_Fostering.md",
+      "chars": 2892
+    },
+    {
+      "zotero_key": "7IVS7X63",
+      "author_year": "Jiang (2022)",
+      "title": "Assessing GPT's bias towards stigmatized social groups: An intersectional case study on nationality prejudice and psychophobia",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/7IVS7X63.md",
+      "kd_source": "generated/distilled/Mei_2023_Assessing_GPT's_bias_towards_stigmatized_social.md",
+      "chars": 3869
+    },
+    {
+      "zotero_key": "JMAWNUEV",
+      "author_year": "Jin (2025)",
+      "title": "GLAT: The generative AI literacy assessment test",
+      "studientyp": "Empirisch",
+      "input_file": "generated/analysis-advisory/inputs/JMAWNUEV.md",
+      "kd_source": "generated/distilled/Jin_2025_GLAT_The_generative_AI_literacy_assessment_test.md",
+      "chars": 3485
+    },
+    {
+      "zotero_key": "YLAKP7Z2",
+      "author_year": "Jääskeläinen (2025)",
+      "title": "Intersectional analysis of visual generative AI: The case of Stable Diffusion",
+      "studientyp": "Empirisch",
+      "input_file": "generated/analysis-advisory/inputs/YLAKP7Z2.md",
+      "kd_source": "generated/distilled/Jääskeläinen_2025_Intersectional_analysis_of_visual_generative_AI.md",
+      "chars": 4242
+    },
+    {
+      "zotero_key": "Z4YXX9PZ",
+      "author_year": "Kamruzzaman (2024)",
+      "title": "Prompting techniques for reducing social bias in LLMs through System 1 and System 2 cognitive processes",
+      "studientyp": "Experimentell",
+      "mapped_via": "duplicate_title",
+      "input_file": "generated/analysis-advisory/inputs/Z4YXX9PZ.md",
+      "kd_source": "generated/distilled/Kamruzzaman_2024_Prompting_techniques_for_reducing_social_bias_in.md",
+      "chars": 3448
+    },
+    {
+      "zotero_key": "55ZR64VU",
+      "author_year": "Kaneko (2024)",
+      "title": "Debiasing prompts for gender bias in large language models",
+      "studientyp": "Empirisch",
+      "input_file": "generated/analysis-advisory/inputs/55ZR64VU.md",
+      "kd_source": "generated/distilled/Zhang_2024_GenderAlign_An_Alignment_Dataset_for_Mitigating.md",
+      "chars": 3461
+    },
+    {
+      "zotero_key": "CYZQ6XPK",
+      "author_year": "Kaneko (2024)",
+      "title": "Evaluating gender bias in large language models via chain-of-thought prompting",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/CYZQ6XPK.md",
+      "kd_source": "generated/distilled/Kaneko_2024_Evaluating_gender_bias_in_large_language_models.md",
+      "chars": 3343
+    },
+    {
+      "zotero_key": "7L93JBLR",
+      "author_year": "Karagianni (2025)",
+      "title": "Gender in a stereo-(gender)typical EU AI law: A feminist reading of the AI Act",
+      "studientyp": "Theoretisch",
+      "input_file": "generated/analysis-advisory/inputs/7L93JBLR.md",
+      "kd_source": "generated/distilled/Karagianni_2025_Gender_in_a_stereo-(gender)typical_EU_AI_law_A.md",
+      "chars": 3901
+    },
+    {
+      "zotero_key": "3QUWCYVW",
+      "author_year": "Kattnig (2024)",
+      "title": "Assessing trustworthy AI: Technical and legal perspectives of fairness in AI",
+      "studientyp": "Theoretisch",
+      "input_file": "generated/analysis-advisory/inputs/3QUWCYVW.md",
+      "kd_source": "generated/distilled/Kattnig_2024_Assessing_trustworthy_AI_Technical_and_legal.md",
+      "chars": 2985
+    },
+    {
+      "zotero_key": "GP4JDSI8",
+      "author_year": "Klein (2024)",
+      "title": "Data Feminism for AI",
+      "studientyp": "Theoretisch",
+      "mapped_via": "duplicate_title",
+      "input_file": "generated/analysis-advisory/inputs/GP4JDSI8.md",
+      "kd_source": "generated/distilled/D'Ignazio_2024_Data_Feminism_for_AI.md",
+      "chars": 4053
+    },
+    {
+      "zotero_key": "QIQR449A",
+      "author_year": "Klinge (2024)",
+      "title": "A sociolinguistic approach to stereotype assessment in large language models",
+      "studientyp": "Empirisch",
+      "input_file": "generated/analysis-advisory/inputs/QIQR449A.md",
+      "kd_source": "generated/distilled/Klinge_2024_A_sociolinguistic_approach_to_stereotype.md",
+      "chars": 3713
+    },
+    {
+      "zotero_key": "7VFNS5R3",
+      "author_year": "Kong (2021)",
+      "title": "Evaluation of an artificial intelligence literacy course for university students with diverse study backgrounds",
+      "studientyp": "Empirisch",
+      "input_file": "generated/analysis-advisory/inputs/7VFNS5R3.md",
+      "kd_source": "generated/distilled/Kong_2021_Evaluation_of_an_artificial_intelligence_literacy.md",
+      "chars": 3589
+    },
+    {
+      "zotero_key": "Q4LK53XW",
+      "author_year": "Kong (2022)",
+      "title": "Are \"Intersectionally Fair\" AI Algorithms Really Fair to Women of Color? A Philosophical Analysis",
+      "studientyp": "Theoretisch",
+      "input_file": "generated/analysis-advisory/inputs/Q4LK53XW.md",
+      "kd_source": "generated/distilled/Kong_2022_Are_Intersectionally_Fair_AI_Algorithms_Really.md",
+      "chars": 3917
+    },
+    {
+      "zotero_key": "BBLJ4RG3",
+      "author_year": "Kong (2024)",
+      "title": "Developing an artificial intelligence literacy framework: Evaluation of a literacy course for senior secondary students using a project-based learning approach",
+      "studientyp": "Empirisch",
+      "input_file": "generated/analysis-advisory/inputs/BBLJ4RG3.md",
+      "kd_source": "generated/distilled/Kong_2024_Developing_an_artificial_intelligence_literacy.md",
+      "chars": 3452
+    },
+    {
+      "zotero_key": "DUV4TUG3",
+      "author_year": "Lahoti (2023)",
+      "title": "Improving diversity of demographic representation in people entities in Large Language Models",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/DUV4TUG3.md",
+      "kd_source": "generated/distilled/Lahoti_2023_Improving_diversity_of_demographic_representation.md",
+      "chars": 3878
+    },
+    {
+      "zotero_key": "Z9BIKVS3",
+      "author_year": "Laine (2025)",
+      "title": "Avoiding Catastrophe Through Intersectionality in Global AI Governance",
+      "studientyp": "Empirisch",
+      "mapped_via": "duplicate_title",
+      "input_file": "generated/analysis-advisory/inputs/Z9BIKVS3.md",
+      "kd_source": "generated/distilled/McCrory_2024_Avoiding_catastrophe_through_intersectionality_in.md",
+      "chars": 3845
+    },
+    {
+      "zotero_key": "AXEIVEW3",
+      "author_year": "Lanzetta (2024)",
+      "title": "Artificial Intelligence Competence Needs for Youth Workers",
+      "studientyp": "Empirisch",
+      "input_file": "generated/analysis-advisory/inputs/AXEIVEW3.md",
+      "kd_source": "generated/distilled/Lanzetta_2024_Artificial_Intelligence_Competence_Needs_for.md",
+      "chars": 3752
+    },
+    {
+      "zotero_key": "CHJQ52DC",
+      "author_year": "Latif (2024)",
+      "title": "AI Gender Bias, Disparities, and Fairness: Does Training Data Matter?",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/CHJQ52DC.md",
+      "kd_source": "generated/distilled/Latif_2023_AI_Gender_Bias,_Disparities,_and_Fairness_Does.md",
+      "chars": 2773
+    },
+    {
+      "zotero_key": "LBLF9BCW",
+      "author_year": "Lau (2023)",
+      "title": "Dipper: Diversity in Prompts for Producing Large Language Model Outputs",
+      "studientyp": "Konzept",
+      "input_file": "generated/analysis-advisory/inputs/LBLF9BCW.md",
+      "kd_source": "generated/distilled/Lau_2023_Dipper_Diversity_in_Prompts_for_Producing_Large.md",
+      "chars": 2588
+    },
+    {
+      "zotero_key": "Y8J3HI9J",
+      "author_year": "Lin (2022)",
+      "title": "Artificial Intelligence in a Structurally Unjust Society",
+      "studientyp": "Theoretisch",
+      "input_file": "generated/analysis-advisory/inputs/Y8J3HI9J.md",
+      "kd_source": "generated/distilled/Lin_2022_Artificial_Intelligence_in_a_Structurally_Unjust.md",
+      "chars": 3424
+    },
+    {
+      "zotero_key": "L6PH7GDL",
+      "author_year": "Linnemann (2025)",
+      "title": "Künstliche Intelligenz in der Sozialen Arbeit: Grundlagen für Theorie und Praxis",
+      "studientyp": "Theoretisch",
+      "input_file": "generated/analysis-advisory/inputs/L6PH7GDL.md",
+      "kd_source": "generated/distilled/Linnemann_2025_Künstliche_Intelligenz_in_der_Sozialen_Arbeit.md",
+      "chars": 4361
+    },
+    {
+      "zotero_key": "64DQYVVB",
+      "author_year": "Liu (2025)",
+      "title": "More or less wrong: A benchmark for directional bias in LLM comparative reasoning",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/64DQYVVB.md",
+      "kd_source": "generated/distilled/Shafie_2025_More_or_less_wrong_A_benchmark_for_directional.md",
+      "chars": 3233
+    },
+    {
+      "zotero_key": "HMDFMBV3",
+      "author_year": "Ma (2023)",
+      "title": "Intersectional Stereotypes in Large Language Models: Dataset and Analysis",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/HMDFMBV3.md",
+      "kd_source": "generated/distilled/Ma_2023_Intersectional_Stereotypes_in_Large_Language.md",
+      "chars": 3403
+    },
+    {
+      "zotero_key": "2SLISKSW",
+      "author_year": "McCrory (2024)",
+      "title": "Avoiding catastrophe through intersectionality in global AI governance",
+      "studientyp": "Theoretisch",
+      "input_file": "generated/analysis-advisory/inputs/2SLISKSW.md",
+      "kd_source": "generated/distilled/McCrory_2024_Avoiding_catastrophe_through_intersectionality_in.md",
+      "chars": 3845
+    },
+    {
+      "zotero_key": "YPYQ2TCL",
+      "author_year": "Mei (2023)",
+      "title": "Assessing GPT's bias towards stigmatized social groups: An intersectional case study on nationality prejudice and psychophobia",
+      "studientyp": "Experimentell",
+      "mapped_via": "duplicate_title",
+      "input_file": "generated/analysis-advisory/inputs/YPYQ2TCL.md",
+      "kd_source": "generated/distilled/Mei_2023_Assessing_GPT's_bias_towards_stigmatized_social.md",
+      "chars": 3869
+    },
+    {
+      "zotero_key": "7L78MV2V",
+      "author_year": "Navigli (2023)",
+      "title": "Biases in large language models: Origins, inventory and discussion",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/7L78MV2V.md",
+      "kd_source": "generated/distilled/Navigli_2023_Biases_in_large_language_models_Origins,.md",
+      "chars": 3460
+    },
+    {
+      "zotero_key": "CLADZZKS",
+      "author_year": "Ng (2021)",
+      "title": "Conceptualizing AI literacy: An exploratory review",
+      "studientyp": "Konzept",
+      "mapped_via": "duplicate_title",
+      "input_file": "generated/analysis-advisory/inputs/CLADZZKS.md",
+      "kd_source": "generated/distilled/Ng_2021_Conceptualizing_AI_literacy_An_exploratory_review.md",
+      "chars": 4071
+    },
+    {
+      "zotero_key": "PAZJHB8J",
+      "author_year": "Nuwasiima (2024)",
+      "title": "The role of artificial intelligence (AI) and machine learning in social work practice",
+      "studientyp": "Literaturreview",
+      "input_file": "generated/analysis-advisory/inputs/PAZJHB8J.md",
+      "kd_source": "generated/distilled/Nuwasiima_2024_The_role_of_artificial_intelligence_(AI)_and.md",
+      "chars": 3620
+    },
+    {
+      "zotero_key": "XXCDL3A3",
+      "author_year": "Ovalle (2023)",
+      "title": "Factoring the Matrix of Domination: A Critical Review and Reimagination of Intersectionality in AI Fairness",
+      "studientyp": "Literaturreview",
+      "mapped_via": "duplicate_title",
+      "input_file": "generated/analysis-advisory/inputs/XXCDL3A3.md",
+      "kd_source": "generated/distilled/Ovalle_2023_Factoring_the_Matrix_of_Domination_A_Critical.md",
+      "chars": 3215
+    },
+    {
+      "zotero_key": "DWS4KXBW",
+      "author_year": "Ovalle (2024)",
+      "title": "Towards Substantive Equality in Artificial Intelligence: Transformative AI Policy for Gender Equality and Diversity",
+      "studientyp": "Konzept",
+      "mapped_via": "duplicate_title",
+      "input_file": "generated/analysis-advisory/inputs/DWS4KXBW.md",
+      "kd_source": "generated/distilled/Ricaurte Quijano_2024_Towards_Substantive_Equality_in_Artificial.md",
+      "chars": 3995
+    },
+    {
+      "zotero_key": "JPUCNHNU",
+      "author_year": "Pan (2025)",
+      "title": "LIBRA: Measuring bias of large language model from a local context",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/JPUCNHNU.md",
+      "kd_source": "generated/distilled/Pan_2025_LIBRA_Measuring_bias_of_large_language_model_from.md",
+      "chars": 4660
+    },
+    {
+      "zotero_key": "JKF6VAQB",
+      "author_year": "Park (2025)",
+      "title": "AI algorithm transparency, pipelines for trust not prisms: mitigating general negative attitudes and enhancing trust toward AI",
+      "studientyp": "Experimentell",
+      "mapped_via": "duplicate_title",
+      "input_file": "generated/analysis-advisory/inputs/JKF6VAQB.md",
+      "kd_source": "generated/distilled/Park_2025_AI_algorithm_transparency,_pipelines_for_trust.md",
+      "chars": 3307
+    },
+    {
+      "zotero_key": "QY6P4RGQ",
+      "author_year": "Parrish (2022)",
+      "title": "BBQ: A hand-built bias benchmark for question answering",
+      "studientyp": "Empirisch",
+      "input_file": "generated/analysis-advisory/inputs/QY6P4RGQ.md",
+      "kd_source": "generated/distilled/Parrish_2022_BBQ_A_hand-built_bias_benchmark_for_question.md",
+      "chars": 2841
+    },
+    {
+      "zotero_key": "YUVR5YNQ",
+      "author_year": "Parrish (2025)",
+      "title": "Self-debiasing large language models: Zero-shot recognition and reduction of stereotypes",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/YUVR5YNQ.md",
+      "kd_source": "generated/distilled/Parrish_2025_Self-debiasing_large_language_models_Zero-shot.md",
+      "chars": 3415
+    },
+    {
+      "zotero_key": "LGYFN6JK",
+      "author_year": "Patton (2023)",
+      "title": "ChatGPT for Social Work Science: Ethical Challenges and Opportunities",
+      "studientyp": "Theoretisch",
+      "input_file": "generated/analysis-advisory/inputs/LGYFN6JK.md",
+      "kd_source": "generated/distilled/Patton_2023_ChatGPT_for_Social_Work_Science_Ethical.md",
+      "chars": 4125
+    },
+    {
+      "zotero_key": "22XEFRWP",
+      "author_year": "Petzel (2025)",
+      "title": "Prejudiced interactions with large language models (LLMs) reduce trustworthiness and behavioral intentions among members of stigmatized groups",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/22XEFRWP.md",
+      "kd_source": "generated/distilled/Petzel_2025_Prejudiced_interactions_with_large_language.md",
+      "chars": 4066
+    },
+    {
+      "zotero_key": "7G78SADI",
+      "author_year": "Pinski (2024)",
+      "title": "AI literacy for users – A comprehensive review and future research directions of learning methods, components, and effects",
+      "studientyp": "Literaturreview",
+      "input_file": "generated/analysis-advisory/inputs/7G78SADI.md",
+      "kd_source": "generated/distilled/Pinski_2024_AI_literacy_for_users_–_A_comprehensive_review.md",
+      "chars": 3197
+    },
+    {
+      "zotero_key": "6MJYP7ZX",
+      "author_year": "Prakash (2023)",
+      "title": "Prompt engineering techniques for mitigating cultural bias against Arabs and Muslims in large language models: A systematic review",
+      "studientyp": "Literaturreview",
+      "mapped_via": "duplicate_title",
+      "input_file": "generated/analysis-advisory/inputs/6MJYP7ZX.md",
+      "kd_source": "generated/distilled/Asseri et al._2025_Prompt_Engineering_Techniques_for_Mitigating.md",
+      "chars": 4532
+    },
+    {
+      "zotero_key": "MTMU9UPJ",
+      "author_year": "Qiu (2025)",
+      "title": "DR.GAP: Mitigating bias in large language models using gender-aware prompting with demonstration and reasoning",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/MTMU9UPJ.md",
+      "kd_source": "generated/distilled/Qiu_2025_DR.GAP_Mitigating_bias_in_large_language_models.md",
+      "chars": 4193
+    },
+    {
+      "zotero_key": "EXVG7MQR",
+      "author_year": "Reamer (2023)",
+      "title": "Artificial intelligence in social work: Emerging ethical issues",
+      "studientyp": "Theoretisch",
+      "mapped_via": "duplicate_title",
+      "input_file": "generated/analysis-advisory/inputs/EXVG7MQR.md",
+      "kd_source": "generated/distilled/Reamer_2023_Artificial_Intelligence_in_Social_Work_Emerging.md",
+      "chars": 3686
+    },
+    {
+      "zotero_key": "YRBP6IEJ",
+      "author_year": "Rodriguez (2024)",
+      "title": "Introducing Generative Artificial Intelligence into the MSW Curriculum: A Proposal for the 2029 Educational Policy and Accreditation Standards",
+      "studientyp": "Konzept",
+      "input_file": "generated/analysis-advisory/inputs/YRBP6IEJ.md",
+      "kd_source": "generated/distilled/Rodriguez_2024_Introducing_Generative_Artificial_Intelligence.md",
+      "chars": 4479
+    },
+    {
+      "zotero_key": "K3YCLBXK",
+      "author_year": "Ruiz (2024)",
+      "title": "AI Literacy: A Framework to Understand, Evaluate, and Use Emerging Technology",
+      "studientyp": "Konzept",
+      "input_file": "generated/analysis-advisory/inputs/K3YCLBXK.md",
+      "kd_source": "generated/distilled/Ruiz_2024_AI_Literacy_A_Framework_to_Understand,_Evaluate,.md",
+      "chars": 4793
+    },
+    {
+      "zotero_key": "M7AGB7LI",
+      "author_year": "Salecha (2025)",
+      "title": "Model explanations for gender and ethnicity bias mitigation in AI-generated narratives",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/M7AGB7LI.md",
+      "kd_source": "generated/distilled/Salecha_2025_Model_explanations_for_gender_and_ethnicity_bias.md",
+      "chars": 3184
+    },
+    {
+      "zotero_key": "YMABYPKF",
+      "author_year": "Salinas (2025)",
+      "title": "What’s in a name? Auditing large language models for race and gender bias",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/YMABYPKF.md",
+      "kd_source": "generated/distilled/Salinas_2025_What’s_in_a_name_Auditing_large_language_models.md",
+      "chars": 3506
+    },
+    {
+      "zotero_key": "KNQYFQ6B",
+      "author_year": "Sant (2024)",
+      "title": "The power of prompts: Evaluating and mitigating gender bias in MT with LLMs",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/KNQYFQ6B.md",
+      "kd_source": "generated/distilled/Sant_2024_The_power_of_prompts_Evaluating_and_mitigating.md",
+      "chars": 4142
+    },
+    {
+      "zotero_key": "YV53DKI2",
+      "author_year": "Santos (2024)",
+      "title": "Explainability through systematicity: The hard systematicity challenge",
+      "studientyp": "Unclear",
+      "input_file": "generated/analysis-advisory/inputs/YV53DKI2.md",
+      "kd_source": "generated/distilled/Santos_2024_Explainability_through_systematicity_The_hard.md",
+      "chars": 3848
+    },
+    {
+      "zotero_key": "99QJDBSV",
+      "author_year": "Santos (2025)",
+      "title": "How large language models judge cooperation",
+      "studientyp": "Empirisch",
+      "input_file": "generated/analysis-advisory/inputs/99QJDBSV.md",
+      "kd_source": "generated/distilled/Santos_2025_How_large_language_models_judge_cooperation.md",
+      "chars": 4650
+    },
+    {
+      "zotero_key": "R5QQTD95",
+      "author_year": "Schönauer (2025)",
+      "title": "Akzeptanz von KI und organisationale Rahmenbedingungen in der Sozialen Arbeit – Eine empirische Untersuchung aus der Perspektive von Berufseinsteiger:innen",
+      "studientyp": "Empirisch",
+      "input_file": "generated/analysis-advisory/inputs/R5QQTD95.md",
+      "kd_source": "generated/distilled/Schönauer_2025_Akzeptanz_von_KI_und_organisationale.md",
+      "chars": 4147
+    },
+    {
+      "zotero_key": "AIZGTQKG",
+      "author_year": "Shah (2025)",
+      "title": "Gender bias in artificial intelligence: Empowering women through digital literacy",
+      "studientyp": "Literaturreview",
+      "mapped_via": "duplicate_title",
+      "input_file": "generated/analysis-advisory/inputs/AIZGTQKG.md",
+      "kd_source": "generated/distilled/Shah_2025_Gender_Bias_in_Artificial_Intelligence_Empowering.md",
+      "chars": 3572
+    },
+    {
+      "zotero_key": "HLBXNWAZ",
+      "author_year": "Sharma (2024)",
+      "title": "Intersectional analysis of visual generative AI: the case of stable diffusion",
+      "studientyp": "Unclear",
+      "input_file": "generated/analysis-advisory/inputs/HLBXNWAZ.md",
+      "kd_source": "generated/distilled/Sharma_2024_Intersectional.md",
+      "chars": 4004
+    },
+    {
+      "zotero_key": "MJDTRLAI",
+      "author_year": "Shin (2024)",
+      "title": "Can prompt modifiers control bias? A comparative analysis of text-to-image generative models",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/MJDTRLAI.md",
+      "kd_source": "generated/distilled/Shin_2024_Can_prompt_modifiers_control_bias_A_comparative.md",
+      "chars": 3970
+    },
+    {
+      "zotero_key": "GJF776AY",
+      "author_year": "Shukla (2025)",
+      "title": "Investigating AI systems: examining data and algorithmic bias through hermeneutic reverse engineering",
+      "studientyp": "Empirisch",
+      "input_file": "generated/analysis-advisory/inputs/GJF776AY.md",
+      "kd_source": "generated/distilled/Shukla_2025_Investigating_AI_systems_examining_data_and.md",
+      "chars": 3526
+    },
+    {
+      "zotero_key": "LT3D3ZQ2",
+      "author_year": "Siapka (2023)",
+      "title": "Towards a Feminist Metaethics of AI",
+      "studientyp": "Theoretisch",
+      "input_file": "generated/analysis-advisory/inputs/LT3D3ZQ2.md",
+      "kd_source": "generated/distilled/Siapka_2023_Towards_a_Feminist_Metaethics_of_AI.md",
+      "chars": 3486
+    },
+    {
+      "zotero_key": "3B87U5LN",
+      "author_year": "Siddals (2024)",
+      "title": "\"It happened to be the perfect thing\": Experiences of generative AI chatbots for mental health",
+      "studientyp": "Empirisch",
+      "input_file": "generated/analysis-advisory/inputs/3B87U5LN.md",
+      "kd_source": "generated/distilled/Siddals_2024_It_happened_to_be_the_perfect_thing_Experiences.md",
+      "chars": 3742
+    },
+    {
+      "zotero_key": "BDBYDLVK",
+      "author_year": "Singh (2025)",
+      "title": "A reparative turn in AI",
+      "studientyp": "Empirisch",
+      "input_file": "generated/analysis-advisory/inputs/BDBYDLVK.md",
+      "kd_source": "generated/distilled/Singh_2025_A_reparative_turn_in_AI.md",
+      "chars": 3494
+    },
+    {
+      "zotero_key": "6L85PRUW",
+      "author_year": "Skilton (2024)",
+      "title": "Inclusive prompt engineering: A methodology for hacking biased AI image generation",
+      "studientyp": "Empirisch",
+      "input_file": "generated/analysis-advisory/inputs/6L85PRUW.md",
+      "kd_source": "generated/distilled/Skilton_2024_Inclusive_prompt_engineering_A_methodology_for.md",
+      "chars": 4226
+    },
+    {
+      "zotero_key": "VVEEL68I",
+      "author_year": "Slesinger (2024)",
+      "title": "Training in Co-Creation as a Methodological Approach to Improve AI Fairness",
+      "studientyp": "Empirisch",
+      "input_file": "generated/analysis-advisory/inputs/VVEEL68I.md",
+      "kd_source": "generated/distilled/Slesinger_2024_Training_in_Co-Creation_as_a_Methodological.md",
+      "chars": 3842
+    },
+    {
+      "zotero_key": "7G73H3KM",
+      "author_year": "Small (2023)",
+      "title": "Generative AI and opportunities for feminist classroom assignments",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/7G73H3KM.md",
+      "kd_source": "generated/distilled/Small_2023_Generative_AI_and_opportunities_for_feminist.md",
+      "chars": 3700
+    },
+    {
+      "zotero_key": "Q8YPNNKL",
+      "author_year": "Srinivasan (2025)",
+      "title": "Mitigating trust-induced inappropriate reliance on AI assistance",
+      "studientyp": "Empirisch",
+      "mapped_via": "duplicate_title",
+      "input_file": "generated/analysis-advisory/inputs/Q8YPNNKL.md",
+      "kd_source": "generated/distilled/Srinivasan_2025_Mitigating_trust-induced_inappropriate_reliance.md",
+      "chars": 2817
+    },
+    {
+      "zotero_key": "N7J2ZRFP",
+      "author_year": "Srivastava (2024)",
+      "title": "Algorithmic Governance and the International Politics of Big Tech",
+      "studientyp": "Theoretisch",
+      "input_file": "generated/analysis-advisory/inputs/N7J2ZRFP.md",
+      "kd_source": "generated/distilled/Srivastava_2024_Algorithmic_Governance_and_the_International.md",
+      "chars": 3571
+    },
+    {
+      "zotero_key": "RXNXJA8W",
+      "author_year": "Steyvers (2025)",
+      "title": "What large language models know and what people think they know",
+      "studientyp": "Empirisch",
+      "mapped_via": "duplicate_title",
+      "input_file": "generated/analysis-advisory/inputs/RXNXJA8W.md",
+      "kd_source": "generated/distilled/Steyvers_2025_What_large_language_models_know_and_what_people.md",
+      "chars": 3319
+    },
+    {
+      "zotero_key": "LXKXPD5H",
+      "author_year": "Studeny (2025)",
+      "title": "Digitale Werkzeuge und Machtasymmetrien?",
+      "studientyp": "Theoretisch",
+      "input_file": "generated/analysis-advisory/inputs/LXKXPD5H.md",
+      "kd_source": "generated/distilled/Studeny_2025_Digitale_Werkzeuge_und_Machtasymmetrien.md",
+      "chars": 4135
+    },
+    {
+      "zotero_key": "H7E3N6VR",
+      "author_year": "Sūna (2024)",
+      "title": "Diskriminierung durch Algorithmen – Überlegungen zur Stärkung KI-bezogener Kompetenzen",
+      "studientyp": "Theoretisch",
+      "input_file": "generated/analysis-advisory/inputs/H7E3N6VR.md",
+      "kd_source": "generated/distilled/Sūna_2024_Diskriminierung_durch_Algorithmen_–_Überlegungen.md",
+      "chars": 3773
+    },
+    {
+      "zotero_key": "T9KEZN3G",
+      "author_year": "Taeihagh (2025)",
+      "title": "Governance of generative AI: A comprehensive framework for navigating challenges and opportunities",
+      "studientyp": "Konzept",
+      "input_file": "generated/analysis-advisory/inputs/T9KEZN3G.md",
+      "kd_source": "generated/distilled/Taeihagh_2025_Governance_of_generative_AI_A_comprehensive.md",
+      "chars": 3426
+    },
+    {
+      "zotero_key": "WLV8L8PM",
+      "author_year": "Tint (2025)",
+      "title": "Guardrails, not guidance: Understanding responses to LGBTQ+ language in large language models",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/WLV8L8PM.md",
+      "kd_source": "generated/distilled/Tint_2025_Guardrails,_not_guidance_Understanding_responses.md",
+      "chars": 3090
+    },
+    {
+      "zotero_key": "SHDNTZJZ",
+      "author_year": "Toupin (2024)",
+      "title": "Shaping feminist artificial intelligence",
+      "studientyp": "Theoretisch",
+      "mapped_via": "duplicate_title",
+      "input_file": "generated/analysis-advisory/inputs/SHDNTZJZ.md",
+      "kd_source": "generated/distilled/Toupin_2024_Shaping_feminist_artificial_intelligence.md",
+      "chars": 5066
+    },
+    {
+      "zotero_key": "ERTJZW5M",
+      "author_year": "Tun (2025)",
+      "title": "Trust in artificial intelligence–based clinical decision support systems among health care workers: Systematic review",
+      "studientyp": "Literaturreview",
+      "mapped_via": "duplicate_title",
+      "input_file": "generated/analysis-advisory/inputs/ERTJZW5M.md",
+      "kd_source": "generated/distilled/Tun_2025_Trust_in_artificial_intelligence–based_clinical.md",
+      "chars": 3367
+    },
+    {
+      "zotero_key": "ZNHUCA4B",
+      "author_year": "UNESCO (2021)",
+      "title": "Recommendation on the Ethics of Artificial Intelligence",
+      "studientyp": "Konzept",
+      "input_file": "generated/analysis-advisory/inputs/ZNHUCA4B.md",
+      "kd_source": "generated/distilled/UNESCO_2021_Recommendation_on_the_Ethics_of_Artificial.md",
+      "chars": 4256
+    },
+    {
+      "zotero_key": "KQ5A8D6E",
+      "author_year": "Unknown (2024)",
+      "title": "AI competency framework for students",
+      "studientyp": "Konzept",
+      "input_file": "generated/analysis-advisory/inputs/KQ5A8D6E.md",
+      "kd_source": "generated/distilled/Unknown_AI_competency_framework_for_students.md",
+      "chars": 3438
+    },
+    {
+      "zotero_key": "SS5HTYY6",
+      "author_year": "Unknown (2025)",
+      "title": "Artificial Intelligence in Social Sciences and Social Work: Bridging Technology and Humanity to Revolutionize Research, Policy, and Human Services",
+      "studientyp": "Literaturreview",
+      "input_file": "generated/analysis-advisory/inputs/SS5HTYY6.md",
+      "kd_source": "generated/distilled/Unknown_Artificial_Intelligence_in_Social_Sciences_and.md",
+      "chars": 5235
+    },
+    {
+      "zotero_key": "Y6SAPNT2",
+      "author_year": "Vethman (2025)",
+      "title": "Fairness Beyond the Algorithmic Frame: Actionable Recommendations for an Intersectional Approach",
+      "studientyp": "Empirisch",
+      "input_file": "generated/analysis-advisory/inputs/Y6SAPNT2.md",
+      "kd_source": "generated/distilled/Vethman_2025_Fairness_Beyond_the_Algorithmic_Frame_Actionable.md",
+      "chars": 4971
+    },
+    {
+      "zotero_key": "U3AJIXAJ",
+      "author_year": "Victor (2023)",
+      "title": "Recommendations for social work researchers and journal editors on the use of generative AI and large language models",
+      "studientyp": "Konzept",
+      "input_file": "generated/analysis-advisory/inputs/U3AJIXAJ.md",
+      "kd_source": "generated/distilled/Victor_2023_Recommendations_for_social_work_researchers_and.md",
+      "chars": 3534
+    },
+    {
+      "zotero_key": "3XMBE43Z",
+      "author_year": "Voutyrakou (2025)",
+      "title": "Algorithmic Governance: Gender Bias in AI-Generated Policymaking?",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/3XMBE43Z.md",
+      "kd_source": "generated/distilled/Voutyrakou_2025_Algorithmic_Governance_Gender_Bias_in.md",
+      "chars": 3994
+    },
+    {
+      "zotero_key": "PQC9G5EU",
+      "author_year": "Wajcman (2023)",
+      "title": "Feminism Confronts AI: The Gender Relations of Digitalisation",
+      "studientyp": "Theoretisch",
+      "input_file": "generated/analysis-advisory/inputs/PQC9G5EU.md",
+      "kd_source": "generated/distilled/Wajcman_2023_Feminism_Confronts_AI_The_Gender_Relations_of.md",
+      "chars": 4353
+    },
+    {
+      "zotero_key": "3AHQEHDF",
+      "author_year": "Wang (2024)",
+      "title": "Multilingual Prompting for Improving LLM Generation Diversity",
+      "studientyp": "Empirisch",
+      "mapped_via": "duplicate_title",
+      "input_file": "generated/analysis-advisory/inputs/3AHQEHDF.md",
+      "kd_source": "generated/distilled/Wang_2025_Multilingual_Prompting_for_Improving_LLM.md",
+      "chars": 3166
+    },
+    {
+      "zotero_key": "NVZA58ML",
+      "author_year": "Wang (2024)",
+      "title": "A survey on fairness in large language models",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/NVZA58ML.md",
+      "kd_source": "generated/distilled/Wang_2024_A_survey_on_fairness_in_large_language_models.md",
+      "chars": 3744
+    },
+    {
+      "zotero_key": "T8R8RKX9",
+      "author_year": "Wilson (2024)",
+      "title": "AI tools show biases in ranking job applicants' names according to perceived race and gender",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/T8R8RKX9.md",
+      "kd_source": "generated/distilled/Wilson_2024_AI_tools_show_biases_in_ranking_job_applicants'.md",
+      "chars": 3336
+    },
+    {
+      "zotero_key": "XW8NHCIE",
+      "author_year": "Wilson (2024)",
+      "title": "Gender, race, and intersectional bias in AI resume screening via language model retrieval",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/XW8NHCIE.md",
+      "kd_source": "generated/distilled/Wilson_2024_Gender,_race,_and_intersectional_bias_in_AI.md",
+      "chars": 3706
+    },
+    {
+      "zotero_key": "C325Y32P",
+      "author_year": "World Economic Forum (2024)",
+      "title": "AI for impact: The PRISM framework for responsible AI in social innovation",
+      "studientyp": "Konzept",
+      "input_file": "generated/analysis-advisory/inputs/C325Y32P.md",
+      "kd_source": "generated/distilled/World Economic Forum_2024_AI_for_impact_The_PRISM_framework_for_responsible.md",
+      "chars": 4575
+    },
+    {
+      "zotero_key": "JGZDWMN3",
+      "author_year": "Wu (2025)",
+      "title": "Bias in decision-making for AI's ethical dilemmas: A comparative study of ChatGPT and Claude",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/JGZDWMN3.md",
+      "kd_source": "generated/distilled/Wu_2025_Bias_in_decision-making_for_AI's_ethical_dilemmas.md",
+      "chars": 4551
+    },
+    {
+      "zotero_key": "NHIZN4QJ",
+      "author_year": "Wudel (2025)",
+      "title": "What is Feminist AI?",
+      "studientyp": "Theoretisch",
+      "mapped_via": "duplicate_title",
+      "input_file": "generated/analysis-advisory/inputs/NHIZN4QJ.md",
+      "kd_source": "generated/distilled/Wudel_2025_What_is_Feminist_AI.md",
+      "chars": 3208
+    },
+    {
+      "zotero_key": "2SNYUZG4",
+      "author_year": "Yan (2024)",
+      "title": "Promises and challenges of generative artificial intelligence for human learning",
+      "studientyp": "Konzept",
+      "input_file": "generated/analysis-advisory/inputs/2SNYUZG4.md",
+      "kd_source": "generated/distilled/Yan_2024_Promises_and_challenges_of_generative_artificial.md",
+      "chars": 3831
+    },
+    {
+      "zotero_key": "Y6M97SWQ",
+      "author_year": "Yu (2025)",
+      "title": "Algorithmic-Assisted Decision-Making Tools in Child Welfare Practice: A Systematic Review",
+      "studientyp": "Literaturreview",
+      "input_file": "generated/analysis-advisory/inputs/Y6M97SWQ.md",
+      "kd_source": "generated/distilled/Yu_2025_Algorithmic-Assisted_Decision-Making_Tools_in.md",
+      "chars": 4053
+    },
+    {
+      "zotero_key": "22KJL3PC",
+      "author_year": "Yuan (2025)",
+      "title": "The cultural stereotype and cultural bias of ChatGPT",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/22KJL3PC.md",
+      "kd_source": "generated/distilled/Yuan_2025_The_cultural_stereotype_and_cultural_bias_of.md",
+      "chars": 4268
+    },
+    {
+      "zotero_key": "UDZLIJWX",
+      "author_year": "Yunusov (2024)",
+      "title": "MirrorStories: Reflecting Diversity through Personalized Narrative Generation with Large Language Models",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/UDZLIJWX.md",
+      "kd_source": "generated/distilled/Yunusov_2024_MirrorStories_Reflecting_Diversity_through.md",
+      "chars": 5232
+    },
+    {
+      "zotero_key": "K6JQ7SVA",
+      "author_year": "Zannone (2023)",
+      "title": "Intersectional Fairness: A Fractal Approach",
+      "studientyp": "Theoretisch",
+      "input_file": "generated/analysis-advisory/inputs/K6JQ7SVA.md",
+      "kd_source": "generated/distilled/Zannone_2023_Intersectional_Fairness_A_Fractal_Approach.md",
+      "chars": 3456
+    },
+    {
+      "zotero_key": "UB9NK8KI",
+      "author_year": "Zayed (2024)",
+      "title": "Scaling implicit bias analysis across transformer-based language models through embedding association test and prompt engineering",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/UB9NK8KI.md",
+      "kd_source": "generated/distilled/Zayed_2024_Scaling_implicit_bias_analysis_across.md",
+      "chars": 3321
+    },
+    {
+      "zotero_key": "XY2WVKBY",
+      "author_year": "Zeng (2025)",
+      "title": "Governing discriminatory content in conversational AI: A cross-system, cross-lingual, and cross-topic audit",
+      "studientyp": "Experimentell",
+      "input_file": "generated/analysis-advisory/inputs/XY2WVKBY.md",
+      "kd_source": "generated/distilled/Zeng_2025_Governing_discriminatory_content_in.md",
+      "chars": 3244
+    },
+    {
+      "zotero_key": "MT54YHER",
+      "author_year": "Zhao (2025)",
+      "title": "Thinking like a scientist: Can interactive simulations foster critical AI literacy?",
+      "studientyp": "Empirisch",
+      "input_file": "generated/analysis-advisory/inputs/MT54YHER.md",
+      "kd_source": "generated/distilled/Zhao_2025_Thinking_like_a_scientist_Can_interactive.md",
+      "chars": 2972
+    }
+  ],
+  "unmapped_includes": [
+    {
+      "zotero_key": "ZLMLP53P",
+      "author_year": "Cvoelcker (2023)",
+      "title": "Queer in AI: A case study in community-led participatory AI",
+      "studientyp": "Experimentell"
+    },
+    {
+      "zotero_key": "WGVC7FQ5",
+      "author_year": "Hermann (2022)",
+      "title": "Artificial intelligence and mass personalization of communication content—An ethical and literacy perspective",
+      "studientyp": "Literaturreview"
+    },
+    {
+      "zotero_key": "DZ39L7GC",
+      "author_year": "Kim (2021)",
+      "title": "Why and What to Teach: AI Curriculum for Elementary School",
+      "studientyp": "Konzept"
+    },
+    {
+      "zotero_key": "7FBB2KUC",
+      "author_year": "Linnemann (2023)",
+      "title": "Bedeutung von Künstlicher Intelligenz in der Sozialen Arbeit",
+      "studientyp": "Theoretisch"
+    },
+    {
+      "zotero_key": "7WMD5JQ6",
+      "author_year": "Maeda (2025)",
+      "title": "Toward Agency‐Centered <span style=\"font-variant:small-caps;\">AI</span> Literacy: A Scoping Review",
+      "studientyp": "Literaturreview"
+    },
+    {
+      "zotero_key": "6JAZXKEB",
+      "author_year": "Ng (2022)",
+      "title": "Using digital story writing as a pedagogy to develop AI literacy among primary students",
+      "studientyp": "Konzept"
+    },
+    {
+      "zotero_key": "JJLSMEQA",
+      "author_year": "Ng (2025)",
+      "title": "Opportunities, challenges and school strategies for integrating generative AI in education",
+      "studientyp": "Empirisch"
+    },
+    {
+      "zotero_key": "MQJEES7J",
+      "author_year": "Pan (2025)",
+      "title": "AI literacy and trust: A multi-method study of Human-GAI team collaboration",
+      "studientyp": "Empirisch"
+    },
+    {
+      "zotero_key": "UJ7DXK8Y",
+      "author_year": "Santy (2023)",
+      "title": "NLPositionality: Characterizing design biases of datasets and models",
+      "studientyp": "Konzept"
+    },
+    {
+      "zotero_key": "W8DFWR9L",
+      "author_year": "Shin (2025)",
+      "title": "Mitigating age-related bias in large language models: Strategies for responsible artificial intelligence development",
+      "studientyp": "Experimentell"
+    },
+    {
+      "zotero_key": "9MDIBETZ",
+      "author_year": "Tang (2024)",
+      "title": "GenderCARE: A Comprehensive Framework for Assessing and Reducing Gender Bias in Large Language Models",
+      "studientyp": "Konzept"
+    },
+    {
+      "zotero_key": "WS4KQPWN",
+      "author_year": "Ulnicane (2024)",
+      "title": "Intersectionality in artificial intelligence: Framing concerns and recommendations for action",
+      "studientyp": "Konzept"
+    },
+    {
+      "zotero_key": "6QPLNNQK",
+      "author_year": "UNESCO (2024)",
+      "title": "Bias against women and girls in large language models: A UNESCO study",
+      "studientyp": "Experimentell"
+    }
+  ]
+}

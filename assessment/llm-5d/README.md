@@ -58,13 +58,13 @@ assessment/llm-5d/
 
 ## Abgrenzung zum 10K Assessment
 
-| Aspekt | 5D (dieses System) | 10K (benchmark/) |
+| Aspekt | 5D (dieses System) | 10K |
 |--------|-------------------|-----------------|
 | Schema | 5 Dimensionen (0-3) | 10 binaere Kategorien |
 | Zweck | Parametrisches Screening | Benchmark (Cohen's Kappa) |
 | Papers | 325 | 326 |
 | Status | Archiviert | Aktiv |
-| Output | `output/assessment_llm.xlsx` | `benchmark/data/llm_assessment_10k.csv` |
+| Output | `output/assessment_llm.xlsx` | `assessment/llm_assessment_10k.csv` |
 
 ---
 

@@ -1276,6 +1276,21 @@ test('a 0.2 record without text_source counts as unrecorded; counts are per sour
         d: { decision: 'Include' }
     });
     assertEqual(counts.raw, 1); assertEqual(counts.abstract, 1); assertEqual(counts.none, 1); assertEqual(counts.unrecorded, 1);
+    assertEqual(counts.knowledge_doc, 0, 'the historical value is a counter, zero when absent');
+});
+
+test('a migrated record from the superseded build keeps its knowledge_doc source instead of becoming unrecorded', function() {
+    var counts = T.textSourceCounts({
+        a: { decision: 'Include', text_source: 'knowledge_doc' },
+        b: { decision: 'Include', text_source: 'raw' },
+        c: { decision: 'Include' }
+    });
+    assertEqual(counts.knowledge_doc, 1);
+    assertEqual(counts.unrecorded, 1, 'only a record without any value is unrecorded');
+    T.setPapers([{ id: 'a' }, { id: 'b' }, { id: 'c' }]);
+    T.getState().reviewers = { r1: { a: { decision: 'Include', text_source: 'knowledge_doc' } } };
+    T.getState().reviewer = 'r1';
+    assertContains(T.disclosureMarkdown(), 'knowledge document 1', 'the disclosure names the historical source');
 });
 
 test('decision-log CSV carries a text_source column filled from the record', function() {

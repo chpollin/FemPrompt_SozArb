@@ -92,7 +92,7 @@ A status caveat governs how to cite it. The authors call it a "well-founded prop
 
 ### Adapted flow diagram
 
-The core modification is the addition of separate fields to distinguish exclusions made by human reviewers from those made by AI systems at each screening stage, while preserving the familiar PRISMA layout. It also separates rule-based administrative tools (e.g. deduplication) from evaluative AI systems. This is item R1 made visual, and it is the signature artefact of the tool's report layer. Under the v4 pivot (see [[specification]] ADR-012) the flow diagram, the agreement matrix, and kappa live on the "PRISMA & Report" surface, computed but not foregrounded; the working Screening view is centred on reading, searching, and pinning evidence (FR-11 to FR-13), not on the divergence apparatus.
+The core modification is the addition of separate fields to distinguish exclusions made by human reviewers from those made by AI systems at each screening stage, while preserving the familiar PRISMA layout. It also separates rule-based administrative tools (e.g. deduplication) from evaluative AI systems. This is item R1 made visual, and it is the signature artefact of the tool's report layer. Under the v4 pivot (see [[specification]] ADR-012, then ADR-020) the flow diagram lives with the checklist and the disclosure in the on-demand PRISMA-Record panel; the agreement matrix and kappa are no longer computed in the tool at all (ADR-014/017), agreement is evaluated externally on the benchmark corpus. The working Screening view is centred on reading, searching, and pinning evidence (FR-11 to FR-13), without the divergence apparatus.
 
 ## RAISE (Cochrane, Campbell, JBI, CEE, Nov 2025)
 
@@ -116,10 +116,10 @@ The dual assessment track and benchmark already satisfy most of the demanding re
 | trAIce M3: stage and task | Identification (deep research), Screening (10K assessment), Synthesis (3-stage SKE), each documented | Satisfied |
 | trAIce M4: input data | Title and abstract vs knowledge documents, tracked per paper (`Input_Source`); the 2x2 experiment; in PRISM every decision records the paper-layer text actually read (`text_source`, schema 0.3, ADR-027) and the disclosure reports the per-source counts | Satisfied |
 | trAIce M5: output format and post-processing | Structured JSON, per-category booleans, confidence scores; deterministic stage 2 | Satisfied |
-| trAIce M6: prompts and parameters | `prompts/` governance, `CHANGELOG.md`, negative constraints; decoding parameters (temperature, top-p, max tokens) and confidence thresholds not yet disclosed | Partial |
+| trAIce M6: prompts and parameters | `prompts/` governance, `CHANGELOG.md`, negative constraints, per-prompt max_tokens; temperature, top-p, and confidence thresholds not yet disclosed | Partial |
 | trAIce M8: human oversight | Full dual track, both human and LLM screening run parallel and independent across the corpus; the expert decision is binding | Satisfied (gold standard) |
 | trAIce M9 and R2: AI performance evaluation | Confusion matrix, Cohen's kappa for the decision and the ten categories, base rates, and the divergence analysis, with human consensus as the reference standard | Satisfied (project strength) |
-| trAIce R1: flow diagram, AI vs human split | The recorded AI and human decisions exist; the tool renders the adapted flow diagram on its PRISMA & Report surface | Built (tool); paper text pending |
+| trAIce R1: flow diagram, AI vs human split | The recorded AI and human decisions exist; the tool renders the adapted flow diagram in its on-demand PRISMA-Record panel | Built (tool); paper text pending |
 | trAIce M10: data governance | `.vault_cache/` (reproducible API cache), open repository | Satisfied |
 | trAIce M1: protocol pre-registration of AI use | No PROSPERO or OSF protocol on record | Gap |
 | RAISE P1: accountability | Expert track epistemically binding; the responsibility-asymmetry framing in [[project]] | Satisfied |
@@ -132,7 +132,11 @@ The dual assessment track and benchmark already satisfy most of the demanding re
 
 Der Item-für-Item-Status dieses Reviews gegen PRISMA 2020, PRISMA-trAIce und RAISE liegt als maschinenlesbares Artefakt in `generated/conformance/conformance_map.yaml`. Jeder Eintrag trägt Standard, Item-Kennung, Kurzbezeichnung, Status (reconstructable, partial, gap, not_applicable), Quellpfad oder benannte Lücke und die Nuance, die nicht in die Felder passt. R4 (Stage R der Datensatzerzeugung in [[plan]]) speist sich aus dieser Datei; die R2-Wiedergabe liefert die zählenden Werte, die Konformanzbewertung liest die partial- und gap-Zeilen als ihren Abschnitt zur ehrlichen Konformanz.
 
+Die zählenden Items behauptet der committete Replay `src/replay/replay_round1.py`. Er paart die Roh-CSVs über den Zotero_Key, reproduziert die kanonische `generated/benchmark-results/agreement_metrics.json` als Selbsttest und schreibt danach `flow_model.json` und `agreement_replay.json` nach `generated/benchmark-results/replay/`. Für ein zählendes Item heisst der Status reconstructable damit, dass sein Wert aus diesen Ausgaben fällt; R4 liest sie, wenn es den Record baut, und jede frühere Handzählung ist abgelöst.
+
 Die zentrale, retrospektiv unreparierbare Lücke ist das fehlende Runde-1-Protokoll (PRISMA-trAIce M1, PRISMA 24a-c). Der KI-Einsatz war in Runde 1 nicht vorab spezifiziert; das Runde-2-Protokoll in [[update-protocol]] spezifiziert ihn vor jedem Lauf und schliesst die Lücke vorwärts, nicht rückwirkend.
+
+Drei weitere benannte Lücken hängen am Korpus statt an einem Checklistenpunkt und tragen deshalb keine eigene Zeile im maschinenlesbaren Artefakt. Erstens Korpuspapiere, die durch den LLM-Strang liefen und in `assessment/human_assessment.csv` fehlen; sie stehen im Flow als Datensätze ohne bindende menschliche Entscheidung und werden nie stillschweigend eingeschlossen. Zweitens Teile der PDF-Beschaffung ohne vollständigen Audit-Trail, denn die Kette aus Beschaffung, Konvertierung und Destillation verliert auf jeder Stufe Material ([[methods]], Stage 2). Drittens Datensätze ohne Volltext als Folge ebendieser Verluste; die fehlgeschlagenen Konvertierungen sind in [[methods]] namentlich aufgeführt.
 
 Die meta-analytischen PRISMA-Items sind für diesen Reviewtyp not_applicable. Als qualitatives Feld-Review mit Screening und Kategorisierung, ohne Meta-Analyse, ohne studienweise Risk-of-Bias-Bewertung, ohne Effektmasse und ohne Gewissheitsbewertung, treffen die Items 11 bis 15 sowie 18, 20, 21 und 22 nicht zu.
 
@@ -142,7 +146,7 @@ Die meta-analytischen PRISMA-Items sind für diesen Reviewtyp not_applicable. Al
 2. Auto-generate a consolidated AI-disclosure section or supplementary table from the screening data, covering model name, version, date, stage, task, prompt version, decoding parameters, confidence threshold, validation metrics, known limitations. This is a tool feature and closes trAIce M6 (parameters), RAISE Table 1, and P3 at once.
 3. Disclose decoding parameters and any confidence threshold in the assessment prompt config so M6b is explicit and reproducible.
 4. Declare conflicts of interest regarding the AI tools used (RAISE Table 1, final row).
-5. Render the PRISMA-trAIce adapted flow diagram (AI vs human split) on the tool's PRISMA & Report surface, the report layer, not the working Screening view, per ADR-012. Closes trAIce R1.
+5. Render the PRISMA-trAIce adapted flow diagram (AI vs human split) in the tool's on-demand PRISMA-Record panel, the report layer separate from the working Screening view, per ADR-020. Done on the tool side; the exportable flow artefact and the paper text come from R4, fed by the committed replay (`src/replay/`).
 6. Frame the benchmark explicitly as the trAIce M9/R2 performance evaluation, naming the human-consensus reference standard and the metrics, in the methods text the tool emits.
 
 ## How this legitimises the workflow

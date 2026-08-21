@@ -99,7 +99,9 @@ const state = {
 };
 
 let papers = [];
-let dirHandle = null;          // connected File System Access directory handle
+let dirHandle = null;          // connected File System Access directory handle (what the picker returned)
+let screeningHandle = null;    // docs/data/screening within it: where reviewer files are read and written
+let connectScope = 'screening'; // 'root' when the picked folder is the repo root, else 'screening'
 let corpusIndex = null;        // id -> { t, ay, kd, src, n, x } for corpus full-text search
 let corpusIndexPromise = null;
 let corpusQuery = '';          // current corpus-wide search (left pane)
@@ -171,7 +173,7 @@ let writeChain = Promise.resolve();
 function save() {
     saveLocal();
     // serialize repo writes so rapid screening cannot overlap createWritable on the same file
-    if (dirHandle) writeChain = writeChain.then(writeCurrentReviewer).catch(function(e) { console.warn('[PRISMA] repo write failed:', e); });
+    if (screeningHandle) writeChain = writeChain.then(writeCurrentReviewer).catch(function(e) { console.warn('[PRISMA] repo write failed:', e); });
 }
 
 function reviewerPayload(key) {
@@ -235,16 +237,45 @@ function idbGet(k) {
     }); });
 }
 
+// The picker may be pointed at the repo root of the local clone; the reviewer folder is
+// then resolved as docs/data/screening below it, which is one step for the reviewer and
+// keeps the connect target the same folder Git sees. A picked folder without a docs child
+// is treated as the reviewer folder itself, which is the pre-existing behaviour.
+async function resolveScopes(picked) {
+    // drop the previous connection first: a failed resolution must not leave writes
+    // pointing at the folder of an earlier session
+    screeningHandle = null;
+    connectScope = 'screening';
+    let docs = null;
+    try { docs = await picked.getDirectoryHandle('docs'); } catch (e) { docs = null; }
+    if (docs) {
+        // the two levels are created when absent, so a clone that has never been screened
+        // in connects as readily as one that has
+        const data = await docs.getDirectoryHandle('data', { create: true });
+        screeningHandle = await data.getDirectoryHandle('screening', { create: true });
+        connectScope = 'root';
+    } else {
+        screeningHandle = picked;
+    }
+}
+
 async function connectRepo() {
     if (!FS_SUPPORTED) { alert('Dieser Browser schreibt nicht direkt auf die Platte. Nutze Export/Import (Firefox/Safari).'); return; }
     try {
         let handle = await window.showDirectoryPicker({ mode: 'readwrite' });
         dirHandle = handle;
         await idbSet('dir', handle);
+        await resolveScopes(handle);
         await loadAllReviewers();
         updateConnStatus();
         showSurface(state.surface);
-    } catch (e) { if (e.name !== 'AbortError') console.warn('[PRISMA] connect failed:', e); }
+    } catch (e) {
+        if (e.name !== 'AbortError') {
+            console.warn('[PRISMA] connect failed:', e);
+            updateConnStatus(); // the status line must not keep claiming a connection
+            alert('Verbindung fehlgeschlagen: ' + (e.message || e.name) + '. Nutze Export/Import, oder verbinde den Ordner erneut.');
+        }
+    }
 }
 
 async function reconnectRepo() {
@@ -255,16 +286,21 @@ async function reconnectRepo() {
         const perm = await handle.requestPermission({ mode: 'readwrite' });
         if (perm !== 'granted') { alert('Schreibrecht nicht erteilt.'); return; }
         dirHandle = handle;
+        await resolveScopes(handle);
         await loadAllReviewers();
         updateConnStatus();
         showSurface(state.surface);
-    } catch (e) { console.warn('[PRISMA] reconnect failed:', e); }
+    } catch (e) {
+        console.warn('[PRISMA] reconnect failed:', e);
+        updateConnStatus();
+        alert('Erneutes Verbinden fehlgeschlagen: ' + (e.message || e.name) + '.');
+    }
 }
 
 async function loadAllReviewers() {
-    if (!dirHandle) return;
+    if (!screeningHandle) return;
     const found = {};
-    for await (const entry of dirHandle.values()) {
+    for await (const entry of screeningHandle.values()) {
         if (entry.kind === 'file' && /\.json$/.test(entry.name)) {
             try {
                 let f = await entry.getFile();
@@ -280,8 +316,8 @@ async function loadAllReviewers() {
 }
 
 async function writeCurrentReviewer() {
-    if (!dirHandle) return false;
-    const fh = await dirHandle.getFileHandle(state.reviewer + '.json', { create: true });
+    if (!screeningHandle) return false;
+    const fh = await screeningHandle.getFileHandle(state.reviewer + '.json', { create: true });
     const w = await fh.createWritable();
     await w.write(reviewerFileText(state.reviewer));
     await w.close();
@@ -291,7 +327,11 @@ async function writeCurrentReviewer() {
 function updateConnStatus() {
     let el = document.getElementById('pt-conn-status');
     if (!el) return;
-    if (dirHandle) { el.textContent = 'verbunden, schreibt ' + state.reviewer + '.json'; el.classList.add('connected'); }
+    if (screeningHandle) {
+        const scope = connectScope === 'root' ? 'Repo-Wurzel' : 'Screening-Ordner';
+        el.textContent = 'verbunden (' + scope + '), schreibt ' + state.reviewer + '.json';
+        el.classList.add('connected');
+    }
     else { el.textContent = FS_SUPPORTED ? '' : 'Browser ohne Direktschreiben (Export nutzen)'; el.classList.remove('connected'); }
 }
 
@@ -1695,7 +1735,8 @@ function disclosureMarkdown() {
     L.push('Performance evaluation (PRISMA-trAIce M9/R2): AI-human agreement is evaluated outside this tool, on the benchmark corpus in the repository (generated/benchmark-results/, replay self-test), not recomputed here over the loaded corpus.');
     L.push('Confidence threshold: ' + disc('threshold') + '. Conflicts of interest: ' + disc('conflicts') + '.');
     const ts = textSourceCounts(curDec());
-    L.push('Text sources read by the human reviewer (PRISMA-trAIce M4): raw full text ' + ts.raw + ', abstract ' + ts.abstract + ', no text ' + ts.none + ', unrecorded ' + ts.unrecorded + '.');
+    L.push('Text sources read by the human reviewer (PRISMA-trAIce M4): raw full text ' + ts.raw + ', abstract ' + ts.abstract +
+        (ts.knowledge_doc ? ', knowledge document ' + ts.knowledge_doc : '') + ', no text ' + ts.none + ', unrecorded ' + ts.unrecorded + '.');
     if (disc('limitations')) L.push('Limitations: ' + disc('limitations'));
     L.push('', 'Flow diagram distinguishes AI from human decisions (PRISMA-trAIce R1). Tool identity, prompt, and parameters disclosed per M2/M6.');
     return L.join('\n');
@@ -1711,7 +1752,7 @@ function renderData(targetEl) {
 
     html += '<div class="pt-data-block"><h4>In den Projektordner speichern</h4>';
     if (FS_SUPPORTED) {
-        html += '<p class="pt-muted">Ordner docs/data/screening/ im lokalen Klon verbinden. Das Tool liest alle Reviewer-Dateien und schreibt deine bei jeder Entscheidung diff-stabil hinein (Schema 0.2, nach Paper-ID sortiert). Danach committest du sie mit deinem üblichen Werkzeug.</p>';
+        html += '<p class="pt-muted">Wurzel des lokalen Klons verbinden; das Tool findet docs/data/screening/ darunter und legt den Ordner an, wenn er fehlt. Ein direkt gewählter Screening-Ordner funktioniert weiterhin. Das Tool liest alle Reviewer-Dateien und schreibt deine bei jeder Entscheidung diff-stabil hinein (' + REVIEWER_SCHEMA + ', nach Paper-ID sortiert). Danach committest du sie mit deinem üblichen Werkzeug.</p>';
         html += '<div class="pt-data-actions">' +
             '<button class="pt-btn pt-connect">Mit Projektordner verbinden</button>' +
             '<button class="pt-btn pt-reconnect">Erneut verbinden</button>' +
@@ -1811,11 +1852,14 @@ function exportCsv() { download('prisma-decision-log.csv', decisionLogCsv(), 'te
 
 // Per-source counts of the current reviewer's records (trAIce M4, input data). A record
 // written before schema 0.3 carries no text_source and counts as 'unrecorded'.
+// knowledge_doc is a historical value: the superseded raw-from-clone build wrote it for a
+// decision taken on the served distillate. It is counted as itself rather than as
+// unrecorded, so a migrated file keeps saying what its reviewer actually read.
 function textSourceCounts(decisions) {
-    const out = { raw: 0, abstract: 0, none: 0, unrecorded: 0 };
+    const out = { raw: 0, abstract: 0, knowledge_doc: 0, none: 0, unrecorded: 0 };
     Object.keys(decisions || {}).forEach(function(pid) {
         const s = decisions[pid] && decisions[pid].text_source;
-        if (s === 'raw' || s === 'abstract' || s === 'none') out[s]++; else out.unrecorded++;
+        if (s === 'raw' || s === 'abstract' || s === 'knowledge_doc' || s === 'none') out[s]++; else out.unrecorded++;
     });
     return out;
 }
@@ -1981,7 +2025,10 @@ const TEST_HOOK = {
     readToken: function() { return readToken; }, textSource: function() { return currentTextSource; },
     readingPending: function() { return readingPending; },
     textSourceCounts: textSourceCounts, decisionLogCsv: decisionLogCsv,
-    reconcileReviewers: reconcileReviewers, reconciliationText: reconciliationText
+    reconcileReviewers: reconcileReviewers, reconciliationText: reconciliationText,
+    // repo-root connect (ported from the paper lane's ADR-024 by operator decision)
+    resolveScopes: resolveScopes, connectScope: function() { return connectScope; },
+    screeningHandle: function() { return screeningHandle; }
 };
 window.EC = window.EC || {};
 window.EC._test = TEST_HOOK;

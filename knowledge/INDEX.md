@@ -15,10 +15,10 @@ status: complete
 language: en
 version: "0.3"
 created: 2026-06-29
-updated: 2026-07-18
+updated: 2026-07-21
 authors: [Christopher Pollin]
 generated-with: Claude Code
-related: [project, methods, specification, data, standards, plan, journal, update-protocol, research-vault]
+related: [project, methods, specification, data, standards, plan, journal, update-protocol, research-vault, analysis-divergence, analysis-sq-advisory]
 ---
 
 This is the knowledge base of FemPrompt SozArb, a systematic literature review on feminist AI literacy and LLM bias in social work and the epistemic infrastructure built around it. It documents the conducted review and its benchmark, the PRISM screening tool, which is the binding screening surface the review is carried through (ADR-019), and the plan for the literature update. Concrete numbers do not live here. The benchmark figures live in the data (`generated/benchmark-results/`, `docs/data/`), the corpus and screening data in `docs/data/` and `assessment/`, and the Evidence Companion (https://chpollin.github.io/FemPrompt_SozArb/) renders them. This index shows where each piece of knowledge lives, in what order to read, and what the constitutive terms mean.
@@ -34,22 +34,25 @@ In function order, not alphabetical.
 | [[specification]] | The PRISM tool at one place: requirements, user stories, the ADR decision log, and the design system | per tool iteration |
 | [[data]] | The data substrate the PRISM tool consumes and produces | per schema change |
 | [[standards]] | The reporting standards implemented (PRISMA 2020, PRISMA-trAIce, RAISE), and this review's conformance state against them | rarely |
-| [[plan]] | Forward steering: the staged roadmap, current status, and the simulated decisions with their ratification | per phase |
+| [[plan]] | Forward steering: the staged roadmap, current status, and the decided questions | per phase |
 | [[journal]] | Genesis: the chronological session log with decisions and learnings | per session |
 | [[update-protocol]] | The round-2 pre-registration, the analysis-field design, the pilot findings, the coding procedure, and the RIS procedure | until round 2 starts |
+| [[analysis-divergence]] | The licensed round-1 divergence analysis the follow-up paper's empirical section cites, decomposed and read off named replay keys | per replay change |
+| [[analysis-sq-advisory]] | The advisory, unreviewed SQ1 to SQ3 coding (TP4) feeding the paper's synthesis, pending human confirmation | per coding run |
 | [[research-vault]] | The Grounded-Vault layer model and the distillate audit as its migration precondition | until the research-vault is grounded |
 | [[guides/manual-review-checklist]] | The human-in-the-loop markdown review checklist | rarely |
 
 ## Reading paths
 
-- Onboarding a new collaborator: [[project]], [[methods]], [[specification]].
+- Onboarding a new collaborator: [[project]], [[methods]], [[specification]]. The reviewing colleagues use `docs/onboarding.html` instead; nothing on their path requires this knowledge base.
 - Describe the method in the follow-up paper: [[methods]] (the chain and the depth, including the replay verification), [[standards]] (the conformance state and the named gaps).
 - Prepare the qualitative coding: [[update-protocol]] (fields, pilot findings, and coding procedure).
-- Inspect the benchmark: the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion; the replay in [[methods]].
+- Inspect the benchmark: the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion; the committed replay (`src/replay/`) re-derives and asserts the figures, described in [[methods]].
 - Understand a tool decision: [[specification]] (the Entscheidungen / ADR section and the design system), [[journal]].
-- Understand the divergence (the motivating illustration): [[methods]].
+- Understand the divergence (the motivating illustration and demonstration): [[methods]], [[analysis-divergence]].
 - Evaluate conformance: [[standards]] (the criterion and the per-item status; the machine-readable item status in `generated/conformance/conformance_map.yaml`).
 - Prepare the literature update: [[plan]] (Stage B), [[update-protocol]], [[standards]].
+- Prepare the follow-up paper's synthesis: [[analysis-divergence]] (section 5), [[analysis-sq-advisory]] (section 6, advisory).
 - Understand the research-vault: [[research-vault]] (the layer model and the audit precondition), `research-vault/README.md` (the built skeleton and its status).
 
 ## Convention
@@ -102,6 +105,9 @@ A structured summary of a study produced by the distillation pipeline: metadata,
 ### PRISM and PRISMA
 PRISMA (with the final A) is the reporting standard (see [[standards]]). PRISM is this project's screening tool (`docs/prisma.html`). They are not the same; the names are kept distinct deliberately.
 
+### Replay (round 1)
+The committed script `src/replay/replay_round1.py` that re-derives the retrospective PRISMA flow and the agreement figures from the raw assessment CSVs, pairing by Zotero_Key, and reproduces the canonical benchmark file as a self-test before writing its outputs (`generated/benchmark-results/replay/`). The mechanism that lets count-bearing claims be asserted by script, superseding every hand recount; R4 builds the record from its outputs.
+
 ### Responsibility asymmetry
 Responsibility for all results remains with the researchers even when LLMs provide epistemically relevant contributions. The expert track is the epistemically binding reference track because accountability resides only there.
 
@@ -114,6 +120,6 @@ A defined point in the workflow where human or rule-based control checks AI-gene
 ## What is missing and why
 
 - No `architecture.md`. The tool is a static vanilla-JS page with no backend; its construction is covered by [[specification]] (requirements, ADR log, and design system) and [[data]], and the research pipeline by [[methods]].
-- No `testing.md`. The tool's behaviour tests live in `tests/`, in two layers: a jsdom harness over the pure functions (`npm test`, jsdom as the only dev dependency of the harness) and a pinned supported-browser pilot that drives the real page in Chromium (`npm run pilot`, contract in `tests/pilot/README.md`). What a person still has to check by hand is `tests/manual-checklist.md`.
+- No `testing.md`. The tool's behaviour tests live in `tests/`, in two layers: a jsdom harness over the pure functions (`npm test`, jsdom as the only dev dependency of the harness) and a pinned supported-browser pilot that drives the real page in Chromium (`npm run pilot`, contract in `tests/pilot/README.md`). The retrospective counts and agreement figures are asserted by the committed replay (`src/replay/`). What a person still has to check by hand is `tests/manual-checklist.md`; the test responsibility matrix and the autonomous verification measures are in [[plan]].
 - No `report.md` (a status report for an external recipient). The current state lives in [[plan]] and this index; a formal external report is deferred to the FFG report and the follow-up paper.
 - No numbers in the prose. Volatile quantities live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion, by convention.

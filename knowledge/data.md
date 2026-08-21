@@ -7,7 +7,7 @@ status: complete
 language: en
 version: "0.2"
 created: 2026-06-09
-updated: 2026-07-01
+updated: 2026-08-21
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 4.8)
 method:
@@ -22,7 +22,7 @@ topics: ["[[Data Modelling]]"]
 related: [specification, methods, standards]
 ---
 
-This document describes the substrate the PRISMA screening tool consumes and produces. The tool is built so that its data model is, by construction, a PRISMA-trAIce-conformant screening record: every screening decision stores the AI decision and the human decision separately, which is exactly what item R1 needs to render an AI-vs-human flow split. The model has the per-paper `ScreeningRecord`, the aggregated `FlowModel`, and the `DisclosureMetadata`. The canonical persisted unit in the built tool is one file per reviewer (schema `femprompt-prisma-reviewer/0.2`, with the evidence map, see below); the single-blob `Session` envelope is the superseded v3 export shape. The category schema and inclusion logic are reused verbatim from the benchmark (`assessment/categories.yaml`); the seed dataset is the existing corpus. What the data *means* lives here; what is *done* with it lives in [[specification]].
+This document describes the substrate the PRISMA screening tool consumes and produces. The tool is built so that its data model is, by construction, a PRISMA-trAIce-conformant screening record: every screening decision stores the AI decision and the human decision separately, which is exactly what item R1 needs to render an AI-vs-human flow split. The model has the per-paper `ScreeningRecord`, the aggregated `FlowModel`, and the `DisclosureMetadata`. The canonical persisted unit in the built tool is one file per reviewer (schema `femprompt-prisma-reviewer/0.3`, with the evidence map and the recorded text source, see below); the single-blob `Session` envelope is the superseded v3 export shape. The category schema and inclusion logic are reused verbatim from the benchmark (`assessment/categories.yaml`); the seed dataset is the existing corpus. What the data *means* lives here; what is *done* with it lives in [[specification]].
 
 ## Category schema (reused, not redefined)
 
@@ -126,7 +126,7 @@ The fields the disclosure generator (FR-06) needs. Most come from `ai_decision`;
 
 ## Session (export / import envelope, v3 single-blob, superseded)
 
-The v3 single-blob format, kept only as a description of the earlier export shape. The built tool does not write this; it persists one file per reviewer (schema 0.2, see "Per-reviewer files" below) and exports that file plus a decision-log CSV.
+The v3 single-blob format, kept only as a description of the earlier export shape. The built tool does not write this; it persists one file per reviewer (schema 0.3, see "Per-reviewer files" below) and exports that file plus a decision-log CSV.
 
 ```json
 {
@@ -196,7 +196,7 @@ The raw Docling full texts live in `generated/markdown_clean/` and hold copyrigh
 
 The screening view fetches the full text and the knowledge doc together (`loadReadingInto`): the Volltext layer renders the full text with a built-in minimal Markdown renderer, the KI-Extraktion layer renders the distillation (`splitDocLayers` takes the `## Kernbefund` onward). In-text search runs over the rendered document (debounced); corpus-wide search runs over `fulltext_index.json` (instant, one lazy load). The AI proposal (`paper.llm`) stays collapsed and is not evidence. The layer a snippet is pinned from sets its `origin`, binding a Beleg's provenance to its source (ADR-016).
 
-Text-source options (a copyright decision, not yet taken): (1) keep the served knowledge documents, current and publishable; (2) read the raw local full text from the connected clone (`generated/markdown_clean/`), never published, public fallback to the knowledge document; (3) publish the raw full texts. Because the source is one function, switching to (2) or (3) is a one-function change.
+Text-source options: (1) keep the served knowledge documents, current and publishable; (2) read the raw local full text from the connected clone (`generated/markdown_clean/`), never published, public fallback to the knowledge document; (3) publish the raw full texts. The paper lane built option 2 (P2, ADR-024) with a title-prefix mapping from paper to raw file and a fourth `text_source` value `knowledge_doc`; that design is superseded and does not stand. What is built is the served reading layer of ADR-025, `build_fulltext.py` writing `docs/data/fulltext/` and the tool reading it through `fetchFullText` against `fulltext_manifest.json`, with the abstract as fallback, and the decision-level record of ADR-027. Because the source is one function, switching to (3) stays a one-function change, and publishing the raw full texts remains a separate, rights-gated decision (ADR-025). One element of the paper-lane design was ported and holds: the folder picker may be pointed at the repository root, and the tool resolves `docs/data/screening/` below it, creating the folder when it is absent.
 
 ## Evidence behaviour (FR-13 contract, as built)
 

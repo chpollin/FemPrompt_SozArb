@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onboarding -- Feministische AI Literacies</title>
+    <meta name="description" content="Einstieg in das PRISM-Screening für die beiden Reviewer:innen.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%231e3a5f'/><text x='50' y='68' font-size='60' font-family='serif' font-weight='bold' fill='white' text-anchor='middle'>F</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/research.css">
+</head>
+<body>
+    <!-- Header with Navigation (same as index.html) -->
+    <header>
+        <div class="header-content">
+            <div class="header-top">
+                <div class="header-brand">
+                    <a href="index.html" class="brand-link">
+                        <h1>Feministische AI Literacies</h1>
+                        <p class="subtitle">Systematischer Review &middot; Interaktive Evidenz</p>
+                    </a>
+                    <p class="header-authors">Pollin, Sackl-Sharif, Klinger &amp; Steiner (2026)</p>
+                </div>
+                <nav class="header-nav" aria-label="Hauptnavigation">
+                    <a href="index.html#chat" class="nav-link">Wissens-Chat</a>
+                    <a href="index.html#wissensnetz" class="nav-link">Wissensnetz</a>
+                    <a href="index.html#vergleich" class="nav-link">Kategorien</a>
+                    <a href="index.html#korpus" class="nav-link">Korpus</a>
+                    <span class="nav-sep"></span>
+                    <a href="prisma.html" class="nav-link">PRISM</a>
+                    <a href="onboarding.html" class="nav-link nav-link-active">Onboarding</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="methoden.html" class="nav-link">Methoden</a>
+                    <a href="help.html" class="nav-link">Hilfe</a>
+                    <span class="nav-sep"></span>
+                    <a href="https://github.com/chpollin/FemPrompt_SozArb" class="nav-link nav-link-ext" target="_blank" rel="noopener"><i class="fas fa-code-branch"></i></a>
+                    <a href="downloads/vault.zip" class="nav-link nav-link-ext" title="Obsidian Vault (.zip)"><i class="fas fa-download"></i></a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <article class="prose">
+            <h2>Onboarding für das Screening</h2>
+            <p>Diese Seite führt die beiden Reviewer:innen durch das PRISM-Screening. Du brauchst dafür
+            weder Git noch ein Terminal noch die Wissensbasis, ein Browser und der Link zum Tool genügen.</p>
+
+            <h3><i class="fas fa-circle-info"></i> Was ist PRISM und was ist deine Aufgabe</h3>
+            <p>PRISM ist die Screening-Oberfläche des systematischen Reviews. Deine Aufgabe ist, jedes Paper
+            im Korpus zu lesen und am Text belegt zu entscheiden, ob es in den Review aufgenommen wird (Include)
+            oder ausgeschlossen wird (Exclude). Beide Reviewer:innen bearbeiten den vollständigen Batch. Ihr
+            entscheidet unabhängig voneinander und stimmt euch während des Screenings nicht ab. Die menschliche
+            Entscheidung ist bindend.</p>
+
+            <h3><i class="fas fa-list-ol"></i> Schritt für Schritt durch ein Paper</h3>
+            <ol>
+                <li><strong>Tool öffnen.</strong> Rufe
+                    <a href="https://chpollin.github.io/FemPrompt_SozArb/prisma.html" target="_blank" rel="noopener">chpollin.github.io/FemPrompt_SozArb/prisma.html</a>
+                    auf. Links steht der Korpus, in der Mitte die Lesespalte, rechts deine Bewertung.</li>
+                <li><strong>Paper lesen.</strong> Über der Lesespalte schaltest du zwischen
+                    &bdquo;Volltext&ldquo; und &bdquo;KI-Extraktion&ldquo; um. Der Volltext ist die verbindliche Textgrundlage.
+                    Die KI-Extraktion ist eine Zusammenfassung; Belege von dort werden als KI markiert und binden deine
+                    Entscheidung nicht. Bei manchen Papern liegt nur ein Abstract vor, das zeigt der Hinweis
+                    &bdquo;nur Abstract&ldquo; an.</li>
+                <li><strong>Suchen.</strong> Im Feld &bdquo;Im Text suchen&ldquo; findest du eine Stelle im
+                    aktuellen Paper, mit Enter springst du zum nächsten Treffer. Über der Korpusliste durchsucht
+                    &bdquo;Volltext-Suche über alle Paper&ldquo; den gesamten Korpus.</li>
+                <li><strong>Beleg anheften.</strong> Markiere im Text die Stelle, die eine Kategorie trägt, oder
+                    hefte einen Suchtreffer an. Es öffnet sich das Menü &bdquo;Als Beleg anheften an&ldquo;, dort
+                    wählst du die passende Kategorie. Ein aus dem Volltext angehefteter Beleg setzt die zugehörige
+                    Kategorie automatisch.</li>
+                <li><strong>Kategorien setzen.</strong> Die zehn Kategorien liegen in zwei Gruppen,
+                    &bdquo;Gegenstand&ldquo; und &bdquo;Perspektive&ldquo;. Klicke jede Kategorie an, die du am Text belegen
+                    kannst.</li>
+                <li><strong>Abgeleitete Entscheidung prüfen.</strong> Sobald mindestens eine Kategorie in
+                    Gegenstand und mindestens eine in Perspektive gesetzt ist, leitet das Tool Include ab, sonst Exclude.
+                    Die abgeleitete Entscheidung steht als Pille in der Logikzeile.</li>
+                <li><strong>Override und Begründung.</strong> Der Override-Schalter kehrt die abgeleitete
+                    Entscheidung um. Überschreibst du zu Include, verlangt das Tool eine schriftliche
+                    &bdquo;Begründung Override zu Include&ldquo;. Führt die Entscheidung zu Exclude, wählst du einen
+                    Ausschlussgrund aus den Chips (Duplicate, Not relevant topic, Wrong publication type, No full text,
+                    Language).</li>
+                <li><strong>Entscheidung erfassen.</strong> Mit &bdquo;Entscheidung erfassen (bindend)&ldquo;
+                    schreibst du die Bewertung fest. Sie lässt sich danach über &bdquo;Überarbeiten&ldquo; wieder
+                    öffnen.</li>
+                <li><strong>Nächstes Paper.</strong> &bdquo;Nächstes offen&ldquo; springt zum nächsten noch
+                    nicht bewerteten Paper. So arbeitest du den Batch der Reihe nach ab.</li>
+            </ol>
+
+            <h3><i class="fas fa-file-arrow-down"></i> Deine Datei</h3>
+            <p>Deine Entscheidungen liegen als eine JSON-Datei pro Reviewer:in. Am Ende einer Sitzung öffnest du
+            oben rechts &bdquo;Daten &amp; Sync&ldquo; und klickst &bdquo;Eigene Datei exportieren&ldquo;. Die Datei
+            heißt standardmäßig <code>reviewer1.json</code>; ergänze deinen Namen, wenn du sie an den Technical
+            Lead schickst, damit die beiden Dateien auseinandergehalten werden.</p>
+            <p>Der Browser hält deinen Stand zusätzlich lokal (localStorage). Arbeite deshalb immer im gleichen
+            Browser auf demselben Gerät, dann findest du deinen Fortschritt bei der nächsten Sitzung wieder. Die
+            Datei am Sitzungsende zu exportieren bleibt trotzdem wichtig, sie ist deine gesicherte Kopie für den
+            Technical Lead.</p>
+
+            <h3><i class="fas fa-circle-question"></i> Kurz-FAQ</h3>
+            <p><strong>Ein Paper hat keinen Text.</strong> Liegt weder Volltext noch Abstract vor, erscheint ein
+            Hinweis in der Lesespalte. Eine am Text belegte Bewertung ist dann nicht möglich, und der Ausschluss
+            als &bdquo;No full text&ldquo; ist legitim.</p>
+            <p><strong>Was ist der KI-Vorschlag?</strong> Der KI-Vorschlag ist beratend. Er steht eingeklappt am
+            Ende der Bewertungsspalte und bindet deine Entscheidung nie. Er gilt als diagnostisch und
+            konfabulationsanfällig, lies ihn also mit Vorsicht.</p>
+            <p><strong>Was, wenn ihr euch widersprecht?</strong> Abweichungen zwischen euren beiden Bewertungen
+            werden später in einer Reconciliation aufgelöst. Während des Screenings ist das nicht deine Aufgabe,
+            entscheide unabhängig nach dem, was du am Text belegen kannst.</p>
+            <p><strong>Pause und Weiterarbeiten.</strong> Du kannst jederzeit aufhören. Beim erneuten Öffnen im
+            selben Browser ist dein Stand da, und &bdquo;Nächstes offen&ldquo; bringt dich zum ersten noch offenen
+            Paper.</p>
+
+            <h3><i class="fas fa-screwdriver-wrench"></i> Randnotiz für den Technical Lead</h3>
+            <p>In Chrome und Edge bietet &bdquo;Daten &amp; Sync&ldquo; unter &bdquo;Mit Projektordner verbinden&ldquo;
+            einen direkten Schreibpfad in den Ordner <code>docs/data/screening/</code> eines lokalen Klons. Dieser Weg
+            setzt Git und einen lokalen Klon voraus und ist für die technische Leitung gedacht. Für das Screening der
+            Reviewer:innen genügt der Export.</p>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <p>Teil der epistemischen Infrastruktur zu: Pollin, Sackl-Sharif, Klinger &amp; Steiner (2026).
+        Deep-Research-gestützte Literature-Reviews. Forum Wissenschaft 2/2026.</p>
+        <p class="footer-links">
+            <a href="https://github.com/chpollin/FemPrompt_SozArb">Repository</a> &middot;
+            <a href="downloads/vault.zip">Obsidian Vault (.zip)</a>
+        </p>
+    </footer>
+</body>
+</html>

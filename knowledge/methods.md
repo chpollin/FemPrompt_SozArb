@@ -10,7 +10,7 @@ status: complete
 language: en
 version: "0.2"
 created: 2026-02-21
-updated: 2026-07-18
+updated: 2026-08-21
 authors: [Christopher Pollin]
 generated-with: Claude Code
 topics: ["[[Systematic Review]]", "[[PRISMA]]"]
@@ -37,7 +37,7 @@ Two knowledge places frame the chain. `knowledge/` carries the steering knowledg
 
 ## System requirements
 
-Python 3.8 or later, on Windows, macOS, or Linux. Core packages installed via `pip install -r requirements.txt`: `anthropic` (Claude API), `pandas` and `openpyxl` (Excel processing), `pyzotero` (Zotero API), `docling` (PDF conversion), `pdfplumber` (PDF analysis), `python-dotenv` (environment). Environment variables in a `.env` file (not committed): `ANTHROPIC_API_KEY`, `ZOTERO_API_KEY`.
+Python 3.8 or later, on Windows, macOS, or Linux. Core packages installed via `pip install -r requirements.txt`: `anthropic` (Claude API), `pandas` and `openpyxl` (Excel processing), `pyzotero` (Zotero API), `docling` (PDF conversion), `python-dotenv` (environment). `pdfplumber` is an optional extra for the PDF-comparison validation layer (`src/acquire/validate_markdown_enhanced.py`), installed on demand with `pip install pdfplumber`; without it that comparison is disabled. Environment variables in a `.env` file (not committed): `ANTHROPIC_API_KEY`, `ZOTERO_API_KEY`.
 
 ## PRISMA 2020 framework
 
@@ -116,7 +116,7 @@ Scoring. The completed benchmark tracks scored the categories binary (Yes/No). T
 
 Expert track (epistemically authoritative). Researchers from social work, gender and diversity studies, and technology studies assess each study against the ten categories in the established spreadsheet workflow. This is the epistemically authoritative reference track, because accountability and responsibility reside only here.
 
-LLM track (two assessment systems). A 5D system (five relevance dimensions, ordinal 0 to 3) for exploratory screening and prioritization, and a 10K system (the ten binary categories, Yes/No) for the benchmark against the human assessment. Both run on Claude Haiku 4.5; the 10K run is the benchmark basis.
+LLM track (two assessment systems). A 5D system (five relevance dimensions, ordinal 0 to 3) for exploratory screening and prioritization, and a 10K system (the ten binary categories, Yes/No) for the benchmark against the human assessment. Both run on Claude Haiku 4.5; the 10K run is the benchmark basis. A condition contrast additionally varies the assessment input (title and abstract versus knowledge document) and the model (Haiku 4.5 versus Sonnet 4.6), tracked per paper (`Input_Source`, trAIce M4); the replay reports the agreement per condition together with the content-only sensitivity.
 
 Human-LLM benchmark. The benchmark compares the human and LLM assessment and adapts the approach of Woelfle et al. (2024). Reference literature for the human inter-rater baseline: Woelfle et al. (2024, parallel human-AI assessment), Hanegraaf et al. (2024, human IRR across abstract and full-text screening), and Sandner et al. (2025, the LLM deviating from the human reference no more than human raters deviate from each other). The project's own confusion matrix, base rates, and divergence live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion; the primary metrics are the confusion matrix and the base-rate comparison, with Cohen's kappa reported only as a comparison anchor (decision of 2026-02-22, [[journal]]).
 
@@ -239,6 +239,8 @@ Category value normalisation. Category cells carry Ja/Nein or their variants; de
 
 Content-only subset and the decomposed divergence. The content-only subset is the paired set minus the human records whose `Exclusion_Reason` is a workflow criterion (Duplicate, No full text, Wrong publication type in their human-CSV spelling). On this subset the two tracks' include rates converge and agreement rises. The divergence is reported decomposed, workflow-criteria disagreement separated from content disagreement, before any interpretation ([[plan]] Consequence ledger). No error-rate language is used; no inter-human baseline exists.
 
+A second committed replay came from the paper lane, `src/replay/replay_round1.py`, documented in `src/replay/README.md`. It re-derives the retrospective PRISMA flow and the agreement figures from the raw assessment CSVs, pairs strictly by Zotero_Key, separates the workflow-criteria exclusions (Duplicate, No full text, Wrong publication type) for the content-only sensitivity, computes the pre-specified metric set per track, per category, and per condition, and reproduces the canonical `generated/benchmark-results/agreement_metrics.json` as its own self-test before writing `generated/benchmark-results/replay/` (`flow_model.json`, `agreement_replay.json`). Its normalization and kappa functions are taken byte-for-byte from `merge_assessments.py` and `calculate_agreement.py`, which is why it reproduces the canonical figures without reading the merged CSV. Every count-bearing claim of the round-1 record and of the follow-up paper traces to these outputs ([[plan]] Stage R; the per-item conformance status is the artefact `generated/conformance/conformance_map.yaml` referenced from [[standards]]). Both replay paths now stand in the repository, each self-testing against the same canonical benchmark; which of them becomes the single production path is an open decision.
+
 ## Quality assessment
 
 Bibliographic validation: DOI validation via the CrossRef API, author disambiguation via ORCID, journal verification against DOAJ and Beall's List. Alternative review standards consulted for the appraisal layer that a reporting standard does not cover: the JBI Manual (pluralistic evidence), Cochrane 6.5 (RoB 2, ROBINS-I), ENTREQ (qualitative syntheses), and MMAT (mixed methods).
@@ -261,6 +263,7 @@ LLMs are used to examine literature on the use of LLMs; feminist AI literacies a
 | `generated/distilled/`, `_stage1_json/`, `_verification/` | Distilled documents and intermediate results |
 | `assessment/` | `categories.yaml` |
 | `src/assess/`, `assessment/`, `generated/benchmark-results/` | Benchmark scripts, assessment data, results |
+| `src/replay/`, `generated/benchmark-results/replay/` | The committed round-1 replay and its outputs (FlowModel, agreement reproduction) |
 | `corpus/` | `zotero_export.json`, `papers_metadata.csv`, `source_tool_mapping.json` |
 | `docs/`, `docs/data/` | The Evidence Companion and its generated JSON |
 | `src/publish/` | `generate_vault_v2.py`, `generate_promptotyping_data_v2.py` |

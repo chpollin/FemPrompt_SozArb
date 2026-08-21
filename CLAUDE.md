@@ -9,9 +9,9 @@
 
 This project builds an **epistemic infrastructure** for an LLM-assisted literature review. The central thesis is that reliability cannot be presupposed as a property of the system but must be established as a property of the research process. The workflow is organized around **verification checkpoints**, defined points after each AI-assisted step where human or rule-based control checks results before they flow into the next stage. PRISM (`docs/prisma.html`) is the binding screening surface this runs through; per ADR-019 the review counts complete only once all of its data has passed through PRISM under PRISMA 2020 and PRISMA-trAIce, with the items unrepairable in retrospect (the absent round-1 protocol above all) named, not hidden.
 
-A corpus of papers identified via four proprietary Deep Research systems was processed through a five-step workflow. A **dual assessment track** runs expert and LLM evaluation in parallel on the same ten-category schema, without mutual knowledge. The result is a substantial, asymmetric divergence between the LLM and the expert judgments. This divergence is a motivating illustration of why reliability cannot be presupposed as a property of the system; it is not a finding the review defends but a worked example of why the epistemic infrastructure is needed.
+A corpus of papers identified via four proprietary Deep Research systems was processed through a five-step workflow. A **dual assessment track** runs expert and LLM evaluation in parallel on the same ten-category schema, without mutual knowledge. The result is a substantial, asymmetric divergence between the LLM and the expert judgments. This divergence is a motivating illustration of why reliability cannot be presupposed as a property of the system; it is not a finding the review defends but a worked example of why the epistemic infrastructure is needed. Its decomposition (workflow criteria versus content judgement) additionally demonstrates what the recorded per-decision data make analysable; the follow-up paper frames it that way.
 
-The Forum Wissenschaft 2/2026 paper is submitted and editorially closed (it was written on Google Docs, not in this repo). The active work is the PRISM screening tool and the follow-up paper on the epistemic infrastructure and the LLM-assisted review process, tracked in `knowledge/plan.md`.
+The Forum Wissenschaft 2/2026 paper is submitted and editorially closed (it was written on Google Docs, not in this repo). The active work, tracked in `knowledge/plan.md`, comprises the PRISM screening tool, the follow-up paper (`paper/draft.md`), the human analysis coding (TP4) that fills its synthesis section, the round-2 literature update executed through PRISM, and the round-1 record (Stage R). The follow-up paper's concept frame (operator decisions 2026-07-21): the methodological integration question frames the paper, SQ1-SQ3 are reported as the workflow's yield, the claim stays with the documented case and its published artifacts, the primary reader is a social-work researcher planning an LLM-assisted review.
 
 ---
 
@@ -73,16 +73,17 @@ The benchmark (the human-LLM divergence and its decomposition, used as a motivat
 | `generated/distilled/_stage1_json/`, `_verification/` | Stage-1 JSON extractions, verification reports | Read-only |
 | `generated/vault/` | Obsidian Vault v2 (Papers, Concepts, Divergences, Pipeline) | Generated |
 | `docs/`, `docs/data/` | GitHub Pages web interfaces and generated JSON | Actively edited |
-| `generated/benchmark-results/` | Benchmark results | Complete |
+| `generated/benchmark-results/` | Benchmark results; `replay/` holds the committed round-1 replay outputs | Complete |
 | `assessment/` | LLM 5D and human assessment | Complete |
 | `src/publish/` | Generators (Vault v2, Promptotyping data) | Actively edited |
+| `src/replay/` | Round-1 replay (`replay_round1.py`, self-test against the canonical benchmark) | Yes, with care |
 | `config/` | `defaults.yaml` (now lists `generated/` paths; the restructure superseded its do-not-change note) | Yes, with care |
 | `.vault_cache/` | LLM API cache (reproducible) | Do not change |
 | `prompts/` | Prompt governance and CHANGELOG | Read-only |
 
 ### Knowledge documents
 
-`INDEX.md` (navigation and glossary), `project.md` (identity and theory), `methods.md` (review method, the chain, pipeline, dual assessment, replay verification), `specification.md` (PRISM requirements, ADRs, user stories, design system), `data.md` (tool data substrate), `plan.md` (roadmap, status, simulated decisions with ratification), `journal.md` (session log), `standards.md` (PRISMA, trAIce, RAISE, and this review's conformance state), `update-protocol.md` (round-2 protocol, analysis fields, pilot, coding procedure, RIS), `research-vault.md` (Grounded-Vault model and the distillate audit precondition), `guides/manual-review-checklist.md`. The per-item PRISMA/trAIce conformance status is a machine-readable artifact at `generated/conformance/conformance_map.yaml`, fed by the R4 replay. Start at `INDEX.md`.
+`INDEX.md` (navigation and glossary), `project.md` (identity and theory), `methods.md` (review method, the chain, pipeline, dual assessment, replay verification), `specification.md` (PRISM requirements, ADRs, user stories, design system), `data.md` (tool data substrate), `plan.md` (roadmap, status, decided questions with their ratification status), `journal.md` (session log), `standards.md` (PRISMA, trAIce, RAISE, and this review's conformance state), `update-protocol.md` (round-2 protocol, analysis fields, pilot, coding procedure, RIS), `research-vault.md` (Grounded-Vault model and the distillate audit precondition), `guides/manual-review-checklist.md`. Beside these carriers the paper lane contributes two analysis documents, `analysis-divergence.md` (the licensed TP3 analysis of the round-1 divergence) and `analysis-sq-advisory.md` (the advisory SQ1 to SQ3 coding of TP4, unverified), plus `HANDOFF.md`, a dated re-entry snapshot that is superseded by the next one and canonical for nothing. The per-item PRISMA/trAIce conformance status is a machine-readable artifact at `generated/conformance/conformance_map.yaml`, fed by the R4 replay. Start at `INDEX.md`.
 
 ### Key web files
 
@@ -90,6 +91,7 @@ The benchmark (the human-LLM divergence and its decomposition, used as a motivat
 |------|---------|
 | `docs/index.html` | Evidence Companion (4-view SPA, default Knowledge Chat) |
 | `docs/prisma.html` | PRISM screening tool |
+| `docs/onboarding.html` | Reviewer onboarding (German walkthrough for the two colleagues) |
 | `docs/js/research-app.js` | Corpus table, modal tabs, navigation, export |
 | `docs/js/wissenschat.js` | Knowledge Chat (Gemini 3 Flash, streaming, citations) |
 | `docs/js/wissensnetz.js` | Knowledge Graph (D3 force graph, divergence mode) |
@@ -114,7 +116,7 @@ Academic companion publication. Vanilla JS plus Chart.js and D3 via CDN.
 | Categories | Ten-category spectrum, rate comparison, divergence papers | `kategorien.js` |
 | Corpus (reference layer) | Sortable table, filters, detail modal, export | `research-app.js` |
 
-Subpages: `about.html`, `methoden.html`, `help.html`.
+Subpages: `about.html`, `methoden.html`, `help.html`, `onboarding.html`.
 
 Architecture rules: no build tool, no framework, no npm, CDN only (D3, Chart.js, Fuse.js, FontAwesome); IIFE pattern for all JS, communication via the `window.EC` API; IBM Plex Serif (headings) and Inter (body); ten categories as a gender-neutral spectrum; detail as a slide-in side panel; the chat API key is local only (localStorage plus gitignored `config.local.js`); data in `docs/data/research_vault_v2.json`, `concept_graph.json`, `promptotyping_v2.json`; ZIP export via JSZip.
 
@@ -147,7 +149,7 @@ Each piece of information has exactly ONE canonical location. Other files refere
 | Category definitions | `assessment/categories.yaml` |
 | Theory and operationalization | `knowledge/project.md` |
 | Glossary | `knowledge/INDEX.md` |
-| Roadmap, current status, simulated decisions | `knowledge/plan.md` |
+| Roadmap, current status, decided questions | `knowledge/plan.md` |
 | Standards (PRISMA, trAIce, RAISE) | `knowledge/standards.md` |
 | Work journal | `knowledge/journal.md` |
 
