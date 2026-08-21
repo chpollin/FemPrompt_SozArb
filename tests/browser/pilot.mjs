@@ -68,11 +68,14 @@ const browser = await chromium.launch({ headless: !opt.headed });
 const context = await browser.newContext({ acceptDownloads: true, viewport: { width: 1440, height: 900 }, locale: 'de-AT' });
 trace.browser = browser.version();
 
-// fixture overlay: corpus, full-text manifest, full texts, empty corpus index; no external hosts
+// Fixture overlay for every context of this run: the corpus, the full-text manifest and
+// the full texts come from tests/pilot/fixtures, external hosts answer empty so the page
+// has no network dependence, and production data under docs/data/ is never read.
+// delayPaperA holds back paper A's full text, which is how the out-of-order and the
+// pending-commit scenarios get a response that is genuinely still in flight.
 const fixture = (rel) => readFileSync(join(pilotDir, 'fixtures', rel));
-await context.route('**/*', async (route) => {
+const installFixtureRoutes = (ctx, delayPaperA = 0) => ctx.route('**/*', async (route) => {
   const url = new URL(route.request().url());
-  // external hosts (web fonts, icon CSS) answer empty so the page has no network dependence
   if (url.host !== `127.0.0.1:${opt.port}`) return route.fulfill({ status: 200, contentType: 'text/css', body: '' });
   const p = url.pathname;
   if (p.endsWith('/data/research_vault_v2.json')) return route.fulfill({ contentType: 'application/json', body: fixture('vault.json') });
@@ -80,11 +83,14 @@ await context.route('**/*', async (route) => {
   if (p.endsWith('/data/fulltext_index.json')) return route.fulfill({ contentType: 'application/json', body: '{"meta":{},"papers":{}}' });
   const m = p.match(/\/data\/fulltext\/([^/]+)\.md$/);
   if (m) {
-    const f = join(pilotDir, 'fixtures', 'fulltext', decodeURIComponent(m[1]) + '.md');
+    const id = decodeURIComponent(m[1]);
+    if (delayPaperA && id === 'PILOT-A') await new Promise((r) => setTimeout(r, delayPaperA));
+    const f = join(pilotDir, 'fixtures', 'fulltext', id + '.md');
     return existsSync(f) ? route.fulfill({ contentType: 'text/markdown', body: readFileSync(f) }) : route.fulfill({ status: 404, body: '' });
   }
   return route.continue();
 });
+await installFixtureRoutes(context);
 // reviewer key: the documented manual step, seeded once into the persisted config
 await context.addInitScript(({ key, reviewer }) => {
   if (!localStorage.getItem(key)) localStorage.setItem(key, JSON.stringify({ schema: key, config: { reviewer }, reviewers: {}, checklist: {} }));
@@ -264,16 +270,7 @@ try {
   // full-text cache is empty and the delayed route is really in flight
   const delayedContext = async () => {
     const c = await browser.newContext({ viewport: { width: 1440, height: 900 } });
-    await c.route('**/*', async (route) => {
-      const url = new URL(route.request().url());
-      if (url.host !== `127.0.0.1:${opt.port}`) return route.fulfill({ status: 200, contentType: 'text/css', body: '' });
-      const p = url.pathname;
-      if (p.endsWith('/data/research_vault_v2.json')) return route.fulfill({ contentType: 'application/json', body: fixture('vault.json') });
-      if (p.endsWith('/data/fulltext_manifest.json')) return route.fulfill({ contentType: 'application/json', body: fixture('fulltext_manifest.json') });
-      if (p.endsWith('/data/fulltext_index.json')) return route.fulfill({ contentType: 'application/json', body: '{"meta":{},"papers":{}}' });
-      if (/\/data\/fulltext\/PILOT-A\.md$/.test(p)) { await new Promise((r) => setTimeout(r, 1500)); return route.fulfill({ contentType: 'text/markdown', body: fixture('fulltext/PILOT-A.md') }); }
-      return route.continue();
-    });
+    await installFixtureRoutes(c, 1500);
     const pg = await c.newPage();
     await pg.goto(base + '/prisma.html');
     await pg.waitForFunction(() => window.__PRISMA_TEST__ && document.querySelector('#pt-doc'), null, { timeout: 15000 });

@@ -23,6 +23,7 @@ The only network activity is `docs/js/prisma-data.js` attempting to load the res
 | File | Purpose |
 |---|---|
 | `run-tests.html` | Browser runner page. Loads `../docs/js/prisma-data.js` (real `window.EC.escapeHtml`), then `../docs/js/prisma.js` (whose appended exposure block attaches `window.EC._test`), then `../docs/js/prisma-import.js` (the import bridge, which exposes `window.__PRISMA_IMPORT_TEST__`), then `tests.js`. Load order matters: the data layer must come first so `window.EC` exists when the exposure block runs. |
+| `prisma-window.mjs` | The shared jsdom bootstrap: loads `prisma-data.js` before `prisma.js` and stubs `fetch`. Written once because that order carries the `window.EC._test` hook; used by `run.mjs` and by `browser/reconcile.mjs`. |
 | `run.mjs` | Headless node runner. Injects the same four scripts into a jsdom window, reads `window.__TEST_RESULTS__`, and exits non-zero on failure. Run with `npm test`. |
 | `tests.js` | The suite: assert helpers, inline fixtures, all test cases, result rendering. |
 | `browser/pilot.mjs` | Supported-browser pilot (Playwright, Chromium): one isolated reviewer session end to end against the pinned fixtures in `tests/pilot/`, see `tests/pilot/README.md`. `npm run pilot -- --reviewer r1 --out tests/browser/out/r1`. |

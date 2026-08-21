@@ -5,35 +5,19 @@
 // then tests/tests.js into one jsdom window, then reports window.__TEST_RESULTS__
 // and sets the process exit code. The app stays framework-free; jsdom is a
 // dev dependency of this harness only and is never shipped from docs/.
-import { JSDOM } from 'jsdom';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+import { createPrismaWindow } from './prisma-window.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const root = join(here, '..');
 
-const dom = new JSDOM(
-  '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"></head>' +
-  '<body><div id="results"></div><div id="prisma-root" hidden></div></body></html>',
-  { runScripts: 'dangerously', pretendToBeVisual: true, url: 'http://localhost/' }
-);
-const { window } = dom;
-
-// The pure-function suite needs no network. prisma-data.js attempts to fetch the
-// research vault and is written to catch that failure; make fetch reject so it
-// takes the caught path instead of hanging.
-window.fetch = () => Promise.reject(new Error('headless: no network'));
-
-function inject(rel) {
-  const el = window.document.createElement('script');
-  el.textContent = readFileSync(join(root, rel), 'utf8');
-  window.document.body.appendChild(el);
-}
+// createPrismaWindow loads prisma-data.js then prisma.js in the browser's order and
+// stubs fetch; the import bridge and the suite itself are injected on top of that.
+const { window, inject } = createPrismaWindow(root);
 
 try {
-  inject('docs/js/prisma-data.js');
-  inject('docs/js/prisma.js');
   inject('docs/js/prisma-import.js'); // exposes window.__PRISMA_IMPORT_TEST__ for the bridge suite
   // FR-05 seed reproduction (plan P1): the app fetches the served seed at runtime, but
   // headless has no network, so the runner reads it from disk and hands the papers to

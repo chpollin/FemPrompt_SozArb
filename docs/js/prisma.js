@@ -762,8 +762,10 @@ function renderScreening() {
     el.querySelectorAll('.pt-ws-panel').forEach(function(b) {
         b.addEventListener('click', function() { openPanel(b.dataset.panel); });
     });
-    attachScreening(p, dec);
+    // the load starts first: it raises readingPending synchronously, so the commit gate
+    // that attachScreening evaluates sees this paper's load rather than the previous one
     loadReadingInto(p);
+    attachScreening(p, dec);
 
     // keyboard flow: after a paper switch (corpus pick, next-open), move focus to the
     // paper heading so the reader does not lose its place to document body (a11y).
@@ -892,9 +894,13 @@ function loadReadingInto(p) {
     const my = ++readToken;
     readingPending = true;
     currentTextSource = 'none'; // nothing of this paper is shown until its response is applied
-    Promise.all([fetchFullText(p), fetchPaperText(p)]).then(function(res) {
-        applyReading(my, p, res[0], res[1]);
-    });
+    // both fetch helpers swallow their own errors, so the rejection arm is unreachable
+    // today; it stays because without it one throwing helper would leave readingPending
+    // raised and block every commit for the rest of the session
+    Promise.all([fetchFullText(p), fetchPaperText(p)]).then(
+        function(res) { applyReading(my, p, res[0], res[1]); },
+        function() { applyReading(my, p, null, null); }
+    );
 }
 
 // Apply a reading response. A response whose token is no longer current belongs to a

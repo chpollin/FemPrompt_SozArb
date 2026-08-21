@@ -8,11 +8,11 @@
 //
 // --check runs the reconciliation twice with reversed input order and exits non-zero
 // unless both outputs are byte-identical.
-import { JSDOM } from 'jsdom';
 import { createHash } from 'node:crypto';
 import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+import { createPrismaWindow } from '../prisma-window.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const root = join(here, '..', '..');
@@ -30,15 +30,7 @@ if (files.length < 1) { console.error('usage: reconcile.mjs <reviewer.json>... [
 const sha = (p) => createHash('sha256').update(readFileSync(p)).digest('hex');
 const before = files.map(sha);
 
-const dom = new JSDOM('<!DOCTYPE html><html><body><div id="prisma-root" hidden></div></body></html>',
-  { runScripts: 'dangerously', url: 'http://localhost/' });
-const { window } = dom;
-window.fetch = () => Promise.reject(new Error('headless: no network'));
-for (const rel of ['docs/js/prisma-data.js', 'docs/js/prisma.js']) {
-  const el = window.document.createElement('script');
-  el.textContent = readFileSync(join(root, rel), 'utf8');
-  window.document.body.appendChild(el);
-}
+const { window } = createPrismaWindow(root);
 const T = window.EC && window.EC._test;
 if (!T || !T.reconciliationText) { console.error('reconcileReviewers not exposed by prisma.js'); process.exit(1); }
 
