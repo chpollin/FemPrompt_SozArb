@@ -1,7 +1,7 @@
 {
   "reviewer": "r2",
-  "started": "2026-08-21T17:16:12.163Z",
-  "base": "http://127.0.0.1:8832",
+  "started": "2026-08-21T17:43:31.273Z",
+  "base": "http://127.0.0.1:8872",
   "checks": [
     {
       "name": "cold load: fixture corpus of two papers",
@@ -239,9 +239,27 @@
       "detail": []
     },
     {
-      "name": "out-of-order: commit is gated while paper A is still loading",
+      "name": "gate: an Include-deriving state cannot be committed while the text is loading",
       "ok": true,
-      "detail": null
+      "detail": {
+        "pending": true,
+        "derived": "Include",
+        "disabled": true,
+        "hint": "Der Text wird noch geladen."
+      }
+    },
+    {
+      "name": "gate: the landed reading releases the button without touching a chip",
+      "ok": true,
+      "detail": {
+        "disabled": false,
+        "src": "raw"
+      }
+    },
+    {
+      "name": "gate: the record written after release names the full text",
+      "ok": true,
+      "detail": "raw"
     },
     {
       "name": "out-of-order: late full text of paper A does not paint over paper B",
@@ -265,11 +283,11 @@
     "09-out-of-order.png"
   ],
   "files": {
-    "reviewer_export": "C:\\Users\\Chrisi\\Documents\\GitHub\\DHCraft\\SocialAI\\FemPrompt_SozArb-prism-pilot\\tests\\browser\\out\\r2-final\\r2.json",
-    "decision_log": "C:\\Users\\Chrisi\\Documents\\GitHub\\DHCraft\\SocialAI\\FemPrompt_SozArb-prism-pilot\\tests\\browser\\out\\r2-final\\decision-log-r2.csv"
+    "reviewer_export": "C:\\Users\\Chrisi\\Documents\\GitHub\\DHCraft\\SocialAI\\FemPrompt_SozArb-prism-pilot\\tests\\browser\\out\\f2\\r2.json",
+    "decision_log": "C:\\Users\\Chrisi\\Documents\\GitHub\\DHCraft\\SocialAI\\FemPrompt_SozArb-prism-pilot\\tests\\browser\\out\\f2\\decision-log-r2.csv"
   },
   "browser": "151.0.7922.34",
-  "finished": "2026-08-21T17:16:17.218Z",
+  "finished": "2026-08-21T17:43:37.817Z",
   "failed": 0,
   "console_errors": []
 }

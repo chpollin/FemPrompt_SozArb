@@ -260,30 +260,62 @@ try {
 
   check('no page errors during the session', consoleErrors.length === 0, consoleErrors);
 
-  // 9 out-of-order load in a fresh profile: paper A's full text answers late, the reviewer
-  // has already moved to paper B; the late response must not paint over B nor set its source
-  const ctx2 = await browser.newContext({ viewport: { width: 1440, height: 900 } });
-  await ctx2.route('**/*', async (route) => {
-    const url = new URL(route.request().url());
-    if (url.host !== `127.0.0.1:${opt.port}`) return route.fulfill({ status: 200, contentType: 'text/css', body: '' });
-    const p = url.pathname;
-    if (p.endsWith('/data/research_vault_v2.json')) return route.fulfill({ contentType: 'application/json', body: fixture('vault.json') });
-    if (p.endsWith('/data/fulltext_manifest.json')) return route.fulfill({ contentType: 'application/json', body: fixture('fulltext_manifest.json') });
-    if (p.endsWith('/data/fulltext_index.json')) return route.fulfill({ contentType: 'application/json', body: '{"meta":{},"papers":{}}' });
-    if (/\/data\/fulltext\/PILOT-A\.md$/.test(p)) { await new Promise((r) => setTimeout(r, 1500)); return route.fulfill({ contentType: 'text/markdown', body: fixture('fulltext/PILOT-A.md') }); }
-    return route.continue();
+  // 9 the pending-reading gate and the out-of-order load, each in a fresh profile so the
+  // full-text cache is empty and the delayed route is really in flight
+  const delayedContext = async () => {
+    const c = await browser.newContext({ viewport: { width: 1440, height: 900 } });
+    await c.route('**/*', async (route) => {
+      const url = new URL(route.request().url());
+      if (url.host !== `127.0.0.1:${opt.port}`) return route.fulfill({ status: 200, contentType: 'text/css', body: '' });
+      const p = url.pathname;
+      if (p.endsWith('/data/research_vault_v2.json')) return route.fulfill({ contentType: 'application/json', body: fixture('vault.json') });
+      if (p.endsWith('/data/fulltext_manifest.json')) return route.fulfill({ contentType: 'application/json', body: fixture('fulltext_manifest.json') });
+      if (p.endsWith('/data/fulltext_index.json')) return route.fulfill({ contentType: 'application/json', body: '{"meta":{},"papers":{}}' });
+      if (/\/data\/fulltext\/PILOT-A\.md$/.test(p)) { await new Promise((r) => setTimeout(r, 1500)); return route.fulfill({ contentType: 'text/markdown', body: fixture('fulltext/PILOT-A.md') }); }
+      return route.continue();
+    });
+    const pg = await c.newPage();
+    await pg.goto(base + '/prisma.html');
+    await pg.waitForFunction(() => window.__PRISMA_TEST__ && document.querySelector('#pt-doc'), null, { timeout: 15000 });
+    return { c, pg };
+  };
+
+  // 9a the gate: categories that derive Include are set while the text is still loading, so
+  // an unset gate would enable the button; then the landing reading must enable it by itself
+  const a = await delayedContext();
+  await a.pg.evaluate(() => {
+    const T = window.__PRISMA_TEST__;
+    const w = T.getWork();
+    w.cats.Generative_KI = 2; w.cats.Soziale_Arbeit = 2;
+    T.refreshAssess();
   });
-  const page2 = await ctx2.newPage();
-  await page2.goto(base + '/prisma.html');
-  await page2.waitForFunction(() => window.__PRISMA_TEST__ && document.querySelector('#pt-doc'), null, { timeout: 15000 });
-  check('out-of-order: commit is gated while paper A is still loading', await page2.evaluate(() => window.__PRISMA_TEST__.readingPending() && document.getElementById('pt-record').disabled));
-  await page2.evaluate(() => { const T = window.__PRISMA_TEST__; T.getState().index = 1; T.showSurface('screening'); });
-  await page2.waitForTimeout(2500); // longer than the delayed response
-  const shown = await page2.evaluate(() => ({ id: window.EC.getAllPapers()[window.__PRISMA_TEST__.getState().index].id, src: window.__PRISMA_TEST__.textSource(), doc: document.getElementById('pt-doc').textContent.slice(0, 80), pending: window.__PRISMA_TEST__.readingPending() }));
+  const gated = await a.pg.evaluate(() => ({
+    pending: window.__PRISMA_TEST__.readingPending(),
+    derived: window.__PRISMA_TEST__.finalDecisionOf(window.__PRISMA_TEST__.getWork().cats, false),
+    disabled: document.getElementById('pt-record').disabled,
+    hint: (document.getElementById('pt-actions-hint') || {}).textContent
+  }));
+  check('gate: an Include-deriving state cannot be committed while the text is loading', gated.pending && gated.derived === 'Include' && gated.disabled && /geladen/.test(gated.hint || ''), gated);
+  await a.pg.waitForFunction(() => !window.__PRISMA_TEST__.readingPending(), null, { timeout: 8000 });
+  const released = await a.pg.evaluate(() => ({
+    disabled: document.getElementById('pt-record').disabled,
+    src: window.__PRISMA_TEST__.textSource()
+  }));
+  check('gate: the landed reading releases the button without touching a chip', released.disabled === false && released.src === 'raw', released);
+  await a.pg.click('#pt-record');
+  const gatedRec = await a.pg.evaluate(() => window.__PRISMA_TEST__.curDec()['PILOT-A'] || null);
+  check('gate: the record written after release names the full text', gatedRec && gatedRec.text_source === 'raw', gatedRec && gatedRec.text_source);
+  await a.c.close();
+
+  // 9b out-of-order: the reviewer leaves paper A while its full text is in flight
+  const b = await delayedContext();
+  await b.pg.evaluate(() => { const T = window.__PRISMA_TEST__; T.getState().index = 1; T.showSurface('screening'); });
+  await b.pg.waitForTimeout(2500); // longer than the delayed response
+  const shown = await b.pg.evaluate(() => ({ id: window.EC.getAllPapers()[window.__PRISMA_TEST__.getState().index].id, src: window.__PRISMA_TEST__.textSource(), doc: document.getElementById('pt-doc').textContent.slice(0, 80), pending: window.__PRISMA_TEST__.readingPending() }));
   check('out-of-order: late full text of paper A does not paint over paper B', shown.id === 'PILOT-B' && shown.src === 'abstract' && /recommender/.test(shown.doc) && !/gendered/.test(shown.doc) && !shown.pending, shown);
-  await page2.screenshot({ path: join(outDir, '09-out-of-order.png') });
+  await b.pg.screenshot({ path: join(outDir, '09-out-of-order.png') });
   trace.screenshots.push('09-out-of-order.png');
-  await ctx2.close();
+  await b.c.close();
 } catch (e) {
   failed++;
   trace.checks.push({ name: 'driver exception', ok: false, detail: String(e && e.stack || e) });

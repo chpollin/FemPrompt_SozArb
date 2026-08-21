@@ -43,8 +43,13 @@ const T = window.EC && window.EC._test;
 if (!T || !T.reconciliationText) { console.error('reconcileReviewers not exposed by prisma.js'); process.exit(1); }
 
 const payloads = files.map((f) => JSON.parse(readFileSync(f, 'utf8')));
-const forward = T.reconciliationText(payloads);
-let ok = true;
+let forward, ok = true;
+try {
+  forward = T.reconciliationText(payloads);
+} catch (e) {
+  console.error('reconciliation refused:', e && e.message ? e.message : e);
+  process.exit(2);
+}
 if (check) {
   const reversed = T.reconciliationText(payloads.slice().reverse());
   ok = forward === reversed;

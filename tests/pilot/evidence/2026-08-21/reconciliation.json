@@ -28,12 +28,12 @@
               {
                 "term": "gendered scripts",
                 "snippet": "…and feedback tools. Educators report that the generated case vignettes tend to reproduce gendered scripts of care, assigning emotional labour to women and decision authority to men.",
-                "ts": "2026-08-21T17:15:45.376Z",
+                "ts": "2026-08-21T17:43:25.193Z",
                 "origin": "human"
               }
             ]
           },
-          "ts": "2026-08-21T17:15:45.593Z",
+          "ts": "2026-08-21T17:43:25.393Z",
           "reviewer": "r1",
           "text_source": "raw"
         },
@@ -52,12 +52,12 @@
               {
                 "term": "gendered scripts",
                 "snippet": "…and feedback tools. Educators report that the generated case vignettes tend to reproduce gendered scripts of care, assigning emotional labour to women and decision authority to men.",
-                "ts": "2026-08-21T17:16:12.625Z",
+                "ts": "2026-08-21T17:43:31.726Z",
                 "origin": "human"
               }
             ]
           },
-          "ts": "2026-08-21T17:16:12.841Z",
+          "ts": "2026-08-21T17:43:31.942Z",
           "reviewer": "r2",
           "text_source": "raw"
         }
@@ -76,7 +76,7 @@
           "reason": "Not_relevant_topic",
           "override_reason": null,
           "evidence": {},
-          "ts": "2026-08-21T17:15:45.825Z",
+          "ts": "2026-08-21T17:43:25.626Z",
           "reviewer": "r1",
           "text_source": "abstract"
         },
@@ -90,7 +90,7 @@
           "reason": null,
           "override_reason": null,
           "evidence": {},
-          "ts": "2026-08-21T17:16:13.108Z",
+          "ts": "2026-08-21T17:43:32.210Z",
           "reviewer": "r2",
           "text_source": "abstract"
         }

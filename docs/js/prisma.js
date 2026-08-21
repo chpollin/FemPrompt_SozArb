@@ -924,7 +924,9 @@ function applyReading(token, p, full, kdmd) {
         applyInText(pendingInText);
         pendingInText = null;
     }
-    if (!curDec()[p.id] && document.getElementById('pt-record')) refreshAssess(); // re-evaluate the commit gate
+    // re-evaluate the commit gate; #pt-record exists only in the unlocked form, which is
+    // also what an edit renders, so a paper reopened for editing is covered too
+    if (document.getElementById('pt-record')) refreshAssess();
     return true;
 }
 
