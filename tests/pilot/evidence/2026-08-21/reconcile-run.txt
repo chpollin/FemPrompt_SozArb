@@ -1,5 +1,5 @@
 order check: identical for reversed input order
-unchanged tests/pilot/evidence/2026-08-21/r1.json sha256=cdc7b166afb9b87e9bf88c2b095e585de8d153b32b808ba8a658d45e9b03cad5
-unchanged tests/pilot/evidence/2026-08-21/r2.json sha256=c68861695523b204d71d5a127f10d43548882464a9f1c20a1fefe3f31df21be3
-wrote tests/pilot/evidence/2026-08-21/reconciliation.json sha256=8e4d0587fc2ae36db540f294d93711ec715a18fea9d41f615809b24dba9ae1f8
+unchanged tests/pilot/evidence/2026-08-21/r1.json sha256=e4d280ceb54f9a52ab2f026cc2fbd9dffa74a0a3be6926670774f0c5512803cb
+unchanged tests/pilot/evidence/2026-08-21/r2.json sha256=15d13323b91b2453c18c70ca01e58caa88bb87abcd041d967c6c16f9b3b125c6
+wrote tests/pilot/evidence/2026-08-21/reconciliation.json sha256=8fdeeefcde5e641499720dcf18d8d712b7f498565343915579a26cbfb6c3b35c
 summary: {"agree":1,"divergent":1,"single":0} reviewers: r1,r2

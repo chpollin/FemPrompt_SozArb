@@ -1,7 +1,7 @@
 {
   "reviewer": "r1",
-  "started": "2026-08-21T17:06:34.479Z",
-  "base": "http://127.0.0.1:8811",
+  "started": "2026-08-21T17:15:44.274Z",
+  "base": "http://127.0.0.1:8831",
   "checks": [
     {
       "name": "cold load: fixture corpus of two papers",
@@ -211,6 +211,21 @@
       "name": "no page errors during the session",
       "ok": true,
       "detail": []
+    },
+    {
+      "name": "out-of-order: commit is gated while paper A is still loading",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "out-of-order: late full text of paper A does not paint over paper B",
+      "ok": true,
+      "detail": {
+        "id": "PILOT-B",
+        "src": "abstract",
+        "doc": "A synthetic abstract. This fixture paper surveys recommender systems and classif",
+        "pending": false
+      }
     }
   ],
   "screenshots": [
@@ -220,14 +235,15 @@
     "PILOT-B-before-commit.png",
     "PILOT-B-committed.png",
     "04-after-reload.png",
-    "06-after-import.png"
+    "06-after-import.png",
+    "09-out-of-order.png"
   ],
   "files": {
-    "reviewer_export": "C:\\Users\\Chrisi\\Documents\\GitHub\\DHCraft\\SocialAI\\FemPrompt_SozArb-prism-pilot\\tests\\browser\\out\\r1-post\\r1.json",
-    "decision_log": "C:\\Users\\Chrisi\\Documents\\GitHub\\DHCraft\\SocialAI\\FemPrompt_SozArb-prism-pilot\\tests\\browser\\out\\r1-post\\decision-log-r1.csv"
+    "reviewer_export": "C:\\Users\\Chrisi\\Documents\\GitHub\\DHCraft\\SocialAI\\FemPrompt_SozArb-prism-pilot\\tests\\browser\\out\\r1-final\\r1.json",
+    "decision_log": "C:\\Users\\Chrisi\\Documents\\GitHub\\DHCraft\\SocialAI\\FemPrompt_SozArb-prism-pilot\\tests\\browser\\out\\r1-final\\decision-log-r1.csv"
   },
   "browser": "151.0.7922.34",
-  "finished": "2026-08-21T17:06:36.441Z",
+  "finished": "2026-08-21T17:15:49.736Z",
   "failed": 0,
   "console_errors": []
 }

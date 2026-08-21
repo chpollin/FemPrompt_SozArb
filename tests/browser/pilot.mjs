@@ -21,12 +21,13 @@ const pilotDir = join(root, 'tests', 'pilot');
 const manifest = JSON.parse(readFileSync(join(pilotDir, 'manifest.json'), 'utf8'));
 
 const args = process.argv.slice(2);
-const opt = { reviewer: 'r1', out: null, port: 8765, headed: false };
+const opt = { reviewer: 'r1', out: null, port: 8765, headed: false, importForeign: null };
 for (let i = 0; i < args.length; i++) {
   if (args[i] === '--reviewer') opt.reviewer = args[++i];
   else if (args[i] === '--out') opt.out = args[++i];
   else if (args[i] === '--port') opt.port = parseInt(args[++i], 10);
   else if (args[i] === '--headed') opt.headed = true;
+  else if (args[i] === '--import-foreign') opt.importForeign = resolve(args[++i]); // another reviewer's export, the colleague simulation of plan P5 S4
 }
 if (!manifest.reviewers[opt.reviewer]) { console.error('unknown reviewer ' + opt.reviewer + '; manifest has ' + Object.keys(manifest.reviewers).join(',')); process.exit(2); }
 const outDir = resolve(opt.out || join(here, 'out', opt.reviewer));
@@ -200,7 +201,7 @@ try {
   // 6 clear own session, then import the export
   await page.click('.pt-clear'); // confirm dialog auto-accepted
   await page.waitForFunction(() => Object.keys(window.__PRISMA_TEST__.curDec()).length === 0, null, { timeout: 5000 });
-  check('clear: own session empty', true);
+  check('clear: own session empty', (await hook(page, 'Object.keys(window.__PRISMA_TEST__.curDec()).length')) === 0);
   await page.click('.pt-ws-panel[data-panel="data"]');
   await page.waitForSelector('#pt-overlay:not([hidden]) .pt-imp', { state: 'attached', timeout: 5000 }); // the file input is hidden behind its label
   await page.setInputFiles('.pt-imp', exportPath);
@@ -208,6 +209,23 @@ try {
   const imported = await hook(page, 'window.__PRISMA_TEST__.curDec()');
   check('import: records restored byte-equal to the export', JSON.stringify(imported) === exportedDecisions);
   check('import: text_source restored', manifest.papers.every((p) => imported[p.id].text_source === p.expected_text_source));
+  if (opt.importForeign) {
+    // the colleague's file lands in this profile next to the own one; the own records stay untouched
+    const foreign = JSON.parse(readFileSync(opt.importForeign, 'utf8'));
+    await page.setInputFiles('.pt-imp', opt.importForeign);
+    await page.waitForFunction((k) => !!window.__PRISMA_TEST__.getState().reviewers[k], foreign.reviewer, { timeout: 5000 });
+    const revs = await hook(page, 'Object.keys(window.__PRISMA_TEST__.getState().reviewers).sort()');
+    check('foreign import: both reviewer tracks loaded in one profile', revs.indexOf(opt.reviewer) !== -1 && revs.indexOf(foreign.reviewer) !== -1, revs);
+    check('foreign import: own records unchanged', JSON.stringify(await hook(page, 'window.__PRISMA_TEST__.curDec()')) === exportedDecisions);
+    check('foreign import: foreign records byte-equal to the file', JSON.stringify(await hook(page, `window.__PRISMA_TEST__.getState().reviewers[${JSON.stringify(foreign.reviewer)}]`)) === JSON.stringify(foreign.decisions));
+    dl = page.waitForEvent('download');
+    await page.click('.pt-exp-recon');
+    d = await dl;
+    const reconBoth = join(outDir, `reconciliation-${opt.reviewer}-with-${foreign.reviewer}.json`);
+    await d.saveAs(reconBoth);
+    const rb = JSON.parse(readFileSync(reconBoth, 'utf8'));
+    check('foreign import: in-tool reconciliation sees both reviewers with the expected statuses', rb.reviewers.length === 2 && Object.entries(manifest.expected_reconciliation).every(([pid, st]) => rb.papers[pid] && rb.papers[pid].status === st), rb.summary);
+  }
   await page.keyboard.press('Escape');
   await gotoPaper(manifest.papers[0].id);
   await shot(page, '06-after-import');
@@ -236,10 +254,36 @@ try {
   const reconPath = join(outDir, `reconciliation-${opt.reviewer}-only.json`);
   await d.saveAs(reconPath);
   const recon = JSON.parse(readFileSync(reconPath, 'utf8'));
-  check('in-tool reconciliation export: schema and single statuses', recon.schema === 'femprompt-prisma-reconciliation/0.1' && Object.values(recon.papers).every((x) => x.status === 'single'));
+  const expectedStatus = (pid) => (opt.importForeign ? manifest.expected_reconciliation[pid] : 'single');
+  check('in-tool reconciliation export: schema and per-paper statuses', recon.schema === 'femprompt-prisma-reconciliation/0.1' && Object.entries(recon.papers).every(([pid, x]) => x.status === expectedStatus(pid)), recon.summary);
   await page.keyboard.press('Escape');
 
   check('no page errors during the session', consoleErrors.length === 0, consoleErrors);
+
+  // 9 out-of-order load in a fresh profile: paper A's full text answers late, the reviewer
+  // has already moved to paper B; the late response must not paint over B nor set its source
+  const ctx2 = await browser.newContext({ viewport: { width: 1440, height: 900 } });
+  await ctx2.route('**/*', async (route) => {
+    const url = new URL(route.request().url());
+    if (url.host !== `127.0.0.1:${opt.port}`) return route.fulfill({ status: 200, contentType: 'text/css', body: '' });
+    const p = url.pathname;
+    if (p.endsWith('/data/research_vault_v2.json')) return route.fulfill({ contentType: 'application/json', body: fixture('vault.json') });
+    if (p.endsWith('/data/fulltext_manifest.json')) return route.fulfill({ contentType: 'application/json', body: fixture('fulltext_manifest.json') });
+    if (p.endsWith('/data/fulltext_index.json')) return route.fulfill({ contentType: 'application/json', body: '{"meta":{},"papers":{}}' });
+    if (/\/data\/fulltext\/PILOT-A\.md$/.test(p)) { await new Promise((r) => setTimeout(r, 1500)); return route.fulfill({ contentType: 'text/markdown', body: fixture('fulltext/PILOT-A.md') }); }
+    return route.continue();
+  });
+  const page2 = await ctx2.newPage();
+  await page2.goto(base + '/prisma.html');
+  await page2.waitForFunction(() => window.__PRISMA_TEST__ && document.querySelector('#pt-doc'), null, { timeout: 15000 });
+  check('out-of-order: commit is gated while paper A is still loading', await page2.evaluate(() => window.__PRISMA_TEST__.readingPending() && document.getElementById('pt-record').disabled));
+  await page2.evaluate(() => { const T = window.__PRISMA_TEST__; T.getState().index = 1; T.showSurface('screening'); });
+  await page2.waitForTimeout(2500); // longer than the delayed response
+  const shown = await page2.evaluate(() => ({ id: window.EC.getAllPapers()[window.__PRISMA_TEST__.getState().index].id, src: window.__PRISMA_TEST__.textSource(), doc: document.getElementById('pt-doc').textContent.slice(0, 80), pending: window.__PRISMA_TEST__.readingPending() }));
+  check('out-of-order: late full text of paper A does not paint over paper B', shown.id === 'PILOT-B' && shown.src === 'abstract' && /recommender/.test(shown.doc) && !/gendered/.test(shown.doc) && !shown.pending, shown);
+  await page2.screenshot({ path: join(outDir, '09-out-of-order.png') });
+  trace.screenshots.push('09-out-of-order.png');
+  await ctx2.close();
 } catch (e) {
   failed++;
   trace.checks.push({ name: 'driver exception', ok: false, detail: String(e && e.stack || e) });

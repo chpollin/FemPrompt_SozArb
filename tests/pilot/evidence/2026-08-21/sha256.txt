@@ -1,10 +1,11 @@
-cdc7b166afb9b87e9bf88c2b095e585de8d153b32b808ba8a658d45e9b03cad5 *tests/pilot/evidence/2026-08-21/r1.json
-c68861695523b204d71d5a127f10d43548882464a9f1c20a1fefe3f31df21be3 *tests/pilot/evidence/2026-08-21/r2.json
-8e4d0587fc2ae36db540f294d93711ec715a18fea9d41f615809b24dba9ae1f8 *tests/pilot/evidence/2026-08-21/reconciliation-reversed.json
-8e4d0587fc2ae36db540f294d93711ec715a18fea9d41f615809b24dba9ae1f8 *tests/pilot/evidence/2026-08-21/reconciliation.json
+e4d280ceb54f9a52ab2f026cc2fbd9dffa74a0a3be6926670774f0c5512803cb *tests/pilot/evidence/2026-08-21/r1.json
+15d13323b91b2453c18c70ca01e58caa88bb87abcd041d967c6c16f9b3b125c6 *tests/pilot/evidence/2026-08-21/r2.json
+1483314863663b91fdf173bac1459fbd6f61aa8ac3dd60e8fca3d40ff5579fc2 *tests/pilot/evidence/2026-08-21/reconciliation-in-tool-r2-with-r1.json
+8fdeeefcde5e641499720dcf18d8d712b7f498565343915579a26cbfb6c3b35c *tests/pilot/evidence/2026-08-21/reconciliation-reversed.json
+8fdeeefcde5e641499720dcf18d8d712b7f498565343915579a26cbfb6c3b35c *tests/pilot/evidence/2026-08-21/reconciliation.json
 887de5e34de6644876d930ee592aec106d2a0ba115c02b087e1ddea63a819ec4 *tests/pilot/evidence/2026-08-21/trace-r1-agent-prefix.json
-931af9643cfcb8c1c6cfd1e18a4df2f73b3635d5a15118749b67d4c968e4924b *tests/pilot/evidence/2026-08-21/trace-r1.json
+f726265b530b4337c62d5e9f13d4d2d225e35f58fedb958aee2d4e390474e408 *tests/pilot/evidence/2026-08-21/trace-r1.json
 ad2a094907183ac16422ba88c28efb44bad466fe25b40eaad2097e673e67e306 *tests/pilot/evidence/2026-08-21/trace-r2-agent-prefix.json
-13af9bf7d5faf24c8e63e54d269bba820002efab42db8bb38941e7a33e66cec2 *tests/pilot/evidence/2026-08-21/trace-r2.json
+2451787357250c996a5fa8037f5e53f21b153a0e38f37d924c730b992ccb163e *tests/pilot/evidence/2026-08-21/trace-r2.json
 6a98c7f93a06857bd5f180e71cfe876fe27b0dd7f561950e1f352f1ad5e2ee0f *tests/pilot/evidence/2026-08-21/decision-log-r1.csv
 4d3ec8138aba6c19d404673e59462f8790732dea37e16bdd8b0f6c6594d3040f *tests/pilot/evidence/2026-08-21/decision-log-r2.csv

@@ -1250,6 +1250,24 @@ test('commit records text_source of the shown text; the file form and schema 0.3
     assertEqual(T.curDec().ts2.decision, 'Exclude');
 });
 
+test('commit waits for the reading: refused while the load is pending, recorded once applied', function() {
+    T.setPapers(tsFix);
+    T.getState().reviewers = {};
+    T.getState().reviewer = 'r1';
+    T.getState().index = 0;
+    T.resetWork(tsFix[0]);
+    T.loadReadingInto(tsFix[0]);
+    assert(T.readingPending(), 'pending after load start');
+    T.getWork().cats.Generative_KI = 2;
+    T.getWork().cats.Gender = 2;
+    T.commit();
+    assertEqual(T.curDec().ts1, undefined, 'no record while the text is pending');
+    T.applyReading(T.readToken(), tsFix[0], 'Full text.', null);
+    assert(!T.readingPending(), 'applied');
+    T.commit();
+    assertEqual(T.curDec().ts1.text_source, 'raw');
+});
+
 test('a 0.2 record without text_source counts as unrecorded; counts are per source', function() {
     var counts = T.textSourceCounts({
         a: { decision: 'Include', text_source: 'raw' },
@@ -1318,6 +1336,12 @@ test('reconcileReviewers is order-independent and never mutates its inputs', fun
     var r = T.reconcileReviewers([reconA, reconB]);
     r.papers['PILOT-A'].records.r1.decision = 'Exclude';
     assertEqual(reconA.decisions['PILOT-A'].decision, 'Include', 'copy, not reference');
+});
+
+test('reconcileReviewers refuses two payloads claiming the same reviewer key', function() {
+    var threw = false;
+    try { T.reconcileReviewers([reconA, { reviewer: 'r1', decisions: {} }]); } catch (e) { threw = /duplicate reviewer key/.test(e.message); }
+    assert(threw, 'duplicate key throws');
 });
 
 test('reconcileReviewers ignores the seed track and payloads without decisions', function() {

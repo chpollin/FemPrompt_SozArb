@@ -176,7 +176,7 @@ Not agent-testable, manual checklist (`tests/manual-checklist.md`): File System 
 
 Done when: all six scenarios protocolled, findings fixed or explicitly deferred.
 
-Note (2026-08-21): S2 (screening pass), S4 (export/import round-trip across two isolated browser profiles) and the reload half of S5 are automated as the pinned Playwright pilot (`tests/pilot/README.md`, `tests/browser/pilot.mjs`); the two simulated reviewer sessions and the reconciliation check are recorded in the Research Mission Control lane `social-ai · prism-pilot`. S1, S3, S6 and the record surface of S5 remain to be protocolled.
+Note (2026-08-21): S2 (screening pass), S4 (export/import round-trip, own file in the own profile and the colleague's file imported next to it through `--import-foreign`) and the reload half of S5 are automated as the pinned Playwright pilot (`tests/pilot/README.md`, `tests/browser/pilot.mjs`); the two simulated reviewer sessions and the reconciliation check are recorded in the Research Mission Control lane `social-ai · prism-pilot`. S1, S3, S6 and the record surface of S5 remain to be protocolled.
 
 ### P6: Knowledge-base consolidation
 

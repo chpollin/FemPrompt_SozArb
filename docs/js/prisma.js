@@ -123,6 +123,7 @@ let pinReturnFocus = null, pinKeyHandler = null; // pin-menu dialog focus restor
 let focusReadingOnRender = false; // move focus to the paper heading after a paper switch (a11y)
 let editingPid = null; // a committed paper reopened for editing; its record stays until re-commit
 let readToken = 0;             // monotonic load token; a reading response for a stale token is dropped
+let readingPending = false;    // true between a reading load and its applied response; commit waits for it
 let currentTextSource = 'none'; // paper-layer text actually shown: 'raw' | 'abstract' | 'none' (ADR-027)
 
 // the in-progress (pre-commit) decision for the open paper
@@ -889,6 +890,7 @@ function readingShellHtml(p, dec) {
 // Docling full text; the "KI-Extraktion" layer is the distillation from the knowledge doc.
 function loadReadingInto(p) {
     const my = ++readToken;
+    readingPending = true;
     currentTextSource = 'none'; // nothing of this paper is shown until its response is applied
     Promise.all([fetchFullText(p), fetchPaperText(p)]).then(function(res) {
         applyReading(my, p, res[0], res[1]);
@@ -900,6 +902,7 @@ function loadReadingInto(p) {
 // over the paper opened later (out-of-order regression, pilot). Returns whether applied.
 function applyReading(token, p, full, kdmd) {
     if (token !== readToken) return false;
+    readingPending = false;
     docHtmlAi = kdmd ? renderMarkdown(splitDocLayers(kdmd).ai || '') : '';
     if (full && full.trim()) {
         docHtmlPaper = renderMarkdown(full);
@@ -921,6 +924,7 @@ function applyReading(token, p, full, kdmd) {
         applyInText(pendingInText);
         pendingInText = null;
     }
+    if (!curDec()[p.id] && document.getElementById('pt-record')) refreshAssess(); // re-evaluate the commit gate
     return true;
 }
 
@@ -1423,11 +1427,11 @@ function bindAssess(p, dec) {
         const fin = finalDecisionOf(work.cats, work.override);
         const needExcl = fin === 'Exclude';
         const needJust = work.override && fin === 'Include';
-        const can = (!needExcl || !!work.reason) &&
+        const can = !readingPending && (!needExcl || !!work.reason) &&
             (!needJust || !!(work.overrideReason && work.overrideReason.trim()));
         if (rec) rec.disabled = !can;
         if (hint) hint.textContent = can ? 'Deine Entscheidung ist verbindlich. KI bleibt nur als Vorschlag.'
-            : (needExcl ? 'Bitte einen Ausschlussgrund wählen.' : 'Bitte den Override zu Include begründen.');
+            : (readingPending ? 'Der Text wird noch geladen.' : (needExcl ? 'Bitte einen Ausschlussgrund wählen.' : 'Bitte den Override zu Include begründen.'));
     }
     const ovr = col.querySelector('#pt-override-reason');
     if (ovr) ovr.addEventListener('input', function() { work.overrideReason = ovr.value; syncRecord(); });
@@ -1437,6 +1441,9 @@ function bindAssess(p, dec) {
 
 function commit() {
     let p = papers[state.index];
+    // the record names the text it was taken on; a commit before the reading has been
+    // applied would write text_source none for a paper that has a full text
+    if (readingPending) { refreshAssess(); return; }
     let fin = finalDecisionOf(work.cats, work.override);
     if (fin === 'Exclude' && !work.reason) { refreshAssess(); return; }
     if (work.override && fin === 'Include' && !(work.overrideReason && work.overrideReason.trim())) { refreshAssess(); return; }
@@ -1815,6 +1822,7 @@ function reconcileReviewers(payloads) {
         if (!pl || typeof pl !== 'object' || !pl.decisions) return;
         const key = String(pl.reviewer || '').trim();
         if (!key || key === SEED) return;
+        if (byRev[key]) throw new Error('duplicate reviewer key: ' + key); // last-wins would make the result order-dependent
         byRev[key] = pl.decisions;
     });
     const reviewers = Object.keys(byRev).sort();
@@ -1963,6 +1971,7 @@ const TEST_HOOK = {
     // text-source provenance, load-token guard, decision log, reconciliation (ADR-027, pilot)
     loadReadingInto: loadReadingInto, applyReading: applyReading,
     readToken: function() { return readToken; }, textSource: function() { return currentTextSource; },
+    readingPending: function() { return readingPending; },
     textSourceCounts: textSourceCounts, decisionLogCsv: decisionLogCsv,
     reconcileReviewers: reconcileReviewers, reconciliationText: reconciliationText
 };
