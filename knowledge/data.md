@@ -147,9 +147,9 @@ Round-trip must be lossless (FR-08 acceptance). The `schema` string is versioned
 The shipped tool persists not as one session blob but as **one JSON per reviewer** under `docs/data/screening/`, so version control is the sync layer and reviewers never conflict (see ADR-009, ADR-010). The File System Access API writes the current reviewer's file directly into the connected project folder on every decision; localStorage mirrors it as a cache; export/import is the fallback. Versioning happens in GitHub Desktop outside the tool (ADR-014 removed the in-tool Git surface; the write path is unchanged).
 
 ```json
-// docs/data/screening/<reviewer>.json  (schema bumped to 0.2 with evidence)
+// docs/data/screening/<reviewer>.json  (schema 0.2 added evidence, 0.3 adds text_source)
 {
-  "schema": "femprompt-prisma-reviewer/0.2",
+  "schema": "femprompt-prisma-reviewer/0.3",
   "reviewer": "sss",
   "updated": "2026-06-09T12:00:00.000Z",
   "decisions": {
@@ -164,13 +164,16 @@ The shipped tool persists not as one session blob but as **one JSON per reviewer
           { "term": "gendered scripts", "snippet": "...agents reproduce gendered scripts of care...", "ts": "..." }
         ]
       },
-      "ts": "...", "reviewer": "sss"
+      "ts": "...", "reviewer": "sss",
+      "text_source": "raw"
     }
   }
 }
 ```
 
 The `evidence` map (added in schema 0.2, FR-13) is the v4 core: per category, a list of pinned Belege, each a `term` plus the surrounding `snippet` taken from the read document at screening time. Backward compatible: a 0.1 record without `evidence` loads as a record with no evidence. A Beleg taken from the verbatim paper layer is human-sourced (`origin: human`) and is the reviewer's binding justification; a Beleg taken from the machine-extraction layer is marked `origin: ai` and stays advisory (ADR-016).
+
+`text_source` (added in schema 0.3, ADR-027) records the paper-layer text the decision was taken on, `raw` for the local Docling full text, `abstract` when only the abstract was shown, `none` when no text was available; a 0.1 or 0.2 record without the field loads unchanged and counts as unrecorded in the disclosure's per-source line (PRISMA-trAIce M4). The decision-log CSV carries the same value per row.
 
 The `decision` is the inclusion rule's default (at least one Gegenstand and at least one Perspektive yields Include); the human binds and may override it either way. An override to Include records a free-text `override_reason`, so the deviation from the rule is documented (O2, ADR-023; RAISE P3); an override to Exclude carries the exclusion `reason`. A category toggle that flips the derivation clears a now-stale override.
 

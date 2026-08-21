@@ -1,0 +1,32 @@
+{
+  "schema": "femprompt-prisma-pilot/0.1",
+  "pinned": "2026-08-21",
+  "papers": [
+    {
+      "id": "PILOT-A",
+      "expected_text_source": "raw",
+      "search_term": "gendered scripts",
+      "pin_category": "Gender"
+    },
+    {
+      "id": "PILOT-B",
+      "expected_text_source": "abstract",
+      "search_term": null,
+      "pin_category": null
+    }
+  ],
+  "reviewers": {
+    "r1": {
+      "PILOT-A": { "categories": { "Generative_KI": 2, "Soziale_Arbeit": 2, "Gender": 2 }, "expected_decision": "Include" },
+      "PILOT-B": { "categories": { "KI_Sonstige": 2 }, "reason": "Not_relevant_topic", "expected_decision": "Exclude" }
+    },
+    "r2": {
+      "PILOT-A": { "categories": { "Generative_KI": 2, "Soziale_Arbeit": 2, "Gender": 2 }, "expected_decision": "Include" },
+      "PILOT-B": { "categories": { "KI_Sonstige": 2, "Soziale_Arbeit": 2 }, "expected_decision": "Include" }
+    }
+  },
+  "expected_reconciliation": {
+    "PILOT-A": "agree",
+    "PILOT-B": "divergent"
+  }
+}

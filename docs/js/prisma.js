@@ -82,7 +82,7 @@ const TRAICE = [
 ];
 
 const LS_KEY = 'femprompt-prisma-state/0.2';
-const REVIEWER_SCHEMA = 'femprompt-prisma-reviewer/0.2'; // bumped for the evidence map (FR-13)
+const REVIEWER_SCHEMA = 'femprompt-prisma-reviewer/0.3'; // 0.2 added the evidence map (FR-13), 0.3 adds text_source per decision (ADR-027)
 const SEED = 'seed'; // built-in reviewer = the existing expert assessment (paper.human)
 
 // State
@@ -122,6 +122,8 @@ let pinTerm = '', pinSnippet = '', pinOrigin = 'human'; // pinOrigin = source la
 let pinReturnFocus = null, pinKeyHandler = null; // pin-menu dialog focus restore + keydown trap
 let focusReadingOnRender = false; // move focus to the paper heading after a paper switch (a11y)
 let editingPid = null; // a committed paper reopened for editing; its record stays until re-commit
+let readToken = 0;             // monotonic load token; a reading response for a stale token is dropped
+let currentTextSource = 'none'; // paper-layer text actually shown: 'raw' | 'abstract' | 'none' (ADR-027)
 
 // the in-progress (pre-commit) decision for the open paper
 let work = { pid: null, cats: {}, override: false, reason: null, overrideReason: null, evidence: {} };
@@ -529,7 +531,7 @@ window.initializePrisma = function() {
     normalizeSurface();
     state.index = firstEntryIndex(); // O4: open on a screenable paper, not on boilerplate
     loadCorpusIndex(); // background: ready by the time the user runs a corpus search
-    loadFulltextManifest(); // background: full-text availability for the reading pane
+    loadFulltextManifest().then(function() { if (initialized) refreshSourcePill(); }); // background: full-text availability for the reading pane
     loadAnalysisFields().then(function() { // background: the frozen AN_ vocabulary for the Include analysis panel (FR-14)
         if (initialized && state.surface === 'screening') refreshAssess();
     });
@@ -741,6 +743,11 @@ function renderScreening() {
     let html = '<div class="pt-ws-bar">';
     html += '<span class="pt-ws-pos">Paper ' + (state.index + 1) + ' / ' + papers.length + '</span>';
     html += '<span class="pt-ws-progressbar"><span class="pt-ws-progressfill" style="width:' + pct + '%"></span></span>';
+    // the two on-demand panels of ADR-020 need a visible affordance; without these
+    // buttons the record and the export/import path were reachable only via the test hook
+    html += '<span class="pt-spacer"></span>' +
+        '<button class="pt-btn pt-ws-panel" data-panel="report" type="button">PRISMA-Record</button>' +
+        '<button class="pt-btn pt-ws-panel" data-panel="data" type="button">Daten &amp; Sync</button>';
     html += '</div>';
 
     html += '<div class="pt-ws pt-ws-screen">';
@@ -751,6 +758,9 @@ function renderScreening() {
     html += '</div>';
 
     el.innerHTML = html;
+    el.querySelectorAll('.pt-ws-panel').forEach(function(b) {
+        b.addEventListener('click', function() { openPanel(b.dataset.panel); });
+    });
     attachScreening(p, dec);
     loadReadingInto(p);
 
@@ -831,13 +841,25 @@ function bindCorpusItems() {
 }
 
 // ---- center: reading column (full text + in-text search) ----
+function sourcePillHtml(p) {
+    if (hasFullText(p)) return '<span class="pt-pill pt-source-pill pt-pill-ghost">Volltext</span>';
+    if (p.knowledge_doc) return '<span class="pt-pill pt-source-pill pt-pill-warn">nur Destillat</span>';
+    return '<span class="pt-pill pt-source-pill pt-pill-warn">nur Abstract</span>';
+}
+
+// The first paint can precede the full-text manifest; once it resolves, the pill of the
+// open paper is corrected in place (no re-render, so typed search text is kept).
+function refreshSourcePill() {
+    const pill = document.querySelector('.pt-read-meta .pt-source-pill');
+    if (!pill || !papers.length) return;
+    pill.outerHTML = sourcePillHtml(papers[state.index]);
+}
+
 function readingShellHtml(p, dec) {
     const aq = abstractQuality(p);
     let h = '<div class="pt-read pt-read-screen"><div class="pt-read-inner">';
     h += '<div class="pt-read-meta">';
-    if (hasFullText(p)) h += '<span class="pt-pill pt-pill-ghost">Volltext</span>';
-    else if (p.knowledge_doc) h += '<span class="pt-pill pt-pill-warn">nur Destillat</span>';
-    else h += '<span class="pt-pill pt-pill-warn">nur Abstract</span>';
+    h += sourcePillHtml(p);
     if (dec) h += '<span class="pt-pill pt-pill-human pt-pill-right">erfasst</span>';
     h += '</div>';
     h += '<h1 class="pt-paper-title" id="pt-paper-title" tabindex="-1">' + EC.escapeHtml(p.title || '(ohne Titel)') + '</h1>';
@@ -866,28 +888,40 @@ function readingShellHtml(p, dec) {
 // Two epistemic layers by source (M3, ADR-016): the human "Volltext" layer is the original
 // Docling full text; the "KI-Extraktion" layer is the distillation from the knowledge doc.
 function loadReadingInto(p) {
-    let doc = document.getElementById('pt-doc'); if (!doc) return;
+    const my = ++readToken;
+    currentTextSource = 'none'; // nothing of this paper is shown until its response is applied
     Promise.all([fetchFullText(p), fetchPaperText(p)]).then(function(res) {
-        const full = res[0], kdmd = res[1];
-        docHtmlAi = kdmd ? renderMarkdown(splitDocLayers(kdmd).ai || '') : '';
-        if (full && full.trim()) {
-            docHtmlPaper = renderMarkdown(full);
-        } else if (p.abstract && p.abstract.trim()) {
-            docHtmlPaper = '<p class="pt-doc-p">' + inlineMd(p.abstract) + '</p>';
-        } else {
-            docHtmlPaper = '';
-        }
-        if (state.readMode === 'ai' && !docHtmlAi) state.readMode = 'full';
-        updateLayerToggle();
-        paintActiveLayer();
-        docMarks = []; docMarkIdx = 0;
-        if (pendingInText) {
-            let box = document.getElementById('pt-intext');
-            if (box) box.value = pendingInText;
-            applyInText(pendingInText);
-            pendingInText = null;
-        }
+        applyReading(my, p, res[0], res[1]);
     });
+}
+
+// Apply a reading response. A response whose token is no longer current belongs to a
+// paper the reviewer has already left; it is dropped so a slow load can never paint
+// over the paper opened later (out-of-order regression, pilot). Returns whether applied.
+function applyReading(token, p, full, kdmd) {
+    if (token !== readToken) return false;
+    docHtmlAi = kdmd ? renderMarkdown(splitDocLayers(kdmd).ai || '') : '';
+    if (full && full.trim()) {
+        docHtmlPaper = renderMarkdown(full);
+        currentTextSource = 'raw';
+    } else if (p.abstract && p.abstract.trim()) {
+        docHtmlPaper = '<p class="pt-doc-p">' + inlineMd(p.abstract) + '</p>';
+        currentTextSource = 'abstract';
+    } else {
+        docHtmlPaper = '';
+        currentTextSource = 'none';
+    }
+    if (state.readMode === 'ai' && !docHtmlAi) state.readMode = 'full';
+    updateLayerToggle();
+    paintActiveLayer();
+    docMarks = []; docMarkIdx = 0;
+    if (pendingInText) {
+        let box = document.getElementById('pt-intext');
+        if (box) box.value = pendingInText;
+        applyInText(pendingInText);
+        pendingInText = null;
+    }
+    return true;
 }
 
 function activeLayerHtml() { return state.readMode === 'ai' ? docHtmlAi : docHtmlPaper; }
@@ -987,7 +1021,7 @@ function pinEvidence(cat, term, snippet, origin) {
     if (!term) return;
     if (!work.evidence[cat]) work.evidence[cat] = [];
     work.evidence[cat].push({ term: term, snippet: snippet, ts: new Date().toISOString(), origin: origin });
-    if (origin === 'human') work.cats[cat] = true; // only a paper-sourced Beleg enters the binding record
+    if (origin === 'human') work.cats[cat] = 2; // only a paper-sourced Beleg enters the binding record; level ja, same shape as a chip
     refreshAssess();
 }
 
@@ -1417,7 +1451,8 @@ function commit() {
         categories: work.cats, decision: fin, override: !!work.override,
         reason: fin === 'Exclude' ? work.reason : null,
         override_reason: (work.override && fin === 'Include') ? work.overrideReason.trim() : null,
-        evidence: humanEvidence, ts: new Date().toISOString(), reviewer: state.reviewer
+        evidence: humanEvidence, ts: new Date().toISOString(), reviewer: state.reviewer,
+        text_source: currentTextSource // the paper-layer text the decision was taken on (ADR-027, trAIce M4)
     };
     // FR-14: an edited Include record keeps its analysis codes across the re-commit;
     // a decision that leaves Include drops them (coding rule 1, excluded papers carry
@@ -1644,6 +1679,8 @@ function disclosureMarkdown() {
     L.push('Stage: ' + disc('stage') + '. The AI proposal is advisory; every record was screened independently by a human reviewer, whose decision is binding (RAISE).');
     L.push('Performance evaluation (PRISMA-trAIce M9/R2): AI-human agreement is evaluated outside this tool, on the benchmark corpus in the repository (generated/benchmark-results/, replay self-test), not recomputed here over the loaded corpus.');
     L.push('Confidence threshold: ' + disc('threshold') + '. Conflicts of interest: ' + disc('conflicts') + '.');
+    const ts = textSourceCounts(curDec());
+    L.push('Text sources read by the human reviewer (PRISMA-trAIce M4): raw full text ' + ts.raw + ', abstract ' + ts.abstract + ', no text ' + ts.none + ', unrecorded ' + ts.unrecorded + '.');
     if (disc('limitations')) L.push('Limitations: ' + disc('limitations'));
     L.push('', 'Flow diagram distinguishes AI from human decisions (PRISMA-trAIce R1). Tool identity, prompt, and parameters disclosed per M2/M6.');
     return L.join('\n');
@@ -1680,6 +1717,7 @@ function renderData(targetEl) {
         '<label class="pt-btn pt-imp-label">Reviewer-Datei importieren<input type="file" accept=".json" class="pt-imp" hidden></label>' +
         '<button class="pt-btn pt-exp-csv">Decision-Log (.csv)</button>' +
         '<button class="pt-btn pt-exp-analysis">Analyse-Export (human_assessment.csv-Schema)</button>' +
+        '<button class="pt-btn pt-exp-recon">Abgleich aller geladenen Reviewer-Dateien (.json)</button>' +
         '<button class="pt-btn pt-clear">Eigene Session leeren</button></div></div>';
 
     html += '</div>';
@@ -1701,6 +1739,10 @@ function renderData(targetEl) {
 
     el.querySelector('.pt-exp-rev').addEventListener('click', function() { download(state.reviewer + '.json', reviewerFileText(state.reviewer), 'application/json'); });
     el.querySelector('.pt-exp-csv').addEventListener('click', exportCsv);
+    el.querySelector('.pt-exp-recon').addEventListener('click', function() {
+        const payloads = Object.keys(state.reviewers).map(function(k) { return reviewerPayload(k); });
+        download('prisma-reconciliation.json', reconciliationText(payloads), 'application/json');
+    });
     el.querySelector('.pt-exp-analysis').addEventListener('click', function() {
         download('prisma-analysis-' + state.reviewer + '.csv', analysisCsv(state.reviewer), 'text/csv');
     });
@@ -1736,16 +1778,66 @@ function csvCell(v) {
     return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
 }
 
-function exportCsv() {
-    let rows = [['id', 'title', 'human_decision', 'human_source', 'ai_decision', 'divergent', 'reason', 'evidence_count']];
+function decisionLogCsv() {
+    let rows = [['id', 'title', 'human_decision', 'human_source', 'ai_decision', 'divergent', 'reason', 'evidence_count', 'text_source']];
+    // the log documents the current reviewer's session; the seed perspective has no
+    // UI since ADR-021 and would otherwise replace the reviewer's decisions here
     papers.forEach(function(p) {
-        let h = humanDecision(p), a = aiProposal(p);
-        let rec = (state.reviewers[state.perspective] && state.reviewers[state.perspective][p.id]) || curDec()[p.id];
+        let h = humanDecision(p, state.reviewer), a = aiProposal(p);
+        let rec = curDec()[p.id];
         rows.push([p.id, p.title || '', h ? h.decision : '', h ? h.source : '',
-            a ? a.decision : '', divergent(h, a) ? 'yes' : 'no', (h && h.reason) ? h.reason : '', evidenceCount(rec)]);
+            a ? a.decision : '', divergent(h, a) ? 'yes' : 'no', (h && h.reason) ? h.reason : '', evidenceCount(rec),
+            (rec && rec.text_source) || '']);
     });
-    download('prisma-decision-log.csv', rows.map(function(r) { return r.map(csvCell).join(','); }).join('\n'), 'text/csv');
+    return rows.map(function(r) { return r.map(csvCell).join(','); }).join('\n');
 }
+
+function exportCsv() { download('prisma-decision-log.csv', decisionLogCsv(), 'text/csv'); }
+
+// Per-source counts of the current reviewer's records (trAIce M4, input data). A record
+// written before schema 0.3 carries no text_source and counts as 'unrecorded'.
+function textSourceCounts(decisions) {
+    const out = { raw: 0, abstract: 0, none: 0, unrecorded: 0 };
+    Object.keys(decisions || {}).forEach(function(pid) {
+        const s = decisions[pid] && decisions[pid].text_source;
+        if (s === 'raw' || s === 'abstract' || s === 'none') out[s]++; else out.unrecorded++;
+    });
+    return out;
+}
+
+// Deterministic reconciliation record over reviewer payloads (plan B3, trAIce M8). Pure:
+// the payloads are read and copied, never mutated; the output is independent of input
+// order (reviewers and papers sorted) and carries both source records verbatim plus an
+// empty consensus slot, which the human consensus session fills outside this function.
+function reconcileReviewers(payloads) {
+    const byRev = {};
+    (payloads || []).forEach(function(pl) {
+        if (!pl || typeof pl !== 'object' || !pl.decisions) return;
+        const key = String(pl.reviewer || '').trim();
+        if (!key || key === SEED) return;
+        byRev[key] = pl.decisions;
+    });
+    const reviewers = Object.keys(byRev).sort();
+    const seen = {};
+    reviewers.forEach(function(r) { Object.keys(byRev[r]).forEach(function(pid) { seen[pid] = true; }); });
+    const out = {}, summary = { agree: 0, divergent: 0, single: 0 };
+    Object.keys(seen).sort().forEach(function(pid) {
+        const records = {}, decisions = [];
+        reviewers.forEach(function(r) {
+            const d = byRev[r][pid];
+            if (!d) return;
+            records[r] = JSON.parse(JSON.stringify(d));
+            decisions.push(d.decision);
+        });
+        const status = decisions.length < 2 ? 'single'
+            : (decisions.every(function(x) { return x === decisions[0]; }) ? 'agree' : 'divergent');
+        summary[status]++;
+        out[pid] = { status: status, records: records, consensus: null };
+    });
+    return { schema: 'femprompt-prisma-reconciliation/0.1', reviewers: reviewers, summary: summary, papers: out };
+}
+
+function reconciliationText(payloads) { return JSON.stringify(reconcileReviewers(payloads), null, 2); }
 
 // Analysis export (FR-14): the human_assessment.csv column schema, extended by the
 // AN_ columns after Notes in the update-protocol D order (AN_Prompting_Role after
@@ -1867,7 +1959,12 @@ const TEST_HOOK = {
     // surface + reading-layer drivers (browser-agent traces on the real page)
     showSurface: function(s) { showSurface(s); },
     setReadMode: function(m) { setReadMode(m); },
-    activeLayerHtml: activeLayerHtml
+    activeLayerHtml: activeLayerHtml,
+    // text-source provenance, load-token guard, decision log, reconciliation (ADR-027, pilot)
+    loadReadingInto: loadReadingInto, applyReading: applyReading,
+    readToken: function() { return readToken; }, textSource: function() { return currentTextSource; },
+    textSourceCounts: textSourceCounts, decisionLogCsv: decisionLogCsv,
+    reconcileReviewers: reconcileReviewers, reconciliationText: reconciliationText
 };
 window.EC = window.EC || {};
 window.EC._test = TEST_HOOK;

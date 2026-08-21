@@ -310,7 +310,7 @@ test('pinEvidence sets the category and truncates term (80) and snippet (260)', 
     var longSnip = new Array(300 + 1).join('s');     // 300 chars
     T.pinEvidence('Gender', longTerm, longSnip);
     var w = T.getWork();
-    assertEqual(w.cats.Gender, true, 'category set by pinning');
+    assertEqual(w.cats.Gender, 2, 'category set by pinning to level ja, same shape as a chip');
     assertEqual(w.evidence.Gender.length, 1);
     assertEqual(w.evidence.Gender[0].term.length, 80, 'term truncated');
     assertEqual(w.evidence.Gender[0].snippet.length, 260, 'snippet truncated');
@@ -344,10 +344,10 @@ test('unpinEvidence removes one entry and deletes an emptied category list', fun
 // Section F: persistence payload, commit flow, generated disclosure
 // ============================================================
 
-test('reviewerPayload carries schema 0.2, reviewer key, decisions', function() {
+test('reviewerPayload carries schema 0.3, reviewer key, decisions', function() {
     T.getState().reviewers.r2 = { x1: { decision: 'Include', categories: {} } };
     var pl = T.reviewerPayload('r2');
-    assertEqual(pl.schema, 'femprompt-prisma-reviewer/0.2');
+    assertEqual(pl.schema, 'femprompt-prisma-reviewer/0.3');
     assertEqual(pl.schema, T.REVIEWER_SCHEMA);
     assertEqual(pl.reviewer, 'r2');
     assertEqual(pl.decisions.x1.decision, 'Include');
@@ -507,7 +507,7 @@ test('a human-origin Beleg sets the binding category, an AI-origin Beleg does no
     var tc = T.TECH_CATS[0], sc = T.SOCIAL_CATS[0];
     T.resetWork({ id: 'm3Paper' });
     T.pinEvidence(tc, 'tech term', 'tech snippet', 'human');
-    assertEqual(T.getWork().cats[tc], true, 'paper-sourced Beleg sets the binding category');
+    assertEqual(T.getWork().cats[tc], 2, 'paper-sourced Beleg sets the binding category');
     T.pinEvidence(sc, 'soc term', 'soc snippet', 'ai');
     assert(!T.getWork().cats[sc], 'AI-sourced Beleg leaves the binding category unset');
 });
@@ -620,7 +620,7 @@ test('FR-08: a reviewer export survives a JSON round-trip and reloads losslessly
     delete S.reviewers.rtSrc; delete S.reviewers.rtDst;
 });
 
-test('reviewer schema 0.1 to 0.2: a pre-evidence file loads and behaves as 0.2', function() {
+test('reviewer schema 0.1 to current: a pre-evidence file loads and is written back as 0.3', function() {
     T.setPapers([{ id: 'mg1' }, { id: 'mg2' }]);
     var S = T.getState();
     // a 0.1 reviewer file: decisions without an evidence map; a legacy Beleg without origin
@@ -642,7 +642,7 @@ test('reviewer schema 0.1 to 0.2: a pre-evidence file loads and behaves as 0.2',
     assertContains(html, 'pt-evid-origin-human">Mensch');
     assertNotContains(html, 'pt-evid-origin-ai');
     // re-exporting stamps the current schema, completing the upgrade to 0.2
-    assertEqual(T.reviewerPayload('old').schema, 'femprompt-prisma-reviewer/0.2');
+    assertEqual(T.reviewerPayload('old').schema, 'femprompt-prisma-reviewer/0.3');
     delete S.reviewers.old;
 });
 
@@ -1183,6 +1183,147 @@ test('the export field set derives from the loaded vocabulary, no second list to
     // the header carries exactly the derived order after Notes
     var cols = T.analysisCsvHeader().split(',');
     assertEqual(cols.slice(cols.indexOf('Notes') + 1).join(','), order.join(','), 'header uses the derived order');
+});
+
+// ============================================================
+// Section L: text-source provenance, load-token guard, decision log,
+// deterministic reconciliation (ADR-027, browser pilot)
+// ============================================================
+
+var tsFix = [
+    { id: 'ts1', title: 'full text paper', abstract: 'has an abstract too' },
+    { id: 'ts2', title: 'abstract only paper', abstract: 'only this abstract' },
+    { id: 'ts3', title: 'textless paper', abstract: '' }
+];
+
+test('applyReading sets text_source raw / abstract / none from what is actually shown', function() {
+    T.setPapers(tsFix);
+    T.loadReadingInto(tsFix[0]);
+    assert(T.applyReading(T.readToken(), tsFix[0], 'Some full text body.', null), 'current token applies');
+    assertEqual(T.textSource(), 'raw');
+    T.loadReadingInto(tsFix[1]);
+    T.applyReading(T.readToken(), tsFix[1], null, null);
+    assertEqual(T.textSource(), 'abstract');
+    T.loadReadingInto(tsFix[2]);
+    T.applyReading(T.readToken(), tsFix[2], null, null);
+    assertEqual(T.textSource(), 'none');
+});
+
+test('a stale reading response is dropped: it neither paints nor changes text_source (out-of-order load)', function() {
+    T.setPapers(tsFix);
+    T.loadReadingInto(tsFix[0]);          // slow response, token t1
+    var t1 = T.readToken();
+    T.loadReadingInto(tsFix[1]);          // reviewer moved on, token t2
+    var t2 = T.readToken();
+    assert(t2 > t1, 'token advances per load');
+    assert(T.applyReading(t2, tsFix[1], null, null), 'current paper applies');
+    assertEqual(T.textSource(), 'abstract');
+    assertEqual(T.applyReading(t1, tsFix[0], 'late full text of the paper left behind', null), false, 'stale response dropped');
+    assertEqual(T.textSource(), 'abstract', 'text_source still belongs to the paper shown');
+});
+
+test('commit records text_source of the shown text; the file form and schema 0.3 carry it', function() {
+    T.setPapers(tsFix);
+    T.getState().reviewers = {};
+    T.getState().reviewer = 'r1';
+    T.getState().index = 0;
+    T.resetWork(tsFix[0]);
+    T.loadReadingInto(tsFix[0]);
+    T.applyReading(T.readToken(), tsFix[0], 'Full text with gendered scripts of care.', null);
+    T.getWork().cats.Generative_KI = 2;
+    T.getWork().cats.Gender = 2;
+    T.commit();
+    var rec = T.curDec().ts1;
+    assert(rec, 'record exists');
+    assertEqual(rec.text_source, 'raw');
+    var txt = T.reviewerFileText('r1');
+    assertContains(txt, '"text_source": "raw"');
+    assertContains(txt, '"schema": "femprompt-prisma-reviewer/0.3"');
+    T.getState().index = 1;
+    T.resetWork(tsFix[1]);
+    T.loadReadingInto(tsFix[1]);
+    T.applyReading(T.readToken(), tsFix[1], null, null);
+    T.getWork().cats.KI_Sonstige = 2;
+    T.getWork().reason = 'Not_relevant_topic';
+    T.commit();
+    assertEqual(T.curDec().ts2.text_source, 'abstract');
+    assertEqual(T.curDec().ts2.decision, 'Exclude');
+});
+
+test('a 0.2 record without text_source counts as unrecorded; counts are per source', function() {
+    var counts = T.textSourceCounts({
+        a: { decision: 'Include', text_source: 'raw' },
+        b: { decision: 'Exclude', text_source: 'abstract' },
+        c: { decision: 'Exclude', text_source: 'none' },
+        d: { decision: 'Include' }
+    });
+    assertEqual(counts.raw, 1); assertEqual(counts.abstract, 1); assertEqual(counts.none, 1); assertEqual(counts.unrecorded, 1);
+});
+
+test('decision-log CSV carries a text_source column filled from the record', function() {
+    T.setPapers(tsFix);
+    T.getState().reviewers = { r1: { ts1: { decision: 'Include', categories: { Generative_KI: 2, Gender: 2 }, evidence: {}, reviewer: 'r1', text_source: 'raw' } } };
+    T.getState().reviewer = 'r1';
+    var csv = T.decisionLogCsv();
+    var lines = csv.split('\n');
+    assertEqual(lines[0].split(',').pop(), 'text_source', 'header ends with text_source');
+    var row1 = lines[1].split(',');
+    assertEqual(row1[0], 'ts1');
+    assertEqual(row1[2], 'Include', 'human_decision is the current reviewer record');
+    assertEqual(row1[3], 'r1', 'human_source is the reviewer key');
+    assertEqual(row1[row1.length - 1], 'raw');
+    var row2 = lines[2].split(',');
+    assertEqual(row2[row2.length - 1], '', 'unscreened paper has an empty text_source cell');
+});
+
+test('disclosure reports the per-source counts of the current reviewer (trAIce M4)', function() {
+    T.setPapers(tsFix);
+    T.getState().reviewers = { r1: { ts1: { decision: 'Include', text_source: 'raw' }, ts2: { decision: 'Exclude', text_source: 'abstract' } } };
+    T.getState().reviewer = 'r1';
+    var md = T.disclosureMarkdown();
+    assertContains(md, 'raw full text 1, abstract 1, no text 0, unrecorded 0');
+});
+
+var reconA = { schema: 'femprompt-prisma-reviewer/0.3', reviewer: 'r1', updated: '2026-08-21T10:00:00.000Z', decisions: {
+    'PILOT-B': { decision: 'Exclude', reason: 'Not_relevant_topic', categories: { KI_Sonstige: 2 }, evidence: {}, text_source: 'abstract', reviewer: 'r1' },
+    'PILOT-A': { decision: 'Include', reason: null, categories: { Generative_KI: 2, Soziale_Arbeit: 2 }, evidence: { Gender: [{ term: 'gendered scripts', snippet: 'x', origin: 'human' }] }, text_source: 'raw', reviewer: 'r1' },
+    'ONLY-R1': { decision: 'Include', categories: {}, evidence: {}, text_source: 'raw', reviewer: 'r1' }
+} };
+var reconB = { schema: 'femprompt-prisma-reviewer/0.3', reviewer: 'r2', updated: '2026-08-21T11:00:00.000Z', decisions: {
+    'PILOT-A': { decision: 'Include', reason: null, categories: { Generative_KI: 2, Soziale_Arbeit: 2, Gender: 2 }, evidence: {}, text_source: 'raw', reviewer: 'r2' },
+    'PILOT-B': { decision: 'Include', reason: null, categories: { KI_Sonstige: 2, Soziale_Arbeit: 2 }, evidence: {}, text_source: 'abstract', reviewer: 'r2' }
+} };
+
+test('reconcileReviewers: agree / divergent / single per paper, sorted, consensus slot empty', function() {
+    var r = T.reconcileReviewers([reconA, reconB]);
+    assertEqual(r.schema, 'femprompt-prisma-reconciliation/0.1');
+    assertEqual(r.reviewers.join(','), 'r1,r2');
+    assertEqual(Object.keys(r.papers).join(','), 'ONLY-R1,PILOT-A,PILOT-B', 'paper ids sorted');
+    assertEqual(r.papers['PILOT-A'].status, 'agree');
+    assertEqual(r.papers['PILOT-B'].status, 'divergent');
+    assertEqual(r.papers['ONLY-R1'].status, 'single');
+    assertEqual(r.papers['PILOT-B'].consensus, null);
+    assertEqual(r.papers['PILOT-B'].records.r1.reason, 'Not_relevant_topic', 'source record carried verbatim');
+    assertEqual(r.papers['PILOT-B'].records.r2.decision, 'Include');
+    assertEqual(r.summary.agree, 1); assertEqual(r.summary.divergent, 1); assertEqual(r.summary.single, 1);
+});
+
+test('reconcileReviewers is order-independent and never mutates its inputs', function() {
+    var snapA = JSON.stringify(reconA), snapB = JSON.stringify(reconB);
+    var ab = T.reconciliationText([reconA, reconB]);
+    var ba = T.reconciliationText([reconB, reconA]);
+    assertEqual(ab, ba, 'byte-identical for reversed input order');
+    assertEqual(JSON.stringify(reconA), snapA, 'input A untouched');
+    assertEqual(JSON.stringify(reconB), snapB, 'input B untouched');
+    var r = T.reconcileReviewers([reconA, reconB]);
+    r.papers['PILOT-A'].records.r1.decision = 'Exclude';
+    assertEqual(reconA.decisions['PILOT-A'].decision, 'Include', 'copy, not reference');
+});
+
+test('reconcileReviewers ignores the seed track and payloads without decisions', function() {
+    var r = T.reconcileReviewers([reconA, { reviewer: 'seed', decisions: { 'PILOT-A': { decision: 'Exclude' } } }, null, { reviewer: 'r9' }]);
+    assertEqual(r.reviewers.join(','), 'r1');
+    assertEqual(r.papers['PILOT-A'].status, 'single');
 });
 
 // ============================================================

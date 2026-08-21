@@ -114,7 +114,7 @@ The dual assessment track and benchmark already satisfy most of the demanding re
 |---|---|---|
 | trAIce M2: tool identity | Claude Haiku 4.5 and Sonnet 4.6 (model IDs); four Deep Research models (ChatGPT, Claude, Gemini, Perplexity) for identification | Satisfied |
 | trAIce M3: stage and task | Identification (deep research), Screening (10K assessment), Synthesis (3-stage SKE), each documented | Satisfied |
-| trAIce M4: input data | Title and abstract vs knowledge documents, tracked per paper (`Input_Source`); the 2x2 experiment | Satisfied |
+| trAIce M4: input data | Title and abstract vs knowledge documents, tracked per paper (`Input_Source`); the 2x2 experiment; in PRISM every decision records the paper-layer text actually read (`text_source`, schema 0.3, ADR-027) and the disclosure reports the per-source counts | Satisfied |
 | trAIce M5: output format and post-processing | Structured JSON, per-category booleans, confidence scores; deterministic stage 2 | Satisfied |
 | trAIce M6: prompts and parameters | `prompts/` governance, `CHANGELOG.md`, negative constraints; decoding parameters (temperature, top-p, max tokens) and confidence thresholds not yet disclosed | Partial |
 | trAIce M8: human oversight | Full dual track, both human and LLM screening run parallel and independent across the corpus; the expert decision is binding | Satisfied (gold standard) |

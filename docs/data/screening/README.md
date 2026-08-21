@@ -20,7 +20,7 @@ This folder holds the working data of the PRISMA screening tool (`docs/prisma.ht
 
 ```json
 {
-  "schema": "femprompt-prisma-reviewer/0.2",
+  "schema": "femprompt-prisma-reviewer/0.3",
   "reviewer": "sss",
   "updated": "2026-06-09T12:00:00.000Z",
   "decisions": {
@@ -35,12 +35,13 @@ This folder holds the working data of the PRISMA screening tool (`docs/prisma.ht
         ]
       },
       "ts": "...",
-      "reviewer": "sss"
+      "reviewer": "sss",
+      "text_source": "raw"
     }
   }
 }
 ```
 
-Schema 0.2 adds `evidence` (pinned Belege per category, one `{term, snippet, ts}` list per category, FR-13) and `override` (a derived Include demoted to Exclude, with a required `reason`). A 0.1 file without these fields loads cleanly; the tool writes 0.2.
+Schema 0.2 adds `evidence` (pinned Belege per category, one `{term, snippet, ts}` list per category, FR-13) and `override` (a derived Include demoted to Exclude, with a required `reason`). Schema 0.3 adds `text_source` (`raw`, `abstract` or `none`, the paper-layer text the decision was taken on, ADR-027). A 0.1 or 0.2 file without these fields loads cleanly; the tool writes 0.3.
 
 The AI assessment is not stored here; it comes from the corpus (`docs/data/research_vault_v2.json`). The built-in `seed` reviewer is the existing expert assessment from that corpus.

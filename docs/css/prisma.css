@@ -317,6 +317,7 @@ body.pt-fullscreen *, body.pt-fullscreen *::before, body.pt-fullscreen *::after 
 /* READING COLUMN (centre) */
 .pt-read-screen .pt-read-inner { max-width: 720px; }
 .pt-layer-toggle { display: inline-flex; gap: 0; margin-bottom: 0.5rem; border: 1px solid var(--pt-border-2); border-radius: var(--pt-r-sm); overflow: hidden; }
+.pt-layer-toggle[hidden] { display: none; } /* the inline-flex rule otherwise outranks the hidden attribute on papers without an AI layer */
 .pt-layer-btn {
   border: none; background: var(--pt-surface); color: var(--pt-ink-3); cursor: pointer;
   font-family: var(--pt-sans); font-size: var(--pt-xs); font-weight: 600; padding: 0.3rem 0.7rem;

@@ -1,0 +1,101 @@
+{
+  "schema": "femprompt-prisma-reconciliation/0.1",
+  "reviewers": [
+    "r1",
+    "r2"
+  ],
+  "summary": {
+    "agree": 1,
+    "divergent": 1,
+    "single": 0
+  },
+  "papers": {
+    "PILOT-A": {
+      "status": "agree",
+      "records": {
+        "r1": {
+          "categories": {
+            "Gender": 2,
+            "Generative_KI": 2,
+            "Soziale_Arbeit": 2
+          },
+          "decision": "Include",
+          "override": false,
+          "reason": null,
+          "override_reason": null,
+          "evidence": {
+            "Gender": [
+              {
+                "term": "gendered scripts",
+                "snippet": "…and feedback tools. Educators report that the generated case vignettes tend to reproduce gendered scripts of care, assigning emotional labour to women and decision authority to men.",
+                "ts": "2026-08-21T17:06:34.948Z",
+                "origin": "human"
+              }
+            ]
+          },
+          "ts": "2026-08-21T17:06:35.148Z",
+          "reviewer": "r1",
+          "text_source": "raw"
+        },
+        "r2": {
+          "categories": {
+            "Gender": 2,
+            "Generative_KI": 2,
+            "Soziale_Arbeit": 2
+          },
+          "decision": "Include",
+          "override": false,
+          "reason": null,
+          "override_reason": null,
+          "evidence": {
+            "Gender": [
+              {
+                "term": "gendered scripts",
+                "snippet": "…and feedback tools. Educators report that the generated case vignettes tend to reproduce gendered scripts of care, assigning emotional labour to women and decision authority to men.",
+                "ts": "2026-08-21T17:06:39.615Z",
+                "origin": "human"
+              }
+            ]
+          },
+          "ts": "2026-08-21T17:06:39.814Z",
+          "reviewer": "r2",
+          "text_source": "raw"
+        }
+      },
+      "consensus": null
+    },
+    "PILOT-B": {
+      "status": "divergent",
+      "records": {
+        "r1": {
+          "categories": {
+            "KI_Sonstige": 2
+          },
+          "decision": "Exclude",
+          "override": false,
+          "reason": "Not_relevant_topic",
+          "override_reason": null,
+          "evidence": {},
+          "ts": "2026-08-21T17:06:35.382Z",
+          "reviewer": "r1",
+          "text_source": "abstract"
+        },
+        "r2": {
+          "categories": {
+            "KI_Sonstige": 2,
+            "Soziale_Arbeit": 2
+          },
+          "decision": "Include",
+          "override": false,
+          "reason": null,
+          "override_reason": null,
+          "evidence": {},
+          "ts": "2026-08-21T17:06:40.080Z",
+          "reviewer": "r2",
+          "text_source": "abstract"
+        }
+      },
+      "consensus": null
+    }
+  }
+}

@@ -135,6 +135,8 @@ Motivation: evidence pinned on a knowledge document inherits the distillate's fr
 
 Done when: with a connected clone, a paper with a raw text renders it and its Belege carry `text_source: raw`; on Pages without a connection, behaviour is unchanged except the visible source label.
 
+Note (2026-08-21): the raw local text half was built by ADR-025; the `text_source` half is built by ADR-027 (schema 0.3, decision-log column, per-source disclosure counts). The `kd` value does not occur since ADR-016 made the knowledge document the AI layer. P2 is closed except for the manual File System Access checklist.
+
 Note (2026-06-21): M3 (ADR-016) realized the layer-source provenance for the already-served document, splitting paper text from machine extraction and binding `origin` to the layer. That is distinct from P2, which still adds the raw Docling text from the local clone and the `text_source` field. P2 remains open; M3 closed the contamination path inside the served distillate.
 
 ### P3: Excel-to-PRISM import seam (reframed by ADR-019)
@@ -173,6 +175,8 @@ Documented scenarios an AI browser agent executes against the deployed tool (or 
 Not agent-testable, manual checklist (`tests/manual-checklist.md`): File System Access connect and write (browser security dialogs), the Git round-trip (commit, push, pull, reconnect), real colleague onboarding.
 
 Done when: all six scenarios protocolled, findings fixed or explicitly deferred.
+
+Note (2026-08-21): S2 (screening pass), S4 (export/import round-trip across two isolated browser profiles) and the reload half of S5 are automated as the pinned Playwright pilot (`tests/pilot/README.md`, `tests/browser/pilot.mjs`); the two simulated reviewer sessions and the reconciliation check are recorded in the Research Mission Control lane `social-ai · prism-pilot`. S1, S3, S6 and the record surface of S5 remain to be protocolled.
 
 ### P6: Knowledge-base consolidation
 
@@ -422,4 +426,5 @@ The memo walk-through of 2026-07-18 carried this ledger top to bottom against th
 - Reviewer identity in public files: are the current short keys acceptable in a public repo, or pseudonyms? Decide before P3.
 - Do the colleagues screen the full corpus or a split? Affects only the onboarding text, not the tool.
 - Pages source setting (branch/folder) to verify at the P0 merge.
+- Reviewer key before screening starts: the key is seeded by a documented localStorage step since the identity form left with ADR-021; decide UI switcher versus documented manual step (carried from the 2026-07-03 handoff, confirmed by the 2026-08-21 pilot).
 - Folder restructure executed 2026-06-30 (code into `src/`, generated data into `generated/`, deep-research into `corpus/`, assessment unified); see [[journal]] Session 24.

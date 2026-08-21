@@ -1,0 +1,3 @@
+id,title,human_decision,human_source,ai_decision,divergent,reason,evidence_count,text_source
+PILOT-A,Pilot paper A: generative models in social work education,Include,r2,Include,no,,1,raw
+PILOT-B,Pilot paper B: recommender systems overview,Include,r2,Exclude,yes,,0,abstract

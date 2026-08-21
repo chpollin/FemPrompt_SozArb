@@ -1,0 +1,5 @@
+order check: identical for reversed input order
+unchanged tests/pilot/evidence/2026-08-21/r1.json sha256=cdc7b166afb9b87e9bf88c2b095e585de8d153b32b808ba8a658d45e9b03cad5
+unchanged tests/pilot/evidence/2026-08-21/r2.json sha256=c68861695523b204d71d5a127f10d43548882464a9f1c20a1fefe3f31df21be3
+wrote tests/pilot/evidence/2026-08-21/reconciliation.json sha256=8e4d0587fc2ae36db540f294d93711ec715a18fea9d41f615809b24dba9ae1f8
+summary: {"agree":1,"divergent":1,"single":0} reviewers: r1,r2

@@ -1,0 +1,4 @@
+{
+  "PILOT-A": { "src": "clean", "chars": 1234, "source_file": "pilot_a_fixture.md" },
+  "PILOT-B": { "src": "none", "chars": 0 }
+}

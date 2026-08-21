@@ -100,9 +100,13 @@ def resolve_docling(paper, clean_idx, raw_idx):
     key = author_year_key(paper)
     if len(key) > 5:
         for idx, base, label in ((clean_idx, CLEAN_DIR, "clean"), (raw_idx, RAW_DIR, "raw")):
-            for stem_norm, fn in idx.items():
-                if stem_norm.startswith(key):
-                    return base / fn, label
+            hits = sorted(fn for stem_norm, fn in idx.items() if stem_norm.startswith(key))
+            if len(hits) == 1:
+                return base / hits[0], label
+            if len(hits) > 1:
+                # two conversions share the first-author-year prefix (same author, same
+                # year); assigning the first would silently attach a foreign full text
+                return None, "ambiguous"
     return None, None
 
 
@@ -119,7 +123,7 @@ def main() -> int:
         old.unlink()
 
     manifest = {}
-    n_clean = n_raw = n_none = 0
+    n_clean = n_raw = n_none = n_ambiguous = 0
     glyph_files = []
     for p in papers:
         pid = p.get("id")
@@ -128,6 +132,9 @@ def main() -> int:
         path, src = resolve_docling(p, clean_idx, raw_idx)
         if not path:
             manifest[pid] = {"src": "none", "chars": 0}
+            if src == "ambiguous":
+                manifest[pid]["reason"] = "ambiguous"
+                n_ambiguous += 1
             n_none += 1
             continue
         raw = path.read_text(encoding="utf-8", errors="replace")
@@ -144,6 +151,7 @@ def main() -> int:
     print(f"  full text from markdown_clean: {n_clean}")
     print(f"  full text from markdown (raw):  {n_raw}")
     print(f"  no full text (abstract-only):   {n_none}")
+    print(f"  of which ambiguous fallback:    {n_ambiguous}")
     print(f"  GLYPH-affected source files:    {len(glyph_files)}")
     print(f"wrote {n_clean + n_raw} files to {OUT_DIR.relative_to(ROOT)} plus manifest")
     return 0

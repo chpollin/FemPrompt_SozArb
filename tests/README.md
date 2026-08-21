@@ -25,6 +25,9 @@ The only network activity is `docs/js/prisma-data.js` attempting to load the res
 | `run-tests.html` | Browser runner page. Loads `../docs/js/prisma-data.js` (real `window.EC.escapeHtml`), then `../docs/js/prisma.js` (whose appended exposure block attaches `window.EC._test`), then `../docs/js/prisma-import.js` (the import bridge, which exposes `window.__PRISMA_IMPORT_TEST__`), then `tests.js`. Load order matters: the data layer must come first so `window.EC` exists when the exposure block runs. |
 | `run.mjs` | Headless node runner. Injects the same four scripts into a jsdom window, reads `window.__TEST_RESULTS__`, and exits non-zero on failure. Run with `npm test`. |
 | `tests.js` | The suite: assert helpers, inline fixtures, all test cases, result rendering. |
+| `browser/pilot.mjs` | Supported-browser pilot (Playwright, Chromium): one isolated reviewer session end to end against the pinned fixtures in `tests/pilot/`, see `tests/pilot/README.md`. `npm run pilot -- --reviewer r1 --out tests/browser/out/r1`. |
+| `browser/reconcile.mjs` | Deterministic reconciliation of reviewer files through the tool's own `reconcileReviewers`; `--check` proves order independence, the SHA-256 lines prove the inputs were not touched. |
+| `test_build_fulltext.py` | pytest: the full-text builder refuses an ambiguous first-author-year fallback. |
 
 ## What is covered
 
@@ -36,6 +39,7 @@ The only network activity is `docs/js/prisma-data.js` attempting to load the res
 - Persistence and commit: `reviewerPayload` schema `femprompt-prisma-reviewer/0.2`, the commit guard (Exclude requires a reason, override-Exclude likewise), the controlled exclusion-reason vocabulary, and `disclosureMarkdown` carrying the screening count and the external M9/R2 reference (no in-tool kappa or matrix, ADR-017).
 - Evidence provenance (KI2, ADR-015): `pinEvidence` stamps `origin: human`; `evidenceListHtml` renders a neutral Mensch/KI marker per Beleg, defaults a Beleg without `origin` to human, and uses the same marker class for both origins (no valuation).
 - Reading-column layer split and binding separation (M3, ADR-016): `splitDocLayers` separates the paper layer from the machine-extraction layer at the first `## Kernbefund` heading (and yields no AI layer for an abstract-only doc); a human-origin Beleg sets the binding category while an AI-origin Beleg does not, so AI-sourced evidence alone never flips the derived decision to Include, yet is still stored and rendered as KI.
+- Text-source provenance, load-token guard, decision log and deterministic reconciliation (Section L, ADR-027): `applyReading` sets `text_source` from what is shown and drops a stale response, `commit` records it, the reviewer file is schema 0.3, `decisionLogCsv` carries the column, the disclosure reports per-source counts, `reconcileReviewers` classifies agree / divergent / single, is order-independent and never mutates its inputs.
 - Import bridge validation (`window.__PRISMA_IMPORT_TEST__`, plan P3): the data-hygiene report on crafted CSV fixtures, a clean Include with no error-level findings, an out-of-vocabulary exclusion reason flagged and preserved verbatim, an empty reason on Exclude flagged, a duplicate Zotero key reported and the second row skipped, an Unclear decision skipped, and an idempotent re-import counted as unchanged.
 
 Reviewer keys in fixtures are neutral ids (`r1`, `r2`).
@@ -50,7 +54,7 @@ The pure functions are closure-scoped inside the IIFE of `docs/js/prisma.js`. A 
 
 ## Status
 
-Executed and green: `npm test` reports PASS 58/58 headless under jsdom (jsdom is a dev dependency, pinned in `package.json`). The browser leg (`run-tests.html`) runs the identical suite. The count dropped from 73 when ADR-017 removed the agreement section.
+Executed and green: `npm test` reports PASS 103/103 headless under jsdom (jsdom is a dev dependency, pinned in `package.json`). The browser leg (`run-tests.html`) runs the identical suite. The count dropped from 73 when ADR-017 removed the agreement section.
 
 ## Relation to plan P1
 

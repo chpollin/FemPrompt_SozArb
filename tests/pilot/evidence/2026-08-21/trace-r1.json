@@ -1,0 +1,233 @@
+{
+  "reviewer": "r1",
+  "started": "2026-08-21T17:06:34.479Z",
+  "base": "http://127.0.0.1:8811",
+  "checks": [
+    {
+      "name": "cold load: fixture corpus of two papers",
+      "ok": true,
+      "detail": 2
+    },
+    {
+      "name": "cold load: reviewer key seeded",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "toolbar: PRISMA-Record and Daten & Sync affordances present",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "cold load: source pill corrects to Volltext once the manifest resolves",
+      "ok": true,
+      "detail": "Volltext"
+    },
+    {
+      "name": "PILOT-A: source pill",
+      "ok": true,
+      "detail": "Volltext"
+    },
+    {
+      "name": "PILOT-A: layer toggle hidden without an AI layer",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "PILOT-A: text_source after load",
+      "ok": true,
+      "detail": "raw"
+    },
+    {
+      "name": "PILOT-A: in-text search hits",
+      "ok": true,
+      "detail": "1/2"
+    },
+    {
+      "name": "PILOT-A: Beleg pinned on Gender",
+      "ok": true,
+      "detail": 1
+    },
+    {
+      "name": "PILOT-A: pinned category set to ja",
+      "ok": true,
+      "detail": "2"
+    },
+    {
+      "name": "PILOT-A: record exists",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "PILOT-A: decision",
+      "ok": true,
+      "detail": "Include"
+    },
+    {
+      "name": "PILOT-A: reviewer key",
+      "ok": true,
+      "detail": "r1"
+    },
+    {
+      "name": "PILOT-A: text_source recorded",
+      "ok": true,
+      "detail": "raw"
+    },
+    {
+      "name": "PILOT-A: evidence persisted in record",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "PILOT-A: locked view after commit",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "PILOT-B: source pill",
+      "ok": true,
+      "detail": "nur Abstract"
+    },
+    {
+      "name": "PILOT-B: layer toggle hidden without an AI layer",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "PILOT-B: text_source after load",
+      "ok": true,
+      "detail": "abstract"
+    },
+    {
+      "name": "PILOT-B: record exists",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "PILOT-B: decision",
+      "ok": true,
+      "detail": "Exclude"
+    },
+    {
+      "name": "PILOT-B: reviewer key",
+      "ok": true,
+      "detail": "r1"
+    },
+    {
+      "name": "PILOT-B: text_source recorded",
+      "ok": true,
+      "detail": "abstract"
+    },
+    {
+      "name": "PILOT-B: exclusion reason",
+      "ok": true,
+      "detail": "Not_relevant_topic"
+    },
+    {
+      "name": "PILOT-B: locked view after commit",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "reload: both records persisted",
+      "ok": true,
+      "detail": [
+        "PILOT-A",
+        "PILOT-B"
+      ]
+    },
+    {
+      "name": "reload: text_source survives",
+      "ok": true,
+      "detail": {
+        "PILOT-A": "raw",
+        "PILOT-B": "abstract"
+      }
+    },
+    {
+      "name": "reload: locked view for paper A",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "export: schema 0.3",
+      "ok": true,
+      "detail": "femprompt-prisma-reviewer/0.3"
+    },
+    {
+      "name": "export: reviewer key",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "export: both decisions with text_source",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "export: decisions sorted by paper id (deterministic file)",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "clear: own session empty",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "import: records restored byte-equal to the export",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "import: text_source restored",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "csv: header ends with text_source",
+      "ok": true,
+      "detail": "id,title,human_decision,human_source,ai_decision,divergent,reason,evidence_count,text_source"
+    },
+    {
+      "name": "csv: rows carry the expected text_source",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "csv: human_decision is the reviewer decision, human_source the reviewer key",
+      "ok": true,
+      "detail": [
+        "PILOT-A,Pilot paper A: generative models in social work education,Include,r1,Include,no,,1,raw",
+        "PILOT-B,Pilot paper B: recommender systems overview,Exclude,r1,Exclude,no,Not_relevant_topic,0,abstract"
+      ]
+    },
+    {
+      "name": "in-tool reconciliation export: schema and single statuses",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "no page errors during the session",
+      "ok": true,
+      "detail": []
+    }
+  ],
+  "screenshots": [
+    "01-cold-load.png",
+    "PILOT-A-before-commit.png",
+    "PILOT-A-committed.png",
+    "PILOT-B-before-commit.png",
+    "PILOT-B-committed.png",
+    "04-after-reload.png",
+    "06-after-import.png"
+  ],
+  "files": {
+    "reviewer_export": "C:\\Users\\Chrisi\\Documents\\GitHub\\DHCraft\\SocialAI\\FemPrompt_SozArb-prism-pilot\\tests\\browser\\out\\r1-post\\r1.json",
+    "decision_log": "C:\\Users\\Chrisi\\Documents\\GitHub\\DHCraft\\SocialAI\\FemPrompt_SozArb-prism-pilot\\tests\\browser\\out\\r1-post\\decision-log-r1.csv"
+  },
+  "browser": "151.0.7922.34",
+  "finished": "2026-08-21T17:06:36.441Z",
+  "failed": 0,
+  "console_errors": []
+}

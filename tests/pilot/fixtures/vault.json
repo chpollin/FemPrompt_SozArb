@@ -1,0 +1,37 @@
+{
+  "meta": { "pilot": true, "note": "Non-production fixture corpus for the PRISM browser pilot; two synthetic papers." },
+  "papers": [
+    {
+      "id": "PILOT-A",
+      "title": "Pilot paper A: generative models in social work education",
+      "author_year": "Pilot et al. (2026)",
+      "authors": "Pilot, Anna; Probe, Ben",
+      "year": 2026,
+      "doi": "",
+      "url": "",
+      "abstract": "A synthetic abstract. This fixture paper discusses generative language models in social work education and the gendered scripts of care they reproduce.",
+      "item_type": "journalArticle",
+      "journal": "Pilot Journal",
+      "knowledge_doc": null,
+      "llm": { "decision": "Include", "categories": ["Generative_KI", "Soziale_Arbeit", "Gender"],
+               "all_categories": { "AI_Literacies": 0, "Generative_KI": 1, "Prompting": 0, "KI_Sonstige": 0, "Soziale_Arbeit": 1, "Bias_Ungleichheit": 0, "Gender": 1, "Diversitaet": 0, "Feministisch": 0, "Fairness": 0 },
+               "reasoning": "Synthetic advisory proposal for the pilot." }
+    },
+    {
+      "id": "PILOT-B",
+      "title": "Pilot paper B: recommender systems overview",
+      "author_year": "Probe (2025)",
+      "authors": "Probe, Ben",
+      "year": 2025,
+      "doi": "",
+      "url": "",
+      "abstract": "A synthetic abstract. This fixture paper surveys recommender systems and classification pipelines without a social work setting; it exists to exercise the abstract-only reading path of the pilot.",
+      "item_type": "report",
+      "journal": "",
+      "knowledge_doc": null,
+      "llm": { "decision": "Exclude", "categories": ["KI_Sonstige"],
+               "all_categories": { "AI_Literacies": 0, "Generative_KI": 0, "Prompting": 0, "KI_Sonstige": 1, "Soziale_Arbeit": 0, "Bias_Ungleichheit": 0, "Gender": 0, "Diversitaet": 0, "Feministisch": 0, "Fairness": 0 },
+               "reasoning": "Synthetic advisory proposal for the pilot." }
+    }
+  ]
+}

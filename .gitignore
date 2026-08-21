@@ -94,3 +94,4 @@ docs/data/fulltext_manifest.json
 # public repo. Releasing a single open-access source would be a separate per-source decision.
 research-vault/_sources/
 research-vault/00_representation/
+tests/browser/out/

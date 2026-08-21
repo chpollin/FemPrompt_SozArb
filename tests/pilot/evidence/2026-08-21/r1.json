@@ -1,0 +1,44 @@
+{
+  "schema": "femprompt-prisma-reviewer/0.3",
+  "reviewer": "r1",
+  "updated": "2026-08-21T17:06:35.765Z",
+  "decisions": {
+    "PILOT-A": {
+      "categories": {
+        "Gender": 2,
+        "Generative_KI": 2,
+        "Soziale_Arbeit": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Gender": [
+          {
+            "term": "gendered scripts",
+            "snippet": "…and feedback tools. Educators report that the generated case vignettes tend to reproduce gendered scripts of care, assigning emotional labour to women and decision authority to men.",
+            "ts": "2026-08-21T17:06:34.948Z",
+            "origin": "human"
+          }
+        ]
+      },
+      "ts": "2026-08-21T17:06:35.148Z",
+      "reviewer": "r1",
+      "text_source": "raw"
+    },
+    "PILOT-B": {
+      "categories": {
+        "KI_Sonstige": 2
+      },
+      "decision": "Exclude",
+      "override": false,
+      "reason": "Not_relevant_topic",
+      "override_reason": null,
+      "evidence": {},
+      "ts": "2026-08-21T17:06:35.382Z",
+      "reviewer": "r1",
+      "text_source": "abstract"
+    }
+  }
+}
