@@ -37,4 +37,4 @@ The File System Access write path (`showDirectoryPicker`) needs a native picker 
 
 ## Evidence
 
-`evidence/<date>/` holds the committed evidence of an executed pilot: both reviewer exports, their traces, the decision logs, the reconciliation record in both input orders and the SHA-256 list. Screenshots stay local under `tests/browser/out/` (gitignored) and are reproduced by rerunning the driver.
+`evidence/<date>/` holds the committed evidence of an executed pilot: both reviewer exports, their traces, the decision logs, the reconciliation record in both input orders and from the in-tool export, the load-bearing screenshots per reviewer under `screenshots/`, and `sha256.txt` over every file beside it. The full screenshot set of a run stays local under `tests/browser/out/` (gitignored) and is reproduced by rerunning the driver.
