@@ -15,7 +15,7 @@ status: complete
 language: en
 version: "0.3"
 created: 2026-06-29
-updated: 2026-07-21
+updated: 2026-08-21
 authors: [Christopher Pollin]
 generated-with: Claude Code
 related: [project, methods, specification, data, standards, plan, journal, update-protocol, research-vault, analysis-divergence, analysis-sq-advisory]
@@ -120,6 +120,6 @@ A defined point in the workflow where human or rule-based control checks AI-gene
 ## What is missing and why
 
 - No `architecture.md`. The tool is a static vanilla-JS page with no backend; its construction is covered by [[specification]] (requirements, ADR log, and design system) and [[data]], and the research pipeline by [[methods]].
-- No `testing.md`. The tool's behaviour tests live in `tests/`, in two layers: a jsdom harness over the pure functions (`npm test`, jsdom as the only dev dependency of the harness) and a pinned supported-browser pilot that drives the real page in Chromium (`npm run pilot`, contract in `tests/pilot/README.md`). The retrospective counts and agreement figures are asserted by the committed replay (`src/replay/`). What a person still has to check by hand is `tests/manual-checklist.md`; the test responsibility matrix and the autonomous verification measures are in [[plan]].
+- No `testing.md`. The tool's behaviour tests live in `tests/`, in two layers: a jsdom harness over the pure functions (`npm test`, jsdom as the only dev dependency of the harness) and a pinned supported-browser pilot that drives the real page in Chromium (`npm run pilot`, contract in `tests/pilot/README.md`). The retrospective counts and agreement figures are asserted by the committed replay (`src/replay/`). The Python side runs with `python -m pytest tests/`, and the anchors of the claims layer are checked by `python -m src.publish.check_claims`, whose green run is the precondition of that layer's `grounded` status. What a person still has to check by hand is `tests/manual-checklist.md`; the test responsibility matrix and the autonomous verification measures are in [[plan]].
 - No `report.md` (a status report for an external recipient). The current state lives in [[plan]] and this index; a formal external report is deferred to the FFG report and the follow-up paper.
 - No numbers in the prose. Volatile quantities live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion, by convention.

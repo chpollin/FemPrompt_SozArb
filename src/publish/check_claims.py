@@ -22,6 +22,7 @@ CLAIMS = REPO / "research-vault" / "20_claims"
 DIST = REPO / "research-vault" / "10_distillates"
 
 WIKILINK = re.compile(r"\[\[([^\]|#]+)(?:#([^\]|]+))?(?:\|[^\]]+)?\]\]")
+CODE = re.compile(r"```.*?```|`[^`\n]*`", re.S)
 
 
 def headings(path: Path) -> set[str]:
@@ -29,13 +30,18 @@ def headings(path: Path) -> set[str]:
             for m in re.finditer(r"^#{1,6}\s+(.+)$", path.read_text(encoding="utf-8"), re.M)}
 
 
-def main() -> int:
-    errors = []
-    for f in sorted(CLAIMS.glob("*.md")):
-        for m in WIKILINK.finditer(f.read_text(encoding="utf-8")):
+def strip_code(text: str) -> str:
+    """A wikilink inside code markup states the syntax and references nothing."""
+    return CODE.sub(" ", text)
+
+
+def collect_errors(claims: Path, dist: Path) -> list[str]:
+    errors: list[str] = []
+    for f in sorted(claims.glob("*.md")):
+        for m in WIKILINK.finditer(strip_code(f.read_text(encoding="utf-8"))):
             target, head = m.group(1).strip(), m.group(2)
-            cand_dist = DIST / f"{target}.md"
-            cand_claim = CLAIMS / f"{target}.md"
+            cand_dist = dist / f"{target}.md"
+            cand_claim = claims / f"{target}.md"
             if cand_dist.exists():
                 cand = cand_dist
             elif cand_claim.exists():
@@ -45,6 +51,11 @@ def main() -> int:
                 continue
             if head and head.strip() not in headings(cand):
                 errors.append(f"{f.name}: Anker fehlt: [[{target}#{head}]]")
+    return errors
+
+
+def main(claims: Path = CLAIMS, dist: Path = DIST) -> int:
+    errors = collect_errors(claims, dist)
     if errors:
         print("FAIL")
         for e in errors:

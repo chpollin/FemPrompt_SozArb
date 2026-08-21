@@ -10,7 +10,7 @@ status: draft
 language: de
 version: "0.2"
 created: 2026-07-18
-updated: 2026-07-18
+updated: 2026-08-21
 authors: [Christopher Pollin]
 generated-with: Claude Code
 topics: ["[[Grounded Vault]]", "[[Systematic Review]]"]
@@ -106,6 +106,10 @@ Anker werden an ihrer Heimatebene geprägt (`00_representation/` prägt Repräse
 2. Der tote Anker bleibt vollständig aufgelöst und geprüft im lokalen Klon mit den Volltexten. Die Statusleiter läuft lokal, wo die Anker leben.
 3. Ein toter Anker, der auf eine der committed Ebenen zeigt (`10_distillates/`, `20_claims/`, `30_deliverable/`) und dort ins Leere zeigt, ist dagegen ein echter Integritätsfehler und wird wie ein toter Wikilink behandelt.
 4. Jedes committed Distillat trägt genug bibliografischen Kontext aus `references/`, dass ein öffentlicher Leser die Aussage der Quelle zuordnen kann, auch ohne den Anker auflösen zu können. Der Anker ist die zeichengenaue Fundstelle, der Referenz-Record die publizierbare Zuordnung.
+
+### Prüfung der Claim-Anker
+
+Die Anker der Claim-Ebene werden deterministisch geprüft (`src/publish/check_claims.py`). Die Prüfung löst jeden Wikilink eines Claim-Dokuments gegen die Distillat-Ebene und gegen die Claim-Ebene selbst auf, samt Überschrift, wenn der Link eine nennt. Sie kennt eine Ausnahme, die aus der Ebene selbst folgt: ein Wikilink, der in Code-Auszeichnung steht, also in Backticks oder in einem Code-Block, nennt die Schreibweise und referenziert nichts. Die Registerdatei der Ebene erklärt die Ankerform an genau so einem Beispiel, und ohne diese Ausnahme meldete die Prüfung ihr eigenes Erklärungsbeispiel als toten Anker. Der `grounded`-Status der Claim-Ebene gilt nur, solange die Prüfung grün läuft; ein Fehlalarm entwertet den Status ebenso wie ein echter toter Anker, weil beide ihn unbelegt lassen.
 
 ### Sprachregelung je Ebene
 

@@ -1,7 +1,7 @@
 # Working Rules for Claude AI Assistant
 
 **Project:** FemPrompt SozArb, a systematic literature review on feminist AI literacies in social work
-**Last Updated:** 2026-06-30
+**Last Updated:** 2026-08-21
 
 ---
 
@@ -77,6 +77,10 @@ The benchmark (the human-LLM divergence and its decomposition, used as a motivat
 | `assessment/` | LLM 5D and human assessment | Complete |
 | `src/publish/` | Generators (Vault v2, Promptotyping data) | Actively edited |
 | `src/replay/` | Round-1 replay (`replay_round1.py`, self-test against the canonical benchmark) | Yes, with care |
+| `src/assess/replay_flow.py` | Second replay implementation with its own self-test, from the paper lane; which of the two is the production path is an open code decision in `knowledge/plan.md` | Do not extend before the decision |
+| `research-vault/` | Subject knowledge of the literature in the Grounded-Vault layer model; `_sources/` and `00_representation/` are gitignored by license lock and are never created here | Yes, with care |
+| `tests/` | PRISM test layers: jsdom harness, Companion smoke suite, browser pilot, pytest, manual checklist | Yes, with care |
+| `paper/` | Follow-up paper (draft, outline, expert questions) | Yes, with care |
 | `config/` | `defaults.yaml` (now lists `generated/` paths; the restructure superseded its do-not-change note) | Yes, with care |
 | `.vault_cache/` | LLM API cache (reproducible) | Do not change |
 | `prompts/` | Prompt governance and CHANGELOG | Read-only |
@@ -118,7 +122,7 @@ Academic companion publication. Vanilla JS plus Chart.js and D3 via CDN.
 
 Subpages: `about.html`, `methoden.html`, `help.html`, `onboarding.html`.
 
-Architecture rules: no build tool, no framework, no npm, CDN only (D3, Chart.js, Fuse.js, FontAwesome); IIFE pattern for all JS, communication via the `window.EC` API; IBM Plex Serif (headings) and Inter (body); ten categories as a gender-neutral spectrum; detail as a slide-in side panel; the chat API key is local only (localStorage plus gitignored `config.local.js`); data in `docs/data/research_vault_v2.json`, `concept_graph.json`, `promptotyping_v2.json`; ZIP export via JSZip.
+Architecture rules: no build tool and no framework, the served pages load their libraries from a CDN (D3, Chart.js, Fuse.js, JSZip, FontAwesome) and nothing is bundled; npm exists only for the test harness (jsdom, Playwright) and never for anything the pages load; IIFE pattern for all JS, communication via the `window.EC` API; IBM Plex Serif (headings) and Inter (body); ten categories as a gender-neutral spectrum; detail as a slide-in side panel; the chat API key is local only (localStorage plus gitignored `config.local.js`); data in `docs/data/research_vault_v2.json`, `concept_graph.json`, `promptotyping_v2.json`; ZIP export via JSZip.
 
 ---
 
@@ -152,6 +156,7 @@ Each piece of information has exactly ONE canonical location. Other files refere
 | Roadmap, current status, decided questions | `knowledge/plan.md` |
 | Standards (PRISMA, trAIce, RAISE) | `knowledge/standards.md` |
 | Work journal | `knowledge/journal.md` |
+| Subject knowledge of the literature (what the sources say, in which check state) | `research-vault/`, modelled in `knowledge/research-vault.md` |
 
 ---
 
@@ -172,6 +177,10 @@ Each piece of information has exactly ONE canonical location. Other files refere
 - Frontmatter Pflichtkern on every authored knowledge doc: `title, project, method, status, created, updated`; `version` is shared repo-wide; `status` is document maturity, not operative status.
 - Tables for comparisons, lists for enumerations.
 - Update the journal for every substantive session.
+
+### Gates before committing
+
+`npm test` (jsdom harness and Companion smoke suite), `python -m pytest tests/`, and `python -m src.publish.check_claims` when the claims layer was touched. The browser pilot (`npm run pilot`) runs before anything that changes the screening path. A green anchor check is the precondition of the `grounded` status of the claims layer, not a formality.
 
 ### Git workflow
 

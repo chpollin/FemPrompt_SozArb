@@ -7,7 +7,7 @@ status: active
 language: en
 version: "0.3"
 created: 2026-06-09
-updated: 2026-07-18
+updated: 2026-08-21
 authors: [Christopher Pollin]
 generated-with: Claude Code
 method:
@@ -445,8 +445,10 @@ Two records of this ledger stand side by side and are deliberately left unmerged
 - Two replay implementations stand in the tree after the merge, both committed, both self-testing green against `generated/benchmark-results/agreement_metrics.json`: `src/assess/replay_flow.py` with `src/assess/replay_selftest.py` (this line) and `src/replay/replay_round1.py` (the paper lane). Decide which is the production path R4 reads from, and retire the other or state why both stay. This is a code decision, not a merge decision.
 - ADR numbering after the merge: the recorded text source was decided on 2026-08-21 in favour of ADR-027 (full texts from the served manifest of ADR-025, values `raw`/`abstract`/`none`, reviewer schema 0.3), and the paper lane's ADR-024 design (raw texts from `generated/markdown_clean/` of the connected clone, title-prefix matching without a manifest, an added `knowledge_doc` value, schema kept at 0.2) does not survive; its repo-root connect target was ported and holds. What the decision leaves untouched is that both lines used the number ADR-024 for different decisions, so the ADR register in [[specification]] carries a collision to resolve when the registers are merged.
 - Reviewer key before screening starts: the key is seeded by a documented localStorage step since the identity form left with ADR-021; decide UI switcher versus documented manual step (carried from the 2026-07-03 handoff, confirmed by the 2026-08-21 pilot).
-- P2 race: committing a decision while the text is still loading records the synchronous source guess; guard the commit or re-resolve `text_source` when the read completes. Recorded on the paper lane against its own build, so re-check it against the ADR-027 implementation before the disclosure relies on the per-source counts.
+- Grounding the research-vault: the anchor layer `00_representation/` was never built, so the distillates carry `migrated` and not `grounded`, and the deliverable layer `30_deliverable/` is empty. The binding stage-3 verification of the waitlist (`research-vault/waitlist.md`) is untouched and cannot be delegated to a machine. Both are preconditions of a vault that carries its own status claim; decide whether they are executed in this project's scope.
 - Filesystem housekeeping: the acquired PDFs still sit in the gitignored `pipeline/pdfs/` instead of the declared `generated/pdfs` (`config/defaults.yaml`); move or delete the leftover.
 - Folder restructure executed 2026-06-30 (code into `src/`, generated data into `generated/`, deep-research into `corpus/`, assessment unified); see [[journal]] Session 24.
+
+Resolved 2026-08-21: the P2 race (a decision committed while the text was still loading recorded the synchronous source guess). The ADR-027 implementation gates the commit on the applied reading and re-evaluates it when the read completes; the browser pilot asserts the gate, its release and a delayed out-of-order load, and three mutations each fell exactly one of those assertions. The per-source counts of the disclosure can rely on `text_source`.
 
 Resolved 2026-07-03: reviewer identity in public files (neutral ids `reviewer-1`/`reviewer-2` repo-wide, acceptable in a public repo); screening mode (both reviewers screen the full batch, see the decided questions above); O5 (one decisions file per reviewer, ADR-021 default confirmed as the decision); the [[standards]] item 1 report reference (the Forum Wissenschaft paper is the external round-1 report of record, marked as outside the repo).
