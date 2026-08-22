@@ -1,0 +1,50 @@
+{
+  "schema": "femprompt-prisma-agent-run/0.1",
+  "run_id": "agent-v03-10-20260822",
+  "status": "aborted",
+  "abort_reason": "Der lokale Browserzustand des ersten, wegen offengelegter Vergleichsdaten abgebrochenen Versuchs wurde beim Neustart über denselben Origin wiederhergestellt. Es entstand kein Export.",
+  "prompt": {
+    "path": "prompts/prism-agent-reviewer.md",
+    "version_at_run": "0.3",
+    "sha256_at_run": "1CE020742A6A1E9477CF152457995E26C711F340D2129B76E5BDF37D3242A9ED"
+  },
+  "method": {
+    "categories": "assessment/categories.yaml#v1.3",
+    "coding_protocol": "knowledge/update-protocol.md#B-B.1-C",
+    "publication_type_policy": "Zulässig sind wissenschaftliche Artikel, Konferenzbeiträge, wissenschaftliche Buchkapitel, systematische Reviews, belegte Forschungs- und Policy-Reports sowie fachwissenschaftliche Kommentare und Editorials mit identifizierbarer Autorenschaft und Quellenbasis. Ausgeschlossen werden kommerzielle Blogs, Marketingtexte, Newsbeiträge, Landingpages, allgemeine Ratgeber ohne wissenschaftliche Anlage und unbelegte institutionelle Webtexte. Ein nicht eindeutig zuordenbarer Publikationstyp wird als Blocker gemeldet und im Pilot nicht gespeichert."
+  },
+  "repository_root": ".",
+  "selection": {
+    "policy": "Deterministische, inhaltsblinde Stichprobe aus bisher ungenutzten Testfällen; geschichtet nach neutralem Publikationstyp und Textquellenverfügbarkeit.",
+    "excluded_sources": [
+      "tests/review-cases",
+      "docs/data/review-cases"
+    ]
+  },
+  "tracks": [
+    {
+      "reviewer": "ar1",
+      "actor": "agent",
+      "prism_url": "http://127.0.0.1:8791/prisma.html?trial=1&actor=agent&reviewer=ar1",
+      "paper_ids": [
+        "MA3LBJS6",
+        "WAYCKUZ8",
+        "7L78MV2V",
+        "3GB9B4IJ",
+        "7VFNS5R3",
+        "2EBHMYU4",
+        "T8R8RKX9",
+        "XIYX5HJS",
+        "THGC3PA2",
+        "EXRF5629"
+      ],
+      "export": "tests/review-cases/agent-runs/agent-v03-10-20260822/tracks/ar1.json",
+      "report": "tests/review-cases/agent-runs/agent-v03-10-20260822/reports/ar1.md",
+      "status": "assigned"
+    }
+  ],
+  "evaluation": {
+    "status": "pending",
+    "report": null
+  }
+}

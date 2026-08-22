@@ -1,0 +1,1031 @@
+{
+  "schema": "femprompt-prisma-reviewer/0.3",
+  "reviewer": "ar2",
+  "actor": "agent",
+  "status": "provisional_technical_acceptance",
+  "updated": "2026-08-22T12:00:23.462Z",
+  "decisions": {
+    "2EBHMYU4": {
+      "categories": {
+        "AI_Literacies": 1,
+        "KI_Sonstige": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Diversitaet": 2,
+        "Feministisch": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "robust approach to raise awareness and literacy",
+            "snippet": "…aving the ability to exert influence” (UNESCO, 2020, p. 23). Additionally, it calls for a robust approach to raise awareness and literacy, technical and ethical education, skills development, and capacity building.",
+            "ts": "2026-08-22T11:55:41.498Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "AI is not just a neutral tool",
+            "snippet": "…—a more contested and problematic nature of AI is revealed. These examples highlight that AI is not just a neutral tool but is co‐created with society, and as such has major political and social implications i…",
+            "ts": "2026-08-22T11:55:58.586Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "systemic issues reflecting existing power relationships in the AI sector",
+            "snippet": "Importantly, the reports emphasize that these are systemic issues reflecting existing power relationships in the AI sector, which are shaped by a feedback loop of discriminatory workplace practices leading to dis…",
+            "ts": "2026-08-22T11:56:09.136Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "The major gender disparity in the AI workforce hinders the development of equita",
+            "snippet": "…riminatory workplace practices leading to discriminatory tools (S. M. West et al., 2019). The major gender disparity in the AI workforce hinders the development of equitable AI (Collett & Dillon, 2019). “A troubling and persistent absence of women” (Young et ",
+            "ts": "2026-08-22T11:56:19.252Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "Lack of diversity in the AI workforce is seen as the key problem in all four rep",
+            "snippet": "Lack of diversity in the AI workforce is seen as the key problem in all four reports. It is called the “diversity crisis” and “diversity disaster” (S. M. West et al., 2019) a…",
+            "ts": "2026-08-22T11:56:31.653Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Feministisch": [
+          {
+            "term": "Feminist, intersectional, and decolonial approaches to AI present resistance",
+            "snippet": "…nazio & Klein, 2020; Little & Winch, 2021; Noble, 2018; Søraa, 2023; Young et al., 2023). Feminist, intersectional, and decolonial approaches to AI present resistance to discriminatory AI, draw attention to the wealth of experience that has been erased fro…",
+            "ts": "2026-08-22T11:56:43.920Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ]
+      },
+      "ts": "2026-08-22T11:57:52.322Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Intersectional",
+            "Race_Ethnicity",
+            "Socioeconomic"
+          ],
+          "AN_Harm_Types": [
+            "Direct_Discrimination",
+            "Disparate_Performance",
+            "Exclusionary_Norms",
+            "Stereotyping"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process",
+            "Pre_Processing"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "Qualitative Framing-Analyse von vier Berichten zu Intersektionalität und KI. Das Paper synthetisiert strukturelle Arbeitsmarkt- und Systemschäden sowie organisatorische und datenbezogene Empfehlungen.",
+          "Studientyp": "Empirisch"
+        },
+        "undecidable": {}
+      }
+    },
+    "3GB9B4IJ": {
+      "categories": {
+        "Generative_KI": 2,
+        "Prompting": 2
+      },
+      "decision": "Exclude",
+      "override": false,
+      "reason": "Not_relevant_topic",
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "In this paper we investigate the ability of Large Language Models (LLMs) to reas",
+            "snippet": "…for AI systems to assist users in understanding the social state of their relationships. In this paper we investigate the ability of Large Language Models (LLMs) to reason about trust between two individuals in an environment which requires fostering trust re",
+            "ts": "2026-08-22T11:13:23.201Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "These elements were then combined together, as illustrated in Fig. 1, to constru",
+            "snippet": "…ectively reason about trust based on conversational interactions between two individuals. These elements were then combined together, as illustrated in Fig. 1, to construct a system prompt provided to the LLMs for trust analysis.",
+            "ts": "2026-08-22T11:13:24.001Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ]
+      },
+      "ts": "2026-08-22T11:13:43.102Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw"
+    },
+    "7L78MV2V": {
+      "categories": {
+        "Generative_KI": 2,
+        "Prompting": 1,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Diversitaet": 2,
+        "Feministisch": 1,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "we survey the different types of social bias evidenced in the text generated by ",
+            "snippet": "…as, that is, the bias caused by the choice of texts that make up a training corpus. Then, we survey the different types of social bias evidenced in the text generated by language models trained on such corpora, ranging from gender to age, from sexual orientat",
+            "ts": "2026-08-22T11:11:11.029Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "we base most of our examples on text completion, i.e., the task of completing a ",
+            "snippet": "…gle Translate and DeepL. To keep a level playing field among the different cases of bias, we base most of our examples on text completion, i.e., the task of completing a human-written input w 1 , w 2 , . . . , w t -1 by sampling the next word(s) according to ",
+            "ts": "2026-08-22T11:11:11.847Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "In this article, we introduce and discuss the pervasive issue of bias in the lar",
+            "snippet": "In this article, we introduce and discuss the pervasive issue of bias in the large language models that are currently at the core of mainstream approaches to Natural Language Processing (NLP). We first introduce data selection bias, that is, the bias caused by",
+            "ts": "2026-08-22T11:11:12.662Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "Gender bias is the tendency to prefer one gender over another. This can lead to ",
+            "snippet": "Gender bias is the tendency to prefer one gender over another. This can lead to unequal opportunities, e.g., in education, employment or politics, and it can affect the way individuals or gro…",
+            "ts": "2026-08-22T11:11:13.480Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "Increasing language and cultural diversity: Focusing on more languages implies f",
+            "snippet": "Increasing language and cultural diversity: Focusing on more languages implies focusing on different cultures and taking into account bias from different perspectives and in a global way. Unfortunately, the current state of NLP is strongly oriented towards cov",
+            "ts": "2026-08-22T11:11:20.498Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Feministisch": [
+          {
+            "term": "People have multiple intersecting identities. In this context, intersectionality",
+            "snippet": "People have multiple intersecting identities. In this context, intersectionality describes how different aspects of a person's social identity can combine to create discrimination. In language models, some biases may only become evident when considering more t",
+            "ts": "2026-08-22T11:11:21.314Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "metrics used in hundreds of papers dealing with social bias can be unified under",
+            "snippet": "…0] have also been made available. Importantly, it has been found that the various sets of metrics used in hundreds of papers dealing with social bias can be unified under three generalized fairness metrics: pairwise comparison, background comparison, and mult",
+            "ts": "2026-08-22T11:11:22.129Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ]
+      },
+      "ts": "2026-08-22T11:11:42.647Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Object_of_Critique",
+            "Research_Instrument"
+          ],
+          "AN_Prompt_Techniques": [
+            "General_Guidance",
+            "ICL"
+          ],
+          "AN_Bias_Axes": [
+            "Age",
+            "Disability",
+            "Gender",
+            "Intersectional",
+            "Language_Culture",
+            "Nationality_Migration",
+            "Physical_Appearance",
+            "Race_Ethnicity",
+            "Religion",
+            "Sexual_Orientation_Identity",
+            "Socioeconomic"
+          ],
+          "AN_Harm_Types": [
+            "Derogatory_Language",
+            "Direct_Discrimination",
+            "Disparate_Performance",
+            "Erasure",
+            "Exclusionary_Norms",
+            "Indirect_Discrimination",
+            "Misrepresentation",
+            "Stereotyping",
+            "Toxicity"
+          ],
+          "AN_Mitigation_Stage": [
+            "In_Training",
+            "Post_Processing",
+            "Pre_Processing"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "General_Guidance: human-written text-completion prompts and textual templates used to elicit and inspect model bias.",
+          "Studientyp": "Literaturreview"
+        },
+        "undecidable": {}
+      }
+    },
+    "7VFNS5R3": {
+      "categories": {
+        "AI_Literacies": 2,
+        "KI_Sonstige": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Diversitaet": 2,
+        "Feministisch": 1
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "The objective of this study was to design, implement and evaluate an AI literacy",
+            "snippet": "…ted efforts have been made to promote artificial intelligence (AI) literacy for citizens. The objective of this study was to design, implement and evaluate an AI literacy course for university students. One of the study ' s research questions was whether univ",
+            "ts": "2026-08-22T11:18:06.996Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "machine learning, supervised learning and unsupervised learning",
+            "snippet": "The course covered the following major concepts: artificial intelligence, machine learning, supervised learning and unsupervised learning.",
+            "ts": "2026-08-22T11:18:18.564Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "The course helped to narrow the gap in AI literacy between the participants from",
+            "snippet": "…the course, this difference was reduced after the course, as shown in Fig. 7. Therefore, the course helped to narrow the gap in AI literacy between the participants from computer science-related disciplines and those from other disciplines.",
+            "ts": "2026-08-22T11:18:24.581Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "This finding highlighted that the course helped to bridge the difference in AI e",
+            "snippet": "…bout AI, the female participants showed a greater increase in their sense of empowerment. This finding highlighted that the course helped to bridge the difference in AI empowerment between genders.",
+            "ts": "2026-08-22T11:18:30.598Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "We felt it was critical that participants from different backgrounds and of both",
+            "snippet": "The course targeted university students from all study backgrounds and both genders. We felt it was critical that participants from different backgrounds and of both genders have equal opportunities to gain the skills they need to operate in an AI-integrated s",
+            "ts": "2026-08-22T11:18:41.648Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Feministisch": [
+          {
+            "term": "structural barriers that perpetuate workplace gender inequality",
+            "snippet": "…17). Such a gender stereotypes can lead to different levels of self-motivation and create structural barriers that perpetuate workplace gender inequality (International Labour Organization, 2017; OECD, 2018a). Fig. 6 illustrates the changes in…",
+            "ts": "2026-08-22T11:18:47.665Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ]
+      },
+      "ts": "2026-08-22T11:19:16.451Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Gender"
+          ],
+          "AN_Harm_Types": [
+            "Exclusionary_Norms",
+            "Stereotyping"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Empirisch"
+        },
+        "undecidable": {}
+      }
+    },
+    "EXRF5629": {
+      "categories": {},
+      "decision": "Exclude",
+      "override": false,
+      "reason": "No_full_text",
+      "override_reason": null,
+      "evidence": {},
+      "ts": "2026-08-22T11:35:34.837Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "abstract"
+    },
+    "MA3LBJS6": {
+      "categories": {
+        "KI_Sonstige": 2,
+        "Soziale_Arbeit": 2,
+        "AI_Literacies": 1,
+        "Generative_KI": 1,
+        "Bias_Ungleichheit": 1
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "Um solche Systeme sinnvoll einsetzen zu können, ist es notwendig, dass Fachkräft",
+            "snippet": "…den zu anderen Fällen soll die Fachkraft in ihren Beratungsgesprächen unterstützt werden. Um solche Systeme sinnvoll einsetzen zu können, ist es notwendig, dass Fachkräfte Wissen darüber erlangen, wie durch das System generierte Vorschläge zu interpretieren s",
+            "ts": "2026-08-22T11:05:34.837Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Generative_KI": [
+          {
+            "term": "Mit GPT-3 besteht die Möglichkeit, Texte zu erzeugen, die sehr nah an der natürl",
+            "snippet": "Mit GPT-3 besteht die Möglichkeit, Texte zu erzeugen, die sehr nah an der natürlichen Sprache sind. Die Unterstützung in der Analyse von Dokumenten und Social Media kann einen Mehrwert für…",
+            "ts": "2026-08-22T11:05:35.636Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "vertieft der Bereich der Sprachverarbeitung durch KI, das Natural Language Proce",
+            "snippet": "…erkannt und diskutiert. Mit diesem Artikel wird ein Beitrag zum Diskurs geleistet, indem vertieft der Bereich der Sprachverarbeitung durch KI, das Natural Language Processing (NLP), in den Blick genommen wird. Verarbeitung natürlicher Sprache ist aufgrund der",
+            "ts": "2026-08-22T11:04:57.368Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Soziale_Arbeit": [
+          {
+            "term": "In verschiedenen Handlungsfeldern der Sozialen Arbeit wird der Einfluss von NLP ",
+            "snippet": "…auf Klient*innen greifen wir auf die Media Equation Theory (Nass und Brave 2005) zurück. In verschiedenen Handlungsfeldern der Sozialen Arbeit wird der Einfluss von NLP exemplarisch dargestellt. Die entsprechenden Erörterungen sind wiederum für die profession",
+            "ts": "2026-08-22T11:05:34.036Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Ohne interdisziplinäre Teams in der Entwicklung von Werkzeugen, die NLP nutzen, ",
+            "snippet": "…sich z. B. darin, dass stereotype Rollenbilder wiederholt werden (Lucy und Bamman 2021). Ohne interdisziplinäre Teams in der Entwicklung von Werkzeugen, die NLP nutzen, besteht die Gefahr der Reproduktion von Diskriminierung und sogar weiterer Radikalisierung",
+            "ts": "2026-08-22T11:05:36.453Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ]
+      },
+      "ts": "2026-08-22T11:06:02.839Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "None"
+          ],
+          "AN_Harm_Types": [
+            "Stereotyping"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Child_Family_Welfare",
+            "General_Social_Work",
+            "Health_Care",
+            "Mental_Health"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Theoretisch"
+        },
+        "undecidable": {}
+      }
+    },
+    "T8R8RKX9": {
+      "categories": {
+        "Generative_KI": 2,
+        "Prompting": 1,
+        "KI_Sonstige": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Diversitaet": 2,
+        "Feministisch": 2,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "We proposed using retrieval to simulate resume screening via LLMs to investigate",
+            "snippet": "We proposed using retrieval to simulate resume screening via LLMs to investigate the potential for biased outcomes. We found that the models do not exhibit occupational biases, but rather reinforce societa…",
+            "ts": "2026-08-22T11:21:10.587Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "We created a set of 10 instructions",
+            "snippet": "…ery texts are encoded with an additional instruction describing the particular setting. 5 We created a set of 10 instructions, shown in Table ?? , to be encoded with job descriptions according to templates specific…",
+            "ts": "2026-08-22T11:21:16.587Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "perform a resume audit study to determine whether a selection of Massive Text Em",
+            "snippet": "…retrieval framework that simulates job candidate selection. Using that framework, we then perform a resume audit study to determine whether a selection of Massive Text Embedding (MTE) models are biased in resume screening scenarios. We simulate this for nine ",
+            "ts": "2026-08-22T11:21:22.603Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "They consistently replicate existing societal patterns of discrimination, furthe",
+            "snippet": "…sults presented here exemplify the risks associated with using LLMs for resume screening. They consistently replicate existing societal patterns of discrimination, further disadvantaging the groups already experiencing inequity in resume screening (Bertrand a",
+            "ts": "2026-08-22T11:21:29.736Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "In 51.9% of 27 tests for gender bias in resume screening, male names were prefer",
+            "snippet": "…iments, the disparities were less than those demonstrated using Black versus White names. In 51.9% of 27 tests for gender bias in resume screening, male names were preferred to female names, and only in 11.1% of tests were female names preferred, as seen in F",
+            "ts": "2026-08-22T11:21:33.354Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "Further analyses show that Black males are disadvantaged in up to 100% of cases",
+            "snippet": "…1.1% of cases, with a minority of cases showing no statistically significant differences. Further analyses show that Black males are disadvantaged in up to 100% of cases, replicating real-world patterns of bias in employment settings, and validate three hypot",
+            "ts": "2026-08-22T11:21:39.371Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Feministisch": [
+          {
+            "term": "requires accounting for structural power imbalances that underpin the conceptual",
+            "snippet": "…reth (2022), addressing and solving inequities in resume screening mediated by AI or LLMs requires accounting for structural power imbalances that underpin the conceptualization and use of these tools.",
+            "ts": "2026-08-22T11:21:49.571Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "essential in order to evaluate their fairness and improve or remove these system",
+            "snippet": "…o comprehensively audit resume screening systems, whether proprietary or open source, are essential in order to evaluate their fairness and improve or remove these systems accordingly.",
+            "ts": "2026-08-22T11:21:55.606Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ]
+      },
+      "ts": "2026-08-22T11:22:27.440Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Research_Instrument"
+          ],
+          "AN_Prompt_Techniques": [
+            "General_Guidance"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Intersectional",
+            "Race_Ethnicity"
+          ],
+          "AN_Harm_Types": [
+            "Direct_Discrimination",
+            "Disparate_Performance",
+            "Exclusionary_Norms",
+            "Indirect_Discrimination",
+            "Stereotyping"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process",
+            "Post_Processing",
+            "Pre_Processing"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "General_Guidance: Zehn Aufgabeninstruktionen werden den Stellenbeschreibungen als Retrieval-Queries hinzugefügt; Prompting dient als Forschungsinstrument.",
+          "Studientyp": "Experimentell"
+        },
+        "undecidable": {}
+      }
+    },
+    "THGC3PA2": {
+      "categories": {
+        "AI_Literacies": 2,
+        "Generative_KI": 1,
+        "KI_Sonstige": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Diversitaet": 2,
+        "Feministisch": 2,
+        "Fairness": 1
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "Im vorgestellten Seminar lernen Studierende ihren allt",
+            "snippet": "K ü nstliche Intelligenz geht uns alle an! Im vorgestellten Seminar lernen Studierende ihren allt ä glichen Umgang mit KI-Anwendungen wie KI-Assistenzsystemen, DatingApps &amp; Chat GPT a…",
+            "ts": "2026-08-22T11:32:08.246Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Generative_KI": [
+          {
+            "term": "ChatGPT mit uns kommunizieren",
+            "snippet": "…ware, mit der wir unser Smartphone entsperren, bis hin zu intelligenten Chatbots, die wie ChatGPT mit uns kommunizieren und uns bei schri ft lichen Arbeiten unterst ü tzen. KI hat gro ß artiges Potential. Sie…",
+            "ts": "2026-08-22T11:32:14.281Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "Im Seminar analysieren die Studierenden KI im Kontext von androzentrischen",
+            "snippet": "Im Seminar analysieren die Studierenden KI im Kontext von androzentrischen, eurozentrischen, anthropozentrischen, kapitalistischpatriarchalen Strukturen. Sie lernen…",
+            "ts": "2026-08-22T11:32:20.346Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Ungleichheits- Diskriminierungs- und Exklusionsmechanismen von KI-Anwendungen",
+            "snippet": "….) wie auch Mehrfachdiskriminierungen. Im Seminar wird deshalb ein analytischer Blick auf Ungleichheits- Diskriminierungs- und Exklusionsmechanismen von KI-Anwendungen geworfen und es werden die in die Technologie eingeschriebenen Bias, Sexismen, Rassismen,…",
+            "ts": "2026-08-22T11:32:35.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "Bias, Sexismen, Rassismen, Dichotomien",
+            "snippet": "…anismen von KI-Anwendungen geworfen und es werden die in die Technologie eingeschriebenen Bias, Sexismen, Rassismen, Dichotomien, Normierungs- und Kolonialisierungspraxen aufgedeckt.",
+            "ts": "2026-08-22T11:32:41.697Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "Diversit",
+            "snippet": "Gender und Diversitykompetenz f ü r die Lehre",
+            "ts": "2026-08-22T11:32:47.698Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          },
+          {
+            "term": "in algorithmische Modelle, Datens",
+            "snippet": "…italistischpatriarchalen Strukturen. Sie lernen, dass es unerl ä sslich ist, Diversit ä t in algorithmische Modelle, Datens ä tze und Systeme einzubinden und dass KI niemals unabh ä ngig von ihrem gesellscha ft li…",
+            "ts": "2026-08-22T11:33:02.881Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Feministisch": [
+          {
+            "term": "Eine feministische Perspektive deckt Macht- und Herrscha",
+            "snippet": "Was bedeutet es also, mit feministischem Blick auf KI zu schauen? Eine feministische Perspektive deckt Macht- und Herrscha ft sstrukturen auf und analysiert, wer von diesen profitiert und wer nicht. Sie identifiz…",
+            "ts": "2026-08-22T11:33:08.916Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "nach welchen Kriterien sie materialisierte KI jenseits von Normierungen",
+            "snippet": "…e Studierenden im Queerbot-Workshop in die Rolle von Roboterdesignerinnen und ü berlegen, nach welchen Kriterien sie materialisierte KI jenseits von Normierungen, Dichotomien, Sexismen und Rassismen neu denken und designen k ö nnen. Konzepte von Gesch…",
+            "ts": "2026-08-22T11:33:14.965Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ]
+      },
+      "ts": "2026-08-22T11:33:28.965Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Disability",
+            "Gender",
+            "Intersectional",
+            "Language_Culture",
+            "Other_Axis",
+            "Race_Ethnicity",
+            "Sexual_Orientation_Identity",
+            "Socioeconomic"
+          ],
+          "AN_Harm_Types": [
+            "Direct_Discrimination",
+            "Exclusionary_Norms",
+            "Indirect_Discrimination",
+            "Misrepresentation",
+            "Stereotyping"
+          ],
+          "AN_Mitigation_Stage": [
+            "In_Training",
+            "Organisational_Process",
+            "Pre_Processing"
+          ],
+          "AN_Mitigation_Status": "Demonstrated",
+          "AN_Population": [
+            "Education_Professional"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Konzept"
+        },
+        "undecidable": {}
+      }
+    },
+    "WAYCKUZ8": {
+      "categories": {
+        "AI_Literacies": 2,
+        "Generative_KI": 2,
+        "Bias_Ungleichheit": 1,
+        "Fairness": 1
+      },
+      "decision": "Unclear",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "The paradigm shift underscores the growing importance of critical engagement wit",
+            "snippet": "…age AI for data-driven insights while prioritizing human-centric skills for patient care. The paradigm shift underscores the growing importance of critical engagement with AI outputs, necessitating medical professionals to adeptly interpret and apply AI-gener",
+            "ts": "2026-08-22T11:08:54.376Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Generative_KI": [
+          {
+            "term": "This paper explores the evolving relationship among clinician trust in LLMs, the",
+            "snippet": "…integration becomes crucial for maximizing benefits while mitigating potential pitfalls. This paper explores the evolving relationship among clinician trust in LLMs, the transition of data sources from predominantly human-generated to artificial intelligence ",
+            "ts": "2026-08-22T11:08:55.160Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "The consequence of a self-referential loop in LLMs can lead to several problemat",
+            "snippet": "…materialized, it represents a likely challenge as generative AI continues to proliferate. The consequence of a self-referential loop in LLMs can lead to several problematic outcomes, including the propagation of biases [30], increased homogeneity in generated",
+            "ts": "2026-08-22T11:09:09.578Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "This perspective is crucial for developing impact assessments and frameworks aim",
+            "snippet": "…the capacity to respond ethically to the challenges posed by algorithmic decision-making. This perspective is crucial for developing impact assessments and frameworks aimed at promoting fairness and preventing discriminatory practices within algorithmic syste",
+            "ts": "2026-08-22T11:09:10.361Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ]
+      },
+      "ts": "2026-08-22T11:09:28.395Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw"
+    },
+    "XIYX5HJS": {
+      "categories": {
+        "AI_Literacies": 1,
+        "Generative_KI": 1,
+        "Prompting": 1,
+        "KI_Sonstige": 2,
+        "Soziale_Arbeit": 1,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Diversitaet": 2,
+        "Feministisch": 2,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "Develop and strengthen the public sector's and the general public's overall know",
+            "snippet": "Develop and strengthen the public sector's and the general public's overall knowledge and understanding of, and ability to engage with, AI ecosystems and development.",
+            "ts": "2026-08-22T11:27:45.502Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Generative_KI": [
+          {
+            "term": "Using image-generating AI tools such as Midjourney, Dall-e and Stable Diffusion",
+            "snippet": "…AI datasets using AI. Women are vastly underrepresented in the datasets used to train AI. Using image-generating AI tools such as Midjourney, Dall-e and Stable Diffusion, and employing gender-intentional text prompts, the campaign corrects representational bi",
+            "ts": "2026-08-22T11:27:51.520Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "employing gender-intentional text prompts",
+            "snippet": "…AI. Using image-generating AI tools such as Midjourney, Dall-e and Stable Diffusion, and employing gender-intentional text prompts, the campaign corrects representational biases in training data pools. The images are roy…",
+            "ts": "2026-08-22T11:27:57.537Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "Working towards gender equality and diversity in AI requires one to consider the",
+            "snippet": "Working towards gender equality and diversity in AI requires one to consider the full AI lifecycle from a sociotechnical perspective. A socio-technical approach to AI systems and lifecycle recognises that the performance an…",
+            "ts": "2026-08-22T11:28:03.537Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Soziale_Arbeit": [
+          {
+            "term": "Biased social benefit decision-making systems may, for example, allocate fewer r",
+            "snippet": "…i and Rodm, 2022, Buolamwini and Gebru, 2018; Hull, 2023; Ricaurte, 2019; UNESCO, 2024a). Biased social benefit decision-making systems may, for example, allocate fewer resources to individuals with disabilities and restrict employment opportunities for margi",
+            "ts": "2026-08-22T11:28:15.204Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "They reproduce the world models, cultural values, knowledge, and languages of th",
+            "snippet": "The evidence is clear: AI systems are not neutral. They reproduce the world models, cultural values, knowledge, and languages of the contexts in which they are conceived, thereby replicating or amplifying systemic inequalities based on gender, race, ethnicity,",
+            "ts": "2026-08-22T11:28:21.238Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "It examines promising practices, provides policy insights and offers actionable ",
+            "snippet": "…y of States and other stakeholders to foster inclusive, equitable and just AI ecosystems. It examines promising practices, provides policy insights and offers actionable recommendations to enhance gender equality and diversity in AI and related policy making.",
+            "ts": "2026-08-22T11:28:27.238Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "provides policy insights and offers actionable recommendations to enhance gender",
+            "snippet": "…s to foster inclusive, equitable and just AI ecosystems. It examines promising practices, provides policy insights and offers actionable recommendations to enhance gender equality and diversity in AI and related policy making. The Policy Guide for Implementin",
+            "ts": "2026-08-22T11:28:39.605Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Feministisch": [
+          {
+            "term": "Drawing on gender-transformative approaches, this report advances a transformati",
+            "snippet": "Drawing on gender-transformative approaches, this report advances a transformative approach to AI policy to achieve substantive equality .",
+            "ts": "2026-08-22T11:28:45.605Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "Adopting intersectional fairness metrics in AI models",
+            "snippet": "Adopting intersectional fairness metrics in AI models",
+            "ts": "2026-08-22T11:28:51.605Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ]
+      },
+      "ts": "2026-08-22T11:29:19.256Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Recommended_Practice"
+          ],
+          "AN_Prompt_Techniques": [
+            "General_Guidance"
+          ],
+          "AN_Bias_Axes": [
+            "Age",
+            "Disability",
+            "Gender",
+            "Intersectional",
+            "Language_Culture",
+            "Nationality_Migration",
+            "Race_Ethnicity",
+            "Religion",
+            "Sexual_Orientation_Identity",
+            "Socioeconomic"
+          ],
+          "AN_Harm_Types": [
+            "Direct_Discrimination",
+            "Disparate_Performance",
+            "Erasure",
+            "Exclusionary_Norms",
+            "Indirect_Discrimination",
+            "Misrepresentation",
+            "Stereotyping",
+            "Toxicity"
+          ],
+          "AN_Mitigation_Stage": [
+            "In_Training",
+            "Organisational_Process",
+            "Post_Processing",
+            "Pre_Processing",
+            "Prompt_Practice"
+          ],
+          "AN_Mitigation_Status": "Demonstrated",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "General_Guidance: Eine dokumentierte Bildgenerierungsinitiative nutzt gender-intentionale Textprompts als nachgeordnete empfohlene Praxis.",
+          "Studientyp": "Konzept"
+        },
+        "undecidable": {}
+      }
+    }
+  }
+}

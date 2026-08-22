@@ -1,0 +1,1040 @@
+{
+  "schema": "femprompt-prisma-reviewer/0.3",
+  "reviewer": "ea",
+  "updated": "2026-08-22T08:25:02.727Z",
+  "decisions": {
+    "AIGLDZ4C": {
+      "categories": {
+        "AI_Literacies": 2,
+        "Generative_KI": 2,
+        "Prompting": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Diversitaet": 2
+      },
+      "decision": "Exclude",
+      "override": true,
+      "reason": "Wrong_publication_type",
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "Inclusive prompt engineering",
+            "snippet": "Inclusive prompt engineering can interrupt biased AI defaults by intentionally shaping how people are described and depicted.",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Generative_KI": [
+          {
+            "term": "AI image generation tools are fast and creative",
+            "snippet": "AI image generation tools are fast and creative, but without thoughtful prompts, they often reinforce stereotypes.",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "how to write image prompts",
+            "snippet": "This article unpacks how to write image prompts that produce more inclusive, representative visuals.",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "They erase people, reinforce biases",
+            "snippet": "These default outputs are harmful. They erase people, reinforce biases, and exclude audiences.",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "Gender. Represent people of all gender identities",
+            "snippet": "Gender. Represent people of all gender identities, including non-binary, women, men, and gender-diverse individuals.",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "full spectrum of human experience",
+            "snippet": "With a few thoughtful techniques, you can generate images that respectfully and accurately reflect the full spectrum of human experience.",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ]
+      },
+      "ts": "2026-08-22T08:25:02.727Z",
+      "reviewer": "ea",
+      "text_source": "raw"
+    },
+    "CLKAD87H": {
+      "categories": {
+        "AI_Literacies": 2,
+        "Generative_KI": 2,
+        "Prompting": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 1,
+        "Diversitaet": 1,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "support novice prompt engineers and raise awareness",
+            "snippet": "Responsible prompting recommendations have the potential to support novice prompt engineers and raise awareness about RAI in prompting-time.",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Generative_KI": [
+          {
+            "term": "while people prompt GenAI systems",
+            "snippet": "while people prompt GenAI systems",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "define Responsible Prompting as the process",
+            "snippet": "define Responsible Prompting as the process",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "erasing or obfuscating social terms or issues",
+            "snippet": "erasing or obfuscating social terms or issues",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "Avoid discrimination based ongender",
+            "snippet": "Avoid discrimination based ongender",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "the more diverse your team",
+            "snippet": "Be aware that the more diverse your team, the better represented it will be and this will be reflected in your results.",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "generated classes are fair, balanced, and representative",
+            "snippet": "Make sure that any generated classes are fair, balanced, and representative. Provide additional examples of common sources of bias in hiring algorithms.",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ]
+      },
+      "ts": "2026-08-22T08:25:02.727Z",
+      "reviewer": "ea",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Learning_Content",
+            "Recommended_Practice",
+            "Research_Instrument"
+          ],
+          "AN_Prompt_Techniques": [
+            "General_Guidance"
+          ],
+          "AN_Bias_Axes": [
+            "Age",
+            "Gender",
+            "Language_Culture",
+            "Race_Ethnicity",
+            "Socioeconomic"
+          ],
+          "AN_Harm_Types": [
+            "Erasure",
+            "Misrepresentation",
+            "Stereotyping"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process",
+            "Prompt_Practice"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Education_Professional"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "Interviews und User-Study mit IT-Fachpersonen evaluieren einen Recommender für verantwortliches Prompting. Der Nachweis betrifft Nutzbarkeit und wahrgenommene RAI-Verbesserung; ein direkter Bias-Benchmark fehlt.",
+          "Studientyp": "Empirisch"
+        },
+        "undecidable": {}
+      }
+    },
+    "CY5IMM6G": {
+      "categories": {
+        "AI_Literacies": 2,
+        "Generative_KI": 1,
+        "KI_Sonstige": 2,
+        "Soziale_Arbeit": 2,
+        "Bias_Ungleichheit": 2,
+        "Diversitaet": 2,
+        "Feministisch": 1,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "AI literacy -the knowledge and skills",
+            "snippet": "AI literacy -the knowledge and skills",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Generative_KI": [
+          {
+            "term": "Recent advances in generative AI offer additional promise for social work",
+            "snippet": "Recent advances in generative AI offer additional promise for social work",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "Machine learning models analyze patterns",
+            "snippet": "Machine learning models analyze patterns in past data to estimate the likelihood of future events.",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Soziale_Arbeit": [
+          {
+            "term": "AI literacy among social workers",
+            "snippet": "AI literacy among social workers",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "AI systems potentially deepen inequalities",
+            "snippet": "AI systems potentially deepen inequalities",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "experience working with diverse communities",
+            "snippet": "experience working with diverse communities",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Feministisch": [
+          {
+            "term": "antiracist and intersectional lenses",
+            "snippet": "Examine AI systems through antiracist and intersectional lenses, understanding how algorithmic biases can perpetuate systemic oppression through data, design, and deployment choices.",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "AI bias and fairness research",
+            "snippet": "AI bias and fairness research",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ]
+      },
+      "ts": "2026-08-22T08:25:02.727Z",
+      "reviewer": "ea",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Disability",
+            "Language_Culture",
+            "Race_Ethnicity",
+            "Socioeconomic"
+          ],
+          "AN_Harm_Types": [
+            "Direct_Discrimination",
+            "Disparate_Performance",
+            "Erasure",
+            "Exclusionary_Norms",
+            "Indirect_Discrimination",
+            "Stereotyping"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process",
+            "Post_Processing",
+            "Pre_Processing"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Child_Family_Welfare",
+            "Education_Professional",
+            "General_Social_Work",
+            "Health_Care",
+            "Mental_Health",
+            "Social_Assistance_Admin"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "Konzeptionelle Übertragung eines AI-Literacy-Rahmens auf Soziale Arbeit. Beispiele reichen von Kinder- und Familienhilfe über Gesundheit bis Leistungsverwaltung; der vorgeschlagene Rahmen benötigt ausdrücklich noch empirische Prüfung.",
+          "Studientyp": "Konzept"
+        },
+        "undecidable": {}
+      }
+    },
+    "EHQBHVYV": {
+      "categories": {
+        "Generative_KI": 2,
+        "Prompting": 2,
+        "Bias_Ungleichheit": 2,
+        "Diversitaet": 2,
+        "Feministisch": 2,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "Large language models (LLMs) have substantially advanced",
+            "snippet": "Large language models (LLMs) have substantially advanced natural language processing by generating human-like text, answering questions, and performing a wide array of language tasks.",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "five primary prompt engineering approaches",
+            "snippet": "Our findings reveal five primary prompt engineering approaches: cultural prompting, affective priming, self-debiasing techniques, structured multi-step pipelines, and parameter-optimized continuous prompts.",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "associating these groups with terrorism",
+            "snippet": "This bias often takes the form of associating these groups with terrorism, violence, or religious extremism, thus reinforcing damaging stereotypes that can fuel marginalization and discrimination.",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "centering Arab and Muslim experiences",
+            "snippet": "centering Arab and Muslim experiences",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Feministisch": [
+          {
+            "term": "examination of power structures, historical injustices",
+            "snippet": "examination of power structures, historical injustices",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "performance-fairness trade-offs",
+            "snippet": "Our analysis highlights the need to carefully consider performance-fairness trade-offs when implementing prompt engineering techniques.",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ]
+      },
+      "ts": "2026-08-22T08:25:02.727Z",
+      "reviewer": "ea",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Object_of_Critique",
+            "Recommended_Practice"
+          ],
+          "AN_Prompt_Techniques": [
+            "Decomposition",
+            "Ensembling",
+            "General_Guidance",
+            "Role_Persona",
+            "Self_Criticism",
+            "Thought_Generation"
+          ],
+          "AN_Bias_Axes": [
+            "Intersectional",
+            "Language_Culture",
+            "Nationality_Migration",
+            "Race_Ethnicity",
+            "Religion"
+          ],
+          "AN_Harm_Types": [
+            "Derogatory_Language",
+            "Misrepresentation",
+            "Stereotyping",
+            "Toxicity"
+          ],
+          "AN_Mitigation_Stage": [
+            "In_Training",
+            "Intra_Processing",
+            "Post_Processing",
+            "Prompt_Practice"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "Systematischer Review von acht heterogenen empirischen Studien. Prozentwerte und Metriken sind nicht direkt vergleichbar; die aggregierte Kategorie Arab/Muslim und der englischsprachige Suchraum begrenzen die Evidenz.",
+          "Studientyp": "Literaturreview"
+        },
+        "undecidable": {}
+      }
+    },
+    "I78CL6R5": {
+      "categories": {
+        "AI_Literacies": 2,
+        "Generative_KI": 1,
+        "Prompting": 1,
+        "KI_Sonstige": 2,
+        "Bias_Ungleichheit": 2,
+        "Diversitaet": 2,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "clearly explain how AI technologies work and impact society",
+            "snippet": "clearly explain how AI technologies work and impact society",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Generative_KI": [
+          {
+            "term": "ChatGPT and Sora",
+            "snippet": "ChatGPT and Sora",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "students need to learn how to prompt effectively",
+            "snippet": "students need to learn how to prompt effectively",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "essential concepts such as big data, machine learning",
+            "snippet": "The students must understand essential concepts such as big data, machine learning, and cloud computing.",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "fairness and biases",
+            "snippet": "fairness and biases",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "promote inclusive and diverse AI education",
+            "snippet": "promote inclusive and diverse AI education",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "fairness and biases; trust and transparency; accountability; social benefit",
+            "snippet": "fairness and biases; trust and transparency; accountability; social benefit",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ]
+      },
+      "ts": "2026-08-22T08:25:02.727Z",
+      "reviewer": "ea",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Learning_Content",
+            "Recommended_Practice"
+          ],
+          "AN_Prompt_Techniques": [
+            "General_Guidance",
+            "Role_Persona"
+          ],
+          "AN_Bias_Axes": [
+            "Language_Culture"
+          ],
+          "AN_Harm_Types": [
+            "None"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "Qualitative Co-Design-Studie mit 30 Lehrkräften. Bias und Fairness sind ein Ethikbaustein; Prompt Engineering wird als Lerninhalt und Forschungsrichtung vorgeschlagen. Der Rahmen wurde noch nicht in der Praxis evaluiert.",
+          "Studientyp": "Empirisch"
+        },
+        "undecidable": {}
+      }
+    },
+    "J9IZDVTW": {
+      "categories": {
+        "AI_Literacies": 2,
+        "KI_Sonstige": 2,
+        "Bias_Ungleichheit": 1,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "survey on AI literacy was performed in four dimensions",
+            "snippet": "A survey on AI literacy was performed in four dimensions: cognitive, operational, critical and ethical.",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "Artificial Intelligence (AI) stands at the forefront",
+            "snippet": "Artificial Intelligence (AI) stands at the forefront",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "limitations and potential biases",
+            "snippet": "limitations and potential biases",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "encompassing transparency, fairness, responsibility",
+            "snippet": "encompassing transparency, fairness, responsibility",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ]
+      },
+      "ts": "2026-08-22T08:25:02.727Z",
+      "reviewer": "ea",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "None"
+          ],
+          "AN_Harm_Types": [
+            "None"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Education_Professional"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "Befragung von 66 Doktorand:innen zur selbst eingeschätzten AI Literacy und zum Vertrauen in KI. Fairness ist Teil der ethischen Kompetenzdimension; konkrete Bias-Achsen oder Bias-Interventionen werden nicht untersucht.",
+          "Studientyp": "Empirisch"
+        },
+        "undecidable": {}
+      }
+    },
+    "JZN2I6J5": {
+      "categories": {
+        "Generative_KI": 2,
+        "Prompting": 2,
+        "KI_Sonstige": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Diversitaet": 1,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "Large language models are prone to internalize",
+            "snippet": "Large language models are prone to internalize social biases due to the characteristics of the data used for their self-supervised training scheme.",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "novel prompt-tuning method",
+            "snippet": "We present a novel prompt-tuning method for reducing biases in encoder models such as BERT or RoBERTa.",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "encoder models such as BERT or RoBERTa",
+            "snippet": "We present a novel prompt-tuning method for reducing biases in encoder models such as BERT or RoBERTa.",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "perpetuating stereotypes towards underrepresented groups",
+            "snippet": "It is mandatory to identify and alleviate these biases to avoid perpetuating stereotypes towards underrepresented groups.",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "particularize this method to gender bias",
+            "snippet": "particularize this method to gender bias",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "retaining the identity of all social groups",
+            "snippet": "retaining the identity of all social groups",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "ensuring fairness is becoming more and more critical",
+            "snippet": "ensuring fairness is becoming more and more critical",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ]
+      },
+      "ts": "2026-08-22T08:25:02.727Z",
+      "reviewer": "ea",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Recommended_Practice",
+            "Research_Instrument"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Gender"
+          ],
+          "AN_Harm_Types": [
+            "Disparate_Performance",
+            "Exclusionary_Norms",
+            "Stereotyping"
+          ],
+          "AN_Mitigation_Stage": [
+            "In_Training",
+            "Intra_Processing"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "Experimentelles Soft-Prompt-Tuning für BERT und RoBERTa, evaluiert mit SEAT und StereoSet. Die kontrollierte Prompttechnik-Liste enthält keinen Soft-Prompt-Code; daher AN_Prompt_Techniques=None.",
+          "Studientyp": "Experimentell"
+        },
+        "undecidable": {}
+      }
+    },
+    "UBYTNGNV": {
+      "categories": {
+        "Generative_KI": 1,
+        "KI_Sonstige": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Diversitaet": 2,
+        "Feministisch": 1,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "Large Language Models (LLMs) and Generative AI",
+            "snippet": "Large Language Models (LLMs) and Generative AI",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "AI systems considered as high-risk",
+            "snippet": "AI systems considered as high-risk",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "gender biases and discriminatory risk",
+            "snippet": "gender biases and discriminatory risk",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "through the lens of gender equality",
+            "snippet": "through the lens of gender equality",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "inclusive and diverse design and development",
+            "snippet": "inclusive and diverse design and development",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Feministisch": [
+          {
+            "term": "historical and structural exclusion of certain communities",
+            "snippet": "historical and structural exclusion of certain communities",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "appropriate measures to detect, prevent and mitigate possible biases",
+            "snippet": "appropriate measures to detect, prevent and mitigate possible biases",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ]
+      },
+      "ts": "2026-08-22T08:25:02.727Z",
+      "reviewer": "ea",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Gender"
+          ],
+          "AN_Harm_Types": [
+            "Direct_Discrimination",
+            "Exclusionary_Norms",
+            "Indirect_Discrimination"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process",
+            "Post_Processing",
+            "Pre_Processing"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "Rechtsdogmatische Analyse des AI Act aus Gender- und Nichtdiskriminierungsperspektive. Vorgeschlagene Audits, Folgenabschätzungen und Aufsicht werden normativ bewertet; Ausnahmen und begrenzter Anwendungsbereich schwächen den Schutz.",
+          "Studientyp": "Theoretisch"
+        },
+        "undecidable": {}
+      }
+    },
+    "Z4YXX9PZ": {
+      "categories": {
+        "Generative_KI": 2,
+        "Prompting": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Diversitaet": 2,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "5 cutting-edge LLMs",
+            "snippet": "5 cutting-edge LLMs",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "12 different prompting techniques",
+            "snippet": "12 different prompting techniques",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "largest reduction in social bias",
+            "snippet": "largest reduction in social bias",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "gender bias improvement of up to 9 percent",
+            "snippet": "We also observe a gender bias improvement of up to 9 percent across various models.",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "nine distinct social bias categories",
+            "snippet": "nine distinct social bias categories",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "ensuring fairness and inclusivity",
+            "snippet": "ensuring fairness and inclusivity",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ]
+      },
+      "ts": "2026-08-22T08:25:02.727Z",
+      "reviewer": "ea",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Recommended_Practice",
+            "Research_Instrument"
+          ],
+          "AN_Prompt_Techniques": [
+            "General_Guidance",
+            "Role_Persona",
+            "Thought_Generation"
+          ],
+          "AN_Bias_Axes": [
+            "Age",
+            "Gender",
+            "Nationality_Migration",
+            "Other_Axis",
+            "Physical_Appearance",
+            "Race_Ethnicity",
+            "Religion"
+          ],
+          "AN_Harm_Types": [
+            "Stereotyping"
+          ],
+          "AN_Mitigation_Stage": [
+            "Prompt_Practice"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "Experiment mit zwölf Promptvarianten, fünf LLMs und neun getrennt ausgewerteten Bias-Kategorien. Human-Persona/System-2-Effekte variieren nach Modell und Kategorie; CoT reduziert Stereotype nicht konsistent.",
+          "Studientyp": "Experimentell"
+        },
+        "undecidable": {}
+      }
+    },
+    "ZLMLP53P": {
+      "categories": {
+        "Generative_KI": 1,
+        "KI_Sonstige": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Diversitaet": 2,
+        "Feministisch": 2,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "Some of these harms can be traced to large language models",
+            "snippet": "Some of these harms can be traced to large language models",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "Queer in AI, a grassroots organization",
+            "snippet": "Queer in AI, a grassroots organization",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "produces discriminatory outcomes and harms marginalized communities",
+            "snippet": "produces discriminatory outcomes and harms marginalized communities",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "inherently cisnormative and heteronormative",
+            "snippet": "inherently cisnormative and heteronormative",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "including people with diverse lived experiences",
+            "snippet": "including people with diverse lived experiences",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Feministisch": [
+          {
+            "term": "intersectionality as critical inquiry and praxis",
+            "snippet": "intersectionality as critical inquiry and praxis",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "computational approaches to fairness can reinforce",
+            "snippet": "computational approaches to fairness can reinforce",
+            "ts": "2026-08-22T08:25:02.727Z",
+            "origin": "human"
+          }
+        ]
+      },
+      "ts": "2026-08-22T08:25:02.727Z",
+      "reviewer": "ea",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Disability",
+            "Gender",
+            "Intersectional",
+            "Language_Culture",
+            "Nationality_Migration",
+            "Other_Axis",
+            "Race_Ethnicity",
+            "Sexual_Orientation_Identity",
+            "Socioeconomic"
+          ],
+          "AN_Harm_Types": [
+            "Derogatory_Language",
+            "Direct_Discrimination",
+            "Disparate_Performance",
+            "Erasure",
+            "Exclusionary_Norms",
+            "Indirect_Discrimination",
+            "Misrepresentation",
+            "Stereotyping",
+            "Toxicity"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Demonstrated",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "Organisationsfallstudie mit Programm-, Teilnahme- und Befragungsdaten. Sie dokumentiert umgesetzte community-geführte Maßnahmen und deren Grenzen; ein experimenteller Kausalnachweis fehlt.",
+          "Studientyp": "Empirisch"
+        },
+        "undecidable": {}
+      }
+    }
+  }
+}

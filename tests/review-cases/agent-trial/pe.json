@@ -1,0 +1,837 @@
+{
+  "schema": "femprompt-prisma-reviewer/0.3",
+  "reviewer": "pe",
+  "updated": "2026-08-22T08:49:21.311Z",
+  "decisions": {
+    "4GYXUS9Y": {
+      "categories": {
+        "AI_Literacies": 2,
+        "Generative_KI": 2,
+        "Prompting": 1,
+        "KI_Sonstige": 1,
+        "Soziale_Arbeit": 2,
+        "Bias_Ungleichheit": 2,
+        "Diversitaet": 2,
+        "Fairness": 1
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "ethical imperative to maintain competency",
+            "snippet": "…d position them to interrogate the use of ChatGPT or its implications. Congruent with the ethical imperative to maintain competency, professionals will need channels to learn about emerging AI tools, seeking guidance from…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Generative_KI": [
+          {
+            "term": "Chat GPT is a chatbot",
+            "snippet": "R eleased on November 30, 2022, Chat GPT is a chatbot powered by artificial intelligence (AI) that responds to prompts posed as questions, prod…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "responds to prompts posed as questions",
+            "snippet": "…on November 30, 2022, Chat GPT is a chatbot powered by artificial intelligence (AI) that responds to prompts posed as questions, producing intelligible, mostly accurate text responses. ChatGPT is built on natural lang…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "risk assessment in child welfare",
+            "snippet": "…shows that the existing use of advanced technological tools-in arenas like sentencing or risk assessment in child welfare-has exerted disproportionate impact upon marginalized populations, because the constructi…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Soziale_Arbeit": [
+          {
+            "term": "ChatGPT and Social Work",
+            "snippet": "The End of the World as We Know It? ChatGPT and Social Work",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "amplifies existing bias and discrimination",
+            "snippet": "…n marginalized populations, because the construction and deployment of these technologies amplifies existing bias and discrimination (Gillingham, 2019). Post hoc fixes that control for cumulative bias across AI-driven tech…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "not inclusive of diverse perspectives",
+            "snippet": "…megabytes; Kitchin, 2014). The extant texts training these language models are generally not inclusive of diverse perspectives and frequently reflect larger biases of society. Unlike prior bots, ChatGPT is adept at a…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "advocate for its fair use",
+            "snippet": "…conversations that purposefully engage the evolution of AI, explore its implications, and advocate for its fair use.",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ]
+      },
+      "ts": "2026-08-22T08:49:21.311Z",
+      "reviewer": "pe",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Learning_Content"
+          ],
+          "AN_Prompt_Techniques": [
+            "General_Guidance"
+          ],
+          "AN_Bias_Axes": [
+            "None"
+          ],
+          "AN_Harm_Types": [
+            "Erasure",
+            "Indirect_Discrimination"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "General_Social_Work"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "General Guidance bezeichnet die einfache Frageform als Interaktion mit ChatGPT; eine benannte Prompttechnik fehlt. Der Beitrag fordert Fortbildung, organisationsbezogene Regeln und eine menschenrechtsbasierte fachliche Auseinandersetzung.",
+          "Studientyp": "Konzept"
+        },
+        "undecidable": {}
+      }
+    },
+    "9WIGR47Y": {
+      "categories": {
+        "Soziale_Arbeit": 2,
+        "Diversitaet": 1
+      },
+      "decision": "Exclude",
+      "override": false,
+      "reason": "Not_relevant_topic",
+      "override_reason": null,
+      "evidence": {
+        "Soziale_Arbeit": [
+          {
+            "term": "ethical issues of the Social Work profession",
+            "snippet": "…for reporting systematic reviews of PRISMA 2020. The research objective is related to the ethical issues of the Social Work profession associated with the use of digital technologies in professional practice. Increasing ethi…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "accessibility and inclusivity",
+            "snippet": "…professional integrity. Furthermore, practitioners should leverage technology to enhance accessibility and inclusivity in service delivery. They must remain mindful of the digital divide and ensure that techn…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ]
+      },
+      "ts": "2026-08-22T08:49:21.311Z",
+      "reviewer": "pe",
+      "text_source": "raw"
+    },
+    "A776TPGG": {
+      "categories": {
+        "Generative_KI": 1,
+        "KI_Sonstige": 2,
+        "Soziale_Arbeit": 1,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Diversitaet": 2,
+        "Feministisch": 2,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "generative AI tools",
+            "snippet": "…ors, particularly women. To the extent of gender-based violence, the rapid advancement of generative AI tools, especially in creating deepfakes, has raised legal concerns, as these tools enable the p…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "AI applications can reinforce gender disparities",
+            "snippet": "…ent control and predictive policing in domestic violence cases, the report highlights how AI applications can reinforce gender disparities. A detailed examination of specific provisions within the AI Act reveals critical gaps in…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Soziale_Arbeit": [
+          {
+            "term": "healthcare, border management control",
+            "snippet": "…women from marginalised communities. Through case studies in recruitment and employment, healthcare, border management control and predictive policing in domestic violence cases, the report highlights how AI applicat…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "structural power imbalances",
+            "snippet": "…e Act (hereinafter the 'AI Act'), assessing its capacity to address gender inequities and structural power imbalances in AI systems. Drawing on feminist theories, the paper evaluates the AI Act's limitations…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "gender biases",
+            "snippet": "…Drawing on feminist theories, the paper evaluates the AI Act's limitations in mitigating gender biases that might disproportionately impact marginalised groups, particularly women of colour an…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "diverse teams",
+            "snippet": "…ely harm marginalised communities. To achieve this, conformity assessments should involve diverse teams that reflect a range of genders, races and social backgrounds. This diversity ensures tha…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Feministisch": [
+          {
+            "term": "feminist analysis",
+            "snippet": "This paper provides a feminist analysis of the European Union's Artificial Intelligence Act (hereinafter the 'AI Act'), assessing…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "safe, reliable, fair and devoid of bias",
+            "snippet": "…es prior to deployment. These assessments typically focus on ensuring that AI systems are safe, reliable, fair and devoid of bias. However, from a feminist perspective, it is crucial to address gender bias, inclusivity…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ]
+      },
+      "ts": "2026-08-22T08:49:21.311Z",
+      "reviewer": "pe",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Age",
+            "Disability",
+            "Gender",
+            "Intersectional",
+            "Race_Ethnicity",
+            "Sexual_Orientation_Identity",
+            "Socioeconomic"
+          ],
+          "AN_Harm_Types": [
+            "Direct_Discrimination",
+            "Disparate_Performance",
+            "Erasure",
+            "Indirect_Discrimination",
+            "Misrepresentation",
+            "Stereotyping"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process",
+            "Post_Processing",
+            "Pre_Processing"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "Die vorgeschlagenen Maßnahmen umfassen repräsentative und genderdisaggregierte Daten, intersektionale Bias Audits, Gender Impact Assessments, Konformitätsprüfungen und partizipative Governance. Die Fallbeispiele belegen Diskriminierung und Fehlklassifikation; die Maßnahmen selbst werden konzeptionell vorgeschlagen.",
+          "Studientyp": "Theoretisch"
+        },
+        "undecidable": {}
+      }
+    },
+    "AIGLDZ4C": {
+      "categories": {
+        "AI_Literacies": 2,
+        "Generative_KI": 2,
+        "Prompting": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Diversitaet": 2,
+        "Fairness": 1
+      },
+      "decision": "Exclude",
+      "override": true,
+      "reason": "Wrong_publication_type",
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "These prompting techniques",
+            "snippet": "…inclusive images requires being specific, thoughtful, and intentional with your language. These prompting techniques can help you create imagery that reflects reality.",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Generative_KI": [
+          {
+            "term": "AI image generation tools",
+            "snippet": "AI image generation tools are fast and creative, but without thoughtful prompts, they often reinforce stereotypes.…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "inclusive prompt engineering",
+            "snippet": "Inclusive prompt engineering can interrupt biased AI defaults by intentionally shaping how people are described and de…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "trained on unbalanced data",
+            "snippet": "Artificial intelligence images often reinforce bias because they're trained on unbalanced data, resulting in narrow, stereotypical representations.",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "all gender identities",
+            "snippet": "Gender. Represent people of all gender identities, including non-binary, women, men, and gender-diverse individuals. Challenge stereotypes…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "range of skin tones",
+            "snippet": "Race and ethnicity. Be intentional about representing a range of skin tones, racial and ethnic backgrounds, and cultural identities. Prompt for people from specific…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "inclusive, representative visuals",
+            "snippet": "…reinforce stereotypes. This article unpacks how to write image prompts that produce more inclusive, representative visuals.",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ]
+      },
+      "ts": "2026-08-22T08:49:21.311Z",
+      "reviewer": "pe",
+      "text_source": "raw"
+    },
+    "AMYZFAPH": {
+      "categories": {
+        "AI_Literacies": 2,
+        "Generative_KI": 2,
+        "Prompting": 1,
+        "Soziale_Arbeit": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 1,
+        "Diversitaet": 1,
+        "Fairness": 1
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "knowledge and ethical awareness",
+            "snippet": "…o intend to use generative AI technologies. These responsibilities largely pertain to the knowledge and ethical awareness that research teams should develop prior to deployment of generative AI within a program…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Generative_KI": [
+          {
+            "term": "large language models (LLMs) are poised",
+            "snippet": "ABSTRACT Generative arti /uniFB01 cial intelligence (AI) and large language models (LLMs) are poised to signi /uniFB01 cantly impact social work research. These technologies can produce high…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "the prompts used should be detailed",
+            "snippet": "…loy LLMs for tasks such as information extraction, classi /uniFB01 cation, or clustering, the prompts used should be detailed, along with the names and version numbers of the tools. Authors should also include a sta…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Soziale_Arbeit": [
+          {
+            "term": "social work research",
+            "snippet": "…lligence (AI) and large language models (LLMs) are poised to signi /uniFB01 cantly impact social work research. These technologies can produce high-quality written materials and support qualitative an…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "perpetuation of harmful stereotypes",
+            "snippet": "results can lead to misinterpretation of data, perpetuation of harmful stereotypes, and policy decisions that reproduce inequity. Furthermore, LLMs are often complex and op…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "racial and gender biases",
+            "snippet": "…roduce biases inherent in the data, such as biases that result from the use of texts with racial and gender biases to train the model (Gordon, 2023). Another concern is the potential for LLMs to replace h…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "vulnerable and marginalized groups",
+            "snippet": "…re careful consideration within social work research contexts, such as research involving vulnerable and marginalized groups. The guidelines also lack suf /uniFB01 cient guidance on how AI tools should be described…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "nondiscriminatory outcomes",
+            "snippet": "…s in generative AI algorithms and their training data and work to minimize them to ensure nondiscriminatory outcomes and reporting. They should also consider the implications and impact of",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ]
+      },
+      "ts": "2026-08-22T08:49:21.311Z",
+      "reviewer": "pe",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Object_of_Critique",
+            "Recommended_Practice",
+            "Research_Instrument"
+          ],
+          "AN_Prompt_Techniques": [
+            "General_Guidance"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Race_Ethnicity"
+          ],
+          "AN_Harm_Types": [
+            "Indirect_Discrimination",
+            "Misrepresentation",
+            "Stereotyping"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process",
+            "Post_Processing"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "General_Social_Work"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "General Guidance umfasst die präzise Dokumentation von Prompts, Toolversionen und Aufgaben sowie die menschliche Prüfung erzeugter Analysen. Die Empfehlungen fordern Biasprüfung, Qualitätssicherung und institutionelle Regeln für sozialarbeitswissenschaftliche Forschung.",
+          "Studientyp": "Konzept"
+        },
+        "undecidable": {}
+      }
+    },
+    "MITLDF9S": {
+      "categories": {
+        "AI_Literacies": 1,
+        "KI_Sonstige": 2,
+        "Soziale_Arbeit": 2,
+        "Bias_Ungleichheit": 1,
+        "Fairness": 1
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "Schulungsbedarf",
+            "snippet": "…ährdungseinschätzung. Betont Human-in-the-Loop, Datenschutz, Organisationsentwicklung und Schulungsbedarf; zeigt Potenziale (präventive Hinweise) und Risiken (Bias, Fehlklassifikationen) im sensi…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "KI-Assistenzsystem",
+            "snippet": "Praxisnaher Bericht zu einem KI-Assistenzsystem für Gefährdungseinschätzung. Betont Human-in-the-Loop, Datenschutz, Organisationsentwickl…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Soziale_Arbeit": [
+          {
+            "term": "Kinderschutzkontext",
+            "snippet": "…gt Potenziale (präventive Hinweise) und Risiken (Bias, Fehlklassifikationen) im sensiblen Kinderschutzkontext.",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Bias",
+            "snippet": "…tionsentwicklung und Schulungsbedarf; zeigt Potenziale (präventive Hinweise) und Risiken (Bias, Fehlklassifikationen) im sensiblen Kinderschutzkontext.",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "Human-in-the-Loop",
+            "snippet": "Praxisnaher Bericht zu einem KI-Assistenzsystem für Gefährdungseinschätzung. Betont Human-in-the-Loop, Datenschutz, Organisationsentwicklung und Schulungsbedarf; zeigt Potenziale (präventive…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ]
+      },
+      "ts": "2026-08-22T08:49:21.311Z",
+      "reviewer": "pe",
+      "text_source": "abstract",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Demonstrated",
+          "AN_Population": [
+            "Child_Family_Welfare"
+          ],
+          "AN_Coding_Basis": "Abstract",
+          "AN_Notes": "Der Metadatensatz beschreibt ein eingesetztes Assistenzsystem, Human-in-the-Loop, Organisationsentwicklung und Schulungsbedarf. AN_Bias_Axes und AN_Harm_Types sind aus dem Abstract nicht entscheidbar. Der lokale titelungleiche Volltext wurde verworfen.",
+          "Studientyp": "Unclear"
+        },
+        "undecidable": {
+          "AN_Bias_Axes": true,
+          "AN_Harm_Types": true
+        }
+      }
+    },
+    "P82X89Q4": {
+      "categories": {
+        "AI_Literacies": 2,
+        "KI_Sonstige": 2
+      },
+      "decision": "Exclude",
+      "override": false,
+      "reason": "Not_relevant_topic",
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "comprehensive competency framework",
+            "snippet": "This study aims to develop a comprehensive competency framework for artificial intelligence (AI) literacy, delineating essential competencies and sub- co…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "data and algorithm literacy",
+            "snippet": "…ncies are: (1) AI device and software/application/platform operations ( n = 12, 41%), (2) data and algorithm literacy ( n = 23, 79%), (3) problem solving ( n = 14, 50%), (4) communication and collaboration (…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ]
+      },
+      "ts": "2026-08-22T08:49:21.311Z",
+      "reviewer": "pe",
+      "text_source": "raw"
+    },
+    "TRAN2GJU": {
+      "categories": {
+        "AI_Literacies": 1,
+        "KI_Sonstige": 2,
+        "Soziale_Arbeit": 1,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Diversitaet": 2,
+        "Feministisch": 2,
+        "Fairness": 2
+      },
+      "decision": "Exclude",
+      "override": true,
+      "reason": "Wrong_publication_type",
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "training program for governments",
+            "snippet": "…Recommendation on the Ethics of AI into an actionable roadmap, framework, repository, and training program for governments and other stakeholders in the AI ecosystem.",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "AI systems throughout their full life cycle",
+            "snippet": "…ority. It is driven by a commitment to achieving integral, planetary justice, considering AI systems throughout their full life cycle, beyond just the AI/data pipeline.",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Soziale_Arbeit": [
+          {
+            "term": "combating gender-based violence",
+            "snippet": "…ted in social justice and human rights, with a commitment to achieving social justice and combating gender-based violence while being grounded in communities. The 13 proposals incubated in our region address pro…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "structural inequalities",
+            "snippet": "…Feminist AI governance aims to address power imbalances in the AI ecosystem, considering structural inequalities, colonial legacies  , and the multidimensional harms that disproportionately affect comm…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "advancing gender equality",
+            "snippet": "…text, we will explore how a feminist perspective on AI governance can be instrumental in advancing gender equality and diversity throughout the full AI life cycle. Additionally, I will provide examples of…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "diversity, equity, and inclusion",
+            "snippet": "…st ensure that our ethical frameworks and governance structures reflect the principles of diversity, equity, and inclusion, contributing to the achievement of multidimensional justice. In this text, we will explo…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Feministisch": [
+          {
+            "term": "Based on feminist principles",
+            "snippet": "Based on feminist principles and a critical understanding of the role of technology in society, feminist AI governance…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "fair, equitable and inclusive AI systems",
+            "snippet": "…I systems responsive to global justice and the survival of the planet? How can we imagine fair, equitable and inclusive AI systems in the pursuit of universal access to human rights?",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ]
+      },
+      "ts": "2026-08-22T08:49:21.311Z",
+      "reviewer": "pe",
+      "text_source": "raw"
+    },
+    "VP6SXQHY": {
+      "categories": {
+        "AI_Literacies": 2,
+        "Generative_KI": 1,
+        "Prompting": 1,
+        "KI_Sonstige": 2,
+        "Bias_Ungleichheit": 1,
+        "Fairness": 1
+      },
+      "decision": "Unclear",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "AI Literacy Assessment Matrix",
+            "snippet": "…ork for assessing and developing AI literacy within organizations. First, we introduce an AI Literacy Assessment Matrix tailored to different managerial levels, enabling firms to evaluate AI-related competenci…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Generative_KI": [
+          {
+            "term": "generative AI for drafting reports",
+            "snippet": "…and ethically. This includes knowing how to interact with AI-driven applications, such as generative AI for drafting reports or AI-enhanced customer service platforms, and critically evaluating AI-generated outputs…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "advanced prompting techniques",
+            "snippet": "…s for daily tasks; training on responsible AI use; practical exercises on applying (e.g., advanced prompting techniques) and communicating AI results in lab and compliance contexts. | | TheHOW (Execution& Meas…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "recruitment screening, or predictive maintenance",
+            "snippet": "…They need a solid grasp of AI tools relevant to their functions, such as sales analytics, recruitment screening, or predictive maintenance. Just as Toyota trained middle managers extensively in lean production techniques in the…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "race, age, and disability discrimination",
+            "snippet": "…rkday, where its AI-based applicant recommendation system was alleged to have perpetuated race, age, and disability discrimination-claims severe enough for a court to certify a collective action alleging algorithmic bias…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "fairness, transparency, and accountability",
+            "snippet": "…s ethical and risk implications. | • 'I evaluate the ethical risks of AI systems, such as fairness, transparency, and accountability, when making strategic decisions or approving projects.' • 'I stay informed about data pr…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ]
+      },
+      "ts": "2026-08-22T08:49:21.311Z",
+      "reviewer": "pe",
+      "text_source": "raw"
+    },
+    "Z4YXX9PZ": {
+      "categories": {
+        "Generative_KI": 2,
+        "Prompting": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Diversitaet": 2,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "five major language models",
+            "snippet": "We evaluate five major language models in this paper: 1) GPT-4 (Achiam et al., 2023), using the GPT-4 checkpoint on the OpenAI A…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "12 different types of prompting techniques",
+            "snippet": "We use 12 different types of prompting techniques in our paper including the combinations of CoT, System 1, System 2, and Persona.",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "embedded social biases",
+            "snippet": "However, despite these advancements, LLMs continue to struggle with embedded social biases. These biases show up in different ways, including stereotyping and biased answers, which…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "gender, race, religion",
+            "snippet": "…Kamruzzaman et al.'s (Kamruzzaman et al., 2023) bias detection dataset. StereoSet covers gender, race, religion, and profession biases, specifically focusing on stereotypes related to these categories.…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "nine distinct social bias categories",
+            "snippet": "…12 different prompting techniques including CoT, System 1, System 2, and Persona, across nine distinct social bias categories (ageism, beauty, beauty with profession, gender, institutional, nationality, profession,…",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "fairness and inclusivity",
+            "snippet": "…pany language use. This task of mitigating social biases in LLMs is paramount to ensuring fairness and inclusivity in AI-driven",
+            "ts": "2026-08-22T08:49:21.311Z",
+            "origin": "human"
+          }
+        ]
+      },
+      "ts": "2026-08-22T08:49:21.311Z",
+      "reviewer": "pe",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Recommended_Practice",
+            "Research_Instrument"
+          ],
+          "AN_Prompt_Techniques": [
+            "Role_Persona",
+            "Thought_Generation"
+          ],
+          "AN_Bias_Axes": [
+            "Age",
+            "Gender",
+            "Nationality_Migration",
+            "Other_Axis",
+            "Physical_Appearance",
+            "Race_Ethnicity",
+            "Religion"
+          ],
+          "AN_Harm_Types": [
+            "Stereotyping"
+          ],
+          "AN_Mitigation_Stage": [
+            "Prompt_Practice"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "System-2- und Persona-Prompts werden über fünf Modelle und neun Biasgruppen experimentell verglichen. Die Studie zeigt die stärkste mittlere Reduktion stereotyper Antworten für Human Persona plus System 2; CoT allein reduziert den Bias nicht konsistent.",
+          "Studientyp": "Experimentell"
+        },
+        "undecidable": {}
+      }
+    }
+  }
+}

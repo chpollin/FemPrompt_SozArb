@@ -1,0 +1,38 @@
+{
+  "schema": "femprompt-prisma-agent-run/0.1",
+  "run_id": "replace-me",
+  "status": "prepared",
+  "prompt": {
+    "path": "prompts/prism-agent-reviewer.md",
+    "version": "0.4",
+    "sha256": "replace-with-file-sha256"
+  },
+  "method": {
+    "categories": "assessment/categories.yaml#v1.3",
+    "coding_protocol": "knowledge/update-protocol.md#B-B.1-C",
+    "publication_type_policy": "replace-with-ratified-run-rule"
+  },
+  "repository_root": ".",
+  "runtime": {
+    "provider": "replace-me",
+    "model": "replace-me",
+    "baseline_commit": "replace-me",
+    "worktree_at_run": "clean-or-dirty",
+    "application_sha256": "replace-me"
+  },
+  "tracks": [
+    {
+      "reviewer": "ar1",
+      "actor": "agent",
+      "prism_url": "http://127.0.0.1:8765/prisma.html?trial=1&actor=agent&reviewer=ar1",
+      "paper_ids": [],
+      "export": "tests/review-cases/agent-runs/replace-me/tracks/ar1.json",
+      "report": "tests/review-cases/agent-runs/replace-me/reports/ar1.md",
+      "status": "assigned"
+    }
+  ],
+  "evaluation": {
+    "status": "pending",
+    "report": null
+  }
+}

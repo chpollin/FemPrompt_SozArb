@@ -9,7 +9,8 @@
     "test:prism": "node tests/run.mjs",
     "test:companion": "node tests/companion.mjs",
     "pilot": "node tests/browser/pilot.mjs",
-    "reconcile": "node tests/browser/reconcile.mjs"
+    "reconcile": "node tests/browser/reconcile.mjs",
+    "verify:agent-track": "node tests/review-cases/verify-agent-track.mjs"
   },
   "devDependencies": {
     "jsdom": "^29.1.1",

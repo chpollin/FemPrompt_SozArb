@@ -1,0 +1,96 @@
+{
+  "schema": "femprompt-prisma-agent-run/0.1",
+  "run_id": "agent-v03-10b-20260822",
+  "status": "completed_with_supplement",
+  "prompt": {
+    "path": "prompts/prism-agent-reviewer.md",
+    "version_at_run": "0.3",
+    "sha256_at_run": "1CE020742A6A1E9477CF152457995E26C711F340D2129B76E5BDF37D3242A9ED",
+    "current_version": "0.4",
+    "current_sha256": "3EC4AFB62EF57C3FACFC8925F133F004ADF34F3F3D1B50709967E90FC1F8929A",
+    "provenance_gap": "The exact v0.3 prompt body was not committed before execution. Its captured hash is retained; v0.4 corrects the single-save ordering."
+  },
+  "method": {
+    "categories": "assessment/categories.yaml#v1.3",
+    "coding_protocol": "knowledge/update-protocol.md#B-B.1-C",
+    "publication_type_policy": "Zulässig sind wissenschaftliche Artikel, Konferenzbeiträge, wissenschaftliche Buchkapitel, systematische Reviews, belegte Forschungs- und Policy-Reports sowie fachwissenschaftliche Kommentare und Editorials mit identifizierbarer Autorenschaft und Quellenbasis. Ausgeschlossen werden kommerzielle Blogs, Marketingtexte, Newsbeiträge, Landingpages, allgemeine Ratgeber ohne wissenschaftliche Anlage und unbelegte institutionelle Webtexte. Ein nicht eindeutig zuordenbarer Publikationstyp wird als Blocker gemeldet und im Pilot nicht gespeichert."
+  },
+  "repository_root": ".",
+  "runtime": {
+    "provider": "OpenAI",
+    "model": "gpt-5.6-sol",
+    "baseline_commit": "3a0d004",
+    "worktree_at_run": "dirty",
+    "application": {
+      "path": "docs/js/prisma.js",
+      "cachebuster_at_run": "20260822-19",
+      "sha256_at_run": null,
+      "provenance_gap": "The application file hash was not captured before the run."
+    }
+  },
+  "selection": {
+    "policy": "Identische Zehn-Paper-Stichprobe des abgebrochenen Laufs. Neuer lokaler Origin und neues Kürzel verhindern die Wiederherstellung seines Browserzustands.",
+    "predecessor": "tests/review-cases/agent-runs/agent-v03-10-20260822/run.json"
+  },
+  "tracks": [
+    {
+      "reviewer": "ar2",
+      "actor": "agent",
+      "prism_url": "http://127.0.0.1:8792/prisma.html?trial=1&actor=agent&reviewer=ar2",
+      "paper_ids": [
+        "MA3LBJS6",
+        "WAYCKUZ8",
+        "7L78MV2V",
+        "3GB9B4IJ",
+        "7VFNS5R3",
+        "2EBHMYU4",
+        "T8R8RKX9",
+        "XIYX5HJS",
+        "THGC3PA2",
+        "EXRF5629"
+      ],
+      "export": "tests/review-cases/agent-runs/agent-v03-10b-20260822/tracks/ar2.json",
+      "report": "tests/review-cases/agent-runs/agent-v03-10b-20260822/reports/ar2.md",
+      "status": "supplemented"
+    }
+  ],
+  "evaluation": {
+    "status": "technical_acceptance_complete_substantive_ratification_open",
+    "report": "tests/review-cases/agent-runs/agent-v03-10b-20260822/evaluation.md"
+  },
+  "integration": {
+    "supplement": "tests/review-cases/agent-runs/agent-v03-2ebh-20260822/run.json",
+    "policy": "Use the nine records from the main export and replace the blocked 2EBHMYU4 slot with the one-record blinded supplement.",
+    "inputs": [
+      {
+        "path": "tests/review-cases/agent-runs/agent-v03-10b-20260822/tracks/ar2.json",
+        "sha256": "4AA6FA9B98185A7B727041C605506A932A2248EAA1F9E29D0BDBDE607C152FF6"
+      },
+      {
+        "path": "tests/review-cases/agent-runs/agent-v03-2ebh-20260822/tracks/ar2.json",
+        "sha256": "BE01D0E263DC6431A7C91E19F1C927F14A7C6CB82B905F1926D68C4CE8ECD3E2"
+      }
+    ],
+    "output": {
+      "path": "docs/data/screening/ar2.json",
+      "sha256": "CF7E129212FFA7FA6073480B8DD2BA0AAC9A7AEF7D01BCAC13D15A06A221FFAF",
+      "status": "provisional_technical_acceptance"
+    },
+    "acceptance_copy": {
+      "path": "docs/data/review-cases/agent-v03-10b.json",
+      "sha256": "CF7E129212FFA7FA6073480B8DD2BA0AAC9A7AEF7D01BCAC13D15A06A221FFAF"
+    },
+    "verifier": "tests/review-cases/verify-agent-track.mjs"
+  },
+  "fulltext_sha256": {
+    "MA3LBJS6": "0EA7AB9BC6B736476A5B65275AEFBF0629A57BB12F4FB6872201DA34D583C408",
+    "WAYCKUZ8": "20D48ECC6AE80CF03290CE80609BB5D94765452DAF4E60ABE485F2C1A29CB2D5",
+    "7L78MV2V": "2C44B52D9E556D06192F0945AC4B88FF540BF8863629B82698008899EA8ADDFF",
+    "3GB9B4IJ": "4EE2A00443D543EA9BCE53CD7E47B85C617956B5964F491C9511CE55DB0A3FF6",
+    "7VFNS5R3": "47E5FB76840A914D7AE2DAD7631661ABA776BEA21375680ABA41F76865F9F60A",
+    "2EBHMYU4": "CBAA583C53AD7C0AA3405A6D898DFD29CC1D0AED32A8400F224B8CD6E09675D4",
+    "T8R8RKX9": "C00027E813F0449B203DCD489A322576D857C19D8F6D2B9043B450AB12808232",
+    "XIYX5HJS": "20BC50F8669788BAD5CB0E5A74DEDEB4D0B351EC2CFFB4F785AB653853B82517",
+    "THGC3PA2": "F17A68A8A9901BECCCEAEE632CF587631E5AC11682FE8849321AEECB161900F6"
+  }
+}

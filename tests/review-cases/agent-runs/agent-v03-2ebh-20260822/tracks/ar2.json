@@ -1,0 +1,122 @@
+{
+  "schema": "femprompt-prisma-reviewer/0.3",
+  "reviewer": "ar2",
+  "actor": "agent",
+  "updated": "2026-08-22T12:00:23.462Z",
+  "decisions": {
+    "2EBHMYU4": {
+      "categories": {
+        "AI_Literacies": 1,
+        "KI_Sonstige": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Diversitaet": 2,
+        "Feministisch": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "robust approach to raise awareness and literacy",
+            "snippet": "…aving the ability to exert influence” (UNESCO, 2020, p. 23). Additionally, it calls for a robust approach to raise awareness and literacy, technical and ethical education, skills development, and capacity building.",
+            "ts": "2026-08-22T11:55:41.498Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "AI is not just a neutral tool",
+            "snippet": "…—a more contested and problematic nature of AI is revealed. These examples highlight that AI is not just a neutral tool but is co‐created with society, and as such has major political and social implications i…",
+            "ts": "2026-08-22T11:55:58.586Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "systemic issues reflecting existing power relationships in the AI sector",
+            "snippet": "Importantly, the reports emphasize that these are systemic issues reflecting existing power relationships in the AI sector, which are shaped by a feedback loop of discriminatory workplace practices leading to dis…",
+            "ts": "2026-08-22T11:56:09.136Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "The major gender disparity in the AI workforce hinders the development of equita",
+            "snippet": "…riminatory workplace practices leading to discriminatory tools (S. M. West et al., 2019). The major gender disparity in the AI workforce hinders the development of equitable AI (Collett & Dillon, 2019). “A troubling and persistent absence of women” (Young et ",
+            "ts": "2026-08-22T11:56:19.252Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "Lack of diversity in the AI workforce is seen as the key problem in all four rep",
+            "snippet": "Lack of diversity in the AI workforce is seen as the key problem in all four reports. It is called the “diversity crisis” and “diversity disaster” (S. M. West et al., 2019) a…",
+            "ts": "2026-08-22T11:56:31.653Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Feministisch": [
+          {
+            "term": "Feminist, intersectional, and decolonial approaches to AI present resistance",
+            "snippet": "…nazio & Klein, 2020; Little & Winch, 2021; Noble, 2018; Søraa, 2023; Young et al., 2023). Feminist, intersectional, and decolonial approaches to AI present resistance to discriminatory AI, draw attention to the wealth of experience that has been erased fro…",
+            "ts": "2026-08-22T11:56:43.920Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ]
+      },
+      "ts": "2026-08-22T11:57:52.322Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Intersectional",
+            "Race_Ethnicity",
+            "Socioeconomic"
+          ],
+          "AN_Harm_Types": [
+            "Direct_Discrimination",
+            "Disparate_Performance",
+            "Exclusionary_Norms",
+            "Stereotyping"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process",
+            "Pre_Processing"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "Qualitative Framing-Analyse von vier Berichten zu Intersektionalität und KI. Das Paper synthetisiert strukturelle Arbeitsmarkt- und Systemschäden sowie organisatorische und datenbezogene Empfehlungen.",
+          "Studientyp": "Empirisch"
+        },
+        "undecidable": {}
+      }
+    }
+  }
+}

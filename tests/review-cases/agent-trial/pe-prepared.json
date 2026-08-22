@@ -1,0 +1,1085 @@
+{
+  "schema": "femprompt-prisma-prepared/0.1",
+  "reviewer": "pe",
+  "persona": "Praxisnahe wissenschaftliche Editorin mit Schwerpunkt auf fachlicher Verwendbarkeit, belastbarer Evidenz und Transfer in die Soziale Arbeit",
+  "prepared_at": "2026-08-22",
+  "protocol": {
+    "eligibility_source": "assessment/categories.yaml v1.3",
+    "coding_source": "knowledge/update-protocol.md",
+    "decision_rule": "Mindestens eine Technik- und eine Sozialkategorie auf ja ergibt Include. Zwei nur teilweise abgedeckte Dimensionen ergeben Unclear. Eine vollständig fehlende Dimension ergibt Exclude. Abweichungen werden als Override dokumentiert.",
+    "category_scale": {
+      "0": "nein",
+      "1": "teilweise",
+      "2": "ja"
+    },
+    "text_policy": "Neun Fälle wurden am titelgleichen Docling-Volltext geprüft. MITLDF9S wurde wegen einer gesperrten falschen Volltextzuordnung ausschließlich aus dem nachgewiesenen Abstract und den Metadaten beurteilt."
+  },
+  "assignment": {
+    "requested_ids": [
+      "Z4YXX9PZ",
+      "AIGLDZ4C",
+      "VP6SXQHY",
+      "P82X89Q4",
+      "AMYZFAPH",
+      "4GYXUS9Y",
+      "9WIGR47Y",
+      "MITLDF9S",
+      "TRAN2GJU",
+      "A776TPGG"
+    ],
+    "record_count": 10,
+    "decision_distribution": {
+      "Include": 5,
+      "Unclear": 1,
+      "Exclude": 4
+    },
+    "exclusion_reason_distribution": {
+      "Wrong_publication_type": 2,
+      "Not_relevant_topic": 2
+    }
+  },
+  "records": {
+    "Z4YXX9PZ": {
+      "paper_id": "Z4YXX9PZ",
+      "title": "Prompting techniques for reducing social bias in LLMs through System 1 and System 2 cognitive processes",
+      "title_check": {
+        "status": "match",
+        "text_title": "Prompting Techniques for Reducing Social Bias in LLMs through System 1 and System 2 Cognitive Processes"
+      },
+      "text_basis": {
+        "prism_text_source": "raw",
+        "analysis_basis": "Fulltext",
+        "source_file": "generated/markdown_clean/Kamruzzaman_2024_Prompting_techniques_for_reducing_social_bias_in.md",
+        "limitation": null
+      },
+      "categories": {
+        "AI_Literacies": 0,
+        "Generative_KI": 2,
+        "Prompting": 2,
+        "KI_Sonstige": 0,
+        "Soziale_Arbeit": 0,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Diversitaet": 2,
+        "Feministisch": 0,
+        "Fairness": 2
+      },
+      "category_notes": {
+        "AI_Literacies": "Die Studie prüft Modellverhalten und vermittelt kein Kompetenz- oder Bildungskonzept.",
+        "Generative_KI": "Fünf Large Language Models bilden den Untersuchungsgegenstand.",
+        "Prompting": "Zwölf Promptvarianten werden experimentell verglichen.",
+        "Bias_Ungleichheit": "Soziale Biases und stereotype Antworten sind die Zielgrößen.",
+        "Gender": "Gender ist eine der neun separat ausgewerteten Biasachsen.",
+        "Diversitaet": "Mehrere soziale Gruppen und Inklusion werden systematisch über Biasdatensätze abgedeckt.",
+        "Feministisch": "Eine feministische Theorie oder Methodik fehlt.",
+        "Fairness": "Die Studie begründet Biasreduktion ausdrücklich mit Fairness und Inklusion."
+      },
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "five major language models",
+            "excerpt": "We evaluate five major language models in this paper",
+            "location": "generated/markdown_clean/Kamruzzaman_2024_Prompting_techniques_for_reducing_social_bias_in.md:74"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "12 different types of prompting techniques",
+            "excerpt": "We use 12 different types of prompting techniques in our paper",
+            "location": "generated/markdown_clean/Kamruzzaman_2024_Prompting_techniques_for_reducing_social_bias_in.md:82"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "embedded social biases",
+            "excerpt": "LLMs continue to struggle with embedded social biases",
+            "location": "generated/markdown_clean/Kamruzzaman_2024_Prompting_techniques_for_reducing_social_bias_in.md:40"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "gender, race, religion",
+            "excerpt": "StereoSet covers gender, race, religion, and profession biases",
+            "location": "generated/markdown_clean/Kamruzzaman_2024_Prompting_techniques_for_reducing_social_bias_in.md:68"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "nine distinct social bias categories",
+            "excerpt": "nine distinct social bias categories (ageism, beauty, beauty with profession, gender, institutional, nationality, profession, race, religion)",
+            "location": "generated/markdown_clean/Kamruzzaman_2024_Prompting_techniques_for_reducing_social_bias_in.md:50"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "fairness and inclusivity",
+            "excerpt": "mitigating social biases in LLMs is paramount to ensuring fairness and inclusivity",
+            "location": "generated/markdown_clean/Kamruzzaman_2024_Prompting_techniques_for_reducing_social_bias_in.md:40"
+          }
+        ]
+      },
+      "derived_decision": "Include",
+      "decision": "Include",
+      "override": false,
+      "exclusion_reason": null,
+      "override_reason": null,
+      "decision_rationale": "Die Studie verbindet eine experimentelle Untersuchung generativer KI und konkreter Promptstrategien mit einer breiten Analyse sozialer Biases einschließlich Gender und Fairness.",
+      "analysis": {
+        "fields": {
+          "Studientyp": "Experimentell",
+          "AN_Prompting_Role": [
+            "Recommended_Practice",
+            "Research_Instrument"
+          ],
+          "AN_Prompt_Techniques": [
+            "Thought_Generation",
+            "Role_Persona"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Race_Ethnicity",
+            "Age",
+            "Religion",
+            "Physical_Appearance",
+            "Nationality_Migration",
+            "Other_Axis"
+          ],
+          "AN_Harm_Types": [
+            "Stereotyping"
+          ],
+          "AN_Mitigation_Stage": [
+            "Prompt_Practice"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "System-2- und Persona-Prompts werden über fünf Modelle und neun Biasgruppen experimentell verglichen. Die Studie zeigt die stärkste mittlere Reduktion stereotyper Antworten für Human Persona plus System 2; CoT allein reduziert den Bias nicht konsistent."
+        },
+        "undecidable": {}
+      }
+    },
+    "AIGLDZ4C": {
+      "paper_id": "AIGLDZ4C",
+      "title": "How to Create Inclusive AI Images: A Guide to Bias-Free Prompting",
+      "title_check": {
+        "status": "match",
+        "text_title": "How to Create Inclusive AI Images: A Guide to Bias-Free Prompting"
+      },
+      "text_basis": {
+        "prism_text_source": "raw",
+        "analysis_basis": "Fulltext",
+        "source_file": "generated/markdown_clean/Articulate_2025_How_to_Create_Inclusive_AI_Images_A_Guide_to.md",
+        "limitation": "Der Volltext kennzeichnet sich als Unternehmensblog."
+      },
+      "categories": {
+        "AI_Literacies": 2,
+        "Generative_KI": 2,
+        "Prompting": 2,
+        "KI_Sonstige": 0,
+        "Soziale_Arbeit": 0,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Diversitaet": 2,
+        "Feministisch": 0,
+        "Fairness": 1
+      },
+      "category_notes": {
+        "AI_Literacies": "Der Beitrag vermittelt konkrete Anwendungskompetenz für inklusive Bildprompts.",
+        "Generative_KI": "Text-zu-Bild-Generatoren bilden den Gegenstand.",
+        "Prompting": "Die Gestaltung inklusiver Prompts strukturiert den gesamten Beitrag.",
+        "Soziale_Arbeit": "Ein direkter Fach- oder Praxisbezug zur Sozialen Arbeit fehlt.",
+        "Bias_Ungleichheit": "Trainingsdatenbias und stereotype Standardausgaben werden ausführlich behandelt.",
+        "Gender": "Geschlechtsidentitäten und Geschlechterstereotype erhalten eigene Empfehlungen.",
+        "Diversitaet": "Repräsentation nach Alter, Ethnizität, Körper, Behinderung und Religion steht im Zentrum.",
+        "Feministisch": "Eine feministische Theorie oder Methodik fehlt.",
+        "Fairness": "Repräsentative und biasarme Ausgaben werden praktisch angestrebt; eine explizite Fairnessanalyse fehlt."
+      },
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "These prompting techniques",
+            "excerpt": "These prompting techniques can help you create imagery that reflects reality.",
+            "location": "generated/markdown_clean/Articulate_2025_How_to_Create_Inclusive_AI_Images_A_Guide_to.md:71"
+          }
+        ],
+        "Generative_KI": [
+          {
+            "term": "AI image generation tools",
+            "excerpt": "AI image generation tools are fast and creative",
+            "location": "generated/markdown_clean/Articulate_2025_How_to_Create_Inclusive_AI_Images_A_Guide_to.md:24"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "inclusive prompt engineering",
+            "excerpt": "inclusive prompt engineering: writing image prompts that account for identity, context, and representation",
+            "location": "generated/markdown_clean/Articulate_2025_How_to_Create_Inclusive_AI_Images_A_Guide_to.md:59"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "trained on unbalanced data",
+            "excerpt": "trained on unbalanced data, resulting in narrow, stereotypical representations",
+            "location": "generated/markdown_clean/Articulate_2025_How_to_Create_Inclusive_AI_Images_A_Guide_to.md:42"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "all gender identities",
+            "excerpt": "Represent people of all gender identities, including non-binary, women, men, and gender-diverse individuals.",
+            "location": "generated/markdown_clean/Articulate_2025_How_to_Create_Inclusive_AI_Images_A_Guide_to.md:88"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "range of skin tones",
+            "excerpt": "Be intentional about representing a range of skin tones, racial and ethnic backgrounds, and cultural identities.",
+            "location": "generated/markdown_clean/Articulate_2025_How_to_Create_Inclusive_AI_Images_A_Guide_to.md:87"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "inclusive, representative visuals",
+            "excerpt": "write image prompts that produce more inclusive, representative visuals",
+            "location": "generated/markdown_clean/Articulate_2025_How_to_Create_Inclusive_AI_Images_A_Guide_to.md:24"
+          }
+        ]
+      },
+      "derived_decision": "Include",
+      "decision": "Exclude",
+      "override": true,
+      "exclusion_reason": "Wrong_publication_type",
+      "override_reason": null,
+      "decision_rationale": "Der Beitrag erfüllt die inhaltlichen Dimensionen sehr deutlich, ist laut Volltext jedoch ein Unternehmensblog ohne wissenschaftliche Methode oder überprüfbare Evaluation. Der Publikationstyp begründet den Override zu Exclude.",
+      "analysis": null
+    },
+    "VP6SXQHY": {
+      "paper_id": "VP6SXQHY",
+      "title": "The AI literacy development canvas: Assessing and building AI literacy in organizations",
+      "title_check": {
+        "status": "match",
+        "text_title": "The AI literacy development canvas: Assessing and building AI literacy in organizations"
+      },
+      "text_basis": {
+        "prism_text_source": "raw",
+        "analysis_basis": "Fulltext",
+        "source_file": "generated/markdown_clean/Benlian_2025_The_AI_literacy_development_canvas_Assessing_and.md",
+        "limitation": null
+      },
+      "categories": {
+        "AI_Literacies": 2,
+        "Generative_KI": 1,
+        "Prompting": 1,
+        "KI_Sonstige": 2,
+        "Soziale_Arbeit": 0,
+        "Bias_Ungleichheit": 1,
+        "Gender": 0,
+        "Diversitaet": 0,
+        "Feministisch": 0,
+        "Fairness": 1
+      },
+      "category_notes": {
+        "AI_Literacies": "Assessment Matrix und Development Canvas bilden den Kernbeitrag.",
+        "Generative_KI": "Generative KI erscheint als Anwendungsbeispiel innerhalb eines breiteren AI-Literacy-Rahmens.",
+        "Prompting": "Fortgeschrittenes Prompting ist ein einzelner Trainingsinhalt der Fallstudie.",
+        "KI_Sonstige": "Das Rahmenwerk umfasst algorithmische Entscheidungssysteme, Predictive Analytics und weitere KI-Anwendungen.",
+        "Soziale_Arbeit": "Der Organisations- und Pharmakontext besitzt keinen direkten Sozialarbeitsbezug.",
+        "Bias_Ungleichheit": "Bias und Diskriminierung sind Bestandteil der ethischen Kompetenzdimension, tragen jedoch nicht die Hauptfragestellung.",
+        "Gender": "Eine geschlechtsspezifische Analyse fehlt.",
+        "Diversitaet": "Die verschiedenen Organisationsrollen bilden keine soziale Diversitätsanalyse.",
+        "Feministisch": "Eine feministische Perspektive fehlt.",
+        "Fairness": "Fairness wird innerhalb ethischer AI Literacy genannt, bleibt aber ein Teilaspekt."
+      },
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "AI Literacy Assessment Matrix",
+            "excerpt": "we introduce an AI Literacy Assessment Matrix tailored to different managerial levels",
+            "location": "generated/markdown_clean/Benlian_2025_The_AI_literacy_development_canvas_Assessing_and.md:42"
+          }
+        ],
+        "Generative_KI": [
+          {
+            "term": "generative AI for drafting reports",
+            "excerpt": "generative AI for drafting reports or AI-enhanced customer service platforms",
+            "location": "generated/markdown_clean/Benlian_2025_The_AI_literacy_development_canvas_Assessing_and.md:68"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "advanced prompting techniques",
+            "excerpt": "practical exercises on applying (e.g., advanced prompting techniques)",
+            "location": "generated/markdown_clean/Benlian_2025_The_AI_literacy_development_canvas_Assessing_and.md:232"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "recruitment screening, or predictive maintenance",
+            "excerpt": "sales analytics, recruitment screening, or predictive maintenance",
+            "location": "generated/markdown_clean/Benlian_2025_The_AI_literacy_development_canvas_Assessing_and.md:64"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "race, age, and disability discrimination",
+            "excerpt": "perpetuated race, age, and disability discrimination",
+            "location": "generated/markdown_clean/Benlian_2025_The_AI_literacy_development_canvas_Assessing_and.md:48"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "fairness, transparency, and accountability",
+            "excerpt": "ethical risks of AI systems, such as fairness, transparency, and accountability",
+            "location": "generated/markdown_clean/Benlian_2025_The_AI_literacy_development_canvas_Assessing_and.md:199"
+          }
+        ]
+      },
+      "derived_decision": "Unclear",
+      "decision": "Unclear",
+      "override": false,
+      "exclusion_reason": null,
+      "override_reason": null,
+      "decision_rationale": "Die Technikdimension ist klar erfüllt. Bias und Fairness sind als ethische Teilkompetenzen substanziell vorhanden, bleiben gegenüber dem allgemeinen Organisations- und Kompetenzrahmen sekundär. Die Sozialdimension erreicht deshalb nur teilweise und das Protokoll ergibt Unclear.",
+      "analysis": null
+    },
+    "P82X89Q4": {
+      "paper_id": "P82X89Q4",
+      "title": "A Competency Framework for AI Literacy: Variations by Different Learner Groups and an Implied Learning Pathway",
+      "title_check": {
+        "status": "match",
+        "text_title": "A Competency Framework for AI Literacy: Variations by Different Learner Groups and an Implied Learning Pathway"
+      },
+      "text_basis": {
+        "prism_text_source": "raw",
+        "analysis_basis": "Fulltext",
+        "source_file": "generated/markdown_clean/Chee_2025_A_Competency_Framework_for_AI_Literacy_Variations.md",
+        "limitation": null
+      },
+      "categories": {
+        "AI_Literacies": 2,
+        "Generative_KI": 0,
+        "Prompting": 0,
+        "KI_Sonstige": 2,
+        "Soziale_Arbeit": 0,
+        "Bias_Ungleichheit": 0,
+        "Gender": 0,
+        "Diversitaet": 0,
+        "Feministisch": 0,
+        "Fairness": 0
+      },
+      "category_notes": {
+        "AI_Literacies": "Der systematische Review entwickelt ein umfassendes Kompetenzrahmenwerk und einen Lernpfad.",
+        "Generative_KI": "Generative Modelle bilden keinen erkennbaren Schwerpunkt.",
+        "Prompting": "Promptstrategien werden nicht untersucht.",
+        "KI_Sonstige": "Daten-, Algorithmus- und Anwendungskompetenz für allgemeine KI stehen im Rahmenwerk.",
+        "Soziale_Arbeit": "Soziale Arbeit, ihre Praxisfelder und ihre Zielgruppen fehlen.",
+        "Bias_Ungleichheit": "Die allgemeine Kategorie AI Ethics wird ausgearbeitet, eine Analyse von Bias oder sozialer Ungleichheit fehlt.",
+        "Gender": "Eine Genderanalyse fehlt.",
+        "Diversitaet": "Learner Groups und Disziplinen bezeichnen Bildungsebenen und Fachrichtungen, keine soziale Diversität.",
+        "Feministisch": "Eine feministische Perspektive fehlt.",
+        "Fairness": "Algorithmische Fairness wird nicht als eigener Gegenstand behandelt."
+      },
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "comprehensive competency framework",
+            "excerpt": "develop a comprehensive competency framework for artificial intelligence (AI) literacy",
+            "location": "generated/markdown_clean/Chee_2025_A_Competency_Framework_for_AI_Literacy_Variations.md:52"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "data and algorithm literacy",
+            "excerpt": "data and algorithm literacy, problem solving, communication and collaboration, AI ethics",
+            "location": "generated/markdown_clean/Chee_2025_A_Competency_Framework_for_AI_Literacy_Variations.md:168"
+          }
+        ]
+      },
+      "derived_decision": "Exclude",
+      "decision": "Exclude",
+      "override": false,
+      "exclusion_reason": "Not_relevant_topic",
+      "override_reason": null,
+      "decision_rationale": "Das Paper erfüllt die Technikdimension vollständig. Die Sozialdimension des Review-Schemas bleibt leer, weil allgemeine AI Ethics keine Analyse von Sozialer Arbeit, Bias, Gender, Diversität, Feminismus oder Fairness ersetzt.",
+      "analysis": null
+    },
+    "AMYZFAPH": {
+      "paper_id": "AMYZFAPH",
+      "title": "Recommendations for social work researchers and journal editors on the use of generative AI and large language models",
+      "title_check": {
+        "status": "match",
+        "text_title": "Recommendations for Social Work Researchers and Journal Editors on the Use of Generative AI and Large Language Models"
+      },
+      "text_basis": {
+        "prism_text_source": "raw",
+        "analysis_basis": "Fulltext",
+        "source_file": "generated/markdown_clean/Victor_2023_Recommendations_for_social_work_researchers_and.md",
+        "limitation": null
+      },
+      "categories": {
+        "AI_Literacies": 2,
+        "Generative_KI": 2,
+        "Prompting": 1,
+        "KI_Sonstige": 0,
+        "Soziale_Arbeit": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 1,
+        "Diversitaet": 1,
+        "Feministisch": 0,
+        "Fairness": 1
+      },
+      "category_notes": {
+        "AI_Literacies": "Der Beitrag formuliert Wissen, ethische Awareness und laufende Weiterbildung als Verantwortlichkeiten von Forschenden und Redaktionen.",
+        "Generative_KI": "Generative KI und Large Language Models sind der alleinige Technologiegegenstand.",
+        "Prompting": "Prompts werden als Forschungsinstrument und als berichtspflichtige Methodenkomponente behandelt, konkrete Techniken bleiben randständig.",
+        "Soziale_Arbeit": "Adressiert werden Forschung, Zeitschriften und Fachverantwortung der Sozialen Arbeit.",
+        "Bias_Ungleichheit": "Modellbias, Stereotype und ungleiche Folgen werden als zentrale Risiken ausgearbeitet.",
+        "Gender": "Racial und Gender Bias werden ausdrücklich genannt, ohne eigenständige Genderanalyse.",
+        "Diversitaet": "Vulnerable und marginalisierte Gruppen sowie sprachliche Teilhabebarrieren werden berücksichtigt.",
+        "Feministisch": "Eine feministische Theorie oder Methodik fehlt.",
+        "Fairness": "Nichtdiskriminierende Ergebnisse werden gefordert; ein Fairnessrahmen wird nicht entwickelt."
+      },
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "knowledge and ethical awareness",
+            "excerpt": "the knowledge and ethical awareness that research teams should develop prior to deployment",
+            "location": "generated/markdown_clean/Victor_2023_Recommendations_for_social_work_researchers_and.md:132"
+          }
+        ],
+        "Generative_KI": [
+          {
+            "term": "Generative artificial intelligence",
+            "excerpt": "Generative artificial intelligence (AI) and large language models (LLMs) are poised to significantly impact social work research.",
+            "location": "generated/markdown_clean/Victor_2023_Recommendations_for_social_work_researchers_and.md:26"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "the prompts used should be detailed",
+            "excerpt": "the prompts used should be detailed, along with the names and version numbers of the tools",
+            "location": "generated/markdown_clean/Victor_2023_Recommendations_for_social_work_researchers_and.md:168"
+          }
+        ],
+        "Soziale_Arbeit": [
+          {
+            "term": "social work research",
+            "excerpt": "offer recommendations for social work researchers and journal editors",
+            "location": "generated/markdown_clean/Victor_2023_Recommendations_for_social_work_researchers_and.md:26"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "perpetuation of harmful stereotypes",
+            "excerpt": "inaccurate or biased results can lead to misinterpretation of data, perpetuation of harmful stereotypes, and policy decisions that reproduce inequity",
+            "location": "generated/markdown_clean/Victor_2023_Recommendations_for_social_work_researchers_and.md:86"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "racial and gender biases",
+            "excerpt": "texts with racial and gender biases to train the model",
+            "location": "generated/markdown_clean/Victor_2023_Recommendations_for_social_work_researchers_and.md:36"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "vulnerable and marginalized groups",
+            "excerpt": "unique ethical issues within social work research contexts, such as research involving vulnerable and marginalized groups",
+            "location": "generated/markdown_clean/Victor_2023_Recommendations_for_social_work_researchers_and.md:124"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "nondiscriminatory outcomes",
+            "excerpt": "work to minimize them to ensure nondiscriminatory outcomes and reporting",
+            "location": "generated/markdown_clean/Victor_2023_Recommendations_for_social_work_researchers_and.md:142"
+          }
+        ]
+      },
+      "derived_decision": "Include",
+      "decision": "Include",
+      "override": false,
+      "exclusion_reason": null,
+      "override_reason": null,
+      "decision_rationale": "Der Beitrag verbindet generative KI, professionelles Wissen und dokumentierte Promptnutzung mit den spezifischen Qualitäts-, Bias- und Verantwortungsfragen sozialarbeitswissenschaftlicher Forschung.",
+      "analysis": {
+        "fields": {
+          "Studientyp": "Konzept",
+          "AN_Prompting_Role": [
+            "Recommended_Practice",
+            "Research_Instrument",
+            "Object_of_Critique"
+          ],
+          "AN_Prompt_Techniques": [
+            "General_Guidance"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Race_Ethnicity"
+          ],
+          "AN_Harm_Types": [
+            "Stereotyping",
+            "Misrepresentation",
+            "Indirect_Discrimination"
+          ],
+          "AN_Mitigation_Stage": [
+            "Post_Processing",
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "General_Social_Work"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "General Guidance umfasst die präzise Dokumentation von Prompts, Toolversionen und Aufgaben sowie die menschliche Prüfung erzeugter Analysen. Die Empfehlungen fordern Biasprüfung, Qualitätssicherung und institutionelle Regeln für sozialarbeitswissenschaftliche Forschung."
+        },
+        "undecidable": {}
+      }
+    },
+    "4GYXUS9Y": {
+      "paper_id": "4GYXUS9Y",
+      "title": "The end of the world as we know it? ChatGPT and social work",
+      "title_check": {
+        "status": "match",
+        "text_title": "The End of the World as We Know It? ChatGPT and Social Work"
+      },
+      "text_basis": {
+        "prism_text_source": "raw",
+        "analysis_basis": "Fulltext",
+        "source_file": "generated/markdown_clean/Goldkind_2024_The_end_of_the_world_as_we_know_it_ChatGPT_and.md",
+        "limitation": "Kommentarischer Beitrag ohne empirische Evaluation."
+      },
+      "categories": {
+        "AI_Literacies": 2,
+        "Generative_KI": 2,
+        "Prompting": 1,
+        "KI_Sonstige": 1,
+        "Soziale_Arbeit": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 0,
+        "Diversitaet": 2,
+        "Feministisch": 0,
+        "Fairness": 1
+      },
+      "category_notes": {
+        "AI_Literacies": "Kompetenz, Fortbildung und kritische Reflexion von Fachkräften und Studierenden bilden zentrale Forderungen.",
+        "Generative_KI": "ChatGPT steht im Mittelpunkt.",
+        "Prompting": "Prompts werden als einfache Interaktionsform erwähnt, ohne Technikvergleich.",
+        "KI_Sonstige": "Der Social-Justice-Abschnitt bezieht weitere algorithmische Systeme wie Risikobewertung ein.",
+        "Soziale_Arbeit": "Praxis, Ausbildung, Organisationen und Klientinnen der Sozialen Arbeit strukturieren den Beitrag.",
+        "Bias_Ungleichheit": "Marginalisierung und diskriminierende Wirkungen algorithmischer Systeme werden ausdrücklich problematisiert.",
+        "Gender": "Eine Genderanalyse fehlt.",
+        "Diversitaet": "Nichtinklusive Trainingsdaten und marginalisierte Populationen werden behandelt.",
+        "Feministisch": "Eine feministische Theorie oder Methodik fehlt.",
+        "Fairness": "Fair use und soziale Gerechtigkeit werden gefordert, ein technischer Fairnessrahmen fehlt."
+      },
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "ethical imperative to maintain competency",
+            "excerpt": "Congruent with the ethical imperative to maintain competency, professionals will need channels to learn about emerging AI tools",
+            "location": "generated/markdown_clean/Goldkind_2024_The_end_of_the_world_as_we_know_it_ChatGPT_and.md:42"
+          }
+        ],
+        "Generative_KI": [
+          {
+            "term": "Chat GPT is a chatbot",
+            "excerpt": "Chat GPT is a chatbot powered by artificial intelligence (AI) that responds to prompts",
+            "location": "generated/markdown_clean/Goldkind_2024_The_end_of_the_world_as_we_know_it_ChatGPT_and.md:14"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "responds to prompts posed as questions",
+            "excerpt": "responds to prompts posed as questions, producing intelligible, mostly accurate text responses",
+            "location": "generated/markdown_clean/Goldkind_2024_The_end_of_the_world_as_we_know_it_ChatGPT_and.md:14"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "risk assessment in child welfare",
+            "excerpt": "advanced technological tools-in arenas like sentencing or risk assessment in child welfare",
+            "location": "generated/markdown_clean/Goldkind_2024_The_end_of_the_world_as_we_know_it_ChatGPT_and.md:48"
+          }
+        ],
+        "Soziale_Arbeit": [
+          {
+            "term": "ChatGPT and Social Work",
+            "excerpt": "ChatGPT offers us an opportunity to consider how AI will disrupt social work practice",
+            "location": "generated/markdown_clean/Goldkind_2024_The_end_of_the_world_as_we_know_it_ChatGPT_and.md:14"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "amplifies existing bias and discrimination",
+            "excerpt": "the construction and deployment of these technologies amplifies existing bias and discrimination",
+            "location": "generated/markdown_clean/Goldkind_2024_The_end_of_the_world_as_we_know_it_ChatGPT_and.md:48"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "not inclusive of diverse perspectives",
+            "excerpt": "The extant texts training these language models are generally not inclusive of diverse perspectives",
+            "location": "generated/markdown_clean/Goldkind_2024_The_end_of_the_world_as_we_know_it_ChatGPT_and.md:22"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "advocate for its fair use",
+            "excerpt": "explore its implications, and advocate for its fair use",
+            "location": "generated/markdown_clean/Goldkind_2024_The_end_of_the_world_as_we_know_it_ChatGPT_and.md:14"
+          }
+        ]
+      },
+      "derived_decision": "Include",
+      "decision": "Include",
+      "override": false,
+      "exclusion_reason": null,
+      "override_reason": null,
+      "decision_rationale": "Der Kommentar ist wissenschaftlich publiziert und adressiert generative KI direkt in sozialarbeiterischer Praxis und Bildung. Er verbindet Kompetenzaufbau mit Bias-, Marginalisierungs- und Fairnessfragen.",
+      "analysis": {
+        "fields": {
+          "Studientyp": "Konzept",
+          "AN_Prompting_Role": [
+            "Learning_Content"
+          ],
+          "AN_Prompt_Techniques": [
+            "General_Guidance"
+          ],
+          "AN_Bias_Axes": [
+            "None"
+          ],
+          "AN_Harm_Types": [
+            "Erasure",
+            "Indirect_Discrimination"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "General_Social_Work"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "General Guidance bezeichnet die einfache Frageform als Interaktion mit ChatGPT; eine benannte Prompttechnik fehlt. Der Beitrag fordert Fortbildung, organisationsbezogene Regeln und eine menschenrechtsbasierte fachliche Auseinandersetzung."
+        },
+        "undecidable": {}
+      }
+    },
+    "9WIGR47Y": {
+      "paper_id": "9WIGR47Y",
+      "title": "Ethical issues related to the use of technology in social work practice: A systematic review",
+      "title_check": {
+        "status": "match",
+        "text_title": "Ethical Issues Related to the Use of Technology in Social Work Practice. A Systematic Review"
+      },
+      "text_basis": {
+        "prism_text_source": "raw",
+        "analysis_basis": "Fulltext",
+        "source_file": "generated/markdown_clean/Rodríguez-Martínez_2024_Ethical_issues_related_to_the_use_of_technology.md",
+        "limitation": null
+      },
+      "categories": {
+        "AI_Literacies": 0,
+        "Generative_KI": 0,
+        "Prompting": 0,
+        "KI_Sonstige": 0,
+        "Soziale_Arbeit": 2,
+        "Bias_Ungleichheit": 0,
+        "Gender": 0,
+        "Diversitaet": 1,
+        "Feministisch": 0,
+        "Fairness": 0
+      },
+      "category_notes": {
+        "AI_Literacies": "Der Review behandelt digitale Literacy, keine AI Literacy.",
+        "Generative_KI": "Generative KI fehlt.",
+        "Prompting": "Prompting fehlt.",
+        "KI_Sonstige": "KI erscheint nur als Vorschlag für künftige Forschung; der untersuchte Bestand betrifft ICT, soziale Medien und digitale Praxis.",
+        "Soziale_Arbeit": "Ethische Fragen digitaler sozialarbeiterischer Praxis sind der Kern.",
+        "Bias_Ungleichheit": "Digitale Ungleichheit wird erwähnt, aber nicht im KI-Kontext analysiert.",
+        "Gender": "Eine Genderanalyse fehlt.",
+        "Diversitaet": "Kulturelle Kompetenz, Inklusivität und die digitale Kluft werden als Teilaspekte behandelt.",
+        "Feministisch": "Eine feministische Theorie oder Methodik fehlt.",
+        "Fairness": "Algorithmische Fairness fehlt."
+      },
+      "evidence": {
+        "Soziale_Arbeit": [
+          {
+            "term": "ethical issues of the Social Work profession",
+            "excerpt": "ethical issues of the Social Work profession associated with the use of digital technologies in professional practice",
+            "location": "generated/markdown_clean/Rodríguez-Martínez_2024_Ethical_issues_related_to_the_use_of_technology.md:14"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "accessibility and inclusivity",
+            "excerpt": "leverage technology to enhance accessibility and inclusivity in service delivery",
+            "location": "generated/markdown_clean/Rodríguez-Martínez_2024_Ethical_issues_related_to_the_use_of_technology.md:257"
+          }
+        ]
+      },
+      "derived_decision": "Exclude",
+      "decision": "Exclude",
+      "override": false,
+      "exclusion_reason": "Not_relevant_topic",
+      "override_reason": null,
+      "decision_rationale": "Der Review ist für digitale Sozialarbeit relevant, behandelt jedoch keine der vier Technik-Kategorien des Protokolls. Künstliche Intelligenz wird lediglich als künftiges Forschungsthema genannt.",
+      "analysis": null
+    },
+    "MITLDF9S": {
+      "paper_id": "MITLDF9S",
+      "title": "KI-basiertes Assistenzsystem im Kinderschutzverfahren",
+      "title_check": {
+        "status": "metadata_match_raw_fulltext_rejected",
+        "text_title": null,
+        "critical_finding": "Das bisher zugeordnete lokale Dokument ist ein anderes Präsentationskonvolut. Die Volltextzuordnung ist gesperrt und wurde fachlich nicht verwendet."
+      },
+      "text_basis": {
+        "prism_text_source": "abstract",
+        "analysis_basis": "Abstract",
+        "source_file": "corpus/papers_metadata.csv:186",
+        "limitation": "Die Beurteilung beruht ausschließlich auf dem nachgewiesenen Abstract und den bibliografischen Metadaten. Aussagen zu Methode, Biasachsen und Schadensmechanismen bleiben eingeschränkt."
+      },
+      "categories": {
+        "AI_Literacies": 1,
+        "Generative_KI": 0,
+        "Prompting": 0,
+        "KI_Sonstige": 2,
+        "Soziale_Arbeit": 2,
+        "Bias_Ungleichheit": 1,
+        "Gender": 0,
+        "Diversitaet": 0,
+        "Feministisch": 0,
+        "Fairness": 1
+      },
+      "category_notes": {
+        "AI_Literacies": "Der Abstract nennt Schulungsbedarf, lässt dessen Ausarbeitung offen.",
+        "Generative_KI": "Ein generatives System ist nicht ausgewiesen.",
+        "Prompting": "Prompting ist nicht ausgewiesen.",
+        "KI_Sonstige": "Ein KI-Assistenzsystem zur Gefährdungseinschätzung ist der Gegenstand.",
+        "Soziale_Arbeit": "Der Kinderschutz ist ein direktes sozialarbeiterisches Praxisfeld.",
+        "Bias_Ungleichheit": "Bias wird als Risiko genannt, ohne Achsen oder Mechanismus.",
+        "Gender": "Ein Genderbezug ist im Abstract nicht ausgewiesen.",
+        "Diversitaet": "Diversität oder Repräsentation sind im Abstract nicht ausgewiesen.",
+        "Feministisch": "Eine feministische Perspektive ist im Abstract nicht ausgewiesen.",
+        "Fairness": "Human-in-the-Loop und Fehlklassifikationsrisiken begründen eine partielle Fairnessrelevanz."
+      },
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "Schulungsbedarf",
+            "excerpt": "Betont Human-in-the-Loop, Datenschutz, Organisationsentwicklung und Schulungsbedarf",
+            "location": "corpus/papers_metadata.csv:186"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "KI-Assistenzsystem",
+            "excerpt": "Praxisnaher Bericht zu einem KI-Assistenzsystem für Gefährdungseinschätzung.",
+            "location": "corpus/papers_metadata.csv:186"
+          }
+        ],
+        "Soziale_Arbeit": [
+          {
+            "term": "Kinderschutzkontext",
+            "excerpt": "im sensiblen Kinderschutzkontext",
+            "location": "corpus/papers_metadata.csv:186"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Bias",
+            "excerpt": "zeigt Potenziale (präventive Hinweise) und Risiken (Bias, Fehlklassifikationen)",
+            "location": "corpus/papers_metadata.csv:186"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "Human-in-the-Loop",
+            "excerpt": "Betont Human-in-the-Loop, Datenschutz, Organisationsentwicklung und Schulungsbedarf",
+            "location": "corpus/papers_metadata.csv:186"
+          }
+        ]
+      },
+      "derived_decision": "Include",
+      "decision": "Include",
+      "override": false,
+      "exclusion_reason": null,
+      "override_reason": null,
+      "decision_rationale": "Der Abstract verbindet ein KI-basiertes Entscheidungshilfesystem direkt mit dem Kinderschutz und nennt Bias, Fehlklassifikation sowie menschliche Kontrolle. Technik- und Sozialdimension sind damit erfüllt. Die geringe Texttiefe wird in den Kategorien und Analysefeldern ausdrücklich abgebildet.",
+      "analysis": {
+        "fields": {
+          "Studientyp": "Unclear",
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Demonstrated",
+          "AN_Population": [
+            "Child_Family_Welfare"
+          ],
+          "AN_Coding_Basis": "Abstract",
+          "AN_Notes": "Der Metadatensatz beschreibt ein eingesetztes Assistenzsystem, Human-in-the-Loop, Organisationsentwicklung und Schulungsbedarf. AN_Bias_Axes und AN_Harm_Types sind aus dem Abstract nicht entscheidbar. Der lokale titelungleiche Volltext wurde verworfen."
+        },
+        "undecidable": {
+          "AN_Bias_Axes": true,
+          "AN_Harm_Types": true
+        }
+      }
+    },
+    "TRAN2GJU": {
+      "paper_id": "TRAN2GJU",
+      "title": "How can feminism inform AI governance in practice?",
+      "title_check": {
+        "status": "match",
+        "text_title": "How can feminism inform AI governance in practice?"
+      },
+      "text_basis": {
+        "prism_text_source": "raw",
+        "analysis_basis": "Fulltext",
+        "source_file": "generated/markdown_clean/Ricaurte_2024_How_can_feminism_inform_AI_governance_in_practice.md",
+        "limitation": "Der Volltext kennzeichnet sich als News-Webbeitrag einer internationalen Organisation."
+      },
+      "categories": {
+        "AI_Literacies": 1,
+        "Generative_KI": 0,
+        "Prompting": 0,
+        "KI_Sonstige": 2,
+        "Soziale_Arbeit": 1,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Diversitaet": 2,
+        "Feministisch": 2,
+        "Fairness": 2
+      },
+      "category_notes": {
+        "AI_Literacies": "Ein Trainingsprogramm für Regierungen und Stakeholder wird beschrieben; Kompetenzentwicklung bleibt ein Teilaspekt.",
+        "Generative_KI": "Der Text behandelt KI-Governance allgemein.",
+        "Prompting": "Prompting fehlt.",
+        "KI_Sonstige": "Algorithmische Systeme und ihr gesamter Lebenszyklus bilden den Gegenstand.",
+        "Soziale_Arbeit": "Communitybasierte Technikentwicklung und geschlechtsspezifische Gewalt berühren sozialarbeiterische Zielgruppen, ein direkter Fachbezug fehlt.",
+        "Bias_Ungleichheit": "Strukturelle Ungleichheiten, koloniale Kontinuitäten und Machtasymmetrien sind zentral.",
+        "Gender": "Gender Equality und geschlechtsspezifische Gewalt werden ausdrücklich behandelt.",
+        "Diversitaet": "Diversität, Repräsentation und Teilhabe marginalisierter Communities tragen den Beitrag.",
+        "Feministisch": "Feministische Prinzipien, Intersektionalität und Care bilden den Bezugsrahmen.",
+        "Fairness": "Gerechte, faire und inklusive KI-Systeme sind das explizite Governanceziel."
+      },
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "training program for governments",
+            "excerpt": "an actionable roadmap, framework, repository, and training program for governments and other stakeholders",
+            "location": "generated/markdown_clean/Ricaurte_2024_How_can_feminism_inform_AI_governance_in_practice.md:62"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "AI systems throughout their full life cycle",
+            "excerpt": "considering AI systems throughout their full life cycle, beyond just the AI/data pipeline",
+            "location": "generated/markdown_clean/Ricaurte_2024_How_can_feminism_inform_AI_governance_in_practice.md:38"
+          }
+        ],
+        "Soziale_Arbeit": [
+          {
+            "term": "combating gender-based violence",
+            "excerpt": "a commitment to achieving social justice and combating gender-based violence while being grounded in communities",
+            "location": "generated/markdown_clean/Ricaurte_2024_How_can_feminism_inform_AI_governance_in_practice.md:52"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "structural inequalities",
+            "excerpt": "address power imbalances in the AI ecosystem, considering structural inequalities, colonial legacies",
+            "location": "generated/markdown_clean/Ricaurte_2024_How_can_feminism_inform_AI_governance_in_practice.md:32"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "advancing gender equality",
+            "excerpt": "advancing gender equality and diversity throughout the full AI life cycle",
+            "location": "generated/markdown_clean/Ricaurte_2024_How_can_feminism_inform_AI_governance_in_practice.md:28"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "diversity, equity, and inclusion",
+            "excerpt": "ethical frameworks and governance structures reflect the principles of diversity, equity, and inclusion",
+            "location": "generated/markdown_clean/Ricaurte_2024_How_can_feminism_inform_AI_governance_in_practice.md:28"
+          }
+        ],
+        "Feministisch": [
+          {
+            "term": "Based on feminist principles",
+            "excerpt": "Based on feminist principles and a critical understanding of the role of technology in society",
+            "location": "generated/markdown_clean/Ricaurte_2024_How_can_feminism_inform_AI_governance_in_practice.md:34"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "fair, equitable and inclusive AI systems",
+            "excerpt": "How can we imagine fair, equitable and inclusive AI systems",
+            "location": "generated/markdown_clean/Ricaurte_2024_How_can_feminism_inform_AI_governance_in_practice.md:14"
+          }
+        ]
+      },
+      "derived_decision": "Include",
+      "decision": "Exclude",
+      "override": true,
+      "exclusion_reason": "Wrong_publication_type",
+      "override_reason": null,
+      "decision_rationale": "Der Beitrag erfüllt die inhaltlichen Dimensionen in hoher Dichte. Die Seite ist als News-Beitrag ausgewiesen und enthält weder nachvollziehbare wissenschaftliche Methode noch einen geeigneten Publikationstyp. Dies begründet den Override zu Exclude.",
+      "analysis": null
+    },
+    "A776TPGG": {
+      "paper_id": "A776TPGG",
+      "title": "The EU artificial intelligence act through a gender lens",
+      "title_check": {
+        "status": "match",
+        "text_title": "The EU Artificial Intelligence Act through a Gender Lens"
+      },
+      "text_basis": {
+        "prism_text_source": "raw",
+        "analysis_basis": "Fulltext",
+        "source_file": "generated/markdown_clean/Karagianni_2025_The_EU_artificial_intelligence_act_through_a.md",
+        "limitation": "Policyanalyse und institutioneller Forschungsbericht; keine empirische Wirkungsprüfung."
+      },
+      "categories": {
+        "AI_Literacies": 0,
+        "Generative_KI": 1,
+        "Prompting": 0,
+        "KI_Sonstige": 2,
+        "Soziale_Arbeit": 1,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Diversitaet": 2,
+        "Feministisch": 2,
+        "Fairness": 2
+      },
+      "category_notes": {
+        "AI_Literacies": "Der Text entwickelt keine Kompetenz- oder Bildungsstruktur.",
+        "Generative_KI": "Generative Deepfakes werden als ein Anwendungsfall behandelt; die Analyse gilt KI-Systemen insgesamt.",
+        "Prompting": "Prompting fehlt.",
+        "KI_Sonstige": "AI Act, algorithmische Entscheidungssysteme, Gesichtserkennung und Risikobewertung stehen im Zentrum.",
+        "Soziale_Arbeit": "Gesundheit, häusliche Gewalt und soziale Schutzrechte berühren Praxisfelder und Zielgruppen; der Text bleibt rechtspolitisch.",
+        "Bias_Ungleichheit": "Systemische Diskriminierung und strukturelle Machtungleichgewichte tragen die Analyse.",
+        "Gender": "Gender Bias und Gender Equality bilden den Hauptfokus.",
+        "Diversitaet": "Marginalisierte Geschlechtsidentitäten, Behinderung, Race und partizipative Governance werden einbezogen.",
+        "Feministisch": "Die Analyse stützt sich ausdrücklich auf feministische Rechtstheorie und Intersektionalität.",
+        "Fairness": "Algorithmische Fairness, Bias Audits und Gleichbehandlung werden systematisch behandelt."
+      },
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "generative AI tools",
+            "excerpt": "the rapid advancement of generative AI tools, especially in creating deepfakes",
+            "location": "generated/markdown_clean/Karagianni_2025_The_EU_artificial_intelligence_act_through_a.md:99"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "AI applications can reinforce gender disparities",
+            "excerpt": "the report highlights how AI applications can reinforce gender disparities",
+            "location": "generated/markdown_clean/Karagianni_2025_The_EU_artificial_intelligence_act_through_a.md:73"
+          }
+        ],
+        "Soziale_Arbeit": [
+          {
+            "term": "healthcare, border management control",
+            "excerpt": "case studies in recruitment and employment, healthcare, border management control and predictive policing in domestic violence cases",
+            "location": "generated/markdown_clean/Karagianni_2025_The_EU_artificial_intelligence_act_through_a.md:73"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "structural power imbalances",
+            "excerpt": "assessing its capacity to address gender inequities and structural power imbalances in AI systems",
+            "location": "generated/markdown_clean/Karagianni_2025_The_EU_artificial_intelligence_act_through_a.md:73"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "gender biases",
+            "excerpt": "the paper evaluates the AI Act's limitations in mitigating gender biases",
+            "location": "generated/markdown_clean/Karagianni_2025_The_EU_artificial_intelligence_act_through_a.md:73"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "diverse teams",
+            "excerpt": "conformity assessments should involve diverse teams that reflect a range of genders, races and social backgrounds",
+            "location": "generated/markdown_clean/Karagianni_2025_The_EU_artificial_intelligence_act_through_a.md:179"
+          }
+        ],
+        "Feministisch": [
+          {
+            "term": "feminist analysis",
+            "excerpt": "This paper provides a feminist analysis of the European Union's Artificial Intelligence Act",
+            "location": "generated/markdown_clean/Karagianni_2025_The_EU_artificial_intelligence_act_through_a.md:73"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "safe, reliable, fair and devoid of bias",
+            "excerpt": "ensuring that AI systems are safe, reliable, fair and devoid of bias",
+            "location": "generated/markdown_clean/Karagianni_2025_The_EU_artificial_intelligence_act_through_a.md:175"
+          }
+        ]
+      },
+      "derived_decision": "Include",
+      "decision": "Include",
+      "override": false,
+      "exclusion_reason": null,
+      "override_reason": null,
+      "decision_rationale": "Die Policyanalyse verbindet verschiedene KI-Systeme mit einer explizit feministischen und intersektionalen Prüfung von Gender Bias, systemischer Diskriminierung, Diversität und Fairness. Der Forschungsbericht besitzt eine nachvollziehbare Analyseanlage und einen geeigneten wissenschaftsnahen Publikationstyp.",
+      "analysis": {
+        "fields": {
+          "Studientyp": "Theoretisch",
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Race_Ethnicity",
+            "Intersectional",
+            "Disability",
+            "Age",
+            "Socioeconomic",
+            "Sexual_Orientation_Identity"
+          ],
+          "AN_Harm_Types": [
+            "Disparate_Performance",
+            "Erasure",
+            "Misrepresentation",
+            "Stereotyping",
+            "Direct_Discrimination",
+            "Indirect_Discrimination"
+          ],
+          "AN_Mitigation_Stage": [
+            "Pre_Processing",
+            "Post_Processing",
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "Die vorgeschlagenen Maßnahmen umfassen repräsentative und genderdisaggregierte Daten, intersektionale Bias Audits, Gender Impact Assessments, Konformitätsprüfungen und partizipative Governance. Die Fallbeispiele belegen Diskriminierung und Fehlklassifikation; die Maßnahmen selbst werden konzeptionell vorgeschlagen."
+        },
+        "undecidable": {}
+      }
+    }
+  }
+}
