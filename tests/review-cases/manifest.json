@@ -1,0 +1,39 @@
+{
+  "schema": "femprompt-prisma-operator-cases/0.1",
+  "status": "test-judgements-awaiting-operator-review",
+  "normalization": "whitespace-collapse-v1",
+  "cases": [
+    {
+      "paper_id": "Y6M97SWQ",
+      "title": "Algorithmic-Assisted Decision-Making Tools in Child Welfare Practice: A Systematic Review",
+      "source": "generated/markdown_clean/Yu_2025_Algorithmic-Assisted_Decision-Making_Tools_in.md",
+      "sha256": "3D0458CCD6E87A60A82989971F7A3583DF3041A19601AA5875707123D14E531A",
+      "expected_final_decision": "Include",
+      "selectors": [
+        { "target": "AI_Literacies", "term": "algorithm literacy", "quote": "enhance algorithm literacy and support social workers in correctly interpreting the output of the model" },
+        { "target": "KI_Sonstige", "term": "decision-making tools", "quote": "algorithmic-assisted decision-making tools in CW" },
+        { "target": "Soziale_Arbeit", "term": "social workers", "quote": "support social workers in correctly interpreting the output of the model" },
+        { "target": "Bias_Ungleichheit", "term": "historical bias", "quote": "historical bias embedded in administrative records" },
+        { "target": "Diversitaet", "term": "race and socioeconomic status", "quote": "race and socioeconomic status" },
+        { "target": "Fairness", "term": "fairness and bias", "quote": "Nearly all studies examined fairness and bias across subgroups or included ethical reviews." }
+      ]
+    },
+    {
+      "paper_id": "VICS443I",
+      "title": "AI Creates the Message: Integrating AI Language Learning Models into Social Work Education and Practice",
+      "source": "generated/markdown_clean/Singer_2023_AI_Creates_the_Message_Integrating_AI_Language.md",
+      "sha256": "AEC9D78565B8C0B715472F7EE42A7BE8F7E36162199F77E3070F6D0D85700682",
+      "expected_final_decision": "Exclude",
+      "selectors": [
+        { "target": "AI_Literacies", "term": "learn and teach", "quote": "We believe it is unethical for social workers not to learn and teach about technology-mediated social work." },
+        { "target": "Generative_KI", "term": "language model", "quote": "One example of an NLP-based AI system is ChatGPT, a language model developed by OpenAI." },
+        { "target": "Prompting", "term": "prompts", "quote": "ChatGPT can create outlines based on informational prompts." },
+        { "target": "Soziale_Arbeit", "term": "social workers must", "quote": "social workers must play a pivotal role in helping AI developers understand" },
+        { "target": "Bias_Ungleichheit", "term": "bias and discrimination", "quote": "ChatGPT could perpetuate bias and discrimination" },
+        { "target": "Diversitaet", "term": "historically been excluded", "quote": "those who have historically been excluded from technological advances" },
+        { "target": "Fairness", "term": "openness, fairness", "quote": "it is crucial to use openness, fairness, and provide context" },
+        { "target": "reason", "term": "editorial", "quote": "In this editorial, we will explore the pros and cons of ChatGPT in social work education." }
+      ]
+    }
+  ]
+}

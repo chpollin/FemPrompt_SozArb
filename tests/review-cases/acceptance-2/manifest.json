@@ -1,0 +1,47 @@
+{
+  "schema": "femprompt-prisma-operator-cases/0.1",
+  "status": "test-judgements-awaiting-operator-review",
+  "normalization": "whitespace-collapse-v1",
+  "cases": [
+    {
+      "paper_id": "Z4YXX9PZ",
+      "title": "Prompting techniques for reducing social bias in LLMs through System 1 and System 2 cognitive processes",
+      "source": "generated/markdown_clean/Kamruzzaman_2024_Prompting_techniques_for_reducing_social_bias_in.md",
+      "sha256": "F967CA003179E36CCE0E7C83604B0D9F7EBD8A4D82F7856CD1D82ED511CF5675",
+      "expected_final_decision": "Include",
+      "selectors": [
+        { "target": "Generative_KI", "term": "major language models", "quote": "We evaluate five major language models in this paper" },
+        { "target": "Prompting", "term": "prompting techniques", "quote": "We use 12 different types of prompting techniques in our paper" },
+        { "target": "Bias_Ungleichheit", "term": "social biases", "quote": "Altogether, we evaluate LLMs over 9 types of social biases." },
+        { "target": "Gender", "term": "gender", "quote": "StereoSet covers gender, race, religion, and profession biases" },
+        { "target": "Diversitaet", "term": "inclusivity", "quote": "ensuring fairness and inclusivity in AI-driven communication and decisions." },
+        { "target": "Fairness", "term": "fairness", "quote": "mitigating social biases in LLMs is paramount to ensuring fairness and inclusivity" }
+      ],
+      "analysis_selectors": [
+        { "target": "AN_Prompting_Role", "term": "two bias datasets", "quote": "prompting strategies on two bias datasets spanning nine different social bias categories" },
+        { "target": "AN_Prompt_Techniques", "term": "think step-bystep", "quote": "Let's think step-bystep" },
+        { "target": "AN_Prompt_Techniques", "term": "Adopt the identity", "quote": "Adopt the identity of [persona]" },
+        { "target": "AN_Prompt_Techniques", "term": "slowly and thoughtfully", "quote": "You answer questions slowly and thoughtfully." },
+        { "target": "AN_Bias_Axes", "term": "nine distinct", "quote": "ageism, beauty, beauty with profession, gender, institutional, nationality, profession, race, religion" },
+        { "target": "AN_Harm_Types", "term": "stereotypical judgments", "quote": "responses that aligned with stereotypical judgments" },
+        { "target": "AN_Mitigation_Stage", "term": "System 2 prompting", "quote": "Human Persona with System 2 prompting best reduces social bias in LLMs." }
+      ]
+    },
+    {
+      "paper_id": "AIGLDZ4C",
+      "title": "How to Create Inclusive AI Images: A Guide to Bias-Free Prompting",
+      "source": "generated/markdown_clean/Articulate_2025_How_to_Create_Inclusive_AI_Images_A_Guide_to.md",
+      "sha256": "F271E754F9C041977F983D34D8EA27FE1B1C76886B7003A01FF8A9CE4D4C7666",
+      "expected_final_decision": "Exclude",
+      "selectors": [
+        { "target": "AI_Literacies", "term": "These prompting techniques", "quote": "These prompting techniques can help you create imagery that reflects reality." },
+        { "target": "Generative_KI", "term": "AI image generation tools", "quote": "AI image generation tools are fast and creative" },
+        { "target": "Prompting", "term": "Inclusive prompt engineering", "quote": "Inclusive prompt engineering can interrupt biased AI defaults" },
+        { "target": "Bias_Ungleichheit", "term": "reinforce stereotypes", "quote": "without thoughtful prompts, they often reinforce stereotypes." },
+        { "target": "Gender", "term": "Gender. Represent", "quote": "Represent people of all gender identities, including non-binary, women, men, and gender-diverse individuals." },
+        { "target": "Diversitaet", "term": "prompting for diverse representation", "quote": "guide AI toward more inclusive results by prompting for diverse representation." },
+        { "target": "reason", "term": "Blog AI", "quote": "Blog AI" }
+      ]
+    }
+  ]
+}

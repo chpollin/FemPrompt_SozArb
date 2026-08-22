@@ -1,40 +1,35 @@
 # PRISM supported-browser pilot
 
-Pinned contract for the lane `social-ai · prism-pilot` (Research Mission Control board). Two fixed, non-production test papers run through the complete screening path in a supported browser (Chromium via Playwright), in two isolated reviewer sessions, and the resulting reviewer files are reconciled deterministically. Nothing here touches production data: the pilot serves `docs/` as is and overlays only the corpus, the full-text manifest and the full texts with the fixtures below through request interception.
+The Chromium pilot exercises the current editor contract with three non-production papers and isolated reviewer keys. Request interception supplies the fixture corpus, full-text manifest, search index, and paper texts. Production screening files are never read or changed.
 
-## Fixtures (pinned before execution)
+## Fixtures
 
-| Paper id | Title | Text source expected | Why |
-|---|---|---|---|
-| `PILOT-A` | Pilot paper A (full text) | `raw` | has a fixture full text (`fixtures/fulltext/PILOT-A.md`) and no knowledge document |
-| `PILOT-B` | Pilot paper B (abstract only) | `abstract` | no full text, no knowledge document; the reading pane falls back to the abstract |
+| Paper id | Text source | Contract covered |
+|---|---|---|
+| `PILOT-A` | `raw` | full-text search, UI-driven evidence correction, Include gates, and UI-driven analysis coding |
+| `PILOT-B` | `abstract` | abstract fallback, DOI link, and the second decision path |
+| `AIGLDZ4C` | `raw` | removal of a repeated source URL, compact source hyperlink, and author fallback |
 
-`manifest.json` pins the two papers, their expected text sources and the scripted decisions per reviewer (`r1`, `r2`). The decisions are chosen so that paper A agrees and paper B diverges, which makes the reconciliation non-trivial. The fixture corpus (`fixtures/vault.json`) carries the same record shape as `docs/data/research_vault_v2.json`.
+`manifest.json` defines the expected decision for the keys `cp` and `ms`. Each run starts with a fresh browser context.
 
-## Scenario per reviewer session
+## Covered workflow
 
-One isolated browser context per reviewer (own storage, own downloads directory), reviewer key seeded through the documented localStorage config before load.
+1. Set and canonicalise a short reviewer key.
+2. Keep the disk action disabled until a working folder is connected.
+3. Resolve the repository root to `docs/data/screening/` through a fake directory handle with the same browser API surface.
+4. Read, search, attach and correct evidence through the visible controls.
+5. Complete multi-select, undecidable, and notes fields through the analysis UI.
+6. Save through the disk icon and verify the actual JSON written to the fake reviewer file.
+7. Reload and confirm reviewer key, decisions, text source, and locked records.
+8. Verify serial writes, immutable folder targets for queued writes, queue recovery after one failed write, explicit write-error feedback, malformed-file write blocking, pending-text gating, and stale-response rejection.
+9. Verify separate same-origin storage for trial and production tracks, reference blindness before save, Paper-layer reset after navigation, direct paper links, accessible info popovers, compact metadata, source links, responsive behaviour, and the full-text priority over the assessment rail.
 
-1. Cold load of `prisma.html` against the fixture corpus; the screening surface opens on paper A with the `Volltext` pill.
-2. Paper A: in-text search for the pinned term, pin the hit as a Beleg on the pinned category, set the remaining categories by chip, commit. The record carries `text_source: raw`, the Beleg and the reviewer key.
-3. Paper B: `nur Abstract` pill; set categories per script, choose the exclusion reason where the derived decision is Exclude, commit. The record carries `text_source: abstract`.
-4. Reload the page; both records are still present (localStorage save path) and locked.
-5. Open the data panel, export the reviewer file (download captured to the session directory).
-6. Clear the own session, confirm both papers are open again, import the exported file, confirm both records are restored with decision, evidence, reviewer key and `text_source`.
-7. Export the decision-log CSV and check the `text_source` column.
-8. Screenshots after steps 1, 2, 3, 4, 6; a JSON trace of every assertion in the session directory.
+Pure export, import, decision-log, and reconciliation functions are tested in `tests/tests.js` and `tests/browser/reconcile.mjs`. They have no daily editor control and are intentionally absent from this browser workflow.
 
-The File System Access write path (`showDirectoryPicker`) needs a native picker and stays on the manual checklist (`tests/manual-checklist.md`); the pilot covers save, reload, export and import.
+Run one reviewer session with:
 
-## Reconciliation
+```text
+npm run pilot -- --reviewer cp --port 8767 --out tests/browser/out/cp
+```
 
-`node tests/browser/reconcile.mjs <r1.json> <r2.json> [--out file]` loads the tool's `reconcileReviewers` through the headless harness and writes the reconciliation record. The verification runs it twice with reversed input order and compares the two outputs byte for byte and the input files' SHA-256 before and after.
-
-## Regressions added with the pilot
-
-- asynchronous reading loads: a slower response for a previously opened paper must not overwrite the pane of the paper opened later (`loadReadingInto` load token);
-- raw-text resolution collisions: the full-text builder refuses an ambiguous first-author-year fallback instead of assigning the first match (`src/publish/build_fulltext.py`, `tests/test_build_fulltext.py`).
-
-## Evidence
-
-`evidence/<date>/` holds the committed evidence of an executed pilot: both reviewer exports, their traces, the decision logs, the reconciliation record in both input orders and from the in-tool export, the load-bearing screenshots per reviewer under `screenshots/`, and `sha256.txt` over every file beside it. The full screenshot set of a run stays local under `tests/browser/out/` (gitignored) and is reproduced by rerunning the driver. Most frames come out byte-identical between runs; the delayed-load frame and the post-reload frame do not, because scroll position and load timing differ, so the hashes record what was captured rather than a reproducibility claim.
+Run the second with `--reviewer ms` and a different port. The native folder picker and permission persistence remain in `tests/manual-checklist.md`.

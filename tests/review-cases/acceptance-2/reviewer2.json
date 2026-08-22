@@ -1,0 +1,96 @@
+{
+  "schema": "femprompt-prisma-reviewer/0.3",
+  "reviewer": "reviewer2",
+  "updated": "2026-08-22T14:00:00.000Z",
+  "decisions": {
+    "AIGLDZ4C": {
+      "categories": {
+        "AI_Literacies": 2,
+        "Bias_Ungleichheit": 2,
+        "Diversitaet": 2,
+        "Gender": 1,
+        "Generative_KI": 2,
+        "Prompting": 2
+      },
+      "decision": "Exclude",
+      "override": true,
+      "reason": "Wrong_publication_type",
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          { "term": "These prompting techniques", "snippet": "These prompting techniques can help you create imagery that reflects reality.", "ts": "2026-08-22T14:00:00.000Z", "origin": "human" }
+        ],
+        "Bias_Ungleichheit": [
+          { "term": "reinforce stereotypes", "snippet": "without thoughtful prompts, they often reinforce stereotypes.", "ts": "2026-08-22T14:00:00.000Z", "origin": "human" }
+        ],
+        "Diversitaet": [
+          { "term": "prompting for diverse representation", "snippet": "guide AI toward more inclusive results by prompting for diverse representation.", "ts": "2026-08-22T14:00:00.000Z", "origin": "human" }
+        ],
+        "Gender": [
+          { "term": "Gender. Represent", "snippet": "Represent people of all gender identities, including non-binary, women, men, and gender-diverse individuals.", "ts": "2026-08-22T14:00:00.000Z", "origin": "human" }
+        ],
+        "Generative_KI": [
+          { "term": "AI image generation tools", "snippet": "AI image generation tools are fast and creative", "ts": "2026-08-22T14:00:00.000Z", "origin": "human" }
+        ],
+        "Prompting": [
+          { "term": "Inclusive prompt engineering", "snippet": "Inclusive prompt engineering can interrupt biased AI defaults", "ts": "2026-08-22T14:00:00.000Z", "origin": "human" }
+        ]
+      },
+      "ts": "2026-08-22T14:00:00.000Z",
+      "reviewer": "reviewer2",
+      "text_source": "raw"
+    },
+    "Z4YXX9PZ": {
+      "categories": {
+        "Bias_Ungleichheit": 2,
+        "Diversitaet": 1,
+        "Fairness": 2,
+        "Gender": 2,
+        "Generative_KI": 2,
+        "Prompting": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Bias_Ungleichheit": [
+          { "term": "social biases", "snippet": "Altogether, we evaluate LLMs over 9 types of social biases.", "ts": "2026-08-22T14:00:00.000Z", "origin": "human" }
+        ],
+        "Diversitaet": [
+          { "term": "inclusivity", "snippet": "ensuring fairness and inclusivity in AI-driven communication and decisions.", "ts": "2026-08-22T14:00:00.000Z", "origin": "human" }
+        ],
+        "Fairness": [
+          { "term": "fairness", "snippet": "mitigating social biases in LLMs is paramount to ensuring fairness and inclusivity", "ts": "2026-08-22T14:00:00.000Z", "origin": "human" }
+        ],
+        "Gender": [
+          { "term": "gender", "snippet": "StereoSet covers gender, race, religion, and profession biases", "ts": "2026-08-22T14:00:00.000Z", "origin": "human" }
+        ],
+        "Generative_KI": [
+          { "term": "major language models", "snippet": "We evaluate five major language models in this paper", "ts": "2026-08-22T14:00:00.000Z", "origin": "human" }
+        ],
+        "Prompting": [
+          { "term": "prompting techniques", "snippet": "We use 12 different types of prompting techniques in our paper", "ts": "2026-08-22T14:00:00.000Z", "origin": "human" }
+        ]
+      },
+      "analysis": {
+        "fields": {
+          "Studientyp": "Experimentell",
+          "AN_Prompting_Role": ["Research_Instrument"],
+          "AN_Prompt_Techniques": ["General_Guidance", "Role_Persona", "Thought_Generation"],
+          "AN_Bias_Axes": ["Age", "Gender", "Nationality_Migration", "Other_Axis", "Physical_Appearance", "Race_Ethnicity", "Religion"],
+          "AN_Harm_Types": ["Stereotyping"],
+          "AN_Mitigation_Stage": ["Prompt_Practice"],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": ["Not_SW_Specific"],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "Experimental comparison of twelve prompting variants across five LLMs and nine bias categories. Thought Generation captures chain-of-thought prompts; Role Persona captures human and machine persona prompts; General Guidance captures System 1 and System 2 instructions. Other Axis covers profession and institution."
+        },
+        "undecidable": {}
+      },
+      "ts": "2026-08-22T14:00:00.000Z",
+      "reviewer": "reviewer2",
+      "text_source": "raw"
+    }
+  }
+}

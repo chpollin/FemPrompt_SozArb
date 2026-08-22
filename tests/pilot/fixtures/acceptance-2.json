@@ -1,0 +1,46 @@
+{
+  "schema": "femprompt-prisma-reviewer/0.3",
+  "reviewer": "acceptance",
+  "updated": "2026-08-22T16:00:00.000Z",
+  "decisions": {
+    "PILOT-A": {
+      "categories": { "Prompting": 2, "Gender": 2 },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Prompting": [{ "term": "prompt", "snippet": "prompt evidence", "ts": "2026-08-22T16:00:00.000Z", "origin": "human" }],
+        "Gender": [{ "term": "gender", "snippet": "gender evidence", "ts": "2026-08-22T16:00:00.000Z", "origin": "human" }]
+      },
+      "analysis": {
+        "fields": {
+          "Studientyp": "Empirisch",
+          "AN_Prompting_Role": ["Research_Instrument"],
+          "AN_Prompt_Techniques": ["General_Guidance"],
+          "AN_Bias_Axes": ["Gender"],
+          "AN_Harm_Types": ["Stereotyping"],
+          "AN_Mitigation_Stage": ["Prompt_Practice"],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": ["Not_SW_Specific"],
+          "AN_Coding_Basis": "Fulltext"
+        },
+        "undecidable": {}
+      },
+      "ts": "2026-08-22T16:00:00.000Z",
+      "reviewer": "acceptance",
+      "text_source": "raw"
+    },
+    "PILOT-B": {
+      "categories": {},
+      "decision": "Exclude",
+      "override": false,
+      "reason": "Not_relevant_topic",
+      "override_reason": null,
+      "evidence": {},
+      "ts": "2026-08-22T16:00:00.000Z",
+      "reviewer": "acceptance",
+      "text_source": "abstract"
+    }
+  }
+}

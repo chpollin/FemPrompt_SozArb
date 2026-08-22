@@ -46,80 +46,78 @@
     <main class="page-content">
         <article class="prose">
             <h2>Onboarding für das Screening</h2>
-            <p>Diese Seite führt die beiden Reviewer:innen durch das PRISM-Screening. Du brauchst dafür
-            weder Git noch ein Terminal noch die Wissensbasis, ein Browser und der Link zum Tool genügen.</p>
+            <p>Für das Screening brauchst du Chrome oder Edge und einen lokalen Klon des bereitgestellten
+            Projektordners. PRISM schreibt deine Entscheidungen direkt in diesen Klon.</p>
 
-            <h3><i class="fas fa-circle-info"></i> Was ist PRISM und was ist deine Aufgabe</h3>
-            <p>PRISM ist die Screening-Oberfläche des systematischen Reviews. Deine Aufgabe ist, jedes Paper
-            im Korpus zu lesen und am Text belegt zu entscheiden, ob es in den Review aufgenommen wird (Include)
-            oder ausgeschlossen wird (Exclude). Beide Reviewer:innen bearbeiten den vollständigen Batch. Ihr
-            entscheidet unabhängig voneinander und stimmt euch während des Screenings nicht ab. Die menschliche
-            Entscheidung ist bindend.</p>
+            <h3><i class="fas fa-circle-info"></i> Aufgabe</h3>
+            <p>Du liest jedes Paper und belegst deine Bewertung mit Textstellen. Beide Reviewer:innen bearbeiten
+            den vollständigen Korpus unabhängig voneinander. Die Abstimmung abweichender Entscheidungen folgt
+            nach dem Screening.</p>
 
-            <h3><i class="fas fa-list-ol"></i> Schritt für Schritt durch ein Paper</h3>
+            <h3><i class="fas fa-sliders"></i> Einmalige Einrichtung</h3>
             <ol>
-                <li><strong>Tool öffnen.</strong> Rufe
-                    <a href="https://chpollin.github.io/FemPrompt_SozArb/prisma.html" target="_blank" rel="noopener">chpollin.github.io/FemPrompt_SozArb/prisma.html</a>
-                    auf. Links steht der Korpus, in der Mitte die Lesespalte, rechts deine Bewertung.</li>
-                <li><strong>Paper lesen.</strong> Über der Lesespalte schaltest du zwischen
-                    &bdquo;Volltext&ldquo; und &bdquo;KI-Extraktion&ldquo; um. Der Volltext ist die verbindliche Textgrundlage.
-                    Die KI-Extraktion ist eine Zusammenfassung; Belege von dort werden als KI markiert und binden deine
-                    Entscheidung nicht. Bei manchen Papern liegt nur ein Abstract vor, das zeigt der Hinweis
-                    &bdquo;nur Abstract&ldquo; an.</li>
-                <li><strong>Suchen.</strong> Im Feld &bdquo;Im Text suchen&ldquo; findest du eine Stelle im
-                    aktuellen Paper, mit Enter springst du zum nächsten Treffer. Über der Korpusliste durchsucht
-                    &bdquo;Volltext-Suche über alle Paper&ldquo; den gesamten Korpus.</li>
-                <li><strong>Beleg anheften.</strong> Markiere im Text die Stelle, die eine Kategorie trägt, oder
-                    hefte einen Suchtreffer an. Es öffnet sich das Menü &bdquo;Als Beleg anheften an&ldquo;, dort
-                    wählst du die passende Kategorie. Ein aus dem Volltext angehefteter Beleg setzt die zugehörige
-                    Kategorie automatisch.</li>
-                <li><strong>Kategorien setzen.</strong> Die zehn Kategorien liegen in zwei Gruppen,
-                    &bdquo;Gegenstand&ldquo; und &bdquo;Perspektive&ldquo;. Klicke jede Kategorie an, die du am Text belegen
-                    kannst.</li>
-                <li><strong>Abgeleitete Entscheidung prüfen.</strong> Sobald mindestens eine Kategorie in
-                    Gegenstand und mindestens eine in Perspektive gesetzt ist, leitet das Tool Include ab, sonst Exclude.
-                    Die abgeleitete Entscheidung steht als Pille in der Logikzeile.</li>
-                <li><strong>Override und Begründung.</strong> Der Override-Schalter kehrt die abgeleitete
-                    Entscheidung um. Überschreibst du zu Include, verlangt das Tool eine schriftliche
-                    &bdquo;Begründung Override zu Include&ldquo;. Führt die Entscheidung zu Exclude, wählst du einen
-                    Ausschlussgrund aus den Chips (Duplicate, Not relevant topic, Wrong publication type, No full text,
-                    Language).</li>
-                <li><strong>Entscheidung erfassen.</strong> Mit &bdquo;Entscheidung erfassen (bindend)&ldquo;
-                    schreibst du die Bewertung fest. Sie lässt sich danach über &bdquo;Überarbeiten&ldquo; wieder
-                    öffnen.</li>
-                <li><strong>Nächstes Paper.</strong> &bdquo;Nächstes offen&ldquo; springt zum nächsten noch
-                    nicht bewerteten Paper. So arbeitest du den Batch der Reihe nach ab.</li>
+                <li><strong>Kürzel festlegen.</strong> Trage ein kurzes persönliches Kürzel mit zwei bis zwölf Zeichen
+                    ein. Das Kürzel bestimmt die Datei <code>docs/data/screening/&lt;kürzel&gt;.json</code>.</li>
+                <li><strong>Arbeitsordner verbinden.</strong> Wähle die Wurzel des lokalen Projektordners. PRISM löst
+                    darin <code>docs/data/screening/</code> auf und zeigt den genauen Zielpfad.</li>
+                <li><strong>Status prüfen.</strong> Nach der Verbindung bleibt nur eine kompakte Zeile mit Kürzel,
+                    Zielpfad und Ordnerstatus sichtbar. Über &bdquo;Ordner ändern&ldquo; lässt sich die Verbindung bei
+                    Bedarf ersetzen.</li>
             </ol>
 
-            <h3><i class="fas fa-file-arrow-down"></i> Deine Datei</h3>
-            <p>Deine Entscheidungen liegen als eine JSON-Datei pro Reviewer:in. Am Ende einer Sitzung öffnest du
-            oben rechts &bdquo;Daten &amp; Sync&ldquo; und klickst &bdquo;Eigene Datei exportieren&ldquo;. Die Datei
-            heißt standardmäßig <code>reviewer1.json</code>; ergänze deinen Namen, wenn du sie an den Technical
-            Lead schickst, damit die beiden Dateien auseinandergehalten werden.</p>
-            <p>Der Browser hält deinen Stand zusätzlich lokal (localStorage). Arbeite deshalb immer im gleichen
-            Browser auf demselben Gerät, dann findest du deinen Fortschritt bei der nächsten Sitzung wieder. Die
-            Datei am Sitzungsende zu exportieren bleibt trotzdem wichtig, sie ist deine gesicherte Kopie für den
-            Technical Lead.</p>
+            <h3><i class="fas fa-list-ol"></i> Ein Paper bearbeiten</h3>
+            <ol>
+                <li><strong>Paper lesen.</strong> Die Metadaten stehen kompakt über dem Dokument. Ein DOI und eine
+                    vorhandene Webquelle sind verlinkt. Der Hinweis &bdquo;Metadaten-Abstract&ldquo; kennzeichnet fehlenden
+                    Volltext.</li>
+                <li><strong>Text durchsuchen.</strong> Das Suchfeld in der Lesespalte springt mit Enter zum nächsten
+                    Treffer. Die Korpussuche zeigt vollständige Titel, Autor:innen, Jahr und Paper-ID, damit gleiche
+                    Treffer unterscheidbar bleiben.</li>
+                <li><strong>Beleg anheften.</strong> Markiere eine tragende Textstelle oder hefte den aktiven
+                    Suchtreffer an eine Kategorie. Jede gewählte Kategorie braucht mindestens einen Beleg aus dem
+                    Papertext.</li>
+                <li><strong>Kategorien bewerten.</strong> Die Stufen lauten nein, teilweise und ja. Die Definition
+                    jeder Kategorie sowie die Beleganleitung stehen in den zugehörigen Info-Schaltern.</li>
+                <li><strong>Ableitung prüfen.</strong> Der Bewertungsbereich zeigt nur das Ergebnis Include, Unclear
+                    oder Exclude. Der Info-Schalter erklärt die Ableitungsregel. Ein Override erfordert die passende
+                    Begründung.</li>
+                <li><strong>Include codieren.</strong> Bei Include werden Studientyp und die erforderlichen
+                    Analysefelder ausgefüllt. PRISM übernimmt die gelesene Textquelle als Codierbasis. Bei Volltext
+                    ist <code>AN_Harm_Types</code> erforderlich.</li>
+                <li><strong>Speichern.</strong> Klicke auf das Diskettensymbol neben der Paperzahl. Der Knopf wird
+                    erst aktiv, wenn alle Muss-Kriterien erfüllt sind. PRISM schreibt anschließend die vollständige
+                    Reviewer-Datei in den verbundenen Arbeitsordner.</li>
+            </ol>
 
-            <h3><i class="fas fa-circle-question"></i> Kurz-FAQ</h3>
-            <p><strong>Ein Paper hat keinen Text.</strong> Liegt weder Volltext noch Abstract vor, erscheint ein
-            Hinweis in der Lesespalte. Eine am Text belegte Bewertung ist dann nicht möglich, und der Ausschluss
-            als &bdquo;No full text&ldquo; ist legitim.</p>
-            <p><strong>Was ist der KI-Vorschlag?</strong> Der KI-Vorschlag ist beratend. Er steht eingeklappt am
-            Ende der Bewertungsspalte und bindet deine Entscheidung nie. Er gilt als diagnostisch und
-            konfabulationsanfällig, lies ihn also mit Vorsicht.</p>
-            <p><strong>Was, wenn ihr euch widersprecht?</strong> Abweichungen zwischen euren beiden Bewertungen
-            werden später in einer Reconciliation aufgelöst. Während des Screenings ist das nicht deine Aufgabe,
-            entscheide unabhängig nach dem, was du am Text belegen kannst.</p>
-            <p><strong>Pause und Weiterarbeiten.</strong> Du kannst jederzeit aufhören. Beim erneuten Öffnen im
-            selben Browser ist dein Stand da, und &bdquo;Nächstes offen&ldquo; bringt dich zum ersten noch offenen
-            Paper.</p>
+            <h3><i class="fas fa-check-circle"></i> Muss-Kriterien</h3>
+            <ul>
+                <li>Kürzel und Arbeitsordner sind festgelegt.</li>
+                <li>Jede gewählte Kategorie besitzt einen Beleg aus der Paper-Ebene.</li>
+                <li>Exclude besitzt einen kontrollierten Ausschlussgrund.</li>
+                <li>Ein Override zu Include besitzt eine schriftliche Begründung.</li>
+                <li>Include besitzt eine vollständige und widerspruchsfreie Analyse.</li>
+                <li>Die gelesene Textquelle ist vollständig geladen und im Datensatz vermerkt.</li>
+            </ul>
 
-            <h3><i class="fas fa-screwdriver-wrench"></i> Randnotiz für den Technical Lead</h3>
-            <p>In Chrome und Edge bietet &bdquo;Daten &amp; Sync&ldquo; unter &bdquo;Mit Projektordner verbinden&ldquo;
-            einen direkten Schreibpfad in den Ordner <code>docs/data/screening/</code> eines lokalen Klons. Dieser Weg
-            setzt Git und einen lokalen Klon voraus und ist für die technische Leitung gedacht. Für das Screening der
-            Reviewer:innen genügt der Export.</p>
+            <h3><i class="fas fa-layer-group"></i> LLM-Wissensdestillat</h3>
+            <p>Das LLM-Wissensdestillat ist ein automatisch erzeugtes Referenzdokument. Es wird erst nach der
+            gespeicherten eigenen Entscheidung angeboten und kann anschließend zur Einordnung geöffnet werden.
+            Seine Textstellen erfüllen das Paper-Belegkriterium nicht.</p>
+
+            <h3><i class="fas fa-floppy-disk"></i> Speichern und Versionieren</h3>
+            <p>Der Speicherstatus meldet den Zielpfad, den erfolgreichen Schreibvorgang oder einen Fehler. Bei einem
+            Schreibfehler bleibt der Browser-Zwischenstand erhalten. Beende die Sitzung erst nach einer bestätigten
+            Dateispeicherung.</p>
+            <p>Commit und Push erfolgen anschließend in GitHub Desktop. PRISM führt keine Git-Aktion aus und erzeugt
+            keine Commit-Nachricht.</p>
+
+            <h3><i class="fas fa-circle-question"></i> Häufige Fälle</h3>
+            <p><strong>Ein Paper hat keinen lesbaren Text.</strong> Der Ausschlussgrund &bdquo;No full text&ldquo; ist
+            vorgesehen, wenn weder Volltext noch ein ausreichender Abstract vorliegt.</p>
+            <p><strong>Frühere Bewertungen.</strong> Frühere fachliche oder automatische Einschätzungen erscheinen
+            erst nach deiner gespeicherten Entscheidung im eingeklappten Vergleich.</p>
+            <p><strong>Abweichende Entscheidungen.</strong> Die beiden Dateien bleiben während des Screenings getrennt.
+            Der spätere Abgleich verändert die Quelldateien nicht.</p>
         </article>
     </main>
 

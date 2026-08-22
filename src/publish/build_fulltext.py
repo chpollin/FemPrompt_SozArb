@@ -11,11 +11,17 @@ Why here and not in the vault generator: the served knowledge docs carry an empt
 "## Full Text" placeholder; the real Docling text was never injected. This fills the gap
 from the canonical conversion without touching the distillation, which stays the AI layer.
 """
+
+import html
 import json
 import re
+import shutil
 import sys
+import unicodedata
 from collections import Counter
+from difflib import SequenceMatcher
 from pathlib import Path
+from tempfile import TemporaryDirectory
 
 ROOT = Path(__file__).resolve().parents[2]
 DOCS = ROOT / "docs"
@@ -50,24 +56,323 @@ def drop_running_headers(text: str) -> str:
     lines = text.split("\n")
     stripped = [ln.strip() for ln in lines]
     counts = Counter(s for s in stripped if s)
+
     def is_header(s: str) -> bool:
         return bool(s) and len(s) <= 6 and counts[s] >= 5 and not s.startswith("#")
+
     return "\n".join(ln for ln, s in zip(lines, stripped) if not is_header(s))
 
 
-def embedded_source_file(served_md: Path):
-    """The served knowledge doc carries the distillation frontmatter with source_file."""
+def embedded_source_metadata(served_md: Path) -> dict[str, object]:
+    """Return the source identity embedded below a knowledge doc's full-text marker."""
     try:
         md = served_md.read_text(encoding="utf-8", errors="replace")
     except OSError:
-        return None
+        return {}
     i = md.find("## Full Text")
     seg = md[i:] if i != -1 else md
-    m = re.search(r"^source_file:\s*(.+?)\s*$", seg, re.MULTILINE)
-    return m.group(1).strip().strip('"') if m else None
+    metadata: dict[str, object] = {}
+    for field in ("source_file", "title"):
+        match = re.search(rf"^{field}:\s*(.+?)\s*$", seg, re.MULTILINE)
+        if match:
+            metadata[field] = match.group(1).strip().strip('"')
+    authors = re.search(r"^authors:\s*(.+?)\s*$", seg, re.MULTILINE)
+    if authors:
+        try:
+            value = json.loads(authors.group(1))
+        except json.JSONDecodeError:
+            value = []
+        if isinstance(value, list) and all(isinstance(author, str) for author in value):
+            metadata["authors"] = value
+    year = re.search(r"^year:\s*(\d{4})\s*$", seg, re.MULTILINE)
+    if year:
+        metadata["year"] = int(year.group(1))
+    return metadata
 
 
-def author_year_key(paper: dict) -> str:
+def embedded_source_file(served_md: Path) -> str | None:
+    """Return the conversion filename embedded in a served knowledge doc."""
+    source_file = embedded_source_metadata(served_md).get("source_file")
+    return source_file if isinstance(source_file, str) else None
+
+
+GENERIC_HEADINGS = {
+    "abstract",
+    "acknowledgements",
+    "article",
+    "articleinfo",
+    "citation",
+    "contents",
+    "copyright",
+    "correspondence",
+    "forum",
+    "introduction",
+    "keywords",
+    "openaccess",
+    "originalpaper",
+    "researcharticle",
+    "viewpoint",
+}
+
+
+def substantive_heading(value: str) -> str | None:
+    """Discard document-type labels while retaining a title after such a prefix."""
+    value = html.unescape(value).strip()
+    prefixed = re.match(
+        r"^(?:research[- ]?article|original paper|article|viewpoint|forum)\s*"
+        r"(?:[:\-–—]\s*)?(.+)$",
+        value,
+        re.IGNORECASE,
+    )
+    if prefixed:
+        value = prefixed.group(1).strip()
+    if not value or norm(value) in GENERIC_HEADINGS:
+        return None
+    if re.match(r"^\d+(?:\.\d+)*\s+", value):
+        return None
+    return value
+
+
+def source_titles(path: Path) -> list[str]:
+    """Return substantive title candidates from the document's compact title block."""
+    try:
+        text = path.read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return []
+    candidates: list[str] = []
+    frontmatter = re.match(r"^---\s*\n(.*?)\n---\s*\n", text, re.DOTALL)
+    if frontmatter:
+        title = re.search(
+            r'^title:\s*["\']?(.+?)["\']?\s*$', frontmatter.group(1), re.MULTILINE
+        )
+        if title:
+            candidates.append(title.group(1).strip())
+    early_lines = text.splitlines()[:120]
+    headings = [
+        heading
+        for line in early_lines
+        if (match := re.match(r"^#{1,2}\s+(.+?)\s*$", line))
+        if (heading := substantive_heading(match.group(1)))
+    ]
+    candidates.extend(headings[:5])
+    return candidates
+
+
+def filename_title(path: Path) -> str:
+    """Return a filename-derived title hint, which never proves identity by itself."""
+    value = path.stem.replace("_", " ")
+    return re.sub(r"^.*?\b(?:19|20)\d{2}\b\s*", "", value, count=1)
+
+
+TITLE_STOPWORDS = {
+    "and",
+    "are",
+    "das",
+    "der",
+    "die",
+    "ein",
+    "eine",
+    "for",
+    "from",
+    "how",
+    "ist",
+    "mit",
+    "the",
+    "und",
+    "von",
+    "was",
+    "what",
+    "why",
+    "with",
+    "zum",
+    "zur",
+}
+
+
+def title_tokens(value: str) -> set[str]:
+    """Return stable content tokens for truncated or typographically noisy titles."""
+    ascii_value = (
+        unicodedata.normalize("NFKD", value).encode("ascii", "ignore").decode()
+    )
+    return {
+        token
+        for token in re.findall(r"[a-z0-9]+", ascii_value.lower())
+        if len(token) > 2 and not token.isdigit() and token not in TITLE_STOPWORDS
+    }
+
+
+def titles_match(expected: str, candidates: list[str]) -> bool:
+    """Require a strong title match before attaching a conversion to a paper."""
+    expected_norm = norm(expected)
+    expected_tokens = title_tokens(expected)
+    if not expected_norm:
+        return False
+    for candidate in candidates:
+        candidate_norm = norm(candidate)
+        if not candidate_norm:
+            continue
+        shorter = min(len(expected_norm), len(candidate_norm))
+        longer = max(len(expected_norm), len(candidate_norm))
+        if expected_norm == candidate_norm:
+            return True
+        if (
+            shorter >= 20
+            and shorter / longer >= 0.72
+            and (expected_norm in candidate_norm or candidate_norm in expected_norm)
+        ):
+            return True
+        if SequenceMatcher(None, expected_norm, candidate_norm).ratio() >= 0.86:
+            return True
+        candidate_tokens = title_tokens(candidate)
+        overlap = len(expected_tokens & candidate_tokens)
+        shorter_token_count = min(len(expected_tokens), len(candidate_tokens))
+        if shorter_token_count:
+            candidate_containment = overlap / len(candidate_tokens)
+            expected_coverage = overlap / len(expected_tokens)
+            # Docling filenames and early headings are often truncated. Three shared
+            # content words are enough only when they also cover at least half of the
+            # expected title. This rejects a shorter related title that merely reorders
+            # the expected paper's generic subject words.
+            if (
+                overlap >= 4
+                and candidate_containment >= 0.75
+                and expected_coverage >= 0.35
+            ) or (
+                overlap >= 2
+                and candidate_containment >= 0.75
+                and expected_coverage >= 0.5
+            ):
+                return True
+    return False
+
+
+def titles_corroborate(expected: str, candidates: list[str]) -> bool:
+    """Require topical support before a filename may confirm a renamed publication."""
+    expected_tokens = title_tokens(expected)
+    return any(
+        len(expected_tokens & title_tokens(candidate)) >= 2 for candidate in candidates
+    )
+
+
+def title_similarity(expected: str, candidates: list[str]) -> float:
+    """Rank plausible same-author/year sources without weakening the match gate."""
+    expected_norm = norm(expected)
+    expected_tokens = title_tokens(expected)
+    best = 0.0
+    for candidate in candidates:
+        candidate_norm = norm(candidate)
+        if not candidate_norm:
+            continue
+        if expected_norm == candidate_norm:
+            return 1.0
+        sequence = SequenceMatcher(None, expected_norm, candidate_norm).ratio()
+        candidate_tokens = title_tokens(candidate)
+        overlap = len(expected_tokens & candidate_tokens)
+        token_f1 = (
+            2 * overlap / (len(expected_tokens) + len(candidate_tokens))
+            if expected_tokens and candidate_tokens
+            else 0.0
+        )
+        best = max(best, sequence, token_f1)
+    return best
+
+
+DOI_RE = re.compile(
+    r"(?:\bdoi\s*:|https?://doi\.org/)\s*[\"']?"
+    r"(10\.\d{4,9}/[^\s<>\"']+)",
+    re.IGNORECASE,
+)
+
+
+def source_dois(path: Path) -> set[str]:
+    """Extract DOI identifiers from the compact publication metadata block."""
+    try:
+        title_block = "\n".join(
+            path.read_text(encoding="utf-8", errors="replace").splitlines()[:120]
+        )
+    except OSError:
+        return set()
+    return {
+        match.group(1).lower().rstrip(".,;:)")
+        for match in DOI_RE.finditer(html.unescape(title_block))
+    }
+
+
+def first_author_surname(authors: object) -> str:
+    """Return a normalized first-author surname from corpus-style author metadata."""
+    if not isinstance(authors, str) or not authors.strip():
+        return ""
+    return norm(authors.split(";", 1)[0].split(",", 1)[0])
+
+
+def identity_conflicts(
+    paper: dict[str, object], path: Path, metadata: dict[str, object] | None = None
+) -> list[str]:
+    """Return hard DOI, first-author, and year conflicts for a proposed source."""
+    conflicts: list[str] = []
+    expected_doi = str(paper.get("doi") or "").lower().strip()
+    dois = source_dois(path)
+    if (
+        expected_doi
+        and dois
+        and not any(
+            expected_doi == doi
+            or expected_doi.startswith(doi)
+            or doi.startswith(expected_doi)
+            for doi in dois
+        )
+    ):
+        conflicts.append("doi")
+
+    metadata = metadata or {}
+    expected_year = paper.get("year")
+    source_year = metadata.get("year")
+    if isinstance(expected_year, int) and isinstance(source_year, int):
+        if expected_year != source_year:
+            conflicts.append("year")
+
+    expected_author = first_author_surname(paper.get("authors"))
+    source_authors = metadata.get("authors")
+    if expected_author and isinstance(source_authors, list) and source_authors:
+        source_author = source_authors[0]
+        if isinstance(source_author, str) and expected_author not in norm(
+            source_author
+        ):
+            conflicts.append("author")
+    return conflicts
+
+
+def verified_source(
+    paper: dict[str, object],
+    path: Path,
+    label: str,
+    metadata: dict[str, object] | None = None,
+) -> tuple[Path | None, str]:
+    """Fail closed on identity conflicts or an unsupported filename-only match."""
+    conflicts = identity_conflicts(paper, path, metadata)
+    if "doi" in conflicts:
+        return None, "mismatch"
+    expected = str(paper.get("title") or "")
+    document_titles = source_titles(path)
+    metadata_title = (metadata or {}).get("title")
+    corroborated_metadata = isinstance(metadata_title, str) and titles_match(
+        metadata_title, document_titles
+    )
+    verified_titles = document_titles.copy()
+    if corroborated_metadata:
+        verified_titles.insert(0, metadata_title)
+    if titles_match(expected, verified_titles):
+        return path, label
+    if (
+        not {"author", "year"} & set(conflicts)
+        and titles_match(expected, [filename_title(path)])
+        and titles_corroborate(expected, document_titles)
+    ):
+        return path, label
+    return None, "mismatch"
+
+
+def author_year_key(paper: dict[str, object]) -> str:
     """First-author lastname plus year, e.g. 'chatterji2025', for the fallback join."""
     ay = (paper.get("author_year") or "").strip()
     if not ay:
@@ -81,33 +386,113 @@ def clean(text: str) -> str:
     text = FRONTMATTER_RE.sub("", text, count=1)
     text = HTML_COMMENT_RE.sub("", text)
     text = GLYPH_RE.sub("", text)
-    text = HSPACE_RE.sub(" ", text)  # collapse the whitespace runs a stripped GLYPH leaves behind
+    text = HSPACE_RE.sub(
+        " ", text
+    )  # collapse the whitespace runs a stripped GLYPH leaves behind
     text = drop_running_headers(text)
     text = BLANKS_RE.sub("\n\n", text)
     return text.strip() + "\n"
 
 
-def resolve_docling(paper, clean_idx, raw_idx):
+def resolve_docling(
+    paper: dict[str, object], clean_idx: dict[str, str], raw_idx: dict[str, str]
+) -> tuple[Path | None, str | None]:
     """Cascade: exact source_file from the knowledge doc, then first-author-year prefix."""
     kd = paper.get("knowledge_doc")
-    if kd:
-        sf = embedded_source_file(DOCS / kd)
+    explicit_mismatch = False
+    rejected: set[tuple[str, str]] = set()
+    if isinstance(kd, str) and kd:
+        metadata = embedded_source_metadata(DOCS / kd)
+        sf = metadata.get("source_file")
+        if not isinstance(sf, str):
+            sf = None
         if sf:
             if (CLEAN_DIR / sf).exists():
-                return CLEAN_DIR / sf, "clean"
+                resolved = verified_source(
+                    paper, CLEAN_DIR / sf, "clean", metadata=metadata
+                )
+                if resolved[0]:
+                    return resolved
+                explicit_mismatch = True
+                rejected.add(("clean", sf))
             if (RAW_DIR / sf).exists():
-                return RAW_DIR / sf, "raw"
+                resolved = verified_source(
+                    paper, RAW_DIR / sf, "raw", metadata=metadata
+                )
+                if resolved[0]:
+                    return resolved
+                explicit_mismatch = True
+                rejected.add(("raw", sf))
     key = author_year_key(paper)
     if len(key) > 5:
-        for idx, base, label in ((clean_idx, CLEAN_DIR, "clean"), (raw_idx, RAW_DIR, "raw")):
-            hits = sorted(fn for stem_norm, fn in idx.items() if stem_norm.startswith(key))
+        for idx, base, label in (
+            (clean_idx, CLEAN_DIR, "clean"),
+            (raw_idx, RAW_DIR, "raw"),
+        ):
+            hits = sorted(
+                fn
+                for stem_norm, fn in idx.items()
+                if stem_norm.startswith(key) and (label, fn) not in rejected
+            )
             if len(hits) == 1:
-                return base / hits[0], label
+                resolved = verified_source(paper, base / hits[0], label)
+                if resolved[0]:
+                    return resolved
+                explicit_mismatch = True
             if len(hits) > 1:
-                # two conversions share the first-author-year prefix (same author, same
-                # year); assigning the first would silently attach a foreign full text
+                expected = str(paper.get("title") or "")
+                ranked: list[tuple[float, str]] = []
+                for filename in hits:
+                    path = base / filename
+                    resolved = verified_source(paper, path, label)
+                    if resolved[0]:
+                        candidates = source_titles(path) + [filename_title(path)]
+                        ranked.append(
+                            (title_similarity(expected, candidates), filename)
+                        )
+                    else:
+                        explicit_mismatch = True
+                ranked.sort()
+                if not ranked:
+                    continue
+                if len(ranked) == 1:
+                    return base / ranked[0][1], label
+                if len(ranked) > 1 and ranked[-1][0] - ranked[-2][0] >= 0.05:
+                    return base / ranked[-1][1], label
+                # Equally plausible conversions remain unsafe. Attaching the first would
+                # silently transfer evidence between publications from the same year.
                 return None, "ambiguous"
-    return None, None
+    return (None, "mismatch") if explicit_mismatch else (None, None)
+
+
+def _publish_staged(stage_assets: Path, stage_manifest: Path) -> None:
+    """Replace assets and manifest together, restoring the previous build on failure."""
+    backup_assets = stage_assets.parent / "previous-fulltext"
+    backup_manifest = stage_assets.parent / "previous-fulltext-manifest.json"
+    had_assets = OUT_DIR.exists()
+    had_manifest = MANIFEST.exists()
+    moved_assets = installed_assets = moved_manifest = installed_manifest = False
+    try:
+        if had_assets:
+            OUT_DIR.replace(backup_assets)
+            moved_assets = True
+        stage_assets.replace(OUT_DIR)
+        installed_assets = True
+        if had_manifest:
+            MANIFEST.replace(backup_manifest)
+            moved_manifest = True
+        stage_manifest.replace(MANIFEST)
+        installed_manifest = True
+    except Exception:
+        if installed_assets and OUT_DIR.exists():
+            shutil.rmtree(OUT_DIR)
+        if moved_assets and backup_assets.exists():
+            backup_assets.replace(OUT_DIR)
+        if installed_manifest and MANIFEST.exists():
+            MANIFEST.unlink()
+        if moved_manifest and backup_manifest.exists():
+            backup_manifest.replace(MANIFEST)
+        raise
 
 
 def main() -> int:
@@ -118,40 +503,49 @@ def main() -> int:
     clean_idx = {norm(p.name[:-3]): p.name for p in CLEAN_DIR.glob("*.md")}
     raw_idx = {norm(p.name[:-3]): p.name for p in RAW_DIR.glob("*.md")}
 
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
-    for old in OUT_DIR.glob("*.md"):
-        old.unlink()
-
-    manifest = {}
-    n_clean = n_raw = n_none = n_ambiguous = 0
-    glyph_files = []
-    for p in papers:
-        pid = p.get("id")
-        if not pid:
-            continue
-        path, src = resolve_docling(p, clean_idx, raw_idx)
-        if not path:
-            manifest[pid] = {"src": "none", "chars": 0}
-            if src == "ambiguous":
-                manifest[pid]["reason"] = "ambiguous"
-                n_ambiguous += 1
-            n_none += 1
-            continue
-        raw = path.read_text(encoding="utf-8", errors="replace")
-        if GLYPH_RE.search(raw):
-            glyph_files.append(path.name)
-        body = clean(raw)
-        (OUT_DIR / f"{pid}.md").write_text(body, encoding="utf-8")
-        manifest[pid] = {"src": src, "chars": len(body), "source_file": path.name}
-        n_clean += src == "clean"
-        n_raw += src == "raw"
-
-    MANIFEST.write_text(json.dumps(manifest, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    OUT_DIR.parent.mkdir(parents=True, exist_ok=True)
+    manifest: dict[str, dict[str, object]] = {}
+    n_clean = n_raw = n_none = n_ambiguous = n_mismatch = 0
+    glyph_files: list[str] = []
+    with TemporaryDirectory(prefix=".fulltext-stage-", dir=OUT_DIR.parent) as temp_dir:
+        stage_root = Path(temp_dir)
+        stage_assets = stage_root / "fulltext"
+        stage_assets.mkdir()
+        stage_manifest = stage_root / "fulltext_manifest.json"
+        for paper in papers:
+            pid = paper.get("id")
+            if not isinstance(pid, str) or not pid:
+                continue
+            path, src = resolve_docling(paper, clean_idx, raw_idx)
+            if not path:
+                manifest[pid] = {"src": "none", "chars": 0}
+                if src == "ambiguous":
+                    manifest[pid]["reason"] = "ambiguous"
+                    n_ambiguous += 1
+                elif src == "mismatch":
+                    manifest[pid]["reason"] = "title_mismatch"
+                    n_mismatch += 1
+                n_none += 1
+                continue
+            raw = path.read_text(encoding="utf-8", errors="replace")
+            if GLYPH_RE.search(raw):
+                glyph_files.append(path.name)
+            body = clean(raw)
+            (stage_assets / f"{pid}.md").write_text(body, encoding="utf-8")
+            manifest[pid] = {"src": src, "chars": len(body), "source_file": path.name}
+            n_clean += src == "clean"
+            n_raw += src == "raw"
+        stage_manifest.write_text(
+            json.dumps(manifest, ensure_ascii=False, separators=(",", ":")),
+            encoding="utf-8",
+        )
+        _publish_staged(stage_assets, stage_manifest)
     print(f"papers: {len(papers)}")
     print(f"  full text from markdown_clean: {n_clean}")
     print(f"  full text from markdown (raw):  {n_raw}")
     print(f"  no full text (abstract-only):   {n_none}")
     print(f"  of which ambiguous fallback:    {n_ambiguous}")
+    print(f"  of which title mismatch:        {n_mismatch}")
     print(f"  GLYPH-affected source files:    {len(glyph_files)}")
     print(f"wrote {n_clean + n_raw} files to {OUT_DIR.relative_to(ROOT)} plus manifest")
     return 0

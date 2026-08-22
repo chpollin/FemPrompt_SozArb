@@ -1,6 +1,6 @@
 // PRISMA Screening Tool (PRISM) -- standalone evidence-grounded screening instrument.
 // The screening view is built around reading and searching the paper's original full text
-// (the Volltext layer; the AI distillation is a separate KI-Extraktion layer) and pinning
+// (the full-text layer; the generated knowledge distillate is a separate reference layer) and pinning
 // found passages as Belege (evidence) on categories. AI is reduced to an optional
 // collapsed suggestion; human and AI assessment are brought together, not scored against
 // each other -- the human-AI comparison surface (matrix, kappa, divergence) was removed
@@ -8,14 +8,13 @@
 // the in-tool kappa and confusion matrix of the AI-disclosure line. AI-human agreement
 // is evaluated outside the tool on the benchmark corpus (PRISMA-trAIce M9/R2 by reference).
 //
-// One screening workspace (ADR-020); the report and data functions remain in code as
-// on-demand panels, not surfaced in the toolbar.
+// One screening workspace (ADR-020/028). Editors set a short reviewer key and
+// connect the local repository once; the daily workflow has one save action.
 // Human decision is binding (RAISE); the AI proposal is advisory and stored separately
 // so the flow diagram splits AI from human decisions (PRISMA-trAIce R1).
-// Persistence: File System Access writes one JSON per reviewer (schema 0.2, with an
-// evidence map) into docs/data/screening/<reviewer>.json; versioning happens outside the
-// tool (GitHub Desktop), export/import fallback. Runs on prisma.html via the window.EC
-// shim from prisma-data.js.
+// Persistence: after an explicit reviewer key, File System Access writes
+// one JSON per reviewer (schema 0.3) into docs/data/screening/<reviewer>.json.
+// Runs on prisma.html via the window.EC shim from prisma-data.js.
 // See knowledge/specification.md (requirements, ADRs, design system), knowledge/data.md.
 
 (function() {
@@ -23,6 +22,9 @@
 
 let EC = window.EC;
 let initialized = false;
+let acceptanceMode = null;
+let trialMode = false;
+let runActor = 'human';
 const FS_SUPPORTED = typeof window.showDirectoryPicker === 'function';
 
 // Constants
@@ -82,17 +84,19 @@ const TRAICE = [
 ];
 
 const LS_KEY = 'femprompt-prisma-state/0.2';
+const TRIAL_LS_KEY = 'femprompt-prisma-trial-state/0.1';
 const REVIEWER_SCHEMA = 'femprompt-prisma-reviewer/0.3'; // 0.2 added the evidence map (FR-13), 0.3 adds text_source per decision (ADR-027)
 const SEED = 'seed'; // built-in reviewer = the existing expert assessment (paper.human)
+const REVIEWER_KEY_PATTERN = /^[A-Za-z][A-Za-z0-9_-]{1,11}$/;
 
 // State
 
 const state = {
     surface: 'screening',
-    reviewer: 'reviewer1', // who is editing; drives the per-reviewer file name
-    perspective: SEED,     // whose decisions drive Flow/Agreement (default: seed = benchmark)
+    reviewer: null,        // explicit filename-safe reviewer key; drives the data file
+    perspective: null,     // current reviewer source for project records; never silently falls back to seed
     index: 0,
-    readMode: 'full',      // reading column layer: 'full' (paper text) or 'ai' (machine extraction)
+    readMode: 'full',      // reading layer: 'full' (paper text) or 'ai' (LLM knowledge distillate)
     reviewers: {},         // reviewerKey -> { paperId -> decision }
     checklist: {},
     disclosure: {}
@@ -102,6 +106,9 @@ let papers = [];
 let dirHandle = null;          // connected File System Access directory handle (what the picker returned)
 let screeningHandle = null;    // docs/data/screening within it: where reviewer files are read and written
 let connectScope = 'screening'; // 'root' when the picked folder is the repo root, else 'screening'
+let storedHandleAvailable = false;
+let reviewerFileErrors = {};   // reviewerKey -> blocking read/validation error for an existing file
+let reviewerRecoveryPending = {}; // reviewerKey -> browser records newer than the connected file
 let corpusIndex = null;        // id -> { t, ay, kd, src, n, x } for corpus full-text search
 let corpusIndexPromise = null;
 let corpusQuery = '';          // current corpus-wide search (left pane)
@@ -119,19 +126,25 @@ let docHtmlCurrent = '';       // rendered HTML of the active layer (for re-high
 let docHtmlPaper = '';         // rendered paper layer (verbatim text)
 let docHtmlAi = '';            // rendered AI-extraction layer (machine knowledge doc), '' when absent
 let docMarks = [], docMarkIdx = 0;
+let appliedInTextQuery = '';
 let pendingInText = null;      // in-text query to apply once the document has loaded
 let pinTerm = '', pinSnippet = '', pinOrigin = 'human'; // pinOrigin = source layer of the staged snippet
 let pinReturnFocus = null, pinKeyHandler = null; // pin-menu dialog focus restore + keydown trap
 let focusReadingOnRender = false; // move focus to the paper heading after a paper switch (a11y)
 let editingPid = null; // a committed paper reopened for editing; its record stays until re-commit
+let renderedPaperId = null;
 let readToken = 0;             // monotonic load token; a reading response for a stale token is dropped
 let readingPending = false;    // true between a reading load and its applied response; commit waits for it
 let currentTextSource = 'none'; // paper-layer text actually shown: 'raw' | 'abstract' | 'none' (ADR-027)
+let saveStatus = { kind: 'needs-reviewer', message: 'Einmal Reviewer:innen-Kürzel festlegen.' };
+let openInfoTrigger = null;
+let infoGlobalBound = false;
 
 // the in-progress (pre-commit) decision for the open paper
 let work = { pid: null, cats: {}, override: false, reason: null, overrideReason: null, evidence: {} };
 
 function curDec() {
+    if (!state.reviewer) return {};
     if (!state.reviewers[state.reviewer]) state.reviewers[state.reviewer] = {};
     return state.reviewers[state.reviewer];
 }
@@ -142,49 +155,94 @@ function resetWork(p) { work = { pid: p.id, cats: {}, override: false, reason: n
 
 function serializeAll() {
     return {
-        schema: LS_KEY,
-        config: { reviewer: state.reviewer, perspective: state.perspective, disclosure: state.disclosure },
+        schema: storageKey(),
+        config: { reviewer: state.reviewer, reviewerSelected: !!state.reviewer,
+                  perspective: state.perspective, disclosure: state.disclosure },
         reviewers: state.reviewers,
         checklist: state.checklist
     };
 }
 
+function storageKey() { return trialMode ? TRIAL_LS_KEY : LS_KEY; }
+
 function saveLocal() {
-    try { localStorage.setItem(LS_KEY, JSON.stringify(serializeAll())); }
+    if (acceptanceMode) return;
+    try { localStorage.setItem(storageKey(), JSON.stringify(serializeAll())); }
     catch (e) { console.warn('[PRISMA] local save failed:', e.message); }
 }
 
 function loadLocal() {
     try {
-        const raw = localStorage.getItem(LS_KEY);
+        const raw = localStorage.getItem(storageKey());
         if (!raw) return;
         const o = JSON.parse(raw);
         if (o.config) {
-            if (o.config.reviewer) state.reviewer = o.config.reviewer;
+            // Older builds silently defaulted everyone to reviewer1. Only an explicit
+            // selection marker and a filename-safe key are trusted during migration.
+            if (o.config.reviewerSelected && isReviewerId(o.config.reviewer))
+                state.reviewer = o.config.reviewer;
             if (o.config.perspective) state.perspective = o.config.perspective;
             if (o.config.disclosure) state.disclosure = o.config.disclosure;
         }
         state.reviewers = o.reviewers || {};
         state.checklist = o.checklist || {};
+        if (state.reviewer) saveStatus = trialMode ? {
+            kind: 'ready',
+            message: 'Isolierter Testlauf aus diesem Browser geladen.'
+        } : {
+            kind: 'dirty',
+            message: 'Zwischenstand aus dem Browser geladen; Datendatei nach dem Verbinden abgleichen.'
+        };
     } catch (e) { console.warn('[PRISMA] local load failed:', e.message); }
 }
 
 let writeChain = Promise.resolve();
+let writeVersion = 0;
 function save() {
     saveLocal();
+    if (!state.reviewer) {
+        setSaveStatus('needs-reviewer', 'Reviewer:innen-Kürzel festlegen, bevor die erste Entscheidung gespeichert wird.');
+        return;
+    }
+    if (trialMode) {
+        setSaveStatus('saved', 'Testlauf im Browser gespeichert. Forschungsdaten bleiben unverändert.');
+        renderData(document.getElementById('pt-data-inline'));
+        return;
+    }
+    const key = state.reviewer;
+    if (reviewerFileErrors[key]) {
+        setSaveStatus('error', 'Bestehende Datei ' + reviewerPath(key) + ' ist nicht lesbar und wird nicht überschrieben.');
+        renderData(document.getElementById('pt-data-inline'));
+        return;
+    }
+    setSaveStatus('dirty', screeningHandle
+        ? 'Änderungen vorhanden; Speicherung wird vorbereitet.'
+        : 'Nur im Browser gespeichert; die Datendatei ist noch nicht aktualisiert.');
     // serialize repo writes so rapid screening cannot overlap createWritable on the same file
-    if (screeningHandle) writeChain = writeChain.then(writeCurrentReviewer).catch(function(e) { console.warn('[PRISMA] repo write failed:', e); });
+    if (screeningHandle) {
+        const targetHandle = screeningHandle;
+        const text = reviewerFileText(key);
+        const version = ++writeVersion;
+        setSaveStatus('saving', 'Speichert in ' + reviewerPath(key) + ' …');
+        writeChain = writeChain.then(function() { return writeReviewerText(targetHandle, key, text); }).then(function() {
+            reviewerRecoveryPending[key] = false;
+            if (state.reviewer === key && version === writeVersion && screeningHandle === targetHandle)
+                setSaveStatus('saved', 'Gespeichert in ' + reviewerPath(key) + '.');
+        }).catch(function(e) {
+            if (state.reviewer === key && version === writeVersion)
+                setSaveStatus('error', 'Speichern fehlgeschlagen: ' + (e.message || e));
+            console.warn('[PRISMA] file write failed:', e);
+        });
+    }
 }
 
 function reviewerPayload(key) {
-    return { schema: REVIEWER_SCHEMA, reviewer: key,
+    return { schema: REVIEWER_SCHEMA, reviewer: key, actor: runActor,
              updated: new Date().toISOString(), decisions: state.reviewers[key] || {} };
 }
 
-// Deterministic on-disk form of a reviewer file: decisions sorted by paper id so a
-// git diff shows exactly which decisions changed and git blame attributes each to
-// its commit (the Git-provenance model, ADR-021). The in-memory shape is untouched;
-// only the serialized file is ordered.
+// Deterministic on-disk form: decisions are sorted by paper id. The in-memory shape
+// is untouched; only the serialized file is ordered.
 function sortedDecisions(d) {
     const out = {};
     Object.keys(d || {}).sort().forEach(function(k) { out[k] = d[k]; });
@@ -196,23 +254,112 @@ function reviewerFileText(key) {
     return JSON.stringify(pl, null, 2);
 }
 
-// A paste-ready commit message summarizing the current session, so the reviewer's
-// commit documents the work and the commit author carries the provenance (ADR-021).
-function commitMessage() {
-    const d = curDec();
-    const ids = Object.keys(d);
-    let incl = 0, excl = 0;
-    const reasons = {};
-    ids.forEach(function(id) {
-        if (d[id].decision === 'Include') incl++; else excl++;
-        const r = d[id].reason;
-        if (r) reasons[r] = (reasons[r] || 0) + 1;
+function normalizedReviewerKey(key) {
+    const normalized = String(key || '').trim().toLowerCase();
+    return REVIEWER_KEY_PATTERN.test(normalized) ? normalized : null;
+}
+
+function isReviewerId(key) { return normalizedReviewerKey(key) !== null; }
+
+function reviewerPath(key) {
+    if (!key) return 'Kürzel festlegen';
+    return trialMode ? 'isolierter Testlauf/' + key + '.json' : 'docs/data/screening/' + key + '.json';
+}
+
+function selectedFolderLabel() {
+    if (!screeningHandle) return 'nicht verbunden';
+    if (connectScope === 'root') return (dirHandle && dirHandle.name ? dirHandle.name + '/' : '') + 'docs/data/screening';
+    return (dirHandle && dirHandle.name) || 'gewählter Screening-Ordner';
+}
+
+function setSaveStatus(kind, message) {
+    saveStatus = { kind: kind, message: message };
+    const status = document.getElementById('pt-save-status');
+    if (status) {
+        status.className = 'pt-save-status pt-save-' + kind;
+        status.textContent = message;
+    }
+}
+
+function selectReviewer(key) {
+    const normalized = normalizedReviewerKey(key);
+    if (!normalized) return false;
+    state.reviewer = normalized;
+    if (!state.reviewers[normalized]) state.reviewers[normalized] = {};
+    state.perspective = normalized;
+    saveLocal();
+    const fileError = reviewerFileErrors[normalized];
+    const recovery = reviewerRecoveryPending[normalized];
+    setSaveStatus(fileError ? 'error' : (recovery ? 'dirty' : (trialMode ? 'ready' : (screeningHandle ? 'ready' : 'local'))), fileError
+        ? 'Bestehende Datei ' + reviewerPath(normalized) + ' ist nicht lesbar: ' + fileError + ' Sie wird nicht verändert.'
+        : (recovery
+            ? 'Neuere Browser-Änderungen wurden wiederhergestellt. Mit der Diskette in die Reviewer-Datei schreiben.'
+        : (trialMode
+            ? 'Isolierter Testlauf bereit. Ergebnisse bleiben in diesem Browser-Ursprung.'
+            : (screeningHandle
+                ? 'Bereit: ' + reviewerPath(normalized) + ' ist verbunden.'
+                : 'Kürzel gespeichert. Jetzt einmal den lokalen Arbeitsordner wählen.'))));
+    return true;
+}
+
+function normalizedReviewerDecisions(decisions, key) {
+    const copy = JSON.parse(JSON.stringify(decisions || {}));
+    Object.keys(copy).forEach(function(pid) {
+        if (copy[pid] && typeof copy[pid] === 'object') copy[pid].reviewer = key;
     });
-    const lines = ['screening: ' + ids.length + ' Paper bewertet (' + incl + ' Include, ' + excl + ' Exclude)', ''];
-    lines.push('Reviewer-Datei: ' + state.reviewer + '.json');
-    const rk = Object.keys(reasons).sort();
-    if (rk.length) lines.push('Ausschlussgründe: ' + rk.map(function(r) { return r.replace(/_/g, ' ') + ' ' + reasons[r]; }).join(', '));
-    return lines.join('\n');
+    return copy;
+}
+
+function recordTimestamp(record) {
+    const value = Date.parse(record && record.ts);
+    return Number.isFinite(value) ? value : null;
+}
+
+// The repository file and the browser recovery copy can diverge after a failed
+// physical write. Merge by paper and keep the newer timestamp. A same-paper
+// conflict without comparable timestamps is blocked instead of guessed.
+function mergeReviewerDecisions(fileDecisions, localDecisions) {
+    const disk = JSON.parse(JSON.stringify(fileDecisions || {}));
+    const local = JSON.parse(JSON.stringify(localDecisions || {}));
+    const merged = disk;
+    let recovered = false;
+    let conflict = null;
+    Object.keys(local).forEach(function(pid) {
+        if (!disk[pid]) {
+            merged[pid] = local[pid];
+            recovered = true;
+            return;
+        }
+        if (JSON.stringify(disk[pid]) === JSON.stringify(local[pid])) return;
+        const diskTs = recordTimestamp(disk[pid]);
+        const localTs = recordTimestamp(local[pid]);
+        if (diskTs !== null && localTs !== null && diskTs !== localTs) {
+            if (localTs > diskTs) { merged[pid] = local[pid]; recovered = true; }
+            return;
+        }
+        // Keep the browser recovery in memory while the conflicting file remains
+        // untouched on disk. The blocking error prevents either version overwriting
+        // the other until the operator resolves the record explicitly.
+        merged[pid] = local[pid];
+        conflict = 'Browser- und Dateistand widersprechen sich bei Paper ' + pid +
+            (diskTs !== null && localTs !== null
+                ? ' trotz identischem Zeitstempel.'
+                : ' ohne vergleichbare Zeitstempel.');
+    });
+    return { decisions: merged, recovered: recovered, conflict: conflict };
+}
+
+// Backup imports always target the explicitly selected reviewer. The file name and an
+// outdated embedded reviewer value therefore cannot overwrite the other reviewer's track.
+function importReviewerPayload(obj, target, overwrite) {
+    if (!isReviewerId(target)) return { ok: false, reason: 'reviewer-required' };
+    if (!obj || typeof obj !== 'object' || !obj.decisions || typeof obj.decisions !== 'object')
+        return { ok: false, reason: 'invalid' };
+    if (!overwrite && Object.keys(state.reviewers[target] || {}).length)
+        return { ok: false, reason: 'occupied' };
+    state.reviewers[target] = normalizedReviewerDecisions(obj.decisions, target);
+    save();
+    return { ok: true, reviewer: target, count: Object.keys(obj.decisions).length };
 }
 
 // --- IndexedDB: persist the directory handle so reconnect is one click ---
@@ -239,8 +386,8 @@ function idbGet(k) {
 
 // The picker may be pointed at the repo root of the local clone; the reviewer folder is
 // then resolved as docs/data/screening below it, which is one step for the reviewer and
-// keeps the connect target the same folder Git sees. A picked folder without a docs child
-// is treated as the reviewer folder itself, which is the pre-existing behaviour.
+// keeps the connection target stable. A picked folder without a docs child is treated as
+// the reviewer folder itself, which is the pre-existing behaviour.
 async function resolveScopes(picked) {
     // drop the previous connection first: a failed resolution must not leave writes
     // pointing at the folder of an earlier session
@@ -259,21 +406,40 @@ async function resolveScopes(picked) {
     }
 }
 
+function setConnectedSaveStatus() {
+    const fileError = state.reviewer && reviewerFileErrors[state.reviewer];
+    if (fileError) {
+        setSaveStatus('error', 'Bestehende Datei ' + reviewerPath(state.reviewer) +
+            ' ist nicht lesbar: ' + fileError + ' Sie wird nicht verändert.');
+        return;
+    }
+    if (state.reviewer && reviewerRecoveryPending[state.reviewer]) {
+        setSaveStatus('dirty', 'Neuere Browser-Änderungen wurden wiederhergestellt. Mit der Diskette in ' +
+            reviewerPath(state.reviewer) + ' schreiben.');
+        return;
+    }
+    setSaveStatus(state.reviewer ? 'ready' : 'needs-reviewer', state.reviewer
+        ? 'Arbeitsordner verbunden. Ziel: ' + reviewerPath(state.reviewer) + '.'
+        : 'Arbeitsordner verbunden. Vor dem Speichern Kürzel festlegen.');
+}
+
 async function connectRepo() {
-    if (!FS_SUPPORTED) { alert('Dieser Browser schreibt nicht direkt auf die Platte. Nutze Export/Import (Firefox/Safari).'); return; }
+    if (!FS_SUPPORTED) { alert('Dieser Browser kann den lokalen Arbeitsordner nicht direkt beschreiben. Öffne PRISM in einem Chromium-basierten Browser.'); return; }
     try {
         let handle = await window.showDirectoryPicker({ mode: 'readwrite' });
         dirHandle = handle;
         await idbSet('dir', handle);
+        storedHandleAvailable = true;
         await resolveScopes(handle);
         await loadAllReviewers();
-        updateConnStatus();
+        setConnectedSaveStatus();
+        renderData(document.getElementById('pt-data-inline'));
         showSurface(state.surface);
     } catch (e) {
         if (e.name !== 'AbortError') {
             console.warn('[PRISMA] connect failed:', e);
-            updateConnStatus(); // the status line must not keep claiming a connection
-            alert('Verbindung fehlgeschlagen: ' + (e.message || e.name) + '. Nutze Export/Import, oder verbinde den Ordner erneut.');
+            setSaveStatus('error', 'Verbindung fehlgeschlagen: ' + (e.message || e.name) + '. Browser-Zwischenstand bleibt erhalten.');
+            alert('Verbindung fehlgeschlagen: ' + (e.message || e.name) + '.');
         }
     }
 }
@@ -282,57 +448,100 @@ async function reconnectRepo() {
     if (!FS_SUPPORTED) return;
     try {
         let handle = await idbGet('dir');
-        if (!handle) { alert('Kein gespeicherter Ordner. Erst "Mit Repo-Ordner verbinden".'); return; }
+        if (!handle) { storedHandleAvailable = false; renderData(document.getElementById('pt-data-inline')); return; }
+        storedHandleAvailable = true;
         const perm = await handle.requestPermission({ mode: 'readwrite' });
-        if (perm !== 'granted') { alert('Schreibrecht nicht erteilt.'); return; }
+        if (perm !== 'granted') {
+            setSaveStatus('error', 'Schreibrecht nicht erteilt. Browser-Zwischenstand bleibt erhalten.');
+            alert('Schreibrecht nicht erteilt.'); return;
+        }
         dirHandle = handle;
         await resolveScopes(handle);
         await loadAllReviewers();
-        updateConnStatus();
+        setConnectedSaveStatus();
+        renderData(document.getElementById('pt-data-inline'));
         showSurface(state.surface);
     } catch (e) {
         console.warn('[PRISMA] reconnect failed:', e);
-        updateConnStatus();
+        setSaveStatus('error', 'Erneutes Verbinden fehlgeschlagen: ' + (e.message || e.name) + '.');
         alert('Erneutes Verbinden fehlgeschlagen: ' + (e.message || e.name) + '.');
+    }
+}
+
+async function restoreRepoConnection() {
+    if (!FS_SUPPORTED) return;
+    try {
+        const handle = await idbGet('dir');
+        if (!handle) return;
+        storedHandleAvailable = true;
+        dirHandle = handle;
+        const permission = handle.queryPermission ? await handle.queryPermission({ mode: 'readwrite' }) : 'prompt';
+        if (permission !== 'granted') {
+            setSaveStatus('local', 'Arbeitsordner einmal freigeben, danach kann direkt gespeichert werden.');
+            renderData(document.getElementById('pt-data-inline'));
+            return;
+        }
+        await resolveScopes(handle);
+        await loadAllReviewers();
+        setConnectedSaveStatus();
+        renderData(document.getElementById('pt-data-inline'));
+        renderScreening();
+    } catch (e) {
+        console.warn('[PRISMA] saved folder restore failed:', e);
+        setSaveStatus('error', 'Gespeicherter Arbeitsordner konnte nicht verbunden werden.');
+        renderData(document.getElementById('pt-data-inline'));
     }
 }
 
 async function loadAllReviewers() {
     if (!screeningHandle) return;
     const found = {};
+    const errors = {};
+    const recoveries = {};
     for await (const entry of screeningHandle.values()) {
         if (entry.kind === 'file' && /\.json$/.test(entry.name)) {
+            const fileKey = entry.name.replace(/\.json$/, '');
+            const key = normalizedReviewerKey(fileKey);
+            if (!key) continue;
+            if (key !== fileKey) {
+                errors[key] = 'Der Dateiname muss in kanonischer Kleinschreibung vorliegen.';
+                continue;
+            }
             try {
                 let f = await entry.getFile();
                 let obj = JSON.parse(await f.text());
-                let key = obj.reviewer || entry.name.replace(/\.json$/, '');
-                found[key] = obj.decisions || {}; // 0.1 records simply lack `evidence`
-            } catch (e) { console.warn('[PRISMA] could not read', entry.name, e); }
+                const check = validateReviewerPayload(obj);
+                if (!check.ok) throw new Error(check.message);
+                // The canonical filename owns the reviewer role. This repairs the
+                // historical case where reviewer2.json still embedded reviewer1 and
+                // prevents the two files from collapsing into one in-memory track.
+                const disk = normalizedReviewerDecisions(obj.decisions || {}, key);
+                const local = normalizedReviewerDecisions(state.reviewers[key] || {}, key);
+                const merged = mergeReviewerDecisions(disk, local);
+                found[key] = merged.decisions;
+                if (merged.recovered) recoveries[key] = true;
+                if (merged.conflict) errors[key] = merged.conflict;
+            } catch (e) {
+                errors[key] = e && e.message ? e.message : String(e);
+                console.warn('[PRISMA] could not read', entry.name, e);
+            }
         }
     }
-    // merge file state over local (files are the committed source of truth)
+    reviewerFileErrors = errors;
+    reviewerRecoveryPending = recoveries;
+    // Apply resolved records. On a blocked conflict, the file stays untouched on disk
+    // while the browser recovery remains in memory and localStorage.
     Object.keys(found).forEach(function(k) { state.reviewers[k] = found[k]; });
     saveLocal();
 }
 
-async function writeCurrentReviewer() {
-    if (!screeningHandle) return false;
-    const fh = await screeningHandle.getFileHandle(state.reviewer + '.json', { create: true });
+async function writeReviewerText(targetHandle, key, text) {
+    if (!targetHandle || !isReviewerId(key)) return false;
+    const fh = await targetHandle.getFileHandle(key + '.json', { create: true });
     const w = await fh.createWritable();
-    await w.write(reviewerFileText(state.reviewer));
+    await w.write(text);
     await w.close();
     return true;
-}
-
-function updateConnStatus() {
-    let el = document.getElementById('pt-conn-status');
-    if (!el) return;
-    if (screeningHandle) {
-        const scope = connectScope === 'root' ? 'Repo-Wurzel' : 'Screening-Ordner';
-        el.textContent = 'verbunden (' + scope + '), schreibt ' + state.reviewer + '.json';
-        el.classList.add('connected');
-    }
-    else { el.textContent = FS_SUPPORTED ? '' : 'Browser ohne Direktschreiben (Export nutzen)'; el.classList.remove('connected'); }
 }
 
 // Corpus full-text index (FR-12 corpus search) + document fetch (FR-11)
@@ -388,6 +597,35 @@ function countOcc(hay, needle) {
     return n;
 }
 
+function normalizeSearchText(value) {
+    return String(value || '').toLowerCase().replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss')
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase().replace(/\s+/g, ' ').trim();
+}
+
+function corpusSearchResults(query) {
+    const q = normalizeSearchText(query);
+    if (!q || !corpusIndex) return [];
+    return papers.map(function(p, index) {
+        const entry = corpusIndex[p.id] || {};
+        const title = normalizeSearchText(p.title || entry.t);
+        const author = normalizeSearchText([p.authors, p.author_year, entry.ay].filter(Boolean).join(' '));
+        const doi = normalizeSearchText(p.doi);
+        const id = normalizeSearchText(p.id);
+        const body = normalizeSearchText(entry.x);
+        let rank = 99, kind = '', count = 0;
+        if (title === q) { rank = 0; kind = 'Exakter Titel'; count = 1; }
+        else if (title.indexOf(q) !== -1) { rank = 1; kind = 'Titel'; count = countOcc(title, q); }
+        else if (author.indexOf(q) !== -1) { rank = 2; kind = 'Autor:in/Jahr'; count = countOcc(author, q); }
+        else if (doi && doi.indexOf(q) !== -1) { rank = 3; kind = 'DOI'; count = countOcc(doi, q); }
+        else if (id && id.indexOf(q) !== -1) { rank = 4; kind = 'Paper-ID'; count = countOcc(id, q); }
+        else if (body.indexOf(q) !== -1) { rank = 5; kind = 'Text'; count = countOcc(body, q); }
+        return { paper: p, index: index, rank: rank, kind: kind, count: count };
+    }).filter(function(x) { return x.rank < 99; }).sort(function(a, b) {
+        return a.rank - b.rank || a.index - b.index;
+    });
+}
+
 // Analysis coding vocabulary (FR-14, ADR-026) --------------------------------
 // The static app cannot read the YAML, so a committed build step emits it as JSON
 // (the single-source rule of ADR-026). Loaded once at init like the full-text
@@ -426,7 +664,13 @@ function readAnalysis(dec) {
 // This is the enforcement point: no value outside categories.yaml v1.3 survives,
 // on capture, import, or export. Unknown fields and undecidable toggles on
 // unknown fields are dropped.
-function sanitizeAnalysis(raw) {
+function expectedCodingBasis(textSource) {
+    return textSource === 'raw' ? 'Fulltext'
+        : (textSource === 'abstract' ? 'Abstract'
+            : (textSource === 'knowledge_doc' ? 'Knowledge_Doc' : null));
+}
+
+function sanitizeAnalysis(raw, textSource) {
     raw = raw || {};
     const inF = raw.fields || {}, inU = raw.undecidable || {};
     const outF = {}, outU = {};
@@ -437,21 +681,34 @@ function sanitizeAnalysis(raw) {
             return;
         }
         const vocab = f.values || [];
+        if (inU[f.name]) {
+            outU[f.name] = true;
+            return;
+        }
         if (f.multi) {
             const arr = (Array.isArray(v) ? v : (v != null ? [v] : []))
                 .filter(function(x) { return vocab.indexOf(x) !== -1; });
-            const uniq = arr.filter(function(x, i) { return arr.indexOf(x) === i; }).sort();
+            let uniq = arr.filter(function(x, i) { return arr.indexOf(x) === i; });
+            // `None` denotes the absence of a substantive code. Imported legacy
+            // combinations therefore keep the substantive codes and drop `None`.
+            if (uniq.length > 1 && uniq.indexOf('None') !== -1)
+                uniq = uniq.filter(function(x) { return x !== 'None'; });
+            uniq.sort();
             if (uniq.length) outF[f.name] = uniq;
         } else {
             if (vocab.indexOf(v) !== -1) outF[f.name] = v;
         }
-        if (inU[f.name]) outU[f.name] = true;
     });
     // Studientyp travels with the analysis capture (required for Include,
     // update-protocol D); its closed list is study_types from the same YAML source.
     // Same strictness as the AN_ fields; no undecidable toggle, its vocabulary
     // carries Unclear itself.
     if (anStudyTypes.indexOf(inF.Studientyp) !== -1) outF.Studientyp = inF.Studientyp;
+    const expected = expectedCodingBasis(textSource);
+    if (expected) {
+        outF.AN_Coding_Basis = expected;
+        delete outU.AN_Coding_Basis;
+    }
     return { fields: outF, undecidable: outU };
 }
 
@@ -462,8 +719,30 @@ function sanitizeAnalysis(raw) {
 function setAnalysis(pid, raw) {
     const rec = curDec()[pid];
     if (!rec || rec.decision !== 'Include') return;
-    rec.analysis = sanitizeAnalysis(raw);
+    rec.analysis = sanitizeAnalysis(raw, rec.text_source);
     save();
+    refreshCorpusList();
+}
+
+function analysisRequirements(dec) {
+    if (!dec || dec.decision !== 'Include') return { ok: true, missing: [] };
+    const raw = readAnalysis(dec);
+    const a = sanitizeAnalysis(raw, dec.text_source);
+    const f = a.fields, u = a.undecidable;
+    const missing = [];
+    if (!f.Studientyp) missing.push('Studientyp');
+    const expected = expectedCodingBasis(dec.text_source);
+    if (!expected) missing.push('lesbare Textquelle');
+    else if (raw.fields.AN_Coding_Basis !== expected) missing.push('AN_Coding_Basis = ' + expected);
+    anFields.forEach(function(fd) {
+        if (fd.free_text || fd.name === 'AN_Coding_Basis') return;
+        const binding = !fd.optional || (fd.name === 'AN_Harm_Types' && expected === 'Fulltext');
+        if (!binding) return;
+        const v = f[fd.name];
+        const filled = fd.multi ? Array.isArray(v) && v.length > 0 : !!v;
+        if (!filled && !u[fd.name]) missing.push(fd.name);
+    });
+    return { ok: missing.length === 0, missing: missing };
 }
 
 // The AN_Notes export value: the free note plus one machine-countable line per
@@ -482,14 +761,13 @@ function analysisNotes(analysis) {
     return lines.join('\n');
 }
 
-// AN_Harm_Types is optional and only binding where the basis is Fulltext
-// (B.1 point 3). This is a soft hint, never a hard gate: an Include with an empty
-// Harm_Types is never blocked.
+// AN_Harm_Types is optional outside full-text coding and required for Fulltext.
 function harmTypesHint(analysis) {
-    const f = (analysis && analysis.fields) || {};
+    const f = (analysis && analysis.fields) || {}, u = (analysis && analysis.undecidable) || {};
     if (f.AN_Coding_Basis !== 'Fulltext') return '';
+    if (u.AN_Harm_Types) return '';
     if ((f.AN_Harm_Types || []).length) return '';
-    return 'Bei Volltext-Basis ist AN_Harm_Types erwartet (B.1 Punkt 3). Leer lassen nur, wenn kein Harm-Mechanismus benannt ist, oder als nicht entscheidbar markieren.';
+    return 'Bei Volltext-Basis ist AN_Harm_Types erforderlich. Wähle einen Code einschließlich None oder markiere das Feld als nicht entscheidbar.';
 }
 
 // Split a served knowledge document into its two epistemic layers (M3, ADR-016).
@@ -513,6 +791,74 @@ function splitDocLayers(md) {
 
 // ---- minimal Markdown renderer (no dependency, NFR-01/architecture rule) ----
 function stripFrontmatter(md) { return md.replace(/^---\s*\n[\s\S]*?\n---\s*\n/, ''); }
+
+function normalizedLine(s) {
+    return String(s || '').replace(/^#{1,6}\s+/, '').replace(/[\s\p{P}]+/gu, ' ').trim().toLowerCase();
+}
+
+function normalizedSourceUrl(raw) {
+    const value = String(raw || '').trim();
+    if (!value) return '';
+    try {
+        const parsed = new URL(value);
+        return parsed.protocol === 'http:' || parsed.protocol === 'https:' ? parsed.href : '';
+    } catch (e) { return ''; }
+}
+
+function urlOnlyLine(line) {
+    const value = String(line || '').trim();
+    const raw = value.replace(/^<(.+)>$/, '$1');
+    const markdown = raw.match(/^\[([^\]]+)\]\((https?:\/\/[^)]+)\)$/i);
+    if (markdown && markdown[1] === markdown[2]) return normalizedSourceUrl(markdown[2]);
+    return /^https?:\/\/\S+$/i.test(raw) ? normalizedSourceUrl(raw) : '';
+}
+
+function sameSourceUrl(candidate, canonical) {
+    const a = normalizedSourceUrl(candidate), b = normalizedSourceUrl(canonical);
+    if (!a || !b) return false;
+    try {
+        const left = new URL(a), right = new URL(b);
+        const pathKey = function(url) { return url.pathname.toLowerCase().replace(/[^a-z0-9]/g, ''); };
+        return left.hostname.toLowerCase() === right.hostname.toLowerCase() && pathKey(left) === pathKey(right);
+    } catch (e) { return false; }
+}
+
+function authorDisplay(paper) {
+    if (paper && String(paper.authors || '').trim()) return String(paper.authors).trim();
+    return String((paper && paper.author_year) || '').trim()
+        .replace(/\s*\(?(?:18|19|20)\d{2}[a-z]?\)?\s*$/i, '')
+        .replace(/[\s,;]+$/, '') || 'nicht angegeben';
+}
+
+// Full-text sources vary between publisher Markdown and Docling output. Prefer an
+// explicit Abstract/Zusammenfassung heading near the document start. Otherwise only
+// remove a leading title and metadata lines that match the structured corpus record;
+// no unknown prose is discarded.
+function paperBodyMarkdown(md, paper) {
+    const clean = stripFrontmatter(md || '');
+    let lines = clean.split(/\r?\n/);
+    const sourceUrl = normalizedSourceUrl(paper && paper.url);
+    if (sourceUrl) lines = lines.filter(function(line) {
+        const candidate = urlOnlyLine(line);
+        return !candidate || !sameSourceUrl(candidate, sourceUrl);
+    });
+    const abstractAt = lines.findIndex(function(line, i) {
+        return i < 100 && /^#{1,6}\s+(abstract|zusammenfassung|kurzfassung)\s*$/i.test(line.trim());
+    });
+    if (abstractAt !== -1) return lines.slice(abstractAt).join('\n').trim();
+
+    while (lines.length && !lines[0].trim()) lines.shift();
+    const title = normalizedLine(paper && paper.title);
+    if (lines.length && title && normalizedLine(lines[0]) === title) lines.shift();
+    while (lines.length && !lines[0].trim()) lines.shift();
+    const known = [paper && paper.authors, paper && paper.author_year, paper && paper.journal]
+        .map(normalizedLine).filter(Boolean);
+    while (lines.length && (known.indexOf(normalizedLine(lines[0])) !== -1 || urlOnlyLine(lines[0]))) {
+        lines.shift();
+        while (lines.length && !lines[0].trim()) lines.shift();
+    }
+    return lines.join('\n').trim();
+}
 
 function inlineMd(s) {
     s = EC.escapeHtml(s);
@@ -568,22 +914,72 @@ window.initializePrisma = function() {
     initialized = true;
     EC = window.EC;
     papers = (EC && EC.getAllPapers) ? (EC.getAllPapers() || []) : [];
+    const query = new URLSearchParams(window.location.search);
+    trialMode = query.get('trial') === '1';
+    const requestedActor = query.get('actor');
+    runActor = requestedActor === 'agent' ? 'agent' : 'human';
+    if (trialMode && !requestedActor) runActor = 'agent';
     loadLocal();
+    const requestedReviewer = normalizedReviewerKey(query.get('reviewer'));
+    if (trialMode && requestedReviewer) selectReviewer(requestedReviewer);
     normalizeSurface();
-    state.index = firstEntryIndex(); // O4: open on a screenable paper, not on boilerplate
+    const requestedPaper = query.get('paper');
+    const requestedReview = query.get('review');
+    state.index = startIndexForPaper(requestedPaper); // O4 plus a read-only direct-paper link
     loadCorpusIndex(); // background: ready by the time the user runs a corpus search
     loadFulltextManifest().then(function() { if (initialized) refreshSourcePill(); }); // background: full-text availability for the reading pane
     loadAnalysisFields().then(function() { // background: the frozen AN_ vocabulary for the Include analysis panel (FR-14)
-        if (initialized && state.surface === 'screening') refreshAssess();
+        if (initialized && state.surface === 'screening') {
+            refreshAssess();
+            refreshCorpusList();
+        }
     });
-    renderShell();
-    showSurface(state.surface || 'screening');
-    updateConnStatus();
+    if (requestedReview) {
+        const root = document.getElementById('prisma-root');
+        if (root) root.innerHTML = '<section class="pt-shell"><h2>Screening</h2>' +
+            '<div class="pt-acceptance-status" role="status">Abnahmeansicht wird geladen&hellip;</div></section>';
+        loadAcceptanceReview(requestedReview, requestedPaper);
+    } else {
+        renderShell();
+        showSurface(state.surface || 'screening');
+        if (!trialMode) restoreRepoConnection();
+    }
     console.log('[PRISMA] initialized, ' + papers.length + ' papers, FS ' + (FS_SUPPORTED ? 'supported' : 'fallback'));
 };
 
-// The tool is one workspace; the record and data functions open as panels, never
-// as a persisted surface, so load always lands on screening (ADR-020).
+function loadAcceptanceReview(slug, requestedPaper) {
+    if (!/^[a-z0-9-]+$/.test(slug || '')) {
+        renderShell();
+        showSurface('screening');
+        setSaveStatus('error', 'Ungültiger Abnahmefall.');
+        renderData(document.getElementById('pt-data-inline'));
+        return;
+    }
+    fetch('data/review-cases/' + slug + '.json').then(function(response) {
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        return response.json();
+    }).then(function(payload) {
+        const check = validateReviewerPayload(payload);
+        if (!check.ok) throw new Error(check.message);
+        acceptanceMode = slug;
+        state.reviewer = 'acceptance';
+        state.reviewers.acceptance = normalizedReviewerDecisions(payload.decisions, 'acceptance');
+        state.index = startIndexForPaper(requestedPaper);
+        if (!state.reviewers.acceptance[papers[state.index] && papers[state.index].id])
+            state.index = papers.findIndex(function(paper) { return !!state.reviewers.acceptance[paper.id]; });
+        if (state.index < 0) throw new Error('keine bekannten Paper im Abnahmefall');
+        renderShell();
+        showSurface('screening');
+    }).catch(function(error) {
+        acceptanceMode = null;
+        renderShell();
+        showSurface('screening');
+        setSaveStatus('error', 'Abnahmefall konnte nicht geladen werden: ' + (error.message || error));
+        renderData(document.getElementById('pt-data-inline'));
+    });
+}
+
+// The editor always lands on screening; report generation remains an internal helper.
 function normalizeSurface() {
     state.surface = 'screening';
 }
@@ -594,62 +990,25 @@ function renderShell() {
     const root = document.getElementById('prisma-root');
     if (!root) return;
     let html = '<div class="pt-wsbar-top"><span class="pt-wsbar-title">Screening</span></div>';
+    html += '<section class="pt-sync-inline" id="pt-data-inline" aria-label="Reviewer und Datenspeicherung"></section>';
     html += '<div class="pt-surface" id="pt-surface"></div>';
-    html += '<div class="pt-overlay" id="pt-overlay" hidden>' +
-        '<div class="pt-overlay-backdrop"></div>' +
-        '<div class="pt-overlay-panel" role="dialog" aria-modal="true" aria-labelledby="pt-overlay-title" tabindex="-1">' +
-        '<div class="pt-overlay-head"><span class="pt-overlay-title" id="pt-overlay-title"></span>' +
-        '<button class="pt-overlay-x" id="pt-overlay-x" type="button" aria-label="Schließen">&times;</button></div>' +
-        '<div class="pt-overlay-body" id="pt-overlay-body"></div></div></div>';
     root.innerHTML = html;
-    root.querySelector('.pt-overlay-backdrop').addEventListener('click', closePanel);
-    root.querySelector('#pt-overlay-x').addEventListener('click', closePanel);
-    document.addEventListener('keydown', function(e) {
-        const ov = document.getElementById('pt-overlay');
-        if (e.key === 'Escape' && ov && !ov.hidden) closePanel();
-    });
+    renderData(root.querySelector('#pt-data-inline'));
 }
 
-// One workspace: 'screening' is the permanent surface; 'report' and 'data' open as
-// on-demand panels (the record is a generated output, the data functions an edge
-// affordance), ADR-020. showSurface keeps its name for the test hook and browser
-// traces, and routes the two panel ids to the overlay.
-function showSurface(name) {
-    if (name === 'report' || name === 'data') { openPanel(name); return; }
+// showSurface keeps its name for the test hook and browser traces.
+function showSurface() {
     state.surface = 'screening'; saveLocal();
     renderScreening();
 }
 
+function focusDataInline() {
+    const inline = document.getElementById('pt-data-inline');
+    const first = inline && inline.querySelector('#pt-reviewer-key, .pt-folder-action, .pt-change-folder');
+    if (first && typeof first.focus === 'function') first.focus();
+}
+
 function surfaceEl() { return document.getElementById('pt-surface'); }
-
-// --- on-demand panels (report, data) over the screening workspace (ADR-020) ---
-let panelKind = null;
-let panelReturnFocus = null;
-
-function openPanel(kind) {
-    const ov = document.getElementById('pt-overlay'); if (!ov) return;
-    panelKind = kind;
-    panelReturnFocus = document.activeElement;
-    const title = document.getElementById('pt-overlay-title');
-    if (title) title.textContent = kind === 'report' ? 'PRISMA-Record' : 'Daten & Sync';
-    renderPanel();
-    ov.hidden = false;
-    const panel = ov.querySelector('.pt-overlay-panel');
-    if (panel && typeof panel.focus === 'function') panel.focus();
-}
-
-function renderPanel() {
-    const body = document.getElementById('pt-overlay-body'); if (!body) return;
-    if (panelKind === 'report') renderReportSurface(body);
-    else if (panelKind === 'data') renderData(body);
-}
-
-function closePanel() {
-    const ov = document.getElementById('pt-overlay'); if (ov) ov.hidden = true;
-    panelKind = null;
-    if (panelReturnFocus && typeof panelReturnFocus.focus === 'function') panelReturnFocus.focus();
-    panelReturnFocus = null;
-}
 
 // Decision helpers
 
@@ -707,35 +1066,50 @@ function divergent(h, a) { return h && a && h.decision !== a.decision; }
 
 function abstractQuality(p) {
     let a = (p.abstract || '').trim();
-    if (!a) return { ok: false, note: 'Kein Abstract vorhanden, bitte Volltext (Wissensdokument) oder Quelle prüfen.' };
+    if (!a) return { ok: false, note: 'Kein Abstract vorhanden; bitte die Volltextquelle prüfen.' };
     if (/National Bureau of Economic Research|Founded in 1920, the NBER|private, non-profit, non-partisan organization/i.test(a))
         return { ok: false, note: 'Wirkt wie Verlags-Boilerplate (NBER), nicht das Paper-Abstract.' };
     if (a.length < 120) return { ok: false, note: 'Sehr kurzes Abstract, evtl. unvollständig.' };
     return { ok: true };
 }
 
-// A paper is screenable when there is substantive text to ground a decision on:
-// a served knowledge document, or an abstract that is not boilerplate. The tool
-// opens on the first such (unscreened) paper rather than on the corpus's first
-// record when that is publisher boilerplate (browser-agent O4 finding: default
-// entry landed on paper 1, an NBER boilerplate with no usable text).
+// The initial paper is screenable when the currently known paper layer contains
+// substantive text: a manifest-backed full text or a non-boilerplate abstract.
+// A knowledge document is only the LLM reference layer and never qualifies here.
 function isScreenable(p) {
-    return !!(p && (p.knowledge_doc || abstractQuality(p).ok));
+    return !!(p && (hasFullText(p) || abstractQuality(p).ok));
 }
 
 function firstEntryIndex() {
     const d = curDec();
-    for (let i = 0; i < papers.length; i++) { if (!d[papers[i].id] && isScreenable(papers[i])) return i; }
+    for (let i = 0; i < papers.length; i++) {
+        const rec = d[papers[i].id];
+        if ((!rec || !recordRequirements(rec).ok) && isScreenable(papers[i])) return i;
+    }
     for (let i = 0; i < papers.length; i++) { if (isScreenable(papers[i])) return i; }
     return 0;
 }
 
-// Counts human Belege only; AI-origin evidence (pinned from the KI-Extraktion
-// reading layer, ADR-016) is advisory and excluded from the count.
+function startIndexForPaper(requestedPaper) {
+    const requestedIndex = requestedPaper
+        ? papers.findIndex(function(p) { return p.id === requestedPaper; })
+        : -1;
+    return requestedIndex === -1 ? firstEntryIndex() : requestedIndex;
+}
+
+function evidenceLayer(ev) {
+    if (ev && ev.source_layer) return ev.source_layer;
+    return ev && ev.origin === 'ai' ? 'llm_distillate' : 'paper';
+}
+
+function isPaperEvidence(ev) { return evidenceLayer(ev) === 'paper'; }
+
+// Counts evidence from the verified paper layer only. Generated knowledge-distillate
+// evidence is advisory and excluded from the binding count.
 function evidenceCount(rec) {
     if (!rec || !rec.evidence) return 0;
     return ALL_CATS.reduce(function(s, c) {
-        return s + (rec.evidence[c] || []).filter(function(ev) { return (ev.origin || 'human') !== 'ai'; }).length;
+        return s + (rec.evidence[c] || []).filter(isPaperEvidence).length;
     }, 0);
 }
 
@@ -749,21 +1123,32 @@ function evidenceCount(rec) {
 // the flow diagram needs the per-track counts.
 
 function computeFlow(persp) {
-    let f = { total: papers.length, aiScreened: 0, aiIncl: 0, aiExcl: 0,
-              humanScreened: 0, humanIncl: 0, humanExcl: 0, humanReasons: {} };
+    let f = { total: papers.length, aiScreened: 0, aiIncl: 0, aiUnclear: 0, aiExcl: 0,
+              humanScreened: 0, humanIncl: 0, humanUnclear: 0, humanExcl: 0, humanReasons: {} };
     papers.forEach(function(p) {
-        let a = aiProposal(p), h = humanDecision(p, persp);
-        if (a) { f.aiScreened++; if (a.decision === 'Include') f.aiIncl++; else f.aiExcl++; }
+        let a = aiProposal(p), h = persp ? humanDecision(p, persp) : null;
+        if (a) {
+            f.aiScreened++;
+            if (a.decision === 'Include') f.aiIncl++;
+            else if (a.decision === 'Unclear') f.aiUnclear++;
+            else f.aiExcl++;
+        }
+        if (h && persp !== SEED) {
+            const rec = state.reviewers[persp] && state.reviewers[persp][p.id];
+            if (!recordRequirements(rec).ok) h = null;
+        }
         if (h) {
             f.humanScreened++;
-            if (h.decision === 'Include') f.humanIncl++; else f.humanExcl++;
+            if (h.decision === 'Include') f.humanIncl++;
+            else if (h.decision === 'Unclear') f.humanUnclear++;
+            else f.humanExcl++;
             if (h.decision === 'Exclude' && h.reason) f.humanReasons[h.reason] = (f.humanReasons[h.reason] || 0) + 1;
         }
     });
     return f;
 }
 
-function reviewerLabel(k) { return k === SEED ? 'Seed (Expert:innen)' : k; }
+function reviewerLabel(k) { return k === SEED ? 'Frühere Expert:innen-Referenz' : k; }
 
 // Surface: Screening (read + search + pin evidence)
 
@@ -774,6 +1159,10 @@ function renderScreening() {
     if (state.index >= papers.length) state.index = papers.length - 1;
 
     let p = papers[state.index];
+    if (renderedPaperId !== p.id) {
+        state.readMode = 'full';
+        renderedPaperId = p.id;
+    }
     if (editingPid && editingPid !== p.id) editingPid = null; // navigating away abandons the edit; the record stays
     const dec = editingPid === p.id ? null : curDec()[p.id]; // while editing, render the form, not the locked record
     if (!dec && work.pid !== p.id) resetWork(p);
@@ -784,11 +1173,13 @@ function renderScreening() {
     let html = '<div class="pt-ws-bar">';
     html += '<span class="pt-ws-pos">Paper ' + (state.index + 1) + ' / ' + papers.length + '</span>';
     html += '<span class="pt-ws-progressbar"><span class="pt-ws-progressfill" style="width:' + pct + '%"></span></span>';
-    // the two on-demand panels of ADR-020 need a visible affordance; without these
-    // buttons the record and the export/import path were reachable only via the test hook
-    html += '<span class="pt-spacer"></span>' +
-        '<button class="pt-btn pt-ws-panel" data-panel="report" type="button">PRISMA-Record</button>' +
-        '<button class="pt-btn pt-ws-panel" data-panel="data" type="button">Daten &amp; Sync</button>';
+    if (!acceptanceMode) {
+        html += '<button class="pt-save-icon" id="pt-record" type="button" aria-label="Entscheidung speichern" title="Entscheidung speichern"' +
+            ((dec || !state.reviewer || (!screeningHandle && !trialMode)) ? ' disabled' : '') + '>' +
+            '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 3h12l2 2v16H5V3Zm2 2v5h9V5H7Zm1 9v5h8v-5H8Z"></path></svg>' +
+            '<span class="pt-sr-only">Entscheidung speichern</span></button>';
+    }
+    html += '<span class="pt-spacer"></span>';
     html += '</div>';
 
     html += '<div class="pt-ws pt-ws-screen">';
@@ -799,9 +1190,6 @@ function renderScreening() {
     html += '</div>';
 
     el.innerHTML = html;
-    el.querySelectorAll('.pt-ws-panel').forEach(function(b) {
-        b.addEventListener('click', function() { openPanel(b.dataset.panel); });
-    });
     // the load starts first: it raises readingPending synchronously, so the commit gate
     // that attachScreening evaluates sees this paper's load rather than the previous one
     loadReadingInto(p);
@@ -819,43 +1207,47 @@ function renderScreening() {
 // ---- left: corpus navigator with full-text search ----
 function corpusHtml() {
     let d = curDec();
+    const total = acceptanceMode ? Object.keys(d).length : papers.length;
     let h = '<aside class="pt-nav"><div class="pt-nav-head"><span class="pt-nav-title-main">Korpus</span>' +
-        '<span class="pt-tag-mono">' + Object.keys(d).length + ' / ' + papers.length + '</span></div>';
-    h += '<div class="pt-corpus-search"><input id="pt-corpus-q" aria-label="Volltext-Suche über alle Paper" placeholder="Volltext-Suche über alle Paper" value="' + EC.escapeHtml(corpusQuery) + '">' +
+        '<span class="pt-tag-mono">' + Object.keys(d).length + ' / ' + total + '</span></div>';
+    h += '<div class="pt-corpus-search"><input id="pt-corpus-q" aria-label="Korpus durchsuchen: Metadaten und Wissensindex" placeholder="Korpus durchsuchen" value="' + EC.escapeHtml(corpusQuery) + '">' +
         '<span class="pt-corpus-hint" id="pt-corpus-hint"></span></div>';
-    h += '<div class="pt-nav-list" id="pt-corpus-list">' + corpusListHtml() + '</div></aside>';
+    h += '<div class="pt-nav-list' + (corpusQuery.trim() ? ' is-searching' : '') + '" id="pt-corpus-list">' + corpusListHtml() + '</div></aside>';
     return h;
 }
 
 // Text equivalent for the colour-only status dot in the corpus list (a screen reader
 // otherwise hears nothing for the decision state), browser-agent a11y finding.
 function statusLabel(st) {
-    return st === 'include' ? 'eingeschlossen' : st === 'exclude' ? 'ausgeschlossen' : st === 'unclear' ? 'unklar' : 'offen';
+    return st === 'include' ? 'eingeschlossen' : st === 'exclude' ? 'ausgeschlossen'
+        : st === 'unclear' ? 'unklar' : st === 'incomplete' ? 'unvollständig' : 'offen';
 }
 
 function corpusListHtml() {
     let d = curDec();
-    let q = corpusQuery.trim().toLowerCase();
-    let rows = papers, match = null;
+    let q = corpusQuery.trim();
+    let rows = papers.map(function(p, index) { return { paper: p, index: index, kind: '', count: 0 }; });
+    if (acceptanceMode) rows = rows.filter(function(result) { return !!d[result.paper.id]; });
     if (q) {
         if (!corpusIndex) return '<p class="pt-muted pt-corpus-empty">Such-Index lädt…</p>';
-        match = {};
-        rows = papers.filter(function(p) {
-            let e = corpusIndex[p.id]; if (!e || !e.x) return false;
-            let c = countOcc(e.x, q); if (c) { match[p.id] = c; return true; } return false;
-        });
+        rows = corpusSearchResults(q);
+        if (acceptanceMode) rows = rows.filter(function(result) { return !!d[result.paper.id]; });
         if (!rows.length) return '<p class="pt-muted pt-corpus-empty">Keine Treffer für &bdquo;' + EC.escapeHtml(corpusQuery) + '&ldquo;.</p>';
     }
-    return rows.map(function(p) {
-        let i = papers.indexOf(p);
+    return rows.map(function(result) {
+        const p = result.paper, i = result.index;
         let rec = d[p.id];
-        let st = rec ? rec.decision.toLowerCase() : 'none';
-        const badge = match ? '<span class="pt-hit-badge mono">' + match[p.id] + '</span>' : '';
-        return '<button class="pt-nav-item' + (i === state.index ? ' active' : '') + '" data-i="' + i + '">' +
+        let st = rec ? (recordRequirements(rec).ok ? rec.decision.toLowerCase() : 'incomplete') : 'none';
+        const badge = q ? '<span class="pt-hit-badge">' + EC.escapeHtml(result.kind === 'Text'
+            ? result.count + ' Texttreffer' : result.kind) + '</span>' : '';
+        const idLabel = result.kind === 'Paper-ID' || !p.doi ? 'ID ' + p.id : 'DOI ' + p.doi;
+        return '<button class="pt-nav-item' + (i === state.index ? ' active' : '') + '" data-i="' + i +
+            '" data-match-kind="' + EC.escapeHtml(result.kind || '') + '">' +
             '<span class="pt-nav-dot pt-dot-' + st + '" aria-hidden="true"></span>' +
             '<span class="pt-sr-only">' + statusLabel(st) + '</span>' +
             '<span class="pt-nav-text"><span class="pt-nav-t">' + EC.escapeHtml(p.title || '(ohne Titel)') + '</span>' +
-            '<span class="pt-nav-m mono">' + EC.escapeHtml(p.author_year || p.id) + '</span></span>' + badge + '</button>';
+            '<span class="pt-nav-m">' + EC.escapeHtml(p.author_year || p.authors || 'Autor:in/Jahr unbekannt') + '</span>' +
+            (q ? '<span class="pt-nav-id mono">' + EC.escapeHtml(idLabel) + '</span>' : '') + '</span>' + badge + '</button>';
     }).join('');
 }
 
@@ -867,8 +1259,13 @@ function refreshCorpusList() {
         let q = corpusQuery.trim();
         if (!q) hint.textContent = '';
         else if (!corpusIndex) hint.textContent = '';
-        else hint.textContent = papers.filter(function(p) { const e = corpusIndex[p.id]; return e && e.x && e.x.indexOf(q.toLowerCase()) !== -1; }).length + ' Paper';
+        else {
+            let results = corpusSearchResults(q);
+            if (acceptanceMode) results = results.filter(function(result) { return !!curDec()[result.paper.id]; });
+            hint.textContent = results.length + ' Ergebnisse';
+        }
     }
+    if (list) list.classList.toggle('is-searching', !!corpusQuery.trim());
 }
 
 function bindCorpusItems() {
@@ -876,7 +1273,7 @@ function bindCorpusItems() {
     list.querySelectorAll('.pt-nav-item').forEach(function(btn) {
         btn.addEventListener('click', function() {
             state.index = parseInt(btn.dataset.i, 10);
-            if (corpusQuery.trim()) pendingInText = corpusQuery.trim(); // carry the term into the open paper
+            pendingInText = corpusQuery.trim() && btn.dataset.matchKind === 'Text' ? corpusQuery.trim() : null;
             focusReadingOnRender = true;
             renderScreening();
         });
@@ -886,8 +1283,8 @@ function bindCorpusItems() {
 // ---- center: reading column (full text + in-text search) ----
 function sourcePillHtml(p) {
     if (hasFullText(p)) return '<span class="pt-pill pt-source-pill pt-pill-ghost">Volltext</span>';
-    if (p.knowledge_doc) return '<span class="pt-pill pt-source-pill pt-pill-warn">nur Destillat</span>';
-    return '<span class="pt-pill pt-source-pill pt-pill-warn">nur Abstract</span>';
+    if (p.abstract && p.abstract.trim()) return '<span class="pt-pill pt-source-pill pt-pill-warn">Metadaten-Abstract</span>';
+    return '<span class="pt-pill pt-source-pill pt-pill-warn">kein Papertext</span>';
 }
 
 // The first paint can precede the full-text manifest; once it resolves, the pill of the
@@ -898,21 +1295,42 @@ function refreshSourcePill() {
     pill.outerHTML = sourcePillHtml(papers[state.index]);
 }
 
+function normalizedDoi(raw) {
+    return String(raw || '').trim()
+        .replace(/^https?:\/\/(?:dx\.)?doi\.org\//i, '')
+        .replace(/^doi:\s*/i, '');
+}
+
+function doiHref(raw) {
+    const doi = normalizedDoi(raw);
+    return doi ? 'https://doi.org/' + doi.split('/').map(encodeURIComponent).join('/') : '';
+}
+
 function readingShellHtml(p, dec) {
     const aq = abstractQuality(p);
     let h = '<div class="pt-read pt-read-screen"><div class="pt-read-inner">';
-    h += '<div class="pt-read-meta">';
+    h += '<div class="pt-paper-head"><div class="pt-read-meta">';
     h += sourcePillHtml(p);
     if (dec) h += '<span class="pt-pill pt-pill-human pt-pill-right">erfasst</span>';
     h += '</div>';
     h += '<h1 class="pt-paper-title" id="pt-paper-title" tabindex="-1">' + EC.escapeHtml(p.title || '(ohne Titel)') + '</h1>';
-    h += '<div class="pt-paper-authors">' + EC.escapeHtml(p.author_year || p.authors || '') +
-        (p.journal ? ' &middot; <span class="pt-muted">' + EC.escapeHtml(p.journal) + '</span>' : '') + '</div>';
+    const doi = normalizedDoi(p.doi);
+    const sourceUrl = normalizedSourceUrl(p.url);
+    h += '<dl class="pt-paper-metadata">' +
+        '<div><dt>Autor:innen</dt><dd>' + EC.escapeHtml(authorDisplay(p)) + '</dd></div>' +
+        '<div><dt>Jahr</dt><dd>' + EC.escapeHtml(p.publication_year || p.year || 'nicht angegeben') + '</dd></div>' +
+        (p.journal ? '<div><dt>Publikation</dt><dd>' + EC.escapeHtml(p.journal) + '</dd></div>' : '') +
+        (doi ? '<div><dt>DOI</dt><dd class="mono"><a class="pt-doi-link" href="' + EC.escapeHtml(doiHref(doi)) +
+            '" target="_blank" rel="noopener noreferrer" title="DOI ' + EC.escapeHtml(doi) + ' öffnen">' + EC.escapeHtml(doi) + '</a></dd></div>' : '') +
+        '<div><dt>Paper-ID</dt><dd class="mono">' + EC.escapeHtml(p.id) + '</dd></div>' +
+        (sourceUrl ? '<div><dt>Quelle</dt><dd><a class="pt-source-link" href="' + EC.escapeHtml(sourceUrl) +
+            '" target="_blank" rel="noopener noreferrer">Webseite öffnen</a></dd></div>' : '') + '</dl></div>';
     if (!aq.ok && !p.knowledge_doc) h += '<div class="pt-aq-warn">Achtung: ' + EC.escapeHtml(aq.note) + '</div>';
 
+    h += '<article class="pt-reading-surface" aria-label="Papertext">';
     h += '<div class="pt-layer-toggle" id="pt-layer-toggle" hidden>' +
-        '<button class="pt-layer-btn active" data-mode="full">Volltext</button>' +
-        '<button class="pt-layer-btn" data-mode="ai">KI-Extraktion</button>' +
+        '<button type="button" class="pt-layer-btn active" data-mode="full" aria-pressed="true">Volltext</button>' +
+        '<button type="button" class="pt-layer-btn" data-mode="ai" aria-pressed="false">LLM-Wissensdestillat</button>' +
         '</div>';
     h += '<div class="pt-intext-bar">' +
         '<input id="pt-intext" aria-label="Im Text suchen" placeholder="Im Text suchen (Enter = nächster Treffer)">' +
@@ -921,15 +1339,15 @@ function readingShellHtml(p, dec) {
         '<button class="pt-intext-nav" id="pt-intext-next" title="nächster Treffer">&rsaquo;</button>' +
         '<button class="pt-btn pt-pin-hit" id="pt-pin-hit" disabled title="Aktuellen Treffer als Beleg anheften">Treffer anheften</button>' +
         '</div>';
-    h += '<p class="pt-read-help">Text markieren und als Beleg an eine Kategorie anheften, oder einen Treffer der Suche anheften.</p>';
-    h += '<div class="pt-layer-band" id="pt-layer-band" hidden>KI-Extraktion, nicht der Originaltext. Belege von hier gelten als KI und gehen nicht in den bindenden Record ein.</div>';
+    h += '<div class="pt-search-key" id="pt-search-key" hidden><span aria-hidden="true"></span>Aktueller Suchtreffer im Lesetext</div>';
+    h += '<div class="pt-layer-band" id="pt-layer-band" hidden>LLM-Wissensdestillat aus dem Wissensdokument. Diese automatisch erzeugte Referenz ist vom Originaltext getrennt; Belege daraus zählen nicht als menschliche Belege.</div>';
     h += '<div class="pt-doc" id="pt-doc"><p class="pt-muted">Volltext lädt…</p></div>';
-    h += '</div></div>';
+    h += '</article></div></div>';
     return h;
 }
 
 // Two epistemic layers by source (M3, ADR-016): the human "Volltext" layer is the original
-// Docling full text; the "KI-Extraktion" layer is the distillation from the knowledge doc.
+// Docling full text; the LLM knowledge distillate is generated from the knowledge document.
 function loadReadingInto(p) {
     const my = ++readToken;
     readingPending = true;
@@ -951,7 +1369,7 @@ function applyReading(token, p, full, kdmd) {
     readingPending = false;
     docHtmlAi = kdmd ? renderMarkdown(splitDocLayers(kdmd).ai || '') : '';
     if (full && full.trim()) {
-        docHtmlPaper = renderMarkdown(full);
+        docHtmlPaper = renderMarkdown(paperBodyMarkdown(full, p));
         currentTextSource = 'raw';
     } else if (p.abstract && p.abstract.trim()) {
         docHtmlPaper = '<p class="pt-doc-p">' + inlineMd(p.abstract) + '</p>';
@@ -960,10 +1378,10 @@ function applyReading(token, p, full, kdmd) {
         docHtmlPaper = '';
         currentTextSource = 'none';
     }
-    if (state.readMode === 'ai' && !docHtmlAi) state.readMode = 'full';
+    if (state.readMode === 'ai' && !referenceLayerAvailable()) state.readMode = 'full';
     updateLayerToggle();
     paintActiveLayer();
-    docMarks = []; docMarkIdx = 0;
+    docMarks = []; docMarkIdx = 0; appliedInTextQuery = '';
     if (pendingInText) {
         let box = document.getElementById('pt-intext');
         if (box) box.value = pendingInText;
@@ -976,7 +1394,12 @@ function applyReading(token, p, full, kdmd) {
     return true;
 }
 
-function activeLayerHtml() { return state.readMode === 'ai' ? docHtmlAi : docHtmlPaper; }
+function referenceLayerAvailable() {
+    const paper = papers[state.index];
+    return !!(docHtmlAi && paper && (acceptanceMode || (runActor !== 'agent' && curDec()[paper.id])));
+}
+
+function activeLayerHtml() { return state.readMode === 'ai' && referenceLayerAvailable() ? docHtmlAi : docHtmlPaper; }
 
 function paintActiveLayer() {
     let d = document.getElementById('pt-doc'); if (!d) return;
@@ -990,14 +1413,15 @@ function paintActiveLayer() {
 
 function updateLayerToggle() {
     const tg = document.getElementById('pt-layer-toggle');
-    if (tg) tg.hidden = !docHtmlAi; // the toggle only appears when a paper has an AI layer
+    if (tg) tg.hidden = !referenceLayerAvailable();
     document.querySelectorAll('.pt-layer-btn').forEach(function(b) {
         b.classList.toggle('active', b.dataset.mode === state.readMode);
+        b.setAttribute('aria-pressed', b.dataset.mode === state.readMode ? 'true' : 'false');
     });
 }
 
 function setReadMode(mode) {
-    if (mode === 'ai' && !docHtmlAi) return;
+    if (mode === 'ai' && !referenceLayerAvailable()) return;
     if (mode !== 'ai') mode = 'full';
     state.readMode = mode; saveLocal();
     updateLayerToggle();
@@ -1017,8 +1441,10 @@ function applyInText(q) {
     docMarks = []; docMarkIdx = 0;
     let cnt = document.getElementById('pt-intext-count');
     let pinBtn = document.getElementById('pt-pin-hit');
+    let key = document.getElementById('pt-search-key');
     q = (q || '').trim();
-    if (q.length < 2) { if (cnt) cnt.textContent = ''; if (pinBtn) pinBtn.disabled = true; return; }
+    appliedInTextQuery = q;
+    if (q.length < 2) { if (cnt) cnt.textContent = ''; if (pinBtn) pinBtn.disabled = true; if (key) key.hidden = true; return; }
     const ql = q.toLowerCase();
     const walker = document.createTreeWalker(doc, NodeFilter.SHOW_TEXT, null);
     let nodes = [], n;
@@ -1036,6 +1462,7 @@ function applyInText(q) {
         node.parentNode.replaceChild(frag, node);
     });
     if (pinBtn) pinBtn.disabled = docMarks.length === 0;
+    if (key) key.hidden = docMarks.length === 0;
     if (docMarks.length) setActiveMark(0);
     else if (cnt) cnt.textContent = '0 Treffer';
 }
@@ -1048,7 +1475,7 @@ function setActiveMark(i) {
     m.classList.add('active');
     if (typeof m.scrollIntoView === 'function') m.scrollIntoView({ block: 'center' });
     let cnt = document.getElementById('pt-intext-count');
-    if (cnt) cnt.textContent = (docMarkIdx + 1) + '/' + docMarks.length;
+    if (cnt) cnt.textContent = 'Treffer ' + (docMarkIdx + 1) + ' von ' + docMarks.length;
 }
 
 function snippetAround(el, term) {
@@ -1060,20 +1487,22 @@ function snippetAround(el, term) {
 }
 
 // ---- evidence pinning (FR-13) ----
-// Each Beleg records the source layer it came from (origin: 'human' or 'ai',
-// M3/ADR-016). A snippet taken from the verbatim paper layer is 'human' and
-// sets the binding category; a snippet taken from the AI-extraction layer is
-// 'ai', is shown marked KI, and never sets work.cats, so AI-sourced text can
-// never flip the binding human decision. origin defaults to 'human' for legacy
-// and three-argument calls.
+// Source layer and acting reviewer are separate provenance dimensions. The legacy
+// origin field is retained for existing files; source_layer is authoritative for
+// new evidence. A paper pin starts an empty category at level 1 so evidence capture
+// cannot silently assert that the category is central.
 function pinEvidence(cat, term, snippet, origin) {
     origin = origin === 'ai' ? 'ai' : 'human';
+    const sourceLayer = origin === 'ai' ? 'llm_distillate' : 'paper';
     term = (term || '').trim().slice(0, 80);
     snippet = (snippet || term).trim().slice(0, 260);
     if (!term) return;
     if (!work.evidence[cat]) work.evidence[cat] = [];
-    work.evidence[cat].push({ term: term, snippet: snippet, ts: new Date().toISOString(), origin: origin });
-    if (origin === 'human') work.cats[cat] = 2; // only a paper-sourced Beleg enters the binding record; level ja, same shape as a chip
+    work.evidence[cat].push({
+        term: term, snippet: snippet, ts: new Date().toISOString(), origin: origin,
+        source_layer: sourceLayer, actor: runActor
+    });
+    if (sourceLayer === 'paper' && catLevel(work.cats[cat]) === 0) work.cats[cat] = 1;
     refreshAssess();
 }
 
@@ -1085,40 +1514,68 @@ function unpinEvidence(cat, idx) {
     refreshAssess();
 }
 
-// The existing annotations on a paper, shown as reference (never binding): the expert seed
-// decision with its set categories, and a Mensch/KI divergence badge from the benchmark.
-// These are the binary track (human all_categories, benchmark.agreement); the reviewer's own
-// three-level input is separate.
+// Existing annotations are revealed only after the reviewer has saved a decision.
 function seedRefHtml(p) {
     const seed = seedDecision(p);
     if (!seed) return '';
     const setCats = ALL_CATS.filter(function(c) { return seed.categories[c]; });
-    let h = '<div class="pt-seed-ref">Seed-Bewertung (Expert:innen): <strong class="pt-dec-' +
-        seed.decision.toLowerCase() + '">' + seed.decision + '</strong>. Du entscheidest unabhängig.';
+    let h = '<div class="pt-reference-card"><span class="pt-tag-mono">Frühere Expert:innen-Referenz</span>' +
+        '<strong class="pt-dec-' + seed.decision.toLowerCase() + '">' + seed.decision + '</strong>';
     if (setCats.length) h += '<div class="pt-seed-cats">' + setCats.map(function(c) {
         return '<span class="pt-pill pt-pill-human">' + EC.escapeHtml(CAT_LABELS[c]) + '</span>';
     }).join('') + '</div>';
     const bm = p.benchmark;
     if (bm && bm.agreement === 'disagree') {
         const aff = (bm.affected_categories || []).map(function(c) { return CAT_LABELS[c] || c; });
-        h += '<div class="pt-diverg"><span class="pt-pill pt-pill-warn">Divergenz Mensch/KI</span>' +
+        h += '<div class="pt-diverg"><span class="pt-pill pt-pill-warn">Frühere Abweichung</span>' +
             (aff.length ? '<span class="pt-muted">' + EC.escapeHtml(aff.join(', ')) + '</span>' : '') + '</div>';
     }
     return h + '</div>';
+}
+
+function paperEvidenceMissing(cats, evidence) {
+    return ALL_CATS.filter(function(c) {
+        if (catLevel((cats || {})[c]) === 0) return false;
+        return !((evidence && evidence[c]) || []).some(isPaperEvidence);
+    });
+}
+
+// Backward-compatible test and integration seam.
+function humanEvidenceMissing(cats, evidence) { return paperEvidenceMissing(cats, evidence); }
+
+function recordRequirements(dec) {
+    if (!dec) return { ok: false, missing: ['Entscheidung'] };
+    const missing = paperEvidenceMissing(dec.categories || {}, dec.evidence || {})
+        .map(function(c) { return 'Paper-Beleg: ' + CAT_LABELS[c]; });
+    if (dec.decision === 'Include')
+        analysisRequirements(dec).missing.forEach(function(x) { missing.push(x); });
+    return { ok: missing.length === 0, missing: missing };
+}
+
+function workingDecisionRecord() {
+    const decision = finalDecisionOf(work.cats, work.override);
+    if (decision === 'Include') work.analysis = sanitizeAnalysis(work.analysis || {}, currentTextSource);
+    return {
+        categories: work.cats,
+        decision: decision,
+        override: !!work.override,
+        evidence: work.evidence,
+        analysis: work.analysis,
+        text_source: currentTextSource
+    };
 }
 
 // ---- right: assessment (categories + evidence + derived decision + collapsed AI) ----
 function assessInnerHtml(p, dec) {
     if (dec) return assessLockedHtml(p, dec);
     let cats = work.cats;
-    let h = '<div class="pt-rail-head"><span class="pt-rail-title">Deine Bewertung</span>' +
-        '<span class="pt-spacer"></span><span class="pt-pill pt-pill-human">bindend</span></div>';
-    h += '<div class="pt-rail-body">';
-    h += seedRefHtml(p);
+    let h = '<div class="pt-rail-head"><span class="pt-rail-title">Deine Bewertung</span></div>';
+    h += '<div class="pt-rail-body"><div class="pt-rail-scroll">';
     h += dimHtml('Gegenstand', TECH_CATS, cats, false);
     h += dimHtml('Perspektive', SOCIAL_CATS, cats, false);
     h += evidenceListHtml(work.evidence, false);
-    h += '<div class="pt-logic" id="pt-logic">' + logicInner(cats, work.override) + '</div>';
+    const draft = workingDecisionRecord();
+    if (draft.decision === 'Include') h += analysisPanelHtml(draft, false);
     const showReason = finalDecisionOf(cats, work.override) === 'Exclude';
     h += '<div class="pt-reason-block" id="pt-reason-block" style="display:' + (showReason ? 'block' : 'none') + ';">';
     h += '<div class="pt-tag-mono pt-reason-label">Ausschlussgrund &middot; erforderlich</div><div class="pt-reason-chips">';
@@ -1132,32 +1589,35 @@ function assessInnerHtml(p, dec) {
     h += '<div class="pt-tag-mono pt-override-label">Begruendung Override zu Include &middot; erforderlich</div>';
     h += '<textarea id="pt-override-reason" class="pt-override-input" rows="2" placeholder="Warum einschliessen, obwohl die Regel auf Exclude steht? Wird im Record dokumentiert.">' + EC.escapeHtml(work.overrideReason || '') + '</textarea>';
     h += '</div>';
-    h += '<div class="pt-actions">';
-    h += '<button class="pt-record-btn" id="pt-record">Entscheidung erfassen (bindend)</button>';
-    h += '<span class="pt-actions-hint" id="pt-actions-hint"></span>';
-    h += '</div>';
-    h += aiCollapsedHtml(p);
-    h += '</div>';
+    h += '</div><div class="pt-action-dock">';
+    h += '<div class="pt-logic" id="pt-logic">' + logicInner(cats, work.override) + '</div>';
+    h += '<span class="pt-actions-hint" id="pt-actions-hint" role="status" aria-live="polite"></span>';
+    h += '</div></div>';
     return h;
 }
 
 function assessLockedHtml(p, dec) {
     let cats = dec.categories || {};
+    const req = recordRequirements(dec);
     let h = '<div class="pt-rail-head"><span class="pt-rail-title">Deine Bewertung</span>' +
         '<span class="pt-spacer"></span><span class="pt-pill pt-pill-' + decCls(dec.decision) + ' pt-pill-lg">' + dec.decision + '</span></div>';
-    h += '<div class="pt-rail-body">';
+    h += '<div class="pt-rail-body"><div class="pt-rail-scroll">';
     if (dec.decision === 'Exclude' && dec.reason) h += '<div class="pt-seed-ref">Ausschlussgrund: <strong>' + EC.escapeHtml(dec.reason.replace(/_/g, ' ')) + '</strong></div>';
     if (dec.decision === 'Include' && dec.override && dec.override_reason) h += '<div class="pt-seed-ref">Override zu Include &middot; Begruendung: <strong>' + EC.escapeHtml(dec.override_reason) + '</strong></div>';
     h += dimHtml('Gegenstand', TECH_CATS, cats, true);
     h += dimHtml('Perspektive', SOCIAL_CATS, cats, true);
     h += evidenceListHtml(dec.evidence || {}, true);
-    h += analysisPanelHtml(dec); // FR-14: analysis coding, inline, only on Include
-    h += '<div class="pt-actions">';
-    h += '<button class="pt-revise-btn" id="pt-revise">Überarbeiten</button><span class="pt-spacer"></span>';
-    h += '<button class="pt-next-btn" id="pt-next">' + (state.index < papers.length - 1 ? 'Nächstes offen' : 'Zum ersten offenen') + ' &rarr;</button>';
-    h += '</div>';
-    h += aiCollapsedHtml(p);
-    h += '</div>';
+    h += analysisPanelHtml(dec, true);
+    h += referenceComparisonHtml(p);
+    h += '</div><div class="pt-action-dock pt-action-dock-locked">' +
+        '<div class="pt-record-summary"><span class="pt-tag-mono">Gespeicherte Entscheidung</span>' +
+        '<span class="pt-pill pt-pill-' + decCls(dec.decision) + '">' + dec.decision + '</span></div>' +
+        '<span class="pt-actions-hint ' + (req.ok ? 'is-complete' : 'is-required') + '" role="status">' +
+        (req.ok ? 'Vollständig erfasst.' : 'Noch erforderlich: ' + EC.escapeHtml(req.missing.join(', '))) + '</span>' +
+        '<div class="pt-actions">' + (acceptanceMode ? '' : '<button class="pt-revise-btn" id="pt-revise">Überarbeiten</button>') + '<span class="pt-spacer"></span>' +
+        '<button class="pt-next-btn" id="pt-next"' + (!req.ok ? ' disabled' : '') + '>' +
+        (acceptanceMode ? 'Anderer Abnahmefall' : (state.index < papers.length - 1 ? 'Nächstes offen' : 'Zum ersten offenen')) + ' &rarr;</button></div>' +
+        '</div></div>';
     return h;
 }
 
@@ -1172,36 +1632,45 @@ function dimHtml(label, keys, cats, locked) {
     return h;
 }
 
-// A three-state cycling chip (nein -> teilweise -> ja -> nein). The accessible name is the
-// visible label plus the current state ("AI Literacies, teilweise"); the slug and definition
-// stay decorative in the hover tip. The native title is gone (it doubled the styled tip);
-// the definition reaches assistive tech via aria-describedby to the tip.
+// The category action and its definition are separate keyboard targets. The definition
+// opens in a rail- and viewport-clamped popover instead of covering adjacent controls.
 function chipHtml(cat, level, locked) {
     const lvl = catLevel(level);
     const stateCls = lvl === 2 ? ' on' : (lvl === 1 ? ' partial' : '');
     const tipId = 'pt-chip-tip-' + cat;
-    return '<button class="pt-chip' + stateCls + '" data-cat="' + cat + '" data-level="' + lvl + '"' +
+    return '<span class="pt-chip-wrap"><button class="pt-chip' + stateCls + '" data-cat="' + cat + '" data-level="' + lvl + '"' +
         ' aria-label="' + EC.escapeHtml(CAT_LABELS[cat]) + ', ' + CAT_STATE[lvl] + '"' +
-        ' aria-describedby="' + tipId + '"' + (locked ? ' disabled' : '') + '>' +
+        (locked ? ' disabled' : '') + '>' +
         '<span class="pt-chip-box" aria-hidden="true"></span>' + EC.escapeHtml(CAT_LABELS[cat]) +
         (lvl ? '<span class="pt-chip-state" aria-hidden="true">' + CAT_STATE[lvl] + '</span>' : '') +
-        '<span class="pt-chip-tip" id="' + tipId + '"><b class="mono">' + cat + '</b><span>' + EC.escapeHtml(CAT_DEFS[cat] || '') + '</span></span></button>';
+        '</button><button type="button" class="pt-info-btn pt-chip-info" aria-label="Definition zu ' +
+        EC.escapeHtml(CAT_LABELS[cat]) + ' anzeigen" aria-expanded="false" aria-controls="' + tipId +
+        '" aria-describedby="' + tipId + '" data-info-target="' + tipId + '">i</button><span class="pt-info-popover pt-chip-tip" role="tooltip" id="' + tipId +
+        '" hidden><b class="mono">' + cat + '</b><span>' + EC.escapeHtml(CAT_DEFS[cat] || '') + '</span></span></span>';
+}
+
+function evidenceHeaderHtml() {
+    return '<div class="pt-evid-head"><span class="pt-tag-mono">Belege</span>' +
+        '<button type="button" class="pt-info-btn" aria-label="Hinweise zum Anheften von Belegen anzeigen" ' +
+        'aria-expanded="false" aria-controls="pt-evid-help" aria-describedby="pt-evid-help" data-info-target="pt-evid-help">i</button>' +
+        '<span class="pt-info-popover" role="tooltip" id="pt-evid-help" hidden>Markiere eine Textstelle oder suche im Papertext. ' +
+        'Hefte sie an die passende Kategorie. Ein Paper-Beleg setzt eine leere Kategorie zunächst auf teilweise; ja wählst du ausdrücklich.</span></div>';
 }
 
 function evidenceListHtml(evidence, locked) {
     let cats = ALL_CATS.filter(function(c) { return (evidence[c] || []).length; });
     if (!cats.length) {
-        return locked ? '' : '<div class="pt-evid pt-evid-empty"><span class="pt-tag-mono">Belege</span>' +
-            '<p class="pt-muted">Noch keine Belege angeheftet. Markiere im Text die Stelle, die eine Kategorie trägt.</p></div>';
+        return locked ? '' : '<div class="pt-evid pt-evid-empty">' + evidenceHeaderHtml() +
+            '<p class="pt-muted">Noch keine Belege angeheftet.</p></div>';
     }
-    let h = '<div class="pt-evid"><span class="pt-tag-mono">Belege</span>';
+    let h = '<div class="pt-evid">' + evidenceHeaderHtml();
     cats.forEach(function(c) {
         h += '<div class="pt-evid-cat"><div class="pt-evid-cat-h"><span class="pt-evid-dot" style="background:' +
             ((EC.CAT_COLORS && EC.CAT_COLORS[c]) || 'var(--pt-human)') + '"></span>' + EC.escapeHtml(CAT_LABELS[c]) + '</div>';
         (evidence[c] || []).forEach(function(ev, i) {
-            let origin = ev.origin === 'ai' ? 'ai' : 'human'; // legacy Belege without origin are human pins
+            let origin = evidenceLayer(ev) === 'llm_distillate' ? 'ai' : 'human';
             h += '<div class="pt-evid-item">' +
-                '<span class="pt-evid-origin pt-evid-origin-' + origin + '">' + (origin === 'ai' ? 'KI' : 'Mensch') + '</span>' +
+                '<span class="pt-evid-origin pt-evid-origin-' + origin + '">' + (origin === 'ai' ? 'LLM' : 'Paper') + '</span>' +
                 '<span class="pt-evid-snip">' + EC.escapeHtml(ev.snippet || ev.term) + '</span>' +
                 (locked ? '' : '<button class="pt-evid-x" data-cat="' + c + '" data-i="' + i + '" title="Beleg entfernen">&times;</button>') + '</div>';
         });
@@ -1217,48 +1686,59 @@ function evidenceListHtml(evidence, locked) {
 // value is a closed selection from the frozen vocabulary (anFields). The
 // vocabulary pins evidence keep their Fundstelle in the evidence list above; this
 // panel adds the descriptive analysis codes for the coding phase.
-function analysisPanelHtml(dec) {
+function analysisPanelHtml(dec, readOnly) {
     if (!dec || dec.decision !== 'Include') return '';
     if (!anFields.length) {
         return '<div class="pt-anpanel"><div class="pt-anpanel-head"><span class="pt-tag-mono">Analyse-Codierung</span></div>' +
             '<p class="pt-muted">Analysefeld-Vokabular nicht geladen (docs/data/analysis_fields.json). ' +
             'Build ausführen: python src/publish/build_analysis_fields.py</p></div>';
     }
-    const a = readAnalysis(dec), fv = a.fields, uv = a.undecidable;
+    const rawAnalysis = readAnalysis(dec);
+    const a = sanitizeAnalysis(rawAnalysis, dec.text_source), fv = a.fields, uv = a.undecidable;
+    const req = analysisRequirements(dec);
     let h = '<div class="pt-anpanel"><div class="pt-anpanel-head">' +
         '<span class="pt-tag-mono">Analyse-Codierung</span>' +
         '<span class="pt-spacer"></span><span class="pt-pill pt-pill-human">nur Include</span></div>';
     h += '<p class="pt-anpanel-lead pt-muted">Geschlossene Auswahl aus categories.yaml v' + EC.escapeHtml(anVocabVersion) +
-        '. Menschliche Erfassung, KI bleibt Vorschlag.</p>';
+        '. Studientyp und alle erforderlichen Felder schließen den Include-Record ab.</p>';
 
     // Studientyp is required for an Include (update-protocol D) and captured here as a
     // closed single select from study_types; no nicht-entscheidbar toggle, because its
     // vocabulary carries Unclear itself.
-    h += anFieldHtml({ name: 'Studientyp', multi: false, values: anStudyTypes, no_undec: true }, fv.Studientyp, false);
+    h += anFieldHtml({ name: 'Studientyp', multi: false, values: anStudyTypes, no_undec: true }, fv.Studientyp, false, !!readOnly);
 
     anFields.forEach(function(f) {
-        h += anFieldHtml(f, fv[f.name], !!uv[f.name]);
+        const fixed = f.name === 'AN_Coding_Basis';
+        const effective = f.name === 'AN_Harm_Types' && fv.AN_Coding_Basis === 'Fulltext'
+            ? Object.assign({}, f, { optional: false }) : f;
+        h += anFieldHtml(effective, fv[f.name], !!uv[f.name], fixed || !!readOnly, !!readOnly);
     });
 
     const hint = harmTypesHint(a);
     if (hint) h += '<div class="pt-an-hint">' + EC.escapeHtml(hint) + '</div>';
+    const expectedBasis = expectedCodingBasis(dec.text_source);
+    if (!readOnly && expectedBasis && rawAnalysis.fields.AN_Coding_Basis !== expectedBasis)
+        h += '<button type="button" class="pt-btn pt-an-fix-basis">Codierbasis aus Textquelle übernehmen: ' + EC.escapeHtml(expectedBasis) + '</button>';
+    h += '<p class="pt-an-status ' + (req.ok ? 'is-complete' : 'is-required') + '" role="status">' +
+        (req.ok ? 'Analyse-Codierung vollständig.' : 'Noch erforderlich: ' + EC.escapeHtml(req.missing.join(', '))) + '</p>';
     h += '</div>';
     return h;
 }
 
-function anFieldHtml(f, value, undecidable) {
+function anFieldHtml(f, value, undecidable, fixed, readOnly) {
     let h = '<div class="pt-an-field" data-an-field="' + f.name + '">';
     h += '<div class="pt-an-field-head"><span class="pt-an-label">' + EC.escapeHtml(f.name) + '</span>';
     if (f.optional) h += '<span class="pt-tag-mono pt-an-opt">optional</span>';
+    else if (!f.free_text) h += '<span class="pt-tag-mono pt-an-required">erforderlich</span>';
     h += '<span class="pt-spacer"></span>';
-    if (!f.free_text && !f.no_undec) {
+    if (!f.free_text && !f.no_undec && !fixed) {
         h += '<label class="pt-an-undec"><input type="checkbox" data-an-undec="' + f.name + '"' +
-            (undecidable ? ' checked' : '') + '> nicht entscheidbar</label>';
+            (undecidable ? ' checked' : '') + (readOnly ? ' disabled' : '') + '> nicht entscheidbar</label>';
     }
     h += '</div>';
 
     if (f.free_text) {
-        h += '<textarea class="pt-an-notes" data-an-free="' + f.name + '" rows="2" ' +
+        h += '<textarea class="pt-an-notes" data-an-free="' + f.name + '" rows="2" ' + (readOnly ? 'readonly ' : '') +
             'placeholder="Begründungen, Verbatim-Strategien; Nicht-Entscheidbarkeit wird beim Export angehängt.">' +
             EC.escapeHtml(value || '') + '</textarea>';
         h += '</div>';
@@ -1272,23 +1752,22 @@ function anFieldHtml(f, value, undecidable) {
         h += '<button type="button" class="pt-an-opt' + (on ? ' sel' : '') + '"' +
             ' data-an-field="' + f.name + '" data-an-value="' + v + '"' +
             ' data-an-multi="' + (f.multi ? '1' : '0') + '"' +
-            ' aria-pressed="' + (on ? 'true' : 'false') + '">' + EC.escapeHtml(v.replace(/_/g, ' ')) + '</button>';
+            ' aria-pressed="' + (on ? 'true' : 'false') + '"' + (fixed ? ' disabled' : '') + '>' + EC.escapeHtml(v.replace(/_/g, ' ')) + '</button>';
     });
     h += '</div></div>';
     return h;
 }
 
 function logicInner(cats, override) {
-    let tech = TECH_CATS.some(function(c) { return cats[c]; });
-    let soc = SOCIAL_CATS.some(function(c) { return cats[c]; });
     const derived = deriveDecision(cats);
     let h = '<div class="pt-logic-row">';
-    h += '<span class="pt-logic-term' + (tech ? ' on' : '') + '">&ge;1 Gegenstand</span>';
-    h += '<span class="pt-logic-and mono">UND</span>';
-    h += '<span class="pt-logic-term' + (soc ? ' on' : '') + '">&ge;1 Perspektive</span>';
-    h += '<span class="pt-logic-arrow">&rarr;</span>';
-    h += '<span class="pt-tag-mono">abgeleitet</span>';
+    h += '<span class="pt-tag-mono">Ergebnis</span>';
     h += '<span class="pt-pill pt-pill-' + decCls(derived) + '">' + derived + '</span>';
+    h += '<button type="button" class="pt-info-btn pt-logic-info" aria-label="Ableitungsregel anzeigen" aria-expanded="false" ' +
+        'aria-controls="pt-logic-help" aria-describedby="pt-logic-help" data-info-target="pt-logic-help">i</button>' +
+        '<span class="pt-info-popover" role="tooltip" id="pt-logic-help" hidden>' +
+        '<b class="mono">Ableitungsregel</b><span>Include: mindestens eine mit ja bewertete Kategorie in Gegenstand und Perspektive. ' +
+        'Unclear: beide Dimensionen sind mindestens teilweise belegt. Andernfalls Exclude.</span></span>';
     h += '<span class="pt-spacer"></span>';
     h += '<label class="pt-override"><span class="pt-switch"><input type="checkbox" id="pt-override"' +
         (override ? ' checked' : '') + '><span class="pt-switch-track"></span></span> ' +
@@ -1297,57 +1776,136 @@ function logicInner(cats, override) {
     return h;
 }
 
-function aiCollapsedHtml(p) {
+function automaticReferenceHtml(p) {
     let a = aiProposal(p);
     if (!a) return '';
     const on = ALL_CATS.filter(function(c) { return a.categories[c]; });
-    let h = '<details class="pt-ai-collapse"><summary><span class="pt-tag-mono">KI-Vorschlag</span>' +
-        '<span class="pt-pill pt-pill-ai">advisory</span><span class="pt-spacer"></span>' +
-        '<span class="pt-dec-' + (a.decision === 'Include' ? 'include' : 'exclude') + '">' + a.decision + '</span></summary>';
-    h += '<div class="pt-ai-collapse-body">';
-    h += '<div class="pt-tag-mono">KI-Kategorien</div><div class="pt-chips-static">';
+    let h = '<div class="pt-reference-card"><span class="pt-tag-mono">Frühere automatische Klassifikation</span>' +
+        '<strong class="pt-dec-' + decCls(a.decision) + '">' + a.decision + '</strong>' +
+        '<div class="pt-tag-mono">Automatisch zugeordnete Kategorien</div><div class="pt-chips-static">';
     h += on.length ? on.map(function(c) { return '<span class="pt-pill pt-pill-ai">' + CAT_LABELS[c] + '</span>'; }).join('') : '<span class="pt-muted">keine</span>';
     h += '</div>';
     if (a.reasoning) h += '<p class="pt-ai-reason">' + EC.escapeHtml(a.reasoning) + '</p>';
-    h += '<p class="pt-ai-foot pt-tag-mono">diagnostisch, konfabulationsanfällig.</p>';
-    h += '</div></details>';
+    h += '<p class="pt-ai-foot">Historische automatische Referenz; sie war vor dem Speichern der eigenen Entscheidung ausgeblendet.</p></div>';
     return h;
+}
+
+function referenceComparisonHtml(p) {
+    if (runActor === 'agent') return '';
+    const hasSeed = !!seedDecision(p), hasAutomatic = !!aiProposal(p);
+    if (!hasSeed && !hasAutomatic) return '';
+    return '<details class="pt-reference-comparison"><summary>Frühere Referenzen vergleichen</summary>' +
+        '<p class="pt-muted">Dieser Bereich wird erst nach der gespeicherten eigenen Entscheidung angeboten.</p>' +
+        '<div class="pt-reference-content"></div></details>';
+}
+
+function bindReferenceComparison(p, col) {
+    const comparison = col.querySelector('.pt-reference-comparison');
+    if (!comparison) return;
+    comparison.addEventListener('toggle', function() {
+        if (!comparison.open || comparison.dataset.loaded === 'true') return;
+        const content = comparison.querySelector('.pt-reference-content');
+        if (!content) return;
+        content.innerHTML = seedRefHtml(p) + automaticReferenceHtml(p);
+        comparison.dataset.loaded = 'true';
+    });
 }
 
 function refreshAssess() {
     let col = document.getElementById('pt-assess-col');
     if (!col) return;
+    closeInfoPopover(false);
     let p = papers[state.index];
-    col.innerHTML = assessInnerHtml(p, curDec()[p.id]);
-    bindAssess(p, curDec()[p.id]);
+    const dec = editingPid === p.id ? null : curDec()[p.id];
+    col.innerHTML = assessInnerHtml(p, dec);
+    bindAssess(p, dec);
 }
 
-// Wire the analysis coding panel of a locked Include record (FR-14). Each edit
-// mutates a working copy of the record's analysis, sanitizes, and persists via
-// setAnalysis; the binding screening fields are never touched. Option and toggle
-// changes re-render the panel in place; the free-text note updates without a
-// re-render so the caret is kept.
-function attachAnalysisPanel(p, dec, col) {
+function closeInfoPopover(restoreFocus) {
+    if (!openInfoTrigger) return;
+    const pop = document.getElementById(openInfoTrigger.dataset.infoTarget);
+    openInfoTrigger.setAttribute('aria-expanded', 'false');
+    if (pop) pop.hidden = true;
+    const trigger = openInfoTrigger;
+    openInfoTrigger = null;
+    if (restoreFocus && typeof trigger.focus === 'function') trigger.focus();
+}
+
+function openInfoPopover(trigger) {
+    if (!trigger) return;
+    if (openInfoTrigger && openInfoTrigger !== trigger) closeInfoPopover(false);
+    const pop = document.getElementById(trigger.dataset.infoTarget);
+    if (!pop) return;
+    openInfoTrigger = trigger;
+    trigger.setAttribute('aria-expanded', 'true');
+    pop.hidden = false;
+    pop.style.visibility = 'hidden';
+    const t = trigger.getBoundingClientRect();
+    const rail = trigger.closest('.pt-rail');
+    const bounds = rail ? rail.getBoundingClientRect() : { left: 8, right: window.innerWidth - 8 };
+    const width = pop.offsetWidth;
+    const left = Math.max(bounds.left + 8, Math.min(t.left, bounds.right - width - 8));
+    const below = t.bottom + 8;
+    const top = below + pop.offsetHeight <= window.innerHeight - 8
+        ? below : Math.max(8, t.top - pop.offsetHeight - 8);
+    pop.style.left = left + 'px';
+    pop.style.top = top + 'px';
+    pop.style.visibility = 'visible';
+}
+
+function bindInfoPopovers(root) {
+    root.querySelectorAll('[data-info-target]').forEach(function(trigger) {
+        trigger.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (openInfoTrigger === trigger) closeInfoPopover(false); else openInfoPopover(trigger);
+        });
+        trigger.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') { e.preventDefault(); closeInfoPopover(true); }
+        });
+    });
+    if (!infoGlobalBound) {
+        infoGlobalBound = true;
+        document.addEventListener('pointerdown', function(e) {
+            if (!openInfoTrigger) return;
+            const pop = document.getElementById(openInfoTrigger.dataset.infoTarget);
+            if (e.target !== openInfoTrigger && !(pop && pop.contains(e.target))) closeInfoPopover(false);
+        });
+        document.addEventListener('focusin', function(e) {
+            if (!openInfoTrigger) return;
+            const pop = document.getElementById(openInfoTrigger.dataset.infoTarget);
+            if (e.target !== openInfoTrigger && !(pop && pop.contains(e.target))) closeInfoPopover(false);
+        });
+    }
+}
+
+// Wire the analysis panel into the unsaved Include draft. The analysis remains in
+// work until the single disk action writes the complete record.
+function attachAnalysisPanel(dec, col) {
     if (!dec || dec.decision !== 'Include' || !anFields.length) return;
     const panel = col.querySelector('.pt-anpanel');
     if (!panel) return;
 
     function cur() {
-        const a = readAnalysis(curDec()[p.id]);
+        const a = readAnalysis({ analysis: work.analysis });
         return { fields: JSON.parse(JSON.stringify(a.fields)), undecidable: JSON.parse(JSON.stringify(a.undecidable)) };
     }
-    function persist(next) { setAnalysis(p.id, next); }
+    function persist(next) { work.analysis = sanitizeAnalysis(next, currentTextSource); }
     function rerender() { refreshAssess(); }
 
     panel.querySelectorAll('.pt-an-opt').forEach(function(btn) {
         btn.addEventListener('click', function() {
             const name = btn.dataset.anField, val = btn.dataset.anValue, multi = btn.dataset.anMulti === '1';
             const st = cur();
+            delete st.undecidable[name];
             if (multi) {
                 const arr = Array.isArray(st.fields[name]) ? st.fields[name] : [];
-                const at = arr.indexOf(val);
-                if (at === -1) arr.push(val); else arr.splice(at, 1);
-                st.fields[name] = arr;
+                if (val === 'None') st.fields[name] = arr.length === 1 && arr[0] === 'None' ? [] : ['None'];
+                else {
+                    const withoutNone = arr.filter(function(x) { return x !== 'None'; });
+                    const at = withoutNone.indexOf(val);
+                    if (at === -1) withoutNone.push(val); else withoutNone.splice(at, 1);
+                    st.fields[name] = withoutNone;
+                }
             } else {
                 st.fields[name] = st.fields[name] === val ? undefined : val; // single-select toggles off on re-click
             }
@@ -1358,10 +1916,15 @@ function attachAnalysisPanel(p, dec, col) {
         cb.addEventListener('change', function() {
             const name = cb.dataset.anUndec;
             const st = cur();
-            if (cb.checked) st.undecidable[name] = true; else delete st.undecidable[name];
+            if (cb.checked) {
+                st.undecidable[name] = true;
+                delete st.fields[name];
+            } else delete st.undecidable[name];
             persist(st); rerender();
         });
     });
+    const fixBasis = panel.querySelector('.pt-an-fix-basis');
+    if (fixBasis) fixBasis.addEventListener('click', function() { persist(cur()); rerender(); });
     const notes = panel.querySelector('[data-an-free]');
     if (notes) notes.addEventListener('input', function() {
         const st = cur();
@@ -1375,8 +1938,10 @@ function attachScreening(p, dec) {
     let el = surfaceEl(); if (!el) return;
 
     bindCorpusItems();
+    const recordButton = document.getElementById('pt-record');
+    if (recordButton && !dec) recordButton.addEventListener('click', commit);
 
-    // reading-column layer toggle (Volltext / KI-Extraktion)
+    // Reading-column layer toggle (full text / knowledge distillate).
     el.querySelectorAll('.pt-layer-btn').forEach(function(b) {
         b.addEventListener('click', function() { setReadMode(b.dataset.mode); });
     });
@@ -1385,7 +1950,9 @@ function attachScreening(p, dec) {
     // or rebuilds the whole reading document, which janks on long full texts.
     const debounce = function(fn, ms) {
         let t;
-        return function() { clearTimeout(t); t = setTimeout(fn, ms); };
+        const wrapped = function() { clearTimeout(t); t = setTimeout(fn, ms); };
+        wrapped.cancel = function() { clearTimeout(t); };
+        return wrapped;
     };
 
     const cq = document.getElementById('pt-corpus-q');
@@ -1404,7 +1971,13 @@ function attachScreening(p, dec) {
         const runIntext = debounce(function() { applyInText(intext.value); }, 120);
         intext.addEventListener('input', runIntext);
         intext.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter') { e.preventDefault(); if (docMarks.length) setActiveMark(docMarkIdx + 1); }
+            if (e.key !== 'Enter') return;
+            e.preventDefault();
+            const query = intext.value.trim();
+            if (query !== appliedInTextQuery) {
+                runIntext.cancel();
+                applyInText(query);
+            } else if (docMarks.length) setActiveMark(docMarkIdx + 1);
         });
     }
     const prev = document.getElementById('pt-intext-prev');
@@ -1436,13 +2009,14 @@ function attachScreening(p, dec) {
 
 function bindAssess(p, dec) {
     let col = document.getElementById('pt-assess-col'); if (!col) return;
+    bindInfoPopovers(col);
 
     if (dec) {
+        bindReferenceComparison(p, col);
         const rev = col.querySelector('#pt-revise');
         if (rev) rev.addEventListener('click', function() { editRecord(p); });
         let nx = col.querySelector('#pt-next');
         if (nx) nx.addEventListener('click', gotoNextOpen);
-        attachAnalysisPanel(p, dec, col);
         return;
     }
 
@@ -1465,8 +2039,9 @@ function bindAssess(p, dec) {
     });
     const ov = col.querySelector('#pt-override');
     if (ov) ov.addEventListener('change', function() { work.override = ov.checked; if (!ov.checked) work.overrideReason = null; refreshAssess(); });
+    attachAnalysisPanel(workingDecisionRecord(), col);
 
-    let rec = col.querySelector('#pt-record');
+    let rec = document.getElementById('pt-record');
     let hint = col.querySelector('#pt-actions-hint');
     // A derived Exclude needs an exclusion reason; an override to Include needs a recorded
     // justification (RAISE P3). The justification textarea updates without re-rendering so
@@ -1475,48 +2050,76 @@ function bindAssess(p, dec) {
         const fin = finalDecisionOf(work.cats, work.override);
         const needExcl = fin === 'Exclude';
         const needJust = work.override && fin === 'Include';
-        const can = !readingPending && (!needExcl || !!work.reason) &&
-            (!needJust || !!(work.overrideReason && work.overrideReason.trim()));
+        const missingEvidence = paperEvidenceMissing(work.cats, work.evidence);
+        const missingAnalysis = fin === 'Include' ? analysisRequirements(workingDecisionRecord()).missing : [];
+        const fileError = reviewerFileErrors[state.reviewer];
+        const storageReady = (!!screeningHandle || trialMode) && !fileError;
+        const can = !!state.reviewer && storageReady && !readingPending && (!needExcl || !!work.reason) &&
+            (!needJust || !!(work.overrideReason && work.overrideReason.trim())) && !missingEvidence.length && !missingAnalysis.length;
         if (rec) rec.disabled = !can;
-        if (hint) hint.textContent = can ? 'Deine Entscheidung ist verbindlich. KI bleibt nur als Vorschlag.'
-            : (readingPending ? 'Der Text wird noch geladen.' : (needExcl ? 'Bitte einen Ausschlussgrund wählen.' : 'Bitte den Override zu Include begründen.'));
+        if (hint) hint.textContent = can ? 'Bereit zum Speichern.'
+            : (!state.reviewer ? 'Vor dem Speichern Reviewer:innen-Kürzel festlegen.'
+                : (fileError ? 'Bestehende Reviewer-Datei ist nicht lesbar und wird nicht überschrieben.'
+                : (!storageReady ? 'Vor dem Speichern den lokalen Arbeitsordner verbinden.'
+                : (readingPending ? 'Der Text wird noch geladen.'
+                    : (missingEvidence.length ? 'Paper-Beleg fehlt: ' + missingEvidence.map(function(c) { return CAT_LABELS[c]; }).join(', ') + '.'
+                        : (missingAnalysis.length ? 'Analyse-Codierung unvollständig.'
+                        : (needExcl && !work.reason ? 'Bitte einen Ausschlussgrund wählen.'
+                            : (needJust && !(work.overrideReason && work.overrideReason.trim())
+                                ? 'Bitte den Override zu Include begründen.' : 'Speichern ist noch nicht möglich.'))))))));
     }
     const ovr = col.querySelector('#pt-override-reason');
     if (ovr) ovr.addEventListener('input', function() { work.overrideReason = ovr.value; syncRecord(); });
     syncRecord();
-    if (rec) rec.addEventListener('click', commit);
 }
 
 function commit() {
     let p = papers[state.index];
+    if (!state.reviewer) {
+        setSaveStatus('needs-reviewer', 'Reviewer:innen-Kürzel festlegen, bevor die erste Entscheidung gespeichert wird.');
+        focusDataInline(); return;
+    }
+    if (!screeningHandle && !trialMode) {
+        setSaveStatus('local', 'Lokalen Arbeitsordner verbinden, bevor die erste Entscheidung gespeichert wird.');
+        focusDataInline(); return;
+    }
+    if (!trialMode && reviewerFileErrors[state.reviewer]) {
+        setSaveStatus('error', 'Bestehende Datei ' + reviewerPath(state.reviewer) + ' ist nicht lesbar und wird nicht überschrieben.');
+        renderData(document.getElementById('pt-data-inline'));
+        return;
+    }
     // the record names the text it was taken on; a commit before the reading has been
     // applied would write text_source none for a paper that has a full text
     if (readingPending) { refreshAssess(); return; }
     let fin = finalDecisionOf(work.cats, work.override);
     if (fin === 'Exclude' && !work.reason) { refreshAssess(); return; }
     if (work.override && fin === 'Include' && !(work.overrideReason && work.overrideReason.trim())) { refreshAssess(); return; }
-    // the persisted record holds only human Belege; AI-origin evidence stays
-    // advisory and session-only, never written to the reviewer file (ADR-016)
-    const humanEvidence = {};
+    if (paperEvidenceMissing(work.cats, work.evidence).length) { refreshAssess(); return; }
+    // The persisted record holds only paper-layer evidence. Knowledge-distillate
+    // evidence stays advisory and session-only.
+    const paperEvidence = {};
     ALL_CATS.forEach(function(c) {
-        const items = (work.evidence[c] || []).filter(function(ev) { return (ev.origin || 'human') !== 'ai'; });
-        if (items.length) humanEvidence[c] = items;
+        const items = (work.evidence[c] || []).filter(isPaperEvidence);
+        if (items.length) paperEvidence[c] = items;
     });
-    curDec()[p.id] = {
+    const nextRecord = {
         categories: work.cats, decision: fin, override: !!work.override,
         reason: fin === 'Exclude' ? work.reason : null,
         override_reason: (work.override && fin === 'Include') ? work.overrideReason.trim() : null,
-        evidence: humanEvidence, ts: new Date().toISOString(), reviewer: state.reviewer,
+        evidence: paperEvidence, ts: new Date().toISOString(), reviewer: state.reviewer, actor: runActor,
         text_source: currentTextSource // the paper-layer text the decision was taken on (ADR-027, trAIce M4)
     };
     // FR-14: an edited Include record keeps its analysis codes across the re-commit;
     // a decision that leaves Include drops them (coding rule 1, excluded papers carry
     // no AN codes). A record that never had an analysis part gets no key, so a session
     // that touches no analysis field still serializes the pre-FR-14 file body.
-    if (fin === 'Include' && work.analysis) curDec()[p.id].analysis = work.analysis;
+    if (fin === 'Include') nextRecord.analysis = sanitizeAnalysis(work.analysis || {}, currentTextSource);
+    if (!recordRequirements(nextRecord).ok) { refreshAssess(); return; }
+    curDec()[p.id] = nextRecord;
     editingPid = null; // the edit (if any) is now re-committed
     save();
-    gotoNextOpen();
+    if (recordRequirements(nextRecord).ok) { corpusQuery = ''; gotoNextOpen(); }
+    else renderScreening();
 }
 
 // "Ueberarbeiten" reopens a committed decision for editing. It rehydrates the saved
@@ -1545,13 +2148,20 @@ function editRecord(p) {
 function gotoNextOpen() {
     focusReadingOnRender = true;
     let d = curDec();
+    if (acceptanceMode) {
+        const cases = papers.map(function(p, index) { return d[p.id] ? index : -1; }).filter(function(index) { return index >= 0; });
+        const current = cases.indexOf(state.index);
+        if (cases.length) state.index = cases[(current + 1 + cases.length) % cases.length];
+        renderScreening();
+        return;
+    }
     // Visit every undecided paper, including textless ones (unlike firstEntryIndex, which
     // only avoids opening *on* boilerplate): a paper without usable text must still be
     // reachable so the reviewer can exclude it as No full text. Skipping it here would
     // leave it permanently unscreened.
     for (let i = 0; i < papers.length; i++) {
         const j = (state.index + 1 + i) % papers.length;
-        if (!d[papers[j].id]) { state.index = j; renderScreening(); return; }
+        if (!d[papers[j].id] || !recordRequirements(d[papers[j].id]).ok) { state.index = j; renderScreening(); return; }
     }
     if (state.index < papers.length - 1) state.index++;
     renderScreening();
@@ -1571,7 +2181,7 @@ function openPinMenu(term, snippet) {
     menu.setAttribute('tabindex', '-1');
     let h = '<div class="pt-pinmenu-head"><span class="pt-tag-mono">Als Beleg anheften an</span>' +
         '<button class="pt-pinmenu-x" id="pt-pinmenu-x" aria-label="Schließen">&times;</button></div>';
-    if (pinOrigin === 'ai') h += '<div class="pt-pinmenu-ai">Dieser Beleg stammt aus der KI-Extraktion. Er wird als KI markiert und bindet die Entscheidung nicht.</div>';
+    if (pinOrigin === 'ai') h += '<div class="pt-pinmenu-ai">Dieser Beleg stammt aus dem LLM-Wissensdestillat und wird als automatisch erzeugte Referenz markiert. Er erfüllt kein menschliches Beleg-Gate.</div>';
     h += '<div class="pt-pinmenu-snip">' + EC.escapeHtml((snippet || term).slice(0, 160)) + '</div>';
     h += '<div class="pt-pinmenu-cats">';
     ALL_CATS.forEach(function(c) {
@@ -1627,8 +2237,11 @@ function renderReportSurface(targetEl) {
 
 function renderFlowInto(el) {
     if (!el) return;
-    let f = computeFlow();
+    const source = state.reviewer;
+    let f = computeFlow(source);
     let html = '<div class="pt-flow">';
+    html += '<p class="pt-flow-source"><strong>Reviewerquelle:</strong> ' + EC.escapeHtml(source || 'keine ausgewählt') +
+        '. Ein Konsensdatensatz ist in PRISM derzeit nicht definiert; die Zahlen zeigen ausschließlich diese Reviewerdatei.</p>';
     html += '<div class="pt-flow-box pt-flow-id"><div class="pt-flow-h">Identification</div>' +
         '<div class="pt-flow-n">Records identified&nbsp; n = ' + f.total + '</div>' +
         '<div class="pt-flow-sub">Seed-Korpus (Deep Research + manuell + Zotero)</div></div>';
@@ -1636,9 +2249,11 @@ function renderFlowInto(el) {
     html += '<div class="pt-flow-h pt-flow-stage">Screening</div>';
     html += '<div class="pt-flow-split">';
     html += '<div class="pt-flow-lane pt-lane-ai"><div class="pt-lane-h">KI-Tool (evaluativ)</div>' +
-        '<div class="pt-lane-n">gescreent ' + f.aiScreened + '</div><div class="pt-lane-r">Include ' + f.aiIncl + ' &middot; Exclude ' + f.aiExcl + '</div><div class="pt-lane-note">advisory</div></div>';
-    html += '<div class="pt-flow-lane pt-lane-human"><div class="pt-lane-h">Mensch (' + EC.escapeHtml(reviewerLabel(state.perspective)) + ')</div>' +
-        '<div class="pt-lane-n">gescreent ' + f.humanScreened + '</div><div class="pt-lane-r">Include ' + f.humanIncl + ' &middot; Exclude ' + f.humanExcl + '</div><div class="pt-lane-note">bindend</div></div>';
+        '<div class="pt-lane-n">gescreent ' + f.aiScreened + '</div><div class="pt-lane-r">Include ' + f.aiIncl +
+        ' &middot; Unclear ' + f.aiUnclear + ' &middot; Exclude ' + f.aiExcl + '</div><div class="pt-lane-note">advisory</div></div>';
+    html += '<div class="pt-flow-lane pt-lane-human"><div class="pt-lane-h">Reviewerdatei (' + EC.escapeHtml(reviewerLabel(source)) + ')</div>' +
+        '<div class="pt-lane-n">gescreent ' + f.humanScreened + '</div><div class="pt-lane-r">Include ' + f.humanIncl +
+        ' &middot; Unclear ' + f.humanUnclear + ' &middot; Exclude ' + f.humanExcl + '</div><div class="pt-lane-note">gewählte Quelle</div></div>';
     html += '</div>';
     if (Object.keys(f.humanReasons).length) {
         html += '<div class="pt-flow-reasons"><strong>Ausschlussgründe (Mensch):</strong> ' +
@@ -1646,7 +2261,7 @@ function renderFlowInto(el) {
     }
     html += '<div class="pt-flow-arrow">&darr;</div>';
     html += '<div class="pt-flow-box pt-flow-incl"><div class="pt-flow-h">Included</div>' +
-        '<div class="pt-flow-n">Mensch (bindend) ' + f.humanIncl + '</div><div class="pt-flow-sub">KI (advisory) ' + f.aiIncl + '</div></div>';
+        '<div class="pt-flow-n">Reviewerdatei ' + f.humanIncl + '</div><div class="pt-flow-sub">frühere automatische Klassifikation ' + f.aiIncl + '</div></div>';
     html += '</div>';
     html += '<p class="pt-flow-caption">KI- und Mensch-Entscheidungen getrennt (PRISMA-trAIce R1).</p>';
     el.innerHTML = html;
@@ -1655,17 +2270,17 @@ function renderFlowInto(el) {
 
 function renderChecklistInto(el) {
     if (!el) return;
-    let html = '<p class="pt-check-intro">PRISMA-trAIce (Holst et al. 2025), 17 Items. Auto-markierte erfüllt das Dual-Assessment-Setup bereits.</p>';
+    let html = '<p class="pt-check-intro">PRISMA-trAIce (Holst et al. 2025), 17 Items. Der Status wird projektspezifisch belegt; Werkzeugfunktionen erfüllen kein Item pauschal.</p>';
     let lastSec = '';
     TRAICE.forEach(function(it) {
         if (it.sec !== lastSec) { html += '<div class="pt-check-sec">' + it.sec + '</div>'; lastSec = it.sec; }
         let st = state.checklist[it.id] || {};
-        let status = st.status || (it.auto ? 'satisfied' : 'open');
+        let status = st.status || 'open';
         html += '<div class="pt-check-item"><div class="pt-check-row">' +
             '<button class="pt-check-status pt-st-' + status + '" data-id="' + it.id + '">' + status + '</button>' +
             '<span class="pt-check-id">' + it.id + '</span>' +
             '<span class="pt-check-lvl pt-lvl-' + it.lvl.split(' ')[0] + '">' + it.lvl + '</span>' +
-            (it.auto ? '<span class="pt-check-auto">auto</span>' : '') + '</div>' +
+            (it.auto ? '<span class="pt-check-auto">Werkzeugbezug</span>' : '') + '</div>' +
             '<p class="pt-check-text">' + EC.escapeHtml(it.text) + '</p>' +
             '<input class="pt-check-note" data-id="' + it.id + '" placeholder="Notiz" value="' + EC.escapeHtml(st.note || '') + '"></div>';
     });
@@ -1675,7 +2290,7 @@ function renderChecklistInto(el) {
         btn.addEventListener('click', function() {
             let id = btn.dataset.id;
             const it = TRAICE.filter(function(t) { return t.id === id; })[0];
-            const cur = (state.checklist[id] && state.checklist[id].status) || (it.auto ? 'satisfied' : 'open');
+            const cur = (state.checklist[id] && state.checklist[id].status) || 'open';
             let nx = cur === 'open' ? 'satisfied' : cur === 'satisfied' ? 'na' : 'open';
             state.checklist[id] = state.checklist[id] || {}; state.checklist[id].status = nx;
             save(); renderChecklistInto(el);
@@ -1694,7 +2309,7 @@ function exportChecklist() {
     let lines = ['# PRISMA-trAIce checklist', ''];
     TRAICE.forEach(function(it) {
         let st = state.checklist[it.id] || {};
-        let status = st.status || (it.auto ? 'satisfied' : 'open');
+        let status = st.status || 'open';
         lines.push('- [' + (status === 'satisfied' ? 'x' : ' ') + '] ' + it.id + ' (' + it.lvl + '): ' + it.text + (st.note ? ' -- ' + st.note : ''));
     });
     download('prisma-traice-checklist.md', lines.join('\n'), 'text/markdown');
@@ -1731,7 +2346,7 @@ function disclosureMarkdown() {
     const L = [];
     L.push('## AI use disclosure (PRISMA-trAIce / RAISE)', '');
     L.push('Screening of ' + n + ' records used ' + disc('name') + ' (prompt ' + disc('prompt') + ', temperature ' + disc('temperature') + '), date ' + disc('date') + '.');
-    L.push('Stage: ' + disc('stage') + '. The AI proposal is advisory; every record was screened independently by a human reviewer, whose decision is binding (RAISE).');
+    L.push('Stage: ' + disc('stage') + '. Reviewer source: ' + (state.reviewer || 'not selected') + '. The application does not infer a two-reviewer consensus.');
     L.push('Performance evaluation (PRISMA-trAIce M9/R2): AI-human agreement is evaluated outside this tool, on the benchmark corpus in the repository (generated/benchmark-results/, replay self-test), not recomputed here over the loaded corpus.');
     L.push('Confidence threshold: ' + disc('threshold') + '. Conflicts of interest: ' + disc('conflicts') + '.');
     const ts = textSourceCounts(curDec());
@@ -1742,89 +2357,94 @@ function disclosureMarkdown() {
     return L.join('\n');
 }
 
-// Data panel (sync: connect, per-reviewer files, export/import), rendered on demand
+// One-time editor setup: reviewer key and local repository folder.
 
 function renderData(targetEl) {
-    let el = targetEl || surfaceEl(); if (!el) return;
-    let html = '<div class="pt-data">';
-
-    html += '<div class="pt-data-block"><p class="pt-muted pt-panel-lead">Provenienz über Git. Deine Entscheidungen liegen als eine Datei pro Reviewer:in in docs/data/screening/; wer was entschieden hat, trägt der Commit-Autor, kein Feld im Tool.</p></div>';
-
-    html += '<div class="pt-data-block"><h4>In den Projektordner speichern</h4>';
-    if (FS_SUPPORTED) {
-        html += '<p class="pt-muted">Wurzel des lokalen Klons verbinden; das Tool findet docs/data/screening/ darunter und legt den Ordner an, wenn er fehlt. Ein direkt gewählter Screening-Ordner funktioniert weiterhin. Das Tool liest alle Reviewer-Dateien und schreibt deine bei jeder Entscheidung diff-stabil hinein (' + REVIEWER_SCHEMA + ', nach Paper-ID sortiert). Danach committest du sie mit deinem üblichen Werkzeug.</p>';
-        html += '<div class="pt-data-actions">' +
-            '<button class="pt-btn pt-connect">Mit Projektordner verbinden</button>' +
-            '<button class="pt-btn pt-reconnect">Erneut verbinden</button>' +
-            '<button class="pt-btn pt-reload">Reviewer-Dateien neu laden</button></div>';
-    } else {
-        html += '<p class="pt-aq-warn">Dieser Browser (Firefox/Safari) kann nicht direkt schreiben. Nutze Export/Import unten und lege die Datei manuell ab.</p>';
+    const el = targetEl || document.getElementById('pt-data-inline'); if (!el) return;
+    if (acceptanceMode) {
+        el.innerHTML = '<div class="pt-acceptance-status"><strong>Abnahmeansicht</strong>' +
+            '<span>Vorgeschlagene Testurteile. Diese Ansicht schreibt keine Forschungsdaten.</span></div>';
+        return;
     }
-    html += '</div>';
-
-    html += '<div class="pt-data-block"><h4>Commit vorbereiten</h4>' +
-        '<p class="pt-muted">Eine fertige Commit-Nachricht, die deine Session dokumentiert. Übernimm sie in deinen Commit.</p>' +
-        '<div class="pt-data-actions"><button class="pt-btn pt-commitmsg">Commit-Nachricht erzeugen</button>' +
-        '<button class="pt-btn pt-commitmsg-copy" hidden>Kopieren</button></div>' +
-        '<pre class="pt-commitmsg-out" id="pt-commitmsg-out" hidden></pre></div>';
-
-    html += '<div class="pt-data-block"><h4>Export / Import (Fallback, alle Browser)</h4><div class="pt-data-actions">' +
-        '<button class="pt-btn pt-exp-rev">Eigene Datei exportieren (' + EC.escapeHtml(state.reviewer) + '.json)</button>' +
-        '<label class="pt-btn pt-imp-label">Reviewer-Datei importieren<input type="file" accept=".json" class="pt-imp" hidden></label>' +
-        '<button class="pt-btn pt-exp-csv">Decision-Log (.csv)</button>' +
-        '<button class="pt-btn pt-exp-analysis">Analyse-Export (human_assessment.csv-Schema)</button>' +
-        '<button class="pt-btn pt-exp-recon">Abgleich aller geladenen Reviewer-Dateien (.json)</button>' +
-        '<button class="pt-btn pt-clear">Eigene Session leeren</button></div></div>';
-
-    html += '</div>';
-    el.innerHTML = html;
-
-    const conn = el.querySelector('.pt-connect'); if (conn) conn.addEventListener('click', connectRepo);
-    const recon = el.querySelector('.pt-reconnect'); if (recon) recon.addEventListener('click', reconnectRepo);
-    const reload = el.querySelector('.pt-reload'); if (reload) reload.addEventListener('click', function() { loadAllReviewers().then(function() { renderPanel(); }); });
-
-    const cm = el.querySelector('.pt-commitmsg');
-    const cmOut = el.querySelector('#pt-commitmsg-out');
-    const cmCopy = el.querySelector('.pt-commitmsg-copy');
-    if (cm) cm.addEventListener('click', function() {
-        cmOut.textContent = commitMessage();
-        cmOut.hidden = false;
-        if (cmCopy) cmCopy.hidden = false;
-    });
-    if (cmCopy) cmCopy.addEventListener('click', function() { if (navigator.clipboard) navigator.clipboard.writeText(cmOut.textContent); });
-
-    el.querySelector('.pt-exp-rev').addEventListener('click', function() { download(state.reviewer + '.json', reviewerFileText(state.reviewer), 'application/json'); });
-    el.querySelector('.pt-exp-csv').addEventListener('click', exportCsv);
-    el.querySelector('.pt-exp-recon').addEventListener('click', function() {
-        const payloads = Object.keys(state.reviewers).map(function(k) { return reviewerPayload(k); });
-        download('prisma-reconciliation.json', reconciliationText(payloads), 'application/json');
-    });
-    el.querySelector('.pt-exp-analysis').addEventListener('click', function() {
-        download('prisma-analysis-' + state.reviewer + '.csv', analysisCsv(state.reviewer), 'text/csv');
-    });
-    el.querySelector('.pt-clear').addEventListener('click', function() {
-        if (!confirm('Eigene Entscheidungen (' + state.reviewer + ') verwerfen?')) return;
-        state.reviewers[state.reviewer] = {}; state.index = 0; save(); closePanel(); renderScreening();
-    });
-    el.querySelector('.pt-imp').addEventListener('change', function(e) {
-        const file = e.target.files[0]; if (!file) return;
-        let r = new FileReader();
-        r.onload = function() {
-            let obj;
-            try { obj = JSON.parse(r.result); }
-            catch (err) { alert('Import fehlgeschlagen: ' + err.message); return; }
-            // A foreign or corrupt file must not poison the persistent state.
-            if (!obj || typeof obj !== 'object' || !obj.decisions || typeof obj.decisions !== 'object') {
-                alert('Import fehlgeschlagen: keine gültige Reviewer-Datei (Feld "decisions" fehlt).');
+    if (!state.reviewer) {
+        el.innerHTML = '<form class="pt-reviewer-setup" id="pt-reviewer-setup" novalidate>' +
+            '<label for="pt-reviewer-key"><span>Reviewer:innen-Kürzel</span>' +
+            '<input id="pt-reviewer-key" name="reviewer" type="text" required minlength="2" maxlength="12" ' +
+            'pattern="[A-Za-z][A-Za-z0-9_-]{1,11}" autocomplete="off" spellcheck="false" ' +
+            'aria-describedby="pt-reviewer-help pt-reviewer-error" placeholder="z. B. cp"></label>' +
+            '<button class="pt-btn pt-reviewer-set" type="submit">Kürzel festlegen</button>' +
+            '<span class="pt-reviewer-help" id="pt-reviewer-help">2–12 Zeichen: Buchstaben, Ziffern, _ oder -; Beginn mit Buchstabe.</span>' +
+            '<span class="pt-reviewer-error" id="pt-reviewer-error" role="status" aria-live="polite"></span></form>' +
+            '<p class="pt-save-status pt-save-' + saveStatus.kind + '" id="pt-save-status" role="status" aria-live="polite">' +
+            EC.escapeHtml(saveStatus.message) + '</p>';
+        const form = el.querySelector('#pt-reviewer-setup');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const input = el.querySelector('#pt-reviewer-key');
+            if (!selectReviewer(input.value)) {
+                input.setAttribute('aria-invalid', 'true');
+                el.querySelector('#pt-reviewer-error').textContent = 'Ungültiges Kürzel. Verwende 2–12 erlaubte Zeichen.';
+                input.focus();
                 return;
             }
-            const rawKey = obj.reviewer || file.name.replace(/\.json$/, '');
-            let key = String(rawKey).trim().replace(/[^a-zA-Z0-9_-]/g, '') || 'import';
-            state.reviewers[key] = obj.decisions;
-            save(); renderPanel();
-        };
-        r.readAsText(file);
+            renderData(el);
+            renderScreening();
+        });
+        return;
+    }
+
+    const identity = '<span class="pt-sync-identity"><strong>' + EC.escapeHtml(state.reviewer) + '</strong>' +
+        '<code>' + EC.escapeHtml(reviewerPath(state.reviewer)) + '</code></span>';
+    if (trialMode) {
+        el.innerHTML = '<div class="pt-sync-ready pt-trial-ready">' + identity +
+            '<span class="pt-folder-status">Agentischer Testlauf · isolierter Browser-Zwischenstand</span>' +
+            '<p class="pt-save-status pt-save-' + saveStatus.kind + '" id="pt-save-status" role="status" aria-live="polite">' +
+            EC.escapeHtml(saveStatus.message) + '</p>' +
+            '<button class="pt-btn pt-trial-export" type="button">Testdaten exportieren</button>' +
+            '<span class="pt-trial-note">Keine Forschungsdaten werden geschrieben.</span></div>';
+        el.querySelector('.pt-trial-export').addEventListener('click', function() {
+            download(state.reviewer + '.json', reviewerFileText(state.reviewer), 'application/json');
+            setSaveStatus('saved', 'Testdaten als ' + state.reviewer + '.json exportiert.');
+        });
+        return;
+    }
+    if (screeningHandle) {
+        el.innerHTML = '<div class="pt-sync-ready">' + identity +
+            '<span class="pt-folder-status">Arbeitsordner: ' + EC.escapeHtml(selectedFolderLabel()) + '</span>' +
+            '<p class="pt-save-status pt-save-' + saveStatus.kind + '" id="pt-save-status" role="status" aria-live="polite">' +
+            EC.escapeHtml(saveStatus.message) + '</p>' +
+            '<button class="pt-change-folder" type="button">Ordner ändern</button></div>';
+        el.querySelector('.pt-change-folder').addEventListener('click', connectRepo);
+        return;
+    }
+
+    const actionLabel = storedHandleAvailable ? 'Arbeitsordner freigeben' : 'Arbeitsordner wählen';
+    el.innerHTML = '<div class="pt-folder-setup">' + identity +
+        '<span class="pt-folder-status">Arbeitsordner: nicht verbunden</span>' +
+        (FS_SUPPORTED ? '<button class="pt-btn pt-folder-action" type="button">' + actionLabel + '</button>' :
+            '<span class="pt-sync-browser-note">Lokales Speichern benötigt einen Chromium-basierten Browser.</span>') +
+        '<p class="pt-save-status pt-save-' + saveStatus.kind + '" id="pt-save-status" role="status" aria-live="polite">' +
+        EC.escapeHtml(saveStatus.message) + '</p></div>';
+    const folderAction = el.querySelector('.pt-folder-action');
+    if (folderAction) folderAction.addEventListener('click', storedHandleAvailable ? reconnectRepo : connectRepo);
+}
+
+function validateReviewerPayload(obj) {
+    if (!obj || typeof obj !== 'object') return { ok: false, message: 'Datei enthält kein JSON-Objekt.' };
+    if (!/^femprompt-prisma-reviewer\/0\.[123]$/.test(obj.schema || ''))
+        return { ok: false, message: 'unbekanntes oder fehlendes Reviewer-Schema.' };
+    if (!obj.decisions || typeof obj.decisions !== 'object' || Array.isArray(obj.decisions))
+        return { ok: false, message: 'Feld "decisions" fehlt oder ist ungültig.' };
+    const known = {};
+    papers.forEach(function(p) { known[p.id] = true; });
+    const badIds = Object.keys(obj.decisions).filter(function(id) { return papers.length && !known[id]; });
+    if (badIds.length) return { ok: false, message: 'unbekannte Paper-IDs: ' + badIds.slice(0, 5).join(', ') + (badIds.length > 5 ? ' …' : '') };
+    const badDecision = Object.keys(obj.decisions).find(function(id) {
+        const d = obj.decisions[id];
+        return !d || ['Include', 'Exclude', 'Unclear'].indexOf(d.decision) === -1;
     });
+    if (badDecision) return { ok: false, message: 'ungültige Decision bei Paper ' + badDecision + '.' };
+    return { ok: true };
 }
 
 // Quote a CSV cell only when it carries a comma, quote, or newline; any of those
@@ -1936,7 +2556,7 @@ function analysisCsv(reviewerKey) {
     let idn = 0;
     papers.forEach(function(p) {
         const rec = dec[p.id];
-        if (!rec || rec.decision !== 'Include') return; // only Include papers carry AN codes
+        if (!rec || rec.decision !== 'Include' || !recordRequirements(rec).ok) return;
         idn++;
         const a = readAnalysis(rec), f = a.fields;
         const anVal = function(name) {
@@ -1996,24 +2616,40 @@ const TEST_HOOK = {
     computeFlow: computeFlow,
     // parsing and rendering helpers
     countOcc: countOcc, stripFrontmatter: stripFrontmatter, inlineMd: inlineMd,
-    renderMarkdown: renderMarkdown, splitDocLayers: splitDocLayers,
+    renderMarkdown: renderMarkdown, splitDocLayers: splitDocLayers, paperBodyMarkdown: paperBodyMarkdown,
+    readingShellHtml: readingShellHtml, normalizedDoi: normalizedDoi, doiHref: doiHref,
+    normalizedSourceUrl: normalizedSourceUrl, urlOnlyLine: urlOnlyLine, sameSourceUrl: sameSourceUrl, authorDisplay: authorDisplay,
     // generated report text and persistence payload
     disclosureMarkdown: disclosureMarkdown, reviewerPayload: reviewerPayload,
-    reviewerFileText: reviewerFileText, sortedDecisions: sortedDecisions, commitMessage: commitMessage,
+    reviewerFileText: reviewerFileText, sortedDecisions: sortedDecisions,
+    isReviewerId: isReviewerId, normalizedReviewerKey: normalizedReviewerKey, reviewerPath: reviewerPath,
+    selectReviewer: selectReviewer, importReviewerPayload: importReviewerPayload,
+    validateReviewerPayload: validateReviewerPayload, save: save, saveStatus: function() { return saveStatus; },
+    loadAllReviewers: loadAllReviewers,
+    reviewerFileErrors: function() { return JSON.parse(JSON.stringify(reviewerFileErrors)); },
+    reviewerRecoveryPending: function() { return JSON.parse(JSON.stringify(reviewerRecoveryPending)); },
+    mergeReviewerDecisions: mergeReviewerDecisions,
     // stateful seams for inline fixtures
-    setPapers: function(p) { papers = p; },
+    setPapers: function(p) { papers = p; }, renderData: renderData,
     getState: function() { return state; },
     getWork: function() { return work; },
     curDec: curDec, resetWork: resetWork, refreshAssess: refreshAssess,
     pinEvidence: pinEvidence, unpinEvidence: unpinEvidence, commit: commit, editRecord: editRecord,
     evidenceListHtml: evidenceListHtml, chipHtml: chipHtml, statusLabel: statusLabel,
-    corpusListHtml: corpusListHtml, isScreenable: isScreenable, firstEntryIndex: firstEntryIndex,
+    corpusListHtml: corpusListHtml, corpusSearchResults: corpusSearchResults,
+    setCorpusQuery: function(x) { corpusQuery = String(x || ''); },
+    setCorpusIndex: function(x) { corpusIndex = x; }, isScreenable: isScreenable, firstEntryIndex: firstEntryIndex,
+    startIndexForPaper: startIndexForPaper,
+    evidenceLayer: evidenceLayer, isPaperEvidence: isPaperEvidence,
+    paperEvidenceMissing: paperEvidenceMissing, humanEvidenceMissing: humanEvidenceMissing,
+    recordRequirements: recordRequirements, workingDecisionRecord: workingDecisionRecord,
     // analysis coding panel (FR-14, ADR-026)
     setAnalysisFields: function(d) { applyAnalysisVocab(d); },
     anVersion: function() { return anVocabVersion; },
     anFieldNames: anFieldNames, anField: anField, anVocab: anVocab,
     anStudyTypes: function() { return anStudyTypes; }, anExportOrder: anExportOrder,
     readAnalysis: readAnalysis, sanitizeAnalysis: sanitizeAnalysis, setAnalysis: setAnalysis,
+    expectedCodingBasis: expectedCodingBasis, analysisRequirements: analysisRequirements,
     analysisNotes: analysisNotes, harmTypesHint: harmTypesHint, analysisPanelHtml: analysisPanelHtml,
     analysisCsvHeader: analysisCsvHeader, analysisCsv: analysisCsv,
     // surface + reading-layer drivers (browser-agent traces on the real page)
@@ -2023,12 +2659,15 @@ const TEST_HOOK = {
     // text-source provenance, load-token guard, decision log, reconciliation (ADR-027, pilot)
     loadReadingInto: loadReadingInto, applyReading: applyReading,
     readToken: function() { return readToken; }, textSource: function() { return currentTextSource; },
+    setTextSource: function(source) { currentTextSource = source; },
     readingPending: function() { return readingPending; },
     textSourceCounts: textSourceCounts, decisionLogCsv: decisionLogCsv,
     reconcileReviewers: reconcileReviewers, reconciliationText: reconciliationText,
+    renderReportSurface: renderReportSurface,
     // repo-root connect (ported from the paper lane's ADR-024 by operator decision)
     resolveScopes: resolveScopes, connectScope: function() { return connectScope; },
-    screeningHandle: function() { return screeningHandle; }
+    screeningHandle: function() { return screeningHandle; },
+    setScreeningHandle: function(handle) { screeningHandle = handle; }
 };
 window.EC = window.EC || {};
 window.EC._test = TEST_HOOK;

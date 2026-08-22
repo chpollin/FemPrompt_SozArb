@@ -1,5 +1,5 @@
 {
-  "meta": { "pilot": true, "note": "Non-production fixture corpus for the PRISM browser pilot; two synthetic papers." },
+  "meta": { "pilot": true, "note": "Non-production fixture corpus for the PRISM browser pilot; three synthetic papers." },
   "papers": [
     {
       "id": "PILOT-A",
@@ -12,7 +12,7 @@
       "abstract": "A synthetic abstract. This fixture paper discusses generative language models in social work education and the gendered scripts of care they reproduce.",
       "item_type": "journalArticle",
       "journal": "Pilot Journal",
-      "knowledge_doc": null,
+      "knowledge_doc": "data/pilot/PILOT-A.md",
       "llm": { "decision": "Include", "categories": ["Generative_KI", "Soziale_Arbeit", "Gender"],
                "all_categories": { "AI_Literacies": 0, "Generative_KI": 1, "Prompting": 0, "KI_Sonstige": 0, "Soziale_Arbeit": 1, "Bias_Ungleichheit": 0, "Gender": 1, "Diversitaet": 0, "Feministisch": 0, "Fairness": 0 },
                "reasoning": "Synthetic advisory proposal for the pilot." }
@@ -23,10 +23,26 @@
       "author_year": "Probe (2025)",
       "authors": "Probe, Ben",
       "year": 2025,
-      "doi": "",
+      "doi": "10.5555/femprompt.second",
       "url": "",
       "abstract": "A synthetic abstract. This fixture paper surveys recommender systems and classification pipelines without a social work setting; it exists to exercise the abstract-only reading path of the pilot.",
       "item_type": "report",
+      "journal": "",
+      "knowledge_doc": null,
+      "llm": { "decision": "Exclude", "categories": ["KI_Sonstige"],
+               "all_categories": { "AI_Literacies": 0, "Generative_KI": 0, "Prompting": 0, "KI_Sonstige": 1, "Soziale_Arbeit": 0, "Bias_Ungleichheit": 0, "Gender": 0, "Diversitaet": 0, "Feministisch": 0, "Fairness": 0 },
+               "reasoning": "Synthetic advisory proposal for the pilot." }
+    },
+    {
+      "id": "AIGLDZ4C",
+      "title": "Pilot webpage source metadata case",
+      "author_year": "Articulate (2025)",
+      "authors": "",
+      "year": 2025,
+      "doi": "",
+      "url": "https://example.org/femprompt-source",
+      "abstract": "A synthetic webpage fixture used only to verify conservative URL-only metadata handling in the PRISM browser pilot.",
+      "item_type": "webpage",
       "journal": "",
       "knowledge_doc": null,
       "llm": { "decision": "Exclude", "categories": ["KI_Sonstige"],

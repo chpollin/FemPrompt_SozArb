@@ -79,6 +79,14 @@ if (!T) {
     return;
 }
 
+var TEST_SCREENING_HANDLE = {
+    getFileHandle: function() { return Promise.resolve({
+        createWritable: function() { return Promise.resolve({ write: function() {}, close: function() {} }); }
+    }); }
+};
+T.setScreeningHandle(TEST_SCREENING_HANDLE);
+if (window.__ANALYSIS_FIELDS__ && T.setAnalysisFields) T.setAnalysisFields(window.__ANALYSIS_FIELDS__);
+
 // localStorage hygiene: commit() persists app state under this key. Snapshot
 // before the suite and restore after, so a same-origin PRISM session is not
 // polluted when the tests run from a served checkout.
@@ -90,48 +98,34 @@ try { lsBackup = localStorage.getItem(LS_KEY); lsReadable = true; } catch (e) {}
 // Section A: decision derivation truth table
 // ============================================================
 
-test('deriveDecision: empty category set is Exclude', function() {
-    assertEqual(T.deriveDecision({}), 'Exclude');
+test('deriveDecision covers the category-level truth table', function() {
+    var all = {};
+    T.ALL_CATS.forEach(function(c) { all[c] = true; });
+    [
+        ['empty', {}, 'Exclude'],
+        ['technical only', { Prompting: 2 }, 'Exclude'],
+        ['perspective only', { Gender: 2 }, 'Exclude'],
+        ['false values ignored', { Prompting: false, Gender: 2 }, 'Exclude'],
+        ['both dimensions at ja', { Prompting: 2, Gender: 2 }, 'Include'],
+        ['all categories', all, 'Include'],
+        ['both dimensions partial', { Prompting: 1, Gender: 1 }, 'Unclear'],
+        ['mixed ja and partial', { Prompting: 2, Gender: 1 }, 'Unclear'],
+        ['partial in one dimension', { Prompting: 1 }, 'Exclude'],
+        ['legacy boolean true', { Prompting: true, Gender: 2 }, 'Include']
+    ].forEach(function(row) {
+        assertEqual(T.deriveDecision(row[1]), row[2], row[0]);
+    });
 });
-test('deriveDecision: technical category alone is Exclude', function() {
-    assertEqual(T.deriveDecision({ Prompting: true }), 'Exclude');
-});
-test('deriveDecision: social category alone is Exclude', function() {
-    assertEqual(T.deriveDecision({ Gender: true }), 'Exclude');
-});
-test('deriveDecision: one technical AND one social category is Include', function() {
-    assertEqual(T.deriveDecision({ Prompting: true, Gender: true }), 'Include');
-});
-test('deriveDecision: falsy category values do not count', function() {
-    assertEqual(T.deriveDecision({ Prompting: false, Gender: true }), 'Exclude');
-});
-test('deriveDecision: all ten categories set is Include', function() {
-    var cats = {};
-    T.ALL_CATS.forEach(function(c) { cats[c] = true; });
-    assertEqual(T.deriveDecision(cats), 'Include');
-});
-test('deriveDecision: both dimensions at teilweise (level 1) is Unclear', function() {
-    assertEqual(T.deriveDecision({ Prompting: 1, Gender: 1 }), 'Unclear');
-});
-test('deriveDecision: one dimension ja and the other teilweise is Unclear', function() {
-    assertEqual(T.deriveDecision({ Prompting: 2, Gender: 1 }), 'Unclear');
-});
-test('deriveDecision: teilweise in one dimension, nein in the other is Exclude', function() {
-    assertEqual(T.deriveDecision({ Prompting: 1 }), 'Exclude');
-});
-test('deriveDecision: legacy boolean true coerces to ja (level 2)', function() {
-    assertEqual(T.deriveDecision({ Prompting: true, Gender: 2 }), 'Include');
-});
-test('finalDecisionOf: derived Include without override stays Include', function() {
-    assertEqual(T.finalDecisionOf({ Prompting: true, Gender: true }, false), 'Include');
-});
-test('finalDecisionOf: derived Include with override becomes Exclude', function() {
-    assertEqual(T.finalDecisionOf({ Prompting: true, Gender: true }, true), 'Exclude');
-});
-test('finalDecisionOf: from a derived Exclude, override flips to Include (O2, ADR-023)', function() {
-    assertEqual(T.finalDecisionOf({ Prompting: true }, false), 'Exclude');
-    assertEqual(T.finalDecisionOf({ Prompting: true }, true), 'Include');
-    assertEqual(T.finalDecisionOf({}, true), 'Include');
+test('finalDecisionOf applies the symmetric human override to every derived outcome', function() {
+    [
+        ['Include remains Include', { Prompting: 2, Gender: 2 }, false, 'Include'],
+        ['Include flips to Exclude', { Prompting: 2, Gender: 2 }, true, 'Exclude'],
+        ['Exclude remains Exclude', { Prompting: 2 }, false, 'Exclude'],
+        ['Exclude flips to Include', { Prompting: 2 }, true, 'Include'],
+        ['empty Exclude flips to Include', {}, true, 'Include']
+    ].forEach(function(row) {
+        assertEqual(T.finalDecisionOf(row[1], row[2]), row[3], row[0]);
+    });
 });
 test('divergent: differing decisions are divergent, equal or missing tracks are not', function() {
     assert(T.divergent({ decision: 'Include' }, { decision: 'Exclude' }) === true, 'Include vs Exclude');
@@ -155,19 +149,22 @@ var flowFix = [
     { id: 'f2', human: { decision: 'Exclude' }, llm: { decision: 'Include' } },
     { id: 'f3', human: { decision: 'Include' } },                  // no AI track
     { id: 'f4', llm: { decision: 'Exclude' } },                    // no human track
-    { id: 'f5', title: 'neither track' }
+    { id: 'f5', title: 'neither track' },
+    { id: 'f6', human: { decision: 'Unclear' }, llm: { decision: 'Unclear' } }
 ];
 
 test('computeFlow (seed perspective): totals, lanes, no reasons on seed', function() {
     T.setPapers(flowFix);
     var f = T.computeFlow(T.SEED);
-    assertEqual(f.total, 5, 'total');
-    assertEqual(f.aiScreened, 3, 'aiScreened');
+    assertEqual(f.total, 6, 'total');
+    assertEqual(f.aiScreened, 4, 'aiScreened');
     assertEqual(f.aiIncl, 2, 'aiIncl');
     assertEqual(f.aiExcl, 1, 'aiExcl');
-    assertEqual(f.humanScreened, 3, 'humanScreened');
+    assertEqual(f.aiUnclear, 1, 'aiUnclear');
+    assertEqual(f.humanScreened, 4, 'humanScreened');
     assertEqual(f.humanIncl, 2, 'humanIncl');
     assertEqual(f.humanExcl, 1, 'humanExcl');
+    assertEqual(f.humanUnclear, 1, 'humanUnclear');
     // the seed track carries no exclusion reasons, so none may be aggregated
     assertEqual(Object.keys(f.humanReasons).length, 0, 'humanReasons empty');
 });
@@ -180,12 +177,13 @@ test('computeFlow (reviewer perspective): exclusion reasons are aggregated', fun
         f4: { decision: 'Include', categories: { Prompting: true, Gender: true } }
     };
     var f = T.computeFlow('r1');
-    assertEqual(f.humanScreened, 4, 'humanScreened');
-    assertEqual(f.humanIncl, 1, 'humanIncl');
+    assertEqual(f.humanScreened, 3, 'only methodically complete reviewer records are counted');
+    assertEqual(f.humanIncl, 0, 'an Include without evidence and analysis is not counted as complete');
     assertEqual(f.humanExcl, 3, 'humanExcl');
+    assertEqual(f.humanUnclear, 0, 'humanUnclear');
     assertEqual(f.humanReasons.Duplicate, 2, 'Duplicate count');
     assertEqual(f.humanReasons.Language, 1, 'Language count');
-    assertEqual(f.aiScreened, 3, 'AI lane unchanged by perspective');
+    assertEqual(f.aiScreened, 4, 'AI lane unchanged by perspective');
     delete T.getState().reviewers.r1;
 });
 test('computeFlow on an empty corpus returns zeroed lanes', function() {
@@ -280,6 +278,77 @@ test('countOcc: counts, empty needle, empty haystack, non-overlapping matches', 
     assertEqual(T.countOcc('', 'an'), 0);
     assertEqual(T.countOcc('aaa', 'aa'), 1, 'matches do not overlap');
 });
+test('paperBodyMarkdown starts at an explicit Abstract and removes duplicate title metadata', function() {
+    var p = { title: 'A Study', authors: 'Ada Example; Ben Probe', author_year: 'Example et al. (2026)' };
+    var md = '# A Study\n\nAda Example; Ben Probe\n\n## Abstract\nThe abstract body.\n\n## Method\nDetails.';
+    var body = T.paperBodyMarkdown(md, p);
+    assert(body.indexOf('## Abstract') === 0, 'body begins at the explicit Abstract heading');
+    assertNotContains(body, '# A Study');
+    assertNotContains(body, 'Ada Example; Ben Probe');
+});
+test('paperBodyMarkdown removes only known leading metadata when no Abstract exists', function() {
+    var p = { title: 'A Study', author_year: 'Example (2026)' };
+    var body = T.paperBodyMarkdown('# A Study\n\nExample (2026)\n\n## Introduction\nSubstantive opening.', p);
+    assert(body.indexOf('## Introduction') === 0, 'known title and author-year removed');
+    var unknown = T.paperBodyMarkdown('Publisher note that is real prose.\n\n## Introduction\nBody.', p);
+    assertContains(unknown, 'Publisher note that is real prose.', 'unknown prose is never removed heuristically');
+});
+test('DOI metadata normalizes resolver forms and renders a safe compact link', function() {
+    assertEqual(T.normalizedDoi('https://doi.org/10.1234/example.test'), '10.1234/example.test');
+    assertEqual(T.normalizedDoi('doi: 10.1234/example test'), '10.1234/example test');
+    assertEqual(T.doiHref('doi: 10.1234/example test'), 'https://doi.org/10.1234/example%20test');
+    var html = T.readingShellHtml({
+        id: 'doi-paper', title: 'DOI paper', authors: 'Ada Example', year: 2026,
+        doi: 'https://doi.org/10.1234/example.test', abstract: new Array(140).join('a')
+    }, null);
+    assertContains(html, 'class="pt-doi-link"');
+    assertContains(html, 'href="https://doi.org/10.1234/example.test"');
+    assertContains(html, 'target="_blank" rel="noopener noreferrer"');
+    assertContains(html, '>10.1234/example.test</a>');
+    assertContains(html, '<dt>Paper-ID</dt><dd class="mono">doi-paper</dd>', 'operational identity remains visible beside the DOI');
+});
+test('reading shell labels the generated reference as LLM-Wissensdestillat', function() {
+    var html = T.readingShellHtml({ id: 'layer-paper', title: 'Layer paper', abstract: new Array(140).join('a') }, null);
+    assertContains(html, '>LLM-Wissensdestillat</button>');
+    assertContains(html, 'LLM-Wissensdestillat aus dem Wissensdokument');
+    assertNotContains(html, 'KI-Extraktion');
+    assertContains(html, 'class="pt-reading-surface" aria-label="Papertext"');
+});
+test('web source URLs move to metadata and repeated URL-only lines leave the paper body', function() {
+    var canonical = 'https://www.articulate.com/blog/how-to-create-inclusive-ai-images-a-guide-to-bias-free-prompting/';
+    var converted = 'https://www.articulate.com/blog/how-to-create-inclusive-ai-images-a-guide-to-bias-freeprompting/';
+    var p = { id: 'web', title: 'Guide', author_year: 'Articulate (2025)', year: 2025, url: canonical };
+    var body = T.paperBodyMarkdown(converted + '\n\nSubstantive opening.\n\n' + converted + '\n\nClosing.', p);
+    assertNotContains(body, 'https://www.articulate.com', 'source artefact removed throughout the body');
+    assertContains(body, 'Substantive opening.');
+    assertContains(body, 'Closing.');
+    assert(T.sameSourceUrl(converted, canonical), 'hyphenation variation resolves to the canonical source');
+    var html = T.readingShellHtml(p, null);
+    assertContains(html, 'class="pt-source-link"');
+    assertContains(html, 'href="' + canonical + '"');
+    assertContains(html, '>Articulate</dd>', 'fallback author omits the separately shown year');
+});
+test('corpus search ranks an exact title first and labels unambiguous match kinds', function() {
+    T.setPapers([
+        { id: 'S1', title: 'Exact Paper', author_year: 'A (2024)', doi: '10.1/exact' },
+        { id: 'S2', title: 'A discussion of Exact Paper', author_year: 'B (2025)' },
+        { id: 'S3', title: 'Unrelated', author_year: 'Exact Paper (2023)' }
+    ]);
+    T.setCorpusIndex({ S1: { x: 'exact paper body' }, S2: { x: 'body' }, S3: { x: 'body' } });
+    var results = T.corpusSearchResults('Exact Paper');
+    assertEqual(results.map(function(x) { return x.paper.id; }).join('|'), 'S1|S2|S3');
+    assertEqual(results.map(function(x) { return x.kind; }).join('|'), 'Exakter Titel|Titel|Autor:in/Jahr');
+});
+test('corpus search shows the matched Paper-ID even when the record also has a DOI', function() {
+    T.setPapers([{ id: 'S-DOI', title: 'Identified paper', author_year: 'A (2024)', doi: '10.1/identified' }]);
+    T.setCorpusIndex({ 'S-DOI': { x: 'body' } });
+    T.setCorpusQuery('S-DOI');
+    var html = T.corpusListHtml();
+    assertContains(html, 'ID S-DOI');
+    assertContains(html, '>Paper-ID</span>');
+    assertNotContains(html, 'DOI 10.1/identified', 'the identity search result shows the value that matched');
+    T.setCorpusQuery('');
+});
 
 // ============================================================
 // Section E: evidence and quality helpers
@@ -304,16 +373,18 @@ test('abstractQuality: empty, boilerplate, too short, acceptable', function() {
     var long_ = 'This study examines prompting practice in social work education and reports survey results. ';
     assertEqual(T.abstractQuality({ abstract: long_ + long_ }).ok, true, 'long abstract');
 });
-test('pinEvidence sets the category and truncates term (80) and snippet (260)', function() {
+test('pinEvidence starts an empty paper category at level 1 and records provenance', function() {
     T.resetWork({ id: 'evPaper' });
     var longTerm = new Array(101 + 1).join('t');     // 101 chars
     var longSnip = new Array(300 + 1).join('s');     // 300 chars
     T.pinEvidence('Gender', longTerm, longSnip);
     var w = T.getWork();
-    assertEqual(w.cats.Gender, 2, 'category set by pinning to level ja, same shape as a chip');
+    assertEqual(w.cats.Gender, 1, 'paper evidence starts at teilweise; ja requires an explicit judgement');
     assertEqual(w.evidence.Gender.length, 1);
     assertEqual(w.evidence.Gender[0].term.length, 80, 'term truncated');
     assertEqual(w.evidence.Gender[0].snippet.length, 260, 'snippet truncated');
+    assertEqual(w.evidence.Gender[0].source_layer, 'paper');
+    assertEqual(w.evidence.Gender[0].actor, 'human');
 });
 test('pinEvidence with empty term is a no-op', function() {
     T.resetWork({ id: 'evPaper2' });
@@ -350,6 +421,7 @@ test('reviewerPayload carries schema 0.3, reviewer key, decisions', function() {
     assertEqual(pl.schema, 'femprompt-prisma-reviewer/0.3');
     assertEqual(pl.schema, T.REVIEWER_SCHEMA);
     assertEqual(pl.reviewer, 'r2');
+    assertEqual(pl.actor, 'human');
     assertEqual(pl.decisions.x1.decision, 'Include');
     assert(typeof pl.updated === 'string' && pl.updated.length > 0, 'updated timestamp');
     delete T.getState().reviewers.r2;
@@ -358,6 +430,44 @@ test('reviewerPayload for an unknown reviewer has empty decisions', function() {
     var pl = T.reviewerPayload('nobody');
     assertEqual(Object.keys(pl.decisions).length, 0);
 });
+test('file/browser recovery merge keeps the newer record and every local-only record', function() {
+    var merged = T.mergeReviewerDecisions(
+        {
+            diskNewer: { decision: 'Exclude', ts: '2026-08-22T12:00:00Z' },
+            localNewer: { decision: 'Exclude', ts: '2026-08-22T10:00:00Z' },
+            diskOnly: { decision: 'Exclude', ts: '2026-08-22T09:00:00Z' }
+        },
+        {
+            diskNewer: { decision: 'Include', ts: '2026-08-22T11:00:00Z' },
+            localNewer: { decision: 'Include', ts: '2026-08-22T13:00:00Z' },
+            localOnly: { decision: 'Unclear', ts: '2026-08-22T08:00:00Z' }
+        }
+    );
+    assertEqual(merged.decisions.diskNewer.decision, 'Exclude', 'newer disk record wins');
+    assertEqual(merged.decisions.localNewer.decision, 'Include', 'newer browser record survives');
+    assertEqual(merged.decisions.diskOnly.decision, 'Exclude', 'disk-only record survives');
+    assertEqual(merged.decisions.localOnly.decision, 'Unclear', 'browser-only record survives');
+    assert(merged.recovered, 'merge reports that a browser recovery must be written');
+    assertEqual(merged.conflict, null);
+});
+test('file/browser recovery merge blocks an ambiguous same-paper conflict', function() {
+    var merged = T.mergeReviewerDecisions(
+        { p: { decision: 'Exclude' } },
+        { p: { decision: 'Include' } }
+    );
+    assertContains(merged.conflict, 'Paper p');
+    assertEqual(merged.decisions.p.decision, 'Include', 'browser recovery remains available while the file stays untouched');
+});
+
+test('file/browser recovery merge blocks different records with the same timestamp', function() {
+    var ts = '2026-08-22T12:00:00.000Z';
+    var merged = T.mergeReviewerDecisions(
+        { p: { decision: 'Exclude', ts: ts } },
+        { p: { decision: 'Include', ts: ts } }
+    );
+    assertContains(merged.conflict, 'identischem Zeitstempel');
+    assertEqual(merged.decisions.p.decision, 'Include', 'equal-time browser recovery is retained');
+});
 
 var commitFix = [
     { id: 'c1', title: 'commit one' },
@@ -365,7 +475,13 @@ var commitFix = [
     { id: 'c3', title: 'commit three' }
 ];
 
-test('commit: derived Include is recorded with no reason', function() {
+function addHumanEvidence(work, cats) {
+    cats.forEach(function(cat) {
+        work.evidence[cat] = [{ term: cat, snippet: 'human evidence for ' + cat, origin: 'human' }];
+    });
+}
+
+test('commit: derived Include is written only with complete analysis', function() {
     T.setPapers(commitFix);
     T.getState().reviewers = {};            // clean slate for the commit tests
     T.getState().reviewer = 'r1';
@@ -373,6 +489,11 @@ test('commit: derived Include is recorded with no reason', function() {
     T.resetWork(commitFix[0]);
     T.getWork().cats.Prompting = true;
     T.getWork().cats.Gender = true;
+    addHumanEvidence(T.getWork(), ['Prompting', 'Gender']);
+    T.setTextSource('abstract');
+    T.commit();
+    assertEqual(T.curDec().c1, undefined, 'incomplete Include is not written');
+    T.getWork().analysis = completeAnalysis('abstract');
     T.commit();
     var rec = T.curDec().c1;
     assert(rec, 'record exists');
@@ -388,6 +509,7 @@ test('commit: Exclude without a reason is refused, with a reason it is recorded'
     T.getState().index = 1;
     T.resetWork(commitFix[1]);
     T.getWork().cats.Prompting = true;      // tech only, derived Exclude
+    addHumanEvidence(T.getWork(), ['Prompting']);
     T.commit();
     assertEqual(T.curDec().c2, undefined, 'refused without reason');
     T.getWork().reason = 'Not_relevant_topic';
@@ -405,6 +527,7 @@ test('commit: override on a derived Include yields Exclude and requires a reason
     T.resetWork(commitFix[2]);
     T.getWork().cats.Prompting = true;
     T.getWork().cats.Gender = true;
+    addHumanEvidence(T.getWork(), ['Prompting', 'Gender']);
     T.getWork().override = true;
     T.commit();
     assertEqual(T.curDec().c3, undefined, 'override-Exclude refused without reason');
@@ -416,6 +539,22 @@ test('commit: override on a derived Include yields Exclude and requires a reason
     assertEqual(rec.decision, 'Exclude');
     assertEqual(rec.override, true);
     assertEqual(rec.reason, 'Duplicate');
+});
+test('commit: every selected category requires a paper-layer Beleg', function() {
+    T.setPapers([{ id: 'c-evidence', title: 'evidence gate' }]);
+    T.getState().reviewer = 'r1'; T.getState().reviewers.r1 = {}; T.getState().index = 0;
+    T.resetWork({ id: 'c-evidence' });
+    T.getWork().cats.Prompting = 2; T.getWork().cats.Gender = 2;
+    T.getWork().evidence.Prompting = [{ term: 'p', snippet: 'p', origin: 'ai' }];
+    T.getWork().evidence.Gender = [{ term: 'g', snippet: 'g', origin: 'human' }];
+    assertEqual(T.paperEvidenceMissing(T.getWork().cats, T.getWork().evidence).join('|'), 'Prompting');
+    T.commit();
+    assertEqual(T.curDec()['c-evidence'], undefined, 'LLM-distillate evidence cannot satisfy the paper evidence gate');
+    T.getWork().evidence.Prompting.push({ term: 'p2', snippet: 'p2', origin: 'human' });
+    T.setTextSource('abstract');
+    T.getWork().analysis = completeAnalysis('abstract');
+    T.commit();
+    assert(T.curDec()['c-evidence'], 'record is stored after every selected category has paper evidence');
 });
 test('exclusion reason vocabulary is the controlled five-value set', function() {
     assertEqual(T.EXCLUSION_REASONS.join('|'),
@@ -438,37 +577,29 @@ test('disclosureMarkdown covers the screening count and references external M9/R
 // KI2: per-Beleg provenance (origin), neutral, no valuation
 // ============================================================
 
-test('pinEvidence stamps human provenance on a reviewer Beleg', function() {
+test('pinEvidence separates paper source from the acting reviewer', function() {
     T.resetWork({ id: 'provPaper' });
     T.pinEvidence('Gender', 'gendered language', 'a snippet about gendered language');
     assertEqual(T.getWork().evidence.Gender[0].origin, 'human');
+    assertEqual(T.getWork().evidence.Gender[0].source_layer, 'paper');
+    assertEqual(T.getWork().evidence.Gender[0].actor, 'human');
 });
-test('evidenceListHtml marks a human Beleg as Mensch and an AI Beleg as KI', function() {
+test('evidenceListHtml labels paper and LLM-distillate evidence by source layer', function() {
     var ev = {
         Gender: [{ term: 'h', snippet: 'human snippet', origin: 'human' }],
         Prompting: [{ term: 'a', snippet: 'ai snippet', origin: 'ai' }]
     };
     var html = T.evidenceListHtml(ev, true);
-    assertContains(html, 'pt-evid-origin-human">Mensch');
-    assertContains(html, 'pt-evid-origin-ai">KI');
+    assertContains(html, 'pt-evid-origin-human">Paper');
+    assertContains(html, 'pt-evid-origin-ai">LLM');
     assertContains(html, 'human snippet');
     assertContains(html, 'ai snippet');
 });
-test('evidenceListHtml defaults a Beleg without origin to human (legacy records)', function() {
+test('evidenceListHtml defaults a legacy Beleg without provenance to the paper layer', function() {
     var html = T.evidenceListHtml({ Fairness: [{ term: 'x', snippet: 'legacy snippet' }] }, true);
-    assertContains(html, 'pt-evid-origin-human">Mensch');
+    assertContains(html, 'pt-evid-origin-human">Paper');
     assertNotContains(html, 'pt-evid-origin-ai');
 });
-test('evidenceListHtml renders both origins through the same neutral marker class', function() {
-    var ev = {
-        Gender: [{ term: 'h', snippet: 's1', origin: 'human' }],
-        Prompting: [{ term: 'a', snippet: 's2', origin: 'ai' }]
-    };
-    var html = T.evidenceListHtml(ev, true);
-    // both Belege carry the shared base class; only the identity modifier differs (no better/worse)
-    assertEqual(html.split('class="pt-evid-origin ').length - 1, 2, 'both Belege share the pt-evid-origin marker');
-});
-
 // ============================================================
 // M3: reading-column layer split and binding separation (ADR-016)
 // ============================================================
@@ -503,31 +634,34 @@ test('splitDocLayers returns no AI layer when the doc has no Kernbefund (abstrac
     assertEqual(L.ai, '');
     assertContains(L.paper, 'only an abstract');
 });
-test('a human-origin Beleg sets the binding category, an AI-origin Beleg does not', function() {
+test('a paper Beleg starts at teilweise, an LLM-distillate Beleg leaves the category unset', function() {
     var tc = T.TECH_CATS[0], sc = T.SOCIAL_CATS[0];
     T.resetWork({ id: 'm3Paper' });
     T.pinEvidence(tc, 'tech term', 'tech snippet', 'human');
-    assertEqual(T.getWork().cats[tc], 2, 'paper-sourced Beleg sets the binding category');
+    assertEqual(T.getWork().cats[tc], 1, 'paper evidence starts the category at teilweise');
     T.pinEvidence(sc, 'soc term', 'soc snippet', 'ai');
     assert(!T.getWork().cats[sc], 'AI-sourced Beleg leaves the binding category unset');
 });
-test('AI-sourced evidence alone never flips the binding decision to Include', function() {
+test('LLM-distillate evidence never upgrades the binding decision', function() {
     var tc = T.TECH_CATS[0], sc = T.SOCIAL_CATS[0];
     T.resetWork({ id: 'm3Paper2' });
-    T.pinEvidence(tc, 'tech term', 'tech snippet', 'human'); // one technical dimension, human
-    T.pinEvidence(sc, 'soc term', 'soc snippet', 'ai');      // social dimension AI-sourced only
-    assertEqual(T.finalDecisionOf(T.getWork().cats, false), 'Exclude', 'tech human + social AI stays Exclude');
-    T.pinEvidence(sc, 'soc term 2', 'soc snippet 2', 'human'); // now a human social Beleg
-    assertEqual(T.finalDecisionOf(T.getWork().cats, false), 'Include', 'tech + social both human derive Include');
+    T.pinEvidence(tc, 'tech term', 'tech snippet', 'human');
+    T.pinEvidence(sc, 'soc term', 'soc snippet', 'ai');
+    assertEqual(T.finalDecisionOf(T.getWork().cats, false), 'Exclude', 'paper tech + LLM social stays Exclude');
+    T.pinEvidence(sc, 'soc term 2', 'soc snippet 2', 'human');
+    assertEqual(T.finalDecisionOf(T.getWork().cats, false), 'Unclear', 'two paper pins remain partly coded');
+    T.getWork().cats[tc] = 2;
+    T.getWork().cats[sc] = 2;
+    assertEqual(T.finalDecisionOf(T.getWork().cats, false), 'Include', 'Include requires explicit centrality in both dimensions');
 });
-test('an AI-origin Beleg is stored, rendered as KI, and stays advisory', function() {
+test('an LLM-distillate Beleg is stored, labelled, and stays advisory', function() {
     var sc = T.SOCIAL_CATS[0];
     T.resetWork({ id: 'm3Paper3' });
     T.pinEvidence(sc, 'ai soc', 'ai social snippet', 'ai');
     var w = T.getWork();
     assertEqual(w.evidence[sc][0].origin, 'ai');
     assert(!w.cats[sc], 'AI Beleg does not set the category');
-    assertContains(T.evidenceListHtml(w.evidence, false), 'pt-evid-origin-ai">KI');
+    assertContains(T.evidenceListHtml(w.evidence, false), 'pt-evid-origin-ai">LLM');
 });
 
 // ============================================================
@@ -546,9 +680,6 @@ function runImport(body, existing, overwrite) {
 }
 function reportKinds(res) { return res.report.map(function(it) { return it.kind; }).join('|'); }
 
-test('import bridge test hook is exposed (harness loads prisma-import.js)', function() {
-    assert(IMP && IMP.convert && IMP.parseCsv && IMP.mapHeader, 'window.__PRISMA_IMPORT_TEST__ present');
-});
 test('import: a clean Include row is added with no error-level findings', function() {
     var res = runImport('P1,Nein,Ja,Nein,Nein,Ja,Nein,Nein,Nein,Nein,Nein,Include,');
     assertEqual(res.stats.added, 1);
@@ -556,10 +687,11 @@ test('import: a clean Include row is added with no error-level findings', functi
     assertEqual(res.payload.decisions.P1.decision, 'Include');
     assertEqual(res.report.filter(function(it) { return it.level === 'error'; }).length, 0, 'no error-level findings');
 });
-test('import: an out-of-vocabulary exclusion reason is flagged and preserved verbatim', function() {
+test('import: an out-of-vocabulary exclusion reason fails closed', function() {
     var res = runImport('P2,Nein,Ja,Nein,Nein,Nein,Nein,Nein,Nein,Nein,Nein,Exclude,Other');
     assertContains(reportKinds(res), 'Ausschlussgrund ausserhalb des Vokabulars');
-    assertEqual(res.payload.decisions.P2.reason, 'Other', 'unknown reason preserved verbatim');
+    assertEqual(res.payload.decisions.P2, undefined, 'invalid row is not imported');
+    assertEqual(res.stats.skipped, 1);
 });
 test('import: an empty exclusion reason on Exclude is flagged', function() {
     var res = runImport('P3,Nein,Ja,Nein,Nein,Nein,Nein,Nein,Nein,Nein,Nein,Exclude,');
@@ -573,10 +705,11 @@ test('import: a duplicate Zotero key is reported and the second row skipped', fu
     assertEqual(res.stats.added, 1, 'only the first P4 added');
     assert(res.stats.skipped >= 1, 'the duplicate row is skipped');
 });
-test('import: an Unclear decision is not representable and is skipped', function() {
-    var res = runImport('P5,Nein,Ja,Nein,Nein,Ja,Nein,Nein,Nein,Nein,Nein,Unclear,');
-    assertContains(reportKinds(res), 'Decision Unclear');
-    assertEqual(res.payload.decisions.P5, undefined, 'Unclear row not recorded');
+test('import: an Unclear decision is preserved in reviewer schema 0.3', function() {
+    var res = runImport('P5,Nein,Teilweise,Nein,Nein,Teilweise,Nein,Nein,Nein,Nein,Nein,Unclear,');
+    assertEqual(res.payload.schema, 'femprompt-prisma-reviewer/0.3');
+    assertEqual(res.payload.decisions.P5.decision, 'Unclear');
+    assertEqual(res.stats.added, 1, 'Unclear row recorded');
 });
 test('import: re-importing the same row is idempotent (unchanged, not re-added)', function() {
     var first = runImport('P6,Nein,Ja,Nein,Nein,Ja,Nein,Nein,Nein,Nein,Nein,Include,');
@@ -635,13 +768,13 @@ test('reviewer schema 0.1 to current: a pre-evidence file loads and is written b
     var file = JSON.parse(JSON.stringify(v01));
     S.reviewers.old = file.decisions;                              // load path
     assertEqual(T.humanDecision({ id: 'mg1' }, 'old').decision, 'Include', '0.1 decision loads');
-    assertEqual(T.computeFlow('old').humanScreened, 2, 'both 0.1 decisions counted');
+    assertEqual(T.computeFlow('old').humanScreened, 1, 'legacy Include remains loaded but incomplete until evidence and analysis are added');
     assertEqual(T.evidenceCount(file.decisions.mg1), 0, 'missing evidence map reads as zero, no throw');
     // a legacy Beleg without origin renders as a human pin (ADR-015 backward compatibility)
     var html = T.evidenceListHtml(file.decisions.mg2.evidence, true);
-    assertContains(html, 'pt-evid-origin-human">Mensch');
+    assertContains(html, 'pt-evid-origin-human">Paper');
     assertNotContains(html, 'pt-evid-origin-ai');
-    // re-exporting stamps the current schema, completing the upgrade to 0.2
+    // re-exporting stamps the current schema, completing the upgrade to 0.3
     assertEqual(T.reviewerPayload('old').schema, 'femprompt-prisma-reviewer/0.3');
     delete S.reviewers.old;
 });
@@ -665,7 +798,7 @@ if (window.__SEED_PAPERS__ && window.__SEED_PAPERS__.length) {
 }
 
 // ============================================================
-// Section H: Git provenance (ADR-021): deterministic file, commit message
+// Section H: deterministic reviewer files and explicit reviewer separation
 // ============================================================
 
 test('sortedDecisions orders decision keys for a stable diff', function() {
@@ -682,26 +815,84 @@ test('reviewerFileText sorts decisions by paper id and is body-stable', function
     assertEqual(strip(txt), strip(T.reviewerFileText('rDet')), 'same state serializes identically (modulo timestamp)');
     delete T.getState().reviewers.rDet;
 });
-test('commitMessage summarizes the session counts and exclusion reasons', function() {
-    T.getState().reviewers.rCM = {
-        p1: { decision: 'Include' }, p2: { decision: 'Include' },
-        p3: { decision: 'Exclude', reason: 'Duplicate' }, p4: { decision: 'Exclude', reason: 'Duplicate' }
+test('reviewer key accepts a safe short code and fixes the target path', function() {
+    var S = T.getState();
+    S.reviewer = null;
+    assertEqual(T.selectReviewer('../alice'), false, 'unsafe path-like key refused');
+    assertEqual(S.reviewer, null);
+    assert(T.selectReviewer('cp'), 'short code accepted');
+    assertEqual(S.reviewer, 'cp');
+    assertEqual(T.reviewerPath(S.reviewer), 'docs/data/screening/cp.json');
+});
+test('reviewer keys are case-folded so Windows cannot address one file as two tracks', function() {
+    var S = T.getState();
+    S.reviewers = {};
+    assert(T.selectReviewer('CP'), 'uppercase input accepted');
+    assertEqual(S.reviewer, 'cp', 'stored key is canonical lowercase');
+    assertEqual(T.reviewerPath(S.reviewer), 'docs/data/screening/cp.json');
+    assert(T.selectReviewer('cp'), 'lowercase input accepted');
+    assertEqual(Object.keys(S.reviewers).join(','), 'cp', 'only one reviewer track exists');
+});
+
+test('commit is refused until a reviewer role has been explicitly selected', function() {
+    T.setPapers([{ id: 'needs-reviewer', title: 'X' }]);
+    var S = T.getState();
+    S.reviewer = null; S.index = 0;
+    T.resetWork({ id: 'needs-reviewer' });
+    T.getWork().cats = { Prompting: 2, Gender: 2 };
+    T.commit();
+    assertEqual(S.reviewers.null, undefined, 'no accidental null reviewer track');
+    assertEqual(T.saveStatus().kind, 'needs-reviewer');
+});
+
+test('commit is refused until the local screening folder is connected', function() {
+    T.setPapers([{ id: 'needs-folder', title: 'X' }]);
+    var S = T.getState();
+    S.reviewer = 'cp'; S.index = 0; S.reviewers.cp = {};
+    T.resetWork({ id: 'needs-folder' });
+    T.setScreeningHandle(null);
+    T.commit();
+    assertEqual(S.reviewers.cp['needs-folder'], undefined, 'no browser-only decision is created');
+    assertEqual(T.saveStatus().kind, 'local');
+    T.setScreeningHandle(TEST_SCREENING_HANDLE);
+});
+
+test('payload import targets the selected key and cannot overwrite another reviewer', function() {
+    var S = T.getState();
+    S.reviewers = {
+        cp: { own: { decision: 'Include', reviewer: 'cp' } },
+        ms: { old: { decision: 'Exclude', reviewer: 'ms' } }
     };
-    const prevReviewer = T.getState().reviewer;
-    T.getState().reviewer = 'rCM';
-    const msg = T.commitMessage();
-    assertContains(msg, '4 Paper bewertet (2 Include, 2 Exclude)');
-    assertContains(msg, 'Reviewer-Datei: rCM.json');
-    assertContains(msg, 'Duplicate 2');
-    delete T.getState().reviewers.rCM;
-    T.getState().reviewer = prevReviewer;
+    T.selectReviewer('ms');
+    var mislabeled = { schema: 'femprompt-prisma-reviewer/0.3', reviewer: 'cp', decisions: {
+        imported: { decision: 'Unclear', categories: {}, reviewer: 'cp' }
+    } };
+    var blocked = T.importReviewerPayload(mislabeled, 'ms', false);
+    assertEqual(blocked.reason, 'occupied', 'replacement needs an explicit confirmation');
+    var done = T.importReviewerPayload(mislabeled, 'ms', true);
+    assert(done.ok, 'confirmed import succeeds');
+    assert(S.reviewers.cp.own, 'cp remains untouched');
+    assertEqual(S.reviewers.ms.imported.reviewer, 'ms', 'record normalized to selected key');
+    assertEqual(S.reviewers.ms.imported.decision, 'Unclear', 'Unclear survives payload import');
+});
+
+test('backup validation requires schema 0.1-0.3, known paper ids and valid decisions', function() {
+    T.setPapers([{ id: 'known' }]);
+    assert(!T.validateReviewerPayload({ decisions: {} }).ok, 'missing schema refused');
+    assert(!T.validateReviewerPayload({ schema: 'other/1', decisions: {} }).ok, 'foreign schema refused');
+    assert(!T.validateReviewerPayload({ schema: 'femprompt-prisma-reviewer/0.3', decisions: { unknown: { decision: 'Include' } } }).ok,
+        'unknown paper id refused');
+    assert(!T.validateReviewerPayload({ schema: 'femprompt-prisma-reviewer/0.3', decisions: { known: { decision: 'Maybe' } } }).ok,
+        'unknown decision refused');
+    assert(T.validateReviewerPayload({ schema: 'femprompt-prisma-reviewer/0.2', decisions: { known: { decision: 'Unclear' } } }).ok,
+        'backward-compatible schema and Unclear accepted');
 });
 
 // ============================================================
 // Section I: accessibility (Cut 3) and screenable entry (O4)
 // ============================================================
 
-test('chipHtml exposes the three-level state as the accessible name and keeps slug/definition decorative', function() {
+test('chipHtml exposes state and a separately focusable definition control', function() {
     var ja = T.chipHtml('AI_Literacies', true, false);
     assertContains(ja, ', ja"');
     assertContains(ja, 'data-level="2"');
@@ -711,10 +902,11 @@ test('chipHtml exposes the three-level state as the accessible name and keeps sl
     var teil = T.chipHtml('AI_Literacies', 1, false);
     assertContains(teil, ', teilweise"');
     assertContains(teil, 'data-level="1"');
-    // the checkbox stays decorative; the definition reaches AT via the described-by tip,
-    // not a native title (which had doubled the styled tip)
+    // category change and definition are separate keyboard targets
     assertContains(nein, 'class="pt-chip-box" aria-hidden="true"');
-    assertContains(nein, 'aria-describedby="pt-chip-tip-AI_Literacies"');
+    assertContains(nein, 'class="pt-info-btn pt-chip-info"');
+    assertContains(nein, 'aria-controls="pt-chip-tip-AI_Literacies"');
+    assertContains(nein, 'aria-expanded="false"');
     assert(nein.indexOf('title="') === -1, 'no native title on the chip');
 });
 
@@ -735,19 +927,34 @@ test('corpusListHtml hides the colour dot from AT and gives the status a text eq
     T.getState().reviewer = prevRev;
 });
 
-test('firstEntryIndex skips a boilerplate first paper and opens on a screenable one (O4)', function() {
+test('firstEntryIndex ignores the LLM reference layer and opens on a usable Paper layer (O4)', function() {
     T.setPapers([
         { id: 'b1', abstract: 'Founded in 1920, the NBER is a private, non-profit, non-partisan organization.' },
-        { id: 'g1', knowledge_doc: 'data/x.md', abstract: '' }
+        { id: 'g1', knowledge_doc: 'data/x.md', abstract: 'This original metadata abstract provides enough substantive paper text for an evidence-grounded screening decision and an independent methodological assessment.' }
     ]);
     assert(!T.isScreenable({ id: 'b1', abstract: 'Founded in 1920, the NBER is a private, non-profit, non-partisan organization.' }), 'NBER boilerplate is not screenable');
-    assert(T.isScreenable({ id: 'g1', knowledge_doc: 'data/x.md' }), 'a paper with a knowledge document is screenable');
+    assert(!T.isScreenable({ id: 'ai-only', knowledge_doc: 'data/x.md', abstract: '' }), 'an LLM distillate alone is not a Paper layer');
+    assert(T.isScreenable({ id: 'g1', abstract: 'This original metadata abstract provides enough substantive paper text for an evidence-grounded screening decision and an independent methodological assessment.' }), 'a substantive abstract is screenable');
     var prevRev = T.getState().reviewer;
     T.getState().reviewer = 'rFE'; T.getState().reviewers.rFE = {};
     assertEqual(T.firstEntryIndex(), 1, 'lands on the screenable paper, not the boilerplate');
     T.getState().reviewers.rFE = { g1: { decision: 'Include' } };
     assertEqual(T.firstEntryIndex(), 1, 'falls back to the only screenable paper when it is already decided');
     delete T.getState().reviewers.rFE;
+    T.getState().reviewer = prevRev;
+});
+
+test('paper query selects a known paper and falls back normally for an unknown id', function() {
+    T.setPapers([
+        { id: 'boilerplate', abstract: 'Founded in 1920, the NBER is a private, non-profit, non-partisan organization.' },
+        { id: 'direct-paper', knowledge_doc: 'data/direct.md', abstract: '' }
+    ]);
+    var prevRev = T.getState().reviewer;
+    T.getState().reviewer = 'rDirect'; T.getState().reviewers.rDirect = {};
+    assertEqual(T.startIndexForPaper('direct-paper'), 1, 'known paper id selects its exact index');
+    assertEqual(T.startIndexForPaper('missing-paper'), T.firstEntryIndex(), 'unknown paper id uses the normal fallback');
+    assertEqual(T.startIndexForPaper(null), T.firstEntryIndex(), 'missing paper query uses the normal fallback');
+    delete T.getState().reviewers.rDirect;
     T.getState().reviewer = prevRev;
 });
 
@@ -769,15 +976,6 @@ test('editRecord rehydrates work and keeps the committed decision until re-commi
     T.getState().reviewer = prevRev;
 });
 
-test('finalDecisionOf: override flips the derived decision in both directions (O2, ADR-023)', function() {
-    var inc = { AI_Literacies: true, Soziale_Arbeit: true }; // >=1 Gegenstand AND >=1 Perspektive
-    assertEqual(T.finalDecisionOf(inc, false), 'Include');
-    assertEqual(T.finalDecisionOf(inc, true), 'Exclude', 'override flips Include to Exclude');
-    var exc = { AI_Literacies: true }; // only one group -> derived Exclude
-    assertEqual(T.finalDecisionOf(exc, false), 'Exclude');
-    assertEqual(T.finalDecisionOf(exc, true), 'Include', 'override flips Exclude to Include');
-});
-
 test('commit records the trimmed override justification on an override to Include (O2)', function() {
     T.setPapers([{ id: 'pO2', title: 'X', knowledge_doc: 'd.md' }]);
     var prevRev = T.getState().reviewer;
@@ -785,6 +983,9 @@ test('commit records the trimmed override justification on an override to Includ
     T.resetWork({ id: 'pO2' });
     var w = T.getWork();
     w.cats = { AI_Literacies: true }; w.override = true; w.overrideReason = '  relevant trotz duennem Text  ';
+    addHumanEvidence(w, ['AI_Literacies']);
+    T.setTextSource('abstract');
+    w.analysis = completeAnalysis('abstract');
     T.commit();
     var rec = T.getState().reviewers.rO2.pO2;
     assert(!!rec, 'a decision was committed');
@@ -802,6 +1003,7 @@ test('commit is blocked on an override to Include without a justification (O2 ga
     T.resetWork({ id: 'pO2b' });
     var w = T.getWork();
     w.cats = { AI_Literacies: true }; w.override = true; w.overrideReason = '';
+    addHumanEvidence(w, ['AI_Literacies']);
     T.commit();
     assert(!T.getState().reviewers.rO2b.pO2b, 'no decision committed without a justification');
     delete T.getState().reviewers.rO2b;
@@ -822,6 +1024,40 @@ function mountAssessCol() {
     host.innerHTML = '';
     return host;
 }
+
+test('unsaved assessment hides Seed and automatic classification and renders a sticky action dock', function() {
+    mountAssessCol();
+    var p = { id: 'pBlind', title: 'X', human: { decision: 'Include', all_categories: {} },
+        llm: { decision: 'Exclude', all_categories: {}, reasoning: 'prior rationale' } };
+    T.setPapers([p]);
+    T.getState().reviewer = 'rBlind'; T.getState().reviewers.rBlind = {}; T.getState().index = 0;
+    T.resetWork(p); T.refreshAssess();
+    var html = document.getElementById('pt-assess-col').innerHTML;
+    assertNotContains(html, 'Frühere Expert:innen-Referenz');
+    assertNotContains(html, 'prior rationale');
+    assertContains(html, 'pt-action-dock');
+    assertContains(html, 'data-info-target="pt-evid-help"', 'evidence help is an accessible button popover');
+    assertNotContains(html, 'Text markieren und als Beleg', 'static reading instruction is absent from the assessment');
+});
+
+test('saved assessment offers prior references only in a collapsed comparison', function() {
+    mountAssessCol();
+    var p = { id: 'pCompare', title: 'X', human: { decision: 'Include', all_categories: {} },
+        llm: { decision: 'Exclude', all_categories: {}, reasoning: 'prior rationale' } };
+    T.setPapers([p]); T.getState().reviewer = 'rCompare'; T.getState().reviewers.rCompare = {}; T.getState().index = 0;
+    T.getState().reviewers.rCompare.pCompare = { decision: 'Exclude', categories: {}, evidence: {}, reason: 'Duplicate' };
+    T.refreshAssess();
+    var comparison = document.querySelector('#pt-assess-col .pt-reference-comparison');
+    assert(comparison && !comparison.open, 'comparison is present and collapsed');
+    assertNotContains(comparison.innerHTML, 'Frühere Expert:innen-Referenz');
+    assertNotContains(comparison.innerHTML, 'Frühere automatische Klassifikation');
+    assertNotContains(comparison.innerHTML, 'prior rationale');
+    comparison.open = true;
+    comparison.dispatchEvent(new Event('toggle'));
+    assertContains(comparison.innerHTML, 'Frühere Expert:innen-Referenz');
+    assertContains(comparison.innerHTML, 'Frühere automatische Klassifikation');
+    assertContains(comparison.innerHTML, 'prior rationale');
+});
 
 test('a chip click cycles nein/teilweise/ja and re-renders the derived decision (ADR-024)', function() {
     mountAssessCol();
@@ -898,6 +1134,21 @@ if (window.__ANALYSIS_FIELDS__ && T.setAnalysisFields) {
     T.setAnalysisFields(window.__ANALYSIS_FIELDS__);
 }
 
+function completeAnalysis(source) {
+    var fields = {
+        Studientyp: 'Empirisch',
+        AN_Prompting_Role: ['None'],
+        AN_Prompt_Techniques: ['None'],
+        AN_Bias_Axes: ['None'],
+        AN_Mitigation_Stage: ['None'],
+        AN_Mitigation_Status: 'None',
+        AN_Population: ['Not_SW_Specific'],
+        AN_Coding_Basis: T.expectedCodingBasis(source)
+    };
+    if (source === 'raw') fields.AN_Harm_Types = ['None'];
+    return { fields: fields, undecidable: {} };
+}
+
 test('analysis vocabulary loaded from the built categories.yaml source (v1.3)', function() {
     assert(window.__ANALYSIS_FIELDS__, 'the runner injected docs/data/analysis_fields.json');
     assertEqual(T.anVersion(), '1.3', 'the frozen analysis_fields version');
@@ -953,6 +1204,28 @@ test('sanitizeAnalysis drops any value outside the frozen vocabulary', function(
     assert(clean.undecidable.AN_Bias_Axes === true, 'undecidable toggle on a known field kept');
     assert(!('AN_Not_A_Field' in clean.undecidable), 'undecidable toggle on an unknown field dropped');
 });
+test('sanitizeAnalysis prevents None/code coexistence and lets nicht entscheidbar replace codes', function() {
+    var clean = T.sanitizeAnalysis({
+        fields: { AN_Bias_Axes: ['None', 'Gender'], AN_Mitigation_Status: 'Evaluated' },
+        undecidable: { AN_Mitigation_Status: true }
+    });
+    assertEqual(clean.fields.AN_Bias_Axes.join('|'), 'Gender', 'substantive code excludes None');
+    assert(!('AN_Mitigation_Status' in clean.fields), 'undecidable removes the prior substantive code');
+    assert(clean.undecidable.AN_Mitigation_Status, 'undecidable marker remains');
+});
+test('text_source fixes AN_Coding_Basis and Fulltext makes AN_Harm_Types a completion gate', function() {
+    var a = completeAnalysis('raw');
+    a.fields.AN_Coding_Basis = 'Abstract';
+    delete a.fields.AN_Harm_Types;
+    var rec = { decision: 'Include', text_source: 'raw', analysis: a, categories: {}, evidence: {} };
+    var clean = T.sanitizeAnalysis(a, 'raw');
+    assertEqual(clean.fields.AN_Coding_Basis, 'Fulltext', 'stored basis follows the actual text source');
+    var req = T.analysisRequirements(rec);
+    assert(!req.ok && req.missing.indexOf('AN_Harm_Types') !== -1, 'Fulltext needs Harm_Types');
+    rec.analysis = clean;
+    rec.analysis.undecidable.AN_Harm_Types = true;
+    assert(T.analysisRequirements(rec).ok, 'explicitly undecidable satisfies the field gate');
+});
 
 test('setAnalysis on a paper stores only sanitized values (no code path writes outside the vocabulary)', function() {
     T.setPapers([{ id: 'anP1', title: 'X' }]);
@@ -985,14 +1258,15 @@ test('nicht-entscheidbar exports as an AN_Notes line "Feld: nicht entscheidbar a
     assertContains(noBasis, 'AN_Bias_Axes: nicht entscheidbar aus unbekannt');
 });
 
-test('harmTypesHint fires only when the basis is Fulltext and Harm_Types is empty (B.1 point 3, soft)', function() {
+test('harmTypesHint fires only while the Fulltext Harm_Types gate is unresolved', function() {
     assert(T.harmTypesHint({ fields: { AN_Coding_Basis: 'Fulltext', AN_Harm_Types: [] } }),
         'Fulltext basis with empty Harm_Types shows a hint');
     assert(!T.harmTypesHint({ fields: { AN_Coding_Basis: 'Fulltext', AN_Harm_Types: ['Stereotyping'] } }),
         'a filled Harm_Types clears the hint');
     assert(!T.harmTypesHint({ fields: { AN_Coding_Basis: 'Abstract', AN_Harm_Types: [] } }),
         'no hint when the basis is not Fulltext (the field stays optional there)');
-    // the hint is advisory only: an Include with an empty Harm_Types is never blocked
+    assert(!T.harmTypesHint({ fields: { AN_Coding_Basis: 'Fulltext' }, undecidable: { AN_Harm_Types: true } }),
+        'explicitly undecidable resolves the gate');
     assert(!T.harmTypesHint({ fields: {} }), 'no hint without a coding basis');
 });
 
@@ -1087,15 +1361,14 @@ test('analysis export: multi-select values are semicolon-separated, undecidable 
     T.setPapers([{ id: 'exP1', title: 'Paper, with comma', zotero_key: 'ZK1', author_year: 'A 2025' }]);
     var prevRev = T.getState().reviewer;
     T.getState().reviewer = 'rEX'; T.getState().reviewers.rEX = {};
+    var exAnalysis = completeAnalysis('abstract');
+    exAnalysis.fields.AN_Prompting_Role = ['Recommended_Practice', 'Learning_Content'];
+    exAnalysis.fields.AN_Notes = 'a note';
+    exAnalysis.undecidable.AN_Harm_Types = true;
     T.curDec().exP1 = {
         decision: 'Include', categories: { Prompting: true, Gender: true },
-        analysis: T.sanitizeAnalysis({
-            fields: {
-                AN_Prompting_Role: ['Recommended_Practice', 'Learning_Content'],
-                AN_Coding_Basis: 'Abstract', AN_Notes: 'a note'
-            },
-            undecidable: { AN_Harm_Types: true }
-        })
+        evidence: { Prompting: [{ term: 'p', snippet: 'p', origin: 'human' }], Gender: [{ term: 'g', snippet: 'g', origin: 'human' }] },
+        text_source: 'abstract', analysis: T.sanitizeAnalysis(exAnalysis, 'abstract')
     };
     var csv = T.analysisCsv('rEX');
     // the AN_Notes cell may carry newlines (base note + undecidable lines), a valid
@@ -1122,8 +1395,12 @@ test('edit and re-commit preserves the analysis codes of an Include record; a ch
     T.getState().reviewer = 'rCYC'; T.getState().reviewers.rCYC = {}; T.getState().index = 0;
     T.resetWork({ id: 'cyc1' });
     T.getWork().cats = { Prompting: true, Gender: true };
+    addHumanEvidence(T.getWork(), ['Prompting', 'Gender']);
+    var cycAnalysis = completeAnalysis('abstract');
+    cycAnalysis.fields.AN_Population = ['Mental_Health']; cycAnalysis.undecidable.AN_Harm_Types = true;
+    T.setTextSource('abstract');
+    T.getWork().analysis = cycAnalysis;
     T.commit();
-    T.setAnalysis('cyc1', { fields: { AN_Population: ['Mental_Health'], AN_Coding_Basis: 'Abstract' }, undecidable: { AN_Harm_Types: true } });
     assert(T.curDec().cyc1.analysis, 'analysis captured on the committed Include');
     // Ueberarbeiten + erneut erfassen, unchanged decision: the codes must survive the cycle
     T.getState().index = 0;
@@ -1164,8 +1441,10 @@ test('Studientyp: closed single select from study_types, persisted, exported (re
     T.setPapers([{ id: 'stP1', title: 'T', zotero_key: 'ZKST' }]);
     var prevRev = T.getState().reviewer;
     T.getState().reviewer = 'rST'; T.getState().reviewers.rST = {};
-    T.curDec().stP1 = { decision: 'Include', categories: { Prompting: true, Gender: true } };
-    T.setAnalysis('stP1', { fields: { Studientyp: 'Konzept', AN_Coding_Basis: 'Abstract' }, undecidable: {} });
+    T.curDec().stP1 = { decision: 'Include', categories: { Prompting: true, Gender: true },
+        evidence: { Prompting: [{ term: 'p', snippet: 'p', origin: 'human' }], Gender: [{ term: 'g', snippet: 'g', origin: 'human' }] }, text_source: 'abstract' };
+    var stAnalysis = completeAnalysis('abstract'); stAnalysis.fields.Studientyp = 'Konzept';
+    T.setAnalysis('stP1', stAnalysis);
     assertEqual(T.curDec().stP1.analysis.fields.Studientyp, 'Konzept', 'Studientyp survives persistence');
     assertContains(T.analysisCsv('rST'), ',Konzept,Include,', 'Studientyp cell filled in the export row');
     delete T.getState().reviewers.rST;
@@ -1232,6 +1511,8 @@ test('commit records text_source of the shown text; the file form and schema 0.3
     T.applyReading(T.readToken(), tsFix[0], 'Full text with gendered scripts of care.', null);
     T.getWork().cats.Generative_KI = 2;
     T.getWork().cats.Gender = 2;
+    addHumanEvidence(T.getWork(), ['Generative_KI', 'Gender']);
+    T.getWork().analysis = completeAnalysis('raw');
     T.commit();
     var rec = T.curDec().ts1;
     assert(rec, 'record exists');
@@ -1244,6 +1525,7 @@ test('commit records text_source of the shown text; the file form and schema 0.3
     T.loadReadingInto(tsFix[1]);
     T.applyReading(T.readToken(), tsFix[1], null, null);
     T.getWork().cats.KI_Sonstige = 2;
+    addHumanEvidence(T.getWork(), ['KI_Sonstige']);
     T.getWork().reason = 'Not_relevant_topic';
     T.commit();
     assertEqual(T.curDec().ts2.text_source, 'abstract');
@@ -1260,6 +1542,8 @@ test('commit waits for the reading: refused while the load is pending, recorded 
     assert(T.readingPending(), 'pending after load start');
     T.getWork().cats.Generative_KI = 2;
     T.getWork().cats.Gender = 2;
+    addHumanEvidence(T.getWork(), ['Generative_KI', 'Gender']);
+    T.getWork().analysis = completeAnalysis('raw');
     T.commit();
     assertEqual(T.curDec().ts1, undefined, 'no record while the text is pending');
     T.applyReading(T.readToken(), tsFix[0], 'Full text.', null);

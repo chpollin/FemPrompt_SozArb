@@ -1,0 +1,26 @@
+{
+  "meta": { "pilot": true },
+  "papers": {
+    "PILOT-A": {
+      "t": "Pilot paper A: generative models in social work education",
+      "ay": "Pilot et al. (2026)",
+      "src": "raw",
+      "n": 1,
+      "x": "pilot paper a generative models in social work education gendered scripts"
+    },
+    "PILOT-B": {
+      "t": "Pilot paper B: recommender systems overview",
+      "ay": "Probe (2025)",
+      "src": "abstract",
+      "n": 1,
+      "x": "pilot paper b recommender systems overview classification pipelines"
+    },
+    "AIGLDZ4C": {
+      "t": "Pilot webpage source metadata case",
+      "ay": "Articulate (2025)",
+      "src": "raw",
+      "n": 1,
+      "x": "pilot webpage source metadata case leading url-only metadata"
+    }
+  }
+}

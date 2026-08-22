@@ -1,18 +1,29 @@
-# Manual checklist: the paths no driver can take
+# Manual checklist for native browser permissions
 
-What only a person in a real browser can verify. The counterpart to the committed harness (`tests/`), the replay self-test (`src/replay/`), and the supported-browser pilot (`tests/pilot/README.md`), which already covers cold load, screening, reload, export, import, the commit gate and the out-of-order load. The File System Access path needs the browser's native folder picker and its permission dialogs, which no automation reaches. Run it in Chromium (Chrome or Edge) on a local clone served from the repository (for example `python -m http.server` in `docs/`). Record date, browser and outcome per item in `knowledge/journal.md`; a failed item keeps the work open.
+The automated browser pilot covers the editor workflow with a faithful directory-handle replacement. This checklist is limited to behaviour owned by the browser's native folder picker and permission store. Run it in Chrome or Edge against a local repository clone. Record the date, browser, and result in `knowledge/journal.md`.
 
-## File System Access
+## First connection
 
-1. Connect to the repository root: open the `Daten & Sync` panel, choose `Mit Projektordner verbinden` and pick the **repository root** of the clone. Expected: the status line reads `verbunden (Repo-Wurzel), schreibt <reviewer>.json`, and `docs/data/screening/` is used even if it did not exist before.
-2. Connect to the screening folder: repeat, picking `docs/data/screening/` directly. Expected: the status line reads `verbunden (Screening-Ordner)`, and writing still works. This is the pre-existing target and stays supported.
-3. Load: reviewer files already in the folder appear as additional tracks (a second reviewer's decisions become visible after `Reviewer-Dateien neu laden`); a file on disk wins over the localStorage cache.
-4. Write: screen one paper and commit. `<reviewer>.json` in the folder changes, decisions sorted by paper id, schema `femprompt-prisma-reviewer/0.3`, and the record carries `text_source`.
-5. Rapid commits: screen three papers in quick succession. The file holds all three decisions, because the write chain serializes overlapping writes.
-6. Reconnect and persistence: reload the page, choose `Erneut verbinden`, grant permission. Then close the browser entirely, reopen and reconnect. Expected: the stored handle is offered again, a permission re-prompt is acceptable, and the folder state is loaded.
-7. Denied permission: refuse the permission dialog once. Expected: the tool says so, the status line stops claiming a connection, and the session survives in the localStorage cache with the export path available.
-8. Unsupported browser (Firefox or Safari): the panel offers export and import only. Expected: the round trip through export, session clear and import works there as it does in the pilot.
+1. Open PRISM with a fresh browser profile. Enter a mixed-case key such as `CP`. Expected result: PRISM shows the canonical target `docs/data/screening/cp.json` and keeps the disk icon disabled.
+2. Choose the repository root through `Arbeitsordner wählen`. Expected result: the browser asks for write access once, PRISM resolves or creates `docs/data/screening/`, and the disk icon becomes available when the paper-level gates are complete.
+3. Repeat with `docs/data/screening/` selected directly. Expected result: the same reviewer file is targeted.
 
-## Git round trip
+## Permission persistence
 
-9. Commit the reviewer file with the message from the commit-message generator, push, pull in a second clone and reconnect there. Expected: the aggregated state (flow, disclosure) reflects both reviewer files, and `git blame` attributes each decision block to its author.
+1. Reload the page after a successful connection. Expected result: the saved handle is recognised. A browser permission prompt may require one confirmation.
+2. Close and reopen the browser. Expected result: PRISM either reconnects automatically with an existing grant or offers one `Arbeitsordner freigeben` action. The selected key and browser recovery copy remain available.
+3. Deny the permission request. Expected result: no repository file is changed, the disk icon remains unavailable, and the status explains that write permission is missing.
+
+## Physical write
+
+1. Complete one paper and press the disk icon beside the paper position. Expected result: the status advances to the saved state and `docs/data/screening/<key>.json` contains the paper with schema 0.3, `text_source`, evidence, and deterministic paper ordering.
+2. Save several papers in quick succession. Expected result: every decision appears in the final file. No earlier decision disappears.
+3. Revoke write permission and save again. Expected result: the interface reports the write error and the browser recovery copy retains the changed decision.
+4. Restore permission and save once more. Expected result: the following save succeeds and updates the reviewer file.
+
+## Existing files
+
+1. Place a valid lowercase reviewer file in `docs/data/screening/` before connecting. Expected result: PRISM loads its decisions and preserves its reviewer key.
+2. Place a malformed JSON file in a disposable test clone. Expected result: PRISM reports the file as unreadable, preserves the browser copy, and blocks every write to that reviewer key. The automated pilot verifies the fail-closed state; this manual item confirms only its behaviour through the native folder permission path.
+
+Two simultaneously open tabs with the same reviewer key remain outside the supported workflow. Use one PRISM tab per reviewer to avoid last-write-wins conflicts between browser processes.

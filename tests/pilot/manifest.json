@@ -1,32 +1,45 @@
 {
   "schema": "femprompt-prisma-pilot/0.1",
-  "pinned": "2026-08-21",
+  "pinned": "2026-08-22",
   "papers": [
     {
       "id": "PILOT-A",
       "expected_text_source": "raw",
+      "has_ai_layer": true,
       "search_term": "gendered scripts",
       "pin_category": "Gender"
     },
     {
       "id": "PILOT-B",
       "expected_text_source": "abstract",
+      "expected_doi": "10.5555/femprompt.second",
+      "search_term": null,
+      "pin_category": null
+    },
+    {
+      "id": "AIGLDZ4C",
+      "expected_text_source": "raw",
+      "expected_source_url": "https://example.org/femprompt-source",
+      "expected_author": "Articulate",
       "search_term": null,
       "pin_category": null
     }
   ],
   "reviewers": {
-    "r1": {
+    "cp": {
       "PILOT-A": { "categories": { "Generative_KI": 2, "Soziale_Arbeit": 2, "Gender": 2 }, "expected_decision": "Include" },
-      "PILOT-B": { "categories": { "KI_Sonstige": 2 }, "reason": "Not_relevant_topic", "expected_decision": "Exclude" }
+      "PILOT-B": { "categories": { "KI_Sonstige": 2 }, "reason": "Not_relevant_topic", "expected_decision": "Exclude" },
+      "AIGLDZ4C": { "categories": { "KI_Sonstige": 2 }, "reason": "Not_relevant_topic", "expected_decision": "Exclude" }
     },
-    "r2": {
+    "ms": {
       "PILOT-A": { "categories": { "Generative_KI": 2, "Soziale_Arbeit": 2, "Gender": 2 }, "expected_decision": "Include" },
-      "PILOT-B": { "categories": { "KI_Sonstige": 2, "Soziale_Arbeit": 2 }, "expected_decision": "Include" }
+      "PILOT-B": { "categories": { "KI_Sonstige": 2, "Soziale_Arbeit": 2 }, "expected_decision": "Include" },
+      "AIGLDZ4C": { "categories": { "KI_Sonstige": 2 }, "reason": "Not_relevant_topic", "expected_decision": "Exclude" }
     }
   },
   "expected_reconciliation": {
     "PILOT-A": "agree",
-    "PILOT-B": "divergent"
+    "PILOT-B": "divergent",
+    "AIGLDZ4C": "agree"
   }
 }

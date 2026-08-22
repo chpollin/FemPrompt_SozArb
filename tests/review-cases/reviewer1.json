@@ -1,0 +1,100 @@
+{
+  "schema": "femprompt-prisma-reviewer/0.3",
+  "reviewer": "reviewer1",
+  "updated": "2026-08-22T12:00:00.000Z",
+  "decisions": {
+    "VICS443I": {
+      "categories": {
+        "AI_Literacies": 2,
+        "Bias_Ungleichheit": 2,
+        "Diversitaet": 1,
+        "Fairness": 1,
+        "Generative_KI": 2,
+        "Prompting": 1,
+        "Soziale_Arbeit": 2
+      },
+      "decision": "Exclude",
+      "override": true,
+      "reason": "Wrong_publication_type",
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          { "term": "learn and teach", "snippet": "We believe it is unethical for social workers not to learn and teach about technology-mediated social work.", "ts": "2026-08-22T12:00:00.000Z", "origin": "human" }
+        ],
+        "Bias_Ungleichheit": [
+          { "term": "bias and discrimination", "snippet": "ChatGPT could perpetuate bias and discrimination", "ts": "2026-08-22T12:00:00.000Z", "origin": "human" }
+        ],
+        "Diversitaet": [
+          { "term": "historically been excluded", "snippet": "those who have historically been excluded from technological advances", "ts": "2026-08-22T12:00:00.000Z", "origin": "human" }
+        ],
+        "Fairness": [
+          { "term": "openness, fairness", "snippet": "it is crucial to use openness, fairness, and provide context", "ts": "2026-08-22T12:00:00.000Z", "origin": "human" }
+        ],
+        "Generative_KI": [
+          { "term": "language model", "snippet": "One example of an NLP-based AI system is ChatGPT, a language model developed by OpenAI.", "ts": "2026-08-22T12:00:00.000Z", "origin": "human" }
+        ],
+        "Prompting": [
+          { "term": "prompts", "snippet": "ChatGPT can create outlines based on informational prompts.", "ts": "2026-08-22T12:00:00.000Z", "origin": "human" }
+        ],
+        "Soziale_Arbeit": [
+          { "term": "social workers must", "snippet": "social workers must play a pivotal role in helping AI developers understand", "ts": "2026-08-22T12:00:00.000Z", "origin": "human" }
+        ]
+      },
+      "ts": "2026-08-22T12:00:00.000Z",
+      "reviewer": "reviewer1",
+      "text_source": "raw"
+    },
+    "Y6M97SWQ": {
+      "categories": {
+        "AI_Literacies": 2,
+        "Bias_Ungleichheit": 2,
+        "Diversitaet": 1,
+        "Fairness": 2,
+        "KI_Sonstige": 2,
+        "Soziale_Arbeit": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          { "term": "algorithm literacy", "snippet": "enhance algorithm literacy and support social workers in correctly interpreting the output of the model", "ts": "2026-08-22T12:00:00.000Z", "origin": "human" }
+        ],
+        "Bias_Ungleichheit": [
+          { "term": "historical bias", "snippet": "historical bias embedded in administrative records", "ts": "2026-08-22T12:00:00.000Z", "origin": "human" }
+        ],
+        "Diversitaet": [
+          { "term": "race and socioeconomic status", "snippet": "race and socioeconomic status", "ts": "2026-08-22T12:00:00.000Z", "origin": "human" }
+        ],
+        "Fairness": [
+          { "term": "fairness and bias", "snippet": "Nearly all studies examined fairness and bias across subgroups or included ethical reviews.", "ts": "2026-08-22T12:00:00.000Z", "origin": "human" }
+        ],
+        "KI_Sonstige": [
+          { "term": "decision-making tools", "snippet": "algorithmic-assisted decision-making tools in CW", "ts": "2026-08-22T12:00:00.000Z", "origin": "human" }
+        ],
+        "Soziale_Arbeit": [
+          { "term": "social workers", "snippet": "support social workers in correctly interpreting the output of the model", "ts": "2026-08-22T12:00:00.000Z", "origin": "human" }
+        ]
+      },
+      "analysis": {
+        "fields": {
+          "Studientyp": "Literaturreview",
+          "AN_Prompting_Role": ["None"],
+          "AN_Prompt_Techniques": ["None"],
+          "AN_Bias_Axes": ["Race_Ethnicity", "Socioeconomic"],
+          "AN_Harm_Types": ["Disparate_Performance"],
+          "AN_Mitigation_Stage": ["Organisational_Process", "Post_Processing", "Pre_Processing"],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": ["Child_Family_Welfare"],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "Review synthesizes feature selection, model choice, subgroup analysis, threshold adjustment and organisational consultation as fairness measures."
+        },
+        "undecidable": {}
+      },
+      "ts": "2026-08-22T12:00:00.000Z",
+      "reviewer": "reviewer1",
+      "text_source": "raw"
+    }
+  }
+}

@@ -1,4 +1,5 @@
 {
   "PILOT-A": { "src": "clean", "chars": 1234, "source_file": "pilot_a_fixture.md" },
-  "PILOT-B": { "src": "none", "chars": 0 }
+  "PILOT-B": { "src": "none", "chars": 0 },
+  "AIGLDZ4C": { "src": "clean", "chars": 311, "source_file": "aigldz4c_fixture.md" }
 }
