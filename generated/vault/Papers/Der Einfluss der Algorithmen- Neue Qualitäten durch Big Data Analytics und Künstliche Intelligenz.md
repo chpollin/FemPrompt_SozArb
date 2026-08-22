@@ -61,14 +61,6 @@ agreement: disagree
 | Feministisch | Nein | Nein |  |
 | Fairness | Nein | Nein |  |
 
-> Siehe [[Divergenz Schneider_2018_Der_Einfluss_der_Algorithmen_Neue_Qualitäten]] fuer detaillierte Analyse
-
-
-## Key Concepts
-
-- [[Algorithmic Bias in Social Work]]
-- [[Data Literacy in Professional Practice]]
-
 ## Wissensdokument
 
 # Der Einfluss der Algorithmen: Neue Qualitäten durch Big Data Analytics und Künstliche Intelligenz

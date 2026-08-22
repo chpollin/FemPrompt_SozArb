@@ -64,13 +64,6 @@ agreement: disagree
 | Feministisch | Nein | Nein |  |
 | Fairness | Nein | Ja | X |
 
-> Siehe [[Divergenz Latif_2023_AI_Gender_Bias,_Disparities,_and_Fairness_Does]] fuer detaillierte Analyse
-
-
-## Key Concepts
-
-- [[Gender Bias in AI Systems]]
-
 ## Wissensdokument
 
 # AI Gender Bias, Disparities, and Fairness: Does Training Data Matter?

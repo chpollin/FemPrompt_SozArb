@@ -14,6 +14,12 @@ llm_confidence: 0.75
 llm_categories:
   - AI_Literacies
   - KI_Sonstige
+human_decision: Exclude
+human_categories:
+  - AI_Literacies
+  - KI_Sonstige
+  - Bias_Ungleichheit
+agreement: agree
 ---
 
 # Imagination, Algorithms and News: Developing AI Literacy for Journalism
@@ -37,12 +43,7 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Exclude (Confidence: 0.75)
-
-## Key Concepts
-
-- [[AI Literacy]]
-- [[Algorithmic Bias]]
-- [[Algorithmic Fairness]]
+**Human:** Exclude
 
 ## Wissensdokument
 

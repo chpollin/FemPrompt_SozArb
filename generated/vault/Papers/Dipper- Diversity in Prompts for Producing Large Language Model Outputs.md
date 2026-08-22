@@ -20,7 +20,6 @@ human_decision: Include
 human_categories:
   - Generative_KI
   - Prompting
-  - Diversitaet
 agreement: agree
 ---
 
@@ -37,10 +36,6 @@ agreement: agree
 
 **LLM:** Include (Confidence: 0.85)
 **Human:** Include
-
-## Key Concepts
-
-- [[Chain-of-Thought Reasoning]]
 
 ## Wissensdokument
 

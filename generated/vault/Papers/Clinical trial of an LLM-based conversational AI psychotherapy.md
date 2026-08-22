@@ -16,6 +16,10 @@ llm_decision: Exclude
 llm_confidence: 0.95
 llm_categories:
   - Generative_KI
+human_decision: Exclude
+human_categories:
+  - Generative_KI
+agreement: agree
 ---
 
 # Clinical trial of an LLM-based conversational AI psychotherapy
@@ -39,6 +43,7 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Exclude (Confidence: 0.95)
+**Human:** Exclude
 
 ## Wissensdokument
 

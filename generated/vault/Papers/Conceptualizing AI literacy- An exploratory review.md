@@ -21,7 +21,6 @@ human_categories:
   - KI_Sonstige
   - Bias_Ungleichheit
   - Gender
-  - Diversitaet
   - Fairness
 agreement: agree
 ---
@@ -48,12 +47,6 @@ agreement: agree
 
 **LLM:** Exclude (Confidence: 0.85)
 **Human:** Exclude
-
-## Key Concepts
-
-- [[AI Literacy]]
-- [[Algorithmic Fairness and Transparency]]
-- [[Ethical AI in Education]]
 
 ## Wissensdokument
 

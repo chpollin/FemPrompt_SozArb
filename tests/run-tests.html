@@ -16,21 +16,63 @@
 </style>
 </head>
 <body>
-<h1>PRISM pure-function tests (plan P1, zero-dependency browser runner)</h1>
+<h1>PRISM pure-function tests (plan P1, browser runner)</h1>
 <p class="note">
-Open this file directly over file:// or from any static server; no build step, no framework.
-All fixtures are inline in tests.js. The only network attempt is prisma-data.js trying to load
-the research vault, which fails here and is caught; the tests do not depend on it.
+Open this file from a local static server; no build step or framework is required.
+All fixtures are inline in tests.js. The runner loads the generated category schema,
+analysis vocabulary and seed, then evaluates the production logic without starting the application UI.
 Results render below, into document.title (PASS n/n or FAIL k/n), and into window.__TEST_RESULTS__,
 so a browser agent can read the outcome from the title alone.
 </p>
 <div id="results"></div>
 <!-- hidden stub: prisma-data.js writes its fetch-failure note here instead of throwing -->
 <div id="prisma-root" hidden></div>
-<!-- load order matters: prisma-data.js first so window.EC exists when prisma.js attaches window.EC._test -->
-<script src="../docs/js/prisma-data.js"></script>
-<script src="../docs/js/prisma.js"></script>
-<script src="../docs/js/prisma-import.js"></script><!-- exposes window.__PRISMA_IMPORT_TEST__ for the bridge suite -->
-<script src="tests.js"></script>
+<script>
+(async function loadSuite() {
+  async function loadJson(path) {
+    const response = await fetch(path);
+    if (!response.ok) throw new Error(path + ': HTTP ' + response.status);
+    return response.json();
+  }
+  const payloads = await Promise.all([
+    loadJson('../docs/data/category_schema.json'),
+    loadJson('../docs/data/analysis_fields.json'),
+    loadJson('../docs/data/research_vault_v2.json')
+  ]);
+  window.__CATEGORY_SCHEMA__ = payloads[0];
+  window.__ANALYSIS_FIELDS__ = payloads[1];
+  window.__SEED_PAPERS__ = payloads[2].papers || [];
+  window.fetch = function() { return Promise.reject(new Error('browser harness: network disabled')); };
+  const colors = {};
+  payloads[0].categories.forEach(function(category) { colors[category.key] = category.color; });
+  window.EC = {
+    escapeHtml: function(value) {
+      return String(value == null ? '' : value).replace(/[&<>"']/g, function(char) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char];
+      });
+    },
+    CAT_COLORS: colors,
+    getCategorySchema: function() { return window.__CATEGORY_SCHEMA__; },
+    getAllPapers: function() { return []; }
+  };
+  const scripts = [
+    '../docs/js/prisma.js',
+    '../docs/js/prisma-import.js',
+    'tests.js'
+  ];
+  for (const src of scripts) {
+    await new Promise(function(resolve, reject) {
+      const script = document.createElement('script');
+      script.src = src;
+      script.onload = resolve;
+      script.onerror = function() { reject(new Error('script load failed: ' + src)); };
+      document.body.appendChild(script);
+    });
+  }
+})().catch(function(error) {
+  document.title = 'FAIL browser runner';
+  document.getElementById('results').textContent = error.message;
+});
+</script>
 </body>
 </html>

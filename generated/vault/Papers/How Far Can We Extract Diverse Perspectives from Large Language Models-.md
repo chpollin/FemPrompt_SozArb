@@ -18,6 +18,13 @@ llm_categories:
   - Bias_Ungleichheit
   - Diversitaet
   - Fairness
+human_decision: Include
+human_categories:
+  - Generative_KI
+  - Prompting
+  - Bias_Ungleichheit
+  - Fairness
+agreement: agree
 ---
 
 # How Far Can We Extract Diverse Perspectives from Large Language Models?
@@ -41,6 +48,7 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Include (Confidence: 0.85)
+**Human:** Include
 
 ## Wissensdokument
 

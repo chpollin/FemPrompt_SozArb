@@ -1,0 +1,121 @@
+{
+  "schema": "femprompt-prisma-agent-run/0.2",
+  "run_id": "ratification-ar2-20260822",
+  "status": "completed",
+  "objective": "Two independent blinded reviews of the ten provisional ar2 papers, followed by separate adjudication of decisions, category levels, evidence quality, and the pilot publication-type policy.",
+  "repository_root": ".",
+  "baseline": {
+    "branch": "lane/merge-prep",
+    "commit": "c479510",
+    "worktree": "dirty_preserved"
+  },
+  "prompt": {
+    "path": "prompts/prism-agent-reviewer.md",
+    "version": "0.4",
+    "sha256": "3EC4AFB62EF57C3FACFC8925F133F004ADF34F3F3D1B50709967E90FC1F8929A"
+  },
+  "application": {
+    "path": "docs/js/prisma.js",
+    "sha256": "046B729BE799FE26C18F3F8AC049C56483F5A5A14C8FC11C56AF8A440090E1E6"
+  },
+  "method": {
+    "categories": "assessment/categories.yaml#v1.3",
+    "coding_protocol": "knowledge/update-protocol.md#B-B.1-C",
+    "publication_type_policy": "Zulässig sind wissenschaftliche Artikel, Konferenzbeiträge, wissenschaftliche Buchkapitel, systematische Reviews, belegte Forschungs- und Policy-Reports sowie fachwissenschaftliche Kommentare und Editorials mit identifizierbarer Autorenschaft und Quellenbasis. Ausgeschlossen werden kommerzielle Blogs, Marketingtexte, Newsbeiträge, Landingpages, allgemeine Ratgeber ohne wissenschaftliche Anlage und unbelegte institutionelle Webtexte. Ein nicht eindeutig zuordenbarer Publikationstyp wird als Blocker gemeldet und nicht gespeichert.",
+    "blindness": "Reviewers may read only the rule sources, manifest, PRISM paper layer, and their own track. The provisional ar2 track, prior assessments, knowledge distillates, and the other ratification track are excluded."
+  },
+  "execution": {
+    "mode": "blinded_source_review_with_operator_prism_transcription",
+    "reason": "The collaboration subagents had no usable browser binding. They produce independent source-grounded coding packets. The orchestrator transcribes each completed packet through its isolated PRISM trial origin and exports the authentic reviewer track.",
+    "required_controls": [
+      "No reviewer may inspect ar2, prior assessments, knowledge distillates, or the other ratification packet.",
+      "The operator may transcribe only the supplied values and quotations and may not resolve substantive ambiguity during transcription.",
+      "The exported PRISM records must be compared byte-for-byte against the source coding packet before adjudication."
+    ],
+    "transcription_validation": {
+      "command": "node tests/review-cases/verify-transcription.mjs tests/review-cases/agent-runs/ratification-ar2-20260822/run.json",
+      "result": "pass",
+      "records": 20,
+      "evidence_passages": 115,
+      "normalization": "PRISM search collapsed runs of PDF-conversion whitespace to one space. Wording and category assignment were otherwise transcribed without interpretation."
+    }
+  },
+  "paper_sources": {
+    "MA3LBJS6": "generated/markdown_clean/Linnemann_2023_Bedeutung_von_Künstlicher_Intelligenz_in_der.md",
+    "WAYCKUZ8": "generated/markdown_clean/Choudhury_2024_Large_Language_Models_and_User_Trust_Consequence.md",
+    "7L78MV2V": "generated/markdown_clean/Navigli_2023_Biases_in_large_language_models_Origins,.md",
+    "3GB9B4IJ": "generated/markdown_clean/Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study.md",
+    "7VFNS5R3": "generated/markdown_clean/Kong_2021_Evaluation_of_an_artificial_intelligence_literacy.md",
+    "2EBHMYU4": "generated/markdown_clean/Ulnicane_2024_Intersectionality_in_Artificial_Intelligence.md",
+    "T8R8RKX9": "generated/markdown_clean/Wilson_2024_AI_tools_show_biases_in_ranking_job_applicants'.md",
+    "XIYX5HJS": "generated/markdown_clean/Ricaurte Quijano_2024_Towards_Substantive_Equality_in_Artificial.md",
+    "THGC3PA2": "generated/markdown_clean/Kubes_2024_Feministische_KI_–_Künstliche_Intelligenz_für.md",
+    "EXRF5629": "No verified full text. The corpus exposes only a truncated metadata abstract; apply the source rule from the reviewer prompt."
+  },
+  "paper_ids": [
+    "MA3LBJS6",
+    "WAYCKUZ8",
+    "7L78MV2V",
+    "3GB9B4IJ",
+    "7VFNS5R3",
+    "2EBHMYU4",
+    "T8R8RKX9",
+    "XIYX5HJS",
+    "THGC3PA2",
+    "EXRF5629"
+  ],
+  "tracks": [
+    {
+      "reviewer": "rr1",
+      "actor": "agent",
+      "prism_url": "http://127.0.0.1:8795/prisma.html?trial=1&actor=agent&reviewer=rr1",
+      "export": "tests/review-cases/agent-runs/ratification-ar2-20260822/tracks/rr1.json",
+      "sha256": "0c85e461fc278db08f590987a5cc45fadbb6ff9837a2a73151d06e4202291b62",
+      "coding_packet": "tests/review-cases/agent-runs/ratification-ar2-20260822/tracks/rr1-coding.json",
+      "report": "tests/review-cases/agent-runs/ratification-ar2-20260822/reports/rr1.md",
+      "status": "completed_and_verified"
+    },
+    {
+      "reviewer": "rr2",
+      "actor": "agent",
+      "prism_url": "http://127.0.0.1:8796/prisma.html?trial=1&actor=agent&reviewer=rr2",
+      "export": "tests/review-cases/agent-runs/ratification-ar2-20260822/tracks/rr2.json",
+      "sha256": "1dacb64f26f67bf539381f4bcee8be3fa02a867bb52dbc1b9f6fe4e5483f35df",
+      "coding_packet": "tests/review-cases/agent-runs/ratification-ar2-20260822/tracks/rr2-coding.json",
+      "report": "tests/review-cases/agent-runs/ratification-ar2-20260822/reports/rr2.md",
+      "status": "completed_and_verified"
+    }
+  ],
+  "adjudication": {
+    "status": "completed",
+    "inputs": [
+      "tests/review-cases/agent-runs/ratification-ar2-20260822/tracks/rr1.json",
+      "tests/review-cases/agent-runs/ratification-ar2-20260822/tracks/rr2.json"
+    ],
+    "reconciliation": {
+      "path": "tests/review-cases/agent-runs/ratification-ar2-20260822/reconciliation.json",
+      "sha256": "24b5f113fc111bdf749198ee9926a83041409f7770b7c8b50b971e2746a65fc5",
+      "result": "10 decision agreements, 0 decision divergences; category and analysis differences require source-based adjudication",
+      "order_check": "pass"
+    },
+    "comparison_to_provisional_after_blind_reviews": "docs/data/screening/ar2.json",
+    "consensus": {
+      "path": "tests/review-cases/agent-runs/ratification-ar2-20260822/consensus-coding.json",
+      "sha256": "5efa0727c2e4a60795f66592d0357fc2d6e92afb9022ccebedd523c960e44d4c",
+      "phase_a_manifest_sha256": "33a11004cc29c661b722989cd4e3e98a78bfab60d6b2f05c09a5730d5ba57338",
+      "gate": "pass",
+      "blocked_records": 0
+    },
+    "report": "tests/review-cases/agent-runs/ratification-ar2-20260822/evaluation.md",
+    "report_sha256": "266434eb75d8f4175d1aa9e2b870966c02a41fc1a4de1b8639ebff8db145ee49",
+    "integration": {
+      "status": "accepted_and_applied",
+      "accepted_at": "2026-08-22T18:21:59.029Z",
+      "operator_basis": "The user authorized direct integration into the real research data and execution through Milestone 1.",
+      "output": "docs/data/screening/ar2.json",
+      "output_sha256": "38ab5796c6018b5fbde6a9cb562a4ececfb4c0c88dcaea86cb18325fb0fdd392",
+      "verification_command": "node tests/review-cases/apply-ratification.mjs tests/review-cases/agent-runs/ratification-ar2-20260822/run.json tests/review-cases/agent-runs/ratification-ar2-20260822/consensus-coding.json docs/data/screening/ar2.json 2026-08-22T18:21:59.029Z --check",
+      "verification_result": "pass"
+    }
+  }
+}

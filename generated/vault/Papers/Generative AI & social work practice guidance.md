@@ -15,6 +15,14 @@ llm_categories:
   - Generative_KI
   - Soziale_Arbeit
   - Bias_Ungleichheit
+human_decision: Exclude
+human_categories:
+  - Generative_KI
+  - Prompting
+  - Soziale_Arbeit
+  - Bias_Ungleichheit
+  - Gender
+agreement: disagree
 ---
 
 # Generative AI & social work practice guidance
@@ -38,10 +46,22 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Include (Confidence: 0.95)
+**Human:** Exclude
 
-## Key Concepts
+**Kategorie-Vergleich (bei Divergenz):**
 
-- [[Algorithmic Bias in Social Work]]
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Ja | X |
+| Generative_KI | Ja | Ja |  |
+| Prompting | Ja | Nein | X |
+| KI_Sonstige | Nein | Nein |  |
+| Soziale_Arbeit | Ja | Ja |  |
+| Bias_Ungleichheit | Ja | Ja |  |
+| Gender | Ja | Nein | X |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Nein |  |
 
 ## Wissensdokument
 

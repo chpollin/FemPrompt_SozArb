@@ -15,12 +15,12 @@ llm_confidence: 0.92
 llm_categories:
   - Generative_KI
   - Soziale_Arbeit
-human_decision: Unclear
+human_decision: Include
 human_categories:
   - Generative_KI
   - Soziale_Arbeit
   - Bias_Ungleichheit
-agreement: disagree
+agreement: agree
 ---
 
 # "It happened to be the perfect thing": Experiences of generative AI chatbots for mental health
@@ -44,25 +44,7 @@ agreement: disagree
 ### Stufe 4: Assessment
 
 **LLM:** Include (Confidence: 0.92)
-**Human:** Unclear
-
-**Kategorie-Vergleich (bei Divergenz):**
-
-| Kategorie | Human | LLM | Divergent |
-|-----------|-------|-----|----------|
-| AI_Literacies | Nein | Nein |  |
-| Generative_KI | Ja | Ja |  |
-| Prompting | Nein | Nein |  |
-| KI_Sonstige | Nein | Nein |  |
-| Soziale_Arbeit | Ja | Ja |  |
-| Bias_Ungleichheit | Ja | Nein | X |
-| Gender | Nein | Nein |  |
-| Diversitaet | Nein | Nein |  |
-| Feministisch | Nein | Nein |  |
-| Fairness | Nein | Nein |  |
-
-> Siehe [[Divergenz Siddals_2024_It_happened_to_be_the_perfect_thing_Experiences]] fuer detaillierte Analyse
-
+**Human:** Include
 
 ## Wissensdokument
 

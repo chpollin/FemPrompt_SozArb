@@ -26,7 +26,6 @@ human_categories:
   - KI_Sonstige
   - Soziale_Arbeit
   - Bias_Ungleichheit
-  - Diversitaet
   - Fairness
 agreement: agree
 ---
@@ -53,13 +52,6 @@ agreement: agree
 
 **LLM:** Include (Confidence: 0.95)
 **Human:** Include
-
-## Key Concepts
-
-- [[AI Literacy in Social Work Education]]
-- [[Algorithmic Bias in Social Services]]
-- [[Algorithmic Fairness and Transparency]]
-- [[Predictive Analytics in Social Work]]
 
 ## Wissensdokument
 

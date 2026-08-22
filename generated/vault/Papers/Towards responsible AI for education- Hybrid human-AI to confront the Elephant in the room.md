@@ -17,6 +17,11 @@ llm_categories:
   - KI_Sonstige
   - Bias_Ungleichheit
   - Fairness
+human_decision: Exclude
+human_categories:
+  - AI_Literacies
+  - KI_Sonstige
+agreement: disagree
 ---
 
 # Towards responsible AI for education: Hybrid human-AI to confront the Elephant in the room
@@ -40,11 +45,22 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Include (Confidence: 0.85)
+**Human:** Exclude
 
-## Key Concepts
+**Kategorie-Vergleich (bei Divergenz):**
 
-- [[Algorithmic Fairness in Education]]
-- [[Explainable AI (XAI)]]
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Ja | Ja |  |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Ja | Ja |  |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Nein | Ja | X |
+| Gender | Nein | Nein |  |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Ja | X |
 
 ## Wissensdokument
 

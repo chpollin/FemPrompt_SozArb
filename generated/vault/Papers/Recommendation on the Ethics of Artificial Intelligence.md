@@ -23,7 +23,6 @@ human_categories:
   - Soziale_Arbeit
   - Bias_Ungleichheit
   - Gender
-  - Diversitaet
   - Fairness
 agreement: agree
 ---
@@ -50,10 +49,6 @@ agreement: agree
 
 **LLM:** Include (Confidence: 0.85)
 **Human:** Include
-
-## Key Concepts
-
-- [[Algorithmic Fairness and Equity]]
 
 ## Wissensdokument
 

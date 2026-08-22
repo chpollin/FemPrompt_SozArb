@@ -23,21 +23,26 @@
 (function() {
 'use strict';
 
-// Vocabularies. docs/data/ carries no categories JSON, so these are derived
-// from assessment/categories.yaml (v1.3), the same source prisma.js
-// mirrors in its own constants.
-
-const TECH_CATS = ['AI_Literacies', 'Generative_KI', 'Prompting', 'KI_Sonstige'];
-const SOCIAL_CATS = ['Soziale_Arbeit', 'Bias_Ungleichheit', 'Gender', 'Diversitaet', 'Feministisch', 'Fairness'];
+// Vocabularies are generated from assessment/categories.yaml and injected by
+// PRISM or the operator harness before this module is evaluated.
+const CATEGORY_SCHEMA = window.__CATEGORY_SCHEMA__ ||
+    (window.EC && window.EC.getCategorySchema ? window.EC.getCategorySchema() : null);
+if (!CATEGORY_SCHEMA || !Array.isArray(CATEGORY_SCHEMA.categories) ||
+        !Array.isArray(CATEGORY_SCHEMA.decision_options) ||
+        !Array.isArray(CATEGORY_SCHEMA.exclusion_reasons)) {
+    throw new Error('Kategorieschema nicht geladen (docs/data/category_schema.json).');
+}
+const TECH_CATS = CATEGORY_SCHEMA.groups.object.slice();
+const SOCIAL_CATS = CATEGORY_SCHEMA.groups.perspective.slice();
 const ALL_CATS = TECH_CATS.concat(SOCIAL_CATS);
 
 // decision.options in categories.yaml; all three values are representable in
 // reviewer schema 0.3.
-const DECISION_VOCAB = ['Include', 'Exclude', 'Unclear'];
+const DECISION_VOCAB = CATEGORY_SCHEMA.decision_options.slice();
 
 // exclusion_reasons codes in categories.yaml; the Excel writes them with
 // spaces ("No full text"), the canonical codes use underscores.
-const REASON_VOCAB = ['Duplicate', 'Not_relevant_topic', 'Wrong_publication_type', 'No_full_text', 'Language'];
+const REASON_VOCAB = CATEGORY_SCHEMA.exclusion_reasons.slice();
 
 // Accepted three-level category cells. Historical Ja/Nein exports remain valid.
 const CAT_VALUES = { nein: 0, '0': 0, teilweise: 1, '1': 1, ja: 2, '2': 2 };

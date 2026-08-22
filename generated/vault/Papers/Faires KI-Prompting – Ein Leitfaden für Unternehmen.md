@@ -21,6 +21,16 @@ llm_categories:
   - Diversitaet
   - Feministisch
   - Fairness
+human_decision: Include
+human_categories:
+  - Generative_KI
+  - Prompting
+  - KI_Sonstige
+  - Bias_Ungleichheit
+  - Gender
+  - Feministisch
+  - Fairness
+agreement: agree
 ---
 
 # Faires KI-Prompting – Ein Leitfaden für Unternehmen
@@ -44,11 +54,7 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Include (Confidence: 0.92)
-
-## Key Concepts
-
-- [[Algorithmic Fairness in Generative AI]]
-- [[Feminist AI]]
+**Human:** Include
 
 ## Wissensdokument
 

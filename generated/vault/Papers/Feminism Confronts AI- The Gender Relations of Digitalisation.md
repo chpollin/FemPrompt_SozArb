@@ -19,11 +19,9 @@ llm_categories:
   - Feministisch
 human_decision: Include
 human_categories:
-  - AI_Literacies
   - KI_Sonstige
   - Bias_Ungleichheit
   - Gender
-  - Diversitaet
   - Feministisch
   - Fairness
 agreement: agree
@@ -51,11 +49,6 @@ agreement: agree
 
 **LLM:** Include (Confidence: 0.95)
 **Human:** Include
-
-## Key Concepts
-
-- [[Algorithmic Bias]]
-- [[Intersectional Bias]]
 
 ## Wissensdokument
 

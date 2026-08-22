@@ -51,12 +51,6 @@ agreement: agree
 **LLM:** Exclude (Confidence: 0.85)
 **Human:** Exclude
 
-## Key Concepts
-
-- [[AI Literacy]]
-- [[Algorithmic Transparency]]
-- [[Ethical AI Awareness]]
-
 ## Wissensdokument
 
 # Artificial Intelligence (AI) literacy - an argument for AI literacy in education

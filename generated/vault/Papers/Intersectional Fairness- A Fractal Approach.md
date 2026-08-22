@@ -21,7 +21,6 @@ human_categories:
   - KI_Sonstige
   - Bias_Ungleichheit
   - Gender
-  - Diversitaet
   - Feministisch
   - Fairness
 agreement: agree
@@ -49,11 +48,6 @@ agreement: agree
 
 **LLM:** Include (Confidence: 0.92)
 **Human:** Include
-
-## Key Concepts
-
-- [[Fairness Gerrymandering]]
-- [[Intersectional Fairness]]
 
 ## Wissensdokument
 

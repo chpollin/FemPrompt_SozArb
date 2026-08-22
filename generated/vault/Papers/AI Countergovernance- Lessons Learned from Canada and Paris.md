@@ -19,6 +19,10 @@ llm_categories:
   - Bias_Ungleichheit
   - Gender
   - Feministisch
+human_decision: Exclude
+human_categories:
+  - KI_Sonstige
+agreement: disagree
 ---
 
 # AI Countergovernance: Lessons Learned from Canada and Paris
@@ -42,6 +46,22 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Include (Confidence: 0.82)
+**Human:** Exclude
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Ja | X |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Ja | Ja |  |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Nein | Ja | X |
+| Gender | Nein | Ja | X |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Nein | Ja | X |
+| Fairness | Nein | Nein |  |
 
 ## Wissensdokument
 

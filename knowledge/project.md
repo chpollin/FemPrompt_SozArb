@@ -59,7 +59,7 @@ Primary audience: researchers with limited AI expertise.
 | Benchmark metrics computed (confusion matrix, base rates, divergence analysis) | Complete |
 | Distilled knowledge documents from full texts | Complete |
 | Divergence analysis classified into patterns | Complete |
-| Obsidian Vault, interlinked knowledge base | Complete |
+| Downloadable Obsidian paper collection | Complete |
 | GitHub Pages documentation site | Complete (the Evidence Companion) |
 | Open Access analysis of the corpus | Pending |
 

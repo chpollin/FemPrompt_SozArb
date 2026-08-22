@@ -43,12 +43,6 @@ agreement: agree
 **LLM:** Exclude (Confidence: 0.95)
 **Human:** Exclude
 
-## Key Concepts
-
-- [[Critical Digital Thinking]]
-- [[Digital Divide]]
-- [[Digital Literacy]]
-
 ## Wissensdokument
 
 # A systematic review on digital literacy

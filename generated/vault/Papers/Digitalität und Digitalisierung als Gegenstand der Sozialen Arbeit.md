@@ -49,14 +49,6 @@ agreement: disagree
 | Feministisch | Nein | Nein |  |
 | Fairness | Nein | Nein |  |
 
-> Siehe [[Divergenz Kutscher_2024_Digitalität_und_Digitalisierung_als_Gegenstand]] fuer detaillierte Analyse
-
-
-## Key Concepts
-
-- [[Algorithmic Discrimination]]
-- [[Algorithmic Fairness in Social Work]]
-
 ## Wissensdokument
 
 # Digitalität und Digitalisierung als Gegenstand der Sozialen Arbeit

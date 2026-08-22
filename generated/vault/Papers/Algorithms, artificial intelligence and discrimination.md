@@ -59,17 +59,6 @@ agreement: disagree
 | Feministisch | Nein | Nein |  |
 | Fairness | Ja | Ja |  |
 
-> Siehe [[Divergenz Lund_2025_Algorithms,_artificial_intelligence_and]] fuer detaillierte Analyse
-
-
-## Key Concepts
-
-- [[Algorithmic Discrimination]]
-- [[Algorithmic Fairness]]
-- [[Algorithmic Transparency and Explainability]]
-- [[Intersectional Discrimination]]
-- [[Proxy Discrimination]]
-
 ## Wissensdokument
 
 # Algorithms, Artificial Intelligence and Discrimination: An Analysis of the Equality and Anti-Discrimination Act's Possibilities and Limitations

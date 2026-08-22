@@ -16,6 +16,13 @@ llm_categories:
   - Bias_Ungleichheit
   - Diversitaet
   - Fairness
+human_decision: Include
+human_categories:
+  - KI_Sonstige
+  - Soziale_Arbeit
+  - Bias_Ungleichheit
+  - Gender
+agreement: agree
 ---
 
 # Coded injustice: Surveillance and discrimination in Denmark's automated welfare state
@@ -39,10 +46,7 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Include (Confidence: 0.95)
-
-## Key Concepts
-
-- [[Algorithmic Discrimination]]
+**Human:** Include
 
 ## Wissensdokument
 

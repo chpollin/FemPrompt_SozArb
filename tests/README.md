@@ -6,9 +6,9 @@ Test foundation for the PRISM screening tool (plan P1). The shipped application 
 
 Two legs, same suite (`tests.js`), same inline fixtures.
 
-Headless (node, the committed harness): run `npm install` once, then `npm test`. The runner `tests/run.mjs` injects the same four scripts (`prisma-data.js`, `prisma.js`, `prisma-import.js`, `tests.js`) into a jsdom window in the same order as the browser page, prints `PASS n/n` to stdout, and sets the process exit code (non-zero on any failure). jsdom is a dev dependency of this harness only; the app under `docs/` stays framework-free and dependency-free.
+Headless (node, the committed harness): run `npm install` once, then `npm test`. The runner `tests/run.mjs` injects the same four scripts (`prisma-data.js`, `prisma.js`, `prisma-import.js`, `tests.js`) into a jsdom window in the same order as the browser page, prints `PASS n/n` to stdout, and sets the process exit code (non-zero on any failure). The app under `docs/` stays framework-free. Its small runtime dependency set is pinned under `docs/vendor/`; jsdom and Playwright remain development dependencies.
 
-Browser: open `tests/run-tests.html` directly over `file://` or from a static server serving the repo root. No build step, no framework, no test data to fetch.
+Browser: serve the repository root with a local static server and open `tests/run-tests.html`. The runner fetches the generated category schema before evaluating the production scripts. No build step or framework is required.
 
 Results appear in three places so both humans and browser agents can read them:
 
@@ -16,7 +16,7 @@ Results appear in three places so both humans and browser agents can read them:
 - `document.title` (`PASS n/n PRISM tests` or `FAIL k/n PRISM tests`),
 - `window.__TEST_RESULTS__` (machine-readable object with the full result list).
 
-The only network activity is `docs/js/prisma-data.js` attempting to load the research vault JSON; over `file://` and in the headless runner this fails, is caught by that script, and has no effect on the tests.
+The browser runner fetches the generated category schema, analysis vocabulary, and seed before loading the production logic. It does not start the application UI. The headless runner rejects network requests and injects the same generated inputs from disk.
 
 ## Files
 
@@ -27,6 +27,7 @@ The only network activity is `docs/js/prisma-data.js` attempting to load the res
 | `run.mjs` | Headless node runner. Injects the same four scripts into a jsdom window, reads `window.__TEST_RESULTS__`, and exits non-zero on failure. Run with `npm test`. |
 | `tests.js` | The suite: assert helpers, inline fixtures, all test cases, result rendering. |
 | `browser/pilot.mjs` | Supported-browser pilot (Playwright, Chromium): one isolated reviewer session end to end against the pinned fixtures in `tests/pilot/`, see `tests/pilot/README.md`. `npm run pilot -- --reviewer r1 --out tests/browser/out/r1`. |
+| `browser/companion.mjs` | Public Companion acceptance run in Chromium. It covers the Literature Landscape, responsive layout, URL restoration, keyboard drill-down, local runtime assets, and browser errors. Run with `npm run test:browser-companion`. |
 | `browser/reconcile.mjs` | Deterministic reconciliation of reviewer files through the tool's own `reconcileReviewers`; `--check` proves order independence, the SHA-256 lines prove the inputs were not touched. |
 | `test_build_fulltext.py` | pytest: full-text identity checks, fail-closed ambiguity and mismatch handling, and atomic publication rollback. |
 

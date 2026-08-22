@@ -29,7 +29,6 @@ human_categories:
   - Soziale_Arbeit
   - Bias_Ungleichheit
   - Gender
-  - Diversitaet
   - Fairness
 agreement: agree
 ---

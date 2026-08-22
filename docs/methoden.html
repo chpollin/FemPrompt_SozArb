@@ -6,10 +6,8 @@
     <title>Methoden -- Feministische AI Literacies</title>
     <meta name="description" content="Methodik des systematischen Reviews: Pipeline, Kategorie-System, duale Bewertung, Divergenz-Analyse.">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%231e3a5f'/><text x='50' y='68' font-size='60' font-family='serif' font-weight='bold' fill='white' text-anchor='middle'>F</text></svg>">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/tokens.css">
     <link rel="stylesheet" href="css/research.css">
 </head>
 <body>
@@ -26,16 +24,18 @@
                 <nav class="header-nav" aria-label="Hauptnavigation">
                     <a href="index.html#chat" class="nav-link">Wissens-Chat</a>
                     <a href="index.html#wissensnetz" class="nav-link">Wissensnetz</a>
+                    <a href="index.html#literaturbild" class="nav-link">Literaturbild</a>
                     <a href="index.html#vergleich" class="nav-link">Kategorien</a>
                     <a href="index.html#korpus" class="nav-link">Korpus</a>
                     <span class="nav-sep"></span>
                     <a href="prisma.html" class="nav-link">PRISM</a>
+                    <a href="onboarding.html" class="nav-link">Onboarding</a>
                     <a href="about.html" class="nav-link">About</a>
                     <a href="methoden.html" class="nav-link nav-link-active">Methoden</a>
                     <a href="help.html" class="nav-link">Hilfe</a>
                     <span class="nav-sep"></span>
                     <a href="https://github.com/chpollin/FemPrompt_SozArb" class="nav-link nav-link-ext" target="_blank" rel="noopener"><i class="fas fa-code-branch"></i></a>
-                    <a href="downloads/vault.zip" class="nav-link nav-link-ext" title="Obsidian Vault (.zip)"><i class="fas fa-download"></i></a>
+                    <a href="downloads/vault.zip" class="nav-link nav-link-ext" title="Paper-Wissenssammlung (.zip)"><i class="fas fa-download"></i></a>
                 </nav>
             </div>
         </div>
@@ -107,6 +107,15 @@
             </ul>
             <p>Die Schnittmenge der beidseitig bewerteten Papers bildet die Benchmark-Basis.</p>
 
+            <h3>Annotationsbasierte Synthese</h3>
+            <p>Das <a href="index.html#literaturbild">Literaturbild</a> wird aus den produktiven PRISM-Records
+            erzeugt. Thematische Haeufigkeiten verwenden ausschliesslich eingeschlossene Papers. Entscheidungen mit
+            dem Status Unclear und ausgeschlossene Papers bleiben im Bearbeitungsstand sichtbar, fliessen jedoch
+            nicht in die Inhaltsprofile ein.</p>
+            <p>Der Generator prueft Paper-Identitaet, Kategorien, Belege und die Analysevollstaendigkeit jedes
+            eingeschlossenen Papers. Jede Aggregation bleibt bis zu den zugrunde liegenden Paper-Belegen
+            rueckverfolgbar. Volltext- und Abstract-Codierungen werden getrennt ausgewiesen.</p>
+
             <h3>Beobachtete Divergenz (motivierende Illustration)</h3>
             <p>Als Illustration, warum Verlaesslichkeit nicht vorausgesetzt werden kann, nicht als Befund des Reviews, schliesst das LLM deutlich mehr Publikationen ein als die Expert:innen; die Divergenz ist asymmetrisch, das LLM ueberinkludiert oefter als umgekehrt. Cohen's Kappa ist bei stark ungleichen Basisraten kein valider Indikator fuer Uebereinstimmung (Byrt et al. 1993); primaere Metriken sind die Konfusionsmatrix und die Basisraten. Die konkreten Raten, Fallzahlen und die Konfusionsmatrix zeigt der <a href="index.html#vergleich">Kategorien-Explorer</a> direkt aus den Daten.</p>
 
@@ -130,13 +139,13 @@
                 <li>Divergenz-Muster-Klassifikation ist LLM-gestuetzt (Claude Sonnet)</li>
             </ul>
             <h3>Nachnutzung</h3>
-            <p>Die Wissensdokumente und der vollstaendige Obsidian Vault koennen als Kontext fuer eigene Forschung mit LLMs genutzt werden.</p>
+            <p>Die veröffentlichten Wissensdokumente können als nachvollziehbarer Kontext für die eigene Forschung genutzt werden.</p>
 
             <h4>Obsidian</h4>
-            <p><a href="downloads/vault.zip" style="color:var(--primary);">Vault-ZIP herunterladen</a> und entpacken. In Obsidian als Vault oeffnen. Die verlinkten Dokumente (Papers, Konzepte, Divergenzen, Pipeline-Stufen) ergeben im Graph View das Wissensnetz.</p>
+            <p><a href="downloads/vault.zip">Paper-Wissenssammlung herunterladen</a> und entpacken. Die Sammlung enthält die veröffentlichten Paper-Dokumente mit Transformationspfad, Assessment-Vergleich und Wissensdestillat.</p>
 
             <h4>Claude Code</h4>
-            <p>Im <a href="index.html#korpus" style="color:var(--primary);">Korpus</a> Papers filtern und per "Markdown-Export" herunterladen. Im Exportordner <code>claude</code> starten. Der Export enthaelt einen System-Prompt in der README.md.</p>
+            <p>Im <a href="index.html#korpus" style="color:var(--primary);">Korpus</a> Papers filtern und per "Markdown-Export" als gemeinsame Datei herunterladen. Die Datei enthaelt die ausgewaehlten Wissensdokumente mit Record- und Werkkennung.</p>
             <p>Beispiel-Prompts:</p>
             <ul>
                 <li>"Welche Papers behandeln Gender Bias in Large Language Models?"</li>
@@ -145,10 +154,10 @@
             </ul>
 
             <h4>NotebookLM (Google)</h4>
-            <p>Markdown-Export herunterladen und die .md-Dateien als Quellen in NotebookLM hochladen. Automatische Zusammenfassung und Q&amp;A ueber den Korpus.</p>
+            <p>Die exportierte Markdown-Datei als Quelle in NotebookLM hochladen. Sie enthaelt alle Wissensdokumente der aktuellen Auswahl.</p>
 
             <h4>ChatGPT, Gemini und andere Frontier-LLMs</h4>
-            <p>Markdown-Export herunterladen und Dateien als Kontext hochladen. System-Prompt aus der README.md in Custom Instructions oder System Prompt einfuegen.</p>
+            <p>Die exportierte Markdown-Datei als Kontext hochladen und den untenstehenden System-Prompt verwenden.</p>
 
             <div style="background:var(--gray-50);border-radius:var(--radius-md);padding:1rem 1.25rem;margin-top:1.5rem;">
                 <h4 style="margin-top:0;">System-Prompt (Vorlage)</h4>
@@ -160,7 +169,7 @@
     <footer class="site-footer">
         <p class="footer-links">
             <a href="https://github.com/chpollin/FemPrompt_SozArb">Repository</a>
-            <a href="downloads/vault.zip">Obsidian Vault (.zip)</a>
+            <a href="downloads/vault.zip">Paper-Wissenssammlung (.zip)</a>
         </p>
     </footer>
 </body>

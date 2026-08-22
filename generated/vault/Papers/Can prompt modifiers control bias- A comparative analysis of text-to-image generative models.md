@@ -26,7 +26,6 @@ human_categories:
   - Prompting
   - Bias_Ungleichheit
   - Gender
-  - Diversitaet
 agreement: agree
 ---
 
@@ -52,10 +51,6 @@ agreement: agree
 
 **LLM:** Include (Confidence: 0.92)
 **Human:** Include
-
-## Key Concepts
-
-- [[Prompt Engineering for Bias Mitigation]]
 
 ## Wissensdokument
 

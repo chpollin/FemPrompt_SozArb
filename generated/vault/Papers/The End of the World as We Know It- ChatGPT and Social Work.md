@@ -19,6 +19,12 @@ llm_categories:
   - Generative_KI
   - Soziale_Arbeit
   - Bias_Ungleichheit
+human_decision: Include
+human_categories:
+  - Generative_KI
+  - Soziale_Arbeit
+  - Bias_Ungleichheit
+agreement: agree
 ---
 
 # The End of the World as We Know It? ChatGPT and Social Work
@@ -42,11 +48,7 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Include (Confidence: 0.85)
-
-## Key Concepts
-
-- [[AI Ethics Curriculum Integration]]
-- [[Algorithmic Fairness in Social Work]]
+**Human:** Include
 
 ## Wissensdokument
 

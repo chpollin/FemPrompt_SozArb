@@ -26,7 +26,6 @@ human_categories:
   - KI_Sonstige
   - Bias_Ungleichheit
   - Gender
-  - Diversitaet
 agreement: disagree
 ---
 
@@ -64,20 +63,9 @@ agreement: disagree
 | Soziale_Arbeit | Nein | Nein |  |
 | Bias_Ungleichheit | Ja | Nein | X |
 | Gender | Ja | Nein | X |
-| Diversitaet | Ja | Nein | X |
+| Diversitaet | Nein | Nein |  |
 | Feministisch | Nein | Nein |  |
 | Fairness | Nein | Nein |  |
-
-> Siehe [[Divergenz Ruiz_2024_AI_Literacy_A_Framework_to_Understand,_Evaluate,]] fuer detaillierte Analyse
-
-
-## Key Concepts
-
-- [[AI Literacy]]
-- [[Algorithmic Bias]]
-- [[Algorithmic Fairness Evaluation]]
-- [[Computational Thinking]]
-- [[Generative AI Literacy]]
 
 ## Wissensdokument
 

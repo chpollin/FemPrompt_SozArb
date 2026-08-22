@@ -14,6 +14,13 @@ llm_categories:
   - KI_Sonstige
   - Bias_Ungleichheit
   - Fairness
+human_decision: Exclude
+human_categories:
+  - KI_Sonstige
+  - Bias_Ungleichheit
+  - Gender
+  - Fairness
+agreement: agree
 ---
 
 # Revisiting Technical Bias Mitigation Strategies
@@ -37,11 +44,7 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Exclude (Confidence: 0.85)
-
-## Key Concepts
-
-- [[Algorithmic Bias Mitigation]]
-- [[Algorithmic Fairness]]
+**Human:** Exclude
 
 ## Wissensdokument
 

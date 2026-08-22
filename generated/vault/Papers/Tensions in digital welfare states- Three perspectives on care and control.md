@@ -59,9 +59,6 @@ agreement: disagree
 | Feministisch | Nein | Nein |  |
 | Fairness | Nein | Nein |  |
 
-> Siehe [[Divergenz Zakharova_2024_Tensions_in_digital_welfare_states_Three]] fuer detaillierte Analyse
-
-
 ## Wissensdokument
 
 # Tensions in digital welfare states: Three perspectives on care and control

@@ -15,6 +15,13 @@ llm_confidence: 0.85
 llm_categories:
   - KI_Sonstige
   - Feministisch
+human_decision: Include
+human_categories:
+  - KI_Sonstige
+  - Bias_Ungleichheit
+  - Gender
+  - Feministisch
+agreement: disagree
 ---
 
 # Engineers on responsibility: feminist approaches to who's responsible for ethical AI
@@ -38,6 +45,22 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Exclude (Confidence: 0.85)
+**Human:** Include
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Ja | Ja |  |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Ja | Nein | X |
+| Gender | Ja | Nein | X |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Ja | Ja |  |
+| Fairness | Nein | Nein |  |
 
 ## Wissensdokument
 

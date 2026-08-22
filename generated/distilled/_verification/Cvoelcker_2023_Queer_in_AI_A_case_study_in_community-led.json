@@ -1,0 +1,29 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 91,
+      "missing_critical": [],
+      "missing_minor": [
+        "Die zahlreichen Einzelmetriken der Programme, Umfragen und Organisationsfinanzierung werden zugunsten einer kompakten Datenbasis nicht vollständig wiedergegeben.",
+        "Die vier Initiativen Graduate School Application Fee Aid, Workshops und Socials, Inclusive Conference Guide und Trans-inclusive Publishing Advocacy werden nur zusammenfassend benannt.",
+        "Der bereitgestellte Volltext verweist mehrfach auf Anhänge, enthält nach der Referenzliste jedoch keine Appendix-Inhalte."
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [],
+      "distortions": []
+    },
+    "category_validation": {
+      "score": 97,
+      "incorrect_categories": [],
+      "missing_categories": []
+    }
+  },
+  "overall_confidence": 95,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": null,
+    "content_fixes": []
+  }
+}

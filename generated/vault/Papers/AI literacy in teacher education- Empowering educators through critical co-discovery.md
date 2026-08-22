@@ -15,6 +15,14 @@ llm_confidence: 0.85
 llm_categories:
   - AI_Literacies
   - Bias_Ungleichheit
+human_decision: Include
+human_categories:
+  - AI_Literacies
+  - Generative_KI
+  - Prompting
+  - Bias_Ungleichheit
+  - Gender
+agreement: agree
 ---
 
 # AI literacy in teacher education: Empowering educators through critical co-discovery
@@ -38,13 +46,7 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Include (Confidence: 0.85)
-
-## Key Concepts
-
-- [[AI Literacy]]
-- [[Algorithmic Bias]]
-- [[Algorithmic Fairness]]
-- [[Gender Bias in AI]]
+**Human:** Include
 
 ## Wissensdokument
 

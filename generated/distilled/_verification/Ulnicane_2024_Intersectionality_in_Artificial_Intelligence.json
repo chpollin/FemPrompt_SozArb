@@ -1,0 +1,28 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 96,
+      "missing_critical": [],
+      "missing_minor": [
+        "Die zahlreichen Einzelstatistiken zur Repräsentation in der KI-Branche sind im kompakten Wissensdokument nicht aufgeführt.",
+        "Die Empfehlungen der vier Berichte werden synthetisiert und nicht jeweils vollständig einzeln wiedergegeben."
+      ]
+    },
+    "correctness": {
+      "score": 99,
+      "errors": [],
+      "distortions": []
+    },
+    "category_validation": {
+      "score": 94,
+      "incorrect_categories": [],
+      "missing_categories": []
+    }
+  },
+  "overall_confidence": 97,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": null,
+    "content_fixes": []
+  }
+}

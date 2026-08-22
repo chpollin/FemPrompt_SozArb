@@ -17,7 +17,7 @@ llm_categories:
   - Generative_KI
   - Prompting
   - Soziale_Arbeit
-human_decision: Unclear
+human_decision: Exclude
 human_categories:
   - Generative_KI
 agreement: disagree
@@ -35,7 +35,7 @@ agreement: disagree
 ### Stufe 4: Assessment
 
 **LLM:** Include (Confidence: 0.85)
-**Human:** Unclear
+**Human:** Exclude
 
 **Kategorie-Vergleich (bei Divergenz):**
 
@@ -51,9 +51,6 @@ agreement: disagree
 | Diversitaet | Nein | Nein |  |
 | Feministisch | Nein | Nein |  |
 | Fairness | Nein | Nein |  |
-
-> Siehe [[Divergenz Näscher_2025_ReflectAI_Design_and_evaluation_of_an_AI_coach_to]] fuer detaillierte Analyse
-
 
 ## Wissensdokument
 

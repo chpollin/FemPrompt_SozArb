@@ -1,6 +1,6 @@
 // Headless smoke tests for the Evidence Companion modules (research-app,
 // kategorien, wissenschat). It loads the real docs/index.html into jsdom so every
-// element id exists, mocks fetch with the on-disk data JSONs, stubs Fuse, and
+// element id exists, mocks fetch with the on-disk data JSONs, and
 // drives the render paths the refactor touched: data load, corpus table,
 // delegated row click, category explorer, chat UI, and the EC helpers. The D3
 // concept graph is out of scope here (no D3 in node); it stays a browser check.
@@ -15,8 +15,10 @@ const docs = join(root, 'docs');
 
 const dataFiles = {
   'data/research_vault_v2.json': 'docs/data/research_vault_v2.json',
+  'data/category_schema.json': 'docs/data/category_schema.json',
   'data/concept_graph.json': 'docs/data/concept_graph.json',
   'data/promptotyping_v2.json': 'docs/data/promptotyping_v2.json',
+  'data/literature_landscape.json': 'docs/data/literature_landscape.json',
 };
 
 const dom = new JSDOM(readFileSync(join(docs, 'index.html'), 'utf8'), {
@@ -34,23 +36,12 @@ window.fetch = (url) => {
   return Promise.resolve({ ok: true, status: 200, json: () => Promise.resolve(JSON.parse(body)), text: () => Promise.resolve(body) });
 };
 
-// Minimal Fuse stub: substring match over the configured keys, Fuse-shaped result.
-window.Fuse = class {
-  constructor(list, opts) { this.list = list; this.keys = (opts && opts.keys) || []; }
-  search(q) {
-    const needle = String(q).toLowerCase();
-    return this.list
-      .filter((item) => this.keys.some((k) => String(item[k] || '').toLowerCase().includes(needle)))
-      .map((item) => ({ item }));
-  }
-};
-
 function inject(rel) {
   const el = window.document.createElement('script');
   el.textContent = readFileSync(join(root, rel), 'utf8');
   window.document.body.appendChild(el);
 }
-['docs/js/research-app.js', 'docs/js/kategorien.js', 'docs/js/wissensnetz.js', 'docs/js/wissenschat.js'].forEach(inject);
+['docs/js/research-app.js', 'docs/js/kategorien.js', 'docs/js/wissensnetz.js', 'docs/js/literaturbild.js', 'docs/js/wissenschat.js'].forEach(inject);
 
 // research-app initializes on DOMContentLoaded. jsdom fires that event once after
 // these scripts are appended, so the listener runs exactly once; dispatching it
@@ -111,7 +102,7 @@ await check('EC.navigateToPaper opens a paper by id', async () => {
 });
 
 await check('EC helpers behave', async () => {
-  if (EC.catLabel('Bias_Ungleichheit') !== 'Bias Ungleichheit') throw new Error('catLabel');
+  if (EC.catLabel('Bias_Ungleichheit') !== 'Bias & Ungleichheit') throw new Error('catLabel');
   const s = EC.paperStatus({ benchmark: { has_human: true, agreement: false }, human: { decision: 'Exclude' } });
   if (s.cls !== 'diverge') throw new Error('paperStatus cls ' + s.cls);
 });
@@ -129,6 +120,66 @@ await check('category explorer initializes on view switch', async () => {
   const card = doc.querySelector('.kategorie-card[data-cat]');
   card.dispatchEvent(new window.MouseEvent('click', { bubbles: true }));
   await waitFor(() => doc.querySelector('#kategorie-detail .kdetail-header') !== null, 'detail rendered');
+});
+
+await check('literature landscape renders verified annotation aggregates', async () => {
+  window.switchView('literaturbild');
+  await waitFor(() => doc.querySelectorAll('#literaturbild-root .lit-matrix-button').length > 0, 'literature matrix');
+  const progress = doc.querySelector('#literaturbild-root .lit-progress');
+  if (!progress || !progress.textContent.includes('10 / 326 annotiert')) throw new Error('wrong annotated total');
+  if (!progress.textContent.includes('7 Include')) throw new Error('wrong Include total');
+  if (!doc.querySelector('#literaturbild-root .lit-workspace > .lit-sidebar')) throw new Error('left control rail missing');
+  if (doc.querySelectorAll('#literaturbild-root .lit-viz').length !== 1) throw new Error('multiple visualizations visible');
+  if (doc.querySelector('#literaturbild-root .lit-stats')) throw new Error('legacy dashboard cards remain');
+  if (doc.querySelector('.header-stats .stat-sep')) throw new Error('inventory separators remain');
+  const visibleCopy = doc.querySelector('#literaturbild-root').textContent;
+  if (visibleCopy.includes('Die Ansicht verdichtet') || visibleCopy.includes('Mehrfachcodierungen sind zulässig')) {
+    throw new Error('removed explanatory copy remains visible');
+  }
+});
+
+await check('literature landscape matrix selection drills into grounded papers', async () => {
+  window.switchView('literaturbild');
+  const populated = Array.from(doc.querySelectorAll('.lit-matrix-button')).find((button) => !button.disabled);
+  if (!populated) throw new Error('no populated matrix cell');
+  populated.dispatchEvent(new window.MouseEvent('click', { bubbles: true }));
+  await waitFor(() => doc.querySelector('.lit-matrix-button.active') !== null, 'matrix selection');
+  if (doc.querySelector('.lit-matrix-button.active').getAttribute('aria-pressed') !== 'true') throw new Error('selection not announced');
+  const papers = doc.querySelectorAll('.lit-results .lit-paper');
+  if (!papers.length) throw new Error('selection has no paper drill-down');
+  const evidence = papers[0].querySelector('.lit-evidence-group blockquote');
+  if (!evidence || !evidence.textContent.trim()) throw new Error('drill-down has no Paper evidence');
+  doc.querySelector('.lit-matrix-button.active').dispatchEvent(new window.MouseEvent('click', { bubbles: true }));
+  if (doc.querySelector('.lit-matrix-button.active')) throw new Error('second click did not clear selection');
+  if (doc.querySelector('.lit-results')) throw new Error('paper drill-down remains after clearing selection');
+});
+
+await check('literature landscape switches to one compact analysis profile', async () => {
+  const profile = doc.querySelector('.lit-view-button[data-lit-view="profile"]');
+  profile.dispatchEvent(new window.MouseEvent('click', { bubbles: true }));
+  await waitFor(() => doc.querySelectorAll('.lit-bar-row').length > 0, 'analysis profile');
+  if (profile.getAttribute('aria-pressed') !== 'true') throw new Error('profile view not announced');
+  if (doc.querySelector('.lit-matrix')) throw new Error('matrix remains visible in profile view');
+  if (doc.querySelectorAll('#literaturbild-root .lit-viz').length !== 1) throw new Error('multiple profile views visible');
+  if (doc.querySelector('.lit-profile-field').hidden) throw new Error('analysis field selector hidden');
+});
+
+await check('literature landscape writes and restores its URL state', async () => {
+  const profileField = doc.getElementById('lit-profile-field');
+  profileField.value = 'AN_Bias_Axes';
+  profileField.dispatchEvent(new window.Event('change', { bubbles: true }));
+  await waitFor(() => window.location.hash.includes('litProfile=AN_Bias_Axes'), 'literature profile in hash');
+  const year = Array.from(doc.getElementById('lit-filter-year').options)
+    .map((option) => option.value).find((value) => value !== 'all');
+  if (!year) throw new Error('no literature year option');
+  setHash('#view=literaturbild&litView=profile&litYear=' + encodeURIComponent(year) +
+    '&litProfile=AN_Harm_Types');
+  await waitFor(() => EC.store.get().litProfile === 'AN_Harm_Types', 'literature state restored');
+  if (!doc.querySelector('.lit-view-button[data-lit-view="profile"]').classList.contains('active')) {
+    throw new Error('profile view not restored');
+  }
+  if (doc.getElementById('lit-filter-year').value !== year) throw new Error('year not restored');
+  if (profileField.value !== 'AN_Harm_Types') throw new Error('profile field not restored');
 });
 
 await check('chat UI builds without network', async () => {

@@ -21,7 +21,6 @@ human_categories:
   - Generative_KI
   - KI_Sonstige
   - Bias_Ungleichheit
-  - Diversitaet
   - Fairness
 agreement: agree
 ---
@@ -48,12 +47,6 @@ agreement: agree
 
 **LLM:** Include (Confidence: 0.92)
 **Human:** Include
-
-## Key Concepts
-
-- [[Algorithmic Discrimination]]
-- [[Reparative Justice in AI]]
-- [[Transformative Justice Framework]]
 
 ## Wissensdokument
 

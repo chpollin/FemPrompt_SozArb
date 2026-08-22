@@ -16,8 +16,10 @@ canonical numbers by a human-checked path instead of trusting the merged CSV.
 
 Run from the repo root:
     python src/replay/replay_round1.py
+    python src/replay/replay_round1.py --check-only
 """
 
+import argparse
 import csv
 import io
 import json
@@ -56,6 +58,18 @@ WORKFLOW_REASONS = {"Duplicate", "No_full_text", "Wrong_publication_type"}
 CONDITIONS = ["haiku", "haiku_kd", "sonnet", "sonnet_kd"]
 
 EPS = 1e-9
+
+
+def parse_args(argv=None):
+    """Parse the replay command-line interface."""
+    parser = argparse.ArgumentParser(
+        description="Rebuild and verify the retrospective round-1 benchmark.")
+    parser.add_argument(
+        "--check-only",
+        action="store_true",
+        help="Verify the replay without rewriting generated artifacts.",
+    )
+    return parser.parse_args(argv)
 
 
 def _force_utf8_stdout():
@@ -181,13 +195,18 @@ def two_by_two(pairs):
     pairs: list of (human_decision, llm_decision). Pairs with any non-binary
     decision (e.g. Unclear) are dropped from the 2x2 and counted separately.
     """
-    binary = [(h, l) for h, l in pairs if h in ("Include", "Exclude") and l in ("Include", "Exclude")]
+    binary = [
+        (human, llm)
+        for human, llm in pairs
+        if human in ("Include", "Exclude")
+        and llm in ("Include", "Exclude")
+    ]
     n = len(binary)
     dropped = len(pairs) - n
-    a = sum(1 for h, l in binary if h == "Include" and l == "Include")
-    b = sum(1 for h, l in binary if h == "Include" and l == "Exclude")
-    c = sum(1 for h, l in binary if h == "Exclude" and l == "Include")
-    d = sum(1 for h, l in binary if h == "Exclude" and l == "Exclude")
+    a = sum(1 for human, llm in binary if human == "Include" and llm == "Include")
+    b = sum(1 for human, llm in binary if human == "Include" and llm == "Exclude")
+    c = sum(1 for human, llm in binary if human == "Exclude" and llm == "Include")
+    d = sum(1 for human, llm in binary if human == "Exclude" and llm == "Exclude")
     if n == 0:
         return {"n": 0, "dropped_non_binary": dropped}
     po = (a + d) / n
@@ -261,7 +280,7 @@ def build_flow_model(human, llm, papers, provenance):
     union = human_keys | llm_keys
 
     dup_yes = sum(1 for v in papers.values() if v["is_duplicate"] == "Yes")
-    has_ha_yes = sum(1 for v in papers.values() if v["has_ha"] == "Yes")
+    has_ha_keys = {key for key, value in papers.items() if value["has_ha"] == "Yes"}
 
     human_incl = sum(1 for v in human.values() if v["decision"] == "Include")
     human_excl = sum(1 for v in human.values() if v["decision"] == "Exclude")
@@ -283,16 +302,12 @@ def build_flow_model(human, llm, papers, provenance):
         else:
             out_of_vocab[code] += 1
 
-    # Resolved known issue: stray Has_HA flag on 2YS85B49 in papers_full, a key
-    # absent from the human CSV; papers_full Has_HA=Yes overcounts human
-    # decisions on the corpus by exactly this one row.
-    stray = "2YS85B49"
-    assert stray in papers, f"{stray} expected in papers_full"
-    assert papers[stray]["has_ha"] == "Yes", f"{stray} expected Has_HA=Yes"
-    assert stray not in human_keys, f"{stray} expected absent from human CSV"
-    human_on_corpus = len(paired)
-    assert has_ha_yes == human_on_corpus + 1, (
-        f"Has_HA=Yes ({has_ha_yes}) should be paired ({human_on_corpus}) + 1 stray"
+    expected_has_ha = human_keys & corpus_keys
+    missing_flags = sorted(expected_has_ha - has_ha_keys)
+    extra_flags = sorted(has_ha_keys - expected_has_ha)
+    assert not missing_flags and not extra_flags, (
+        "papers_full Has_HA differs from human_assessment.csv: "
+        f"missing={missing_flags}, extra={extra_flags}"
     )
 
     return {
@@ -331,15 +346,12 @@ def build_flow_model(human, llm, papers, provenance):
         },
         "llm_decisions": {"include": llm_incl, "exclude": llm_excl, "total": len(llm_keys)},
         "included_per_track": {"human": human_incl, "llm_10k": llm_incl},
-        "known_resolved_issue": {
-            "key": stray,
-            "description": ("Stray Has_HA flag in papers_full.csv; the key is absent "
-                            "from the human CSV, so there is no missing human decision. "
-                            "papers_full Has_HA=Yes overcounts corpus human decisions by 1."),
-            "has_ha_in_papers_full": papers[stray]["has_ha"],
-            "present_in_human_csv": False,
-            "has_ha_yes_count": has_ha_yes,
-            "human_decisions_on_corpus": human_on_corpus,
+        "human_assessment_flag_check": {
+            "status": "consistent",
+            "has_ha_yes_count": len(has_ha_keys),
+            "human_decisions_on_corpus": len(expected_has_ha),
+            "missing_flags": missing_flags,
+            "extra_flags": extra_flags,
         },
     }, paired
 
@@ -420,7 +432,22 @@ def build_condition_contrast(human, provenance):
     }
 
 
-def main():
+def write_replay_artifacts(flow_model, agreement_replay, *, check_only=False):
+    """Write replay outputs unless the caller requested a read-only check."""
+    if check_only:
+        return []
+
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    paths = [OUT_DIR / "flow_model.json", OUT_DIR / "agreement_replay.json"]
+    paths[0].write_text(
+        json.dumps(flow_model, indent=2, ensure_ascii=False), encoding="utf-8")
+    paths[1].write_text(
+        json.dumps(agreement_replay, indent=2, ensure_ascii=False), encoding="utf-8")
+    return paths
+
+
+def main(argv=None):
+    args = parse_args(argv)
     _force_utf8_stdout()
 
     human_path = ASSESS / "human_assessment.csv"
@@ -487,11 +514,8 @@ def main():
         },
     }
 
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
-    (OUT_DIR / "flow_model.json").write_text(
-        json.dumps(flow_model, indent=2, ensure_ascii=False), encoding="utf-8")
-    (OUT_DIR / "agreement_replay.json").write_text(
-        json.dumps(agreement_replay, indent=2, ensure_ascii=False), encoding="utf-8")
+    written_paths = write_replay_artifacts(
+        flow_model, agreement_replay, check_only=args.check_only)
 
     # Console summary.
     print("=" * 68)
@@ -512,9 +536,9 @@ def main():
     print(f"Human exclusion reasons (controlled): {reasons['controlled_vocabulary']}")
     if reasons["out_of_vocabulary"]:
         print(f"  OUT-OF-VOCABULARY (surfaced): {reasons['out_of_vocabulary']}")
-    print(f"Resolved known issue: {flow_model['known_resolved_issue']['key']} "
-          f"(Has_HA=Yes count {flow_model['known_resolved_issue']['has_ha_yes_count']} = "
-          f"paired {len(paired_sorted)} + 1 stray)")
+    flag_check = flow_model["human_assessment_flag_check"]
+    print(f"Human-assessment flags: {flag_check['status']} "
+          f"({flag_check['has_ha_yes_count']} corpus records)")
     fd = full_decision
     print("-" * 68)
     print(f"FULL     n={fd['n']} po={fd['overall_agreement']} kappa={fd['cohens_kappa']} "
@@ -538,8 +562,11 @@ def main():
             print(f"  {cond:<10} full kappa={d['full']['kappa']} po={d['full']['po']} | "
                   f"content kappa={d['content_only']['kappa']} po={d['content_only']['po']}")
     print("-" * 68)
-    print(f"Wrote {OUT_DIR / 'flow_model.json'}")
-    print(f"Wrote {OUT_DIR / 'agreement_replay.json'}")
+    if written_paths:
+        for path in written_paths:
+            print(f"Wrote {path}")
+    else:
+        print("CHECK-ONLY: generated replay artifacts were not rewritten")
     print("PASS: replay reproduces agreement_metrics.json (decision matrix, decision kappa, ten per-category kappas) within 1e-9")
 
 

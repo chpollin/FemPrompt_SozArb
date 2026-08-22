@@ -26,7 +26,6 @@ human_categories:
   - KI_Sonstige
   - Soziale_Arbeit
   - Bias_Ungleichheit
-  - Diversitaet
   - Feministisch
   - Fairness
 agreement: agree
@@ -54,11 +53,6 @@ agreement: agree
 
 **LLM:** Include (Confidence: 0.92)
 **Human:** Include
-
-## Key Concepts
-
-- [[Algorithmic Bias in Welfare Systems]]
-- [[Intersectional AI Fairness]]
 
 ## Wissensdokument
 

@@ -20,6 +20,15 @@ llm_categories:
   - Diversitaet
   - Feministisch
   - Fairness
+human_decision: Include
+human_categories:
+  - Generative_KI
+  - KI_Sonstige
+  - Bias_Ungleichheit
+  - Gender
+  - Feministisch
+  - Fairness
+agreement: agree
 ---
 
 # Tech workers' perspectives on ethical issues in AI development: Foregrounding feminist approaches
@@ -43,6 +52,7 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Include (Confidence: 0.95)
+**Human:** Include
 
 ## Wissensdokument
 

@@ -23,7 +23,6 @@ human_categories:
   - Generative_KI
   - Prompting
   - KI_Sonstige
-  - Diversitaet
 agreement: agree
 ---
 

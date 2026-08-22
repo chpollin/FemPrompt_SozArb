@@ -24,7 +24,6 @@ human_categories:
   - KI_Sonstige
   - Bias_Ungleichheit
   - Gender
-  - Diversitaet
 agreement: disagree
 ---
 
@@ -62,18 +61,9 @@ agreement: disagree
 | Soziale_Arbeit | Nein | Nein |  |
 | Bias_Ungleichheit | Ja | Ja |  |
 | Gender | Ja | Ja |  |
-| Diversitaet | Ja | Ja |  |
+| Diversitaet | Nein | Ja | X |
 | Feministisch | Nein | Ja | X |
 | Fairness | Nein | Ja | X |
-
-> Siehe [[Divergenz West_2023_Discriminating_Systems_Gender,_Race,_and_Power_in]] fuer detaillierte Analyse
-
-
-## Key Concepts
-
-- [[Algorithmic Bias]]
-- [[Algorithmic Fairness]]
-- [[Intersectional Feminism in AI]]
 
 ## Wissensdokument
 

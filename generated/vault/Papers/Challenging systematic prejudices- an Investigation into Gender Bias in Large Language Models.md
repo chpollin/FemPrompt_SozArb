@@ -40,11 +40,6 @@ llm_categories:
 
 **LLM:** Include (Confidence: 0.95)
 
-## Key Concepts
-
-- [[Gender Bias in Large Language Models]]
-- [[Reinforcement Learning from Human Feedback (RLHF)]]
-
 ## Wissensdokument
 
 # Challenging Systematic Prejudices: An Investigation into Gender Bias in Large Language Models

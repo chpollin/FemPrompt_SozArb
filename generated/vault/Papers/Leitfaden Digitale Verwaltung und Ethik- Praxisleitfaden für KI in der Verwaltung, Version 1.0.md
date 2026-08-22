@@ -18,6 +18,15 @@ llm_categories:
   - AI_Literacies
   - KI_Sonstige
   - Bias_Ungleichheit
+human_decision: Exclude
+human_categories:
+  - Generative_KI
+  - Prompting
+  - KI_Sonstige
+  - Bias_Ungleichheit
+  - Gender
+  - Fairness
+agreement: agree
 ---
 
 # Leitfaden Digitale Verwaltung und Ethik: Praxisleitfaden für KI in der Verwaltung, Version 1.0
@@ -32,13 +41,7 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Exclude (Confidence: 0.85)
-
-## Key Concepts
-
-- [[AI Literacy]]
-- [[Algorithmic Fairness]]
-- [[Digital Sovereignty]]
-- [[Inclusive AI Design]]
+**Human:** Exclude
 
 ## Wissensdokument
 

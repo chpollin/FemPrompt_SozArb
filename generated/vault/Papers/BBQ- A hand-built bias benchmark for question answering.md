@@ -26,7 +26,6 @@ human_categories:
   - KI_Sonstige
   - Bias_Ungleichheit
   - Gender
-  - Diversitaet
   - Fairness
 agreement: agree
 ---
@@ -53,10 +52,6 @@ agreement: agree
 
 **LLM:** Include (Confidence: 0.85)
 **Human:** Include
-
-## Key Concepts
-
-- [[Representational Harm]]
 
 ## Wissensdokument
 

@@ -44,13 +44,6 @@ agreement: agree
 **LLM:** Exclude (Confidence: 0.95)
 **Human:** Exclude
 
-## Key Concepts
-
-- [[AI Competency Framework]]
-- [[AI Literacy]]
-- [[Algorithmic Fairness]]
-- [[Ethical AI Integration]]
-
 ## Wissensdokument
 
 # Learning About AI: A Systematic Review of Reviews on AI Literacy

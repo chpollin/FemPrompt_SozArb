@@ -219,13 +219,13 @@ def test_filename_does_not_override_a_different_substantive_title() -> None:
     assert bf.verified_source(paper, source, "clean", metadata) == (None, "mismatch")
 
 
-def test_filename_can_confirm_a_related_publication_title() -> None:
+def test_corrected_publication_title_matches_verified_source() -> None:
     paper = _real_paper("T8R8RKX9")
     knowledge_doc = bf.DOCS / str(paper["knowledge_doc"])
     metadata = bf.embedded_source_metadata(knowledge_doc)
     source = bf.CLEAN_DIR / str(metadata["source_file"])
 
-    assert not bf.titles_match(str(paper["title"]), bf.source_titles(source))
+    assert bf.titles_match(str(paper["title"]), bf.source_titles(source))
     assert bf.titles_corroborate(str(paper["title"]), bf.source_titles(source))
     assert bf.verified_source(paper, source, "clean", metadata) == (source, "clean")
 

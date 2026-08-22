@@ -25,7 +25,6 @@ human_categories:
   - KI_Sonstige
   - Bias_Ungleichheit
   - Gender
-  - Diversitaet
   - Feministisch
   - Fairness
 agreement: disagree
@@ -65,19 +64,9 @@ agreement: disagree
 | Soziale_Arbeit | Nein | Nein |  |
 | Bias_Ungleichheit | Ja | Ja |  |
 | Gender | Ja | Ja |  |
-| Diversitaet | Ja | Ja |  |
+| Diversitaet | Nein | Ja | X |
 | Feministisch | Ja | Ja |  |
 | Fairness | Ja | Ja |  |
-
-> Siehe [[Divergenz D'Ignazio_2024_Data_Feminism_for_AI]] fuer detaillierte Analyse
-
-
-## Key Concepts
-
-- [[Algorithmic Fairness]]
-- [[Data Feminism]]
-- [[Gender Bias in NLP]]
-- [[Intersectional Feminism]]
 
 ## Wissensdokument
 

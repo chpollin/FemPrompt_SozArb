@@ -61,13 +61,6 @@ agreement: disagree
 | Feministisch | Nein | Nein |  |
 | Fairness | Nein | Ja | X |
 
-> Siehe [[Divergenz van Toorn_2024_Introduction_to_the_digital_welfare_state]] fuer detaillierte Analyse
-
-
-## Key Concepts
-
-- [[Intersectional Algorithmic Bias]]
-
 ## Wissensdokument
 
 # Introduction to the digital welfare state: Contestations, considerations and entanglements

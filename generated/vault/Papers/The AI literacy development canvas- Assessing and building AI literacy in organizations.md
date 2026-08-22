@@ -13,6 +13,14 @@ llm_decision: Exclude
 llm_confidence: 0.85
 llm_categories:
   - AI_Literacies
+human_decision: Include
+human_categories:
+  - AI_Literacies
+  - Generative_KI
+  - Prompting
+  - Bias_Ungleichheit
+  - Fairness
+agreement: disagree
 ---
 
 # The AI literacy development canvas: Assessing and building AI literacy in organizations
@@ -36,12 +44,22 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Exclude (Confidence: 0.85)
+**Human:** Include
 
-## Key Concepts
+**Kategorie-Vergleich (bei Divergenz):**
 
-- [[AI Literacy]]
-- [[Algorithmic Bias]]
-- [[Algorithmic Fairness]]
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Ja | Ja |  |
+| Generative_KI | Ja | Nein | X |
+| Prompting | Ja | Nein | X |
+| KI_Sonstige | Nein | Nein |  |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Ja | Nein | X |
+| Gender | Nein | Nein |  |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Nein | Nein |  |
+| Fairness | Ja | Nein | X |
 
 ## Wissensdokument
 

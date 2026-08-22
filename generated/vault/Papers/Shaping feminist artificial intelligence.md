@@ -59,14 +59,6 @@ agreement: disagree
 | Feministisch | Nein | Ja | X |
 | Fairness | Nein | Nein |  |
 
-> Siehe [[Divergenz Toupin_2024_Shaping_feminist_artificial_intelligence]] fuer detaillierte Analyse
-
-
-## Key Concepts
-
-- [[Feminist AI]]
-- [[Intersectional Algorithmic Bias]]
-
 ## Wissensdokument
 
 # Shaping feminist artificial intelligence

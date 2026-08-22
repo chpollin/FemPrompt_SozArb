@@ -17,6 +17,11 @@ llm_categories:
   - KI_Sonstige
   - Soziale_Arbeit
   - Bias_Ungleichheit
+human_decision: Exclude
+human_categories:
+  - KI_Sonstige
+  - Soziale_Arbeit
+agreement: disagree
 ---
 
 # Automated government benefits and welfare surveillance
@@ -40,10 +45,22 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Include (Confidence: 0.92)
+**Human:** Exclude
 
-## Key Concepts
+**Kategorie-Vergleich (bei Divergenz):**
 
-- [[Algorithmic Bias in Social Services]]
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Ja | Ja |  |
+| Soziale_Arbeit | Ja | Ja |  |
+| Bias_Ungleichheit | Nein | Ja | X |
+| Gender | Nein | Nein |  |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Nein |  |
 
 ## Wissensdokument
 

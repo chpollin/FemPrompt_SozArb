@@ -6,7 +6,7 @@
 'use strict';
 
 const EC = window.EC;
-const API_KEY_STORAGE = 'femPrompt_geminiApiKey';
+const API_KEY_STORAGE = 'femPrompt_geminiApiKey/session';
 const MODEL = 'gemini-3-flash-preview';
 const API_BASE = 'https://generativelanguage.googleapis.com/v1beta';
 const MAX_CONTEXT_PAPERS = 30;
@@ -23,7 +23,7 @@ window.initWissensChat = function() {
     const container = document.getElementById('chat-container');
     if (!container) return;
 
-    const savedKey = localStorage.getItem(API_KEY_STORAGE) || window.GEMINI_API_KEY || '';
+    const savedKey = sessionStorage.getItem(API_KEY_STORAGE) || '';
     container.innerHTML = buildChatUI(savedKey);
     bindChatEvents();
 };
@@ -39,7 +39,7 @@ function buildChatUI(savedKey) {
             '</a>' +
         '</div>' +
         '<p class="chat-key-note">' +
-            '<i class="fas fa-lock"></i> Der Key bleibt lokal im Browser und wird direkt an die Google API gesendet.' +
+            '<i class="fas fa-lock"></i> Der Key bleibt in diesem Browser-Tab. Frage und ausgewählte Forschungsdaten werden direkt an die Google API gesendet.' +
         '</p>' +
     '</form>' +
     '<div class="chat-messages" id="chat-messages">' +
@@ -85,7 +85,7 @@ function bindChatEvents() {
     });
 
     keyInput.addEventListener('change', function() {
-        localStorage.setItem(API_KEY_STORAGE, this.value.trim());
+        sessionStorage.setItem(API_KEY_STORAGE, this.value.trim());
     });
 
     document.querySelectorAll('.chat-suggestion').forEach(function(btn) {
@@ -117,7 +117,7 @@ function sendMessage() {
         showError('Bitte geben Sie einen Gemini API Key ein.');
         return;
     }
-    localStorage.setItem(API_KEY_STORAGE, apiKey);
+    sessionStorage.setItem(API_KEY_STORAGE, apiKey);
 
     messages.push({ role: 'user', text: question });
     renderMessages();

@@ -62,13 +62,6 @@ agreement: disagree
 | Feministisch | Nein | Nein |  |
 | Fairness | Nein | Nein |  |
 
-> Siehe [[Divergenz Yan_2024_Promises_and_challenges_of_generative_artificial]] fuer detaillierte Analyse
-
-
-## Key Concepts
-
-- [[AI Literacy]]
-
 ## Wissensdokument
 
 # Promises and challenges of generative artificial intelligence for human learning

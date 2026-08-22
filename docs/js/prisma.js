@@ -29,33 +29,39 @@ const FS_SUPPORTED = typeof window.showDirectoryPicker === 'function';
 
 // Constants
 
-const TECH_CATS = ['AI_Literacies', 'Generative_KI', 'Prompting', 'KI_Sonstige'];
-const SOCIAL_CATS = ['Soziale_Arbeit', 'Bias_Ungleichheit', 'Gender', 'Diversitaet', 'Feministisch', 'Fairness'];
-const ALL_CATS = TECH_CATS.concat(SOCIAL_CATS);
+// Populated once from docs/data/category_schema.json. The arrays and maps retain
+// their identity so the production UI and the exposed test surface share one schema.
+const TECH_CATS = [];
+const SOCIAL_CATS = [];
+const ALL_CATS = [];
+const CAT_LABELS = {};
+const CAT_DEFS = {};
+const EXCLUSION_REASONS = [];
 
-const CAT_LABELS = {
-    'AI_Literacies': 'AI Literacies', 'Generative_KI': 'Generative KI',
-    'Prompting': 'Prompting', 'KI_Sonstige': 'KI Sonstige',
-    'Soziale_Arbeit': 'Soziale Arbeit', 'Bias_Ungleichheit': 'Bias & Ungleichheit',
-    'Gender': 'Gender', 'Diversitaet': 'Diversität',
-    'Feministisch': 'Feministisch', 'Fairness': 'Fairness'
-};
+function applyCategorySchema() {
+    const schema = window.__CATEGORY_SCHEMA__ ||
+        (EC && EC.getCategorySchema ? EC.getCategorySchema() : null);
+    const categories = schema && Array.isArray(schema.categories) ? schema.categories : [];
+    const groups = schema && schema.groups ? schema.groups : {};
+    if (!categories.length || !Array.isArray(groups.object) || !Array.isArray(groups.perspective) ||
+            !Array.isArray(schema.exclusion_reasons)) {
+        throw new Error('Kategorieschema nicht geladen (docs/data/category_schema.json).');
+    }
+    TECH_CATS.splice(0, TECH_CATS.length, ...groups.object);
+    SOCIAL_CATS.splice(0, SOCIAL_CATS.length, ...groups.perspective);
+    ALL_CATS.splice(0, ALL_CATS.length, ...TECH_CATS, ...SOCIAL_CATS);
+    EXCLUSION_REASONS.splice(0, EXCLUSION_REASONS.length, ...schema.exclusion_reasons);
+    Object.keys(CAT_LABELS).forEach(function(key) { delete CAT_LABELS[key]; });
+    Object.keys(CAT_DEFS).forEach(function(key) { delete CAT_DEFS[key]; });
+    categories.forEach(function(category) {
+        CAT_LABELS[category.key] = category.label;
+        CAT_DEFS[category.key] = category.definition;
+    });
+}
 
-// Category definitions (hover tooltips on the chips), ported from the design seed.
-const CAT_DEFS = {
-    'AI_Literacies': 'Kompetenzen, um KI-Systeme zu verstehen, zu nutzen und kritisch zu reflektieren.',
-    'Generative_KI': 'Generative KI / LLMs, die Text, Bild oder Code erzeugen (ChatGPT, Claude, Gemini).',
-    'Prompting': 'Gestaltung, Engineering oder Untersuchung von Prompts als Schnittstelle zu generativen Modellen.',
-    'KI_Sonstige': 'Andere KI/ML-Verfahren: Klassifikatoren, Empfehlungssysteme, Computer Vision.',
-    'Soziale_Arbeit': 'Soziale Arbeit als Profession, Praxis, Ausbildung oder Institution.',
-    'Bias_Ungleichheit': 'Bias, Ungleichheit oder Diskriminierung, durch soziotechnische Systeme erzeugt oder verstärkt.',
-    'Gender': 'Gender als analytische Kategorie: geschlechtsbezogene Effekte, Repräsentation, Identität.',
-    'Diversitaet': 'Diversität jenseits von Gender: Race, Klasse, Behinderung, Migration.',
-    'Feministisch': 'Explizit feministische Theorie, Epistemologie oder Methodologie.',
-    'Fairness': 'Fairness, Gerechtigkeit oder Equity als normatives Kriterium für Systeme.'
-};
-
-const EXCLUSION_REASONS = ['Duplicate', 'Not_relevant_topic', 'Wrong_publication_type', 'No_full_text', 'Language'];
+// The headless harness injects the built schema before evaluating this file and
+// exercises pure functions without starting the full application.
+if (window.__CATEGORY_SCHEMA__) applyCategorySchema();
 
 const MODEL_DEFAULT = {
     name: 'Claude Haiku 4.5', id: 'claude-haiku-4-5', date: '2026-03-15',
@@ -911,8 +917,9 @@ function renderMarkdown(md) {
 
 window.initializePrisma = function() {
     if (initialized) return;
-    initialized = true;
     EC = window.EC;
+    applyCategorySchema();
+    initialized = true;
     papers = (EC && EC.getAllPapers) ? (EC.getAllPapers() || []) : [];
     const query = new URLSearchParams(window.location.search);
     trialMode = query.get('trial') === '1';

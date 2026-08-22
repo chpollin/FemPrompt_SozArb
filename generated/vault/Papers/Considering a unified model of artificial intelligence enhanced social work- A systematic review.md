@@ -16,6 +16,12 @@ llm_categories:
   - AI_Literacies
   - KI_Sonstige
   - Soziale_Arbeit
+human_decision: Include
+human_categories:
+  - KI_Sonstige
+  - Soziale_Arbeit
+  - Bias_Ungleichheit
+agreement: agree
 ---
 
 # Considering a unified model of artificial intelligence enhanced social work: A systematic review
@@ -39,12 +45,7 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Include (Confidence: 0.95)
-
-## Key Concepts
-
-- [[AI Literacy in Social Work]]
-- [[Algorithmic Bias in Social Services]]
-- [[Predictive Analytics in Child Welfare]]
+**Human:** Include
 
 ## Wissensdokument
 

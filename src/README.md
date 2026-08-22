@@ -24,7 +24,7 @@ corpus/zotero_export.json
   → acquire/postprocess_markdown.py                             → generated/markdown_clean/
   → distill/markdown_reviewer.html (human review)
   → distill/distill_knowledge.py (3-stage SKE)                  → generated/distilled/
-  → publish/generate_vault_v2.py                                → generated/vault/, docs/vault/Papers/
+  → publish/generate_vault_v2.py                                → generated/vault/Papers/, docs/downloads/vault.zip
   → publish/generate_docs_data.py, generate_promptotyping_data_v2.py,
     build_screening_index.py                                    → docs/data/
 ```

@@ -1,7 +1,16 @@
 {
   "meta": {
-    "generated": "2026-06-30",
+    "source_fingerprint": "sha256:4d860c09fae1121b8d2a1b0a7ae9f137fd9a200e86e1c191003ec47f3f5ed95a",
     "total_papers": 326,
+    "unique_works": 258,
+    "knowledge_linked_records": 242,
+    "distinct_knowledge_docs": 183,
+    "knowledge_coverage": {
+      "linked": 242,
+      "fulltext_ready": 30,
+      "identity_unresolved": 11,
+      "source_missing": 43
+    },
     "papers_with_human": 291,
     "benchmark_papers": 291,
     "kappa_overall": 0.0561,
@@ -105,6 +114,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "record:BHXDU7VM",
+      "identity_basis": "record",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -146,6 +158,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/What are artificial intelligence literacy and competency- A comprehensive framework to support them.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1016/j.caeo.2024.100171",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -206,6 +221,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/The AI literacy development canvas- Assessing and building AI literacy in organizations.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1016/j.bushor.2025.10.001",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -267,6 +285,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Artificial Intelligence Competence Needs for Youth Workers.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.5281/zenodo.11525357",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -325,10 +346,13 @@
       "year": 2023,
       "doi": "10.1186/s40594-023-00418-7",
       "url": "https://stemeducationjournal.springeropen.com/articles/10.1186/s40594-023-00418-7",
-      "abstract": "Abstract\r\n            The successful irruption of AI-based technology in our daily lives has led to a growing educational, social, and political interest in training citizens in AI. Education systems now need to train students at the K-12 level to live in a society where they must interact with AI. Thus, AI literacy is a pedagogical and cognitive challenge at the K-12 level. This study aimed to understand how AI is being integrated into K-12 education worldwide. We conducted a search process fol",
+      "abstract": "Abstract\n            The successful irruption of AI-based technology in our daily lives has led to a growing educational, social, and political interest in training citizens in AI. Education systems now need to train students at the K-12 level to live in a society where they must interact with AI. Thus, AI literacy is a pedagogical and cognitive challenge at the K-12 level. This study aimed to understand how AI is being integrated into K-12 education worldwide. We conducted a search process foll",
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/AI literacy in K-12- a systematic literature review.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1186/s40594-023-00418-7",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -388,6 +412,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Less knowledge, more trust- Exploring potentially uncritical attitudes towards AI in higher education.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.17471/2499-4324/1337",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -445,6 +472,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/A Competency Framework for AI Literacy- Variations by Different Learner Groups and an Implied Learning Pathway.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1111/bjet.13556",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -506,6 +536,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/AI literacy and competency- definitions, frameworks, development and future research directions.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1080/10494820.2025.2514372",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -567,6 +600,9 @@
       "item_type": "book",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "record:XCS4YCQH",
+      "identity_basis": "record",
       "llm": {
         "decision": "Exclude",
         "categories": [],
@@ -616,10 +652,13 @@
       "year": 2023,
       "doi": "10.1371/journal.pdig.0000279",
       "url": "https://dx.plos.org/10.1371/journal.pdig.0000279",
-      "abstract": "Introduction\r\n              Harnessing new digital technologies can improve access to health care but can also widen the health divide for those with poor digital literacy. This scoping review aims to assess the current situation of low digital health literacy in terms of its definition, reach, impact on health and interventions for its mitigation.\r\n            \r\n            \r\n              Methods\r\n              A comprehensive literature search strategy was composed by a qualified medical libr",
+      "abstract": "Introduction\n              Harnessing new digital technologies can improve access to health care but can also widen the health divide for those with poor digital literacy. This scoping review aims to assess the current situation of low digital health literacy in terms of its definition, reach, impact on health and interventions for its mitigation.\n            \n            \n              Methods\n              A comprehensive literature search strategy was composed by a qualified medical librarian",
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Digital literacy as a new determinant of health- A scoping review.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1371/journal.pdig.0000279",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -675,10 +714,13 @@
       "year": 2022,
       "doi": "10.1186/s40561-022-00204-y",
       "url": "https://slejournal.springeropen.com/articles/10.1186/s40561-022-00204-y",
-      "abstract": "Abstract\r\n            The purpose of this study is to discover the main themes and categories of the research studies regarding digital literacy. To serve this purpose, the databases of WoS/Clarivate Analytics, Proquest Central, Emerald Management Journals, Jstor Business College Collections and Scopus/Elsevier were searched with four keyword-combinations and final forty-three articles were included in the dataset. The researchers applied a systematic literature review method to the dataset. The",
+      "abstract": "Abstract\n            The purpose of this study is to discover the main themes and categories of the research studies regarding digital literacy. To serve this purpose, the databases of WoS/Clarivate Analytics, Proquest Central, Emerald Management Journals, Jstor Business College Collections and Scopus/Elsevier were searched with four keyword-combinations and final forty-three articles were included in the dataset. The researchers applied a systematic literature review method to the dataset. The ",
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/A systematic review on digital literacy.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1186/s40561-022-00204-y",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [],
@@ -734,6 +776,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/A Literature Review of Digital Literacy over Two Decades.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1155/2022/2533413",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -789,6 +834,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/AI literacy for users – A comprehensive review and future research directions of learning methods, components, and effects.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1016/j.chbah.2024.100062",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -851,6 +899,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Conceptualizing AI literacy- An exploratory review.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1016/j.caeai.2021.100041",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -912,6 +963,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Evaluation of an artificial intelligence literacy course for university students with diverse study backgrounds.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1016/j.caeai.2021.100026",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -971,6 +1025,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Measuring user competence in using artificial intelligence- validity and reliability of artificial intelligence literacy scale.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1080/0144929x.2022.2072768",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -1029,6 +1086,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Development of the “Scale for the assessment of non-experts’ AI literacy” – An exploratory factor analysis.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1016/j.chbr.2023.100338",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -1087,6 +1147,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Imagination, Algorithms and News- Developing AI Literacy for Journalism.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1080/21670811.2022.2119152",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -1147,6 +1210,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Developing an artificial intelligence literacy framework- Evaluation of a literacy course for senior secondary students using a project-based learning approach.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1016/j.caeai.2024.100214",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -1206,6 +1272,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "fulltext_ready",
+      "work_id": "doi:10.1080/14703297.2024.2332744",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -1265,6 +1334,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/GLAT- The generative AI literacy assessment test.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1016/j.caeai.2025.100436",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -1327,6 +1399,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/In search of artificial intelligence (AI) literacy in teacher education- A scoping review.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1016/j.caeo.2024.100169",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -1387,6 +1462,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "fulltext_ready",
+      "work_id": "doi:10.24251/hicss.2023.021",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -1445,6 +1523,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Promises and challenges of generative artificial intelligence for human learning.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1038/s41562-024-02004-5",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -1505,6 +1586,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Conceptualizing AI literacy- An exploratory review.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1016/j.caeai.2021.100041",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -1566,6 +1650,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "doi:10.1080/0960085x.2021.1934130",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -1610,6 +1697,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Recommendations for social work researchers and journal editors on the use of generative AI and large language models.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1086/726021",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -1653,6 +1743,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "doi:10.1093/bjsw/bcab168",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -1695,6 +1788,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "doi:10.1016/j.childyouth.2023.107229",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -1736,6 +1832,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "record:NSI6S5QE",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -1778,6 +1877,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "doi:10.1145/3491102.3501831",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -1821,6 +1923,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "doi:10.1177/0950017020950021",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [],
@@ -1859,6 +1964,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "doi:10.3390/ai4010003",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -1901,6 +2009,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "doi:10.1145/3593013.3594094",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -1945,6 +2056,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "doi:10.1177/20539517211020332",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -1986,6 +2100,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "doi:10.1080/1369118x.2021.1934069",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -2029,6 +2146,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "doi:10.3390/socsci8100281",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -2072,7 +2192,10 @@
       "abstract": "Invited paper exploring opportunities and ethical challenges of deploying ChatGPT and large language models specifically for social work science. Describes potential uses of ChatGPT in social work research while examining critical ethical concerns related to algorithmic bias, data quality, and risk of replacing human expertise with AI-generated content. Offers preliminary recommendations for ethical ChatGPT use in social work research, emphasizing need for researchers to critically evaluate AI o",
       "item_type": "journalarticle",
       "journal": "",
-      "knowledge_doc": "vault/Papers/ChatGPT for social work science- Ethical challenges and opportunities.md",
+      "knowledge_doc": "vault/Papers/ChatGPT for Social Work Science- Ethical Challenges and Opportunities.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1086/726042",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -2115,7 +2238,10 @@
       "abstract": "Explores tensions between training social workers for technologically-driven environments and engaging students in critical theories acknowledging unequal power distributions that technological change reinforces. Introduces algorithmic literacy centered on understanding critical limitations of algorithmic decision-making systems. Argues that adding social work subjects on ADM alone proves insufficient; students need opportunities to develop algorithmic literacy enabling them to ask appropriate q",
       "item_type": "journalarticle",
       "journal": "",
-      "knowledge_doc": "vault/Papers/Algorithmic decision-making in social work practice and pedagogy- Confronting the competency-critique dilemma.md",
+      "knowledge_doc": "vault/Papers/Algorithmic decision-making in social work practice and pedagogy- confronting the competency-critique dilemma.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1080/02615479.2023.2195425",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -2159,6 +2285,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Artificial intelligence in social work- Emerging ethical issues.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.55521/10-020-205",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -2204,6 +2333,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "doi:10.3389/fdgth.2023.1133987",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -2244,6 +2376,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Ethical issues related to the use of technology in social work practice- A systematic review.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1177/21582440241274842",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -2303,6 +2438,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Automated government benefits and welfare surveillance.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Dencik_2024_Automated_government_benefits_and_welfare.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -2363,6 +2501,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/Coded injustice- Surveillance and discrimination in Denmark's automated welfare state.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Amnesty International_2024_Coded_injustice_Surveillance_and_discrimination.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -2427,6 +2568,9 @@
       "item_type": "booksection",
       "journal": "",
       "knowledge_doc": "vault/Papers/Decision support and algorithmic support- The construction of algorithms and professional discretion in social work.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Meilvang_2024_Decision_support_and_algorithmic_support_The.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -2489,6 +2633,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Introduction to the digital welfare state- Contestations, considerations and entanglements.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1177/14407833241260890",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -2548,6 +2695,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Exploring machine learning to support decision-making for placement stabilization and preservation in child welfare.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1007/s10826-024-02993-x",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -2611,6 +2761,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Clinical trial of an LLM-based conversational AI psychotherapy.md",
+      "knowledge_coverage": "linked",
+      "work_id": "record:E4G328PD",
+      "identity_basis": "record",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -2668,6 +2821,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/AI implementation science for social issues- Pitfalls and tips.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.2188/jea.je20210380",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -2728,6 +2884,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/-It happened to be the perfect thing-- Experiences of generative AI chatbots for mental health.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1038/s44184-024-00097-4",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -2788,6 +2947,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/AI for impact- The PRISM framework for responsible AI in social innovation.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:World Economic Forum_2024_AI_for_impact_The_PRISM_framework_for_responsible.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -2850,6 +3012,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "record:7QQV7R9S",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -2914,6 +3079,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": "vault/Papers/Failing our youngest- On the biases, pitfalls, and risks in a decision support algorithm used for child protection.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1145/3630106.3658906",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -2979,6 +3147,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": "vault/Papers/Improving human-AI partnerships in child welfare- Understanding worker practices, challenges, and desires for algorithmic decision support.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1145/3491102.3517439",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -3041,6 +3212,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": "vault/Papers/ReflectAI- Design and evaluation of an AI coach to support public servants' self-reflection.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1007/978-3-032-02515-9_7",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -3101,6 +3275,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "fulltext_ready",
+      "work_id": "doi:10.1007/s10560-023-00931-2",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -3164,7 +3341,10 @@
       "abstract": "Editorial in flagship journal Social Work providing critical reflection on ChatGPT's introduction and implications for social work practice. Addresses how ChatGPT, built on natural language processing, responds to prompts and generates text responses. Notes social work's historical reluctance to embrace new technologies and positions ChatGPT as opportunity to reflect on strategies promoting just technology use. Urges social workers to join cross-disciplinary conversations about AI evolution and ",
       "item_type": "journalarticle",
       "journal": "",
-      "knowledge_doc": "vault/Papers/The end of the world as we know it- ChatGPT and social work.md",
+      "knowledge_doc": "vault/Papers/The End of the World as We Know It- ChatGPT and Social Work.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1093/sw/swad044",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -3224,6 +3404,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": "vault/Papers/Responsible prompting recommendation- Fostering responsible AI practices in prompting-time.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1145/3706598.3713365",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -3290,6 +3473,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "fulltext_ready",
+      "work_id": "doi:10.1086/735187",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -3349,6 +3535,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Considering a unified model of artificial intelligence enhanced social work- A systematic review.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1007/s41134-024-00326-y",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -3410,6 +3599,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "fulltext_ready",
+      "work_id": "doi:10.1080/0312407x.2025.2488345",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -3477,6 +3669,9 @@
       "item_type": "booksection",
       "journal": "",
       "knowledge_doc": "vault/Papers/Positionings, challenges, and ambivalences in children's and parents' perspectives in digitalized familial contexts.md",
+      "knowledge_coverage": "linked",
+      "work_id": "record:6Y5EPQRR",
+      "identity_basis": "record",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -3532,6 +3727,9 @@
       "item_type": "book",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "identity_unresolved",
+      "work_id": "record:QKFG72IT",
+      "identity_basis": "record",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -3592,6 +3790,9 @@
       "item_type": "booksection",
       "journal": "",
       "knowledge_doc": "vault/Papers/Digitalität und Digitalisierung als Gegenstand der Sozialen Arbeit.md",
+      "knowledge_coverage": "linked",
+      "work_id": "record:BKSU66QB",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -3651,6 +3852,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Exploring opportunities and risks in decision support technologies for social workers- An empirical study in the field of disabled people's services.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1093/bjsw/bcab262",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -3712,6 +3916,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Indecision on the use of artificial intelligence in healthcare- A qualitative study of patient perspectives on trust, responsibility and self-determination using AI-CDSS.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1186/s12910-024-01143-5",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -3772,6 +3979,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/AI for decision support- What are possible futures, social impacts, regulatory options, ethical conundrums and agency constellations-.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.14512/tatup.33.1.08",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -3829,6 +4039,9 @@
       "item_type": "booksection",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "identity_unresolved",
+      "work_id": "record:44AA6ETH",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -3886,6 +4099,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Who cares about data- Data care arrangements in everyday organisational practice.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1080/1369118x.2024.2320917",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -3944,6 +4160,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Tensions in digital welfare states- Three perspectives on care and control.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1177/14407833241226800",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -4001,6 +4220,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Datafied ageing futures- Regimes of anticipation and participatory futuring.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1177/20539517241306363",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -4064,6 +4286,9 @@
       "item_type": "book",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "fulltext_ready",
+      "work_id": "source:Linnemann_2025_Künstliche_Intelligenz_in_der_Sozialen_Arbeit.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -4132,6 +4357,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Der Einfluss der Algorithmen- Neue Qualitäten durch Big Data Analytics und Künstliche Intelligenz.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1007/s12054-018-0046-y",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -4193,6 +4421,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Künstliche Intelligenz in der Sozialen Arbeit- Grundlagen, Entwicklungen, Herausforderungen.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1007/s12054-022-00546-4",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -4255,6 +4486,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Rationalisierung durch Digitalisierung-.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1007/s12592-023-00472-6",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -4314,6 +4548,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "fulltext_ready",
+      "work_id": "doi:10.1007/s12592-023-00455-7",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -4375,6 +4612,9 @@
       "item_type": "booksection",
       "journal": "",
       "knowledge_doc": "vault/Papers/RETHINKING SOCIAL SERVICES WITH ARTIFICIAL INTELLIGENCE- OPPORTUNITIES, RISKS, AND FUTURE PERSPECTIVES.md",
+      "knowledge_coverage": "linked",
+      "work_id": "record:2FUXNFZS",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -4439,6 +4679,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "doi:10.1080/0312407x.2025.2488345",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -4498,6 +4741,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "record:SS5HTYY6",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -4563,6 +4809,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Algorithmic decision-making in social work practice and pedagogy- confronting the competency-critique dilemma.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1080/02615479.2023.2195425",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -4626,6 +4875,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/The End of the World as We Know It- ChatGPT and Social Work.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1093/sw/swad044",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -4688,6 +4940,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Introducing Generative Artificial Intelligence into the MSW Curriculum- A Proposal for the 2029 Educational Policy and Accreditation Standards.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1080/10437797.2024.2340931",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -4756,6 +5011,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Clinical Social Workers’ Perceptions of Large Language Models in Practice- Resistance to Automation and Prospects for Integration.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1080/26408066.2025.2542450",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -4818,6 +5076,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/ChatGPT for Social Work Science- Ethical Challenges and Opportunities.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1086/726042",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -4882,7 +5143,10 @@
       "abstract": "Comprehensive ethical analysis of AI in social work covering consent, autonomy, privacy, transparency, algorithmic bias, and professional competence. Maps issues to the NASW Code and urges policies, training, and client options to opt out of AI-mediated services.",
       "item_type": "journalarticle",
       "journal": "",
-      "knowledge_doc": "vault/Papers/Artificial Intelligence in Social Work- Emerging Ethical Issues.md",
+      "knowledge_doc": "vault/Papers/Artificial intelligence in social work- Emerging ethical issues.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Reamer_2023_Artificial_Intelligence_in_Social_Work_Emerging.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -4950,6 +5214,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "fulltext_ready",
+      "work_id": "doi:10.1080/0312407x.2025.2488345",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -5017,6 +5284,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "fulltext_ready",
+      "work_id": "doi:10.1086/735187",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -5083,6 +5353,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Algorithmic-Assisted Decision-Making Tools in Child Welfare Practice- A Systematic Review.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1177/10497315251350933",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -5148,6 +5421,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/AI Creates the Message- Integrating AI Language Learning Models into Social Work Education and Practice.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1080/10437797.2023.2189878",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -5210,6 +5486,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "fulltext_ready",
+      "work_id": "doi:10.1007/s12054-025-00783-3",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -5272,6 +5551,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "fulltext_ready",
+      "work_id": "doi:10.1007/s12592-023-00455-7",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -5333,6 +5615,9 @@
       "item_type": "booksection",
       "journal": "",
       "knowledge_doc": "vault/Papers/Diskriminierung durch Algorithmen – Überlegungen zur Stärkung KI-bezogener Kompetenzen.md",
+      "knowledge_coverage": "linked",
+      "work_id": "record:H7E3N6VR",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -5399,6 +5684,9 @@
       "item_type": "booksection",
       "journal": "",
       "knowledge_doc": "vault/Papers/KI-basiertes Assistenzsystem im Kinderschutzverfahren.md",
+      "knowledge_coverage": "linked",
+      "work_id": "record:MITLDF9S",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -5458,6 +5746,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "record:D4FY2S3R",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -5515,6 +5806,9 @@
       "item_type": "booksection",
       "journal": "",
       "knowledge_doc": "vault/Papers/Voll (dia)logisch- Ein Werkstattbericht über den Einsatz von generativer KI in der Hochschulbildung für Soziale Arbeit – Curriculare Überlegungen und veränderte Akteurskonstellationen.md",
+      "knowledge_coverage": "linked",
+      "work_id": "record:DGLWM93D",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -5579,6 +5873,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Prompten nach Plan- Das PCRR-Framework als pädagogisches Werkzeug für den Einsatz von Künstlicher Intelligenz.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.21243/mi-01-25-26",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -5640,6 +5937,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Bedeutung von Künstlicher Intelligenz in der Sozialen Arbeit.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1007/s12592-023-00455-7",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -5700,6 +6000,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Akzeptanz von KI und organisationale Rahmenbedingungen in der Sozialen Arbeit.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1007/s12054-025-00783-3",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -5757,6 +6060,9 @@
       "item_type": "book",
       "journal": "",
       "knowledge_doc": "vault/Papers/Handbuch Soziale Arbeit und Digitalisierung.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Kutscher_2020_Handbuch_Soziale_Arbeit_und_Digitalisierung.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -5812,6 +6118,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Social work and artificial intelligence- Collaboration and challenges.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Chen_2025_Social_work_and_artificial_intelligence.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -5876,6 +6185,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/The role of artificial intelligence (AI) and machine learning in social work practice.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.30574/wjarr.2024.24.1.2998",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -5943,6 +6255,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/A framework for the learning and teaching of Critical AI Literacy skills (Version 0.1).md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Hauck_2025_A_framework_for_the_learning_and_teaching_of.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -6010,6 +6325,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Social work in the age of artificial intelligence- A rights-based framework for evidence-based practice through social psychology, group dynamics, and institutional analysis.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1080/26408066.2025.2547219",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -6075,6 +6393,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "fulltext_ready",
+      "work_id": "doi:10.1086/735187",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -6133,6 +6454,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Artificial intelligence in social work- Emerging ethical issues.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Reamer_2023_Artificial_Intelligence_in_Social_Work_Emerging.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -6200,6 +6524,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "record:HZKE8T8I",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -6257,6 +6584,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": "vault/Papers/Digitale Werkzeuge und Machtasymmetrien-.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Studeny_2025_Digitale_Werkzeuge_und_Machtasymmetrien.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -6322,6 +6652,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/Leitfaden Digitale Verwaltung und Ethik- Praxisleitfaden für KI in der Verwaltung, Version 1.0.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Biegelbauer_2023_Leitfaden_Digitale_Verwaltung_und_Ethik.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -6386,6 +6719,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "fulltext_ready",
+      "work_id": "source:Ahrweiler_2025_AI_FORA_–_Artificial_Intelligence_for_Assessment.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -6451,6 +6787,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "fulltext_ready",
+      "work_id": "source:Strauß_2024_CAIL_–_Critical_AI_Literacy_Kritische.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -6510,6 +6849,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": "vault/Papers/What is AI Literacy- Competencies and Design Considerations.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1145/3313831.3376727",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -6568,6 +6910,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "fulltext_ready",
+      "work_id": "doi:10.1086/735187",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -6624,6 +6969,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Learning About AI- A Systematic Review of Reviews on AI Literacy.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1177/07356331251342081",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -6678,10 +7026,13 @@
       "year": 2025,
       "doi": "10.11586/2025078",
       "url": "https://www.bertelsmann-stiftung.de/doi/10.11586/2025078",
-      "abstract": "Foundation models are the backbone of generative AI and thus central to applications such as ChatGPT, Gemini, or Copilot. However, their use comes with risks: from randomly compiled training data and opaque processes to profit-driven business models.\r\n\r\nThe new report Fragile Foundations: Hidden Risks of Generative AI by the Bertelsmann Stiftung shows why mission-driven organizations in particular should critically question the foundations of AI. It highlights the systemic weaknesses of foundati",
+      "abstract": "Foundation models are the backbone of generative AI and thus central to applications such as ChatGPT, Gemini, or Copilot. However, their use comes with risks: from randomly compiled training data and opaque processes to profit-driven business models.\n\nThe new report Fragile Foundations: Hidden Risks of Generative AI by the Bertelsmann Stiftung shows why mission-driven organizations in particular should critically question the foundations of AI. It highlights the systemic weaknesses of foundation",
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "fulltext_ready",
+      "work_id": "doi:10.11586/2025078",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -6724,6 +7075,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "doi:10.23977/jaip.2024.070222",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -6766,6 +7120,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "doi:10.23977/jaip.2024.070222",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -6808,6 +7165,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Messung von AI Literacy – Empirische Evidenz und Implikationen.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Weber_2023_Messung_von_AI_Literacy_–_Empirische_Evidenz_und.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -6866,6 +7226,9 @@
       "item_type": "book",
       "journal": "",
       "knowledge_doc": "vault/Papers/AI competency framework for students.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Unknown_AI_competency_framework_for_students.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -6928,6 +7291,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/AI Literacy- A Framework to Understand, Evaluate, and Use Emerging Technology.md",
+      "knowledge_coverage": "linked",
+      "work_id": "record:K3YCLBXK",
+      "identity_basis": "record",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -6986,10 +7352,13 @@
       "year": 2025,
       "doi": "10.70389/PJAI.1000088",
       "url": "https://premierscience.com/pjai-24-524/",
-      "abstract": "Purpose\r\n\r\nThis narrative review investigates the interplay between gender bias in artificial intelligence (AI) systems and the potential of digital literacy to empower women in technology. By synthesising research from 2010 to 2024, the study examines how gender bias manifests in AI, its impact on women’s participation in technology, and the effectiveness of digital literacy initiatives in addressing these disparities.\r\n\r\nMethods\r\n\r\nA systematic literature search was conducted across major acad",
+      "abstract": "Purpose\n\nThis narrative review investigates the interplay between gender bias in artificial intelligence (AI) systems and the potential of digital literacy to empower women in technology. By synthesising research from 2010 to 2024, the study examines how gender bias manifests in AI, its impact on women’s participation in technology, and the effectiveness of digital literacy initiatives in addressing these disparities.\n\nMethods\n\nA systematic literature search was conducted across major academic d",
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "doi:10.70389/pjai.1000088",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -7048,10 +7417,13 @@
       "year": null,
       "doi": "",
       "url": "https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference/",
-      "abstract": "Reproducibility is a bedrock of scientific progress. However, it’s remarkably difficult to get reproducible results out of large language models.\r\nFor example, you might observe that asking ChatGPT the same question multiple times provides different results. This by itself is not surprising, since getting a result from a language model involves “sampling”, a process that converts the language model’s output into a probability distribution and probabilistically selects a token.\r\nWhat might be mor",
+      "abstract": "Reproducibility is a bedrock of scientific progress. However, it’s remarkably difficult to get reproducible results out of large language models.\nFor example, you might observe that asking ChatGPT the same question multiple times provides different results. This by itself is not surprising, since getting a result from a language model involves “sampling”, a process that converts the language model’s output into a probability distribution and probabilistically selects a token.\nWhat might be more ",
       "item_type": "blogpost",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "record:FTJM5R8N",
+      "identity_basis": "record",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -7092,6 +7464,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/Towards responsible AI for education- Hybrid human-AI to confront the Elephant in the room.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Hooshyar et al._2025_Towards_responsible_AI_for_education_Hybrid.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -7153,6 +7528,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Governing discriminatory content in conversational AI- A cross-system, cross-lingual, and cross-topic audit.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1080/1369118x.2025.2537803",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -7217,6 +7595,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/LIBRA- Measuring bias of large language model from a local context.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Pan_2025_LIBRA_Measuring_bias_of_large_language_model_from.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -7282,6 +7663,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Explainability through systematicity- The hard systematicity challenge.md",
+      "knowledge_coverage": "linked",
+      "work_id": "record:YV53DKI2",
+      "identity_basis": "record",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -7342,6 +7726,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/A reparative turn in AI.md",
+      "knowledge_coverage": "linked",
+      "work_id": "record:BDBYDLVK",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -7404,6 +7791,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Governance of generative AI- A comprehensive framework for navigating challenges and opportunities.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Taeihagh_2025_Governance_of_generative_AI_A_comprehensive.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -7467,6 +7857,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/How large language models judge cooperation.md",
+      "knowledge_coverage": "linked",
+      "work_id": "record:99QJDBSV",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -7531,6 +7924,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/Prompting techniques for reducing social bias in LLMs through System 1 and System 2 cognitive processes.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Kamruzzaman_2024_Prompting_techniques_for_reducing_social_bias_in.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -7595,6 +7991,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Beyond transparency and explainability- On the need for adequate and contextualized user guidelines for LLM use.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1007/s10676-024-09778-2",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -7657,6 +8056,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/Unequal voices- How LLMs construct constrained queer narratives.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Ghosal_2025_Unequal_voices_How_LLMs_construct_constrained.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -7722,6 +8124,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": "vault/Papers/Guardrails, not guidance- Understanding responses to LGBTQ+ language in large language models.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Tint_2025_Guardrails,_not_guidance_Understanding_responses.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -7788,6 +8193,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Explicitly unbiased large language models still form biased associations.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1073/pnas.2416228122",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -7851,6 +8259,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Bias and fairness in large language models- A survey.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1162/coli_a_00524",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -7909,6 +8320,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Prejudiced interactions with large language models (LLMs) reduce trustworthiness and behavioral intentions among members of stigmatized groups.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1016/j.chb.2025.108563",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -7972,6 +8386,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Measuring gender and racial biases in large language models- Intersectional evidence from automated resume evaluation.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1093/pnasnexus/pgaf089",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -8033,6 +8450,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Biases in large language models- Origins, inventory and discussion.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1145/3597307",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -8098,6 +8518,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/Advancing Accountability in AI.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:OECD_2023_Advancing_Accountability_in_AI.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -8161,6 +8584,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": "vault/Papers/Dipper- Diversity in Prompts for Producing Large Language Model Outputs.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Lau_2023_Dipper_Diversity_in_Prompts_for_Producing_Large.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -8223,6 +8649,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "record:QFPTW4VL",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -8287,6 +8716,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": "vault/Papers/Improving diversity of demographic representation in people entities in Large Language Models.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Lahoti_2023_Improving_diversity_of_demographic_representation.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -8350,6 +8782,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": "vault/Papers/How Far Can We Extract Diverse Perspectives from Large Language Models-.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Hayati_2024_How_Far_Can_We_Extract_Diverse_Perspectives_from.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -8414,6 +8849,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/Multilingual Prompting for Improving LLM Generation Diversity.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Wang_2025_Multilingual_Prompting_for_Improving_LLM.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -8477,6 +8915,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/A formal account of AI trustworthiness- Connecting intrinsic and perceived trustworthiness in an operational schematization.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Bisconti_2024_A_formal_account_of_AI_trustworthiness_Connecting.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -8532,6 +8973,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Mitigating trust-induced inappropriate reliance on AI assistance.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Srinivasan_2025_Mitigating_trust-induced_inappropriate_reliance.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -8589,6 +9033,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "fulltext_ready",
+      "work_id": "doi:10.1080/0312407x.2025.2488345",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -8647,7 +9094,10 @@
       "abstract": "Systematic review following PRISMA guidelines analyzing prompt-engineering techniques to reduce cultural bias against Arabs and Muslims in LLMs, evaluating eight empirical studies (2021-2024). Identifies five primary approaches: Cultural Prompting, Affective Priming, Self-Debiasing techniques, structured multi-stage pipelines, and parameter-optimized continuous prompts. Structured multi-stage pipelines most effective with up to 87.7% bias reduction. Emphasizes accessibility of prompt engineering",
       "item_type": "journalarticle",
       "journal": "",
-      "knowledge_doc": "vault/Papers/Prompt engineering techniques for mitigating cultural bias against Arabs and Muslims in large language models- A systematic review.md",
+      "knowledge_doc": "vault/Papers/Prompt Engineering Techniques for Mitigating Cultural Bias Against Arabs and Muslims in Large Language Models- A Systematic Review.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.48550/arxiv.2506.18199",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -8707,6 +9157,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Recommendations for social work researchers and journal editors on the use of generative AI and large language models.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1086/726021",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -8772,6 +9225,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Artificial intelligence in social work- Emerging ethical issues.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.55521/10-020-205",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -8839,6 +9295,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Can LLMs reason about trust- A pilot study.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -8894,6 +9353,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Bias, accuracy, and trust- Gender-diverse perspectives on large language models.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Gaba_2025_Bias,_accuracy,_and_trust_Gender-diverse.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -8959,6 +9421,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/The influence of mental state attributions on trust in large language models.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1038/s44271-025-00262-1",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -9016,6 +9481,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Trust in artificial intelligence–based clinical decision support systems among health care workers- Systematic review.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.2196/69678",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -9080,6 +9548,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Measuring and identifying factors of individuals' trust in large language models.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.48550/arxiv.2502.21028",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -9136,6 +9607,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/What large language models know and what people think they know.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1038/s42256-024-00976-7",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -9200,6 +9674,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/AI algorithm transparency, pipelines for trust not prisms- mitigating general negative attitudes and enhancing trust toward AI.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1057/s41599-025-05116-z",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -9262,6 +9739,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "record:EJEFPZGA",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -9327,6 +9807,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Prompting techniques for reducing social bias in LLMs through System 1 and System 2 cognitive processes.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.48550/arxiv.2404.17218",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -9391,6 +9874,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Transparency enhances positive perceptions of social artificial intelligence.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1155/2023/5550418",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -9448,6 +9934,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Large Language Models and User Trust- Consequence of Self-Referential Learning Loop and the Deskilling of Health Care Professionals.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.2196/56764",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -9511,6 +10000,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/A formal account of AI trustworthiness- Connecting intrinsic and perceived trustworthiness in an operational schematization.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Bisconti_2024_A_formal_account_of_AI_trustworthiness_Connecting.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -9566,6 +10058,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "fulltext_ready",
+      "work_id": "doi:10.1080/0312407x.2025.2488345",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -9625,6 +10120,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Can LLMs reason about trust- A pilot study.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -9679,7 +10177,10 @@
       "abstract": "Systematic review following PRISMA guidelines analyzing prompt-engineering techniques to reduce cultural bias against Arabs and Muslims in LLMs, evaluating eight empirical studies (2021-2024). Identifies five primary approaches: Cultural Prompting, Affective Priming, Self-Debiasing techniques, structured multi-stage pipelines, and parameter-optimized continuous prompts. Structured multi-stage pipelines most effective with up to 87.7% bias reduction. Emphasizes accessibility of prompt engineering",
       "item_type": "journalarticle",
       "journal": "",
-      "knowledge_doc": "vault/Papers/Prompt engineering techniques for mitigating cultural bias against Arabs and Muslims in large language models- A systematic review.md",
+      "knowledge_doc": "vault/Papers/Prompt Engineering Techniques for Mitigating Cultural Bias Against Arabs and Muslims in Large Language Models- A Systematic Review.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.48550/arxiv.2506.18199",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -9739,6 +10240,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Recommendations for social work researchers and journal editors on the use of generative AI and large language models.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1086/726021",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -9804,6 +10308,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Mitigating trust-induced inappropriate reliance on AI assistance.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Srinivasan_2025_Mitigating_trust-induced_inappropriate_reliance.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -9866,6 +10373,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Artificial intelligence in social work- Emerging ethical issues.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.55521/10-020-205",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -9933,6 +10443,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Measuring and identifying factors of individuals' trust in large language models.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.48550/arxiv.2502.21028",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -9993,6 +10506,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Trust in artificial intelligence–based clinical decision support systems among health care workers- Systematic review.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.2196/69678",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -10051,6 +10567,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Bias, accuracy, and trust- Gender-diverse perspectives on large language models.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Gaba_2025_Bias,_accuracy,_and_trust_Gender-diverse.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -10110,6 +10629,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/The influence of mental state attributions on trust in large language models.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1038/s44271-025-00262-1",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -10170,6 +10692,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/What large language models know and what people think they know.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1038/s42256-024-00976-7",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -10228,6 +10753,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Large Language Models and User Trust- Consequence of Self-Referential Learning Loop and the Deskilling of Health Care Professionals.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.2196/56764",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -10287,6 +10815,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Prompting techniques for reducing social bias in LLMs through System 1 and System 2 cognitive processes.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.48550/arxiv.2404.17218",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -10351,6 +10882,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/AI algorithm transparency, pipelines for trust not prisms- mitigating general negative attitudes and enhancing trust toward AI.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1057/s41599-025-05116-z",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -10413,6 +10947,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Transparency enhances positive perceptions of social artificial intelligence.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1155/2023/5550418",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -10473,6 +11010,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Mitigating trust-induced inappropriate reliance on AI assistance.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Srinivasan_2025_Mitigating_trust-induced_inappropriate_reliance.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -10530,6 +11070,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "fulltext_ready",
+      "work_id": "doi:10.1080/0312407x.2025.2488345",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -10589,6 +11132,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/A formal account of AI trustworthiness- Connecting intrinsic and perceived trustworthiness in an operational schematization.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Bisconti_2024_A_formal_account_of_AI_trustworthiness_Connecting.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -10647,6 +11193,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Can LLMs reason about trust- A pilot study.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -10687,6 +11236,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Prompting techniques for reducing social bias in LLMs through System 1 and System 2 cognitive processes.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.48550/arxiv.2404.17218",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -10750,7 +11302,10 @@
       "abstract": "Systematic review following PRISMA guidelines analyzing prompt-engineering techniques to reduce cultural bias against Arabs and Muslims in LLMs, evaluating eight empirical studies (2021-2024). Identifies five primary approaches: Cultural Prompting, Affective Priming, Self-Debiasing techniques, structured multi-stage pipelines, and parameter-optimized continuous prompts. Structured multi-stage pipelines most effective with up to 87.7% bias reduction. Emphasizes accessibility of prompt engineering",
       "item_type": "journalarticle",
       "journal": "",
-      "knowledge_doc": "vault/Papers/Prompt engineering techniques for mitigating cultural bias against Arabs and Muslims in large language models- A systematic review.md",
+      "knowledge_doc": "vault/Papers/Prompt Engineering Techniques for Mitigating Cultural Bias Against Arabs and Muslims in Large Language Models- A Systematic Review.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.48550/arxiv.2506.18199",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -10814,6 +11369,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Recommendations for social work researchers and journal editors on the use of generative AI and large language models.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1086/726021",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -10879,6 +11437,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Artificial intelligence in social work- Emerging ethical issues.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.55521/10-020-205",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -10946,6 +11507,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Scaling implicit bias analysis across transformer-based language models through embedding association test and prompt engineering.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Zayed_2024_Scaling_implicit_bias_analysis_across.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -11010,6 +11574,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "record:XG7RFFC7",
+      "identity_basis": "record",
       "llm": {
         "decision": "Exclude",
         "categories": [],
@@ -11048,6 +11615,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "record:JRG3B3LE",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -11105,6 +11675,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/Bias in decision-making for AI's ethical dilemmas- A comparative study of ChatGPT and Claude.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Wu_2025_Bias_in_decision-making_for_AI's_ethical_dilemmas.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -11166,6 +11739,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/A survey on fairness in large language models.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Wang_2024_A_survey_on_fairness_in_large_language_models.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -11229,6 +11805,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "record:Z9DNTBFF",
+      "identity_basis": "record",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -11271,6 +11850,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "record:W8DFWR9L",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -11333,6 +11915,9 @@
       "item_type": "thesis",
       "journal": "",
       "knowledge_doc": "vault/Papers/Model explanations for gender and ethnicity bias mitigation in AI-generated narratives.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Salecha_2025_Model_explanations_for_gender_and_ethnicity_bias.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -11397,7 +11982,10 @@
       "abstract": "",
       "item_type": "journalarticle",
       "journal": "",
-      "knowledge_doc": "vault/Papers/Prompt engineering techniques for mitigating cultural bias against Arabs and Muslims in large language models- A systematic review.md",
+      "knowledge_doc": "vault/Papers/Prompt Engineering Techniques for Mitigating Cultural Bias Against Arabs and Muslims in Large Language Models- A Systematic Review.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Asseri_2025_Prompt_engineering_techniques_for_mitigating.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -11463,6 +12051,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": "vault/Papers/Self-debiasing large language models- Zero-shot recognition and reduction of stereotypes.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Parrish_2025_Self-debiasing_large_language_models_Zero-shot.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -11526,6 +12117,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/Assessing GPT's bias towards stigmatized social groups- An intersectional case study on nationality prejudice and psychophobia.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Mei_2023_Assessing_GPT's_bias_towards_stigmatized_social.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -11590,6 +12184,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/More or less wrong- A benchmark for directional bias in LLM comparative reasoning.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Shafie_2025_More_or_less_wrong_A_benchmark_for_directional.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -11654,6 +12251,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "record:RAY6G2R7",
+      "identity_basis": "record",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -11695,6 +12295,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": "vault/Papers/BBQ- A hand-built bias benchmark for question answering.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Parrish_2022_BBQ_A_hand-built_bias_benchmark_for_question.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -11760,6 +12363,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": "vault/Papers/Large language models are zero-shot reasoners.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Kojima_2022_Large_language_models_are_zero-shot_reasoners.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -11819,6 +12425,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": "vault/Papers/On the steerability of large language models.md",
+      "knowledge_coverage": "linked",
+      "work_id": "record:RM833D5N",
+      "identity_basis": "record",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -11880,6 +12489,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/Prompting techniques for reducing social bias in LLMs through System 1 and System 2 cognitive processes.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Kamruzzaman_2024_Prompting_techniques_for_reducing_social_bias_in.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -11944,6 +12556,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/Exploring complex mental health symptoms via classifying social media data with explainable LLMs.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Chen_2024_Exploring_complex_mental_health_symptoms_via.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -12002,6 +12617,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": "vault/Papers/A sociolinguistic approach to stereotype assessment in large language models.md",
+      "knowledge_coverage": "linked",
+      "work_id": "record:QIQR449A",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -12063,6 +12681,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/Debiasing prompts for gender bias in large language models.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Kaneko_2024_Debiasing_prompts_for_gender_bias_in_large.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -12128,6 +12749,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/Assessing GPT's bias towards stigmatized social groups- An intersectional case study on nationality prejudice and psychophobia.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Mei_2023_Assessing_GPT's_bias_towards_stigmatized_social.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -12191,6 +12815,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": "vault/Papers/Counterfactual fairness in text classification through robustness.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Garg_2019_Counterfactual_fairness_in_text_classification.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -12252,6 +12879,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "record:SQYLQFRU",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -12294,6 +12924,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": "vault/Papers/Measuring and mitigating unintended bias in text data.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Dixon_2018_Measuring_and_mitigating_unintended_bias_in_text.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -12355,6 +12988,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "record:GCN42PAM",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -12413,6 +13049,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/Evaluating gender bias in large language models via chain-of-thought prompting.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Kaneko_2024_Evaluating_gender_bias_in_large_language_models.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -12477,7 +13116,10 @@
       "abstract": "This systematic review of 8 studies (2021–2024) identifies five prompt engineering approaches to mitigate bias against Arabs and Muslims: self-debiasing, cultural context prompting, affective priming, structured multi-step pipelines, and continuous prompt tuning. Multi-step pipelines were most effective, reducing biased content by up to ~88%, while simpler methods like cultural prompts showed ~71–81% improvement. The review concludes that while prompt engineering can mitigate biases without retr",
       "item_type": "report",
       "journal": "",
-      "knowledge_doc": "vault/Papers/Prompt engineering techniques for mitigating cultural bias against Arabs and Muslims in large language models- A systematic review.md",
+      "knowledge_doc": "vault/Papers/Prompt Engineering Techniques for Mitigating Cultural Bias Against Arabs and Muslims in Large Language Models- A Systematic Review.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Asseri_2025_Prompt_engineering_techniques_for_mitigating.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -12537,6 +13179,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/The cultural stereotype and cultural bias of ChatGPT.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1177/18344909251355673",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -12602,6 +13247,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/Prompting techniques for reducing social bias in LLMs through System 1 and System 2 cognitive processes.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Kamruzzaman_2024_Prompting_techniques_for_reducing_social_bias_in.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -12666,6 +13314,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/What’s in a name- Auditing large language models for race and gender bias.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Salinas_2025_What’s_in_a_name_Auditing_large_language_models.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -12731,7 +13382,10 @@
       "abstract": "Fallstudie zu Queer in AI, dokumentiert Schäden durch KI-Systeme an queeren Menschen und beschreibt community-geleitete Strategien für partizipative, faire KI.",
       "item_type": "conferencepaper",
       "journal": "",
-      "knowledge_doc": null,
+      "knowledge_doc": "vault/Papers/Queer in AI- A case study in community-led participatory AI.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Cvoelcker_2023_Queer_in_AI_A_case_study_in_community-led.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -12796,6 +13450,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Flexible intersectional stereotype extraction (FISE)- Analyzing intersectional biases in large language models.md",
+      "knowledge_coverage": "linked",
+      "work_id": "record:4LY3SA4E",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -12862,6 +13519,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/Women4Ethical AI- Global cooperation for gender-inclusive AI.md",
+      "knowledge_coverage": "linked",
+      "work_id": "record:TSYJ3Y57",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -12922,6 +13582,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/The EU artificial intelligence act through a gender lens.md",
+      "knowledge_coverage": "linked",
+      "work_id": "record:A776TPGG",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -12986,6 +13649,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/DR.GAP- Mitigating bias in large language models using gender-aware prompting with demonstration and reasoning.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Qiu_2025_DR.GAP_Mitigating_bias_in_large_language_models.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -13049,7 +13715,10 @@
       "abstract": "Empirische Analyse von Geschlechterbias in Bewertungssystemen mit BERT und GPT-3.5. Mixed-gender Trainingsdaten reduzierten Bias, aber verstärkten Unterschiede. Drei Bias-Metriken angewendet.",
       "item_type": "report",
       "journal": "",
-      "knowledge_doc": "vault/Papers/AI gender bias, disparities, and fairness- Does training data matter-.md",
+      "knowledge_doc": "vault/Papers/AI Gender Bias, Disparities, and Fairness- Does Training Data Matter-.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Latif_2023_AI_Gender_Bias,_Disparities,_and_Fairness_Does.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -13114,6 +13783,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/How AI hype impacts the LGBTQ+ community.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1007/s43681-024-00423-8",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -13180,6 +13852,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Feminist perspectives on AI- Ethical considerations in algorithmic decision-making.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Ahmed_2024_Feminist_perspectives_on_AI_Ethical.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -13247,6 +13922,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/Bias against women and girls in large language models- A UNESCO study.md",
+      "knowledge_coverage": "linked",
+      "work_id": "record:6QPLNNQK",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -13312,6 +13990,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "identity_unresolved",
+      "work_id": "doi:10.17645/si.v12i1.7543",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -13377,6 +14058,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "fulltext_ready",
+      "work_id": "doi:10.1093/pnasnexus/pgaf089",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -13438,6 +14122,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": "vault/Papers/Intersectional Stereotypes in Large Language Models- Dataset and Analysis.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.18653/v1/2023.findings-emnlp.575",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -13504,6 +14191,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/Prompt Engineering Techniques for Mitigating Cultural Bias Against Arabs and Muslims in Large Language Models- A Systematic Review.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Asseri_2025_Prompt_engineering_techniques_for_mitigating.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -13563,6 +14253,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/MirrorStories- Reflecting Diversity through Personalized Narrative Generation with Large Language Models.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Yunusov_2024_MirrorStories_Reflecting_Diversity_through.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -13629,6 +14322,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/Multilingual Prompting for Improving LLM Generation Diversity.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Wang_2025_Multilingual_Prompting_for_Improving_LLM.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -13688,6 +14384,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/Avoiding Catastrophe Through Intersectionality in Global AI Governance.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:McCrory_2024_Avoiding_catastrophe_through_intersectionality_in.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -13754,6 +14453,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "identity_unresolved",
+      "work_id": "record:SSH3LVN6",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -13819,6 +14521,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/Algorithms, artificial intelligence and discrimination.md",
+      "knowledge_coverage": "linked",
+      "work_id": "record:QZJL6KBZ",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -13879,6 +14584,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/The AI Act, gender equality and non-discrimination- what role for the AI Office-.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1007/s12027-024-00785-w",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -13943,6 +14651,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/Discriminating Systems- Gender, Race, and Power in AI.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:West_2023_Discriminating_Systems_Gender,_Race,_and_Power_in.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -14007,6 +14718,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/Revisiting Technical Bias Mitigation Strategies.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Djiberou Mahamadou_2024_Revisiting_Technical_Bias_Mitigation_Strategies.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -14069,6 +14783,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/Towards Substantive Equality in Artificial Intelligence- Transformative AI Policy for Gender Equality and Diversity.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Ricaurte Quijano_2024_Towards_Substantive_Equality_in_Artificial.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -14137,6 +14854,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/Intersectional Fairness- A Fractal Approach.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Zannone_2023_Intersectional_Fairness_A_Fractal_Approach.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -14202,6 +14922,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/What is Feminist AI-.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Wudel_2025_What_is_Feminist_AI.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -14268,6 +14991,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Algorithmic discrimination- examining its types and regulatory measures with emphasis on US legal practices.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.3389/frai.2024.1320277",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -14325,6 +15051,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Factoring the Matrix of Domination- A Critical Review and Reimagination of Intersectionality in AI Fairness.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1145/3600211.3604705",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -14389,6 +15118,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/How can feminism inform AI governance in practice-.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Ricaurte_2024_How_can_feminism_inform_AI_governance_in_practice.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -14449,6 +15181,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": "vault/Papers/Are -Intersectionally Fair- AI Algorithms Really Fair to Women of Color- A Philosophical Analysis.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1145/3531146.3533074",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -14514,7 +15249,10 @@
       "abstract": "This extensive report – developed through the Global Partnership on AI (GPAI) with contributors from academia and policy – sets out a vision for “substantive equality” in AI as opposed to mere formal equality. It recognizes that AI systems can replicate and even amplify societal power imbalances (“algorithmic discrimination”), thus requiring proactive governance to ensure historically marginalized groups are not left behind in the AI era. The report argues that purely technical bias mitigation i",
       "item_type": "report",
       "journal": "",
-      "knowledge_doc": "vault/Papers/Towards substantive equality in artificial intelligence- Transformative AI policy for gender equality and diversity.md",
+      "knowledge_doc": "vault/Papers/Towards Substantive Equality in Artificial Intelligence- Transformative AI Policy for Gender Equality and Diversity.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Ricaurte Quijano_2024_Towards_Substantive_Equality_in_Artificial.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -14576,6 +15314,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Assessing trustworthy AI- Technical and legal perspectives of fairness in AI.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1016/j.clsr.2024.106053",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -14639,6 +15380,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Policy advice and best practices on bias and fairness in AI.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1007/s10676-024-09746-w",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -14701,7 +15445,10 @@
       "abstract": "In this working paper, McCrory argues that prevailing global AI governance efforts (especially those focused on “AI safety” and existential risks) lack an adequate intersectional, feminist perspective, which is needed to avert not just hypothetical future catastrophes but ongoing injustices. The paper analyzes seven prominent international AI policy initiatives (e.g. global AI accords and principles) against criteria derived from feminist theory, such as intersectionality, context, and power dyn",
       "item_type": "report",
       "journal": "",
-      "knowledge_doc": "vault/Papers/Avoiding catastrophe through intersectionality in global AI governance.md",
+      "knowledge_doc": "vault/Papers/Avoiding Catastrophe Through Intersectionality in Global AI Governance.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:McCrory_2024_Avoiding_catastrophe_through_intersectionality_in.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -14768,6 +15515,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "identity_unresolved",
+      "work_id": "doi:10.17645/si.v12.7543",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -14833,6 +15583,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Gender in a stereo-(gender)typical EU AI law- A feminist reading of the AI Act.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1017/cfl.2025.12",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -14900,6 +15653,9 @@
       "item_type": "webpage",
       "journal": "",
       "knowledge_doc": "vault/Papers/Feministische Netzpolitik und Künstliche Intelligenz in der politischen Bildung [Feminist network politics and artificial intelligence in political education].md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Mosene_2023_Feministische_Netzpolitik_und_Künstliche.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -14966,6 +15722,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/Feminist reflections for the development of artificial intelligence.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Guerra_2023_Feminist_reflections_for_the_development_of.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -15027,6 +15786,9 @@
       "item_type": "webpage",
       "journal": "",
       "knowledge_doc": "vault/Papers/Feminist Data Set.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Sinders_2017_Feminist_Data_Set.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -15090,6 +15852,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/Data Feminism for AI.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:D'Ignazio_2024_Data_Feminism_for_AI.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -15157,6 +15922,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Shaping feminist artificial intelligence.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1177/14614448221150776",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -15217,6 +15985,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Algorithmic Governance and the International Politics of Big Tech.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Srivastava_2024_Algorithmic_Governance_and_the_International.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -15277,6 +16048,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Engineers on responsibility- feminist approaches to who's responsible for ethical AI.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1007/s10676-023-09739-1",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -15338,6 +16112,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "fulltext_ready",
+      "work_id": "source:Gohar_2023_A_Survey_on_Intersectional_Fairness_in_Machine.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -15404,6 +16181,9 @@
       "item_type": "webpage",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "fulltext_ready",
+      "work_id": "source:Kubes_2024_Feministische_KI_–_Künstliche_Intelligenz_für.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -15470,6 +16250,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": "vault/Papers/Thinking like a scientist- Can interactive simulations foster critical AI literacy-.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1007/978-3-031-98417-4_5",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -15524,16 +16307,19 @@
     },
     {
       "id": "T8R8RKX9",
-      "title": "AI tools show biases in ranking job applicants' names according to perceived race and gender",
+      "title": "Gender, Race, and Intersectional Bias in Resume Screening via Language Model Retrieval",
       "author_year": "Wilson & Caliskan (2024)",
-      "authors": "Wilson, K.; Caliskan, A.",
+      "authors": "Wilson, Kyra; Caliskan, Aylin",
       "year": 2024,
-      "doi": "",
+      "doi": "10.1609/aies.v7i1.31748",
       "url": "https://ojs.aaai.org/index.php/AIES/article/view/31748",
       "abstract": "Large-scale empirical study using over 550 resumes and 3+ million comparisons reveals that intersectional patterns of bias in AI resume screening cannot be understood as additive combinations of single-axis discrimination. Discovered unique harm against Black men invisible when examining race or gender independently—Black male names were never preferred over white male names (0% selection rate). Demonstrates co-constitutive nature of multiple discrimination where intersection of Blackness and ma",
       "item_type": "conferencepaper",
       "journal": "",
-      "knowledge_doc": "vault/Papers/AI tools show biases in ranking job applicants' names according to perceived race and gender.md",
+      "knowledge_doc": "vault/Papers/Gender, race, and intersectional bias in AI resume screening via language model retrieval.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1609/aies.v7i1.31748",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -15598,7 +16384,10 @@
       "abstract": "Applies Crenshaw's intersectionality theory to examine four high-profile AI policy reports, revealing how diversity crises in AI workforce create \"negative feedback loops\" where homogeneous development teams embed biases into systems. Demonstrates how multiple forms of discrimination co-constitute each other through voice assistants, robots, and hiring tools, showing that intersectional experiences cannot be reduced to single identity categories. Argues for moving beyond simple diversity initiat",
       "item_type": "journalarticle",
       "journal": "",
-      "knowledge_doc": null,
+      "knowledge_doc": "vault/Papers/Intersectionality in Artificial Intelligence- Framing Concerns and Recommendations for Action.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.17645/si.7543",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -15663,6 +16452,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/AI literacy in teacher education- Empowering educators through critical co-discovery.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1177/00224871251325083",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -15725,6 +16517,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "doi:10.1145/3589139",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -15784,6 +16579,9 @@
       "item_type": "booksection",
       "journal": "",
       "knowledge_doc": "vault/Papers/Feminism Confronts AI- The Gender Relations of Digitalisation.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Wajcman_2023_Feminism_Confronts_AI_The_Gender_Relations_of.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -15849,6 +16647,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "doi:10.1145/3630659.3630671",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -15908,6 +16709,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Operationalizing positive-constructive pedagogy to artificial intelligence- the 3E model for scaffolding AI technology adoption.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.3389/feduc.2024.1293235",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -15967,7 +16771,10 @@
       "abstract": "This article critically examines how intersectionality is understood and applied in European Union AI policy documents. Ulnicane argues that current policy approaches often reduce intersectionality to a mere \"multi-category\" perspective, focusing on adding more diversity variables without addressing the underlying structural power dynamics that create inequalities. The study reveals that while policies acknowledge bias, they fail to adequately address the systemic nature of discrimination co-con",
       "item_type": "journalarticle",
       "journal": "",
-      "knowledge_doc": null,
+      "knowledge_doc": "vault/Papers/Intersectionality in Artificial Intelligence- Framing Concerns and Recommendations for Action.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.17645/si.7543",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -16033,6 +16840,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "fulltext_ready",
+      "work_id": "doi:10.1007/s44230-025-00109-2",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -16101,6 +16911,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Shaping feminist artificial intelligence.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1177/14614448221150776",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -16167,6 +16980,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "identity_unresolved",
+      "work_id": "doi:10.17645/si.v12i2.7543",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -16231,6 +17047,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "identity_unresolved",
+      "work_id": "record:C485NKYA",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -16292,6 +17111,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": "vault/Papers/Trustworthy AI and the Logics of Intersectional Resistance.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1145/3593013.3593986",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -16358,6 +17180,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Investigating AI systems- examining data and algorithmic bias through hermeneutic reverse engineering.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Shukla_2025_Investigating_AI_systems_examining_data_and.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -16421,6 +17246,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/An empirical study of structural social and ethical challenges in AI.md",
+      "knowledge_coverage": "linked",
+      "work_id": "record:PC75954S",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -16482,6 +17310,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Shaping feminist artificial intelligence.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Toupin_2024_Shaping_feminist_artificial_intelligence.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -16542,6 +17373,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "fulltext_ready",
+      "work_id": "source:Lin_2022_Artificial_Intelligence_in_a_Structurally_Unjust.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -16605,6 +17439,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Training in Co-Creation as a Methodological Approach to Improve AI Fairness.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Slesinger_2024_Training_in_Co-Creation_as_a_Methodological.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -16672,6 +17509,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Intersectional analysis of visual generative AI- the case of stable diffusion.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Jääskeläinen_2025_Intersectional_analysis_of_visual_generative_AI.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -16738,6 +17578,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": "vault/Papers/Fairness Beyond the Algorithmic Frame- Actionable Recommendations for an Intersectional Approach.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Vethman_2025_Fairness_Beyond_the_Algorithmic_Frame_Actionable.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -16805,6 +17648,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": "vault/Papers/Factoring the Matrix of Domination- A Critical Review and Reimagination of Intersectionality in AI Fairness.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Ovalle_2023_Factoring_the_Matrix_of_Domination_A_Critical.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -16870,6 +17716,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "fulltext_ready",
+      "work_id": "source:Himmelreich_2022_Artificial_Intelligence_and_Structural_Injustice.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -16933,6 +17782,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Towards a Feminist Metaethics of AI.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Siapka_2023_Towards_a_Feminist_Metaethics_of_AI.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -16997,6 +17849,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": "vault/Papers/Data Feminism for AI.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:D'Ignazio_2024_Data_Feminism_for_AI.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -17065,6 +17920,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/What is Feminist AI-.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Wudel_2025_What_is_Feminist_AI.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -17131,6 +17989,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": "vault/Papers/PreciseDebias- An automatic prompt engineering approach for generative AI to mitigate image demographic biases.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Clemmer_2024_PreciseDebias_An_automatic_prompt_engineering.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -17197,6 +18058,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "fulltext_ready",
+      "work_id": "source:Gengler_2024_Faires_KI-Prompting_–_Ein_Leitfaden_für.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -17267,6 +18131,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "record:UJ7DXK8Y",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -17329,6 +18196,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/Can prompt modifiers control bias- A comparative analysis of text-to-image generative models.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Shin_2024_Can_prompt_modifiers_control_bias_A_comparative.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -17393,6 +18263,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": "vault/Papers/Inclusive prompt engineering- A methodology for hacking biased AI image generation.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1145/3641237.3691655",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -17458,7 +18331,10 @@
       "abstract": "This open-access paper provides a feminist intersectional critique of Stable Diffusion through qualitative visual analysis of 180 AI-generated images. Authors examined how power systems like racism, sexism, heteronormativity, ableism, colonialism, and capitalism are reflected in AI outputs. Found that default outputs frequently perpetuate harmful stereotypes and assume a \"white, able-bodied, masculine-presenting\" default subject position. Advocates for social justice-oriented approach to AI by a",
       "item_type": "journalarticle",
       "journal": "",
-      "knowledge_doc": "vault/Papers/Intersectional analysis of visual generative AI- The case of Stable Diffusion.md",
+      "knowledge_doc": "vault/Papers/Intersectional analysis of visual generative AI- the case of stable diffusion.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1007/s00146-025-02207-y",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -17525,6 +18401,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": "vault/Papers/Reflexive prompt engineering- A framework for responsible prompt engineering and AI interaction design.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1145/3715275.3732118",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -17591,6 +18470,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Female perspectives on algorithmic bias- Implications for AI researchers and practitioners.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1108/md-04-2024-0884",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -17658,6 +18540,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "fulltext_ready",
+      "work_id": "doi:10.70389/pjai.1000088",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -17724,6 +18609,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "fulltext_ready",
+      "work_id": "doi:10.7559/citarj.v11i2.665",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -17791,6 +18679,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/AI Gender Bias, Disparities, and Fairness- Does Training Data Matter-.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Latif_2023_AI_Gender_Bias,_Disparities,_and_Fairness_Does.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -17854,6 +18745,9 @@
       "item_type": "webpage",
       "journal": "",
       "knowledge_doc": "vault/Papers/How to Create Inclusive AI Images- A Guide to Bias-Free Prompting.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Articulate_2025_How_to_Create_Inclusive_AI_Images_A_Guide_to.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -17919,7 +18813,10 @@
       "abstract": "Explores ethical implications of algorithmic decision-making from feminist perspective, examining data bias, discrimination in automated systems, and underrepresentation of women in AI development. Algorithmic biases disproportionately affect marginalized groups and reinforce societal inequalities in areas like hiring, healthcare, and law enforcement. Feminist ethical framework emphasizes transparency, fairness, and inclusivity while questioning patriarchal and corporate-driven narratives in AI ",
       "item_type": "journalarticle",
       "journal": "",
-      "knowledge_doc": "vault/Papers/Feminist Perspectives on AI- Ethical Considerations in Algorithmic Decision-Making.md",
+      "knowledge_doc": "vault/Papers/Feminist perspectives on AI- Ethical considerations in algorithmic decision-making.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Ahmed_2024_Feminist_perspectives_on_AI_Ethical.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -17987,6 +18884,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "identity_unresolved",
+      "work_id": "doi:10.17645/si.v12.7543",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -18052,6 +18952,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "record:SWB86AYC",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -18111,6 +19014,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": "vault/Papers/Data Feminism for AI.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1145/3630106.3658543",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -18180,6 +19086,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/What is Feminist AI-.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Wudel_2025_What_is_Feminist_AI.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -18245,6 +19154,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "fulltext_ready",
+      "work_id": "doi:10.24963/ijcai.2023/742",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -18305,6 +19217,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "fulltext_ready",
+      "work_id": "doi:10.70389/pjai.1000088",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -18365,6 +19280,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "record:9BDIJE9B",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -18424,6 +19342,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Tech workers' perspectives on ethical issues in AI development- Foregrounding feminist approaches.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1177/20539517231221780",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -18491,7 +19412,10 @@
       "abstract": "Extends the influential \"Data Feminism\" framework to AI research, presenting intersectional feminist principles for conducting equitable, ethical, and sustainable AI research. Rearticulates original seven data feminism principles specifically for AI contexts and introduces two new principles addressing environmental impact and consent, providing concrete methodological guidance.",
       "item_type": "conferencepaper",
       "journal": "",
-      "knowledge_doc": "vault/Papers/Data feminism for AI.md",
+      "knowledge_doc": "vault/Papers/Data Feminism for AI.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1145/3630106.3658543",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -18560,6 +19484,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/Incubating Feminist AI- Executive Summary 2021-2024.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:A+ Alliance_2024_Incubating_Feminist_AI_Executive_Summary_2021-2024.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -18628,6 +19555,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": "vault/Papers/Recommendation on the Ethics of Artificial Intelligence.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:UNESCO_2021_Recommendation_on_the_Ethics_of_Artificial.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -18694,6 +19624,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Measuring gender and racial biases in large language models- Intersectional evidence from automated resume evaluation.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1093/pnasnexus/pgaf089",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -18758,7 +19691,10 @@
       "abstract": "Critical review examining how intersectionality is conceptualized and operationalized within AI fairness research, analyzing 30 papers from the field. Identifies significant gaps between intersectionality theory and technical applications, proposing six key tenets for properly applying intersectionality in AI research drawn from Patricia Hill Collins and Sirma Bilge's framework.",
       "item_type": "conferencepaper",
       "journal": "",
-      "knowledge_doc": "vault/Papers/Factoring the matrix of domination- A critical review and reimagination of intersectionality in AI fairness.md",
+      "knowledge_doc": "vault/Papers/Factoring the Matrix of Domination- A Critical Review and Reimagination of Intersectionality in AI Fairness.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1145/3600211.3604705",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -18824,6 +19760,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": "vault/Papers/Gender, race, and intersectional bias in AI resume screening via language model retrieval.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1609/aies.v7i1.31748",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -18889,6 +19828,9 @@
       "item_type": "book",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "record:ZLM537Z4",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -18955,6 +19897,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": "vault/Papers/Prompting fairness- Learning prompts for debiasing large language models.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Chisca_2024_Prompting_fairness_Learning_prompts_for_debiasing.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -19019,6 +19964,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Bias and fairness in large language models- A survey.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1162/coli_a_00524",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -19082,6 +20030,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Generative AI and opportunities for feminist classroom assignments.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Small_2023_Generative_AI_and_opportunities_for_feminist.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -19146,6 +20097,9 @@
       "item_type": "conferencepaper",
       "journal": "",
       "knowledge_doc": "vault/Papers/The power of prompts- Evaluating and mitigating gender bias in MT with LLMs.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.18653/v1/2024.gebnlp-1.7",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Exclude",
         "categories": [
@@ -19209,7 +20163,10 @@
       "abstract": "Synthesizes conversations among Latin American women developing AI systems, providing methodological frameworks for feminist AI development based on four real-world projects. Emphasizes co-design methodologies, digital autonomy, data sovereignty, and intersectional approaches through community agreements and power-balancing strategies.",
       "item_type": "report",
       "journal": "",
-      "knowledge_doc": "vault/Papers/Feminist reflections for the development of Artificial Intelligence.md",
+      "knowledge_doc": "vault/Papers/Feminist reflections for the development of artificial intelligence.md",
+      "knowledge_coverage": "linked",
+      "work_id": "source:Guerra_2023_Feminist_reflections_for_the_development_of.md",
+      "identity_basis": "verified_fulltext",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -19275,6 +20232,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": "vault/Papers/Shaping feminist artificial intelligence.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.1177/14614448221150776",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -19334,6 +20294,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "record:BDI6XU5A",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -19372,10 +20335,13 @@
       "year": 2024,
       "doi": "",
       "url": "https://discovery.ucl.ac.uk/id/eprint/10188772/1/Unesco_results.pdf",
-      "abstract": "This study explores biases in three significant large language models (LLMs): OpenAI’s GPT-2\r\nand ChatGPT, along with Meta’s Llama 2, highlighting their role in both advanced decision-making\r\nsystems and as user-facing conversational agents. Across multiple studies, the brief reveals how\r\nbiases emerge in the text generated by LLMs, through gendered word associations, positive or\r\nnegative regard for gendered subjects, or diversity in text generated by gender and culture.\r\nThe research uncovers ",
+      "abstract": "This study explores biases in three significant large language models (LLMs): OpenAI’s GPT-2\nand ChatGPT, along with Meta’s Llama 2, highlighting their role in both advanced decision-making\nsystems and as user-facing conversational agents. Across multiple studies, the brief reveals how\nbiases emerge in the text generated by LLMs, through gendered word associations, positive or\nnegative regard for gendered subjects, or diversity in text generated by gender and culture.\nThe research uncovers persi",
       "item_type": "document",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "identity_unresolved",
+      "work_id": "record:EQV4DNQR",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -19420,6 +20386,9 @@
       "item_type": "booksection",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "record:8NG4ZEWE",
+      "identity_basis": "record",
       "llm": {
         "decision": "Exclude",
         "categories": [],
@@ -19454,10 +20423,13 @@
       "year": 2020,
       "doi": "",
       "url": "unesdoc.unesco.org/in/rest/annotationSVC/DownloadWatermarkedAttachment/attach_import_ab07646d-c784-4a4e-96a1-3be7855b6f76?_=374174eng.pdf&to=54&from=1",
-      "abstract": "The present report builds on UNESCO’s previous\r\nwork on gender equality and AI and aims to continue\r\nthe conversation on this topic with a select group\r\nof experts from key stakeholder groups. In March\r\n2019, UNESCO published a groundbreaking report,\r\nI’d Blush if I Could: closing gender divides in digital\r\nskills through education, based on research funded\r\nby the German Federal Ministry for Economic\r\nCooperation and Development. This report featured\r\nrecommendations on actions to overcome\r\nglo",
+      "abstract": "The present report builds on UNESCO’s previous\nwork on gender equality and AI and aims to continue\nthe conversation on this topic with a select group\nof experts from key stakeholder groups. In March\n2019, UNESCO published a groundbreaking report,\nI’d Blush if I Could: closing gender divides in digital\nskills through education, based on research funded\nby the German Federal Ministry for Economic\nCooperation and Development. This report featured\nrecommendations on actions to overcome\nglobal gender",
       "item_type": "report",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "record:5T55I5Z7",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -19502,6 +20474,9 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "identity_unresolved",
+      "work_id": "doi:10.48558/a179-b138",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -19541,10 +20516,13 @@
       "year": 2024,
       "doi": "",
       "url": "https://www.businessschool-berlin.de/files/Business-School-Berlin/Publikation/Faires-KI-Prompting-Ein-Leitfaden-fuer-Unternehmen%202024.pdf",
-      "abstract": "Der vorliegende Leitfaden möchte Sie auf eine Reise durch die Welt der Generativen KI mitnehmen und Ihnen Werkzeuge an die Hand geben, um diese Technolo-\r\ngien verantwortungsvoll und bewusst zu nutzen. Wir möchten Verständnis für die positive wie negative Wirkung von Generativer KI schaffen, zugleich aber auch den Weg für einen diversen und fairen Einsatz ebnen. Dieser Guide kann Ihr Kompass sein, um nicht nur zu navigieren, sondern die digitale Zukunft mitzugestalten",
+      "abstract": "Der vorliegende Leitfaden möchte Sie auf eine Reise durch die Welt der Generativen KI mitnehmen und Ihnen Werkzeuge an die Hand geben, um diese Technolo-\ngien verantwortungsvoll und bewusst zu nutzen. Wir möchten Verständnis für die positive wie negative Wirkung von Generativer KI schaffen, zugleich aber auch den Weg für einen diversen und fairen Einsatz ebnen. Dieser Guide kann Ihr Kompass sein, um nicht nur zu navigieren, sondern die digitale Zukunft mitzugestalten",
       "item_type": "report",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "identity_unresolved",
+      "work_id": "record:4KMMPA6A",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -19590,6 +20568,9 @@
       "item_type": "webpage",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "record:3ZNMTJ5B",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -19633,6 +20614,9 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": null,
+      "knowledge_coverage": "source_missing",
+      "work_id": "record:J5EF9W6M",
+      "identity_basis": "record",
       "llm": {
         "decision": "Include",
         "categories": [
@@ -19679,7 +20663,10 @@
       "abstract": "Diese Studie analysiert die aufkommende Agenda zu Intersektionalität in AI durch Untersuchung von vier hochrangigen Berichten zu diesem Thema (2019-2021). Die Forschung zeigt, wie diese Dokumente Probleme rahmen und Empfehlungen zur Adressierung von Ungleichheiten formulieren. AI-Systeme verstärken und verschärfen oft menschliche Verzerrungen und Stereotypen, was zu Diskriminierung und Marginalisierung führt. Die Analyse deckt systematische Probleme auf: Diversitätskrisen in AI-Entwicklung, wo G",
       "item_type": "journalarticle",
       "journal": "",
-      "knowledge_doc": null,
+      "knowledge_doc": "vault/Papers/Intersectionality in Artificial Intelligence- Framing Concerns and Recommendations for Action.md",
+      "knowledge_coverage": "linked",
+      "work_id": "doi:10.17645/si.7543",
+      "identity_basis": "doi",
       "llm": {
         "decision": "Include",
         "categories": [

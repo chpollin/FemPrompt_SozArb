@@ -24,7 +24,6 @@ human_categories:
   - KI_Sonstige
   - Bias_Ungleichheit
   - Gender
-  - Diversitaet
   - Feministisch
   - Fairness
 agreement: disagree
@@ -64,19 +63,9 @@ agreement: disagree
 | Soziale_Arbeit | Nein | Ja | X |
 | Bias_Ungleichheit | Ja | Ja |  |
 | Gender | Ja | Ja |  |
-| Diversitaet | Ja | Ja |  |
+| Diversitaet | Nein | Ja | X |
 | Feministisch | Ja | Ja |  |
 | Fairness | Ja | Ja |  |
-
-> Siehe [[Divergenz A+ Alliance_2024_Incubating_Feminist_AI_Executive_Summary_2021-2024]] fuer detaillierte Analyse
-
-
-## Key Concepts
-
-- [[Algorithmic Bias Detection]]
-- [[Design Justice]]
-- [[Feminist AI]]
-- [[Intersectional Feminism in Technology]]
 
 ## Wissensdokument
 

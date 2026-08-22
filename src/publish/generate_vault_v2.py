@@ -1,17 +1,10 @@
 #!/usr/bin/env python3
-"""
-Vault v2 Generator -- Epistemisches Wissensnetz fuer Promptotyping.
+"""Publish the downloadable Obsidian paper collection.
 
-Generates a fully-connected Obsidian vault with 4 document types:
-  - Paper Notes (249): Transformation trails, concepts, assessment data
-  - Concept Notes (~80-120): LLM-extracted, with definitions and co-occurrence
-  - Pipeline Notes (5): Prompts, configs, stats, limitations
-  - Divergence Notes (111): Classified disagreement cases
-
-Usage:
-    python scripts/generate_vault_v2.py              # Full run (needs API key)
-    python scripts/generate_vault_v2.py --skip-llm   # Use cached LLM results
-    python scripts/generate_vault_v2.py --clean       # Delete vault first
+The former concept, divergence, pipeline, and MOC projections were retired
+because they duplicated canonical data with stale embedded counts. The active
+download contains paper notes only. Matching helpers remain shared with the
+Promptotyping publisher.
 """
 
 import os
@@ -21,11 +14,9 @@ import csv
 import re
 import time
 import argparse
-import shutil
 import zipfile
 from pathlib import Path
-from typing import Dict, List, Set, Tuple, Optional, Any
-from datetime import datetime
+from typing import Dict, List, Optional, Set, Tuple
 from collections import defaultdict, Counter
 from difflib import SequenceMatcher
 
@@ -34,6 +25,14 @@ if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
 if hasattr(sys.stderr, 'reconfigure'):
     sys.stderr.reconfigure(encoding='utf-8')
+
+
+def unlink_file(path: Path) -> None:
+    """Delete one file, including legacy paths beyond the Windows MAX_PATH limit."""
+    target = str(path.resolve())
+    if os.name == 'nt' and not target.startswith('\\\\?\\'):
+        target = f'\\\\?\\{target}'
+    os.unlink(target)
 
 
 # ---------------------------------------------------------------------------
@@ -390,7 +389,7 @@ def build_assessment_prompt_from_code(categories_path: Path) -> str:
 # ---------------------------------------------------------------------------
 
 class VaultV2Generator:
-    """Generates Obsidian Vault v2 with 4 document types."""
+    """Generate paper notes while preserving the shared matching contract."""
 
     ASSESSMENT_CATEGORIES = [
         "AI_Literacies", "Generative_KI", "Prompting", "KI_Sonstige",
@@ -550,7 +549,7 @@ class VaultV2Generator:
         # 5. Agreement metrics
         if self.agreement_json_path.exists():
             self.agreement_metrics = json.loads(self.agreement_json_path.read_text(encoding='utf-8'))
-            print(f"  Agreement metrics: loaded")
+            print("  Agreement metrics: loaded")
 
         print()
 
@@ -880,7 +879,7 @@ Antworte NUR mit diesem JSON:
 
         # Print pattern distribution
         patterns = Counter(v['pattern'] for v in self.divergence_classifications.values())
-        print(f"  Pattern distribution:")
+        print("  Pattern distribution:")
         for pattern, count in patterns.most_common():
             print(f"    {pattern}: {count} ({count * 100 / total:.0f}%)")
         print()
@@ -890,13 +889,13 @@ Antworte NUR mit diesem JSON:
     # -------------------------------------------------------------------
 
     def setup_vault_structure(self, clean: bool = False):
-        """Create vault directory structure."""
-        if clean and self.vault_path.exists():
-            shutil.rmtree(self.vault_path)
-            print(f"  Cleaned vault: {self.vault_path}")
-
-        for subdir in ['Papers', 'Concepts', 'Pipeline', 'Divergenzen', 'MOCs']:
-            (self.vault_path / subdir).mkdir(parents=True, exist_ok=True)
+        """Create the paper collection and optionally clear its old notes."""
+        paper_directory = self.vault_path / 'Papers'
+        paper_directory.mkdir(parents=True, exist_ok=True)
+        if clean:
+            for path in paper_directory.glob('*.md'):
+                unlink_file(path)
+            print(f"  Cleaned paper notes: {paper_directory}")
 
         print(f"  Vault structure ready: {self.vault_path}")
 
@@ -907,7 +906,19 @@ Antworte NUR mit diesem JSON:
     def _safe_filename(self, title: str) -> str:
         """Make a filesystem-safe filename from a title."""
         safe = re.sub(r'[<>:"/\\|?*\n\r]', '-', title).strip('. ')
-        return safe[:200]  # Max length
+        return safe[:100]
+
+    def _unique_filename(self, title: str, stem: str, used: Set[str]) -> str:
+        """Return a case-insensitively unique, Windows-safe output filename."""
+        base_title = self._safe_filename(title)
+        candidate = base_title
+        suffix_index = 1
+        while candidate.casefold() in used:
+            suffix_index += 1
+            suffix = stem[:32] if suffix_index == 2 else f"{stem[:24]}-{suffix_index}"
+            candidate = f"{base_title[:64].rstrip('. ')} ({suffix})"
+        used.add(candidate.casefold())
+        return candidate
 
     def _yaml_frontmatter(self, data: dict) -> str:
         """Render a dict as YAML frontmatter."""
@@ -1043,7 +1054,7 @@ Antworte NUR mit diesem JSON:
         if verif:
             v = verif.get('verification', {})
             note += '### Stufe 3: Verifikation (LLM)\n\n'
-            note += f'| Metrik | Score |\n|--------|-------|\n'
+            note += '| Metrik | Score |\n|--------|-------|\n'
             note += f'| Completeness | {v.get("completeness", {}).get("score", "?")} |\n'
             note += f'| Correctness | {v.get("correctness", {}).get("score", "?")} |\n'
             note += f'| Category Validation | {v.get("category_validation", {}).get("score", "?")} |\n'
@@ -1062,12 +1073,9 @@ Antworte NUR mit diesem JSON:
                 note += '|-----------|-------|-----|----------|\n'
                 for cat in self.ASSESSMENT_CATEGORIES:
                     h = 'Ja' if human_data.get('categories', {}).get(cat) else 'Nein'
-                    l = 'Ja' if llm_data.get('categories', {}).get(cat) else 'Nein'
-                    div = 'X' if h != l else ''
-                    note += f'| {cat} | {h} | {l} | {div} |\n'
-                note += '\n'
-                # Link to divergence note
-                note += f'> Siehe [[Divergenz {stem}]] fuer detaillierte Analyse\n\n'
+                    llm_value = 'Ja' if llm_data.get('categories', {}).get(cat) else 'Nein'
+                    div = 'X' if h != llm_value else ''
+                    note += f'| {cat} | {h} | {llm_value} | {div} |\n'
             note += '\n'
 
         # Section 2: Key Concepts
@@ -1170,7 +1178,7 @@ Antworte NUR mit diesem JSON:
         notes = {}
 
         # 1. Identifikation
-        notes['Identifikation'] = f"""---
+        notes['Identifikation'] = """---
 title: "Pipeline: Identifikation"
 type: pipeline
 stage: 1
@@ -1208,7 +1216,7 @@ Manuelle Ergaenzung ueber Schneeballverfahren und Expert:innen-Empfehlungen.
 """
 
         # 2. Konversion
-        notes['Konversion'] = f"""---
+        notes['Konversion'] = """---
 title: "Pipeline: Konversion"
 type: pipeline
 stage: 2
@@ -1447,7 +1455,7 @@ Deterministisches Python-Script (`scripts/generate_vault_v2.py`) mit LLM-gestuet
 
         # Decisions
         note += '## Entscheidungen\n\n'
-        note += f'| | Entscheidung |\n|---|---|\n'
+        note += '| | Entscheidung |\n|---|---|\n'
         note += f'| **Human** | {row.get("human_decision", "")} |\n'
         note += f'| **LLM** | {row.get("agent_decision", "")} |\n'
         note += f'| **Typ** | {row.get("disagreement_type", "")} |\n'
@@ -1459,9 +1467,9 @@ Deterministisches Python-Script (`scripts/generate_vault_v2.py`) mit LLM-gestuet
         note += '|-----------|-------|-----|----------|\n'
         for cat in self.ASSESSMENT_CATEGORIES:
             h = row.get(f'human_{cat}', '')
-            l = row.get(f'agent_{cat}', '')
-            div = '**X**' if h != l else ''
-            note += f'| {cat} | {h} | {l} | {div} |\n'
+            agent_value = row.get(f'agent_{cat}', '')
+            div = '**X**' if h != agent_value else ''
+            note += f'| {cat} | {h} | {agent_value} | {div} |\n'
         note += '\n'
 
         # LLM Reasoning
@@ -1629,8 +1637,8 @@ Jede Note in diesem Vault operiert auf drei Ebenen:
     # Main orchestrator
     # -------------------------------------------------------------------
 
-    def generate(self, clean: bool = False, skip_llm: bool = False):
-        """Full generation pipeline."""
+    def generate(self, clean: bool = False):
+        """Generate paper notes and the downloadable archive."""
         print("\n" + "=" * 60)
         print("VAULT V2 GENERATOR")
         print("=" * 60 + "\n")
@@ -1638,10 +1646,6 @@ Jede Note in diesem Vault operiert auf drei Ebenen:
         # Setup
         self.setup_vault_structure(clean=clean)
         self.load_all_data()
-
-        # LLM phases
-        self.run_concept_extraction(skip_llm=skip_llm)
-        self.run_divergence_classification(skip_llm=skip_llm)
 
         # Generate documents
         print("=" * 60)
@@ -1651,7 +1655,7 @@ Jede Note in diesem Vault operiert auf drei Ebenen:
         # Paper notes (Step 1.4)
         print("\n  [Papers] Generating paper notes...")
         paper_count = 0
-        used_filenames: Dict[str, int] = {}  # Track collisions
+        used_filenames: Set[str] = set()
         self._stem_to_vault_filename: Dict[str, str] = {}  # For cross-references
         knowledge_files = sorted(self.knowledge_dir.glob('*.md'))
         for kd_path in knowledge_files:
@@ -1664,16 +1668,7 @@ Jede Note in diesem Vault operiert auf drei Ebenen:
             match_data = self.knowledge_to_zotero.get(stem, {})
             zotero_item = match_data.get('zotero_item', {})
             title = zotero_item.get('title', stem) or stem
-            safe_title = self._safe_filename(title)
-
-            # Handle filename collisions by appending stem suffix
-            if safe_title in used_filenames:
-                used_filenames[safe_title] += 1
-                # Truncate title to leave room for suffix, keeping total under 150 chars
-                truncated = safe_title[:100].rstrip('. ')
-                safe_title = f"{truncated} ({stem[:40]})"
-            else:
-                used_filenames[safe_title] = 1
+            safe_title = self._unique_filename(title, stem, used_filenames)
 
             self._stem_to_vault_filename[stem] = safe_title
             out_path = self.vault_path / 'Papers' / f'{safe_title}.md'
@@ -1682,61 +1677,15 @@ Jede Note in diesem Vault operiert auf drei Ebenen:
 
         print(f"    {paper_count} paper notes created")
 
-        # Concept notes (Step 1.5)
-        print("  [Concepts] Generating concept notes...")
-        concept_count = 0
-        for name, data in self.concepts.items():
-            note = self.create_concept_note(name, data)
-            safe_name = self._safe_filename(name)
-            out_path = self.vault_path / 'Concepts' / f'{safe_name}.md'
-            out_path.write_text(note, encoding='utf-8')
-            concept_count += 1
-        print(f"    {concept_count} concept notes created")
-
-        # Pipeline notes (Step 1.6)
-        print("  [Pipeline] Generating pipeline notes...")
-        pipeline_notes = self.create_pipeline_notes()
-        for name, content in pipeline_notes.items():
-            out_path = self.vault_path / 'Pipeline' / f'{name}.md'
-            out_path.write_text(content, encoding='utf-8')
-        print(f"    {len(pipeline_notes)} pipeline notes created")
-
-        # Divergence notes (Step 1.7)
-        print("  [Divergenzen] Generating divergence notes...")
-        div_count = 0
-        for row in self.disagreements:
-            note = self.create_divergenz_note(row)
-            pid = row.get('paper_id', '')
-            author_year = row.get('author_year', '')
-            safe_name = f"Divergenz_{pid}_{self._safe_filename(author_year)}"
-            out_path = self.vault_path / 'Divergenzen' / f'{safe_name}.md'
-            out_path.write_text(note, encoding='utf-8')
-            div_count += 1
-        print(f"    {div_count} divergence notes created")
-
-        # MOC/Index notes (Step 1.8)
-        print("  [MOCs] Generating index notes...")
-        index_notes = self.create_index_notes()
-        # Master MOC at vault root
-        (self.vault_path / 'MASTER_MOC.md').write_text(index_notes.pop('MASTER_MOC'), encoding='utf-8')
-        for name, content in index_notes.items():
-            out_path = self.vault_path / 'MOCs' / f'{name}.md'
-            out_path.write_text(content, encoding='utf-8')
-        print(f"    {len(index_notes) + 1} index notes created")
-
         # ZIP
         print("\n  [ZIP] Creating vault archive...")
         self.generate_vault_zip()
 
         # Summary
         print("\n" + "=" * 60)
-        print("VAULT V2 GENERATION COMPLETE")
+        print("PAPER VAULT GENERATION COMPLETE")
         print("=" * 60)
         print(f"  Papers:      {paper_count}")
-        print(f"  Concepts:    {concept_count}")
-        print(f"  Pipeline:    {len(pipeline_notes)}")
-        print(f"  Divergenzen: {div_count}")
-        print(f"  MOCs:        {len(index_notes) + 1}")
         print(f"  Location:    {self.vault_path}")
         print()
 
@@ -1747,12 +1696,10 @@ Jede Note in diesem Vault operiert auf drei Ebenen:
 
 def main():
     parser = argparse.ArgumentParser(
-        description='Generate Obsidian Vault v2 for Promptotyping'
+        description='Generate the downloadable Obsidian paper collection'
     )
     parser.add_argument('--clean', action='store_true',
-                        help='Delete existing vault before generation')
-    parser.add_argument('--skip-llm', action='store_true',
-                        help='Use cached LLM results (no API calls)')
+                        help='Delete existing paper notes before generation')
     parser.add_argument('--cache-dir', default='.vault_cache',
                         help='Directory for LLM result cache (default: .vault_cache)')
     parser.add_argument('--base-path', default=None,
@@ -1761,7 +1708,7 @@ def main():
 
     base_path = Path(args.base_path) if args.base_path else None
     generator = VaultV2Generator(base_path=base_path, cache_dir=args.cache_dir)
-    generator.generate(clean=args.clean, skip_llm=args.skip_llm)
+    generator.generate(clean=args.clean)
 
 
 if __name__ == '__main__':

@@ -62,9 +62,6 @@ agreement: disagree
 | Feministisch | Nein | Nein |  |
 | Fairness | Nein | Ja | X |
 
-> Siehe [[Divergenz Wang_2025_Multilingual_Prompting_for_Improving_LLM]] fuer detaillierte Analyse
-
-
 ## Wissensdokument
 
 # Multilingual Prompting for Improving LLM Generation Diversity

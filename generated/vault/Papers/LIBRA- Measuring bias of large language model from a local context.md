@@ -25,7 +25,6 @@ human_categories:
   - Prompting
   - Bias_Ungleichheit
   - Gender
-  - Diversitaet
   - Fairness
 agreement: disagree
 ---
@@ -36,7 +35,7 @@ agreement: disagree
 
 ### Stufe 1: Extraktion & Klassifikation (LLM)
 
-**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Fairness
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
 **Argumente:** 3 extrahiert
 
 ### Stufe 3: Verifikation (LLM)
@@ -45,8 +44,8 @@ agreement: disagree
 |--------|-------|
 | Completeness | 88 |
 | Correctness | 92 |
-| Category Validation | 85 |
-| **Overall Confidence** | **88** |
+| Category Validation | 93 |
+| **Overall Confidence** | **91** |
 
 ### Stufe 4: Assessment
 
@@ -64,74 +63,80 @@ agreement: disagree
 | Soziale_Arbeit | Nein | Nein |  |
 | Bias_Ungleichheit | Ja | Ja |  |
 | Gender | Ja | Nein | X |
-| Diversitaet | Ja | Ja |  |
+| Diversitaet | Nein | Ja | X |
 | Feministisch | Nein | Nein |  |
 | Fairness | Ja | Ja |  |
 
-> Siehe [[Divergenz Pan_2025_AI_literacy_and_trust_A_multi-method_study_of]] fuer detaillierte Analyse
-
-
-## Key Concepts
-
-- [[AI Literacy]]
-- [[AI Trustworthiness]]
-
 ## Wissensdokument
 
-# AI literacy and trust: A multi-method study of Human-GAI team collaboration
+# LIBRA: Measuring Bias of Large Language Model from a Local Context
 
 ## Kernbefund
 
-Higher AI literacy shows a paradox: while perceived value increases trust in GAI, greater knowledge can lead to distrust. The study identified three trust categories (trust 52%, distrust 26%, ambivalence 22%) and found that AI accuracy perceptions are critical determinants of trust formation.
+Lokale Wörter (besonders Te Reo Māori) liegen außerhalb der Wissensgrenzen der meisten LLMs; Llama-3 zeigt besseres Verständnis für kulturelle Kontexte, aber alle getesteten Modelle zeigen erhebliche Bias - insbesondere gilt: linguistisch kompetentere Modelle sind stärker verzerrt.
 
 ## Forschungsfrage
 
-Wie beeinflussen AI Literacy und Vertrauen die Zusammenarbeit zwischen Menschen und generativer KI in Team-Settings?
+Wie können lokale Biases in Large Language Models effektiv gemessen werden, indem kulturspezifische Korpora genutzt werden und gleichzeitig die Herausforderungen durch Wörter außerhalb der Wissensgrenzen der Modelle adressiert werden?
 
 ## Methodik
 
-Mixed Methods: Qualitativ (kodierte Interviews zu Trust-Kategorien) und Quantitativ (Multinomiale logistische Regression und lineare Regression mit n=116 Studierenden in 23 Projektteams)
-**Datenbasis:** n=116 undergraduate team members across 23 project teams throughout a semester; qualitative and quantitative measures on AI literacy (knowledge, perceived value, concerns) and trust in GAI
+Empirisch-Mixed: Framework-Entwicklung (LIBRA) mit automatisierter Datensatzkonstruktion aus lokalen Korpora (367.384 neuseeländische Nachrichtenartikel und Transkripte), Keyword-Augmentation mittels LLM2Vec und Association Rule Learning, Fuzzy Clustering, Evaluationen mit Jensen-Shannon Divergence und neuer EiCAT-Metrik, Evaluationen an BERT, GPT-2, Llama-3 Modellen.
+**Datenbasis:** 167.712 Sätze und Tripel-Testfälle aus 367.384 Nachrichtenartikel und Transkripten aus neuseeländischen lokalen Medien; 8 Zielgruppen (Alter 73,43%, Geschlecht 10,78%, Rasse/Ethnizität 10,65%, sexuelle Orientierung 2,94%, physisches Erscheinungsbild 0,96%, Behinderung 0,78%, Nationalität 0,02%, Religion 0,45%); Validierung auch mit 'Our Voices' Dataset und Malaysia-Kontext
 
 ## Hauptargumente
 
-- Trust is a fundamental requirement for effective human-AI teamwork, but unlike human teams, GAI teams face unique challenges because trust-building mechanisms based on shared experiences and interpersonal familiarity are unavailable in human-GAI interactions.
-- AI literacy is a multidimensional construct comprising knowledge about GAI, perceived value, and perceived concerns. Knowledge paradoxically increases distrust while perceived value increases trust, suggesting that critical technical understanding can prompt skepticism about GAI reliability.
-- The educational context reveals real-world trust deficits in AI adoption across domains (healthcare, K-12 education, software development), necessitating targeted AI literacy development programs to foster both informed use and appropriate calibration of trust in AI systems.
+- Bestehende LLM-Bias-Forschung fokussiert zu stark auf US-amerikanische kulturelle Kontexte und ignoriert lokale, regionale Stereotype in anderen Kulturen, was zu unfairen Entwicklungs- und Einsatzpraktiken führt.
+- Wörter außerhalb der Wissensgrenzen von LLMs (wie Te Reo Māori Begriffe) erzeugen halluzinatorische und selbstsichere Ausgaben, die nicht auf echtem Bias beruhen sondern auf Wissenslücken; diese müssen bei der Bias-Messung separat identifiziert und gewichtet werden.
+- Ein Framework zur automatisierten Datensatzkonstruktion aus lokalen Korpora ohne Crowdsourcing ermöglicht es Forschern weltweit, kulturspezifische Bias-Tests effizient zu entwickeln und dabei grammatikalische Diversität und syntaktische Variation zu bewahren.
 
 ## Kategorie-Evidenz
 
 ### Evidenz 1
 
-Long and Magerko (2020) define AI literacy as understanding basic AI concepts, recognizing practical applications, and evaluating social impacts. The study operationalizes AI literacy through three sub-constructs: knowledge about GAI, perceived value of GAI, and perceived concerns about GAI, with α=.75 overall reliability.
+Das Paper adressiert die Notwendigkeit von Verständnis über LLM-Biases und deren Auswirkungen auf diverse Kulturen: 'LLMs have become a cornerstone in natural language processing (NLP) applications' und 'Developing methodologies to detect local biases in region-specific contexts accurately is essential, ensuring that LLMs are evaluated and improved with a sensitivity to cultural diversity.'
 
 ### Evidenz 2
 
-Study focuses explicitly on human-generative AI (GAI) collaboration, defined as systems capable of generating new content based on training data, specifically examining LLMs like ChatGPT. Both Study 1 and Study 2 measure trust and perceptions of GAI as a teammate in collaborative settings.
+Fokus auf Large Language Models (BERT, GPT-2, Llama-3): 'This research addresses these limitations with a Local Integrated Bias Recognition and Assessment Framework (LIBRA) for measuring bias using datasets sourced from local corpora without crowdsourcing.'
 
 ### Evidenz 3
 
-The National Institute of Standards and Technology (2023) AI Risk Management Framework is referenced, highlighting key attributes contributing to AI trustworthiness such as explainability, accuracy, reliability, and fairness as critical factors for positioning AI as a trustworthy collaborator.
+Verwendung von NLP-Techniken (Named Entity Recognition, Clustering, Text Encoding mit LLM2Vec, Association Rule Learning, Jensen-Shannon Divergence Analyse): 'For privacy, we perform Named Entity Recognition (NER)' und 'We then measure bias between these distributions using the Jensen-Shannon Divergence, JSD(Da||Ds).'
+
+### Evidenz 4
+
+Fokus auf marginalisierte Communities und historisch benachteiligte Gruppen in Neuseeland: 'Māori and Pacific Peoples have historically faced poor socio-economic outcomes stemming from colonization and cultural marginalization' und Fokus auf faire Technologien für diverse Populationen.
+
+### Evidenz 5
+
+Zentrale Fokus auf algorithmischen Bias, Stereotype in LLMs und strukturelle Ungleichheiten: 'Bias in LLMs is typically influenced by the data they are trained on, which consists of internet-sourced corpora reflecting the dominant cultural stereotypes from all over the world. When used in diverse cultural settings, this leads to unfair and potentially harmful outcomes.'
+
+### Evidenz 6
+
+Expliziter Fokus auf kulturelle Diversität, lokale Kontexte und unterrepräsentierte Sprachen: 'The use of LLMs in diverse cultural settings, this leads to unfair and potentially harmful outcomes' und Konzentration auf Te Reo Māori und kulturelle Besonderheiten: 'It addresses the significant presence of Te Reo Māori borrow-words in the NZ English corpora and whose limited presence in LLM training data often poses challenges.'
+
+### Evidenz 7
+
+Framework zur Messung und Verbesserung der Fairness von LLMs durch neue Metriken (EiCAT) und beyond knowledge boundary scoring: 'The Enhanced Idealized CAT Score (EiCAT), which incorporates measures of bias, language model capacity and knowledge boundaries, is as follows' und 'ensure that LLMs are evaluated and improved with a sensitivity to cultural diversity.'
 
 ## Assessment-Relevanz
 
-**Domain Fit:** Das Paper hat nur begrenzte Relevanz für die Schnittstelle AI/Soziale Arbeit/Gender. Der Fokus liegt auf Hochschulbildung und Teamarbeit in Lehrkontexten, nicht auf Sozialarbeitsfeldern oder vulnerablen Zielgruppen. Gender und Vielfalt werden nicht explizit untersucht.
+**Domain Fit:** Das Paper ist hochgradig relevant für die Schnittstelle KI und Soziale Arbeit: Es adressiert systematisch die Verzerrungen in LLMs gegenüber marginalisierten Communities (Māori, Pacific Peoples, unterrepräsentierte kulturelle Gruppen) und zeigt, wie diese Biases harm für vulnerable Populationen bedeuten können. Die Fokussierung auf lokale Kontexte und kulturelle Sensibilität sind zentral für ethisch verantwortungsvolle Soziale Arbeit in multikulturellen Gesellschaften.
 
-**Unique Contribution:** Das Paper trägt durch ein mixed-method Design zum Verständnis des Vertrauensparadoxons in GAI-Teams bei: Es zeigt, dass höhere AI Literacy zu mehr kritischem Bewusstsein und damit potentiell zu Misstrauen führen kann, während wahrgenommener Nutzen Vertrauen fördert.
+**Unique Contribution:** Die Innovation liegt in der Kombination aus (1) automatisierter Datensatzkonstruktion aus lokalen Korpora ohne Crowdsourcing, (2) expliziter Behandlung von Wissensgrenzen-Problemen bei lokalen Wörtern durch Beyond Boundary Score, und (3) neuer EiCAT-Metrik, die Bias und kulturelle Verständnis simultan misst - damit wird erstmals ein skalierbares Framework für regionale Bias-Evaluation außerhalb des US-Kontexts bereitgestellt.
 
-**Limitations:** Limitationen: Nicht angegeben im Abstract/Excerpt; methodisch wahrscheinlich: Kleine Stichprobe von Studierenden in einem Lehrsetting, begrenzte Generalisierbarkeit auf andere Populationen und professionelle Kontexte
+**Limitations:** Das Paper konzentriert sich auf englischsprachige Kontexte mit begrenzt lokalisierten Tests (Neuseeland, Malaysia, Our Voices); die Verallgemeinerbarkeit auf stark nicht-englische Sprachkontexte oder visuelle/multimodale Biases ist unklar; auch die Annotation durch 'local cultural experts' ist nicht detailliert dokumentiert, was Replikierbarkeit gefährdet.
 
-**Target Group:** Bildungsforscher, Hochschullehrende, Organisationsentwickler, HR-Profis, KI-Literacy-Curriculum-Designer, Forscher im Bereich Human-AI Collaboration und Team-Management
+**Target Group:** KI-Entwickler und Forscher im NLP-Bereich; Policymaker für KI-Regulierung in multikulturellen Gesellschaften; Sozialarbeiter und Organisationen, die mit marginalisierten Communities arbeiten und LLM-basierte Systeme evaluieren müssen; Wissenschaftler in Gender Studies und Critical Data Studies mit Interesse an algorithmischer Gerechtigkeit; internationale Institutionen zur KI-Governance und Bias-Mitigation
 
 ## Schlüsselreferenzen
 
-- [[Lee_See_2004]] - Trust in automation: Designing for appropriate reliance
-- [[Mayer_Davis_Schoorman_1995]] - An integrative model of organizational trust
-- [[Kozlowski_et_al_2015]] - Teams, teamwork, and team effectiveness: Implications for human systems integration
-- [[Fiore_Wiltshire_2016]] - Technology as a teammate: Cognition across members, artifacts, and technology
-- [[Long_Magerko_2020]] - What is AI literacy? Competencies and design considerations
-- [[Wilson_Daugherty_2018]] - Collaborative intelligence: Humans and AI are joining forces
-- [[Chan_Hu_2023]] - AI literacy measure with knowledge, perceived value, and concerns sub-constructs
-- [[ONeill_et_al_2022]] - Human-autonomy teaming: A review and analysis of the empirical literature
-- [[National_Institute_of_Standards_and_Technology_2023]] - AI Risk Management Framework
-- [[Guzman_Lewis_2019]] - Artificial intelligence and communication: A human-machine communication research agenda
+- [[Nadeem_M_Bethke_A_Reddy_S_2021]] - StereoSet: Measuring stereotypical bias in pretrained language models
+- [[Caliskan_A_Bryson_JJ_Narayanan_A_2017]] - Semantics derived automatically from language corpora contain human-like biases
+- [[Nangia_N_Vania_C_Bhalerao_R_Bowman_SR_2020]] - CrowS-Pairs: A Challenge Dataset for Measuring Social Biases in Masked Language Models
+- [[May_C_Wang_A_Bordia_S_Bowman_SR_Rudinger_R_2019]] - On measuring social biases in sentence encoders
+- [[Li_Y_Du_M_Song_R_Wang_X_Wang_Y_2023]] - A survey on fairness in large language models
+- [[Gallegos_IO_Rossi_RA_Barrow_J_Tanjim_MM_Kim_S_Dernoncourt_F_Yu_T_Zhang_R_Ahmed_NK_2024]] - Bias and Fairness in Large Language Models: A Survey
+- [[Yogarajan_V_Dobbie_G_Keegan_TT_Neuwirth_RJ_2023]] - Tackling bias in pretrained language models: Current trends and under-represented societies
+- [[Radford_A_Wu_J_Child_R_Luan_D_Amodei_D_Sutskever_I_2019]] - Language models are unsupervised multitask learners

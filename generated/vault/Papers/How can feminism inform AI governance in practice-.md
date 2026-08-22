@@ -60,9 +60,6 @@ agreement: disagree
 | Feministisch | Nein | Ja | X |
 | Fairness | Nein | Ja | X |
 
-> Siehe [[Divergenz Ricaurte_2024_How_can_feminism_inform_AI_governance_in_practice]] fuer detaillierte Analyse
-
-
 ## Wissensdokument
 
 # How can feminism inform AI governance in practice?

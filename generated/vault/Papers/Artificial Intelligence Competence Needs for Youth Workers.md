@@ -54,15 +54,6 @@ agreement: agree
 **LLM:** Include (Confidence: 0.95)
 **Human:** Include
 
-## Key Concepts
-
-- [[AI Literacy]]
-- [[Algorithmic Bias]]
-- [[Algorithmic Fairness]]
-- [[Digital Inclusion]]
-- [[Ethical AI Integration]]
-- [[Prompt Engineering]]
-
 ## Wissensdokument
 
 # Artificial Intelligence Competence Needs for Youth Workers

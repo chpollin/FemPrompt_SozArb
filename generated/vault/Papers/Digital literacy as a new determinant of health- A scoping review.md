@@ -21,6 +21,11 @@ llm_confidence: 0.95
 llm_categories:
   - AI_Literacies
   - Bias_Ungleichheit
+human_decision: Exclude
+human_categories:
+  - Bias_Ungleichheit
+  - Gender
+agreement: agree
 ---
 
 # Digital literacy as a new determinant of health: A scoping review
@@ -35,11 +40,7 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Exclude (Confidence: 0.95)
-
-## Key Concepts
-
-- [[Digital Divide]]
-- [[Digital Health Literacy]]
+**Human:** Exclude
 
 ## Wissensdokument
 

@@ -60,13 +60,6 @@ agreement: disagree
 | Feministisch | Nein | Nein |  |
 | Fairness | Nein | Ja | X |
 
-> Siehe [[Divergenz UNESCO_2024_Women4Ethical_AI_Global_cooperation_for]] fuer detaillierte Analyse
-
-
-## Key Concepts
-
-- [[Gender Bias in AI Systems]]
-
 ## Wissensdokument
 
 # Women for Ethical AI Action Request: A global cooperation for gender-inclusive AI governance

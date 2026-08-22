@@ -20,7 +20,6 @@ human_categories:
   - Prompting
   - Bias_Ungleichheit
   - Gender
-  - Diversitaet
   - Fairness
 agreement: agree
 ---
@@ -38,10 +37,6 @@ agreement: agree
 
 **LLM:** Include (Confidence: 0.85)
 **Human:** Include
-
-## Key Concepts
-
-- [[Algorithmic Bias Amplification]]
 
 ## Wissensdokument
 

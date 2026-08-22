@@ -23,7 +23,6 @@ human_categories:
   - KI_Sonstige
   - Bias_Ungleichheit
   - Gender
-  - Diversitaet
   - Feministisch
   - Fairness
 agreement: disagree
@@ -63,17 +62,9 @@ agreement: disagree
 | Soziale_Arbeit | Nein | Nein |  |
 | Bias_Ungleichheit | Ja | Ja |  |
 | Gender | Ja | Ja |  |
-| Diversitaet | Ja | Ja |  |
+| Diversitaet | Nein | Ja | X |
 | Feministisch | Ja | Ja |  |
 | Fairness | Ja | Ja |  |
-
-> Siehe [[Divergenz Kumar_2024_How_AI_hype_impacts_the_LGBTQ+_community]] fuer detaillierte Analyse
-
-
-## Key Concepts
-
-- [[Algorithmic Bias]]
-- [[Intersectionality in AI Systems]]
 
 ## Wissensdokument
 

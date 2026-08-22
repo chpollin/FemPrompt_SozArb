@@ -42,13 +42,6 @@ agreement: agree
 **LLM:** Exclude (Confidence: 0.95)
 **Human:** Exclude
 
-## Key Concepts
-
-- [[Critical Digital Thinking]]
-- [[Digital Divide]]
-- [[Digital Equity in Education]]
-- [[Digital Literacy]]
-
 ## Wissensdokument
 
 # A Literature Review of Digital Literacy over Two Decades

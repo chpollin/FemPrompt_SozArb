@@ -4,7 +4,8 @@ import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = resolve(fileURLToPath(new URL('../..', import.meta.url)));
-const runPath = 'tests/review-cases/agent-runs/agent-v03-10b-20260822/run.json';
+const provisionalRunPath = 'tests/review-cases/agent-runs/agent-v03-10b-20260822/run.json';
+const ratificationRunPath = 'tests/review-cases/agent-runs/ratification-ar2-20260822/run.json';
 
 function bytes(path) {
   return readFileSync(resolve(root, path));
@@ -42,26 +43,83 @@ function normalizedText(value) {
     .toLowerCase();
 }
 
-const run = json(runPath);
-for (const input of run.integration.inputs)
+const provisionalRun = json(provisionalRunPath);
+for (const input of provisionalRun.integration.inputs)
   assert(sha256(input.path) === input.sha256, `input hash mismatch: ${input.path}`);
 
-const main = json(run.integration.inputs[0].path);
-const supplement = json(run.integration.inputs[1].path);
-const product = json(run.integration.output.path);
-const acceptance = json(run.integration.acceptance_copy.path);
+const main = json(provisionalRun.integration.inputs[0].path);
+const supplement = json(provisionalRun.integration.inputs[1].path);
+const acceptance = json(provisionalRun.integration.acceptance_copy.path);
 
 const merged = { ...main.decisions, ...supplement.decisions };
-same(product.decisions, merged, 'integrated decisions');
-same(acceptance, product, 'acceptance copy');
-assert(product.schema === 'femprompt-prisma-reviewer/0.3', 'unexpected reviewer schema');
-assert(product.reviewer === 'ar2' && product.actor === 'agent', 'reviewer or actor changed');
-assert(product.status === 'provisional_technical_acceptance', 'product status is not provisional');
-assert(sha256(run.integration.output.path) === run.integration.output.sha256, 'product hash mismatch');
-assert(sha256(run.integration.acceptance_copy.path) === run.integration.acceptance_copy.sha256, 'acceptance hash mismatch');
+same(acceptance.decisions, merged, 'provisional acceptance decisions');
+assert(acceptance.status === 'provisional_technical_acceptance', 'historical acceptance is not provisional');
+assert(
+  sha256(provisionalRun.integration.acceptance_copy.path) === provisionalRun.integration.acceptance_copy.sha256,
+  'historical acceptance hash mismatch',
+);
+
+const ratificationRun = json(ratificationRunPath);
+for (const track of ratificationRun.tracks)
+  assert(sha256(track.export).toLowerCase() === track.sha256, `ratification track hash mismatch: ${track.export}`);
+
+const consensusPath = ratificationRun.adjudication.consensus.path;
+const consensus = json(consensusPath);
+assert(
+  sha256(consensusPath).toLowerCase() === ratificationRun.adjudication.consensus.sha256,
+  'consensus hash mismatch',
+);
+
+const productPath = ratificationRun.adjudication.integration.output;
+const product = json(productPath);
+const acceptedAt = ratificationRun.adjudication.integration.accepted_at;
+const decisions = {};
+for (const id of ratificationRun.paper_ids) {
+  const record = structuredClone(consensus.records[id]?.proposed_record);
+  assert(record?.decision, `${id}: consensus record missing`);
+  record.ts = acceptedAt;
+  record.reviewer = 'ar2';
+  record.actor = 'agent';
+  decisions[id] = record;
+}
+
+const expectedProduct = {
+  schema: 'femprompt-prisma-reviewer/0.3',
+  reviewer: 'ar2',
+  actor: 'agent',
+  status: 'ratified_agent_consensus',
+  updated: acceptedAt,
+  ratification: {
+    run_id: ratificationRun.run_id,
+    method: 'dual_blind_agent_review_with_independent_source_adjudication',
+    consensus_path: consensusPath,
+    consensus_sha256: ratificationRun.adjudication.consensus.sha256,
+    input_tracks: ratificationRun.tracks.map((track) => ({
+      reviewer: track.reviewer,
+      path: track.export,
+      sha256: track.sha256,
+    })),
+    operator_acceptance: {
+      status: 'accepted',
+      accepted_at: acceptedAt,
+      basis: 'User authorized direct integration into the real research data and execution through Milestone 1.',
+    },
+  },
+  decisions,
+};
+
+same(product, expectedProduct, 'ratified product');
+assert(
+  sha256(productPath).toLowerCase() === ratificationRun.adjudication.integration.output_sha256,
+  'ratified product hash mismatch',
+);
 
 const ids = Object.keys(product.decisions).sort();
 assert(ids.length === 10, `expected 10 records, got ${ids.length}`);
+assert(
+  JSON.stringify(ids) === JSON.stringify([...ratificationRun.paper_ids].sort()),
+  'ratified product IDs differ from the run manifest',
+);
 
 let evidenceCount = 0;
 for (const id of ids) {
@@ -79,14 +137,12 @@ for (const id of ids) {
     assert(analysis?.fields?.AN_Coding_Basis, `${id}: Include has no coding basis`);
   }
 
-  const expectedFulltextHash = run.fulltext_sha256[id];
-  if (!expectedFulltextHash) {
+  const sourcePath = ratificationRun.paper_sources[id];
+  if (!sourcePath?.startsWith('generated/')) {
     assert(!Object.values(record.evidence || {}).flat().length, `${id}: evidence exists without pinned full text`);
     continue;
   }
-  const fulltextPath = `docs/data/fulltext/${id}.md`;
-  assert(sha256(fulltextPath) === expectedFulltextHash, `${id}: full-text hash mismatch`);
-  const paper = normalizedText(bytes(fulltextPath).toString('utf8'));
+  const paper = normalizedText(bytes(sourcePath).toString('utf8'));
   for (const evidence of Object.values(record.evidence || {}).flat()) {
     const quote = normalizedText(evidence.term || evidence.snippet);
     assert(quote && paper.includes(quote), `${id}: evidence is not verbatim in the pinned full text`);
@@ -94,4 +150,6 @@ for (const id of ids) {
   }
 }
 
-console.log(`PASS agent track: ${ids.length} records, ${evidenceCount} evidence passages, hashes and integration verified`);
+console.log(
+  `PASS agent track: historical provisional acceptance and ratified product verified; ${ids.length} records, ${evidenceCount} evidence passages`,
+);

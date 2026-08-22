@@ -16,6 +16,10 @@ llm_confidence: 0.35
 llm_categories:
   - Generative_KI
   - KI_Sonstige
+human_decision: Exclude
+human_categories:
+  - Generative_KI
+agreement: agree
 ---
 
 # Exploring complex mental health symptoms via classifying social media data with explainable LLMs
@@ -39,6 +43,7 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Exclude (Confidence: 0.35)
+**Human:** Exclude
 
 ## Wissensdokument
 

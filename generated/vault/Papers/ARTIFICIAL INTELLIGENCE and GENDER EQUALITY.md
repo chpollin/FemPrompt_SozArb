@@ -40,10 +40,6 @@ llm_categories:
 
 **LLM:** Include (Confidence: 0.85)
 
-## Key Concepts
-
-- [[Gender Bias in AI Systems]]
-
 ## Wissensdokument
 
 # Artificial Intelligence and gender equality

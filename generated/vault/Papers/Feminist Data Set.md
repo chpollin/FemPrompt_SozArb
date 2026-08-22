@@ -63,15 +63,6 @@ agreement: disagree
 | Feministisch | Nein | Ja | X |
 | Fairness | Nein | Ja | X |
 
-> Siehe [[Divergenz Sinders_2017_Feminist_Data_Set]] fuer detaillierte Analyse
-
-
-## Key Concepts
-
-- [[Algorithmic Bias]]
-- [[Data Feminism]]
-- [[Gender Bias in AI Systems]]
-
 ## Wissensdokument
 
 # Feminist Data Set

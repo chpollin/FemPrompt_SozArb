@@ -45,10 +45,12 @@ Use these terms consistently. They are defined in `knowledge/INDEX.md` (glossary
 
 The corpus is processed through a five-step workflow (Identification, PDF acquisition, Markdown conversion, knowledge extraction, assessment). The core question is what happens to knowledge when it flows through a distillation pipeline.
 
-Three layers:
-1. **Obsidian Vault** (`generated/vault/`): interlinked Markdown of Papers, Concepts, Divergences, and Pipeline stages, generated.
-2. **Evidence Companion** (`docs/index.html` plus subpages): four views (Knowledge Chat, Knowledge Graph, Categories, Corpus), live at https://chpollin.github.io/FemPrompt_SozArb/.
+Three publication layers:
+1. **Distilled knowledge** (`generated/distilled/`): source-grounded paper distillates with stage and verification artefacts.
+2. **Evidence Companion** (`docs/index.html` plus subpages): five views (Knowledge Chat, Knowledge Graph, Literature Landscape, Categories, Corpus), live at https://chpollin.github.io/FemPrompt_SozArb/.
 3. **Paper**: Forum Wissenschaft 2/2026, submitted and closed (on Google Docs). The follow-up paper is led by the infrastructure and the review method, not by a results claim.
+
+`research-vault/` is the curated subject-knowledge layer. `generated/vault/Papers/` is only the generated source of the downloadable paper collection; the former concept, divergence, pipeline, and MOC projections are retired.
 
 The benchmark (the human-LLM divergence and its decomposition, used as a motivating illustration) and all figures live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion; do not restate them here.
 
@@ -71,11 +73,11 @@ The benchmark (the human-LLM divergence and its decomposition, used as a motivat
 | `knowledge/` | **Single source of truth** for all project documentation (see `knowledge/INDEX.md`) | Yes, with care |
 | `generated/distilled/` | Distilled knowledge documents | Read-only |
 | `generated/distilled/_stage1_json/`, `_verification/` | Stage-1 JSON extractions, verification reports | Read-only |
-| `generated/vault/` | Obsidian Vault v2 (Papers, Concepts, Divergences, Pipeline) | Generated |
+| `generated/vault/Papers/` | Generated source of the downloadable Obsidian paper collection | Generated |
 | `docs/`, `docs/data/` | GitHub Pages web interfaces and generated JSON | Actively edited |
 | `generated/benchmark-results/` | Benchmark results; `replay/` holds the committed round-1 replay outputs | Complete |
 | `assessment/` | LLM 5D and human assessment | Complete |
-| `src/publish/` | Generators (Vault v2, Promptotyping data) | Actively edited |
+| `src/publish/` | Deterministic publishers for paper notes, Companion data, schema, and literature landscape | Actively edited |
 | `src/replay/` | Round-1 replay (`replay_round1.py`, self-test against the canonical benchmark) | Yes, with care |
 | `research-vault/` | Subject knowledge of the literature in the Grounded-Vault layer model; `_sources/` and `00_representation/` are gitignored by license lock and are never created here | Yes, with care |
 | `tests/` | PRISM test layers: jsdom harness, Companion smoke suite, browser pilot, pytest, manual checklist | Yes, with care |
@@ -83,24 +85,26 @@ The benchmark (the human-LLM divergence and its decomposition, used as a motivat
 | `config/` | `defaults.yaml` (now lists `generated/` paths; the restructure superseded its do-not-change note) | Yes, with care |
 | `.vault_cache/` | LLM API cache (reproducible) | Do not change |
 | `prompts/` | Versioned prompt governance and changelog | Edit only through a documented prompt version or status change |
+| `skills/prism-agent-review/` | Project-local workflow for controlled PRISM agent tracks and adjudication | Follow the canonical prompt and run manifest |
 
 ### Knowledge documents
 
-`INDEX.md` (navigation and glossary), `project.md` (identity and theory), `methods.md` (review method, the chain, pipeline, dual assessment, replay verification), `specification.md` (PRISM requirements, ADRs, user stories, design system), `data.md` (tool data substrate), `plan.md` (roadmap, status, decided questions with their ratification status), `journal.md` (session log), `standards.md` (PRISMA, trAIce, RAISE, and this review's conformance state), `update-protocol.md` (round-2 protocol, analysis fields, pilot, coding procedure, RIS), `research-vault.md` (Grounded-Vault model and the distillate audit precondition), `guides/manual-review-checklist.md`. Beside these carriers the paper lane contributes two analysis documents, `analysis-divergence.md` (the licensed TP3 analysis of the round-1 divergence) and `analysis-sq-advisory.md` (the advisory SQ1 to SQ3 coding of TP4, unverified), plus `HANDOFF.md`, a dated re-entry snapshot that is superseded by the next one and canonical for nothing. The per-item PRISMA/trAIce conformance status is a machine-readable artifact at `generated/conformance/conformance_map.yaml`, fed by the R4 replay. Start at `INDEX.md`.
+`INDEX.md` (navigation and glossary), `project.md` (identity and theory), `methods.md` (review method, the chain, pipeline, dual assessment, replay verification), `specification.md` (PRISM requirements, ADRs, user stories, design system), `data.md` (tool data substrate), `plan.md` (roadmap, status, decided questions with their ratification status), `journal.md` (session log), `standards.md` (PRISMA, trAIce, RAISE, and this review's conformance state), `update-protocol.md` (round-2 protocol, analysis fields, pilot, coding procedure, RIS), `research-vault.md` (Grounded-Vault model and the distillate audit precondition), `guides/manual-review-checklist.md`. Beside these carriers the paper lane contributes two analysis documents, `analysis-divergence.md` (the licensed TP3 analysis of the round-1 divergence) and `analysis-sq-advisory.md` (the advisory SQ1 to SQ3 coding of TP4, unverified). The per-item PRISMA/trAIce conformance status is a machine-readable artifact at `generated/conformance/conformance_map.yaml`, fed by the R4 replay. Start at `INDEX.md`.
 
 ### Key web files
 
 | File | Purpose |
 |------|---------|
-| `docs/index.html` | Evidence Companion (4-view SPA, default Knowledge Chat) |
+| `docs/index.html` | Evidence Companion (5-view SPA, default Knowledge Chat) |
 | `docs/prisma.html` | PRISM screening tool |
 | `docs/onboarding.html` | Reviewer onboarding (German walkthrough for the two colleagues) |
 | `docs/js/research-app.js` | Corpus table, modal tabs, navigation, export |
 | `docs/js/wissenschat.js` | Knowledge Chat (Gemini 3 Flash, streaming, citations) |
 | `docs/js/wissensnetz.js` | Knowledge Graph (D3 force graph, divergence mode) |
+| `docs/js/literaturbild.js` | Annotation-native Literature Landscape with evidence drill-down |
 | `docs/js/kategorien.js` | Categories Explorer |
 | `docs/js/prisma.js`, `prisma-data.js`, `prisma-import.js` | PRISM logic, data shim, Excel bridge |
-| `docs/css/research.css`, `prisma.css` | Styles |
+| `docs/css/tokens.css`, `research.css`, `literaturbild.css`, `prisma.css` | Shared tokens and view-specific styles |
 | `generated/benchmark-results/agreement_metrics.json` | Canonical benchmark metrics |
 | `assessment/categories.yaml` | Canonical category definitions |
 
@@ -108,7 +112,7 @@ The benchmark (the human-LLM divergence and its decomposition, used as a motivat
 
 ## Evidence Companion (`docs/index.html`)
 
-Academic companion publication. Vanilla JS plus Chart.js and D3 via CDN.
+Academic companion publication. Framework-free vanilla JavaScript with pinned local D3 and Font Awesome assets.
 
 **Live:** https://chpollin.github.io/FemPrompt_SozArb/
 
@@ -116,12 +120,13 @@ Academic companion publication. Vanilla JS plus Chart.js and D3 via CDN.
 |------|---------|---------|
 | Knowledge Chat (default) | Gemini 3 Flash Q&A, inline citations to Corpus | `wissenschat.js` |
 | Knowledge Graph | D3 force graph, cluster layout, divergence mode | `wissensnetz.js` |
+| Literature Landscape | PRISM category matrix, analysis profiles, Paper-evidence drill-down | `literaturbild.js` |
 | Categories | Ten-category spectrum, rate comparison, divergence papers | `kategorien.js` |
 | Corpus (reference layer) | Sortable table, filters, detail modal, export | `research-app.js` |
 
 Subpages: `about.html`, `methoden.html`, `help.html`, `onboarding.html`.
 
-Architecture rules: no build tool and no framework, the served pages load their libraries from a CDN (D3, Chart.js, Fuse.js, JSZip, FontAwesome) and nothing is bundled; npm exists only for the test harness (jsdom, Playwright) and never for anything the pages load; IIFE pattern for all JS, communication via the `window.EC` API; IBM Plex Serif (headings) and Inter (body); ten categories as a gender-neutral spectrum; detail as a slide-in side panel; the chat API key is local only (localStorage plus gitignored `config.local.js`); data in `docs/data/research_vault_v2.json`, `concept_graph.json`, `promptotyping_v2.json`; ZIP export via JSZip.
+Architecture rules: no build tool and no framework. Runtime libraries are pinned under `docs/vendor/`; npm is used for the test harness and controlled vendor refreshes. IIFE modules communicate through `window.EC`. System font stacks avoid remote font requests. `assessment/categories.yaml` is the canonical source for categories, decision options, and exclusion reasons; `docs/data/category_schema.json` is its generated frontend projection. The chat API key stays in `sessionStorage` for the current tab. Questions and selected research data are sent only when the user calls the model provider. Data lives in `docs/data/research_vault_v2.json`, `concept_graph.json`, `promptotyping_v2.json`, and `literature_landscape.json`. Markdown export produces one concatenated file without a runtime archive library.
 
 ---
 
@@ -138,6 +143,8 @@ Knowledge document structure: YAML frontmatter (title, authors, year, type, lang
 `promptotyping_v2.json` (generated by `src/publish/generate_promptotyping_data_v2.py`): `meta` (totals, disagreements, kappa, confusion_matrix, rates, pattern_distribution, asymmetry), `papers`, `concepts` (nodes and edges), `divergences`. Note: `meta.total_papers` in the agreement JSONs is the union of the two assessment tracks, not the corpus (see the comment in `src/assess/calculate_agreement.py`).
 
 `research_vault_v2.json` (generated by `src/publish/generate_docs_data.py`): for the Evidence Companion.
+
+`literature_landscape.json` (generated by `src/publish/generate_literature_landscape.py`): the verified, annotation-native Companion projection of the productive PRISM track. Its thematic records are Include-only, while progress retains all annotated decisions and source status.
 
 ---
 

@@ -33,7 +33,7 @@ Ten three-level categories (nein/teilweise/ja = 0/1/2), split into two dimension
 - Derivation: both dimensions ja yields Include; both at least teilweise yields Unclear; any dimension entirely nein yields Exclude.
 - Exclusion reasons (controlled): `Duplicate`, `Not_relevant_topic`, `Wrong_publication_type`, `No_full_text`, `Language`.
 
-Canonical definitions stay in `assessment/categories.yaml`; the tool reads them, it does not fork them.
+Canonical definitions stay in `assessment/categories.yaml`. `src/publish/build_category_schema.py` publishes the frontend projection `docs/data/category_schema.json`, which contains keys, groups, labels, definitions, colours, decision options, and exclusion reasons. PRISM, its CSV converter, the Companion, and the Literature Landscape consume this projection. The repository test compares it with the canonical YAML and blocks schema drift.
 
 ## ScreeningRecord (per paper)
 
@@ -180,7 +180,38 @@ The `decision` follows the three-level rule: Include requires at least one categ
 
 Aggregation: the tool loads every `*.json` in the folder into `reviewers[key]`. The current human side of the Flow is the explicitly selected reviewer role. The earlier expert assessment (`paper.human`) and the model proposal (`paper.llm`) come from the corpus and are never stored in a reviewer file. Both stay hidden until the selected reviewer has saved an independent decision; they are then available as collapsed reference material.
 
-Versioning: the reviewer files are committed in GitHub Desktop outside the tool (ADR-014 removed the in-tool `git add/commit/push` hint); collaborators pull and reconnect the folder. Documented in `docs/data/screening/README.md`. The agent file `ar2.json` retains `actor: agent` at payload and record level and carries `status: provisional_technical_acceptance`. The operator accepted its technically verified integration into real research data; substantive judgements and the pilot publication-type rule still require methodological ratification.
+Versioning: the reviewer files are committed in GitHub Desktop outside the tool (ADR-014 removed the in-tool `git add/commit/push` hint); collaborators pull and reconnect the folder. Documented in `docs/data/screening/README.md`. The agent file `ar2.json` retains `actor: agent` at payload and record level and carries `status: ratified_agent_consensus`. Its top-level `ratification` object records the dual-blind method, the independently adjudicated consensus hash, the hashes of both unchanged input tracks, and the explicit operator acceptance. The ten records are binding agent-generated research judgements with visible provenance; they are not human reviews.
+
+## Published Companion records and work identity
+
+`src/publish/generate_docs_data.py` writes `docs/data/research_vault_v2.json` through an atomic replacement. Its `source_fingerprint` hashes every canonical input and replaces a wall-clock generation timestamp. Unchanged sources therefore produce byte-identical output.
+
+Every corpus record carries `work_id` and `identity_basis`. A normalised DOI has priority. A safely matched full-text source is the second basis. The Zotero record key remains the fallback when neither source proves a shared work identity. This preserves every corpus record while allowing duplicated records of the same work to be counted separately from distinct works.
+
+`knowledge_coverage` records why a paper does or does not expose a knowledge document.
+
+- `linked` identifies a published document link.
+- `fulltext_ready` identifies a safely bound full text whose document link is still absent.
+- `identity_unresolved` identifies an ambiguous or conflicting source identity.
+- `source_missing` identifies a record without a safely bound source.
+
+The metadata reports record links and distinct document paths separately. The Companion header uses both values so a duplicated record does not look like an additional knowledge document.
+
+## Wissensdokument-Abdeckung
+
+Der Companion zählt Korpusrecords mit einem nichtleeren `knowledge_doc`-Verweis und weist die Zahl unterschiedlicher Dokumentpfade separat aus. Mehrere Zotero-Records können dasselbe Werk und dieselbe Datei referenzieren. Die aktuellen Werte stehen ausschließlich in `docs/data/research_vault_v2.json > meta`; dieser Vertragstext wiederholt keine veränderlichen Bestandszahlen.
+
+`generate_docs_data.py` löst Dateinamen case-insensitiv auf, veröffentlicht die tatsächliche Schreibweise und verwirft mehrdeutige Matches. Nach der Publikation entfernt es Seiten unter `docs/vault/Papers/`, auf die kein aktueller Record verweist. Repository-Tests prüfen die exakte Dateischreibweise und die interne Konsistenz der Abdeckungszustände.
+
+`docs/data/knowledge_doc_bindings.json` hält ausschließlich explizit verifizierte Zuordnungen zwischen Records, Volltextquellen und veröffentlichten Wissensdokumenten. Titelkonflikte und mehrdeutige Quellenidentitäten bleiben gesperrt. Fuzzy Titel- oder Autor-Jahr-Matches sind Kandidaten für eine manuelle Klärung und erzeugen keinen veröffentlichten Link.
+
+## Published literature landscape
+
+`src/publish/generate_literature_landscape.py` joins the productive PRISM track with the corpus metadata and writes `docs/data/literature_landscape.json`. The public artifact contains the decision state of every annotated paper and the complete analysis fields and Paper evidence of included papers. It excludes raw full text and browser-only recovery state.
+
+The generator is a fail-closed verification checkpoint. It rejects an unknown Paper ID, an unknown category, a category value outside the three-level vocabulary, every positive category without Paper-layer evidence, and every Include record without analysis. Its output retains the reviewer, actor, source status, text basis, and a derived provisional flag. Only explicit binding statuses such as `accepted` and `ratified_agent_consensus` remove that flag. The Companion therefore cannot present an unratified agent track as binding research data through omission of its status.
+
+The Literature Landscape uses only Include records for thematic aggregation. Exclude and Unclear remain part of the progress summary. Category combinations are multi-valued co-occurrences, and the analysis fields retain their multi-select semantics. Every matrix cell and profile value resolves to the supporting papers, their analysis fields, and the stored Paper evidence.
 
 ## Reading text source and corpus search (v4, as built)
 

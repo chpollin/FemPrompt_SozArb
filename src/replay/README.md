@@ -9,9 +9,12 @@ by a human-checked path. It supersedes any hand-entered count for the R1 record
 
 ```bash
 python src/replay/replay_round1.py
+python src/replay/replay_round1.py --check-only
 ```
 
-From the repo root. Stdlib only (`csv`, `json`); no arguments.
+From the repo root. The default command regenerates both replay artifacts.
+`--check-only` performs the same reconstruction and self-test without changing
+them. The script uses only the Python standard library.
 
 ## What it does
 
@@ -25,8 +28,9 @@ From the repo root. Stdlib only (`csv`, `json`); no arguments.
    vocabulary from `categories.yaml`; out-of-vocabulary values are surfaced,
    never dropped), included per track. Every denominator is named. The
    benchmark meta counts the UNION of the two tracks, not the corpus; both are
-   reported. The resolved `2YS85B49` discrepancy (a stray `Has_HA` flag in
-   `papers_full.csv` for a key absent from the human CSV) is asserted and named.
+   reported. The formerly stray `2YS85B49` flag is corrected by the canonical
+   `papers_full.csv` generator. Replay now requires every `Has_HA` flag to match
+   `human_assessment.csv` exactly.
 3. **Agreement** (`agreement_replay.json`): decision confusion matrix, observed
    agreement, Cohen's kappa, plus the 2x2 decomposition (PABAK, kappa-max,
    prevalence index, bias index) and the ten per-category kappas, computed both
@@ -35,8 +39,9 @@ From the repo root. Stdlib only (`csv`, `json`); no arguments.
 4. **Self-test**: the decision matrix, decision kappa, and ten per-category
    kappas are compared against the canonical
    `generated/benchmark-results/agreement_metrics.json`, exact within `1e-9`.
-   On mismatch it prints the deltas and exits non-zero; on success it prints one
-   `PASS` line and writes the outputs.
+   On mismatch it prints the deltas and exits non-zero. On success it prints one
+   `PASS` line. The default mode writes the outputs; `--check-only` leaves them
+   unchanged.
 5. **Condition contrast** (secondary): each of
    `llm_assessment_{haiku,haiku_kd,sonnet,sonnet_kd}.csv` against the human
    track, full and content-only, reported mechanically by kappa (plan.md V1).

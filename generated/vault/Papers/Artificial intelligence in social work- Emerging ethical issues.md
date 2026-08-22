@@ -24,7 +24,6 @@ human_categories:
   - Soziale_Arbeit
   - Bias_Ungleichheit
   - Gender
-  - Diversitaet
   - Fairness
 agreement: disagree
 ---
@@ -63,16 +62,9 @@ agreement: disagree
 | Soziale_Arbeit | Ja | Ja |  |
 | Bias_Ungleichheit | Ja | Ja |  |
 | Gender | Ja | Nein | X |
-| Diversitaet | Ja | Nein | X |
+| Diversitaet | Nein | Nein |  |
 | Feministisch | Nein | Nein |  |
 | Fairness | Ja | Ja |  |
-
-> Siehe [[Divergenz Reamer_2023_Artificial_Intelligence_in_Social_Work_Emerging]] fuer detaillierte Analyse
-
-
-## Key Concepts
-
-- [[Algorithmic Bias in Social Work]]
 
 ## Wissensdokument
 

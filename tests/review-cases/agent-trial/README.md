@@ -9,4 +9,4 @@ Dieser Ordner dokumentiert den ersten explorativen Lauf mit den Kürzeln `ea`, `
 
 Kanonische Laufartefakte sind `ea.json` mit `ea-report.md`, `mk.json` mit `mk-report.md` sowie `pe.json` mit `pe-ui-report.md`. `pe-analysis-report.md` und `pe-prepared.json` dokumentieren die vorgelagerte fachliche Vorbereitung und sind kein eigener Track.
 
-Ein erneuter Lauf verwendet die jeweils im Run-Manifest gehashte Version von `prompts/prism-agent-reviewer.md`; aktuell ist das v0.4. Neue Läufe folgen der Struktur unter `tests/review-cases/agent-runs/`.
+Ein erneuter Lauf verwendet die jeweils im Run-Manifest gehashte Version von `prompts/prism-agent-reviewer.md`; aktuell ist das v1.0. Neue Läufe folgen der Struktur unter `tests/review-cases/agent-runs/`. Der historische Pilot bleibt über seinen Baseline-Commit und den dort protokollierten v0.4-Hash reproduzierbar.

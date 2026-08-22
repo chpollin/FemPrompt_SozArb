@@ -22,7 +22,6 @@ human_categories:
   - KI_Sonstige
   - Soziale_Arbeit
   - Bias_Ungleichheit
-  - Diversitaet
   - Fairness
 agreement: agree
 ---
@@ -49,13 +48,6 @@ agreement: agree
 
 **LLM:** Include (Confidence: 0.92)
 **Human:** Include
-
-## Key Concepts
-
-- [[Algorithmic Discrimination]]
-- [[Algorithmic Transparency]]
-- [[Digital Divide]]
-- [[Digital Sovereignty]]
 
 ## Wissensdokument
 

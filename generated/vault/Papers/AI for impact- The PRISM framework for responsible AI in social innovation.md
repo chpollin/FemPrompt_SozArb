@@ -19,7 +19,6 @@ human_categories:
   - Generative_KI
   - KI_Sonstige
   - Bias_Ungleichheit
-  - Diversitaet
   - Fairness
 agreement: agree
 ---
@@ -37,11 +36,6 @@ agreement: agree
 
 **LLM:** Include (Confidence: 0.85)
 **Human:** Include
-
-## Key Concepts
-
-- [[Algorithmic Fairness]]
-- [[Algorithmic Transparency and Explainability]]
 
 ## Wissensdokument
 

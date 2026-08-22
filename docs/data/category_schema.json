@@ -1,0 +1,105 @@
+{
+  "schema": "femprompt-category-schema/1.0",
+  "source": "assessment/categories.yaml",
+  "version": "1.3",
+  "decision_options": [
+    "Include",
+    "Exclude",
+    "Unclear"
+  ],
+  "exclusion_reasons": [
+    "Duplicate",
+    "Not_relevant_topic",
+    "Wrong_publication_type",
+    "No_full_text",
+    "Language"
+  ],
+  "categories": [
+    {
+      "key": "AI_Literacies",
+      "definition": "Das Paper behandelt Kompetenzen, Fähigkeiten oder Wissen im Umgang mit KI-Systemen. Umfasst kritische Reflexion, technisches Verständnis oder praktische Anwendungskompetenz.",
+      "group": "technik",
+      "label": "AI Literacies",
+      "color": "#5b8c5a"
+    },
+    {
+      "key": "Generative_KI",
+      "definition": "Fokus auf generative KI-Modelle wie Large Language Models, Bildgeneratoren oder andere generative Systeme.",
+      "group": "technik",
+      "label": "Generative KI",
+      "color": "#3a7d7e"
+    },
+    {
+      "key": "Prompting",
+      "definition": "Behandelt Prompt-Engineering, Prompt-Strategien oder die Gestaltung von Eingaben für KI-Systeme.",
+      "group": "technik",
+      "label": "Prompting",
+      "color": "#4b7bab"
+    },
+    {
+      "key": "KI_Sonstige",
+      "definition": "Andere KI/ML-Themen: klassisches Machine Learning, algorithmische Entscheidungssysteme, Predictive Analytics, Robotik, Computer Vision. WICHTIG: Algorithmische Systeme im Sozialbereich (z.B. Risikobewertung in der Jugendhilfe) zählen hierzu und sind relevant!",
+      "group": "technik",
+      "label": "KI Sonstige",
+      "color": "#7c6fae"
+    },
+    {
+      "key": "Soziale_Arbeit",
+      "definition": "Direkter Bezug zu sozialarbeiterischer Praxis, Theorie, Ausbildung oder den Zielgruppen Sozialer Arbeit.",
+      "group": "sozial",
+      "label": "Soziale Arbeit",
+      "color": "#b0546e"
+    },
+    {
+      "key": "Bias_Ungleichheit",
+      "definition": "Thematisiert Diskriminierung, algorithmischen Bias, soziale Ungleichheit oder strukturelle Benachteiligung im KI-Kontext.",
+      "group": "sozial",
+      "label": "Bias & Ungleichheit",
+      "color": "#c2694e"
+    },
+    {
+      "key": "Gender",
+      "definition": "Expliziter Gender-Fokus, Geschlechterperspektive oder Analyse von Gender-Bias.",
+      "group": "sozial",
+      "label": "Gender",
+      "color": "#d4943a"
+    },
+    {
+      "key": "Diversitaet",
+      "definition": "Thematisiert Diversität, Inklusion oder Repräsentation verschiedener Gruppen.",
+      "group": "sozial",
+      "label": "Diversität",
+      "color": "#8a7542"
+    },
+    {
+      "key": "Feministisch",
+      "definition": "Verwendet feministische Theorie, Methodik oder Perspektive. Auch implizit feministische Ansätze zählen: intersektionale Analysen, kritische Betrachtung von Machtstrukturen, Fokus auf marginalisierte Gruppen aus Geschlechterperspektive.",
+      "group": "sozial",
+      "label": "Feministisch",
+      "color": "#a24b7a"
+    },
+    {
+      "key": "Fairness",
+      "definition": "Thematisiert algorithmische Fairness, faire ML-Systeme oder Fairness-Metriken.",
+      "group": "sozial",
+      "label": "Fairness",
+      "color": "#6a8e4e"
+    }
+  ],
+  "groups": {
+    "object": [
+      "AI_Literacies",
+      "Generative_KI",
+      "Prompting",
+      "KI_Sonstige"
+    ],
+    "perspective": [
+      "Soziale_Arbeit",
+      "Bias_Ungleichheit",
+      "Gender",
+      "Diversitaet",
+      "Feministisch",
+      "Fairness"
+    ]
+  }
+}

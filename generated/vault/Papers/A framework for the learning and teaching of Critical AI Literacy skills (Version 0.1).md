@@ -19,6 +19,15 @@ llm_categories:
   - Bias_Ungleichheit
   - Diversitaet
   - Fairness
+human_decision: Include
+human_categories:
+  - AI_Literacies
+  - Generative_KI
+  - Prompting
+  - Bias_Ungleichheit
+  - Gender
+  - Fairness
+agreement: agree
 ---
 
 # A framework for the learning and teaching of Critical AI Literacy skills (Version 0.1)
@@ -42,12 +51,7 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Include (Confidence: 0.92)
-
-## Key Concepts
-
-- [[Algorithmic Bias Detection]]
-- [[Critical AI Literacy]]
-- [[Epistemic Injustice in AI Systems]]
+**Human:** Include
 
 ## Wissensdokument
 

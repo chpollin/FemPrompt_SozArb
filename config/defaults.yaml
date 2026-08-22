@@ -20,7 +20,7 @@ paths:
   markdown_clean: "generated/markdown_clean"
   knowledge_distilled: "generated/distilled"
   validation_reports: "generated/validation_reports"
-  vault: "generated/vault"
+  paper_vault: "generated/vault/Papers"
 
 # Knowledge Distillation
 knowledge:

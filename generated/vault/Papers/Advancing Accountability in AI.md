@@ -14,14 +14,14 @@ llm_categories:
   - KI_Sonstige
   - Bias_Ungleichheit
   - Fairness
-human_decision: Include
+human_decision: Exclude
 human_categories:
   - AI_Literacies
   - KI_Sonstige
   - Bias_Ungleichheit
-  - Diversitaet
+  - Feministisch
   - Fairness
-agreement: disagree
+agreement: agree
 ---
 
 # Advancing Accountability in AI
@@ -45,32 +45,7 @@ agreement: disagree
 ### Stufe 4: Assessment
 
 **LLM:** Exclude (Confidence: 0.85)
-**Human:** Include
-
-**Kategorie-Vergleich (bei Divergenz):**
-
-| Kategorie | Human | LLM | Divergent |
-|-----------|-------|-----|----------|
-| AI_Literacies | Ja | Nein | X |
-| Generative_KI | Nein | Nein |  |
-| Prompting | Nein | Nein |  |
-| KI_Sonstige | Ja | Ja |  |
-| Soziale_Arbeit | Nein | Nein |  |
-| Bias_Ungleichheit | Ja | Ja |  |
-| Gender | Nein | Nein |  |
-| Diversitaet | Ja | Nein | X |
-| Feministisch | Nein | Nein |  |
-| Fairness | Ja | Ja |  |
-
-> Siehe [[Divergenz OECD_2023_Advancing_Accountability_in_AI]] fuer detaillierte Analyse
-
-
-## Key Concepts
-
-- [[Algorithmic Accountability]]
-- [[Algorithmic Fairness]]
-- [[Algorithmic Transparency and Explainability]]
-- [[Trustworthy AI]]
+**Human:** Exclude
 
 ## Wissensdokument
 

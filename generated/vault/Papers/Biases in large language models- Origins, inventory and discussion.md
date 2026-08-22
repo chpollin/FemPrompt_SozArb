@@ -24,7 +24,6 @@ human_categories:
   - Prompting
   - Bias_Ungleichheit
   - Gender
-  - Diversitaet
   - Fairness
 agreement: agree
 ---
@@ -42,11 +41,6 @@ agreement: agree
 
 **LLM:** Include (Confidence: 0.92)
 **Human:** Include
-
-## Key Concepts
-
-- [[Gender Bias in Language Models]]
-- [[Intersectional Bias]]
 
 ## Wissensdokument
 

@@ -15,6 +15,14 @@ llm_categories:
   - Bias_Ungleichheit
   - Gender
   - Fairness
+human_decision: Exclude
+human_categories:
+  - Generative_KI
+  - KI_Sonstige
+  - Bias_Ungleichheit
+  - Gender
+  - Fairness
+agreement: disagree
 ---
 
 # The EU artificial intelligence act through a gender lens
@@ -23,26 +31,37 @@ llm_categories:
 
 ### Stufe 1: Extraktion & Klassifikation (LLM)
 
-**Extrahierte Kategorien:** KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
-**Argumente:** 5 extrahiert
+**Extrahierte Kategorien:** KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
+**Argumente:** 3 extrahiert
 
 ### Stufe 3: Verifikation (LLM)
 
 | Metrik | Score |
 |--------|-------|
 | Completeness | 92 |
-| Correctness | 98 |
-| Category Validation | 95 |
+| Correctness | 96 |
+| Category Validation | 98 |
 | **Overall Confidence** | **95** |
 
 ### Stufe 4: Assessment
 
 **LLM:** Include (Confidence: 0.75)
+**Human:** Exclude
 
-## Key Concepts
+**Kategorie-Vergleich (bei Divergenz):**
 
-- [[Algorithmic Gender Bias]]
-- [[Intersectional AI Fairness]]
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Ja | Nein | X |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Ja | Ja |  |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Ja | Ja |  |
+| Gender | Ja | Ja |  |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Nein | Nein |  |
+| Fairness | Ja | Ja |  |
 
 ## Wissensdokument
 
@@ -50,74 +69,66 @@ llm_categories:
 
 ## Kernbefund
 
-Der EU AI Act enthält erhebliche Lücken bei der Adressierung von Geschlechterungerechtigkeit und verwendet überwiegend geschlechtsneutrale Sprache, die die einzigartigen Herausforderungen marginalisierter Gruppen, insbesondere Frauen of Color und LGBTQIA+ Personen, nicht angemessen berücksichtigt.
+Das EU-AI-Gesetz enthält zwar Verweise auf Nicht-Diskriminierung, verfügt aber über kritische Lücken bei der expliziten Behandlung von Geschlechtergerechtigkeit und feministischen Perspektiven. Eine intersektionale, geschlechtersensible Überarbeitung ist notwendig, um marginalisierte Gruppen effektiv zu schützen.
 
 ## Forschungsfrage
 
-Wie adäquat adressiert der EU AI Act Geschlechtergerechtigkeit und strukturelle Machtungleichgewichte in KI-Systemen, insbesondere für marginalisierte Gruppen?
+Wie adressiert das EU-Gesetz über künstliche Intelligenz Geschlechtergerechtigkeit und strukturelle Machtungleichgewichte in KI-Systemen, und welche Lücken bestehen bei der Bekämpfung von Geschlechterbias?
 
 ## Methodik
 
-Theoretisch: Feministische Textanalyse des AI Act mit Artikel-für-Artikel-Analyse und Fallstudien; kritische Literaturanalyse; intersektionale Perspektive
-**Datenbasis:** Nicht empirisch; basiert auf Dokumentenanalyse des AI Act, Fallstudien (Amazon Recruiting, Deliveroo, iBorderCtrl, VioGen) und kritischer Literaturanalyse
+Theoretisch: Feministische Textanalyse des AI Act mit artikel-für-artikel-Analyse; Fallstudienanalyse zur Illustration von KI-bedingten Geschlechterungerechtigkeit
+**Datenbasis:** nicht angegeben (theoretisches und dokumentenanalytisches Papier)
 
 ## Hauptargumente
 
-- Der AI Act referenziert 'Geschlechtergleichstellung' nur minimal (Recitals 27, 48 und Artikel 95(2)(e)), während 'Nicht-Diskriminierung' häufiger erwähnt wird, was eine mangelnde explizite Verpflichtung zur Geschlechtergleichstellung widerspiegelt.
-- Bestehende KI-Systeme (Amazon, Deliveroo, iBorderCtrl, VioGen) demonstrieren, wie Algorithmen ohne intersektionale Perspektive geschlechtsspezifische und rassifizierte Diskriminierung reproduzieren und marginalisierte Gruppen disproportional schädigen.
-- Eine intersektionale, feministische Analyse ist notwendig, da Geschlechter-Bias nicht isoliert existiert, sondern mit Rasse, Klasse, Behinderung und anderen Identitätsfaktoren zusammenwirkt, was einen mehrdimensionalen regulatorischen Ansatz erfordert.
-- Standardisierungs- und Konformitätsbewertungsprozesse müssen durch geschlechtsspezifische Auswirkungsbewertungen (GIA) und verbindliche Bias-Audits verstärkt werden, die explizit intersektionale Diskriminierung adressieren.
-- Die Regulierung allein ist unzureichend; eine feministische Interpretation des AI Act mit inklusiverer Sprache, partizipativen Governance-Strukturen und Einbeziehung marginalisierter Stimmen in Designprozessen ist erforderlich.
+- KI-Systeme können bestehende gesellschaftliche Geschlechterverzerrungen perpetuieren (Amazon-Rekrutierungstool, Deliveroo-Algorithmus, iBorderCtrl, VioGen), was die Notwendigkeit geschlechtssensitiver Regulation unterstreicht.
+- Das EU-AI-Gesetz verwendet überwiegend geschlechtsneutrale Sprache und vermeidet explizite geschlechtsspezifische Begriffe, wodurch die Herausforderungen marginalisierter Gruppen einschließlich Frauen of Colour, LGBTQIA+ und nicht-binärer Personen übersehen werden.
+- Eine intersektionale, feministische Approach ist notwendig, um zu verstehen, wie Geschlecht mit Rasse, Klasse, Behinderung und anderen Identitätsfaktoren interagiert und wie KI-Systeme diese multiplen Diskriminierungen verstärken können.
 
 ## Kategorie-Evidenz
 
 ### Evidenz 1
 
-Das Paper analysiert den EU AI Act als regulatorisches Framework für verschiedene KI-Systeme in Recruitment, Healthcare, Border Management und Predictive Policing.
+Das Paper analysiert verschiedene AI-Systeme und deren Regulierung durch das EU-AI-Gesetz, einschließlich hochriskanter KI-Systeme in Rekrutierung, Gesundheitswesen, Grenzmanagement und prädiktiver Polizei.
 
 ### Evidenz 2
 
-Analyse von KI-Systemen in der Gewaltschutzpraxis (VioGen-Fall) und deren Auswirkungen auf vulnerable Gruppen; Empfehlungen für inklusive Sozialschutzpolitik und Gewaltschutz.
+The paper provides extensive case studies showing how AI systems perpetuate discrimination: 'AI technologies, if not designed with comprehensive oversight, can inadvertently perpetuate existing societal biases, leading to discriminatory impacts against women and marginalised communities.'
 
 ### Evidenz 3
 
-Fallstudien zeigen systematische Diskriminierung: 'Amazon's AI recruitment tool...unintentionally favoured male candidates'; 'Deliveroo's rider-ranking algorithm...violated labour laws'; iBorderCtrl könnte 'misinterpret women's facial expressions, reflecting societal biases'.
+Explicit gender focus throughout: 'This paper examines the need for feminist-informed AI frameworks to address diverse socio-technical impacts and counter the risk of AI reflecting biases favouring white, cisgender, able-bodied men.'
 
 ### Evidenz 4
 
-Expliziter Gender-Fokus: 'gender equality is limited to Recitals 27 and 48 AI Act'; Analyse von Geschlechter-Bias in Objektifizierungstheorie; Schutz vor geschlechtsspezifischer KI-Gewalt (Deepfakes); Reproduktion von Geschlechterstereotypen.
+The paper emphasizes intersectionality: 'Feminist scholars contend that existing laws must incorporate stronger protections for individuals, especially women, facing vulnerabilities related to privacy breaches and surveillance' and explicitly discusses marginalized communities including women of color, LGBTQIA+, disabled individuals.
 
 ### Evidenz 5
 
-Intersektionale Analyse: 'individuals do not experience bias in isolation; rather, their experiences are shaped by the confluence of their gender, race, socioeconomic status and other identity factors'; Fokus auf 'women of colour, LGBTQIA+ individuals, and those with disabilities'.
+Explicit feminist theoretical framework: 'Drawing on feminist theories, the paper evaluates the AI Act's limitations in mitigating gender biases.' Uses feminist scholars like Crenshaw (intersectionality), MacKinnon, objectification theory, and feminist legal analysis throughout.
 
 ### Evidenz 6
 
-Explizite Verwendung feministischer Theorie: Objectification Theory (Fredrickson & Roberts 1997); Intersectionality Framework (Crenshaw 2019); Feminist Data Protection (Theilen et al. 2021); Feminist Philosophy of Law (Francs & Smith 2021); 'a feminist approach to harmonisation'; 'feminist-informed revisions'; Kritik an patriarchalischen Strukturen.
-
-### Evidenz 7
-
-Conformity assessment muss 'comprehensive bias audits' durchführen; Forderung nach 'fair and devoid of bias' AI systems; 'intersectional data analysis in conformity assessments' zur Gewährleistung von Fairness für marginalisierte Communities.
+Addresses algorithmic fairness in context of gender: 'Conformity assessments should require comprehensive bias audits that extend beyond identifying overt discrimination' and discusses fairness in recruitment, healthcare, and border control contexts.
 
 ## Assessment-Relevanz
 
-**Domain Fit:** Hochrelevant für die Schnittstelle AI/Soziale Arbeit/Gender. Das Paper analysiert regulatorische Rahmenbedingungen für KI-Systeme, die Sozialarbeit, Gewaltschutz und vulnerable Gruppen unmittelbar betreffen, und liefert eine feministisch-kritische Perspektive auf strukturelle Ungleichheiten.
+**Domain Fit:** Hochgradig relevant für die Schnittmenge von KI-Regulierung, Geschlechterforschung und sozialer Gerechtigkeit. Das Paper bietet eine einzigartige feministische Analyse von EU-KI-Politik und deren Auswirkungen auf marginalisierte Gruppen.
 
-**Unique Contribution:** Die systematische feministische und intersektionale Analyse des EU AI Act mit Fokus auf Geschlechter-Bias und strukturelle Benachteiligung marginalisierter Gruppen; konkrete Empfehlungen zur Integration geschlechterspezifischer Auswirkungsbewertungen und inklusiver Sprache.
+**Unique Contribution:** Das Paper leistet einen originären Beitrag durch die systematische, intersektionale feministische Analyse des EU-AI-Gesetzes und identifiziert spezifische textuelle Lücken sowie praktische Handlungsempfehlungen für geschlechtersensible KI-Governance.
 
-**Limitations:** Nicht empirisch validiert; konzentriert sich auf EU-Kontext; begrenzte Analyse von Implementierungsmechanismen; keine Daten zu tatsächlichen Auswirkungen auf Sozialarbeitspraxis nach AI-Act-Implementierung
+**Limitations:** Das Paper ist primär dokumenten- und theoriebasiert; es fehlen empirische Daten zur realen Auswirkung des AI Act auf Geschlechtergerechtigkeit oder qualitative Forschung mit betroffenen marginalisierten Gruppen.
 
-**Target Group:** Policymaker und EU-Institutionen; Sozialarbeiter und Fachkräfte in Gewaltschutz und Care-Arbeit; KI-Entwickler und Standardisierungsorgane; Feminist und Gender-Studies Scholar; Menschenrechtsorganisationen und Interessenvertretungen marginalisierter Gruppen; Forschende an der Schnittstelle KI und Soziale Arbeit
+**Target Group:** Policymakers und EU-Institutionen, Geschlechterstudien und Gender-Forscher:innen, KI-Ethiker:innen und Regulierungsspezialisten:innen, Menschenrechtsorganisationen und feministische Aktivist:innen, Juristen:innen im Bereich Technologierecht
 
 ## Schlüsselreferenzen
 
-- [[Crenshaw_K_2019]] - Intersectionality Framework
+- [[Crenshaw_K_2019]] - 'Difference' through intersectionality
 - [[Fredrickson_B_L_Roberts_T_A_1997]] - Objectification Theory: Toward Understanding Women's Lived Experiences and Mental Health Risks
-- [[Theilen_J_T_Baur_A_Bieker_F_Ammicht_Quinn_R_Hansen_M_González_Fuster_G_2021]] - Feminist data protection: an introduction
 - [[Dastin_J_2018]] - Amazon scraps secret AI recruiting tool that showed bias against women
 - [[Zuiderveen_Borgesius_F_2018]] - Discrimination, Artificial Intelligence and Algorithmic Decision-Making
+- [[Theilen_J_T_et_al_2021]] - Feminist data protection: an introduction
 - [[Leavy_S_2018]] - Gender bias in artificial intelligence: The need for diversity and gender theory in machine learning
-- [[Sovacool_B_FurszyferDel_Rio_D_D_Martiskainen_M_2021]] - Can prosuming become perilous? Exploring systems of control and domestic abuse in the smart homes of the future
-- [[Karagianni_A_Doh_M_2024]] - A feminist legal analysis of non-consensual sexualized deepfakes: contextualizing its impact as AI-generated image-based violence under EU law
-- [[Kloza_D_Van_Dijk_N_Casiraghi_S_Vazquez_Maymir_S_Tanas_A_2021]] - The concept of impact assessment
-- [[Hendrickx_V_2024]] - Women's rights in the age of automation
+- [[Karagianni_A_Doh_M_2024]] - A feminist legal analysis of non-consensual sexualized deepfakes
+- [[Sovacool_B_et_al_2021]] - Can prosuming become perilous? Exploring systems of control and domestic abuse in the smart homes of the future

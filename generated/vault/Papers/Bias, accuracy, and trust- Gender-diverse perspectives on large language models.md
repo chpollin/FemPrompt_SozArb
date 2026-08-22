@@ -64,14 +64,6 @@ agreement: disagree
 | Feministisch | Nein | Nein |  |
 | Fairness | Nein | Ja | X |
 
-> Siehe [[Divergenz Gaba_2025_Bias,_accuracy,_and_trust_Gender-diverse]] fuer detaillierte Analyse
-
-
-## Key Concepts
-
-- [[Algorithmic Fairness]]
-- [[Gender Bias in Large Language Models]]
-
 ## Wissensdokument
 
 # Bias, Accuracy, and Trust: Gender-Diverse Perspectives on Large Language Models

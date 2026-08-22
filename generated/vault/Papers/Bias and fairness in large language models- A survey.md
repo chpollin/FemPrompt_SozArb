@@ -22,6 +22,14 @@ llm_categories:
   - Generative_KI
   - Bias_Ungleichheit
   - Fairness
+human_decision: Include
+human_categories:
+  - Generative_KI
+  - Prompting
+  - Bias_Ungleichheit
+  - Gender
+  - Fairness
+agreement: disagree
 ---
 
 # Bias and fairness in large language models: A survey
@@ -36,12 +44,22 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Exclude (Confidence: 0.85)
+**Human:** Include
 
-## Key Concepts
+**Kategorie-Vergleich (bei Divergenz):**
 
-- [[Algorithmic Bias in Language Models]]
-- [[Gender Bias in NLP]]
-- [[Intersectional Fairness]]
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Ja | Ja |  |
+| Prompting | Ja | Nein | X |
+| KI_Sonstige | Nein | Nein |  |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Ja | Ja |  |
+| Gender | Ja | Nein | X |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Nein | Nein |  |
+| Fairness | Ja | Ja |  |
 
 ## Wissensdokument
 

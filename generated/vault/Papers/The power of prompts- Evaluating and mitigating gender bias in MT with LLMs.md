@@ -67,15 +67,6 @@ agreement: disagree
 | Feministisch | Nein | Nein |  |
 | Fairness | Nein | Ja | X |
 
-> Siehe [[Divergenz Sant_2024_The_power_of_prompts_Evaluating_and_mitigating]] fuer detaillierte Analyse
-
-
-## Key Concepts
-
-- [[Algorithmic Fairness Evaluation]]
-- [[Chain-of-Thought Reasoning]]
-- [[Prompt Engineering for Bias Mitigation]]
-
 ## Wissensdokument
 
 # The power of Prompts: Evaluating and Mitigating Gender Bias in MT with LLMs

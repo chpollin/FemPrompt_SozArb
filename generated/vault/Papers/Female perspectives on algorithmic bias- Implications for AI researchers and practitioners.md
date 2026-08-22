@@ -20,6 +20,14 @@ llm_categories:
   - Diversitaet
   - Feministisch
   - Fairness
+human_decision: Include
+human_categories:
+  - KI_Sonstige
+  - Bias_Ungleichheit
+  - Gender
+  - Feministisch
+  - Fairness
+agreement: agree
 ---
 
 # Female perspectives on algorithmic bias: Implications for AI researchers and practitioners
@@ -43,13 +51,7 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Include (Confidence: 0.92)
-
-## Key Concepts
-
-- [[Algorithmic Fairness]]
-- [[Gender Bias in AI Systems]]
-- [[Intersectionality in AI]]
-- [[Responsible AI Development]]
+**Human:** Include
 
 ## Wissensdokument
 

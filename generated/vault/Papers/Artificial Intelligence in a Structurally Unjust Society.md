@@ -15,15 +15,14 @@ llm_categories:
   - KI_Sonstige
   - Bias_Ungleichheit
   - Fairness
-human_decision: Unclear
+human_decision: Include
 human_categories:
   - KI_Sonstige
   - Bias_Ungleichheit
   - Gender
-  - Diversitaet
   - Feministisch
   - Fairness
-agreement: disagree
+agreement: agree
 ---
 
 # Artificial Intelligence in a Structurally Unjust Society
@@ -47,32 +46,7 @@ agreement: disagree
 ### Stufe 4: Assessment
 
 **LLM:** Include (Confidence: 0.85)
-**Human:** Unclear
-
-**Kategorie-Vergleich (bei Divergenz):**
-
-| Kategorie | Human | LLM | Divergent |
-|-----------|-------|-----|----------|
-| AI_Literacies | Nein | Nein |  |
-| Generative_KI | Nein | Nein |  |
-| Prompting | Nein | Nein |  |
-| KI_Sonstige | Ja | Ja |  |
-| Soziale_Arbeit | Nein | Nein |  |
-| Bias_Ungleichheit | Ja | Ja |  |
-| Gender | Ja | Nein | X |
-| Diversitaet | Ja | Nein | X |
-| Feministisch | Ja | Nein | X |
-| Fairness | Ja | Ja |  |
-
-> Siehe [[Divergenz Lin_2022_Artificial_Intelligence_in_a_Structurally_Unjust]] fuer detaillierte Analyse
-
-
-## Key Concepts
-
-- [[Algorithmic Bias]]
-- [[Algorithmic Fairness]]
-- [[Gender Bias in AI]]
-- [[Structural Injustice]]
+**Human:** Include
 
 ## Wissensdokument
 

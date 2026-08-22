@@ -24,9 +24,18 @@ A corpus identified via four Deep Research systems, screened in two parallel, in
 
 The benchmark serves as a motivating illustration of why reliability cannot be presupposed. It records a substantial, asymmetric divergence between the LLM and the expert judgments; the decomposition shows that the headline gap is dominated by human workflow exclusions (duplicates, no full text, wrong publication type) that a single-paper LLM cannot see, and on content-only decisions the include rates converge. The figures live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion.
 
+The Evidence Companion also provides an annotation-native literature landscape. It derives its matrix,
+analysis profiles, and evidence drill-down from the productive PRISM track through
+`src/publish/generate_literature_landscape.py`. Provisional tracks remain visibly provisional, and thematic
+aggregates include only included papers with complete analysis records.
+
+The public application is framework-free and uses pinned local runtime assets. The ten review categories are generated from `assessment/categories.yaml` into one frontend schema. Corpus records carry a stable work identity and an explicit knowledge-document coverage status, which distinguishes record links from unique published documents. The Literature Landscape stores its view, filters, profile, and selection in the URL.
+
 ## Screening Tool (PRISM)
 
 Screening runs through **PRISM** ([`docs/prisma.html`](docs/prisma.html)), the project's binding PRISMA-trAIce screening instrument, distinct from the PRISMA reporting standard. The first-round corpus and the round-two update are carried through the same record machinery. The review counts complete only after the binding human pass and reconciliation. The operative state is in [`knowledge/plan.md`](knowledge/plan.md).
+
+Controlled agent reviews use the ratified [`prompts/prism-agent-reviewer.md`](prompts/prism-agent-reviewer.md), the project-local [`prism-agent-review` skill](skills/prism-agent-review/SKILL.md), and a hashed run manifest based on [`tests/review-cases/agent-runs/run-template.json`](tests/review-cases/agent-runs/run-template.json). Independent tracks remain outside productive research data until the [`ratification evaluator`](prompts/prism-ratification-evaluator.md) has passed them and the acceptance is documented.
 
 ## Research Vault
 
@@ -34,7 +43,7 @@ Subject knowledge of the review lives in [`research-vault/`](research-vault/READ
 
 ## Testing
 
-PRISM is tested in three layers. A jsdom harness over the pure functions and a Companion smoke suite run with `npm test`; a pinned supported-browser pilot drives the real page in Chromium with `npm run pilot`, its contract in [`tests/pilot/README.md`](tests/pilot/README.md); the paths that need a native folder picker are specified for a person in [`tests/manual-checklist.md`](tests/manual-checklist.md). The Python side runs with `python -m pytest tests/`. The retrospective counts and agreement figures are asserted by the committed replay, not recounted by hand.
+PRISM is tested in three layers. A jsdom harness over the pure functions and a Companion smoke suite run with `npm test`. A pinned supported-browser pilot drives the PRISM workflow with `npm run pilot`; `npm run test:browser-companion` verifies the public Companion, responsive Literature Landscape, URL restoration, local assets, and browser errors. The paths that need a native folder picker are specified in [`tests/manual-checklist.md`](tests/manual-checklist.md). The Python side, including the fail-closed publishers and atomic publication checks, runs with `python -m pytest tests/`. The committed replay asserts the retrospective counts and agreement figures.
 
 ## Repository Structure
 
@@ -47,10 +56,11 @@ generated/                 # Generated artifacts
   markdown/                # PDF -> Markdown
   markdown_clean/          # cleaned Markdown (the raw-text source PRISM resolves)
   distilled/               # distilled knowledge documents
-  vault/                   # Obsidian Vault (Papers, Concepts, Divergences, Pipeline)
+  vault/Papers/            # Generated source for the downloadable paper collection
 src/                       # Pipeline and publishing scripts (acquire, distill, assess, publish)
 config/                    # Configuration (defaults.yaml)
 prompts/                   # Prompt changelog and governance
+skills/                    # Project-local controlled review workflow
 docs/                      # Evidence Companion and PRISM tool (GitHub Pages)
 knowledge/                 # Project documentation (single source of truth)
 research-vault/            # Subject knowledge of the review in the Grounded-Vault layer model

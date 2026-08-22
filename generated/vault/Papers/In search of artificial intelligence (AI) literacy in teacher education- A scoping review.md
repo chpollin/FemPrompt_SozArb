@@ -49,12 +49,6 @@ agreement: agree
 **LLM:** Exclude (Confidence: 0.92)
 **Human:** Exclude
 
-## Key Concepts
-
-- [[AI Literacy]]
-- [[Algorithmic Fairness]]
-- [[Ethical AI in Education]]
-
 ## Wissensdokument
 
 # In search of artificial intelligence (AI) literacy in teacher education: A scoping review

@@ -22,7 +22,6 @@ human_categories:
   - KI_Sonstige
   - Bias_Ungleichheit
   - Gender
-  - Diversitaet
   - Feministisch
 agreement: disagree
 ---
@@ -33,17 +32,17 @@ agreement: disagree
 
 ### Stufe 1: Extraktion & Klassifikation (LLM)
 
-**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
+**Extrahierte Kategorien:** KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
 **Argumente:** 3 extrahiert
 
 ### Stufe 3: Verifikation (LLM)
 
 | Metrik | Score |
 |--------|-------|
-| Completeness | 88 |
-| Correctness | 92 |
-| Category Validation | 85 |
-| **Overall Confidence** | **88** |
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 88 |
+| **Overall Confidence** | **92** |
 
 ### Stufe 4: Assessment
 
@@ -61,83 +60,70 @@ agreement: disagree
 | Soziale_Arbeit | Nein | Nein |  |
 | Bias_Ungleichheit | Ja | Ja |  |
 | Gender | Ja | Ja |  |
-| Diversitaet | Ja | Ja |  |
+| Diversitaet | Nein | Ja | X |
 | Feministisch | Ja | Ja |  |
 | Fairness | Nein | Ja | X |
 
-> Siehe [[Divergenz Hermann_2022_Artificial_intelligence_and_mass_personalization]] fuer detaillierte Analyse
-
-
-## Key Concepts
-
-- [[AI Ethics Principles]]
-- [[AI Literacy]]
-- [[Algorithmic Fairness]]
-
 ## Wissensdokument
 
-# Artificial intelligence and mass personalization of communication content: An ethical and literacy perspective
+# Artificial Intelligence and Intersectionality
 
 ## Kernbefund
 
-Die konzeptuelle Analyse offenbart Interdependenzen und Spannungen zwischen ethischen Prinzipien (Beneficence, Non-maleficence, Autonomy, Justice, Explicability) bei der KI-gestützten Massenpersonalisierung. AI-Literalität wird als Schlüsselmittel zur Befähigung von Individuen vorgeschlagen, um mit personalisierten Inhalten auf Weise umzugehen, die individuelles und gesellschaftliches Wohlbefinden fördert.
+AI amplifiziert und verstärkt menschliche Vorurteile und reflektiert tiefgreifende historische und systemische Ungleichheiten; ein breiter intersektionaler Ansatz ist notwendig, der über reine Diversitätszahlen hinausgeht und strukturelle sowie kulturelle Probleme in der Tech-Branche adressiert.
 
 ## Forschungsfrage
 
-Welche ethischen Herausforderungen entstehen durch den Einsatz von KI für die Massenpersonalisierung von Kommunikationsinhalten, und wie kann AI-Literalität diese Herausforderungen adressieren?
+Wie rahmen AI-Dokumente Bedenken bezüglich Bias und Ungleichheit in AI ein und welche Empfehlungen zur Bekämpfung dieser Probleme werden aus einer intersektionalen Perspektive gegeben?
 
 ## Methodik
 
-Theoretisch/Konzeptuelle Analyse. Umfassende Literatursuche in elektronischen Datenbanken (Web of Science, EBSCO, Google Scholar), Screening von Referenzen in Review- und Seminalarbeiten, manuelle Suche in relevanten Fachzeitschriften.
-**Datenbasis:** Nicht empirisch; konzeptuelle Literaturanalyse ohne quantitative oder qualitative Datenerhebung
+Theoretisch/Review - Analyse von AI-Policy-Dokumenten mit intersektionaler Linse, Unterscheidung zwischen technischem und soziotechnischem Framing
+**Datenbasis:** Vier hochprofilierte Berichte zu AI und Geschlecht; Analyse von AI-Policy-Dokumenten
 
 ## Hauptargumente
 
-- KI-gestützte Massenpersonalisierung bietet erhebliche Vorteile für individuelle Bedürfnisbefriedigung und Nutzerzufriedenheit, führt aber gleichzeitig zu ethischen Spannungen zwischen Benefizenz auf individueller Ebene und potenziellen Schäden auf Gesellschaftsebene durch Filter-Blasen und polarisierte Inhaltsvielfalt.
-- Zwischen den fünf zentralen ethischen Prinzipien (Beneficence, Non-maleficence, Autonomy, Justice, Explicability) entstehen Zielkonflikte und Trade-offs: Beispielsweise konkurriert der Datenschutz mit der Genauigkeit von Personalisierung, und individuelle Autonomie wird durch algorithmische Gatekeeping-Funktionen gefährdet.
-- AI-Literalität - verstanden als grundlegendes Verständnis von KI-Inputs, Funktionsweise, Agentur und Ergebnissen - kann Individuen befähigen, mit Massenpersonalisierung auf eine Weise umzugehen, die persönliches und gesellschaftliches Wohlbefinden schützt und Schaden verhindert.
+- Bias in AI wird oft technisch gerahmt als behebbar durch technische Maßnahmen, doch dies ignoriert die tief verwurzelten sozialen, politischen, kulturellen und historischen Dimensionen des Problems.
+- Der Mangel an Frauen und Minderheiten in der Informatik und AI-Entwicklung führt zu einer negativen Rückkopplungsschleife: homogene Entwicklerteams bauen voreingenommene Systeme, was Ungleichheit perpetuiert und bisherige Fortschritte gefährdet.
+- Effektive Lösungen erfordern einen systemischen, intersektionalen Ansatz, der Kultur, Macht und Einflussmöglichkeiten transformiert, statt nur Zahlen zu erhöhen, und der Perspektiven mehrerer Disziplinen, Sektoren und marginalisierter Gruppen einbezieht.
 
 ## Kategorie-Evidenz
 
 ### Evidenz 1
 
-By this form of AI literacy, individuals could be empowered to interact with and treat mass-personalized content in a way that promotes individual and social good while preventing harm. The authors propose AI literacy as a potential individual remedy to address the interdependent ethical challenges.
+Analyse von AI-Systemen wie Einstellungsalgorithmen, Gesichtserkennung und digitalen Sprachassistenten als Fallbeispiele für algorithmische Bias
 
 ### Evidenz 2
 
-The study systematically scrutinizes AI-driven mass personalization of communication content, including recommender systems, personalization algorithms, machine learning algorithms, and algorithmic content filtering in news feeds and e-commerce platforms.
+Growing evidence suggests that AI is amplifying and exacerbating gender, racial, ethnic and other stereotypes; AI amplifies and exacerbates human biases and reflects deep rooted historical and systemic inequalities and power asymmetries
 
 ### Evidenz 3
 
-Personalization could 'segment a population so that only some segments are worthy of receiving some opportunities or information, re-enforcing existing social (dis)advantages' leading to 'industrialized social discrimination' that creates 'winners' and 'losers'. AI-powered mass personalization could discriminate based on psychological, economic, and demographic factors, and reinforce gender, age, and racial disparities, prejudices, and stereotypes.
+focus on framing concerns and recommendations related to gender; biased AI applications include hiring algorithms that discriminate against female candidates, facial recognition that performs poorly on black and female faces as well as obedient and subservient digital female voice assistants
 
 ### Evidenz 4
 
-The analysis accounts for a multi-stakeholder perspective and addresses phenomena such as filter bubbles, echo chambers, and selective exposure that can have adverse effects on democratic representation and content diversity for different social groups.
+The diversity crisis among AI developers and founders; Lack of women and minorities in computing; intersectional lens to highlight the interaction of multiple identities - gender, race, class and others - leading to the marginalization, exclusion and discrimination of certain social groups
 
 ### Evidenz 5
 
-The justice principle addresses how biases in algorithmic systems can lead to unfair and unequal treatment, discrimination on the basis of demographic factors, and the need for monitoring and diligence along the entire data lifecycle to prevent discriminatory outcomes and ensure fair market access.
+use an intersectional lens; intersectionality provides an illuminating perspective; use intersectionality to reimagine AI in more inclusive and participatory ways - referenziert implizit intersektionale feministische Theorie (Crenshaw-Tradition)
+
+### Evidenz 6
+
+concerns about bias and inequality in AI; issues such as justice, fairness and equality; focus on shaping culture, power and opportunities
 
 ## Assessment-Relevanz
 
-**Domain Fit:** Das Paper hat moderate Relevanz für die Schnittstellenforschung AI/Soziale Arbeit/Gender. Es adressiert KI-Ethik und Literalität aus einer Multi-Stakeholder-Perspektive, was für Soziale Arbeit relevant ist, fokussiert jedoch primär auf Kommunikation und Massenpersonalisierung statt direkt auf sozialarbeiterische Kontexte oder explizit Gender-Fragen.
+**Domain Fit:** Das Paper ist hochrelevant für die Schnittstelle AI/Gender/Diversität, bietet eine kritische intersektionale Perspektive auf Bias in AI-Systemen, hat aber einen geringen direkten Bezug zur Sozialen Arbeit.
 
-**Unique Contribution:** Das Paper leistet einen einzigartigen Beitrag durch die erste systematische konzeptuelle Analyse von ethischen Prinzipien im Kontext von KI-gestützter Massenpersonalisierung mit Fokus auf Interdependenzen und Spannungen zwischen Ethik-Prinzipien sowie der Vorschlag von AI-Literalität als individuelle Empowerment-Strategie.
+**Unique Contribution:** Die systematische Anwendung einer intersektionalen Linse auf die Analyse von AI-Policy-Dokumenten und die Unterscheidung zwischen technischem und soziotechnischem Framing bietet einen innovativen Zugang zur Critique von AI-Governance.
 
-**Limitations:** Das Paper ist eine konzeptuelle Analyse ohne empirische Datengrundlage; es fehlt die spezifische Anwendung auf Soziale Arbeit und eine explizite Gender-Perspektive wird nicht entwickelt, obwohl Diskriminierung und Fairness adressiert werden.
+**Limitations:** Das Paper basiert auf Dokumentenanalyse von vier hochprofiligen Berichten; empirische Daten zur Wirksamkeit von intersektionalen Interventionen fehlen; direkter Bezug zu Sozialer Arbeit wird nicht hergestellt.
 
-**Target Group:** KI-Ethiker, Kommunikationswissenschaftler, Policymaker im Tech-Bereich, Medienliteratur-Experten, Plattform-Designer, und potentiell Sozialarbeiter im Kontext von digitaler Inklusion und Nutzerschutz. Das Paper ist relevant für die Ausbildung von Fachkräften im Umgang mit algorithmischen Systemen und deren gesellschaftlichen Auswirkungen.
+**Target Group:** AI-Policymaker, Wissenschaftler:innen in Gender Studies und Critical AI Studies, Tech-Führungskräfte und Diversitätsmanager:innen, Aktivist:innen für soziale Gerechtigkeit in Tech, jedoch weniger relevant für praktiker:innen der Sozialen Arbeit
 
 ## Schlüsselreferenzen
 
-- [[Floridi_L_Cowls_J_Beltrametti_M_et_al_2018]] - AI4People—An ethical framework for a good AI society
-- [[Matz_SC_Kosinski_M_Nave_G_et_al_2017]] - Psychological targeting as an effective approach to digital mass persuasion
-- [[Milano_S_Taddeo_M_Floridi_L_2020]] - Recommender systems and their ethical challenges
-- [[Hancock_JT_Naaman_M_Levy_K_2020]] - AI-mediated communication: definition, research agenda, and ethical considerations
-- [[Sundar_SS_2020]] - Rise of machine agency: a framework for studying the psychology of human-AI interaction
-- [[Guzman_AL_Lewis_SC_2020]] - Artificial intelligence and communication: a human-machine communication research agenda
-- [[Mittelstadt_BD_Allo_P_Taddeo_M_et_al_2016]] - The ethics of algorithms: mapping the debate
-- [[Turow_J_Couldry_N_2018]] - Media as data extraction: towards a new map of a transformed communications field
-- [[Levy_R_2021]] - Social media, news consumption, and polarization
-- [[Cowls_J_Tsamados_A_Taddeo_M_et_al_2021]] - A definition, benchmark and database of AI for social good initiatives
+- [[Ulnicane_2024]] - Intersectionality in Artificial Intelligence: Framing Concerns and Recommendations for Action
+- [[Ulnicane_Aden_2023]] - Power and politics in framing bias in artificial intelligence policy

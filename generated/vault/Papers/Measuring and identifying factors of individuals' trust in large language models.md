@@ -16,6 +16,12 @@ llm_confidence: 0.85
 llm_categories:
   - AI_Literacies
   - Generative_KI
+human_decision: Include
+human_categories:
+  - Generative_KI
+  - Prompting
+  - Gender
+agreement: disagree
 ---
 
 # Measuring and identifying factors of individuals' trust in large language models
@@ -39,6 +45,22 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Exclude (Confidence: 0.85)
+**Human:** Include
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Ja | X |
+| Generative_KI | Ja | Ja |  |
+| Prompting | Ja | Nein | X |
+| KI_Sonstige | Nein | Nein |  |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Nein | Nein |  |
+| Gender | Ja | Nein | X |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Nein |  |
 
 ## Wissensdokument
 

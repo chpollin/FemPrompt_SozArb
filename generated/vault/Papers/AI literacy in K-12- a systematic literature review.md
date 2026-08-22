@@ -17,6 +17,12 @@ llm_decision: Exclude
 llm_confidence: 0.95
 llm_categories:
   - AI_Literacies
+human_decision: Include
+human_categories:
+  - AI_Literacies
+  - KI_Sonstige
+  - Gender
+agreement: disagree
 ---
 
 # AI literacy in K-12: a systematic literature review
@@ -40,12 +46,22 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Exclude (Confidence: 0.95)
+**Human:** Include
 
-## Key Concepts
+**Kategorie-Vergleich (bei Divergenz):**
 
-- [[AI Literacy]]
-- [[Algorithmic Fairness]]
-- [[Machine Learning Literacy]]
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Ja | Ja |  |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Ja | Nein | X |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Nein | Nein |  |
+| Gender | Ja | Nein | X |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Nein |  |
 
 ## Wissensdokument
 

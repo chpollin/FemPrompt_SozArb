@@ -20,7 +20,6 @@ human_categories:
   - Prompting
   - Bias_Ungleichheit
   - Gender
-  - Diversitaet
   - Fairness
 agreement: disagree
 ---
@@ -59,16 +58,9 @@ agreement: disagree
 | Soziale_Arbeit | Nein | Nein |  |
 | Bias_Ungleichheit | Ja | Ja |  |
 | Gender | Ja | Nein | X |
-| Diversitaet | Ja | Nein | X |
+| Diversitaet | Nein | Nein |  |
 | Feministisch | Nein | Nein |  |
 | Fairness | Ja | Ja |  |
-
-> Siehe [[Divergenz Wang_2024_A_survey_on_fairness_in_large_language_models]] fuer detaillierte Analyse
-
-
-## Key Concepts
-
-- [[Social Bias in Language Models]]
 
 ## Wissensdokument
 

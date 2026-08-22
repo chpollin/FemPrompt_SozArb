@@ -18,6 +18,12 @@ llm_categories:
   - KI_Sonstige
   - Bias_Ungleichheit
   - Fairness
+human_decision: Exclude
+human_categories:
+  - Bias_Ungleichheit
+  - Gender
+  - Fairness
+agreement: disagree
 ---
 
 # Measuring and mitigating unintended bias in text data
@@ -41,6 +47,22 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Include (Confidence: 0.75)
+**Human:** Exclude
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Nein | Ja | X |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Ja | Ja |  |
+| Gender | Ja | Nein | X |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Nein | Nein |  |
+| Fairness | Ja | Ja |  |
 
 ## Wissensdokument
 

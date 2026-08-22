@@ -2,12 +2,14 @@
   "name": "femprompt-prisma-tests",
   "version": "0.1.0",
   "private": true,
-  "description": "Headless test harness for the docs/ front end (PRISM pure functions plus Evidence Companion smoke tests). The app stays framework-free and dependency-free; jsdom is a dev dependency of the harness only, never shipped (plan P1); Playwright drives the supported-browser pilot (tests/pilot/README.md).",
+  "description": "Headless test harness for the framework-free static front end. Runtime libraries are pinned vendor assets; npm dependencies support tests and vendor refreshes only.",
   "type": "module",
   "scripts": {
+    "build:literature": "python src/publish/generate_literature_landscape.py",
     "test": "node tests/run.mjs && node tests/companion.mjs",
     "test:prism": "node tests/run.mjs",
     "test:companion": "node tests/companion.mjs",
+    "test:browser-companion": "node tests/browser/companion.mjs",
     "pilot": "node tests/browser/pilot.mjs",
     "reconcile": "node tests/browser/reconcile.mjs",
     "verify:agent-track": "node tests/review-cases/verify-agent-track.mjs"

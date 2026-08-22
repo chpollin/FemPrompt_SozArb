@@ -37,12 +37,6 @@ agreement: agree
 **LLM:** Exclude (Confidence: 0.92)
 **Human:** Exclude
 
-## Key Concepts
-
-- [[AI Literacy]]
-- [[AI Transparency]]
-- [[Algorithmic Opacity]]
-
 ## Wissensdokument
 
 # Transparency Enhances Positive Perceptions of Social Artificial Intelligence

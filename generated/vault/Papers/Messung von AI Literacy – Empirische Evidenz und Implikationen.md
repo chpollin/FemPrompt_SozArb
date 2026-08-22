@@ -44,12 +44,6 @@ agreement: agree
 **LLM:** Exclude (Confidence: 0.65)
 **Human:** Exclude
 
-## Key Concepts
-
-- [[AI Literacy]]
-- [[Digital Divide]]
-- [[Measurement Instrument Development]]
-
 ## Wissensdokument
 
 # Messung von AI Literacy - Empirische Evidenz und Implikationen

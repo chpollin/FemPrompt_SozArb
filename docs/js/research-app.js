@@ -6,26 +6,9 @@
 
 // Shared Constants & Utilities (exposed via window.EC)
 
-const CATEGORIES = [
-    'AI_Literacies', 'Generative_KI', 'Prompting', 'KI_Sonstige',
-    'Soziale_Arbeit', 'Bias_Ungleichheit', 'Gender',
-    'Diversitaet', 'Feministisch', 'Fairness'
-];
-
-// Category colors: 10 distinct hues across a spectrum (Gegenstand -> Perspektive)
-// No gendered color coding. Perceptually distinct, works for colorblind users.
-const CAT_COLORS = {
-    'AI_Literacies':    '#5b8c5a', // sage green
-    'Generative_KI':    '#3a7d7e', // teal
-    'Prompting':        '#4b7bab', // steel blue
-    'KI_Sonstige':      '#7c6fae', // soft purple
-    'Soziale_Arbeit':   '#b0546e', // dusty rose
-    'Bias_Ungleichheit':'#c2694e', // terracotta
-    'Gender':           '#d4943a', // amber
-    'Diversitaet':      '#8a7542', // olive gold
-    'Feministisch':     '#a24b7a', // plum
-    'Fairness':         '#6a8e4e', // moss green
-};
+const CATEGORIES = [];
+const CAT_COLORS = {};
+const CATEGORY_LABELS = {};
 
 function escapeHtml(text) {
     if (!text) return '';
@@ -36,7 +19,14 @@ function escapeHtml(text) {
 
 // Human-readable category label from the underscore key.
 function catLabel(cat) {
-    return String(cat || '').replace(/_/g, ' ');
+    return CATEGORY_LABELS[cat] || String(cat || '').replace(/_/g, ' ');
+}
+
+function normalizeSearch(text) {
+    return String(text || '')
+        .toLocaleLowerCase('de')
+        .replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss')
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 }
 
 // Only http(s) links are safe to emit into an href; blocks javascript: and data:.
@@ -74,10 +64,10 @@ let allPapers = [];
 let filteredPapers = [];
 let vaultMeta = {};
 let kappas = {};
-let fuse = null;
 const activeCategories = new Set();
 let benchmarkInitialized = false;
 let wissensnetzInitialized = false;
+let literaturbildInitialized = false;
 let chatInitialized = true; // chat is default tab, initialized on load
 let conceptData = null;
 let divergencePatterns = null;
@@ -96,7 +86,11 @@ let applyingFromUrl = false; // suppresses UI->store sync while a URL is being a
 // applyStateToUI; one subscriber mirrors it into the location hash, so any view is a
 // shareable, citable link. subscribe/set are the Observer pattern the DH-interface
 // standard prescribes for coordinated framework-free views.
-const DEFAULT_STATE = { view: 'chat', q: '', dec: 'all', hum: 'all', year: 'all', sort: 'relevance', cat: [], paper: null };
+const DEFAULT_STATE = {
+    view: 'chat', q: '', dec: 'all', hum: 'all', year: 'all', sort: 'relevance', cat: [], paper: null,
+    litView: 'matrix', litYear: 'all', litSource: 'all', litStudy: 'all',
+    litProfile: 'AN_Prompting_Role', litSelection: null,
+};
 
 function createStore(initial) {
     let state = initial;
@@ -207,20 +201,32 @@ function logInit() {
 // Data Loading
 
 function loadData() {
-    return fetch('data/research_vault_v2.json').then(function(res) {
-        if (!res.ok) throw new Error('Daten konnten nicht geladen werden');
-        return res.json();
-    }).then(function(data) {
+    function loadJson(path) {
+        return fetch(path).then(function(response) {
+            if (!response.ok) throw new Error(path + ' konnte nicht geladen werden');
+            return response.json();
+        });
+    }
+    return Promise.all([
+        loadJson('data/research_vault_v2.json'),
+        loadJson('data/category_schema.json')
+    ]).then(function(payloads) {
+        const data = payloads[0];
+        const categorySchema = payloads[1];
+        categorySchema.categories.forEach(function(category) {
+            CATEGORIES.push(category.key);
+            CAT_COLORS[category.key] = category.color;
+            CATEGORY_LABELS[category.key] = category.label;
+        });
         allPapers = data.papers;
         vaultMeta = data.meta;
         kappas = data.kappa_by_category;
-        filteredPapers = allPapers.slice();
-
-        fuse = new Fuse(allPapers, {
-            keys: ['title', 'author_year', 'abstract'],
-            threshold: 0.3,
-            includeScore: true
+        allPapers.forEach(function(paper) {
+            paper._searchText = normalizeSearch([
+                paper.title, paper.author_year, paper.authors, paper.abstract, paper.doi
+            ].join(' '));
         });
+        filteredPapers = allPapers.slice();
 
         // Load concept data + divergence patterns in parallel
         const cgFetch = fetch('data/concept_graph.json').then(function(cgRes) {
@@ -400,9 +406,12 @@ function renderIntroNumbers() {
     if (el('total-count-intro')) el('total-count-intro').textContent = allPapers.length;
     if (el('human-count-intro')) el('human-count-intro').textContent = withDecision;
     if (el('kd-count-intro')) {
-        let kdCount = allPapers.filter(function(p) { return p.knowledge_doc; }).length;
-        el('kd-count-intro').textContent = kdCount;
+        el('kd-count-intro').textContent = vaultMeta.knowledge_linked_records != null
+            ? vaultMeta.knowledge_linked_records
+            : allPapers.filter(function(p) { return p.knowledge_doc; }).length;
     }
+    if (el('kd-distinct-intro')) el('kd-distinct-intro').textContent =
+        vaultMeta.distinct_knowledge_docs != null ? vaultMeta.distinct_knowledge_docs : '–';
 }
 
 // Category Chips
@@ -450,7 +459,12 @@ function handleSearch(e) {
     if (query.length === 0) {
         filteredPapers = allPapers.slice();
     } else {
-        filteredPapers = fuse.search(query).map(function(r) { return r.item; });
+        const terms = normalizeSearch(query).split(/\s+/).filter(Boolean);
+        filteredPapers = allPapers.filter(function(paper) {
+            return terms.every(function(term) {
+                return paper._searchText.indexOf(term) >= 0;
+            });
+        });
     }
     applyFilters();
 }
@@ -792,12 +806,13 @@ function buildTooltipContent() {
         '<div class="tip-section">Jahrgaenge</div>' + yearBars;
 
     // --- Wissensdokumente ---
-    const tipWD = '<div class="tip-title">Destillationspipeline</div>' +
+    const tipWD = '<div class="tip-title">Wissensdokument-Abdeckung</div>' +
         '<div class="tip-pipeline">' +
-            '<span class="tip-step">' + total + ' Papers</span> <i class="fas fa-arrow-right tip-arrow"></i> ' +
-            '<span class="tip-step tip-step-hl">' + kdCount + ' Wissensdok.</span>' +
+            '<span class="tip-step">' + total + ' Korpusrecords</span> <i class="fas fa-arrow-right tip-arrow"></i> ' +
+            '<span class="tip-step tip-step-hl">' + kdCount + ' verknüpft</span> <i class="fas fa-arrow-right tip-arrow"></i> ' +
+            '<span class="tip-step">' + (vaultMeta.distinct_knowledge_docs || '–') + ' Dokumente</span>' +
         '</div>' +
-        '<div class="tip-text">Dreistufige Extraktion je Volltext: LLM-Extraktion und Klassifikation, deterministische Formatierung, LLM-Verifikation gegen das Original. Jedes Wissensdokument enthaelt Kernbefund, Forschungsfrage, Methodik und Kategorie-Evidenz.</div>';
+        '<div class="tip-text">Verknüpfungen zählen Korpusrecords mit Dokument-Link. Die Dokumentzahl zählt eindeutige veröffentlichte Dateien; mehrere Records können dasselbe Werk referenzieren.</div>';
 
     const tipHuman = '<div class="tip-title">Duale Bewertung</div>' +
         '<div class="tip-grid">' +
@@ -832,7 +847,7 @@ function buildTooltipContent() {
 
     let tipNetz = '<div class="tip-title">Wissensnetz</div>' +
         '<div class="tip-text">' + (conceptCount != null ? conceptCount + ' Konzepte' : 'Konzepte') +
-        ' aus ' + kdCount + ' Wissensdokumenten.</div>';
+        ' aus den zugeordneten Wissensdokumenten.</div>';
     if (topConcepts.length > 0) {
         tipNetz += '<div class="tip-section">Haeufigste Konzepte</div>';
         topConcepts.forEach(function(c) {
@@ -846,6 +861,9 @@ function buildTooltipContent() {
     const tipVergleich = '<div class="tip-title">Kategorien-Explorer</div>' +
         '<div class="tip-text">10 Kategorien als interaktives Spektrum. Waehlen Sie eine Kategorie, um Human- und LLM-Raten, Divergenz-Papers und Konzepte zu explorieren.</div>' +
         '<div class="tip-text tip-muted">Die Raten je Kategorie weichen unterschiedlich stark ab; die Auswahl zeigt Richtung und Ausmass pro Kategorie.</div>';
+
+    const tipLiteraturbild = '<div class="tip-title">Literaturbild</div>' +
+        '<div class="tip-text">Verdichtet die geprüften PRISM-Annotationen zu einer Kategorienmatrix und inhaltlichen Analyseprofilen. Jede Häufigkeit führt zu Papers und Belegstellen.</div>';
 
     const tipKorpus = '<div class="tip-title">Korpus</div>' +
         '<div class="tip-grid">' +
@@ -862,6 +880,7 @@ function buildTooltipContent() {
         kategorien: tipCats,
         chat: tipChat,
         wissensnetz: tipNetz,
+        literaturbild: tipLiteraturbild,
         vergleich: tipVergleich,
         korpus: tipKorpus
     };
@@ -875,7 +894,7 @@ function switchView(viewId) {
     document.querySelectorAll('.nav-view-btn').forEach(function(btn) {
         const on = btn.dataset.view === viewId;
         btn.classList.toggle('active', on);
-        btn.setAttribute('aria-selected', on ? 'true' : 'false');
+        btn.setAttribute('aria-pressed', on ? 'true' : 'false');
     });
 
     // Show/hide view sections
@@ -893,6 +912,10 @@ function switchView(viewId) {
     if (viewId === 'wissensnetz' && !wissensnetzInitialized && conceptData) {
         wissensnetzInitialized = true;
         if (window.initWissensnetz) window.initWissensnetz(conceptData.nodes, conceptData.edges, conceptData.papers);
+    }
+    if (viewId === 'literaturbild' && !literaturbildInitialized) {
+        literaturbildInitialized = true;
+        if (window.initLiteraturbild) window.initLiteraturbild();
     }
     if (viewId === 'chat' && !chatInitialized) {
         chatInitialized = true;
@@ -923,7 +946,7 @@ function highlightActiveRow(paper) {
 
 // URL State (shareable, citable views)
 
-const URL_VIEWS = ['chat', 'wissensnetz', 'vergleich', 'korpus'];
+const URL_VIEWS = ['chat', 'wissensnetz', 'literaturbild', 'vergleich', 'korpus'];
 
 // The navigational state read from the current DOM, categories, view and modal.
 function stateFromUI() {
@@ -969,7 +992,14 @@ function applyStateToUI(s) {
 
         // Reproduce the search base the same way handleSearch does.
         const q = s.q || '';
-        filteredPapers = (q.length === 0 || !fuse) ? allPapers.slice() : fuse.search(q).map(function(r) { return r.item; });
+        if (q.length === 0) {
+            filteredPapers = allPapers.slice();
+        } else {
+            const terms = normalizeSearch(q).split(/\s+/).filter(Boolean);
+            filteredPapers = allPapers.filter(function(paper) {
+                return terms.every(function(term) { return paper._searchText.indexOf(term) >= 0; });
+            });
+        }
 
         switchView(s.view || 'chat');
         applyFilters();
@@ -997,6 +1027,14 @@ function serializeState(s) {
     if (s.sort && s.sort !== 'relevance') p.set('sort', s.sort);
     if (s.cat && s.cat.length) p.set('cat', s.cat.join(','));
     if (s.paper) p.set('paper', s.paper);
+    if (s.view === 'literaturbild') {
+        if (s.litView && s.litView !== 'matrix') p.set('litView', s.litView);
+        if (s.litYear && s.litYear !== 'all') p.set('litYear', s.litYear);
+        if (s.litSource && s.litSource !== 'all') p.set('litSource', s.litSource);
+        if (s.litStudy && s.litStudy !== 'all') p.set('litStudy', s.litStudy);
+        if (s.litProfile && s.litProfile !== 'AN_Prompting_Role') p.set('litProfile', s.litProfile);
+        if (s.litSelection) p.set('litSelection', s.litSelection);
+    }
     const qs = p.toString();
     return qs ? '#' + qs : '';
 }
@@ -1020,6 +1058,12 @@ function deserializeState(hashStr) {
         // over a non-existent column would silently empty the corpus.
         cat: p.get('cat') ? p.get('cat').split(',').filter(function(c) { return CATEGORIES.indexOf(c) >= 0; }) : [],
         paper: p.get('paper') || null,
+        litView: p.get('litView') === 'profile' ? 'profile' : 'matrix',
+        litYear: p.get('litYear') || 'all',
+        litSource: p.get('litSource') || 'all',
+        litStudy: p.get('litStudy') || 'all',
+        litProfile: p.get('litProfile') || 'AN_Prompting_Role',
+        litSelection: p.get('litSelection') || null,
     };
 }
 
@@ -1047,11 +1091,12 @@ function writeUrl(s) {
 }
 
 function restoreFromUrl() {
-    applyStateToUI(deserializeState(window.location.hash));
+    const decoded = deserializeState(window.location.hash);
+    applyStateToUI(decoded);
     // Mirror what actually got applied, not the raw hash: an unknown paper closed the
     // modal and unknown categories dropped out. Presetting lastView/lastPaper makes the
     // store write a replaceState, correcting a stale hash in place without a new entry.
-    const applied = stateFromUI();
+    const applied = Object.assign({}, decoded, stateFromUI());
     lastView = applied.view; lastPaper = applied.paper || null; urlReady = true;
     store.set(applied);
 }
@@ -1251,15 +1296,10 @@ function downloadKnowledgeDoc(docPath, title) {
 }
 
 function downloadVaultZip() {
-    download('FemPrompt_Research_Vault.zip', 'downloads/vault.zip');
+    download('FemPrompt_Paper_Wissenssammlung.zip', 'downloads/vault.zip');
 }
 
 function exportFilteredMarkdown() {
-    if (typeof JSZip === 'undefined') {
-        alert('JSZip wird geladen, bitte erneut versuchen.');
-        return;
-    }
-
     let papers = filteredPapers.length ? filteredPapers : allPapers;
     const withDocs = papers.filter(function(p) { return p.knowledge_doc; });
 
@@ -1268,57 +1308,27 @@ function exportFilteredMarkdown() {
         return;
     }
 
-    const zip = new JSZip();
-    const fetches = [];
-
-    withDocs.forEach(function(p) {
-        const promise = fetch(p.knowledge_doc)
-            .then(function(res) { return res.ok ? res.text() : null; })
-            .then(function(text) {
-                if (text) {
-                    let safeName = (p.author_year || p.id).replace(/[<>:"/\\|?*]/g, '-').substring(0, 80) + '.md';
-                    zip.file(safeName, text);
-                }
-            })
-            .catch(function() {});
-        fetches.push(promise);
-    });
-
-    Promise.all(fetches).then(function() {
-        // Generate README with system prompt
-        let readme = '# Forschungskorpus-Auswahl (' + withDocs.length + ' Wissensdokumente)\n\n';
-        readme += 'Exportiert aus: Feministische AI Literacies -- Evidence Companion\n';
-        readme += 'Datum: ' + new Date().toISOString().split('T')[0] + '\n';
-        readme += 'Quelle: https://chpollin.github.io/FemPrompt_SozArb/\n\n';
-
-        readme += '## Enthaltene Papers\n\n';
-        withDocs.forEach(function(p, i) {
-            readme += (i + 1) + '. ' + (p.author_year || '') + ': ' + p.title + '\n';
+    Promise.all(withDocs.map(function(paper) {
+        return fetch(paper.knowledge_doc).then(function(response) {
+            if (!response.ok) throw new Error(paper.id + ': HTTP ' + response.status);
+            return response.text();
+        }).then(function(text) {
+            return '# ' + paper.title + '\n\n' +
+                '**Record:** ' + paper.id + '  \n' +
+                '**Werk:** ' + paper.work_id + '\n\n' + text.trim();
         });
-
-        readme += '\n## Nachnutzung als LLM-Kontext\n\n';
-        readme += 'Laden Sie diesen Ordner als Kontext in ein LLM Ihrer Wahl.\n';
-        readme += 'Verwenden Sie folgenden System-Prompt:\n\n';
-        readme += '---\n\n';
-        readme += 'Du bist ein Forschungsassistent fuer einen systematischen Literature Review\n';
-        readme += 'zu feministischen AI Literacies in der Sozialen Arbeit. Dir liegen ' + withDocs.length + '\n';
-        readme += 'Wissensdokumente vor, die aus wissenschaftlichen Papers extrahiert wurden.\n';
-        readme += 'Jedes Dokument enthaelt: Kernbefund, Forschungsfrage, Methodik und\n';
-        readme += 'Hauptargumente. Beantworte Fragen auf Basis dieser Dokumente. Zitiere\n';
-        readme += 'immer die Quelle (Autor, Jahr). Wenn eine Information nicht in den\n';
-        readme += 'Dokumenten steht, sage das explizit.\n\n';
-        readme += '---\n\n';
-        readme += '### Wege zur Nachnutzung\n\n';
-        readme += '- **Claude Code:** `claude` im Exportordner starten, System-Prompt verwenden\n';
-        readme += '- **NotebookLM:** Dateien als Quellen hochladen\n';
-        readme += '- **ChatGPT/Gemini:** Dateien hochladen, System-Prompt in Custom Instructions\n';
-        readme += '- **Obsidian:** Ordner als Vault oeffnen (volles Vault: https://chpollin.github.io/FemPrompt_SozArb/downloads/vault.zip)\n';
-
-        zip.file('README.md', readme);
-
-        return zip.generateAsync({ type: 'blob' });
-    }).then(function(blob) {
-        download('fem_prompt_auswahl_' + withDocs.length + '_papers.zip', blob);
+    })).then(function(documents) {
+        const header = '# Forschungskorpus-Auswahl\n\n' +
+            withDocs.length + ' Wissensdokumente aus dem Evidence Companion.\n\n';
+        const body = header + documents.join('\n\n---\n\n') + '\n';
+        download(
+            'fem_prompt_auswahl_' + withDocs.length + '_wissensdokumente.md',
+            body,
+            'text/markdown;charset=utf-8;'
+        );
+    }).catch(function(error) {
+        console.error('[Markdown export]', error);
+        alert('Der Markdown-Export konnte nicht vollständig erstellt werden.');
     });
 }
 

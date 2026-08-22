@@ -25,7 +25,6 @@ human_categories:
   - Soziale_Arbeit
   - Bias_Ungleichheit
   - Gender
-  - Diversitaet
 agreement: agree
 ---
 
@@ -42,11 +41,6 @@ agreement: agree
 
 **LLM:** Include (Confidence: 0.92)
 **Human:** Include
-
-## Key Concepts
-
-- [[AI Literacy in Professional Practice]]
-- [[Algorithmic Bias in Large Language Models]]
 
 ## Wissensdokument
 

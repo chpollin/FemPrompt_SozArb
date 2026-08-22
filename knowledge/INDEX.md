@@ -94,13 +94,13 @@ A division of labour in which the agents process knowledge in fundamentally diff
 The totality of procedures, documentation structures, verification checkpoints, and responsibility assignments that make LLM contributions in research verifiable, traceable, and accountable. The project's guiding concept. Core principle: reliability is not a property of the system to be presupposed but a property of the process to be established.
 
 ### Evidence Companion
-The web-based academic companion publication at https://chpollin.github.io/FemPrompt_SozArb/. Four views (Knowledge Chat, Knowledge Graph, Categories, Corpus) that render the corpus, the assessment, and the numbers from the data.
+The web-based academic companion publication at https://chpollin.github.io/FemPrompt_SozArb/. Five views render the corpus and its research layers. Knowledge Chat and Knowledge Graph operate on the distilled knowledge documents, the Literature Landscape operates on productive PRISM annotations, Categories presents the historical dual-assessment comparison, and Corpus is the reference layer.
 
 ### Jagged frontier
 The uneven competence distribution of AI systems, strong on some tasks and weak on adjacent ones (Mollick). In this project, the LLM scores high agreement on explicit categories (Soziale_Arbeit, Feministisch) and low on interpretive ones (Gender).
 
 ### Knowledge document
-A structured summary of a study produced by the distillation pipeline: metadata, core finding, methodology, main arguments, category evidence, and a confidence score. The served reading text in the PRISM tool, distinct from the raw full text.
+A structured summary of a study produced by the distillation pipeline: metadata, core finding, methodology, main arguments, category evidence, and a confidence score. PRISM presents it as the separate `LLM-Wissensdestillat` reference layer after the independent decision. The Paper layer uses the local full text where available and the metadata abstract as fallback.
 
 ### PRISM and PRISMA
 PRISMA (with the final A) is the reporting standard (see [[standards]]). PRISM is this project's screening tool (`docs/prisma.html`). They are not the same; the names are kept distinct deliberately.
@@ -120,6 +120,6 @@ A defined point in the workflow where human or rule-based control checks AI-gene
 ## What is missing and why
 
 - No `architecture.md`. The tool is a static vanilla-JS page with no backend; its construction is covered by [[specification]] (requirements, ADR log, and design system) and [[data]], and the research pipeline by [[methods]].
-- No `testing.md`. The tool's behaviour tests live in `tests/`, in two layers: a jsdom harness over the pure functions (`npm test`, jsdom as the only dev dependency of the harness) and a pinned supported-browser pilot that drives the real page in Chromium (`npm run pilot`, contract in `tests/pilot/README.md`). The retrospective counts and agreement figures are asserted by the committed replay (`src/replay/`). The Python side runs with `python -m pytest tests/`, and the anchors of the claims layer are checked by `python -m src.publish.check_claims`, whose green run is the precondition of that layer's `grounded` status. What a person still has to check by hand is `tests/manual-checklist.md`; the test responsibility matrix and the autonomous verification measures are in [[plan]].
+- No `testing.md`. The tool's behaviour tests live in `tests/`. The jsdom suites cover PRISM logic and Companion integration. The PRISM browser pilot exercises the editor and persistence workflow; the Companion browser run covers the public Literature Landscape, URL restoration, responsive layout, keyboard interaction, local runtime assets, and browser errors. The retrospective counts and agreement figures are asserted by the committed replay (`src/replay/`). The Python side runs with `python -m pytest tests/`, and the anchors of the claims layer are checked by `python -m src.publish.check_claims`, whose green run is the precondition of that layer's `grounded` status. What a person still has to check by hand is `tests/manual-checklist.md`; the test responsibility matrix and the autonomous verification measures are in [[plan]].
 - No `report.md` (a status report for an external recipient). The current state lives in [[plan]] and this index; a formal external report is deferred to the FFG report and the follow-up paper.
 - No numbers in the prose. Volatile quantities live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion, by convention.

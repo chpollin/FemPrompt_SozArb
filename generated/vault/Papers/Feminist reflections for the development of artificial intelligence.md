@@ -16,6 +16,14 @@ llm_categories:
   - Gender
   - Diversitaet
   - Feministisch
+human_decision: Exclude
+human_categories:
+  - KI_Sonstige
+  - Bias_Ungleichheit
+  - Gender
+  - Feministisch
+  - Fairness
+agreement: disagree
 ---
 
 # Feminist reflections for the development of Artificial Intelligence
@@ -39,12 +47,22 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Include (Confidence: 0.92)
+**Human:** Exclude
 
-## Key Concepts
+**Kategorie-Vergleich (bei Divergenz):**
 
-- [[Algorithmic Bias]]
-- [[Design Justice]]
-- [[Intersectional Fairness]]
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Ja | Ja |  |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Ja | Ja |  |
+| Gender | Ja | Ja |  |
+| Diversitaet | Nein | Ja | X |
+| Feministisch | Ja | Ja |  |
+| Fairness | Ja | Nein | X |
 
 ## Wissensdokument
 

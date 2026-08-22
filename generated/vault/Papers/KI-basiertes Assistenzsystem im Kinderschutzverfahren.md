@@ -18,6 +18,9 @@ llm_categories:
   - Soziale_Arbeit
   - Bias_Ungleichheit
   - Fairness
+human_decision: Exclude
+human_categories: []
+agreement: disagree
 ---
 
 # KI-basiertes Assistenzsystem im Kinderschutzverfahren
@@ -41,10 +44,22 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Include (Confidence: 0.92)
+**Human:** Exclude
 
-## Key Concepts
+**Kategorie-Vergleich (bei Divergenz):**
 
-- [[Algorithmic Bias in Child Welfare]]
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Ja | X |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Nein | Ja | X |
+| Soziale_Arbeit | Nein | Ja | X |
+| Bias_Ungleichheit | Nein | Ja | X |
+| Gender | Nein | Nein |  |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Ja | X |
 
 ## Wissensdokument
 

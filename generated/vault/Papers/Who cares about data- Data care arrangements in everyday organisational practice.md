@@ -13,6 +13,11 @@ llm_decision: Exclude
 llm_confidence: 0.85
 llm_categories:
   - Soziale_Arbeit
+human_decision: Exclude
+human_categories:
+  - KI_Sonstige
+  - Soziale_Arbeit
+agreement: agree
 ---
 
 # Who cares about data? Data care arrangements in everyday organisational practice
@@ -36,10 +41,7 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Exclude (Confidence: 0.85)
-
-## Key Concepts
-
-- [[Feminist Science and Technology Studies (STS)]]
+**Human:** Exclude
 
 ## Wissensdokument
 

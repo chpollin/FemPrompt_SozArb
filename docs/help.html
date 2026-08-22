@@ -6,10 +6,8 @@
     <title>Hilfe -- Feministische AI Literacies</title>
     <meta name="description" content="Hilfe zur Benutzung der interaktiven Evidenz-Plattform.">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%231e3a5f'/><text x='50' y='68' font-size='60' font-family='serif' font-weight='bold' fill='white' text-anchor='middle'>F</text></svg>">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/tokens.css">
     <link rel="stylesheet" href="css/research.css">
 </head>
 <body>
@@ -27,16 +25,18 @@
                 <nav class="header-nav" aria-label="Hauptnavigation">
                     <a href="index.html#chat" class="nav-link">Wissens-Chat</a>
                     <a href="index.html#wissensnetz" class="nav-link">Wissensnetz</a>
+                    <a href="index.html#literaturbild" class="nav-link">Literaturbild</a>
                     <a href="index.html#vergleich" class="nav-link">Kategorien</a>
                     <a href="index.html#korpus" class="nav-link">Korpus</a>
                     <span class="nav-sep"></span>
                     <a href="prisma.html" class="nav-link">PRISM</a>
+                    <a href="onboarding.html" class="nav-link">Onboarding</a>
                     <a href="about.html" class="nav-link">About</a>
                     <a href="methoden.html" class="nav-link">Methoden</a>
                     <a href="help.html" class="nav-link nav-link-active">Hilfe</a>
                     <span class="nav-sep"></span>
                     <a href="https://github.com/chpollin/FemPrompt_SozArb" class="nav-link nav-link-ext" target="_blank" rel="noopener"><i class="fas fa-code-branch"></i></a>
-                    <a href="downloads/vault.zip" class="nav-link nav-link-ext" title="Obsidian Vault (.zip)"><i class="fas fa-download"></i></a>
+                    <a href="downloads/vault.zip" class="nav-link nav-link-ext" title="Paper-Wissenssammlung (.zip)"><i class="fas fa-download"></i></a>
                 </nav>
             </div>
         </div>
@@ -53,7 +53,7 @@
             Wissensextraktion (Claude Haiku 4.5), einmal durch die Antwortgenerierung (Gemini 3 Flash).
             Inline-Zitationen (z.B. <em>Zakharova et al. (2024)</em>) sind klickbar und fuehren direkt
             zum Paper im Korpus zur Verifikation.</p>
-            <p>Sie benoetigen einen kostenlosen <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">Google AI API Key</a>.</p>
+            <p>Sie benoetigen einen <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">Google AI API Key</a>. Der Key bleibt bis zum Schliessen des Browser-Tabs im Sitzungsspeicher. Eine Frage und die dafuer ausgewaehlten Forschungsdaten werden beim Absenden direkt an die Google API uebertragen.</p>
 
             <h3><i class="fas fa-project-diagram"></i> Wissensnetz</h3>
             <p>Konzepte, extrahiert aus den Wissensdokumenten. Groesse = Haeufigkeit im Korpus.
@@ -66,6 +66,11 @@
                 <li>Gestrichelte Ringe = Konzepte in Divergenz-Faellen</li>
                 <li>Divergenz-Modus: Hebt nur Divergenz-Konzepte hervor</li>
             </ul>
+
+            <h3><i class="fas fa-chart-column"></i> Literaturbild</h3>
+            <p>Die linke Steuerleiste wechselt zwischen der Kategorienmatrix und einem waehlbaren Analyseprofil.
+            Jahr und Studientyp filtern die eingeschlossenen Papers. Ein Klick auf eine Matrixzelle oder einen
+            Balken zeigt die zugehoerigen Papers und Belege. Vorlaeufige Agententracks bleiben gekennzeichnet.</p>
 
             <h3><i class="fas fa-th-large"></i> Kategorien</h3>
             <p>10 Kategorien als interaktives Spektrum (Gegenstand bis Perspektive). Klick auf eine Kategorie zeigt:
@@ -89,7 +94,7 @@
     <footer class="site-footer">
         <p class="footer-links">
             <a href="https://github.com/chpollin/FemPrompt_SozArb">Repository</a>
-            <a href="downloads/vault.zip">Obsidian Vault (.zip)</a>
+            <a href="downloads/vault.zip">Paper-Wissenssammlung (.zip)</a>
         </p>
     </footer>
 </body>

@@ -17,6 +17,13 @@ llm_categories:
   - Soziale_Arbeit
   - Bias_Ungleichheit
   - Fairness
+human_decision: Include
+human_categories:
+  - AI_Literacies
+  - KI_Sonstige
+  - Soziale_Arbeit
+  - Bias_Ungleichheit
+agreement: agree
 ---
 
 # Social work and artificial intelligence: Collaboration and challenges
@@ -40,12 +47,7 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Include (Confidence: 0.95)
-
-## Key Concepts
-
-- [[AI Literacy in Professional Practice]]
-- [[Algorithmic Bias in Social Services]]
-- [[Explainable Artificial Intelligence (XAI)]]
+**Human:** Include
 
 ## Wissensdokument
 

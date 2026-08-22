@@ -15,6 +15,13 @@ llm_confidence: 0.6
 llm_categories:
   - Generative_KI
   - Prompting
+human_decision: Include
+human_categories:
+  - Generative_KI
+  - Prompting
+  - Bias_Ungleichheit
+  - Fairness
+agreement: disagree
 ---
 
 # On the steerability of large language models
@@ -38,6 +45,22 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Exclude (Confidence: 0.6)
+**Human:** Include
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Ja | Ja |  |
+| Prompting | Ja | Ja |  |
+| KI_Sonstige | Nein | Nein |  |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Ja | Nein | X |
+| Gender | Nein | Nein |  |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Nein | Nein |  |
+| Fairness | Ja | Nein | X |
 
 ## Wissensdokument
 

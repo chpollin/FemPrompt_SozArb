@@ -1,10 +1,10 @@
 # PRISM Agent Reviewer
 
-**Version:** 0.4
+**Version:** 1.0
 
-**Status:** Pilotverfahren, vor fachlich bindender Verwendung zu ratifizieren
+**Status:** Ratifiziert für kontrollierte Agententracks
 
-**Geltung:** Unabhängige, beratende Agententracks in PRISM
+**Geltung:** Unabhängige Agententracks mit nachgelagerter Adjudikation; keine unmittelbare Bindungswirkung
 
 **Regelquellen:** `assessment/categories.yaml` v1.3 und `knowledge/update-protocol.md`, Abschnitte B, B.1 und C
 
@@ -109,10 +109,10 @@ Schreibe ausschließlich den eigenen PRISM-Export und den eigenen Abschlussberic
 - alle Includes sind vollständig analysiert: ja | nein
 ```
 
-## Vorläufige Publikationstypregel für den nächsten Pilot
+## Ratifizierte Publikationstypregel
 
 - Zulässig sind wissenschaftliche Artikel, Konferenzbeiträge, wissenschaftliche Buchkapitel, systematische Reviews, belegte Forschungs- und Policy-Reports sowie fachwissenschaftliche Kommentare und Editorials mit identifizierbarer Autorenschaft und Quellenbasis.
 - Ausgeschlossen werden kommerzielle Blogs, Marketingtexte, Newsbeiträge, Landingpages, allgemeine Ratgeber ohne wissenschaftliche Anlage und unbelegte institutionelle Webtexte.
-- Ein nicht eindeutig zuordenbarer Publikationstyp wird als Blocker gemeldet und im Pilot nicht gespeichert.
+- Ein nicht eindeutig zuordenbarer Publikationstyp wird als Blocker gemeldet und nicht gespeichert.
 
-Diese Regel bleibt ein expliziter Laufparameter, bis sie methodisch ratifiziert ist.
+Die Regel ist seit dem ratifizierten Zehn-Paper-Lauf vom 22. August 2026 der kanonische Default. Ein Laufmanifest darf sie nur mit dokumentierter Operatorentscheidung abweichend festlegen.

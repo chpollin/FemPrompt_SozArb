@@ -43,15 +43,6 @@ agreement: agree
 **LLM:** Exclude (Confidence: 0.7)
 **Human:** Exclude
 
-## Key Concepts
-
-- [[AI Literacy]]
-- [[Algorithmic Bias]]
-- [[Algorithmic Fairness]]
-- [[Digital Divide]]
-- [[Explainable AI]]
-- [[Inclusive AI Education Design]]
-
 ## Wissensdokument
 
 # What is AI Literacy? Competencies and Design Considerations

@@ -1,0 +1,35 @@
+{
+  "schema": "femprompt-knowledge-doc-bindings/1.0",
+  "bindings": {
+    "ZLMLP53P": {
+      "knowledge_doc": "vault/Papers/Queer in AI- A case study in community-led participatory AI.md",
+      "source_file": "Cvoelcker_2023_Queer_in_AI_A_case_study_in_community-led.md",
+      "identity_basis": "verified_fulltext_manifest"
+    },
+    "X54V3JMF": {
+      "knowledge_doc": "vault/Papers/Intersectionality in Artificial Intelligence- Framing Concerns and Recommendations for Action.md",
+      "source_file": "Ulnicane_2024_Intersectionality_in_Artificial_Intelligence.md",
+      "identity_basis": "verified_fulltext_manifest"
+    },
+    "SJLJ2GHC": {
+      "knowledge_doc": "vault/Papers/Intersectionality in Artificial Intelligence- Framing Concerns and Recommendations for Action.md",
+      "source_file": "Ulnicane_2024_Intersectionality_in_Artificial_Intelligence.md",
+      "identity_basis": "verified_fulltext_manifest"
+    },
+    "2EBHMYU4": {
+      "knowledge_doc": "vault/Papers/Intersectionality in Artificial Intelligence- Framing Concerns and Recommendations for Action.md",
+      "source_file": "Ulnicane_2024_Intersectionality_in_Artificial_Intelligence.md",
+      "identity_basis": "verified_fulltext_manifest"
+    },
+    "T8R8RKX9": {
+      "knowledge_doc": "vault/Papers/Gender, race, and intersectional bias in AI resume screening via language model retrieval.md",
+      "source_file": "Wilson_2024_AI_tools_show_biases_in_ranking_job_applicants'.md",
+      "identity_basis": "verified_fulltext_manifest"
+    },
+    "XW8NHCIE": {
+      "knowledge_doc": "vault/Papers/Gender, race, and intersectional bias in AI resume screening via language model retrieval.md",
+      "source_file": "Wilson_2024_Gender,_race,_and_intersectional_bias_in_AI.md",
+      "identity_basis": "verified_fulltext_manifest"
+    }
+  }
+}

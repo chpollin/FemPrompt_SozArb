@@ -43,12 +43,6 @@ llm_categories:
 
 **LLM:** Include (Confidence: 0.95)
 
-## Key Concepts
-
-- [[AI Literacy]]
-- [[Data Feminism]]
-- [[Intersectional Algorithmic Bias]]
-
 ## Wissensdokument
 
 # AI & Intersectionality: A Toolkit for Fairness & Inclusion for the Industry Sector

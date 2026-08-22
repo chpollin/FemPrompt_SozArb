@@ -43,12 +43,6 @@ agreement: agree
 **LLM:** Exclude (Confidence: 0.85)
 **Human:** Exclude
 
-## Key Concepts
-
-- [[AI Literacy]]
-- [[Human-AI Collaboration]]
-- [[Measurement Instrument Development]]
-
 ## Wissensdokument
 
 # AI Literacy - Towards Measuring Human Competency in Artificial Intelligence

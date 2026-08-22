@@ -8182,22 +8182,22 @@
     "key": "T8R8RKX9",
     "version": 84,
     "itemType": "conferencePaper",
-    "title": "AI tools show biases in ranking job applicants' names according to perceived race and gender",
+    "title": "Gender, Race, and Intersectional Bias in Resume Screening via Language Model Retrieval",
     "creators": [
       {
         "creatorType": "author",
-        "firstName": "K.",
+        "firstName": "Kyra",
         "lastName": "Wilson"
       },
       {
         "creatorType": "author",
-        "firstName": "A.",
+        "firstName": "Aylin",
         "lastName": "Caliskan"
       }
     ],
-    "date": "2024",
+    "date": "2024-10-16",
     "url": "https://ojs.aaai.org/index.php/AIES/article/view/31748",
-    "DOI": "",
+    "DOI": "10.1609/aies.v7i1.31748",
     "abstractNote": "Large-scale empirical study using over 550 resumes and 3+ million comparisons reveals that intersectional patterns of bias in AI resume screening cannot be understood as additive combinations of single-axis discrimination. Discovered unique harm against Black men invisible when examining race or gender independently—Black male names were never preferred over white male names (0% selection rate). Demonstrates co-constitutive nature of multiple discrimination where intersection of Blackness and masculinity creates distinct exclusion patterns.",
     "tags": [],
     "collections": [

@@ -13,12 +13,11 @@ llm_confidence: 0.85
 llm_categories:
   - KI_Sonstige
   - Bias_Ungleichheit
-human_decision: Unclear
+human_decision: Include
 human_categories:
   - KI_Sonstige
   - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
+  - Gender
 agreement: disagree
 ---
 
@@ -34,7 +33,7 @@ agreement: disagree
 ### Stufe 4: Assessment
 
 **LLM:** Exclude (Confidence: 0.85)
-**Human:** Unclear
+**Human:** Include
 
 **Kategorie-Vergleich (bei Divergenz):**
 
@@ -46,19 +45,10 @@ agreement: disagree
 | KI_Sonstige | Ja | Ja |  |
 | Soziale_Arbeit | Nein | Nein |  |
 | Bias_Ungleichheit | Ja | Ja |  |
-| Gender | Nein | Nein |  |
-| Diversitaet | Ja | Nein | X |
+| Gender | Ja | Nein | X |
+| Diversitaet | Nein | Nein |  |
 | Feministisch | Nein | Nein |  |
-| Fairness | Ja | Nein | X |
-
-> Siehe [[Divergenz Srivastava_2024_Algorithmic_Governance_and_the_International]] fuer detaillierte Analyse
-
-
-## Key Concepts
-
-- [[Algorithmic Discrimination]]
-- [[Algorithmic Governance]]
-- [[Algorithmic Opacity]]
+| Fairness | Nein | Nein |  |
 
 ## Wissensdokument
 

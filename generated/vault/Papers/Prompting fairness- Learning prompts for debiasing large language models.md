@@ -17,6 +17,14 @@ llm_categories:
   - KI_Sonstige
   - Bias_Ungleichheit
   - Fairness
+human_decision: Include
+human_categories:
+  - Prompting
+  - KI_Sonstige
+  - Bias_Ungleichheit
+  - Gender
+  - Fairness
+agreement: disagree
 ---
 
 # Prompting fairness: Learning prompts for debiasing large language models
@@ -31,11 +39,22 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Exclude (Confidence: 0.92)
+**Human:** Include
 
-## Key Concepts
+**Kategorie-Vergleich (bei Divergenz):**
 
-- [[Algorithmic Bias in Language Models]]
-- [[Gender Bias in NLP]]
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Ja | Ja |  |
+| KI_Sonstige | Ja | Ja |  |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Ja | Ja |  |
+| Gender | Ja | Nein | X |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Nein | Nein |  |
+| Fairness | Ja | Ja |  |
 
 ## Wissensdokument
 

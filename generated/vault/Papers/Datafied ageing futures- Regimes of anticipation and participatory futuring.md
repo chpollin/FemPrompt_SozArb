@@ -17,6 +17,12 @@ llm_categories:
   - Diversitaet
   - Feministisch
   - Fairness
+human_decision: Exclude
+human_categories:
+  - KI_Sonstige
+  - Gender
+  - Feministisch
+agreement: disagree
 ---
 
 # Datafied ageing futures: Regimes of anticipation and participatory futuring
@@ -40,6 +46,22 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Include (Confidence: 0.82)
+**Human:** Exclude
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Ja | Ja |  |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Nein | Ja | X |
+| Gender | Ja | Nein | X |
+| Diversitaet | Nein | Ja | X |
+| Feministisch | Ja | Ja |  |
+| Fairness | Nein | Ja | X |
 
 ## Wissensdokument
 

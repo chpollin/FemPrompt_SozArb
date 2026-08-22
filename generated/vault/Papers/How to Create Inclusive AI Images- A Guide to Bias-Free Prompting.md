@@ -18,6 +18,13 @@ llm_categories:
   - Gender
   - Diversitaet
   - Fairness
+human_decision: Exclude
+human_categories:
+  - Generative_KI
+  - Prompting
+  - Bias_Ungleichheit
+  - Gender
+agreement: disagree
 ---
 
 # How to Create Inclusive AI Images: A Guide to Bias-Free Prompting
@@ -41,11 +48,22 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Include (Confidence: 0.92)
+**Human:** Exclude
 
-## Key Concepts
+**Kategorie-Vergleich (bei Divergenz):**
 
-- [[Inclusive Prompt Engineering]]
-- [[Training Data Bias]]
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Ja | X |
+| Generative_KI | Ja | Ja |  |
+| Prompting | Ja | Ja |  |
+| KI_Sonstige | Nein | Nein |  |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Ja | Ja |  |
+| Gender | Ja | Ja |  |
+| Diversitaet | Nein | Ja | X |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Ja | X |
 
 ## Wissensdokument
 

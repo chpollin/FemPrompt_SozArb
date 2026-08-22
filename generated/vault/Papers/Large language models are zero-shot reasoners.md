@@ -47,10 +47,6 @@ agreement: agree
 **LLM:** Exclude (Confidence: 0.95)
 **Human:** Exclude
 
-## Key Concepts
-
-- [[Prompt Engineering]]
-
 ## Wissensdokument
 
 # Large Language Models are Zero-Shot Reasoners

@@ -12,6 +12,14 @@ llm_decision: Exclude
 llm_confidence: 0.85
 llm_categories:
   - AI_Literacies
+human_decision: Include
+human_categories:
+  - AI_Literacies
+  - Generative_KI
+  - Prompting
+  - KI_Sonstige
+  - Bias_Ungleichheit
+agreement: disagree
 ---
 
 # AI literacy and competency: definitions, frameworks, development and future research directions
@@ -35,13 +43,22 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Exclude (Confidence: 0.85)
+**Human:** Include
 
-## Key Concepts
+**Kategorie-Vergleich (bei Divergenz):**
 
-- [[AI Literacy]]
-- [[Algorithmic Bias]]
-- [[Ethical AI Literacy]]
-- [[Prompt Engineering]]
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Ja | Ja |  |
+| Generative_KI | Ja | Nein | X |
+| Prompting | Ja | Nein | X |
+| KI_Sonstige | Ja | Nein | X |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Ja | Nein | X |
+| Gender | Nein | Nein |  |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Nein |  |
 
 ## Wissensdokument
 

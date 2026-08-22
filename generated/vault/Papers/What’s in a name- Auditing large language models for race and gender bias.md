@@ -25,7 +25,6 @@ human_categories:
   - Prompting
   - Bias_Ungleichheit
   - Gender
-  - Diversitaet
   - Fairness
 agreement: agree
 ---
@@ -52,12 +51,6 @@ agreement: agree
 
 **LLM:** Include (Confidence: 0.95)
 **Human:** Include
-
-## Key Concepts
-
-- [[Algorithmic Bias in Large Language Models]]
-- [[Disparate Impact Assessment]]
-- [[Intersectional Bias]]
 
 ## Wissensdokument
 

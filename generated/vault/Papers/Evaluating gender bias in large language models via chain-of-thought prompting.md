@@ -35,7 +35,7 @@ agreement: agree
 
 ### Stufe 1: Extraktion & Klassifikation (LLM)
 
-**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Extrahierte Kategorien:** Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
 **Argumente:** 3 extrahiert
 
 ### Stufe 3: Verifikation (LLM)
@@ -52,87 +52,78 @@ agreement: agree
 **LLM:** Include (Confidence: 0.95)
 **Human:** Include
 
-## Key Concepts
-
-- [[Chain-of-Thought Prompting]]
-- [[Gender Bias in Large Language Models]]
-
 ## Wissensdokument
 
 # Evaluating Gender Bias in Large Language Models via Chain-of-Thought Prompting
 
 ## Kernbefund
 
-CoT-Prompting reduziert systematisch Geschlechterbias in LLMs signifikant, indem es Modelle dazu zwingt, ihre versteckten Annahmen über Geschlechterstereotypen explizit zu artikulieren, selbst bei einfachen Zählaufgaben.
+CoT-Prompting reduziert Geschlechtsbias in LLMs signifikant, indem es Modelle zwingt, ihre Vorhersageprozesse explizit zu artikulieren, auch wenn einfache Debiasing-Prompts allein ineffektiv sind. Der MGBR-Benchmark zeigt hohe Korrelation mit downstream-Task-Bias (BBQ, BNLI) aber niedrige Korrelation mit intrinsischen Bias-Metriken.
 
 ## Forschungsfrage
 
-Kann Chain-of-Thought (CoT) Prompting Geschlechterbias in Large Language Models bei unscalierbaren Aufgaben reduzieren?
+Kann Chain-of-Thought Prompting Geschlechtsbias in Large Language Models bei unausnutzbaren Aufgaben (unscalable tasks) reduzieren?
 
 ## Methodik
 
-Empirisch: Benchmark-Konstruktion (Multi-step Gender Bias Reasoning - MGBR), experimentelle Evaluierung mit 23 LLMs, Vergleich von sechs Prompting-Strategien (Zero-shot, Few-shot, CoT, Debiasing Prompts), Korrelationsanalyse mit bestehenden Bias-Metriken (BBQ, BNLI, CrowS-Pairs, StereoSet), statistische Tests (McNemar's test).
-**Datenbasis:** 23 verschiedene LLMs getestet (OPT-Familie: 125m-66b, Llama2-Familie: 7b-70b, GPT-J, MPT, Falcon, Phi, Mistral, BioGPT); Benchmark mit zufällig generierten Word-Listen; multiple Test-Instanzen mit randomisierten Parametern.
+Empirisch: Entwicklung eines neuen Benchmarks (Multi-step Gender Bias Reasoning – MGBR) zur Evaluation von Geschlechtsbias durch Wort-Zählaufgaben; Vergleich von 23 LLMs mit verschiedenen Prompting-Strategien (Zero-shot, Few-shot, CoT, Debiasing Prompt); statistische Analyse mit McNemar-Test; Korrelationsanalyse mit bestehenden Bias-Benchmarks.
+**Datenbasis:** 23 verschiedene LLMs (OPT-Familie: 125m-66b, Llama2-Familie: 7b-70b, GPT-J-6B, MPT-7b, GPT-3.5-Turbo, Claude-v1); N Testinstanzen mit randomisiert gesampelten Wort-Listen (p, q, r Parameter variiert)
 
 ## Hauptargumente
 
-- Trotz ihrer beeindruckenden Reasoning-Fähigkeiten internalisieren und reproduzieren LLMs diskriminierende gesellschaftliche Biases aus ihrer Trainingskorpora, was sich auch bei kognitiv einfachen Aufgaben wie Wörter zählen manifestiert.
-- Chain-of-Thought-Prompting, das Schritt-für-Schritt-Erklärungen für jeden einzelnen Schritt verlangt (z.B. explizite Geschlechtsklassifizierung jedes Wortes), zwingt Modelle ihre impliziten Annahmen zu externalisieren und reduziert damit unbewusste Biases signifikant.
-- Die neu entwickelte MGBR-Benchmark zeigt unterschiedliche Korrelationsmuster mit bestehenden Bias-Evaluierungsmetriken und misst eine andere Dimension von Bias (sogenannte intrinsic bias vs. extrinsic bias), was auf die Notwendigkeit mehrfacher Evaluierungsperspektiven hinweist.
+- LLMs zeigen beträchtliche Geschlechtsstereotype bei einfachen kognitiven Aufgaben (Wort-Zählung), die in der vorherigen Forschung vernachlässigt wurden, was auf tiefer verankerte implizite Bias hinweist.
+- Step-by-step Reasoning durch CoT fungiert als Debiasing-Mechanismus, der LLMs zur expliziten Kategorisierung zwingt und versteckte Vorurteile aufdeckt; dieser Effekt ist stärker als explizite Debiasing-Instruktionen.
+- Intrinsische vs. extrinsische Bias-Evaluation zeigen unterschiedliche Muster – MGBR korreliert mit downstream-Aufgaben-Bias (QA, NLI) aber nicht mit traditionellen intrinsischen Metriken, was für die praktische Relevanz spricht.
 
 ## Kategorie-Evidenz
 
 ### Evidenz 1
 
-Das Paper adressiert die kritische Fähigkeit, LLMs zu verstehen und ihre Biases zu evaluieren. Es zeigt, wie CoT-Prompting als Instrument zur bewussteren Nutzung von LLMs fungiert: 'Humans organize their thoughts through natural language, enabling them to make better decisions'.
+Fokus auf 'Large Language Models (LLMs)' wie OPT, Llama2, GPT-J, Claude mit Chain-of-Thought Prompting als zentrale Methode zur Debiasing generativer Systeme.
 
 ### Evidenz 2
 
-Fokus auf Large Language Models und ihre inhärenten Biases: 'Despite the impressive performance, unfortunately LLMs still learn unfair social biases'. Evaluation von 23 verschiedenen LLMs (OPT, Llama2, GPT-J, etc.).
+Zentrale Methode ist Chain-of-Thought (CoT) Prompting: 'an LLM is required to explain step-by-step whether a word is feminine or masculine' mit spezifischen Prompt-Strategien (Zero-shot+CoT, Few-shot+CoT, Debiasing Prompt).
 
 ### Evidenz 3
 
-Zentrale Methodik basiert auf Prompting-Strategien: 'In CoT, an LLM is required to explain step-by-step whether a word is feminine... Zero-shot+CoT follows Kojima et al. (2022) and adds "Let's think step by step"'.
+Behandelt Themen wie Natural Language Processing (NLP), Word Embeddings, Language Model Scaling Laws, Arithmetic and Symbolic Reasoning in unscalable tasks.
 
 ### Evidenz 4
 
-Behandelt fundamentale NLP-Herausforderungen wie Wort-Embedding-Bias: 'Models do not explicitly learn the meanings of words but do so implicitly from the co-occurrences of tokens in a corpus, which can lead to flawed associations between words'.
+Expliziter Fokus auf 'unfair social biases' und 'discriminatory societal biases' in LLMs: 'LLMs still learn unfair social biases' und Untersuchung wie implizite Lernmechanismen zu stereotypen Assoziationen führen.
 
 ### Evidenz 5
 
-Hauptfokus auf algorithmischen Bias und diskriminierende Vorhersagen: 'Without step-by-step prediction, most LLMs make socially biased predictions, despite the task being as simple as counting words'. Das Paper zeigt systematische Verzerrungen in der Klassifikation von Berufen nach Geschlecht.
+Kernfokus auf Geschlechtsbias: 'gender bias in LLMs', 'gender-neutral occupations classified as feminine or masculine', Verwendung von feminine/masculine/gendered occupational words als Benchmark-Komponenten.
 
 ### Evidenz 6
 
-Explizites Gender-Fokus in Benchmark-Design und Evaluation: 'We construct a benchmark for an unscalable task where the LLM is given a list of words comprising feminine, masculine, and gendered occupational words'. Die gesamte Studie konzentriert sich auf Geschlechterstereotypen.
+Erwähnung marginalisierter Perspektiven durch Referenzen auf non-binary gender bias: 'gender biases have been reported related to non-binary gender' (Dev et al., 2021a) und Anerkennung intersektionaler Dimensionen jenseits Geschlecht (Rasse, Religion).
 
 ### Evidenz 7
 
-Erkennt Begrenztheit der binären Geschlechtsperspektive: 'For future work, potential areas of exploration include extending the application of CoT techniques to non-binary genders (Dev et al., 2021b; Ovalle et al., 2023)' und erwähnt andere Formen sozialer Biases (Rasse, Religion).
-
-### Evidenz 8
-
-Fairness ist zentral zur Evaluierungsmethodik: 'If an LLM is unbiased, the inclusion of occupational words in the input should not affect its prediction accuracy. However, if an LLM is gender biased, it might incorrectly count occupations as feminine or masculine words'. Verwendet Fairness-Konzepte zur Bias-Messung.
+Zentral für Fairness-Evaluation: 'bias score' als Fairness-Metrik definiert als Differenz in Genauigkeit zwischen unbiased vs. biased Konditionen; Vergleich mit Fairness-Benchmarks wie BBQ und BNLI mit Metriken für faire Vorhersagen.
 
 ## Assessment-Relevanz
 
-**Domain Fit:** Das Paper hat moderaten Bezug zur Sozialen Arbeit. Während es sich primär mit KI-technischen Fragen beschäftigt, sind die Erkenntnisse über Geschlechterstereotypen und Bias-Mitigation in KI-Systemen für Sozialarbeiter:innen relevant, die zunehmend algorithmen-gestützte Systeme in ihrer Praxis nutzen oder von diesen beeinflusst werden.
+**Domain Fit:** Hohe Relevanz für AI-Fairness und Gender Studies, jedoch begrenzte direkte Anwendung auf Soziale Arbeit. Das Paper adressiert kritische Fragen zur algorithmischen Gerechtigkeit und Geschlechterstereotypen in KI-Systemen, die für sozialarbeiterische Kontexte (z.B. Einsatz von KI in Beratung, Case Management, Risikobewertung) relevant sind.
 
-**Unique Contribution:** Die Konstruktion eines Benchmark-Datensatzes (MGBR), der spezifisch unbewussten Geschlechterbias durch eine einfache aber strikte Zählaufgabe operationalisiert und nachweist, dass CoT-Prompting durch Externalisierung von Stereotypen Bias reduzieren kann - während gleichzeitig die Differenzierung zwischen intrinsic und extrinsic Bias-Metriken beleuchtet wird.
+**Unique Contribution:** Erstmalige Evaluation von Gender Bias in unscalable arithmetic/symbolic reasoning tasks via CoT und Nachweis, dass Step-by-Step-Reasoning als intrinsischer Debiasing-Mechanismus funktioniert, der stärker ist als explizite Anti-Bias-Instruktionen.
 
-**Limitations:** Das Paper evaluiert nur englische Sprachfähigkeiten, konzentriert sich ausschließlich auf binäre Geschlechterkategorien und Geschlechterbias (nicht Rasse, Religion, etc.), und die Studienautoren betonen selbst: 'intrinsic bias evaluation does not necessarily correlate with extrinsic bias evaluation' - es ist unklar ob CoT-Debiasing in echten downstream tasks genauso wirkt.
+**Limitations:** Beschränkung auf englische Sprache (morphologisch limitiert), nur binäre Geschlechterkategorien, Fokus auf intrinsische Bias-Evaluation ohne Garantie für reale Downstream-Anwendungen, keine Evaluation von kommerziellen Systemen wie ChatGPT oder Bard.
 
-**Target Group:** Primär: NLP/KI-Forscher:innen und KI-Entwickler:innen, die sich mit Bias-Evaluierung und Debiasing-Methoden auseinandersetzen. Sekundär: Policy-Maker und KI-Ethics-Spezialist:innen, die an Fairness und Governance von LLMs arbeiten. Tertiär: Sozialarbeiter:innen und andere Praktiker:innen, die verstehen möchten, wie Bias in KI-gestützten Systemen funktioniert und potenziell gemindert werden kann.
+**Target Group:** NLP-Forscher, KI-Entwickler und Machine Learning Ingenieure; Fairness-Auditor und AI Ethics-Experten; Policymaker zur Regulierung von LLMs; bedingt relevant für Sozialarbeiter und Organisationen, die KI-Systeme in ihrer Praxis einsetzen
 
 ## Schlüsselreferenzen
 
-- [[Wei_et_al_2022]] - Chain-of-Thought Prompting Elicits Reasoning in Large Language Models
-- [[Bolukbasi_et_al_2016]] - Man is to Computer Programmer as Woman is to Homemaker? Debiasing Word Embeddings
-- [[Parrish_et_al_2022]] - BBQ: A Hand-Built Bias Benchmark for Question Answering
-- [[Nadeem_et_al_2021]] - StereoSet: Measuring stereotypical bias in pretrained language models
-- [[Nangia_et_al_2020]] - CrowS-Pairs: A Challenge Dataset for Measuring Social Biases in Masked Language Models
-- [[Ganguli_et_al_2023]] - The Capacity for Moral Self-Correction in Large Language Models
-- [[Kojima_et_al_2022]] - Large Language Models are Zero-Shot Reasoners
-- [[Dev_et_al_2021]] - Harms of Gender Exclusivity and Challenges in Non-binary Representation in Language Technologies
-- [[Kaneko_and_Bollegala_2022]] - Unmasking the Mask: Evaluating Social Biases in Masked Language Models
-- [[Brown_et_al_2020]] - Language Models are Few-Shot Learners
+- [[Brown_et_al_2020]] - Language Models are Few-Shot Learners (GPT-3)
+- [[Wei_et_al_2022]] - Chain-of-Thought Prompting Elicits Reasoning in LLMs
+- [[Nadeem_et_al_2021]] - StereoSet: Measuring Stereotypical Bias in LMs
+- [[Nangia_et_al_2020]] - CrowS-Pairs: Intrinsic Bias Evaluation Benchmark
+- [[Parrish_et_al_2022]] - BBQ (Bias Benchmark for QA)
+- [[Ganguli_et_al_2023]] - The Capacity for Moral Self-Correction in LLMs
+- [[Bolukbasi_et_al_2016]] - Man is to Computer Programmer as Woman is to Homemaker
+- [[Dev_et_al_2021]] - Harms of Gender Exclusivity in Language Technologies
+- [[Kaneko_Bollegala_2022]] - Unmasking the Mask: Evaluating Social Biases in MLMs
+- [[GoldfarbTarrant_et_al_2021]] - Intrinsic Bias Metrics Do Not Correlate with Application Bias

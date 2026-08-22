@@ -59,13 +59,6 @@ agreement: disagree
 | Feministisch | Nein | Nein |  |
 | Fairness | Ja | Nein | X |
 
-> Siehe [[Divergenz Santos_2024_Explainability_through_systematicity_The_hard]] fuer detaillierte Analyse
-
-
-## Key Concepts
-
-- [[Algorithmic Fairness]]
-
 ## Wissensdokument
 
 # Explainability Through Systematicity: The Hard Systematicity Challenge for Artificial Intelligence

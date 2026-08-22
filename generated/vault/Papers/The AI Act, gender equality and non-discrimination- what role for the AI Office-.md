@@ -16,6 +16,14 @@ llm_categories:
   - Bias_Ungleichheit
   - Gender
   - Fairness
+human_decision: Include
+human_categories:
+  - AI_Literacies
+  - Generative_KI
+  - KI_Sonstige
+  - Bias_Ungleichheit
+  - Gender
+agreement: agree
 ---
 
 # The AI Act, gender equality and non-discrimination: what role for the AI Office?
@@ -39,11 +47,7 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Include (Confidence: 0.92)
-
-## Key Concepts
-
-- [[Algorithmic Fairness Metrics]]
-- [[Algorithmic Gender Bias]]
+**Human:** Include
 
 ## Wissensdokument
 

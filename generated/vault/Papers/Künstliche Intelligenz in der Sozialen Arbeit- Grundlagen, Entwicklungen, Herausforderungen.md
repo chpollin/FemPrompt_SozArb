@@ -62,15 +62,6 @@ agreement: disagree
 | Feministisch | Nein | Nein |  |
 | Fairness | Nein | Nein |  |
 
-> Siehe [[Divergenz Steiner_2022_Künstliche_Intelligenz_in_der_Sozialen_Arbeit]] fuer detaillierte Analyse
-
-
-## Key Concepts
-
-- [[AI Literacy in Social Work]]
-- [[Algorithmic Bias in Social Services]]
-- [[Algorithmic Fairness]]
-
 ## Wissensdokument
 
 # Künstliche Intelligenz in der Sozialen Arbeit: Grundlagen, Entwicklungen, Herausforderungen

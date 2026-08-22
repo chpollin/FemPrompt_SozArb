@@ -38,12 +38,6 @@ llm_categories:
 
 **LLM:** Include (Confidence: 0.85)
 
-## Key Concepts
-
-- [[AI Governance and Accountability]]
-- [[Algorithmic Bias]]
-- [[Gender Bias in AI]]
-
 ## Wissensdokument
 
 # Fragile Foundations: Hidden Risks of Generative AI

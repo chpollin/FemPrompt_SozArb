@@ -6,11 +6,8 @@
 (function() {
 'use strict';
 
-const CAT_COLORS = {
-    'AI_Literacies': '#5b8c5a', 'Generative_KI': '#3a7d7e', 'Prompting': '#4b7bab',
-    'KI_Sonstige': '#7c6fae', 'Soziale_Arbeit': '#b0546e', 'Bias_Ungleichheit': '#c2694e',
-    'Gender': '#d4943a', 'Diversitaet': '#8a7542', 'Feministisch': '#a24b7a', 'Fairness': '#6a8e4e'
-};
+const CAT_COLORS = {};
+const CATEGORY_SCHEMA = { categories: [], groups: { object: [], perspective: [] } };
 
 function escapeHtml(s) {
     if (s == null) return '';
@@ -27,13 +24,28 @@ let papers = [];
 window.EC = {
     escapeHtml: escapeHtml,
     CAT_COLORS: CAT_COLORS,
+    getCategorySchema: function() { return CATEGORY_SCHEMA; },
     getAllPapers: function() { return papers; }
 };
 
-fetch('data/research_vault_v2.json')
-    .then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-    .then(function(d) {
-        papers = d.papers || [];
+const scriptUrl = document.currentScript && document.currentScript.src
+    ? document.currentScript.src
+    : window.location.href;
+const dataBase = new URL('../data/', scriptUrl);
+
+Promise.all(['research_vault_v2.json', 'category_schema.json'].map(function(filename) {
+    const url = new URL(filename, dataBase);
+    return fetch(url).then(function(response) {
+        if (!response.ok) throw new Error(filename + ': HTTP ' + response.status);
+        return response.json();
+    });
+}))
+    .then(function(payloads) {
+        papers = payloads[0].papers || [];
+        Object.assign(CATEGORY_SCHEMA, payloads[1]);
+        CATEGORY_SCHEMA.categories.forEach(function(category) {
+            CAT_COLORS[category.key] = category.color;
+        });
         console.log('[PRISMA data] ' + papers.length + ' papers loaded');
         if (window.initializePrisma) window.initializePrisma();
     })

@@ -23,7 +23,6 @@ human_categories:
   - KI_Sonstige
   - Bias_Ungleichheit
   - Gender
-  - Diversitaet
   - Fairness
 agreement: disagree
 ---
@@ -62,16 +61,9 @@ agreement: disagree
 | Soziale_Arbeit | Nein | Nein |  |
 | Bias_Ungleichheit | Ja | Ja |  |
 | Gender | Ja | Nein | X |
-| Diversitaet | Ja | Nein | X |
+| Diversitaet | Nein | Nein |  |
 | Feministisch | Nein | Nein |  |
 | Fairness | Ja | Ja |  |
-
-> Siehe [[Divergenz Shafie_2025_More_or_less_wrong_A_benchmark_for_directional]] fuer detaillierte Analyse
-
-
-## Key Concepts
-
-- [[Chain-of-Thought Prompting Limitations]]
 
 ## Wissensdokument
 

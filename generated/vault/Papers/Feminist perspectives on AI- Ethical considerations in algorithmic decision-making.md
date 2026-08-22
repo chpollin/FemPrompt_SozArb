@@ -18,7 +18,13 @@ llm_categories:
   - Feministisch
   - Fairness
 human_decision: Exclude
-human_categories: []
+human_categories:
+  - Generative_KI
+  - KI_Sonstige
+  - Bias_Ungleichheit
+  - Gender
+  - Feministisch
+  - Fairness
 agreement: disagree
 ---
 
@@ -50,24 +56,15 @@ agreement: disagree
 | Kategorie | Human | LLM | Divergent |
 |-----------|-------|-----|----------|
 | AI_Literacies | Nein | Nein |  |
-| Generative_KI | Nein | Nein |  |
+| Generative_KI | Ja | Nein | X |
 | Prompting | Nein | Nein |  |
-| KI_Sonstige | Nein | Ja | X |
+| KI_Sonstige | Ja | Ja |  |
 | Soziale_Arbeit | Nein | Nein |  |
-| Bias_Ungleichheit | Nein | Ja | X |
-| Gender | Nein | Ja | X |
+| Bias_Ungleichheit | Ja | Ja |  |
+| Gender | Ja | Ja |  |
 | Diversitaet | Nein | Ja | X |
-| Feministisch | Nein | Ja | X |
-| Fairness | Nein | Ja | X |
-
-> Siehe [[Divergenz Ahmed_2024_Feminist_perspectives_on_AI_Ethical]] fuer detaillierte Analyse
-
-
-## Key Concepts
-
-- [[Algorithmic Bias]]
-- [[Explainable AI (XAI)]]
-- [[Intersectional Feminism in Technology]]
+| Feministisch | Ja | Ja |  |
+| Fairness | Ja | Ja |  |
 
 ## Wissensdokument
 

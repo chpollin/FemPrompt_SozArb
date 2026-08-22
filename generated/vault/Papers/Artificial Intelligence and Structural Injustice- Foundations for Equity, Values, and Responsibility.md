@@ -16,6 +16,13 @@ llm_categories:
   - Bias_Ungleichheit
   - Diversitaet
   - Fairness
+human_decision: Exclude
+human_categories:
+  - KI_Sonstige
+  - Bias_Ungleichheit
+  - Gender
+  - Feministisch
+agreement: disagree
 ---
 
 # Artificial Intelligence and Structural Injustice: Foundations for Equity, Values, and Responsibility
@@ -39,13 +46,22 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Include (Confidence: 0.92)
+**Human:** Exclude
 
-## Key Concepts
+**Kategorie-Vergleich (bei Divergenz):**
 
-- [[Algorithmic Bias in Healthcare]]
-- [[Algorithmic Fairness]]
-- [[Ethics Washing]]
-- [[Structural Injustice]]
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Ja | Ja |  |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Ja | Ja |  |
+| Gender | Ja | Nein | X |
+| Diversitaet | Nein | Ja | X |
+| Feministisch | Ja | Nein | X |
+| Fairness | Nein | Ja | X |
 
 ## Wissensdokument
 

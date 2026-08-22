@@ -8,7 +8,8 @@ Versionierte Dokumentation aller Prompts, die in der Pipeline und im Assessment 
 
 | Prompt | Datei | Zeilen | Version | Status |
 |--------|-------|--------|---------|--------|
-| PRISM Agent Reviewer | `prompts/prism-agent-reviewer.md` | -- | v0.4 | Pilot, vor Produktiveinsatz zu ratifizieren |
+| PRISM Agent Reviewer | `prompts/prism-agent-reviewer.md` | -- | v1.0 | Ratifiziert für kontrollierte Agententracks |
+| PRISM Ratification Evaluator | `prompts/prism-ratification-evaluator.md` | -- | v0.1 | Im ratifizierten Zehn-Paper-Lauf verwendet; Hash im Konsensartefakt gesichert |
 | Deep-Research-Prompt | `prompts/deep-research-template.md` | -- | v1.0 (restauriert) | Template wiederhergestellt, instanziierter Prompt rekonstruiert |
 | SKE Stage 1: Extract & Classify | `src/distill/distill_knowledge.py` | 53-143 | v1.0 | Aktiv, 249 Docs produziert |
 | SKE Stage 3: Verify | `src/distill/distill_knowledge.py` | 223-282 | v1.0 | Aktiv, 249 Docs verifiziert |
@@ -149,6 +150,7 @@ Versionierte Dokumentation aller Prompts, die in der Pipeline und im Assessment 
 | Aug 2026 | PRISM Agent Reviewer | -- | v0.2 | Persona, Laufparameter und Publikationstypregel getrennt; Quellen-, Evidenz- und Exportgates aus dem Drei-Persona-Pilot operationalisiert |
 | Aug 2026 | PRISM Agent Reviewer | v0.2 | v0.3 | Projektmethode präzisiert; Akteur, Kürzel, URL, Manifest und Zielpfade als vollständige Laufkonfiguration festgelegt; Berichtsschema vereinheitlicht |
 | Aug 2026 | PRISM Agent Reviewer | v0.3 | v0.4 | Include-Analyse vor den einzigen Speichervorgang gelegt; Publikationstypregel ausdrücklich als vorläufig bezeichnet |
+| Aug 2026 | PRISM Agent Reviewer | v0.4 | v1.0 | Im unabhängigen Zehn-Paper-Lauf ratifiziert; geprüfte Publikationstypregel als kanonischer Default festgelegt; operative Regeln unverändert |
 
 ---
 

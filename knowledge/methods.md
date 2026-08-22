@@ -82,15 +82,16 @@ Pipeline steps, acquisition scripts in `src/acquire/` and distillation scripts i
 | 4. Post-processing | `src/acquire/postprocess_markdown.py` | Markdown | `generated/markdown_clean/` |
 | 5. Human review | `src/distill/markdown_reviewer.html` | Markdown and PDFs | JSON export |
 | 6. Knowledge distillation | `src/distill/distill_knowledge.py` | Markdown | `generated/distilled/` |
-| 7. Vault building | `src/publish/generate_vault_v2.py` | Knowledge docs and assessment CSVs | `generated/vault/` |
+| 7. Paper collection | `src/publish/generate_vault_v2.py` | Knowledge docs and assessment CSVs | `generated/vault/Papers/`, `docs/downloads/vault.zip` |
 
 PDF acquisition uses four fallback strategies in priority order (Zotero, DOI, Unpaywall, ArXiv). A substantial fraction of PDFs sits behind access barriers, and the acquisition, conversion, and distillation chain loses material at each step. Some conversions failed on corrupt or invalid source files and are documented so the gap is named:
 
 - `British_Association_of_Social_Workers_2025_Generat.pdf` (data format error)
 - `Browne_2023_Feminist_AI_Critical_Perspectives_on_Algorithms.pdf` (page dimension error)
-- `Ulnicane_2024_Intersectionality_in_Artificial_Intelligence.pdf` (conversion failure)
 - `UNESCO__IRCAI_2024_Challenging.pdf` (not valid)
 - `Workers_2025_Generative.pdf` (not valid)
+
+The Ulnicane conversion failure was resolved on 2026-08-22 through a verified clean full text. Its knowledge document is bound explicitly to the three matching corpus records; four records with the same title remain blocked by the fulltext manifest because their source identity conflicts.
 
 Validation runs in four layers: syntactic (GLYPH placeholders, Unicode errors), structural (the character ratio between Markdown and PDF), semantic (an optional LLM spot-check), and manual (a review queue prioritized by confidence). Post-processing is a conservative cleanup (hyphenation fix, page-number and header removal). The human review tool `src/distill/markdown_reviewer.html` is a dual-pane browser tool with PASS, WARN, and FAIL keyboard shortcuts.
 
@@ -210,7 +211,7 @@ Binding human stage: the stage-3 verification and the `verified` status.
 
 ## Named gaps and open steps (cut-off 2026-07-18)
 
-Retrospectively unrepairable and openly named: no preregistered round-1 protocol (M1), the lost instantiated round-1 prompt, the non-reproducible round-1 RIS conversion, no inter-human baseline in round 1. Open in the forward pass: Zotero import of the L5 RIS with mapping follow-up, the binding human round-2 screening pass, the stage-3 verification of the waitlist, the Zotero duplicate merge, the `00_representation/` anchor layer for the `grounded` status, and the ratification of the simulated stakeholder decisions ([[plan]], Simulated decisions).
+Retrospectively unrepairable and openly named: no preregistered round-1 protocol (M1), the lost instantiated round-1 prompt, the non-reproducible round-1 RIS conversion, no inter-human baseline in round 1. Open in the forward pass: Zotero import of the L5 RIS with mapping follow-up, the binding human round-2 screening pass, the stage-3 verification of the waitlist, the Zotero duplicate merge, and the `00_representation/` anchor layer for the `grounded` status. The former simulated stakeholder decisions are retained as ratified project decisions in [[plan]].
 
 ## Replay verification (Stage R)
 
@@ -224,7 +225,7 @@ FlowModel schema. The FlowModel follows PRISMA 2020's three phases (Identificati
 4. **Excluded, with reasons.** Human exclusions grouped by `Exclusion_Reason`; the workflow-criteria reasons (Duplicate, No full text, Wrong publication type) are tagged as such, because a one-paper-at-a-time LLM cannot see them (the V1 decomposition, [[plan]] section V).
 5. **Included.** Records with `Decision == Include`, per track. The human track is the binding record (ADR-019); the LLM Include set is the parallel advisory track, never a binding inclusion.
 
-Pairing key and the 2YS85B49 resolution. Pairing is on `Zotero_Key`, always, never on the sequential `ID` column; a prior merge on an unstable sequential identifier produced plausible-looking but wrong results (the merge bug, [[plan]] V1). The residual pairing discrepancy is resolved and the replay reproduces the resolution rather than reopening it. The key `2YS85B49` is present in `papers_full.csv` with `Has_HA == Yes` and present in the LLM track, yet absent from `human_assessment.csv`. That `Has_HA` flag is stray; there is no missing human decision. Pairing therefore treats presence in `human_assessment.csv` as the sole authority for a human decision and ignores the `Has_HA` flag for the pairing count. The replay asserts this as a guarded check and flags it rather than silently proceeding if the discrepancy has changed.
+Pairing key and assessment flags. Pairing is on `Zotero_Key`, always, never on the sequential `ID` column; a prior merge on an unstable sequential identifier produced plausible-looking but wrong results (the merge bug, [[plan]] V1). `human_assessment.csv` is the sole authority for the presence of a human decision. `generate_papers_csv.py` derives `Has_HA` from those keys, and replay requires the generated flag set to match the human CSV exactly. The earlier stray flag on `2YS85B49` is therefore corrected at its source rather than carried as a permanent exception.
 
 Metric definitions. All metrics are computed on the decision pairs and per category over the paired set, unless the subset is named. The primary metrics are the confusion matrix and the base-rate comparison; Cohen's kappa `(po - pe) / (1 - pe)` is reported as the comparison anchor. Auxiliary indices isolate what depresses kappa: PABAK (`2 * po - 1` for the two-label decision) isolates the skewed base rate, kappa max expresses the ceiling under the fixed marginals, the bias index (`|b - c| / n`) measures the asymmetry of the disagreement. The confusion matrix is the 3x3 (Include/Exclude/Unclear) decision matrix keyed `{human}_{agent}`, matching `agreement_metrics.json`, and must not be transposed.
 
@@ -242,9 +243,9 @@ Bibliographic validation: DOI validation via the CrossRef API, author disambigua
 
 LLMs are used to examine literature on the use of LLMs; feminist AI literacies are simultaneously the subject of the review and a prerequisite of the workflow. This circularity cannot be resolved and is treated not as a methodological flaw but as a condition of the field.
 
-## Vault v2
+## Downloadable paper collection
 
-`src/publish/generate_vault_v2.py` replaces the flat v1 paper index with an epistemic network of four document types: Paper Notes (assessment frontmatter, transformation trail, concept wikilinks, the knowledge-document full text), Concept Notes (LLM-extracted definitions, frequency, a co-occurrence table, paper backlinks), Pipeline Notes (stage descriptions, prompts extracted from code, configuration), and Divergence Notes (pattern classification, category comparison, LLM reasoning). Concepts are extracted by an LLM call per paper, post-processed by synonym merge and a frequency filter; divergences are classified by an LLM (the canonical classification is Sonnet 4.6). Title matching from the distilled documents to the Zotero records runs a five-strategy cascade (Stage1-JSON title, knowledge-document YAML title, filename prefix, author and year, then `difflib.SequenceMatcher` as fallback). The exact node, concept, and divergence counts are derivations and live in the generated JSON.
+`src/publish/generate_vault_v2.py` creates the paper notes and `docs/downloads/vault.zip` from the distilled documents and assessment data. Each note retains the transformation trail, assessment comparison, and complete knowledge document. The earlier generated concept, divergence, pipeline, and MOC notes were retired because they duplicated canonical data and embedded counts that drifted from the current corpus. The Evidence Companion and `research-vault/` remain the active analytical and curated knowledge projections. Title matching from the distilled documents to the Zotero records remains shared with the Promptotyping publisher.
 
 ## Directory structure
 
@@ -259,7 +260,7 @@ LLMs are used to examine literature on the use of LLMs; feminist AI literacies a
 | `src/replay/`, `generated/benchmark-results/replay/` | The committed round-1 replay and its outputs (FlowModel, agreement reproduction) |
 | `corpus/` | `zotero_export.json`, `papers_metadata.csv`, `source_tool_mapping.json` |
 | `docs/`, `docs/data/` | The Evidence Companion and its generated JSON |
-| `src/publish/` | `generate_vault_v2.py`, `generate_promptotyping_data_v2.py` |
+| `src/publish/` | Paper collection, Companion data, category schema, Promptotyping, and literature-landscape publishers |
 | `.vault_cache/` | LLM API result cache (not committed, reproducible) |
 
 ## Error handling

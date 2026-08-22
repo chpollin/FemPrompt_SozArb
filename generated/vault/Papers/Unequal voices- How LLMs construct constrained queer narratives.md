@@ -17,6 +17,15 @@ llm_categories:
   - Bias_Ungleichheit
   - Gender
   - Diversitaet
+human_decision: Exclude
+human_categories:
+  - Generative_KI
+  - Prompting
+  - KI_Sonstige
+  - Bias_Ungleichheit
+  - Gender
+  - Fairness
+agreement: disagree
 ---
 
 # Unequal voices: How LLMs construct constrained queer narratives
@@ -40,10 +49,22 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Include (Confidence: 0.92)
+**Human:** Exclude
 
-## Key Concepts
+**Kategorie-Vergleich (bei Divergenz):**
 
-- [[Representational Harm]]
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Ja | Ja |  |
+| Prompting | Ja | Nein | X |
+| KI_Sonstige | Ja | Nein | X |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Ja | Ja |  |
+| Gender | Ja | Ja |  |
+| Diversitaet | Nein | Ja | X |
+| Feministisch | Nein | Nein |  |
+| Fairness | Ja | Nein | X |
 
 ## Wissensdokument
 

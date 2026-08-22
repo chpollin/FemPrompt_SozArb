@@ -59,16 +59,6 @@ agreement: disagree
 | Feministisch | Nein | Nein |  |
 | Fairness | Nein | Nein |  |
 
-> Siehe [[Divergenz Ahn_2025_Artificial_Intelligence_(AI)_literacy_for_social]] fuer detaillierte Analyse
-
-
-## Key Concepts
-
-- [[AI Literacy]]
-- [[Algorithmic Bias]]
-- [[Algorithmic Fairness]]
-- [[Digital Divide]]
-
 ## Wissensdokument
 
 # Artificial Intelligence (AI) Literacy for Social Work: Implications for Core Competencies

@@ -20,7 +20,6 @@ human_categories:
   - KI_Sonstige
   - Bias_Ungleichheit
   - Gender
-  - Diversitaet
 agreement: disagree
 ---
 
@@ -58,17 +57,9 @@ agreement: disagree
 | Soziale_Arbeit | Nein | Nein |  |
 | Bias_Ungleichheit | Ja | Nein | X |
 | Gender | Ja | Nein | X |
-| Diversitaet | Ja | Nein | X |
+| Diversitaet | Nein | Nein |  |
 | Feministisch | Nein | Nein |  |
 | Fairness | Nein | Nein |  |
-
-> Siehe [[Divergenz Unknown_AI_competency_framework_for_students]] fuer detaillierte Analyse
-
-
-## Key Concepts
-
-- [[AI Literacy Framework]]
-- [[Algorithmic Fairness in Education]]
 
 ## Wissensdokument
 

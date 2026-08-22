@@ -23,7 +23,6 @@ human_categories:
   - KI_Sonstige
   - Soziale_Arbeit
   - Bias_Ungleichheit
-  - Diversitaet
   - Fairness
 agreement: agree
 ---
@@ -50,12 +49,6 @@ agreement: agree
 
 **LLM:** Include (Confidence: 0.95)
 **Human:** Include
-
-## Key Concepts
-
-- [[Algorithmic Fairness in Child Welfare]]
-- [[Algorithmic Transparency and Interpretability]]
-- [[Racial Disparities in Algorithmic Decision-Making]]
 
 ## Wissensdokument
 

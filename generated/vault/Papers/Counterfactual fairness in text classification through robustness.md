@@ -17,6 +17,12 @@ llm_categories:
   - KI_Sonstige
   - Bias_Ungleichheit
   - Fairness
+human_decision: Include
+human_categories:
+  - KI_Sonstige
+  - Bias_Ungleichheit
+  - Fairness
+agreement: agree
 ---
 
 # Counterfactual fairness in text classification through robustness
@@ -40,6 +46,7 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Include (Confidence: 0.75)
+**Human:** Include
 
 ## Wissensdokument
 

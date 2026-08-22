@@ -60,16 +60,6 @@ agreement: disagree
 | Feministisch | Nein | Nein |  |
 | Fairness | Nein | Ja | X |
 
-> Siehe [[Divergenz Shah_2025_Gender_Bias_in_Artificial_Intelligence_Empowering]] fuer detaillierte Analyse
-
-
-## Key Concepts
-
-- [[AI Literacy]]
-- [[Algorithmic Fairness]]
-- [[Gender Bias in AI Systems]]
-- [[Inclusive AI Design]]
-
 ## Wissensdokument
 
 # Gender Bias in Artificial Intelligence: Empowering Women Through Digital Literacy

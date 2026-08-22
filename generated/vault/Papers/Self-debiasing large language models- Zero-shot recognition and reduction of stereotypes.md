@@ -22,7 +22,6 @@ human_categories:
   - Prompting
   - Bias_Ungleichheit
   - Gender
-  - Diversitaet
 agreement: disagree
 ---
 
@@ -60,16 +59,9 @@ agreement: disagree
 | Soziale_Arbeit | Nein | Nein |  |
 | Bias_Ungleichheit | Ja | Ja |  |
 | Gender | Ja | Nein | X |
-| Diversitaet | Ja | Nein | X |
+| Diversitaet | Nein | Nein |  |
 | Feministisch | Nein | Nein |  |
 | Fairness | Nein | Ja | X |
-
-> Siehe [[Divergenz Parrish_2025_Self-debiasing_large_language_models_Zero-shot]] fuer detaillierte Analyse
-
-
-## Key Concepts
-
-- [[Social Bias in Language Models]]
 
 ## Wissensdokument
 

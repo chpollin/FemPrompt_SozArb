@@ -16,6 +16,11 @@ llm_categories:
   - AI_Literacies
   - Generative_KI
   - Prompting
+human_decision: Exclude
+human_categories:
+  - Generative_KI
+  - Prompting
+agreement: agree
 ---
 
 # The influence of mental state attributions on trust in large language models
@@ -39,6 +44,7 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Exclude (Confidence: 0.85)
+**Human:** Exclude
 
 ## Wissensdokument
 

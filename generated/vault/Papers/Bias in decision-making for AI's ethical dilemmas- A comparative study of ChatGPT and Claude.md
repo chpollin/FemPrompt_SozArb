@@ -18,7 +18,6 @@ human_categories:
   - Generative_KI
   - Bias_Ungleichheit
   - Gender
-  - Diversitaet
   - Fairness
 agreement: disagree
 ---
@@ -57,18 +56,9 @@ agreement: disagree
 | Soziale_Arbeit | Nein | Nein |  |
 | Bias_Ungleichheit | Ja | Ja |  |
 | Gender | Ja | Nein | X |
-| Diversitaet | Ja | Nein | X |
+| Diversitaet | Nein | Nein |  |
 | Feministisch | Nein | Nein |  |
 | Fairness | Ja | Nein | X |
-
-> Siehe [[Divergenz Wu_2025_Bias_in_decision-making_for_AI's_ethical_dilemmas]] fuer detaillierte Analyse
-
-
-## Key Concepts
-
-- [[Algorithmic Bias in Large Language Models]]
-- [[Algorithmic Fairness]]
-- [[Intersectional Discrimination]]
 
 ## Wissensdokument
 

@@ -20,6 +20,14 @@ llm_categories:
   - Soziale_Arbeit
   - Bias_Ungleichheit
   - Fairness
+human_decision: Include
+human_categories:
+  - Generative_KI
+  - Prompting
+  - Bias_Ungleichheit
+  - Gender
+  - Fairness
+agreement: agree
 ---
 
 # Responsible prompting recommendation: Fostering responsible AI practices in prompting-time
@@ -43,11 +51,7 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Include (Confidence: 0.87)
-
-## Key Concepts
-
-- [[Algorithmic Bias in Language Models]]
-- [[Prompt Engineering]]
+**Human:** Include
 
 ## Wissensdokument
 

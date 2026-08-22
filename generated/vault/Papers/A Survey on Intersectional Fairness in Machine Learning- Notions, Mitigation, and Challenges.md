@@ -18,6 +18,14 @@ llm_categories:
   - Diversitaet
   - Feministisch
   - Fairness
+human_decision: Include
+human_categories:
+  - KI_Sonstige
+  - Bias_Ungleichheit
+  - Gender
+  - Feministisch
+  - Fairness
+agreement: agree
 ---
 
 # A Survey on Intersectional Fairness in Machine Learning: Notions, Mitigation, and Challenges
@@ -41,12 +49,7 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Include (Confidence: 0.95)
-
-## Key Concepts
-
-- [[Intersectional Fairness]]
-- [[Multicalibration]]
-- [[Subgroup Fairness]]
+**Human:** Include
 
 ## Wissensdokument
 

@@ -21,7 +21,6 @@ human_categories:
   - Prompting
   - Bias_Ungleichheit
   - Gender
-  - Diversitaet
   - Feministisch
 agreement: agree
 ---
@@ -48,12 +47,6 @@ agreement: agree
 
 **LLM:** Include (Confidence: 0.85)
 **Human:** Include
-
-## Key Concepts
-
-- [[AI Literacy]]
-- [[Algorithmic Bias]]
-- [[Gender Bias in AI]]
 
 ## Wissensdokument
 

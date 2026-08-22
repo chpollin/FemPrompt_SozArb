@@ -42,11 +42,6 @@ agreement: agree
 **LLM:** Include (Confidence: 0.92)
 **Human:** Include
 
-## Key Concepts
-
-- [[Algorithmic Fairness]]
-- [[Critical AI Literacy]]
-
 ## Wissensdokument
 
 # Thinking Like a Scientist: Can Interactive Simulations Foster Critical AI Literacy?

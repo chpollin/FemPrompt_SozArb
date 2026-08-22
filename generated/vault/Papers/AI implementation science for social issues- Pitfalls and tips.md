@@ -59,15 +59,6 @@ agreement: disagree
 | Feministisch | Nein | Nein |  |
 | Fairness | Nein | Nein |  |
 
-> Siehe [[Divergenz Takaoka_2022_AI_implementation_science_for_social_issues]] fuer detaillierte Analyse
-
-
-## Key Concepts
-
-- [[Algorithmic Fairness in Social Services]]
-- [[Explainable AI (XAI)]]
-- [[Human-in-the-Loop Decision Support]]
-
 ## Wissensdokument
 
 # AI Implementation Science for Social Issues: Pitfalls and Tips

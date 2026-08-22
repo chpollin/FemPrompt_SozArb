@@ -43,13 +43,6 @@ agreement: agree
 **LLM:** Exclude (Confidence: 0.85)
 **Human:** Exclude
 
-## Key Concepts
-
-- [[AI Literacy]]
-- [[Algorithmic Decision Support]]
-- [[Explainable AI (XAI)]]
-- [[Human-AI Collaboration]]
-
 ## Wissensdokument
 
 # Adjust for Trust: Mitigating Trust-Induced Inappropriate Reliance on AI Assistance

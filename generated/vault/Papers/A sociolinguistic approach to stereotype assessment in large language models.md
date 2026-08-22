@@ -15,6 +15,12 @@ llm_categories:
   - Generative_KI
   - Bias_Ungleichheit
   - Gender
+human_decision: Include
+human_categories:
+  - Generative_KI
+  - Bias_Ungleichheit
+  - Gender
+agreement: agree
 ---
 
 # A sociolinguistic approach to stereotype assessment in large language models
@@ -38,10 +44,7 @@ llm_categories:
 ### Stufe 4: Assessment
 
 **LLM:** Include (Confidence: 0.75)
-
-## Key Concepts
-
-- [[Algorithmic Fairness in NLP]]
+**Human:** Include
 
 ## Wissensdokument
 

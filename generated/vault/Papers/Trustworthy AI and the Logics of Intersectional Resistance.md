@@ -25,7 +25,6 @@ human_categories:
   - KI_Sonstige
   - Bias_Ungleichheit
   - Gender
-  - Diversitaet
   - Feministisch
   - Fairness
 agreement: disagree
@@ -56,16 +55,9 @@ agreement: disagree
 | Soziale_Arbeit | Nein | Nein |  |
 | Bias_Ungleichheit | Ja | Ja |  |
 | Gender | Ja | Ja |  |
-| Diversitaet | Ja | Ja |  |
+| Diversitaet | Nein | Ja | X |
 | Feministisch | Ja | Ja |  |
 | Fairness | Ja | Ja |  |
-
-> Siehe [[Divergenz Knowles_2023_Trustworthy_AI_and_the_Logics_of_Intersectional]] fuer detaillierte Analyse
-
-
-## Key Concepts
-
-- [[Trustworthy AI]]
 
 ## Wissensdokument
 

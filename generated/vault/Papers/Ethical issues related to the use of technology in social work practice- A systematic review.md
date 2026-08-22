@@ -61,13 +61,6 @@ agreement: disagree
 | Feministisch | Nein | Nein |  |
 | Fairness | Nein | Nein |  |
 
-> Siehe [[Divergenz Rodríguez-Martínez_2024_Ethical_issues_related_to_the_use_of_technology]] fuer detaillierte Analyse
-
-
-## Key Concepts
-
-- [[Algorithmic Decision-Making in Social Services]]
-
 ## Wissensdokument
 
 # Ethical Issues Related to the Use of Technology in Social Work Practice. A Systematic Review
