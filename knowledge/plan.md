@@ -5,9 +5,9 @@ project:
   repository: https://github.com/chpollin/FemPrompt_SozArb
 status: active
 language: en
-version: "0.3"
+version: "0.5"
 created: 2026-06-09
-updated: 2026-08-21
+updated: 2026-08-22
 authors: [Christopher Pollin]
 generated-with: Claude Code
 method:
@@ -17,6 +17,12 @@ related: [specification, data, journal, update-protocol]
 ---
 
 Phased plan for completing the whole project: PRISM v1.0 (Stage A), the first-round pass of the existing review data through PRISM and its evaluation (Stage R, the demonstrable core), the real review cycle through the tool (Stage B), and closure plus reuse (Stage C). This is a process document; it is updated as phases close (mark done with date), and decisions made along the way go into [[specification]] as ADRs, not here.
+
+## Current operative state (2026-08-22)
+
+PRISM now has one editor workspace, a one-time reviewer-key and repository-folder setup, and one disk action per complete paper. Paper evidence is required for every positive category. Include records contain their complete analysis before the single write. Earlier expert and model judgements remain unavailable until the independent record is saved; agent trial mode cannot expose them. Browser recovery data and repository files reconcile per paper by timestamp and ambiguous or malformed file states block writes. The supported-browser pilot exercises the editor, persistence, failure recovery, direct links, acceptance mode, isolated agent trials, and responsive layout. Only the native browser permission dialogue remains a manual environment check.
+
+The canonical round-one replay is `src/replay/replay_round1.py`; the duplicate implementation under `src/assess/` has been retired. The ten-paper `ar2` agent result is stored in the production data as a provisional technical acceptance. Its content and the pilot publication-type rule still require methodological ratification before the track becomes a binding research judgement. The historical phase sections below retain decision provenance; this operative state supersedes their older implementation-status sentences where they differ.
 
 ## Zielbild (what "done" means)
 
@@ -33,9 +39,9 @@ Narrative register (decided 2026-06-09): the project describes the workflow and 
 
 ## Shaping decisions (taken 2026-06-09)
 
-1. **Reading text: raw full text, read locally.** The screening view reads the raw Docling texts from `generated/markdown_clean/` through the connected clone (File System Access), option 2 in [[data]] (reading text source). Raw texts are never published; the public Pages site falls back to the served knowledge document, then the abstract. Every decision records which text source was actually read.
-2. **Primary collaborator path: export/import without Git.** The reviewing colleagues work on the deployed Pages site in any browser and exchange their reviewer file as a download. Git plus File System Access stays the power path (technical lead, local clone).
-3. **Testing: committed headless harness plus agent click-tests.** The jsdom harness moves into the repo and becomes reproducible; an AI browser agent executes documented click-scenarios against the real UI and protocols findings. No CI for now; revisit once the harness is committed.
+1. **Reading text: raw full text, served locally.** `src/publish/build_fulltext.py` produces the gitignored `docs/data/fulltext/` layer from the Docling conversions. A local server in the clone can serve that layer; the public Pages site falls back to the abstract because the copyrighted full texts are excluded from publication. Every decision records the source actually read.
+2. **Primary collaborator path: local clone plus GitHub Desktop.** Each reviewing colleague works in a local clone, enters a short personal key once, connects the repository root, and writes only the corresponding reviewer file. GitHub Desktop handles commit, pull, and push. Historical import and export functions remain operator utilities outside the daily editor.
+3. **Testing: committed unit, browser, and data checks.** The jsdom and Python suites verify logic and publication paths. A pinned Chromium pilot drives the visible workflow with faithful filesystem handles; the native folder-permission dialogue is the remaining manual check.
 4. **Scope.** Tool completion, testing, knowledge-base consolidation, push and deploy.
 
 ## Programme view: Teilprojekte (added 2026-06-09)
@@ -70,11 +76,11 @@ Status (2026-07-03): steps 1 and 2 are built as the committed replay (`src/repla
 1. A structured working session turns "how must prompt engineering adapt for social work, gender, and bias" into answerable sub-questions (with the colleagues where possible).
 2. Derive candidate capture fields from the sub-questions (for instance: prompt techniques discussed, bias types addressed, intervention or mitigation type, evidence type, population). Draft as a schema extension next to the ten categories.
 3. Pilot: code a small stratified sample of already-included papers with the draft fields; measure answerability (fill rate, ambiguity notes); revise definitions.
-4. Freeze: the extension goes into the Excel template for the update, `categories.yaml`, and the import-bridge validation (P3).
+4. Freeze: the extension goes into `categories.yaml` and the PRISM analysis panel; the documented Excel exchange shape mirrors it.
 
-Verification: the pilot shows the fields are answerable from the texts. Validation: the colleagues confirm the fields capture what the analysis needs, before the schema freeze. Done when: the update's Excel template carries the analysis fields and the bridge validates them. Hard ordering: TP4 freeze precedes the B2 screening start.
+Verification: the pilot shows the fields are answerable from the texts. Validation: the colleagues confirm the fields capture what the analysis needs, before the schema freeze. Done when: `categories.yaml` and PRISM carry the same closed fields and complete Includes cannot be saved without them. Any future external analysis importer must validate the same contract before use.
 
-Status: the analysis-design is written into [[update-protocol]] (sub-questions, field set with closed vocabularies); the field decisions were fixed on 2026-07-03 (see Decided questions below). Next are the pilot and the freeze.
+Status: the analysis design is frozen in `assessment/categories.yaml` v1.3 and rendered from `docs/data/analysis_fields.json`. PRISM enforces complete analysis capture before an Include record can be saved. Substantive human validation of the coding design remains part of the review work.
 
 ## Programme verification and validation matrix
 
@@ -86,7 +92,7 @@ Verification means technically correct (automated or recomputed wherever possibl
 | TP2 Retro-record | the replay reproduces the canonical benchmark by a human-checked path; every conformance item sourced | human review of the record page before publishing | citable record page live on the Companion |
 | TP3 Divergence | all figures from committed script output; independent, human-checked re-derivation; sensitivity analyses documented | co-authors accept the decomposed framing | paper-ready analysis document, every number licensed |
 | TP4 Analysis fields | pilot coding shows fields answerable | colleagues confirm fields serve the analysis | schema frozen before update screening |
-| TP5 Update | protocol committed before any run; import validation reports; flow reconciles with decision log | reconciliation of divergences with the reviewers | updated corpus with complete audit trail |
+| TP5 Update | protocol and dated amendments reflect the actual operation order without retroactive prospectivity claims; converter validation reports; flow reconciles with decision log | reconciliation of divergences with the reviewers | updated corpus with complete audit trail |
 | TP6 Paper/FFG | paper-integrity check against the repo before submission; claims only as licensed by a human-checked recomputation or published source | co-author review; venue peer review | submission with generated, verifiable methods section |
 | TP7 Reuse | third-party dry run from documentation alone | an external person succeeds without help | documented setup path |
 
@@ -99,7 +105,7 @@ Every iteration in every stage follows the same cycle, and the documents are the
 3. **Verify.** The committed harness runs green, plus the affected click-test scenarios (S1 to S6); what neither covers goes on the manual checklist.
 4. **Record.** Journal entry with decisions, results, and learnings; the plan phase is marked done with date.
 
-The human role is the critical expert in the loop: decisions with methodological or outward-facing consequences (publishing, reviewer identity, copyright, merge to main) are taken by the human and recorded as ADRs. The reviewing colleagues are users, not operators: nothing on their path may require Git, a terminal, or this knowledge base.
+The human role is the critical expert in the loop: decisions with methodological or outward-facing consequences are taken by the human and recorded as ADRs. The reviewing colleagues use PRISM and GitHub Desktop; their path requires no terminal and no access to the knowledge base.
 
 ## Stage A: PRISM v1.0
 
@@ -151,7 +157,7 @@ Under ADR-019 PRISM is the binding screening surface and the colleagues screen i
 
 Done when: an Excel export of the established format imports cleanly, the validation report flags vocabulary violations, and the imported track appears in flow, agreement, and record.
 
-Status (2026-06-21): the pure conversion and validation report (controlled-vocabulary checks on category, decision and exclusion reason, duplicate Zotero keys, Unclear skip, collision guard, idempotent re-import) is now under the headless harness (`tests/tests.js`, via `window.__PRISMA_IMPORT_TEST__`). Still unexecuted in a browser: the FileReader flow, the MutationObserver mounting, the File System Access write, and the download path need the browser click-test (P5 S4) before P3 can be marked done. After the P2 connect-target move the bridge must write into the `docs/data/screening/` subpath instead of the handle root.
+Status (2026-08-22): the operator-only converter supports the historical three-level CSV vocabulary and fails closed on unknown categories, decisions, exclusion reasons, or category-decision combinations that the current contract cannot represent. Imported positive categories still require Paper evidence and Include analysis in PRISM before they count as complete. The converter has no daily editor control and writes no reviewer file itself.
 
 ### P4: UI completion
 
@@ -191,7 +197,7 @@ Done when: searching the retired numbers hits only journal and archive contexts.
 ### P7: Dress rehearsal
 
 - One end-to-end run of the colleague quickstart by someone who is not the builder (or a strict fresh-profile simulation), fixing friction only, no new features.
-- Prepare the demo: seed perspective plus one worked example with pinned evidence.
+- Prepare the demo with independent capture and two worked examples whose category pins and analysis coding can be reviewed directly.
 - Freeze for the stakeholder validation.
 
 Done when: the quickstart works without help from the builder.
@@ -213,7 +219,7 @@ Stage A above was planned with the three-surface IA (ADR-012) and the colleague-
 |---|---|---|
 | Tool purpose is an instrument for active research, not a one-shot demonstrator | ADR-020 | sharpens ADR-019 |
 | The three surfaces merge into one workspace; the PRISMA record becomes a generated output, the data functions an edge affordance | ADR-020 | ADR-008, ADR-012 (three-surface IA) |
-| Reviewer identity is the Git commit author; the in-tool identity form and the multi-reviewer perspective are dropped; the decisions file is written diff-able | ADR-021 | ADR-010 (one file per reviewer), the reviewer-identity open item, the simulated reviewer-identifiers row |
+| Reviewer enters a short lowercase-canonical key; Git commit authorship supplies personal provenance; the decisions file is written diff-able | ADR-021/028/029 | ADR-010, the implicit `reviewer1` default, and the fixed-role selector |
 | Academic references leave the work surface; standard names live only in the generated record and disclosure | ADR-020 | P4/P6 design and reference placement |
 | The divergence stays out of the tool (synthesis-only screening) | confirms ADR-014 | -- |
 
@@ -233,13 +239,13 @@ A second interactive pass (browser agent, 2026-06-30) ran a real screening on a 
 
 Decided and unblocked first, gated cuts after their decision resolves. Each keeps the harness green (the current count is whatever `node tests/run.mjs` prints) and is recorded as an ADR.
 
-1. **One workspace** (done 2026-06-30) -- ADR-020. Screening is the permanent surface; the PRISMA record and the data functions become on-demand affordances; academic references leave the work surface. Files: `docs/prisma.html`, `docs/js/prisma.js` (renderShell, showSurface, renderData), `docs/css/prisma.css`.
-2. **Git provenance** (done 2026-06-30; O5 decided 2026-07-03: one file per reviewer) -- ADR-021. Drop the identity form and the perspective switcher; write the decisions file deterministically (stable order, one paper block); generate a session commit message. Files: `docs/js/prisma.js`, a deterministic serializer with its own test.
+1. **One workspace** (done 2026-06-30; revised 2026-08-22) -- ADR-020/028/029. Screening is permanent. First-use setup captures the reviewer key and repository folder. The daily surface retains compact storage status and one disk action. Report and exchange functions have no editor-facing trigger.
+2. **Reviewer files and Git provenance** (done 2026-06-30; revised 2026-08-22) -- ADR-021/028/029. The reviewer enters a short personal key that is canonicalised to lowercase; the tool writes one deterministic file per key. GitHub Desktop supplies commit authorship and handles all Git interaction. PRISM creates no commit message.
 3. **Accessibility and keyboard flow** (done 2026-06-30) -- P4 NFR-06. Focus restoration after a paper switch, visible focus rings on inputs and controls, `aria-pressed` on category and exclusion chips, dialog semantics with focus move, Escape, and Tab trap for the pin menu, text equivalent for the colour-only status dot, slug and definition out of the chip's accessible name, keyboard-focus tooltips, darkened muted-text tokens for contrast.
 4. **Machine evidence** (done 2026-06-30) -- ADR-022 supersedes ADR-018: removed from the evidence list; the model's per-paper reasoning stays only in the collapsed KI-Vorschlag.
 5. **Inclusion logic** (done 2026-06-30) -- ADR-023 resolves O2: a reason-gated override to Include. The AND-rule derives a default; the human binds and may override it either way, an override to Include recording a free-text justification (RAISE P3). Grounded in [[standards]] and the RAISE primary source.
 6. **Feminist language** (done 2026-06-30) -- O3: Technik/Sozial to Gegenstand/Perspektive on the work surface; the internal constants stay.
-7. **Text substrate** (built 2026-07-03, pending human browser verification) -- O4/P2/ADR-013, ADR-024: the tool opens on the first screenable paper (not boilerplate) and a textless paper shows a prominent notice instead of going silent; loading raw local full text from the connected clone with a recorded `text_source` is now built (ADR-024), pending human browser verification (File System Access cannot be exercised headless).
+7. **Text substrate** (done 2026-08-22 except native permission confirmation) -- O4/P2/ADR-013/025/027. The tool opens on a usable Paper layer, prioritises manifest-backed full text, records `text_source`, and treats the LLM distillate as a post-decision reference. The automated pilot covers the directory-handle and write semantics; only the browser-owned permission dialogue remains manual.
 
 ### Open gates
 
@@ -248,10 +254,10 @@ Decided and unblocked first, gated cuts after their decision resolves. Each keep
 | O1 | Machine evidence: remove from the evidence list, or replace with verbatim category quotes | resolved: removed (ADR-022, cut 4 done) |
 | O2 | Inclusion AND-rule: keep rigid, or reason-gated override to Include | resolved: reason-gated override to Include (ADR-023, cut 5 done) |
 | O3 | Technik/Sozial to Gegenstand/Perspektive | resolved: renamed (cut 6 done) |
-| O4 | Thin-text papers: block, warn, or load raw local text | resolved: warn + screenable entry done; raw local text built (ADR-024, cut 7), pending human browser verification |
+| O4 | Thin-text papers: block, warn, or load raw local text | resolved: manifest-backed full text, abstract fallback, explicit no-text state; native permission dialogue remains manual |
 | O5 | Decisions file: one shared file, or one per person | resolved: one file per reviewer (operator decision 2026-07-03, confirming the ADR-021 default) |
 
-All seven cuts are built and on the branch: cuts 1 to 6 complete (O1 and O3 resolved; O2 resolved by ADR-023), and cut 7 is now built in full (the warn-and-entry half plus the raw-local-text half, ADR-024), pending human browser verification. The Stage A redesign is closed. O5 was decided on 2026-07-03: one decisions file per reviewer, confirming the ADR-021 default; no gate waits on the operator.
+All seven cuts are built. The Stage A redesign is closed at the implementation and automated-verification level. A native Chromium folder-permission confirmation and substantive reviewer validation remain external acceptance activities.
 
 ## Stage R: The first-round pass through PRISM and its evaluation
 
@@ -285,7 +291,7 @@ Status (2026-06-30): the per-item map is drafted as [[standards]], the full PRIS
 - A script builds the full retrospective FlowModel from the actual files (identification, duplicates, screening with the AI/human split, included), not hand-entered; the seed reproduces the canonical benchmark (kappa and confusion matrix as held in the offline benchmark data) as self-test, by a human-checked path.
 - Machine-extracted evidence: the Kategorie-Evidenz quotes from the knowledge documents are imported per paper and category as a separate, labelled provenance class (new ADR; schema field distinct from reviewer evidence; rendered visually distinct; never counted as reviewer Belege).
 
-Status (2026-06-21): the provenance-class half is built and verified (M3, ADR-016). The reading column now splits the served document into a paper layer and a machine-extraction layer (`splitDocLayers`), a Volltext / KI-Extraktion toggle switches between them, and a Beleg pinned from the KI-Extraktion layer carries `origin: ai` and never sets `work.cats`, so AI-sourced text cannot enter the binding decision. Headless tests cover the split and the binding separation; the boundary lands cleanly on all served documents.
+Status (revised 2026-08-22): source provenance is built and verified (M3, ADR-016/028/029/030). The reading column separates the Paper layer from the generated knowledge-document distillation (`splitDocLayers`). The interface labels the latter `LLM-Wissensdestillat`. A pin from that layer carries `source_layer: llm_distillate`, never sets a category, and cannot satisfy the Paper-evidence gate. The separate `actor` field identifies human or agent review work.
 
 Update (2026-06-21, Session 17): the residual pairing discrepancy is resolved (the stray Has_HA flag on `2YS85B49`, no missing human decision). A committed, human-checked replay that re-pairs the raw CSVs and reproduces the canonical matrix, the content-only sensitivity, and that resolution still has to be (re)built; the figures it would assert live in the data (`generated/benchmark-results/`, `docs/data/`), not in this plan. Reversed since (ADR-022, 2026-06-30): the ADR-018 machine-evidence preload (`injectMachineEvidence` from `docs/data/machine_evidence.json`) was removed; the loaded snippets were whole-paper reasoning duplicated verbatim across categories, not per-category quotes, so the per-category structure was fabricated. The machine assessment stays in the collapsed KI-Vorschlag, and the R2 goal of a real per-category provenance class still needs a verified quote-to-category mapping the data does not yet carry. The generator part and `machine_evidence.json` were deleted in the same audit-driven cleanup.
 
@@ -295,13 +301,13 @@ Done when: the report surface shows the complete retrospective review from data 
 
 ### R3: Interactive agent screening pass
 
-Status (decided 2026-06-09): paper-grade, not a throwaway usability run. Prerequisite: a pre-specified protocol document, committed before the run, fixing sample size and stratification, prompt and instruction version, stopping criteria, and its own disclosure. The agent track must not recreate the M1 gap (no pre-specified protocol) that R1 diagnoses for the original review.
+Status (technically completed 2026-08-22, substantive ratification open): a governed ten-paper agent run and blinded one-paper source-repair supplement produced authentic PRISM exports. Their deterministic integration is stored as `docs/data/screening/ar2.json` with `status: provisional_technical_acceptance`. The run manifest records the application- and prompt-snapshot provenance gaps; the verifier checks inputs, integration, records, evidence passages, analysis completeness, and full-text hashes. The publication-type rule and every judgement remain subject to substantive ratification.
 
-- An AI browser agent screens a stratified sample in the real frontend: read, search, pin evidence, decide. Stratification over the confusion-matrix cells and text availability (raw, knowledge document, abstract only); sample size decided at phase kickoff.
-- The agent writes the reviewer file `agent`, a third track besides the human seed and the batch LLM. Its agreement (kappa agent vs human, agent vs batch LLM) and its divergence patterns are an evaluation result in their own right: does interactive, evidence-grounded screening diverge differently than abstract-only batch assessment?
-- By-product: a friction protocol of real tool use under load, fed back into Stage A polish.
+- The agent screens the assigned sample in isolated PRISM trial mode: read, search, pin Paper evidence, code, decide, save, and export.
+- Each run fixes its reviewer key, URL, paper list, prompt hash, rules, target paths, and model in `run.json`. Authentic exports preserve `actor: agent`; technical integration and substantive ratification are separate operations.
+- The browser work supplies a friction protocol. Its findings feed back into the editor only after reproduction and tests.
 
-Done when: the sample is screened with pinned evidence, the third track appears in the Reviewers and Agreement views, and the friction findings are journaled.
+Technically done when: the authentic export and report exist, the executable verifier passes, provenance gaps are named, and reproducible tool defects have regression tests. Substantively done when the run rule and paper judgements have been independently ratified.
 
 ### R4: Record generation and evaluation
 
@@ -324,7 +330,7 @@ Stage B proves repeatability: the tool carries the literature update end-to-end 
 
 - Protocol the stakeholder validation against the open ADR effects: every "Effekt: to be observed" in [[specification]] gets its observation recorded (held, revised, or refuted).
 - Friction findings become fixes; anything structural becomes an ADR; the result deploys as v1.1.
-- Decide from observation, not assumption: do the colleagues want blind mode for fresh screening, do they use evidence pinning as designed, is the assessment pane sufficient.
+- Validate the fixed independent-capture rule, the evidence and analysis gates, the inline storage workflow, and the sticky assessment actions with the colleagues' first real papers.
 
 Done when: no ADR carries an unobserved effect; v1.1 is deployed and the colleagues have screened their first real papers with it.
 
@@ -333,15 +339,15 @@ Done when: no ADR carries an unobserved effect; v1.1 is deployed and the colleag
 - Re-run the versioned deep-research prompts (`prompts/CHANGELOG.md` governance); export RIS; deduplicate against the existing corpus.
 - Run the offline LLM assessment on the new batch with the versioned assessment prompt and recorded parameters (existing pipeline scripts; this is the disclosure's input).
 - Pipeline the new papers: PDF to `generated/markdown_clean/` (raw, unpublished), knowledge documents where wanted, rebuild the full-text index and the raw-text manifest.
-- The colleagues screen the new papers in PRISM, the binding surface (this time with a pre-specified protocol, enforced vocabulary, and a reviewer column); a batch captured in Excel enters over the P3 import seam; evidence grounding happens in PRISM (machine evidence, agent pass, human verification of samples); the flow diagram shows the update cycle with the AI/human split.
+- The colleagues screen the new papers in PRISM, the binding surface, under the versioned protocol and its dated amendments. PRISM enforces the vocabulary, reviewer key, Paper evidence, and complete Include analysis. The operator-only converter may migrate a historical screening batch; external analysis records require a separate validator that is not implemented. The flow diagram shows the update cycle with the AI/human split.
 
 Done when: every new paper has a binding human decision with evidence, recorded text source, and a sibling AI decision; the update is reproducible from the repo alone.
 
-Status (2026-06-09): the pre-registration protocol is [[update-protocol]] (finalized from the round-1 draft), with paste-ready prompts per lane and two Claude Code rehearsal runs in `corpus/deep-research/update-rehearsal/`; it is committed before any round 2 search executes. Open inside it: whether both reviewers screen the full batch or a split, and whether the optional Claude Code lane L5 runs.
+Status (2026-08-22): [[update-protocol]] contains the initial protocol state and the dated amendments that followed the searches of 2026-07-17. Paste-ready prompts and the rehearsal runs live in `corpus/deep-research/update-rehearsal/`. The repository claims prospective status only for rules demonstrably fixed before the operation they govern. Both reviewers screening the full batch and the documented L5 run are resolved; E1, E5, and E7 remain ratifiable proposals for the later coding procedure.
 
 ### B3: Reconciliation and the PRISMA record
 
-- Reconcile divergent human decisions from the per-reviewer files (Daten & Sync panel); the consensus decision and the process are recorded (PRISMA-trAIce M8).
+- Generate deterministic reconciliation input with the operator utility over the separate reviewer files. The human consensus process still needs a canonical writer (PRISMA-trAIce M8); no project-administration surface exists in the editor.
 - Export the complete PRISMA record as one bundle with the Stage R machinery (R2, R4), now over the updated corpus: flow SVG, agreement metrics, both filled checklists, disclosure text, decision-log CSV; the bundle lives in the repo.
 - The paper's methods and disclosure sections are generated from the bundle, then edited by the authors; a human-checked integrity pass checks the final paper text against the repository.
 
@@ -391,7 +397,7 @@ Writing the Forum Wissenschaft paper itself (the plan delivers its methods input
 
 ## Decided questions (the former simulation ledger)
 
-These decisions were first simulated on 2026-06-09 to avoid blocking on external feedback. On 2026-07-03, after the stakeholder meeting of 2026-07-01, the operator retired the simulation-and-ratification mechanism entirely and fixed every row as a project decision; the project builds on them without a waiting state. The one revision against the simulated ledger is the screening mode (both reviewers screen everything, see below). Provenance of the simulation phase lives in the Git history and [[journal]].
+These decisions were first simulated on 2026-06-09 to avoid blocking on external feedback. Later ADRs and dated amendments made most rows binding, including the screening mode in which both reviewers screen everything. The status column is authoritative: E1, E5, and E7 remain simulated, ratifiable proposals until the operator confirms them; all other rows carry the binding status stated below. Provenance of the simulation phase lives in the Git history and [[journal]].
 
 ### Analysis fields (the [[update-protocol]] TP4 decisions)
 
@@ -401,11 +407,11 @@ Ratification status added 2026-07-18 from the memo walk-through; the memo itself
 |---|---|---|---|---|
 | 1 | Sub-question set | SQ1 to SQ3 confirmed; the gap map (SQ3) serves both the follow-up paper and the Fair Bench preparation | producing it once for two uses matches the programme economy | ratifiziert-wie-simuliert. No real decision contradicts; the freeze amendments ([[update-protocol]] B.1) and the pilot run throughout against SQ1 to SQ3, and `categories.yaml` v1.3 presupposes them. |
 | 2 | Field set, AN_Harm_Types | seven fields confirmed; AN_Harm_Types kept optional | the highest-burden field; SQ2 survives at reduced resolution without it | ratifiziert, präzisiert durch realen Entscheid. The freeze sharpened the row: `AN_Harm_Types` is optional and binding only when `AN_Coding_Basis = Fulltext` (B.1 point 3, v1.3 `binding_when`). The simulated "optional" is the conservative subset of the real form. |
-| 3 | Encoding | semicolon multi-select | binary columns per code would make the working sheet unusable; the bridge validates either way | ratifiziert, durch realen Entscheid getragen. ADR-026 makes PRISM the capture surface with closed per-field selection; the semicolon-encoded Excel is the export and bridge contract ([[update-protocol]] D, B.1 point 7). The binary-column alternative is settled out. |
-| 4 | Retro-coding scope | staged: update batch first, then retro-code round-1 includes after the pilot stabilizes the definitions | avoids doubling the workload before the field definitions are proven | ratifiziert-wie-simuliert. Still simulated only; no ADR touches it. Consistent with E1 in [[update-protocol]], which carries the staging as a separate later coding run. A genuine open proposal for the meeting. |
-| 5 | Coding setup | single human coder per paper, plus the advisory LLM track, plus a double-coded human-human overlap sample | full dual coding is unrealistic for two busy academics; the overlap sample closes the missing inter-human baseline at bounded cost | revidiert (LLM-Track zurückgestellt, optional). The advisory LLM track is deferred in [[update-protocol]] E6; it is not a precondition of the main coding and runs only under its own pre-committed sub-protocol. The single-human-coder-per-paper plus overlap sample stands (E1, E5); the revision strikes the LLM track from the binding setup. |
+| 3 | Encoding | semicolon multi-select | binary columns per code would make the working sheet unusable | ratifiziert, durch realen Entscheid getragen. ADR-026 makes PRISM the capture surface with closed per-field selection; the semicolon-encoded Excel shape is the documented export and exchange representation ([[update-protocol]] D, B.1 point 7). An external analysis importer is not implemented. |
+| 4 | Retro-coding scope | staged: update batch first, then retro-code round-1 includes after the pilot stabilizes the definitions | avoids doubling the workload before the field definitions are proven | simuliert, ratifikationspflichtig (E1). No ADR has made the staged retro-coding binding. It remains an open operator proposal. |
+| 5 | Coding setup | single human coder per paper, plus the advisory LLM track, plus a double-coded human-human overlap sample | full dual coding is unrealistic for two busy academics; the overlap sample closes the missing inter-human baseline at bounded cost | teilweise revidiert, weiterhin ratifikationspflichtig (E1, E5). E6 defers the advisory LLM track. The proposed single-coder split and the human-human overlap remain simulated until operator ratification. |
 | 6 | Vocabulary | Role_Persona promotion kept; AN_Population boundary rules added; Intersectional coded additively; Other_Axis stays | resolves the three vague-field findings; additive intersectionality preserves per-axis frequencies | ratifiziert, durch realen Entscheid getragen. The freeze (B.1 points 5, 6; v1.3) overtook all four parts: Role_Persona promotion kept, `Education_Professional` bounded to occupational and higher-education AI literacy, `Intersectional` requires two interacting axes, `Other_Axis` stays the catch value. The fine-grained SW-practice fields stay open for post-screening retro-coding (open decision 6, this part). |
-| 7 | Pilot | stratified pilot on a small sample; revise a field when coders flag ambiguity on more than roughly a quarter of papers | concrete enough to run, loose enough to revise | ratifiziert, operationalisiert durch E7. The pilot has run ([[update-protocol]], eight papers, four strata); the rule of thumb is operationalized in [[update-protocol]] E7 as a trigger not an automatism, its reference set the running coding stock, R1 and R2 deciding the revision. |
+| 7 | Pilot | stratified pilot on a small sample; revise a field when coders flag ambiguity on more than roughly a quarter of papers | concrete enough to run, loose enough to revise | Pilot durchgeführt; Schwellenregel simuliert und ratifikationspflichtig (E7). The eight-paper pilot is complete. The quarter threshold remains a proposed trigger and becomes binding only by operator ratification. |
 | 8 | Studientyp | confirmed, existing column, vocabulary-enforced, no duplicate | no argument against it surfaced | ratifiziert, durch realen Entscheid getragen. The freeze makes `Studientyp` mandatory for Include and vocabulary-validated (v1.3, `study_types`), no duplicate; the review special rule (B.1 point 4) settles literature review and concept. No counter-argument surfaced. |
 
 ### Round-2 protocol (the [[update-protocol]] decisions)
@@ -415,40 +421,36 @@ Ratification status added 2026-07-18 from the memo walk-through; the memo itself
 | Screening split | the two reviewers split the new batch with a double-screened overlap sample; the overlap yields the project's first inter-human agreement figures | workload-realistic; addresses the named baseline gap | verworfen fürs Screening, übertragen auf die Codierung. The 2026-07-17 amendment ([[update-protocol]] section 10 point 4) fixed full-batch screening: both reviewers screen the full batch. The split-plus-overlap principle lives on in the coding layer (E1, E5), which halves the coding load and draws the inter-human baseline from the overlap sample there, not at screening. The paper lane records the same outcome one step earlier, as a decision of 2026-07-03 revising the simulated split; only the date of record differs. |
 | Claude Code lane L5 | runs as a documented fifth lane | the rehearsal runs showed it works; an extra documented lane strengthens the multi-system design | ratifiziert, durch realen Entscheid getragen. The 2026-07-17 amendment (section 10 point 5) confirms L5 ran (Claude Fable 5), eight records, five new distinct candidates, documented like the other lanes with its own Source_Tool. |
 | Prompt provenance | cite `corpus/deep-research/literature-review-prompt.md` as the documented template, with the loss of the instantiated round-1 prompt stated as a known gap | settled by the submitted paper's own citation practice | ratifiziert, durch realen Entscheid getragen. The 2026-07-17 amendment (section 10 point 1) confirms provenance as the documented round-1 prompt, not an unprovable verbatim execution; the round-2 prompt is committed. |
-| Reviewer identifiers | neutral ids `reviewer-1` / `reviewer-2` repo-wide (avoids the R1 collision with the trAIce item id and the plan phase) | privacy-clean, PRISMA-sufficient, collision-free | revidiert (R1 / R2 als kanonische Form). The neutral-id principle stands and is carried by ADR-021 (reviewer identity is the Git commit author). The concrete form is set in [[update-protocol]] section 7 to `R1` / `R2`; the revision adopts `R1` / `R2` as canonical, consistent with E1 and E5 using the same ids in the coding layer. The paper lane keeps `reviewer-1` / `reviewer-2`, and its roles table is the one that survived into [[update-protocol]] section 7, so the two records leave the id form unreconciled; this is not decided here. |
-| Unclear decisions in the tool vs at import | in PRISM, Unclear is now a first-class derived decision from the three-level categories (ADR-024); the Excel import bridge still treats an Unclear row as a report item pending a bridge update (Batch 5) | the three category levels map onto Include/Unclear/Exclude, so Unclear is the honest resting state for partial coverage, not merely a work state | ratifiziert, durch realen Entscheid getragen. ADR-024 makes Unclear a first-class derived decision; the bridge treats an Unclear row as a report item until the bridge update. Consistent with [[update-protocol]] section 4: an Unclear paper is not coded until the binding human pass resolves it to Include. |
+| Reviewer identifiers | short personal keys for the PRISM screening files | compact and explicit at capture | revised and implemented by ADR-029. Keys are canonicalised to lowercase and determine `docs/data/screening/<key>.json`; Git authorship supplies personal provenance. |
+| Unclear decisions in the tool and converter | PRISM derives Unclear from three-level categories; the operator converter preserves a consistent Unclear row and rejects inconsistent combinations | Unclear is a first-class screening result and remains uncoded until a binding Include | ratifiziert und implementiert durch ADR-024 plus den fail-closed Konverter. |
 
 ### User-story validation (the stories in [[specification]])
 
-The v4 core stories (read, search, pin) are confirmed in substance, with a role correction. ADR-019 makes in-tool screening the binding path; whether evidence pinning is required per decision or concentrated at reconciliation stays a workflow choice for the stakeholder meeting, and the heavy in-tool reader during reconciliation is the review lead and technical lead. Record-an-exclusion is confirmed but lives in Excel; generate-record, produce-disclosure, verify-conformance, look-up-category, and understand-checklist are confirmed. The v3 blind and divergence stories are confirmed superseded. Share-a-session is dropped for round 2, since the Excel-plus-bridge path replaces session hand-off, and retained only as background for foreign reuse.
+The v4 core stories (read, search, pin) are confirmed in substance. ADR-019 makes in-tool screening the binding path; ADR-028 requires a human pin for every selected category and complete analysis coding for Include. Record-an-exclusion lives in PRISM. Generate-record, produce-disclosure, verify-conformance, look-up-category, and understand-checklist remain confirmed. Sharing happens through per-reviewer files in the local Git workflow.
 
 | Story statement | Simulated outcome | Ratification status (2026-07-18) |
 |---|---|---|
 | v4 core stories (read, search, pin) | confirmed in substance, with a role correction | ratifiziert-wie-simuliert. The adversarial frontend review and the interactive passes (2026-06-30, Stage A revision above) confirmed the core mechanic; the heavy in-tool reader at reconciliation is the review and technical lead. |
-| Evidence pinning per decision vs bundled at reconciliation | left as a workflow choice for the stakeholder meeting | ratifiziert-wie-simuliert (bleibt offen). No ADR closes the choice; it stays on the meeting agenda. E8 in [[update-protocol]] settled the source location via the pin for SQ3 verbatims, which leaves per-decision-vs-bundled untouched. The paper lane records the choice as decided on 2026-07-03, pinning technically optional per decision and expected where a category is contested and at reconciliation. The two records disagree about whether the choice is closed, so it stays open here. |
-| Record-an-exclusion | confirmed, lives in Excel | revidiert (Erfassungsort PRISM). Overtaken by ADR-026: capture happens in PRISM, Excel is the export and fallback format. The story stays valid; its capture site moves from Excel into the tool. |
+| Evidence pinning per decision vs bundled at reconciliation | one human pin for every selected category at capture | revised and implemented by ADR-028; the save gate enforces it. |
+| Record-an-exclusion | confirmed, lives in Excel | revidiert (Erfassungsort PRISM). Overtaken by ADR-026: capture happens in PRISM; the Excel shape is a documented exchange format. The story stays valid; its capture site moves from Excel into the tool. |
 | generate-record, produce-disclosure, verify-conformance, look-up-category, understand-checklist | confirmed | ratifiziert-wie-simuliert. Carried by the Stage R machinery and the [[standards]] deliverable; no counter-finding. |
 | v3 blind and divergence stories | confirmed superseded | ratifiziert, durch realen Entscheid getragen. Confirms ADR-014 (divergence stays out of the tool) and the reframing line, divergence as illustration not empirical core. |
-| Share-a-session | dropped for round 2, kept as background for foreign reuse | ratifiziert-wie-simuliert. The Excel-plus-bridge path and ADR-021 (deterministic, diff-able decisions file) replace the session hand-off; it stays a reference for foreign reuse (Stage C). |
+| Share-a-session | dropped for round 2, kept as background for foreign reuse | ratifiziert-wie-simuliert. Deterministic per-reviewer files under ADR-021 replace the session hand-off; the story stays a reference for foreign reuse (Stage C). |
 
 ### Ratification
 
-The memo walk-through of 2026-07-18 carried this ledger top to bottom against the real decisions since simulation (ADR-019 to ADR-026, the 2026-07-17 amendments in [[update-protocol]] section 10, and the coding decisions E1 to E8 in [[update-protocol]]); its per-row votes are folded into the Ratification status columns above. Two vote classes stand: where a real decision already overtook a row, the vote is carried by the ADR and the meeting only confirms it; where a row is still simulated only (analysis fields 4, the retro-coding staging, and the pinning-timepoint story), the vote is a genuine open proposal. The votes are a ratification proposal, not a setting; a row becomes binding only with confirmation in the real conversation, at which point the simulation marker falls at its source ([[plan]], [[update-protocol]], [[update-protocol]], [[specification]]). The ledger stays as provenance of which decisions were, for a time, simulated.
+The memo walk-through of 2026-07-18 compared this ledger with ADR-019 to ADR-026 and the dated amendments in [[update-protocol]]. Its per-row outcomes are folded into the status columns above. Those columns are the current authority: rows overtaken by an ADR or amendment are binding; E1, E5, and E7 remain explicitly simulated and require operator ratification before their overlap, retro-coding, or revision-threshold procedures become binding. Earlier prose that treated every simulated row as fixed is superseded by this rule.
 
-Two records of this ledger stand side by side and are deliberately left unmerged. The introduction above, which comes from the paper lane and is dated 2026-07-03, retires the simulation-and-ratification mechanism and treats every row as a fixed project decision; the walk-through of 2026-07-18, whose votes fill the status columns, treats the ratification as a proposal that becomes binding only in the real conversation. The row outcomes agree; what differs is whether the confirming step is still owed.
+## Open operator decisions and later research work
 
-## Open items
-
-- Reviewer identity in public files: are the current short keys acceptable in a public repo, or pseudonyms? Decide before P3. The paper lane records this resolved on 2026-07-03 (neutral ids, acceptable in a public repo, see the Resolved line closing this section); this line still carries it as open.
-- Do the colleagues screen the full corpus or a split? Affects only the onboarding text, not the tool. Both records answer it the same way, the paper lane on 2026-07-03 and the round-2 amendment of 2026-07-17, as full-batch screening; it stays listed here because this line's list was never updated.
-- Pages source setting (branch/folder) to verify at the P0 merge.
-- Two replay implementations stand in the tree after the merge, both committed, both self-testing green against `generated/benchmark-results/agreement_metrics.json`: `src/assess/replay_flow.py` with `src/assess/replay_selftest.py` (this line) and `src/replay/replay_round1.py` (the paper lane). Decide which is the production path R4 reads from, and retire the other or state why both stay. This is a code decision, not a merge decision.
-- ADR numbering after the merge: the recorded text source was decided on 2026-08-21 in favour of ADR-027 (full texts from the served manifest of ADR-025, values `raw`/`abstract`/`none`, reviewer schema 0.3), and the paper lane's ADR-024 design (raw texts from `generated/markdown_clean/` of the connected clone, title-prefix matching without a manifest, an added `knowledge_doc` value, schema kept at 0.2) does not survive; its repo-root connect target was ported and holds. What the decision leaves untouched is that both lines used the number ADR-024 for different decisions, so the ADR register in [[specification]] carries a collision to resolve when the registers are merged.
-- Reviewer key before screening starts: the key is seeded by a documented localStorage step since the identity form left with ADR-021; decide UI switcher versus documented manual step (carried from the 2026-07-03 handoff, confirmed by the 2026-08-21 pilot).
+- Ratify or revise the provisional publication-type rule used by the `ar2` agent pilot, then conduct substantive review of its ten decisions before treating the track as binding research data.
+- Confirm the native Chrome or Edge directory permission and physical write once in a disposable clone; the automated handle-level contract is complete.
 - Grounding the research-vault: the anchor layer `00_representation/` was never built, so the distillates carry `migrated` and not `grounded`, and the deliverable layer `30_deliverable/` is empty. The binding stage-3 verification of the waitlist (`research-vault/waitlist.md`) is untouched and cannot be delegated to a machine. Both are preconditions of a vault that carries its own status claim; decide whether they are executed in this project's scope.
 - Filesystem housekeeping: the acquired PDFs still sit in the gitignored `pipeline/pdfs/` instead of the declared `generated/pdfs` (`config/defaults.yaml`); move or delete the leftover.
 - Folder restructure executed 2026-06-30 (code into `src/`, generated data into `generated/`, deep-research into `corpus/`, assessment unified); see [[journal]] Session 24.
 
 Resolved 2026-08-21: the P2 race (a decision committed while the text was still loading recorded the synchronous source guess). The ADR-027 implementation gates the commit on the applied reading and re-evaluates it when the read completes; the browser pilot asserts the gate, its release and a delayed out-of-order load, and three mutations each fell exactly one of those assertions. The per-source counts of the disclosure can rely on `text_source`.
 
-Resolved 2026-07-03: reviewer identity in public files (neutral ids `reviewer-1`/`reviewer-2` repo-wide, acceptable in a public repo); screening mode (both reviewers screen the full batch, see the decided questions above); O5 (one decisions file per reviewer, ADR-021 default confirmed as the decision); the [[standards]] item 1 report reference (the Forum Wissenschaft paper is the external round-1 report of record, marked as outside the repo).
+Resolved 2026-08-22: PRISM requires a short lowercase-canonical reviewer key; both reviewers screen the full batch; every selected category requires a human evidence pin; Include requires complete analysis coding; earlier assessments remain hidden until the independent decision is saved; first-use setup captures key and repository folder; the daily surface retains one disk action; GitHub Desktop handles commit and push.
+
+Historical decision 2026-07-03, later revised by ADR-029: the fixed public ids `reviewer-1` and `reviewer-2` were initially accepted. The current editor instead uses short lowercase-canonical reviewer keys chosen at setup. Still operative from that decision: both reviewers screen the full batch; one decisions file exists per reviewer; the Forum Wissenschaft paper remains the external round-one report of record.

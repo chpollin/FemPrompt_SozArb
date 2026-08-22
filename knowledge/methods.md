@@ -10,7 +10,7 @@ status: complete
 language: en
 version: "0.2"
 created: 2026-02-21
-updated: 2026-08-21
+updated: 2026-08-22
 authors: [Christopher Pollin]
 generated-with: Claude Code
 topics: ["[[Systematic Review]]", "[[PRISMA]]"]
@@ -134,13 +134,13 @@ PRISM (`docs/prisma.html`, not to be confused with the PRISMA standard) is the e
 - ADR-020/021 (2026-06-30), one working workspace, reviewer identity from the Git commit author, deterministically serialized decision files.
 - ADR-022/023 (2026-06-30), the faulty machine category evidence removed, a reason-obligated override to Include (RAISE P3).
 - ADR-024 (2026-07-01), three-level categories (nein/teilweise/ja) with the derived three-way decision Include/Unclear/Exclude.
-- Full text local (2026-07-01), `src/publish/build_fulltext.py` builds the reading layer `docs/data/fulltext/` from `generated/markdown_clean/`; it is gitignored because copyright-protected, and publicly the tool falls back to knowledge document and abstract.
+- Full text local (2026-07-01), `src/publish/build_fulltext.py` builds the reading layer `docs/data/fulltext/` from `generated/markdown_clean/`; it is gitignored because copyright-protected, and the public tool falls back to the metadata abstract.
 
-The human decision in PRISM is the binding record, every AI contribution marked as such (evidence provenance `origin`, AI suggestion collapsed). The retrospective replay of the round-1 data through PRISM (Stage R) and the round-2 pass (Stage B) are steered in [[plan]]; the conformance state per PRISMA and trAIce item is in [[standards]].
+The human decision in PRISM is the binding record. Evidence provenance separates the source layer (`paper` or `llm_distillate`) from the actor (`human` or `agent`); earlier expert and model judgements stay unavailable until the independent decision is saved. The retrospective replay of the round-1 data through PRISM (Stage R) and the round-2 pass (Stage B) are steered in [[plan]]; the conformance state per PRISMA and trAIce item is in [[standards]].
 
 ## Stage 6: Preregistration round 2 and analysis-field freeze
 
-Because round 1 had no protocol fixed in advance, the second round was preregistered prospectively. [[update-protocol]] binds the search window, lanes, prompt, dedup procedure, screening procedure, metrics, and roles (neutral ids R1, R2, OP, LLM, AG), committed before the first run; changes after that only as dated amendments.
+Round 2 began with an initial protocol draft, but it was not fully prospective. The searches ran on 2026-07-17, while several operational decisions and corrections were fixed during or after execution and are recorded as dated amendments in [[update-protocol]]. Only rules demonstrably committed before a specific operation are treated as prospective for that operation; the repository makes no blanket preregistration claim for the round.
 
 In parallel, the analysis question was operationalized (TP4 in [[plan]]). The chain with dates:
 
@@ -214,14 +214,7 @@ Retrospectively unrepairable and openly named: no preregistered round-1 protocol
 
 ## Replay verification (Stage R)
 
-The retrospective PRISMA FlowModel and the benchmark are reproduced from the raw assessment files by a committed, human-checkable path (Stage R, R2/R4 in [[plan]]). The replay rebuilds the flow from the raw CSVs, pairs the two screening tracks on Zotero_Key, computes the decomposed agreement metrics (full decision matrix plus content-only subset), and reproduces the canonical benchmark as a self-test. No count appears in this prose; the numbers are emitted by `src/assess/replay_flow.py` into `generated/benchmark-results/replay_flow.json` and held in the data and the Evidence Companion. The operative reproduction instructions and the human verification checklist live beside the script in `src/assess/README_replay.md`.
-
-Two independent paths. A prior replay apparatus was removed as unverified AI output; it must not return as an unaudited black box. A self-test that imports the very logic it checks proves nothing, so the replay carries two computational paths that never share code.
-
-- **Core path** (`src/assess/replay_flow.py`): the production computation. It loads the raw CSVs, pairs on Zotero_Key, builds the FlowModel, and computes the decomposed metrics. Its output is the emitted report.
-- **Self-test path** (`src/assess/replay_selftest.py`): an independent re-derivation. It recomputes the decision confusion matrix and Cohen's kappa from the same raw CSVs by its own arithmetic, without importing anything from the core path, and compares both against `generated/benchmark-results/agreement_metrics.json`. It reports red or green.
-
-Agreement across the two paths, and of both against the canonical benchmark, is what licenses the replay as human-checked. A green self-test means three things agree: the canonical benchmark, the core path, and an independent re-derivation.
+The retrospective PRISMA FlowModel and the benchmark are reproduced from the raw assessment files by the canonical replay `src/replay/replay_round1.py` (Stage R, R2/R4 in [[plan]]). It pairs the tracks on `Zotero_Key`, emits the FlowModel and decomposed agreement results under `generated/benchmark-results/replay/`, and checks its decision matrix and category results against the canonical benchmark before writing. The operative command, inputs, normalisation provenance, checks, and outputs are documented in `src/replay/README.md`. The retired duplicate implementation under `src/assess/` is no longer a competing source of truth.
 
 FlowModel schema. The FlowModel follows PRISMA 2020's three phases (Identification, Screening, Included), with the trAIce R1 AI-versus-human split inside Screening. Each stage is a named count the script emits.
 
@@ -239,7 +232,7 @@ Category value normalisation. Category cells carry Ja/Nein or their variants; de
 
 Content-only subset and the decomposed divergence. The content-only subset is the paired set minus the human records whose `Exclusion_Reason` is a workflow criterion (Duplicate, No full text, Wrong publication type in their human-CSV spelling). On this subset the two tracks' include rates converge and agreement rises. The divergence is reported decomposed, workflow-criteria disagreement separated from content disagreement, before any interpretation ([[plan]] Consequence ledger). No error-rate language is used; no inter-human baseline exists.
 
-A second committed replay came from the paper lane, `src/replay/replay_round1.py`, documented in `src/replay/README.md`. It re-derives the retrospective PRISMA flow and the agreement figures from the raw assessment CSVs, pairs strictly by Zotero_Key, separates the workflow-criteria exclusions (Duplicate, No full text, Wrong publication type) for the content-only sensitivity, computes the pre-specified metric set per track, per category, and per condition, and reproduces the canonical `generated/benchmark-results/agreement_metrics.json` as its own self-test before writing `generated/benchmark-results/replay/` (`flow_model.json`, `agreement_replay.json`). Its normalization and kappa functions are taken byte-for-byte from `merge_assessments.py` and `calculate_agreement.py`, which is why it reproduces the canonical figures without reading the merged CSV. Every count-bearing claim of the round-1 record and of the follow-up paper traces to these outputs ([[plan]] Stage R; the per-item conformance status is the artefact `generated/conformance/conformance_map.yaml` referenced from [[standards]]). Both replay paths now stand in the repository, each self-testing against the same canonical benchmark; which of them becomes the single production path is an open decision.
+The canonical implementation is `src/replay/replay_round1.py`, documented in `src/replay/README.md`. It re-derives the retrospective PRISMA flow and the agreement figures from the raw assessment CSVs, pairs strictly by Zotero_Key, separates the workflow-criteria exclusions (Duplicate, No full text, Wrong publication type) for the content-only sensitivity, computes the pre-specified metric set per track, per category, and per condition, and reproduces the canonical `generated/benchmark-results/agreement_metrics.json` as its own self-test before writing `generated/benchmark-results/replay/` (`flow_model.json`, `agreement_replay.json`). Its normalization and kappa functions are taken byte-for-byte from `merge_assessments.py` and `calculate_agreement.py`, which is why it reproduces the canonical figures without reading the merged CSV. Every count-bearing claim of the round-1 record and of the follow-up paper traces to these outputs ([[plan]] Stage R; the per-item conformance status is the artefact `generated/conformance/conformance_map.yaml` referenced from [[standards]]). The former duplicate under `src/assess/` has been retired.
 
 ## Quality assessment
 

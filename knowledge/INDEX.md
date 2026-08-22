@@ -13,9 +13,9 @@ template:
   alias: https://dhcraft.org/Promptotyping/#promptotyping-document-index
 status: complete
 language: en
-version: "0.3"
+version: "0.4"
 created: 2026-06-29
-updated: 2026-08-21
+updated: 2026-08-22
 authors: [Christopher Pollin]
 generated-with: Claude Code
 related: [project, methods, specification, data, standards, plan, journal, update-protocol, research-vault, analysis-divergence, analysis-sq-advisory]
@@ -64,7 +64,7 @@ This knowledge base follows the convention for Promptotyping documents. It fixes
 The project-constitutive terms, alphabetical. Sibling documents use these terms; this is where they are defined.
 
 ### Beleg
-A pinned piece of evidence in the PRISM tool: a search hit or selected passage attached to a category, stored with its term, surrounding snippet, timestamp, and an origin (human or AI). A human-sourced Beleg sets the category and is binding; a machine-sourced Beleg is advisory and never sets a category.
+A pinned passage in PRISM, stored with term, surrounding snippet, timestamp, source layer, and actor. A pin from the Paper layer starts an empty category at `teilweise`; the reviewer decides whether the aspect is central enough for `ja`. A pin from the LLM-Wissensdestillat remains advisory and cannot satisfy the Paper-evidence gate. The legacy `origin` field is retained only for compatibility; `source_layer` and `actor` carry the current provenance.
 
 ### Confabulation
 The generation of coherent but factually unsupported claims without internal verification. Preferred over "hallucination" because it names the generative mechanism rather than a sensory metaphor.

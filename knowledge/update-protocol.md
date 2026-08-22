@@ -1,34 +1,34 @@
 ---
-title: Update Protocol (Round 2 Pre-Registration)
+title: Update Protocol (Round 2, amended)
 project:
   name: FemPrompt SozArb
   repository: https://github.com/chpollin/FemPrompt_SozArb
 method:
   name: Promptotyping
   url: https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin
-status: draft
+status: active-amended
 language: en
-version: "0.2"
+version: "0.3"
 created: 2026-06-09
-updated: 2026-07-18
+updated: 2026-08-22
 authors: [Christopher Pollin]
 generated-with: Claude Code
 topics: ["[[Pre-Registration]]", "[[Coding Scheme]]"]
 related: [plan, data, specification, methods]
 ---
 
-This document is the pre-registration protocol for the second literature round (TP5 and Stage B2 of [[plan]]). It exists because the first round had no pre-specified protocol, the one gap of the conducted review that cannot be repaired retrospectively (PRISMA-trAIce M1 and PRISMA 2020 item 24). The protocol closes that gap prospectively, carries the analysis-field design the round must capture at screening time (the Analysis fields section), and binds the RIS conversion to a reproducible procedure (the RIS conversion section). It is committed, in finalized form, before the first round 2 search runs; any change after the first run is recorded as a dated amendment, never as a silent edit. The protocol describes the workflow and how large language models are used within it; it makes no efficiency claims. It is a draft until the remaining open items of section 10 (cutoff precision, freeze ordering) are resolved and the analysis-field schema is frozen after the pilot; the field and protocol decisions themselves were fixed on 2026-07-03 ([[plan]], Decided questions).
+This document governs the second literature round (TP5 and Stage B2 of [[plan]]). Its initial version existed before the production searches. The searches ran on 2026-07-17, and the dated amendments in section 10 record decisions made during or after that execution, including the relaxed analysis-field freeze. Prospective claims therefore apply only to rules fixed before the relevant operation; later changes are reported as amendments. The document carries the current screening and analysis contract. The absence of a pre-specified protocol for round one remains irreparable (PRISMA-trAIce M1 and PRISMA 2020 item 24).
 
 ## 1. Objectives
 
 1. Update the existing first-round corpus with literature published since the round 1 search execution, using the same identification instrument: parallel deep research queries with an identical prompt across systems, followed by deduplication, dual assessment, and human-binding screening.
-2. Conduct the round under full PRISMA 2020 plus PRISMA-trAIce conformance by construction: pre-specified protocol (this document), executed prompts committed verbatim with run metadata, enforced controlled vocabulary at capture, per-record reviewer identity, separate AI and human decision tracks, generated flow and disclosure artifacts.
+2. Document PRISMA 2020 and PRISMA-trAIce conformance at the point each operation occurred: versioned protocol and amendments, executed prompts with run metadata, controlled vocabulary at capture, per-record reviewer identity, separate AI and human decision tracks, and generated flow and disclosure artifacts.
 3. Capture the analysis fields (prompt techniques, bias axes, harm types, mitigation, population; see the Analysis fields section) at screening time, so the round 2 corpus can carry the analysis of how prompt engineering must adapt for social work, gender, and bias contexts.
 4. Produce the data for the two-round comparison: round 1 is carried through PRISM with named gaps (Stage R), round 2 demonstrates the same record machinery under prospective conformance.
 
 ## 2. Eligibility criteria
 
-Eligibility is defined by `assessment/categories.yaml`, version 1.2, and is used unchanged: the ten categories in two dimensions (technology and social) and the controlled exclusion vocabulary are not restated here; the YAML file is the single source of truth. PRISM scores the categories three-level and derives the decision (both dimensions ja yields Include, both at least teilweise yields Unclear, any dimension entirely nein yields Exclude; ADR-024, [[specification]]); the requirement that both a technology and a social dimension be present is unchanged from round 1.
+Eligibility is defined by `assessment/categories.yaml`, version 1.3: the ten categories in two dimensions and the controlled exclusion vocabulary are not restated here; the YAML file is the single source of truth. PRISM scores the categories on three levels. Both dimensions with at least one `ja` yield Include, both dimensions with at least one `teilweise` yield Unclear, and a dimension entirely at `nein` yields Exclude. The v1.3 additions are analysis fields and do not change the eligibility dimensions.
 
 The analysis-field extension adds capture fields for the analysis question. These are descriptive coding fields, not eligibility criteria. If merging the extension into `assessment/categories.yaml` bumps the file version, the eligibility-relevant content remains identical to v1.2; any change to eligibility-relevant content would be a protocol amendment.
 
@@ -80,14 +80,14 @@ Deduplication against the existing corpus and within the new batch happens as a 
 
 PRISM is the binding screening surface for round 2 ([[plan]] Stage B2, ADR-019 in [[specification]]). The reviewing colleagues screen the new batch in the tool, where every category points at the words that justify it and the human decision is the binding record. The screening record carries, for round 2, the same shape the established capture format does, the column shape of `assessment/human_assessment.csv`, extended by:
 
-1. the analysis-field extension (frozen before screening starts, see the Analysis fields section), and
-2. a per-record reviewer identity through neutral reviewer ids (reviewer-1, reviewer-2; the short form R1/R2 is avoided because R1 already names a PRISMA-trAIce item and a plan phase), closing the round 1 gap of per-record reviewer identity.
+1. the analysis-field extension from `assessment/categories.yaml` v1.3, and
+2. a per-record reviewer identity through a short personal key, canonicalised to lowercase and stored in `docs/data/screening/<key>.json`.
 
 The tool enforces the controlled vocabulary at input time (validated values for Decision, Exclusion_Reason, category values, and the analysis fields); values like Other or empty reason cells, which round 1 admitted, are impossible by construction.
 
-A batch captured in Excel elsewhere enters over the P3 import bridge ([[plan]] Stage A P3), which survives as an entry and migration seam rather than the canonical capture path, with idempotent re-import, an import report (added, changed, skipped), and validation of vocabulary, category completeness, duplicate Zotero keys, and the analysis fields. Violations are a visible import report, never silent acceptance.
+A batch captured in the historical CSV format may enter through the operator-only P3 converter ([[plan]] Stage A P3). The converter supports the three-level vocabulary and fails closed on unknown values, missing or unknown exclusion reasons, duplicates, and category-decision combinations that the current contract cannot represent. Its output remains staging data: positive categories require Paper evidence and Include requires complete analysis before the record counts as complete.
 
-In PRISM the more precise PRISMA steps happen, where machine-extracted evidence enters as a clearly labelled separate provenance class, human verification of evidence runs on samples, the text source actually read is recorded (raw, knowledge document, abstract), divergent human decisions are reconciled from the per-reviewer files (Daten & Sync panel) with the consensus decision and process recorded (PRISMA-trAIce M8), and flow, agreement, checklist, and disclosure artifacts are generated from the data.
+PRISM records the text source actually read (`raw`, `abstract`, or `none`) and requires Paper evidence for every positive category. The LLM knowledge distillate is hidden until the independent record has been saved and never supplies binding evidence. Divergent decisions are reconciled from per-reviewer files through operator utilities, with the consensus process recorded (PRISMA-trAIce M8). Flow, agreement, checklist, disclosure, migration, and reconciliation functions remain outside the daily editor surface (ADR-029/030).
 
 The dual track runs as in round 1: the offline LLM assessment processes the new batch with the versioned 10K assessment prompt (`src/assess/run_llm_assessment.py`, governed by `prompts/CHANGELOG.md`) and recorded parameters. Decoding parameters are set explicitly and recorded this round; round 1 left temperature and top-p as unrecorded API defaults. The human decision is the binding record; the LLM track is advisory and kept separate. An interactive agent screening lane (as in Stage R3) may run as a third track under its own pre-specified sub-protocol.
 
@@ -109,38 +109,40 @@ All metrics are computed by committed scripts, never by hand; every published nu
 
 ## 7. Roles
 
-Neutral ids; no personal names in committed files.
+Short reviewer keys keep records compact. Git commit authorship and the external assignment record supply personal provenance.
 
 | Id | Role |
 |---|---|
-| reviewer-1 | Reviewing colleague, human track, binding decisions; screens the full batch |
-| reviewer-2 | Reviewing colleague, human track, binding decisions; screens the full batch, divergences are reconciled per M8 |
+| `<key-a>` | Reviewing colleague, human track, binding decisions; screens the full batch |
+| `<key-b>` | Reviewing colleague, human track, binding decisions; screens the full batch, divergences are reconciled per M8 |
 | OP | Technical operator: runs searches, pipeline, LLM track, imports; does not screen |
 | LLM | Offline 10K assessment track, advisory |
 | AG | Optional interactive agent screening track, advisory |
 
 The mapping of ids to persons is kept outside the repository. The human decision is the binding record in every case.
 
-## 8. Committed before the first search runs
+## 8. Initial pre-search gate and actual conformance
 
-The pre-registration is complete when the following are in the repository, in this order, before any round 2 search executes:
+The intended pre-search gate was the following ordered set. The run protocol records which elements were already fixed and which were amended after the search started:
 
 1. This protocol, finalized (open items of section 10 resolved, status no longer draft).
 2. The exact paste-ready prompt texts per lane (Appendix A) as a versioned prompt file under `prompts/`, with a `prompts/CHANGELOG.md` entry for the round 2 prompt version.
 3. `assessment/categories.yaml` in the version in force, with the analysis-field extension merged and frozen, eligibility content unchanged from v1.2.
-4. The Excel import template with the analysis fields, the reviewer column, and enforced vocabulary (dropdown validation), as the seam for a batch captured elsewhere; the colleagues screen in PRISM.
-5. The P3 bridge import validation extended to the analysis fields and the reviewer column.
+4. The documented Excel exchange shape with the analysis fields and reviewer column; colleagues screen in PRISM.
+5. A fail-closed validator before any externally captured analysis batch is admitted. The current operator converter covers screening records only; an analysis importer is not implemented.
 6. The 10K assessment prompt version and the run configuration with explicitly set decoding parameters.
 7. The metrics pre-specification as committed, runnable scripts, including the content-only computation.
 8. The deduplication procedure (script or documented manual procedure with output format).
 9. The disclosure skeleton declaring the intended AI use of the round (identification lanes, LLM track, optional agent track), closing PRISMA-trAIce M1 prospectively.
 10. The decision record: L5 runs as a documented fifth lane and both reviewers screen the full batch (decided 2026-07-03, [[plan]] Decided questions), plus the role assignment of section 7.
 
-After the first search run, this list is frozen; changes happen only as dated amendments below.
+Changes after the first search run are dated amendments. They do not retroactively change the protocol state of earlier operations.
+
+Actual conformance differs from the intended gate in three places. The protocol and analysis vocabulary were amended after identification had begun. The historical CSV converter validates the screening fields only; it does not ingest reviewer identity or `AN_` analysis columns. The current PRISM editor is therefore the vocabulary-enforced capture surface for analysis, while any external analysis import remains unbuilt. These limits are reported as such and cannot be used as prospective evidence for earlier operations.
 
 ## 9. Amendments
 
-None yet. Format: date, what changed, why, which runs were affected.
+The 2026-07-17 amendments are recorded in section 10 and in `corpus/deep-research/round2/LAUFPROTOKOLL.md`. They apply to operations after each recorded decision. Earlier search operations retain the protocol state that existed when they ran.
 
 ## 10. Open items before finalization
 
@@ -158,7 +160,7 @@ The paper lane had already recorded points 1, 4 and 5 as resolved on 2026-07-03,
 
 # Analysis fields (TP4)
 
-This section is the TP4 deliverable of [[plan]]: it turns the programme question, how prompt engineering must be adapted for social work, gender, and bias contexts, into an operationalized analysis design. The field decisions were fixed on 2026-07-03 (section F; [[plan]], Decided questions); the schema is frozen into the Excel template, `categories.yaml`, and the P3 bridge validation after the pilot (section E). The hard ordering holds: the freeze precedes the B2 screening start, because the update's Excel template must carry the analysis fields from the first decision onward.
+This section is the TP4 deliverable of [[plan]]: it turns the programme question, how prompt engineering must be adapted for social work, gender, and bias contexts, into an operationalized analysis design. The field decisions were fixed on 2026-07-03 (section F; [[plan]], Decided questions); the operative schema is frozen in `categories.yaml` v1.3 and the PRISM analysis panel after the pilot (section E). The documented Excel shape mirrors these fields for exchange. No importer for externally captured analysis records is implemented.
 
 The design problem in one sentence: the first review round produced a corpus with binding inclusion decisions and ten binary topic categories, but no fields that say what an included paper contributes to the prompt-engineering question; a paper coded `Prompting: Ja` could recommend role prompts for case documentation or benchmark chain-of-thought debiasing, and the current schema cannot tell these apart.
 
@@ -210,17 +212,17 @@ Frozen 2026-07-17 by operator decision, together with section B, into `assessmen
 4. **Review rule** (amends coding rule 5): for `Studientyp` Literaturreview or Konzept, the techniques, harms, and mitigations the paper synthesizes as its own subject matter are codable; rule 5 excludes only incidental citation, not the review's object.
 5. **`AN_Population` sharpening:** `Education_Professional` is restricted to professional or higher-education AI-literacy settings (teaching professionals or students to work with AI); general-audience or unspecified contexts go to `Not_SW_Specific`. The fine-grained social-work practice codes stay unchanged and are re-examined after screening, when the corpus shows which fields actually occur (open decision 6 stays open for that part).
 6. **`Role_Persona` promotion is kept** (open decision 6, this part resolved): the pilot found it independently, as the technique form professional-practice guidance actually names.
-7. **Excel schema:** `AN_Prompting_Role` is appended after `AN_Population`; as a multi field it uses the semicolon encoding with a `Legend` entry, enforced at the P3 bridge like the other multi-select lists.
+7. **Exchange schema:** `AN_Prompting_Role` is appended after `AN_Population`; as a multi field it uses the semicolon encoding with a `Legend` entry. PRISM enforces the closed vocabulary at capture. Any future external analysis importer must enforce the same list.
 
 The freeze decision reviews sections B and B.1 together; after the freeze the vocabularies are written into `categories.yaml` as the `analysis_fields` block and this revision block is folded into B.
 
 ## C. Coding instructions
 
-The capture surface is the PRISM tool, inline in the screening assessment column (ADR-026 in [[specification]], decided 2026-07-18); the Excel in the schema of section D remains the export and fallback format, and the legend sheet carries the code lists for anyone working outside the tool. The rules below are surface-independent. In the tool, rule 2's not-decidable case is captured as a per-field click and exported as the `AN_Notes` line `Feldname: nicht entscheidbar aus <Basis>`, so the frozen schema is unchanged and the cases stay machine-countable. General rules:
+The capture surface is the PRISM tool, inline in the screening assessment column (ADR-026 in [[specification]], decided 2026-07-18); the Excel shape in section D is a documented export and exchange representation, not an implemented analysis-import path. The rules below are surface-independent. In the tool, rule 2's not-decidable case is captured as a per-field click and exported as the `AN_Notes` line `Feldname: nicht entscheidbar aus <Basis>`, so the frozen schema is unchanged and the cases stay machine-countable. General rules:
 
 1. Code only papers with the binding decision Include. Excluded papers get no analysis codes.
 2. Code from the deepest text available and record it in `AN_Coding_Basis`. Use `None` only when the paper genuinely does not address the field's subject; when a field is not decidable from the available text, write that into `AN_Notes`.
-3. Never leave an analysis cell empty. Every field has a `None` code; an empty cell is a validation error at import.
+3. Never leave an analysis field empty. Every field has a `None` code; PRISM blocks saving an incomplete Include record. Any future external importer must enforce the same rule before admission.
 4. Multi-select fields take one or more codes, semicolon-separated, verbatim from the legend sheet. No free text in coded columns; free text goes to `AN_Notes`.
 5. Code what the paper does, not what it cites.
 
@@ -228,13 +230,13 @@ Per field, the salient rules: a technique group is assigned only when the paper 
 
 ## D. Excel schema extension
 
-Since ADR-026 (2026-07-18) this schema is the export and bridge contract, no longer the capture surface; capture happens in PRISM (section C), and the PRISM export emits exactly this column shape. The established format is the column shape of `assessment/human_assessment.csv`. The extension appends columns after `Notes`, so every existing parser and the P3 bridge see an unchanged prefix. New columns in order: `AN_Prompt_Techniques`, `AN_Bias_Axes`, `AN_Harm_Types` (optional), `AN_Mitigation_Stage`, `AN_Mitigation_Status`, `AN_Population`, `AN_Coding_Basis`, `AN_Notes` (free text). Additionally `Studientyp` becomes required for `Decision = Include`.
+Since ADR-026 (2026-07-18) this schema is the documented export and exchange shape, no longer the capture surface; capture happens in PRISM (section C). The established prefix is the column shape of `assessment/human_assessment.csv`. The extension appends `AN_Prompt_Techniques`, `AN_Bias_Axes`, `AN_Harm_Types` (optional), `AN_Mitigation_Stage`, `AN_Mitigation_Status`, `AN_Population`, `AN_Coding_Basis`, and `AN_Notes` (free text). `Studientyp` is required for Include. An external analysis importer has not been built.
 
-Mechanics: a `Legend` sheet lists every column, its codes, and one-line definitions; single-select columns get Excel data-validation dropdowns; multi-select columns are typed as semicolon lists, which Excel cannot validate natively, so enforcement happens at the P3 import bridge (split on `;`, trim, match against the closed list; empty-cell check on all `AN_` columns for included papers; a visible import report). The freeze writes the vocabularies into `categories.yaml` as a new `analysis_fields` block, so tool, bridge, and template read one source. The semicolon encoding is the decided primary (F.3) because it keeps the sheet readable; the bridge can also ingest the alternative, one binary column per code, matching the established one-column-per-category pattern and giving full dropdown validation at the price of one column per code across all fields.
+Mechanics: a `Legend` sheet documents every column, its codes, and one-line definitions; single-select columns may use Excel data-validation dropdowns, while multi-select columns use semicolon-separated closed codes. The frozen authority is the `analysis_fields` block in `categories.yaml`, from which PRISM's controls are derived. The semicolon encoding is the primary exchange representation (F.3). A batch prepared outside PRISM requires a separate fail-closed validator for vocabulary, completeness, and semicolon parsing before it can enter the reviewer files; that analysis import path remains unimplemented.
 
 ## E. Analysis methods over the coded corpus
 
-The analysis corpus is the set of papers with a binding human Include (round 1's included set plus whatever the update adds). Retro-coding is staged (F.4): the update batch first, the round-1 includes after the pilot stabilizes the definitions; SQ1 to SQ3 can be answered on the update batch alone, but coverage and the gap map are stronger with retro-coding. Three method layers in ascending interpretive depth:
+The analysis corpus is the set of papers with a binding human Include from the batch being coded. E1 proposes a later extension to the round-1 Includes after the update batch has stabilized the definitions; that retro-coding order remains ratification-dependent. SQ1 to SQ3 can be answered on the update batch alone, while a ratified retro-coding run would broaden coverage and the gap map. Three method layers in ascending interpretive depth:
 
 Frequencies. Per-field code frequencies over the coded corpus, computed by a committed script, never by hand. Multi-select fields are counted per code with the paper count as denominator. Outputs: the technique inventory (SQ1), the bias-axis and mitigation profiles (SQ2), the population coverage (SQ3).
 
@@ -308,11 +310,11 @@ Revision proposals from the pilot (advisory, informing the freeze, not replacing
 
 The design's open decisions and the coding-workflow decisions (E1 to E8, section G) are one ledger, kept coherent here. Decisions marked "simulated, ratifiable" follow the project's simulation convention ([[plan]], Decided questions): they are resolved from the documented roles and binding only after the reviewing colleague confirms them at the next real contact. A full ratification pass of the simulation ledger is in [[plan]].
 
-The paper lane carried this section as eight decisions fixed on 2026-07-03, with no open and no simulated row. Its outcomes are the ones the rows below name, the sub-question set SQ1 to SQ3, the seven fields with `AN_Harm_Types` optional, semicolon multi-select, staged retro-coding with the update batch first, one human coder per paper plus the advisory LLM track plus a double-coded overlap sample, the `Role_Persona` promotion with `AN_Population` boundary rules and additive `Intersectional` and `Other_Axis` retained, the stratified pilot with the quarter-of-papers revision rule, and `Studientyp` reused. The two records disagree about status, since this one holds rows 1, 4, 5 and the threshold half of 7 as still owing confirmation. That disagreement stands as recorded.
+An earlier paper-lane note treated all eight outcomes as fixed on 2026-07-03. The dated ADRs, amendments, and status table below now resolve that ambiguity. The sub-questions, field set, encoding, vocabulary, capture surface, and `Studientyp` are binding. E1, E5, and E7 remain simulated, ratifiable proposals; E6 is deferred. This status is authoritative until an operator decision changes it.
 
-1. Sub-question set: confirm, sharpen, or replace SQ1 to SQ3, and whether the gap map (SQ3) is a deliverable of the follow-up paper, the Fair Bench preparation, or both. **Open.**
+1. Sub-question set: confirm, sharpen, or replace SQ1 to SQ3, and whether the gap map (SQ3) is a deliverable of the follow-up paper, the Fair Bench preparation, or both. **Resolved:** SQ1 to SQ3 are confirmed; the gap map serves the follow-up paper and the Fair Bench preparation.
 2. Field set and obligation: confirm the seven fields; decide whether `AN_Harm_Types` is kept, dropped, or required. **Resolved 2026-07-17 (freeze B.1 point 3):** kept, optional, binding only where `AN_Coding_Basis = Fulltext`.
-3. Encoding: semicolon multi-select versus one binary column per code. **Resolved (section D):** semicolon multi-select as primary, enforced at the P3 bridge; the bridge can ingest either encoding.
+3. Encoding: semicolon multi-select versus one binary column per code. **Resolved (section D):** semicolon multi-select is the primary exchange representation. PRISM enforces the vocabulary at capture; an external analysis importer remains unimplemented.
 4. Retro-coding scope: update batch only, or also the first round's included papers, and if so who codes and on which text basis. **Simulated, ratifiable (E1):** staggered, update batch first, retro-coding of the round 1 includes as a separate later run once the update pass has stabilized the definitions; SQ1 to SQ3 are answerable on the update batch alone.
 5. Coding setup: single coder with spot checks, full dual coding, or single human coding plus an advisory LLM track. **Simulated, ratifiable (E1, E5):** one human coder per paper with the corpus split between R1 and R2, plus a pre-fixed stratified overlap sample both code independently, plus the advisory LLM track deferred (E6). The advisory LLM track extends the dual-track design to the analysis layer and needs its own pre-specified sub-protocol.
 6. Vocabulary details: keep or revert the `Role_Persona` promotion; finalize `AN_Population`; decide whether `Other_Axis` stays or the axes list is extended. **Resolved 2026-07-17 (freeze B.1 points 5, 6):** promotion kept, `Education_Professional` sharpened, `Other_Axis` kept; the fine-grained SW practice codes stay open until screening shows which fields occur.
@@ -322,13 +324,13 @@ The paper lane carried this section as eight decisions fixed on 2026-07-03, with
 Two further capture-surface decisions from the coding workflow (section G):
 
 - Coding basis where no full text exists. **Resolved 2026-07-18 (E2):** the narrow reading, only the verified research-vault distillate counts as `Knowledge_Doc` basis, because only it carries a verified evidence chain.
-- Not-decidable handling and capture surface. **Resolved 2026-07-18 (E3, E4, E8):** capture is in PRISM, the analysis fields inline in the assessment column, appearing only at Include (ADR-026, FR-14 in [[specification]]); not-decidability is a per-field capture exported machine-countable, no new vocabulary code and no amendment; pinned evidence carries its source location, so SQ3 verbatims need no extra convention. The Excel schema (section D) stays as export and fallback.
+- Not-decidable handling and capture surface. **Resolved 2026-07-18 (E3, E4, E8):** capture is in PRISM, the analysis fields inline in the assessment column, appearing only at Include (ADR-026, FR-14 in [[specification]]); not-decidability is a per-field capture exported machine-countable, no new vocabulary code and no amendment; pinned evidence carries its source location, so SQ3 verbatims need no extra convention. The Excel schema (section D) stays as a documented export and exchange shape.
 
 Grounding sources (accessed 2026-06-09): Schulhoff et al., "The Prompt Report", arXiv:2406.06608v6; Gallegos et al., "Bias and Fairness in Large Language Models: A Survey", Computational Linguistics 50(3) 2024, arXiv:2309.00770v3; Gardiner, O'Donoghue, Yeung, Jewel, "Social work practice and artificial intelligence: A scoping review", Aotearoa New Zealand Social Work 38(1) 2026.
 
 ## G. Coding procedure
 
-This section carries the coding method over the frozen analysis fields (`assessment/categories.yaml` v1.3, the `analysis_fields` block including `AN_Prompting_Role`), the operational form of sections B, B.1, and C. It is a draft, not a setting; humans code bindingly, every machine contribution stays advisory, consistent with the project's responsibility asymmetry. The decisions E1 to E8 are collected in section H. Any change to field definitions or vocabularies after coding start would be a dated amendment of the pre-registration, not a silent adjustment.
+This section carries the operational coding method over the frozen analysis fields (`assessment/categories.yaml` v1.3, including `AN_Prompting_Role`). Human coding is binding. Agent records retain their actor provenance and remain provisional until substantive ratification. The still-simulated decisions E1, E5, and E7 are collected in section H and require operator ratification before the corresponding overlap or revision procedure is used. Any change to field definitions or vocabularies after coding start is a dated amendment.
 
 ### G.1 Object and coding unit
 
@@ -338,7 +340,7 @@ The coding unit is the paper per analysis field. Each field takes exactly one va
 
 ### G.2 Coding basis, full text against distillate
 
-Coding runs from the deepest available text, and the base actually read is held per paper in `AN_Coding_Basis` (`Fulltext`, `Knowledge_Doc`, `Abstract`; coding rule 2). The full text is the coding basis of choice where it lies in `generated/markdown_clean/` or over the local PRISM reading layer. Two fields depend on it especially, `AN_Harm_Types` is binding only at `AN_Coding_Basis = Fulltext` (freeze B.1 point 3), and the pilot found `AN_Prompt_Techniques` often unresolvable from weaker bases.
+Coding runs from the Paper layer actually read, and the basis is held per paper in `AN_Coding_Basis`. PRISM derives `Fulltext` from the local Docling layer and `Abstract` from the metadata fallback. `Knowledge_Doc` remains a vocabulary value for a separately governed, verified external coding path; the PRISM editor never derives it from the LLM-Wissensdestillat. Two fields depend on the basis especially: `AN_Harm_Types` is required at `Fulltext`, and the pilot found `AN_Prompt_Techniques` often unresolvable from weaker bases.
 
 The research-vault distillates are working material, not coding basis. They serve as an entry, for orientation, for quickly finding evidence passages, because their quote claims are checked against the full text (documented evidence chain, `audit` frontmatter). Three constraints ground the separation:
 
@@ -346,7 +348,7 @@ The research-vault distillates are working material, not coding basis. They serv
 2. The distillates in `generated/distilled/` still on the waitlist are unverified; their category evidence can contain paraphrase with a quote claim (the error class from [[research-vault]]).
 3. Even migrated research-vault distillates carry `status: migrated`, not `verified`; the binding human confirmation of the evidence chain is outstanding.
 
-Where no full text exists, the distillate or the abstract is the honestly documented basis, which is exactly what `AN_Coding_Basis` records.
+Where no full text exists in PRISM, the metadata abstract is the documented basis. A verified research-vault document can support the separate `Knowledge_Doc` path only outside the current editor flow and with explicit provenance.
 
 **E2 (resolved 2026-07-18, operator).** The narrow reading holds, only the verified research-vault version counts as `Knowledge_Doc` basis, because only it carries a verified evidence chain. The case stays rare, in the tool the full text is present for most papers.
 
@@ -366,7 +368,7 @@ Recommended coding order per paper, first `AN_Prompting_Role`, because it fixes 
 | `AN_Coding_Basis` (single) | The deepest text base actually read |
 | `AN_Notes` (free) | Justifications, verbatim strategies and statements, non-decidability |
 
-Across fields the coding rules 1 to 5 hold, in particular no empty cell (every field has `None`, an empty cell is a validation error at the import bridge) and code what the paper does, not what it cites. For `Studientyp` Literaturreview or Konzept the review special rule holds (B.1 point 4), the technique, harm, and mitigation inventory the review synthesizes is codable as the review's object; only incidental citation stays excluded.
+Across fields the coding rules 1 to 5 hold, in particular no empty field (every field has `None`; PRISM enforces completeness before saving an Include) and code what the paper does, not what it cites. Any future external analysis importer must apply the same validation. For `Studientyp` Literaturreview or Konzept the review special rule holds (B.1 point 4), the technique, harm, and mitigation inventory the review synthesizes is codable as the review's object; only incidental citation stays excluded.
 
 ### G.4 Handling of Unclear cases
 
@@ -399,9 +401,9 @@ Concrete procedure:
 
 ### G.6 Documentation form of the coding decisions
 
-The capture location is the PRISM tool (E4, resolved 2026-07-18). The coding fields sit directly in the existing assessment column of the one working view, below the decision block, and appear only once the binding decision Include has fallen; no separate tab, no separate page. Captured per Include paper are the `AN_` fields as a closed selection directly from `assessment/categories.yaml` v1.3, with per-field non-decidability capture (E3), a notes field, and evidence locations from the existing evidence pins (E8). Vocabulary enforcement thus happens at capture time, as the pre-registration expects, a closed selection cannot produce an invalid value. The work package is held in [[specification]] as ADR-026 with FR-14; the panel must stand before coding starts, so the tool does not switch mid-pass.
+The capture location is PRISM (E4, resolved 2026-07-18). The coding fields sit directly in the assessment column and appear when the working screening state derives Include, so analysis is complete before the single save. Captured per Include paper are the `AN_` fields as closed selections from `assessment/categories.yaml` v1.3, per-field non-decidability (E3), notes, and evidence locations from the existing pins (E8). Vocabulary enforcement happens at capture time; the save gate rejects incomplete or contradictory analysis.
 
-The Excel in the column schema of `assessment/human_assessment.csv` (extended by the `AN_` columns after `Notes`, section D) stays as export and fallback format; the P3 import bridge (split, trim, match against the list, empty-cell check for includes, visible import report, never silent acceptance) stays the entry seam for stock captured outside the tool. `categories.yaml` v1.3 is the one source panel, bridge, and export read from.
+The column schema of `assessment/human_assessment.csv` remains the analysis export shape and a documented external exchange format. The current operator-only CSV converter covers historical screening decisions only and does not import `AN_` fields or reviewer identity. External analysis imports therefore require a separate validated converter before use. `categories.yaml` v1.3 remains the vocabulary source for the PRISM panel and analysis export.
 
 **E8 (resolved by E4, 2026-07-18).** With capture in the PRISM tool, pinned evidence carries its source location automatically (marked passage with surrounding snippet); the pin is the source record for SQ3 verbatims, an extra manual convention drops out. Only for verbatims noted outside the tool the quote form in `AN_Notes` stays the fallback.
 
@@ -411,7 +413,7 @@ The documented stock per coding decision:
 - the text base in `AN_Coding_Basis`,
 - justifications and verbatim material in `AN_Notes`, non-decidability as a per-field capture,
 - at consensus cases the consensus record from G.5,
-- the pinned evidence with origin (`origin`) and source location as evidence anchor.
+- the pinned evidence with `source_layer`, `actor`, and source location as evidence anchor; `origin` remains a compatibility field.
 
 ## H. Coding decisions, collected
 

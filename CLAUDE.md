@@ -1,7 +1,7 @@
 # Working Rules for Claude AI Assistant
 
 **Project:** FemPrompt SozArb, a systematic literature review on feminist AI literacies in social work
-**Last Updated:** 2026-08-21
+**Last Updated:** 2026-08-22
 
 ---
 
@@ -77,13 +77,12 @@ The benchmark (the human-LLM divergence and its decomposition, used as a motivat
 | `assessment/` | LLM 5D and human assessment | Complete |
 | `src/publish/` | Generators (Vault v2, Promptotyping data) | Actively edited |
 | `src/replay/` | Round-1 replay (`replay_round1.py`, self-test against the canonical benchmark) | Yes, with care |
-| `src/assess/replay_flow.py` | Second replay implementation with its own self-test, from the paper lane; which of the two is the production path is an open code decision in `knowledge/plan.md` | Do not extend before the decision |
 | `research-vault/` | Subject knowledge of the literature in the Grounded-Vault layer model; `_sources/` and `00_representation/` are gitignored by license lock and are never created here | Yes, with care |
 | `tests/` | PRISM test layers: jsdom harness, Companion smoke suite, browser pilot, pytest, manual checklist | Yes, with care |
 | `paper/` | Follow-up paper (draft, outline, expert questions) | Yes, with care |
 | `config/` | `defaults.yaml` (now lists `generated/` paths; the restructure superseded its do-not-change note) | Yes, with care |
 | `.vault_cache/` | LLM API cache (reproducible) | Do not change |
-| `prompts/` | Prompt governance and CHANGELOG | Read-only |
+| `prompts/` | Versioned prompt governance and changelog | Edit only through a documented prompt version or status change |
 
 ### Knowledge documents
 
@@ -187,7 +186,7 @@ Each piece of information has exactly ONE canonical location. Other files refere
 - Commit format: `[type]: [description]` (feat, fix, docs, refactor, test, chore).
 - Commit frequently after each logical change.
 - Branch off main for substantial work; NEVER force-push to main.
-- Do not commit: `.env`, generated data (PDFs, knowledge docs), test artifacts, `.vault_cache/`.
+- Do not commit secrets, licensed PDFs or full texts, disposable browser output, or `.vault_cache/`. A verified open-access source conversion may be committed when its frontmatter records the stable source, authorship, licence, and conversion provenance. Governed reviewer records and reproducibility manifests are versioned research data and may be committed after their validation gates pass.
 
 ### Code rules
 

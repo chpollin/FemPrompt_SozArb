@@ -1,6 +1,6 @@
 # tests/
 
-Test fundament for the PRISM screening tool (plan P1). A zero-dependency test suite locks down the pure functions of `docs/js/prisma.js`: decision derivation, agreement metrics, flow aggregation, markdown escaping and parsing helpers, evidence handling, the commit guard, and the generated disclosure text.
+Test foundation for the PRISM screening tool (plan P1). The shipped application remains framework-free; the test harness uses jsdom and Playwright as development dependencies. It covers decision derivation, flow aggregation, rendering helpers, evidence and analysis gates, persistence, agent provenance, operator conversion, and generated report data.
 
 ## How to run
 
@@ -28,23 +28,24 @@ The only network activity is `docs/js/prisma-data.js` attempting to load the res
 | `tests.js` | The suite: assert helpers, inline fixtures, all test cases, result rendering. |
 | `browser/pilot.mjs` | Supported-browser pilot (Playwright, Chromium): one isolated reviewer session end to end against the pinned fixtures in `tests/pilot/`, see `tests/pilot/README.md`. `npm run pilot -- --reviewer r1 --out tests/browser/out/r1`. |
 | `browser/reconcile.mjs` | Deterministic reconciliation of reviewer files through the tool's own `reconcileReviewers`; `--check` proves order independence, the SHA-256 lines prove the inputs were not touched. |
-| `test_build_fulltext.py` | pytest: the full-text builder refuses an ambiguous first-author-year fallback. |
+| `test_build_fulltext.py` | pytest: full-text identity checks, fail-closed ambiguity and mismatch handling, and atomic publication rollback. |
 
 ## What is covered
 
-- Decision derivation truth table: `deriveDecision` (at least one technical AND one social category yields Include), `finalDecisionOf` (override only demotes a derived Include), `divergent`.
+- Decision derivation truth table: `deriveDecision` (level 2 in both dimensions yields Include; level 1 in both yields Unclear; an empty dimension yields Exclude), `finalDecisionOf` with justified overrides, and `divergent`.
 - Agreement metrics (removed with ADR-017): the human-AI agreement section (`computeMatrix`, `cohenKappa`, `kappaLabel` and the canonical-benchmark tests) left the tool. Agreement is no longer computed in-tool and no JS test recomputes it.
 - Flow aggregation: `computeFlow` for the seed perspective (no exclusion reasons on the seed track) and a reviewer perspective (reason counting), empty corpus, papers missing one or both tracks.
 - Markdown escaping and parsing: `EC.escapeHtml`, `inlineMd`, and `renderMarkdown` against script-tag and attribute-injection input; frontmatter stripping; embedded yaml-block skipping; list, blockquote, paragraph-joining, and heading-cap behaviour; `countOcc` including the non-overlapping-match property.
-- Evidence and quality helpers: `pinEvidence` (category set by pinning, term and snippet truncation, empty-term no-op), `unpinEvidence`, `evidenceCount`, `abstractQuality` (empty, boilerplate, short, acceptable).
+- Evidence and quality helpers: `pinEvidence` (Paper pin starts an empty category at level 1, term and snippet truncation, empty-term no-op), `unpinEvidence`, `evidenceCount`, `abstractQuality` (empty, boilerplate, short, acceptable).
 - Persistence and commit: `reviewerPayload` schema `femprompt-prisma-reviewer/0.3`, the commit guard (Exclude requires a reason, override-Exclude likewise), the controlled exclusion-reason vocabulary, and `disclosureMarkdown` carrying the screening count and the external M9/R2 reference (no in-tool kappa or matrix, ADR-017).
-- Evidence provenance (KI2, ADR-015): `pinEvidence` stamps `origin: human`; `evidenceListHtml` renders a neutral Mensch/KI marker per Beleg, defaults a Beleg without `origin` to human, and uses the same marker class for both origins (no valuation).
-- Reading-column layer split and binding separation (M3, ADR-016): `splitDocLayers` separates the paper layer from the machine-extraction layer at the first `## Kernbefund` heading (and yields no AI layer for an abstract-only doc); a human-origin Beleg sets the binding category while an AI-origin Beleg does not, so AI-sourced evidence alone never flips the derived decision to Include, yet is still stored and rendered as KI.
+- Evidence provenance (ADR-030): `pinEvidence` stores source layer and actor separately, retains `origin` for compatibility, and `evidenceListHtml` renders the neutral source marker Paper or LLM. Legacy evidence without provenance defaults to the Paper layer.
+- Reference blindness (ADR-030): saved human records mount prior references only after the reviewer opens the comparison. Agent mode renders no comparison surface, so hidden DOM inspection cannot expose earlier judgements.
+- Reading-column layer split and binding separation (M3, ADR-016/030): `splitDocLayers` separates the paper layer from the machine-extraction layer at the first `## Kernbefund`; Paper evidence starts an empty category at `teilweise`, while LLM-distillate evidence leaves it unset and cannot satisfy the save gate. An explicit reviewer action is required for `ja`.
 - Text-source provenance, load-token guard, decision log and deterministic reconciliation (Section L, ADR-027): `applyReading` sets `text_source` from what is shown and drops a stale response, `commit` records it, the reviewer file is schema 0.3, `decisionLogCsv` carries the column, the disclosure reports per-source counts, `reconcileReviewers` classifies agree / divergent / single, is order-independent and never mutates its inputs.
-- Import bridge validation (`window.__PRISMA_IMPORT_TEST__`, plan P3): the data-hygiene report on crafted CSV fixtures, a clean Include with no error-level findings, an out-of-vocabulary exclusion reason flagged and preserved verbatim, an empty reason on Exclude flagged, a duplicate Zotero key reported and the second row skipped, an Unclear decision skipped, and an idempotent re-import counted as unchanged.
-- Raw-text reading (P2, ADR-024): the paper-to-rawfile matching (title-prefix dominance, year tiebreak, longest-prefix win), the `fetchPaperText` resolution order (raw, then knowledge document, then abstract), and `text_source` recorded on the decision, rehydrated on edit, and emitted in the decision-log CSV.
+- Import bridge validation (`window.__PRISMA_IMPORT_TEST__`, plan P3): three-level historical CSV categories, fail-closed unknown categories, decisions and exclusion reasons, duplicate-key rejection, derivation consistency, representable Exclude overrides, collision protection, and idempotent re-import. Converted positive categories still need Paper evidence and Include analysis in PRISM.
+- Reading and publication (ADR-025/027/031): manifest-based local full text with metadata-abstract fallback, loaded-source gating, stale-response rejection, hidden pre-save distillate, and `text_source` persistence. Pytest separately verifies the publisher's source identity and atomic replacement rules.
 
-Reviewer keys in fixtures are neutral ids (`r1`, `r2`).
+Pure-function fixtures use neutral ids such as `r1` and `r2`; the supported-browser pilot deliberately runs the distinct keys `cp` and `ms` to catch hard-coded reviewer assumptions.
 
 ## Test exposure block in prisma.js
 
@@ -52,7 +53,7 @@ The pure functions are closure-scoped inside the IIFE of `docs/js/prisma.js`. A 
 
 ## State hygiene
 
-`commit()` persists app state to `localStorage` under `femprompt-prisma-state/0.2`. The suite snapshots that key before running and restores it afterwards, so running the tests from a served checkout does not pollute a same-origin PRISM session.
+Production recovery state uses `femprompt-prisma-state/0.2`; isolated trial runs use `femprompt-prisma-trial-state/0.1`. The suite snapshots and restores the production key. The browser pilot verifies that a same-origin trial cannot read or overwrite the production reviewer cache, and vice versa.
 
 ## Status
 
