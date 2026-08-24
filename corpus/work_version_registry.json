@@ -1,10 +1,10 @@
 {
   "schema": "femprompt-work-version-registry/0.1",
-  "source_fingerprint": "sha256:18e7c6cd0f096a9a280d0d423abda97122cc6142113dacd763284a878e44b21b",
+  "source_fingerprint": "sha256:71028f94918c9b7ff4775f87f621d87891ed288eb6ae497f1b2c26df8018bb2a",
   "sources": [
     {
       "path": "corpus/zotero_export.json",
-      "sha256": "4e7698570c3cd3a37d9afd854b127261044d80cca6e34e5580f758cb2bc78194"
+      "sha256": "a494ba7539919d79a5f2c0e421302050edac3e695a48a04923a085de9065816a"
     },
     {
       "path": "docs/data/work_version_contract.json",
@@ -12,19 +12,19 @@
     },
     {
       "path": "generated/round2-agent-review/identity.json",
-      "sha256": "53b159ab8bf808656b719a7f395782a8423a81e95771eae99d992aaf7df14a89"
+      "sha256": "b33a2a94a96eb14ea4ac5425047fd6dc11d552ac11f5bcfad1943639658bef71"
     },
     {
       "path": "generated/round2-agent-review/metadata.json",
-      "sha256": "fe02b7c9bc6ae33b16338e28b916157469772becc0995c3bc5414dd4d96d68a1"
+      "sha256": "c3e9dcc7567478b89ddf3453e393f8ce815806bece49de6fef1f0528e9e74799"
     },
     {
       "path": "generated/round2-agent-review/sources.json",
-      "sha256": "abc5d2e4de4b0bfd7b4657fed642d8172d78d2c428f1700b3c0b424b58530d4f"
+      "sha256": "004e17c860ffb9236e5d8208f4a2f3d99c8da5a58aded9f028afd22984dd153b"
     },
     {
       "path": "generated/round2-intake.json",
-      "sha256": "512394c2b87800af96b3ebc8f5f5133c2628b43abf36824a9b27571d1ae1f5f0"
+      "sha256": "43b18519024aed04d4e12b7d01271b6f1eb8f16ab2645fbbdb0401cd1bc6bef7"
     }
   ],
   "counts": {

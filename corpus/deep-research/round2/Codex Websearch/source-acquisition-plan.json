@@ -4,7 +4,7 @@
   "authority": "Source preparation only; acquisition does not establish PRISM inclusion or scholarly verification.",
   "source": {
     "path": "corpus/deep-research/round2/Codex Websearch/codex-websearch-2026-package.json",
-    "sha256": "c20e8baf135404831dba4b4d14db0134a4d0d4e890bf25c1a4a7ea36137e2129"
+    "sha256": "934d6041df8950f06cc2534ff628e3f933c0d15f7ee491e990807d1791f97775"
   },
   "source_recovery": {
     "path": "corpus/deep-research/round2/Codex Websearch/source-recovery-audit.json",

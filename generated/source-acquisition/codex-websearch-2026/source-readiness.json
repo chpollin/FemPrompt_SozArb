@@ -5,11 +5,11 @@
   "sources": {
     "package": {
       "path": "corpus/deep-research/round2/Codex Websearch/codex-websearch-2026-package.json",
-      "sha256": "72377e6612c14e6c8c3c884263bf7769865f4a55d5c7992a8032f4ce7cb8bde4"
+      "sha256": "934d6041df8950f06cc2534ff628e3f933c0d15f7ee491e990807d1791f97775"
     },
     "acquisition_plan": {
       "path": "corpus/deep-research/round2/Codex Websearch/source-acquisition-plan.json",
-      "sha256": "aae9852b97ddb38aba5b22062cdd72ab6f438711b4bb4bf801e47bc11b33209e"
+      "sha256": "4150b13073ba8ca2141708d227f8db0409eccdaa86e94d8448d841416983c151"
     },
     "acquisition_manifest": {
       "path": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/manifest.json",

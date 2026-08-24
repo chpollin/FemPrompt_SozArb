@@ -5,7 +5,7 @@
   "authority_rule": "Any human annotation covers the canonical work; duplicate records do not trigger reassessment.",
   "sources": {
     "research_vault": "docs/data/research_vault_v2.json",
-    "research_vault_sha256": "41b467ab8751015e914b9e5913da7e8cb67b955276b9b15f5f986a08101b308f",
+    "research_vault_sha256": "624d417a83b6234a995f13a01d989a94f580c090a9682b720094046c4ff6aa05",
     "fulltext_manifest": "docs/data/fulltext_manifest.json",
     "fulltext_manifest_sha256": "27942d9b703187d84f7124369fa71eff3d5da2ef328d28e0285574f909e96302",
     "productive_screening_dir": "docs/data/screening"
