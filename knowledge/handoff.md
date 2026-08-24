@@ -34,4 +34,4 @@ Third-party PDF binaries remain under the ignored local source directory. Their 
 
 ## Verification state
 
-The package, acquisition plan, source-readiness ledger, Python suite, formatting checks, and repository diff checks passed before the session close. Domain-expert verification and publication approval remain open.
+The package, acquisition plan, source-readiness ledger, Python suite, formatting checks, and repository diff checks passed before the session close. A detached checkout containing only versioned files rebuilt the ignored local reading layer, reproduced the source-readiness ledger, and passed all 139 Python tests. Domain-expert verification and publication approval remain open.

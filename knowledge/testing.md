@@ -59,6 +59,10 @@ The automated suites cover the following contracts.
 
 The native browser permission dialogue for the File System Access API remains a manual environment check because headless automation cannot grant the browser-owned permission. `tests/manual-checklist.md` defines that check. Domain-expert usability and scholarly verification are research activities and therefore remain outside technical test success.
 
+## Clean-checkout verification
+
+A repository-only verification first rebuilds the ignored local reading layer with `python -m src.publish.build_fulltext`. It then runs the generator checks and test suites. This preserves the rights boundary for full-text outputs while proving that the versioned sources reproduce the required manifest. Hash-bearing research artifacts use the repository's canonical LF representation so their checksums remain stable across operating systems.
+
 ## Change gates
 
 | Change | Required checks |
