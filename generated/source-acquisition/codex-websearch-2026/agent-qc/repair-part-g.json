@@ -56,7 +56,7 @@
       "validation": {
         "utf8_decode": "passed",
         "source_unchanged": "passed: SHA-256 c13898d5f76817e42bca5f2debe38a18a11b9d228bea719689bfacdb67f48df2",
-        "repaired_sha256": "53934a6a464bdbcf2495846affe2ac32219466aa018ab9e369a3702ec481f9b0",
+      "repaired_sha256": "4dbc41e4a458cf82e1784ad5190b2a6b211a63488e2c0aaa557b67304aca5737",
         "page_markers": "passed: PAGE 1 through PAGE 20 are identical and sequential in source and repaired Markdown",
         "repair_delta": "passed: the repaired file differs from the source Markdown only by the three restored segments on PAGE 3 and a normalized final newline",
         "page_3_text_coverage": "passed: normalized PDF-token recall increased from 0.546 to 0.932",

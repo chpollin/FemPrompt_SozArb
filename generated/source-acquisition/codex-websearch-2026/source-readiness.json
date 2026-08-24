@@ -68,19 +68,19 @@
       },
       {
         "path": "generated/source-acquisition/codex-websearch-2026/agent-qc/repair-part-f.json",
-        "sha256": "059fd783f7d9457771ed429f2f9a2cc2aa5ac70653ee373c969d272154bfe7de"
+        "sha256": "f2c1a4ecd792aa8f93cf5232238dee098c1dd59b188cbbe7f603c17073040365"
       },
       {
         "path": "generated/source-acquisition/codex-websearch-2026/agent-qc/repair-part-g.json",
-        "sha256": "e01930baaf1db29181cefe042b5b9c685299bca5813e21dcd2e49ebcac78ea64"
+        "sha256": "d5411bfe8d204ff79052c5d205bd6f6fce6a28789d121a94d0956ce97cd9ce7b"
       },
       {
         "path": "generated/source-acquisition/codex-websearch-2026/agent-qc/repair-part-h.json",
-        "sha256": "7833e8d378ae166d147104ffe55b4eeb9f41f3dfa9633c074d2d0074c7dbd259"
+        "sha256": "839d921b0b7cd34474e65b4a507f9eed5657560f9d7e26da3c8a8c1c058ffc8e"
       },
       {
         "path": "generated/source-acquisition/codex-websearch-2026/agent-qc/repair-part-i.json",
-        "sha256": "9d229ee2c9eb0b7df95149e6461fb21ea2aad311ede9a0e1f1a06a4f852ef0f2"
+        "sha256": "f12246508ff119b7ee35b04d7b6789727bd77644292327e079230e2eee47bfc4"
       }
     ],
     "visual_assessment": [
@@ -206,7 +206,7 @@
       "source_readiness": "agent_qc_approved_after_repair",
       "screening_source_ready": true,
       "screening_markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/96199ea06371c4cdbed4.md",
-      "screening_markdown_sha256": "8f81ce2864693f29012f178a585805a0b3dcf5f9831a355453f3cefbedb56448",
+      "screening_markdown_sha256": "083cb0907bf7aab681945a721dd55de1b0706768190dc822ca2806f7c6f47ebf",
       "canonical_queue_status": "pending_zotero_identity_binding",
       "next_required_action": "zotero_identity_binding_pending"
     },
@@ -587,7 +587,7 @@
       "source_readiness": "agent_qc_approved_after_repair",
       "screening_source_ready": true,
       "screening_markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/f30907f71818e5803100.md",
-      "screening_markdown_sha256": "ed32ec085960d806d4de02c0c5e300488f0434d1b1cf18745fa5c4fc9c2c82ea",
+      "screening_markdown_sha256": "52124fc9de6eaea544d9608c02ff14aec8835a2ec15c40c0faca69e0a4c9b25a",
       "canonical_queue_status": "pending_zotero_identity_binding",
       "next_required_action": "zotero_identity_binding_pending"
     },
@@ -719,7 +719,7 @@
       "source_readiness": "agent_qc_approved_after_repair",
       "screening_source_ready": true,
       "screening_markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/4dd9fd2a26f9d7eea07a.md",
-      "screening_markdown_sha256": "aad3c34effb5a59adad15be86f09c1db6aa5638a9e38b19ba1e633dc1cd67fcd",
+      "screening_markdown_sha256": "c0d19894593d8c2209a4c40a59a35d20a251a15f8b1db25e737368fee1ffc16c",
       "canonical_queue_status": "pending_zotero_identity_binding",
       "next_required_action": "zotero_identity_binding_pending"
     },
@@ -1230,7 +1230,7 @@
       "source_readiness": "agent_qc_approved_after_repair",
       "screening_source_ready": true,
       "screening_markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/4875ad9321dfcfc0aa52.md",
-      "screening_markdown_sha256": "fa17575c874a52ab8e14c199b8f1e81513d8555e456467ba738661b487a0cbec",
+      "screening_markdown_sha256": "62cec11670505fe2b2cea73052cd5d8b0a48cddc4e5a5ccab46cd0ace12005e5",
       "canonical_queue_status": "pending_zotero_identity_binding",
       "next_required_action": "zotero_identity_binding_pending"
     },
@@ -1467,7 +1467,7 @@
       "source_readiness": "agent_qc_approved_after_repair",
       "screening_source_ready": true,
       "screening_markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/e9fb8b7679eaf1023485.md",
-      "screening_markdown_sha256": "53934a6a464bdbcf2495846affe2ac32219466aa018ab9e369a3702ec481f9b0",
+      "screening_markdown_sha256": "4dbc41e4a458cf82e1784ad5190b2a6b211a63488e2c0aaa557b67304aca5737",
       "canonical_queue_status": "pending_zotero_identity_binding",
       "next_required_action": "zotero_identity_binding_pending"
     },
@@ -2169,7 +2169,7 @@
       "source_readiness": "agent_qc_approved_after_repair",
       "screening_source_ready": true,
       "screening_markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/7cbaa5fc7bd51c3642ad.md",
-      "screening_markdown_sha256": "ed017caf57b9a62751da48fe256ce14784b1102c390624e1b8102cc92ba00ae2",
+      "screening_markdown_sha256": "0be805ae3a3f7b36b1cee62fc14a5dac9fadef125704bbd385b524eaeb565448",
       "canonical_queue_status": "pending_zotero_identity_binding",
       "next_required_action": "zotero_identity_binding_pending"
     },
@@ -2395,7 +2395,7 @@
       "source_readiness": "agent_qc_approved_after_repair",
       "screening_source_ready": true,
       "screening_markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/a1c7e9db9a3dc6caff54.md",
-      "screening_markdown_sha256": "8b4bcb25c970b4f62f4a8dafa6de66c50a4eebae547d646fcff9007f9e76c29e",
+      "screening_markdown_sha256": "0aa4087d1d261b8e702f3f8c42aff5f75647809fc338226ecd0bf3451dbbff96",
       "canonical_queue_status": "pending_zotero_identity_binding",
       "next_required_action": "zotero_identity_binding_pending"
     },

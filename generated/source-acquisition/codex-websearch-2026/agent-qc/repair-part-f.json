@@ -93,7 +93,7 @@
         "beginning": "passed: front matter and opening content unchanged",
         "ending": "passed: terminal appendix content unchanged; final newline normalized",
         "source_markdown_sha256": "530110de2d7906ea4eea9f5cd009e58bc80927603602c50de4890eec3473c82a",
-        "repaired_markdown_sha256": "8f81ce2864693f29012f178a585805a0b3dcf5f9831a355453f3cefbedb56448"
+        "repaired_markdown_sha256": "083cb0907bf7aab681945a721dd55de1b0706768190dc822ca2806f7c6f47ebf"
       },
       "issues_remaining": []
     }

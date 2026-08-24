@@ -93,7 +93,7 @@
         "ending": "passed: PAGE 15 and the final Zhang et al. reference are unchanged",
         "source_pdf_sha256": "1c1131cd74d203d9f77680077fb992d1e23f83978814a0f9791ede7c0891f899",
         "source_markdown_sha256": "7433fd6bc92aee34b533cb789b9ba38f71b3177914376fd2dc1e4637884b61cf",
-        "repaired_markdown_sha256": "aad3c34effb5a59adad15be86f09c1db6aa5638a9e38b19ba1e633dc1cd67fcd"
+        "repaired_markdown_sha256": "c0d19894593d8c2209a4c40a59a35d20a251a15f8b1db25e737368fee1ffc16c"
       },
       "issues_remaining": []
     },
@@ -240,7 +240,7 @@
         "ending": "passed: PAGE 26 ends with Webb (2006), WHO (2021), and the existing terminal image placeholder",
         "source_pdf_sha256": "cb631c338b6e2ef7fc37b53115e7a1f5fa261eb6874dda9cf210d689ed67bd54",
         "source_markdown_sha256": "08639a2a1a60d6cfca1ef61f0e6034e9b442af5b55d407a2541412d813b30791",
-        "repaired_markdown_sha256": "ed32ec085960d806d4de02c0c5e300488f0434d1b1cf18745fa5c4fc9c2c82ea"
+        "repaired_markdown_sha256": "52124fc9de6eaea544d9608c02ff14aec8835a2ec15c40c0faca69e0a4c9b25a"
       },
       "issues_remaining": []
     }

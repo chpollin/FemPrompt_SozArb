@@ -87,7 +87,7 @@
       "validation": {
         "utf8_decode": "passed",
         "source_unchanged": "passed: SHA-256 c5339294032cb5fe9b71a69e5d07768c11e5b01f7b23149bb025a18edec72849",
-        "repaired_sha256": "e2d8f9155a66508dc162a3d4357ab72f3582b7bd536697bb4dba52117afde10b",
+      "repaired_sha256": "3ab8c67dc125d4235203c920b3693836a3a86cfe22f3a02ed70293c50359b104",
         "page_markers": "passed: PAGE 1 through PAGE 19 are identical and sequential in source and repaired Markdown",
         "repair_delta": "passed: the repaired file differs from the source Markdown only by the three restored PAGE 2 segments and a normalized final newline",
         "page_2_text_coverage": "passed: normalized PDF-token recall is 0.948 after repair",
@@ -178,7 +178,7 @@
       "validation": {
         "utf8_decode": "passed",
         "source_unchanged": "passed: SHA-256 9e532599f1e5d168b97b2512d7eab862603928659936b0e8fd4c505ff6fdc3c1",
-        "repaired_sha256": "fa17575c874a52ab8e14c199b8f1e81513d8555e456467ba738661b487a0cbec",
+      "repaired_sha256": "62cec11670505fe2b2cea73052cd5d8b0a48cddc4e5a5ccab46cd0ace12005e5",
         "page_markers": "passed: PAGE 1 through PAGE 16 are identical and sequential in source and repaired Markdown",
         "repair_delta": "passed: the repaired file differs from the source Markdown only by the three restored PAGE 2 segments and a normalized final newline",
         "page_2_text_coverage": "passed: normalized PDF-token recall is 0.945 after repair",
