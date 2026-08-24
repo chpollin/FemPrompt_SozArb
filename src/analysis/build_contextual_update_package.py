@@ -353,7 +353,7 @@ def main() -> None:
     for path, text in ((output, rendered), (ris_output, ris)):
         path.parent.mkdir(parents=True, exist_ok=True)
         temporary = path.with_suffix(f"{path.suffix}.tmp")
-        temporary.write_text(text, encoding="utf-8")
+        temporary.write_text(text, encoding="utf-8", newline="\n")
         temporary.replace(path)
     print(
         "OK: "

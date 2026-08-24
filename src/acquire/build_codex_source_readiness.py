@@ -569,7 +569,7 @@ def main() -> None:
         print("OK: Codex source-readiness ledger is current")
         return
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(serialised, encoding="utf-8")
+    args.output.write_text(serialised, encoding="utf-8", newline="\n")
     print(
         "OK: "
         f"{payload['counts']['local_sources']} local sources; "

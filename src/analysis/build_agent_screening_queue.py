@@ -245,7 +245,7 @@ def main() -> None:
 
     output.parent.mkdir(parents=True, exist_ok=True)
     temporary = output.with_suffix(f"{output.suffix}.tmp")
-    temporary.write_text(rendered, encoding="utf-8")
+    temporary.write_text(rendered, encoding="utf-8", newline="\n")
     temporary.replace(output)
     counts = queue["counts"]
     print(

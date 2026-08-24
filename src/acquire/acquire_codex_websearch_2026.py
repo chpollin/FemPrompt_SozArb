@@ -66,7 +66,7 @@ def _serialise(payload: dict[str, Any]) -> str:
 def _atomic_write_text(path: Path, text: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary = path.with_suffix(f"{path.suffix}.tmp")
-    temporary.write_text(text, encoding="utf-8")
+    temporary.write_text(text, encoding="utf-8", newline="\n")
     temporary.replace(path)
 
 

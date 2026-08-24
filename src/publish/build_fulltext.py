@@ -677,7 +677,9 @@ def main() -> int:
             if GLYPH_RE.search(raw):
                 glyph_files.append(path.name)
             body = clean(raw)
-            (stage_assets / f"{pid}.md").write_text(body, encoding="utf-8")
+            (stage_assets / f"{pid}.md").write_text(
+                body, encoding="utf-8", newline="\n"
+            )
             manifest[pid] = {
                 "src": src,
                 "chars": len(body),
@@ -689,6 +691,7 @@ def main() -> int:
         stage_manifest.write_text(
             json.dumps(manifest, ensure_ascii=False, separators=(",", ":")),
             encoding="utf-8",
+            newline="\n",
         )
         _publish_staged(stage_assets, stage_manifest)
     print(f"papers: {len(papers)}")
