@@ -1,0 +1,334 @@
+{
+  "timestamp": "2026-08-24T17:04:54.765755",
+  "input_dir": "generated\\pdfs\\codex-websearch-2026",
+  "output_dir": "generated\\source-acquisition\\codex-websearch-2026\\markdown-raw",
+  "total_files": 34,
+  "converted": 4,
+  "skipped": 30,
+  "failed": 0,
+  "low_quality": 0,
+  "files": [
+    {
+      "input": "014fa29a31624d80e530.pdf",
+      "output": "014fa29a31624d80e530.md",
+      "file_hash": "8f0f005bbd5eddfca8ae3183d8d3ae4a",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "050d5f410967dd9371a0.pdf",
+      "output": "050d5f410967dd9371a0.md",
+      "file_hash": "4ca1f3e4cf8a679fe2d034849db0f444",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "136b6db72d8a7b8d390c.pdf",
+      "output": "136b6db72d8a7b8d390c.md",
+      "file_hash": "983e1e6f2bf91dce150c400a27f88531",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "152b1aa29e0dddabe838.pdf",
+      "output": "152b1aa29e0dddabe838.md",
+      "file_hash": "ec949b5ad28f9fcefee212554778b1bd",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "1e429407d9b091311a65.pdf",
+      "output": "1e429407d9b091311a65.md",
+      "file_hash": "016f4e9e3d1c3fd1c42303e59e443653",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "20972ab37764965190de.pdf",
+      "output": "20972ab37764965190de.md",
+      "file_hash": "491e884eb1e8a891a3987088572e1e63",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "2b57266b9d8b015d2ac2.pdf",
+      "output": "2b57266b9d8b015d2ac2.md",
+      "file_hash": "e2df81bfeda181feb77322432dc8d9ab",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "2e6aa61930deea324751.pdf",
+      "output": "2e6aa61930deea324751.md",
+      "file_hash": "14cca6b76e4926f5c146bbcfc6c0d19a",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "3cb613d559a8c57c13c1.pdf",
+      "output": "3cb613d559a8c57c13c1.md",
+      "file_hash": "a325f57962ec887fd7f5dba7363d324c",
+      "success": true,
+      "duration_seconds": 18.95,
+      "metrics": {
+        "total_chars": 64192,
+        "total_lines": 480,
+        "total_words": 8487,
+        "headings": 19,
+        "heading_levels": {
+          "h2": 19
+        },
+        "tables": 2,
+        "lists": 59,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 217,
+        "avg_line_length": 242.3
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "45a89ba69a2b7d1a99cd.pdf",
+      "output": "45a89ba69a2b7d1a99cd.md",
+      "file_hash": "bc9b9ad83772dc0734a13c93d423e5bb",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "4875ad9321dfcfc0aa52.pdf",
+      "output": "4875ad9321dfcfc0aa52.md",
+      "file_hash": "b8565eb3d187d83ebb994ca2c93f17ef",
+      "success": true,
+      "duration_seconds": 17.63,
+      "metrics": {
+        "total_chars": 57923,
+        "total_lines": 396,
+        "total_words": 7544,
+        "headings": 26,
+        "heading_levels": {
+          "h2": 26
+        },
+        "tables": 2,
+        "lists": 33,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 184,
+        "avg_line_length": 271.4
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "4dbe6aa9dfa229e88746.pdf",
+      "output": "4dbe6aa9dfa229e88746.md",
+      "file_hash": "880c00e11668d95da8ffdc8d57e39b2e",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "4dd9fd2a26f9d7eea07a.pdf",
+      "output": "4dd9fd2a26f9d7eea07a.md",
+      "file_hash": "482d91e47c5ebd31a2dcf389f69cd707",
+      "success": true,
+      "duration_seconds": 13.78,
+      "metrics": {
+        "total_chars": 125993,
+        "total_lines": 587,
+        "total_words": 17087,
+        "headings": 29,
+        "heading_levels": {
+          "h2": 29
+        },
+        "tables": 3,
+        "lists": 97,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 251,
+        "avg_line_length": 373.2
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "5fa4fb41e396f11b2c6e.pdf",
+      "output": "5fa4fb41e396f11b2c6e.md",
+      "file_hash": "574ddaf0f0e9d999dbf8e993516d3659",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "62d8ff0c669bf7e511d0.pdf",
+      "output": "62d8ff0c669bf7e511d0.md",
+      "file_hash": "b3b2de0e3e329893f293649a5f52241a",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "7cbaa5fc7bd51c3642ad.pdf",
+      "output": "7cbaa5fc7bd51c3642ad.md",
+      "file_hash": "40aeea2c371b4a949ed57dd59396c0dd",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "8a561b548035e4512084.pdf",
+      "output": "8a561b548035e4512084.md",
+      "file_hash": "a99bf4b5e0bde880b23a58923fc5fcd8",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "926800fc523bebd0420c.pdf",
+      "output": "926800fc523bebd0420c.md",
+      "file_hash": "e7a82e2bd6c51c6276e2dc4a80147bef",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "96199ea06371c4cdbed4.pdf",
+      "output": "96199ea06371c4cdbed4.md",
+      "file_hash": "499e259748d9288919a06fe6d9e97123",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "98a0f77c12e1ee6328c0.pdf",
+      "output": "98a0f77c12e1ee6328c0.md",
+      "file_hash": "e1457d8bf133ad50a312f6a9b6cf93ec",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "a1c7e9db9a3dc6caff54.pdf",
+      "output": "a1c7e9db9a3dc6caff54.md",
+      "file_hash": "2e853909a7e97ab73e34675ba8fa7838",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "aff73b4c6b2eab31b8f7.pdf",
+      "output": "aff73b4c6b2eab31b8f7.md",
+      "file_hash": "0d6fb04b7b7e0f07c53dd58ef7f3a7b9",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "c38bdbce0e8dbb82ce3f.pdf",
+      "output": "c38bdbce0e8dbb82ce3f.md",
+      "file_hash": "54d08b9408f0052b36e9ed9f6058dd07",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "c42b463f9ba115503a58.pdf",
+      "output": "c42b463f9ba115503a58.md",
+      "file_hash": "d7dd291c7d4ed632a8ee22eb34e7413b",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "cf8d8fbb3db223f01b6c.pdf",
+      "output": "cf8d8fbb3db223f01b6c.md",
+      "file_hash": "2ec34428be7dbb99d699d0aff8813f37",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "d3bd00602e07cf40396c.pdf",
+      "output": "d3bd00602e07cf40396c.md",
+      "file_hash": "44fbbde83666add16788196f2228f6af",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "e98f1e62b53a093069fc.pdf",
+      "output": "e98f1e62b53a093069fc.md",
+      "file_hash": "95d9c32d721fa443a8eaa4cbed778c39",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "e9be7a01361ab7bae7bb.pdf",
+      "output": "e9be7a01361ab7bae7bb.md",
+      "file_hash": "6ab145d19904eabb8c9efe9925b457bb",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "e9fb8b7679eaf1023485.pdf",
+      "output": "e9fb8b7679eaf1023485.md",
+      "file_hash": "ad5e62c728090718bb9e6ba008cc1189",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "eb3406e6b996a77368bd.pdf",
+      "output": "eb3406e6b996a77368bd.md",
+      "file_hash": "a8544124d5ce61241ee5302a06e0f3fb",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "f30907f71818e5803100.pdf",
+      "output": "f30907f71818e5803100.md",
+      "file_hash": "bce0faa00529294eda032ad48c5a1d87",
+      "success": true,
+      "duration_seconds": 18.56,
+      "metrics": {
+        "total_chars": 81086,
+        "total_lines": 510,
+        "total_words": 11016,
+        "headings": 44,
+        "heading_levels": {
+          "h2": 44
+        },
+        "tables": 2,
+        "lists": 56,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 251,
+        "avg_line_length": 311.1
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "f403809ad4503150093a.pdf",
+      "output": "f403809ad4503150093a.md",
+      "file_hash": "acb2393090a33c1c24cbdc168ae28f70",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "fe0639bed94ac912274d.pdf",
+      "output": "fe0639bed94ac912274d.md",
+      "file_hash": "a547eeee89914a90497272d8c597c7eb",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "febcd242f416adc86eb1.pdf",
+      "output": "febcd242f416adc86eb1.md",
+      "file_hash": "7939d710e47ab68addcbcbe7e0167ab8",
+      "status": "skipped",
+      "note": "Already existed"
+    }
+  ]
+}

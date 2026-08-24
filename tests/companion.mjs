@@ -20,6 +20,9 @@ const dataFiles = {
   'data/promptotyping_v2.json': 'docs/data/promptotyping_v2.json',
   'data/literature_landscape.json': 'docs/data/literature_landscape.json',
 };
+const literatureLandscape = JSON.parse(
+  readFileSync(join(root, dataFiles['data/literature_landscape.json']), 'utf8'),
+);
 
 const dom = new JSDOM(readFileSync(join(docs, 'index.html'), 'utf8'), {
   runScripts: 'dangerously',
@@ -122,12 +125,14 @@ await check('category explorer initializes on view switch', async () => {
   await waitFor(() => doc.querySelector('#kategorie-detail .kdetail-header') !== null, 'detail rendered');
 });
 
-await check('literature landscape renders verified annotation aggregates', async () => {
+await check('literature landscape withholds records pending publication approval', async () => {
   window.switchView('literaturbild');
-  await waitFor(() => doc.querySelectorAll('#literaturbild-root .lit-matrix-button').length > 0, 'literature matrix');
+  await waitFor(() => doc.querySelector('#literaturbild-root .lit-empty-state') !== null, 'publication gate state');
   const progress = doc.querySelector('#literaturbild-root .lit-progress');
-  if (!progress || !progress.textContent.includes('10 / 326 annotiert')) throw new Error('wrong annotated total');
-  if (!progress.textContent.includes('7 Include')) throw new Error('wrong Include total');
+  if (!progress || !progress.textContent.includes('0 publikationsfreigegeben')) throw new Error('wrong public total');
+  if (!progress.textContent.includes(`${literatureLandscape.meta.source_annotated_total} bearbeitet`)) throw new Error('wrong source total');
+  if (!progress.textContent.includes(`${literatureLandscape.meta.withheld_total} zurückgehalten`)) throw new Error('wrong withheld total');
+  if (!doc.querySelector('#literaturbild-root .lit-status--provisional')) throw new Error('pending status missing');
   if (!doc.querySelector('#literaturbild-root .lit-workspace > .lit-sidebar')) throw new Error('left control rail missing');
   if (doc.querySelectorAll('#literaturbild-root .lit-viz').length !== 1) throw new Error('multiple visualizations visible');
   if (doc.querySelector('#literaturbild-root .lit-stats')) throw new Error('legacy dashboard cards remain');
@@ -138,30 +143,21 @@ await check('literature landscape renders verified annotation aggregates', async
   }
 });
 
-await check('literature landscape matrix selection drills into grounded papers', async () => {
+await check('literature landscape exposes no unapproved paper drill-down', async () => {
   window.switchView('literaturbild');
-  const populated = Array.from(doc.querySelectorAll('.lit-matrix-button')).find((button) => !button.disabled);
-  if (!populated) throw new Error('no populated matrix cell');
-  populated.dispatchEvent(new window.MouseEvent('click', { bubbles: true }));
-  await waitFor(() => doc.querySelector('.lit-matrix-button.active') !== null, 'matrix selection');
-  if (doc.querySelector('.lit-matrix-button.active').getAttribute('aria-pressed') !== 'true') throw new Error('selection not announced');
-  const papers = doc.querySelectorAll('.lit-results .lit-paper');
-  if (!papers.length) throw new Error('selection has no paper drill-down');
-  const evidence = papers[0].querySelector('.lit-evidence-group blockquote');
-  if (!evidence || !evidence.textContent.trim()) throw new Error('drill-down has no Paper evidence');
-  doc.querySelector('.lit-matrix-button.active').dispatchEvent(new window.MouseEvent('click', { bubbles: true }));
-  if (doc.querySelector('.lit-matrix-button.active')) throw new Error('second click did not clear selection');
-  if (doc.querySelector('.lit-results')) throw new Error('paper drill-down remains after clearing selection');
+  if (doc.querySelector('.lit-matrix-button:not([disabled])')) throw new Error('unapproved matrix value exposed');
+  if (doc.querySelector('.lit-results .lit-paper')) throw new Error('unapproved paper exposed');
+  if (!doc.querySelector('.lit-empty-state')) throw new Error('publication gate explanation missing');
 });
 
-await check('literature landscape switches to one compact analysis profile', async () => {
+await check('literature landscape keeps controls operable while gated', async () => {
   const profile = doc.querySelector('.lit-view-button[data-lit-view="profile"]');
   profile.dispatchEvent(new window.MouseEvent('click', { bubbles: true }));
-  await waitFor(() => doc.querySelectorAll('.lit-bar-row').length > 0, 'analysis profile');
   if (profile.getAttribute('aria-pressed') !== 'true') throw new Error('profile view not announced');
   if (doc.querySelector('.lit-matrix')) throw new Error('matrix remains visible in profile view');
   if (doc.querySelectorAll('#literaturbild-root .lit-viz').length !== 1) throw new Error('multiple profile views visible');
   if (doc.querySelector('.lit-profile-field').hidden) throw new Error('analysis field selector hidden');
+  if (!doc.querySelector('.lit-empty-state')) throw new Error('publication gate state lost');
 });
 
 await check('literature landscape writes and restores its URL state', async () => {
@@ -169,16 +165,12 @@ await check('literature landscape writes and restores its URL state', async () =
   profileField.value = 'AN_Bias_Axes';
   profileField.dispatchEvent(new window.Event('change', { bubbles: true }));
   await waitFor(() => window.location.hash.includes('litProfile=AN_Bias_Axes'), 'literature profile in hash');
-  const year = Array.from(doc.getElementById('lit-filter-year').options)
-    .map((option) => option.value).find((value) => value !== 'all');
-  if (!year) throw new Error('no literature year option');
-  setHash('#view=literaturbild&litView=profile&litYear=' + encodeURIComponent(year) +
-    '&litProfile=AN_Harm_Types');
+  setHash('#view=literaturbild&litView=profile&litProfile=AN_Harm_Types');
   await waitFor(() => EC.store.get().litProfile === 'AN_Harm_Types', 'literature state restored');
   if (!doc.querySelector('.lit-view-button[data-lit-view="profile"]').classList.contains('active')) {
     throw new Error('profile view not restored');
   }
-  if (doc.getElementById('lit-filter-year').value !== year) throw new Error('year not restored');
+  if (doc.getElementById('lit-filter-year').value !== 'all') throw new Error('empty year filter changed');
   if (profileField.value !== 'AN_Harm_Types') throw new Error('profile field not restored');
 });
 

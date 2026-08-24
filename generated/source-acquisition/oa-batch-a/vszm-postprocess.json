@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-08-23T18:58:43.633622",
+  "input_dir": "generated\\source-acquisition\\oa-batch-a\\vszm-output",
+  "output_dir": "generated\\source-acquisition\\oa-batch-a\\vszm-clean",
+  "in_place": false,
+  "documents": [
+    {
+      "filename": "VSZM7CT6.md",
+      "original_chars": 54694,
+      "final_chars": 54483,
+      "chars_removed": 211,
+      "hyphenations_fixed": 0,
+      "page_numbers_removed": 0,
+      "repeated_headers_removed": 3,
+      "excessive_newlines_fixed": 54,
+      "all_caps_removed": 0,
+      "artifact_score_before": 21.6,
+      "artifact_score_after": 0.0
+    }
+  ]
+}

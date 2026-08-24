@@ -1,0 +1,234 @@
+{
+  "schema": "femprompt-prisma-coding-packet/0.1",
+  "run_id": "uncovered-sources-5-20260823",
+  "reviewer": "ar1",
+  "actor": "agent",
+  "source_mode": "blinded_source_review_with_operator_prism_transcription",
+  "decisions": {
+    "UKKQKL7I": {
+      "source_path": "docs/data/fulltext/UKKQKL7I.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "The text gives the assigned DOI 10.11586/2025078, the 2025 publication year, the title Fragile Foundations: Hidden Risks of Generative AI, and author Anne L. Washington."
+      },
+      "categories": {
+        "AI_Literacies": "teilweise",
+        "Generative_KI": "ja",
+        "Prompting": "nein",
+        "KI_Sonstige": "teilweise",
+        "Soziale_Arbeit": "teilweise",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "teilweise",
+        "Diversitaet": "ja",
+        "Feministisch": "nein",
+        "Fairness": "ja"
+      },
+      "decision": "Include",
+      "reason": null,
+      "evidence": {
+        "AI_Literacies": ["to use generative AI responsibly, we must first understand the foundations on which it rests"],
+        "Generative_KI": ["Foundation models - the underlying systems behind applications such as ChatGPT - are the backbone of generative artificial intelligence and increasingly shape the digital tools that permeate work and everyday life."],
+        "Prompting": [],
+        "KI_Sonstige": ["The Stanford Institute for Human-Centered Artificial Intelligence's (HAI) defines a foundation model as a large-scale machine-learning model 'trained on broad data (generally using self-supervision at scale) that can be adapted (e.g., fine-tuned) to a wide range of downstream tasks.' (Bommasani, 2022)."],
+        "Soziale_Arbeit": ["An automated tool in social work might deliver incorrect advice on social benefits, making access to support more difficult and undermining trust in the counseling process."],
+        "Bias_Ungleichheit": ["These datasets reflect dominant power structures that are often Western, patriarchal, and discriminatory. Rather than reflecting diversity, the models reproduce and amplify existing biases."],
+        "Gender": ["A chatbot from Austria's employment agency gave stereotypical career advice, steering women toward cooking or nursing professions and men toward IT jobs."],
+        "Diversitaet": ["We found that foundation models today are built with uncurated data, driven by profit-first business models. Foundation models in the public interest could be designed to satisfy more than profit incentives and could genuinely serve the public and the interests of society as a whole."],
+        "Feministisch": [],
+        "Fairness": ["This report examines how foundation models could be designed and governed so the benefits of large-scale data collection could be equally shared - across geographies, ideologies, populations, and languages." ]
+      },
+      "analysis": {
+        "AN_Prompting_Role": ["None"],
+        "AN_Prompt_Techniques": ["None"],
+        "AN_Bias_Axes": ["Gender", "Language_Culture"],
+        "AN_Harm_Types": ["Misrepresentation", "Exclusionary_Norms", "Stereotyping", "Disparate_Performance"],
+        "AN_Mitigation_Stage": ["Pre_Processing", "Post_Processing", "Organisational_Process"],
+        "AN_Mitigation_Status": "Proposed",
+        "AN_Population": ["General_Social_Work", "Not_SW_Specific"],
+        "AN_Coding_Basis": "Fulltext",
+        "AN_Notes": "The report addresses mission-driven organisations broadly and uses social work as an explicit example; its recommendations are proposed rather than experimentally validated.",
+        "Studientyp": "Empirisch"
+      }
+    },
+    "8MRNK6FX": {
+      "source_path": "docs/data/fulltext/8MRNK6FX.md",
+      "identity_check": {
+        "status": "provisional",
+        "basis": "The text title and author Yuan Yi match the assigned source and manifest DOI 10.23977/jaip.2024.070222; the supplied fulltext does not print the DOI or publication year, and no title or author contradiction is present."
+      },
+      "categories": {
+        "AI_Literacies": "teilweise",
+        "Generative_KI": "ja",
+        "Prompting": "nein",
+        "KI_Sonstige": "nein",
+        "Soziale_Arbeit": "ja",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "nein",
+        "Diversitaet": "teilweise",
+        "Feministisch": "nein",
+        "Fairness": "ja"
+      },
+      "decision": "Include",
+      "reason": null,
+      "evidence": {
+        "AI_Literacies": ["Enhancing professional training equips social workers to navigate challenges posed by emerging technologies, ensuring effective social work in digital environments."],
+        "Generative_KI": ["Since its debut on November 30, 2022, OpenAI's ChatGPT has rapidly transformed natural language processing (NLP) and artificial intelligence-generated content (AIGC)."],
+        "Prompting": [],
+        "KI_Sonstige": [],
+        "Soziale_Arbeit": ["Therefore, in anticipation of future risks, this discourse delves into the application risks posed by ChatGPT and other AI technologies in social work, offering multifaceted analyses and proposing corresponding regulatory measures to guide the responsible development of AI within the social work domain."],
+        "Bias_Ungleichheit": ["A significant concern arises from algorithmic bias, stemming from inherent imbalances in the data collation process."],
+        "Gender": [],
+        "Diversitaet": ["These cocoons risk isolating clients from diverse perspectives, underscoring the imperative for social workers to promote social participation and diversity among their clientele."],
+        "Feministisch": [],
+        "Fairness": ["Social workers must remain vigilant in identifying and rectifying instances of bias to uphold principles of fairness and inclusivity in their practice."]
+      },
+      "analysis": {
+        "AN_Prompting_Role": ["None"],
+        "AN_Prompt_Techniques": ["None"],
+        "AN_Bias_Axes": ["Socioeconomic"],
+        "AN_Harm_Types": ["Disparate_Performance", "Exclusionary_Norms", "Direct_Discrimination"],
+        "AN_Mitigation_Stage": ["Pre_Processing", "Post_Processing", "Organisational_Process"],
+        "AN_Mitigation_Status": "Proposed",
+        "AN_Population": ["General_Social_Work"],
+        "AN_Coding_Basis": "Fulltext",
+        "AN_Notes": "The paper is a risk-and-countermeasure discussion centered on ChatGPT in social work; prompting is not treated as a technique or practice.",
+        "Studientyp": "Theoretisch"
+      }
+    },
+    "4KMMPA6A": {
+      "source_path": "docs/data/fulltext/4KMMPA6A.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "The text identifies the title, named authors, 2024 citation, BSP Business and Law School as publisher, and a documented source basis. It is an institutional policy/practice guide rather than a commercial blog or unsupported web text."
+      },
+      "categories": {
+        "AI_Literacies": "ja",
+        "Generative_KI": "ja",
+        "Prompting": "ja",
+        "KI_Sonstige": "nein",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "ja",
+        "Diversitaet": "ja",
+        "Feministisch": "teilweise",
+        "Fairness": "ja"
+      },
+      "decision": "Include",
+      "reason": null,
+      "evidence": {
+        "AI_Literacies": ["Um diese Technologien sinnvoll zu nutzen, müssen wir verstehen, wie sie funktionieren, wofür sie geeignet sind und wo ihre Grenzen liegen."],
+        "Generative_KI": ["Generative KI bezieht sich auf KI-Systeme, die basierend auf trainierten Modellen und Algorithmen sowie (menschlichen) 'Prompts' Inhalte erzeugen können, wie z.B. Texte, Bilder, Musik, Videos oder sogar Code."],
+        "Prompting": ["KI-Prompting ist die Eingabe spezifischer Anweisungen oder Daten in ein Generatives KI-System, um damit eine gewünschte Reaktion oder ein bestimmtes Ergebnis zu erzeugen."],
+        "KI_Sonstige": [],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": ["KI-Modelle lernen aus Datensätzen, die oft menschliche Vorurteile und Stereotypen widerspiegeln. Dies kann zu diskriminierenden Ergebnissen führen, z.B. bei Stellenausschreibungen oder Darstellungen auf Bildern."],
+        "Gender": ["Auch in der Textgenerierung treten immer wieder stereotype Beschreibungen auf wie Genderstereotype in Empfehlungsschreiben."],
+        "Diversitaet": ["Generative KI bietet vielfältige Vorteile für KMU, birgt aber gleichzeitig Herausforderungen im Bereich der Diversität."],
+        "Feministisch": ["Dem setzt z.B. die sogenannte 'Feministische KI' ein positives Narrativ entgegen."],
+        "Fairness": ["Fairness im Kontext von KI bedeutet, dass alle Menschen gleichberechtigt und diskriminierungsfrei von KI-Systemen behandelt werden:" ]
+      },
+      "analysis": {
+        "AN_Prompting_Role": ["Recommended_Practice"],
+        "AN_Prompt_Techniques": ["General_Guidance", "Role_Persona"],
+        "AN_Bias_Axes": ["Gender", "Race_Ethnicity", "Age", "Disability", "Socioeconomic", "Language_Culture", "Religion", "Intersectional"],
+        "AN_Harm_Types": ["Stereotyping", "Misrepresentation", "Direct_Discrimination", "Indirect_Discrimination"],
+        "AN_Mitigation_Stage": ["Pre_Processing", "Prompt_Practice", "Organisational_Process"],
+        "AN_Mitigation_Status": "Proposed",
+        "AN_Population": ["Not_SW_Specific"],
+        "AN_Coding_Basis": "Fulltext",
+        "AN_Notes": "Institutional fair-prompting guide for SMEs; its social focus is diversity, gender and fairness rather than social-work practice.",
+        "Studientyp": "Konzept"
+      }
+    },
+    "EQV4DNQR": {
+      "source_path": "docs/data/fulltext/EQV4DNQR.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "The text identifies the title, UNESCO/IRCAI as publisher, 2024 publication, a named author group, report citation, and open-access study status."
+      },
+      "categories": {
+        "AI_Literacies": "teilweise",
+        "Generative_KI": "ja",
+        "Prompting": "teilweise",
+        "KI_Sonstige": "nein",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "ja",
+        "Diversitaet": "ja",
+        "Feministisch": "ja",
+        "Fairness": "ja"
+      },
+      "decision": "Include",
+      "reason": null,
+      "evidence": {
+        "AI_Literacies": ["Additionally, promoting public awareness and education on AI ethics and biases empowers users to critically engage with AI technologies and advocate for their rights."],
+        "Generative_KI": ["This study explores biases in three significant large language models (LLMs): OpenAI's GPT -2 and ChatGPT, along with Meta's Llama 2"],
+        "Prompting": ["The approach of this second study starts with an incomplete sentence and prompts the model to complete it."],
+        "KI_Sonstige": [],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": ["The research uncovers persistent social biases within these state-of-the-art language models, despite ongoing efforts to mitigate such issues."],
+        "Gender": ["The pervasive problem of bias against women and girls worldwide is a deeply entrenched issue that manifests across various societal, economic, and political domains, reflecting centuries of gender inequalities and systemic discrimination."],
+        "Diversitaet": ["showing a tendency to assign more diverse and professional jobs to men"],
+        "Feministisch": ["The pervasive problem of bias against women and girls worldwide is a deeply entrenched issue that manifests across various societal, economic, and political domains, reflecting centuries of gender inequalities and systemic discrimination."],
+        "Fairness": ["This approach not only requires the involvement of multiple stakeholders, but as the recommendations provided in this brief make plain, a more equitable and responsible approach to AI development and deployment writ large." ]
+      },
+      "analysis": {
+        "AN_Prompting_Role": ["Research_Instrument"],
+        "AN_Prompt_Techniques": ["None"],
+        "AN_Bias_Axes": ["Gender", "Race_Ethnicity", "Sexual_Orientation_Identity", "Language_Culture", "Nationality_Migration", "Intersectional"],
+        "AN_Harm_Types": ["Derogatory_Language", "Stereotyping", "Disparate_Performance", "Misrepresentation"],
+        "AN_Mitigation_Stage": ["Pre_Processing", "In_Training", "Post_Processing", "Organisational_Process"],
+        "AN_Mitigation_Status": "Proposed",
+        "AN_Population": ["Not_SW_Specific"],
+        "AN_Coding_Basis": "Fulltext",
+        "AN_Notes": "UNESCO/IRCAI issue brief reporting several bias studies and policy recommendations; it does not address social-work practice specifically.",
+        "Studientyp": "Empirisch"
+      }
+    },
+    "J5EF9W6M": {
+      "source_path": "docs/data/fulltext/J5EF9W6M.md",
+      "identity_check": {
+        "status": "provisional",
+        "basis": "The title, DIVERSIFAIR project identity, November 2024 date, EU funding and Work Package 5 provenance are explicit; the supplied toolkit does not provide an individual author list or DOI, but no identity contradiction is present."
+      },
+      "categories": {
+        "AI_Literacies": "ja",
+        "Generative_KI": "nein",
+        "Prompting": "nein",
+        "KI_Sonstige": "ja",
+        "Soziale_Arbeit": "teilweise",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "ja",
+        "Diversitaet": "ja",
+        "Feministisch": "ja",
+        "Fairness": "ja"
+      },
+      "decision": "Include",
+      "reason": null,
+      "evidence": {
+        "AI_Literacies": ["Building AI literacy is crucial for the policy sector to understand AI fundamentals, such as machine learning and data ethics, while also raising awareness of intersectionality in AI."],
+        "Generative_KI": [],
+        "Prompting": [],
+        "KI_Sonstige": ["It powers applications ranging from voice assistants (like Siri, Alexa or Google Assistant) to more complex tools like recommendation systems, autonomous vehicles, predictive policing algorithms."],
+        "Soziale_Arbeit": ["Without addressing these intersectional biases, AI systems risk perpetuating and deepening existing inequalities in welfare and social services."],
+        "Bias_Ungleichheit": ["One significant issue is intersectional bias, where different forms of discrimination-such as racism, sexism, ableism, and colonialism-overlap and affect people in complex ways."],
+        "Gender": ["Intersectionality, a term coined by legal scholar Kimberlé Crenshaw, is an approach to describe and address complex and nuanced forms of discrimination that result from interconnecting forms of oppression (e.g. racism, (cis)sexism, ableism, colonialism), a nd the unique harm people experience based on their multiple intersecting identities ."],
+        "Diversitaet": ["By focusing on fairness and inclusivity, policymakers can create AI systems that promote equality rather than worsen current inequalities."],
+        "Feministisch": ["AI is not just a neutral tool but is co-created with society, and as such has major political and social implications in reinforcing existing power relationships, discrimination, and structural inequalities."],
+        "Fairness": ["Fairness in AI refers to designing systems that promote equitable outcomes for all individuals , regardless of identity." ]
+      },
+      "analysis": {
+        "AN_Prompting_Role": ["None"],
+        "AN_Prompt_Techniques": ["None"],
+        "AN_Bias_Axes": ["Gender", "Race_Ethnicity", "Disability", "Socioeconomic", "Nationality_Migration", "Intersectional"],
+        "AN_Harm_Types": ["Disparate_Performance", "Exclusionary_Norms", "Direct_Discrimination", "Indirect_Discrimination", "Misrepresentation", "Stereotyping"],
+        "AN_Mitigation_Stage": ["Pre_Processing", "Intra_Processing", "Post_Processing", "Organisational_Process"],
+        "AN_Mitigation_Status": "Proposed",
+        "AN_Population": ["Not_SW_Specific"],
+        "AN_Coding_Basis": "Fulltext",
+        "AN_Notes": "DIVERSIFAIR toolkit for policymakers, regulators and industry; it is informed by interviews and focus groups but has no social-work-specific population.",
+        "Studientyp": "Konzept"
+      }
+    }
+  }
+}

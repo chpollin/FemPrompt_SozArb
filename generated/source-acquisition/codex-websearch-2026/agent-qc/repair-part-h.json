@@ -1,0 +1,195 @@
+{
+  "schema": "femprompt-markdown-repair-report/0.1",
+  "reviewer": "Codex subagent source QC H",
+  "repaired_at": "2026-08-24",
+  "records": [
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/02615479.2026.2660786",
+      "title": "Towards a framework for digital literacy in social work education in a time of artificial intelligence",
+      "source_pdf": "generated/pdfs/codex-websearch-2026/3cb613d559a8c57c13c1.pdf",
+      "source_markdown": "generated/source-acquisition/codex-websearch-2026/markdown-clean/3cb613d559a8c57c13c1.md",
+      "repaired_markdown": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/3cb613d559a8c57c13c1.md",
+      "decision": "requires_reconversion",
+      "page_markers_preserved": true,
+      "repaired_segments": [
+        {
+          "segment_id": "abstract",
+          "pdf_page": 2,
+          "source_state": "absent_from_source_markdown",
+          "repaired_state": "complete_source_text_restored_before_introduction",
+          "extraction_methods": [
+            "PyMuPDF full-page text-layer extraction",
+            "pdfplumber independent page-text extraction",
+            "PyMuPDF 3x page render with manual visual comparison"
+          ],
+          "verification": "The complete seven-sentence abstract matches both text extractions and the rendered abstract panel. Its purpose, integrative literature review methodology, three thematic domains, illustrative image case, transformative digital-literacy model, and closing roadmap statement are preserved in source order.",
+          "status": "verified_complete"
+        },
+        {
+          "segment_id": "article_history",
+          "pdf_page": 2,
+          "source_state": "absent_from_source_markdown",
+          "repaired_state": "complete_heading_and_two_dates_restored_after_abstract",
+          "extraction_methods": [
+            "PyMuPDF full-page text-layer extraction",
+            "pdfplumber independent page-text extraction",
+            "PyMuPDF 3x page render with manual visual comparison"
+          ],
+          "verification": "The heading ARTICLE HISTORY and the lines `Received 5 February 2025` and `Accepted 7 April 2026` match both text layers and the rendered metadata column.",
+          "status": "verified_complete"
+        },
+        {
+          "segment_id": "keywords",
+          "pdf_page": 2,
+          "source_state": "absent_from_source_markdown",
+          "repaired_state": "complete_heading_and_keyword_sequence_restored_after_article_history",
+          "extraction_methods": [
+            "PyMuPDF full-page text-layer extraction",
+            "pdfplumber independent page-text extraction",
+            "PyMuPDF 3x page render with manual visual comparison"
+          ],
+          "verification": "The heading KEYWORDS and the exact sequence `Artificial intelligence; critical thinking; decolonization; pedagogy; technology` match both text layers and the rendered metadata column.",
+          "status": "verified_complete"
+        }
+      ],
+      "visual_evidence": {
+        "status": "extracted_and_manifested_but_not_representable_in_current_prism_evidence_structure",
+        "manifest": "generated/source-acquisition/codex-websearch-2026/visual-evidence/3cb613d559a8c57c13c1/manifest.json",
+        "assessment": "generated/source-acquisition/codex-websearch-2026/agent-qc/visual-evidence-assessment-h.json",
+        "pdf_page": 13,
+        "table_id": "3",
+        "image_count": 5,
+        "content_interpretation_performed": false
+      },
+      "tables": [
+        {
+          "table_id": "Table 1 Overview of articles",
+          "pdf_page": 7,
+          "source_state": "complete_markdown_table",
+          "repaired_state": "unchanged_complete_markdown_table",
+          "status": "verified_complete"
+        },
+        {
+          "table_id": "Table 2 Commands and AI system",
+          "pdf_page": 13,
+          "source_state": "complete_markdown_table",
+          "repaired_state": "unchanged_complete_markdown_table",
+          "status": "verified_complete"
+        },
+        {
+          "table_id": "Table 3 Images generated",
+          "pdf_page": 13,
+          "source_state": "caption_and_single_image_placeholder_only",
+          "repaired_state": "markdown_placeholder_unchanged; five native-resolution visual assets extracted separately with manifest",
+          "status": "visual_evidence_externalized_not_screening_representable"
+        }
+      ],
+      "validation": {
+        "utf8_decode": "passed",
+        "source_unchanged": "passed: SHA-256 c5339294032cb5fe9b71a69e5d07768c11e5b01f7b23149bb025a18edec72849",
+        "repaired_sha256": "e2d8f9155a66508dc162a3d4357ab72f3582b7bd536697bb4dba52117afde10b",
+        "page_markers": "passed: PAGE 1 through PAGE 19 are identical and sequential in source and repaired Markdown",
+        "repair_delta": "passed: the repaired file differs from the source Markdown only by the three restored PAGE 2 segments and a normalized final newline",
+        "page_2_text_coverage": "passed: normalized PDF-token recall is 0.948 after repair",
+        "remaining_body_coverage": "passed: every article-body page from PDF page 2 through 16 has normalized PDF-token recall of at least 0.948",
+        "heading_sequence": "passed: 22 Markdown headings, including ABSTRACT, ARTICLE HISTORY and KEYWORDS, remain in source order",
+        "visual_assets": "passed: five PNG files match the five page-13 image XObjects in order and native dimensions; file and raw-stream hashes are recorded in the manifest",
+        "beginning": "passed: repository cover, publisher cover, article title, author and affiliation preceding the repaired segments are unchanged",
+        "ending": "passed: disclosure, ORCID, references and terminal Zuboff (2019) entry are unchanged",
+        "paths": "passed: source PDF, source Markdown, repaired Markdown, five visual assets, visual manifest and assessment all exist at the recorded paths"
+      },
+      "issues_remaining": [
+        "The five Table 3 images are preserved as hashed visual-evidence assets, but the current PRISM evidence structure cannot represent visual assets, their locators, or the Table 2-to-Table 3 mapping. The screening surface would still expose only a Markdown image placeholder."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/02615479.2026.2631708",
+      "title": "Are future social workers ready for AI? Fears, barriers, and learning needs in higher education",
+      "source_pdf": "generated/pdfs/codex-websearch-2026/4875ad9321dfcfc0aa52.pdf",
+      "source_markdown": "generated/source-acquisition/codex-websearch-2026/markdown-clean/4875ad9321dfcfc0aa52.md",
+      "repaired_markdown": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/4875ad9321dfcfc0aa52.md",
+      "decision": "approved_for_screening",
+      "page_markers_preserved": true,
+      "repaired_segments": [
+        {
+          "segment_id": "abstract",
+          "pdf_page": 2,
+          "source_state": "absent_from_source_markdown",
+          "repaired_state": "complete_source_text_restored_before_introduction",
+          "extraction_methods": [
+            "PyMuPDF full-page text-layer extraction",
+            "pdfplumber independent page-text extraction",
+            "PyMuPDF 3x page render with manual visual comparison"
+          ],
+          "verification": "The complete abstract matches both independent text extractions and the rendered abstract panel. The progression context, two research questions, sample size 42, mixed-method design, six questionnaire dimensions, qualitative ambivalence, implementation model and curriculum implication are preserved in source order.",
+          "status": "verified_complete"
+        },
+        {
+          "segment_id": "article_history",
+          "pdf_page": 2,
+          "source_state": "absent_from_source_markdown",
+          "repaired_state": "complete_heading_and_two_dates_restored_after_abstract",
+          "extraction_methods": [
+            "PyMuPDF full-page text-layer extraction",
+            "pdfplumber independent page-text extraction",
+            "PyMuPDF 3x page render with manual visual comparison"
+          ],
+          "verification": "The heading ARTICLE HISTORY and the lines `Received 18 July 2025` and `Accepted 2 February 2026` match both text layers and the rendered metadata column.",
+          "status": "verified_complete"
+        },
+        {
+          "segment_id": "keywords",
+          "pdf_page": 2,
+          "source_state": "absent_from_source_markdown",
+          "repaired_state": "complete_heading_and_keyword_sequence_restored_after_article_history",
+          "extraction_methods": [
+            "PyMuPDF full-page text-layer extraction",
+            "pdfplumber independent page-text extraction",
+            "PyMuPDF 3x page render with manual visual comparison"
+          ],
+          "verification": "The heading KEYWORDS and the exact sequence `Artificial intelligence; social work; higher education; attitudes; ethics` match both text layers and the rendered metadata column.",
+          "status": "verified_complete"
+        }
+      ],
+      "tables": [
+        {
+          "table_id": "Table 1 Clustering of items according to the components extracted in the factorial analysis",
+          "pdf_page": 7,
+          "source_state": "complete_markdown_table",
+          "repaired_state": "unchanged_complete_markdown_table",
+          "dimensions": {
+            "data_rows": 6,
+            "columns": 4
+          },
+          "status": "verified_complete"
+        },
+        {
+          "table_id": "Table 2 Rotated factor loadings of the questionnaire items on attitudes toward AI in social work",
+          "pdf_page": 8,
+          "source_state": "complete_markdown_table_with_minor_character_artifacts",
+          "repaired_state": "unchanged_complete_markdown_table",
+          "dimensions": {
+            "data_rows": 17,
+            "columns": 7
+          },
+          "status": "verified_complete"
+        }
+      ],
+      "validation": {
+        "utf8_decode": "passed",
+        "source_unchanged": "passed: SHA-256 9e532599f1e5d168b97b2512d7eab862603928659936b0e8fd4c505ff6fdc3c1",
+        "repaired_sha256": "fa17575c874a52ab8e14c199b8f1e81513d8555e456467ba738661b487a0cbec",
+        "page_markers": "passed: PAGE 1 through PAGE 16 are identical and sequential in source and repaired Markdown",
+        "repair_delta": "passed: the repaired file differs from the source Markdown only by the three restored PAGE 2 segments and a normalized final newline",
+        "page_2_text_coverage": "passed: normalized PDF-token recall is 0.945 after repair",
+        "remaining_body_coverage": "passed: every article-body page from PDF page 2 through 13 has normalized PDF-token recall of at least 0.945",
+        "heading_sequence": "passed: 29 Markdown headings, including ABSTRACT, ARTICLE HISTORY and KEYWORDS, remain in source order",
+        "tables": "passed: Table 1 has six data rows by four columns and Table 2 has 17 data rows by seven columns; all source rows and factor loadings are present",
+        "beginning": "passed: repository cover, publisher cover, title, authors and affiliations preceding the repaired segments are unchanged",
+        "ending": "passed: acknowledgements, disclosure, open-scholarship statement, references and terminal Xue, Rashid and Ouyang (2024) entry are unchanged",
+        "paths": "passed: source PDF, source Markdown and repaired Markdown all exist at the recorded paths"
+      },
+      "issues_remaining": []
+    }
+  ]
+}

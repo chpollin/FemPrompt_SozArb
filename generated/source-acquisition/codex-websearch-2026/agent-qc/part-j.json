@@ -1,0 +1,40 @@
+{
+  "schema": "femprompt-markdown-agent-qc/0.1",
+  "reviewer": "Codex subagent source QC J",
+  "reviewed_at": "2026-08-24",
+  "records": [
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1016/j.mcpdig.2026.100344",
+      "title": "Implicit Gender, Racial, and Ethnic Biases in Large Language Models: An Audit Study of Automated Psychiatric Diagnoses",
+      "source_file": "generated/source-acquisition/codex-websearch-2026/html-source/166a9834b422f052b7c5.html",
+      "source_format": "html",
+      "markdown_file": "generated/source-acquisition/codex-websearch-2026/html-markdown/166a9834b422f052b7c5.md",
+      "source_sha256": "79584417e45c81b3a08df4fbcca861c99c5e3f7ffce91860abba13a229ece628",
+      "markdown_sha256": "5568a06471911bf9d102f9caf87159966469807bd990ef8a837d52585de186f5",
+      "automated_warning": "Not applicable to HTML; direct DOM-to-Markdown QC performed.",
+      "identity_match": true,
+      "body_complete": true,
+      "tables": {
+        "source_numbered_tables": 5,
+        "source_table_blocks": 14,
+        "markdown_numbered_tables": 5,
+        "markdown_table_blocks": 14,
+        "source_nonempty_cells": 570,
+        "verified_nonempty_cells": 570,
+        "material_loss": false,
+        "basis": "The PMC article presents five numbered tables across fourteen HTML table blocks because Tables 3 and 4 contain several lettered panels. The Markdown preserves all five labels and captions, all fourteen matrices, and every one of the 570 nonempty source cells. Colspan headers are flattened into Markdown columns without loss of header text or data values."
+      },
+      "decision": "approved_for_screening",
+      "issues": [],
+      "evidence": [
+        "Title, all four authors, DOI 10.1016/j.mcpdig.2026.100344, PMCID PMC13217584 and PMID 42221464 match the PMC HTML metadata and are present in the Markdown header.",
+        "The complete normalized article-body token sequence from the PMC DOM consists of 8,494 tokens and occurs contiguously and identically in the rendered Markdown after the locally supplied source metadata.",
+        "All 30 source headings from Abstract through Associated Data and Supplementary Materials occur in the same order and at the corresponding hierarchy levels in the Markdown.",
+        "All fourteen HTML table blocks have corresponding Markdown table blocks; all 570 nonempty table cells were matched, and the five numbered captions and their explanatory panel descriptions are retained.",
+        "The source contains no main-article image or figcaption elements. Both Supplemental Figure 1 references and the supplemental-material link and description are retained as article text and links.",
+        "References 1 through 31 are complete and sequential. The Markdown begins with the verified title and article/version metadata and ends with the Associated Data supplementary-material record.",
+        "The CC BY-NC-ND 4.0 licence, copyright notice, publication date, collection date, journal citation and version_of_record_repository_html designation are retained."
+      ]
+    }
+  ]
+}

@@ -31,6 +31,7 @@ logs/
 *.tmp
 *.backup
 *.bak
+tmp/
 
 # Test artifacts
 test_*.xlsx
@@ -53,6 +54,11 @@ generated/conversion_report_*.json
 generated/validation_*.json
 generated/markdown_test/
 conversion_metadata.json
+
+# Third-party source captures stay local. Versioned Markdown and manifests retain
+# the reproducible representation and source checksum without publishing raw pages.
+generated/source-acquisition/**/*.official.html
+generated/source-acquisition/**/html-source/
 
 # Benchmark test data
 assessment/test_*.csv

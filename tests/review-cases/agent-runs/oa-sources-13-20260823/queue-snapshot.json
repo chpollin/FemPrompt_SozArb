@@ -1,0 +1,509 @@
+{
+  "schema": "femprompt-agent-screening-queue/0.1",
+  "purpose": "Work-level queue for records without human or governed AI-agent review",
+  "script": "src/analysis/build_agent_screening_queue.py",
+  "authority_rule": "Any human annotation covers the canonical work; duplicate records do not trigger reassessment.",
+  "sources": {
+    "research_vault": "docs/data/research_vault_v2.json",
+    "research_vault_sha256": "c52be88d967114c8af82297ce14e15c736a7a2a44b4118964489bd4bf7570ded",
+    "fulltext_manifest": "docs/data/fulltext_manifest.json",
+    "fulltext_manifest_sha256": "a2aed839a1cf213c067e39018f21e8fe7aab3bf02562c01c563d84986584f1fc",
+    "productive_screening_dir": "docs/data/screening"
+  },
+  "counts": {
+    "canonical_records": 326,
+    "canonical_works": 258,
+    "direct_human_annotated_records": 291,
+    "direct_ai_agent_reviewed_without_human": 8,
+    "unannotated_alias_records_covered_at_work_level": 5,
+    "queued_records": 22,
+    "queued_works": 22,
+    "ready_works": 13,
+    "blocked_abstract_only_works": 4,
+    "blocked_without_text_works": 5
+  },
+  "gate": {
+    "status": "partial",
+    "ready_work_ids": [
+      "doi:10.1093/bjsw/bcab168",
+      "doi:10.1145/3491102.3501831",
+      "doi:10.1145/3593013.3594094",
+      "doi:10.1177/20539517211020332",
+      "doi:10.3389/fdgth.2023.1133987",
+      "doi:10.3390/ai4010003",
+      "doi:10.3390/socsci8100281",
+      "doi:10.48558/a179-b138",
+      "record:3ZNMTJ5B",
+      "record:BDI6XU5A",
+      "record:BHXDU7VM",
+      "record:FTJM5R8N",
+      "record:NSI6S5QE"
+    ],
+    "required_action": "Acquire and review Paper Markdown for every blocked work before its agent run."
+  },
+  "queue": [
+    {
+      "work_id": "doi:10.1080/0960085x.2021.1934130",
+      "representative_record_id": "KI9GRGHB",
+      "record_ids": [
+        "KI9GRGHB"
+      ],
+      "title": "Theorising algorithmic justice",
+      "author_year": "Marjanovic et al. (2022)",
+      "doi": "10.1080/0960085X.2021.1934130",
+      "url": null,
+      "abstract_available": true,
+      "source_status": "none",
+      "source_chars": 0,
+      "paper_source": null,
+      "paper_source_sha256": null,
+      "queue_status": "blocked_missing_paper_source",
+      "blockers": [
+        "reviewed_fulltext_markdown_missing"
+      ]
+    },
+    {
+      "work_id": "doi:10.1080/1369118x.2021.1934069",
+      "representative_record_id": "ZQHP5G35",
+      "record_ids": [
+        "ZQHP5G35"
+      ],
+      "title": "Data and rights in the digital welfare state: the case of Denmark",
+      "author_year": "Jørgensen (2023)",
+      "doi": "10.1080/1369118X.2021.1934069",
+      "url": null,
+      "abstract_available": true,
+      "source_status": "none",
+      "source_chars": 0,
+      "paper_source": null,
+      "paper_source_sha256": null,
+      "queue_status": "blocked_missing_paper_source",
+      "blockers": [
+        "reviewed_fulltext_markdown_missing"
+      ]
+    },
+    {
+      "work_id": "doi:10.1093/bjsw/bcab168",
+      "representative_record_id": "VSZM7CT6",
+      "record_ids": [
+        "VSZM7CT6"
+      ],
+      "title": "Problematising artificial intelligence in social work education: Challenges, issues and possibilities",
+      "author_year": "Hodgson et al. (2022)",
+      "doi": "10.1093/bjsw/bcab168",
+      "url": null,
+      "abstract_available": true,
+      "source_status": "clean",
+      "source_chars": 53855,
+      "paper_source": "docs/data/fulltext/VSZM7CT6.md",
+      "paper_source_sha256": "4557a0e44affd3732f7aff3f2b8244b45df7eb5f8cbb0bcb043aa4dee9422bf3",
+      "queue_status": "ready",
+      "blockers": []
+    },
+    {
+      "work_id": "doi:10.1145/3491102.3501831",
+      "representative_record_id": "7FEFMCBZ",
+      "record_ids": [
+        "7FEFMCBZ"
+      ],
+      "title": "How child welfare workers reduce racial disparities in algorithmic decisions",
+      "author_year": "Cheng et al. (2022)",
+      "doi": "10.1145/3491102.3501831",
+      "url": null,
+      "abstract_available": true,
+      "source_status": "clean",
+      "source_chars": 133022,
+      "paper_source": "docs/data/fulltext/7FEFMCBZ.md",
+      "paper_source_sha256": "de16bedf403143d41f37bcd19af189018e049126bba32c148277976ef2ee828f",
+      "queue_status": "ready",
+      "blockers": []
+    },
+    {
+      "work_id": "doi:10.1145/3593013.3594094",
+      "representative_record_id": "R7V99ERA",
+      "record_ids": [
+        "R7V99ERA"
+      ],
+      "title": "Examining risks of racial biases in NLP tools for child protective services",
+      "author_year": "Field et al. (2023)",
+      "doi": "10.1145/3593013.3594094",
+      "url": null,
+      "abstract_available": true,
+      "source_status": "clean",
+      "source_chars": 89214,
+      "paper_source": "docs/data/fulltext/R7V99ERA.md",
+      "paper_source_sha256": "03177cb37158d46696fe4422919053cdda5591068e6f0e395e7d21487bc2a2db",
+      "queue_status": "ready",
+      "blockers": []
+    },
+    {
+      "work_id": "doi:10.1177/0950017020950021",
+      "representative_record_id": "LR8Z3YHP",
+      "record_ids": [
+        "LR8Z3YHP"
+      ],
+      "title": "'Meaningless work': How the datafication of health reconfigures knowledge about work and erodes professional judgement",
+      "author_year": "Wadmann & Hoeyer (2020)",
+      "doi": "10.1177/0950017020950021",
+      "url": null,
+      "abstract_available": true,
+      "source_status": "none",
+      "source_chars": 0,
+      "paper_source": null,
+      "paper_source_sha256": null,
+      "queue_status": "blocked_missing_paper_source",
+      "blockers": [
+        "reviewed_fulltext_markdown_missing"
+      ]
+    },
+    {
+      "work_id": "doi:10.1177/20539517211020332",
+      "representative_record_id": "4ZL5Q48E",
+      "record_ids": [
+        "4ZL5Q48E"
+      ],
+      "title": "Algorithmic management in a work context",
+      "author_year": "Jarrahi et al. (2021)",
+      "doi": "10.1177/20539517211020332",
+      "url": null,
+      "abstract_available": true,
+      "source_status": "clean",
+      "source_chars": 74058,
+      "paper_source": "docs/data/fulltext/4ZL5Q48E.md",
+      "paper_source_sha256": "4d5b7fb19ec62f5a192bf5844f68d82fb1680a2ed260f18d14ca3bcb3276c4db",
+      "queue_status": "ready",
+      "blockers": []
+    },
+    {
+      "work_id": "doi:10.3389/fdgth.2023.1133987",
+      "representative_record_id": "J7V3AAQT",
+      "record_ids": [
+        "J7V3AAQT"
+      ],
+      "title": "A chatbot for mental health support: Exploring the impact of Emohaa on reducing mental distress in China",
+      "author_year": "Sabour et al. (2023)",
+      "doi": "10.3389/fdgth.2023.1133987",
+      "url": null,
+      "abstract_available": true,
+      "source_status": "clean",
+      "source_chars": 66273,
+      "paper_source": "docs/data/fulltext/J7V3AAQT.md",
+      "paper_source_sha256": "5b2c28e320dd95560f01adfb33b123d5049a4bb3106fb448335626f7958ff252",
+      "queue_status": "ready",
+      "blockers": []
+    },
+    {
+      "work_id": "doi:10.3390/ai4010003",
+      "representative_record_id": "P4YQIKJX",
+      "record_ids": [
+        "P4YQIKJX"
+      ],
+      "title": "Ethics & AI: A systematic review on ethical concerns and related strategies for designing with AI in healthcare",
+      "author_year": "Li et al. (2023)",
+      "doi": "10.3390/ai4010003",
+      "url": null,
+      "abstract_available": true,
+      "source_status": "clean",
+      "source_chars": 99193,
+      "paper_source": "docs/data/fulltext/P4YQIKJX.md",
+      "paper_source_sha256": "21913775f2ff6abfb26b09e167c14e8d1bfac55d43f7a8db06b60582ac383a17",
+      "queue_status": "ready",
+      "blockers": []
+    },
+    {
+      "work_id": "doi:10.3390/socsci8100281",
+      "representative_record_id": "A2P8MXMY",
+      "record_ids": [
+        "A2P8MXMY"
+      ],
+      "title": "Algorithmic justice in child protection: Statistical fairness, social justice and the implications for practice",
+      "author_year": "Keddell (2019)",
+      "doi": "10.3390/socsci8100281",
+      "url": null,
+      "abstract_available": true,
+      "source_status": "clean",
+      "source_chars": 98762,
+      "paper_source": "docs/data/fulltext/A2P8MXMY.md",
+      "paper_source_sha256": "6441bd19785f939ca020aa1d0aa2c8ac2d21c55bcd44d7c29601fa543367d6b3",
+      "queue_status": "ready",
+      "blockers": []
+    },
+    {
+      "work_id": "doi:10.48558/a179-b138",
+      "representative_record_id": "QUV5DQH3",
+      "record_ids": [
+        "QUV5DQH3"
+      ],
+      "title": "When Good Algorithms Go Sexist: Why and How to Advance AI Gender Equity",
+      "author_year": "Smith & Rustagi (2021)",
+      "doi": "10.48558/A179-B138",
+      "url": "https://ssir.org/articles/entry/when_good_algorithms_go_sexist_why_and_how_to_advance_ai_gender_equity",
+      "abstract_available": true,
+      "source_status": "clean",
+      "source_chars": 17726,
+      "paper_source": "docs/data/fulltext/QUV5DQH3.md",
+      "paper_source_sha256": "e7d5eedd33818ff4614f26577e29e11050d1e12e6c730250573231f7ade1ac9a",
+      "queue_status": "ready",
+      "blockers": []
+    },
+    {
+      "work_id": "record:3ZNMTJ5B",
+      "representative_record_id": "3ZNMTJ5B",
+      "record_ids": [
+        "3ZNMTJ5B"
+      ],
+      "title": "feminist AI | ACADEMY",
+      "author_year": "[Author not specified] (n.d.)",
+      "doi": null,
+      "url": "https://www.feminist-ai.com/academy",
+      "abstract_available": true,
+      "source_status": "raw",
+      "source_chars": 2310,
+      "paper_source": "docs/data/fulltext/3ZNMTJ5B.md",
+      "paper_source_sha256": "7f3e3b93547355806fec125d1cde0f65bb1819192be52a85376b08a868069a4c",
+      "queue_status": "ready",
+      "blockers": []
+    },
+    {
+      "work_id": "record:5T55I5Z7",
+      "representative_record_id": "5T55I5Z7",
+      "record_ids": [
+        "5T55I5Z7"
+      ],
+      "title": "ARTIFICIAL INTELLIGENCE and GENDER EQUALITY",
+      "author_year": "UNESCO (2020)",
+      "doi": null,
+      "url": "unesdoc.unesco.org/in/rest/annotationSVC/DownloadWatermarkedAttachment/attach_import_ab07646d-c784-4a4e-96a1-3be7855b6f76?_=374174eng.pdf&to=54&from=1",
+      "abstract_available": true,
+      "source_status": "none",
+      "source_chars": 0,
+      "paper_source": null,
+      "paper_source_sha256": null,
+      "queue_status": "blocked_missing_paper_source",
+      "blockers": [
+        "reviewed_fulltext_markdown_missing"
+      ]
+    },
+    {
+      "work_id": "record:8NG4ZEWE",
+      "representative_record_id": "8NG4ZEWE",
+      "record_ids": [
+        "8NG4ZEWE"
+      ],
+      "title": "Intersektionalität",
+      "author_year": "Arnold et al. (2023)",
+      "doi": null,
+      "url": "https://wb-erwachsenenbildung.net/intersektionalitaet/",
+      "abstract_available": false,
+      "source_status": "none",
+      "source_chars": 0,
+      "paper_source": null,
+      "paper_source_sha256": null,
+      "queue_status": "blocked_missing_paper_source",
+      "blockers": [
+        "reviewed_fulltext_markdown_missing"
+      ]
+    },
+    {
+      "work_id": "record:BDI6XU5A",
+      "representative_record_id": "BDI6XU5A",
+      "record_ids": [
+        "BDI6XU5A"
+      ],
+      "title": "Gender und KI-Anwendungen. Trägt KI zum Genderproblem oder zu seiner Lösung bei?",
+      "author_year": "Franken & Mauritz (n.d.)",
+      "doi": null,
+      "url": "https://www.fh-bielefeld.de/multimedia/Fachbereiche/Wirtschaft+und+Gesundheit/ Forschung/Denkfabrik+Digitalisierte+Arbeitswelt/geki_Abschlussbericht.pdf",
+      "abstract_available": false,
+      "source_status": "clean",
+      "source_chars": 90625,
+      "paper_source": "docs/data/fulltext/BDI6XU5A.md",
+      "paper_source_sha256": "1aa57614a5d30b608006dde1d2da7c7cb49f2c27324bd4726ebb370487b47e74",
+      "queue_status": "ready",
+      "blockers": []
+    },
+    {
+      "work_id": "record:BHXDU7VM",
+      "representative_record_id": "BHXDU7VM",
+      "record_ids": [
+        "BHXDU7VM"
+      ],
+      "title": "How People Use ChatGPT",
+      "author_year": "Chatterji et al. (2025)",
+      "doi": null,
+      "url": "https://www.nber.org/papers/w34255",
+      "abstract_available": true,
+      "source_status": "clean",
+      "source_chars": 116495,
+      "paper_source": "docs/data/fulltext/BHXDU7VM.md",
+      "paper_source_sha256": "3d4c7eebcc7eede980a7a9e64003ba8df9dcb3ce98afcac0a03773915ab14668",
+      "queue_status": "ready",
+      "blockers": []
+    },
+    {
+      "work_id": "record:FTJM5R8N",
+      "representative_record_id": "FTJM5R8N",
+      "record_ids": [
+        "FTJM5R8N"
+      ],
+      "title": "Defeating Nondeterminism in LLM Inference",
+      "author_year": "[Author not specified] (n.d.)",
+      "doi": null,
+      "url": "https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference/",
+      "abstract_available": true,
+      "source_status": "clean",
+      "source_chars": 31073,
+      "paper_source": "docs/data/fulltext/FTJM5R8N.md",
+      "paper_source_sha256": "92cbd69cb6ef71c5932014d1656d5e35b85db1a576a863346091c7a5c45ba55f",
+      "queue_status": "ready",
+      "blockers": []
+    },
+    {
+      "work_id": "record:NSI6S5QE",
+      "representative_record_id": "NSI6S5QE",
+      "record_ids": [
+        "NSI6S5QE"
+      ],
+      "title": "NASW, ASWB, CSWE, & CSWA standards for technology in social work practice",
+      "author_year": "National Association of Social Workers et al. (2017)",
+      "doi": null,
+      "url": "https://www.socialworkers.org/Practice/NASW-Practice-Standards-Guidelines/Standards-for-Technology-in-Social-Work-Practice",
+      "abstract_available": true,
+      "source_status": "clean",
+      "source_chars": 102643,
+      "paper_source": "docs/data/fulltext/NSI6S5QE.md",
+      "paper_source_sha256": "3187b1cf1d4010d5a926b636205c9e242a80fa814cbdb5e9449f2c523e6b387d",
+      "queue_status": "ready",
+      "blockers": []
+    },
+    {
+      "work_id": "record:RAY6G2R7",
+      "representative_record_id": "RAY6G2R7",
+      "record_ids": [
+        "RAY6G2R7"
+      ],
+      "title": "SWIFTSAGE: A new dual-module framework for better action planning in complex interactive reasoning tasks",
+      "author_year": "Lin et al. (2024)",
+      "doi": null,
+      "url": "https://arxiv.org/html/2404.17218v3",
+      "abstract_available": false,
+      "source_status": "none",
+      "source_chars": 0,
+      "paper_source": null,
+      "paper_source_sha256": null,
+      "queue_status": "blocked_missing_paper_source",
+      "blockers": [
+        "reviewed_fulltext_markdown_missing"
+      ]
+    },
+    {
+      "work_id": "record:SQYLQFRU",
+      "representative_record_id": "SQYLQFRU",
+      "record_ids": [
+        "SQYLQFRU"
+      ],
+      "title": "Reasoning towards fairness: Mitigating bias in language models through reasoning-guided fine-tuning",
+      "author_year": "Furniturewala et al. (2024)",
+      "doi": null,
+      "url": "https://powerdrill.ai/discover/summary-reasoning-towards-fairness-mitigating-bias-in-cm9af0g1h7sb507pn7f5qh32q",
+      "abstract_available": false,
+      "source_status": "none",
+      "source_chars": 0,
+      "paper_source": null,
+      "paper_source_sha256": null,
+      "queue_status": "blocked_missing_paper_source",
+      "blockers": [
+        "reviewed_fulltext_markdown_missing"
+      ]
+    },
+    {
+      "work_id": "record:XG7RFFC7",
+      "representative_record_id": "XG7RFFC7",
+      "record_ids": [
+        "XG7RFFC7"
+      ],
+      "title": "Occupational employment statistics",
+      "author_year": "U.S. Bureau of Labor Statistics (2023)",
+      "doi": null,
+      "url": "https://www.bls.gov/oes/",
+      "abstract_available": false,
+      "source_status": "none",
+      "source_chars": 0,
+      "paper_source": null,
+      "paper_source_sha256": null,
+      "queue_status": "blocked_missing_paper_source",
+      "blockers": [
+        "reviewed_fulltext_markdown_missing"
+      ]
+    },
+    {
+      "work_id": "record:Z9DNTBFF",
+      "representative_record_id": "Z9DNTBFF",
+      "record_ids": [
+        "Z9DNTBFF"
+      ],
+      "title": "Worst of both worlds: A comparative analysis of error in language and vision-language models",
+      "author_year": "Srinivasan & Bisk (2024)",
+      "doi": null,
+      "url": "https://arxiv.org/html/2405.20152v1",
+      "abstract_available": false,
+      "source_status": "none",
+      "source_chars": 0,
+      "paper_source": null,
+      "paper_source_sha256": null,
+      "queue_status": "blocked_missing_paper_source",
+      "blockers": [
+        "reviewed_fulltext_markdown_missing"
+      ]
+    }
+  ],
+  "covered_alias_records": [
+    {
+      "work_id": "doi:10.1080/02615479.2023.2195425",
+      "record_id": "QI5AYE4V",
+      "covered_by_human_records": [
+        "H59BNSX8"
+      ],
+      "covered_by_ai_agent_reviewed_records": []
+    },
+    {
+      "work_id": "doi:10.1086/726021",
+      "record_id": "AMYZFAPH",
+      "covered_by_human_records": [
+        "4PK8UN82",
+        "9YYPYEGY",
+        "U3AJIXAJ"
+      ],
+      "covered_by_ai_agent_reviewed_records": []
+    },
+    {
+      "work_id": "doi:10.1086/726042",
+      "record_id": "ZITLBM8A",
+      "covered_by_human_records": [
+        "LGYFN6JK"
+      ],
+      "covered_by_ai_agent_reviewed_records": []
+    },
+    {
+      "work_id": "doi:10.55521/10-020-205",
+      "record_id": "WTLVG29I",
+      "covered_by_human_records": [
+        "EXVG7MQR",
+        "HN7KKNYV",
+        "IUN7Z56I"
+      ],
+      "covered_by_ai_agent_reviewed_records": []
+    },
+    {
+      "work_id": "source:Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study.md",
+      "record_id": "2YS85B49",
+      "covered_by_human_records": [
+        "3GB9B4IJ",
+        "BCBWSU3Z"
+      ],
+      "covered_by_ai_agent_reviewed_records": [
+        "3GB9B4IJ"
+      ]
+    }
+  ]
+}

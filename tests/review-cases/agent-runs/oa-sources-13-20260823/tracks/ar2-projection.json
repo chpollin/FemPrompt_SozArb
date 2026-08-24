@@ -1,0 +1,1090 @@
+{
+  "schema": "femprompt-prisma-reviewer/0.3",
+  "reviewer": "ar2",
+  "actor": "agent",
+  "updated": "2026-08-23T17:28:16.733Z",
+  "transcription": {
+    "run_id": "oa-sources-13-20260823",
+    "source_packet": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar2-coding.json",
+    "source_packet_sha256": "f3dcf84c76c73d5e96d7eff708563ff9579043d2a2a796e9e0f52784e225ed80",
+    "method": "deterministic_packet_projection_pending_prism_roundtrip"
+  },
+  "decisions": {
+    "3ZNMTJ5B": {
+      "categories": {
+        "Bias_Ungleichheit": 2,
+        "Diversitaet": 2,
+        "Feministisch": 2,
+        "Fairness": 2
+      },
+      "decision": "Exclude",
+      "override": false,
+      "reason": "Wrong_publication_type",
+      "override_reason": null,
+      "evidence": {
+        "Bias_Ungleichheit": [
+          {
+            "term": "replicate biases and stereotypes against marginalized people",
+            "snippet": "replicate biases and stereotypes against marginalized people",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "marginalized people",
+            "snippet": "marginalized people",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Feministisch": [
+          {
+            "term": "create feminist AI with education on biases, power, and AI",
+            "snippet": "create feminist AI with education on biases, power, and AI",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "more equitable AI",
+            "snippet": "more equitable AI",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ]
+      },
+      "ts": "2026-08-23T17:28:16.733Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw"
+    },
+    "4ZL5Q48E": {
+      "categories": {
+        "AI_Literacies": 2,
+        "KI_Sonstige": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 1,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "algorithmic management demands new roles and competencies",
+            "snippet": "algorithmic management demands new roles and competencies",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "algorithmic management may influence existing power and social structures within",
+            "snippet": "algorithmic management may influence existing power and social structures within organizations",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "bias, discrimination, and inequalities",
+            "snippet": "bias, discrimination, and inequalities",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "did not rank applicants for technical posts in a gender-neutral manner",
+            "snippet": "did not rank applicants for technical posts in a gender-neutral manner",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "future of work, accountability",
+            "snippet": "future of work, accountability",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ]
+      },
+      "ts": "2026-08-23T17:28:16.733Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Gender"
+          ],
+          "AN_Harm_Types": [
+            "Direct_Discrimination",
+            "Exclusionary_Norms"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "Sociotechnical conceptual review of algorithmic management and workplace power.",
+          "Studientyp": "Theoretisch"
+        },
+        "undecidable": {}
+      }
+    },
+    "7FEFMCBZ": {
+      "categories": {
+        "KI_Sonstige": 2,
+        "Soziale_Arbeit": 2,
+        "Bias_Ungleichheit": 2,
+        "Diversitaet": 1,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "KI_Sonstige": [
+          {
+            "term": "when people work with algorithms in a child welfare context",
+            "snippet": "when people work with algorithms in a child welfare context",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Soziale_Arbeit": [
+          {
+            "term": "Child welfare workers were generally aware of their own individual biases.",
+            "snippet": "Child welfare workers were generally aware of their own individual biases.",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "workers reduced the disparity in screen-in rate between Black and white children",
+            "snippet": "workers reduced the disparity in screen-in rate between Black and white children from 20% to 9%",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "increase diversity among the child welfare workers, especially supervisors",
+            "snippet": "increase diversity among the child welfare workers, especially supervisors",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "algorithmic fairness",
+            "snippet": "algorithmic fairness",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ]
+      },
+      "ts": "2026-08-23T17:28:16.733Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Race_Ethnicity"
+          ],
+          "AN_Harm_Types": [
+            "Disparate_Performance"
+          ],
+          "AN_Mitigation_Stage": [
+            "Intra_Processing",
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Child_Family_Welfare"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "Mixed-method study of human-algorithm collaboration in child welfare screening.",
+          "Studientyp": "Empirisch"
+        },
+        "undecidable": {}
+      }
+    },
+    "A2P8MXMY": {
+      "categories": {
+        "KI_Sonstige": 2,
+        "Soziale_Arbeit": 2,
+        "Bias_Ungleichheit": 2,
+        "Diversitaet": 1,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "KI_Sonstige": [
+          {
+            "term": "algorithmic tools",
+            "snippet": "algorithmic tools",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Soziale_Arbeit": [
+          {
+            "term": "These debates should be of much interest to social work",
+            "snippet": "These debates should be of much interest to social work",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "algorithms using these data have distorted feedback loops and can contain inequa",
+            "snippet": "algorithms using these data have distorted feedback loops and can contain inequalities and biases",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "children and parents involved in the child protection system have a set of compl",
+            "snippet": "children and parents involved in the child protection system have a set of complex and at times divergent rights and needs",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "The concept of fairness has multiple definitions when used to analyse algorithms",
+            "snippet": "The concept of fairness has multiple definitions when used to analyse algorithms",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ]
+      },
+      "ts": "2026-08-23T17:28:16.733Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Race_Ethnicity",
+            "Socioeconomic"
+          ],
+          "AN_Harm_Types": [
+            "Disparate_Performance",
+            "Indirect_Discrimination",
+            "Exclusionary_Norms"
+          ],
+          "AN_Mitigation_Stage": [
+            "Pre_Processing",
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Child_Family_Welfare"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "Conceptual analysis of statistical fairness and social justice in child protection algorithms.",
+          "Studientyp": "Theoretisch"
+        },
+        "undecidable": {}
+      }
+    },
+    "BDI6XU5A": {
+      "categories": {
+        "AI_Literacies": 2,
+        "KI_Sonstige": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Diversitaet": 2,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "der Aufbau von KIKompetenz",
+            "snippet": "der Aufbau von KIKompetenz",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "Die Künstliche Intelligenz (KI)",
+            "snippet": "Die Künstliche Intelligenz (KI)",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Diese spiegeln gesellschaftliche Ungleichheiten wider und verstärken diese zudem",
+            "snippet": "Diese spiegeln gesellschaftliche Ungleichheiten wider und verstärken diese zudem.",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "Das Ziel des Projekts 'Gender und KI-Anwendungen. Trägt KI zum Genderproblem ode",
+            "snippet": "Das Ziel des Projekts 'Gender und KI-Anwendungen. Trägt KI zum Genderproblem oder zu seiner Lösung bei?'",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "eine größere Vielfalt an Personen bei der KI-Entwicklung",
+            "snippet": "eine größere Vielfalt an Personen bei der KI-Entwicklung",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "Fairness zu erreichen",
+            "snippet": "Fairness zu erreichen",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ]
+      },
+      "ts": "2026-08-23T17:28:16.733Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Gender"
+          ],
+          "AN_Harm_Types": [
+            "Stereotyping",
+            "Direct_Discrimination",
+            "Indirect_Discrimination"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process",
+            "Post_Processing"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "Empirical project report on gender differences in AI perceptions, competence and discrimination risks.",
+          "Studientyp": "Empirisch"
+        },
+        "undecidable": {}
+      }
+    },
+    "BHXDU7VM": {
+      "categories": {
+        "Generative_KI": 2,
+        "Prompting": 2,
+        "Gender": 2,
+        "Diversitaet": 1
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "Writing dominates work-related tasks, highlighting chatbots' unique ability to g",
+            "snippet": "Writing dominates work-related tasks, highlighting chatbots' unique ability to generate digital outputs",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "Each taxonomy is defined in a prompt passed to an LLM",
+            "snippet": "Each taxonomy is defined in a prompt passed to an LLM",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "the gender gap in ChatGPT usage has likely narrowed considerably over time",
+            "snippet": "the gender gap in ChatGPT usage has likely narrowed considerably over time",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "usage has grown relatively faster in low- and middle-income countries",
+            "snippet": "usage has grown relatively faster in low- and middle-income countries",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ]
+      },
+      "ts": "2026-08-23T17:28:16.733Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Research_Instrument"
+          ],
+          "AN_Prompt_Techniques": [
+            "General_Guidance"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Socioeconomic"
+          ],
+          "AN_Harm_Types": [
+            "None"
+          ],
+          "AN_Mitigation_Stage": [
+            "None"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "Empirical study of global ChatGPT use and demographic usage gaps.",
+          "Studientyp": "Empirisch"
+        },
+        "undecidable": {}
+      }
+    },
+    "FTJM5R8N": {
+      "categories": {
+        "Generative_KI": 2
+      },
+      "decision": "Exclude",
+      "override": false,
+      "reason": "Wrong_publication_type",
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "We use Qwen/Qwen3-235B-A22B-Instruct-2507 and sample 1000 completions at tempera",
+            "snippet": "We use Qwen/Qwen3-235B-A22B-Instruct-2507 and sample 1000 completions at temperature 0",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ]
+      },
+      "ts": "2026-08-23T17:28:16.733Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw"
+    },
+    "J7V3AAQT": {
+      "categories": {
+        "Generative_KI": 2
+      },
+      "decision": "Exclude",
+      "override": false,
+      "reason": "Not_relevant_topic",
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "a generative dialogue platform that allows conversations regarding various emoti",
+            "snippet": "a generative dialogue platform that allows conversations regarding various emotional issues in an open-ended manner",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ]
+      },
+      "ts": "2026-08-23T17:28:16.733Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw"
+    },
+    "NSI6S5QE": {
+      "categories": {
+        "Soziale_Arbeit": 2,
+        "Diversitaet": 1,
+        "Fairness": 1
+      },
+      "decision": "Exclude",
+      "override": false,
+      "reason": "Not_relevant_topic",
+      "override_reason": null,
+      "evidence": {
+        "Soziale_Arbeit": [
+          {
+            "term": "Technology Standards in Social Work Practice",
+            "snippet": "Technology Standards in Social Work Practice",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "meet the needs of diverse populations, such as people with differing physical ab",
+            "snippet": "meet the needs of diverse populations, such as people with differing physical abilities",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "As a matter of fairness, employers should cover the costs of the devices and tec",
+            "snippet": "As a matter of fairness, employers should cover the costs of the devices and technology",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ]
+      },
+      "ts": "2026-08-23T17:28:16.733Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw"
+    },
+    "P4YQIKJX": {
+      "categories": {
+        "KI_Sonstige": 2,
+        "Bias_Ungleichheit": 2,
+        "Diversitaet": 1,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "KI_Sonstige": [
+          {
+            "term": "applying AI in healthcare",
+            "snippet": "applying AI in healthcare",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "justice and fairness was found to be the most prevalent ethical issue",
+            "snippet": "justice and fairness was found to be the most prevalent ethical issue",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "health disparities",
+            "snippet": "health disparities",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "revealed 12 main ethical issues: justice and fairness, freedom and autonomy, pri",
+            "snippet": "revealed 12 main ethical issues: justice and fairness, freedom and autonomy, privacy, transparency",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ]
+      },
+      "ts": "2026-08-23T17:28:16.733Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Other_Axis"
+          ],
+          "AN_Harm_Types": [
+            "Disparate_Performance",
+            "Indirect_Discrimination"
+          ],
+          "AN_Mitigation_Stage": [
+            "Pre_Processing",
+            "In_Training",
+            "Post_Processing",
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Health_Care"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "Systematic review of ethical issues and strategies in healthcare AI.",
+          "Studientyp": "Literaturreview"
+        },
+        "undecidable": {}
+      }
+    },
+    "QUV5DQH3": {
+      "categories": {
+        "AI_Literacies": 1,
+        "KI_Sonstige": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Diversitaet": 2,
+        "Feministisch": 2,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "advocate for AI literacy training",
+            "snippet": "advocate for AI literacy training",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "gender bias in these systems is pervasive",
+            "snippet": "gender bias in these systems is pervasive",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "embed and scale gender bias",
+            "snippet": "embed and scale gender bias",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "How can we build gender-smart AI to advance gender equity",
+            "snippet": "How can we build gender-smart AI to advance gender equity",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "ensuring that diversity is a core leadership priority",
+            "snippet": "ensuring that diversity is a core leadership priority",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Feministisch": [
+          {
+            "term": "Use feminist data practices to help fill data gaps.",
+            "snippet": "Use feminist data practices to help fill data gaps.",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "advance gender equity",
+            "snippet": "advance gender equity",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ]
+      },
+      "ts": "2026-08-23T17:28:16.733Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Race_Ethnicity",
+            "Intersectional"
+          ],
+          "AN_Harm_Types": [
+            "Derogatory_Language",
+            "Erasure",
+            "Stereotyping",
+            "Direct_Discrimination"
+          ],
+          "AN_Mitigation_Stage": [
+            "Pre_Processing",
+            "In_Training",
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "Feminist commentary on gender-equitable AI design and governance.",
+          "Studientyp": "Konzept"
+        },
+        "undecidable": {}
+      }
+    },
+    "R7V99ERA": {
+      "categories": {
+        "KI_Sonstige": 2,
+        "Soziale_Arbeit": 2,
+        "Bias_Ungleichheit": 2,
+        "Diversitaet": 1,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "KI_Sonstige": [
+          {
+            "term": "NLP algorithmic fairness in a potential deployed setting",
+            "snippet": "NLP algorithmic fairness in a potential deployed setting",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Soziale_Arbeit": [
+          {
+            "term": "NLP tools for child protective services",
+            "snippet": "NLP tools for child protective services",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Our results show consistent racial bias in NER",
+            "snippet": "Our results show consistent racial bias in NER",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "disparities in model performance over case notes about black and white families",
+            "snippet": "disparities in model performance over case notes about black and white families",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "algorithmic fairness",
+            "snippet": "algorithmic fairness",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ]
+      },
+      "ts": "2026-08-23T17:28:16.733Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Race_Ethnicity"
+          ],
+          "AN_Harm_Types": [
+            "Disparate_Performance",
+            "Indirect_Discrimination"
+          ],
+          "AN_Mitigation_Stage": [
+            "None"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Child_Family_Welfare"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "Empirical evaluation of NLP fairness risks in CPS case notes.",
+          "Studientyp": "Empirisch"
+        },
+        "undecidable": {}
+      }
+    },
+    "VSZM7CT6": {
+      "categories": {
+        "AI_Literacies": 2,
+        "KI_Sonstige": 2,
+        "Soziale_Arbeit": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 1,
+        "Diversitaet": 1,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "We foresee a greater impetus to include critical digital literacies in social wo",
+            "snippet": "We foresee a greater impetus to include critical digital literacies in social work education",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "AI systems are created by humans",
+            "snippet": "AI systems are created by humans",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Soziale_Arbeit": [
+          {
+            "term": "As social work educators, we have begun to wonder what the implications of AI in",
+            "snippet": "As social work educators, we have begun to wonder what the implications of AI in the academy will have for social work education",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "bias and structural inequity can be built into them",
+            "snippet": "bias and structural inequity can be built into them",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "AI algorithms may reinforce racial and gender stereotypes",
+            "snippet": "AI algorithms may reinforce racial and gender stereotypes",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "critical digital literacies in social work education",
+            "snippet": "critical digital literacies in social work education",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "fairness, privacy, transparency, and accountability",
+            "snippet": "fairness, privacy, transparency, and accountability",
+            "ts": "2026-08-23T17:28:16.733Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ]
+      },
+      "ts": "2026-08-23T17:28:16.733Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Race_Ethnicity"
+          ],
+          "AN_Harm_Types": [
+            "Stereotyping",
+            "Indirect_Discrimination"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Education_Professional"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "Conceptual social-work education paper on AI and critical digital literacies.",
+          "Studientyp": "Theoretisch"
+        },
+        "undecidable": {}
+      }
+    }
+  }
+}

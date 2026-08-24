@@ -1,0 +1,148 @@
+{
+  "schema": "femprompt-markdown-agent-qc/0.1",
+  "reviewer": "Codex subagent source QC E",
+  "reviewed_at": "2026-08-24",
+  "records": [
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1007/s43681-025-00926-y",
+      "title": "Toward substantive intersectional algorithmic fairness: desiderata for a feminist approach",
+      "pdf_file": "generated/pdfs/codex-websearch-2026/014fa29a31624d80e530.pdf",
+      "markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-clean/014fa29a31624d80e530.md",
+      "automated_warning": "Automated validation: PASS",
+      "identity_match": true,
+      "body_complete": true,
+      "tables": {
+        "pdf_semantic_tables": 2,
+        "markdown_semantic_tables": 2,
+        "material_loss": false,
+        "basis": "Das PDF enthält zwei semantische Tabellen: Tabelle 1 mit sechs Kritikbereichen formaler intersektionaler algorithmischer Fairness und Tabelle 2 mit sechs Desiderata. Beide Tabellen sind im Markdown vollständig als Pipe-Tabellen mit Beschriftungen, Kategorien und Erläuterungen vorhanden. Die automatische PDF-Tabellenzahl 0 ist für die linienarmen Springer-Tabellen unzutreffend."
+      },
+      "decision": "approved_for_screening",
+      "issues": [
+        "Zahlreiche DOI-URLs im Literaturverzeichnis enthalten durch den PDF-Satz zusätzliche Leerzeichen und Trennungen.",
+        "Tabelle 2 beginnt im Markdown mit einer zusammengezogenen Beschriftungs- und Kopfzeile; die sechs Desiderata und ihre Erläuterungen bleiben semantisch zuordenbar.",
+        "Einzelne Worttrennungen wurden als Leerzeichen-Hyphen-Kombinationen übernommen."
+      ],
+      "evidence": [
+        "PDF- und Markdown-Seite 1 stimmen bei Titel, Marie Mirsch, Laila Wegner, Jonas Strube und Carmen Leicht-Scholten, Received-, Accepted- und Published-online-Daten sowie Abstract überein.",
+        "Alle PDF-Seiten 1–20 besitzen genau einen korrespondierenden PAGE-Marker im Markdown.",
+        "PDF-Seite 6 enthält Tabelle 1 und PDF-Seite 8 Tabelle 2; beide Tabellen wurden gegen die Markdown-Zeilen 145 ff. und 203 ff. auf Kategorien und Desiderata geprüft.",
+        "Die Überschriftenfolge Introduction, Authors positionality, Theoretical foundations, Formal intersectional algorithmic fairness mit Unterabschnitten 3.1–3.3.6, Substantive intersectional algorithmic fairness, Conclusion, Declarations und References ist vollständig.",
+        "PDF- und Markdown-Ende enthalten die Referenzen 119–137 und den Publisher’s note."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1098/rsta.2025.0125",
+      "title": "Mitigating medical bias in large language models by prompt engineering: an empirical study of effectiveness and trade-offs",
+      "pdf_file": "generated/pdfs/codex-websearch-2026/136b6db72d8a7b8d390c.pdf",
+      "markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-clean/136b6db72d8a7b8d390c.md",
+      "automated_warning": "Automated validation: PASS",
+      "identity_match": true,
+      "body_complete": true,
+      "tables": {
+        "pdf_semantic_tables": 3,
+        "markdown_semantic_tables": 3,
+        "material_loss": false,
+        "basis": "Die drei nummerierten Ergebnistabellen des PDFs sind im Markdown als drei Pipe-Tabellen enthalten: McNemar-p-Werte, Token- und Laufzeitvergleich sowie Qwen3-Genauigkeit unter alternativen Promptformulierungen. Spalten, Modelle, Strategien und Werte sind erhalten."
+      },
+      "decision": "approved_for_screening",
+      "issues": [
+        "Die sechs Abbildungen sind als vollständige Beschriftungen mit Bildplatzhaltern repräsentiert; einzelne Heatmap- und Balkenwerte bleiben nur im PDF visuell verfügbar, die wesentlichen Vergleiche und Kennzahlen stehen zusätzlich in Text und Tabellen.",
+        "Der Download-Footer „on 06 August 2026“ wurde als letzter Markdown-Text übernommen.",
+        "Einzelne Literaturangaben, besonders Referenz 39, sind am Markdown-Ende typografisch zusammengezogen."
+      ],
+      "evidence": [
+        "Das King’s-Portal-Deckblatt auf PDF-Seite 1 und der Artikelbeginn auf PDF-Seite 2 stimmen mit dem Markdown bei DOI, Version, Titel sowie Ying Xiao, Zhenpeng Chen und Jie Zhang überein.",
+        "Alle PDF-Seiten 1–17 besitzen genau einen korrespondierenden PAGE-Marker im Markdown.",
+        "PDF-Seiten 9 und 12 enthalten Tabellen 1–3; alle drei Beschriftungen, Promptstrategien, Modelle und Ergebniswerte wurden im Markdown wiedergefunden.",
+        "Die PDF-Seiten 7–10 zeigen Figures 1–6; das Markdown enthält alle sechs Beschriftungen, Bildplatzhalter und die narrativen Ergebnisangaben zu Biasreduktion, Accuracy und Pareto-Trade-offs.",
+        "Introduction, Preliminaries, Experimental design, Results mit vier Unterabschnitten, Discussion, Conclusion, Appendix A und References sind vollständig; das Referenzende 40–43 ist vorhanden."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1038/s41746-026-02584-8",
+      "title": "New model, old risks: sociodemographic bias and adversarial hallucinations vulnerability in GPT-5",
+      "pdf_file": "generated/pdfs/codex-websearch-2026/1e429407d9b091311a65.pdf",
+      "markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-clean/1e429407d9b091311a65.md",
+      "automated_warning": "Automated validation: PASS",
+      "identity_match": true,
+      "body_complete": true,
+      "tables": {
+        "pdf_semantic_tables": 0,
+        "markdown_semantic_tables": 0,
+        "material_loss": false,
+        "basis": "Der dreiseitige Comment enthält keine semantische Tabelle. PDF und Markdown enthalten folgerichtig keine nummerierte Tabelle."
+      },
+      "decision": "approved_for_screening",
+      "issues": [
+        "Figure 1 ist im Markdown als Bildplatzhalter mit vollständiger Beschriftung repräsentiert; die Prozentpunktdifferenzen und Hauptergebnisse stehen zusätzlich im Fließtext.",
+        "Das PDF-Ligaturzeichen „fi“ wurde in mehreren Wörtern als „/uniFB01“ übernommen.",
+        "Zwei technische Zeichensätze „1234567890():,;“ stehen am Markdown-Anfang, ohne Titel oder Artikeltext zu verdrängen."
+      ],
+      "evidence": [
+        "PDF- und Markdown-Seite 1 stimmen bei Titel, acht Autor:innen und der einleitenden Zusammenfassung zu 500 Emergency-Vignetten und 32 soziodemografischen Labels überein.",
+        "Alle drei PDF-Seiten besitzen genau einen korrespondierenden PAGE-Marker im Markdown.",
+        "Evaluation Design, Key Findings, Interpretation and Context, Implications for LLM Governance, Methodological Considerations, Data availability und References erscheinen vollständig und in Quellreihenfolge.",
+        "Figure 1 auf PDF-Seite 2 und ihre Beschriftung sind im Markdown vorhanden; die berichteten Unterschiede nach Alter, Geschlecht und Einkommen werden im Text wiedergegeben.",
+        "PDF- und Markdown-Ende enthalten Acknowledgements, Author contributions, Competing interests, Additional information, Open-Access-Lizenz und © The Author(s) 2026."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/26408066.2026.2616711",
+      "title": "Small Models Achieve Large Language Model Performance: Evaluating Reasoning-Enabled AI for Secure Child Welfare Research",
+      "pdf_file": "generated/pdfs/codex-websearch-2026/5fa4fb41e396f11b2c6e.pdf",
+      "markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-clean/5fa4fb41e396f11b2c6e.md",
+      "automated_warning": "Automated validation: PASS",
+      "identity_match": true,
+      "body_complete": true,
+      "tables": {
+        "pdf_semantic_tables": 4,
+        "markdown_semantic_tables": 4,
+        "material_loss": false,
+        "basis": "Das PDF enthält vier nummerierte Modellleistungstabellen. Alle vier sind im Markdown vollständig vorhanden. Tabelle 1 wird wegen ihres Seitenumbruchs über PDF-Seiten 41–42 als zwei aufeinanderfolgende Pipe-Blöcke dargestellt; daraus entstehen fünf technische Blöcke für vier semantische Tabellen."
+      },
+      "decision": "approved_for_screening",
+      "issues": [
+        "Die Markdown-PAGE-Marker 36–38 fehlen; der vollständige Referenztext dieser PDF-Seiten ist jedoch zwischen PAGE 35 und PAGE 39 erhalten und wurde anhand charakteristischer Einträge von Perron, Sokol, Wang, Wu, Yang und Ziems verifiziert.",
+        "Figure 1 ist als Bildplatzhalter mit Beschriftung repräsentiert; die Cohen-Kappa-Werte werden zusätzlich in Tabellen 1–4 und im Ergebnisteil berichtet.",
+        "Das Literaturverzeichnis wurde auf den PDF-Seiten 34–38 weitgehend zu wenigen langen Markdown-Listenabsätzen zusammengezogen; einzelne DOI-URLs fehlen oder sind vom Eintrag getrennt.",
+        "Die vier Ergebnistabellen stehen im Quell-PDF als Endtabellen auf Seiten 41–48 und nicht unmittelbar an den Einfügemarkern im Haupttext; diese Quellstruktur bleibt im Markdown erkennbar."
+      ],
+      "evidence": [
+        "PDF- und Markdown-Seite 1 stimmen bei Titel, Zia Qi, Brian E. Perron, Bryan G. Victor, Dragan Stoll und Joseph P. Ryan sowie Institutionen, Author Note und Abstract überein.",
+        "Die PDF-Seiten 1–35 und 39–48 besitzen korrespondierende PAGE-Marker; der Text der nicht markierten Seiten 36–38 ist ohne materiellen Verlust im vorhergehenden Markdown-Segment enthalten.",
+        "Die Hauptgliederung Benchmarking Approach, Challenges, Architecture, Purpose, Materials and Methods, Results, Discussion, Limitations, Conclusion, Declaration und References ist vollständig.",
+        "PDF-Seite 39 enthält Figure 1; PDF-Seiten 41–48 enthalten Tabellen 1–4. Abbildungsbeschriftung und sämtliche Modellzeilen, κ-, Sensitivitäts-, Spezifitäts- und Laufzeitwerte der vier Tabellen sind im Markdown vorhanden.",
+        "Das PDF endet auf Seite 48 mit der Anmerkung zu Tabelle 4; das Markdown endet mit derselben Stichprobengröße n = 500 und derselben Tabellenanmerkung."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/02615479.2026.2635471",
+      "title": "Promoting AI literacy in social work education: lessons from an interdisciplinary course for social work students",
+      "pdf_file": "generated/pdfs/codex-websearch-2026/62d8ff0c669bf7e511d0.pdf",
+      "markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-clean/62d8ff0c669bf7e511d0.md",
+      "automated_warning": "Automated validation: PASS",
+      "identity_match": true,
+      "body_complete": true,
+      "tables": {
+        "pdf_semantic_tables": 1,
+        "markdown_semantic_tables": 1,
+        "material_loss": false,
+        "basis": "Das PDF enthält in Appendix B eine semantische Dreispaltentabelle mit den SNAIL-Items nach Technical Understanding, Critical Appraisal und Practical Application. Das Markdown gibt diese vollständig als eine Pipe-Tabelle wieder. Die automatische PDF-Zahl 0 hat die linienarme Anhangstabelle nicht erkannt."
+      },
+      "decision": "approved_for_screening",
+      "issues": [
+        "Figures 1–4 sind als Bildplatzhalter mit Beschriftungen repräsentiert; die zentralen Pre-/Post-Werte, CSA-Gains, Teilnehmendenrückmeldungen und vier Integrationsdimensionen werden im Fließtext erläutert.",
+        "Die Titelseite enthält mehrere leere Bildplatzhalter und ein einzelnes Artefaktzeichen „曲“ aus den Verlagsfunktionen.",
+        "Die Anhangstabelle enthält durch die mehrspaltige PDF-Struktur einzelne zusammengezogene Itemzeilen, bleibt jedoch nach den drei SNAIL-Dimensionen semantisch lesbar."
+      ],
+      "evidence": [
+        "PDF-Seite 1 und Markdown-Seite 1 stimmen bei Journal, Titel, Joshua Weber und Lauri Goldkind, DOI und Veröffentlichungsdatum 24. Februar 2026 überein; PDF-Seite 2 und Markdown-Seite 2 enthalten denselben Abstract und Artikelbeginn.",
+        "Alle PDF-Seiten 1–18 besitzen genau einen korrespondierenden PAGE-Marker im Markdown.",
+        "Introduction, Digital literacy, Course description, Methods, Findings, Discussion, Limitations, Conclusion, Notes, Acknowledgments, Disclosure, ORCID, References und Appendices A–B sind vollständig.",
+        "PDF-Seiten 9, 10 und 12 enthalten Figures 1–4; alle vier Beschriftungen, Bildplatzhalter und die zugehörigen Ergebnispassagen stehen im Markdown.",
+        "PDF-Seite 18 enthält die Appendix-B-Tabelle; die vollständige dreidimensionale Itemliste bildet zugleich das Markdown-Ende."
+      ]
+    }
+  ]
+}

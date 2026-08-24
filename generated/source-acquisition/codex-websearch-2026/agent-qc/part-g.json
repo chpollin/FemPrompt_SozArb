@@ -1,0 +1,148 @@
+{
+  "schema": "femprompt-markdown-agent-qc/0.1",
+  "reviewer": "Codex subagent source QC G",
+  "reviewed_at": "2026-08-24",
+  "records": [
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.18653/v1/2026.acl-long.1094",
+      "title": "InsideOut: Measuring and Mitigating Insider–Outsider Bias in Interview Script Generation",
+      "pdf_file": "generated/pdfs/codex-websearch-2026/c42b463f9ba115503a58.pdf",
+      "markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-clean/c42b463f9ba115503a58.md",
+      "automated_warning": "Automated validation: PASS",
+      "identity_match": true,
+      "body_complete": true,
+      "tables": {
+        "pdf_semantic_tables": 12,
+        "markdown_semantic_tables": 12,
+        "material_loss": false,
+        "basis": "Das PDF enthält zwölf nummerierte Tabellen. Das Markdown enthält für Tabellen 1–12 jeweils Beschriftung und semantischen Inhalt; komplexe beziehungsweise mehrseitige Tabellen erzeugen dreizehn technische Pipe-Tabellenblöcke, ohne eine semantische Tabelle auszulassen."
+      },
+      "decision": "approved_for_screening",
+      "issues": [
+        "Die zweispaltige erste PDF-Seite wird im Markdown nicht vollständig in visueller Lesereihenfolge linearisiert: Der Beginn der Introduction steht vor dem danach eingefügten Abstract; beide Texte sind vollständig vorhanden.",
+        "Figures 1–5 besitzen vollständige Beschriftungen und fünf Bildplatzhalter. Ausgewählte Beschriftungen innerhalb der Diagramme wurden linearisiert; die visuellen Beziehungen bleiben nur im PDF erhalten, während Text und Tabellen die zentralen Befunde wiedergeben.",
+        "Sieben Display-Formeln sind als `formula-not-decoded` markiert. Variablendefinitionen, methodische Erläuterungen und die berichteten Kennzahlen bleiben im Fließtext und in Tabellen erhalten."
+      ],
+      "evidence": [
+        "PDF- und Markdown-Seite 1 stimmen bei Titel, Yixin Wan, Xingrun Chen und Kai-Wei Chang sowie Institution und Abstract überein; das PDF weist den Beitrag als ACL-2026-Langpaper auf den Proceedings-Seiten 23864–23883 aus.",
+        "Alle 20 PDF-Seiten besitzen genau einen korrespondierenden PAGE-Marker im Markdown.",
+        "Die Überschriftenfolge von Introduction, Related Work, Benchmark, Evaluation, Mitigation, Conclusion, Limitations, Ethics Statement und References bis zu den Anhängen A–D ist vollständig.",
+        "Figures 1–5 und Tables 1–12 wurden gegen das PDF geprüft. Alle Beschriftungen sind vorhanden; sämtliche tabellarischen Modell-, Kultur-, Prompt-, Bewertungs- und Agententrace-Inhalte bleiben zuordenbar.",
+        "PDF und Markdown enden mit Table 12, dem Eingabeprompt und den vollständigen zehn generierten Fairness Intervention Pillars."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.3390/ai7010024",
+      "title": "No Free Lunch in Language Model Bias Mitigation? Targeted Bias Reduction Can Exacerbate Unmitigated LLM Biases",
+      "pdf_file": "generated/pdfs/codex-websearch-2026/cf8d8fbb3db223f01b6c.pdf",
+      "markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-clean/cf8d8fbb3db223f01b6c.md",
+      "automated_warning": "Automated validation: PASS",
+      "identity_match": true,
+      "body_complete": true,
+      "tables": {
+        "pdf_semantic_tables": 1,
+        "markdown_semantic_tables": 1,
+        "material_loss": false,
+        "basis": "Das PDF enthält Table 1 mit zehn Modellen, sieben Modellfamilien und Parameterzahlen. Diese Tabelle ist im Markdown vollständig als ein Pipe-Tabellenblock vorhanden."
+      },
+      "decision": "approved_for_screening",
+      "issues": [
+        "Der lokale Volltext ist ausdrücklich der Preprint `arXiv:2511.18635v1` vom 23. November 2025. Er ist eine aufgezeichnete alternative Fassung; die bibliografisch bevorzugte Version of Record erschien unter DOI 10.3390/ai7010024 am 13. Januar 2026 und ist nicht der lokale PDF-Inhalt.",
+        "Figures 1–6 sind als sechs Bildplatzhalter mit vollständigen Beschriftungen erhalten. Einzelne Heatmap-, Scatter- und Verteilungswerte sind nur im PDF visuell lesbar; die zentralen Vergleiche werden zusätzlich im Ergebnisteil beschrieben.",
+        "Vier mathematische Ausdrücke sind als `formula-not-decoded` markiert; Definitionen von LMS, SS, ICAT und den Interventionen sowie die für das Screening wesentlichen Aussagen bleiben im Text erhalten."
+      ],
+      "evidence": [
+        "PDF-Seite 1 trägt den Identifikator `arXiv:2511.18635v1 [cs.CL] 23 Nov 2025`; Titel sowie Shireen Chand, Faith Baca und Emilio Ferrara stimmen mit dem Markdown überein.",
+        "Alle 19 Seiten des Preprint-PDF besitzen genau einen korrespondierenden PAGE-Marker im Markdown.",
+        "Introduction, Related Work, Methodology mit StereoSet, Modellen und vier Interventionstechniken, Auditing Framework, Results, Discussion, Conclusions und References stehen vollständig in Quellreihenfolge.",
+        "Table 1 sowie Figures 1–6 wurden gegen PDF-Seiten 4 und 6 sowie 9–13 geprüft; Beschriftungen, Modellliste und zugehörige Ergebnispassagen sind vorhanden.",
+        "PDF und Markdown enden mit der vollständigen nummerierten Referenzfolge 1–49."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.55121/jele.v2i1.1050",
+      "title": "Artificial Intelligence and Case-Based Learning in Social Work Education: Pedagogical Considerations and Future Directions",
+      "pdf_file": "generated/pdfs/codex-websearch-2026/e98f1e62b53a093069fc.pdf",
+      "markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-clean/e98f1e62b53a093069fc.md",
+      "automated_warning": "Automated validation: PASS",
+      "identity_match": true,
+      "body_complete": true,
+      "tables": {
+        "pdf_semantic_tables": 0,
+        "markdown_semantic_tables": 0,
+        "material_loss": false,
+        "basis": "Der dreizehnseitige theoretische Beitrag enthält weder nummerierte noch anderweitig semantische Tabellen. Das Markdown enthält entsprechend keine Tabelle."
+      },
+      "decision": "approved_for_screening",
+      "issues": [
+        "Die DOI 10.55121/jele.v2i1.1050 steht auf der PDF-Titelseite zweimal ausgeschrieben, wurde im Markdown nach den Feldern DOI und CITATION jedoch jeweils ausgelassen. Titel, Autor, Journal, Band, Heft und Seitenbereich bleiben erhalten.",
+        "Zwei Bildplatzhalter betreffen Layout- beziehungsweise Verlagsgrafiken der Titelseite; das PDF enthält keine nummerierte Inhaltsabbildung.",
+        "Das zweispaltige Literaturverzeichnis ist abschnittsweise zu langen Listenzeilen zusammengezogen; mehrere DOI-URLs enthalten Leerzeichen oder Seitenumbruchfragmente. Die Referenzfolge und bibliografischen Kerndaten bleiben lesbar."
+      ],
+      "evidence": [
+        "PDF- und Markdown-Seite 1 stimmen bei Titel, Mark Taylor, Goldsmiths-Zugehörigkeit, Abstract und Publikationsdaten überein.",
+        "Alle 13 PDF-Seiten besitzen genau einen korrespondierenden PAGE-Marker im Markdown.",
+        "Introduction, Pedagogical Foundations, Pedagogical Risks, Implications mit Unterabschnitten 4.1–4.6, Conclusions und sämtliche Erklärungsabschnitte erscheinen vollständig und in Quellreihenfolge.",
+        "Die Sichtprüfung aller Seiten bestätigt, dass das PDF keine semantischen Tabellen oder nummerierten Abbildungen enthält; fortlaufender Haupttext und Abschnittsübergänge sind im Markdown vorhanden.",
+        "PDF und Markdown enden mit den Referenzen 1–58; die letzte Referenz ist Reynolds (2019)."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/02615479.2026.2669634",
+      "title": "A kind of magic? Artificial intelligence-assisted recording: developing principles for an AI-informed social work curriculum",
+      "pdf_file": "generated/pdfs/codex-websearch-2026/e9fb8b7679eaf1023485.pdf",
+      "markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-clean/e9fb8b7679eaf1023485.md",
+      "automated_warning": "Automated validation: PASS; direct QC found a material omission",
+      "identity_match": true,
+      "body_complete": false,
+      "tables": {
+        "pdf_semantic_tables": 0,
+        "markdown_semantic_tables": 0,
+        "material_loss": false,
+        "basis": "Das PDF enthält keine semantische Tabelle. Figure 1 ist eine Abbildung und wird daher nicht als Tabelle gezählt."
+      },
+      "decision": "requires_reconversion",
+      "issues": [
+        "Der vollständige Abstract auf PDF-Seite 3 fehlt im Markdown. Verloren sind damit unter anderem die Angaben zu 152 befragten Praktiker:innen, sieben Fokusgruppenteilnehmenden und mehr als 255 Freitextantworten sowie die Zusammenfassung der fünf Spannungsfelder und fünf Curriculumprinzipien.",
+        "Die ebenfalls auf PDF-Seite 3 stehenden Felder ARTICLE HISTORY mit Received 19 March 2026 und Accepted 22 April 2026 sowie die Keywords fehlen vollständig.",
+        "Alle zwanzig PAGE-Marker sind vorhanden; die automatische Seitenabdeckungsprüfung erkennt den inhaltlichen Ausfall innerhalb von PAGE 3 daher nicht.",
+        "Figure 1 ist als Bildplatzhalter mit vollständiger Beschriftung erhalten. Die fünf darin visualisierten Curriculumprinzipien werden anschließend einzeln im Fließtext erläutert."
+      ],
+      "evidence": [
+        "Repository-Deckblatt, Verlagsdeckblatt und Artikelbeginn stimmen bei Titel, Richard Ingram, Social Work Education und DOI 10.1080/02615479.2026.2669634 zwischen PDF und Markdown überein.",
+        "PDF-Seite 3 enthält zwischen Autor:innenangabe und Introduction einen Abstractblock, ARTICLE HISTORY und KEYWORDS; das Markdown springt an derselben Stelle von Autor und Zugehörigkeit unmittelbar zur Überschrift Introduction.",
+        "Exakte Abstractanfänge wie `The deployment of AI tools in social work practice settings` und die Formulierung `administrative relief versus the reflective value of writing` kommen im gesamten Markdown nicht vor.",
+        "Der nachfolgende Artikelkörper von Introduction und Methodology über die fünf Tensions, Implications, fünf Propositions, Conclusion und Disclosure statement ist vollständig; alle 20 PDF-Seiten besitzen PAGE-Marker.",
+        "PDF und Markdown enden mit demselben Literaturverzeichnis bis Wroe und Lloyd (2020)."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1007/s43681-026-01161-9",
+      "title": "Beyond inclusion: feminist AI for transformative justice in STEM",
+      "pdf_file": "generated/pdfs/codex-websearch-2026/eb3406e6b996a77368bd.pdf",
+      "markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-clean/eb3406e6b996a77368bd.md",
+      "automated_warning": "Automated validation: PASS",
+      "identity_match": true,
+      "body_complete": true,
+      "tables": {
+        "pdf_semantic_tables": 0,
+        "markdown_semantic_tables": 0,
+        "material_loss": false,
+        "basis": "Der neunseitige Springer-Beitrag enthält keine semantische Tabelle. Das Markdown enthält folgerichtig keine Tabelle."
+      },
+      "decision": "approved_for_screening",
+      "issues": [
+        "Zahlreiche DOI- und Webadressen im Literaturverzeichnis auf PDF-Seiten 8–9 wurden mit Zeichenabständen und Zeilenumbruchartefakten übernommen; nummerierte Referenzen und bibliografische Kerndaten bleiben zuordenbar.",
+        "Fünf Bildplatzhalter betreffen Verlags-, Seiten- oder Layoutgrafiken. Das PDF enthält keine nummerierte Inhaltsabbildung.",
+        "Auf der ersten zweispaltigen Seite stehen Autor:innen- und Zugehörigkeitsangaben im Markdown innerhalb des Haupttextflusses; der Argumentationsinhalt bleibt vollständig."
+      ],
+      "evidence": [
+        "PDF- und Markdown-Seite 1 stimmen bei Titel, Tanja Kubes, DOI, Received-, Accepted- und Published-online-Daten, Abstract und Keywords überein.",
+        "Alle neun PDF-Seiten besitzen genau einen korrespondierenden PAGE-Marker im Markdown.",
+        "Die Abschnitte 1–6 von Generative AI and the reproduction of epistemic injustice in STEM bis Reimagining STEM education, anschließend Declarations und References, sind vollständig und in Quellreihenfolge vorhanden.",
+        "Die Sichtprüfung aller neun Seiten bestätigt, dass weder semantische Tabellen noch nummerierte Abbildungen ausgelassen werden konnten; der textbasierte FAIF-Aufbau bleibt vollständig.",
+        "PDF und Markdown enden mit Referenz 56 sowie dem Publisher's note."
+      ]
+    }
+  ]
+}

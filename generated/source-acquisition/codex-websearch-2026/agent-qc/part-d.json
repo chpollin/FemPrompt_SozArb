@@ -1,0 +1,118 @@
+{
+  "schema": "femprompt-markdown-agent-qc/0.1",
+  "reviewer": "round2_identity_followup",
+  "reviewed_at": "2026-08-24",
+  "records": [
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1007/s10639-026-13908-2",
+      "title": "Teachers’ perceptions of generative AI in gender-inclusive STEM education: a grounded theory study",
+      "pdf_file": "generated/pdfs/codex-websearch-2026/20972ab37764965190de.pdf",
+      "markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-clean/20972ab37764965190de.md",
+      "automated_warning": "Table mismatch: PDF=0, MD=3",
+      "identity_match": true,
+      "body_complete": true,
+      "tables": {
+        "pdf_semantic_tables": 3,
+        "markdown_semantic_tables": 3,
+        "material_loss": false,
+        "basis": "Das PDF enthält die drei nummerierten Tabellen 1–3. Im Markdown sind alle drei Tabellen mit Beschriftungen, Spalten, Teilnehmerzuordnungen, Kategorien und Interviewzitaten als Pipe-Tabellen vorhanden. Die automatische PDF-Zahl 0 ist eine Fehlklassifikation der linienarmen Springer-Tabellen."
+      },
+      "decision": "approved_for_screening",
+      "issues": [
+        "Die beiden Grounded-Theory-Modelle in Abbildungen 1 und 2 sind als Beschriftung mit Bildplatzhalter repräsentiert; Modellstruktur und screeningrelevante Interpretation werden im umgebenden Text erläutert.",
+        "In den Referenzen wurden zahlreiche DOI-URLs mit zusätzlichen Leerzeichen und Trennungen konvertiert; die Literaturangaben selbst sind vorhanden.",
+        "Einzelne Worttrennungen aus dem Blocksatz wurden als Leerzeichen-Hyphen-Kombination übernommen."
+      ],
+      "evidence": [
+        "PDF-Seite 1 und Markdown-Seite 1 stimmen bei Titel, vier Autor:innen, Received-, Accepted- und Published-online-Daten sowie Abstract überein.",
+        "Alle PDF-Seiten 1–36 besitzen genau einen korrespondierenden PAGE-Marker im Markdown.",
+        "PDF-Seiten 7, 13 und 14 enthalten Tabellen 1–3; sämtliche Beschriftungen und Inhalte wurden in den drei Markdown-Tabellen wiedergefunden.",
+        "PDF-Seiten 20–21 zeigen die Modelle v1 und v2; das Markdown enthält beide Beschriftungen, Bildplatzhalter und die erläuternden Abschnitte 5.1–5.4.",
+        "Die Überschriftenfolge Introduction, Background, Methodology, Findings, Discussion, Conclusion, Declarations, References und Authors and Affiliations ist vollständig; PDF- und Markdown-Ende enthalten denselben Affiliationsblock."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1186/s12910-026-01496-2",
+      "title": "Algorithmic bias in clinical resource allocation by a large language model: a cross-sectional in-silico evaluation of 13,608 decisions",
+      "pdf_file": "generated/pdfs/codex-websearch-2026/45a89ba69a2b7d1a99cd.pdf",
+      "markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-clean/45a89ba69a2b7d1a99cd.md",
+      "automated_warning": "Table mismatch: PDF=0, MD=3",
+      "identity_match": true,
+      "body_complete": true,
+      "tables": {
+        "pdf_semantic_tables": 3,
+        "markdown_semantic_tables": 3,
+        "material_loss": false,
+        "basis": "Das PDF enthält die nummerierten Tabellen 1–3. Alle drei sind im Markdown vollständig als Pipe-Tabellen mit Odds Ratios, Risikodifferenzen, Regressionskoeffizienten, Konfidenzintervallen und p-Werten enthalten. Die automatische PDF-Zahl 0 beruht auf der nicht erkannten tabellarischen Satzstruktur."
+      },
+      "decision": "approved_for_screening",
+      "issues": [
+        "Die Balkendiagramme in Abbildungen 1 und 2 sind nur als Bildplatzhalter mit vollständigen Beschriftungen repräsentiert; dieselben Prädiktoren und Effektwerte stehen in Tabellen 1–3 und im Ergebnisteil.",
+        "Einzelne DOI- und Lizenz-URLs sind durch den PDF-Zeilenumbruch mit zusätzlichen Leerzeichen konvertiert."
+      ],
+      "evidence": [
+        "PDF- und Markdown-Anfang stimmen bei Artikeltyp, Titel, Sid Garth Gandhi und Michael Balas sowie Abstract und Keywords überein.",
+        "Alle PDF-Seiten 1–10 besitzen genau einen korrespondierenden PAGE-Marker im Markdown.",
+        "PDF-Seite 5 enthält Tabelle 1, PDF-Seite 7 die Tabellen 2 und 3; die drei Markdown-Tabellen enthalten die vollständigen Zeilen und Kennzahlen.",
+        "Die Abbildungsbeschriftungen 1 und 2 sowie die narrativen Befunde zu gruppierter und einzelner Variablenwichtigkeit sind im Markdown erhalten.",
+        "Die Folge Background, Methods, Results, Discussion, Conclusion, Erklärungen und References ist vollständig; das Markdown endet wie PDF-Seite 10 mit Referenzen und Publisher’s note."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1038/s44360-026-00152-8",
+      "title": "Addressing benchmarking gaps in large language models for health and medicine with dynamic red-teaming",
+      "pdf_file": "generated/pdfs/codex-websearch-2026/98a0f77c12e1ee6328c0.pdf",
+      "markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-clean/98a0f77c12e1ee6328c0.md",
+      "automated_warning": "Table mismatch: PDF=35, MD=0",
+      "identity_match": true,
+      "body_complete": true,
+      "tables": {
+        "pdf_semantic_tables": 0,
+        "markdown_semantic_tables": 0,
+        "material_loss": false,
+        "basis": "Der Artikel enthält keine nummerierte oder semantische Tabelle. Die 35 automatischen PDF-Treffer entstehen aus Raster-, Heatmap-, Prompt- und Panelstrukturen der sechs mehrteiligen Abbildungen 1–6. Das Markdown enthält folgerichtig keine Pipe-Tabelle."
+      },
+      "decision": "approved_for_screening",
+      "issues": [
+        "Die sechs zentralen mehrteiligen Abbildungen sind im Markdown als Bildplatzhalter mit vollständigen Beschriftungen repräsentiert; einzelne modellbezogene Detailwerte und Heatmap-Zellen bleiben ausschließlich im PDF visuell verfügbar.",
+        "Die Abbildungsüberschrift zu Figure 6 wurde als Markdown-Überschrift der Ebene 2 klassifiziert, während Figures 1–5 als normale Beschriftungsabsätze erscheinen.",
+        "Das PDF enthält nach der inhaltlichen Seite 17 drei leere Seiten ohne Text oder Abbildungen; für diese leeren Seiten wurden keine Markdown-PAGE-Marker erzeugt."
+      ],
+      "evidence": [
+        "PDF-Seite 1 und Markdown-Seite 1 stimmen bei Titel, vollständigem Autor:innenblock, Received- und Accepted-Daten sowie einleitender Zusammenfassung überein.",
+        "Die inhaltlichen PDF-Seiten 1–17 besitzen korrespondierende PAGE-Marker; die zusätzlichen PDF-Seiten 18–20 sind vollständig leer.",
+        "Die visuelle Prüfung der PDF-Seiten 3–10 zeigt ausschließlich die nummerierten Abbildungen 1–6 und keine Tabelle; alle sechs Beschriftungen und die zugehörigen Bildplatzhalter stehen im Markdown.",
+        "Die screeningrelevanten Ergebniswerte zu Robustness, Privacy, Bias-fairness und Hallucination-factual inaccuracies werden zusätzlich im Fließtext und in den Abbildungsbeschriftungen berichtet.",
+        "Results, Discussion, Methods, Reporting summary, Data und Code availability, References sowie Beitrags- und Lizenzangaben sind vollständig; das Markdown endet mit dem Affiliationsblock der PDF-Seite 17."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/17496535.2026.2619945",
+      "title": "The (Un)Fair Algorithm: Socio-Technical Ethics Work for Artificial Intelligence in Social Work",
+      "pdf_file": "generated/pdfs/codex-websearch-2026/e9be7a01361ab7bae7bb.pdf",
+      "markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-clean/e9be7a01361ab7bae7bb.md",
+      "automated_warning": "Table mismatch: PDF=1, MD=0",
+      "identity_match": true,
+      "body_complete": true,
+      "tables": {
+        "pdf_semantic_tables": 0,
+        "markdown_semantic_tables": 0,
+        "material_loss": false,
+        "basis": "Der Artikel enthält keine semantische Tabelle. Der automatische PDF-Treffer 1 ist der rasterförmige Interface-Screenshot in Abbildung 1 beziehungsweise das Portal-Deckblatt. Beide sind Abbildungs- oder Layoutbestandteile und keine Datentabellen."
+      },
+      "decision": "approved_for_screening",
+      "issues": [
+        "Die dänischen Zeichen in Schrøder und Høybye-Mortensen wurden auf dem Portaldeckblatt und teilweise im Artikeltext als „Schrłder“ beziehungsweise „Hłybye-Mortensen“ fehlkonvertiert; DOI und Werktitel sichern die Identität.",
+        "Die Interface-Screenshots in Abbildungen 1 und 2 sind als Bildplatzhalter mit Beschriftung repräsentiert; die für die Argumentation relevanten Kategorien, Prozentwerte und Fehlzuordnung werden im Fließtext beschrieben.",
+        "Die zweispaltige Referenzliste ist inhaltlich vorhanden, aber im Markdown weitgehend zu langen Absätzen zusammengezogen."
+      ],
+      "evidence": [
+        "Das Portaldeckblatt auf PDF-Seite 1 und der Artikelbeginn auf PDF-Seite 2 stimmen mit den entsprechenden Markdown-Seiten bei Titel, DOI, Venue, Version und drei Autorinnen überein; die Zeichenfehler ändern die Werkzuordnung nicht.",
+        "Alle PDF-Seiten 1–18 besitzen genau einen korrespondierenden PAGE-Marker im Markdown.",
+        "PDF-Seite 5 enthält Abbildung 1 und PDF-Seite 14 Abbildung 2; beide Beschriftungen sowie die erläuternden Passagen zu AICA, Problemkategorien und Fehlzuordnung sind im Markdown vorhanden.",
+        "Die Überschriftenfolge Introduction, AICA, Ethical issues, Materials and methods, Results mit vier Unterabschnitten, Discussion, Note, Disclosure, Funding, Contributors und References ist vollständig.",
+        "PDF- und Markdown-Ende enthalten dieselben letzten Referenzen von Scott und Orlikowski bis Tronto 2012."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "schema": "femprompt-markdown-repair-report/0.1",
+  "reviewer": "Codex subagent source QC G",
+  "repaired_at": "2026-08-24",
+  "records": [
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/02615479.2026.2669634",
+      "title": "A kind of magic? Artificial intelligence-assisted recording: developing principles for an AI-informed social work curriculum",
+      "source_pdf": "generated/pdfs/codex-websearch-2026/e9fb8b7679eaf1023485.pdf",
+      "source_markdown": "generated/source-acquisition/codex-websearch-2026/markdown-clean/e9fb8b7679eaf1023485.md",
+      "repaired_markdown": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/e9fb8b7679eaf1023485.md",
+      "decision": "approved_for_screening",
+      "page_markers_preserved": true,
+      "tables": [],
+      "repaired_segments": [
+        {
+          "segment_id": "abstract",
+          "pdf_page": 3,
+          "source_state": "absent_from_source_markdown",
+          "repaired_state": "complete_source_text_restored_before_introduction",
+          "extraction_methods": [
+            "PyMuPDF full-page text-layer extraction",
+            "pdfplumber positioned crop extraction of the abstract column",
+            "PyMuPDF 3x page render with manual visual comparison"
+          ],
+          "verification": "Both independent text extractions and the high-resolution page render agree on the complete abstract. The repaired text preserves all sentences, the three sample-size statements, the five semicolon-separated tensions, the five curriculum principles, and the closing agents-rather-than-subjects statement in source order.",
+          "status": "verified_complete"
+        },
+        {
+          "segment_id": "article_history",
+          "pdf_page": 3,
+          "source_state": "absent_from_source_markdown",
+          "repaired_state": "complete_heading_and_two_dates_restored_after_abstract",
+          "extraction_methods": [
+            "PyMuPDF full-page text-layer extraction",
+            "pdfplumber positioned crop extraction of the metadata column",
+            "PyMuPDF 3x page render with manual visual comparison"
+          ],
+          "verification": "The heading ARTICLE HISTORY and the two source lines `Received 19 March 2026` and `Accepted 22 April 2026` match both text layers and the rendered metadata column.",
+          "status": "verified_complete"
+        },
+        {
+          "segment_id": "keywords",
+          "pdf_page": 3,
+          "source_state": "absent_from_source_markdown",
+          "repaired_state": "complete_heading_and_keyword_sequence_restored_after_article_history",
+          "extraction_methods": [
+            "PyMuPDF full-page text-layer extraction",
+            "pdfplumber positioned crop extraction of the metadata column",
+            "PyMuPDF 3x page render with manual visual comparison"
+          ],
+          "verification": "The heading KEYWORDS and the exact sequence `Artificial intelligence; AI; social work education; practice; recording` match both text layers and the rendered metadata column.",
+          "status": "verified_complete"
+        }
+      ],
+      "validation": {
+        "utf8_decode": "passed",
+        "source_unchanged": "passed: SHA-256 c13898d5f76817e42bca5f2debe38a18a11b9d228bea719689bfacdb67f48df2",
+        "repaired_sha256": "53934a6a464bdbcf2495846affe2ac32219466aa018ab9e369a3702ec481f9b0",
+        "page_markers": "passed: PAGE 1 through PAGE 20 are identical and sequential in source and repaired Markdown",
+        "repair_delta": "passed: the repaired file differs from the source Markdown only by the three restored segments on PAGE 3 and a normalized final newline",
+        "page_3_text_coverage": "passed: normalized PDF-token recall increased from 0.546 to 0.932",
+        "remaining_body_coverage": "passed: every article-body page from PDF page 3 through 18 has normalized PDF-token recall of at least 0.907",
+        "heading_sequence": "passed: 20 material headings from ABSTRACT through References are present in source order",
+        "beginning": "passed: repository cover, publisher cover, article title, author, and affiliation preceding the repaired segments are unchanged",
+        "ending": "passed: disclosure, references, and terminal Wroe and Lloyd (2020) entry are unchanged",
+        "paths": "passed: source PDF, source Markdown, and repaired Markdown all exist at the recorded paths"
+      },
+      "issues_remaining": []
+    }
+  ]
+}

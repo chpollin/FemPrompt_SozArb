@@ -1,0 +1,83 @@
+{
+  "schema": "femprompt-prisma-lifecycle-contract/1.0",
+  "record_schema": "femprompt-prisma-reviewer/0.5",
+  "states": [
+    "identified",
+    "curated",
+    "agent-annotated",
+    "ai-agent-reviewed",
+    "verified",
+    "publication-approved"
+  ],
+  "roles": [
+    "curation",
+    "screening",
+    "ai_agent_reviewer",
+    "domain_expert",
+    "publication_approval",
+    "validation"
+  ],
+  "transitions": [
+    {
+      "from": "curated",
+      "to": "agent-annotated",
+      "event_type": "agent_annotation",
+      "actor_type": "ai_agent",
+      "role": "screening",
+      "accepted_results": ["completed"]
+    },
+    {
+      "from": "agent-annotated",
+      "to": "ai-agent-reviewed",
+      "event_type": "ai_agent_review",
+      "actor_type": "ai_agent",
+      "role": "ai_agent_reviewer",
+      "accepted_results": ["accepted"]
+    },
+    {
+      "from": "ai-agent-reviewed",
+      "to": "verified",
+      "event_type": "domain_expert_verification",
+      "actor_type": "person",
+      "role": "domain_expert",
+      "accepted_results": ["accepted", "corrected_and_accepted"]
+    },
+    {
+      "from": "verified",
+      "to": "publication-approved",
+      "event_type": "publication_approval",
+      "actor_type": "person",
+      "role": "publication_approval",
+      "accepted_results": ["approved"]
+    }
+  ],
+  "non_transition_events": [
+    {
+      "state": "ai-agent-reviewed",
+      "event_type": "domain_expert_verification",
+      "actor_type": "person",
+      "role": "domain_expert",
+      "results": ["changes_requested", "rejected"]
+    }
+  ],
+  "verification_results": [
+    "accepted",
+    "corrected_and_accepted",
+    "changes_requested",
+    "rejected"
+  ],
+  "check_statuses": ["passed", "failed"],
+  "check_types": [
+    "lifecycle_contract",
+    "schema_validation",
+    "source_identity_validation",
+    "transcription_validation"
+  ],
+  "authority": {
+    "validation": "A deterministic script or schema checks structural and rule conformance. A passed check does not establish scholarly correctness.",
+    "ai_agent_review": "An AI agent checks an annotation against its assigned sources. This review does not establish domain-expert verification.",
+    "verification": "A named domain expert evaluates an artifact against its evidence and scholarly meaning and may accept, correct, request changes, or reject it.",
+    "publication_approval": "A named person authorizes a verified artifact for the public projection."
+  },
+  "propagation": "artifact_local"
+}

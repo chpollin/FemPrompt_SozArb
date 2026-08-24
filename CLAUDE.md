@@ -1,17 +1,17 @@
 # Working Rules for Claude AI Assistant
 
 **Project:** FemPrompt SozArb, a systematic literature review on feminist AI literacies in social work
-**Last Updated:** 2026-08-22
+**Last Updated:** 2026-08-24
 
 ---
 
 ## Core Argument
 
-This project builds an **epistemic infrastructure** for an LLM-assisted literature review. The central thesis is that reliability cannot be presupposed as a property of the system but must be established as a property of the research process. The workflow is organized around **verification checkpoints**, defined points after each AI-assisted step where human or rule-based control checks results before they flow into the next stage. PRISM (`docs/prisma.html`) is the binding screening surface this runs through; per ADR-019 the review counts complete only once all of its data has passed through PRISM under PRISMA 2020 and PRISMA-trAIce, with the items unrepairable in retrospect (the absent round-1 protocol above all) named, not hidden.
+This project implements a traceable workflow for an LLM- and agent-assisted literature review. Reliability is established through recorded evidence, provenance, deterministic validation, source-grounded AI Agent Review, domain-expert verification, and publication approval. PRISM (`docs/prisma.html`) is the governed screening and verification surface. The Grounded Vault carries source-linked knowledge into the literature report and the follow-up paper.
 
-A corpus of papers identified via four proprietary Deep Research systems was processed through a five-step workflow. A **dual assessment track** runs expert and LLM evaluation in parallel on the same ten-category schema, without mutual knowledge. The result is a substantial, asymmetric divergence between the LLM and the expert judgments. This divergence is a motivating illustration of why reliability cannot be presupposed as a property of the system; it is not a finding the review defends but a worked example of why the epistemic infrastructure is needed. Its decomposition (workflow criteria versus content judgement) additionally demonstrates what the recorded per-decision data make analysable; the follow-up paper frames it that way.
+Round one used a comparative expert and LLM assessment under the same ten-category schema. Its divergence remains a motivating illustration and a demonstration of what per-decision records make analysable. Round two uses controlled intake, two operationally isolated AI-agent tracks, a separate source-grounded AI Agent Review, and deferred verification by domain experts. Operational isolation records execution conditions and supports no claim of epistemic independence. Every productive record follows the lifecycle `identified → curated → agent-annotated → ai-agent-reviewed → verified → publication-approved`.
 
-The Forum Wissenschaft 2/2026 paper is submitted and editorially closed (it was written on Google Docs, not in this repo). The active work, tracked in `knowledge/plan.md`, comprises the PRISM screening tool, the follow-up paper (`paper/draft.md`), the human analysis coding (TP4) that fills its synthesis section, the round-2 literature update executed through PRISM, and the round-1 record (Stage R). The follow-up paper's concept frame (operator decisions 2026-07-21): the methodological integration question frames the paper, SQ1-SQ3 are reported as the workflow's yield, the claim stays with the documented case and its published artifacts, the primary reader is a social-work researcher planning an LLM-assisted review.
+The Forum Wissenschaft 2/2026 paper is submitted and editorially closed; it was written on Google Docs and is not maintained in this repository. The remaining work is tracked in `knowledge/plan.md`. It comprises source and corpus readiness, governed round-two agent annotation, full-corpus analysis, Assertion-backed synthesis, domain-expert verification, and publication approval. The canonical manuscript is `research-vault/40_output/paper/paper.md`. Its methodological integration question frames the paper, while SQ1 to SQ3 report the workflow's yield for social-work researchers planning an LLM-assisted review.
 
 ---
 
@@ -27,11 +27,20 @@ Use these terms consistently. They are defined in `knowledge/INDEX.md` (glossary
 
 | Term | Definition |
 |------|------------|
-| Epistemic infrastructure | Systematic arrangement of tools, decision rules, verification checkpoints, and responsibility assignments that establishes reliability in a research process |
-| Distillation pipeline (SKE) | Three-stage knowledge extraction from full texts: LLM extract and classify, deterministic formatting, LLM verification against the original |
-| Dual assessment track | Parallel, independent evaluation by experts and LLM using an identical ten-category schema |
-| Verification checkpoint | Defined point where human or rule-based control checks AI-generated results |
-| Knowledge document | Structured summary of a paper with core finding, methodology, arguments, category evidence, confidence score |
+| Epistemic infrastructure | Systematic arrangement of tools, decision rules, distinct control points, and responsibility assignments that establishes reliability in a research process |
+| Distilled knowledge document | Source-specific structured reduction of a full text with traceable source anchors |
+| Assertion | Atomic evidence-linked statement over one or more distilled knowledge documents |
+| Work | Stable project identity for one scholarly contribution across bibliographic records and publication expressions |
+| Publication Version | Exact Preprint, Accepted Manuscript, proof, Version of Record, corrected Version, or other expression used as evidence |
+| Work-Version registry | Canonical mapping from Zotero records and intake candidates to one Work and one exact Version |
+| Round-1 dual assessment track | Separately recorded expert and LLM assessments used for the first-round comparison |
+| Operational isolation | Separate agent contexts, browser states, assignments, and outputs without an epistemic-independence claim |
+| Source-grounded AI Agent Review | AI-agent check of annotations and evidence against the Paper source |
+| Validation | Deterministic check of structural, referential, or rule conformance; it grants no scholarly authority |
+| Verification | Domain-expert assessment of an artifact against its evidence and scholarly meaning |
+| Final scholarly authority | Domain-expert responsibility for verification, interpretation, and publication approval |
+| Screening lifecycle | Ordered authority states from identification through publication approval |
+| Grounded Vault | Evidence chain from sources through Markdown, distillates, Assertions, and outputs |
 | Confabulation | Generation of coherent but factually unsupported claims (preferred over "hallucination") |
 | Context rot | Degradation of LLM processing quality with increasing input length (Hong et al. 2025) |
 | Sycophancy | LLM tendency to over-agree with prompt presuppositions |
@@ -43,7 +52,7 @@ Use these terms consistently. They are defined in `knowledge/INDEX.md` (glossary
 
 ## Project Overview
 
-The corpus is processed through a five-step workflow (Identification, PDF acquisition, Markdown conversion, knowledge extraction, assessment). The core question is what happens to knowledge when it flows through a distillation pipeline.
+The corpus flows from identification through Zotero curation, Work-Version reconciliation, PDF acquisition, reviewed Docling Markdown, agent annotation, AI Agent Review, internal Grounded Vault synthesis and analysis, artifact-local domain-expert verification, and publication approval. Screening coverage is Work-level; full texts, evidence, distillates, and Assertions retain exact Version provenance.
 
 Three publication layers:
 1. **Distilled knowledge** (`generated/distilled/`): source-grounded paper distillates with stage and verification artefacts.
@@ -79,17 +88,17 @@ The benchmark (the human-LLM divergence and its decomposition, used as a motivat
 | `assessment/` | LLM 5D and human assessment | Complete |
 | `src/publish/` | Deterministic publishers for paper notes, Companion data, schema, and literature landscape | Actively edited |
 | `src/replay/` | Round-1 replay (`replay_round1.py`, self-test against the canonical benchmark) | Yes, with care |
-| `research-vault/` | Subject knowledge of the literature in the Grounded-Vault layer model; `_sources/` and `00_representation/` are gitignored by license lock and are never created here | Yes, with care |
+| `research-vault/` | Subject knowledge in the Grounded-Vault chain; protected source and Markdown layers remain local, while legacy `10_distillates/` and `20_claims/` are read-only migration sources | Yes, with care |
 | `tests/` | PRISM test layers: jsdom harness, Companion smoke suite, browser pilot, pytest, manual checklist | Yes, with care |
-| `paper/` | Follow-up paper (draft, outline, expert questions) | Yes, with care |
+| `paper/` | Expert questions and historical manuscript planning; the canonical paper is `research-vault/40_output/paper/paper.md` | Yes, with care |
 | `config/` | `defaults.yaml` (now lists `generated/` paths; the restructure superseded its do-not-change note) | Yes, with care |
 | `.vault_cache/` | LLM API cache (reproducible) | Do not change |
 | `prompts/` | Versioned prompt governance and changelog | Edit only through a documented prompt version or status change |
-| `skills/prism-agent-review/` | Project-local workflow for controlled PRISM agent tracks and adjudication | Follow the canonical prompt and run manifest |
+| `skills/prism-agent-review/` | Project-local workflow for controlled PRISM agent tracks and source-grounded AI Agent Review | Follow the canonical prompt and run manifest |
 
 ### Knowledge documents
 
-`INDEX.md` (navigation and glossary), `project.md` (identity and theory), `methods.md` (review method, the chain, pipeline, dual assessment, replay verification), `specification.md` (PRISM requirements, ADRs, user stories, design system), `data.md` (tool data substrate), `plan.md` (roadmap, status, decided questions with their ratification status), `journal.md` (session log), `standards.md` (PRISMA, trAIce, RAISE, and this review's conformance state), `update-protocol.md` (round-2 protocol, analysis fields, pilot, coding procedure, RIS), `research-vault.md` (Grounded-Vault model and the distillate audit precondition), `guides/manual-review-checklist.md`. Beside these carriers the paper lane contributes two analysis documents, `analysis-divergence.md` (the licensed TP3 analysis of the round-1 divergence) and `analysis-sq-advisory.md` (the advisory SQ1 to SQ3 coding of TP4, unverified). The per-item PRISMA/trAIce conformance status is a machine-readable artifact at `generated/conformance/conformance_map.yaml`, fed by the R4 replay. Start at `INDEX.md`.
+`INDEX.md` provides navigation and the glossary. `project.md` carries identity, research questions, and theory. `methods.md`, `standards.md`, `specification.md`, and `data.md` describe the review method, reporting frame, PRISM decisions, and data substrate. `governance.md` defines authority and publication rules, `testing.md` the technical guarantees, and `verification.md` the evidence and authority state of externally relevant claims. `plan.md` carries the forward work, `journal.md` the decision provenance, and `handoff.md` the open process inbox. `update-protocol.md` governs round-two identification, screening, coding, and verification. `research-vault.md` defines the active Grounded Vault model. The paper lane contributes `analysis-divergence.md` and the draft `analysis-sq-advisory.md`. The per-item PRISMA and trAIce conformance state remains machine-readable in `generated/conformance/conformance_map.yaml`. Start at `INDEX.md`.
 
 ### Key web files
 
@@ -132,7 +141,7 @@ Architecture rules: no build tool and no framework. Runtime libraries are pinned
 
 ## Pipeline
 
-Workflow: Zotero papers, PDF acquisition (four fallback strategies), Markdown conversion (Docling), three-stage distillation (extract JSON, format Markdown, verify). The acquisition, conversion, and distillation loss chain is quantified in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion, not here.
+Workflow: Zotero papers, Work-Version reconciliation, PDF acquisition (four fallback strategies), Markdown conversion (Docling), three-stage distillation (extract JSON, format Markdown, verify). The acquisition, conversion, and distillation loss chain is quantified in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion, not here.
 
 Knowledge document structure: YAML frontmatter (title, authors, year, type, language, processed, source_file, confidence); sections Core Finding, Research Question, Methodology, Main Arguments, Category Evidence, Assessment Relevance, Key References. Categories live in `_stage1_json/` as booleans, not in the Markdown frontmatter.
 
@@ -143,6 +152,8 @@ Knowledge document structure: YAML frontmatter (title, authors, year, type, lang
 `promptotyping_v2.json` (generated by `src/publish/generate_promptotyping_data_v2.py`): `meta` (totals, disagreements, kappa, confusion_matrix, rates, pattern_distribution, asymmetry), `papers`, `concepts` (nodes and edges), `divergences`. Note: `meta.total_papers` in the agreement JSONs is the union of the two assessment tracks, not the corpus (see the comment in `src/assess/calculate_agreement.py`).
 
 `research_vault_v2.json` (generated by `src/publish/generate_docs_data.py`): for the Evidence Companion.
+
+`corpus/work_version_registry.json` (generated by `src/analysis/build_work_version_registry.py`): canonical Work and publication-Version identity, record and candidate bindings, preferred/latest selection, peer-review basis, relations, conflicts, and provenance. `docs/data/work_version_contract.json` defines the controlled vocabulary and selection rule.
 
 `literature_landscape.json` (generated by `src/publish/generate_literature_landscape.py`): the verified, annotation-native Companion projection of the productive PRISM track. Its thematic records are Include-only, while progress retains all annotated decisions and source status.
 
@@ -157,9 +168,13 @@ Each piece of information has exactly ONE canonical location. Other files refere
 | Benchmark figures, the divergence and its decomposition | the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion |
 | Script reference, pipeline method | `knowledge/methods.md` |
 | Category definitions | `assessment/categories.yaml` |
+| Work identity, publication Version, and bibliographic relations | `corpus/work_version_registry.json` and `docs/data/work_version_contract.json` |
 | Theory and operationalization | `knowledge/project.md` |
 | Glossary | `knowledge/INDEX.md` |
-| Roadmap, current status, decided questions | `knowledge/plan.md` |
+| Remaining work and operator decisions | `knowledge/plan.md` |
+| Authority, lifecycle and publication rules | `knowledge/governance.md` |
+| Technical guarantees | `knowledge/testing.md` |
+| Claim and artifact verification state | `knowledge/verification.md` |
 | Standards (PRISMA, trAIce, RAISE) | `knowledge/standards.md` |
 | Work journal | `knowledge/journal.md` |
 | Subject knowledge of the literature (what the sources say, in which check state) | `research-vault/`, modelled in `knowledge/research-vault.md` |
@@ -224,9 +239,9 @@ Use for multi-step tasks (three or more steps) and long operations. Mark `in_pro
 
 ---
 
-## Milestones
+## Current completion boundary
 
-The research artifacts (the identified corpus, the benchmark, the Evidence Companion, and the vault) are produced. Per ADR-019 the review counts complete only once all of its data is carried through PRISM; the active work is that pass, the PRISM tool, the first-round record (Stage R), and the round-2 update, tracked in `knowledge/plan.md` under Stage A/R/B/C and TP1 to TP7. The Forum paper is submitted and closed.
+The identified corpus, the round-one benchmark, PRISM, the Evidence Companion, and the initial Grounded Vault layers exist. The review is complete when the intended corpus has a reviewed source basis, every productive round-two record has passed the governed lifecycle, the literature analysis is derived from the completed records, Assertions support the report and paper, and domain experts have verified the scholarly outputs. Public projections additionally require publication approval. `knowledge/plan.md` is the canonical forward record.
 
 ---
 

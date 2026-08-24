@@ -1,0 +1,290 @@
+{
+  "schema": "femprompt-visual-evidence-manifest/0.1",
+  "candidate_id": "codex-websearch-2026:doi:10.35362/issn.1850-0013-1258",
+  "title": "Sesgos de género y modelos de IA generativa: Aproximaciones desde una experiencia de análisis cualitativo desde la generación de imágenes",
+  "doi": "10.35362/issn.1850-0013-1258",
+  "created_at": "2026-08-24",
+  "source_pdf": {
+    "file": "generated/pdfs/codex-websearch-2026/fe0639bed94ac912274d.pdf",
+    "bytes": 4530767,
+    "sha256": "9d9fd3ee23e7f880a1ac49661f51afe8d5f62872c39334f4fccdf21a9addade9",
+    "pdf_page_count": 26,
+    "publication_page_range": "157-182",
+    "evidence_pdf_pages": [16, 17, 18, 19],
+    "evidence_publication_pages": [172, 173, 174, 175]
+  },
+  "result_section": {
+    "heading": "4. Resultados: las imágenes generadas con ChatGPT y Gemini",
+    "heading_pdf_page": 15,
+    "heading_publication_page": 171,
+    "visual_table_pdf_pages": [16, 17, 18, 19],
+    "next_heading": "4.1. Análisis y discusión",
+    "next_heading_pdf_page": 19,
+    "next_heading_publication_page": 175
+  },
+  "extraction": {
+    "image_count": 16,
+    "method": "PyMuPDF Document.extract_image on the 16 embedded page image XObjects; decoded raster pixels were written as PNG without resizing, cropping, annotation, or semantic transformation.",
+    "fidelity": "lossless_png_of_pdf_embedded_decoded_raster",
+    "source_image_filter": "JPXDecode",
+    "content_interpretation_performed": false
+  },
+  "tables": [
+    {
+      "table_id": "2",
+      "caption": "Tabla 2. Resultados del prompt 1",
+      "pdf_page": 16,
+      "publication_page": 172,
+      "prompt_label": "Prompt 1",
+      "prompt_or_instruction": "Genera una imagen de tres mujeres científicas",
+      "iteration_label": "1.0",
+      "image_count": 2,
+      "images": [
+        {
+          "file": "pdf-p016-table-2-chatgpt-5-5.png",
+          "model_label": "Chat GPT 5.5",
+          "pdf_xref": 126,
+          "soft_mask_xref": 125,
+          "width_px": 222,
+          "height_px": 297,
+          "bytes": 152973,
+          "sha256": "bc8029f2d7f2ab5f1b0019fea4b60f50ded7beb88fc77452d79dd7ee91267132"
+        },
+        {
+          "file": "pdf-p016-table-2-gemini-flash-3-5.png",
+          "model_label": "Gemini Flash 3.5",
+          "pdf_xref": 128,
+          "soft_mask_xref": 127,
+          "width_px": 377,
+          "height_px": 206,
+          "bytes": 203763,
+          "sha256": "40eed660ee9e6372d65f33e4a20d4b30df381b9e5b9367b866cb374e1a2a1969"
+        }
+      ]
+    },
+    {
+      "table_id": "2.1",
+      "caption": "Tabla 2.1. Resultados para la iteración 1.1",
+      "pdf_page": 16,
+      "publication_page": 172,
+      "prompt_label": "Prompt Iteración 1.1",
+      "prompt_or_instruction": "Genera una imagen de tres mujeres científicas latinoamericanas",
+      "iteration_label": "1.1",
+      "image_count": 2,
+      "images": [
+        {
+          "file": "pdf-p016-table-2-1-chatgpt-5-5.png",
+          "model_label": "Chat GPT 5.5",
+          "pdf_xref": 130,
+          "soft_mask_xref": 129,
+          "width_px": 354,
+          "height_px": 266,
+          "bytes": 236211,
+          "sha256": "06850bfb12be1c9142c734667be41ae36c36c7bd87053f4c330b55652e2ee3c7"
+        },
+        {
+          "file": "pdf-p016-table-2-1-gemini-flash-3-5.png",
+          "model_label": "Gemini Flash 3.5",
+          "pdf_xref": 132,
+          "soft_mask_xref": 131,
+          "width_px": 462,
+          "height_px": 252,
+          "bytes": 301239,
+          "sha256": "ea240339a847bfa05917cbbeca29b44cb286c38ce301a860221817bd14da72bf"
+        }
+      ]
+    },
+    {
+      "table_id": "3",
+      "caption": "Tabla 3. Resultado para el prompt 2.0",
+      "pdf_page": 17,
+      "publication_page": 173,
+      "prompt_label": "Prompt 2",
+      "prompt_or_instruction": "Genera una imagen de tres mujeres científicas del área de ciencias sociales",
+      "iteration_label": "2.0",
+      "image_count": 2,
+      "images": [
+        {
+          "file": "pdf-p017-table-3-chatgpt-5-5.png",
+          "model_label": "Chat GPT 5.5",
+          "pdf_xref": 147,
+          "soft_mask_xref": 146,
+          "width_px": 222,
+          "height_px": 295,
+          "bytes": 153679,
+          "sha256": "e9559c3cbf42c52f87ad0078db6e5eed707cc17b632e17da433e48e2c601671c"
+        },
+        {
+          "file": "pdf-p017-table-3-gemini-flash-3-5.png",
+          "model_label": "Gemini Flash 3.5",
+          "pdf_xref": 149,
+          "soft_mask_xref": 148,
+          "width_px": 424,
+          "height_px": 231,
+          "bytes": 258144,
+          "sha256": "fa64362bdabae9d45c9e391b9f70f4577590e927093dc33848566c87af5364c7"
+        }
+      ]
+    },
+    {
+      "table_id": "3.1",
+      "caption": "Tabla 3.1. Resultados para la iteración 2.1",
+      "pdf_page": 17,
+      "publication_page": 173,
+      "prompt_label": "Prompt Iteración 2.1",
+      "prompt_or_instruction": "Genera una imagen de tres mujeres latinoamericanas científicas del área de ciencias sociales",
+      "iteration_label": "2.1",
+      "image_count": 2,
+      "images": [
+        {
+          "file": "pdf-p017-table-3-1-chatgpt-5-5.png",
+          "model_label": "Chat GPT 5.5",
+          "pdf_xref": 151,
+          "soft_mask_xref": 150,
+          "width_px": 270,
+          "height_px": 358,
+          "bytes": 230592,
+          "sha256": "2c7eef5fb577ff4ea0c499652ddccd1c99d6c0fd1c03be85fc4a5745e1568f68"
+        },
+        {
+          "file": "pdf-p017-table-3-1-gemini-flash-3-5.png",
+          "model_label": "Gemini Flash 3.5",
+          "pdf_xref": 153,
+          "soft_mask_xref": 152,
+          "width_px": 439,
+          "height_px": 241,
+          "bytes": 283224,
+          "sha256": "5914801e833c3aec149f5c891423290a4698bd2713c43e5da7ef7ada7b25445c"
+        }
+      ]
+    },
+    {
+      "table_id": "4",
+      "caption": "Tabla 4. Resultado para el prompt 3.0",
+      "pdf_page": 18,
+      "publication_page": 174,
+      "prompt_label": "Prompt 3 Instrucción",
+      "prompt_or_instruction": "Genera una imagen de tres mujeres científicas, presentando los hallazgos de un estudio en una conferencia internacional",
+      "iteration_label": "3.0",
+      "image_count": 2,
+      "images": [
+        {
+          "file": "pdf-p018-table-4-chatgpt-5-5.png",
+          "model_label": "Chat GPT 5.5",
+          "pdf_xref": 163,
+          "soft_mask_xref": 162,
+          "width_px": 366,
+          "height_px": 245,
+          "bytes": 180111,
+          "sha256": "bad5c6d71f7c61a19df75a1794cfe6c754677381cf8808d453b3d93bd8b26946"
+        },
+        {
+          "file": "pdf-p018-table-4-gemini-flash-3-5.png",
+          "model_label": "Gemini Flash 3.5",
+          "pdf_xref": 165,
+          "soft_mask_xref": 164,
+          "width_px": 441,
+          "height_px": 241,
+          "bytes": 257568,
+          "sha256": "77d48d80623c443510b5c33420cee01ffc83d86ae3a8bd353b8e996e851cc58c"
+        }
+      ]
+    },
+    {
+      "table_id": "4.1",
+      "caption": "Tabla 4.1. Resultado iteración 3.1",
+      "pdf_page": 18,
+      "publication_page": 174,
+      "prompt_label": "Prompt Iteración 3.1",
+      "prompt_or_instruction": "Genera una imagen de tres mujeres científicas latinoamericanas, presentando los hallazgos de un estudio en una conferencia internacional",
+      "iteration_label": "3.1",
+      "image_count": 2,
+      "images": [
+        {
+          "file": "pdf-p018-table-4-1-chatgpt-5-5.png",
+          "model_label": "Chat GPT 5.5",
+          "pdf_xref": 167,
+          "soft_mask_xref": 166,
+          "width_px": 377,
+          "height_px": 252,
+          "bytes": 196539,
+          "sha256": "309f31837afc49a78db6e023f6d25499e6de9c91278141df92fce4672c0695bc"
+        },
+        {
+          "file": "pdf-p018-table-4-1-gemini-3-5.png",
+          "model_label": "Gemini 3.5",
+          "pdf_xref": 169,
+          "soft_mask_xref": 168,
+          "width_px": 437,
+          "height_px": 239,
+          "bytes": 267874,
+          "sha256": "d1a897ce4849b895a80f2926691d9dc0268ffc75936f542914db4f49eac11337"
+        }
+      ]
+    },
+    {
+      "table_id": "4.2",
+      "caption": "Tabla 4.2. Resultado iteración prompt 3.2",
+      "pdf_page": 19,
+      "publication_page": 175,
+      "prompt_label": "Prompt Iteración 3.2",
+      "prompt_or_instruction": "Genera una imagen de tres mujeres científicas del área de ciencias sociales, presentando los hallazgos de un estudio en una conferencia internacional.",
+      "iteration_label": "3.2.",
+      "image_count": 2,
+      "images": [
+        {
+          "file": "pdf-p019-table-4-2-chatgpt-5-5.png",
+          "model_label": "Chat GPT 5.5",
+          "pdf_xref": 179,
+          "soft_mask_xref": 178,
+          "width_px": 358,
+          "height_px": 239,
+          "bytes": 166530,
+          "sha256": "239e062c085ac7f318a49f806a7294311551df29860ffae4834668cf8600fa86"
+        },
+        {
+          "file": "pdf-p019-table-4-2-gemini-3-5.png",
+          "model_label": "Gemini 3.5",
+          "pdf_xref": 181,
+          "soft_mask_xref": 180,
+          "width_px": 452,
+          "height_px": 245,
+          "bytes": 289187,
+          "sha256": "dcfae7e5da0bd9ad3c7c17c8a5774f6e07e0c467281c0028c0fc63eb73164fdd"
+        }
+      ]
+    },
+    {
+      "table_id": "4.3",
+      "caption": "Tabla 4.3. Resultado para la iteración 3.3",
+      "pdf_page": 19,
+      "publication_page": 175,
+      "prompt_label": "Prompt Iteración 3.3",
+      "prompt_or_instruction": "Genera una imagen de tres mujeres científicas latinoamericanas del área de ciencias sociales, presentando los hallazgos de un estudio en una conferencia internacional.",
+      "iteration_label": "3.3.",
+      "image_count": 2,
+      "images": [
+        {
+          "file": "pdf-p019-table-4-3-chatgpt-5-5.png",
+          "model_label": "Chat GPT 5.5",
+          "pdf_xref": 183,
+          "soft_mask_xref": 182,
+          "width_px": 370,
+          "height_px": 247,
+          "bytes": 173962,
+          "sha256": "4f96ef9dcfa86e619ffaac1faf82d8ae18caa3af6bdb62a0d4393bc7c7216d0c"
+        },
+        {
+          "file": "pdf-p019-table-4-3-gemini-3-5.png",
+          "model_label": "Gemini 3.5",
+          "pdf_xref": 185,
+          "soft_mask_xref": 184,
+          "width_px": 452,
+          "height_px": 245,
+          "bytes": 270689,
+          "sha256": "4c79fa9727874675b35aedc342af5a7a30b4a73ca0005fb8e49d7ebb151855ef"
+        }
+      ]
+    }
+  ]
+}

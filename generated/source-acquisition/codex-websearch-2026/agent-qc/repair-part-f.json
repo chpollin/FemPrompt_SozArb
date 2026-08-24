@@ -1,0 +1,101 @@
+{
+  "schema": "femprompt-markdown-repair-report/0.1",
+  "reviewer": "round2_identity",
+  "repaired_at": "2026-08-24",
+  "records": [
+    {
+      "candidate_id": "codex-websearch-2026:arxiv:2505.13995",
+      "title": "Sycophantic AI decreases prosocial intentions and promotes dependence",
+      "source_pdf": "generated/pdfs/codex-websearch-2026/96199ea06371c4cdbed4.pdf",
+      "source_markdown": "generated/source-acquisition/codex-websearch-2026/markdown-clean/96199ea06371c4cdbed4.md",
+      "repaired_markdown": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/96199ea06371c4cdbed4.md",
+      "decision": "approved_for_screening",
+      "page_markers_preserved": true,
+      "version_note": "Der lokale PDF- und Markdown-Text entspricht der Preprint-/ICLR-Fassung arXiv:2505.13995 mit dem Titel „ELEPHANT: Measuring and Understanding Social Sycophancy in LLMs“. Die verknüpfte Science-Version „Sycophantic AI decreases prosocial intentions and promotes dependence“ ist die bibliografisch bevorzugte Fassung; die Reparatur verändert die lokale Versionsidentität nicht.",
+      "tables": [
+        {
+          "table_id": "Table 4 Social sycophancy scores after various mitigations",
+          "pdf_page": 8,
+          "source_state": "caption_and_image_placeholder_only",
+          "repaired_state": "complete_markdown_table",
+          "dimensions": {
+            "header_rows": 2,
+            "data_rows": 11,
+            "columns": 12
+          },
+          "extraction_methods": [
+            "pdfplumber ruled-table extraction of 119 numeric cells; the two n/a cells were independently recovered from PyMuPDF and the visual render",
+            "PyMuPDF positioned-text extraction of row labels, column labels, values, asterisks, n/a cells, and bold-font spans",
+            "PyMuPDF 3x page render with direct visual row-and-column verification"
+          ],
+          "visual_verification": "All 11 mitigation rows and 11 result columns were checked against PDF page 8. The grouped OEQ, AITA-YTA, ALP, and AITA-NTA-FLIP headers, every signed decimal, both n/a cells, four asterisked YTA/NTA values, model labels, and all bolded least-sycophantic values match the source table.",
+          "status": "verified_complete"
+        },
+        {
+          "table_id": "Table A11 Social sycophancy scores after perspective shift mitigation",
+          "pdf_page": 28,
+          "source_state": "table_present_but_rows_and_model_columns_collapsed",
+          "repaired_state": "complete_markdown_table",
+          "dimensions": {
+            "header_rows": 1,
+            "data_rows": 11,
+            "columns": 14
+          },
+          "extraction_methods": [
+            "PyMuPDF positioned-text extraction using the fixed x coordinates of the 14 columns",
+            "pdfplumber table-region extraction as an independent cell-content check",
+            "PyMuPDF 3x page render with direct visual verification"
+          ],
+          "visual_verification": "The OEQ, YTA, NTA-FLIP, and SS row groups, 11 dimension rows, Mean column, and all 11 model columns were checked against PDF page 28. All 132 numeric values and their row assignments match the rendered table and positioned PDF text layer.",
+          "status": "verified_complete"
+        }
+      ],
+      "table_inventory": {
+        "pdf_semantic_tables": 25,
+        "repaired_markdown_semantic_tables": 25,
+        "repaired_markdown_pipe_blocks": 26,
+        "verified_table_ids": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "A1",
+          "A2",
+          "A3",
+          "A4",
+          "A5",
+          "A6",
+          "A7",
+          "A8",
+          "A9",
+          "A10",
+          "A11",
+          "A12",
+          "A13",
+          "A14",
+          "A15",
+          "A16",
+          "A17",
+          "A18",
+          "A19",
+          "A20",
+          "A21"
+        ],
+        "additional_missing_tables": [],
+        "counting_note": "Table A2 spans PDF pages 20–21 and appears as two consecutive Markdown pipe blocks with a repeated caption. This page-break split accounts for the 26 technical pipe blocks representing 25 semantic tables after repair. Tables A3, A9, A11, and A15 are placed before their captions by the source PDF reading order; each was located and checked rather than counted as absent."
+      },
+      "validation": {
+        "utf8_decode": "passed",
+        "page_markers": "passed: PAGE 1 through PAGE 38 are identical to the source Markdown",
+        "table_4_shape": "passed: 11 data rows and 12 columns; values match pdfplumber and PyMuPDF extraction",
+        "table_a11_shape": "passed: 11 data rows and 14 columns; values match positioned PyMuPDF extraction and visual render",
+        "table_inventory": "passed: 25 unique semantic table identifiers, with Table A2 split over two technical blocks",
+        "beginning": "passed: front matter and opening content unchanged",
+        "ending": "passed: terminal appendix content unchanged; final newline normalized",
+        "source_markdown_sha256": "530110de2d7906ea4eea9f5cd009e58bc80927603602c50de4890eec3473c82a",
+        "repaired_markdown_sha256": "8f81ce2864693f29012f178a585805a0b3dcf5f9831a355453f3cefbedb56448"
+      },
+      "issues_remaining": []
+    }
+  ]
+}

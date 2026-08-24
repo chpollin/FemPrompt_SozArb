@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-08-23T19:01:51.022347",
+  "input_dir": "generated\\source-acquisition\\oa-batch-a\\4zl-input",
+  "output_dir": "generated\\source-acquisition\\oa-batch-a\\4zl-output",
+  "total_files": 1,
+  "converted": 1,
+  "skipped": 0,
+  "failed": 0,
+  "low_quality": 0,
+  "files": [
+    {
+      "input": "4ZL5Q48E.pdf",
+      "output": "4ZL5Q48E.md",
+      "file_hash": "8fcb0414bb58563ba8f05ba726113a4f",
+      "success": true,
+      "duration_seconds": 13.33,
+      "metrics": {
+        "total_chars": 74485,
+        "total_lines": 378,
+        "total_words": 10605,
+        "headings": 23,
+        "heading_levels": {
+          "h2": 23
+        },
+        "tables": 0,
+        "lists": 107,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 150,
+        "avg_line_length": 325.0
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    }
+  ]
+}

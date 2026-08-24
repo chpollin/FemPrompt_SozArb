@@ -8,6 +8,8 @@
 
 const CAT_COLORS = {};
 const CATEGORY_SCHEMA = { categories: [], groups: { object: [], perspective: [] } };
+const LIFECYCLE_CONTRACT = { states: [], transitions: [], verification_results: [] };
+const WORK_VERSION_CONTRACT = { version_types: [] };
 
 function escapeHtml(s) {
     if (s == null) return '';
@@ -25,6 +27,8 @@ window.EC = {
     escapeHtml: escapeHtml,
     CAT_COLORS: CAT_COLORS,
     getCategorySchema: function() { return CATEGORY_SCHEMA; },
+    getLifecycleContract: function() { return LIFECYCLE_CONTRACT; },
+    getWorkVersionContract: function() { return WORK_VERSION_CONTRACT; },
     getAllPapers: function() { return papers; }
 };
 
@@ -33,7 +37,7 @@ const scriptUrl = document.currentScript && document.currentScript.src
     : window.location.href;
 const dataBase = new URL('../data/', scriptUrl);
 
-Promise.all(['research_vault_v2.json', 'category_schema.json'].map(function(filename) {
+Promise.all(['research_vault_v2.json', 'category_schema.json', 'screening_lifecycle_contract.json', 'work_version_contract.json'].map(function(filename) {
     const url = new URL(filename, dataBase);
     return fetch(url).then(function(response) {
         if (!response.ok) throw new Error(filename + ': HTTP ' + response.status);
@@ -43,6 +47,8 @@ Promise.all(['research_vault_v2.json', 'category_schema.json'].map(function(file
     .then(function(payloads) {
         papers = payloads[0].papers || [];
         Object.assign(CATEGORY_SCHEMA, payloads[1]);
+        Object.assign(LIFECYCLE_CONTRACT, payloads[2]);
+        Object.assign(WORK_VERSION_CONTRACT, payloads[3]);
         CATEGORY_SCHEMA.categories.forEach(function(category) {
             CAT_COLORS[category.key] = category.color;
         });

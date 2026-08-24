@@ -156,6 +156,36 @@ def test_published_coverage_and_work_counts_are_internally_consistent() -> None:
     assert "generated" not in meta
 
 
+def test_published_records_and_fulltext_manifest_share_exact_version_identity() -> None:
+    payload = json.loads(
+        (ROOT / "docs" / "data" / "research_vault_v2.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    manifest = json.loads(
+        (ROOT / "docs" / "data" / "fulltext_manifest.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    contract = json.loads(
+        (ROOT / "docs" / "data" / "work_version_contract.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    allowed_types = {item["key"] for item in contract["version_types"]}
+
+    for paper in payload["papers"]:
+        source = manifest[paper["id"]]
+        assert paper["work_id"].startswith("work:")
+        assert paper["version_id"].startswith("version:")
+        assert paper["version_type"] in allowed_types
+        assert paper["preferred_version_id"].startswith("version:")
+        assert paper["latest_version_id"].startswith("version:")
+        assert source["work_id"] == paper["work_id"]
+        assert source["version_id"] == paper["version_id"]
+        assert source["preferred_version_id"] == paper["preferred_version_id"]
+
+
 def test_atomic_write_preserves_previous_file_when_serialization_fails(
     tmp_path: Path,
     monkeypatch,

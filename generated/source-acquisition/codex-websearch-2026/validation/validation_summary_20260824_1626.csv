@@ -1,0 +1,20 @@
+Filename,Status,Confidence,Char_Ratio,GLYPH_Count,Artifact_Score,Tables_PDF,Tables_MD,Table_Mismatch,Needs_Review,Issues
+050d5f410967dd9371a0.md,WARNING,99.6,1.006,0,2.2,1,0,YES,YES,"Table mismatch: PDF=1, MD=0"
+152b1aa29e0dddabe838.md,WARNING,99.9,1.041,0,0.6,2,7,YES,YES,"Table mismatch: PDF=2, MD=7"
+2b57266b9d8b015d2ac2.md,WARNING,98.5,0.962,0,0.0,3,0,YES,YES,"Table mismatch: PDF=3, MD=0"
+2e6aa61930deea324751.md,WARNING,99.5,1.082,0,2.4,0,7,YES,YES,"Table mismatch: PDF=0, MD=7"
+4dbe6aa9dfa229e88746.md,WARNING,98.2,1.179,0,8.8,1,17,YES,YES,"Table mismatch: PDF=1, MD=17"
+5fa4fb41e396f11b2c6e.md,PASS,99.8,1.047,0,1.2,5,4,NO,NO,
+62d8ff0c669bf7e511d0.md,PASS,99.6,1.099,0,1.8,0,1,NO,NO,
+7cbaa5fc7bd51c3642ad.md,WARNING,96.1,1.051,0,0.0,1,0,YES,YES,"Table mismatch: PDF=1, MD=0"
+8a561b548035e4512084.md,PASS,99.2,1.094,0,3.6,8,8,NO,NO,
+926800fc523bebd0420c.md,PASS,99.0,1.047,0,5.0,0,2,NO,NO,
+96199ea06371c4cdbed4.md,PASS,99.4,1.695,0,0.0,27,25,NO,NO,
+a1c7e9db9a3dc6caff54.md,WARNING,92.7,2.526,0,0.6,6,4,NO,YES,Low text ratio: 25.97%
+aff73b4c6b2eab31b8f7.md,PASS,99.1,1.044,0,4.4,0,2,NO,NO,
+c38bdbce0e8dbb82ce3f.md,PASS,99.6,0.990,0,0.0,1,1,NO,NO,
+c42b463f9ba115503a58.md,PASS,98.9,1.039,0,5.4,9,10,NO,NO,
+d3bd00602e07cf40396c.md,WARNING,99.4,1.445,0,1.6,2,22,YES,YES,"Table mismatch: PDF=2, MD=22"
+f403809ad4503150093a.md,WARNING,99.2,1.293,0,4.0,0,7,YES,YES,"Table mismatch: PDF=0, MD=7"
+fe0639bed94ac912274d.md,WARNING,99.5,1.043,0,2.4,11,4,YES,YES,"Table mismatch: PDF=11, MD=4"
+febcd242f416adc86eb1.md,WARNING,93.5,0.919,0,16.4,3,13,YES,YES,"Table mismatch: PDF=3, MD=13"

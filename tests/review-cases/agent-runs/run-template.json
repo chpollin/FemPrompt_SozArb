@@ -1,38 +1,200 @@
 {
-  "schema": "femprompt-prisma-agent-run/0.1",
+  "schema": "femprompt-prisma-agent-run/1.3",
   "run_id": "replace-me",
   "status": "prepared",
-  "prompt": {
-    "path": "prompts/prism-agent-reviewer.md",
-    "version": "1.0",
-    "sha256": "91ecf91275e4c3841f5f0c339acfbfe14af679ad170aed7d4918ab8fe40665a5"
+  "lifecycle": {
+    "baseline": "identified",
+    "state": "prepared",
+    "target": "ai-agent-reviewed",
+    "events": []
   },
-  "method": {
-    "categories": "assessment/categories.yaml#v1.3",
-    "coding_protocol": "knowledge/update-protocol.md#B-B.1-C",
-    "publication_type_policy": "prompts/prism-agent-reviewer.md#ratifizierte-publikationstypregel"
-  },
-  "repository_root": ".",
-  "runtime": {
+  "model": {
     "provider": "replace-me",
     "model": "replace-me",
-    "baseline_commit": "replace-me",
-    "worktree_at_run": "clean-or-dirty",
-    "application_sha256": "replace-me"
+    "model_version": "replace-me",
+    "immutable_model_id": null
+  },
+  "prompt": {
+    "path": "prompts/prism-agent-reviewer-v1.1.md",
+    "version": "replace-me",
+    "sha256": "replace-me"
+  },
+  "baseline": {
+    "commit": "replace-me"
+  },
+  "assignment": {
+    "complete": false,
+    "papers": [
+      {
+        "paper_id": "replace-me",
+        "work_id": "replace-me",
+        "version_id": "replace-me",
+        "version_type": "replace-me",
+        "preferred_version_id": "replace-me",
+        "selected_version_is_preferred": true,
+        "record_ids": ["replace-me"],
+        "human_coverage": false,
+        "ai_agent_review_coverage": false,
+        "source": {
+          "path": "replace-me",
+          "sha256": "replace-me",
+          "version_id": "replace-me"
+        }
+      }
+    ]
+  },
+  "isolation": {
+    "mode": "operational",
+    "epistemic_independence_claimed": false,
+    "explanation": "Each agent track uses a separate Codex context, reviewer identity, coding packet, report, and output path. Operational separation records execution conditions; it does not establish epistemic independence."
+  },
+  "actors": [
+    {
+      "id": "replace-me-ar1",
+      "type": "ai_agent",
+      "role": "reviewer",
+      "reviewer_id": "ar1"
+    },
+    {
+      "id": "replace-me-ar2",
+      "type": "ai_agent",
+      "role": "reviewer",
+      "reviewer_id": "ar2"
+    },
+    {
+      "id": "replace-me-ai-agent-review",
+      "type": "ai_agent",
+      "role": "ai_agent_reviewer"
+    }
+  ],
+  "timestamps": {
+    "created_at": "replace-me",
+    "started_at": null,
+    "completed_at": null
+  },
+  "execution": {
+    "mode": "blinded_source_review_with_deterministic_prism_roundtrip",
+    "reason": "Operationally isolated agents create source-grounded coding packets. The orchestrator transfers validated packets deterministically through the production PRISM functions.",
+    "required_controls": [
+      "Reviewer agents may read only the frozen rules, manifest, assigned Paper sources, and their own output paths.",
+      "Reviewer agents may not inspect previous judgments, knowledge distillates, the other track, or productive screening data.",
+      "The orchestrator projects validated values mechanically and may not resolve substantive ambiguity during transfer."
+    ],
+    "coding_packet_validation": {
+      "command": "node tests/review-cases/validate-coding-packet.mjs tests/review-cases/agent-runs/replace-me/run.json <reviewer-id>",
+      "result": "pending",
+      "records": 0
+    },
+    "frontend_roundtrip": {
+      "method": "deterministic_projection_with_prism_frontend_roundtrip",
+      "command": "node tests/review-cases/roundtrip-prism-track.mjs tests/review-cases/agent-runs/replace-me/run.json <reviewer-id> <projection.json> <track.json>",
+      "result": "pending",
+      "records": 0,
+      "production_functions": [
+        "validateReviewerPayload",
+        "importReviewerPayload",
+        "recordRequirements",
+        "reviewerFileText"
+      ]
+    },
+    "protocol_basis": "knowledge/specification.md#ADR-037"
   },
   "tracks": [
     {
-      "reviewer": "ar1",
-      "actor": "agent",
-      "prism_url": "http://127.0.0.1:8765/prisma.html?trial=1&actor=agent&reviewer=ar1",
-      "paper_ids": [],
-      "export": "tests/review-cases/agent-runs/replace-me/tracks/ar1.json",
+      "reviewer_id": "ar1",
+      "actor_id": "replace-me-ar1",
+      "actor_type": "ai_agent",
+      "paper_ids": ["replace-me"],
+      "source_assignments": [
+        {
+          "paper_id": "replace-me",
+          "version_id": "replace-me",
+          "source_path": "replace-me",
+          "source_sha256": "replace-me"
+        }
+      ],
+      "coding_packet": "tests/review-cases/agent-runs/replace-me/tracks/ar1-coding.json",
+      "coding_packet_sha256": null,
       "report": "tests/review-cases/agent-runs/replace-me/reports/ar1.md",
-      "status": "assigned"
+      "report_sha256": null,
+      "started_at": null,
+      "completed_at": null,
+      "output": {
+        "path": "tests/review-cases/agent-runs/replace-me/tracks/ar1.json",
+        "sha256": null
+      }
+    },
+    {
+      "reviewer_id": "ar2",
+      "actor_id": "replace-me-ar2",
+      "actor_type": "ai_agent",
+      "paper_ids": ["replace-me"],
+      "source_assignments": [
+        {
+          "paper_id": "replace-me",
+          "version_id": "replace-me",
+          "source_path": "replace-me",
+          "source_sha256": "replace-me"
+        }
+      ],
+      "coding_packet": "tests/review-cases/agent-runs/replace-me/tracks/ar2-coding.json",
+      "coding_packet_sha256": null,
+      "report": "tests/review-cases/agent-runs/replace-me/reports/ar2.md",
+      "report_sha256": null,
+      "started_at": null,
+      "completed_at": null,
+      "output": {
+        "path": "tests/review-cases/agent-runs/replace-me/tracks/ar2.json",
+        "sha256": null
+      }
     }
   ],
-  "evaluation": {
-    "status": "pending",
-    "report": null
-  }
+  "provenance": {
+    "activities": [
+      {
+        "id": "ai-agent-review-1",
+        "type": "ai_agent_review",
+        "run_id": null,
+        "method": "source_grounded_ai_agent_review",
+        "prompt": {
+          "path": "prompts/prism-ai-agent-review-v0.2.md",
+          "version": "replace-me",
+          "sha256": "replace-me"
+        },
+        "model": {
+          "provider": "replace-me",
+          "model": "replace-me",
+          "model_version": "replace-me"
+        },
+        "associated_actor_ids": ["replace-me-ai-agent-review"],
+        "status": "planned",
+        "actor_id": "replace-me-ai-agent-review",
+        "actor_type": "ai_agent",
+        "input_track_ids": ["ar1", "ar2"],
+        "source_basis": "assigned paper/source records",
+        "started_at": null,
+        "completed_at": null,
+        "outputs": []
+      }
+    ]
+  },
+  "outputs": [
+    {
+      "kind": "agent_track",
+      "reviewer_id": "ar1",
+      "path": "tests/review-cases/agent-runs/replace-me/tracks/ar1.json",
+      "sha256": null
+    },
+    {
+      "kind": "agent_track",
+      "reviewer_id": "ar2",
+      "path": "tests/review-cases/agent-runs/replace-me/tracks/ar2.json",
+      "sha256": null
+    },
+    {
+      "kind": "ai_agent_review",
+      "path": "tests/review-cases/agent-runs/replace-me/ai-agent-review.json",
+      "sha256": null
+    }
+  ]
 }

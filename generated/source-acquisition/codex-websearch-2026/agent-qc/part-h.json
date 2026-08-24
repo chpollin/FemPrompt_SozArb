@@ -1,0 +1,69 @@
+{
+  "schema": "femprompt-markdown-agent-qc/0.1",
+  "reviewer": "Codex subagent source QC H",
+  "reviewed_at": "2026-08-24",
+  "records": [
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/02615479.2026.2660786",
+      "title": "Towards a framework for digital literacy in social work education in a time of artificial intelligence",
+      "pdf_file": "generated/pdfs/codex-websearch-2026/3cb613d559a8c57c13c1.pdf",
+      "markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-clean/3cb613d559a8c57c13c1.md",
+      "automated_warning": "Automated validation: PASS; direct QC found material omissions",
+      "identity_match": true,
+      "body_complete": false,
+      "tables": {
+        "pdf_semantic_tables": 3,
+        "markdown_semantic_tables": 2,
+        "material_loss": true,
+        "basis": "Das PDF enthält drei nummerierte Tabellen. Tabelle 1 mit 22 eingeschlossenen Publikationen und Tabelle 2 mit fünf Prompts, KI-Systemen und Bildnummern sind vollständig als Pipe-Tabellen vorhanden. Tabelle 3 besteht aus den fünf erzeugten Bildern; das Markdown enthält dafür nur Beschriftung und einen Bildplatzhalter, nicht die fünf visuellen Inhalte."
+      },
+      "decision": "requires_reconversion",
+      "issues": [
+        "Der tatsächlich erworbene Volltext ist die institutionelle Repository-Kopie der online-first Version of Record vom 16. April 2026 mit DOI 10.1080/02615479.2026.2660786 und DiVA-Kennung diva2:2053633; er ist keine Accepted-Manuscript-Fassung.",
+        "Der vollständige Abstract auf PDF-Seite 2 fehlt im Markdown. Verloren sind Ziel, ILR-Methodik, die drei thematischen Domänen, die illustrative Bildanalyse und die Zusammenfassung des vorgeschlagenen Digital-Literacy-Rahmens.",
+        "ARTICLE HISTORY mit Received 5 February 2025 und Accepted 7 April 2026 sowie die fünf Keywords fehlen vollständig.",
+        "Tabelle 3 auf PDF-Seite 13 zeigt fünf KI-generierte Bilder zu den Prompts aus Tabelle 2. Das Markdown enthält nur `<!-- image -->`; die fünf Einzelbilder und ihre visuelle Zuordnung zu Image 1–5 sind nicht erhalten.",
+        "Alle 19 PAGE-Marker sind vorhanden; die automatische Seitenabdeckungsprüfung erkennt daher weder den Ausfall des Frontmatters auf PAGE 2 noch den visuellen Ausfall innerhalb von PAGE 13."
+      ],
+      "evidence": [
+        "Repository- und Verlagsdeckblatt sowie Artikelbeginn stimmen bei Titel, Michael Wallengren-Lynch, Social Work Education, DOI und Veröffentlichungsdatum zwischen PDF und Markdown überein.",
+        "PDF-Seite 2 enthält zwischen Zugehörigkeit und Introduction den Abstract, ARTICLE HISTORY und KEYWORDS; das Markdown springt an derselben Stelle unmittelbar von Zugehörigkeit zur Überschrift Introduction.",
+        "Der Abstractanfang `As artificial intelligence (AI) technologies increasingly influence higher education` und die Formulierung `integrative literature review (ILR) methodology` kommen im gesamten Markdown nicht vor.",
+        "Die Tabellen 1–3 auf PDF-Seiten 7 und 13 wurden direkt geprüft. Tabellen 1 und 2 sind inhaltlich vollständig; Tabelle 3 ist nur als Beschriftung und Bildplatzhalter repräsentiert.",
+        "Introduction, Social work and technology, Methodology mit drei Unterabschnitten, Limitations, Results & analysis mit drei Themen, Illustrative case, Conclusion, Disclosure statement, ORCID und References sind vollständig und in Quellreihenfolge vorhanden.",
+        "PDF und Markdown enden mit demselben Literaturverzeichnis bis Zuboff (2019)."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/02615479.2026.2631708",
+      "title": "Are future social workers ready for AI? Fears, barriers, and learning needs in higher education",
+      "pdf_file": "generated/pdfs/codex-websearch-2026/4875ad9321dfcfc0aa52.pdf",
+      "markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-clean/4875ad9321dfcfc0aa52.md",
+      "automated_warning": "Automated validation: PASS; direct QC found a material omission",
+      "identity_match": true,
+      "body_complete": false,
+      "tables": {
+        "pdf_semantic_tables": 2,
+        "markdown_semantic_tables": 2,
+        "material_loss": false,
+        "basis": "Die beiden nummerierten Tabellen des PDFs sind im Markdown als zwei Pipe-Tabellen vorhanden. Tabelle 1 enthält alle sechs Faktoren mit Beschreibung, Items und Inhalt; Tabelle 2 enthält alle 17 zweisprachigen Items und ihre sechs Faktorladungen. Einzelne Wort- und Zeichenartefakte beeinträchtigen die strukturelle Zuordnung nicht."
+      },
+      "decision": "requires_reconversion",
+      "issues": [
+        "Der tatsächlich erworbene Volltext ist die institutionelle Repository-Kopie der Version of Record vom 23. Februar 2026 mit DOI 10.1080/02615479.2026.2631708 und Handle 2454/56539; er ist keine Accepted-Manuscript-Fassung.",
+        "Der vollständige Abstract auf PDF-Seite 2 fehlt im Markdown. Verloren sind unter anderem die Stichprobengröße 42, die Kombination quantitativer und qualitativer Analyse, die sechs Einstellungsdimensionen und die Zusammenfassung der ambivalenten Haltung der Studierenden.",
+        "ARTICLE HISTORY mit Received 18 July 2025 und Accepted 2 February 2026 sowie die fünf Keywords fehlen vollständig.",
+        "Tabelle 2 enthält kleinere Extraktionsartefakte wie zusätzliche Leerzeichen in Dezimalwerten und `all tata AI can do` statt `all that AI can do`; alle 17 Items und Faktorladungen bleiben zuordenbar.",
+        "Alle 16 PAGE-Marker sind vorhanden; die automatische Seitenabdeckungsprüfung erkennt den inhaltlichen Ausfall innerhalb von PAGE 2 nicht."
+      ],
+      "evidence": [
+        "Repository- und Verlagsdeckblatt sowie Artikelbeginn stimmen bei Titel, Sacramento Pinazo-Hernandis, Nuria Carcavilla-González, Social Work Education, DOI und Veröffentlichungsdatum zwischen PDF und Markdown überein.",
+        "PDF-Seite 2 enthält zwischen Zugehörigkeiten und Introduction den Abstract, ARTICLE HISTORY und KEYWORDS; das Markdown springt an derselben Stelle unmittelbar zur Überschrift Introduction.",
+        "Der Abstractanfang `Artificial intelligence is experiencing continuous and sustained progress` und die Formulierung `combining quantitative and qualitative analysis with a sample size of 42` kommen im gesamten Markdown nicht vor.",
+        "Tabelle 1 auf PDF-Seite 7 und Tabelle 2 auf PDF-Seite 8 wurden zeilen- und spaltenweise mit den beiden Markdown-Pipe-Tabellen verglichen; sechs Faktoren, 17 Items und sämtliche Ladungen sind vorhanden.",
+        "Introduction, Material and method mit Unterabschnitten, Results, Qualitative results, Discussion mit drei Themen, Strengths and limitations, Implications, Acknowledgement, Disclosure statement, Open scholarship und References sind vollständig und in Quellreihenfolge vorhanden.",
+        "PDF und Markdown enden mit demselben Literaturverzeichnis bis Xue, Rashid und Ouyang (2024)."
+      ]
+    }
+  ]
+}

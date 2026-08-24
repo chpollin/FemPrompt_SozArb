@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-08-23T19:01:32.382016",
+  "input_dir": "generated\\source-acquisition\\oa-batch-a\\j7-output",
+  "output_dir": "generated\\source-acquisition\\oa-batch-a\\j7-clean",
+  "in_place": false,
+  "documents": [
+    {
+      "filename": "J7V3AAQT.md",
+      "original_chars": 69186,
+      "final_chars": 68779,
+      "chars_removed": 407,
+      "hyphenations_fixed": 0,
+      "page_numbers_removed": 0,
+      "repeated_headers_removed": 8,
+      "excessive_newlines_fixed": 25,
+      "all_caps_removed": 0,
+      "artifact_score_before": 9.6,
+      "artifact_score_after": 0.0
+    }
+  ]
+}

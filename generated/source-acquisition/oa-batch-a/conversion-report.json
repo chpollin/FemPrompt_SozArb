@@ -1,0 +1,110 @@
+{
+  "timestamp": "2026-08-23T18:56:44.412534",
+  "input_dir": "generated\\pdfs",
+  "output_dir": "generated\\markdown",
+  "total_files": 11,
+  "converted": 1,
+  "skipped": 10,
+  "failed": 0,
+  "low_quality": 0,
+  "files": [
+    {
+      "input": "4ZL5Q48E.pdf",
+      "output": "4ZL5Q48E.md",
+      "file_hash": "8fcb0414bb58563ba8f05ba726113a4f",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "7FEFMCBZ.pdf",
+      "output": "7FEFMCBZ.md",
+      "file_hash": "4915af4511dcc17f77513b92845b026b",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "A2P8MXMY-collection.pdf",
+      "output": "A2P8MXMY-collection.md",
+      "file_hash": "8043b6ce577355782a202693f9d31116",
+      "success": true,
+      "duration_seconds": 299.18,
+      "metrics": {
+        "total_chars": 1092346,
+        "total_lines": 5007,
+        "total_words": 152115,
+        "headings": 226,
+        "heading_levels": {
+          "h2": 226
+        },
+        "tables": 25,
+        "lists": 997,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 2187,
+        "avg_line_length": 385.6
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "A2P8MXMY.pdf",
+      "output": "A2P8MXMY.md",
+      "file_hash": "05251813c6436d550458637e4812bcd8",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "BHXDU7VM.pdf",
+      "output": "BHXDU7VM.md",
+      "file_hash": "945b37c1dc6f88c4c5fdfcc4e5390dda",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Franken_Mauritz_2021_Gender_und_KI-Anwendungen.pdf",
+      "output": "Franken_Mauritz_2021_Gender_und_KI-Anwendungen.md",
+      "file_hash": "f25425ec8717a8966935e080d1db2a0c",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "J7V3AAQT.pdf",
+      "output": "J7V3AAQT.md",
+      "file_hash": "32bc7a2eb710582012e5bc329f1d765b",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "NASW_ASWB_CSWE_CSWA_2017_Standards_for_Technology_in_Social_Work_Practice.pdf",
+      "output": "NASW_ASWB_CSWE_CSWA_2017_Standards_for_Technology_in_Social_Work_Practice.md",
+      "file_hash": "401992c0015a9aece8453f478f1ca2b3",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "P4YQIKJX.pdf",
+      "output": "P4YQIKJX.md",
+      "file_hash": "006e86936797d58c3da5a225cbbda3f5",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "R7V99ERA.pdf",
+      "output": "R7V99ERA.md",
+      "file_hash": "5fba9c757fa667b6caec40af80a6b615",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "VSZM7CT6.pdf",
+      "output": "VSZM7CT6.md",
+      "file_hash": "0931b8a4f50e4c6fe30fe9e054220f4d",
+      "status": "skipped",
+      "note": "Already existed"
+    }
+  ]
+}

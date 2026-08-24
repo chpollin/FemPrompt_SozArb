@@ -8,3 +8,11 @@
 *.png binary
 *.woff2 binary
 *.zip binary
+
+# Source captures and generated research artifacts preserve source-exact text.
+# Their recorded hashes take precedence over Git's whitespace heuristic.
+corpus/deep-research/round2/** -whitespace
+generated/markdown/** -whitespace
+generated/markdown_clean/** -whitespace
+generated/source-acquisition/** -whitespace
+tests/review-cases/agent-runs/** -whitespace

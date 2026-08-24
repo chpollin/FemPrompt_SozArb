@@ -1,0 +1,47 @@
+{
+  "timestamp": "2026-08-23T18:56:44.440045",
+  "input_dir": "generated\\source-acquisition\\oa-batch-b\\markdown-input",
+  "output_dir": "generated\\markdown_clean",
+  "in_place": false,
+  "documents": [
+    {
+      "filename": "A2P8MXMY.md",
+      "original_chars": 101151,
+      "final_chars": 99311,
+      "chars_removed": 1840,
+      "hyphenations_fixed": 0,
+      "page_numbers_removed": 0,
+      "repeated_headers_removed": 14,
+      "excessive_newlines_fixed": 42,
+      "all_caps_removed": 0,
+      "artifact_score_before": 16.8,
+      "artifact_score_after": 0.0
+    },
+    {
+      "filename": "BHXDU7VM.md",
+      "original_chars": 130705,
+      "final_chars": 130525,
+      "chars_removed": 180,
+      "hyphenations_fixed": 0,
+      "page_numbers_removed": 0,
+      "repeated_headers_removed": 1,
+      "excessive_newlines_fixed": 126,
+      "all_caps_removed": 0,
+      "artifact_score_before": 50.4,
+      "artifact_score_after": 0.0
+    },
+    {
+      "filename": "P4YQIKJX.md",
+      "original_chars": 112936,
+      "final_chars": 110011,
+      "chars_removed": 2925,
+      "hyphenations_fixed": 1,
+      "page_numbers_removed": 0,
+      "repeated_headers_removed": 57,
+      "excessive_newlines_fixed": 51,
+      "all_caps_removed": 0,
+      "artifact_score_before": 21.2,
+      "artifact_score_after": 0.0
+    }
+  ]
+}

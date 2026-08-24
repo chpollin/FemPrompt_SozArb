@@ -1,0 +1,2564 @@
+{
+  "schema": "femprompt-codex-websearch-lane/0.1",
+  "generated_at": "2026-08-24T15:22:27.0591341+02:00",
+  "cutoff_date": "2026-08-24",
+  "year_filter": {
+    "from": "2026-01-01",
+    "until": "2026-08-24",
+    "rule": "Nur belastbar datierte Publikations- oder Versionsfassungen innerhalb des Intervalls."
+  },
+  "lane_id": "A",
+  "lane_title": "Soziale Arbeit, Social Care und Human Services mit Generative AI/LLMs — 2026",
+  "scope": "Breite, mehrsprachige Primärquellensuche nach 2026 veröffentlichten Arbeiten zu generativer KI oder Large Language Models in Sozialer Arbeit, Social Work Education und Practice, Social Care, Child Welfare, Clinical Social Work, Mental Health und Human Services. Prompting, Bias, Gender, Fairness, Diversity und soziale Ungleichheit wurden priorisiert.",
+  "exact_queries": [
+    "\"generative AI\" \"social work\" 2026",
+    "\"large language model\" \"social work\" 2026",
+    "ChatGPT \"social work\" 2026",
+    "\"artificial intelligence\" \"social work education\" 2026",
+    "\"generative AI\" \"child welfare\" 2026",
+    "\"large language model\" \"child welfare\" 2026",
+    "\"generative AI\" \"clinical social work\" 2026",
+    "\"generative AI\" \"mental health\" \"social work\" 2026",
+    "\"generative AI\" \"human services\" 2026",
+    "\"generative AI\" \"social care\" 2026",
+    "\"inteligencia artificial generativa\" \"trabajo social\" 2026",
+    "\"grandes modelos de lenguaje\" \"trabajo social\" 2026",
+    "\"intelligence artificielle générative\" \"travail social\" 2026",
+    "\"grand modèle de langage\" \"travail social\" 2026",
+    "\"Generative KI\" \"Soziale Arbeit\" 2026",
+    "Sprachmodell \"Soziale Arbeit\" 2026",
+    "\"generatieve AI\" \"sociaal werk\" 2026",
+    "\"inteligência artificial generativa\" \"serviço social\" 2026"
+  ],
+  "searched_sources": [
+    "Crossref REST API",
+    "DOI resolver and publisher landing pages",
+    "Taylor & Francis",
+    "Oxford University Press",
+    "Wiley",
+    "SAGE",
+    "Springer Nature",
+    "Routledge",
+    "Cairn/Vie sociale",
+    "JSTOR",
+    "JMIR Mental Health",
+    "DiMe-Sozial OJS",
+    "Social Work and Education OJS",
+    "Journal of Education and Learning Environments OJS",
+    "institutional repositories",
+    "arXiv"
+  ],
+  "deduplication_sources": [
+    "corpus/work_version_registry.json",
+    "corpus/zotero_export.json",
+    "generated/round2-intake-package.json",
+    "generated/contextual-update-2026-08-24-intake-package.json",
+    "corpus/deep-research/round2/contextual-update-2026-08-24/lane-a-social-work.json",
+    "corpus/deep-research/round2/contextual-update-2026-08-24/lane-b-feminist-social-work.json",
+    "corpus/deep-research/round2/contextual-update-2026-08-24/lane-c-prompt-bias.json"
+  ],
+  "saturation": {
+    "status": "high_practical_saturation",
+    "candidates_total": 35,
+    "tier_a": 23,
+    "tier_b": 12,
+    "previously_identified": 14,
+    "new_candidates": 21,
+    "exclusions": 17,
+    "basis": "Mehrsprachige Suchkombinationen, Crossref-Deep-Scan, gezielte Verlagsprüfungen und DOI-/Titel-/Autor:innenabgleich. Letzte Erweiterungen lieferten überwiegend allgemeine AI-Arbeiten ohne generativen Technikbezug, undatierte 2026-Einträge oder bereits identifizierte Treffer.",
+    "limitations": [
+      "Einige JSSWR- und Cairn-Volltexte waren zugangsbeschränkt.",
+      "Für Buchkapitel ist kapitelspezifische Peer-Review-Evidenz meist nicht öffentlich belegt.",
+      "Einträge mit bloßem Jahresdatum wurden wegen des strikten Stichtags ausgeschlossen."
+    ]
+  },
+  "candidates": [
+    {
+      "tier": "A",
+      "title": "Same Prompt, Different Care? Evaluating Inequities in AI-Generated Mental Health Support for Immigrant Communities",
+      "authors": [
+        "Cheng Chow",
+        "Xiuer Gu"
+      ],
+      "publication_date": "2026-07-28",
+      "publication_type": "journal_article",
+      "venue": "Journal of the Society for Social Work and Research",
+      "volume_issue_pages": null,
+      "doi": "10.1086/743397",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-07-28",
+          "identifiers": {
+            "doi": "10.1086/743397"
+          },
+          "landing_url": "https://doi.org/10.1086/743397",
+          "fulltext_url": null,
+          "relation": null
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-07-28",
+        "identifiers": {
+          "doi": "10.1086/743397"
+        },
+        "landing_url": "https://doi.org/10.1086/743397",
+        "fulltext_url": null
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Crossref weist einen Journal Article in Journal of the Society for Social Work and Research aus; eine item-spezifische Annahme- oder Begutachtungshistorie war nicht belegt.",
+        "evidence_url": "https://doi.org/10.1086/743397"
+      },
+      "access": {
+        "status": "restricted_or_not_verified",
+        "fulltext_url": null,
+        "license": null,
+        "basis": "Kein offener Volltext in den geprüften Primärquellen belegt."
+      },
+      "eligibility": {
+        "technical": "Generative_KI, Prompting. Human Services und mentale Gesundheit mit explizitem Immigrationsbezug",
+        "social": "Bias_Ungleichheit, Fairness, Diversitaet. Human Services und mentale Gesundheit mit explizitem Immigrationsbezug",
+        "decision": "Beide Review-Dimensionen erfüllt und direkt relevant."
+      },
+      "source_urls": [
+        "https://doi.org/10.1086/743397"
+      ],
+      "duplicate_check": {
+        "status": "previously_identified",
+        "matched_sources": [
+          "corpus/deep-research/round2/contextual-update-2026-08-24/lane-a-social-work.json",
+          "generated/contextual-update-2026-08-24-intake-package.json"
+        ],
+        "matched_existing_keys": [],
+        "method": "Exakter DOI-Abgleich sowie normalisierter Titel-/Autor:innenabgleich gegen alle Deduplication Sources."
+      },
+      "recommendation": "Als bereits identifizierten 2026-Treffer fortführen.",
+      "notes": [
+        "Untersucht bei identischem Prompt Ungleichheiten in KI-generierter Unterstützung zur mentalen Gesundheit für Immigrant:innengemeinschaften.",
+        "Prioritär aufnehmen; direkter GenAI-, Prompting-, Ungleichheits- und Diversitätsbezug. Volltextbeschaffung erforderlich."
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Prompt Engineering for Social Workers",
+      "authors": [
+        "Moon Sun Song",
+        "Othelia E. Lee"
+      ],
+      "publication_date": "2026-08-12",
+      "publication_type": "book_chapter",
+      "venue": "Social Work Practice and Artificial Intelligence for the Common Good (Routledge)",
+      "volume_issue_pages": null,
+      "doi": "10.4324/9781003755081-10",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-08-12",
+          "identifiers": {
+            "doi": "10.4324/9781003755081-10"
+          },
+          "landing_url": "https://doi.org/10.4324/9781003755081-10",
+          "fulltext_url": null,
+          "relation": null
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-08-12",
+        "identifiers": {
+          "doi": "10.4324/9781003755081-10"
+        },
+        "landing_url": "https://doi.org/10.4324/9781003755081-10",
+        "fulltext_url": null
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Routledge weist das Kapitel und die Kapitel-DOI aus; eine kapitelspezifische Begutachtung ist auf der Landingpage nicht belegt.",
+        "evidence_url": "https://doi.org/10.4324/9781003755081-10"
+      },
+      "access": {
+        "status": "restricted_or_not_verified",
+        "fulltext_url": null,
+        "license": null,
+        "basis": "Kein offener Volltext in den geprüften Primärquellen belegt."
+      },
+      "eligibility": {
+        "technical": "Generative_KI, Prompting. Prompting-Kompetenz für Sozialarbeiter:innen",
+        "social": "Soziale_Arbeit, Bias_Ungleichheit, Fairness. Prompting-Kompetenz für Sozialarbeiter:innen",
+        "decision": "Beide Review-Dimensionen erfüllt und direkt relevant."
+      },
+      "source_urls": [
+        "https://doi.org/10.4324/9781003755081-10"
+      ],
+      "duplicate_check": {
+        "status": "previously_identified",
+        "matched_sources": [
+          "corpus/deep-research/round2/contextual-update-2026-08-24/lane-a-social-work.json",
+          "generated/contextual-update-2026-08-24-intake-package.json"
+        ],
+        "matched_existing_keys": [],
+        "method": "Exakter DOI-Abgleich sowie normalisierter Titel-/Autor:innenabgleich gegen alle Deduplication Sources."
+      },
+      "recommendation": "Als bereits identifizierten 2026-Treffer fortführen.",
+      "notes": [
+        "Führt Prompt Engineering als Ko-Kreationskompetenz für Sozialarbeiter:innen ein. Das P.I.C.O.-Framework soll Prompts so strukturieren, dass Bias reduziert, Privatsphäre geschützt und Outputs iterativ geprüft werden.",
+        "Aufnehmen; direkter Prompting-, Bias- und Sozialarbeitsbezug. Volltextbeschaffung erforderlich."
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Using ChatGPT for Qualitative Social Media Analysis: Insights for Cross-Cultural Social Work",
+      "authors": [
+        "Michin Hong",
+        "Grace Yi"
+      ],
+      "publication_date": "2026-06-01",
+      "publication_type": "journal_article",
+      "venue": "Journal of the Society for Social Work and Research",
+      "volume_issue_pages": null,
+      "doi": "10.1086/740605",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-06-01",
+          "identifiers": {
+            "doi": "10.1086/740605"
+          },
+          "landing_url": "https://doi.org/10.1086/740605",
+          "fulltext_url": null,
+          "relation": null
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-06-01",
+        "identifiers": {
+          "doi": "10.1086/740605"
+        },
+        "landing_url": "https://doi.org/10.1086/740605",
+        "fulltext_url": null
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Crossref weist einen Journal Article in Journal of the Society for Social Work and Research aus; eine item-spezifische Begutachtungshistorie war nicht belegt.",
+        "evidence_url": "https://doi.org/10.1086/740605"
+      },
+      "access": {
+        "status": "restricted_or_not_verified",
+        "fulltext_url": null,
+        "license": null,
+        "basis": "Kein offener Volltext in den geprüften Primärquellen belegt."
+      },
+      "eligibility": {
+        "technical": "Generative_KI. Cross-Cultural Social Work und qualitative Forschung",
+        "social": "Soziale_Arbeit, Diversitaet. Cross-Cultural Social Work und qualitative Forschung",
+        "decision": "Beide Review-Dimensionen erfüllt und direkt relevant."
+      },
+      "source_urls": [
+        "https://doi.org/10.1086/740605"
+      ],
+      "duplicate_check": {
+        "status": "previously_identified",
+        "matched_sources": [
+          "corpus/deep-research/round2/contextual-update-2026-08-24/lane-a-social-work.json",
+          "generated/contextual-update-2026-08-24-intake-package.json"
+        ],
+        "matched_existing_keys": [],
+        "method": "Exakter DOI-Abgleich sowie normalisierter Titel-/Autor:innenabgleich gegen alle Deduplication Sources."
+      },
+      "recommendation": "Als bereits identifizierten 2026-Treffer fortführen.",
+      "notes": [
+        "Methodische Untersuchung von ChatGPT für qualitative Social-Media-Analyse in kulturvergleichender sozialarbeiterischer Forschung.",
+        "Aufnehmen; direkter ChatGPT- und kulturvergleichender Sozialarbeitsbezug. Volltextbeschaffung erforderlich."
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Small Models Achieve Large Language Model Performance: Evaluating Reasoning-Enabled AI for Secure Child Welfare Research",
+      "authors": [
+        "Zia Qi",
+        "Brian E. Perron",
+        "Bryan G. Victor",
+        "Dragan Stoll",
+        "Joseph P. Ryan"
+      ],
+      "publication_date": "2026-01-18",
+      "publication_type": "journal_article",
+      "venue": "Journal of Evidence-Based Social Work",
+      "volume_issue_pages": null,
+      "doi": "10.1080/26408066.2026.2616711",
+      "other_identifiers": {
+        "arxiv": "2512.04261",
+        "arxiv_doi": "10.48550/arXiv.2512.04261"
+      },
+      "versions": [
+        {
+          "version_type": "preprint_v1",
+          "date": "2025-12-03",
+          "identifiers": {
+            "arxiv": "2512.04261",
+            "doi": "10.48550/arXiv.2512.04261"
+          },
+          "landing_url": "https://arxiv.org/abs/2512.04261v1",
+          "fulltext_url": "https://arxiv.org/pdf/2512.04261v1",
+          "relation": "is_preprint_of_version_of_record"
+        },
+        {
+          "version_type": "preprint_v2",
+          "date": "2026-01-10",
+          "identifiers": {
+            "arxiv": "2512.04261",
+            "doi": "10.48550/arXiv.2512.04261"
+          },
+          "landing_url": "https://arxiv.org/abs/2512.04261",
+          "fulltext_url": "https://arxiv.org/pdf/2512.04261",
+          "relation": "is_preprint_of_version_of_record"
+        },
+        {
+          "version_type": "version_of_record",
+          "date": "2026-01-18",
+          "identifiers": {
+            "doi": "10.1080/26408066.2026.2616711",
+            "arxiv": "2512.04261"
+          },
+          "landing_url": "https://doi.org/10.1080/26408066.2026.2616711",
+          "fulltext_url": "https://www.tandfonline.com/doi/pdf/10.1080/26408066.2026.2616711?needAccess=true",
+          "relation": "version_of_record_of_preprint"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-01-18",
+        "identifiers": {
+          "doi": "10.1080/26408066.2026.2616711",
+          "arxiv": "2512.04261"
+        },
+        "landing_url": "https://doi.org/10.1080/26408066.2026.2616711",
+        "fulltext_url": "https://www.tandfonline.com/doi/pdf/10.1080/26408066.2026.2616711?needAccess=true"
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Taylor & Francis weist eine Version of Record und die Journal-Peer-Review-Policy aus; eine item-spezifische Annahmehistorie war in Crossref nicht enthalten.",
+        "evidence_url": "https://doi.org/10.1080/26408066.2026.2616711"
+      },
+      "access": {
+        "status": "open_access",
+        "fulltext_url": "https://arxiv.org/pdf/2512.04261",
+        "license": null,
+        "basis": "Offene Fassung in Primär- oder Repositoriumsmetadaten belegt."
+      },
+      "eligibility": {
+        "technical": "Generative_KI. Sichere und validierte Sprachmodellnutzung in der Kindeswohlforschung",
+        "social": "Soziale_Arbeit, Bias_Ungleichheit, Fairness. Sichere und validierte Sprachmodellnutzung in der Kindeswohlforschung",
+        "decision": "Beide Review-Dimensionen erfüllt und direkt relevant."
+      },
+      "source_urls": [
+        "https://doi.org/10.1080/26408066.2026.2616711",
+        "https://arxiv.org/pdf/2512.04261"
+      ],
+      "duplicate_check": {
+        "status": "previously_identified",
+        "matched_sources": [
+          "corpus/deep-research/round2/contextual-update-2026-08-24/lane-a-social-work.json",
+          "generated/contextual-update-2026-08-24-intake-package.json"
+        ],
+        "matched_existing_keys": [],
+        "method": "Exakter DOI-Abgleich sowie normalisierter Titel-/Autor:innenabgleich gegen alle Deduplication Sources."
+      },
+      "recommendation": "Als bereits identifizierten 2026-Treffer fortführen.",
+      "notes": [
+        "Benchmarkt sieben Sprachmodellgrößen für häusliche Gewalt, Schusswaffen, substanzbezogene Probleme und Opioide in Kindeswohlakten. Ein reasoning-gestütztes 4B-Modell erreicht bei drei Benchmarks Kappa-Werte von 0,93 bis 0,96 und bei häuslicher Gewalt 0,74.",
+        "Als einen neuen Work mit zwei Preprintrevisionen und einer Version of Record aufnehmen; arXiv-Volltext für Screening verwenden und Versionen verknüpfen."
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "The (Un)Fair Algorithm: Socio-Technical Ethics Work for Artificial Intelligence in Social Work",
+      "authors": [
+        "Ida Schrøder",
+        "Marie Leth Meilvang",
+        "Matilde Høybye-Mortensen"
+      ],
+      "publication_date": "2026-02-18",
+      "publication_type": "journal_article",
+      "venue": "Ethics and Social Welfare",
+      "volume_issue_pages": null,
+      "doi": "10.1080/17496535.2026.2619945",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-02-18",
+          "identifiers": {
+            "doi": "10.1080/17496535.2026.2619945"
+          },
+          "landing_url": "https://doi.org/10.1080/17496535.2026.2619945",
+          "fulltext_url": null,
+          "relation": null
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-02-18",
+        "identifiers": {
+          "doi": "10.1080/17496535.2026.2619945"
+        },
+        "landing_url": "https://doi.org/10.1080/17496535.2026.2619945",
+        "fulltext_url": null
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "basis": "Crossref weist Received 2025-03-19, Accepted 2026-01-16 und Published 2026-02-18 aus.",
+        "evidence_url": "https://doi.org/10.1080/17496535.2026.2619945"
+      },
+      "access": {
+        "status": "restricted_or_not_verified",
+        "fulltext_url": null,
+        "license": null,
+        "basis": "Kein offener Volltext in den geprüften Primärquellen belegt."
+      },
+      "eligibility": {
+        "technical": "KI_Sonstige. Der GenAI- oder LLM-Status des Systems ist in Abstract und Metadaten nicht belegt.",
+        "social": "Soziale_Arbeit, Fairness. Der GenAI- oder LLM-Status des Systems ist in Abstract und Metadaten nicht belegt.",
+        "decision": "Beide Review-Dimensionen erfüllt und direkt relevant."
+      },
+      "source_urls": [
+        "https://doi.org/10.1080/17496535.2026.2619945"
+      ],
+      "duplicate_check": {
+        "status": "previously_identified",
+        "matched_sources": [
+          "corpus/deep-research/round2/contextual-update-2026-08-24/lane-a-social-work.json",
+          "corpus/deep-research/round2/contextual-update-2026-08-24/lane-b-feminist-social-work.json",
+          "generated/contextual-update-2026-08-24-intake-package.json"
+        ],
+        "matched_existing_keys": [],
+        "method": "Exakter DOI-Abgleich sowie normalisierter Titel-/Autor:innenabgleich gegen alle Deduplication Sources."
+      },
+      "recommendation": "Als bereits identifizierten 2026-Treffer fortführen.",
+      "notes": [
+        "Organisationsethnografie zu einem fairen AI Counselling Assistant einer skandinavischen NGO und zu sozio-technischer Ethikarbeit.",
+        "Zurückstellen, bis der Volltext einen GenAI- oder LLM-Anteil belegt."
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "The Adoption of Generative AI by Social Workers in Practice: A Scoping Review",
+      "authors": [
+        "Chuhan Bai",
+        "Esther Mercado García"
+      ],
+      "publication_date": "2026-07-29",
+      "publication_type": "journal_article",
+      "venue": "Research on Social Work Practice",
+      "volume_issue_pages": null,
+      "doi": "10.1177/10497315261469433",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-07-29",
+          "identifiers": {
+            "doi": "10.1177/10497315261469433"
+          },
+          "landing_url": "https://doi.org/10.1177/10497315261469433",
+          "fulltext_url": null,
+          "relation": null
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-07-29",
+        "identifiers": {
+          "doi": "10.1177/10497315261469433"
+        },
+        "landing_url": "https://doi.org/10.1177/10497315261469433",
+        "fulltext_url": null
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Crossref weist einen Journal Article aus; eine item-spezifische Begutachtungshistorie war nicht belegt.",
+        "evidence_url": "https://doi.org/10.1177/10497315261469433"
+      },
+      "access": {
+        "status": "restricted_or_not_verified",
+        "fulltext_url": null,
+        "license": null,
+        "basis": "Kein offener Volltext in den geprüften Primärquellen belegt."
+      },
+      "eligibility": {
+        "technical": "Generative_KI. Bias, Fairness, Gender, Diversity oder Prompting sind kein nachweisbarer Hauptfokus.",
+        "social": "Soziale_Arbeit. Bias, Fairness, Gender, Diversity oder Prompting sind kein nachweisbarer Hauptfokus.",
+        "decision": "Beide Review-Dimensionen erfüllt und direkt relevant."
+      },
+      "source_urls": [
+        "https://doi.org/10.1177/10497315261469433"
+      ],
+      "duplicate_check": {
+        "status": "previously_identified",
+        "matched_sources": [
+          "corpus/deep-research/round2/contextual-update-2026-08-24/lane-a-social-work.json"
+        ],
+        "matched_existing_keys": [],
+        "method": "Exakter DOI-Abgleich sowie normalisierter Titel-/Autor:innenabgleich gegen alle Deduplication Sources."
+      },
+      "recommendation": "Als bereits identifizierten 2026-Treffer fortführen.",
+      "notes": [
+        "Scoping Review von sieben Studien zu GenAI-Adoption durch praktizierende Sozialarbeiter:innen in Dokumentation, Assessment, Klient:innenkontakt und professioneller Entwicklung.",
+        "Als Kontextliteratur vormerken; für die fokussierte Runde zurückstellen."
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Innovating social work pedagogy: generative AI for critical competency development in evidence-based practice",
+      "authors": [
+        "Anitra P. Walker",
+        "Daniel J. Gibbs",
+        "Leon Banks",
+        "Hee Yun Lee",
+        "Kaylie Danielle Frazier",
+        "Jaesung Lee"
+      ],
+      "publication_date": "2026-01-21",
+      "publication_type": "journal_article",
+      "venue": "Social Work Education",
+      "volume_issue_pages": null,
+      "doi": "10.1080/02615479.2026.2617512",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-01-21",
+          "identifiers": {
+            "doi": "10.1080/02615479.2026.2617512"
+          },
+          "landing_url": "https://doi.org/10.1080/02615479.2026.2617512",
+          "fulltext_url": null,
+          "relation": null
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-01-21",
+        "identifiers": {
+          "doi": "10.1080/02615479.2026.2617512"
+        },
+        "landing_url": "https://doi.org/10.1080/02615479.2026.2617512",
+        "fulltext_url": null
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "basis": "Verlagsmetadaten weisen Received 2025-11-25 und Accepted 2026-01-09 aus.",
+        "evidence_url": "https://doi.org/10.1080/02615479.2026.2617512"
+      },
+      "access": {
+        "status": "restricted_or_not_verified",
+        "fulltext_url": null,
+        "license": null,
+        "basis": "Kein offener Volltext in den geprüften Primärquellen belegt."
+      },
+      "eligibility": {
+        "technical": "Generative_KI, AI_Literacies. Kein substanzieller Fokus auf Bias, Fairness, Gender, Diversity oder Prompting.",
+        "social": "Soziale_Arbeit. Kein substanzieller Fokus auf Bias, Fairness, Gender, Diversity oder Prompting.",
+        "decision": "Beide Review-Dimensionen erfüllt und direkt relevant."
+      },
+      "source_urls": [
+        "https://doi.org/10.1080/02615479.2026.2617512"
+      ],
+      "duplicate_check": {
+        "status": "previously_identified",
+        "matched_sources": [
+          "corpus/deep-research/round2/contextual-update-2026-08-24/lane-a-social-work.json"
+        ],
+        "matched_existing_keys": [],
+        "method": "Exakter DOI-Abgleich sowie normalisierter Titel-/Autor:innenabgleich gegen alle Deduplication Sources."
+      },
+      "recommendation": "Als bereits identifizierten 2026-Treffer fortführen.",
+      "notes": [
+        "Mixed-Methods-Studie zu einer Lehrübung, in der Studierende menschliche und KI-generierte Literaturübersichten vergleichen; untersucht Halluzinationen, Zitationsgenauigkeit und EBP-Kompetenz.",
+        "Für AI-Literacy-Kontext vormerken; aus der fokussierten Tier-A-Auswahl zurückstellen."
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "AI-enhanced ethical decision-making in social work: development and testing of an application-specific language model",
+      "authors": [
+        "Jia-Lin Zhao",
+        "Li Shen",
+        "John Shields",
+        "Xiang Huang",
+        "Samdan Chokyi"
+      ],
+      "publication_date": "2026-06-04",
+      "publication_type": "journal_article",
+      "venue": "Journal of Social Work Practice",
+      "volume_issue_pages": null,
+      "doi": "10.1080/02650533.2026.2683352",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-06-04",
+          "identifiers": {
+            "doi": "10.1080/02650533.2026.2683352"
+          },
+          "landing_url": "https://doi.org/10.1080/02650533.2026.2683352",
+          "fulltext_url": null,
+          "relation": null
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-06-04",
+        "identifiers": {
+          "doi": "10.1080/02650533.2026.2683352"
+        },
+        "landing_url": "https://doi.org/10.1080/02650533.2026.2683352",
+        "fulltext_url": null
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Crossref weist einen Journal Article aus; eine item-spezifische Begutachtungshistorie war nicht belegt.",
+        "evidence_url": "https://doi.org/10.1080/02650533.2026.2683352"
+      },
+      "access": {
+        "status": "restricted_or_not_verified",
+        "fulltext_url": null,
+        "license": null,
+        "basis": "Kein offener Volltext in den geprüften Primärquellen belegt."
+      },
+      "eligibility": {
+        "technical": "Generative_KI. Ethik ist zentral, die priorisierten Dimensionen sind nicht explizit untersucht.",
+        "social": "Soziale_Arbeit. Ethik ist zentral, die priorisierten Dimensionen sind nicht explizit untersucht.",
+        "decision": "Beide Review-Dimensionen erfüllt und direkt relevant."
+      },
+      "source_urls": [
+        "https://doi.org/10.1080/02650533.2026.2683352"
+      ],
+      "duplicate_check": {
+        "status": "previously_identified",
+        "matched_sources": [
+          "corpus/deep-research/round2/contextual-update-2026-08-24/lane-a-social-work.json"
+        ],
+        "matched_existing_keys": [],
+        "method": "Exakter DOI-Abgleich sowie normalisierter Titel-/Autor:innenabgleich gegen alle Deduplication Sources."
+      },
+      "recommendation": "Als bereits identifizierten 2026-Treffer fortführen.",
+      "notes": [
+        "Entwickelt und testet ein auf Gemini 2.5 Pro beruhendes Agentensystem für ethische Entscheidungen in 70 simulierten Sozialarbeitsfällen.",
+        "Als Anwendungskontext vormerken; für die fokussierte Runde zurückstellen."
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Social Work Ethics and Generative AI",
+      "authors": [
+        "Michael Balkow"
+      ],
+      "publication_date": "2026-07-21",
+      "publication_type": "book_chapter",
+      "venue": "Routledge book chapter",
+      "volume_issue_pages": null,
+      "doi": "10.4324/9781003627920-14",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-07-21",
+          "identifiers": {
+            "doi": "10.4324/9781003627920-14"
+          },
+          "landing_url": "https://doi.org/10.4324/9781003627920-14",
+          "fulltext_url": null,
+          "relation": null
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-07-21",
+        "identifiers": {
+          "doi": "10.4324/9781003627920-14"
+        },
+        "landing_url": "https://doi.org/10.4324/9781003627920-14",
+        "fulltext_url": null
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Routledge weist das Kapitel aus; eine kapitelspezifische Begutachtung war nicht belegt.",
+        "evidence_url": "https://doi.org/10.4324/9781003627920-14"
+      },
+      "access": {
+        "status": "restricted_or_not_verified",
+        "fulltext_url": null,
+        "license": null,
+        "basis": "Kein offener Volltext in den geprüften Primärquellen belegt."
+      },
+      "eligibility": {
+        "technical": "Generative_KI. Kein belegter Bias-, Fairness-, Diversity- oder Prompting-Schwerpunkt.",
+        "social": "Soziale_Arbeit. Kein belegter Bias-, Fairness-, Diversity- oder Prompting-Schwerpunkt.",
+        "decision": "Beide Review-Dimensionen erfüllt und direkt relevant."
+      },
+      "source_urls": [
+        "https://doi.org/10.4324/9781003627920-14"
+      ],
+      "duplicate_check": {
+        "status": "previously_identified",
+        "matched_sources": [
+          "corpus/deep-research/round2/contextual-update-2026-08-24/lane-a-social-work.json"
+        ],
+        "matched_existing_keys": [],
+        "method": "Exakter DOI-Abgleich sowie normalisierter Titel-/Autor:innenabgleich gegen alle Deduplication Sources."
+      },
+      "recommendation": "Als bereits identifizierten 2026-Treffer fortführen.",
+      "notes": [
+        "Kapitel zu administrativen Möglichkeiten, menschlicher Entscheidungshoheit, Regulierung und Risiken generativer KI in einer ethisch fundierten Profession.",
+        "Als Ethik-Kontext vormerken; Tier A zurückstellen."
+      ]
+    },
+    {
+      "tier": "B",
+      "title": "Artificial intelligence: a neoliberal tool to better manage social inequalities?",
+      "authors": [
+        "Paul Michael Garrett"
+      ],
+      "publication_date": "2026-02-03",
+      "publication_type": "research_article",
+      "venue": "European Journal of Social Work 29(5), 1029-1041",
+      "volume_issue_pages": null,
+      "doi": "10.1080/13691457.2025.2607705",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-02-03",
+          "identifiers": {
+            "doi": "10.1080/13691457.2025.2607705"
+          },
+          "landing_url": "https://doi.org/10.1080/13691457.2025.2607705",
+          "fulltext_url": "https://www.tandfonline.com/doi/full/10.1080/13691457.2025.2607705",
+          "relation": null
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-02-03",
+        "identifiers": {
+          "doi": "10.1080/13691457.2025.2607705"
+        },
+        "landing_url": "https://doi.org/10.1080/13691457.2025.2607705",
+        "fulltext_url": "https://www.tandfonline.com/doi/full/10.1080/13691457.2025.2607705"
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "received": "2025-03-15",
+        "accepted": "2025-12-16",
+        "evidence_url": "https://www.tandfonline.com/doi/full/10.1080/13691457.2025.2607705",
+        "basis": "Verlags- oder Repositoriumsmetadaten belegen die begutachtete Fassung."
+      },
+      "access": {
+        "status": "restricted_or_not_verified",
+        "fulltext_url": "https://www.tandfonline.com/doi/full/10.1080/13691457.2025.2607705",
+        "license": null,
+        "basis": "Kein offener Volltext in den geprüften Primärquellen belegt."
+      },
+      "eligibility": {
+        "technical": "Kritische Untersuchung von KI, Predictive Analytics und automatisierter Verwaltung in Wohlfahrtssystemen.",
+        "social": "Behandelt soziale und ökonomische Ungleichheit, Rationierung sozialer Leistungen, Rassismus, digitale Kolonialität und Kinderfürsorge aus sozialarbeitswissenschaftlicher Perspektive.",
+        "decision": "Direkter Sozialarbeitsbezug; GenAI-/LLM-Scope bleibt begrenzt."
+      },
+      "source_urls": [
+        "https://doi.org/10.1080/13691457.2025.2607705",
+        "https://www.tandfonline.com/doi/full/10.1080/13691457.2025.2607705"
+      ],
+      "duplicate_check": {
+        "status": "previously_identified",
+        "matched_sources": [
+          "corpus/deep-research/round2/contextual-update-2026-08-24/lane-b-feminist-social-work.json"
+        ],
+        "matched_existing_keys": [],
+        "method": "Exakter DOI-Abgleich sowie normalisierter Titel-/Autor:innenabgleich gegen alle Deduplication Sources."
+      },
+      "recommendation": "Als Kontexttreffer führen; GenAI-/LLM-Anteil im Volltext verifizieren.",
+      "notes": [
+        "Verlags-HTML war zugänglich; eine offene Creative-Commons-Lizenz ist in Crossref nicht ausgewiesen."
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Towards a framework for digital literacy in social work education in a time of artificial intelligence",
+      "authors": [
+        "Michael Wallengren-Lynch"
+      ],
+      "publication_date": "2026-04-16",
+      "publication_type": "research_article",
+      "venue": "Social Work Education, 1-18",
+      "volume_issue_pages": null,
+      "doi": "10.1080/02615479.2026.2660786",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record_online_first",
+          "date": "2026-04-16",
+          "identifiers": {
+            "doi": "10.1080/02615479.2026.2660786"
+          },
+          "landing_url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2660786",
+          "fulltext_url": "https://www.tandfonline.com/doi/pdf/10.1080/02615479.2026.2660786",
+          "relation": null
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record_online_first",
+        "date": "2026-04-16",
+        "identifiers": {
+          "doi": "10.1080/02615479.2026.2660786"
+        },
+        "landing_url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2660786",
+        "fulltext_url": "https://www.tandfonline.com/doi/pdf/10.1080/02615479.2026.2660786"
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "received": "2025-02-05",
+        "accepted": "2026-04-07",
+        "evidence_url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2660786",
+        "basis": "Verlags- oder Repositoriumsmetadaten belegen die begutachtete Fassung."
+      },
+      "access": {
+        "status": "open_access",
+        "fulltext_url": "https://www.tandfonline.com/doi/pdf/10.1080/02615479.2026.2660786",
+        "license": "CC BY 4.0.",
+        "basis": "Offene Fassung in Primär- oder Repositoriumsmetadaten belegt."
+      },
+      "eligibility": {
+        "technical": "Entwickelt kritische KI- und Digitalkompetenz und nutzt ein Fallbeispiel zu stereotypen KI-generierten Bildern.",
+        "social": "Expliziter Rahmen für Sozialarbeitsausbildung auf Basis dekolonialer Theorie, Anti-Rassismus, sozialer Gerechtigkeit und Community-Anbindung.",
+        "decision": "Beide Review-Dimensionen erfüllt und direkt relevant."
+      },
+      "source_urls": [
+        "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2660786",
+        "https://www.tandfonline.com/doi/pdf/10.1080/02615479.2026.2660786",
+        "https://doi.org/10.1080/02615479.2026.2660786"
+      ],
+      "duplicate_check": {
+        "status": "previously_identified",
+        "matched_sources": [
+          "corpus/deep-research/round2/contextual-update-2026-08-24/lane-b-feminist-social-work.json",
+          "generated/contextual-update-2026-08-24-intake-package.json"
+        ],
+        "matched_existing_keys": [],
+        "method": "Exakter DOI-Abgleich sowie normalisierter Titel-/Autor:innenabgleich gegen alle Deduplication Sources."
+      },
+      "recommendation": "Als bereits identifizierten 2026-Treffer fortführen.",
+      "notes": [
+        "CC BY 4.0.",
+        "Online-first veröffentlichte Verlagsfassung."
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Promoting AI literacy in social work education: lessons from an interdisciplinary course for social work students",
+      "authors": [
+        "Joshua Weber",
+        "Lauri Goldkind"
+      ],
+      "publication_date": "2026-02-24",
+      "publication_type": "research_article",
+      "venue": "Social Work Education, 1-17",
+      "volume_issue_pages": null,
+      "doi": "10.1080/02615479.2026.2635471",
+      "other_identifiers": {
+        "repository_doi": "10.26041/fhnw-15616"
+      },
+      "versions": [
+        {
+          "version_type": "version_of_record_online_first",
+          "date": "2026-02-24",
+          "identifiers": {
+            "doi": "10.1080/02615479.2026.2635471",
+            "repository_doi": "10.26041/fhnw-15616"
+          },
+          "landing_url": "https://irf.fhnw.ch/entities/publication/895bedd9-51aa-41ac-942a-7c2d20210c32",
+          "fulltext_url": "https://irf.fhnw.ch/server/api/core/bitstreams/58e87312-aca1-4b37-9e15-988182c55803/content",
+          "relation": null
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record_online_first",
+        "date": "2026-02-24",
+        "identifiers": {
+          "doi": "10.1080/02615479.2026.2635471",
+          "repository_doi": "10.26041/fhnw-15616"
+        },
+        "landing_url": "https://irf.fhnw.ch/entities/publication/895bedd9-51aa-41ac-942a-7c2d20210c32",
+        "fulltext_url": "https://irf.fhnw.ch/server/api/core/bitstreams/58e87312-aca1-4b37-9e15-988182c55803/content"
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "received": "2025-08-13",
+        "accepted": "2026-02-11",
+        "evidence_url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2635471",
+        "basis": "Verlags- oder Repositoriumsmetadaten belegen die begutachtete Fassung."
+      },
+      "access": {
+        "status": "open_access",
+        "fulltext_url": "https://irf.fhnw.ch/server/api/core/bitstreams/58e87312-aca1-4b37-9e15-988182c55803/content",
+        "license": "CC BY-NC-ND 4.0.",
+        "basis": "Offene Fassung in Primär- oder Repositoriumsmetadaten belegt."
+      },
+      "eligibility": {
+        "technical": "Empirisch evaluierter Kurs zu generativer KI, Large Language Models, Prompt Engineering und CustomGPTs.",
+        "social": "Untersucht Sozialarbeitsstudierende; ethische Navigation schließt Bias, Accountability und Fairness ein und wird um digitale Vulnerabilität und Data Justice ergänzt.",
+        "decision": "Beide Review-Dimensionen erfüllt und direkt relevant."
+      },
+      "source_urls": [
+        "https://irf.fhnw.ch/entities/publication/895bedd9-51aa-41ac-942a-7c2d20210c32",
+        "https://irf.fhnw.ch/server/api/core/bitstreams/58e87312-aca1-4b37-9e15-988182c55803/content",
+        "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2635471",
+        "https://doi.org/10.1080/02615479.2026.2635471"
+      ],
+      "duplicate_check": {
+        "status": "previously_identified",
+        "matched_sources": [
+          "corpus/deep-research/round2/contextual-update-2026-08-24/lane-b-feminist-social-work.json",
+          "generated/contextual-update-2026-08-24-intake-package.json"
+        ],
+        "matched_existing_keys": [],
+        "method": "Exakter DOI-Abgleich sowie normalisierter Titel-/Autor:innenabgleich gegen alle Deduplication Sources."
+      },
+      "recommendation": "Als bereits identifizierten 2026-Treffer fortführen.",
+      "notes": [
+        "CC BY-NC-ND 4.0.",
+        "Online-first veröffentlichte Verlagsfassung im FHNW-Repositorium."
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "A kind of magic? Artificial intelligence-assisted recording: developing principles for an AI-informed social work curriculum",
+      "authors": [
+        "Richard Ingram"
+      ],
+      "publication_date": "2026-05-11",
+      "publication_type": "research_article",
+      "venue": "Social Work Education, 1-18",
+      "volume_issue_pages": null,
+      "doi": "10.1080/02615479.2026.2669634",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record_online_first",
+          "date": "2026-05-11",
+          "identifiers": {
+            "doi": "10.1080/02615479.2026.2669634"
+          },
+          "landing_url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2669634",
+          "fulltext_url": "https://www.tandfonline.com/doi/pdf/10.1080/02615479.2026.2669634",
+          "relation": null
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record_online_first",
+        "date": "2026-05-11",
+        "identifiers": {
+          "doi": "10.1080/02615479.2026.2669634"
+        },
+        "landing_url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2669634",
+        "fulltext_url": "https://www.tandfonline.com/doi/pdf/10.1080/02615479.2026.2669634"
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "received": "2026-03-19",
+        "accepted": "2026-04-22",
+        "evidence_url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2669634",
+        "basis": "Verlags- oder Repositoriumsmetadaten belegen die begutachtete Fassung."
+      },
+      "access": {
+        "status": "open_access",
+        "fulltext_url": "https://www.tandfonline.com/doi/pdf/10.1080/02615479.2026.2669634",
+        "license": "CC BY-NC-ND 4.0.",
+        "basis": "Offene Fassung in Primär- oder Repositoriumsmetadaten belegt."
+      },
+      "eligibility": {
+        "technical": "Evaluiert KI-gestützte Dokumentation in einer schottischen Kommunalverwaltung anhand der Erfahrungen von 152 Praktikerinnen und Praktikern.",
+        "social": "Leitet Prinzipien für die Sozialarbeitsausbildung ab und behandelt unterschiedliche Wirkungen auf neurodivergente Fachkräfte und Studierende sowie Equity und Inclusion.",
+        "decision": "Beide Review-Dimensionen erfüllt und direkt relevant."
+      },
+      "source_urls": [
+        "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2669634",
+        "https://www.tandfonline.com/doi/pdf/10.1080/02615479.2026.2669634",
+        "https://doi.org/10.1080/02615479.2026.2669634"
+      ],
+      "duplicate_check": {
+        "status": "previously_identified",
+        "matched_sources": [
+          "corpus/deep-research/round2/contextual-update-2026-08-24/lane-b-feminist-social-work.json",
+          "generated/contextual-update-2026-08-24-intake-package.json"
+        ],
+        "matched_existing_keys": [],
+        "method": "Exakter DOI-Abgleich sowie normalisierter Titel-/Autor:innenabgleich gegen alle Deduplication Sources."
+      },
+      "recommendation": "Als bereits identifizierten 2026-Treffer fortführen.",
+      "notes": [
+        "CC BY-NC-ND 4.0.",
+        "Online-first veröffentlichte Verlagsfassung."
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Are future social workers ready for AI? Fears, barriers, and learning needs in higher education",
+      "authors": [
+        "Sacramento Pinazo-Hernandis",
+        "Nuria Carcavilla-González"
+      ],
+      "publication_date": "2026-02-23",
+      "publication_type": "research_article",
+      "venue": "Social Work Education, 1-15",
+      "volume_issue_pages": null,
+      "doi": "10.1080/02615479.2026.2631708",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record_online_first",
+          "date": "2026-02-23",
+          "identifiers": {
+            "doi": "10.1080/02615479.2026.2631708"
+          },
+          "landing_url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2631708",
+          "fulltext_url": "https://www.tandfonline.com/doi/pdf/10.1080/02615479.2026.2631708",
+          "relation": null
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record_online_first",
+        "date": "2026-02-23",
+        "identifiers": {
+          "doi": "10.1080/02615479.2026.2631708"
+        },
+        "landing_url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2631708",
+        "fulltext_url": "https://www.tandfonline.com/doi/pdf/10.1080/02615479.2026.2631708"
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "received": "2025-07-18",
+        "accepted": "2026-02-02",
+        "evidence_url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2631708",
+        "basis": "Verlags- oder Repositoriumsmetadaten belegen die begutachtete Fassung."
+      },
+      "access": {
+        "status": "open_access",
+        "fulltext_url": "https://www.tandfonline.com/doi/pdf/10.1080/02615479.2026.2631708",
+        "license": "CC BY-NC-ND 4.0.",
+        "basis": "Offene Fassung in Primär- oder Repositoriumsmetadaten belegt."
+      },
+      "eligibility": {
+        "technical": "Empirische Untersuchung der KI-Kompetenz und Nutzungsvorstellungen von 42 Sozialarbeitsstudierenden; ChatGPT-basierte Lernformen werden einbezogen.",
+        "social": "Behandelt professionelle Identität, ethische und relationale Kompetenz, algorithmischen Bias und Auswirkungen auf vulnerable Gruppen.",
+        "decision": "Beide Review-Dimensionen erfüllt und direkt relevant."
+      },
+      "source_urls": [
+        "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2631708",
+        "https://www.tandfonline.com/doi/pdf/10.1080/02615479.2026.2631708",
+        "https://doi.org/10.1080/02615479.2026.2631708"
+      ],
+      "duplicate_check": {
+        "status": "previously_identified",
+        "matched_sources": [
+          "corpus/deep-research/round2/contextual-update-2026-08-24/lane-b-feminist-social-work.json",
+          "generated/contextual-update-2026-08-24-intake-package.json"
+        ],
+        "matched_existing_keys": [],
+        "method": "Exakter DOI-Abgleich sowie normalisierter Titel-/Autor:innenabgleich gegen alle Deduplication Sources."
+      },
+      "recommendation": "Als bereits identifizierten 2026-Treffer fortführen.",
+      "notes": [
+        "CC BY-NC-ND 4.0.",
+        "Online-first veröffentlichte Verlagsfassung."
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "AI-Generated Images of Social Workers in Healthcare and Implications for Professional Identity",
+      "authors": [
+        "Helen Hickson",
+        "Amy-Louise Byrne",
+        "Jennifer Mulvogue"
+      ],
+      "publication_date": "2026-04-30",
+      "publication_type": "research_article",
+      "venue": "Australian Social Work",
+      "volume_issue_pages": "online first, 1-17",
+      "doi": "10.1080/0312407X.2026.2627220",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-04-30",
+          "identifiers": {
+            "doi": "10.1080/0312407X.2026.2627220"
+          },
+          "landing_url": "https://doi.org/10.1080/0312407X.2026.2627220",
+          "fulltext_url": "https://www.tandfonline.com/doi/pdf/10.1080/0312407X.2026.2627220?needAccess=true",
+          "relation": null
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-04-30",
+        "identifiers": {
+          "doi": "10.1080/0312407X.2026.2627220"
+        },
+        "landing_url": "https://doi.org/10.1080/0312407X.2026.2627220",
+        "fulltext_url": "https://www.tandfonline.com/doi/pdf/10.1080/0312407X.2026.2627220?needAccess=true"
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "basis": "Verlagsmetadaten: received 2025-08-07, accepted 2026-02-01, published 2026-04-30.",
+        "evidence_url": "https://doi.org/10.1080/0312407X.2026.2627220",
+        "received": "2025-08-07",
+        "accepted": "2026-02-01"
+      },
+      "access": {
+        "status": "open_access",
+        "fulltext_url": "https://www.tandfonline.com/doi/pdf/10.1080/0312407X.2026.2627220?needAccess=true",
+        "license": "CC BY",
+        "basis": "Verlagsfassung als Hybrid Open Access mit CC BY belegt."
+      },
+      "eligibility": {
+        "technical": "Kritische Diskursanalyse von mit Adobe Illustrator und Adobe Express Text to Image Generator erzeugten Bildern.",
+        "social": "Untersucht epistemische und zeitliche Auslöschung, normative Ästhetik, kulturelle Responsivität und professionelle Identität von Sozialarbeiter:innen im Gesundheitswesen.",
+        "decision": "Beide Review-Dimensionen erfüllt und direkt relevant."
+      },
+      "source_urls": [
+        "https://doi.org/10.1080/0312407X.2026.2627220",
+        "https://www.tandfonline.com/doi/pdf/10.1080/0312407X.2026.2627220?needAccess=true",
+        "https://api.crossref.org/works/10.1080%2F0312407X.2026.2627220"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "matched_sources": [],
+        "matched_existing_keys": [],
+        "method": "Exakter DOI-Abgleich sowie normalisierter Titel-/Autor:innenabgleich gegen alle Deduplication Sources; kein Treffer."
+      },
+      "recommendation": "Prioritär aufnehmen; direkter GenAI-, Repräsentationsbias- und Sozialarbeitsbezug.",
+      "notes": []
+    },
+    {
+      "tier": "A",
+      "title": "Accuracy and Readability of Large Language Models’ Responses to Frequently Asked Questions on Social Assistance",
+      "authors": [
+        "Hacer Taşkıran Tepe"
+      ],
+      "publication_date": "2026-06-01",
+      "publication_type": "journal_article",
+      "venue": "Journal of the Society for Social Work and Research",
+      "volume_issue_pages": "17(2), 217-240",
+      "doi": "10.1086/740347",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-06-01",
+          "identifiers": {
+            "doi": "10.1086/740347"
+          },
+          "landing_url": "https://doi.org/10.1086/740347",
+          "fulltext_url": null,
+          "relation": null
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-06-01",
+        "identifiers": {
+          "doi": "10.1086/740347"
+        },
+        "landing_url": "https://doi.org/10.1086/740347",
+        "fulltext_url": null
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Crossref weist die Heftfassung aus; keine item-spezifische Annahmehistorie verfügbar.",
+        "evidence_url": "https://doi.org/10.1086/740347"
+      },
+      "access": {
+        "status": "restricted",
+        "fulltext_url": null,
+        "license": null,
+        "basis": "Kein offener Volltext belegt."
+      },
+      "eligibility": {
+        "technical": "Vergleicht Accuracy und Lesbarkeit von LLM-Antworten auf häufige Fragen zur Sozialhilfe.",
+        "social": "Direkter Social-Assistance-/Human-Services-Kontext.",
+        "decision": "Beide Review-Dimensionen erfüllt und direkt relevant."
+      },
+      "source_urls": [
+        "https://doi.org/10.1086/740347",
+        "https://api.crossref.org/works/10.1086%2F740347"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "matched_sources": [],
+        "matched_existing_keys": [],
+        "method": "Exakter DOI-Abgleich sowie normalisierter Titel-/Autor:innenabgleich gegen alle Deduplication Sources; kein Treffer."
+      },
+      "recommendation": "Aufnehmen; LLM-Qualität in unmittelbarem Human-Services-Kontext.",
+      "notes": []
+    },
+    {
+      "tier": "A",
+      "title": "The Role of Generative AI in Transforming Social Work Practice",
+      "authors": [
+        "Joana Guerra",
+        "Flávia Fonseca"
+      ],
+      "publication_date": "2026-07-14",
+      "publication_type": "book_chapter",
+      "venue": "Social Work in the 21st Century",
+      "volume_issue_pages": "57-73",
+      "doi": "10.1007/978-3-032-27336-9_4",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-07-14",
+          "identifiers": {
+            "doi": "10.1007/978-3-032-27336-9_4"
+          },
+          "landing_url": "https://doi.org/10.1007/978-3-032-27336-9_4",
+          "fulltext_url": null,
+          "relation": null
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-07-14",
+        "identifiers": {
+          "doi": "10.1007/978-3-032-27336-9_4"
+        },
+        "landing_url": "https://doi.org/10.1007/978-3-032-27336-9_4",
+        "fulltext_url": null
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Springer weist First Online 2026-07-14 aus; keine kapitelspezifische Begutachtung belegt.",
+        "evidence_url": "https://doi.org/10.1007/978-3-032-27336-9_4"
+      },
+      "access": {
+        "status": "restricted",
+        "fulltext_url": null,
+        "license": null,
+        "basis": "Kein offener Volltext belegt."
+      },
+      "eligibility": {
+        "technical": "Kapitel zur Rolle generativer KI in der Transformation sozialarbeiterischer Praxis.",
+        "social": "Direkter professions- und praxisbezogener Sozialarbeitskontext.",
+        "decision": "Beide Review-Dimensionen erfüllt und direkt relevant."
+      },
+      "source_urls": [
+        "https://doi.org/10.1007/978-3-032-27336-9_4",
+        "https://api.crossref.org/works/10.1007%2F978-3-032-27336-9_4"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "matched_sources": [],
+        "matched_existing_keys": [],
+        "method": "Exakter DOI-Abgleich sowie normalisierter Titel-/Autor:innenabgleich gegen alle Deduplication Sources; kein Treffer."
+      },
+      "recommendation": "Aufnehmen; direkten GenAI-/Praxisbezug im Volltext screenen.",
+      "notes": []
+    },
+    {
+      "tier": "A",
+      "title": "Generative AI and Agentic AI",
+      "authors": [
+        "Moon Sun Song"
+      ],
+      "publication_date": "2026-08-12",
+      "publication_type": "book_chapter",
+      "venue": "Social Work Practice and Artificial Intelligence for the Common Good",
+      "volume_issue_pages": "50-68",
+      "doi": "10.4324/9781003755081-5",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-08-12",
+          "identifiers": {
+            "doi": "10.4324/9781003755081-5"
+          },
+          "landing_url": "https://doi.org/10.4324/9781003755081-5",
+          "fulltext_url": null,
+          "relation": null
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-08-12",
+        "identifiers": {
+          "doi": "10.4324/9781003755081-5"
+        },
+        "landing_url": "https://doi.org/10.4324/9781003755081-5",
+        "fulltext_url": null
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Routledge weist die publizierte Kapitelversion aus; keine kapitelspezifische Begutachtung belegt.",
+        "evidence_url": "https://doi.org/10.4324/9781003755081-5"
+      },
+      "access": {
+        "status": "restricted",
+        "fulltext_url": null,
+        "license": null,
+        "basis": "Kein offener Volltext belegt."
+      },
+      "eligibility": {
+        "technical": "Erklärt Generative AI, Agentic AI, Large Language Models und Retrieval-Augmented Generation.",
+        "social": "Analysiert Anwendungen ausdrücklich für Sozialarbeitspraxis.",
+        "decision": "Beide Review-Dimensionen erfüllt und direkt relevant."
+      },
+      "source_urls": [
+        "https://doi.org/10.4324/9781003755081-5",
+        "https://api.crossref.org/works/10.4324%2F9781003755081-5"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "matched_sources": [],
+        "matched_existing_keys": [],
+        "method": "Exakter DOI-Abgleich sowie normalisierter Titel-/Autor:innenabgleich gegen alle Deduplication Sources; kein Treffer."
+      },
+      "recommendation": "Aufnehmen; direkter GenAI-/LLM-Grundlagentext.",
+      "notes": []
+    },
+    {
+      "tier": "A",
+      "title": "ChatGPT in Social Work? Insights from MSW Students",
+      "authors": [
+        "Shih-Ying Cheng",
+        "Jieun Lee"
+      ],
+      "publication_date": "2026-01-16",
+      "publication_type": "research_article",
+      "venue": "Journal of Social Work Education",
+      "volume_issue_pages": "62(1), 95-109",
+      "doi": "10.1080/10437797.2025.2594423",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-01-16",
+          "identifiers": {
+            "doi": "10.1080/10437797.2025.2594423"
+          },
+          "landing_url": "https://doi.org/10.1080/10437797.2025.2594423",
+          "fulltext_url": null,
+          "relation": null
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-01-16",
+        "identifiers": {
+          "doi": "10.1080/10437797.2025.2594423"
+        },
+        "landing_url": "https://doi.org/10.1080/10437797.2025.2594423",
+        "fulltext_url": null
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "basis": "Verlagsmetadaten weisen accepted 2024-12-21 und published 2026-01-16 aus.",
+        "evidence_url": "https://doi.org/10.1080/10437797.2025.2594423",
+        "accepted": "2024-12-21"
+      },
+      "access": {
+        "status": "restricted",
+        "fulltext_url": null,
+        "license": null,
+        "basis": "Kein offener Volltext belegt."
+      },
+      "eligibility": {
+        "technical": "Untersucht ChatGPT in einer Fallberatungsaufgabe mit 42 MSW-Studierenden.",
+        "social": "Direkte Sozialarbeitsausbildung; verantwortliche Nutzung, ethische Grenzen und professionelle Identität.",
+        "decision": "Beide Review-Dimensionen erfüllt und direkt relevant."
+      },
+      "source_urls": [
+        "https://doi.org/10.1080/10437797.2025.2594423",
+        "https://api.crossref.org/works/10.1080%2F10437797.2025.2594423"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "matched_sources": [],
+        "matched_existing_keys": [],
+        "method": "Exakter DOI-Abgleich sowie normalisierter Titel-/Autor:innenabgleich gegen alle Deduplication Sources; kein Treffer."
+      },
+      "recommendation": "Aufnehmen; direkte empirische ChatGPT-Studie.",
+      "notes": []
+    },
+    {
+      "tier": "A",
+      "title": "Artificial Intelligence and Case-Based Learning in Social Work Education: Pedagogical Considerations and Future Directions",
+      "authors": [
+        "Mark Taylor"
+      ],
+      "publication_date": "2026-04-21",
+      "publication_type": "journal_article",
+      "venue": "Journal of Education and Learning Environments",
+      "volume_issue_pages": "2(1), 129-141",
+      "doi": "10.55121/jele.v2i1.1050",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-04-21",
+          "identifiers": {
+            "doi": "10.55121/jele.v2i1.1050"
+          },
+          "landing_url": "https://doi.org/10.55121/jele.v2i1.1050",
+          "fulltext_url": "https://research.gold.ac.uk/id/eprint/40392/2/JELE-1050-v2i1-129-141.pdf",
+          "relation": null
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-04-21",
+        "identifiers": {
+          "doi": "10.55121/jele.v2i1.1050"
+        },
+        "landing_url": "https://doi.org/10.55121/jele.v2i1.1050",
+        "fulltext_url": "https://research.gold.ac.uk/id/eprint/40392/2/JELE-1050-v2i1-129-141.pdf"
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "basis": "Verlagsseite: received 2025-12-22, accepted 2026-03-06, published online 2026-04-21.",
+        "evidence_url": "https://doi.org/10.55121/jele.v2i1.1050",
+        "received": "2025-12-22",
+        "accepted": "2026-03-06"
+      },
+      "access": {
+        "status": "open_access",
+        "fulltext_url": "https://research.gold.ac.uk/id/eprint/40392/2/JELE-1050-v2i1-129-141.pdf",
+        "license": null,
+        "basis": "Offene Repositoriumsfassung belegt."
+      },
+      "eligibility": {
+        "technical": "Theoretischer Rahmen für KI-generierte Fallstudien und Case-Based Learning.",
+        "social": "Explizite Sozialarbeitsausbildung, ethische Nutzung und professionelle Identitätsbildung.",
+        "decision": "Beide Review-Dimensionen erfüllt und direkt relevant."
+      },
+      "source_urls": [
+        "https://doi.org/10.55121/jele.v2i1.1050",
+        "https://research.gold.ac.uk/id/eprint/40392/2/JELE-1050-v2i1-129-141.pdf",
+        "https://api.crossref.org/works/10.55121%2Fjele.v2i1.1050"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "matched_sources": [],
+        "matched_existing_keys": [],
+        "method": "Exakter DOI-Abgleich sowie normalisierter Titel-/Autor:innenabgleich gegen alle Deduplication Sources; kein Treffer."
+      },
+      "recommendation": "Aufnehmen; direkter GenAI-/Lehrfallbezug.",
+      "notes": []
+    },
+    {
+      "tier": "A",
+      "title": "Generative AI in Youth Mental Health Apps: Rapid Review",
+      "authors": [
+        "Helene Høgsdal",
+        "Henriette Kyrrestad",
+        "Sabine Kaiser"
+      ],
+      "publication_date": "2026-08-19",
+      "publication_type": "rapid_review",
+      "venue": "JMIR Mental Health",
+      "volume_issue_pages": "13, e90589",
+      "doi": "10.2196/90589",
+      "other_identifiers": {
+        "preprint_doi": "10.2196/preprints.90589"
+      },
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-08-19",
+          "identifiers": {
+            "doi": "10.2196/90589",
+            "preprint_doi": "10.2196/preprints.90589"
+          },
+          "landing_url": "https://doi.org/10.2196/90589",
+          "fulltext_url": "https://mental.jmir.org/2026/1/e90589/PDF",
+          "relation": null
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-08-19",
+        "identifiers": {
+          "doi": "10.2196/90589",
+          "preprint_doi": "10.2196/preprints.90589"
+        },
+        "landing_url": "https://doi.org/10.2196/90589",
+        "fulltext_url": "https://mental.jmir.org/2026/1/e90589/PDF"
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "JMIR weist Version of Record und Preprint-Relation aus; item-spezifische Annahmehistorie nicht extrahiert.",
+        "evidence_url": "https://doi.org/10.2196/90589"
+      },
+      "access": {
+        "status": "open_access",
+        "fulltext_url": "https://mental.jmir.org/2026/1/e90589/PDF",
+        "license": "CC BY",
+        "basis": "JMIR-Verlagsfassung ist Gold Open Access."
+      },
+      "eligibility": {
+        "technical": "Rapid Review von fünf Studien zu generativer KI, überwiegend Chatbots, in Apps für junge Menschen.",
+        "social": "Direkter Youth-Mental-Health-/Human-Services-Bezug; Nutzen, Risiken und fehlende standardisierte Schadensprüfung.",
+        "decision": "Beide Review-Dimensionen erfüllt und direkt relevant."
+      },
+      "source_urls": [
+        "https://doi.org/10.2196/90589",
+        "https://mental.jmir.org/2026/1/e90589/PDF",
+        "https://api.crossref.org/works/10.2196%2F90589"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "matched_sources": [],
+        "matched_existing_keys": [],
+        "method": "Exakter DOI-Abgleich sowie normalisierter Titel-/Autor:innenabgleich gegen alle Deduplication Sources; kein Treffer."
+      },
+      "recommendation": "Aufnehmen; unmittelbarer GenAI- und Jugendmentalgesundheitsbezug.",
+      "notes": []
+    },
+    {
+      "tier": "A",
+      "title": "Intelligence artificielle et travail social, une ressource au service des professionnels ?",
+      "authors": [
+        "LaborIA",
+        "Anne-Sophie Maillot",
+        "Stéphanie Hemairia Clerc",
+        "Laurence Mari",
+        "Yann Ferguson"
+      ],
+      "publication_date": "2026-01-22",
+      "publication_type": "journal_article",
+      "venue": "Vie sociale",
+      "volume_issue_pages": "52(4), 29-43",
+      "doi": "10.3917/vsoc.052.0029",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-01-22",
+          "identifiers": {
+            "doi": "10.3917/vsoc.052.0029"
+          },
+          "landing_url": "https://doi.org/10.3917/vsoc.052.0029",
+          "fulltext_url": null,
+          "relation": null
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-01-22",
+        "identifiers": {
+          "doi": "10.3917/vsoc.052.0029"
+        },
+        "landing_url": "https://doi.org/10.3917/vsoc.052.0029",
+        "fulltext_url": null
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Cairn/Crossref weisen Journalfassung und Datum aus; keine Annahmehistorie belegt.",
+        "evidence_url": "https://doi.org/10.3917/vsoc.052.0029"
+      },
+      "access": {
+        "status": "restricted",
+        "fulltext_url": null,
+        "license": null,
+        "basis": "Cairn-Landingpage zugangsbeschränkt."
+      },
+      "eligibility": {
+        "technical": "Abstract beschreibt generative KI als Auslöser der jüngsten institutionellen AI-Nutzung im französischen travail social.",
+        "social": "Untersucht professionelle Nutzung und öffentliche Steuerung in der französischen Sozialarbeit.",
+        "decision": "Beide Review-Dimensionen erfüllt und direkt relevant."
+      },
+      "source_urls": [
+        "https://doi.org/10.3917/vsoc.052.0029",
+        "https://api.crossref.org/works/10.3917%2Fvsoc.052.0029"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "matched_sources": [],
+        "matched_existing_keys": [],
+        "method": "Exakter DOI-Abgleich sowie normalisierter Titel-/Autor:innenabgleich gegen alle Deduplication Sources; kein Treffer."
+      },
+      "recommendation": "Aufnehmen; expliziter GenAI- und Sozialarbeitsbezug.",
+      "notes": []
+    },
+    {
+      "tier": "A",
+      "title": "Generative KI in der Beratung: Empirische Befunde mit Blick auf Nutzungsbedingungen von Chatbots",
+      "authors": [
+        "Fabian Beloch",
+        "Anne Martin"
+      ],
+      "publication_date": "2026-01-31",
+      "publication_type": "journal_article",
+      "venue": "DiMe-Sozial | Soziale Arbeit, Medien und Digitalisierung",
+      "volume_issue_pages": "2(1), 1-20",
+      "doi": "10.21240/dimesoz/2026/1/57",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-01-31",
+          "identifiers": {
+            "doi": "10.21240/dimesoz/2026/1/57"
+          },
+          "landing_url": "https://www.dime-sozial.de/index.php/dimesoz/article/view/57",
+          "fulltext_url": "https://www.dime-sozial.de/index.php/dimesoz/article/download/57/24",
+          "relation": null
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-01-31",
+        "identifiers": {
+          "doi": "10.21240/dimesoz/2026/1/57"
+        },
+        "landing_url": "https://www.dime-sozial.de/index.php/dimesoz/article/view/57",
+        "fulltext_url": "https://www.dime-sozial.de/index.php/dimesoz/article/download/57/24"
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "basis": "Journal-Primärseite erklärt ein qualitätssicherndes Peer-Review-Verfahren.",
+        "evidence_url": "https://www.dime-sozial.de/index.php/dimesoz/about"
+      },
+      "access": {
+        "status": "open_access",
+        "fulltext_url": "https://www.dime-sozial.de/index.php/dimesoz/article/download/57/24",
+        "license": "CC BY 4.0",
+        "basis": "Verlagsseite stellt PDF und Lizenz bereit."
+      },
+      "eligibility": {
+        "technical": "Empirische Untersuchung generativer KI und von Chatbots in Sozial- und Schuldenberatung.",
+        "social": "Teilhabe, individuelle Unterstützungsbedarfe, professionelle Rollen und Bedingungen sozialer Beratung.",
+        "decision": "Beide Review-Dimensionen erfüllt und direkt relevant."
+      },
+      "source_urls": [
+        "https://www.dime-sozial.de/index.php/dimesoz/article/view/57",
+        "https://www.dime-sozial.de/index.php/dimesoz/article/download/57/24",
+        "https://www.dime-sozial.de/index.php/dimesoz/about",
+        "https://api.crossref.org/works/10.21240%2Fdimesoz%2F2026%2F1%2F57"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "matched_sources": [],
+        "matched_existing_keys": [],
+        "method": "Exakter DOI-Abgleich sowie normalisierter Titel-/Autor:innenabgleich gegen alle Deduplication Sources; kein Treffer."
+      },
+      "recommendation": "Prioritär aufnehmen; direkter deutschsprachiger GenAI-/Beratungstreffer.",
+      "notes": []
+    },
+    {
+      "tier": "A",
+      "title": "An ethical framework for assessing artificial intelligence as augmentation or automation in social work",
+      "authors": [
+        "Kwangseon Hwang"
+      ],
+      "publication_date": "2026-08-05",
+      "publication_type": "journal_article",
+      "venue": "Discover Social Science and Health",
+      "volume_issue_pages": null,
+      "doi": "10.1007/s44155-026-00463-x",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-08-05",
+          "identifiers": {
+            "doi": "10.1007/s44155-026-00463-x"
+          },
+          "landing_url": "https://doi.org/10.1007/s44155-026-00463-x",
+          "fulltext_url": "https://link.springer.com/content/pdf/10.1007/s44155-026-00463-x.pdf",
+          "relation": null
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-08-05",
+        "identifiers": {
+          "doi": "10.1007/s44155-026-00463-x"
+        },
+        "landing_url": "https://doi.org/10.1007/s44155-026-00463-x",
+        "fulltext_url": "https://link.springer.com/content/pdf/10.1007/s44155-026-00463-x.pdf"
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "basis": "Springer: received 2026-04-18, accepted 2026-07-29, first online 2026-08-05.",
+        "evidence_url": "https://doi.org/10.1007/s44155-026-00463-x",
+        "received": "2026-04-18",
+        "accepted": "2026-07-29"
+      },
+      "access": {
+        "status": "open_access",
+        "fulltext_url": "https://link.springer.com/content/pdf/10.1007/s44155-026-00463-x.pdf",
+        "license": "CC BY-NC-ND",
+        "basis": "Gold-Open-Access-Verlagsfassung belegt."
+      },
+      "eligibility": {
+        "technical": "Framework umfasst prädiktive Modelle, Large Language Models, algorithmische Entscheidungssysteme und digitale Care-Technologien.",
+        "social": "Verknüpft AI mit Privatsphäre, Selbstbestimmung, sozialer Gerechtigkeit, Menschenwürde, Bias und Ausschluss.",
+        "decision": "Beide Review-Dimensionen erfüllt und direkt relevant."
+      },
+      "source_urls": [
+        "https://doi.org/10.1007/s44155-026-00463-x",
+        "https://link.springer.com/content/pdf/10.1007/s44155-026-00463-x.pdf",
+        "https://api.crossref.org/works/10.1007%2Fs44155-026-00463-x"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "matched_sources": [],
+        "matched_existing_keys": [],
+        "method": "Exakter DOI-Abgleich sowie normalisierter Titel-/Autor:innenabgleich gegen alle Deduplication Sources; kein Treffer."
+      },
+      "recommendation": "Aufnehmen; LLM, Fairness und sozialarbeitsspezifische Ethik substanziell.",
+      "notes": []
+    },
+    {
+      "tier": "B",
+      "title": "Artificial intelligence (AI) in social work education and research: reflections from emerging African social work researchers",
+      "authors": [
+        "Fidel Bethel Nnadi",
+        "Cecilia Sochima Odo",
+        "Somtochukwu Vivian Onwubiko",
+        "Emmanuel Onyemaechi Ugwu",
+        "Tochukwu Jonathan Okolie",
+        "Samuel Chinedu Onuh",
+        "Ifechukwu Hope Nwabineli",
+        "Prince Chiagozie Ekoh"
+      ],
+      "publication_date": "2026-07-29",
+      "publication_type": "research_article",
+      "venue": "Social Work Education",
+      "volume_issue_pages": "online first, 1-19",
+      "doi": "10.1080/02615479.2026.2711003",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-07-29",
+          "identifiers": {
+            "doi": "10.1080/02615479.2026.2711003"
+          },
+          "landing_url": "https://doi.org/10.1080/02615479.2026.2711003",
+          "fulltext_url": null,
+          "relation": null
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-07-29",
+        "identifiers": {
+          "doi": "10.1080/02615479.2026.2711003"
+        },
+        "landing_url": "https://doi.org/10.1080/02615479.2026.2711003",
+        "fulltext_url": null
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "basis": "Verlag: received 2026-01-16, accepted 2026-07-10, published 2026-07-29.",
+        "evidence_url": "https://doi.org/10.1080/02615479.2026.2711003",
+        "received": "2026-01-16",
+        "accepted": "2026-07-10"
+      },
+      "access": {
+        "status": "restricted",
+        "fulltext_url": null,
+        "license": null,
+        "basis": "Kein offener Volltext belegt."
+      },
+      "eligibility": {
+        "technical": "Autoethnografie zu AI in Bildung und Forschung; Abstract spezifiziert GenAI-/LLM-Anteil nicht.",
+        "social": "Algorithmischer Bias, westliche Epistemologien, Africentric Social Work, kulturelle Sensitivität und Inklusion.",
+        "decision": "Plausibler Scope, aber generativer Technikbezug, Volltext oder Metadaten bleiben offen."
+      },
+      "source_urls": [
+        "https://doi.org/10.1080/02615479.2026.2711003",
+        "https://api.crossref.org/works/10.1080%2F02615479.2026.2711003"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "matched_sources": [],
+        "matched_existing_keys": [],
+        "method": "Exakter DOI-Abgleich sowie normalisierter Titel-/Autor:innenabgleich gegen alle Deduplication Sources; kein Treffer."
+      },
+      "recommendation": "Tier B bis Volltext GenAI-/LLM-Anteil belegt.",
+      "notes": []
+    },
+    {
+      "tier": "B",
+      "title": "Experiences and perceptions of artificial intelligence among social work students: analysis of educational transformations",
+      "authors": [
+        "María Dolores Muñoz de Dios",
+        "Fernando Relinque-Medina",
+        "Cristina Díaz Román",
+        "Cristina Belén Sampedro-Palacios"
+      ],
+      "publication_date": "2026-05-12",
+      "publication_type": "research_article",
+      "venue": "Social Work Education",
+      "volume_issue_pages": "online first, 1-17",
+      "doi": "10.1080/02615479.2026.2671971",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-05-12",
+          "identifiers": {
+            "doi": "10.1080/02615479.2026.2671971"
+          },
+          "landing_url": "https://doi.org/10.1080/02615479.2026.2671971",
+          "fulltext_url": "https://ruja.ujaen.es/bitstreams/2e04be35-0a5a-449e-9312-6ecf5944c7fc/download",
+          "relation": null
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-05-12",
+        "identifiers": {
+          "doi": "10.1080/02615479.2026.2671971"
+        },
+        "landing_url": "https://doi.org/10.1080/02615479.2026.2671971",
+        "fulltext_url": "https://ruja.ujaen.es/bitstreams/2e04be35-0a5a-449e-9312-6ecf5944c7fc/download"
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "basis": "Verlag: received 2025-10-01, accepted 2026-05-02, published 2026-05-12.",
+        "evidence_url": "https://doi.org/10.1080/02615479.2026.2671971",
+        "received": "2025-10-01",
+        "accepted": "2026-05-02"
+      },
+      "access": {
+        "status": "open_access",
+        "fulltext_url": "https://ruja.ujaen.es/bitstreams/2e04be35-0a5a-449e-9312-6ecf5944c7fc/download",
+        "license": null,
+        "basis": "Offene Repositoriumsfassung belegt."
+      },
+      "eligibility": {
+        "technical": "Fokusgruppen zu AI-Nutzung; Abstract spezifiziert kein GenAI-/LLM-System.",
+        "social": "Direkte Sozialarbeitsausbildung sowie ethische und kritische Digitalkompetenz.",
+        "decision": "Plausibler Scope, aber generativer Technikbezug, Volltext oder Metadaten bleiben offen."
+      },
+      "source_urls": [
+        "https://doi.org/10.1080/02615479.2026.2671971",
+        "https://ruja.ujaen.es/bitstreams/2e04be35-0a5a-449e-9312-6ecf5944c7fc/download",
+        "https://api.crossref.org/works/10.1080%2F02615479.2026.2671971"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "matched_sources": [],
+        "matched_existing_keys": [],
+        "method": "Exakter DOI-Abgleich sowie normalisierter Titel-/Autor:innenabgleich gegen alle Deduplication Sources; kein Treffer."
+      },
+      "recommendation": "Tier B; Volltext auf ChatGPT-/GenAI-Nutzung prüfen.",
+      "notes": []
+    },
+    {
+      "tier": "B",
+      "title": "Utilization of artificial intelligence: student experiences in social work educational programs",
+      "authors": [
+        "Olha Baidarova",
+        "Olena Кaragodina",
+        "Tetyana Semigina"
+      ],
+      "publication_date": "2026-03-30",
+      "publication_type": "journal_article",
+      "venue": "Social Work and Education",
+      "volume_issue_pages": "13(1), 148-167",
+      "doi": "10.25128/2520-6230.26.1.10",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-03-30",
+          "identifiers": {
+            "doi": "10.25128/2520-6230.26.1.10"
+          },
+          "landing_url": "https://journals.uran.ua/swe/article/view/349239",
+          "fulltext_url": "https://journals.uran.ua/swe/article/download/349239/336537",
+          "relation": null
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-03-30",
+        "identifiers": {
+          "doi": "10.25128/2520-6230.26.1.10"
+        },
+        "landing_url": "https://journals.uran.ua/swe/article/view/349239",
+        "fulltext_url": "https://journals.uran.ua/swe/article/download/349239/336537"
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Journal-Landingpage weist Peer-Review-Policy aus; item-spezifische Daten fehlen.",
+        "evidence_url": "https://journals.uran.ua/swe/article/view/349239"
+      },
+      "access": {
+        "status": "open_access",
+        "fulltext_url": "https://journals.uran.ua/swe/article/download/349239/336537",
+        "license": "CC BY 4.0",
+        "basis": "OJS-PDF und Lizenz belegt."
+      },
+      "eligibility": {
+        "technical": "Studie zu AI-Nutzung in Sozialarbeitsstudiengängen; generativer Anteil im Abstract nicht spezifiziert.",
+        "social": "Direkte Social-Work-Education-Relevanz unter Bedingungen von Digitalisierung und Krieg.",
+        "decision": "Plausibler Scope, aber generativer Technikbezug, Volltext oder Metadaten bleiben offen."
+      },
+      "source_urls": [
+        "https://journals.uran.ua/swe/article/view/349239",
+        "https://journals.uran.ua/swe/article/download/349239/336537",
+        "https://api.crossref.org/works/10.25128%2F2520-6230.26.1.10"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "matched_sources": [],
+        "matched_existing_keys": [],
+        "method": "Exakter DOI-Abgleich sowie normalisierter Titel-/Autor:innenabgleich gegen alle Deduplication Sources; kein Treffer."
+      },
+      "recommendation": "Tier B; konkrete GenAI-/LLM-Werkzeuge im Volltext prüfen.",
+      "notes": []
+    },
+    {
+      "tier": "B",
+      "title": "Artificial intelligence in social work education",
+      "authors": [
+        "Tarsem Singh Cooner"
+      ],
+      "publication_date": "2026-06-16",
+      "publication_type": "encyclopedia_entry",
+      "venue": "Elgar Encyclopedia of Social Work",
+      "volume_issue_pages": "241-243",
+      "doi": "10.4337/9781035310234.00090",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-06-16",
+          "identifiers": {
+            "doi": "10.4337/9781035310234.00090"
+          },
+          "landing_url": "https://doi.org/10.4337/9781035310234.00090",
+          "fulltext_url": null,
+          "relation": null
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-06-16",
+        "identifiers": {
+          "doi": "10.4337/9781035310234.00090"
+        },
+        "landing_url": "https://doi.org/10.4337/9781035310234.00090",
+        "fulltext_url": null
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Elgar weist publizierte Enzyklopädie-Fassung aus; beitragsspezifische Begutachtung nicht belegt.",
+        "evidence_url": "https://doi.org/10.4337/9781035310234.00090"
+      },
+      "access": {
+        "status": "restricted",
+        "fulltext_url": null,
+        "license": null,
+        "basis": "Kein offener Volltext belegt."
+      },
+      "eligibility": {
+        "technical": "PAIR-Framework für Problemformulierung, Tool-Auswahl, Interaktion und Reflexion; konkrete GenAI-Systeme nicht benannt.",
+        "social": "Direkte ethische AI-Kompetenz in Sozialarbeitsausbildung und Praxis.",
+        "decision": "Plausibler Scope, aber generativer Technikbezug, Volltext oder Metadaten bleiben offen."
+      },
+      "source_urls": [
+        "https://doi.org/10.4337/9781035310234.00090",
+        "https://api.crossref.org/works/10.4337%2F9781035310234.00090"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "matched_sources": [],
+        "matched_existing_keys": [],
+        "method": "Exakter DOI-Abgleich sowie normalisierter Titel-/Autor:innenabgleich gegen alle Deduplication Sources; kein Treffer."
+      },
+      "recommendation": "Tier B; GenAI-/LLM-Anteil im Kapitel prüfen.",
+      "notes": []
+    },
+    {
+      "tier": "B",
+      "title": "Quelle place donner à l’intelligence artificielle générative en travail social?",
+      "authors": [],
+      "publication_date": "2026-06-25",
+      "publication_type": "book_chapter",
+      "venue": "Le jeu-questionnaire du travail social",
+      "volume_issue_pages": "255-262",
+      "doi": "10.2307/jj.43774876.34",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-06-25",
+          "identifiers": {
+            "doi": "10.2307/jj.43774876.34"
+          },
+          "landing_url": "https://doi.org/10.2307/jj.43774876.34",
+          "fulltext_url": null,
+          "relation": null
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-06-25",
+        "identifiers": {
+          "doi": "10.2307/jj.43774876.34"
+        },
+        "landing_url": "https://doi.org/10.2307/jj.43774876.34",
+        "fulltext_url": null
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "JSTOR/Crossref weisen Kapitel und Datum aus; Autor:innen und Begutachtung nicht belegt.",
+        "evidence_url": "https://doi.org/10.2307/jj.43774876.34"
+      },
+      "access": {
+        "status": "restricted",
+        "fulltext_url": null,
+        "license": null,
+        "basis": "JSTOR-Zugang beschränkt."
+      },
+      "eligibility": {
+        "technical": "Titel belegt direkten GenAI-Gegenstand.",
+        "social": "Titel belegt direkten travail-social-Bezug; Scope und Autor:innenmetadaten offen.",
+        "decision": "Plausibler Scope, aber generativer Technikbezug, Volltext oder Metadaten bleiben offen."
+      },
+      "source_urls": [
+        "https://doi.org/10.2307/jj.43774876.34",
+        "https://api.crossref.org/works/10.2307%2Fjj.43774876.34"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "matched_sources": [],
+        "matched_existing_keys": [],
+        "method": "Exakter DOI-Abgleich sowie normalisierter Titel-/Autor:innenabgleich gegen alle Deduplication Sources; kein Treffer."
+      },
+      "recommendation": "Tier B bis vollständige Kapitelmetadaten verifiziert sind.",
+      "notes": [
+        "Autor:innenliste in Primärmetadaten leer."
+      ]
+    },
+    {
+      "tier": "B",
+      "title": "Intelligence artificielle, algorithmes et travail social : entre promesses, risques et vigilance éthique",
+      "authors": [
+        "Didier Dubasque"
+      ],
+      "publication_date": "2026-01-22",
+      "publication_type": "journal_article",
+      "venue": "Vie sociale",
+      "volume_issue_pages": "52(4), 57-71",
+      "doi": "10.3917/vsoc.052.0057",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-01-22",
+          "identifiers": {
+            "doi": "10.3917/vsoc.052.0057"
+          },
+          "landing_url": "https://doi.org/10.3917/vsoc.052.0057",
+          "fulltext_url": null,
+          "relation": null
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-01-22",
+        "identifiers": {
+          "doi": "10.3917/vsoc.052.0057"
+        },
+        "landing_url": "https://doi.org/10.3917/vsoc.052.0057",
+        "fulltext_url": null
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Cairn/Crossref weisen Journalfassung und Datum aus; keine Annahmehistorie belegt.",
+        "evidence_url": "https://doi.org/10.3917/vsoc.052.0057"
+      },
+      "access": {
+        "status": "restricted",
+        "fulltext_url": null,
+        "license": null,
+        "basis": "Cairn-Zugang beschränkt."
+      },
+      "eligibility": {
+        "technical": "Behandelt AI, automatisierte Berichterstellung und Chatbots; Abstract grenzt GenAI nicht eindeutig ab.",
+        "social": "Automatisierung sozialer Ungleichheiten, Überwachung, Vertraulichkeit und professionelle Beziehung.",
+        "decision": "Plausibler Scope, aber generativer Technikbezug, Volltext oder Metadaten bleiben offen."
+      },
+      "source_urls": [
+        "https://doi.org/10.3917/vsoc.052.0057",
+        "https://api.crossref.org/works/10.3917%2Fvsoc.052.0057"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "matched_sources": [],
+        "matched_existing_keys": [],
+        "method": "Exakter DOI-Abgleich sowie normalisierter Titel-/Autor:innenabgleich gegen alle Deduplication Sources; kein Treffer."
+      },
+      "recommendation": "Tier B; Volltext auf substanziellen GenAI-/LLM-Anteil prüfen.",
+      "notes": []
+    },
+    {
+      "tier": "B",
+      "title": "Integration of artificial intelligence into gender-sensitive social work with adolescents and their parents: opportunities for career counseling and vocational guidance support in educational institutions in the context of digital transformation",
+      "authors": [
+        "Kateryna Volkova",
+        "Olena Beloliptseva"
+      ],
+      "publication_date": "2026-03-30",
+      "publication_type": "journal_article",
+      "venue": "Social Work and Education",
+      "volume_issue_pages": "13(1), 8-21",
+      "doi": "10.25128/2520-6230.26.1.1",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-03-30",
+          "identifiers": {
+            "doi": "10.25128/2520-6230.26.1.1"
+          },
+          "landing_url": "https://journals.uran.ua/swe/article/view/347624",
+          "fulltext_url": "https://journals.uran.ua/swe/article/download/347624/345497",
+          "relation": null
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-03-30",
+        "identifiers": {
+          "doi": "10.25128/2520-6230.26.1.1"
+        },
+        "landing_url": "https://journals.uran.ua/swe/article/view/347624",
+        "fulltext_url": "https://journals.uran.ua/swe/article/download/347624/345497"
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "OJS-Journalfassung und Peer-Review-Policy belegt; item-spezifische Daten fehlen.",
+        "evidence_url": "https://journals.uran.ua/swe/article/view/347624"
+      },
+      "access": {
+        "status": "open_access",
+        "fulltext_url": "https://journals.uran.ua/swe/article/download/347624/345497",
+        "license": "CC BY 4.0",
+        "basis": "OJS-PDF und Lizenz belegt."
+      },
+      "eligibility": {
+        "technical": "Modell zur AI-Unterstützung von Diagnostik und Beratung; kein spezifisches GenAI-/LLM-System im Abstract.",
+        "social": "Gender-sensitive Sozialarbeit mit vulnerablen Jugendlichen und Eltern, Inklusion und Beratungszugang.",
+        "decision": "Plausibler Scope, aber generativer Technikbezug, Volltext oder Metadaten bleiben offen."
+      },
+      "source_urls": [
+        "https://journals.uran.ua/swe/article/view/347624",
+        "https://journals.uran.ua/swe/article/download/347624/345497",
+        "https://api.crossref.org/works/10.25128%2F2520-6230.26.1.1"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "matched_sources": [],
+        "matched_existing_keys": [],
+        "method": "Exakter DOI-Abgleich sowie normalisierter Titel-/Autor:innenabgleich gegen alle Deduplication Sources; kein Treffer."
+      },
+      "recommendation": "Tier B; Gender-/Sozialarbeitsfit stark, generativer Technikbezug offen.",
+      "notes": []
+    },
+    {
+      "tier": "B",
+      "title": "Inteligência artificial e Serviço Social: um compromisso com os desafios éticos",
+      "authors": [
+        "Flávia Fonseca",
+        "Joana Guerra"
+      ],
+      "publication_date": "2026-06-17",
+      "publication_type": "book_chapter",
+      "venue": "Serviço social e os desafios da sustentabilidade global",
+      "volume_issue_pages": null,
+      "doi": "10.64622/df9786552036735.16",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-06-17",
+          "identifiers": {
+            "doi": "10.64622/df9786552036735.16"
+          },
+          "landing_url": "https://doi.org/10.64622/df9786552036735.16",
+          "fulltext_url": null,
+          "relation": null
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-06-17",
+        "identifiers": {
+          "doi": "10.64622/df9786552036735.16"
+        },
+        "landing_url": "https://doi.org/10.64622/df9786552036735.16",
+        "fulltext_url": null
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Crossref weist Kapitel und Datum aus; keine kapitelspezifische Begutachtung belegt.",
+        "evidence_url": "https://doi.org/10.64622/df9786552036735.16"
+      },
+      "access": {
+        "status": "restricted_or_not_verified",
+        "fulltext_url": null,
+        "license": null,
+        "basis": "Kein offener Volltext verifiziert."
+      },
+      "eligibility": {
+        "technical": "Titel belegt AI, aber keinen spezifischen GenAI-/LLM-Anteil.",
+        "social": "Direkter Serviço-Social- und Ethikbezug im lusophonen Kontext.",
+        "decision": "Plausibler Scope, aber generativer Technikbezug, Volltext oder Metadaten bleiben offen."
+      },
+      "source_urls": [
+        "https://doi.org/10.64622/df9786552036735.16",
+        "https://api.crossref.org/works/10.64622%2Fdf9786552036735.16"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "matched_sources": [],
+        "matched_existing_keys": [],
+        "method": "Exakter DOI-Abgleich sowie normalisierter Titel-/Autor:innenabgleich gegen alle Deduplication Sources; kein Treffer."
+      },
+      "recommendation": "Tier B; Volltext für GenAI-/LLM-Scope beschaffen.",
+      "notes": []
+    },
+    {
+      "tier": "B",
+      "title": "Using Artificial Intelligence in Qualitative Data Analysis in Social Work: Integrity, Preparation, and Data Justice",
+      "authors": [
+        "Maryam Rafieifar"
+      ],
+      "publication_date": "2026-03-27",
+      "publication_type": "journal_article",
+      "venue": "Journal of the Society for Social Work and Research",
+      "volume_issue_pages": "online first",
+      "doi": "10.1086/741562",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-03-27",
+          "identifiers": {
+            "doi": "10.1086/741562"
+          },
+          "landing_url": "https://doi.org/10.1086/741562",
+          "fulltext_url": null,
+          "relation": null
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-03-27",
+        "identifiers": {
+          "doi": "10.1086/741562"
+        },
+        "landing_url": "https://doi.org/10.1086/741562",
+        "fulltext_url": null
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Crossref/JSSWR weisen Journalfassung und Datum aus; keine Annahmehistorie zugänglich.",
+        "evidence_url": "https://doi.org/10.1086/741562"
+      },
+      "access": {
+        "status": "restricted",
+        "fulltext_url": null,
+        "license": null,
+        "basis": "Kein offener Volltext belegt."
+      },
+      "eligibility": {
+        "technical": "AI in qualitativer Datenanalyse; Metadaten spezifizieren kein GenAI-/LLM-Werkzeug.",
+        "social": "Integrität und Data Justice in Sozialarbeitsforschung.",
+        "decision": "Plausibler Scope, aber generativer Technikbezug, Volltext oder Metadaten bleiben offen."
+      },
+      "source_urls": [
+        "https://doi.org/10.1086/741562",
+        "https://api.crossref.org/works/10.1086%2F741562"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "matched_sources": [],
+        "matched_existing_keys": [],
+        "method": "Exakter DOI-Abgleich sowie normalisierter Titel-/Autor:innenabgleich gegen alle Deduplication Sources; kein Treffer."
+      },
+      "recommendation": "Tier B; Volltext auf generative Analysewerkzeuge prüfen.",
+      "notes": []
+    },
+    {
+      "tier": "B",
+      "title": "Artificial Intelligence (AI): Double Risk in Immigrant Communities",
+      "authors": [
+        "Maryam Rafieifar",
+        "Jaclyn Kirsch",
+        "Yingying Zeng",
+        "Mitra Naseh",
+        "Hanna Haran"
+      ],
+      "publication_date": "2026-07-06",
+      "publication_type": "journal_article",
+      "venue": "Journal of the Society for Social Work and Research",
+      "volume_issue_pages": "online first",
+      "doi": "10.1086/742988",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-07-06",
+          "identifiers": {
+            "doi": "10.1086/742988"
+          },
+          "landing_url": "https://doi.org/10.1086/742988",
+          "fulltext_url": null,
+          "relation": null
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-07-06",
+        "identifiers": {
+          "doi": "10.1086/742988"
+        },
+        "landing_url": "https://doi.org/10.1086/742988",
+        "fulltext_url": null
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Crossref/JSSWR weisen Journalfassung und Datum aus; keine Annahmehistorie zugänglich.",
+        "evidence_url": "https://doi.org/10.1086/742988"
+      },
+      "access": {
+        "status": "restricted",
+        "fulltext_url": null,
+        "license": null,
+        "basis": "Kein offener Volltext belegt."
+      },
+      "eligibility": {
+        "technical": "AI-Risiken; Metadaten spezifizieren keinen GenAI-/LLM-Anteil.",
+        "social": "Immigrant:innengemeinschaften und doppelte Risikolagen mit starkem Diversity-/Ungleichheitsbezug.",
+        "decision": "Plausibler Scope, aber generativer Technikbezug, Volltext oder Metadaten bleiben offen."
+      },
+      "source_urls": [
+        "https://doi.org/10.1086/742988",
+        "https://api.crossref.org/works/10.1086%2F742988"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "matched_sources": [],
+        "matched_existing_keys": [],
+        "method": "Exakter DOI-Abgleich sowie normalisierter Titel-/Autor:innenabgleich gegen alle Deduplication Sources; kein Treffer."
+      },
+      "recommendation": "Tier B; Abstract oder Volltext technisch einordnen.",
+      "notes": []
+    },
+    {
+      "tier": "B",
+      "title": "Human Versus Artificial Intelligence in Qualitative Analysis: A Study of Child and Family Services During the COVID-19 Pandemic",
+      "authors": [
+        "Liwei Zhang",
+        "Yingying Zeng",
+        "Jana Leigh Woodiwiss",
+        "Patricia L. Kohl"
+      ],
+      "publication_date": "2026-06-01",
+      "publication_type": "journal_article",
+      "venue": "Journal of the Society for Social Work and Research",
+      "volume_issue_pages": "online first",
+      "doi": "10.1086/742492",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-06-01",
+          "identifiers": {
+            "doi": "10.1086/742492"
+          },
+          "landing_url": "https://doi.org/10.1086/742492",
+          "fulltext_url": null,
+          "relation": null
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-06-01",
+        "identifiers": {
+          "doi": "10.1086/742492"
+        },
+        "landing_url": "https://doi.org/10.1086/742492",
+        "fulltext_url": null
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Crossref/JSSWR weisen Journalfassung und Datum aus; keine Annahmehistorie zugänglich.",
+        "evidence_url": "https://doi.org/10.1086/742492"
+      },
+      "access": {
+        "status": "restricted",
+        "fulltext_url": null,
+        "license": null,
+        "basis": "Kein offener Volltext belegt."
+      },
+      "eligibility": {
+        "technical": "Vergleicht menschliche und AI-gestützte qualitative Analyse; konkretes Modell nicht benannt.",
+        "social": "Direkter Child-and-Family-Services-Kontext.",
+        "decision": "Plausibler Scope, aber generativer Technikbezug, Volltext oder Metadaten bleiben offen."
+      },
+      "source_urls": [
+        "https://doi.org/10.1086/742492",
+        "https://api.crossref.org/works/10.1086%2F742492"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "matched_sources": [],
+        "matched_existing_keys": [],
+        "method": "Exakter DOI-Abgleich sowie normalisierter Titel-/Autor:innenabgleich gegen alle Deduplication Sources; kein Treffer."
+      },
+      "recommendation": "Tier B; Volltext auf LLM-/GenAI-Methodik prüfen.",
+      "notes": []
+    }
+  ],
+  "exclusions": [
+    {
+      "title": "All publications dated 2025 or earlier",
+      "identifiers": {},
+      "reason": "Außerhalb des strikt auf 2026-01-01 bis 2026-08-24 begrenzten Publikations-/Versionsfensters."
+    },
+    {
+      "title": "Entre algoritmos e hegemonia: Serviço Social na era da inteligência artificial",
+      "identifiers": {
+        "doi": "10.1590/0101-6628.533"
+      },
+      "reason": "Nur das Jahr 2026, kein belastbares Publikations- oder Versionsdatum innerhalb des Stichtagsfensters belegt."
+    },
+    {
+      "title": "Die Antworten von KI-Chatbots auf Beratungsanfragen",
+      "identifiers": {
+        "doi": "10.5771/0490-1606-2026-6-225"
+      },
+      "reason": "Kein belastbares Datum bis 2026-08-24."
+    },
+    {
+      "title": "Generative AI and Social Work Pedagogy in Pakistan",
+      "identifiers": {
+        "doi": [
+          "10.71317/rjsa.003.06(a).1000",
+          "10.71317/rjsa.004.03(s4).1000"
+        ]
+      },
+      "reason": "Ungeklärte Werk-, Versions- oder Reproduktionsbeziehung."
+    },
+    {
+      "title": "Use of Generative AI for Digital Triage",
+      "identifiers": {
+        "doi": "10.65835/lsw.2026.2.8"
+      },
+      "reason": "Gesundheits-Triage ohne belegten spezifischen Sozialarbeits-/Human-Services-Kontext."
+    },
+    {
+      "title": "The ethics of explainable AI in child welfare",
+      "identifiers": {
+        "doi": "10.1111/ijsw.70087"
+      },
+      "reason": "Erklärbare prädiktive Entscheidungshilfe; kein GenAI-/LLM-Anteil belegt."
+    },
+    {
+      "title": "Reframing communication between autistic people and neurotypical social workers through artificial intelligence",
+      "identifiers": {
+        "doi": "10.1093/bjsw/bcag063"
+      },
+      "reason": "Starker Diversity-/Fairnessbezug, jedoch kein GenAI-/LLM-System belegt."
+    },
+    {
+      "title": "A reflection on social work knowledge in the era of AI",
+      "identifiers": {
+        "doi": "10.1093/bjsw/bcag092"
+      },
+      "reason": "Allgemeiner Reflexionsbeitrag; kein substanzieller GenAI-/LLM- und Bias-/Fairnessfokus belegt; bereits in früherer Lane identifiziert."
+    },
+    {
+      "title": "Artificial Intelligence in Social Work: Intellectual Structure and Thematic Growth over a Decade",
+      "identifiers": {
+        "doi": "10.1093/swr/svag011"
+      },
+      "reason": "Bibliometrie allgemeiner AI-Literatur; generative KI nur Teilthema."
+    },
+    {
+      "title": "The Effect of Artificial Intelligence Attitudes on Social Work Students in Türkiye",
+      "identifiers": {
+        "doi": "10.1093/swr/svag010"
+      },
+      "reason": "Allgemeine AI-Einstellungsstudie ohne GenAI-/LLM-Anteil."
+    },
+    {
+      "title": "Tools or threat: Social workers’ attitudes, concerns, and readiness for artificial intelligence in Singapore",
+      "identifiers": {
+        "doi": "10.1177/00208728261453261"
+      },
+      "reason": "Allgemeine AI-Adoptionsstudie ohne GenAI-/LLM-Anteil."
+    },
+    {
+      "title": "Social Workers’ Concerns About Artificial Intelligence",
+      "identifiers": {
+        "doi": "10.1177/14680173261435140"
+      },
+      "reason": "Allgemeine AI-Angst-/Einstellungsstudie ohne generativen Technikbezug."
+    },
+    {
+      "title": "Between data and dignity",
+      "identifiers": {
+        "doi": "10.11157/anzswj-vol38iss1id1293"
+      },
+      "reason": "Direkter Sozialarbeitskontext, aber AI-System nicht als GenAI oder LLM ausgewiesen."
+    },
+    {
+      "title": "Upholding Professional Judgement in Social Work amid the Rise of Artificial Intelligence",
+      "identifiers": {
+        "doi": "10.1080/0312407X.2026.2684237"
+      },
+      "reason": "Allgemeine AI ohne belegten GenAI-/LLM-Anteil."
+    },
+    {
+      "title": "Child Protection in the Digital Age in South Korea",
+      "identifiers": {
+        "doi": "10.1111/cfs.70125"
+      },
+      "reason": "AI-gestützte Big-Data-/Prädiktionssysteme, kein GenAI-/LLM-Einsatz."
+    },
+    {
+      "title": "L’intelligence artificielle et le travail social: enjeux démocratiques, éthiques et épistémologiques",
+      "identifiers": {
+        "doi": "10.3917/vsoc.052.0111"
+      },
+      "reason": "Allgemeine und prädiktive AI; kein substanzieller GenAI-/LLM-Anteil belegt."
+    },
+    {
+      "title": "KI und Soziale Arbeit: Eine Studie zur Akzeptanz des Technologieeinsatzes",
+      "identifiers": {
+        "doi": "10.21240/dimesoz/2026/1/74"
+      },
+      "reason": "Allgemeine AI-Akzeptanzstudie ohne spezifischen GenAI-/LLM-Einsatz."
+    }
+  ]
+}
+

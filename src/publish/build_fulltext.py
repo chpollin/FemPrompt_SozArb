@@ -31,6 +31,115 @@ RAW_DIR = ROOT / "generated" / "markdown"
 OUT_DIR = DOCS / "data" / "fulltext"
 MANIFEST = DOCS / "data" / "fulltext_manifest.json"
 
+
+def source_identity(paper: dict[str, object]) -> dict[str, object]:
+    """Return the exact work-version binding for a served Paper source."""
+    return {
+        key: paper[key]
+        for key in (
+            "work_id",
+            "version_id",
+            "version_type",
+            "preferred_version_id",
+            "is_preferred_version",
+        )
+        if paper.get(key) is not None
+    }
+
+# Curated identity repairs for conversions that the generic author/year cascade
+# cannot resolve.  Each entry names an exact Paper record, the real conversion,
+# and a title passage that must occur in that conversion.  The resolver still
+# rejects DOI conflicts and fails if a committed override disappears.
+CURATED_SOURCE_OVERRIDES = {
+    "P4YQIKJX": {
+        "source": "clean",
+        "file": "P4YQIKJX.md",
+        "title_evidence": "Ethics & AI: A systematic review on ethical concerns and related strategies for designing with AI in healthcare",
+    },
+    "A2P8MXMY": {
+        "source": "clean",
+        "file": "A2P8MXMY.md",
+        "title_evidence": "Algorithmic Justice in Child Protection: Statistical Fairness, Social Justice and the Implications for Practice",
+    },
+    "BHXDU7VM": {
+        "source": "clean",
+        "file": "BHXDU7VM.md",
+        "title_evidence": "How People Use ChatGPT",
+    },
+    "QUV5DQH3": {
+        "source": "clean",
+        "file": "QUV5DQH3.md",
+        "title_evidence": "When Good Algorithms Go Sexist: Why and How to Advance AI Gender Equity",
+    },
+    "FTJM5R8N": {
+        "source": "clean",
+        "file": "FTJM5R8N.md",
+        "title_evidence": "Defeating Nondeterminism in LLM Inference",
+    },
+    "3ZNMTJ5B": {
+        "source": "raw",
+        "file": "Feminist_AI_n.d._Academy.md",
+        "title_evidence": "feminist AI | ACADEMY",
+    },
+    "8MRNK6FX": {
+        "source": "raw",
+        "file": "Unknown_2024_Research.md",
+        "title_evidence": "Research on the application risks and countermeasures of ChatGPT generative artificial intelligence in social work",
+    },
+    "SSF5Q33W": {
+        "source": "raw",
+        "file": "Unknown_2024_Research.md",
+        "title_evidence": "Research on the application risks and countermeasures of ChatGPT generative artificial intelligence in social work",
+    },
+    "4KMMPA6A": {
+        "source": "clean",
+        "file": "Gengler_2024_Faires_KI-Prompting_–_Ein_Leitfaden_für.md",
+        "title_evidence": "Faires KI-Prompting Ein Leitfaden für Unternehmen",
+    },
+    "EQV4DNQR": {
+        "source": "raw",
+        "file": "UNESCO_2024_Bias_against_women_and_girls_in_large_language.md",
+        "title_evidence": "Challenging systematic prejudices: an Investigation into Gender Bias in Large Language Models",
+    },
+    "J5EF9W6M": {
+        "source": "raw",
+        "file": "Project_2024_Intersectionality.md",
+        "title_evidence": "AI & Intersectionality A Toolkit for Fairness & Inclusion",
+    },
+    "NSI6S5QE": {
+        "source": "clean",
+        "file": "NASW_ASWB_CSWE_CSWA_2017_Standards_for_Technology_in_Social_Work_Practice.md",
+        "title_evidence": "Standards for Technology in Social Work Practice",
+    },
+    # OA batch A: exact Paper records whose acquired PDFs have no knowledge-doc
+    # source_file to drive the normal resolver cascade.
+    "VSZM7CT6": {
+        "source": "clean",
+        "file": "VSZM7CT6.md",
+        "title_evidence": "Problematising Artificial Intelligence in Social Work Education: Challenges, Issues and Possibilities",
+    },
+    "7FEFMCBZ": {
+        "source": "clean",
+        "file": "7FEFMCBZ.md",
+        "title_evidence": "How Child Welfare Workers Reduce Racial Disparities in Algorithmic Decisions",
+    },
+    "R7V99ERA": {
+        "source": "clean",
+        "file": "R7V99ERA.md",
+        "title_evidence": "Examining risks of racial biases in NLP tools for child protective services",
+    },
+    "4ZL5Q48E": {
+        "source": "clean",
+        "file": "4ZL5Q48E.md",
+        "title_evidence": "Algorithmic management in a work context",
+    },
+    "J7V3AAQT": {
+        "source": "clean",
+        "file": "J7V3AAQT.md",
+        "title_evidence": "A chatbot for mental health support: exploring the impact of Emohaa on reducing mental distress in China",
+    },
+}
+
 FRONTMATTER_RE = re.compile(r"^---\s*\n.*?\n---\s*\n", re.DOTALL)
 HTML_COMMENT_RE = re.compile(r"<!--.*?-->", re.DOTALL)
 # Docling emits GLYPH<..> runs where a PDF's embedded font could not be decoded;
@@ -382,6 +491,36 @@ def author_year_key(paper: dict[str, object]) -> str:
     return norm(last) + (year.group(0) if year else "")
 
 
+def curated_source(paper: dict[str, object]) -> tuple[Path | None, str | None]:
+    """Resolve a recorded identity repair while retaining deterministic guards."""
+    paper_id = str(paper.get("id") or "")
+    override = CURATED_SOURCE_OVERRIDES.get(paper_id)
+    if override is None:
+        return None, None
+    label = override["source"]
+    base = CLEAN_DIR if label == "clean" else RAW_DIR
+    path = base / override["file"]
+    if not path.exists():
+        raise FileNotFoundError(f"curated full-text source is missing: {path}")
+
+    evidence = override["title_evidence"]
+    expected = str(paper.get("title") or "")
+    expected_norm = norm(expected)
+    evidence_norm = norm(evidence)
+    if not (
+        titles_match(expected, [evidence])
+        or evidence_norm in expected_norm
+        or expected_norm in evidence_norm
+    ):
+        raise ValueError(f"curated title evidence no longer matches Paper {paper_id}")
+    source_text = html.unescape(path.read_text(encoding="utf-8", errors="replace"))
+    if evidence_norm not in norm(source_text):
+        raise ValueError(f"curated title evidence is absent from source {path}")
+    if identity_conflicts(paper, path):
+        raise ValueError(f"curated source conflicts with Paper identity {paper_id}")
+    return path, label
+
+
 def clean(text: str) -> str:
     text = FRONTMATTER_RE.sub("", text, count=1)
     text = HTML_COMMENT_RE.sub("", text)
@@ -398,6 +537,9 @@ def resolve_docling(
     paper: dict[str, object], clean_idx: dict[str, str], raw_idx: dict[str, str]
 ) -> tuple[Path | None, str | None]:
     """Cascade: exact source_file from the knowledge doc, then first-author-year prefix."""
+    override_path, override_label = curated_source(paper)
+    if override_path is not None:
+        return override_path, override_label
     kd = paper.get("knowledge_doc")
     explicit_mismatch = False
     rejected: set[tuple[str, str]] = set()
@@ -518,7 +660,11 @@ def main() -> int:
                 continue
             path, src = resolve_docling(paper, clean_idx, raw_idx)
             if not path:
-                manifest[pid] = {"src": "none", "chars": 0}
+                manifest[pid] = {
+                    "src": "none",
+                    "chars": 0,
+                    **source_identity(paper),
+                }
                 if src == "ambiguous":
                     manifest[pid]["reason"] = "ambiguous"
                     n_ambiguous += 1
@@ -532,7 +678,12 @@ def main() -> int:
                 glyph_files.append(path.name)
             body = clean(raw)
             (stage_assets / f"{pid}.md").write_text(body, encoding="utf-8")
-            manifest[pid] = {"src": src, "chars": len(body), "source_file": path.name}
+            manifest[pid] = {
+                "src": src,
+                "chars": len(body),
+                "source_file": path.name,
+                **source_identity(paper),
+            }
             n_clean += src == "clean"
             n_raw += src == "raw"
         stage_manifest.write_text(

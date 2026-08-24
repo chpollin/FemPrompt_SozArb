@@ -1,0 +1,143 @@
+{
+  "schema": "femprompt-prisma-ai-agent-review/0.1",
+  "run_id": "uncovered-sources-5-20260823",
+  "actor": "agent",
+  "reviewer": "ai-agent-review",
+  "created": "2026-08-23T14:27:46.1081359Z",
+  "inputs": {
+    "tracks": [
+      {"reviewer": "ar1", "path": "tests/review-cases/agent-runs/uncovered-sources-5-20260823/tracks/ar1-coding.json", "sha256": "4e6867dfe36aa31c00b2d67fc0bb9bd7d812365440020300bb13b2eeda8724b5"},
+      {"reviewer": "ar2", "path": "tests/review-cases/agent-runs/uncovered-sources-5-20260823/tracks/ar2-coding.json", "sha256": "54bf5dc7f4809d426e8e6f97932f12a5b8da3765f4d5a9254f4eea2b6b886bf9"}
+    ],
+    "sources": [
+      {"paper_id": "UKKQKL7I", "path": "docs/data/fulltext/UKKQKL7I.md", "sha256": "d6ef1a0ffbf5ab4e5b570afe571b4ea15e612ebc847490d8da19cb3a4c802039"},
+      {"paper_id": "8MRNK6FX", "path": "docs/data/fulltext/8MRNK6FX.md", "sha256": "70fdb1be2b731a07359d7a56e55e45898596e20ebe9da3f7742acc5c2ebbc503"},
+      {"paper_id": "4KMMPA6A", "path": "docs/data/fulltext/4KMMPA6A.md", "sha256": "5de258c45aa67fc5411f8feec565452f21080e8472fec84d5d9bc01637884431"},
+      {"paper_id": "EQV4DNQR", "path": "docs/data/fulltext/EQV4DNQR.md", "sha256": "ecc4f3a51ac656567e830dda8ed4843da7548db46775ebb330e610eae1c8c0eb"},
+      {"paper_id": "J5EF9W6M", "path": "docs/data/fulltext/J5EF9W6M.md", "sha256": "494bdb584b5ab9bc943debbbcf51b19699d6513f1b92c824bf221cc15b392141"}
+    ]
+  },
+  "records": {
+    "UKKQKL7I": {
+      "result": "resolved",
+      "differences": ["KI_Sonstige und Feministisch", "Biasachsen, Harm-Typen, Population und Studientyp"],
+      "rationale": "Der Gegenstand sind generative Foundation Models. Klassisches ML erscheint nur in der Definition des Foundation Models. Patriarchale Datenmacht wird ausdrücklich als strukturelle geschlechterbezogene Kritik behandelt. Sozialarbeit ist ein Anwendungsbeispiel und keine untersuchte Population.",
+      "identity_check": {"status": "verified", "basis": "Titel, DOI, Jahr, Autorin und der Berichtstyp sind im Volltext ausgewiesen."},
+      "final_coding": {
+        "categories": {"AI_Literacies": "teilweise", "Generative_KI": "ja", "Prompting": "nein", "KI_Sonstige": "nein", "Soziale_Arbeit": "teilweise", "Bias_Ungleichheit": "ja", "Gender": "teilweise", "Diversitaet": "teilweise", "Feministisch": "teilweise", "Fairness": "ja"},
+        "decision": "Include",
+        "reason": null,
+        "evidence": {
+          "AI_Literacies": ["to use generative AI responsibly, we must first understand the foundations on which it rests"],
+          "Generative_KI": ["Foundation models - the underlying systems behind applications such as ChatGPT - are the backbone of generative artificial intelligence and increasingly shape the digital tools that permeate work and everyday life."],
+          "Prompting": [],
+          "KI_Sonstige": [],
+          "Soziale_Arbeit": ["An automated tool in social work might deliver incorrect advice on social benefits, making access to support more difficult and undermining trust in the counseling process."],
+          "Bias_Ungleichheit": ["These datasets reflect dominant power structures that are often Western, patriarchal, and discriminatory. Rather than reflecting diversity, the models reproduce and amplify existing biases."],
+          "Gender": ["A chatbot from Austria's employment agency gave stereotypical career advice, steering women toward cooking or nursing professions and men toward IT jobs."],
+          "Diversitaet": ["Training sources should reflect the people, customs, religions, ideas, and languages relevant to future uses."],
+          "Feministisch": ["These datasets reflect dominant power structures that are often Western, patriarchal, and discriminatory. Rather than reflecting diversity, the models reproduce and amplify existing biases."],
+          "Fairness": ["This report examines how foundation models could be designed and governed so the benefits of large-scale data collection could be equally shared - across geographies, ideologies, populations, and languages."]
+        },
+        "analysis": {"AN_Prompting_Role": ["None"], "AN_Prompt_Techniques": ["None"], "AN_Bias_Axes": ["Gender", "Language_Culture"], "AN_Harm_Types": ["Misrepresentation", "Stereotyping", "Indirect_Discrimination"], "AN_Mitigation_Stage": ["Pre_Processing", "Organisational_Process"], "AN_Mitigation_Status": "Proposed", "AN_Population": ["Not_SW_Specific"], "AN_Coding_Basis": "Fulltext", "AN_Notes": "Der Bericht kombiniert Literaturauswertung, vergleichende Systemanalyse und Expert:inneninterviews. Sozialarbeit erscheint als Praxisbeispiel.", "Studientyp": "Empirisch"}
+      }
+    },
+    "8MRNK6FX": {
+      "result": "resolved",
+      "differences": ["Biasachsen, Harm-Typen und Mitigationsstufen", "Identitätsstatus"],
+      "rationale": "Der Text ist eine theoretische Risiko- und Maßnahmenanalyse zu ChatGPT in der Sozialen Arbeit. Er benennt sozioökonomische Benachteiligung als Beispiel, stellt keine eigene empirische Untersuchung vor und zeigt keine DOI- oder Jahresangabe im gelieferten Volltext.",
+      "identity_check": {"status": "provisional", "basis": "Titel und Autorin stimmen mit dem Auftrag überein. DOI und Jahr sind im gelieferten Volltext nicht ausgewiesen."},
+      "final_coding": {
+        "categories": {"AI_Literacies": "teilweise", "Generative_KI": "ja", "Prompting": "nein", "KI_Sonstige": "nein", "Soziale_Arbeit": "ja", "Bias_Ungleichheit": "ja", "Gender": "nein", "Diversitaet": "teilweise", "Feministisch": "nein", "Fairness": "ja"},
+        "decision": "Include",
+        "reason": null,
+        "evidence": {
+          "AI_Literacies": ["Enhancing professional training equips social workers to navigate challenges posed by emerging technologies, ensuring effective social work in digital environments."],
+          "Generative_KI": ["The advent of generative AI introduces a host of ethical challenges for the field of social work, necessitating proactive measures to mitigate potential negative impacts."],
+          "Prompting": [],
+          "KI_Sonstige": [],
+          "Soziale_Arbeit": ["Therefore, in anticipation of future risks, this discourse delves into the application risks posed by ChatGPT and other AI technologies in social work, offering multifaceted analyses and proposing corresponding regulatory measures to guide the responsible development of AI within the social work domain."],
+          "Bias_Ungleichheit": ["A significant concern arises from algorithmic bias, stemming from inherent imbalances in the data collation process."],
+          "Gender": [],
+          "Diversitaet": ["These cocoons risk isolating clients from diverse perspectives, underscoring the imperative for social workers to promote social participation and diversity among their clientele."],
+          "Feministisch": [],
+          "Fairness": ["Social workers must remain vigilant in identifying and rectifying instances of bias to uphold principles of fairness and inclusivity in their practice."]
+        },
+        "analysis": {"AN_Prompting_Role": ["None"], "AN_Prompt_Techniques": ["None"], "AN_Bias_Axes": ["Socioeconomic"], "AN_Harm_Types": ["Disparate_Performance", "Exclusionary_Norms", "Stereotyping", "Direct_Discrimination"], "AN_Mitigation_Stage": ["Pre_Processing", "Organisational_Process"], "AN_Mitigation_Status": "Proposed", "AN_Population": ["General_Social_Work"], "AN_Coding_Basis": "Fulltext", "AN_Notes": "Der Text diskutiert Risiken und vorgeschlagene Gegenmaßnahmen. Prompting ist kein eigener Gegenstand.", "Studientyp": "Theoretisch"}
+      }
+    },
+    "4KMMPA6A": {
+      "result": "resolved",
+      "differences": ["Prompting-Rolle und -Techniken", "Biasachsen, Harm-Typen, Mitigationsstufen und Population"],
+      "rationale": "Der institutionelle Leitfaden ist ein Konzeptpapier für Unternehmen. Er lehrt konkrete Promptbestandteile, Beispiele, Rollen und Feedbackschleifen. Die Zielgruppe sind Unternehmen, daher keine Education_Professional- oder Sozialarbeitszuordnung.",
+      "identity_check": {"status": "verified", "basis": "Titel, Autor:innen, Jahr, Zitierempfehlung und institutionelle Herausgeberschaft stehen im Volltext."},
+      "final_coding": {
+        "categories": {"AI_Literacies": "ja", "Generative_KI": "ja", "Prompting": "ja", "KI_Sonstige": "nein", "Soziale_Arbeit": "nein", "Bias_Ungleichheit": "ja", "Gender": "ja", "Diversitaet": "ja", "Feministisch": "teilweise", "Fairness": "ja"},
+        "decision": "Include",
+        "reason": null,
+        "evidence": {
+          "AI_Literacies": ["Um diese Technologien sinnvoll zu nutzen, müssen wir verstehen, wie sie funktionieren, wofür sie geeignet sind und wo ihre Grenzen liegen."],
+          "Generative_KI": ["Generative KI bezieht sich auf KI-Systeme, die basierend auf trainierten Modellen und Algorithmen sowie (menschlichen) 'Prompts' Inhalte erzeugen können, wie z.B. Texte, Bilder, Musik, Videos oder sogar Code."],
+          "Prompting": ["KI-Prompting ist die Eingabe spezifischer Anweisungen oder Daten in ein Generatives KI-System, um damit eine gewünschte Reaktion oder ein bestimmtes Ergebnis zu erzeugen."],
+          "KI_Sonstige": [],
+          "Soziale_Arbeit": [],
+          "Bias_Ungleichheit": ["KI-Modelle lernen aus Datensätzen, die oft menschliche Vorurteile und Stereotypen widerspiegeln. Dies kann zu diskriminierenden Ergebnissen führen, z.B. bei Stellenausschreibungen oder Darstellungen auf Bildern."],
+          "Gender": ["So werden Frauen und insbesondere Women of Color auf KI-generierten Bildern häufig sexualisiert dargestellt."],
+          "Diversitaet": ["Generative KI bietet vielfältige Vorteile für KMU, birgt aber gleichzeitig Herausforderungen im Bereich der Diversität."],
+          "Feministisch": ["Dem setzt z.B. die sogenannte 'Feministische KI' ein positives Narrativ entgegen. Es gibt bereits einige Beispiele von KI mit feministischem Zweck und für die Stärkung der Rechte marginalisierter Gruppen."],
+          "Fairness": ["In einem Prompt das Wort 'divers' zu ergänzen ist in den wenigsten Fällen ausreichend, um faire und diverse Ergebnisse zu erhalten."]
+        },
+        "analysis": {"AN_Prompting_Role": ["Recommended_Practice", "Learning_Content"], "AN_Prompt_Techniques": ["ICL", "Role_Persona", "General_Guidance", "Self_Criticism"], "AN_Bias_Axes": ["Gender", "Race_Ethnicity", "Disability", "Age", "Physical_Appearance"], "AN_Harm_Types": ["Exclusionary_Norms", "Misrepresentation", "Stereotyping", "Direct_Discrimination"], "AN_Mitigation_Stage": ["Prompt_Practice", "Organisational_Process"], "AN_Mitigation_Status": "Proposed", "AN_Population": ["Not_SW_Specific"], "AN_Coding_Basis": "Fulltext", "AN_Notes": "Konzeptleitfaden für KMU. General_Guidance umfasst Spezifität, Kontext, Sprache und detaillierte Beschreibungen; ICL stützt sich auf die ausdrücklich empfohlenen Beispiele.", "Studientyp": "Konzept"}
+      }
+    },
+    "EQV4DNQR": {
+      "result": "resolved",
+      "differences": ["Feministisch", "Biasachsen, Harm-Typen und Studientyp"],
+      "rationale": "Der Bericht untersucht Gender-, Kultur- und Identitätsbias in LLMs mit mehreren beschriebenen Studien. Er verwendet keine feministische Theorie oder Methodik. Die Promptverwendung ist ein Forschungsinstrument und keine Prompting-Praxis.",
+      "identity_check": {"status": "verified", "basis": "Titel, Herausgeber, Jahr, Autor:innengruppe und Berichtszitation sind im Volltext dokumentiert."},
+      "final_coding": {
+        "categories": {"AI_Literacies": "teilweise", "Generative_KI": "ja", "Prompting": "teilweise", "KI_Sonstige": "nein", "Soziale_Arbeit": "nein", "Bias_Ungleichheit": "ja", "Gender": "ja", "Diversitaet": "ja", "Feministisch": "nein", "Fairness": "ja"},
+        "decision": "Include",
+        "reason": null,
+        "evidence": {
+          "AI_Literacies": ["Additionally, promoting public awareness and education on AI ethics and biases empowers users to critically engage with AI technologies and advocate for their rights."],
+          "Generative_KI": ["This study explores biases in three significant large language models (LLMs): OpenAI's GPT -2 and ChatGPT, along with Meta's Llama 2, highlighting their role in both advanced decision-making systems and as user-facing conversational agents."],
+          "Prompting": ["The approach of this second study starts with an incomplete sentence and prompts the model to complete it. It investigates if the LLMs would show bias in its text generation."],
+          "KI_Sonstige": [],
+          "Soziale_Arbeit": [],
+          "Bias_Ungleichheit": ["The research uncovers persistent social biases within these state-of-the-art language models, despite ongoing efforts to mitigate such issues."],
+          "Gender": ["Key findings include that in gendered word association tasks, a recent LLM still exhibited previously identified biases and was significantly more likely to associate gendered names with traditional roles"],
+          "Diversitaet": ["Finally, in generating content using prompts which intersect gender and culture with occupation, the results highlight a clear bias in AI-generated content, showing a tendency to assign more diverse and professional jobs to men"],
+          "Feministisch": [],
+          "Fairness": ["The emphasis on GPT-2 and Llama 2 being open-source foundational models is particularly noteworthy, as their widespread adoption underlines the urgent need for scalable, objective methods to assess and correct biases, ensuring fairness in AI systems globally."]
+        },
+        "analysis": {"AN_Prompting_Role": ["Research_Instrument"], "AN_Prompt_Techniques": ["None"], "AN_Bias_Axes": ["Gender", "Race_Ethnicity", "Intersectional", "Sexual_Orientation_Identity", "Language_Culture", "Nationality_Migration"], "AN_Harm_Types": ["Derogatory_Language", "Disparate_Performance", "Misrepresentation", "Stereotyping"], "AN_Mitigation_Stage": ["Pre_Processing", "In_Training", "Post_Processing", "Organisational_Process"], "AN_Mitigation_Status": "Proposed", "AN_Population": ["Not_SW_Specific"], "AN_Coding_Basis": "Fulltext", "AN_Notes": "Issue Brief mit mehreren empirischen LLM-Biasstudien und Policy-Empfehlungen. Die Satzvervollständigung dient als Bias-Probe.", "Studientyp": "Empirisch"}
+      }
+    },
+    "J5EF9W6M": {
+      "result": "resolved",
+      "differences": ["Soziale_Arbeit und Feministisch", "Harm-Typen, Mitigationsstufen und Identitätsstatus"],
+      "rationale": "Der Toolkit-Schwerpunkt liegt auf intersectional bias, fairer KI und Handlungsempfehlungen für Unternehmen. Sozialarbeit erscheint nur im Fallmaterial zu Wohlfahrtsdiensten. Die kritische intersektionale Machtanalyse trägt Feministisch. Der Text weist keine individuelle Autorenschaft oder DOI aus.",
+      "identity_check": {"status": "provisional", "basis": "Titel, Projekt, Finanzierung und Datum stehen im Volltext. Individuelle Autorenschaft und DOI fehlen im gelieferten Text."},
+      "final_coding": {
+        "categories": {"AI_Literacies": "ja", "Generative_KI": "nein", "Prompting": "nein", "KI_Sonstige": "ja", "Soziale_Arbeit": "teilweise", "Bias_Ungleichheit": "ja", "Gender": "ja", "Diversitaet": "ja", "Feministisch": "ja", "Fairness": "ja"},
+        "decision": "Include",
+        "reason": null,
+        "evidence": {
+          "AI_Literacies": ["Building AI literacy is crucial for the policy sector to understand AI fundamentals, such as machine learning and data ethics, while also raising awareness of intersectionality in AI."],
+          "Generative_KI": [],
+          "Prompting": [],
+          "KI_Sonstige": ["AI algorithms are trained using large datasets so that they can identify patterns, make predictions, recommend actions, and figure out what to do in unfamiliar situations, learning from new data and thus improving over time."],
+          "Soziale_Arbeit": ["Without addressing these intersectional biases, AI systems risk perpetuating and deepening existing inequalities in welfare and social services."],
+          "Bias_Ungleichheit": ["One significant issue is intersectional bias, where different forms of discrimination-such as racism, sexism, ableism, and colonialism-overlap and affect people in complex ways."],
+          "Gender": ["The Council of Europe's Gender Equality Strategy (2024-2029) calls for tackling structural barriers and encouraging diversity in AI development."],
+          "Diversitaet": ["By focusing on fairness and inclusivity, policymakers can create AI systems that promote equality rather than worsen current inequalities."],
+          "Feministisch": ["AI is not just a neutral tool but is co-created with society, and as such has major political and social implications in reinforcing existing power relationships, discrimination, and structural inequalities."],
+          "Fairness": ["Fairness in AI refers to designing systems that promote equitable outcomes for all individuals , regardless of identity."]
+        },
+        "analysis": {"AN_Prompting_Role": ["None"], "AN_Prompt_Techniques": ["None"], "AN_Bias_Axes": ["Gender", "Race_Ethnicity", "Intersectional", "Disability", "Socioeconomic", "Nationality_Migration"], "AN_Harm_Types": ["Disparate_Performance", "Exclusionary_Norms", "Direct_Discrimination", "Indirect_Discrimination"], "AN_Mitigation_Stage": ["Pre_Processing", "Intra_Processing", "Post_Processing", "Organisational_Process"], "AN_Mitigation_Status": "Proposed", "AN_Population": ["Not_SW_Specific"], "AN_Coding_Basis": "Fulltext", "AN_Notes": "DIVERSIFAIR-Toolkit für Industrie und Governance. Wohlfahrtsdienste sind Fallmaterial, keine Zielpopulation.", "Studientyp": "Konzept"}
+      }
+    }
+  },
+  "summary": {"record_count": 5, "decisions": {"Include": 5, "Unclear": 0, "Exclude": 0}, "resolved_difference_records": 5}
+}

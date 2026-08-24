@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-08-23T19:00:50.293343",
+  "input_dir": "generated\\source-acquisition\\oa-batch-a\\j7-input",
+  "output_dir": "generated\\source-acquisition\\oa-batch-a\\j7-output",
+  "total_files": 1,
+  "converted": 1,
+  "skipped": 0,
+  "failed": 0,
+  "low_quality": 0,
+  "files": [
+    {
+      "input": "J7V3AAQT.pdf",
+      "output": "J7V3AAQT.md",
+      "file_hash": "32bc7a2eb710582012e5bc329f1d765b",
+      "success": true,
+      "duration_seconds": 34.52,
+      "metrics": {
+        "total_chars": 69070,
+        "total_lines": 488,
+        "total_words": 10797,
+        "headings": 35,
+        "heading_levels": {
+          "h2": 35
+        },
+        "tables": 3,
+        "lists": 10,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 241,
+        "avg_line_length": 277.7
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    }
+  ]
+}

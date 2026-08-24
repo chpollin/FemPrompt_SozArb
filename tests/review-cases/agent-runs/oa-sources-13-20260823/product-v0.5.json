@@ -1,0 +1,4525 @@
+{
+  "schema": "femprompt-prisma-reviewer/0.5",
+  "reviewer": "ar2",
+  "actor": "agent",
+  "status": "ai-agent-reviewed",
+  "updated": "2026-08-23T17:33:46.602Z",
+  "review_context": {
+    "run_id": "oa-sources-13-20260823",
+    "provenance_method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+    "run_manifest": "tests/review-cases/agent-runs/oa-sources-13-20260823/run.json",
+    "review_path": "tests/review-cases/agent-runs/oa-sources-13-20260823/ai-agent-review.json",
+    "review_sha256": "3e010293d1d0b377fbcc9715645483a2a958168fa5e1b0ce1d33e70de39a91ea",
+    "ai_agent_reviewer_actor_id": "codex-ai-agent-review",
+    "input_tracks": [
+      {
+        "reviewer": "ar1",
+        "actor_id": "oa-sources-13-20260823-ar1",
+        "path": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar1.json",
+        "sha256": "5d9ecd672a101943a1709f15e32d9350f1139a7390c6f2e2bc08008c531e634e",
+        "coding_packet": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar1-coding.json",
+        "coding_packet_sha256": "f2626a0a435389a9d9b2646db904a4fa887608d1ca16e588991116b1ac8c5ff0"
+      },
+      {
+        "reviewer": "ar2",
+        "actor_id": "oa-sources-13-20260823-ar2",
+        "path": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar2.json",
+        "sha256": "f019c60207f9610369e6bbbd1229326ff0b549350c0c9c2a978c402344d1e009",
+        "coding_packet": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar2-coding.json",
+        "coding_packet_sha256": "f3dcf84c76c73d5e96d7eff708563ff9579043d2a2a796e9e0f52784e225ed80"
+      }
+    ],
+    "paper_sources": {
+      "VSZM7CT6": {
+        "path": "docs/data/fulltext/VSZM7CT6.md",
+        "sha256": "4557a0e44affd3732f7aff3f2b8244b45df7eb5f8cbb0bcb043aa4dee9422bf3",
+        "work_id": "doi:10.1093/bjsw/bcab168",
+        "representative_record_id": "VSZM7CT6"
+      },
+      "7FEFMCBZ": {
+        "path": "docs/data/fulltext/7FEFMCBZ.md",
+        "sha256": "de16bedf403143d41f37bcd19af189018e049126bba32c148277976ef2ee828f",
+        "work_id": "doi:10.1145/3491102.3501831",
+        "representative_record_id": "7FEFMCBZ"
+      },
+      "R7V99ERA": {
+        "path": "docs/data/fulltext/R7V99ERA.md",
+        "sha256": "03177cb37158d46696fe4422919053cdda5591068e6f0e395e7d21487bc2a2db",
+        "work_id": "doi:10.1145/3593013.3594094",
+        "representative_record_id": "R7V99ERA"
+      },
+      "4ZL5Q48E": {
+        "path": "docs/data/fulltext/4ZL5Q48E.md",
+        "sha256": "4d5b7fb19ec62f5a192bf5844f68d82fb1680a2ed260f18d14ca3bcb3276c4db",
+        "work_id": "doi:10.1177/20539517211020332",
+        "representative_record_id": "4ZL5Q48E"
+      },
+      "J7V3AAQT": {
+        "path": "docs/data/fulltext/J7V3AAQT.md",
+        "sha256": "5b2c28e320dd95560f01adfb33b123d5049a4bb3106fb448335626f7958ff252",
+        "work_id": "doi:10.3389/fdgth.2023.1133987",
+        "representative_record_id": "J7V3AAQT"
+      },
+      "P4YQIKJX": {
+        "path": "docs/data/fulltext/P4YQIKJX.md",
+        "sha256": "21913775f2ff6abfb26b09e167c14e8d1bfac55d43f7a8db06b60582ac383a17",
+        "work_id": "doi:10.3390/ai4010003",
+        "representative_record_id": "P4YQIKJX"
+      },
+      "A2P8MXMY": {
+        "path": "docs/data/fulltext/A2P8MXMY.md",
+        "sha256": "6441bd19785f939ca020aa1d0aa2c8ac2d21c55bcd44d7c29601fa543367d6b3",
+        "work_id": "doi:10.3390/socsci8100281",
+        "representative_record_id": "A2P8MXMY"
+      },
+      "QUV5DQH3": {
+        "path": "docs/data/fulltext/QUV5DQH3.md",
+        "sha256": "e7d5eedd33818ff4614f26577e29e11050d1e12e6c730250573231f7ade1ac9a",
+        "work_id": "doi:10.48558/a179-b138",
+        "representative_record_id": "QUV5DQH3"
+      },
+      "3ZNMTJ5B": {
+        "path": "docs/data/fulltext/3ZNMTJ5B.md",
+        "sha256": "7f3e3b93547355806fec125d1cde0f65bb1819192be52a85376b08a868069a4c",
+        "work_id": "record:3ZNMTJ5B",
+        "representative_record_id": "3ZNMTJ5B"
+      },
+      "BDI6XU5A": {
+        "path": "docs/data/fulltext/BDI6XU5A.md",
+        "sha256": "1aa57614a5d30b608006dde1d2da7c7cb49f2c27324bd4726ebb370487b47e74",
+        "work_id": "record:BDI6XU5A",
+        "representative_record_id": "BDI6XU5A"
+      },
+      "BHXDU7VM": {
+        "path": "docs/data/fulltext/BHXDU7VM.md",
+        "sha256": "3d4c7eebcc7eede980a7a9e64003ba8df9dcb3ce98afcac0a03773915ab14668",
+        "work_id": "record:BHXDU7VM",
+        "representative_record_id": "BHXDU7VM"
+      },
+      "FTJM5R8N": {
+        "path": "docs/data/fulltext/FTJM5R8N.md",
+        "sha256": "92cbd69cb6ef71c5932014d1656d5e35b85db1a576a863346091c7a5c45ba55f",
+        "work_id": "record:FTJM5R8N",
+        "representative_record_id": "FTJM5R8N"
+      },
+      "NSI6S5QE": {
+        "path": "docs/data/fulltext/NSI6S5QE.md",
+        "sha256": "3187b1cf1d4010d5a926b636205c9e242a80fa814cbdb5e9449f2c523e6b387d",
+        "work_id": "record:NSI6S5QE",
+        "representative_record_id": "NSI6S5QE"
+      }
+    },
+    "work_assignments": [
+      {
+        "work_id": "doi:10.1093/bjsw/bcab168",
+        "representative_record_id": "VSZM7CT6",
+        "record_ids": [
+          "VSZM7CT6"
+        ]
+      },
+      {
+        "work_id": "doi:10.1145/3491102.3501831",
+        "representative_record_id": "7FEFMCBZ",
+        "record_ids": [
+          "7FEFMCBZ"
+        ]
+      },
+      {
+        "work_id": "doi:10.1145/3593013.3594094",
+        "representative_record_id": "R7V99ERA",
+        "record_ids": [
+          "R7V99ERA"
+        ]
+      },
+      {
+        "work_id": "doi:10.1177/20539517211020332",
+        "representative_record_id": "4ZL5Q48E",
+        "record_ids": [
+          "4ZL5Q48E"
+        ]
+      },
+      {
+        "work_id": "doi:10.3389/fdgth.2023.1133987",
+        "representative_record_id": "J7V3AAQT",
+        "record_ids": [
+          "J7V3AAQT"
+        ]
+      },
+      {
+        "work_id": "doi:10.3390/ai4010003",
+        "representative_record_id": "P4YQIKJX",
+        "record_ids": [
+          "P4YQIKJX"
+        ]
+      },
+      {
+        "work_id": "doi:10.3390/socsci8100281",
+        "representative_record_id": "A2P8MXMY",
+        "record_ids": [
+          "A2P8MXMY"
+        ]
+      },
+      {
+        "work_id": "doi:10.48558/a179-b138",
+        "representative_record_id": "QUV5DQH3",
+        "record_ids": [
+          "QUV5DQH3"
+        ]
+      },
+      {
+        "work_id": "record:3ZNMTJ5B",
+        "representative_record_id": "3ZNMTJ5B",
+        "record_ids": [
+          "3ZNMTJ5B"
+        ]
+      },
+      {
+        "work_id": "record:BDI6XU5A",
+        "representative_record_id": "BDI6XU5A",
+        "record_ids": [
+          "BDI6XU5A"
+        ]
+      },
+      {
+        "work_id": "record:BHXDU7VM",
+        "representative_record_id": "BHXDU7VM",
+        "record_ids": [
+          "BHXDU7VM"
+        ]
+      },
+      {
+        "work_id": "record:FTJM5R8N",
+        "representative_record_id": "FTJM5R8N",
+        "record_ids": [
+          "FTJM5R8N"
+        ]
+      },
+      {
+        "work_id": "record:NSI6S5QE",
+        "representative_record_id": "NSI6S5QE",
+        "record_ids": [
+          "NSI6S5QE"
+        ]
+      }
+    ]
+  },
+  "decisions": {
+    "3ZNMTJ5B": {
+      "categories": {},
+      "decision": "Exclude",
+      "override": false,
+      "reason": "Wrong_publication_type",
+      "override_reason": null,
+      "evidence": {},
+      "ts": "2026-08-23T17:33:46.602Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "record:3ZNMTJ5B",
+      "representative_record_id": "3ZNMTJ5B",
+      "provenance": {
+        "annotation_id": "ar2:3ZNMTJ5B",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "curation-provenance-unrecorded",
+            "type": "person",
+            "roles": [
+              "curation"
+            ],
+            "identity": {
+              "status": "legacy_gap",
+              "value": "unrecorded"
+            }
+          },
+          {
+            "id": "oa-sources-13-20260823-ar1",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "oa-sources-13-20260823-ar2",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codex-ai-agent-review",
+            "type": "ai_agent",
+            "roles": [
+              "ai_agent_reviewer"
+            ],
+            "identity": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            }
+          }
+        ],
+        "activities": [
+          {
+            "id": "3ZNMTJ5B:agent-annotation",
+            "type": "screening",
+            "run_id": "oa-sources-13-20260823",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.1.md",
+              "version": "1.1",
+              "sha256": "31b5741719d813848622351efab184c420f9f9bc0771f52dff2d5feb15609acb"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            },
+            "associated_actor_ids": [
+              "oa-sources-13-20260823-ar1",
+              "oa-sources-13-20260823-ar2"
+            ]
+          },
+          {
+            "id": "3ZNMTJ5B:ai-agent-review",
+            "type": "ai_agent_review",
+            "run_id": "oa-sources-13-20260823",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.1.md",
+              "version": "1.1",
+              "sha256": "31b5741719d813848622351efab184c420f9f9bc0771f52dff2d5feb15609acb"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            },
+            "associated_actor_ids": [
+              "codex-ai-agent-review"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:3ZNMTJ5B",
+            "type": "paper",
+            "reference": "docs/data/fulltext/3ZNMTJ5B.md",
+            "sha256": "7f3e3b93547355806fec125d1cde0f65bb1819192be52a85376b08a868069a4c"
+          }
+        ],
+        "derived_from": [
+          {
+            "id": "ai-agent-review",
+            "type": "ai_agent_review",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/ai-agent-review.json"
+          },
+          {
+            "id": "run-manifest",
+            "type": "run_manifest",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/run.json"
+          },
+          {
+            "id": "track:ar1",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar1.json"
+          },
+          {
+            "id": "track:ar2",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar2.json"
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "annotation_id": "ar2:3ZNMTJ5B",
+          "annotation_type": "screening_decision",
+          "at": "2026-08-23T17:33:46.602Z",
+          "actor_ids": [
+            "oa-sources-13-20260823-ar1",
+            "oa-sources-13-20260823-ar2"
+          ],
+          "body": {
+            "categories": {},
+            "decision": "Exclude",
+            "override": false,
+            "reason": "Wrong_publication_type",
+            "override_reason": null,
+            "evidence": {},
+            "text_source": "raw",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "reviewer": "ar2",
+            "actor": "agent"
+          }
+        }
+      ],
+      "active_annotation_id": "ar2:3ZNMTJ5B",
+      "checks": [],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "curated_corpus_snapshot",
+          "at": "2026-08-23T17:33:46.602Z",
+          "actor_ids": [
+            "curation-provenance-unrecorded"
+          ]
+        },
+        "state": "ai-agent-reviewed",
+        "events": [
+          {
+            "event_id": "3ZNMTJ5B:agent-annotation",
+            "event_type": "agent_annotation",
+            "from": "curated",
+            "to": "agent-annotated",
+            "at": "2026-08-23T17:33:46.602Z",
+            "activity_id": "3ZNMTJ5B:agent-annotation",
+            "actor_ids": [
+              "oa-sources-13-20260823-ar1",
+              "oa-sources-13-20260823-ar2"
+            ],
+            "result": "completed",
+            "annotation_id": "ar2:3ZNMTJ5B"
+          },
+          {
+            "event_id": "3ZNMTJ5B:ai-agent-review",
+            "event_type": "ai_agent_review",
+            "from": "agent-annotated",
+            "to": "ai-agent-reviewed",
+            "at": "2026-08-23T17:33:46.602Z",
+            "activity_id": "3ZNMTJ5B:ai-agent-review",
+            "actor_ids": [
+              "codex-ai-agent-review"
+            ],
+            "result": "accepted",
+            "annotation_id": "ar2:3ZNMTJ5B"
+          }
+        ]
+      }
+    },
+    "4ZL5Q48E": {
+      "categories": {
+        "AI_Literacies": 2,
+        "KI_Sonstige": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 1,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "algorithmic literacy",
+            "snippet": "algorithmic literacy",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "machine-learning algorithms",
+            "snippet": "machine-learning algorithms",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "algorithmic systems can inherit biases embedded in previous decisions",
+            "snippet": "algorithmic systems can inherit biases embedded in previous decisions",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "fewer women than men were shown ads about STEM careers",
+            "snippet": "fewer women than men were shown ads about STEM careers",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "a fair and democratic roll-out of algorithmic management",
+            "snippet": "a fair and democratic roll-out of algorithmic management",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ]
+      },
+      "ts": "2026-08-23T17:33:46.602Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Gender"
+          ],
+          "AN_Harm_Types": [
+            "Direct_Discrimination",
+            "Exclusionary_Norms"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "Theoretische soziotechnische Einordnung algorithmischen Managements in Arbeitskontexten.",
+          "Studientyp": "Theoretisch"
+        },
+        "undecidable": {}
+      },
+      "work_id": "doi:10.1177/20539517211020332",
+      "representative_record_id": "4ZL5Q48E",
+      "provenance": {
+        "annotation_id": "ar2:4ZL5Q48E",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "curation-provenance-unrecorded",
+            "type": "person",
+            "roles": [
+              "curation"
+            ],
+            "identity": {
+              "status": "legacy_gap",
+              "value": "unrecorded"
+            }
+          },
+          {
+            "id": "oa-sources-13-20260823-ar1",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "oa-sources-13-20260823-ar2",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codex-ai-agent-review",
+            "type": "ai_agent",
+            "roles": [
+              "ai_agent_reviewer"
+            ],
+            "identity": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            }
+          }
+        ],
+        "activities": [
+          {
+            "id": "4ZL5Q48E:agent-annotation",
+            "type": "screening",
+            "run_id": "oa-sources-13-20260823",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.1.md",
+              "version": "1.1",
+              "sha256": "31b5741719d813848622351efab184c420f9f9bc0771f52dff2d5feb15609acb"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            },
+            "associated_actor_ids": [
+              "oa-sources-13-20260823-ar1",
+              "oa-sources-13-20260823-ar2"
+            ]
+          },
+          {
+            "id": "4ZL5Q48E:ai-agent-review",
+            "type": "ai_agent_review",
+            "run_id": "oa-sources-13-20260823",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.1.md",
+              "version": "1.1",
+              "sha256": "31b5741719d813848622351efab184c420f9f9bc0771f52dff2d5feb15609acb"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            },
+            "associated_actor_ids": [
+              "codex-ai-agent-review"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:4ZL5Q48E",
+            "type": "paper",
+            "reference": "docs/data/fulltext/4ZL5Q48E.md",
+            "sha256": "4d5b7fb19ec62f5a192bf5844f68d82fb1680a2ed260f18d14ca3bcb3276c4db"
+          }
+        ],
+        "derived_from": [
+          {
+            "id": "ai-agent-review",
+            "type": "ai_agent_review",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/ai-agent-review.json"
+          },
+          {
+            "id": "run-manifest",
+            "type": "run_manifest",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/run.json"
+          },
+          {
+            "id": "track:ar1",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar1.json"
+          },
+          {
+            "id": "track:ar2",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar2.json"
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "annotation_id": "ar2:4ZL5Q48E",
+          "annotation_type": "screening_decision",
+          "at": "2026-08-23T17:33:46.602Z",
+          "actor_ids": [
+            "oa-sources-13-20260823-ar1",
+            "oa-sources-13-20260823-ar2"
+          ],
+          "body": {
+            "categories": {
+              "AI_Literacies": 2,
+              "KI_Sonstige": 2,
+              "Bias_Ungleichheit": 2,
+              "Gender": 1,
+              "Fairness": 2
+            },
+            "decision": "Include",
+            "override": false,
+            "reason": null,
+            "override_reason": null,
+            "evidence": {
+              "AI_Literacies": [
+                {
+                  "term": "algorithmic literacy",
+                  "snippet": "algorithmic literacy",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "KI_Sonstige": [
+                {
+                  "term": "machine-learning algorithms",
+                  "snippet": "machine-learning algorithms",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "Bias_Ungleichheit": [
+                {
+                  "term": "algorithmic systems can inherit biases embedded in previous decisions",
+                  "snippet": "algorithmic systems can inherit biases embedded in previous decisions",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "Gender": [
+                {
+                  "term": "fewer women than men were shown ads about STEM careers",
+                  "snippet": "fewer women than men were shown ads about STEM careers",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "Fairness": [
+                {
+                  "term": "a fair and democratic roll-out of algorithmic management",
+                  "snippet": "a fair and democratic roll-out of algorithmic management",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ]
+            },
+            "analysis": {
+              "fields": {
+                "AN_Prompting_Role": [
+                  "None"
+                ],
+                "AN_Prompt_Techniques": [
+                  "None"
+                ],
+                "AN_Bias_Axes": [
+                  "Gender"
+                ],
+                "AN_Harm_Types": [
+                  "Direct_Discrimination",
+                  "Exclusionary_Norms"
+                ],
+                "AN_Mitigation_Stage": [
+                  "Organisational_Process"
+                ],
+                "AN_Mitigation_Status": "Proposed",
+                "AN_Population": [
+                  "Not_SW_Specific"
+                ],
+                "AN_Coding_Basis": "Fulltext",
+                "AN_Notes": "Theoretische soziotechnische Einordnung algorithmischen Managements in Arbeitskontexten.",
+                "Studientyp": "Theoretisch"
+              },
+              "undecidable": {}
+            },
+            "text_source": "raw",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "reviewer": "ar2",
+            "actor": "agent"
+          }
+        }
+      ],
+      "active_annotation_id": "ar2:4ZL5Q48E",
+      "checks": [],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "curated_corpus_snapshot",
+          "at": "2026-08-23T17:33:46.602Z",
+          "actor_ids": [
+            "curation-provenance-unrecorded"
+          ]
+        },
+        "state": "ai-agent-reviewed",
+        "events": [
+          {
+            "event_id": "4ZL5Q48E:agent-annotation",
+            "event_type": "agent_annotation",
+            "from": "curated",
+            "to": "agent-annotated",
+            "at": "2026-08-23T17:33:46.602Z",
+            "activity_id": "4ZL5Q48E:agent-annotation",
+            "actor_ids": [
+              "oa-sources-13-20260823-ar1",
+              "oa-sources-13-20260823-ar2"
+            ],
+            "result": "completed",
+            "annotation_id": "ar2:4ZL5Q48E"
+          },
+          {
+            "event_id": "4ZL5Q48E:ai-agent-review",
+            "event_type": "ai_agent_review",
+            "from": "agent-annotated",
+            "to": "ai-agent-reviewed",
+            "at": "2026-08-23T17:33:46.602Z",
+            "activity_id": "4ZL5Q48E:ai-agent-review",
+            "actor_ids": [
+              "codex-ai-agent-review"
+            ],
+            "result": "accepted",
+            "annotation_id": "ar2:4ZL5Q48E"
+          }
+        ]
+      }
+    },
+    "7FEFMCBZ": {
+      "categories": {
+        "KI_Sonstige": 2,
+        "Soziale_Arbeit": 2,
+        "Bias_Ungleichheit": 2,
+        "Diversitaet": 1,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "KI_Sonstige": [
+          {
+            "term": "machine learning to estimate risk",
+            "snippet": "machine learning to estimate risk",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Soziale_Arbeit": [
+          {
+            "term": "child welfare call screen workers",
+            "snippet": "child welfare call screen workers",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "reduced the disparity in screen-in rate between Black and white children",
+            "snippet": "reduced the disparity in screen-in rate between Black and white children",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "increase diversity among the child welfare workers",
+            "snippet": "increase diversity among the child welfare workers",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "algorithmic fairness",
+            "snippet": "algorithmic fairness",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ]
+      },
+      "ts": "2026-08-23T17:33:46.602Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Race_Ethnicity"
+          ],
+          "AN_Harm_Types": [
+            "Disparate_Performance"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Child_Family_Welfare"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "Empirische Mixed-Methods-Studie zur Zusammenarbeit von Fachkräften und Risikoalgorithmus im Kinderschutz.",
+          "Studientyp": "Empirisch"
+        },
+        "undecidable": {}
+      },
+      "work_id": "doi:10.1145/3491102.3501831",
+      "representative_record_id": "7FEFMCBZ",
+      "provenance": {
+        "annotation_id": "ar2:7FEFMCBZ",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "curation-provenance-unrecorded",
+            "type": "person",
+            "roles": [
+              "curation"
+            ],
+            "identity": {
+              "status": "legacy_gap",
+              "value": "unrecorded"
+            }
+          },
+          {
+            "id": "oa-sources-13-20260823-ar1",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "oa-sources-13-20260823-ar2",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codex-ai-agent-review",
+            "type": "ai_agent",
+            "roles": [
+              "ai_agent_reviewer"
+            ],
+            "identity": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            }
+          }
+        ],
+        "activities": [
+          {
+            "id": "7FEFMCBZ:agent-annotation",
+            "type": "screening",
+            "run_id": "oa-sources-13-20260823",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.1.md",
+              "version": "1.1",
+              "sha256": "31b5741719d813848622351efab184c420f9f9bc0771f52dff2d5feb15609acb"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            },
+            "associated_actor_ids": [
+              "oa-sources-13-20260823-ar1",
+              "oa-sources-13-20260823-ar2"
+            ]
+          },
+          {
+            "id": "7FEFMCBZ:ai-agent-review",
+            "type": "ai_agent_review",
+            "run_id": "oa-sources-13-20260823",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.1.md",
+              "version": "1.1",
+              "sha256": "31b5741719d813848622351efab184c420f9f9bc0771f52dff2d5feb15609acb"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            },
+            "associated_actor_ids": [
+              "codex-ai-agent-review"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:7FEFMCBZ",
+            "type": "paper",
+            "reference": "docs/data/fulltext/7FEFMCBZ.md",
+            "sha256": "de16bedf403143d41f37bcd19af189018e049126bba32c148277976ef2ee828f"
+          }
+        ],
+        "derived_from": [
+          {
+            "id": "ai-agent-review",
+            "type": "ai_agent_review",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/ai-agent-review.json"
+          },
+          {
+            "id": "run-manifest",
+            "type": "run_manifest",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/run.json"
+          },
+          {
+            "id": "track:ar1",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar1.json"
+          },
+          {
+            "id": "track:ar2",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar2.json"
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "annotation_id": "ar2:7FEFMCBZ",
+          "annotation_type": "screening_decision",
+          "at": "2026-08-23T17:33:46.602Z",
+          "actor_ids": [
+            "oa-sources-13-20260823-ar1",
+            "oa-sources-13-20260823-ar2"
+          ],
+          "body": {
+            "categories": {
+              "KI_Sonstige": 2,
+              "Soziale_Arbeit": 2,
+              "Bias_Ungleichheit": 2,
+              "Diversitaet": 1,
+              "Fairness": 2
+            },
+            "decision": "Include",
+            "override": false,
+            "reason": null,
+            "override_reason": null,
+            "evidence": {
+              "KI_Sonstige": [
+                {
+                  "term": "machine learning to estimate risk",
+                  "snippet": "machine learning to estimate risk",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "Soziale_Arbeit": [
+                {
+                  "term": "child welfare call screen workers",
+                  "snippet": "child welfare call screen workers",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "Bias_Ungleichheit": [
+                {
+                  "term": "reduced the disparity in screen-in rate between Black and white children",
+                  "snippet": "reduced the disparity in screen-in rate between Black and white children",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "Diversitaet": [
+                {
+                  "term": "increase diversity among the child welfare workers",
+                  "snippet": "increase diversity among the child welfare workers",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "Fairness": [
+                {
+                  "term": "algorithmic fairness",
+                  "snippet": "algorithmic fairness",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ]
+            },
+            "analysis": {
+              "fields": {
+                "AN_Prompting_Role": [
+                  "None"
+                ],
+                "AN_Prompt_Techniques": [
+                  "None"
+                ],
+                "AN_Bias_Axes": [
+                  "Race_Ethnicity"
+                ],
+                "AN_Harm_Types": [
+                  "Disparate_Performance"
+                ],
+                "AN_Mitigation_Stage": [
+                  "Organisational_Process"
+                ],
+                "AN_Mitigation_Status": "Evaluated",
+                "AN_Population": [
+                  "Child_Family_Welfare"
+                ],
+                "AN_Coding_Basis": "Fulltext",
+                "AN_Notes": "Empirische Mixed-Methods-Studie zur Zusammenarbeit von Fachkräften und Risikoalgorithmus im Kinderschutz.",
+                "Studientyp": "Empirisch"
+              },
+              "undecidable": {}
+            },
+            "text_source": "raw",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "reviewer": "ar2",
+            "actor": "agent"
+          }
+        }
+      ],
+      "active_annotation_id": "ar2:7FEFMCBZ",
+      "checks": [],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "curated_corpus_snapshot",
+          "at": "2026-08-23T17:33:46.602Z",
+          "actor_ids": [
+            "curation-provenance-unrecorded"
+          ]
+        },
+        "state": "ai-agent-reviewed",
+        "events": [
+          {
+            "event_id": "7FEFMCBZ:agent-annotation",
+            "event_type": "agent_annotation",
+            "from": "curated",
+            "to": "agent-annotated",
+            "at": "2026-08-23T17:33:46.602Z",
+            "activity_id": "7FEFMCBZ:agent-annotation",
+            "actor_ids": [
+              "oa-sources-13-20260823-ar1",
+              "oa-sources-13-20260823-ar2"
+            ],
+            "result": "completed",
+            "annotation_id": "ar2:7FEFMCBZ"
+          },
+          {
+            "event_id": "7FEFMCBZ:ai-agent-review",
+            "event_type": "ai_agent_review",
+            "from": "agent-annotated",
+            "to": "ai-agent-reviewed",
+            "at": "2026-08-23T17:33:46.602Z",
+            "activity_id": "7FEFMCBZ:ai-agent-review",
+            "actor_ids": [
+              "codex-ai-agent-review"
+            ],
+            "result": "accepted",
+            "annotation_id": "ar2:7FEFMCBZ"
+          }
+        ]
+      }
+    },
+    "A2P8MXMY": {
+      "categories": {
+        "KI_Sonstige": 2,
+        "Soziale_Arbeit": 2,
+        "Bias_Ungleichheit": 2,
+        "Diversitaet": 1,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "KI_Sonstige": [
+          {
+            "term": "Algorithmic tools are increasingly used in child protection decision-making.",
+            "snippet": "Algorithmic tools are increasingly used in child protection decision-making.",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Soziale_Arbeit": [
+          {
+            "term": "many social workers practice",
+            "snippet": "many social workers practice",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "inequalities and biases",
+            "snippet": "inequalities and biases",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "social inequalities, marginalisation, and lack of power",
+            "snippet": "social inequalities, marginalisation, and lack of power",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "The concept of fairness has multiple definitions",
+            "snippet": "The concept of fairness has multiple definitions",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ]
+      },
+      "ts": "2026-08-23T17:33:46.602Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Race_Ethnicity",
+            "Socioeconomic",
+            "Intersectional"
+          ],
+          "AN_Harm_Types": [
+            "Disparate_Performance",
+            "Exclusionary_Norms",
+            "Direct_Discrimination",
+            "Indirect_Discrimination",
+            "Misrepresentation"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process",
+            "Pre_Processing"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Child_Family_Welfare",
+            "General_Social_Work"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "Kritische theoretische Analyse algorithmischer Entscheidungen, Daten und Gerechtigkeit im Kinderschutz.",
+          "Studientyp": "Theoretisch"
+        },
+        "undecidable": {}
+      },
+      "work_id": "doi:10.3390/socsci8100281",
+      "representative_record_id": "A2P8MXMY",
+      "provenance": {
+        "annotation_id": "ar2:A2P8MXMY",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "curation-provenance-unrecorded",
+            "type": "person",
+            "roles": [
+              "curation"
+            ],
+            "identity": {
+              "status": "legacy_gap",
+              "value": "unrecorded"
+            }
+          },
+          {
+            "id": "oa-sources-13-20260823-ar1",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "oa-sources-13-20260823-ar2",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codex-ai-agent-review",
+            "type": "ai_agent",
+            "roles": [
+              "ai_agent_reviewer"
+            ],
+            "identity": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            }
+          }
+        ],
+        "activities": [
+          {
+            "id": "A2P8MXMY:agent-annotation",
+            "type": "screening",
+            "run_id": "oa-sources-13-20260823",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.1.md",
+              "version": "1.1",
+              "sha256": "31b5741719d813848622351efab184c420f9f9bc0771f52dff2d5feb15609acb"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            },
+            "associated_actor_ids": [
+              "oa-sources-13-20260823-ar1",
+              "oa-sources-13-20260823-ar2"
+            ]
+          },
+          {
+            "id": "A2P8MXMY:ai-agent-review",
+            "type": "ai_agent_review",
+            "run_id": "oa-sources-13-20260823",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.1.md",
+              "version": "1.1",
+              "sha256": "31b5741719d813848622351efab184c420f9f9bc0771f52dff2d5feb15609acb"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            },
+            "associated_actor_ids": [
+              "codex-ai-agent-review"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:A2P8MXMY",
+            "type": "paper",
+            "reference": "docs/data/fulltext/A2P8MXMY.md",
+            "sha256": "6441bd19785f939ca020aa1d0aa2c8ac2d21c55bcd44d7c29601fa543367d6b3"
+          }
+        ],
+        "derived_from": [
+          {
+            "id": "ai-agent-review",
+            "type": "ai_agent_review",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/ai-agent-review.json"
+          },
+          {
+            "id": "run-manifest",
+            "type": "run_manifest",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/run.json"
+          },
+          {
+            "id": "track:ar1",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar1.json"
+          },
+          {
+            "id": "track:ar2",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar2.json"
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "annotation_id": "ar2:A2P8MXMY",
+          "annotation_type": "screening_decision",
+          "at": "2026-08-23T17:33:46.602Z",
+          "actor_ids": [
+            "oa-sources-13-20260823-ar1",
+            "oa-sources-13-20260823-ar2"
+          ],
+          "body": {
+            "categories": {
+              "KI_Sonstige": 2,
+              "Soziale_Arbeit": 2,
+              "Bias_Ungleichheit": 2,
+              "Diversitaet": 1,
+              "Fairness": 2
+            },
+            "decision": "Include",
+            "override": false,
+            "reason": null,
+            "override_reason": null,
+            "evidence": {
+              "KI_Sonstige": [
+                {
+                  "term": "Algorithmic tools are increasingly used in child protection decision-making.",
+                  "snippet": "Algorithmic tools are increasingly used in child protection decision-making.",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "Soziale_Arbeit": [
+                {
+                  "term": "many social workers practice",
+                  "snippet": "many social workers practice",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "Bias_Ungleichheit": [
+                {
+                  "term": "inequalities and biases",
+                  "snippet": "inequalities and biases",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "Diversitaet": [
+                {
+                  "term": "social inequalities, marginalisation, and lack of power",
+                  "snippet": "social inequalities, marginalisation, and lack of power",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "Fairness": [
+                {
+                  "term": "The concept of fairness has multiple definitions",
+                  "snippet": "The concept of fairness has multiple definitions",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ]
+            },
+            "analysis": {
+              "fields": {
+                "AN_Prompting_Role": [
+                  "None"
+                ],
+                "AN_Prompt_Techniques": [
+                  "None"
+                ],
+                "AN_Bias_Axes": [
+                  "Race_Ethnicity",
+                  "Socioeconomic",
+                  "Intersectional"
+                ],
+                "AN_Harm_Types": [
+                  "Disparate_Performance",
+                  "Exclusionary_Norms",
+                  "Direct_Discrimination",
+                  "Indirect_Discrimination",
+                  "Misrepresentation"
+                ],
+                "AN_Mitigation_Stage": [
+                  "Organisational_Process",
+                  "Pre_Processing"
+                ],
+                "AN_Mitigation_Status": "Proposed",
+                "AN_Population": [
+                  "Child_Family_Welfare",
+                  "General_Social_Work"
+                ],
+                "AN_Coding_Basis": "Fulltext",
+                "AN_Notes": "Kritische theoretische Analyse algorithmischer Entscheidungen, Daten und Gerechtigkeit im Kinderschutz.",
+                "Studientyp": "Theoretisch"
+              },
+              "undecidable": {}
+            },
+            "text_source": "raw",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "reviewer": "ar2",
+            "actor": "agent"
+          }
+        }
+      ],
+      "active_annotation_id": "ar2:A2P8MXMY",
+      "checks": [],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "curated_corpus_snapshot",
+          "at": "2026-08-23T17:33:46.602Z",
+          "actor_ids": [
+            "curation-provenance-unrecorded"
+          ]
+        },
+        "state": "ai-agent-reviewed",
+        "events": [
+          {
+            "event_id": "A2P8MXMY:agent-annotation",
+            "event_type": "agent_annotation",
+            "from": "curated",
+            "to": "agent-annotated",
+            "at": "2026-08-23T17:33:46.602Z",
+            "activity_id": "A2P8MXMY:agent-annotation",
+            "actor_ids": [
+              "oa-sources-13-20260823-ar1",
+              "oa-sources-13-20260823-ar2"
+            ],
+            "result": "completed",
+            "annotation_id": "ar2:A2P8MXMY"
+          },
+          {
+            "event_id": "A2P8MXMY:ai-agent-review",
+            "event_type": "ai_agent_review",
+            "from": "agent-annotated",
+            "to": "ai-agent-reviewed",
+            "at": "2026-08-23T17:33:46.602Z",
+            "activity_id": "A2P8MXMY:ai-agent-review",
+            "actor_ids": [
+              "codex-ai-agent-review"
+            ],
+            "result": "accepted",
+            "annotation_id": "ar2:A2P8MXMY"
+          }
+        ]
+      }
+    },
+    "BDI6XU5A": {
+      "categories": {
+        "AI_Literacies": 2,
+        "KI_Sonstige": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Diversitaet": 1,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "Selbsteinschätzung der Kompetenz bezüglich KI",
+            "snippet": "Selbsteinschätzung der Kompetenz bezüglich KI",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "Gender und KI-Anwendungen",
+            "snippet": "Gender und KI-Anwendungen",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Gefahr der (Geschlechter)Diskriminierung durch KI",
+            "snippet": "Gefahr der (Geschlechter)Diskriminierung durch KI",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "genderrelevanten Aspekten bei der Wahrnehmung, Bewertung, Entwicklung und dem Ei",
+            "snippet": "genderrelevanten Aspekten bei der Wahrnehmung, Bewertung, Entwicklung und dem Einsatz von KI",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "Menschen mit diversen Hintergründen",
+            "snippet": "Menschen mit diversen Hintergründen",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "für gerechtere Systeme sorgen",
+            "snippet": "für gerechtere Systeme sorgen",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ]
+      },
+      "ts": "2026-08-23T17:33:46.602Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Gender"
+          ],
+          "AN_Harm_Types": [
+            "Stereotyping",
+            "Direct_Discrimination",
+            "Indirect_Discrimination"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process",
+            "Post_Processing"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "Empirischer Forschungsbericht zu KI-Kompetenz, Geschlechterdifferenzen und Diskriminierungsrisiken.",
+          "Studientyp": "Empirisch"
+        },
+        "undecidable": {}
+      },
+      "work_id": "record:BDI6XU5A",
+      "representative_record_id": "BDI6XU5A",
+      "provenance": {
+        "annotation_id": "ar2:BDI6XU5A",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "curation-provenance-unrecorded",
+            "type": "person",
+            "roles": [
+              "curation"
+            ],
+            "identity": {
+              "status": "legacy_gap",
+              "value": "unrecorded"
+            }
+          },
+          {
+            "id": "oa-sources-13-20260823-ar1",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "oa-sources-13-20260823-ar2",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codex-ai-agent-review",
+            "type": "ai_agent",
+            "roles": [
+              "ai_agent_reviewer"
+            ],
+            "identity": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            }
+          }
+        ],
+        "activities": [
+          {
+            "id": "BDI6XU5A:agent-annotation",
+            "type": "screening",
+            "run_id": "oa-sources-13-20260823",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.1.md",
+              "version": "1.1",
+              "sha256": "31b5741719d813848622351efab184c420f9f9bc0771f52dff2d5feb15609acb"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            },
+            "associated_actor_ids": [
+              "oa-sources-13-20260823-ar1",
+              "oa-sources-13-20260823-ar2"
+            ]
+          },
+          {
+            "id": "BDI6XU5A:ai-agent-review",
+            "type": "ai_agent_review",
+            "run_id": "oa-sources-13-20260823",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.1.md",
+              "version": "1.1",
+              "sha256": "31b5741719d813848622351efab184c420f9f9bc0771f52dff2d5feb15609acb"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            },
+            "associated_actor_ids": [
+              "codex-ai-agent-review"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:BDI6XU5A",
+            "type": "paper",
+            "reference": "docs/data/fulltext/BDI6XU5A.md",
+            "sha256": "1aa57614a5d30b608006dde1d2da7c7cb49f2c27324bd4726ebb370487b47e74"
+          }
+        ],
+        "derived_from": [
+          {
+            "id": "ai-agent-review",
+            "type": "ai_agent_review",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/ai-agent-review.json"
+          },
+          {
+            "id": "run-manifest",
+            "type": "run_manifest",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/run.json"
+          },
+          {
+            "id": "track:ar1",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar1.json"
+          },
+          {
+            "id": "track:ar2",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar2.json"
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "annotation_id": "ar2:BDI6XU5A",
+          "annotation_type": "screening_decision",
+          "at": "2026-08-23T17:33:46.602Z",
+          "actor_ids": [
+            "oa-sources-13-20260823-ar1",
+            "oa-sources-13-20260823-ar2"
+          ],
+          "body": {
+            "categories": {
+              "AI_Literacies": 2,
+              "KI_Sonstige": 2,
+              "Bias_Ungleichheit": 2,
+              "Gender": 2,
+              "Diversitaet": 1,
+              "Fairness": 2
+            },
+            "decision": "Include",
+            "override": false,
+            "reason": null,
+            "override_reason": null,
+            "evidence": {
+              "AI_Literacies": [
+                {
+                  "term": "Selbsteinschätzung der Kompetenz bezüglich KI",
+                  "snippet": "Selbsteinschätzung der Kompetenz bezüglich KI",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "KI_Sonstige": [
+                {
+                  "term": "Gender und KI-Anwendungen",
+                  "snippet": "Gender und KI-Anwendungen",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "Bias_Ungleichheit": [
+                {
+                  "term": "Gefahr der (Geschlechter)Diskriminierung durch KI",
+                  "snippet": "Gefahr der (Geschlechter)Diskriminierung durch KI",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "Gender": [
+                {
+                  "term": "genderrelevanten Aspekten bei der Wahrnehmung, Bewertung, Entwicklung und dem Ei",
+                  "snippet": "genderrelevanten Aspekten bei der Wahrnehmung, Bewertung, Entwicklung und dem Einsatz von KI",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "Diversitaet": [
+                {
+                  "term": "Menschen mit diversen Hintergründen",
+                  "snippet": "Menschen mit diversen Hintergründen",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "Fairness": [
+                {
+                  "term": "für gerechtere Systeme sorgen",
+                  "snippet": "für gerechtere Systeme sorgen",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ]
+            },
+            "analysis": {
+              "fields": {
+                "AN_Prompting_Role": [
+                  "None"
+                ],
+                "AN_Prompt_Techniques": [
+                  "None"
+                ],
+                "AN_Bias_Axes": [
+                  "Gender"
+                ],
+                "AN_Harm_Types": [
+                  "Stereotyping",
+                  "Direct_Discrimination",
+                  "Indirect_Discrimination"
+                ],
+                "AN_Mitigation_Stage": [
+                  "Organisational_Process",
+                  "Post_Processing"
+                ],
+                "AN_Mitigation_Status": "Evaluated",
+                "AN_Population": [
+                  "Not_SW_Specific"
+                ],
+                "AN_Coding_Basis": "Fulltext",
+                "AN_Notes": "Empirischer Forschungsbericht zu KI-Kompetenz, Geschlechterdifferenzen und Diskriminierungsrisiken.",
+                "Studientyp": "Empirisch"
+              },
+              "undecidable": {}
+            },
+            "text_source": "raw",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "reviewer": "ar2",
+            "actor": "agent"
+          }
+        }
+      ],
+      "active_annotation_id": "ar2:BDI6XU5A",
+      "checks": [],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "curated_corpus_snapshot",
+          "at": "2026-08-23T17:33:46.602Z",
+          "actor_ids": [
+            "curation-provenance-unrecorded"
+          ]
+        },
+        "state": "ai-agent-reviewed",
+        "events": [
+          {
+            "event_id": "BDI6XU5A:agent-annotation",
+            "event_type": "agent_annotation",
+            "from": "curated",
+            "to": "agent-annotated",
+            "at": "2026-08-23T17:33:46.602Z",
+            "activity_id": "BDI6XU5A:agent-annotation",
+            "actor_ids": [
+              "oa-sources-13-20260823-ar1",
+              "oa-sources-13-20260823-ar2"
+            ],
+            "result": "completed",
+            "annotation_id": "ar2:BDI6XU5A"
+          },
+          {
+            "event_id": "BDI6XU5A:ai-agent-review",
+            "event_type": "ai_agent_review",
+            "from": "agent-annotated",
+            "to": "ai-agent-reviewed",
+            "at": "2026-08-23T17:33:46.602Z",
+            "activity_id": "BDI6XU5A:ai-agent-review",
+            "actor_ids": [
+              "codex-ai-agent-review"
+            ],
+            "result": "accepted",
+            "annotation_id": "ar2:BDI6XU5A"
+          }
+        ]
+      }
+    },
+    "BHXDU7VM": {
+      "categories": {
+        "Generative_KI": 2,
+        "Prompting": 2,
+        "Gender": 2,
+        "Diversitaet": 1
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "generative AI",
+            "snippet": "generative AI",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "Each taxonomy is defined in a prompt passed to an LLM",
+            "snippet": "Each taxonomy is defined in a prompt passed to an LLM",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "the gender gap in ChatGPT usage has likely narrowed considerably",
+            "snippet": "the gender gap in ChatGPT usage has likely narrowed considerably",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "demographic variation in ChatGPT usage",
+            "snippet": "demographic variation in ChatGPT usage",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ]
+      },
+      "ts": "2026-08-23T17:33:46.602Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Research_Instrument"
+          ],
+          "AN_Prompt_Techniques": [
+            "General_Guidance"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Age",
+            "Socioeconomic",
+            "Nationality_Migration"
+          ],
+          "AN_Harm_Types": [
+            "None"
+          ],
+          "AN_Mitigation_Stage": [
+            "None"
+          ],
+          "AN_Mitigation_Status": "None",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "Empirische Studie zu globaler ChatGPT-Nutzung und demografischen Unterschieden; keine Mitigationsintervention.",
+          "Studientyp": "Empirisch"
+        },
+        "undecidable": {}
+      },
+      "work_id": "record:BHXDU7VM",
+      "representative_record_id": "BHXDU7VM",
+      "provenance": {
+        "annotation_id": "ar2:BHXDU7VM",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "curation-provenance-unrecorded",
+            "type": "person",
+            "roles": [
+              "curation"
+            ],
+            "identity": {
+              "status": "legacy_gap",
+              "value": "unrecorded"
+            }
+          },
+          {
+            "id": "oa-sources-13-20260823-ar1",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "oa-sources-13-20260823-ar2",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codex-ai-agent-review",
+            "type": "ai_agent",
+            "roles": [
+              "ai_agent_reviewer"
+            ],
+            "identity": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            }
+          }
+        ],
+        "activities": [
+          {
+            "id": "BHXDU7VM:agent-annotation",
+            "type": "screening",
+            "run_id": "oa-sources-13-20260823",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.1.md",
+              "version": "1.1",
+              "sha256": "31b5741719d813848622351efab184c420f9f9bc0771f52dff2d5feb15609acb"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            },
+            "associated_actor_ids": [
+              "oa-sources-13-20260823-ar1",
+              "oa-sources-13-20260823-ar2"
+            ]
+          },
+          {
+            "id": "BHXDU7VM:ai-agent-review",
+            "type": "ai_agent_review",
+            "run_id": "oa-sources-13-20260823",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.1.md",
+              "version": "1.1",
+              "sha256": "31b5741719d813848622351efab184c420f9f9bc0771f52dff2d5feb15609acb"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            },
+            "associated_actor_ids": [
+              "codex-ai-agent-review"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:BHXDU7VM",
+            "type": "paper",
+            "reference": "docs/data/fulltext/BHXDU7VM.md",
+            "sha256": "3d4c7eebcc7eede980a7a9e64003ba8df9dcb3ce98afcac0a03773915ab14668"
+          }
+        ],
+        "derived_from": [
+          {
+            "id": "ai-agent-review",
+            "type": "ai_agent_review",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/ai-agent-review.json"
+          },
+          {
+            "id": "run-manifest",
+            "type": "run_manifest",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/run.json"
+          },
+          {
+            "id": "track:ar1",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar1.json"
+          },
+          {
+            "id": "track:ar2",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar2.json"
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "annotation_id": "ar2:BHXDU7VM",
+          "annotation_type": "screening_decision",
+          "at": "2026-08-23T17:33:46.602Z",
+          "actor_ids": [
+            "oa-sources-13-20260823-ar1",
+            "oa-sources-13-20260823-ar2"
+          ],
+          "body": {
+            "categories": {
+              "Generative_KI": 2,
+              "Prompting": 2,
+              "Gender": 2,
+              "Diversitaet": 1
+            },
+            "decision": "Include",
+            "override": false,
+            "reason": null,
+            "override_reason": null,
+            "evidence": {
+              "Generative_KI": [
+                {
+                  "term": "generative AI",
+                  "snippet": "generative AI",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "Prompting": [
+                {
+                  "term": "Each taxonomy is defined in a prompt passed to an LLM",
+                  "snippet": "Each taxonomy is defined in a prompt passed to an LLM",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "Gender": [
+                {
+                  "term": "the gender gap in ChatGPT usage has likely narrowed considerably",
+                  "snippet": "the gender gap in ChatGPT usage has likely narrowed considerably",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "Diversitaet": [
+                {
+                  "term": "demographic variation in ChatGPT usage",
+                  "snippet": "demographic variation in ChatGPT usage",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ]
+            },
+            "analysis": {
+              "fields": {
+                "AN_Prompting_Role": [
+                  "Research_Instrument"
+                ],
+                "AN_Prompt_Techniques": [
+                  "General_Guidance"
+                ],
+                "AN_Bias_Axes": [
+                  "Gender",
+                  "Age",
+                  "Socioeconomic",
+                  "Nationality_Migration"
+                ],
+                "AN_Harm_Types": [
+                  "None"
+                ],
+                "AN_Mitigation_Stage": [
+                  "None"
+                ],
+                "AN_Mitigation_Status": "None",
+                "AN_Population": [
+                  "Not_SW_Specific"
+                ],
+                "AN_Coding_Basis": "Fulltext",
+                "AN_Notes": "Empirische Studie zu globaler ChatGPT-Nutzung und demografischen Unterschieden; keine Mitigationsintervention.",
+                "Studientyp": "Empirisch"
+              },
+              "undecidable": {}
+            },
+            "text_source": "raw",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "reviewer": "ar2",
+            "actor": "agent"
+          }
+        }
+      ],
+      "active_annotation_id": "ar2:BHXDU7VM",
+      "checks": [],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "curated_corpus_snapshot",
+          "at": "2026-08-23T17:33:46.602Z",
+          "actor_ids": [
+            "curation-provenance-unrecorded"
+          ]
+        },
+        "state": "ai-agent-reviewed",
+        "events": [
+          {
+            "event_id": "BHXDU7VM:agent-annotation",
+            "event_type": "agent_annotation",
+            "from": "curated",
+            "to": "agent-annotated",
+            "at": "2026-08-23T17:33:46.602Z",
+            "activity_id": "BHXDU7VM:agent-annotation",
+            "actor_ids": [
+              "oa-sources-13-20260823-ar1",
+              "oa-sources-13-20260823-ar2"
+            ],
+            "result": "completed",
+            "annotation_id": "ar2:BHXDU7VM"
+          },
+          {
+            "event_id": "BHXDU7VM:ai-agent-review",
+            "event_type": "ai_agent_review",
+            "from": "agent-annotated",
+            "to": "ai-agent-reviewed",
+            "at": "2026-08-23T17:33:46.602Z",
+            "activity_id": "BHXDU7VM:ai-agent-review",
+            "actor_ids": [
+              "codex-ai-agent-review"
+            ],
+            "result": "accepted",
+            "annotation_id": "ar2:BHXDU7VM"
+          }
+        ]
+      }
+    },
+    "FTJM5R8N": {
+      "categories": {
+        "Generative_KI": 2
+      },
+      "decision": "Exclude",
+      "override": false,
+      "reason": "Wrong_publication_type",
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "We use Qwen/Qwen3-235B-A22B-Instruct-2507 and sample 1000 completions at tempera",
+            "snippet": "We use Qwen/Qwen3-235B-A22B-Instruct-2507 and sample 1000 completions at temperature 0",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ]
+      },
+      "ts": "2026-08-23T17:33:46.602Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "record:FTJM5R8N",
+      "representative_record_id": "FTJM5R8N",
+      "provenance": {
+        "annotation_id": "ar2:FTJM5R8N",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "curation-provenance-unrecorded",
+            "type": "person",
+            "roles": [
+              "curation"
+            ],
+            "identity": {
+              "status": "legacy_gap",
+              "value": "unrecorded"
+            }
+          },
+          {
+            "id": "oa-sources-13-20260823-ar1",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "oa-sources-13-20260823-ar2",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codex-ai-agent-review",
+            "type": "ai_agent",
+            "roles": [
+              "ai_agent_reviewer"
+            ],
+            "identity": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            }
+          }
+        ],
+        "activities": [
+          {
+            "id": "FTJM5R8N:agent-annotation",
+            "type": "screening",
+            "run_id": "oa-sources-13-20260823",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.1.md",
+              "version": "1.1",
+              "sha256": "31b5741719d813848622351efab184c420f9f9bc0771f52dff2d5feb15609acb"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            },
+            "associated_actor_ids": [
+              "oa-sources-13-20260823-ar1",
+              "oa-sources-13-20260823-ar2"
+            ]
+          },
+          {
+            "id": "FTJM5R8N:ai-agent-review",
+            "type": "ai_agent_review",
+            "run_id": "oa-sources-13-20260823",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.1.md",
+              "version": "1.1",
+              "sha256": "31b5741719d813848622351efab184c420f9f9bc0771f52dff2d5feb15609acb"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            },
+            "associated_actor_ids": [
+              "codex-ai-agent-review"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:FTJM5R8N",
+            "type": "paper",
+            "reference": "docs/data/fulltext/FTJM5R8N.md",
+            "sha256": "92cbd69cb6ef71c5932014d1656d5e35b85db1a576a863346091c7a5c45ba55f"
+          }
+        ],
+        "derived_from": [
+          {
+            "id": "ai-agent-review",
+            "type": "ai_agent_review",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/ai-agent-review.json"
+          },
+          {
+            "id": "run-manifest",
+            "type": "run_manifest",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/run.json"
+          },
+          {
+            "id": "track:ar1",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar1.json"
+          },
+          {
+            "id": "track:ar2",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar2.json"
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "annotation_id": "ar2:FTJM5R8N",
+          "annotation_type": "screening_decision",
+          "at": "2026-08-23T17:33:46.602Z",
+          "actor_ids": [
+            "oa-sources-13-20260823-ar1",
+            "oa-sources-13-20260823-ar2"
+          ],
+          "body": {
+            "categories": {
+              "Generative_KI": 2
+            },
+            "decision": "Exclude",
+            "override": false,
+            "reason": "Wrong_publication_type",
+            "override_reason": null,
+            "evidence": {
+              "Generative_KI": [
+                {
+                  "term": "We use Qwen/Qwen3-235B-A22B-Instruct-2507 and sample 1000 completions at tempera",
+                  "snippet": "We use Qwen/Qwen3-235B-A22B-Instruct-2507 and sample 1000 completions at temperature 0",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ]
+            },
+            "text_source": "raw",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "reviewer": "ar2",
+            "actor": "agent"
+          }
+        }
+      ],
+      "active_annotation_id": "ar2:FTJM5R8N",
+      "checks": [],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "curated_corpus_snapshot",
+          "at": "2026-08-23T17:33:46.602Z",
+          "actor_ids": [
+            "curation-provenance-unrecorded"
+          ]
+        },
+        "state": "ai-agent-reviewed",
+        "events": [
+          {
+            "event_id": "FTJM5R8N:agent-annotation",
+            "event_type": "agent_annotation",
+            "from": "curated",
+            "to": "agent-annotated",
+            "at": "2026-08-23T17:33:46.602Z",
+            "activity_id": "FTJM5R8N:agent-annotation",
+            "actor_ids": [
+              "oa-sources-13-20260823-ar1",
+              "oa-sources-13-20260823-ar2"
+            ],
+            "result": "completed",
+            "annotation_id": "ar2:FTJM5R8N"
+          },
+          {
+            "event_id": "FTJM5R8N:ai-agent-review",
+            "event_type": "ai_agent_review",
+            "from": "agent-annotated",
+            "to": "ai-agent-reviewed",
+            "at": "2026-08-23T17:33:46.602Z",
+            "activity_id": "FTJM5R8N:ai-agent-review",
+            "actor_ids": [
+              "codex-ai-agent-review"
+            ],
+            "result": "accepted",
+            "annotation_id": "ar2:FTJM5R8N"
+          }
+        ]
+      }
+    },
+    "J7V3AAQT": {
+      "categories": {
+        "Generative_KI": 2
+      },
+      "decision": "Exclude",
+      "override": false,
+      "reason": "Not_relevant_topic",
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "a generative dialogue platform that allows conversations regarding various emoti",
+            "snippet": "a generative dialogue platform that allows conversations regarding various emotional issues in an open-ended manner",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ]
+      },
+      "ts": "2026-08-23T17:33:46.602Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "doi:10.3389/fdgth.2023.1133987",
+      "representative_record_id": "J7V3AAQT",
+      "provenance": {
+        "annotation_id": "ar2:J7V3AAQT",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "curation-provenance-unrecorded",
+            "type": "person",
+            "roles": [
+              "curation"
+            ],
+            "identity": {
+              "status": "legacy_gap",
+              "value": "unrecorded"
+            }
+          },
+          {
+            "id": "oa-sources-13-20260823-ar1",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "oa-sources-13-20260823-ar2",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codex-ai-agent-review",
+            "type": "ai_agent",
+            "roles": [
+              "ai_agent_reviewer"
+            ],
+            "identity": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            }
+          }
+        ],
+        "activities": [
+          {
+            "id": "J7V3AAQT:agent-annotation",
+            "type": "screening",
+            "run_id": "oa-sources-13-20260823",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.1.md",
+              "version": "1.1",
+              "sha256": "31b5741719d813848622351efab184c420f9f9bc0771f52dff2d5feb15609acb"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            },
+            "associated_actor_ids": [
+              "oa-sources-13-20260823-ar1",
+              "oa-sources-13-20260823-ar2"
+            ]
+          },
+          {
+            "id": "J7V3AAQT:ai-agent-review",
+            "type": "ai_agent_review",
+            "run_id": "oa-sources-13-20260823",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.1.md",
+              "version": "1.1",
+              "sha256": "31b5741719d813848622351efab184c420f9f9bc0771f52dff2d5feb15609acb"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            },
+            "associated_actor_ids": [
+              "codex-ai-agent-review"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:J7V3AAQT",
+            "type": "paper",
+            "reference": "docs/data/fulltext/J7V3AAQT.md",
+            "sha256": "5b2c28e320dd95560f01adfb33b123d5049a4bb3106fb448335626f7958ff252"
+          }
+        ],
+        "derived_from": [
+          {
+            "id": "ai-agent-review",
+            "type": "ai_agent_review",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/ai-agent-review.json"
+          },
+          {
+            "id": "run-manifest",
+            "type": "run_manifest",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/run.json"
+          },
+          {
+            "id": "track:ar1",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar1.json"
+          },
+          {
+            "id": "track:ar2",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar2.json"
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "annotation_id": "ar2:J7V3AAQT",
+          "annotation_type": "screening_decision",
+          "at": "2026-08-23T17:33:46.602Z",
+          "actor_ids": [
+            "oa-sources-13-20260823-ar1",
+            "oa-sources-13-20260823-ar2"
+          ],
+          "body": {
+            "categories": {
+              "Generative_KI": 2
+            },
+            "decision": "Exclude",
+            "override": false,
+            "reason": "Not_relevant_topic",
+            "override_reason": null,
+            "evidence": {
+              "Generative_KI": [
+                {
+                  "term": "a generative dialogue platform that allows conversations regarding various emoti",
+                  "snippet": "a generative dialogue platform that allows conversations regarding various emotional issues in an open-ended manner",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ]
+            },
+            "text_source": "raw",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "reviewer": "ar2",
+            "actor": "agent"
+          }
+        }
+      ],
+      "active_annotation_id": "ar2:J7V3AAQT",
+      "checks": [],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "curated_corpus_snapshot",
+          "at": "2026-08-23T17:33:46.602Z",
+          "actor_ids": [
+            "curation-provenance-unrecorded"
+          ]
+        },
+        "state": "ai-agent-reviewed",
+        "events": [
+          {
+            "event_id": "J7V3AAQT:agent-annotation",
+            "event_type": "agent_annotation",
+            "from": "curated",
+            "to": "agent-annotated",
+            "at": "2026-08-23T17:33:46.602Z",
+            "activity_id": "J7V3AAQT:agent-annotation",
+            "actor_ids": [
+              "oa-sources-13-20260823-ar1",
+              "oa-sources-13-20260823-ar2"
+            ],
+            "result": "completed",
+            "annotation_id": "ar2:J7V3AAQT"
+          },
+          {
+            "event_id": "J7V3AAQT:ai-agent-review",
+            "event_type": "ai_agent_review",
+            "from": "agent-annotated",
+            "to": "ai-agent-reviewed",
+            "at": "2026-08-23T17:33:46.602Z",
+            "activity_id": "J7V3AAQT:ai-agent-review",
+            "actor_ids": [
+              "codex-ai-agent-review"
+            ],
+            "result": "accepted",
+            "annotation_id": "ar2:J7V3AAQT"
+          }
+        ]
+      }
+    },
+    "NSI6S5QE": {
+      "categories": {
+        "Soziale_Arbeit": 2,
+        "Diversitaet": 1
+      },
+      "decision": "Exclude",
+      "override": false,
+      "reason": "Not_relevant_topic",
+      "override_reason": null,
+      "evidence": {
+        "Soziale_Arbeit": [
+          {
+            "term": "Technology Standards in Social Work Practice",
+            "snippet": "Technology Standards in Social Work Practice",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "use of technology to meet the needs of diverse populations",
+            "snippet": "use of technology to meet the needs of diverse populations",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ]
+      },
+      "ts": "2026-08-23T17:33:46.602Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "record:NSI6S5QE",
+      "representative_record_id": "NSI6S5QE",
+      "provenance": {
+        "annotation_id": "ar2:NSI6S5QE",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "curation-provenance-unrecorded",
+            "type": "person",
+            "roles": [
+              "curation"
+            ],
+            "identity": {
+              "status": "legacy_gap",
+              "value": "unrecorded"
+            }
+          },
+          {
+            "id": "oa-sources-13-20260823-ar1",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "oa-sources-13-20260823-ar2",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codex-ai-agent-review",
+            "type": "ai_agent",
+            "roles": [
+              "ai_agent_reviewer"
+            ],
+            "identity": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            }
+          }
+        ],
+        "activities": [
+          {
+            "id": "NSI6S5QE:agent-annotation",
+            "type": "screening",
+            "run_id": "oa-sources-13-20260823",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.1.md",
+              "version": "1.1",
+              "sha256": "31b5741719d813848622351efab184c420f9f9bc0771f52dff2d5feb15609acb"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            },
+            "associated_actor_ids": [
+              "oa-sources-13-20260823-ar1",
+              "oa-sources-13-20260823-ar2"
+            ]
+          },
+          {
+            "id": "NSI6S5QE:ai-agent-review",
+            "type": "ai_agent_review",
+            "run_id": "oa-sources-13-20260823",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.1.md",
+              "version": "1.1",
+              "sha256": "31b5741719d813848622351efab184c420f9f9bc0771f52dff2d5feb15609acb"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            },
+            "associated_actor_ids": [
+              "codex-ai-agent-review"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:NSI6S5QE",
+            "type": "paper",
+            "reference": "docs/data/fulltext/NSI6S5QE.md",
+            "sha256": "3187b1cf1d4010d5a926b636205c9e242a80fa814cbdb5e9449f2c523e6b387d"
+          }
+        ],
+        "derived_from": [
+          {
+            "id": "ai-agent-review",
+            "type": "ai_agent_review",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/ai-agent-review.json"
+          },
+          {
+            "id": "run-manifest",
+            "type": "run_manifest",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/run.json"
+          },
+          {
+            "id": "track:ar1",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar1.json"
+          },
+          {
+            "id": "track:ar2",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar2.json"
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "annotation_id": "ar2:NSI6S5QE",
+          "annotation_type": "screening_decision",
+          "at": "2026-08-23T17:33:46.602Z",
+          "actor_ids": [
+            "oa-sources-13-20260823-ar1",
+            "oa-sources-13-20260823-ar2"
+          ],
+          "body": {
+            "categories": {
+              "Soziale_Arbeit": 2,
+              "Diversitaet": 1
+            },
+            "decision": "Exclude",
+            "override": false,
+            "reason": "Not_relevant_topic",
+            "override_reason": null,
+            "evidence": {
+              "Soziale_Arbeit": [
+                {
+                  "term": "Technology Standards in Social Work Practice",
+                  "snippet": "Technology Standards in Social Work Practice",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "Diversitaet": [
+                {
+                  "term": "use of technology to meet the needs of diverse populations",
+                  "snippet": "use of technology to meet the needs of diverse populations",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ]
+            },
+            "text_source": "raw",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "reviewer": "ar2",
+            "actor": "agent"
+          }
+        }
+      ],
+      "active_annotation_id": "ar2:NSI6S5QE",
+      "checks": [],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "curated_corpus_snapshot",
+          "at": "2026-08-23T17:33:46.602Z",
+          "actor_ids": [
+            "curation-provenance-unrecorded"
+          ]
+        },
+        "state": "ai-agent-reviewed",
+        "events": [
+          {
+            "event_id": "NSI6S5QE:agent-annotation",
+            "event_type": "agent_annotation",
+            "from": "curated",
+            "to": "agent-annotated",
+            "at": "2026-08-23T17:33:46.602Z",
+            "activity_id": "NSI6S5QE:agent-annotation",
+            "actor_ids": [
+              "oa-sources-13-20260823-ar1",
+              "oa-sources-13-20260823-ar2"
+            ],
+            "result": "completed",
+            "annotation_id": "ar2:NSI6S5QE"
+          },
+          {
+            "event_id": "NSI6S5QE:ai-agent-review",
+            "event_type": "ai_agent_review",
+            "from": "agent-annotated",
+            "to": "ai-agent-reviewed",
+            "at": "2026-08-23T17:33:46.602Z",
+            "activity_id": "NSI6S5QE:ai-agent-review",
+            "actor_ids": [
+              "codex-ai-agent-review"
+            ],
+            "result": "accepted",
+            "annotation_id": "ar2:NSI6S5QE"
+          }
+        ]
+      }
+    },
+    "P4YQIKJX": {
+      "categories": {
+        "KI_Sonstige": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 1,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "KI_Sonstige": [
+          {
+            "term": "AI techniques and their applications can help",
+            "snippet": "AI techniques and their applications can help",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "bias was the most frequently discussed ethical issue",
+            "snippet": "bias was the most frequently discussed ethical issue",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "gender bias",
+            "snippet": "gender bias",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "justice and fairness was found to be the most prevalent ethical issue",
+            "snippet": "justice and fairness was found to be the most prevalent ethical issue",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ]
+      },
+      "ts": "2026-08-23T17:33:46.602Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Race_Ethnicity",
+            "Disability",
+            "Socioeconomic"
+          ],
+          "AN_Harm_Types": [
+            "Disparate_Performance",
+            "Exclusionary_Norms",
+            "Direct_Discrimination",
+            "Indirect_Discrimination",
+            "Misrepresentation"
+          ],
+          "AN_Mitigation_Stage": [
+            "Pre_Processing",
+            "In_Training",
+            "Intra_Processing",
+            "Post_Processing",
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Health_Care"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "Systematischer Review zu ethischen Problemen und Strategien für KI im Gesundheitsbereich.",
+          "Studientyp": "Literaturreview"
+        },
+        "undecidable": {}
+      },
+      "work_id": "doi:10.3390/ai4010003",
+      "representative_record_id": "P4YQIKJX",
+      "provenance": {
+        "annotation_id": "ar2:P4YQIKJX",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "curation-provenance-unrecorded",
+            "type": "person",
+            "roles": [
+              "curation"
+            ],
+            "identity": {
+              "status": "legacy_gap",
+              "value": "unrecorded"
+            }
+          },
+          {
+            "id": "oa-sources-13-20260823-ar1",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "oa-sources-13-20260823-ar2",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codex-ai-agent-review",
+            "type": "ai_agent",
+            "roles": [
+              "ai_agent_reviewer"
+            ],
+            "identity": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            }
+          }
+        ],
+        "activities": [
+          {
+            "id": "P4YQIKJX:agent-annotation",
+            "type": "screening",
+            "run_id": "oa-sources-13-20260823",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.1.md",
+              "version": "1.1",
+              "sha256": "31b5741719d813848622351efab184c420f9f9bc0771f52dff2d5feb15609acb"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            },
+            "associated_actor_ids": [
+              "oa-sources-13-20260823-ar1",
+              "oa-sources-13-20260823-ar2"
+            ]
+          },
+          {
+            "id": "P4YQIKJX:ai-agent-review",
+            "type": "ai_agent_review",
+            "run_id": "oa-sources-13-20260823",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.1.md",
+              "version": "1.1",
+              "sha256": "31b5741719d813848622351efab184c420f9f9bc0771f52dff2d5feb15609acb"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            },
+            "associated_actor_ids": [
+              "codex-ai-agent-review"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:P4YQIKJX",
+            "type": "paper",
+            "reference": "docs/data/fulltext/P4YQIKJX.md",
+            "sha256": "21913775f2ff6abfb26b09e167c14e8d1bfac55d43f7a8db06b60582ac383a17"
+          }
+        ],
+        "derived_from": [
+          {
+            "id": "ai-agent-review",
+            "type": "ai_agent_review",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/ai-agent-review.json"
+          },
+          {
+            "id": "run-manifest",
+            "type": "run_manifest",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/run.json"
+          },
+          {
+            "id": "track:ar1",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar1.json"
+          },
+          {
+            "id": "track:ar2",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar2.json"
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "annotation_id": "ar2:P4YQIKJX",
+          "annotation_type": "screening_decision",
+          "at": "2026-08-23T17:33:46.602Z",
+          "actor_ids": [
+            "oa-sources-13-20260823-ar1",
+            "oa-sources-13-20260823-ar2"
+          ],
+          "body": {
+            "categories": {
+              "KI_Sonstige": 2,
+              "Bias_Ungleichheit": 2,
+              "Gender": 1,
+              "Fairness": 2
+            },
+            "decision": "Include",
+            "override": false,
+            "reason": null,
+            "override_reason": null,
+            "evidence": {
+              "KI_Sonstige": [
+                {
+                  "term": "AI techniques and their applications can help",
+                  "snippet": "AI techniques and their applications can help",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "Bias_Ungleichheit": [
+                {
+                  "term": "bias was the most frequently discussed ethical issue",
+                  "snippet": "bias was the most frequently discussed ethical issue",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "Gender": [
+                {
+                  "term": "gender bias",
+                  "snippet": "gender bias",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "Fairness": [
+                {
+                  "term": "justice and fairness was found to be the most prevalent ethical issue",
+                  "snippet": "justice and fairness was found to be the most prevalent ethical issue",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ]
+            },
+            "analysis": {
+              "fields": {
+                "AN_Prompting_Role": [
+                  "None"
+                ],
+                "AN_Prompt_Techniques": [
+                  "None"
+                ],
+                "AN_Bias_Axes": [
+                  "Gender",
+                  "Race_Ethnicity",
+                  "Disability",
+                  "Socioeconomic"
+                ],
+                "AN_Harm_Types": [
+                  "Disparate_Performance",
+                  "Exclusionary_Norms",
+                  "Direct_Discrimination",
+                  "Indirect_Discrimination",
+                  "Misrepresentation"
+                ],
+                "AN_Mitigation_Stage": [
+                  "Pre_Processing",
+                  "In_Training",
+                  "Intra_Processing",
+                  "Post_Processing",
+                  "Organisational_Process"
+                ],
+                "AN_Mitigation_Status": "Proposed",
+                "AN_Population": [
+                  "Health_Care"
+                ],
+                "AN_Coding_Basis": "Fulltext",
+                "AN_Notes": "Systematischer Review zu ethischen Problemen und Strategien für KI im Gesundheitsbereich.",
+                "Studientyp": "Literaturreview"
+              },
+              "undecidable": {}
+            },
+            "text_source": "raw",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "reviewer": "ar2",
+            "actor": "agent"
+          }
+        }
+      ],
+      "active_annotation_id": "ar2:P4YQIKJX",
+      "checks": [],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "curated_corpus_snapshot",
+          "at": "2026-08-23T17:33:46.602Z",
+          "actor_ids": [
+            "curation-provenance-unrecorded"
+          ]
+        },
+        "state": "ai-agent-reviewed",
+        "events": [
+          {
+            "event_id": "P4YQIKJX:agent-annotation",
+            "event_type": "agent_annotation",
+            "from": "curated",
+            "to": "agent-annotated",
+            "at": "2026-08-23T17:33:46.602Z",
+            "activity_id": "P4YQIKJX:agent-annotation",
+            "actor_ids": [
+              "oa-sources-13-20260823-ar1",
+              "oa-sources-13-20260823-ar2"
+            ],
+            "result": "completed",
+            "annotation_id": "ar2:P4YQIKJX"
+          },
+          {
+            "event_id": "P4YQIKJX:ai-agent-review",
+            "event_type": "ai_agent_review",
+            "from": "agent-annotated",
+            "to": "ai-agent-reviewed",
+            "at": "2026-08-23T17:33:46.602Z",
+            "activity_id": "P4YQIKJX:ai-agent-review",
+            "actor_ids": [
+              "codex-ai-agent-review"
+            ],
+            "result": "accepted",
+            "annotation_id": "ar2:P4YQIKJX"
+          }
+        ]
+      }
+    },
+    "QUV5DQH3": {
+      "categories": {
+        "AI_Literacies": 1,
+        "KI_Sonstige": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Diversitaet": 2,
+        "Feministisch": 2,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "advocate for AI literacy training",
+            "snippet": "advocate for AI literacy training",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "artificial intelligence (AI) systems using machine learning (ML)",
+            "snippet": "artificial intelligence (AI) systems using machine learning (ML)",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "gender bias in these systems is pervasive",
+            "snippet": "gender bias in these systems is pervasive",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "gender bias in these systems is pervasive",
+            "snippet": "gender bias in these systems is pervasive",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "Center the voices of marginalized community members",
+            "snippet": "Center the voices of marginalized community members",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Feministisch": [
+          {
+            "term": "Use feminist data practices",
+            "snippet": "Use feminist data practices",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "gender-equitable AI",
+            "snippet": "gender-equitable AI",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ]
+      },
+      "ts": "2026-08-23T17:33:46.602Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Race_Ethnicity",
+            "Intersectional"
+          ],
+          "AN_Harm_Types": [
+            "Disparate_Performance",
+            "Erasure",
+            "Stereotyping",
+            "Direct_Discrimination"
+          ],
+          "AN_Mitigation_Stage": [
+            "Pre_Processing",
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "Fachlicher Kommentar zu gendergerechter KI, feministischen Datenpraktiken und organisationaler Gestaltung.",
+          "Studientyp": "Konzept"
+        },
+        "undecidable": {}
+      },
+      "work_id": "doi:10.48558/a179-b138",
+      "representative_record_id": "QUV5DQH3",
+      "provenance": {
+        "annotation_id": "ar2:QUV5DQH3",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "curation-provenance-unrecorded",
+            "type": "person",
+            "roles": [
+              "curation"
+            ],
+            "identity": {
+              "status": "legacy_gap",
+              "value": "unrecorded"
+            }
+          },
+          {
+            "id": "oa-sources-13-20260823-ar1",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "oa-sources-13-20260823-ar2",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codex-ai-agent-review",
+            "type": "ai_agent",
+            "roles": [
+              "ai_agent_reviewer"
+            ],
+            "identity": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            }
+          }
+        ],
+        "activities": [
+          {
+            "id": "QUV5DQH3:agent-annotation",
+            "type": "screening",
+            "run_id": "oa-sources-13-20260823",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.1.md",
+              "version": "1.1",
+              "sha256": "31b5741719d813848622351efab184c420f9f9bc0771f52dff2d5feb15609acb"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            },
+            "associated_actor_ids": [
+              "oa-sources-13-20260823-ar1",
+              "oa-sources-13-20260823-ar2"
+            ]
+          },
+          {
+            "id": "QUV5DQH3:ai-agent-review",
+            "type": "ai_agent_review",
+            "run_id": "oa-sources-13-20260823",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.1.md",
+              "version": "1.1",
+              "sha256": "31b5741719d813848622351efab184c420f9f9bc0771f52dff2d5feb15609acb"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            },
+            "associated_actor_ids": [
+              "codex-ai-agent-review"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:QUV5DQH3",
+            "type": "paper",
+            "reference": "docs/data/fulltext/QUV5DQH3.md",
+            "sha256": "e7d5eedd33818ff4614f26577e29e11050d1e12e6c730250573231f7ade1ac9a"
+          }
+        ],
+        "derived_from": [
+          {
+            "id": "ai-agent-review",
+            "type": "ai_agent_review",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/ai-agent-review.json"
+          },
+          {
+            "id": "run-manifest",
+            "type": "run_manifest",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/run.json"
+          },
+          {
+            "id": "track:ar1",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar1.json"
+          },
+          {
+            "id": "track:ar2",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar2.json"
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "annotation_id": "ar2:QUV5DQH3",
+          "annotation_type": "screening_decision",
+          "at": "2026-08-23T17:33:46.602Z",
+          "actor_ids": [
+            "oa-sources-13-20260823-ar1",
+            "oa-sources-13-20260823-ar2"
+          ],
+          "body": {
+            "categories": {
+              "AI_Literacies": 1,
+              "KI_Sonstige": 2,
+              "Bias_Ungleichheit": 2,
+              "Gender": 2,
+              "Diversitaet": 2,
+              "Feministisch": 2,
+              "Fairness": 2
+            },
+            "decision": "Include",
+            "override": false,
+            "reason": null,
+            "override_reason": null,
+            "evidence": {
+              "AI_Literacies": [
+                {
+                  "term": "advocate for AI literacy training",
+                  "snippet": "advocate for AI literacy training",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "KI_Sonstige": [
+                {
+                  "term": "artificial intelligence (AI) systems using machine learning (ML)",
+                  "snippet": "artificial intelligence (AI) systems using machine learning (ML)",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "Bias_Ungleichheit": [
+                {
+                  "term": "gender bias in these systems is pervasive",
+                  "snippet": "gender bias in these systems is pervasive",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "Gender": [
+                {
+                  "term": "gender bias in these systems is pervasive",
+                  "snippet": "gender bias in these systems is pervasive",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "Diversitaet": [
+                {
+                  "term": "Center the voices of marginalized community members",
+                  "snippet": "Center the voices of marginalized community members",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "Feministisch": [
+                {
+                  "term": "Use feminist data practices",
+                  "snippet": "Use feminist data practices",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "Fairness": [
+                {
+                  "term": "gender-equitable AI",
+                  "snippet": "gender-equitable AI",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ]
+            },
+            "analysis": {
+              "fields": {
+                "AN_Prompting_Role": [
+                  "None"
+                ],
+                "AN_Prompt_Techniques": [
+                  "None"
+                ],
+                "AN_Bias_Axes": [
+                  "Gender",
+                  "Race_Ethnicity",
+                  "Intersectional"
+                ],
+                "AN_Harm_Types": [
+                  "Disparate_Performance",
+                  "Erasure",
+                  "Stereotyping",
+                  "Direct_Discrimination"
+                ],
+                "AN_Mitigation_Stage": [
+                  "Pre_Processing",
+                  "Organisational_Process"
+                ],
+                "AN_Mitigation_Status": "Proposed",
+                "AN_Population": [
+                  "Not_SW_Specific"
+                ],
+                "AN_Coding_Basis": "Fulltext",
+                "AN_Notes": "Fachlicher Kommentar zu gendergerechter KI, feministischen Datenpraktiken und organisationaler Gestaltung.",
+                "Studientyp": "Konzept"
+              },
+              "undecidable": {}
+            },
+            "text_source": "raw",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "reviewer": "ar2",
+            "actor": "agent"
+          }
+        }
+      ],
+      "active_annotation_id": "ar2:QUV5DQH3",
+      "checks": [],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "curated_corpus_snapshot",
+          "at": "2026-08-23T17:33:46.602Z",
+          "actor_ids": [
+            "curation-provenance-unrecorded"
+          ]
+        },
+        "state": "ai-agent-reviewed",
+        "events": [
+          {
+            "event_id": "QUV5DQH3:agent-annotation",
+            "event_type": "agent_annotation",
+            "from": "curated",
+            "to": "agent-annotated",
+            "at": "2026-08-23T17:33:46.602Z",
+            "activity_id": "QUV5DQH3:agent-annotation",
+            "actor_ids": [
+              "oa-sources-13-20260823-ar1",
+              "oa-sources-13-20260823-ar2"
+            ],
+            "result": "completed",
+            "annotation_id": "ar2:QUV5DQH3"
+          },
+          {
+            "event_id": "QUV5DQH3:ai-agent-review",
+            "event_type": "ai_agent_review",
+            "from": "agent-annotated",
+            "to": "ai-agent-reviewed",
+            "at": "2026-08-23T17:33:46.602Z",
+            "activity_id": "QUV5DQH3:ai-agent-review",
+            "actor_ids": [
+              "codex-ai-agent-review"
+            ],
+            "result": "accepted",
+            "annotation_id": "ar2:QUV5DQH3"
+          }
+        ]
+      }
+    },
+    "R7V99ERA": {
+      "categories": {
+        "KI_Sonstige": 2,
+        "Soziale_Arbeit": 2,
+        "Bias_Ungleichheit": 2,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "KI_Sonstige": [
+          {
+            "term": "NLP models",
+            "snippet": "NLP models",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Soziale_Arbeit": [
+          {
+            "term": "child protective services (CPS)",
+            "snippet": "child protective services (CPS)",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "consistent racial bias in NER",
+            "snippet": "consistent racial bias in NER",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "algorithmic fairness",
+            "snippet": "algorithmic fairness",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ]
+      },
+      "ts": "2026-08-23T17:33:46.602Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Race_Ethnicity"
+          ],
+          "AN_Harm_Types": [
+            "Disparate_Performance",
+            "Direct_Discrimination",
+            "Indirect_Discrimination"
+          ],
+          "AN_Mitigation_Stage": [
+            "None"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Child_Family_Welfare"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "Empirische Evaluation von NLP-Komponenten und Risikoprognose in der Kinder- und Jugendhilfe.",
+          "Studientyp": "Empirisch"
+        },
+        "undecidable": {}
+      },
+      "work_id": "doi:10.1145/3593013.3594094",
+      "representative_record_id": "R7V99ERA",
+      "provenance": {
+        "annotation_id": "ar2:R7V99ERA",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "curation-provenance-unrecorded",
+            "type": "person",
+            "roles": [
+              "curation"
+            ],
+            "identity": {
+              "status": "legacy_gap",
+              "value": "unrecorded"
+            }
+          },
+          {
+            "id": "oa-sources-13-20260823-ar1",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "oa-sources-13-20260823-ar2",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codex-ai-agent-review",
+            "type": "ai_agent",
+            "roles": [
+              "ai_agent_reviewer"
+            ],
+            "identity": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            }
+          }
+        ],
+        "activities": [
+          {
+            "id": "R7V99ERA:agent-annotation",
+            "type": "screening",
+            "run_id": "oa-sources-13-20260823",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.1.md",
+              "version": "1.1",
+              "sha256": "31b5741719d813848622351efab184c420f9f9bc0771f52dff2d5feb15609acb"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            },
+            "associated_actor_ids": [
+              "oa-sources-13-20260823-ar1",
+              "oa-sources-13-20260823-ar2"
+            ]
+          },
+          {
+            "id": "R7V99ERA:ai-agent-review",
+            "type": "ai_agent_review",
+            "run_id": "oa-sources-13-20260823",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.1.md",
+              "version": "1.1",
+              "sha256": "31b5741719d813848622351efab184c420f9f9bc0771f52dff2d5feb15609acb"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            },
+            "associated_actor_ids": [
+              "codex-ai-agent-review"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:R7V99ERA",
+            "type": "paper",
+            "reference": "docs/data/fulltext/R7V99ERA.md",
+            "sha256": "03177cb37158d46696fe4422919053cdda5591068e6f0e395e7d21487bc2a2db"
+          }
+        ],
+        "derived_from": [
+          {
+            "id": "ai-agent-review",
+            "type": "ai_agent_review",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/ai-agent-review.json"
+          },
+          {
+            "id": "run-manifest",
+            "type": "run_manifest",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/run.json"
+          },
+          {
+            "id": "track:ar1",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar1.json"
+          },
+          {
+            "id": "track:ar2",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar2.json"
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "annotation_id": "ar2:R7V99ERA",
+          "annotation_type": "screening_decision",
+          "at": "2026-08-23T17:33:46.602Z",
+          "actor_ids": [
+            "oa-sources-13-20260823-ar1",
+            "oa-sources-13-20260823-ar2"
+          ],
+          "body": {
+            "categories": {
+              "KI_Sonstige": 2,
+              "Soziale_Arbeit": 2,
+              "Bias_Ungleichheit": 2,
+              "Fairness": 2
+            },
+            "decision": "Include",
+            "override": false,
+            "reason": null,
+            "override_reason": null,
+            "evidence": {
+              "KI_Sonstige": [
+                {
+                  "term": "NLP models",
+                  "snippet": "NLP models",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "Soziale_Arbeit": [
+                {
+                  "term": "child protective services (CPS)",
+                  "snippet": "child protective services (CPS)",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "Bias_Ungleichheit": [
+                {
+                  "term": "consistent racial bias in NER",
+                  "snippet": "consistent racial bias in NER",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "Fairness": [
+                {
+                  "term": "algorithmic fairness",
+                  "snippet": "algorithmic fairness",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ]
+            },
+            "analysis": {
+              "fields": {
+                "AN_Prompting_Role": [
+                  "None"
+                ],
+                "AN_Prompt_Techniques": [
+                  "None"
+                ],
+                "AN_Bias_Axes": [
+                  "Race_Ethnicity"
+                ],
+                "AN_Harm_Types": [
+                  "Disparate_Performance",
+                  "Direct_Discrimination",
+                  "Indirect_Discrimination"
+                ],
+                "AN_Mitigation_Stage": [
+                  "None"
+                ],
+                "AN_Mitigation_Status": "Evaluated",
+                "AN_Population": [
+                  "Child_Family_Welfare"
+                ],
+                "AN_Coding_Basis": "Fulltext",
+                "AN_Notes": "Empirische Evaluation von NLP-Komponenten und Risikoprognose in der Kinder- und Jugendhilfe.",
+                "Studientyp": "Empirisch"
+              },
+              "undecidable": {}
+            },
+            "text_source": "raw",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "reviewer": "ar2",
+            "actor": "agent"
+          }
+        }
+      ],
+      "active_annotation_id": "ar2:R7V99ERA",
+      "checks": [],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "curated_corpus_snapshot",
+          "at": "2026-08-23T17:33:46.602Z",
+          "actor_ids": [
+            "curation-provenance-unrecorded"
+          ]
+        },
+        "state": "ai-agent-reviewed",
+        "events": [
+          {
+            "event_id": "R7V99ERA:agent-annotation",
+            "event_type": "agent_annotation",
+            "from": "curated",
+            "to": "agent-annotated",
+            "at": "2026-08-23T17:33:46.602Z",
+            "activity_id": "R7V99ERA:agent-annotation",
+            "actor_ids": [
+              "oa-sources-13-20260823-ar1",
+              "oa-sources-13-20260823-ar2"
+            ],
+            "result": "completed",
+            "annotation_id": "ar2:R7V99ERA"
+          },
+          {
+            "event_id": "R7V99ERA:ai-agent-review",
+            "event_type": "ai_agent_review",
+            "from": "agent-annotated",
+            "to": "ai-agent-reviewed",
+            "at": "2026-08-23T17:33:46.602Z",
+            "activity_id": "R7V99ERA:ai-agent-review",
+            "actor_ids": [
+              "codex-ai-agent-review"
+            ],
+            "result": "accepted",
+            "annotation_id": "ar2:R7V99ERA"
+          }
+        ]
+      }
+    },
+    "VSZM7CT6": {
+      "categories": {
+        "AI_Literacies": 2,
+        "KI_Sonstige": 2,
+        "Soziale_Arbeit": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 1,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "critical digital literacies in social work education",
+            "snippet": "critical digital literacies in social work education",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "AI systems are created by humans",
+            "snippet": "AI systems are created by humans",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Soziale_Arbeit": [
+          {
+            "term": "This paper explores possible future implications for social work education.",
+            "snippet": "This paper explores possible future implications for social work education.",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "bias and structural inequity can be built into them",
+            "snippet": "bias and structural inequity can be built into them",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "AI algorithms may reinforce racial and gender stereotypes",
+            "snippet": "AI algorithms may reinforce racial and gender stereotypes",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "fairness, privacy, transparency, and accountability",
+            "snippet": "fairness, privacy, transparency, and accountability",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent"
+          }
+        ]
+      },
+      "ts": "2026-08-23T17:33:46.602Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Race_Ethnicity"
+          ],
+          "AN_Harm_Types": [
+            "Stereotyping"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Education_Professional"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "Theoretischer Beitrag zu KI, kritischen digitalen Kompetenzen und sozialarbeiterischer Bildung.",
+          "Studientyp": "Theoretisch"
+        },
+        "undecidable": {}
+      },
+      "work_id": "doi:10.1093/bjsw/bcab168",
+      "representative_record_id": "VSZM7CT6",
+      "provenance": {
+        "annotation_id": "ar2:VSZM7CT6",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "curation-provenance-unrecorded",
+            "type": "person",
+            "roles": [
+              "curation"
+            ],
+            "identity": {
+              "status": "legacy_gap",
+              "value": "unrecorded"
+            }
+          },
+          {
+            "id": "oa-sources-13-20260823-ar1",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "oa-sources-13-20260823-ar2",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codex-ai-agent-review",
+            "type": "ai_agent",
+            "roles": [
+              "ai_agent_reviewer"
+            ],
+            "identity": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            }
+          }
+        ],
+        "activities": [
+          {
+            "id": "VSZM7CT6:agent-annotation",
+            "type": "screening",
+            "run_id": "oa-sources-13-20260823",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.1.md",
+              "version": "1.1",
+              "sha256": "31b5741719d813848622351efab184c420f9f9bc0771f52dff2d5feb15609acb"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            },
+            "associated_actor_ids": [
+              "oa-sources-13-20260823-ar1",
+              "oa-sources-13-20260823-ar2"
+            ]
+          },
+          {
+            "id": "VSZM7CT6:ai-agent-review",
+            "type": "ai_agent_review",
+            "run_id": "oa-sources-13-20260823",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.1.md",
+              "version": "1.1",
+              "sha256": "31b5741719d813848622351efab184c420f9f9bc0771f52dff2d5feb15609acb"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Codex collaboration runtime:opus",
+              "provider": "Codex collaboration runtime",
+              "model": "opus",
+              "model_version": "runtime-alias-opus-2026-08-23"
+            },
+            "associated_actor_ids": [
+              "codex-ai-agent-review"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:VSZM7CT6",
+            "type": "paper",
+            "reference": "docs/data/fulltext/VSZM7CT6.md",
+            "sha256": "4557a0e44affd3732f7aff3f2b8244b45df7eb5f8cbb0bcb043aa4dee9422bf3"
+          }
+        ],
+        "derived_from": [
+          {
+            "id": "ai-agent-review",
+            "type": "ai_agent_review",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/ai-agent-review.json"
+          },
+          {
+            "id": "run-manifest",
+            "type": "run_manifest",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/run.json"
+          },
+          {
+            "id": "track:ar1",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar1.json"
+          },
+          {
+            "id": "track:ar2",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar2.json"
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "annotation_id": "ar2:VSZM7CT6",
+          "annotation_type": "screening_decision",
+          "at": "2026-08-23T17:33:46.602Z",
+          "actor_ids": [
+            "oa-sources-13-20260823-ar1",
+            "oa-sources-13-20260823-ar2"
+          ],
+          "body": {
+            "categories": {
+              "AI_Literacies": 2,
+              "KI_Sonstige": 2,
+              "Soziale_Arbeit": 2,
+              "Bias_Ungleichheit": 2,
+              "Gender": 1,
+              "Fairness": 2
+            },
+            "decision": "Include",
+            "override": false,
+            "reason": null,
+            "override_reason": null,
+            "evidence": {
+              "AI_Literacies": [
+                {
+                  "term": "critical digital literacies in social work education",
+                  "snippet": "critical digital literacies in social work education",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "KI_Sonstige": [
+                {
+                  "term": "AI systems are created by humans",
+                  "snippet": "AI systems are created by humans",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "Soziale_Arbeit": [
+                {
+                  "term": "This paper explores possible future implications for social work education.",
+                  "snippet": "This paper explores possible future implications for social work education.",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "Bias_Ungleichheit": [
+                {
+                  "term": "bias and structural inequity can be built into them",
+                  "snippet": "bias and structural inequity can be built into them",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "Gender": [
+                {
+                  "term": "AI algorithms may reinforce racial and gender stereotypes",
+                  "snippet": "AI algorithms may reinforce racial and gender stereotypes",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ],
+              "Fairness": [
+                {
+                  "term": "fairness, privacy, transparency, and accountability",
+                  "snippet": "fairness, privacy, transparency, and accountability",
+                  "ts": "2026-08-23T17:33:46.602Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent"
+                }
+              ]
+            },
+            "analysis": {
+              "fields": {
+                "AN_Prompting_Role": [
+                  "None"
+                ],
+                "AN_Prompt_Techniques": [
+                  "None"
+                ],
+                "AN_Bias_Axes": [
+                  "Gender",
+                  "Race_Ethnicity"
+                ],
+                "AN_Harm_Types": [
+                  "Stereotyping"
+                ],
+                "AN_Mitigation_Stage": [
+                  "Organisational_Process"
+                ],
+                "AN_Mitigation_Status": "Proposed",
+                "AN_Population": [
+                  "Education_Professional"
+                ],
+                "AN_Coding_Basis": "Fulltext",
+                "AN_Notes": "Theoretischer Beitrag zu KI, kritischen digitalen Kompetenzen und sozialarbeiterischer Bildung.",
+                "Studientyp": "Theoretisch"
+              },
+              "undecidable": {}
+            },
+            "text_source": "raw",
+            "ts": "2026-08-23T17:33:46.602Z",
+            "reviewer": "ar2",
+            "actor": "agent"
+          }
+        }
+      ],
+      "active_annotation_id": "ar2:VSZM7CT6",
+      "checks": [],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "curated_corpus_snapshot",
+          "at": "2026-08-23T17:33:46.602Z",
+          "actor_ids": [
+            "curation-provenance-unrecorded"
+          ]
+        },
+        "state": "ai-agent-reviewed",
+        "events": [
+          {
+            "event_id": "VSZM7CT6:agent-annotation",
+            "event_type": "agent_annotation",
+            "from": "curated",
+            "to": "agent-annotated",
+            "at": "2026-08-23T17:33:46.602Z",
+            "activity_id": "VSZM7CT6:agent-annotation",
+            "actor_ids": [
+              "oa-sources-13-20260823-ar1",
+              "oa-sources-13-20260823-ar2"
+            ],
+            "result": "completed",
+            "annotation_id": "ar2:VSZM7CT6"
+          },
+          {
+            "event_id": "VSZM7CT6:ai-agent-review",
+            "event_type": "ai_agent_review",
+            "from": "agent-annotated",
+            "to": "ai-agent-reviewed",
+            "at": "2026-08-23T17:33:46.602Z",
+            "activity_id": "VSZM7CT6:ai-agent-review",
+            "actor_ids": [
+              "codex-ai-agent-review"
+            ],
+            "result": "accepted",
+            "annotation_id": "ar2:VSZM7CT6"
+          }
+        ]
+      }
+    }
+  }
+}

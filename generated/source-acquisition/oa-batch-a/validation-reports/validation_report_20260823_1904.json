@@ -1,0 +1,251 @@
+{
+  "metadata": {
+    "timestamp": "2026-08-23T19:04:52.881256",
+    "version": "2.0",
+    "validator": "validate_markdown_enhanced.py"
+  },
+  "summary": {
+    "total_documents": 5,
+    "status_distribution": {
+      "pass": 3,
+      "warning": 2,
+      "fail": 0
+    },
+    "pass_rate": 0.6,
+    "metrics": {
+      "avg_char_ratio": 1.0794,
+      "avg_artifact_score": 1.0799999999999998,
+      "avg_confidence": 99.8,
+      "min_confidence": 99.5,
+      "max_confidence": 100
+    },
+    "table_mismatch_count": 2,
+    "char_loss_warning_count": 0,
+    "manual_review_queue_size": 2,
+    "llm_reviewed_count": 0
+  },
+  "manual_review_queue": [
+    {
+      "filename": "4ZL5Q48E.md",
+      "status": "WARNING",
+      "confidence": 99.5,
+      "issues": [
+        "Table mismatch: PDF=1, MD=0"
+      ],
+      "reasons": [
+        "table_mismatch"
+      ],
+      "priority": "MEDIUM"
+    },
+    {
+      "filename": "R7V99ERA.md",
+      "status": "WARNING",
+      "confidence": 100,
+      "issues": [
+        "Table mismatch: PDF=2, MD=11"
+      ],
+      "reasons": [
+        "table_mismatch"
+      ],
+      "priority": "MEDIUM"
+    }
+  ],
+  "detailed_results": [
+    {
+      "filename": "4ZL5Q48E.md",
+      "pdf_filename": "4ZL5Q48E.pdf",
+      "md_char_count": 74601,
+      "md_word_count": 10615,
+      "md_file_size_mb": 0.07114505767822266,
+      "glyph_count": 0,
+      "unicode_error_count": 0,
+      "text_to_noise_ratio": 0.732,
+      "pdf_char_count": 72430,
+      "pdf_word_count": 8396,
+      "char_ratio": 1.03,
+      "char_loss_warning": false,
+      "pdf_table_count": 1,
+      "md_table_count": 0,
+      "table_mismatch": true,
+      "artifact_types": {
+        "ocr_zero_o": 4
+      },
+      "artifact_score": 2.4,
+      "llm_reviewed": false,
+      "semantic_score": null,
+      "section_coverage": {
+        "abstract": true,
+        "introduction": true,
+        "methodology": false,
+        "results": false,
+        "discussion": true,
+        "conclusion": false,
+        "references": true
+      },
+      "llm_issues": [],
+      "confidence_score": 99.5,
+      "status": "WARNING",
+      "issues": [
+        "Table mismatch: PDF=1, MD=0"
+      ],
+      "needs_manual_review": true,
+      "manual_review_reasons": [
+        "table_mismatch"
+      ]
+    },
+    {
+      "filename": "7FEFMCBZ.md",
+      "pdf_filename": "7FEFMCBZ.pdf",
+      "md_char_count": 135445,
+      "md_word_count": 20256,
+      "md_file_size_mb": 0.12917041778564453,
+      "glyph_count": 0,
+      "unicode_error_count": 0,
+      "text_to_noise_ratio": 0.711,
+      "pdf_char_count": 134923,
+      "pdf_word_count": 21236,
+      "char_ratio": 1.004,
+      "char_loss_warning": false,
+      "pdf_table_count": 5,
+      "md_table_count": 5,
+      "table_mismatch": false,
+      "artifact_types": {
+        "all_caps_noise": 2
+      },
+      "artifact_score": 1.2,
+      "llm_reviewed": false,
+      "semantic_score": null,
+      "section_coverage": {
+        "abstract": true,
+        "introduction": false,
+        "methodology": false,
+        "results": false,
+        "discussion": false,
+        "conclusion": false,
+        "references": true
+      },
+      "llm_issues": [],
+      "confidence_score": 99.8,
+      "status": "PASS",
+      "issues": [],
+      "needs_manual_review": false,
+      "manual_review_reasons": []
+    },
+    {
+      "filename": "J7V3AAQT.md",
+      "pdf_filename": "J7V3AAQT.pdf",
+      "md_char_count": 69186,
+      "md_word_count": 10807,
+      "md_file_size_mb": 0.06598091125488281,
+      "glyph_count": 0,
+      "unicode_error_count": 0,
+      "text_to_noise_ratio": 0.632,
+      "pdf_char_count": 62863,
+      "pdf_word_count": 7287,
+      "char_ratio": 1.101,
+      "char_loss_warning": false,
+      "pdf_table_count": 3,
+      "md_table_count": 3,
+      "table_mismatch": false,
+      "artifact_types": {
+        "ocr_zero_o": 2
+      },
+      "artifact_score": 1.2,
+      "llm_reviewed": false,
+      "semantic_score": null,
+      "section_coverage": {
+        "abstract": false,
+        "introduction": false,
+        "methodology": false,
+        "results": false,
+        "discussion": false,
+        "conclusion": false,
+        "references": true
+      },
+      "llm_issues": [],
+      "confidence_score": 99.8,
+      "status": "PASS",
+      "issues": [],
+      "needs_manual_review": false,
+      "manual_review_reasons": []
+    },
+    {
+      "filename": "R7V99ERA.md",
+      "pdf_filename": "R7V99ERA.pdf",
+      "md_char_count": 96285,
+      "md_word_count": 13746,
+      "md_file_size_mb": 0.09182453155517578,
+      "glyph_count": 0,
+      "unicode_error_count": 0,
+      "text_to_noise_ratio": 0.649,
+      "pdf_char_count": 77700,
+      "pdf_word_count": 2522,
+      "char_ratio": 1.239,
+      "char_loss_warning": false,
+      "pdf_table_count": 2,
+      "md_table_count": 11,
+      "table_mismatch": true,
+      "artifact_types": {},
+      "artifact_score": 0.0,
+      "llm_reviewed": false,
+      "semantic_score": null,
+      "section_coverage": {
+        "abstract": true,
+        "introduction": false,
+        "methodology": false,
+        "results": false,
+        "discussion": false,
+        "conclusion": true,
+        "references": true
+      },
+      "llm_issues": [],
+      "confidence_score": 100,
+      "status": "WARNING",
+      "issues": [
+        "Table mismatch: PDF=2, MD=11"
+      ],
+      "needs_manual_review": true,
+      "manual_review_reasons": [
+        "table_mismatch"
+      ]
+    },
+    {
+      "filename": "VSZM7CT6.md",
+      "pdf_filename": "VSZM7CT6.pdf",
+      "md_char_count": 54694,
+      "md_word_count": 7789,
+      "md_file_size_mb": 0.05216026306152344,
+      "glyph_count": 0,
+      "unicode_error_count": 0,
+      "text_to_noise_ratio": 0.699,
+      "pdf_char_count": 53487,
+      "pdf_word_count": 7621,
+      "char_ratio": 1.023,
+      "char_loss_warning": false,
+      "pdf_table_count": 0,
+      "md_table_count": 0,
+      "table_mismatch": false,
+      "artifact_types": {
+        "all_caps_noise": 1
+      },
+      "artifact_score": 0.6,
+      "llm_reviewed": false,
+      "semantic_score": null,
+      "section_coverage": {
+        "abstract": true,
+        "introduction": false,
+        "methodology": false,
+        "results": false,
+        "discussion": false,
+        "conclusion": true,
+        "references": true
+      },
+      "llm_issues": [],
+      "confidence_score": 99.9,
+      "status": "PASS",
+      "issues": [],
+      "needs_manual_review": false,
+      "manual_review_reasons": []
+    }
+  ]
+}

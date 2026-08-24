@@ -1,0 +1,11 @@
+Filename,Status,Confidence,Char_Ratio,GLYPH_Count,Artifact_Score,Tables_PDF,Tables_MD,Table_Mismatch,Needs_Review,Issues
+2b57266b9d8b015d2ac2.md,WARNING,98.5,0.962,0,0.0,3,0,YES,YES,"Table mismatch: PDF=3, MD=0"
+2e6aa61930deea324751.md,WARNING,99.5,1.082,0,2.4,0,7,YES,YES,"Table mismatch: PDF=0, MD=7"
+4dbe6aa9dfa229e88746.md,WARNING,98.2,1.179,0,8.8,1,17,YES,YES,"Table mismatch: PDF=1, MD=17"
+5fa4fb41e396f11b2c6e.md,PASS,99.8,1.047,0,1.2,5,4,NO,NO,
+926800fc523bebd0420c.md,PASS,99.0,1.047,0,5.0,0,2,NO,NO,
+96199ea06371c4cdbed4.md,PASS,99.4,1.695,0,0.0,27,25,NO,NO,
+a1c7e9db9a3dc6caff54.md,WARNING,92.7,2.526,0,0.6,6,4,NO,YES,Low text ratio: 25.97%
+aff73b4c6b2eab31b8f7.md,PASS,99.1,1.044,0,4.4,0,2,NO,NO,
+c42b463f9ba115503a58.md,PASS,98.9,1.039,0,5.4,9,10,NO,NO,
+d3bd00602e07cf40396c.md,WARNING,99.4,1.445,0,1.6,2,22,YES,YES,"Table mismatch: PDF=2, MD=22"

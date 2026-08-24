@@ -1,0 +1,114 @@
+{
+  "schema": "femprompt-markdown-agent-qc/0.1",
+  "reviewer": "round2_metadata",
+  "reviewed_at": "2026-08-24",
+  "records": [
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.2196/86633",
+      "title": "Ethics and Fairness Considerations in AI-Based Deception Detection Technologies for Mental Health Applications: Focus Group Study",
+      "pdf_file": "generated/pdfs/codex-websearch-2026/2e6aa61930deea324751.pdf",
+      "markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-clean/2e6aa61930deea324751.md",
+      "automated_warning": "Table mismatch: PDF=0, MD=7",
+      "identity_match": true,
+      "body_complete": true,
+      "tables": {
+        "pdf_semantic_tables": 5,
+        "markdown_semantic_tables": 5,
+        "material_loss": false,
+        "basis": "Das PDF enthält fünf nummerierte semantische Tabellen. Im Markdown werden dieselben fünf Tabellen vollständig wiedergegeben; Tabellen 3 und 4 sind wegen Seitenumbrüchen jeweils in zwei Pipe-Table-Blöcke segmentiert, woraus die automatische Zahl 7 entsteht."
+      },
+      "decision": "approved_for_screening",
+      "issues": [
+        "Nichtmaterielle Segmentierungsabweichung: fünf semantische Tabellen sind als sieben Markdown-Tabellenblöcke kodiert.",
+        "Wiederkehrende Kopf-/Fußzeilen wurden teilweise als Zwischenüberschriften übernommen, ohne Abschnitte oder Inhalte zu verdrängen."
+      ],
+      "evidence": [
+        "PDF-Seiten 3, 5-6, 9-10 und 12 zeigen Tabellen 1-5; die Markdown-Zeilen 73-504 enthalten alle Beschriftungen, Spalten und Werte.",
+        "PDF-Seite 1 beginnt mit Dokumenttyp, Titel, Autor:innen und Abstract; Markdown-Seite 1 entspricht dieser Identität und Reihenfolge.",
+        "PDF-Seiten 20-21 enthalten Referenzende, Abkürzungen, Begutachtungshistorie, Zitierhinweis und Lizenz; diese Elemente stehen vollständig am Markdown-Ende.",
+        "Alle PDF-Seiten 1-21 besitzen korrespondierende PAGE-Marker im Markdown; die Abfolge Introduction, Methods, Results, Discussion, Conclusions, Anhänge und References ist erhalten."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.35362/issn.1850-0013-1258",
+      "title": "Sesgos de género y modelos de IA generativa: Aproximaciones desde una experiencia de análisis cualitativo desde la generación de imágenes",
+      "pdf_file": "generated/pdfs/codex-websearch-2026/fe0639bed94ac912274d.pdf",
+      "markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-clean/fe0639bed94ac912274d.md",
+      "automated_warning": "Table mismatch: PDF=11, MD=4",
+      "identity_match": true,
+      "body_complete": false,
+      "tables": {
+        "pdf_semantic_tables": 11,
+        "markdown_semantic_tables": 4,
+        "material_loss": true,
+        "basis": "Die drei Methodentabellen 1, 1.1 und 1.2 sind textuell erhalten. Von den acht Ergebnistabellen 2 bis 4.3 ist nur Tabelle 2.1 als unvollständiges Tabellengerüst vorhanden; die 16 bildlichen Modellergebnisse fehlen und sind überwiegend lediglich durch leere HTML-Kommentare `<!-- image -->` vertreten."
+      },
+      "decision": "requires_reconversion",
+      "issues": [
+        "Materieller Verlust des zentralen empirischen Ergebniskorpus: 16 generierte Bilder aus acht Vergleichstabellen fehlen im Markdown.",
+        "Die Ergebnistabellen 2, 3, 3.1, 4, 4.1, 4.2 und 4.3 bestehen im Markdown nur aus Beschriftung und Bildplatzhalter; Tabelle 2.1 enthält leere Ergebniszellen.",
+        "Mehrere Literaturangaben am Markdown-Ende sind zusammengezogen; einzelne DOI-Felder erscheinen leer oder mit dem folgenden Eintrag verbunden."
+      ],
+      "evidence": [
+        "PDF-Seiten 16-19 zeigen acht Ergebnistabellen mit jeweils zwei generierten Bildern, insgesamt 16 Bildresultate; Markdown-Zeilen 260-311 enthalten dafür nur Beschriftungen, leere Platzhalter und bei Tabelle 2.1 ein leeres Raster.",
+        "PDF-Seiten 13-14 und Markdown-Zeilen 215-238 stimmen bei den Methodentabellen 1, 1.1 und 1.2 inhaltlich überein.",
+        "PDF-Seite 1 und Markdown-Seite 1 stimmen bei Titel, Autorin und Abstract überein; alle 26 Seitenmarker sind vorhanden.",
+        "PDF-Seiten 24-26 enthalten die Bibliografie als getrennte Einträge; das Markdown-Ende zeigt mehrere unmittelbar verkettete DOI- und Folgeeinträge."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.18653/v1/2026.findings-acl.1389",
+      "title": "Multi-Persona Thinking for Bias Mitigation in Large Language Models",
+      "pdf_file": "generated/pdfs/codex-websearch-2026/d3bd00602e07cf40396c.pdf",
+      "markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-clean/d3bd00602e07cf40396c.md",
+      "automated_warning": "Table mismatch: PDF=2, MD=22",
+      "identity_match": true,
+      "body_complete": true,
+      "tables": {
+        "pdf_semantic_tables": 22,
+        "markdown_semantic_tables": 22,
+        "material_loss": false,
+        "basis": "Das PDF enthält die nummerierten Tabellen 1-22. Das Markdown enthält dieselben 22 Tabellen mit Beschriftungen, Zeilen, Spalten und Werten. Die automatische PDF-Zählung 2 erfasst das zweispaltige ACL-Layout unzureichend."
+      },
+      "decision": "approved_for_screening",
+      "issues": [
+        "Drei nummerierte Abbildungen werden als Beschriftung mit Bildplatzhalter wiedergegeben; die zugehörigen Befunde und Zahlen sind im Fließtext und in Tabellen erhalten.",
+        "Nichtmaterielle Lesereihenfolge auf PDF-Seite 12: Ein einleitender Satz zu Tabellen 12-13 steht im Markdown vor Tabellen 9-11, sämtliche Inhalte bleiben jedoch vorhanden."
+      ],
+      "evidence": [
+        "PDF-Seiten 3, 6-7 und 12-15 zeigen Tabellen 1-22; Markdown-Zeilen 69-648 enthalten alle 22 nummerierten Tabellen.",
+        "Die umfangreichen Ergebnistabellen 3-6 und 12-20 wurden visuell gegen Spaltenstruktur, Methodenvarianten und Kennzahlen geprüft; kein semantischer Tabellenverlust ist erkennbar.",
+        "PDF-Seite 1 und Markdown-Seite 1 stimmen bei Titel, Autor:innen, Abstract und Warnhinweis überein.",
+        "PDF-Seite 15 endet mit Tabellen 21 und 22; das Markdown endet ebenfalls mit diesen beiden Prompt- und Template-Tabellen.",
+        "Alle PDF-Seiten 1-15 besitzen korrespondierende PAGE-Marker; Introduction, Related Work, Approach, Experiments, Conclusion, Limitations, Acknowledgments, References und Anhänge A-E sind erhalten."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.21556/edutec.2026.96.4777",
+      "title": "Pensar críticamente la inteligencia artificial en la escuela: un estudio de caso desde una perspectiva de género",
+      "pdf_file": "generated/pdfs/codex-websearch-2026/152b1aa29e0dddabe838.pdf",
+      "markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-clean/152b1aa29e0dddabe838.md",
+      "automated_warning": "Table mismatch: PDF=2, MD=7",
+      "identity_match": true,
+      "body_complete": true,
+      "tables": {
+        "pdf_semantic_tables": 7,
+        "markdown_semantic_tables": 7,
+        "material_loss": false,
+        "basis": "Das PDF enthält sieben didaktische Falltabellen auf Seiten 10-14. Im Markdown sind alle sieben als Pipe Tables mit den Feldern Tema FVT und Tema HESEIA sowie den jeweils anschließenden Aktivitäts- und Gender-Bias-Abschnitten erhalten."
+      },
+      "decision": "approved_for_screening",
+      "issues": [
+        "Nichtmaterieller OCR-/Konvertierungsfehler im Zeitschriftenkopf: `EDUTEC` erscheint einmal als `EDUTC`.",
+        "Logo-, ORCID- und DOI-Symbole der Titelseite sind nur als Bildplatzhalter vorhanden; bibliografische Textangaben und DOI bleiben erhalten."
+      ],
+      "evidence": [
+        "PDF-Seiten 10-14 zeigen Tabellen 1-7; Markdown-Zeilen 198-382 enthalten alle sieben Tabellen und ihre zugehörigen Aktivitäts- sowie Sesgo-de-Género-Inhalte.",
+        "PDF-Seite 1 und Markdown-Seite 1 stimmen bei Artikeltitel, englischem Titel, Autorinnen, Abstracts sowie Received-/Accepted-Daten überein.",
+        "Alle PDF-Seiten 1-19 besitzen korrespondierende PAGE-Marker im Markdown.",
+        "Die Überschriftenfolge Introduction, Marcos de referencias, Metodología, Resultados, Discusión y conclusiones, Financiación, Contribución de los autores und Referencias ist vollständig erhalten.",
+        "PDF-Seite 19 und das Markdown-Ende enthalten das Ende der Referenzen und den vollständigen Zitierhinweis."
+      ]
+    }
+  ]
+}

@@ -428,6 +428,7 @@
     font-size: inherit;
 }
 
+.lit-paper-version,
 .lit-paper-analysis,
 .lit-paper-evidence {
     margin-top: var(--space-lg);
@@ -440,6 +441,7 @@
     font-size: var(--text-sm);
 }
 
+.lit-paper-version,
 .lit-paper-analysis dl {
     display: grid;
     grid-template-columns: minmax(150px, 0.3fr) 1fr;
@@ -448,11 +450,13 @@
     line-height: 1.5;
 }
 
+.lit-paper-version dt,
 .lit-paper-analysis dt {
     color: var(--gray-500);
     font-weight: 600;
 }
 
+.lit-paper-version dd,
 .lit-paper-analysis dd {
     color: var(--gray-700);
 }
@@ -524,6 +528,7 @@
         align-items: flex-start;
     }
 
+    .lit-paper-version,
     .lit-paper-analysis dl {
         grid-template-columns: 1fr;
     }

@@ -1,0 +1,2998 @@
+{
+  "schema": "femprompt-codex-websearch-lane/0.1",
+  "generated_at": "2026-08-24T18:30:00+02:00",
+  "cutoff_date": "2026-08-24",
+  "year_filter": {
+    "from": "2026-01-01",
+    "through": "2026-08-24",
+    "rule": "The selected version must have a documented publication or version date inside the interval; earlier versions remain in the version chain."
+  },
+  "lane_id": "B",
+  "lane_title": "Gender, feminist and intersectional AI research, bias, fairness, diversity, critical AI literacy and professional education",
+  "scope": "2026 publications on generative AI, LLMs or directly relevant AI systems that substantively address gender, feminist or intersectional analysis, bias, inequality, diversity, fairness, critical AI literacy, professional education, social work, human services, mental health, health, counseling or consequential person-level decisions.",
+  "exact_queries": [
+    "\"generative AI\" gender bias 2026 social work",
+    "\"large language model\" gender bias mental health 2026",
+    "\"generative AI\" intersectionality fairness 2026",
+    "\"feminist AI\" 2026 education",
+    "\"AI literacy\" bias teacher education 2026",
+    "\"generative AI\" social work education 2026",
+    "\"LLM\" racial ethnic gender bias psychiatric diagnosis 2026",
+    "\"AI-generated images\" social workers gender race 2026",
+    "\"generative AI\" disability bias hiring 2026",
+    "\"ChatGPT\" disability job recommendation 2026",
+    "\"large language models\" stigma health judgement 2026",
+    "\"generative AI\" diversity equity inclusion healthcare education 2026",
+    "\"gender-inclusive STEM\" generative AI teachers 2026",
+    "\"sesgos de género\" \"IA generativa\" 2026",
+    "\"inteligencia artificial\" \"salud mental\" género 2026",
+    "\"inteligencia artificial\" sesgos género educación 2026",
+    "\"生成式人工智能\" 偏见 心理健康 教育 2026",
+    "\"algorithmic bias\" clinical resource allocation LLM 2026",
+    "\"ethics and fairness\" AI deception detection mental health 2026",
+    "\"generative AI\" body image eating disorder equity 2026",
+    "\"generative AI\" inequality adoption socioeconomic 2026",
+    "\"gender bias\" generative AI recruitment 2026",
+    "\"gendered\" generative AI adoption 2026",
+    "site:crossref.org 2026 generative AI bias fairness",
+    "site:pubmed.ncbi.nlm.nih.gov 2026 LLM bias mental health",
+    "site:arxiv.org 2026 generative AI gender inequality"
+  ],
+  "searched_sources": [
+    {
+      "source": "Crossref REST API",
+      "role": "DOI metadata and date discovery"
+    },
+    {
+      "source": "Publisher primary pages",
+      "publishers": [
+        "Taylor & Francis",
+        "Springer Nature",
+        "Elsevier",
+        "SAGE",
+        "Wiley",
+        "JMIR Publications",
+        "Frontiers",
+        "Royal Society",
+        "AUP",
+        "Edutec",
+        "Revista CTS",
+        "Interconectando Saberes",
+        "Journal of Psychological Science"
+      ],
+      "role": "bibliographic, version, access and peer-review evidence"
+    },
+    {
+      "source": "PubMed and PubMed Central",
+      "role": "medical identifiers, dates and open full text"
+    },
+    {
+      "source": "arXiv and export.arxiv.org API",
+      "role": "preprint identity, dates and version status"
+    },
+    {
+      "source": "Institutional repositories",
+      "repositories": [
+        "UCL Discovery",
+        "UWE Research Repository",
+        "Flinders ResearchNow",
+        "University of Helsinki Research Portal"
+      ],
+      "role": "full text and peer-review classification"
+    },
+    {
+      "source": "Google/Bing web index through web search",
+      "role": "candidate discovery only; final records grounded in primary sources"
+    }
+  ],
+  "deduplication_sources": [
+    "corpus/work_version_registry.json",
+    "corpus/zotero_export.json",
+    "generated/round2-intake-package.json",
+    "generated/contextual-update-2026-08-24-intake-package.json",
+    "corpus/deep-research/round2/contextual-update-2026-08-24/lane-a-social-work.json",
+    "corpus/deep-research/round2/contextual-update-2026-08-24/lane-b-feminist-social-work.json",
+    "corpus/deep-research/round2/contextual-update-2026-08-24/lane-c-prompt-bias.json"
+  ],
+  "saturation": {
+    "status": "high_but_not_exhaustive",
+    "rationale": "Repeated English, German, Spanish and Chinese concept/domain queries converged on the same direct social-work, health, education, hiring and representation clusters. Crossref, publisher, PubMed/PMC, OJS, institutional-repository and arXiv checks yielded diminishing new eligible Works. August 2026 indexing remains volatile, and some publisher pages did not expose item-level peer-review histories.",
+    "last_new_candidate_clusters": [
+      "socioeconomic GenAI adoption inequality",
+      "disability bias in employment decisions",
+      "multilingual gender-bias studies",
+      "mental-health fairness and stigma"
+    ],
+    "limitations": [
+      "No subscription database search interface was available.",
+      "Some Elsevier and Wiley full texts were paywalled or blocked to automated retrieval.",
+      "Exact publication day was not exposed for DOI 10.1016/j.techsoc.2026.103402.",
+      "Peer-review status was left not_established whenever only a journal label, rather than item-specific evidence, was available."
+    ]
+  },
+  "candidates": [
+    {
+      "tier": "A",
+      "title": "The (Un)Fair Algorithm: Socio-Technical Ethics Work for Artificial Intelligence in Social Work",
+      "authors": [
+        "Ida Schrøder",
+        "Marie Leth Meilvang",
+        "Matilde Høybye-Mortensen"
+      ],
+      "publication_date": "2026-02-18",
+      "publication_type": "research_article",
+      "venue": "Ethics and Social Welfare",
+      "volume_issue_pages": "20(3), 409-424",
+      "doi": "10.1080/17496535.2026.2619945",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-02-18",
+          "url": "https://www.tandfonline.com/doi/full/10.1080/17496535.2026.2619945",
+          "peer_review_status": "peer_reviewed"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-02-18",
+        "url": "https://www.tandfonline.com/doi/full/10.1080/17496535.2026.2619945",
+        "peer_review_status": "peer_reviewed"
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "basis": "Publisher gives received and accepted dates.",
+        "url": "https://www.tandfonline.com/doi/full/10.1080/17496535.2026.2619945",
+        "received": "2025-03-19",
+        "accepted": "2026-01-16"
+      },
+      "access": {
+        "status": "publisher_access",
+        "license": null,
+        "fulltext_url": null,
+        "landing_url": "https://doi.org/10.1080/17496535.2026.2619945"
+      },
+      "eligibility": {
+        "technical": "AI systems and socio-technical ethics work.",
+        "social": "Direct empirical social-work study of fairness, discretion and ethics.",
+        "assessment": "both_dimensions_direct"
+      },
+      "source_urls": [
+        "https://doi.org/10.1080/17496535.2026.2619945"
+      ],
+      "duplicate_check": {
+        "status": "previously_identified",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [
+          "contextual intake",
+          "lane A",
+          "lane B"
+        ],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "include_priority",
+      "notes": [
+        "previously_identified"
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Artificial intelligence: a neoliberal tool to better manage social inequalities?",
+      "authors": [
+        "Paul Michael Garrett"
+      ],
+      "publication_date": "2026-02-03",
+      "publication_type": "research_article",
+      "venue": "European Journal of Social Work",
+      "volume_issue_pages": "29(5), 1029-1041",
+      "doi": "10.1080/13691457.2025.2607705",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-02-03",
+          "url": "https://www.tandfonline.com/doi/full/10.1080/13691457.2025.2607705",
+          "peer_review_status": "peer_reviewed"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-02-03",
+        "url": "https://www.tandfonline.com/doi/full/10.1080/13691457.2025.2607705",
+        "peer_review_status": "peer_reviewed"
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "basis": "Publisher gives received and accepted dates.",
+        "url": "https://www.tandfonline.com/doi/full/10.1080/13691457.2025.2607705",
+        "received": "2025-03-15",
+        "accepted": "2025-12-16"
+      },
+      "access": {
+        "status": "publisher_access",
+        "license": null,
+        "fulltext_url": null,
+        "landing_url": "https://doi.org/10.1080/13691457.2025.2607705"
+      },
+      "eligibility": {
+        "technical": "Critical analysis of AI in welfare/social work.",
+        "social": "Direct analysis of AI, neoliberal governance and social inequality.",
+        "assessment": "both_dimensions_direct"
+      },
+      "source_urls": [
+        "https://doi.org/10.1080/13691457.2025.2607705"
+      ],
+      "duplicate_check": {
+        "status": "previously_identified",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [
+          "contextual intake",
+          "lane B"
+        ],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "include_priority",
+      "notes": [
+        "DOI suffix contains 2025; documented online publication is 2026-02-03.",
+        "previously_identified"
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Towards a framework for digital literacy in social work education in a time of artificial intelligence",
+      "authors": [
+        "Michael Wallengren-Lynch"
+      ],
+      "publication_date": "2026-04-16",
+      "publication_type": "research_article",
+      "venue": "Social Work Education",
+      "volume_issue_pages": "1-18",
+      "doi": "10.1080/02615479.2026.2660786",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-04-16",
+          "url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2660786",
+          "peer_review_status": "peer_reviewed"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-04-16",
+        "url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2660786",
+        "peer_review_status": "peer_reviewed"
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "basis": "Publisher gives received and accepted dates.",
+        "url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2660786",
+        "received": "2025-02-05",
+        "accepted": "2026-04-07"
+      },
+      "access": {
+        "status": "publisher_access",
+        "license": null,
+        "fulltext_url": null,
+        "landing_url": "https://doi.org/10.1080/02615479.2026.2660786"
+      },
+      "eligibility": {
+        "technical": "AI and critical digital-literacy framework.",
+        "social": "Direct professional-education contribution for social work.",
+        "assessment": "both_dimensions_direct"
+      },
+      "source_urls": [
+        "https://doi.org/10.1080/02615479.2026.2660786"
+      ],
+      "duplicate_check": {
+        "status": "previously_identified",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [
+          "contextual intake",
+          "lane B"
+        ],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "include_priority",
+      "notes": [
+        "previously_identified"
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Promoting AI literacy in social work education: lessons from an interdisciplinary course for social work students",
+      "authors": [
+        "Joshua Weber",
+        "Lauri Goldkind"
+      ],
+      "publication_date": "2026-02-24",
+      "publication_type": "research_article",
+      "venue": "Social Work Education",
+      "volume_issue_pages": "1-17",
+      "doi": "10.1080/02615479.2026.2635471",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-02-24",
+          "url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2635471",
+          "peer_review_status": "peer_reviewed"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-02-24",
+        "url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2635471",
+        "peer_review_status": "peer_reviewed"
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "basis": "Publisher gives received and accepted dates.",
+        "url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2635471",
+        "received": "2025-08-13",
+        "accepted": "2026-02-11"
+      },
+      "access": {
+        "status": "publisher_access",
+        "license": null,
+        "fulltext_url": null,
+        "landing_url": "https://doi.org/10.1080/02615479.2026.2635471"
+      },
+      "eligibility": {
+        "technical": "AI literacy taught through an interdisciplinary course.",
+        "social": "Direct social-work professional education with critical and ethical competencies.",
+        "assessment": "both_dimensions_direct"
+      },
+      "source_urls": [
+        "https://doi.org/10.1080/02615479.2026.2635471"
+      ],
+      "duplicate_check": {
+        "status": "previously_identified",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [
+          "contextual intake",
+          "lane B"
+        ],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "include_priority",
+      "notes": [
+        "previously_identified"
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "A kind of magic? Artificial intelligence-assisted recording: developing principles for an AI-informed social work curriculum",
+      "authors": [
+        "Richard Ingram"
+      ],
+      "publication_date": "2026-05-11",
+      "publication_type": "research_article",
+      "venue": "Social Work Education",
+      "volume_issue_pages": "1-18",
+      "doi": "10.1080/02615479.2026.2669634",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-05-11",
+          "url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2669634",
+          "peer_review_status": "peer_reviewed"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-05-11",
+        "url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2669634",
+        "peer_review_status": "peer_reviewed"
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "basis": "Publisher gives received and accepted dates.",
+        "url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2669634",
+        "received": "2026-03-19",
+        "accepted": "2026-04-22"
+      },
+      "access": {
+        "status": "publisher_access",
+        "license": null,
+        "fulltext_url": null,
+        "landing_url": "https://doi.org/10.1080/02615479.2026.2669634"
+      },
+      "eligibility": {
+        "technical": "AI-assisted recording and AI-informed curriculum.",
+        "social": "Direct social-work education and practice-recording implications.",
+        "assessment": "both_dimensions_direct"
+      },
+      "source_urls": [
+        "https://doi.org/10.1080/02615479.2026.2669634"
+      ],
+      "duplicate_check": {
+        "status": "previously_identified",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [
+          "contextual intake",
+          "lane B"
+        ],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "include_priority",
+      "notes": [
+        "previously_identified"
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Are future social workers ready for AI? Fears, barriers, and learning needs in higher education",
+      "authors": [
+        "Sacramento Pinazo-Hernandis",
+        "Nuria Carcavilla-González"
+      ],
+      "publication_date": "2026-02-23",
+      "publication_type": "research_article",
+      "venue": "Social Work Education",
+      "volume_issue_pages": "1-15",
+      "doi": "10.1080/02615479.2026.2631708",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-02-23",
+          "url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2631708",
+          "peer_review_status": "peer_reviewed"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-02-23",
+        "url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2631708",
+        "peer_review_status": "peer_reviewed"
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "basis": "Publisher gives received and accepted dates.",
+        "url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2631708",
+        "received": "2025-07-18",
+        "accepted": "2026-02-02"
+      },
+      "access": {
+        "status": "publisher_access",
+        "license": null,
+        "fulltext_url": null,
+        "landing_url": "https://doi.org/10.1080/02615479.2026.2631708"
+      },
+      "eligibility": {
+        "technical": "AI readiness, barriers and learning needs.",
+        "social": "Direct social-work student and professional-education relevance.",
+        "assessment": "both_dimensions_direct"
+      },
+      "source_urls": [
+        "https://doi.org/10.1080/02615479.2026.2631708"
+      ],
+      "duplicate_check": {
+        "status": "previously_identified",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [
+          "contextual intake",
+          "lane B"
+        ],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "include_priority",
+      "notes": [
+        "previously_identified"
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Innovating social work pedagogy: generative AI for critical competency development in evidence-based practice",
+      "authors": [
+        "Anitra P. Walker",
+        "Daniel J. Gibbs",
+        "Leon Banks",
+        "Hee Yun Lee",
+        "Kaylie Danielle Frazier",
+        "Jaesung Lee"
+      ],
+      "publication_date": "2026-01-21",
+      "publication_type": "research_article",
+      "venue": "Social Work Education",
+      "volume_issue_pages": "1-20",
+      "doi": "10.1080/02615479.2026.2617512",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-01-21",
+          "url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2617512",
+          "peer_review_status": "not_established"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-01-21",
+        "url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2617512",
+        "peer_review_status": "not_established"
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Publisher article metadata identifies a research article, but no item-specific review history was captured.",
+        "url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2617512"
+      },
+      "access": {
+        "status": "publisher_access",
+        "license": null,
+        "fulltext_url": null,
+        "landing_url": "https://doi.org/10.1080/02615479.2026.2617512"
+      },
+      "eligibility": {
+        "technical": "Generative AI used for critical competency development.",
+        "social": "Direct social-work pedagogy and evidence-based practice.",
+        "assessment": "both_dimensions_direct"
+      },
+      "source_urls": [
+        "https://doi.org/10.1080/02615479.2026.2617512"
+      ],
+      "duplicate_check": {
+        "status": "previously_identified",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [
+          "lane A"
+        ],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "include_priority",
+      "notes": [
+        "previously_identified"
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Same Prompt, Different Care? Evaluating Inequities in AI-Generated Mental Health Support for Immigrant Communities",
+      "authors": [
+        "Cheng Chow",
+        "Xiuer Gu"
+      ],
+      "publication_date": "2026-07-28",
+      "publication_type": "journal_article",
+      "venue": "Journal of the Society for Social Work and Research",
+      "volume_issue_pages": null,
+      "doi": "10.1086/743397",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-07-28",
+          "url": "https://www.journals.uchicago.edu/doi/10.1086/743397",
+          "peer_review_status": "not_established"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-07-28",
+        "url": "https://www.journals.uchicago.edu/doi/10.1086/743397",
+        "peer_review_status": "not_established"
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Publisher supplies journal article metadata, but no item-specific review history was captured.",
+        "url": "https://www.journals.uchicago.edu/doi/10.1086/743397"
+      },
+      "access": {
+        "status": "publisher_access",
+        "license": null,
+        "fulltext_url": null,
+        "landing_url": "https://www.journals.uchicago.edu/doi/10.1086/743397"
+      },
+      "eligibility": {
+        "technical": "Prompt-controlled comparison of AI-generated mental-health support.",
+        "social": "Direct inequity analysis for immigrant communities and social-work research.",
+        "assessment": "both_dimensions_direct"
+      },
+      "source_urls": [
+        "https://doi.org/10.1086/743397"
+      ],
+      "duplicate_check": {
+        "status": "previously_identified",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [
+          "contextual intake",
+          "lane A"
+        ],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "include_priority",
+      "notes": [
+        "previously_identified"
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Implicit Gender, Racial, and Ethnic Biases in Large Language Models: An Audit Study of Automated Psychiatric Diagnoses",
+      "authors": [
+        "Sachin R. Pendse",
+        "Mini Jain",
+        "Neha Kumar",
+        "Munmun De Choudhury"
+      ],
+      "publication_date": "2026-03-06",
+      "publication_type": "original_article",
+      "venue": "Mayo Clinic Proceedings: Digital Health",
+      "volume_issue_pages": "4(2), 100344",
+      "doi": "10.1016/j.mcpdig.2026.100344",
+      "other_identifiers": {
+        "pmid": "42221464",
+        "pmcid": "PMC13217584",
+        "pii": "S2949761226000106"
+      },
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-03-06",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13217584/",
+          "peer_review_status": "not_established"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-03-06",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13217584/",
+        "peer_review_status": "not_established"
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Elsevier and NLM classify it as an Original Article; accessible XML does not expose received or accepted dates.",
+        "url": "https://www.sciencedirect.com/science/article/pii/S2949761226000106"
+      },
+      "access": {
+        "status": "open_access",
+        "license": "CC BY-NC-ND",
+        "fulltext_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13217584/",
+        "landing_url": "https://www.sciencedirect.com/science/article/pii/S2949761226000106"
+      },
+      "eligibility": {
+        "technical": "Audit of LLM-generated psychiatric diagnoses.",
+        "social": "Direct gender, racial and ethnic bias in mental-health decisions.",
+        "assessment": "both_dimensions_direct"
+      },
+      "source_urls": [
+        "https://doi.org/10.1016/j.mcpdig.2026.100344",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC13217584/"
+      ],
+      "duplicate_check": {
+        "status": "previously_identified",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [
+          "lane B"
+        ],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "include_priority",
+      "notes": [
+        "previously_identified"
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "AI-Generated Images of Social Workers in Healthcare and Implications for Professional Identity",
+      "authors": [
+        "Helen Hickson",
+        "Amy-Louise Byrne",
+        "Jennifer Mulvogue"
+      ],
+      "publication_date": "2026-04-30",
+      "publication_type": "research_article",
+      "venue": "Australian Social Work",
+      "volume_issue_pages": "1-17",
+      "doi": "10.1080/0312407X.2026.2627220",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-04-30",
+          "url": "https://www.tandfonline.com/doi/full/10.1080/0312407X.2026.2627220",
+          "peer_review_status": "peer_reviewed"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-04-30",
+        "url": "https://www.tandfonline.com/doi/full/10.1080/0312407X.2026.2627220",
+        "peer_review_status": "peer_reviewed"
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "basis": "Publisher gives received and accepted dates.",
+        "url": "https://www.tandfonline.com/doi/full/10.1080/0312407X.2026.2627220",
+        "received": "2025-08-07",
+        "accepted": "2026-02-01"
+      },
+      "access": {
+        "status": "publisher_access",
+        "license": null,
+        "fulltext_url": "https://www.tandfonline.com/doi/pdf/10.1080/0312407X.2026.2627220",
+        "landing_url": "https://www.tandfonline.com/doi/full/10.1080/0312407X.2026.2627220"
+      },
+      "eligibility": {
+        "technical": "Critical discourse analysis of AI-generated professional imagery.",
+        "social": "Directly identifies white, able-bodied and classed representations of social workers and absences of diverse service populations.",
+        "assessment": "both_dimensions_direct"
+      },
+      "source_urls": [
+        "https://doi.org/10.1080/0312407X.2026.2627220"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "include_priority",
+      "notes": [
+        "new_candidate"
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Large language models exhibit stigmatizing behaviour in contextual judgements of health conditions",
+      "authors": [
+        "Xi Wang",
+        "Yujia Zhou",
+        "Guangyu Zhou"
+      ],
+      "publication_date": "2026-07-06",
+      "publication_type": "article",
+      "venue": "Nature Health",
+      "volume_issue_pages": null,
+      "doi": "10.1038/s44360-026-00164-4",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-07-06",
+          "url": "https://www.nature.com/articles/s44360-026-00164-4",
+          "peer_review_status": "peer_reviewed"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-07-06",
+        "url": "https://www.nature.com/articles/s44360-026-00164-4",
+        "peer_review_status": "peer_reviewed"
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "basis": "Publisher history records receipt and acceptance.",
+        "url": "https://www.nature.com/articles/s44360-026-00164-4",
+        "received": "2026-01-23",
+        "accepted": "2026-06-10"
+      },
+      "access": {
+        "status": "publisher_access",
+        "license": null,
+        "fulltext_url": null,
+        "landing_url": "https://www.nature.com/articles/s44360-026-00164-4"
+      },
+      "eligibility": {
+        "technical": "Six LLMs evaluated over 61,200 contextual health judgements.",
+        "social": "Direct stigma analysis covering HIV, hepatitis B and mental-health conditions across languages.",
+        "assessment": "both_dimensions_direct"
+      },
+      "source_urls": [
+        "https://doi.org/10.1038/s44360-026-00164-4",
+        "https://crossmark.crossref.org/dialog/?doi=10.1038%2Fs44360-026-00164-4"
+      ],
+      "duplicate_check": {
+        "status": "previously_identified",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [
+          "lane C exclusion"
+        ],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "include_priority",
+      "notes": [
+        "Previously found but excluded from prompt-mitigation lane; eligible here."
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Integrating diversity, equity, and inclusion in generative AI applications for healthcare education: a scoping review",
+      "authors": [
+        "Hwayeon Danielle Shin",
+        "Charlene E. Ronquillo",
+        "Jisan Lee",
+        "Zerina Lokmic-Tomkins",
+        "Lisa Reid",
+        "Sang Bin You",
+        "Shauna Davies",
+        "Lorraine J. Block",
+        "Irem Ozbay",
+        "Mifetika Lukitasari",
+        "Hannah Cho",
+        "Mijeong Park",
+        "Hana Kim",
+        "Brigitte Fong Yeong Woo",
+        "JaMor Hairston",
+        "Hyeongju Ryu",
+        "Zhihong Zhang",
+        "Mollie Hobensack",
+        "Nader Alnomasy",
+        "Pallavi Gupta",
+        "Maxim Topaz",
+        "Jiyoun Song"
+      ],
+      "publication_date": "2026-07-02",
+      "publication_type": "journal_preproof",
+      "venue": "International Journal of Medical Informatics",
+      "volume_issue_pages": "220, 106582",
+      "doi": "10.1016/j.ijmedinf.2026.106582",
+      "other_identifiers": {
+        "pii": "S1386505626003229"
+      },
+      "versions": [
+        {
+          "version_type": "proof",
+          "date": "2026-07-02",
+          "url": "https://www.sciencedirect.com/science/article/pii/S1386505626003229",
+          "peer_review_status": "peer_reviewed"
+        },
+        {
+          "version_type": "version_of_record",
+          "date": "2026-11",
+          "url": "https://doi.org/10.1016/j.ijmedinf.2026.106582",
+          "peer_review_status": "peer_reviewed"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "proof",
+        "date": "2026-07-02",
+        "url": "https://www.sciencedirect.com/science/article/pii/S1386505626003229",
+        "peer_review_status": "peer_reviewed"
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "basis": "Institutional research portal classifies the accepted review article as peer reviewed; publisher labels the selected 2026-07-02 file Journal Pre-proof.",
+        "url": "https://researchnow.flinders.edu.au/"
+      },
+      "access": {
+        "status": "publisher_access",
+        "license": null,
+        "fulltext_url": null,
+        "landing_url": "https://www.sciencedirect.com/science/article/pii/S1386505626003229"
+      },
+      "eligibility": {
+        "technical": "Scoping review of DEI in generative-AI healthcare education.",
+        "social": "Direct diversity, equity and intersectional-identity relevance for professional education.",
+        "assessment": "both_dimensions_direct"
+      },
+      "source_urls": [
+        "https://doi.org/10.1016/j.ijmedinf.2026.106582",
+        "https://www.sciencedirect.com/science/article/pii/S1386505626003229"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "include_priority",
+      "notes": [
+        "new_candidate",
+        "Preferred in-window version is the journal pre-proof; issue VOR is dated 2026-11 and lies after the cutoff."
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Beyond “painting in pink”: A critical case study of all-girls generative AI workshops in a European makerspace and implications for gender equity in computing",
+      "authors": [
+        "Qian Liu",
+        "Louise Archer",
+        "Meghna Nag Chowdhuri",
+        "Esme Freedman",
+        "Jennifer DeWitt"
+      ],
+      "publication_date": "2026-05-04",
+      "publication_type": "research_article",
+      "venue": "Computers and Education: Artificial Intelligence",
+      "volume_issue_pages": "10, 100602",
+      "doi": "10.1016/j.caeai.2026.100602",
+      "other_identifiers": {
+        "pii": "S2666920X26000640"
+      },
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-05-04",
+          "url": "https://discovery.ucl.ac.uk/id/eprint/10225293/",
+          "peer_review_status": "peer_reviewed"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-05-04",
+        "url": "https://discovery.ucl.ac.uk/id/eprint/10225293/",
+        "peer_review_status": "peer_reviewed"
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "basis": "Publisher history records acceptance; repository supplies the VOR.",
+        "url": "https://discovery.ucl.ac.uk/id/eprint/10225293/",
+        "received": "2025-06-21",
+        "revised": "2026-03-31",
+        "accepted": "2026-04-30"
+      },
+      "access": {
+        "status": "open_access",
+        "license": "CC BY",
+        "fulltext_url": "https://discovery.ucl.ac.uk/id/eprint/10225293/1/1-s2.0-S2666920X26000640-main-2.pdf",
+        "landing_url": "https://discovery.ucl.ac.uk/id/eprint/10225293/"
+      },
+      "eligibility": {
+        "technical": "Generative-AI workshop case study.",
+        "social": "Direct gender-equity analysis in computing education.",
+        "assessment": "both_dimensions_direct"
+      },
+      "source_urls": [
+        "https://doi.org/10.1016/j.caeai.2026.100602",
+        "https://discovery.ucl.ac.uk/id/eprint/10225293/"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "include_priority",
+      "notes": [
+        "new_candidate"
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Teachers’ perceptions of generative AI in gender-inclusive STEM education: a grounded theory study",
+      "authors": [
+        "Celeste Tipple",
+        "Therese Keane",
+        "Tianchong Wang",
+        "Milorad Cerovac"
+      ],
+      "publication_date": "2026-02-13",
+      "publication_type": "original_paper",
+      "venue": "Education and Information Technologies",
+      "volume_issue_pages": "31(8), 2399-2434",
+      "doi": "10.1007/s10639-026-13908-2",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-02-13",
+          "url": "https://link.springer.com/article/10.1007/s10639-026-13908-2",
+          "peer_review_status": "not_established"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-02-13",
+        "url": "https://link.springer.com/article/10.1007/s10639-026-13908-2",
+        "peer_review_status": "not_established"
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Publisher labels the item Original Paper; item-level review dates were not exposed in captured metadata.",
+        "url": "https://link.springer.com/article/10.1007/s10639-026-13908-2"
+      },
+      "access": {
+        "status": "publisher_access",
+        "license": null,
+        "fulltext_url": null,
+        "landing_url": "https://link.springer.com/article/10.1007/s10639-026-13908-2"
+      },
+      "eligibility": {
+        "technical": "Teacher study of generative AI in STEM education.",
+        "social": "Direct gender-inclusion and professional-education contribution.",
+        "assessment": "both_dimensions_direct"
+      },
+      "source_urls": [
+        "https://doi.org/10.1007/s10639-026-13908-2"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "include_priority",
+      "notes": [
+        "new_candidate",
+        "Peer-review status remains not_established pending item-specific evidence."
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Mitigating Disability Bias in Hiring: The Role of Inclusion-Focused Generative AI in Complex HR Decisions",
+      "authors": [
+        "Miles M. Yang"
+      ],
+      "publication_date": "2026-03-11",
+      "publication_type": "research_article",
+      "venue": "Human Resource Management Journal",
+      "volume_issue_pages": "36(3), 553-565",
+      "doi": "10.1111/1748-8583.70044",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-03-11",
+          "url": "https://onlinelibrary.wiley.com/doi/10.1111/1748-8583.70044",
+          "peer_review_status": "not_established"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-03-11",
+        "url": "https://onlinelibrary.wiley.com/doi/10.1111/1748-8583.70044",
+        "peer_review_status": "not_established"
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Wiley labels it Research Article; no item-specific review history was captured.",
+        "url": "https://onlinelibrary.wiley.com/doi/10.1111/1748-8583.70044"
+      },
+      "access": {
+        "status": "open_access",
+        "license": null,
+        "fulltext_url": null,
+        "landing_url": "https://onlinelibrary.wiley.com/doi/10.1111/1748-8583.70044"
+      },
+      "eligibility": {
+        "technical": "Experiments on inclusion-focused GenAI in hiring decisions.",
+        "social": "Direct disability-bias and high-stakes person-decision relevance.",
+        "assessment": "both_dimensions_direct"
+      },
+      "source_urls": [
+        "https://doi.org/10.1111/1748-8583.70044"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "include_priority",
+      "notes": [
+        "new_candidate"
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Bias Bytes: A Study Examining Disability Bias in ChatGPT Job Recommendation",
+      "authors": [
+        "Claire Sharon Sullivan",
+        "Charlotte Jackson",
+        "Virakti Shah",
+        "Tiona Wu",
+        "Nicole Ditchman"
+      ],
+      "publication_date": "2026-05-11",
+      "publication_type": "research_article",
+      "venue": "Journal of Vocational Rehabilitation",
+      "volume_issue_pages": "65(1), 70-82",
+      "doi": "10.1177/10522263261449121",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-05-11",
+          "url": "https://journals.sagepub.com/doi/10.1177/10522263261449121",
+          "peer_review_status": "not_established"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-05-11",
+        "url": "https://journals.sagepub.com/doi/10.1177/10522263261449121",
+        "peer_review_status": "not_established"
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "SAGE supplies OnlineFirst journal-article metadata; item-specific review history was not exposed.",
+        "url": "https://journals.sagepub.com/doi/10.1177/10522263261449121"
+      },
+      "access": {
+        "status": "publisher_access",
+        "license": null,
+        "fulltext_url": null,
+        "landing_url": "https://journals.sagepub.com/doi/10.1177/10522263261449121"
+      },
+      "eligibility": {
+        "technical": "ChatGPT job recommendations tested across disability vignettes.",
+        "social": "Direct relevance to disability bias, vocational rehabilitation counselors and employment specialists.",
+        "assessment": "both_dimensions_direct"
+      },
+      "source_urls": [
+        "https://doi.org/10.1177/10522263261449121"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "include_priority",
+      "notes": [
+        "new_candidate"
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Pensar críticamente la inteligencia artificial en la escuela: un estudio de caso desde una perspectiva de género",
+      "authors": [
+        "Maria Emilia Echeveste",
+        "Virginia Brassesco"
+      ],
+      "publication_date": "2026-06-30",
+      "publication_type": "journal_article",
+      "venue": "Edutec, Revista Electrónica de Tecnología Educativa",
+      "volume_issue_pages": "96, article 2",
+      "doi": "10.21556/edutec.2026.96.4777",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-06-30",
+          "url": "https://edutec.es/revista/index.php/edutec-e/article/view/4777",
+          "peer_review_status": "not_established"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-06-30",
+        "url": "https://edutec.es/revista/index.php/edutec-e/article/view/4777",
+        "peer_review_status": "not_established"
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Journal documents a peer-review process, but no item-specific acceptance history was exposed.",
+        "url": "https://edutec.es/revista/index.php/edutec-e/about/editorialPolicies#peerReviewProcess"
+      },
+      "access": {
+        "status": "open_access",
+        "license": "CC BY 4.0",
+        "fulltext_url": null,
+        "landing_url": "https://edutec.es/revista/index.php/edutec-e/article/view/4777"
+      },
+      "eligibility": {
+        "technical": "Critical analysis of generative-AI outputs in school teacher education.",
+        "social": "Direct gender perspective and critical AI literacy.",
+        "assessment": "both_dimensions_direct"
+      },
+      "source_urls": [
+        "https://doi.org/10.21556/edutec.2026.96.4777"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "include_priority",
+      "notes": [
+        "Spanish-language new_candidate"
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "IA, salud mental y género: Un mapeo sistemático de las ciencias sociales y humanas en América Latina",
+      "authors": [
+        "Chiara Forti Dono",
+        "María Eugenia Fazio",
+        "María Dalponte Ayastuy"
+      ],
+      "publication_date": "2026-07-23",
+      "publication_type": "systematic_mapping",
+      "venue": "Revista Iberoamericana de Ciencia, Tecnología y Sociedad",
+      "volume_issue_pages": "21(62), 269-302",
+      "doi": "10.35362/issn.1850-0013-1259",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-07-23",
+          "url": "https://ojs.revistacts.net/index.php/CTS/article/view/1259",
+          "peer_review_status": "not_established"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-07-23",
+        "url": "https://ojs.revistacts.net/index.php/CTS/article/view/1259",
+        "peer_review_status": "not_established"
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Issue and journal expose referee information but no item-specific history.",
+        "url": "https://ojs.revistacts.net/index.php/CTS/article/view/1259"
+      },
+      "access": {
+        "status": "open_access",
+        "license": "CC BY",
+        "fulltext_url": null,
+        "landing_url": "https://ojs.revistacts.net/index.php/CTS/article/view/1259"
+      },
+      "eligibility": {
+        "technical": "Systematic mapping of AI research.",
+        "social": "Direct intersection of mental health, gender and Latin American social-science/humanities research.",
+        "assessment": "both_dimensions_direct"
+      },
+      "source_urls": [
+        "https://doi.org/10.35362/issn.1850-0013-1259"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "include_priority",
+      "notes": [
+        "Spanish-language new_candidate",
+        "AI scope is broader than generative AI."
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Semantic Stability, Response Strategies, and Bias Analysis of Generative Artificial Intelligence in Psychological Health Education",
+      "authors": [
+        "Mu Yi",
+        "Li Qiang",
+        "Wang Zhen",
+        "Zhang Lidan",
+        "Chen Yu"
+      ],
+      "publication_date": "2026-03-20",
+      "publication_type": "journal_article",
+      "venue": "Journal of Psychological Science",
+      "volume_issue_pages": "49(2), 258-270",
+      "doi": "10.16719/j.cnki.1671-6981.20260201",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-03-20",
+          "url": "https://jps.ecnu.edu.cn/EN/10.16719/j.cnki.1671-6981.20260201",
+          "peer_review_status": "not_established"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-03-20",
+        "url": "https://jps.ecnu.edu.cn/EN/10.16719/j.cnki.1671-6981.20260201",
+        "peer_review_status": "not_established"
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Official journal page supplies article and PDF; item-specific peer-review history was not exposed.",
+        "url": "https://jps.ecnu.edu.cn/EN/10.16719/j.cnki.1671-6981.20260201"
+      },
+      "access": {
+        "status": "open_access",
+        "license": null,
+        "fulltext_url": null,
+        "landing_url": "https://jps.ecnu.edu.cn/EN/10.16719/j.cnki.1671-6981.20260201"
+      },
+      "eligibility": {
+        "technical": "Bias and response-strategy analysis of GenAI.",
+        "social": "Direct psychological-health education and high-stakes guidance relevance.",
+        "assessment": "both_dimensions_direct"
+      },
+      "source_urls": [
+        "https://jps.ecnu.edu.cn/EN/10.16719/j.cnki.1671-6981.20260201"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "include_priority",
+      "notes": [
+        "Chinese-language new_candidate",
+        "DOI string is supplied by the journal but was not found in Crossref."
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Algorithmic bias in clinical resource allocation by a large language model: a cross-sectional in-silico evaluation of 13,608 decisions",
+      "authors": [
+        "Siddharth Gandhi",
+        "Michael Balas"
+      ],
+      "publication_date": "2026-05-22",
+      "publication_type": "research_article",
+      "venue": "BMC Medical Ethics",
+      "volume_issue_pages": "27(1), article 136",
+      "doi": "10.1186/s12910-026-01496-2",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-05-22",
+          "url": "https://link.springer.com/article/10.1186/s12910-026-01496-2",
+          "peer_review_status": "peer_reviewed"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-05-22",
+        "url": "https://link.springer.com/article/10.1186/s12910-026-01496-2",
+        "peer_review_status": "peer_reviewed"
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "basis": "Publisher records receipt and acceptance.",
+        "url": "https://link.springer.com/article/10.1186/s12910-026-01496-2",
+        "received": "2025-10-14",
+        "accepted": "2026-05-19"
+      },
+      "access": {
+        "status": "open_access",
+        "license": null,
+        "fulltext_url": "https://link.springer.com/content/pdf/10.1186/s12910-026-01496-2.pdf",
+        "landing_url": "https://link.springer.com/article/10.1186/s12910-026-01496-2"
+      },
+      "eligibility": {
+        "technical": "GPT-5 tested on 13,608 clinical allocation decisions.",
+        "social": "Direct demographic and social bias across age, gender, race, income, dependents, education and social support.",
+        "assessment": "both_dimensions_direct"
+      },
+      "source_urls": [
+        "https://doi.org/10.1186/s12910-026-01496-2"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "include_priority",
+      "notes": [
+        "new_candidate",
+        "Publisher later records Version of Record date 2026-07-20; first publication is 2026-05-22."
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Ethics and Fairness Considerations in AI-Based Deception Detection Technologies for Mental Health Applications: Focus Group Study",
+      "authors": [
+        "Sayde Leya King",
+        "Serena Bhaskar",
+        "Julia Woodward",
+        "Tempestt Neal"
+      ],
+      "publication_date": "2026-05-25",
+      "publication_type": "original_paper",
+      "venue": "JMIR AI",
+      "volume_issue_pages": "5, e86633",
+      "doi": "10.2196/86633",
+      "other_identifiers": {
+        "pmid": "42184337",
+        "pmcid": "PMC13200768"
+      },
+      "versions": [
+        {
+          "version_type": "preprint",
+          "date": "2025-10-28",
+          "url": "https://preprints.jmir.org/preprint/86633",
+          "peer_review_status": "not_peer_reviewed"
+        },
+        {
+          "version_type": "version_of_record",
+          "date": "2026-05-25",
+          "url": "https://ai.jmir.org/2026/1/e86633/",
+          "peer_review_status": "peer_reviewed"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-05-25",
+        "url": "https://ai.jmir.org/2026/1/e86633/",
+        "peer_review_status": "peer_reviewed"
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "basis": "Publisher names reviewers and records acceptance.",
+        "url": "https://ai.jmir.org/2026/1/e86633/",
+        "submitted": "2025-10-28",
+        "revised": "2026-03-16",
+        "accepted": "2026-03-17",
+        "reviewers": [
+          "Drew Curtis",
+          "Henry Asante Antwi"
+        ]
+      },
+      "access": {
+        "status": "open_access",
+        "license": "CC BY 4.0",
+        "fulltext_url": "https://ai.jmir.org/2026/1/e86633/PDF",
+        "landing_url": "https://ai.jmir.org/2026/1/e86633/"
+      },
+      "eligibility": {
+        "technical": "AI-based deception detection in therapy.",
+        "social": "Direct fairness, cultural representation, power and trust issues in mental-health practice.",
+        "assessment": "both_dimensions_direct"
+      },
+      "source_urls": [
+        "https://doi.org/10.2196/86633",
+        "https://ai.jmir.org/2026/1/e86633/"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "include_priority",
+      "notes": [
+        "new_candidate"
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Existing and future use cases, and safety and ethical considerations for AI in body image, and eating disorder prevention",
+      "authors": [
+        "Nadia Craddock",
+        "Harriet G. Smith",
+        "Jake Linardon",
+        "Tracy L. Tylka",
+        "Phillippa C. Diedrichs"
+      ],
+      "publication_date": "2026-02-07",
+      "publication_type": "short_communication",
+      "venue": "Body Image",
+      "volume_issue_pages": "56, 102042",
+      "doi": "10.1016/j.bodyim.2026.102042",
+      "other_identifiers": {
+        "pmid": "41655362"
+      },
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-02-07",
+          "url": "https://uwe-repository.worktribe.com/output/15715301/existing-and-future-use-cases-and-safety-and-ethical-considerations-for-ai-in-body-image-and-eating-disorder-prevention",
+          "peer_review_status": "peer_reviewed"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-02-07",
+        "url": "https://uwe-repository.worktribe.com/output/15715301/existing-and-future-use-cases-and-safety-and-ethical-considerations-for-ai-in-body-image-and-eating-disorder-prevention",
+        "peer_review_status": "peer_reviewed"
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "basis": "Publisher history and institutional repository record acceptance and peer-reviewed status.",
+        "url": "https://uwe-repository.worktribe.com/output/15715301/existing-and-future-use-cases-and-safety-and-ethical-considerations-for-ai-in-body-image-and-eating-disorder-prevention",
+        "received": "2025-11-28",
+        "revised": "2026-02-04",
+        "accepted": "2026-02-04"
+      },
+      "access": {
+        "status": "open_access",
+        "license": "CC BY 4.0",
+        "fulltext_url": "https://uwe-repository.worktribe.com/OutputFile/15725579",
+        "landing_url": "https://doi.org/10.1016/j.bodyim.2026.102042"
+      },
+      "eligibility": {
+        "technical": "Traditional and generative AI in prevention and intervention.",
+        "social": "Direct equity, representation, appearance ideals, body image and eating-disorder prevention.",
+        "assessment": "both_dimensions_direct"
+      },
+      "source_urls": [
+        "https://doi.org/10.1016/j.bodyim.2026.102042",
+        "https://pubmed.ncbi.nlm.nih.gov/41655362/"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "include_priority",
+      "notes": [
+        "new_candidate"
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Mitigating medical bias in large language models by prompt engineering: an empirical study of effectiveness and trade-offs",
+      "authors": [
+        "Ying Xiao",
+        "Zhenpeng Chen",
+        "Jie Zhang"
+      ],
+      "publication_date": "2026-07-16",
+      "publication_type": "journal_article",
+      "venue": "Philosophical Transactions of the Royal Society A",
+      "volume_issue_pages": "384(2324), 20250125",
+      "doi": "10.1098/rsta.2025.0125",
+      "other_identifiers": {
+        "pmid": "42463224"
+      },
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-07-16",
+          "url": "https://royalsocietypublishing.org/doi/10.1098/rsta.2025.0125",
+          "peer_review_status": "peer_reviewed"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-07-16",
+        "url": "https://royalsocietypublishing.org/doi/10.1098/rsta.2025.0125",
+        "peer_review_status": "peer_reviewed"
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "basis": "Royal Society journal article metadata.",
+        "url": "https://royalsocietypublishing.org/doi/10.1098/rsta.2025.0125"
+      },
+      "access": {
+        "status": "open_access",
+        "license": "CC BY 4.0",
+        "fulltext_url": "https://royalsocietypublishing.org/rsta/article-pdf/doi/10.1098/rsta.2025.0125/6152317/rsta20250125.pdf",
+        "landing_url": "https://royalsocietypublishing.org/doi/10.1098/rsta.2025.0125"
+      },
+      "eligibility": {
+        "technical": "Five prompting strategies evaluated on a medical-bias benchmark.",
+        "social": "Direct healthcare fairness and patient-safety relevance.",
+        "assessment": "both_dimensions_direct"
+      },
+      "source_urls": [
+        "https://doi.org/10.1098/rsta.2025.0125",
+        "https://pubmed.ncbi.nlm.nih.gov/42463224/"
+      ],
+      "duplicate_check": {
+        "status": "previously_identified",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [
+          "contextual intake",
+          "lane C"
+        ],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "include_priority",
+      "notes": [
+        "previously_identified",
+        "DOI suffix contains 2025; documented VOR date is 2026-07-16."
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "New model, old risks: sociodemographic bias and adversarial hallucinations vulnerability in GPT-5",
+      "authors": [
+        "Mahmud Omar",
+        "Reem Agbareia",
+        "Donald U. Apakama",
+        "Carol R. Horowitz",
+        "Robert Freeman",
+        "Alexander W. Charney",
+        "Girish N. Nadkarni",
+        "Eyal Klang"
+      ],
+      "publication_date": "2026-04-04",
+      "publication_type": "comment",
+      "venue": "npj Digital Medicine",
+      "volume_issue_pages": "9(1), article 282",
+      "doi": "10.1038/s41746-026-02584-8",
+      "other_identifiers": {
+        "pmid": "41935214",
+        "pmcid": "PMC13050324",
+        "medrxiv": "10.1101/2025.09.19.25336180"
+      },
+      "versions": [
+        {
+          "version_type": "preprint",
+          "date": "2025-09-21",
+          "url": "https://doi.org/10.1101/2025.09.19.25336180",
+          "peer_review_status": "not_peer_reviewed"
+        },
+        {
+          "version_type": "version_of_record",
+          "date": "2026-04-04",
+          "url": "https://www.nature.com/articles/s41746-026-02584-8",
+          "peer_review_status": "not_established"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-04-04",
+        "url": "https://www.nature.com/articles/s41746-026-02584-8",
+        "peer_review_status": "not_established"
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Nature classifies the VOR as Comment; the accessible publisher page does not provide item-specific peer-review history.",
+        "url": "https://www.nature.com/articles/s41746-026-02584-8"
+      },
+      "access": {
+        "status": "open_access",
+        "license": null,
+        "fulltext_url": "https://www.nature.com/articles/s41746-026-02584-8.pdf",
+        "landing_url": "https://www.nature.com/articles/s41746-026-02584-8"
+      },
+      "eligibility": {
+        "technical": "GPT-5 evaluated across 500 emergency vignettes and adversarial prompts.",
+        "social": "Direct sociodemographic and LGBTQIA+ bias in clinical decisions.",
+        "assessment": "both_dimensions_direct"
+      },
+      "source_urls": [
+        "https://doi.org/10.1038/s41746-026-02584-8"
+      ],
+      "duplicate_check": {
+        "status": "previously_identified",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [
+          "lane C"
+        ],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "include_priority",
+      "notes": [
+        "previously_identified"
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Inclusive generative AI and the dynamics of inequality: A capability-resource model of adoption disparities",
+      "authors": [
+        "Hyelim Yang",
+        "Min Jae Park"
+      ],
+      "publication_date": "2026-08",
+      "publication_type": "journal_article",
+      "venue": "Technology in Society",
+      "volume_issue_pages": "87, 103402",
+      "doi": "10.1016/j.techsoc.2026.103402",
+      "other_identifiers": {
+        "pii": "S0160791X26001910"
+      },
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-08",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0160791X26001910",
+          "peer_review_status": "not_established"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-08",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0160791X26001910",
+        "peer_review_status": "not_established"
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Elsevier publisher page exposes the VOR and issue; item-specific review history was not captured.",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0160791X26001910"
+      },
+      "access": {
+        "status": "paywalled",
+        "license": null,
+        "fulltext_url": null,
+        "landing_url": "https://www.sciencedirect.com/science/article/pii/S0160791X26001910"
+      },
+      "eligibility": {
+        "technical": "Representative survey of GenAI adoption and capability barriers.",
+        "social": "Direct socioeconomic inequality analysis using a South Korean sample of 4,344 adults.",
+        "assessment": "both_dimensions_direct"
+      },
+      "source_urls": [
+        "https://doi.org/10.1016/j.techsoc.2026.103402"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "include_priority",
+      "notes": [
+        "new_candidate",
+        "Publisher exposes August 2026 but not an exact day in captured metadata; the live publisher record was retrievable before the 2026-08-24 cutoff."
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Toward substantive intersectional algorithmic fairness: desiderata for a feminist approach",
+      "authors": [
+        "Marie Mirsch",
+        "Laila Wegner",
+        "Jonas Strube",
+        "Carmen Leicht-Scholten"
+      ],
+      "publication_date": "2026-01-08",
+      "publication_type": "original_research",
+      "venue": "AI and Ethics",
+      "volume_issue_pages": "6(1), article 90",
+      "doi": "10.1007/s43681-025-00926-y",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-01-08",
+          "url": "https://link.springer.com/article/10.1007/s43681-025-00926-y",
+          "peer_review_status": "peer_reviewed"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-01-08",
+        "url": "https://link.springer.com/article/10.1007/s43681-025-00926-y",
+        "peer_review_status": "peer_reviewed"
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "basis": "Publisher records receipt and acceptance.",
+        "url": "https://link.springer.com/article/10.1007/s43681-025-00926-y",
+        "received": "2025-08-25",
+        "accepted": "2025-11-24"
+      },
+      "access": {
+        "status": "open_access",
+        "license": null,
+        "fulltext_url": null,
+        "landing_url": "https://link.springer.com/article/10.1007/s43681-025-00926-y"
+      },
+      "eligibility": {
+        "technical": "Framework for substantive algorithmic fairness.",
+        "social": "Direct feminist and intersectional analysis.",
+        "assessment": "both_dimensions_direct"
+      },
+      "source_urls": [
+        "https://doi.org/10.1007/s43681-025-00926-y"
+      ],
+      "duplicate_check": {
+        "status": "previously_identified",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [
+          "lane B"
+        ],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "include_priority",
+      "notes": [
+        "previously_identified"
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Gender Representation in Large Language Models: A Cross-Linguistic and Cross-Model Analysis",
+      "authors": [
+        "Aleksandra Urman",
+        "Emese Domahidi",
+        "Johannes B. Gruber",
+        "Ana Jovančević",
+        "Michaela Maier",
+        "Dren Gërguri",
+        "Jaromír Mazak",
+        "Mariken A.C.G. van der Velden"
+      ],
+      "publication_date": "2026-05-21",
+      "publication_type": "journal_article",
+      "venue": "Computational Communication Research",
+      "volume_issue_pages": "8(2), 1-47",
+      "doi": "10.5117/CCR2026.2.11.URMA",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-05-21",
+          "url": "https://www.aup-online.com/content/journals/10.5117/CCR2026.2.11.URMA",
+          "peer_review_status": "peer_reviewed"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-05-21",
+        "url": "https://www.aup-online.com/content/journals/10.5117/CCR2026.2.11.URMA",
+        "peer_review_status": "peer_reviewed"
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "basis": "Publisher records receipt and acceptance.",
+        "url": "https://www.aup-online.com/content/journals/10.5117/CCR2026.2.11.URMA",
+        "received": "2025-05-15",
+        "accepted": "2026-03-12"
+      },
+      "access": {
+        "status": "publisher_access",
+        "license": null,
+        "fulltext_url": null,
+        "landing_url": "https://www.aup-online.com/content/journals/10.5117/CCR2026.2.11.URMA"
+      },
+      "eligibility": {
+        "technical": "Cross-linguistic and cross-model LLM audit.",
+        "social": "Direct gender-representation analysis.",
+        "assessment": "both_dimensions_direct"
+      },
+      "source_urls": [
+        "https://doi.org/10.5117/CCR2026.2.11.URMA"
+      ],
+      "duplicate_check": {
+        "status": "previously_identified",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [
+          "lane B"
+        ],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "include_priority",
+      "notes": [
+        "previously_identified"
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "AI-generated visual disinformation and digital equity: an intersectional analysis of algorithmic vulnerabilities among marginalised communities",
+      "authors": [
+        "Vinanda Cinta Cendekia Putri"
+      ],
+      "publication_date": "2026-02-26",
+      "publication_type": "mini_review",
+      "venue": "Frontiers in Human Dynamics",
+      "volume_issue_pages": "8, 1791655",
+      "doi": "10.3389/fhumd.2026.1791655",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-02-26",
+          "url": "https://www.frontiersin.org/journals/human-dynamics/articles/10.3389/fhumd.2026.1791655/full",
+          "peer_review_status": "peer_reviewed"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-02-26",
+        "url": "https://www.frontiersin.org/journals/human-dynamics/articles/10.3389/fhumd.2026.1791655/full",
+        "peer_review_status": "peer_reviewed"
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "basis": "Publisher records receipt, revision and acceptance and names a reviewer.",
+        "url": "https://www.frontiersin.org/journals/human-dynamics/articles/10.3389/fhumd.2026.1791655/full",
+        "received": "2026-01-20",
+        "revised": "2026-02-07",
+        "accepted": "2026-02-18",
+        "reviewers": [
+          "Janneth Trejo-Quintana"
+        ]
+      },
+      "access": {
+        "status": "open_access",
+        "license": "CC BY",
+        "fulltext_url": null,
+        "landing_url": "https://www.frontiersin.org/journals/human-dynamics/articles/10.3389/fhumd.2026.1791655/full"
+      },
+      "eligibility": {
+        "technical": "Generative-image disinformation and algorithmic vulnerability.",
+        "social": "Direct intersectional digital-equity analysis of marginalized communities.",
+        "assessment": "both_dimensions_direct"
+      },
+      "source_urls": [
+        "https://doi.org/10.3389/fhumd.2026.1791655"
+      ],
+      "duplicate_check": {
+        "status": "previously_identified",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [
+          "lane B"
+        ],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "include_priority",
+      "notes": [
+        "previously_identified"
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Can AI reduce gender bias? The case of AI-generated audio conversations in Google's NotebookLM",
+      "authors": [
+        "Milad Malekzadeh"
+      ],
+      "publication_date": "2026-08-08",
+      "publication_type": "journal_article",
+      "venue": "Computers in Human Behavior Reports",
+      "volume_issue_pages": "23, 101246",
+      "doi": "10.1016/j.chbr.2026.101246",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-08-08",
+          "url": "https://doi.org/10.1016/j.chbr.2026.101246",
+          "peer_review_status": "peer_reviewed"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-08-08",
+        "url": "https://doi.org/10.1016/j.chbr.2026.101246",
+        "peer_review_status": "peer_reviewed"
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "basis": "Institutional research portal classifies the publication as a refereed journal article.",
+        "url": "https://researchportal.helsinki.fi/en/publications/can-ai-reduce-gender-bias-the-case-of-ai-generated-audio-conversa/"
+      },
+      "access": {
+        "status": "open_access",
+        "license": null,
+        "fulltext_url": null,
+        "landing_url": "https://doi.org/10.1016/j.chbr.2026.101246"
+      },
+      "eligibility": {
+        "technical": "Evaluation of AI-generated audio conversations in NotebookLM.",
+        "social": "Direct gender-bias question.",
+        "assessment": "both_dimensions_direct"
+      },
+      "source_urls": [
+        "https://doi.org/10.1016/j.chbr.2026.101246"
+      ],
+      "duplicate_check": {
+        "status": "previously_identified",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [
+          "lane B"
+        ],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "include_priority",
+      "notes": [
+        "previously_identified"
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Generative AI So White: Racial Biases in AI Imagery Across the United States and China",
+      "authors": [
+        "Zituo Wang",
+        "Jiayi Zhu",
+        "Zhuoyu Wang",
+        "Vivian Jiaying Zhai",
+        "Jianyu Wu"
+      ],
+      "publication_date": "2026-04-08",
+      "publication_type": "research_article",
+      "venue": "Science Communication",
+      "volume_issue_pages": "48(3), 305-337",
+      "doi": "10.1177/10755470261428542",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-04-08",
+          "url": "https://journals.sagepub.com/doi/10.1177/10755470261428542",
+          "peer_review_status": "not_established"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-04-08",
+        "url": "https://journals.sagepub.com/doi/10.1177/10755470261428542",
+        "peer_review_status": "not_established"
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "SAGE supplies journal VOR metadata; item-specific review history was not exposed.",
+        "url": "https://journals.sagepub.com/doi/10.1177/10755470261428542"
+      },
+      "access": {
+        "status": "publisher_access",
+        "license": null,
+        "fulltext_url": "https://journals.sagepub.com/doi/pdf/10.1177/10755470261428542",
+        "landing_url": "https://journals.sagepub.com/doi/10.1177/10755470261428542"
+      },
+      "eligibility": {
+        "technical": "Audit of 9,600 occupational images from four generative models.",
+        "social": "Direct racial-representation and cross-national bias analysis.",
+        "assessment": "both_dimensions_direct"
+      },
+      "source_urls": [
+        "https://doi.org/10.1177/10755470261428542"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "include_priority",
+      "notes": [
+        "new_candidate"
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Sesgos de género y modelos de IA generativa: Aproximaciones desde una experiencia de análisis cualitativo desde la generación de imágenes",
+      "authors": [
+        "Patricia Peña Miranda"
+      ],
+      "publication_date": "2026-07-23",
+      "publication_type": "journal_article",
+      "venue": "Revista Iberoamericana de Ciencia, Tecnología y Sociedad",
+      "volume_issue_pages": "21(62), 157-182",
+      "doi": "10.35362/issn.1850-0013-1258",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-07-23",
+          "url": "https://ojs.revistacts.net/index.php/CTS/article/view/1258",
+          "peer_review_status": "not_established"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-07-23",
+        "url": "https://ojs.revistacts.net/index.php/CTS/article/view/1258",
+        "peer_review_status": "not_established"
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Issue and journal expose referee information but no item-specific history.",
+        "url": "https://ojs.revistacts.net/index.php/CTS/article/view/1258"
+      },
+      "access": {
+        "status": "open_access",
+        "license": "CC BY",
+        "fulltext_url": null,
+        "landing_url": "https://ojs.revistacts.net/index.php/CTS/article/view/1258"
+      },
+      "eligibility": {
+        "technical": "Qualitative experiment with generative-image models.",
+        "social": "Direct gender-bias and Latin American feminist analysis.",
+        "assessment": "both_dimensions_direct"
+      },
+      "source_urls": [
+        "https://doi.org/10.35362/issn.1850-0013-1258"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "include_priority",
+      "notes": [
+        "Spanish-language new_candidate"
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Análisis de la desinformación y los sesgos de género generados por la inteligencia artificial",
+      "authors": [
+        "Barbara Sarrionandia Uriguen"
+      ],
+      "publication_date": "2026-07-13",
+      "publication_type": "journal_article",
+      "venue": "Interconectando Saberes",
+      "volume_issue_pages": "11(21), 1-18",
+      "doi": "10.25009/is.v11i21.3001",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-07-13",
+          "url": "https://is.uv.mx/index.php/IS/article/view/3001",
+          "peer_review_status": "not_established"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-07-13",
+        "url": "https://is.uv.mx/index.php/IS/article/view/3001",
+        "peer_review_status": "not_established"
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "OJS journal supplies its evaluation policy; item-level history was not exposed.",
+        "url": "https://is.uv.mx/index.php/IS/article/view/3001"
+      },
+      "access": {
+        "status": "open_access",
+        "license": null,
+        "fulltext_url": null,
+        "landing_url": "https://is.uv.mx/index.php/IS/article/view/3001"
+      },
+      "eligibility": {
+        "technical": "Analysis of AI-generated disinformation and bias.",
+        "social": "Direct gender-bias and media-literacy contribution.",
+        "assessment": "both_dimensions_direct"
+      },
+      "source_urls": [
+        "https://doi.org/10.25009/is.v11i21.3001"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "include_priority",
+      "notes": [
+        "Spanish-language new_candidate"
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Beyond inclusion: feminist AI for transformative justice in STEM",
+      "authors": [
+        "Tanja Kubes"
+      ],
+      "publication_date": "2026-05-20",
+      "publication_type": "article",
+      "venue": "AI and Ethics",
+      "volume_issue_pages": "6(3), article 311",
+      "doi": "10.1007/s43681-026-01161-9",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-05-20",
+          "url": "https://link.springer.com/article/10.1007/s43681-026-01161-9",
+          "peer_review_status": "peer_reviewed"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-05-20",
+        "url": "https://link.springer.com/article/10.1007/s43681-026-01161-9",
+        "peer_review_status": "peer_reviewed"
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "basis": "Publisher metadata and local registry record receipt, acceptance and VOR status.",
+        "url": "https://link.springer.com/article/10.1007/s43681-026-01161-9"
+      },
+      "access": {
+        "status": "open_access",
+        "license": "CC BY 4.0",
+        "fulltext_url": "https://link.springer.com/content/pdf/10.1007/s43681-026-01161-9.pdf",
+        "landing_url": "https://link.springer.com/article/10.1007/s43681-026-01161-9"
+      },
+      "eligibility": {
+        "technical": "Feminist AI and critical AI literacy.",
+        "social": "Direct intersectional and transformative-justice analysis in STEM.",
+        "assessment": "both_dimensions_direct"
+      },
+      "source_urls": [
+        "https://doi.org/10.1007/s43681-026-01161-9"
+      ],
+      "duplicate_check": {
+        "status": "previously_identified",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [
+          "work registry",
+          "round2 intake"
+        ],
+        "relation_to_existing_work": "work:0b69246b-4c05-5e2f-a22e-1416ec893b1d"
+      },
+      "recommendation": "retain_existing_work",
+      "notes": [
+        "previously_identified",
+        "Existing VOR, not a new Work.",
+        "The local registry retains a peer-review-status conflict flag; the publisher metadata is the positive item-level basis used here."
+      ]
+    },
+    {
+      "tier": "B",
+      "title": "AI literacy for teacher educators: a holistic curriculum for capacity-building in higher education",
+      "authors": [
+        "Sima Caspari-Sadeghi"
+      ],
+      "publication_date": "2026-04-14",
+      "publication_type": "curriculum_instruction",
+      "venue": "Frontiers in Education",
+      "volume_issue_pages": "11, 1745768",
+      "doi": "10.3389/feduc.2026.1745768",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-04-14",
+          "url": "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2026.1745768/full",
+          "peer_review_status": "peer_reviewed"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-04-14",
+        "url": "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2026.1745768/full",
+        "peer_review_status": "peer_reviewed"
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "basis": "Publisher records receipt and acceptance and names reviewers.",
+        "url": "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2026.1745768/full",
+        "received": "2025-11-13",
+        "accepted": "2026-03-23"
+      },
+      "access": {
+        "status": "open_access",
+        "license": "CC BY",
+        "fulltext_url": null,
+        "landing_url": "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2026.1745768/full"
+      },
+      "eligibility": {
+        "technical": "Direct critical AI-literacy curriculum.",
+        "social": "Professional teacher education is direct; gender, intersectionality and fairness are secondary rather than central.",
+        "assessment": "plausible_or_transferred"
+      },
+      "source_urls": [
+        "https://doi.org/10.3389/feduc.2026.1745768"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "retain_for_screening",
+      "notes": [
+        "new_candidate",
+        "Tier B because the social-bias dimension is not the central analytic object."
+      ]
+    },
+    {
+      "tier": "B",
+      "title": "Generative AI as a de facto mental health provider: a policy brief and urgent call for regulation",
+      "authors": [
+        "Elad Refoua",
+        "Karny Gigi",
+        "Inbar Levkovich",
+        "Dorit Hadar Shoval",
+        "Zohar Elyoseph",
+        "Iftach Tsafrir",
+        "Oori Pen",
+        "Tal Angert",
+        "Yuval Haber"
+      ],
+      "publication_date": "2026-05-19",
+      "publication_type": "policy_brief",
+      "venue": "Frontiers in Digital Health",
+      "volume_issue_pages": "8, 1708806",
+      "doi": "10.3389/fdgth.2026.1708806",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-05-19",
+          "url": "https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2026.1708806/full",
+          "peer_review_status": "peer_reviewed"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-05-19",
+        "url": "https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2026.1708806/full",
+        "peer_review_status": "peer_reviewed"
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "basis": "Publisher PDF names two reviewers and records receipt, revision and acceptance.",
+        "url": "https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2026.1708806/pdf",
+        "received": "2025-09-19",
+        "revised": "2026-04-03",
+        "accepted": "2026-04-07",
+        "reviewers": [
+          "George Karystianis",
+          "Luke Balcombe"
+        ]
+      },
+      "access": {
+        "status": "open_access",
+        "license": "CC BY",
+        "fulltext_url": "https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2026.1708806/pdf",
+        "landing_url": "https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2026.1708806/full"
+      },
+      "eligibility": {
+        "technical": "Direct generative-AI mental-health provider analysis.",
+        "social": "Human-services context is direct; gender/fairness analysis is not central.",
+        "assessment": "plausible_or_transferred"
+      },
+      "source_urls": [
+        "https://doi.org/10.3389/fdgth.2026.1708806"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "retain_for_screening",
+      "notes": [
+        "new_candidate"
+      ]
+    },
+    {
+      "tier": "B",
+      "title": "Ethical and Regulatory Gaps in Using Generative AI for Mental Health Support in Low- and Middle-Income Countries",
+      "authors": [
+        "Leonardo Rojas-Mezarina",
+        "David Villarreal-Zegarra"
+      ],
+      "publication_date": "2026-01-02",
+      "publication_type": "commentary",
+      "venue": "Interacciones",
+      "volume_issue_pages": "12, e497",
+      "doi": "10.24016/2026.v12.497",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-01-02",
+          "url": "https://revistainteracciones.com/index.php/rin/article/view/497",
+          "peer_review_status": "peer_reviewed"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-01-02",
+        "url": "https://revistainteracciones.com/index.php/rin/article/view/497",
+        "peer_review_status": "peer_reviewed"
+      },
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "basis": "Publisher supplies reviewer report and author response.",
+        "url": "https://revistainteracciones.com/index.php/rin/article/download/497/628"
+      },
+      "access": {
+        "status": "open_access",
+        "license": "CC BY",
+        "fulltext_url": null,
+        "landing_url": "https://revistainteracciones.com/index.php/rin/article/view/497"
+      },
+      "eligibility": {
+        "technical": "Direct generative-AI mental-health support analysis.",
+        "social": "LMIC inequality and regulatory gaps are direct; article type is a short commentary.",
+        "assessment": "plausible_or_transferred"
+      },
+      "source_urls": [
+        "https://doi.org/10.24016/2026.v12.497",
+        "https://revistainteracciones.com/index.php/rin/article/download/497/628"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "retain_for_screening",
+      "notes": [
+        "new_candidate",
+        "Tier B because the contribution is a short commentary."
+      ]
+    },
+    {
+      "tier": "B",
+      "title": "Artificial Intelligence Large Language Model-Influenced Bias on Trainees and Patients in Pharmacotherapeutic Decision Making",
+      "authors": [
+        "Andrew Chantha Hean",
+        "Youngil Chang"
+      ],
+      "publication_date": "2026-01-12",
+      "publication_type": "research_article",
+      "venue": "Pharmacotherapy: The Journal of Human Pharmacology and Drug Therapy",
+      "volume_issue_pages": "46(3), e70100",
+      "doi": "10.1002/phar.70100",
+      "other_identifiers": {},
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "date": "2026-01-12",
+          "url": "https://accpjournals.onlinelibrary.wiley.com/doi/10.1002/phar.70100",
+          "peer_review_status": "not_established"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "version_of_record",
+        "date": "2026-01-12",
+        "url": "https://accpjournals.onlinelibrary.wiley.com/doi/10.1002/phar.70100",
+        "peer_review_status": "not_established"
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Wiley issue labels it Open Access Research Article; item-level review history was not accessible.",
+        "url": "https://accpjournals.onlinelibrary.wiley.com/toc/18759114/2026/46/3"
+      },
+      "access": {
+        "status": "open_access",
+        "license": null,
+        "fulltext_url": "https://accpjournals.onlinelibrary.wiley.com/doi/pdf/10.1002/phar.70100",
+        "landing_url": "https://accpjournals.onlinelibrary.wiley.com/doi/10.1002/phar.70100"
+      },
+      "eligibility": {
+        "technical": "LLM-influenced bias in pharmacotherapeutic decisions.",
+        "social": "Direct professional-trainee and patient decision context; decisive full text was not retrievable in this environment.",
+        "assessment": "plausible_or_transferred"
+      },
+      "source_urls": [
+        "https://doi.org/10.1002/phar.70100"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "retain_for_screening",
+      "notes": [
+        "new_candidate",
+        "Tier B pending full-text and item-specific peer-review verification."
+      ]
+    },
+    {
+      "tier": "B",
+      "title": "Gender Bias in Generative AI-assisted Recruitment Processes",
+      "authors": [
+        "Martina Ullasci",
+        "Marco Rondina",
+        "Riccardo Coppola",
+        "Antonio Vetrò"
+      ],
+      "publication_date": "2026-03-12",
+      "publication_type": "preprint",
+      "venue": "arXiv",
+      "volume_issue_pages": null,
+      "doi": null,
+      "other_identifiers": {
+        "arxiv": "2603.11736"
+      },
+      "versions": [
+        {
+          "version_type": "preprint",
+          "date": "2026-03-12",
+          "url": "https://arxiv.org/abs/2603.11736",
+          "peer_review_status": "not_peer_reviewed"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "preprint",
+        "date": "2026-03-12",
+        "url": "https://arxiv.org/abs/2603.11736",
+        "peer_review_status": "not_peer_reviewed"
+      },
+      "peer_review_evidence": {
+        "status": "not_peer_reviewed",
+        "basis": "arXiv preprint; no journal or proceedings version located by cutoff.",
+        "url": "https://arxiv.org/abs/2603.11736"
+      },
+      "access": {
+        "status": "open_access",
+        "license": null,
+        "fulltext_url": "https://arxiv.org/pdf/2603.11736",
+        "landing_url": "https://arxiv.org/abs/2603.11736"
+      },
+      "eligibility": {
+        "technical": "GPT-5 recruitment recommendations for 24 balanced candidate profiles.",
+        "social": "Direct gender-stereotype and high-stakes recruitment analysis.",
+        "assessment": "plausible_or_transferred"
+      },
+      "source_urls": [
+        "https://arxiv.org/abs/2603.11736",
+        "https://export.arxiv.org/api/query?id_list=2603.11736"
+      ],
+      "duplicate_check": {
+        "status": "previously_identified",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [
+          "lane B exclusion"
+        ],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "retain_for_screening",
+      "notes": [
+      "previously_identified",
+      "Tier B solely because the only located version is a non-peer-reviewed preprint."
+      ]
+    },
+    {
+      "tier": "B",
+      "title": "Women Worry, Men Adopt? Gendered Risk Perceptions and Generative AI Adoption",
+      "authors": [
+        "Fabian Stephany",
+        "Jedrzej Duszynski"
+      ],
+      "publication_date": "2026-01-07",
+      "publication_type": "preprint",
+      "venue": "arXiv",
+      "volume_issue_pages": null,
+      "doi": null,
+      "other_identifiers": {
+        "arxiv": "2601.03880"
+      },
+      "versions": [
+        {
+          "version_type": "preprint",
+          "date": "2026-01-07",
+          "url": "https://arxiv.org/abs/2601.03880",
+          "peer_review_status": "not_peer_reviewed"
+        }
+      ],
+      "preferred_version": {
+        "version_type": "preprint",
+        "date": "2026-01-07",
+        "url": "https://arxiv.org/abs/2601.03880",
+        "peer_review_status": "not_peer_reviewed"
+      },
+      "peer_review_evidence": {
+        "status": "not_peer_reviewed",
+        "basis": "arXiv preprint; no peer-reviewed version located by cutoff.",
+        "url": "https://arxiv.org/abs/2601.03880"
+      },
+      "access": {
+        "status": "open_access",
+        "license": null,
+        "fulltext_url": "https://arxiv.org/pdf/2601.03880",
+        "landing_url": "https://arxiv.org/abs/2601.03880"
+      },
+      "eligibility": {
+        "technical": "Nationally representative UK data on GenAI adoption.",
+        "social": "Direct gender gap, intersectional disparity and societal-risk perception analysis.",
+        "assessment": "plausible_or_transferred"
+      },
+      "source_urls": [
+        "https://arxiv.org/abs/2601.03880",
+        "https://export.arxiv.org/api/query?id_list=2601.03880"
+      ],
+      "duplicate_check": {
+        "status": "new_candidate",
+        "checked_against": [
+          "corpus/work_version_registry.json",
+          "corpus/zotero_export.json",
+          "generated/round2-intake-package.json",
+          "generated/contextual-update-2026-08-24-intake-package.json",
+          "contextual-update lane A",
+          "contextual-update lane B",
+          "contextual-update lane C"
+        ],
+        "matches": [],
+        "relation_to_existing_work": null
+      },
+      "recommendation": "retain_for_screening",
+      "notes": [
+        "new_candidate",
+        "Updated 2026-07-30; Tier B because the located version is a non-peer-reviewed preprint."
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "title": "Implicit Bias in Large Language Model Diagnosis of Eating Disorders: Experimental Vignette Study",
+      "identifiers": {
+        "doi": "10.2196/93498"
+      },
+      "reason": "Only a JMIR preprint record was available by cutoff and the title itself explicitly marks the record Preprint; a peer-reviewed publication version was not located. Retained as exclusion because a closely overlapping 2025 JMIR Mental Health VOR already covers gender/sexual-orientation bias in eating-disorder vignettes."
+    },
+    {
+      "title": "Human-centered artificial intelligence in education: From teacher adoption to systemic transformation",
+      "identifiers": {
+        "doi": "10.1016/j.caeo.2026.100399"
+      },
+      "reason": "Publisher/Crossref publication date is December 2026; no documented in-window online version was found."
+    },
+    {
+      "title": "AI-resilient admissions interviews",
+      "identifiers": {
+        "doi": "10.1038/s41746-026-02667-6"
+      },
+      "reason": "News & Views article rather than a primary peer-reviewed study; focus is admissions integrity, not substantive gender/bias/inequality analysis."
+    },
+    {
+      "title": "How LLM Counselors Violate Ethical Standards in Mental Health Practice: A Practitioner-Informed Framework",
+      "identifiers": {
+        "doi": "10.1609/aies.v8i2.36632"
+      },
+      "reason": "Relevant mental-health safety work already captured in the prompt-focused contextual lane; gender, intersectionality, diversity and fairness are not the central analytic dimensions for this lane."
+    },
+    {
+      "title": "Patient Cognitive Bias in Large Language Model-Supported Health Consultations",
+      "identifiers": {
+        "doi": "10.2196/85770"
+      },
+      "reason": "Cognitive-bias study without a substantive social-group fairness, gender, diversity or inequality dimension."
+    },
+    {
+      "title": "Gender Bias in Generative AI-Assisted Software Development",
+      "identifiers": {
+        "arxiv": "2604.11609"
+      },
+      "reason": "Preprint located, but no substantive human-services, professional-education or consequential person-decision contribution beyond software-development task outputs."
+    },
+    {
+      "title": "Gender Bias in Large Language Models: A Comprehensive Review",
+      "identifiers": {
+        "arxiv": "2604.00011"
+      },
+      "reason": "Preprint-only review; stronger peer-reviewed and empirical 2026 gender-bias candidates were retained."
+    },
+    {
+      "title": "Critical AI Literacy for Teacher Education",
+      "identifiers": {
+        "arxiv": "2608.01705"
+      },
+      "reason": "Preprint-only curriculum proposal with limited separate gender/fairness evidence; stronger peer-reviewed professional-education candidates were retained."
+    },
+    {
+      "title": "Mapping gender bias in generative AI",
+      "identifiers": {
+        "arxiv": "2606.18649"
+      },
+      "reason": "Preprint-only audit lacking a direct professional/human-services or consequential-decision application in the accessible metadata."
+    },
+    {
+      "title": "Gender Bias in Artificial Intelligence: A Bibliometric Analysis",
+      "identifiers": {
+        "doi": null
+      },
+      "reason": "Bibliometric or secondary discovery records lacked a stable, verified 2026 primary-source bibliographic identity."
+    },
+    {
+      "title": "The diversity of therapeutic technique in large language model responses",
+      "identifiers": {
+        "doi": "10.1080/10503307.2026.2689633"
+      },
+      "reason": "Diversity refers to variation in therapeutic techniques, not social diversity, group bias, inequality or fairness."
+    },
+    {
+      "title": "Generative AI and mental health technostress in medical education",
+      "identifiers": {
+        "doi": "10.30773/pi.2026.0068"
+      },
+      "reason": "Direct professional-education and mental-health relevance, but no substantive gender, social bias, diversity, fairness or inequality analysis."
+    },
+    {
+      "title": "French charter for responsible generative AI in health studies",
+      "identifiers": {
+        "doi": "10.3917/spub.262.0011"
+      },
+      "reason": "Responsible-use charter without a substantive empirical gender, intersectionality, bias or inequality contribution."
+    },
+    {
+      "title": "Artificial intelligence and consumer adoption in higher education",
+      "identifiers": {
+        "doi": null
+      },
+      "reason": "Discovery record lacked a stable primary-source identity and did not provide a sufficiently direct bias/fairness contribution."
+    },
+    {
+      "title": "Making Accurate Judgements in Child Welfare: Comparing ChatGPT With Qualified Social Workers",
+      "identifiers": {
+        "doi": "10.1111/cfs.13304"
+      },
+      "reason": "Version of record was first published in 2025; no distinct 2026 publication version was documented."
+    },
+    {
+      "title": "A learning tool or hazard? Concerns related to AI misuse in social work courses",
+      "identifiers": {
+        "doi": "10.1080/02615479.2025.2508510"
+      },
+      "reason": "First online publication occurred in 2025; no distinct 2026 version was found."
+    },
+    {
+      "title": "Explaining Resistance to Algorithmic Bias: The Impact of Feminist Consciousness and AI Literacy on Protest Participation in South Korea",
+      "identifiers": {
+        "doi": "10.64446/aw.2025.9.41.3.145"
+      },
+      "reason": "Published in 2025 and therefore outside the strict date window."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+Priority,Filename,Status,Confidence,Issues,Review_Reasons
+MEDIUM,4dbe6aa9dfa229e88746.md,WARNING,98.2,"Table mismatch: PDF=1, MD=17",table_mismatch
+MEDIUM,2e6aa61930deea324751.md,WARNING,99.5,"Table mismatch: PDF=0, MD=7",table_mismatch
+MEDIUM,d3bd00602e07cf40396c.md,WARNING,99.4,"Table mismatch: PDF=2, MD=22",table_mismatch
+MEDIUM,2b57266b9d8b015d2ac2.md,WARNING,98.5,"Table mismatch: PDF=3, MD=0",table_mismatch
+LOW,a1c7e9db9a3dc6caff54.md,WARNING,92.7,Low text ratio: 25.97%,low_text_ratio

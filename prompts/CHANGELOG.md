@@ -8,8 +8,10 @@ Versionierte Dokumentation aller Prompts, die in der Pipeline und im Assessment 
 
 | Prompt | Datei | Zeilen | Version | Status |
 |--------|-------|--------|---------|--------|
-| PRISM Agent Reviewer | `prompts/prism-agent-reviewer.md` | -- | v1.0 | Ratifiziert für kontrollierte Agententracks |
-| PRISM Ratification Evaluator | `prompts/prism-ratification-evaluator.md` | -- | v0.1 | Im ratifizierten Zehn-Paper-Lauf verwendet; Hash im Konsensartefakt gesichert |
+| PRISM Agent Reviewer | `prompts/prism-agent-reviewer-v1.1.md` | -- | v1.1 | Aktiv; Coding-Paket und deterministischer PRISM-Transfer |
+| PRISM Agent Reviewer, historisch | `prompts/prism-agent-reviewer.md` | -- | v1.0 | In den abgeschlossenen Läufen verwendet; Hash im Run-Manifest gesichert |
+| PRISM AI Agent Review | `prompts/prism-ai-agent-review-v0.2.md` | -- | v0.2 | Aktiv; quellengestützte Prüfung vor `ai-agent-reviewed` |
+| PRISM Ratification Evaluator, historisch | `prompts/prism-ratification-evaluator.md` | -- | v0.1 | Im ratifizierten Zehn-Paper-Lauf verwendet; Hash im Konsensartefakt gesichert |
 | Deep-Research-Prompt | `prompts/deep-research-template.md` | -- | v1.0 (restauriert) | Template wiederhergestellt, instanziierter Prompt rekonstruiert |
 | SKE Stage 1: Extract & Classify | `src/distill/distill_knowledge.py` | 53-143 | v1.0 | Aktiv, 249 Docs produziert |
 | SKE Stage 3: Verify | `src/distill/distill_knowledge.py` | 223-282 | v1.0 | Aktiv, 249 Docs verifiziert |

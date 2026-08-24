@@ -2,10 +2,12 @@ import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { validateManifest } from './validate-run-contract.mjs';
 
 const root = resolve(fileURLToPath(new URL('../..', import.meta.url)));
 const provisionalRunPath = 'tests/review-cases/agent-runs/agent-v03-10b-20260822/run.json';
 const ratificationRunPath = 'tests/review-cases/agent-runs/ratification-ar2-20260822/run.json';
+const currentProductPath = 'docs/data/screening/ar2.json';
 
 function bytes(path) {
   return readFileSync(resolve(root, path));
@@ -60,6 +62,8 @@ assert(
 );
 
 const ratificationRun = json(ratificationRunPath);
+const contract = validateManifest(ratificationRun, { path: ratificationRunPath });
+assert(contract.ok && contract.legacy, 'historical ratification manifest is not accepted as legacy');
 for (const track of ratificationRun.tracks)
   assert(sha256(track.export).toLowerCase() === track.sha256, `ratification track hash mismatch: ${track.export}`);
 
@@ -113,6 +117,47 @@ assert(
   sha256(productPath).toLowerCase() === ratificationRun.adjudication.integration.output_sha256,
   'ratified product hash mismatch',
 );
+
+const currentProduct = json(currentProductPath);
+assert(currentProduct.schema === 'femprompt-prisma-reviewer/0.5', 'current product is not schema 0.5');
+assert(currentProduct.status === 'ai-agent-reviewed', 'current product is not ai-agent-reviewed');
+for (const id of ratificationRun.paper_ids) {
+  const current = structuredClone(currentProduct.decisions[id]);
+  const historical = structuredClone(product.decisions[id]);
+  delete current.provenance;
+  delete current.lifecycle;
+  delete current.annotations;
+  delete current.active_annotation_id;
+  delete current.checks;
+  same(current, historical, `${id}: lifecycle projection changed the screening decision`);
+
+  const provenance = currentProduct.decisions[id].provenance;
+  const lifecycle = currentProduct.decisions[id].lifecycle;
+  assert(lifecycle?.baseline?.state === 'curated', `${id}: curated baseline missing`);
+  assert(lifecycle?.state === 'ai-agent-reviewed', `${id}: lifecycle state differs`);
+  assert(lifecycle?.events?.length === 2, `${id}: expected two lifecycle events`);
+  assert(lifecycle.events[0].to === 'agent-annotated', `${id}: agent annotation event missing`);
+  assert(lifecycle.events[1].to === 'ai-agent-reviewed', `${id}: AI-agent review event missing`);
+  assert(lifecycle.events[1].event_type === 'ai_agent_review', `${id}: AI-agent review event type differs`);
+  assert(provenance?.activities?.length === 2, `${id}: provenance activities missing`);
+  assert(
+    provenance.activities.every((activity) => activity.prompt?.status === 'recorded'),
+    `${id}: recorded prompt provenance missing`,
+  );
+  assert(
+    provenance.activities.every((activity) => activity.model?.status === 'legacy_gap'),
+    `${id}: historical model gap is not explicit`,
+  );
+  assert(currentProduct.decisions[id].annotations?.length === 1, `${id}: original annotation snapshot missing`);
+  assert(
+    currentProduct.decisions[id].active_annotation_id === currentProduct.decisions[id].annotations[0].annotation_id,
+    `${id}: active annotation pointer differs`,
+  );
+  assert(
+    currentProduct.decisions[id].checks?.some((check) => check.check_type === 'lifecycle_contract' && check.status === 'passed'),
+    `${id}: deterministic lifecycle validation receipt missing`,
+  );
+}
 
 const ids = Object.keys(product.decisions).sort();
 assert(ids.length === 10, `expected 10 records, got ${ids.length}`);

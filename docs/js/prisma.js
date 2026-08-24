@@ -13,7 +13,7 @@
 // Human decision is binding (RAISE); the AI proposal is advisory and stored separately
 // so the flow diagram splits AI from human decisions (PRISMA-trAIce R1).
 // Persistence: after an explicit reviewer key, File System Access writes
-// one JSON per reviewer (schema 0.3) into docs/data/screening/<reviewer>.json.
+// one JSON per reviewer (schema 0.4) into docs/data/screening/<reviewer>.json.
 // Runs on prisma.html via the window.EC shim from prisma-data.js.
 // See knowledge/specification.md (requirements, ADRs, design system), knowledge/data.md.
 
@@ -25,6 +25,7 @@ let initialized = false;
 let acceptanceMode = null;
 let trialMode = false;
 let runActor = 'human';
+let verificationMode = false;
 const FS_SUPPORTED = typeof window.showDirectoryPicker === 'function';
 
 // Constants
@@ -91,9 +92,68 @@ const TRAICE = [
 
 const LS_KEY = 'femprompt-prisma-state/0.2';
 const TRIAL_LS_KEY = 'femprompt-prisma-trial-state/0.1';
-const REVIEWER_SCHEMA = 'femprompt-prisma-reviewer/0.3'; // 0.2 added the evidence map (FR-13), 0.3 adds text_source per decision (ADR-027)
+const REVIEWER_SCHEMA = 'femprompt-prisma-reviewer/0.4'; // 0.4 binds decisions and paper evidence to an exact work version.
 const SEED = 'seed'; // built-in reviewer = the existing expert assessment (paper.human)
 const REVIEWER_KEY_PATTERN = /^[A-Za-z][A-Za-z0-9_-]{1,11}$/;
+const LIFECYCLE_STATES = [];
+const LIFECYCLE_NEXT = {};
+const LIFECYCLE_TRANSITIONS = {};
+const VERIFICATION_RESULTS = [];
+const VERSION_LABELS = {};
+const PEER_REVIEW_LABELS = {
+    peer_reviewed: 'Peer-Review abgeschlossen',
+    under_review: 'im Peer-Review',
+    not_peer_reviewed: 'kein Peer-Review',
+    not_established: 'Peer-Review nicht belegt'
+};
+
+function applyWorkVersionContract() {
+    const contract = EC && EC.getWorkVersionContract ? EC.getWorkVersionContract() : null;
+    const types = contract && Array.isArray(contract.version_types) ? contract.version_types : [];
+    Object.keys(VERSION_LABELS).forEach(function(key) { delete VERSION_LABELS[key]; });
+    types.forEach(function(item) { VERSION_LABELS[item.key] = item.label_de || item.key; });
+}
+
+function versionLabel(value) { return VERSION_LABELS[value] || value || 'Version ungeklärt'; }
+function peerReviewLabel(value) { return PEER_REVIEW_LABELS[value] || 'Peer-Review nicht belegt'; }
+
+function bindRecordIdentity(record, paper) {
+    if (!paper.work_id || !paper.version_id) return record;
+    record.work_id = paper.work_id || null;
+    record.version_id = paper.version_id || null;
+    record.version_type = paper.version_type || 'unknown';
+    record.preferred_version_id = paper.preferred_version_id || paper.version_id || null;
+    record.selected_version_is_preferred = !!paper.is_preferred_version;
+    Object.keys(record.evidence || {}).forEach(function(category) {
+        (record.evidence[category] || []).forEach(function(item) {
+            item.paper_id = paper.id;
+            item.work_id = paper.work_id || null;
+            item.version_id = paper.version_id || null;
+        });
+    });
+    return record;
+}
+
+function applyLifecycleContract() {
+    const contract = window.__LIFECYCLE_CONTRACT__ ||
+        (EC && EC.getLifecycleContract ? EC.getLifecycleContract() : null);
+    if (!contract || contract.record_schema !== 'femprompt-prisma-reviewer/0.5' ||
+            !Array.isArray(contract.states) || !Array.isArray(contract.transitions) ||
+            !Array.isArray(contract.verification_results)) {
+        throw new Error('Lifecycle-Vertrag nicht geladen (docs/data/screening_lifecycle_contract.json).');
+    }
+    LIFECYCLE_STATES.splice(0, LIFECYCLE_STATES.length, ...contract.states);
+    VERIFICATION_RESULTS.splice(0, VERIFICATION_RESULTS.length, ...contract.verification_results);
+    Object.keys(LIFECYCLE_NEXT).forEach(function(key) { delete LIFECYCLE_NEXT[key]; });
+    Object.keys(LIFECYCLE_TRANSITIONS).forEach(function(key) { delete LIFECYCLE_TRANSITIONS[key]; });
+    contract.transitions.forEach(function(transition) {
+        LIFECYCLE_TRANSITIONS[transition.from + '→' + transition.to] = transition;
+        if (transition.from === 'ai-agent-reviewed' || transition.from === 'verified')
+            LIFECYCLE_NEXT[transition.from] = transition.to;
+    });
+}
+
+if (window.__LIFECYCLE_CONTRACT__) applyLifecycleContract();
 
 // State
 
@@ -115,12 +175,13 @@ let connectScope = 'screening'; // 'root' when the picked folder is the repo roo
 let storedHandleAvailable = false;
 let reviewerFileErrors = {};   // reviewerKey -> blocking read/validation error for an existing file
 let reviewerRecoveryPending = {}; // reviewerKey -> browser records newer than the connected file
+const reviewerEnvelopes = {};  // reviewerKey -> loaded top-level JSON, preserved across decision writes
 let corpusIndex = null;        // id -> { t, ay, kd, src, n, x } for corpus full-text search
 let corpusIndexPromise = null;
 let corpusQuery = '';          // current corpus-wide search (left pane)
 const textCache = {};            // paperId -> raw knowledge-doc markdown (or null)
 const fullTextCache = {};        // paperId -> cleaned Docling full text (or null)
-let fulltextManifest = null;     // id -> { src, chars }; null until loaded, {} if absent
+let fulltextManifest = null;     // id -> { src, chars, work_id, version_id }; null until loaded, {} if absent
 // Analysis coding vocabulary (FR-14, ADR-026): the frozen categories.yaml v1.3
 // analysis_fields block, served as docs/data/analysis_fields.json (built by
 // src/publish/build_analysis_fields.py). anFields is the single source the panel's
@@ -145,6 +206,7 @@ let currentTextSource = 'none'; // paper-layer text actually shown: 'raw' | 'abs
 let saveStatus = { kind: 'needs-reviewer', message: 'Einmal Reviewer:innen-Kürzel festlegen.' };
 let openInfoTrigger = null;
 let infoGlobalBound = false;
+let verificationNotice = '';
 
 // the in-progress (pre-commit) decision for the open paper
 let work = { pid: null, cats: {}, override: false, reason: null, overrideReason: null, evidence: {} };
@@ -243,8 +305,21 @@ function save() {
 }
 
 function reviewerPayload(key) {
-    return { schema: REVIEWER_SCHEMA, reviewer: key, actor: runActor,
-             updated: new Date().toISOString(), decisions: state.reviewers[key] || {} };
+    const loaded = reviewerEnvelopes[key];
+    const payload = loaded ? JSON.parse(JSON.stringify(loaded)) : {
+        schema: REVIEWER_SCHEMA, reviewer: key, actor: runActor
+    };
+    if (/^femprompt-prisma-reviewer\/0\.[1234]$/.test(payload.schema || ''))
+        payload.schema = REVIEWER_SCHEMA;
+    payload.updated = new Date().toISOString();
+    payload.decisions = {};
+    Object.keys(state.reviewers[key] || {}).forEach(function(paperId) {
+        const record = JSON.parse(JSON.stringify(state.reviewers[key][paperId]));
+        const paper = papers.find(function(item) { return item.id === paperId; });
+        if (paper) bindRecordIdentity(record, paper);
+        payload.decisions[paperId] = record;
+    });
+    return payload;
 }
 
 // Deterministic on-disk form: decisions are sorted by paper id. The in-memory shape
@@ -364,6 +439,7 @@ function importReviewerPayload(obj, target, overwrite) {
     if (!overwrite && Object.keys(state.reviewers[target] || {}).length)
         return { ok: false, reason: 'occupied' };
     state.reviewers[target] = normalizedReviewerDecisions(obj.decisions, target);
+    reviewerEnvelopes[target] = JSON.parse(JSON.stringify(obj));
     save();
     return { ok: true, reviewer: target, count: Object.keys(obj.decisions).length };
 }
@@ -525,6 +601,7 @@ async function loadAllReviewers() {
                 const local = normalizedReviewerDecisions(state.reviewers[key] || {}, key);
                 const merged = mergeReviewerDecisions(disk, local);
                 found[key] = merged.decisions;
+                reviewerEnvelopes[key] = JSON.parse(JSON.stringify(obj));
                 if (merged.recovered) recoveries[key] = true;
                 if (merged.conflict) errors[key] = merged.conflict;
             } catch (e) {
@@ -584,7 +661,9 @@ function loadFulltextManifest() {
 }
 
 function hasFullText(p) {
-    return !!(fulltextManifest && fulltextManifest[p.id] && fulltextManifest[p.id].src !== 'none');
+    const source = fulltextManifest && fulltextManifest[p.id];
+    if (!source || source.src === 'none') return false;
+    return !(source.version_id && p.version_id && source.version_id !== p.version_id);
 }
 
 function fetchFullText(p) {
@@ -919,10 +998,13 @@ window.initializePrisma = function() {
     if (initialized) return;
     EC = window.EC;
     applyCategorySchema();
+    applyLifecycleContract();
+    applyWorkVersionContract();
     initialized = true;
     papers = (EC && EC.getAllPapers) ? (EC.getAllPapers() || []) : [];
     const query = new URLSearchParams(window.location.search);
     trialMode = query.get('trial') === '1';
+    verificationMode = query.get('verify') === '1';
     const requestedActor = query.get('actor');
     runActor = requestedActor === 'agent' ? 'agent' : 'human';
     if (trialMode && !requestedActor) runActor = 'agent';
@@ -996,7 +1078,9 @@ function normalizeSurface() {
 function renderShell() {
     const root = document.getElementById('prisma-root');
     if (!root) return;
-    let html = '<div class="pt-wsbar-top"><span class="pt-wsbar-title">Screening</span></div>';
+    let html = '<div class="pt-wsbar-top"><span class="pt-wsbar-title">' + (verificationMode ? 'PRISM-Verifikation' : 'Screening') + '</span>' +
+        '<a class="pt-mode-switch' + (verificationMode ? ' is-active' : '') + '" href="' + EC.escapeHtml(modeHref(!verificationMode)) + '">' +
+        (verificationMode ? 'Zum Screening' : 'Verifikationsmodus') + '</a></div>';
     html += '<section class="pt-sync-inline" id="pt-data-inline" aria-label="Reviewer und Datenspeicherung"></section>';
     html += '<div class="pt-surface" id="pt-surface"></div>';
     root.innerHTML = html;
@@ -1016,6 +1100,15 @@ function focusDataInline() {
 }
 
 function surfaceEl() { return document.getElementById('pt-surface'); }
+
+function modeHref(wantVerification) {
+    const url = new URL(window.location.href);
+    if (wantVerification) url.searchParams.set('verify', '1');
+    else url.searchParams.delete('verify');
+    const paper = papers[state.index];
+    if (paper && paper.id) url.searchParams.set('paper', paper.id);
+    return url.pathname.split('/').pop() + (url.search || '');
+}
 
 // Decision helpers
 
@@ -1318,6 +1411,7 @@ function readingShellHtml(p, dec) {
     let h = '<div class="pt-read pt-read-screen"><div class="pt-read-inner">';
     h += '<div class="pt-paper-head"><div class="pt-read-meta">';
     h += sourcePillHtml(p);
+    h += '<span class="pt-pill pt-pill-ghost">' + EC.escapeHtml(versionLabel(p.version_type)) + '</span>';
     if (dec) h += '<span class="pt-pill pt-pill-human pt-pill-right">erfasst</span>';
     h += '</div>';
     h += '<h1 class="pt-paper-title" id="pt-paper-title" tabindex="-1">' + EC.escapeHtml(p.title || '(ohne Titel)') + '</h1>';
@@ -1327,9 +1421,17 @@ function readingShellHtml(p, dec) {
         '<div><dt>Autor:innen</dt><dd>' + EC.escapeHtml(authorDisplay(p)) + '</dd></div>' +
         '<div><dt>Jahr</dt><dd>' + EC.escapeHtml(p.publication_year || p.year || 'nicht angegeben') + '</dd></div>' +
         (p.journal ? '<div><dt>Publikation</dt><dd>' + EC.escapeHtml(p.journal) + '</dd></div>' : '') +
+        '<div><dt>Fassung</dt><dd>' + EC.escapeHtml(versionLabel(p.version_type)) +
+            (p.is_preferred_version ? ' · bevorzugte Fassung' : '') + '</dd></div>' +
+        '<div><dt>Begutachtung</dt><dd>' + EC.escapeHtml(peerReviewLabel(p.peer_review_status)) + '</dd></div>' +
         (doi ? '<div><dt>DOI</dt><dd class="mono"><a class="pt-doi-link" href="' + EC.escapeHtml(doiHref(doi)) +
             '" target="_blank" rel="noopener noreferrer" title="DOI ' + EC.escapeHtml(doi) + ' öffnen">' + EC.escapeHtml(doi) + '</a></dd></div>' : '') +
         '<div><dt>Paper-ID</dt><dd class="mono">' + EC.escapeHtml(p.id) + '</dd></div>' +
+        (p.work_id ? '<div><dt>Werk-ID</dt><dd class="mono">' + EC.escapeHtml(p.work_id) + '</dd></div>' : '') +
+        (p.version_id ? '<div><dt>Fassungs-ID</dt><dd class="mono">' + EC.escapeHtml(p.version_id) + '</dd></div>' : '') +
+        ((p.work_versions || []).length > 1 ? '<div><dt>Bekannte Fassungen</dt><dd>' +
+            EC.escapeHtml(p.work_versions.map(function(item) { return versionLabel(item.version_type); }).join(' · ')) +
+            '</dd></div>' : '') +
         (sourceUrl ? '<div><dt>Quelle</dt><dd><a class="pt-source-link" href="' + EC.escapeHtml(sourceUrl) +
             '" target="_blank" rel="noopener noreferrer">Webseite öffnen</a></dd></div>' : '') + '</dl></div>';
     if (!aq.ok && !p.knowledge_doc) h += '<div class="pt-aq-warn">Achtung: ' + EC.escapeHtml(aq.note) + '</div>';
@@ -1347,7 +1449,7 @@ function readingShellHtml(p, dec) {
         '<button class="pt-btn pt-pin-hit" id="pt-pin-hit" disabled title="Aktuellen Treffer als Beleg anheften">Treffer anheften</button>' +
         '</div>';
     h += '<div class="pt-search-key" id="pt-search-key" hidden><span aria-hidden="true"></span>Aktueller Suchtreffer im Lesetext</div>';
-    h += '<div class="pt-layer-band" id="pt-layer-band" hidden>LLM-Wissensdestillat aus dem Wissensdokument. Diese automatisch erzeugte Referenz ist vom Originaltext getrennt; Belege daraus zählen nicht als menschliche Belege.</div>';
+    h += '<div class="pt-layer-band" id="pt-layer-band" hidden>LLM-Wissensdestillat aus dem Wissensdokument. Diese automatisch erzeugte Referenz ist vom Originaltext getrennt; Belege daraus erfüllen das Paper-Beleg-Gate nicht.</div>';
     h += '<div class="pt-doc" id="pt-doc"><p class="pt-muted">Volltext lädt…</p></div>';
     h += '</article></div></div>';
     return h;
@@ -1507,7 +1609,10 @@ function pinEvidence(cat, term, snippet, origin) {
     if (!work.evidence[cat]) work.evidence[cat] = [];
     work.evidence[cat].push({
         term: term, snippet: snippet, ts: new Date().toISOString(), origin: origin,
-        source_layer: sourceLayer, actor: runActor
+        source_layer: sourceLayer, actor: runActor,
+        paper_id: papers[state.index] && papers[state.index].id,
+        work_id: papers[state.index] && papers[state.index].work_id,
+        version_id: papers[state.index] && papers[state.index].version_id
     });
     if (sourceLayer === 'paper' && catLevel(work.cats[cat]) === 0) work.cats[cat] = 1;
     refreshAssess();
@@ -1557,6 +1662,364 @@ function recordRequirements(dec) {
     if (dec.decision === 'Include')
         analysisRequirements(dec).missing.forEach(function(x) { missing.push(x); });
     return { ok: missing.length === 0, missing: missing };
+}
+
+// PRISM verification is an explicit, append-only layer on top of the binding
+// screening decision. A legacy capture remains below AI-agent review until the
+// governed projection records that activity. Ordinary screening never creates a
+// lifecycle or scholarly authority by accident.
+function isLifecycleState(value) { return LIFECYCLE_STATES.indexOf(value) !== -1; }
+
+function recordSourceSummary(record) {
+    const evidence = record && record.evidence ? record.evidence : {};
+    const categories = Object.keys(evidence).filter(function(key) { return (evidence[key] || []).length; });
+    const source = record && record.text_source ? record.text_source : 'unrecorded';
+    return [{ source_id: source, categories: categories }];
+}
+
+function legacyProvenance(record) {
+    const actorId = record && record.reviewer ? record.reviewer : null;
+    const actorType = record && record.actor === 'agent' ? 'ai_agent' : 'person';
+    const actors = actorId ? [{ id: actorId, type: actorType, roles: ['screening'] }] : [];
+    return {
+        annotation_id: null,
+        annotation_type: 'legacy-migrated',
+        activities: [{
+            id: 'legacy-migration', type: 'legacy_migration', run_id: null,
+            method: null, prompt: null, model: null,
+            associated_actor_ids: actorId ? [actorId] : []
+        }],
+        actors: actors,
+        used_sources: recordSourceSummary(record),
+        derived_from: [],
+        legacy_gap: 'Lauf, Prompt und Modell wurden für diesen vorbestehenden Record nicht vollständig überliefert.'
+    };
+}
+
+function normalizeProvenance(record) {
+    const fallback = legacyProvenance(record);
+    const hasProvenance = !!(record && record.provenance && typeof record.provenance === 'object');
+    const source = hasProvenance ? record.provenance : {};
+    const rawActivities = Array.isArray(source.activities) ? source.activities : (source.activity ? [source.activity] : (hasProvenance ? [] : fallback.activities));
+    const rawActors = Array.isArray(source.actors) ? source.actors : (hasProvenance ? [] : fallback.actors);
+    return {
+        annotation_id: Object.prototype.hasOwnProperty.call(source, 'annotation_id') ? source.annotation_id : fallback.annotation_id,
+        annotation_type: source.annotation_type || fallback.annotation_type,
+        activities: rawActivities.map(function(activity, index) {
+            activity = activity || {};
+            return {
+                id: activity.id || ('legacy-activity-' + (index + 1)), type: activity.type || 'unspecified',
+                run_id: activity.run_id || null, method: activity.method || null,
+                prompt: activity.prompt || null, model: activity.model || null,
+                associated_actor_ids: actorIds(activity.associated_actor_ids)
+            };
+        }),
+        actors: rawActors.map(function(actor) {
+            actor = actor || {};
+            const type = ['person', 'ai_agent', 'software_agent'].indexOf(actor.type) !== -1 ? actor.type : 'person';
+            return { id: String(actor.id || ''), type: type, roles: actorIds(actor.roles) };
+        }).filter(function(actor) { return !!actor.id; }),
+        used_sources: Array.isArray(source.used_sources) ? source.used_sources : (hasProvenance ? [] : fallback.used_sources),
+        derived_from: Array.isArray(source.derived_from) ? source.derived_from : (hasProvenance ? [] : fallback.derived_from),
+        legacy_gap: source.legacy_gap || (source.activity && source.activity.legacy_gap) || (!hasProvenance ? fallback.legacy_gap : null)
+    };
+}
+
+function legacyBaseline(record) {
+    return {
+        state: record && record.actor === 'agent' ? 'agent-annotated' : 'curated',
+        basis: 'legacy_capture',
+        at: record && record.ts ? record.ts : null,
+        actor_ids: actorIds(record && record.reviewer)
+    };
+}
+
+function normalizeBaseline(value, record) {
+    const fallback = legacyBaseline(record);
+    if (typeof value === 'string' && isLifecycleState(value)) {
+        fallback.state = value;
+        return fallback;
+    }
+    if (!value || typeof value !== 'object') return fallback;
+    return {
+        state: isLifecycleState(value.state) ? value.state : fallback.state,
+        basis: value.basis || fallback.basis,
+        at: value.at || fallback.at,
+        actor_ids: actorIds(value.actor_ids)
+    };
+}
+
+function verificationView(record) {
+    const source = record && typeof record === 'object' ? record : {};
+    const lifecycle = source.lifecycle && typeof source.lifecycle === 'object' ? source.lifecycle : null;
+    const baseline = normalizeBaseline(lifecycle && lifecycle.baseline, source);
+    const stateValue = lifecycle && isLifecycleState(lifecycle.state) ? lifecycle.state : baseline.state;
+    return {
+        lifecycle: {
+            baseline: baseline,
+            state: stateValue,
+            events: lifecycle && Array.isArray(lifecycle.events) ? lifecycle.events.slice() : []
+        },
+        provenance: normalizeProvenance(source),
+        annotations: Array.isArray(source.annotations) ? source.annotations.slice() : [],
+        active_annotation_id: source.active_annotation_id || null,
+        checks: Array.isArray(source.checks) ? source.checks.slice() : [],
+        legacy: !lifecycle || !source.provenance
+    };
+}
+
+function ensureVerificationContract(record) {
+    const view = verificationView(record);
+    record.lifecycle = view.lifecycle;
+    record.provenance = view.provenance;
+    if (!Array.isArray(record.annotations) || !record.annotations.length) {
+        const annotationId = record.provenance.annotation_id || verificationEventId();
+        const screeningActors = record.provenance.actors.filter(function(actor) {
+            return actor.roles.indexOf('screening') !== -1;
+        }).map(function(actor) { return actor.id; });
+        record.annotations = [{
+            annotation_id: annotationId,
+            annotation_type: 'screening_decision',
+            at: record.ts || new Date().toISOString(),
+            actor_ids: screeningActors.length ? screeningActors : actorIds(record.reviewer),
+            body: annotationBody(record)
+        }];
+        record.active_annotation_id = annotationId;
+    }
+    if (!Array.isArray(record.checks)) record.checks = [];
+    return record;
+}
+
+function actorIds(value) {
+    const raw = Array.isArray(value) ? value : String(value || '').split(/[;,\s]+/);
+    return raw.map(function(id) { return String(id || '').trim(); }).filter(function(id, index, all) {
+        return !!id && all.indexOf(id) === index;
+    });
+}
+
+function verificationEventId() {
+    if (window.crypto && typeof window.crypto.randomUUID === 'function') return 'prism-' + window.crypto.randomUUID();
+    return 'prism-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 10);
+}
+
+const ANNOTATION_BODY_FIELDS = ['categories', 'decision', 'override', 'reason', 'override_reason', 'evidence', 'analysis', 'text_source', 'ts', 'reviewer', 'actor'];
+
+function annotationBody(record) {
+    const body = {};
+    ANNOTATION_BODY_FIELDS.forEach(function(field) {
+        if (Object.prototype.hasOwnProperty.call(record || {}, field))
+            body[field] = JSON.parse(JSON.stringify(record[field]));
+    });
+    return body;
+}
+
+function applyAnnotationBody(record, body) {
+    ANNOTATION_BODY_FIELDS.forEach(function(field) {
+        if (Object.prototype.hasOwnProperty.call(body, field))
+            record[field] = JSON.parse(JSON.stringify(body[field]));
+        else
+            delete record[field];
+    });
+}
+
+function annotationDiff(before, after, path) {
+    path = path || '';
+    if (JSON.stringify(before) === JSON.stringify(after)) return [];
+    const beforeObject = before && typeof before === 'object' && !Array.isArray(before);
+    const afterObject = after && typeof after === 'object' && !Array.isArray(after);
+    if (beforeObject && afterObject) {
+        const keys = Object.keys(Object.assign({}, before, after)).sort();
+        return keys.reduce(function(changes, key) {
+            const escaped = key.replace(/~/g, '~0').replace(/\//g, '~1');
+            return changes.concat(annotationDiff(before[key], after[key], path + '/' + escaped));
+        }, []);
+    }
+    return [{
+        path: path || '/',
+        before: before === undefined ? { status: 'absent' } : JSON.parse(JSON.stringify(before)),
+        after: after === undefined ? { status: 'absent' } : JSON.parse(JSON.stringify(after))
+    }];
+}
+
+function correctedAnnotationBody(record, value) {
+    let body;
+    try {
+        body = typeof value === 'string' ? JSON.parse(value) : JSON.parse(JSON.stringify(value || {}));
+    } catch (error) {
+        return { ok: false, message: 'Die korrigierte Annotation ist kein gültiges JSON.' };
+    }
+    if (!body || typeof body !== 'object' || Array.isArray(body))
+        return { ok: false, message: 'Die korrigierte Annotation muss ein JSON-Objekt sein.' };
+    const current = annotationBody(record);
+    ['ts', 'reviewer', 'actor'].forEach(function(field) {
+        if (!Object.prototype.hasOwnProperty.call(body, field) && Object.prototype.hasOwnProperty.call(current, field))
+            body[field] = current[field];
+    });
+    if (body.decision !== finalDecisionOf(body.categories || {}, !!body.override))
+        return { ok: false, message: 'Decision, Kategorien und Override sind nicht konsistent.' };
+    if (body.decision === 'Exclude' && !body.reason)
+        return { ok: false, message: 'Eine korrigierte Exclude-Entscheidung braucht einen Ausschlussgrund.' };
+    if (body.override && body.decision === 'Include' && !String(body.override_reason || '').trim())
+        return { ok: false, message: 'Ein korrigierter Include-Override braucht eine Begründung.' };
+    const requirements = recordRequirements(body);
+    if (!requirements.ok)
+        return { ok: false, message: 'Die korrigierte Annotation ist unvollständig: ' + requirements.missing.join(', ') + '.' };
+    const changes = annotationDiff(current, body);
+    if (!changes.length)
+        return { ok: false, message: 'Für corrected_and_accepted ist mindestens eine fachliche Änderung erforderlich.' };
+    return { ok: true, body: body, changes: changes };
+}
+
+function advanceVerification(record, target, details) {
+    if (!record || typeof record !== 'object') return { ok: false, message: 'Kein Decision Record geladen.' };
+    if (!isLifecycleState(target)) return { ok: false, message: 'Unzulässiger Zielstatus.' };
+    const reviewer = String(details && details.reviewer_id || '').trim();
+    const activity = String(details && details.activity_id || '').trim();
+    const actors = actorIds(details && details.actor_ids);
+    const note = String(details && details.note || '').trim();
+    if (!reviewer) return { ok: false, message: 'Reviewer-ID ist erforderlich.' };
+    if (!activity) return { ok: false, message: 'Activity-ID ist erforderlich.' };
+    if (!actors.length) return { ok: false, message: 'Mindestens eine Actor-ID ist erforderlich.' };
+    if (!note) return { ok: false, message: 'Eine fachliche Begründung ist erforderlich.' };
+    if (actors.indexOf(reviewer) === -1) actors.unshift(reviewer);
+
+    const from = verificationView(record).lifecycle.state;
+    if (LIFECYCLE_NEXT[from] !== target)
+        return { ok: false, message: 'Statuswechsel ' + from + ' → ' + target + ' ist nicht zulässig.' };
+    ensureVerificationContract(record);
+
+    const isVerification = from === 'ai-agent-reviewed';
+    const result = String(details && details.result || (isVerification ? 'accepted' : 'approved'));
+    const allowed = isVerification
+        ? ['accepted', 'corrected_and_accepted', 'changes_requested', 'rejected']
+        : ['approved'];
+    if (allowed.indexOf(result) === -1)
+        return { ok: false, message: 'Unzulässiges Prüfergebnis.' };
+
+    let correction = null;
+    if (result === 'corrected_and_accepted') {
+        correction = correctedAnnotationBody(record, details && details.corrected_annotation);
+        if (!correction.ok) return correction;
+    }
+    const advances = ['accepted', 'corrected_and_accepted', 'approved'].indexOf(result) !== -1;
+    const actualTarget = advances ? target : from;
+    const at = new Date().toISOString();
+
+    const event = {
+        event_id: verificationEventId(), event_type: isVerification ? 'domain_expert_verification' : 'publication_approval',
+        from: from, to: actualTarget, result: result, note: note,
+        at: at, activity_id: activity, actor_ids: actors,
+        annotation_id: record.active_annotation_id
+    };
+    const role = isVerification ? 'domain_expert' : 'publication_approval';
+    const provenanceActors = record.provenance.actors = record.provenance.actors || [];
+    actors.forEach(function(id) {
+        let actor = provenanceActors.find(function(item) { return item.id === id; });
+        if (!actor) { actor = { id: id, type: 'person', roles: [] }; provenanceActors.push(actor); }
+        actor.type = 'person';
+        actor.roles = actorIds(actor.roles);
+        if (actor.roles.indexOf(role) === -1) actor.roles.push(role);
+    });
+    let namedReviewer = provenanceActors.find(function(item) { return item.id === reviewer; });
+    if (!namedReviewer) { namedReviewer = { id: reviewer, type: 'person', roles: [] }; provenanceActors.push(namedReviewer); }
+    namedReviewer.type = 'person';
+    namedReviewer.roles = actorIds(namedReviewer.roles);
+    if (namedReviewer.roles.indexOf(role) === -1) namedReviewer.roles.push(role);
+    let activityRecord = record.provenance.activities.find(function(item) { return item.id === activity; });
+    if (!activityRecord) {
+        activityRecord = {
+            id: activity,
+            type: event.event_type,
+            run_id: activity,
+            method: isVerification
+                ? 'prism_domain_expert_verification'
+                : 'prism_publication_approval',
+            prompt: {
+                status: 'recorded',
+                reference: 'knowledge/update-protocol.md#1.1-agent-assisted-completion-and-deferred-verification'
+            },
+            model: { status: 'not_applicable', value: 'not_applicable' },
+            associated_actor_ids: []
+        };
+        record.provenance.activities.push(activityRecord);
+    }
+    activityRecord.associated_actor_ids = actorIds(activityRecord.associated_actor_ids);
+    actors.forEach(function(id) { if (activityRecord.associated_actor_ids.indexOf(id) === -1) activityRecord.associated_actor_ids.push(id); });
+    if (correction) {
+        const correctionId = verificationEventId();
+        record.annotations.push({
+            annotation_id: correctionId,
+            annotation_type: 'domain_expert_correction',
+            supersedes: record.active_annotation_id,
+            at: at,
+            actor_ids: actors,
+            reason: note,
+            changes: correction.changes,
+            body: correction.body
+        });
+        record.active_annotation_id = correctionId;
+        event.annotation_id = correctionId;
+        applyAnnotationBody(record, correction.body);
+    }
+    record.lifecycle.events.push(event);
+    record.lifecycle.state = actualTarget;
+    return { ok: true, event: event, record: record };
+}
+
+function verificationValue(value, empty) {
+    if (value === null || value === undefined || value === '') return '<span class="pt-verify-empty">' + EC.escapeHtml(empty || 'Nicht überliefert') + '</span>';
+    if (Array.isArray(value)) return value.length ? EC.escapeHtml(value.join(', ')) : '<span class="pt-verify-empty">' + EC.escapeHtml(empty || 'Keine Angabe') + '</span>';
+    if (typeof value === 'object') return EC.escapeHtml(JSON.stringify(value));
+    return EC.escapeHtml(String(value));
+}
+
+function verificationPanelHtml(record) {
+    const view = verificationView(record);
+    const lifecycle = view.lifecycle, provenance = view.provenance || {}, activities = provenance.activities || [], actors = provenance.actors || [];
+    const canAdvance = ['ai-agent-reviewed', 'verified'].indexOf(lifecycle.state) !== -1 &&
+        !!LIFECYCLE_NEXT[lifecycle.state] && !acceptanceMode && runActor === 'human';
+    const target = LIFECYCLE_NEXT[lifecycle.state];
+    let h = '<section class="pt-verification" aria-labelledby="pt-verification-title">';
+    h += '<div class="pt-verification-head"><div><span class="pt-tag-mono">PRISM-Verifikation</span><h3 id="pt-verification-title">Nachweis- und Freigabestatus</h3></div>' +
+        '<span class="pt-lifecycle-state pt-lifecycle-' + EC.escapeHtml(lifecycle.state) + '">' + EC.escapeHtml(lifecycle.state) + '</span></div>';
+    h += '<p class="pt-verification-lead">Fachliche Verifikation und öffentliche Freigabe sind getrennte, dauerhaft protokollierte Schritte.</p>';
+    h += '<dl class="pt-verification-grid"><div><dt>Baseline</dt><dd>' + verificationValue(lifecycle.baseline.state) + '</dd></div><div><dt>Baseline-Basis</dt><dd>' + verificationValue(lifecycle.baseline.basis) + '</dd></div><div><dt>Baseline-Actors</dt><dd>' + verificationValue(lifecycle.baseline.actor_ids) + '</dd></div><div><dt>Baseline-Zeit</dt><dd>' + verificationValue(lifecycle.baseline.at) + '</dd></div><div><dt>Aktueller Status</dt><dd>' + verificationValue(lifecycle.state) + '</dd></div>' +
+        '<div><dt>Annotation</dt><dd>' + verificationValue(provenance.annotation_id) + ' · ' + verificationValue(provenance.annotation_type) + '</dd></div>' +
+        '<div><dt>Actors</dt><dd>' + verificationValue(actors.map(function(actor) { return actor.id + ' (' + actor.type + '; ' + actor.roles.join(', ') + ')'; })) + '</dd></div></dl>';
+    h += '<div class="pt-verification-provenance"><h4>Ausführungsprovenienz</h4>' + (activities.length ? activities.map(function(activity) {
+        return '<div class="pt-verification-activity"><p><strong>' + EC.escapeHtml(activity.id) + '</strong> · ' + EC.escapeHtml(activity.type) + '</p><dl class="pt-verification-grid"><div><dt>Run</dt><dd>' + verificationValue(activity.run_id) + '</dd></div><div><dt>Methode</dt><dd>' + verificationValue(activity.method) + '</dd></div><div><dt>Prompt</dt><dd>' + verificationValue(activity.prompt) + '</dd></div><div><dt>Modell</dt><dd>' + verificationValue(activity.model) + '</dd></div><div><dt>Actors</dt><dd>' + verificationValue(activity.associated_actor_ids) + '</dd></div></dl></div>';
+    }).join('') : '<p class="pt-muted">Keine Aktivitätsprovenienz.</p>');
+    if (provenance.legacy_gap) h += '<p class="pt-legacy-gap"><strong>legacy_gap:</strong> ' + EC.escapeHtml(String(provenance.legacy_gap)) + '</p>';
+    h += '</div>';
+    h += '<div class="pt-verification-tracks"><h4>Quellen und abgeleitete Artefakte</h4><p><strong>Quellen:</strong> ' + verificationValue(provenance.used_sources, 'Keine Quellenprovenienz') + '</p><p><strong>Abgeleitet aus:</strong> ' + verificationValue(provenance.derived_from, 'Keine abgeleiteten Artefakte') + '</p></div>';
+    h += '<div class="pt-verification-annotations"><h4>Annotationen</h4>' + (view.annotations.length ? '<ol>' + view.annotations.map(function(annotation) {
+        const active = annotation.annotation_id === view.active_annotation_id ? ' · aktiv' : '';
+        const supersedes = annotation.supersedes ? ' · ersetzt ' + annotation.supersedes : '';
+        return '<li><strong>' + verificationValue(annotation.annotation_id) + '</strong><span>' + verificationValue(annotation.annotation_type) + active + supersedes + ' · ' + verificationValue(annotation.at) + '</span></li>';
+    }).join('') + '</ol>' : '<p class="pt-muted">Keine Annotationen dokumentiert.</p>') + '</div>';
+    h += '<div class="pt-verification-checks"><h4>Deterministische Validierungen</h4>' + (view.checks.length ? '<ol>' + view.checks.map(function(check) {
+        return '<li><strong>' + verificationValue(check.check_type) + ': ' + verificationValue(check.status) + '</strong><span>' + verificationValue(check.at) + ' · ' + verificationValue(check.actor_id) + '</span></li>';
+    }).join('') + '</ol>' : '<p class="pt-muted">Keine persistierte Validierungsquittung. Die fachliche Verifikation ersetzt diesen Check nicht.</p>') + '</div>';
+    h += '<div class="pt-verification-events"><h4>Eventverlauf</h4>' + (lifecycle.events.length ? '<ol>' + lifecycle.events.map(function(event) {
+        return '<li><strong>' + EC.escapeHtml(event.from || '?') + ' → ' + EC.escapeHtml(event.to || '?') + '</strong><span>' + verificationValue(event.event_type) + ' · ' + verificationValue(event.result) + ' · ' + verificationValue(event.at) + ' · ' + verificationValue(event.actor_ids) + '</span>' + (event.note ? '<p>' + EC.escapeHtml(event.note) + '</p>' : '') + '</li>';
+    }).join('') + '</ol>' : '<p class="pt-muted">Noch kein Verifikationsereignis dokumentiert.</p>') + '</div>';
+    if (canAdvance) {
+        const isVerification = target === 'verified';
+        const action = isVerification ? 'Fachliches Ergebnis protokollieren' : 'Öffentliche Freigabe bestätigen';
+        h += '<form class="pt-verification-action" id="pt-verification-action"><h4>' + (isVerification ? 'Fachliche Verifikation' : 'Öffentliche Freigabe') + '</h4>' +
+            '<label>Reviewer-ID<input name="reviewer_id" required autocomplete="off"></label><label>Actor-ID(s)<input name="actor_ids" required autocomplete="off" aria-describedby="pt-verification-actors"></label><span id="pt-verification-actors" class="pt-field-help">Mehrere IDs mit Leerzeichen oder Komma trennen.</span><label>Activity-ID<input name="activity_id" required autocomplete="off"></label>' +
+            (isVerification ? '<label>Prüfergebnis<select name="result"><option value="accepted">Akzeptiert</option><option value="corrected_and_accepted">Korrigiert und akzeptiert</option><option value="changes_requested">Änderungen erforderlich</option><option value="rejected">Abgelehnt</option></select></label><label class="pt-correction-editor" hidden>Korrigierte Annotation als JSON<textarea name="corrected_annotation" rows="14">' + EC.escapeHtml(JSON.stringify(annotationBody(record), null, 2)) + '</textarea><span class="pt-field-help">Die vollständige Annotation wird als neue Version gespeichert. Das Original bleibt erhalten.</span></label>' : '') +
+            '<label>Begründung<textarea name="note" rows="3" required></textarea></label>' +
+            '<button class="pt-btn pt-verification-submit" type="submit">' + action + '</button></form>';
+    } else if (lifecycle.state === 'publication-approved') {
+        h += '<p class="pt-publication-approved">Öffentliche Freigabe ist dokumentiert.</p>';
+    } else if (view.legacy) {
+        h += '<p class="pt-legacy-gap">Dieser ältere Record besitzt keinen gouvernierten AI-Agent-Review-Status. Er muss zuerst durch den aktuellen Projektionsworkflow in Schema 0.5 überführt werden.</p>';
+    } else if (runActor !== 'human') {
+        h += '<p class="pt-legacy-gap">Eine Domänenexpertin oder ein Domänenexperte muss diesen Statuswechsel im fachlichen Verifikationsmodus dokumentieren.</p>';
+    }
+    h += '<p class="pt-verification-status" id="pt-verification-status" role="status" aria-live="polite">' + EC.escapeHtml(verificationNotice) + '</p></section>';
+    return h;
 }
 
 function workingDecisionRecord() {
@@ -1616,6 +2079,7 @@ function assessLockedHtml(p, dec) {
     h += evidenceListHtml(dec.evidence || {}, true);
     h += analysisPanelHtml(dec, true);
     h += referenceComparisonHtml(p);
+    if (verificationMode) h += verificationPanelHtml(dec);
     h += '</div><div class="pt-action-dock pt-action-dock-locked">' +
         '<div class="pt-record-summary"><span class="pt-tag-mono">Gespeicherte Entscheidung</span>' +
         '<span class="pt-pill pt-pill-' + decCls(dec.decision) + '">' + dec.decision + '</span></div>' +
@@ -2020,6 +2484,7 @@ function bindAssess(p, dec) {
 
     if (dec) {
         bindReferenceComparison(p, col);
+        bindVerificationPanel(p, dec, col);
         const rev = col.querySelector('#pt-revise');
         if (rev) rev.addEventListener('click', function() { editRecord(p); });
         let nx = col.querySelector('#pt-next');
@@ -2080,6 +2545,45 @@ function bindAssess(p, dec) {
     syncRecord();
 }
 
+function bindVerificationPanel(p, dec, col) {
+    if (!verificationMode) return;
+    const form = col.querySelector('#pt-verification-action');
+    if (!form) return;
+    const resultSelect = form.elements.result;
+    const correctionEditor = form.querySelector('.pt-correction-editor');
+    function syncCorrectionEditor() {
+        if (correctionEditor)
+            correctionEditor.hidden = !resultSelect || resultSelect.value !== 'corrected_and_accepted';
+    }
+    if (resultSelect) resultSelect.addEventListener('change', syncCorrectionEditor);
+    syncCorrectionEditor();
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        if (runActor !== 'human' || acceptanceMode) return;
+        const target = LIFECYCLE_NEXT[verificationView(dec).lifecycle.state];
+        const result = advanceVerification(dec, target, {
+            reviewer_id: form.elements.reviewer_id && form.elements.reviewer_id.value,
+            actor_ids: form.elements.actor_ids && form.elements.actor_ids.value,
+            activity_id: form.elements.activity_id && form.elements.activity_id.value,
+            result: resultSelect && resultSelect.value,
+            note: form.elements.note && form.elements.note.value,
+            corrected_annotation: form.elements.corrected_annotation && form.elements.corrected_annotation.value
+        });
+        const status = col.querySelector('#pt-verification-status');
+        if (!result.ok) {
+            if (status) status.textContent = result.message;
+            return;
+        }
+        verificationNotice = target === 'verified'
+            ? (result.event.to === 'verified'
+                ? 'Fachliche Verifikation wurde protokolliert.'
+                : 'Das fachliche Prüfergebnis wurde ohne Statusfreigabe protokolliert.')
+            : 'Öffentliche Freigabe wurde protokolliert.';
+        save();
+        renderScreening();
+    });
+}
+
 function commit() {
     let p = papers[state.index];
     if (!state.reviewer) {
@@ -2116,6 +2620,7 @@ function commit() {
         evidence: paperEvidence, ts: new Date().toISOString(), reviewer: state.reviewer, actor: runActor,
         text_source: currentTextSource // the paper-layer text the decision was taken on (ADR-027, trAIce M4)
     };
+    bindRecordIdentity(nextRecord, p);
     // FR-14: an edited Include record keeps its analysis codes across the re-commit;
     // a decision that leaves Include drops them (coding rule 1, excluded papers carry
     // no AN codes). A record that never had an analysis part gets no key, so a session
@@ -2188,7 +2693,7 @@ function openPinMenu(term, snippet) {
     menu.setAttribute('tabindex', '-1');
     let h = '<div class="pt-pinmenu-head"><span class="pt-tag-mono">Als Beleg anheften an</span>' +
         '<button class="pt-pinmenu-x" id="pt-pinmenu-x" aria-label="Schließen">&times;</button></div>';
-    if (pinOrigin === 'ai') h += '<div class="pt-pinmenu-ai">Dieser Beleg stammt aus dem LLM-Wissensdestillat und wird als automatisch erzeugte Referenz markiert. Er erfüllt kein menschliches Beleg-Gate.</div>';
+    if (pinOrigin === 'ai') h += '<div class="pt-pinmenu-ai">Dieser Beleg stammt aus dem LLM-Wissensdestillat und wird als automatisch erzeugte Referenz markiert. Er erfüllt das Paper-Beleg-Gate nicht.</div>';
     h += '<div class="pt-pinmenu-snip">' + EC.escapeHtml((snippet || term).slice(0, 160)) + '</div>';
     h += '<div class="pt-pinmenu-cats">';
     ALL_CATS.forEach(function(c) {
@@ -2438,7 +2943,7 @@ function renderData(targetEl) {
 
 function validateReviewerPayload(obj) {
     if (!obj || typeof obj !== 'object') return { ok: false, message: 'Datei enthält kein JSON-Objekt.' };
-    if (!/^femprompt-prisma-reviewer\/0\.[123]$/.test(obj.schema || ''))
+    if (!/^femprompt-prisma-reviewer\/0\.[12345]$/.test(obj.schema || ''))
         return { ok: false, message: 'unbekanntes oder fehlendes Reviewer-Schema.' };
     if (!obj.decisions || typeof obj.decisions !== 'object' || Array.isArray(obj.decisions))
         return { ok: false, message: 'Feld "decisions" fehlt oder ist ungültig.' };
@@ -2451,6 +2956,14 @@ function validateReviewerPayload(obj) {
         return !d || ['Include', 'Exclude', 'Unclear'].indexOf(d.decision) === -1;
     });
     if (badDecision) return { ok: false, message: 'ungültige Decision bei Paper ' + badDecision + '.' };
+    if (obj.schema === REVIEWER_SCHEMA) {
+        const badVersion = Object.keys(obj.decisions).find(function(id) {
+            const decision = obj.decisions[id], paper = papers.find(function(item) { return item.id === id; });
+            return !decision.work_id || !decision.version_id || !decision.version_type ||
+                (paper && (decision.work_id !== paper.work_id || decision.version_id !== paper.version_id));
+        });
+        if (badVersion) return { ok: false, message: 'Werk- oder Fassungsbindung fehlt bei Paper ' + badVersion + '.' };
+    }
     return { ok: true };
 }
 
@@ -2631,6 +3144,8 @@ const TEST_HOOK = {
     reviewerFileText: reviewerFileText, sortedDecisions: sortedDecisions,
     isReviewerId: isReviewerId, normalizedReviewerKey: normalizedReviewerKey, reviewerPath: reviewerPath,
     selectReviewer: selectReviewer, importReviewerPayload: importReviewerPayload,
+    reviewerEnvelope: function(key) { return reviewerEnvelopes[key] ? JSON.parse(JSON.stringify(reviewerEnvelopes[key])) : null; },
+    setReviewerEnvelope: function(key, payload) { reviewerEnvelopes[key] = JSON.parse(JSON.stringify(payload)); },
     validateReviewerPayload: validateReviewerPayload, save: save, saveStatus: function() { return saveStatus; },
     loadAllReviewers: loadAllReviewers,
     reviewerFileErrors: function() { return JSON.parse(JSON.stringify(reviewerFileErrors)); },
@@ -2650,6 +3165,12 @@ const TEST_HOOK = {
     evidenceLayer: evidenceLayer, isPaperEvidence: isPaperEvidence,
     paperEvidenceMissing: paperEvidenceMissing, humanEvidenceMissing: humanEvidenceMissing,
     recordRequirements: recordRequirements, workingDecisionRecord: workingDecisionRecord,
+    // PRISM lifecycle verification (kept separate from ordinary screening commits)
+    LIFECYCLE_STATES: LIFECYCLE_STATES, verificationView: verificationView, legacyBaseline: legacyBaseline,
+    ensureVerificationContract: ensureVerificationContract, advanceVerification: advanceVerification,
+    verificationPanelHtml: verificationPanelHtml, actorIds: actorIds,
+    annotationBody: annotationBody, annotationDiff: annotationDiff,
+    correctedAnnotationBody: correctedAnnotationBody, VERIFICATION_RESULTS: VERIFICATION_RESULTS,
     // analysis coding panel (FR-14, ADR-026)
     setAnalysisFields: function(d) { applyAnalysisVocab(d); },
     anVersion: function() { return anVocabVersion; },

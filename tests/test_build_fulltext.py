@@ -230,6 +230,70 @@ def test_corrected_publication_title_matches_verified_source() -> None:
     assert bf.verified_source(paper, source, "clean", metadata) == (source, "clean")
 
 
+@pytest.mark.parametrize(
+    ("paper_id", "source"),
+    [
+        ("P4YQIKJX", "clean"),
+        ("A2P8MXMY", "clean"),
+        ("BHXDU7VM", "clean"),
+        ("QUV5DQH3", "clean"),
+        ("FTJM5R8N", "clean"),
+        ("3ZNMTJ5B", "raw"),
+        ("8MRNK6FX", "raw"),
+        ("SSF5Q33W", "raw"),
+        ("4KMMPA6A", "clean"),
+        ("EQV4DNQR", "raw"),
+        ("J5EF9W6M", "raw"),
+        ("NSI6S5QE", "clean"),
+        ("VSZM7CT6", "clean"),
+        ("7FEFMCBZ", "clean"),
+        ("R7V99ERA", "clean"),
+        ("4ZL5Q48E", "clean"),
+        ("J7V3AAQT", "clean"),
+    ],
+)
+def test_curated_source_repairs_resolve_exact_records(
+    paper_id: str, source: str
+) -> None:
+    path, label = bf.curated_source(_real_paper(paper_id))
+
+    assert path is not None and path.exists()
+    assert label == source
+
+
+def test_same_title_does_not_bridge_different_un_women_work() -> None:
+    paper = _real_paper("5T55I5Z7")
+    source = (
+        bf.CLEAN_DIR / "UN Women_2024_Artificial_Intelligence_and_gender_equality.md"
+    )
+
+    assert bf.identity_conflicts(paper, source) == []
+    assert paper["year"] == 2020
+    assert "5T55I5Z7" not in bf.CURATED_SOURCE_OVERRIDES
+
+
+@pytest.mark.parametrize(
+    "paper_id", ["KI9GRGHB", "ZQHP5G35", "LR8Z3YHP"]
+)
+def test_batch_a_unresolved_records_remain_fail_closed(paper_id: str) -> None:
+    paper = _real_paper(paper_id)
+    clean_idx = {bf.norm(path.stem): path.name for path in bf.CLEAN_DIR.glob("*.md")}
+    raw_idx = {bf.norm(path.stem): path.name for path in bf.RAW_DIR.glob("*.md")}
+
+    assert paper_id not in bf.CURATED_SOURCE_OVERRIDES
+    assert bf.resolve_docling(paper, clean_idx, raw_idx) == (None, None)
+
+
+@pytest.mark.parametrize("paper_id", ["5T55I5Z7", "8NG4ZEWE", "XG7RFFC7"])
+def test_batch_c_conflicts_remain_unbound(paper_id: str) -> None:
+    paper = _real_paper(paper_id)
+    clean_idx = {bf.norm(path.stem): path.name for path in bf.CLEAN_DIR.glob("*.md")}
+    raw_idx = {bf.norm(path.stem): path.name for path in bf.RAW_DIR.glob("*.md")}
+
+    assert paper_id not in bf.CURATED_SOURCE_OVERRIDES
+    assert bf.resolve_docling(paper, clean_idx, raw_idx) == (None, None)
+
+
 def test_truncated_source_title_with_shared_content_words_is_accepted(
     tmp_path: Path, monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -381,7 +445,10 @@ def test_main_publishes_assets_and_manifest_as_one_build(
     clean_dir, out_dir, manifest = _configure_build(tmp_path, monkeypatch)
     (bf.DATA_IN).write_text(
         json.dumps(
-            {"papers": [{"id": "X", "title": "Fresh", "author_year": "Pilot (2026)"}]}
+            {"papers": [{"id": "X", "title": "Fresh", "author_year": "Pilot (2026)",
+                "work_id": "work:test", "version_id": "version:test",
+                "version_type": "version_of_record", "preferred_version_id": "version:test",
+                "is_preferred_version": True}]}
         ),
         encoding="utf-8",
     )
@@ -393,7 +460,10 @@ def test_main_publishes_assets_and_manifest_as_one_build(
 
     assert bf.main() == 0
     assert sorted(path.name for path in out_dir.glob("*.md")) == ["X.md"]
-    assert json.loads(manifest.read_text(encoding="utf-8"))["X"]["src"] == "clean"
+    published = json.loads(manifest.read_text(encoding="utf-8"))["X"]
+    assert published["src"] == "clean"
+    assert published["work_id"] == "work:test"
+    assert published["version_id"] == "version:test"
 
 
 def test_main_preserves_previous_build_when_generation_fails(

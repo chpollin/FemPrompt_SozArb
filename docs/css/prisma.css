@@ -503,11 +503,57 @@ body.pt-fullscreen *, body.pt-fullscreen *::before, body.pt-fullscreen *::after 
   padding: 0.2rem 0.1rem 0.7rem;
 }
 .pt-wsbar-title { font-family: var(--pt-serif); font-size: var(--pt-lg); font-weight: 600; color: var(--pt-ink); }
+.pt-mode-switch {
+  margin-left: auto; display: inline-flex; align-items: center; min-height: 30px; padding: 0 0.65rem;
+  border: 1px solid var(--pt-human-line); border-radius: var(--pt-r-sm); color: var(--pt-human);
+  background: var(--pt-human-bg); font-size: var(--pt-xs); font-weight: 600; text-decoration: none;
+}
+.pt-mode-switch:hover { color: var(--pt-ink); border-color: var(--pt-ink-4); }
+
+/* PRISM keeps AI-agent review, deterministic checks, expert verification, and
+   publication approval visible as separate governance operations. */
+.pt-verification { margin-top: 1.25rem; padding: 0.9rem; border: 1px solid var(--pt-border-2); border-radius: var(--pt-r-lg); background: var(--pt-surface); }
+.pt-verification-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.7rem; }
+.pt-verification h3, .pt-verification h4 { margin: 0; color: var(--pt-ink); }
+.pt-verification h3 { font-family: var(--pt-serif); font-size: var(--pt-md); }
+.pt-verification h4 { font-size: var(--pt-sm); }
+.pt-verification-lead { margin: 0.55rem 0 0.8rem; font-size: var(--pt-sm); line-height: 1.5; color: var(--pt-ink-2); }
+.pt-lifecycle-state { display: inline-flex; align-items: center; max-width: 13rem; padding: 0.25rem 0.45rem; border-radius: var(--pt-r-sm); font: 600 var(--pt-2xs) var(--pt-mono); overflow-wrap: anywhere; }
+.pt-lifecycle-ai-agent-reviewed { color: var(--pt-ai); background: var(--pt-ai-bg); border: 1px solid var(--pt-ai-line); }
+.pt-lifecycle-verified { color: var(--pt-human); background: var(--pt-human-bg); border: 1px solid var(--pt-human-line); }
+.pt-lifecycle-publication-approved { color: var(--pt-include); background: var(--pt-include-bg); border: 1px solid var(--pt-include); }
+.pt-lifecycle-identified, .pt-lifecycle-curated, .pt-lifecycle-agent-annotated { color: var(--pt-ink-2); background: var(--pt-surface-3); border: 1px solid var(--pt-border-2); }
+.pt-verification-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.55rem; margin: 0; }
+.pt-verification-grid div { min-width: 0; padding: 0.45rem 0.5rem; background: var(--pt-surface-2); border-radius: var(--pt-r-sm); }
+.pt-verification-grid dt { font: 600 var(--pt-2xs) var(--pt-mono); color: var(--pt-ink-3); text-transform: uppercase; }
+.pt-verification-grid dd { margin: 0.2rem 0 0; font-size: var(--pt-xs); overflow-wrap: anywhere; }
+.pt-verify-empty { color: var(--pt-ink-4); font-style: italic; }
+.pt-verification-provenance, .pt-verification-tracks, .pt-verification-annotations, .pt-verification-checks, .pt-verification-events, .pt-verification-action { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--pt-border); }
+.pt-verification-activity + .pt-verification-activity { margin-top: 0.6rem; padding-top: 0.6rem; border-top: 1px solid var(--pt-border); }
+.pt-verification-activity > p { margin: 0 0 0.4rem; font-size: var(--pt-xs); overflow-wrap: anywhere; }
+.pt-legacy-gap { margin: 0.65rem 0 0; padding: 0.5rem 0.6rem; border-left: 3px solid var(--pt-warn); border-radius: var(--pt-r-sm); background: var(--pt-warn-bg); color: var(--pt-warn-ink); font-size: var(--pt-xs); line-height: 1.5; }
+.pt-verification-tracks p { margin: 0.45rem 0 0; font-size: var(--pt-xs); line-height: 1.45; overflow-wrap: anywhere; }
+.pt-verification-events ol, .pt-verification-annotations ol, .pt-verification-checks ol { margin: 0.55rem 0 0; padding-left: 1.2rem; }
+.pt-verification-events li, .pt-verification-annotations li, .pt-verification-checks li { margin: 0 0 0.45rem; font-size: var(--pt-xs); line-height: 1.45; }
+.pt-verification-events li span, .pt-verification-annotations li span, .pt-verification-checks li span { display: block; color: var(--pt-ink-3); overflow-wrap: anywhere; }
+.pt-verification-events li p { margin: 0.2rem 0 0; color: var(--pt-ink-2); }
+.pt-verification-action { display: grid; gap: 0.5rem; border-top: 2px solid var(--pt-human-line); }
+.pt-verification-action label { display: grid; gap: 0.25rem; font-size: var(--pt-xs); font-weight: 600; color: var(--pt-ink-2); }
+.pt-verification-action input, .pt-verification-action select, .pt-verification-action textarea { width: 100%; padding: 0.42rem 0.55rem; border: 1px solid var(--pt-border-2); border-radius: var(--pt-r-sm); background: var(--pt-surface); color: var(--pt-ink); font: var(--pt-sm) var(--pt-mono); }
+.pt-verification-action textarea { resize: vertical; line-height: 1.45; }
+.pt-field-help { margin-top: -0.25rem; color: var(--pt-ink-3); font-size: var(--pt-2xs); }
+.pt-verification-submit { justify-self: start; border-color: var(--pt-human); background: var(--pt-human); color: var(--pt-surface); }
+.pt-publication-approved { margin: 0.75rem 0 0; padding: 0.55rem 0.65rem; border: 1px solid var(--pt-include); border-left-width: 3px; border-radius: var(--pt-r-sm); background: var(--pt-include-bg); color: var(--pt-include); font-size: var(--pt-sm); font-weight: 600; }
+.pt-verification-status { min-height: 1.2em; margin: 0.65rem 0 0; color: var(--pt-ink-2); font-size: var(--pt-xs); }
 /* a visible keyboard focus indicator (WCAG 2.4.7) */
 .pt-fullscreen .pt-btn:focus-visible,
 #pt-reviewer-key:focus-visible,
 .pt-save-icon:focus-visible,
-.pt-change-folder:focus-visible { outline: 2px solid var(--pt-human); outline-offset: 2px; }
+.pt-change-folder:focus-visible,
+.pt-mode-switch:focus-visible,
+.pt-verification-action input:focus-visible,
+.pt-verification-action select:focus-visible,
+.pt-verification-action textarea:focus-visible { outline: 2px solid var(--pt-human); outline-offset: 2px; }
 
 /* ACCESSIBILITY (Cut 3 / NFR-06) */
 /* screen-reader-only text: carries the status the colour dot conveys visually */

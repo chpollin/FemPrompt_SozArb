@@ -1,0 +1,49 @@
+{
+  "schema": "femprompt-codex-websearch-run/0.1",
+  "run_id": "codex-websearch-2026-08-24",
+  "executed_at": "2026-08-24",
+  "cutoff_date": "2026-08-24",
+  "year_filter": "2026 only",
+  "orchestrator": "Codex",
+  "runtime_model_identifier": "not_exposed_by_collaboration_interface",
+  "lanes": [
+    {
+      "lane_id": "A",
+      "agent_name": "Hubble",
+      "task_path": "/root/round2_identity",
+      "scope": "Generative AI and LLMs in social work and adjacent human services",
+      "output": "raw/lane-a-social-work-2026.json",
+      "status": "complete"
+    },
+    {
+      "lane_id": "B",
+      "agent_name": "Bacon",
+      "task_path": "/root/round2_metadata",
+      "scope": "Gender, feminist and intersectional AI research, inequality, fairness, and professional contexts",
+      "output": "raw/lane-b-gender-intersectionality-2026.json",
+      "status": "complete"
+    },
+    {
+      "lane_id": "C",
+      "agent_name": "Lovelace",
+      "task_path": "/root/round2_sources",
+      "scope": "Prompt engineering, prompt-based bias evaluation and mitigation, and socially consequential applications",
+      "output": "raw/lane-c-prompt-bias-2026.json",
+      "status": "complete"
+    }
+  ],
+  "deduplication_basis": [
+    "corpus/work_version_registry.json",
+    "corpus/zotero_export.json",
+    "generated/round2-intake-package.json",
+    "generated/contextual-update-2026-08-24-intake-package.json",
+    "corpus/deep-research/round2/contextual-update-2026-08-24/"
+  ],
+  "generated_outputs": [
+    "codex-websearch-2026-package.json",
+    "codex-websearch-2026-zotero-import.ris",
+    "bibliographic-audit.json"
+  ],
+  "authority": "The run identifies and prioritises candidates. It does not assign PRISM inclusion, verification, or publication approval."
+}
+

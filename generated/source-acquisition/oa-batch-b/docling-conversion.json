@@ -1,0 +1,94 @@
+{
+  "timestamp": "2026-08-23T18:51:39.874093",
+  "input_dir": "generated\\source-acquisition\\oa-batch-b\\pdf-input",
+  "output_dir": "generated\\markdown",
+  "total_files": 3,
+  "converted": 3,
+  "skipped": 0,
+  "failed": 0,
+  "low_quality": 0,
+  "files": [
+    {
+      "input": "A2P8MXMY.pdf",
+      "output": "A2P8MXMY.md",
+      "file_hash": "05251813c6436d550458637e4812bcd8",
+      "success": true,
+      "duration_seconds": 19.26,
+      "metrics": {
+        "total_chars": 101035,
+        "total_lines": 380,
+        "total_words": 15470,
+        "headings": 16,
+        "heading_levels": {
+          "h2": 16
+        },
+        "tables": 0,
+        "lists": 106,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 160,
+        "avg_line_length": 457.5
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "BHXDU7VM.pdf",
+      "output": "BHXDU7VM.md",
+      "file_hash": "945b37c1dc6f88c4c5fdfcc4e5390dda",
+      "success": true,
+      "duration_seconds": 160.17,
+      "metrics": {
+        "total_chars": 130588,
+        "total_lines": 1256,
+        "total_words": 18675,
+        "headings": 48,
+        "heading_levels": {
+          "h2": 48
+        },
+        "tables": 9,
+        "lists": 122,
+        "figures": 0,
+        "code_blocks": 10,
+        "links": 0,
+        "empty_lines": 591,
+        "avg_line_length": 189.9
+      },
+      "quality_score": 100,
+      "quality_issues": [],
+      "status": "converted"
+    },
+    {
+      "input": "P4YQIKJX.pdf",
+      "output": "P4YQIKJX.md",
+      "file_hash": "006e86936797d58c3da5a225cbbda3f5",
+      "success": true,
+      "duration_seconds": 113.34,
+      "metrics": {
+        "total_chars": 112820,
+        "total_lines": 778,
+        "total_words": 15065,
+        "headings": 62,
+        "heading_levels": {
+          "h2": 62
+        },
+        "tables": 7,
+        "lists": 100,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 289,
+        "avg_line_length": 229.1
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    }
+  ]
+}

@@ -442,7 +442,7 @@ try {
     return text ? JSON.parse(text) : null;
   }, opt.reviewer);
   check('file write: the connected reviewer file contains every completed paper under the selected key',
-    diskWrite?.schema === 'femprompt-prisma-reviewer/0.3' && diskWrite.reviewer === opt.reviewer &&
+    diskWrite?.schema === 'femprompt-prisma-reviewer/0.4' && diskWrite.reviewer === opt.reviewer &&
       manifest.papers.every((paperSpec) => !!diskWrite.decisions[paperSpec.id]),
     diskWrite && { reviewer: diskWrite.reviewer, papers: Object.keys(diskWrite.decisions) });
   const exportPath = join(outDir, `${opt.reviewer}.json`);
@@ -470,6 +470,102 @@ try {
   await page.waitForFunction(() => window.__PRISMA_TEST__ && !window.__PRISMA_TEST__.readingPending());
   await gotoPaper(manifest.papers[0].id);
   await shot(page, '04-after-reload');
+
+  // Verification is a separate surface over a locked record. It may advance only
+  // through the governed verification and publication transitions and must never appear in normal screening.
+  await connectFixtureStorage(page, opt.reviewer);
+  await page.goto(base + '/prisma.html?verify=1&paper=PILOT-A');
+  await waitInit();
+  check('verification mode: legacy capture is blocked until governed AI-agent review', await page.evaluate(() => {
+    const panel = document.querySelector('.pt-verification');
+    return !!panel && panel.textContent.includes('curated') && panel.textContent.includes('legacy_gap') &&
+      panel.textContent.includes('keinen gouvernierten AI-Agent-Review-Status') &&
+      !document.querySelector('#pt-verification-action');
+  }));
+  await page.evaluate(() => {
+    const T = window.__PRISMA_TEST__;
+    const r = T.curDec()['PILOT-A'];
+    r.provenance = {
+      annotation_id: 'pilot:PILOT-A', annotation_type: 'screening_decision',
+      actors: [
+        { id: 'curator-1', type: 'person', roles: ['curation'] },
+        { id: 'agent-1', type: 'ai_agent', roles: ['screening'] },
+        { id: 'ai-agent-reviewer-1', type: 'ai_agent', roles: ['ai_agent_reviewer'] }
+      ],
+      activities: [
+        { id: 'screen-1', type: 'agent_screening', run_id: 'pilot-run', method: 'agent_screening', prompt: { status: 'recorded', reference: 'prompt.md' }, model: { status: 'recorded', reference: 'model-id' }, associated_actor_ids: ['agent-1'] },
+        { id: 'ai-review-1', type: 'ai_agent_review', run_id: 'pilot-run', method: 'source_grounded_ai_agent_review', prompt: { status: 'recorded', reference: 'prompt.md' }, model: { status: 'recorded', reference: 'model-id' }, associated_actor_ids: ['ai-agent-reviewer-1'] }
+      ],
+      used_sources: [{ id: 'PILOT-A', type: 'paper', reference: 'fixtures/PILOT-A.md' }],
+      derived_from: [{ id: 'track-1', type: 'agent_track', reference: 'tracks/agent-1.json' }]
+    };
+    r.lifecycle = {
+      baseline: { state: 'curated', basis: 'controlled_intake', at: '2026-08-23T09:00:00.000Z', actor_ids: ['curator-1'] },
+      state: 'ai-agent-reviewed',
+      events: [
+        { event_id: 'screen-event-1', event_type: 'agent_annotation', from: 'curated', to: 'agent-annotated', result: 'completed', at: '2026-08-23T10:00:00.000Z', activity_id: 'screen-1', actor_ids: ['agent-1'] },
+        { event_id: 'ai-review-event-1', event_type: 'ai_agent_review', from: 'agent-annotated', to: 'ai-agent-reviewed', result: 'accepted', at: '2026-08-23T11:00:00.000Z', activity_id: 'ai-review-1', actor_ids: ['ai-agent-reviewer-1'] }
+      ]
+    };
+    T.showSurface('screening');
+  });
+  check('verification mode: a governed AI-agent-reviewed record exposes expert verification',
+    !!(await page.$('#pt-verification-action')) && (await page.textContent('.pt-lifecycle-ai-agent-reviewed')) === 'ai-agent-reviewed');
+  await page.fill('#pt-verification-action [name="reviewer_id"]', 'expert-1');
+  await page.fill('#pt-verification-action [name="actor_ids"]', 'expert-1');
+  await page.fill('#pt-verification-action [name="activity_id"]', 'expert-review-request-1');
+  await page.selectOption('#pt-verification-action [name="result"]', 'changes_requested');
+  await page.fill('#pt-verification-action [name="note"]', 'Die fachliche Einordnung muss präzisiert werden.');
+  await page.click('#pt-verification-action button[type="submit"]');
+  await page.waitForFunction(() => window.__PRISMA_TEST__.curDec()['PILOT-A']?.lifecycle?.events?.length === 3);
+  check('verification mode: changes requested are recorded without advancing authority', await page.evaluate(() => {
+    const r = window.__PRISMA_TEST__.curDec()['PILOT-A'];
+    const e = r.lifecycle?.events?.[2];
+    return r.lifecycle?.state === 'ai-agent-reviewed' && e?.event_type === 'domain_expert_verification' &&
+      e?.from === 'ai-agent-reviewed' && e?.to === 'ai-agent-reviewed' && e?.result === 'changes_requested' &&
+      !!document.querySelector('#pt-verification-action');
+  }));
+  await page.fill('#pt-verification-action [name="reviewer_id"]', 'expert-1');
+  await page.fill('#pt-verification-action [name="actor_ids"]', 'expert-1 observer-1');
+  await page.fill('#pt-verification-action [name="activity_id"]', 'expert-review-1');
+  await page.selectOption('#pt-verification-action [name="result"]', 'corrected_and_accepted');
+  await page.evaluate(() => {
+    const textarea = document.querySelector('#pt-verification-action [name="corrected_annotation"]');
+    const body = JSON.parse(textarea.value);
+    body.analysis.fields.AN_Notes = 'Von der Domänenexpertin fachlich präzisiert.';
+    textarea.value = JSON.stringify(body, null, 2);
+  });
+  await page.fill('#pt-verification-action [name="note"]', 'Belege geprüft und fachliche Einordnung präzisiert.');
+  await page.click('#pt-verification-action button[type="submit"]');
+  await page.waitForFunction(() => window.__PRISMA_TEST__.curDec()['PILOT-A']?.lifecycle?.state === 'verified');
+  check('verification mode: expert correction preserves the source annotation and advances to verified', await page.evaluate(() => {
+    const r = window.__PRISMA_TEST__.curDec()['PILOT-A'];
+    const e = r.lifecycle?.events?.[3];
+    const a = r.provenance?.activities?.find((item) => item.id === 'expert-review-1');
+    const correction = r.annotations?.[1];
+    return e?.event_type === 'domain_expert_verification' && e?.from === 'ai-agent-reviewed' && e?.to === 'verified' && e?.result === 'corrected_and_accepted' && e?.activity_id === 'expert-review-1' &&
+      Array.isArray(e.actor_ids) && e.actor_ids.join(',') === 'expert-1,observer-1' &&
+      a?.method === 'prism_domain_expert_verification' && a?.model?.status === 'not_applicable' &&
+      r.annotations?.length === 2 && correction?.annotation_type === 'domain_expert_correction' &&
+      correction?.supersedes === r.annotations[0].annotation_id && r.active_annotation_id === correction.annotation_id &&
+      correction?.changes?.some((change) => change.path === '/analysis/fields/AN_Notes') &&
+      document.body.textContent.includes('Öffentliche Freigabe bestätigen');
+  }));
+  await page.fill('#pt-verification-action [name="reviewer_id"]', 'publisher-1');
+  await page.fill('#pt-verification-action [name="actor_ids"]', 'publisher-1');
+  await page.fill('#pt-verification-action [name="activity_id"]', 'release-1');
+  await page.fill('#pt-verification-action [name="note"]', 'Für die öffentliche Projektion freigegeben.');
+  await page.click('#pt-verification-action button[type="submit"]');
+  await page.waitForFunction(() => window.__PRISMA_TEST__.curDec()['PILOT-A']?.lifecycle?.state === 'publication-approved');
+  check('verification mode: publication approval is visually distinct and retains both events', await page.evaluate(() => {
+    const r = window.__PRISMA_TEST__.curDec()['PILOT-A'];
+    return r.lifecycle?.events?.length === 5 && !!document.querySelector('.pt-publication-approved') &&
+      document.querySelector('.pt-lifecycle-publication-approved')?.textContent === 'publication-approved';
+  }));
+  await page.goto(base + '/prisma.html?paper=PILOT-A');
+  await waitInit();
+  check('normal screening: lifecycle controls remain absent after a verified record reloads',
+    !(await page.$('.pt-verification, #pt-verification-action')));
 
   // Repo-root connect: the picker hands over a folder and the tool resolves the reviewer
   // folder below it. The real picker cannot be automated, so a fake directory handle with the
@@ -738,6 +834,42 @@ try {
     const T = window.__PRISMA_TEST__;
     return Object.keys(T.curDec()).length > 0 && /Speichern fehlgeschlagen/.test(T.saveStatus().message || '');
   }));
+
+  const envelope05 = await page.evaluate(async () => {
+    const T = window.__PRISMA_TEST__;
+    const writes = {};
+    const payload = {
+      schema: 'femprompt-prisma-reviewer/0.5', reviewer: 'a04', actor: 'agent', status: 'ai-agent-reviewed',
+      ratification: { status: 'ratified', activity_id: 'ratify-1' }, run_manifest: 'runs/a04.json',
+      updated: '2026-08-23T10:00:00.000Z', decisions: {
+        'PILOT-A': {
+          decision: 'Exclude', categories: {}, evidence: {}, lifecycle: {
+            baseline: { state: 'agent-annotated', basis: 'agent_capture', at: '2026-08-22T10:00:00.000Z', actor_ids: ['agent-1'] },
+            state: 'ai-agent-reviewed', events: []
+          }
+        }
+      }
+    };
+    const entry = { kind: 'file', name: 'a04.json', async getFile() { return { async text() { return JSON.stringify(payload); } }; } };
+    T.setScreeningHandle({
+      async *values() { yield entry; },
+      async getFileHandle(name) { return { async createWritable() { let body = ''; return {
+        async write(value) { body = String(value); }, async close() { writes[name] = body; }
+      }; } }; }
+    });
+    await T.loadAllReviewers();
+    T.selectReviewer('a04');
+    T.save();
+    const deadline = Date.now() + 3000;
+    while (!writes['a04.json'] && Date.now() < deadline) await new Promise((resolve) => setTimeout(resolve, 10));
+    return writes['a04.json'] ? JSON.parse(writes['a04.json']) : null;
+  });
+  check('0.5 envelope: a loaded agent file preserves schema, status, ratification, metadata, and lifecycle on write',
+    envelope05?.schema === 'femprompt-prisma-reviewer/0.5' && envelope05?.actor === 'agent' &&
+      envelope05?.status === 'ai-agent-reviewed' && envelope05?.ratification?.activity_id === 'ratify-1' &&
+      envelope05?.run_manifest === 'runs/a04.json' && envelope05?.decisions?.['PILOT-A']?.lifecycle?.baseline?.state === 'agent-annotated',
+    envelope05);
+  await page.evaluate((reviewer) => window.__PRISMA_TEST__.selectReviewer(reviewer), opt.reviewer);
 
   const malformed = await page.evaluate(async (reviewer) => {
     const T = window.__PRISMA_TEST__;

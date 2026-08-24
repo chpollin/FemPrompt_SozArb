@@ -1,0 +1,540 @@
+{
+  "schema": "femprompt-agent-screening-queue/0.2",
+  "purpose": "Work-level queue for records without human or governed AI-agent review",
+  "script": "src/analysis/build_agent_screening_queue.py",
+  "authority_rule": "Any human annotation covers the canonical work; duplicate records do not trigger reassessment.",
+  "sources": {
+    "research_vault": "docs/data/research_vault_v2.json",
+    "research_vault_sha256": "41b467ab8751015e914b9e5913da7e8cb67b955276b9b15f5f986a08101b308f",
+    "fulltext_manifest": "docs/data/fulltext_manifest.json",
+    "fulltext_manifest_sha256": "27942d9b703187d84f7124369fa71eff3d5da2ef328d28e0285574f909e96302",
+    "productive_screening_dir": "docs/data/screening"
+  },
+  "counts": {
+    "canonical_records": 326,
+    "canonical_works": 257,
+    "direct_human_annotated_records": 291,
+    "direct_ai_agent_reviewed_without_human": 21,
+    "unannotated_alias_records_covered_at_work_level": 5,
+    "queued_records": 9,
+    "queued_works": 9,
+    "ready_works": 0,
+    "blocked_abstract_only_works": 4,
+    "blocked_without_text_works": 5
+  },
+  "gate": {
+    "status": "blocked",
+    "ready_work_ids": [],
+    "required_action": "Acquire and review Paper Markdown for every blocked work before its agent run."
+  },
+  "queue": [
+    {
+      "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+      "preferred_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+      "latest_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+      "selected_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+      "selected_version_type": "unknown",
+      "selected_version_is_preferred": true,
+      "available_versions": [
+        {
+          "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+          "version_type": "unknown",
+          "version_date": "2024",
+          "identifiers": {
+            "zotero_key": [
+              "SQYLQFRU"
+            ],
+            "url": [
+              "https://powerdrill.ai/discover/summary-reasoning-towards-fairness-mitigating-bias-in-cm9af0g1h7sb507pn7f5qh32q"
+            ]
+          },
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "integrity_status": "current",
+          "access_status": "unknown",
+          "landing_url": "https://powerdrill.ai/discover/summary-reasoning-towards-fairness-mitigating-bias-in-cm9af0g1h7sb507pn7f5qh32q",
+          "fulltext_url": "",
+          "relations": [],
+          "is_preferred": true,
+          "is_latest": true
+        }
+      ],
+      "representative_record_id": "SQYLQFRU",
+      "record_ids": [
+        "SQYLQFRU"
+      ],
+      "title": "Reasoning towards fairness: Mitigating bias in language models through reasoning-guided fine-tuning",
+      "author_year": "Furniturewala et al. (2024)",
+      "doi": null,
+      "url": "https://powerdrill.ai/discover/summary-reasoning-towards-fairness-mitigating-bias-in-cm9af0g1h7sb507pn7f5qh32q",
+      "abstract_available": false,
+      "source_status": "none",
+      "source_chars": 0,
+      "paper_source": null,
+      "paper_source_work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+      "paper_source_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+      "paper_source_sha256": null,
+      "queue_status": "blocked_missing_paper_source",
+      "blockers": [
+        "reviewed_fulltext_markdown_missing"
+      ]
+    },
+    {
+      "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+      "preferred_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+      "latest_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+      "selected_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+      "selected_version_type": "preprint",
+      "selected_version_is_preferred": true,
+      "available_versions": [
+        {
+          "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+          "version_type": "preprint",
+          "version_date": "2024",
+          "identifiers": {
+            "zotero_key": [
+              "RAY6G2R7"
+            ],
+            "url": [
+              "https://arxiv.org/html/2404.17218v3"
+            ]
+          },
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "integrity_status": "current",
+          "access_status": "unknown",
+          "landing_url": "https://arxiv.org/html/2404.17218v3",
+          "fulltext_url": "",
+          "relations": [],
+          "is_preferred": true,
+          "is_latest": true
+        }
+      ],
+      "representative_record_id": "RAY6G2R7",
+      "record_ids": [
+        "RAY6G2R7"
+      ],
+      "title": "SWIFTSAGE: A new dual-module framework for better action planning in complex interactive reasoning tasks",
+      "author_year": "Lin et al. (2024)",
+      "doi": null,
+      "url": "https://arxiv.org/html/2404.17218v3",
+      "abstract_available": false,
+      "source_status": "none",
+      "source_chars": 0,
+      "paper_source": null,
+      "paper_source_work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+      "paper_source_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+      "paper_source_sha256": null,
+      "queue_status": "blocked_missing_paper_source",
+      "blockers": [
+        "reviewed_fulltext_markdown_missing"
+      ]
+    },
+    {
+      "work_id": "work:5d44ca3d-827b-5f4e-a4f1-1ee40ec55c18",
+      "preferred_version_id": "version:d25aa754-f559-54ef-bd2f-4f8d0bec38a5",
+      "latest_version_id": "version:d25aa754-f559-54ef-bd2f-4f8d0bec38a5",
+      "selected_version_id": "version:d25aa754-f559-54ef-bd2f-4f8d0bec38a5",
+      "selected_version_type": "version_of_record",
+      "selected_version_is_preferred": true,
+      "available_versions": [
+        {
+          "version_id": "version:d25aa754-f559-54ef-bd2f-4f8d0bec38a5",
+          "version_type": "version_of_record",
+          "version_date": "2023",
+          "identifiers": {
+            "doi": [
+              "10.1080/1369118x.2021.1934069"
+            ],
+            "zotero_key": [
+              "ZQHP5G35"
+            ]
+          },
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "integrity_status": "current",
+          "access_status": "unknown",
+          "landing_url": "",
+          "fulltext_url": "",
+          "relations": [],
+          "is_preferred": true,
+          "is_latest": true
+        }
+      ],
+      "representative_record_id": "ZQHP5G35",
+      "record_ids": [
+        "ZQHP5G35"
+      ],
+      "title": "Data and rights in the digital welfare state: the case of Denmark",
+      "author_year": "Jørgensen (2023)",
+      "doi": "10.1080/1369118X.2021.1934069",
+      "url": null,
+      "abstract_available": true,
+      "source_status": "none",
+      "source_chars": 0,
+      "paper_source": null,
+      "paper_source_work_id": "work:5d44ca3d-827b-5f4e-a4f1-1ee40ec55c18",
+      "paper_source_version_id": "version:d25aa754-f559-54ef-bd2f-4f8d0bec38a5",
+      "paper_source_sha256": null,
+      "queue_status": "blocked_missing_paper_source",
+      "blockers": [
+        "reviewed_fulltext_markdown_missing"
+      ]
+    },
+    {
+      "work_id": "work:62cbd3ab-96ea-50e4-b877-2f65571a8f83",
+      "preferred_version_id": "version:d523f07b-3eed-5bf9-9073-62ffb923d65b",
+      "latest_version_id": "version:d523f07b-3eed-5bf9-9073-62ffb923d65b",
+      "selected_version_id": "version:d523f07b-3eed-5bf9-9073-62ffb923d65b",
+      "selected_version_type": "version_of_record",
+      "selected_version_is_preferred": true,
+      "available_versions": [
+        {
+          "version_id": "version:d523f07b-3eed-5bf9-9073-62ffb923d65b",
+          "version_type": "version_of_record",
+          "version_date": "2020",
+          "identifiers": {
+            "doi": [
+              "10.1177/0950017020950021"
+            ],
+            "zotero_key": [
+              "LR8Z3YHP"
+            ]
+          },
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "integrity_status": "current",
+          "access_status": "unknown",
+          "landing_url": "",
+          "fulltext_url": "",
+          "relations": [],
+          "is_preferred": true,
+          "is_latest": true
+        }
+      ],
+      "representative_record_id": "LR8Z3YHP",
+      "record_ids": [
+        "LR8Z3YHP"
+      ],
+      "title": "'Meaningless work': How the datafication of health reconfigures knowledge about work and erodes professional judgement",
+      "author_year": "Wadmann & Hoeyer (2020)",
+      "doi": "10.1177/0950017020950021",
+      "url": null,
+      "abstract_available": true,
+      "source_status": "none",
+      "source_chars": 0,
+      "paper_source": null,
+      "paper_source_work_id": "work:62cbd3ab-96ea-50e4-b877-2f65571a8f83",
+      "paper_source_version_id": "version:d523f07b-3eed-5bf9-9073-62ffb923d65b",
+      "paper_source_sha256": null,
+      "queue_status": "blocked_missing_paper_source",
+      "blockers": [
+        "reviewed_fulltext_markdown_missing"
+      ]
+    },
+    {
+      "work_id": "work:a6e813e5-57e0-555c-92f9-1155ffc79f42",
+      "preferred_version_id": "version:e3428c27-954b-565a-9d89-d546870301b3",
+      "latest_version_id": "version:e3428c27-954b-565a-9d89-d546870301b3",
+      "selected_version_id": "version:e3428c27-954b-565a-9d89-d546870301b3",
+      "selected_version_type": "version_of_record",
+      "selected_version_is_preferred": true,
+      "available_versions": [
+        {
+          "version_id": "version:e3428c27-954b-565a-9d89-d546870301b3",
+          "version_type": "version_of_record",
+          "version_date": "2022",
+          "identifiers": {
+            "doi": [
+              "10.1080/0960085x.2021.1934130"
+            ],
+            "zotero_key": [
+              "KI9GRGHB"
+            ]
+          },
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "integrity_status": "current",
+          "access_status": "unknown",
+          "landing_url": "",
+          "fulltext_url": "",
+          "relations": [],
+          "is_preferred": true,
+          "is_latest": true
+        }
+      ],
+      "representative_record_id": "KI9GRGHB",
+      "record_ids": [
+        "KI9GRGHB"
+      ],
+      "title": "Theorising algorithmic justice",
+      "author_year": "Marjanovic et al. (2022)",
+      "doi": "10.1080/0960085X.2021.1934130",
+      "url": null,
+      "abstract_available": true,
+      "source_status": "none",
+      "source_chars": 0,
+      "paper_source": null,
+      "paper_source_work_id": "work:a6e813e5-57e0-555c-92f9-1155ffc79f42",
+      "paper_source_version_id": "version:e3428c27-954b-565a-9d89-d546870301b3",
+      "paper_source_sha256": null,
+      "queue_status": "blocked_missing_paper_source",
+      "blockers": [
+        "reviewed_fulltext_markdown_missing"
+      ]
+    },
+    {
+      "work_id": "work:b440aa78-e9c1-5b93-8d4d-2200924a02cd",
+      "preferred_version_id": "version:09999996-2035-5d96-8058-aa9bb3c2b668",
+      "latest_version_id": "version:09999996-2035-5d96-8058-aa9bb3c2b668",
+      "selected_version_id": "version:09999996-2035-5d96-8058-aa9bb3c2b668",
+      "selected_version_type": "unknown",
+      "selected_version_is_preferred": true,
+      "available_versions": [
+        {
+          "version_id": "version:09999996-2035-5d96-8058-aa9bb3c2b668",
+          "version_type": "unknown",
+          "version_date": "2020",
+          "identifiers": {
+            "zotero_key": [
+              "5T55I5Z7"
+            ],
+            "url": [
+              "unesdoc.unesco.org/in/rest/annotationSVC/DownloadWatermarkedAttachment/attach_import_ab07646d-c784-4a4e-96a1-3be7855b6f76?_=374174eng.pdf&to=54&from=1"
+            ]
+          },
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "integrity_status": "current",
+          "access_status": "unknown",
+          "landing_url": "unesdoc.unesco.org/in/rest/annotationSVC/DownloadWatermarkedAttachment/attach_import_ab07646d-c784-4a4e-96a1-3be7855b6f76?_=374174eng.pdf&to=54&from=1",
+          "fulltext_url": "",
+          "relations": [],
+          "is_preferred": true,
+          "is_latest": true
+        }
+      ],
+      "representative_record_id": "5T55I5Z7",
+      "record_ids": [
+        "5T55I5Z7"
+      ],
+      "title": "ARTIFICIAL INTELLIGENCE and GENDER EQUALITY",
+      "author_year": "UNESCO (2020)",
+      "doi": null,
+      "url": "unesdoc.unesco.org/in/rest/annotationSVC/DownloadWatermarkedAttachment/attach_import_ab07646d-c784-4a4e-96a1-3be7855b6f76?_=374174eng.pdf&to=54&from=1",
+      "abstract_available": true,
+      "source_status": "none",
+      "source_chars": 0,
+      "paper_source": null,
+      "paper_source_work_id": "work:b440aa78-e9c1-5b93-8d4d-2200924a02cd",
+      "paper_source_version_id": "version:09999996-2035-5d96-8058-aa9bb3c2b668",
+      "paper_source_sha256": null,
+      "queue_status": "blocked_missing_paper_source",
+      "blockers": [
+        "reviewed_fulltext_markdown_missing"
+      ]
+    },
+    {
+      "work_id": "work:e3fcbaca-43ce-552e-85d8-0c743c12fee2",
+      "preferred_version_id": "version:ee62fefd-c381-5494-87e4-6accdce35fbe",
+      "latest_version_id": "version:ee62fefd-c381-5494-87e4-6accdce35fbe",
+      "selected_version_id": "version:ee62fefd-c381-5494-87e4-6accdce35fbe",
+      "selected_version_type": "version_of_record",
+      "selected_version_is_preferred": true,
+      "available_versions": [
+        {
+          "version_id": "version:ee62fefd-c381-5494-87e4-6accdce35fbe",
+          "version_type": "version_of_record",
+          "version_date": "2023",
+          "identifiers": {
+            "zotero_key": [
+              "XG7RFFC7"
+            ],
+            "url": [
+              "https://www.bls.gov/oes"
+            ]
+          },
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "integrity_status": "current",
+          "access_status": "unknown",
+          "landing_url": "https://www.bls.gov/oes",
+          "fulltext_url": "",
+          "relations": [],
+          "is_preferred": true,
+          "is_latest": true
+        }
+      ],
+      "representative_record_id": "XG7RFFC7",
+      "record_ids": [
+        "XG7RFFC7"
+      ],
+      "title": "Occupational employment statistics",
+      "author_year": "U.S. Bureau of Labor Statistics (2023)",
+      "doi": null,
+      "url": "https://www.bls.gov/oes/",
+      "abstract_available": false,
+      "source_status": "none",
+      "source_chars": 0,
+      "paper_source": null,
+      "paper_source_work_id": "work:e3fcbaca-43ce-552e-85d8-0c743c12fee2",
+      "paper_source_version_id": "version:ee62fefd-c381-5494-87e4-6accdce35fbe",
+      "paper_source_sha256": null,
+      "queue_status": "blocked_missing_paper_source",
+      "blockers": [
+        "reviewed_fulltext_markdown_missing"
+      ]
+    },
+    {
+      "work_id": "work:ec94cf1c-87bf-5f4d-a840-9dd3b92eefab",
+      "preferred_version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
+      "latest_version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
+      "selected_version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
+      "selected_version_type": "preprint",
+      "selected_version_is_preferred": true,
+      "available_versions": [
+        {
+          "version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
+          "version_type": "preprint",
+          "version_date": "2024",
+          "identifiers": {
+            "zotero_key": [
+              "Z9DNTBFF"
+            ],
+            "url": [
+              "https://arxiv.org/html/2405.20152v1"
+            ]
+          },
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "integrity_status": "current",
+          "access_status": "unknown",
+          "landing_url": "https://arxiv.org/html/2405.20152v1",
+          "fulltext_url": "",
+          "relations": [],
+          "is_preferred": true,
+          "is_latest": true
+        }
+      ],
+      "representative_record_id": "Z9DNTBFF",
+      "record_ids": [
+        "Z9DNTBFF"
+      ],
+      "title": "Worst of both worlds: A comparative analysis of error in language and vision-language models",
+      "author_year": "Srinivasan & Bisk (2024)",
+      "doi": null,
+      "url": "https://arxiv.org/html/2405.20152v1",
+      "abstract_available": false,
+      "source_status": "none",
+      "source_chars": 0,
+      "paper_source": null,
+      "paper_source_work_id": "work:ec94cf1c-87bf-5f4d-a840-9dd3b92eefab",
+      "paper_source_version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
+      "paper_source_sha256": null,
+      "queue_status": "blocked_missing_paper_source",
+      "blockers": [
+        "reviewed_fulltext_markdown_missing"
+      ]
+    },
+    {
+      "work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
+      "preferred_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+      "latest_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+      "selected_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+      "selected_version_type": "unknown",
+      "selected_version_is_preferred": true,
+      "available_versions": [
+        {
+          "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+          "version_type": "unknown",
+          "version_date": "2023-04-03",
+          "identifiers": {
+            "zotero_key": [
+              "8NG4ZEWE"
+            ],
+            "url": [
+              "https://wb-erwachsenenbildung.net/intersektionalitaet"
+            ]
+          },
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "integrity_status": "current",
+          "access_status": "unknown",
+          "landing_url": "https://wb-erwachsenenbildung.net/intersektionalitaet",
+          "fulltext_url": "",
+          "relations": [],
+          "is_preferred": true,
+          "is_latest": true
+        }
+      ],
+      "representative_record_id": "8NG4ZEWE",
+      "record_ids": [
+        "8NG4ZEWE"
+      ],
+      "title": "Intersektionalität",
+      "author_year": "Arnold et al. (2023)",
+      "doi": null,
+      "url": "https://wb-erwachsenenbildung.net/intersektionalitaet/",
+      "abstract_available": false,
+      "source_status": "none",
+      "source_chars": 0,
+      "paper_source": null,
+      "paper_source_work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
+      "paper_source_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+      "paper_source_sha256": null,
+      "queue_status": "blocked_missing_paper_source",
+      "blockers": [
+        "reviewed_fulltext_markdown_missing"
+      ]
+    }
+  ],
+  "covered_alias_records": [
+    {
+      "work_id": "work:5611657b-9caf-528c-aba7-b27719e34b25",
+      "record_id": "WTLVG29I",
+      "covered_by_human_records": [
+        "EXVG7MQR",
+        "HN7KKNYV",
+        "IUN7Z56I"
+      ],
+      "covered_by_ai_agent_reviewed_records": []
+    },
+    {
+      "work_id": "work:5f49f95b-dcfe-5778-8376-a313cb039d4d",
+      "record_id": "QI5AYE4V",
+      "covered_by_human_records": [
+        "H59BNSX8"
+      ],
+      "covered_by_ai_agent_reviewed_records": []
+    },
+    {
+      "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88",
+      "record_id": "2YS85B49",
+      "covered_by_human_records": [
+        "3GB9B4IJ",
+        "BCBWSU3Z"
+      ],
+      "covered_by_ai_agent_reviewed_records": [
+        "3GB9B4IJ"
+      ]
+    },
+    {
+      "work_id": "work:c54f89d4-e79b-5fd8-9426-6b51b36669e2",
+      "record_id": "ZITLBM8A",
+      "covered_by_human_records": [
+        "LGYFN6JK"
+      ],
+      "covered_by_ai_agent_reviewed_records": []
+    },
+    {
+      "work_id": "work:e1ca8a4c-5cc2-5e35-b3cc-375950a07405",
+      "record_id": "AMYZFAPH",
+      "covered_by_human_records": [
+        "4PK8UN82",
+        "9YYPYEGY",
+        "U3AJIXAJ"
+      ],
+      "covered_by_ai_agent_reviewed_records": []
+    }
+  ]
+}

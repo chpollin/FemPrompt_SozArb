@@ -1,0 +1,34 @@
+{
+  "timestamp": "2026-08-23T18:57:22.521755",
+  "input_dir": "tmp\\oa-batch-c-markdown",
+  "output_dir": "generated\\markdown_clean",
+  "in_place": false,
+  "documents": [
+    {
+      "filename": "Franken_Mauritz_2021_Gender_und_KI-Anwendungen.md",
+      "original_chars": 109338,
+      "final_chars": 109223,
+      "chars_removed": 115,
+      "hyphenations_fixed": 0,
+      "page_numbers_removed": 0,
+      "repeated_headers_removed": 1,
+      "excessive_newlines_fixed": 84,
+      "all_caps_removed": 0,
+      "artifact_score_before": 33.6,
+      "artifact_score_after": 0.0
+    },
+    {
+      "filename": "NASW_ASWB_CSWE_CSWA_2017_Standards_for_Technology_in_Social_Work_Practice.md",
+      "original_chars": 107635,
+      "final_chars": 107505,
+      "chars_removed": 130,
+      "hyphenations_fixed": 0,
+      "page_numbers_removed": 2,
+      "repeated_headers_removed": 0,
+      "excessive_newlines_fixed": 120,
+      "all_caps_removed": 0,
+      "artifact_score_before": 49.2,
+      "artifact_score_after": 0.0
+    }
+  ]
+}

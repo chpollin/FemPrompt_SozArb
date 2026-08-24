@@ -415,10 +415,10 @@ test('unpinEvidence removes one entry and deletes an emptied category list', fun
 // Section F: persistence payload, commit flow, generated disclosure
 // ============================================================
 
-test('reviewerPayload carries schema 0.3, reviewer key, decisions', function() {
+test('reviewerPayload carries the current schema, reviewer key, decisions', function() {
     T.getState().reviewers.r2 = { x1: { decision: 'Include', categories: {} } };
     var pl = T.reviewerPayload('r2');
-    assertEqual(pl.schema, 'femprompt-prisma-reviewer/0.3');
+    assertEqual(pl.schema, 'femprompt-prisma-reviewer/0.4');
     assertEqual(pl.schema, T.REVIEWER_SCHEMA);
     assertEqual(pl.reviewer, 'r2');
     assertEqual(pl.actor, 'human');
@@ -429,6 +429,36 @@ test('reviewerPayload carries schema 0.3, reviewer key, decisions', function() {
 test('reviewerPayload for an unknown reviewer has empty decisions', function() {
     var pl = T.reviewerPayload('nobody');
     assertEqual(Object.keys(pl.decisions).length, 0);
+});
+test('a loaded 0.5 agent envelope round-trips status, ratification, metadata, and decision lifecycle', function() {
+    var source = {
+        schema: 'femprompt-prisma-reviewer/0.5', reviewer: 'a04', actor: 'agent', status: 'ai-agent-reviewed',
+        ratification: { status: 'ratified', activity_id: 'ratify-1' }, run_manifest: 'runs/a04.json',
+        updated: '2026-08-23T10:00:00.000Z', decisions: {
+            p04: {
+                decision: 'Exclude', lifecycle: {
+                    baseline: { state: 'agent-annotated', basis: 'agent_capture', at: '2026-08-22T10:00:00.000Z', actor_ids: ['agent-1'] },
+                    state: 'ai-agent-reviewed', events: []
+                }
+            }
+        }
+    };
+    var imported = T.importReviewerPayload(source, 'a04', true);
+    assert(imported.ok, '0.5 import accepted');
+    var envelope = T.reviewerEnvelope('a04');
+    assertEqual(envelope.schema, 'femprompt-prisma-reviewer/0.5');
+    assertEqual(envelope.actor, 'agent');
+    assertEqual(envelope.status, 'ai-agent-reviewed');
+    assertEqual(envelope.ratification.activity_id, 'ratify-1');
+    var written = JSON.parse(T.reviewerFileText('a04'));
+    assertEqual(written.schema, 'femprompt-prisma-reviewer/0.5');
+    assertEqual(written.actor, 'agent');
+    assertEqual(written.status, 'ai-agent-reviewed');
+    assertEqual(written.ratification.status, 'ratified');
+    assertEqual(written.run_manifest, 'runs/a04.json');
+    assertEqual(written.decisions.p04.lifecycle.baseline.state, 'agent-annotated');
+    assert(written.updated !== source.updated, 'only the updated field is refreshed');
+    delete T.getState().reviewers.a04;
 });
 test('file/browser recovery merge keeps the newer record and every local-only record', function() {
     var merged = T.mergeReviewerDecisions(
@@ -705,11 +735,31 @@ test('import: a duplicate Zotero key is reported and the second row skipped', fu
     assertEqual(res.stats.added, 1, 'only the first P4 added');
     assert(res.stats.skipped >= 1, 'the duplicate row is skipped');
 });
-test('import: an Unclear decision is preserved in reviewer schema 0.3', function() {
+test('import: an Unclear decision is preserved in the historical offline schema', function() {
     var res = runImport('P5,Nein,Teilweise,Nein,Nein,Teilweise,Nein,Nein,Nein,Nein,Nein,Unclear,');
     assertEqual(res.payload.schema, 'femprompt-prisma-reviewer/0.3');
     assertEqual(res.payload.decisions.P5.decision, 'Unclear');
     assertEqual(res.stats.added, 1, 'Unclear row recorded');
+});
+test('import: a loaded corpus binds historical rows to the exact Work and Version', function() {
+    var getAllPapers = window.EC.getAllPapers;
+    window.EC.getAllPapers = function() {
+        return [{
+            id: 'PV1', work_id: 'work:pv1', version_id: 'version:pv1',
+            version_type: 'accepted_manuscript', preferred_version_id: 'version:pv1',
+            is_preferred_version: true
+        }];
+    };
+    try {
+        var res = runImport('PV1,Nein,Ja,Nein,Nein,Ja,Nein,Nein,Nein,Nein,Nein,Include,');
+        assertEqual(res.payload.schema, 'femprompt-prisma-reviewer/0.4');
+        assertEqual(res.payload.decisions.PV1.work_id, 'work:pv1');
+        assertEqual(res.payload.decisions.PV1.version_id, 'version:pv1');
+        assertEqual(res.payload.decisions.PV1.version_type, 'accepted_manuscript');
+        assertEqual(res.payload.decisions.PV1.selected_version_is_preferred, true);
+    } finally {
+        window.EC.getAllPapers = getAllPapers;
+    }
 });
 test('import: re-importing the same row is idempotent (unchanged, not re-added)', function() {
     var first = runImport('P6,Nein,Ja,Nein,Nein,Ja,Nein,Nein,Nein,Nein,Nein,Include,');
@@ -753,7 +803,7 @@ test('FR-08: a reviewer export survives a JSON round-trip and reloads losslessly
     delete S.reviewers.rtSrc; delete S.reviewers.rtDst;
 });
 
-test('reviewer schema 0.1 to current: a pre-evidence file loads and is written back as 0.3', function() {
+test('reviewer schema 0.1 to current: a pre-evidence file loads and is written back as 0.4', function() {
     T.setPapers([{ id: 'mg1' }, { id: 'mg2' }]);
     var S = T.getState();
     // a 0.1 reviewer file: decisions without an evidence map; a legacy Beleg without origin
@@ -775,7 +825,7 @@ test('reviewer schema 0.1 to current: a pre-evidence file loads and is written b
     assertContains(html, 'pt-evid-origin-human">Paper');
     assertNotContains(html, 'pt-evid-origin-ai');
     // re-exporting stamps the current schema, completing the upgrade to 0.3
-    assertEqual(T.reviewerPayload('old').schema, 'femprompt-prisma-reviewer/0.3');
+    assertEqual(T.reviewerPayload('old').schema, 'femprompt-prisma-reviewer/0.4');
     delete S.reviewers.old;
 });
 
@@ -1501,7 +1551,7 @@ test('a stale reading response is dropped: it neither paints nor changes text_so
     assertEqual(T.textSource(), 'abstract', 'text_source still belongs to the paper shown');
 });
 
-test('commit records text_source of the shown text; the file form and schema 0.3 carry it', function() {
+test('commit records text_source of the shown text; the file form and current schema carry it', function() {
     T.setPapers(tsFix);
     T.getState().reviewers = {};
     T.getState().reviewer = 'r1';
@@ -1519,7 +1569,7 @@ test('commit records text_source of the shown text; the file form and schema 0.3
     assertEqual(rec.text_source, 'raw');
     var txt = T.reviewerFileText('r1');
     assertContains(txt, '"text_source": "raw"');
-    assertContains(txt, '"schema": "femprompt-prisma-reviewer/0.3"');
+    assertContains(txt, '"schema": "femprompt-prisma-reviewer/0.4"');
     T.getState().index = 1;
     T.resetWork(tsFix[1]);
     T.loadReadingInto(tsFix[1]);
@@ -1647,6 +1697,172 @@ test('reconcileReviewers ignores the seed track and payloads without decisions',
     var r = T.reconcileReviewers([reconA, { reviewer: 'seed', decisions: { 'PILOT-A': { decision: 'Exclude' } } }, null, { reviewer: 'r9' }]);
     assertEqual(r.reviewers.join(','), 'r1');
     assertEqual(r.papers['PILOT-A'].status, 'single');
+});
+
+// ============================================================
+// Section M: PRISM lifecycle verification
+// ============================================================
+
+test('legacy decision records retain their achieved capture state with an explicit provenance gap', function() {
+    var legacy = { decision: 'Exclude', reviewer: 'ar2', actor: 'agent', text_source: 'abstract', evidence: { Gender: [{ snippet: 'gender' }] } };
+    var snapshot = JSON.stringify(legacy);
+    var view = T.verificationView(legacy);
+    assertEqual(view.lifecycle.baseline.state, 'agent-annotated');
+    assertEqual(view.lifecycle.baseline.basis, 'legacy_capture');
+    assertEqual(view.lifecycle.state, 'agent-annotated');
+    assertEqual(view.lifecycle.events.length, 0);
+    assertEqual(view.provenance.annotation_type, 'legacy-migrated');
+    assertContains(view.provenance.legacy_gap, 'nicht vollständig überliefert');
+    assertEqual(JSON.stringify(legacy), snapshot, 'opening the verification view does not mutate legacy screening data');
+});
+
+test('verification appends complete events and permits only AI-agent review to expert verification to publication approval', function() {
+    var record = {
+        decision: 'Include', reviewer: 'agent-a', actor: 'agent', text_source: 'raw', evidence: {},
+        provenance: {
+            annotation_id: 'ann-pilot', annotation_type: 'screening_decision',
+            actors: [
+                { id: 'curator-1', type: 'person', roles: ['curation'] },
+                { id: 'agent-a', type: 'ai_agent', roles: ['screening'] },
+                { id: 'ai-agent-reviewer-1', type: 'ai_agent', roles: ['ai_agent_reviewer'] }
+            ],
+            activities: [
+                { id: 'screen-1', type: 'agent_screening', run_id: 'run-1', method: 'agent_screening', prompt: { status: 'recorded', reference: 'prompt.md' }, model: { status: 'recorded', reference: 'model-id' }, associated_actor_ids: ['agent-a'] },
+                { id: 'ai-review-1', type: 'ai_agent_review', run_id: 'run-1', method: 'source_grounded_ai_agent_review', prompt: { status: 'recorded', reference: 'prompt.md' }, model: { status: 'recorded', reference: 'model-id' }, associated_actor_ids: ['ai-agent-reviewer-1'] }
+            ],
+            used_sources: [{ id: 'paper-1', type: 'paper', reference: 'paper.md' }],
+            derived_from: [{ id: 'track-1', type: 'agent_track', reference: 'track.json' }]
+        },
+        lifecycle: {
+            baseline: { state: 'curated', basis: 'controlled_intake', at: '2026-08-23T09:00:00.000Z', actor_ids: ['curator-1'] },
+            state: 'ai-agent-reviewed',
+            events: [
+                { event_id: 'event-screen-1', event_type: 'agent_annotation', from: 'curated', to: 'agent-annotated', result: 'completed', at: '2026-08-23T10:00:00.000Z', activity_id: 'screen-1', actor_ids: ['agent-a'] },
+                { event_id: 'event-ai-review-1', event_type: 'ai_agent_review', from: 'agent-annotated', to: 'ai-agent-reviewed', result: 'accepted', at: '2026-08-23T11:00:00.000Z', activity_id: 'ai-review-1', actor_ids: ['ai-agent-reviewer-1'] }
+            ]
+        }
+    };
+    var beforeSkippedTransition = JSON.stringify(record);
+    var skipped = T.advanceVerification(record, 'publication-approved', {
+        reviewer_id: 'expert-1', actor_ids: 'expert-1', activity_id: 'pub-1', note: 'Freigabeversuch.'
+    });
+    assert(!skipped.ok, 'publication approval cannot skip domain-expert verification');
+    assertEqual(JSON.stringify(record), beforeSkippedTransition, 'a rejected transition leaves the source record unchanged');
+
+    var expert = T.advanceVerification(record, 'verified', {
+        reviewer_id: 'expert-1', actor_ids: 'expert-1 expert-witness', activity_id: 'expert-review-1',
+        result: 'accepted', note: 'Belege und fachliche Bedeutung geprüft.'
+    });
+    assert(expert.ok, expert.message);
+    assertEqual(record.lifecycle.baseline.state, 'curated');
+    assertEqual(record.lifecycle.baseline.basis, 'controlled_intake');
+    assertEqual(record.lifecycle.state, 'verified');
+    assertEqual(record.lifecycle.events.length, 3);
+    var event = record.lifecycle.events[2];
+    ['event_id', 'event_type', 'from', 'to', 'at', 'activity_id', 'actor_ids'].forEach(function(key) {
+        assert(Object.prototype.hasOwnProperty.call(event, key), 'event contains ' + key);
+    });
+    assertEqual(event.from, 'ai-agent-reviewed');
+    assertEqual(event.to, 'verified');
+    assertEqual(event.event_type, 'domain_expert_verification');
+    assertEqual(event.result, 'accepted');
+    assertEqual(event.activity_id, 'expert-review-1');
+    assertEqual(event.actor_ids.join(','), 'expert-1,expert-witness');
+    var expertActor = record.provenance.actors.find(function(actor) { return actor.id === 'expert-1'; });
+    assert(expertActor && expertActor.type === 'person' && expertActor.roles.indexOf('domain_expert') !== -1,
+        'explicit reviewer is retained as a domain-expert person actor');
+    assert(record.provenance.activities.some(function(activity) {
+        return activity.id === 'expert-review-1' && activity.associated_actor_ids.indexOf('expert-1') !== -1 &&
+            activity.run_id === 'expert-review-1' && activity.method === 'prism_domain_expert_verification' &&
+            activity.prompt.status === 'recorded' && activity.model.status === 'not_applicable';
+    }), 'the event activity references the explicit actor');
+
+    var publication = T.advanceVerification(record, 'publication-approved', {
+        reviewer_id: 'publisher-1', actor_ids: 'publisher-1', activity_id: 'release-1',
+        note: 'Für die öffentliche Projektion freigegeben.'
+    });
+    assert(publication.ok, publication.message);
+    assertEqual(record.lifecycle.state, 'publication-approved');
+    assertEqual(record.lifecycle.events.length, 4, 'events are appended rather than replaced');
+    assertEqual(record.lifecycle.events[2].event_id, event.event_id, 'the expert event remains intact');
+});
+
+test('expert review can request changes or append a correction without overwriting the agent annotation', function() {
+    var record = {
+        categories: {}, decision: 'Exclude', override: false, reason: 'Not_relevant_topic', override_reason: null,
+        evidence: {}, text_source: 'abstract', ts: '2026-08-23T10:00:00.000Z', reviewer: 'agent-a', actor: 'agent',
+        provenance: {
+            annotation_id: 'ann-pilot', annotation_type: 'screening_decision',
+            actors: [{ id: 'agent-a', type: 'ai_agent', roles: ['screening'] }], activities: [],
+            used_sources: [{ id: 'paper-1', type: 'paper', reference: 'paper.md' }], derived_from: []
+        },
+        annotations: [{
+            annotation_id: 'ann-pilot', annotation_type: 'screening_decision', at: '2026-08-23T10:00:00.000Z',
+            actor_ids: ['agent-a'], body: {
+                categories: {}, decision: 'Exclude', override: false, reason: 'Not_relevant_topic', override_reason: null,
+                evidence: {}, text_source: 'abstract', ts: '2026-08-23T10:00:00.000Z', reviewer: 'agent-a', actor: 'agent'
+            }
+        }],
+        active_annotation_id: 'ann-pilot', checks: [],
+        lifecycle: { baseline: { state: 'ai-agent-reviewed', basis: 'test', at: '2026-08-23T10:00:00.000Z', actor_ids: ['agent-a'] }, state: 'ai-agent-reviewed', events: [] }
+    };
+    var requested = T.advanceVerification(record, 'verified', {
+        reviewer_id: 'expert-1', actor_ids: 'expert-1', activity_id: 'expert-review-1',
+        result: 'changes_requested', note: 'Der Ausschlussgrund muss korrigiert werden.'
+    });
+    assert(requested.ok, requested.message);
+    assertEqual(record.lifecycle.state, 'ai-agent-reviewed');
+    assertEqual(record.lifecycle.events[0].to, 'ai-agent-reviewed');
+    assertEqual(record.lifecycle.events[0].result, 'changes_requested');
+    assertEqual(record.annotations.length, 1);
+
+    var corrected = T.annotationBody(record);
+    corrected.reason = 'Wrong_population';
+    var accepted = T.advanceVerification(record, 'verified', {
+        reviewer_id: 'expert-1', actor_ids: 'expert-1', activity_id: 'expert-review-2',
+        result: 'corrected_and_accepted', note: 'Der präzisere Ausschlussgrund ist inhaltlich belegt.',
+        corrected_annotation: JSON.stringify(corrected)
+    });
+    assert(accepted.ok, accepted.message);
+    assertEqual(record.lifecycle.state, 'verified');
+    assertEqual(record.reason, 'Wrong_population');
+    assertEqual(record.annotations.length, 2);
+    assertEqual(record.annotations[0].body.reason, 'Not_relevant_topic');
+    assertEqual(record.annotations[1].supersedes, 'ann-pilot');
+    assert(record.annotations[1].changes.some(function(change) { return change.path === '/reason'; }), 'correction carries a field-level diff');
+    assertEqual(record.active_annotation_id, record.annotations[1].annotation_id);
+});
+
+test('verification requires explicit reviewer, actor, and activity identifiers', function() {
+    var base = { lifecycle: { baseline: { state: 'ai-agent-reviewed', basis: 'test', at: null, actor_ids: [] }, state: 'ai-agent-reviewed', events: [] }, provenance: T.verificationView({}).provenance };
+    [
+        [{ reviewer_id: '', actor_ids: 'expert-1', activity_id: 'a-1', note: 'x' }, 'Reviewer-ID'],
+        [{ reviewer_id: 'expert-1', actor_ids: '', activity_id: 'a-1', note: 'x' }, 'Actor-ID'],
+        [{ reviewer_id: 'expert-1', actor_ids: 'expert-1', activity_id: '', note: 'x' }, 'Activity-ID'],
+        [{ reviewer_id: 'expert-1', actor_ids: 'expert-1', activity_id: 'a-1', note: '' }, 'Begründung']
+    ].forEach(function(row) {
+        var record = JSON.parse(JSON.stringify(base));
+        var result = T.advanceVerification(record, 'verified', row[0]);
+        assert(!result.ok, row[1] + ' blocks the action');
+        assertContains(result.message, row[1]);
+        assertEqual(record.lifecycle.state, 'ai-agent-reviewed', 'rejected action keeps state');
+        assertEqual(record.lifecycle.events.length, 0, 'rejected action adds no event');
+    });
+});
+
+test('verification panel separates the expert and publication states and exposes legacy_gap', function() {
+    var legacyHtml = T.verificationPanelHtml({ decision: 'Exclude', reviewer: 'ar2', actor: 'agent' });
+    assertContains(legacyHtml, 'PRISM-Verifikation');
+    assertContains(legacyHtml, 'keinen gouvernierten AI-Agent-Review-Status');
+    assertNotContains(legacyHtml, 'Fachliches Ergebnis protokollieren');
+    assertContains(legacyHtml, 'legacy_gap');
+    var approvedHtml = T.verificationPanelHtml({
+        lifecycle: { baseline: { state: 'ai-agent-reviewed', basis: 'agent_capture', at: '2026-08-23T10:00:00.000Z', actor_ids: ['agent-1'] }, state: 'publication-approved', events: [] },
+        provenance: { annotation_id: 'ann-1', annotation_type: 'decision', activities: [], actors: [], used_sources: [], derived_from: [] }
+    });
+    assertContains(approvedHtml, 'agent_capture');
+    assertContains(approvedHtml, 'Öffentliche Freigabe ist dokumentiert.');
+    assertNotContains(approvedHtml, 'Fachliches Ergebnis protokollieren');
 });
 
 // ============================================================

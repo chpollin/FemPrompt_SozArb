@@ -8,36 +8,36 @@ method:
   url: https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin
 status: complete
 language: en
-version: "0.2"
+version: "0.6"
 created: 2026-02-21
-updated: 2026-07-01
+updated: 2026-08-23
 authors: [Christopher Pollin]
 generated-with: Claude Code
 topics: ["[[Epistemic Infrastructure]]", "[[Feminist AI]]"]
-related: [INDEX, methods, standards, journal]
+related: [INDEX, methods, standards, governance, verification, plan, journal]
 ---
 
-This is the identity of the project: what it is, why it exists, and the theory it stands on. FemPrompt SozArb is a systematic literature review on feminist AI literacy and LLM bias in social work, and an epistemic infrastructure built around it. Part of the Elisabeth List Fellowship project "Diversity-Sensitive Engagement with Artificial Intelligence" (University of Graz, 2025 to 2026). The constitutive terms are defined in [[INDEX]]; the conducted methods are in [[methods]]. The divergence between the LLM and expert tracks illustrates why the infrastructure is needed.
+FemPrompt SozArb is a qualitative literature review on generative AI, gender, bias, and social work, together with the epistemic infrastructure that makes its AI-assisted research operations traceable. It forms part of the Elisabeth List Fellowship project "Diversity-Sensitive Engagement with Artificial Intelligence" at the University of Graz. The round-one expert and LLM divergence motivates the record design. The round-two workflow demonstrates how AI agents can prepare a corpus for later domain-expert verification.
 
 ## Project goal
 
-Primary goal: describe and operationalize an epistemic infrastructure for LLM-assisted literature reviews, using the case of a systematic review on feminist AI literacy and LLM bias in social work. Core question: what procedures, documentation structures, and workflow decisions are needed so that LLM contributions in research remain verifiable, traceable, and accountable?
+The primary goal is to describe and operationalise an epistemic infrastructure for LLM- and agent-assisted qualitative literature review. The case study examines generative AI, gender, and bias in social work. The infrastructure records evidence, provenance, deterministic validation, source-grounded AI Agent Review, domain-expert verification, and publication approval as distinct operations.
 
-Secondary goal (foundation): create a conceptual basis for a benchmark ("Fair Bench") for social work. The review identifies relevant terms, concepts, and discourse positions that can be transferred into test scenarios.
+A secondary goal is to create a conceptual basis for a social-work bias benchmark. The review identifies relevant terms, bias axes, mitigation approaches, population contexts, and domain-specific constraints that can inform later test scenarios.
 
 Working definition of feminist AI literacies: diversity-sensitive, intersectional, and bias-aware competencies that social work professionals need when engaging with generative AI, with a focus on prompting, critical output evaluation, and context and application sensitivity.
 
 ## Research questions
 
-The review carries three co-equal main questions, one methodological and two substantive.
+The paper has one methodological integration question. How can LLMs and AI agents be integrated into a qualitative literature review with traceable contributions, re-executable processing, and final scholarly authority assigned to domain experts?
 
-M (method). What epistemic infrastructure does an LLM-assisted literature review require to methodologically address the asymmetry between machine pattern recognition and expert judgment?
+The literature analysis answers three sub-questions.
 
-Q1 (bias and its reduction). Which biases in AI systems are documented, which methods and approaches reduce them, and where are the research gaps? Bias is read along its axes as the corpus carries them (gender, race and ethnicity, intersectional, socioeconomic class, sexual orientation, disability, nationality and migration, religion, age, language, physical appearance, and further), reduction across the recurring approaches (AI literacy, participatory co-design, auditing and evaluation, governance and regulation, data debiasing, prompting, transparency and documentation, human-in-the-loop, tool literacy).
+- SQ1 identifies the prompting techniques discussed in the literature and distinguishes proposed, demonstrated, and evaluated uses.
+- SQ2 maps bias axes and harm types to mitigation stages and evidence status.
+- SQ3 identifies social-work-specific constraints, population contexts, practice settings, and gaps in general-purpose prompt-engineering guidance.
 
-Q2 (AI in social work). How is AI used in social work, across which practice fields and functions, at what degree of maturity, and how is the division of labour between human judgment and tool drawn?
-
-M is the core methodological contribution; Q1 and Q2 are what the review answers from the corpus. The three hold together, the infrastructure (M) is what makes the answers to Q1 and Q2 verifiable rather than presupposed. Q1 and Q2 are the organizing axis for the knowledge documents and the analysis fields ([[update-protocol]]).
+The methodological question frames the paper. SQ1 to SQ3 demonstrate what the governed workflow yields from the literature. Their controlled fields and coding rules live in [[update-protocol]].
 
 ## Target audience
 
@@ -53,31 +53,29 @@ Primary audience: researchers with limited AI expertise.
 
 | Criterion | Status |
 |---|---|
-| Workflow fully documented, repository auditable | Implemented |
-| Epistemic infrastructure documented, prompts versioned | Implemented |
-| Dual assessment track executed (human and LLM) | Complete |
-| Benchmark metrics computed (confusion matrix, base rates, divergence analysis) | Complete |
-| Distilled knowledge documents from full texts | Complete |
-| Divergence analysis classified into patterns | Complete |
-| Downloadable Obsidian paper collection | Complete |
-| GitHub Pages documentation site | Complete (the Evidence Companion) |
-| Open Access analysis of the corpus | Pending |
+| Round-one comparative assessment and replay remain reconstructable | Implemented |
+| Round-two agent runs preserve source, prompt, model, actor, and lifecycle provenance | Implemented for governed runs; complete corpus open |
+| Domain experts can verify, correct, and approve prepared records in PRISM | Implemented; execution over the intended corpus open |
+| Quantitative findings derive from committed data and executable scripts | Open for the completed corpus |
+| Qualitative findings derive from source-linked Assertions | Initial vertical slice implemented; complete synthesis open |
+| Public projections contain only publication-approved material | Implemented |
+| Canonical literature report and paper receive domain-expert review | Open |
 
-## Non-goals
+## Scope boundaries
 
-| What is not part of the project | Why |
+| Boundary | Consequence |
 |---|---|
-| A finished prompting guide | Planned for a subsequent phase |
-| Empirical validation of prompting strategies | Out of scope; Q1 describes what the literature reports and tests, it runs no experiments of its own |
-| An end-user tool | The focus is research, not product |
-| Full automation | Expert-in-the-loop remains central |
-| Training custom models | Uses existing frontier LLMs |
+| Prompting guidance | The review synthesises reported practices and evidence; a practice guide can be derived later |
+| Experimental efficacy testing | The project reports experiments found in the literature and conducts no new prompting experiment |
+| Tool audience | PRISM serves research teams and domain experts working on a review |
+| Scholarly authority | Domain experts verify interpretations and approve publication |
+| Model development | The workflow uses existing LLMs and records their versions and roles |
 
 ## Two strands of the project
 
-The methodological strand (M), the core contribution. What epistemic infrastructure does an LLM-assisted review require to address the asymmetry between machine pattern recognition and expert judgment? Output: the concept of epistemic infrastructure (four layers, below), the dual assessment track as its operationalization, the benchmark results as illustration that divergence is measurable and informationally productive, and a documented, reproducible workflow in the repository.
+The methodological strand develops the implemented workflow and its authority model. Its outputs are PRISM, the lifecycle and provenance schema, the governed agent-run contract, the round-one replay, and the documented Grounded Vault chain.
 
-The substantive strand (Q1 and Q2), the review's own findings, co-equal with the method. Which biases are documented and how are they reduced (Q1), and how is AI used in social work (Q2)? Output: a thematically coded corpus under the ten three-level categories, the distilled knowledge documents carrying per-paper bias axes, reduction approaches, and social-work use, the Obsidian vault, and the conceptual foundation for Fair Bench.
+The substantive strand answers SQ1 to SQ3 from the completed corpus. Its outputs are the quantitative literature landscape, the source-linked Assertions, the literature report, and the paper synthesis. The same knowledge structure supplies a conceptual foundation for a later social-work bias benchmark.
 
 ## Corpus
 
@@ -85,12 +83,12 @@ The corpus was identified via four proprietary Deep Research systems (ChatGPT, C
 
 ## Team
 
-| Person | Role |
+| Role | Responsibility |
 |---|---|
-| Christopher Pollin | Technical infrastructure, pipeline |
-| Review lead (university partner) | Human assessment, research lead |
-| Reviewing expert (university partner) | Human assessment |
-| Research assistant (university partner) | Zotero curation, metadata |
+| Technical and methodological lead | Infrastructure, data model, agent orchestration, analysis pipeline |
+| Review lead | Research design, domain-expert verification, scholarly interpretation |
+| Reviewing domain expert | Domain-expert verification and interpretation |
+| Research assistant | Zotero curation, metadata correction, source management |
 
 ## Theoretical framework
 
@@ -105,11 +103,11 @@ The asymmetry maps onto concrete risks and infrastructure measures:
 | Asymmetry dimension | Risk | Infrastructure measure |
 |---|---|---|
 | Opacity (justificatory esotericism) | Unverifiable selection by Deep Research models | Multi-provider strategy plus selection logging |
-| Unsecured LLM outputs | LLMs can generate factually unsupported claims | 3-stage SKE with deterministic stage 2 and a verification stage 3 |
+| Unsecured LLM outputs | LLMs can generate factually unsupported claims | 3-stage SKE with deterministic validation, source-grounded AI Agent Review, and deferred domain-expert verification |
 | Sycophancy | Prompt-induced over-attribution of categories | Negative constraints in prompts, calibration items, prompt versioning |
 | Paywall bias | Systematic underrepresentation of paywalled literature | Hierarchical acquisition strategy plus OA disclosure |
 | Prompt competence | Result dependence on prompt quality | Prompt governance: versioning, review, documentation |
-| Responsibility asymmetry | No attributable agent on the LLM side | Expert track as the epistemically binding reference track |
+| Scholarly authority | AI review cannot establish a domain interpretation or public release | Domain-expert verification and separate publication approval |
 | Provider divergence | Different models yield different evidence bases | Multi-provider comparison, overlap analysis |
 | Resource asymmetry | Unequal access to frontier models and infrastructure | Cost transparency, open-source pipeline where possible |
 
@@ -119,7 +117,7 @@ Epistemic infrastructure denotes the totality of procedures, documentation struc
 
 Core principle: reliability cannot be presupposed as a property of the system but must be established as a property of the process.
 
-Operative design principle (verification checkpoints): each AI-assisted work step is followed by a verification checkpoint, a defined point in the process where human or rule-based control checks the results.
+Operative design principle: each AI-assisted work step has a named control point. Deterministic validation checks form and rules, AI Agent Review checks source support, and domain-expert verification establishes scholarly authority for the artifact under review.
 
 Diagnostic function of LLM justifications: LLM assessments contain textual justifications. These are themselves confabulation-prone outputs. As a prompting strategy they serve a diagnostic function, because inconsistencies between a classification and its justification indicate unstable assignments.
 
@@ -127,8 +125,8 @@ Four layers:
 
 | Layer | Description | Project implementation |
 |---|---|---|
-| Workflow | Dual assessment track, deterministic processing stages | 3-stage SKE, parallel assessment |
-| Research integrity | Documentation, traceable design decisions | Repository, prompt changelog, verification checkpoints |
+| Workflow | Round-specific assessment design and governed processing stages | Comparative expert and LLM tracks in round one; agent annotation, deterministic transfer, AI Agent Review, and deferred domain-expert verification in round two |
+| Research integrity | Documentation, traceable design decisions | Repository, prompt changelog, validation receipts, AI Agent Review, domain-expert verification |
 | Institutional | AI guidelines | Not yet in place |
 | Community | Peer review practices that include workflows | A demand the paper makes |
 
@@ -136,11 +134,11 @@ Four layers:
 
 The design principle made concrete across the three phases:
 
-Phase 1, identification. The four LLM models decide which literature is found (automated cross-disciplinary search); the research assistant and researchers decide what is supplemented (manual search closes gaps); the research assistant decides duplicate removal (metadata matching).
+Phase 1 covers identification and curation. Deep Research systems propose literature. Researchers supplement the search, curate Zotero metadata, resolve duplicates, attach sources, and review Docling Markdown.
 
-Phase 2, assessment. The two reviewing experts make the binding include/exclude decision on domain knowledge and interpretive judgment; the LLM makes an exploratory decision for scalability and pattern recognition; both assign categories in parallel and independently, which is what enables the divergence analysis.
+Phase 2 covers screening and analysis coding. Round one retains its separately recorded consolidated expert and LLM assessments. Round two assigns source coding to operationally isolated AI agents, uses deterministic PRISM transfer, and conducts a separate source-grounded AI Agent Review. Domain experts later verify or correct every intended productive record.
 
-Phase 3, synthesis. The LLM extracts (stage 1, probabilistic, scaling across the corpus); deterministic software formats (stage 2, no LLM, for reproducibility); the LLM verifies against the original full text (stage 3, with a verification mandate); a software rule escalates at low confidence (a threshold-based forward to a human).
+Phase 3 covers knowledge synthesis and publication. Distillation produces source-linked knowledge documents, Assertions consolidate atomic findings, and deterministic scripts compute quantitative results. Domain experts verify the resulting scholarly interpretation. An authorised person records publication approval for each public artifact.
 
 ### Artificial epistemic authorities (Hauswald 2025)
 
@@ -168,11 +166,11 @@ Oppression does not operate along single axes (gender, race) but through their m
 
 ### Response-ability (Haraway) and responsibility asymmetry
 
-Responsibility means the capacity to respond and to maintain relationships. Responsibility for all results remains with the researchers even when LLMs provide epistemically relevant contributions. Operationalization: expert-in-the-loop validation at critical decision points, explicit justifications for inclusion and exclusion decisions, transparent documentation of methodological limitations, and the expert track as the epistemically binding reference track.
+Responsibility means the capacity to respond and to maintain relationships. Researchers retain responsibility for the results when LLMs provide epistemically relevant contributions. The workflow operationalises this through explicit evidence, attributable decisions, artifact-local domain-expert verification, and separate publication approval.
 
 ## Methodological limitations
 
-- Circularity: LLMs are used to examine literature about the use of LLMs. This is not a defect but a condition of the field.
+- Circularity: LLMs are used to examine literature about LLM use. The workflow treats this field condition through explicit model provenance and source-linked verification.
 - Justificatory esotericism (Hauswald): training data, model architectures, and selection logics are not disclosed.
 - Unsecured LLM outputs: addressed by the 3-stage SKE with deterministic stage 2 and verification.
 - Sycophancy risk: addressed by negative constraints and calibration items.
@@ -180,10 +178,3 @@ Responsibility means the capacity to respond and to maintain relationships. Resp
 - Resource asymmetry: groups studying bias and inequality frequently have fewer resources for building epistemic infrastructure.
 - Dependence on proprietary systems.
 - Benchmark limitations: the benchmark rests on the overlap of the human and LLM tracks, the provider overlap is verifiable only for a sample, and the acquisition barrier underrepresents paywalled literature. The exact subset sizes and the decomposed reading of the divergence are derivable from the data (generated/benchmark-results/, docs/data/) and the Evidence Companion.
-
-## Open items (theory and framing)
-
-- Conduct the OA analysis (Unpaywall API).
-- Overlap analysis on the full corpus, not just the restored RIS sample.
-- Formalize the escalation rule for expert review.
-- Institutional level: document the AI-guidelines reference.

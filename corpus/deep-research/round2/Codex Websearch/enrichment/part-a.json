@@ -1,0 +1,643 @@
+{
+  "schema": "femprompt-source-enrichment/0.1",
+  "partition": "A",
+  "searched_at": "2026-08-24",
+  "candidate_ids": [
+    "codex-websearch-2026:arxiv:2505.13995",
+    "codex-websearch-2026:arxiv:2510.00232",
+    "codex-websearch-2026:doi:10.1007/978-3-032-27336-9_4",
+    "codex-websearch-2026:doi:10.1007/s10639-026-13908-2",
+    "codex-websearch-2026:doi:10.1007/s43681-025-00926-y",
+    "codex-websearch-2026:doi:10.1007/s43681-026-01161-9",
+    "codex-websearch-2026:doi:10.1007/s44155-026-00463-x",
+    "codex-websearch-2026:doi:10.1016/j.bodyim.2026.102042",
+    "codex-websearch-2026:doi:10.1016/j.caeai.2026.100602",
+    "codex-websearch-2026:doi:10.1016/j.chbr.2026.101246",
+    "codex-websearch-2026:doi:10.1016/j.ijmedinf.2026.106582",
+    "codex-websearch-2026:doi:10.1016/j.mcpdig.2026.100344",
+    "codex-websearch-2026:doi:10.1016/j.techsoc.2026.103402",
+    "codex-websearch-2026:doi:10.1038/s41746-026-02584-8",
+    "codex-websearch-2026:doi:10.1038/s44360-026-00152-8",
+    "codex-websearch-2026:doi:10.1038/s44360-026-00164-4",
+    "codex-websearch-2026:doi:10.1080/02615479.2026.2617512",
+    "codex-websearch-2026:doi:10.1080/02615479.2026.2631708",
+    "codex-websearch-2026:doi:10.1080/02615479.2026.2635471",
+    "codex-websearch-2026:doi:10.1080/02615479.2026.2660786"
+  ],
+  "records": [
+    {
+      "candidate_id": "codex-websearch-2026:arxiv:2505.13995",
+      "title": "ELEPHANT: Measuring and understanding social sycophancy in LLMs",
+      "checked_urls": [
+        "https://arxiv.org/abs/2505.13995",
+        "https://arxiv.org/pdf/2505.13995",
+        "https://doi.org/10.1126/science.aec8352"
+      ],
+      "fulltext": {
+        "status": "located_repository_copy",
+        "url": "https://arxiv.org/pdf/2505.13995",
+        "license": null,
+        "evidence_url": "https://arxiv.org/abs/2505.13995",
+        "basis": "The arXiv item provides a freely accessible manuscript PDF and links it to the published Science DOI."
+      },
+      "peer_review": {
+        "status": "review_history_documented",
+        "evidence_url": "https://doi.org/10.1126/science.aec8352",
+        "basis": "The article-specific Science record reports received and accepted dates for the version of record.",
+        "received": "2025-10-16",
+        "accepted": "2026-02-02"
+      },
+      "metadata_corrections": [
+        {
+          "field": "title",
+          "old_value": "ELEPHANT: Measuring and understanding social sycophancy in LLMs",
+          "new_value": "Sycophantic AI decreases prosocial intentions and promotes dependence",
+          "evidence_url": "https://doi.org/10.1126/science.aec8352",
+          "basis": "The linked Science version of record uses the new title."
+        },
+        {
+          "field": "authors",
+          "old_value": [
+            "Myra Cheng",
+            "Sunny Yu",
+            "Cinoo Lee",
+            "Pranav Khadpe",
+            "Lujain Ibrahim",
+            "Dan Jurafsky"
+          ],
+          "new_value": [
+            "Myra Cheng",
+            "Cinoo Lee",
+            "Pranav Khadpe",
+            "Sunny Yu",
+            "Dyllan Han",
+            "Dan Jurafsky"
+          ],
+          "evidence_url": "https://doi.org/10.1126/science.aec8352",
+          "basis": "The Science version of record has a changed author list and order."
+        },
+        {
+          "field": "publication_date",
+          "old_value": "2026-04-23",
+          "new_value": "2026-03-26",
+          "evidence_url": "https://doi.org/10.1126/science.aec8352",
+          "basis": "The linked Science version of record was published on 26 March 2026."
+        },
+        {
+          "field": "doi",
+          "old_value": null,
+          "new_value": "10.1126/science.aec8352",
+          "evidence_url": "https://arxiv.org/abs/2505.13995",
+          "basis": "The arXiv primary record exposes the journal DOI."
+        },
+        {
+          "field": "venue",
+          "old_value": "ICLR 2026",
+          "new_value": "Science",
+          "evidence_url": "https://doi.org/10.1126/science.aec8352",
+          "basis": "The linked version of record is a Science research article."
+        },
+        {
+          "field": "publication_type",
+          "old_value": "conference_paper",
+          "new_value": "journal_article",
+          "evidence_url": "https://doi.org/10.1126/science.aec8352",
+          "basis": "The linked version of record is a journal article."
+        },
+        {
+          "field": "version_relation",
+          "old_value": "arXiv record without a linked version of record",
+          "new_value": "arXiv:2505.13995 is the repository preprint associated with DOI 10.1126/science.aec8352",
+          "evidence_url": "https://arxiv.org/abs/2505.13995",
+          "basis": "The arXiv record directly identifies the related DOI."
+        }
+      ],
+      "notes": [
+        "The Science version of record uses a materially changed title and author list; work identity is supported by the DOI relation on arXiv.",
+        "The repository manuscript is open; the bibliographically preferred version is the Science version of record."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:arxiv:2510.00232",
+      "title": "BiasFreeBench: a Benchmark for Mitigating Bias in Large Language Model Responses",
+      "checked_urls": [
+        "https://arxiv.org/abs/2510.00232",
+        "https://arxiv.org/pdf/2510.00232"
+      ],
+      "fulltext": {
+        "status": "located_repository_copy",
+        "url": "https://arxiv.org/pdf/2510.00232",
+        "license": null,
+        "evidence_url": "https://arxiv.org/abs/2510.00232",
+        "basis": "The arXiv record provides the manuscript PDF; version 2 is dated 15 February 2026."
+      },
+      "peer_review": {
+        "status": "venue_reviewed_proceedings",
+        "evidence_url": "https://arxiv.org/abs/2510.00232",
+        "basis": "The item-specific arXiv record states acceptance by ICLR 2026; no individual proceedings or OpenReview landing page was located.",
+        "received": null,
+        "accepted": null
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "No DOI or separate proceedings version was located.",
+        "The acceptance claim is item-specific but author-supplied; no dated review history was found."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1007/978-3-032-27336-9_4",
+      "title": "The Role of Generative AI in Transforming Social Work Practice",
+      "checked_urls": [
+        "https://doi.org/10.1007/978-3-032-27336-9_4",
+        "https://link.springer.com/chapter/10.1007/978-3-032-27336-9_4"
+      ],
+      "fulltext": {
+        "status": "restricted",
+        "url": null,
+        "license": null,
+        "evidence_url": "https://link.springer.com/chapter/10.1007/978-3-032-27336-9_4",
+        "basis": "Publisher metadata and an access-controlled full-text route were found; no lawful open repository manuscript was located."
+      },
+      "peer_review": {
+        "status": "not_established",
+        "evidence_url": null,
+        "basis": "The publisher chapter page does not provide chapter-specific received, accepted, or review-history evidence.",
+        "received": null,
+        "accepted": null
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "The publisher confirms First Online 14 July 2026 and pages 57–73.",
+        "Book-level editorial practices were not treated as chapter-specific peer-review evidence."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1007/s10639-026-13908-2",
+      "title": "Teachers’ perceptions of generative AI in gender-inclusive STEM education: a grounded theory study",
+      "checked_urls": [
+        "https://doi.org/10.1007/s10639-026-13908-2",
+        "https://link.springer.com/article/10.1007/s10639-026-13908-2",
+        "https://link.springer.com/content/pdf/10.1007/s10639-026-13908-2.pdf",
+        "https://doi.org/10.1007/s10639-026-13970-w"
+      ],
+      "fulltext": {
+        "status": "located_open_access",
+        "url": "https://link.springer.com/content/pdf/10.1007/s10639-026-13908-2.pdf",
+        "license": "CC BY 4.0",
+        "evidence_url": "https://link.springer.com/article/10.1007/s10639-026-13908-2",
+        "basis": "The publisher provides an open PDF under CC BY 4.0."
+      },
+      "peer_review": {
+        "status": "review_history_documented",
+        "evidence_url": "https://link.springer.com/article/10.1007/s10639-026-13908-2",
+        "basis": "The article-specific publisher page reports received and accepted dates.",
+        "received": "2025-05-07",
+        "accepted": "2026-01-23"
+      },
+      "metadata_corrections": [
+        {
+          "field": "correction_relation",
+          "old_value": null,
+          "new_value": "Correction published as DOI 10.1007/s10639-026-13970-w on 2026-03-23",
+          "evidence_url": "https://doi.org/10.1007/s10639-026-13970-w",
+          "basis": "Springer published a separate correction linked to this article."
+        }
+      ],
+      "notes": [
+        "First Online 13 February 2026; volume 31, issue 8, pages 2399–2434."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1007/s43681-025-00926-y",
+      "title": "Toward substantive intersectional algorithmic fairness: desiderata for a feminist approach",
+      "checked_urls": [
+        "https://doi.org/10.1007/s43681-025-00926-y",
+        "https://link.springer.com/article/10.1007/s43681-025-00926-y",
+        "https://link.springer.com/content/pdf/10.1007/s43681-025-00926-y.pdf"
+      ],
+      "fulltext": {
+        "status": "located_open_access",
+        "url": "https://link.springer.com/content/pdf/10.1007/s43681-025-00926-y.pdf",
+        "license": "CC BY 4.0",
+        "evidence_url": "https://link.springer.com/article/10.1007/s43681-025-00926-y",
+        "basis": "The publisher provides an open PDF under CC BY 4.0."
+      },
+      "peer_review": {
+        "status": "review_history_documented",
+        "evidence_url": "https://link.springer.com/article/10.1007/s43681-025-00926-y",
+        "basis": "The article page reports received and accepted dates.",
+        "received": "2025-08-25",
+        "accepted": "2025-11-24"
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "First Online 8 January 2026; volume 6, issue 1."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1007/s43681-026-01161-9",
+      "title": "Beyond inclusion: feminist AI for transformative justice in STEM",
+      "checked_urls": [
+        "https://doi.org/10.1007/s43681-026-01161-9",
+        "https://link.springer.com/article/10.1007/s43681-026-01161-9",
+        "https://link.springer.com/content/pdf/10.1007/s43681-026-01161-9.pdf"
+      ],
+      "fulltext": {
+        "status": "located_open_access",
+        "url": "https://link.springer.com/content/pdf/10.1007/s43681-026-01161-9.pdf",
+        "license": "CC BY 4.0",
+        "evidence_url": "https://link.springer.com/article/10.1007/s43681-026-01161-9",
+        "basis": "The publisher provides an open PDF under CC BY 4.0."
+      },
+      "peer_review": {
+        "status": "review_history_documented",
+        "evidence_url": "https://link.springer.com/article/10.1007/s43681-026-01161-9",
+        "basis": "The article page reports received and accepted dates.",
+        "received": "2026-01-11",
+        "accepted": "2026-04-24"
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "First Online 20 May 2026; volume 6, issue 3."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1007/s44155-026-00463-x",
+      "title": "An ethical framework for assessing artificial intelligence as augmentation or automation in social work",
+      "checked_urls": [
+        "https://doi.org/10.1007/s44155-026-00463-x",
+        "https://link.springer.com/article/10.1007/s44155-026-00463-x",
+        "https://link.springer.com/content/pdf/10.1007/s44155-026-00463-x.pdf",
+        "https://link.springer.com/content/pdf/10.1007/s44155-026-00463-x_reference.pdf"
+      ],
+      "fulltext": {
+        "status": "located_repository_copy",
+        "url": "https://link.springer.com/content/pdf/10.1007/s44155-026-00463-x_reference.pdf",
+        "license": "CC BY-NC-ND 4.0",
+        "evidence_url": "https://link.springer.com/article/10.1007/s44155-026-00463-x",
+        "basis": "The publisher provides the peer-reviewed, unedited Accepted Manuscript as an open Article in Press PDF and states that it will later be replaced by the Version of Record."
+      },
+      "peer_review": {
+        "status": "review_history_documented",
+        "evidence_url": "https://link.springer.com/article/10.1007/s44155-026-00463-x",
+        "basis": "The article page reports received and accepted dates.",
+        "received": "2026-04-18",
+        "accepted": "2026-07-29"
+      },
+      "metadata_corrections": [
+        {
+          "field": "preferred_version.version_type",
+          "old_value": "version_of_record",
+          "new_value": "accepted_manuscript",
+          "evidence_url": "https://link.springer.com/article/10.1007/s44155-026-00463-x",
+          "basis": "The article-specific publisher page and PDF explicitly identify the available source as an accepted, unedited Article in Press manuscript that precedes the Version of Record."
+        }
+      ],
+      "notes": [
+        "The Accepted Manuscript was released online on 5 August 2026; a Version of Record was not yet established at the search cutoff."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1016/j.bodyim.2026.102042",
+      "title": "Existing and future use cases, and safety and ethical considerations for AI in body image, and eating disorder prevention",
+      "checked_urls": [
+        "https://doi.org/10.1016/j.bodyim.2026.102042",
+        "https://pubmed.ncbi.nlm.nih.gov/41655362/"
+      ],
+      "fulltext": {
+        "status": "located_open_access",
+        "url": "https://doi.org/10.1016/j.bodyim.2026.102042",
+        "license": "CC BY 4.0",
+        "evidence_url": "https://doi.org/10.1016/j.bodyim.2026.102042",
+        "basis": "The publisher DOI resolves to the open version of record under CC BY 4.0."
+      },
+      "peer_review": {
+        "status": "not_established",
+        "evidence_url": null,
+        "basis": "No item-specific received, accepted, or review-history evidence was located on the accessible primary publisher record.",
+        "received": null,
+        "accepted": null
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Electronic publication 7 February 2026; March 2026 issue, volume 56, article 102042."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1016/j.caeai.2026.100602",
+      "title": "Beyond “painting in pink”: A critical case study of all-girls generative AI workshops in a European makerspace and implications for gender equity in computing",
+      "checked_urls": [
+        "https://doi.org/10.1016/j.caeai.2026.100602"
+      ],
+      "fulltext": {
+        "status": "located_open_access",
+        "url": "https://doi.org/10.1016/j.caeai.2026.100602",
+        "license": "CC BY-NC-ND 4.0",
+        "evidence_url": "https://doi.org/10.1016/j.caeai.2026.100602",
+        "basis": "The publisher DOI resolves to the open version of record under CC BY-NC-ND 4.0."
+      },
+      "peer_review": {
+        "status": "not_established",
+        "evidence_url": null,
+        "basis": "No item-specific received, accepted, or review-history evidence was located on the accessible primary publisher record.",
+        "received": null,
+        "accepted": null
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Volume 10, article 100602."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1016/j.chbr.2026.101246",
+      "title": "Can AI reduce gender bias? The case of AI-generated audio conversations in Google's NotebookLM",
+      "checked_urls": [
+        "https://doi.org/10.1016/j.chbr.2026.101246"
+      ],
+      "fulltext": {
+        "status": "located_open_access",
+        "url": "https://doi.org/10.1016/j.chbr.2026.101246",
+        "license": "CC BY 4.0",
+        "evidence_url": "https://doi.org/10.1016/j.chbr.2026.101246",
+        "basis": "The publisher DOI resolves to the open version of record under CC BY 4.0."
+      },
+      "peer_review": {
+        "status": "not_established",
+        "evidence_url": null,
+        "basis": "No item-specific received, accepted, or review-history evidence was located on the accessible primary publisher record.",
+        "received": null,
+        "accepted": null
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Volume 23, article 101246."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1016/j.ijmedinf.2026.106582",
+      "title": "Integrating diversity, equity, and inclusion in generative AI applications for healthcare education: a scoping review",
+      "checked_urls": [
+        "https://doi.org/10.1016/j.ijmedinf.2026.106582",
+        "https://pubmed.ncbi.nlm.nih.gov/42407288/"
+      ],
+      "fulltext": {
+        "status": "restricted",
+        "url": null,
+        "license": null,
+        "evidence_url": "https://doi.org/10.1016/j.ijmedinf.2026.106582",
+        "basis": "The publisher landing page was located, but no freely accessible publisher or repository manuscript was found."
+      },
+      "peer_review": {
+        "status": "not_established",
+        "evidence_url": null,
+        "basis": "No item-specific received, accepted, or review-history evidence was located on the accessible primary publisher record.",
+        "received": null,
+        "accepted": null
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Electronic publication 2 July 2026; November 2026 issue, volume 220, article 106582."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1016/j.mcpdig.2026.100344",
+      "title": "Implicit Gender, Racial, and Ethnic Biases in Large Language Models: An Audit Study of Automated Psychiatric Diagnoses",
+      "checked_urls": [
+        "https://doi.org/10.1016/j.mcpdig.2026.100344",
+        "https://www.mcpdigitalhealth.org/article/S2949-7612(26)00010-6/pdf"
+      ],
+      "fulltext": {
+        "status": "located_open_access",
+        "url": "https://www.mcpdigitalhealth.org/article/S2949-7612(26)00010-6/pdf",
+        "license": null,
+        "evidence_url": "https://doi.org/10.1016/j.mcpdig.2026.100344",
+        "basis": "The journal provides a freely accessible publisher PDF; no explicit licence statement was retained."
+      },
+      "peer_review": {
+        "status": "not_established",
+        "evidence_url": null,
+        "basis": "No item-specific received, accepted, or review-history evidence was located on the accessible primary publisher record.",
+        "received": null,
+        "accepted": null
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Volume 4, issue 2, article 100344."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1016/j.techsoc.2026.103402",
+      "title": "Inclusive generative AI and the dynamics of inequality: A capability-resource model of adoption disparities",
+      "checked_urls": [
+        "https://doi.org/10.1016/j.techsoc.2026.103402"
+      ],
+      "fulltext": {
+        "status": "restricted",
+        "url": null,
+        "license": null,
+        "evidence_url": "https://doi.org/10.1016/j.techsoc.2026.103402",
+        "basis": "The publisher landing page was located; no lawful open publisher or repository full text was found."
+      },
+      "peer_review": {
+        "status": "not_established",
+        "evidence_url": null,
+        "basis": "No item-specific received, accepted, or review-history evidence was located on the accessible primary publisher record.",
+        "received": null,
+        "accepted": null
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Volume 87, article 103402; publisher metadata supplies August 2026 without a stable item-level day."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1038/s41746-026-02584-8",
+      "title": "New model, old risks: sociodemographic bias and adversarial hallucinations vulnerability in GPT-5",
+      "checked_urls": [
+        "https://doi.org/10.1038/s41746-026-02584-8",
+        "https://www.nature.com/articles/s41746-026-02584-8",
+        "https://www.nature.com/articles/s41746-026-02584-8.pdf"
+      ],
+      "fulltext": {
+        "status": "located_open_access",
+        "url": "https://www.nature.com/articles/s41746-026-02584-8.pdf",
+        "license": "CC BY-NC-ND 4.0",
+        "evidence_url": "https://www.nature.com/articles/s41746-026-02584-8",
+        "basis": "Nature provides an open publisher PDF under CC BY-NC-ND 4.0."
+      },
+      "peer_review": {
+        "status": "review_history_documented",
+        "evidence_url": "https://www.nature.com/articles/s41746-026-02584-8",
+        "basis": "The article page reports received and accepted dates.",
+        "received": "2025-10-28",
+        "accepted": "2026-03-17"
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Nature published the Comment online on 4 April 2026."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1038/s44360-026-00152-8",
+      "title": "Addressing benchmarking gaps in large language models for health and medicine with dynamic red-teaming",
+      "checked_urls": [
+        "https://doi.org/10.1038/s44360-026-00152-8",
+        "https://www.nature.com/articles/s44360-026-00152-8",
+        "https://www.nature.com/articles/s44360-026-00152-8.pdf"
+      ],
+      "fulltext": {
+        "status": "located_open_access",
+        "url": "https://www.nature.com/articles/s44360-026-00152-8.pdf",
+        "license": "CC BY 4.0",
+        "evidence_url": "https://www.nature.com/articles/s44360-026-00152-8",
+        "basis": "Nature provides an open publisher PDF under CC BY 4.0."
+      },
+      "peer_review": {
+        "status": "review_history_documented",
+        "evidence_url": "https://www.nature.com/articles/s44360-026-00152-8",
+        "basis": "The article page reports received and accepted dates.",
+        "received": "2026-04-23",
+        "accepted": "2026-05-22"
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Nature published the article online on 15 July 2026."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1038/s44360-026-00164-4",
+      "title": "Large language models exhibit stigmatizing behaviour in contextual judgements of health conditions",
+      "checked_urls": [
+        "https://doi.org/10.1038/s44360-026-00164-4",
+        "https://www.nature.com/articles/s44360-026-00164-4"
+      ],
+      "fulltext": {
+        "status": "restricted",
+        "url": null,
+        "license": null,
+        "evidence_url": "https://www.nature.com/articles/s44360-026-00164-4",
+        "basis": "The publisher landing page was located, but no open publisher PDF or lawful repository copy was found."
+      },
+      "peer_review": {
+        "status": "review_history_documented",
+        "evidence_url": "https://www.nature.com/articles/s44360-026-00164-4",
+        "basis": "The article page reports received and accepted dates.",
+        "received": "2026-01-23",
+        "accepted": "2026-06-10"
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Nature published the article online on 6 July 2026."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/02615479.2026.2617512",
+      "title": "Innovating social work pedagogy: generative AI for critical competency development in evidence-based practice",
+      "checked_urls": [
+        "https://doi.org/10.1080/02615479.2026.2617512",
+        "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2617512"
+      ],
+      "fulltext": {
+        "status": "restricted",
+        "url": null,
+        "license": null,
+        "evidence_url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2617512",
+        "basis": "The publisher article page was located; no freely accessible publisher or repository manuscript was found."
+      },
+      "peer_review": {
+        "status": "review_history_documented",
+        "evidence_url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2617512",
+        "basis": "The article page reports received and accepted dates.",
+        "received": "2025-11-25",
+        "accepted": "2026-01-09"
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Online publication 21 January 2026; pages 1–20."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/02615479.2026.2631708",
+      "title": "Are future social workers ready for AI? Fears, barriers, and learning needs in higher education",
+      "checked_urls": [
+        "https://doi.org/10.1080/02615479.2026.2631708",
+        "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2631708",
+        "https://www.tandfonline.com/doi/pdf/10.1080/02615479.2026.2631708"
+      ],
+      "fulltext": {
+        "status": "located_open_access",
+        "url": "https://www.tandfonline.com/doi/pdf/10.1080/02615479.2026.2631708",
+        "license": "CC BY-NC-ND 4.0",
+        "evidence_url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2631708",
+        "basis": "The publisher provides an open PDF under CC BY-NC-ND 4.0."
+      },
+      "peer_review": {
+        "status": "review_history_documented",
+        "evidence_url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2631708",
+        "basis": "The article page reports received and accepted dates.",
+        "received": "2025-07-18",
+        "accepted": "2026-02-02"
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Online publication 23 February 2026; pages 1–15."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/02615479.2026.2635471",
+      "title": "Promoting AI literacy in social work education: lessons from an interdisciplinary course for social work students",
+      "checked_urls": [
+        "https://doi.org/10.1080/02615479.2026.2635471",
+        "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2635471",
+        "https://irf.fhnw.ch/entities/publication/895bedd9-51aa-41ac-942a-7c2d20210c32",
+        "https://irf.fhnw.ch/server/api/core/bitstreams/58e87312-aca1-4b37-9e15-988182c55803/content"
+      ],
+      "fulltext": {
+        "status": "located_repository_copy",
+        "url": "https://irf.fhnw.ch/server/api/core/bitstreams/58e87312-aca1-4b37-9e15-988182c55803/content",
+        "license": "CC BY-NC-ND 4.0",
+        "evidence_url": "https://irf.fhnw.ch/entities/publication/895bedd9-51aa-41ac-942a-7c2d20210c32",
+        "basis": "The FHNW repository provides a freely accessible deposited manuscript and licence metadata."
+      },
+      "peer_review": {
+        "status": "review_history_documented",
+        "evidence_url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2635471",
+        "basis": "The publisher article page reports received and accepted dates.",
+        "received": "2025-08-13",
+        "accepted": "2026-02-11"
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Online publication 24 February 2026; pages 1–17.",
+        "The repository copy is the lawful full-text source; the publisher page is the review-history source."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/02615479.2026.2660786",
+      "title": "Towards a framework for digital literacy in social work education in a time of artificial intelligence",
+      "checked_urls": [
+        "https://doi.org/10.1080/02615479.2026.2660786",
+        "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2660786",
+        "https://www.tandfonline.com/doi/pdf/10.1080/02615479.2026.2660786"
+      ],
+      "fulltext": {
+        "status": "located_open_access",
+        "url": "https://www.tandfonline.com/doi/pdf/10.1080/02615479.2026.2660786",
+        "license": "CC BY 4.0",
+        "evidence_url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2660786",
+        "basis": "The publisher provides an open PDF under CC BY 4.0."
+      },
+      "peer_review": {
+        "status": "review_history_documented",
+        "evidence_url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2660786",
+        "basis": "The article page reports received and accepted dates.",
+        "received": "2025-02-05",
+        "accepted": "2026-04-07"
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Online publication 16 April 2026; pages 1–18."
+      ]
+    }
+  ]
+}

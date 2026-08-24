@@ -3,7 +3,8 @@
 // This operator-only migration utility ingests a CSV exported from the historical
 // assessment sheet
 // (column shape of assessment/human_assessment.csv), converts it into a
-// per-reviewer JSON file (schema femprompt-prisma-reviewer/0.3) and produces a
+// per-reviewer JSON file (version-aware schema 0.4 when the corpus mapping is
+// loaded; historical schema 0.3 in an offline migration) and produces a
 // validation report: out-of-vocabulary category and decision values, empty or
 // out-of-vocabulary exclusion reasons on Exclude (the data-hygiene lesson from
 // the conformance audit, knowledge/conformance-audit.md), duplicate paper ids,
@@ -47,7 +48,8 @@ const REASON_VOCAB = CATEGORY_SCHEMA.exclusion_reasons.slice();
 // Accepted three-level category cells. Historical Ja/Nein exports remain valid.
 const CAT_VALUES = { nein: 0, '0': 0, teilweise: 1, '1': 1, ja: 2, '2': 2 };
 
-const REVIEWER_SCHEMA = 'femprompt-prisma-reviewer/0.3';
+const REVIEWER_SCHEMA = 'femprompt-prisma-reviewer/0.4';
+const HISTORICAL_REVIEWER_SCHEMA = 'femprompt-prisma-reviewer/0.3';
 
 // CSV parser (RFC-4180-ish): quoted fields, "" escapes, commas and line
 // breaks inside quotes, CRLF and LF and lone CR, BOM. No library.
@@ -146,7 +148,7 @@ function convert(rows, header, rid, existing, overwrite, fileName) {
     const nowIso = new Date().toISOString();
     const corpus = {};
     const papers = (window.EC && window.EC.getAllPapers) ? (window.EC.getAllPapers() || []) : [];
-    papers.forEach(function(p) { corpus[p.id] = true; });
+    papers.forEach(function(p) { corpus[p.id] = p; });
     const corpusLoaded = papers.length > 0;
 
     const report = [];          // { row, id, kind, level, detail }
@@ -246,6 +248,14 @@ function convert(rows, header, rid, existing, overwrite, fileName) {
             ts: nowIso, reviewer: rid, actor: 'human',
             imported: { source: fileName || 'csv', row: rowNo, raw_reason: idx.reason != null ? (r[idx.reason] || '').trim() : '' }
         };
+        const paper = corpus[id];
+        if (paper && paper.work_id && paper.version_id) Object.assign(rec, {
+            work_id: paper.work_id,
+            version_id: paper.version_id,
+            version_type: paper.version_type || 'unknown',
+            preferred_version_id: paper.preferred_version_id || paper.version_id,
+            selected_version_is_preferred: !!paper.is_preferred_version
+        });
 
         const ex = existing && existing[id];
         if (!ex) {
@@ -276,7 +286,20 @@ function convert(rows, header, rid, existing, overwrite, fileName) {
              'Korpus-Pruefung uebersprungen, da keine Paper geladen sind.');
     }
 
-    const payload = { schema: REVIEWER_SCHEMA, reviewer: rid, actor: 'human', updated: nowIso, decisions: decisions };
+    const versionAware = corpusLoaded && Object.keys(decisions).every(function(id) {
+        const paper = corpus[id];
+        if (!paper || !paper.work_id || !paper.version_id) return false;
+        Object.assign(decisions[id], {
+            work_id: paper.work_id,
+            version_id: paper.version_id,
+            version_type: paper.version_type || 'unknown',
+            preferred_version_id: paper.preferred_version_id || paper.version_id,
+            selected_version_is_preferred: !!paper.is_preferred_version
+        });
+        return true;
+    });
+    const payload = { schema: versionAware ? REVIEWER_SCHEMA : HISTORICAL_REVIEWER_SCHEMA,
+        reviewer: rid, actor: 'human', updated: nowIso, decisions: decisions };
     return { payload: payload, report: report, stats: stats };
 }
 

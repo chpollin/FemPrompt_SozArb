@@ -46,7 +46,7 @@ try {
   });
 
   await page.goto(`${base}/index.html#view=literaturbild`, { waitUntil: 'networkidle' });
-  await page.waitForSelector('#literaturbild-root .lit-matrix-button');
+  await page.waitForSelector('#literaturbild-root .lit-empty-state');
   check('Literaturbild is the restored active view', await page.locator('#view-literaturbild').evaluate((node) => node.classList.contains('active')));
   const intro = await page.locator('#intro-section').innerText();
   check('inventory distinguishes links and unique knowledge documents',
@@ -58,19 +58,18 @@ try {
   check('desktop document has no horizontal overflow', await page.evaluate(() =>
     document.documentElement.scrollWidth <= window.innerWidth + 1));
 
-  const matrixButton = page.locator('.lit-matrix-button:not([disabled])').first();
-  await matrixButton.focus();
-  await page.keyboard.press('Enter');
-  await page.waitForSelector('.lit-results .lit-paper');
-  check('keyboard selection opens papers with grounded evidence',
-    await page.locator('.lit-results .lit-evidence-group blockquote').count() > 0);
+  check('unapproved papers are not exposed',
+    await page.locator('.lit-matrix-button:not([disabled])').count() === 0 &&
+    await page.locator('.lit-results .lit-paper').count() === 0);
+  check('publication gate is explained',
+    (await page.locator('.lit-empty-state').innerText()).includes('fachlichen Verifikation'));
 
   await page.locator('.lit-view-button[data-lit-view="profile"]').click();
   await page.selectOption('#lit-profile-field', 'AN_Bias_Axes');
   await page.waitForFunction(() => location.hash.includes('litView=profile') && location.hash.includes('litProfile=AN_Bias_Axes'));
   const sharedUrl = page.url();
   await page.reload({ waitUntil: 'networkidle' });
-  await page.waitForSelector('.lit-bar-row');
+  await page.waitForSelector('.lit-empty-state');
   check('profile URL survives reload', page.url() === sharedUrl &&
     await page.locator('.lit-view-button[data-lit-view="profile"]').getAttribute('aria-pressed') === 'true' &&
     await page.inputValue('#lit-profile-field') === 'AN_Bias_Axes');

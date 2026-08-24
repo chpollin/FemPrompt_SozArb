@@ -1,0 +1,1233 @@
+{
+  "schema": "femprompt-round2-metadata-review/0.1",
+  "input_sha256": "512394c2b87800af96b3ebc8f5f5133c2628b43abf36824a9b27571d1ae1f5f0",
+  "records": [
+    {
+      "input_work_id": "doi:10.1201/9781003585527-19",
+      "metadata_status": "conflict",
+      "canonical_title": "Ethical AI through a Feminist Lens: Challenging Power and Redefining Technology",
+      "authors": [
+        "Gengler, Eva",
+        "Wedel, Marco"
+      ],
+      "issued_date": "2025-06-27",
+      "item_type": "book_chapter",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": "10.1201/9781003585527-19",
+            "isbn": "9781040387122"
+          },
+          "publication_date": "2025-06-27",
+          "journal_or_repository": "Handbook of Global Philosophies on AI Ethics: Toward Sustainable Futures (CRC Press/Routledge)",
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "evidence": [
+            {
+              "url": "https://api.crossref.org/works/10.1201%2F9781003585527-19",
+              "source_type": "crossref_metadata",
+              "supports": [
+                "doi",
+                "authors",
+                "publication_date",
+                "book_chapter_stage"
+              ]
+            },
+            {
+              "url": "https://cris.fau.de/publications/351466014/",
+              "source_type": "institutional_repository_metadata",
+              "supports": [
+                "canonical_title",
+                "authors",
+                "publisher",
+                "isbn",
+                "doi"
+              ]
+            }
+          ],
+          "flags": [
+            "crossref_title_omits_subtitle",
+            "publisher_and_institutional_metadata_support_full_title"
+          ]
+        }
+      ]
+    },
+    {
+      "input_work_id": "doi:10.1007/978-3-031-80119-8_6",
+      "metadata_status": "conflict",
+      "canonical_title": "Power Imbalances in Society and AI: On the Need to Expand the Feminist Approach",
+      "authors": [
+        "Gengler, Eva Johanna",
+        "Wedel, Marco",
+        "Wudel, Alexandra",
+        "Laumer, Sven"
+      ],
+      "issued_date": "2025-05-13",
+      "item_type": "book_chapter",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": "10.1007/978-3-031-80119-8_6"
+          },
+          "publication_date": "2025-05-13",
+          "journal_or_repository": "Conceptualizing Digital Responsibility for the Information Age (Springer Nature)",
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "evidence": [
+            {
+              "url": "https://api.crossref.org/works/10.1007%2F978-3-031-80119-8_6",
+              "source_type": "crossref_metadata",
+              "supports": [
+                "canonical_title",
+                "authors",
+                "publication_date",
+                "book_chapter_stage"
+              ]
+            },
+            {
+              "url": "https://www.digitalization.rw.fau.eu/eva-gengler-m-sc/",
+              "source_type": "institutional_author_profile",
+              "supports": [
+                "canonical_title",
+                "authors"
+              ]
+            }
+          ],
+          "flags": [
+            "input_author_given_name_conflict:Wudel_Antonia_vs_Alexandra"
+          ]
+        }
+      ]
+    },
+    {
+      "input_work_id": "doi:10.1007/s43681-026-01161-9",
+      "metadata_status": "confirmed",
+      "canonical_title": "Beyond inclusion: feminist AI for transformative justice in STEM",
+      "authors": [
+        "Kubes, Tanja"
+      ],
+      "issued_date": "2026-05-20",
+      "item_type": "journal_article",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": "10.1007/s43681-026-01161-9"
+          },
+          "publication_date": "2026-05-20",
+          "journal_or_repository": "AI and Ethics",
+          "peer_review_status": "peer_reviewed",
+          "peer_review_basis": "publisher_metadata",
+          "evidence": [
+            {
+              "url": "https://link.springer.com/article/10.1007/s43681-026-01161-9",
+              "source_type": "publisher_metadata",
+              "supports": [
+                "canonical_title",
+                "authors",
+                "received_date",
+                "accepted_date",
+                "publication_date",
+                "version_of_record"
+              ]
+            }
+          ],
+          "flags": []
+        }
+      ]
+    },
+    {
+      "input_work_id": "doi:10.1145/3715275.3732210",
+      "metadata_status": "conflict",
+      "canonical_title": "Fairness Beyond the Algorithmic Frame: Actionable Recommendations for an Intersectional Approach",
+      "authors": [
+        "Vethman, Steven",
+        "Smit, Quirine T. S.",
+        "van Liebergen, Nina M.",
+        "Veenman, Cor J."
+      ],
+      "issued_date": "2025-06-23",
+      "item_type": "conference_paper",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": "10.1145/3715275.3732210"
+          },
+          "publication_date": "2025-06-23",
+          "journal_or_repository": "Proceedings of the 2025 ACM Conference on Fairness, Accountability, and Transparency",
+          "peer_review_status": "peer_reviewed",
+          "peer_review_basis": "version_stage_inference",
+          "evidence": [
+            {
+              "url": "https://api.crossref.org/works/10.1145%2F3715275.3732210",
+              "source_type": "crossref_metadata",
+              "supports": [
+                "canonical_title",
+                "complete_author_list",
+                "publication_date",
+                "proceedings_article_stage"
+              ]
+            },
+            {
+              "url": "repo://corpus/zotero_export.json#Y6SAPNT2",
+              "source_type": "local_zotero_export",
+              "supports": [
+                "canonical_title",
+                "complete_author_list",
+                "conference_paper_type"
+              ]
+            }
+          ],
+          "flags": [
+            "input_author_list_incomplete"
+          ]
+        }
+      ]
+    },
+    {
+      "input_work_id": "doi:10.21240/zfhe/sh-ki-1/09",
+      "metadata_status": "confirmed",
+      "canonical_title": "Verbesserung der KI-Literacy von Lehrenden im Hochschulbereich",
+      "authors": [
+        "Schallert-Vallaster, Stefanie",
+        "Nüesch, Charlotte",
+        "Papageorgiou, Konstantin",
+        "Herrmann, Lisa",
+        "Hofmann, Martin",
+        "Buchner, Josef"
+      ],
+      "issued_date": "2025-02-27",
+      "item_type": "journal_article",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": "10.21240/zfhe/sh-ki-1/09"
+          },
+          "publication_date": "2025-02-27",
+          "journal_or_repository": "Zeitschrift für Hochschulentwicklung",
+          "peer_review_status": "peer_reviewed",
+          "peer_review_basis": "version_stage_inference",
+          "evidence": [
+            {
+              "url": "https://www.zfhe.at/index.php/zfhe/article/view/2086",
+              "source_type": "publisher_metadata",
+              "supports": [
+                "canonical_title",
+                "authors",
+                "journal",
+                "volume_issue",
+                "pages",
+                "doi"
+              ]
+            },
+            {
+              "url": "https://api.crossref.org/works/10.21240%2Fzfhe%2Fsh-ki-1%2F09",
+              "source_type": "crossref_metadata",
+              "supports": [
+                "publication_date",
+                "journal_article_stage"
+              ]
+            }
+          ],
+          "flags": [
+            "crossref_title_concatenates_english_and_german_titles",
+            "journal_citation_uses_german_title_as_canonical"
+          ]
+        }
+      ]
+    },
+    {
+      "input_work_id": "doi:10.1038/s41467-025-68004-9",
+      "metadata_status": "confirmed",
+      "canonical_title": "Intersectional biases in narratives produced by open-ended prompting of generative language models",
+      "authors": [
+        "Shieh, Evan",
+        "Vassel, Faye-Marie",
+        "Sugimoto, Cassidy R.",
+        "Monroe-White, Thema"
+      ],
+      "issued_date": "2026-01-08",
+      "item_type": "journal_article",
+      "versions": [
+        {
+          "version_type": "proof",
+          "identifiers": {
+            "doi": "10.1038/s41467-025-68004-9"
+          },
+          "publication_date": "2026-01-08",
+          "journal_or_repository": "Nature Communications",
+          "peer_review_status": "peer_reviewed",
+          "peer_review_basis": "publisher_metadata",
+          "evidence": [
+            {
+              "url": "https://www.nature.com/articles/s41467-025-68004-9_reference.pdf",
+              "source_type": "publisher_proof",
+              "supports": [
+                "proof_stage",
+                "accepted_date",
+                "canonical_title",
+                "authors"
+              ]
+            }
+          ],
+          "flags": [
+            "publisher_labels_file_article_in_press_and_unedited"
+          ]
+        },
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": "10.1038/s41467-025-68004-9",
+            "pmid": "41507174",
+            "pmcid": "PMC12864755"
+          },
+          "publication_date": "2026-01-08",
+          "journal_or_repository": "Nature Communications",
+          "peer_review_status": "peer_reviewed",
+          "peer_review_basis": "publisher_metadata",
+          "evidence": [
+            {
+              "url": "https://www.nature.com/articles/s41467-025-68004-9",
+              "source_type": "publisher_version_of_record",
+              "supports": [
+                "canonical_title",
+                "authors",
+                "publication_date",
+                "version_of_record"
+              ]
+            },
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12864755/",
+              "source_type": "institutional_repository_metadata",
+              "supports": [
+                "received_date",
+                "accepted_date",
+                "publication_date",
+                "pmid",
+                "pmcid"
+              ]
+            }
+          ],
+          "flags": [
+            "doi_suffix_year_2025_does_not_equal_publication_year_2026"
+          ]
+        }
+      ]
+    },
+    {
+      "input_work_id": "doi:10.3389/fsoc.2025.1602947",
+      "metadata_status": "confirmed",
+      "canonical_title": "Black feminism and Artificial Intelligence: the possibilities and limitations of contesting discriminatory AI from a critical social theory perspective",
+      "authors": [
+        "Schelenz, Laura"
+      ],
+      "issued_date": "2025-07-23",
+      "item_type": "journal_article",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": "10.3389/fsoc.2025.1602947"
+          },
+          "publication_date": "2025-07-23",
+          "journal_or_repository": "Frontiers in Sociology",
+          "peer_review_status": "peer_reviewed",
+          "peer_review_basis": "version_stage_inference",
+          "evidence": [
+            {
+              "url": "https://www.frontiersin.org/journals/sociology/articles/10.3389/fsoc.2025.1602947/full",
+              "source_type": "publisher_version_of_record",
+              "supports": [
+                "canonical_title",
+                "authors",
+                "journal_article_stage"
+              ]
+            },
+            {
+              "url": "https://api.crossref.org/works/10.3389%2Ffsoc.2025.1602947",
+              "source_type": "crossref_metadata",
+              "supports": [
+                "publication_date",
+                "doi"
+              ]
+            }
+          ],
+          "flags": []
+        }
+      ]
+    },
+    {
+      "input_work_id": "doi:10.1007/s00146-025-02556-8",
+      "metadata_status": "conflict",
+      "canonical_title": "A Critique of Human-Centred AI: A Plea for a Feminist AI Framework (FAIF)",
+      "authors": [
+        "Kubes, Tanja"
+      ],
+      "issued_date": "2025-08-19",
+      "item_type": "journal_article",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": "10.1007/s00146-025-02556-8"
+          },
+          "publication_date": "2025-08-19",
+          "journal_or_repository": "AI & SOCIETY",
+          "peer_review_status": "peer_reviewed",
+          "peer_review_basis": "version_stage_inference",
+          "evidence": [
+            {
+              "url": "https://api.crossref.org/works/10.1007%2Fs00146-025-02556-8",
+              "source_type": "crossref_metadata",
+              "supports": [
+                "canonical_title",
+                "authors",
+                "online_publication_date",
+                "print_issue_date"
+              ]
+            },
+            {
+              "url": "https://link.springer.com/article/10.1007/s00146-025-02556-8",
+              "source_type": "publisher_version_of_record",
+              "supports": [
+                "version_of_record",
+                "online_publication_date",
+                "correction_relationship"
+              ]
+            }
+          ],
+          "flags": [
+            "input_year_2026_reflects_print_issue_not_first_publication",
+            "publisher_marks_article_as_updated"
+          ]
+        },
+        {
+          "version_type": "corrected_version_of_record",
+          "identifiers": {
+            "doi": "10.1007/s00146-025-02556-8",
+            "correction_doi": "10.1007/s00146-025-02718-8"
+          },
+          "publication_date": "2026-01-21",
+          "journal_or_repository": "AI & SOCIETY",
+          "peer_review_status": "peer_reviewed",
+          "peer_review_basis": "publisher_metadata",
+          "evidence": [
+            {
+              "url": "https://link.springer.com/article/10.1007/s00146-025-02718-8",
+              "source_type": "publisher_correction_notice",
+              "supports": [
+                "correction_date",
+                "correction_doi",
+                "relationship_to_original",
+                "corrected_version_stage"
+              ]
+            }
+          ],
+          "flags": [
+            "correction_repairs_table_typography"
+          ]
+        }
+      ]
+    },
+    {
+      "input_work_id": "doi:10.1145/3769994.3770037",
+      "metadata_status": "confirmed",
+      "canonical_title": "\"Grillz on a hijabi\": Intersectional Identities in Fostering Critical AI Literacy",
+      "authors": [
+        "Solyst, Jaemarie",
+        "Fong, Chloe",
+        "Nurdin, Faisal",
+        "Landesman, Rotem",
+        "Shapiro, R. Benjamin"
+      ],
+      "issued_date": "2025-11-10",
+      "item_type": "conference_paper",
+      "versions": [
+        {
+          "version_type": "preprint",
+          "identifiers": {
+            "doi": "10.48550/arxiv.2510.06306",
+            "arxiv": "2510.06306"
+          },
+          "publication_date": "2025-10-07",
+          "journal_or_repository": "arXiv",
+          "peer_review_status": "not_peer_reviewed",
+          "peer_review_basis": "source_metadata",
+          "evidence": [
+            {
+              "url": "https://api.datacite.org/dois/10.48550/arxiv.2510.06306",
+              "source_type": "datacite_metadata",
+              "supports": [
+                "canonical_title",
+                "authors",
+                "preprint_stage",
+                "submission_date",
+                "arxiv_version_v1"
+              ]
+            },
+            {
+              "url": "https://arxiv.org/abs/2510.06306",
+              "source_type": "repository_metadata",
+              "supports": [
+                "canonical_title",
+                "authors",
+                "submission_date"
+              ]
+            }
+          ],
+          "flags": []
+        },
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": "10.1145/3769994.3770037"
+          },
+          "publication_date": "2025-11-10",
+          "journal_or_repository": "Proceedings of the 25th Koli Calling International Conference on Computing Education Research",
+          "peer_review_status": "peer_reviewed",
+          "peer_review_basis": "version_stage_inference",
+          "evidence": [
+            {
+              "url": "https://api.crossref.org/works/10.1145%2F3769994.3770037",
+              "source_type": "crossref_metadata",
+              "supports": [
+                "canonical_title",
+                "authors",
+                "publication_date",
+                "proceedings_article_stage"
+              ]
+            }
+          ],
+          "flags": [
+            "local_ris_sources_describe_both_preprint_and_published_proceedings_versions"
+          ]
+        }
+      ]
+    },
+    {
+      "input_work_id": "doi:10.3390/educsci15091143",
+      "metadata_status": "conflict",
+      "canonical_title": "AI Literacy and Gender Bias: Comparative Perspectives from the UK and Indonesia",
+      "authors": [
+        "Tunjungbiru, Amrita Deviayu",
+        "Pranggono, Bernardi",
+        "Sari, Riri Fitri",
+        "Sanchez-Velazquez, Erika",
+        "Purnamasari, Prima Dewi",
+        "Liliana, Dewi Yanti",
+        "Andryani, Nur Afny Catur"
+      ],
+      "issued_date": "2025-09-02",
+      "item_type": "journal_article",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": "10.3390/educsci15091143"
+          },
+          "publication_date": "2025-09-02",
+          "journal_or_repository": "Education Sciences",
+          "peer_review_status": "peer_reviewed",
+          "peer_review_basis": "version_stage_inference",
+          "evidence": [
+            {
+              "url": "https://api.crossref.org/works/10.3390%2Feducsci15091143",
+              "source_type": "crossref_metadata",
+              "supports": [
+                "canonical_title",
+                "complete_author_list",
+                "publication_date",
+                "journal_article_stage"
+              ]
+            },
+            {
+              "url": "https://doi.org/10.3390/educsci15091143",
+              "source_type": "publisher_doi_landing_page",
+              "supports": [
+                "canonical_title",
+                "complete_author_list",
+                "version_of_record"
+              ]
+            }
+          ],
+          "flags": [
+            "input_author_list_incomplete"
+          ]
+        }
+      ]
+    },
+    {
+      "input_work_id": "doi:10.1007/978-3-032-07830-8_12",
+      "metadata_status": "confirmed",
+      "canonical_title": "AI Ethics for the Global Majority: lessons from Decolonial Feminist Bioethics",
+      "authors": [
+        "Rangel Teixeira, Alice"
+      ],
+      "issued_date": "2026-04-01",
+      "item_type": "book_chapter",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": "10.1007/978-3-032-07830-8_12"
+          },
+          "publication_date": "2026-04-01",
+          "journal_or_repository": "AI from the Global Majority (Springer Nature)",
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "evidence": [
+            {
+              "url": "https://api.crossref.org/works/10.1007%2F978-3-032-07830-8_12",
+              "source_type": "crossref_metadata",
+              "supports": [
+                "canonical_title",
+                "authors",
+                "online_publication_date",
+                "book_chapter_stage"
+              ]
+            },
+            {
+              "url": "https://doi.org/10.1007/978-3-032-07830-8_12",
+              "source_type": "publisher_doi_landing_page",
+              "supports": [
+                "version_of_record",
+                "book_chapter_stage"
+              ]
+            }
+          ],
+          "flags": []
+        }
+      ]
+    },
+    {
+      "input_work_id": "doi:10.1177/13505068261419933",
+      "metadata_status": "conflict",
+      "canonical_title": "Feminist knowledges in the age of AI",
+      "authors": [
+        "Koobak, Redi"
+      ],
+      "issued_date": "2026-01-30",
+      "item_type": "journal_article",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": "10.1177/13505068261419933"
+          },
+          "publication_date": "2026-01-30",
+          "journal_or_repository": "European Journal of Women's Studies",
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "evidence": [
+            {
+              "url": "https://journals.sagepub.com/doi/10.1177/13505068261419933",
+              "source_type": "publisher_version_of_record",
+              "supports": [
+                "canonical_title",
+                "authors",
+                "publication_date",
+                "volume_issue",
+                "pages_3_5"
+              ]
+            },
+            {
+              "url": "https://api.crossref.org/works/10.1177%2F13505068261419933",
+              "source_type": "crossref_metadata",
+              "supports": [
+                "publication_date",
+                "journal_article_registration"
+              ]
+            }
+          ],
+          "flags": [
+            "short_issue_opening_essay_genre",
+            "local_ris_peer_review_claim_not_supported_by_publisher_metadata"
+          ]
+        }
+      ]
+    },
+    {
+      "input_work_id": "doi:10.48550/arxiv.2604.20677",
+      "metadata_status": "confirmed",
+      "canonical_title": "Intersectional Fairness in Large Language Models",
+      "authors": [
+        "Boufaied, Chaima",
+        "Santos, Ronnie De Souza",
+        "Barcomb, Ann"
+      ],
+      "issued_date": "2026-04-22",
+      "item_type": "preprint",
+      "versions": [
+        {
+          "version_type": "preprint",
+          "identifiers": {
+            "doi": "10.48550/arxiv.2604.20677",
+            "arxiv": "2604.20677"
+          },
+          "publication_date": "2026-04-22",
+          "journal_or_repository": "arXiv",
+          "peer_review_status": "not_peer_reviewed",
+          "peer_review_basis": "source_metadata",
+          "evidence": [
+            {
+              "url": "https://api.datacite.org/dois/10.48550/arxiv.2604.20677",
+              "source_type": "datacite_metadata",
+              "supports": [
+                "canonical_title",
+                "authors",
+                "preprint_stage",
+                "submission_date",
+                "latest_version_v2"
+              ]
+            },
+            {
+              "url": "https://arxiv.org/abs/2604.20677",
+              "source_type": "repository_metadata",
+              "supports": [
+                "canonical_title",
+                "authors",
+                "submission_date"
+              ]
+            }
+          ],
+          "flags": [
+            "latest_repository_version_v2",
+            "no_peer_reviewed_version_identified"
+          ]
+        }
+      ]
+    },
+    {
+      "input_work_id": "doi:10.3828/dap.2026.7",
+      "metadata_status": "confirmed",
+      "canonical_title": "Unveiling gender bias in AI: A classroom reflection on media representation and AI literacy in postgraduate education",
+      "authors": [
+        "Hu, Tingting"
+      ],
+      "issued_date": "2026-04-29",
+      "item_type": "journal_article",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": "10.3828/dap.2026.7"
+          },
+          "publication_date": "2026-04-29",
+          "journal_or_repository": "Developing Academic Practice",
+          "peer_review_status": "peer_reviewed",
+          "peer_review_basis": "version_stage_inference",
+          "evidence": [
+            {
+              "url": "https://api.crossref.org/works/10.3828%2Fdap.2026.7",
+              "source_type": "crossref_metadata",
+              "supports": [
+                "canonical_title",
+                "authors",
+                "publication_date",
+                "journal_article_stage"
+              ]
+            },
+            {
+              "url": "https://doi.org/10.3828/dap.2026.7",
+              "source_type": "publisher_doi_landing_page",
+              "supports": [
+                "version_of_record"
+              ]
+            }
+          ],
+          "flags": []
+        }
+      ]
+    },
+    {
+      "input_work_id": "doi:10.1080/17439884.2026.2652638",
+      "metadata_status": "confirmed",
+      "canonical_title": "Metacognitive AI literacy: going beyond the AI skills gap agenda",
+      "authors": [
+        "Shapiro, Hanne",
+        "Souto-Otero, Manuel",
+        "Watermeyer, Richard"
+      ],
+      "issued_date": "2026-04-13",
+      "item_type": "journal_article",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": "10.1080/17439884.2026.2652638"
+          },
+          "publication_date": "2026-04-13",
+          "journal_or_repository": "Learning, Media and Technology",
+          "peer_review_status": "peer_reviewed",
+          "peer_review_basis": "version_stage_inference",
+          "evidence": [
+            {
+              "url": "https://api.crossref.org/works/10.1080%2F17439884.2026.2652638",
+              "source_type": "crossref_metadata",
+              "supports": [
+                "canonical_title",
+                "authors",
+                "publication_date",
+                "journal_article_stage"
+              ]
+            },
+            {
+              "url": "https://doi.org/10.1080/17439884.2026.2652638",
+              "source_type": "publisher_doi_landing_page",
+              "supports": [
+                "version_of_record"
+              ]
+            }
+          ],
+          "flags": []
+        }
+      ]
+    },
+    {
+      "input_work_id": "doi:10.1108/ijssp-02-2026-0125",
+      "metadata_status": "confirmed",
+      "canonical_title": "Does being literate in AI make workplaces more equal? The mediating role of psychological capital",
+      "authors": [
+        "Pratono, Aluisius Hery",
+        "Elgeka, Honey Wahyuni Sugiharto",
+        "Jeong, Bok Gyo"
+      ],
+      "issued_date": "2026-03-31",
+      "item_type": "journal_article",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": "10.1108/ijssp-02-2026-0125"
+          },
+          "publication_date": "2026-03-31",
+          "journal_or_repository": "International Journal of Sociology and Social Policy",
+          "peer_review_status": "peer_reviewed",
+          "peer_review_basis": "version_stage_inference",
+          "evidence": [
+            {
+              "url": "https://api.crossref.org/works/10.1108%2Fijssp-02-2026-0125",
+              "source_type": "crossref_metadata",
+              "supports": [
+                "canonical_title",
+                "authors",
+                "publication_date",
+                "journal_article_stage"
+              ]
+            },
+            {
+              "url": "https://doi.org/10.1108/ijssp-02-2026-0125",
+              "source_type": "publisher_doi_landing_page",
+              "supports": [
+                "version_of_record"
+              ]
+            }
+          ],
+          "flags": []
+        }
+      ]
+    },
+    {
+      "input_work_id": "title:critical literacy in an ai world",
+      "metadata_status": "conflict",
+      "canonical_title": "Critical Literacy in an AI World",
+      "authors": [
+        "Mills, Kathy A.",
+        "Gutierrez, Amanda"
+      ],
+      "issued_date": "2025-11-15",
+      "item_type": "book",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": "10.4324/9781003539193",
+            "ebook_isbn": "9781003539193",
+            "paperback_isbn": "9781032886985",
+            "hardback_isbn": "9781032887005"
+          },
+          "publication_date": "2025-11-15",
+          "journal_or_repository": "Routledge",
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "evidence": [
+            {
+              "url": "https://api.crossref.org/works/10.4324%2F9781003539193",
+              "source_type": "crossref_metadata",
+              "supports": [
+                "canonical_title",
+                "authors",
+                "doi",
+                "ebook_isbn",
+                "issued_date",
+                "monograph_stage"
+              ]
+            },
+            {
+              "url": "https://www.routledge.com/Critical-Literacy-in-an-AI-World/Mills-Gutierrez/p/book/9781032886985",
+              "source_type": "publisher_product_metadata",
+              "supports": [
+                "canonical_title",
+                "authors",
+                "publisher",
+                "paperback_isbn",
+                "copyright_year_2026"
+              ]
+            }
+          ],
+          "flags": [
+            "canonical_doi_added",
+            "crossref_issued_date_2025-11-15",
+            "publisher_catalogue_release_dates_vary_in_december_2025",
+            "publisher_labels_copyright_year_2026"
+          ]
+        }
+      ]
+    },
+    {
+      "input_work_id": "title:safety guardrails in large language models and selective refusal bias",
+      "metadata_status": "conflict",
+      "canonical_title": "Characterizing Selective Refusal Bias in Large Language Models",
+      "authors": [
+        "Khorramrouz, Adel",
+        "Levy, Sharon"
+      ],
+      "issued_date": "2026-07",
+      "item_type": "conference_paper",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": "10.18653/v1/2026.findings-acl.550",
+            "acl_anthology_id": "2026.findings-acl.550",
+            "isbn": "979-8-89176-395-1"
+          },
+          "publication_date": "2026-07",
+          "journal_or_repository": "Findings of the Association for Computational Linguistics: ACL 2026",
+          "peer_review_status": "peer_reviewed",
+          "peer_review_basis": "version_stage_inference",
+          "evidence": [
+            {
+              "url": "https://aclanthology.org/2026.findings-acl.550/",
+              "source_type": "publisher_repository_metadata",
+              "supports": [
+                "canonical_title",
+                "authors",
+                "doi",
+                "publication_month",
+                "pages",
+                "proceedings_stage"
+              ]
+            },
+            {
+              "url": "https://aclanthology.org/2026.findings-acl.550.pdf",
+              "source_type": "publisher_version_of_record",
+              "supports": [
+                "canonical_title",
+                "authors",
+                "version_of_record"
+              ]
+            }
+          ],
+          "flags": [
+            "input_title_does_not_match_source",
+            "input_authors_do_not_match_source",
+            "input_ris_url_identifies_this_canonical_acl_record"
+          ]
+        }
+      ]
+    },
+    {
+      "input_work_id": "doi:10.31995/jgv.2026.v17i01",
+      "metadata_status": "conflict",
+      "canonical_title": "Feminist AI: Confronting Bias, Power, and the Promise of Justice-Oriented Technology",
+      "authors": [
+        "Singh, Rashmi"
+      ],
+      "issued_date": "2026-06-30",
+      "item_type": "journal_article",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "issue_doi": "10.31995/jgv.2026.v17i01"
+          },
+          "publication_date": "2026-06-30",
+          "journal_or_repository": "Journal Global Value, volume XVII, number 1",
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "evidence": [
+            {
+              "url": "https://anubooks.com/journal-volume/jgv-vol-xvii-no1-jan-june-2026-272",
+              "source_type": "publisher_issue_contents",
+              "supports": [
+                "canonical_title",
+                "author",
+                "presence_in_issue"
+              ]
+            },
+            {
+              "url": "https://api.crossref.org/works/10.31995%2Fjgv.2026.v17i01",
+              "source_type": "crossref_metadata",
+              "supports": [
+                "issue_level_identifier",
+                "issue_publication_date",
+                "journal_issue_type"
+              ]
+            }
+          ],
+          "flags": [
+            "input_doi_is_issue_level_not_article_level",
+            "article_level_doi_not_found",
+            "peer_review_status_not_documented_for_article"
+          ]
+        }
+      ]
+    },
+    {
+      "input_work_id": "doi:10.1215/2834703x-12095946",
+      "metadata_status": "confirmed",
+      "canonical_title": "The Politics of Prompt Engineering",
+      "authors": [
+        "Halm, Matthew"
+      ],
+      "issued_date": "2025-10-01",
+      "item_type": "journal_article",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": "10.1215/2834703x-12095946"
+          },
+          "publication_date": "2025-10-01",
+          "journal_or_repository": "Critical AI",
+          "peer_review_status": "peer_reviewed",
+          "peer_review_basis": "version_stage_inference",
+          "evidence": [
+            {
+              "url": "https://api.crossref.org/works/10.1215%2F2834703x-12095946",
+              "source_type": "crossref_metadata",
+              "supports": [
+                "canonical_title",
+                "author",
+                "publication_date",
+                "journal_article_stage"
+              ]
+            },
+            {
+              "url": "https://doi.org/10.1215/2834703x-12095946",
+              "source_type": "publisher_doi_landing_page",
+              "supports": [
+                "version_of_record"
+              ]
+            }
+          ],
+          "flags": []
+        }
+      ]
+    },
+    {
+      "input_work_id": "doi:10.1177/14614448261435197",
+      "metadata_status": "confirmed",
+      "canonical_title": "Gender bias in text-to-image generative artificial intelligence: Neglect and stereotypical presentations across three popular platforms",
+      "authors": [
+        "Weinmann, Hannah",
+        "Messingschlager, Tanja V.",
+        "Appel, Markus"
+      ],
+      "issued_date": "2026-04-16",
+      "item_type": "journal_article",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": "10.1177/14614448261435197"
+          },
+          "publication_date": "2026-04-16",
+          "journal_or_repository": "New Media & Society",
+          "peer_review_status": "peer_reviewed",
+          "peer_review_basis": "version_stage_inference",
+          "evidence": [
+            {
+              "url": "https://api.crossref.org/works/10.1177%2F14614448261435197",
+              "source_type": "crossref_metadata",
+              "supports": [
+                "canonical_title",
+                "authors",
+                "publication_date",
+                "journal_article_stage"
+              ]
+            },
+            {
+              "url": "https://doi.org/10.1177/14614448261435197",
+              "source_type": "publisher_doi_landing_page",
+              "supports": [
+                "version_of_record"
+              ]
+            }
+          ],
+          "flags": []
+        }
+      ]
+    },
+    {
+      "input_work_id": "doi:10.1111/ejed.70602",
+      "metadata_status": "confirmed",
+      "canonical_title": "AI For Whom? Participation, Power and Educational Pathways in the Age of Artificial Intelligence",
+      "authors": [
+        "Autenrieth, Daniel",
+        "Schluchter, Jan-René",
+        "Schulz, Lea"
+      ],
+      "issued_date": "2026-04-21",
+      "item_type": "journal_article",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": "10.1111/ejed.70602"
+          },
+          "publication_date": "2026-04-21",
+          "journal_or_repository": "European Journal of Education",
+          "peer_review_status": "peer_reviewed",
+          "peer_review_basis": "version_stage_inference",
+          "evidence": [
+            {
+              "url": "https://api.crossref.org/works/10.1111%2Fejed.70602",
+              "source_type": "crossref_metadata",
+              "supports": [
+                "canonical_title",
+                "authors",
+                "online_publication_date",
+                "print_issue_date",
+                "journal_article_stage"
+              ]
+            },
+            {
+              "url": "https://doi.org/10.1111/ejed.70602",
+              "source_type": "publisher_doi_landing_page",
+              "supports": [
+                "version_of_record"
+              ]
+            }
+          ],
+          "flags": [
+            "print_issue_date_2026-06"
+          ]
+        }
+      ]
+    },
+    {
+      "input_work_id": "doi:10.1080/14680777.2025.2593317",
+      "metadata_status": "confirmed",
+      "canonical_title": "From salad bar feminism to denotative portraiture: How neoliberalism shapes feminism in AI-Generated visuals",
+      "authors": [
+        "Bouko, Catherine",
+        "Colombo, Gabriele",
+        "Joseph, Tiago",
+        "Cenni, Irene"
+      ],
+      "issued_date": "2025-12-07",
+      "item_type": "journal_article",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": "10.1080/14680777.2025.2593317"
+          },
+          "publication_date": "2025-12-07",
+          "journal_or_repository": "Feminist Media Studies",
+          "peer_review_status": "peer_reviewed",
+          "peer_review_basis": "version_stage_inference",
+          "evidence": [
+            {
+              "url": "https://api.crossref.org/works/10.1080%2F14680777.2025.2593317",
+              "source_type": "crossref_metadata",
+              "supports": [
+                "canonical_title",
+                "authors",
+                "publication_date",
+                "journal_article_stage"
+              ]
+            },
+            {
+              "url": "https://doi.org/10.1080/14680777.2025.2593317",
+              "source_type": "publisher_doi_landing_page",
+              "supports": [
+                "version_of_record"
+              ]
+            }
+          ],
+          "flags": []
+        }
+      ]
+    },
+    {
+      "input_work_id": "doi:10.2991/978-94-6239-618-0_20",
+      "metadata_status": "conflict",
+      "canonical_title": "Algorithm beyond Neutrality: Feminist Approaches to Redefining Artificial Intelligence",
+      "authors": [
+        "Shahi, Manavi",
+        "Kaur, Harleen",
+        "Tyagi, Deepa",
+        "Sood, Rati",
+        "Kumar, Vipin",
+        "Tikaram"
+      ],
+      "issued_date": "2026-03-16",
+      "item_type": "conference_paper",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": "10.2991/978-94-6239-618-0_20",
+            "isbn": "978-94-6239-618-0",
+            "issn": "1951-6851"
+          },
+          "publication_date": "2026-03-16",
+          "journal_or_repository": "Proceedings of 3rd International Conference on Library & Technology on Artificial Intelligence and Humanities in Library and Education 4.0 (AIHLE 2025)",
+          "peer_review_status": "peer_reviewed",
+          "peer_review_basis": "publisher_metadata",
+          "evidence": [
+            {
+              "url": "https://www.atlantis-press.com/proceedings/aihle-25/126022241",
+              "source_type": "publisher_metadata",
+              "supports": [
+                "canonical_title",
+                "authors",
+                "publication_date",
+                "doi",
+                "isbn",
+                "issn",
+                "version_of_record"
+              ]
+            },
+            {
+              "url": "https://download.atlantis-press.com/proceedings/aihle-25/articles",
+              "source_type": "publisher_peer_review_statement",
+              "supports": [
+                "peer_reviewed_status"
+              ]
+            },
+            {
+              "url": "https://api.crossref.org/works/10.2991%2F978-94-6239-618-0_20",
+              "source_type": "crossref_metadata",
+              "supports": [
+                "publication_date_2026-03-15",
+                "book_chapter_registration"
+              ]
+            }
+          ],
+          "flags": [
+            "publisher_date_2026-03-16_preferred_over_crossref_date_2026-03-15",
+            "sixth_author_is_published_as_single_name_Tikaram"
+          ]
+        }
+      ]
+    }
+  ]
+}

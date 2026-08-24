@@ -5,9 +5,9 @@ project:
   repository: https://github.com/chpollin/FemPrompt_SozArb
 status: complete
 language: en
-version: "0.5"
+version: "0.7"
 created: 2026-06-09
-updated: 2026-08-22
+updated: 2026-08-24
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 4.8)
 method:
@@ -24,12 +24,14 @@ related: [project, data, standards, plan, journal]
 
 This document is the substance layer for the **PRISMA screening tool**, a standalone, PRISMA-conformant screening instrument (`docs/prisma.html`, see ADR-008) linked from the Evidence Companion. It describes what the tool does, how it was decided, and how it looks. The tool writes its data files directly into the connected project folder (File System Access); versioning happens outside the tool in GitHub Desktop (ADR-014, supersedes the in-tool Git surface of ADR-009). It has these sections with different update rhythms: Requirements (static, what the tool must do and for whom), Anwendungsszenarien (the narrative usage scenarios), Funktionsumfang (refactored per release, the current shape of the view and its modules), the Designsystem (the UI and design language, tokens, epistemic principles, and open design questions), and Decisions (monotonically growing ADRs). The data model lives in [[data]]; the standards being implemented are in [[standards]]. The five Companion views form the reference and synthesis layer documented in `CLAUDE.md`; this specification covers the PRISM working layer.
 
+**Current round-two interpretation.** ADR-034 supersedes earlier round-two requirements that assign direct screening or analysis coding to domain experts. AI agents now prepare the complete batch, a separate AI-agent activity performs source-grounded AI Agent Review, and domain experts later verify the prepared records. ADR-037 binds each assignment to one Work and the exact publication Version used. Earlier requirements and ADRs remain readable where they describe round one or the evolution of the tool.
+
 ## Anforderungen
 
 ### Funktionale Anforderungen
 
 - FR-01: Load a versioned screening batch from the repository. An operator-only converter may migrate a historical CSV into the current record contract; unknown categories, decisions, reasons, or inconsistent derivations fail closed. Acceptance: the daily editor requires no import interaction, and a converted record cannot bypass Paper-evidence or Include-analysis gates.
-- FR-02: Record an independent human screening decision per paper: ten three-level categories (nein/teilweise/ja), a three-way decision derived as (both dimensions ja yields Include; both at least teilweise yields Unclear; any dimension entirely nein yields Exclude), and, on exclude, one reason from a controlled list. Acceptance: the decision persists with reviewer id and timestamp; the derived decision matches the three-level category logic (ADR-024).
+- FR-02: Record one operationally isolated screening decision per assigned Work: ten three-level categories (nein/teilweise/ja), a three-way decision derived as (both dimensions ja yields Include; both at least teilweise yields Unclear; any dimension entirely nein yields Exclude), and, on exclude, one reason from a controlled list. The actor may be a person or AI agent and remains explicit. Acceptance: the decision persists with reviewer id, actor type, timestamp, Work ID, and exact Version ID; the derived decision matches the three-level category logic (ADR-024/037).
 - FR-03: Enforce independent capture by hiding the earlier expert assessment and the model proposal until the reviewer has saved their own decision. After saving, both references are available in a collapsed comparison section. Acceptance: no earlier judgement, reasoning, or category set is rendered before the independent decision; saving reveals the optional comparison without changing the reviewer's record.
 - FR-04: Render a PRISMA 2020 flow diagram with the PRISMA-trAIce R1 split, identified -> screened -> included, with separate tallies for AI-tool decisions and human-reviewer decisions and a breakdown of exclusion reasons. Acceptance: counts reconcile with the decision log; the diagram exports as SVG. As built, the flow renders as an HTML diagram and the SVG export is not implemented.
 - FR-05 (superseded by ADR-014/017): Compute agreement metrics live as decisions accrue: confusion matrix (human x AI), Cohen's kappa for the decision and per category, and base rates. As built, the in-tool agreement surface and the kappa computation are removed; agreement is evaluated externally on the benchmark corpus, where the figures live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion.
@@ -42,6 +44,7 @@ This document is the substance layer for the **PRISMA screening tool**, a standa
 - FR-12: Search the reading text. Provide an in-text search that highlights and steps through matches in the open Paper layer, plus a corpus-wide discovery index built from the project distillates. Acceptance: the UI labels match types and Paper identity explicitly, and a corpus identity hit never becomes an unrelated in-text query.
 - FR-13: Pin a hit as evidence for a category. From a search hit or a selected passage, attach the term plus its surrounding snippet to one of the ten categories as a stored Beleg; evidence is saved with the decision and is citable in the report. Acceptance: every category recorded at `teilweise` or `ja` carries at least one Paper-layer evidence pin; the snippets persist in the reviewer file with separate source-layer and actor provenance.
 - FR-14 (implemented 2026-07-18, strengthened 2026-08-22, ADR-026/028): Capture the qualitative analysis coding for included papers inline in the screening assessment column. The analysis fields appear once the binding decision is Include, including an override to Include. Per included paper, record the `AN_` fields as closed selections fed from `assessment/categories.yaml` v1.3, a per-field `nicht entscheidbar` capture, the text-source-derived `AN_Coding_Basis`, and `AN_Notes`; evidence pins carry their Fundstelle. Export uses the `human_assessment.csv` column schema. `src/publish/build_analysis_fields.py` emits `docs/data/analysis_fields.json` from the frozen `analysis_fields` block, which is the vocabulary source for the panel. `sanitizeAnalysis` drops values outside that vocabulary. The save gate requires a complete and internally consistent analysis record for Include. With Fulltext as the coding basis, `AN_Harm_Types` is required. A `nicht entscheidbar` selection clears competing values. Test coverage includes visibility, closed vocabulary, required fields, contradictory states, coding-basis derivation, export shape, reviewer-file determinism, and backward compatibility.
+- FR-15 (implemented 2026-08-24, ADR-037): Bind bibliographic records to a stable Work and an exact publication Version. The registry groups Preprints, Accepted Manuscripts, Versions of Record, corrected Versions, and other known expressions without collapsing their identifiers or provenance. Acceptance: every corpus record and intake candidate resolves through the registry; preferred and latest Versions are explicit; new screening records and evidence carry `work_id` and `version_id`; source mismatch fails closed; screening coverage is computed at Work level.
 
 The AI-forward requirements are demoted by ADR-012 and ADR-014. As built, FR-03 is a fixed independence rule rather than a user-controlled mode: earlier human and model assessments stay hidden until the reviewer's own decision has been saved. FR-05 has no in-tool surface or computation; agreement is evaluated externally on the benchmark corpus, with the figures in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion. FR-10 remains optional and unimplemented. The screening view centres on reading, searching, evidence capture, and complete analysis coding.
 
@@ -54,7 +57,7 @@ Acceptance (one-workspace IA, ADR-020/028/029): Screening is the permanent surfa
 - NFR-01: Static application, no backend. All logic is client-side and deployable on GitHub Pages. Runtime libraries are pinned under `docs/vendor/`; the public application loads no CDN resource. Maßstab: the view runs from `docs/` with no application server and the browser acceptance run records no external runtime request.
 - NFR-02: Architectural consistency. IIFE modules expose shared behaviour through the `window.EC` API, matching the Companion views. Maßstab: a code reviewer recognises the same pattern as `kategorien.js` and `literaturbild.js`.
 - NFR-03: Reproducibility. The canonical screening path uses pre-computed, file-backed AI assessments; live LLM calls are opt-in and labelled. Maßstab: a session can be reproduced from its exported JSON without any network call.
-- NFR-04: Accountability (RAISE). Human review decisions are binding. Agent records retain `actor: agent`, remain distinguishable from human records, and require an explicit technical integration step plus substantive ratification before they become binding research judgements. Earlier model proposals remain advisory. Maßstab: provenance cannot be erased by loading, saving, merging, or exporting a record.
+- NFR-04: Accountability (RAISE). Agent records retain `actor: agent` and remain distinguishable through typed provenance. Domain experts hold final scholarly authority. PRISM records domain verification and publication approval as separate lifecycle events. Maßstab: loading, saving, merging, verification, and export preserve the full schema-0.5 envelope.
 - NFR-05: Data sovereignty. The optional Knowledge Chat keeps its API key in `sessionStorage`, scoped to the current tab. A request transmits the question and selected research context directly to the named model provider. No key is committed. Maßstab: a new tab has no stored key, the interface discloses the transmitted context, and the application contacts no provider before an explicit request.
 - NFR-06: Keyboard-first screening. Category toggles and include/exclude reachable by keyboard, echoing the `markdown_reviewer.html` shortcut model. Maßstab: a full paper can be screened without the mouse.
 - NFR-07: Performance. Smooth interaction for at least 500 papers in one session. Maßstab: no perceptible lag on decision entry or diagram redraw at that size.
@@ -239,7 +242,7 @@ The tool inherits the Companion frame and carries its own screening design langu
 Each operationalises the project's thesis (reliability as a property of the process) and the standards.
 
 1. Synthesis, not adversarial scoring. Human and AI assessment are brought together; the tool does not blend them into one number and no longer scores them against each other in the working view (ADR-014). Where they meet, each Beleg carries its provenance.
-2. The human decision is visually primary and binding. The binding decision is the loud element; the AI proposal is quiet, labelled, and advisory; a machine-sourced Beleg never enters the binding record (RAISE accountability, ADR-016).
+2. The current decision and lifecycle state are visually primary. AI proposals remain labelled references. AI-agent-reviewed records carry their status until domain experts verify them and record publication approval.
 3. Provenance is always visible. Model, version, prompt version, and parameters travel with every AI proposal; each Beleg shows whether it is human or machine-sourced (PRISMA-trAIce M2/M6).
 4. Reporting is a by-product, not extra work. The flow, the checklist, and the disclosure assemble themselves from the act of screening; the user never feels they are doing PRISMA on the side.
 
@@ -283,15 +286,15 @@ Begründung. Keeps the reproducibility guarantee (NFR-03) while still letting a 
 
 Effekt. To be observed.
 
-### ADR-003 Human decision binding, AI advisory
+### ADR-003 Round-1 expert decision binding, AI advisory
 
 Kontext. RAISE requires human oversight and author accountability; PRISMA-trAIce R1 requires AI and human decisions to be separable.
 
-Wahl. The human decision is always the final, binding record; the AI decision is stored separately as advisory.
+Wahl. The expert decision is the binding round-1 record; the LLM decision is stored separately as advisory.
 
 Begründung. Satisfies RAISE P1/P2 and makes the R1 split structurally possible; matches the project's responsibility-asymmetry thesis.
 
-Effekt. To be observed.
+Effekt. This remains the authority rule for the completed round-1 comparison. ADR-034 defines the later lifecycle for round 2.
 
 ### ADR-004 Blind independent screening mode
 
@@ -555,6 +558,8 @@ Effekt. The desktop reading column receives at least twice the width of the comp
 
 ### ADR-030 Agententracks als vorkonfigurierte, authentisch exportierte PRISM-Läufe; Belegquelle und Akteur getrennt (revises ADR-015/016/027/029)
 
+Current relation. ADR-036 retains the actor and source-provenance model while replacing visible PRISM trial transcription with deterministic projection through PRISM's production functions for new Codex runs. The visible exports described here remain the executed method of the initial governed pilot.
+
 Kontext. Der Drei-Persona-Pilot zeigte, dass eine Agentenpersona allein keinen reproduzierbaren Lauf definiert. Instanzen brauchten ein festes Kürzel, eine exakte lokale URL, eine Paper-Zuweisung, methodische Quellen und getrennte Zielpfade. Der Testmodus konnte Entscheidungen nur im Browser halten; seine JSON-Dateien mussten danach rekonstruiert werden. Außerdem bezeichnete `origin` zugleich die Textschicht und vermeintlich den handelnden Menschen. Agentisch angeheftete Paperpassagen erschienen dadurch als `Mensch`. Das automatische Setzen eines Paper-Belegs auf Stufe `ja` vermischte Evidenzfund und fachliche Zentralitätsbewertung.
 
 Wahl. Ein Agentenlauf erhält ein unveränderliches Manifest mit Run-ID, Repository, Promptversion, Regelquellen, Publikationstypregel, festem Reviewer-Kürzel, exakter URL, Paperliste und Zielpfaden. PRISM nimmt im isolierten Testmodus `actor=agent` und `reviewer=<kürzel>` aus der URL an. Die sichtbare Funktion `Testdaten exportieren` erzeugt die authentische Reviewer-Datei. Payload und Record tragen additiv `actor`; jeder neue Beleg trägt `source_layer` und `actor`. Das bestehende `origin` bleibt für alte Dateien erhalten und wird nur noch als Kompatibilitätsabbildung der Textschicht gelesen. Die UI bezeichnet Belege nach ihrer Quelle als `Paper` oder `LLM`. Ein Paper-Beleg setzt eine leere Kategorie auf Stufe `teilweise`; Stufe `ja` erfordert eine ausdrückliche Bewertung. Das LLM-Wissensdestillat erfüllt weiterhin kein Paper-Beleg-Gate. Frühere Referenzen werden im Agentenmodus nicht gerendert. In menschlichen Sitzungen lädt der geschlossene Vergleich seine Inhalte erst beim ausdrücklichen Öffnen. Das gemeinsame Laufmanifest ist für Agenten schreibgeschützt; jede Instanz schreibt ausschließlich den eigenen Export und Bericht.
@@ -563,7 +568,7 @@ Begründung. Kürzel und URL sind Laufidentität und gehören deshalb in die kon
 
 Effekt. `prompts/prism-agent-reviewer.md` v1.0 definiert das projektspezifische PRISM-Protokoll, den ratifizierten System-Prompt, alle Laufparameter und ein kompaktes Berichtsschema. Die operativen Regeln entsprechen der im Zehn-Paper-Lauf geprüften v0.4; Version 1.0 fixiert ihren ratifizierten Governance-Status und die Publikationstypregel als kanonischen Default. `tests/review-cases/agent-runs/` enthält die Manifestkonvention. Der Browserpilot prüft die vorkonfigurierte Agenten-URL, Akteursprovenienz, Referenzblindheit und den heruntergeladenen JSON-Track. Während eines Testlaufs bleiben produktive Forschungsdaten unverändert. Eine ausdrücklich freigegebene technische Übernahme vereinigt nur authentische Exporte, erhält deren Provenienz und bleibt von der fachlichen Ratifikation getrennt. Der erste technisch übernommene Track liegt als `docs/data/screening/ar2.json` mit `status: provisional_technical_acceptance` vor. Der Lauf führte außerdem zu vier UI-Korrekturen: sichtbare Paper-ID neben der DOI, Identitätssuchen ohne Übernahme in die Volltextsuche, unmittelbare Aktualisierung des Korpusstatus nach vollständiger Analyse und eindeutige Speicherhinweise.
 
-Ratifikationsnachtrag 2026-08-22. Milestone 1 wendete den Vertrag auf zwei unabhängige Blindtracks mit je zehn identischen Paper-IDs an. Beide Coding-Pakete wurden über isolierte PRISM-Trial-Sitzungen authentisch exportiert und anschließend gegen 20 Records und 115 Eingabebelege transkriptionsgeprüft. Eine dritte, quellengestützte Auswertung adjudizierte Kategorien, Analysefelder und Belege. Der fixierte Konsens umfasst sieben Includes, ein Unclear, zwei Excludes und 58 positive, gegen die Paper-Ebene geprüfte Belege. Nach expliziter Operatorannahme wurde er mechanisch nach `ar2.json` projiziert. Der Status lautet `ratified_agent_consensus`; der Record bewahrt `actor: agent`, beide Rohtrack-Hashes, den Konsens-Hash und die Annahmeprovenienz. Damit ist die in ADR-030 getrennte fachliche Ratifikation für diese zehn Records abgeschlossen.
+Implementierungsnachtrag 2026-08-23. Milestone 1 verwendete zwei operational isolierte Tracks mit je zehn identischen Paper-IDs. Beide Coding-Pakete wurden über getrennte PRISM-Trial-Sitzungen exportiert und gegen 20 Records und 115 Eingabebelege transkriptionsgeprüft. Eine separate quellengestützte AI Agent Review prüfte Kategorien, Analysefelder und Belege. Schema 0.5 projiziert dieses Ergebnis als `ai-agent-reviewed` und bewahrt die exakte 0.3-Fassung sowie beide Rohtracks. Domain-expert verification und publication approval stehen für alle zehn Records aus.
 
 ### ADR-031 Recovery-safe repository persistence and one-write completeness (extends ADR-029/030)
 
@@ -595,6 +600,52 @@ Begründung. Eine generierte Kategorieprojektion verhindert inhaltliche Drift. L
 
 Effekt. Die Python-Tests prüfen Schemadrift, byte-identische Wiederholung und Rollback. Die JavaScript-Suiten lesen das veröffentlichte Schema. Ein Chromium-Test prüft Literaturbild, URL-Wiederherstellung, responsive Darstellung, Tastaturbedienung und das Ausbleiben externer Laufzeitanfragen. Der vollständige PRISM-Browserpilot bleibt grün.
 
-## Was nicht reingehört
+### ADR-034 Agent-assisted round-2 screening with deferred domain verification
 
-Architecture (stack, data flow, module boundaries) belongs in a future `architecture.md`; the data model belongs in [[data]]; the standards themselves belong in [[standards]]. The design tokens and UI patterns are carried in the Designsystem section of this document; it is the visual and interaction brief, the bridge from the standards and the requirements to a buildable interface, and it does not restate the full PRISMA or PRISMA-trAIce text (see [[standards]]) or redefine the data schema (see [[data]]).
+Status. Accepted and implemented on 2026-08-23; execution transfer revised by ADR-036.
+
+Kontext. Round 1 used a comparative expert-LLM dual track and retains its consolidated expert decisions. The later ten-paper PRISM pilot used two operationally isolated agent tracks, deterministic transcription checks, and a separate source-grounded AI Agent Review. Its earlier technical ratification recorded integration and operator acceptance. No domain expert reviewed those records. The intended completion path assigns the high-volume screening work to Codex agents and schedules domain-expert verification after the full batch has been prepared.
+
+Wahl. Round 2 uses two manifest-bound Codex screening agents with separate contexts, identities, browser origins, and output paths. A separately commissioned AI agent checks both tracks against the Paper layer. Accepted records reach `ai-agent-reviewed` in a single corpus. Domain experts later verify every record, and a separate action records publication approval. PRISM embeds run and source provenance plus ordered lifecycle events in the existing record. Round-1 data and its authority remain unchanged. The detailed contract is [[update-protocol#Agent-assisted completion]].
+
+Begründung. The arrangement preserves the completed comparative first round while allowing the expanded corpus to be prepared with the available agent infrastructure. AI Agent Review, domain-expert verification, and publication approval remain distinct transitions. Every later expert correction stays traceable to the original agent record.
+
+Effekt. Schema 0.5, the deterministic lifecycle validator, the PRISM verification mode, and the publication gate implement this decision. The ten-paper pilot is projected to `ai-agent-reviewed`; the exact 0.3 integration output and both raw tracks remain archived. No pilot record has domain-expert verification or publication approval. The separate offline 10K track remains outside the round-2 production path unless registered as an additional comparison study.
+
+### ADR-035 Validation, AI Agent Review, domain-expert verification, and publication approval are distinct
+
+Status. Accepted and implemented on 2026-08-23.
+
+Kontext. The terms `validated`, `verified`, and Machine Review had carried overlapping meanings. A deterministic schema can establish formal conformance, an AI agent can assess source support, and a domain expert can judge scholarly correctness. Collapsing these operations into one status would overstate the authority of technical and AI-based checks and would make later expert corrections difficult to reconstruct.
+
+Wahl. Deterministic scripts and schemas write artifact-local `checks`; they do not advance the lifecycle. Source-grounded assessment by an AI actor is named AI Agent Review and can establish `ai-agent-reviewed`. Domain experts record `accepted`, `corrected_and_accepted`, `changes_requested`, or `rejected`. The first two establish `verified`. A correction appends a complete annotation version with a field-level diff, reason, person, timestamp, and `supersedes`; the original agent annotation remains immutable. Publication approval is a separate person-attributed transition from `verified` to `publication-approved`.
+
+Begründung. Each term now names the actor, operation, and authority it can establish. Persisted checks identify the exact annotation they tested by ID and hash. Artifact-local status prevents verification of a screening record from silently propagating to a derived Assertion, report section, or paper claim.
+
+Effekt. `docs/data/screening_lifecycle_contract.json` is the canonical lifecycle vocabulary. Schema 0.5 stores `annotations`, `active_annotation_id`, `checks`, provenance, and lifecycle events in each decision record. PRISM exposes the four expert outcomes and preserves corrections as new versions. The public publisher accepts only records with an accepted domain-expert verification followed by publication approval.
+
+### ADR-036 Deterministic PRISM transfer for Codex agent tracks (revises ADR-030/034)
+
+Status. Accepted and implemented on 2026-08-23.
+
+Current relation. ADR-037 advances new reviewer tracks to schema 0.4 and new run manifests to schema 1.3 so the deterministic transfer carries exact Work-Version identity. Schema 0.3 tracks and run schema 1.2 remain the historical form of the runs governed here.
+
+Kontext. ADR-030 required Codex reviewers to enter every annotation through visible PRISM trial sessions. The five-work run showed that the source review and the UI transcription are separable operations. Both reviewer agents produced complete source-grounded coding packets, while the in-app browser failed before page initialization. The committed harness could still execute PRISM's production validation, import, record-requirement, and serialization functions over the unchanged packets. Repeating the same values manually in a browser adds a transcription step and makes corpus completion depend on browser-session availability.
+
+Wahl. New Codex runs store each operationally isolated source review as a validated `femprompt-prisma-coding-packet/0.1`. The orchestrator projects the packet mechanically and passes it through `validateReviewerPayload`, `importReviewerPayload`, `recordRequirements`, and `reviewerFileText`. The resulting schema-0.3 tracks remain immutable inputs to the separate source-grounded AI Agent Review. Run schema 1.2 binds packets, reports, sources, prompts, models, generated tracks, and review outputs with hashes. The visible PRISM interface remains the surface for domain-expert verification, corrections, and browser acceptance tests.
+
+Begründung. The packet is the direct product of source interpretation. Deterministic transfer preserves its exact values, exercises the production data contract, and removes an avoidable transcription dependency. Operational isolation continues through separate contexts and output paths. The method makes no epistemic independence claim. AI Agent Review, domain-expert verification, and publication approval retain their existing authority boundaries.
+
+Effekt. `prompts/prism-agent-reviewer-v1.1.md`, the PRISM agent-review skill, the run template, and the executable run validator require the new path. The run `uncovered-sources-5-20260823` records its original browser failure and the subsequent operator acceptance of the deterministic method. Its annotations and lifecycle states remain unchanged. Visible trial exports from the earlier ten-paper pilot remain valid historical artefacts.
+
+### ADR-037 Stable Work identity and exact publication Version provenance
+
+Status. Accepted and implemented on 2026-08-24.
+
+Kontext. A DOI or Zotero record can identify only one publication expression of a scholarly work. The same work may exist as a Preprint, Accepted Manuscript, proof, Version of Record, or corrected Version of Record. Earlier stable identifiers grouped records sufficiently for frontend coverage, but they could conflate the scholarly Work with the particular text used as evidence. Publication stage also carried no reliable implication about peer review.
+
+Wahl. `corpus/work_version_registry.json` is the canonical bibliographic identity layer. Every scholarly Work receives a stable `work_id`; every known expression receives a stable `version_id` and controlled `version_type`. Publication stage, peer-review status and basis, integrity status, access, identifiers, relations, and provenance remain separate fields. `preferred_version_id` selects the normally screened expression by the documented stage rule, while `latest_version_id` records chronology. Screening coverage applies once per Work. Full-text manifests, new PRISM records, agent assignments, evidence, distillates, Assertions, and public projections bind to the exact Version used. Ambiguous identity or a mismatch between assignment and source blocks productive processing.
+
+Begründung. The distinction prevents double screening while preserving the evidence actually read. It also supports claims about publication status without treating an Accepted Manuscript or Version of Record as automatic proof of peer review. Separate preferred and latest fields accommodate corrected, retracted, embargoed, or chronologically newer expressions.
+
+Effekt. `docs/data/work_version_contract.json` defines the vocabulary and selection rules. The registry builder reconciles the Zotero corpus and round-two intake, retains duplicate records as addressable mappings, and writes explicit conflicts for operator review. Reviewer schema 0.4 and run schema 1.3 add exact Work-Version bindings. Historical reviewer and run schemas remain readable. PRISM displays publication stage, peer-review metadata, Work ID, Version ID, and known Versions. The Grounded Vault validator requires exact Version provenance on active distillates.

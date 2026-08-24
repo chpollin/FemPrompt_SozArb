@@ -1,0 +1,291 @@
+{
+  "schema": "femprompt-source-recovery-audit/0.1",
+  "searched_at": "2026-08-24",
+  "records": [
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1007/s44155-026-00463-x",
+      "title": "An ethical framework for assessing artificial intelligence as augmentation or automation in social work",
+      "doi": "10.1007/s44155-026-00463-x",
+      "status": "alternative_located",
+      "alternative_url": "https://link.springer.com/content/pdf/10.1007/s44155-026-00463-x_reference.pdf",
+      "version_type": "accepted_manuscript_article_in_press",
+      "version_date": "2026-08-05",
+      "identifier": {
+        "doi": "10.1007/s44155-026-00463-x"
+      },
+      "relation_to_preferred": "Same DOI and article, but explicitly an accepted, unedited article-in-press manuscript that precedes and is not the preferred Version of Record.",
+      "evidence_url": "https://link.springer.com/article/10.1007/s44155-026-00463-x",
+      "basis": "The Springer landing page states that the peer-reviewed accepted research is being shared early, remains subject to edits, and will be replaced by the final Version of Record. The directly rendered 26-page PDF identifies itself as ARTICLE IN PRESS and ACCEPTED MANUSCRIPT; it reports acceptance on 2026-07-29 and release on 2026-08-05.",
+      "checked_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s44155-026-00463-x.pdf",
+        "https://link.springer.com/article/10.1007/s44155-026-00463-x",
+        "https://link.springer.com/content/pdf/10.1007/s44155-026-00463-x_reference.pdf"
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1016/j.bodyim.2026.102042",
+      "title": "Existing and future use cases, and safety and ethical considerations for AI in body image, and eating disorder prevention",
+      "doi": "10.1016/j.bodyim.2026.102042",
+      "status": "alternative_located",
+      "alternative_url": "https://uwe-repository.worktribe.com/OutputFile/15725579",
+      "version_type": "version_of_record_repository_copy",
+      "version_date": "2026-02-07",
+      "identifier": {
+        "doi": "10.1016/j.bodyim.2026.102042",
+        "uwe_output": "15715301"
+      },
+      "relation_to_preferred": "Repository-hosted copy of the preferred Version of Record with the same DOI and journal article number.",
+      "evidence_url": "https://uwe-repository.worktribe.com/output/15715301/existing-and-future-use-cases-and-safety-and-ethical-considerations-for-ai-in-body-image-and-eating-disorder-prevention",
+      "basis": "The University of the West of England repository record identifies the item as peer reviewed and supplies a public file. The file has the final Body Image 56 (2026) 102042 journal layout, DOI, and publication metadata; it is therefore treated as a repository copy of the published article rather than as an accepted manuscript.",
+      "checked_urls": [
+        "https://doi.org/10.1016/j.bodyim.2026.102042",
+        "https://uwe-repository.worktribe.com/output/15715301/existing-and-future-use-cases-and-safety-and-ethical-considerations-for-ai-in-body-image-and-eating-disorder-prevention",
+        "https://uwe-repository.worktribe.com/OutputFile/15725579"
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1016/j.caeai.2026.100602",
+      "title": "Beyond “painting in pink”: A critical case study of all-girls generative AI workshops in a European makerspace and implications for gender equity in computing",
+      "doi": "10.1016/j.caeai.2026.100602",
+      "status": "alternative_located",
+      "alternative_url": "https://discovery.ucl.ac.uk/id/eprint/10225293/1/1-s2.0-S2666920X26000640-main-2.pdf",
+      "version_type": "version_of_record_repository_copy",
+      "version_date": "2026-05-04",
+      "identifier": {
+        "doi": "10.1016/j.caeai.2026.100602",
+        "ucl_eprint": "10225293"
+      },
+      "relation_to_preferred": "Repository-hosted copy of the preferred Version of Record with the same DOI.",
+      "evidence_url": "https://discovery.ucl.ac.uk/id/eprint/10225293/",
+      "basis": "UCL Discovery labels the deposited file Published Version. Direct retrieval was verified as an application/pdf document of 15 pages; its first page gives Computers and Education: Artificial Intelligence 10 (2026) 100602, the DOI, acceptance on 2026-04-30, and online availability on 2026-05-04.",
+      "checked_urls": [
+        "https://doi.org/10.1016/j.caeai.2026.100602",
+        "https://discovery.ucl.ac.uk/id/eprint/10225293/",
+        "https://discovery.ucl.ac.uk/id/eprint/10225293/1/1-s2.0-S2666920X26000640-main-2.pdf"
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1016/j.chbr.2026.101246",
+      "title": "Can AI reduce gender bias? The case of AI-generated audio conversations in Google's NotebookLM",
+      "doi": "10.1016/j.chbr.2026.101246",
+      "status": "alternative_located",
+      "alternative_url": "https://www.sciencedirect.com/science/article/pii/S2451958826003209",
+      "version_type": "version_of_record",
+      "version_date": "2026-08-08",
+      "identifier": {
+        "doi": "10.1016/j.chbr.2026.101246",
+        "pii": "S2451958826003209"
+      },
+      "relation_to_preferred": "Official publisher HTML of the preferred Version of Record, identified by the same DOI and PII.",
+      "evidence_url": "https://www.sciencedirect.com/science/article/pii/S2451958826003209",
+      "basis": "The ScienceDirect article endpoint exposes the full article in HTML and identifies the journal article by PII S2451958826003209 and the same DOI. This recovery records an HTML Version of Record and does not represent the endpoint as a PDF.",
+      "checked_urls": [
+        "https://doi.org/10.1016/j.chbr.2026.101246",
+        "https://www.sciencedirect.com/science/article/pii/S2451958826003209"
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1016/j.mcpdig.2026.100344",
+      "title": "Implicit Gender, Racial, and Ethnic Biases in Large Language Models: An Audit Study of Automated Psychiatric Diagnoses",
+      "doi": "10.1016/j.mcpdig.2026.100344",
+      "status": "alternative_located",
+      "alternative_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13217584/",
+      "version_type": "version_of_record_repository_html",
+      "version_date": "2026-03-06",
+      "identifier": {
+        "doi": "10.1016/j.mcpdig.2026.100344",
+        "pmcid": "PMC13217584",
+        "pmid": "42221464"
+      },
+      "relation_to_preferred": "PubMed Central full-text rendering of the published journal article with the same DOI; no separate manuscript version is inferred.",
+      "evidence_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13217584/",
+      "basis": "PubMed Central supplies the complete article as text/html and records the DOI, journal citation, PMCID, and PMID. The PMC PDF endpoint returned an HTML reCAPTCHA response during checking and was therefore rejected as a PDF recovery; only the verified full HTML is recorded.",
+      "checked_urls": [
+        "https://www.mcpdigitalhealth.org/article/S2949-7612(26)00010-6/pdf",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC13217584/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC13217584/pdf/main.pdf"
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/02615479.2026.2631708",
+      "title": "Are future social workers ready for AI? Fears, barriers, and learning needs in higher education",
+      "doi": "10.1080/02615479.2026.2631708",
+      "status": "alternative_located",
+      "alternative_url": "https://academica-e.unavarra.es/server/api/core/bitstreams/ecc4e165-4064-452e-9db6-6632e2450d6b/content",
+      "version_type": "version_of_record_repository_copy",
+      "version_date": "2026-02-23",
+      "identifier": {
+        "doi": "10.1080/02615479.2026.2631708",
+        "handle": "2454/56539"
+      },
+      "relation_to_preferred": "Institutional-repository copy of the published article with the same DOI.",
+      "evidence_url": "https://academica-e.unavarra.es/entities/publication/12afd941-5e20-457a-98fd-84d5a93f2b1f",
+      "basis": "The Universidad Pública de Navarra repository record labels the item Versión publicada, gives the DOI, Routledge as publisher, the handle, and the date 2026-02-23. The linked public bitstream was inspected as the journal-formatted article, supporting classification as a repository copy of the published version.",
+      "checked_urls": [
+        "https://www.tandfonline.com/doi/pdf/10.1080/02615479.2026.2631708",
+        "https://academica-e.unavarra.es/entities/publication/12afd941-5e20-457a-98fd-84d5a93f2b1f",
+        "https://academica-e.unavarra.es/server/api/core/bitstreams/ecc4e165-4064-452e-9db6-6632e2450d6b/content"
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/02615479.2026.2660786",
+      "title": "Towards a framework for digital literacy in social work education in a time of artificial intelligence",
+      "doi": "10.1080/02615479.2026.2660786",
+      "status": "alternative_located",
+      "alternative_url": "https://mau.diva-portal.org/smash/get/diva2%3A2053633/FULLTEXT01.pdf",
+      "version_type": "version_of_record_online_first_repository_copy",
+      "version_date": "2026-04-16",
+      "identifier": {
+        "doi": "10.1080/02615479.2026.2660786",
+        "diva": "diva2:2053633"
+      },
+      "relation_to_preferred": "Repository copy of the recorded online-first Version of Record with the same DOI; it may precede later issue pagination.",
+      "evidence_url": "https://mau.diva-portal.org/smash/get/diva2%3A2053633/FULLTEXT01.pdf",
+      "basis": "Direct retrieval from Malmö University's DiVA endpoint was verified as an application/pdf document of 19 pages. Its first page has the Taylor & Francis publisher layout, the DOI, and the online publication date 2026-04-16, supporting an online-first Version of Record rather than an accepted manuscript.",
+      "checked_urls": [
+        "https://www.tandfonline.com/doi/pdf/10.1080/02615479.2026.2660786",
+        "https://mau.diva-portal.org/smash/get/diva2%3A2053633/FULLTEXT01.pdf"
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/0312407x.2026.2627220",
+      "title": "AI-Generated Images of Social Workers in Healthcare and Implications for Professional Identity",
+      "doi": "10.1080/0312407x.2026.2627220",
+      "status": "alternative_located",
+      "alternative_url": "https://www.tandfonline.com/doi/full/10.1080/0312407X.2026.2627220",
+      "version_type": "version_of_record",
+      "version_date": "2026-04-30",
+      "identifier": {
+        "doi": "10.1080/0312407X.2026.2627220"
+      },
+      "relation_to_preferred": "Official publisher HTML of the preferred Version of Record with the same DOI.",
+      "evidence_url": "https://www.tandfonline.com/doi/full/10.1080/0312407X.2026.2627220",
+      "basis": "The Taylor & Francis full-article endpoint exposes the article body, references, DOI, received and accepted history, and online publication date. This is an official HTML Version of Record used in place of the failed PDF request; it is not represented as a PDF.",
+      "checked_urls": [
+        "https://www.tandfonline.com/doi/pdf/10.1080/0312407X.2026.2627220?needAccess=true",
+        "https://doi.org/10.1080/0312407X.2026.2627220",
+        "https://www.tandfonline.com/doi/full/10.1080/0312407X.2026.2627220"
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/13691457.2025.2607705",
+      "title": "Artificial intelligence: a neoliberal tool to better manage social inequalities?",
+      "doi": "10.1080/13691457.2025.2607705",
+      "status": "alternative_located",
+      "alternative_url": "https://www.tandfonline.com/doi/full/10.1080/13691457.2025.2607705",
+      "version_type": "version_of_record",
+      "version_date": "2026-02-03",
+      "identifier": {
+        "doi": "10.1080/13691457.2025.2607705"
+      },
+      "relation_to_preferred": "Official publisher HTML of the preferred Version of Record with the same DOI.",
+      "evidence_url": "https://www.tandfonline.com/doi/full/10.1080/13691457.2025.2607705",
+      "basis": "A fresh retrieval of the Taylor & Francis full-article endpoint exposed the abstract, full article sections, references, DOI, and publication history through the official publisher HTML. The recovery therefore concerns the same Version of Record at a currently readable OA endpoint; no PDF or repository manuscript is claimed.",
+      "checked_urls": [
+        "https://www.tandfonline.com/doi/full/10.1080/13691457.2025.2607705",
+        "https://www.tandfonline.com/doi/abs/10.1080/13691457.2025.2607705",
+        "https://doi.org/10.1080/13691457.2025.2607705"
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1086/740347",
+      "title": "Accuracy and Readability of Large Language Models’ Responses to Frequently Asked Questions on Social Assistance",
+      "doi": "10.1086/740347",
+      "status": "alternative_located",
+      "alternative_url": "https://www.journals.uchicago.edu/doi/full/10.1086/740347",
+      "version_type": "version_of_record",
+      "version_date": "2026-06-01",
+      "identifier": {
+        "doi": "10.1086/740347"
+      },
+      "relation_to_preferred": "Official publisher HTML of the preferred Version of Record with the same DOI.",
+      "evidence_url": "https://www.journals.uchicago.edu/doi/full/10.1086/740347",
+      "basis": "A fresh retrieval of the University of Chicago Press full-article endpoint returned text/html with the complete methods, results, discussion, and references. The journal issue is dated 2026-06-01 and the page records online publication on 2026-06-03. The recovered object is HTML, not a PDF.",
+      "checked_urls": [
+        "https://www.journals.uchicago.edu/doi/full/10.1086/740347",
+        "https://www.journals.uchicago.edu/doi/10.1086/740347",
+        "https://doi.org/10.1086/740347"
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1086/740605",
+      "title": "Using ChatGPT for Qualitative Social Media Analysis: Insights for Cross-Cultural Social Work",
+      "doi": "10.1086/740605",
+      "status": "alternative_located",
+      "alternative_url": "https://www.journals.uchicago.edu/doi/10.1086/740605",
+      "version_type": "version_of_record",
+      "version_date": "2026-06-01",
+      "identifier": {
+        "doi": "10.1086/740605"
+      },
+      "relation_to_preferred": "Official publisher HTML of the preferred Version of Record with the same DOI.",
+      "evidence_url": "https://www.journals.uchicago.edu/doi/10.1086/740605",
+      "basis": "The canonical University of Chicago Press DOI endpoint exposes the full article in HTML, including results, ethical discussion, article history, and references. The issue is dated 2026-06-01 and the article page records online publication on 2026-06-10. The endpoint is recorded as HTML rather than PDF.",
+      "checked_urls": [
+        "https://www.journals.uchicago.edu/doi/full/10.1086/740605",
+        "https://www.journals.uchicago.edu/doi/10.1086/740605",
+        "https://doi.org/10.1086/740605"
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1111/1748-8583.70044",
+      "title": "Mitigating Disability Bias in Hiring: The Role of Inclusion-Focused Generative AI in Complex HR Decisions",
+      "doi": "10.1111/1748-8583.70044",
+      "status": "alternative_located",
+      "alternative_url": "https://onlinelibrary.wiley.com/doi/full/10.1111/1748-8583.70044",
+      "version_type": "version_of_record",
+      "version_date": "2026-03-11",
+      "identifier": {
+        "doi": "10.1111/1748-8583.70044"
+      },
+      "relation_to_preferred": "Official publisher HTML of the preferred Version of Record with the same DOI.",
+      "evidence_url": "https://onlinelibrary.wiley.com/doi/10.1111/1748-8583.70044",
+      "basis": "Wiley identifies the item as an Open Access research article, gives volume, issue, pages, DOI, and first-publication date 2026-03-11, and the full endpoint exposes the article text. This recovery records the official HTML Version of Record; no repository manuscript or PDF is inferred.",
+      "checked_urls": [
+        "https://onlinelibrary.wiley.com/doi/full/10.1111/1748-8583.70044",
+        "https://onlinelibrary.wiley.com/doi/10.1111/1748-8583.70044",
+        "https://onlinelibrary.wiley.com/doi/abs/10.1111/1748-8583.70044"
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1177/10755470261428542",
+      "title": "Generative AI So White: Racial Biases in AI Imagery Across the United States and China",
+      "doi": "10.1177/10755470261428542",
+      "status": "alternative_located",
+      "alternative_url": "https://journals.sagepub.com/doi/full/10.1177/10755470261428542",
+      "version_type": "version_of_record_version_2",
+      "version_date": "2026-04-27",
+      "identifier": {
+        "doi": "10.1177/10755470261428542"
+      },
+      "relation_to_preferred": "Official publisher HTML for the current Version 2 of the preferred Version of Record; same DOI. Version 1 was published on 2026-04-08 and Version 2 on 2026-04-27.",
+      "evidence_url": "https://journals.sagepub.com/doi/full/10.1177/10755470261428542",
+      "basis": "The SAGE full-article endpoint exposes the current complete HTML article and a version history distinguishing Version 1 on 2026-04-08 from Version 2 on 2026-04-27. The publisher PDF also rendered as application/pdf, but the recovery URL deliberately uses the separately verified full HTML endpoint.",
+      "checked_urls": [
+        "https://journals.sagepub.com/doi/pdf/10.1177/10755470261428542",
+        "https://journals.sagepub.com/doi/full/10.1177/10755470261428542",
+        "https://journals.sagepub.com/doi/10.1177/10755470261428542"
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.5117/ccr2026.2.11.urma",
+      "title": "Gender Representation in Large Language Models: A Cross-Linguistic and Cross-Model Analysis",
+      "doi": "10.5117/ccr2026.2.11.urma",
+      "status": "alternative_located",
+      "alternative_url": "https://www.aup-online.com/content/journals/10.5117/CCR2026.2.11.URMA",
+      "version_type": "version_of_record",
+      "version_date": "2026-05-21",
+      "identifier": {
+        "doi": "10.5117/CCR2026.2.11.URMA"
+      },
+      "relation_to_preferred": "Official publisher HTML of the preferred Version of Record with the same DOI.",
+      "evidence_url": "https://www.aup-online.com/content/journals/10.5117/CCR2026.2.11.URMA",
+      "basis": "The Amsterdam University Press content endpoint is marked Full-Text and Open Access and exposes the complete article in text/html, with DOI, volume, issue, pagination, received and accepted history, and online publication date 2026-05-21. It replaces the failed asynchronous HTML-delivery URL and is not represented as a PDF.",
+      "checked_urls": [
+        "https://www.aup-online.com/deliver/fulltext/26659085/8/2/CCR2026.2.11.URMA.html?itemId=/content/journals/10.5117/CCR2026.2.11.URMA&mimeType=html&fmt=ahah",
+        "https://www.aup-online.com/content/journals/10.5117/CCR2026.2.11.URMA",
+        "https://research.vu.nl/en/publications/gender-representation-in-large-language-models-a-cross-linguistic/"
+      ]
+    }
+  ]
+}

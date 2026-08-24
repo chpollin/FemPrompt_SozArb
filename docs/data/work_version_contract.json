@@ -1,0 +1,86 @@
+{
+  "schema": "femprompt-work-version-contract/0.1",
+  "version_types": [
+    {
+      "key": "authors_original",
+      "label_de": "Autor:innenfassung",
+      "preference_rank": 10
+    },
+    {
+      "key": "submitted_manuscript_under_review",
+      "label_de": "eingereichtes Manuskript",
+      "preference_rank": 20
+    },
+    {
+      "key": "preprint",
+      "label_de": "Preprint",
+      "preference_rank": 30
+    },
+    {
+      "key": "working_paper",
+      "label_de": "Working Paper",
+      "preference_rank": 30
+    },
+    {
+      "key": "accepted_manuscript",
+      "label_de": "Accepted Manuscript",
+      "preference_rank": 50
+    },
+    {
+      "key": "proof",
+      "label_de": "Korrekturfahne",
+      "preference_rank": 40
+    },
+    {
+      "key": "version_of_record",
+      "label_de": "Version of Record",
+      "preference_rank": 60
+    },
+    {
+      "key": "corrected_version_of_record",
+      "label_de": "korrigierte Version of Record",
+      "preference_rank": 70
+    },
+    {
+      "key": "enhanced_version_of_record",
+      "label_de": "erweiterte Version of Record",
+      "preference_rank": 80
+    },
+    {
+      "key": "unknown",
+      "label_de": "Version ungeklärt",
+      "preference_rank": 0
+    }
+  ],
+  "peer_review_statuses": [
+    "peer_reviewed",
+    "under_review",
+    "not_peer_reviewed",
+    "not_established"
+  ],
+  "peer_review_bases": [
+    "source_metadata",
+    "publisher_metadata",
+    "version_stage_inference",
+    "unknown"
+  ],
+  "integrity_statuses": [
+    "current",
+    "corrected",
+    "withdrawn",
+    "retracted",
+    "unknown"
+  ],
+  "relation_types": [
+    "isPreprintOf",
+    "hasPreprint",
+    "isVersionOf",
+    "hasVersion",
+    "supersedes",
+    "isSupersededBy"
+  ],
+  "selection_rule": {
+    "preferred": "Highest preference rank among versions that are not withdrawn or retracted; ties use the latest recorded date and then the version identifier.",
+    "latest": "Latest recorded version date; ties use preference rank and then the version identifier."
+  }
+}

@@ -6,14 +6,14 @@ project:
 method:
   name: Promptotyping
   url: https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin
-status: complete
+status: active
 language: de
-version: "0.4"
+version: "0.7"
 created: 2026-02-18
-updated: 2026-08-22
+updated: 2026-08-24
 authors: [Christopher Pollin]
 generated-with: Claude Code
-related: [INDEX, plan, specification]
+related: [INDEX, plan, specification, governance, verification, handoff]
 ---
 
 # Arbeitsjournal
@@ -23,6 +23,62 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 ---
 
 ## PRISM and the epistemic infrastructure (2026)
+
+### 2026-08-23: Quellenbereiter Restbestand agentisch bearbeitet
+
+- **Ziel.** Alle im aktuellen Korpus belastbar quellenbereiten Arbeiten durch den geltenden Codex-nativen Screening-Vertrag führen.
+- **Ausführung.** Drei getrennte Quellenläufe beschafften offen zugängliche Paper-Repräsentationen, prüften Werkidentitäten und dokumentierten Konversionsqualität. Zwei operational isolierte Agents codierten den gebundenen Bestand. Ein weiterer Agent prüfte beide Tracks gegen die Paper-Ebene. Der Lauf `oa-sources-13-20260823` projizierte die Coding-Pakete deterministisch durch den PRISM-Vertrag und integrierte das geprüfte Produkt append-only in den produktiven Agententrack.
+- **Ergebnis.** Die aktuelle Queue enthält keine unmittelbar bearbeitbare Arbeit mehr. Ihre verbleibenden Einträge tragen explizite Quellen- oder Identitätsblockaden. Der Run-Vertrag bindet Quellen, Prompt, Modell, Coding-Pakete, Review, Produkte und Integration über Hashes. Die produktiven Records stehen bei `ai-agent-reviewed`; Domänenverifikation und Publikationsfreigabe bleiben offen.
+- **Prüfung.** Laufvertrag, Quellenhashes, beide Coding-Pakete, PRISM-Roundtrips, AI Agent Review, Lifecycle, Merge-Idempotenz und Queue-Konsistenz sind ausführbar geprüft. Exakte Mengen und Einzelentscheidungen stehen im Run-Manifest, im produktiven Track und in der generierten Queue.
+
+### 2026-08-23: Wissensbasis auf Version 0.6 konsolidiert
+
+- **Integriert.** Die repo-weite Wissensbasis verwendet eine gemeinsame Version, zulässige Dokumentstatus und getrennte Träger für Governance, technische Tests, wissenschaftliche Verifikation und Handoffs. Der Arbeitsplan führt nur noch den Zielzustand, die verbleibenden Forschungsschritte und die erforderlichen Operatorentscheidungen.
+- **Korrigiert.** Das Grounded-Vault-Modell verwendet durchgängig `00_sources → 10_markdown → 20_distillates → 30_assertions → 40_output`. Das Update-Protokoll bildet den geltenden Codex-nativen Ablauf mit operational isolierten Coding-Paketen, deterministischem PRISM-Transfer, AI Agent Review und später Domänenverifikation ab. Die Analyse-Dokumente verweisen für Mengen und Kennzahlen auf die generierten Daten.
+- **Provenienz.** Frühere Promptversionen, Run-Manifeste, sichtbare Trial-Exporte, ADR-Fassungen und datierte Journaleinträge bleiben als Nachweis der tatsächlich ausgeführten Methoden erhalten. Die aktuellen Dokumente markieren ihre Ablösung durch ADR-036 und den Lifecycle-Vertrag.
+
+### 2026-08-23: Deterministischer PRISM-Transfer ratifiziert
+
+- **Entscheidung.** Der Operator akzeptiert den deterministischen PRISM-Round-trip als regulären Codex-nativen Transferweg. Operational isolierte Agents schreiben validierte Coding-Pakete. Der Orchestrator projiziert deren Werte mechanisch durch die produktiven PRISM-Funktionen. Ein dritter Agent führt danach die quellengestützte AI Agent Review aus.
+- **Wirkung.** Die sichtbare PRISM-Oberfläche bleibt die Arbeitsfläche für spätere Domänenverifikation, personengebundene Korrekturen und Bedienprüfung. Neue Agentenläufe benötigen keine sichtbare UI-Transkription. Run-Schema 1.2 bindet Coding-Pakete und Berichte mit Hash, verlangt den deterministischen Transfermodus und protokolliert die verwendeten Produktionsfunktionen. Prompt v1.1 und der PRISM-Agent-Review-Skill bilden denselben Ablauf ab.
+- **Bestandslauf.** `uncovered-sources-5-20260823` bewahrt den ursprünglichen Ausfall der geplanten Browserübertragung als Ausführungsereignis. Das Manifest verknüpft dieses Ereignis mit der späteren Methodenentscheidung. Die inhaltlichen Annotationen und ihre Lifecycle-Stati bleiben unverändert.
+
+### 2026-08-23: Erster vollständiger Codex-nativer Screening-Batch integriert
+
+- **Ziel.** Den installierten Laufvertrag erstmals auf alle im aktuellen Korpus unmittelbar verfügbaren, noch ungedeckten Volltexte anwenden und jeden Übergang bis zum internen Status `ai-agent-reviewed` belegen.
+- **Ausführung.** Zwei getrennte Codex-Agenten codierten fünf Werke aus geprüftem Paper-Markdown. Ihre Pakete enthalten alle Kategorien, Analysefelder, Quellenhashes und zeichengetreue Belegstellen. Ein dritter Agent prüfte beide Tracks erneut an den Quellen und entschied jede Abweichung. Die geplante sichtbare PRISM-Übertragung war wegen eines Initialisierungsfehlers des In-App-Browsers nicht verfügbar. Der Lauf verwendete deshalb die produktiven PRISM-Funktionen für Validierung, Import, Record-Anforderungen und Export im vorhandenen jsdom-Harness. Das Run-Manifest weist diese Abweichung ausdrücklich aus.
+- **Ergebnis.** Fünf Werke wurden als sechs Record-Projektionen übernommen, weil ein Werk zwei Korpus-IDs besitzt. Der produktive Agententrack umfasst nun 16 Records für 15 Werke. Der Append-only-Merge bewahrt die zehn früheren Records, ist idempotent und verweigert abweichende Überschreibungen. Alle neuen Records tragen Quellen-, Prompt-, Modell-, Run- und Aktivitätsprovenienz. Der Publisher hält alle 16 Records zurück, da keine Domänenverifikation und keine Publikationsfreigabe vorliegt.
+- **Offen.** Die aktuelle Korpusqueue enthält 22 Werke ohne gebundenes, geprüftes Paper-Markdown. Dieser Befund kann auf fehlende Konvertierung oder Zuordnung hinweisen und belegt keine fehlende PDF-Datei. Im separaten Runde-2-Intake fehlen 23 der 24 Kandidaten in der committed Korpusprojektion.
+- **Prüfung.** Laufvertrag, beide Coding-Pakete, beide PRISM-Tracks, AI Agent Review, schema-0.5-Produkt, Lifecycle und Publikationssperre bestehen ihre ausführbaren Prüfungen. Die vollständigen Suiten bestehen mit 85 Python-Tests, 119 PRISM-Tests und 19 Companion-Smoke-Tests. Der sichtbare PRISM-Pilot besteht mit 122 Prüfungen; der Companion-Browserlauf mit elf Prüfungen.
+
+### 2026-08-23: Validation, AI Agent Review und Verification getrennt
+
+- **Ziel.** Die zuletzt geklärten Begriffe als ausführbaren Daten- und UI-Vertrag festschreiben.
+- **Ergebnis.** Schema 0.5 bewahrt Annotationsversionen unveränderlich, markiert die wirksame Version und speichert deterministische Prüfquittungen getrennt vom Lifecycle. AI Agent Review endet bei `ai-agent-reviewed`. Domänenexpert*innen können akzeptieren, korrigieren und akzeptieren, Änderungen verlangen oder ablehnen. Eine Korrektur erzeugt eine vollständige neue Annotation mit Differenz, Grund, Person, Zeitpunkt und `supersedes`. Die Publikationsfreigabe bleibt ein eigener personengebundener Schritt. Der lokale Grounded-Vault-Validator übernimmt dieselbe Begriffsgrenze für Markdown-Artefakte und verhindert, dass ein Output einen höheren Status als seine Assertions trägt.
+- **Prüfgrenze.** Der Lifecycle-Validator prüft Rollen, Übergänge, Annotationen und den Hash jeder persistierten Validierungsquittung. PRISM bildet die vier Expert*innen-Ergebnisse ab und der reale Browserpilot beobachtet sowohl `changes_requested` als auch eine überschreibungsfreie Korrektur. Diese technische Prüfung verifiziert keine fachliche Aussage. Der Zehn-Paper-Pilot bleibt bis zur späteren Domänenprüfung bei `ai-agent-reviewed`.
+
+### 2026-08-23: Milestone 2, Provenienz- und Verifikationsworkflow implementiert
+
+- **Ziel.** Den bestätigten Ablauf für Runde 2 als ausführbaren Daten-, Agenten-, Prüf- und Publikationsvertrag umsetzen.
+- **Ausführung.** Drei spezialisierte Agenten-Lanes entwickelten den Lifecycle-Validator, den PRISM-Verifikationsmodus und den Codex-nativen Laufvertrag. Die Integration vereinheitlichte diese Beiträge, ergänzte die Publikationssperre und migrierte den Zehn-Paper-Pilot. Ein Integrationsaudit erkannte, dass die Oberfläche für fachliche Statuswechsel zunächst unvollständige Aktivitätsmetadaten erzeugt hätte. Die Korrektur erfasst Run, Methode, Protokollreferenz, Personenrollen und ein explizites `not_applicable` für das Modellfeld. Ältere Schema-0.3-Records bleiben unter ihrem tatsächlich belegten Erfassungsstatus und können die AI Agent Review nicht überspringen.
+- **Datenstand.** Schema 0.5 speichert Provenienz und Lifecycle im jeweiligen Annotation Record. Der Pilot trägt `ai-agent-reviewed`; seine zehn Records enthalten keine Domänenverifikation und keine Publikationsfreigabe. Die unveränderte Schema-0.3-Fassung, beide Agententracks und die Laufartefakte bleiben archiviert. Das öffentliche Literaturbild enthält deshalb aktuell null freigegebene Records und weist zehn zurückgehaltene Records aus. Die Quelldaten bleiben intern vollständig erhalten.
+- **Paper und Wissensstruktur.** `research-vault/40_output/paper/paper.md` ist das einzige kanonische Manuskript. Der frühere Draft wurde aufgelöst. Abstract und Methoden beschreiben jetzt Zotero-Kuration, Docling-Prüfung, beide Review-Runden, den agentischen Ablauf, den Lifecycle, PRISM, den Grounded Vault und die geplante Literaturanalyse. Glossar, Protokoll, Datenvertrag, Spezifikation, Methodenbeschreibung und Plan verwenden dieselben Begriffe und Autoritätsgrenzen.
+- **Prüfung.** Die vollständigen Python-Tests bestehen mit 69 Fällen. Die JavaScript-Suiten bestehen mit 119 PRISM- und 19 Companion-Fällen. Der reale PRISM-Browserpilot besteht mit 122 Prüfungen, der Companion-Browserlauf mit 11 Prüfungen. Run-Vertrag, Pilotmigration, Publikationsgenerator, Claim-Anker, Research-Vault-Profil, Python-Formatierung und Diff-Integrität sind ebenfalls grün.
+- **Geltungsgrenze.** Milestone 2 belegt eine aktive und formal geprüfte Implementierung. Die vollständige Korpusbearbeitung, fachliche Verifikation, Literaturanalyse und Publikationsfreigabe folgen im nächsten wissenschaftlichen Milestone.
+
+### 2026-08-23: Erster kanonischer Assertion-Ausschnitt und Output-Gerüste
+
+- **Ziel.** Die gemeinsame Wissensbasis für Literaturbericht und Paper praktisch beginnen und den Übergang vom älteren Claim-Modell zum aktuellen Grounded-Vault-Schema an einem vollständigen Belegpfad prüfen.
+- **Verlauf.** Drei Publikationen wurden als kanonische Distillate mit identifizierten Einzelaussagen und geprüften Kurzzitaten aufgenommen. Daraus entstanden drei atomare Assertions zu AI Literacy, gemessenen Prompting-Effekten und deren Abhängigkeit von Modellbedingungen und Bias-Kategorien. Zwei voneinander getrennte Subagent-Prüfungen kontrollierten die Kette von der Quelle bis zur Assertion und von der Assertion bis zum Berichtstext. Zwei anfangs zu weit formulierte Aussagen wurden auf den belegten Umfang reduziert. Eine weitere Formulierung, die den gesamten Ausschnitt pauschal als konditional charakterisierte, wurde nach der unabhängigen Beanstandung enger gefasst und erneut geprüft.
+- **Ergebnis.** Die drei Distillate, drei Assertions und das erste inhaltliche Berichtskapitel tragen den Status `ai-agent-reviewed`. Ihre deterministischen Validierungsangaben sind ohne Fehler und Warnungen geprüft. Getrennte Gerüste legen die Struktur des Literaturberichts und des Papers fest. Beide Outputs verwenden denselben Assertion-Bestand. Der vorhandene Paperentwurf bleibt bis zur verlustfreien Übernahme seines Inhalts erhalten.
+- **Status.** Die maschinelle Prüfung ist dokumentiert. Die menschliche Verifikation durch Domänenexpertinnen steht aus, daher trägt kein neues Artefakt den Status `verified` und kein Ergebnis ist für die öffentliche Ausgabe freigegeben. Methodische Paper-Assertions folgen erst nach der förmlichen Ingestion der projeksteigenen Methoden-, Werkzeug- und Ergebnisquellen.
+
+### 2026-08-23: Agent-first Methodenvertrag als Abnahmeentwurf
+
+- **Ziel.** Den geklärten Ablauf für Runde 1, die agentische Bearbeitung von Runde 2 und die abschließende Prüfung durch Domänenexpertinnen als prüfbaren Methodenvertrag formulieren.
+- **Verlauf.** Drei getrennte Read-only-Prüfungen untersuchten den bestehenden Methodenvertrag, die reale Provenienz in PRISM und Distillation sowie die Abweichung des SocialAI Research Vault vom aktuellen Grounded-Vault-Schema. Der Orchestrator glich die Befunde gegen die kanonischen Repository-Dokumente ab. Alle Prüfungen identifizierten denselben Statuskonflikt: Der zehn Papers umfassende `ar2`-Pilot belegt eine unabhängige maschinelle Quellenprüfung und technische Annahme, jedoch keine fachliche Verifikation durch Domänenexpertinnen.
+- **Ergebnis.** Der damalige Entwurf, heute in [[update-protocol#Agent-assisted completion]] fortgeführt, trennt den historischen Human-LLM-Dual-Track der ersten Runde vom vorgeschlagenen agentischen Ablauf der zweiten Runde. Zwei blinde Agententracks und eine unabhängige maschinelle Quellenprüfung erzeugen den Working Corpus. Die Domänenexpertinnen prüfen am Ende jeden Runde-2-Record und danach die tragenden Assertions und den Bericht. ADR-034 hält diese Regel als Abnahmeentwurf fest. Eine zusätzliche Annotation Registry wurde verworfen, weil das bestehende PRISM-Modell erweiterbar ist.
+- **Status.** Der Methodenvertrag ist dokumentiert und formal noch nicht ratifiziert. Datenmodell, Frontend, Research-Vault-Migration und Paper bleiben unverändert, bis der Operator den Vertrag bestätigt.
 
 ### 2026-08-22: Dokument- und Publikationskonsolidierung
 
@@ -159,7 +215,7 @@ Die Laufberichte zeigten vier Arbeitsfehler der Oberfläche. Paper-ID-Treffer ne
 - **Ziel:** Die über die Forschungsleitstelle freigegebenen M3-Entscheide im Repo verankern, die zwei Plandokumente an ihren Wissensort ziehen und den offenen externen Rechercheschritt festhalten.
 - **Entscheid research-vault zu generated/distilled (Operator, 2026-07-17).** Das Verhältnis ist entschieden, beide Bestände bleiben. `generated/distilled/` bleibt Pipeline-Output, der maschinell erzeugte Rohstoff aus der Distillation-Pipeline. Der geplante `research-vault/` wird die kuratierte Quelle für Belegketten, in der jede Kernaussage über die Ankerschicht `00_representation/` an ihre zeichengenaue Fundstelle gebunden ist. Die Migration eines `generated/distilled/`-Distillats in `research-vault/10_distillates/` ist damit kein Kopieren, sondern die verankernde Prüfung gegen den Ursprung, deren Prüfplan in [[research-vault]] liegt. Der Aufbau des `research-vault/` folgt [[research-vault]] und bleibt Operator-gated.
 - **Verlauf:** `research-vault-plan.md` und `distillate-check-plan.md` von `corpus/deep-research/` nach `knowledge/` verschoben, weil beide Steuerungswissen über die Arbeit tragen, nicht Deep-Research-Ausbeute. Beide waren untracked, daher normales Verschieben statt `git mv`. Die wechselseitigen Verweise der zwei Dateien sind dateiort-relativ und bleiben korrekt, da beide gemeinsam wandern; alle übrigen Pfadzeiger sind repo-root-relativ. `literature-review-prompt-round2.md` blieb bewusst in `corpus/deep-research/`. Beide Dokumente in [[INDEX]] registriert, in der Dokumententabelle, im `related`-Frontmatter und als eigener Lesepfad.
-- **Offen, externer Deep-Research-Durchgang.** Die zweite Deep-Research-Runde nach `corpus/deep-research/literature-review-prompt-round2.md` bleibt offen und wird durch den Operator ausgeführt, nicht durch die Leitstelle. Ihre Vorbedingungen sind die Präregistrierungs-Offenpunkte in [[update-protocol#10. Open items before finalization]], die vor dem ersten Round-2-Lauf aufgelöst sein müssen und hier nur referenziert, nicht beantwortet werden.
+- **Offen, externer Deep-Research-Durchgang.** Die zweite Deep-Research-Runde nach `corpus/deep-research/literature-review-prompt-round2.md` bleibt offen und wird durch den Operator ausgeführt, nicht durch die Leitstelle. Die geltenden Anforderungen an die Suchprovenienz stehen in [[update-protocol#Identification and search provenance]].
 - **Ergebnis:** Zwei Dateien verschoben, [[INDEX]] und dieses Journal aktualisiert. Working Tree, nichts committet, keine Branch-Operation. Die Ordner `_sources/` und `00_representation/` nicht angefasst.
 
 ### 2026-07-17: research-vault-Skelett gebaut, erste Migrationswelle nach der Audit-Vorbedingung
@@ -446,3 +502,35 @@ Zwei Wissensbausteine in knowledge/ ergänzt und im INDEX registriert. workflow.
 ## 2026-07-18 Codierungs-Entscheide, PRISM-Analyse-Panel beauftragt
 
 Operator-Entscheide zum Codierungskonzept unter dem Leitprinzip niedriger Aufwand für die Codiererinnen. Erfassung der Analysecodierung im PRISM-Tool statt der Excel-Route (E4, festgehalten als ADR-026 und FR-14 in specification.md), Nicht-Entscheidbarkeit als Erfassung je Feld im Tool statt Vokabular-Amendment (E3, categories.yaml v1.3 bleibt eingefroren), Distillat-Basis nur in der research-vault-geprüften Fassung (E2), Fundstellen-Konvention durch Pin-Fundstellen aufgelöst (E8); advisory LLM-Codier-Track zurückgestellt (E6). coding-concept.md auf v0.2, Fragenkatalog auf E1/E5/E7 für die Abstimmung mit der Projektkollegin eingedampft. Bau des Analyse-Panels als Leitstellen-Lane beauftragt (ein Implementierungs-Agent, Leitstellen-Verifikation mit Diff, Test-Nachlauf und Browser-Smoke-Test; Screening-Pfad byte-identisch); das Panel muss vor Codierstart stehen. Dead End der Konzeptrunde: der Werkzeug-Split Excel plus Import-Brücke plus PRISM hätte drei Orte für einen Arbeitsschritt erzeugt, obwohl das Tool Lesen, Suchen, Pinnen und Persistenz bereits trägt.
+
+## 2026-08-24 Work-Version Registry und Round-2-Intake
+
+Die bibliografische Identität wurde in Werk und Publikationsfassung getrennt. `corpus/work_version_registry.json` gruppiert Preprints, Accepted Manuscripts, Versions of Record, korrigierte Fassungen und doppelte Zotero-Records unter stabilen Work-IDs, erhält jede Fassung mit eigener Version-ID und führt Publikationsstufe, Peer-Review-Basis, Integrität, Zugang, Relationen und Provenienz als getrennte Metadaten. Preferred und latest werden unabhängig abgeleitet. Screening-Abdeckung gilt auf Werkebene; Volltext, Belege, Agentenläufe, Distillate, Assertions und öffentliche Projektionen tragen die exakte Fassung.
+
+Drei getrennte agentische Prüfungen untersuchten die Round-2-Kandidaten auf Identität, Metadaten und Quellenlage. Der zusammengeführte Intake erzeugt ein RIS-Paket ausschließlich aus konfliktfreien Einträgen. Ein falsch zugeordnetes ACL-Paper, ein Issue-DOI statt Article-DOI und weitere bibliografische Konflikte bleiben für die Zotero-Kuration markiert. Zotero-Import, Konfliktkorrektur, kuratierter Re-Export und Markdown-Prüfung bleiben operatorgebundene Handlungen.
+
+Reviewer-Schema 0.4 und Run-Schema 1.3 führen Work- und Version-ID durch PRISM und den Codex-nativen Laufvertrag. Der Grounded-Vault-Validator verlangt diese Provenienz für aktive Distillate. Das Paper erklärt die Trennung und behandelt den Grounded Vault als gemeinsame Assertion-Basis für Literaturbericht und Manuskript. Technische Tests, Generator-Checks, Agent-Run-Validatoren und die Browserprüfungen wurden nach der Integration ausgeführt; die fachliche Verifikation durch Domänenexpertinnen bleibt ausdrücklich offen.
+
+## 2026-08-24 Kontextinformierte Literaturaktualisierung
+
+Drei getrennte Codex-Subagenten suchten bis zum Stichtag 24.08.2026 in den Bereichen direkte Sozialarbeitsanwendungen, feministische und ungleichheitsbezogene KI-Forschung sowie promptbasierte Bias-Prüfung und -Minderung. Jede Lane dokumentiert Suchmuster, Primärquellen, bibliografische Evidenz, Versionsbeziehungen, Dublettenabgleich, Tier-A- und Tier-B-Treffer, Ausschlüsse und Sättigung. Der strenge Tier-A-Satz enthält 22 neue Werke und eine neue begutachtete Fassung eines bereits registrierten Preprints. Das generierte RIS hält alle 23 Datensätze im Status `identified_not_screened`; vier Publikationen liegen nach dem ursprünglichen Rundenfenster, zwei davor und 17 darin. Das ursprüngliche Fenster wurde nicht rückwirkend verändert.
+
+Die Zielbibliothek wurde über die lokale Zotero-Datenbank read-only als editierbare Gruppenbibliothek `FemPrompt_SozArb` mit Gruppen-ID `6080294` bestätigt. Zotero 9.0.6 bietet noch keinen autorisierbaren lokalen Schreibzugriff. Der sichere nächste Schritt ist daher der native RIS-Import mit einmaliger Auswahlbestätigung in Zotero oder ein dedizierter Web-API-Schlüssel mit Schreibrecht für diese Gruppe. Direkte Änderungen an `zotero.sqlite` wurden ausgeschlossen.
+
+## 2026-08-24 Codex Websearch 2026
+
+Auf Wunsch des Operators wurde die Kontextsuche als eigenständige, ausschließlich auf 2026-Fassungen begrenzte Tiefenrecherche wiederholt. Drei getrennte Subagenten bearbeiteten direkte Sozialarbeitsanwendungen, Gender/Intersektionalität/Ungleichheit und promptbasierte Bias-Prüfung. Die 69 Tier-A-Lane-Einträge wurden über DOI, Proceedings- und Preprint-Identifier sowie normalisierte Titel auf 58 Werke oder Fassungen dedupliziert. Davon sind 31 in dieser Vertiefung neu identifiziert und 27 aus früheren Suchständen übernommen. Der aktuelle Zotero-Export enthält keinen der 58 Datensätze.
+
+Der Ordner `corpus/deep-research/round2/Codex Websearch/` enthält Protokoll, Run-Manifest, vollständige Lane-Befunde, das konsolidierte JSON, ein RIS und den bibliografischen Audit. 56 Datensätze besitzen eine DOI, 25 einen direkt lokalisierten Volltext und 33 einen dokumentierten Open-Access-Status. Es bestehen keine blockierenden bibliografischen Konflikte. Bei 25 Datensätzen konnte keine artikelspezifische Peer-Review-Evidenz aus den Primärquellen etabliert werden, und bei 33 ist noch keine direkte Volltext-URL belegt. Diese Zustände bleiben explizite Metadaten und verhindern keine bibliografische Aufnahme; das Paper-Screening bleibt bis zur Quellenbeschaffung gesperrt.
+
+Der Zotero-Import wurde wegen der mobilen Situation des Operators verschoben. Das neue RIS ist die einzige Importquelle für den 2026-Teilbestand. Damit werden Überschneidungen mit den früheren, noch nicht importierten RIS-Dateien vermieden.
+
+## 2026-08-24 Quellenaufbereitung der Codex Websearch
+
+Die spätere Quellenanreicherung ersetzt die vorläufigen Zugangs- und DOI-Zahlen des vorherigen Eintrags. Der bibliografische Bestand umfasst weiterhin 58 Kandidaten; 57 besitzen eine DOI. Für 44 ist eine offene Quelle belegt. Die automatisierte Beschaffung ergab 34 validierte PDFs; ein weiterer vollständiger Zeitschriftenartikel wurde aus dem offiziellen PMC-Repositorium als HTML übernommen. Für neun weitere Kandidaten sind offene Alternativquellen bekannt, die von dieser Umgebung nicht automatisiert abgerufen werden konnten. Bei 14 Kandidaten ist weiterhin kein zugänglicher Volltext belegt.
+
+Alle 35 lokalen Quellen wurden direkt durch Agenten mit ihrer Markdown-Repräsentation verglichen. 26 Repräsentationen waren unmittelbar vollständig. Sieben wurden anhand des Originals repariert und erneut geprüft. Damit sind 33 Quellen für das spätere Screening vorbereitet. Zwei weitere Volltexte sind textlich aufbereitet, enthalten jedoch ergebnisrelevante Abbildungen, für die das derzeitige PRISM-Evidenzmodell noch keine belastbaren Bild-, Hash- und Seitenverweise aufnehmen kann. Ihre 21 extrahierten Bilddateien, Quellseiten, Tabellenzuordnungen und Prüfsummen wurden deterministisch gegen zwei Evidenzmanifeste geprüft; die beiden Fälle bleiben bis zur Modellerweiterung gesperrt.
+
+Die Quellenprovenienz trennt die bibliografisch bevorzugte Fassung von der tatsächlich aufbereiteten Fassung. Dadurch bleibt beispielsweise ein verwendeter Preprint oder ein Accepted Manuscript auch dann als solcher erkennbar, wenn eine Version of Record zum selben Werk bevorzugt wird. Der Bereitschaftsstatus erzeugt noch keine PRISM-Entscheidung: Zotero wurde nicht verändert, die 2026-Kandidaten wurden nicht in die kanonische Screening-Warteschlange übernommen und nicht durch Domänenexpertinnen verifiziert. Dafür sind zuerst der kuratierte Zotero-Import, der Re-Export und die Zuordnung zu stabilen Werk- und Fassungs-IDs erforderlich.
+
+Die fremden PDF-Binärdateien und vollständigen HTML-Rohseiten bleiben entsprechend der Repository-Regel lokal und werden nicht veröffentlicht. Ihre beim Abruf geprüften SHA-256-Werte stehen in den Acquisition-Manifesten. Versioniert werden die geprüften Markdown-Repräsentationen, Reparaturen, Bildbelege und Prüfnachweise. Der Bereitschafts-Builder prüft lokale Quellen erneut, wenn sie vorhanden sind, und kann den protokollierten Stand in einem frischen Clone ohne die geschützten Quelldateien reproduzieren.

@@ -37,11 +37,13 @@ so a browser agent can read the outcome from the title alone.
   const payloads = await Promise.all([
     loadJson('../docs/data/category_schema.json'),
     loadJson('../docs/data/analysis_fields.json'),
-    loadJson('../docs/data/research_vault_v2.json')
+    loadJson('../docs/data/research_vault_v2.json'),
+    loadJson('../docs/data/screening_lifecycle_contract.json')
   ]);
   window.__CATEGORY_SCHEMA__ = payloads[0];
   window.__ANALYSIS_FIELDS__ = payloads[1];
   window.__SEED_PAPERS__ = payloads[2].papers || [];
+  window.__LIFECYCLE_CONTRACT__ = payloads[3];
   window.fetch = function() { return Promise.reject(new Error('browser harness: network disabled')); };
   const colors = {};
   payloads[0].categories.forEach(function(category) { colors[category.key] = category.color; });
@@ -53,6 +55,7 @@ so a browser agent can read the outcome from the title alone.
     },
     CAT_COLORS: colors,
     getCategorySchema: function() { return window.__CATEGORY_SCHEMA__; },
+    getLifecycleContract: function() { return window.__LIFECYCLE_CONTRACT__; },
     getAllPapers: function() { return []; }
   };
   const scripts = [

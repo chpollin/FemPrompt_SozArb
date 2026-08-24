@@ -5,17 +5,22 @@ project:
   repository: https://github.com/chpollin/FemPrompt_SozArb
 status: active
 language: de
+version: "0.6"
 created: 2026-07-21
-updated: 2026-07-21
+updated: 2026-08-23
 authors: [Christopher Pollin]
 generated-with: Claude Code
+method:
+  name: Promptotyping
+  url: https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin
+related: [verification, analysis-sq-advisory, research-vault]
 ---
 
 # Fachfragen an die Expertinnen
 
-Arbeitsdokument zur Übertragung ins gemeinsame Google Doc. Die Fragen sammeln das fachliche Urteil der beiden Kolleginnen (Expertise Bias-Forschung und soziale Dimensionen der Sozialen Arbeit) für die Kapitel des Folgepapers, die inhaltliche Bewertung verlangen, vor allem Abschnitt 6 (Synthese SQ1 bis SQ3) sowie Teile von Abschnitt 5 und 7. Antworten können direkt unter den Fragen notiert werden, Stichworte genügen; die Einarbeitung in den Draft übernimmt die redaktionelle Seite.
+Arbeitsdokument für die abschließende fachliche Prüfung durch die Domänenexpertinnen. Die Fragen werden erst auf den vollständigen `ai-agent-reviewed` Korpus, die daraus erzeugten Analysen und den Bericht angewendet. Sie sammeln fachliche Entscheidungen für Abschnitt 6 sowie die interpretativen Teile der Abschnitte 5 und 7. Der kanonische Papertext liegt in `research-vault/40_output/paper/paper.md`.
 
-Grundlage der Abschnitts- und Fragenummern ist `paper/draft.md` (v0.4); die Nummern von Abschnitt 6 (Synthese SQ1 bis SQ3), Abschnitt 5 (Divergenz) und Abschnitt 7 (Discussion, mit den Unterabschnitten „The methodological yield" und „Integrating the workflow into a research process") gelten unverändert. Der beratende LLM-Track ist inzwischen über den Korpus gelaufen; die Fragen im Abschnitt „Aus der Advisory-Synthese" stammen aus seinen Kandidaten-Claims und verlangen fachliche Bestätigung oder Verwerfung.
+Die Fragen im Abschnitt „Aus der Advisory-Synthese" sind vorbereitete Prüfimpulse. Sie gelten erst dann als prüfbar, wenn die zugehörigen Assertions, Quellenanker und Analysen im Grounded Vault vorliegen. Antworten der Domänenexpertinnen werden als Verifikationsereignisse und fachliche Entscheidungen zurückgeführt.
 
 ## Zu SQ1, Prompting-Techniken (Abschnitt 6)
 

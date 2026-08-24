@@ -1,0 +1,6 @@
+Filename,Status,Confidence,Char_Ratio,GLYPH_Count,Artifact_Score,Tables_PDF,Tables_MD,Table_Mismatch,Needs_Review,Issues
+4ZL5Q48E.md,WARNING,99.5,1.030,0,2.4,1,0,YES,YES,"Table mismatch: PDF=1, MD=0"
+7FEFMCBZ.md,PASS,99.8,1.004,0,1.2,5,5,NO,NO,
+J7V3AAQT.md,PASS,99.8,1.101,0,1.2,3,3,NO,NO,
+R7V99ERA.md,WARNING,100.0,1.239,0,0.0,2,11,YES,YES,"Table mismatch: PDF=2, MD=11"
+VSZM7CT6.md,PASS,99.9,1.023,0,0.6,0,0,NO,NO,

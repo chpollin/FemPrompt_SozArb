@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-08-23T18:59:01.653795",
+  "input_dir": "generated\\source-acquisition\\oa-batch-a\\r7-input",
+  "output_dir": "generated\\source-acquisition\\oa-batch-a\\r7-output",
+  "total_files": 1,
+  "converted": 1,
+  "skipped": 0,
+  "failed": 0,
+  "low_quality": 0,
+  "files": [
+    {
+      "input": "R7V99ERA.pdf",
+      "output": "R7V99ERA.md",
+      "file_hash": "5fba9c757fa667b6caec40af80a6b615",
+      "success": true,
+      "duration_seconds": 71.63,
+      "metrics": {
+        "total_chars": 96169,
+        "total_lines": 486,
+        "total_words": 13736,
+        "headings": 21,
+        "heading_levels": {
+          "h2": 21
+        },
+        "tables": 11,
+        "lists": 69,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 185,
+        "avg_line_length": 317.9
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    }
+  ]
+}

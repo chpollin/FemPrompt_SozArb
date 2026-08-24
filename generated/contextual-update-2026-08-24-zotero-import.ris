@@ -1,0 +1,430 @@
+TY  - CONF
+TI  - Toward True Neutrality: Evaluating Inference-Time Debiasing Strategies for Gender Coreference Resolution in LLMs
+AU  - Arati Mohapatra
+AU  - S Jaya Nirmala
+PY  - 2025
+DA  - 2025-12
+T2  - Proceedings of the 39th Pacific Asia Conference on Language, Information and Computation
+UR  - https://aclanthology.org/2025.paclic-1.19/
+KW  - FemPrompt contextual-update-2026-08-24
+KW  - Search lanes C
+KW  - within_original_window
+N1  - FemPrompt-Candidate-ID: contextual:acl_anthology:2025.paclic-1.19
+N1  - Identity-Status: new_work
+N1  - Version-Status: official PACLIC 2025 proceedings version; no preprint found
+N1  - Peer-Review-Evidence: ACL Anthology records the paper in the PACLIC 2025 proceedings.
+ER  -
+
+TY  - CONF
+TI  - Prompting Fairness: Integrating Causality to Debias Large Language Models
+AU  - Jingling Li
+AU  - Zeyu Tang
+AU  - Xiaoyu Liu
+AU  - Peter Spirtes
+AU  - Kun Zhang
+AU  - Liu Leqi
+AU  - Yang Liu
+PY  - 2025
+DA  - 2025
+T2  - International Conference on Learning Representations 2025
+UR  - https://proceedings.iclr.cc/paper_files/paper/2025/hash/9f26a2d143a227376dff99a279f93f99-Abstract-Conference.html
+KW  - FemPrompt contextual-update-2026-08-24
+KW  - Search lanes C
+KW  - within_original_window
+N1  - FemPrompt-Candidate-ID: contextual:arxiv:2403.08743
+N1  - Identity-Status: new_work
+N1  - Version-Status: arXiv v1 2024-03-13, v2 2025-03-02; official ICLR 2025 conference paper
+N1  - Peer-Review-Evidence: Official ICLR 2025 proceedings record and OpenReview conference-paper record.
+ER  -
+
+TY  - RPRT
+TI  - Gender Bias in LLM Hiring Decisions: Evidence from a Japanese Context and Evaluation of Mitigation Strategies
+AU  - Serena A. Hoffstedde
+AU  - Machiko Hirota
+AU  - Akshara Nadayanur Sathis Kanna
+AU  - Rihito Kotani
+AU  - Ujwal Kumar
+AU  - Gabriele Trovato
+AU  - Phan Xuan Tan
+PY  - 2026
+DA  - 2026-06-17
+T2  - arXiv
+UR  - https://arxiv.org/abs/2606.18649
+KW  - FemPrompt contextual-update-2026-08-24
+KW  - Search lanes C
+KW  - within_original_window
+N1  - FemPrompt-Candidate-ID: contextual:arxiv:2606.18649
+N1  - Identity-Status: new_work
+N1  - Version-Status: arXiv v1; no accepted conference or journal version found by the cutoff date
+N1  - Peer-Review-Evidence: No peer-review evidence found; preprint only.
+ER  -
+
+TY  - JOUR
+TI  - Are future social workers ready for AI? Fears, barriers, and learning needs in higher education
+AU  - Sacramento Pinazo-Hernandis
+AU  - Nuria Carcavilla-González
+PY  - 2026
+DA  - 2026-02-23
+T2  - Social Work Education, 1-15
+DO  - 10.1080/02615479.2026.2631708
+UR  - https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2631708
+KW  - FemPrompt contextual-update-2026-08-24
+KW  - Search lanes B
+KW  - within_original_window
+N1  - FemPrompt-Candidate-ID: contextual:doi:10.1080/02615479.2026.2631708
+N1  - Identity-Status: new_work
+N1  - Version-Status: version_of_record_online_first
+N1  - Peer-Review-Evidence: {"status":"peer_reviewed","received":"2025-07-18","accepted":"2026-02-02","evidence_url":"https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2631708"}
+ER  -
+
+TY  - JOUR
+TI  - Promoting AI literacy in social work education: lessons from an interdisciplinary course for social work students
+AU  - Joshua Weber
+AU  - Lauri Goldkind
+PY  - 2026
+DA  - 2026-02-24
+T2  - Social Work Education, 1-17
+DO  - 10.1080/02615479.2026.2635471
+UR  - https://irf.fhnw.ch/entities/publication/895bedd9-51aa-41ac-942a-7c2d20210c32
+KW  - FemPrompt contextual-update-2026-08-24
+KW  - Search lanes B
+KW  - within_original_window
+N1  - FemPrompt-Candidate-ID: contextual:doi:10.1080/02615479.2026.2635471
+N1  - Identity-Status: new_work
+N1  - Version-Status: version_of_record_online_first
+N1  - Peer-Review-Evidence: {"status":"peer_reviewed","received":"2025-08-13","accepted":"2026-02-11","evidence_url":"https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2635471"}
+ER  -
+
+TY  - JOUR
+TI  - Towards a framework for digital literacy in social work education in a time of artificial intelligence
+AU  - Michael Wallengren-Lynch
+PY  - 2026
+DA  - 2026-04-16
+T2  - Social Work Education, 1-18
+DO  - 10.1080/02615479.2026.2660786
+UR  - https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2660786
+KW  - FemPrompt contextual-update-2026-08-24
+KW  - Search lanes B
+KW  - within_original_window
+N1  - FemPrompt-Candidate-ID: contextual:doi:10.1080/02615479.2026.2660786
+N1  - Identity-Status: new_work
+N1  - Version-Status: version_of_record_online_first
+N1  - Peer-Review-Evidence: {"status":"peer_reviewed","received":"2025-02-05","accepted":"2026-04-07","evidence_url":"https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2660786"}
+ER  -
+
+TY  - JOUR
+TI  - A kind of magic? Artificial intelligence-assisted recording: developing principles for an AI-informed social work curriculum
+AU  - Richard Ingram
+PY  - 2026
+DA  - 2026-05-11
+T2  - Social Work Education, 1-18
+DO  - 10.1080/02615479.2026.2669634
+UR  - https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2669634
+KW  - FemPrompt contextual-update-2026-08-24
+KW  - Search lanes B
+KW  - within_original_window
+N1  - FemPrompt-Candidate-ID: contextual:doi:10.1080/02615479.2026.2669634
+N1  - Identity-Status: new_work
+N1  - Version-Status: version_of_record_online_first
+N1  - Peer-Review-Evidence: {"status":"peer_reviewed","received":"2026-03-19","accepted":"2026-04-22","evidence_url":"https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2669634"}
+ER  -
+
+TY  - JOUR
+TI  - Artificial intelligence: a neoliberal tool to better manage social inequalities?
+AU  - Paul Michael Garrett
+PY  - 2026
+DA  - 2026-02-03
+T2  - European Journal of Social Work 29(5), 1029-1041
+DO  - 10.1080/13691457.2025.2607705
+UR  - https://doi.org/10.1080/13691457.2025.2607705
+KW  - FemPrompt contextual-update-2026-08-24
+KW  - Search lanes B
+KW  - within_original_window
+N1  - FemPrompt-Candidate-ID: contextual:doi:10.1080/13691457.2025.2607705
+N1  - Identity-Status: new_work
+N1  - Version-Status: version_of_record
+N1  - Peer-Review-Evidence: {"status":"peer_reviewed","received":"2025-03-15","accepted":"2025-12-16","evidence_url":"https://www.tandfonline.com/doi/full/10.1080/13691457.2025.2607705"}
+ER  -
+
+TY  - JOUR
+TI  - The (Un)Fair Algorithm: Socio-Technical Ethics Work for Artificial Intelligence in Social Work
+AU  - Ida Schrøder
+AU  - Marie Leth Meilvang
+AU  - Matilde Høybye-Mortensen
+PY  - 2026
+DA  - 2026-02-18
+T2  - Ethics and Social Welfare 20(3), 409-424
+DO  - 10.1080/17496535.2026.2619945
+UR  - https://www.tandfonline.com/doi/full/10.1080/17496535.2026.2619945
+KW  - FemPrompt contextual-update-2026-08-24
+KW  - Search lanes B
+KW  - within_original_window
+N1  - FemPrompt-Candidate-ID: contextual:doi:10.1080/17496535.2026.2619945
+N1  - Identity-Status: new_work
+N1  - Version-Status: version_of_record
+N1  - Peer-Review-Evidence: {"status":"peer_reviewed","received":"2025-03-19","accepted":"2026-01-16","evidence_url":"https://www.tandfonline.com/doi/full/10.1080/17496535.2026.2619945"}
+ER  -
+
+TY  - JOUR
+TI  - Can a Large Language Model Judge a Child’s Statement?: A Comparative Analysis of ChatGPT and Human Experts in Credibility Assessment
+AU  - Zeki Karataş
+PY  - 2025
+DA  - 2025-08-11
+T2  - Journal of Evidence-Based Social Work
+DO  - 10.1080/26408066.2025.2547211
+UR  - https://doi.org/10.1080/26408066.2025.2547211
+KW  - FemPrompt contextual-update-2026-08-24
+KW  - Search lanes A
+KW  - within_original_window
+N1  - FemPrompt-Candidate-ID: contextual:doi:10.1080/26408066.2025.2547211
+N1  - Identity-Status: new_work
+N1  - Version-Status: version_of_record
+N1  - Peer-Review-Evidence: {"status":"not_established","basis":"Crossref enthält einen Peer-Review-Policy-Verweis des Journals, aber keine item-spezifische Annahmehistorie.","evidence_url":"https://doi.org/10.1080/26408066.2025.2547211"}
+ER  -
+
+TY  - JOUR
+TI  - Small Models Achieve Large Language Model Performance: Evaluating Reasoning-Enabled AI for Secure Child Welfare Research
+AU  - Zia Qi
+AU  - Brian E. Perron
+AU  - Bryan G. Victor
+AU  - Dragan Stoll
+AU  - Joseph P. Ryan
+PY  - 2026
+DA  - 2026-01-18
+T2  - Journal of Evidence-Based Social Work
+DO  - 10.1080/26408066.2026.2616711
+UR  - https://doi.org/10.1080/26408066.2026.2616711
+KW  - FemPrompt contextual-update-2026-08-24
+KW  - Search lanes A
+KW  - within_original_window
+N1  - FemPrompt-Candidate-ID: contextual:doi:10.1080/26408066.2026.2616711
+N1  - Identity-Status: new_work
+N1  - Version-Status: preprint v1 2025-12-03; preprint v2 2026-01-10; version of record 2026-01-18 (preferred bibliographic version)
+N1  - Peer-Review-Evidence: {"status":"not_established","basis":"Taylor & Francis weist eine Version of Record und die Journal-Peer-Review-Policy aus; eine item-spezifische Annahmehistorie war in Crossref nicht enthalten.","evidence_url":"https://doi.org/10.1080/26408066.2026.2616711"}
+ER  -
+
+TY  - JOUR
+TI  - Using ChatGPT for Qualitative Social Media Analysis: Insights for Cross-Cultural Social Work
+AU  - Michin Hong
+AU  - Grace Yi
+PY  - 2026
+DA  - 2026-06-01
+T2  - Journal of the Society for Social Work and Research
+DO  - 10.1086/740605
+UR  - https://doi.org/10.1086/740605
+KW  - FemPrompt contextual-update-2026-08-24
+KW  - Search lanes A
+KW  - within_original_window
+N1  - FemPrompt-Candidate-ID: contextual:doi:10.1086/740605
+N1  - Identity-Status: new_work
+N1  - Version-Status: version_of_record
+N1  - Peer-Review-Evidence: {"status":"not_established","basis":"Crossref weist einen Journal Article in Journal of the Society for Social Work and Research aus; eine item-spezifische Begutachtungshistorie war nicht belegt.","evidence_url":"https://doi.org/10.1086/740605"}
+ER  -
+
+TY  - JOUR
+TI  - Same Prompt, Different Care? Evaluating Inequities in AI-Generated Mental Health Support for Immigrant Communities
+AU  - Cheng Chow
+AU  - Xiuer Gu
+PY  - 2026
+DA  - 2026-07-28
+T2  - Journal of the Society for Social Work and Research
+DO  - 10.1086/743397
+UR  - https://doi.org/10.1086/743397
+KW  - FemPrompt contextual-update-2026-08-24
+KW  - Search lanes A
+KW  - after_original_window
+N1  - FemPrompt-Candidate-ID: contextual:doi:10.1086/743397
+N1  - Identity-Status: new_work
+N1  - Version-Status: version_of_record
+N1  - Peer-Review-Evidence: {"status":"not_established","basis":"Crossref weist einen Journal Article in Journal of the Society for Social Work and Research aus; eine item-spezifische Annahme- oder Begutachtungshistorie war nicht belegt.","evidence_url":"https://doi.org/10.1086/743397"}
+ER  -
+
+TY  - JOUR
+TI  - Mitigating medical bias in large language models by prompt engineering: an empirical study of effectiveness and trade-offs
+AU  - Ying Xiao
+AU  - Zhenpeng Chen
+AU  - Jie Zhang
+PY  - 2026
+DA  - 2026-07-16
+T2  - Philosophical Transactions of the Royal Society A, 384(2324), article 20250125
+DO  - 10.1098/rsta.2025.0125
+UR  - https://doi.org/10.1098/rsta.2025.0125
+KW  - FemPrompt contextual-update-2026-08-24
+KW  - Search lanes C
+KW  - after_original_window
+N1  - FemPrompt-Candidate-ID: contextual:doi:10.1098/rsta.2025.0125
+N1  - Identity-Status: new_work
+N1  - Version-Status: version of record; no preprint found
+N1  - Peer-Review-Evidence: Published as a journal article by the Royal Society in Philosophical Transactions A.
+ER  -
+
+TY  - JOUR
+TI  - Making Accurate Judgements in Child Welfare: Comparing ChatGPT With Qualified Social Workers
+AU  - David Wilkins
+AU  - Verity Bennett
+PY  - 2025
+DA  - 2025-06-02
+T2  - Child & Family Social Work 31(2), 703-712
+DO  - 10.1111/cfs.13304
+UR  - https://orca.cardiff.ac.uk/id/eprint/178748/
+KW  - FemPrompt contextual-update-2026-08-24
+KW  - Search lanes B
+KW  - before_original_window
+N1  - FemPrompt-Candidate-ID: contextual:doi:10.1111/cfs.13304
+N1  - Identity-Status: new_work
+N1  - Version-Status: version_of_record
+N1  - Peer-Review-Evidence: {"status":"peer_reviewed","received":"2024-07-19","revised":"2025-01-22","accepted":"2025-04-11","evidence_url":"https://orca.cardiff.ac.uk/id/eprint/178748/1/cfs.13304.pdf"}
+ER  -
+
+TY  - JOUR
+TI  - Designing a framework for ethnography-driven prompt engineering in social work
+AU  - Miroslavas Seniutis
+AU  - Valentas Gružauskas
+AU  - Artūras Sas
+AU  - Valentinas Navickas
+AU  - Mantas Švažas
+PY  - 2025
+DA  - 2025-05-28
+T2  - Human Technology 21(1), 106–127
+DO  - 10.14254/1795-6889.2025.21-1.5
+UR  - https://www.ht.csr-pub.eu/index.php/ht/article/view/460
+KW  - FemPrompt contextual-update-2026-08-24
+KW  - Search lanes A
+KW  - before_original_window
+N1  - FemPrompt-Candidate-ID: contextual:doi:10.14254/1795-6889.2025.21-1.5
+N1  - Identity-Status: new_work
+N1  - Version-Status: version_of_record
+N1  - Peer-Review-Evidence: {"status":"peer_reviewed","basis":"Die Journal-Landingpage bezeichnet Human Technology als peer-reviewed und weist den Beitrag als veröffentlichten Artikel aus; eingereicht am 2023-12-30.","evidence_url":"https://www.ht.csr-pub.eu/index.php/ht/article/view/460"}
+ER  -
+
+TY  - CONF
+TI  - Rethinking Prompt-based Debiasing in Large Language Model
+AU  - Xinyi Yang
+AU  - Runzhe Zhan
+AU  - Shu Yang
+AU  - Junchao Wu
+AU  - Lidia S. Chao
+AU  - Derek F. Wong
+PY  - 2025
+DA  - 2025-07
+T2  - Findings of the Association for Computational Linguistics: ACL 2025
+DO  - 10.18653/v1/2025.findings-acl.1361
+UR  - https://aclanthology.org/2025.findings-acl.1361/
+KW  - FemPrompt contextual-update-2026-08-24
+KW  - Search lanes C
+KW  - within_original_window
+N1  - FemPrompt-Candidate-ID: contextual:doi:10.18653/v1/2025.findings-acl.1361
+N1  - Identity-Status: new_work
+N1  - Version-Status: arXiv preprint submitted 2025-03-12 under the plural title Large Language Models; Findings of ACL version published 2025-07 under the singular title Large Language Model
+N1  - Peer-Review-Evidence: ACL Anthology records the paper in Findings of ACL 2025.
+ER  -
+
+TY  - CONF
+TI  - Multi-Persona Thinking for Bias Mitigation in Large Language Models
+AU  - Yuxing Chen
+AU  - Guoqing Luo
+AU  - Zijun Wu
+AU  - Lili Mou
+PY  - 2026
+DA  - 2026-07
+T2  - Findings of the Association for Computational Linguistics: ACL 2026
+DO  - 10.18653/v1/2026.findings-acl.1389
+UR  - https://aclanthology.org/2026.findings-acl.1389/
+KW  - FemPrompt contextual-update-2026-08-24
+KW  - Search lanes C
+KW  - after_original_window
+N1  - FemPrompt-Candidate-ID: contextual:doi:10.18653/v1/2026.findings-acl.1389
+N1  - Identity-Status: new_work
+N1  - Version-Status: arXiv v1 2026-01-21, v3 2026-04-21; Findings of ACL version published 2026-07
+N1  - Peer-Review-Evidence: ACL Anthology records the paper in Findings of ACL 2026.
+ER  -
+
+TY  - JOUR
+TI  - Patient Cognitive Bias in Large Language Model-Supported Health Consultations: Simulation-Based Comparative Study
+AU  - Yi Zuo
+AU  - Qifeng Wan
+AU  - Shalong Wang
+PY  - 2026
+DA  - 2026-06-11
+T2  - Journal of Medical Internet Research, 28, e85770
+DO  - 10.2196/85770
+UR  - https://www.jmir.org/2026/1/e85770
+KW  - FemPrompt contextual-update-2026-08-24
+KW  - Search lanes C
+KW  - within_original_window
+N1  - FemPrompt-Candidate-ID: contextual:doi:10.2196/85770
+N1  - Identity-Status: new_work
+N1  - Version-Status: JMIR preprint submitted 2025-10-13, accepted 2026-05-04; journal version published 2026-06-11
+N1  - Peer-Review-Evidence: JMIR records the original paper and an explicit submitted/accepted open-review history.
+ER  -
+
+TY  - CONF
+TI  - Prompting Techniques for Reducing Social Bias in LLMs through System 1 and System 2 Cognitive Processes
+AU  - Mahammed Kamruzzaman
+AU  - Gene Louis Kim
+PY  - 2025
+DA  - 2025-09
+T2  - Proceedings of the 15th International Conference on Recent Advances in Natural Language Processing (RANLP 2025)
+DO  - 10.26615/978-954-452-098-4-060
+UR  - https://aclanthology.org/2025.ranlp-1.60/
+KW  - FemPrompt contextual-update-2026-08-24
+KW  - Search lanes C
+KW  - within_original_window
+N1  - FemPrompt-Candidate-ID: contextual:doi:10.26615/978-954-452-098-4-060
+N1  - Identity-Status: new_version_of_existing_work
+N1  - Version-Status: arXiv v1 2024-04-26, v4 2025-08-22; accepted main-conference proceedings version published 2025-09
+N1  - Peer-Review-Evidence: The arXiv record states Accepted at RANLP-2025 (main conference); ACL Anthology records the proceedings paper.
+N1  - Related-FemPrompt-Work-ID: work:7644e99b-9dd1-545f-af98-ab7fed6643e6
+ER  -
+
+TY  - JOUR
+TI  - Paying the Cognitive Debt: An Experiential Learning Framework for Integrating AI in Social Work Education
+AU  - Keith J. Watts
+PY  - 2025
+DA  - 2025-10-02
+T2  - Education Sciences 15(10), 1304
+DO  - 10.3390/educsci15101304
+UR  - https://www.mdpi.com/2227-7102/15/10/1304
+KW  - FemPrompt contextual-update-2026-08-24
+KW  - Search lanes B
+KW  - within_original_window
+N1  - FemPrompt-Candidate-ID: contextual:doi:10.3390/educsci15101304
+N1  - Identity-Status: new_work
+N1  - Version-Status: version_of_record
+N1  - Peer-Review-Evidence: {"status":"peer_reviewed","received":"2025-07-24","revised":"2025-09-23","accepted":"2025-09-26","evidence_url":"https://www.mdpi.com/2227-7102/15/10/1304"}
+ER  -
+
+TY  - CHAP
+TI  - Prompt Engineering for Social Workers
+AU  - Moon Sun Song
+AU  - Othelia E. Lee
+PY  - 2026
+DA  - 2026-08-12
+T2  - Social Work Practice and Artificial Intelligence for the Common Good (Routledge)
+DO  - 10.4324/9781003755081-10
+UR  - https://doi.org/10.4324/9781003755081-10
+KW  - FemPrompt contextual-update-2026-08-24
+KW  - Search lanes A
+KW  - after_original_window
+N1  - FemPrompt-Candidate-ID: contextual:doi:10.4324/9781003755081-10
+N1  - Identity-Status: new_work
+N1  - Version-Status: version_of_record
+N1  - Peer-Review-Evidence: {"status":"not_established","basis":"Routledge weist das Kapitel und die Kapitel-DOI aus; eine kapitelspezifische Begutachtung ist auf der Landingpage nicht belegt.","evidence_url":"https://doi.org/10.4324/9781003755081-10"}
+ER  -
+
+TY  - JOUR
+TI  - Mitigating Anchoring Bias When Using AI in Social Work Research: Responsible Conduct of AI-Assisted Research
+AU  - Allan Barsky
+PY  - 2025
+DA  - 2025-07-30
+T2  - International Journal of Social Work Values and Ethics 22(1)
+DO  - 10.55521/10-022-106
+UR  - https://jswve.org/volume-22/issue-1/item-06/
+KW  - FemPrompt contextual-update-2026-08-24
+KW  - Search lanes A
+KW  - within_original_window
+N1  - FemPrompt-Candidate-ID: contextual:doi:10.55521/10-022-106
+N1  - Identity-Status: new_work
+N1  - Version-Status: version_of_record
+N1  - Peer-Review-Evidence: {"status":"peer_reviewed","basis":"Die Journal-Landingpage bezeichnet die Zeitschrift als peer-reviewed und stellt den veröffentlichten Artikel bereit.","evidence_url":"https://jswve.org/volume-22/issue-1/item-06/"}
+ER  -

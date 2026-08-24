@@ -1,0 +1,4 @@
+Priority,Filename,Status,Confidence,Issues,Review_Reasons
+MEDIUM,BHXDU7VM.md,WARNING,99.3,"Table mismatch: PDF=0, MD=9",table_mismatch
+MEDIUM,P4YQIKJX.md,WARNING,99.6,"Table mismatch: PDF=1, MD=7",table_mismatch
+MEDIUM,A2P8MXMY.md,WARNING,100.0,"Table mismatch: PDF=1, MD=0",table_mismatch

@@ -1,0 +1,571 @@
+{
+  "schema": "femprompt-contextual-search-lane/0.1",
+  "generated_at": "2026-08-24T14:51:34+02:00",
+  "cutoff_date": "2026-08-24",
+  "lane_id": "B",
+  "lane_title": "Feministische KI, Bias, Fairness und Soziale Arbeit",
+  "scope": "Websuche nach Veröffentlichungen von 2025 bis einschließlich 2026-08-24 zu feministischer KI, Gender Bias, Intersektionalität, Diversity und Fairness in generativer KI oder Large Language Models mit möglicher Relevanz für Soziale Arbeit, Sozialberufe oder professionelle Bildung. Primärquellen und getrennte Peer-Review-Nachweise wurden priorisiert.",
+  "queries": [
+    "2026 feminist AI generative AI journal DOI",
+    "2026 intersectional large language models bias DOI",
+    "2026 gender bias large language models journal DOI",
+    "2026 critical AI literacy gender bias journal DOI",
+    "2025 2026 social work generative AI bias journal DOI",
+    "2025 2026 social workers ChatGPT gender bias DOI",
+    "2025 2026 mental health professionals LLM bias gender race DOI",
+    "2025 2026 professional education critical AI literacy bias DOI",
+    "Toward substantive intersectional algorithmic fairness DOI",
+    "2025 2026 feminist large language models peer reviewed DOI",
+    "2025 2026 feminist AI AI literacy journal",
+    "2026 intersectional fairness generative AI journal accepted",
+    "2025 2026 feministische KI Gender Bias generative KI Soziale Arbeit DOI",
+    "2025 2026 KI-Kompetenz Soziale Arbeit ChatGPT Bias",
+    "site:academic.oup.com/bjsw 2026 artificial intelligence bias social work",
+    "site:tandfonline.com/doi 2025 2026 artificial intelligence social work fairness bias ethics",
+    "site:aclanthology.org/2026 intersectional gender bias LLM fairness",
+    "site:link.springer.com/article 2026 feminist intersectional generative AI fairness",
+    "2025 2026 peer reviewed generative AI intersectionality social work education DOI",
+    "2025 2026 generative AI diversity fairness social care journal DOI"
+  ],
+  "deduplication_sources": [
+    "corpus/work_version_registry.json",
+    "corpus/zotero_export.json",
+    "generated/round2-intake-package.json"
+  ],
+  "saturation": {
+    "direct_social_work_literature": "high",
+    "broader_llm_bias_literature": "medium",
+    "basis": "Die letzten beiden Sucherweiterungen lieferten für die unmittelbare Sozialarbeitsrelevanz überwiegend bereits identifizierte Treffer, einen bereits im Corpus vorhandenen Work oder Beiträge mit schwächerem Sozialberufsbezug. Die breitere technische LLM-Bias-Literatur wächst weiter und weist meist nur indirekte Berufsfeldrelevanz auf."
+  },
+  "candidates": [
+    {
+      "tier": "A",
+      "title": "Making Accurate Judgements in Child Welfare: Comparing ChatGPT With Qualified Social Workers",
+      "authors": [
+        "David Wilkins",
+        "Verity Bennett"
+      ],
+      "publication_date": "2025-06-02",
+      "publication_type": "journal_article",
+      "venue": "Child & Family Social Work 31(2), 703-712",
+      "doi": "10.1111/cfs.13304",
+      "other_identifiers": {},
+      "version_status": "version_of_record",
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "received": "2024-07-19",
+        "revised": "2025-01-22",
+        "accepted": "2025-04-11",
+        "evidence_url": "https://orca.cardiff.ac.uk/id/eprint/178748/1/cfs.13304.pdf"
+      },
+      "open_access": true,
+      "fulltext_url": "https://orca.cardiff.ac.uk/id/eprint/178748/1/cfs.13304.pdf",
+      "landing_url": "https://orca.cardiff.ac.uk/id/eprint/178748/",
+      "eligibility_technical": "Empirischer Vergleich von ChatGPT mit 581 qualifizierten Fachkräften anhand von zwölf Kinderschutzfällen.",
+      "eligibility_social": "Unmittelbare Kinder- und Jugendhilferelevanz; Bias, professionelles Urteil sowie rechtliche, ethische und soziale Kontextsensitivität werden behandelt.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "Online veröffentlicht am 2. Juni 2025; Heftpublikation Mai 2026.",
+        "CC BY 4.0.",
+        "Crossref schreibt den Familiennamen der zweiten Autorin als Benett; Verlags-PDF, ORCID und Cardiff-Repositorium belegen Bennett."
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "The (Un)Fair Algorithm: Socio-Technical Ethics Work for Artificial Intelligence in Social Work",
+      "authors": [
+        "Ida Schrøder",
+        "Marie Leth Meilvang",
+        "Matilde Høybye-Mortensen"
+      ],
+      "publication_date": "2026-02-18",
+      "publication_type": "research_article",
+      "venue": "Ethics and Social Welfare 20(3), 409-424",
+      "doi": "10.1080/17496535.2026.2619945",
+      "other_identifiers": {},
+      "version_status": "version_of_record",
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "received": "2025-03-19",
+        "accepted": "2026-01-16",
+        "evidence_url": "https://www.tandfonline.com/doi/full/10.1080/17496535.2026.2619945"
+      },
+      "open_access": true,
+      "fulltext_url": "https://www.tandfonline.com/doi/pdf/10.1080/17496535.2026.2619945",
+      "landing_url": "https://www.tandfonline.com/doi/full/10.1080/17496535.2026.2619945",
+      "eligibility_technical": "Organisatorische Ethnografie zur Entwicklung eines KI-Beratungsassistenten; im Projekt wurde später ein kommerzielles Sprachmodell eingesetzt.",
+      "eligibility_social": "Der Assistent unterstützt Beratende in schriftlichen Gesprächen mit hilfesuchenden Kindern; Fairness und Diskriminierung nach Geschlecht, Alter, Race und Religion werden explizit untersucht.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "CC BY-NC-ND 4.0.",
+        "Das institutionelle Repositorium UC Viden klassifiziert den Beitrag zusätzlich als peer-reviewed research article."
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Artificial intelligence: a neoliberal tool to better manage social inequalities?",
+      "authors": [
+        "Paul Michael Garrett"
+      ],
+      "publication_date": "2026-02-03",
+      "publication_type": "research_article",
+      "venue": "European Journal of Social Work 29(5), 1029-1041",
+      "doi": "10.1080/13691457.2025.2607705",
+      "other_identifiers": {},
+      "version_status": "version_of_record",
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "received": "2025-03-15",
+        "accepted": "2025-12-16",
+        "evidence_url": "https://www.tandfonline.com/doi/full/10.1080/13691457.2025.2607705"
+      },
+      "open_access": false,
+      "fulltext_url": "https://www.tandfonline.com/doi/full/10.1080/13691457.2025.2607705",
+      "landing_url": "https://doi.org/10.1080/13691457.2025.2607705",
+      "eligibility_technical": "Kritische Untersuchung von KI, Predictive Analytics und automatisierter Verwaltung in Wohlfahrtssystemen.",
+      "eligibility_social": "Behandelt soziale und ökonomische Ungleichheit, Rationierung sozialer Leistungen, Rassismus, digitale Kolonialität und Kinderfürsorge aus sozialarbeitswissenschaftlicher Perspektive.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "Verlags-HTML war zugänglich; eine offene Creative-Commons-Lizenz ist in Crossref nicht ausgewiesen."
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Towards a framework for digital literacy in social work education in a time of artificial intelligence",
+      "authors": [
+        "Michael Wallengren-Lynch"
+      ],
+      "publication_date": "2026-04-16",
+      "publication_type": "research_article",
+      "venue": "Social Work Education, 1-18",
+      "doi": "10.1080/02615479.2026.2660786",
+      "other_identifiers": {},
+      "version_status": "version_of_record_online_first",
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "received": "2025-02-05",
+        "accepted": "2026-04-07",
+        "evidence_url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2660786"
+      },
+      "open_access": true,
+      "fulltext_url": "https://www.tandfonline.com/doi/pdf/10.1080/02615479.2026.2660786",
+      "landing_url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2660786",
+      "eligibility_technical": "Entwickelt kritische KI- und Digitalkompetenz und nutzt ein Fallbeispiel zu stereotypen KI-generierten Bildern.",
+      "eligibility_social": "Expliziter Rahmen für Sozialarbeitsausbildung auf Basis dekolonialer Theorie, Anti-Rassismus, sozialer Gerechtigkeit und Community-Anbindung.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "CC BY 4.0.",
+        "Online-first veröffentlichte Verlagsfassung."
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Promoting AI literacy in social work education: lessons from an interdisciplinary course for social work students",
+      "authors": [
+        "Joshua Weber",
+        "Lauri Goldkind"
+      ],
+      "publication_date": "2026-02-24",
+      "publication_type": "research_article",
+      "venue": "Social Work Education, 1-17",
+      "doi": "10.1080/02615479.2026.2635471",
+      "other_identifiers": {
+        "repository_doi": "10.26041/fhnw-15616"
+      },
+      "version_status": "version_of_record_online_first",
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "received": "2025-08-13",
+        "accepted": "2026-02-11",
+        "evidence_url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2635471"
+      },
+      "open_access": true,
+      "fulltext_url": "https://irf.fhnw.ch/server/api/core/bitstreams/58e87312-aca1-4b37-9e15-988182c55803/content",
+      "landing_url": "https://irf.fhnw.ch/entities/publication/895bedd9-51aa-41ac-942a-7c2d20210c32",
+      "eligibility_technical": "Empirisch evaluierter Kurs zu generativer KI, Large Language Models, Prompt Engineering und CustomGPTs.",
+      "eligibility_social": "Untersucht Sozialarbeitsstudierende; ethische Navigation schließt Bias, Accountability und Fairness ein und wird um digitale Vulnerabilität und Data Justice ergänzt.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "CC BY-NC-ND 4.0.",
+        "Online-first veröffentlichte Verlagsfassung im FHNW-Repositorium."
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Paying the Cognitive Debt: An Experiential Learning Framework for Integrating AI in Social Work Education",
+      "authors": [
+        "Keith J. Watts"
+      ],
+      "publication_date": "2025-10-02",
+      "publication_type": "journal_article",
+      "venue": "Education Sciences 15(10), 1304",
+      "doi": "10.3390/educsci15101304",
+      "other_identifiers": {},
+      "version_status": "version_of_record",
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "received": "2025-07-24",
+        "revised": "2025-09-23",
+        "accepted": "2025-09-26",
+        "evidence_url": "https://www.mdpi.com/2227-7102/15/10/1304"
+      },
+      "open_access": true,
+      "fulltext_url": "https://www.mdpi.com/2227-7102/15/10/1304/pdf",
+      "landing_url": "https://www.mdpi.com/2227-7102/15/10/1304",
+      "eligibility_technical": "Behandelt GenAI-Kompetenz und erfahrungsbasierte Aufgaben zur kritischen Nutzung generativer Systeme.",
+      "eligibility_social": "Adressiert Sozialarbeitsausbildung, professionelles Urteil, soziale Gerechtigkeit, Bias, ethische Praxis und akademische Integrität.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "CC BY 4.0.",
+        "Offenes Verlags-PDF, XML und EPUB verfügbar."
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "A kind of magic? Artificial intelligence-assisted recording: developing principles for an AI-informed social work curriculum",
+      "authors": [
+        "Richard Ingram"
+      ],
+      "publication_date": "2026-05-11",
+      "publication_type": "research_article",
+      "venue": "Social Work Education, 1-18",
+      "doi": "10.1080/02615479.2026.2669634",
+      "other_identifiers": {},
+      "version_status": "version_of_record_online_first",
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "received": "2026-03-19",
+        "accepted": "2026-04-22",
+        "evidence_url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2669634"
+      },
+      "open_access": true,
+      "fulltext_url": "https://www.tandfonline.com/doi/pdf/10.1080/02615479.2026.2669634",
+      "landing_url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2669634",
+      "eligibility_technical": "Evaluiert KI-gestützte Dokumentation in einer schottischen Kommunalverwaltung anhand der Erfahrungen von 152 Praktikerinnen und Praktikern.",
+      "eligibility_social": "Leitet Prinzipien für die Sozialarbeitsausbildung ab und behandelt unterschiedliche Wirkungen auf neurodivergente Fachkräfte und Studierende sowie Equity und Inclusion.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "CC BY-NC-ND 4.0.",
+        "Online-first veröffentlichte Verlagsfassung."
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Are future social workers ready for AI? Fears, barriers, and learning needs in higher education",
+      "authors": [
+        "Sacramento Pinazo-Hernandis",
+        "Nuria Carcavilla-González"
+      ],
+      "publication_date": "2026-02-23",
+      "publication_type": "research_article",
+      "venue": "Social Work Education, 1-15",
+      "doi": "10.1080/02615479.2026.2631708",
+      "other_identifiers": {},
+      "version_status": "version_of_record_online_first",
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "received": "2025-07-18",
+        "accepted": "2026-02-02",
+        "evidence_url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2631708"
+      },
+      "open_access": true,
+      "fulltext_url": "https://www.tandfonline.com/doi/pdf/10.1080/02615479.2026.2631708",
+      "landing_url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2631708",
+      "eligibility_technical": "Empirische Untersuchung der KI-Kompetenz und Nutzungsvorstellungen von 42 Sozialarbeitsstudierenden; ChatGPT-basierte Lernformen werden einbezogen.",
+      "eligibility_social": "Behandelt professionelle Identität, ethische und relationale Kompetenz, algorithmischen Bias und Auswirkungen auf vulnerable Gruppen.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "CC BY-NC-ND 4.0.",
+        "Online-first veröffentlichte Verlagsfassung."
+      ]
+    },
+    {
+      "tier": "B",
+      "title": "‘Magic moments’: AI and the ‘disappearance’ of social work ethics?",
+      "authors": [
+        "Paul Michael Garrett"
+      ],
+      "publication_date": "2025-10-30",
+      "publication_type": "journal_article",
+      "venue": "The British Journal of Social Work 56(1), 377-395",
+      "doi": "10.1093/bjsw/bcaf230",
+      "other_identifiers": {},
+      "version_status": "version_of_record",
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "accepted": "2025-09-25",
+        "evidence_url": "https://academic.oup.com/bjsw/article/56/1/377/8306959"
+      },
+      "open_access": true,
+      "fulltext_url": "https://academic.oup.com/bjsw/article-pdf/56/1/377/65042924/bcaf230.pdf",
+      "landing_url": "https://academic.oup.com/bjsw/article/56/1/377/8306959",
+      "eligibility_technical": "Analysiert den Einsatz von KI in Sozialarbeitspraktiken einschließlich KI-gestützter Aufzeichnung und Assistenz.",
+      "eligibility_social": "Behandelt Vertraulichkeit, Selbstbestimmung, Beteiligung, Ganzheitlichkeit und die ethischen Grundlagen Sozialer Arbeit.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "CC BY 4.0.",
+        "Tier B wegen starker inhaltlicher Überschneidung mit den Tier-A-Beiträgen von Schrøder et al. und Garrett."
+      ]
+    },
+    {
+      "tier": "B",
+      "title": "Toward substantive intersectional algorithmic fairness: desiderata for a feminist approach",
+      "authors": [
+        "Marie Mirsch",
+        "Laila Wegner",
+        "Jonas Strube",
+        "Carmen Leicht-Scholten"
+      ],
+      "publication_date": "2026-01-08",
+      "publication_type": "original_research",
+      "venue": "AI and Ethics 6, article 90",
+      "doi": "10.1007/s43681-025-00926-y",
+      "other_identifiers": {},
+      "version_status": "version_of_record",
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "received": "2025-08-25",
+        "accepted": "2025-11-24",
+        "evidence_url": "https://link.springer.com/article/10.1007/s43681-025-00926-y"
+      },
+      "open_access": true,
+      "fulltext_url": "https://link.springer.com/content/pdf/10.1007/s43681-025-00926-y.pdf",
+      "landing_url": "https://link.springer.com/article/10.1007/s43681-025-00926-y",
+      "eligibility_technical": "Entwickelt zehn Desiderata für eine substanzielle intersektionale Bewertung, Gestaltung und Nicht-Einführung algorithmischer Systeme.",
+      "eligibility_social": "Verbindet intersektionale feministische Theorie mit struktureller Diskriminierung und den Erfahrungen mehrfach marginalisierter Gemeinschaften.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "CC BY 4.0.",
+        "Tier B wegen nur transferierter Sozialarbeitsrelevanz und eines breiten, nicht GenAI-spezifischen Algorithmusbegriffs."
+      ]
+    },
+    {
+      "tier": "B",
+      "title": "Gender Representation in Large Language Models: A Cross-Linguistic and Cross-Model Analysis",
+      "authors": [
+        "Aleksandra Urman",
+        "Emese Domahidi",
+        "Johannes B. Gruber",
+        "Ana Jovančević",
+        "Michaela Maier",
+        "Dren Gërguri",
+        "Jaromír Mazak",
+        "Mariken A. C. G. van der Velden"
+      ],
+      "publication_date": "2026-05-21",
+      "publication_type": "journal_article",
+      "venue": "Computational Communication Research 8(2), 1-47",
+      "doi": "10.5117/CCR2026.2.11.URMA",
+      "other_identifiers": {},
+      "version_status": "version_of_record",
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "received": "2025-05-15",
+        "accepted": "2026-03-12",
+        "evidence_url": "https://www.aup-online.com/content/journals/10.5117/CCR2026.2.11.URMA"
+      },
+      "open_access": true,
+      "fulltext_url": "https://www.aup-online.com/content/journals/10.5117/CCR2026.2.11.URMA?crawler=true&mimetype=application/pdf",
+      "landing_url": "https://www.aup-online.com/content/journals/10.5117/CCR2026.2.11.URMA",
+      "eligibility_technical": "Vergleicht Gender-Repräsentationen in 24 offenen Large Language Models über sechs Sprachen hinweg und berücksichtigt nichtbinäre Optionen sowie Stereotypdimensionen.",
+      "eligibility_social": "Untersucht Gender, Diversität, Repräsentation und Stereotypisierung.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "CC BY 4.0.",
+        "Online-Veröffentlichung 21. Mai 2026; Heftdatum 31. Juli 2026.",
+        "Tier B, weil keine spezifische Sozialberufs- oder Ausbildungskomponente vorliegt."
+      ]
+    },
+    {
+      "tier": "B",
+      "title": "Explaining Resistance to Algorithmic Bias: The Impact of Feminist Consciousness and AI Literacy on Protest Participation in South Korea",
+      "authors": [
+        "Jung In Jo"
+      ],
+      "publication_date": "2025-09-24",
+      "publication_type": "original_article",
+      "venue": "Asian Women 41(3), 145-160",
+      "doi": "10.64446/aw.2025.9.41.3.145",
+      "other_identifiers": {},
+      "version_status": "version_of_record",
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "received": "2025-05-19",
+        "revised": "2025-09-04",
+        "accepted": "2025-09-22",
+        "evidence_url": "https://e-asianwomen.org/DOIx.php?id=10.64446%2Faw.2025.9.41.3.145"
+      },
+      "open_access": true,
+      "fulltext_url": "https://e-asianwomen.org/Synapse/Data/PDFData/0274AW/aw-41-3-145.pdf",
+      "landing_url": "https://e-asianwomen.org/DOIx.php?id=10.64446%2Faw.2025.9.41.3.145",
+      "eligibility_technical": "Untersucht den Zusammenhang von KI-Kompetenz mit der Wahrnehmung und Bekämpfung algorithmischer Verzerrung.",
+      "eligibility_social": "Feministisches Bewusstsein und Widerstand gegen algorithmische Diskriminierung stehen im Zentrum einer Befragung von 1000 Personen in Südkorea.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "CC BY-NC.",
+        "Tier B, weil professionelle Bildung und Soziale Arbeit nicht spezifisch untersucht werden."
+      ]
+    },
+    {
+      "tier": "B",
+      "title": "AI-generated visual disinformation and digital equity: an intersectional analysis of algorithmic vulnerabilities among marginalised communities",
+      "authors": [
+        "Vinanda Cinta Cendekia Putri"
+      ],
+      "publication_date": "2026-02-26",
+      "publication_type": "mini_review",
+      "venue": "Frontiers in Human Dynamics 8, 1791655",
+      "doi": "10.3389/fhumd.2026.1791655",
+      "other_identifiers": {},
+      "version_status": "version_of_record",
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "received": "2026-01-20",
+        "revised": "2026-02-07",
+        "accepted": "2026-02-18",
+        "reviewers_named": [
+          "Janneth Trejo-Quintana"
+        ],
+        "evidence_url": "https://www.frontiersin.org/journals/human-dynamics/articles/10.3389/fhumd.2026.1791655/full"
+      },
+      "open_access": true,
+      "fulltext_url": "https://www.frontiersin.org/journals/human-dynamics/articles/10.3389/fhumd.2026.1791655/pdf",
+      "landing_url": "https://www.frontiersin.org/journals/human-dynamics/articles/10.3389/fhumd.2026.1791655/full",
+      "eligibility_technical": "Analysiert KI-generierte und KI-verstärkte visuelle Desinformation, algorithmische Verstärkung und medienbezogene KI-Kompetenz.",
+      "eligibility_social": "Nutzt Intersektionalität zur Analyse von Race, Ethnizität, sozioökonomischem Status, Geografie und digitaler Kompetenz marginalisierter Gemeinschaften.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "CC BY 4.0.",
+        "Tier B, weil der Mini Review keinen spezifischen Sozialberufsbezug aufweist."
+      ]
+    },
+    {
+      "tier": "B",
+      "title": "Can AI reduce gender bias? The case of AI-generated audio conversations in Google's NotebookLM",
+      "authors": [
+        "Milad Malekzadeh"
+      ],
+      "publication_date": "2026-08-08",
+      "publication_type": "journal_article",
+      "venue": "Computers in Human Behavior Reports 23, 101246",
+      "doi": "10.1016/j.chbr.2026.101246",
+      "other_identifiers": {
+        "pii": "S2451958826003209"
+      },
+      "version_status": "version_of_record",
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "basis": "Institutional research portal classifies the publication as a refereed journal article.",
+        "evidence_url": "https://researchportal.helsinki.fi/en/publications/can-ai-reduce-gender-bias-the-case-of-ai-generated-audio-conversa/"
+      },
+      "open_access": true,
+      "fulltext_url": "https://www.sciencedirect.com/science/article/pii/S2451958826003209",
+      "landing_url": "https://doi.org/10.1016/j.chbr.2026.101246",
+      "eligibility_technical": "Auditiert 100 mit NotebookLM erzeugte Audiozusammenfassungen hinsichtlich Sprechzeit, epistemischer Autorität und kommunikativer Rollen.",
+      "eligibility_social": "Untersucht gendercodierte Repräsentation, Autorität und Fairness in der professionellen und wissenschaftlichen Wissenskommunikation.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "CC BY 4.0.",
+        "Tier B, weil die Sozialberufsrelevanz nur über professionelle Wissenskommunikation hergestellt werden kann."
+      ]
+    },
+    {
+      "tier": "B",
+      "title": "Implicit Gender, Racial, and Ethnic Biases in Large Language Models: An Audit Study of Automated Psychiatric Diagnoses",
+      "authors": [
+        "Sachin R. Pendse",
+        "Mini Jain",
+        "Neha Kumar",
+        "Munmun De Choudhury"
+      ],
+      "publication_date": "2026-03-06",
+      "publication_type": "original_article",
+      "venue": "Mayo Clinic Proceedings: Digital Health 4(2), 100344",
+      "doi": "10.1016/j.mcpdig.2026.100344",
+      "other_identifiers": {
+        "pii": "S2949-7612(26)00010-6",
+        "pmcid": "PMC13217584",
+        "pmid": "42221464"
+      },
+      "version_status": "version_of_record",
+      "peer_review_evidence": {
+        "status": "not_separately_confirmed",
+        "basis": "Elsevier and NLM classify the work as an Original Article in Mayo Clinic Proceedings: Digital Health; the accessible article XML does not expose received or accepted dates.",
+        "evidence_url": "https://www.sciencedirect.com/science/article/pii/S2949761226000106"
+      },
+      "open_access": true,
+      "fulltext_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13217584/",
+      "landing_url": "https://doi.org/10.1016/j.mcpdig.2026.100344",
+      "eligibility_technical": "Großes Audit von sechs allgemeinen und medizinischen Large Language Models anhand von 97 psychiatrischen Trainingsfällen und 39 demografischen Gruppen.",
+      "eligibility_social": "Untersucht implizite Gender-, Race- und Ethnizitätsverzerrungen in psychiatrischer Diagnostik und damit verbundene Fairnessrisiken in der psychosozialen Versorgung.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "CC BY-NC-ND 4.0.",
+        "Tier B wegen indirekter Sozialarbeitsrelevanz und fehlender separat zugänglicher Annahme- oder Review-Historie."
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "title": "Artificial Intelligence (AI) Literacy for Social Work: Implications for Core Competencies",
+      "identifier": "10.1086/735187",
+      "reason": "Bereits vorhandener Work; DOI und Titel sind in corpus/work_version_registry.json und corpus/zotero_export.json erfasst.",
+      "evidence_url": "https://www.journals.uchicago.edu/doi/full/10.1086/735187"
+    },
+    {
+      "title": "ArXiv-only intersectional and LLM-bias candidates",
+      "identifiers": [
+        "10.48550/arXiv.2604.11609",
+        "10.48550/arXiv.2604.00011",
+        "10.48550/arXiv.2606.18649",
+        "10.48550/arXiv.2603.11736"
+      ],
+      "reason": "Preprint-only; kein belastbarer Peer-Review-Nachweis und keine spätere veröffentlichte Fassung im Suchlauf identifiziert."
+    },
+    {
+      "title": "Human-centered AI for teacher educators: Designing professional learning for critical AI literacy",
+      "identifier": "10.1016/j.caeo.2026.100399",
+      "reason": "Heftdatum Dezember 2026; ein belastbares VOR-Datum bis einschließlich 2026-08-24 war nicht nachweisbar.",
+      "evidence_url": "https://www.sciencedirect.com/science/article/pii/S2666557326000704"
+    },
+    {
+      "title": "When writing students design AI chatbots: Integrating design thinking as a critical AI literacy practice",
+      "identifier": "10.1016/j.compcom.2026.103022",
+      "reason": "Heftdatum September 2026; ein belastbares VOR-Datum bis einschließlich 2026-08-24 war nicht nachweisbar.",
+      "evidence_url": "https://www.sciencedirect.com/science/article/pii/S8755461526000435"
+    },
+    {
+      "title": "A learning tool or hazard? Concerns related to AI misuse in social work courses",
+      "identifier": "10.1080/02615479.2025.2508510",
+      "reason": "Direkte Sozialarbeitsrelevanz, aber Schwerpunkt auf akademischem Fehlgebrauch und Quellenproblemen statt Bias, Fairness, Diversität oder Intersektionalität.",
+      "evidence_url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2025.2508510"
+    },
+    {
+      "title": "From resistance to integration: AI in social work education",
+      "identifier": "10.1080/02615479.2026.2638396",
+      "reason": "Schwerpunkt auf Adoption, Einstellungen und Barrieren; geringere eigenständige Bias-, Fairness- oder Diversity-Perspektive als die Tier-A-Treffer.",
+      "evidence_url": "https://www.tandfonline.com/doi/abs/10.1080/02615479.2026.2638396"
+    },
+    {
+      "title": "A reflection on social work knowledge in the era of AI",
+      "identifier": "10.1093/bjsw/bcag092",
+      "reason": "Kurzer Reflexionsbeitrag mit geringerem eigenständigem Bias-, Fairness- oder Diversity-Gehalt als die priorisierten Treffer.",
+      "evidence_url": "https://academic.oup.com/bjsw/article/56/4/1391/8729436"
+    }
+  ]
+}

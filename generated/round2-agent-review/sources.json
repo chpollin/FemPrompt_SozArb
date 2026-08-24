@@ -1,0 +1,1008 @@
+{
+  "schema": "femprompt-round2-source-review/0.1",
+  "input_sha256": "512394c2b87800af96b3ebc8f5f5133c2628b43abf36824a9b27571d1ae1f5f0",
+  "records": [
+    {
+      "input_work_id": "doi:10.1201/9781003585527-19",
+      "source_status": "abstract_only",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": [
+              "10.1201/9781003585527-19"
+            ]
+          },
+          "landing_url": "https://www.taylorfrancis.com/chapters/edit/10.1201/9781003585527-19/ethical-ai-feminist-lens-eva-gengler-marco-wedel",
+          "access_status": "restricted",
+          "source_type": "publisher"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.taylorfrancis.com/chapters/edit/10.1201/9781003585527-19/ethical-ai-feminist-lens-eva-gengler-marco-wedel",
+          "source_type": "publisher",
+          "supports": [
+            "bibliographic_identity",
+            "abstract_available",
+            "publisher_fulltext_restricted"
+          ]
+        }
+      ],
+      "flags": [
+        "no_open_fulltext_found"
+      ]
+    },
+    {
+      "input_work_id": "doi:10.1007/978-3-031-80119-8_6",
+      "source_status": "abstract_only",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": [
+              "10.1007/978-3-031-80119-8_6"
+            ]
+          },
+          "landing_url": "https://link.springer.com/chapter/10.1007/978-3-031-80119-8_6",
+          "access_status": "restricted",
+          "source_type": "publisher"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://link.springer.com/chapter/10.1007/978-3-031-80119-8_6",
+          "source_type": "publisher",
+          "supports": [
+            "bibliographic_identity",
+            "abstract_available",
+            "subscription_preview_and_purchase_access"
+          ]
+        }
+      ],
+      "flags": [
+        "no_open_fulltext_found"
+      ]
+    },
+    {
+      "input_work_id": "doi:10.1007/s43681-026-01161-9",
+      "source_status": "fulltext_available",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": [
+              "10.1007/s43681-026-01161-9"
+            ]
+          },
+          "landing_url": "https://link.springer.com/article/10.1007/s43681-026-01161-9",
+          "fulltext_url": "https://link.springer.com/content/pdf/10.1007/s43681-026-01161-9.pdf",
+          "access_status": "open_access",
+          "license": "CC BY 4.0",
+          "source_type": "publisher"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://link.springer.com/article/10.1007/s43681-026-01161-9",
+          "source_type": "publisher",
+          "supports": [
+            "bibliographic_identity",
+            "open_access_status",
+            "cc_by_4_0_license"
+          ]
+        },
+        {
+          "url": "https://link.springer.com/content/pdf/10.1007/s43681-026-01161-9.pdf",
+          "source_type": "publisher",
+          "supports": [
+            "public_fulltext_pdf"
+          ]
+        }
+      ],
+      "flags": []
+    },
+    {
+      "input_work_id": "doi:10.1145/3715275.3732210",
+      "source_status": "fulltext_available",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": [
+              "10.1145/3715275.3732210"
+            ]
+          },
+          "landing_url": "https://dl.acm.org/doi/10.1145/3715275.3732210",
+          "fulltext_url": "https://facctconference.org/static/docs/facct2025-206archivalpdfs/facct2025-final2348-acmpaginated.pdf",
+          "access_status": "open_access",
+          "source_type": "other"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://dl.acm.org/doi/10.1145/3715275.3732210",
+          "source_type": "publisher",
+          "supports": [
+            "publisher_bibliographic_identity"
+          ]
+        },
+        {
+          "url": "https://facctconference.org/static/docs/facct2025-206archivalpdfs/facct2025-final2348-acmpaginated.pdf",
+          "source_type": "other",
+          "supports": [
+            "official_conference_fulltext_pdf",
+            "doi_and_title_match"
+          ]
+        }
+      ],
+      "flags": [
+        "official_conference_copy_has_no_explicit_reuse_license",
+        "local_fulltext_manifest_confirms_existing_clean_source"
+      ]
+    },
+    {
+      "input_work_id": "doi:10.21240/zfhe/sh-ki-1/09",
+      "source_status": "fulltext_available",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": [
+              "10.21240/zfhe/sh-ki-1/09"
+            ]
+          },
+          "landing_url": "https://www.zfhe.at/index.php/zfhe/article/view/2086",
+          "fulltext_url": "https://www.zfhe.at/index.php/zfhe/article/download/2086/1324",
+          "access_status": "open_access",
+          "license": "CC BY 4.0",
+          "source_type": "publisher"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.zfhe.at/index.php/zfhe/article/view/2086",
+          "source_type": "publisher",
+          "supports": [
+            "bibliographic_identity",
+            "citation_pdf_url",
+            "cc_by_4_0_license"
+          ]
+        },
+        {
+          "url": "https://www.zfhe.at/index.php/zfhe/article/download/2086/1324",
+          "source_type": "publisher",
+          "supports": [
+            "public_fulltext_pdf"
+          ]
+        }
+      ],
+      "flags": []
+    },
+    {
+      "input_work_id": "doi:10.1038/s41467-025-68004-9",
+      "source_status": "fulltext_available",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": [
+              "10.1038/s41467-025-68004-9"
+            ]
+          },
+          "landing_url": "https://www.nature.com/articles/s41467-025-68004-9",
+          "fulltext_url": "https://www.nature.com/articles/s41467-025-68004-9.pdf",
+          "access_status": "open_access",
+          "license": "CC BY-NC-ND 4.0",
+          "source_type": "publisher"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.nature.com/articles/s41467-025-68004-9",
+          "source_type": "publisher",
+          "supports": [
+            "bibliographic_identity",
+            "open_access_status",
+            "cc_by_nc_nd_4_0_license"
+          ]
+        },
+        {
+          "url": "https://www.nature.com/articles/s41467-025-68004-9.pdf",
+          "source_type": "publisher",
+          "supports": [
+            "public_fulltext_pdf"
+          ]
+        }
+      ],
+      "flags": []
+    },
+    {
+      "input_work_id": "doi:10.3389/fsoc.2025.1602947",
+      "source_status": "fulltext_available",
+      "versions": [
+        {
+          "version_type": "corrected_version_of_record",
+          "identifiers": {
+            "doi": [
+              "10.3389/fsoc.2025.1602947"
+            ]
+          },
+          "landing_url": "https://www.frontiersin.org/journals/sociology/articles/10.3389/fsoc.2025.1602947/full",
+          "fulltext_url": "https://www.frontiersin.org/journals/sociology/articles/10.3389/fsoc.2025.1602947/pdf",
+          "access_status": "open_access",
+          "license": "CC BY 4.0",
+          "source_type": "publisher"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.frontiersin.org/journals/sociology/articles/10.3389/fsoc.2025.1602947/full",
+          "source_type": "publisher",
+          "supports": [
+            "bibliographic_identity",
+            "public_fulltext_html",
+            "cc_by_4_0_license",
+            "correction_history"
+          ]
+        },
+        {
+          "url": "https://www.frontiersin.org/journals/sociology/articles/10.3389/fsoc.2025.1602947/pdf",
+          "source_type": "publisher",
+          "supports": [
+            "public_fulltext_pdf"
+          ]
+        }
+      ],
+      "flags": [
+        "publisher_correction_history_present"
+      ]
+    },
+    {
+      "input_work_id": "doi:10.1007/s00146-025-02556-8",
+      "source_status": "fulltext_available",
+      "versions": [
+        {
+          "version_type": "corrected_version_of_record",
+          "identifiers": {
+            "doi": [
+              "10.1007/s00146-025-02556-8"
+            ]
+          },
+          "landing_url": "https://link.springer.com/article/10.1007/s00146-025-02556-8",
+          "fulltext_url": "https://link.springer.com/content/pdf/10.1007/s00146-025-02556-8.pdf",
+          "access_status": "open_access",
+          "license": "CC BY 4.0",
+          "source_type": "publisher"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://link.springer.com/article/10.1007/s00146-025-02556-8",
+          "source_type": "publisher",
+          "supports": [
+            "bibliographic_identity",
+            "open_access_status",
+            "cc_by_4_0_license",
+            "correction_notice"
+          ]
+        },
+        {
+          "url": "https://link.springer.com/content/pdf/10.1007/s00146-025-02556-8.pdf",
+          "source_type": "publisher",
+          "supports": [
+            "public_fulltext_pdf"
+          ]
+        }
+      ],
+      "flags": [
+        "publisher_correction_attached"
+      ]
+    },
+    {
+      "input_work_id": "doi:10.1145/3769994.3770037",
+      "source_status": "fulltext_available",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": [
+              "10.1145/3769994.3770037"
+            ]
+          },
+          "landing_url": "https://dl.acm.org/doi/10.1145/3769994.3770037",
+          "access_status": "unknown",
+          "source_type": "publisher"
+        },
+        {
+          "version_type": "preprint",
+          "identifiers": {
+            "arxiv": [
+              "2510.06306"
+            ],
+            "doi": [
+              "10.1145/3769994.3770037"
+            ]
+          },
+          "landing_url": "https://arxiv.org/abs/2510.06306",
+          "fulltext_url": "https://arxiv.org/pdf/2510.06306",
+          "access_status": "open_access",
+          "source_type": "preprint_server"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://dl.acm.org/doi/10.1145/3769994.3770037",
+          "source_type": "publisher",
+          "supports": [
+            "publisher_bibliographic_identity"
+          ]
+        },
+        {
+          "url": "https://arxiv.org/abs/2510.06306",
+          "source_type": "preprint_server",
+          "supports": [
+            "preprint_identity",
+            "corresponding_publisher_doi",
+            "public_fulltext_link"
+          ]
+        },
+        {
+          "url": "https://arxiv.org/pdf/2510.06306",
+          "source_type": "preprint_server",
+          "supports": [
+            "public_preprint_pdf"
+          ]
+        }
+      ],
+      "flags": [
+        "publisher_fulltext_access_not_established",
+        "open_preprint_available"
+      ]
+    },
+    {
+      "input_work_id": "doi:10.3390/educsci15091143",
+      "source_status": "fulltext_available",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": [
+              "10.3390/educsci15091143"
+            ]
+          },
+          "landing_url": "https://www.mdpi.com/2227-7102/15/9/1143",
+          "fulltext_url": "https://www.mdpi.com/2227-7102/15/9/1143/pdf",
+          "access_status": "open_access",
+          "license": "CC BY 4.0",
+          "source_type": "publisher"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.mdpi.com/2227-7102/15/9/1143",
+          "source_type": "publisher",
+          "supports": [
+            "bibliographic_identity",
+            "public_fulltext_html",
+            "open_access_status"
+          ]
+        },
+        {
+          "url": "https://www.mdpi.com/2227-7102/15/9/1143/pdf",
+          "source_type": "publisher",
+          "supports": [
+            "public_fulltext_pdf",
+            "cc_by_4_0_license"
+          ]
+        }
+      ],
+      "flags": []
+    },
+    {
+      "input_work_id": "doi:10.1007/978-3-032-07830-8_12",
+      "source_status": "abstract_only",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": [
+              "10.1007/978-3-032-07830-8_12"
+            ]
+          },
+          "landing_url": "https://link.springer.com/chapter/10.1007/978-3-032-07830-8_12",
+          "access_status": "restricted",
+          "source_type": "publisher"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://link.springer.com/chapter/10.1007/978-3-032-07830-8_12",
+          "source_type": "publisher",
+          "supports": [
+            "bibliographic_identity",
+            "abstract_available",
+            "subscription_preview_and_purchase_access"
+          ]
+        }
+      ],
+      "flags": [
+        "no_open_fulltext_found"
+      ]
+    },
+    {
+      "input_work_id": "doi:10.1177/13505068261419933",
+      "source_status": "fulltext_available",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": [
+              "10.1177/13505068261419933"
+            ]
+          },
+          "landing_url": "https://journals.sagepub.com/doi/10.1177/13505068261419933",
+          "fulltext_url": "https://journals.sagepub.com/doi/pdf/10.1177/13505068261419933?download=true",
+          "access_status": "open_access",
+          "source_type": "publisher"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://journals.sagepub.com/doi/10.1177/13505068261419933",
+          "source_type": "publisher",
+          "supports": [
+            "bibliographic_identity",
+            "free_access_label",
+            "public_fulltext_html"
+          ]
+        },
+        {
+          "url": "https://journals.sagepub.com/doi/pdf/10.1177/13505068261419933?download=true",
+          "source_type": "publisher",
+          "supports": [
+            "public_fulltext_pdf",
+            "standard_permissions_notice_without_creative_commons_license"
+          ]
+        }
+      ],
+      "flags": [
+        "public_fulltext_without_explicit_open_license"
+      ]
+    },
+    {
+      "input_work_id": "doi:10.48550/arxiv.2604.20677",
+      "source_status": "fulltext_available",
+      "versions": [
+        {
+          "version_type": "preprint",
+          "identifiers": {
+            "doi": [
+              "10.48550/arxiv.2604.20677"
+            ],
+            "arxiv": [
+              "2604.20677"
+            ]
+          },
+          "landing_url": "https://arxiv.org/abs/2604.20677",
+          "fulltext_url": "https://arxiv.org/pdf/2604.20677",
+          "access_status": "open_access",
+          "source_type": "preprint_server"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2604.20677",
+          "source_type": "preprint_server",
+          "supports": [
+            "bibliographic_identity",
+            "public_fulltext_link",
+            "preprint_version"
+          ]
+        },
+        {
+          "url": "https://arxiv.org/pdf/2604.20677",
+          "source_type": "preprint_server",
+          "supports": [
+            "public_preprint_pdf"
+          ]
+        }
+      ],
+      "flags": [
+        "no_publisher_version_identified"
+      ]
+    },
+    {
+      "input_work_id": "doi:10.3828/dap.2026.7",
+      "source_status": "fulltext_available",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": [
+              "10.3828/dap.2026.7"
+            ]
+          },
+          "landing_url": "https://doi.org/10.3828/dap.2026.7",
+          "fulltext_url": "https://www.liverpooluniversitypress.co.uk/doi/pdf/10.3828/dap.2026.7",
+          "access_status": "open_access",
+          "license": "CC BY 4.0",
+          "source_type": "publisher"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://doi.org/10.3828/dap.2026.7",
+          "source_type": "publisher",
+          "supports": [
+            "bibliographic_identity",
+            "public_fulltext_html",
+            "published_open_access_under_cc_by"
+          ]
+        },
+        {
+          "url": "https://www.liverpooluniversitypress.co.uk/doi/pdf/10.3828/dap.2026.7",
+          "source_type": "publisher",
+          "supports": [
+            "version_of_record_pdf"
+          ]
+        }
+      ],
+      "flags": []
+    },
+    {
+      "input_work_id": "doi:10.1080/17439884.2026.2652638",
+      "source_status": "fulltext_available",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": [
+              "10.1080/17439884.2026.2652638"
+            ]
+          },
+          "landing_url": "https://www.tandfonline.com/doi/full/10.1080/17439884.2026.2652638",
+          "fulltext_url": "https://www.tandfonline.com/doi/pdf/10.1080/17439884.2026.2652638",
+          "access_status": "open_access",
+          "license": "CC BY 4.0",
+          "source_type": "publisher"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.tandfonline.com/doi/full/10.1080/17439884.2026.2652638",
+          "source_type": "publisher",
+          "supports": [
+            "bibliographic_identity",
+            "public_fulltext_html",
+            "open_access_status"
+          ]
+        },
+        {
+          "url": "https://www.tandfonline.com/doi/pdf/10.1080/17439884.2026.2652638",
+          "source_type": "publisher",
+          "supports": [
+            "public_fulltext_pdf",
+            "cc_by_4_0_license"
+          ]
+        }
+      ],
+      "flags": []
+    },
+    {
+      "input_work_id": "doi:10.1108/ijssp-02-2026-0125",
+      "source_status": "fulltext_available",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": [
+              "10.1108/ijssp-02-2026-0125"
+            ]
+          },
+          "landing_url": "https://www.emerald.com/insight/content/doi/10.1108/IJSSP-02-2026-0125/full/html",
+          "access_status": "unknown",
+          "source_type": "publisher"
+        },
+        {
+          "version_type": "accepted_manuscript",
+          "identifiers": {
+            "doi": [
+              "10.1108/ijssp-02-2026-0125"
+            ],
+            "repository_id": [
+              "50883"
+            ]
+          },
+          "landing_url": "https://repository.ubaya.ac.id/50883/",
+          "fulltext_url": "https://repository.ubaya.ac.id/50883/1/IJSSP-02-2026-0125_Proof_hi.pdf",
+          "access_status": "open_access",
+          "source_type": "institutional_repository"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.emerald.com/insight/content/doi/10.1108/IJSSP-02-2026-0125/full/html",
+          "source_type": "publisher",
+          "supports": [
+            "publisher_bibliographic_identity"
+          ]
+        },
+        {
+          "url": "https://repository.ubaya.ac.id/50883/",
+          "source_type": "institutional_repository",
+          "supports": [
+            "repository_identity",
+            "accepted_version_label",
+            "public_pdf_link"
+          ]
+        },
+        {
+          "url": "https://repository.ubaya.ac.id/50883/1/IJSSP-02-2026-0125_Proof_hi.pdf",
+          "source_type": "institutional_repository",
+          "supports": [
+            "public_repository_fulltext_pdf"
+          ]
+        }
+      ],
+      "flags": [
+        "repository_labels_accepted_version_but_filename_says_proof",
+        "publisher_fulltext_access_not_established"
+      ]
+    },
+    {
+      "input_work_id": "title:critical literacy in an ai world",
+      "source_status": "abstract_only",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "isbn": [
+              "9781032886985"
+            ]
+          },
+          "landing_url": "https://www.routledge.com/Critical-Literacy-in-an-AI-World/Mills-Gutierrez/p/book/9781032886985",
+          "access_status": "restricted",
+          "source_type": "publisher"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.routledge.com/Critical-Literacy-in-an-AI-World/Mills-Gutierrez/p/book/9781032886985",
+          "source_type": "publisher",
+          "supports": [
+            "book_identity",
+            "publisher_description",
+            "isbn",
+            "commercial_access"
+          ]
+        }
+      ],
+      "flags": [
+        "no_open_fulltext_found",
+        "input_year_2025_but_publisher_lists_2026"
+      ]
+    },
+    {
+      "input_work_id": "title:safety guardrails in large language models and selective refusal bias",
+      "source_status": "ambiguous",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": [
+              "10.18653/v1/2026.findings-acl.550"
+            ],
+            "anthology_id": [
+              "2026.findings-acl.550"
+            ]
+          },
+          "landing_url": "https://aclanthology.org/2026.findings-acl.550/",
+          "fulltext_url": "https://aclanthology.org/2026.findings-acl.550.pdf",
+          "access_status": "open_access",
+          "source_type": "other"
+        },
+        {
+          "version_type": "preprint",
+          "identifiers": {
+            "arxiv": [
+              "2510.27087"
+            ]
+          },
+          "landing_url": "https://arxiv.org/abs/2510.27087",
+          "fulltext_url": "https://arxiv.org/pdf/2510.27087",
+          "access_status": "open_access",
+          "source_type": "preprint_server"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://aclanthology.org/2026.findings-acl.550/",
+          "source_type": "other",
+          "supports": [
+            "candidate_published_work_identity",
+            "candidate_title_characterizing_selective_refusal_bias_in_large_language_models",
+            "candidate_authors_adel_khorramrouz_and_sharon_levy",
+            "public_fulltext_link"
+          ]
+        },
+        {
+          "url": "https://aclanthology.org/2026.findings-acl.550.pdf",
+          "source_type": "other",
+          "supports": [
+            "candidate_public_fulltext_pdf",
+            "candidate_title_and_authors_conflict_with_intake"
+          ]
+        },
+        {
+          "url": "https://arxiv.org/abs/2510.27087",
+          "source_type": "preprint_server",
+          "supports": [
+            "candidate_preprint_identity",
+            "candidate_public_fulltext_link"
+          ]
+        }
+      ],
+      "flags": [
+        "input_title_does_not_match_primary_source",
+        "input_authors_do_not_match_primary_source",
+        "supplied_acl_identifier_points_to_different_work",
+        "candidate_work_requires_identity_adjudication"
+      ]
+    },
+    {
+      "input_work_id": "doi:10.31995/jgv.2026.v17i01",
+      "source_status": "fulltext_available",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": [
+              "10.31995/jgv.2026.v17i01"
+            ]
+          },
+          "landing_url": "https://anubooks.com/view?file=4585&session_id=jgv-vol-xvii-no1-jan-june-2026-272",
+          "fulltext_url": "https://anubooks.com/uploads/session_pdf/178230309029.%20Rashmi%20Singh%20280-291.pdf",
+          "access_status": "open_access",
+          "source_type": "publisher"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://anubooks.com/journal-volume/jgv-vol-xvii-no1-jan-june-2026-272",
+          "source_type": "publisher",
+          "supports": [
+            "issue_identity",
+            "article_title_and_author_listing",
+            "public_article_link"
+          ]
+        },
+        {
+          "url": "https://anubooks.com/view?file=4585&session_id=jgv-vol-xvii-no1-jan-june-2026-272",
+          "source_type": "publisher",
+          "supports": [
+            "article_landing_page",
+            "public_pdf_link"
+          ]
+        },
+        {
+          "url": "https://anubooks.com/uploads/session_pdf/178230309029.%20Rashmi%20Singh%20280-291.pdf",
+          "source_type": "publisher",
+          "supports": [
+            "public_fulltext_pdf"
+          ]
+        }
+      ],
+      "flags": [
+        "doi_resolves_to_issue_level_record",
+        "public_fulltext_without_explicit_open_license"
+      ]
+    },
+    {
+      "input_work_id": "doi:10.1215/2834703x-12095946",
+      "source_status": "abstract_only",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": [
+              "10.1215/2834703x-12095946"
+            ]
+          },
+          "landing_url": "https://read.dukeupress.edu/critical-ai/article/doi/10.1215/2834703X-12095946/406205/The-Politics-of-Prompt-Engineering",
+          "access_status": "unknown",
+          "source_type": "publisher"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://read.dukeupress.edu/critical-ai/article/doi/10.1215/2834703X-12095946/406205/The-Politics-of-Prompt-Engineering",
+          "source_type": "publisher",
+          "supports": [
+            "bibliographic_identity",
+            "publisher_landing_page"
+          ]
+        }
+      ],
+      "flags": [
+        "no_open_fulltext_found",
+        "publisher_access_state_not_machine_verifiable"
+      ]
+    },
+    {
+      "input_work_id": "doi:10.1177/14614448261435197",
+      "source_status": "fulltext_available",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": [
+              "10.1177/14614448261435197"
+            ]
+          },
+          "landing_url": "https://journals.sagepub.com/doi/abs/10.1177/14614448261435197",
+          "fulltext_url": "https://journals.sagepub.com/doi/pdf/10.1177/14614448261435197?download=true",
+          "access_status": "open_access",
+          "source_type": "publisher"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://journals.sagepub.com/doi/abs/10.1177/14614448261435197",
+          "source_type": "publisher",
+          "supports": [
+            "bibliographic_identity",
+            "abstract_available"
+          ]
+        },
+        {
+          "url": "https://journals.sagepub.com/doi/pdf/10.1177/14614448261435197?download=true",
+          "source_type": "publisher",
+          "supports": [
+            "public_fulltext_pdf",
+            "standard_permissions_notice_without_creative_commons_license"
+          ]
+        }
+      ],
+      "flags": [
+        "public_fulltext_without_explicit_open_license"
+      ]
+    },
+    {
+      "input_work_id": "doi:10.1111/ejed.70602",
+      "source_status": "fulltext_available",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": [
+              "10.1111/ejed.70602"
+            ]
+          },
+          "landing_url": "https://onlinelibrary.wiley.com/doi/10.1111/ejed.70602",
+          "fulltext_url": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/ejed.70602",
+          "access_status": "open_access",
+          "license": "CC BY 4.0",
+          "source_type": "publisher"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://onlinelibrary.wiley.com/doi/10.1111/ejed.70602",
+          "source_type": "publisher",
+          "supports": [
+            "bibliographic_identity",
+            "open_access_label",
+            "public_fulltext_html"
+          ]
+        },
+        {
+          "url": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/ejed.70602",
+          "source_type": "publisher",
+          "supports": [
+            "version_of_record_pdf_url",
+            "cc_by_4_0_license"
+          ]
+        }
+      ],
+      "flags": []
+    },
+    {
+      "input_work_id": "doi:10.1080/14680777.2025.2593317",
+      "source_status": "abstract_only",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": [
+              "10.1080/14680777.2025.2593317"
+            ]
+          },
+          "landing_url": "https://www.tandfonline.com/doi/abs/10.1080/14680777.2025.2593317",
+          "access_status": "restricted",
+          "source_type": "publisher"
+        },
+        {
+          "version_type": "accepted_manuscript",
+          "identifiers": {
+            "doi": [
+              "10.1080/14680777.2025.2593317"
+            ],
+            "handle": [
+              "1854/LU-01KF0W9654GEGMWE3FAP5JSAXH"
+            ]
+          },
+          "landing_url": "https://biblio.ugent.be/publication/01KF0W9654GEGMWE3FAP5JSAXH",
+          "access_status": "restricted",
+          "source_type": "institutional_repository"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.tandfonline.com/doi/abs/10.1080/14680777.2025.2593317",
+          "source_type": "publisher",
+          "supports": [
+            "bibliographic_identity",
+            "abstract_available",
+            "publisher_access_restricted"
+          ]
+        },
+        {
+          "url": "https://biblio.ugent.be/publication/01KF0W9654GEGMWE3FAP5JSAXH",
+          "source_type": "institutional_repository",
+          "supports": [
+            "accepted_manuscript_deposit",
+            "ugent_only_until_2026_12_07",
+            "no_license_in_copyright"
+          ]
+        }
+      ],
+      "flags": [
+        "accepted_manuscript_embargoed_until_2026_12_07",
+        "no_currently_open_fulltext_found"
+      ]
+    },
+    {
+      "input_work_id": "doi:10.2991/978-94-6239-618-0_20",
+      "source_status": "fulltext_available",
+      "versions": [
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": [
+              "10.2991/978-94-6239-618-0_20"
+            ],
+            "isbn": [
+              "978-94-6239-618-0"
+            ]
+          },
+          "landing_url": "https://www.atlantis-press.com/proceedings/aihle-25/126022241",
+          "fulltext_url": "https://www.atlantis-press.com/article/126022241.pdf",
+          "access_status": "open_access",
+          "license": "CC BY-NC 4.0",
+          "source_type": "publisher"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.atlantis-press.com/proceedings/aihle-25/126022241",
+          "source_type": "publisher",
+          "supports": [
+            "bibliographic_identity",
+            "open_access_status",
+            "cc_by_nc_4_0_license",
+            "public_pdf_link"
+          ]
+        },
+        {
+          "url": "https://www.atlantis-press.com/article/126022241.pdf",
+          "source_type": "publisher",
+          "supports": [
+            "public_fulltext_pdf"
+          ]
+        }
+      ],
+      "flags": []
+    }
+  ]
+}

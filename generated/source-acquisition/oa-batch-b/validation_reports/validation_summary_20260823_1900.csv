@@ -1,0 +1,4 @@
+Filename,Status,Confidence,Char_Ratio,GLYPH_Count,Artifact_Score,Tables_PDF,Tables_MD,Table_Mismatch,Needs_Review,Issues
+A2P8MXMY.md,WARNING,100.0,1.160,0,0.0,1,0,YES,YES,"Table mismatch: PDF=1, MD=0"
+BHXDU7VM.md,WARNING,99.3,1.182,0,3.6,0,9,YES,YES,"Table mismatch: PDF=0, MD=9"
+P4YQIKJX.md,WARNING,99.6,1.143,0,2.0,1,7,YES,YES,"Table mismatch: PDF=1, MD=7"

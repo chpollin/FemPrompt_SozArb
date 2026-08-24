@@ -1,3 +1,4 @@
+[
 {
   "id": "Ahn_2025_Artificial_Intelligence_(AI)_literacy_for_social",
   "type": "article-journal",
@@ -29,6 +30,11 @@
   },
   "language": "en",
   "DOI": "10.1086/735187",
-  "URL": "https://doi.org/10.1086/735187](https://doi.org/10.1086/735187",
+  "URL": "https://doi.org/10.1086/735187",
+  "femprompt-record-id": "ZJS2J7E7",
+  "femprompt-work-id": "work:70312fae-6975-587e-b409-06a82d50b6ce",
+  "femprompt-version-id": "version:7b79b88e-3857-5a65-8cfe-94478052d8ee",
+  "femprompt-version-type": "version_of_record",
   "note": "Reference record for migrated distillate. Source distillate generated/distilled/Ahn_2025_Artificial_Intelligence_(AI)_literacy_for_social.md. audit=P-pending. Stage-1b resolved 2026-07-18. Zotero key: ZJS2J7E7."
 }
+]

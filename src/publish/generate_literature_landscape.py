@@ -2,7 +2,7 @@
 
 The generator joins the productive PRISM reviewer track with corpus metadata and
 publishes only the fields needed for aggregation and evidence drill-down. It is a
-fail-closed verification checkpoint. Unknown papers, invalid category values,
+fail-closed validation and publication checkpoint. Unknown papers, invalid category values,
 ungrounded positive categories, and incomplete Include records stop the build.
 
 Usage:
@@ -23,10 +23,13 @@ DEFAULT_SCREENING = REPO_ROOT / "docs" / "data" / "screening" / "ar2.json"
 DEFAULT_CORPUS = REPO_ROOT / "docs" / "data" / "research_vault_v2.json"
 DEFAULT_ANALYSIS_SCHEMA = REPO_ROOT / "docs" / "data" / "analysis_fields.json"
 DEFAULT_CATEGORY_SCHEMA = REPO_ROOT / "docs" / "data" / "category_schema.json"
+DEFAULT_WORK_VERSION_CONTRACT = (
+    REPO_ROOT / "docs" / "data" / "work_version_contract.json"
+)
 DEFAULT_OUTPUT = REPO_ROOT / "docs" / "data" / "literature_landscape.json"
 
 DECISIONS = frozenset(("Include", "Exclude", "Unclear"))
-BINDING_STATUSES = frozenset(("accepted", "ratified_agent_consensus"))
+PUBLICATION_STATE = "publication-approved"
 
 
 def _read_json(path: Path) -> dict[str, Any]:
@@ -53,9 +56,71 @@ def _paper_evidence(decision: dict[str, Any], category: str) -> list[dict[str, s
                     "snippet": snippet,
                     "source_layer": "paper",
                     "actor": str(passage.get("actor", "")),
+                    "work_id": str(
+                        passage.get("work_id") or decision.get("work_id", "")
+                    ),
+                    "version_id": str(
+                        passage.get("version_id") or decision.get("version_id", "")
+                    ),
                 }
             )
     return result
+
+
+def _publication_event(
+    decision: dict[str, Any], paper_id: str
+) -> dict[str, Any] | None:
+    """Return the publication event, or withhold a record that has not reached it."""
+    lifecycle = decision.get("lifecycle")
+    if not isinstance(lifecycle, dict):
+        return None
+    if lifecycle.get("state") != PUBLICATION_STATE:
+        return None
+    events = lifecycle.get("events")
+    if not isinstance(events, list) or not events:
+        raise ValueError(f"{paper_id}: publication approval has no lifecycle event")
+    event = events[-1]
+    if (
+        not isinstance(event, dict)
+        or event.get("from") != "verified"
+        or event.get("to") != PUBLICATION_STATE
+        or event.get("event_type") != "publication_approval"
+        or event.get("result") != "approved"
+    ):
+        raise ValueError(
+            f"{paper_id}: final lifecycle event is not publication approval"
+        )
+    if not str(event.get("event_id", "")).strip():
+        raise ValueError(f"{paper_id}: publication approval event has no ID")
+    if not str(event.get("at", "")).strip():
+        raise ValueError(f"{paper_id}: publication approval event has no timestamp")
+    actor_ids = event.get("actor_ids")
+    if not isinstance(actor_ids, list) or not any(
+        str(value).strip() for value in actor_ids
+    ):
+        raise ValueError(f"{paper_id}: publication approval event has no actor")
+    return event
+
+
+def _verification_event(decision: dict[str, Any], paper_id: str) -> dict[str, Any]:
+    events = decision["lifecycle"]["events"]
+    event = next(
+        (
+            candidate
+            for candidate in reversed(events[:-1])
+            if candidate.get("event_type") == "domain_expert_verification"
+            and candidate.get("to") == "verified"
+        ),
+        None,
+    )
+    if event is None or event.get("result") not in (
+        "accepted",
+        "corrected_and_accepted",
+    ):
+        raise ValueError(
+            f"{paper_id}: publication approval has no accepted verification"
+        )
+    return event
 
 
 def _analysis_payload(
@@ -113,7 +178,9 @@ def _analysis_payload(
             if any(item not in vocabulary for item in values):
                 raise ValueError(f"{paper_id}: invalid value in {name}")
             if "None" in values and len(values) > 1:
-                raise ValueError(f"{paper_id}: {name} combines None with substantive values")
+                raise ValueError(
+                    f"{paper_id}: {name} combines None with substantive values"
+                )
             filled = bool(values)
         else:
             if value is not None and value not in vocabulary:
@@ -150,6 +217,12 @@ def _validate_and_transform_record(
     outcome = decision.get("decision")
     if outcome not in DECISIONS:
         raise ValueError(f"{paper_id}: unsupported decision {outcome!r}")
+    if decision.get("version_id") and decision.get("version_id") != paper.get(
+        "version_id"
+    ):
+        raise ValueError(f"{paper_id}: decision and corpus version IDs differ")
+    if decision.get("work_id") and decision.get("work_id") != paper.get("work_id"):
+        raise ValueError(f"{paper_id}: decision and corpus work IDs differ")
 
     published_categories = []
     for category, raw_level in sorted(decision.get("categories", {}).items()):
@@ -159,7 +232,9 @@ def _validate_and_transform_record(
             raise ValueError(f"{paper_id}: invalid level {raw_level!r} for {category}")
         evidence = _paper_evidence(decision, category)
         if not evidence:
-            raise ValueError(f"{paper_id}: positive category {category} has no Paper evidence")
+            raise ValueError(
+                f"{paper_id}: positive category {category} has no Paper evidence"
+            )
         published_categories.append(
             {"key": category, "level": raw_level, "evidence": evidence}
         )
@@ -167,6 +242,11 @@ def _validate_and_transform_record(
     analysis = _analysis_payload(paper_id, decision, analysis_schema)
     if outcome == "Include" and analysis is None:
         raise ValueError(f"{paper_id}: Include record has no complete analysis payload")
+
+    publication_event = _publication_event(decision, paper_id)
+    if publication_event is None:
+        raise ValueError(f"{paper_id}: record is not publication-approved")
+    verification_event = _verification_event(decision, paper_id)
 
     return {
         "id": paper_id,
@@ -179,6 +259,15 @@ def _validate_and_transform_record(
         "item_type": paper.get("item_type", ""),
         "journal": paper.get("journal", ""),
         "work_id": paper.get("work_id", f"record:{paper_id}"),
+        "version_id": paper.get("version_id"),
+        "version_type": paper.get("version_type", "unknown"),
+        "version_date": paper.get("version_date", ""),
+        "peer_review_status": paper.get("peer_review_status", "not_established"),
+        "peer_review_basis": paper.get("peer_review_basis", "unknown"),
+        "preferred_version_id": paper.get("preferred_version_id"),
+        "latest_version_id": paper.get("latest_version_id"),
+        "is_preferred_version": paper.get("is_preferred_version", True),
+        "work_versions": paper.get("work_versions", []),
         "identity_basis": paper.get("identity_basis", "record"),
         "knowledge_coverage": paper.get("knowledge_coverage", "source_missing"),
         "decision": outcome,
@@ -186,6 +275,19 @@ def _validate_and_transform_record(
         "text_source": decision.get("text_source", ""),
         "reviewer": decision.get("reviewer", ""),
         "actor": decision.get("actor", ""),
+        "lifecycle_state": PUBLICATION_STATE,
+        "verification": {
+            "event_id": verification_event.get("event_id"),
+            "result": verification_event.get("result"),
+            "at": verification_event.get("at"),
+            "actor_ids": verification_event.get("actor_ids"),
+            "annotation_id": verification_event.get("annotation_id"),
+        },
+        "publication_approval": {
+            "event_id": publication_event.get("event_id"),
+            "at": publication_event.get("at"),
+            "actor_ids": publication_event.get("actor_ids"),
+        },
         "categories": published_categories,
         "analysis": analysis,
     }
@@ -196,12 +298,21 @@ def build(
     corpus_path: Path,
     analysis_schema_path: Path = DEFAULT_ANALYSIS_SCHEMA,
     category_schema_path: Path = DEFAULT_CATEGORY_SCHEMA,
+    work_version_contract_path: Path = DEFAULT_WORK_VERSION_CONTRACT,
 ) -> dict[str, Any]:
     """Join and verify the productive track, returning deterministic public data."""
     screening = _read_json(screening_path)
+    try:
+        from src.assess.screening_lifecycle import require_valid_document
+    except ModuleNotFoundError:
+        sys.path.insert(0, str(REPO_ROOT))
+        from src.assess.screening_lifecycle import require_valid_document
+
+    require_valid_document(screening)
     corpus = _read_json(corpus_path)
     analysis_schema = _read_json(analysis_schema_path)
     category_schema = _read_json(category_schema_path)
+    work_version_contract = _read_json(work_version_contract_path)
     category_groups = category_schema.get("groups", {})
     object_categories = category_groups.get("object", [])
     perspective_categories = category_groups.get("perspective", [])
@@ -215,6 +326,7 @@ def build(
         raise ValueError("Screening track has no decisions object")
 
     records = []
+    withheld_total = 0
     for paper_id in sorted(decisions):
         paper = paper_by_id.get(paper_id)
         if paper is None:
@@ -222,6 +334,9 @@ def build(
         decision = decisions[paper_id]
         if not isinstance(decision, dict):
             raise ValueError(f"{paper_id}: decision must be an object")
+        if _publication_event(decision, paper_id) is None:
+            withheld_total += 1
+            continue
         records.append(
             _validate_and_transform_record(
                 paper_id, decision, paper, analysis_schema, categories
@@ -235,7 +350,7 @@ def build(
     except ValueError:
         screening_file = screening_path.name
     return {
-        "schema": "femprompt-literature-landscape/1.0",
+        "schema": "femprompt-literature-landscape/1.1",
         "source": {
             "screening_file": screening_file,
             "schema": screening.get("schema"),
@@ -243,11 +358,14 @@ def build(
             "actor": screening.get("actor"),
             "status": source_status,
             "updated": screening.get("updated"),
-            "provisional": source_status not in BINDING_STATUSES,
+            "publication_gate": PUBLICATION_STATE,
+            "provisional": withheld_total > 0,
         },
         "meta": {
             "corpus_total": len(papers),
             "annotated_total": len(records),
+            "source_annotated_total": len(decisions),
+            "withheld_total": withheld_total,
             "included_total": counts["Include"],
             "excluded_total": counts["Exclude"],
             "unclear_total": counts["Unclear"],
@@ -256,6 +374,10 @@ def build(
         "category_groups": {
             "object": object_categories,
             "perspective": perspective_categories,
+        },
+        "version_type_labels": {
+            item["key"]: item["label_de"]
+            for item in work_version_contract.get("version_types", [])
         },
         "records": records,
     }
@@ -276,11 +398,12 @@ def _parser() -> argparse.ArgumentParser:
     )
     parser.add_argument("--screening", type=Path, default=DEFAULT_SCREENING)
     parser.add_argument("--corpus", type=Path, default=DEFAULT_CORPUS)
+    parser.add_argument("--analysis-schema", type=Path, default=DEFAULT_ANALYSIS_SCHEMA)
+    parser.add_argument("--category-schema", type=Path, default=DEFAULT_CATEGORY_SCHEMA)
     parser.add_argument(
-        "--analysis-schema", type=Path, default=DEFAULT_ANALYSIS_SCHEMA
-    )
-    parser.add_argument(
-        "--category-schema", type=Path, default=DEFAULT_CATEGORY_SCHEMA
+        "--work-version-contract",
+        type=Path,
+        default=DEFAULT_WORK_VERSION_CONTRACT,
     )
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     return parser
@@ -294,6 +417,7 @@ def main() -> int:
             args.corpus.resolve(),
             args.analysis_schema.resolve(),
             args.category_schema.resolve(),
+            args.work_version_contract.resolve(),
         )
         _write_json_atomic(args.output.resolve(), payload)
     except (FileNotFoundError, json.JSONDecodeError, ValueError) as error:
@@ -301,7 +425,8 @@ def main() -> int:
         return 1
     print(
         "OK: literature landscape contains "
-        f"{payload['meta']['annotated_total']} verified records"
+        f"{payload['meta']['annotated_total']} publication-approved records; "
+        f"{payload['meta']['withheld_total']} withheld"
     )
     return 0
 

@@ -1,0 +1,1203 @@
+TY  - JOUR
+TI  - Sycophantic AI decreases prosocial intentions and promotes dependence
+AU  - Myra Cheng
+AU  - Cinoo Lee
+AU  - Pranav Khadpe
+AU  - Sunny Yu
+AU  - Dyllan Han
+AU  - Dan Jurafsky
+PY  - 2026
+DA  - 2026-03-26
+T2  - Science
+DO  - 10.1126/science.aec8352
+UR  - https://doi.org/10.1126/science.aec8352
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - new_candidate
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:arxiv:2505.13995
+N1  - Source-Lanes: C
+N1  - Peer-Review-Status: review_history_documented
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - CONF
+TI  - BiasFreeBench: a Benchmark for Mitigating Bias in Large Language Model Responses
+AU  - Xin Xu
+AU  - Xunzhi He
+AU  - Churan Zhi
+AU  - Ruizhe Chen
+AU  - Julian McAuley
+AU  - Zexue He
+PY  - 2026
+DA  - 2026-04-23
+T2  - International Conference on Learning Representations 2026
+UR  - https://proceedings.iclr.cc/paper_files/paper/2026/hash/71c3451f6cd6a4f82bb822db25cea4fd-Abstract-Conference.html
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - previously_identified
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:arxiv:2510.00232
+N1  - Source-Lanes: C
+N1  - Peer-Review-Status: venue_reviewed_proceedings
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - CHAP
+TI  - The Role of Generative AI in Transforming Social Work Practice
+AU  - Joana Guerra
+AU  - Flávia Fonseca
+PY  - 2026
+DA  - 2026-07-14
+T2  - Social Work in the 21st Century
+DO  - 10.1007/978-3-032-27336-9_4
+UR  - https://doi.org/10.1007/978-3-032-27336-9_4
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - new_candidate
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.1007/978-3-032-27336-9_4
+N1  - Source-Lanes: A
+N1  - Peer-Review-Status: not_established
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Teachers’ perceptions of generative AI in gender-inclusive STEM education: a grounded theory study
+AU  - Celeste Tipple
+AU  - Therese Keane
+AU  - Tianchong Wang
+AU  - Milorad Cerovac
+PY  - 2026
+DA  - 2026-02-13
+T2  - Education and Information Technologies
+DO  - 10.1007/s10639-026-13908-2
+UR  - https://link.springer.com/article/10.1007/s10639-026-13908-2
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - new_candidate
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.1007/s10639-026-13908-2
+N1  - Source-Lanes: B
+N1  - Peer-Review-Status: review_history_documented
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Toward substantive intersectional algorithmic fairness: desiderata for a feminist approach
+AU  - Marie Mirsch
+AU  - Laila Wegner
+AU  - Jonas Strube
+AU  - Carmen Leicht-Scholten
+PY  - 2026
+DA  - 2026-01-08
+T2  - AI and Ethics
+DO  - 10.1007/s43681-025-00926-y
+UR  - https://link.springer.com/article/10.1007/s43681-025-00926-y
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - previously_identified
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.1007/s43681-025-00926-y
+N1  - Source-Lanes: B
+N1  - Peer-Review-Status: review_history_documented
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Beyond inclusion: feminist AI for transformative justice in STEM
+AU  - Tanja Kubes
+PY  - 2026
+DA  - 2026-05-20
+T2  - AI and Ethics
+DO  - 10.1007/s43681-026-01161-9
+UR  - https://link.springer.com/article/10.1007/s43681-026-01161-9
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - previously_identified
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.1007/s43681-026-01161-9
+N1  - Source-Lanes: B
+N1  - Peer-Review-Status: review_history_documented
+N1  - Screening-Status: identified_not_screened
+N1  - Related-FemPrompt-Work-ID: work:0b69246b-4c05-5e2f-a22e-1416ec893b1d
+ER  -
+
+TY  - JOUR
+TI  - An ethical framework for assessing artificial intelligence as augmentation or automation in social work
+AU  - Kwangseon Hwang
+PY  - 2026
+DA  - 2026-08-05
+T2  - Discover Social Science and Health
+DO  - 10.1007/s44155-026-00463-x
+UR  - https://doi.org/10.1007/s44155-026-00463-x
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - new_candidate
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.1007/s44155-026-00463-x
+N1  - Source-Lanes: A
+N1  - Peer-Review-Status: review_history_documented
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Existing and future use cases, and safety and ethical considerations for AI in body image, and eating disorder prevention
+AU  - Nadia Craddock
+AU  - Harriet G. Smith
+AU  - Jake Linardon
+AU  - Tracy L. Tylka
+AU  - Phillippa C. Diedrichs
+PY  - 2026
+DA  - 2026-02-07
+T2  - Body Image
+DO  - 10.1016/j.bodyim.2026.102042
+UR  - https://uwe-repository.worktribe.com/output/15715301/existing-and-future-use-cases-and-safety-and-ethical-considerations-for-ai-in-body-image-and-eating-disorder-prevention
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - new_candidate
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.1016/j.bodyim.2026.102042
+N1  - Source-Lanes: B
+N1  - Peer-Review-Status: not_established
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Beyond “painting in pink”: A critical case study of all-girls generative AI workshops in a European makerspace and implications for gender equity in computing
+AU  - Qian Liu
+AU  - Louise Archer
+AU  - Meghna Nag Chowdhuri
+AU  - Esme Freedman
+AU  - Jennifer DeWitt
+PY  - 2026
+DA  - 2026-05-04
+T2  - Computers and Education: Artificial Intelligence
+DO  - 10.1016/j.caeai.2026.100602
+UR  - https://discovery.ucl.ac.uk/id/eprint/10225293/
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - new_candidate
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.1016/j.caeai.2026.100602
+N1  - Source-Lanes: B
+N1  - Peer-Review-Status: not_established
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Can AI reduce gender bias? The case of AI-generated audio conversations in Google's NotebookLM
+AU  - Milad Malekzadeh
+PY  - 2026
+DA  - 2026-08-08
+T2  - Computers in Human Behavior Reports
+DO  - 10.1016/j.chbr.2026.101246
+UR  - https://doi.org/10.1016/j.chbr.2026.101246
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - previously_identified
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.1016/j.chbr.2026.101246
+N1  - Source-Lanes: B
+N1  - Peer-Review-Status: not_established
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Integrating diversity, equity, and inclusion in generative AI applications for healthcare education: a scoping review
+AU  - Hwayeon Danielle Shin
+AU  - Charlene E. Ronquillo
+AU  - Jisan Lee
+AU  - Zerina Lokmic-Tomkins
+AU  - Lisa Reid
+AU  - Sang Bin You
+AU  - Shauna Davies
+AU  - Lorraine J. Block
+AU  - Irem Ozbay
+AU  - Mifetika Lukitasari
+AU  - Hannah Cho
+AU  - Mijeong Park
+AU  - Hana Kim
+AU  - Brigitte Fong Yeong Woo
+AU  - JaMor Hairston
+AU  - Hyeongju Ryu
+AU  - Zhihong Zhang
+AU  - Mollie Hobensack
+AU  - Nader Alnomasy
+AU  - Pallavi Gupta
+AU  - Maxim Topaz
+AU  - Jiyoun Song
+PY  - 2026
+DA  - 2026-07-02
+T2  - International Journal of Medical Informatics
+DO  - 10.1016/j.ijmedinf.2026.106582
+UR  - https://www.sciencedirect.com/science/article/pii/S1386505626003229
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - new_candidate
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.1016/j.ijmedinf.2026.106582
+N1  - Source-Lanes: B
+N1  - Peer-Review-Status: not_established
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Implicit Gender, Racial, and Ethnic Biases in Large Language Models: An Audit Study of Automated Psychiatric Diagnoses
+AU  - Sachin R. Pendse
+AU  - Mini Jain
+AU  - Neha Kumar
+AU  - Munmun De Choudhury
+PY  - 2026
+DA  - 2026-03-06
+T2  - Mayo Clinic Proceedings: Digital Health
+DO  - 10.1016/j.mcpdig.2026.100344
+UR  - https://pmc.ncbi.nlm.nih.gov/articles/PMC13217584/
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - previously_identified
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.1016/j.mcpdig.2026.100344
+N1  - Source-Lanes: B
+N1  - Peer-Review-Status: not_established
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Inclusive generative AI and the dynamics of inequality: A capability-resource model of adoption disparities
+AU  - Hyelim Yang
+AU  - Min Jae Park
+PY  - 2026
+DA  - 2026-08
+T2  - Technology in Society
+DO  - 10.1016/j.techsoc.2026.103402
+UR  - https://www.sciencedirect.com/science/article/pii/S0160791X26001910
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - new_candidate
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.1016/j.techsoc.2026.103402
+N1  - Source-Lanes: B
+N1  - Peer-Review-Status: not_established
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - New model, old risks: sociodemographic bias and adversarial hallucinations vulnerability in GPT-5
+AU  - Mahmud Omar
+AU  - Reem Agbareia
+AU  - Donald U. Apakama
+AU  - Carol R. Horowitz
+AU  - Robert Freeman
+AU  - Alexander W. Charney
+AU  - Girish N. Nadkarni
+AU  - Eyal Klang
+PY  - 2026
+DA  - 2026-04-04
+T2  - npj Digital Medicine
+DO  - 10.1038/s41746-026-02584-8
+UR  - https://www.nature.com/articles/s41746-026-02584-8
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - previously_identified
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.1038/s41746-026-02584-8
+N1  - Source-Lanes: B
+N1  - Peer-Review-Status: review_history_documented
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Addressing benchmarking gaps in large language models for health and medicine with dynamic red-teaming
+AU  - Jiazhen Pan
+AU  - Bailiang Jian
+AU  - Paul Hager
+AU  - Yundi Zhang
+AU  - Che Liu
+AU  - Friedrike Jungmann
+AU  - Hongwei Bran Li
+AU  - Julian Canisius
+AU  - Chenyu You
+AU  - Junde Wu
+AU  - Jiayuan Zhu
+AU  - Fenglin Liu
+AU  - Yuyuan Liu
+AU  - Niklas Bubeck
+AU  - Moritz Knolle
+AU  - Chen Chen
+AU  - Christian Wachinger
+AU  - Zhenyu Gong
+AU  - Cheng Ouyang
+AU  - Georgios Kaissis
+AU  - Benedikt Wiestler
+AU  - Daniel Rueckert
+PY  - 2026
+DA  - 2026-07-15
+T2  - Nature Health
+DO  - 10.1038/s44360-026-00152-8
+UR  - https://www.nature.com/articles/s44360-026-00152-8
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - new_candidate
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.1038/s44360-026-00152-8
+N1  - Source-Lanes: C
+N1  - Peer-Review-Status: review_history_documented
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Large language models exhibit stigmatizing behaviour in contextual judgements of health conditions
+AU  - Xi Wang
+AU  - Yujia Zhou
+AU  - Guangyu Zhou
+PY  - 2026
+DA  - 2026-07-06
+T2  - Nature Health
+DO  - 10.1038/s44360-026-00164-4
+UR  - https://www.nature.com/articles/s44360-026-00164-4
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - previously_identified
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.1038/s44360-026-00164-4
+N1  - Source-Lanes: B, C
+N1  - Peer-Review-Status: review_history_documented
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Innovating social work pedagogy: generative AI for critical competency development in evidence-based practice
+AU  - Anitra P. Walker
+AU  - Daniel J. Gibbs
+AU  - Leon Banks
+AU  - Hee Yun Lee
+AU  - Kaylie Danielle Frazier
+AU  - Jaesung Lee
+PY  - 2026
+DA  - 2026-01-21
+T2  - Social Work Education
+DO  - 10.1080/02615479.2026.2617512
+UR  - https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2617512
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - previously_identified
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.1080/02615479.2026.2617512
+N1  - Source-Lanes: A, B
+N1  - Peer-Review-Status: review_history_documented
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Are future social workers ready for AI? Fears, barriers, and learning needs in higher education
+AU  - Sacramento Pinazo-Hernandis
+AU  - Nuria Carcavilla-González
+PY  - 2026
+DA  - 2026-02-23
+T2  - Social Work Education
+DO  - 10.1080/02615479.2026.2631708
+UR  - https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2631708
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - previously_identified
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.1080/02615479.2026.2631708
+N1  - Source-Lanes: A, B
+N1  - Peer-Review-Status: review_history_documented
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Promoting AI literacy in social work education: lessons from an interdisciplinary course for social work students
+AU  - Joshua Weber
+AU  - Lauri Goldkind
+PY  - 2026
+DA  - 2026-02-24
+T2  - Social Work Education
+DO  - 10.1080/02615479.2026.2635471
+UR  - https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2635471
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - previously_identified
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.1080/02615479.2026.2635471
+N1  - Source-Lanes: A, B
+N1  - Peer-Review-Status: review_history_documented
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Towards a framework for digital literacy in social work education in a time of artificial intelligence
+AU  - Michael Wallengren-Lynch
+PY  - 2026
+DA  - 2026-04-16
+T2  - Social Work Education
+DO  - 10.1080/02615479.2026.2660786
+UR  - https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2660786
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - previously_identified
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.1080/02615479.2026.2660786
+N1  - Source-Lanes: A, B
+N1  - Peer-Review-Status: review_history_documented
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - A kind of magic? Artificial intelligence-assisted recording: developing principles for an AI-informed social work curriculum
+AU  - Richard Ingram
+PY  - 2026
+DA  - 2026-05-11
+T2  - Social Work Education
+DO  - 10.1080/02615479.2026.2669634
+UR  - https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2669634
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - previously_identified
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.1080/02615479.2026.2669634
+N1  - Source-Lanes: A, B
+N1  - Peer-Review-Status: review_history_documented
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - AI-enhanced ethical decision-making in social work: development and testing of an application-specific language model
+AU  - Jia-Lin Zhao
+AU  - Li Shen
+AU  - John Shields
+AU  - Xiang Huang
+AU  - Samdan Chokyi
+PY  - 2026
+DA  - 2026-06-04
+T2  - Journal of Social Work Practice
+DO  - 10.1080/02650533.2026.2683352
+UR  - https://doi.org/10.1080/02650533.2026.2683352
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - previously_identified
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.1080/02650533.2026.2683352
+N1  - Source-Lanes: A
+N1  - Peer-Review-Status: not_established
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - AI-Generated Images of Social Workers in Healthcare and Implications for Professional Identity
+AU  - Helen Hickson
+AU  - Amy-Louise Byrne
+AU  - Jennifer Mulvogue
+PY  - 2026
+DA  - 2026-04-30
+T2  - Australian Social Work
+DO  - 10.1080/0312407x.2026.2627220
+UR  - https://doi.org/10.1080/0312407X.2026.2627220
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - new_candidate
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.1080/0312407x.2026.2627220
+N1  - Source-Lanes: A, B
+N1  - Peer-Review-Status: review_history_documented
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - ChatGPT in Social Work? Insights from MSW Students
+AU  - Shih-Ying Cheng
+AU  - Jieun Lee
+PY  - 2026
+DA  - 2026-01-16
+T2  - Journal of Social Work Education
+DO  - 10.1080/10437797.2025.2594423
+UR  - https://doi.org/10.1080/10437797.2025.2594423
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - new_candidate
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.1080/10437797.2025.2594423
+N1  - Source-Lanes: A
+N1  - Peer-Review-Status: review_history_documented
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Artificial intelligence: a neoliberal tool to better manage social inequalities?
+AU  - Paul Michael Garrett
+PY  - 2026
+DA  - 2026-02-03
+T2  - European Journal of Social Work
+DO  - 10.1080/13691457.2025.2607705
+UR  - https://www.tandfonline.com/doi/full/10.1080/13691457.2025.2607705
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - previously_identified
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.1080/13691457.2025.2607705
+N1  - Source-Lanes: B
+N1  - Peer-Review-Status: review_history_documented
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - The (Un)Fair Algorithm: Socio-Technical Ethics Work for Artificial Intelligence in Social Work
+AU  - Ida Schrøder
+AU  - Marie Leth Meilvang
+AU  - Matilde Høybye-Mortensen
+PY  - 2026
+DA  - 2026-02-18
+T2  - Ethics and Social Welfare
+DO  - 10.1080/17496535.2026.2619945
+UR  - https://www.tandfonline.com/doi/full/10.1080/17496535.2026.2619945
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - previously_identified
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.1080/17496535.2026.2619945
+N1  - Source-Lanes: A, B
+N1  - Peer-Review-Status: review_history_documented
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Small Models Achieve Large Language Model Performance: Evaluating Reasoning-Enabled AI for Secure Child Welfare Research
+AU  - Zia Qi
+AU  - Brian E. Perron
+AU  - Bryan G. Victor
+AU  - Dragan Stoll
+AU  - Joseph P. Ryan
+PY  - 2026
+DA  - 2026-01-18
+T2  - Journal of Evidence-Based Social Work
+DO  - 10.1080/26408066.2026.2616711
+UR  - https://doi.org/10.1080/26408066.2026.2616711
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - previously_identified
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.1080/26408066.2026.2616711
+N1  - Source-Lanes: A
+N1  - Peer-Review-Status: peer_reviewed
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Accuracy and Readability of Large Language Models’ Responses to Frequently Asked Questions on Social Assistance
+AU  - Hacer Taşkıran Tepe
+PY  - 2026
+DA  - 2026-06-01
+T2  - Journal of the Society for Social Work and Research
+DO  - 10.1086/740347
+UR  - https://doi.org/10.1086/740347
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - new_candidate
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.1086/740347
+N1  - Source-Lanes: A
+N1  - Peer-Review-Status: review_history_documented
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Using ChatGPT for Qualitative Social Media Analysis: Insights for Cross-Cultural Social Work
+AU  - Michin Hong
+AU  - Grace Yi
+PY  - 2026
+DA  - 2026-06-01
+T2  - Journal of the Society for Social Work and Research
+DO  - 10.1086/740605
+UR  - https://doi.org/10.1086/740605
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - previously_identified
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.1086/740605
+N1  - Source-Lanes: A
+N1  - Peer-Review-Status: review_history_documented
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Same Prompt, Different Care? Evaluating Inequities in AI-Generated Mental Health Support for Immigrant Communities
+AU  - Cheng Chow
+AU  - Xiuer Gu
+PY  - 2026
+DA  - 2026-07-28
+T2  - Journal of the Society for Social Work and Research
+DO  - 10.1086/743397
+UR  - https://doi.org/10.1086/743397
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - previously_identified
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.1086/743397
+N1  - Source-Lanes: A, B, C
+N1  - Peer-Review-Status: not_established
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Mitigating medical bias in large language models by prompt engineering: an empirical study of effectiveness and trade-offs
+AU  - Ying Xiao
+AU  - Zhenpeng Chen
+AU  - Jie Zhang
+PY  - 2026
+DA  - 2026-07-16
+T2  - Philosophical Transactions of the Royal Society A
+DO  - 10.1098/rsta.2025.0125
+UR  - https://royalsocietypublishing.org/doi/10.1098/rsta.2025.0125
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - previously_identified
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.1098/rsta.2025.0125
+N1  - Source-Lanes: B, C
+N1  - Peer-Review-Status: peer_reviewed
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Mitigating Disability Bias in Hiring: The Role of Inclusion-Focused Generative AI in Complex HR Decisions
+AU  - Miles M. Yang
+PY  - 2026
+DA  - 2026-03-11
+T2  - Human Resource Management Journal
+DO  - 10.1111/1748-8583.70044
+UR  - https://onlinelibrary.wiley.com/doi/10.1111/1748-8583.70044
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - new_candidate
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.1111/1748-8583.70044
+N1  - Source-Lanes: B
+N1  - Peer-Review-Status: not_established
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - The Adoption of Generative AI by Social Workers in Practice: A Scoping Review
+AU  - Chuhan Bai
+AU  - Esther Mercado García
+PY  - 2026
+DA  - 2026-07-29
+T2  - Research on Social Work Practice
+DO  - 10.1177/10497315261469433
+UR  - https://doi.org/10.1177/10497315261469433
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - previously_identified
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.1177/10497315261469433
+N1  - Source-Lanes: A
+N1  - Peer-Review-Status: not_established
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Bias Bytes: A Study Examining Disability Bias in ChatGPT Job Recommendation
+AU  - Claire Sharon Sullivan
+AU  - Charlotte Jackson
+AU  - Virakti Shah
+AU  - Tiona Wu
+AU  - Nicole Ditchman
+PY  - 2026
+DA  - 2026-05-11
+T2  - Journal of Vocational Rehabilitation
+DO  - 10.1177/10522263261449121
+UR  - https://journals.sagepub.com/doi/10.1177/10522263261449121
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - new_candidate
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.1177/10522263261449121
+N1  - Source-Lanes: B
+N1  - Peer-Review-Status: not_established
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Generative AI So White: Racial Biases in AI Imagery Across the United States and China
+AU  - Zituo Wang
+AU  - Jiayi Zhu
+AU  - Zhuoyu Wang
+AU  - Vivian Jiaying Zhai
+AU  - Jianyu Wu
+PY  - 2026
+DA  - 2026-04-27
+T2  - Science Communication
+DO  - 10.1177/10755470261428542
+UR  - https://journals.sagepub.com/doi/10.1177/10755470261428542
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - new_candidate
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.1177/10755470261428542
+N1  - Source-Lanes: B
+N1  - Peer-Review-Status: not_established
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Algorithmic bias in clinical resource allocation by a large language model: a cross-sectional in-silico evaluation of 13,608 decisions
+AU  - Siddharth Gandhi
+AU  - Michael Balas
+PY  - 2026
+DA  - 2026-07-20
+T2  - BMC Medical Ethics
+DO  - 10.1186/s12910-026-01496-2
+UR  - https://link.springer.com/article/10.1186/s12910-026-01496-2
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - new_candidate
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.1186/s12910-026-01496-2
+N1  - Source-Lanes: B
+N1  - Peer-Review-Status: review_history_documented
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Semantic Stability, Response Strategies, and Bias Analysis of Generative Artificial Intelligence in Psychological Health Education
+AU  - Mu Yi
+AU  - Li Qiang
+AU  - Wang Zhen
+AU  - Zhang Lidan
+AU  - Chen Yu
+PY  - 2026
+DA  - 2026-03-20
+T2  - Journal of Psychological Science
+DO  - 10.16719/j.cnki.1671-6981.20260201
+UR  - https://jps.ecnu.edu.cn/EN/10.16719/j.cnki.1671-6981.20260201
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - new_candidate
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.16719/j.cnki.1671-6981.20260201
+N1  - Source-Lanes: B
+N1  - Peer-Review-Status: not_established
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - CONF
+TI  - InsideOut: Measuring and Mitigating Insider–Outsider Bias in Interview Script Generation
+AU  - Yixin Wan
+AU  - Xingrun Chen
+AU  - Kai-Wei Chang
+PY  - 2026
+DA  - 2026-07-02
+T2  - 64th Annual Meeting of the Association for Computational Linguistics
+DO  - 10.18653/v1/2026.acl-long.1094
+UR  - https://aclanthology.org/2026.acl-long.1094/
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - new_candidate
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.18653/v1/2026.acl-long.1094
+N1  - Source-Lanes: C
+N1  - Peer-Review-Status: venue_reviewed_proceedings
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - CONF
+TI  - Multi-Persona Thinking for Bias Mitigation in Large Language Models
+AU  - Yuxing Chen
+AU  - Guoqing Luo
+AU  - Zijun Wu
+AU  - Lili Mou
+PY  - 2026
+DA  - 2026-07-02
+T2  - Findings of the Association for Computational Linguistics: ACL 2026
+DO  - 10.18653/v1/2026.findings-acl.1389
+UR  - https://aclanthology.org/2026.findings-acl.1389/
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - previously_identified
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.18653/v1/2026.findings-acl.1389
+N1  - Source-Lanes: C
+N1  - Peer-Review-Status: venue_reviewed_proceedings
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - CONF
+TI  - Mitigating Cultural Bias in LLMs via Multi-Agent Cultural Debate
+AU  - Qian Tan
+AU  - Lei Jiang
+AU  - Yuting Zeng
+AU  - Shuoyang Ding
+AU  - Xiaohua Xu
+PY  - 2026
+DA  - 2026-07-02
+T2  - Findings of the Association for Computational Linguistics: ACL 2026
+DO  - 10.18653/v1/2026.findings-acl.418
+UR  - https://aclanthology.org/2026.findings-acl.418/
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - new_candidate
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.18653/v1/2026.findings-acl.418
+N1  - Source-Lanes: C
+N1  - Peer-Review-Status: venue_reviewed_proceedings
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - CONF
+TI  - Persona-Assigned Large Language Models Exhibit Human-Like Motivated Reasoning
+AU  - Saloni Dash
+AU  - Amélie Reymond
+AU  - Emma Spiro
+AU  - Aylin Caliskan
+PY  - 2026
+DA  - 2026-07-02
+T2  - Findings of the Association for Computational Linguistics: ACL 2026
+DO  - 10.18653/v1/2026.findings-acl.585
+UR  - https://aclanthology.org/2026.findings-acl.585/
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - new_candidate
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.18653/v1/2026.findings-acl.585
+N1  - Source-Lanes: C
+N1  - Peer-Review-Status: venue_reviewed_proceedings
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Generative KI in der Beratung: Empirische Befunde mit Blick auf Nutzungsbedingungen von Chatbots
+AU  - Fabian Beloch
+AU  - Anne Martin
+PY  - 2026
+DA  - 2026-01-31
+T2  - DiMe-Sozial | Soziale Arbeit, Medien und Digitalisierung
+DO  - 10.21240/dimesoz/2026/1/57
+UR  - https://www.dime-sozial.de/index.php/dimesoz/article/view/57
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - new_candidate
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.21240/dimesoz/2026/1/57
+N1  - Source-Lanes: A
+N1  - Peer-Review-Status: not_established
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Pensar críticamente la inteligencia artificial en la escuela: un estudio de caso desde una perspectiva de género
+AU  - Maria Emilia Echeveste
+AU  - Virginia Brassesco
+PY  - 2026
+DA  - 2026-06-30
+T2  - Edutec, Revista Electrónica de Tecnología Educativa
+DO  - 10.21556/edutec.2026.96.4777
+UR  - https://edutec.es/revista/index.php/edutec-e/article/view/4777
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - new_candidate
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.21556/edutec.2026.96.4777
+N1  - Source-Lanes: B
+N1  - Peer-Review-Status: review_history_documented
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Patient Cognitive Bias in Large Language Model-Supported Health Consultations: Simulation-Based Comparative Study
+AU  - Yi Zuo
+AU  - Qifeng Wan
+AU  - Shalong Wang
+PY  - 2026
+DA  - 2026-06-11
+T2  - Journal of Medical Internet Research
+DO  - 10.2196/85770
+UR  - https://www.jmir.org/2026/1/e85770
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - previously_identified
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.2196/85770
+N1  - Source-Lanes: C
+N1  - Peer-Review-Status: review_history_documented
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Ethics and Fairness Considerations in AI-Based Deception Detection Technologies for Mental Health Applications: Focus Group Study
+AU  - Sayde Leya King
+AU  - Serena Bhaskar
+AU  - Julia Woodward
+AU  - Tempestt Neal
+PY  - 2026
+DA  - 2026-05-25
+T2  - JMIR AI
+DO  - 10.2196/86633
+UR  - https://ai.jmir.org/2026/1/e86633/
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - new_candidate
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.2196/86633
+N1  - Source-Lanes: B
+N1  - Peer-Review-Status: review_history_documented
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Generative AI in Youth Mental Health Apps: Rapid Review
+AU  - Helene Høgsdal
+AU  - Henriette Kyrrestad
+AU  - Sabine Kaiser
+PY  - 2026
+DA  - 2026-08-19
+T2  - JMIR Mental Health
+DO  - 10.2196/90589
+UR  - https://doi.org/10.2196/90589
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - new_candidate
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.2196/90589
+N1  - Source-Lanes: A
+N1  - Peer-Review-Status: review_history_documented
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Análisis de la desinformación y los sesgos de género generados por la inteligencia artificial
+AU  - Barbara Sarrionandia Uriguen
+PY  - 2026
+DA  - 2026-07-13
+T2  - Interconectando Saberes
+DO  - 10.25009/is.v11i21.3001
+UR  - https://is.uv.mx/index.php/IS/article/view/3001
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - new_candidate
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.25009/is.v11i21.3001
+N1  - Source-Lanes: B
+N1  - Peer-Review-Status: review_history_documented
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - AI-generated visual disinformation and digital equity: an intersectional analysis of algorithmic vulnerabilities among marginalised communities
+AU  - Vinanda Cinta Cendekia Putri
+PY  - 2026
+DA  - 2026-02-26
+T2  - Frontiers in Human Dynamics
+DO  - 10.3389/fhumd.2026.1791655
+UR  - https://www.frontiersin.org/journals/human-dynamics/articles/10.3389/fhumd.2026.1791655/full
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - previously_identified
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.3389/fhumd.2026.1791655
+N1  - Source-Lanes: B
+N1  - Peer-Review-Status: review_history_documented
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - No Free Lunch in Language Model Bias Mitigation? Targeted Bias Reduction Can Exacerbate Unmitigated LLM Biases
+AU  - Shireen Chand
+AU  - Faith Baca
+AU  - Emilio Ferrara
+PY  - 2026
+DA  - 2026-01-13
+T2  - AI
+DO  - 10.3390/ai7010024
+UR  - https://www.mdpi.com/2673-2688/7/1/24
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - previously_identified
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.3390/ai7010024
+N1  - Source-Lanes: C
+N1  - Peer-Review-Status: review_history_documented
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Sesgos de género y modelos de IA generativa: Aproximaciones desde una experiencia de análisis cualitativo desde la generación de imágenes
+AU  - Patricia Peña Miranda
+PY  - 2026
+DA  - 2026-07-27
+T2  - Revista Iberoamericana de Ciencia, Tecnología y Sociedad
+DO  - 10.35362/issn.1850-0013-1258
+UR  - https://ojs.revistacts.net/index.php/CTS/article/view/1258
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - new_candidate
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.35362/issn.1850-0013-1258
+N1  - Source-Lanes: B
+N1  - Peer-Review-Status: not_established
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - IA, salud mental y género: Un mapeo sistemático de las ciencias sociales y humanas en América Latina
+AU  - Chiara Forti Dono
+AU  - María Eugenia Fazio
+AU  - María Dalponte Ayastuy
+PY  - 2026
+DA  - 2026-07-27
+T2  - Revista Iberoamericana de Ciencia, Tecnología y Sociedad
+DO  - 10.35362/issn.1850-0013-1259
+UR  - https://ojs.revistacts.net/index.php/CTS/article/view/1259
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - new_candidate
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.35362/issn.1850-0013-1259
+N1  - Source-Lanes: B
+N1  - Peer-Review-Status: not_established
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Intelligence artificielle et travail social, une ressource au service des professionnels ?
+AU  - LaborIA
+AU  - Anne-Sophie Maillot
+AU  - Stéphanie Hemairia Clerc
+AU  - Laurence Mari
+AU  - Yann Ferguson
+PY  - 2026
+DA  - 2026-03-17
+T2  - Vie sociale
+DO  - 10.3917/vsoc.052.0029
+UR  - https://doi.org/10.3917/vsoc.052.0029
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - new_candidate
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.3917/vsoc.052.0029
+N1  - Source-Lanes: A
+N1  - Peer-Review-Status: not_established
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - CHAP
+TI  - Social Work Ethics and Generative AI
+AU  - Michael Balkow
+PY  - 2026
+DA  - 2026-07-21
+T2  - Routledge book chapter
+DO  - 10.4324/9781003627920-14
+UR  - https://doi.org/10.4324/9781003627920-14
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - previously_identified
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.4324/9781003627920-14
+N1  - Source-Lanes: A
+N1  - Peer-Review-Status: not_established
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - CHAP
+TI  - Prompt Engineering for Social Workers
+AU  - Moon Sun Song
+AU  - Othelia E. Lee
+PY  - 2026
+DA  - 2026-08-12
+T2  - Social Work Practice and Artificial Intelligence for the Common Good (Routledge)
+DO  - 10.4324/9781003755081-10
+UR  - https://doi.org/10.4324/9781003755081-10
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - previously_identified
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.4324/9781003755081-10
+N1  - Source-Lanes: A
+N1  - Peer-Review-Status: not_established
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - CHAP
+TI  - Generative AI and Agentic AI
+AU  - Moon Sun Song
+PY  - 2026
+DA  - 2026-08-12
+T2  - Social Work Practice and Artificial Intelligence for the Common Good
+DO  - 10.4324/9781003755081-5
+UR  - https://doi.org/10.4324/9781003755081-5
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - new_candidate
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.4324/9781003755081-5
+N1  - Source-Lanes: A
+N1  - Peer-Review-Status: not_established
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Gender Representation in Large Language Models: A Cross-Linguistic and Cross-Model Analysis
+AU  - Aleksandra Urman
+AU  - Emese Domahidi
+AU  - Johannes B. Gruber
+AU  - Ana Jovančević
+AU  - Michaela Maier
+AU  - Dren Gërguri
+AU  - Jaromír Mazak
+AU  - Mariken A.C.G. van der Velden
+PY  - 2026
+DA  - 2026-05-21
+T2  - Computational Communication Research
+DO  - 10.5117/ccr2026.2.11.urma
+UR  - https://www.aup-online.com/content/journals/10.5117/CCR2026.2.11.URMA
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - previously_identified
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.5117/ccr2026.2.11.urma
+N1  - Source-Lanes: B
+N1  - Peer-Review-Status: review_history_documented
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - JOUR
+TI  - Artificial Intelligence and Case-Based Learning in Social Work Education: Pedagogical Considerations and Future Directions
+AU  - Mark Taylor
+PY  - 2026
+DA  - 2026-04-21
+T2  - Journal of Education and Learning Environments
+DO  - 10.55121/jele.v2i1.1050
+UR  - https://doi.org/10.55121/jele.v2i1.1050
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - new_candidate
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.55121/jele.v2i1.1050
+N1  - Source-Lanes: A
+N1  - Peer-Review-Status: review_history_documented
+N1  - Screening-Status: identified_not_screened
+ER  -
+
+TY  - CONF
+TI  - I Am Not Them: Persistent Outgroup Bias in Large Language Models Arising from Social Identity Persona Setting
+AU  - Wenchao Dong
+AU  - Assem Zhunis
+AU  - Dongyoung Jeong
+AU  - Hyojin Chin
+AU  - Jiyoung Han
+AU  - Meeyoung Cha
+PY  - 2026
+DA  - 2026-05-13
+T2  - Fifteenth Language Resources and Evaluation Conference
+DO  - 10.63317/2hn5gs6yh5m2
+UR  - https://aclanthology.org/2026.lrec-1.217/
+KW  - Codex Websearch
+KW  - 2026
+KW  - Tier A candidate
+KW  - new_candidate
+N1  - FemPrompt-Candidate-ID: codex-websearch-2026:doi:10.63317/2hn5gs6yh5m2
+N1  - Source-Lanes: C
+N1  - Peer-Review-Status: venue_reviewed_proceedings
+N1  - Screening-Status: identified_not_screened
+ER  -

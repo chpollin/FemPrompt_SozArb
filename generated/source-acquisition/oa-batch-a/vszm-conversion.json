@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-08-23T18:57:57.855900",
+  "input_dir": "generated\\source-acquisition\\oa-batch-a\\vszm-input",
+  "output_dir": "generated\\source-acquisition\\oa-batch-a\\vszm-output",
+  "total_files": 1,
+  "converted": 1,
+  "skipped": 0,
+  "failed": 0,
+  "low_quality": 0,
+  "files": [
+    {
+      "input": "VSZM7CT6.pdf",
+      "output": "VSZM7CT6.md",
+      "file_hash": "0931b8a4f50e4c6fe30fe9e054220f4d",
+      "success": true,
+      "duration_seconds": 38.05,
+      "metrics": {
+        "total_chars": 54578,
+        "total_lines": 454,
+        "total_words": 7779,
+        "headings": 17,
+        "heading_levels": {
+          "h2": 17
+        },
+        "tables": 0,
+        "lists": 1,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 253,
+        "avg_line_length": 269.3
+      },
+      "quality_score": 85,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)",
+        "Too many empty lines (>50%)"
+      ],
+      "status": "converted"
+    }
+  ]
+}

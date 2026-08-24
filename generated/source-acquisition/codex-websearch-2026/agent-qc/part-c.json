@@ -1,0 +1,92 @@
+{
+  "schema": "femprompt-markdown-agent-qc/0.1",
+  "reviewer": "round2_sources",
+  "reviewed_at": "2026-08-24",
+  "records": [
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.21240/dimesoz/2026/1/57",
+      "title": "Generative KI in der Beratung: Empirische Befunde mit Blick auf Nutzungsbedingungen von Chatbots",
+      "pdf_file": "2b57266b9d8b015d2ac2.pdf",
+      "markdown_file": "2b57266b9d8b015d2ac2.md",
+      "automated_warning": "Table mismatch: PDF=3, MD=0",
+      "identity_match": true,
+      "body_complete": true,
+      "tables": {
+        "pdf_semantic_tables": 0,
+        "markdown_semantic_tables": 0,
+        "material_loss": false,
+        "basis": "Die drei vom automatischen Verfahren als Tabellen gezählten Objekte auf PDF-Seiten 4, 5 und 7 sind die Balkendiagramme Abbildung 1 bis 3. Das PDF enthält keine semantische Tabelle. Im Markdown sind die drei Abbildungsbeschriftungen, Bildplatzhalter und die jeweils anschließende textliche Interpretation vorhanden."
+      },
+      "decision": "approved_for_screening",
+      "issues": [
+        "Die drei Diagramme selbst sind im Markdown nur als Bildplatzhalter enthalten; Beschriftungen und die für das Screening wesentlichen Befunde stehen im Fließtext.",
+        "Wiederkehrende Zeitschriften-Kopfzeilen wurden mehrfach als Überschriften der Ebene 2 klassifiziert, ohne die Reihenfolge der fachlichen Hauptabschnitte zu verändern."
+      ],
+      "evidence": [
+        "PDF-Seiten 1 bis 20 und Markdown-PAGE-Marker 1 bis 20 stimmen in Beginn, Ende und Seitenfolge überein.",
+        "PDF-Seiten 4, 5 und 7 zeigen Abbildung 1 bis 3 als Balkendiagramme; Markdown-Zeilen 72 bis 74, 88 bis 90 und 112 bis 114 enthalten jeweils Beschriftung und Bildplatzhalter.",
+        "Die fachliche Überschriftenfolge Einleitung, Ausgangsbedingungen der Zielgruppe, Ausgangsbedingungen professioneller Beratender, Spannungsfeld, Ausblick und Limitationen sowie Literatur ist vollständig und in Quellreihenfolge vorhanden.",
+        "Der Markdown-Anfang enthält Titel, Autor:innen, Zusammenfassung und Abstract; das Ende enthält die letzten Literaturangaben einschließlich Weizenbaum (1966), wie PDF-Seite 20."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.16719/j.cnki.1671-6981.20260201",
+      "title": "Semantic Stability, Response Strategies, and Bias Analysis of Generative Artificial Intelligence in Psychological Health Education",
+      "pdf_file": "7cbaa5fc7bd51c3642ad.pdf",
+      "markdown_file": "7cbaa5fc7bd51c3642ad.md",
+      "automated_warning": "Table mismatch: PDF=1, MD=0",
+      "identity_match": true,
+      "body_complete": false,
+      "tables": {
+        "pdf_semantic_tables": 7,
+        "markdown_semantic_tables": 0,
+        "material_loss": true,
+        "basis": "Die visuelle Prüfung weist sieben semantische Tabellen aus: Forschungswerkzeuge und Prompt-Handbuch auf PDF-Seiten 3 bis 4 sowie die Ergebnistabellen 3 bis 7 auf PDF-Seiten 8 bis 10. Im Markdown stehen nur Tabellenbeschriftungen und Bildplatzhalter; Zeilen-, Spalten- und Messwerte fehlen vollständig."
+      },
+      "decision": "requires_reconversion",
+      "issues": [
+        "Alle sieben semantischen Tabellen sind als strukturierte Inhalte verloren gegangen.",
+        "Tabelle 2 mit 21 psychologischen Promptfragen fehlt vollständig und ist für die Reproduzierbarkeit der Untersuchung materiell.",
+        "Die numerischen Tabellen 3, 5 und 6 sowie die kategorialen Tabellen 4 und 7 fehlen; dadurch lassen sich Modell-, Parameter- und Gendervergleiche nicht aus dem Markdown prüfen.",
+        "Mehrere fachliche Zwischenüberschriften sind nicht als Überschriften erhalten oder mit Fließtext vermischt, darunter 2.4.4, 3.2, 3.2.2, 3.3 und 3.4."
+      ],
+      "evidence": [
+        "PDF-Seite 3 enthält Tabelle 1 mit sechs Werkzeugschritten; Markdown-Zeile 61 enthält nur die Beschriftung.",
+        "PDF-Seite 4 enthält Tabelle 2 mit Q1 bis Q21, Kategorien und vollständigen Prompttexten; Markdown-Zeile 65 enthält nur die Beschriftung.",
+        "PDF-Seite 8 enthält Tabelle 3 mit 21 Zeilen und sechs Kennwertspalten; Markdown-Zeilen 173 bis 175 enthalten Beschriftung und Bildplatzhalter ohne Werte.",
+        "PDF-Seite 9 enthält Tabellen 4 und 5; Markdown-Zeilen 193 bis 201 enthalten nur Beschriftungen und die Anmerkung N/A.",
+        "PDF-Seite 10 enthält Tabellen 6 und 7; Markdown-Zeilen 217 bis 223 enthalten Bildplatzhalter und zusammengezogene Beschriftungen ohne Tabellendaten.",
+        "Der übrige Lauftext beginnt mit chinesischem Titel und Abstract, führt durch Methoden, Ergebnisse, Diskussion und Schluss und endet nach den Referenzen mit dem englischen Abstract wie PDF-Seite 13."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.18653/v1/2026.findings-acl.418",
+      "title": "Mitigating Cultural Bias in LLMs via Multi-Agent Cultural Debate",
+      "pdf_file": "a1c7e9db9a3dc6caff54.pdf",
+      "markdown_file": "a1c7e9db9a3dc6caff54.md",
+      "automated_warning": "Low text ratio: 25.97%",
+      "identity_match": true,
+      "body_complete": false,
+      "tables": {
+        "pdf_semantic_tables": 4,
+        "markdown_semantic_tables": 4,
+        "material_loss": true,
+        "basis": "Das PDF enthält vier nummerierte semantische Tabellen, und das Markdown erzeugt vier Pipe-Tabellen. Tabelle 1 ist weitgehend zeilen- und spaltengetreu. Tabelle 2 fasst jeweils drei Datenzeilen in eine Markdown-Zeile zusammen und ersetzt Häkchen durch '/check'. Tabelle 3 ist durch massive Zeilen- und Spaltenverschmelzung nicht zuverlässig zuzuordnen. In Tabelle 4 sind Werte mehrerer PDF-Zeilen in einzelne Markdown-Zellen verschoben oder zusammengezogen."
+      },
+      "decision": "requires_reconversion",
+      "issues": [
+        "Tabelle 3 mit den vollständigen CEBiasBench-Ergebnissen ist im Markdown semantisch unbrauchbar: Methoden-, Generator-/Evaluator- und Ergebniszeilen sind über lange Zellen und falsche Spalten vermischt.",
+        "Tabelle 4 verschiebt Werte zwischen den Zeilen; beispielsweise werden in der Direct/GPT-5-Zeile die PDF-Werte für Direct/GLM4 teilweise als zusätzliche Werte derselben Markdown-Zellen geführt.",
+        "Tabelle 2 komprimiert drei Datenzeilen je Ablationsblock in eine einzige Zeile und gibt Häkchen als '/check' wieder.",
+        "Der automatisierte Hinweis auf ein niedriges Textverhältnis erkennt den eigentlichen Fehler nicht; die zusätzliche Markdown-Zeichenmenge stammt wesentlich aus fehlstrukturierten Großtabellen."
+      ],
+      "evidence": [
+        "PDF-Seite 7 und Markdown-Zeilen 189 bis 221 zeigen Tabelle 1 mit 12 Spalten und den englischen und chinesischen Ergebnissen; diese Tabelle ist inhaltlich weitgehend erhalten.",
+        "PDF-Seite 8 zeigt Tabelle 2 mit getrennten Zeilen für jede Ablationsvariante; Markdown-Zeilen 261 bis 268 bündeln die Varianten blockweise und enthalten '/check' statt der Quellsymbole.",
+        "PDF-Seiten 12 bis 13 zeigen Tabelle 3 als klar gegliederte Ergebniszeilen; Markdown-Zeilen 370 bis 397 enthalten stattdessen extrem lange, spaltenübergreifend vermischte Zellen.",
+        "PDF-Seite 13 zeigt Tabelle 4 mit acht Methoden-/Evaluatorzeilen; Markdown-Zeilen 437 bis 447 enthalten zusammengezogene und verschobene Zellen, etwa '0 0' und '33 4' in der Direct/GPT-5-Zeile.",
+        "Titel, Autor:innen, Abstract, Hauptabschnitte 1 bis 6, Limitations, Ethics Statement, Acknowledgments, References und Anhänge A bis F sind in der Quellreihenfolge vorhanden; der letzte Absatz zu den CAMeL-Ergebnissen entspricht dem Ende von PDF-Seite 13."
+      ]
+    }
+  ]
+}

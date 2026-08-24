@@ -12,18 +12,23 @@ This folder holds one deterministic PRISM decision file per reviewer.
 
 The editor interface has no backup, import, reconciliation, project-administration, or report panel. Those data functions remain internal utilities and test contracts. The browser keeps a recovery copy when a physical write fails.
 
-Both reviewers screen the full batch independently. Different reviewer keys produce different files. Git commit authorship records personal provenance while the short key keeps the research data compact.
+Both reviewers screen the full batch in operationally isolated sessions. Different reviewer keys produce different files. Git commit authorship records personal provenance while the short key keeps the research data compact.
 
 ## File format
 
 ```json
 {
-  "schema": "femprompt-prisma-reviewer/0.3",
+  "schema": "femprompt-prisma-reviewer/0.4",
   "reviewer": "cp",
   "actor": "human",
   "updated": "2026-08-22T12:00:00.000Z",
   "decisions": {
     "<paperId>": {
+      "work_id": "work:...",
+      "version_id": "version:...",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:...",
+      "selected_version_is_preferred": true,
       "categories": { "Gender": 2 },
       "decision": "Exclude",
       "override": false,
@@ -33,6 +38,8 @@ Both reviewers screen the full batch independently. Different reviewer keys prod
       "evidence": {
         "Gender": [
           {
+            "work_id": "work:...",
+            "version_id": "version:...",
             "term": "gendered scripts",
             "snippet": "...reproduce gendered scripts of care...",
             "ts": "...",
@@ -50,10 +57,14 @@ Both reviewers screen the full batch independently. Different reviewer keys prod
 }
 ```
 
-Schema 0.2 introduced evidence and the symmetric override. Schema 0.3 adds `text_source` with `raw`, `abstract`, or `none`. `actor` and `source_layer` are additive provenance fields; legacy `origin` remains readable. Files using schema 0.1 or 0.2 still load. PRISM writes schema 0.3 with paper identifiers in stable order.
+Schema 0.2 introduced evidence and the symmetric override. Schema 0.3 added `text_source` with `raw`, `abstract`, or `none`. Schema 0.4 is the current isolated capture format and binds the decision plus every new Paper evidence item to a stable Work and exact publication Version. `actor` and `source_layer` are additive provenance fields; legacy `origin` remains readable. Files using schema 0.1 through 0.3 still load. An offline historical Excel migration remains schema 0.3 until a corpus mapping is available; the normal in-app migration writes schema 0.4. PRISM writes new screening captures with paper identifiers in stable order.
 
-Agentenpiloten use `?trial=1&actor=agent&reviewer=<key>`. They write no production file during the run and export their isolated track through the visible `Testdaten exportieren` action. Their manifests and reports live under `tests/review-cases/agent-runs/`. A later production merge requires explicit operator acceptance and preserves the exported actor, reviewer, text-source, and evidence provenance.
+Schema 0.5 is the governed productive format. It adds embedded `provenance`, immutable `annotations`, deterministic `checks`, and `lifecycle` objects to every decision. Its status sequence is `identified → curated → agent-annotated → ai-agent-reviewed → verified → publication-approved`. The verification mode preserves the complete 0.5 envelope. An expert outcome can accept, correct and accept, request changes, or reject. Corrections append a version with `supersedes`, reason, actor, timestamp, and field-level differences. The public Literature Landscape admits only `publication-approved` records.
 
-`ar2.json` is the ratified ten-paper agent-consensus track. Two independent blind reviews were transcribed through isolated PRISM trial sessions, checked against 20 source records and 115 evidence passages, and adjudicated independently against the Paper layer. The accepted consensus contains seven Includes, one Unclear, two Excludes, and 58 verified positive evidence passages. The productive file carries `status: ratified_agent_consensus`; its ratification object fixes the consensus hash, both unchanged input-track hashes, and the documented operator acceptance. The run manifest, raw tracks, evaluation, and executable verification live under `tests/review-cases/agent-runs/ratification-ar2-20260822/`.
+The Codex-native agent path begins with two operationally isolated source-coding packets. Each packet is validated against its manifest, assigned Work and Paper Version, source hashes, controlled vocabularies, decision thresholds, and exact quotations. The orchestrator then projects it through PRISM's production validation, import, record-requirement, and serialization functions. New run manifests use schema 1.3; historical schemas remain valid records of their execution. Run manifests, packets, tracks, and reports live under `tests/review-cases/agent-runs/`. A productive projection always requires a separate source-grounded AI Agent Review and preserves actor, reviewer, Work-Version identity, text-source, source-hash, and evidence provenance. The visible PRISM interface remains available for domain-expert verification and browser acceptance testing.
 
-Earlier expert and model assessments come from `docs/data/research_vault_v2.json`. They stay hidden until the independent reviewer decision has been saved. Records below `tests/review-cases/` are acceptance fixtures and never become research decisions without explicit human acceptance.
+`ar2.json` is the append-only schema-0.5 productive agent track. Exact run membership, work and record identities, transfer mode, integration product, and execution history are recorded in its `review_runs` entries and the corresponding directories under `tests/review-cases/agent-runs/`. Earlier visible PRISM pilots and later deterministic PRISM transfers retain their distinct provenance.
+
+Every productive decision carries `status: ai-agent-reviewed`. Embedded provenance retains track references, prompt and model metadata where available, the Paper source and hash, ordered events, and the active annotation snapshot. Deterministic lifecycle-contract receipts appear under `checks` where the producing run recorded them. No record is marked `verified` or `publication-approved`. Exact integration products, raw tracks, reports, manifests, and executable checks remain under the corresponding directories in `tests/review-cases/agent-runs/`.
+
+Earlier expert and model assessments come from `docs/data/research_vault_v2.json`. They stay hidden until the reviewer has saved the current decision. Records below `tests/review-cases/` are acceptance fixtures and do not become research decisions through test execution.

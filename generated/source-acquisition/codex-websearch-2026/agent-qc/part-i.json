@@ -1,0 +1,72 @@
+{
+  "schema": "femprompt-markdown-agent-qc/0.1",
+  "reviewer": "Codex subagent source QC I",
+  "reviewed_at": "2026-08-24",
+  "records": [
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1016/j.caeai.2026.100602",
+      "title": "Beyond “painting in pink”: A critical case study of all-girls generative AI workshops in a European makerspace and implications for gender equity in computing",
+      "pdf_file": "generated/pdfs/codex-websearch-2026/4dd9fd2a26f9d7eea07a.pdf",
+      "markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-clean/4dd9fd2a26f9d7eea07a.md",
+      "automated_warning": "Automated validation: WARNING (Table mismatch: PDF=0, MD=3); direct QC found material table loss",
+      "identity_match": true,
+      "body_complete": false,
+      "tables": {
+        "pdf_semantic_tables": 3,
+        "markdown_semantic_tables": 3,
+        "material_loss": true,
+        "basis": "Das PDF enthält die drei nummerierten Tabellen 1–3. Das Markdown erzeugt drei Pipe-Tabellen, doch Tabelle 1 enthält abgeschnittene und zwischen Zeilen verschobene Zellinhalte; Tabelle 3 reduziert die hierarchische Kategorien-, Themen- und Codestruktur auf drei unvollständige Datenzeilen. Tabelle 2 ist inhaltlich weitgehend erhalten. Die automatische PDF-Tabellenerkennung mit dem Wert 0 ist für diesen visuell gesetzten Artikel unzutreffend."
+      },
+      "decision": "requires_reconversion",
+      "issues": [
+        "Der tatsächlich erworbene Volltext ist die im institutionellen UCL-Repositorium bereitgestellte Kopie der Version of Record vom 4. Mai 2026 mit DOI 10.1016/j.caeai.2026.100602 und UCL-EPrint 10225293.",
+        "Tabelle 1 auf PDF-Seite 3 ist materiell beschädigt. Mehrere Zellen enden mitten im Inhalt; Inhalte der Zeile Digital Youth Divas wandern in die folgende Team-Mensa-Zeile, und der letzte Effekt dieser Zeile bricht bei `problem-` ab.",
+        "Tabelle 3 auf PDF-Seite 7 ist semantisch unvollständig. Die Untergliederung in Benefits, Concerns, Other considerations, Representation, Relationship building, Responsive approach, Issues and challenges sowie Further changes und mehrere zugehörige Codes werden zusammengezogen oder ausgelassen.",
+        "Die Titelseite ist in falscher Lesereihenfolge linearisiert: Der Beginn der Introduction steht vor dem anschließend eingefügten Abstract. DOI, Received-, Accepted- und Available-online-Angaben sowie der Lizenzhinweis der Titelseite fehlen im Markdown.",
+        "Figure 1 auf PDF-Seite 12 ist mit Beschriftung und Bildplatzhalter repräsentiert. Die visuelle Zuordnung der vier Ebenen und ihrer Maßnahmen bleibt nur im PDF erhalten; der Fließtext erläutert den Rahmen, kann die beschädigte Tabelle 3 jedoch nicht vollständig kompensieren."
+      ],
+      "evidence": [
+        "PDF- und Markdown-Seite 1 stimmen bei Titel, Qian Liu, Louise Archer, Meghna Nag Chowdhuri, Esme Freedman und Jennifer DeWitt, Institution, Keywords und Abstract überein; das PDF weist Computers and Education: Artificial Intelligence 10 (2026) 100602 aus.",
+        "Alle 15 PDF-Seiten besitzen genau einen korrespondierenden PAGE-Marker im Markdown. PDF und Markdown enden mit derselben letzten Referenz von Zhang et al. (2024).",
+        "Introduction, Literature review mit den Unterabschnitten 2.1–2.3, Methods mit 3.1–3.3, Findings mit 4.1–4.2.2, Discussion mit 5.1–5.2, Conclusion, Erklärungsabschnitte und References sind vorhanden und in fachlicher Quellreihenfolge.",
+        "Der direkte Vergleich von PDF-Seite 3 mit den Markdown-Zeilen 80–88 zeigt die abgeschnittenen und verschobenen Inhalte in Tabelle 1; die PDF-Seite enthält fünf klar getrennte Programmzeilen mit sechs Spalten.",
+        "Der direkte Vergleich von PDF-Seite 7 mit den Markdown-Zeilen 172–198 zeigt: Tabelle 2 bleibt mit neun Datenquellenzeilen erhalten, während Tabelle 3 im Markdown wesentliche hierarchische Zeilen und Codes verliert.",
+        "PDF-Seite 12 und die Markdown-Zeilen 400–412 enthalten Figure 1 und dieselbe Beschriftung; im Markdown steht anstelle der Grafik ein Bildplatzhalter."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1007/s44155-026-00463-x",
+      "title": "An ethical framework for assessing artificial intelligence as augmentation or automation in social work",
+      "pdf_file": "generated/pdfs/codex-websearch-2026/f30907f71818e5803100.pdf",
+      "markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-clean/f30907f71818e5803100.md",
+      "automated_warning": "Automated validation: PASS; direct QC found material table and heading corruption",
+      "identity_match": true,
+      "body_complete": false,
+      "tables": {
+        "pdf_semantic_tables": 2,
+        "markdown_semantic_tables": 2,
+        "material_loss": true,
+        "basis": "Das PDF enthält zwei nummerierte Tabellen, und das Markdown enthält zwei Pipe-Tabellen. In Tabelle 1 ist der Schluss der letzten Zelle auf PDF-Seite 12 außerhalb des Pipe-Blocks abgelegt; wiederkehrender Seitenkopftext wird als `ARTIC/E`, `IN` und `PRESS` in mehrere Tabellenzellen eingefügt. Tabelle 2 enthält dieselben Seitenkopfartefakte in drei Ergebniszellen. Die fachlichen Aussagen sind im lokalen Text teilweise auffindbar, ihre zuverlässige Zeilen- und Spaltenzuordnung ist jedoch materiell beschädigt."
+      },
+      "decision": "requires_reconversion",
+      "issues": [
+        "Der lokale Volltext ist ausdrücklich das akzeptierte, redaktionell unbearbeitete Manuskript beziehungsweise Article in Press vom 5. August 2026; es wurde am 29. Juli 2026 angenommen. Bibliografisch bevorzugt bleibt die noch ausstehende beziehungsweise später ersetzende Version of Record unter derselben DOI 10.1007/s44155-026-00463-x.",
+        "Der laufende Kopf `ARTICLE IN PRESS` beziehungsweise `ACCEPTED MANUSCRIPT ARTICLE IN PRESS` wird auf fast allen Seiten als Überschrift oder als Textfragment übernommen und erscheint innerhalb von Fließtext, Tabellen und Literaturangaben als `ARTIC/E IN PRESS`.",
+        "Tabelle 1 auf PDF-Seiten 11–12 verliert ihre strukturelle Kontinuität: `termination, crisis response)?` steht auf Markdown-Seite 12 außerhalb der letzten Tabellenzelle. Weitere Zellen enthalten die eingefügten Fragmente `IN`, `PRESS` und `ARTIC/E`.",
+        "Tabelle 2 auf PDF-Seite 17 besitzt zwar alle drei Fallzeilen, enthält im Markdown aber ebenfalls die fremden Fragmente `PRESS`, `ARTIC/E` und `IN` in fachlichen Ergebniszellen.",
+        "Mehrere fachliche Überschriften sind nicht als eigene Überschriften erhalten, sondern mit dem vorherigen Absatz oder einer anderen Überschrift verschmolzen: 2.2 Case selection criteria, 5. From artificial to augmented intelligence, 6.1 Why three ethical traditions, 6.3 Core social-work values und 7.2 Case 2.",
+        "Das Literaturverzeichnis ist vollständig bis WHO (2021), doch mehrere eigenständige Referenzen sind durch die einspaltige Linearisierung zu gemeinsamen Listenpunkten zusammengezogen und mit Seitenkopfartefakten durchsetzt.",
+        "Das PDF enthält keine semantische Inhaltsabbildung. Die zwei Markdown-Bildplatzhalter beziehen sich auf Deckblatt- beziehungsweise Layoutbestandteile und nicht auf eine fachliche Figure."
+      ],
+      "evidence": [
+        "PDF- und Markdown-Seite 1 stimmen bei Titel, Kwangseon Hwang, Received 18 April 2026, Accepted 29 July 2026, DOI und dem ausdrücklichen Hinweis auf die uneditierte frühe Manuskriptfassung überein.",
+        "PDF-Seite 2 und Markdown-Seite 2 enthalten Titel, Autor, Gachon University, ORCID, Abstract, Keywords und den Beginn der Introduction; die Identität des Accepted Manuscript ist damit belegt.",
+        "Alle 26 PDF-Seiten besitzen genau einen korrespondierenden PAGE-Marker im Markdown. Der Text endet in beiden Fassungen mit den Referenzen Webb (2006) und World Health Organization (2021).",
+        "Die fachlichen Abschnitte 1–11, die drei Fallanalysen, Erklärungen und References sind in Textform vorhanden; die Überschriften 2.2, 5, 6.1, 6.3 und 7.2 sind im Markdown jedoch in umgebenden Text eingebettet.",
+        "PDF-Seiten 11–12 zeigen Tabelle 1 als fünfspaltige Matrix mit vier Wertzeilen. Die Markdown-Zeilen 183–198 enthalten den Pipe-Block mit der abgetrennten Zellfortsetzung und den eingefügten Seitenkopfsegmenten.",
+        "PDF-Seite 17 zeigt Tabelle 2 mit sechs Spalten und drei Fallzeilen. Die Markdown-Zeilen 276–282 enthalten dieselben Zeilen, aber drei durch laufenden Seitenkopftext verunreinigte Zellen.",
+        "Die visuelle Prüfung aller 26 PDF-Seiten bestätigt den durchgehenden ARTICLE-IN-PRESS-Kopf und das Wasserzeichen; diese Layoutbestandteile erklären die wiederkehrenden Konvertierungsartefakte, ohne die Fassung zu einer Version of Record zu machen."
+      ]
+    }
+  ]
+}

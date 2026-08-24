@@ -29,17 +29,17 @@ analysis profiles, and evidence drill-down from the productive PRISM track throu
 `src/publish/generate_literature_landscape.py`. Provisional tracks remain visibly provisional, and thematic
 aggregates include only included papers with complete analysis records.
 
-The public application is framework-free and uses pinned local runtime assets. The ten review categories are generated from `assessment/categories.yaml` into one frontend schema. Corpus records carry a stable work identity and an explicit knowledge-document coverage status, which distinguishes record links from unique published documents. The Literature Landscape stores its view, filters, profile, and selection in the URL.
+The public application is framework-free and uses pinned local runtime assets. The ten review categories are generated from `assessment/categories.yaml` into one frontend schema. Corpus records carry a stable Work identity, an exact publication Version, and an explicit knowledge-document coverage status. The canonical registry retains Preprints, Accepted Manuscripts, Versions of Record, corrected Versions, and duplicate bibliographic records as distinct, traceable expressions of the same Work. Screening coverage applies once per Work; evidence remains bound to the Version read. The Literature Landscape stores its view, filters, profile, and selection in the URL.
 
 ## Screening Tool (PRISM)
 
-Screening runs through **PRISM** ([`docs/prisma.html`](docs/prisma.html)), the project's binding PRISMA-trAIce screening instrument, distinct from the PRISMA reporting standard. The first-round corpus and the round-two update are carried through the same record machinery. The review counts complete only after the binding human pass and reconciliation. The operative state is in [`knowledge/plan.md`](knowledge/plan.md).
+Screening runs through **PRISM** ([`docs/prisma.html`](docs/prisma.html)), the project's binding PRISMA-trAIce screening instrument, distinct from the PRISMA reporting standard. The first-round corpus and the round-two update are carried through the same record machinery. Round-two AI agents prepare the records, a separate AI Agent Review checks their Paper support, and domain experts later verify the completed corpus. Publication approval is recorded separately. The operative state is in [`knowledge/plan.md`](knowledge/plan.md).
 
-Controlled agent reviews use the ratified [`prompts/prism-agent-reviewer.md`](prompts/prism-agent-reviewer.md), the project-local [`prism-agent-review` skill](skills/prism-agent-review/SKILL.md), and a hashed run manifest based on [`tests/review-cases/agent-runs/run-template.json`](tests/review-cases/agent-runs/run-template.json). Independent tracks remain outside productive research data until the [`ratification evaluator`](prompts/prism-ratification-evaluator.md) has passed them and the acceptance is documented.
+Controlled agent reviews use [`prompts/prism-agent-reviewer-v1.1.md`](prompts/prism-agent-reviewer-v1.1.md), the project-local [`prism-agent-review` skill](skills/prism-agent-review/SKILL.md), and a hashed run manifest based on [`tests/review-cases/agent-runs/run-template.json`](tests/review-cases/agent-runs/run-template.json). Productive integration requires two manifest-bound coding packets, deterministic projection through PRISM's production contract, and a separate source-grounded AI Agent Review. The current per-work processing state is generated in [`generated/agent-screening-queue.json`](generated/agent-screening-queue.json), while the append-only productive track is [`docs/data/screening/ar2.json`](docs/data/screening/ar2.json).
 
 ## Research Vault
 
-Subject knowledge of the review lives in [`research-vault/`](research-vault/README.md) under the Grounded-Vault layer model: bibliographic records, one distillate per source, and atomic claims organised in topic maps, each layer referencing only the one below it. Three of the five layers are built. The anchor layer over the full texts is not, because it would carry licensed full texts of third parties and stays gitignored; the distillates therefore carry `migrated`, not `grounded`, and the deliverable layer is empty. A distillate enters the vault only once its evidence resolves verbatim in the committed full text; what a deterministic re-match could not resolve waits in `research-vault/waitlist.md` for binding human verification and is not part of the vault. The claim layer's anchors are checked by `src/publish/check_claims.py`, and the `grounded` status of that layer holds only while the check passes.
+Subject knowledge of the review lives in [`research-vault/`](research-vault/README.md) under the Grounded-Vault chain `00_sources → 10_markdown → 20_distillates → 30_assertions → 40_output`. Protected full texts remain local, while references, distillates, Assertions, and output documents retain resolvable links across adjacent layers. A distillate enters the active vault only after its evidence resolves against the reviewed Paper representation. Unresolved evidence remains in `research-vault/waitlist.md` for domain-expert verification. `src/publish/validate_research_vault.py` checks the active chain, and `src/publish/check_claims.py` remains the compatibility check for the legacy Claim layer.
 
 ## Testing
 
@@ -64,7 +64,7 @@ skills/                    # Project-local controlled review workflow
 docs/                      # Evidence Companion and PRISM tool (GitHub Pages)
 knowledge/                 # Project documentation (single source of truth)
 research-vault/            # Subject knowledge of the review in the Grounded-Vault layer model
-paper/                     # Follow-up paper (draft, outline, expert questions)
+paper/                     # Archived work notes, outline, and expert questions
 tests/                     # PRISM test layers: jsdom harness, browser pilot, manual checklist
 ```
 
@@ -95,4 +95,4 @@ Full project documentation is in [`knowledge/`](knowledge/INDEX.md); start at th
 
 ---
 
-*Updated: 2026-08-22*
+*Updated: 2026-08-24*

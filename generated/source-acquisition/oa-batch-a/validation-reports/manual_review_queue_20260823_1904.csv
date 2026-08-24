@@ -1,0 +1,3 @@
+Priority,Filename,Status,Confidence,Issues,Review_Reasons
+MEDIUM,4ZL5Q48E.md,WARNING,99.5,"Table mismatch: PDF=1, MD=0",table_mismatch
+MEDIUM,R7V99ERA.md,WARNING,100.0,"Table mismatch: PDF=2, MD=11",table_mismatch

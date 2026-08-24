@@ -8,15 +8,15 @@ method:
   url: https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin
 status: complete
 language: en
-version: "0.2"
+version: "0.6"
 created: 2026-02-06
-updated: 2026-06-29
+updated: 2026-08-23
 authors: [Christopher Pollin]
 generated-with: Claude Code
-related: [methods]
+related: [methods, governance, testing]
 ---
 
-The human-in-the-loop quality check for converted Markdown documents, used with the review tool `src/distill/markdown_reviewer.html` (see [[methods]], the human review step). Fill one checklist per document.
+This checklist supports the source-curation quality check for Docling Markdown with `src/distill/markdown_reviewer.html`. It determines whether a Markdown representation is suitable for downstream reading and annotation. It is separate from domain-expert verification of screening decisions and synthesized findings. Complete one checklist per document.
 
 ## Document information
 
@@ -27,7 +27,7 @@ The human-in-the-loop quality check for converted Markdown documents, used with 
 | Reviewer | |
 | Date | |
 | Confidence score | /100 |
-| Automatic status | PASS / WARNING / FAIL |
+| Automatic status | PASS / WARN / FAIL |
 
 ## 1. Structural integrity
 
@@ -43,7 +43,7 @@ Text integrity: the first paragraph after the abstract is readable and coherent,
 
 No obvious gaps: no abruptly ending sentences, no recognizably missing pages, clean page transitions with no page-break artifacts.
 
-Language quality: umlauts correct (a, o, u, ss for German texts), accents correct (e, e, n for other languages), quotation marks consistent.
+Language quality: umlauts correct (ä, ö, ü, ß for German texts), accents correct (é, è, ñ for other languages), quotation marks consistent.
 
 ## 3. Table quality
 
@@ -85,4 +85,4 @@ Tool: `src/distill/markdown_reviewer.html`. Start it via VS Code Live Server (ri
 
 Keyboard shortcuts: `1` PASS, `2` WARN, `3` FAIL, `0` reset, the arrow keys for navigation, `L` to toggle the list, `S` to toggle sync-scroll.
 
-Persistence: localStorage (automatic, across sessions), export to JSON (manual, the Export button), import from JSON (manual, the Import button). The export JSON carries the export timestamp, a summary counter (pass, warn, fail, pending), the total document count, and a filename-to-status map. Save exports as `generated/validation_reports/human_review_YYYY-MM-DD.json`. Claude can read the exported JSON to identify problematic documents, compute statistics, and recommend reconversion.
+Persistence: localStorage (automatic, across sessions), export to JSON (manual, the Export button), import from JSON (manual, the Import button). The export JSON carries the export timestamp, a summary counter (pass, warn, fail, pending), the total document count, and a filename-to-status map. Save exports as `generated/validation_reports/human_review_YYYY-MM-DD.json`. AI agents can read the exported JSON to identify problematic documents, compute statistics, and propose reconversion candidates. A person remains responsible for the source-curation verdict recorded by this checklist.

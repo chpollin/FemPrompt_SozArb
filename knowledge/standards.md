@@ -8,9 +8,9 @@ method:
   url: https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin
 status: complete
 language: en
-version: "0.3"
+version: "0.7"
 created: 2026-06-09
-updated: 2026-08-22
+updated: 2026-08-24
 authors: [Christopher Pollin]
 generated-with: Claude Code, deep-research web synthesis and full-text extraction of the primary sources
 topics: ["[[PRISMA]]", "[[Reporting Standards]]", "[[AI in Evidence Synthesis]]"]
@@ -106,33 +106,41 @@ AI that makes or suggests judgements must be declared, explicitly including stud
 
 The mandatory reporting elements (RAISE Table 1) are the AI system name(s), version(s), and date(s); the purpose and stages affected; a justification that the tool is methodologically sound; evidence of validation or performance evaluation; known limitations and biases; and financial or non-financial interests in the AI tool. RAISE points to PRISMA for the reporting mechanics and asks that inputs (prompt development), outputs, datasets, and code be made publicly available. RAISE comes as a three-part package, RAISE 1 (recommendations for practice), RAISE 2 (building and evaluating tools), RAISE 3 (selecting and using tools), Thomas et al. 2025a/b/c.
 
+## Publication versions and peer-review metadata
+
+The project uses the NISO Journal Article Versions terminology as the bibliographic basis for publication stages and Crossref's versioning guidance for relations between expressions. A Work denotes the underlying scholarly contribution. A Version denotes the exact expression used by the review, including a Preprint, Accepted Manuscript, proof, Version of Record, or corrected Version of Record. The operational vocabulary in `docs/data/work_version_contract.json` extends these terms where the corpus needs a submitted manuscript, working paper, enhanced Version of Record, or unknown stage.
+
+Publication stage and peer-review status answer different questions. An Accepted Manuscript indicates acceptance and therefore normally follows journal peer review, but the metadata records the supporting basis explicitly. A Version of Record identifies the publisher's definitive expression and carries no automatic project-level assertion about the venue's review procedure. Preprints can later relate to an Accepted Manuscript or Version of Record without losing their own identifiers. The registry therefore stores `version_type`, `peer_review_status`, and `peer_review_basis` independently.
+
+The preferred Version is the expression normally selected for screening under the project rule: a current corrected or enhanced Version of Record outranks a Version of Record, followed by an Accepted Manuscript and then a Preprint. Access and integrity constraints can alter that choice. The latest Version is determined chronologically and remains a separate field. This project mapping is an operational decision documented in [[specification#ADR-037 Stable Work identity and exact publication Version provenance]].
+
 ## Mapping onto this project's workflow
 
-The dual assessment track and benchmark already satisfy most of the demanding requirements. The figures that back the "Satisfied" judgements live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion; this table states only the mapping and the status. Status values are Satisfied, Partial, or Gap. This section is the AI-layer summary; the full per-item conformance lives in the artefact named under "Konformanzstand dieses Reviews".
+The project has two reporting situations. Round one is a conducted comparative expert and LLM assessment that can only be rendered retrospectively from its surviving records. Round two uses a governed agent workflow whose domain-expert verification remains open. The evidence behind the status judgements lives in the data, run manifests, generated conformance map, and the Evidence Companion. Status values are Satisfied, Partial, or Gap.
 
 | Requirement | Project artefact | Status |
 |---|---|---|
-| trAIce M2: tool identity | Claude Haiku 4.5 and Sonnet 4.6 (model IDs); four Deep Research models (ChatGPT, Claude, Gemini, Perplexity) for identification | Satisfied |
-| trAIce M3: stage and task | Identification (deep research), Screening (10K assessment), Synthesis (3-stage SKE), each documented | Satisfied |
-| trAIce M4: input data | Title and abstract vs knowledge documents, tracked per paper (`Input_Source`); the 2x2 experiment; in PRISM every decision records the paper-layer text actually read (`text_source`, schema 0.3, ADR-027) and the disclosure reports the per-source counts | Satisfied |
-| trAIce M5: output format and post-processing | Structured JSON, per-category booleans, confidence scores; deterministic stage 2 | Satisfied |
-| trAIce M6: prompts and parameters | `prompts/` governance, `CHANGELOG.md`, negative constraints, per-prompt max_tokens; temperature, top-p, and confidence thresholds not yet disclosed | Partial |
-| trAIce M8: human oversight | Full dual track, both expert and LLM screening run parallel and independent across the corpus; the expert decision is binding | Satisfied for expert oversight; no inter-human baseline |
-| trAIce M9 and R2: AI performance evaluation | Confusion matrix, Cohen's kappa for the decision and the ten categories, base rates, and divergence analysis against one expert track | Satisfied as an expert-reference comparison; no human consensus standard |
-| trAIce R1: flow diagram, AI vs human split | The recorded AI and human decisions exist; the report utilities render the adapted flow diagram from those records | Built (report utilities); paper text pending |
-| trAIce M10: data governance | `.vault_cache/` (reproducible API cache), open repository | Satisfied |
-| trAIce M1: protocol pre-registration of AI use | No PROSPERO or OSF protocol on record | Gap |
-| RAISE P1: accountability | Expert track epistemically binding; the responsibility-asymmetry framing in [[project]] | Satisfied |
-| RAISE P2: human oversight | Dual track, human decision binding | Satisfied |
-| RAISE P3: transparent reporting of AI judgements | Repo and prompt governance, but no single consolidated AI-disclosure section yet | Partial |
-| RAISE Table 1: justification and validation evidence | The benchmark is the validation evidence; it needs explicit framing as such | Partial |
-| RAISE Table 1: conflicts of interest in AI tool | Not yet declared | Gap |
+| trAIce M2: tool identity | Model identifiers are stored in round-one artifacts and each governed round-two run; identification systems are named in the method record | Partial because some round-one execution metadata is unrecoverable |
+| trAIce M3: stage and task | Identification, text preparation, screening, AI Agent Review, analysis, and drafting are distinguished by activity | Satisfied |
+| trAIce M4: input data | Round one distinguishes title and abstract from knowledge-document conditions; PRISM records the Paper source actually read and each run binds source hashes | Satisfied for recorded operations |
+| trAIce M5: output format and post-processing | Structured JSON, immutable annotation versions, deterministic PRISM projection, and recorded derivations | Satisfied |
+| trAIce M6: prompts and parameters | Versioned prompts and changelog for current runs; legacy prompt instances and some decoding parameters remain unavailable | Partial |
+| trAIce M8: human oversight | Round one has a consolidated expert annotation and a separately executed LLM assessment. Round two assigns final verification to domain experts after AI Agent Review | Partial until round-two domain-expert verification is complete; no round-one inter-human baseline |
+| trAIce M9 and R2: AI performance evaluation | Canonical replay, full statistic set, and divergence analysis against the consolidated expert track | Satisfied as an expert-reference comparison; no human consensus standard |
+| trAIce R1: flow diagram, AI versus human split | Actor and activity records support the adapted flow rendering | Built; final paper rendering pending |
+| trAIce M10: data governance | Versioned research data, local rights-gated full texts, source hashes, and explicit public-release boundary | Satisfied |
+| trAIce M1: protocol pre-specification of AI use | Round one has no pre-specified protocol. Round two has an initial protocol and dated amendments | Gap for round one; Partial for round two |
+| RAISE P1: accountability | [[governance]] assigns final scholarly authority and publication approval to people | Satisfied |
+| RAISE P2: human oversight | Domain-expert verification is implemented as a distinct lifecycle stage | Partial until the intended corpus has been verified |
+| RAISE P3: transparent reporting of AI judgements | Run manifests, prompt governance, actor provenance, and disclosure fields are implemented | Partial until the final consolidated disclosure is generated |
+| RAISE Table 1: justification and performance evidence | Round-one benchmark, governed round-two runs, and [[verification]] provide the evidence structure | Partial until the completed workflow is verified |
+| RAISE Table 1: conflicts of interest in AI tool | Declaration required in the final manuscript | Gap |
 
 ## Konformanzstand dieses Reviews
 
-Der Item-für-Item-Status dieses Reviews gegen PRISMA 2020, PRISMA-trAIce und RAISE liegt als maschinenlesbares Artefakt in `generated/conformance/conformance_map.yaml`. Jeder Eintrag trägt Standard, Item-Kennung, Kurzbezeichnung, Status (reconstructable, partial, gap, not_applicable), Quellpfad oder benannte Lücke und die Nuance, die nicht in die Felder passt. R4 (Stage R der Datensatzerzeugung in [[plan]]) speist sich aus dieser Datei; die R2-Wiedergabe liefert die zählenden Werte, die Konformanzbewertung liest die partial- und gap-Zeilen als ihren Abschnitt zur ehrlichen Konformanz.
+Der Item-für-Item-Status dieses Reviews gegen PRISMA 2020, PRISMA-trAIce und RAISE liegt als maschinenlesbares Artefakt in `generated/conformance/conformance_map.yaml`. Jeder Eintrag trägt Standard, Item-Kennung, Kurzbezeichnung, Status (reconstructable, partial, gap, not_applicable), Quellpfad oder benannte Lücke und die Nuance, die nicht in die Felder passt. Der Record-Generator speist sich aus dieser Datei. Die Round-one-Wiedergabe liefert die zählenden Werte, während die Konformanzbewertung die `partial`- und `gap`-Einträge in die transparente Berichterstattung übernimmt.
 
-Die zählenden Items behauptet der committete Replay `src/replay/replay_round1.py`. Er paart die Roh-CSVs über den Zotero_Key, reproduziert die kanonische `generated/benchmark-results/agreement_metrics.json` als Selbsttest und schreibt danach `flow_model.json` und `agreement_replay.json` nach `generated/benchmark-results/replay/`. Für ein zählendes Item heisst der Status reconstructable damit, dass sein Wert aus diesen Ausgaben fällt; R4 liest sie, wenn es den Record baut, und jede frühere Handzählung ist abgelöst.
+Die zählenden Items behauptet der committete Replay `src/replay/replay_round1.py`. Er paart die Roh-CSVs über den `Zotero_Key`, reproduziert die kanonische `generated/benchmark-results/agreement_metrics.json` als Selbsttest und schreibt danach `flow_model.json` und `agreement_replay.json` nach `generated/benchmark-results/replay/`. Für ein zählendes Item bedeutet der Status `reconstructable`, dass sein Wert aus diesen Ausgaben hervorgeht. Der Record-Generator liest diese Ausgaben; frühere Handzählungen sind damit abgelöst.
 
 Die zentrale, retrospektiv unreparierbare Lücke ist das fehlende Runde-1-Protokoll (PRISMA-trAIce M1, PRISMA 24a-c). Der KI-Einsatz war in Runde 1 nicht vorab spezifiziert. Für Runde 2 lag ein erster Protokollstand vor den Suchen vor; einzelne operative Regeln wurden während oder nach der Ausführung als datierte Amendments festgelegt. Prospektive Konformanz wird deshalb nur für jene Operationen beansprucht, deren einschlägige Regeln nachweislich vorher committet waren.
 
@@ -140,18 +148,9 @@ Drei weitere benannte Lücken hängen am Korpus statt an einem Checklistenpunkt 
 
 Die meta-analytischen PRISMA-Items sind für diesen Reviewtyp not_applicable. Als qualitatives Feld-Review mit Screening und Kategorisierung, ohne Meta-Analyse, ohne studienweise Risk-of-Bias-Bewertung, ohne Effektmasse und ohne Gewissheitsbewertung, treffen die Items 11 bis 15 sowie 18, 20, 21 und 22 nicht zu.
 
-## Concrete improvements (the to-do list this yields)
+## Interpretation for this review
 
-1. Register the amended literature-update protocol in OSF or PROSPERO before a future prospective update run. The current in-repository protocol documents both its initial draft and its dated post-search amendments; it does not retroactively close the original M1 gap.
-2. Auto-generate a consolidated AI-disclosure section or supplementary table from the screening data, covering model name, version, date, stage, task, prompt version, decoding parameters, confidence threshold, validation metrics, known limitations. This is a tool feature and closes trAIce M6 (parameters), RAISE Table 1, and P3 at once.
-3. Disclose decoding parameters and any confidence threshold in the assessment prompt config so M6b is explicit and reproducible.
-4. Declare conflicts of interest regarding the AI tools used (RAISE Table 1, final row).
-5. Render the PRISMA-trAIce adapted flow diagram (AI vs human split) through the report utilities, which remain separate from the working Screening view under ADR-029. The exportable flow artefact and the paper text come from R4, fed by the committed replay (`src/replay/`).
-6. Frame the benchmark explicitly as the trAIce M9/R2 performance evaluation against one expert track, naming the metrics and the missing inter-human reference standard in the methods text the report utilities emit.
-
-## How this legitimises the workflow
-
-PRISMA-trAIce M8 asks what proportion of AI outputs were manually verified. Every paper in round one was screened independently by both one expert and the LLM, so the project provides full expert oversight rather than a spot-check sample. M9/R2 asks for evaluation against a reference standard; the confusion matrix, kappa, and divergence analysis provide an expert-reference comparison. The absence of an inter-human baseline limits any claim that this expert track is a gold standard. RAISE's accountability principle is implemented through the binding expert record and separate AI provenance. The divergence is measurable because AI and expert decisions were recorded separately, as R1 requires.
+The round-one benchmark supports PRISMA-trAIce M9 and R2 as a comparison against one consolidated expert track. Its divergence measures differences between the recorded products. The missing inter-human baseline prevents classification of those differences as model error rates. Round two implements the M8 oversight path through deferred domain-expert verification of every intended productive record. That requirement remains partially satisfied until the verification events exist. [[verification]] carries the current evidence and authority state.
 
 ## Sources
 
@@ -167,12 +166,14 @@ AI layer:
 - PRISMA-trAIce: Holst et al. 2025, JMIR AI 4:e80247, https://ai.jmir.org/2025/1/e80247 (DOI 10.2196/80247); repository (MIT) https://github.com/cqh4046/PRISMA-trAIce; PMC mirror https://pmc.ncbi.nlm.nih.gov/articles/PMC12694947/
 - RAISE: joint position statement (Cochrane, Campbell, JBI, CEE), Nov 2025; open-access mirror https://pmc.ncbi.nlm.nih.gov/articles/PMC12603384/ (also JBI Evidence Synthesis, Cochrane Library ED000178, Environmental Evidence 10.1186/s13750-025-00374-5)
 
-## What this note does not cover
-
-It does not reproduce the full 27-item PRISMA checklist text (see the official statement) or the full RAISE 1/2/3 guidance documents (tool-selection and tool-building recommendations are out of scope here). It is a reference note, not a conduct manual; the methodological how-to stays in [[methods]], the tool's data model and UI in [[data]] and [[specification]].
+Publication versions:
+- NISO RP-8-2008, Journal Article Versions (JAV): https://niso.org/publications/niso-rp-8-2008-jav
+- Crossref, Best practices for versioning: https://crossref.org/documentation/principles-practices/best-practices/versioning/
 
 ## Related
 
 - [[specification]]
 - [[methods]]
 - [[project]]
+- [[governance]]
+- [[verification]]

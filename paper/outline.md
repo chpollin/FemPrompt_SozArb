@@ -3,22 +3,22 @@ title: "Paper Outline: Follow-up Paper (Two-Round Review Record)"
 project:
   name: FemPrompt SozArb
   repository: https://github.com/chpollin/FemPrompt_SozArb
-status: draft
+status: archived
 language: en
-version: "0.4"
+version: "0.6"
 created: 2026-06-09
-updated: 2026-07-21
+updated: 2026-08-23
 authors: [Christopher Pollin]
 generated-with: Claude Code
 method:
   name: Promptotyping
   url: https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin
-related: [plan]
+related: [plan, verification, analysis-divergence]
 ---
 
-**SUPERSEDED IN STRUCTURE (updated 2026-07-21 to draft v0.4). `paper/draft.md` (v0.4) leads with the methodological integration question and reports the qualitative synthesis along SQ1 to SQ3 as that workflow's yield.** The framing question asks how generative AI can be integrated into a qualitative literature review so that every machine contribution remains traceable and re-executable while the domain experts' judgement stays binding, and what such a review yields. The claim stays with the documented case and its published artifacts (PRISM, replay scripts, protocols, the knowledge structure); the paper advances no general-framework or design-specification claim, and the three principles of the discussion are offered to teams that adopt the workflow. The primary reader is a social-work researcher planning an LLM-assisted review; the journal first choice is the Journal of Technology in Human Services. The divergence analysis carries two roles at once, motivation for why reliability must be established by the research process and demonstration of what the recorded per-decision data make analysable; its decomposition separates the workflow criteria a paper-isolated model cannot see from the content judgement, and it admits no error-rate reading because round one has no inter-human baseline.
+**Superseded planning record.** `research-vault/40_output/paper/paper.md` is the single canonical manuscript. This outline remains only as a dated round-one claim inventory. Its descriptions of round-two screening, authority, and manuscript section numbers are obsolete and must not be copied into the paper. The current method is governed by `knowledge/update-protocol.md`, ADR-034, and the canonical manuscript.
 
-This outline stays valid as the claims inventory. Every claim-to-source mapping below still licenses the draft's numbers. The outline's twelve sections map onto the draft's ten as follows:
+Only the round-one claim-to-source entries remain potentially reusable, and each must be checked against the current generated artifacts before use. The following mapping records how the historical outline related to an earlier manuscript structure:
 
 - outline 1 (Introduction) to draft 1 (Introduction)
 - outline 2 and 3 (standards, related work) to draft 2 (Background)

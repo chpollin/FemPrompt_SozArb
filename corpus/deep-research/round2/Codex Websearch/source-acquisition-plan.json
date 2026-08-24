@@ -1,0 +1,2665 @@
+{
+  "schema": "femprompt-source-acquisition-plan/0.2",
+  "scope": "Codex Websearch 2026 candidates",
+  "authority": "Source preparation only; acquisition does not establish PRISM inclusion or scholarly verification.",
+  "source": {
+    "path": "corpus/deep-research/round2/Codex Websearch/codex-websearch-2026-package.json",
+    "sha256": "c20e8baf135404831dba4b4d14db0134a4d0d4e890bf25c1a4a7ea36137e2129"
+  },
+  "source_recovery": {
+    "path": "corpus/deep-research/round2/Codex Websearch/source-recovery-audit.json",
+    "sha256": "b0d6e6d1aa5626a349b161a9fdba5931cc7ba3fd406335e64dc96460358ed671"
+  },
+  "rights_rule": "Automated acquisition begins only for records whose audited access state is open_access and whose full-text URL uses HTTPS. It may fall back only to another full-text URL already recorded in that Work's Version chain; the acquired Version is retained separately from the preferred Version.",
+  "counts": {
+    "candidates": 58,
+    "download_eligible": 44,
+    "with_recorded_source_url": 44,
+    "with_recorded_license": 35,
+    "with_recovery_option": 14
+  },
+  "records": [
+    {
+      "candidate_id": "codex-websearch-2026:arxiv:2505.13995",
+      "title": "Sycophantic AI decreases prosocial intentions and promotes dependence",
+      "doi": "10.1126/science.aec8352",
+      "preferred_version_date": "2026-03-26",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "preprint",
+        "date": "2025",
+        "identifier": "arXiv:2505.13995",
+        "title": "ELEPHANT: Measuring and understanding social sycophancy in LLMs",
+        "authors": [
+          "Myra Cheng",
+          "Sunny Yu",
+          "Cinoo Lee",
+          "Pranav Khadpe",
+          "Lujain Ibrahim",
+          "Dan Jurafsky"
+        ],
+        "relation_to_preferred": "alternative_recorded_version"
+      },
+      "source_options": [
+        {
+          "url": "https://arxiv.org/pdf/2505.13995",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "preprint",
+            "date": "2025",
+            "identifier": "arXiv:2505.13995",
+            "title": "ELEPHANT: Measuring and understanding social sycophancy in LLMs",
+            "authors": [
+              "Myra Cheng",
+              "Sunny Yu",
+              "Cinoo Lee",
+              "Pranav Khadpe",
+              "Lujain Ibrahim",
+              "Dan Jurafsky"
+            ],
+            "relation_to_preferred": "alternative_recorded_version"
+          },
+          "source_recovery": false
+        },
+        {
+          "url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/d3362f84979d16cee000f09eef61244c-Paper-Conference.pdf",
+          "priority": "recorded_version_fallback",
+          "source_version": {
+            "version_type": "proceedings_version",
+            "date": "2026-03-26",
+            "identifier": "ICLR:d3362f84979d16cee000f09eef61244c",
+            "title": "ELEPHANT: Measuring and understanding social sycophancy in LLMs",
+            "authors": [
+              "Myra Cheng",
+              "Sunny Yu",
+              "Cinoo Lee",
+              "Pranav Khadpe",
+              "Lujain Ibrahim",
+              "Dan Jurafsky"
+            ],
+            "relation_to_preferred": "alternative_recorded_version"
+          },
+          "source_recovery": false
+        }
+      ],
+      "access_status": "open_access",
+      "license": null,
+      "source_url": "https://arxiv.org/pdf/2505.13995",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "96199ea06371c4cdbed4.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:arxiv:2510.00232",
+      "title": "BiasFreeBench: a Benchmark for Mitigating Bias in Large Language Model Responses",
+      "doi": null,
+      "preferred_version_date": "2026-04-23",
+      "preferred_version_type": "proceedings_version",
+      "source_version": {
+        "version_type": "preprint",
+        "date": "2025-09-30",
+        "identifier": "arXiv:2510.00232",
+        "title": "BiasFreeBench: a Benchmark for Mitigating Bias in Large Language Model Responses",
+        "authors": [
+          "Xin Xu",
+          "Xunzhi He",
+          "Churan Zhi",
+          "Ruizhe Chen",
+          "Julian McAuley",
+          "Zexue He"
+        ],
+        "relation_to_preferred": "alternative_recorded_version"
+      },
+      "source_options": [
+        {
+          "url": "https://arxiv.org/pdf/2510.00232",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "preprint",
+            "date": "2025-09-30",
+            "identifier": "arXiv:2510.00232",
+            "title": "BiasFreeBench: a Benchmark for Mitigating Bias in Large Language Model Responses",
+            "authors": [
+              "Xin Xu",
+              "Xunzhi He",
+              "Churan Zhi",
+              "Ruizhe Chen",
+              "Julian McAuley",
+              "Zexue He"
+            ],
+            "relation_to_preferred": "alternative_recorded_version"
+          },
+          "source_recovery": false
+        },
+        {
+          "url": "https://openreview.net/pdf?id=Ncf2LFDT4e",
+          "priority": "recorded_version_fallback",
+          "source_version": {
+            "version_type": "proceedings_version",
+            "date": "2026-04-23",
+            "identifier": "OpenReview:Ncf2LFDT4e",
+            "title": "BiasFreeBench: a Benchmark for Mitigating Bias in Large Language Model Responses",
+            "authors": [
+              "Xin Xu",
+              "Xunzhi He",
+              "Churan Zhi",
+              "Ruizhe Chen",
+              "Julian McAuley",
+              "Zexue He"
+            ],
+            "relation_to_preferred": "preferred_version"
+          },
+          "source_recovery": false
+        }
+      ],
+      "access_status": "open_access",
+      "license": null,
+      "source_url": "https://arxiv.org/pdf/2510.00232",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "febcd242f416adc86eb1.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1007/978-3-032-27336-9_4",
+      "title": "The Role of Generative AI in Transforming Social Work Practice",
+      "doi": "10.1007/978-3-032-27336-9_4",
+      "preferred_version_date": "2026-07-14",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [],
+      "access_status": "restricted",
+      "license": null,
+      "source_url": null,
+      "download_eligible": false,
+      "eligibility_reason": "access_not_confirmed_open",
+      "local_pdf_name": "51580de8494d6f602c63.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1007/s10639-026-13908-2",
+      "title": "Teachers’ perceptions of generative AI in gender-inclusive STEM education: a grounded theory study",
+      "doi": "10.1007/s10639-026-13908-2",
+      "preferred_version_date": "2026-02-13",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [
+        {
+          "url": "https://link.springer.com/content/pdf/10.1007/s10639-026-13908-2.pdf",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "not_established",
+            "date": null,
+            "identifier": null,
+            "title": null,
+            "authors": [],
+            "relation_to_preferred": "not_established"
+          },
+          "source_recovery": false
+        }
+      ],
+      "access_status": "open_access",
+      "license": "CC BY 4.0",
+      "source_url": "https://link.springer.com/content/pdf/10.1007/s10639-026-13908-2.pdf",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "20972ab37764965190de.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1007/s43681-025-00926-y",
+      "title": "Toward substantive intersectional algorithmic fairness: desiderata for a feminist approach",
+      "doi": "10.1007/s43681-025-00926-y",
+      "preferred_version_date": "2026-01-08",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [
+        {
+          "url": "https://link.springer.com/content/pdf/10.1007/s43681-025-00926-y.pdf",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "not_established",
+            "date": null,
+            "identifier": null,
+            "title": null,
+            "authors": [],
+            "relation_to_preferred": "not_established"
+          },
+          "source_recovery": false
+        }
+      ],
+      "access_status": "open_access",
+      "license": "CC BY 4.0",
+      "source_url": "https://link.springer.com/content/pdf/10.1007/s43681-025-00926-y.pdf",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "014fa29a31624d80e530.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1007/s43681-026-01161-9",
+      "title": "Beyond inclusion: feminist AI for transformative justice in STEM",
+      "doi": "10.1007/s43681-026-01161-9",
+      "preferred_version_date": "2026-05-20",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [
+        {
+          "url": "https://link.springer.com/content/pdf/10.1007/s43681-026-01161-9.pdf",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "not_established",
+            "date": null,
+            "identifier": null,
+            "title": null,
+            "authors": [],
+            "relation_to_preferred": "not_established"
+          },
+          "source_recovery": false
+        }
+      ],
+      "access_status": "open_access",
+      "license": "CC BY 4.0",
+      "source_url": "https://link.springer.com/content/pdf/10.1007/s43681-026-01161-9.pdf",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "eb3406e6b996a77368bd.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1007/s44155-026-00463-x",
+      "title": "An ethical framework for assessing artificial intelligence as augmentation or automation in social work",
+      "doi": "10.1007/s44155-026-00463-x",
+      "preferred_version_date": "2026-08-05",
+      "preferred_version_type": "accepted_manuscript",
+      "source_version": {
+        "version_type": "accepted_manuscript",
+        "date": "2026-08-05",
+        "identifier": {
+          "doi": "10.1007/s44155-026-00463-x"
+        },
+        "title": "An ethical framework for assessing artificial intelligence as augmentation or automation in social work",
+        "authors": [
+          "Kwangseon Hwang"
+        ],
+        "relation_to_preferred": "preferred_version"
+      },
+      "source_options": [
+        {
+          "url": "https://link.springer.com/content/pdf/10.1007/s44155-026-00463-x_reference.pdf",
+          "priority": "audited_access_and_source_recovery",
+          "source_version": {
+            "version_type": "accepted_manuscript",
+            "source_version_label": "accepted_manuscript_article_in_press",
+            "date": "2026-08-05",
+            "identifier": {
+              "doi": "10.1007/s44155-026-00463-x"
+            },
+            "title": "An ethical framework for assessing artificial intelligence as augmentation or automation in social work",
+            "authors": [
+              "Kwangseon Hwang"
+            ],
+            "relation_to_preferred": "preferred_version",
+            "relation_basis": "Same DOI and article, but explicitly an accepted, unedited article-in-press manuscript that precedes and is not the preferred Version of Record."
+          },
+          "source_recovery": true
+        }
+      ],
+      "access_status": "open_access",
+      "license": "CC BY-NC-ND 4.0",
+      "source_url": "https://link.springer.com/content/pdf/10.1007/s44155-026-00463-x_reference.pdf",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "f30907f71818e5803100.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1016/j.bodyim.2026.102042",
+      "title": "Existing and future use cases, and safety and ethical considerations for AI in body image, and eating disorder prevention",
+      "doi": "10.1016/j.bodyim.2026.102042",
+      "preferred_version_date": "2026-02-07",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [
+        {
+          "url": "https://doi.org/10.1016/j.bodyim.2026.102042",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "not_established",
+            "date": null,
+            "identifier": null,
+            "title": null,
+            "authors": [],
+            "relation_to_preferred": "not_established"
+          },
+          "source_recovery": false
+        },
+        {
+          "url": "https://uwe-repository.worktribe.com/OutputFile/15725579",
+          "priority": "source_recovery_audit",
+          "source_version": {
+            "version_type": "version_of_record",
+            "source_version_label": "version_of_record_repository_copy",
+            "date": "2026-02-07",
+            "identifier": {
+              "doi": "10.1016/j.bodyim.2026.102042",
+              "uwe_output": "15715301"
+            },
+            "title": "Existing and future use cases, and safety and ethical considerations for AI in body image, and eating disorder prevention",
+            "authors": [
+              "Nadia Craddock",
+              "Harriet G. Smith",
+              "Jake Linardon",
+              "Tracy L. Tylka",
+              "Phillippa C. Diedrichs"
+            ],
+            "relation_to_preferred": "preferred_version",
+            "relation_basis": "Repository-hosted copy of the preferred Version of Record with the same DOI and journal article number."
+          },
+          "source_recovery": true
+        }
+      ],
+      "access_status": "open_access",
+      "license": "CC BY 4.0",
+      "source_url": "https://doi.org/10.1016/j.bodyim.2026.102042",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "3f21b9e32e318ed85f04.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1016/j.caeai.2026.100602",
+      "title": "Beyond “painting in pink”: A critical case study of all-girls generative AI workshops in a European makerspace and implications for gender equity in computing",
+      "doi": "10.1016/j.caeai.2026.100602",
+      "preferred_version_date": "2026-05-04",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [
+        {
+          "url": "https://doi.org/10.1016/j.caeai.2026.100602",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "not_established",
+            "date": null,
+            "identifier": null,
+            "title": null,
+            "authors": [],
+            "relation_to_preferred": "not_established"
+          },
+          "source_recovery": false
+        },
+        {
+          "url": "https://discovery.ucl.ac.uk/id/eprint/10225293/1/1-s2.0-S2666920X26000640-main-2.pdf",
+          "priority": "source_recovery_audit",
+          "source_version": {
+            "version_type": "version_of_record",
+            "source_version_label": "version_of_record_repository_copy",
+            "date": "2026-05-04",
+            "identifier": {
+              "doi": "10.1016/j.caeai.2026.100602",
+              "ucl_eprint": "10225293"
+            },
+            "title": "Beyond “painting in pink”: A critical case study of all-girls generative AI workshops in a European makerspace and implications for gender equity in computing",
+            "authors": [
+              "Qian Liu",
+              "Louise Archer",
+              "Meghna Nag Chowdhuri",
+              "Esme Freedman",
+              "Jennifer DeWitt"
+            ],
+            "relation_to_preferred": "preferred_version",
+            "relation_basis": "Repository-hosted copy of the preferred Version of Record with the same DOI."
+          },
+          "source_recovery": true
+        }
+      ],
+      "access_status": "open_access",
+      "license": "CC BY-NC-ND 4.0",
+      "source_url": "https://doi.org/10.1016/j.caeai.2026.100602",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "4dd9fd2a26f9d7eea07a.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1016/j.chbr.2026.101246",
+      "title": "Can AI reduce gender bias? The case of AI-generated audio conversations in Google's NotebookLM",
+      "doi": "10.1016/j.chbr.2026.101246",
+      "preferred_version_date": "2026-08-08",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "version_of_record",
+        "date": "2026-08-08",
+        "identifier": null,
+        "title": "Can AI reduce gender bias? The case of AI-generated audio conversations in Google's NotebookLM",
+        "authors": [
+          "Milad Malekzadeh"
+        ],
+        "relation_to_preferred": "preferred_version"
+      },
+      "source_options": [
+        {
+          "url": "https://doi.org/10.1016/j.chbr.2026.101246",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "version_of_record",
+            "date": "2026-08-08",
+            "identifier": null,
+            "title": "Can AI reduce gender bias? The case of AI-generated audio conversations in Google's NotebookLM",
+            "authors": [
+              "Milad Malekzadeh"
+            ],
+            "relation_to_preferred": "preferred_version"
+          },
+          "source_recovery": false
+        },
+        {
+          "url": "https://www.sciencedirect.com/science/article/pii/S2451958826003209",
+          "priority": "source_recovery_audit",
+          "source_version": {
+            "version_type": "version_of_record",
+            "source_version_label": "version_of_record",
+            "date": "2026-08-08",
+            "identifier": {
+              "doi": "10.1016/j.chbr.2026.101246",
+              "pii": "S2451958826003209"
+            },
+            "title": "Can AI reduce gender bias? The case of AI-generated audio conversations in Google's NotebookLM",
+            "authors": [
+              "Milad Malekzadeh"
+            ],
+            "relation_to_preferred": "preferred_version",
+            "relation_basis": "Official publisher HTML of the preferred Version of Record, identified by the same DOI and PII."
+          },
+          "source_recovery": true
+        }
+      ],
+      "access_status": "open_access",
+      "license": "CC BY 4.0",
+      "source_url": "https://doi.org/10.1016/j.chbr.2026.101246",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "baa79bb6a25160130a9c.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1016/j.ijmedinf.2026.106582",
+      "title": "Integrating diversity, equity, and inclusion in generative AI applications for healthcare education: a scoping review",
+      "doi": "10.1016/j.ijmedinf.2026.106582",
+      "preferred_version_date": "2026-07-02",
+      "preferred_version_type": "proof",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [],
+      "access_status": "restricted",
+      "license": null,
+      "source_url": null,
+      "download_eligible": false,
+      "eligibility_reason": "access_not_confirmed_open",
+      "local_pdf_name": "e2f4d6f45e8f93fff940.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1016/j.mcpdig.2026.100344",
+      "title": "Implicit Gender, Racial, and Ethnic Biases in Large Language Models: An Audit Study of Automated Psychiatric Diagnoses",
+      "doi": "10.1016/j.mcpdig.2026.100344",
+      "preferred_version_date": "2026-03-06",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [
+        {
+          "url": "https://www.mcpdigitalhealth.org/article/S2949-7612(26)00010-6/pdf",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "not_established",
+            "date": null,
+            "identifier": null,
+            "title": null,
+            "authors": [],
+            "relation_to_preferred": "not_established"
+          },
+          "source_recovery": false
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13217584/",
+          "priority": "source_recovery_audit",
+          "source_version": {
+            "version_type": "version_of_record",
+            "source_version_label": "version_of_record_repository_html",
+            "date": "2026-03-06",
+            "identifier": {
+              "doi": "10.1016/j.mcpdig.2026.100344",
+              "pmcid": "PMC13217584",
+              "pmid": "42221464"
+            },
+            "title": "Implicit Gender, Racial, and Ethnic Biases in Large Language Models: An Audit Study of Automated Psychiatric Diagnoses",
+            "authors": [
+              "Sachin R. Pendse",
+              "Mini Jain",
+              "Neha Kumar",
+              "Munmun De Choudhury"
+            ],
+            "relation_to_preferred": "preferred_version",
+            "relation_basis": "PubMed Central full-text rendering of the published journal article with the same DOI; no separate manuscript version is inferred."
+          },
+          "source_recovery": true
+        }
+      ],
+      "access_status": "open_access",
+      "license": null,
+      "source_url": "https://www.mcpdigitalhealth.org/article/S2949-7612(26)00010-6/pdf",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "166a9834b422f052b7c5.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1016/j.techsoc.2026.103402",
+      "title": "Inclusive generative AI and the dynamics of inequality: A capability-resource model of adoption disparities",
+      "doi": "10.1016/j.techsoc.2026.103402",
+      "preferred_version_date": "2026-08",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [],
+      "access_status": "restricted",
+      "license": null,
+      "source_url": null,
+      "download_eligible": false,
+      "eligibility_reason": "access_not_confirmed_open",
+      "local_pdf_name": "166206e6803a6329317a.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1038/s41746-026-02584-8",
+      "title": "New model, old risks: sociodemographic bias and adversarial hallucinations vulnerability in GPT-5",
+      "doi": "10.1038/s41746-026-02584-8",
+      "preferred_version_date": "2026-04-04",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [
+        {
+          "url": "https://www.nature.com/articles/s41746-026-02584-8.pdf",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "not_established",
+            "date": null,
+            "identifier": null,
+            "title": null,
+            "authors": [],
+            "relation_to_preferred": "not_established"
+          },
+          "source_recovery": false
+        }
+      ],
+      "access_status": "open_access",
+      "license": "CC BY-NC-ND 4.0",
+      "source_url": "https://www.nature.com/articles/s41746-026-02584-8.pdf",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "1e429407d9b091311a65.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1038/s44360-026-00152-8",
+      "title": "Addressing benchmarking gaps in large language models for health and medicine with dynamic red-teaming",
+      "doi": "10.1038/s44360-026-00152-8",
+      "preferred_version_date": "2026-07-15",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "version_of_record",
+        "date": "2026-07-15",
+        "identifier": "doi:10.1038/s44360-026-00152-8",
+        "title": "Addressing benchmarking gaps in large language models for health and medicine with dynamic red-teaming",
+        "authors": [
+          "Jiazhen Pan",
+          "Bailiang Jian",
+          "Paul Hager",
+          "Yundi Zhang",
+          "Che Liu",
+          "Friedrike Jungmann",
+          "Hongwei Bran Li",
+          "Julian Canisius",
+          "Chenyu You",
+          "Junde Wu",
+          "Jiayuan Zhu",
+          "Fenglin Liu",
+          "Yuyuan Liu",
+          "Niklas Bubeck",
+          "Moritz Knolle",
+          "Chen Chen",
+          "Christian Wachinger",
+          "Zhenyu Gong",
+          "Cheng Ouyang",
+          "Georgios Kaissis",
+          "Benedikt Wiestler",
+          "Daniel Rueckert"
+        ],
+        "relation_to_preferred": "preferred_version"
+      },
+      "source_options": [
+        {
+          "url": "https://www.nature.com/articles/s44360-026-00152-8.pdf",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "version_of_record",
+            "date": "2026-07-15",
+            "identifier": "doi:10.1038/s44360-026-00152-8",
+            "title": "Addressing benchmarking gaps in large language models for health and medicine with dynamic red-teaming",
+            "authors": [
+              "Jiazhen Pan",
+              "Bailiang Jian",
+              "Paul Hager",
+              "Yundi Zhang",
+              "Che Liu",
+              "Friedrike Jungmann",
+              "Hongwei Bran Li",
+              "Julian Canisius",
+              "Chenyu You",
+              "Junde Wu",
+              "Jiayuan Zhu",
+              "Fenglin Liu",
+              "Yuyuan Liu",
+              "Niklas Bubeck",
+              "Moritz Knolle",
+              "Chen Chen",
+              "Christian Wachinger",
+              "Zhenyu Gong",
+              "Cheng Ouyang",
+              "Georgios Kaissis",
+              "Benedikt Wiestler",
+              "Daniel Rueckert"
+            ],
+            "relation_to_preferred": "preferred_version"
+          },
+          "source_recovery": false
+        }
+      ],
+      "access_status": "open_access",
+      "license": "CC BY 4.0",
+      "source_url": "https://www.nature.com/articles/s44360-026-00152-8.pdf",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "98a0f77c12e1ee6328c0.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1038/s44360-026-00164-4",
+      "title": "Large language models exhibit stigmatizing behaviour in contextual judgements of health conditions",
+      "doi": "10.1038/s44360-026-00164-4",
+      "preferred_version_date": "2026-07-06",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [],
+      "access_status": "restricted",
+      "license": null,
+      "source_url": null,
+      "download_eligible": false,
+      "eligibility_reason": "access_not_confirmed_open",
+      "local_pdf_name": "e955efa2609ed1c51e0a.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/02615479.2026.2617512",
+      "title": "Innovating social work pedagogy: generative AI for critical competency development in evidence-based practice",
+      "doi": "10.1080/02615479.2026.2617512",
+      "preferred_version_date": "2026-01-21",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [],
+      "access_status": "restricted",
+      "license": null,
+      "source_url": null,
+      "download_eligible": false,
+      "eligibility_reason": "access_not_confirmed_open",
+      "local_pdf_name": "731c3331fc50ed80278f.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/02615479.2026.2631708",
+      "title": "Are future social workers ready for AI? Fears, barriers, and learning needs in higher education",
+      "doi": "10.1080/02615479.2026.2631708",
+      "preferred_version_date": "2026-02-23",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "version_of_record_online_first",
+        "date": "2026-02-23",
+        "identifier": {
+          "doi": "10.1080/02615479.2026.2631708"
+        },
+        "title": "Are future social workers ready for AI? Fears, barriers, and learning needs in higher education",
+        "authors": [
+          "Sacramento Pinazo-Hernandis",
+          "Nuria Carcavilla-González"
+        ],
+        "relation_to_preferred": "alternative_recorded_version"
+      },
+      "source_options": [
+        {
+          "url": "https://www.tandfonline.com/doi/pdf/10.1080/02615479.2026.2631708",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "version_of_record_online_first",
+            "date": "2026-02-23",
+            "identifier": {
+              "doi": "10.1080/02615479.2026.2631708"
+            },
+            "title": "Are future social workers ready for AI? Fears, barriers, and learning needs in higher education",
+            "authors": [
+              "Sacramento Pinazo-Hernandis",
+              "Nuria Carcavilla-González"
+            ],
+            "relation_to_preferred": "alternative_recorded_version"
+          },
+          "source_recovery": false
+        },
+        {
+          "url": "https://academica-e.unavarra.es/server/api/core/bitstreams/ecc4e165-4064-452e-9db6-6632e2450d6b/content",
+          "priority": "source_recovery_audit",
+          "source_version": {
+            "version_type": "version_of_record",
+            "source_version_label": "version_of_record_repository_copy",
+            "date": "2026-02-23",
+            "identifier": {
+              "doi": "10.1080/02615479.2026.2631708",
+              "handle": "2454/56539"
+            },
+            "title": "Are future social workers ready for AI? Fears, barriers, and learning needs in higher education",
+            "authors": [
+              "Sacramento Pinazo-Hernandis",
+              "Nuria Carcavilla-González"
+            ],
+            "relation_to_preferred": "preferred_version",
+            "relation_basis": "Institutional-repository copy of the published article with the same DOI."
+          },
+          "source_recovery": true
+        }
+      ],
+      "access_status": "open_access",
+      "license": "CC BY-NC-ND 4.0",
+      "source_url": "https://www.tandfonline.com/doi/pdf/10.1080/02615479.2026.2631708",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "4875ad9321dfcfc0aa52.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/02615479.2026.2635471",
+      "title": "Promoting AI literacy in social work education: lessons from an interdisciplinary course for social work students",
+      "doi": "10.1080/02615479.2026.2635471",
+      "preferred_version_date": "2026-02-24",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "version_of_record_online_first",
+        "date": "2026-02-24",
+        "identifier": {
+          "doi": "10.1080/02615479.2026.2635471",
+          "repository_doi": "10.26041/fhnw-15616"
+        },
+        "title": "Promoting AI literacy in social work education: lessons from an interdisciplinary course for social work students",
+        "authors": [
+          "Joshua Weber",
+          "Lauri Goldkind"
+        ],
+        "relation_to_preferred": "alternative_recorded_version"
+      },
+      "source_options": [
+        {
+          "url": "https://irf.fhnw.ch/server/api/core/bitstreams/58e87312-aca1-4b37-9e15-988182c55803/content",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "version_of_record_online_first",
+            "date": "2026-02-24",
+            "identifier": {
+              "doi": "10.1080/02615479.2026.2635471",
+              "repository_doi": "10.26041/fhnw-15616"
+            },
+            "title": "Promoting AI literacy in social work education: lessons from an interdisciplinary course for social work students",
+            "authors": [
+              "Joshua Weber",
+              "Lauri Goldkind"
+            ],
+            "relation_to_preferred": "alternative_recorded_version"
+          },
+          "source_recovery": false
+        }
+      ],
+      "access_status": "open_access",
+      "license": "CC BY-NC-ND 4.0",
+      "source_url": "https://irf.fhnw.ch/server/api/core/bitstreams/58e87312-aca1-4b37-9e15-988182c55803/content",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "62d8ff0c669bf7e511d0.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/02615479.2026.2660786",
+      "title": "Towards a framework for digital literacy in social work education in a time of artificial intelligence",
+      "doi": "10.1080/02615479.2026.2660786",
+      "preferred_version_date": "2026-04-16",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "version_of_record_online_first",
+        "date": "2026-04-16",
+        "identifier": {
+          "doi": "10.1080/02615479.2026.2660786"
+        },
+        "title": "Towards a framework for digital literacy in social work education in a time of artificial intelligence",
+        "authors": [
+          "Michael Wallengren-Lynch"
+        ],
+        "relation_to_preferred": "alternative_recorded_version"
+      },
+      "source_options": [
+        {
+          "url": "https://www.tandfonline.com/doi/pdf/10.1080/02615479.2026.2660786",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "version_of_record_online_first",
+            "date": "2026-04-16",
+            "identifier": {
+              "doi": "10.1080/02615479.2026.2660786"
+            },
+            "title": "Towards a framework for digital literacy in social work education in a time of artificial intelligence",
+            "authors": [
+              "Michael Wallengren-Lynch"
+            ],
+            "relation_to_preferred": "alternative_recorded_version"
+          },
+          "source_recovery": false
+        },
+        {
+          "url": "https://mau.diva-portal.org/smash/get/diva2%3A2053633/FULLTEXT01.pdf",
+          "priority": "source_recovery_audit",
+          "source_version": {
+            "version_type": "version_of_record",
+            "source_version_label": "version_of_record_online_first_repository_copy",
+            "date": "2026-04-16",
+            "identifier": {
+              "doi": "10.1080/02615479.2026.2660786",
+              "diva": "diva2:2053633"
+            },
+            "title": "Towards a framework for digital literacy in social work education in a time of artificial intelligence",
+            "authors": [
+              "Michael Wallengren-Lynch"
+            ],
+            "relation_to_preferred": "preferred_version",
+            "relation_basis": "Repository copy of the recorded online-first Version of Record with the same DOI; it may precede later issue pagination."
+          },
+          "source_recovery": true
+        }
+      ],
+      "access_status": "open_access",
+      "license": "CC BY 4.0",
+      "source_url": "https://www.tandfonline.com/doi/pdf/10.1080/02615479.2026.2660786",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "3cb613d559a8c57c13c1.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/02615479.2026.2669634",
+      "title": "A kind of magic? Artificial intelligence-assisted recording: developing principles for an AI-informed social work curriculum",
+      "doi": "10.1080/02615479.2026.2669634",
+      "preferred_version_date": "2026-05-11",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [
+        {
+          "url": "https://discovery.dundee.ac.uk/ws/files/169373072/A_kind_of_magic_Artificial_intelligence-assisted_recording_developing_principles_for_an_AI-informed_social_work_curriculum.pdf",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "not_established",
+            "date": null,
+            "identifier": null,
+            "title": null,
+            "authors": [],
+            "relation_to_preferred": "not_established"
+          },
+          "source_recovery": false
+        },
+        {
+          "url": "https://www.tandfonline.com/doi/pdf/10.1080/02615479.2026.2669634",
+          "priority": "recorded_version_fallback",
+          "source_version": {
+            "version_type": "version_of_record_online_first",
+            "date": "2026-05-11",
+            "identifier": {
+              "doi": "10.1080/02615479.2026.2669634"
+            },
+            "title": "A kind of magic? Artificial intelligence-assisted recording: developing principles for an AI-informed social work curriculum",
+            "authors": [
+              "Richard Ingram"
+            ],
+            "relation_to_preferred": "alternative_recorded_version"
+          },
+          "source_recovery": false
+        }
+      ],
+      "access_status": "open_access",
+      "license": "CC BY-NC-ND",
+      "source_url": "https://discovery.dundee.ac.uk/ws/files/169373072/A_kind_of_magic_Artificial_intelligence-assisted_recording_developing_principles_for_an_AI-informed_social_work_curriculum.pdf",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "e9fb8b7679eaf1023485.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/02650533.2026.2683352",
+      "title": "AI-enhanced ethical decision-making in social work: development and testing of an application-specific language model",
+      "doi": "10.1080/02650533.2026.2683352",
+      "preferred_version_date": "2026-06-04",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [],
+      "access_status": "publisher_access",
+      "license": null,
+      "source_url": null,
+      "download_eligible": false,
+      "eligibility_reason": "access_not_confirmed_open",
+      "local_pdf_name": "e0e8963601916a99c514.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/0312407x.2026.2627220",
+      "title": "AI-Generated Images of Social Workers in Healthcare and Implications for Professional Identity",
+      "doi": "10.1080/0312407x.2026.2627220",
+      "preferred_version_date": "2026-04-30",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "version_of_record",
+        "date": "2026-04-30",
+        "identifier": {
+          "doi": "10.1080/0312407X.2026.2627220"
+        },
+        "title": "AI-Generated Images of Social Workers in Healthcare and Implications for Professional Identity",
+        "authors": [
+          "Helen Hickson",
+          "Amy-Louise Byrne",
+          "Jennifer Mulvogue"
+        ],
+        "relation_to_preferred": "preferred_version"
+      },
+      "source_options": [
+        {
+          "url": "https://www.tandfonline.com/doi/pdf/10.1080/0312407X.2026.2627220?needAccess=true",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "version_of_record",
+            "date": "2026-04-30",
+            "identifier": {
+              "doi": "10.1080/0312407X.2026.2627220"
+            },
+            "title": "AI-Generated Images of Social Workers in Healthcare and Implications for Professional Identity",
+            "authors": [
+              "Helen Hickson",
+              "Amy-Louise Byrne",
+              "Jennifer Mulvogue"
+            ],
+            "relation_to_preferred": "preferred_version"
+          },
+          "source_recovery": false
+        },
+        {
+          "url": "https://www.tandfonline.com/doi/full/10.1080/0312407X.2026.2627220",
+          "priority": "source_recovery_audit",
+          "source_version": {
+            "version_type": "version_of_record",
+            "source_version_label": "version_of_record",
+            "date": "2026-04-30",
+            "identifier": {
+              "doi": "10.1080/0312407X.2026.2627220"
+            },
+            "title": "AI-Generated Images of Social Workers in Healthcare and Implications for Professional Identity",
+            "authors": [
+              "Helen Hickson",
+              "Amy-Louise Byrne",
+              "Jennifer Mulvogue"
+            ],
+            "relation_to_preferred": "preferred_version",
+            "relation_basis": "Official publisher HTML of the preferred Version of Record with the same DOI."
+          },
+          "source_recovery": true
+        }
+      ],
+      "access_status": "open_access",
+      "license": "CC BY",
+      "source_url": "https://www.tandfonline.com/doi/pdf/10.1080/0312407X.2026.2627220?needAccess=true",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "7bdd19e11bafa75ea0ea.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/10437797.2025.2594423",
+      "title": "ChatGPT in Social Work? Insights from MSW Students",
+      "doi": "10.1080/10437797.2025.2594423",
+      "preferred_version_date": "2026-01-16",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [],
+      "access_status": "restricted",
+      "license": null,
+      "source_url": null,
+      "download_eligible": false,
+      "eligibility_reason": "access_not_confirmed_open",
+      "local_pdf_name": "3aa420f78d7e734b6f8c.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/13691457.2025.2607705",
+      "title": "Artificial intelligence: a neoliberal tool to better manage social inequalities?",
+      "doi": "10.1080/13691457.2025.2607705",
+      "preferred_version_date": "2026-02-03",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "version_of_record",
+        "date": "2026-02-03",
+        "identifier": null,
+        "title": "Artificial intelligence: a neoliberal tool to better manage social inequalities?",
+        "authors": [
+          "Paul Michael Garrett"
+        ],
+        "relation_to_preferred": "preferred_version"
+      },
+      "source_options": [
+        {
+          "url": "https://www.tandfonline.com/doi/full/10.1080/13691457.2025.2607705",
+          "priority": "audited_access_and_source_recovery",
+          "source_version": {
+            "version_type": "version_of_record",
+            "source_version_label": "version_of_record",
+            "date": "2026-02-03",
+            "identifier": {
+              "doi": "10.1080/13691457.2025.2607705"
+            },
+            "title": "Artificial intelligence: a neoliberal tool to better manage social inequalities?",
+            "authors": [
+              "Paul Michael Garrett"
+            ],
+            "relation_to_preferred": "preferred_version",
+            "relation_basis": "Official publisher HTML of the preferred Version of Record with the same DOI."
+          },
+          "source_recovery": true
+        }
+      ],
+      "access_status": "open_access",
+      "license": null,
+      "source_url": "https://www.tandfonline.com/doi/full/10.1080/13691457.2025.2607705",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "70067a9101c63ad9cba1.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/17496535.2026.2619945",
+      "title": "The (Un)Fair Algorithm: Socio-Technical Ethics Work for Artificial Intelligence in Social Work",
+      "doi": "10.1080/17496535.2026.2619945",
+      "preferred_version_date": "2026-02-18",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [
+        {
+          "url": "https://www.ucviden.dk/ws/files/285358215/The_Un_Fair_Algorithm_Socio-Technical_Ethics_Work_for_Artificial_Intelligence_in_Social_Work.pdf",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "not_established",
+            "date": null,
+            "identifier": null,
+            "title": null,
+            "authors": [],
+            "relation_to_preferred": "not_established"
+          },
+          "source_recovery": false
+        }
+      ],
+      "access_status": "open_access",
+      "license": "CC BY-NC-ND",
+      "source_url": "https://www.ucviden.dk/ws/files/285358215/The_Un_Fair_Algorithm_Socio-Technical_Ethics_Work_for_Artificial_Intelligence_in_Social_Work.pdf",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "e9be7a01361ab7bae7bb.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/26408066.2026.2616711",
+      "title": "Small Models Achieve Large Language Model Performance: Evaluating Reasoning-Enabled AI for Secure Child Welfare Research",
+      "doi": "10.1080/26408066.2026.2616711",
+      "preferred_version_date": "2026-01-18",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [
+        {
+          "url": "https://digitalcollection.zhaw.ch/server/api/core/bitstreams/9e397e56-2222-4079-9708-14d82f6e45d1/content",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "not_established",
+            "date": null,
+            "identifier": null,
+            "title": null,
+            "authors": [],
+            "relation_to_preferred": "not_established"
+          },
+          "source_recovery": false
+        },
+        {
+          "url": "https://arxiv.org/pdf/2512.04261v1",
+          "priority": "recorded_version_fallback",
+          "source_version": {
+            "version_type": "preprint_v1",
+            "date": "2025-12-03",
+            "identifier": {
+              "arxiv": "2512.04261",
+              "doi": "10.48550/arXiv.2512.04261"
+            },
+            "title": "Small Models Achieve Large Language Model Performance: Evaluating Reasoning-Enabled AI for Secure Child Welfare Research",
+            "authors": [
+              "Zia Qi",
+              "Brian E. Perron",
+              "Bryan G. Victor",
+              "Dragan Stoll",
+              "Joseph P. Ryan"
+            ],
+            "relation_to_preferred": "alternative_recorded_version"
+          },
+          "source_recovery": false
+        },
+        {
+          "url": "https://arxiv.org/pdf/2512.04261",
+          "priority": "recorded_version_fallback",
+          "source_version": {
+            "version_type": "preprint_v2",
+            "date": "2026-01-10",
+            "identifier": {
+              "arxiv": "2512.04261",
+              "doi": "10.48550/arXiv.2512.04261"
+            },
+            "title": "Small Models Achieve Large Language Model Performance: Evaluating Reasoning-Enabled AI for Secure Child Welfare Research",
+            "authors": [
+              "Zia Qi",
+              "Brian E. Perron",
+              "Bryan G. Victor",
+              "Dragan Stoll",
+              "Joseph P. Ryan"
+            ],
+            "relation_to_preferred": "alternative_recorded_version"
+          },
+          "source_recovery": false
+        },
+        {
+          "url": "https://www.tandfonline.com/doi/pdf/10.1080/26408066.2026.2616711?needAccess=true",
+          "priority": "recorded_version_fallback",
+          "source_version": {
+            "version_type": "version_of_record",
+            "date": "2026-01-18",
+            "identifier": {
+              "doi": "10.1080/26408066.2026.2616711",
+              "arxiv": "2512.04261"
+            },
+            "title": "Small Models Achieve Large Language Model Performance: Evaluating Reasoning-Enabled AI for Secure Child Welfare Research",
+            "authors": [
+              "Zia Qi",
+              "Brian E. Perron",
+              "Bryan G. Victor",
+              "Dragan Stoll",
+              "Joseph P. Ryan"
+            ],
+            "relation_to_preferred": "preferred_version"
+          },
+          "source_recovery": false
+        }
+      ],
+      "access_status": "open_access",
+      "license": "CC BY-NC-ND 4.0",
+      "source_url": "https://digitalcollection.zhaw.ch/server/api/core/bitstreams/9e397e56-2222-4079-9708-14d82f6e45d1/content",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "5fa4fb41e396f11b2c6e.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1086/740347",
+      "title": "Accuracy and Readability of Large Language Models’ Responses to Frequently Asked Questions on Social Assistance",
+      "doi": "10.1086/740347",
+      "preferred_version_date": "2026-06-01",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [
+        {
+          "url": "https://www.journals.uchicago.edu/doi/full/10.1086/740347",
+          "priority": "audited_access_and_source_recovery",
+          "source_version": {
+            "version_type": "version_of_record",
+            "source_version_label": "version_of_record",
+            "date": "2026-06-01",
+            "identifier": {
+              "doi": "10.1086/740347"
+            },
+            "title": "Accuracy and Readability of Large Language Models’ Responses to Frequently Asked Questions on Social Assistance",
+            "authors": [
+              "Hacer Taşkıran Tepe"
+            ],
+            "relation_to_preferred": "preferred_version",
+            "relation_basis": "Official publisher HTML of the preferred Version of Record with the same DOI."
+          },
+          "source_recovery": true
+        }
+      ],
+      "access_status": "open_access",
+      "license": null,
+      "source_url": "https://www.journals.uchicago.edu/doi/full/10.1086/740347",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "36ccc241a6e68755bf00.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1086/740605",
+      "title": "Using ChatGPT for Qualitative Social Media Analysis: Insights for Cross-Cultural Social Work",
+      "doi": "10.1086/740605",
+      "preferred_version_date": "2026-06-01",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [
+        {
+          "url": "https://www.journals.uchicago.edu/doi/full/10.1086/740605",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "not_established",
+            "date": null,
+            "identifier": null,
+            "title": null,
+            "authors": [],
+            "relation_to_preferred": "not_established"
+          },
+          "source_recovery": false
+        },
+        {
+          "url": "https://www.journals.uchicago.edu/doi/10.1086/740605",
+          "priority": "source_recovery_audit",
+          "source_version": {
+            "version_type": "version_of_record",
+            "source_version_label": "version_of_record",
+            "date": "2026-06-01",
+            "identifier": {
+              "doi": "10.1086/740605"
+            },
+            "title": "Using ChatGPT for Qualitative Social Media Analysis: Insights for Cross-Cultural Social Work",
+            "authors": [
+              "Michin Hong",
+              "Grace Yi"
+            ],
+            "relation_to_preferred": "preferred_version",
+            "relation_basis": "Official publisher HTML of the preferred Version of Record with the same DOI."
+          },
+          "source_recovery": true
+        }
+      ],
+      "access_status": "open_access",
+      "license": null,
+      "source_url": "https://www.journals.uchicago.edu/doi/full/10.1086/740605",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "daad33bb32b2b6a91cbd.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1086/743397",
+      "title": "Same Prompt, Different Care? Evaluating Inequities in AI-Generated Mental Health Support for Immigrant Communities",
+      "doi": "10.1086/743397",
+      "preferred_version_date": "2026-07-28",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [],
+      "access_status": "restricted",
+      "license": null,
+      "source_url": null,
+      "download_eligible": false,
+      "eligibility_reason": "access_not_confirmed_open",
+      "local_pdf_name": "55eccaf74c5a9ed3fd2a.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1098/rsta.2025.0125",
+      "title": "Mitigating medical bias in large language models by prompt engineering: an empirical study of effectiveness and trade-offs",
+      "doi": "10.1098/rsta.2025.0125",
+      "preferred_version_date": "2026-07-16",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [
+        {
+          "url": "https://kclpure.kcl.ac.uk/ws/files/383343620/MitigatingMedicalBias_Xiao_GoldVoR.pdf",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "not_established",
+            "date": null,
+            "identifier": null,
+            "title": null,
+            "authors": [],
+            "relation_to_preferred": "not_established"
+          },
+          "source_recovery": false
+        },
+        {
+          "url": "https://royalsocietypublishing.org/rsta/article-pdf/doi/10.1098/rsta.2025.0125/6152317/rsta20250125.pdf",
+          "priority": "recorded_version_fallback",
+          "source_version": {
+            "version_type": "version_of_record",
+            "date": "2026-07-16",
+            "identifier": "doi:10.1098/rsta.2025.0125",
+            "title": "Mitigating medical bias in large language models by prompt engineering: an empirical study of effectiveness and trade-offs",
+            "authors": [
+              "Ying Xiao",
+              "Zhenpeng Chen",
+              "Jie Zhang"
+            ],
+            "relation_to_preferred": "preferred_version"
+          },
+          "source_recovery": false
+        }
+      ],
+      "access_status": "open_access",
+      "license": "CC BY",
+      "source_url": "https://kclpure.kcl.ac.uk/ws/files/383343620/MitigatingMedicalBias_Xiao_GoldVoR.pdf",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "136b6db72d8a7b8d390c.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1111/1748-8583.70044",
+      "title": "Mitigating Disability Bias in Hiring: The Role of Inclusion-Focused Generative AI in Complex HR Decisions",
+      "doi": "10.1111/1748-8583.70044",
+      "preferred_version_date": "2026-03-11",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [
+        {
+          "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/1748-8583.70044",
+          "priority": "audited_access_and_source_recovery",
+          "source_version": {
+            "version_type": "version_of_record",
+            "source_version_label": "version_of_record",
+            "date": "2026-03-11",
+            "identifier": {
+              "doi": "10.1111/1748-8583.70044"
+            },
+            "title": "Mitigating Disability Bias in Hiring: The Role of Inclusion-Focused Generative AI in Complex HR Decisions",
+            "authors": [
+              "Miles M. Yang"
+            ],
+            "relation_to_preferred": "preferred_version",
+            "relation_basis": "Official publisher HTML of the preferred Version of Record with the same DOI."
+          },
+          "source_recovery": true
+        }
+      ],
+      "access_status": "open_access",
+      "license": null,
+      "source_url": "https://onlinelibrary.wiley.com/doi/full/10.1111/1748-8583.70044",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "4bf89c05b4c8e71c9f91.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1177/10497315261469433",
+      "title": "The Adoption of Generative AI by Social Workers in Practice: A Scoping Review",
+      "doi": "10.1177/10497315261469433",
+      "preferred_version_date": "2026-07-29",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [],
+      "access_status": "restricted",
+      "license": null,
+      "source_url": null,
+      "download_eligible": false,
+      "eligibility_reason": "access_not_confirmed_open",
+      "local_pdf_name": "51321e6ad3c894f2a036.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1177/10522263261449121",
+      "title": "Bias Bytes: A Study Examining Disability Bias in ChatGPT Job Recommendation",
+      "doi": "10.1177/10522263261449121",
+      "preferred_version_date": "2026-05-11",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [],
+      "access_status": "restricted",
+      "license": null,
+      "source_url": null,
+      "download_eligible": false,
+      "eligibility_reason": "access_not_confirmed_open",
+      "local_pdf_name": "4dbbd6c2a6c7e1a67018.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1177/10755470261428542",
+      "title": "Generative AI So White: Racial Biases in AI Imagery Across the United States and China",
+      "doi": "10.1177/10755470261428542",
+      "preferred_version_date": "2026-04-27",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [
+        {
+          "url": "https://journals.sagepub.com/doi/pdf/10.1177/10755470261428542",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "not_established",
+            "date": null,
+            "identifier": null,
+            "title": null,
+            "authors": [],
+            "relation_to_preferred": "not_established"
+          },
+          "source_recovery": false
+        },
+        {
+          "url": "https://journals.sagepub.com/doi/full/10.1177/10755470261428542",
+          "priority": "source_recovery_audit",
+          "source_version": {
+            "version_type": "version_of_record",
+            "source_version_label": "version_of_record_version_2",
+            "date": "2026-04-27",
+            "identifier": {
+              "doi": "10.1177/10755470261428542"
+            },
+            "title": "Generative AI So White: Racial Biases in AI Imagery Across the United States and China",
+            "authors": [
+              "Zituo Wang",
+              "Jiayi Zhu",
+              "Zhuoyu Wang",
+              "Vivian Jiaying Zhai",
+              "Jianyu Wu"
+            ],
+            "relation_to_preferred": "preferred_version",
+            "relation_basis": "Official publisher HTML for the current Version 2 of the preferred Version of Record; same DOI. Version 1 was published on 2026-04-08 and Version 2 on 2026-04-27."
+          },
+          "source_recovery": true
+        }
+      ],
+      "access_status": "open_access",
+      "license": "CC BY-NC 4.0",
+      "source_url": "https://journals.sagepub.com/doi/pdf/10.1177/10755470261428542",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "218381e3dda93216c8b2.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1186/s12910-026-01496-2",
+      "title": "Algorithmic bias in clinical resource allocation by a large language model: a cross-sectional in-silico evaluation of 13,608 decisions",
+      "doi": "10.1186/s12910-026-01496-2",
+      "preferred_version_date": "2026-07-20",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [
+        {
+          "url": "https://link.springer.com/content/pdf/10.1186/s12910-026-01496-2.pdf",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "not_established",
+            "date": null,
+            "identifier": null,
+            "title": null,
+            "authors": [],
+            "relation_to_preferred": "not_established"
+          },
+          "source_recovery": false
+        }
+      ],
+      "access_status": "open_access",
+      "license": "CC BY-NC-ND 4.0",
+      "source_url": "https://link.springer.com/content/pdf/10.1186/s12910-026-01496-2.pdf",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "45a89ba69a2b7d1a99cd.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.16719/j.cnki.1671-6981.20260201",
+      "title": "Semantic Stability, Response Strategies, and Bias Analysis of Generative Artificial Intelligence in Psychological Health Education",
+      "doi": "10.16719/j.cnki.1671-6981.20260201",
+      "preferred_version_date": "2026-03-20",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [
+        {
+          "url": "https://jps.ecnu.edu.cn/EN/PDF/10.16719/j.cnki.1671-6981.20260201",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "not_established",
+            "date": null,
+            "identifier": null,
+            "title": null,
+            "authors": [],
+            "relation_to_preferred": "not_established"
+          },
+          "source_recovery": false
+        }
+      ],
+      "access_status": "open_access",
+      "license": null,
+      "source_url": "https://jps.ecnu.edu.cn/EN/PDF/10.16719/j.cnki.1671-6981.20260201",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "7cbaa5fc7bd51c3642ad.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.18653/v1/2026.acl-long.1094",
+      "title": "InsideOut: Measuring and Mitigating Insider–Outsider Bias in Interview Script Generation",
+      "doi": "10.18653/v1/2026.acl-long.1094",
+      "preferred_version_date": "2026-07-02",
+      "preferred_version_type": "proceedings_version",
+      "source_version": {
+        "version_type": "proceedings_version",
+        "date": "2026-07-02",
+        "identifier": "doi:10.18653/v1/2026.acl-long.1094",
+        "title": "InsideOut: Measuring and Mitigating Insider–Outsider Bias in Interview Script Generation",
+        "authors": [
+          "Yixin Wan",
+          "Xingrun Chen",
+          "Kai-Wei Chang"
+        ],
+        "relation_to_preferred": "preferred_version"
+      },
+      "source_options": [
+        {
+          "url": "https://aclanthology.org/2026.acl-long.1094.pdf",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "proceedings_version",
+            "date": "2026-07-02",
+            "identifier": "doi:10.18653/v1/2026.acl-long.1094",
+            "title": "InsideOut: Measuring and Mitigating Insider–Outsider Bias in Interview Script Generation",
+            "authors": [
+              "Yixin Wan",
+              "Xingrun Chen",
+              "Kai-Wei Chang"
+            ],
+            "relation_to_preferred": "preferred_version"
+          },
+          "source_recovery": false
+        },
+        {
+          "url": "https://arxiv.org/pdf/2509.21080",
+          "priority": "recorded_version_fallback",
+          "source_version": {
+            "version_type": "preprint",
+            "date": "2025-09",
+            "identifier": "arXiv:2509.21080",
+            "title": "InsideOut: Measuring and Mitigating Insider–Outsider Bias in Interview Script Generation",
+            "authors": [
+              "Yixin Wan",
+              "Xingrun Chen",
+              "Kai-Wei Chang"
+            ],
+            "relation_to_preferred": "alternative_recorded_version"
+          },
+          "source_recovery": false
+        }
+      ],
+      "access_status": "open_access",
+      "license": "CC BY 4.0",
+      "source_url": "https://aclanthology.org/2026.acl-long.1094.pdf",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "c42b463f9ba115503a58.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.18653/v1/2026.findings-acl.1389",
+      "title": "Multi-Persona Thinking for Bias Mitigation in Large Language Models",
+      "doi": "10.18653/v1/2026.findings-acl.1389",
+      "preferred_version_date": "2026-07-02",
+      "preferred_version_type": "proceedings_version",
+      "source_version": {
+        "version_type": "proceedings_version",
+        "date": "2026-07-02",
+        "identifier": "doi:10.18653/v1/2026.findings-acl.1389",
+        "title": "Multi-Persona Thinking for Bias Mitigation in Large Language Models",
+        "authors": [
+          "Yuxing Chen",
+          "Guoqing Luo",
+          "Zijun Wu",
+          "Lili Mou"
+        ],
+        "relation_to_preferred": "preferred_version"
+      },
+      "source_options": [
+        {
+          "url": "https://aclanthology.org/2026.findings-acl.1389.pdf",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "proceedings_version",
+            "date": "2026-07-02",
+            "identifier": "doi:10.18653/v1/2026.findings-acl.1389",
+            "title": "Multi-Persona Thinking for Bias Mitigation in Large Language Models",
+            "authors": [
+              "Yuxing Chen",
+              "Guoqing Luo",
+              "Zijun Wu",
+              "Lili Mou"
+            ],
+            "relation_to_preferred": "preferred_version"
+          },
+          "source_recovery": false
+        },
+        {
+          "url": "https://arxiv.org/pdf/2601.15488",
+          "priority": "recorded_version_fallback",
+          "source_version": {
+            "version_type": "preprint",
+            "date": "2026-01-21",
+            "identifier": "arXiv:2601.15488",
+            "title": "Multi-Persona Thinking for Bias Mitigation in Large Language Models",
+            "authors": [
+              "Yuxing Chen",
+              "Guoqing Luo",
+              "Zijun Wu",
+              "Lili Mou"
+            ],
+            "relation_to_preferred": "alternative_recorded_version"
+          },
+          "source_recovery": false
+        }
+      ],
+      "access_status": "open_access",
+      "license": "CC BY 4.0",
+      "source_url": "https://aclanthology.org/2026.findings-acl.1389.pdf",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "d3bd00602e07cf40396c.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.18653/v1/2026.findings-acl.418",
+      "title": "Mitigating Cultural Bias in LLMs via Multi-Agent Cultural Debate",
+      "doi": "10.18653/v1/2026.findings-acl.418",
+      "preferred_version_date": "2026-07-02",
+      "preferred_version_type": "proceedings_version",
+      "source_version": {
+        "version_type": "proceedings_version",
+        "date": "2026-07-02",
+        "identifier": "doi:10.18653/v1/2026.findings-acl.418",
+        "title": "Mitigating Cultural Bias in LLMs via Multi-Agent Cultural Debate",
+        "authors": [
+          "Qian Tan",
+          "Lei Jiang",
+          "Yuting Zeng",
+          "Shuoyang Ding",
+          "Xiaohua Xu"
+        ],
+        "relation_to_preferred": "preferred_version"
+      },
+      "source_options": [
+        {
+          "url": "https://aclanthology.org/2026.findings-acl.418.pdf",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "proceedings_version",
+            "date": "2026-07-02",
+            "identifier": "doi:10.18653/v1/2026.findings-acl.418",
+            "title": "Mitigating Cultural Bias in LLMs via Multi-Agent Cultural Debate",
+            "authors": [
+              "Qian Tan",
+              "Lei Jiang",
+              "Yuting Zeng",
+              "Shuoyang Ding",
+              "Xiaohua Xu"
+            ],
+            "relation_to_preferred": "preferred_version"
+          },
+          "source_recovery": false
+        },
+        {
+          "url": "https://arxiv.org/pdf/2601.12091",
+          "priority": "recorded_version_fallback",
+          "source_version": {
+            "version_type": "preprint",
+            "date": "2026-01-17",
+            "identifier": "arXiv:2601.12091",
+            "title": "Mitigating Cultural Bias in LLMs via Multi-Agent Cultural Debate",
+            "authors": [
+              "Qian Tan",
+              "Lei Jiang",
+              "Yuting Zeng",
+              "Shuoyang Ding",
+              "Xiaohua Xu"
+            ],
+            "relation_to_preferred": "alternative_recorded_version"
+          },
+          "source_recovery": false
+        }
+      ],
+      "access_status": "open_access",
+      "license": "CC BY 4.0",
+      "source_url": "https://aclanthology.org/2026.findings-acl.418.pdf",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "a1c7e9db9a3dc6caff54.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.18653/v1/2026.findings-acl.585",
+      "title": "Persona-Assigned Large Language Models Exhibit Human-Like Motivated Reasoning",
+      "doi": "10.18653/v1/2026.findings-acl.585",
+      "preferred_version_date": "2026-07-02",
+      "preferred_version_type": "proceedings_version",
+      "source_version": {
+        "version_type": "proceedings_version",
+        "date": "2026-07-02",
+        "identifier": "doi:10.18653/v1/2026.findings-acl.585",
+        "title": "Persona-Assigned Large Language Models Exhibit Human-Like Motivated Reasoning",
+        "authors": [
+          "Saloni Dash",
+          "Amélie Reymond",
+          "Emma Spiro",
+          "Aylin Caliskan"
+        ],
+        "relation_to_preferred": "preferred_version"
+      },
+      "source_options": [
+        {
+          "url": "https://aclanthology.org/2026.findings-acl.585.pdf",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "proceedings_version",
+            "date": "2026-07-02",
+            "identifier": "doi:10.18653/v1/2026.findings-acl.585",
+            "title": "Persona-Assigned Large Language Models Exhibit Human-Like Motivated Reasoning",
+            "authors": [
+              "Saloni Dash",
+              "Amélie Reymond",
+              "Emma Spiro",
+              "Aylin Caliskan"
+            ],
+            "relation_to_preferred": "preferred_version"
+          },
+          "source_recovery": false
+        },
+        {
+          "url": "https://arxiv.org/pdf/2506.20020",
+          "priority": "recorded_version_fallback",
+          "source_version": {
+            "version_type": "preprint",
+            "date": "2025-06-24",
+            "identifier": "arXiv:2506.20020",
+            "title": "Persona-Assigned Large Language Models Exhibit Human-Like Motivated Reasoning",
+            "authors": [
+              "Saloni Dash",
+              "Amélie Reymond",
+              "Emma Spiro",
+              "Aylin Caliskan"
+            ],
+            "relation_to_preferred": "alternative_recorded_version"
+          },
+          "source_recovery": false
+        }
+      ],
+      "access_status": "open_access",
+      "license": "CC BY 4.0",
+      "source_url": "https://aclanthology.org/2026.findings-acl.585.pdf",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "4dbe6aa9dfa229e88746.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.21240/dimesoz/2026/1/57",
+      "title": "Generative KI in der Beratung: Empirische Befunde mit Blick auf Nutzungsbedingungen von Chatbots",
+      "doi": "10.21240/dimesoz/2026/1/57",
+      "preferred_version_date": "2026-01-31",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "version_of_record",
+        "date": "2026-01-31",
+        "identifier": {
+          "doi": "10.21240/dimesoz/2026/1/57"
+        },
+        "title": "Generative KI in der Beratung: Empirische Befunde mit Blick auf Nutzungsbedingungen von Chatbots",
+        "authors": [
+          "Fabian Beloch",
+          "Anne Martin"
+        ],
+        "relation_to_preferred": "preferred_version"
+      },
+      "source_options": [
+        {
+          "url": "https://www.dime-sozial.de/index.php/dimesoz/article/download/57/24",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "version_of_record",
+            "date": "2026-01-31",
+            "identifier": {
+              "doi": "10.21240/dimesoz/2026/1/57"
+            },
+            "title": "Generative KI in der Beratung: Empirische Befunde mit Blick auf Nutzungsbedingungen von Chatbots",
+            "authors": [
+              "Fabian Beloch",
+              "Anne Martin"
+            ],
+            "relation_to_preferred": "preferred_version"
+          },
+          "source_recovery": false
+        }
+      ],
+      "access_status": "open_access",
+      "license": "CC BY 4.0",
+      "source_url": "https://www.dime-sozial.de/index.php/dimesoz/article/download/57/24",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "2b57266b9d8b015d2ac2.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.21556/edutec.2026.96.4777",
+      "title": "Pensar críticamente la inteligencia artificial en la escuela: un estudio de caso desde una perspectiva de género",
+      "doi": "10.21556/edutec.2026.96.4777",
+      "preferred_version_date": "2026-06-30",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [
+        {
+          "url": "https://edutec.es/revista/index.php/edutec-e/article/download/4777/1657",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "not_established",
+            "date": null,
+            "identifier": null,
+            "title": null,
+            "authors": [],
+            "relation_to_preferred": "not_established"
+          },
+          "source_recovery": false
+        }
+      ],
+      "access_status": "open_access",
+      "license": "CC BY 4.0",
+      "source_url": "https://edutec.es/revista/index.php/edutec-e/article/download/4777/1657",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "152b1aa29e0dddabe838.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.2196/85770",
+      "title": "Patient Cognitive Bias in Large Language Model-Supported Health Consultations: Simulation-Based Comparative Study",
+      "doi": "10.2196/85770",
+      "preferred_version_date": "2026-06-11",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "version_of_record",
+        "date": "2026-06-11",
+        "identifier": "doi:10.2196/85770",
+        "title": "Patient Cognitive Bias in Large Language Model-Supported Health Consultations: Simulation-Based Comparative Study",
+        "authors": [
+          "Yi Zuo",
+          "Qifeng Wan",
+          "Shalong Wang"
+        ],
+        "relation_to_preferred": "preferred_version"
+      },
+      "source_options": [
+        {
+          "url": "https://www.jmir.org/2026/1/e85770/PDF",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "version_of_record",
+            "date": "2026-06-11",
+            "identifier": "doi:10.2196/85770",
+            "title": "Patient Cognitive Bias in Large Language Model-Supported Health Consultations: Simulation-Based Comparative Study",
+            "authors": [
+              "Yi Zuo",
+              "Qifeng Wan",
+              "Shalong Wang"
+            ],
+            "relation_to_preferred": "preferred_version"
+          },
+          "source_recovery": false
+        }
+      ],
+      "access_status": "open_access",
+      "license": "CC BY 4.0",
+      "source_url": "https://www.jmir.org/2026/1/e85770/PDF",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "aff73b4c6b2eab31b8f7.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.2196/86633",
+      "title": "Ethics and Fairness Considerations in AI-Based Deception Detection Technologies for Mental Health Applications: Focus Group Study",
+      "doi": "10.2196/86633",
+      "preferred_version_date": "2026-05-25",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [
+        {
+          "url": "https://ai.jmir.org/2026/1/e86633/PDF",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "not_established",
+            "date": null,
+            "identifier": null,
+            "title": null,
+            "authors": [],
+            "relation_to_preferred": "not_established"
+          },
+          "source_recovery": false
+        }
+      ],
+      "access_status": "open_access",
+      "license": "CC BY 4.0",
+      "source_url": "https://ai.jmir.org/2026/1/e86633/PDF",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "2e6aa61930deea324751.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.2196/90589",
+      "title": "Generative AI in Youth Mental Health Apps: Rapid Review",
+      "doi": "10.2196/90589",
+      "preferred_version_date": "2026-08-19",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "version_of_record",
+        "date": "2026-08-19",
+        "identifier": {
+          "doi": "10.2196/90589",
+          "preprint_doi": "10.2196/preprints.90589"
+        },
+        "title": "Generative AI in Youth Mental Health Apps: Rapid Review",
+        "authors": [
+          "Helene Høgsdal",
+          "Henriette Kyrrestad",
+          "Sabine Kaiser"
+        ],
+        "relation_to_preferred": "preferred_version"
+      },
+      "source_options": [
+        {
+          "url": "https://mental.jmir.org/2026/1/e90589/PDF",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "version_of_record",
+            "date": "2026-08-19",
+            "identifier": {
+              "doi": "10.2196/90589",
+              "preprint_doi": "10.2196/preprints.90589"
+            },
+            "title": "Generative AI in Youth Mental Health Apps: Rapid Review",
+            "authors": [
+              "Helene Høgsdal",
+              "Henriette Kyrrestad",
+              "Sabine Kaiser"
+            ],
+            "relation_to_preferred": "preferred_version"
+          },
+          "source_recovery": false
+        }
+      ],
+      "access_status": "open_access",
+      "license": "CC BY 4.0",
+      "source_url": "https://mental.jmir.org/2026/1/e90589/PDF",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "926800fc523bebd0420c.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.25009/is.v11i21.3001",
+      "title": "Análisis de la desinformación y los sesgos de género generados por la inteligencia artificial",
+      "doi": "10.25009/is.v11i21.3001",
+      "preferred_version_date": "2026-07-13",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [
+        {
+          "url": "https://is.uv.mx/index.php/IS/article/download/3001/4785",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "not_established",
+            "date": null,
+            "identifier": null,
+            "title": null,
+            "authors": [],
+            "relation_to_preferred": "not_established"
+          },
+          "source_recovery": false
+        }
+      ],
+      "access_status": "open_access",
+      "license": "CC BY-NC-ND 4.0",
+      "source_url": "https://is.uv.mx/index.php/IS/article/download/3001/4785",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "050d5f410967dd9371a0.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.3389/fhumd.2026.1791655",
+      "title": "AI-generated visual disinformation and digital equity: an intersectional analysis of algorithmic vulnerabilities among marginalised communities",
+      "doi": "10.3389/fhumd.2026.1791655",
+      "preferred_version_date": "2026-02-26",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [
+        {
+          "url": "https://www.frontiersin.org/journals/human-dynamics/articles/10.3389/fhumd.2026.1791655/pdf",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "not_established",
+            "date": null,
+            "identifier": null,
+            "title": null,
+            "authors": [],
+            "relation_to_preferred": "not_established"
+          },
+          "source_recovery": false
+        }
+      ],
+      "access_status": "open_access",
+      "license": "CC BY 4.0",
+      "source_url": "https://www.frontiersin.org/journals/human-dynamics/articles/10.3389/fhumd.2026.1791655/pdf",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "c38bdbce0e8dbb82ce3f.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.3390/ai7010024",
+      "title": "No Free Lunch in Language Model Bias Mitigation? Targeted Bias Reduction Can Exacerbate Unmitigated LLM Biases",
+      "doi": "10.3390/ai7010024",
+      "preferred_version_date": "2026-01-13",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "version_of_record",
+        "date": "2026-01-13",
+        "identifier": "doi:10.3390/ai7010024",
+        "title": "No Free Lunch in Language Model Bias Mitigation? Targeted Bias Reduction Can Exacerbate Unmitigated LLM Biases",
+        "authors": [
+          "Shireen Chand",
+          "Faith Baca",
+          "Emilio Ferrara"
+        ],
+        "relation_to_preferred": "preferred_version"
+      },
+      "source_options": [
+        {
+          "url": "https://www.mdpi.com/2673-2688/7/1/24/pdf",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "version_of_record",
+            "date": "2026-01-13",
+            "identifier": "doi:10.3390/ai7010024",
+            "title": "No Free Lunch in Language Model Bias Mitigation? Targeted Bias Reduction Can Exacerbate Unmitigated LLM Biases",
+            "authors": [
+              "Shireen Chand",
+              "Faith Baca",
+              "Emilio Ferrara"
+            ],
+            "relation_to_preferred": "preferred_version"
+          },
+          "source_recovery": false
+        },
+        {
+          "url": "https://arxiv.org/pdf/2511.18635",
+          "priority": "recorded_version_fallback",
+          "source_version": {
+            "version_type": "preprint",
+            "date": "2025-11-23",
+            "identifier": "arXiv:2511.18635",
+            "title": "No Free Lunch in Language Model Bias Mitigation? Targeted Bias Reduction Can Exacerbate Unmitigated LLM Biases",
+            "authors": [
+              "Shireen Chand",
+              "Faith Baca",
+              "Emilio Ferrara"
+            ],
+            "relation_to_preferred": "alternative_recorded_version"
+          },
+          "source_recovery": false
+        }
+      ],
+      "access_status": "open_access",
+      "license": "CC BY 4.0",
+      "source_url": "https://www.mdpi.com/2673-2688/7/1/24/pdf",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "cf8d8fbb3db223f01b6c.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.35362/issn.1850-0013-1258",
+      "title": "Sesgos de género y modelos de IA generativa: Aproximaciones desde una experiencia de análisis cualitativo desde la generación de imágenes",
+      "doi": "10.35362/issn.1850-0013-1258",
+      "preferred_version_date": "2026-07-27",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [
+        {
+          "url": "https://ojs.revistacts.net/index.php/CTS/article/download/1258/943",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "not_established",
+            "date": null,
+            "identifier": null,
+            "title": null,
+            "authors": [],
+            "relation_to_preferred": "not_established"
+          },
+          "source_recovery": false
+        }
+      ],
+      "access_status": "open_access",
+      "license": "CC BY 4.0",
+      "source_url": "https://ojs.revistacts.net/index.php/CTS/article/download/1258/943",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "fe0639bed94ac912274d.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.35362/issn.1850-0013-1259",
+      "title": "IA, salud mental y género: Un mapeo sistemático de las ciencias sociales y humanas en América Latina",
+      "doi": "10.35362/issn.1850-0013-1259",
+      "preferred_version_date": "2026-07-27",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [
+        {
+          "url": "https://ojs.revistacts.net/index.php/CTS/article/download/1259/947",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "not_established",
+            "date": null,
+            "identifier": null,
+            "title": null,
+            "authors": [],
+            "relation_to_preferred": "not_established"
+          },
+          "source_recovery": false
+        }
+      ],
+      "access_status": "open_access",
+      "license": "CC BY 4.0",
+      "source_url": "https://ojs.revistacts.net/index.php/CTS/article/download/1259/947",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "8a561b548035e4512084.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.3917/vsoc.052.0029",
+      "title": "Intelligence artificielle et travail social, une ressource au service des professionnels ?",
+      "doi": "10.3917/vsoc.052.0029",
+      "preferred_version_date": "2026-03-17",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [],
+      "access_status": "restricted",
+      "license": null,
+      "source_url": null,
+      "download_eligible": false,
+      "eligibility_reason": "access_not_confirmed_open",
+      "local_pdf_name": "3898ab69fcc854df78ae.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.4324/9781003627920-14",
+      "title": "Social Work Ethics and Generative AI",
+      "doi": "10.4324/9781003627920-14",
+      "preferred_version_date": "2026-07-21",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [],
+      "access_status": "publisher_access",
+      "license": null,
+      "source_url": null,
+      "download_eligible": false,
+      "eligibility_reason": "access_not_confirmed_open",
+      "local_pdf_name": "4671b9d993df692a35df.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.4324/9781003755081-10",
+      "title": "Prompt Engineering for Social Workers",
+      "doi": "10.4324/9781003755081-10",
+      "preferred_version_date": "2026-08-12",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [],
+      "access_status": "publisher_access",
+      "license": null,
+      "source_url": null,
+      "download_eligible": false,
+      "eligibility_reason": "access_not_confirmed_open",
+      "local_pdf_name": "6391c6624b77f768472b.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.4324/9781003755081-5",
+      "title": "Generative AI and Agentic AI",
+      "doi": "10.4324/9781003755081-5",
+      "preferred_version_date": "2026-08-12",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [],
+      "access_status": "publisher_access",
+      "license": null,
+      "source_url": null,
+      "download_eligible": false,
+      "eligibility_reason": "access_not_confirmed_open",
+      "local_pdf_name": "335834d3c0bc7c334a76.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.5117/ccr2026.2.11.urma",
+      "title": "Gender Representation in Large Language Models: A Cross-Linguistic and Cross-Model Analysis",
+      "doi": "10.5117/ccr2026.2.11.urma",
+      "preferred_version_date": "2026-05-21",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [
+        {
+          "url": "https://www.aup-online.com/deliver/fulltext/26659085/8/2/CCR2026.2.11.URMA.html?itemId=/content/journals/10.5117/CCR2026.2.11.URMA&mimeType=html&fmt=ahah",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "not_established",
+            "date": null,
+            "identifier": null,
+            "title": null,
+            "authors": [],
+            "relation_to_preferred": "not_established"
+          },
+          "source_recovery": false
+        },
+        {
+          "url": "https://www.aup-online.com/content/journals/10.5117/CCR2026.2.11.URMA",
+          "priority": "source_recovery_audit",
+          "source_version": {
+            "version_type": "version_of_record",
+            "source_version_label": "version_of_record",
+            "date": "2026-05-21",
+            "identifier": {
+              "doi": "10.5117/CCR2026.2.11.URMA"
+            },
+            "title": "Gender Representation in Large Language Models: A Cross-Linguistic and Cross-Model Analysis",
+            "authors": [
+              "Aleksandra Urman",
+              "Emese Domahidi",
+              "Johannes B. Gruber",
+              "Ana Jovančević",
+              "Michaela Maier",
+              "Dren Gërguri",
+              "Jaromír Mazak",
+              "Mariken A.C.G. van der Velden"
+            ],
+            "relation_to_preferred": "preferred_version",
+            "relation_basis": "Official publisher HTML of the preferred Version of Record with the same DOI."
+          },
+          "source_recovery": true
+        }
+      ],
+      "access_status": "open_access",
+      "license": "CC BY 4.0",
+      "source_url": "https://www.aup-online.com/deliver/fulltext/26659085/8/2/CCR2026.2.11.URMA.html?itemId=/content/journals/10.5117/CCR2026.2.11.URMA&mimeType=html&fmt=ahah",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "966ccb35ca7bffd2ac75.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.55121/jele.v2i1.1050",
+      "title": "Artificial Intelligence and Case-Based Learning in Social Work Education: Pedagogical Considerations and Future Directions",
+      "doi": "10.55121/jele.v2i1.1050",
+      "preferred_version_date": "2026-04-21",
+      "preferred_version_type": "version_of_record",
+      "source_version": {
+        "version_type": "version_of_record",
+        "date": "2026-04-21",
+        "identifier": {
+          "doi": "10.55121/jele.v2i1.1050"
+        },
+        "title": "Artificial Intelligence and Case-Based Learning in Social Work Education: Pedagogical Considerations and Future Directions",
+        "authors": [
+          "Mark Taylor"
+        ],
+        "relation_to_preferred": "preferred_version"
+      },
+      "source_options": [
+        {
+          "url": "https://research.gold.ac.uk/id/eprint/40392/2/JELE-1050-v2i1-129-141.pdf",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "version_of_record",
+            "date": "2026-04-21",
+            "identifier": {
+              "doi": "10.55121/jele.v2i1.1050"
+            },
+            "title": "Artificial Intelligence and Case-Based Learning in Social Work Education: Pedagogical Considerations and Future Directions",
+            "authors": [
+              "Mark Taylor"
+            ],
+            "relation_to_preferred": "preferred_version"
+          },
+          "source_recovery": false
+        }
+      ],
+      "access_status": "open_access",
+      "license": null,
+      "source_url": "https://research.gold.ac.uk/id/eprint/40392/2/JELE-1050-v2i1-129-141.pdf",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "e98f1e62b53a093069fc.pdf"
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.63317/2hn5gs6yh5m2",
+      "title": "I Am Not Them: Persistent Outgroup Bias in Large Language Models Arising from Social Identity Persona Setting",
+      "doi": "10.63317/2hn5gs6yh5m2",
+      "preferred_version_date": "2026-05-13",
+      "preferred_version_type": "proceedings_version",
+      "source_version": {
+        "version_type": "not_established",
+        "date": null,
+        "identifier": null,
+        "title": null,
+        "authors": [],
+        "relation_to_preferred": "not_established"
+      },
+      "source_options": [
+        {
+          "url": "https://aclanthology.org/2026.lrec-1.217.pdf",
+          "priority": "audited_access",
+          "source_version": {
+            "version_type": "not_established",
+            "date": null,
+            "identifier": null,
+            "title": null,
+            "authors": [],
+            "relation_to_preferred": "not_established"
+          },
+          "source_recovery": false
+        },
+        {
+          "url": "https://arxiv.org/pdf/2402.10436",
+          "priority": "recorded_version_fallback",
+          "source_version": {
+            "version_type": "preprint",
+            "date": "2024-02",
+            "identifier": "arXiv:2402.10436",
+            "title": "I Am Not Them: Persistent Outgroup Bias in Large Language Models Arising from Social Identity Persona Setting",
+            "authors": [
+              "Wenchao Dong",
+              "Assem Zhunis",
+              "Dongyoung Jeong",
+              "Hyojin Chin",
+              "Jiyoung Han",
+              "Meeyoung Cha"
+            ],
+            "relation_to_preferred": "alternative_recorded_version"
+          },
+          "source_recovery": false
+        },
+        {
+          "url": "https://arxiv.org/pdf/2409.03843",
+          "priority": "recorded_version_fallback",
+          "source_version": {
+            "version_type": "preprint",
+            "date": "2024-09",
+            "identifier": "arXiv:2409.03843",
+            "title": "I Am Not Them: Persistent Outgroup Bias in Large Language Models Arising from Social Identity Persona Setting",
+            "authors": [
+              "Wenchao Dong",
+              "Assem Zhunis",
+              "Dongyoung Jeong",
+              "Hyojin Chin",
+              "Jiyoung Han",
+              "Meeyoung Cha"
+            ],
+            "relation_to_preferred": "alternative_recorded_version"
+          },
+          "source_recovery": false
+        },
+        {
+          "url": "https://lrec.elra.info/lrec2026-main-217",
+          "priority": "recorded_version_fallback",
+          "source_version": {
+            "version_type": "proceedings_version",
+            "date": "2026-05-13",
+            "identifier": "doi:10.63317/2hn5gs6yh5m2",
+            "title": "I Am Not Them: Persistent Outgroup Bias in Large Language Models Arising from Social Identity Persona Setting",
+            "authors": [
+              "Wenchao Dong",
+              "Assem Zhunis",
+              "Dongyoung Jeong",
+              "Hyojin Chin",
+              "Jiyoung Han",
+              "Meeyoung Cha"
+            ],
+            "relation_to_preferred": "preferred_version"
+          },
+          "source_recovery": false
+        }
+      ],
+      "access_status": "open_access",
+      "license": "CC BY 4.0",
+      "source_url": "https://aclanthology.org/2026.lrec-1.217.pdf",
+      "download_eligible": true,
+      "eligibility_reason": "confirmed_open_fulltext_url",
+      "local_pdf_name": "f403809ad4503150093a.pdf"
+    }
+  ]
+}

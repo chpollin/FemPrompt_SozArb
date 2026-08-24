@@ -1,0 +1,35 @@
+{
+  "schema": "femprompt-html-source-manifest/0.1",
+  "records": [
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1016/j.mcpdig.2026.100344",
+      "title": "Implicit Gender, Racial, and Ethnic Biases in Large Language Models: An Audit Study of Automated Psychiatric Diagnoses",
+      "source_format": "html",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13217584/",
+      "source_version": {
+        "version_type": "version_of_record",
+        "source_version_label": "version_of_record_repository_html",
+        "date": "2026-03-06",
+        "identifier": {
+          "doi": "10.1016/j.mcpdig.2026.100344",
+          "pmcid": "PMC13217584",
+          "pmid": "42221464"
+        },
+        "title": "Implicit Gender, Racial, and Ethnic Biases in Large Language Models: An Audit Study of Automated Psychiatric Diagnoses",
+        "authors": [
+          "Sachin R. Pendse",
+          "Mini Jain",
+          "Neha Kumar",
+          "Munmun De Choudhury"
+        ],
+        "relation_to_preferred": "preferred_version"
+      },
+      "source_file": "generated/source-acquisition/codex-websearch-2026/html-source/166a9834b422f052b7c5.html",
+      "markdown_file": "generated/source-acquisition/codex-websearch-2026/html-markdown/166a9834b422f052b7c5.md",
+      "source_sha256": "79584417e45c81b3a08df4fbcca861c99c5e3f7ffce91860abba13a229ece628",
+      "markdown_sha256": "5568a06471911bf9d102f9caf87159966469807bd990ef8a837d52585de186f5",
+      "extraction_method": "Official PMC HTML fetched directly over HTTPS with an identifying user agent; the article-body DOM was isolated with BeautifulSoup/lxml, non-article controls were removed, relative article links were resolved against the PMC source URL, and semantic Markdown including all HTML tables was generated with markdownify.",
+      "acquired_at": "2026-08-24"
+    }
+  ]
+}

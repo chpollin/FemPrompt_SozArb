@@ -1,0 +1,235 @@
+{
+  "schema": "femprompt-markdown-repair-report/0.1",
+  "reviewer": "round2_sources",
+  "repaired_at": "2026-08-24",
+  "records": [
+    {
+      "candidate_id": "7cbaa5fc7bd51c3642ad",
+      "title": "生成式人工智能在心理健康教育中的语义稳定性、回答策略与偏差分析",
+      "source_pdf": "generated/pdfs/codex-websearch-2026/7cbaa5fc7bd51c3642ad.pdf",
+      "source_markdown": "generated/source-acquisition/codex-websearch-2026/markdown-clean/7cbaa5fc7bd51c3642ad.md",
+      "repaired_markdown": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/7cbaa5fc7bd51c3642ad.md",
+      "decision": "approved_for_screening",
+      "page_markers_preserved": true,
+      "tables": [
+        {
+          "table_id": "表1 研究工具",
+          "pdf_page": 3,
+          "source_state": "caption_only",
+          "repaired_state": "complete_markdown_table",
+          "dimensions": {
+            "header_rows": 1,
+            "data_rows": 6,
+            "columns": 4
+          },
+          "extraction_methods": [
+            "PyMuPDF high-resolution raster extraction at 4x scale with manual cell transcription",
+            "Poppler pdftoppm independent page render at 300 dpi"
+          ],
+          "visual_verification": "All six rows and four columns were checked against the ruled table on PDF page 3; Chinese labels, software names, functions, citations, and the two-line final row match the PDF.",
+          "status": "verified_complete"
+        },
+        {
+          "table_id": "表2 心理健康教育对话提示语手册",
+          "pdf_page": 4,
+          "source_state": "caption_only",
+          "repaired_state": "complete_markdown_table",
+          "dimensions": {
+            "header_rows": 1,
+            "data_rows": 21,
+            "columns": 3
+          },
+          "extraction_methods": [
+            "PyMuPDF high-resolution raster extraction at 3.5x scale with manual row transcription",
+            "Poppler pdftoppm independent page render at 300 dpi"
+          ],
+          "visual_verification": "Q1 through Q21 were checked in sequence against the full-page render; every category assignment and prompt sentence is present in its PDF row.",
+          "status": "verified_complete"
+        },
+        {
+          "table_id": "表3 多参数配置下语义相似度的均值与标准差对比结果",
+          "pdf_page": 8,
+          "source_state": "caption_and_image_placeholder_only",
+          "repaired_state": "complete_markdown_table",
+          "dimensions": {
+            "header_rows": 1,
+            "data_rows": 21,
+            "columns": 7
+          },
+          "extraction_methods": [
+            "PyMuPDF high-resolution raster extraction at 4x scale with manual numeric transcription",
+            "Poppler pdftoppm independent page render at 300 dpi"
+          ],
+          "visual_verification": "All 126 numeric cells for Q1 through Q21 were checked row-wise against PDF page 8; the low-, medium-, and high-temperature μ and σ column order is preserved.",
+          "status": "verified_complete"
+        },
+        {
+          "table_id": "表4 多参数配置下的策略类型",
+          "pdf_page": 9,
+          "source_state": "caption_only",
+          "repaired_state": "complete_markdown_table",
+          "dimensions": {
+            "header_rows": 1,
+            "data_rows": 4,
+            "columns": 4
+          },
+          "extraction_methods": [
+            "PyMuPDF high-resolution raster extraction at 3.5x scale with manual cell transcription",
+            "Poppler pdftoppm independent page render at 300 dpi"
+          ],
+          "visual_verification": "The four strategy types and every Q identifier in the low-, medium-, and high-temperature columns were checked against the complete table area on PDF page 9.",
+          "status": "verified_complete"
+        },
+        {
+          "table_id": "表5 性别组的回答差异检验结果",
+          "pdf_page": 9,
+          "source_state": "caption_and_note_only",
+          "repaired_state": "complete_markdown_table_with_existing_note",
+          "dimensions": {
+            "header_rows": 1,
+            "data_rows": 6,
+            "columns": 5
+          },
+          "extraction_methods": [
+            "PyMuPDF high-resolution raster extraction at 4x scale with manual numeric transcription",
+            "Poppler pdftoppm independent page render at 300 dpi"
+          ],
+          "visual_verification": "The six evaluation criteria, both M ± SD columns, all U and p values, and both N/A cells were checked against PDF page 9; the existing N/A note remains directly after the table.",
+          "status": "verified_complete"
+        },
+        {
+          "table_id": "表6 跨模型语义相似度的均值与标准差对比结果",
+          "pdf_page": 10,
+          "source_state": "caption_and_image_placeholder_only",
+          "repaired_state": "complete_markdown_table",
+          "dimensions": {
+            "header_rows": 1,
+            "data_rows": 21,
+            "columns": 7
+          },
+          "extraction_methods": [
+            "PyMuPDF high-resolution raster extraction at 4x scale with manual numeric transcription",
+            "Poppler pdftoppm independent page render at 300 dpi"
+          ],
+          "visual_verification": "All 126 numeric cells for Q1 through Q21 were checked row-wise against PDF page 10; the DeepSeek, ChatGPT, and 豆包 μ and σ columns retain the PDF order.",
+          "status": "verified_complete"
+        },
+        {
+          "table_id": "表7 跨模型的策略类型",
+          "pdf_page": 10,
+          "source_state": "caption_merged_with_figure_caption",
+          "repaired_state": "separated_caption_and_complete_markdown_table",
+          "dimensions": {
+            "header_rows": 1,
+            "data_rows": 4,
+            "columns": 4
+          },
+          "extraction_methods": [
+            "PyMuPDF high-resolution raster extraction at 4x scale with manual cell transcription",
+            "Poppler pdftoppm independent page render at 300 dpi"
+          ],
+          "visual_verification": "The figure and table captions were separated in their PDF order; all four strategy rows and every Q identifier under DeepSeek, ChatGPT, and 豆包 were checked against PDF page 10.",
+          "status": "verified_complete"
+        }
+      ],
+      "validation": {
+        "utf8_decode": "passed",
+        "page_markers": "passed: PAGE 1 through PAGE 13 are identical to the source Markdown",
+        "table_shapes": "passed: 7 of 7 tables have the verified row and column counts",
+        "beginning": "passed: front matter and opening content unchanged",
+        "ending": "passed: terminal article content unchanged; final newline normalized"
+      },
+      "issues_remaining": []
+    },
+    {
+      "candidate_id": "a1c7e9db9a3dc6caff54",
+      "title": "Mitigating Cultural Bias in LLMs via Multi-Agent Cultural Debate",
+      "source_pdf": "generated/pdfs/codex-websearch-2026/a1c7e9db9a3dc6caff54.pdf",
+      "source_markdown": "generated/source-acquisition/codex-websearch-2026/markdown-clean/a1c7e9db9a3dc6caff54.md",
+      "repaired_markdown": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/a1c7e9db9a3dc6caff54.md",
+      "decision": "approved_for_screening",
+      "page_markers_preserved": true,
+      "tables": [
+        {
+          "table_id": "Table 1 Detailed performance comparison on CEBiasBench",
+          "pdf_page": 7,
+          "source_state": "complete_markdown_table",
+          "repaired_state": "unchanged_complete_markdown_table",
+          "dimensions": {
+            "header_rows": 6,
+            "data_rows": 24,
+            "columns": 12
+          },
+          "extraction_methods": [
+            "Visual PDF-to-Markdown comparison"
+          ],
+          "visual_verification": "The pre-existing table contains the complete three-backbone by four-method result matrix and required no repair.",
+          "status": "verified_complete"
+        },
+        {
+          "table_id": "Table 2 Ablation study on CEBiasBench-EN",
+          "pdf_page": 8,
+          "source_state": "rows_collapsed_and_checkmarks_corrupted",
+          "repaired_state": "complete_markdown_table",
+          "dimensions": {
+            "header_rows": 1,
+            "data_rows": 12,
+            "columns": 5
+          },
+          "extraction_methods": [
+            "PyMuPDF high-resolution raster extraction at 4x scale with manual row transcription",
+            "Poppler pdftoppm independent page render at 300 dpi"
+          ],
+          "visual_verification": "All three section rows and nine experiment rows were checked against PDF page 8; every ✓/× setting, agent count, and No Bias percentage matches the PDF.",
+          "status": "verified_complete"
+        },
+        {
+          "table_id": "Table 3 Full CEBiasBench results",
+          "pdf_page": 12,
+          "source_state": "severely_fragmented_markdown_table",
+          "repaired_state": "complete_markdown_table",
+          "dimensions": {
+            "header_rows": 1,
+            "data_rows": 48,
+            "columns": 12
+          },
+          "extraction_methods": [
+            "PyMuPDF positioned-text extraction grouped by PDF x/y coordinates",
+            "Poppler pdftoppm independent page render at 300 dpi"
+          ],
+          "visual_verification": "Both language panels, all four method groups, all 48 generator/evaluator rows, and the nine result columns were checked against the full-page render. A machine comparison confirmed that every repaired row exactly matches the positioned PDF text layer.",
+          "status": "verified_complete"
+        },
+        {
+          "table_id": "Table 4 CAMeL benchmark results",
+          "pdf_page": 13,
+          "source_state": "cells_shifted_and_rows_merged",
+          "repaired_state": "complete_markdown_table",
+          "dimensions": {
+            "header_rows": 1,
+            "data_rows": 8,
+            "columns": 8
+          },
+          "extraction_methods": [
+            "PyMuPDF positioned-text extraction with manual row reconstruction",
+            "Poppler pdftoppm independent page render at 300 dpi"
+          ],
+          "visual_verification": "The Direct, CoT, MAD, and MACD rows for GPT-5 and GLM4 were checked against PDF page 13; all 48 category counts and the eight-column structure match the ruled source table.",
+          "status": "verified_complete"
+        }
+      ],
+      "validation": {
+        "utf8_decode": "passed",
+        "page_markers": "passed: PAGE 1 through PAGE 13 are identical to the source Markdown",
+        "table_2_shape": "passed: 12 data/section rows and 5 columns",
+        "table_3_pdf_text_match": "passed: 48 rows by 12 columns exactly match positioned PDF text extraction",
+        "table_4_shape": "passed: 8 data rows and 8 columns",
+        "beginning": "passed: front matter and opening content unchanged",
+        "ending": "passed: terminal article content unchanged; final newline normalized"
+      },
+      "issues_remaining": [
+        "Source-level anomaly preserved verbatim: the cn/MAD/mistral-large × Qwen3-32b cell in Table 3 contains seven slash-separated counts (65/8/26/0/0/0/1), although the caption defines six categories. Both the PDF text layer and visual render show this exact value."
+      ]
+    }
+  ]
+}

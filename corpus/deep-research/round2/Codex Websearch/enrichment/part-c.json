@@ -1,0 +1,583 @@
+{
+  "schema": "femprompt-source-enrichment/0.1",
+  "partition": "C",
+  "searched_at": "2026-08-24",
+  "candidate_ids": [
+    "codex-websearch-2026:doi:10.18653/v1/2026.findings-acl.418",
+    "codex-websearch-2026:doi:10.18653/v1/2026.findings-acl.585",
+    "codex-websearch-2026:doi:10.21240/dimesoz/2026/1/57",
+    "codex-websearch-2026:doi:10.21556/edutec.2026.96.4777",
+    "codex-websearch-2026:doi:10.2196/85770",
+    "codex-websearch-2026:doi:10.2196/86633",
+    "codex-websearch-2026:doi:10.2196/90589",
+    "codex-websearch-2026:doi:10.25009/is.v11i21.3001",
+    "codex-websearch-2026:doi:10.3389/fhumd.2026.1791655",
+    "codex-websearch-2026:doi:10.3390/ai7010024",
+    "codex-websearch-2026:doi:10.35362/issn.1850-0013-1258",
+    "codex-websearch-2026:doi:10.35362/issn.1850-0013-1259",
+    "codex-websearch-2026:doi:10.3917/vsoc.052.0029",
+    "codex-websearch-2026:doi:10.4324/9781003627920-14",
+    "codex-websearch-2026:doi:10.4324/9781003755081-10",
+    "codex-websearch-2026:doi:10.4324/9781003755081-5",
+    "codex-websearch-2026:doi:10.5117/ccr2026.2.11.urma",
+    "codex-websearch-2026:doi:10.55121/jele.v2i1.1050",
+    "codex-websearch-2026:doi:10.63317/2hn5gs6yh5m2"
+  ],
+  "records": [
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.18653/v1/2026.findings-acl.418",
+      "title": "Mitigating Cultural Bias in LLMs via Multi-Agent Cultural Debate",
+      "checked_urls": [
+        "https://aclanthology.org/2026.findings-acl.418/",
+        "https://aclanthology.org/2026.findings-acl.418.pdf",
+        "https://aclanthology.org/faq/copyright/",
+        "https://arxiv.org/abs/2601.12091"
+      ],
+      "fulltext": {
+        "status": "located_open_access",
+        "url": "https://aclanthology.org/2026.findings-acl.418.pdf",
+        "license": "CC BY 4.0",
+        "evidence_url": "https://aclanthology.org/2026.findings-acl.418/",
+        "basis": "Der offizielle ACL-Anthology-Datensatz verlinkt die frei abrufbare Proceedings-PDF; die Anthology weist für ab 2016 publiziertes Material CC BY 4.0 aus."
+      },
+      "peer_review": {
+        "status": "venue_reviewed_proceedings",
+        "evidence_url": "https://aclanthology.org/2026.findings-acl.418/",
+        "basis": "Offizieller artikelspezifischer Datensatz in Findings of ACL 2026 mit Proceedings-Zitation, Seiten und DOI.",
+        "received": null,
+        "accepted": null
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Die arXiv-Fassung 2601.12091 und die Proceedings-Fassung wurden als Versionskette bestätigt."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.18653/v1/2026.findings-acl.585",
+      "title": "Persona-Assigned Large Language Models Exhibit Human-Like Motivated Reasoning",
+      "checked_urls": [
+        "https://aclanthology.org/2026.findings-acl.585/",
+        "https://aclanthology.org/2026.findings-acl.585.pdf",
+        "https://aclanthology.org/faq/copyright/",
+        "https://arxiv.org/abs/2506.20020"
+      ],
+      "fulltext": {
+        "status": "located_open_access",
+        "url": "https://aclanthology.org/2026.findings-acl.585.pdf",
+        "license": "CC BY 4.0",
+        "evidence_url": "https://aclanthology.org/2026.findings-acl.585/",
+        "basis": "Der offizielle ACL-Anthology-Datensatz verlinkt die frei abrufbare Proceedings-PDF; die Anthology weist für ab 2016 publiziertes Material CC BY 4.0 aus."
+      },
+      "peer_review": {
+        "status": "venue_reviewed_proceedings",
+        "evidence_url": "https://aclanthology.org/2026.findings-acl.585/",
+        "basis": "Offizieller artikelspezifischer Datensatz in Findings of ACL 2026 mit Proceedings-Zitation, Seiten und DOI.",
+        "received": null,
+        "accepted": null
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Die arXiv-Fassung 2506.20020 und die Proceedings-Fassung wurden als Versionskette bestätigt."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.21240/dimesoz/2026/1/57",
+      "title": "Generative KI in der Beratung: Empirische Befunde mit Blick auf Nutzungsbedingungen von Chatbots",
+      "checked_urls": [
+        "https://www.dime-sozial.de/index.php/dimesoz/article/view/57",
+        "https://www.dime-sozial.de/index.php/dimesoz/article/download/57/24",
+        "https://www.dime-sozial.de/index.php/dimesoz/about"
+      ],
+      "fulltext": {
+        "status": "located_open_access",
+        "url": "https://www.dime-sozial.de/index.php/dimesoz/article/download/57/24",
+        "license": "CC BY 4.0",
+        "evidence_url": "https://www.dime-sozial.de/index.php/dimesoz/article/view/57",
+        "basis": "Die offizielle OJS-Artikelseite weist die PDF als citation_pdf_url und die Lizenz ausdrücklich als Creative Commons Namensnennung 4.0 International aus."
+      },
+      "peer_review": {
+        "status": "not_established",
+        "evidence_url": "https://www.dime-sozial.de/index.php/dimesoz/article/view/57",
+        "basis": "Die Artikelseite und die frei zugängliche PDF enthalten keine artikelspezifischen Einreichungs-, Annahme- oder Reviewangaben; die allgemeine Journalbeschreibung allein genügt hier nicht als artikelspezifischer Nachweis.",
+        "received": null,
+        "accepted": null
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Publikationsdatum 2026-01-31, Autor:innen und DOI wurden durch die OJS-Metadaten bestätigt."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.21556/edutec.2026.96.4777",
+      "title": "Pensar críticamente la inteligencia artificial en la escuela: un estudio de caso desde una perspectiva de género",
+      "checked_urls": [
+        "https://edutec.es/revista/index.php/edutec-e/article/view/4777",
+        "https://edutec.es/revista/index.php/edutec-e/article/download/4777/1657",
+        "https://edutec.es/revista/index.php/edutec-e/issue/view/141"
+      ],
+      "fulltext": {
+        "status": "located_open_access",
+        "url": "https://edutec.es/revista/index.php/edutec-e/article/download/4777/1657",
+        "license": "CC BY 4.0",
+        "evidence_url": "https://edutec.es/revista/index.php/edutec-e/article/view/4777",
+        "basis": "Die offizielle OJS-Seite verlinkt die PDF und weist ausdrücklich Creative Commons Atribución 4.0 aus."
+      },
+      "peer_review": {
+        "status": "review_history_documented",
+        "evidence_url": "https://edutec.es/revista/index.php/edutec-e/article/download/4777/1657",
+        "basis": "Die Verlags-PDF nennt artikelspezifisch Eingang und Annahme.",
+        "received": "2025-12-31",
+        "accepted": "2026-03-06"
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Die Ausgabe 96 wurde am 2026-06-30 veröffentlicht; Autorinnen, DOI und Artikelnummer 2 wurden bestätigt."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.2196/85770",
+      "title": "Patient Cognitive Bias in Large Language Model-Supported Health Consultations: Simulation-Based Comparative Study",
+      "checked_urls": [
+        "https://www.jmir.org/2026/1/e85770",
+        "https://www.jmir.org/2026/1/e85770/PDF",
+        "https://preprints.jmir.org/preprint/85770/accepted"
+      ],
+      "fulltext": {
+        "status": "located_open_access",
+        "url": "https://www.jmir.org/2026/1/e85770/PDF",
+        "license": "CC BY 4.0",
+        "evidence_url": "https://www.jmir.org/2026/1/e85770",
+        "basis": "Die offizielle JMIR-Artikelseite stellt HTML und PDF der Version of Record frei bereit und weist CC BY 4.0 aus."
+      },
+      "peer_review": {
+        "status": "review_history_documented",
+        "evidence_url": "https://www.jmir.org/2026/1/e85770/PDF",
+        "basis": "Der Publisher nennt in der Version of Record Einreichung, namentlich bezeichnete Peer Reviewer und Annahme.",
+        "received": "2025-10-13",
+        "accepted": "2026-05-04"
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Die JMIR-Preprintseite bestätigt die Relation zur finalen peer-reviewten Fassung."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.2196/86633",
+      "title": "Ethics and Fairness Considerations in AI-Based Deception Detection Technologies for Mental Health Applications: Focus Group Study",
+      "checked_urls": [
+        "https://ai.jmir.org/2026/1/e86633/",
+        "https://ai.jmir.org/2026/1/e86633/PDF",
+        "https://preprints.jmir.org/preprint/86633/accepted"
+      ],
+      "fulltext": {
+        "status": "located_open_access",
+        "url": "https://ai.jmir.org/2026/1/e86633/PDF",
+        "license": "CC BY 4.0",
+        "evidence_url": "https://ai.jmir.org/2026/1/e86633/",
+        "basis": "Die offizielle JMIR-AI-Seite stellt die Version of Record als HTML und PDF frei unter CC BY 4.0 bereit."
+      },
+      "peer_review": {
+        "status": "review_history_documented",
+        "evidence_url": "https://preprints.jmir.org/preprint/86633/accepted",
+        "basis": "Die offizielle JMIR-Preprintseite bezeichnet die finale Fassung als peer reviewed und nennt Einreichungs- und Annahmedatum; die Version of Record nennt die Reviewer.",
+        "received": "2025-10-28",
+        "accepted": "2026-03-17"
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Der frei zugängliche publizierte Volltext macht einen Rückgriff auf die zugangsbeschränkte Accepted-Manuscript-Ansicht entbehrlich."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.2196/90589",
+      "title": "Generative AI in Youth Mental Health Apps: Rapid Review",
+      "checked_urls": [
+        "https://mental.jmir.org/2026/1/e90589",
+        "https://mental.jmir.org/2026/1/e90589/PDF",
+        "https://preprints.jmir.org/preprint/90589/accepted"
+      ],
+      "fulltext": {
+        "status": "located_open_access",
+        "url": "https://mental.jmir.org/2026/1/e90589/PDF",
+        "license": "CC BY 4.0",
+        "evidence_url": "https://mental.jmir.org/2026/1/e90589",
+        "basis": "Die offizielle JMIR-Mental-Health-Seite stellt die Version of Record als HTML und PDF frei unter CC BY 4.0 bereit."
+      },
+      "peer_review": {
+        "status": "review_history_documented",
+        "evidence_url": "https://mental.jmir.org/2026/1/e90589/PDF",
+        "basis": "Die Verlags-PDF nennt Einreichung, namentlich bezeichnete Peer Reviewer, Revision und Annahme.",
+        "received": "2025-12-30",
+        "accepted": "2026-07-07"
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Die Version of Record wurde am 2026-08-19 veröffentlicht."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.25009/is.v11i21.3001",
+      "title": "Análisis de la desinformación y los sesgos de género generados por la inteligencia artificial",
+      "checked_urls": [
+        "https://is.uv.mx/index.php/IS/article/view/3001",
+        "https://is.uv.mx/index.php/IS/article/download/3001/4785"
+      ],
+      "fulltext": {
+        "status": "located_open_access",
+        "url": "https://is.uv.mx/index.php/IS/article/download/3001/4785",
+        "license": "CC BY-NC-ND 4.0",
+        "evidence_url": "https://is.uv.mx/index.php/IS/article/view/3001",
+        "basis": "Die offizielle OJS-Seite weist die PDF als citation_pdf_url und die Lizenz ausdrücklich als Creative Commons Atribución-NoComercial-SinDerivadas 4.0 aus."
+      },
+      "peer_review": {
+        "status": "review_history_documented",
+        "evidence_url": "https://is.uv.mx/index.php/IS/article/download/3001/4785",
+        "basis": "Die Verlags-PDF nennt artikelspezifisch Eingang und Annahme.",
+        "received": "2025-07-22",
+        "accepted": "2026-04-13"
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Publikationsdatum 2026-07-13, Band 11, Heft 21 und Seiten 1-18 wurden bestätigt."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.3389/fhumd.2026.1791655",
+      "title": "AI-generated visual disinformation and digital equity: an intersectional analysis of algorithmic vulnerabilities among marginalised communities",
+      "checked_urls": [
+        "https://www.frontiersin.org/journals/human-dynamics/articles/10.3389/fhumd.2026.1791655/full",
+        "https://www.frontiersin.org/journals/human-dynamics/articles/10.3389/fhumd.2026.1791655/pdf"
+      ],
+      "fulltext": {
+        "status": "located_open_access",
+        "url": "https://www.frontiersin.org/journals/human-dynamics/articles/10.3389/fhumd.2026.1791655/pdf",
+        "license": "CC BY 4.0",
+        "evidence_url": "https://www.frontiersin.org/journals/human-dynamics/articles/10.3389/fhumd.2026.1791655/full",
+        "basis": "Frontiers stellt HTML und PDF offen bereit; die Verlags-PDF nennt die Creative Commons Attribution License."
+      },
+      "peer_review": {
+        "status": "review_history_documented",
+        "evidence_url": "https://www.frontiersin.org/journals/human-dynamics/articles/10.3389/fhumd.2026.1791655/full",
+        "basis": "Die artikelspezifische Frontiers-Seite nennt Eingang, Annahme, zuständige Editorin und Reviewerin.",
+        "received": "2026-01-20",
+        "accepted": "2026-02-18"
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Die Version of Record wurde am 2026-02-26 veröffentlicht."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.3390/ai7010024",
+      "title": "No Free Lunch in Language Model Bias Mitigation? Targeted Bias Reduction Can Exacerbate Unmitigated LLM Biases",
+      "checked_urls": [
+        "https://www.mdpi.com/2673-2688/7/1/24",
+        "https://www.mdpi.com/2673-2688/7/1/24/pdf",
+        "https://www.mdpi.com/2673-2688/7/1/24/review_report",
+        "https://arxiv.org/abs/2511.18635"
+      ],
+      "fulltext": {
+        "status": "located_open_access",
+        "url": "https://www.mdpi.com/2673-2688/7/1/24/pdf",
+        "license": "CC BY 4.0",
+        "evidence_url": "https://www.mdpi.com/2673-2688/7/1/24",
+        "basis": "Die offizielle MDPI-Artikelseite kennzeichnet den Beitrag als Open Access und verlinkt die Version-of-Record-PDF."
+      },
+      "peer_review": {
+        "status": "review_history_documented",
+        "evidence_url": "https://www.mdpi.com/2673-2688/7/1/24/review_report",
+        "basis": "MDPI stellt für genau diesen Artikel eine öffentliche Review-Report-Seite bereit.",
+        "received": null,
+        "accepted": null
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Die arXiv-Fassung 2511.18635 und die MDPI-Version of Record wurden als Versionskette bestätigt."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.35362/issn.1850-0013-1258",
+      "title": "Sesgos de género y modelos de IA generativa: Aproximaciones desde una experiencia de análisis cualitativo desde la generación de imágenes",
+      "checked_urls": [
+        "https://ojs.revistacts.net/index.php/CTS/article/view/1258",
+        "https://ojs.revistacts.net/index.php/CTS/article/download/1258/943"
+      ],
+      "fulltext": {
+        "status": "located_open_access",
+        "url": "https://ojs.revistacts.net/index.php/CTS/article/download/1258/943",
+        "license": "CC BY 4.0",
+        "evidence_url": "https://ojs.revistacts.net/index.php/CTS/article/view/1258",
+        "basis": "Die offizielle OJS-Seite weist die PDF als citation_pdf_url und die Lizenz ausdrücklich als Creative Commons Atribución 4.0 aus."
+      },
+      "peer_review": {
+        "status": "not_established",
+        "evidence_url": "https://ojs.revistacts.net/index.php/CTS/article/view/1258",
+        "basis": "Artikelseite und Verlags-PDF enthalten keine artikelspezifische Einreichungs-, Annahme- oder Reviewhistorie.",
+        "received": null,
+        "accepted": null
+      },
+      "metadata_corrections": [
+        {
+          "field": "publication_date",
+          "old_value": "2026-07-23",
+          "new_value": "2026-07-27",
+          "evidence_url": "https://ojs.revistacts.net/index.php/CTS/article/view/1258",
+          "basis": "Die Primärmetadaten der OJS-Artikelseite geben citation_date 2026/07/27 an."
+        }
+      ],
+      "notes": [
+        "Band 21, Heft 62 und Seiten 157-182 wurden in den OJS-Metadaten bestätigt."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.35362/issn.1850-0013-1259",
+      "title": "IA, salud mental y género: Un mapeo sistemático de las ciencias sociales y humanas en América Latina",
+      "checked_urls": [
+        "https://ojs.revistacts.net/index.php/CTS/article/view/1259",
+        "https://ojs.revistacts.net/index.php/CTS/article/download/1259/947"
+      ],
+      "fulltext": {
+        "status": "located_open_access",
+        "url": "https://ojs.revistacts.net/index.php/CTS/article/download/1259/947",
+        "license": "CC BY 4.0",
+        "evidence_url": "https://ojs.revistacts.net/index.php/CTS/article/view/1259",
+        "basis": "Die offizielle OJS-Seite weist die PDF als citation_pdf_url und die Lizenz ausdrücklich als Creative Commons Atribución 4.0 aus."
+      },
+      "peer_review": {
+        "status": "not_established",
+        "evidence_url": "https://ojs.revistacts.net/index.php/CTS/article/view/1259",
+        "basis": "Artikelseite und Verlags-PDF enthalten keine artikelspezifische Einreichungs-, Annahme- oder Reviewhistorie.",
+        "received": null,
+        "accepted": null
+      },
+      "metadata_corrections": [
+        {
+          "field": "publication_date",
+          "old_value": "2026-07-23",
+          "new_value": "2026-07-27",
+          "evidence_url": "https://ojs.revistacts.net/index.php/CTS/article/view/1259",
+          "basis": "Die Primärmetadaten der OJS-Artikelseite geben citation_date 2026/07/27 an."
+        }
+      ],
+      "notes": [
+        "Band 21, Heft 62 und Seiten 269-302 wurden in den OJS-Metadaten bestätigt."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.3917/vsoc.052.0029",
+      "title": "Intelligence artificielle et travail social, une ressource au service des professionnels ?",
+      "checked_urls": [
+        "https://doi.org/10.3917/vsoc.052.0029",
+        "https://shs.cairn.info/revue-vie-sociale-2025-4-page-29?lang=fr&tab=texte-integral",
+        "https://www.editions-eres.com/uploads/documents/sommairepdf/202601304046sommaire-vie-sociale-52-rr.pdf"
+      ],
+      "fulltext": {
+        "status": "restricted",
+        "url": null,
+        "license": null,
+        "evidence_url": "https://shs.cairn.info/revue-vie-sociale-2025-4-page-29?lang=fr&tab=texte-integral",
+        "basis": "Die offizielle Cairn-Seite kennzeichnet den Artikel ausdrücklich als accès conditionnel; die frei zugängliche érès-PDF enthält nur das Inhaltsverzeichnis. Eine rechtmäßige Repositoriumsfassung wurde nicht gefunden."
+      },
+      "peer_review": {
+        "status": "not_established",
+        "evidence_url": "https://shs.cairn.info/revue-vie-sociale-2025-4-page-29?lang=fr",
+        "basis": "Die Verlagsseite belegt die Journalfassung, enthält aber keine artikelspezifische Einreichungs-, Annahme- oder Reviewhistorie.",
+        "received": null,
+        "accepted": null
+      },
+      "metadata_corrections": [
+        {
+          "field": "publication_date",
+          "old_value": "2026-01-22",
+          "new_value": "2026-03-17",
+          "evidence_url": "https://shs.cairn.info/revue-vie-sociale-2025-4-page-29?lang=fr",
+          "basis": "Cairn nennt als Datum der Online-Veröffentlichung 17/03/2026."
+        },
+        {
+          "field": "volume_issue_pages",
+          "old_value": "52(4), 29-43",
+          "new_value": "2025/4, no. 52, 29-43",
+          "evidence_url": "https://shs.cairn.info/revue-vie-sociale-2025-4-page-29?lang=fr",
+          "basis": "Die Verlagszitation führt Vie sociale 2025/4, numéro 52, Seiten 29-43; 52 ist die Heftnummer, nicht der Band."
+        }
+      ],
+      "notes": [
+        "Die Zuordnung zum Jahrgang 2025/4 und die Online-Veröffentlichung 2026 sind getrennt zu erfassen."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.4324/9781003627920-14",
+      "title": "Social Work Ethics and Generative AI",
+      "checked_urls": [
+        "https://doi.org/10.4324/9781003627920-14",
+        "https://www.taylorfrancis.com/books/9781003627920/chapters/10.4324/9781003627920-14",
+        "https://www.routledge.com/AI-and-the-Disruption-of-the-Social-Challenges-for-Social-Work-Education-and-Practice/Ottmann-Noble/p/book/9781041041955"
+      ],
+      "fulltext": {
+        "status": "publisher_landing_only",
+        "url": null,
+        "license": null,
+        "evidence_url": "https://www.taylorfrancis.com/books/9781003627920/chapters/10.4324/9781003627920-14",
+        "basis": "Die DOI löst auf eine offizielle Taylor-&-Francis-Kapitelseite auf; weder dort noch in der geprüften Autor-/Repositoriumssuche wurde eine offene Kapitel-, Accepted-Manuscript- oder Repositoriumsfassung belegt."
+      },
+      "peer_review": {
+        "status": "not_established",
+        "evidence_url": "https://www.routledge.com/AI-and-the-Disruption-of-the-Social-Challenges-for-Social-Work-Education-and-Practice/Ottmann-Noble/p/book/9781041041955",
+        "basis": "Die Routledge-Primärseite belegt Buch, Kapitel und Autor, aber keine kapitelspezifische Begutachtung.",
+        "received": null,
+        "accepted": null
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Die offizielle Buchseite führt Michael Balkow als Autor von Kapitel 14."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.4324/9781003755081-10",
+      "title": "Prompt Engineering for Social Workers",
+      "checked_urls": [
+        "https://doi.org/10.4324/9781003755081-10",
+        "https://www.taylorfrancis.com/books/9781003755081/chapters/10.4324/9781003755081-10",
+        "https://www.routledge.com/Social-Work-Practice-and-Artificial-Intelligence-for-the-Common-Good-Ethics-Equity-and-Innovation-in-Human-Services/Lee-Song/p/book/9781041275459"
+      ],
+      "fulltext": {
+        "status": "publisher_landing_only",
+        "url": null,
+        "license": null,
+        "evidence_url": "https://www.taylorfrancis.com/books/9781003755081/chapters/10.4324/9781003755081-10",
+        "basis": "Die DOI löst auf eine offizielle Taylor-&-Francis-Kapitelseite auf; eine offene Kapitel-, Accepted-Manuscript- oder Repositoriumsfassung wurde nicht gefunden."
+      },
+      "peer_review": {
+        "status": "not_established",
+        "evidence_url": "https://www.routledge.com/Social-Work-Practice-and-Artificial-Intelligence-for-the-Common-Good-Ethics-Equity-and-Innovation-in-Human-Services/Lee-Song/p/book/9781041275459",
+        "basis": "Die Routledge-Primärseite belegt Buch, Inhaltsverzeichnis und Autorinnen, aber keine kapitelspezifische Begutachtung.",
+        "received": null,
+        "accepted": null
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Die offizielle Buchseite führt den Beitrag im Inhaltsverzeichnis als Kapitel 8, während die DOI-Suffixnummer 10 keine Kapitelnummer belegt.",
+        "Die Buchseite bezeichnet das Werk als Copyright 2027; der 2026-Datensatz beruht auf der vorab registrierten Kapitel-DOI."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.4324/9781003755081-5",
+      "title": "Generative AI and Agentic AI",
+      "checked_urls": [
+        "https://doi.org/10.4324/9781003755081-5",
+        "https://www.taylorfrancis.com/books/9781003755081/chapters/10.4324/9781003755081-5",
+        "https://www.routledge.com/Social-Work-Practice-and-Artificial-Intelligence-for-the-Common-Good-Ethics-Equity-and-Innovation-in-Human-Services/Lee-Song/p/book/9781041275459"
+      ],
+      "fulltext": {
+        "status": "publisher_landing_only",
+        "url": null,
+        "license": null,
+        "evidence_url": "https://www.taylorfrancis.com/books/9781003755081/chapters/10.4324/9781003755081-5",
+        "basis": "Die DOI löst auf eine offizielle Taylor-&-Francis-Kapitelseite auf; eine offene Kapitel-, Accepted-Manuscript- oder Repositoriumsfassung wurde nicht gefunden."
+      },
+      "peer_review": {
+        "status": "not_established",
+        "evidence_url": "https://www.routledge.com/Social-Work-Practice-and-Artificial-Intelligence-for-the-Common-Good-Ethics-Equity-and-Innovation-in-Human-Services/Lee-Song/p/book/9781041275459",
+        "basis": "Die Routledge-Primärseite belegt Buch, Inhaltsverzeichnis und Autorinnen, aber keine kapitelspezifische Begutachtung.",
+        "received": null,
+        "accepted": null
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Die offizielle Buchseite führt den Beitrag im Inhaltsverzeichnis als Kapitel 4, während die DOI-Suffixnummer 5 keine Kapitelnummer belegt.",
+        "Die Buchseite bezeichnet das Werk als Copyright 2027; der 2026-Datensatz beruht auf der vorab registrierten Kapitel-DOI."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.5117/ccr2026.2.11.urma",
+      "title": "Gender Representation in Large Language Models: A Cross-Linguistic and Cross-Model Analysis",
+      "checked_urls": [
+        "https://www.aup-online.com/content/journals/10.5117/CCR2026.2.11.URMA",
+        "https://www.aup-online.com/deliver/fulltext/26659085/8/2/CCR2026.2.11.URMA.html?itemId=/content/journals/10.5117/CCR2026.2.11.URMA&mimeType=html&fmt=ahah",
+        "https://research.vu.nl/en/publications/gender-representation-in-large-language-models-a-cross-linguistic/"
+      ],
+      "fulltext": {
+        "status": "located_open_access",
+        "url": "https://www.aup-online.com/deliver/fulltext/26659085/8/2/CCR2026.2.11.URMA.html?itemId=/content/journals/10.5117/CCR2026.2.11.URMA&mimeType=html&fmt=ahah",
+        "license": "CC BY 4.0",
+        "evidence_url": "https://www.aup-online.com/content/journals/10.5117/CCR2026.2.11.URMA",
+        "basis": "Die AUP-Artikelseite kennzeichnet den Beitrag als Open Access, lädt den vollständigen HTML-Text, bietet eine PDF an und weist CC BY 4.0 ausdrücklich aus."
+      },
+      "peer_review": {
+        "status": "review_history_documented",
+        "evidence_url": "https://www.aup-online.com/content/journals/10.5117/CCR2026.2.11.URMA",
+        "basis": "Die artikelspezifische AUP-Seite nennt Eingang, Annahme und Online-Veröffentlichung; der institutionelle VU-Datensatz klassifiziert den Beitrag ausdrücklich als peer-reviewten Journalartikel.",
+        "received": "2025-05-15",
+        "accepted": "2026-03-12"
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "AUP ist die tragende Quelle für Seiten 1-47 und das Publikationsdatum 2026-05-21; ein institutioneller Metadatensatz nennt abweichend 1-39 und wurde insoweit nicht übernommen."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.55121/jele.v2i1.1050",
+      "title": "Artificial Intelligence and Case-Based Learning in Social Work Education: Pedagogical Considerations and Future Directions",
+      "checked_urls": [
+        "https://doi.org/10.55121/jele.v2i1.1050",
+        "https://research.gold.ac.uk/id/eprint/40392/",
+        "https://research.gold.ac.uk/id/eprint/40392/2/JELE-1050-v2i1-129-141.pdf"
+      ],
+      "fulltext": {
+        "status": "located_repository_copy",
+        "url": "https://research.gold.ac.uk/id/eprint/40392/2/JELE-1050-v2i1-129-141.pdf",
+        "license": null,
+        "evidence_url": "https://research.gold.ac.uk/id/eprint/40392/",
+        "basis": "Goldsmiths Research Online stellt eine frei und institutionell bereitgestellte PDF der publizierten Artikelfassung bereit. Die Lizenzangabe in der PDF ist intern widersprüchlich und wird deshalb nicht normalisiert."
+      },
+      "peer_review": {
+        "status": "review_history_documented",
+        "evidence_url": "https://research.gold.ac.uk/id/eprint/40392/2/JELE-1050-v2i1-129-141.pdf",
+        "basis": "Die im institutionellen Repositorium bereitgestellte publizierte Fassung nennt Eingang, Revision, Annahme und Online-Veröffentlichung.",
+        "received": "2025-12-22",
+        "accepted": "2026-03-06"
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Die PDF bezeichnet die Lizenz zugleich als Attribution-NonCommercial 4.0 und als CC BY 4.0 mit BY-URL; wegen dieses Widerspruchs bleibt license null."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.63317/2hn5gs6yh5m2",
+      "title": "I Am Not Them: Persistent Outgroup Bias in Large Language Models Arising from Social Identity Persona Setting",
+      "checked_urls": [
+        "https://aclanthology.org/2026.lrec-1.217/",
+        "https://aclanthology.org/2026.lrec-1.217.pdf",
+        "https://lrec.elra.info/lrec2026-main-217",
+        "https://arxiv.org/abs/2409.03843",
+        "https://arxiv.org/abs/2402.10436"
+      ],
+      "fulltext": {
+        "status": "located_open_access",
+        "url": "https://aclanthology.org/2026.lrec-1.217.pdf",
+        "license": "CC BY 4.0",
+        "evidence_url": "https://aclanthology.org/2026.lrec-1.217/",
+        "basis": "Der offizielle ACL-Anthology-Datensatz und die direkte Anthology-PDF stellen die Proceedings-Fassung frei bereit."
+      },
+      "peer_review": {
+        "status": "venue_reviewed_proceedings",
+        "evidence_url": "https://aclanthology.org/2026.lrec-1.217/",
+        "basis": "Offizieller artikelspezifischer Datensatz in den Proceedings der Fifteenth Language Resources and Evaluation Conference mit Seiten, DOI und ELRA als Publisher.",
+        "received": null,
+        "accepted": null
+      },
+      "metadata_corrections": [
+        {
+          "field": "versions[arXiv:2402.10436].relation",
+          "old_value": "preprint version of the proceedings work",
+          "new_value": "related antecedent work; same-work version relation not established",
+          "evidence_url": "https://arxiv.org/abs/2402.10436",
+          "basis": "arXiv:2402.10436 hat einen anderen Titel und eine kleinere Autorengruppe; arXiv:2409.03843 entspricht mit Dong, Zhunis, Jeong, Chin, Han und Cha der Autorengruppe der Proceedings-Fassung und ist die belastbare direkte Vorfassung."
+        }
+      ],
+      "notes": [
+        "arXiv:2409.03843 ist als direkte Preprint-Vorfassung der Proceedings-Version bestätigt; arXiv:2402.10436 bleibt als verwandter Vorläufer getrennt."
+      ]
+    }
+  ]
+}

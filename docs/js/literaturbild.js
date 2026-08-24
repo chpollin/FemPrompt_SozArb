@@ -58,6 +58,19 @@ function label(value) {
     return LABELS[value] || String(value || '').replace(/_/g, ' ');
 }
 
+function versionLabel(value) {
+    return (data && data.version_type_labels && data.version_type_labels[value]) || label(value || 'unknown');
+}
+
+function peerReviewLabel(value) {
+    return {
+        peer_reviewed: 'Peer-Review abgeschlossen',
+        under_review: 'im Peer-Review',
+        not_peer_reviewed: 'kein Peer-Review',
+        not_established: 'Peer-Review nicht belegt'
+    }[value] || 'Peer-Review nicht belegt';
+}
+
 function paperCount(value) {
     return value + (value === 1 ? ' Paper' : ' Papers');
 }
@@ -219,8 +232,10 @@ function renderShell() {
     }).map(function(record) { return record.text_source; })));
     const source = data.source || {};
     const provisional = source.provisional
-        ? '<span class="lit-status lit-status--provisional">Vorläufig</span>'
-        : '<span class="lit-status lit-status--accepted">Bestätigt</span>';
+        ? '<span class="lit-status lit-status--provisional">Freigabe ausstehend</span>'
+        : '<span class="lit-status lit-status--accepted">Publikationsfreigegeben</span>';
+    const sourceTotal = Number(data.meta.source_annotated_total || data.meta.annotated_total || 0);
+    const withheldTotal = Number(data.meta.withheld_total || 0);
 
     root.innerHTML =
         '<div class="lit-workspace">' +
@@ -230,7 +245,9 @@ function renderShell() {
                 '<div class="lit-source-state">' + provisional +
                 '<span>' + EC.escapeHtml(String(source.reviewer || '')) + '</span></div>' +
                 '<p class="lit-progress" aria-label="Bearbeitungsstand">' +
-                    '<span><strong>' + data.meta.annotated_total + '</strong> / ' + data.meta.corpus_total + ' annotiert</span>' +
+                    '<span><strong>' + data.meta.annotated_total + '</strong> publikationsfreigegeben</span>' +
+                    '<span><strong>' + sourceTotal + '</strong> bearbeitet</span>' +
+                    (withheldTotal ? '<span><strong>' + withheldTotal + '</strong> zurückgehalten</span>' : '') +
                     '<span><strong>' + data.meta.included_total + '</strong> Include</span>' +
                     '<span><strong>' + data.meta.unclear_total + '</strong> Unklar</span>' +
                     '<span><strong>' + data.meta.excluded_total + '</strong> Exclude</span>' +
@@ -369,6 +386,19 @@ function renderAnalysis(record) {
     return '<div class="lit-paper-analysis"><h5>Analyse</h5><dl>' + rows + '</dl></div>';
 }
 
+function renderVersionMeta(record) {
+    const versions = record.work_versions || [];
+    return '<dl class="lit-paper-version"><dt>Fassung</dt><dd>' +
+        EC.escapeHtml(versionLabel(record.version_type)) +
+        (record.is_preferred_version ? ' · bevorzugte Fassung' : '') + '</dd>' +
+        '<dt>Begutachtung</dt><dd>' + EC.escapeHtml(peerReviewLabel(record.peer_review_status)) + '</dd>' +
+        '<dt>Werk-ID</dt><dd class="mono">' + EC.escapeHtml(record.work_id || '') + '</dd>' +
+        '<dt>Fassungs-ID</dt><dd class="mono">' + EC.escapeHtml(record.version_id || '') + '</dd>' +
+        (versions.length > 1 ? '<dt>Bekannte Fassungen</dt><dd>' + EC.escapeHtml(versions.map(function(item) {
+            return versionLabel(item.version_type);
+        }).join(' · ')) + '</dd>' : '') + '</dl>';
+}
+
 function renderPapers(records) {
     const selected = records.filter(selectionMatches);
     if (!activeSelection) return '';
@@ -384,10 +414,10 @@ function renderPapers(records) {
         }).join('');
         html += '<details class="lit-paper"><summary><span><strong>' + EC.escapeHtml(record.title) +
             '</strong><small>' + EC.escapeHtml(record.author_year) + '</small></span>' +
-            '<span class="lit-paper-basis">' + EC.escapeHtml(label(record.text_source)) + '</span></summary>' +
+            '<span class="lit-paper-basis">' + EC.escapeHtml(label(record.text_source) + ' · ' + versionLabel(record.version_type)) + '</span></summary>' +
             '<div class="lit-paper-body"><div class="lit-paper-meta"><span>Paper-ID ' +
             EC.escapeHtml(record.id) + '</span>' + paperLink(record) + '</div><div class="lit-chip-row">' + cats +
-            '</div>' + renderAnalysis(record) + '<div class="lit-paper-evidence"><h5>Paper-Belege</h5>' +
+            '</div>' + renderVersionMeta(record) + renderAnalysis(record) + '<div class="lit-paper-evidence"><h5>Paper-Belege</h5>' +
             renderEvidence(record) + '</div></div></details>';
     });
     return html + '</section>';
@@ -395,6 +425,14 @@ function renderPapers(records) {
 
 function renderDynamic() {
     const records = filteredIncludes();
+    if (!data.records.length) {
+        const withheldTotal = Number(data.meta.withheld_total || 0);
+        root.querySelector('#lit-dynamic').innerHTML =
+            '<section class="lit-viz lit-empty-state" role="status"><h3>Noch keine freigegebenen Ergebnisse</h3>' +
+            '<p>' + withheldTotal + ' bearbeitete Records bleiben bis zur fachlichen Verifikation und ' +
+            'Publikationsfreigabe intern.</p></section>';
+        return;
+    }
     const visualization = activeView === 'profile' ? renderProfile(records) : renderMatrix(records);
     root.querySelector('#lit-dynamic').innerHTML = visualization + renderPapers(records);
 }

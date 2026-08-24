@@ -1,0 +1,540 @@
+{
+  "schema": "femprompt-contextual-search-lane/0.1",
+  "generated_at": "2026-08-24T14:51:51.5702072+02:00",
+  "cutoff_date": "2026-08-24",
+  "lane_id": "C",
+  "lane_title": "Prompting als Bias-Mitigation in sozial sensiblen LLM-Anwendungen",
+  "scope": "Primaerquellen zu 2025-2026 veroeffentlichten empirischen Untersuchungen von Prompt Engineering oder Prompting als Bias-Mitigation in LLMs, mit Schwerpunkt Gender Bias, soziale Fairness sowie Anwendungen in Gesundheit, Mental Health, Bildung, Beschaeftigung und Human Services. Preprints vor 2025 wurden nur aufgenommen, wenn 2025-2026 eine neue begutachtete Fassung erschien.",
+  "queries": [
+    "\"prompt-based debiasing\" LLM 2025 2026 gender",
+    "\"prompt engineering\" bias mitigation large language model healthcare",
+    "\"gender bias\" prompting LLM hiring 2026",
+    "2025 2026 LLM social bias mitigation prompting persona System 2 conference proceedings",
+    "2025 2026 LLM gender bias mitigation self-correction prompting conference",
+    "2025 2026 large language model mental health bias prompt mitigation empirical",
+    "2025 2026 LLM fairness prompt intervention education social work empirical",
+    "site:aclanthology.org/2026 (prompt OR prompting) (debiasing OR bias mitigation) gender LLM",
+    "site:proceedings.iclr.cc/paper_files/paper/2026 prompting social bias large language models",
+    "site:dl.acm.org/doi 2026 prompt bias mitigation large language models",
+    "site:jmir.org 2025 2026 prompt-based mitigation bias large language model",
+    "persona System 1 System 2 self-correction fairness prompt mental health human rights education college admission recommendation"
+  ],
+  "deduplication_sources": [
+    "corpus/work_version_registry.json",
+    "corpus/zotero_export.json",
+    "generated/round2-intake-package.json"
+  ],
+  "saturation": {
+    "status": "high_practical_saturation",
+    "basis": "Nach breiten, anwendungsbezogenen und konferenzspezifischen Suchen wurden Titel, Autor:innen, DOI- und arXiv-Identifikatoren manuell gegen die drei lokalen Quellen abgeglichen und Preprint-zu-VOR-Ketten nachverfolgt. Die letzte Folgerunde ergab ueberwiegend Dubletten, Auditstudien ohne Mitigation, technische Nicht-Promptverfahren oder schwaechere unbegutachtete Preprints.",
+    "limitations": [
+      "Keine formale Datenbanksuche in Scopus oder Web of Science.",
+      "Der Royal-Society-Volltext war als CC-BY-VOR registriert, automatisierte Abrufe wurden in dieser Umgebung jedoch mit HTTP 403 abgewiesen.",
+      "Der Elsevier-Volltext zu Exploring attribution bias in LLMs war zugangsbeschraenkt; kein Preprint wurde gefunden.",
+      "Fuer die aufgenommenen reinen 2026-Preprints wurde bis zum Stichtag keine angenommene Fassung gefunden."
+    ]
+  },
+  "candidates": [
+    {
+      "tier": "A",
+      "title": "Prompting Techniques for Reducing Social Bias in LLMs through System 1 and System 2 Cognitive Processes",
+      "authors": ["Mahammed Kamruzzaman", "Gene Louis Kim"],
+      "publication_date": "2025-09",
+      "publication_type": "conference_paper",
+      "venue": "Proceedings of the 15th International Conference on Recent Advances in Natural Language Processing (RANLP 2025)",
+      "doi": "10.26615/978-954-452-098-4-060",
+      "other_identifiers": {
+        "arxiv": "2404.17218",
+        "acl_anthology": "2025.ranlp-1.60"
+      },
+      "version_status": "arXiv v1 2024-04-26, v4 2025-08-22; accepted main-conference proceedings version published 2025-09",
+      "peer_review_evidence": "The arXiv record states Accepted at RANLP-2025 (main conference); ACL Anthology records the proceedings paper.",
+      "open_access": true,
+      "fulltext_url": "https://aclanthology.org/2025.ranlp-1.60.pdf",
+      "landing_url": "https://aclanthology.org/2025.ranlp-1.60/",
+      "eligibility_technical": "Compares zero-shot CoT, direct debiasing, System 1/System 2 prompts and human/machine personas across five LLMs, two datasets and nine social-bias categories; reports up to a 33 percent reduction in stereotypical judgments.",
+      "eligibility_social": "Directly covers gender, race, religion, nationality, profession and other social categories and is closely aligned with socially sensitive prompt design.",
+      "duplicate_status": "new_version_of_existing_work",
+      "relation_to_existing_work": "work:7644e99b-9dd1-545f-af98-ab7fed6643e6",
+      "notes": [
+        "The local registry contains the arXiv preprint but not the RANLP 2025 proceedings version.",
+        "The most effective prompt combination varies by model and bias category.",
+        "Open preprint landing page: https://arxiv.org/abs/2404.17218"
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Multi-Persona Thinking for Bias Mitigation in Large Language Models",
+      "authors": ["Yuxing Chen", "Guoqing Luo", "Zijun Wu", "Lili Mou"],
+      "publication_date": "2026-07",
+      "publication_type": "conference_paper",
+      "venue": "Findings of the Association for Computational Linguistics: ACL 2026",
+      "doi": "10.18653/v1/2026.findings-acl.1389",
+      "other_identifiers": {
+        "arxiv": "2601.15488",
+        "acl_anthology": "2026.findings-acl.1389"
+      },
+      "version_status": "arXiv v1 2026-01-21, v3 2026-04-21; Findings of ACL version published 2026-07",
+      "peer_review_evidence": "ACL Anthology records the paper in Findings of ACL 2026.",
+      "open_access": true,
+      "fulltext_url": "https://aclanthology.org/2026.findings-acl.1389.pdf",
+      "landing_url": "https://aclanthology.org/2026.findings-acl.1389/",
+      "eligibility_technical": "Introduces an inference-time multi-persona framework in which contrasting social identities and a neutral perspective iteratively identify and correct biased judgments; evaluated on two established bias benchmarks with open and closed models.",
+      "eligibility_social": "Explicitly models male, female and neutral viewpoints and addresses harmful social stereotypes and unfair outcomes.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "The authors report lower bias than existing prompting-based methods while maintaining core reasoning ability.",
+        "Open preprint landing page: https://arxiv.org/abs/2601.15488"
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Prompting Fairness: Integrating Causality to Debias Large Language Models",
+      "authors": ["Jingling Li", "Zeyu Tang", "Xiaoyu Liu", "Peter Spirtes", "Kun Zhang", "Liu Leqi", "Yang Liu"],
+      "publication_date": "2025",
+      "publication_type": "conference_paper",
+      "venue": "International Conference on Learning Representations 2025",
+      "doi": null,
+      "other_identifiers": {
+        "arxiv": "2403.08743",
+        "openreview": "7GKbQ1WT1C",
+        "iclr_proceedings_hash": "9f26a2d143a227376dff99a279f93f99"
+      },
+      "version_status": "arXiv v1 2024-03-13, v2 2025-03-02; official ICLR 2025 conference paper",
+      "peer_review_evidence": "Official ICLR 2025 proceedings record and OpenReview conference-paper record.",
+      "open_access": true,
+      "fulltext_url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/9f26a2d143a227376dff99a279f93f99-Paper-Conference.pdf",
+      "landing_url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/9f26a2d143a227376dff99a279f93f99-Abstract-Conference.html",
+      "eligibility_technical": "Develops a causality-guided debiasing framework and Dual Directional Prompting; evaluates black-box LLMs on WinoBias and BBQ. On WinoBias, GPT-4 reaches a 2.17 percent pro/anti gap and 94.57 percent accuracy on anti-stereotypical cases.",
+      "eligibility_social": "Targets gender and broader social bias and explicitly motivates the method with high-stakes hiring and healthcare decisions.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "This is distinct from the locally present work Prompting fairness: Learning prompts for debiasing large language models.",
+        "Open preprint landing page: https://arxiv.org/abs/2403.08743"
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Rethinking Prompt-based Debiasing in Large Language Model",
+      "authors": ["Xinyi Yang", "Runzhe Zhan", "Shu Yang", "Junchao Wu", "Lidia S. Chao", "Derek F. Wong"],
+      "publication_date": "2025-07",
+      "publication_type": "conference_paper",
+      "venue": "Findings of the Association for Computational Linguistics: ACL 2025",
+      "doi": "10.18653/v1/2025.findings-acl.1361",
+      "other_identifiers": {
+        "arxiv": "2503.09219",
+        "acl_anthology": "2025.findings-acl.1361"
+      },
+      "version_status": "arXiv preprint submitted 2025-03-12 under the plural title Large Language Models; Findings of ACL version published 2025-07 under the singular title Large Language Model",
+      "peer_review_evidence": "ACL Anthology records the paper in Findings of ACL 2025.",
+      "open_access": true,
+      "fulltext_url": "https://aclanthology.org/2025.findings-acl.1361.pdf",
+      "landing_url": "https://aclanthology.org/2025.findings-acl.1361/",
+      "eligibility_technical": "Evaluates prompt-based debiasing on BBQ and StereoSet with open models and GPT; shows that lower bias scores can result from evasive Unknown responses and reduced task accuracy. Llama2-7B-Chat misclassified more than 90 percent of unbiased content as biased.",
+      "eligibility_social": "Provides a necessary validity check for claimed social-bias mitigation and for evaluations used to justify deployment in socially sensitive contexts.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "The paper argues that fairness, task accuracy and answer evasion must be evaluated together.",
+        "Open preprint landing page: https://arxiv.org/abs/2503.09219"
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Toward True Neutrality: Evaluating Inference-Time Debiasing Strategies for Gender Coreference Resolution in LLMs",
+      "authors": ["Arati Mohapatra", "S Jaya Nirmala"],
+      "publication_date": "2025-12",
+      "publication_type": "conference_paper",
+      "venue": "Proceedings of the 39th Pacific Asia Conference on Language, Information and Computation",
+      "doi": null,
+      "other_identifiers": {
+        "acl_anthology": "2025.paclic-1.19"
+      },
+      "version_status": "official PACLIC 2025 proceedings version; no preprint found",
+      "peer_review_evidence": "ACL Anthology records the paper in the PACLIC 2025 proceedings.",
+      "open_access": true,
+      "fulltext_url": "https://aclanthology.org/2025.paclic-1.19.pdf",
+      "landing_url": "https://aclanthology.org/2025.paclic-1.19/",
+      "eligibility_technical": "Compares self-correction, self-consistency and chain-of-thought for occupational gender coreference while measuring bias reduction and computational cost; low-bias-feedback self-correction improves performance by up to 41 percent over self-consistent prompting.",
+      "eligibility_social": "Directly addresses gender bias affecting women and non-binary people in a task motivated by healthcare, education and finance deployments.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "The study also qualitatively analyzes bias, logic and grammaticality patterns in chain-of-thought responses.",
+        "No DOI is listed in ACL Anthology."
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Mitigating medical bias in large language models by prompt engineering: an empirical study of effectiveness and trade-offs",
+      "authors": ["Ying Xiao", "Zhenpeng Chen", "Jie Zhang"],
+      "publication_date": "2026-07-16",
+      "publication_type": "journal_article",
+      "venue": "Philosophical Transactions of the Royal Society A, 384(2324), article 20250125",
+      "doi": "10.1098/rsta.2025.0125",
+      "other_identifiers": {
+        "pmid": "42463224"
+      },
+      "version_status": "version of record; no preprint found",
+      "peer_review_evidence": "Published as a journal article by the Royal Society in Philosophical Transactions A.",
+      "open_access": true,
+      "fulltext_url": "https://royalsocietypublishing.org/rsta/article-pdf/doi/10.1098/rsta.2025.0125/6152317/rsta20250125.pdf",
+      "landing_url": "https://doi.org/10.1098/rsta.2025.0125",
+      "eligibility_technical": "Evaluates five prompting strategies across five LLMs on a medical-bias benchmark, jointly measuring fairness, accuracy and inference overhead. Chain-of-thought reduces the average group gap by 2.4 percentage points, with a maximum reduction of 6.2 points and significant reductions in 8 of 15 McNemar comparisons.",
+      "eligibility_social": "Directly addresses fair healthcare and patient-safety risks for groups defined by sensitive attributes.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "No prompting strategy is universally effective, and some exacerbate bias.",
+        "The VOR is registered under CC BY 4.0, but automated publisher retrieval returned HTTP 403 in this environment.",
+        "Authoritative abstract and metadata: https://pubmed.ncbi.nlm.nih.gov/42463224/"
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Patient Cognitive Bias in Large Language Model-Supported Health Consultations: Simulation-Based Comparative Study",
+      "authors": ["Yi Zuo", "Qifeng Wan", "Shalong Wang"],
+      "publication_date": "2026-06-11",
+      "publication_type": "journal_article",
+      "venue": "Journal of Medical Internet Research, 28, e85770",
+      "doi": "10.2196/85770",
+      "other_identifiers": {
+        "pmid": "42275635",
+        "pmcid": "PMC13258194",
+        "jmir_preprint": "85770"
+      },
+      "version_status": "JMIR preprint submitted 2025-10-13, accepted 2026-05-04; journal version published 2026-06-11",
+      "peer_review_evidence": "JMIR records the original paper and an explicit submitted/accepted open-review history.",
+      "open_access": true,
+      "fulltext_url": "https://www.jmir.org/2026/1/e85770/PDF",
+      "landing_url": "https://www.jmir.org/2026/1/e85770",
+      "eligibility_technical": "Uses 1273 MedQA-USMLE cases, six LLMs, three-round consultations, three prompt mitigations and four temperature settings. Patient bias reduces accuracy by about 7-39 percentage points; prompting is limited and inconsistent, while a separate reasoning system gains about 10-39 points.",
+      "eligibility_social": "Directly evaluates patient-facing health consultations and user-driven cognitive bias in an interactive Human Services setting.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "The all-inclusive prompt provides the most consistent but generally modest prompt-level gains.",
+        "Open review/version landing page: https://preprints.jmir.org/preprint/85770/accepted"
+      ]
+    },
+    {
+      "tier": "A",
+      "title": "Gender Bias in LLM Hiring Decisions: Evidence from a Japanese Context and Evaluation of Mitigation Strategies",
+      "authors": ["Serena A. Hoffstedde", "Machiko Hirota", "Akshara Nadayanur Sathis Kanna", "Rihito Kotani", "Ujwal Kumar", "Gabriele Trovato", "Phan Xuan Tan"],
+      "publication_date": "2026-06-17",
+      "publication_type": "preprint",
+      "venue": "arXiv",
+      "doi": null,
+      "other_identifiers": {
+        "arxiv": "2606.18649",
+        "arxiv_datacite_doi": "10.48550/arXiv.2606.18649"
+      },
+      "version_status": "arXiv v1; no accepted conference or journal version found by the cutoff date",
+      "peer_review_evidence": "No peer-review evidence found; preprint only.",
+      "open_access": true,
+      "fulltext_url": "https://arxiv.org/pdf/2606.18649",
+      "landing_url": "https://arxiv.org/abs/2606.18649",
+      "eligibility_technical": "Counterfactual design with 60 Japanese rirekisho resumes, 12 gender-signaling name pairs, five LLMs and 43200 API calls across baseline, gender-neutrality instruction and privacy-filter conditions. The prompt instruction does not meaningfully reduce bias; removing names removes nearly the full effect.",
+      "eligibility_social": "Direct gender-bias evidence in hiring, with a non-Western setting and practical privacy/refusal trade-offs relevant to personnel and case decisions.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "The privacy-filter condition produces a 42 percent refusal rate for GPT-4o.",
+        "Findings remain provisional because the work is not peer reviewed."
+      ]
+    },
+    {
+      "tier": "B",
+      "title": "BiasFreeBench: a Benchmark for Mitigating Bias in Large Language Model Responses",
+      "authors": ["Xin Xu", "Xunzhi He", "Churan Zhi", "Ruizhe Chen", "Julian McAuley", "Zexue He"],
+      "publication_date": "2026",
+      "publication_type": "conference_paper",
+      "venue": "International Conference on Learning Representations 2026",
+      "doi": null,
+      "other_identifiers": {
+        "arxiv": "2510.00232",
+        "openreview": "Ncf2LFDT4e",
+        "iclr_proceedings_hash": "71c3451f6cd6a4f82bb822db25cea4fd"
+      },
+      "version_status": "arXiv v1 2025-09-30, v2 2026-02-15; accepted ICLR 2026 paper",
+      "peer_review_evidence": "Official ICLR 2026 proceedings record; arXiv states Accepted by ICLR 2026.",
+      "open_access": true,
+      "fulltext_url": "https://openreview.net/pdf?id=Ncf2LFDT4e",
+      "landing_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/71c3451f6cd6a4f82bb822db25cea4fd-Abstract-Conference.html",
+      "eligibility_technical": "Benchmarks four prompt-based and four training-based methods across seven LLMs, BBQ and FairMT-Bench; prompt methods are generally stronger, with chain-of-thought often best and self-awareness relatively efficient.",
+      "eligibility_social": "Covers nine social-bias types, including gender, age, disability and socioeconomic status.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": ["Tier B because it is a general benchmark without a concrete Human Services application setting."]
+    },
+    {
+      "tier": "B",
+      "title": "No Free Lunch in Language Model Bias Mitigation? Targeted Bias Reduction Can Exacerbate Unmitigated LLM Biases",
+      "authors": ["Shireen Chand", "Faith Baca", "Emilio Ferrara"],
+      "publication_date": "2026",
+      "publication_type": "journal_article",
+      "venue": "AI, 7(1), 24",
+      "doi": "10.3390/ai7010024",
+      "other_identifiers": {"arxiv": "2511.18635"},
+      "version_status": "arXiv preprint submitted 2025-11-23; journal version published 2026",
+      "peer_review_evidence": "MDPI journal version and public review-report page.",
+      "open_access": true,
+      "fulltext_url": "https://arxiv.org/pdf/2511.18635",
+      "landing_url": "https://www.mdpi.com/2673-2688/7/1/24",
+      "eligibility_technical": "Runs 160 debiasing experiments and 640 evaluations across ten models, four techniques and four StereoSet dimensions. Significant on-target improvement occurs in 20.6 percent of cases; significant spillover harm occurs in 31.5 percent.",
+      "eligibility_social": "Directly examines cross-effects among gender, race, religion and profession bias.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": ["Tier B because prompt debiasing is only one of four interventions and the application remains a generic StereoSet evaluation."]
+    },
+    {
+      "tier": "B",
+      "title": "Can Fairness Be Prompted? Prompt-Based Debiasing Strategies in High-Stakes Recommendations",
+      "authors": ["Mihaela Rotar", "Theresia Veronika Rampisela", "Maria Maistro"],
+      "publication_date": "2026-03-13",
+      "publication_type": "preprint",
+      "venue": "arXiv",
+      "doi": null,
+      "other_identifiers": {"arxiv": "2603.12935", "arxiv_datacite_doi": "10.48550/arXiv.2603.12935"},
+      "version_status": "arXiv v1; no accepted venue found by the cutoff date",
+      "peer_review_evidence": "No peer-review evidence found; preprint only.",
+      "open_access": true,
+      "fulltext_url": "https://arxiv.org/pdf/2603.12935",
+      "landing_url": "https://arxiv.org/abs/2603.12935",
+      "eligibility_technical": "Tests three bias-aware prompt strategies with three LLMs, four templates, nine sensitive-attribute values and two recommendation datasets; reports fairness improvements up to 74 percent with possible overpromotion.",
+      "eligibility_social": "Applies prompting to employment and news recommendations where inferred gender and age can affect outcomes.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": ["Tier B because the evidence is an unreviewed single-version preprint."]
+    },
+    {
+      "tier": "B",
+      "title": "Hedging and Non-Affirmation: Quantifying LLM Alignment on Questions of Human Rights",
+      "authors": ["Rafiya Javed", "Cassandra Parent", "Jackie Kay", "David Yanni", "Abdullah Zaini", "Anushe Sheikh", "Maribeth Rauh", "Walter Gerych", "Ramona Comanescu", "Iason Gabriel", "Marzyeh Ghassemi", "Laura Weidinger"],
+      "publication_date": "2026-06-25",
+      "publication_type": "conference_paper",
+      "venue": "Proceedings of the 2026 ACM Conference on Fairness, Accountability, and Transparency",
+      "doi": "10.1145/3805689.3806734",
+      "other_identifiers": {"arxiv": "2502.19463"},
+      "version_status": "arXiv v1 2025-02-26, v2 2026-04-06; FAccT 2026 version published 2026-06-25",
+      "peer_review_evidence": "ACM FAccT 2026 proceedings publication.",
+      "open_access": true,
+      "fulltext_url": "https://arxiv.org/pdf/2502.19463",
+      "landing_url": "https://doi.org/10.1145/3805689.3806734",
+      "eligibility_technical": "Evaluates seven LLMs on 4738 prompts across 205 national and stateless identities; group steering is the most effective mitigation and is robust to downstream forgetting.",
+      "eligibility_social": "Directly measures identity-dependent hedging and non-affirmation in human-rights statements.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": ["Tier B because the mitigation uses activation steering and orthogonalization rather than prompt engineering.", "The ACM VOR is marked CC BY 4.0."]
+    },
+    {
+      "tier": "B",
+      "title": "Mental Health Equity in LLMs: Leveraging Multi-Hop Question Answering to Detect Amplified and Silenced Perspectives",
+      "authors": ["Batool Haider", "Atmika Gorti", "Aman Chadha", "Manas Gaur"],
+      "publication_date": "2025-06-22",
+      "publication_type": "preprint",
+      "venue": "arXiv",
+      "doi": null,
+      "other_identifiers": {"arxiv": "2506.18116", "arxiv_datacite_doi": "10.48550/arXiv.2506.18116"},
+      "version_status": "arXiv v1; marked Under Review; no accepted version found by the cutoff date",
+      "peer_review_evidence": "No completed peer review; the arXiv record says Under Review.",
+      "open_access": true,
+      "fulltext_url": "https://arxiv.org/pdf/2506.18116",
+      "landing_url": "https://arxiv.org/abs/2506.18116",
+      "eligibility_technical": "Uses IMHI material, multi-hop question answering, four LLMs and intersectional tags; roleplay simulation and explicit bias-reduction few-shot prompts report 66-94 percent bias reductions.",
+      "eligibility_social": "Directly covers mental-health discourse at intersections of age, race, gender and socioeconomic status.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": ["Tier B because the large reported effects lack completed peer review and independent validation."]
+    },
+    {
+      "tier": "B",
+      "title": "'Rich Dad, Poor Lad': How do Large Language Models Contextualize Socioeconomic Factors in College Admission?",
+      "authors": ["Huy Nghiem", "Phuong-Anh Nguyen-Le", "John Prindle", "Rachel Rudinger", "Hal Daume III"],
+      "publication_date": "2025-11",
+      "publication_type": "conference_paper",
+      "venue": "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing",
+      "doi": "10.18653/v1/2025.emnlp-main.1064",
+      "other_identifiers": {"arxiv": "2509.16400", "acl_anthology": "2025.emnlp-main.1064"},
+      "version_status": "arXiv preprint submitted 2025-09-19; EMNLP 2025 main-conference version published 2025-11",
+      "peer_review_evidence": "ACL Anthology records an EMNLP 2025 main-conference paper.",
+      "open_access": true,
+      "fulltext_url": "https://aclanthology.org/2025.emnlp-main.1064.pdf",
+      "landing_url": "https://aclanthology.org/2025.emnlp-main.1064/",
+      "eligibility_technical": "Audits four open LLMs with 30000 synthetic applicant profiles and five million prompts under decision-only and explanation-based modes; explanation prompting amplifies socioeconomic-status compensation reasoning.",
+      "eligibility_social": "Directly addresses socioeconomic fairness in college admissions and is strongly relevant to education.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": ["Tier B because prompt mode is an audit condition rather than a tested mitigation intervention."]
+    },
+    {
+      "tier": "B",
+      "title": "How LLM Counselors Violate Ethical Standards in Mental Health Practice: A Practitioner-Informed Framework",
+      "authors": ["Zainab Iftikhar", "Amy Xiao", "Sean Ransom", "Jeff Huang", "Harini Suresh"],
+      "publication_date": "2025-10-15",
+      "publication_type": "conference_paper",
+      "venue": "Proceedings of the AAAI/ACM Conference on AI, Ethics, and Society, 8(2)",
+      "doi": "10.1609/aies.v8i2.36632",
+      "other_identifiers": {},
+      "version_status": "AIES 2025 main-track proceedings version",
+      "peer_review_evidence": "Official AIES proceedings record, Main Track II.",
+      "open_access": true,
+      "fulltext_url": "https://ojs.aaai.org/index.php/AIES/article/download/36632/38760",
+      "landing_url": "https://ojs.aaai.org/index.php/AIES/article/view/36632",
+      "eligibility_technical": "Combines an 18-month ethnographic collaboration with three psychologists and seven peer counselors with expert evaluation of 137 sessions, yielding 15 ethical violations in five themes.",
+      "eligibility_social": "Directly examines mental-health counseling, discrimination, cultural insensitivity, user agency, crisis management and unequal effects of digital literacy.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": ["Tier B because it is an ethics audit and does not experimentally evaluate a bias-mitigation prompt."]
+    },
+    {
+      "tier": "B",
+      "title": "Evaluating anti-LGBTQIA+ medical bias in large language models",
+      "authors": ["Crystal T. Chang", "Neha Srivathsa", "Charbel Bou-Khalil", "Akshay Swaminathan", "Mitchell R. Lunn", "Kavita Mishra", "Sanmi Koyejo", "Roxana Daneshjou"],
+      "publication_date": "2025-09-08",
+      "publication_type": "journal_article",
+      "venue": "PLOS Digital Health, 4(9), e0001001",
+      "doi": "10.1371/journal.pdig.0001001",
+      "other_identifiers": {"medrxiv": "10.1101/2024.08.22.24312464"},
+      "version_status": "medRxiv preprint chain followed by peer-reviewed PLOS Digital Health version",
+      "peer_review_evidence": "PLOS identifies the work as a peer-reviewed research article and exposes its peer-review record.",
+      "open_access": true,
+      "fulltext_url": "https://journals.plos.org/digitalhealth/article/file?id=10.1371/journal.pdig.0001001&type=printable",
+      "landing_url": "https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0001001",
+      "eligibility_technical": "Tests four LLMs with 38 clinician- and LGBTQIA+-expert-designed prompt pairs and medical review of safety, privacy, accuracy and bias.",
+      "eligibility_social": "Directly addresses health inequity and differential harms for LGBTQIA+ patients.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": ["Tier B because it is an audit/benchmark without an evaluated mitigation intervention.", "PLOS states CC BY open access."]
+    },
+    {
+      "tier": "B",
+      "title": "New model, old risks: sociodemographic bias and adversarial hallucinations vulnerability in GPT-5",
+      "authors": ["Mahmud Omar", "Reem Agbareia", "Donald U. Apakama", "Carol R. Horowitz", "Robert Freeman", "Alexander W. Charney", "Girish N. Nadkarni", "Eyal Klang"],
+      "publication_date": "2026-04-04",
+      "publication_type": "journal_article",
+      "venue": "npj Digital Medicine, 9(1), 282",
+      "doi": "10.1038/s41746-026-02584-8",
+      "other_identifiers": {"pmid": "41935214", "pmcid": "PMC13050324", "medrxiv": "10.1101/2025.09.19.25336180"},
+      "version_status": "medRxiv preprint published 2025-09-21; npj Digital Medicine version published 2026-04-04",
+      "peer_review_evidence": "Published in npj Digital Medicine; PubMed links the preprint as updated by the journal article.",
+      "open_access": true,
+      "fulltext_url": "https://www.nature.com/articles/s41746-026-02584-8.pdf",
+      "landing_url": "https://www.nature.com/articles/s41746-026-02584-8",
+      "eligibility_technical": "Re-evaluates GPT-5 on 500 emergency vignettes across 32 sociodemographic labels and adversarial prompts. An explicit mitigation prompt reduces adversarial hallucination from 65 percent to 7.67 percent.",
+      "eligibility_social": "Shows persistent demographic variation and 100 percent mental-health-screening recommendations for several LGBTQIA+ groups in controlled clinical cases.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": ["Tier B because the mitigation prompt targets adversarial hallucination rather than the measured sociodemographic bias."]
+    },
+    {
+      "tier": "B",
+      "title": "Exploring attribution bias in LLMs: Social influences and prompt-based mitigation",
+      "authors": ["Leilei Jiang", "Jie Cao", "Guixiang Zhu", "Yuyao Wang"],
+      "publication_date": "2026-08",
+      "publication_type": "journal_article",
+      "venue": "Technology in Society, 87, 103361",
+      "doi": "10.1016/j.techsoc.2026.103361",
+      "other_identifiers": {"pii": "S0160791X26001508"},
+      "version_status": "publisher version of record; no preprint found",
+      "peer_review_evidence": "Published as a journal article in Technology in Society.",
+      "open_access": false,
+      "fulltext_url": null,
+      "landing_url": "https://www.sciencedirect.com/science/article/pii/S0160791X26001508",
+      "eligibility_technical": "Controlled experiment with five LLMs manipulating event valence, attribution perspective, gender, age, education and region; prompt interventions reduce attributional extremity.",
+      "eligibility_social": "Connects social cognition and fairness to high-stakes settings including education, law and healthcare.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": ["Tier B because the setting is general attribution rather than a direct Human Services task.", "Publisher full text is restricted; only the publisher abstract was verifiable."]
+    }
+  ],
+  "exclusions": [
+    {
+      "title": "Self-Debiasing Large Language Models: Zero-Shot Recognition and Reduction of Stereotypes",
+      "identifiers": {"doi": "10.18653/v1/2025.naacl-short.74"},
+      "reason": "Already present in corpus/work_version_registry.json and corpus/zotero_export.json."
+    },
+    {
+      "title": "COFT: Counterfactual-Conformal Decoding for Fair Chain-of-Thought Reasoning in Large Language Models",
+      "identifiers": {"arxiv": "2605.30641"},
+      "reason": "Decode-time intervention rather than prompt engineering and no specific Human Services application."
+    },
+    {
+      "title": "Mechanics of Bias and Reasoning: Interpreting the Impact of Chain-of-Thought Prompting on Gender Bias in LLMs",
+      "identifiers": {"arxiv": "2605.20410"},
+      "reason": "Unreviewed mechanistic preprint overlapping the stronger peer-reviewed validity analysis by Yang et al."
+    },
+    {
+      "title": "LLMs are Biased Teachers: Evaluating LLM Bias in Personalized Education",
+      "identifiers": {"doi": "10.18653/v1/2025.findings-naacl.314", "arxiv": "2410.14012"},
+      "reason": "Strong education audit but no mitigation intervention."
+    },
+    {
+      "title": "Moving Beyond Medical Exams: A Clinician-Annotated Fairness Dataset of Real-World Tasks and Ambiguity in Mental Healthcare",
+      "identifiers": {"iclr_year": "2026"},
+      "reason": "Strong mental-health fairness benchmark but no prompt-based mitigation evaluation."
+    },
+    {
+      "title": "IssueBench: Millions of Realistic Prompts for Measuring Issue Bias in LLM Writing Assistance",
+      "identifiers": {"doi": "10.1162/tacl.a.626", "acl_anthology": "2026.tacl-1.16"},
+      "reason": "Bias measurement benchmark without a mitigation intervention."
+    },
+    {
+      "title": "Prompt Engineering Techniques for Mitigating Cultural Bias Against Arabs and Muslims in Large Language Models: A Systematic Review",
+      "identifiers": {"arxiv": "2506.18199"},
+      "reason": "Secondary systematic review; the lane was restricted to primary studies."
+    },
+    {
+      "title": "Controlling Distributional Bias in Multi-Round LLM Generation via KL-Optimized Fine-Tuning",
+      "identifiers": {"doi": "10.18653/v1/2026.acl-long.802", "arxiv": "2604.05756"},
+      "reason": "Prompt engineering is an unsuccessful baseline; the proposed intervention is KL-optimized fine-tuning."
+    },
+    {
+      "title": "Bi-directional Bias Attribution: Debiasing Large Language Models without Modifying Prompts",
+      "identifiers": {"iclr_year": "2026"},
+      "reason": "Neuron-level activation intervention explicitly designed without prompt modification."
+    },
+    {
+      "title": "Multi-Feature Quantized Self-Attention for Fair Large Language Models",
+      "identifiers": {"iclr_year": "2026"},
+      "reason": "Attention-regularization method rather than prompt engineering."
+    },
+    {
+      "title": "Social Debiasing for Fair Multi-modal LLMs",
+      "identifiers": {"venue": "ICCV 2025"},
+      "reason": "Multimodal training and loss-rescaling intervention outside the prompt-focused scope."
+    },
+    {
+      "title": "Implicit Gender, Racial, and Ethnic Biases in Large Language Models: An Audit Study of Automated Psychiatric Diagnoses",
+      "identifiers": {},
+      "reason": "Psychiatric diagnosis audit without a prompt-based mitigation intervention."
+    },
+    {
+      "title": "Racial bias in AI-mediated psychiatric diagnosis and treatment: a qualitative comparison of four large language models",
+      "identifiers": {"doi": "10.1038/s41746-025-01746-4"},
+      "reason": "Qualitative psychiatric bias audit without an evaluated mitigation prompt."
+    },
+    {
+      "title": "Large language models exhibit stigmatizing behaviour in contextual judgements of health conditions",
+      "identifiers": {"doi": "10.1038/s44360-026-00164-4"},
+      "reason": "Health-stigma measurement study without a prompt-based mitigation evaluation."
+    },
+    {
+      "title": "Unmasking Implicit Bias: Evaluating Persona-Prompted LLM Responses in Power-Disparate Social Scenarios",
+      "identifiers": {"arxiv": "2503.01532"},
+      "reason": "Persona-prompted audit that identifies bias but does not test a mitigation intervention."
+    },
+    {
+      "title": "Prompt Engineering Limitations: Preliminary Evaluation of Large Language Models for Psychotherapy Safety",
+      "identifiers": {"medrxiv": "10.64898/2026.07.16.26358261"},
+      "reason": "Preliminary unreviewed psychotherapy-safety study without a sufficiently documented empirical social-bias mitigation comparison for Tier A or B."
+    },
+    {
+      "title": "Technical and workshop-only fairness candidates",
+      "identifiers": {},
+      "reason": "Workshop papers without a clear review record and technical methods based on fine-tuning, parameter editing, activation steering, decoding or multimodal training were excluded unless prompt mitigation was independently evaluated and socially relevant."
+    }
+  ]
+}

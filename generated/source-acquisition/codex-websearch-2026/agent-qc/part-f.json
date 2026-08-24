@@ -1,0 +1,145 @@
+{
+  "schema": "femprompt-markdown-agent-qc/0.1",
+  "reviewer": "Codex subagent source QC F",
+  "reviewed_at": "2026-08-24",
+  "records": [
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.35362/issn.1850-0013-1259",
+      "title": "IA, salud mental y género: Un mapeo sistemático de las ciencias sociales y humanas en América Latina",
+      "pdf_file": "generated/pdfs/codex-websearch-2026/8a561b548035e4512084.pdf",
+      "markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-clean/8a561b548035e4512084.md",
+      "automated_warning": "Automated validation: PASS",
+      "identity_match": true,
+      "body_complete": true,
+      "tables": {
+        "pdf_semantic_tables": 5,
+        "markdown_semantic_tables": 5,
+        "material_loss": false,
+        "basis": "Das PDF enthält vier nummerierte Tabellen sowie eine semantische Tabelle im Anhang mit den eingeschlossenen Publikationen AP1–AP26. Alle fünf Tabellen sind im Markdown inhaltlich vorhanden. Tabelle 3 und die Anhangstabelle werden durch Seitenumbrüche auf insgesamt acht Pipe-Blöcke verteilt; Kategorien, Kriterien, Publikationskennungen und bibliografische Angaben bleiben erhalten."
+      },
+      "decision": "approved_for_screening",
+      "issues": [
+        "Einzelne Seitenzahlen wurden als Markdown-Überschriften übernommen.",
+        "Die zehn Abbildungen sind mit Beschriftungen und Bildrepräsentationen vorhanden; ihre grafischen Werte sind nicht als strukturierte Tabellen verfügbar, werden jedoch im Ergebnistext erläutert.",
+        "Seitenumbrüche teilen Tabelle 3 und die Anhangstabelle in mehrere aufeinanderfolgende Pipe-Blöcke."
+      ],
+      "evidence": [
+        "PDF- und Markdown-Seite 1 stimmen bei den drei Sprachfassungen des Titels, Chiara Forti Dono, María Eugenia Fazio und María Dalponte Ayastuy sowie Abstract und Schlüsselwörtern überein.",
+        "Alle PDF-Seiten 1–34 besitzen genau einen korrespondierenden PAGE-Marker im Markdown.",
+        "PDF-Seiten 9–12 enthalten Tabellen 1–4; PDF-Seiten 32–34 enthalten die Anhangstabelle AP1–AP26. Alle fünf Tabellen wurden gegen die acht Markdown-Pipe-Blöcke geprüft.",
+        "Introducción, Metodología mit Unterabschnitten 1.1–1.6, Resultados mit Unterabschnitten 2.1–2.2.4, Discusión y conclusiones, Declaración de uso de IA, Bibliografía und Anexo sind vollständig und in Quellreihenfolge vorhanden.",
+        "PDF- und Markdown-Ende enthalten die Anhangseinträge AP24–AP26; der letzte bibliografische Eintrag stimmt überein."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.2196/90589",
+      "title": "Generative AI in Youth Mental Health Apps: Rapid Review",
+      "pdf_file": "generated/pdfs/codex-websearch-2026/926800fc523bebd0420c.pdf",
+      "markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-clean/926800fc523bebd0420c.md",
+      "automated_warning": "Automated validation: PASS",
+      "identity_match": true,
+      "body_complete": true,
+      "tables": {
+        "pdf_semantic_tables": 2,
+        "markdown_semantic_tables": 2,
+        "material_loss": false,
+        "basis": "Die beiden nummerierten Tabellen des PDFs sind im Markdown als zwei Pipe-Tabellen vorhanden: Tabelle 1 beschreibt die fünf eingeschlossenen Studien, Tabelle 2 die fünf Interventionen. Studienmerkmale, Stichproben, KI-Typen, Schnittstellen, Sicherheitsfunktionen und berichtete Outcomes sind erhalten."
+      },
+      "decision": "approved_for_screening",
+      "issues": [
+        "Der wiederkehrende Seitenkopf „JMIR MENTAL HEALTH“ wurde mehrfach als Markdown-Überschrift klassifiziert.",
+        "Figure 1, das PRISMA-Flussdiagramm, ist als Abbildungsrepräsentation mit vollständiger Beschriftung vorhanden; die Selektionszahlen werden zusätzlich im Ergebnisteil genannt."
+      ],
+      "evidence": [
+        "PDF- und Markdown-Seite 1 stimmen bei Titel, Helene Høgsdal, Henriette Kyrrestad und Sabine Kaiser, Institution, Abstract und DOI überein.",
+        "Alle PDF-Seiten 1–13 besitzen genau einen korrespondierenden PAGE-Marker im Markdown.",
+        "Das PRISMA-Diagramm auf PDF-Seite 4 sowie Tabellen 1 und 2 auf PDF-Seiten 5 und 7 wurden gegen Beschriftungen, Bildrepräsentation und die beiden Markdown-Pipe-Tabellen geprüft.",
+        "Introduction, Methods, Results, Discussion, Limitations, Conclusions, Data Availability, Funding, Authors’ Contributions, Conflicts of Interest, Multimedia Appendices, References und Abbreviations sind vollständig.",
+        "PDF- und Markdown-Ende enthalten dieselbe Review History, Zitierangabe, DOI und Creative-Commons-Lizenzinformation."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:arxiv:2505.13995",
+      "title": "Sycophantic AI decreases prosocial intentions and promotes dependence",
+      "pdf_file": "generated/pdfs/codex-websearch-2026/96199ea06371c4cdbed4.pdf",
+      "markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-clean/96199ea06371c4cdbed4.md",
+      "automated_warning": "Automated validation: PASS",
+      "identity_match": true,
+      "body_complete": false,
+      "tables": {
+        "pdf_semantic_tables": 25,
+        "markdown_semantic_tables": 24,
+        "material_loss": true,
+        "basis": "Das PDF enthält vier Haupttabellen und die Anhangstabellen A1–A21, insgesamt 25 semantische Tabellen. Im Markdown sind 24 davon als lesbare Pipe-Tabellen vorhanden; Tabelle A2 ist wegen eines Seitenumbruchs auf zwei Blöcke verteilt. Die zentrale Ergebnistabelle 4 auf PDF-Seite 8 fehlt als Dateninhalt: Das Markdown enthält nur Beschriftung und Bildplatzhalter, nicht die Modell-, Mitigations- und Ergebniswerte."
+      },
+      "decision": "requires_reconversion",
+      "issues": [
+        "Die Quelldatei ist die arXiv-/ICLR-Fassung „ELEPHANT: Measuring and Understanding Social Sycophancy in LLMs“ mit Myra Cheng, Sunny Yu, Cinoo Lee, Pranav Khadpe, Lujain Ibrahim und Dan Jurafsky; der Manifesttitel bezeichnet die verknüpfte Science-Fassung „Sycophantic AI decreases prosocial intentions and promotes dependence“.",
+        "Tabelle 4 ist nur durch ihre Beschriftung und einen Bildplatzhalter vertreten. Die vollständige Matrix mit zehn Mitigationsmodellen und den Ergebnissen für OEQ, AITA-YTA, ALP und AITA-NTA-FLIP fehlt im Markdown.",
+        "Mehrere Anhangstabellen werden aufgrund des mehrspaltigen Satzes vor oder nach ihrer Beschriftung ausgegeben; ihr Dateninhalt bleibt bis auf Tabelle 4 identifizierbar."
+      ],
+      "evidence": [
+        "PDF- und Markdown-Seite 1 stimmen bei dem Quelltitel „ELEPHANT: Measuring and Understanding Social Sycophancy in LLMs“, den sechs Autor:innen, Abstract und ICLR-2026-Kennzeichnung überein; damit ist die Konvertierungsidentität belegt.",
+        "Alle PDF-Seiten 1–38 besitzen genau einen korrespondierenden PAGE-Marker im Markdown.",
+        "Die Hauptgliederung mit Abschnitten 1–7, Ethics Statement, Reproducibility Statement, References und Anhängen A–M ist vollständig und in Quellreihenfolge vorhanden.",
+        "Der direkte Vergleich von PDF-Seite 8 mit den Markdown-Zeilen 171–175 zeigt für Tabelle 4 ausschließlich Beschriftung und „<!-- image -->“; die numerischen Tabellenzellen sind nicht enthalten.",
+        "Die vier Haupttabellen und Anhangstabellen A1–A21 wurden anhand ihrer Beschriftungen und Datenblöcke gezählt; 24 der 25 semantischen Tabellen besitzen lesbare Markdown-Daten.",
+        "PDF- und Markdown-Ende enthalten dieselben vollständigen sycophantischen Beispielantworten im Anhang M."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.2196/85770",
+      "title": "Patient Cognitive Bias in Large Language Model-Supported Health Consultations: Simulation-Based Comparative Study",
+      "pdf_file": "generated/pdfs/codex-websearch-2026/aff73b4c6b2eab31b8f7.pdf",
+      "markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-clean/aff73b4c6b2eab31b8f7.md",
+      "automated_warning": "Automated validation: PASS",
+      "identity_match": true,
+      "body_complete": true,
+      "tables": {
+        "pdf_semantic_tables": 2,
+        "markdown_semantic_tables": 2,
+        "material_loss": false,
+        "basis": "Die zwei Ergebnistabellen auf PDF-Seite 8 sind im Markdown als zwei Pipe-Tabellen vollständig vorhanden. Modelle, Standard- und kognitiv verzerrte Bedingungen, Genauigkeitswerte, Step-by-step-Ergebnisse und Recovery-of-harm-Indizes bleiben lesbar."
+      },
+      "decision": "approved_for_screening",
+      "issues": [
+        "Die vier Abbildungen sind als Abbildungsrepräsentationen mit Beschriftungen vorhanden; einzelne visuelle Detailwerte bleiben grafisch, während Versuchsaufbau und Kernergebnisse im Text und in den Tabellen dokumentiert sind.",
+        "Der wiederkehrende Journal-Seitenkopf wurde mehrfach als Markdown-Überschrift klassifiziert."
+      ],
+      "evidence": [
+        "PDF- und Markdown-Seite 1 stimmen bei Titel, Yi Zuo, Qifeng Wan und Shalong Wang, Institutionen, Abstract und DOI überein.",
+        "Alle PDF-Seiten 1–15 besitzen genau einen korrespondierenden PAGE-Marker im Markdown.",
+        "Figures 1–4 auf PDF-Seiten 3, 4, 6 und 7 sowie Tabellen 1–2 auf PDF-Seite 8 wurden direkt mit den Markdown-Beschriftungen, Abbildungsrepräsentationen und Pipe-Tabellen verglichen.",
+        "Introduction, Methods, Ethical Considerations, Results, Discussion, Limitations, Conclusions, Acknowledgments, Data Availability, Authors’ Contributions, Conflicts of Interest und References sind vollständig.",
+        "PDF- und Markdown-Ende enthalten dieselbe Zitierangabe und den Hinweis zur Originalpublikation im Journal of Medical Internet Research."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.3389/fhumd.2026.1791655",
+      "title": "AI-generated visual disinformation and digital equity: an intersectional analysis of algorithmic vulnerabilities among marginalised communities",
+      "pdf_file": "generated/pdfs/codex-websearch-2026/c38bdbce0e8dbb82ce3f.pdf",
+      "markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-clean/c38bdbce0e8dbb82ce3f.md",
+      "automated_warning": "Automated validation: PASS",
+      "identity_match": true,
+      "body_complete": true,
+      "tables": {
+        "pdf_semantic_tables": 1,
+        "markdown_semantic_tables": 1,
+        "material_loss": false,
+        "basis": "Die einzige semantische Tabelle des PDFs, Tabelle 1 zu intersektionalen Vulnerabilitäten, algorithmischen Mechanismen und Equity-Interventionen, ist vollständig als Markdown-Pipe-Tabelle vorhanden. Alle vier Dimensionen und ihre jeweiligen Inhalte sind erhalten."
+      },
+      "decision": "approved_for_screening",
+      "issues": [
+        "Das zweispaltige Literaturverzeichnis wurde typografisch verdichtet, die geprüften Anfangs- und Endeinträge sind jedoch vollständig vorhanden.",
+        "Die Verlags- und Lizenzinformationen der Titelseite wurden in den Markdown-Fließtext übernommen."
+      ],
+      "evidence": [
+        "PDF- und Markdown-Seite 1 stimmen bei Artikeltyp, Titel, Vinanda Cinta Cendekia Putri, Institution, Abstract, Received-, Accepted- und Published-Daten sowie DOI überein.",
+        "Alle sechs PDF-Seiten besitzen genau einen korrespondierenden PAGE-Marker im Markdown.",
+        "Tabelle 1 auf PDF-Seite 2 wurde vollständig gegen die einzige Markdown-Pipe-Tabelle geprüft; Race and ethnicity, Socioeconomic status, Geographic location und Digital literacy sind mit Mechanismen und Interventionen erhalten.",
+        "Introduction, Literature review methodology, AI and the production of visual disinformation, Intersectionality and differential vulnerabilities, Platform algorithms and equity implications, Discussion and future directions, Conclusion sowie Erklärungen sind vollständig.",
+        "PDF- und Markdown-Ende enthalten das Literaturverzeichnis bis zum Eintrag Zuboff."
+      ]
+    }
+  ]
+}

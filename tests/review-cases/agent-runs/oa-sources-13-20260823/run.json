@@ -1,0 +1,620 @@
+{
+  "schema": "femprompt-prisma-agent-run/1.2",
+  "run_id": "oa-sources-13-20260823",
+  "status": "completed",
+  "lifecycle": {
+    "baseline": "identified",
+    "state": "completed",
+    "target": "ai-agent-reviewed",
+    "events": [
+      {
+        "event_id": "oa-sources-13-20260823:execution-started",
+        "event_type": "agent_screening_started",
+        "from": "prepared",
+        "to": "running",
+        "at": "2026-08-23T17:28:15.968Z",
+        "activity_id": "oa-sources-13-20260823:ai-agent-review",
+        "actor_ids": [
+          "oa-sources-13-20260823-ar1",
+          "oa-sources-13-20260823-ar2"
+        ]
+      },
+      {
+        "event_id": "oa-sources-13-20260823:ai-agent-review-completed",
+        "event_type": "ai_agent_review_completed",
+        "from": "running",
+        "to": "completed",
+        "at": "2026-08-23T17:33:46.602Z",
+        "activity_id": "oa-sources-13-20260823:ai-agent-review",
+        "actor_ids": [
+          "codex-ai-agent-review"
+        ]
+      }
+    ]
+  },
+  "model": {
+    "provider": "Codex collaboration runtime",
+    "model": "opus",
+    "model_version": "runtime-alias-opus-2026-08-23",
+    "immutable_model_id": null
+  },
+  "prompt": {
+    "path": "prompts/prism-agent-reviewer-v1.1.md",
+    "version": "1.1",
+    "sha256": "31b5741719d813848622351efab184c420f9f9bc0771f52dff2d5feb15609acb"
+  },
+  "baseline": {
+    "commit": "1fac15ebc1123ba1b4e8c4c34d3d43e84916e917"
+  },
+  "queue_snapshot": {
+    "path": "tests/review-cases/agent-runs/oa-sources-13-20260823/queue-snapshot.json",
+    "sha256": "f2054b3a207efd97ad317864531ab77c3cff0d16f6bec6bc9fbd7cf6393e381a",
+    "ready_work_ids": [
+      "doi:10.1093/bjsw/bcab168",
+      "doi:10.1145/3491102.3501831",
+      "doi:10.1145/3593013.3594094",
+      "doi:10.1177/20539517211020332",
+      "doi:10.3389/fdgth.2023.1133987",
+      "doi:10.3390/ai4010003",
+      "doi:10.3390/socsci8100281",
+      "doi:10.48558/a179-b138",
+      "record:3ZNMTJ5B",
+      "record:BDI6XU5A",
+      "record:BHXDU7VM",
+      "record:FTJM5R8N",
+      "record:NSI6S5QE"
+    ]
+  },
+  "assignment": {
+    "complete": true,
+    "papers": [
+      {
+        "paper_id": "VSZM7CT6",
+        "work_id": "doi:10.1093/bjsw/bcab168",
+        "record_ids": [
+          "VSZM7CT6"
+        ],
+        "human_coverage": false,
+        "ai_agent_review_coverage": false,
+        "source": {
+          "path": "docs/data/fulltext/VSZM7CT6.md",
+          "sha256": "4557a0e44affd3732f7aff3f2b8244b45df7eb5f8cbb0bcb043aa4dee9422bf3"
+        }
+      },
+      {
+        "paper_id": "7FEFMCBZ",
+        "work_id": "doi:10.1145/3491102.3501831",
+        "record_ids": [
+          "7FEFMCBZ"
+        ],
+        "human_coverage": false,
+        "ai_agent_review_coverage": false,
+        "source": {
+          "path": "docs/data/fulltext/7FEFMCBZ.md",
+          "sha256": "de16bedf403143d41f37bcd19af189018e049126bba32c148277976ef2ee828f"
+        }
+      },
+      {
+        "paper_id": "R7V99ERA",
+        "work_id": "doi:10.1145/3593013.3594094",
+        "record_ids": [
+          "R7V99ERA"
+        ],
+        "human_coverage": false,
+        "ai_agent_review_coverage": false,
+        "source": {
+          "path": "docs/data/fulltext/R7V99ERA.md",
+          "sha256": "03177cb37158d46696fe4422919053cdda5591068e6f0e395e7d21487bc2a2db"
+        }
+      },
+      {
+        "paper_id": "4ZL5Q48E",
+        "work_id": "doi:10.1177/20539517211020332",
+        "record_ids": [
+          "4ZL5Q48E"
+        ],
+        "human_coverage": false,
+        "ai_agent_review_coverage": false,
+        "source": {
+          "path": "docs/data/fulltext/4ZL5Q48E.md",
+          "sha256": "4d5b7fb19ec62f5a192bf5844f68d82fb1680a2ed260f18d14ca3bcb3276c4db"
+        }
+      },
+      {
+        "paper_id": "J7V3AAQT",
+        "work_id": "doi:10.3389/fdgth.2023.1133987",
+        "record_ids": [
+          "J7V3AAQT"
+        ],
+        "human_coverage": false,
+        "ai_agent_review_coverage": false,
+        "source": {
+          "path": "docs/data/fulltext/J7V3AAQT.md",
+          "sha256": "5b2c28e320dd95560f01adfb33b123d5049a4bb3106fb448335626f7958ff252"
+        }
+      },
+      {
+        "paper_id": "P4YQIKJX",
+        "work_id": "doi:10.3390/ai4010003",
+        "record_ids": [
+          "P4YQIKJX"
+        ],
+        "human_coverage": false,
+        "ai_agent_review_coverage": false,
+        "source": {
+          "path": "docs/data/fulltext/P4YQIKJX.md",
+          "sha256": "21913775f2ff6abfb26b09e167c14e8d1bfac55d43f7a8db06b60582ac383a17"
+        }
+      },
+      {
+        "paper_id": "A2P8MXMY",
+        "work_id": "doi:10.3390/socsci8100281",
+        "record_ids": [
+          "A2P8MXMY"
+        ],
+        "human_coverage": false,
+        "ai_agent_review_coverage": false,
+        "source": {
+          "path": "docs/data/fulltext/A2P8MXMY.md",
+          "sha256": "6441bd19785f939ca020aa1d0aa2c8ac2d21c55bcd44d7c29601fa543367d6b3"
+        }
+      },
+      {
+        "paper_id": "QUV5DQH3",
+        "work_id": "doi:10.48558/a179-b138",
+        "record_ids": [
+          "QUV5DQH3"
+        ],
+        "human_coverage": false,
+        "ai_agent_review_coverage": false,
+        "source": {
+          "path": "docs/data/fulltext/QUV5DQH3.md",
+          "sha256": "e7d5eedd33818ff4614f26577e29e11050d1e12e6c730250573231f7ade1ac9a"
+        }
+      },
+      {
+        "paper_id": "3ZNMTJ5B",
+        "work_id": "record:3ZNMTJ5B",
+        "record_ids": [
+          "3ZNMTJ5B"
+        ],
+        "human_coverage": false,
+        "ai_agent_review_coverage": false,
+        "source": {
+          "path": "docs/data/fulltext/3ZNMTJ5B.md",
+          "sha256": "7f3e3b93547355806fec125d1cde0f65bb1819192be52a85376b08a868069a4c"
+        }
+      },
+      {
+        "paper_id": "BDI6XU5A",
+        "work_id": "record:BDI6XU5A",
+        "record_ids": [
+          "BDI6XU5A"
+        ],
+        "human_coverage": false,
+        "ai_agent_review_coverage": false,
+        "source": {
+          "path": "docs/data/fulltext/BDI6XU5A.md",
+          "sha256": "1aa57614a5d30b608006dde1d2da7c7cb49f2c27324bd4726ebb370487b47e74"
+        }
+      },
+      {
+        "paper_id": "BHXDU7VM",
+        "work_id": "record:BHXDU7VM",
+        "record_ids": [
+          "BHXDU7VM"
+        ],
+        "human_coverage": false,
+        "ai_agent_review_coverage": false,
+        "source": {
+          "path": "docs/data/fulltext/BHXDU7VM.md",
+          "sha256": "3d4c7eebcc7eede980a7a9e64003ba8df9dcb3ce98afcac0a03773915ab14668"
+        }
+      },
+      {
+        "paper_id": "FTJM5R8N",
+        "work_id": "record:FTJM5R8N",
+        "record_ids": [
+          "FTJM5R8N"
+        ],
+        "human_coverage": false,
+        "ai_agent_review_coverage": false,
+        "source": {
+          "path": "docs/data/fulltext/FTJM5R8N.md",
+          "sha256": "92cbd69cb6ef71c5932014d1656d5e35b85db1a576a863346091c7a5c45ba55f"
+        }
+      },
+      {
+        "paper_id": "NSI6S5QE",
+        "work_id": "record:NSI6S5QE",
+        "record_ids": [
+          "NSI6S5QE"
+        ],
+        "human_coverage": false,
+        "ai_agent_review_coverage": false,
+        "source": {
+          "path": "docs/data/fulltext/NSI6S5QE.md",
+          "sha256": "3187b1cf1d4010d5a926b636205c9e242a80fa814cbdb5e9449f2c523e6b387d"
+        }
+      }
+    ]
+  },
+  "isolation": {
+    "mode": "operational",
+    "epistemic_independence_claimed": false,
+    "explanation": "Each agent track uses a separate Codex context, reviewer identity, coding packet, report, and output path. Operational separation records execution conditions; it does not establish epistemic independence."
+  },
+  "actors": [
+    {
+      "id": "oa-sources-13-20260823-ar1",
+      "type": "ai_agent",
+      "role": "reviewer",
+      "reviewer_id": "ar1"
+    },
+    {
+      "id": "oa-sources-13-20260823-ar2",
+      "type": "ai_agent",
+      "role": "reviewer",
+      "reviewer_id": "ar2"
+    },
+    {
+      "id": "codex-ai-agent-review",
+      "type": "ai_agent",
+      "role": "ai_agent_reviewer"
+    }
+  ],
+  "timestamps": {
+    "created_at": "2026-08-23T17:16:40.263Z",
+    "started_at": "2026-08-23T17:28:15.968Z",
+    "completed_at": "2026-08-23T17:33:46.602Z"
+  },
+  "execution": {
+    "mode": "blinded_source_review_with_deterministic_prism_roundtrip",
+    "reason": "Operationally isolated agents create source-grounded coding packets. The orchestrator transfers validated packets deterministically through the production PRISM functions.",
+    "required_controls": [
+      "Reviewer agents may read only the frozen rules, manifest, assigned Paper sources, and their own output paths.",
+      "Reviewer agents may not inspect previous judgments, knowledge distillates, the other track, or productive screening data.",
+      "The orchestrator projects validated values mechanically and may not resolve substantive ambiguity during transfer."
+    ],
+    "coding_packet_validation": {
+      "command": "node tests/review-cases/validate-coding-packet.mjs tests/review-cases/agent-runs/oa-sources-13-20260823/run.json <reviewer-id>",
+      "result": "pass",
+      "records": 26
+    },
+    "frontend_roundtrip": {
+      "method": "deterministic_projection_with_prism_frontend_roundtrip",
+      "command": "node tests/review-cases/roundtrip-prism-track.mjs tests/review-cases/agent-runs/oa-sources-13-20260823/run.json <reviewer-id> <projection.json> <track.json>",
+      "result": "pass",
+      "records": 26,
+      "production_functions": [
+        "validateReviewerPayload",
+        "importReviewerPayload",
+        "recordRequirements",
+        "reviewerFileText"
+      ]
+    },
+    "protocol_basis": "knowledge/specification.md#ADR-036"
+  },
+  "tracks": [
+    {
+      "reviewer_id": "ar1",
+      "actor_id": "oa-sources-13-20260823-ar1",
+      "actor_type": "ai_agent",
+      "paper_ids": [
+        "VSZM7CT6",
+        "7FEFMCBZ",
+        "R7V99ERA",
+        "4ZL5Q48E",
+        "J7V3AAQT",
+        "P4YQIKJX",
+        "A2P8MXMY",
+        "QUV5DQH3",
+        "3ZNMTJ5B",
+        "BDI6XU5A",
+        "BHXDU7VM",
+        "FTJM5R8N",
+        "NSI6S5QE"
+      ],
+      "source_assignments": [
+        {
+          "paper_id": "VSZM7CT6",
+          "source_path": "docs/data/fulltext/VSZM7CT6.md",
+          "source_sha256": "4557a0e44affd3732f7aff3f2b8244b45df7eb5f8cbb0bcb043aa4dee9422bf3"
+        },
+        {
+          "paper_id": "7FEFMCBZ",
+          "source_path": "docs/data/fulltext/7FEFMCBZ.md",
+          "source_sha256": "de16bedf403143d41f37bcd19af189018e049126bba32c148277976ef2ee828f"
+        },
+        {
+          "paper_id": "R7V99ERA",
+          "source_path": "docs/data/fulltext/R7V99ERA.md",
+          "source_sha256": "03177cb37158d46696fe4422919053cdda5591068e6f0e395e7d21487bc2a2db"
+        },
+        {
+          "paper_id": "4ZL5Q48E",
+          "source_path": "docs/data/fulltext/4ZL5Q48E.md",
+          "source_sha256": "4d5b7fb19ec62f5a192bf5844f68d82fb1680a2ed260f18d14ca3bcb3276c4db"
+        },
+        {
+          "paper_id": "J7V3AAQT",
+          "source_path": "docs/data/fulltext/J7V3AAQT.md",
+          "source_sha256": "5b2c28e320dd95560f01adfb33b123d5049a4bb3106fb448335626f7958ff252"
+        },
+        {
+          "paper_id": "P4YQIKJX",
+          "source_path": "docs/data/fulltext/P4YQIKJX.md",
+          "source_sha256": "21913775f2ff6abfb26b09e167c14e8d1bfac55d43f7a8db06b60582ac383a17"
+        },
+        {
+          "paper_id": "A2P8MXMY",
+          "source_path": "docs/data/fulltext/A2P8MXMY.md",
+          "source_sha256": "6441bd19785f939ca020aa1d0aa2c8ac2d21c55bcd44d7c29601fa543367d6b3"
+        },
+        {
+          "paper_id": "QUV5DQH3",
+          "source_path": "docs/data/fulltext/QUV5DQH3.md",
+          "source_sha256": "e7d5eedd33818ff4614f26577e29e11050d1e12e6c730250573231f7ade1ac9a"
+        },
+        {
+          "paper_id": "3ZNMTJ5B",
+          "source_path": "docs/data/fulltext/3ZNMTJ5B.md",
+          "source_sha256": "7f3e3b93547355806fec125d1cde0f65bb1819192be52a85376b08a868069a4c"
+        },
+        {
+          "paper_id": "BDI6XU5A",
+          "source_path": "docs/data/fulltext/BDI6XU5A.md",
+          "source_sha256": "1aa57614a5d30b608006dde1d2da7c7cb49f2c27324bd4726ebb370487b47e74"
+        },
+        {
+          "paper_id": "BHXDU7VM",
+          "source_path": "docs/data/fulltext/BHXDU7VM.md",
+          "source_sha256": "3d4c7eebcc7eede980a7a9e64003ba8df9dcb3ce98afcac0a03773915ab14668"
+        },
+        {
+          "paper_id": "FTJM5R8N",
+          "source_path": "docs/data/fulltext/FTJM5R8N.md",
+          "source_sha256": "92cbd69cb6ef71c5932014d1656d5e35b85db1a576a863346091c7a5c45ba55f"
+        },
+        {
+          "paper_id": "NSI6S5QE",
+          "source_path": "docs/data/fulltext/NSI6S5QE.md",
+          "source_sha256": "3187b1cf1d4010d5a926b636205c9e242a80fa814cbdb5e9449f2c523e6b387d"
+        }
+      ],
+      "coding_packet": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar1-coding.json",
+      "coding_packet_sha256": "f2626a0a435389a9d9b2646db904a4fa887608d1ca16e588991116b1ac8c5ff0",
+      "report": "tests/review-cases/agent-runs/oa-sources-13-20260823/reports/ar1.md",
+      "report_sha256": "a7b550267670361a3256073d8616bed9fbb088853d55fd7206d23d04067b1cb5",
+      "started_at": "2026-08-23T17:28:15.968Z",
+      "completed_at": "2026-08-23T17:28:16.711Z",
+      "output": {
+        "path": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar1.json",
+        "sha256": "5d9ecd672a101943a1709f15e32d9350f1139a7390c6f2e2bc08008c531e634e"
+      }
+    },
+    {
+      "reviewer_id": "ar2",
+      "actor_id": "oa-sources-13-20260823-ar2",
+      "actor_type": "ai_agent",
+      "paper_ids": [
+        "VSZM7CT6",
+        "7FEFMCBZ",
+        "R7V99ERA",
+        "4ZL5Q48E",
+        "J7V3AAQT",
+        "P4YQIKJX",
+        "A2P8MXMY",
+        "QUV5DQH3",
+        "3ZNMTJ5B",
+        "BDI6XU5A",
+        "BHXDU7VM",
+        "FTJM5R8N",
+        "NSI6S5QE"
+      ],
+      "source_assignments": [
+        {
+          "paper_id": "VSZM7CT6",
+          "source_path": "docs/data/fulltext/VSZM7CT6.md",
+          "source_sha256": "4557a0e44affd3732f7aff3f2b8244b45df7eb5f8cbb0bcb043aa4dee9422bf3"
+        },
+        {
+          "paper_id": "7FEFMCBZ",
+          "source_path": "docs/data/fulltext/7FEFMCBZ.md",
+          "source_sha256": "de16bedf403143d41f37bcd19af189018e049126bba32c148277976ef2ee828f"
+        },
+        {
+          "paper_id": "R7V99ERA",
+          "source_path": "docs/data/fulltext/R7V99ERA.md",
+          "source_sha256": "03177cb37158d46696fe4422919053cdda5591068e6f0e395e7d21487bc2a2db"
+        },
+        {
+          "paper_id": "4ZL5Q48E",
+          "source_path": "docs/data/fulltext/4ZL5Q48E.md",
+          "source_sha256": "4d5b7fb19ec62f5a192bf5844f68d82fb1680a2ed260f18d14ca3bcb3276c4db"
+        },
+        {
+          "paper_id": "J7V3AAQT",
+          "source_path": "docs/data/fulltext/J7V3AAQT.md",
+          "source_sha256": "5b2c28e320dd95560f01adfb33b123d5049a4bb3106fb448335626f7958ff252"
+        },
+        {
+          "paper_id": "P4YQIKJX",
+          "source_path": "docs/data/fulltext/P4YQIKJX.md",
+          "source_sha256": "21913775f2ff6abfb26b09e167c14e8d1bfac55d43f7a8db06b60582ac383a17"
+        },
+        {
+          "paper_id": "A2P8MXMY",
+          "source_path": "docs/data/fulltext/A2P8MXMY.md",
+          "source_sha256": "6441bd19785f939ca020aa1d0aa2c8ac2d21c55bcd44d7c29601fa543367d6b3"
+        },
+        {
+          "paper_id": "QUV5DQH3",
+          "source_path": "docs/data/fulltext/QUV5DQH3.md",
+          "source_sha256": "e7d5eedd33818ff4614f26577e29e11050d1e12e6c730250573231f7ade1ac9a"
+        },
+        {
+          "paper_id": "3ZNMTJ5B",
+          "source_path": "docs/data/fulltext/3ZNMTJ5B.md",
+          "source_sha256": "7f3e3b93547355806fec125d1cde0f65bb1819192be52a85376b08a868069a4c"
+        },
+        {
+          "paper_id": "BDI6XU5A",
+          "source_path": "docs/data/fulltext/BDI6XU5A.md",
+          "source_sha256": "1aa57614a5d30b608006dde1d2da7c7cb49f2c27324bd4726ebb370487b47e74"
+        },
+        {
+          "paper_id": "BHXDU7VM",
+          "source_path": "docs/data/fulltext/BHXDU7VM.md",
+          "source_sha256": "3d4c7eebcc7eede980a7a9e64003ba8df9dcb3ce98afcac0a03773915ab14668"
+        },
+        {
+          "paper_id": "FTJM5R8N",
+          "source_path": "docs/data/fulltext/FTJM5R8N.md",
+          "source_sha256": "92cbd69cb6ef71c5932014d1656d5e35b85db1a576a863346091c7a5c45ba55f"
+        },
+        {
+          "paper_id": "NSI6S5QE",
+          "source_path": "docs/data/fulltext/NSI6S5QE.md",
+          "source_sha256": "3187b1cf1d4010d5a926b636205c9e242a80fa814cbdb5e9449f2c523e6b387d"
+        }
+      ],
+      "coding_packet": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar2-coding.json",
+      "coding_packet_sha256": "f3dcf84c76c73d5e96d7eff708563ff9579043d2a2a796e9e0f52784e225ed80",
+      "report": "tests/review-cases/agent-runs/oa-sources-13-20260823/reports/ar2.md",
+      "report_sha256": "c458f55dafafd5db1dc2803c0be234ce710708ce4eb01868eb82165e93219130",
+      "started_at": "2026-08-23T17:28:16.733Z",
+      "completed_at": "2026-08-23T17:28:17.462Z",
+      "output": {
+        "path": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar2.json",
+        "sha256": "f019c60207f9610369e6bbbd1229326ff0b549350c0c9c2a978c402344d1e009"
+      }
+    }
+  ],
+  "provenance": {
+    "activities": [
+      {
+        "id": "oa-sources-13-20260823:ai-agent-review",
+        "type": "ai_agent_review",
+        "run_id": "oa-sources-13-20260823",
+        "method": "source_grounded_ai_agent_review",
+        "prompt": {
+          "path": "prompts/prism-agent-reviewer-v1.1.md",
+          "version": "1.1",
+          "sha256": "31b5741719d813848622351efab184c420f9f9bc0771f52dff2d5feb15609acb"
+        },
+        "model": {
+          "provider": "Codex collaboration runtime",
+          "model": "opus",
+          "model_version": "runtime-alias-opus-2026-08-23",
+          "immutable_model_id": null
+        },
+        "associated_actor_ids": [
+          "codex-ai-agent-review"
+        ],
+        "status": "completed",
+        "actor_id": "codex-ai-agent-review",
+        "actor_type": "ai_agent",
+        "input_track_ids": [
+          "ar1",
+          "ar2"
+        ],
+        "source_basis": "assigned Paper source records from the bound queue snapshot",
+        "started_at": "2026-08-23T17:28:17.462Z",
+        "completed_at": "2026-08-23T17:33:46.602Z",
+        "outputs": [
+          {
+            "kind": "ai_agent_review",
+            "path": "tests/review-cases/agent-runs/oa-sources-13-20260823/ai-agent-review.json",
+            "sha256": "3e010293d1d0b377fbcc9715645483a2a958168fa5e1b0ce1d33e70de39a91ea"
+          },
+          {
+            "kind": "ai_agent_reviewed_product_v0.3",
+            "path": "tests/review-cases/agent-runs/oa-sources-13-20260823/product-v0.3.json",
+            "sha256": "22f6e5c69287039df5a0a97dd8bd38e99eb6c52b293f5ca0a970afa16d4fd69e"
+          },
+          {
+            "kind": "ai_agent_reviewed_product_v0.5",
+            "path": "tests/review-cases/agent-runs/oa-sources-13-20260823/product-v0.5.json",
+            "sha256": "506f0e80121b614930a172ea2a826dd91cd4d6d9cf1fbb8e28ed184eb617d527"
+          }
+        ]
+      }
+    ]
+  },
+  "outputs": [
+    {
+      "kind": "agent_track",
+      "reviewer_id": "ar1",
+      "path": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar1.json",
+      "sha256": "5d9ecd672a101943a1709f15e32d9350f1139a7390c6f2e2bc08008c531e634e"
+    },
+    {
+      "kind": "agent_track",
+      "reviewer_id": "ar2",
+      "path": "tests/review-cases/agent-runs/oa-sources-13-20260823/tracks/ar2.json",
+      "sha256": "f019c60207f9610369e6bbbd1229326ff0b549350c0c9c2a978c402344d1e009"
+    },
+    {
+      "kind": "ai_agent_review",
+      "path": "tests/review-cases/agent-runs/oa-sources-13-20260823/ai-agent-review.json",
+      "sha256": "3e010293d1d0b377fbcc9715645483a2a958168fa5e1b0ce1d33e70de39a91ea"
+    },
+    {
+      "kind": "ai_agent_reviewed_product_v0.3",
+      "path": "tests/review-cases/agent-runs/oa-sources-13-20260823/product-v0.3.json",
+      "sha256": "22f6e5c69287039df5a0a97dd8bd38e99eb6c52b293f5ca0a970afa16d4fd69e"
+    },
+    {
+      "kind": "ai_agent_reviewed_product_v0.5",
+      "path": "tests/review-cases/agent-runs/oa-sources-13-20260823/product-v0.5.json",
+      "sha256": "506f0e80121b614930a172ea2a826dd91cd4d6d9cf1fbb8e28ed184eb617d527"
+    }
+  ],
+  "integration": {
+    "mode": "append_only",
+    "status": "applied",
+    "at": "2026-08-23T17:33:46.602Z",
+    "target": "docs/data/screening/ar2.json",
+    "state": "ai-agent-reviewed",
+    "public_projection": false,
+    "review": {
+      "path": "tests/review-cases/agent-runs/oa-sources-13-20260823/ai-agent-review.json",
+      "sha256": "3e010293d1d0b377fbcc9715645483a2a958168fa5e1b0ce1d33e70de39a91ea"
+    },
+    "product": {
+      "path": "tests/review-cases/agent-runs/oa-sources-13-20260823/product-v0.5.json",
+      "sha256": "506f0e80121b614930a172ea2a826dd91cd4d6d9cf1fbb8e28ed184eb617d527"
+    },
+    "work_ids": [
+      "doi:10.1093/bjsw/bcab168",
+      "doi:10.1145/3491102.3501831",
+      "doi:10.1145/3593013.3594094",
+      "doi:10.1177/20539517211020332",
+      "doi:10.3389/fdgth.2023.1133987",
+      "doi:10.3390/ai4010003",
+      "doi:10.3390/socsci8100281",
+      "doi:10.48558/a179-b138",
+      "record:3ZNMTJ5B",
+      "record:BDI6XU5A",
+      "record:BHXDU7VM",
+      "record:FTJM5R8N",
+      "record:NSI6S5QE"
+    ],
+    "record_ids": [
+      "3ZNMTJ5B",
+      "4ZL5Q48E",
+      "7FEFMCBZ",
+      "A2P8MXMY",
+      "BDI6XU5A",
+      "BHXDU7VM",
+      "FTJM5R8N",
+      "J7V3AAQT",
+      "NSI6S5QE",
+      "P4YQIKJX",
+      "QUV5DQH3",
+      "R7V99ERA",
+      "VSZM7CT6"
+    ]
+  }
+}

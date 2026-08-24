@@ -1,0 +1,93 @@
+{
+  "schema": "femprompt-prisma-coding-packet/0.1",
+  "run_id": "oa-sources-13-20260823",
+  "reviewer": "ar2",
+  "actor": "agent",
+  "source_mode": "blinded_source_review_with_deterministic_prism_roundtrip",
+  "decisions": {
+    "VSZM7CT6": {
+      "source_path": "docs/data/fulltext/VSZM7CT6.md",
+      "identity_check": {"status": "verified", "basis": "Title, authors, journal, year and DOI are present in the paper text."},
+      "categories": {"AI_Literacies":"ja","Generative_KI":"nein","Prompting":"nein","KI_Sonstige":"ja","Soziale_Arbeit":"ja","Bias_Ungleichheit":"ja","Gender":"teilweise","Diversitaet":"teilweise","Feministisch":"nein","Fairness":"ja"},
+      "decision": "Include",
+      "reason": null,
+      "evidence": {
+        "AI_Literacies": ["We foresee a greater impetus to include critical digital literacies in social work education"],
+        "Generative_KI": [], "Prompting": [],
+        "KI_Sonstige": ["AI systems are created by humans"],
+        "Soziale_Arbeit": ["As social work educators, we have begun to wonder what the implications of AI in the academy will have for social work education"],
+        "Bias_Ungleichheit": ["bias and structural inequity can be built into them"],
+        "Gender": ["AI algorithms may reinforce racial and gender stereotypes"],
+        "Diversitaet": ["critical digital literacies in social work education"],
+        "Feministisch": [],
+        "Fairness": ["fairness, privacy, transparency, and accountability"]
+      },
+      "analysis": {"AN_Prompting_Role":["None"],"AN_Prompt_Techniques":["None"],"AN_Bias_Axes":["Gender","Race_Ethnicity"],"AN_Harm_Types":["Stereotyping","Indirect_Discrimination"],"AN_Mitigation_Stage":["Organisational_Process"],"AN_Mitigation_Status":"Proposed","AN_Population":["Education_Professional"],"AN_Coding_Basis":"Fulltext","AN_Notes":"Conceptual social-work education paper on AI and critical digital literacies.","Studientyp":"Theoretisch"}
+    },
+    "7FEFMCBZ": {
+      "source_path": "docs/data/fulltext/7FEFMCBZ.md",
+      "identity_check": {"status": "verified", "basis": "Title, authors, ACM CHI venue and year are stated in the paper."},
+      "categories": {"AI_Literacies":"nein","Generative_KI":"nein","Prompting":"nein","KI_Sonstige":"ja","Soziale_Arbeit":"ja","Bias_Ungleichheit":"ja","Gender":"nein","Diversitaet":"teilweise","Feministisch":"nein","Fairness":"ja"},
+      "decision": "Include", "reason": null,
+      "evidence": {"AI_Literacies":[],"Generative_KI":[],"Prompting":[],"KI_Sonstige":["when people work with algorithms in a child welfare context"],"Soziale_Arbeit":["Child welfare workers were generally aware of their own individual biases."],"Bias_Ungleichheit":["workers reduced the disparity in screen-in rate between Black and white children from 20% to 9%"],"Gender":[],"Diversitaet":["increase diversity among the child welfare workers, especially supervisors"],"Feministisch":[],"Fairness":["algorithmic fairness"]},
+      "analysis": {"AN_Prompting_Role":["None"],"AN_Prompt_Techniques":["None"],"AN_Bias_Axes":["Race_Ethnicity"],"AN_Harm_Types":["Disparate_Performance"],"AN_Mitigation_Stage":["Intra_Processing","Organisational_Process"],"AN_Mitigation_Status":"Evaluated","AN_Population":["Child_Family_Welfare"],"AN_Coding_Basis":"Fulltext","AN_Notes":"Mixed-method study of human-algorithm collaboration in child welfare screening.","Studientyp":"Empirisch"}
+    },
+    "R7V99ERA": {
+      "source_path": "docs/data/fulltext/R7V99ERA.md",
+      "identity_check": {"status":"verified","basis":"Title, authors, ACM FAccT venue and year are stated in the paper."},
+      "categories":{"AI_Literacies":"nein","Generative_KI":"nein","Prompting":"nein","KI_Sonstige":"ja","Soziale_Arbeit":"ja","Bias_Ungleichheit":"ja","Gender":"nein","Diversitaet":"teilweise","Feministisch":"nein","Fairness":"ja"},
+      "decision":"Include","reason":null,
+      "evidence":{"AI_Literacies":[],"Generative_KI":[],"Prompting":[],"KI_Sonstige":["NLP algorithmic fairness in a potential deployed setting"],"Soziale_Arbeit":["NLP tools for child protective services"],"Bias_Ungleichheit":["Our results show consistent racial bias in NER"],"Gender":[],"Diversitaet":["disparities in model performance over case notes about black and white families"],"Feministisch":[],"Fairness":["algorithmic fairness"]},
+      "analysis":{"AN_Prompting_Role":["None"],"AN_Prompt_Techniques":["None"],"AN_Bias_Axes":["Race_Ethnicity"],"AN_Harm_Types":["Disparate_Performance","Indirect_Discrimination"],"AN_Mitigation_Stage":["None"],"AN_Mitigation_Status":"Evaluated","AN_Population":["Child_Family_Welfare"],"AN_Coding_Basis":"Fulltext","AN_Notes":"Empirical evaluation of NLP fairness risks in CPS case notes.","Studientyp":"Empirisch"}
+    },
+    "4ZL5Q48E": {
+      "source_path":"docs/data/fulltext/4ZL5Q48E.md","identity_check":{"status":"verified","basis":"Title, authors, journal, year and DOI are present."},
+      "categories":{"AI_Literacies":"ja","Generative_KI":"nein","Prompting":"nein","KI_Sonstige":"ja","Soziale_Arbeit":"nein","Bias_Ungleichheit":"ja","Gender":"teilweise","Diversitaet":"nein","Feministisch":"nein","Fairness":"ja"},"decision":"Include","reason":null,
+      "evidence":{"AI_Literacies":["algorithmic management demands new roles and competencies"],"Generative_KI":[],"Prompting":[],"KI_Sonstige":["algorithmic management may influence existing power and social structures within organizations"],"Soziale_Arbeit":[],"Bias_Ungleichheit":["bias, discrimination, and inequalities"],"Gender":["did not rank applicants for technical posts in a gender-neutral manner"],"Diversitaet":[],"Feministisch":[],"Fairness":["future of work, accountability"]},
+      "analysis":{"AN_Prompting_Role":["None"],"AN_Prompt_Techniques":["None"],"AN_Bias_Axes":["Gender"],"AN_Harm_Types":["Direct_Discrimination","Exclusionary_Norms"],"AN_Mitigation_Stage":["Organisational_Process"],"AN_Mitigation_Status":"Proposed","AN_Population":["Not_SW_Specific"],"AN_Coding_Basis":"Fulltext","AN_Notes":"Sociotechnical conceptual review of algorithmic management and workplace power.","Studientyp":"Theoretisch"}
+    },
+    "J7V3AAQT": {
+      "source_path":"docs/data/fulltext/J7V3AAQT.md","identity_check":{"status":"verified","basis":"Title, authors, Frontiers journal, year and DOI are present."},
+      "categories":{"AI_Literacies":"nein","Generative_KI":"ja","Prompting":"nein","KI_Sonstige":"nein","Soziale_Arbeit":"nein","Bias_Ungleichheit":"nein","Gender":"nein","Diversitaet":"nein","Feministisch":"nein","Fairness":"nein"},"decision":"Exclude","reason":"Not_relevant_topic",
+      "evidence":{"AI_Literacies":[],"Generative_KI":["a generative dialogue platform that allows conversations regarding various emotional issues in an open-ended manner"],"Prompting":[],"KI_Sonstige":[],"Soziale_Arbeit":[],"Bias_Ungleichheit":[],"Gender":[],"Diversitaet":[],"Feministisch":[],"Fairness":[]}
+    },
+    "P4YQIKJX": {
+      "source_path":"docs/data/fulltext/P4YQIKJX.md","identity_check":{"status":"verified","basis":"Title, authors, journal, year and systematic-review method are stated."},
+      "categories":{"AI_Literacies":"nein","Generative_KI":"nein","Prompting":"nein","KI_Sonstige":"ja","Soziale_Arbeit":"nein","Bias_Ungleichheit":"ja","Gender":"nein","Diversitaet":"teilweise","Feministisch":"nein","Fairness":"ja"},"decision":"Include","reason":null,
+      "evidence":{"AI_Literacies":[],"Generative_KI":[],"Prompting":[],"KI_Sonstige":["applying AI in healthcare"],"Soziale_Arbeit":[],"Bias_Ungleichheit":["justice and fairness was found to be the most prevalent ethical issue"],"Gender":[],"Diversitaet":["health disparities"],"Feministisch":[],"Fairness":["revealed 12 main ethical issues: justice and fairness, freedom and autonomy, privacy, transparency"]},
+      "analysis":{"AN_Prompting_Role":["None"],"AN_Prompt_Techniques":["None"],"AN_Bias_Axes":["Other_Axis"],"AN_Harm_Types":["Disparate_Performance","Indirect_Discrimination"],"AN_Mitigation_Stage":["Pre_Processing","In_Training","Post_Processing","Organisational_Process"],"AN_Mitigation_Status":"Proposed","AN_Population":["Health_Care"],"AN_Coding_Basis":"Fulltext","AN_Notes":"Systematic review of ethical issues and strategies in healthcare AI.","Studientyp":"Literaturreview"}
+    },
+    "A2P8MXMY": {
+      "source_path":"docs/data/fulltext/A2P8MXMY.md","identity_check":{"status":"verified","basis":"Title, author, journal, year and DOI are present."},
+      "categories":{"AI_Literacies":"nein","Generative_KI":"nein","Prompting":"nein","KI_Sonstige":"ja","Soziale_Arbeit":"ja","Bias_Ungleichheit":"ja","Gender":"nein","Diversitaet":"teilweise","Feministisch":"nein","Fairness":"ja"},"decision":"Include","reason":null,
+      "evidence":{"AI_Literacies":[],"Generative_KI":[],"Prompting":[],"KI_Sonstige":["algorithmic tools"],"Soziale_Arbeit":["These debates should be of much interest to social work"],"Bias_Ungleichheit":["algorithms using these data have distorted feedback loops and can contain inequalities and biases"],"Gender":[],"Diversitaet":["children and parents involved in the child protection system have a set of complex and at times divergent rights and needs"],"Feministisch":[],"Fairness":["The concept of fairness has multiple definitions when used to analyse algorithms"]},
+      "analysis":{"AN_Prompting_Role":["None"],"AN_Prompt_Techniques":["None"],"AN_Bias_Axes":["Race_Ethnicity","Socioeconomic"],"AN_Harm_Types":["Disparate_Performance","Indirect_Discrimination","Exclusionary_Norms"],"AN_Mitigation_Stage":["Pre_Processing","Organisational_Process"],"AN_Mitigation_Status":"Proposed","AN_Population":["Child_Family_Welfare"],"AN_Coding_Basis":"Fulltext","AN_Notes":"Conceptual analysis of statistical fairness and social justice in child protection algorithms.","Studientyp":"Theoretisch"}
+    },
+    "QUV5DQH3": {
+      "source_path":"docs/data/fulltext/QUV5DQH3.md","identity_check":{"status":"verified","basis":"Title, authors, publication and date are stated in the article."},
+      "categories":{"AI_Literacies":"teilweise","Generative_KI":"nein","Prompting":"nein","KI_Sonstige":"ja","Soziale_Arbeit":"nein","Bias_Ungleichheit":"ja","Gender":"ja","Diversitaet":"ja","Feministisch":"ja","Fairness":"ja"},"decision":"Include","reason":null,
+      "evidence":{"AI_Literacies":["advocate for AI literacy training"],"Generative_KI":[],"Prompting":[],"KI_Sonstige":["gender bias in these systems is pervasive"],"Soziale_Arbeit":[],"Bias_Ungleichheit":["embed and scale gender bias"],"Gender":["How can we build gender-smart AI to advance gender equity"],"Diversitaet":["ensuring that diversity is a core leadership priority"],"Feministisch":["Use feminist data practices to help fill data gaps."],"Fairness":["advance gender equity"]},
+      "analysis":{"AN_Prompting_Role":["None"],"AN_Prompt_Techniques":["None"],"AN_Bias_Axes":["Gender","Race_Ethnicity","Intersectional"],"AN_Harm_Types":["Derogatory_Language","Erasure","Stereotyping","Direct_Discrimination"],"AN_Mitigation_Stage":["Pre_Processing","In_Training","Organisational_Process"],"AN_Mitigation_Status":"Proposed","AN_Population":["Not_SW_Specific"],"AN_Coding_Basis":"Fulltext","AN_Notes":"Feminist commentary on gender-equitable AI design and governance.","Studientyp":"Konzept"}
+    },
+    "3ZNMTJ5B": {
+      "source_path":"docs/data/fulltext/3ZNMTJ5B.md","identity_check":{"status":"verified","basis":"The source page identifies the ACADEMY site and its subject matter."},"categories":{"AI_Literacies":"nein","Generative_KI":"nein","Prompting":"nein","KI_Sonstige":"nein","Soziale_Arbeit":"nein","Bias_Ungleichheit":"ja","Gender":"nein","Diversitaet":"ja","Feministisch":"ja","Fairness":"ja"},"decision":"Exclude","reason":"Wrong_publication_type",
+      "evidence":{"AI_Literacies":[],"Generative_KI":[],"Prompting":[],"KI_Sonstige":[],"Soziale_Arbeit":[],"Bias_Ungleichheit":["replicate biases and stereotypes against marginalized people"],"Gender":[],"Diversitaet":["marginalized people"],"Feministisch":["create feminist AI with education on biases, power, and AI"],"Fairness":["more equitable AI"]}
+    },
+    "BDI6XU5A": {
+      "source_path":"docs/data/fulltext/BDI6XU5A.md","identity_check":{"status":"verified","basis":"Project report identifies authors, FH Bielefeld, title, project period and report period."},"categories":{"AI_Literacies":"ja","Generative_KI":"nein","Prompting":"nein","KI_Sonstige":"ja","Soziale_Arbeit":"nein","Bias_Ungleichheit":"ja","Gender":"ja","Diversitaet":"ja","Feministisch":"nein","Fairness":"ja"},"decision":"Include","reason":null,
+      "evidence":{"AI_Literacies":["der Aufbau von KIKompetenz"],"Generative_KI":[],"Prompting":[],"KI_Sonstige":["Die Künstliche Intelligenz (KI)"],"Soziale_Arbeit":[],"Bias_Ungleichheit":["Diese spiegeln gesellschaftliche Ungleichheiten wider und verstärken diese zudem."],"Gender":["Das Ziel des Projekts 'Gender und KI-Anwendungen. Trägt KI zum Genderproblem oder zu seiner Lösung bei?'"],"Diversitaet":["eine größere Vielfalt an Personen bei der KI-Entwicklung"],"Feministisch":[],"Fairness":["Fairness zu erreichen"]},
+      "analysis":{"AN_Prompting_Role":["None"],"AN_Prompt_Techniques":["None"],"AN_Bias_Axes":["Gender"],"AN_Harm_Types":["Stereotyping","Direct_Discrimination","Indirect_Discrimination"],"AN_Mitigation_Stage":["Organisational_Process","Post_Processing"],"AN_Mitigation_Status":"Evaluated","AN_Population":["Not_SW_Specific"],"AN_Coding_Basis":"Fulltext","AN_Notes":"Empirical project report on gender differences in AI perceptions, competence and discrimination risks.","Studientyp":"Empirisch"}
+    },
+    "BHXDU7VM": {
+      "source_path":"docs/data/fulltext/BHXDU7VM.md","identity_check":{"status":"verified","basis":"NBER working paper identifies title, authors, working-paper number and September 2025 date."},"categories":{"AI_Literacies":"nein","Generative_KI":"ja","Prompting":"ja","KI_Sonstige":"nein","Soziale_Arbeit":"nein","Bias_Ungleichheit":"nein","Gender":"ja","Diversitaet":"teilweise","Feministisch":"nein","Fairness":"nein"},"decision":"Include","reason":null,
+      "evidence":{"AI_Literacies":[],"Generative_KI":["Writing dominates work-related tasks, highlighting chatbots' unique ability to generate digital outputs"],"Prompting":["Each taxonomy is defined in a prompt passed to an LLM"],"KI_Sonstige":[],"Soziale_Arbeit":[],"Bias_Ungleichheit":[],"Gender":["the gender gap in ChatGPT usage has likely narrowed considerably over time"],"Diversitaet":["usage has grown relatively faster in low- and middle-income countries"],"Feministisch":[],"Fairness":[]},
+      "analysis":{"AN_Prompting_Role":["Research_Instrument"],"AN_Prompt_Techniques":["General_Guidance"],"AN_Bias_Axes":["Gender","Socioeconomic"],"AN_Harm_Types":["None"],"AN_Mitigation_Stage":["None"],"AN_Mitigation_Status":"Evaluated","AN_Population":["Not_SW_Specific"],"AN_Coding_Basis":"Fulltext","AN_Notes":"Empirical study of global ChatGPT use and demographic usage gaps.","Studientyp":"Empirisch"}
+    },
+    "FTJM5R8N": {
+      "source_path":"docs/data/fulltext/FTJM5R8N.md","identity_check":{"status":"verified","basis":"The source identifies Thinking Machines Lab Connectionism and the article title."},"categories":{"AI_Literacies":"nein","Generative_KI":"ja","Prompting":"nein","KI_Sonstige":"nein","Soziale_Arbeit":"nein","Bias_Ungleichheit":"nein","Gender":"nein","Diversitaet":"nein","Feministisch":"nein","Fairness":"nein"},"decision":"Exclude","reason":"Wrong_publication_type","evidence":{"AI_Literacies":[],"Generative_KI":["We use Qwen/Qwen3-235B-A22B-Instruct-2507 and sample 1000 completions at temperature 0"],"Prompting":[],"KI_Sonstige":[],"Soziale_Arbeit":[],"Bias_Ungleichheit":[],"Gender":[],"Diversitaet":[],"Feministisch":[],"Fairness":[]}
+    },
+    "NSI6S5QE": {
+      "source_path":"docs/data/fulltext/NSI6S5QE.md","identity_check":{"status":"verified","basis":"The standards document identifies NASW, ASWB, CSWE and CSWA, task force and 2017 copyright."},"categories":{"AI_Literacies":"nein","Generative_KI":"nein","Prompting":"nein","KI_Sonstige":"nein","Soziale_Arbeit":"ja","Bias_Ungleichheit":"nein","Gender":"nein","Diversitaet":"teilweise","Feministisch":"nein","Fairness":"teilweise"},"decision":"Exclude","reason":"Not_relevant_topic","evidence":{"AI_Literacies":[],"Generative_KI":[],"Prompting":[],"KI_Sonstige":[],"Soziale_Arbeit":["Technology Standards in Social Work Practice"],"Bias_Ungleichheit":[],"Gender":[],"Diversitaet":["meet the needs of diverse populations, such as people with differing physical abilities"],"Feministisch":[],"Fairness":["As a matter of fairness, employers should cover the costs of the devices and technology"]}
+    }
+  }
+}

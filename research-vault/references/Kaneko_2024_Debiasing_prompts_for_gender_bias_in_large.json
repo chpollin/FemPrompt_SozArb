@@ -1,3 +1,4 @@
+[
 {
   "id": "Kaneko_2024_Debiasing_prompts_for_gender_bias_in_large",
   "type": "paper-conference",
@@ -29,5 +30,10 @@
   },
   "language": "en",
   "URL": "https://arxiv.org/abs/2401.15585",
+  "femprompt-record-id": "CYZQ6XPK",
+  "femprompt-work-id": "work:843c90a1-99ba-5cbf-9c92-df165923d2b2",
+  "femprompt-version-id": "version:5d14f904-8bae-5aae-80af-d807533bd251",
+  "femprompt-version-type": "preprint",
   "note": "Reference record for migrated distillate. Source distillate generated/distilled/Kaneko_2024_Debiasing_prompts_for_gender_bias_in_large.md. audit=clean. Stage-1b resolved 2026-07-18. Zotero key: CYZQ6XPK."
 }
+]

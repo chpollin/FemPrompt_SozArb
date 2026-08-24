@@ -1,0 +1,17 @@
+Priority,Filename,Status,Confidence,Issues,Review_Reasons
+MEDIUM,febcd242f416adc86eb1.md,WARNING,93.5,"Table mismatch: PDF=3, MD=13",table_mismatch
+MEDIUM,4dbe6aa9dfa229e88746.md,WARNING,98.2,"Table mismatch: PDF=1, MD=17",table_mismatch
+MEDIUM,f403809ad4503150093a.md,WARNING,99.2,"Table mismatch: PDF=0, MD=7",table_mismatch
+MEDIUM,050d5f410967dd9371a0.md,WARNING,99.6,"Table mismatch: PDF=1, MD=0",table_mismatch
+MEDIUM,2e6aa61930deea324751.md,WARNING,99.5,"Table mismatch: PDF=0, MD=7",table_mismatch
+MEDIUM,4dd9fd2a26f9d7eea07a.md,WARNING,99.4,"Table mismatch: PDF=0, MD=3",table_mismatch
+MEDIUM,e9be7a01361ab7bae7bb.md,WARNING,99.4,"Table mismatch: PDF=1, MD=0",table_mismatch
+MEDIUM,fe0639bed94ac912274d.md,WARNING,99.5,"Table mismatch: PDF=11, MD=4",table_mismatch
+MEDIUM,45a89ba69a2b7d1a99cd.md,WARNING,99.8,"Table mismatch: PDF=0, MD=3",table_mismatch
+MEDIUM,d3bd00602e07cf40396c.md,WARNING,99.4,"Table mismatch: PDF=2, MD=22",table_mismatch
+MEDIUM,152b1aa29e0dddabe838.md,WARNING,99.9,"Table mismatch: PDF=2, MD=7",table_mismatch
+MEDIUM,20972ab37764965190de.md,WARNING,100.0,"Table mismatch: PDF=0, MD=3",table_mismatch
+MEDIUM,2b57266b9d8b015d2ac2.md,WARNING,98.5,"Table mismatch: PDF=3, MD=0",table_mismatch
+MEDIUM,7cbaa5fc7bd51c3642ad.md,WARNING,96.1,"Table mismatch: PDF=1, MD=0",table_mismatch
+MEDIUM,98a0f77c12e1ee6328c0.md,WARNING,92.1,"Table mismatch: PDF=35, MD=0",table_mismatch
+LOW,a1c7e9db9a3dc6caff54.md,WARNING,92.7,Low text ratio: 25.97%,low_text_ratio

@@ -1,0 +1,307 @@
+{
+  "schema": "femprompt-prisma-agent-run/1.1",
+  "run_id": "uncovered-sources-5-20260823",
+  "status": "completed",
+  "lifecycle": {
+    "baseline": "identified",
+    "state": "completed",
+    "target": "ai-agent-reviewed",
+    "events": [
+      {
+        "event_id": "uncovered-sources-5-20260823:started",
+        "event_type": "agent_annotation_run_started",
+        "from": "prepared",
+        "to": "running",
+        "at": "2026-08-23T14:10:58.897Z",
+        "activity_id": "agent-screening-1",
+        "actor_ids": ["codex-ar1", "codex-ar2"]
+      },
+      {
+        "event_id": "uncovered-sources-5-20260823:completed",
+        "event_type": "ai_agent_review_completed",
+        "from": "running",
+        "to": "completed",
+        "at": "2026-08-23T14:38:39.541Z",
+        "activity_id": "ai-agent-review-1",
+        "actor_ids": ["codex-ai-agent-review"]
+      }
+    ]
+  },
+  "model": {
+    "provider": "Codex collaboration runtime",
+    "model": "opus",
+    "model_version": "runtime-alias-opus-2026-08-23",
+    "immutable_model_id": null,
+    "identity_status": "Runtime exposes the configured model alias but no immutable provider model identifier."
+  },
+  "prompt": {
+    "path": "prompts/prism-agent-reviewer.md",
+    "version": "1.0",
+    "sha256": "91ecf91275e4c3841f5f0c339acfbfe14af679ad170aed7d4918ab8fe40665a5"
+  },
+  "baseline": {
+    "commit": "1fac15ebc1123ba1b4e8c4c34d3d43e84916e917"
+  },
+  "assignment": {
+    "complete": true,
+    "papers": [
+      {
+        "paper_id": "UKKQKL7I",
+        "work_id": "doi:10.11586/2025078",
+        "record_ids": ["UKKQKL7I"],
+        "human_coverage": false,
+        "ai_agent_review_coverage": false,
+        "source": {
+          "path": "docs/data/fulltext/UKKQKL7I.md",
+          "sha256": "d6ef1a0ffbf5ab4e5b570afe571b4ea15e612ebc847490d8da19cb3a4c802039"
+        }
+      },
+      {
+        "paper_id": "8MRNK6FX",
+        "work_id": "doi:10.23977/jaip.2024.070222",
+        "record_ids": ["8MRNK6FX", "SSF5Q33W"],
+        "human_coverage": false,
+        "ai_agent_review_coverage": false,
+        "source": {
+          "path": "docs/data/fulltext/8MRNK6FX.md",
+          "sha256": "70fdb1be2b731a07359d7a56e55e45898596e20ebe9da3f7742acc5c2ebbc503"
+        }
+      },
+      {
+        "paper_id": "4KMMPA6A",
+        "work_id": "record:4KMMPA6A",
+        "record_ids": ["4KMMPA6A"],
+        "human_coverage": false,
+        "ai_agent_review_coverage": false,
+        "source": {
+          "path": "docs/data/fulltext/4KMMPA6A.md",
+          "sha256": "5de258c45aa67fc5411f8feec565452f21080e8472fec84d5d9bc01637884431"
+        }
+      },
+      {
+        "paper_id": "EQV4DNQR",
+        "work_id": "record:EQV4DNQR",
+        "record_ids": ["EQV4DNQR"],
+        "human_coverage": false,
+        "ai_agent_review_coverage": false,
+        "source": {
+          "path": "docs/data/fulltext/EQV4DNQR.md",
+          "sha256": "ecc4f3a51ac656567e830dda8ed4843da7548db46775ebb330e610eae1c8c0eb"
+        }
+      },
+      {
+        "paper_id": "J5EF9W6M",
+        "work_id": "record:J5EF9W6M",
+        "record_ids": ["J5EF9W6M"],
+        "human_coverage": false,
+        "ai_agent_review_coverage": false,
+        "source": {
+          "path": "docs/data/fulltext/J5EF9W6M.md",
+          "sha256": "494bdb584b5ab9bc943debbbcf51b19699d6513f1b92c824bf221cc15b392141"
+        }
+      }
+    ]
+  },
+  "isolation": {
+    "mode": "operational",
+    "epistemic_independence_claimed": false,
+    "explanation": "Each reviewer uses a separate Codex subagent context and its own output paths. This records operational separation; shared training and shared project rules preclude a claim of epistemic independence."
+  },
+  "actors": [
+    {
+      "id": "codex-ar1",
+      "type": "ai_agent",
+      "role": "reviewer",
+      "reviewer_id": "ar1"
+    },
+    {
+      "id": "codex-ar2",
+      "type": "ai_agent",
+      "role": "reviewer",
+      "reviewer_id": "ar2"
+    },
+    {
+      "id": "codex-ai-agent-review",
+      "type": "ai_agent",
+      "role": "ai_agent_reviewer"
+    }
+  ],
+  "timestamps": {
+    "created_at": "2026-08-23T14:10:58.897Z",
+    "started_at": "2026-08-23T14:10:58.897Z",
+    "completed_at": "2026-08-23T14:38:39.541Z"
+  },
+  "method": {
+    "categories": "assessment/categories.yaml#v1.3",
+    "coding_protocol": "knowledge/update-protocol.md#B-B.1-C",
+    "publication_type_policy": "Eligible sources include scholarly articles, conference papers, scholarly book chapters, systematic reviews, evidenced research and policy reports, and scholarly comments or editorials with identifiable authorship and a source basis. Commercial blogs, marketing material, news items, landing pages, general advice without a scholarly design, and unsupported institutional web texts are excluded. An unresolved publication type blocks the record."
+  },
+  "execution": {
+    "mode": "blinded_source_review_with_operator_prism_transcription",
+    "reason": "The subagents create source-grounded coding packets in operational isolation. The orchestrator transfers only the recorded values and quotations through separate PRISM trial profiles and checks each export against its packet.",
+    "required_controls": [
+      "Reviewers may read only the listed rules, manifest, assigned paper sources, and their own output paths.",
+      "Reviewers may not inspect existing screening judgments, knowledge distillates, the other track, or productive research data.",
+      "The orchestrator may transfer values and quotations but may not resolve substantive ambiguity during transcription."
+    ],
+    "coding_packet_validation": {
+      "command": "node tests/review-cases/validate-coding-packet.mjs tests/review-cases/agent-runs/uncovered-sources-5-20260823/run.json <reviewer-id>",
+      "result": "pass",
+      "records": 10
+    },
+    "frontend_roundtrip": {
+      "method": "deterministic_projection_with_prism_frontend_roundtrip",
+      "command": "node tests/review-cases/roundtrip-prism-track.mjs tests/review-cases/agent-runs/uncovered-sources-5-20260823/run.json <reviewer-id> <projection.json> <track.json>",
+      "result": "pass",
+      "records": 10,
+      "production_functions": ["validateReviewerPayload", "importReviewerPayload", "recordRequirements", "reviewerFileText"]
+    },
+    "protocol_deviation": {
+      "status": "accepted_as_method_amendment",
+      "from": "visible PRISM transcription",
+      "to": "deterministic PRISM frontend roundtrip",
+      "reason": "The Codex in-app browser connection was unavailable because its runtime assets could not be initialized. Source review, exact quotations, PRISM requirements, import, and serialization were executed and validated. The operator subsequently accepted this transfer as the canonical Codex-native path.",
+      "accepted_at": "2026-08-23",
+      "accepted_by": "operator",
+      "decision_reference": "knowledge/specification.md#ADR-036"
+    },
+    "protocol_basis": "knowledge/specification.md#ADR-036",
+    "canonical_successor_schema": "femprompt-prisma-agent-run/1.2"
+  },
+  "tracks": [
+    {
+      "reviewer_id": "ar1",
+      "actor_id": "codex-ar1",
+      "actor_type": "ai_agent",
+      "prism_url": "http://127.0.0.1:8765/prisma.html?trial=1&actor=agent&reviewer=ar1",
+      "paper_ids": ["UKKQKL7I", "8MRNK6FX", "4KMMPA6A", "EQV4DNQR", "J5EF9W6M"],
+      "source_assignments": [
+        {"paper_id": "UKKQKL7I", "source_path": "docs/data/fulltext/UKKQKL7I.md", "source_sha256": "d6ef1a0ffbf5ab4e5b570afe571b4ea15e612ebc847490d8da19cb3a4c802039"},
+        {"paper_id": "8MRNK6FX", "source_path": "docs/data/fulltext/8MRNK6FX.md", "source_sha256": "70fdb1be2b731a07359d7a56e55e45898596e20ebe9da3f7742acc5c2ebbc503"},
+        {"paper_id": "4KMMPA6A", "source_path": "docs/data/fulltext/4KMMPA6A.md", "source_sha256": "5de258c45aa67fc5411f8feec565452f21080e8472fec84d5d9bc01637884431"},
+        {"paper_id": "EQV4DNQR", "source_path": "docs/data/fulltext/EQV4DNQR.md", "source_sha256": "ecc4f3a51ac656567e830dda8ed4843da7548db46775ebb330e610eae1c8c0eb"},
+        {"paper_id": "J5EF9W6M", "source_path": "docs/data/fulltext/J5EF9W6M.md", "source_sha256": "494bdb584b5ab9bc943debbbcf51b19699d6513f1b92c824bf221cc15b392141"}
+      ],
+      "coding_packet": "tests/review-cases/agent-runs/uncovered-sources-5-20260823/tracks/ar1-coding.json",
+      "coding_packet_sha256": "4e6867dfe36aa31c00b2d67fc0bb9bd7d812365440020300bb13b2eeda8724b5",
+      "report": "tests/review-cases/agent-runs/uncovered-sources-5-20260823/reports/ar1.md",
+      "report_sha256": "04cd66045821881b51fcacd1dbe7bb831330248b60a2ad1cf6b1c1245bbdd8bf",
+      "started_at": "2026-08-23T14:10:58.897Z",
+      "completed_at": "2026-08-23T14:32:08.331Z",
+      "output": {
+        "path": "tests/review-cases/agent-runs/uncovered-sources-5-20260823/tracks/ar1.json",
+        "sha256": "9514596333c96b41b7c562b566da10e6d11bef61b2ca6dab619a60eea7906566"
+      }
+    },
+    {
+      "reviewer_id": "ar2",
+      "actor_id": "codex-ar2",
+      "actor_type": "ai_agent",
+      "prism_url": "http://127.0.0.1:8766/prisma.html?trial=1&actor=agent&reviewer=ar2",
+      "paper_ids": ["UKKQKL7I", "8MRNK6FX", "4KMMPA6A", "EQV4DNQR", "J5EF9W6M"],
+      "source_assignments": [
+        {"paper_id": "UKKQKL7I", "source_path": "docs/data/fulltext/UKKQKL7I.md", "source_sha256": "d6ef1a0ffbf5ab4e5b570afe571b4ea15e612ebc847490d8da19cb3a4c802039"},
+        {"paper_id": "8MRNK6FX", "source_path": "docs/data/fulltext/8MRNK6FX.md", "source_sha256": "70fdb1be2b731a07359d7a56e55e45898596e20ebe9da3f7742acc5c2ebbc503"},
+        {"paper_id": "4KMMPA6A", "source_path": "docs/data/fulltext/4KMMPA6A.md", "source_sha256": "5de258c45aa67fc5411f8feec565452f21080e8472fec84d5d9bc01637884431"},
+        {"paper_id": "EQV4DNQR", "source_path": "docs/data/fulltext/EQV4DNQR.md", "source_sha256": "ecc4f3a51ac656567e830dda8ed4843da7548db46775ebb330e610eae1c8c0eb"},
+        {"paper_id": "J5EF9W6M", "source_path": "docs/data/fulltext/J5EF9W6M.md", "source_sha256": "494bdb584b5ab9bc943debbbcf51b19699d6513f1b92c824bf221cc15b392141"}
+      ],
+      "coding_packet": "tests/review-cases/agent-runs/uncovered-sources-5-20260823/tracks/ar2-coding.json",
+      "coding_packet_sha256": "54bf5dc7f4809d426e8e6f97932f12a5b8da3765f4d5a9254f4eea2b6b886bf9",
+      "report": "tests/review-cases/agent-runs/uncovered-sources-5-20260823/reports/ar2.md",
+      "report_sha256": "fabfd4d6f7e872fbc760afb41ad606633d8a049c6deabf55b39b4424937f7315",
+      "started_at": "2026-08-23T14:10:58.897Z",
+      "completed_at": "2026-08-23T14:32:08.983Z",
+      "output": {
+        "path": "tests/review-cases/agent-runs/uncovered-sources-5-20260823/tracks/ar2.json",
+        "sha256": "6f59d3d702bd68375af3a9e1f9506a2efbb1838d8280f884772939d3e1287751"
+      }
+    }
+  ],
+  "provenance": {
+    "activities": [
+      {
+        "id": "ai-agent-review-1",
+        "type": "ai_agent_review",
+        "run_id": null,
+        "method": "source_grounded_ai_agent_review",
+        "prompt": {
+          "path": "prompts/prism-agent-reviewer.md",
+          "version": "1.0",
+          "sha256": "91ecf91275e4c3841f5f0c339acfbfe14af679ad170aed7d4918ab8fe40665a5"
+        },
+        "model": {
+          "provider": "Codex collaboration runtime",
+          "model": "opus",
+          "model_version": "runtime-alias-opus-2026-08-23"
+        },
+        "associated_actor_ids": ["codex-ai-agent-review"],
+        "status": "completed",
+        "actor_id": "codex-ai-agent-review",
+        "actor_type": "ai_agent",
+        "input_track_ids": ["ar1", "ar2"],
+        "source_basis": "assigned paper source records and the two isolated reviewer tracks",
+        "started_at": "2026-08-23T14:23:51.381Z",
+        "completed_at": "2026-08-23T14:27:46.108Z",
+        "outputs": [
+          {
+            "path": "tests/review-cases/agent-runs/uncovered-sources-5-20260823/ai-agent-review.json",
+            "sha256": "eab0f6e9240cc076930eee59f3f5fb739a3ce9b927d33bc54f44d3583be43451"
+          }
+        ]
+      }
+    ]
+  },
+  "outputs": [
+    {
+      "kind": "agent_track",
+      "reviewer_id": "ar1",
+      "path": "tests/review-cases/agent-runs/uncovered-sources-5-20260823/tracks/ar1.json",
+      "sha256": "9514596333c96b41b7c562b566da10e6d11bef61b2ca6dab619a60eea7906566"
+    },
+    {
+      "kind": "agent_track",
+      "reviewer_id": "ar2",
+      "path": "tests/review-cases/agent-runs/uncovered-sources-5-20260823/tracks/ar2.json",
+      "sha256": "6f59d3d702bd68375af3a9e1f9506a2efbb1838d8280f884772939d3e1287751"
+    },
+    {
+      "kind": "ai_agent_review",
+      "path": "tests/review-cases/agent-runs/uncovered-sources-5-20260823/ai-agent-review.json",
+      "sha256": "eab0f6e9240cc076930eee59f3f5fb739a3ce9b927d33bc54f44d3583be43451"
+    },
+    {
+      "kind": "ai_agent_reviewed_product_v0.3",
+      "path": "tests/review-cases/agent-runs/uncovered-sources-5-20260823/product-v0.3.json",
+      "sha256": "60ecae1c4b302720e75db0d5320d24fd3860a5b2c1c29e8801152e76481ad45d"
+    },
+    {
+      "kind": "ai_agent_reviewed_product_v0.5",
+      "path": "tests/review-cases/agent-runs/uncovered-sources-5-20260823/product-v0.5.json",
+      "sha256": "84ae1f7e8716111d10e7cb9b93232933918f4b0a7df3ffab1d5b5e50eab85383"
+    }
+  ],
+  "integration": {
+    "status": "applied",
+    "integrated_at": "2026-08-23T14:38:39.541Z",
+    "target": "docs/data/screening/ar2.json",
+    "state": "ai-agent-reviewed",
+    "work_ids": [
+      "doi:10.11586/2025078",
+      "doi:10.23977/jaip.2024.070222",
+      "record:4KMMPA6A",
+      "record:EQV4DNQR",
+      "record:J5EF9W6M"
+    ],
+    "record_ids": ["UKKQKL7I", "8MRNK6FX", "SSF5Q33W", "4KMMPA6A", "EQV4DNQR", "J5EF9W6M"],
+    "source_product": {
+      "path": "tests/review-cases/agent-runs/uncovered-sources-5-20260823/product-v0.5.json",
+      "sha256": "84ae1f7e8716111d10e7cb9b93232933918f4b0a7df3ffab1d5b5e50eab85383"
+    },
+    "validation": [
+      "python -m src.assess.screening_lifecycle validate docs/data/screening/ar2.json",
+      "python -m src.analysis.build_agent_screening_queue --check"
+    ],
+    "public_projection": false
+  }
+}

@@ -1,0 +1,573 @@
+{
+  "schema": "femprompt-source-enrichment/0.1",
+  "partition": "B",
+  "searched_at": "2026-08-24",
+  "candidate_ids": [
+    "codex-websearch-2026:doi:10.1080/02615479.2026.2669634",
+    "codex-websearch-2026:doi:10.1080/02650533.2026.2683352",
+    "codex-websearch-2026:doi:10.1080/0312407x.2026.2627220",
+    "codex-websearch-2026:doi:10.1080/10437797.2025.2594423",
+    "codex-websearch-2026:doi:10.1080/13691457.2025.2607705",
+    "codex-websearch-2026:doi:10.1080/17496535.2026.2619945",
+    "codex-websearch-2026:doi:10.1080/26408066.2026.2616711",
+    "codex-websearch-2026:doi:10.1086/740347",
+    "codex-websearch-2026:doi:10.1086/740605",
+    "codex-websearch-2026:doi:10.1086/743397",
+    "codex-websearch-2026:doi:10.1098/rsta.2025.0125",
+    "codex-websearch-2026:doi:10.1111/1748-8583.70044",
+    "codex-websearch-2026:doi:10.1177/10497315261469433",
+    "codex-websearch-2026:doi:10.1177/10522263261449121",
+    "codex-websearch-2026:doi:10.1177/10755470261428542",
+    "codex-websearch-2026:doi:10.1186/s12910-026-01496-2",
+    "codex-websearch-2026:doi:10.16719/j.cnki.1671-6981.20260201",
+    "codex-websearch-2026:doi:10.18653/v1/2026.acl-long.1094",
+    "codex-websearch-2026:doi:10.18653/v1/2026.findings-acl.1389"
+  ],
+  "records": [
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/02615479.2026.2669634",
+      "title": "A kind of magic? Artificial intelligence-assisted recording: developing principles for an AI-informed social work curriculum",
+      "checked_urls": [
+        "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2669634",
+        "https://discovery.dundee.ac.uk/en/publications/a-kind-of-magic-artificial-intelligence-assisted-recording-develo/",
+        "https://discovery.dundee.ac.uk/files/169373072/A_kind_of_magic_Artificial_intelligence-assisted_recording_developing_principles_for_an_AI-informed_social_work_curriculum.pdf"
+      ],
+      "fulltext": {
+        "status": "located_repository_copy",
+        "url": "https://discovery.dundee.ac.uk/files/169373072/A_kind_of_magic_Artificial_intelligence-assisted_recording_developing_principles_for_an_AI-informed_social_work_curriculum.pdf",
+        "license": "CC BY-NC-ND",
+        "evidence_url": "https://discovery.dundee.ac.uk/en/publications/a-kind-of-magic-artificial-intelligence-assisted-recording-develo/",
+        "basis": "Das institutionelle Repositorium der University of Dundee bietet die Final Published Version als frei zugängliche Datei an und nennt die Lizenz."
+      },
+      "peer_review": {
+        "status": "review_history_documented",
+        "evidence_url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2669634",
+        "basis": "Die Verlagsseite nennt artikelspezifisch Received und Accepted; das institutionelle Repositorium klassifiziert denselben Beitrag zusätzlich als peer-review.",
+        "received": "2026-03-19",
+        "accepted": "2026-04-22"
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Das Repositorium bezeichnet die Datei ausdrücklich als Final Published Version; es handelt sich daher um eine Repositoriumskopie der Verlagsfassung."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/02650533.2026.2683352",
+      "title": "AI-enhanced ethical decision-making in social work: development and testing of an application-specific language model",
+      "checked_urls": [
+        "https://doi.org/10.1080/02650533.2026.2683352",
+        "https://www.tandfonline.com/doi/full/10.1080/02650533.2026.2683352"
+      ],
+      "fulltext": {
+        "status": "publisher_landing_only",
+        "url": null,
+        "license": null,
+        "evidence_url": "https://doi.org/10.1080/02650533.2026.2683352",
+        "basis": "Die DOI führt zur Verlagsseite; bei der Suche wurde weder ein frei zugänglicher Volltext noch eine rechtmäßige Repositoriumsfassung gefunden."
+      },
+      "peer_review": {
+        "status": "not_established",
+        "evidence_url": "https://doi.org/10.1080/02650533.2026.2683352",
+        "basis": "Für diesen einzelnen Beitrag wurde keine Einreichungs-/Annahmehistorie, veröffentlichte Begutachtung oder institutionelle artikelspezifische Peer-Review-Klassifikation gefunden.",
+        "received": null,
+        "accepted": null
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Titel, Autor:innen, Datum, DOI und Venue blieben nach DOI- und Verlagsabgleich unverändert."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/0312407x.2026.2627220",
+      "title": "AI-Generated Images of Social Workers in Healthcare and Implications for Professional Identity",
+      "checked_urls": [
+        "https://www.tandfonline.com/doi/full/10.1080/0312407X.2026.2627220",
+        "https://www.tandfonline.com/doi/pdf/10.1080/0312407X.2026.2627220?needAccess=true",
+        "https://doi.org/10.1080/0312407X.2026.2627220"
+      ],
+      "fulltext": {
+        "status": "located_open_access",
+        "url": "https://www.tandfonline.com/doi/pdf/10.1080/0312407X.2026.2627220?needAccess=true",
+        "license": "CC BY",
+        "evidence_url": "https://www.tandfonline.com/doi/full/10.1080/0312407X.2026.2627220",
+        "basis": "Taylor & Francis stellt die Version of Record als Open-Access-Volltext unter CC BY bereit."
+      },
+      "peer_review": {
+        "status": "review_history_documented",
+        "evidence_url": "https://www.tandfonline.com/doi/full/10.1080/0312407X.2026.2627220",
+        "basis": "Die Verlagsseite nennt artikelspezifisch Received und Accepted.",
+        "received": "2025-08-07",
+        "accepted": "2026-02-01"
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Die unterschiedliche Groß-/Kleinschreibung des DOI-Bestandteils X ist semantisch unerheblich; DOI-Namen sind nicht case-sensitiv."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/10437797.2025.2594423",
+      "title": "ChatGPT in Social Work? Insights from MSW Students",
+      "checked_urls": [
+        "https://www.tandfonline.com/doi/abs/10.1080/10437797.2025.2594423",
+        "https://doi.org/10.1080/10437797.2025.2594423"
+      ],
+      "fulltext": {
+        "status": "restricted",
+        "url": null,
+        "license": null,
+        "evidence_url": "https://www.tandfonline.com/doi/abs/10.1080/10437797.2025.2594423",
+        "basis": "Die Verlagsseite bietet bibliografische Angaben und Abstract; ein freier Verlagsvolltext oder eine Repositoriumsfassung wurde nicht gefunden."
+      },
+      "peer_review": {
+        "status": "review_history_documented",
+        "evidence_url": "https://www.tandfonline.com/doi/abs/10.1080/10437797.2025.2594423",
+        "basis": "Die Verlagsmetadaten weisen für den einzelnen Beitrag das Annahmedatum aus.",
+        "received": null,
+        "accepted": "2024-12-21"
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Die Verlagsseite bestätigt die Online-Publikation am 16. Januar 2026 und die Seiten 95–109."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/13691457.2025.2607705",
+      "title": "Artificial intelligence: a neoliberal tool to better manage social inequalities?",
+      "checked_urls": [
+        "https://www.tandfonline.com/doi/full/10.1080/13691457.2025.2607705",
+        "https://www.tandfonline.com/doi/pdf/10.1080/13691457.2025.2607705",
+        "https://doi.org/10.1080/13691457.2025.2607705"
+      ],
+      "fulltext": {
+        "status": "located_open_access",
+        "url": "https://www.tandfonline.com/doi/full/10.1080/13691457.2025.2607705",
+        "license": null,
+        "evidence_url": "https://www.tandfonline.com/doi/full/10.1080/13691457.2025.2607705",
+        "basis": "Die Verlagsseite stellt den vollständigen Artikel einschließlich PDF- und EPUB-Zugängen frei bereit; auf der geprüften Seite war keine eindeutige Creative-Commons-Lizenz ausgewiesen."
+      },
+      "peer_review": {
+        "status": "review_history_documented",
+        "evidence_url": "https://www.tandfonline.com/doi/full/10.1080/13691457.2025.2607705",
+        "basis": "Die Verlagsseite nennt artikelspezifisch Received und Accepted.",
+        "received": "2025-03-15",
+        "accepted": "2025-12-16"
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Der DOI enthält 2025; das belegte Online-Publikationsdatum ist 2026-02-03."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/17496535.2026.2619945",
+      "title": "The (Un)Fair Algorithm: Socio-Technical Ethics Work for Artificial Intelligence in Social Work",
+      "checked_urls": [
+        "https://www.tandfonline.com/doi/full/10.1080/17496535.2026.2619945",
+        "https://www.ucviden.dk/en/publications/the-unfair-algorithm-socio-technical-ethics-work-for-artificial-i/",
+        "https://www.ucviden.dk/files/285358215/The_Un_Fair_Algorithm_Socio-Technical_Ethics_Work_for_Artificial_Intelligence_in_Social_Work.pdf"
+      ],
+      "fulltext": {
+        "status": "located_repository_copy",
+        "url": "https://www.ucviden.dk/files/285358215/The_Un_Fair_Algorithm_Socio-Technical_Ethics_Work_for_Artificial_Intelligence_in_Social_Work.pdf",
+        "license": "CC BY-NC-ND",
+        "evidence_url": "https://www.ucviden.dk/en/publications/the-unfair-algorithm-socio-technical-ethics-work-for-artificial-i/",
+        "basis": "UC Knowledge bietet die Final Published Version als frei zugängliche Repositoriumsdatei an und nennt die Lizenz."
+      },
+      "peer_review": {
+        "status": "review_history_documented",
+        "evidence_url": "https://www.tandfonline.com/doi/full/10.1080/17496535.2026.2619945",
+        "basis": "Die Verlagsseite nennt Received und Accepted; UC Knowledge klassifiziert denselben Beitrag artikelspezifisch als peer-review.",
+        "received": "2025-03-19",
+        "accepted": "2026-01-16"
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Die Repositoriumsdatei ist ausdrücklich die Final Published Version."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/26408066.2026.2616711",
+      "title": "Small Models Achieve Large Language Model Performance: Evaluating Reasoning-Enabled AI for Secure Child Welfare Research",
+      "checked_urls": [
+        "https://digitalcollection.zhaw.ch/items/7394c2e8-b4df-4c3f-85e2-bfe8068adaaf",
+        "https://digitalcollection.zhaw.ch/server/api/core/bitstreams/9e397e56-2222-4079-9708-14d82f6e45d1/content",
+        "https://www.tandfonline.com/doi/full/10.1080/26408066.2026.2616711",
+        "https://arxiv.org/abs/2512.04261"
+      ],
+      "fulltext": {
+        "status": "located_repository_copy",
+        "url": "https://digitalcollection.zhaw.ch/server/api/core/bitstreams/9e397e56-2222-4079-9708-14d82f6e45d1/content",
+        "license": "CC BY-NC-ND 4.0",
+        "evidence_url": "https://digitalcollection.zhaw.ch/items/7394c2e8-b4df-4c3f-85e2-bfe8068adaaf",
+        "basis": "Die ZHAW digitalcollection stellt eine frei zugängliche Repositoriumskopie bereit, nennt die Lizenz und verknüpft sowohl den Artikel-DOI als auch den Repositoriums-DOI."
+      },
+      "peer_review": {
+        "status": "peer_reviewed",
+        "evidence_url": "https://digitalcollection.zhaw.ch/items/7394c2e8-b4df-4c3f-85e2-bfe8068adaaf",
+        "basis": "Der institutionelle Datensatz klassifiziert diesen einzelnen Zeitschriftenartikel ausdrücklich als „Peer review (publication)“.",
+        "received": null,
+        "accepted": null
+      },
+      "metadata_corrections": [
+        {
+          "field": "versions",
+          "old_value": "Preprint arXiv:2512.04261 und Version of Record DOI 10.1080/26408066.2026.2616711",
+          "new_value": "Zusätzlich belegte Repositoriumskopie der publizierten Fassung mit Repositoriums-DOI 10.21256/zhaw-35186",
+          "evidence_url": "https://digitalcollection.zhaw.ch/items/7394c2e8-b4df-4c3f-85e2-bfe8068adaaf",
+          "basis": "Der institutionelle Datensatz führt den Artikel-DOI und den separaten Repositoriums-DOI zusammen und bietet die Datei an."
+        }
+      ],
+      "notes": [
+        "Die Repositoriumsseite bezeichnet die Datei als wissenschaftlichen Zeitschriftenartikel; sie ist von der separat nachgewiesenen arXiv-Preprintfassung zu unterscheiden."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1086/740347",
+      "title": "Accuracy and Readability of Large Language Models’ Responses to Frequently Asked Questions on Social Assistance",
+      "checked_urls": [
+        "https://www.journals.uchicago.edu/doi/full/10.1086/740347",
+        "https://www.journals.uchicago.edu/doi/pdf/10.1086/740347",
+        "https://doi.org/10.1086/740347"
+      ],
+      "fulltext": {
+        "status": "located_open_access",
+        "url": "https://www.journals.uchicago.edu/doi/full/10.1086/740347",
+        "license": null,
+        "evidence_url": "https://www.journals.uchicago.edu/doi/full/10.1086/740347",
+        "basis": "University of Chicago Press kennzeichnet den Beitrag als „Free“ und stellt den vollständigen HTML-Text bereit; das Copyright bleibt beim Society for Social Work and Research."
+      },
+      "peer_review": {
+        "status": "review_history_documented",
+        "evidence_url": "https://www.journals.uchicago.edu/doi/full/10.1086/740347",
+        "basis": "Die Verlagsseite dokumentiert für den einzelnen Artikel Submitted, Revised und Accepted.",
+        "received": "2025-09-26",
+        "accepted": "2026-01-09"
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Das Heftdatum ist 2026-06-01; die Verlagsseite nennt zusätzlich Published online 2026-06-03."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1086/740605",
+      "title": "Using ChatGPT for Qualitative Social Media Analysis: Insights for Cross-Cultural Social Work",
+      "checked_urls": [
+        "https://www.journals.uchicago.edu/doi/full/10.1086/740605",
+        "https://www.journals.uchicago.edu/doi/pdf/10.1086/740605",
+        "https://doi.org/10.1086/740605"
+      ],
+      "fulltext": {
+        "status": "located_open_access",
+        "url": "https://www.journals.uchicago.edu/doi/full/10.1086/740605",
+        "license": null,
+        "evidence_url": "https://www.journals.uchicago.edu/doi/full/10.1086/740605",
+        "basis": "University of Chicago Press kennzeichnet den Beitrag als „Free“ und stellt den vollständigen HTML-Text bereit; für die PDF-Ansicht werden zugleich Anmeldeoptionen angezeigt."
+      },
+      "peer_review": {
+        "status": "review_history_documented",
+        "evidence_url": "https://www.journals.uchicago.edu/doi/full/10.1086/740605",
+        "basis": "Die Verlagsseite dokumentiert für den einzelnen Artikel Submitted, Revised und Accepted.",
+        "received": "2025-09-20",
+        "accepted": "2026-01-20"
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Das Heftdatum ist 2026-06-01; die Verlagsseite nennt Published online 2026-06-10.",
+        "Die Verlagsseite weist Revised 2026-01-24 aus, vier Tage nach Accepted 2026-01-20; diese interne Inkonsistenz wurde nicht stillschweigend bereinigt."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1086/743397",
+      "title": "Same Prompt, Different Care? Evaluating Inequities in AI-Generated Mental Health Support for Immigrant Communities",
+      "checked_urls": [
+        "https://doi.org/10.1086/743397",
+        "https://www.journals.uchicago.edu/doi/10.1086/743397",
+        "https://www.journals.uchicago.edu/toc/jsswr/0/ja"
+      ],
+      "fulltext": {
+        "status": "restricted",
+        "url": null,
+        "license": null,
+        "evidence_url": "https://www.journals.uchicago.edu/toc/jsswr/0/ja",
+        "basis": "Der Verlagsdatensatz weist den Ahead-of-Print-Beitrag aus; ein frei zugänglicher Volltext oder eine Repositoriumsfassung wurde nicht gefunden."
+      },
+      "peer_review": {
+        "status": "not_established",
+        "evidence_url": "https://www.journals.uchicago.edu/doi/10.1086/743397",
+        "basis": "Für diesen einzelnen Beitrag war keine Einreichungs-/Annahmehistorie oder veröffentlichte Begutachtung auffindbar.",
+        "received": null,
+        "accepted": null
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Titel, Autor:innen, DOI, Venue und Online-Datum 2026-07-28 wurden auf der Verlags-/DOI-Ebene bestätigt."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1098/rsta.2025.0125",
+      "title": "Mitigating medical bias in large language models by prompt engineering: an empirical study of effectiveness and trade-offs",
+      "checked_urls": [
+        "https://royalsocietypublishing.org/doi/10.1098/rsta.2025.0125",
+        "https://kclpure.kcl.ac.uk/portal/en/publications/mitigating-medical-bias-in-large-language-models-by-prompt-engine-2/",
+        "https://kclpure.kcl.ac.uk/portal/files/383343620/MitigatingMedicalBias_Xiao_GoldVoR.pdf",
+        "https://pubmed.ncbi.nlm.nih.gov/42463224/"
+      ],
+      "fulltext": {
+        "status": "located_repository_copy",
+        "url": "https://kclpure.kcl.ac.uk/portal/files/383343620/MitigatingMedicalBias_Xiao_GoldVoR.pdf",
+        "license": "CC BY",
+        "evidence_url": "https://kclpure.kcl.ac.uk/portal/en/publications/mitigating-medical-bias-in-large-language-models-by-prompt-engine-2/",
+        "basis": "King's College London stellt die Gold Version of Record frei als Repositoriumsdatei bereit und weist CC BY aus."
+      },
+      "peer_review": {
+        "status": "peer_reviewed",
+        "evidence_url": "https://kclpure.kcl.ac.uk/portal/en/publications/mitigating-medical-bias-in-large-language-models-by-prompt-engine-2/",
+        "basis": "Der institutionelle Datensatz klassifiziert diesen einzelnen Beitrag ausdrücklich als Article › peer-review und verknüpft die Version of Record.",
+        "received": null,
+        "accepted": null
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Der institutionelle Datensatz gibt den ersten Autor als „Showing Xiao“ wieder, PubMed als „Ying Xiao“. Mangels eindeutiger Auflösung wurde keine Autor:innenkorrektur vorgenommen.",
+        "Datum, DOI, Band 384, Heft 2324 und Artikelnummer 20250125 sind durch den institutionellen Datensatz und PubMed konsistent belegt."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1111/1748-8583.70044",
+      "title": "Mitigating Disability Bias in Hiring: The Role of Inclusion-Focused Generative AI in Complex HR Decisions",
+      "checked_urls": [
+        "https://onlinelibrary.wiley.com/doi/10.1111/1748-8583.70044",
+        "https://onlinelibrary.wiley.com/doi/full/10.1111/1748-8583.70044",
+        "https://onlinelibrary.wiley.com/doi/pdf/10.1111/1748-8583.70044"
+      ],
+      "fulltext": {
+        "status": "located_open_access",
+        "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/1748-8583.70044",
+        "license": null,
+        "evidence_url": "https://onlinelibrary.wiley.com/doi/10.1111/1748-8583.70044",
+        "basis": "Wiley kennzeichnet den Beitrag artikelspezifisch als Open Access und stellt den vollständigen Beitrag bereit; eine konkrete Lizenz war in den geprüften Metadaten nicht eindeutig ausgewiesen."
+      },
+      "peer_review": {
+        "status": "not_established",
+        "evidence_url": "https://onlinelibrary.wiley.com/doi/10.1111/1748-8583.70044",
+        "basis": "Wiley bezeichnet den Beitrag als Research Article, veröffentlicht aber auf der geprüften Seite keine artikelspezifische Begutachtungshistorie.",
+        "received": null,
+        "accepted": null
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Die Verlagsseite bestätigt Erstveröffentlichung 2026-03-11, Band 36, Heft 3 und Seiten 553–565."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1177/10497315261469433",
+      "title": "The Adoption of Generative AI by Social Workers in Practice: A Scoping Review",
+      "checked_urls": [
+        "https://journals.sagepub.com/doi/10.1177/10497315261469433",
+        "https://doi.org/10.1177/10497315261469433"
+      ],
+      "fulltext": {
+        "status": "restricted",
+        "url": null,
+        "license": null,
+        "evidence_url": "https://journals.sagepub.com/doi/10.1177/10497315261469433",
+        "basis": "Sage kennzeichnet den Artikel ausdrücklich als Restricted access und bietet Kauf-/Abonnementzugang; eine freie Repositoriumsfassung wurde nicht gefunden."
+      },
+      "peer_review": {
+        "status": "not_established",
+        "evidence_url": "https://journals.sagepub.com/doi/10.1177/10497315261469433",
+        "basis": "Die Sage-Seite bestätigt den Typ Research article, enthält jedoch keine artikelspezifische Einreichungs-/Annahmehistorie oder veröffentlichte Begutachtung.",
+        "received": null,
+        "accepted": null
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Sage bestätigt Titel, beide Autor:innen, DOI und First published online 2026-07-29."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1177/10522263261449121",
+      "title": "Bias Bytes: A Study Examining Disability Bias in ChatGPT Job Recommendation",
+      "checked_urls": [
+        "https://journals.sagepub.com/doi/10.1177/10522263261449121",
+        "https://doi.org/10.1177/10522263261449121"
+      ],
+      "fulltext": {
+        "status": "restricted",
+        "url": null,
+        "license": null,
+        "evidence_url": "https://journals.sagepub.com/doi/10.1177/10522263261449121",
+        "basis": "Sage kennzeichnet den Artikel ausdrücklich als Restricted access; eine frei zugängliche Repositoriumsfassung wurde nicht gefunden."
+      },
+      "peer_review": {
+        "status": "not_established",
+        "evidence_url": "https://journals.sagepub.com/doi/10.1177/10522263261449121",
+        "basis": "Die Sage-Seite weist einen Research article aus, veröffentlicht aber keine artikelspezifische Begutachtungshistorie.",
+        "received": null,
+        "accepted": null
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Sage bestätigt Online-Datum 2026-05-11, Band 65, Heft 1 und die fünf Autor:innen."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1177/10755470261428542",
+      "title": "Generative AI So White: Racial Biases in AI Imagery Across the United States and China",
+      "checked_urls": [
+        "https://journals.sagepub.com/doi/10.1177/10755470261428542",
+        "https://journals.sagepub.com/doi/pdf/10.1177/10755470261428542",
+        "https://doi.org/10.1177/10755470261428542"
+      ],
+      "fulltext": {
+        "status": "located_open_access",
+        "url": "https://journals.sagepub.com/doi/pdf/10.1177/10755470261428542",
+        "license": "CC BY-NC 4.0",
+        "evidence_url": "https://journals.sagepub.com/doi/10.1177/10755470261428542",
+        "basis": "Sage kennzeichnet den Artikel als Open access und nennt ausdrücklich die Lizenz CC BY-NC 4.0."
+      },
+      "peer_review": {
+        "status": "not_established",
+        "evidence_url": "https://journals.sagepub.com/doi/10.1177/10755470261428542",
+        "basis": "Die Sage-Seite weist den Typ Research article und eine Versionshistorie aus, aber keine artikelspezifische Begutachtungshistorie.",
+        "received": null,
+        "accepted": null
+      },
+      "metadata_corrections": [
+        {
+          "field": "versions",
+          "old_value": "Eine Version of Record vom 2026-04-08",
+          "new_value": "Sage Version1 vom 2026-04-08 und aktuelle Version2 vom 2026-04-27",
+          "evidence_url": "https://journals.sagepub.com/doi/10.1177/10755470261428542",
+          "basis": "Die Verlagsseite listet beide Online-first-Dateien und bezeichnet Version2 als aktuellste Version."
+        },
+        {
+          "field": "preferred_version.date",
+          "old_value": "2026-04-08",
+          "new_value": "2026-04-27",
+          "evidence_url": "https://journals.sagepub.com/doi/10.1177/10755470261428542",
+          "basis": "Die aktuelle Sage-Version ist Version2 vom 27. April 2026; 8. April bleibt das Datum der Erstveröffentlichung."
+        }
+      ],
+      "notes": [
+        "Die Verlagsseite macht keine Aussage dazu, welche inhaltlichen Änderungen zwischen Version1 und Version2 vorgenommen wurden; daher wurde Version2 nicht als Korrekturtyp weiter interpretiert."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1186/s12910-026-01496-2",
+      "title": "Algorithmic bias in clinical resource allocation by a large language model: a cross-sectional in-silico evaluation of 13,608 decisions",
+      "checked_urls": [
+        "https://link.springer.com/article/10.1186/s12910-026-01496-2",
+        "https://link.springer.com/content/pdf/10.1186/s12910-026-01496-2.pdf",
+        "https://doi.org/10.1186/s12910-026-01496-2"
+      ],
+      "fulltext": {
+        "status": "located_open_access",
+        "url": "https://link.springer.com/content/pdf/10.1186/s12910-026-01496-2.pdf",
+        "license": "CC BY-NC-ND 4.0",
+        "evidence_url": "https://link.springer.com/article/10.1186/s12910-026-01496-2",
+        "basis": "Springer Nature kennzeichnet den Artikel als Open access und nennt ausdrücklich CC BY-NC-ND 4.0."
+      },
+      "peer_review": {
+        "status": "review_history_documented",
+        "evidence_url": "https://link.springer.com/article/10.1186/s12910-026-01496-2",
+        "basis": "Die Verlagsseite dokumentiert Received und Accepted und verlinkt zusätzlich die Peer-review reports dieses Artikels.",
+        "received": "2025-10-14",
+        "accepted": "2026-05-19"
+      },
+      "metadata_corrections": [
+        {
+          "field": "preferred_version.date",
+          "old_value": "2026-05-22",
+          "new_value": "2026-07-20",
+          "evidence_url": "https://link.springer.com/article/10.1186/s12910-026-01496-2",
+          "basis": "Springer Nature unterscheidet Published 2026-05-22 und Version of record 2026-07-20 ausdrücklich."
+        }
+      ],
+      "notes": [
+        "Das Publikationsdatum der Erstveröffentlichung bleibt 2026-05-22; korrigiert wird ausschließlich das Datum der bevorzugten Version of Record."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.16719/j.cnki.1671-6981.20260201",
+      "title": "Semantic Stability, Response Strategies, and Bias Analysis of Generative Artificial Intelligence in Psychological Health Education",
+      "checked_urls": [
+        "https://jps.ecnu.edu.cn/EN/10.16719/j.cnki.1671-6981.20260201",
+        "https://jps.ecnu.edu.cn/EN/PDF/10.16719/j.cnki.1671-6981.20260201",
+        "https://doi.org/10.16719/j.cnki.1671-6981.20260201"
+      ],
+      "fulltext": {
+        "status": "located_open_access",
+        "url": "https://jps.ecnu.edu.cn/EN/PDF/10.16719/j.cnki.1671-6981.20260201",
+        "license": null,
+        "evidence_url": "https://jps.ecnu.edu.cn/EN/10.16719/j.cnki.1671-6981.20260201",
+        "basis": "Die offizielle Zeitschriftenseite bietet den vollständigen PDF-Artikel frei an; eine ausdrückliche Lizenzangabe wurde nicht gefunden."
+      },
+      "peer_review": {
+        "status": "not_established",
+        "evidence_url": "https://jps.ecnu.edu.cn/EN/10.16719/j.cnki.1671-6981.20260201",
+        "basis": "Die offizielle Artikelseite nennt Publikations- und Heftdatum, aber keine artikelspezifische Einreichungs-/Annahmehistorie oder veröffentlichte Begutachtung.",
+        "received": null,
+        "accepted": null
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Die offizielle Seite bestätigt Published 2026-03-20, Issue Date 2026-03-24, Band 49, Heft 2, Seiten 258–270 sowie alle fünf Autor:innen.",
+        "Der DOI wird von der Zeitschrift selbst geführt; ein Crossref-Eintrag war nicht Voraussetzung für die Bestätigung."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.18653/v1/2026.acl-long.1094",
+      "title": "InsideOut: Measuring and Mitigating Insider–Outsider Bias in Interview Script Generation",
+      "checked_urls": [
+        "https://aclanthology.org/2026.acl-long.1094/",
+        "https://aclanthology.org/2026.acl-long.1094.pdf",
+        "https://arxiv.org/abs/2509.21080"
+      ],
+      "fulltext": {
+        "status": "located_open_access",
+        "url": "https://aclanthology.org/2026.acl-long.1094.pdf",
+        "license": "CC BY 4.0",
+        "evidence_url": "https://aclanthology.org/2026.acl-long.1094/",
+        "basis": "ACL Anthology stellt die offizielle Proceedings-Fassung und den Volltext frei unter CC BY 4.0 bereit."
+      },
+      "peer_review": {
+        "status": "venue_reviewed_proceedings",
+        "evidence_url": "https://aclanthology.org/2026.acl-long.1094/",
+        "basis": "Der offizielle ACL-Anthology-Datensatz verzeichnet den Beitrag in den Proceedings der 64th Annual Meeting of the Association for Computational Linguistics.",
+        "received": null,
+        "accepted": null
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Die ACL-Proceedings-Fassung vom 2026-07-02 ist gegenüber arXiv:2509.21080 die bevorzugte Publikationsfassung."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.18653/v1/2026.findings-acl.1389",
+      "title": "Multi-Persona Thinking for Bias Mitigation in Large Language Models",
+      "checked_urls": [
+        "https://aclanthology.org/2026.findings-acl.1389/",
+        "https://aclanthology.org/2026.findings-acl.1389.pdf",
+        "https://arxiv.org/abs/2601.15488"
+      ],
+      "fulltext": {
+        "status": "located_open_access",
+        "url": "https://aclanthology.org/2026.findings-acl.1389.pdf",
+        "license": "CC BY 4.0",
+        "evidence_url": "https://aclanthology.org/2026.findings-acl.1389/",
+        "basis": "ACL Anthology stellt die offizielle Findings-Proceedings-Fassung und den Volltext frei unter CC BY 4.0 bereit."
+      },
+      "peer_review": {
+        "status": "venue_reviewed_proceedings",
+        "evidence_url": "https://aclanthology.org/2026.findings-acl.1389/",
+        "basis": "Der offizielle ACL-Anthology-Datensatz verzeichnet den Beitrag in Findings of the Association for Computational Linguistics: ACL 2026.",
+        "received": null,
+        "accepted": null
+      },
+      "metadata_corrections": [],
+      "notes": [
+        "Die ACL-Proceedings-Fassung vom 2026-07-02 ist gegenüber arXiv:2601.15488 die bevorzugte Publikationsfassung."
+      ]
+    }
+  ]
+}

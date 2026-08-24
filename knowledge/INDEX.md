@@ -13,15 +13,15 @@ template:
   alias: https://dhcraft.org/Promptotyping/#promptotyping-document-index
 status: complete
 language: en
-version: "0.4"
+version: "0.7"
 created: 2026-06-29
-updated: 2026-08-22
+updated: 2026-08-24
 authors: [Christopher Pollin]
 generated-with: Claude Code
-related: [project, methods, specification, data, standards, plan, journal, update-protocol, research-vault, analysis-divergence, analysis-sq-advisory]
+related: [project, methods, specification, data, standards, governance, testing, verification, plan, journal, handoff, update-protocol, research-vault, analysis-divergence, analysis-sq-advisory]
 ---
 
-This is the knowledge base of FemPrompt SozArb, a systematic literature review on feminist AI literacy and LLM bias in social work and the epistemic infrastructure built around it. It documents the conducted review and its benchmark, the PRISM screening tool, which is the binding screening surface the review is carried through (ADR-019), and the plan for the literature update. Concrete numbers do not live here. The benchmark figures live in the data (`generated/benchmark-results/`, `docs/data/`), the corpus and screening data in `docs/data/` and `assessment/`, and the Evidence Companion (https://chpollin.github.io/FemPrompt_SozArb/) renders them. This index shows where each piece of knowledge lives, in what order to read, and what the constitutive terms mean.
+This is the knowledge base of FemPrompt SozArb, a qualitative literature review on feminist AI literacy and LLM bias in social work. It documents both review rounds, the comparative round-one benchmark, the agent-assisted round-two workflow, PRISM, and the Grounded Vault. PRISM is the governed screening and verification surface. Concrete numbers live in `generated/benchmark-results/`, `docs/data/`, and their generated views. This index identifies the canonical documents and defines the terms that connect them.
 
 ## Documents
 
@@ -30,15 +30,19 @@ In function order, not alphabetical.
 | Document | Function | Update rhythm |
 |---|---|---|
 | [[project]] | Identity: goals, research questions, team, and the theoretical framework | rarely |
-| [[methods]] | How the review was conducted: the chain from identification to research-vault, the distillation pipeline, the dual assessment, the PRISMA deviation, and the replay verification | rarely |
+| [[methods]] | How the review was conducted, from identification and text preparation through both assessment rounds, lifecycle verification, the Grounded Vault, and replay verification | rarely |
 | [[specification]] | The PRISM tool at one place: requirements, user stories, the ADR decision log, and the design system | per tool iteration |
 | [[data]] | The data substrate the PRISM tool consumes and produces | per schema change |
 | [[standards]] | The reporting standards implemented (PRISMA 2020, PRISMA-trAIce, RAISE), and this review's conformance state against them | rarely |
-| [[plan]] | Forward steering: the staged roadmap, current status, and the decided questions | per phase |
+| [[governance]] | Authority, lifecycle, correction, provenance, and publication rules for people, AI agents, and software agents | per governance decision |
+| [[testing]] | Technical guarantees, test layers, commands, and the manual acceptance boundary | per test-contract change |
+| [[verification]] | Evidence and authority state of externally relevant claims and research artifacts | per verification event |
+| [[plan]] | Remaining work, completion criteria, and the operator decisions that still affect the result | per material change |
 | [[journal]] | Genesis: the chronological session log with decisions and learnings | per session |
+| [[handoff]] | Open, source-bound handoff items awaiting integration or rejection | per handoff |
 | [[update-protocol]] | The round-2 pre-registration, the analysis-field design, the pilot findings, the coding procedure, and the RIS procedure | until round 2 starts |
 | [[analysis-divergence]] | The licensed round-1 divergence analysis the follow-up paper's empirical section cites, decomposed and read off named replay keys | per replay change |
-| [[analysis-sq-advisory]] | The advisory, unreviewed SQ1 to SQ3 coding (TP4) feeding the paper's synthesis, pending human confirmation | per coding run |
+| [[analysis-sq-advisory]] | The advisory SQ1 to SQ3 interpretation that will be replaced by governed full-corpus analysis and domain-expert verification | per coding run |
 | [[research-vault]] | The Grounded-Vault layer model and the distillate audit as its migration precondition | until the research-vault is grounded |
 | [[guides/manual-review-checklist]] | The human-in-the-loop markdown review checklist | rarely |
 
@@ -51,7 +55,9 @@ In function order, not alphabetical.
 - Understand a tool decision: [[specification]] (the Entscheidungen / ADR section and the design system), [[journal]].
 - Understand the divergence (the motivating illustration and demonstration): [[methods]], [[analysis-divergence]].
 - Evaluate conformance: [[standards]] (the criterion and the per-item status; the machine-readable item status in `generated/conformance/conformance_map.yaml`).
-- Prepare the literature update: [[plan]] (Stage B), [[update-protocol]], [[standards]].
+- Understand authority and publication boundaries: [[governance]], [[verification]].
+- Reproduce a technical guarantee: [[testing]], followed by the applicable command or test artifact.
+- Prepare the literature update: [[plan]] (source and corpus readiness), [[update-protocol]], [[standards]].
 - Prepare the follow-up paper's synthesis: [[analysis-divergence]] (section 5), [[analysis-sq-advisory]] (section 6, advisory).
 - Understand the research-vault: [[research-vault]] (the layer model and the audit precondition), `research-vault/README.md` (the built skeleton and its status).
 
@@ -62,6 +68,9 @@ This knowledge base follows the convention for Promptotyping documents. It fixes
 ## Glossary
 
 The project-constitutive terms, alphabetical. Sibling documents use these terms; this is where they are defined.
+
+### Assertion
+An atomic, evidence-linked statement in the Grounded Vault. An Assertion cites identified statements in one or more distilled knowledge documents and may support the literature report, the paper, or both. Its status records how far the evidence chain has been checked.
 
 ### Beleg
 A pinned passage in PRISM, stored with term, surrounding snippet, timestamp, source layer, and actor. A pin from the Paper layer starts an empty category at `teilweise`; the reviewer decides whether the aspect is central enough for `ja`. A pin from the LLM-Wissensdestillat remains advisory and cannot satisfy the Paper-evidence gate. The legacy `origin` field is retained only for compatibility; `source_layer` and `actor` carry the current provenance.
@@ -78,20 +87,44 @@ The degradation of an LLM's processing quality as the input grows longer (Hong e
 ### Deep Research
 Agent-based LLM systems for iterative, autonomous literature search with cited synthesis. Four were used for identification (ChatGPT, Claude, Gemini, Perplexity).
 
-### Distillation pipeline (Structured Knowledge Extraction, SKE)
-The three-stage extraction of full texts into knowledge documents: an LLM extracts and classifies (stage 1), deterministic software formats (stage 2, no LLM), and an LLM verifies against the original (stage 3). The deterministic middle stage and the verification stage are the epistemic-infrastructure measures against unsecured LLM output.
+### Distilled knowledge document
+A structured, source-specific reduction of a full text. It records metadata, method, central findings, relevant arguments, and traceable source anchors. Distillation is a context-engineering technique that reduces context-window load and context rot while preserving a route back to the full text.
 
 ### Divergence
 A disagreement between the human and the LLM assessment of a paper, on the decision or on a category. The motivating illustration for the infrastructure; classified into three patterns (Semantic Expansion, Implicit Field Membership, Keyword Inclusion). Divergence is reported as divergence, never as an error rate, because the human track has no independent inter-human baseline. The figures and the decomposition live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion.
 
-### Dual assessment track
-The parallel, independent arrangement of an expert track and an LLM track on the same ten-category schema, without mutual knowledge. The methodological centerpiece, designed so the comparison reveals where the two epistemic foundations converge and diverge.
+### Final scholarly authority
+The responsibility assigned to the domain experts for verification, scholarly interpretation, and publication approval. AI-agent annotations and AI Agent Reviews can prepare the complete corpus, but they cannot confer this authority.
+
+### Grounded Vault
+The evidence structure `sources → Markdown → distilled knowledge documents → Assertions → outputs`. Every report or paper statement that uses the structure remains traceable through the adjacent layers to its source.
+
+### Operational isolation
+The separation of AI-agent runs by context, reviewer identity, input assignment, and output path. It limits direct cross-track contamination and makes execution conditions auditable. It does not establish epistemic independence between language models.
+
+### Publication approval
+The explicit transition that permits a verified record or output to enter a public projection. Verification and publication approval remain separate events so that internally verified material can still be withheld.
+
+### Publication version
+A separately addressable expression of one scholarly work, such as an author original, Preprint, Accepted Manuscript, proof, Version of Record, or corrected Version of Record. Its publication stage, date, identifiers, access state, integrity state, and peer-review status are recorded independently. Publication stage is descriptive metadata and does not establish scholarly quality.
+
+### Round-1 dual assessment track
+The comparative arrangement used in the first review round. A consolidated expert annotation and an LLM assessment applied the same ten-category schema without access to each other's judgements. The two records remain separate so their divergence can be analysed. This term describes round 1 and does not name the round-2 completion workflow.
+
+### Screening lifecycle
+The ordered record states `identified → curated → agent-annotated → ai-agent-reviewed → verified → publication-approved`. Every transition is an event with a timestamp, activity, and actor reference. The state therefore reports achieved review authority rather than the mere existence of a file.
+
+### Source-grounded AI Agent Review
+A separate AI-agent activity that checks screening annotations and evidence against the assigned Paper source. It can advance an agent annotation to `ai-agent-reviewed`. It cannot produce domain-expert verification or publication approval.
+
+### Validation
+A deterministic script or schema check of an artifact against explicit structural, referential, or rule-based requirements. Its result is recorded under `checks` with tool, timestamp, subject hash, and status. Validation does not advance the scholarly lifecycle and does not establish the correctness of an interpretation.
 
 ### Epistemic asymmetry
 A division of labour in which the agents process knowledge in fundamentally different ways and neither can fully evaluate the other's epistemic contribution. Reciprocal and context-dependent; managed through workflow design, not resolved.
 
 ### Epistemic infrastructure
-The totality of procedures, documentation structures, verification checkpoints, and responsibility assignments that make LLM contributions in research verifiable, traceable, and accountable. The project's guiding concept. Core principle: reliability is not a property of the system to be presupposed but a property of the process to be established.
+The totality of procedures, documentation structures, distinct control points, and responsibility assignments that make LLM contributions in research verifiable, traceable, and accountable. The project's guiding concept. Core principle: reliability is not a property of the system to be presupposed but a property of the process to be established.
 
 ### Evidence Companion
 The web-based academic companion publication at https://chpollin.github.io/FemPrompt_SozArb/. Five views render the corpus and its research layers. Knowledge Chat and Knowledge Graph operate on the distilled knowledge documents, the Literature Landscape operates on productive PRISM annotations, Categories presents the historical dual-assessment comparison, and Corpus is the reference layer.
@@ -99,27 +132,17 @@ The web-based academic companion publication at https://chpollin.github.io/FemPr
 ### Jagged frontier
 The uneven competence distribution of AI systems, strong on some tasks and weak on adjacent ones (Mollick). In this project, the LLM scores high agreement on explicit categories (Soziale_Arbeit, Feministisch) and low on interpretive ones (Gender).
 
-### Knowledge document
-A structured summary of a study produced by the distillation pipeline: metadata, core finding, methodology, main arguments, category evidence, and a confidence score. PRISM presents it as the separate `LLM-Wissensdestillat` reference layer after the independent decision. The Paper layer uses the local full text where available and the metadata abstract as fallback.
-
 ### PRISM and PRISMA
 PRISMA (with the final A) is the reporting standard (see [[standards]]). PRISM is this project's screening tool (`docs/prisma.html`). They are not the same; the names are kept distinct deliberately.
 
 ### Replay (round 1)
 The committed script `src/replay/replay_round1.py` that re-derives the retrospective PRISMA flow and the agreement figures from the raw assessment CSVs, pairing by Zotero_Key, and reproduces the canonical benchmark file as a self-test before writing its outputs (`generated/benchmark-results/replay/`). The mechanism that lets count-bearing claims be asserted by script, superseding every hand recount; R4 builds the record from its outputs.
 
-### Responsibility asymmetry
-Responsibility for all results remains with the researchers even when LLMs provide epistemically relevant contributions. The expert track is the epistemically binding reference track because accountability resides only there.
-
 ### Sycophancy
 The documented tendency of LLMs to over-agree with a prompt's presuppositions. Countered in the assessment prompts by negative constraints and calibration items.
 
-### Verification checkpoint
-A defined point in the workflow where human or rule-based control checks AI-generated results before they flow into the next stage. The operative design principle of the epistemic infrastructure.
+### Verification
+The documented domain-expert assessment of an annotation, Assertion, or output against its evidence and scholarly meaning. Deterministic validation and source-grounded AI Agent Review are separate controls with lower authority.
 
-## What is missing and why
-
-- No `architecture.md`. The tool is a static vanilla-JS page with no backend; its construction is covered by [[specification]] (requirements, ADR log, and design system) and [[data]], and the research pipeline by [[methods]].
-- No `testing.md`. The tool's behaviour tests live in `tests/`. The jsdom suites cover PRISM logic and Companion integration. The PRISM browser pilot exercises the editor and persistence workflow; the Companion browser run covers the public Literature Landscape, URL restoration, responsive layout, keyboard interaction, local runtime assets, and browser errors. The retrospective counts and agreement figures are asserted by the committed replay (`src/replay/`). The Python side runs with `python -m pytest tests/`, and the anchors of the claims layer are checked by `python -m src.publish.check_claims`, whose green run is the precondition of that layer's `grounded` status. What a person still has to check by hand is `tests/manual-checklist.md`; the test responsibility matrix and the autonomous verification measures are in [[plan]].
-- No `report.md` (a status report for an external recipient). The current state lives in [[plan]] and this index; a formal external report is deferred to the FFG report and the follow-up paper.
-- No numbers in the prose. Volatile quantities live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion, by convention.
+### Work and Work-Version Registry
+A Work is the stable project identity for one intellectual publication, independent of the expressions through which it is available. `corpus/work_version_registry.json` assigns a stable `work_id`, separate `version_id` values, exact record bindings, relations between versions, and distinct preferred and latest versions. Screening coverage is evaluated at Work level; evidence, full text, distillates, and Assertions retain the exact Version used.

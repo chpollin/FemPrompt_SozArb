@@ -1,0 +1,233 @@
+{
+  "timestamp": "2026-08-23T18:51:09.337183",
+  "input_dir": "generated\\pdfs",
+  "output_dir": "generated\\markdown",
+  "total_files": 8,
+  "converted": 8,
+  "skipped": 0,
+  "failed": 0,
+  "low_quality": 0,
+  "files": [
+    {
+      "input": "A2P8MXMY-collection.pdf",
+      "output": "A2P8MXMY-collection.md",
+      "file_hash": "8043b6ce577355782a202693f9d31116",
+      "success": true,
+      "duration_seconds": 348.62,
+      "metrics": {
+        "total_chars": 1092346,
+        "total_lines": 5007,
+        "total_words": 152115,
+        "headings": 226,
+        "heading_levels": {
+          "h2": 226
+        },
+        "tables": 25,
+        "lists": 997,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 2187,
+        "avg_line_length": 385.6
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "BHXDU7VM.pdf",
+      "output": "BHXDU7VM.md",
+      "file_hash": "945b37c1dc6f88c4c5fdfcc4e5390dda",
+      "success": true,
+      "duration_seconds": 108.01,
+      "metrics": {
+        "total_chars": 130588,
+        "total_lines": 1256,
+        "total_words": 18675,
+        "headings": 48,
+        "heading_levels": {
+          "h2": 48
+        },
+        "tables": 9,
+        "lists": 122,
+        "figures": 0,
+        "code_blocks": 10,
+        "links": 0,
+        "empty_lines": 591,
+        "avg_line_length": 189.9
+      },
+      "quality_score": 100,
+      "quality_issues": [],
+      "status": "converted"
+    },
+    {
+      "input": "Franken_Mauritz_2021_Gender_und_KI-Anwendungen.pdf",
+      "output": "Franken_Mauritz_2021_Gender_und_KI-Anwendungen.md",
+      "file_hash": "f25425ec8717a8966935e080d1db2a0c",
+      "success": true,
+      "duration_seconds": 54.87,
+      "metrics": {
+        "total_chars": 109184,
+        "total_lines": 702,
+        "total_words": 11739,
+        "headings": 38,
+        "heading_levels": {
+          "h2": 38
+        },
+        "tables": 4,
+        "lists": 68,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 332,
+        "avg_line_length": 293.2
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "J7V3AAQT.pdf",
+      "output": "J7V3AAQT.md",
+      "file_hash": "32bc7a2eb710582012e5bc329f1d765b",
+      "success": true,
+      "duration_seconds": 34.01,
+      "metrics": {
+        "total_chars": 69070,
+        "total_lines": 488,
+        "total_words": 10797,
+        "headings": 35,
+        "heading_levels": {
+          "h2": 35
+        },
+        "tables": 3,
+        "lists": 10,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 241,
+        "avg_line_length": 277.7
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "NASW_ASWB_CSWE_CSWA_2017_Standards_for_Technology_in_Social_Work_Practice.pdf",
+      "output": "NASW_ASWB_CSWE_CSWA_2017_Standards_for_Technology_in_Social_Work_Practice.md",
+      "file_hash": "401992c0015a9aece8453f478f1ca2b3",
+      "success": true,
+      "duration_seconds": 67.46,
+      "metrics": {
+        "total_chars": 107453,
+        "total_lines": 1266,
+        "total_words": 15059,
+        "headings": 147,
+        "heading_levels": {
+          "h2": 147
+        },
+        "tables": 2,
+        "lists": 94,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 626,
+        "avg_line_length": 165.9
+      },
+      "quality_score": 100,
+      "quality_issues": [],
+      "status": "converted"
+    },
+    {
+      "input": "P4YQIKJX.pdf",
+      "output": "P4YQIKJX.md",
+      "file_hash": "006e86936797d58c3da5a225cbbda3f5",
+      "success": true,
+      "duration_seconds": 28.69,
+      "metrics": {
+        "total_chars": 112820,
+        "total_lines": 778,
+        "total_words": 15065,
+        "headings": 62,
+        "heading_levels": {
+          "h2": 62
+        },
+        "tables": 7,
+        "lists": 100,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 289,
+        "avg_line_length": 229.1
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "R7V99ERA.pdf",
+      "output": "R7V99ERA.md",
+      "file_hash": "5fba9c757fa667b6caec40af80a6b615",
+      "success": true,
+      "duration_seconds": 24.97,
+      "metrics": {
+        "total_chars": 96169,
+        "total_lines": 486,
+        "total_words": 13736,
+        "headings": 21,
+        "heading_levels": {
+          "h2": 21
+        },
+        "tables": 11,
+        "lists": 69,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 185,
+        "avg_line_length": 317.9
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "VSZM7CT6.pdf",
+      "output": "VSZM7CT6.md",
+      "file_hash": "0931b8a4f50e4c6fe30fe9e054220f4d",
+      "success": true,
+      "duration_seconds": 19.89,
+      "metrics": {
+        "total_chars": 54578,
+        "total_lines": 454,
+        "total_words": 7779,
+        "headings": 17,
+        "heading_levels": {
+          "h2": 17
+        },
+        "tables": 0,
+        "lists": 1,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 253,
+        "avg_line_length": 269.3
+      },
+      "quality_score": 85,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)",
+        "Too many empty lines (>50%)"
+      ],
+      "status": "converted"
+    }
+  ]
+}

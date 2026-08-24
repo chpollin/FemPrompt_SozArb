@@ -1,0 +1,248 @@
+{
+  "schema": "femprompt-markdown-repair-report/0.1",
+  "reviewer": "Codex subagent source QC I",
+  "repaired_at": "2026-08-24",
+  "records": [
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1016/j.caeai.2026.100602",
+      "title": "Beyond “painting in pink”: A critical case study of all-girls generative AI workshops in a European makerspace and implications for gender equity in computing",
+      "source_pdf": "generated/pdfs/codex-websearch-2026/4dd9fd2a26f9d7eea07a.pdf",
+      "source_markdown": "generated/source-acquisition/codex-websearch-2026/markdown-clean/4dd9fd2a26f9d7eea07a.md",
+      "repaired_markdown": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/4dd9fd2a26f9d7eea07a.md",
+      "decision": "approved_for_screening",
+      "page_markers_preserved": true,
+      "tables": [
+        {
+          "table_id": "Table 1 Overview of all-girls computing initiatives in different countries",
+          "pdf_page": 3,
+          "source_state": "five_rows_present_but_cells_truncated_and_shifted",
+          "repaired_state": "complete_markdown_table",
+          "dimensions": {
+            "header_rows": 1,
+            "data_rows": 5,
+            "columns": 6
+          },
+          "extraction_methods": [
+            "PyMuPDF page-text extraction with manual row and cell reconstruction",
+            "pdfplumber independent page-text extraction",
+            "PyMuPDF 2x visual page render"
+          ],
+          "visual_verification": "All five programme rows and six columns were checked against the ruled table on PDF page 3. The feature and effect lists for Digital Divas Club, CC4G, All-girl technology camp, Digital Youth Divas, and Team Mensa of SciGirls Code retain their source-row assignment and complete terminal phrases.",
+          "status": "verified_complete"
+        },
+        {
+          "table_id": "Table 2 Data sources and participants",
+          "pdf_page": 7,
+          "source_state": "complete_markdown_table",
+          "repaired_state": "unchanged_complete_markdown_table",
+          "dimensions": {
+            "header_rows": 1,
+            "data_rows": 9,
+            "columns": 4
+          },
+          "extraction_methods": [
+            "PyMuPDF page-text extraction",
+            "pdfplumber independent page-text extraction",
+            "PyMuPDF 2x visual page render"
+          ],
+          "visual_verification": "The two research-question groups, nine data-source rows, conductor assignments, and counts Five, Six, Two, Two, Two, Two, One, One, and 44 match PDF page 7; no cell repair was required.",
+          "status": "verified_complete"
+        },
+        {
+          "table_id": "Table 3 Coding table",
+          "pdf_page": 7,
+          "source_state": "hierarchy_collapsed_and_codes_omitted",
+          "repaired_state": "complete_hierarchical_markdown_table",
+          "dimensions": {
+            "header_rows": 1,
+            "data_rows": 8,
+            "columns": 3
+          },
+          "extraction_methods": [
+            "PyMuPDF page-text extraction with manual hierarchy reconstruction",
+            "pdfplumber independent page-text extraction",
+            "PyMuPDF 2x visual page render"
+          ],
+          "visual_verification": "The three category groups, eight theme rows, and every code were checked against the right-hand ruled table on PDF page 7. Benefits, Concerns, Other considerations, Representation, Relationship building, Responsive approach, Issues and challenges, and Further changes preserve their exact hierarchical relationships.",
+          "status": "verified_complete"
+        }
+      ],
+      "text_segments": [
+        {
+          "segment_id": "page_1_front_matter_and_opening",
+          "pdf_pages": [
+            1
+          ],
+          "source_state": "abstract_after_introduction_start_and_publication_metadata_missing",
+          "repaired_state": "source_order_restored_and_metadata_completed",
+          "extraction_methods": [
+            "PyMuPDF page-text extraction",
+            "pdfplumber independent page-text extraction",
+            "PyMuPDF 2x visual page render"
+          ],
+          "verification": "Title, five authors, affiliation, article information, Abstract, DOI, Received, revised, Accepted, Available-online, CC BY statement, and Introduction now occur in the PDF source order. The Introduction continues across PAGE 1 and PAGE 2 without loss.",
+          "status": "verified_complete"
+        }
+      ],
+      "validation": {
+        "utf8_decode": "passed",
+        "page_markers": "passed: PAGE 1 through PAGE 15 are identical in number and order to the source Markdown",
+        "table_shapes": "passed: Table 1 = 5 data rows × 6 columns; Table 2 = 9 × 4; Table 3 = 8 × 3",
+        "beginning": "passed: source-ordered title, authors, article information, Abstract, DOI, publication history, license, and Introduction",
+        "figure_1": "passed: caption and image placeholder preserved; no visual content was interpreted. Its stated four-level and practice structure is covered by the repaired Table 3 and the surrounding source text",
+        "ending": "passed: PAGE 15 and the final Zhang et al. reference are unchanged",
+        "source_pdf_sha256": "1c1131cd74d203d9f77680077fb992d1e23f83978814a0f9791ede7c0891f899",
+        "source_markdown_sha256": "7433fd6bc92aee34b533cb789b9ba38f71b3177914376fd2dc1e4637884b61cf",
+        "repaired_markdown_sha256": "aad3c34effb5a59adad15be86f09c1db6aa5638a9e38b19ba1e633dc1cd67fcd"
+      },
+      "issues_remaining": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1007/s44155-026-00463-x",
+      "title": "An ethical framework for assessing artificial intelligence as augmentation or automation in social work",
+      "source_pdf": "generated/pdfs/codex-websearch-2026/f30907f71818e5803100.pdf",
+      "source_markdown": "generated/source-acquisition/codex-websearch-2026/markdown-clean/f30907f71818e5803100.md",
+      "repaired_markdown": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/f30907f71818e5803100.md",
+      "decision": "approved_for_screening",
+      "page_markers_preserved": true,
+      "version_control": {
+        "local_version": "accepted_manuscript_article_in_press",
+        "local_version_date": "2026-08-05",
+        "accepted_date": "2026-07-29",
+        "preferred_bibliographic_version": "version_of_record",
+        "relation": "The local Accepted Manuscript/Article in Press precedes the bibliographically preferred Version of Record under the same DOI; the repair does not transfer Version-of-Record status to the local text."
+      },
+      "tables": [
+        {
+          "table_id": "Table 1 Tri-lens Analytical Matrix for AI in Social Work",
+          "pdf_pages": [
+            11,
+            12
+          ],
+          "source_state": "cells_contaminated_by_running_header_and_last_cell_detached_at_page_break",
+          "repaired_state": "complete_markdown_table",
+          "dimensions": {
+            "header_rows": 1,
+            "data_rows": 4,
+            "columns": 5
+          },
+          "extraction_methods": [
+            "PyMuPDF page-text extraction across pages 11–12",
+            "pdfplumber independent page-text extraction across pages 11–12",
+            "PyMuPDF 2x visual page renders"
+          ],
+          "visual_verification": "All twenty diagnostic cells were checked against PDF pages 11–12. The final Deontological–Backstage cell includes the page-12 continuation `termination, crisis response)?`; all ARTICLE-IN-PRESS header fragments have been excluded from table content.",
+          "status": "verified_complete"
+        },
+        {
+          "table_id": "Table 2 Synthesis: AI modality assessments against social-work values",
+          "pdf_page": 17,
+          "source_state": "three_cells_contaminated_by_running_header_fragments",
+          "repaired_state": "complete_markdown_table",
+          "dimensions": {
+            "header_rows": 1,
+            "data_rows": 3,
+            "columns": 6
+          },
+          "extraction_methods": [
+            "PyMuPDF page-text extraction",
+            "pdfplumber independent page-text extraction",
+            "PyMuPDF 2x visual page render"
+          ],
+          "visual_verification": "The AFST, ADS in welfare administration, and Digital-care tech rows were checked across all six columns against PDF page 17. Every assessment remains in its source row and column, with no running-header characters retained.",
+          "status": "verified_complete"
+        }
+      ],
+      "text_segments": [
+        {
+          "segment_id": "running_article_in_press_headers",
+          "pdf_pages": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26
+          ],
+          "source_state": "running_headers_extracted_as_headings_and_inline_ARTIC_E_IN_PRESS_fragments",
+          "repaired_state": "proven_running_header_artifacts_removed_only",
+          "extraction_methods": [
+            "PyMuPDF header/footer text comparison across all pages",
+            "pdfplumber independent header/footer extraction",
+            "full-document visual contact-sheet inspection"
+          ],
+          "verification": "The repeated page furniture was removed from body, tables, and references. The page-1 `Article in Press` and `ARTICLE IN PRESS` document-status statements remain, as do the unedited-manuscript notice, accepted date, YAML source-version metadata, and DOI.",
+          "status": "verified_complete"
+        },
+        {
+          "segment_id": "damaged_section_headings",
+          "pdf_pages": [
+            5,
+            8,
+            9,
+            10,
+            14
+          ],
+          "source_state": "headings_2_2_5_6_1_6_3_and_7_2_merged_into_adjacent_text",
+          "repaired_state": "headings_separated_without_prose_rewrite",
+          "extraction_methods": [
+            "PyMuPDF page-text extraction",
+            "visual PDF-to-Markdown heading-order comparison"
+          ],
+          "verification": "Sections 2.2, 5, 6, 6.1, 6.3, and 7.2 are restored as separate headings in their PDF order; the adjacent source prose is retained verbatim apart from removal of proven running-header fragments.",
+          "status": "verified_complete"
+        },
+        {
+          "segment_id": "references",
+          "pdf_pages": [
+            22,
+            23,
+            24,
+            25,
+            26
+          ],
+          "source_state": "multiple_independent_references_merged_into_shared_list_items",
+          "repaired_state": "independent_reference_items_separated_in_source_order",
+          "extraction_methods": [
+            "PyMuPDF reference-page text extraction",
+            "pdfplumber independent reference-page extraction",
+            "visual inspection of pages 22–26"
+          ],
+          "verification": "Merged reference runs beginning with Alston, French, López-Peláez, Massey, and Segal were split at the source bibliographic boundaries. The sequence continues through Webb and WHO on PAGE 26 without omitted entries.",
+          "status": "verified_complete"
+        }
+      ],
+      "validation": {
+        "utf8_decode": "passed",
+        "page_markers": "passed: PAGE 1 through PAGE 26 are identical in number and order to the source Markdown",
+        "table_shapes": "passed: Table 1 = 4 data rows × 5 columns; Table 2 = 3 × 6",
+        "version_identity": "passed: local accepted_manuscript_article_in_press and preferred bibliographic version_of_record remain distinct",
+        "header_artifacts": "passed: no ARTIC/E IN PRESS fragments or repeated ACCEPTED MANUSCRIPT ARTICLE IN PRESS headings remain after PAGE 1; the two page-1 Article-in-Press status headings remain",
+        "heading_sequence": "passed: sections 1 through 11 and repaired subsections occur in PDF order",
+        "ending": "passed: PAGE 26 ends with Webb (2006), WHO (2021), and the existing terminal image placeholder",
+        "source_pdf_sha256": "cb631c338b6e2ef7fc37b53115e7a1f5fa261eb6874dda9cf210d689ed67bd54",
+        "source_markdown_sha256": "08639a2a1a60d6cfca1ef61f0e6034e9b442af5b55d407a2541412d813b30791",
+        "repaired_markdown_sha256": "ed32ec085960d806d4de02c0c5e300488f0434d1b1cf18745fa5c4fc9c2c82ea"
+      },
+      "issues_remaining": []
+    }
+  ]
+}

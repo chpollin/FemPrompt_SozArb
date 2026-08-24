@@ -1,0 +1,49 @@
+{
+  "schema": "femprompt-visual-evidence-assessment/0.1",
+  "candidate_id": "codex-websearch-2026:doi:10.35362/issn.1850-0013-1258",
+  "assessed_at": "2026-08-24",
+  "scope": "structural_gap_assessment_only",
+  "visual_source": {
+    "manifest": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/manifest.json",
+    "pdf_pages": [16, 17, 18, 19],
+    "table_ids": ["2", "2.1", "3", "3.1", "4", "4.1", "4.2", "4.3"],
+    "image_count": 16
+  },
+  "prism_structure_reviewed": {
+    "reviewer_schema": "femprompt-prisma-reviewer/0.4",
+    "implementation_file": "docs/js/prisma.js",
+    "evidence_fields_observed": [
+      "term",
+      "snippet",
+      "ts",
+      "origin",
+      "source_layer",
+      "actor",
+      "paper_id",
+      "work_id",
+      "version_id"
+    ],
+    "implementation_basis": [
+      "docs/js/prisma.js:95 defines the active reviewer schema.",
+      "docs/js/prisma.js:1603-1616 creates paper evidence as a text term and snippet with provenance identifiers.",
+      "docs/js/prisma.js:948-992 renders Markdown as text-oriented headings, lists, blockquotes, and paragraphs; image assets and semantic table structures are not represented.",
+      "docs/js/prisma.js:2131-2151 displays evidence entries as text snippets grouped by category."
+    ]
+  },
+  "assessment": {
+    "status": "not_representable_in_current_prism_evidence_structure",
+    "missing_capabilities": [
+      "A visual evidence modality distinct from text snippets.",
+      "A stable asset reference carrying file identity or checksum.",
+      "A locator binding an asset to PDF page, publication page, table caption, prompt iteration, and model column.",
+      "A grouping relation for the two source images that form one table-level comparison.",
+      "A reading-surface representation that preserves the source images and their semantic table context."
+    ],
+    "basis": "The present PRISM evidence object can bind selected text to a category and work version, but it has no fields for visual assets or visual locators. Its Markdown renderer also does not retain the images and table relationships documented in the visual-evidence manifest."
+  },
+  "out_of_scope": [
+    "No image-content interpretation was performed.",
+    "No category assignment or screening decision was made.",
+    "No source PDF, Markdown full text, or PRISM implementation file was changed."
+  ]
+}

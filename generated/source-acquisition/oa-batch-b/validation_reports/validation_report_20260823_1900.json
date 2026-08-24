@@ -1,0 +1,193 @@
+{
+  "metadata": {
+    "timestamp": "2026-08-23T19:00:04.277295",
+    "version": "2.0",
+    "validator": "validate_markdown_enhanced.py"
+  },
+  "summary": {
+    "total_documents": 3,
+    "status_distribution": {
+      "pass": 0,
+      "warning": 3,
+      "fail": 0
+    },
+    "pass_rate": 0.0,
+    "metrics": {
+      "avg_char_ratio": 1.1616666666666664,
+      "avg_artifact_score": 1.8666666666666665,
+      "avg_confidence": 99.63333333333333,
+      "min_confidence": 99.3,
+      "max_confidence": 100
+    },
+    "table_mismatch_count": 3,
+    "char_loss_warning_count": 0,
+    "manual_review_queue_size": 3,
+    "llm_reviewed_count": 0
+  },
+  "manual_review_queue": [
+    {
+      "filename": "BHXDU7VM.md",
+      "status": "WARNING",
+      "confidence": 99.3,
+      "issues": [
+        "Table mismatch: PDF=0, MD=9"
+      ],
+      "reasons": [
+        "table_mismatch"
+      ],
+      "priority": "MEDIUM"
+    },
+    {
+      "filename": "P4YQIKJX.md",
+      "status": "WARNING",
+      "confidence": 99.6,
+      "issues": [
+        "Table mismatch: PDF=1, MD=7"
+      ],
+      "reasons": [
+        "table_mismatch"
+      ],
+      "priority": "MEDIUM"
+    },
+    {
+      "filename": "A2P8MXMY.md",
+      "status": "WARNING",
+      "confidence": 100,
+      "issues": [
+        "Table mismatch: PDF=1, MD=0"
+      ],
+      "reasons": [
+        "table_mismatch"
+      ],
+      "priority": "MEDIUM"
+    }
+  ],
+  "detailed_results": [
+    {
+      "filename": "A2P8MXMY.md",
+      "pdf_filename": "A2P8MXMY.pdf",
+      "md_char_count": 101151,
+      "md_word_count": 15480,
+      "md_file_size_mb": 0.0964651107788086,
+      "glyph_count": 0,
+      "unicode_error_count": 0,
+      "text_to_noise_ratio": 0.733,
+      "pdf_char_count": 87194,
+      "pdf_word_count": 1823,
+      "char_ratio": 1.16,
+      "char_loss_warning": false,
+      "pdf_table_count": 1,
+      "md_table_count": 0,
+      "table_mismatch": true,
+      "artifact_types": {},
+      "artifact_score": 0.0,
+      "llm_reviewed": false,
+      "semantic_score": null,
+      "section_coverage": {
+        "abstract": false,
+        "introduction": false,
+        "methodology": false,
+        "results": false,
+        "discussion": false,
+        "conclusion": false,
+        "references": true
+      },
+      "llm_issues": [],
+      "confidence_score": 100,
+      "status": "WARNING",
+      "issues": [
+        "Table mismatch: PDF=1, MD=0"
+      ],
+      "needs_manual_review": true,
+      "manual_review_reasons": [
+        "table_mismatch"
+      ]
+    },
+    {
+      "filename": "BHXDU7VM.md",
+      "pdf_filename": "BHXDU7VM.pdf",
+      "md_char_count": 130705,
+      "md_word_count": 18685,
+      "md_file_size_mb": 0.1246500015258789,
+      "glyph_count": 0,
+      "unicode_error_count": 0,
+      "text_to_noise_ratio": 0.62,
+      "pdf_char_count": 110614,
+      "pdf_word_count": 14765,
+      "char_ratio": 1.182,
+      "char_loss_warning": false,
+      "pdf_table_count": 0,
+      "md_table_count": 9,
+      "table_mismatch": true,
+      "artifact_types": {
+        "ocr_zero_o": 1,
+        "all_caps_noise": 5
+      },
+      "artifact_score": 3.6,
+      "llm_reviewed": false,
+      "semantic_score": null,
+      "section_coverage": {
+        "abstract": true,
+        "introduction": false,
+        "methodology": false,
+        "results": false,
+        "discussion": false,
+        "conclusion": false,
+        "references": true
+      },
+      "llm_issues": [],
+      "confidence_score": 99.3,
+      "status": "WARNING",
+      "issues": [
+        "Table mismatch: PDF=0, MD=9"
+      ],
+      "needs_manual_review": true,
+      "manual_review_reasons": [
+        "table_mismatch"
+      ]
+    },
+    {
+      "filename": "P4YQIKJX.md",
+      "pdf_filename": "P4YQIKJX.pdf",
+      "md_char_count": 112936,
+      "md_word_count": 15075,
+      "md_file_size_mb": 0.10770416259765625,
+      "glyph_count": 0,
+      "unicode_error_count": 0,
+      "text_to_noise_ratio": 0.606,
+      "pdf_char_count": 98844,
+      "pdf_word_count": 14407,
+      "char_ratio": 1.143,
+      "char_loss_warning": false,
+      "pdf_table_count": 1,
+      "md_table_count": 7,
+      "table_mismatch": true,
+      "artifact_types": {
+        "ocr_confusion": 1,
+        "broken_hyphenation": 1
+      },
+      "artifact_score": 2.0,
+      "llm_reviewed": false,
+      "semantic_score": null,
+      "section_coverage": {
+        "abstract": false,
+        "introduction": false,
+        "methodology": false,
+        "results": false,
+        "discussion": false,
+        "conclusion": false,
+        "references": true
+      },
+      "llm_issues": [],
+      "confidence_score": 99.6,
+      "status": "WARNING",
+      "issues": [
+        "Table mismatch: PDF=1, MD=7"
+      ],
+      "needs_manual_review": true,
+      "manual_review_reasons": [
+        "table_mismatch"
+      ]
+    }
+  ]
+}

@@ -8,7 +8,7 @@ updated: 2026-07-18
 
 Ein Claim ist eine atomare, quer über Quellen belegbare Aussage; er referenziert ausschließlich Distillat-Anker der Ebene `10_distillates/`. Anker sind die Überschriften der Distillate, referenziert als `[[Distillat#Überschrift]]`, bedarfsgetrieben geprägt von der Claim-Ebene aus; die vorrangig genutzte Ankerklasse ist `#Kernbefund`. Die deterministische Ankerprüfung läuft mit `src/publish/check_claims.py`; nur solange sie grün ist, ist der `grounded`-Status der Ebene legitim. `contested: true` hält eine widersprüchliche Beleglage fest, mit getrennten Abschnitten für und gegen; der Widerspruch ist Eigenschaft der Beleglage, kein Reifegrad.
 
-Die Claims tragen `status: grounded`, nicht `validated` und nicht `verified`. Eine adversariale Maschinenprüfung der inhaltlichen Deckung zwischen Claim-Satz und Anker-Inhalt ist noch nicht gelaufen, die bindende menschliche Prüfung ebenfalls nicht.
+Die Claims tragen `status: grounded`. Ein quellenbezogenes AI Agent Review und die Verifikation durch Domänenexpertinnen und Domänenexperten stehen noch aus. Deterministische Link- und Ankerprüfungen werden als Checks protokolliert und verändern die fachliche Autorität nicht.
 
 ## Topic Maps
 

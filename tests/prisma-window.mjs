@@ -20,6 +20,9 @@ export function createPrismaWindow(root, scripts = CORE_SCRIPTS) {
   window.__CATEGORY_SCHEMA__ = JSON.parse(
     readFileSync(join(root, 'docs/data/category_schema.json'), 'utf8')
   );
+  window.__LIFECYCLE_CONTRACT__ = JSON.parse(
+    readFileSync(join(root, 'docs/data/screening_lifecycle_contract.json'), 'utf8')
+  );
   window.fetch = () => Promise.reject(new Error('headless: no network'));
   const inject = (rel) => {
     const el = window.document.createElement('script');

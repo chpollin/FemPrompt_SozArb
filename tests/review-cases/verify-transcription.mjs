@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { validateManifest } from './validate-run-contract.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 const runArgument = process.argv[2];
@@ -49,6 +50,8 @@ function sameValue(actual, expected, label) {
 const level = { nein: 0, teilweise: 1, ja: 2 };
 const runPath = runArgument.replaceAll('\\', '/');
 const run = json(runPath);
+const contract = validateManifest(run, { path: runPath });
+assert(contract.ok && contract.legacy, 'historical transcription manifest is not accepted as legacy');
 const expectedIds = [...run.paper_ids].sort();
 let evidenceCount = 0;
 

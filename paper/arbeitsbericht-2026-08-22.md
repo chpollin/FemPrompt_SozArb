@@ -1,4 +1,25 @@
+---
+title: Arbeitsbericht PRISM und Evidence Companion
+project:
+  name: FemPrompt SozArb
+  repository: https://github.com/chpollin/FemPrompt_SozArb
+method:
+  name: Promptotyping
+  url: https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin
+status: snapshot
+language: de
+version: "0.6"
+created: 2026-08-22
+updated: 2026-08-23
+authors: [Christopher Pollin]
+generated-with: Claude Code
+related: [journal, specification, verification]
+---
+
 # Arbeitsbericht PRISM und Evidence Companion
+
+> [!note] Historischer Stand
+> Dieser Bericht dokumentiert den Projektstand vom 22. August 2026. ADR-035 und ADR-036 haben die damaligen Begriffe `ratifizierter Agentenkonsens`, unabhängige Adjudikation und sichtbare PRISM-Transkription für spätere Läufe präzisiert. Der aktuelle Methodenvertrag steht in `knowledge/governance.md`, `knowledge/update-protocol.md` und `knowledge/verification.md`.
 
 **Stand:** 22. August 2026 · **Projekt:** Feministische AI Literacies in der Sozialen Arbeit
 

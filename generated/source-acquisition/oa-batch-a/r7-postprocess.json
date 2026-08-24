@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-08-23T19:00:33.531989",
+  "input_dir": "generated\\source-acquisition\\oa-batch-a\\r7-output",
+  "output_dir": "generated\\source-acquisition\\oa-batch-a\\r7-clean",
+  "in_place": false,
+  "documents": [
+    {
+      "filename": "R7V99ERA.md",
+      "original_chars": 96285,
+      "final_chars": 95319,
+      "chars_removed": 966,
+      "hyphenations_fixed": 0,
+      "page_numbers_removed": 0,
+      "repeated_headers_removed": 22,
+      "excessive_newlines_fixed": 25,
+      "all_caps_removed": 0,
+      "artifact_score_before": 10.4,
+      "artifact_score_after": 0.0
+    }
+  ]
+}

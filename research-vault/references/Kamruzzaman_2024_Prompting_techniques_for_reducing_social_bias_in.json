@@ -1,3 +1,4 @@
+[
 {
   "id": "Kamruzzaman_2024_Prompting_techniques_for_reducing_social_bias_in",
   "type": "paper-conference",
@@ -22,5 +23,10 @@
   "language": "en",
   "DOI": "10.48550/arXiv.2404.17218",
   "URL": "https://doi.org/10.48550/arXiv.2404.17218",
+  "femprompt-record-id": "7W3RGSSG",
+  "femprompt-work-id": "work:7644e99b-9dd1-545f-af98-ab7fed6643e6",
+  "femprompt-version-id": "version:31d4c15c-10dd-530b-b539-6934b297ddc5",
+  "femprompt-version-type": "preprint",
   "note": "Reference record for migrated distillate. Source distillate generated/distilled/Kamruzzaman_2024_Prompting_techniques_for_reducing_social_bias_in.md. audit=P-pending. Stage-1b confirmed 2026-07-18. Zotero key: 7W3RGSSG."
 }
+]

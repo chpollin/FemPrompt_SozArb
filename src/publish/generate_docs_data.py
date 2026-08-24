@@ -27,6 +27,8 @@ import tempfile
 from pathlib import Path
 from typing import Any, Mapping, Sequence
 
+from src.analysis.work_versions import load_registry, lookup_by_record
+
 REPO_ROOT = Path(__file__).resolve().parents[2]
 
 INPUT_LLM = REPO_ROOT / "assessment" / "llm_assessment_10k.csv"
@@ -37,6 +39,8 @@ INPUT_METADATA = REPO_ROOT / "corpus" / "papers_metadata.csv"
 INPUT_FULLTEXT_MANIFEST = REPO_ROOT / "docs" / "data" / "fulltext_manifest.json"
 INPUT_KNOWLEDGE_BINDINGS = REPO_ROOT / "docs" / "data" / "knowledge_doc_bindings.json"
 INPUT_CATEGORY_SCHEMA = REPO_ROOT / "docs" / "data" / "category_schema.json"
+INPUT_WORK_VERSION_CONTRACT = REPO_ROOT / "docs" / "data" / "work_version_contract.json"
+INPUT_WORK_VERSION_REGISTRY = REPO_ROOT / "corpus" / "work_version_registry.json"
 
 OUTPUT_VAULT = REPO_ROOT / "docs" / "data" / "research_vault_v2.json"
 
@@ -90,6 +94,51 @@ def derive_work_identity(
     if source_file and knowledge_doc_identity_allowed(manifest_entry):
         return f"source:{source_file}", "verified_fulltext"
     return f"record:{key}", "record"
+
+
+def work_version_projection(
+    key: str,
+    registry: Mapping[str, Any] | None,
+) -> dict[str, Any] | None:
+    """Return the exact version and its work context for one corpus record."""
+    if registry is None:
+        return None
+    resolved = lookup_by_record(dict(registry), key)
+    if resolved is None:
+        raise ValueError(f"{key}: absent from the canonical Work-Version registry")
+    work, version = resolved
+    return {
+        "work_id": work["work_id"],
+        "identity_basis": "work_version_registry",
+        "version_id": version["version_id"],
+        "version_type": version["version_type"],
+        "version_date": version.get("version_date", ""),
+        "peer_review_status": version["peer_review_status"],
+        "peer_review_basis": version["peer_review_basis"],
+        "integrity_status": version["integrity_status"],
+        "preferred_version_id": work["preferred_version_id"],
+        "latest_version_id": work["latest_version_id"],
+        "is_preferred_version": version["version_id"]
+        == work["preferred_version_id"],
+        "work_versions": [
+            {
+                "version_id": item["version_id"],
+                "version_type": item["version_type"],
+                "version_date": item.get("version_date", ""),
+                "identifiers": item.get("identifiers", {}),
+                "peer_review_status": item["peer_review_status"],
+                "peer_review_basis": item["peer_review_basis"],
+                "integrity_status": item["integrity_status"],
+                "access_status": item.get("access_status", "unknown"),
+                "landing_url": item.get("landing_url", ""),
+                "fulltext_url": item.get("fulltext_url", ""),
+                "relations": item.get("relations", []),
+                "is_preferred": item["version_id"] == work["preferred_version_id"],
+                "is_latest": item["version_id"] == work["latest_version_id"],
+            }
+            for item in work["versions"]
+        ],
+    }
 
 
 def knowledge_coverage(
@@ -189,6 +238,7 @@ def parse_llm_row(
     metadata_by_key: Mapping[str, Mapping[str, str]],
     fulltext_manifest: Mapping[str, Mapping[str, Any]] | None = None,
     knowledge_bindings: Mapping[str, Mapping[str, Any]] | None = None,
+    work_version_registry: Mapping[str, Any] | None = None,
 ) -> dict[str, Any]:
     """Parse one LLM assessment row into paper dict."""
     key = row.get("Zotero_Key", "").strip()
@@ -232,7 +282,18 @@ def parse_llm_row(
             knowledge_doc = f"vault/Papers/{vault_filename}"
 
     doi = meta.get("DOI", "") or ""
-    work_id, identity_basis = derive_work_identity(key, doi, manifest_entry)
+    legacy_work_id, legacy_identity_basis = derive_work_identity(
+        key, doi, manifest_entry
+    )
+    version_projection = work_version_projection(key, work_version_registry)
+    work_id = (
+        version_projection["work_id"] if version_projection else legacy_work_id
+    )
+    identity_basis = (
+        version_projection["identity_basis"]
+        if version_projection
+        else legacy_identity_basis
+    )
 
     return {
         "id": key,
@@ -249,6 +310,40 @@ def parse_llm_row(
         "knowledge_coverage": knowledge_coverage(knowledge_doc, manifest_entry),
         "work_id": work_id,
         "identity_basis": identity_basis,
+        "legacy_work_id": legacy_work_id,
+        "legacy_identity_basis": legacy_identity_basis,
+        "version_id": version_projection["version_id"] if version_projection else None,
+        "version_type": (
+            version_projection["version_type"] if version_projection else "unknown"
+        ),
+        "version_date": version_projection["version_date"] if version_projection else "",
+        "peer_review_status": (
+            version_projection["peer_review_status"]
+            if version_projection
+            else "not_established"
+        ),
+        "peer_review_basis": (
+            version_projection["peer_review_basis"]
+            if version_projection
+            else "unknown"
+        ),
+        "integrity_status": (
+            version_projection["integrity_status"]
+            if version_projection
+            else "unknown"
+        ),
+        "preferred_version_id": (
+            version_projection["preferred_version_id"] if version_projection else None
+        ),
+        "latest_version_id": (
+            version_projection["latest_version_id"] if version_projection else None
+        ),
+        "is_preferred_version": (
+            version_projection["is_preferred_version"] if version_projection else True
+        ),
+        "work_versions": (
+            version_projection["work_versions"] if version_projection else []
+        ),
         "llm": {
             "decision": row.get("Decision", ""),
             "categories": positive_cats,
@@ -346,6 +441,13 @@ def main(argv: Sequence[str] | None = None) -> None:
         knowledge_bindings = json.load(f)["bindings"]
     print(f"  Explicit knowledge bindings: {len(knowledge_bindings)} records")
 
+    work_version_registry = load_registry(INPUT_WORK_VERSION_REGISTRY)
+    print(
+        "  Work-Version registry: "
+        f"{work_version_registry['counts']['works']} works / "
+        f"{work_version_registry['counts']['versions']} versions"
+    )
+
     # Load LLM assessment
     llm_rows = read_csv(INPUT_LLM)
     print(f"  LLM assessment: {len(llm_rows)} rows")
@@ -378,7 +480,13 @@ def main(argv: Sequence[str] | None = None) -> None:
 
     for row in llm_rows:
         key = row.get("Zotero_Key", "").strip()
-        paper = parse_llm_row(row, metadata_by_key, fulltext_manifest, knowledge_bindings)
+        paper = parse_llm_row(
+            row,
+            metadata_by_key,
+            fulltext_manifest,
+            knowledge_bindings,
+            work_version_registry,
+        )
 
         # Attach human assessment if available
         if key in human_by_key:
@@ -466,6 +574,8 @@ def main(argv: Sequence[str] | None = None) -> None:
         INPUT_FULLTEXT_MANIFEST,
         INPUT_KNOWLEDGE_BINDINGS,
         INPUT_CATEGORY_SCHEMA,
+        INPUT_WORK_VERSION_CONTRACT,
+        INPUT_WORK_VERSION_REGISTRY,
     ]
 
     # Build output JSON

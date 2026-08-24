@@ -1,0 +1,841 @@
+{
+  "schema": "femprompt-round2-intake/0.1",
+  "purpose": "Canonical intake audit before productive AI-agent screening",
+  "script": "src/analysis/build_round2_intake.py",
+  "protocol": "knowledge/update-protocol.md",
+  "inputs": [
+    {
+      "lane": "L1",
+      "source": "OpenAI",
+      "path": "corpus/deep-research/round2/ChatGPT_deep-research.ris",
+      "sha256": "3974074f44026b3eba29495c7a196372b8e68ced1f5534449274fa05572b7e36",
+      "records": 5
+    },
+    {
+      "lane": "L2",
+      "source": "Claude",
+      "path": "corpus/deep-research/round2/Claude_deep-research.ris",
+      "sha256": "4cbaebfa6a5ea72520d41d1157fd990e49358e7c539fea0fc3779e12b0118e41",
+      "records": 8
+    },
+    {
+      "lane": "L3",
+      "source": "Gemini",
+      "path": "corpus/deep-research/round2/Gemini_deep-research.ris",
+      "sha256": "c554dc403ae26923ebf11697aaed18881820f3bd3a20e0b0f48026c824dd3717",
+      "records": 8
+    },
+    {
+      "lane": "L5",
+      "source": "ClaudeCode",
+      "path": "corpus/deep-research/round2/ClaudeCode_deep-research.ris",
+      "sha256": "271c8547cea6598973b69b7a4d240e39df5814c618278e3a6206d3eaf97e64e6",
+      "records": 8
+    }
+  ],
+  "counts": {
+    "lane_records": 29,
+    "distinct_candidate_works": 24,
+    "duplicate_lane_records_collapsed": 5,
+    "cross_round_matches": 0,
+    "works_present_in_l1_l3": 19,
+    "works_only_in_l5": 5,
+    "works_with_l5_attribution": 8,
+    "committed_zotero_records": 326,
+    "candidate_works_with_existing_corpus_match": 1,
+    "candidate_works_absent_from_committed_export": 23,
+    "round2_zotero_keys_missing_from_committed_export": 21,
+    "screening_ready_works": 0
+  },
+  "lane_counts": {
+    "L1": 5,
+    "L2": 8,
+    "L3": 8,
+    "L5": 8
+  },
+  "committed_state": {
+    "zotero_export": "corpus/zotero_export.json",
+    "zotero_export_sha256": "4e7698570c3cd3a37d9afd854b127261044d80cca6e34e5580f758cb2bc78194",
+    "source_mapping": "corpus/source_tool_mapping.json",
+    "source_mapping_sha256": "4e49cf87d6045ec09a3dc5a4d8a9bfdb83b140d39281e3e4312923bd3f497153",
+    "mapping_only_keys_by_source": {
+      "Claude": 8,
+      "Gemini": 8,
+      "OpenAI": 5
+    },
+    "mapping_only_keys": [
+      "5DLTP2YA",
+      "5G2VPZR8",
+      "6IU5JG5Y",
+      "7B6V8MN6",
+      "8YZKPS42",
+      "9Y7H9WXQ",
+      "BKYNQZHQ",
+      "CCAKPEGY",
+      "DALR26DL",
+      "DL7G37W9",
+      "EF9TQIRK",
+      "H958FXZR",
+      "IYUPQPTA",
+      "MN2K9JW8",
+      "NJUBGV8X",
+      "PS8KVDVS",
+      "UIBZW4IK",
+      "UNGYENLB",
+      "VXDH5KWP",
+      "VYCF5NCB",
+      "YW3UAXFP"
+    ],
+    "cross_round_matches": []
+  },
+  "gate": {
+    "status": "blocked",
+    "reason": "round2_candidates_absent_from_committed_corpus_projection",
+    "required_actions": [
+      "import_l5_ris_into_zotero_and_preserve_lane_attribution",
+      "export_the_curated_zotero_library_to_corpus/zotero_export.json",
+      "regenerate_corpus/papers_metadata.csv_and_source_tool_mapping.json",
+      "acquire_and_review_each_round2_paper_markdown_source",
+      "rerun_this_manifest_until_screening_ready_works_equals_24"
+    ]
+  },
+  "works": [
+    {
+      "work_id": "doi:10.1201/9781003585527-19",
+      "title": "Ethical AI through a Feminist Lens: Challenging Power and Redefining Technology",
+      "normalised_title": "ethical ai through a feminist lens challenging power and redefining technology",
+      "doi": "10.1201/9781003585527-19",
+      "year": 2025,
+      "authors": [
+        "Gengler, Eva",
+        "Wedel, Marco"
+      ],
+      "lanes": [
+        "L1",
+        "L2"
+      ],
+      "lane_records": [
+        {
+          "lane": "L1",
+          "source": "OpenAI"
+        },
+        {
+          "lane": "L2",
+          "source": "Claude"
+        }
+      ],
+      "intake_status": "zotero_import_logged_export_pending",
+      "zotero_key": null,
+      "paper_source": null,
+      "screening_blockers": [
+        "curated_zotero_identity_missing_from_committed_corpus",
+        "paper_source_not_addressable_by_canonical_id"
+      ],
+      "existing_corpus_candidates": [],
+      "existing_match_basis": null
+    },
+    {
+      "work_id": "doi:10.1007/978-3-031-80119-8_6",
+      "title": "Power Imbalances in Society and AI: On the Need to Expand the Feminist Approach",
+      "normalised_title": "power imbalances in society and ai on the need to expand the feminist approach",
+      "doi": "10.1007/978-3-031-80119-8_6",
+      "year": 2025,
+      "authors": [
+        "Gengler, Eva",
+        "Wedel, Marco",
+        "Wudel, Antonia",
+        "Laumer, Sven"
+      ],
+      "lanes": [
+        "L1"
+      ],
+      "lane_records": [
+        {
+          "lane": "L1",
+          "source": "OpenAI"
+        }
+      ],
+      "intake_status": "zotero_import_logged_export_pending",
+      "zotero_key": null,
+      "paper_source": null,
+      "screening_blockers": [
+        "curated_zotero_identity_missing_from_committed_corpus",
+        "paper_source_not_addressable_by_canonical_id"
+      ],
+      "existing_corpus_candidates": [],
+      "existing_match_basis": null
+    },
+    {
+      "work_id": "doi:10.1007/s43681-026-01161-9",
+      "title": "Beyond inclusion: feminist AI for transformative justice in STEM",
+      "normalised_title": "beyond inclusion feminist ai for transformative justice in stem",
+      "doi": "10.1007/s43681-026-01161-9",
+      "year": 2026,
+      "authors": [
+        "Kubes, Tanja"
+      ],
+      "lanes": [
+        "L1"
+      ],
+      "lane_records": [
+        {
+          "lane": "L1",
+          "source": "OpenAI"
+        }
+      ],
+      "intake_status": "zotero_import_logged_export_pending",
+      "zotero_key": null,
+      "paper_source": null,
+      "screening_blockers": [
+        "curated_zotero_identity_missing_from_committed_corpus",
+        "paper_source_not_addressable_by_canonical_id"
+      ],
+      "existing_corpus_candidates": [],
+      "existing_match_basis": null
+    },
+    {
+      "work_id": "doi:10.1145/3715275.3732210",
+      "title": "Fairness Beyond the Algorithmic Frame: Actionable Recommendations for an Intersectional Approach",
+      "normalised_title": "fairness beyond the algorithmic frame actionable recommendations for an intersectional approach",
+      "doi": "10.1145/3715275.3732210",
+      "year": 2025,
+      "authors": [
+        "Vethman, Steven"
+      ],
+      "lanes": [
+        "L1"
+      ],
+      "lane_records": [
+        {
+          "lane": "L1",
+          "source": "OpenAI"
+        }
+      ],
+      "intake_status": "zotero_import_logged_export_pending",
+      "zotero_key": null,
+      "paper_source": null,
+      "screening_blockers": [
+        "curated_zotero_identity_missing_from_committed_corpus",
+        "paper_source_not_addressable_by_canonical_id"
+      ],
+      "existing_corpus_candidates": [
+        "Y6SAPNT2"
+      ],
+      "existing_match_basis": "normalised_title_only"
+    },
+    {
+      "work_id": "doi:10.21240/zfhe/sh-ki-1/09",
+      "title": "Verbesserung der KI-Literacy von Lehrenden im Hochschulbereich",
+      "normalised_title": "verbesserung der ki literacy von lehrenden im hochschulbereich",
+      "doi": "10.21240/zfhe/sh-ki-1/09",
+      "year": 2025,
+      "authors": [
+        "Schallert-Vallaster, Stefanie",
+        "Nüesch, Charlotte",
+        "Papageorgiou, Konstantin",
+        "Herrmann, Lisa",
+        "Hofmann, Martin",
+        "Buchner, Josef"
+      ],
+      "lanes": [
+        "L1"
+      ],
+      "lane_records": [
+        {
+          "lane": "L1",
+          "source": "OpenAI"
+        }
+      ],
+      "intake_status": "zotero_import_logged_export_pending",
+      "zotero_key": null,
+      "paper_source": null,
+      "screening_blockers": [
+        "curated_zotero_identity_missing_from_committed_corpus",
+        "paper_source_not_addressable_by_canonical_id"
+      ],
+      "existing_corpus_candidates": [],
+      "existing_match_basis": null
+    },
+    {
+      "work_id": "doi:10.1038/s41467-025-68004-9",
+      "title": "Intersectional biases in narratives produced by open-ended prompting of generative language models",
+      "normalised_title": "intersectional biases in narratives produced by open ended prompting of generative language models",
+      "doi": "10.1038/s41467-025-68004-9",
+      "year": 2026,
+      "authors": [
+        "Shieh, Evan",
+        "Vassel, Faye-Marie",
+        "Sugimoto, Cassidy R.",
+        "Monroe-White, Thema"
+      ],
+      "lanes": [
+        "L2",
+        "L3",
+        "L5"
+      ],
+      "lane_records": [
+        {
+          "lane": "L2",
+          "source": "Claude"
+        },
+        {
+          "lane": "L3",
+          "source": "Gemini"
+        },
+        {
+          "lane": "L5",
+          "source": "ClaudeCode"
+        }
+      ],
+      "intake_status": "zotero_import_logged_export_pending",
+      "zotero_key": null,
+      "paper_source": null,
+      "screening_blockers": [
+        "curated_zotero_identity_missing_from_committed_corpus",
+        "paper_source_not_addressable_by_canonical_id"
+      ],
+      "existing_corpus_candidates": [],
+      "existing_match_basis": null
+    },
+    {
+      "work_id": "doi:10.3389/fsoc.2025.1602947",
+      "title": "Black feminism and Artificial Intelligence: the possibilities and limitations of contesting discriminatory AI from a critical social theory perspective",
+      "normalised_title": "black feminism and artificial intelligence the possibilities and limitations of contesting discriminatory ai from a critical social theory perspective",
+      "doi": "10.3389/fsoc.2025.1602947",
+      "year": 2025,
+      "authors": [
+        "Schelenz, Laura"
+      ],
+      "lanes": [
+        "L2"
+      ],
+      "lane_records": [
+        {
+          "lane": "L2",
+          "source": "Claude"
+        }
+      ],
+      "intake_status": "zotero_import_logged_export_pending",
+      "zotero_key": null,
+      "paper_source": null,
+      "screening_blockers": [
+        "curated_zotero_identity_missing_from_committed_corpus",
+        "paper_source_not_addressable_by_canonical_id"
+      ],
+      "existing_corpus_candidates": [],
+      "existing_match_basis": null
+    },
+    {
+      "work_id": "doi:10.1007/s00146-025-02556-8",
+      "title": "A Critique of Human-Centred AI: A Plea for a Feminist AI Framework (FAIF)",
+      "normalised_title": "a critique of human centred ai a plea for a feminist ai framework faif",
+      "doi": "10.1007/s00146-025-02556-8",
+      "year": 2026,
+      "authors": [
+        "Kubes, Tanja"
+      ],
+      "lanes": [
+        "L2",
+        "L5"
+      ],
+      "lane_records": [
+        {
+          "lane": "L2",
+          "source": "Claude"
+        },
+        {
+          "lane": "L5",
+          "source": "ClaudeCode"
+        }
+      ],
+      "intake_status": "zotero_import_logged_export_pending",
+      "zotero_key": null,
+      "paper_source": null,
+      "screening_blockers": [
+        "curated_zotero_identity_missing_from_committed_corpus",
+        "paper_source_not_addressable_by_canonical_id"
+      ],
+      "existing_corpus_candidates": [],
+      "existing_match_basis": null
+    },
+    {
+      "work_id": "doi:10.1145/3769994.3770037",
+      "title": "\"Grillz on a hijabi\": Intersectional Identities in Fostering Critical AI Literacy",
+      "normalised_title": "grillz on a hijabi intersectional identities in fostering critical ai literacy",
+      "doi": "10.1145/3769994.3770037",
+      "year": 2025,
+      "authors": [
+        "Solyst, Jaemarie",
+        "Fong, Chloe",
+        "Nurdin, Faisal",
+        "Landesman, Rotem",
+        "Shapiro, R. Benjamin"
+      ],
+      "lanes": [
+        "L2",
+        "L5"
+      ],
+      "lane_records": [
+        {
+          "lane": "L2",
+          "source": "Claude"
+        },
+        {
+          "lane": "L5",
+          "source": "ClaudeCode"
+        }
+      ],
+      "intake_status": "zotero_import_logged_export_pending",
+      "zotero_key": null,
+      "paper_source": null,
+      "screening_blockers": [
+        "curated_zotero_identity_missing_from_committed_corpus",
+        "paper_source_not_addressable_by_canonical_id"
+      ],
+      "existing_corpus_candidates": [],
+      "existing_match_basis": null
+    },
+    {
+      "work_id": "doi:10.3390/educsci15091143",
+      "title": "AI Literacy and Gender Bias: Comparative Perspectives from the UK and Indonesia",
+      "normalised_title": "ai literacy and gender bias comparative perspectives from the uk and indonesia",
+      "doi": "10.3390/educsci15091143",
+      "year": 2025,
+      "authors": [
+        "Andryani, Nur Afny Catur"
+      ],
+      "lanes": [
+        "L2"
+      ],
+      "lane_records": [
+        {
+          "lane": "L2",
+          "source": "Claude"
+        }
+      ],
+      "intake_status": "zotero_import_logged_export_pending",
+      "zotero_key": null,
+      "paper_source": null,
+      "screening_blockers": [
+        "curated_zotero_identity_missing_from_committed_corpus",
+        "paper_source_not_addressable_by_canonical_id"
+      ],
+      "existing_corpus_candidates": [],
+      "existing_match_basis": null
+    },
+    {
+      "work_id": "doi:10.1007/978-3-032-07830-8_12",
+      "title": "AI Ethics for the Global Majority: Lessons from Decolonial Feminist Bioethics",
+      "normalised_title": "ai ethics for the global majority lessons from decolonial feminist bioethics",
+      "doi": "10.1007/978-3-032-07830-8_12",
+      "year": 2026,
+      "authors": [
+        "Rangel Teixeira, A."
+      ],
+      "lanes": [
+        "L2"
+      ],
+      "lane_records": [
+        {
+          "lane": "L2",
+          "source": "Claude"
+        }
+      ],
+      "intake_status": "zotero_import_logged_export_pending",
+      "zotero_key": null,
+      "paper_source": null,
+      "screening_blockers": [
+        "curated_zotero_identity_missing_from_committed_corpus",
+        "paper_source_not_addressable_by_canonical_id"
+      ],
+      "existing_corpus_candidates": [],
+      "existing_match_basis": null
+    },
+    {
+      "work_id": "doi:10.1177/13505068261419933",
+      "title": "Feminist knowledges in the age of AI",
+      "normalised_title": "feminist knowledges in the age of ai",
+      "doi": "10.1177/13505068261419933",
+      "year": 2026,
+      "authors": [
+        "Koobak, Redi"
+      ],
+      "lanes": [
+        "L2"
+      ],
+      "lane_records": [
+        {
+          "lane": "L2",
+          "source": "Claude"
+        }
+      ],
+      "intake_status": "zotero_import_logged_export_pending",
+      "zotero_key": null,
+      "paper_source": null,
+      "screening_blockers": [
+        "curated_zotero_identity_missing_from_committed_corpus",
+        "paper_source_not_addressable_by_canonical_id"
+      ],
+      "existing_corpus_candidates": [],
+      "existing_match_basis": null
+    },
+    {
+      "work_id": "doi:10.48550/arxiv.2604.20677",
+      "title": "Intersectional Fairness in Large Language Models",
+      "normalised_title": "intersectional fairness in large language models",
+      "doi": "10.48550/arxiv.2604.20677",
+      "year": 2026,
+      "authors": [
+        "Boufaied, C.",
+        "de Souza Santos, R.",
+        "Barcomb, A."
+      ],
+      "lanes": [
+        "L3"
+      ],
+      "lane_records": [
+        {
+          "lane": "L3",
+          "source": "Gemini"
+        }
+      ],
+      "intake_status": "zotero_import_logged_export_pending",
+      "zotero_key": null,
+      "paper_source": null,
+      "screening_blockers": [
+        "curated_zotero_identity_missing_from_committed_corpus",
+        "paper_source_not_addressable_by_canonical_id"
+      ],
+      "existing_corpus_candidates": [],
+      "existing_match_basis": null
+    },
+    {
+      "work_id": "doi:10.3828/dap.2026.7",
+      "title": "Unveiling gender bias in AI: A classroom reflection on media representation and AI literacy in postgraduate education",
+      "normalised_title": "unveiling gender bias in ai a classroom reflection on media representation and ai literacy in postgraduate education",
+      "doi": "10.3828/dap.2026.7",
+      "year": 2026,
+      "authors": [
+        "Hu, T."
+      ],
+      "lanes": [
+        "L3"
+      ],
+      "lane_records": [
+        {
+          "lane": "L3",
+          "source": "Gemini"
+        }
+      ],
+      "intake_status": "zotero_import_logged_export_pending",
+      "zotero_key": null,
+      "paper_source": null,
+      "screening_blockers": [
+        "curated_zotero_identity_missing_from_committed_corpus",
+        "paper_source_not_addressable_by_canonical_id"
+      ],
+      "existing_corpus_candidates": [],
+      "existing_match_basis": null
+    },
+    {
+      "work_id": "doi:10.1080/17439884.2026.2652638",
+      "title": "Metacognitive AI literacy: going beyond the AI skills gap agenda",
+      "normalised_title": "metacognitive ai literacy going beyond the ai skills gap agenda",
+      "doi": "10.1080/17439884.2026.2652638",
+      "year": 2026,
+      "authors": [
+        "Shapiro, H.",
+        "Souto Otero, M.",
+        "Watermeyer, R. P."
+      ],
+      "lanes": [
+        "L3"
+      ],
+      "lane_records": [
+        {
+          "lane": "L3",
+          "source": "Gemini"
+        }
+      ],
+      "intake_status": "zotero_import_logged_export_pending",
+      "zotero_key": null,
+      "paper_source": null,
+      "screening_blockers": [
+        "curated_zotero_identity_missing_from_committed_corpus",
+        "paper_source_not_addressable_by_canonical_id"
+      ],
+      "existing_corpus_candidates": [],
+      "existing_match_basis": null
+    },
+    {
+      "work_id": "doi:10.1108/ijssp-02-2026-0125",
+      "title": "Does being literate in AI make workplaces more equal? The mediating role of psychological capital",
+      "normalised_title": "does being literate in ai make workplaces more equal the mediating role of psychological capital",
+      "doi": "10.1108/ijssp-02-2026-0125",
+      "year": 2026,
+      "authors": [
+        "Pratono, A. H.",
+        "Elgeka, H. W. S.",
+        "Jeong, B. G."
+      ],
+      "lanes": [
+        "L3"
+      ],
+      "lane_records": [
+        {
+          "lane": "L3",
+          "source": "Gemini"
+        }
+      ],
+      "intake_status": "zotero_import_logged_export_pending",
+      "zotero_key": null,
+      "paper_source": null,
+      "screening_blockers": [
+        "curated_zotero_identity_missing_from_committed_corpus",
+        "paper_source_not_addressable_by_canonical_id"
+      ],
+      "existing_corpus_candidates": [],
+      "existing_match_basis": null
+    },
+    {
+      "work_id": "title:critical literacy in an ai world",
+      "title": "Critical Literacy in an AI World",
+      "normalised_title": "critical literacy in an ai world",
+      "doi": null,
+      "year": 2025,
+      "authors": [
+        "Mills, K. A.",
+        "Gutierrez, A."
+      ],
+      "lanes": [
+        "L3"
+      ],
+      "lane_records": [
+        {
+          "lane": "L3",
+          "source": "Gemini"
+        }
+      ],
+      "intake_status": "zotero_import_logged_export_pending",
+      "zotero_key": null,
+      "paper_source": null,
+      "screening_blockers": [
+        "curated_zotero_identity_missing_from_committed_corpus",
+        "paper_source_not_addressable_by_canonical_id"
+      ],
+      "existing_corpus_candidates": [],
+      "existing_match_basis": null
+    },
+    {
+      "work_id": "title:safety guardrails in large language models and selective refusal bias",
+      "title": "Safety guardrails in large language models and selective refusal bias",
+      "normalised_title": "safety guardrails in large language models and selective refusal bias",
+      "doi": null,
+      "year": 2026,
+      "authors": [
+        "Chisca",
+        "Jiang",
+        "Weissburg",
+        "An"
+      ],
+      "lanes": [
+        "L3"
+      ],
+      "lane_records": [
+        {
+          "lane": "L3",
+          "source": "Gemini"
+        }
+      ],
+      "intake_status": "zotero_import_logged_export_pending",
+      "zotero_key": null,
+      "paper_source": null,
+      "screening_blockers": [
+        "curated_zotero_identity_missing_from_committed_corpus",
+        "paper_source_not_addressable_by_canonical_id"
+      ],
+      "existing_corpus_candidates": [],
+      "existing_match_basis": null
+    },
+    {
+      "work_id": "doi:10.31995/jgv.2026.v17i01",
+      "title": "Feminist AI: Confronting Bias, Power, and the Promise of Justice-Oriented Technology",
+      "normalised_title": "feminist ai confronting bias power and the promise of justice oriented technology",
+      "doi": "10.31995/jgv.2026.v17i01",
+      "year": 2026,
+      "authors": [
+        "Singh, R."
+      ],
+      "lanes": [
+        "L3"
+      ],
+      "lane_records": [
+        {
+          "lane": "L3",
+          "source": "Gemini"
+        }
+      ],
+      "intake_status": "zotero_import_logged_export_pending",
+      "zotero_key": null,
+      "paper_source": null,
+      "screening_blockers": [
+        "curated_zotero_identity_missing_from_committed_corpus",
+        "paper_source_not_addressable_by_canonical_id"
+      ],
+      "existing_corpus_candidates": [],
+      "existing_match_basis": null
+    },
+    {
+      "work_id": "doi:10.1215/2834703x-12095946",
+      "title": "The Politics of Prompt Engineering",
+      "normalised_title": "the politics of prompt engineering",
+      "doi": "10.1215/2834703x-12095946",
+      "year": 2025,
+      "authors": [
+        "Halm, Matthew"
+      ],
+      "lanes": [
+        "L5"
+      ],
+      "lane_records": [
+        {
+          "lane": "L5",
+          "source": "ClaudeCode"
+        }
+      ],
+      "intake_status": "zotero_import_pending",
+      "zotero_key": null,
+      "paper_source": null,
+      "screening_blockers": [
+        "curated_zotero_identity_missing_from_committed_corpus",
+        "paper_source_not_addressable_by_canonical_id"
+      ],
+      "existing_corpus_candidates": [],
+      "existing_match_basis": null
+    },
+    {
+      "work_id": "doi:10.1177/14614448261435197",
+      "title": "Gender bias in text-to-image generative artificial intelligence: Neglect and stereotypical presentations across three popular platforms",
+      "normalised_title": "gender bias in text to image generative artificial intelligence neglect and stereotypical presentations across three popular platforms",
+      "doi": "10.1177/14614448261435197",
+      "year": 2026,
+      "authors": [
+        "Weinmann, Hannah",
+        "Messingschlager, Tanja V.",
+        "Appel, Markus"
+      ],
+      "lanes": [
+        "L5"
+      ],
+      "lane_records": [
+        {
+          "lane": "L5",
+          "source": "ClaudeCode"
+        }
+      ],
+      "intake_status": "zotero_import_pending",
+      "zotero_key": null,
+      "paper_source": null,
+      "screening_blockers": [
+        "curated_zotero_identity_missing_from_committed_corpus",
+        "paper_source_not_addressable_by_canonical_id"
+      ],
+      "existing_corpus_candidates": [],
+      "existing_match_basis": null
+    },
+    {
+      "work_id": "doi:10.1111/ejed.70602",
+      "title": "AI For Whom? Participation, Power and Educational Pathways in the Age of Artificial Intelligence",
+      "normalised_title": "ai for whom participation power and educational pathways in the age of artificial intelligence",
+      "doi": "10.1111/ejed.70602",
+      "year": 2026,
+      "authors": [
+        "Autenrieth, Daniel",
+        "Schluchter, Jan-René",
+        "Schulz, Lea"
+      ],
+      "lanes": [
+        "L5"
+      ],
+      "lane_records": [
+        {
+          "lane": "L5",
+          "source": "ClaudeCode"
+        }
+      ],
+      "intake_status": "zotero_import_pending",
+      "zotero_key": null,
+      "paper_source": null,
+      "screening_blockers": [
+        "curated_zotero_identity_missing_from_committed_corpus",
+        "paper_source_not_addressable_by_canonical_id"
+      ],
+      "existing_corpus_candidates": [],
+      "existing_match_basis": null
+    },
+    {
+      "work_id": "doi:10.1080/14680777.2025.2593317",
+      "title": "From salad bar feminism to denotative portraiture: How neoliberalism shapes feminism in AI-Generated visuals",
+      "normalised_title": "from salad bar feminism to denotative portraiture how neoliberalism shapes feminism in ai generated visuals",
+      "doi": "10.1080/14680777.2025.2593317",
+      "year": 2025,
+      "authors": [
+        "Bouko, Catherine",
+        "Colombo, Gabriele",
+        "Joseph, Tiago",
+        "Cenni, Irene"
+      ],
+      "lanes": [
+        "L5"
+      ],
+      "lane_records": [
+        {
+          "lane": "L5",
+          "source": "ClaudeCode"
+        }
+      ],
+      "intake_status": "zotero_import_pending",
+      "zotero_key": null,
+      "paper_source": null,
+      "screening_blockers": [
+        "curated_zotero_identity_missing_from_committed_corpus",
+        "paper_source_not_addressable_by_canonical_id"
+      ],
+      "existing_corpus_candidates": [],
+      "existing_match_basis": null
+    },
+    {
+      "work_id": "doi:10.2991/978-94-6239-618-0_20",
+      "title": "Algorithm beyond Neutrality: Feminist Approaches to Redefining Artificial Intelligence",
+      "normalised_title": "algorithm beyond neutrality feminist approaches to redefining artificial intelligence",
+      "doi": "10.2991/978-94-6239-618-0_20",
+      "year": 2026,
+      "authors": [
+        "Shahi, Manavi",
+        "Kaur, Harleen",
+        "Tyagi, Deepa",
+        "Sood, Rati",
+        "Kumar, Vipin",
+        "Tikaram"
+      ],
+      "lanes": [
+        "L5"
+      ],
+      "lane_records": [
+        {
+          "lane": "L5",
+          "source": "ClaudeCode"
+        }
+      ],
+      "intake_status": "zotero_import_pending",
+      "zotero_key": null,
+      "paper_source": null,
+      "screening_blockers": [
+        "curated_zotero_identity_missing_from_committed_corpus",
+        "paper_source_not_addressable_by_canonical_id"
+      ],
+      "existing_corpus_candidates": [],
+      "existing_match_basis": null
+    }
+  ]
+}

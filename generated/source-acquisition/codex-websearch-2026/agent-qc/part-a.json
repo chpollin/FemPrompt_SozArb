@@ -1,0 +1,117 @@
+{
+  "schema": "femprompt-markdown-agent-qc/0.1",
+  "reviewer": "round2_identity",
+  "reviewed_at": "2026-08-24",
+  "records": [
+    {
+      "candidate_id": "codex-websearch-2026:arxiv:2510.00232",
+      "title": "BiasFreeBench: a Benchmark for Mitigating Bias in Large Language Model Responses",
+      "pdf_file": "generated/pdfs/codex-websearch-2026/febcd242f416adc86eb1.pdf",
+      "markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-clean/febcd242f416adc86eb1.md",
+      "automated_warning": "Table mismatch: PDF=3, MD=13",
+      "identity_match": true,
+      "body_complete": true,
+      "tables": {
+        "pdf_semantic_tables": 13,
+        "markdown_semantic_tables": 13,
+        "material_loss": false,
+        "basis": "Das PDF enthält die nummerierten semantischen Tabellen 1–13. Im Markdown sind alle 13 Beschriftungen, Spaltenstrukturen und Werte als 13 Pipe-Tabellen enthalten. Die automatische PDF-Zahl 3 beruht auf der unzuverlässigen Rastererkennung bei kleinen, teilweise mehrspaltigen Tabellen."
+      },
+      "decision": "approved_for_screening",
+      "issues": [
+        "Abbildungen mit Dialogbeispielen auf PDF-Seiten 26–31 sind im Markdown überwiegend als Bildplatzhalter mit Beschriftung repräsentiert; die umgebenden Abschnitte und Beispieltexte sind vorhanden.",
+        "Einzelne mathematische Indizes, Farbcodierungen und typografische Hervorhebungen der Tabellen wurden vereinfacht, ohne Tabellenwerte oder ihre semantische Zuordnung zu verlieren."
+      ],
+      "evidence": [
+        "PDF und Markdown beginnen mit demselben Titel, denselben sechs Autor:innen, Abstract und Einleitung.",
+        "Alle PDF-Seiten 1–31 besitzen genau einen korrespondierenden PAGE-Marker im Markdown.",
+        "Die Überschriftenfolge von Introduction über Related Work, Techniques, Implementation, Experimental Results und Conclusion bis Ethics, Reproducibility, References und Anhänge A–D ist erhalten.",
+        "Die Tabellen 1–4 stehen im Haupttext; Tabellen 5–13 stehen in den Anhängen. Alle 13 erscheinen mit Inhalt im Markdown.",
+        "Das PDF endet auf Seite 31 mit Figure 17; der Markdown-Text endet ebenfalls mit PAGE 31 und der Beschriftung von Figure 17."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.18653/v1/2026.findings-acl.585",
+      "title": "Persona-Assigned Large Language Models Exhibit Human-Like Motivated Reasoning",
+      "pdf_file": "generated/pdfs/codex-websearch-2026/4dbe6aa9dfa229e88746.pdf",
+      "markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-clean/4dbe6aa9dfa229e88746.md",
+      "automated_warning": "Table mismatch: PDF=1, MD=17",
+      "identity_match": true,
+      "body_complete": true,
+      "tables": {
+        "pdf_semantic_tables": 21,
+        "markdown_semantic_tables": 21,
+        "material_loss": false,
+        "basis": "Das PDF enthält 21 nummerierte semantische Tabellen. Im Markdown sind die Beschriftungen 1–21 und die jeweils zugehörigen Inhalte vollständig vorhanden. Numerische Tabellen wurden als Pipe-Tabellen, kurze Prompt-, Probe- und Itemtabellen teilweise als Überschrift mit strukturiertem Fließtext oder Listen umgesetzt; zwei semantische Kontingenztafeln bestehen jeweils aus mehreren Pipe-Blöcken. Deshalb ist die automatische Blockzahl 17 weder mit der PDF-Detektion 1 noch direkt mit der semantischen Zahl vergleichbar."
+      },
+      "decision": "approved_for_screening",
+      "issues": [
+        "Im Anhang stehen bei Tabellen 4–14 einzelne Beschriftungen durch die zweispaltige Lesereihenfolge vor oder nach dem zugehörigen Tabelleninhalt; Beschriftung und Daten bleiben eindeutig zuordenbar.",
+        "Tabellen 4 und 5 sowie die Itemtabellen 15–18 sind als strukturierter Text beziehungsweise Listen statt als Pipe-Tabellen kodiert.",
+        "Diagramme und promptbasierte Abbildungen sind teilweise nur durch Bildplatzhalter und Beschriftungen repräsentiert; dies betrifft keine nummerierte semantische Tabelle."
+      ],
+      "evidence": [
+        "Titel, Autor:innenblock und Abstract auf PDF-Seite 1 stimmen mit dem Markdown-Anfang überein.",
+        "Alle PDF-Seiten 1–27 besitzen genau einen korrespondierenden PAGE-Marker im Markdown.",
+        "Die Hauptgliederung Introduction, Related Work, Methodology & Setup, Results, Discussion, Limitations, Ethics Statement, Acknowledgments, References und Appendix A.1–A.9 ist vollständig und in derselben Folge vorhanden.",
+        "Die visuelle Prüfung der PDF-Seiten 3, 7 und 14–24 erfasst die Tabellen 1–21; sämtliche Beschriftungen und Inhalte wurden im Markdown wiedergefunden.",
+        "Das Dokumentende mit den Abbildungen 20–22 auf PDF-Seiten 26–27 ist im Markdown einschließlich PAGE 27 und Figure 22 erhalten."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.63317/2hn5gs6yh5m2",
+      "title": "I Am Not Them: Persistent Outgroup Bias in Large Language Models Arising from Social Identity Persona Setting",
+      "pdf_file": "generated/pdfs/codex-websearch-2026/f403809ad4503150093a.pdf",
+      "markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-clean/f403809ad4503150093a.md",
+      "automated_warning": "Table mismatch: PDF=0, MD=7",
+      "identity_match": true,
+      "body_complete": true,
+      "tables": {
+        "pdf_semantic_tables": 8,
+        "markdown_semantic_tables": 8,
+        "material_loss": false,
+        "basis": "Das PDF enthält die nummerierten semantischen Tabellen 1–8. Das Markdown enthält sieben Pipe-Tabellen; Tabelle 6 ist vollständig als zwei beschriftete nummerierte Listen für Sexismus gegen Männer und Frauen wiedergegeben. Damit sind alle acht Tabellen semantisch vorhanden. Die automatische PDF-Zahl 0 ist eine Detektionsfehlleistung bei den linienarmen Konferenzsatz-Tabellen."
+      },
+      "decision": "approved_for_screening",
+      "issues": [
+        "Tabelle 6 wurde als strukturierte Listen statt als Pipe-Tabelle umgesetzt.",
+        "Bei großen Tabellen auf den PDF-Seiten 14–15 sind Zeilenumbrüche und typografische Hervorhebungen vereinfacht; Aussagen, Bedingungen und numerische Werte bleiben erhalten."
+      ],
+      "evidence": [
+        "PDF und Markdown beginnen mit identischem Titel, denselben sechs Autor:innen und dem vollständigen Abstract.",
+        "Alle PDF-Seiten 1–15 besitzen genau einen korrespondierenden PAGE-Marker im Markdown.",
+        "Die Gliederung von Introduction und Related Work über Methods, Results, Replikation im Gender-Bereich, Discussion, Limitations, Ethical Considerations und References bis Appendix ist vollständig erhalten.",
+        "Die PDF-Seiten 6–8 enthalten Tabellen 1–3, die PDF-Seiten 14–15 Tabellen 4–8; alle acht Beschriftungen und zugehörigen Inhalte sind im Markdown vorhanden.",
+        "Das PDF endet auf Seite 15 mit Tabelle 8; auch der Markdown-Text endet mit deren vollständiger Beschriftung, Itemstruktur und Ergebniswerten."
+      ]
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.25009/is.v11i21.3001",
+      "title": "Análisis de la desinformación y los sesgos de género generados por la inteligencia artificial",
+      "pdf_file": "generated/pdfs/codex-websearch-2026/050d5f410967dd9371a0.pdf",
+      "markdown_file": "generated/source-acquisition/codex-websearch-2026/markdown-clean/050d5f410967dd9371a0.md",
+      "automated_warning": "Table mismatch: PDF=1, MD=0",
+      "identity_match": true,
+      "body_complete": true,
+      "tables": {
+        "pdf_semantic_tables": 0,
+        "markdown_semantic_tables": 0,
+        "material_loss": false,
+        "basis": "Das PDF enthält keine semantische Datentabelle. Die automatische PDF-Zahl 1 erfasst den grafisch gerahmten Zeitschriften- und Zitierkasten auf Seite 1 als Layouttabelle. Dessen bibliografische Angaben, Begutachtungsdaten und Lizenztext sind im Markdown als Text vorhanden."
+      },
+      "decision": "approved_for_screening",
+      "issues": [
+        "Die zweispaltige Literaturliste ist vollständig, weist im Markdown jedoch zahlreiche nichtmaterielle Formatierungsartefakte auf: falsche Überschriftenebenen, getrennte URLs, einzelne zusammengezogene Einträge und zwei überzählige Codezäune.",
+        "Der DOI im Zitierkasten wurde durch einen Zeilenumbruch als „10.25009/is.v1 1i21.3001“ getrennt; Titel und candidate_id bleiben über Manifest und PDF eindeutig.",
+        "Versalienüberschriften wurden mit zusätzlichen Leerzeichen konvertiert, etwa „I NTRODUCCIÓN“ und „R EFERENCIAS“."
+      ],
+      "evidence": [
+        "PDF-Seite 1 und Markdown-Seite 1 stimmen bei Titel, Autorin, Abstract, Resumen, Eingangsdatum 22. Juli 2025, Annahmedatum 13. April 2026 und Veröffentlichungsdatum 13. Juli 2026 überein.",
+        "Alle PDF-Seiten 1–18 besitzen genau einen korrespondierenden PAGE-Marker im Markdown.",
+        "Die Abschnitte Introducción, Research Hypotheses, Methodology, Analysis mit fünf Unterabschnitten, Conclusions und Referencias sind vollständig und in derselben Folge vorhanden.",
+        "Der visuell als Tabelle erkannte Block auf PDF-Seite 1 ist ausschließlich Seiten- und Zitationslayout; das PDF enthält im Artikelkörper keine nummerierte oder semantische Tabelle.",
+        "Der letzte Literaturblock auf PDF-Seite 18 mit UNESCO, Vaitla, Wachter-Boettcher, Wajcman, Wang, Wellner, Wilfore, Wojatzki, World Economic Forum, Zhao und Zimmerman ist auch am Markdown-Ende vorhanden."
+      ]
+    }
+  ]
+}

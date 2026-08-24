@@ -1,0 +1,1093 @@
+{
+  "schema": "femprompt-contextual-update-intake/0.1",
+  "update_id": "contextual-update-2026-08-24",
+  "cutoff_date": "2026-08-24",
+  "purpose": "Dated candidate supplement for Zotero curation and governed screening",
+  "selection_rule": "Tier A in at least one contextual search lane; identification priority does not establish PRISM inclusion",
+  "original_round2_window": {
+    "start": "2025-07-01",
+    "end": "2026-06-30",
+    "retrospectively_changed": false
+  },
+  "sources": [
+    {
+      "path": "corpus/deep-research/round2/contextual-update-2026-08-24/lane-a-social-work.json",
+      "sha256": "568d9c05ff3e0171ccbfadb5d54144e4b6853dcfceba89b8cd2a96b71c09a15c",
+      "lane_id": "A"
+    },
+    {
+      "path": "corpus/deep-research/round2/contextual-update-2026-08-24/lane-b-feminist-social-work.json",
+      "sha256": "382f1facb1e9ceda8c42de6678dc249f978e10d58b580ee5df08705f07ff313f",
+      "lane_id": "B"
+    },
+    {
+      "path": "corpus/deep-research/round2/contextual-update-2026-08-24/lane-c-prompt-bias.json",
+      "sha256": "a05971cb18749bb74ab7156c94e0ea65694fea6302d4078b80a410bf7eaa5732",
+      "lane_id": "C"
+    }
+  ],
+  "counts": {
+    "selected_records": 23,
+    "new_works": 22,
+    "new_versions_of_existing_works": 1,
+    "open_access": 18,
+    "fulltext_located": 19,
+    "before_original_window": 2,
+    "within_original_window": 17,
+    "after_original_window": 4,
+    "date_not_established": 0
+  },
+  "zotero_target": {
+    "library_name": "FemPrompt_SozArb",
+    "group_id": "6080294",
+    "import_status": "not_imported"
+  },
+  "gate": {
+    "status": "operator_action_required",
+    "required_actions": [
+      "import_RIS_into_confirmed_Zotero_group_library",
+      "curate_metadata_and_Work-Version_relations_in_Zotero",
+      "export_curated_Zotero_library",
+      "rebuild_Work-Version_registry",
+      "acquire_convert_and_review_preferred_fulltexts",
+      "run_governed_PRISM_screening"
+    ]
+  },
+  "records": [
+    {
+      "tier": "A",
+      "title": "Toward True Neutrality: Evaluating Inference-Time Debiasing Strategies for Gender Coreference Resolution in LLMs",
+      "authors": [
+        "Arati Mohapatra",
+        "S Jaya Nirmala"
+      ],
+      "publication_date": "2025-12",
+      "publication_type": "conference_paper",
+      "venue": "Proceedings of the 39th Pacific Asia Conference on Language, Information and Computation",
+      "doi": null,
+      "other_identifiers": {
+        "acl_anthology": "2025.paclic-1.19"
+      },
+      "version_status": "official PACLIC 2025 proceedings version; no preprint found",
+      "peer_review_evidence": "ACL Anthology records the paper in the PACLIC 2025 proceedings.",
+      "open_access": true,
+      "fulltext_url": "https://aclanthology.org/2025.paclic-1.19.pdf",
+      "landing_url": "https://aclanthology.org/2025.paclic-1.19/",
+      "eligibility_technical": "Compares self-correction, self-consistency and chain-of-thought for occupational gender coreference while measuring bias reduction and computational cost; low-bias-feedback self-correction improves performance by up to 41 percent over self-consistent prompting.",
+      "eligibility_social": "Directly addresses gender bias affecting women and non-binary people in a task motivated by healthcare, education and finance deployments.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "The study also qualitatively analyzes bias, logic and grammaticality patterns in chain-of-thought responses.",
+        "No DOI is listed in ACL Anthology."
+      ],
+      "candidate_id": "contextual:acl_anthology:2025.paclic-1.19",
+      "source_lanes": [
+        "C"
+      ],
+      "source_tiers": {
+        "C": "A"
+      },
+      "identity_status": "new_work",
+      "original_round2_window_relation": "within_original_window",
+      "zotero_status": "prepared_for_import",
+      "screening_status": "identified_not_screened",
+      "lifecycle_state": "identified"
+    },
+    {
+      "tier": "A",
+      "title": "Prompting Fairness: Integrating Causality to Debias Large Language Models",
+      "authors": [
+        "Jingling Li",
+        "Zeyu Tang",
+        "Xiaoyu Liu",
+        "Peter Spirtes",
+        "Kun Zhang",
+        "Liu Leqi",
+        "Yang Liu"
+      ],
+      "publication_date": "2025",
+      "publication_type": "conference_paper",
+      "venue": "International Conference on Learning Representations 2025",
+      "doi": null,
+      "other_identifiers": {
+        "arxiv": "2403.08743",
+        "openreview": "7GKbQ1WT1C",
+        "iclr_proceedings_hash": "9f26a2d143a227376dff99a279f93f99"
+      },
+      "version_status": "arXiv v1 2024-03-13, v2 2025-03-02; official ICLR 2025 conference paper",
+      "peer_review_evidence": "Official ICLR 2025 proceedings record and OpenReview conference-paper record.",
+      "open_access": true,
+      "fulltext_url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/9f26a2d143a227376dff99a279f93f99-Paper-Conference.pdf",
+      "landing_url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/9f26a2d143a227376dff99a279f93f99-Abstract-Conference.html",
+      "eligibility_technical": "Develops a causality-guided debiasing framework and Dual Directional Prompting; evaluates black-box LLMs on WinoBias and BBQ. On WinoBias, GPT-4 reaches a 2.17 percent pro/anti gap and 94.57 percent accuracy on anti-stereotypical cases.",
+      "eligibility_social": "Targets gender and broader social bias and explicitly motivates the method with high-stakes hiring and healthcare decisions.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "This is distinct from the locally present work Prompting fairness: Learning prompts for debiasing large language models.",
+        "Open preprint landing page: https://arxiv.org/abs/2403.08743"
+      ],
+      "candidate_id": "contextual:arxiv:2403.08743",
+      "source_lanes": [
+        "C"
+      ],
+      "source_tiers": {
+        "C": "A"
+      },
+      "identity_status": "new_work",
+      "original_round2_window_relation": "within_original_window",
+      "zotero_status": "prepared_for_import",
+      "screening_status": "identified_not_screened",
+      "lifecycle_state": "identified"
+    },
+    {
+      "tier": "A",
+      "title": "Gender Bias in LLM Hiring Decisions: Evidence from a Japanese Context and Evaluation of Mitigation Strategies",
+      "authors": [
+        "Serena A. Hoffstedde",
+        "Machiko Hirota",
+        "Akshara Nadayanur Sathis Kanna",
+        "Rihito Kotani",
+        "Ujwal Kumar",
+        "Gabriele Trovato",
+        "Phan Xuan Tan"
+      ],
+      "publication_date": "2026-06-17",
+      "publication_type": "preprint",
+      "venue": "arXiv",
+      "doi": null,
+      "other_identifiers": {
+        "arxiv": "2606.18649",
+        "arxiv_datacite_doi": "10.48550/arXiv.2606.18649"
+      },
+      "version_status": "arXiv v1; no accepted conference or journal version found by the cutoff date",
+      "peer_review_evidence": "No peer-review evidence found; preprint only.",
+      "open_access": true,
+      "fulltext_url": "https://arxiv.org/pdf/2606.18649",
+      "landing_url": "https://arxiv.org/abs/2606.18649",
+      "eligibility_technical": "Counterfactual design with 60 Japanese rirekisho resumes, 12 gender-signaling name pairs, five LLMs and 43200 API calls across baseline, gender-neutrality instruction and privacy-filter conditions. The prompt instruction does not meaningfully reduce bias; removing names removes nearly the full effect.",
+      "eligibility_social": "Direct gender-bias evidence in hiring, with a non-Western setting and practical privacy/refusal trade-offs relevant to personnel and case decisions.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "The privacy-filter condition produces a 42 percent refusal rate for GPT-4o.",
+        "Findings remain provisional because the work is not peer reviewed."
+      ],
+      "candidate_id": "contextual:arxiv:2606.18649",
+      "source_lanes": [
+        "C"
+      ],
+      "source_tiers": {
+        "C": "A"
+      },
+      "identity_status": "new_work",
+      "original_round2_window_relation": "within_original_window",
+      "zotero_status": "prepared_for_import",
+      "screening_status": "identified_not_screened",
+      "lifecycle_state": "identified"
+    },
+    {
+      "tier": "A",
+      "title": "Are future social workers ready for AI? Fears, barriers, and learning needs in higher education",
+      "authors": [
+        "Sacramento Pinazo-Hernandis",
+        "Nuria Carcavilla-González"
+      ],
+      "publication_date": "2026-02-23",
+      "publication_type": "research_article",
+      "venue": "Social Work Education, 1-15",
+      "doi": "10.1080/02615479.2026.2631708",
+      "other_identifiers": {},
+      "version_status": "version_of_record_online_first",
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "received": "2025-07-18",
+        "accepted": "2026-02-02",
+        "evidence_url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2631708"
+      },
+      "open_access": true,
+      "fulltext_url": "https://www.tandfonline.com/doi/pdf/10.1080/02615479.2026.2631708",
+      "landing_url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2631708",
+      "eligibility_technical": "Empirische Untersuchung der KI-Kompetenz und Nutzungsvorstellungen von 42 Sozialarbeitsstudierenden; ChatGPT-basierte Lernformen werden einbezogen.",
+      "eligibility_social": "Behandelt professionelle Identität, ethische und relationale Kompetenz, algorithmischen Bias und Auswirkungen auf vulnerable Gruppen.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "CC BY-NC-ND 4.0.",
+        "Online-first veröffentlichte Verlagsfassung."
+      ],
+      "candidate_id": "contextual:doi:10.1080/02615479.2026.2631708",
+      "source_lanes": [
+        "B"
+      ],
+      "source_tiers": {
+        "B": "A"
+      },
+      "identity_status": "new_work",
+      "original_round2_window_relation": "within_original_window",
+      "zotero_status": "prepared_for_import",
+      "screening_status": "identified_not_screened",
+      "lifecycle_state": "identified"
+    },
+    {
+      "tier": "A",
+      "title": "Promoting AI literacy in social work education: lessons from an interdisciplinary course for social work students",
+      "authors": [
+        "Joshua Weber",
+        "Lauri Goldkind"
+      ],
+      "publication_date": "2026-02-24",
+      "publication_type": "research_article",
+      "venue": "Social Work Education, 1-17",
+      "doi": "10.1080/02615479.2026.2635471",
+      "other_identifiers": {
+        "repository_doi": "10.26041/fhnw-15616"
+      },
+      "version_status": "version_of_record_online_first",
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "received": "2025-08-13",
+        "accepted": "2026-02-11",
+        "evidence_url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2635471"
+      },
+      "open_access": true,
+      "fulltext_url": "https://irf.fhnw.ch/server/api/core/bitstreams/58e87312-aca1-4b37-9e15-988182c55803/content",
+      "landing_url": "https://irf.fhnw.ch/entities/publication/895bedd9-51aa-41ac-942a-7c2d20210c32",
+      "eligibility_technical": "Empirisch evaluierter Kurs zu generativer KI, Large Language Models, Prompt Engineering und CustomGPTs.",
+      "eligibility_social": "Untersucht Sozialarbeitsstudierende; ethische Navigation schließt Bias, Accountability und Fairness ein und wird um digitale Vulnerabilität und Data Justice ergänzt.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "CC BY-NC-ND 4.0.",
+        "Online-first veröffentlichte Verlagsfassung im FHNW-Repositorium."
+      ],
+      "candidate_id": "contextual:doi:10.1080/02615479.2026.2635471",
+      "source_lanes": [
+        "B"
+      ],
+      "source_tiers": {
+        "B": "A"
+      },
+      "identity_status": "new_work",
+      "original_round2_window_relation": "within_original_window",
+      "zotero_status": "prepared_for_import",
+      "screening_status": "identified_not_screened",
+      "lifecycle_state": "identified"
+    },
+    {
+      "tier": "A",
+      "title": "Towards a framework for digital literacy in social work education in a time of artificial intelligence",
+      "authors": [
+        "Michael Wallengren-Lynch"
+      ],
+      "publication_date": "2026-04-16",
+      "publication_type": "research_article",
+      "venue": "Social Work Education, 1-18",
+      "doi": "10.1080/02615479.2026.2660786",
+      "other_identifiers": {},
+      "version_status": "version_of_record_online_first",
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "received": "2025-02-05",
+        "accepted": "2026-04-07",
+        "evidence_url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2660786"
+      },
+      "open_access": true,
+      "fulltext_url": "https://www.tandfonline.com/doi/pdf/10.1080/02615479.2026.2660786",
+      "landing_url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2660786",
+      "eligibility_technical": "Entwickelt kritische KI- und Digitalkompetenz und nutzt ein Fallbeispiel zu stereotypen KI-generierten Bildern.",
+      "eligibility_social": "Expliziter Rahmen für Sozialarbeitsausbildung auf Basis dekolonialer Theorie, Anti-Rassismus, sozialer Gerechtigkeit und Community-Anbindung.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "CC BY 4.0.",
+        "Online-first veröffentlichte Verlagsfassung."
+      ],
+      "candidate_id": "contextual:doi:10.1080/02615479.2026.2660786",
+      "source_lanes": [
+        "B"
+      ],
+      "source_tiers": {
+        "B": "A"
+      },
+      "identity_status": "new_work",
+      "original_round2_window_relation": "within_original_window",
+      "zotero_status": "prepared_for_import",
+      "screening_status": "identified_not_screened",
+      "lifecycle_state": "identified"
+    },
+    {
+      "tier": "A",
+      "title": "A kind of magic? Artificial intelligence-assisted recording: developing principles for an AI-informed social work curriculum",
+      "authors": [
+        "Richard Ingram"
+      ],
+      "publication_date": "2026-05-11",
+      "publication_type": "research_article",
+      "venue": "Social Work Education, 1-18",
+      "doi": "10.1080/02615479.2026.2669634",
+      "other_identifiers": {},
+      "version_status": "version_of_record_online_first",
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "received": "2026-03-19",
+        "accepted": "2026-04-22",
+        "evidence_url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2669634"
+      },
+      "open_access": true,
+      "fulltext_url": "https://www.tandfonline.com/doi/pdf/10.1080/02615479.2026.2669634",
+      "landing_url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2669634",
+      "eligibility_technical": "Evaluiert KI-gestützte Dokumentation in einer schottischen Kommunalverwaltung anhand der Erfahrungen von 152 Praktikerinnen und Praktikern.",
+      "eligibility_social": "Leitet Prinzipien für die Sozialarbeitsausbildung ab und behandelt unterschiedliche Wirkungen auf neurodivergente Fachkräfte und Studierende sowie Equity und Inclusion.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "CC BY-NC-ND 4.0.",
+        "Online-first veröffentlichte Verlagsfassung."
+      ],
+      "candidate_id": "contextual:doi:10.1080/02615479.2026.2669634",
+      "source_lanes": [
+        "B"
+      ],
+      "source_tiers": {
+        "B": "A"
+      },
+      "identity_status": "new_work",
+      "original_round2_window_relation": "within_original_window",
+      "zotero_status": "prepared_for_import",
+      "screening_status": "identified_not_screened",
+      "lifecycle_state": "identified"
+    },
+    {
+      "tier": "A",
+      "title": "Artificial intelligence: a neoliberal tool to better manage social inequalities?",
+      "authors": [
+        "Paul Michael Garrett"
+      ],
+      "publication_date": "2026-02-03",
+      "publication_type": "research_article",
+      "venue": "European Journal of Social Work 29(5), 1029-1041",
+      "doi": "10.1080/13691457.2025.2607705",
+      "other_identifiers": {},
+      "version_status": "version_of_record",
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "received": "2025-03-15",
+        "accepted": "2025-12-16",
+        "evidence_url": "https://www.tandfonline.com/doi/full/10.1080/13691457.2025.2607705"
+      },
+      "open_access": false,
+      "fulltext_url": "https://www.tandfonline.com/doi/full/10.1080/13691457.2025.2607705",
+      "landing_url": "https://doi.org/10.1080/13691457.2025.2607705",
+      "eligibility_technical": "Kritische Untersuchung von KI, Predictive Analytics und automatisierter Verwaltung in Wohlfahrtssystemen.",
+      "eligibility_social": "Behandelt soziale und ökonomische Ungleichheit, Rationierung sozialer Leistungen, Rassismus, digitale Kolonialität und Kinderfürsorge aus sozialarbeitswissenschaftlicher Perspektive.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "Verlags-HTML war zugänglich; eine offene Creative-Commons-Lizenz ist in Crossref nicht ausgewiesen."
+      ],
+      "candidate_id": "contextual:doi:10.1080/13691457.2025.2607705",
+      "source_lanes": [
+        "B"
+      ],
+      "source_tiers": {
+        "B": "A"
+      },
+      "identity_status": "new_work",
+      "original_round2_window_relation": "within_original_window",
+      "zotero_status": "prepared_for_import",
+      "screening_status": "identified_not_screened",
+      "lifecycle_state": "identified"
+    },
+    {
+      "tier": "A",
+      "title": "The (Un)Fair Algorithm: Socio-Technical Ethics Work for Artificial Intelligence in Social Work",
+      "authors": [
+        "Ida Schrøder",
+        "Marie Leth Meilvang",
+        "Matilde Høybye-Mortensen"
+      ],
+      "publication_date": "2026-02-18",
+      "publication_type": "research_article",
+      "venue": "Ethics and Social Welfare 20(3), 409-424",
+      "doi": "10.1080/17496535.2026.2619945",
+      "other_identifiers": {},
+      "version_status": "version_of_record",
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "received": "2025-03-19",
+        "accepted": "2026-01-16",
+        "evidence_url": "https://www.tandfonline.com/doi/full/10.1080/17496535.2026.2619945"
+      },
+      "open_access": true,
+      "fulltext_url": "https://www.tandfonline.com/doi/pdf/10.1080/17496535.2026.2619945",
+      "landing_url": "https://www.tandfonline.com/doi/full/10.1080/17496535.2026.2619945",
+      "eligibility_technical": "Organisatorische Ethnografie zur Entwicklung eines KI-Beratungsassistenten; im Projekt wurde später ein kommerzielles Sprachmodell eingesetzt.",
+      "eligibility_social": "Der Assistent unterstützt Beratende in schriftlichen Gesprächen mit hilfesuchenden Kindern; Fairness und Diskriminierung nach Geschlecht, Alter, Race und Religion werden explizit untersucht.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "CC BY-NC-ND 4.0.",
+        "Das institutionelle Repositorium UC Viden klassifiziert den Beitrag zusätzlich als peer-reviewed research article."
+      ],
+      "candidate_id": "contextual:doi:10.1080/17496535.2026.2619945",
+      "source_lanes": [
+        "B"
+      ],
+      "source_tiers": {
+        "B": "A"
+      },
+      "identity_status": "new_work",
+      "original_round2_window_relation": "within_original_window",
+      "zotero_status": "prepared_for_import",
+      "screening_status": "identified_not_screened",
+      "lifecycle_state": "identified"
+    },
+    {
+      "tier": "A",
+      "title": "Can a Large Language Model Judge a Child’s Statement?: A Comparative Analysis of ChatGPT and Human Experts in Credibility Assessment",
+      "authors": [
+        "Zeki Karataş"
+      ],
+      "publication_date": "2025-08-11",
+      "publication_type": "journal_article",
+      "venue": "Journal of Evidence-Based Social Work",
+      "doi": "10.1080/26408066.2025.2547211",
+      "other_identifiers": {},
+      "version_status": "version_of_record",
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Crossref enthält einen Peer-Review-Policy-Verweis des Journals, aber keine item-spezifische Annahmehistorie.",
+        "evidence_url": "https://doi.org/10.1080/26408066.2025.2547211"
+      },
+      "open_access": false,
+      "fulltext_url": null,
+      "landing_url": "https://doi.org/10.1080/26408066.2025.2547211",
+      "eligibility_technical": "Generative_KI. Hochsensible Glaubwürdigkeitsbeurteilung im Kindeswohlkontext",
+      "eligibility_social": "Soziale_Arbeit, Bias_Ungleichheit, Fairness. Hochsensible Glaubwürdigkeitsbeurteilung im Kindeswohlkontext",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "Vergleicht GPT-4o mit einem forensisch-psychologischen und einem sozialarbeiterischen Urteil bei 65 Aussagen zu sexuellem Kindesmissbrauch anhand von 19 CBCA-Kriterien. Das Modell weicht bei kontextabhängigen Kriterien systematisch von den menschlichen Fachurteilen ab.",
+        "Prioritär aufnehmen; direkter LLM- und Fairnessbezug bei Kindeswohlentscheidungen. Volltextbeschaffung erforderlich."
+      ],
+      "candidate_id": "contextual:doi:10.1080/26408066.2025.2547211",
+      "source_lanes": [
+        "A"
+      ],
+      "source_tiers": {
+        "A": "A"
+      },
+      "identity_status": "new_work",
+      "original_round2_window_relation": "within_original_window",
+      "zotero_status": "prepared_for_import",
+      "screening_status": "identified_not_screened",
+      "lifecycle_state": "identified"
+    },
+    {
+      "tier": "A",
+      "title": "Small Models Achieve Large Language Model Performance: Evaluating Reasoning-Enabled AI for Secure Child Welfare Research",
+      "authors": [
+        "Zia Qi",
+        "Brian E. Perron",
+        "Bryan G. Victor",
+        "Dragan Stoll",
+        "Joseph P. Ryan"
+      ],
+      "publication_date": "2026-01-18",
+      "publication_type": "journal_article",
+      "venue": "Journal of Evidence-Based Social Work",
+      "doi": "10.1080/26408066.2026.2616711",
+      "other_identifiers": {
+        "arxiv": "2512.04261",
+        "arxiv_doi": "10.48550/arXiv.2512.04261"
+      },
+      "version_status": "preprint v1 2025-12-03; preprint v2 2026-01-10; version of record 2026-01-18 (preferred bibliographic version)",
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Taylor & Francis weist eine Version of Record und die Journal-Peer-Review-Policy aus; eine item-spezifische Annahmehistorie war in Crossref nicht enthalten.",
+        "evidence_url": "https://doi.org/10.1080/26408066.2026.2616711"
+      },
+      "open_access": true,
+      "fulltext_url": "https://arxiv.org/pdf/2512.04261",
+      "landing_url": "https://doi.org/10.1080/26408066.2026.2616711",
+      "eligibility_technical": "Generative_KI. Sichere und validierte Sprachmodellnutzung in der Kindeswohlforschung",
+      "eligibility_social": "Soziale_Arbeit, Bias_Ungleichheit, Fairness. Sichere und validierte Sprachmodellnutzung in der Kindeswohlforschung",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "Benchmarkt sieben Sprachmodellgrößen für häusliche Gewalt, Schusswaffen, substanzbezogene Probleme und Opioide in Kindeswohlakten. Ein reasoning-gestütztes 4B-Modell erreicht bei drei Benchmarks Kappa-Werte von 0,93 bis 0,96 und bei häuslicher Gewalt 0,74.",
+        "Als einen neuen Work mit zwei Preprintrevisionen und einer Version of Record aufnehmen; arXiv-Volltext für Screening verwenden und Versionen verknüpfen."
+      ],
+      "versions": [
+        {
+          "version_type": "preprint_v1",
+          "identifiers": {
+            "arxiv": "2512.04261",
+            "doi": "10.48550/arXiv.2512.04261"
+          },
+          "date": "2025-12-03",
+          "peer_review_status": "not_peer_reviewed",
+          "basis": "arXiv-Preprint v1 laut Submission History.",
+          "landing_url": "https://arxiv.org/abs/2512.04261v1",
+          "fulltext_url": "https://arxiv.org/pdf/2512.04261v1",
+          "license": null
+        },
+        {
+          "version_type": "preprint_v2",
+          "identifiers": {
+            "arxiv": "2512.04261",
+            "doi": "10.48550/arXiv.2512.04261"
+          },
+          "date": "2026-01-10",
+          "peer_review_status": "not_peer_reviewed",
+          "basis": "arXiv-Preprint v2 laut Submission History; arXiv nennt die spätere Verlags-DOI als Related DOI.",
+          "landing_url": "https://arxiv.org/abs/2512.04261",
+          "fulltext_url": "https://arxiv.org/pdf/2512.04261",
+          "license": null
+        },
+        {
+          "version_type": "version_of_record",
+          "identifiers": {
+            "doi": "10.1080/26408066.2026.2616711",
+            "arxiv": "2512.04261"
+          },
+          "date": "2026-01-18",
+          "peer_review_status": "not_established",
+          "basis": "Taylor & Francis weist eine Version of Record und die Journal-Peer-Review-Policy aus; eine item-spezifische Annahmehistorie war in Crossref nicht enthalten.",
+          "landing_url": "https://doi.org/10.1080/26408066.2026.2616711",
+          "fulltext_url": "https://www.tandfonline.com/doi/pdf/10.1080/26408066.2026.2616711?needAccess=true",
+          "license": null
+        }
+      ],
+      "candidate_id": "contextual:doi:10.1080/26408066.2026.2616711",
+      "source_lanes": [
+        "A"
+      ],
+      "source_tiers": {
+        "A": "A"
+      },
+      "identity_status": "new_work",
+      "original_round2_window_relation": "within_original_window",
+      "zotero_status": "prepared_for_import",
+      "screening_status": "identified_not_screened",
+      "lifecycle_state": "identified"
+    },
+    {
+      "tier": "A",
+      "title": "Using ChatGPT for Qualitative Social Media Analysis: Insights for Cross-Cultural Social Work",
+      "authors": [
+        "Michin Hong",
+        "Grace Yi"
+      ],
+      "publication_date": "2026-06-01",
+      "publication_type": "journal_article",
+      "venue": "Journal of the Society for Social Work and Research",
+      "doi": "10.1086/740605",
+      "other_identifiers": {},
+      "version_status": "version_of_record",
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Crossref weist einen Journal Article in Journal of the Society for Social Work and Research aus; eine item-spezifische Begutachtungshistorie war nicht belegt.",
+        "evidence_url": "https://doi.org/10.1086/740605"
+      },
+      "open_access": false,
+      "fulltext_url": null,
+      "landing_url": "https://doi.org/10.1086/740605",
+      "eligibility_technical": "Generative_KI. Cross-Cultural Social Work und qualitative Forschung",
+      "eligibility_social": "Soziale_Arbeit, Diversitaet. Cross-Cultural Social Work und qualitative Forschung",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "Methodische Untersuchung von ChatGPT für qualitative Social-Media-Analyse in kulturvergleichender sozialarbeiterischer Forschung.",
+        "Aufnehmen; direkter ChatGPT- und kulturvergleichender Sozialarbeitsbezug. Volltextbeschaffung erforderlich."
+      ],
+      "candidate_id": "contextual:doi:10.1086/740605",
+      "source_lanes": [
+        "A"
+      ],
+      "source_tiers": {
+        "A": "A"
+      },
+      "identity_status": "new_work",
+      "original_round2_window_relation": "within_original_window",
+      "zotero_status": "prepared_for_import",
+      "screening_status": "identified_not_screened",
+      "lifecycle_state": "identified"
+    },
+    {
+      "tier": "A",
+      "title": "Same Prompt, Different Care? Evaluating Inequities in AI-Generated Mental Health Support for Immigrant Communities",
+      "authors": [
+        "Cheng Chow",
+        "Xiuer Gu"
+      ],
+      "publication_date": "2026-07-28",
+      "publication_type": "journal_article",
+      "venue": "Journal of the Society for Social Work and Research",
+      "doi": "10.1086/743397",
+      "other_identifiers": {},
+      "version_status": "version_of_record",
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Crossref weist einen Journal Article in Journal of the Society for Social Work and Research aus; eine item-spezifische Annahme- oder Begutachtungshistorie war nicht belegt.",
+        "evidence_url": "https://doi.org/10.1086/743397"
+      },
+      "open_access": false,
+      "fulltext_url": null,
+      "landing_url": "https://doi.org/10.1086/743397",
+      "eligibility_technical": "Generative_KI, Prompting. Human Services und mentale Gesundheit mit explizitem Immigrationsbezug",
+      "eligibility_social": "Bias_Ungleichheit, Fairness, Diversitaet. Human Services und mentale Gesundheit mit explizitem Immigrationsbezug",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "Untersucht bei identischem Prompt Ungleichheiten in KI-generierter Unterstützung zur mentalen Gesundheit für Immigrant:innengemeinschaften.",
+        "Prioritär aufnehmen; direkter GenAI-, Prompting-, Ungleichheits- und Diversitätsbezug. Volltextbeschaffung erforderlich."
+      ],
+      "candidate_id": "contextual:doi:10.1086/743397",
+      "source_lanes": [
+        "A"
+      ],
+      "source_tiers": {
+        "A": "A"
+      },
+      "identity_status": "new_work",
+      "original_round2_window_relation": "after_original_window",
+      "zotero_status": "prepared_for_import",
+      "screening_status": "identified_not_screened",
+      "lifecycle_state": "identified"
+    },
+    {
+      "tier": "A",
+      "title": "Mitigating medical bias in large language models by prompt engineering: an empirical study of effectiveness and trade-offs",
+      "authors": [
+        "Ying Xiao",
+        "Zhenpeng Chen",
+        "Jie Zhang"
+      ],
+      "publication_date": "2026-07-16",
+      "publication_type": "journal_article",
+      "venue": "Philosophical Transactions of the Royal Society A, 384(2324), article 20250125",
+      "doi": "10.1098/rsta.2025.0125",
+      "other_identifiers": {
+        "pmid": "42463224"
+      },
+      "version_status": "version of record; no preprint found",
+      "peer_review_evidence": "Published as a journal article by the Royal Society in Philosophical Transactions A.",
+      "open_access": true,
+      "fulltext_url": "https://royalsocietypublishing.org/rsta/article-pdf/doi/10.1098/rsta.2025.0125/6152317/rsta20250125.pdf",
+      "landing_url": "https://doi.org/10.1098/rsta.2025.0125",
+      "eligibility_technical": "Evaluates five prompting strategies across five LLMs on a medical-bias benchmark, jointly measuring fairness, accuracy and inference overhead. Chain-of-thought reduces the average group gap by 2.4 percentage points, with a maximum reduction of 6.2 points and significant reductions in 8 of 15 McNemar comparisons.",
+      "eligibility_social": "Directly addresses fair healthcare and patient-safety risks for groups defined by sensitive attributes.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "No prompting strategy is universally effective, and some exacerbate bias.",
+        "The VOR is registered under CC BY 4.0, but automated publisher retrieval returned HTTP 403 in this environment.",
+        "Authoritative abstract and metadata: https://pubmed.ncbi.nlm.nih.gov/42463224/"
+      ],
+      "candidate_id": "contextual:doi:10.1098/rsta.2025.0125",
+      "source_lanes": [
+        "C"
+      ],
+      "source_tiers": {
+        "C": "A"
+      },
+      "identity_status": "new_work",
+      "original_round2_window_relation": "after_original_window",
+      "zotero_status": "prepared_for_import",
+      "screening_status": "identified_not_screened",
+      "lifecycle_state": "identified"
+    },
+    {
+      "tier": "A",
+      "title": "Making Accurate Judgements in Child Welfare: Comparing ChatGPT With Qualified Social Workers",
+      "authors": [
+        "David Wilkins",
+        "Verity Bennett"
+      ],
+      "publication_date": "2025-06-02",
+      "publication_type": "journal_article",
+      "venue": "Child & Family Social Work 31(2), 703-712",
+      "doi": "10.1111/cfs.13304",
+      "other_identifiers": {},
+      "version_status": "version_of_record",
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "received": "2024-07-19",
+        "revised": "2025-01-22",
+        "accepted": "2025-04-11",
+        "evidence_url": "https://orca.cardiff.ac.uk/id/eprint/178748/1/cfs.13304.pdf"
+      },
+      "open_access": true,
+      "fulltext_url": "https://orca.cardiff.ac.uk/id/eprint/178748/1/cfs.13304.pdf",
+      "landing_url": "https://orca.cardiff.ac.uk/id/eprint/178748/",
+      "eligibility_technical": "Empirischer Vergleich von ChatGPT mit 581 qualifizierten Fachkräften anhand von zwölf Kinderschutzfällen.",
+      "eligibility_social": "Unmittelbare Kinder- und Jugendhilferelevanz; Bias, professionelles Urteil sowie rechtliche, ethische und soziale Kontextsensitivität werden behandelt.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "Online veröffentlicht am 2. Juni 2025; Heftpublikation Mai 2026.",
+        "CC BY 4.0.",
+        "Crossref schreibt den Familiennamen der zweiten Autorin als Benett; Verlags-PDF, ORCID und Cardiff-Repositorium belegen Bennett."
+      ],
+      "candidate_id": "contextual:doi:10.1111/cfs.13304",
+      "source_lanes": [
+        "B"
+      ],
+      "source_tiers": {
+        "B": "A"
+      },
+      "identity_status": "new_work",
+      "original_round2_window_relation": "before_original_window",
+      "zotero_status": "prepared_for_import",
+      "screening_status": "identified_not_screened",
+      "lifecycle_state": "identified"
+    },
+    {
+      "tier": "A",
+      "title": "Designing a framework for ethnography-driven prompt engineering in social work",
+      "authors": [
+        "Miroslavas Seniutis",
+        "Valentas Gružauskas",
+        "Artūras Sas",
+        "Valentinas Navickas",
+        "Mantas Švažas"
+      ],
+      "publication_date": "2025-05-28",
+      "publication_type": "journal_article",
+      "venue": "Human Technology 21(1), 106–127",
+      "doi": "10.14254/1795-6889.2025.21-1.5",
+      "other_identifiers": {},
+      "version_status": "version_of_record",
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "basis": "Die Journal-Landingpage bezeichnet Human Technology als peer-reviewed und weist den Beitrag als veröffentlichten Artikel aus; eingereicht am 2023-12-30.",
+        "evidence_url": "https://www.ht.csr-pub.eu/index.php/ht/article/view/460"
+      },
+      "open_access": true,
+      "fulltext_url": "https://ht.csr-pub.eu/index.php/ht/article/download/460/317",
+      "landing_url": "https://www.ht.csr-pub.eu/index.php/ht/article/view/460",
+      "eligibility_technical": "Generative_KI, Prompting. Soziale Dienstleistungsorganisation und kulturell kontextualisierte LLM-Nutzung",
+      "eligibility_social": "Soziale_Arbeit, Diversitaet. Soziale Dienstleistungsorganisation und kulturell kontextualisierte LLM-Nutzung",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "Verbindet eine ethnografische Feldstudie in einer sozialen Dienstleistungsorganisation mit Prompt-Komponenten und Prompt-Templates für LLM-Evaluation und -Anpassung. Ziel ist die kulturelle Erdung von Prompts.",
+        "Prioritär aufnehmen; stärkster direkte Prompting- und Diversity-Treffer der Suchspur, Volltext offen verfügbar."
+      ],
+      "candidate_id": "contextual:doi:10.14254/1795-6889.2025.21-1.5",
+      "source_lanes": [
+        "A"
+      ],
+      "source_tiers": {
+        "A": "A"
+      },
+      "identity_status": "new_work",
+      "original_round2_window_relation": "before_original_window",
+      "zotero_status": "prepared_for_import",
+      "screening_status": "identified_not_screened",
+      "lifecycle_state": "identified"
+    },
+    {
+      "tier": "A",
+      "title": "Rethinking Prompt-based Debiasing in Large Language Model",
+      "authors": [
+        "Xinyi Yang",
+        "Runzhe Zhan",
+        "Shu Yang",
+        "Junchao Wu",
+        "Lidia S. Chao",
+        "Derek F. Wong"
+      ],
+      "publication_date": "2025-07",
+      "publication_type": "conference_paper",
+      "venue": "Findings of the Association for Computational Linguistics: ACL 2025",
+      "doi": "10.18653/v1/2025.findings-acl.1361",
+      "other_identifiers": {
+        "arxiv": "2503.09219",
+        "acl_anthology": "2025.findings-acl.1361"
+      },
+      "version_status": "arXiv preprint submitted 2025-03-12 under the plural title Large Language Models; Findings of ACL version published 2025-07 under the singular title Large Language Model",
+      "peer_review_evidence": "ACL Anthology records the paper in Findings of ACL 2025.",
+      "open_access": true,
+      "fulltext_url": "https://aclanthology.org/2025.findings-acl.1361.pdf",
+      "landing_url": "https://aclanthology.org/2025.findings-acl.1361/",
+      "eligibility_technical": "Evaluates prompt-based debiasing on BBQ and StereoSet with open models and GPT; shows that lower bias scores can result from evasive Unknown responses and reduced task accuracy. Llama2-7B-Chat misclassified more than 90 percent of unbiased content as biased.",
+      "eligibility_social": "Provides a necessary validity check for claimed social-bias mitigation and for evaluations used to justify deployment in socially sensitive contexts.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "The paper argues that fairness, task accuracy and answer evasion must be evaluated together.",
+        "Open preprint landing page: https://arxiv.org/abs/2503.09219"
+      ],
+      "candidate_id": "contextual:doi:10.18653/v1/2025.findings-acl.1361",
+      "source_lanes": [
+        "C"
+      ],
+      "source_tiers": {
+        "C": "A"
+      },
+      "identity_status": "new_work",
+      "original_round2_window_relation": "within_original_window",
+      "zotero_status": "prepared_for_import",
+      "screening_status": "identified_not_screened",
+      "lifecycle_state": "identified"
+    },
+    {
+      "tier": "A",
+      "title": "Multi-Persona Thinking for Bias Mitigation in Large Language Models",
+      "authors": [
+        "Yuxing Chen",
+        "Guoqing Luo",
+        "Zijun Wu",
+        "Lili Mou"
+      ],
+      "publication_date": "2026-07",
+      "publication_type": "conference_paper",
+      "venue": "Findings of the Association for Computational Linguistics: ACL 2026",
+      "doi": "10.18653/v1/2026.findings-acl.1389",
+      "other_identifiers": {
+        "arxiv": "2601.15488",
+        "acl_anthology": "2026.findings-acl.1389"
+      },
+      "version_status": "arXiv v1 2026-01-21, v3 2026-04-21; Findings of ACL version published 2026-07",
+      "peer_review_evidence": "ACL Anthology records the paper in Findings of ACL 2026.",
+      "open_access": true,
+      "fulltext_url": "https://aclanthology.org/2026.findings-acl.1389.pdf",
+      "landing_url": "https://aclanthology.org/2026.findings-acl.1389/",
+      "eligibility_technical": "Introduces an inference-time multi-persona framework in which contrasting social identities and a neutral perspective iteratively identify and correct biased judgments; evaluated on two established bias benchmarks with open and closed models.",
+      "eligibility_social": "Explicitly models male, female and neutral viewpoints and addresses harmful social stereotypes and unfair outcomes.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "The authors report lower bias than existing prompting-based methods while maintaining core reasoning ability.",
+        "Open preprint landing page: https://arxiv.org/abs/2601.15488"
+      ],
+      "candidate_id": "contextual:doi:10.18653/v1/2026.findings-acl.1389",
+      "source_lanes": [
+        "C"
+      ],
+      "source_tiers": {
+        "C": "A"
+      },
+      "identity_status": "new_work",
+      "original_round2_window_relation": "after_original_window",
+      "zotero_status": "prepared_for_import",
+      "screening_status": "identified_not_screened",
+      "lifecycle_state": "identified"
+    },
+    {
+      "tier": "A",
+      "title": "Patient Cognitive Bias in Large Language Model-Supported Health Consultations: Simulation-Based Comparative Study",
+      "authors": [
+        "Yi Zuo",
+        "Qifeng Wan",
+        "Shalong Wang"
+      ],
+      "publication_date": "2026-06-11",
+      "publication_type": "journal_article",
+      "venue": "Journal of Medical Internet Research, 28, e85770",
+      "doi": "10.2196/85770",
+      "other_identifiers": {
+        "pmid": "42275635",
+        "pmcid": "PMC13258194",
+        "jmir_preprint": "85770"
+      },
+      "version_status": "JMIR preprint submitted 2025-10-13, accepted 2026-05-04; journal version published 2026-06-11",
+      "peer_review_evidence": "JMIR records the original paper and an explicit submitted/accepted open-review history.",
+      "open_access": true,
+      "fulltext_url": "https://www.jmir.org/2026/1/e85770/PDF",
+      "landing_url": "https://www.jmir.org/2026/1/e85770",
+      "eligibility_technical": "Uses 1273 MedQA-USMLE cases, six LLMs, three-round consultations, three prompt mitigations and four temperature settings. Patient bias reduces accuracy by about 7-39 percentage points; prompting is limited and inconsistent, while a separate reasoning system gains about 10-39 points.",
+      "eligibility_social": "Directly evaluates patient-facing health consultations and user-driven cognitive bias in an interactive Human Services setting.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "The all-inclusive prompt provides the most consistent but generally modest prompt-level gains.",
+        "Open review/version landing page: https://preprints.jmir.org/preprint/85770/accepted"
+      ],
+      "candidate_id": "contextual:doi:10.2196/85770",
+      "source_lanes": [
+        "C"
+      ],
+      "source_tiers": {
+        "C": "A"
+      },
+      "identity_status": "new_work",
+      "original_round2_window_relation": "within_original_window",
+      "zotero_status": "prepared_for_import",
+      "screening_status": "identified_not_screened",
+      "lifecycle_state": "identified"
+    },
+    {
+      "tier": "A",
+      "title": "Prompting Techniques for Reducing Social Bias in LLMs through System 1 and System 2 Cognitive Processes",
+      "authors": [
+        "Mahammed Kamruzzaman",
+        "Gene Louis Kim"
+      ],
+      "publication_date": "2025-09",
+      "publication_type": "conference_paper",
+      "venue": "Proceedings of the 15th International Conference on Recent Advances in Natural Language Processing (RANLP 2025)",
+      "doi": "10.26615/978-954-452-098-4-060",
+      "other_identifiers": {
+        "arxiv": "2404.17218",
+        "acl_anthology": "2025.ranlp-1.60"
+      },
+      "version_status": "arXiv v1 2024-04-26, v4 2025-08-22; accepted main-conference proceedings version published 2025-09",
+      "peer_review_evidence": "The arXiv record states Accepted at RANLP-2025 (main conference); ACL Anthology records the proceedings paper.",
+      "open_access": true,
+      "fulltext_url": "https://aclanthology.org/2025.ranlp-1.60.pdf",
+      "landing_url": "https://aclanthology.org/2025.ranlp-1.60/",
+      "eligibility_technical": "Compares zero-shot CoT, direct debiasing, System 1/System 2 prompts and human/machine personas across five LLMs, two datasets and nine social-bias categories; reports up to a 33 percent reduction in stereotypical judgments.",
+      "eligibility_social": "Directly covers gender, race, religion, nationality, profession and other social categories and is closely aligned with socially sensitive prompt design.",
+      "duplicate_status": "new_version_of_existing_work",
+      "relation_to_existing_work": "work:7644e99b-9dd1-545f-af98-ab7fed6643e6",
+      "notes": [
+        "The local registry contains the arXiv preprint but not the RANLP 2025 proceedings version.",
+        "The most effective prompt combination varies by model and bias category.",
+        "Open preprint landing page: https://arxiv.org/abs/2404.17218"
+      ],
+      "candidate_id": "contextual:doi:10.26615/978-954-452-098-4-060",
+      "source_lanes": [
+        "C"
+      ],
+      "source_tiers": {
+        "C": "A"
+      },
+      "identity_status": "new_version_of_existing_work",
+      "original_round2_window_relation": "within_original_window",
+      "zotero_status": "prepared_for_import",
+      "screening_status": "identified_not_screened",
+      "lifecycle_state": "identified"
+    },
+    {
+      "tier": "A",
+      "title": "Paying the Cognitive Debt: An Experiential Learning Framework for Integrating AI in Social Work Education",
+      "authors": [
+        "Keith J. Watts"
+      ],
+      "publication_date": "2025-10-02",
+      "publication_type": "journal_article",
+      "venue": "Education Sciences 15(10), 1304",
+      "doi": "10.3390/educsci15101304",
+      "other_identifiers": {},
+      "version_status": "version_of_record",
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "received": "2025-07-24",
+        "revised": "2025-09-23",
+        "accepted": "2025-09-26",
+        "evidence_url": "https://www.mdpi.com/2227-7102/15/10/1304"
+      },
+      "open_access": true,
+      "fulltext_url": "https://www.mdpi.com/2227-7102/15/10/1304/pdf",
+      "landing_url": "https://www.mdpi.com/2227-7102/15/10/1304",
+      "eligibility_technical": "Behandelt GenAI-Kompetenz und erfahrungsbasierte Aufgaben zur kritischen Nutzung generativer Systeme.",
+      "eligibility_social": "Adressiert Sozialarbeitsausbildung, professionelles Urteil, soziale Gerechtigkeit, Bias, ethische Praxis und akademische Integrität.",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "CC BY 4.0.",
+        "Offenes Verlags-PDF, XML und EPUB verfügbar."
+      ],
+      "candidate_id": "contextual:doi:10.3390/educsci15101304",
+      "source_lanes": [
+        "B"
+      ],
+      "source_tiers": {
+        "B": "A"
+      },
+      "identity_status": "new_work",
+      "original_round2_window_relation": "within_original_window",
+      "zotero_status": "prepared_for_import",
+      "screening_status": "identified_not_screened",
+      "lifecycle_state": "identified"
+    },
+    {
+      "tier": "A",
+      "title": "Prompt Engineering for Social Workers",
+      "authors": [
+        "Moon Sun Song",
+        "Othelia E. Lee"
+      ],
+      "publication_date": "2026-08-12",
+      "publication_type": "book_chapter",
+      "venue": "Social Work Practice and Artificial Intelligence for the Common Good (Routledge)",
+      "doi": "10.4324/9781003755081-10",
+      "other_identifiers": {},
+      "version_status": "version_of_record",
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Routledge weist das Kapitel und die Kapitel-DOI aus; eine kapitelspezifische Begutachtung ist auf der Landingpage nicht belegt.",
+        "evidence_url": "https://doi.org/10.4324/9781003755081-10"
+      },
+      "open_access": false,
+      "fulltext_url": null,
+      "landing_url": "https://doi.org/10.4324/9781003755081-10",
+      "eligibility_technical": "Generative_KI, Prompting. Prompting-Kompetenz für Sozialarbeiter:innen",
+      "eligibility_social": "Soziale_Arbeit, Bias_Ungleichheit, Fairness. Prompting-Kompetenz für Sozialarbeiter:innen",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "Führt Prompt Engineering als Ko-Kreationskompetenz für Sozialarbeiter:innen ein. Das P.I.C.O.-Framework soll Prompts so strukturieren, dass Bias reduziert, Privatsphäre geschützt und Outputs iterativ geprüft werden.",
+        "Aufnehmen; direkter Prompting-, Bias- und Sozialarbeitsbezug. Volltextbeschaffung erforderlich."
+      ],
+      "candidate_id": "contextual:doi:10.4324/9781003755081-10",
+      "source_lanes": [
+        "A"
+      ],
+      "source_tiers": {
+        "A": "A"
+      },
+      "identity_status": "new_work",
+      "original_round2_window_relation": "after_original_window",
+      "zotero_status": "prepared_for_import",
+      "screening_status": "identified_not_screened",
+      "lifecycle_state": "identified"
+    },
+    {
+      "tier": "A",
+      "title": "Mitigating Anchoring Bias When Using AI in Social Work Research: Responsible Conduct of AI-Assisted Research",
+      "authors": [
+        "Allan Barsky"
+      ],
+      "publication_date": "2025-07-30",
+      "publication_type": "journal_article",
+      "venue": "International Journal of Social Work Values and Ethics 22(1)",
+      "doi": "10.55521/10-022-106",
+      "other_identifiers": {},
+      "version_status": "version_of_record",
+      "peer_review_evidence": {
+        "status": "peer_reviewed",
+        "basis": "Die Journal-Landingpage bezeichnet die Zeitschrift als peer-reviewed und stellt den veröffentlichten Artikel bereit.",
+        "evidence_url": "https://jswve.org/volume-22/issue-1/item-06/"
+      },
+      "open_access": true,
+      "fulltext_url": "https://jswve.org/wp-content/uploads/2025/07/10-022-106-IJSWVE-2025.pdf",
+      "landing_url": "https://jswve.org/volume-22/issue-1/item-06/",
+      "eligibility_technical": "Generative_KI. Verantwortliche KI-gestützte Sozialarbeitsforschung",
+      "eligibility_social": "Soziale_Arbeit, Bias_Ungleichheit, Fairness. Verantwortliche KI-gestützte Sozialarbeitsforschung",
+      "duplicate_status": "new_work",
+      "relation_to_existing_work": null,
+      "notes": [
+        "Analysiert Anchoring Bias bei KI-generierten Outputs in sozialarbeiterischer Forschung und formuliert Prüfstrategien für Recherche, Synthese, Datenanalyse und Schreiben. ChatGPT und andere generative Systeme werden explizit behandelt.",
+        "Aufnehmen; Bias ist Hauptgegenstand und der Volltext ist offen verfügbar."
+      ],
+      "candidate_id": "contextual:doi:10.55521/10-022-106",
+      "source_lanes": [
+        "A"
+      ],
+      "source_tiers": {
+        "A": "A"
+      },
+      "identity_status": "new_work",
+      "original_round2_window_relation": "within_original_window",
+      "zotero_status": "prepared_for_import",
+      "screening_status": "identified_not_screened",
+      "lifecycle_state": "identified"
+    }
+  ]
+}

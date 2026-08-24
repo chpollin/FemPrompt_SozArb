@@ -1,0 +1,770 @@
+{
+  "schema": "femprompt-codex-websearch-2026-bibliographic-audit/0.1",
+  "cutoff_date": "2026-08-24",
+  "sources": [
+    {
+      "path": "corpus/deep-research/round2/Codex Websearch/raw/lane-a-social-work-2026.json",
+      "sha256": "89d83142aaa30f8682caaeb7c60343943723e3644077b8016bbbcdb9ba18dbe1"
+    },
+    {
+      "path": "corpus/deep-research/round2/Codex Websearch/raw/lane-b-gender-intersectionality-2026.json",
+      "sha256": "f13d2ced01a6b9ab2c45fbd423fe4cf062c90b3174d5bbda062a3fa160d24bdb"
+    },
+    {
+      "path": "corpus/deep-research/round2/Codex Websearch/raw/lane-c-prompt-bias-2026.json",
+      "sha256": "d9f297b85514709bac473c6bf59108b72e90605e94d408b303e4e4d9d9f69e21"
+    },
+    {
+      "path": "corpus/deep-research/round2/Codex Websearch/enrichment/part-a.json",
+      "sha256": "abc12650da364bd209e2a6121c0b72d31147d2323cbdbdfc92b0f2109f001384"
+    },
+    {
+      "path": "corpus/deep-research/round2/Codex Websearch/enrichment/part-b.json",
+      "sha256": "3adc0575c915deebfc36db38094ea64ce0554d82704434cc1353478773077294"
+    },
+    {
+      "path": "corpus/deep-research/round2/Codex Websearch/enrichment/part-c.json",
+      "sha256": "1387d152c66eb2fa8eb65066114dbd9dfb66972cec9f6cc77c64a4371ff778a3"
+    },
+    {
+      "path": "corpus/deep-research/round2/Codex Websearch/protocol.md",
+      "sha256": "3b0e70301be683e37ecf753dea68eb8529574ac6523a77dab7c340700fa063cc"
+    },
+    {
+      "path": "corpus/deep-research/round2/Codex Websearch/run-manifest.json",
+      "sha256": "62bdebfaf457647e4f8ccc17daa99952d8beeb7180899f3cad9d9034629457b9"
+    },
+    {
+      "path": "corpus/zotero_export.json",
+      "sha256": "4e7698570c3cd3a37d9afd854b127261044d80cca6e34e5580f758cb2bc78194"
+    }
+  ],
+  "counts": {
+    "lane_tier_a_rows": 69,
+    "distinct_tier_a_candidates": 58,
+    "new_in_codex_websearch": 31,
+    "previously_identified": 27,
+    "import_ready": 58,
+    "already_in_committed_zotero_export": 0,
+    "doi_present": 57,
+    "fulltext_located": 44,
+    "blocking_bibliographic_conflicts": 0,
+    "pending_zotero_corrections": 2,
+    "peer_review_status": {
+      "not_established": 21,
+      "peer_reviewed": 2,
+      "review_history_documented": 29,
+      "venue_reviewed_proceedings": 6
+    },
+    "access_status": {
+      "open_access": 44,
+      "publisher_access": 4,
+      "restricted": 10
+    }
+  },
+  "interpretation": {
+    "metadata_gap": "A missing DOI, item-specific peer-review history, or full-text URL is recorded explicitly and does not by itself invalidate identity.",
+    "blocking_conflict": "A conflicting title, authorship, date, or Work-Version identity withholds the record from unreviewed import."
+  },
+  "records": [
+    {
+      "candidate_id": "codex-websearch-2026:arxiv:2505.13995",
+      "title": "Sycophantic AI decreases prosocial intentions and promotes dependence",
+      "zotero_status": "import_ready",
+      "discovery_status": "new_candidate",
+      "peer_review_status": "review_history_documented",
+      "access_status": "open_access",
+      "metadata_gaps": [],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:arxiv:2510.00232",
+      "title": "BiasFreeBench: a Benchmark for Mitigating Bias in Large Language Model Responses",
+      "zotero_status": "import_ready",
+      "discovery_status": "previously_identified",
+      "peer_review_status": "venue_reviewed_proceedings",
+      "access_status": "open_access",
+      "metadata_gaps": [
+        "doi_not_assigned_or_not_found"
+      ],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1007/978-3-032-27336-9_4",
+      "title": "The Role of Generative AI in Transforming Social Work Practice",
+      "zotero_status": "import_ready",
+      "discovery_status": "new_candidate",
+      "peer_review_status": "not_established",
+      "access_status": "restricted",
+      "metadata_gaps": [
+        "item_specific_peer_review_not_established",
+        "fulltext_url_not_established"
+      ],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1007/s10639-026-13908-2",
+      "title": "Teachers’ perceptions of generative AI in gender-inclusive STEM education: a grounded theory study",
+      "zotero_status": "import_ready",
+      "discovery_status": "new_candidate",
+      "peer_review_status": "review_history_documented",
+      "access_status": "open_access",
+      "metadata_gaps": [],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1007/s43681-025-00926-y",
+      "title": "Toward substantive intersectional algorithmic fairness: desiderata for a feminist approach",
+      "zotero_status": "import_ready",
+      "discovery_status": "previously_identified",
+      "peer_review_status": "review_history_documented",
+      "access_status": "open_access",
+      "metadata_gaps": [],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1007/s43681-026-01161-9",
+      "title": "Beyond inclusion: feminist AI for transformative justice in STEM",
+      "zotero_status": "import_ready",
+      "discovery_status": "previously_identified",
+      "peer_review_status": "review_history_documented",
+      "access_status": "open_access",
+      "metadata_gaps": [],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1007/s44155-026-00463-x",
+      "title": "An ethical framework for assessing artificial intelligence as augmentation or automation in social work",
+      "zotero_status": "import_ready",
+      "discovery_status": "new_candidate",
+      "peer_review_status": "review_history_documented",
+      "access_status": "open_access",
+      "metadata_gaps": [],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1016/j.bodyim.2026.102042",
+      "title": "Existing and future use cases, and safety and ethical considerations for AI in body image, and eating disorder prevention",
+      "zotero_status": "import_ready",
+      "discovery_status": "new_candidate",
+      "peer_review_status": "not_established",
+      "access_status": "open_access",
+      "metadata_gaps": [
+        "item_specific_peer_review_not_established"
+      ],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1016/j.caeai.2026.100602",
+      "title": "Beyond “painting in pink”: A critical case study of all-girls generative AI workshops in a European makerspace and implications for gender equity in computing",
+      "zotero_status": "import_ready",
+      "discovery_status": "new_candidate",
+      "peer_review_status": "not_established",
+      "access_status": "open_access",
+      "metadata_gaps": [
+        "item_specific_peer_review_not_established"
+      ],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1016/j.chbr.2026.101246",
+      "title": "Can AI reduce gender bias? The case of AI-generated audio conversations in Google's NotebookLM",
+      "zotero_status": "import_ready",
+      "discovery_status": "previously_identified",
+      "peer_review_status": "not_established",
+      "access_status": "open_access",
+      "metadata_gaps": [
+        "item_specific_peer_review_not_established"
+      ],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1016/j.ijmedinf.2026.106582",
+      "title": "Integrating diversity, equity, and inclusion in generative AI applications for healthcare education: a scoping review",
+      "zotero_status": "import_ready",
+      "discovery_status": "new_candidate",
+      "peer_review_status": "not_established",
+      "access_status": "restricted",
+      "metadata_gaps": [
+        "item_specific_peer_review_not_established",
+        "fulltext_url_not_established"
+      ],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1016/j.mcpdig.2026.100344",
+      "title": "Implicit Gender, Racial, and Ethnic Biases in Large Language Models: An Audit Study of Automated Psychiatric Diagnoses",
+      "zotero_status": "import_ready",
+      "discovery_status": "previously_identified",
+      "peer_review_status": "not_established",
+      "access_status": "open_access",
+      "metadata_gaps": [
+        "item_specific_peer_review_not_established"
+      ],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1016/j.techsoc.2026.103402",
+      "title": "Inclusive generative AI and the dynamics of inequality: A capability-resource model of adoption disparities",
+      "zotero_status": "import_ready",
+      "discovery_status": "new_candidate",
+      "peer_review_status": "not_established",
+      "access_status": "restricted",
+      "metadata_gaps": [
+        "item_specific_peer_review_not_established",
+        "fulltext_url_not_established"
+      ],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1038/s41746-026-02584-8",
+      "title": "New model, old risks: sociodemographic bias and adversarial hallucinations vulnerability in GPT-5",
+      "zotero_status": "import_ready",
+      "discovery_status": "previously_identified",
+      "peer_review_status": "review_history_documented",
+      "access_status": "open_access",
+      "metadata_gaps": [],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1038/s44360-026-00152-8",
+      "title": "Addressing benchmarking gaps in large language models for health and medicine with dynamic red-teaming",
+      "zotero_status": "import_ready",
+      "discovery_status": "new_candidate",
+      "peer_review_status": "review_history_documented",
+      "access_status": "open_access",
+      "metadata_gaps": [],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1038/s44360-026-00164-4",
+      "title": "Large language models exhibit stigmatizing behaviour in contextual judgements of health conditions",
+      "zotero_status": "import_ready",
+      "discovery_status": "previously_identified",
+      "peer_review_status": "review_history_documented",
+      "access_status": "restricted",
+      "metadata_gaps": [
+        "fulltext_url_not_established"
+      ],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/02615479.2026.2617512",
+      "title": "Innovating social work pedagogy: generative AI for critical competency development in evidence-based practice",
+      "zotero_status": "import_ready",
+      "discovery_status": "previously_identified",
+      "peer_review_status": "review_history_documented",
+      "access_status": "restricted",
+      "metadata_gaps": [
+        "fulltext_url_not_established"
+      ],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/02615479.2026.2631708",
+      "title": "Are future social workers ready for AI? Fears, barriers, and learning needs in higher education",
+      "zotero_status": "import_ready",
+      "discovery_status": "previously_identified",
+      "peer_review_status": "review_history_documented",
+      "access_status": "open_access",
+      "metadata_gaps": [],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/02615479.2026.2635471",
+      "title": "Promoting AI literacy in social work education: lessons from an interdisciplinary course for social work students",
+      "zotero_status": "import_ready",
+      "discovery_status": "previously_identified",
+      "peer_review_status": "review_history_documented",
+      "access_status": "open_access",
+      "metadata_gaps": [],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/02615479.2026.2660786",
+      "title": "Towards a framework for digital literacy in social work education in a time of artificial intelligence",
+      "zotero_status": "import_ready",
+      "discovery_status": "previously_identified",
+      "peer_review_status": "review_history_documented",
+      "access_status": "open_access",
+      "metadata_gaps": [],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/02615479.2026.2669634",
+      "title": "A kind of magic? Artificial intelligence-assisted recording: developing principles for an AI-informed social work curriculum",
+      "zotero_status": "import_ready",
+      "discovery_status": "previously_identified",
+      "peer_review_status": "review_history_documented",
+      "access_status": "open_access",
+      "metadata_gaps": [],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/02650533.2026.2683352",
+      "title": "AI-enhanced ethical decision-making in social work: development and testing of an application-specific language model",
+      "zotero_status": "import_ready",
+      "discovery_status": "previously_identified",
+      "peer_review_status": "not_established",
+      "access_status": "publisher_access",
+      "metadata_gaps": [
+        "item_specific_peer_review_not_established",
+        "fulltext_url_not_established"
+      ],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/0312407x.2026.2627220",
+      "title": "AI-Generated Images of Social Workers in Healthcare and Implications for Professional Identity",
+      "zotero_status": "import_ready",
+      "discovery_status": "new_candidate",
+      "peer_review_status": "review_history_documented",
+      "access_status": "open_access",
+      "metadata_gaps": [],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/10437797.2025.2594423",
+      "title": "ChatGPT in Social Work? Insights from MSW Students",
+      "zotero_status": "import_ready",
+      "discovery_status": "new_candidate",
+      "peer_review_status": "review_history_documented",
+      "access_status": "restricted",
+      "metadata_gaps": [
+        "fulltext_url_not_established"
+      ],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/13691457.2025.2607705",
+      "title": "Artificial intelligence: a neoliberal tool to better manage social inequalities?",
+      "zotero_status": "import_ready",
+      "discovery_status": "previously_identified",
+      "peer_review_status": "review_history_documented",
+      "access_status": "open_access",
+      "metadata_gaps": [],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/17496535.2026.2619945",
+      "title": "The (Un)Fair Algorithm: Socio-Technical Ethics Work for Artificial Intelligence in Social Work",
+      "zotero_status": "import_ready",
+      "discovery_status": "previously_identified",
+      "peer_review_status": "review_history_documented",
+      "access_status": "open_access",
+      "metadata_gaps": [],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1080/26408066.2026.2616711",
+      "title": "Small Models Achieve Large Language Model Performance: Evaluating Reasoning-Enabled AI for Secure Child Welfare Research",
+      "zotero_status": "import_ready",
+      "discovery_status": "previously_identified",
+      "peer_review_status": "peer_reviewed",
+      "access_status": "open_access",
+      "metadata_gaps": [],
+      "pending_zotero_corrections": 1,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1086/740347",
+      "title": "Accuracy and Readability of Large Language Models’ Responses to Frequently Asked Questions on Social Assistance",
+      "zotero_status": "import_ready",
+      "discovery_status": "new_candidate",
+      "peer_review_status": "review_history_documented",
+      "access_status": "open_access",
+      "metadata_gaps": [],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1086/740605",
+      "title": "Using ChatGPT for Qualitative Social Media Analysis: Insights for Cross-Cultural Social Work",
+      "zotero_status": "import_ready",
+      "discovery_status": "previously_identified",
+      "peer_review_status": "review_history_documented",
+      "access_status": "open_access",
+      "metadata_gaps": [],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1086/743397",
+      "title": "Same Prompt, Different Care? Evaluating Inequities in AI-Generated Mental Health Support for Immigrant Communities",
+      "zotero_status": "import_ready",
+      "discovery_status": "previously_identified",
+      "peer_review_status": "not_established",
+      "access_status": "restricted",
+      "metadata_gaps": [
+        "item_specific_peer_review_not_established",
+        "fulltext_url_not_established"
+      ],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1098/rsta.2025.0125",
+      "title": "Mitigating medical bias in large language models by prompt engineering: an empirical study of effectiveness and trade-offs",
+      "zotero_status": "import_ready",
+      "discovery_status": "previously_identified",
+      "peer_review_status": "peer_reviewed",
+      "access_status": "open_access",
+      "metadata_gaps": [],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1111/1748-8583.70044",
+      "title": "Mitigating Disability Bias in Hiring: The Role of Inclusion-Focused Generative AI in Complex HR Decisions",
+      "zotero_status": "import_ready",
+      "discovery_status": "new_candidate",
+      "peer_review_status": "not_established",
+      "access_status": "open_access",
+      "metadata_gaps": [
+        "item_specific_peer_review_not_established"
+      ],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1177/10497315261469433",
+      "title": "The Adoption of Generative AI by Social Workers in Practice: A Scoping Review",
+      "zotero_status": "import_ready",
+      "discovery_status": "previously_identified",
+      "peer_review_status": "not_established",
+      "access_status": "restricted",
+      "metadata_gaps": [
+        "item_specific_peer_review_not_established",
+        "fulltext_url_not_established"
+      ],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1177/10522263261449121",
+      "title": "Bias Bytes: A Study Examining Disability Bias in ChatGPT Job Recommendation",
+      "zotero_status": "import_ready",
+      "discovery_status": "new_candidate",
+      "peer_review_status": "not_established",
+      "access_status": "restricted",
+      "metadata_gaps": [
+        "item_specific_peer_review_not_established",
+        "fulltext_url_not_established"
+      ],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1177/10755470261428542",
+      "title": "Generative AI So White: Racial Biases in AI Imagery Across the United States and China",
+      "zotero_status": "import_ready",
+      "discovery_status": "new_candidate",
+      "peer_review_status": "not_established",
+      "access_status": "open_access",
+      "metadata_gaps": [
+        "item_specific_peer_review_not_established"
+      ],
+      "pending_zotero_corrections": 1,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.1186/s12910-026-01496-2",
+      "title": "Algorithmic bias in clinical resource allocation by a large language model: a cross-sectional in-silico evaluation of 13,608 decisions",
+      "zotero_status": "import_ready",
+      "discovery_status": "new_candidate",
+      "peer_review_status": "review_history_documented",
+      "access_status": "open_access",
+      "metadata_gaps": [],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.16719/j.cnki.1671-6981.20260201",
+      "title": "Semantic Stability, Response Strategies, and Bias Analysis of Generative Artificial Intelligence in Psychological Health Education",
+      "zotero_status": "import_ready",
+      "discovery_status": "new_candidate",
+      "peer_review_status": "not_established",
+      "access_status": "open_access",
+      "metadata_gaps": [
+        "item_specific_peer_review_not_established"
+      ],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.18653/v1/2026.acl-long.1094",
+      "title": "InsideOut: Measuring and Mitigating Insider–Outsider Bias in Interview Script Generation",
+      "zotero_status": "import_ready",
+      "discovery_status": "new_candidate",
+      "peer_review_status": "venue_reviewed_proceedings",
+      "access_status": "open_access",
+      "metadata_gaps": [],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.18653/v1/2026.findings-acl.1389",
+      "title": "Multi-Persona Thinking for Bias Mitigation in Large Language Models",
+      "zotero_status": "import_ready",
+      "discovery_status": "previously_identified",
+      "peer_review_status": "venue_reviewed_proceedings",
+      "access_status": "open_access",
+      "metadata_gaps": [],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.18653/v1/2026.findings-acl.418",
+      "title": "Mitigating Cultural Bias in LLMs via Multi-Agent Cultural Debate",
+      "zotero_status": "import_ready",
+      "discovery_status": "new_candidate",
+      "peer_review_status": "venue_reviewed_proceedings",
+      "access_status": "open_access",
+      "metadata_gaps": [],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.18653/v1/2026.findings-acl.585",
+      "title": "Persona-Assigned Large Language Models Exhibit Human-Like Motivated Reasoning",
+      "zotero_status": "import_ready",
+      "discovery_status": "new_candidate",
+      "peer_review_status": "venue_reviewed_proceedings",
+      "access_status": "open_access",
+      "metadata_gaps": [],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.21240/dimesoz/2026/1/57",
+      "title": "Generative KI in der Beratung: Empirische Befunde mit Blick auf Nutzungsbedingungen von Chatbots",
+      "zotero_status": "import_ready",
+      "discovery_status": "new_candidate",
+      "peer_review_status": "not_established",
+      "access_status": "open_access",
+      "metadata_gaps": [
+        "item_specific_peer_review_not_established"
+      ],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.21556/edutec.2026.96.4777",
+      "title": "Pensar críticamente la inteligencia artificial en la escuela: un estudio de caso desde una perspectiva de género",
+      "zotero_status": "import_ready",
+      "discovery_status": "new_candidate",
+      "peer_review_status": "review_history_documented",
+      "access_status": "open_access",
+      "metadata_gaps": [],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.2196/85770",
+      "title": "Patient Cognitive Bias in Large Language Model-Supported Health Consultations: Simulation-Based Comparative Study",
+      "zotero_status": "import_ready",
+      "discovery_status": "previously_identified",
+      "peer_review_status": "review_history_documented",
+      "access_status": "open_access",
+      "metadata_gaps": [],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.2196/86633",
+      "title": "Ethics and Fairness Considerations in AI-Based Deception Detection Technologies for Mental Health Applications: Focus Group Study",
+      "zotero_status": "import_ready",
+      "discovery_status": "new_candidate",
+      "peer_review_status": "review_history_documented",
+      "access_status": "open_access",
+      "metadata_gaps": [],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.2196/90589",
+      "title": "Generative AI in Youth Mental Health Apps: Rapid Review",
+      "zotero_status": "import_ready",
+      "discovery_status": "new_candidate",
+      "peer_review_status": "review_history_documented",
+      "access_status": "open_access",
+      "metadata_gaps": [],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.25009/is.v11i21.3001",
+      "title": "Análisis de la desinformación y los sesgos de género generados por la inteligencia artificial",
+      "zotero_status": "import_ready",
+      "discovery_status": "new_candidate",
+      "peer_review_status": "review_history_documented",
+      "access_status": "open_access",
+      "metadata_gaps": [],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.3389/fhumd.2026.1791655",
+      "title": "AI-generated visual disinformation and digital equity: an intersectional analysis of algorithmic vulnerabilities among marginalised communities",
+      "zotero_status": "import_ready",
+      "discovery_status": "previously_identified",
+      "peer_review_status": "review_history_documented",
+      "access_status": "open_access",
+      "metadata_gaps": [],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.3390/ai7010024",
+      "title": "No Free Lunch in Language Model Bias Mitigation? Targeted Bias Reduction Can Exacerbate Unmitigated LLM Biases",
+      "zotero_status": "import_ready",
+      "discovery_status": "previously_identified",
+      "peer_review_status": "review_history_documented",
+      "access_status": "open_access",
+      "metadata_gaps": [],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.35362/issn.1850-0013-1258",
+      "title": "Sesgos de género y modelos de IA generativa: Aproximaciones desde una experiencia de análisis cualitativo desde la generación de imágenes",
+      "zotero_status": "import_ready",
+      "discovery_status": "new_candidate",
+      "peer_review_status": "not_established",
+      "access_status": "open_access",
+      "metadata_gaps": [
+        "item_specific_peer_review_not_established"
+      ],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.35362/issn.1850-0013-1259",
+      "title": "IA, salud mental y género: Un mapeo sistemático de las ciencias sociales y humanas en América Latina",
+      "zotero_status": "import_ready",
+      "discovery_status": "new_candidate",
+      "peer_review_status": "not_established",
+      "access_status": "open_access",
+      "metadata_gaps": [
+        "item_specific_peer_review_not_established"
+      ],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.3917/vsoc.052.0029",
+      "title": "Intelligence artificielle et travail social, une ressource au service des professionnels ?",
+      "zotero_status": "import_ready",
+      "discovery_status": "new_candidate",
+      "peer_review_status": "not_established",
+      "access_status": "restricted",
+      "metadata_gaps": [
+        "item_specific_peer_review_not_established",
+        "fulltext_url_not_established"
+      ],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.4324/9781003627920-14",
+      "title": "Social Work Ethics and Generative AI",
+      "zotero_status": "import_ready",
+      "discovery_status": "previously_identified",
+      "peer_review_status": "not_established",
+      "access_status": "publisher_access",
+      "metadata_gaps": [
+        "item_specific_peer_review_not_established",
+        "fulltext_url_not_established"
+      ],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.4324/9781003755081-10",
+      "title": "Prompt Engineering for Social Workers",
+      "zotero_status": "import_ready",
+      "discovery_status": "previously_identified",
+      "peer_review_status": "not_established",
+      "access_status": "publisher_access",
+      "metadata_gaps": [
+        "item_specific_peer_review_not_established",
+        "fulltext_url_not_established"
+      ],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.4324/9781003755081-5",
+      "title": "Generative AI and Agentic AI",
+      "zotero_status": "import_ready",
+      "discovery_status": "new_candidate",
+      "peer_review_status": "not_established",
+      "access_status": "publisher_access",
+      "metadata_gaps": [
+        "item_specific_peer_review_not_established",
+        "fulltext_url_not_established"
+      ],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.5117/ccr2026.2.11.urma",
+      "title": "Gender Representation in Large Language Models: A Cross-Linguistic and Cross-Model Analysis",
+      "zotero_status": "import_ready",
+      "discovery_status": "previously_identified",
+      "peer_review_status": "review_history_documented",
+      "access_status": "open_access",
+      "metadata_gaps": [],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.55121/jele.v2i1.1050",
+      "title": "Artificial Intelligence and Case-Based Learning in Social Work Education: Pedagogical Considerations and Future Directions",
+      "zotero_status": "import_ready",
+      "discovery_status": "new_candidate",
+      "peer_review_status": "review_history_documented",
+      "access_status": "open_access",
+      "metadata_gaps": [],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    },
+    {
+      "candidate_id": "codex-websearch-2026:doi:10.63317/2hn5gs6yh5m2",
+      "title": "I Am Not Them: Persistent Outgroup Bias in Large Language Models Arising from Social Identity Persona Setting",
+      "zotero_status": "import_ready",
+      "discovery_status": "new_candidate",
+      "peer_review_status": "venue_reviewed_proceedings",
+      "access_status": "open_access",
+      "metadata_gaps": [],
+      "pending_zotero_corrections": 0,
+      "blocking_conflicts": []
+    }
+  ]
+}
