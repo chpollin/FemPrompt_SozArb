@@ -7,7 +7,7 @@ status: active
 language: en
 version: "0.7"
 created: 2026-06-09
-updated: 2026-08-24
+updated: 2026-08-26
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6)
 method:
@@ -22,7 +22,7 @@ The remaining work completes the literature corpus through governed agent annota
 
 ## Current operative state
 
-PRISM implements evidence-grounded screening, complete Include coding, deterministic storage, lifecycle provenance, domain-expert verification, and a fail-closed publication gate. The Codex-native workflow produces operationally isolated coding packets, projects them through PRISM's production functions, and submits them to a separate source-grounded AI Agent Review. All works with a reviewed Paper representation in the current screening queue have passed this workflow. The resulting records remain below domain-expert verification and publication approval.
+PRISM implements evidence-grounded screening, complete Include coding, deterministic storage, lifecycle provenance, domain-expert verification, and a fail-closed publication gate. The Codex-native workflow produces operationally isolated coding packets, projects them through PRISM's production functions, and submits them to a separate source-grounded AI Agent Review. All source-ready Works in the canonical queue, including the residual Work `8NG4ZEWE`, have passed this workflow. The resulting records remain below domain-expert verification and publication approval.
 
 The canonical Grounded Vault chain is installed, and its first vertical slice connects publication distillates, Assertions, and an initial literature-report chapter. The paper has one canonical manuscript under `research-vault/40_output/paper/paper.md`. Its qualitative synthesis remains open until the intended corpus and the relevant Assertions have been completed and verified.
 
@@ -48,6 +48,7 @@ The project reaches completion when the following conditions hold.
 - Review the conflict-marked intake records, import the conflict-free RIS package into Zotero, and export the curated library.
 - Import and curate `Codex Websearch/codex-websearch-2026-zotero-import.ris` in the confirmed `FemPrompt_SozArb` group library. Use it as the sole import source for its 2026 subset and reconcile older pending RIS files before importing their residual records.
 - Resolve the remaining identity conflicts and unavailable, ambiguous, or rights-restricted Paper sources recorded by the queue.
+- Use `generated/source-acquisition/residual-queue-9-20260826/resolution-ledger.json` for the record-level corrections and access blocks of the residual queue. Apply bibliographic corrections through Zotero curation and re-export.
 - Reconcile every prepared Codex source-readiness record with the curated Zotero Work and exact Version. Preserve any difference between the preferred bibliographic Version and the acquired source Version.
 - Resolve the visual-evidence representation gap before using image-dependent findings in PRISM annotations.
 - Bind or convert any further Paper representation only after its work identity has passed the source audit.

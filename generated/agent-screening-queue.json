@@ -7,20 +7,20 @@
     "research_vault": "docs/data/research_vault_v2.json",
     "research_vault_sha256": "d4a09a90e43a0771105f04c76ccd2ecffaa01a5fc02b2c627a1be9247db90bac",
     "fulltext_manifest": "docs/data/fulltext_manifest.json",
-    "fulltext_manifest_sha256": "27942d9b703187d84f7124369fa71eff3d5da2ef328d28e0285574f909e96302",
+    "fulltext_manifest_sha256": "1826a19e498864a4b4025f971b227cd07491dcb114ff6a8c80a1e1a027cd499c",
     "productive_screening_dir": "docs/data/screening"
   },
   "counts": {
     "canonical_records": 326,
     "canonical_works": 257,
     "direct_human_annotated_records": 291,
-    "direct_ai_agent_reviewed_without_human": 21,
+    "direct_ai_agent_reviewed_without_human": 22,
     "unannotated_alias_records_covered_at_work_level": 5,
-    "queued_records": 9,
-    "queued_works": 9,
+    "queued_records": 8,
+    "queued_works": 8,
     "ready_works": 0,
     "blocked_abstract_only_works": 4,
-    "blocked_without_text_works": 5
+    "blocked_without_text_works": 4
   },
   "gate": {
     "status": "blocked",
@@ -430,57 +430,6 @@
       "paper_source": null,
       "paper_source_work_id": "work:ec94cf1c-87bf-5f4d-a840-9dd3b92eefab",
       "paper_source_version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
-    },
-    {
-      "work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
-      "preferred_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
-      "latest_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
-      "selected_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
-      "selected_version_type": "unknown",
-      "selected_version_is_preferred": true,
-      "available_versions": [
-        {
-          "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
-          "version_type": "unknown",
-          "version_date": "2023-04-03",
-          "identifiers": {
-            "zotero_key": [
-              "8NG4ZEWE"
-            ],
-            "url": [
-              "https://wb-erwachsenenbildung.net/intersektionalitaet"
-            ]
-          },
-          "peer_review_status": "not_established",
-          "peer_review_basis": "unknown",
-          "integrity_status": "current",
-          "access_status": "unknown",
-          "landing_url": "https://wb-erwachsenenbildung.net/intersektionalitaet",
-          "fulltext_url": "",
-          "relations": [],
-          "is_preferred": true,
-          "is_latest": true
-        }
-      ],
-      "representative_record_id": "8NG4ZEWE",
-      "record_ids": [
-        "8NG4ZEWE"
-      ],
-      "title": "Intersektionalität",
-      "author_year": "Arnold et al. (2023)",
-      "doi": null,
-      "url": "https://wb-erwachsenenbildung.net/intersektionalitaet/",
-      "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
-      "paper_source_work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
-      "paper_source_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
       "paper_source_sha256": null,
       "queue_status": "blocked_missing_paper_source",
       "blockers": [

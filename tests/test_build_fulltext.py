@@ -250,6 +250,7 @@ def test_corrected_publication_title_matches_verified_source() -> None:
         ("R7V99ERA", "clean"),
         ("4ZL5Q48E", "clean"),
         ("J7V3AAQT", "clean"),
+        ("8NG4ZEWE", "clean"),
     ],
 )
 def test_curated_source_repairs_resolve_exact_records(
@@ -272,9 +273,7 @@ def test_same_title_does_not_bridge_different_un_women_work() -> None:
     assert "5T55I5Z7" not in bf.CURATED_SOURCE_OVERRIDES
 
 
-@pytest.mark.parametrize(
-    "paper_id", ["KI9GRGHB", "ZQHP5G35", "LR8Z3YHP"]
-)
+@pytest.mark.parametrize("paper_id", ["KI9GRGHB", "ZQHP5G35", "LR8Z3YHP"])
 def test_batch_a_unresolved_records_remain_fail_closed(paper_id: str) -> None:
     paper = _real_paper(paper_id)
     clean_idx = {bf.norm(path.stem): path.name for path in bf.CLEAN_DIR.glob("*.md")}
@@ -284,7 +283,7 @@ def test_batch_a_unresolved_records_remain_fail_closed(paper_id: str) -> None:
     assert bf.resolve_docling(paper, clean_idx, raw_idx) == (None, None)
 
 
-@pytest.mark.parametrize("paper_id", ["5T55I5Z7", "8NG4ZEWE", "XG7RFFC7"])
+@pytest.mark.parametrize("paper_id", ["5T55I5Z7", "XG7RFFC7"])
 def test_batch_c_conflicts_remain_unbound(paper_id: str) -> None:
     paper = _real_paper(paper_id)
     clean_idx = {bf.norm(path.stem): path.name for path in bf.CLEAN_DIR.glob("*.md")}
@@ -445,10 +444,20 @@ def test_main_publishes_assets_and_manifest_as_one_build(
     clean_dir, out_dir, manifest = _configure_build(tmp_path, monkeypatch)
     (bf.DATA_IN).write_text(
         json.dumps(
-            {"papers": [{"id": "X", "title": "Fresh", "author_year": "Pilot (2026)",
-                "work_id": "work:test", "version_id": "version:test",
-                "version_type": "version_of_record", "preferred_version_id": "version:test",
-                "is_preferred_version": True}]}
+            {
+                "papers": [
+                    {
+                        "id": "X",
+                        "title": "Fresh",
+                        "author_year": "Pilot (2026)",
+                        "work_id": "work:test",
+                        "version_id": "version:test",
+                        "version_type": "version_of_record",
+                        "preferred_version_id": "version:test",
+                        "is_preferred_version": True,
+                    }
+                ]
+            }
         ),
         encoding="utf-8",
     )

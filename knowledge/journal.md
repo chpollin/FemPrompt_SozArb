@@ -10,7 +10,7 @@ status: active
 language: de
 version: "0.7"
 created: 2026-02-18
-updated: 2026-08-24
+updated: 2026-08-26
 authors: [Christopher Pollin]
 generated-with: Claude Code
 related: [INDEX, plan, specification, governance, verification, handoff]
@@ -23,6 +23,13 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 ---
 
 ## PRISM and the epistemic infrastructure (2026)
+
+### 2026-08-26: Restqueue quellenkritisch aufgelöst
+
+- **Ziel.** Die nach den bisherigen OA-Läufen verbliebene Queue erneut gegen Primärquellen prüfen und jeden belastbaren Quellenfortschritt durch den geltenden Work-Version-Vertrag führen.
+- **Verlauf.** Die Prüfung bestätigte die vorhandenen Zugangsblockaden und Metadatenkonflikte. Für `8NG4ZEWE` widerlegte der offizielle zweitseitige Beitrag den bisherigen Versionsverdacht. Autorin und Publikationsjahr stimmen mit dem Zotero-Record überein; die Zeichenfolge `wbeb2022` gehört zur DOI. Die PDF-Textschicht besitzt eine fehlerhafte Zeichencodierung. Standard-Docling ersetzte Buchstaben systematisch, der erzwungene OCR-Lauf verlor Textsegmente. Der vollständige offizielle HTML-Text wurde deshalb mit Docling konvertiert, um Seitennavigation bereinigt und gegen beide gerenderten PDF-Seiten geprüft. Das Ergebnis ist als Paper-Quelle an Work und Version gebunden.
+- **Ergebnis.** Die Quellenakte hält die vollständigen Identitätskorrekturen und Zugangsblockaden für neun Works maschinenlesbar fest. Zwei operational isolierte Reviewer codierten `8NG4ZEWE` übereinstimmend als `Exclude · Not_relevant_topic`; ihre fachlichen Nebenunterschiede blieben im Lauf erhalten. Beide Pakete wurden deterministisch durch die produktiven PRISM-Funktionen übertragen. Eine dritte, getrennte AI-Agent-Review-Instanz löste die Unterschiede quellengestützt auf und akzeptierte den finalen Record. Der append-only integrierte produktive Record trägt `ai-agent-reviewed`; die Queue enthält danach acht gesperrte Works. Der aktive Runtime-Katalog bot keinen Opus-Override. Der Operator autorisierte deshalb `gpt-5.6-sol` mit hohem Reasoning-Aufwand als stärksten verfügbaren Ersatz; Manifest und Aktivitäten nennen ausschließlich dieses tatsächliche Modell.
+- **Prüfung.** Volltext- und Queue-Builder, Coding-Paket-Validatoren, beide PRISM-Roundtrips, Track-Validatoren, AI-Agent-Review, Lifecycle-Migration, append-only Merge und Run-Vertrag prüfen die gebundenen Artefakte. Die vollständige Python-Suite, die PRISM-Tests, die Companion-Smoke-Tests und die Formatprüfungen liefen im Abschlussgate grün. Eine fachliche Prüfung durch Domänenexpertinnen und eine öffentliche Freigabe wurden nicht durchgeführt.
 
 ### 2026-08-23: Quellenbereiter Restbestand agentisch bearbeitet
 

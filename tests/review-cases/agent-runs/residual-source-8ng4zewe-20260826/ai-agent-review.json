@@ -1,0 +1,161 @@
+{
+  "schema": "femprompt-prisma-ai-agent-review/0.1",
+  "run_id": "residual-source-8ng4zewe-20260826",
+  "reviewer": "ai-agent-review",
+  "actor": "agent",
+  "actor_id": "residual-source-8ng4zewe-20260826-ai-agent-review",
+  "actor_type": "ai_agent",
+  "role": "ai_agent_reviewer",
+  "prompt": {
+    "path": "prompts/prism-ai-agent-review-v0.2.md",
+    "version": "0.2",
+    "sha256": "01ad06b333cbe3c9143df11ffea98618a80c2a07aff9f36f58d060fa9900c566"
+  },
+  "source_basis": "assigned Paper source record",
+  "inputs": {
+    "tracks": [
+      {
+        "reviewer": "ar1",
+        "path": "tests/review-cases/agent-runs/residual-source-8ng4zewe-20260826/tracks/ar1-coding.json",
+        "sha256": "4cef23fe30df43638a4af0b9320b9af9d060c36725d26075f13f95773c092ba6"
+      },
+      {
+        "reviewer": "ar2",
+        "path": "tests/review-cases/agent-runs/residual-source-8ng4zewe-20260826/tracks/ar2-coding.json",
+        "sha256": "2b1982cd51f800cc7a2165366cbae7ba1ff9f2bbe0b6c2ff7e19470416fba3b7"
+      }
+    ],
+    "sources": [
+      {
+        "paper_id": "8NG4ZEWE",
+        "work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
+        "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+        "path": "docs/data/fulltext/8NG4ZEWE.md",
+        "sha256": "c49f89450790dd68dbd08a7f03a62864035b53bff9f7a6eb6bc496a5a4907b2b"
+      }
+    ]
+  },
+  "created": "2026-08-26T19:31:07.611Z",
+  "completed_at": "2026-08-26T19:31:07.611Z",
+  "status": "accepted",
+  "summary": {
+    "records": 1,
+    "resolved_records": 1,
+    "blocked": 0,
+    "decisions": {
+      "Include": 0,
+      "Unclear": 0,
+      "Exclude": 1
+    }
+  },
+  "records": {
+    "8NG4ZEWE": {
+      "paper_id": "8NG4ZEWE",
+      "work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
+      "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+      "result": "resolved",
+      "differences": [
+        {
+          "field": "identity_check.status",
+          "ar1": "verified",
+          "ar2": "provisional",
+          "resolution": "verified",
+          "rationale": "Titel, Autorin und DOI stehen unmittelbar in der Paper-Quelle. Die geprüfte offizielle Quelle weist 2023 als Publikationsjahr aus. `wbeb2022` ist Bestandteil des DOI-Namespace und keine Jahresangabe zur Publikation; es liegt kein Identitätskonflikt vor."
+        },
+        {
+          "field": "identity_check.basis",
+          "ar1": "Paper-Titel Intersektionalität, Autorin Katharina Walgenbach und DOI https://doi.org/10.35468/wbeb2022-155 stimmen innerhalb der zugewiesenen Volltextquelle überein; das Jahr 2022 ist nur aus der stabilen DOI-Kennung ableitbar.",
+          "ar2": "Texttitel: Intersektionalität. Autorin: Katharina Walgenbach. DOI: 10.35468/wbeb2022-155. Das Publikationsjahr ist nicht als separates Metadatenfeld genannt und wird aus der stabilen DOI-Kennung wbeb2022 abgeleitet.",
+          "resolution": "Titel: Intersektionalität; Autorin: Katharina Walgenbach; DOI: 10.35468/wbeb2022-155; Publikationsjahr: 2023. `wbeb2022` gehört zum DOI-Namespace und codiert nicht das Publikationsjahr. Die Quellenidentität ist konsistent.",
+          "rationale": "Beide Eingänge erfassen Titel, Autorin und DOI korrekt, leiten das Jahr jedoch unzulässig aus dem DOI-Namespace ab. Die geprüfte offizielle Quelle belegt das Publikationsjahr 2023."
+        },
+        {
+          "field": "categories.Gender",
+          "ar1": "teilweise",
+          "ar2": "ja",
+          "resolution": "teilweise",
+          "rationale": "Geschlecht und die Kreuzung von race und gender werden ausdrücklich behandelt. Der Hauptgegenstand ist Intersektionalität in der Erwachsenenbildung; Gender bildet eine tragende, aber nachgeordnete Achse und keinen eigenständigen zentralen Gender-Fokus."
+        },
+        {
+          "field": "evidence.Bias_Ungleichheit",
+          "ar1": "historisch gewordene soziale Ungleichheiten, Macht- und Diskriminierungsverhältnisse sowie hierarchisierte Subjektpositionen, die sich auf Kategorien wie Geschlecht, soziales Milieu, Schicht oder Klasse, Ethnizität, Race oder Nation, Behinderung, Sexualität usw. beziehen, nicht isoliert voneinander oder additiv konzeptualisiert werden können, sondern in ihren Überkreuzungen oder Interdependenzen analysiert werden müssen",
+          "ar2": "Unter I. lässt sich verstehen, dass historisch gewordene soziale Ungleichheiten, Macht- und Diskriminierungsverhältnisse sowie hierarchisierte Subjektpositionen, die sich auf Kategorien wie Geschlecht, soziales Milieu, Schicht oder Klasse, Ethnizität, Race oder Nation, Behinderung, Sexualität usw. beziehen, nicht isoliert voneinander oder additiv konzeptualisiert werden können, sondern in ihren Überkreuzungen oder Interdependenzen analysiert werden müssen (Walgenbach, 2014, S. 54-55).",
+          "resolution": "Unter I. lässt sich verstehen, dass historisch gewordene soziale Ungleichheiten, Macht- und Diskriminierungsverhältnisse sowie hierarchisierte Subjektpositionen, die sich auf Kategorien wie Geschlecht, soziales Milieu, Schicht oder Klasse, Ethnizität, Race oder Nation, Behinderung, Sexualität usw. beziehen, nicht isoliert voneinander oder additiv konzeptualisiert werden können, sondern in ihren Überkreuzungen oder Interdependenzen analysiert werden müssen (Walgenbach, 2014, S. 54-55).",
+          "rationale": "Beide Passagen sind zeichengetreue, zusammenhängende Ausschnitte der Quelle. Die vollständigere Passage von ar2 trägt den zentralen Ungleichheits- und Diskriminierungsgegenstand eindeutiger."
+        },
+        {
+          "field": "evidence.Feministisch",
+          "ar1": "Stattdessen wird davon ausgegangen, dass das gleichzeitige Zusammenwirken von Ungleichheitskategorien spezifische bzw. andere Machtkonstellationen hervorbringt. In der Folge geht es bei I. nicht allein um den Einbezug mehrerer sozialer Kategorien, sondern insb. um die Analyse ihrer Wechselbeziehungen.",
+          "ar2": "Hiermit wollte Crenshaw zum einen das besondere Vulnerabilitätsrisiko auf der Kreuzung sichtbar machen, zum anderen arbeitete sie damit ein problematisches Gleichheits-Differenz-Paradox für Schwarze Frauen im US-amerikanischen Antidiskriminierungsrecht heraus.",
+          "resolution": "Stattdessen wird davon ausgegangen, dass das gleichzeitige Zusammenwirken von Ungleichheitskategorien spezifische bzw. andere Machtkonstellationen hervorbringt. In der Folge geht es bei I. nicht allein um den Einbezug mehrerer sozialer Kategorien, sondern insb. um die Analyse ihrer Wechselbeziehungen.",
+          "rationale": "Beide Passagen sind wörtlich belegt. Die Passage von ar1 stützt die für Feministisch maßgebliche intersektionale Machtanalyse direkter."
+        },
+        {
+          "field": "notes",
+          "ar1": "Die Paper-Quelle behandelt Intersektionalität in der Erwachsenenbildung. Keine Technik-Kategorie erreicht teilweise oder ja; daher ist Exclude deterministisch abgeleitet.",
+          "ar2": "Das Paper behandelt Intersektionalität als ungleichheitskritische Perspektive der Erwachsenenbildung. Eine Technikdimension des Review-Schemas ist nicht Gegenstand des Textes.",
+          "resolution": "Die Paper-Quelle behandelt Intersektionalität als ungleichheitskritische Perspektive der Erwachsenenbildung. Keine Technik-Kategorie erreicht teilweise oder ja; Exclude ist deshalb deterministisch abgeleitet.",
+          "rationale": "Die beiden Notizen sind sachlich vereinbar; die Zielfassung verbindet Gegenstand und Entscheidungslogik."
+        }
+      ],
+      "rationale": "Alle Differenzen sind anhand der zugewiesenen Paper-Quelle aufgelöst. Die vier Technik-Kategorien stehen übereinstimmend auf nein; die Sozialkategorien tragen daher unabhängig von der Gender-Stufung keinen Einschluss.",
+      "identity_check": {
+        "status": "verified",
+        "title": "Intersektionalität",
+        "authors": [
+          "Katharina Walgenbach"
+        ],
+        "year": 2023,
+        "identifier": "https://doi.org/10.35468/wbeb2022-155",
+        "publication_type": "wissenschaftlicher Lexikonbeitrag mit identifizierbarer Autorin, DOI und Quellenbasis",
+        "basis": "Titel, Autorin und DOI sind unmittelbar in der Paper-Quelle ausgewiesen. Die geprüfte offizielle Quelle nennt 2023 als Publikationsjahr; `wbeb2022` ist Bestandteil des DOI-Namespace. Form, interne Fachverweise und Literaturverzeichnis tragen die zulässige wissenschaftliche Publikationstyp-Einordnung."
+      },
+      "final_coding": {
+        "paper_id": "8NG4ZEWE",
+        "work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
+        "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+        "source_path": "docs/data/fulltext/8NG4ZEWE.md",
+        "source_sha256": "c49f89450790dd68dbd08a7f03a62864035b53bff9f7a6eb6bc496a5a4907b2b",
+        "identity_check": {
+          "status": "verified",
+          "basis": "Titel Intersektionalität, Autorin Katharina Walgenbach und DOI 10.35468/wbeb2022-155 stimmen mit der geprüften offiziellen Quelle überein. Das Publikationsjahr ist 2023; `wbeb2022` gehört zum DOI-Namespace und ist keine Publikationsjahresangabe."
+        },
+        "categories": {
+          "AI_Literacies": "nein",
+          "Generative_KI": "nein",
+          "Prompting": "nein",
+          "KI_Sonstige": "nein",
+          "Soziale_Arbeit": "nein",
+          "Bias_Ungleichheit": "ja",
+          "Gender": "teilweise",
+          "Diversitaet": "teilweise",
+          "Feministisch": "ja",
+          "Fairness": "nein"
+        },
+        "evidence": {
+          "AI_Literacies": [],
+          "Generative_KI": [],
+          "Prompting": [],
+          "KI_Sonstige": [],
+          "Soziale_Arbeit": [],
+          "Bias_Ungleichheit": [
+            "Unter I. lässt sich verstehen, dass historisch gewordene soziale Ungleichheiten, Macht- und Diskriminierungsverhältnisse sowie hierarchisierte Subjektpositionen, die sich auf Kategorien wie Geschlecht, soziales Milieu, Schicht oder Klasse, Ethnizität, Race oder Nation, Behinderung, Sexualität usw. beziehen, nicht isoliert voneinander oder additiv konzeptualisiert werden können, sondern in ihren Überkreuzungen oder Interdependenzen analysiert werden müssen (Walgenbach, 2014, S. 54-55)."
+          ],
+          "Gender": [
+            "Crenshaw verwendete zur Erläuterung des Begriffs die Metapher einer Straßenkreuzung, bei der sich bspw. die Diskriminierungslinien race und gender kreuzen."
+          ],
+          "Diversitaet": [
+            "Des Weiteren wird I. mit der Entwicklung von Diversity-Kompetenzen in der → [Hochschuldidaktik](https://doi.org/10.35468/wbeb2022-132) bzw. → [wissenschaftlichen Weiterbildung](https://doi.org/10.35468/wbeb2022-299) in Verbindung gebracht."
+          ],
+          "Feministisch": [
+            "Stattdessen wird davon ausgegangen, dass das gleichzeitige Zusammenwirken von Ungleichheitskategorien spezifische bzw. andere Machtkonstellationen hervorbringt. In der Folge geht es bei I. nicht allein um den Einbezug mehrerer sozialer Kategorien, sondern insb. um die Analyse ihrer Wechselbeziehungen."
+          ],
+          "Fairness": []
+        },
+        "decision": "Exclude",
+        "reason": "Not_relevant_topic",
+        "notes": "Die Paper-Quelle behandelt Intersektionalität als ungleichheitskritische Perspektive der Erwachsenenbildung. Keine Technik-Kategorie erreicht teilweise oder ja; Exclude ist deshalb deterministisch abgeleitet."
+      }
+    }
+  }
+}

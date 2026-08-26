@@ -29,10 +29,34 @@ NEW_PRODUCT = (
     / "uncovered-sources-5-20260823"
     / "product-v0.3.json"
 )
+RESIDUAL_PRODUCT = (
+    ROOT
+    / "tests"
+    / "review-cases"
+    / "agent-runs"
+    / "residual-source-8ng4zewe-20260826"
+    / "product-v0.4.json"
+)
 
 
 def _pilot() -> dict[str, Any]:
     return json.loads(PILOT.read_text(encoding="utf-8"))
+
+
+def test_migration_preserves_separate_ai_review_activity_provenance() -> None:
+    source = json.loads(RESIDUAL_PRODUCT.read_text(encoding="utf-8"))
+    migrated = lifecycle.migrate_v03_document(source)
+    record = migrated["decisions"]["8NG4ZEWE"]
+    screening, ai_review = record["provenance"]["activities"]
+
+    assert screening["prompt"]["reference"] == "prompts/prism-agent-reviewer-v1.1.md"
+    assert ai_review["prompt"]["reference"] == "prompts/prism-ai-agent-review-v0.2.md"
+    assert ai_review["prompt"]["sha256"] == (
+        "01ad06b333cbe3c9143df11ffea98618a80c2a07aff9f36f58d060fa9900c566"
+    )
+    assert ai_review["associated_actor_ids"] == [
+        "residual-source-8ng4zewe-20260826-ai-agent-review"
+    ]
 
 
 def test_migration_projects_pilot_to_nested_ai_agent_reviewed_lifecycle() -> None:

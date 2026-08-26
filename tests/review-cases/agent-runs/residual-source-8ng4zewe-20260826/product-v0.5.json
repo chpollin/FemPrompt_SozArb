@@ -1,0 +1,404 @@
+{
+  "schema": "femprompt-prisma-reviewer/0.5",
+  "reviewer": "ar2",
+  "actor": "agent",
+  "status": "ai-agent-reviewed",
+  "updated": "2026-08-26T19:31:07.611Z",
+  "review_context": {
+    "run_id": "residual-source-8ng4zewe-20260826",
+    "provenance_method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+    "run_manifest": "tests/review-cases/agent-runs/residual-source-8ng4zewe-20260826/run.json",
+    "review_path": "tests/review-cases/agent-runs/residual-source-8ng4zewe-20260826/ai-agent-review.json",
+    "review_sha256": "681e689b9e4c8362b70fc787740da6e1c2141b8a05893eb47dd2cc582324ef00",
+    "ai_agent_reviewer_actor_id": "residual-source-8ng4zewe-20260826-ai-agent-review",
+    "input_tracks": [
+      {
+        "reviewer": "ar1",
+        "actor_id": "residual-source-8ng4zewe-20260826-ar1",
+        "path": "tests/review-cases/agent-runs/residual-source-8ng4zewe-20260826/tracks/ar1.json",
+        "sha256": "38ea1d6d7a8a9b5bdf8d70ba3ee1577498119c0752894acf26af69f4ff55be92",
+        "coding_packet": "tests/review-cases/agent-runs/residual-source-8ng4zewe-20260826/tracks/ar1-coding.json",
+        "coding_packet_sha256": "4cef23fe30df43638a4af0b9320b9af9d060c36725d26075f13f95773c092ba6"
+      },
+      {
+        "reviewer": "ar2",
+        "actor_id": "residual-source-8ng4zewe-20260826-ar2",
+        "path": "tests/review-cases/agent-runs/residual-source-8ng4zewe-20260826/tracks/ar2.json",
+        "sha256": "c151b2631f82687a38bc7091139a4d6d3a04f88fac1751f88cabda694532883c",
+        "coding_packet": "tests/review-cases/agent-runs/residual-source-8ng4zewe-20260826/tracks/ar2-coding.json",
+        "coding_packet_sha256": "2b1982cd51f800cc7a2165366cbae7ba1ff9f2bbe0b6c2ff7e19470416fba3b7"
+      }
+    ],
+    "paper_sources": {
+      "8NG4ZEWE": {
+        "path": "docs/data/fulltext/8NG4ZEWE.md",
+        "sha256": "c49f89450790dd68dbd08a7f03a62864035b53bff9f7a6eb6bc496a5a4907b2b",
+        "work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
+        "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+        "version_type": "unknown",
+        "representative_record_id": "8NG4ZEWE"
+      }
+    },
+    "work_assignments": [
+      {
+        "work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
+        "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+        "version_type": "unknown",
+        "preferred_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+        "representative_record_id": "8NG4ZEWE",
+        "record_ids": [
+          "8NG4ZEWE"
+        ]
+      }
+    ]
+  },
+  "decisions": {
+    "8NG4ZEWE": {
+      "categories": {
+        "Bias_Ungleichheit": 2,
+        "Gender": 1,
+        "Diversitaet": 1,
+        "Feministisch": 2
+      },
+      "decision": "Exclude",
+      "override": false,
+      "reason": "Not_relevant_topic",
+      "override_reason": null,
+      "evidence": {
+        "Bias_Ungleichheit": [
+          {
+            "term": "Unter I. lässt sich verstehen, dass historisch gewordene soziale Ungleichheiten,",
+            "snippet": "Unter I. lässt sich verstehen, dass historisch gewordene soziale Ungleichheiten, Macht- und Diskriminierungsverhältnisse sowie hierarchisierte Subjektpositionen, die sich auf Kategorien wie Geschlecht, soziales Milieu, Schicht oder Klasse, Ethnizität, Race ode",
+            "ts": "2026-08-26T19:31:07.611Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "8NG4ZEWE",
+            "work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
+            "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "Crenshaw verwendete zur Erläuterung des Begriffs die Metapher einer Straßenkreuz",
+            "snippet": "Crenshaw verwendete zur Erläuterung des Begriffs die Metapher einer Straßenkreuzung, bei der sich bspw. die Diskriminierungslinien race und gender kreuzen.",
+            "ts": "2026-08-26T19:31:07.611Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "8NG4ZEWE",
+            "work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
+            "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "Des Weiteren wird I. mit der Entwicklung von Diversity-Kompetenzen in der → [Hoc",
+            "snippet": "Des Weiteren wird I. mit der Entwicklung von Diversity-Kompetenzen in der → [Hochschuldidaktik](https://doi.org/10.35468/wbeb2022-132) bzw. → [wissenschaftlichen Weiterbildung](https://doi.org/10.35468/wbeb2022-299) in Verbindung gebracht.",
+            "ts": "2026-08-26T19:31:07.611Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "8NG4ZEWE",
+            "work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
+            "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816"
+          }
+        ],
+        "Feministisch": [
+          {
+            "term": "Stattdessen wird davon ausgegangen, dass das gleichzeitige Zusammenwirken von Un",
+            "snippet": "Stattdessen wird davon ausgegangen, dass das gleichzeitige Zusammenwirken von Ungleichheitskategorien spezifische bzw. andere Machtkonstellationen hervorbringt. In der Folge geht es bei I. nicht allein um den Einbezug mehrerer sozialer Kategorien, sondern insb",
+            "ts": "2026-08-26T19:31:07.611Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "8NG4ZEWE",
+            "work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
+            "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816"
+          }
+        ]
+      },
+      "ts": "2026-08-26T19:31:07.611Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
+      "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+      "version_type": "unknown",
+      "preferred_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+      "selected_version_is_preferred": true,
+      "representative_record_id": "8NG4ZEWE",
+      "provenance": {
+        "annotation_id": "ar2:8NG4ZEWE",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "curation-provenance-unrecorded",
+            "type": "person",
+            "roles": [
+              "curation"
+            ],
+            "identity": {
+              "status": "legacy_gap",
+              "value": "unrecorded"
+            }
+          },
+          {
+            "id": "residual-source-8ng4zewe-20260826-ar1",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "residual-source-8ng4zewe-20260826-ar2",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "residual-source-8ng4zewe-20260826-ai-agent-review",
+            "type": "ai_agent",
+            "roles": [
+              "ai_agent_reviewer"
+            ],
+            "identity": {
+              "status": "recorded",
+              "reference": "OpenAI Codex collaboration runtime:gpt-5.6-sol",
+              "provider": "OpenAI Codex collaboration runtime",
+              "model": "gpt-5.6-sol",
+              "model_version": "runtime-catalog-2026-08-26"
+            }
+          },
+          {
+            "id": "deterministic-validator",
+            "type": "software_agent",
+            "roles": [
+              "validation"
+            ]
+          }
+        ],
+        "activities": [
+          {
+            "id": "8NG4ZEWE:agent-annotation",
+            "type": "screening",
+            "run_id": "residual-source-8ng4zewe-20260826",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.1.md",
+              "version": "1.1",
+              "sha256": "31b5741719d813848622351efab184c420f9f9bc0771f52dff2d5feb15609acb"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "OpenAI Codex collaboration runtime:gpt-5.6-sol",
+              "provider": "OpenAI Codex collaboration runtime",
+              "model": "gpt-5.6-sol",
+              "model_version": "runtime-catalog-2026-08-26"
+            },
+            "associated_actor_ids": [
+              "residual-source-8ng4zewe-20260826-ar1",
+              "residual-source-8ng4zewe-20260826-ar2"
+            ]
+          },
+          {
+            "id": "8NG4ZEWE:ai-agent-review",
+            "type": "ai_agent_review",
+            "run_id": "residual-source-8ng4zewe-20260826",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-ai-agent-review-v0.2.md",
+              "version": "0.2",
+              "sha256": "01ad06b333cbe3c9143df11ffea98618a80c2a07aff9f36f58d060fa9900c566"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "OpenAI Codex collaboration runtime:gpt-5.6-sol",
+              "provider": "OpenAI Codex collaboration runtime",
+              "model": "gpt-5.6-sol",
+              "model_version": "runtime-catalog-2026-08-26"
+            },
+            "associated_actor_ids": [
+              "residual-source-8ng4zewe-20260826-ai-agent-review"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:8NG4ZEWE",
+            "type": "paper",
+            "reference": "docs/data/fulltext/8NG4ZEWE.md",
+            "sha256": "c49f89450790dd68dbd08a7f03a62864035b53bff9f7a6eb6bc496a5a4907b2b",
+            "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+            "work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
+            "version_type": "unknown"
+          }
+        ],
+        "derived_from": [
+          {
+            "id": "ai-agent-review",
+            "type": "ai_agent_review",
+            "reference": "tests/review-cases/agent-runs/residual-source-8ng4zewe-20260826/ai-agent-review.json"
+          },
+          {
+            "id": "run-manifest",
+            "type": "run_manifest",
+            "reference": "tests/review-cases/agent-runs/residual-source-8ng4zewe-20260826/run.json"
+          },
+          {
+            "id": "track:ar1",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/residual-source-8ng4zewe-20260826/tracks/ar1.json"
+          },
+          {
+            "id": "track:ar2",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/residual-source-8ng4zewe-20260826/tracks/ar2.json"
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "annotation_id": "ar2:8NG4ZEWE",
+          "annotation_type": "screening_decision",
+          "at": "2026-08-26T19:31:07.611Z",
+          "actor_ids": [
+            "residual-source-8ng4zewe-20260826-ar1",
+            "residual-source-8ng4zewe-20260826-ar2"
+          ],
+          "body": {
+            "categories": {
+              "Bias_Ungleichheit": 2,
+              "Gender": 1,
+              "Diversitaet": 1,
+              "Feministisch": 2
+            },
+            "decision": "Exclude",
+            "override": false,
+            "reason": "Not_relevant_topic",
+            "override_reason": null,
+            "evidence": {
+              "Bias_Ungleichheit": [
+                {
+                  "term": "Unter I. lässt sich verstehen, dass historisch gewordene soziale Ungleichheiten,",
+                  "snippet": "Unter I. lässt sich verstehen, dass historisch gewordene soziale Ungleichheiten, Macht- und Diskriminierungsverhältnisse sowie hierarchisierte Subjektpositionen, die sich auf Kategorien wie Geschlecht, soziales Milieu, Schicht oder Klasse, Ethnizität, Race ode",
+                  "ts": "2026-08-26T19:31:07.611Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "8NG4ZEWE",
+                  "work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
+                  "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816"
+                }
+              ],
+              "Gender": [
+                {
+                  "term": "Crenshaw verwendete zur Erläuterung des Begriffs die Metapher einer Straßenkreuz",
+                  "snippet": "Crenshaw verwendete zur Erläuterung des Begriffs die Metapher einer Straßenkreuzung, bei der sich bspw. die Diskriminierungslinien race und gender kreuzen.",
+                  "ts": "2026-08-26T19:31:07.611Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "8NG4ZEWE",
+                  "work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
+                  "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816"
+                }
+              ],
+              "Diversitaet": [
+                {
+                  "term": "Des Weiteren wird I. mit der Entwicklung von Diversity-Kompetenzen in der → [Hoc",
+                  "snippet": "Des Weiteren wird I. mit der Entwicklung von Diversity-Kompetenzen in der → [Hochschuldidaktik](https://doi.org/10.35468/wbeb2022-132) bzw. → [wissenschaftlichen Weiterbildung](https://doi.org/10.35468/wbeb2022-299) in Verbindung gebracht.",
+                  "ts": "2026-08-26T19:31:07.611Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "8NG4ZEWE",
+                  "work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
+                  "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816"
+                }
+              ],
+              "Feministisch": [
+                {
+                  "term": "Stattdessen wird davon ausgegangen, dass das gleichzeitige Zusammenwirken von Un",
+                  "snippet": "Stattdessen wird davon ausgegangen, dass das gleichzeitige Zusammenwirken von Ungleichheitskategorien spezifische bzw. andere Machtkonstellationen hervorbringt. In der Folge geht es bei I. nicht allein um den Einbezug mehrerer sozialer Kategorien, sondern insb",
+                  "ts": "2026-08-26T19:31:07.611Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "8NG4ZEWE",
+                  "work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
+                  "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816"
+                }
+              ]
+            },
+            "text_source": "raw",
+            "ts": "2026-08-26T19:31:07.611Z",
+            "reviewer": "ar2",
+            "actor": "agent"
+          }
+        }
+      ],
+      "active_annotation_id": "ar2:8NG4ZEWE",
+      "checks": [
+        {
+          "check_id": "8NG4ZEWE:lifecycle-contract:2026-08-26T19:31:07.611Z",
+          "check_type": "lifecycle_contract",
+          "status": "passed",
+          "at": "2026-08-26T19:31:07.611Z",
+          "actor_id": "deterministic-validator",
+          "tool": {
+            "name": "src.assess.screening_lifecycle",
+            "version": "0.5"
+          },
+          "subject": {
+            "annotation_id": "ar2:8NG4ZEWE",
+            "sha256": "c1f85c0286ada33dc8bb820a53eb1ccfca87d80d2c0f820ff62e44f21e2fe8a2"
+          }
+        }
+      ],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "curated_corpus_snapshot",
+          "at": "2026-08-26T19:31:07.611Z",
+          "actor_ids": [
+            "curation-provenance-unrecorded"
+          ]
+        },
+        "state": "ai-agent-reviewed",
+        "events": [
+          {
+            "event_id": "8NG4ZEWE:agent-annotation",
+            "event_type": "agent_annotation",
+            "from": "curated",
+            "to": "agent-annotated",
+            "at": "2026-08-26T19:31:07.611Z",
+            "activity_id": "8NG4ZEWE:agent-annotation",
+            "actor_ids": [
+              "residual-source-8ng4zewe-20260826-ar1",
+              "residual-source-8ng4zewe-20260826-ar2"
+            ],
+            "result": "completed",
+            "annotation_id": "ar2:8NG4ZEWE"
+          },
+          {
+            "event_id": "8NG4ZEWE:ai-agent-review",
+            "event_type": "ai_agent_review",
+            "from": "agent-annotated",
+            "to": "ai-agent-reviewed",
+            "at": "2026-08-26T19:31:07.611Z",
+            "activity_id": "8NG4ZEWE:ai-agent-review",
+            "actor_ids": [
+              "residual-source-8ng4zewe-20260826-ai-agent-review"
+            ],
+            "result": "accepted",
+            "annotation_id": "ar2:8NG4ZEWE"
+          }
+        ]
+      }
+    }
+  }
+}

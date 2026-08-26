@@ -120,6 +120,7 @@ def _write_atomic(path: Path, document: dict[str, Any]) -> None:
     temporary.write_text(
         json.dumps(document, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
+        newline="\n",
     )
     temporary.replace(path)
 

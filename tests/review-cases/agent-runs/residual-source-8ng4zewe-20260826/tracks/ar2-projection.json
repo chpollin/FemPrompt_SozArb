@@ -1,0 +1,89 @@
+{
+  "schema": "femprompt-prisma-reviewer/0.4",
+  "reviewer": "ar2",
+  "actor": "agent",
+  "updated": "2026-08-26T18:59:29.0952153Z",
+  "transcription": {
+    "run_id": "residual-source-8ng4zewe-20260826",
+    "source_packet": "tests/review-cases/agent-runs/residual-source-8ng4zewe-20260826/tracks/ar2-coding.json",
+    "source_packet_sha256": "2b1982cd51f800cc7a2165366cbae7ba1ff9f2bbe0b6c2ff7e19470416fba3b7",
+    "method": "deterministic_packet_projection_pending_prism_roundtrip"
+  },
+  "decisions": {
+    "8NG4ZEWE": {
+      "categories": {
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Diversitaet": 1,
+        "Feministisch": 2
+      },
+      "decision": "Exclude",
+      "override": false,
+      "reason": "Not_relevant_topic",
+      "override_reason": null,
+      "evidence": {
+        "Bias_Ungleichheit": [
+          {
+            "term": "Unter I. lässt sich verstehen, dass historisch gewordene soziale Ungleichheiten,",
+            "snippet": "Unter I. lässt sich verstehen, dass historisch gewordene soziale Ungleichheiten, Macht- und Diskriminierungsverhältnisse sowie hierarchisierte Subjektpositionen, die sich auf Kategorien wie Geschlecht, soziales Milieu, Schicht oder Klasse, Ethnizität, Race ode",
+            "ts": "2026-08-26T18:59:29.0952153Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "8NG4ZEWE",
+            "work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
+            "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "Crenshaw verwendete zur Erläuterung des Begriffs die Metapher einer Straßenkreuz",
+            "snippet": "Crenshaw verwendete zur Erläuterung des Begriffs die Metapher einer Straßenkreuzung, bei der sich bspw. die Diskriminierungslinien race und gender kreuzen.",
+            "ts": "2026-08-26T18:59:29.0952153Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "8NG4ZEWE",
+            "work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
+            "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "Des Weiteren wird I. mit der Entwicklung von Diversity-Kompetenzen in der → [Hoc",
+            "snippet": "Des Weiteren wird I. mit der Entwicklung von Diversity-Kompetenzen in der → [Hochschuldidaktik](https://doi.org/10.35468/wbeb2022-132) bzw. → [wissenschaftlichen Weiterbildung](https://doi.org/10.35468/wbeb2022-299) in Verbindung gebracht.",
+            "ts": "2026-08-26T18:59:29.0952153Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "8NG4ZEWE",
+            "work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
+            "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816"
+          }
+        ],
+        "Feministisch": [
+          {
+            "term": "Hiermit wollte Crenshaw zum einen das besondere Vulnerabilitätsrisiko auf der Kr",
+            "snippet": "Hiermit wollte Crenshaw zum einen das besondere Vulnerabilitätsrisiko auf der Kreuzung sichtbar machen, zum anderen arbeitete sie damit ein problematisches Gleichheits-Differenz-Paradox für Schwarze Frauen im US-amerikanischen Antidiskriminierungsrecht heraus.",
+            "ts": "2026-08-26T18:59:29.0952153Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "8NG4ZEWE",
+            "work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
+            "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816"
+          }
+        ]
+      },
+      "ts": "2026-08-26T18:59:29.0952153Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
+      "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+      "version_type": "unknown",
+      "preferred_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+      "selected_version_is_preferred": true
+    }
+  }
+}

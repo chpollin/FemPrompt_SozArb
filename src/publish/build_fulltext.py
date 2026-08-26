@@ -46,6 +46,7 @@ def source_identity(paper: dict[str, object]) -> dict[str, object]:
         if paper.get(key) is not None
     }
 
+
 # Curated identity repairs for conversions that the generic author/year cascade
 # cannot resolve.  Each entry names an exact Paper record, the real conversion,
 # and a title passage that must occur in that conversion.  The resolver still
@@ -137,6 +138,11 @@ CURATED_SOURCE_OVERRIDES = {
         "source": "clean",
         "file": "J7V3AAQT.md",
         "title_evidence": "A chatbot for mental health support: exploring the impact of Emohaa on reducing mental distress in China",
+    },
+    "8NG4ZEWE": {
+        "source": "clean",
+        "file": "8NG4ZEWE.md",
+        "title_evidence": "Intersektionalität",
     },
 }
 

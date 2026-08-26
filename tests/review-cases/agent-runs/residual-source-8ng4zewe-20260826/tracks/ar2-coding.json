@@ -1,0 +1,54 @@
+{
+  "schema": "femprompt-prisma-coding-packet/0.1",
+  "run_id": "residual-source-8ng4zewe-20260826",
+  "reviewer": "ar2",
+  "actor": "agent",
+  "source_mode": "blinded_source_review_with_deterministic_prism_roundtrip",
+  "decisions": {
+    "8NG4ZEWE": {
+      "work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
+      "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+      "source_path": "docs/data/fulltext/8NG4ZEWE.md",
+      "source_sha256": "c49f89450790dd68dbd08a7f03a62864035b53bff9f7a6eb6bc496a5a4907b2b",
+      "identity_check": {
+        "status": "provisional",
+        "basis": "Texttitel: Intersektionalität. Autorin: Katharina Walgenbach. DOI: 10.35468/wbeb2022-155. Das Publikationsjahr ist nicht als separates Metadatenfeld genannt und wird aus der stabilen DOI-Kennung wbeb2022 abgeleitet."
+      },
+      "categories": {
+        "AI_Literacies": "nein",
+        "Generative_KI": "nein",
+        "Prompting": "nein",
+        "KI_Sonstige": "nein",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "ja",
+        "Diversitaet": "teilweise",
+        "Feministisch": "ja",
+        "Fairness": "nein"
+      },
+      "evidence": {
+        "AI_Literacies": [],
+        "Generative_KI": [],
+        "Prompting": [],
+        "KI_Sonstige": [],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+            "Unter I. lässt sich verstehen, dass historisch gewordene soziale Ungleichheiten, Macht- und Diskriminierungsverhältnisse sowie hierarchisierte Subjektpositionen, die sich auf Kategorien wie Geschlecht, soziales Milieu, Schicht oder Klasse, Ethnizität, Race oder Nation, Behinderung, Sexualität usw. beziehen, nicht isoliert voneinander oder additiv konzeptualisiert werden können, sondern in ihren Überkreuzungen oder Interdependenzen analysiert werden müssen (Walgenbach, 2014, S. 54-55)."
+        ],
+        "Gender": [
+            "Crenshaw verwendete zur Erläuterung des Begriffs die Metapher einer Straßenkreuzung, bei der sich bspw. die Diskriminierungslinien race und gender kreuzen."
+        ],
+        "Diversitaet": [
+            "Des Weiteren wird I. mit der Entwicklung von Diversity-Kompetenzen in der → [Hochschuldidaktik](https://doi.org/10.35468/wbeb2022-132) bzw. → [wissenschaftlichen Weiterbildung](https://doi.org/10.35468/wbeb2022-299) in Verbindung gebracht."
+        ],
+        "Feministisch": [
+            "Hiermit wollte Crenshaw zum einen das besondere Vulnerabilitätsrisiko auf der Kreuzung sichtbar machen, zum anderen arbeitete sie damit ein problematisches Gleichheits-Differenz-Paradox für Schwarze Frauen im US-amerikanischen Antidiskriminierungsrecht heraus."
+        ],
+        "Fairness": []
+      },
+      "decision": "Exclude",
+      "reason": "Not_relevant_topic",
+      "notes": "Das Paper behandelt Intersektionalität als ungleichheitskritische Perspektive der Erwachsenenbildung. Eine Technikdimension des Review-Schemas ist nicht Gegenstand des Textes."
+    }
+  }
+}

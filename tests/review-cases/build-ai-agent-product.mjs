@@ -24,6 +24,11 @@ function main() {
   const review = json(reviewPath);
   const validation = validateAiAgentReview(review, run);
   if (!validation.ok) throw new Error(`invalid AI-agent review:\n- ${validation.errors.join('\n- ')}`);
+  const reviewActivity = run.provenance?.activities?.find(
+    (activity) => activity.type === 'ai_agent_review',
+  );
+  if (!reviewActivity?.actor_id)
+    throw new Error('run manifest has no AI-agent-review actor');
 
   const decisions = {};
   for (const paper of run.assignment.papers) {
@@ -49,7 +54,7 @@ function main() {
       run_manifest: runPath,
       review_path: reviewPath,
       review_sha256: sha256(reviewPath),
-      ai_agent_reviewer_actor_id: 'codex-ai-agent-review',
+      ai_agent_reviewer_actor_id: reviewActivity.actor_id,
       input_tracks: run.tracks.map((track) => ({
         reviewer: track.reviewer_id,
         actor_id: track.actor_id,

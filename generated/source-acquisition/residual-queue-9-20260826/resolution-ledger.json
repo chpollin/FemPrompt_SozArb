@@ -1,0 +1,210 @@
+{
+  "schema": "femprompt-source-resolution-ledger/0.1",
+  "batch_id": "residual-queue-9-20260826",
+  "created_at": "2026-08-26T18:39:58.225Z",
+  "scope": {
+    "queue": "generated/agent-screening-queue.json",
+    "record_ids": [
+      "SQYLQFRU",
+      "RAY6G2R7",
+      "ZQHP5G35",
+      "LR8Z3YHP",
+      "KI9GRGHB",
+      "5T55I5Z7",
+      "XG7RFFC7",
+      "Z9DNTBFF",
+      "8NG4ZEWE"
+    ]
+  },
+  "authority_boundary": "Source-resolution evidence only. Zotero curation, screening annotation, AI Agent Review, domain-expert verification, and publication approval are separate activities.",
+  "records": [
+    {
+      "record_id": "8NG4ZEWE",
+      "work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
+      "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+      "resolution_status": "source_ready",
+      "verified_identity": {
+        "title": "Intersektionalität",
+        "authors": ["Katharina Walgenbach"],
+        "year": 2023,
+        "doi": "10.35468/wbeb2022-155"
+      },
+      "evidence_urls": [
+        "https://wb-erwachsenenbildung.net/download/intersektionalitaet/",
+        "https://www.fernuni-hagen.de/bildungswissenschaft/bildung-differenz/docs/wbeb-155_intersektionalitaet.pdf"
+      ],
+      "paper_source": "generated/markdown_clean/8NG4ZEWE.md",
+      "paper_source_sha256": "9f20057ac511d2e9ff05c6f2234d591c038b40051c5a178030afa9b8eaabba0a",
+      "required_action": "No further source action. Governed screening completed in run residual-source-8ng4zewe-20260826; domain-expert verification remains separate."
+    },
+    {
+      "record_id": "5T55I5Z7",
+      "work_id": "work:b440aa78-e9c1-5b93-8d4d-2200924a02cd",
+      "version_id": "version:09999996-2035-5d96-8058-aa9bb3c2b668",
+      "resolution_status": "blocked_official_delivery",
+      "verified_identity": {
+        "title": "Artificial intelligence and gender equality: key findings of UNESCO's Global Dialogue",
+        "authors": ["UNESCO"],
+        "year": 2020,
+        "ark": "ark:/48223/pf0000374174"
+      },
+      "evidence_urls": [
+        "https://unesdoc.unesco.org/ark:/48223/pf0000374174",
+        "https://www.unesco.org/en/gender-equality/resources"
+      ],
+      "required_action": "Acquire the official publication through an authorised working delivery endpoint and review its Paper Markdown."
+    },
+    {
+      "record_id": "ZQHP5G35",
+      "work_id": "work:5d44ca3d-827b-5f4e-a4f1-1ee40ec55c18",
+      "version_id": "version:d25aa754-f559-54ef-bd2f-4f8d0bec38a5",
+      "resolution_status": "blocked_fulltext_unavailable",
+      "verified_identity": {
+        "title": "Data and rights in the digital welfare state: the case of Denmark",
+        "authors": ["Rikke Frank Jørgensen"],
+        "year": 2023,
+        "doi": "10.1080/1369118X.2021.1934069"
+      },
+      "evidence_urls": [
+        "https://www.tandfonline.com/doi/abs/10.1080/1369118X.2021.1934069"
+      ],
+      "required_action": "Provide an authorised full text or retain the abstract-only queue blocker."
+    },
+    {
+      "record_id": "KI9GRGHB",
+      "work_id": "work:a6e813e5-57e0-555c-92f9-1155ffc79f42",
+      "version_id": "version:e3428c27-954b-565a-9d89-d546870301b3",
+      "resolution_status": "blocked_fulltext_unavailable",
+      "verified_identity": {
+        "title": "Theorising algorithmic justice",
+        "authors": ["Olivera Marjanovic", "Dubravka Cecez-Kecmanovic", "Richard Vidgen"],
+        "year": 2022,
+        "doi": "10.1080/0960085X.2021.1934130"
+      },
+      "evidence_urls": [
+        "https://opus.lib.uts.edu.au/handle/10453/169167",
+        "https://researchers.mq.edu.au/en/publications/theorising-algorithmic-justice"
+      ],
+      "required_action": "Provide an authorised full text or retain the abstract-only queue blocker."
+    },
+    {
+      "record_id": "LR8Z3YHP",
+      "work_id": "work:62cbd3ab-96ea-50e4-b877-2f65571a8f83",
+      "version_id": "version:d523f07b-3eed-5bf9-9073-62ffb923d65b",
+      "resolution_status": "blocked_canonical_identity_conflict",
+      "current_conflict": {
+        "doi": "10.1177/0950017020950021",
+        "author_order": ["Sarah Wadmann", "Klaus Hoeyer"]
+      },
+      "verified_identity": {
+        "title": "‘Meaningless work’: How the datafication of health reconfigures knowledge about work and erodes professional judgement",
+        "authors": ["Klaus Hoeyer", "Sarah Wadmann"],
+        "year": 2020,
+        "doi": "10.1080/03085147.2020.1733842"
+      },
+      "evidence_urls": [
+        "https://researchprofiles.ku.dk/en/publications/meaningless-work-how-the-datafication-of-health-reconfigures-know",
+        "https://www.vive.dk/en/publications/meaningless-work-how-the-datafication-of-health-reconfigures-knowledge-about-work-and-erodes-professional-judgement-qz5gonv8/"
+      ],
+      "required_action": "Correct and re-export the Zotero record before Work-Version rebuilding and source binding."
+    },
+    {
+      "record_id": "XG7RFFC7",
+      "work_id": "work:e3fcbaca-43ce-552e-85d8-0c743c12fee2",
+      "version_id": "version:ee62fefd-c381-5494-87e4-6accdce35fbe",
+      "resolution_status": "blocked_insufficient_bibliographic_identity",
+      "current_conflict": {
+        "title": "Occupational employment statistics",
+        "item_type": "journalArticle",
+        "year": 2023
+      },
+      "verified_context": {
+        "agency": "U.S. Bureau of Labor Statistics",
+        "program_name_since_2021": "Occupational Employment and Wage Statistics"
+      },
+      "evidence_urls": [
+        "https://www.bls.gov/oes/2023/occupational-employment-and-wage-statistics-oews.htm",
+        "https://www.bls.gov/oes/oes_doc_arch.htm"
+      ],
+      "required_action": "Identify the intended 2023 release or remove the malformed journal-article record during Zotero curation."
+    },
+    {
+      "record_id": "SQYLQFRU",
+      "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+      "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+      "resolution_status": "blocked_canonical_identity_conflict",
+      "current_conflict": {
+        "authors": ["Furniturewala", "Zhang", "Chang"],
+        "year": 2024,
+        "source_type": "secondary_summary"
+      },
+      "verified_identity": {
+        "title": "Reasoning Towards Fairness: Mitigating Bias in Language Models through Reasoning-Guided Fine-Tuning",
+        "authors": ["Sanchit Kabra", "Akshita Jha", "Chandan K. Reddy"],
+        "year": 2025,
+        "arxiv": "2504.05632",
+        "doi": "10.48550/arXiv.2504.05632"
+      },
+      "evidence_urls": [
+        "https://arxiv.org/abs/2504.05632"
+      ],
+      "required_action": "Correct and re-export the Zotero record or retain the conflict as a separate unresolved candidate."
+    },
+    {
+      "record_id": "RAY6G2R7",
+      "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+      "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+      "resolution_status": "blocked_canonical_identity_conflict",
+      "current_conflict": {
+        "title": "SWIFTSAGE: A new dual-module framework for better action planning in complex interactive reasoning tasks",
+        "year": 2024,
+        "url": "https://arxiv.org/html/2404.17218v3"
+      },
+      "supplied_url_identity": {
+        "title": "Prompting Techniques for Reducing Social Bias in LLMs through System 1 and System 2 Cognitive Processes",
+        "authors": ["Mahammed Kamruzzaman", "Gene Louis Kim"],
+        "arxiv": "2404.17218"
+      },
+      "candidate_swiftsage_identity": {
+        "title": "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks",
+        "authors": ["Bill Yuchen Lin et al."],
+        "year": 2023,
+        "arxiv": "2305.17390"
+      },
+      "evidence_urls": [
+        "https://arxiv.org/abs/2404.17218",
+        "https://arxiv.org/abs/2305.17390"
+      ],
+      "required_action": "Resolve which work was intended during Zotero curation; do not bind either source to the current record."
+    },
+    {
+      "record_id": "Z9DNTBFF",
+      "work_id": "work:ec94cf1c-87bf-5f4d-a840-9dd3b92eefab",
+      "version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
+      "resolution_status": "blocked_canonical_identity_conflict",
+      "current_conflict": {
+        "title": "Worst of both worlds: A comparative analysis of error in language and vision-language models",
+        "authors": ["Tejas Srinivasan", "Yonatan Bisk"],
+        "year": 2024,
+        "url": "https://arxiv.org/html/2405.20152v1"
+      },
+      "supplied_url_identity": {
+        "title": "Uncovering Bias in Large Vision-Language Models at Scale with Counterfactuals",
+        "authors": ["Phillip Howard", "Kathleen C. Fraser", "Anahita Bhiwandiwalla", "Svetlana Kiritchenko"],
+        "year": 2024,
+        "arxiv": "2405.20152"
+      },
+      "candidate_srinivasan_bisk_identity": {
+        "title": "Worst of Both Worlds: Biases Compound in Pre-trained Vision-and-Language Models",
+        "authors": ["Tejas Srinivasan", "Yonatan Bisk"],
+        "year": 2022,
+        "doi": "10.18653/v1/2022.gebnlp-1.10"
+      },
+      "evidence_urls": [
+        "https://arxiv.org/abs/2405.20152",
+        "https://doi.org/10.18653/v1/2022.gebnlp-1.10"
+      ],
+      "required_action": "Resolve which work was intended during Zotero curation; do not bind either source to the current record."
+    }
+  ]
+}

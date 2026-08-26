@@ -654,9 +654,7 @@ def _run_manifest(source: dict[str, Any]) -> dict[str, Any] | None:
     return manifest if _is_mapping(manifest) else None
 
 
-def _recorded_prompt(source: dict[str, Any]) -> dict[str, str]:
-    manifest = _run_manifest(source)
-    prompt = manifest.get("prompt") if manifest else None
+def _prompt_capture(prompt: Any) -> dict[str, str]:
     if not _is_mapping(prompt) or not _nonempty_string(prompt.get("path")):
         return _legacy_capture()
     capture = {"status": "recorded", "reference": prompt["path"]}
@@ -666,9 +664,7 @@ def _recorded_prompt(source: dict[str, Any]) -> dict[str, str]:
     return capture
 
 
-def _recorded_model(source: dict[str, Any]) -> dict[str, str]:
-    manifest = _run_manifest(source)
-    model = manifest.get("model") if manifest else None
+def _model_capture(model: Any) -> dict[str, str]:
     if (
         not _is_mapping(model)
         or not _nonempty_string(model.get("provider"))
@@ -685,6 +681,33 @@ def _recorded_model(source: dict[str, Any]) -> dict[str, str]:
         if _nonempty_string(model.get(field)):
             capture[field] = model[field]
     return capture
+
+
+def _recorded_prompt(source: dict[str, Any]) -> dict[str, str]:
+    manifest = _run_manifest(source)
+    return _prompt_capture(manifest.get("prompt") if manifest else None)
+
+
+def _recorded_model(source: dict[str, Any]) -> dict[str, str]:
+    manifest = _run_manifest(source)
+    return _model_capture(manifest.get("model") if manifest else None)
+
+
+def _recorded_ai_review_capture(source: dict[str, Any], field: str) -> dict[str, str]:
+    manifest = _run_manifest(source)
+    activities = (
+        manifest.get("provenance", {}).get("activities", []) if manifest else []
+    )
+    review = next(
+        (
+            activity
+            for activity in activities
+            if _is_mapping(activity) and activity.get("type") == "ai_agent_review"
+        ),
+        None,
+    )
+    value = review.get(field) if _is_mapping(review) else None
+    return _prompt_capture(value) if field == "prompt" else _model_capture(value)
 
 
 def _activity_context(source: dict[str, Any]) -> tuple[str, str]:
@@ -902,8 +925,10 @@ def migrate_v03_document(
     screening_actor_ids = [actor["id"] for actor in screening_actors]
     prompt = _recorded_prompt(source)
     model = _recorded_model(source)
+    ai_review_prompt = _recorded_ai_review_capture(source, "prompt")
+    ai_review_model = _recorded_ai_review_capture(source, "model")
     curator = _curation_actor(source)
-    ai_agent_reviewer = _ai_review_actor(source, model)
+    ai_agent_reviewer = _ai_review_actor(source, ai_review_model)
     for paper_id in sorted(decisions):
         record = copy.deepcopy(decisions[paper_id])
         if not _is_mapping(record):
@@ -937,8 +962,8 @@ def migrate_v03_document(
                     "type": "ai_agent_review",
                     "run_id": run_id,
                     "method": method,
-                    "prompt": prompt,
-                    "model": copy.deepcopy(model),
+                    "prompt": ai_review_prompt,
+                    "model": copy.deepcopy(ai_review_model),
                     "associated_actor_ids": [ai_agent_reviewer["id"]],
                 },
             ],
@@ -1013,7 +1038,9 @@ def _read_json(path: Path) -> dict[str, Any]:
 def _write_json(path: Path, document: dict[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(
-        json.dumps(document, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+        json.dumps(document, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+        newline="\n",
     )
 
 

@@ -10,7 +10,7 @@ status: active
 language: en
 version: "0.7"
 created: 2026-08-23
-updated: 2026-08-24
+updated: 2026-08-26
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6)
 topics: ["[[Verification]]", "[[Evidence Synthesis]]", "[[Research Integrity]]"]
@@ -39,6 +39,7 @@ This register states which externally relevant project claims have a reproducibl
 | PRISM screening and lifecycle behaviour | Automated unit, integration, mutation, and browser acceptance coverage | Technically validated |
 | Work-Version identity layer | The canonical builder reconciles Zotero records and round-two candidates, validates controlled stages and relations, and reproduces the committed registry | Deterministically validated; marked identity and metadata conflicts require operator resolution |
 | Codex Websearch 2026 source preparation | The package, acquisition manifest, direct source comparison, repairs, visual manifests, and source-readiness builder preserve exact source-Version provenance and validated hashes | Source preparation validated for the recorded subset; Zotero identity binding and PRISM screening remain open |
+| Residual queue source preparation and screening | The 26 August resolution ledger records all nine residual Works. `8NG4ZEWE` has a hash-bound Docling HTML representation, two validated PRISM tracks, a separate accepted AI Agent Review, and an append-only productive record; the other eight Works retain explicit access or identity blockers | `8NG4ZEWE` is `ai-agent-reviewed`; domain-expert verification and publication approval remain open |
 | Productive round-two agent annotations | `ar2.json` links every productive record through `review_runs` to manifest-bound source coding, deterministic PRISM projection, and separate source-grounded AI Agent Review artifacts | `ai-agent-reviewed`; domain-expert verification open |
 | Grounded Vault vertical slice | Adjacent-layer links and artifact status checked by the project validator | Grounded or AI-agent-reviewed at artifact level; domain-expert verification open |
 | SQ1 to SQ3 synthesis | Advisory coding and initial Assertions exist | Draft; full-corpus analysis and domain-expert verification open |
@@ -55,6 +56,7 @@ A run manifest establishes completed execution only when its lifecycle is comple
 ## Remaining verification work
 
 - Resolve the source, identity, and metadata blocks recorded in `generated/round2-intake-package.json` and `generated/agent-screening-queue.json`.
+- Apply the eight residual source or metadata resolutions in `generated/source-acquisition/residual-queue-9-20260826/resolution-ledger.json` through authorised access or Zotero curation.
 - Import the conflict-free RIS package into Zotero, resolve the withheld records, and export the curated Zotero corpus before productive round-two screening.
 - Bind the prepared Codex Websearch sources to the curated Work-Version registry and recover the remaining accessible full texts.
 - Extend the PRISM evidence contract after Work-Version binding so the two validated visual source bundles can enter screening.
