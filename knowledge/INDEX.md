@@ -65,6 +65,8 @@ In function order, not alphabetical.
 
 This knowledge base follows the convention for Promptotyping documents. It fixes the frontmatter schema (the Pflichtkern `title, project, method, status, created, updated`, with `version` shared repo-wide), the reading heuristic by function, and the structure principles every document is read against. The convention also forbids volatile quantities in the prose, which is why the numbers live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion, not here.
 
+These documents describe the result and the decisions behind it, not how an agent session was organised. Lane, persona, and mission-control framing therefore stays out of the prose, while the content of an operator decision and its date remain recorded.
+
 ## Glossary
 
 The project-constitutive terms, alphabetical. Sibling documents use these terms; this is where they are defined.

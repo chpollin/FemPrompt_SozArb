@@ -65,6 +65,7 @@ Primary audience: researchers with limited AI expertise.
 
 | Boundary | Consequence |
 |---|---|
+| Empirical claims | The project is a qualitative review plus its epistemic infrastructure and makes no empirical claim. The round-one human and LLM divergence is a motivating illustration, not a finding to defend, and no inter-human baseline was set up that would carry one |
 | Prompting guidance | The review synthesises reported practices and evidence; a practice guide can be derived later |
 | Experimental efficacy testing | The project reports experiments found in the literature and conducts no new prompting experiment |
 | Tool audience | PRISM serves research teams and domain experts working on a review |
