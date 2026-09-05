@@ -19,12 +19,13 @@ Usage:
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
 import sys
 from collections import defaultdict
 from pathlib import Path
 from typing import Any
+
+from src.file_hashing import file_sha256
 
 REPO = Path(__file__).resolve().parents[2]
 DEFAULT_OUTPUT = REPO / "generated" / "agent-screening-queue.json"
@@ -33,7 +34,7 @@ SOURCE_PRIORITY = {"clean": 3, "raw": 2, "none": 0}
 
 
 def _sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return file_sha256(path)
 
 
 def _screening_states(repo: Path) -> dict[str, str]:

@@ -7,7 +7,7 @@ status: active
 language: en
 version: "0.7"
 created: 2026-06-09
-updated: 2026-08-26
+updated: 2026-09-05
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6)
 method:
@@ -21,6 +21,10 @@ related: [project, governance, verification, testing, specification, data, journ
 The remaining work completes the literature corpus through governed agent annotation, domain-expert verification, analysis, and publication. Completed implementation history is preserved in [[journal]] and the ADR register in [[specification]]. Generated manifests carry current quantities and per-item processing states.
 
 ## Current operative state
+
+The operator-authorised preliminary result now uses attributed AI source review under `config/publication_policy.json`. The whole existing corpus and prepared 2026 intake remain in scope. `generated/completion/README.md` and its queues are the current completion dashboard; they distinguish existing human coding, newly source-reviewed agent coding, unresolved conflicts, unbound intake and manuscript gaps. The full review and paper remain unfinished.
+
+The deterministic build, receipt validation, immutable AI correction projection, Work-level literature aggregation, Assertion-based chat, consistent downloads, and separate allowlisted result site are implemented. `npm run build` constructs `build/site/`; `npm run check` verifies it. The new site has not been deployed by the local build. `corpus/deep-research/round2/targeted-followup-2026-09-05.md` records the separately dated, deduplicated gap-filling search; its candidates are identified, not included results.
 
 PRISM implements evidence-grounded screening, complete Include coding, deterministic storage, lifecycle provenance, domain-expert verification, and a fail-closed publication gate. The Codex-native workflow produces operationally isolated coding packets, projects them through PRISM's production functions, and submits them to a separate source-grounded AI Agent Review. All source-ready Works in the canonical queue, including the residual Work `8NG4ZEWE`, have passed this workflow. The resulting records remain below domain-expert verification and publication approval.
 
@@ -38,7 +42,7 @@ The project reaches completion when the following conditions hold.
 4. Quantitative analysis derives from committed structured data through executable scripts.
 5. Qualitative analysis derives from source-linked Assertions in the Grounded Vault.
 6. The literature report and paper have received domain-expert review of their scholarly interpretation.
-7. Every public projection has an explicit publication-approval event.
+7. Each public artifact meets its explicit release policy; the final scholarly manuscript additionally has a human publication-approval event. Preliminary AI-source-reviewed results retain their own attributed review basis.
 8. The repository documents a reproducible setup path for a subsequent update or another review corpus.
 
 ## Remaining work

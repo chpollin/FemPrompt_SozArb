@@ -88,6 +88,9 @@ generated/vault/.obsidian/
 # Node (test harness dev dependency only; the app under docs/ stays vanilla)
 node_modules/
 
+# Separate result-site build. Deploy this allowlisted artifact, never docs/.
+build/
+
 # Local-only full texts for the PRISM reading pane (built by src/publish/build_fulltext.py
 # from generated/markdown_clean/). Mostly copyrighted paywalled papers, so the reading pane
 # reads them from a local clone but they are NEVER published to the public GitHub Pages site.

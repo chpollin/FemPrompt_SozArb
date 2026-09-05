@@ -8,6 +8,7 @@ import { fileURLToPath } from 'node:url';
 const here = dirname(fileURLToPath(import.meta.url));
 const docs = resolve(here, '..', '..', 'docs');
 const inventory = JSON.parse(readFileSync(resolve(docs, 'data', 'research_vault_v2.json'))).meta;
+const landscape = JSON.parse(readFileSync(resolve(docs, 'data', 'literature_landscape.json')));
 const mime = {
   '.css': 'text/css; charset=utf-8', '.html': 'text/html; charset=utf-8',
   '.js': 'text/javascript; charset=utf-8', '.json': 'application/json; charset=utf-8',
@@ -46,7 +47,7 @@ try {
   });
 
   await page.goto(`${base}/index.html#view=literaturbild`, { waitUntil: 'networkidle' });
-  await page.waitForSelector('#literaturbild-root .lit-empty-state');
+  await page.waitForSelector('#literaturbild-root .lit-viz');
   check('Literaturbild is the restored active view', await page.locator('#view-literaturbild').evaluate((node) => node.classList.contains('active')));
   const intro = await page.locator('#intro-section').innerText();
   check('inventory distinguishes links and unique knowledge documents',
@@ -58,18 +59,25 @@ try {
   check('desktop document has no horizontal overflow', await page.evaluate(() =>
     document.documentElement.scrollWidth <= window.innerWidth + 1));
 
-  check('unapproved papers are not exposed',
-    await page.locator('.lit-matrix-button:not([disabled])').count() === 0 &&
-    await page.locator('.lit-results .lit-paper').count() === 0);
-  check('publication gate is explained',
-    (await page.locator('.lit-empty-state').innerText()).includes('fachlichen Verifikation'));
+  check('reviewed Work denominator is displayed',
+    (await page.locator('.lit-progress').innerText()).includes(landscape.meta.annotated_total + ' ' + landscape.source.public_label.toLocaleLowerCase('de')));
+  if (!landscape.records.length) {
+    check('withheld papers are absent and explained',
+      await page.locator('.lit-matrix-button:not([disabled])').count() === 0 &&
+      (await page.locator('.lit-empty-state').innerText()).includes('Prüf- und Veröffentlichungsregel'));
+  } else {
+    await page.locator('.lit-matrix-button:not([disabled])').first().click();
+    const titles = await page.locator('.lit-results .lit-paper summary strong').allTextContents();
+    check('drill-down contains eligible works', titles.length > 0 && titles.every(title => landscape.records.some(record => record.title === title)));
+    await page.locator('#lit-clear-selection').click();
+  }
 
   await page.locator('.lit-view-button[data-lit-view="profile"]').click();
   await page.selectOption('#lit-profile-field', 'AN_Bias_Axes');
   await page.waitForFunction(() => location.hash.includes('litView=profile') && location.hash.includes('litProfile=AN_Bias_Axes'));
   const sharedUrl = page.url();
   await page.reload({ waitUntil: 'networkidle' });
-  await page.waitForSelector('.lit-empty-state');
+  await page.waitForSelector('#literaturbild-root .lit-viz');
   check('profile URL survives reload', page.url() === sharedUrl &&
     await page.locator('.lit-view-button[data-lit-view="profile"]').getAttribute('aria-pressed') === 'true' &&
     await page.inputValue('#lit-profile-field') === 'AN_Bias_Axes');

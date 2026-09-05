@@ -1,15 +1,15 @@
 {
   "meta": {
-    "source_fingerprint": "sha256:32d1c3ef86c20ae956c027ea9fa6d388551c16f11a6a6800a395fc8246bd208d",
+    "source_fingerprint": "sha256:aa699626729d5a683220349eda358d66a90b335317ee4e7dfcda1bf2abc5b3f3",
     "total_papers": 326,
     "unique_works": 257,
     "knowledge_linked_records": 242,
     "distinct_knowledge_docs": 183,
     "knowledge_coverage": {
       "linked": 242,
-      "fulltext_ready": 48,
+      "fulltext_ready": 49,
       "identity_unresolved": 8,
-      "source_missing": 28
+      "source_missing": 27
     },
     "papers_with_human": 291,
     "benchmark_papers": 291,
@@ -32903,11 +32903,11 @@
       "item_type": "booksection",
       "journal": "",
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing",
+      "knowledge_coverage": "fulltext_ready",
       "work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
       "identity_basis": "work_version_registry",
-      "legacy_work_id": "record:8NG4ZEWE",
-      "legacy_identity_basis": "record",
+      "legacy_work_id": "source:8NG4ZEWE.md",
+      "legacy_identity_basis": "verified_fulltext",
       "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
       "version_type": "unknown",
       "version_date": "2023-04-03",

@@ -3,6 +3,8 @@
 **Project:** FemPrompt SozArb, a systematic literature review on feminist AI literacies in social work
 **Last Updated:** 2026-08-24
 
+**Operative update (2026-09-05):** The operator authorised an explicitly labelled AI-source-reviewed preliminary result release. Follow `config/publication_policy.json` and `knowledge/governance.md`; do not infer human verification or approval. Current completion state is in `generated/completion/README.md`. Build all projections with `npm run build`, verify with `npm run check`, and deploy only `build/site/`. Historical `docs/` remains the research working application. AI analysis corrections are hash-bound sidecars preserving immutable original annotations.
+
 ---
 
 ## Core Argument

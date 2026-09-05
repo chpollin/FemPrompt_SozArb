@@ -1,0 +1,571 @@
+{
+  "schema": "femprompt-artifact-verification/0.1",
+  "scope": "Non-blinded source-support audit of last 15 sorted productive record keys; existing records unchanged. Not a new operationally isolated two-track run or human verification.",
+  "reviews": [
+    {
+      "artifact": "docs/data/screening/ar2.json#/decisions/FTJM5R8N",
+      "sha256": "sha256:d955f49aa26edcf82322f8643c16eaf4e951ae9cb2133b6cfd21bb5e1c9ad306",
+      "result": "accepted",
+      "review_type": "ai-source-review",
+      "agent_id": "/root/research_completion",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-05T12:37:12Z",
+      "findings": "The identified Thinking Machines Lab engineering blog concerns inference nondeterminism, Qwen experiments and numeric reproducibility. Generative_KI=2 is supported. Its subject does not establish a social-bias or social-work contribution; Exclude is supported both under the commercial-blog rule and the missing social dimension. This verifies source classification, not every technical claim in the blog.",
+      "evidence": [
+        {
+          "source_path": "generated/markdown_clean/FTJM5R8N.md",
+          "sha256": "sha256:06cb8ae6cbf58054af2449750c5eb0512a425262cd1e77be1ff27a2fbc102fd8",
+          "work_id": "work:4842d83e-8ed6-5633-b241-febb6e9c710f",
+          "version_id": "version:0cf091a3-19ee-58b4-82db-a6ce24d7bcae",
+          "source_url": "https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference",
+          "locator": "Experiments: How nondeterministic are completions?",
+          "quote": "We use Qwen/Qwen3-235B-A22B-Instruct-2507 and sample 1000 completions at temperature 0"
+        }
+      ],
+      "canonical_binding": {
+        "paper_id": "FTJM5R8N",
+        "work_id": "work:4842d83e-8ed6-5633-b241-febb6e9c710f",
+        "version_id": "version:0cf091a3-19ee-58b4-82db-a6ce24d7bcae"
+      }
+    },
+    {
+      "artifact": "docs/data/screening/ar2.json#/decisions/J5EF9W6M",
+      "sha256": "sha256:78ce2c3321eaa06a648f960cbfd87b79840a9dc11680194beca878b90593f53d",
+      "result": "changes_requested",
+      "review_type": "ai-source-review",
+      "agent_id": "/root/research_completion",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-05T12:37:12Z",
+      "findings": "The DIVERSIFAIR toolkit supports Include, central AI/intersectionality/feminist-power/fairness/literacy categories and its Proposed/non-social-work-specific coding. Recorded terms resolve in the source. The mitigation recommendations directly support dataset diversification and organisational design/oversight, but Intra_Processing and Post_Processing are not tied to explicit inference-time or output-adjustment interventions. Generic monitoring and corrective-action logs do not independently establish these technical stages. Supply operational definitions and supporting passages or narrow the ambiguous stage coding; no final replacement is asserted in this audit.",
+      "evidence": [
+        {
+          "source_path": "generated/markdown/Project_2024_Intersectionality.md",
+          "sha256": "sha256:5527459c9567d1704f8a67f8f627f8da8d1a1efc6348cb62f323ad8ac5c133e3",
+          "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+          "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+          "source_url": "https://diversifair-project.eu/wp-content/uploads/2025/01/Copie-de-INDUSTRY-Educ-Kits-A4-V2.pdf",
+          "locator": "Strategies for developers: Improve data practices",
+          "quote": "Audit datasets for gaps and diversify data to ensure fair representation."
+        },
+        {
+          "source_path": "generated/markdown/Project_2024_Intersectionality.md",
+          "sha256": "sha256:5527459c9567d1704f8a67f8f627f8da8d1a1efc6348cb62f323ad8ac5c133e3",
+          "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+          "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+          "source_url": "https://diversifair-project.eu/wp-content/uploads/2025/01/Copie-de-INDUSTRY-Educ-Kits-A4-V2.pdf",
+          "locator": "Checklist: Regular monitoring and accountability",
+          "quote": "Create a simple impact log: Track incidents of bias and corrective actions taken."
+        }
+      ],
+      "open_coding_questions": [
+        "AN_Mitigation_Stage: justify Intra_Processing and Post_Processing separately from organisational monitoring."
+      ],
+      "canonical_binding": {
+        "paper_id": "J5EF9W6M",
+        "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+        "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2"
+      }
+    },
+    {
+      "artifact": "docs/data/screening/ar2.json#/decisions/J7V3AAQT",
+      "sha256": "sha256:9eda4d3a66517b450421ba62ffa300f30a8fb7c8df404e70fcbb8b7600314130",
+      "result": "accepted",
+      "review_type": "ai-source-review",
+      "agent_id": "/root/research_completion",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-05T12:37:12Z",
+      "findings": "The original Frontiers article identifies Emohaa, CBT-Bot and generative ES-Bot and a randomized mental-distress study in China. The recorded generative-dialogue passage supports Generative_KI=2. Its research question, methods and discussion examine clinical outcomes/acceptability, without a direct social-work or algorithmic social-bias/fairness contribution. Demographic reporting and cognitive distortions are not gender analysis or social-bias evaluation. Exclude/Not_relevant_topic is supported; clinical efficacy was not independently verified.",
+      "evidence": [
+        {
+          "source_path": "generated/markdown_clean/J7V3AAQT.md",
+          "sha256": "sha256:aba6edd8b0cbd65560fbc48979125c316f9c8df3117e9664aab62737c61f85c1",
+          "work_id": "work:7473ae67-3f6b-5cb7-befc-df628bc87911",
+          "version_id": "version:c3159829-537d-5900-9362-078e15396691",
+          "source_url": "https://doi.org/10.3389/fdgth.2023.1133987",
+          "locator": "2.1 Emohaa",
+          "quote": "a generative dialogue platform that allows conversations regarding various emotional issues in an open-ended manner"
+        }
+      ],
+      "canonical_binding": {
+        "paper_id": "J7V3AAQT",
+        "work_id": "work:7473ae67-3f6b-5cb7-befc-df628bc87911",
+        "version_id": "version:c3159829-537d-5900-9362-078e15396691"
+      }
+    },
+    {
+      "artifact": "docs/data/screening/ar2.json#/decisions/MA3LBJS6",
+      "sha256": "sha256:6462fef3274e0d0c86025e3da8a7b6ed2ccaa1f450ef88f0c5c92dd1d9df28a2",
+      "result": "accepted",
+      "review_type": "ai-source-review",
+      "agent_id": "/root/research_completion",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-05T12:37:12Z",
+      "findings": "The Linnemann/Loehe/Rottkemper article directly treats NLP in social work using professional action theory and examples from psychosocial counselling, elder care and child/youth work. It supports central KI_Sonstige and Soziale_Arbeit, subordinate generative AI/interpretive competence/discrimination, and Theoretisch/Proposed. Mental_Health is grounded in the Woebot therapy and psychosocial-counselling sections. The discussion explicitly warns about stereotype reproduction and discriminatory development. Named demographic contexts do not automatically establish independent bias axes; no distinct prompt technique is studied.",
+      "evidence": [
+        {
+          "source_path": "docs/data/fulltext/MA3LBJS6.md",
+          "sha256": "sha256:29d119217981f46b3af7a8a64d29740c26e4f094f84b55d4ef57819d27534fff",
+          "work_id": "work:f84da843-9f89-5484-9cde-38ea256a6a92",
+          "version_id": "version:8684153b-225d-5ed2-b706-4df0d799f3d5",
+          "source_url": "https://doi.org/10.1007/s12592-023-00455-7",
+          "locator": "2: Einsatz von Chatbots in der psychosozialen Beratung",
+          "quote": "Der Chatbot Woebot"
+        },
+        {
+          "source_path": "docs/data/fulltext/MA3LBJS6.md",
+          "sha256": "sha256:29d119217981f46b3af7a8a64d29740c26e4f094f84b55d4ef57819d27534fff",
+          "work_id": "work:f84da843-9f89-5484-9cde-38ea256a6a92",
+          "version_id": "version:8684153b-225d-5ed2-b706-4df0d799f3d5",
+          "source_url": "https://doi.org/10.1007/s12592-023-00455-7",
+          "locator": "3 Diskussion und Ausblick",
+          "quote": "Ohne interdisziplinäre Teams in der Entwicklung von Werkzeugen, die NLP nutzen, besteht die Gefahr der Reproduktion von Diskriminierung"
+        }
+      ],
+      "canonical_binding": {
+        "paper_id": "MA3LBJS6",
+        "work_id": "work:f84da843-9f89-5484-9cde-38ea256a6a92",
+        "version_id": "version:8684153b-225d-5ed2-b706-4df0d799f3d5"
+      }
+    },
+    {
+      "artifact": "docs/data/screening/ar2.json#/decisions/NSI6S5QE",
+      "sha256": "sha256:e3d15690838746ca2bed6cbbdfe64043833d92affa4b75f4ce238d4d636887a7",
+      "result": "accepted",
+      "review_type": "ai-source-review",
+      "agent_id": "/root/research_completion",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-05T12:37:12Z",
+      "findings": "The original NASW/ASWB/CSWE/CSWA 2017 standards concern electronic social-work services, competence, accessibility and diverse service users. Their recorded social-work/diversity evidence is present. The technology scope and relevant standards, plus navigation checks for AI/machine learning, do not establish an AI-specific contribution: electronic technology alone is not KI_Sonstige. Exclude/Not_relevant_topic follows the missing AI dimension, without assessing the standards as a low-quality source.",
+      "evidence": [
+        {
+          "source_path": "generated/markdown_clean/NASW_ASWB_CSWE_CSWA_2017_Standards_for_Technology_in_Social_Work_Practice.md",
+          "sha256": "sha256:25e103ebce8a3715ec4e076ecebd3522dcf7ae61ca707ad4d3c0f00f4578e284",
+          "work_id": "work:b4a52bdb-3182-5695-bbac-d3620ef7d3fe",
+          "version_id": "version:95c6b86a-c983-5533-ae04-faee6251ec6d",
+          "source_url": "https://www.socialworkers.org/Practice/NASW-Practice-Standards-Guidelines/Standards-for-Technology-in-Social-Work-Practice",
+          "locator": "Standard 2.01: electronic social-work services",
+          "quote": "use of technology to meet the needs of diverse populations"
+        }
+      ],
+      "canonical_binding": {
+        "paper_id": "NSI6S5QE",
+        "work_id": "work:b4a52bdb-3182-5695-bbac-d3620ef7d3fe",
+        "version_id": "version:95c6b86a-c983-5533-ae04-faee6251ec6d"
+      }
+    },
+    {
+      "artifact": "docs/data/screening/ar2.json#/decisions/P4YQIKJX",
+      "sha256": "sha256:5bc075daae8ba1fb0ad36173ca3583d8f08ac632e2787d02ddd1751fd25e2d5d",
+      "result": "changes_requested",
+      "review_type": "ai-source-review",
+      "agent_id": "/root/research_completion",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-05T12:37:12Z",
+      "findings": "The publisher-version systematic review by Li, Ruijs and Lu supports Include, bias/fairness categories, healthcare, the four coded axes and Proposed status. Section 3.1.4 describes preprocessing, fairness constraints, ecological-validity assessment of outputs, compensation and stakeholder cooperation. The record assigns all five processing stages without explaining the separate mappings to In_Training, Intra_Processing and Post_Processing. Output evaluation is not by itself output adjustment. Supply source-bound operational stage definitions or narrow unsupported stages. The stage mapping remains open rather than inventing a final replacement.",
+      "evidence": [
+        {
+          "source_path": "generated/markdown_clean/P4YQIKJX.md",
+          "sha256": "sha256:a4f670474ec99e6c7d888653b43044fd775ebd6dde861dfe2e886c30a8cbf42d",
+          "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+          "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+          "source_url": "https://doi.org/10.3390/ai4010003",
+          "locator": "3.1.4 Strategies for Main Ethical Issue 1",
+          "quote": "preprocessing the training dataset"
+        },
+        {
+          "source_path": "generated/markdown_clean/P4YQIKJX.md",
+          "sha256": "sha256:a4f670474ec99e6c7d888653b43044fd775ebd6dde861dfe2e886c30a8cbf42d",
+          "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+          "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+          "source_url": "https://doi.org/10.3390/ai4010003",
+          "locator": "3.1.4 Strategies for Main Ethical Issue 1",
+          "quote": "Compensating for disadvantaged subgroups on an egalitarian basis if necessary"
+        }
+      ],
+      "open_coding_questions": [
+        "AN_Mitigation_Stage: distinguish fairness constraints, output assessment and compensation from specific training/inference/output-adjustment methods."
+      ],
+      "canonical_binding": {
+        "paper_id": "P4YQIKJX",
+        "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+        "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38"
+      }
+    },
+    {
+      "artifact": "docs/data/screening/ar2.json#/decisions/QUV5DQH3",
+      "sha256": "sha256:c6156e976ac99b41b039a75bb631f7ebc3e7ca96a3b16c8ee65bbbfd9b014534",
+      "result": "accepted",
+      "review_type": "ai-source-review",
+      "agent_id": "/root/research_completion",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-05T12:37:12Z",
+      "findings": "Checked the correct 2021 Stanford Social Innovation Review article by Smith and Rustagi, DOI 10.48558/A179-B138, its case inventory and proposed actions. Central gender bias, intersectional racial/gender disadvantage, feminist data practices and equitable ML design, plus subordinate AI-literacy training, are supported. Concept/Proposed and a general audience fit this professional commentary; proposed safeguards are not evaluated effects. The earlier docs fulltext was a different 2020 equity playbook; source routing was reported and corrected during this audit. This receipt binds the correct record-id source.",
+      "evidence": [
+        {
+          "source_path": "generated/markdown_clean/QUV5DQH3.md",
+          "sha256": "sha256:e5f3106b938f608704fa0809264ce0914030730aec95910259145ff71c6c0293",
+          "work_id": "work:3dc3ced9-8261-5840-9d71-aa2dfc43af87",
+          "version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
+          "source_url": "https://doi.org/10.48558/a179-b138",
+          "locator": "What Social Change Leaders Can Do",
+          "quote": "Use feminist data practices to help fill data gaps."
+        },
+        {
+          "source_path": "generated/markdown_clean/QUV5DQH3.md",
+          "sha256": "sha256:e5f3106b938f608704fa0809264ce0914030730aec95910259145ff71c6c0293",
+          "work_id": "work:3dc3ced9-8261-5840-9d71-aa2dfc43af87",
+          "version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
+          "source_url": "https://doi.org/10.48558/a179-b138",
+          "locator": "Where AI Gender Bias Comes From",
+          "quote": "darker-skinned women were misclassified at an error rate of 35 percent"
+        }
+      ],
+      "canonical_binding": {
+        "paper_id": "QUV5DQH3",
+        "work_id": "work:3dc3ced9-8261-5840-9d71-aa2dfc43af87",
+        "version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a"
+      }
+    },
+    {
+      "artifact": "docs/data/screening/ar2.json#/decisions/R7V99ERA",
+      "sha256": "sha256:c5987e6fd4781cb27733a7103f0d67d5b0ef235d93552761f14fbd88389df055",
+      "result": "changes_requested",
+      "review_type": "ai-source-review",
+      "agent_id": "/root/research_completion",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-05T12:37:12Z",
+      "findings": "The Field et al. FAccT paper supports Include, NLP/child-protection/racial-bias/fairness categories and empirical evaluation of NER, coreference and risk prediction. It explicitly does not develop deployable systems. AN_Mitigation_Stage=None is appropriate, but AN_Mitigation_Status=Evaluated confuses statistically evaluated bias/model performance with a mitigation intervention. No intervention efficacy is established. Set status None, retain the empirical study type and distinguish the NER finding from the source's absence of increased racial-bias evidence for its risk-assessment comparison.",
+      "evidence": [
+        {
+          "source_path": "generated/markdown_clean/R7V99ERA.md",
+          "sha256": "sha256:22e321a8d8c03967dc2171d1d412b6fd80db61452dc85f1c7f86613e7b265d4b",
+          "work_id": "work:365293c9-c8ea-54dd-9f65-2f37976f1a31",
+          "version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
+          "source_url": "https://doi.org/10.1145/3593013.3594094",
+          "locator": "Introduction: summary of findings",
+          "quote": "consistent racial bias in NER"
+        },
+        {
+          "source_path": "generated/markdown_clean/R7V99ERA.md",
+          "sha256": "sha256:22e321a8d8c03967dc2171d1d412b6fd80db61452dc85f1c7f86613e7b265d4b",
+          "work_id": "work:365293c9-c8ea-54dd-9f65-2f37976f1a31",
+          "version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
+          "source_url": "https://doi.org/10.1145/3593013.3594094",
+          "locator": "Limitations and Ethical Considerations",
+          "quote": "As our work does not contribute to the development of deployable systems"
+        }
+      ],
+      "suggested_corrections": [
+        {
+          "field": "analysis.fields.AN_Mitigation_Status",
+          "original": "Evaluated",
+          "suggested": "None",
+          "basis": "The study audits bias and model performance; AN_Mitigation_Stage is None and no mitigation intervention is evaluated."
+        }
+      ],
+      "canonical_binding": {
+        "paper_id": "R7V99ERA",
+        "work_id": "work:365293c9-c8ea-54dd-9f65-2f37976f1a31",
+        "version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049"
+      }
+    },
+    {
+      "artifact": "docs/data/screening/ar2.json#/decisions/SSF5Q33W",
+      "sha256": "sha256:9622034f25e81f0e7e4a192c26c850b26a788ad41f43845a46daac76a6a668d7",
+      "result": "accepted",
+      "review_type": "ai-source-review",
+      "agent_id": "/root/research_completion",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-05T12:37:12Z",
+      "findings": "The Yuan Yi source matches the article title and shared Work-Version of this record and alias 8MRNK6FX. Its body directly discusses ChatGPT in social work, skewed data for economically disadvantaged groups, fairness, client isolation, professional training and organisational countermeasures. Theoretisch/Proposed, no studied prompting technique and General_Social_Work are supported. Generic minority-group mentions alone do not justify additional race/gender axes. The alias remains one work, not independent evidence; proposed safeguards are not presented as tested.",
+      "evidence": [
+        {
+          "source_path": "generated/markdown/Unknown_2024_Research.md",
+          "sha256": "sha256:3e0988a83a4182d4a641d06f2d8287ff6651122d7185e7564641437e7bb915a0",
+          "work_id": "work:4b1bc38b-3228-5112-ac8f-026d8d4f7a2e",
+          "version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
+          "source_url": "https://doi.org/10.23977/jaip.2024.070222",
+          "locator": "2.1: algorithmic bias and social-work risks",
+          "quote": "inadequate data on economically disadvantaged or minority groups may hinder AI systems"
+        },
+        {
+          "source_path": "generated/markdown/Unknown_2024_Research.md",
+          "sha256": "sha256:3e0988a83a4182d4a641d06f2d8287ff6651122d7185e7564641437e7bb915a0",
+          "work_id": "work:4b1bc38b-3228-5112-ac8f-026d8d4f7a2e",
+          "version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
+          "source_url": "https://doi.org/10.23977/jaip.2024.070222",
+          "locator": "3: countermeasures",
+          "quote": "Enhancing professional training equips social workers"
+        }
+      ],
+      "canonical_binding": {
+        "paper_id": "SSF5Q33W",
+        "work_id": "work:4b1bc38b-3228-5112-ac8f-026d8d4f7a2e",
+        "version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670"
+      }
+    },
+    {
+      "artifact": "docs/data/screening/ar2.json#/decisions/T8R8RKX9",
+      "sha256": "sha256:b962008f54ed5e59c5274bffefcb592da9799407d060dd398ca09850ed618f2f",
+      "result": "accepted",
+      "review_type": "ai-source-review",
+      "agent_id": "/root/research_completion",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-05T12:37:12Z",
+      "findings": "Reviewed the document-retrieval framework, task instructions, race/gender/intersectional results, limitations and recommendations. Massive text embeddings are central; general task instructions support subordinate Prompting with Research_Instrument/General_Guidance. Joint race/gender disadvantage and structural-power implications support the social coding. Proposed concerns recommended audits and policy, while the bias-detection study itself is experimental; no deployed mitigation effect is inferred. The population is not social-work-specific. Broken converted table cross-references are not used as evidence.",
+      "evidence": [
+        {
+          "source_path": "docs/data/fulltext/T8R8RKX9.md",
+          "sha256": "sha256:1b21e99ef36887f27a0841800c6c057101e15c4eb28948c1ac30abba69c79f45",
+          "work_id": "work:904b0cbf-d423-5dde-ba01-40a61605b88c",
+          "version_id": "version:0a158fff-18d3-5945-acb1-7bc096ba101f",
+          "source_url": "https://doi.org/10.1609/aies.v7i1.31748",
+          "locator": "Task-Augmented Job Descriptions",
+          "quote": "query texts are encoded with an additional instruction describing the particular setting."
+        },
+        {
+          "source_path": "docs/data/fulltext/T8R8RKX9.md",
+          "sha256": "sha256:1b21e99ef36887f27a0841800c6c057101e15c4eb28948c1ac30abba69c79f45",
+          "work_id": "work:904b0cbf-d423-5dde-ba01-40a61605b88c",
+          "version_id": "version:0a158fff-18d3-5945-acb1-7bc096ba101f",
+          "source_url": "https://doi.org/10.1609/aies.v7i1.31748",
+          "locator": "Abstract",
+          "quote": "validate three hypotheses of intersectionality"
+        }
+      ],
+      "canonical_binding": {
+        "paper_id": "T8R8RKX9",
+        "work_id": "work:904b0cbf-d423-5dde-ba01-40a61605b88c",
+        "version_id": "version:0a158fff-18d3-5945-acb1-7bc096ba101f"
+      }
+    },
+    {
+      "artifact": "docs/data/screening/ar2.json#/decisions/THGC3PA2",
+      "sha256": "sha256:58b85c8b0e45f982b74d3495b349a020fb218ec6b5c9c264e3776b494e205a00",
+      "result": "accepted",
+      "review_type": "ai-source-review",
+      "agent_id": "/root/research_completion",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-05T12:37:12Z",
+      "findings": "Read the complete short FU Berlin seminar report, instructor background and scholarly references. It directly describes critical AI literacy, feminist power analysis, interacting discrimination, queer design and a Queerbot workshop. Include is supportable as a sourced academic practice commentary under the publication rule; Education_Professional and Demonstrated refer to the described teaching activity, not learning gains or intervention effectiveness. The historical human exclusion remains a separate judgement and is not overwritten.",
+      "evidence": [
+        {
+          "source_path": "docs/data/fulltext/THGC3PA2.md",
+          "sha256": "sha256:747bd3f519fc3cdf276b77e1a7e6ef1590419ad49633e9e4c8d2afff47c18563",
+          "work_id": "work:c177fe82-4b8c-53f6-b488-d01f2042ed3d",
+          "version_id": "version:a3a47ba2-0586-5ab0-80d5-0ad259664b41",
+          "source_url": "https://blogs.fu-berlin.de/toolbox/2024/04/08/feministische-ki-kuenstliche-intelligenz-fuer-alle",
+          "locator": "Ein feministischer Blick auf KI",
+          "quote": "Im Seminar wird deshalb ein analytischer Blick auf Ungleichheits- Diskriminierungs- und Exklusionsmechanismen von KI-Anwendungen geworfen"
+        }
+      ],
+      "canonical_binding": {
+        "paper_id": "THGC3PA2",
+        "work_id": "work:c177fe82-4b8c-53f6-b488-d01f2042ed3d",
+        "version_id": "version:a3a47ba2-0586-5ab0-80d5-0ad259664b41"
+      }
+    },
+    {
+      "artifact": "docs/data/screening/ar2.json#/decisions/UKKQKL7I",
+      "sha256": "sha256:6e2c6558d0b1b72c63d3d5954826933d1fbd73b36701266a2b0b11e1892f0c4a",
+      "result": "accepted",
+      "review_type": "ai-source-review",
+      "agent_id": "/root/research_completion",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-05T12:37:12Z",
+      "findings": "Fragile Foundations matches DOI 10.11586/2025078 and states its method as literature review, expert interviews and comparative system analysis. Foundation models and structural bias are central; gender stereotypes, dominant Western/patriarchal data and linguistic/cultural flattening are explicit. Social-work examples and literacy are subordinate. Empirisch/Proposed separates its empirical inquiry from curated-data/governance recommendations. No prompting intervention is studied, and its broad organisational audience supports Not_SW_Specific.",
+      "evidence": [
+        {
+          "source_path": "docs/data/fulltext/UKKQKL7I.md",
+          "sha256": "sha256:b6d6befb0c5bc33a7d2b21efbfadaa0e1bed62bc3d84b465da02cb9e29e20535",
+          "work_id": "work:9ee1a116-9225-5234-b189-b4ea3f93df14",
+          "version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
+          "source_url": "https://doi.org/10.11586/2025078",
+          "locator": "Research approach",
+          "quote": "Our research method unfolded in three stages."
+        },
+        {
+          "source_path": "docs/data/fulltext/UKKQKL7I.md",
+          "sha256": "sha256:b6d6befb0c5bc33a7d2b21efbfadaa0e1bed62bc3d84b465da02cb9e29e20535",
+          "work_id": "work:9ee1a116-9225-5234-b189-b4ea3f93df14",
+          "version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
+          "source_url": "https://doi.org/10.11586/2025078",
+          "locator": "Preface",
+          "quote": "These datasets reflect dominant power structures that are often Western, patriarchal, and discriminatory."
+        }
+      ],
+      "canonical_binding": {
+        "paper_id": "UKKQKL7I",
+        "work_id": "work:9ee1a116-9225-5234-b189-b4ea3f93df14",
+        "version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5"
+      }
+    },
+    {
+      "artifact": "docs/data/screening/ar2.json#/decisions/VSZM7CT6",
+      "sha256": "sha256:114a36d307946899b31e42dd9ebb05424df30cdd4170f88f3b2bcefaa989bd4a",
+      "result": "changes_requested",
+      "review_type": "ai-source-review",
+      "agent_id": "/root/research_completion",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-05T12:37:12Z",
+      "findings": "The source supports Include and theoretical/proposed analysis of AI, critical digital literacy, social-work education, stereotypes and professional ethics. Its cover explicitly identifies Accepted Manuscript (AM), whereas the canonical registry version is version_of_record; reconcile the exact source expression before acceptance. The recorded Soziale_Arbeit evidence term capitalizes 'This paper explores...' while the original has lowercase 'this paper explores...' mid-sentence. Replace that term with a verbatim passage, while preserving the existing AM rather than silently relabelling it as the publisher version.",
+      "evidence": [
+        {
+          "source_path": "generated/markdown_clean/VSZM7CT6.md",
+          "sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+          "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+          "version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+          "source_url": "https://doi.org/10.1093/bjsw/bcab168",
+          "locator": "Repository cover page: Version",
+          "quote": "Accepted Manuscript (AM)"
+        },
+        {
+          "source_path": "generated/markdown_clean/VSZM7CT6.md",
+          "sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+          "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+          "version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+          "source_url": "https://doi.org/10.1093/bjsw/bcab168",
+          "locator": "Abstract",
+          "quote": "this paper explores possible future implications for social work education."
+        }
+      ],
+      "suggested_corrections": [
+        {
+          "field": "evidence.Soziale_Arbeit[0].term",
+          "original": "This paper explores possible future implications for social work education.",
+          "suggested": "this paper explores possible future implications for social work education.",
+          "basis": "Original abstract has lowercase this mid-sentence."
+        }
+      ],
+      "open_coding_questions": [
+        "Bind the actual accepted manuscript to its own canonical Version; publication DOI does not establish that the local source is the Version of Record."
+      ],
+      "canonical_binding": {
+        "paper_id": "VSZM7CT6",
+        "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+        "version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e"
+      }
+    },
+    {
+      "artifact": "docs/data/screening/ar2.json#/decisions/WAYCKUZ8",
+      "sha256": "sha256:d8ab4dedc76cc11226e9d70650765e11cc344aa410dda6677ba7b99e0c39eff7",
+      "result": "accepted",
+      "review_type": "ai-source-review",
+      "agent_id": "/root/research_completion",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-05T12:37:12Z",
+      "findings": "The JMIR Viewpoint matches title/authors/DOI and centrally discusses clinician trust, self-referential learning and critical expertise. Bias entrenchment and algorithmic fairness are explicit subordinate concerns, supporting level 1 alongside central AI/LLM categories. Unclear follows the two-dimensional threshold; healthcare alone is not direct social-work research. No Include-only analysis is required. The historical human exclusion remains separate; neither clinical effects nor newly completed human verification are asserted.",
+      "evidence": [
+        {
+          "source_path": "docs/data/fulltext/WAYCKUZ8.md",
+          "sha256": "sha256:3177cec4c7a81a1dcbf4759593777538ce2834db8e6102e49fdb1acbef1d36d2",
+          "work_id": "work:92f45258-5949-5fcb-b391-256884930baf",
+          "version_id": "version:3b924963-3b65-56a4-b26c-80be911b4983",
+          "source_url": "https://doi.org/10.2196/56764",
+          "locator": "Abstract",
+          "quote": "potentially entrenching biases"
+        },
+        {
+          "source_path": "docs/data/fulltext/WAYCKUZ8.md",
+          "sha256": "sha256:3177cec4c7a81a1dcbf4759593777538ce2834db8e6102e49fdb1acbef1d36d2",
+          "work_id": "work:92f45258-5949-5fcb-b391-256884930baf",
+          "version_id": "version:3b924963-3b65-56a4-b26c-80be911b4983",
+          "source_url": "https://doi.org/10.2196/56764",
+          "locator": "Conclusions",
+          "quote": "user expertise and the necessity for a discerning approach to trusting and validating LLM outputs."
+        }
+      ],
+      "canonical_binding": {
+        "paper_id": "WAYCKUZ8",
+        "work_id": "work:92f45258-5949-5fcb-b391-256884930baf",
+        "version_id": "version:3b924963-3b65-56a4-b26c-80be911b4983"
+      }
+    },
+    {
+      "artifact": "docs/data/screening/ar2.json#/decisions/XIYX5HJS",
+      "sha256": "sha256:dae8586cbb036e0ecb01ca260e311152789e515f2e00089c68ef4de99db409ac",
+      "result": "accepted",
+      "review_type": "ai-source-review",
+      "agent_id": "/root/research_completion",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-05T12:37:12Z",
+      "findings": "The November 2024 GPAI report describes regional/group-specific consultations, thematic analysis and intersectional substantive-equality policy. Its central gender/diversity/feminist/fairness/AI argument and subordinate gender-intentional image-prompting campaign support the categories. General_Guidance and Demonstrated describe a reported practice, not evaluated causal benefit. Welfare-automation governance supports Social_Assistance_Admin within a broad non-social-work-specific report; marginalized groups and intersecting axes are analytical scope. Empirical refers to consultation research, not proven policy or prompt effectiveness.",
+      "evidence": [
+        {
+          "source_path": "docs/data/fulltext/XIYX5HJS.md",
+          "sha256": "sha256:01d56c63884d7b281293b6c022fc26883a8a30cacd6823e56c691360c021a078",
+          "work_id": "work:1d6d18e8-3caa-5677-b0c0-b46ab20aab43",
+          "version_id": "version:8f854693-bb12-55e7-9cc6-ef11dbabf2ee",
+          "source_url": "https://wp.oecd.ai/app/uploads/2025/05/towards-substantive-equality-in-artificial-intelligence_Transformative-AI-policy-for-gender-equality-and-diversity.pdf",
+          "locator": "Promising practices: gender-intentional image campaign",
+          "quote": "employing gender-intentional text prompts"
+        },
+        {
+          "source_path": "docs/data/fulltext/XIYX5HJS.md",
+          "sha256": "sha256:01d56c63884d7b281293b6c022fc26883a8a30cacd6823e56c691360c021a078",
+          "work_id": "work:1d6d18e8-3caa-5677-b0c0-b46ab20aab43",
+          "version_id": "version:8f854693-bb12-55e7-9cc6-ef11dbabf2ee",
+          "source_url": "https://wp.oecd.ai/app/uploads/2025/05/towards-substantive-equality-in-artificial-intelligence_Transformative-AI-policy-for-gender-equality-and-diversity.pdf",
+          "locator": "Policy foundations: intersectionality",
+          "quote": "The intersectionality of the identities of individuals who are part of historically marginalised groups can result in compounded disadvantages"
+        }
+      ],
+      "canonical_binding": {
+        "paper_id": "XIYX5HJS",
+        "work_id": "work:1d6d18e8-3caa-5677-b0c0-b46ab20aab43",
+        "version_id": "version:8f854693-bb12-55e7-9cc6-ef11dbabf2ee"
+      }
+    },
+    {
+      "artifact": "generated/verification/screening-corrections-b.json#/corrections/R7V99ERA",
+      "sha256": "sha256:bee8d491c19f2462827f06c843db44898d2c4ad94e7ca4dc3629963570eb70b6",
+      "result": "accepted",
+      "review_type": "ai-source-review",
+      "agent_id": "/root/research_completion",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-05T12:50:08Z",
+      "findings": "Rechecked the same original FAccT source after the proposed correction. AN_Mitigation_Status=None now accurately distinguishes the empirical racial-bias/model-performance audit from a mitigation intervention. It is consistent with AN_Mitigation_Stage=None and the source limitations. The one-field correction preserves Include, Empirisch and all other original coding. This receipt accepts the immutable correction projection only; the original annotation and its changes_requested receipt remain unchanged, and no human lifecycle state is granted.",
+      "evidence": [
+        {
+          "source_path": "generated/markdown_clean/R7V99ERA.md",
+          "sha256": "sha256:22e321a8d8c03967dc2171d1d412b6fd80db61452dc85f1c7f86613e7b265d4b",
+          "work_id": "work:365293c9-c8ea-54dd-9f65-2f37976f1a31",
+          "version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
+          "source_url": "https://doi.org/10.1145/3593013.3594094",
+          "locator": "Introduction: summary of findings",
+          "quote": "consistent racial bias in NER"
+        },
+        {
+          "source_path": "generated/markdown_clean/R7V99ERA.md",
+          "sha256": "sha256:22e321a8d8c03967dc2171d1d412b6fd80db61452dc85f1c7f86613e7b265d4b",
+          "work_id": "work:365293c9-c8ea-54dd-9f65-2f37976f1a31",
+          "version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
+          "source_url": "https://doi.org/10.1145/3593013.3594094",
+          "locator": "Limitations and Ethical Considerations",
+          "quote": "As our work does not contribute to the development of deployable systems"
+        }
+      ],
+      "canonical_binding": {
+        "paper_id": "R7V99ERA",
+        "work_id": "work:365293c9-c8ea-54dd-9f65-2f37976f1a31",
+        "version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049"
+      }
+    }
+  ]
+}

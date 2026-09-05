@@ -28,6 +28,7 @@ from pathlib import Path
 from typing import Any, Mapping, Sequence
 
 from src.analysis.work_versions import load_registry, lookup_by_record
+from src.file_hashing import canonical_file_bytes
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 
@@ -156,13 +157,11 @@ def knowledge_coverage(
 
 
 def source_fingerprint(paths: Sequence[str | Path]) -> str:
-    """Hash every canonical input so unchanged sources produce identical JSON."""
+    """Hash canonical LF text inputs; binary input bytes remain unchanged."""
     digest = hashlib.sha256()
     for filepath in sorted((Path(path) for path in paths), key=lambda path: path.as_posix()):
         digest.update(filepath.relative_to(REPO_ROOT).as_posix().encode("utf-8"))
-        with filepath.open("rb") as source:
-            for chunk in iter(lambda: source.read(1024 * 1024), b""):
-                digest.update(chunk)
+        digest.update(canonical_file_bytes(filepath))
     return f"sha256:{digest.hexdigest()}"
 
 

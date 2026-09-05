@@ -19,6 +19,7 @@ const dataFiles = {
   'data/concept_graph.json': 'docs/data/concept_graph.json',
   'data/promptotyping_v2.json': 'docs/data/promptotyping_v2.json',
   'data/literature_landscape.json': 'docs/data/literature_landscape.json',
+  'data/assertion_index.json': 'docs/data/assertion_index.json',
 };
 const literatureLandscape = JSON.parse(
   readFileSync(join(root, dataFiles['data/literature_landscape.json']), 'utf8'),
@@ -125,11 +126,11 @@ await check('category explorer initializes on view switch', async () => {
   await waitFor(() => doc.querySelector('#kategorie-detail .kdetail-header') !== null, 'detail rendered');
 });
 
-await check('literature landscape withholds records pending publication approval', async () => {
+await check('literature landscape displays the current publication policy and denominators', async () => {
   window.switchView('literaturbild');
-  await waitFor(() => doc.querySelector('#literaturbild-root .lit-empty-state') !== null, 'publication gate state');
+  await waitFor(() => doc.querySelector('#literaturbild-root .lit-viz') !== null, 'reviewed literature state');
   const progress = doc.querySelector('#literaturbild-root .lit-progress');
-  if (!progress || !progress.textContent.includes('0 publikationsfreigegeben')) throw new Error('wrong public total');
+  if (!progress || !progress.textContent.includes(`${literatureLandscape.meta.annotated_total} ${literatureLandscape.source.public_label.toLocaleLowerCase('de')}`)) throw new Error('wrong public total');
   if (!progress.textContent.includes(`${literatureLandscape.meta.source_annotated_total} bearbeitet`)) throw new Error('wrong source total');
   if (!progress.textContent.includes(`${literatureLandscape.meta.withheld_total} zurückgehalten`)) throw new Error('wrong withheld total');
   if (!doc.querySelector('#literaturbild-root .lit-status--provisional')) throw new Error('pending status missing');
@@ -143,21 +144,29 @@ await check('literature landscape withholds records pending publication approval
   }
 });
 
-await check('literature landscape exposes no unapproved paper drill-down', async () => {
+await check('literature landscape drill-down contains only eligible works', async () => {
   window.switchView('literaturbild');
-  if (doc.querySelector('.lit-matrix-button:not([disabled])')) throw new Error('unapproved matrix value exposed');
-  if (doc.querySelector('.lit-results .lit-paper')) throw new Error('unapproved paper exposed');
-  if (!doc.querySelector('.lit-empty-state')) throw new Error('publication gate explanation missing');
+  const cell = doc.querySelector('.lit-matrix-button:not([disabled])');
+  if (!literatureLandscape.records.length) {
+    if (cell || doc.querySelector('.lit-results .lit-paper')) throw new Error('withheld paper exposed');
+    if (!doc.querySelector('.lit-empty-state')) throw new Error('publication gate explanation missing');
+  } else if (cell) {
+    cell.dispatchEvent(new window.MouseEvent('click', { bubbles: true }));
+    const titles = new Set(literatureLandscape.records.map(record => record.title));
+    const papers = [...doc.querySelectorAll('.lit-results .lit-paper summary strong')];
+    if (!papers.length || papers.some(node => !titles.has(node.textContent))) throw new Error('drill-down is empty or exposes a withheld work');
+    doc.getElementById('lit-clear-selection').click();
+  }
 });
 
-await check('literature landscape keeps controls operable while gated', async () => {
+await check('literature landscape keeps controls operable', async () => {
   const profile = doc.querySelector('.lit-view-button[data-lit-view="profile"]');
   profile.dispatchEvent(new window.MouseEvent('click', { bubbles: true }));
   if (profile.getAttribute('aria-pressed') !== 'true') throw new Error('profile view not announced');
   if (doc.querySelector('.lit-matrix')) throw new Error('matrix remains visible in profile view');
   if (doc.querySelectorAll('#literaturbild-root .lit-viz').length !== 1) throw new Error('multiple profile views visible');
   if (doc.querySelector('.lit-profile-field').hidden) throw new Error('analysis field selector hidden');
-  if (!doc.querySelector('.lit-empty-state')) throw new Error('publication gate state lost');
+  if (!literatureLandscape.records.length && !doc.querySelector('.lit-empty-state')) throw new Error('publication gate state lost');
 });
 
 await check('literature landscape writes and restores its URL state', async () => {
@@ -185,7 +194,7 @@ await check('chat UI builds without network', async () => {
 await check('chat error banner survives a failed request', async () => {
   window.switchView('chat');
   doc.getElementById('gemini-key').value = 'AIzaTEST';
-  doc.getElementById('chat-input').value = 'Testfrage';
+  doc.getElementById('chat-input').value = 'AI literacy social work';
   doc.getElementById('chat-send').dispatchEvent(new window.MouseEvent('click', { bubbles: true }));
   await waitFor(() => doc.querySelector('#chat-messages .chat-error') !== null, 'error banner');
   // It must persist, not be wiped by a re-render in the same path.

@@ -1,0 +1,166 @@
+{
+  "schema": "femprompt-screening-corrections/0.1",
+  "corrections": {
+    "4KMMPA6A": {
+      "paper_id": "4KMMPA6A",
+      "correction_id": "ai-analysis-correction:2026-09-05:4KMMPA6A:aggregation",
+      "base_artifact": "docs/data/screening/ar2.json#/decisions/4KMMPA6A",
+      "base_sha256": "sha256:730878f83d1a691d9168f1e8e357ba6e846e9a281adf0179a9dcd87589973a45",
+      "supersedes_annotation_id": "ar2:4KMMPA6A",
+      "agent_id": "/root/aggregation",
+      "actor_type": "ai_agent",
+      "model": "GPT-6 (exact deployment identifier unavailable)",
+      "corrected_at": "2026-09-05T13:01:37.190610+00:00",
+      "changes": [
+        {
+          "path": "/analysis/fields/AN_Prompt_Techniques",
+          "before": [
+            "ICL",
+            "Role_Persona",
+            "General_Guidance",
+            "Self_Criticism"
+          ],
+          "after": [
+            "ICL",
+            "Role_Persona",
+            "General_Guidance"
+          ],
+          "reason": "§4.3 reflektiert Vorurteile der Menschen; §5.2 empfiehlt Dialog, Feedback und Vier-Augen-Prinzip. Keine explizite Selbstkritik eines Modells an seiner eigenen Ausgabe; Self_Criticism entfällt."
+        },
+        {
+          "path": "/analysis/fields/AN_Bias_Axes",
+          "before": [
+            "Gender",
+            "Race_Ethnicity",
+            "Disability",
+            "Age",
+            "Physical_Appearance"
+          ],
+          "after": [
+            "Gender",
+            "Race_Ethnicity",
+            "Disability",
+            "Age",
+            "Physical_Appearance",
+            "Language_Culture",
+            "Socioeconomic",
+            "Religion"
+          ],
+          "reason": "§5.1 nennt Klasse, kulturelle Herkunft und Religion ausdrücklich als Stereotypisierungsachsen; §5.2 erläutert sprachbedingte Übersetzungsfehler am Chefin/Chef-Beispiel."
+        },
+        {
+          "path": "/analysis/fields/AN_Notes",
+          "before": "Konzeptleitfaden für KMU. General_Guidance umfasst Spezifität, Kontext, Sprache und detaillierte Beschreibungen; ICL stützt sich auf die ausdrücklich empfohlenen Beispiele.",
+          "after": "Konzeptleitfaden für KMU. General_Guidance: Spezifität, Kontext, Sprache und detaillierte Beschreibung. Originalbeleg: ‚Spezifisch sein. Je beschreibender und detaillierter der Prompt, desto besser die Ergebnisse.‘ ICL: Beispiele für gewünschten Stil oder erwartetes Ergebnis; Role_Persona: explizite Rollenzuweisung. Reflexion, Feedback und Vier-Augen-Prinzip beschreiben menschliche Prüfung, keine belegte Modell-Selbstkritik. §5.1 nennt außerdem Klasse, kulturelle Herkunft und Religion; §5.2 behandelt sprachbedingte Verzerrungen. Empfehlungen bleiben Proposed; keine kontrollierte Wirksamkeitsevaluation.",
+          "reason": "Quellenbezug der konkreten General_Guidance-Strategie und der korrigierten Achsen/Techniken explizit machen."
+        }
+      ]
+    },
+    "BDI6XU5A": {
+      "paper_id": "BDI6XU5A",
+      "correction_id": "ai-analysis-correction:2026-09-05:BDI6XU5A:aggregation",
+      "base_artifact": "docs/data/screening/ar2.json#/decisions/BDI6XU5A",
+      "base_sha256": "sha256:faa15f9def47fcb385794e9746eb60d0a12d92f754dbee7d5ef4788af08bdc5f",
+      "supersedes_annotation_id": "ar2:BDI6XU5A",
+      "agent_id": "/root/aggregation",
+      "actor_type": "ai_agent",
+      "model": "GPT-6 (exact deployment identifier unavailable)",
+      "corrected_at": "2026-09-05T13:01:37.192655+00:00",
+      "changes": [
+        {
+          "path": "/analysis/fields/AN_Mitigation_Status",
+          "before": "Evaluated",
+          "after": "Proposed",
+          "reason": "§3 untersucht Wahrnehmung und KI-Kompetenz mit einer Befragung (49 Items, 382 Personen). §5.2 formuliert Handlungsempfehlungen; eine Interventionswirkung wurde nicht evaluiert."
+        },
+        {
+          "path": "/analysis/fields/AN_Mitigation_Stage",
+          "before": [
+            "Organisational_Process",
+            "Post_Processing"
+          ],
+          "after": [
+            "Organisational_Process"
+          ],
+          "reason": "§5.2 empfiehlt Kompetenzaufbau und institutionelle Verantwortung. Die bloße Nennung von AIF360 spezifiziert keine Post-Processing-Maßnahme; Post_Processing entfällt."
+        },
+        {
+          "path": "/analysis/fields/AN_Notes",
+          "before": "Empirischer Forschungsbericht zu KI-Kompetenz, Geschlechterdifferenzen und Diskriminierungsrisiken.",
+          "after": "Empirischer Forschungsbericht: Befragung mit 49 Items und 382 vollständig ausgefüllten Fragebögen zu KI-Kompetenz, Geschlechterdifferenzen und Vertrauen. §5.2 empfiehlt Kompetenzaufbau, Sensibilisierung und organisatorische Verantwortung; deren Wirksamkeit wird nicht geprüft (Proposed). AIF360 wird als mögliches Hilfsmittel genannt, ohne eine konkrete Post-Processing-Intervention zu beschreiben. Bibliografische Lücke separat: Der dokumentierte Projektzeitraum endet Februar 2021, während Jahr und Berichtstyp im Korpus fehlen.",
+          "reason": "Erhebungsdesign und Empfehlung von einer evaluierten Mitigationsintervention trennen; verbleibende bibliografische Lücken offen benennen."
+        }
+      ]
+    },
+    "BHXDU7VM": {
+      "paper_id": "BHXDU7VM",
+      "correction_id": "ai-analysis-correction:2026-09-05:BHXDU7VM:aggregation",
+      "base_artifact": "docs/data/screening/ar2.json#/decisions/BHXDU7VM",
+      "base_sha256": "sha256:acfe5a3ff1c82a1bcaf73c64b6b27941b7027191c6fb5eadbc04a0805c526c3e",
+      "supersedes_annotation_id": "ar2:BHXDU7VM",
+      "agent_id": "/root/aggregation",
+      "actor_type": "ai_agent",
+      "model": "GPT-6 (exact deployment identifier unavailable)",
+      "corrected_at": "2026-09-05T13:01:37.192655+00:00",
+      "changes": [
+        {
+          "path": "/analysis/fields/AN_Prompt_Techniques",
+          "before": [
+            "General_Guidance"
+          ],
+          "after": [
+            "General_Guidance",
+            "ICL"
+          ],
+          "reason": "Appendix A.3 zeigt kategorisierte Beispielanfragen; A.4 enthält Example 1 bis 5 mit Expected output. Diese im Klassifikationsprompt vorgegebenen Eingabe-Ausgabe-Beispiele sind ICL."
+        },
+        {
+          "path": "/analysis/fields/AN_Notes",
+          "before": "Empirische Studie zu globaler ChatGPT-Nutzung und demografischen Unterschieden; keine Mitigationsintervention.",
+          "after": "Empirisches NBER Working Paper zur globalen ChatGPT-Nutzung und demografischen Unterschieden; keine Mitigationsintervention. General_Guidance: Klassifikationsrubriken, Entscheidungsregeln und Ausgabeformat in Appendix A.3/A.4; Originalbeleg: ‚Return exactly two lines and nothing else:‘ ICL: kategorisierte Beispielanfragen in A.3 sowie User Message/Expected output in A.4. Die Prompt-Techniken dienen als Forschungsinstrument; daraus folgt kein Nachweis zur Verbesserung von Fairness in der Sozialen Arbeit.",
+          "reason": "Tatsächlich eingesetzte Klassifikationsstrategie mit Originalbeleg und Beispielen dokumentieren."
+        }
+      ]
+    },
+    "EQV4DNQR": {
+      "paper_id": "EQV4DNQR",
+      "correction_id": "ai-analysis-correction:2026-09-05:EQV4DNQR:aggregation",
+      "base_artifact": "docs/data/screening/ar2.json#/decisions/EQV4DNQR",
+      "base_sha256": "sha256:f4fef9f411d9ffc70efb2fd4fb4d15a394aa0eca844bd7340707e76d817423e8",
+      "supersedes_annotation_id": "ar2:EQV4DNQR",
+      "agent_id": "/root/aggregation",
+      "actor_type": "ai_agent",
+      "model": "GPT-6 (exact deployment identifier unavailable)",
+      "corrected_at": "2026-09-05T13:01:37.194768+00:00",
+      "changes": [
+        {
+          "path": "/analysis/fields/AN_Bias_Axes",
+          "before": [
+            "Gender",
+            "Race_Ethnicity",
+            "Intersectional",
+            "Sexual_Orientation_Identity",
+            "Language_Culture",
+            "Nationality_Migration"
+          ],
+          "after": [
+            "Gender",
+            "Race_Ethnicity",
+            "Intersectional",
+            "Sexual_Orientation_Identity",
+            "Language_Culture",
+            "Nationality_Migration",
+            "Age"
+          ],
+          "reason": "Study 1 verwendet ausdrücklich gender and age-based word lists und berichtet Assoziationen zwischen age and pleasantness. Die selbst untersuchte Age-Achse wird ergänzt."
+        },
+        {
+          "path": "/analysis/fields/AN_Notes",
+          "before": "Issue Brief mit mehreren empirischen LLM-Biasstudien und Policy-Empfehlungen. Die Satzvervollständigung dient als Bias-Probe.",
+          "after": "Issue Brief mit drei empirischen Biasstudien und Policy-Empfehlungen. Study 1 untersucht Wortassoziationen zu Gender und Alter, einschließlich age and pleasantness; die Satzvervollständigung in den weiteren Studien dient als Bias-Probe. Die Empfehlungen bleiben Proposed. Vergleiche verschiedener Modelle sind kein kontrollierter kausaler Nachweis einer universell wirksamen Bias-Mitigation.",
+          "reason": "Die ergänzte Altersachse und die Reichweite der empirischen Befunde in der Synthesenotiz offenlegen."
+        }
+      ]
+    }
+  }
+}

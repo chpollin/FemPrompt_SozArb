@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feministische AI Literacies – Quellengeprüfte Evidenz</title>
+    <meta name="description" content="Quellengeprüfte Aussagen zu KI, Gender und Sozialer Arbeit mit nachvollziehbarer KI-Prüfung.">
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/research.css">
+    <link rel="stylesheet" href="css/literaturbild.css">
+    <link rel="stylesheet" href="css/release.css">
+</head>
+<body>
+<header><div class="header-content">
+    <a class="brand-link" href="index.html"><h1>Feministische AI Literacies</h1></a>
+    <p>Generative KI, Gender und Soziale Arbeit</p>
+    <nav aria-label="Ansichten" class="release-nav">
+        <button data-view="evidence" aria-pressed="true">Belegte Aussagen</button>
+        <button data-view="literature" aria-pressed="false">Literaturbild</button>
+        <button data-view="chat" aria-pressed="false">Wissens-Chat</button>
+        <a href="downloads/research-data.zip">Datensatz herunterladen</a>
+    </nav>
+</div></header>
+<main>
+    <section class="release-intro" aria-label="Prüfstatus">
+        <p class="release-kicker">Nachvollziehbare KI-Quellenprüfung</p>
+        <p>Jede veröffentlichte Aussage führt zu ihrer Quelle und nennt den prüfenden KI-Agenten,
+            das Modell und den Zeitpunkt. Eine menschliche Fachprüfung wird gesondert ausgewiesen.</p>
+        <p id="release-counts" aria-live="polite">Lade den geprüften Datenstand …</p>
+        <p class="release-note">Die Sammlung wächst. Sie zeigt den bereits quellengeprüften Teilbestand;
+            der vollständige Literaturreview ist noch in Bearbeitung.</p>
+    </section>
+    <section id="release-evidence" class="release-view">
+        <label for="evidence-search">Aussagen und Quellen durchsuchen</label>
+        <input id="evidence-search" class="search-box" type="search" placeholder="Zum Beispiel Prompting oder AI Literacy">
+        <div id="assertion-list" aria-live="polite"></div>
+    </section>
+    <section id="release-literature" class="release-view" hidden><div id="literaturbild-root"></div></section>
+    <section id="release-chat" class="release-view" hidden><div class="chat-window" id="chat-container"></div></section>
+</main>
+<footer class="site-footer"><p>
+    <a href="downloads/data-dictionary.md">Datenbeschreibung</a> ·
+    <a href="data/release_manifest.json">Versionsnachweis</a> ·
+    <a href="https://github.com/chpollin/FemPrompt_SozArb">Forschungsprojekt und Arbeitsstände</a>
+</p></footer>
+<script src="js/public-release.js"></script>
+<script src="js/literaturbild.js"></script>
+<script src="js/wissenschat.js"></script>
+</body>
+</html>

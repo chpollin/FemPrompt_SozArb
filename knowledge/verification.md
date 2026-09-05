@@ -10,7 +10,7 @@ status: active
 language: en
 version: "0.7"
 created: 2026-08-23
-updated: 2026-08-26
+updated: 2026-09-05
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6)
 topics: ["[[Verification]]", "[[Evidence Synthesis]]", "[[Research Integrity]]"]
@@ -43,13 +43,14 @@ This register states which externally relevant project claims have a reproducibl
 | Productive round-two agent annotations | `ar2.json` links every productive record through `review_runs` to manifest-bound source coding, deterministic PRISM projection, and separate source-grounded AI Agent Review artifacts | `ai-agent-reviewed`; domain-expert verification open |
 | Grounded Vault vertical slice | Adjacent-layer links and artifact status checked by the project validator | Grounded or AI-agent-reviewed at artifact level; domain-expert verification open |
 | SQ1 to SQ3 synthesis | Advisory coding and initial Assertions exist | Draft; full-corpus analysis and domain-expert verification open |
-| Public Literature Landscape | Fail-closed publication generator checks every admitted record | Publication mechanism validated; governed agent records remain withheld until approval |
+| Public Literature Landscape | The explicit policy and current source-review ledger govern Work-level aggregation; aliases and exact Versions remain inspectable | Attributed AI-source-reviewed subset; unresolved records withheld and no human authority inferred |
+| Active distillates and Assertions | Original source passages checked; incorrect section locators corrected; current artifact/source hashes and named AI agent, model and UTC date recorded in the review ledger | Source-reviewed active slice; full-corpus synthesis remains open |
 
 ## Rules for external claims
 
 Count-bearing statements in the paper, report, and Evidence Companion must derive from committed data and an executable generator or replay. Qualitative literature statements must cite Assertions whose supporting distillates and source anchors resolve. A verified screening record does not verify a derived Assertion automatically. Each derived artifact receives its own evidence check and authority event.
 
-The paper may describe implemented software behaviour after the applicable technical checks pass. It may describe agent annotations as `ai-agent-reviewed` when the source-grounded review exists. It may present them as scholarly findings only after domain-expert verification. Public release additionally requires publication approval.
+The paper may describe implemented software behaviour after the applicable technical checks pass. It may describe agent annotations as `ai-agent-reviewed` when the source-grounded review exists. Final scholarly findings and manuscript approval remain author-governed. The operator separately authorised a labelled preliminary AI-source-reviewed result release; its exact-artifact requirements and correction semantics are defined in [[governance#Publication boundary]].
 
 A run manifest establishes completed execution only when its lifecycle is complete and its validation receipts, source bindings, and output hashes resolve. The presence of generated files or productive records alone does not raise the authority of an unfinished run manifest.
 

@@ -10,7 +10,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-08-23
-updated: 2026-08-24
+updated: 2026-09-05
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6)
 topics: ["[[Research Governance]]", "[[Provenance]]", "[[Human-in-the-Loop]]"]
@@ -31,7 +31,7 @@ FemPrompt assigns each research operation a defined actor, evidence basis, autho
 | Scholarly verification | Domain expert | Accepted, corrected and accepted, changes requested, or rejected | `verified` for accepted outcomes |
 | Publication approval | Authorised person | Approval event over a verified artifact | `publication-approved` |
 
-Deterministic validation evaluates explicit machine-readable requirements. AI Agent Review evaluates source support without conferring scholarly authority. Domain-expert verification evaluates evidence and interpretation. Publication approval controls release into public projections.
+Deterministic validation evaluates explicit machine-readable requirements. AI Agent Review evaluates source support without conferring scholarly authority. Domain-expert verification evaluates evidence and interpretation. Publication approval records final scholarly release. The separately authorised AI-reviewed release policy below controls preliminary result projections.
 
 ## Screening lifecycle
 
@@ -59,7 +59,13 @@ A domain-expert correction creates a complete new annotation version. The correc
 
 ## Publication boundary
 
-The Evidence Companion may publish a screening record only after a valid domain-expert verification event and a later publication-approval event. Records at `agent-annotated`, `ai-agent-reviewed`, or `verified` remain internal. The same artifact-local rule applies to Assertions and output chapters in the Grounded Vault.
+The operator authorised an explicitly attributed AI-source-reviewed result release on 2026-09-05. `config/publication_policy.json` defines eligible states; a label alone never grants release. AI eligibility requires a current accepted source-review receipt with agent identity, available model identity, timezone-qualified timestamp, findings, source locators, and matching artifact/source hashes. `generated/verification/ai-source-reviews.json` preserves both positive and negative outcomes. The latest review of an artifact governs its eligibility. Missing or stale support cannot enter the result projection. This permission does not promote any artifact to `verified` or `publication-approved`.
+
+AI analysis corrections live in immutable, attributed sidecar artifacts under `generated/verification/screening-corrections-*.json`. Each binds the original record hash, field-level before/after values, reason, actor and time. A later source-review receipt checks the correction. The publisher applies only supported analysis-field changes to its derived projection, records that basis, and preserves the original screening document and all historical annotations. A changed base record invalidates its correction. Bibliographic/version conflicts and ambiguous interpretation remain explicit unresolved findings. A review of a corrected projection must target its correction artifact; a review of the original record remains attached to that original artifact.
+
+`build/site/` is the allowlisted result artifact. It contains released source-linked Assertions, reviewed Work-level screening, selected bibliographic metadata and a download built from those same datasets. `docs/` contains the working PRISM/Companion surfaces and must not be deployed wholesale. The repository remains an attributed research working record; the result-site boundary does not make existing repository files or Git history private. Human verification and approval remain necessary for the final scholarly manuscript, as distinguished from this labelled preliminary release.
+
+Later negative reviews of a screening record or its correction family suppress earlier acceptances; they never reactivate an older coding. Conflicting family outcomes at the same timestamp stop publication. Canonical projection permits only an explicitly checked mapping of missing or recognised matching legacy identifiers; foreign Work/Version evidence cannot be relabelled by attaching a receipt.
 
 ## Canonical carriers
 

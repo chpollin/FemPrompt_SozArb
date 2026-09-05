@@ -1,0 +1,13 @@
+{
+  "schema": "femprompt-publication-policy/0.1",
+  "allowed_states": ["ai-agent-reviewed", "verified", "publication-approved"],
+  "public_label": "KI-quellengeprüft",
+  "ai_review_requires_attributed_receipt": true,
+  "authority": "AI source review is attributed and distinct from domain-expert verification. No human verification or approval is inferred.",
+  "decision_basis": "Operator requested AI verification with the agent, model and time recorded on 2026-09-05.",
+  "scope": "Existing corpus and all prepared 2026 candidates. Candidates enter screening only after canonical Work-Version binding.",
+  "search_cutoff": "2026-08-24",
+  "search_cutoff_basis": "Latest completed search package; later additions require a separately recorded targeted search and eligibility decision.",
+  "additional_literature_rule": "Add only source-verified, bibliographically reconciled literature addressing a concrete evidence gap; retain its search date and unscreened state.",
+  "working_data_visibility": "The repository is an attributed research working record. The result site is built separately from eligible reviewed artifacts. This policy does not make Git history private."
+}

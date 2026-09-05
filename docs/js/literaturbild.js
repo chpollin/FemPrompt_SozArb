@@ -72,7 +72,7 @@ function peerReviewLabel(value) {
 }
 
 function paperCount(value) {
-    return value + (value === 1 ? ' Paper' : ' Papers');
+    return value + (value === 1 ? ' Werk' : ' Werke');
 }
 
 function attr(value) {
@@ -231,9 +231,10 @@ function renderShell() {
         return record.decision === 'Include' && record.text_source;
     }).map(function(record) { return record.text_source; })));
     const source = data.source || {};
+    const publicLabel = source.public_label || 'Publikationsfreigegeben';
     const provisional = source.provisional
-        ? '<span class="lit-status lit-status--provisional">Freigabe ausstehend</span>'
-        : '<span class="lit-status lit-status--accepted">Publikationsfreigegeben</span>';
+        ? '<span class="lit-status lit-status--provisional">Prüfung teilweise ausstehend</span>'
+        : '<span class="lit-status lit-status--accepted">' + EC.escapeHtml(publicLabel) + '</span>';
     const sourceTotal = Number(data.meta.source_annotated_total || data.meta.annotated_total || 0);
     const withheldTotal = Number(data.meta.withheld_total || 0);
 
@@ -245,12 +246,12 @@ function renderShell() {
                 '<div class="lit-source-state">' + provisional +
                 '<span>' + EC.escapeHtml(String(source.reviewer || '')) + '</span></div>' +
                 '<p class="lit-progress" aria-label="Bearbeitungsstand">' +
-                    '<span><strong>' + data.meta.annotated_total + '</strong> publikationsfreigegeben</span>' +
-                    '<span><strong>' + sourceTotal + '</strong> bearbeitet</span>' +
-                    (withheldTotal ? '<span><strong>' + withheldTotal + '</strong> zurückgehalten</span>' : '') +
-                    '<span><strong>' + data.meta.included_total + '</strong> Include</span>' +
-                    '<span><strong>' + data.meta.unclear_total + '</strong> Unklar</span>' +
-                    '<span><strong>' + data.meta.excluded_total + '</strong> Exclude</span>' +
+                    '<span><strong>' + data.meta.annotated_total + '</strong> ' + EC.escapeHtml(publicLabel.toLocaleLowerCase('de')) + ' (Werke)</span>' +
+                    '<span><strong>' + sourceTotal + '</strong> bearbeitet (Einträge)</span>' +
+                    (withheldTotal ? '<span><strong>' + withheldTotal + '</strong> zurückgehalten (Einträge)</span>' : '') +
+                    '<span><strong>' + data.meta.included_total + '</strong> Include (Werke)</span>' +
+                    '<span><strong>' + data.meta.unclear_total + '</strong> Unklar (Werke)</span>' +
+                    '<span><strong>' + data.meta.excluded_total + '</strong> Exclude (Werke)</span>' +
                 '</p>' +
                 '<fieldset class="lit-view-switch"><legend>Ansicht</legend>' +
                     viewButton('matrix', 'Zusammenhänge', true) +
@@ -360,7 +361,9 @@ function renderEvidence(record) {
     return (record.categories || []).map(function(category) {
         const evidence = category.evidence.map(function(passage) {
             return '<blockquote><strong>' + EC.escapeHtml(passage.term) + '</strong><p>' +
-                EC.escapeHtml(passage.snippet) + '</p></blockquote>';
+                EC.escapeHtml(passage.snippet) + '</p>' +
+                '<footer>Eintrag ' + EC.escapeHtml(passage.source_record_id || record.id) +
+                ' · Fassung ' + EC.escapeHtml(passage.version_id || record.version_id || '') + '</footer></blockquote>';
         }).join('');
         return '<section class="lit-evidence-group"><h5>' + EC.escapeHtml(label(category.key)) +
             ' <span>Stufe ' + category.level + '</span></h5>' + evidence + '</section>';
@@ -394,9 +397,45 @@ function renderVersionMeta(record) {
         '<dt>Begutachtung</dt><dd>' + EC.escapeHtml(peerReviewLabel(record.peer_review_status)) + '</dd>' +
         '<dt>Werk-ID</dt><dd class="mono">' + EC.escapeHtml(record.work_id || '') + '</dd>' +
         '<dt>Fassungs-ID</dt><dd class="mono">' + EC.escapeHtml(record.version_id || '') + '</dd>' +
+        '<dt>Aggregierte Einträge</dt><dd>' + EC.escapeHtml((record.record_ids || [record.id]).join(', ')) + '</dd>' +
         (versions.length > 1 ? '<dt>Bekannte Fassungen</dt><dd>' + EC.escapeHtml(versions.map(function(item) {
             return versionLabel(item.version_type);
         }).join(' · ')) + '</dd>' : '') + '</dl>';
+}
+
+function renderReview(record) {
+    const sourceRecords = record.source_records || [record];
+    return '<section class="lit-paper-review"><h5>Prüfherkunft</h5>' + sourceRecords.map(function(sourceRecord) {
+        const receipt = sourceRecord.ai_verification;
+        let html = '<dl><dt>Eintrag</dt><dd>' + EC.escapeHtml(sourceRecord.id) + '</dd>';
+        if (receipt) {
+            html += '<dt>KI-Quellenprüfung</dt><dd>' + EC.escapeHtml(receipt.agent_id) +
+                ' · ' + EC.escapeHtml(receipt.model) + ' · ' + EC.escapeHtml(receipt.reviewed_at) + '</dd>' +
+                '<dt>Prüfbefund</dt><dd>' + EC.escapeHtml(receipt.findings) + '</dd>';
+        }
+        if (sourceRecord.ai_correction) {
+            const correction = sourceRecord.ai_correction;
+            html += '<dt>KI-Korrektur</dt><dd>' + EC.escapeHtml(correction.agent_id) + ' · ' +
+                EC.escapeHtml(correction.model) + ' · ' + EC.escapeHtml(correction.corrected_at) + '</dd>';
+            correction.changes.forEach(function(change) {
+                const name = change.path.split('/').pop();
+                const display = function(value) { return (Array.isArray(value) ? value : [value]).map(label).join(', '); };
+                html += '<dt>' + EC.escapeHtml(label(name)) + '</dt><dd>' + EC.escapeHtml(display(change.before)) +
+                    ' → ' + EC.escapeHtml(display(change.after)) + '<br>' + EC.escapeHtml(change.reason) + '</dd>';
+            });
+        }
+        if (sourceRecord.verification) {
+            html += '<dt>Fachliche Verifikation</dt><dd>' +
+                EC.escapeHtml((sourceRecord.verification.actor_ids || []).join(', ')) + ' · ' +
+                EC.escapeHtml(sourceRecord.verification.at || '') + '</dd>';
+        }
+        if (sourceRecord.publication_approval) {
+            html += '<dt>Publikationsfreigabe</dt><dd>' +
+                EC.escapeHtml((sourceRecord.publication_approval.actor_ids || []).join(', ')) + ' · ' +
+                EC.escapeHtml(sourceRecord.publication_approval.at || '') + '</dd>';
+        }
+        return html + '</dl>';
+    }).join('') + '</section>';
 }
 
 function renderPapers(records) {
@@ -406,7 +445,7 @@ function renderPapers(records) {
         EC.escapeHtml(activeSelection.label) + '</h3><div class="lit-result-state">' +
         '<p id="lit-result-count" aria-live="polite">' + paperCount(selected.length) + '</p>' +
         '<button type="button" id="lit-clear-selection">Auswahl lösen</button></div></div>';
-    if (!selected.length) return html + '<p class="lit-empty">Keine Papers entsprechen dieser Auswahl.</p></section>';
+    if (!selected.length) return html + '<p class="lit-empty">Keine Werke entsprechen dieser Auswahl.</p></section>';
     selected.forEach(function(record) {
         const cats = record.categories.map(function(category) {
             return '<span class="lit-chip">' + EC.escapeHtml(label(category.key)) +
@@ -417,7 +456,7 @@ function renderPapers(records) {
             '<span class="lit-paper-basis">' + EC.escapeHtml(label(record.text_source) + ' · ' + versionLabel(record.version_type)) + '</span></summary>' +
             '<div class="lit-paper-body"><div class="lit-paper-meta"><span>Paper-ID ' +
             EC.escapeHtml(record.id) + '</span>' + paperLink(record) + '</div><div class="lit-chip-row">' + cats +
-            '</div>' + renderVersionMeta(record) + renderAnalysis(record) + '<div class="lit-paper-evidence"><h5>Paper-Belege</h5>' +
+            '</div>' + renderVersionMeta(record) + renderReview(record) + renderAnalysis(record) + '<div class="lit-paper-evidence"><h5>Paper-Belege</h5>' +
             renderEvidence(record) + '</div></div></details>';
     });
     return html + '</section>';
@@ -429,8 +468,8 @@ function renderDynamic() {
         const withheldTotal = Number(data.meta.withheld_total || 0);
         root.querySelector('#lit-dynamic').innerHTML =
             '<section class="lit-viz lit-empty-state" role="status"><h3>Noch keine freigegebenen Ergebnisse</h3>' +
-            '<p>' + withheldTotal + ' bearbeitete Records bleiben bis zur fachlichen Verifikation und ' +
-            'Publikationsfreigabe intern.</p></section>';
+            '<p>' + withheldTotal + ' bearbeitete Einträge erfüllen die geltende Prüf- und Veröffentlichungsregel noch nicht ' +
+            'und erscheinen deshalb nicht im Ergebnis-Literaturbild.</p></section>';
         return;
     }
     const visualization = activeView === 'profile' ? renderProfile(records) : renderMatrix(records);

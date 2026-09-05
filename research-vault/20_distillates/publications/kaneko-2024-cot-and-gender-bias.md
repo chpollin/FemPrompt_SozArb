@@ -24,7 +24,7 @@ Kaneko et al. evaluate Chain-of-Thought prompting as a gender-bias mitigation me
 ## Core statements
 
 - Kaneko et al. report lower bias scores for zero-shot and few-shot Chain-of-Thought prompting in their evaluation. ^s1
-  > "both Zero-shot+CoT and Few-shot+CoT decrease bias scores in LLMs" (arXiv:2401.15585, sec. 4.1)
+  > "both Zero-shot+CoT and Few-shot+CoT decrease bias scores in LLMs" (arXiv:2401.15585, sec. 3.3)
 - Kaneko et al. report that Chain-of-Thought does not consistently outperform a debiasing prompt for smaller or only pretrained models. ^s2
   > "for relatively small models or models that have only been pre-trained, CoT does not necessarily debias better than DP." (arXiv:2401.15585, sec. 4.3)
 

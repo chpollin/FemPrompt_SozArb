@@ -33,20 +33,20 @@ prisma_2020:
   - standard: PRISMA-2020
     item_id: "1"
     item_short: Title identifies the report as a systematic review
-    status: reconstructable
-    source_path: paper/ (Forum Wissenschaft, submitted and closed)
-    notes: ""
+    status: partial
+    source_path: research-vault/40_output/paper/paper.md
+    notes: The current manuscript has a working qualitative-review title pending final author approval; the closed Forum Wissenschaft contribution is a separate report.
   - standard: PRISMA-2020
     item_id: "2"
     item_short: Abstract, structured summary
-    status: reconstructable
-    source_path: paper/draft.md
-    notes: ""
+    status: partial
+    source_path: research-vault/40_output/paper/paper.md
+    notes: Canonical manuscript draft; the abstract still contains a pending synthesis result.
   - standard: PRISMA-2020
     item_id: "3"
     item_short: Introduction, rationale
     status: reconstructable
-    source_path: knowledge/project.md, paper/draft.md
+    source_path: knowledge/project.md, research-vault/40_output/paper/paper.md
     notes: ""
   - standard: PRISMA-2020
     item_id: "4"
@@ -103,11 +103,41 @@ prisma_2020:
     source_path: named gap (not applicable)
     notes: No quantitative effect synthesis; field review, not an intervention meta-analysis.
   - standard: PRISMA-2020
-    item_id: "13"
-    item_short: Synthesis methods
-    status: not_applicable
-    source_path: named gap (not applicable)
-    notes: No meta-analytic synthesis; the synthesis is the distillation pipeline and the category mapping, reported under items 9 and 10.
+    item_id: "13a"
+    item_short: Eligibility for each synthesis
+    status: partial
+    source_path: assessment/categories.yaml, knowledge/update-protocol.md, src/analysis/build_completion_package.py
+    notes: Work-level eligibility and SQ1-SQ3 coding are defined; final synthesis membership and unresolved candidate inclusion remain open.
+  - standard: PRISMA-2020
+    item_id: "13b"
+    item_short: Preparing data for presentation and synthesis
+    status: partial
+    source_path: knowledge/methods.md, src/analysis/build_completion_package.py, generated/completion/data-dictionary.md
+    notes: Source preparation, deduplication, missing codes and conflicts are explicit; the completed corpus and final transformations remain to be consolidated.
+  - standard: PRISMA-2020
+    item_id: "13c"
+    item_short: Tabulation and graphical methods
+    status: partial
+    source_path: src/publish/generate_literature_landscape.py, src/analysis/build_completion_package.py, research-vault/40_output/paper/paper.md
+    notes: Work-level category tables and their denominators are implemented; final manuscript tables and figures remain open.
+  - standard: PRISMA-2020
+    item_id: "13d"
+    item_short: Synthesis methods and rationale
+    status: partial
+    source_path: knowledge/methods.md, research-vault/40_output/literature-report/00-structure.md, generated/completion/synthesis-outline.md
+    notes: A qualitative source-bound summary and descriptive mapping are planned. Absence of meta-analysis does not make the requirement to describe and justify the summary approach inapplicable.
+  - standard: PRISMA-2020
+    item_id: "13e"
+    item_short: Exploring variation among study results
+    status: partial
+    source_path: assessment/categories.yaml, research-vault/40_output/paper/paper.md
+    notes: No statistical heterogeneity analysis is planned. Qualitative variation by model, bias axis and practice context is relevant; its final comparison procedure is not yet consolidated.
+  - standard: PRISMA-2020
+    item_id: "13f"
+    item_short: Sensitivity analyses
+    status: partial
+    source_path: research-vault/40_output/paper/paper.md, generated/completion/synthesis-outline.md
+    notes: No synthesis sensitivity analysis is currently recorded. The final report must state this explicitly and document any later robustness analyses and whether they were prespecified; no meta-analysis alone is not an exemption.
   - standard: PRISMA-2020
     item_id: "14"
     item_short: Reporting-bias assessment
@@ -151,11 +181,29 @@ prisma_2020:
     source_path: docs/data/research_vault_v2.json
     notes: Per-paper core finding and category evidence.
   - standard: PRISMA-2020
-    item_id: "20"
-    item_short: Results of syntheses
+    item_id: "20a"
+    item_short: Characteristics of studies contributing to each synthesis
+    status: partial
+    source_path: generated/completion/sq-analysis-tables.csv, research-vault/40_output/paper/paper.md
+    notes: Contributing work IDs are explicit in provisional descriptive tables; final synthesis and study-quality limitations remain open. This item also applies to non-meta-analytic syntheses.
+  - standard: PRISMA-2020
+    item_id: "20b"
+    item_short: Results of statistical syntheses
     status: not_applicable
-    source_path: Evidence Companion (Categories view)
-    notes: No statistical synthesis; the category-level pattern is rendered in the Evidence Companion.
+    source_path: knowledge/methods.md
+    notes: No synthesis of quantitative study effect estimates is planned; descriptive coding frequencies are reported separately.
+  - standard: PRISMA-2020
+    item_id: "20c"
+    item_short: Results of investigations of heterogeneity
+    status: partial
+    source_path: research-vault/40_output/paper/paper.md
+    notes: Final qualitative comparisons remain open; no statistical heterogeneity result is claimed. See item 13e.
+  - standard: PRISMA-2020
+    item_id: "20d"
+    item_short: Results of sensitivity analyses
+    status: partial
+    source_path: research-vault/40_output/paper/paper.md
+    notes: No synthesis sensitivity result is recorded; final reporting must match the methods declaration under 13f.
   - standard: PRISMA-2020
     item_id: "21"
     item_short: Reporting biases
@@ -171,9 +219,9 @@ prisma_2020:
   - standard: PRISMA-2020
     item_id: "23"
     item_short: Discussion (summary, limitations, conclusions)
-    status: reconstructable
-    source_path: knowledge/project.md, knowledge/methods.md (Circularity as a field condition), paper/draft.md
-    notes: ""
+    status: partial
+    source_path: knowledge/project.md, knowledge/methods.md (Circularity as a field condition), research-vault/40_output/paper/paper.md
+    notes: Draft limitations exist; substantive discussion and conclusions depend on the completed synthesis.
   - standard: PRISMA-2020
     item_id: "24a-c"
     item_short: Registration and protocol

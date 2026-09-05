@@ -10,7 +10,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-08-23
-updated: 2026-08-24
+updated: 2026-09-05
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6)
 topics: ["[[Software Testing]]", "[[Research Software]]"]
@@ -52,7 +52,11 @@ The automated suites cover the following contracts.
 - Validation receipts bind to the hash of the checked annotation.
 - Lifecycle transitions require authorised actor roles and valid predecessor states.
 - Productive agent merges are append-only and reject divergent overwrite.
-- Public literature projections admit only `publication-approved` records.
+- Public literature projections enforce the configured release policy; AI-reviewed records require attributed artifact/source-hash-bound receipts. The default publisher without an explicit policy retains its human publication-approval gate.
+- Accepted AI analysis corrections preserve the original annotations and bind their exact original hash, before/after fields and source-reviewed correction artifact.
+- Duplicate bibliographic records contribute once per Work to result aggregations; conflicting eligible codings stop publication.
+- The result-site allowlist excludes raw screening files and full-text assets, and its downloadable research JSON is byte-identical to the site data.
+- Grounded chat contexts contain released Assertions and exact source evidence; no-evidence queries remain local and provider answers require supplied evidence identifiers.
 - Grounded Vault outputs cannot exceed the authority state of their supporting layer.
 
 ## Manual acceptance boundary
@@ -61,7 +65,9 @@ The native browser permission dialogue for the File System Access API remains a 
 
 ## Clean-checkout verification
 
-A repository-only verification first rebuilds the ignored local reading layer with `python -m src.publish.build_fulltext`. It then runs the generator checks and test suites. This preserves the rights boundary for full-text outputs while proving that the versioned sources reproduce the required manifest. Hash-bearing research artifacts use the repository's canonical LF representation so their checksums remain stable across operating systems.
+A repository-only verification uses Python 3.11 or later, `requirements-build.txt`, `npm ci`, and `npx playwright install chromium`. Run `npm run build`, then `npm run check`, `npm run test:browser-companion`, and `npm run pilot`. The build reconstructs the ignored local reading layer, source queues, corpus projections and separate result site without external API calls. The read-only `check:data` rejects changed inputs, missing outputs or stale hashes. Hash-bearing research artifacts use canonical LF text so their checksums remain stable across operating systems. The browser pilot selects an available local port by default; `--port` remains available for explicit binding.
+
+`.github/workflows/quality.yml` runs the same gates in CI. `.github/workflows/pages.yml` is manually dispatched on main and uploads only the checked `build/site/` artifact. A successful local test does not establish that either remote workflow has run.
 
 ## Change gates
 

@@ -23,6 +23,7 @@ import uuid
 from pathlib import Path
 from typing import Any, Iterable
 
+from src.file_hashing import canonical_file_bytes, file_sha256
 from src.analysis.work_versions import (
     REGISTRY_PATH,
     REGISTRY_SCHEMA,
@@ -78,7 +79,7 @@ NON_RECORD_VERSION_TYPES = {
 
 
 def _sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return file_sha256(path)
 
 
 def _read_json(path: Path) -> Any:
@@ -494,7 +495,7 @@ def _source_fingerprint(paths: Iterable[Path]) -> str:
     digest = hashlib.sha256()
     for path in sorted(paths, key=lambda item: item.as_posix()):
         digest.update(path.relative_to(REPO).as_posix().encode("utf-8"))
-        digest.update(path.read_bytes())
+        digest.update(canonical_file_bytes(path))
     return f"sha256:{digest.hexdigest()}"
 
 

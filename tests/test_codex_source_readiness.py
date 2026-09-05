@@ -102,6 +102,9 @@ def test_recorded_hash_can_stand_for_an_intentionally_local_source(tmp_path) -> 
 
 def test_readiness_covers_package_once() -> None:
     payload = build_readiness(REPO)
+    assert payload["sources"]["acquisition_manifest"]["path"] == (
+        "generated/source-acquisition/codex-websearch-2026/acquisition-manifest.json"
+    )
 
     assert payload["schema"] == "femprompt-source-readiness/0.2"
     assert payload["counts"]["candidates"] == 58

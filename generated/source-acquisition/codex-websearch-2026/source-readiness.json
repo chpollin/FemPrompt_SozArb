@@ -12,8 +12,8 @@
       "sha256": "bc5ef839df8d603cec84d3689bc840da6b7dad399e3c9674b20062bfecb63723"
     },
     "acquisition_manifest": {
-      "path": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/manifest.json",
-      "sha256": "38c6eadc567b11da4655a465e4a95cbe65d418b6e9caeead9503cc5f5e18beac"
+      "path": "generated/source-acquisition/codex-websearch-2026/acquisition-manifest.json",
+      "sha256": "c272ef2f5d87f085ce457d086c720707f342049479397ef080ea9372366716d4"
     },
     "conversion_validation": {
       "path": "generated/source-acquisition/codex-websearch-2026/validation/validation_report_20260824_1707.json",

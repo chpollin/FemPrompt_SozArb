@@ -1,0 +1,331 @@
+{
+  "schema": "femprompt-targeted-followup/0.1",
+  "search_date": "2026-09-05",
+  "generated_at": "2026-09-05T12:49:31Z",
+  "search_type": "targeted_gap_search",
+  "search_cutoff": "2026-09-05",
+  "changes_main_search_cutoff": false,
+  "authority": "Source-grounded identification only; no canonical corpus addition or screening approval.",
+  "agent_id": "/root/grounded_chat",
+  "model": "GPT-6",
+  "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+  "queries": [
+    "\"social work\" \"large language models\" bias empirical 2025 2026",
+    "\"social workers\" ChatGPT bias vignettes ethnicity prompting",
+    "LLM mental health intersectional bias prompting mitigation empirical 2025 2026",
+    "\"617\" \"social care\" \"gender\" \"language models\"",
+    "\"Artificial Intelligence and Cultural Context\" \"735590\" PDF",
+    "\"Unveiling and Mitigating Bias in Mental Health Analysis\" publication journal"
+  ],
+  "deduplication": {
+    "method": "Normalised DOI/arXiv identifiers and NFKC casefolded titles across all nested JSON records and RIS records under corpus; incidental source-bibliography mentions distinguished from candidate records.",
+    "result": "No selected candidate has a matching corpus or intake record.",
+    "sources": [
+      {
+        "path": "corpus/deep-research/Claude.ris",
+        "sha256": "sha256:419a36e2155b736c220781db5040e3a1b9f387072701ba402a3ccc4e28e5cfe5"
+      },
+      {
+        "path": "corpus/deep-research/Gemini.ris",
+        "sha256": "sha256:88eefad3faea3e27971cf165eb587dacfd0184acb8af156bef750dde6a942431"
+      },
+      {
+        "path": "corpus/deep-research/OpenAI.ris",
+        "sha256": "sha256:52a7cacb3eef310c271776eb719b5577b1f0b9848571eeba970b7d1a63a34ce2"
+      },
+      {
+        "path": "corpus/deep-research/Perplexity.ris",
+        "sha256": "sha256:03b42106b4c97b63ffbed96c927747d814e7028f00be55356235b878dd503ecc"
+      },
+      {
+        "path": "corpus/deep-research/round2/ChatGPT_deep-research.ris",
+        "sha256": "sha256:d8da56534b9afbb242960762f4cad55dac9200c35e82406dfb99dd32a06feb2a"
+      },
+      {
+        "path": "corpus/deep-research/round2/Claude_deep-research.ris",
+        "sha256": "sha256:5beef9dbee82e03f7fd1bb83d6d6b442ad0d08cea3272aeed7a949b7404e788f"
+      },
+      {
+        "path": "corpus/deep-research/round2/ClaudeCode_deep-research.ris",
+        "sha256": "sha256:1ec14b3c044c07e273e2bfdc91e913be861c5fabaa721c7f3b40ed03c0091d6d"
+      },
+      {
+        "path": "corpus/deep-research/round2/Codex Websearch/bibliographic-audit.json",
+        "sha256": "sha256:b9aa50dce822dd81f3fb0d06326aafaf0f650bc3af6b455900b4c80da51d1d6e"
+      },
+      {
+        "path": "corpus/deep-research/round2/Codex Websearch/codex-websearch-2026-package.json",
+        "sha256": "sha256:f36b3c0eb573589dea2cb3c2c3a12d5d8d3388b40bba10e4c6ce90818cfd3d19"
+      },
+      {
+        "path": "corpus/deep-research/round2/Codex Websearch/codex-websearch-2026-zotero-import.ris",
+        "sha256": "sha256:1a07ea7176c12f463fdd6b3661fdfed025a8f41586f69cbf9e7943513338cf5d"
+      },
+      {
+        "path": "corpus/deep-research/round2/Codex Websearch/enrichment/part-a.json",
+        "sha256": "sha256:abc12650da364bd209e2a6121c0b72d31147d2323cbdbdfc92b0f2109f001384"
+      },
+      {
+        "path": "corpus/deep-research/round2/Codex Websearch/enrichment/part-b.json",
+        "sha256": "sha256:3adc0575c915deebfc36db38094ea64ce0554d82704434cc1353478773077294"
+      },
+      {
+        "path": "corpus/deep-research/round2/Codex Websearch/enrichment/part-c.json",
+        "sha256": "sha256:1387d152c66eb2fa8eb65066114dbd9dfb66972cec9f6cc77c64a4371ff778a3"
+      },
+      {
+        "path": "corpus/deep-research/round2/Codex Websearch/raw/lane-a-social-work-2026.json",
+        "sha256": "sha256:89d83142aaa30f8682caaeb7c60343943723e3644077b8016bbbcdb9ba18dbe1"
+      },
+      {
+        "path": "corpus/deep-research/round2/Codex Websearch/raw/lane-b-gender-intersectionality-2026.json",
+        "sha256": "sha256:f13d2ced01a6b9ab2c45fbd423fe4cf062c90b3174d5bbda062a3fa160d24bdb"
+      },
+      {
+        "path": "corpus/deep-research/round2/Codex Websearch/raw/lane-c-prompt-bias-2026.json",
+        "sha256": "sha256:d9f297b85514709bac473c6bf59108b72e90605e94d408b303e4e4d9d9f69e21"
+      },
+      {
+        "path": "corpus/deep-research/round2/Codex Websearch/run-manifest.json",
+        "sha256": "sha256:62bdebfaf457647e4f8ccc17daa99952d8beeb7180899f3cad9d9034629457b9"
+      },
+      {
+        "path": "corpus/deep-research/round2/Codex Websearch/source-acquisition-plan.json",
+        "sha256": "sha256:bc5ef839df8d603cec84d3689bc840da6b7dad399e3c9674b20062bfecb63723"
+      },
+      {
+        "path": "corpus/deep-research/round2/Codex Websearch/source-recovery-audit.json",
+        "sha256": "sha256:b0d6e6d1aa5626a349b161a9fdba5931cc7ba3fd406335e64dc96460358ed671"
+      },
+      {
+        "path": "corpus/deep-research/round2/contextual-update-2026-08-24/lane-a-social-work.json",
+        "sha256": "sha256:568d9c05ff3e0171ccbfadb5d54144e4b6853dcfceba89b8cd2a96b71c09a15c"
+      },
+      {
+        "path": "corpus/deep-research/round2/contextual-update-2026-08-24/lane-b-feminist-social-work.json",
+        "sha256": "sha256:382f1facb1e9ceda8c42de6678dc249f978e10d58b580ee5df08705f07ff313f"
+      },
+      {
+        "path": "corpus/deep-research/round2/contextual-update-2026-08-24/lane-c-prompt-bias.json",
+        "sha256": "sha256:a05971cb18749bb74ab7156c94e0ea65694fea6302d4078b80a410bf7eaa5732"
+      },
+      {
+        "path": "corpus/deep-research/round2/Gemini_deep-research.ris",
+        "sha256": "sha256:43a63eef712022bda4437b034bc31df0abf46dc77a4fb8055875461c8e2dbb3c"
+      },
+      {
+        "path": "corpus/source_tool_mapping.json",
+        "sha256": "sha256:9feb96ce613a778cf76ac43f0b5dcd302170e0a8e5d8331bf3052cd0d5737c76"
+      },
+      {
+        "path": "corpus/work_version_registry.json",
+        "sha256": "sha256:150427488c4a76064693a18c0822f52814dd1cca207f9f97f9043079410f0e8d"
+      },
+      {
+        "path": "corpus/zotero_export.json",
+        "sha256": "sha256:a494ba7539919d79a5f2c0e421302050edac3e695a48a04923a085de9065816a"
+      }
+    ]
+  },
+  "candidates": [
+    {
+      "candidate_id": "targeted-followup-2026-09-05:doi:10.1186/s12911-025-03118-0",
+      "title": "Evaluating gender bias in large language models in long-term care",
+      "authors": [
+        {
+          "given": "Sam",
+          "family": "Rickman"
+        }
+      ],
+      "year": 2025,
+      "publication_date": "2025-08-11",
+      "publication_type": "journal_article",
+      "venue": "BMC Medical Informatics and Decision Making",
+      "volume": "25",
+      "article_number": "274",
+      "doi": "10.1186/s12911-025-03118-0",
+      "version": {
+        "version_type": "version_of_record",
+        "date": "2025-08-11",
+        "identifier": "doi:10.1186/s12911-025-03118-0"
+      },
+      "landing_url": "https://link.springer.com/article/10.1186/s12911-025-03118-0",
+      "fulltext_url": "https://link.springer.com/article/10.1186/s12911-025-03118-0",
+      "source_access": {
+        "basis": "fulltext_read",
+        "license": "CC BY 4.0",
+        "read_sections": [
+          "Materials and methods",
+          "Results",
+          "Discussion",
+          "Limitations"
+        ],
+        "private_participant_data_accessed": false
+      },
+      "peer_review_evidence": {
+        "status": "venue_publication_only",
+        "basis": "Research article with publisher acceptance history; individual review reports not checked."
+      },
+      "gap": "Direct social-care documentation and gender bias.",
+      "required_next_steps": [
+        "canonical_work_version_binding",
+        "regular_screening"
+      ],
+      "status": "identified_not_screened",
+      "work_id": null,
+      "version_id": null,
+      "zotero_key": null,
+      "accessed_on": "2026-09-05",
+      "selection_note": "High topical fit is not a screening decision or methodological quality approval."
+    },
+    {
+      "candidate_id": "targeted-followup-2026-09-05:doi:10.1086/735590",
+      "title": "Artificial Intelligence and Cultural Context: An Empirical Investigation of Large Language Models’ Performance on Chinese Social Work Professional Standards",
+      "authors": [
+        {
+          "given": "Zia",
+          "family": "Qi"
+        },
+        {
+          "given": "Brian E.",
+          "family": "Perron"
+        },
+        {
+          "given": "Miao",
+          "family": "Wang"
+        },
+        {
+          "given": "Cao",
+          "family": "Fang"
+        },
+        {
+          "given": "Sitao",
+          "family": "Chen"
+        },
+        {
+          "given": "Bryan G.",
+          "family": "Victor"
+        }
+      ],
+      "year": 2025,
+      "publication_date": "2025-12-16",
+      "issue_date": "2025-12-01",
+      "publication_type": "journal_article",
+      "venue": "Journal of the Society for Social Work and Research",
+      "volume": "16",
+      "issue": "4",
+      "pages": "713-739",
+      "doi": "10.1086/735590",
+      "version": {
+        "version_type": "version_of_record",
+        "date": "2025-12-16",
+        "identifier": "doi:10.1086/735590"
+      },
+      "landing_url": "https://www.journals.uchicago.edu/doi/abs/10.1086/735590",
+      "fulltext_url": null,
+      "source_access": {
+        "basis": "abstract_only",
+        "license": null,
+        "read_sections": [
+          "structured abstract",
+          "publication history"
+        ],
+        "limitations": [
+          "Fulltext redirected to access barrier; both supplementary links failed."
+        ]
+      },
+      "peer_review_evidence": {
+        "status": "venue_publication_only",
+        "basis": "Publisher lists acceptance and journal publication; individual review reports not checked."
+      },
+      "gap": "Direct non-Western social-work professional standards and gender scenarios.",
+      "required_next_steps": [
+        "fulltext_acquisition",
+        "canonical_work_version_binding",
+        "regular_screening"
+      ],
+      "status": "identified_not_screened",
+      "work_id": null,
+      "version_id": null,
+      "zotero_key": null,
+      "accessed_on": "2026-09-05",
+      "selection_note": "High topical fit is not a screening decision or methodological quality approval."
+    },
+    {
+      "candidate_id": "targeted-followup-2026-09-05:arxiv:2406.12033",
+      "title": "Unveiling and Mitigating Bias in Mental Health Analysis with Large Language Models",
+      "authors": [
+        {
+          "given": "Yuqing",
+          "family": "Wang"
+        },
+        {
+          "given": "Yun",
+          "family": "Zhao"
+        },
+        {
+          "given": "Sara Alessandra",
+          "family": "Keller"
+        },
+        {
+          "given": "Anne",
+          "family": "de Hond"
+        },
+        {
+          "given": "Marieke M.",
+          "family": "van Buchem"
+        },
+        {
+          "given": "Malvika",
+          "family": "Pillai"
+        },
+        {
+          "given": "Tina",
+          "family": "Hernandez-Boussard"
+        }
+      ],
+      "year": 2024,
+      "publication_date": "2024-06-19",
+      "first_preprint_date": "2024-06-17",
+      "publication_type": "preprint",
+      "venue": "arXiv",
+      "doi": "10.48550/arXiv.2406.12033",
+      "arxiv_id": "2406.12033",
+      "version": {
+        "version_type": "preprint",
+        "date": "2024-06-19",
+        "identifier": "arxiv:2406.12033v2"
+      },
+      "landing_url": "https://arxiv.org/abs/2406.12033v2",
+      "fulltext_url": "https://arxiv.org/html/2406.12033v2",
+      "source_access": {
+        "basis": "fulltext_read",
+        "license": "CC BY-NC-SA 4.0",
+        "read_sections": [
+          "3 Experiments",
+          "4.5 Bias Mitigation",
+          "6 Limitations",
+          "B Prompt Templates"
+        ],
+        "limitations": [
+          "OpenReview submission page required browser verification; no later accepted Version verified."
+        ]
+      },
+      "peer_review_evidence": {
+        "status": "not_established",
+        "basis": "Read version is arXiv v2; submission metadata does not establish acceptance."
+      },
+      "gap": "Tested fairness prompts with intersectional demographic variants in mental-health classification.",
+      "required_next_steps": [
+        "canonical_work_version_binding",
+        "regular_screening"
+      ],
+      "status": "identified_not_screened",
+      "work_id": null,
+      "version_id": null,
+      "zotero_key": null,
+      "accessed_on": "2026-09-05",
+      "selection_note": "High topical fit is not a screening decision or methodological quality approval."
+    }
+  ]
+}

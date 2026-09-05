@@ -1,0 +1,22 @@
+{
+  "schema": "femprompt-screening-corrections/0.1",
+  "corrections": {
+    "R7V99ERA": {
+      "paper_id": "R7V99ERA",
+      "base_artifact": "docs/data/screening/ar2.json#/decisions/R7V99ERA",
+      "base_sha256": "sha256:c5987e6fd4781cb27733a7103f0d67d5b0ef235d93552761f14fbd88389df055",
+      "agent_id": "/root/research_completion",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "corrected_at": "2026-09-05T12:50:08Z",
+      "changes": [
+        {
+          "path": "/analysis/fields/AN_Mitigation_Status",
+          "before": "Evaluated",
+          "after": "None",
+          "reason": "Field et al. evaluate racial disparities in NLP components, not the effectiveness of a mitigating intervention. The record already has AN_Mitigation_Stage=None; source Limitations explicitly says the work does not develop deployable systems. Preserve empirical study type while removing the unsupported mitigation-efficacy interpretation."
+        }
+      ]
+    }
+  }
+}

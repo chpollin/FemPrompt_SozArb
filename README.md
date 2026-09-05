@@ -43,6 +43,34 @@ Subject knowledge of the review lives in [`research-vault/`](research-vault/READ
 
 ## Testing
 
+For the reproducible offline build, use Python 3.11 or later and Node.js 22:
+
+```sh
+python -m pip install -r requirements-build.txt
+npm ci
+npx playwright install chromium
+npm run build
+npm run check
+npm run test:browser-companion
+npm run pilot
+```
+
+The build reconstructs the canonical corpus projections, source-readiness and completion queues, assertion index, downloads and a separate result site at `build/site/`. It uses the versioned local source representations and performs no new AI reviews or external API calls. `npm run check:data` checks input and output hashes without modifying files. Acquisition and fresh PDF conversion use the broader research environment; they are not needed to rebuild the versioned result.
+
+Preview the result with `python -m http.server 8766 --bind 127.0.0.1 --directory build/site`, then open `http://127.0.0.1:8766/index.html`. The historical Companion and PRISM remain local working tools under `docs/`. Deploy **only `build/site/`**. The manual Pages workflow checks and uploads that directory; select GitHub Actions as the repository's Pages source before using it. Running the local build does not update the existing live site.
+
+## Source-reviewed release and completion
+
+The operator-authorised policy in [`config/publication_policy.json`](config/publication_policy.json) permits explicitly labelled AI-source-reviewed results. Each accepted review records the agent, available model identity, UTC timestamp, findings, and hashes of the exact artifact and source. Deterministic validation does not create these reviews. Domain-expert verification and human publication approval retain their distinct lifecycle states.
+
+[`generated/verification/ai-source-reviews.json`](generated/verification/ai-source-reviews.json) is the review ledger. Negative findings remain recorded. Analysis corrections are separately attributed, hash-bound projections in `generated/verification/screening-corrections-*.json`; original screening annotations remain immutable. Public aggregations count Works once while retaining their bibliographic aliases, publication Versions and source evidence. The result ZIP and website use identical gated data. The working paper ZIP is a separate, explicitly provisional collection.
+
+The grounded chat retrieves only released Assertions and their exact evidence blocks. Missing evidence produces a local explanation; a provider key is needed only for supported questions sent to the model. Model output must cite a supplied evidence identifier. This is a bounded retrieval aid, not a full-corpus or independently verified answer service.
+
+The entire existing corpus and prepared 2026 intake remain in the completion scope. [`generated/completion/README.md`](generated/completion/README.md) links the current record/Work inventory, screening and verification queues, synthesis tables, and remaining manuscript work. A separately dated [targeted follow-up](corpus/deep-research/round2/targeted-followup-2026-09-05.md) adds strong gap-filling identification candidates without changing the original search window or claiming they are screened results. The complete review and manuscript remain unfinished.
+
+## Additional test coverage
+
 PRISM is tested in three layers. A jsdom harness over the pure functions and a Companion smoke suite run with `npm test`. A pinned supported-browser pilot drives the PRISM workflow with `npm run pilot`; `npm run test:browser-companion` verifies the public Companion, responsive Literature Landscape, URL restoration, local assets, and browser errors. The paths that need a native folder picker are specified in [`tests/manual-checklist.md`](tests/manual-checklist.md). The Python side, including the fail-closed publishers and atomic publication checks, runs with `python -m pytest tests/`. The committed replay asserts the retrospective counts and agreement figures.
 
 ## Repository Structure
@@ -78,6 +106,7 @@ Full project documentation is in [`knowledge/`](knowledge/INDEX.md); start at th
 | [project.md](knowledge/project.md) | Project goal, theoretical framework |
 | [methods.md](knowledge/methods.md) | PRISMA, assessment design, pipeline, scripts |
 | [plan.md](knowledge/plan.md) | Roadmap, current status, next steps |
+| [Project review](knowledge/project-review-2026-09-05.md) | Implemented fixes, unresolved source findings, completion and uses of the final data |
 | [specification.md](knowledge/specification.md) | PRISM requirements, user stories, ADR decision log, design system |
 | [data.md](knowledge/data.md) | The data substrate the tool consumes and produces |
 | [standards.md](knowledge/standards.md) | PRISMA 2020, PRISMA-trAIce, RAISE, and this review's conformance state |

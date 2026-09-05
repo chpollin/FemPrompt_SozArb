@@ -1620,15 +1620,14 @@ Jede Note in diesem Vault operiert auf drei Ebenen:
         return notes
 
     def generate_vault_zip(self):
-        """Create a ZIP of the vault for download."""
+        """Use the canonical linked inventory for the working download."""
+        from src.publish.build_downloads import build
+
         zip_dir = self.base_path / 'docs' / 'downloads'
         zip_dir.mkdir(parents=True, exist_ok=True)
         zip_path = zip_dir / 'vault.zip'
 
-        with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as zf:
-            for file_path in sorted(self.vault_path.rglob('*.md')):
-                arcname = file_path.relative_to(self.vault_path)
-                zf.write(file_path, arcname)
+        zip_path.write_bytes(build(self.base_path))
 
         size_mb = zip_path.stat().st_size / (1024 * 1024)
         print(f"  Vault ZIP: {zip_path} ({size_mb:.1f} MB)")

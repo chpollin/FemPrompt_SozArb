@@ -10,7 +10,7 @@ status: active
 language: de
 version: "0.7"
 created: 2026-02-18
-updated: 2026-08-26
+updated: 2026-09-05
 authors: [Christopher Pollin]
 generated-with: Claude Code
 related: [INDEX, plan, specification, governance, verification, handoff]
@@ -23,6 +23,14 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 ---
 
 ## PRISM and the epistemic infrastructure (2026)
+
+### 2026-09-05: Konstruktives Review, KI-Quellenprüfung und konsistenter Ergebnisaufbau
+
+- **Auftrag.** Der Operator autorisierte die Umsetzung des Projektreviews mit Subagenten, Quellenprüfung durch benannte KI-Agenten mit Modell und Zeitpunkt, den gesamten bisherigen Korpus einschließlich vorbereitetem 2026-Intake und gezielte Ergänzungen bei sehr guter Passung.
+- **Korrekturen.** Werkaggregation zählt bibliografische Aliase einmal; widersprüchliche freigabefähige Codierungen stoppen den Build. Promptotyping-Kennzahlen und Arbeitsdownload verwenden die kanonische Datenprojektion. Der Readiness-Builder bewahrt nun den richtigen Erwerbsmanifestpfad. Der Quellenabgleich korrigierte aktive Abschnittsverweise und deckte Fehlcodierungen, eine unzutreffende Versionsangabe sowie fehlende Originalbelege auf. Alle Erstbefunde bleiben im Ledger; eindeutige Analysekorrekturen besitzen eigene, hashgebundene Artefakte und spätere Prüfquittungen.
+- **Autorität.** Die neue Konfiguration erlaubt explizit gekennzeichnete KI-geprüfte Ergebnisse. Menschliche Verifikation wird weder erfunden noch aus Softwaretests abgeleitet. Das bestehende Lifecycle-Schema erlaubt nur personengebundene Fachkorrekturen; deshalb ändern KI-Korrekturen ausschließlich eine separat dokumentierte Ergebnisprojektion und lassen frühere Annotationen unverändert.
+- **Ergebniszugang.** Der Wissenschat verwendet freigegebene Assertions mit konkreten Quellenbelegen; fehlende Evidenz erzeugt keine Modellanfrage. Ein separater Website-Build und sein Download enthalten dieselben geprüften Daten. Der Arbeitsordner `docs/` bleibt getrennt. Ein Offline-Gesamtbuild, Frischeprüfung, CI und ein manuell auslösbarer Pages-Workflow machen den Aufbau nachvollziehbar. Ein lokaler Build ändert die bisherige Live-Seite nicht.
+- **Abschlussgrenze.** Das generierte Completion-Paket führt den gesamten Bestand, Reviewkonflikte, Quellenblockaden, Kandidaten und die ausstehende Manuskriptsynthese zusammen. Die zusätzliche Suche ist separat datiert und gegen bestehende Kandidaten dedupliziert; ihre Treffer bleiben ungescreent. Der vollständige Literaturreview ist noch nicht abgeschlossen. Mengen und Einzelbefunde stehen in `generated/completion/` und `generated/verification/`.
 
 ### 2026-08-26: Restqueue quellenkritisch aufgelöst
 

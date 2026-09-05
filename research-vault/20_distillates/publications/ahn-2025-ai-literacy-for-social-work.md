@@ -25,7 +25,7 @@ Ahn et al. develop a social-work-specific account of AI literacy and relate it t
 ## Core statements
 
 - Ahn et al. propose integrating AI literacy across existing core competencies. ^s1
-  > "we propose that AI literacy should also be integrated across existing core competencies." (doi:10.1086/735187, conclusion)
+  > "we propose that AI literacy should also be integrated across existing core competencies." (doi:10.1086/735187, discussion)
 
 ## Open questions
 

@@ -235,8 +235,8 @@ def build_readiness(repo: Path = REPO) -> dict[str, Any]:
             if not manifest_relative:
                 raise ValueError(f"visual assessment lacks manifest: {candidate_id}")
             manifest_sha256 = _verified_repo_file(repo, manifest_relative)
-            manifest_path = repo / manifest_relative
-            visual_manifest = _read_json(manifest_path)
+            visual_manifest_path = repo / manifest_relative
+            visual_manifest = _read_json(visual_manifest_path)
             if (
                 visual_manifest.get("schema")
                 != "femprompt-visual-evidence-manifest/0.1"

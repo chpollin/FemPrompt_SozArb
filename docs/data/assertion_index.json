@@ -1,0 +1,180 @@
+{
+  "schema": "femprompt-assertion-index/0.1",
+  "meta": {
+    "source_assertions": 3,
+    "published_assertions": 3,
+    "withheld_assertions": 0,
+    "allowed_states": [
+      "ai-agent-reviewed",
+      "verified",
+      "publication-approved"
+    ],
+    "public_label": "KI-quellengeprüft"
+  },
+  "assertions": [
+    {
+      "id": "A-5c3ff47d193ec294",
+      "assertion_ref": "30_assertions/reported-prompting-effects-vary-across-models-and-bias-categories",
+      "title": "Reported prompting effects on bias vary across models and bias categories",
+      "statement": "The cited evaluations report that the effects of prompting-based bias mitigation vary across model conditions and bias categories.",
+      "topics": [
+        "Prompting and Bias Mitigation"
+      ],
+      "status": "ai-agent-reviewed",
+      "review": {
+        "type": "ai-source-review",
+        "artifact_sha256": "sha256:2d93d46185de2246740df38d5162244f4bd54d8f82573304b4fb770e1fc7d70d",
+        "agent_id": "/root/research_completion",
+        "model": "GPT-6",
+        "reviewed_at": "2026-09-05T12:20:05Z",
+        "findings": "Checked both grounding blocks against their original sources. Kaneko section 4.3 conditions comparative CoT benefit on model size/training; Kamruzzaman abstract and model/bias-specific results describe different best configurations across models and bias categories. The combined statement says the cited evaluations report variation; it does not infer a universal effect, cross-study pooled estimate, or transfer to social work. Supported as a narrow cross-source qualification. AI review does not constitute human verification or appraisal of methodological certainty.",
+        "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed"
+      },
+      "evidence": [
+        {
+          "id": "E-3ab68dc25e97a97c",
+          "statement_ref": "20_distillates/publications/kamruzzaman-2024-dual-process-prompting#^s1",
+          "statement": "Kamruzzaman and Kim report that the strongest prompting configuration is not universal across models and bias categories.",
+          "quote": "the best combination of features depends on the exact model and bias category",
+          "locator": "abstract",
+          "source_url": "https://doi.org/10.48550/arXiv.2404.17218",
+          "record_id": "7W3RGSSG",
+          "work_id": "work:7644e99b-9dd1-545f-af98-ab7fed6643e6",
+          "version_id": "version:31d4c15c-10dd-530b-b539-6934b297ddc5",
+          "version_type": "preprint",
+          "title": "Prompting Techniques for Reducing Social Bias in LLMs through System 1 and System 2 Cognitive Processes",
+          "author_year": "Kamruzzaman et al. (2024)",
+          "year": "2024",
+          "status": "ai-agent-reviewed",
+          "review": {
+            "type": "ai-source-review",
+            "artifact_sha256": "sha256:a1085eb826896eedba660e0ab98ca7f211803a913993608131a49fbac68451d6",
+            "agent_id": "/root/research_completion",
+            "model": "GPT-6",
+            "reviewed_at": "2026-09-05T12:20:05Z",
+            "findings": "Read the abstract, dataset and experimental setup, model/bias-specific results, invalid-response handling and conclusion. The study compares 12 prompting configurations, five LLMs and nine bias categories on two benchmark datasets. The abstract quote is reproduced exactly and Results section 5 explicitly says the best configuration is not universal across models and categories. The result discussion also reports that CoT can increase stereotypical responses on average despite broader abstract wording; the distillate does not assert universal CoT benefit. Its limited configuration-dependence claim is supported. No practice effectiveness or study-quality approval is inferred.",
+            "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed"
+          }
+        },
+        {
+          "id": "E-7281283c8fcce9ee",
+          "statement_ref": "20_distillates/publications/kaneko-2024-cot-and-gender-bias#^s2",
+          "statement": "Kaneko et al. report that Chain-of-Thought does not consistently outperform a debiasing prompt for smaller or only pretrained models.",
+          "quote": "for relatively small models or models that have only been pre-trained, CoT does not necessarily debias better than DP.",
+          "locator": "sec. 4.3",
+          "source_url": "https://arxiv.org/abs/2401.15585",
+          "record_id": "CYZQ6XPK",
+          "work_id": "work:843c90a1-99ba-5cbf-9c92-df165923d2b2",
+          "version_id": "version:5d14f904-8bae-5aae-80af-d807533bd251",
+          "version_type": "preprint",
+          "title": "Evaluating Gender Bias in Large Language Models via Chain-of-Thought Prompting",
+          "author_year": "Kaneko et al. (2024)",
+          "year": "2024",
+          "status": "ai-agent-reviewed",
+          "review": {
+            "type": "ai-source-review",
+            "artifact_sha256": "sha256:55698c0f23b02bc85989d43330860316d078f543b9d7c17c6a5dc1d082b9f8d3",
+            "agent_id": "/root/research_completion",
+            "model": "GPT-6",
+            "reviewed_at": "2026-09-05T12:20:05Z",
+            "findings": "Read MGBR task definition, six prompt conditions, model settings, Table 1 and Results 3.3, downstream comparison 4.3, Conclusion, Limitations and Ethics Statement. The first quotation belongs to section 3.3, not 4.1; corrected the locator. Results support the reported direction of CoT bias-score reductions in the authors evaluation, while the table contains exceptions and section 4.3 expressly limits comparison with DP for smaller or only pretrained models. The distillate includes that qualification. The evidence is English binary-gender tasks and selected benchmarks, not established mitigation in social work, nonbinary populations or all models. Accepted for the narrow source-bound claims only.",
+            "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "A-93bca81d4074cad2",
+      "assertion_ref": "30_assertions/kaneko-et-al-report-cot-reduced-bias-in-specific-evaluations",
+      "title": "Kaneko et al. report that CoT prompting reduced measured bias in specific evaluations",
+      "statement": "Kaneko et al. report lower measured bias scores for zero-shot and few-shot Chain-of-Thought prompting in their evaluation.",
+      "topics": [
+        "Prompting and Bias Mitigation"
+      ],
+      "status": "ai-agent-reviewed",
+      "review": {
+        "type": "ai-source-review",
+        "artifact_sha256": "sha256:1273273e9c732b22da38c920b70d51b36f8776a55769dfff22fd1139bed101bf",
+        "agent_id": "/root/research_completion",
+        "model": "GPT-6",
+        "reviewed_at": "2026-09-05T12:20:05Z",
+        "findings": "Compared the statement and supporting distillate s1 directly with the original Results 3.3, Table 1 and limitations. The assertion attributes lower measured bias scores to Kaneko et al. and limits the statement to their evaluation. It does not claim every model improved or that CoT eliminates bias. Section 4.3 and the binary-gender/English limitations remain essential context for any later answer or recommendation. The source locator in the supporting distillate was corrected to sec. 3.3 before this receipt.",
+        "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed"
+      },
+      "evidence": [
+        {
+          "id": "E-37e28ba6f1921a04",
+          "statement_ref": "20_distillates/publications/kaneko-2024-cot-and-gender-bias#^s1",
+          "statement": "Kaneko et al. report lower bias scores for zero-shot and few-shot Chain-of-Thought prompting in their evaluation.",
+          "quote": "both Zero-shot+CoT and Few-shot+CoT decrease bias scores in LLMs",
+          "locator": "sec. 3.3",
+          "source_url": "https://arxiv.org/abs/2401.15585",
+          "record_id": "CYZQ6XPK",
+          "work_id": "work:843c90a1-99ba-5cbf-9c92-df165923d2b2",
+          "version_id": "version:5d14f904-8bae-5aae-80af-d807533bd251",
+          "version_type": "preprint",
+          "title": "Evaluating Gender Bias in Large Language Models via Chain-of-Thought Prompting",
+          "author_year": "Kaneko et al. (2024)",
+          "year": "2024",
+          "status": "ai-agent-reviewed",
+          "review": {
+            "type": "ai-source-review",
+            "artifact_sha256": "sha256:55698c0f23b02bc85989d43330860316d078f543b9d7c17c6a5dc1d082b9f8d3",
+            "agent_id": "/root/research_completion",
+            "model": "GPT-6",
+            "reviewed_at": "2026-09-05T12:20:05Z",
+            "findings": "Read MGBR task definition, six prompt conditions, model settings, Table 1 and Results 3.3, downstream comparison 4.3, Conclusion, Limitations and Ethics Statement. The first quotation belongs to section 3.3, not 4.1; corrected the locator. Results support the reported direction of CoT bias-score reductions in the authors evaluation, while the table contains exceptions and section 4.3 expressly limits comparison with DP for smaller or only pretrained models. The distillate includes that qualification. The evidence is English binary-gender tasks and selected benchmarks, not established mitigation in social work, nonbinary populations or all models. Accepted for the narrow source-bound claims only.",
+            "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "A-b5d302e6170dbffe",
+      "assertion_ref": "30_assertions/ahn-et-al-propose-integrating-ai-literacy-across-existing-core-competencies",
+      "title": "Ahn et al. propose integrating AI literacy across existing core competencies",
+      "statement": "Ahn et al. propose integrating AI literacy across existing core competencies.",
+      "topics": [
+        "AI Literacy",
+        "Generative AI in Social Work"
+      ],
+      "status": "ai-agent-reviewed",
+      "review": {
+        "type": "ai-source-review",
+        "artifact_sha256": "sha256:97030c4b4049d47849421135a31e50d7cb1473814c21e2e925942e63f841df49",
+        "agent_id": "/root/research_completion",
+        "model": "GPT-6",
+        "reviewed_at": "2026-09-05T12:20:05Z",
+        "findings": "Compared the assertion and its distillate block s1 with the original Discussion. The verb propose matches the explicit author recommendation and avoids presenting the conceptual framework as empirically validated. The referenced Work-Version binding matches the active distillate. Future empirical testing remains open in the source. Accepted as an AI-reviewed report of a proposal, not human verification.",
+        "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed"
+      },
+      "evidence": [
+        {
+          "id": "E-fbd8c804952377ab",
+          "statement_ref": "20_distillates/publications/ahn-2025-ai-literacy-for-social-work#^s1",
+          "statement": "Ahn et al. propose integrating AI literacy across existing core competencies.",
+          "quote": "we propose that AI literacy should also be integrated across existing core competencies.",
+          "locator": "discussion",
+          "source_url": "https://doi.org/10.1086/735187",
+          "record_id": "ZJS2J7E7",
+          "work_id": "work:70312fae-6975-587e-b409-06a82d50b6ce",
+          "version_id": "version:7b79b88e-3857-5a65-8cfe-94478052d8ee",
+          "version_type": "version_of_record",
+          "title": "Artificial Intelligence (AI) Literacy for Social Work: Implications for Core Competencies",
+          "author_year": "Ahn et al. (2025)",
+          "year": "2025",
+          "status": "ai-agent-reviewed",
+          "review": {
+            "type": "ai-source-review",
+            "artifact_sha256": "sha256:972081a107471839e52aac18b4c4daf59b14962b16d67da8906a05b45b8fa41d",
+            "agent_id": "/root/research_completion",
+            "model": "GPT-6",
+            "reviewed_at": "2026-09-05T12:20:05Z",
+            "findings": "Read the original paper abstract, framework/competency discussion and final Discussion. The quoted sentence explicitly proposes integrating AI literacy across existing competencies; the final paragraph calls for future empirical primary-data evaluation. The distillate correctly describes a proposal and retains an open evaluation question, without claiming validated educational or practice effectiveness. Corrected its inaccurate locator from conclusion to discussion before acceptance. Local conversion has visible glyph artifacts elsewhere; the quoted sentence resolves exactly. This is an AI source-support review, not a human verification or study-quality rating.",
+            "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed"
+          }
+        }
+      ]
+    }
+  ]
+}

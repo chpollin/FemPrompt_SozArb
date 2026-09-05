@@ -259,7 +259,9 @@ LLMs are used to examine literature on the use of LLMs; feminist AI literacies a
 
 ## Downloadable paper collection
 
-`src/publish/generate_vault_v2.py` creates the paper notes and `docs/downloads/vault.zip` from the distilled documents and assessment data. Each note retains the transformation trail, assessment comparison, and complete knowledge document. The earlier generated concept, divergence, pipeline, and MOC notes were retired because they duplicated canonical data and embedded counts that drifted from the current corpus. The Evidence Companion and `research-vault/` remain the active analytical and curated knowledge projections. Title matching from the distilled documents to the Zotero records remains shared with the Promptotyping publisher.
+`src/publish/build_downloads.py` derives `docs/downloads/vault.zip` from the unique knowledge-document paths already resolved in `research_vault_v2.json`. Short deterministic filenames avoid Windows path-length failures; the record index preserves every alias and exact Work-Version binding. This is an explicitly provisional working collection. `generate_vault_v2.py` delegates archive creation to that same builder instead of maintaining another selection implementation.
+
+`src/publish/build_release.py` constructs the separate result ZIP and website from the same policy-filtered Assertion and literature projections. No historical working collection is copied into the result site. `generate_promptotyping_data_v2.py` derives its coverage and rates from the canonical corpus instead of fixed totals or an independent title join. The earlier generated concept, divergence, pipeline, and MOC notes remain retired. Run the complete offline graph through `python -m src.publish.build_project`; `--check` verifies all managed inputs and outputs without writing.
 
 ## Directory structure
 

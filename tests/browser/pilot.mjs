@@ -21,7 +21,7 @@ const pilotDir = join(root, 'tests', 'pilot');
 const manifest = JSON.parse(readFileSync(join(pilotDir, 'manifest.json'), 'utf8'));
 
 const args = process.argv.slice(2);
-const opt = { reviewer: 'cp', out: null, port: 8765, headed: false };
+const opt = { reviewer: 'cp', out: null, port: 0, headed: false };
 for (let i = 0; i < args.length; i++) {
   if (args[i] === '--reviewer') opt.reviewer = args[++i];
   else if (args[i] === '--out') opt.out = args[++i];
@@ -43,6 +43,7 @@ const server = createServer((req, res) => {
   res.end(readFileSync(file));
 });
 await new Promise((r) => server.listen(opt.port, '127.0.0.1', r));
+opt.port = server.address().port;
 const base = `http://127.0.0.1:${opt.port}`;
 
 // --- trace ---

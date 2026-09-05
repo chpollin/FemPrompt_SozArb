@@ -146,7 +146,7 @@ Die zentrale, retrospektiv unreparierbare Lücke ist das fehlende Runde-1-Protok
 
 Drei weitere benannte Lücken hängen am Korpus statt an einem Checklistenpunkt und tragen deshalb keine eigene Zeile im maschinenlesbaren Artefakt. Erstens Korpuspapiere, die durch den LLM-Strang liefen und in `assessment/human_assessment.csv` fehlen; sie stehen im Flow als Datensätze ohne bindende menschliche Entscheidung und werden nie stillschweigend eingeschlossen. Zweitens Teile der PDF-Beschaffung ohne vollständigen Audit-Trail, denn die Kette aus Beschaffung, Konvertierung und Destillation verliert auf jeder Stufe Material ([[methods]], Stage 2). Drittens Datensätze ohne Volltext als Folge ebendieser Verluste; die fehlgeschlagenen Konvertierungen sind in [[methods]] namentlich aufgeführt.
 
-Die meta-analytischen PRISMA-Items sind für diesen Reviewtyp not_applicable. Als qualitatives Feld-Review mit Screening und Kategorisierung, ohne Meta-Analyse, ohne studienweise Risk-of-Bias-Bewertung, ohne Effektmasse und ohne Gewissheitsbewertung, treffen die Items 11 bis 15 sowie 18, 20, 21 und 22 nicht zu.
+Die Anwendbarkeit wird pro Unterpunkt begründet. Das Fehlen einer Meta-Analyse nimmt insbesondere Items 13a–d und 20a nicht aus: Auch eine qualitative Synthese muss ihre Studienzuordnung, Datenaufbereitung, Tabellen, Zusammenfassungsmethode und beitragenden Studien offenlegen. Items 13e–f und 20c–d bleiben bis zur konsolidierten Methoden- und Ergebnisdarstellung `partial`; qualitative Variation ist relevant, während bislang keine Sensitivitätsanalyse der Synthese dokumentiert ist. Eine nicht durchgeführte Analyse ist ausdrücklich zu benennen und nicht allein wegen der fehlenden Meta-Analyse als unzutreffend abzulegen. Die Karte kennzeichnet die nicht vorgesehenen Effektmass-, statistischen Synthese-, studienweisen Risk-of-Bias- und Gewissheitsverfahren gesondert; deren Fehlen bleibt eine mögliche methodische Begrenzung und bedeutet keine Qualitätsbewertung der Studien. Grundlage ist die offizielle erweiterte PRISMA-2020-Checkliste.
 
 ## Interpretation for this review
 
@@ -161,6 +161,7 @@ PRISMA:
 - Page et al. 2021, PRISMA 2020 statement (BMJ 372:n71): https://systematicreviewsjournal.biomedcentral.com/articles/10.1186/s13643-021-01626-4 and https://pmc.ncbi.nlm.nih.gov/articles/PMC8008539/ (PMID 34446261)
 - PRISMA extensions, official site: https://www.prisma-statement.org/extensions
 - PRISMA 2020 flow diagram, official site: https://www.prisma-statement.org/prisma-2020-flow-diagram
+- PRISMA 2020 expanded checklist, official item-level reporting requirements: https://www.prisma-statement.org/s/PRISMA_2020_expanded_checklist-w7ra.pdf (items 13a–f and 20a–d checked 2026-09-05)
 
 AI layer:
 - PRISMA-trAIce: Holst et al. 2025, JMIR AI 4:e80247, https://ai.jmir.org/2025/1/e80247 (DOI 10.2196/80247); repository (MIT) https://github.com/cqh4046/PRISMA-trAIce; PMC mirror https://pmc.ncbi.nlm.nih.gov/articles/PMC12694947/
