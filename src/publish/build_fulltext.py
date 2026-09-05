@@ -24,6 +24,8 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 
 ROOT = Path(__file__).resolve().parents[2]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 DOCS = ROOT / "docs"
 DATA_IN = DOCS / "data" / "research_vault_v2.json"
 CLEAN_DIR = ROOT / "generated" / "markdown_clean"
@@ -34,6 +36,19 @@ MANIFEST = DOCS / "data" / "fulltext_manifest.json"
 
 def source_identity(paper: dict[str, object]) -> dict[str, object]:
     """Return the exact work-version binding for a served Paper source."""
+    binding = paper.get("source_binding")
+    if binding:
+        return {
+            "work_id": binding["work_id"],
+            "version_id": binding["source_version_id"],
+            "version_type": binding["source_version_type"],
+            "bibliographic_version_id": paper["version_id"],
+            "preferred_version_id": binding["preferred_version_id"],
+            "is_preferred_version": binding["is_preferred_version"],
+            "source_path": binding["source_path"],
+            "source_sha256": binding["source_sha256"],
+            "source_binding": binding,
+        }
     return {
         key: paper[key]
         for key in (
@@ -543,9 +558,38 @@ def resolve_docling(
     paper: dict[str, object], clean_idx: dict[str, str], raw_idx: dict[str, str]
 ) -> tuple[Path | None, str | None]:
     """Cascade: exact source_file from the knowledge doc, then first-author-year prefix."""
+    registry_path = ROOT / "corpus/work_version_registry.json"
+    registry = json.loads(registry_path.read_text(encoding="utf-8")) if registry_path.is_file() else {}
+    if registry.get("source_index", {}).get(paper.get("id")) and not paper.get("source_binding"):
+        raise ValueError(f"{paper.get('id')}: corpus is missing the governed source binding")
+    if paper.get("source_binding"):
+        from src.analysis.work_versions import source_binding_for_record
+        binding = source_binding_for_record(registry, str(paper.get("id", "")), ROOT)
+        if binding != paper["source_binding"] or binding.get("work_id") != paper.get("work_id") or binding.get("bibliographic_version_id") != paper.get("version_id"):
+            raise ValueError(f"{paper.get('id')}: corpus source binding differs from canonical registry")
+        path = ROOT / binding["source_path"]
+        if identity_conflicts(paper, path):
+            raise ValueError(f"{paper.get('id')}: bound manuscript conflicts with bibliography")
+        label = "clean" if path.parent == CLEAN_DIR else "raw"
+        return path, label
     override_path, override_label = curated_source(paper)
     if override_path is not None:
         return override_path, override_label
+    # These curated source filenames must also resolve before a generated
+    # manifest exists. Requiring the displayed Knowledge Document here would
+    # create a manifest -> document link -> source -> manifest cycle.
+    bindings_path = ROOT / "docs/data/knowledge_doc_bindings.json"
+    bindings = json.loads(bindings_path.read_text(encoding="utf-8")).get("bindings", {}) if bindings_path.is_file() else {}
+    binding = bindings.get(paper.get("id"))
+    if binding:
+        filename = binding["source_file"]
+        if Path(filename).name != filename or "\\" in filename or ":" in filename:
+            raise ValueError("Knowledge source binding must name a local source file")
+        for directory, label in ((CLEAN_DIR, "clean"), (RAW_DIR, "raw")):
+            path = directory / filename
+            if path.is_file():
+                return verified_source(paper, path, label)
+        raise ValueError(f"{paper.get('id')}: curated Knowledge Document source is missing")
     kd = paper.get("knowledge_doc")
     explicit_mismatch = False
     rejected: set[tuple[str, str]] = set()

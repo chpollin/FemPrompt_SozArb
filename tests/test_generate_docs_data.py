@@ -182,7 +182,16 @@ def test_published_records_and_fulltext_manifest_share_exact_version_identity() 
         assert paper["preferred_version_id"].startswith("version:")
         assert paper["latest_version_id"].startswith("version:")
         assert source["work_id"] == paper["work_id"]
-        assert source["version_id"] == paper["version_id"]
+        binding = paper.get("source_binding")
+        if binding:
+            from src.analysis.work_versions import source_binding_for_record
+            registry = json.loads((ROOT / "corpus/work_version_registry.json").read_text(encoding="utf-8"))
+            assert binding == source_binding_for_record(registry, paper["id"], ROOT)
+            assert source["version_id"] == binding["source_version_id"]
+            assert source["version_type"] == binding["source_version_type"]
+            assert source["bibliographic_version_id"] == paper["version_id"]
+        else:
+            assert source["version_id"] == paper["version_id"]
         assert source["preferred_version_id"] == paper["preferred_version_id"]
 
 
@@ -202,6 +211,18 @@ def test_atomic_write_preserves_previous_file_when_serialization_fails(
 
     assert target.read_text(encoding="utf-8") == '{"stable": true}\n'
     assert list(tmp_path.glob(".payload.json.*.tmp")) == []
+
+
+def test_preparatory_projection_bootstraps_without_a_generated_source_manifest(tmp_path, monkeypatch):
+    target = tmp_path / "corpus.json"
+    monkeypatch.setattr(docs_data, "INPUT_FULLTEXT_MANIFEST", tmp_path / "not-yet-built.json")
+    docs_data.main(["--prepare-fulltext", "--output", str(target)])
+    data = json.loads(target.read_text(encoding="utf-8"))
+    assert data["meta"]["fulltext_projection_state"] == "preparation"
+    assert len(data["papers"]) == data["meta"]["total_papers"] > 0
+    assert all(paper["work_id"].startswith("work:") for paper in data["papers"])
+    with pytest.raises(FileNotFoundError):
+        docs_data.main(["--output", str(target)])
 
 
 def test_prune_unreferenced_knowledge_docs_keeps_only_published_links(

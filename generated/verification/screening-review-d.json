@@ -1,0 +1,224 @@
+{
+  "schema": "femprompt-artifact-verification/0.1",
+  "scope": "Attributed targeted re-review and source-bound immutable correction for VSZM7CT6 only. Historical sources and annotations remain available.",
+  "reviews": [
+    {
+      "review_type": "ai-source-review",
+      "agent_id": "/root/aggregation",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "canonical_binding": {
+        "paper_id": "VSZM7CT6",
+        "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+        "version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e"
+      },
+      "source_binding": {
+        "record_id": "VSZM7CT6",
+        "source_path": "generated/markdown_clean/VSZM7CT6.md",
+        "source_sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+        "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+        "source_version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+        "source_version_type": "accepted_manuscript",
+        "bibliographic_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+        "preferred_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+        "is_preferred_version": false,
+        "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/markdown_clean/VSZM7CT6.md",
+          "sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+          "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+          "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+          "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download",
+          "locator": "PDF p.16 / manuscript p.15, Implications for Social Work Education",
+          "category": "AI_Literacies",
+          "quote": "critical digital literacies in social work education"
+        },
+        {
+          "source_path": "generated/markdown_clean/VSZM7CT6.md",
+          "sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+          "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+          "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+          "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download",
+          "locator": "PDF p.10 / manuscript p.9, Artificial Intelligence in Higher Education",
+          "category": "KI_Sonstige",
+          "quote": "AI systems are created by humans"
+        },
+        {
+          "source_path": "generated/markdown_clean/VSZM7CT6.md",
+          "sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+          "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+          "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+          "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download",
+          "locator": "PDF p.4 / manuscript p.3, Abstract",
+          "category": "Soziale_Arbeit",
+          "quote": "this paper explores possible future implications for social work education."
+        },
+        {
+          "source_path": "generated/markdown_clean/VSZM7CT6.md",
+          "sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+          "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+          "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+          "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download",
+          "locator": "PDF p.10 / manuscript p.9",
+          "category": "Bias_Ungleichheit",
+          "quote": "bias and structural inequity can be built into them"
+        },
+        {
+          "source_path": "generated/markdown_clean/VSZM7CT6.md",
+          "sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+          "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+          "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+          "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download",
+          "locator": "PDF pp.10-11 / manuscript pp.9-10",
+          "category": "Gender",
+          "quote": "AI algorithms may reinforce racial and gender stereotypes"
+        },
+        {
+          "source_path": "generated/markdown_clean/VSZM7CT6.md",
+          "sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+          "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+          "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+          "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download",
+          "locator": "PDF p.11 / manuscript p.10, paragraph before Ethical Considerations",
+          "category": "Fairness",
+          "quote": "fairness, privacy, transparency, and accountability"
+        },
+        {
+          "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/hodgson-griffith-am-text.md",
+          "sha256": "sha256:eaa18a97253a97d8d0ef65a5464e02a01422341769d3b5be5dfc6988eb3af12f",
+          "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+          "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+          "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download",
+          "locator": "Direct primary PDF extraction, cover and manuscript pp.3,9-10,15-21; all six category quotations independently matched to the extraction",
+          "quote": "This is a pre-copy-editing, author-produced PD F of an article"
+        }
+      ],
+      "artifact": "docs/data/screening/ar2.json#/decisions/VSZM7CT6",
+      "sha256": "sha256:114a36d307946899b31e42dd9ebb05424df30cdd4170f88f3b2bcefaa989bd4a",
+      "result": "changes_requested",
+      "reviewed_at": "2026-09-05T15:11:56.464379+00:00",
+      "findings": "Targeted source re-review of the existing record, not an independent blinded screening. Read the Griffith AM cover and manuscript abstract, AI/ML and higher-education discussion, ethical analysis, social-work education implications and conclusion; compared each positive quotation with the direct primary PDF extraction. Source identity is the accepted manuscript, not the DOI's VOR. The original capitalized quote and Fairness=2 need the three explicit corrections. Include and other fields are supported but the unchanged original cannot be accepted as a current source-exact annotation."
+    },
+    {
+      "review_type": "ai-source-review",
+      "agent_id": "/root/aggregation",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "canonical_binding": {
+        "paper_id": "VSZM7CT6",
+        "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+        "version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e"
+      },
+      "source_binding": {
+        "record_id": "VSZM7CT6",
+        "source_path": "generated/markdown_clean/VSZM7CT6.md",
+        "source_sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+        "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+        "source_version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+        "source_version_type": "accepted_manuscript",
+        "bibliographic_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+        "preferred_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+        "is_preferred_version": false,
+        "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/markdown_clean/VSZM7CT6.md",
+          "sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+          "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+          "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+          "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download",
+          "locator": "PDF p.16 / manuscript p.15, Implications for Social Work Education",
+          "category": "AI_Literacies",
+          "quote": "critical digital literacies in social work education"
+        },
+        {
+          "source_path": "generated/markdown_clean/VSZM7CT6.md",
+          "sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+          "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+          "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+          "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download",
+          "locator": "PDF p.10 / manuscript p.9, Artificial Intelligence in Higher Education",
+          "category": "KI_Sonstige",
+          "quote": "AI systems are created by humans"
+        },
+        {
+          "source_path": "generated/markdown_clean/VSZM7CT6.md",
+          "sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+          "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+          "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+          "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download",
+          "locator": "PDF p.4 / manuscript p.3, Abstract",
+          "category": "Soziale_Arbeit",
+          "quote": "this paper explores possible future implications for social work education."
+        },
+        {
+          "source_path": "generated/markdown_clean/VSZM7CT6.md",
+          "sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+          "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+          "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+          "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download",
+          "locator": "PDF p.10 / manuscript p.9",
+          "category": "Bias_Ungleichheit",
+          "quote": "bias and structural inequity can be built into them"
+        },
+        {
+          "source_path": "generated/markdown_clean/VSZM7CT6.md",
+          "sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+          "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+          "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+          "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download",
+          "locator": "PDF pp.10-11 / manuscript pp.9-10",
+          "category": "Gender",
+          "quote": "AI algorithms may reinforce racial and gender stereotypes"
+        },
+        {
+          "source_path": "generated/markdown_clean/VSZM7CT6.md",
+          "sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+          "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+          "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+          "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download",
+          "locator": "PDF p.11 / manuscript p.10, paragraph before Ethical Considerations",
+          "category": "Fairness",
+          "quote": "fairness, privacy, transparency, and accountability"
+        },
+        {
+          "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/hodgson-griffith-am-text.md",
+          "sha256": "sha256:eaa18a97253a97d8d0ef65a5464e02a01422341769d3b5be5dfc6988eb3af12f",
+          "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+          "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+          "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download",
+          "locator": "Direct primary PDF extraction, cover and manuscript pp.3,9-10,15-21; all six category quotations independently matched to the extraction",
+          "quote": "This is a pre-copy-editing, author-produced PD F of an article"
+        }
+      ],
+      "artifact": "generated/verification/screening-corrections-d.json#/corrections/VSZM7CT6",
+      "sha256": "sha256:c6f64bf88a158ef071648b270861394bc1a1b658648faca1b54cef1c467bd23d",
+      "result": "accepted",
+      "reviewed_at": "2026-09-05T15:11:56.464379+00:00",
+      "findings": "Rechecked the complete projected annotation after the three immutable corrections. Critical AI understanding in social-work education supports AI_Literacies=2 and Soziale_Arbeit=2; the article centrally treats AI/ML systems (KI_Sonstige=2) and their structural bias (Bias_Ungleichheit=2). Explicit racial/gender stereotype examples support Gender=1; algorithmic fairness is a subordinate framework reference (Fairness=1). No dedicated generative-model or prompting focus, separate diversity analysis, or feminist methodology is established, so the remaining four categories stay zero. The conceptual prospective article supports Theoretisch, Education_Professional, Gender/Race_Ethnicity, Stereotyping and proposed organisational/educational responses; reports of successful clinical AI or network selection do not evaluate those proposed bias mitigations. Prompting role/techniques stay None, mitigation stage Organisational_Process and status Proposed; AN fields remain unchanged. Object and perspective maxima remain 2, hence Include is unchanged. All six positive quotations resolve in the exact hash-bound AM and in its fresh primary-PDF extraction. This named AI source review grants no human verification or new lifecycle event.",
+      "field_changes": [
+        {
+          "path": "/categories/Fairness",
+          "before": 2,
+          "after": 1,
+          "reason": "AM PDF p.11/manuscript p.10 mentions the Australian framework's fairness/privacy/transparency/accountability among wider education-ethics concerns. There is an explicit algorithmic fairness reference, but no central fairness study, metric, or dedicated intervention evaluation; level 1 matches the existing partial-reference scale."
+        },
+        {
+          "path": "/evidence/Soziale_Arbeit/0/term",
+          "before": "This paper explores possible future implications for social work education.",
+          "after": "this paper explores possible future implications for social work education.",
+          "reason": "The Griffith AM abstract, PDF p.4/manuscript p.3, continues the preceding sentence with lowercase 'this paper'; the publisher VOR's 'this article' belongs to another version. Preserve the exact AM wording."
+        },
+        {
+          "path": "/evidence/Soziale_Arbeit/0/snippet",
+          "before": "This paper explores possible future implications for social work education.",
+          "after": "this paper explores possible future implications for social work education.",
+          "reason": "The Griffith AM abstract, PDF p.4/manuscript p.3, continues the preceding sentence with lowercase 'this paper'; the publisher VOR's 'this article' belongs to another version. Preserve the exact AM wording."
+        }
+      ]
+    }
+  ]
+}

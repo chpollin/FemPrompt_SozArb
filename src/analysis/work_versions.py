@@ -12,14 +12,49 @@ from __future__ import annotations
 import json
 import re
 import unicodedata
+from copy import deepcopy
 from pathlib import Path
 from typing import Any, Iterable
+
+from src.file_hashing import file_sha256
 
 REPO = Path(__file__).resolve().parents[2]
 CONTRACT_PATH = REPO / "docs" / "data" / "work_version_contract.json"
 REGISTRY_PATH = REPO / "corpus" / "work_version_registry.json"
 REGISTRY_SCHEMA = "femprompt-work-version-registry/0.1"
 BLOCKED_INTEGRITY = {"withdrawn", "retracted"}
+SOURCE_BINDINGS_PATH = "corpus/source_version_bindings.json"
+
+
+def source_binding_for_record(registry: dict, record_id: str, repo: Path | None = None) -> dict | None:
+    """Resolve a governed reading source separately from the bibliographic record."""
+    binding = registry.get("source_index", {}).get(record_id)
+    if binding is None:
+        return None
+    canonical = registry.get("record_index", {}).get(record_id, {})
+    work = next((item for item in registry.get("works", []) if item["work_id"] == canonical.get("work_id")), {})
+    version = next((item for item in work.get("versions", []) if item["version_id"] == binding.get("source_version_id")), {})
+    if (
+        binding.get("record_id") != record_id
+        or binding.get("work_id") != canonical.get("work_id")
+        or binding.get("bibliographic_version_id") != canonical.get("version_id")
+        or not version
+        or binding.get("source_version_type") != version.get("version_type")
+        or version.get("integrity_status") in BLOCKED_INTEGRITY
+        or binding.get("preferred_version_id") != work.get("preferred_version_id")
+        or binding.get("is_preferred_version") is not (version.get("version_id") == work.get("preferred_version_id"))
+    ):
+        raise ValueError(f"{record_id}: source binding crosses or misstates canonical Work-Version identity")
+    reference = binding.get("source_path", "")
+    if not isinstance(reference, str) or not reference or "\\" in reference or "#" in reference or Path(reference).is_absolute() or ".." in Path(reference).parts:
+        raise ValueError(f"{record_id}: invalid source binding path")
+    if not re.fullmatch(r"sha256:[0-9a-f]{64}", str(binding.get("source_sha256", ""))):
+        raise ValueError(f"{record_id}: invalid source binding hash")
+    if repo is not None:
+        path = (repo / reference).resolve()
+        if not path.is_relative_to(repo.resolve()) or "sha256:" + file_sha256(path) != binding["source_sha256"]:
+            raise ValueError(f"{record_id}: stale source binding")
+    return deepcopy(binding)
 
 
 def normalise_doi(value: object) -> str:
@@ -206,3 +241,6 @@ def validate_registry(registry: dict[str, Any], contract: dict[str, Any]) -> Non
     for alias, work_id in registry.get("legacy_work_id_index", {}).items():
         if not alias or work_id not in work_ids:
             raise ValueError(f"legacy alias {alias!r} has unknown work")
+
+    for record_id in registry.get("source_index", {}):
+        source_binding_for_record(registry, record_id)

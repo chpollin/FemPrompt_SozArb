@@ -95,6 +95,23 @@ def test_unapproved_grounding_withholds_whole_assertion(tmp_path):
     assert build_index(**args)["assertions"] == []
 
 
+@pytest.mark.parametrize("state", ["publication-approved", "ai-agent-reviewed"])
+def test_current_work_source_hold_withholds_otherwise_approved_chain(tmp_path, state):
+    args = fixture(tmp_path, state)
+    ledger = _ledger(args) if state == "ai-agent-reviewed" else None
+    _write(tmp_path / "hold-evidence.txt", "Source withdrawn or mismatched version")
+    work_id = "work:70312fae-6975-587e-b409-06a82d50b6ce"
+    resolution = {"schema": "femprompt-historical-resolution/0.1", "work_resolutions": {work_id: {
+        "work_id": work_id, "withhold_from_current_synthesis": True, "integrity_hold": True,
+        "reason": "Fixture source restriction", "agent_id": "test-agent", "model": "test-model",
+        "reviewed_at": "2026-09-05T12:00:00Z",
+        "evidence": [{"source_path": "hold-evidence.txt", "sha256": artifact_hash(tmp_path, "hold-evidence.txt")}]}}}
+    _write(tmp_path / "generated/verification/historical-resolution-2026-09-05.json", resolution)
+    payload = build_index(**args)
+    assert payload["assertions"] == []
+    assert payload["meta"]["withheld_assertions"] == 1
+
+
 @pytest.mark.parametrize("field,value,match", [
     ("grounding", ["[[20_distillates/publications/missing#^s1]]"], "unresolved"),
     ("grounding", ["[[20_distillates/publications/ahn-2025-ai-literacy-for-social-work#^s404]]"], "statement block"),

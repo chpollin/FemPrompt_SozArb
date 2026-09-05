@@ -102,12 +102,20 @@ async function waitInit() {
   await page.waitForFunction(() => window.__PRISMA_TEST__.anFieldNames().length > 0, null, { timeout: 15000 });
 }
 async function currentPaperId() { return hook(page, '(() => { const T = window.__PRISMA_TEST__; const s = T.getState(); return window.EC.getAllPapers()[s.index].id; })()'); }
+async function enterEditing(targetPage) {
+  if (!(await targetPage.evaluate(() => window.__PRISMA_TEST__.canEdit()))) {
+    await targetPage.getByRole('button', { name: 'Bearbeiten', exact: true }).click();
+    await targetPage.waitForFunction(() => window.__PRISMA_TEST__.canEdit());
+  }
+}
 async function setReviewerKey(targetPage, key) {
+  await enterEditing(targetPage);
   await targetPage.fill('#pt-reviewer-key', key);
   await targetPage.click('.pt-reviewer-set');
   await targetPage.waitForFunction((expected) => window.__PRISMA_TEST__.getState().reviewer === expected, key);
 }
 async function connectFixtureStorage(targetPage, key) {
+  await enterEditing(targetPage);
   await targetPage.evaluate(async (reviewerKey) => {
     const writes = {};
     const screening = {
@@ -306,8 +314,22 @@ try {
   await waitInit();
   const n = await hook(page, 'window.EC.getAllPapers().length');
   check('cold load: fixture corpus of three papers', n === 3, n);
-  check('cold load: one-time reviewer key setup is visible without fixed-role radios', await page.evaluate(() =>
-    !!document.getElementById('pt-reviewer-key') && !document.querySelector('.pt-reviewer-radio') && !window.__PRISMA_TEST__.getState().reviewer));
+  check('cold load: reading is available without reviewer setup or annotation controls', await page.evaluate(() =>
+    !window.__PRISMA_TEST__.canEdit() && !document.querySelector('#pt-reviewer-key, .pt-folder-action, #pt-record, #pt-pin-hit, .pt-chip') &&
+      document.querySelector('#pt-edit-mode')?.getAttribute('aria-pressed') === 'false' && !!document.querySelector('#pt-doc')));
+  await page.waitForFunction(() => !window.__PRISMA_TEST__.readingPending());
+  await page.fill('#pt-intext', 'social work');
+  await page.press('#pt-intext', 'Enter');
+  check('read mode: searching and navigating do not create a reviewer cache', await page.evaluate(() =>
+    document.querySelectorAll('#pt-doc mark').length > 0 && localStorage.getItem('femprompt-prisma-state/0.2') === null));
+  await page.click('#pt-corpus-list .pt-nav-item[data-i="1"]');
+  check('read mode: another paper opens without enabling authoring', await currentPaperId() === 'PILOT-B' &&
+    !(await page.evaluate(() => window.__PRISMA_TEST__.canEdit())));
+  await page.click('#pt-corpus-list .pt-nav-item[data-i="0"]');
+  await enterEditing(page);
+  check('edit transition: reviewer setup appears with keyboard focus and without fixed-role radios', await page.evaluate(() =>
+    !!document.getElementById('pt-reviewer-key') && document.activeElement === document.getElementById('pt-reviewer-key') &&
+      !document.querySelector('.pt-reviewer-radio') && !window.__PRISMA_TEST__.getState().reviewer));
   await page.fill('#pt-reviewer-key', '../x');
   await page.click('.pt-reviewer-set');
   check('reviewer key: unsafe filename input is rejected and focus returns to the field', await page.evaluate(() =>
@@ -325,6 +347,20 @@ try {
       !!document.querySelector('.pt-change-folder')));
   check('daily UI: backup, import, administration, report trigger and sidepanel are absent', await page.evaluate(() =>
     !document.querySelector('.pt-backup-details, .pt-admin-details, .pt-imp, .pt-exp-rev, .pt-exp-csv, .pt-ws-panel, #pt-overlay')));
+  await page.click('.pt-reason-chip[data-reason="Not_relevant_topic"]');
+  const draftBeforeReading = await page.evaluate(() => JSON.stringify(window.__PRISMA_TEST__.getWork()));
+  await page.getByRole('button', { name: 'Bearbeiten', exact: true }).click();
+  check('edit toggle: returning to reading preserves the unsaved draft without committing it', await page.evaluate((draft) => {
+    const T = window.__PRISMA_TEST__;
+    T.commit(); T.save();
+    return !T.canEdit() && JSON.stringify(T.getWork()) === draft && Object.keys(T.curDec()).length === 0 &&
+      Object.keys(window.__PILOT_WRITES).length === 0 && !document.querySelector('#pt-record, #pt-revise, #pt-pin-hit, .pt-change-folder') &&
+      document.activeElement === document.getElementById('pt-edit-mode');
+  }, draftBeforeReading));
+  await enterEditing(page);
+  check('edit toggle: opting back in resumes the same draft and connected working folder', await page.evaluate((draft) =>
+    window.__PRISMA_TEST__.canEdit() && JSON.stringify(window.__PRISMA_TEST__.getWork()) === draft &&
+      !!document.querySelector('.pt-sync-ready') && !!document.querySelector('#pt-record'), draftBeforeReading));
   check('save action: exactly one accessible disk button sits beside the paper position and none is in the rail', await page.evaluate(() => {
     const all = document.querySelectorAll('#pt-record'); const button = all[0];
     return all.length === 1 && button.closest('.pt-ws-bar') && !document.querySelector('#pt-assess-col #pt-record') &&
@@ -458,11 +494,14 @@ try {
     (await hook(page, 'window.__PRISMA_TEST__.getState().reviewer')) === opt.reviewer, afterReload);
   const tsAfter = await hook(page, 'Object.fromEntries(Object.entries(window.__PRISMA_TEST__.curDec()).map(([k, v]) => [k, v.text_source]))');
   check('reload: text_source survives', manifest.papers.every((p) => tsAfter[p.id] === p.expected_text_source), tsAfter);
+  check('reload: saved reviewer profile still opens read-only without folder or revise controls', await page.evaluate(() =>
+    !window.__PRISMA_TEST__.canEdit() && !document.querySelector('#pt-reviewer-key, .pt-folder-action, .pt-change-folder, #pt-revise, #pt-record')));
   await gotoPaper(manifest.papers[0].id);
   check('reload: locked view for paper A', !!(await page.$('#pt-assess-col .pt-pill-lg')));
   await page.waitForSelector('#pt-corpus-list .pt-nav-item.active .pt-dot-include');
   check('reload: completed Include remains complete in the corpus navigator after analysis vocabulary loads',
     !!(await page.$('#pt-corpus-list .pt-nav-item.active .pt-dot-include')));
+  await enterEditing(page);
   await page.click('#pt-revise');
   await page.waitForFunction(() => !window.__PRISMA_TEST__.readingPending());
   check('revise: asynchronous reading refresh keeps the committed record editable',
@@ -567,6 +606,23 @@ try {
   await waitInit();
   check('normal screening: lifecycle controls remain absent after a verified record reloads',
     !(await page.$('.pt-verification, #pt-verification-action')));
+  const readProtection = await page.evaluate(async () => {
+    const T = window.__PRISMA_TEST__;
+    const before = JSON.stringify(T.getState().reviewers);
+    const storage = localStorage.getItem('femprompt-prisma-state/0.2');
+    let writes = 0, resolutions = 0;
+    T.setScreeningHandle({ async getFileHandle() { writes++; throw new Error('read mode attempted a write'); } });
+    T.resetWork({ id: 'PILOT-A' }); T.getWork().reason = 'Not_relevant_topic';
+    T.commit(); T.save();
+    T.setAnalysis('PILOT-A', { fields: { Studientyp: 'Review' } });
+    const imported = T.importReviewerPayload({ decisions: {} }, T.getState().reviewer, true);
+    try { await T.resolveScopes({ async getDirectoryHandle() { resolutions++; } }); } catch {}
+    await new Promise((resolve) => setTimeout(resolve, 30));
+    return { unchanged: before === JSON.stringify(T.getState().reviewers), cacheUnchanged: storage === localStorage.getItem('femprompt-prisma-state/0.2'), writes, resolutions, imported: imported.reason };
+  });
+  check('read mode: cached records cannot be overwritten, imported or persisted even with a retained folder handle',
+    readProtection.unchanged && readProtection.cacheUnchanged && readProtection.writes === 0 && readProtection.resolutions === 0 && readProtection.imported === 'read-only', readProtection);
+  await enterEditing(page);
 
   // Repo-root connect: the picker hands over a folder and the tool resolves the reviewer
   // folder below it. The real picker cannot be automated, so a fake directory handle with the

@@ -1,0 +1,23 @@
+
+
+Capture: official BLS page excerpts returned by web browsing on 2026-09-05; line labels belong to that representation. These are excerpts, not a full downloaded report. Direct HTTP retrieval returned 403.
+
+L161: HOUSEHOLD DATA
+L162: ANNUAL AVERAGES
+L163: 11. Employed persons by detailed occupation, sex, race, and Hispanic or Latino ethnicity[Numbers in thousands]
+L164: Occupation  | 2023
+L165: --- | ---
+L166: Total
+L167: employed  | Percent of total employed
+L168: --- | ---
+L169: Women  | White  | Black or
+L170: African
+L171: American  | Asian  | Hispanic
+L172: or Latino
+L173: --- | --- | --- | --- | ---
+L174: Total, 16 years and over  | 161,037  | 46.9  | 76.5  | 12.8  | 6.9  | 18.8
+L175: Management, professional, and related occupations  | 70,275  | 51.8  | 76.9  | 10.6  | 9.3  | 11.2
+L176: Management, business, and financial operations occupations  | 30,544  | 45.7  | 79.7  | 9.8  | 7.5  | 11.8
+L177: Management occupations  | 20,906  | 41.9  | 80.9  | 9.2  | 7.0  | 12.1
+L178: Chief executives  | 1,780  | 30.6  | 85.8  | 5.2  | 7.3  | 6.3
+

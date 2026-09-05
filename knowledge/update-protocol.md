@@ -10,7 +10,7 @@ status: active
 language: en
 version: "0.7"
 created: 2026-06-09
-updated: 2026-08-24
+updated: 2026-09-05
 authors: [Christopher Pollin]
 generated-with: Claude Code, Codex (GPT-5.6)
 topics: ["[[Pre-Registration]]", "[[Coding Scheme]]", "[[AI Agents]]"]
@@ -134,13 +134,32 @@ Every field has an explicit value or a recorded non-decidability state. `None` m
 
 Round-two Includes receive the analysis fields during agent screening. Round-one Includes enter the same vocabulary through a separately manifested backfill run. The final synthesis therefore covers both rounds under one analysis schema while preserving their screening provenance.
 
+### Source-review clarification, 5 September 2026
+
+This clarification records the interpretation used in the targeted re-review of existing annotations. It does not claim retrospective preregistration and does not change the ten categories or controlled vocabulary.
+
+`Evaluated` requires a completed assessment of an identifiable mitigation and a reported result. A negative or mixed result qualifies; evaluation does not mean effectiveness. A review may synthesise such an assessment, but a reference list, an inventory of techniques, or bias measurement without a mitigation assessment does not suffice. `AN_Notes` identifies the intervention, the result discussed, and its source; it explicitly distinguishes a synthesised evaluation from the review's own experiment. For mixed inventories, the single status field records the highest supported stage and the note limits that status to the relevant intervention. Other recommendations are not thereby evaluated. A proposed future evaluation remains `Proposed`.
+
+| Mitigation stage | Required source support |
+|---|---|
+| `Pre_Processing` | Selection, cleaning, augmentation, weighting or other preparation of learning data |
+| `In_Training` | An intervention explicitly placed in learning or retraining; a clear training recommendation may qualify as `Proposed` |
+| `Intra_Processing` | A specified technical intervention during model application or inference |
+| `Post_Processing` | A technical change to model outputs or learned representations, such as calibration or filtering |
+| `Prompt_Practice` | A change to instructions or the prompting procedure |
+| `Organisational_Process` | Responsibility, participation, training, governance, audit or human oversight |
+
+Each assigned stage needs its own source support. Monitoring alone does not establish an inference intervention. Inspecting an output does not establish a technical output modification. Generic fairness constraints, compensation or lifecycle language do not justify assigning every technical stage. Stage and evidence status remain separate: an explicit recommendation can identify a stage while remaining `Proposed`. The decisions and exact Paper passages for the reviewed cases are in `generated/verification/screening-review-c.json`.
+
+The existing two-dimensional eligibility rule includes non-generative algorithmic systems and social dimensions beyond a direct social-work setting. Absence of generative AI or of a direct social-work application is therefore not, by itself, a round-two exclusion. Direct practice relevance and transferability are assessed separately for SQ3. The publication medium alone does not establish quality: scholarly grey literature can contribute a conceptual inventory or teaching example when its authorship, source, relevant content and limitations are clear. A withdrawal blocks current synthesis pending an explicit integrity resolution. These clarifications do not overwrite round-one human decisions or invent a missing round-one protocol.
+
 ## Lifecycle and authority
 
 The ordered states are `identified → curated → agent-annotated → ai-agent-reviewed → verified → publication-approved`.
 
 Deterministic checks bind to the exact annotation ID and content hash. They record structural and rule conformance. A domain expert later records `accepted`, `corrected_and_accepted`, `changes_requested`, or `rejected` for every intended productive record. Accepted outcomes establish `verified`. Corrections append a complete person-attributed annotation with field-level differences and `supersedes`. Publication approval requires a later person-attributed event.
 
-Internal topic modelling, descriptive analysis, Assertion generation, and report drafting may use `ai-agent-reviewed` data when every derived artifact retains the supporting lifecycle state. Final literature claims require domain-expert verification. Public projections require publication approval.
+Internal topic modelling, descriptive analysis, Assertion generation, and report drafting may use `ai-agent-reviewed` data when every derived artifact retains the supporting lifecycle state. Final scholarly literature claims require domain-expert verification. The operator's separately dated preliminary-release permission in `config/publication_policy.json` allows explicitly labelled, currently source-reviewed AI projections under the artifact and source integrity gates in [[governance#Publication boundary]]. It does not establish human verification or final scholarly publication approval.
 
 ## Process diagnostics
 

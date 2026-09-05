@@ -1,0 +1,27 @@
+{
+  "schema": "femprompt-primary-metadata-transcription/0.1",
+  "agent_id": "/root/grounded_chat",
+  "model": "GPT-6",
+  "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+  "reviewed_at": "2026-09-05T15:40:49.955416+00:00",
+  "source_url": "https://aclanthology.org/2022.gebnlp-1.10/",
+  "access_date": "2026-09-05",
+  "extraction_method": "Bibliographic facts transcribed from the official ACL Anthology page actually read with the web tool. A separate local curl request failed because the Windows certificate-revocation service was offline; no raw HTTP response is claimed.",
+  "locator": "Title and author header; Cite (ACL); BibTeX and MODS export; PDF link; licensing footer",
+  "metadata": {
+    "title": "Worst of Both Worlds: Biases Compound in Pre-trained Vision-and-Language Models",
+    "authors": [
+      "Tejas Srinivasan",
+      "Yonatan Bisk"
+    ],
+    "date": "2022-07",
+    "doi": "10.18653/v1/2022.gebnlp-1.10",
+    "publisher": "Association for Computational Linguistics",
+    "proceedings": "Proceedings of the 4th Workshop on Gender Bias in Natural Language Processing (GeBNLP)",
+    "pages": "77–85",
+    "venue_location": "Seattle, Washington",
+    "pdf_url": "https://aclanthology.org/2022.gebnlp-1.10.pdf",
+    "license": "CC BY 4.0 (ACL footer: materials from 2016 onward)"
+  },
+  "limits": "Metadata/identity review only. The PDF was not acquired or screened in this task."
+}

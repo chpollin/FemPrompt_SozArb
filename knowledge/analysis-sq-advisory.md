@@ -10,15 +10,17 @@ status: draft
 language: en
 version: "0.6"
 created: 2026-07-21
-updated: 2026-08-23
+updated: 2026-09-05
 authors: [Christopher Pollin]
-generated-with: Claude Code, Codex (GPT-5.6)
+generated-with: Claude Code, Codex (GPT-5.6), Codex (GPT-6)
 related: [update-protocol, plan, methods, verification, research-vault, analysis-divergence]
 ---
 
 # SQ Analysis, Advisory LLM Track
 
 This advisory analysis records hypotheses generated from an earlier LLM coding over the available distilled knowledge documents. It supports schema refinement, expert-question design, and later comparison with the governed full-corpus analysis. Its structured inputs and quantities live under `generated/analysis-advisory/`. The present document carries the qualitative interpretation and its authority limits.
+
+For current descriptive coding, use the [completion package and SQ tables](../generated/completion/README.md); for released qualitative support, use the [Assertion index](../docs/data/assertion_index.json). Those projections have their own source-review and eligibility checks. The historical distillate-based hypotheses below do not become current findings merely because similarly named categories appear in either projection.
 
 ## Method chain
 

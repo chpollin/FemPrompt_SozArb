@@ -1,0 +1,935 @@
+{
+  "schema": "femprompt-identity-resolution-proposals/0.1",
+  "agent_id": "/root/grounded_chat",
+  "model": "GPT-6",
+  "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+  "reviewed_at": "2026-09-05T14:46:50.260385+00:00",
+  "status": "proposals_only_not_applied",
+  "source_cutoff": "2026-09-05",
+  "scope": "Three explicitly assigned checklist identities. No raw Zotero, registry, ar2, source code or accepted review ledger modified.",
+  "records": {
+    "3GB9B4IJ": {
+      "record_id": "3GB9B4IJ",
+      "finding": "confirmed_wrong_year_same_arxiv_version",
+      "agent_id": "/root/grounded_chat",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-05T14:46:50.260385+00:00",
+      "canonical_binding_before": {
+        "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88",
+        "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3"
+      },
+      "canonical_binding_after": {
+        "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88",
+        "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3"
+      },
+      "metadata_corrections": [
+        {
+          "record_id": "2YS85B49",
+          "base_artifact": "corpus/zotero_export.json#/179",
+          "base_record_sha256": "sha256:c44e965d8525dadca0d9d34beca10481813519376700020133e88e6294386b60",
+          "before_record": {
+            "key": "2YS85B49",
+            "version": 110,
+            "itemType": "journalArticle",
+            "title": "Can LLMs reason about trust? A pilot study",
+            "creators": [
+              {
+                "creatorType": "author",
+                "firstName": "A.",
+                "lastName": "Debnath"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "S.",
+                "lastName": "Cranefield"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "E.",
+                "lastName": "Lorini"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "B. T. R.",
+                "lastName": "Savarimuthu"
+              }
+            ],
+            "date": "2024",
+            "url": "https://arxiv.org/html/2507.21075v1",
+            "DOI": "",
+            "abstractNote": "Pilot study investigating LLMs' ability to reason about trust between individuals by capturing complex mental states that exceed traditional symbolic approaches. Evaluates whether LLMs can analyze conversations and assess trust levels based on willingness, competence, and security factors. Demonstrates that LLMs can identify individual goals and develop improvement suggestions for trust building, as well as generate strategic action plans for trust promotion. Suggests LLMs have potential to bridge the gap between computational and socio-cognitive trust models.",
+            "tags": [],
+            "collections": [
+              "C62UPN32"
+            ],
+            "relations": {}
+          },
+          "changes": [
+            {
+              "field": "date",
+              "before_exists": true,
+              "before": "2024",
+              "after": "2025-06-11"
+            }
+          ],
+          "projected_record_sha256": "sha256:511e67bcd57a237a110c0310a50eb8e0ab2fea99e47c4906cc055b850dfa2c9f",
+          "write_scope": "local guarded projection only; preserve raw Zotero export"
+        },
+        {
+          "record_id": "3GB9B4IJ",
+          "base_artifact": "corpus/zotero_export.json#/162",
+          "base_record_sha256": "sha256:06ab7f4635f83a3d78eed228eabb0ea160b514f3077a22689bbcaab4925f2d2d",
+          "before_record": {
+            "key": "3GB9B4IJ",
+            "version": 114,
+            "itemType": "journalArticle",
+            "title": "Can LLMs reason about trust? A pilot study",
+            "creators": [
+              {
+                "creatorType": "author",
+                "firstName": "A.",
+                "lastName": "Debnath"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "S.",
+                "lastName": "Cranefield"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "E.",
+                "lastName": "Lorini"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "B. T. R.",
+                "lastName": "Savarimuthu"
+              }
+            ],
+            "date": "2024",
+            "url": "https://arxiv.org/html/2507.21075v1",
+            "DOI": "",
+            "abstractNote": "Pilot study investigating LLMs' ability to reason about trust between individuals by capturing complex mental states that exceed traditional symbolic approaches. Evaluates whether LLMs can analyze conversations and assess trust levels based on willingness, competence, and security factors. Demonstrates that LLMs can identify individual goals and develop improvement suggestions for trust building, as well as generate strategic action plans for trust promotion. Suggests LLMs have potential to bridge the gap between computational and socio-cognitive trust models.",
+            "tags": [],
+            "collections": [
+              "RG4AVS5G"
+            ],
+            "relations": {}
+          },
+          "changes": [
+            {
+              "field": "date",
+              "before_exists": true,
+              "before": "2024",
+              "after": "2025-06-11"
+            }
+          ],
+          "projected_record_sha256": "sha256:3f539678e935e4aff41f3d848b3a9b43108e6727c4400718b8bdb0b2ac82f013",
+          "write_scope": "local guarded projection only; preserve raw Zotero export"
+        },
+        {
+          "record_id": "BCBWSU3Z",
+          "base_artifact": "corpus/zotero_export.json#/149",
+          "base_record_sha256": "sha256:e4cf232dd97f97d7c8ff04c155d427aebaf8d03ef30c62b7798a08898ff289be",
+          "before_record": {
+            "key": "BCBWSU3Z",
+            "version": 118,
+            "itemType": "journalArticle",
+            "title": "Can LLMs reason about trust? A pilot study",
+            "creators": [
+              {
+                "creatorType": "author",
+                "firstName": "A.",
+                "lastName": "Debnath"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "S.",
+                "lastName": "Cranefield"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "E.",
+                "lastName": "Lorini"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "B. T. R.",
+                "lastName": "Savarimuthu"
+              }
+            ],
+            "date": "2024",
+            "url": "https://arxiv.org/html/2507.21075v1",
+            "DOI": "",
+            "abstractNote": "Pilot study investigating LLMs' ability to reason about trust between individuals by capturing complex mental states that exceed traditional symbolic approaches. Evaluates whether LLMs can analyze conversations and assess trust levels based on willingness, competence, and security factors. Demonstrates that LLMs can identify individual goals and develop improvement suggestions for trust building, as well as generate strategic action plans for trust promotion. Suggests LLMs have potential to bridge the gap between computational and socio-cognitive trust models.",
+            "tags": [],
+            "collections": [
+              "2TZ7BNHZ"
+            ],
+            "relations": {}
+          },
+          "changes": [
+            {
+              "field": "date",
+              "before_exists": true,
+              "before": "2024",
+              "after": "2025-06-11"
+            }
+          ],
+          "projected_record_sha256": "sha256:fed3390f46d1693567fe9cde67d11e6f20c1431a4ee5e868468a0bf8410583d6",
+          "write_scope": "local guarded projection only; preserve raw Zotero export"
+        }
+      ],
+      "version_changes": [
+        {
+          "field": "version_date",
+          "before": "2024",
+          "after": "2025-06-11"
+        },
+        {
+          "field": "journal_or_repository",
+          "before": "",
+          "after": "arXiv"
+        }
+      ],
+      "evidence": [
+        {
+          "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/debnath-arxiv-metadata.json",
+          "sha256": "sha256:7f6d5cb01d26b6cd43ac7689b20d82f9f6a5b95a6a90b6a03d6eff574fd67303",
+          "source_url": "https://arxiv.org/abs/2507.21075v1",
+          "locator": "citation_meta.citation_date, citation_online_date; Submission history [v1]",
+          "quote": "2025/06/11"
+        }
+      ],
+      "finding_detail": "The official arXiv record explicitly reports v1 submitted 11 June 2025 at 09:38:21 UTC, despite the 2507 identifier prefix. The year must not be guessed from the identifier. Title and all four authors match. Three local records share this exact v1 URL and Version; all must receive the same date correction. Keep opaque Work/Version IDs stable and keep historical filenames and receipts as history.",
+      "screening_effect": "Existing Exclude/Not_relevant_topic remains substantively plausible; metadata correction is not a new screening review. Reissue acceptance only after projected metadata and binding checks pass.",
+      "rights": {
+        "license_url": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+        "license": "arXiv non-exclusive distribution licence; no CC licence inferred"
+      }
+    },
+    "VSZM7CT6": {
+      "record_id": "VSZM7CT6",
+      "finding": "confirmed_same_work_distinct_accepted_manuscript_and_vor",
+      "agent_id": "/root/grounded_chat",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-05T14:46:50.260385+00:00",
+      "canonical_binding_before": {
+        "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+        "version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e"
+      },
+      "bibliographic_binding_after": {
+        "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+        "version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e"
+      },
+      "metadata_corrections": [
+        {
+          "record_id": "VSZM7CT6",
+          "base_artifact": "corpus/zotero_export.json#/27",
+          "base_record_sha256": "sha256:5dcaf07c379bf984edcf39980ab06b929a9fe9cd88cda0398c18d72532afffd0",
+          "before_record": {
+            "key": "VSZM7CT6",
+            "version": 242,
+            "itemType": "journalArticle",
+            "title": "Problematising artificial intelligence in social work education: Challenges, issues and possibilities",
+            "creators": [
+              {
+                "creatorType": "author",
+                "firstName": "D.",
+                "lastName": "Hodgson"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "S.",
+                "lastName": "Goldingay"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "J.",
+                "lastName": "Boddy"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "S.",
+                "lastName": "Nipperess"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "L.",
+                "lastName": "Watts"
+              }
+            ],
+            "date": "2022",
+            "url": "",
+            "DOI": "10.1093/bjsw/bcab168",
+            "abstractNote": "Critical examination of AI's fourth industrial revolution implications for social work education, questioning what skills and knowledge should be taught to prepare students for digital working lives. Adopts problematizing approach challenging both celebratory and catastrophic narratives about AI. Argues social work education must address fundamental tensions between training for technologically-driven environments and engaging students in critical theories acknowledging unequal power distributions that technological change reinforces. Advocates for developing critical digital literacies beyond technical competence.",
+            "tags": [],
+            "collections": [],
+            "relations": {}
+          },
+          "changes": [
+            {
+              "field": "publicationTitle",
+              "before_exists": false,
+              "before": null,
+              "after": "The British Journal of Social Work"
+            },
+            {
+              "field": "volume",
+              "before_exists": false,
+              "before": null,
+              "after": "52"
+            },
+            {
+              "field": "issue",
+              "before_exists": false,
+              "before": null,
+              "after": "4"
+            },
+            {
+              "field": "pages",
+              "before_exists": false,
+              "before": null,
+              "after": "1878-1895"
+            },
+            {
+              "field": "url",
+              "before_exists": true,
+              "before": "",
+              "after": "https://academic.oup.com/bjsw/article/52/4/1878/6333771"
+            }
+          ],
+          "projected_record_sha256": "sha256:78a3feaa6841b0a6ad8b2bb0abd3ee387e09140e401d23d0eb74641ba4c2d5cb",
+          "write_scope": "local guarded projection only; preserve raw Zotero export"
+        }
+      ],
+      "bibliographic_dates": {
+        "issue_year": 2022,
+        "online_published": "2021-08-02",
+        "crossref_print_date": "2022-06-22",
+        "publisher_issue_label": "June 2022",
+        "accepted": "2021-07-07",
+        "accepted_date_basis": "Publisher article history, https://academic.oup.com/bjsw/article/52/4/1878/6333771"
+      },
+      "version_changes": [
+        {
+          "field": "version_date",
+          "before": "2022",
+          "after": "2021-08-02",
+          "reason": "First online VOR publication, while bibliographic issue year remains 2022."
+        }
+      ],
+      "additional_source_version": {
+        "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+        "proposed_version": {
+          "title": "Problematising artificial intelligence in social work education: Challenges, issues and possibilities",
+          "authors": [
+            "David Hodgson",
+            "Sophie Goldingay",
+            "Jennifer Boddy",
+            "Sharlene Nipperess",
+            "Lynelle Watts"
+          ],
+          "version_type": "accepted_manuscript",
+          "version_date": "2021",
+          "item_type": "",
+          "journal_or_repository": "Griffith Research Online",
+          "identifiers": {
+            "url": [
+              "https://hdl.handle.net/10072/407943"
+            ]
+          },
+          "peer_review_status": "peer_reviewed",
+          "peer_review_basis": "source_metadata",
+          "integrity_status": "current",
+          "access_status": "open_access",
+          "landing_url": "https://hdl.handle.net/10072/407943",
+          "fulltext_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download",
+          "license": "",
+          "source_lanes": [],
+          "evidence": [],
+          "provenance": [],
+          "relations": [
+            {
+              "type": "isVersionOf",
+              "target_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e"
+            }
+          ],
+          "flags": [],
+          "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec"
+        },
+        "id_status": "deterministically proposed using existing registry UUIDv5 rule; not registered yet",
+        "identity_rule": "Repository URL identifies manuscript; published DOI and Zotero key remain identifiers of the bibliographic Version of Record.",
+        "rights_rule": "Publicly readable manuscript; no Creative Commons or general redistribution licence inferred. Access status does not grant reuse rights."
+      },
+      "proposed_source_binding": {
+        "record_id": "VSZM7CT6",
+        "source_path": "generated/markdown_clean/VSZM7CT6.md",
+        "source_sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+        "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+        "source_version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+        "source_version_type": "accepted_manuscript",
+        "bibliographic_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+        "preferred_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+        "is_preferred_version": false,
+        "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download"
+      },
+      "source_identity_evidence": [
+        {
+          "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/hodgson-2021-crossref.json",
+          "sha256": "sha256:bea299704700047ee8e47349fc48a00f94606c303348a347146d974d6c3ce74a",
+          "source_url": "https://api.crossref.org/works/10.1093/bjsw/bcab168",
+          "locator": "message.title/author/DOI/published-online/published-print/volume/issue/page"
+        },
+        {
+          "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/hodgson-griffith-am.pdf",
+          "sha256": "sha256:4a87dd98c0084b1155670e6eb69736727a0b26f1114d5403f16a8737faef3ebd",
+          "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download",
+          "locator": "PDF p.1: title, authors, Published 2021, Accepted Manuscript (AM), DOI, rights and handle 10072/407943"
+        },
+        {
+          "source_path": "generated/markdown_clean/VSZM7CT6.md",
+          "sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+          "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download",
+          "locator": "Cover p.1 and Abstract p.4",
+          "quote": "Accepted Manuscript (AM)"
+        }
+      ],
+      "screening_base_artifact": "docs/data/screening/ar2.json#/decisions/VSZM7CT6",
+      "screening_base_sha256": "sha256:114a36d307946899b31e42dd9ebb05424df30cdd4170f88f3b2bcefaa989bd4a",
+      "screening_changes": [
+        {
+          "path": "/evidence/Soziale_Arbeit/0/term",
+          "before": "This paper explores possible future implications for social work education.",
+          "after": "this paper explores possible future implications for social work education.",
+          "reason": "Exact AM wording; lowercase mid-sentence. VOR uses article, so do not silently replace the source expression."
+        },
+        {
+          "path": "/evidence/Soziale_Arbeit/0/snippet",
+          "before": "This paper explores possible future implications for social work education.",
+          "after": "this paper explores possible future implications for social work education.",
+          "reason": "Same exact AM correction in displayed evidence, not just the search term."
+        },
+        {
+          "path": "/categories/Fairness",
+          "before": 2,
+          "after": 1,
+          "reason": "Specific fair AI design is an explicit subordinate aspect; category 2 requires a central contribution under PRISM reviewer v1.0."
+        }
+      ],
+      "category_audit": [
+        {
+          "category": "AI_Literacies",
+          "before": 2,
+          "after": 2,
+          "locator": "PDF p.16 / manuscript p.15, Implications for Social Work Education",
+          "rationale": "Critical understanding of AI and what/how to teach are central recommendations, beyond tool operation.",
+          "evidence": {
+            "source_path": "generated/markdown_clean/VSZM7CT6.md",
+            "sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+            "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download",
+            "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+            "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+            "version_status": "proposed_not_yet_registered",
+            "locator": "PDF p.16 / manuscript p.15, Implications for Social Work Education",
+            "quote": "critical digital literacies in social work education"
+          }
+        },
+        {
+          "category": "Generative_KI",
+          "before": 0,
+          "after": 0,
+          "locator": "Whole manuscript, especially AI and Machine Learning and Conclusion",
+          "rationale": "General AI/ML and speculative automated summaries are discussed; no focused study of generative model families or LLMs."
+        },
+        {
+          "category": "Prompting",
+          "before": 0,
+          "after": 0,
+          "locator": "Whole manuscript",
+          "rationale": "No prompt-engineering strategies, input-design intervention or prompt evaluation."
+        },
+        {
+          "category": "KI_Sonstige",
+          "before": 2,
+          "after": 2,
+          "locator": "PDF p.10 / manuscript p.9, Artificial Intelligence in Higher Education",
+          "rationale": "AI/ML systems and their educational and social implications structure the whole argument.",
+          "evidence": {
+            "source_path": "generated/markdown_clean/VSZM7CT6.md",
+            "sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+            "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download",
+            "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+            "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+            "version_status": "proposed_not_yet_registered",
+            "locator": "PDF p.10 / manuscript p.9, Artificial Intelligence in Higher Education",
+            "quote": "AI systems are created by humans"
+          }
+        },
+        {
+          "category": "Soziale_Arbeit",
+          "before": 2,
+          "after": 2,
+          "locator": "PDF p.4 / manuscript p.3, Abstract",
+          "rationale": "Social-work education is the explicit object of the article; lowercase this and paper belong to the AM.",
+          "evidence": {
+            "source_path": "generated/markdown_clean/VSZM7CT6.md",
+            "sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+            "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download",
+            "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+            "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+            "version_status": "proposed_not_yet_registered",
+            "locator": "PDF p.4 / manuscript p.3, Abstract",
+            "quote": "this paper explores possible future implications for social work education."
+          }
+        },
+        {
+          "category": "Bias_Ungleichheit",
+          "before": 2,
+          "after": 2,
+          "locator": "PDF p.10 / manuscript p.9; pp.15-17 for power, marginalisation and critical education",
+          "rationale": "Structural inequity and concentrated technological power support the principal critical-education argument.",
+          "evidence": {
+            "source_path": "generated/markdown_clean/VSZM7CT6.md",
+            "sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+            "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download",
+            "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+            "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+            "version_status": "proposed_not_yet_registered",
+            "locator": "PDF p.10 / manuscript p.9; pp.15-17 for power, marginalisation and critical education",
+            "quote": "bias and structural inequity can be built into them"
+          }
+        },
+        {
+          "category": "Gender",
+          "before": 1,
+          "after": 1,
+          "locator": "PDF pp.10-11 / manuscript pp.9-10",
+          "rationale": "Explicit gender stereotype concern, subordinate to the broader educational and ethical argument; no gender-specific empirical analysis.",
+          "evidence": {
+            "source_path": "generated/markdown_clean/VSZM7CT6.md",
+            "sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+            "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download",
+            "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+            "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+            "version_status": "proposed_not_yet_registered",
+            "locator": "PDF pp.10-11 / manuscript pp.9-10",
+            "quote": "AI algorithms may reinforce racial and gender stereotypes"
+          }
+        },
+        {
+          "category": "Diversitaet",
+          "before": 0,
+          "after": 0,
+          "locator": "PDF pp.16-17",
+          "rationale": "Marginalised entities are mentioned within the critical ethics argument, without a distinct representation/diversity study or proposed diversity mechanism."
+        },
+        {
+          "category": "Feministisch",
+          "before": 0,
+          "after": 0,
+          "locator": "Theoretical framing and whole argument",
+          "rationale": "Posthumanist authors are used; this audit does not infer a feminist or intersectional method solely from their identities. No explicit structural gender analysis beyond the subordinate stereotype example."
+        },
+        {
+          "category": "Fairness",
+          "before": 2,
+          "after": 1,
+          "locator": "PDF p.11 / manuscript p.10, immediately before Ethical Considerations",
+          "rationale": "Explicit reference to fair AI system design is subordinate. General professional ethics and justice do not establish a central algorithmic-fairness contribution; no fairness metric or evaluated fair-system intervention is offered.",
+          "evidence": {
+            "source_path": "generated/markdown_clean/VSZM7CT6.md",
+            "sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+            "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download",
+            "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+            "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+            "version_status": "proposed_not_yet_registered",
+            "locator": "PDF p.11 / manuscript p.10, immediately before Ethical Considerations",
+            "quote": "fairness, privacy, transparency, and accountability"
+          }
+        }
+      ],
+      "analysis_audit": {
+        "before": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Race_Ethnicity"
+          ],
+          "AN_Harm_Types": [
+            "Stereotyping"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Education_Professional"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "Theoretischer Beitrag zu KI, kritischen digitalen Kompetenzen und sozialarbeiterischer Bildung.",
+          "Studientyp": "Theoretisch"
+        },
+        "after": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Race_Ethnicity"
+          ],
+          "AN_Harm_Types": [
+            "Stereotyping"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Education_Professional"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Notes": "Theoretischer Beitrag zu KI, kritischen digitalen Kompetenzen und sozialarbeiterischer Bildung.",
+          "Studientyp": "Theoretisch"
+        },
+        "finding": "No further analysis-field corrections required after source binding and category/quote correction.",
+        "rationales": {
+          "AN_Prompting_Role / AN_Prompt_Techniques": "None: no prompt practice is examined or recommended.",
+          "AN_Bias_Axes / AN_Harm_Types": "Gender and Race_Ethnicity / Stereotyping match the explicit racial/gender stereotype passage, not empirical effect sizes; no interaction is inferred.",
+          "AN_Mitigation_Stage / AN_Mitigation_Status": "Organisational_Process / Proposed: critical education and professional/institutional engagement are proposed in pp.16-17; this is neither demonstrated nor evaluated bias mitigation.",
+          "AN_Population": "Education_Professional: social-work higher education and professional preparation are the primary population/context.",
+          "AN_Coding_Basis / Studientyp / AN_Notes": "Fulltext / Theoretisch: a prospective critical argument ending in a speculative thought experiment, not an empirical intervention study or systematic literature review."
+        }
+      },
+      "decision_before": "Include",
+      "decision_after": "Include",
+      "review_scope": "Source identity, all ten categories, all existing analysis fields; original AM body pp.2-22 read, references distinguished from author argument. Six positive-category quotations independently checked against newly acquired original PDF extraction.",
+      "review_outcome": "changes_requested_until_projections_exist",
+      "acceptance_prerequisites": [
+        "Register AM under the existing Work while retaining the VOR as preferred and keeping record_index bibliographic.",
+        "Bind the actual source path/hash to AM; all receipt and public screening source-version consumers must use it.",
+        "Apply the two exact quote corrections and Fairness 2→1 as attributed projection; retain raw historical annotation.",
+        "Only then compute projected correction/binding hashes and issue a fresh accepted source-review receipt; do not accept the existing VOR-bound receipt."
+      ]
+    },
+    "EXRF5629": {
+      "record_id": "EXRF5629",
+      "finding": "confirmed_mixed_metadata_wrong_doi_wrong_authors_original_exact_title_found",
+      "agent_id": "/root/grounded_chat",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-05T14:46:50.260385+00:00",
+      "canonical_binding_before": {
+        "work_id": "work:80bb4056-d744-573e-bef8-17896d356d2e",
+        "version_id": "version:75660bfb-6982-59e7-ada4-3b60049ccd08"
+      },
+      "canonical_binding_after_proposed_local_repair": {
+        "work_id": "work:80bb4056-d744-573e-bef8-17896d356d2e",
+        "version_id": "version:75660bfb-6982-59e7-ada4-3b60049ccd08"
+      },
+      "identity_decision": "Repair the intended exact-title Trudeau Work locally, preserving opaque local IDs only with this explicit history. The Koçhan/Aypay paper is a different Work, never an alias or version of Trudeau.",
+      "supporting_identity_facts": [
+        "Exact case-normalized title match in publisher-deposited Crossref metadata and PMC original, not a fuzzy or similar-title match.",
+        "Original identifies TOP, Children's Hope Alliance / North Carolina and a second Iowa study, matching distinctive topic fragments in the synthetic local note.",
+        "All five original authors differ from the seven stored Spaulding et al. authors. Correct DOI is 107117; stored 107229 belongs to a resilience psycho-education study."
+      ],
+      "metadata_corrections": [
+        {
+          "record_id": "EXRF5629",
+          "base_artifact": "corpus/zotero_export.json#/28",
+          "base_record_sha256": "sha256:ad4e2948b7c1ae0acfc9d107a46971242081625f3b57fbad78eddf8899a8a58b",
+          "before_record": {
+            "key": "EXRF5629",
+            "version": 242,
+            "itemType": "journalArticle",
+            "title": "Predicting successful placements for youth in child welfare with machine learning",
+            "creators": [
+              {
+                "creatorType": "author",
+                "firstName": "A. D.",
+                "lastName": "Spaulding"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "E. J.",
+                "lastName": "Valentine"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "S. R.",
+                "lastName": "Skinner"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "R. A.",
+                "lastName": "Gosnell"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "K.",
+                "lastName": "Tran"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "J.",
+                "lastName": "Hatfield"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "J. K.",
+                "lastName": "Johnson"
+              }
+            ],
+            "date": "2023",
+            "url": "",
+            "DOI": "10.1016/j.childyouth.2023.107229",
+            "abstractNote": "Study developed machine learning models to predict treatment success for youth in various child welfare placement settings using data from 4,788 youth served by Children's Hope Alliance in North Carolina. Models aimed to distinguish which youth would succeed in high-cost residential psychiatric treatment versus community-based alternatives. Using Treatment Outcome Package (TOP) assessment data and gradient boosting algorithms, models achieved AUROCs >0.70 in predicting placement success. Addresses Family First Prevention Services Act requirement for right level of care determinations. Multiple raters per case improved model accuracy. Demonstrates feasibility of using existing clinical data to inform high-stakes placement decisions.",
+            "tags": [],
+            "collections": [],
+            "relations": {}
+          },
+          "changes": [
+            {
+              "field": "DOI",
+              "before_exists": true,
+              "before": "10.1016/j.childyouth.2023.107229",
+              "after": "10.1016/j.childyouth.2023.107117"
+            },
+            {
+              "field": "creators",
+              "before_exists": true,
+              "before": [
+                {
+                  "creatorType": "author",
+                  "firstName": "A. D.",
+                  "lastName": "Spaulding"
+                },
+                {
+                  "creatorType": "author",
+                  "firstName": "E. J.",
+                  "lastName": "Valentine"
+                },
+                {
+                  "creatorType": "author",
+                  "firstName": "S. R.",
+                  "lastName": "Skinner"
+                },
+                {
+                  "creatorType": "author",
+                  "firstName": "R. A.",
+                  "lastName": "Gosnell"
+                },
+                {
+                  "creatorType": "author",
+                  "firstName": "K.",
+                  "lastName": "Tran"
+                },
+                {
+                  "creatorType": "author",
+                  "firstName": "J.",
+                  "lastName": "Hatfield"
+                },
+                {
+                  "creatorType": "author",
+                  "firstName": "J. K.",
+                  "lastName": "Johnson"
+                }
+              ],
+              "after": [
+                {
+                  "creatorType": "author",
+                  "firstName": "Kimberlee J.",
+                  "lastName": "Trudeau"
+                },
+                {
+                  "creatorType": "author",
+                  "firstName": "Jichen",
+                  "lastName": "Yang"
+                },
+                {
+                  "creatorType": "author",
+                  "firstName": "Jiaming",
+                  "lastName": "Di"
+                },
+                {
+                  "creatorType": "author",
+                  "firstName": "Yi",
+                  "lastName": "Lu"
+                },
+                {
+                  "creatorType": "author",
+                  "firstName": "David R.",
+                  "lastName": "Kraus"
+                }
+              ]
+            },
+            {
+              "field": "publicationTitle",
+              "before_exists": false,
+              "before": null,
+              "after": "Children and Youth Services Review"
+            },
+            {
+              "field": "volume",
+              "before_exists": false,
+              "before": null,
+              "after": "153"
+            },
+            {
+              "field": "pages",
+              "before_exists": false,
+              "before": null,
+              "after": "107117"
+            },
+            {
+              "field": "url",
+              "before_exists": true,
+              "before": "",
+              "after": "https://doi.org/10.1016/j.childyouth.2023.107117"
+            },
+            {
+              "field": "abstractNote",
+              "before_exists": true,
+              "before": "Study developed machine learning models to predict treatment success for youth in various child welfare placement settings using data from 4,788 youth served by Children's Hope Alliance in North Carolina. Models aimed to distinguish which youth would succeed in high-cost residential psychiatric treatment versus community-based alternatives. Using Treatment Outcome Package (TOP) assessment data and gradient boosting algorithms, models achieved AUROCs >0.70 in predicting placement success. Addresses Family First Prevention Services Act requirement for right level of care determinations. Multiple raters per case improved model accuracy. Demonstrates feasibility of using existing clinical data to inform high-stakes placement decisions.",
+              "after": ""
+            }
+          ],
+          "projected_record_sha256": "sha256:94c22f48c40605b0cc56e20a7848dc70a91025359137a7ca52b25dc52e22fa20",
+          "write_scope": "local guarded projection only; preserve raw Zotero export"
+        }
+      ],
+      "synthetic_abstract_action": "Clear from projected original-abstract field; preserve the old text in raw export and this before snapshot. Do not relabel it original or use n=4,788/gradient boosting as extracted findings. Newly acquired original AM is available for a separate screening review.",
+      "distinct_wrong_doi_work": {
+        "doi": "10.1016/j.childyouth.2023.107229",
+        "title": "The effect of the resilience Psycho-Education program on 8th-grade students' resilience, school burnout, and school attachment levels",
+        "authors": [
+          "Kemal Koçhan",
+          "Ayşe Aypay"
+        ],
+        "journal": "Children and Youth Services Review",
+        "volume": "156",
+        "issue_date": "2024-01",
+        "article_number": "107229",
+        "relation_to_intended_work": "none; metadata error only",
+        "create_corpus_record": false
+      },
+      "identifier_removals_required": [
+        "doi:10.1016/j.childyouth.2023.107229 from active version identifiers and identifier_index",
+        "doi:10.1016/j.childyouth.2023.107229 from legacy_work_ids and legacy_work_id_index for this Work; retain only as a rejected historical identifier in the audit"
+      ],
+      "version_dates": {
+        "vor_first_online": "2023-08-04",
+        "vor_issue": "2023-10",
+        "am_year": "2023",
+        "pmc_available_date": "2024-10-01",
+        "warning": "PMC availability is not the AM publication date; no new 2024 study Version inferred."
+      },
+      "additional_source_version": {
+        "work_id": "work:80bb4056-d744-573e-bef8-17896d356d2e",
+        "proposed_version": {
+          "title": "Predicting successful placements for youth in child welfare with machine learning",
+          "authors": [
+            "Kimberlee J. Trudeau",
+            "Jichen Yang",
+            "Jiaming Di",
+            "Yi Lu",
+            "David R. Kraus"
+          ],
+          "version_type": "accepted_manuscript",
+          "version_date": "2023",
+          "item_type": "",
+          "journal_or_repository": "PubMed Central / NIH Manuscript Submission",
+          "identifiers": {
+            "url": [
+              "https://pmc.ncbi.nlm.nih.gov/articles/PMC10569152/"
+            ]
+          },
+          "peer_review_status": "peer_reviewed",
+          "peer_review_basis": "source_metadata",
+          "integrity_status": "current",
+          "access_status": "open_access",
+          "landing_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10569152/",
+          "fulltext_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10569152/",
+          "license": "",
+          "source_lanes": [],
+          "evidence": [],
+          "provenance": [],
+          "relations": [
+            {
+              "type": "isVersionOf",
+              "target_version_id": "version:75660bfb-6982-59e7-ada4-3b60049ccd08"
+            }
+          ],
+          "flags": [],
+          "version_id": "version:897684cb-05ac-541e-8872-c80a44062f26"
+        },
+        "id_status": "deterministically proposed using existing registry UUIDv5 rule; not registered yet",
+        "identity_rule": "Repository URL identifies manuscript; published DOI and Zotero key remain identifiers of the bibliographic Version of Record.",
+        "rights_rule": "Publicly readable manuscript; no Creative Commons or general redistribution licence inferred. Access status does not grant reuse rights."
+      },
+      "proposed_source_binding": {
+        "record_id": "EXRF5629",
+        "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/trudeau-pmc-original.md",
+        "source_sha256": "sha256:028152c0cc60276390fa3b4a6c9f5b8c5964065a19b7b26992923499a6d293cd",
+        "work_id": "work:80bb4056-d744-573e-bef8-17896d356d2e",
+        "source_version_id": "version:897684cb-05ac-541e-8872-c80a44062f26",
+        "source_version_type": "accepted_manuscript",
+        "bibliographic_version_id": "version:75660bfb-6982-59e7-ada4-3b60049ccd08",
+        "preferred_version_id": "version:75660bfb-6982-59e7-ada4-3b60049ccd08",
+        "is_preferred_version": false
+      },
+      "evidence": [
+        {
+          "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/exrf-existing-doi-crossref.json",
+          "sha256": "sha256:87b08921e2c57d36467ed448a6c76114062ca4b8c63fb12d300453d223866b3e",
+          "source_url": "https://api.crossref.org/works/10.1016/j.childyouth.2023.107229",
+          "locator": "message.DOI/title/author/volume/published-print"
+        },
+        {
+          "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/trudeau-2023-crossref.json",
+          "sha256": "sha256:8bad7e6e44633d486223d30b15ef699ae6915eb79685bbcdecaf68eba56f0e13",
+          "source_url": "https://api.crossref.org/works/10.1016/j.childyouth.2023.107117",
+          "locator": "message.DOI/title/author/volume/article-number"
+        },
+        {
+          "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/trudeau-pmc-original.md",
+          "sha256": "sha256:028152c0cc60276390fa3b4a6c9f5b8c5964065a19b7b26992923499a6d293cd",
+          "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10569152/",
+          "locator": "Article header, DOI, author list, PMCID/NIHMS/PMID, author-manuscript and publication dates",
+          "quote": "Author manuscript; available in PMC: 2024 Oct 1."
+        },
+        {
+          "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/trudeau-pmc-original.md",
+          "sha256": "sha256:028152c0cc60276390fa3b4a6c9f5b8c5964065a19b7b26992923499a6d293cd",
+          "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10569152/",
+          "locator": "Study 1 Methods, Step 2",
+          "quote": "in this project we built random forest classification models per domain"
+        }
+      ],
+      "screening_base_artifact": "docs/data/screening/ar2.json#/decisions/EXRF5629",
+      "screening_base_sha256": "sha256:4b9f91ae5e4fcb5cdcd22ddc11896b518434505753adcdff736b01af2cf91f53",
+      "screening_effect": "The historical Exclude/No_full_text is not accepted anew. Identity correction and acquisition resolve the source-access prerequisite, but fresh source-grounded screening with actual methods, samples and ethical discussion is required before public inclusion.",
+      "review_outcome": "identity_resolution_proposed_screening_pending"
+    }
+  },
+  "integration_findings": [
+    "The current registry has no general per-Zotero metadata override input. _version_from_zotero reads raw date/DOI/creators; implement a guarded local projection before this stage and use the same projected metadata in docs data generation.",
+    "The existing round2-agent-review mechanism only enriches candidate_bucket entries and cannot safely stand in for repairs to these existing records.",
+    "build_fulltext.source_identity currently copies bibliographic version_id from the paper record. A separate source-path/hash→source-version binding is required for AM sources; do not rebind record_index or attach Zotero key/VoR DOI to AM identifiers.",
+    "Preserve VOR preference with isVersionOf/hasVersion relations; never equate availability or source-reviewed status with preferred-version choice.",
+    "Receipt validators and landscape/public source records must validate source binding against the actual AM; stale VOR-bound receipts remain changes_requested.",
+    "The registry carries previous legacy aliases forward. EXRF's disproven DOI needs an explicit rejected-identifier removal rule or it remains a false active alias after a simple metadata patch.",
+    "Register guarded corrections/source bindings as build inputs, include before-record/source hashes and named AI attribution, and require source mismatch/staleness to fail closed."
+  ],
+  "acquisition_manifest": "corpus/source-acquisition/checklist-resolution-2026-09-05/acquisition-manifest.json"
+}

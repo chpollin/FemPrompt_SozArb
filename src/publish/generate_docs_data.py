@@ -28,6 +28,7 @@ from pathlib import Path
 from typing import Any, Mapping, Sequence
 
 from src.analysis.work_versions import load_registry, lookup_by_record
+from src.analysis.metadata_corrections import corrected_csv_metadata
 from src.file_hashing import canonical_file_bytes
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -108,7 +109,11 @@ def work_version_projection(
     if resolved is None:
         raise ValueError(f"{key}: absent from the canonical Work-Version registry")
     work, version = resolved
+    from src.analysis.work_versions import source_binding_for_record
+    source_binding = source_binding_for_record(dict(registry), key)
     return {
+        "source_binding": source_binding,
+        "source_hold": work.get("source_hold"),
         "work_id": work["work_id"],
         "identity_basis": "work_version_registry",
         "version_id": version["version_id"],
@@ -261,7 +266,13 @@ def parse_llm_row(
     title = meta.get("Title") or row.get("Title", "")
     knowledge_doc = None
     manifest_entry = (fulltext_manifest or {}).get(key, {})
-    if title:
+    metadata_correction = meta.get("_metadata_correction") or {}
+    invalidated_knowledge = bool(metadata_correction.get("invalidate_knowledge_doc")) or any(
+        change.get("field") in {"DOI", "creators", "title"}
+        and change.get("before") != change.get("after")
+        for change in metadata_correction.get("changes", [])
+    )
+    if title and not invalidated_knowledge:
         expected_filename = safe_title(title) + ".md"
         binding = (knowledge_bindings or {}).get(key)
         governed_filenames = {
@@ -297,7 +308,7 @@ def parse_llm_row(
     return {
         "id": key,
         "title": title,
-        "author_year": row.get("Author_Year", ""),
+        "author_year": (f"{meta.get('Authors', '').split(';')[0]} ({year})" if meta.get("_metadata_correction") else row.get("Author_Year", "")),
         "authors": meta.get("Authors", ""),
         "year": year,
         "doi": doi,
@@ -305,13 +316,17 @@ def parse_llm_row(
         "abstract": (meta.get("Abstract", "") or "")[:500],
         "item_type": (meta.get("Item_Type", "") or "").lower(),
         "journal": meta.get("Journal", "") or "",
+        **({"ai_metadata_correction": meta["_metadata_correction"]} if meta.get("_metadata_correction") else {}),
         "knowledge_doc": knowledge_doc,
+        **({"knowledge_doc_invalidation": {"reason": "bibliographic_identity_corrected", "basis": metadata_correction}} if invalidated_knowledge else {}),
         "knowledge_coverage": knowledge_coverage(knowledge_doc, manifest_entry),
         "work_id": work_id,
         "identity_basis": identity_basis,
         "legacy_work_id": legacy_work_id,
         "legacy_identity_basis": legacy_identity_basis,
         "version_id": version_projection["version_id"] if version_projection else None,
+        "source_binding": version_projection["source_binding"] if version_projection else None,
+        "source_hold": version_projection["source_hold"] if version_projection else None,
         "version_type": (
             version_projection["version_type"] if version_projection else "unknown"
         ),
@@ -420,6 +435,7 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         default=OUTPUT_VAULT,
         help="JSON target (default: docs/data/research_vault_v2.json)",
     )
+    parser.add_argument("--prepare-fulltext", action="store_true", help="Project current identities before the full-text manifest exists; the build must run the normal projection afterward.")
     return parser.parse_args(argv)
 
 
@@ -430,10 +446,13 @@ def main(argv: Sequence[str] | None = None) -> None:
     # Load metadata (for abstract, DOI, etc.)
     metadata_rows = read_csv(INPUT_METADATA)
     metadata_by_key = {r["Zotero_Key"].strip(): r for r in metadata_rows if r.get("Zotero_Key")}
+    metadata_by_key = corrected_csv_metadata(REPO_ROOT, metadata_by_key)
     print(f"  Metadata: {len(metadata_by_key)} papers")
 
-    with INPUT_FULLTEXT_MANIFEST.open(encoding="utf-8") as f:
-        fulltext_manifest = json.load(f)
+    fulltext_manifest = {}
+    if not args.prepare_fulltext:
+        with INPUT_FULLTEXT_MANIFEST.open(encoding="utf-8") as f:
+            fulltext_manifest = json.load(f)
     print(f"  Fulltext manifest: {len(fulltext_manifest)} records")
 
     with INPUT_KNOWLEDGE_BINDINGS.open(encoding="utf-8") as f:
@@ -570,7 +589,7 @@ def main(argv: Sequence[str] | None = None) -> None:
         INPUT_DISAGREEMENTS,
         INPUT_METRICS,
         INPUT_METADATA,
-        INPUT_FULLTEXT_MANIFEST,
+        *([] if args.prepare_fulltext else [INPUT_FULLTEXT_MANIFEST]),
         INPUT_KNOWLEDGE_BINDINGS,
         INPUT_CATEGORY_SCHEMA,
         INPUT_WORK_VERSION_CONTRACT,
@@ -580,6 +599,7 @@ def main(argv: Sequence[str] | None = None) -> None:
     # Build output JSON
     output = {
         "meta": {
+            "fulltext_projection_state": "preparation" if args.prepare_fulltext else "complete",
             "source_fingerprint": source_fingerprint(source_files),
             "total_papers": len(papers),
             "unique_works": len({paper["work_id"] for paper in papers}),
@@ -608,7 +628,7 @@ def main(argv: Sequence[str] | None = None) -> None:
     size_kb = args.output.stat().st_size / 1024
     print(f"  Done: {size_kb:.0f} KB")
 
-    if args.output.resolve() == OUTPUT_VAULT.resolve():
+    if not args.prepare_fulltext and args.output.resolve() == OUTPUT_VAULT.resolve():
         removed = prune_unreferenced_knowledge_docs(VAULT_PAPERS_DIR, papers)
         print(f"  Pruned unreferenced knowledge documents: {len(removed)}")
 

@@ -1,6 +1,6 @@
 # Data dictionary
 
-Source fingerprint: `sha256:a3283c993e9cca8e685f4d4d00b6875f163a062ab6512fed5d9fa90aac462b81`. Deterministic internal preparation; no approval is created.
+Source fingerprint: `sha256:7987896e4010383aeb99bd39c9c0700077ef27833a08ea9f6f8221db9e84396e`. Deterministic internal preparation; no approval is created.
 
 | Field / artifact | Meaning |
 |---|---|
@@ -10,6 +10,8 @@ Source fingerprint: `sha256:a3283c993e9cca8e685f4d4d00b6875f163a062ab6512fed5d9f
 | decision_authority | legacy_human, ai_review or unassessed; distinct tracks are never silently promoted. |
 | effective_decision | One consistent substantive human decision if recorded, otherwise one consistent AI decision; null on unresolved within-track conflict or absence. Explicit Exclude/Duplicate is a record disposition, not a substantive work exclusion. |
 | human_substantive_decisions / human_duplicate_record_ids | Work judgements and administrative duplicate records are distinct; all original dispositions and reasons remain in human_record_dispositions. |
+| historical_identity_bindings / human_metadata_error_record_ids | Attributed exact-row reconciliations link otherwise unbound historical decisions or separate documented metadata-error dispositions; they do not modify the Zotero library or historical CSV. |
+| historical_resolution / integrity_hold | Source-grounded conflict explanation, separate round-specific recommendation and any current source/withdrawal hold. A hold does not rewrite the historical decision and prevents current synthesis. |
 | human_verification | Historical CSV evidence or missing evidence; never a fabricated current lifecycle event. |
 | agent_records | Active annotation, lifecycle events, actor/model provenance, source references and legacy gaps as recorded. |
 | current_ai_source_review | Current accepted source-hash-bound review with actual agent, disclosed model, time and substantive findings; historical provenance remains separate. |
@@ -20,6 +22,8 @@ Source fingerprint: `sha256:a3283c993e9cca8e685f4d4d00b6875f163a062ab6512fed5d9f
 | analysis_fields | Consistent coded values across Include annotations of the work; absent values remain missing. |
 | analysis_conflicts / analysis_undecidable | Conflicting or explicitly undecidable coding; excluded from that field's denominator. |
 | source_blockers / next_actions | Preparation actions for the operator, not automatic exclusion reasons. |
+| source_acquisition_progress | Attributed metadata corrections and original-text acquisitions, checked against raw record and evidence hashes. An acquired text alone does not establish screening readiness or scholarly verification. |
+| knowledge_coverage | Deterministic availability inventory with missing documents, identity-review candidates and concept-graph binding gaps. Active maturity labels are recorded literally and do not substitute for current review receipts. |
 | candidate_id / canonical_bindings | Search-package identity and explicit current Zotero/registry mapping; title similarity never binds identities. |
 | targeted_followup_candidates | Separate gap-fill intake; preserves original candidate metadata and status, gap rationale, required next steps, source access, exact-version details and identification provenance. |
 | targeted_followup.source / targeted_followup_candidates[].source_artifact | Fingerprinted intake JSON and exact original candidate pointer. Source reading is identification evidence, not a new screening or human-verification event. |

@@ -12,7 +12,7 @@ version: "0.7"
 created: 2026-08-23
 updated: 2026-09-05
 authors: [Christopher Pollin]
-generated-with: Codex (GPT-5.6)
+generated-with: Codex (GPT-5.6), Codex (GPT-6)
 topics: ["[[Software Testing]]", "[[Research Software]]"]
 related: [specification, data, governance, verification, methods]
 ---
@@ -43,17 +43,20 @@ The automated suites cover the following contracts.
 - Every positive category requires Paper-layer evidence.
 - Include records require complete analysis coding under the controlled vocabulary.
 - Source identity conflicts fail closed before a full text can enter screening.
-- Every Zotero record and round-two candidate resolves to one stable Work and one exact Version; all Version relations resolve inside that Work.
+- Every record represented in the canonical registry resolves to one stable Work and exact bibliographic Version; all Version relations stay inside that Work. Unbound supplement candidates remain explicitly pending.
 - Preferred and latest Versions are derived independently, and a retracted Version cannot become preferred.
 - Full-text manifests, new reviewer files, agent runs, evidence items, active distillates, and public projections retain exact Work-Version bindings.
 - Reviewer files serialize deterministically and preserve actor and source provenance.
+- Ordinary PRISM entry and reload start read-only even with a stored reviewer profile: no reviewer/folder setup, cache writes or disk writes occur. `Bearbeiten` enables editing; returning to reading preserves the unsaved draft. Explicit trial, agent and verification routes retain their workflows, and acceptance remains read-only.
 - Browser recovery and repository files reconcile per Paper without silent overwrite.
 - Agent coding packets pass through PRISM's production validation, import, record-requirement, and serialization functions.
 - Validation receipts bind to the hash of the checked annotation.
 - Lifecycle transitions require authorised actor roles and valid predecessor states.
 - Productive agent merges are append-only and reject divergent overwrite.
 - Public literature projections enforce the configured release policy; AI-reviewed records require attributed artifact/source-hash-bound receipts. The default publisher without an explicit policy retains its human publication-approval gate.
-- Accepted AI analysis corrections preserve the original annotations and bind their exact original hash, before/after fields and source-reviewed correction artifact.
+- Accepted AI corrections preserve the original annotations and bind their exact original hash, bounded before/after fields and source-reviewed correction artifact. A separately bound manuscript cannot overwrite bibliographic identity.
+- The latest original/correction-family review governs both publication and completion. Later negative outcomes, missing correction tombstones, stale source hashes and conflicting simultaneous reviews cannot revive earlier acceptance.
+- Work-wide source or withdrawal holds exclude otherwise reviewed coding from current analysis and Assertion release.
 - Duplicate bibliographic records contribute once per Work to result aggregations; conflicting eligible codings stop publication.
 - The result-site allowlist excludes raw screening files and full-text assets, and its downloadable research JSON is byte-identical to the site data.
 - Grounded chat contexts contain released Assertions and exact source evidence; no-evidence queries remain local and provider answers require supplied evidence identifiers.

@@ -1,0 +1,30 @@
+{
+  "source_url": "https://arxiv.org/abs/2507.21075v1",
+  "retrieved_at": "2026-09-05T14:39:04.519869+00:00",
+  "raw_response_sha256": "sha256:ed03cffcf700cabe2d5d941cdb2ec26130a15342dea2ca3bb484aa7f60b58c92",
+  "citation_meta": {
+    "citation_title": [
+      "Can LLMs Reason About Trust?: A Pilot Study"
+    ],
+    "citation_author": [
+      "Debnath, Anushka",
+      "Cranefield, Stephen",
+      "Lorini, Emiliano",
+      "Savarimuthu, Bastin Tony Roy"
+    ],
+    "citation_date": [
+      "2025/06/11"
+    ],
+    "citation_online_date": [
+      "2025/06/11"
+    ],
+    "citation_pdf_url": [
+      "https://arxiv.org/pdf/2507.21075"
+    ],
+    "citation_arxiv_id": [
+      "2507.21075"
+    ]
+  },
+  "submission_history": "[v1] Wed, 11 Jun 2025 09:38:21 UTC (1,980 KB)",
+  "license_url": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+}

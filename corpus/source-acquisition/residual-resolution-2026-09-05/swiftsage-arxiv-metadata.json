@@ -1,0 +1,41 @@
+{
+  "source_url": "https://arxiv.org/abs/2305.17390v2",
+  "accessed_at": "2026-09-05T15:18:30.133475+00:00",
+  "raw_response_sha256": "sha256:413df650196196b1ebc2319cdd866f0fbc8485ce26527d49c82bc8e3f9d30d47",
+  "citation_meta": {
+    "citation_title": [
+      "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks"
+    ],
+    "citation_author": [
+      "Lin, Bill Yuchen",
+      "Fu, Yicheng",
+      "Yang, Karina",
+      "Brahman, Faeze",
+      "Huang, Shiyu",
+      "Bhagavatula, Chandra",
+      "Ammanabrolu, Prithviraj",
+      "Choi, Yejin",
+      "Ren, Xiang"
+    ],
+    "citation_date": [
+      "2023/05/27"
+    ],
+    "citation_online_date": [
+      "2023/12/06"
+    ],
+    "citation_pdf_url": [
+      "https://arxiv.org/pdf/2305.17390"
+    ],
+    "citation_arxiv_id": [
+      "2305.17390"
+    ],
+    "citation_abstract": [
+      "We introduce SwiftSage, a novel agent framework inspired by the dual-process theory of human cognition, designed to excel in action planning for complex interactive reasoning tasks. SwiftSage integrates the strengths of behavior cloning and prompting large language models (LLMs) to enhance task completion performance. The framework comprises two primary modules: the Swift module, representing fast and intuitive thinking, and the Sage module, emulating deliberate thought processes. The Swift module is a small encoder-decoder LM fine-tuned on the oracle agent's action trajectories, while the Sage module employs LLMs such as GPT-4 for subgoal planning and grounding. We develop a heuristic method to harmoniously integrate the two modules, resulting in a more efficient and robust problem-solving process. In 30 tasks from the ScienceWorld benchmark, SwiftSage significantly outperforms other methods such as SayCan, ReAct, and Reflexion, demonstrating its effectiveness in solving complex interactive tasks."
+    ]
+  },
+  "submission_history": "Submission history From: Bill Yuchen Lin [ view email ] [v1] Sat, 27 May 2023 07:04:15 UTC (8,764 KB) [v2] Wed, 6 Dec 2023 10:07:01 UTC (9,845 KB)",
+  "license_links": [
+    "http://creativecommons.org/licenses/by/4.0/"
+  ],
+  "abstract": "Abstract: We introduce SwiftSage, a novel agent framework inspired by the dual-process theory of human cognition, designed to excel in action planning for complex interactive reasoning tasks. SwiftSage integrates the strengths of behavior cloning and prompting large language models (LLMs) to enhance task completion performance. The framework comprises two primary modules: the Swift module, representing fast and intuitive thinking, and the Sage module, emulating deliberate thought processes. The Swift module is a small encoder-decoder LM fine-tuned on the oracle agent's action trajectories, while the Sage module employs LLMs such as GPT-4 for subgoal planning and grounding. We develop a heuristic method to harmoniously integrate the two modules, resulting in a more efficient and robust problem-solving process. In 30 tasks from the ScienceWorld benchmark, SwiftSage significantly outperforms other methods such as SayCan, ReAct, and Reflexion, demonstrating its effectiveness in solving complex interactive tasks."
+}

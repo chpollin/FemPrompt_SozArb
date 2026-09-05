@@ -1,0 +1,169 @@
+{
+  "schema": "femprompt-source-version-bindings/0.1",
+  "scope": "Reviewed reading-source identities only. Record index and preferred bibliographic versions remain unchanged; no screening or human authority is granted. Open access does not imply a general reuse licence.",
+  "records": {
+    "VSZM7CT6": {
+      "agent_id": "/root/aggregation",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-05T15:04:27.118395+00:00",
+      "reason": "Directly read Griffith manuscript cover and full manuscript discussion. Cover identifies accepted peer-reviewed manuscript, repository handle and published DOI; lowercase abstract wording matches the existing screening conversion. Bibliographic VOR retains DOI and Zotero key; source AM has only the repository URL.",
+      "bibliographic_identity": {
+        "title": "Problematising artificial intelligence in social work education: Challenges, issues and possibilities",
+        "doi": "10.1093/bjsw/bcab168"
+      },
+      "binding": {
+        "record_id": "VSZM7CT6",
+        "source_path": "generated/markdown_clean/VSZM7CT6.md",
+        "source_sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+        "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+        "source_version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+        "source_version_type": "accepted_manuscript",
+        "bibliographic_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+        "preferred_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+        "is_preferred_version": false,
+        "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download"
+      },
+      "version": {
+        "title": "Problematising artificial intelligence in social work education: Challenges, issues and possibilities",
+        "authors": [
+          "David Hodgson",
+          "Sophie Goldingay",
+          "Jennifer Boddy",
+          "Sharlene Nipperess",
+          "Lynelle Watts"
+        ],
+        "version_type": "accepted_manuscript",
+        "version_date": "2021",
+        "item_type": "",
+        "journal_or_repository": "Griffith Research Online",
+        "identifiers": {
+          "url": [
+            "https://hdl.handle.net/10072/407943"
+          ]
+        },
+        "peer_review_status": "peer_reviewed",
+        "peer_review_basis": "source_metadata",
+        "integrity_status": "current",
+        "access_status": "open_access",
+        "landing_url": "https://hdl.handle.net/10072/407943",
+        "fulltext_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download",
+        "license": "",
+        "source_lanes": [],
+        "evidence": [],
+        "provenance": [],
+        "relations": [
+          {
+            "type": "isVersionOf",
+            "target_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e"
+          }
+        ],
+        "flags": [],
+        "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec"
+      },
+      "evidence": [
+        {
+          "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/hodgson-2021-crossref.json",
+          "sha256": "sha256:bea299704700047ee8e47349fc48a00f94606c303348a347146d974d6c3ce74a",
+          "source_url": "https://api.crossref.org/works/10.1093/bjsw/bcab168",
+          "locator": "message.title/author/DOI/published-online/published-print/volume/issue/page"
+        },
+        {
+          "source_path": "generated/markdown_clean/VSZM7CT6.md",
+          "sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+          "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download",
+          "locator": "Cover p.1 and Abstract p.4",
+          "quote": "Accepted Manuscript (AM)"
+        },
+        {
+          "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/hodgson-griffith-am-text.md",
+          "sha256": "sha256:eaa18a97253a97d8d0ef65a5464e02a01422341769d3b5be5dfc6988eb3af12f",
+          "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download",
+          "locator": "Direct primary PDF extraction, cover and manuscript title/abstract, PDF pages 1-4",
+          "quote": "This is a pre-copy-editing, author-produced PD F of an article"
+        }
+      ]
+    },
+    "EXRF5629": {
+      "agent_id": "/root/aggregation",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-05T15:04:27.118395+00:00",
+      "reason": "Read primary PMC manuscript header, author list and publication/availability dates. Correct DOI and author identity are required before this source can bind; the repository source is a separate accepted manuscript. Source availability permits renewed screening, does not accept the historical No_full_text record or grant Include.",
+      "bibliographic_identity": {
+        "title": "Predicting successful placements for youth in child welfare with machine learning",
+        "doi": "10.1016/j.childyouth.2023.107117"
+      },
+      "binding": {
+        "record_id": "EXRF5629",
+        "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/trudeau-pmc-original.md",
+        "source_sha256": "sha256:028152c0cc60276390fa3b4a6c9f5b8c5964065a19b7b26992923499a6d293cd",
+        "work_id": "work:80bb4056-d744-573e-bef8-17896d356d2e",
+        "source_version_id": "version:897684cb-05ac-541e-8872-c80a44062f26",
+        "source_version_type": "accepted_manuscript",
+        "bibliographic_version_id": "version:75660bfb-6982-59e7-ada4-3b60049ccd08",
+        "preferred_version_id": "version:75660bfb-6982-59e7-ada4-3b60049ccd08",
+        "is_preferred_version": false
+      },
+      "version": {
+        "title": "Predicting successful placements for youth in child welfare with machine learning",
+        "authors": [
+          "Kimberlee J. Trudeau",
+          "Jichen Yang",
+          "Jiaming Di",
+          "Yi Lu",
+          "David R. Kraus"
+        ],
+        "version_type": "accepted_manuscript",
+        "version_date": "2023",
+        "item_type": "",
+        "journal_or_repository": "PubMed Central / NIH Manuscript Submission",
+        "identifiers": {
+          "url": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC10569152/"
+          ]
+        },
+        "peer_review_status": "peer_reviewed",
+        "peer_review_basis": "source_metadata",
+        "integrity_status": "current",
+        "access_status": "open_access",
+        "landing_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10569152/",
+        "fulltext_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10569152/",
+        "license": "",
+        "source_lanes": [],
+        "evidence": [],
+        "provenance": [],
+        "relations": [
+          {
+            "type": "isVersionOf",
+            "target_version_id": "version:75660bfb-6982-59e7-ada4-3b60049ccd08"
+          }
+        ],
+        "flags": [],
+        "version_id": "version:897684cb-05ac-541e-8872-c80a44062f26"
+      },
+      "evidence": [
+        {
+          "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/trudeau-2023-crossref.json",
+          "sha256": "sha256:8bad7e6e44633d486223d30b15ef699ae6915eb79685bbcdecaf68eba56f0e13",
+          "source_url": "https://api.crossref.org/works/10.1016/j.childyouth.2023.107117",
+          "locator": "message.DOI/title/author/volume/article-number"
+        },
+        {
+          "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/trudeau-pmc-original.md",
+          "sha256": "sha256:028152c0cc60276390fa3b4a6c9f5b8c5964065a19b7b26992923499a6d293cd",
+          "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10569152/",
+          "locator": "Article header, DOI, author list, PMCID/NIHMS/PMID, author-manuscript and publication dates",
+          "quote": "Author manuscript; available in PMC: 2024 Oct 1."
+        },
+        {
+          "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/trudeau-pmc-original.md",
+          "sha256": "sha256:028152c0cc60276390fa3b4a6c9f5b8c5964065a19b7b26992923499a6d293cd",
+          "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10569152/",
+          "locator": "Study 1 Methods, Step 2",
+          "quote": "in this project we built random forest classification models per domain"
+        }
+      ]
+    }
+  }
+}

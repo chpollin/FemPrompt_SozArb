@@ -1,0 +1,943 @@
+{
+  "schema": "femprompt-historical-source-acquisition/0.1",
+  "records": [
+    {
+      "key": "WGVC7FQ5",
+      "url": "https://api.crossref.org/works/10.1177%2F14614448211022702",
+      "http_status": 429,
+      "retrieved_at": "2026-09-05T14:40:09.107532+00:00",
+      "response_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "key": "DZ39L7GC",
+      "url": "https://api.crossref.org/works/10.1609%2Faaai.v35i17.17833",
+      "http_status": 200,
+      "retrieved_at": "2026-09-05T14:40:09.118127+00:00",
+      "response_sha256": "sha256:81efccd9a0e86ff1edaea438aec1d7e6eeadaec0c05478ed00a93a2c7d2a12b4",
+      "title": [
+        "Why and What to Teach: AI Curriculum for Elementary School"
+      ],
+      "authors": [
+        {
+          "given": "Seonghun",
+          "family": "Kim",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Yeonju",
+          "family": "Jang",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Woojin",
+          "family": "Kim",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Seongyune",
+          "family": "Choi",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Heeseok",
+          "family": "Jung",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Soohwan",
+          "family": "Kim",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Hyeoncheol",
+          "family": "Kim",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "source_path": "corpus/source-acquisition/historical-resolution-2026-09-05/DZ39L7GC.json",
+      "sha256": "sha256:ef16166688ab602a7517832c98c650834cbc205cbf5172e27988e0a1faba2248"
+    },
+    {
+      "key": "7WMD5JQ6",
+      "url": "https://api.crossref.org/works/10.1002%2Fpra2.1472",
+      "http_status": 429,
+      "retrieved_at": "2026-09-05T14:40:09.103537+00:00",
+      "response_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "key": "CLADZZKS",
+      "url": "https://api.crossref.org/works/10.1016%2Fj.caeai.2021.100041",
+      "http_status": 200,
+      "retrieved_at": "2026-09-05T14:40:09.221520+00:00",
+      "response_sha256": "sha256:2e15efb50f2a99c2fb5252d80c1e0fb84da7d649d5d01ee923de436146135b8c",
+      "title": [
+        "Conceptualizing AI literacy: An exploratory review"
+      ],
+      "authors": [
+        {
+          "ORCID": "https://orcid.org/0000-0002-2380-7814",
+          "authenticated-orcid": false,
+          "given": "Davy Tsz Kit",
+          "family": "Ng",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-6490-7005",
+          "authenticated-orcid": false,
+          "given": "Jac Ka Lok",
+          "family": "Leung",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-1557-2776",
+          "authenticated-orcid": false,
+          "given": "Samuel Kai Wah",
+          "family": "Chu",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Maggie Shen",
+          "family": "Qiao",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "source_path": "corpus/source-acquisition/historical-resolution-2026-09-05/CLADZZKS.json",
+      "sha256": "sha256:7c1c845e1052f91f7cf9d97aab834e34f6b290c1278894508d556113c9baa062"
+    },
+    {
+      "key": "6JAZXKEB",
+      "url": "https://api.crossref.org/works/10.1016%2Fj.caeai.2022.100054",
+      "http_status": 200,
+      "retrieved_at": "2026-09-05T14:40:11.921668+00:00",
+      "response_sha256": "sha256:c57b459ff12025117c0b90e2a0ea5f483833fec80e3c2b8011d84a7f1efc294f",
+      "title": [
+        "Using digital story writing as a pedagogy to develop AI literacy among primary students"
+      ],
+      "authors": [
+        {
+          "ORCID": "https://orcid.org/0000-0002-2380-7814",
+          "authenticated-orcid": false,
+          "given": "Davy Tsz Kit",
+          "family": "Ng",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Wanying",
+          "family": "Luo",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Helen Man Yi",
+          "family": "Chan",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-1557-2776",
+          "authenticated-orcid": false,
+          "given": "Samuel Kai Wah",
+          "family": "Chu",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "source_path": "corpus/source-acquisition/historical-resolution-2026-09-05/6JAZXKEB.json",
+      "sha256": "sha256:5658a68f2da5c29ee94a0e8ce6fb7e3ceab0e1f1c955f9bdcdfc6291b4c46026"
+    },
+    {
+      "key": "JJLSMEQA",
+      "url": "https://api.crossref.org/works/10.1016%2Fj.caeai.2025.100373",
+      "http_status": 200,
+      "retrieved_at": "2026-09-05T14:40:12.237273+00:00",
+      "response_sha256": "sha256:c7b67dd1b055fda6e321d5bcb4ba808ddc27806c7a0406a5aea588bd253c6644",
+      "title": [
+        "Opportunities, challenges and school strategies for integrating generative AI in education"
+      ],
+      "authors": [
+        {
+          "ORCID": "https://orcid.org/0000-0002-2380-7814",
+          "authenticated-orcid": false,
+          "given": "Davy Tsz Kit",
+          "family": "Ng",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Eagle Kai Chi",
+          "family": "Chan",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Chung Kwan",
+          "family": "Lo",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "source_path": "corpus/source-acquisition/historical-resolution-2026-09-05/JJLSMEQA.json",
+      "sha256": "sha256:9f5af91aed883a7c8690d01e2d9e7f95e5d2af0b4f5581493006e141e50d907c"
+    },
+    {
+      "key": "MQJEES7J",
+      "url": "https://api.crossref.org/works/10.1016%2Fj.chbah.2025.100162",
+      "http_status": 200,
+      "retrieved_at": "2026-09-05T14:40:12.237273+00:00",
+      "response_sha256": "sha256:db0f4a29a8c043ea4e9abd995a51ca83e35adc66bf2a0fdbe01fc3d7e5a00fc9",
+      "title": [
+        "AI literacy and trust: A multi-method study of Human-GAI team collaboration"
+      ],
+      "authors": [
+        {
+          "ORCID": "https://orcid.org/0000-0001-7641-0362",
+          "authenticated-orcid": false,
+          "given": "Zilong",
+          "family": "Pan",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-5215-3493",
+          "authenticated-orcid": false,
+          "given": "Ozias A.",
+          "family": "Moore",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-9811-2630",
+          "authenticated-orcid": false,
+          "given": "Antigoni",
+          "family": "Papadimitriou",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jiayan",
+          "family": "Zhu",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "source_path": "corpus/source-acquisition/historical-resolution-2026-09-05/MQJEES7J.json",
+      "sha256": "sha256:521022173e139e3842294d5fb7db12eaa76feee1423eb13dfee292dcdd0ca081"
+    },
+    {
+      "key": "H8WRNPP7",
+      "url": "https://api.crossref.org/works/10.1007%2Fs12525-024-00707-1",
+      "http_status": 200,
+      "retrieved_at": "2026-09-05T14:40:12.473517+00:00",
+      "response_sha256": "sha256:35b9950ab338f25ce933eaba027dccc0604e8b3729ceaecb7f89bf846f61a3a5",
+      "title": [
+        "AI Literacy for the top management: An upper echelons perspective on corporate AI orientation and implementation ability"
+      ],
+      "authors": [
+        {
+          "ORCID": "https://orcid.org/0000-0003-2464-9026",
+          "authenticated-orcid": false,
+          "given": "Marc",
+          "family": "Pinski",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Thomas",
+          "family": "Hofmann",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-7294-3097",
+          "authenticated-orcid": false,
+          "given": "Alexander",
+          "family": "Benlian",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "source_path": "corpus/source-acquisition/historical-resolution-2026-09-05/H8WRNPP7.json",
+      "sha256": "sha256:0f956891386fc75f796d722ff685c1280c017c4aebe778b6fa022ee534902ce6"
+    },
+    {
+      "key": "UY65LIAI",
+      "url": "https://api.crossref.org/works/10.70389%2FPJAI.1000088",
+      "http_status": 200,
+      "retrieved_at": "2026-09-05T14:40:14.783973+00:00",
+      "response_sha256": "sha256:4ce7dce079a3ed5de9f35b16da9e0125c617df2fe40dcf3714594de5ba638261",
+      "title": [
+        "Gender Bias in Artificial Intelligence: Empowering Women Through Digital Literacy"
+      ],
+      "authors": [
+        {
+          "ORCID": "https://orcid.org/0000-0002-4739-4014",
+          "authenticated-orcid": true,
+          "given": "Syed Sibghatullah",
+          "family": "Shah",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Quaid-i-Azam University",
+              "place": [
+                "Islamabad"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "source_path": "corpus/source-acquisition/historical-resolution-2026-09-05/UY65LIAI.json",
+      "sha256": "sha256:fde7d964efd9f4a520a895c4637f7a4a35fdb11ab52cbb2807c1c54c1385a440"
+    },
+    {
+      "key": "9MDIBETZ",
+      "url": "https://api.crossref.org/works/10.1145%2F3658644.3670284",
+      "http_status": 200,
+      "retrieved_at": "2026-09-05T14:40:15.573832+00:00",
+      "response_sha256": "sha256:22d6db5e46f0bee9da79308aa69ef3294a30a8590433e1412d42b4b3ce8c1344",
+      "title": [
+        "GenderCARE: A Comprehensive Framework for Assessing and Reducing Gender Bias in Large Language Models"
+      ],
+      "authors": [
+        {
+          "ORCID": "https://orcid.org/0009-0002-5690-2364",
+          "authenticated-orcid": false,
+          "given": "Kunsheng",
+          "family": "Tang",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "University of Science and Technology of China, Hefei, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-4703-4641",
+          "authenticated-orcid": false,
+          "given": "Wenbo",
+          "family": "Zhou",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Science and Technology of China, Hefei, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-4230-1077",
+          "authenticated-orcid": false,
+          "given": "Jie",
+          "family": "Zhang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Nanyang Technological University, Singapore, Singapore"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-4224-1318",
+          "authenticated-orcid": false,
+          "given": "Aishan",
+          "family": "Liu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Beihang University, Beijing, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-0046-6674",
+          "authenticated-orcid": false,
+          "given": "Gelei",
+          "family": "Deng",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Nanyang Technological University, Singapore, Singapore"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0009-0000-1875-575X",
+          "authenticated-orcid": false,
+          "given": "Shuai",
+          "family": "Li",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Science and Technology of China, Hefei, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0009-0006-4580-539X",
+          "authenticated-orcid": false,
+          "given": "Peigui",
+          "family": "Qi",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Science and Technology of China, Hefei, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-5576-6108",
+          "authenticated-orcid": false,
+          "given": "Weiming",
+          "family": "Zhang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Science and Technology of China, Hefei, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-6595-6650",
+          "authenticated-orcid": false,
+          "given": "Tianwei",
+          "family": "Zhang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Nanyang Technological University, Singapore, Singapore"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-4417-9316",
+          "authenticated-orcid": false,
+          "given": "NengHai",
+          "family": "Yu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Science and Technology of China, Hefei, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "source_path": "corpus/source-acquisition/historical-resolution-2026-09-05/9MDIBETZ.json",
+      "sha256": "sha256:681e54fd94a3cf016887012e69a876f24b25bc9b6792b73fdf0fd1d9acf8f864"
+    },
+    {
+      "key": "R2LPR3VD",
+      "url": "https://api.crossref.org/works/10.1145%2F3381884",
+      "http_status": 200,
+      "retrieved_at": "2026-09-05T14:40:15.515300+00:00",
+      "response_sha256": "sha256:e0084d7e31512dd3d5548a59c86baa9e05041b03d6acd4f325ebe598147b14bc",
+      "title": [
+        "Broadening artificial intelligence education in K-12"
+      ],
+      "authors": [
+        {
+          "given": "Gary K. W.",
+          "family": "Wong",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "The University of Hong Kong"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Xiaojuan",
+          "family": "Ma",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "The Hong Kong University of Science and Technology"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Pierre",
+          "family": "Dillenbourg",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "EPFL Swiss Federal Institute of Technology"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "John",
+          "family": "Huan",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "STEM Academy"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "source_path": "corpus/source-acquisition/historical-resolution-2026-09-05/R2LPR3VD.json",
+      "sha256": "sha256:faf4341591803e3006ca24579b57b0270d8cf098d9b64fcb0ce523584a00640c"
+    },
+    {
+      "key": "latif-v2",
+      "url": "https://arxiv.org/html/2312.10833v2",
+      "http_status": 200,
+      "retrieved_at": "2026-09-05T14:40:27.056187+00:00",
+      "response_sha256": "sha256:ad68305686c71e90eba34b9e7abf6c98322a2c6453059c1dd8b0668c57477f61",
+      "representation": "HTML text extraction with BeautifulSoup; full source URL and raw-response hash retained",
+      "source_path": "corpus/source-acquisition/historical-resolution-2026-09-05/latif-v2.txt",
+      "sha256": "sha256:f59619a08a897c02f336f05c97a868463cef553bce79a123c0a0984d09516e0e"
+    },
+    {
+      "key": "latif-v4",
+      "url": "https://arxiv.org/html/2312.10833v4",
+      "http_status": 200,
+      "retrieved_at": "2026-09-05T14:40:30.649367+00:00",
+      "response_sha256": "sha256:7af27146a969286c9d61633a99260ea5595b3f847ee9cb500f05688c7e2f19b8",
+      "representation": "HTML text extraction with BeautifulSoup; full source URL and raw-response hash retained",
+      "source_path": "corpus/source-acquisition/historical-resolution-2026-09-05/latif-v4.txt",
+      "sha256": "sha256:fa9a2f3f7766fe5a5bd63ce65c9ad412122e42221e9c01e5453679fbac21c18f"
+    },
+    {
+      "key": "latif-history",
+      "url": "https://arxiv.org/abs/2312.10833",
+      "http_status": 200,
+      "retrieved_at": "2026-09-05T14:40:21.524126+00:00",
+      "response_sha256": "sha256:6b195433ee8b5d5621f54a86064ec25f65121cc64f2846267dba3ba56e970756",
+      "representation": "HTML text extraction with BeautifulSoup; full source URL and raw-response hash retained",
+      "source_path": "corpus/source-acquisition/historical-resolution-2026-09-05/latif-history.txt",
+      "sha256": "sha256:ddc931d4f3e9a13d843fac2421e05b2ab5c179e4564a24548712a10e6c4e9494"
+    },
+    {
+      "key": "asseri-v1",
+      "url": "https://arxiv.org/html/2506.18199v1",
+      "http_status": 200,
+      "retrieved_at": "2026-09-05T14:40:33.321863+00:00",
+      "response_sha256": "sha256:d2ec027b0d00986be3d67590a8b1e61cc6546de6ae233dbb1980ea609da4c487",
+      "representation": "HTML text extraction with BeautifulSoup; full source URL and raw-response hash retained",
+      "source_path": "corpus/source-acquisition/historical-resolution-2026-09-05/asseri-v1.txt",
+      "sha256": "sha256:af3e41cf9b3475a6ad5b255942115a0928cb331afd40e72ddb126632304632eb"
+    },
+    {
+      "key": "asseri-history",
+      "url": "https://arxiv.org/abs/2506.18199",
+      "http_status": 200,
+      "retrieved_at": "2026-09-05T14:40:27.743360+00:00",
+      "response_sha256": "sha256:294d7b3462ab2a59480c8044c8aa583aa66ad53c1679dfe064ad22205c676715",
+      "representation": "HTML text extraction with BeautifulSoup; full source URL and raw-response hash retained",
+      "source_path": "corpus/source-acquisition/historical-resolution-2026-09-05/asseri-history.txt",
+      "sha256": "sha256:630c00ade8d44b6ba7ed06c45b26355ad75e1e401200729829327a26349c65e3"
+    },
+    {
+      "key": "boetto-metadata",
+      "url": "https://api.crossref.org/works/10.1080%2F0312407X.2025.2488345",
+      "http_status": 200,
+      "retrieved_at": "2026-09-05T14:40:28.790602+00:00",
+      "response_sha256": "sha256:42c02c9df714113b433f42c36f80b6aeefdebe230ed7fca7664267cbd2a1ce29",
+      "title": [
+        "Artificial Intelligence in Social Work: An EPIC Model for Practice"
+      ],
+      "authors": [
+        {
+          "ORCID": "https://orcid.org/0000-0002-3606-7878",
+          "authenticated-orcid": false,
+          "given": "Heather",
+          "family": "Boetto",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Charles Sturt University",
+              "place": [
+                "Wagga Wagga, Australia"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "source_path": "corpus/source-acquisition/historical-resolution-2026-09-05/boetto-metadata.json",
+      "sha256": "sha256:1d7a9087589a6e2e6690aa33b09c085b0194c4756469a99ac601f96f439687fa"
+    },
+    {
+      "key": "WGVC7FQ5",
+      "url": "https://api.crossref.org/works/10.1177%2F14614448211022702",
+      "http_status": 200,
+      "retrieved_at": "2026-09-05T14:41:42.589356+00:00",
+      "response_sha256": "sha256:036890e374b95adccbc7640106e0786355c3f8adb53dda3aeaa6e3bc9e5ca447",
+      "source_path": "corpus/source-acquisition/historical-resolution-2026-09-05/WGVC7FQ5.json",
+      "sha256": "sha256:6b68bd183d8d0472b0fb6a9b3ea3f73cd916c264cacd987b311cef253403f55a",
+      "title": [
+        "Artificial intelligence and mass personalization of communication content—An ethical and literacy perspective"
+      ],
+      "authors": [
+        {
+          "ORCID": "https://orcid.org/0000-0003-0895-3562",
+          "authenticated-orcid": false,
+          "given": "Erik",
+          "family": "Hermann",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "IHP—Leibniz-Institut für innovative Mikroelektronik, Germany"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "7WMD5JQ6",
+      "url": "https://api.crossref.org/works/10.1002%2Fpra2.1472",
+      "http_status": 200,
+      "retrieved_at": "2026-09-05T14:41:43.923330+00:00",
+      "response_sha256": "sha256:c12a990997800cf66db2c938cf7498f653304aca77a10ddd30cf7de5197ff6d1",
+      "source_path": "corpus/source-acquisition/historical-resolution-2026-09-05/7WMD5JQ6.json",
+      "sha256": "sha256:55a4c0958e22c0cb12547b5bba380bc5698c58c44bad0d58b86c2f723f13b356",
+      "title": [
+        "Toward Agency‐Centered\n                    <scp>AI</scp>\n                    Literacy: A Scoping Review"
+      ],
+      "authors": [
+        {
+          "given": "Takuya",
+          "family": "Maeda",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Western University  Canada"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Hillary",
+          "family": "Anderson",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Western University  Canada"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Anabel",
+          "family": "Quan‐Haase",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Western University  Canada"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Katharine",
+          "family": "Willis",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Plymouth  UK"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Selena",
+          "family": "Gignac",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Western University  Canada"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

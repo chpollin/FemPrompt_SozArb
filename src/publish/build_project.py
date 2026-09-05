@@ -28,7 +28,7 @@ OUTPUTS = (
 OUTPUT_DIRS = ("docs/data/fulltext", "generated/completion", "build/site")
 INPUT_GLOBS = (
     "src/**/*.py", "config/*.json", "assessment/*.csv", "assessment/*.yaml",
-    "corpus/**/*.json", "corpus/**/*.ris", "corpus/**/*.md", "corpus/papers_metadata.csv",
+    "corpus/**/*.json", "corpus/**/*.ris", "corpus/**/*.md", "corpus/**/*.txt", "corpus/papers_metadata.csv",
     "generated/markdown/*.md", "generated/markdown_clean/*.md",
     "generated/distilled/**/*.json", "generated/distilled/**/*.md",
     "generated/source-acquisition/**/*.json", "generated/source-acquisition/**/*.md",
@@ -47,6 +47,8 @@ INPUT_GLOBS = (
     ".github/workflows/*.yaml",
     "package.json", "package-lock.json", "requirements-build.txt",
 )
+LOCAL_INPUT_PATHS = {"docs/js/config.local.js"}
+LOCAL_INPUT_PREFIXES = ("generated/distilled/_evidence_audit/",)
 
 
 def file_hash(path: Path) -> str:
@@ -60,7 +62,9 @@ def snapshot(repo: Path) -> dict[str, Any]:
     missing = sorted(p.relative_to(repo).as_posix() for p in outputs if not p.is_file())
     if missing:
         raise ValueError("Missing build outputs: " + ", ".join(missing))
-    inputs = {p for pattern in INPUT_GLOBS for p in repo.glob(pattern) if p.is_file()} - outputs
+    inputs = {p for pattern in INPUT_GLOBS for p in repo.glob(pattern)
+              if p.is_file() and p.relative_to(repo).as_posix() not in LOCAL_INPUT_PATHS
+              and not p.relative_to(repo).as_posix().startswith(LOCAL_INPUT_PREFIXES)} - outputs
     return {
         "schema": "femprompt-project-build/0.1",
         "inputs": {p.relative_to(repo).as_posix(): file_hash(p) for p in sorted(inputs, key=lambda item: item.relative_to(repo).as_posix())},
@@ -102,10 +106,10 @@ def build() -> None:
     for module in ("src.publish.build_category_schema", "src.publish.build_analysis_fields",
                    "src.analysis.build_work_version_registry"):
         _run(module)
-    # The committed corpus is the bootstrap inventory. Refresh source identities
-    # before rejoining assessments; then verify the resulting mapping is stable.
-    _run("src.publish.build_fulltext")
-    _run("src.publish.generate_docs_data")
+    # Project current registry/source identities before resolving any full text.
+    # Rejoin the resulting source manifest once; only one full-text pass is
+    # needed, and an old corpus cannot label a new manuscript binding as VOR.
+    _run("src.publish.generate_docs_data", "--prepare-fulltext")
     _run("src.publish.build_fulltext")
     _run("src.publish.generate_docs_data")
     for module in ("src.publish.generate_promptotyping_data_v2", "src.publish.build_screening_index",

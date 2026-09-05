@@ -1,0 +1,34 @@
+[
+  {
+    "name": "kabra-arxiv-v3",
+    "requested_url": "https://arxiv.org/html/2504.05632v3",
+    "accessed_at": "2026-09-05T15:21:01.225541+00:00",
+    "agent_id": "/root/grounded_chat",
+    "model": "GPT-6",
+    "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+    "status": 200,
+    "resolved_url": "https://arxiv.org/html/2504.05632v3",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 246568,
+    "response_sha256": "sha256:b59816732e856e3c761ad0ef8a3fdf35949ebe49db675a2a83129c1420aab2e6",
+    "outcome": "original_html_text_acquired",
+    "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-v3-text.md",
+    "source_sha256": "sha256:bac6454052cd33fa790fde5c12b2bfc10fd340fb20433725feecd6a804283620"
+  },
+  {
+    "name": "swiftsage-arxiv-v2",
+    "requested_url": "https://arxiv.org/html/2305.17390v2",
+    "accessed_at": "2026-09-05T15:21:01.226541+00:00",
+    "agent_id": "/root/grounded_chat",
+    "model": "GPT-6",
+    "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+    "status": 200,
+    "resolved_url": "https://arxiv.org/html/2305.17390v2",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 291169,
+    "response_sha256": "sha256:ef3b85048a65067643cb3c35109774c3fe6cfe85fdac51543998abd64ce7dbc1",
+    "outcome": "original_html_text_acquired",
+    "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-v2-text.md",
+    "source_sha256": "sha256:fd64251d9eed80eca0689fe3bad5e8ea15465746be71af1e38d7f8c9bdb553d1"
+  }
+]

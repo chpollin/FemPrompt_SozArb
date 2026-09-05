@@ -1,0 +1,135 @@
+{
+  "schema": "femprompt-checklist-source-acquisition/0.1",
+  "requests": [
+    {
+      "requested_url": "https://api.crossref.org/works/10.1016/j.childyouth.2023.107229",
+      "accessed_at": "2026-09-05T14:36:19.572171+00:00",
+      "name": "exrf-existing-doi-crossref.json",
+      "agent_id": "/root/grounded_chat",
+      "model": "GPT-6 (exact deployment identifier unavailable)",
+      "status": 200,
+      "resolved_url": "https://api.crossref.org/works/10.1016/j.childyouth.2023.107229",
+      "content_type": "application/json",
+      "bytes": 28263,
+      "sha256": "sha256:87b08921e2c57d36467ed448a6c76114062ca4b8c63fb12d300453d223866b3e",
+      "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/exrf-existing-doi-crossref.json"
+    },
+    {
+      "requested_url": "https://api.crossref.org/works/10.1016/j.childyouth.2023.107117",
+      "accessed_at": "2026-09-05T14:36:19.572691+00:00",
+      "name": "trudeau-2023-crossref.json",
+      "agent_id": "/root/grounded_chat",
+      "model": "GPT-6 (exact deployment identifier unavailable)",
+      "status": 200,
+      "resolved_url": "https://api.crossref.org/works/10.1016/j.childyouth.2023.107117",
+      "content_type": "application/json",
+      "bytes": 17089,
+      "sha256": "sha256:8bad7e6e44633d486223d30b15ef699ae6915eb79685bbcdecaf68eba56f0e13",
+      "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/trudeau-2023-crossref.json"
+    },
+    {
+      "requested_url": "https://api.crossref.org/works/10.1093/bjsw/bcab168",
+      "accessed_at": "2026-09-05T14:36:19.573209+00:00",
+      "name": "hodgson-2021-crossref.json",
+      "agent_id": "/root/grounded_chat",
+      "model": "GPT-6 (exact deployment identifier unavailable)",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "requested_url": "https://export.arxiv.org/api/query?id_list=2507.21075",
+      "accessed_at": "2026-09-05T14:36:19.573209+00:00",
+      "name": "debnath-arxiv.xml",
+      "agent_id": "/root/grounded_chat",
+      "model": "GPT-6 (exact deployment identifier unavailable)",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "requested_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download",
+      "accessed_at": "2026-09-05T14:36:20.201801+00:00",
+      "name": "hodgson-griffith-am.pdf",
+      "agent_id": "/root/grounded_chat",
+      "model": "GPT-6 (exact deployment identifier unavailable)",
+      "status": 200,
+      "resolved_url": "https://research-repository.griffith.edu.au/server/api/core/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/content",
+      "content_type": "application/pdf;charset=UTF-8",
+      "bytes": 376601,
+      "sha256": "sha256:4a87dd98c0084b1155670e6eb69736727a0b26f1114d5403f16a8737faef3ebd",
+      "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/hodgson-griffith-am.pdf"
+    },
+    {
+      "requested_url": "https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi?id=PMC10569152",
+      "accessed_at": "2026-09-05T14:36:20.384579+00:00",
+      "name": "trudeau-pmc-oa-status.xml",
+      "agent_id": "/root/grounded_chat",
+      "model": "GPT-6 (exact deployment identifier unavailable)",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "requested_url": "https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_xml/PMC10569152/unicode",
+      "accessed_at": "2026-09-05T14:36:20.794387+00:00",
+      "name": "trudeau-pmc.xml",
+      "agent_id": "/root/grounded_chat",
+      "model": "GPT-6 (exact deployment identifier unavailable)",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "requested_url": "https://api.crossref.org/works/10.1093/bjsw/bcab168",
+      "accessed_at": "2026-09-05T14:39:03.420720+00:00",
+      "name": "hodgson-2021-crossref.json",
+      "agent_id": "/root/grounded_chat",
+      "model": "GPT-6 (exact deployment identifier unavailable)",
+      "status": 200,
+      "resolved_url": "https://api.crossref.org/works/10.1093/bjsw/bcab168",
+      "content_type": "application/json",
+      "response_sha256": "sha256:bea299704700047ee8e47349fc48a00f94606c303348a347146d974d6c3ce74a",
+      "response_bytes": 23996,
+      "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/hodgson-2021-crossref.json",
+      "sha256": "sha256:bea299704700047ee8e47349fc48a00f94606c303348a347146d974d6c3ce74a",
+      "bytes": 23996
+    },
+    {
+      "requested_url": "https://arxiv.org/abs/2507.21075v1",
+      "accessed_at": "2026-09-05T14:39:04.519869+00:00",
+      "name": "debnath-arxiv-metadata.json",
+      "agent_id": "/root/grounded_chat",
+      "model": "GPT-6 (exact deployment identifier unavailable)",
+      "status": 200,
+      "resolved_url": "https://arxiv.org/abs/2507.21075v1",
+      "content_type": "text/html; charset=utf-8",
+      "response_sha256": "sha256:ed03cffcf700cabe2d5d941cdb2ec26130a15342dea2ca3bb484aa7f60b58c92",
+      "response_bytes": 40514,
+      "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/debnath-arxiv-metadata.json",
+      "sha256": "sha256:7f6d5cb01d26b6cd43ac7689b20d82f9f6a5b95a6a90b6a03d6eff574fd67303",
+      "bytes": 846
+    },
+    {
+      "requested_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10569152/",
+      "accessed_at": "2026-09-05T14:39:05.739360+00:00",
+      "name": "trudeau-pmc-original.md",
+      "agent_id": "/root/grounded_chat",
+      "model": "GPT-6 (exact deployment identifier unavailable)",
+      "status": 200,
+      "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10569152/",
+      "content_type": "text/html; charset=utf-8",
+      "response_sha256": "sha256:9c4e2df723fa520f4926d2c176682e42230c9372b6f6805a712f75011889b077",
+      "response_bytes": 189738,
+      "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/trudeau-pmc-original.md",
+      "sha256": "sha256:028152c0cc60276390fa3b4a6c9f5b8c5964065a19b7b26992923499a6d293cd",
+      "bytes": 51417
+    }
+  ],
+  "derivatives": [
+    {
+      "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/hodgson-griffith-am-text.md",
+      "sha256": "sha256:eaa18a97253a97d8d0ef65a5464e02a01422341769d3b5be5dfc6988eb3af12f",
+      "derived_from": "corpus/source-acquisition/checklist-resolution-2026-09-05/hodgson-griffith-am.pdf",
+      "method": "pypdf page-by-page direct text extraction; PDF retained; no synthesis",
+      "generated_at": "2026-09-05T14:46:50.260385+00:00"
+    }
+  ],
+  "rights": {
+    "hodgson_griffith_am": "Cover: copyright 2021 Oxford University Press; author-produced accepted manuscript following peer review. No CC licence found.",
+    "trudeau_pmc_am": "PMC identifies Author manuscript / NIHMS1924189. No CC licence found in downloaded source. Crossref reports an Elsevier AM user licence URL; not treated as a general redistribution licence.",
+    "debnath_arxiv": "arXiv non-exclusive distribution licence to arXiv; not a CC licence."
+  }
+}

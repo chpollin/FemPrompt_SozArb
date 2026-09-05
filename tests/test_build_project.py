@@ -5,6 +5,16 @@ import pytest
 from src.publish import build_project
 
 
+def test_local_settings_and_temporary_audits_do_not_change_portable_build_inputs(tmp_path, monkeypatch):
+    monkeypatch.setattr(build_project, "OUTPUTS", ())
+    monkeypatch.setattr(build_project, "OUTPUT_DIRS", ())
+    for name in ("docs/js/config.local.js", "docs/js/chat.js", "generated/distilled/_evidence_audit/summary.md", "generated/distilled/study.md"):
+        path = tmp_path / name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text("test", encoding="utf-8")
+    assert set(build_project.snapshot(tmp_path)["inputs"]) == {"docs/js/chat.js", "generated/distilled/study.md"}
+
+
 def test_build_freshness_detects_input_and_output_changes(tmp_path, monkeypatch):
     monkeypatch.setattr(build_project, "OUTPUTS", ("out.json",))
     monkeypatch.setattr(build_project, "OUTPUT_DIRS", ())

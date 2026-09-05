@@ -29,6 +29,32 @@ def _real_paper(paper_id: str) -> dict[str, object]:
     return next(paper for paper in papers if paper["id"] == paper_id)
 
 
+def test_curated_source_binding_bootstraps_without_a_displayed_knowledge_document(tmp_path, monkeypatch):
+    data = tmp_path / "docs/data"
+    data.mkdir(parents=True)
+    clean = tmp_path / "clean"
+    clean.mkdir()
+    source = clean / "Pilot_2026_study.md"
+    source.write_text("# Pilot study\n\nStudy text.\n", encoding="utf-8")
+    (data / "knowledge_doc_bindings.json").write_text(json.dumps({"bindings": {"X": {"source_file": source.name}}}), encoding="utf-8")
+    monkeypatch.setattr(bf, "ROOT", tmp_path)
+    monkeypatch.setattr(bf, "CLEAN_DIR", clean)
+    assert bf.resolve_docling(_paper("Pilot 2026"), {}, {}) == (source, "clean")
+    source.write_text("# Unrelated publication about a different question\n", encoding="utf-8")
+    assert bf.resolve_docling(_paper("Pilot 2026"), {}, {}) == (None, "mismatch")
+
+
+@pytest.mark.parametrize("paper_id", ["3GB9B4IJ", "2YS85B49", "BCBWSU3Z"])
+def test_corrected_debnath_year_preserves_exact_known_conversion(paper_id):
+    paper = _real_paper(paper_id)
+    paper.update(year=2025, author_year="A. Debnath (2025)")
+    clean_idx = {bf.norm(path.stem): path.name for path in bf.CLEAN_DIR.glob("*.md")}
+    raw_idx = {bf.norm(path.stem): path.name for path in bf.RAW_DIR.glob("*.md")}
+    path, src = bf.resolve_docling(paper, clean_idx, raw_idx)
+    assert src == "clean"
+    assert path.name == "Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study.md"
+
+
 def test_unique_fallback_resolves(
     tmp_path: Path, monkeypatch: pytest.MonkeyPatch
 ) -> None:

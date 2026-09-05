@@ -3,10 +3,11 @@
 import hashlib
 import json
 
+import pytest
 import yaml
 
 from src.analysis import build_completion_package as completion
-from src.assess.artifact_verification import artifact_hash, record_hash
+from src.assess.artifact_verification import artifact_hash, record_hash, validated_reviews, latest_screening_review, reviewed_screening_projection
 
 
 def registry():
@@ -14,6 +15,30 @@ def registry():
         "record_index": {"A": {"work_id": "work:one", "version_id": "version:one"}, "B": {"work_id": "work:one", "version_id": "version:two"}},
         "works": [{"work_id": "work:one", "canonical_title": "One scholarly contribution", "preferred_version_id": "version:two"}],
     }
+
+
+def test_residual_progress_checks_sources_without_inventing_screening(tmp_path):
+    report_path = tmp_path / completion.RESIDUAL
+    report_path.parent.mkdir(parents=True)
+    (tmp_path / "queue.json").write_text("{}", encoding="utf-8")
+    (tmp_path / "raw.json").write_text('[{"key":"A"}]', encoding="utf-8")
+    (tmp_path / "original.md").write_text("Original article", encoding="utf-8")
+    entry = {"record_id": "A", "canonical_binding_before": registry()["record_index"]["A"],
+             "agent_id": "test", "model": "test", "reviewed_at": "2026-09-05T12:00:00Z",
+             "finding": "Original acquired", "next_step": "Bind and screen",
+             "raw_metadata_reference": "raw.json#/0", "raw_record_sha256": artifact_hash(tmp_path, "raw.json#/0"),
+             "scholarly_screening_status": "not_performed_in_this_task",
+             "original_text": {"source_path": "original.md", "sha256": artifact_hash(tmp_path, "original.md")}}
+    report = {"schema": "femprompt-residual-source-resolution/0.1", "records": {"A": entry},
+              "scope": {"original_queue": "queue.json", "original_queue_sha256": artifact_hash(tmp_path, "queue.json")}}
+    report_path.write_text(json.dumps(report), encoding="utf-8")
+    inputs = set()
+    result = completion._residual_progress(tmp_path, registry(), inputs)
+    assert result["A"]["scholarly_screening_status"] == "not_performed_in_this_task"
+    assert "original.md" in inputs and "raw.json" in inputs
+    (tmp_path / "original.md").write_text("Different version", encoding="utf-8")
+    with pytest.raises(ValueError, match="Stale residual source"):
+        completion._residual_progress(tmp_path, registry(), inputs)
 
 
 def agent(record_id, techniques=None, decision="Include"):
@@ -141,6 +166,71 @@ def test_unresolved_negative_source_review_stays_open_and_out_of_analysis():
     assert "open_source_review" in rows[0]["conflicts"]
     assert not rows[0]["analysis_eligible"]
     assert all(row["work_count"] == 0 for row in completion._analysis(rows, schema()))
+
+
+def _family_review_fixture(tmp_path):
+    artifact = "docs/data/screening/ar2.json#/decisions/A"
+    body = {"decision": "Include", "analysis": {"fields": {"AN_Prompt_Techniques": ["ICL"]}}}
+    original = {**body, "active_annotation_id": "original", "annotations": [{"annotation_id": "original", "body": body}], "lifecycle": {"state": "ai-agent-reviewed"}}
+    path = tmp_path / "docs/data/screening/ar2.json"
+    path.parent.mkdir(parents=True)
+    path.write_text(json.dumps({"schema": "femprompt-prisma-reviewer/0.2", "decisions": {"A": original}}), encoding="utf-8")
+    (tmp_path / "source.md").write_text("A supported finding.", encoding="utf-8")
+    receipt = {"artifact": artifact, "sha256": record_hash(original), "result": "accepted", "review_type": "ai-source-review", "agent_id": "test-reviewer", "model": "test-model", "reviewed_at": "2026-09-05T12:00:00Z", "findings": "Fixture source review.", "evidence": [{"source_path": "source.md", "sha256": artifact_hash(tmp_path, "source.md"), "work_id": "work:one", "version_id": "version:one", "locator": "paragraph 1", "quote": "A supported finding."}]}
+    return artifact, original, receipt
+
+
+@pytest.mark.parametrize("all_acceptances_revoked", [False, True])
+@pytest.mark.parametrize("missing_correction", [False, True])
+def test_later_negative_correction_is_current_and_excluded_from_completion_analysis(tmp_path, all_acceptances_revoked, missing_correction):
+    artifact, original, accepted = _family_review_fixture(tmp_path)
+    correction_artifact = "generated/verification/corrections.json#/corrections/A"
+    negative = dict(accepted, artifact=correction_artifact, sha256="sha256:" + "0" * 64, result="changes_requested", reviewed_at="2026-09-05T14:00:00Z", base_artifact=artifact, findings="The newer correction does not match its source.")
+    if not missing_correction:
+        correction_path = tmp_path / "generated/verification/corrections.json"
+        correction_path.parent.mkdir(parents=True)
+        correction_path.write_text(json.dumps({"corrections": {"A": {"base_artifact": artifact}}}), encoding="utf-8")
+        negative.pop("base_artifact")  # Exercise correlation through artifact bytes.
+    entries = [accepted, negative]
+    if all_acceptances_revoked:
+        entries.append(dict(accepted, result="unverifiable", reviewed_at="2026-09-05T13:00:00Z"))
+    reviews = validated_reviews(tmp_path, {"schema": "femprompt-artifact-verification/0.1", "reviews": entries})
+    assert bool(reviews) is not all_acceptances_revoked
+    assert latest_screening_review(tmp_path, artifact, reviews) == negative
+    assert reviewed_screening_projection(tmp_path, artifact, original, reviews) == (original, None, None)
+    agents, issues = completion._agent_records(tmp_path, set(), reviews)
+    row = agents["A"][0]
+    assert not issues
+    assert row["current_ai_review_result"] == "changes_requested"
+    assert row["current_ai_source_review"]["artifact"] == correction_artifact
+    assert row["current_ai_source_review"]["findings"] == negative["findings"]
+    assert row["applied_ai_correction"] is None
+    assert row["decision"] == "Include" and row["analysis"] == original["analysis"]["fields"]
+    works, _ = completion._work_rows(registry(), [], agents, {})
+    assert works[0]["open_ai_source_review_record_ids"] == ["A"]
+    assert works[0]["analysis_eligible"] is False
+    assert all(cell["work_count"] == 0 for cell in completion._analysis(works, schema()))
+
+
+def test_completion_fails_closed_for_simultaneous_conflicting_family_reviews(tmp_path):
+    artifact, _, accepted = _family_review_fixture(tmp_path)
+    negative = dict(accepted, artifact="missing-correction.json#/corrections/A", result="changes_requested", base_artifact=artifact)
+    reviews = validated_reviews(tmp_path, {"schema": "femprompt-artifact-verification/0.1", "reviews": [accepted, negative]})
+    with pytest.raises(ValueError, match="Conflicting screening family reviews"):
+        completion._agent_records(tmp_path, set(), reviews)
+
+
+@pytest.mark.parametrize("integrity_hold", [False, True])
+def test_source_hold_excludes_current_accepted_coding_from_completion_analysis(integrity_hold):
+    reviewed = agent("A", ["ICL"])
+    reviewed["current_ai_review_result"] = "accepted"
+    resolution = {"work_resolutions": {"work:one": {"withhold_from_current_synthesis": True, "integrity_hold": integrity_hold}}}
+    works, _ = completion._work_rows(registry(), [], {"A": [reviewed]}, {}, resolution)
+    assert works[0]["current_ai_review_results"] == ["accepted"]
+    assert works[0]["effective_decision"] == "Include"
+    assert works[0]["analysis_eligible"] is False
+    assert ("source_integrity_hold" if integrity_hold else "source_version_hold") in works[0]["conflicts"]
+    assert all(cell["work_count"] == 0 for cell in completion._analysis(works, schema()))
 
 
 def test_source_readiness_checks_bytes_and_does_not_invent_binding(tmp_path):

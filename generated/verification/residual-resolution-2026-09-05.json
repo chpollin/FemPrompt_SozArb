@@ -1,0 +1,1026 @@
+{
+  "schema": "femprompt-residual-source-resolution/0.1",
+  "agent_id": "/root/grounded_chat",
+  "model": "GPT-6",
+  "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+  "reviewed_at": "2026-09-05T15:40:49.955416+00:00",
+  "source_cutoff": "2026-09-05",
+  "scope": {
+    "original_queue": "generated/source-acquisition/residual-queue-9-20260826/resolution-ledger.json",
+    "original_queue_sha256": "sha256:219b7a3105a3cc63daa065763660e2c4d4280ce35146d405fb90d27f2534801a",
+    "residual_record_ids": [
+      "5T55I5Z7",
+      "ZQHP5G35",
+      "KI9GRGHB",
+      "LR8Z3YHP",
+      "XG7RFFC7",
+      "SQYLQFRU",
+      "RAY6G2R7",
+      "Z9DNTBFF"
+    ],
+    "additional_related_metadata_alias": "ACDF4FL9",
+    "excluded_already_resolved_record": "8NG4ZEWE"
+  },
+  "authority_boundary": "Local attributed metadata projections and original-source acquisition only. Raw Zotero export, historical annotations, registry and public outputs are unchanged by this task. No new accepted scholarly screening, human verification, Zotero synchronization or publication approval is claimed.",
+  "records": {
+    "5T55I5Z7": {
+      "record_id": "5T55I5Z7",
+      "agent_id": "/root/grounded_chat",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-05T15:40:49.955416+00:00",
+      "canonical_binding_before": {
+        "work_id": "work:b440aa78-e9c1-5b93-8d4d-2200924a02cd",
+        "version_id": "version:09999996-2035-5d96-8058-aa9bb3c2b668"
+      },
+      "raw_metadata_reference": "corpus/zotero_export.json#/320",
+      "raw_record_sha256": "sha256:05485c620fd1fac5f4d146d604784823e2389142db7f8781481c0ef9b1bcb3dd",
+      "previous_status": "blocked_official_delivery",
+      "scholarly_screening_status": "not_performed_in_this_task",
+      "metadata_status": "official_publication_identity_confirmed",
+      "source_status": "official_delivery_still_blocked",
+      "source_ready": false,
+      "finding": "The official publication remains UNESCO 2020, ARK ark:/48223/pf0000374174. The raw download URL lacks https://; adding the scheme fixes URL syntax but did not provide a complete publication in this environment. No licence or full-text review is inferred.",
+      "official_landing_url": "https://unesdoc.unesco.org/ark:/48223/pf0000374174",
+      "delivery_attempts": {
+        "recorded_curl_attempt": "corpus/source-acquisition/residual-resolution-2026-09-05/acquisition-manifest.json",
+        "verified_tls_alternative": "OpenSSL requests transport was terminated after a 40-second total bound without a saved original.",
+        "web_tool": "Official DownloadWatermarkedAttachment endpoint and ARK/PDF route both returned non-retryable safe-open errors. No further retries performed."
+      },
+      "next_step": "Keep the source hold. Provide the official UNESCO PDF through the ordinary library/browser download or another authorised official delivery.",
+      "concrete_access_question": "Kann die offizielle UNESCO-Datei 374174eng.pdf aus dem UNESCO-Bibliothekseintrag bereitgestellt werden?"
+    },
+    "ZQHP5G35": {
+      "record_id": "ZQHP5G35",
+      "agent_id": "/root/grounded_chat",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-05T15:40:49.955416+00:00",
+      "canonical_binding_before": {
+        "work_id": "work:5d44ca3d-827b-5f4e-a4f1-1ee40ec55c18",
+        "version_id": "version:d25aa754-f559-54ef-bd2f-4f8d0bec38a5"
+      },
+      "raw_metadata_reference": "corpus/zotero_export.json#/35",
+      "raw_record_sha256": "sha256:e0d9c00922e30c19dee0026de449aabcd317919cc84b0888f17bdc2d759c10cf",
+      "previous_status": "blocked_fulltext_unavailable",
+      "scholarly_screening_status": "not_performed_in_this_task",
+      "metadata_status": "identity_and_issue_year_confirmed_no_required_identity_change",
+      "source_status": "fulltext_not_acquired",
+      "source_ready": false,
+      "finding": "Publisher-deposited Crossref metadata confirms the title, authors, DOI and issue year. The earlier online date is a publication chronology fact, not proof that the existing issue year is wrong. Publisher full-text delivery returned 403; metadata or abstract access is not a full-text review.",
+      "chronology": {
+        "published_online": "2021-06-02",
+        "published_print": "2023-01-02",
+        "journal": "Information, Communication & Society"
+      },
+      "evidence": [
+        {
+          "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/joergensen-crossref.json",
+          "sha256": "sha256:cc8d777835c5bbc8516888a6c454853bb3827bd4f0c7696009abf7b4df45a05a",
+          "source_url": "https://api.crossref.org/works/10.1080/1369118X.2021.1934069",
+          "locator": "message.title, DOI, author, container-title, published-online and published-print"
+        }
+      ],
+      "next_step": "Supply an authorised full text or accepted manuscript through institutional/library access; retain the source hold until a concrete original version is available.",
+      "concrete_access_question": "Ist ein institutionell zugänglicher Volltext oder ein autorisiertes akzeptiertes Manuskript dieser genauen DOI verfügbar?",
+      "repository_checks": [
+        {
+          "url": "https://marycenter.ku.dk/samarbejde-med-os/formater-for-samarbejde/policy-fellowship/digitalisering-og-teknologi/forskere/rikke-frank-joergensen/",
+          "finding": "Official researcher profile links the publisher; no independent OA full text found in the targeted search."
+        }
+      ]
+    },
+    "KI9GRGHB": {
+      "record_id": "KI9GRGHB",
+      "agent_id": "/root/grounded_chat",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-05T15:40:49.955416+00:00",
+      "canonical_binding_before": {
+        "work_id": "work:a6e813e5-57e0-555c-92f9-1155ffc79f42",
+        "version_id": "version:e3428c27-954b-565a-9d89-d546870301b3"
+      },
+      "raw_metadata_reference": "corpus/zotero_export.json#/25",
+      "raw_record_sha256": "sha256:3d7d2787479d768a8bdd6267f6df8b260448f0814bef3a90cebf7dd8f3c3bf02",
+      "previous_status": "blocked_fulltext_unavailable",
+      "scholarly_screening_status": "not_performed_in_this_task",
+      "metadata_status": "identity_and_issue_year_confirmed_no_required_identity_change",
+      "source_status": "fulltext_not_acquired",
+      "source_ready": false,
+      "finding": "Publisher-deposited Crossref metadata confirms the title, authors, DOI and issue year. The earlier online date is a publication chronology fact, not proof that the existing issue year is wrong. Publisher full-text delivery returned 403; metadata or abstract access is not a full-text review.",
+      "chronology": {
+        "published_online": "2021-06-21",
+        "published_print": "2022-05-04",
+        "journal": "European Journal of Information Systems"
+      },
+      "evidence": [
+        {
+          "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/marjanovic-crossref.json",
+          "sha256": "sha256:885255858ebbc634c7c12ab9a0fb14ff1a7e172e6ab670502360d4c313bb29eb",
+          "source_url": "https://api.crossref.org/works/10.1080/0960085X.2021.1934130",
+          "locator": "message.title, DOI, author, container-title, published-online and published-print"
+        }
+      ],
+      "next_step": "Supply an authorised full text or accepted manuscript through institutional/library access; retain the source hold until a concrete original version is available.",
+      "concrete_access_question": "Ist ein institutionell zugänglicher Volltext oder ein autorisiertes akzeptiertes Manuskript dieser genauen DOI verfügbar?",
+      "repository_checks": [
+        {
+          "url": "https://research.unsw.edu.au/people/emeritus-professor-richard-timothy-vidgen/publications?page=0&type=journalarticles",
+          "finding": "Official author publication list confirms the work and DOI but exposes no full-text PDF."
+        },
+        {
+          "url": "https://opus.lib.uts.edu.au/handle/10453/169167",
+          "finding": "Parent /root reported a same-day check explicitly showing Closed access. This agent does not relabel a file listing as an accessible download.",
+          "observation_attribution": "/root, relayed in the current task on 2026-09-05"
+        },
+        {
+          "url": "https://researchers.mq.edu.au/en/publications/theorising-algorithmic-justice",
+          "finding": "Parent /root reported metadata-only access on the same day.",
+          "observation_attribution": "/root"
+        }
+      ]
+    },
+    "LR8Z3YHP": {
+      "record_id": "LR8Z3YHP",
+      "agent_id": "/root/grounded_chat",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-05T15:40:49.955416+00:00",
+      "canonical_binding_before": {
+        "work_id": "work:62cbd3ab-96ea-50e4-b877-2f65571a8f83",
+        "version_id": "version:d523f07b-3eed-5bf9-9073-62ffb923d65b"
+      },
+      "raw_metadata_reference": "corpus/zotero_export.json#/31",
+      "raw_record_sha256": "sha256:a54fc5bea1aeab7b40ae48abdaac215734dae38419d5809ae68917e73fe4c923",
+      "previous_status": "blocked_canonical_identity_conflict",
+      "scholarly_screening_status": "not_performed_in_this_task",
+      "metadata_status": "corrected_in_guarded_local_projection",
+      "correction_reference": "corpus/metadata_corrections.json#/corrections/4",
+      "before_after": [
+        {
+          "field": "DOI",
+          "before": "10.1177/0950017020950021",
+          "after": "10.1080/03085147.2020.1733842",
+          "reason": "The distinctive full title matches the publisher-deposited Crossref record and University of Copenhagen publication record. The correct DOI is 10.1080/03085147.2020.1733842 and author order is Klaus Hoeyer then Sarah Wadmann; the existing 2020 year is correct. The former DOI must not remain an identity alias."
+        },
+        {
+          "field": "creators",
+          "before": [
+            {
+              "creatorType": "author",
+              "firstName": "S.",
+              "lastName": "Wadmann"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "K.",
+              "lastName": "Hoeyer"
+            }
+          ],
+          "after": [
+            {
+              "creatorType": "author",
+              "firstName": "Klaus",
+              "lastName": "Hoeyer"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "Sarah",
+              "lastName": "Wadmann"
+            }
+          ],
+          "reason": "The distinctive full title matches the publisher-deposited Crossref record and University of Copenhagen publication record. The correct DOI is 10.1080/03085147.2020.1733842 and author order is Klaus Hoeyer then Sarah Wadmann; the existing 2020 year is correct. The former DOI must not remain an identity alias."
+        },
+        {
+          "field": "publicationTitle",
+          "before": null,
+          "after": "Economy and Society",
+          "reason": "The distinctive full title matches the publisher-deposited Crossref record and University of Copenhagen publication record. The correct DOI is 10.1080/03085147.2020.1733842 and author order is Klaus Hoeyer then Sarah Wadmann; the existing 2020 year is correct. The former DOI must not remain an identity alias."
+        },
+        {
+          "field": "url",
+          "before": "",
+          "after": "https://doi.org/10.1080/03085147.2020.1733842",
+          "reason": "The distinctive full title matches the publisher-deposited Crossref record and University of Copenhagen publication record. The correct DOI is 10.1080/03085147.2020.1733842 and author order is Klaus Hoeyer then Sarah Wadmann; the existing 2020 year is correct. The former DOI must not remain an identity alias."
+        }
+      ],
+      "finding": "The distinctive full title matches the publisher-deposited Crossref record and University of Copenhagen publication record. The correct DOI is 10.1080/03085147.2020.1733842 and author order is Klaus Hoeyer then Sarah Wadmann; the existing 2020 year is correct. The former DOI must not remain an identity alias.",
+      "evidence": [
+        {
+          "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/hoeyer-wadmann-crossref.json",
+          "sha256": "sha256:c38394eca735a1eb9949071c6aa2d0896b9a14899c70289bd99b9f86c4bf415e",
+          "source_url": "https://api.crossref.org/works/10.1080/03085147.2020.1733842",
+          "locator": "message.title, author (ordered), DOI, container-title, published-online, published-print, license"
+        }
+      ],
+      "integration_rule": "Preserve the corrected record identity when rebuilding, discard wrong former identifiers rather than making them aliases, and bind only the exact original version. Historical raw rows remain immutable.",
+      "source_status": "official_open_fulltext_identified_but_local_delivery_blocked",
+      "source_ready": false,
+      "primary_version": {
+        "title": "'Meaningless work': How the datafication of health reconfigures knowledge about work and erodes professional judgement",
+        "doi": "10.1080/03085147.2020.1733842",
+        "version_type": "version_of_record",
+        "year": 2020,
+        "published_online": "2020-07-28",
+        "publisher_reported_print_date": "2020-07-02",
+        "date_note": "Crossref has print date earlier than online date; retain 2020 bibliography year rather than silently choosing a day."
+      },
+      "access_evidence": {
+        "landing_url": "https://researchprofiles.ku.dk/en/publications/meaningless-work-how-the-datafication-of-health-reconfigures-know/",
+        "locator": "Access to Document: Fulltext, Final published version, 661 KB, CC BY",
+        "fulltext_url": "https://researchprofiles.ku.dk/files/251374223/Meaningless_work_How_the_datafication_of_health_reconfigures_knowledge_about_work_and_erodes_professional_judgement_version_of_record_.pdf",
+        "license": "CC BY 4.0; corroborated by publisher-deposited Crossref license field",
+        "local_result": "No complete PDF retained. Verified-TLS OpenSSL request returned 403; Windows curl had an offline CRL error. The web tool initially exposed the PDF but subsequent fetches returned 403.",
+        "delivery_log": "corpus/source-acquisition/residual-resolution-2026-09-05/hoeyer-wadmann-vor-delivery.json"
+      },
+      "next_step": "Retrieve the documented legal CC-BY publisher version through an ordinary working browser or authorised institutional delivery, then make a source-bound full-text screening. Do not use the old synthetic abstract as original-source evidence."
+    },
+    "XG7RFFC7": {
+      "record_id": "XG7RFFC7",
+      "agent_id": "/root/grounded_chat",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-05T15:40:49.955416+00:00",
+      "canonical_binding_before": {
+        "work_id": "work:e3fcbaca-43ce-552e-85d8-0c743c12fee2",
+        "version_id": "version:ee62fefd-c381-5494-87e4-6accdce35fbe"
+      },
+      "raw_metadata_reference": "corpus/zotero_export.json#/185",
+      "raw_record_sha256": "sha256:adfa7eef090957a09dd6f24745afc56e00bc84bbb28e92c4df17aabb4c8988ec",
+      "previous_status": "blocked_insufficient_bibliographic_identity",
+      "scholarly_screening_status": "not_performed_in_this_task",
+      "metadata_status": "insufficient_release_identity",
+      "source_status": "not_a_resolved_article_or_dataset_release",
+      "source_ready": false,
+      "finding": "The cited 2023 BLS page explains the OES-to-OEWS program rename; it is not the identity of a particular 2023 statistical table. The raw record is wrongly typed as journalArticle, but the intended data release, occupation code and geography cannot be inferred from the generic title and program URL.",
+      "primary_url": "https://www.bls.gov/oes/2023/occupational-employment-and-wage-statistics-oews.htm",
+      "locator": "Occupational Employment and Wage Statistics (OEWS), program-name paragraph",
+      "next_step": "Keep this malformed bibliographic item outside the screened-paper corpus until the intended data release is identified. Do not choose an arbitrary BLS table merely to remove a blocker.",
+      "concrete_identity_question": "Welche konkrete OEWS-Tabelle ist gemeint: Referenzjahr bzw. Release, Berufscode und geografischer Bereich? Alternativ den allgemeinen Programmverweis als Hintergrundlink führen.",
+      "evidence": [
+        {
+          "source_path": "corpus/source-acquisition/bls-resolution-2026-09-05/release-2023-data-2022.txt",
+          "sha256": "sha256:7ea16288918bcdf0e59879dffec3dbfe2c03c739821cc4ca9c6841c8eb4abfbf",
+          "source_url": "https://www.bls.gov/news.release/archives/ocwage_04252023.htm",
+          "locator": "release header and report title, lines 175-181",
+          "capture_kind": "official_web_tool_excerpt_not_fulltext",
+          "agent_id": "/root/research_completion",
+          "reviewed_at": "2026-09-05T16:38:03.842248+00:00"
+        },
+        {
+          "source_path": "corpus/source-acquisition/bls-resolution-2026-09-05/release-2024-data-2023.txt",
+          "sha256": "sha256:0fa27efb8ffb1c961c04181fa17803867106890cec176e9bc780121282d8c48f",
+          "source_url": "https://www.bls.gov/news.release/archives/ocwage_04032024.htm",
+          "locator": "release header and report title, lines 175-181",
+          "capture_kind": "official_web_tool_excerpt_not_fulltext",
+          "agent_id": "/root/research_completion",
+          "reviewed_at": "2026-09-05T16:38:03.842248+00:00"
+        },
+        {
+          "source_path": "corpus/source-acquisition/bls-resolution-2026-09-05/release-2025-data-2024.txt",
+          "sha256": "sha256:e1fe49d0a7063155179229780cb6f6a987d8acfaf62e4eb458a2b9f47e534497",
+          "source_url": "https://www.bls.gov/news.release/archives/ocwage_04022025.htm",
+          "locator": "release header and report title, lines 175-181",
+          "capture_kind": "official_web_tool_excerpt_not_fulltext",
+          "agent_id": "/root/research_completion",
+          "reviewed_at": "2026-09-05T16:38:03.842248+00:00"
+        },
+        {
+          "source_path": "corpus/source-acquisition/bls-resolution-2026-09-05/oews-program-name.txt",
+          "sha256": "sha256:3606ce2a1af07f78dcc8293958f78990b46ac11a09436d0169565bf561f20677",
+          "source_url": "https://www.bls.gov/oes/2023/occupational-employment-and-wage-statistics-oews.htm",
+          "locator": "program-name paragraph",
+          "capture_kind": "official_web_tool_excerpt_not_fulltext",
+          "agent_id": "/root/research_completion",
+          "reviewed_at": "2026-09-05T16:38:03.842248+00:00"
+        },
+        {
+          "source_path": "corpus/source-acquisition/bls-resolution-2026-09-05/oews-faq.txt",
+          "sha256": "sha256:e57a37aad9a86a55b961491c3d1d6b88adbc4b6dc25c6247c1692d7532d0b48a",
+          "source_url": "https://www.bls.gov/oes/oes_ques.htm",
+          "locator": "C. Data we do not have, question 1",
+          "capture_kind": "official_web_tool_excerpt_not_fulltext",
+          "agent_id": "/root/research_completion",
+          "reviewed_at": "2026-09-05T16:38:03.842248+00:00"
+        },
+        {
+          "source_path": "corpus/source-acquisition/bls-resolution-2026-09-05/cps-2023-table11.txt",
+          "sha256": "sha256:b3f283c90324b901393b3a36b3598d6f8552c864f6f7d25863623e2b656b8897",
+          "source_url": "https://www.bls.gov/cps/data/aa2023/cpsaat11.htm",
+          "locator": "2023 annual-average Table 11, heading and Chief executives row",
+          "capture_kind": "official_web_tool_excerpt_not_fulltext",
+          "agent_id": "/root/research_completion",
+          "reviewed_at": "2026-09-05T16:38:03.842248+00:00"
+        },
+        {
+          "source_path": "generated/markdown/Statistics_2023_Occupational.md",
+          "sha256": "sha256:6557fd604913e6fddbff656ea9043d28fca9b1d4dc1b41d2d81e13387c9fa95a",
+          "source_url": "https://www.bls.gov/news.release/archives/ocwage_04022025.htm",
+          "locator": "page 1, release date, USDL-25-0451 and report title",
+          "quote": "OCCUPATIONAL EMPLOYMENT AND WAGES - MAY 2024",
+          "role": "wrongly_dated_existing_download_identity_evidence_only",
+          "agent_id": "/root/research_completion",
+          "reviewed_at": "2026-09-05T16:38:03.842248+00:00"
+        },
+        {
+          "source_path": "generated/markdown_clean/Wilson_2024_Gender,_race,_and_intersectional_bias_in_AI.md",
+          "sha256": "sha256:12a654eca67c10db48c4465d15fced043002a032b52d0937f7c46920cc1ca14c",
+          "locator": "Table 1, Chief Executives row: 1780 thousand workers, 30.6% women, 85.8% White, 5.2% Black",
+          "role": "related_corpus_context_not_identity_binding",
+          "agent_id": "/root/research_completion",
+          "reviewed_at": "2026-09-05T16:38:03.842248+00:00"
+        }
+      ],
+      "follow_up_reviews": [
+        {
+          "review_id": "XG7RFFC7-web-search-2026-09-05",
+          "agent_id": "/root/research_completion",
+          "model": "GPT-6",
+          "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+          "reviewed_at": "2026-09-05T16:38:03.842248+00:00",
+          "review_type": "ai-primary-source-bibliographic-resolution",
+          "authorization": "User explicitly requested web search for this missing source.",
+          "result": "search_completed_candidates_verified_intended_release_unresolved",
+          "source_ready": false,
+          "scholarly_screening_status": "not_performed_in_this_follow_up",
+          "raw_metadata_reference": "corpus/zotero_export.json#/185",
+          "raw_record_sha256": "sha256:adfa7eef090957a09dd6f24745afc56e00bc84bbb28e92c4df17aabb4c8988ec",
+          "canonical_binding_before": {
+            "work_id": "work:e3fcbaca-43ce-552e-85d8-0c743c12fee2",
+            "version_id": "version:ee62fefd-c381-5494-87e4-6accdce35fbe"
+          },
+          "finding": "The existing file Statistics_2023_Occupational.md is positively identified as the BLS release of 2 April 2025 (USDL-25-0451), reporting May 2024 data. Its filename year is not a valid publication or reference year. Official archives distinguish a release published in 2023 (May 2022 data) from May 2023 data released in 2024. The raw generic program title, URL, empty abstract and absent occupation/geography do not distinguish these candidates. No original user intent is claimed to have been recovered.",
+          "existing_download_identity": {
+            "source_path": "generated/markdown/Statistics_2023_Occupational.md",
+            "sha256": "sha256:6557fd604913e6fddbff656ea9043d28fca9b1d4dc1b41d2d81e13387c9fa95a",
+            "title": "Occupational Employment and Wages — May 2024",
+            "publication_date": "2025-04-02",
+            "reference_period": "2024-05",
+            "release_id": "USDL-25-0451",
+            "source_url": "https://www.bls.gov/news.release/archives/ocwage_04022025.htm",
+            "outcome": "wrong_version_for_2023_reference_do_not_bind"
+          },
+          "ranked_candidates": [
+            {
+              "rank": 1,
+              "source_url": "https://www.bls.gov/news.release/archives/ocwage_04252023.htm",
+              "title": "Occupational Employment and Wages — May 2022",
+              "publication_date": "2023-04-25",
+              "reference_period": "2022-05",
+              "release_id": "USDL-23-0794",
+              "supports": "Same OEWS program and exact 2023 publication year. Strongest candidate if Zotero date means publication year.",
+              "limits": "Generic raw title does not identify a news release; no exact table or occupation is specified.",
+              "outcome": "plausible_unbound"
+            },
+            {
+              "rank": 2,
+              "source_url": "https://www.bls.gov/news.release/archives/ocwage_04032024.htm",
+              "title": "Occupational Employment and Wages — May 2023",
+              "publication_date": "2024-04-03",
+              "reference_period": "2023-05",
+              "release_id": "USDL-24-0628",
+              "supports": "Same OEWS program and exact 2023 data year. Strongest candidate if Zotero date means reference year.",
+              "limits": "Publication year is 2024, not the raw 2023 date. No evidence chooses data year over publication year.",
+              "outcome": "plausible_unbound"
+            },
+            {
+              "rank": 3,
+              "source_url": "https://www.bls.gov/cps/data/aa2023/cpsaat11.htm",
+              "title": "Employed persons by detailed occupation, sex, race, and Hispanic or Latino ethnicity",
+              "reference_period": "2023 annual averages",
+              "table": "11",
+              "program": "Current Population Survey (CPS)",
+              "supports": "Concrete demographic baseline in the project context: the Wilson paper Table 1 Chief Executives row exactly matches CPS Table 11 values (1780 thousand; 30.6% women; 85.8% White; 5.2% Black).",
+              "limits": "Different program from the saved /oes URL. Context match establishes a useful baseline source, not identity equivalence with XG7RFFC7.",
+              "outcome": "contextual_alternative_not_an_identity_match"
+            }
+          ],
+          "program_scope_check": "Official OEWS FAQ C.1 states that OEWS does not gather demographic information and directs users to CPS. Therefore an OEWS release cannot substantiate sex/race workforce proportions; CPS Table 11 can provide such contextual data with an explicit year and occupation.",
+          "recommended_disposition": "Retain XG7RFFC7 as an unresolved background program reference outside the screened-study synthesis. Record the existing download mismatch. Keep the two release candidates and the separately identified CPS contextual table available; do not arbitrarily replace this WorkVersion or treat this bibliographic search as screening approval.",
+          "remaining_information": "A specific original citation, quoted statistic, table/occupation or manuscript passage would distinguish the intended release. The authorized web search is complete without claiming that missing intent was recovered.",
+          "evidence": [
+            {
+              "source_path": "corpus/source-acquisition/bls-resolution-2026-09-05/release-2023-data-2022.txt",
+              "sha256": "sha256:7ea16288918bcdf0e59879dffec3dbfe2c03c739821cc4ca9c6841c8eb4abfbf",
+              "source_url": "https://www.bls.gov/news.release/archives/ocwage_04252023.htm",
+              "locator": "release header and report title, lines 175-181",
+              "capture_kind": "official_web_tool_excerpt_not_fulltext",
+              "agent_id": "/root/research_completion",
+              "reviewed_at": "2026-09-05T16:38:03.842248+00:00"
+            },
+            {
+              "source_path": "corpus/source-acquisition/bls-resolution-2026-09-05/release-2024-data-2023.txt",
+              "sha256": "sha256:0fa27efb8ffb1c961c04181fa17803867106890cec176e9bc780121282d8c48f",
+              "source_url": "https://www.bls.gov/news.release/archives/ocwage_04032024.htm",
+              "locator": "release header and report title, lines 175-181",
+              "capture_kind": "official_web_tool_excerpt_not_fulltext",
+              "agent_id": "/root/research_completion",
+              "reviewed_at": "2026-09-05T16:38:03.842248+00:00"
+            },
+            {
+              "source_path": "corpus/source-acquisition/bls-resolution-2026-09-05/release-2025-data-2024.txt",
+              "sha256": "sha256:e1fe49d0a7063155179229780cb6f6a987d8acfaf62e4eb458a2b9f47e534497",
+              "source_url": "https://www.bls.gov/news.release/archives/ocwage_04022025.htm",
+              "locator": "release header and report title, lines 175-181",
+              "capture_kind": "official_web_tool_excerpt_not_fulltext",
+              "agent_id": "/root/research_completion",
+              "reviewed_at": "2026-09-05T16:38:03.842248+00:00"
+            },
+            {
+              "source_path": "corpus/source-acquisition/bls-resolution-2026-09-05/oews-program-name.txt",
+              "sha256": "sha256:3606ce2a1af07f78dcc8293958f78990b46ac11a09436d0169565bf561f20677",
+              "source_url": "https://www.bls.gov/oes/2023/occupational-employment-and-wage-statistics-oews.htm",
+              "locator": "program-name paragraph",
+              "capture_kind": "official_web_tool_excerpt_not_fulltext",
+              "agent_id": "/root/research_completion",
+              "reviewed_at": "2026-09-05T16:38:03.842248+00:00"
+            },
+            {
+              "source_path": "corpus/source-acquisition/bls-resolution-2026-09-05/oews-faq.txt",
+              "sha256": "sha256:e57a37aad9a86a55b961491c3d1d6b88adbc4b6dc25c6247c1692d7532d0b48a",
+              "source_url": "https://www.bls.gov/oes/oes_ques.htm",
+              "locator": "C. Data we do not have, question 1",
+              "capture_kind": "official_web_tool_excerpt_not_fulltext",
+              "agent_id": "/root/research_completion",
+              "reviewed_at": "2026-09-05T16:38:03.842248+00:00"
+            },
+            {
+              "source_path": "corpus/source-acquisition/bls-resolution-2026-09-05/cps-2023-table11.txt",
+              "sha256": "sha256:b3f283c90324b901393b3a36b3598d6f8552c864f6f7d25863623e2b656b8897",
+              "source_url": "https://www.bls.gov/cps/data/aa2023/cpsaat11.htm",
+              "locator": "2023 annual-average Table 11, heading and Chief executives row",
+              "capture_kind": "official_web_tool_excerpt_not_fulltext",
+              "agent_id": "/root/research_completion",
+              "reviewed_at": "2026-09-05T16:38:03.842248+00:00"
+            },
+            {
+              "source_path": "generated/markdown/Statistics_2023_Occupational.md",
+              "sha256": "sha256:6557fd604913e6fddbff656ea9043d28fca9b1d4dc1b41d2d81e13387c9fa95a",
+              "source_url": "https://www.bls.gov/news.release/archives/ocwage_04022025.htm",
+              "locator": "page 1, release date, USDL-25-0451 and report title",
+              "quote": "OCCUPATIONAL EMPLOYMENT AND WAGES - MAY 2024",
+              "role": "wrongly_dated_existing_download_identity_evidence_only",
+              "agent_id": "/root/research_completion",
+              "reviewed_at": "2026-09-05T16:38:03.842248+00:00"
+            },
+            {
+              "source_path": "generated/markdown_clean/Wilson_2024_Gender,_race,_and_intersectional_bias_in_AI.md",
+              "sha256": "sha256:12a654eca67c10db48c4465d15fced043002a032b52d0937f7c46920cc1ca14c",
+              "locator": "Table 1, Chief Executives row: 1780 thousand workers, 30.6% women, 85.8% White, 5.2% Black",
+              "role": "related_corpus_context_not_identity_binding",
+              "agent_id": "/root/research_completion",
+              "reviewed_at": "2026-09-05T16:38:03.842248+00:00"
+            }
+          ]
+        }
+      ]
+    },
+    "SQYLQFRU": {
+      "record_id": "SQYLQFRU",
+      "agent_id": "/root/grounded_chat",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-05T15:40:49.955416+00:00",
+      "canonical_binding_before": {
+        "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+        "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
+      },
+      "raw_metadata_reference": "corpus/zotero_export.json#/206",
+      "raw_record_sha256": "sha256:6a8c7d8d715a5fd9162fcd1d09f57b0fd7f0fd5754c2bb243b54663166f45865",
+      "previous_status": "blocked_canonical_identity_conflict",
+      "scholarly_screening_status": "not_performed_in_this_task",
+      "metadata_status": "corrected_in_guarded_local_projection",
+      "correction_reference": "corpus/metadata_corrections.json#/corrections/5",
+      "before_after": [
+        {
+          "field": "creators",
+          "before": [
+            {
+              "creatorType": "author",
+              "firstName": "A.",
+              "lastName": "Furniturewala"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "A.",
+              "lastName": "Zhang"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "K.",
+              "lastName": "Chang"
+            }
+          ],
+          "after": [
+            {
+              "creatorType": "author",
+              "firstName": "Sanchit",
+              "lastName": "Kabra"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "Akshita",
+              "lastName": "Jha"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "Chandan K.",
+              "lastName": "Reddy"
+            }
+          ],
+          "reason": "Exact title identity is confirmed by the original arXiv record; the secondary summary supplied incorrect authors and 2024 year. The selected original-source version is v3, revised 5 June 2025; first submission was 8 April 2025. The citation date here names the selected version, not a new distinct Work."
+        },
+        {
+          "field": "date",
+          "before": "2024",
+          "after": "2025-06-05",
+          "reason": "Exact title identity is confirmed by the original arXiv record; the secondary summary supplied incorrect authors and 2024 year. The selected original-source version is v3, revised 5 June 2025; first submission was 8 April 2025. The citation date here names the selected version, not a new distinct Work."
+        },
+        {
+          "field": "itemType",
+          "before": "report",
+          "after": "preprint",
+          "reason": "Exact title identity is confirmed by the original arXiv record; the secondary summary supplied incorrect authors and 2024 year. The selected original-source version is v3, revised 5 June 2025; first submission was 8 April 2025. The citation date here names the selected version, not a new distinct Work."
+        },
+        {
+          "field": "repository",
+          "before": null,
+          "after": "arXiv",
+          "reason": "Exact title identity is confirmed by the original arXiv record; the secondary summary supplied incorrect authors and 2024 year. The selected original-source version is v3, revised 5 June 2025; first submission was 8 April 2025. The citation date here names the selected version, not a new distinct Work."
+        },
+        {
+          "field": "DOI",
+          "before": "",
+          "after": "10.48550/arXiv.2504.05632",
+          "reason": "Exact title identity is confirmed by the original arXiv record; the secondary summary supplied incorrect authors and 2024 year. The selected original-source version is v3, revised 5 June 2025; first submission was 8 April 2025. The citation date here names the selected version, not a new distinct Work."
+        },
+        {
+          "field": "url",
+          "before": "https://powerdrill.ai/discover/summary-reasoning-towards-fairness-mitigating-bias-in-cm9af0g1h7sb507pn7f5qh32q",
+          "after": "https://arxiv.org/abs/2504.05632v3",
+          "reason": "Exact title identity is confirmed by the original arXiv record; the secondary summary supplied incorrect authors and 2024 year. The selected original-source version is v3, revised 5 June 2025; first submission was 8 April 2025. The citation date here names the selected version, not a new distinct Work."
+        }
+      ],
+      "finding": "Exact title identity is confirmed by the original arXiv record; the secondary summary supplied incorrect authors and 2024 year. The selected original-source version is v3, revised 5 June 2025; first submission was 8 April 2025. The citation date here names the selected version, not a new distinct Work.",
+      "evidence": [
+        {
+          "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-metadata.json",
+          "sha256": "sha256:caf3057760abe06a04b2bffe47e15b553f7afd9b7abd7184cb805993ddbfd498",
+          "source_url": "https://arxiv.org/abs/2504.05632v3",
+          "locator": "citation_meta; submission_history [v1] and [v3]; license_links"
+        }
+      ],
+      "integration_rule": "Preserve the corrected record identity when rebuilding, discard wrong former identifiers rather than making them aliases, and bind only the exact original version. Historical raw rows remain immutable.",
+      "source_status": "original_fulltext_acquired_pending_source_binding_and_screening",
+      "source_ready": true,
+      "original_text": {
+        "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-v3-text.md",
+        "sha256": "sha256:bac6454052cd33fa790fde5c12b2bfc10fd340fb20433725feecd6a804283620",
+        "source_url": "https://arxiv.org/html/2504.05632v3",
+        "locator": "Original article heading, full main text, references and appendices in DOM order"
+      },
+      "primary_version": {
+        "arxiv_version": "v3",
+        "version_date": "2025-06-05",
+        "first_submitted": "2025-04-08",
+        "license": "CC BY 4.0"
+      },
+      "extraction_limits": "Complete original HTML article text, not a summary; figure pixels are not copied and mathematical/table layout can lose structure. No category scores or substantive findings are accepted by this acquisition task.",
+      "next_step": "Bind the acquired text to this exact arXiv version and conduct a fresh source-bound screening; no borrowed decision from the former unrelated URL."
+    },
+    "RAY6G2R7": {
+      "record_id": "RAY6G2R7",
+      "agent_id": "/root/grounded_chat",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-05T15:40:49.955416+00:00",
+      "canonical_binding_before": {
+        "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+        "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460"
+      },
+      "raw_metadata_reference": "corpus/zotero_export.json#/196",
+      "raw_record_sha256": "sha256:b82c631ade7fb74ec58d8e36c0dca8e903338f6bfa3992b95a06290b62578c6d",
+      "previous_status": "blocked_canonical_identity_conflict",
+      "scholarly_screening_status": "not_performed_in_this_task",
+      "metadata_status": "corrected_in_guarded_local_projection",
+      "correction_reference": "corpus/metadata_corrections.json#/corrections/6",
+      "before_after": [
+        {
+          "field": "title",
+          "before": "SWIFTSAGE: A new dual-module framework for better action planning in complex interactive reasoning tasks",
+          "after": "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks",
+          "reason": "Explicit editorial reconciliation under the user-delegated instruction to fix the mixed record using best judgment: the unique SwiftSage name and dual-module/action-planning/complex-interactive-task description identify the Lin framework. The former authors also contain errors (only the Lin surname agrees), so this is not a claim to know the original user intention. Replace them with all nine original authors. The old URL is an unrelated Kamruzzaman/Kim paper and must be removed from this Work, with no alias or Work merge. v2 is dated 6 December 2023; first submission was 27 May 2023."
+        },
+        {
+          "field": "creators",
+          "before": [
+            {
+              "creatorType": "author",
+              "firstName": "S.",
+              "lastName": "Lin"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "M.",
+              "lastName": "Chen"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "W.",
+              "lastName": "Yih"
+            }
+          ],
+          "after": [
+            {
+              "creatorType": "author",
+              "firstName": "Bill Yuchen",
+              "lastName": "Lin"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "Yicheng",
+              "lastName": "Fu"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "Karina",
+              "lastName": "Yang"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "Faeze",
+              "lastName": "Brahman"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "Shiyu",
+              "lastName": "Huang"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "Chandra",
+              "lastName": "Bhagavatula"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "Prithviraj",
+              "lastName": "Ammanabrolu"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "Yejin",
+              "lastName": "Choi"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "Xiang",
+              "lastName": "Ren"
+            }
+          ],
+          "reason": "Explicit editorial reconciliation under the user-delegated instruction to fix the mixed record using best judgment: the unique SwiftSage name and dual-module/action-planning/complex-interactive-task description identify the Lin framework. The former authors also contain errors (only the Lin surname agrees), so this is not a claim to know the original user intention. Replace them with all nine original authors. The old URL is an unrelated Kamruzzaman/Kim paper and must be removed from this Work, with no alias or Work merge. v2 is dated 6 December 2023; first submission was 27 May 2023."
+        },
+        {
+          "field": "date",
+          "before": "2024",
+          "after": "2023-12-06",
+          "reason": "Explicit editorial reconciliation under the user-delegated instruction to fix the mixed record using best judgment: the unique SwiftSage name and dual-module/action-planning/complex-interactive-task description identify the Lin framework. The former authors also contain errors (only the Lin surname agrees), so this is not a claim to know the original user intention. Replace them with all nine original authors. The old URL is an unrelated Kamruzzaman/Kim paper and must be removed from this Work, with no alias or Work merge. v2 is dated 6 December 2023; first submission was 27 May 2023."
+        },
+        {
+          "field": "itemType",
+          "before": "report",
+          "after": "preprint",
+          "reason": "Explicit editorial reconciliation under the user-delegated instruction to fix the mixed record using best judgment: the unique SwiftSage name and dual-module/action-planning/complex-interactive-task description identify the Lin framework. The former authors also contain errors (only the Lin surname agrees), so this is not a claim to know the original user intention. Replace them with all nine original authors. The old URL is an unrelated Kamruzzaman/Kim paper and must be removed from this Work, with no alias or Work merge. v2 is dated 6 December 2023; first submission was 27 May 2023."
+        },
+        {
+          "field": "repository",
+          "before": null,
+          "after": "arXiv",
+          "reason": "Explicit editorial reconciliation under the user-delegated instruction to fix the mixed record using best judgment: the unique SwiftSage name and dual-module/action-planning/complex-interactive-task description identify the Lin framework. The former authors also contain errors (only the Lin surname agrees), so this is not a claim to know the original user intention. Replace them with all nine original authors. The old URL is an unrelated Kamruzzaman/Kim paper and must be removed from this Work, with no alias or Work merge. v2 is dated 6 December 2023; first submission was 27 May 2023."
+        },
+        {
+          "field": "DOI",
+          "before": "",
+          "after": "10.48550/arXiv.2305.17390",
+          "reason": "Explicit editorial reconciliation under the user-delegated instruction to fix the mixed record using best judgment: the unique SwiftSage name and dual-module/action-planning/complex-interactive-task description identify the Lin framework. The former authors also contain errors (only the Lin surname agrees), so this is not a claim to know the original user intention. Replace them with all nine original authors. The old URL is an unrelated Kamruzzaman/Kim paper and must be removed from this Work, with no alias or Work merge. v2 is dated 6 December 2023; first submission was 27 May 2023."
+        },
+        {
+          "field": "url",
+          "before": "https://arxiv.org/html/2404.17218v3",
+          "after": "https://arxiv.org/abs/2305.17390v2",
+          "reason": "Explicit editorial reconciliation under the user-delegated instruction to fix the mixed record using best judgment: the unique SwiftSage name and dual-module/action-planning/complex-interactive-task description identify the Lin framework. The former authors also contain errors (only the Lin surname agrees), so this is not a claim to know the original user intention. Replace them with all nine original authors. The old URL is an unrelated Kamruzzaman/Kim paper and must be removed from this Work, with no alias or Work merge. v2 is dated 6 December 2023; first submission was 27 May 2023."
+        }
+      ],
+      "finding": "Explicit editorial reconciliation under the user-delegated instruction to fix the mixed record using best judgment: the unique SwiftSage name and dual-module/action-planning/complex-interactive-task description identify the Lin framework. The former authors also contain errors (only the Lin surname agrees), so this is not a claim to know the original user intention. Replace them with all nine original authors. The old URL is an unrelated Kamruzzaman/Kim paper and must be removed from this Work, with no alias or Work merge. v2 is dated 6 December 2023; first submission was 27 May 2023.",
+      "evidence": [
+        {
+          "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-metadata.json",
+          "sha256": "sha256:8c2861ec357bf69788ca8ae495ecd877aade1fba5c1b86a406b5251fbef56e71",
+          "source_url": "https://arxiv.org/abs/2305.17390v2",
+          "locator": "citation_meta title/authors; submission_history [v1] and [v2]; abstract describes Swift/Sage action-planning modules"
+        },
+        {
+          "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kamruzzaman-url-identity.json",
+          "sha256": "sha256:53ed27871d002049fd867608ea8bce95de42cbbae6583d39d279976d1f500239",
+          "source_url": "https://arxiv.org/abs/2404.17218v3",
+          "locator": "citation_meta title/authors; submission_history [v3]"
+        }
+      ],
+      "integration_rule": "Preserve the corrected record identity when rebuilding, discard wrong former identifiers rather than making them aliases, and bind only the exact original version. Historical raw rows remain immutable.",
+      "source_status": "original_fulltext_acquired_pending_source_binding_and_screening",
+      "source_ready": true,
+      "original_text": {
+        "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-v2-text.md",
+        "sha256": "sha256:fd64251d9eed80eca0689fe3bad5e8ea15465746be71af1e38d7f8c9bdb553d1",
+        "source_url": "https://arxiv.org/html/2305.17390v2",
+        "locator": "Original article heading, full main text, references and appendices in DOM order"
+      },
+      "primary_version": {
+        "arxiv_version": "v2",
+        "version_date": "2023-12-06",
+        "first_submitted": "2023-05-27",
+        "license": "CC BY 4.0"
+      },
+      "extraction_limits": "Complete original HTML article text, not a summary; figure pixels are not copied and mathematical/table layout can lose structure. No category scores or substantive findings are accepted by this acquisition task.",
+      "next_step": "Bind the acquired text to this exact arXiv version and conduct a fresh source-bound screening; no borrowed decision from the former unrelated URL.",
+      "separate_work_of_old_url": {
+        "work_id": "work:55f0efa8-e433-5588-9afe-3f708043a400",
+        "title": "Prompting Techniques for Reducing Social Bias in LLMs through System 1 and System 2 Cognitive Processes",
+        "records": [
+          "ACDF4FL9",
+          "R3VJVFCE"
+        ],
+        "url": "https://arxiv.org/abs/2404.17218v3",
+        "rule": "Keep separate; never merge with SwiftSage."
+      }
+    },
+    "Z9DNTBFF": {
+      "record_id": "Z9DNTBFF",
+      "agent_id": "/root/grounded_chat",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-05T15:40:49.955416+00:00",
+      "canonical_binding_before": {
+        "work_id": "work:ec94cf1c-87bf-5f4d-a840-9dd3b92eefab",
+        "version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330"
+      },
+      "raw_metadata_reference": "corpus/zotero_export.json#/189",
+      "raw_record_sha256": "sha256:2098aa48604dc172afc14610013a44541f44c0d90891ff31dab57a5735f3eab2",
+      "previous_status": "blocked_canonical_identity_conflict",
+      "scholarly_screening_status": "not_performed_in_this_task",
+      "metadata_status": "corrected_in_guarded_local_projection",
+      "correction_reference": "corpus/metadata_corrections.json#/corrections/8",
+      "before_after": [
+        {
+          "field": "title",
+          "before": "Worst of both worlds: A comparative analysis of error in language and vision-language models",
+          "after": "Worst of Both Worlds: Biases Compound in Pre-trained Vision-and-Language Models",
+          "reason": "Explicit editorial reconciliation under delegated best judgment: the distinctive Worst of Both Worlds title and Srinivasan/Bisk surnames identify the ACL 2022 paper. The former initial V. is corrected to Tejas; the previous paraphrased subtitle and 2024 date were wrong. The former URL points to Howard et al. (2024), a separate paper with different authors and title, and must not remain an alias of the corrected Work. No prior user intention is asserted."
+        },
+        {
+          "field": "creators",
+          "before": [
+            {
+              "creatorType": "author",
+              "firstName": "V.",
+              "lastName": "Srinivasan"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "Y.",
+              "lastName": "Bisk"
+            }
+          ],
+          "after": [
+            {
+              "creatorType": "author",
+              "firstName": "Tejas",
+              "lastName": "Srinivasan"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "Yonatan",
+              "lastName": "Bisk"
+            }
+          ],
+          "reason": "Explicit editorial reconciliation under delegated best judgment: the distinctive Worst of Both Worlds title and Srinivasan/Bisk surnames identify the ACL 2022 paper. The former initial V. is corrected to Tejas; the previous paraphrased subtitle and 2024 date were wrong. The former URL points to Howard et al. (2024), a separate paper with different authors and title, and must not remain an alias of the corrected Work. No prior user intention is asserted."
+        },
+        {
+          "field": "date",
+          "before": "2024",
+          "after": "2022-07",
+          "reason": "Explicit editorial reconciliation under delegated best judgment: the distinctive Worst of Both Worlds title and Srinivasan/Bisk surnames identify the ACL 2022 paper. The former initial V. is corrected to Tejas; the previous paraphrased subtitle and 2024 date were wrong. The former URL points to Howard et al. (2024), a separate paper with different authors and title, and must not remain an alias of the corrected Work. No prior user intention is asserted."
+        },
+        {
+          "field": "itemType",
+          "before": "report",
+          "after": "conferencePaper",
+          "reason": "Explicit editorial reconciliation under delegated best judgment: the distinctive Worst of Both Worlds title and Srinivasan/Bisk surnames identify the ACL 2022 paper. The former initial V. is corrected to Tejas; the previous paraphrased subtitle and 2024 date were wrong. The former URL points to Howard et al. (2024), a separate paper with different authors and title, and must not remain an alias of the corrected Work. No prior user intention is asserted."
+        },
+        {
+          "field": "DOI",
+          "before": "",
+          "after": "10.18653/v1/2022.gebnlp-1.10",
+          "reason": "Explicit editorial reconciliation under delegated best judgment: the distinctive Worst of Both Worlds title and Srinivasan/Bisk surnames identify the ACL 2022 paper. The former initial V. is corrected to Tejas; the previous paraphrased subtitle and 2024 date were wrong. The former URL points to Howard et al. (2024), a separate paper with different authors and title, and must not remain an alias of the corrected Work. No prior user intention is asserted."
+        },
+        {
+          "field": "url",
+          "before": "https://arxiv.org/html/2405.20152v1",
+          "after": "https://aclanthology.org/2022.gebnlp-1.10/",
+          "reason": "Explicit editorial reconciliation under delegated best judgment: the distinctive Worst of Both Worlds title and Srinivasan/Bisk surnames identify the ACL 2022 paper. The former initial V. is corrected to Tejas; the previous paraphrased subtitle and 2024 date were wrong. The former URL points to Howard et al. (2024), a separate paper with different authors and title, and must not remain an alias of the corrected Work. No prior user intention is asserted."
+        },
+        {
+          "field": "publisher",
+          "before": null,
+          "after": "Association for Computational Linguistics",
+          "reason": "Explicit editorial reconciliation under delegated best judgment: the distinctive Worst of Both Worlds title and Srinivasan/Bisk surnames identify the ACL 2022 paper. The former initial V. is corrected to Tejas; the previous paraphrased subtitle and 2024 date were wrong. The former URL points to Howard et al. (2024), a separate paper with different authors and title, and must not remain an alias of the corrected Work. No prior user intention is asserted."
+        }
+      ],
+      "finding": "Explicit editorial reconciliation under delegated best judgment: the distinctive Worst of Both Worlds title and Srinivasan/Bisk surnames identify the ACL 2022 paper. The former initial V. is corrected to Tejas; the previous paraphrased subtitle and 2024 date were wrong. The former URL points to Howard et al. (2024), a separate paper with different authors and title, and must not remain an alias of the corrected Work. No prior user intention is asserted.",
+      "evidence": [
+        {
+          "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/srinivasan-acl-metadata.json",
+          "sha256": "sha256:1bd368ea46f64845638e9e33731fdf77c0197ff712b7ea97b802d3cb428bf030",
+          "source_url": "https://aclanthology.org/2022.gebnlp-1.10/",
+          "locator": "Title and author header; Cite (ACL); BibTeX and MODS export; PDF link; licensing footer"
+        },
+        {
+          "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/howard-url-identity.json",
+          "sha256": "sha256:665bd048bdc4e2e80ea0d10ad7e554641f25ee71ff4d2cf039dabc03edf1f526",
+          "source_url": "https://arxiv.org/abs/2405.20152v1",
+          "locator": "citation_meta title/authors; submission_history [v1]"
+        }
+      ],
+      "integration_rule": "Preserve the corrected record identity when rebuilding, discard wrong former identifiers rather than making them aliases, and bind only the exact original version. Historical raw rows remain immutable.",
+      "source_status": "original_identity_resolved_fulltext_not_acquired",
+      "source_ready": false,
+      "primary_version": {
+        "title": "Worst of Both Worlds: Biases Compound in Pre-trained Vision-and-Language Models",
+        "authors": [
+          "Tejas Srinivasan",
+          "Yonatan Bisk"
+        ],
+        "date": "2022-07",
+        "doi": "10.18653/v1/2022.gebnlp-1.10",
+        "publisher": "Association for Computational Linguistics",
+        "proceedings": "Proceedings of the 4th Workshop on Gender Bias in Natural Language Processing (GeBNLP)",
+        "pages": "77–85",
+        "venue_location": "Seattle, Washington",
+        "pdf_url": "https://aclanthology.org/2022.gebnlp-1.10.pdf",
+        "license": "CC BY 4.0 (ACL footer: materials from 2016 onward)"
+      },
+      "separate_work_of_old_url": {
+        "title": "Uncovering Bias in Large Vision-Language Models at Scale with Counterfactuals",
+        "authors": [
+          "Phillip Howard",
+          "Kathleen C. Fraser",
+          "Anahita Bhiwandiwalla",
+          "Svetlana Kiritchenko"
+        ],
+        "arxiv": "2405.20152v1",
+        "date": "2024-05-30",
+        "url": "https://arxiv.org/abs/2405.20152v1",
+        "rule": "Keep as a separate candidate identity; do not inherit a screening or create a wrong Work alias."
+      },
+      "next_step": "Acquire the official ACL 2022 PDF linked in primary_version, bind the proceedings version, and screen it. The Howard source remains separate."
+    },
+    "ACDF4FL9": {
+      "record_id": "ACDF4FL9",
+      "agent_id": "/root/grounded_chat",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-05T15:40:49.955416+00:00",
+      "canonical_binding_before": {
+        "work_id": "work:55f0efa8-e433-5588-9afe-3f708043a400",
+        "version_id": "version:27a927ae-6f49-562f-bf62-9556487ad583"
+      },
+      "raw_metadata_reference": "corpus/zotero_export.json#/200",
+      "raw_record_sha256": "sha256:a392866f9a748d5113271cd858cefa3a975639915974dc2a57d1194d289c62d8",
+      "previous_status": "related_alias_metadata_error",
+      "scholarly_screening_status": "not_performed_in_this_task",
+      "metadata_status": "corrected_in_guarded_local_projection_with_identifier_enrichment_deferred",
+      "correction_reference": "corpus/metadata_corrections.json#/corrections/7",
+      "before_after": [
+        {
+          "field": "creators",
+          "before": [
+            {
+              "creatorType": "author",
+              "firstName": "R.",
+              "lastName": "Chisca"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "A.",
+              "lastName": "Saltaformaggio"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "G.",
+              "lastName": "Verma"
+            }
+          ],
+          "after": [
+            {
+              "creatorType": "author",
+              "firstName": "Mahammed",
+              "lastName": "Kamruzzaman"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "Gene Louis",
+              "lastName": "Kim"
+            }
+          ],
+          "reason": "The stored full title and versioned arXiv URL agree exactly with Kamruzzaman/Kim, not Chisca/Saltaformaggio/Verma. Correct the author list and specify the already-linked v3 date (23 September 2024). Keep this alias in the existing Kamruzzaman Work, separate from SwiftSage. Do not upgrade it to arXiv v4 (2025) without a separate version binding."
+        },
+        {
+          "field": "date",
+          "before": "2024",
+          "after": "2024-09-23",
+          "reason": "The stored full title and versioned arXiv URL agree exactly with Kamruzzaman/Kim, not Chisca/Saltaformaggio/Verma. Correct the author list and specify the already-linked v3 date (23 September 2024). Keep this alias in the existing Kamruzzaman Work, separate from SwiftSage. Do not upgrade it to arXiv v4 (2025) without a separate version binding."
+        },
+        {
+          "field": "itemType",
+          "before": "report",
+          "after": "preprint",
+          "reason": "The stored full title and versioned arXiv URL agree exactly with Kamruzzaman/Kim, not Chisca/Saltaformaggio/Verma. Correct the author list and specify the already-linked v3 date (23 September 2024). Keep this alias in the existing Kamruzzaman Work, separate from SwiftSage. Do not upgrade it to arXiv v4 (2025) without a separate version binding."
+        },
+        {
+          "field": "repository",
+          "before": null,
+          "after": "arXiv",
+          "reason": "The stored full title and versioned arXiv URL agree exactly with Kamruzzaman/Kim, not Chisca/Saltaformaggio/Verma. Correct the author list and specify the already-linked v3 date (23 September 2024). Keep this alias in the existing Kamruzzaman Work, separate from SwiftSage. Do not upgrade it to arXiv v4 (2025) without a separate version binding."
+        }
+      ],
+      "finding": "The stored full title and versioned arXiv URL agree exactly with Kamruzzaman/Kim, not Chisca/Saltaformaggio/Verma. Correct the author list and specify the already-linked v3 date (23 September 2024). Keep this alias in the existing Kamruzzaman Work, separate from SwiftSage. Do not upgrade it to arXiv v4 (2025) without a separate version binding.",
+      "evidence": [
+        {
+          "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kamruzzaman-url-identity.json",
+          "sha256": "sha256:53ed27871d002049fd867608ea8bce95de42cbbae6583d39d279976d1f500239",
+          "source_url": "https://arxiv.org/abs/2404.17218v3",
+          "locator": "citation_meta title/authors; submission_history [v3]"
+        }
+      ],
+      "integration_rule": "Preserve the corrected record identity when rebuilding, discard wrong former identifiers rather than making them aliases, and bind only the exact original version. Historical raw rows remain immutable.",
+      "source_status": "existing_related_source_requires_exact_v3_binding",
+      "source_ready": false,
+      "next_step": "Keep existing canonical Work/Version IDs and rebuild the applied author/date/type/repository corrections. Resolve the true duplicate Kamruzzaman Works in an explicit identity migration with source-version and receipt audit before adding the deferred DOI. No new source review or human verification is inferred.",
+      "deferred_identifier_enrichments": [
+        {
+          "field": "DOI",
+          "before": "",
+          "after": "10.48550/arXiv.2404.17218",
+          "reason": "The stored full title and versioned arXiv URL agree exactly with Kamruzzaman/Kim, not Chisca/Saltaformaggio/Verma. Correct the author list and specify the already-linked v3 date (23 September 2024). Keep this alias in the existing Kamruzzaman Work, separate from SwiftSage. Do not upgrade it to arXiv v4 (2025) without a separate version binding.",
+          "status": "deferred_not_applied",
+          "deferred_at": "2026-09-05T16:19:42Z",
+          "agent_id": "/root/research_completion",
+          "model": "GPT-6",
+          "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+          "deferral_reason": "The source-supported DOI enrichment would collide with two established canonical Kamruzzaman Works and their distinct Version IDs. Applying it as an ordinary metadata edit would require an implicit identity merge and invalidate existing Work/Version-bound review references. Defer only this new DOI field until an explicit migration preserves aliases, exact Versions and receipt provenance; the independent author, v3 date, type and repository corrections remain applied. SwiftSage/RAY6G2R7 is unrelated and must not be reassigned.",
+          "current_work_id": "work:55f0efa8-e433-5588-9afe-3f708043a400",
+          "conflicting_work_id": "work:7644e99b-9dd1-545f-af98-ab7fed6643e6",
+          "required_next_step": "explicit_work_version_duplicate_migration_and_receipt_audit"
+        }
+      ]
+    }
+  },
+  "acquisition_manifest": "corpus/source-acquisition/residual-resolution-2026-09-05/acquisition-manifest.json",
+  "transport_limits": "No access-control bypass, credentials, CAPTCHA solving or insecure TLS setting was used. Windows curl CRL failures, publisher 403 responses, bounded timeouts and incomplete responses are retained as failures; partial responses are not full texts.",
+  "validation": {
+    "metadata_corrections_valid": true,
+    "total_corrections": 9,
+    "new_corrections": [
+      "LR8Z3YHP",
+      "SQYLQFRU",
+      "RAY6G2R7",
+      "ACDF4FL9",
+      "Z9DNTBFF"
+    ],
+    "raw_zotero_sha256": "sha256:a494ba7539919d79a5f2c0e421302050edac3e695a48a04923a085de9065816a",
+    "no_full_project_build": true
+  },
+  "new_evidence_summary": {
+    "complete_original_texts_acquired": [
+      "SQYLQFRU",
+      "RAY6G2R7"
+    ],
+    "metadata_corrections_applied": [
+      "LR8Z3YHP",
+      "SQYLQFRU",
+      "RAY6G2R7",
+      "ACDF4FL9",
+      "Z9DNTBFF"
+    ],
+    "residual_sources_still_without_new_fulltext": [
+      "LR8Z3YHP",
+      "ZQHP5G35",
+      "KI9GRGHB",
+      "5T55I5Z7",
+      "Z9DNTBFF"
+    ],
+    "unresolved_release_identity": [
+      "XG7RFFC7"
+    ],
+    "new_accepted_screening_reviews": 0
+  }
+}

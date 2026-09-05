@@ -25,6 +25,16 @@ def _write(path: Path, payload: dict[str, object]) -> Path:
     return path
 
 
+def test_source_hold_withholds_even_previously_publication_approved_record(tmp_path):
+    screening, corpus = _fixture()
+    # A restrictive current-source hold does not rewrite historical approval.
+    corpus["papers"][0]["source_hold"] = {"kind": "integrity_hold", "reason": "Source withdrawn"}
+    _approve_record(screening["decisions"]["P1"], "P1")
+    data = landscape.build(_write(tmp_path / "screening.json", screening), _write(tmp_path / "corpus.json", corpus))
+    assert data["meta"]["published_record_total"] == 0
+    assert data["meta"]["withheld_total"] == len(screening["decisions"])
+
+
 def _approve_record(record: dict[str, object], paper_id: str) -> None:
     provenance = record["provenance"]
     provenance["actors"].extend(

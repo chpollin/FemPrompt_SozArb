@@ -14,13 +14,13 @@ The Chromium pilot exercises the current editor contract with three non-producti
 
 ## Covered workflow
 
-1. Set and canonicalise a short reviewer key.
+1. Verify the ordinary read-only entry, including with a stored reviewer profile: no setup or writes. Click `Bearbeiten`, then set and canonicalise a short reviewer key. Explicit `trial=1`, `actor=agent` and `verify=1` URLs retain their working modes; acceptance remains read-only.
 2. Keep the disk action disabled until a working folder is connected.
 3. Resolve the repository root to `docs/data/screening/` through a fake directory handle with the same browser API surface.
 4. Read, search, attach and correct evidence through the visible controls.
 5. Complete multi-select, undecidable, and notes fields through the analysis UI.
 6. Save through the disk icon and verify the actual JSON written to the fake reviewer file.
-7. Reload and confirm reviewer key, decisions, text source, and locked records.
+7. Reload and confirm reviewer key, decisions, text source, and locked records; ordinary entry returns to reading. Verify switching back to reading preserves an unsaved draft without writing and switching to editing resumes it.
 8. Verify serial writes, immutable folder targets for queued writes, queue recovery after one failed write, explicit write-error feedback, malformed-file write blocking, pending-text gating, and stale-response rejection.
 9. Verify separate same-origin storage for trial and production tracks, reference blindness before save, Paper-layer reset after navigation, direct paper links, accessible info popovers, compact metadata, source links, responsive behaviour, and the full-text priority over the assessment rail.
 

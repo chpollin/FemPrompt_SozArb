@@ -5,9 +5,11 @@
   "authority_rule": "Any human annotation covers the canonical work; duplicate records do not trigger reassessment.",
   "sources": {
     "research_vault": "docs/data/research_vault_v2.json",
-    "research_vault_sha256": "a15f5157dbeaec9557716595c20adede0af7c2d920826e239189027038727d12",
+    "research_vault_sha256": "8fa546b572392735ec0cdde69546386dd6b468208c1f17d88441e64947f828e8",
     "fulltext_manifest": "docs/data/fulltext_manifest.json",
-    "fulltext_manifest_sha256": "1826a19e498864a4b4025f971b227cd07491dcb114ff6a8c80a1e1a027cd499c",
+    "fulltext_manifest_sha256": "5a973ca0bf1b4034689f2806144842d67f27965b9cf39af1c8d830271e4722b1",
+    "work_version_registry": "corpus/work_version_registry.json",
+    "work_version_registry_sha256": "4bf2287066f307dab97054375d0e6ae5d8c43b6bc90866965d6dbb9f3ec6691d",
     "productive_screening_dir": "docs/data/screening"
   },
   "counts": {
@@ -33,26 +35,30 @@
       "preferred_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
       "latest_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
       "selected_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
-      "selected_version_type": "unknown",
+      "selected_version_type": "preprint",
       "selected_version_is_preferred": true,
+      "source_binding": null,
       "available_versions": [
         {
           "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
-          "version_type": "unknown",
-          "version_date": "2024",
+          "version_type": "preprint",
+          "version_date": "2025-06-05",
           "identifiers": {
+            "doi": [
+              "10.48550/arxiv.2504.05632"
+            ],
             "zotero_key": [
               "SQYLQFRU"
             ],
             "url": [
-              "https://powerdrill.ai/discover/summary-reasoning-towards-fairness-mitigating-bias-in-cm9af0g1h7sb507pn7f5qh32q"
+              "https://arxiv.org/abs/2504.05632v3"
             ]
           },
           "peer_review_status": "not_established",
           "peer_review_basis": "unknown",
           "integrity_status": "current",
           "access_status": "unknown",
-          "landing_url": "https://powerdrill.ai/discover/summary-reasoning-towards-fairness-mitigating-bias-in-cm9af0g1h7sb507pn7f5qh32q",
+          "landing_url": "https://arxiv.org/abs/2504.05632v3",
           "fulltext_url": "",
           "relations": [],
           "is_preferred": true,
@@ -64,9 +70,9 @@
         "SQYLQFRU"
       ],
       "title": "Reasoning towards fairness: Mitigating bias in language models through reasoning-guided fine-tuning",
-      "author_year": "Furniturewala et al. (2024)",
-      "doi": null,
-      "url": "https://powerdrill.ai/discover/summary-reasoning-towards-fairness-mitigating-bias-in-cm9af0g1h7sb507pn7f5qh32q",
+      "author_year": "Sanchit Kabra (2025)",
+      "doi": "10.48550/arXiv.2504.05632",
+      "url": "https://arxiv.org/abs/2504.05632v3",
       "abstract_available": false,
       "source_status": "none",
       "source_chars": 0,
@@ -86,24 +92,28 @@
       "selected_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
       "selected_version_type": "preprint",
       "selected_version_is_preferred": true,
+      "source_binding": null,
       "available_versions": [
         {
           "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
           "version_type": "preprint",
-          "version_date": "2024",
+          "version_date": "2023-12-06",
           "identifiers": {
+            "doi": [
+              "10.48550/arxiv.2305.17390"
+            ],
             "zotero_key": [
               "RAY6G2R7"
             ],
             "url": [
-              "https://arxiv.org/html/2404.17218v3"
+              "https://arxiv.org/abs/2305.17390v2"
             ]
           },
           "peer_review_status": "not_established",
           "peer_review_basis": "unknown",
           "integrity_status": "current",
           "access_status": "unknown",
-          "landing_url": "https://arxiv.org/html/2404.17218v3",
+          "landing_url": "https://arxiv.org/abs/2305.17390v2",
           "fulltext_url": "",
           "relations": [],
           "is_preferred": true,
@@ -114,10 +124,10 @@
       "record_ids": [
         "RAY6G2R7"
       ],
-      "title": "SWIFTSAGE: A new dual-module framework for better action planning in complex interactive reasoning tasks",
-      "author_year": "Lin et al. (2024)",
-      "doi": null,
-      "url": "https://arxiv.org/html/2404.17218v3",
+      "title": "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks",
+      "author_year": "Bill Yuchen Lin (2023)",
+      "doi": "10.48550/arXiv.2305.17390",
+      "url": "https://arxiv.org/abs/2305.17390v2",
       "abstract_available": false,
       "source_status": "none",
       "source_chars": 0,
@@ -137,6 +147,7 @@
       "selected_version_id": "version:d25aa754-f559-54ef-bd2f-4f8d0bec38a5",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
+      "source_binding": null,
       "available_versions": [
         {
           "version_id": "version:d25aa754-f559-54ef-bd2f-4f8d0bec38a5",
@@ -188,6 +199,7 @@
       "selected_version_id": "version:d523f07b-3eed-5bf9-9073-62ffb923d65b",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
+      "source_binding": null,
       "available_versions": [
         {
           "version_id": "version:d523f07b-3eed-5bf9-9073-62ffb923d65b",
@@ -195,17 +207,20 @@
           "version_date": "2020",
           "identifiers": {
             "doi": [
-              "10.1177/0950017020950021"
+              "10.1080/03085147.2020.1733842"
             ],
             "zotero_key": [
               "LR8Z3YHP"
+            ],
+            "url": [
+              "https://doi.org/10.1080/03085147.2020.1733842"
             ]
           },
           "peer_review_status": "not_established",
           "peer_review_basis": "unknown",
           "integrity_status": "current",
           "access_status": "unknown",
-          "landing_url": "",
+          "landing_url": "https://doi.org/10.1080/03085147.2020.1733842",
           "fulltext_url": "",
           "relations": [],
           "is_preferred": true,
@@ -217,9 +232,9 @@
         "LR8Z3YHP"
       ],
       "title": "'Meaningless work': How the datafication of health reconfigures knowledge about work and erodes professional judgement",
-      "author_year": "Wadmann & Hoeyer (2020)",
-      "doi": "10.1177/0950017020950021",
-      "url": null,
+      "author_year": "Klaus Hoeyer (2020)",
+      "doi": "10.1080/03085147.2020.1733842",
+      "url": "https://doi.org/10.1080/03085147.2020.1733842",
       "abstract_available": true,
       "source_status": "none",
       "source_chars": 0,
@@ -239,6 +254,7 @@
       "selected_version_id": "version:e3428c27-954b-565a-9d89-d546870301b3",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
+      "source_binding": null,
       "available_versions": [
         {
           "version_id": "version:e3428c27-954b-565a-9d89-d546870301b3",
@@ -290,6 +306,7 @@
       "selected_version_id": "version:09999996-2035-5d96-8058-aa9bb3c2b668",
       "selected_version_type": "unknown",
       "selected_version_is_preferred": true,
+      "source_binding": null,
       "available_versions": [
         {
           "version_id": "version:09999996-2035-5d96-8058-aa9bb3c2b668",
@@ -341,6 +358,7 @@
       "selected_version_id": "version:ee62fefd-c381-5494-87e4-6accdce35fbe",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
+      "source_binding": null,
       "available_versions": [
         {
           "version_id": "version:ee62fefd-c381-5494-87e4-6accdce35fbe",
@@ -390,26 +408,30 @@
       "preferred_version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
       "latest_version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
       "selected_version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
-      "selected_version_type": "preprint",
+      "selected_version_type": "unknown",
       "selected_version_is_preferred": true,
+      "source_binding": null,
       "available_versions": [
         {
           "version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
-          "version_type": "preprint",
-          "version_date": "2024",
+          "version_type": "unknown",
+          "version_date": "2022-07",
           "identifiers": {
+            "doi": [
+              "10.18653/v1/2022.gebnlp-1.10"
+            ],
             "zotero_key": [
               "Z9DNTBFF"
             ],
             "url": [
-              "https://arxiv.org/html/2405.20152v1"
+              "https://aclanthology.org/2022.gebnlp-1.10"
             ]
           },
           "peer_review_status": "not_established",
           "peer_review_basis": "unknown",
           "integrity_status": "current",
           "access_status": "unknown",
-          "landing_url": "https://arxiv.org/html/2405.20152v1",
+          "landing_url": "https://aclanthology.org/2022.gebnlp-1.10",
           "fulltext_url": "",
           "relations": [],
           "is_preferred": true,
@@ -420,10 +442,10 @@
       "record_ids": [
         "Z9DNTBFF"
       ],
-      "title": "Worst of both worlds: A comparative analysis of error in language and vision-language models",
-      "author_year": "Srinivasan & Bisk (2024)",
-      "doi": null,
-      "url": "https://arxiv.org/html/2405.20152v1",
+      "title": "Worst of Both Worlds: Biases Compound in Pre-trained Vision-and-Language Models",
+      "author_year": "Tejas Srinivasan (2022)",
+      "doi": "10.18653/v1/2022.gebnlp-1.10",
+      "url": "https://aclanthology.org/2022.gebnlp-1.10/",
       "abstract_available": false,
       "source_status": "none",
       "source_chars": 0,

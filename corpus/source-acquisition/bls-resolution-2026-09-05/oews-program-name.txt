@@ -1,0 +1,5 @@
+Source URL: https://www.bls.gov/oes/2023/occupational-employment-and-wage-statistics-oews.htm
+Capture: official BLS page excerpt returned by web browsing on 2026-09-05. This is an excerpt, not a full downloaded report. Direct HTTP retrieval returned 403.
+Locator: program-name paragraph, rendered line 159.
+
+Data released on or after March 31, 2021 reflect the new program name.

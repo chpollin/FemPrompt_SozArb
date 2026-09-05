@@ -186,8 +186,12 @@ def build_index(
     ):
         raise ValueError("publication policy: invalid allowed_states")
     ledger = _read_json(ledger_path) if ledger_path.is_file() else {"schema": LEDGER_SCHEMA, "reviews": []}
-    reviews = validated_reviews(repo or vault.parent, ledger)
+    repo = repo or vault.parent
+    reviews = validated_reviews(repo, ledger)
     registry = load_registry(registry_path)
+    from src.analysis.historical_resolution import load_source_holds
+    source_holds = load_source_holds(repo)
+    source_holds.update({work["work_id"]: work["source_hold"] for work in registry["works"] if work.get("source_hold")})
     references = _references(vault)
     docs = {doc.key: doc for folder in ("20_distillates", "30_assertions")
             for path in sorted((vault / folder).rglob("*.md"))
@@ -218,6 +222,9 @@ def build_index(
             if distillate is None or distillate.metadata.get("type") != "distillate":
                 raise ValueError(f"{doc.key}: unresolved distillate {target}")
             meta = distillate.metadata
+            if meta.get("work-id") in source_holds:
+                withheld = True
+                continue
             if meta.get("status") not in allowed:
                 withheld = True
                 continue

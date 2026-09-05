@@ -10,7 +10,7 @@ status: active
 language: en
 version: "0.6"
 created: 2026-07-17
-updated: 2026-08-23
+updated: 2026-09-05
 ---
 
 # Research Vault
@@ -39,6 +39,8 @@ The canonical chain is being introduced without rewriting the legacy evidence re
 
 The legacy `status: grounded` records only the former link check. It does not establish canonical Grounded Vault validation, AI Agent Review, or domain-expert verification. Legacy files remain unchanged until their content has been migrated through the current chain.
 
+The active source-reviewed slice is still small and does not cover the full corpus. [The canonical Vault guide](../knowledge/research-vault.md#aktueller-implementierungsstand) identifies its distillates, Assertions and coverage measures. A legacy document, topic-map link or category co-occurrence does not establish a reviewed scientific claim. Current released assertions are listed in [assertion_index.json](../docs/data/assertion_index.json); whole-corpus readiness is tracked in the [completion package](../generated/completion/README.md).
+
 ## Output separation
 
 The literature report and paper are sibling outputs over one Assertion layer.
@@ -50,7 +52,9 @@ The literature report and paper are sibling outputs over one Assertion layer.
 
 ## Public boundary
 
-Working and `ai-agent-reviewed` material remains internal. Public projections may use only records, Assertions, and chapters that have completed domain-expert verification and publication approval. The status ladder is `grounded → ai-agent-reviewed → verified → publication-approved`. For Markdown artifacts, deterministic validation is recorded as `checked.validation`; PRISM JSON records use the richer `checks` array. Neither form creates a scholarly authority state.
+The operator authorised a labelled preliminary AI-source-reviewed result on 2026-09-05. Eligibility follows [publication_policy.json](../config/publication_policy.json) and requires current attributed reviews bound to the exact artifact and its evidence. The [governance contract](../knowledge/governance.md#publication-boundary) defines this release separately from person-attributed domain-expert verification and final scholarly publication approval. A maturity label alone never admits a file to the result site.
+
+The status ladder remains `grounded → ai-agent-reviewed → verified → publication-approved`. For Markdown artifacts, deterministic validation is recorded as `checked.validation`; PRISM JSON records use the richer `checks` array. Neither form creates a scholarly authority state. The allowlisted site is `build/site/`; this boundary does not make the repository's working files private.
 
 ## Validation
 
@@ -58,4 +62,4 @@ Working and `ai-agent-reviewed` material remains internal. Public projections ma
 
 ## Rights boundary
 
-Third-party originals and full-text Markdown remain local unless an individual source licence permits publication. Publication distillates may use short quotations whose identity was checked at intake. Bibliographic metadata, original prose, Assertions, and output chapters may be committed.
+The result build excludes full-text sources and the historical working collection. Local PDF binaries, versioned source representations and released quotations have distinct roles; public readability does not imply a general reuse licence. Bibliographic metadata, original prose, Assertions and source-checked excerpts retain their provenance in the released subset.

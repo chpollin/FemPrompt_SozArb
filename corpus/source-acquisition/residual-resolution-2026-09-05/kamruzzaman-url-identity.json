@@ -1,0 +1,32 @@
+{
+  "source_url": "https://arxiv.org/abs/2404.17218v3",
+  "accessed_at": "2026-09-05T15:19:47.174524+00:00",
+  "raw_response_sha256": "sha256:e4f284e8f3f645e313526b37ce390c6cd4ef345a35f87b27b88779f8519ede7a",
+  "citation_meta": {
+    "citation_title": [
+      "Prompting Techniques for Reducing Social Bias in LLMs through System 1 and System 2 Cognitive Processes"
+    ],
+    "citation_author": [
+      "Kamruzzaman, Mahammed",
+      "Kim, Gene Louis"
+    ],
+    "citation_date": [
+      "2024/04/26"
+    ],
+    "citation_online_date": [
+      "2024/09/23"
+    ],
+    "citation_pdf_url": [
+      "https://arxiv.org/pdf/2404.17218"
+    ],
+    "citation_arxiv_id": [
+      "2404.17218"
+    ],
+    "citation_abstract": [
+      "Dual process theory posits that human cognition arises via two systems. System 1, which is a quick, emotional, and intuitive process, which is subject to cognitive biases, and System 2, is a slow, onerous, and deliberate process. NLP researchers often compare zero-shot prompting in LLMs to System 1 reasoning and chain-of-thought (CoT) prompting to System 2. In line with this interpretation, prior research has found that using CoT prompting in LLMs leads to reduced gender bias. We investigate the relationship between bias, CoT prompting, a debiasing prompt, and dual process theory in LLMs directly. We compare zero-shot CoT, debiasing, and a variety of dual process theory-based prompting strategies on two bias datasets spanning nine different social bias categories. We incorporate human and machine personas to determine whether the effects of dual process theory in LLMs exist independent of explicit persona models or are based on modeling human cognition. We find that a human persona, debiasing, System 2, and CoT prompting all tend to reduce social biases in LLMs, though the best combination of features depends on the exact model and bias category -- resulting in up to a 19 percent drop in stereotypical judgments by an LLM."
+    ]
+  },
+  "submission_history": "Submission history From: Mahammed Kamruzzaman [ view email ] [v1] Fri, 26 Apr 2024 07:46:29 UTC (8,067 KB) [v2] Fri, 28 Jun 2024 23:54:49 UTC (8,068 KB) [v3] Mon, 23 Sep 2024 02:20:13 UTC (10,227 KB) [v4] Fri, 22 Aug 2025 05:59:31 UTC (7,873 KB)",
+  "license_links": [],
+  "abstract": "Abstract: Dual process theory posits that human cognition arises via two systems. System 1, which is a quick, emotional, and intuitive process, which is subject to cognitive biases, and System 2, is a slow, onerous, and deliberate process. NLP researchers often compare zero-shot prompting in LLMs to System 1 reasoning and chain-of-thought (CoT) prompting to System 2. In line with this interpretation, prior research has found that using CoT prompting in LLMs leads to reduced gender bias. We investigate the relationship between bias, CoT prompting, a debiasing prompt, and dual process theory in LLMs directly. We compare zero-shot CoT, debiasing, and a variety of dual process theory-based prompting strategies on two bias datasets spanning nine different social bias categories. We incorporate human and machine personas to determine whether the effects of dual process theory in LLMs exist independent of explicit persona models or are based on modeling human cognition. We find that a human persona, debiasing, System 2, and CoT prompting all tend to reduce social biases in LLMs, though the best combination of features depends on the exact model and bias category -- resulting in up to a 19 percent drop in stereotypical judgments by an LLM."
+}

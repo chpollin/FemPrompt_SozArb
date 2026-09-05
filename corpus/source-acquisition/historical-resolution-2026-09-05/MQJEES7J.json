@@ -1,0 +1,1259 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          8,
+          28
+        ]
+      ],
+      "date-time": "2026-08-28T14:55:44Z",
+      "timestamp": 1787928944546,
+      "version": "build-2784847793"
+    },
+    "reference-count": 97,
+    "publisher": "Elsevier BV",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              5,
+              1
+            ]
+          ],
+          "date-time": "2025-05-01T00:00:00Z",
+          "timestamp": 1746057600000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              5,
+              1
+            ]
+          ],
+          "date-time": "2025-05-01T00:00:00Z",
+          "timestamp": 1746057600000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/legal/tdmrep-license"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              5,
+              6
+            ]
+          ],
+          "date-time": "2025-05-06T00:00:00Z",
+          "timestamp": 1746489600000
+        },
+        "content-version": "vor",
+        "delay-in-days": 5,
+        "URL": "http://creativecommons.org/licenses/by-nc/4.0/"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "elsevier.com",
+        "sciencedirect.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Computers in Human Behavior: Artificial Humans"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2025,
+          5
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.chbah.2025.100162",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2025,
+          5,
+          9
+        ]
+      ],
+      "date-time": "2025-05-09T02:44:04Z",
+      "timestamp": 1746758644000
+    },
+    "page": "100162",
+    "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 28,
+    "special_numbering": "C",
+    "title": [
+      "AI literacy and trust: A multi-method study of Human-GAI team collaboration"
+    ],
+    "prefix": "10.1016",
+    "volume": "4",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0001-7641-0362",
+        "authenticated-orcid": false,
+        "given": "Zilong",
+        "family": "Pan",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-5215-3493",
+        "authenticated-orcid": false,
+        "given": "Ozias A.",
+        "family": "Moore",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-9811-2630",
+        "authenticated-orcid": false,
+        "given": "Antigoni",
+        "family": "Papadimitriou",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jiayan",
+        "family": "Zhu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "78",
+    "reference": [
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib1",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.1016/j.infoecopol.2019.05.001",
+        "article-title": "Exploring the impact of artificial intelligence: Prediction versus judgment",
+        "volume": "47",
+        "author": "Agrawal",
+        "year": "2019",
+        "journal-title": "Information Economics and Policy"
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.chbah.2025.100162_bib2",
+        "doi-asserted-by": "crossref",
+        "first-page": "383",
+        "DOI": "10.1108/QRJ-D-18-00035",
+        "article-title": "Qualitative research: Deductive and inductive approaches to data analysis",
+        "volume": "18",
+        "author": "Azungah",
+        "year": "2018",
+        "journal-title": "Qualitative Research Journal"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib3",
+        "doi-asserted-by": "crossref",
+        "first-page": "255",
+        "DOI": "10.1016/j.indmarman.2021.09.003",
+        "article-title": "SMEs and artificial intelligence (AI): Antecedents and consequences of AI-based B2B practices",
+        "volume": "98",
+        "author": "Baabdullah",
+        "year": "2021",
+        "journal-title": "Industrial Marketing Management"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib4",
+        "article-title": "Is ChatGPT scary good? How user motivations affect creepiness and trust in generative artificial intelligence",
+        "volume": "83",
+        "author": "Baek",
+        "year": "2023",
+        "journal-title": "Telematics and Informatics"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib5",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.2139/ssrn.4298669",
+        "article-title": "Improving human-algorithm collaboration: Causes and mitigation of over-and under-adherence",
+        "author": "Balakrishnan",
+        "year": "2022",
+        "journal-title": "SSRN Electronic Journal"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.chbah.2025.100162_bib6",
+        "doi-asserted-by": "crossref",
+        "first-page": "159",
+        "DOI": "10.1002/job.2735",
+        "article-title": "A multilevel review of artificial intelligence in organizations: Implications for organizational behavior research and practice",
+        "volume": "45",
+        "author": "Bankins",
+        "year": "2024",
+        "journal-title": "Journal of Organizational Behavior"
+      },
+      {
+        "issue": "6",
+        "key": "10.1016/j.chbah.2025.100162_bib7",
+        "doi-asserted-by": "crossref",
+        "first-page": "825",
+        "DOI": "10.1007/s12599-022-00764-w",
+        "article-title": "Algorithmic management: Bright and dark sides, practical implications, and research opportunities",
+        "volume": "64",
+        "author": "Benlian",
+        "year": "2022",
+        "journal-title": "Business & Information Systems Engineering"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.chbah.2025.100162_bib8",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.25300/MISQ/2021/16274",
+        "article-title": "Managing artificial intelligence",
+        "volume": "45",
+        "author": "Berente",
+        "year": "2021",
+        "journal-title": "MIS Quarterly"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.chbah.2025.100162_bib9",
+        "doi-asserted-by": "crossref",
+        "first-page": "629",
+        "DOI": "10.1177/10596011231160574",
+        "article-title": "Artificial intelligence and groups: Effects of attitudes and discretion on collaboration",
+        "volume": "48",
+        "author": "Bezrukova",
+        "year": "2023",
+        "journal-title": "Group & Organization Management"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.chbah.2025.100162_bib10",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.51415/ajims.v6i1.1528",
+        "article-title": "Interrogating assessment in the age of generative AI",
+        "volume": "6",
+        "author": "Blackie",
+        "year": "2024",
+        "journal-title": "African Journal of Inter/Multidisciplinary Studies"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.chbah.2025.100162_bib11",
+        "doi-asserted-by": "crossref",
+        "first-page": "127",
+        "DOI": "10.1016/j.obhdp.2006.07.001",
+        "article-title": "Advice taking and decision-making: An integrative literature review, and implications for the organizational sciences",
+        "volume": "101",
+        "author": "Bonaccio",
+        "year": "2006",
+        "journal-title": "Organizational Behavior and Human Decision Processes"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.chbah.2025.100162_bib12",
+        "doi-asserted-by": "crossref",
+        "first-page": "239",
+        "DOI": "10.1017/jmo.2016.55",
+        "article-title": "Smart technology, artificial intelligence, robotics, and algorithms (STARA): Employees' perceptions of our future workplace",
+        "volume": "24",
+        "author": "Brougham",
+        "year": "2017",
+        "journal-title": "Journal of Management and Organization"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib13",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.technovation.2021.102312",
+        "article-title": "Understanding managers' attitudes and behavioral intentions towards using artificial intelligence for organizational decision-making",
+        "volume": "106",
+        "author": "Cao",
+        "year": "2021",
+        "journal-title": "Technovation"
+      },
+      {
+        "issue": "5",
+        "key": "10.1016/j.chbah.2025.100162_bib14",
+        "doi-asserted-by": "crossref",
+        "first-page": "809",
+        "DOI": "10.1177/0022243719851788",
+        "article-title": "Task-dependent algorithm aversion",
+        "volume": "56",
+        "author": "Castelo",
+        "year": "2019",
+        "journal-title": "Journal of Marketing Research"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.chbah.2025.100162_bib15",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1186/s41239-023-00411-8",
+        "article-title": "Students' voices on generative AI: Perceptions, benefits, and challenges in higher education",
+        "volume": "20",
+        "author": "Chan",
+        "year": "2023",
+        "journal-title": "International Journal of Educational Technology in Higher Education"
+      },
+      {
+        "issue": "2–3",
+        "key": "10.1016/j.chbah.2025.100162_bib16",
+        "first-page": "601",
+        "article-title": "Does data-driven culture impact innovation and performance of a firm? An empirical examination",
+        "volume": "333",
+        "author": "Chatterjee",
+        "year": "2021",
+        "journal-title": "Annals of Operations Research"
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.chbah.2025.100162_bib17",
+        "doi-asserted-by": "crossref",
+        "first-page": "1299",
+        "DOI": "10.1007/s10796-021-10181-1",
+        "article-title": "Assessing organizational users' intentions and behavior to AI integrated CRM systems: A meta-UTAUT approach",
+        "volume": "25",
+        "author": "Chatterjee",
+        "year": "2021",
+        "journal-title": "Information Systems Frontiers"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.chbah.2025.100162_bib18",
+        "doi-asserted-by": "crossref",
+        "first-page": "79",
+        "DOI": "10.21818/001c.122143",
+        "article-title": "Exploring generative artificial intelligence (GAI): Business professionals' surveys and perceptions on GAI",
+        "volume": "24",
+        "author": "Chen",
+        "year": "2024",
+        "journal-title": "Journal of Behavioral and Applied Management"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.chbah.2025.100162_bib19",
+        "doi-asserted-by": "crossref",
+        "first-page": "137",
+        "DOI": "10.1177/00187208211009995",
+        "article-title": "Trusting automation: Designing for responsivity and resilience",
+        "volume": "65",
+        "author": "Chiou",
+        "year": "2021",
+        "journal-title": "Human Factors"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib20",
+        "doi-asserted-by": "crossref",
+        "first-page": "31",
+        "DOI": "10.1016/j.jbusres.2022.01.069",
+        "article-title": "AI-employee collaboration and business performance: Integrating knowledge-based view, socio-technical systems and organisational socialisation framework",
+        "volume": "144",
+        "author": "Chowdhury",
+        "year": "2022",
+        "journal-title": "Journal of Business Research"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib21",
+        "series-title": "The impact of artificial intelligence on innovation: An exploratory analysis",
+        "author": "Cockburn",
+        "year": "2019"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib22",
+        "series-title": "Research design: Qualitative, quantitative, and mixed methods approaches",
+        "author": "Creswell",
+        "year": "2017"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib23",
+        "series-title": "Rise of the strategy machines",
+        "author": "Davenport",
+        "year": "2016"
+      },
+      {
+        "issue": "8",
+        "key": "10.1016/j.chbah.2025.100162_bib106",
+        "doi-asserted-by": "crossref",
+        "first-page": "1134",
+        "DOI": "10.1037/apl0000110",
+        "article-title": "Trust and team performance: A meta-analysis of main effects, moderators, and covariates",
+        "volume": "101",
+        "author": "De Jong",
+        "year": "2016",
+        "journal-title": "Journal of Applied Psychology"
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.chbah.2025.100162_bib24",
+        "doi-asserted-by": "crossref",
+        "first-page": "431",
+        "DOI": "10.1016/j.lrp.2016.09.004",
+        "article-title": "The strategic management of high-growth firms: A review and theoretical conceptualization",
+        "volume": "50",
+        "author": "Demir",
+        "year": "2017",
+        "journal-title": "Long Range Planning"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.chbah.2025.100162_bib25",
+        "doi-asserted-by": "crossref",
+        "first-page": "307",
+        "DOI": "10.1080/07421222.2023.2196773",
+        "article-title": "AI agents as team members: Effects on satisfaction, conflict, trustworthiness, and willingness to work with",
+        "volume": "40",
+        "author": "Dennis",
+        "year": "2023",
+        "journal-title": "Journal of Management Information Systems"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib26",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.chb.2022.107574",
+        "article-title": "Supporting human-AI teams: Transparency, explainability, and situation awareness",
+        "volume": "140",
+        "author": "Endsley",
+        "year": "2023",
+        "journal-title": "Computers in Human Behavior"
+      },
+      {
+        "issue": "7",
+        "key": "10.1016/j.chbah.2025.100162_bib27",
+        "doi-asserted-by": "crossref",
+        "first-page": "492",
+        "DOI": "10.1136/medethics-2021-107482",
+        "article-title": "Design publicity of black box algorithms: A support to the epistemic and ethical justifications of medical AI systems",
+        "volume": "48",
+        "author": "Ferrario",
+        "year": "2021",
+        "journal-title": "Journal of Medical Ethics"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib28",
+        "doi-asserted-by": "crossref",
+        "first-page": "1531",
+        "DOI": "10.3389/fpsyg.2016.01531",
+        "article-title": "Technology as teammate: Examining the role of external cognition in support of team cognitive processes",
+        "volume": "7",
+        "author": "Fiore",
+        "year": "2016",
+        "journal-title": "Frontiers in Psychology"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib29",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1111/joop.12504",
+        "article-title": "Would you trust an AI team member? Team trust in human–AI teams",
+        "author": "Georganta",
+        "year": "2024",
+        "journal-title": "Journal of Occupational and Organizational Psychology"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib31",
+        "series-title": "Trust in artificial intelligence: A global study",
+        "author": "Gillespie",
+        "year": "2023"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.chbah.2025.100162_bib32",
+        "doi-asserted-by": "crossref",
+        "first-page": "627",
+        "DOI": "10.5465/annals.2018.0057",
+        "article-title": "Human trust in artificial intelligence: Review of empirical research",
+        "volume": "14",
+        "author": "Glikson",
+        "year": "2020",
+        "journal-title": "The Academy of Management Annals"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.chbah.2025.100162_bib33",
+        "doi-asserted-by": "crossref",
+        "first-page": "354",
+        "DOI": "10.1016/j.ijforecast.2012.08.001",
+        "article-title": "Antecedents and effects of trust in forecasting advice",
+        "volume": "29",
+        "author": "Goodwin",
+        "year": "2013",
+        "journal-title": "International Journal of Forecasting"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.chbah.2025.100162_bib34",
+        "doi-asserted-by": "crossref",
+        "first-page": "483",
+        "DOI": "10.1075/is.8.3.10gro",
+        "article-title": "Can robots be teammates?: Benchmarks in human–robot teams",
+        "volume": "8",
+        "author": "Groom",
+        "year": "2007",
+        "journal-title": "Interaction Studies"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.chbah.2025.100162_bib37",
+        "doi-asserted-by": "crossref",
+        "first-page": "70",
+        "DOI": "10.1177/1461444819858691",
+        "article-title": "Artificial intelligence and communication: A human–machine communication research agenda",
+        "volume": "22",
+        "author": "Guzman",
+        "year": "2019",
+        "journal-title": "New Media & Society"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.chbah.2025.100162_bib38",
+        "doi-asserted-by": "crossref",
+        "first-page": "407",
+        "DOI": "10.1177/0018720814547570",
+        "article-title": "Trust in automation: Integrating empirical evidence on factors that influence trust",
+        "volume": "57",
+        "author": "Hoff",
+        "year": "2015",
+        "journal-title": "Human Factors"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.chbah.2025.100162_bib39",
+        "doi-asserted-by": "crossref",
+        "first-page": "179",
+        "DOI": "10.1177/1440783319873046",
+        "article-title": "‘Where are the people? What are they doing? Why are they doing it?’(mindell) situating artificial intelligence within a socio-technical framework",
+        "volume": "57",
+        "author": "Holton",
+        "year": "2021",
+        "journal-title": "Journal of Sociology"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib40",
+        "series-title": "IBM SPSS statistics for windows (version 29.0)",
+        "year": "2024"
+      },
+      {
+        "issue": "6",
+        "key": "10.1016/j.chbah.2025.100162_bib41",
+        "doi-asserted-by": "crossref",
+        "first-page": "1179",
+        "DOI": "10.1080/09585192.2021.1891114",
+        "article-title": "Rebooting employees: Upskilling for artificial intelligence in multinational corporations",
+        "volume": "33",
+        "author": "Jaiswal",
+        "year": "2021",
+        "journal-title": "International Journal of Human Resource Management"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.chbah.2025.100162_bib42",
+        "doi-asserted-by": "crossref",
+        "first-page": "390",
+        "DOI": "10.1080/0960085X.2023.2175474",
+        "article-title": "Between scale and impact: Member prototype ambiguity in digital transformation",
+        "volume": "32",
+        "author": "Jarvenpaa",
+        "year": "2023",
+        "journal-title": "European Journal of Information Systems"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib43",
+        "doi-asserted-by": "crossref",
+        "first-page": "7044",
+        "DOI": "10.1109/TEM.2023.3275643",
+        "article-title": "Artificial intelligence-enabled business model innovation: Competencies and roles of top management",
+        "volume": "71",
+        "author": "Jorzik",
+        "year": "2023",
+        "journal-title": "IEEE Transactions on Engineering Management"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.chbah.2025.100162_bib44",
+        "doi-asserted-by": "crossref",
+        "first-page": "1670",
+        "DOI": "10.1287/mnsc.2020.3599",
+        "article-title": "When will workers follow an algorithm? A field experiment with a retail business",
+        "volume": "67",
+        "author": "Kawaguchi",
+        "year": "2021",
+        "journal-title": "Management Science"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib45",
+        "article-title": "Exploring the AI competencies of elementary school teachers in South Korea",
+        "volume": "4",
+        "author": "Kim",
+        "year": "2023",
+        "journal-title": "Computers and Education: Artificial Intelligence"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib46",
+        "article-title": "The many facets of trust in AI: Formalizing the relation between trust and fairness, accountability, and transparency",
+        "author": "Knowles",
+        "year": "2022",
+        "journal-title": "arXiv preprint arXiv:2208.00681"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib47",
+        "article-title": "Evaluation of an artificial intelligence literacy course for university students with diverse study backgrounds",
+        "volume": "2",
+        "author": "Kong",
+        "year": "2021",
+        "journal-title": "Computers and Education: Artificial Intelligence"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib49",
+        "series-title": "The handbook of human systems integration",
+        "article-title": "Teams, teamwork, and team effectiveness: Implications for human systems integration",
+        "author": "Kozlowski",
+        "year": "2015"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib50",
+        "article-title": "Artificial intelligence literacy in higher and adult education: A scoping literature review",
+        "volume": "3",
+        "author": "Laupichler",
+        "year": "2022",
+        "journal-title": "Computers and Education: Artificial Intelligence"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib51",
+        "doi-asserted-by": "crossref",
+        "first-page": "141",
+        "DOI": "10.1007/s42113-019-00029-y",
+        "article-title": "Robust modeling in cognitive science",
+        "volume": "2",
+        "author": "Lee",
+        "year": "2019",
+        "journal-title": "Computational Brain & Behavior"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.chbah.2025.100162_bib52",
+        "doi-asserted-by": "crossref",
+        "first-page": "50",
+        "DOI": "10.1518/hfes.46.1.50.30392",
+        "article-title": "Trust in automation: Designing for appropriate reliance",
+        "volume": "46",
+        "author": "Lee",
+        "year": "2004",
+        "journal-title": "Human Factors"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib53",
+        "article-title": "Does “AI” stand for augmenting inequality in the era of COVID-19 healthcare?",
+        "volume": "n304",
+        "author": "Leslie",
+        "year": "2021",
+        "journal-title": "BMJ"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib54",
+        "doi-asserted-by": "crossref",
+        "first-page": "33",
+        "DOI": "10.1016/j.cogsys.2021.11.001",
+        "article-title": "What is it like to trust a rock? A functionalist perspective on trust and trustworthiness in artificial intelligence",
+        "volume": "72",
+        "author": "Lewis",
+        "year": "2022",
+        "journal-title": "Cognitive Systems Research"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib55",
+        "series-title": "A quarter of U.S. teachers say AI tools do more harm than good in K-12 education",
+        "author": "Lin",
+        "year": "2024"
+      },
+      {
+        "issue": "CSCW2",
+        "key": "10.1016/j.chbah.2025.100162_bib56",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.1145/3476034",
+        "article-title": "Co-designing AI literacy exhibits for informal learning spaces",
+        "volume": "5",
+        "author": "Long",
+        "year": "2021",
+        "journal-title": "Proceedings of the ACM on Human-Computer Interaction"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib57",
+        "series-title": "Proceedings of the 2020 CHI conference on human factors in computing systems",
+        "first-page": "1",
+        "article-title": "What is AI literacy? Competencies and design considerations",
+        "author": "Long",
+        "year": "2020"
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.chbah.2025.100162_bib59",
+        "doi-asserted-by": "crossref",
+        "first-page": "629",
+        "DOI": "10.1093/jcr/ucz013",
+        "article-title": "Resistance to medical artificial intelligence",
+        "volume": "46",
+        "author": "Longoni",
+        "year": "2019",
+        "journal-title": "Journal of Consumer Research"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.chbah.2025.100162_bib60",
+        "doi-asserted-by": "crossref",
+        "first-page": "452",
+        "DOI": "10.1037/apl0000128",
+        "article-title": "A century of work teams in the Journal of Applied Psychology",
+        "volume": "102",
+        "author": "Mathieu",
+        "year": "2017",
+        "journal-title": "Journal of Applied Psychology"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.chbah.2025.100162_bib61",
+        "doi-asserted-by": "crossref",
+        "first-page": "709",
+        "DOI": "10.2307/258792",
+        "article-title": "An integrative model of organizational trust",
+        "volume": "20",
+        "author": "Mayer",
+        "year": "1995",
+        "journal-title": "Academy of Management Review"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib62",
+        "series-title": "Artificial intelligence in HCI: First international conference, AI-HCI 2020, held as part of the 22nd HCI international conference, HCII 2020, Copenhagen, Denmark, july 19–24, 2020, proceedings 22",
+        "first-page": "54",
+        "article-title": "Transparency and trust in human-AI-interaction: The role of model-agnostic explanations in computer vision-based decision support",
+        "author": "Meske",
+        "year": "2020"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib63",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.chb.2021.106852",
+        "article-title": "What happens when humans believe their teammate is an AI? An investigation into humans teaming with autonomy",
+        "volume": "122",
+        "author": "Musick",
+        "year": "2021",
+        "journal-title": "Computers in Human Behavior"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib65",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.caeai.2021.100041",
+        "article-title": "Conceptualizing AI literacy: An exploratory review",
+        "volume": "2",
+        "author": "Ng",
+        "year": "2021",
+        "journal-title": "Computers and Education. Artificial Intelligence"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.chbah.2025.100162_bib66",
+        "doi-asserted-by": "crossref",
+        "first-page": "482",
+        "DOI": "10.1108/IMR-02-2021-0078",
+        "article-title": "Impact of knowledge sharing on employees' service quality: The moderating role of artificial intelligence",
+        "volume": "39",
+        "author": "Nguyen",
+        "year": "2022",
+        "journal-title": "International Marketing Review"
+      },
+      {
+        "issue": "6654",
+        "key": "10.1016/j.chbah.2025.100162_bib67",
+        "doi-asserted-by": "crossref",
+        "first-page": "187",
+        "DOI": "10.1126/science.adh2586",
+        "article-title": "Experimental evidence on the productivity effects of generative artificial intelligence",
+        "volume": "381",
+        "author": "Noy",
+        "year": "2023",
+        "journal-title": "Science"
+      },
+      {
+        "issue": "5",
+        "key": "10.1016/j.chbah.2025.100162_bib68",
+        "doi-asserted-by": "crossref",
+        "first-page": "904",
+        "DOI": "10.1177/0018720820960865",
+        "article-title": "Human–autonomy teaming: A review and analysis of the empirical literature",
+        "volume": "64",
+        "author": "O'Neill",
+        "year": "2022",
+        "journal-title": "Human Factors"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib70",
+        "author": "Oppenlaender"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.chbah.2025.100162_bib71",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.hrmr.2022.100924",
+        "article-title": "An interdisciplinary review of AI and HRM: Challenges and future directions",
+        "volume": "33",
+        "author": "Pan",
+        "year": "2023",
+        "journal-title": "Human Resource Management Review"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib72",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.chb.2021.106855",
+        "article-title": "What makes an AI device human-like? The role of interaction quality, empathy and perceived psychological anthropomorphic characteristics in the acceptance of artificial intelligence in the service industry",
+        "volume": "122",
+        "author": "Pelau",
+        "year": "2021",
+        "journal-title": "Computers in Human Behavior"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.chbah.2025.100162_bib73",
+        "doi-asserted-by": "crossref",
+        "first-page": "15",
+        "DOI": "10.1504/IJASM.2024.135370",
+        "article-title": "Project virtual teams: Systematic literature review",
+        "volume": "17",
+        "author": "Pereira",
+        "year": "2024",
+        "journal-title": "International Journal of Agile Systems and Management"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib74",
+        "series-title": "Proceedings of the 2023 CHI conference on human factors in computing systems",
+        "first-page": "1",
+        "article-title": "AI knowledge: Improving AI delegation through human enablement",
+        "author": "Pinski",
+        "year": "2023"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib75",
+        "article-title": "AI literacy for users–A comprehensive review and future research directions of learning methods, components, and effects",
+        "volume": "2",
+        "author": "Pinski",
+        "year": "2024",
+        "journal-title": "Computers in Human Behavior: Artificial Humans"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib76",
+        "series-title": "Theories of small groups: Interdisciplinary perspectives",
+        "year": "2005"
+      },
+      {
+        "issue": "13",
+        "key": "10.1016/j.chbah.2025.100162_bib77",
+        "doi-asserted-by": "crossref",
+        "first-page": "1369",
+        "DOI": "10.1002/smj.968",
+        "article-title": "Behavioral strategy",
+        "volume": "32",
+        "author": "Powell",
+        "year": "2011",
+        "journal-title": "Strategic Management Journal"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.chbah.2025.100162_bib78",
+        "doi-asserted-by": "crossref",
+        "first-page": "192",
+        "DOI": "10.5465/amr.2018.0072",
+        "article-title": "Artificial intelligence and management: The automation–augmentation paradox",
+        "volume": "46",
+        "author": "Raisch",
+        "year": "2021",
+        "journal-title": "Academy of Management Review"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib79",
+        "series-title": "IBM's Watson supercomputer recommended ‘unsafe and incorrect’ cancer treatments, internal documents show",
+        "author": "Ross",
+        "year": "2018"
+      },
+      {
+        "issue": "5",
+        "key": "10.1016/j.chbah.2025.100162_bib80",
+        "doi-asserted-by": "crossref",
+        "first-page": "540",
+        "DOI": "10.1177/1046496406293125",
+        "article-title": "Teamwork behaviors: A review and an integration of frameworks",
+        "volume": "37",
+        "author": "Rousseau",
+        "year": "2006",
+        "journal-title": "Small Group Research"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.chbah.2025.100162_bib81",
+        "doi-asserted-by": "crossref",
+        "first-page": "589",
+        "DOI": "10.1037/apl0000206",
+        "article-title": "A century of progress in industrial and organizational psychology: Discoveries and the next century",
+        "volume": "102",
+        "author": "Salas",
+        "year": "2017",
+        "journal-title": "Journal of Applied Psychology"
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.chbah.2025.100162_bib82",
+        "doi-asserted-by": "crossref",
+        "first-page": "593",
+        "DOI": "10.1037/amp0000334",
+        "article-title": "The science of teamwork: Progress, reflections, and the road ahead",
+        "volume": "73",
+        "author": "Salas",
+        "year": "2018",
+        "journal-title": "American Psychologist"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.chbah.2025.100162_bib83",
+        "doi-asserted-by": "crossref",
+        "first-page": "344",
+        "DOI": "10.5465/amr.2007.24348410",
+        "article-title": "An integrative model of organizational trust: Past, present, and future",
+        "volume": "32",
+        "author": "Schoorman",
+        "year": "2007",
+        "journal-title": "Academy of Management Review"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.chbah.2025.100162_bib84",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.im.2019.103174",
+        "article-title": "Machines as teammates: A research agenda on AI in team collaboration",
+        "volume": "57",
+        "author": "Seeber",
+        "year": "2020",
+        "journal-title": "Information & Management"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib85",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.jbusres.2023.114168",
+        "article-title": "Mechanisms of cognitive trust development in artificial intelligence among front line employees: An empirical examination from a developing economy",
+        "volume": "167",
+        "author": "Shamim",
+        "year": "2023",
+        "journal-title": "Journal of Business Research"
+      },
+      {
+        "issue": "6",
+        "key": "10.1016/j.chbah.2025.100162_bib87",
+        "doi-asserted-by": "crossref",
+        "first-page": "495",
+        "DOI": "10.1080/10447318.2020.1741118",
+        "article-title": "Human-centered artificial intelligence: Reliable, safe & trustworthy",
+        "volume": "36",
+        "author": "Shneiderman",
+        "year": "2020",
+        "journal-title": "International Journal of Human-Computer Interaction"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.chbah.2025.100162_bib107",
+        "first-page": "47",
+        "article-title": "Building trust in artificial intelligence, machine learning, and robotics",
+        "volume": "31",
+        "author": "Siau",
+        "year": "2018",
+        "journal-title": "Cutter business technology journal"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.chbah.2025.100162_bib88",
+        "doi-asserted-by": "crossref",
+        "first-page": "367",
+        "DOI": "10.1287/orsc.4.3.367",
+        "article-title": "Explaining the limited effectiveness of legalistic “remedies” for trust/distrust",
+        "volume": "4",
+        "author": "Sitkin",
+        "year": "1993",
+        "journal-title": "Organization Science"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.chbah.2025.100162_bib89",
+        "doi-asserted-by": "crossref",
+        "first-page": "367",
+        "DOI": "10.1287/orsc.4.3.367",
+        "article-title": "Explaining the limited effectiveness of legalistic “remedies” for trust/distrust",
+        "volume": "4",
+        "author": "Sitkin",
+        "year": "1993",
+        "journal-title": "Organization Science"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.chbah.2025.100162_bib90",
+        "doi-asserted-by": "crossref",
+        "first-page": "288",
+        "DOI": "10.1006/obhd.2000.2926",
+        "article-title": "Trust, confidence, and expertise in a judge-advisor system",
+        "volume": "84",
+        "author": "Sniezek",
+        "year": "2001",
+        "journal-title": "Organizational Behavior and Human Decision Processes"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib91",
+        "series-title": "Digital transformation of collaboration: Proceedings of the 9th international COINs conference",
+        "first-page": "179",
+        "article-title": "Digital coworker: Human-AI collaboration in work environment, on the example of virtual assistants for management professions",
+        "author": "Sowa",
+        "year": "2020"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib92",
+        "doi-asserted-by": "crossref",
+        "first-page": "135",
+        "DOI": "10.1016/j.jbusres.2020.11.038",
+        "article-title": "Cobots in knowledge work",
+        "volume": "125",
+        "author": "Sowa",
+        "year": "2021",
+        "journal-title": "Journal of Business Research"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib94",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.chb.2021.106997",
+        "article-title": "Employment relationships in algorithmic management: A psychological contract perspective",
+        "volume": "126",
+        "author": "Tomprou",
+        "year": "2022",
+        "journal-title": "Computers in Human Behavior"
+      },
+      {
+        "issue": "9",
+        "key": "10.1016/j.chbah.2025.100162_bib95",
+        "doi-asserted-by": "crossref",
+        "first-page": "1600",
+        "DOI": "10.1002/smj.3322",
+        "article-title": "The Janus face of artificial intelligence feedback: Deployment versus disclosure effects on employee performance",
+        "volume": "42",
+        "author": "Tong",
+        "year": "2021",
+        "journal-title": "Strategic Management Journal"
+      },
+      {
+        "issue": "5",
+        "key": "10.1016/j.chbah.2025.100162_bib96",
+        "doi-asserted-by": "crossref",
+        "first-page": "490",
+        "DOI": "10.1177/1046496406292938",
+        "article-title": "Social and cognitive factors driving teamwork in collaborative learning environments",
+        "volume": "37",
+        "author": "Van Den Bossche",
+        "year": "2006",
+        "journal-title": "Small Group Research"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib97",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.chb.2022.107215",
+        "article-title": "Impact of artificial intelligence-enabled job characteristics and perceived substitution crisis on innovative work behavior of employees from high-tech firms",
+        "volume": "131",
+        "author": "Verma",
+        "year": "2022",
+        "journal-title": "Computers in Human Behavior"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib98",
+        "series-title": "Proceedings of the 2nd European Conference on the Impact of artificial Intelligence and robotics (ECIAIR 2020)",
+        "article-title": "Explainability is not enough: Requirements for human-AI-partnership in complex socio-technical systems",
+        "author": "Waefler",
+        "year": "2020"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib99",
+        "article-title": "Liability for artificial intelligence: A proposal of the European parliament",
+        "author": "Wagner",
+        "year": "2021",
+        "journal-title": "Social Science Research Network"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.chbah.2025.100162_bib101",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.1111/joop.12042",
+        "article-title": "Student‐recruited samples in organizational research: A review, analysis, and guidelines for future research",
+        "volume": "87",
+        "author": "Wheeler",
+        "year": "2014",
+        "journal-title": "Journal of Occupational and Organizational Psychology"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib102",
+        "article-title": "Collaborative intelligence: Humans and AI are joining forces",
+        "author": "Wilson",
+        "year": "2018",
+        "journal-title": "Harvard Business Review"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib103",
+        "author": "Wolf"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib105",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.chb.2022.107536",
+        "article-title": "Trust in an AI versus a Human teammate: The effects of teammate identity and performance on Human-AI cooperation",
+        "volume": "139",
+        "author": "Zhang",
+        "year": "2023",
+        "journal-title": "Computers in Human Behavior"
+      },
+      {
+        "key": "10.1016/j.chbah.2025.100162_bib64",
+        "unstructured": "National Institute of Standards and Technology. (2023). AI risk management framework. U.S. Department of Commerce. Retrieved from https://www.nist.gov/itl/ai-risk-management-framework."
+      }
+    ],
+    "container-title": [
+      "Computers in Human Behavior: Artificial Humans"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S2949882125000465?httpAccept=text/xml",
+        "content-type": "text/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S2949882125000465?httpAccept=text/plain",
+        "content-type": "text/plain",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          27
+        ]
+      ],
+      "date-time": "2026-03-27T02:18:12Z",
+      "timestamp": 1774577892000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://linkinghub.elsevier.com/retrieve/pii/S2949882125000465"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          5
+        ]
+      ]
+    },
+    "references-count": 97,
+    "alternative-id": [
+      "S2949882125000465"
+    ],
+    "URL": "https://doi.org/10.1016/j.chbah.2025.100162",
+    "relation": {},
+    "ISSN": [
+      "2949-8821"
+    ],
+    "issn-type": [
+      {
+        "value": "2949-8821",
+        "type": "print"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2025,
+          5
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "Elsevier",
+        "name": "publisher",
+        "label": "This article is maintained by"
+      },
+      {
+        "value": "AI literacy and trust: A multi-method study of Human-GAI team collaboration",
+        "name": "articletitle",
+        "label": "Article Title"
+      },
+      {
+        "value": "Computers in Human Behavior: Artificial Humans",
+        "name": "journaltitle",
+        "label": "Journal Title"
+      },
+      {
+        "value": "https://doi.org/10.1016/j.chbah.2025.100162",
+        "name": "articlelink",
+        "label": "CrossRef DOI link to publisher maintained version"
+      },
+      {
+        "value": "article",
+        "name": "content_type",
+        "label": "Content Type"
+      },
+      {
+        "value": "© 2025 The Authors. Published by Elsevier Inc.",
+        "name": "copyright",
+        "label": "Copyright"
+      }
+    ],
+    "article-number": "100162"
+  }
+}

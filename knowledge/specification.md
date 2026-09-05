@@ -7,9 +7,9 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-06-09
-updated: 2026-08-24
+updated: 2026-09-05
 authors: [Christopher Pollin]
-generated-with: Claude Code (Claude Opus 4.8)
+generated-with: Claude Code (Claude Opus 4.8), Codex (GPT-6)
 method:
   name: Promptotyping
   url: https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin
@@ -25,6 +25,8 @@ related: [project, data, standards, plan, journal]
 This document is the substance layer for the **PRISMA screening tool**, a standalone, PRISMA-conformant screening instrument (`docs/prisma.html`, see ADR-008) linked from the Evidence Companion. It describes what the tool does, how it was decided, and how it looks. The tool writes its data files directly into the connected project folder (File System Access); versioning happens outside the tool in GitHub Desktop (ADR-014, supersedes the in-tool Git surface of ADR-009). It has these sections with different update rhythms: Requirements (static, what the tool must do and for whom), Anwendungsszenarien (the narrative usage scenarios), Funktionsumfang (refactored per release, the current shape of the view and its modules), the Designsystem (the UI and design language, tokens, epistemic principles, and open design questions), and Decisions (monotonically growing ADRs). The data model lives in [[data]]; the standards being implemented are in [[standards]]. The five Companion views form the reference and synthesis layer documented in `CLAUDE.md`; this specification covers the PRISM working layer.
 
 **Current round-two interpretation.** ADR-034 supersedes earlier round-two requirements that assign direct screening or analysis coding to domain experts. AI agents now prepare the complete batch, a separate AI-agent activity performs source-grounded AI Agent Review, and domain experts later verify the prepared records. ADR-037 binds each assignment to one Work and the exact publication Version used. Earlier requirements and ADRs remain readable where they describe round one or the evolution of the tool.
+
+**Current release boundary (2026-09-05).** The operator-authorised preliminary result uses explicitly attributed AI source review under [[governance#Publication boundary]]. This revises earlier ADR wording that restricted every public projection to `publication-approved`; the lifecycle meanings and person-attributed final scholarly approval remain unchanged. The working application and its legacy knowledge archive are distinct from the allowlisted result site. Current coverage and completion are defined in [[research-vault#Aktueller Implementierungsstand]] and the [generated completion package](../generated/completion/README.md).
 
 ## Anforderungen
 
@@ -50,7 +52,7 @@ The AI-forward requirements are demoted by ADR-012 and ADR-014. As built, FR-03 
 
 FR-11 to FR-13 acceptance, as built: FR-11 renders the reading text with a built-in Markdown renderer, falling back to the abstract, then to an empty state. FR-12 highlights and steps through in-text matches in the open document and filters the corpus via the prebuilt `docs/data/fulltext_index.json`; Enter applies the current query before navigating its matches. FR-13 pins a selected passage or a search hit as evidence with text, timestamp, source layer, and actor. A Paper pin starts an empty category at level `teilweise`; the reviewer explicitly decides whether it remains `teilweise` or becomes `ja`. The behaviour contract is in [[data]] (Evidence behaviour). The paper layer is the local Docling full text served under `docs/data/fulltext/` where one exists, the abstract otherwise (ADR-025); the source actually read is recorded per decision as `text_source` with the values `raw`, `abstract`, or `none` and rendered as a pill (ADR-027), while the superseded P2 design that resolved the raw texts from `generated/markdown_clean/` of the connected clone did not survive. On public Pages, where the full-text layer is not published, the abstract is the reading text. The File System Access write path remains on the manual checklist (`tests/manual-checklist.md`), since it cannot be exercised headless.
 
-Acceptance (one-workspace IA, ADR-020/028/029): Screening is the permanent surface. The first-use setup asks for a short reviewer key and the repository folder. Daily work retains a compact target and folder status plus one disk action beside the paper position. Backup, import, project administration, reconciliation, and report triggers have no editor-facing surface. The underlying pure data and report functions remain available for tests and operator tooling. Kappa and the matrix have no in-tool computation; the disclosure references the external benchmark evaluation. A persisted older surface id is normalised onto the screening workspace on load.
+Acceptance (one-workspace IA, ADR-020/028/029; read/edit clarification 2026-09-05): Screening is the permanent surface. Ordinary entry and reload start in read mode, even with a saved reviewer profile. Only `Bearbeiten` enables the short reviewer key and repository-folder setup, annotation controls and saving. Returning to reading preserves the unsaved draft without writing it; the edit-mode flag is not persisted. Explicit `trial=1`, `actor=agent` and `verify=1` URLs retain their working modes, while acceptance remains read-only. Daily editing retains a compact target and folder status plus one disk action beside the paper position. Backup, import, project administration, reconciliation, and report triggers have no editor-facing surface. The underlying pure data and report functions remain available for tests and operator tooling. Kappa and the matrix have no in-tool computation; the disclosure references the external benchmark evaluation. A persisted older surface id is normalised onto the screening workspace on load.
 
 ### Nicht-funktionale Anforderungen
 

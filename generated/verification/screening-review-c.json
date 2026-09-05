@@ -1,0 +1,260 @@
+{
+  "schema": "femprompt-artifact-verification/0.1",
+  "reviews": [
+    {
+      "artifact": "generated/verification/screening-corrections-c.json#/corrections/7L78MV2V",
+      "sha256": "sha256:644af885ffb7a16e8c252a6b0fe1bc7357fbd32b6439d680768153dba5eea065",
+      "base_artifact": "docs/data/screening/ar2.json#/decisions/7L78MV2V",
+      "result": "accepted",
+      "review_type": "ai-source-review",
+      "agent_id": "/root/aggregation",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-05T14:45:48.120563+00:00",
+      "findings": "Die offene Statusfrage ist aufgelöst. Der Originalreview diskutiert in §4/[57] ausdrücklich einen negativen Befund zur Wirkung von Word-Embedding-Debiasing. Nach der bestehenden Regel für selbst synthetisierte Inventare trägt das Evaluated; reine Bias-Messung wäre unzureichend. Der ergänzende Abgleich mit der bezeichneten NAACL-Primärstudie bestätigt eine tatsächliche Evaluation zweier Verfahren. Korrigiert wird nur die irreführend allgemeine Notes-Begründung; Kategorien, Include, übrige Analysefelder und historische Autorität bleiben unverändert. Evaluated wird nicht als positive oder allgemeine Wirksamkeitsaussage gelesen.",
+      "review_scope": "Targeted source re-review of the previously withheld mitigation coding, applying the existing synthesis rule and a dated operational clarification of processing stages. Original article/toolkit passages and their surrounding arguments were checked; this is not a new blinded track, an independent double review, or human verification.",
+      "coding_rule_application": "2026-09-05: evaluated synthesis requires a discussed result of an identifiable mitigation assessment; each processing stage requires an explicitly located intervention; assessment/monitoring alone is not technical output transformation.",
+      "canonical_binding": {
+        "paper_id": "7L78MV2V",
+        "work_id": "work:61b5eb97-0fa5-5a1b-a3f7-3a892158e2d3",
+        "version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c"
+      },
+      "binding_reference": "corpus/work_version_registry.json#/record_index/7L78MV2V",
+      "binding_sha256": "sha256:41334da358a78dfaadd981e36cece0b3ea4734a2fd9578361e010fd4995a9a92",
+      "revision_of_review": {
+        "artifact": "docs/data/screening/ar2.json#/decisions/7L78MV2V",
+        "sha256": "sha256:5a0d8e629eb94f16c86b36baf454cfeab44eabdd405a5998817c75b6bc53813a",
+        "reviewed_at": "2026-09-05T13:01:37.194768+00:00"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/markdown_clean/Navigli_2023_Biases_in_large_language_models_Origins,.md",
+          "sha256": "sha256:2003aee4063cd3a4a47d13fbad0bb90cd0c224e1cc69a455836f476f10f95021",
+          "work_id": "work:61b5eb97-0fa5-5a1b-a3f7-3a892158e2d3",
+          "version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c",
+          "source_url": "https://doi.org/10.1145/3597307",
+          "locator": "line 42; title and author block; DOI 10.1145/3597307",
+          "quote": "Biases in Large Language Models: Origins, Inventory, and Discussion"
+        },
+        {
+          "source_path": "generated/markdown_clean/Navigli_2023_Biases_in_large_language_models_Origins,.md",
+          "sha256": "sha256:2003aee4063cd3a4a47d13fbad0bb90cd0c224e1cc69a455836f476f10f95021",
+          "work_id": "work:61b5eb97-0fa5-5a1b-a3f7-3a892158e2d3",
+          "version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c",
+          "source_url": "https://doi.org/10.1145/3597307",
+          "locator": "line 334; section 4, Understanding bias; reported negative mitigation finding",
+          "quote": "In fact, attempts to reduce bias in word embeddings may amount to little more than 'putting lipstick on a pig' [57]: Hiding bias instead of removing it."
+        },
+        {
+          "source_path": "generated/markdown_clean/Navigli_2023_Biases_in_large_language_models_Origins,.md",
+          "sha256": "sha256:2003aee4063cd3a4a47d13fbad0bb90cd0c224e1cc69a455836f476f10f95021",
+          "work_id": "work:61b5eb97-0fa5-5a1b-a3f7-3a892158e2d3",
+          "version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c",
+          "source_url": "https://doi.org/10.1145/3597307",
+          "locator": "line 335; section 4, Reducing bias; retained In_Training",
+          "quote": "For example, domain adaptation aims at fine-tuning an existing model with a considerably smaller amount of balanced, ideally unbiased, data [118]."
+        },
+        {
+          "source_path": "generated/markdown_clean/Navigli_2023_Biases_in_large_language_models_Origins,.md",
+          "sha256": "sha256:2003aee4063cd3a4a47d13fbad0bb90cd0c224e1cc69a455836f476f10f95021",
+          "work_id": "work:61b5eb97-0fa5-5a1b-a3f7-3a892158e2d3",
+          "version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c",
+          "source_url": "https://doi.org/10.1145/3597307",
+          "locator": "line 336; section 4, Avoiding bias; retained Pre_Processing",
+          "quote": "For instance, gender swapping can be applied to enrich the training data with sentences where pronouns and gendered words are replaced with the equivalent words of the opposite gender, and entities are replaced by placeholders, again to soften gender bias."
+        },
+        {
+          "source_path": "generated/markdown_clean/Navigli_2023_Biases_in_large_language_models_Origins,.md",
+          "sha256": "sha256:2003aee4063cd3a4a47d13fbad0bb90cd0c224e1cc69a455836f476f10f95021",
+          "work_id": "work:61b5eb97-0fa5-5a1b-a3f7-3a892158e2d3",
+          "version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c",
+          "source_url": "https://doi.org/10.1145/3597307",
+          "locator": "line 344; section 4 closing paragraph; organisational collaboration",
+          "quote": "Instead, it will require the concerted efforts of large collaborations such as BigScience."
+        }
+      ],
+      "external_checks": [
+        {
+          "url": "https://aclanthology.org/N19-1061/",
+          "pdf_url": "https://aclanthology.org/N19-1061.pdf",
+          "checked_at": "2026-09-05T14:45:48.120563+00:00",
+          "locator": "sections 3–4; pp.611–613",
+          "finding": "The original study named by Navigli reference [57] compares two debiasing procedures with baseline embeddings and reports remaining gender bias. This confirms the evaluation character of the finding already discussed in Navigli section 4; no extra inventory codes are imported from the cited paper."
+        }
+      ]
+    },
+    {
+      "artifact": "generated/verification/screening-corrections-c.json#/corrections/J5EF9W6M",
+      "sha256": "sha256:e8e1a19cc231d0235fef18ec806205f87f8e2fe9712fed667825b2ce34f2090d",
+      "base_artifact": "docs/data/screening/ar2.json#/decisions/J5EF9W6M",
+      "result": "accepted",
+      "review_type": "ai-source-review",
+      "agent_id": "/root/aggregation",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-05T14:45:48.136265+00:00",
+      "findings": "Die offene Stufenzuordnung ist aufgelöst. Titel, DIVERSIFAIR-Projektbezug, Industrie-Fassung und November-2024-Datum sind im lokalen Originalvolltext vorhanden. Datenaudits/Diversifizierung und organisatorische Empfehlungen tragen Pre_Processing und Organisational_Process. Weder Monitoring noch ein Korrekturlog beschreiben einen technischen Inferenz- oder Nachverarbeitungseingriff. Intra_Processing und Post_Processing werden daher entfernt; Notes begründen die Zuordnung. Proposed bleibt angesichts der angekündigten Evaluation bestehen. Kategorien und Include bleiben unverändert; die bisherigen quellengetragenen Argumente zur intersektionalen Fairness werden nicht in eine Wirksamkeitsbehauptung umgedeutet.",
+      "review_scope": "Targeted source re-review of the previously withheld mitigation coding, applying the existing synthesis rule and a dated operational clarification of processing stages. Original article/toolkit passages and their surrounding arguments were checked; this is not a new blinded track, an independent double review, or human verification.",
+      "coding_rule_application": "2026-09-05: evaluated synthesis requires a discussed result of an identifiable mitigation assessment; each processing stage requires an explicitly located intervention; assessment/monitoring alone is not technical output transformation.",
+      "canonical_binding": {
+        "paper_id": "J5EF9W6M",
+        "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+        "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2"
+      },
+      "binding_reference": "corpus/work_version_registry.json#/record_index/J5EF9W6M",
+      "binding_sha256": "sha256:6dae285767a1c161f93143c6239eff2a5200e4c511f5108de31a764eb030fe8e",
+      "revision_of_review": {
+        "artifact": "docs/data/screening/ar2.json#/decisions/J5EF9W6M",
+        "sha256": "sha256:78ce2c3321eaa06a648f960cbfd87b79840a9dc11680194beca878b90593f53d",
+        "reviewed_at": "2026-09-05T12:37:12Z"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/markdown/Project_2024_Intersectionality.md",
+          "sha256": "sha256:5527459c9567d1704f8a67f8f627f8da8d1a1efc6348cb62f323ad8ac5c133e3",
+          "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+          "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+          "source_url": "https://diversifair-project.eu/wp-content/uploads/2025/01/Copie-de-INDUSTRY-Educ-Kits-A4-V2.pdf",
+          "locator": "line 114; PDF p.5; edition date",
+          "quote": "This resource (November 2024) will evolve based on feedback from users and emerging insights."
+        },
+        {
+          "source_path": "generated/markdown/Project_2024_Intersectionality.md",
+          "sha256": "sha256:5527459c9567d1704f8a67f8f627f8da8d1a1efc6348cb62f323ad8ac5c133e3",
+          "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+          "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+          "source_url": "https://diversifair-project.eu/wp-content/uploads/2025/01/Copie-de-INDUSTRY-Educ-Kits-A4-V2.pdf",
+          "locator": "line 431; PDF p.18, Improve data practices; Pre_Processing",
+          "quote": "Audit datasets for gaps and diversify data to ensure fair representation."
+        },
+        {
+          "source_path": "generated/markdown/Project_2024_Intersectionality.md",
+          "sha256": "sha256:5527459c9567d1704f8a67f8f627f8da8d1a1efc6348cb62f323ad8ac5c133e3",
+          "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+          "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+          "source_url": "https://diversifair-project.eu/wp-content/uploads/2025/01/Copie-de-INDUSTRY-Educ-Kits-A4-V2.pdf",
+          "locator": "line 433; PDF p.18, Improve data practices; Pre_Processing",
+          "quote": "Tailor datasets to local or cultural needs to improve contextual relevance."
+        },
+        {
+          "source_path": "generated/markdown/Project_2024_Intersectionality.md",
+          "sha256": "sha256:5527459c9567d1704f8a67f8f627f8da8d1a1efc6348cb62f323ad8ac5c133e3",
+          "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+          "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+          "source_url": "https://diversifair-project.eu/wp-content/uploads/2025/01/Copie-de-INDUSTRY-Educ-Kits-A4-V2.pdf",
+          "locator": "line 486; PDF p.20, Governance teams; Organisational_Process",
+          "quote": "Set up independent oversight committees to audit AI systems for fairness and intersectionality."
+        },
+        {
+          "source_path": "generated/markdown/Project_2024_Intersectionality.md",
+          "sha256": "sha256:5527459c9567d1704f8a67f8f627f8da8d1a1efc6348cb62f323ad8ac5c133e3",
+          "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+          "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+          "source_url": "https://diversifair-project.eu/wp-content/uploads/2025/01/Copie-de-INDUSTRY-Educ-Kits-A4-V2.pdf",
+          "locator": "line 663; PDF p.26, Regular monitoring and accountability; no technical processing phase specified",
+          "quote": "Create a simple impact log: Track incidents of bias and corrective actions taken."
+        },
+        {
+          "source_path": "generated/markdown/Project_2024_Intersectionality.md",
+          "sha256": "sha256:5527459c9567d1704f8a67f8f627f8da8d1a1efc6348cb62f323ad8ac5c133e3",
+          "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+          "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+          "source_url": "https://diversifair-project.eu/wp-content/uploads/2025/01/Copie-de-INDUSTRY-Educ-Kits-A4-V2.pdf",
+          "locator": "line 415; PDF p.17, Strategic approaches; planned evaluation",
+          "quote": "To ensure ongoing relevance and impact, we intend to further evaluate and fine-tune these recommendations."
+        }
+      ]
+    },
+    {
+      "artifact": "generated/verification/screening-corrections-c.json#/corrections/P4YQIKJX",
+      "sha256": "sha256:2af4cb0846073d07e949470ee9b585f8c85f81cad7059e5b798ad0055e3802e8",
+      "base_artifact": "docs/data/screening/ar2.json#/decisions/P4YQIKJX",
+      "result": "accepted",
+      "review_type": "ai-source-review",
+      "agent_id": "/root/aggregation",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-05T14:45:48.136265+00:00",
+      "findings": "Die offene Stufenzuordnung ist aufgelöst. Titel, Li/Ruijs/Lu und DOI 10.3390/ai4010003 stimmen mit dem lokalen Publisher-PDF überein; Heftjahr 2023 und Online-Publikation 31.12.2022 sind im Dokument getrennt erkennbar. Pre_Processing und Organisational_Process tragen §3.1.4; die zusätzliche explizite Trainingsempfehlung in §3.10.2 trägt In_Training auf Vorschlagsebene. Validitätsprüfung ist keine Ausgabetransformation, allgemeine Kompensation benennt keine technische Phase. Nur Intra_Processing und Post_Processing entfallen. Notes halten die begrenzte Aussagekraft und den unveränderten Proposed-Status fest. Kategorien und Include bleiben unverändert.",
+      "review_scope": "Targeted source re-review of the previously withheld mitigation coding, applying the existing synthesis rule and a dated operational clarification of processing stages. Original article/toolkit passages and their surrounding arguments were checked; this is not a new blinded track, an independent double review, or human verification.",
+      "coding_rule_application": "2026-09-05: evaluated synthesis requires a discussed result of an identifiable mitigation assessment; each processing stage requires an explicitly located intervention; assessment/monitoring alone is not technical output transformation.",
+      "canonical_binding": {
+        "paper_id": "P4YQIKJX",
+        "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+        "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38"
+      },
+      "binding_reference": "corpus/work_version_registry.json#/record_index/P4YQIKJX",
+      "binding_sha256": "sha256:feb9d7588533e7472f76a40bfa3e53b6e9e5695509037e055ead933942ee8218",
+      "revision_of_review": {
+        "artifact": "docs/data/screening/ar2.json#/decisions/P4YQIKJX",
+        "sha256": "sha256:5bc075daae8ba1fb0ad36173ca3583d8f08ac632e2787d02ddd1751fd25e2d5d",
+        "reviewed_at": "2026-09-05T12:37:12Z"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/markdown_clean/P4YQIKJX.md",
+          "sha256": "sha256:a4f670474ec99e6c7d888653b43044fd775ebd6dde861dfe2e886c30a8cbf42d",
+          "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+          "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+          "source_url": "https://doi.org/10.3390/ai4010003",
+          "locator": "line 17; repository cover sheet; publisher-version identity, DOI 10.3390/ai4010003",
+          "quote": "Li, F., Ruijs, N., &amp; Lu, Y. (2023). Ethics &amp; AI: A systematic review on ethical concerns and related strategies for designing with AI in healthcare."
+        },
+        {
+          "source_path": "generated/markdown_clean/P4YQIKJX.md",
+          "sha256": "sha256:a4f670474ec99e6c7d888653b43044fd775ebd6dde861dfe2e886c30a8cbf42d",
+          "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+          "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+          "source_url": "https://doi.org/10.3390/ai4010003",
+          "locator": "line 309; section 3.1.4; Pre_Processing",
+          "quote": "Understanding the difference between the training data and input  data [55,82] before utilizing an AI algorithm and preprocessing the training dataset; and"
+        },
+        {
+          "source_path": "generated/markdown_clean/P4YQIKJX.md",
+          "sha256": "sha256:a4f670474ec99e6c7d888653b43044fd775ebd6dde861dfe2e886c30a8cbf42d",
+          "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+          "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+          "source_url": "https://doi.org/10.3390/ai4010003",
+          "locator": "line 310; section 3.1.4; requested evaluation, no output transformation",
+          "quote": "Evaluating ecological  validity  when  considering  the  output  of  the  algorithms [55]."
+        },
+        {
+          "source_path": "generated/markdown_clean/P4YQIKJX.md",
+          "sha256": "sha256:a4f670474ec99e6c7d888653b43044fd775ebd6dde861dfe2e886c30a8cbf42d",
+          "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+          "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+          "source_url": "https://doi.org/10.3390/ai4010003",
+          "locator": "line 313; section 3.1.4; no specified technical phase",
+          "quote": "Compensating for disadvantaged subgroups on an egalitarian basis if necessary [70]."
+        },
+        {
+          "source_path": "generated/markdown_clean/P4YQIKJX.md",
+          "sha256": "sha256:a4f670474ec99e6c7d888653b43044fd775ebd6dde861dfe2e886c30a8cbf42d",
+          "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+          "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+          "source_url": "https://doi.org/10.3390/ai4010003",
+          "locator": "line 316; section 3.1.4; Organisational_Process",
+          "quote": "Encourage the cooperation of stakeholders, including ethicists, social scientists, and regulatory scholars, in the development of AI systems [72]."
+        },
+        {
+          "source_path": "generated/markdown_clean/P4YQIKJX.md",
+          "sha256": "sha256:a4f670474ec99e6c7d888653b43044fd775ebd6dde861dfe2e886c30a8cbf42d",
+          "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+          "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+          "source_url": "https://doi.org/10.3390/ai4010003",
+          "locator": "line 541; section 3.10.2; explicit proposed training of occupational-health decision support",
+          "quote": "Providing the best effective data and training these tools with the best-known algorithms [57]; and"
+        },
+        {
+          "source_path": "generated/markdown_clean/P4YQIKJX.md",
+          "sha256": "sha256:a4f670474ec99e6c7d888653b43044fd775ebd6dde861dfe2e886c30a8cbf42d",
+          "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+          "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+          "source_url": "https://doi.org/10.3390/ai4010003",
+          "locator": "line 542; section 3.10.2; requested validation, no conducted mitigation evaluation",
+          "quote": "Validating the tools and discussing their ethical impact [57]."
+        }
+      ]
+    }
+  ]
+}

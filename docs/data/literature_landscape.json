@@ -20,28 +20,28 @@
     "corpus_total": 326,
     "corpus_record_total": 326,
     "corpus_work_total": 257,
-    "annotated_total": 23,
-    "published_record_total": 24,
-    "published_work_total": 23,
+    "annotated_total": 28,
+    "published_record_total": 29,
+    "published_work_total": 28,
     "source_annotated_total": 30,
     "source_annotated_record_total": 30,
     "source_annotated_work_total": 29,
-    "withheld_total": 6,
-    "withheld_record_total": 6,
-    "unpublished_work_total": 6,
-    "included_total": 17,
-    "excluded_total": 5,
+    "withheld_total": 1,
+    "withheld_record_total": 1,
+    "unpublished_work_total": 1,
+    "included_total": 21,
+    "excluded_total": 6,
     "unclear_total": 1,
-    "thematic_total": 17,
+    "thematic_total": 21,
     "aggregation_unit": "work",
     "record_decision_counts": {
-      "Exclude": 5,
-      "Include": 18,
+      "Exclude": 6,
+      "Include": 22,
       "Unclear": 1
     },
     "work_decision_counts": {
-      "Exclude": 5,
-      "Include": 17,
+      "Exclude": 6,
+      "Include": 21,
       "Unclear": 1
     },
     "denominators": {
@@ -96,6 +96,9 @@
       "journal": "",
       "work_id": "work:0a676f75-d839-5eb9-b390-5921f1658895",
       "version_id": "version:ce6ccb5d-d20d-5309-9f32-2d2a1d63fbc7",
+      "bibliographic_version_id": "version:ce6ccb5d-d20d-5309-9f32-2d2a1d63fbc7",
+      "source_version_id": "version:ce6ccb5d-d20d-5309-9f32-2d2a1d63fbc7",
+      "source_binding": null,
       "version_type": "version_of_record",
       "version_date": "2021",
       "peer_review_status": "not_established",
@@ -302,6 +305,9 @@
       "version_ids": [
         "version:ce6ccb5d-d20d-5309-9f32-2d2a1d63fbc7"
       ],
+      "source_version_ids": [
+        "version:ce6ccb5d-d20d-5309-9f32-2d2a1d63fbc7"
+      ],
       "source_records": [
         {
           "id": "7VFNS5R3",
@@ -315,6 +321,9 @@
           "journal": "",
           "work_id": "work:0a676f75-d839-5eb9-b390-5921f1658895",
           "version_id": "version:ce6ccb5d-d20d-5309-9f32-2d2a1d63fbc7",
+          "bibliographic_version_id": "version:ce6ccb5d-d20d-5309-9f32-2d2a1d63fbc7",
+          "source_version_id": "version:ce6ccb5d-d20d-5309-9f32-2d2a1d63fbc7",
+          "source_binding": null,
           "version_type": "version_of_record",
           "version_date": "2021",
           "peer_review_status": "not_established",
@@ -520,6 +529,9 @@
       "journal": "",
       "work_id": "work:1d6d18e8-3caa-5677-b0c0-b46ab20aab43",
       "version_id": "version:8f854693-bb12-55e7-9cc6-ef11dbabf2ee",
+      "bibliographic_version_id": "version:8f854693-bb12-55e7-9cc6-ef11dbabf2ee",
+      "source_version_id": "version:8f854693-bb12-55e7-9cc6-ef11dbabf2ee",
+      "source_binding": null,
       "version_type": "unknown",
       "version_date": "2024",
       "peer_review_status": "not_established",
@@ -826,6 +838,9 @@
       "version_ids": [
         "version:8f854693-bb12-55e7-9cc6-ef11dbabf2ee"
       ],
+      "source_version_ids": [
+        "version:8f854693-bb12-55e7-9cc6-ef11dbabf2ee"
+      ],
       "source_records": [
         {
           "id": "XIYX5HJS",
@@ -839,6 +854,9 @@
           "journal": "",
           "work_id": "work:1d6d18e8-3caa-5677-b0c0-b46ab20aab43",
           "version_id": "version:8f854693-bb12-55e7-9cc6-ef11dbabf2ee",
+          "bibliographic_version_id": "version:8f854693-bb12-55e7-9cc6-ef11dbabf2ee",
+          "source_version_id": "version:8f854693-bb12-55e7-9cc6-ef11dbabf2ee",
+          "source_binding": null,
           "version_type": "unknown",
           "version_date": "2024",
           "peer_review_status": "not_established",
@@ -1129,6 +1147,685 @@
       ]
     },
     {
+      "id": "VSZM7CT6",
+      "title": "Problematising artificial intelligence in social work education: Challenges, issues and possibilities",
+      "author_year": "Hodgson et al. (2022)",
+      "authors": "Hodgson, D.; Goldingay, S.; Boddy, J.; Nipperess, S.; Watts, L.",
+      "year": 2022,
+      "doi": "10.1093/bjsw/bcab168",
+      "url": "",
+      "item_type": "journalarticle",
+      "journal": "",
+      "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+      "version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+      "bibliographic_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+      "source_version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+      "source_binding": {
+        "record_id": "VSZM7CT6",
+        "source_path": "generated/markdown_clean/VSZM7CT6.md",
+        "source_sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+        "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+        "source_version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+        "source_version_type": "accepted_manuscript",
+        "bibliographic_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+        "preferred_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+        "is_preferred_version": false,
+        "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download"
+      },
+      "version_type": "version_of_record",
+      "version_date": "2022",
+      "peer_review_status": "not_established",
+      "peer_review_basis": "unknown",
+      "preferred_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+      "latest_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+      "is_preferred_version": true,
+      "work_versions": [
+        {
+          "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+          "version_type": "accepted_manuscript",
+          "version_date": "2021",
+          "identifiers": {
+            "url": [
+              "https://hdl.handle.net/10072/407943"
+            ]
+          },
+          "peer_review_status": "peer_reviewed",
+          "peer_review_basis": "source_metadata",
+          "integrity_status": "current",
+          "access_status": "open_access",
+          "landing_url": "https://hdl.handle.net/10072/407943",
+          "fulltext_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download",
+          "relations": [
+            {
+              "type": "isVersionOf",
+              "target_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e"
+            }
+          ],
+          "is_preferred": false,
+          "is_latest": false
+        },
+        {
+          "version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+          "version_type": "version_of_record",
+          "version_date": "2022",
+          "identifiers": {
+            "doi": [
+              "10.1093/bjsw/bcab168"
+            ],
+            "zotero_key": [
+              "VSZM7CT6"
+            ]
+          },
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "integrity_status": "current",
+          "access_status": "unknown",
+          "landing_url": "",
+          "fulltext_url": "",
+          "relations": [
+            {
+              "type": "hasVersion",
+              "target_version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec"
+            }
+          ],
+          "is_preferred": true,
+          "is_latest": true
+        }
+      ],
+      "identity_basis": "work_version_registry",
+      "knowledge_coverage": "fulltext_ready",
+      "decision": "Include",
+      "reason": null,
+      "text_source": "raw",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "lifecycle_state": "ai-agent-reviewed",
+      "publication_basis": "ai-source-review",
+      "recorded_identity": {
+        "work_id": "doi:10.1093/bjsw/bcab168",
+        "version_id": null
+      },
+      "ai_verification": {
+        "artifact": "generated/verification/screening-corrections-d.json#/corrections/VSZM7CT6",
+        "sha256": "sha256:c6f64bf88a158ef071648b270861394bc1a1b658648faca1b54cef1c467bd23d",
+        "result": "accepted",
+        "review_type": "ai-source-review",
+        "agent_id": "/root/aggregation",
+        "model": "GPT-6",
+        "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+        "reviewed_at": "2026-09-05T15:11:56.464379+00:00",
+        "findings": "Rechecked the complete projected annotation after the three immutable corrections. Critical AI understanding in social-work education supports AI_Literacies=2 and Soziale_Arbeit=2; the article centrally treats AI/ML systems (KI_Sonstige=2) and their structural bias (Bias_Ungleichheit=2). Explicit racial/gender stereotype examples support Gender=1; algorithmic fairness is a subordinate framework reference (Fairness=1). No dedicated generative-model or prompting focus, separate diversity analysis, or feminist methodology is established, so the remaining four categories stay zero. The conceptual prospective article supports Theoretisch, Education_Professional, Gender/Race_Ethnicity, Stereotyping and proposed organisational/educational responses; reports of successful clinical AI or network selection do not evaluate those proposed bias mitigations. Prompting role/techniques stay None, mitigation stage Organisational_Process and status Proposed; AN fields remain unchanged. Object and perspective maxima remain 2, hence Include is unchanged. All six positive quotations resolve in the exact hash-bound AM and in its fresh primary-PDF extraction. This named AI source review grants no human verification or new lifecycle event.",
+        "canonical_binding": {
+          "paper_id": "VSZM7CT6",
+          "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+          "version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e"
+        },
+        "source_binding": {
+          "record_id": "VSZM7CT6",
+          "source_path": "generated/markdown_clean/VSZM7CT6.md",
+          "source_sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+          "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+          "source_version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+          "source_version_type": "accepted_manuscript",
+          "bibliographic_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+          "preferred_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+          "is_preferred_version": false,
+          "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download"
+        },
+        "field_changes": [
+          {
+            "path": "/categories/Fairness",
+            "before": 2,
+            "after": 1,
+            "reason": "AM PDF p.11/manuscript p.10 mentions the Australian framework's fairness/privacy/transparency/accountability among wider education-ethics concerns. There is an explicit algorithmic fairness reference, but no central fairness study, metric, or dedicated intervention evaluation; level 1 matches the existing partial-reference scale."
+          },
+          {
+            "path": "/evidence/Soziale_Arbeit/0/term",
+            "before": "This paper explores possible future implications for social work education.",
+            "after": "this paper explores possible future implications for social work education.",
+            "reason": "The Griffith AM abstract, PDF p.4/manuscript p.3, continues the preceding sentence with lowercase 'this paper'; the publisher VOR's 'this article' belongs to another version. Preserve the exact AM wording."
+          },
+          {
+            "path": "/evidence/Soziale_Arbeit/0/snippet",
+            "before": "This paper explores possible future implications for social work education.",
+            "after": "this paper explores possible future implications for social work education.",
+            "reason": "The Griffith AM abstract, PDF p.4/manuscript p.3, continues the preceding sentence with lowercase 'this paper'; the publisher VOR's 'this article' belongs to another version. Preserve the exact AM wording."
+          }
+        ]
+      },
+      "verification": null,
+      "publication_approval": null,
+      "categories": [
+        {
+          "key": "AI_Literacies",
+          "level": 2,
+          "evidence": [
+            {
+              "term": "critical digital literacies in social work education",
+              "snippet": "critical digital literacies in social work education",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+              "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+              "recorded_work_id": "doi:10.1093/bjsw/bcab168",
+              "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/VSZM7CT6.md",
+              "source_sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+              "source_record_id": "VSZM7CT6"
+            }
+          ]
+        },
+        {
+          "key": "Bias_Ungleichheit",
+          "level": 2,
+          "evidence": [
+            {
+              "term": "bias and structural inequity can be built into them",
+              "snippet": "bias and structural inequity can be built into them",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+              "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+              "recorded_work_id": "doi:10.1093/bjsw/bcab168",
+              "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/VSZM7CT6.md",
+              "source_sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+              "source_record_id": "VSZM7CT6"
+            }
+          ]
+        },
+        {
+          "key": "Fairness",
+          "level": 1,
+          "evidence": [
+            {
+              "term": "fairness, privacy, transparency, and accountability",
+              "snippet": "fairness, privacy, transparency, and accountability",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+              "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+              "recorded_work_id": "doi:10.1093/bjsw/bcab168",
+              "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/VSZM7CT6.md",
+              "source_sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+              "source_record_id": "VSZM7CT6"
+            }
+          ]
+        },
+        {
+          "key": "Gender",
+          "level": 1,
+          "evidence": [
+            {
+              "term": "AI algorithms may reinforce racial and gender stereotypes",
+              "snippet": "AI algorithms may reinforce racial and gender stereotypes",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+              "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+              "recorded_work_id": "doi:10.1093/bjsw/bcab168",
+              "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/VSZM7CT6.md",
+              "source_sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+              "source_record_id": "VSZM7CT6"
+            }
+          ]
+        },
+        {
+          "key": "KI_Sonstige",
+          "level": 2,
+          "evidence": [
+            {
+              "term": "AI systems are created by humans",
+              "snippet": "AI systems are created by humans",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+              "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+              "recorded_work_id": "doi:10.1093/bjsw/bcab168",
+              "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/VSZM7CT6.md",
+              "source_sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+              "source_record_id": "VSZM7CT6"
+            }
+          ]
+        },
+        {
+          "key": "Soziale_Arbeit",
+          "level": 2,
+          "evidence": [
+            {
+              "term": "this paper explores possible future implications for social work education.",
+              "snippet": "this paper explores possible future implications for social work education.",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+              "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+              "recorded_work_id": "doi:10.1093/bjsw/bcab168",
+              "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/VSZM7CT6.md",
+              "source_sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+              "source_record_id": "VSZM7CT6"
+            }
+          ]
+        }
+      ],
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Race_Ethnicity"
+          ],
+          "AN_Harm_Types": [
+            "Stereotyping"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Education_Professional"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Theoretisch"
+        },
+        "notes": "Theoretischer Beitrag zu KI, kritischen digitalen Kompetenzen und sozialarbeiterischer Bildung.",
+        "undecidable": []
+      },
+      "ai_correction": {
+        "paper_id": "VSZM7CT6",
+        "base_artifact": "docs/data/screening/ar2.json#/decisions/VSZM7CT6",
+        "base_sha256": "sha256:114a36d307946899b31e42dd9ebb05424df30cdd4170f88f3b2bcefaa989bd4a",
+        "agent_id": "/root/aggregation",
+        "model": "GPT-6",
+        "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+        "corrected_at": "2026-09-05T15:11:56.462117+00:00",
+        "source_binding": {
+          "record_id": "VSZM7CT6",
+          "source_path": "generated/markdown_clean/VSZM7CT6.md",
+          "source_sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+          "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+          "source_version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+          "source_version_type": "accepted_manuscript",
+          "bibliographic_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+          "preferred_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+          "is_preferred_version": false,
+          "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download"
+        },
+        "changes": [
+          {
+            "path": "/categories/Fairness",
+            "before": 2,
+            "after": 1,
+            "reason": "AM PDF p.11/manuscript p.10 mentions the Australian framework's fairness/privacy/transparency/accountability among wider education-ethics concerns. There is an explicit algorithmic fairness reference, but no central fairness study, metric, or dedicated intervention evaluation; level 1 matches the existing partial-reference scale."
+          },
+          {
+            "path": "/evidence/Soziale_Arbeit/0/term",
+            "before": "This paper explores possible future implications for social work education.",
+            "after": "this paper explores possible future implications for social work education.",
+            "reason": "The Griffith AM abstract, PDF p.4/manuscript p.3, continues the preceding sentence with lowercase 'this paper'; the publisher VOR's 'this article' belongs to another version. Preserve the exact AM wording."
+          },
+          {
+            "path": "/evidence/Soziale_Arbeit/0/snippet",
+            "before": "This paper explores possible future implications for social work education.",
+            "after": "this paper explores possible future implications for social work education.",
+            "reason": "The Griffith AM abstract, PDF p.4/manuscript p.3, continues the preceding sentence with lowercase 'this paper'; the publisher VOR's 'this article' belongs to another version. Preserve the exact AM wording."
+          }
+        ]
+      },
+      "aggregation_unit": "work",
+      "record_ids": [
+        "VSZM7CT6"
+      ],
+      "corpus_record_ids": [
+        "VSZM7CT6"
+      ],
+      "version_ids": [
+        "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e"
+      ],
+      "source_version_ids": [
+        "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec"
+      ],
+      "source_records": [
+        {
+          "id": "VSZM7CT6",
+          "title": "Problematising artificial intelligence in social work education: Challenges, issues and possibilities",
+          "author_year": "Hodgson et al. (2022)",
+          "authors": "Hodgson, D.; Goldingay, S.; Boddy, J.; Nipperess, S.; Watts, L.",
+          "year": 2022,
+          "doi": "10.1093/bjsw/bcab168",
+          "url": "",
+          "item_type": "journalarticle",
+          "journal": "",
+          "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+          "version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+          "bibliographic_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+          "source_version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+          "source_binding": {
+            "record_id": "VSZM7CT6",
+            "source_path": "generated/markdown_clean/VSZM7CT6.md",
+            "source_sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+            "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+            "source_version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+            "source_version_type": "accepted_manuscript",
+            "bibliographic_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+            "preferred_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+            "is_preferred_version": false,
+            "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download"
+          },
+          "version_type": "version_of_record",
+          "version_date": "2022",
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "preferred_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+          "latest_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+          "is_preferred_version": true,
+          "work_versions": [
+            {
+              "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+              "version_type": "accepted_manuscript",
+              "version_date": "2021",
+              "identifiers": {
+                "url": [
+                  "https://hdl.handle.net/10072/407943"
+                ]
+              },
+              "peer_review_status": "peer_reviewed",
+              "peer_review_basis": "source_metadata",
+              "integrity_status": "current",
+              "access_status": "open_access",
+              "landing_url": "https://hdl.handle.net/10072/407943",
+              "fulltext_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download",
+              "relations": [
+                {
+                  "type": "isVersionOf",
+                  "target_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e"
+                }
+              ],
+              "is_preferred": false,
+              "is_latest": false
+            },
+            {
+              "version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+              "version_type": "version_of_record",
+              "version_date": "2022",
+              "identifiers": {
+                "doi": [
+                  "10.1093/bjsw/bcab168"
+                ],
+                "zotero_key": [
+                  "VSZM7CT6"
+                ]
+              },
+              "peer_review_status": "not_established",
+              "peer_review_basis": "unknown",
+              "integrity_status": "current",
+              "access_status": "unknown",
+              "landing_url": "",
+              "fulltext_url": "",
+              "relations": [
+                {
+                  "type": "hasVersion",
+                  "target_version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec"
+                }
+              ],
+              "is_preferred": true,
+              "is_latest": true
+            }
+          ],
+          "identity_basis": "work_version_registry",
+          "knowledge_coverage": "fulltext_ready",
+          "decision": "Include",
+          "reason": null,
+          "text_source": "raw",
+          "reviewer": "ar2",
+          "actor": "agent",
+          "lifecycle_state": "ai-agent-reviewed",
+          "publication_basis": "ai-source-review",
+          "recorded_identity": {
+            "work_id": "doi:10.1093/bjsw/bcab168",
+            "version_id": null
+          },
+          "ai_verification": {
+            "artifact": "generated/verification/screening-corrections-d.json#/corrections/VSZM7CT6",
+            "sha256": "sha256:c6f64bf88a158ef071648b270861394bc1a1b658648faca1b54cef1c467bd23d",
+            "result": "accepted",
+            "review_type": "ai-source-review",
+            "agent_id": "/root/aggregation",
+            "model": "GPT-6",
+            "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+            "reviewed_at": "2026-09-05T15:11:56.464379+00:00",
+            "findings": "Rechecked the complete projected annotation after the three immutable corrections. Critical AI understanding in social-work education supports AI_Literacies=2 and Soziale_Arbeit=2; the article centrally treats AI/ML systems (KI_Sonstige=2) and their structural bias (Bias_Ungleichheit=2). Explicit racial/gender stereotype examples support Gender=1; algorithmic fairness is a subordinate framework reference (Fairness=1). No dedicated generative-model or prompting focus, separate diversity analysis, or feminist methodology is established, so the remaining four categories stay zero. The conceptual prospective article supports Theoretisch, Education_Professional, Gender/Race_Ethnicity, Stereotyping and proposed organisational/educational responses; reports of successful clinical AI or network selection do not evaluate those proposed bias mitigations. Prompting role/techniques stay None, mitigation stage Organisational_Process and status Proposed; AN fields remain unchanged. Object and perspective maxima remain 2, hence Include is unchanged. All six positive quotations resolve in the exact hash-bound AM and in its fresh primary-PDF extraction. This named AI source review grants no human verification or new lifecycle event.",
+            "canonical_binding": {
+              "paper_id": "VSZM7CT6",
+              "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+              "version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e"
+            },
+            "source_binding": {
+              "record_id": "VSZM7CT6",
+              "source_path": "generated/markdown_clean/VSZM7CT6.md",
+              "source_sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+              "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+              "source_version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+              "source_version_type": "accepted_manuscript",
+              "bibliographic_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+              "preferred_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+              "is_preferred_version": false,
+              "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download"
+            },
+            "field_changes": [
+              {
+                "path": "/categories/Fairness",
+                "before": 2,
+                "after": 1,
+                "reason": "AM PDF p.11/manuscript p.10 mentions the Australian framework's fairness/privacy/transparency/accountability among wider education-ethics concerns. There is an explicit algorithmic fairness reference, but no central fairness study, metric, or dedicated intervention evaluation; level 1 matches the existing partial-reference scale."
+              },
+              {
+                "path": "/evidence/Soziale_Arbeit/0/term",
+                "before": "This paper explores possible future implications for social work education.",
+                "after": "this paper explores possible future implications for social work education.",
+                "reason": "The Griffith AM abstract, PDF p.4/manuscript p.3, continues the preceding sentence with lowercase 'this paper'; the publisher VOR's 'this article' belongs to another version. Preserve the exact AM wording."
+              },
+              {
+                "path": "/evidence/Soziale_Arbeit/0/snippet",
+                "before": "This paper explores possible future implications for social work education.",
+                "after": "this paper explores possible future implications for social work education.",
+                "reason": "The Griffith AM abstract, PDF p.4/manuscript p.3, continues the preceding sentence with lowercase 'this paper'; the publisher VOR's 'this article' belongs to another version. Preserve the exact AM wording."
+              }
+            ]
+          },
+          "verification": null,
+          "publication_approval": null,
+          "categories": [
+            {
+              "key": "AI_Literacies",
+              "level": 2,
+              "evidence": [
+                {
+                  "term": "critical digital literacies in social work education",
+                  "snippet": "critical digital literacies in social work education",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+                  "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+                  "recorded_work_id": "doi:10.1093/bjsw/bcab168",
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/VSZM7CT6.md",
+                  "source_sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990"
+                }
+              ]
+            },
+            {
+              "key": "Bias_Ungleichheit",
+              "level": 2,
+              "evidence": [
+                {
+                  "term": "bias and structural inequity can be built into them",
+                  "snippet": "bias and structural inequity can be built into them",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+                  "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+                  "recorded_work_id": "doi:10.1093/bjsw/bcab168",
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/VSZM7CT6.md",
+                  "source_sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990"
+                }
+              ]
+            },
+            {
+              "key": "Fairness",
+              "level": 1,
+              "evidence": [
+                {
+                  "term": "fairness, privacy, transparency, and accountability",
+                  "snippet": "fairness, privacy, transparency, and accountability",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+                  "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+                  "recorded_work_id": "doi:10.1093/bjsw/bcab168",
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/VSZM7CT6.md",
+                  "source_sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990"
+                }
+              ]
+            },
+            {
+              "key": "Gender",
+              "level": 1,
+              "evidence": [
+                {
+                  "term": "AI algorithms may reinforce racial and gender stereotypes",
+                  "snippet": "AI algorithms may reinforce racial and gender stereotypes",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+                  "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+                  "recorded_work_id": "doi:10.1093/bjsw/bcab168",
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/VSZM7CT6.md",
+                  "source_sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990"
+                }
+              ]
+            },
+            {
+              "key": "KI_Sonstige",
+              "level": 2,
+              "evidence": [
+                {
+                  "term": "AI systems are created by humans",
+                  "snippet": "AI systems are created by humans",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+                  "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+                  "recorded_work_id": "doi:10.1093/bjsw/bcab168",
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/VSZM7CT6.md",
+                  "source_sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990"
+                }
+              ]
+            },
+            {
+              "key": "Soziale_Arbeit",
+              "level": 2,
+              "evidence": [
+                {
+                  "term": "this paper explores possible future implications for social work education.",
+                  "snippet": "this paper explores possible future implications for social work education.",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+                  "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+                  "recorded_work_id": "doi:10.1093/bjsw/bcab168",
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/VSZM7CT6.md",
+                  "source_sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990"
+                }
+              ]
+            }
+          ],
+          "analysis": {
+            "fields": {
+              "AN_Prompting_Role": [
+                "None"
+              ],
+              "AN_Prompt_Techniques": [
+                "None"
+              ],
+              "AN_Bias_Axes": [
+                "Gender",
+                "Race_Ethnicity"
+              ],
+              "AN_Harm_Types": [
+                "Stereotyping"
+              ],
+              "AN_Mitigation_Stage": [
+                "Organisational_Process"
+              ],
+              "AN_Mitigation_Status": "Proposed",
+              "AN_Population": [
+                "Education_Professional"
+              ],
+              "AN_Coding_Basis": "Fulltext",
+              "Studientyp": "Theoretisch"
+            },
+            "notes": "Theoretischer Beitrag zu KI, kritischen digitalen Kompetenzen und sozialarbeiterischer Bildung.",
+            "undecidable": []
+          },
+          "ai_correction": {
+            "paper_id": "VSZM7CT6",
+            "base_artifact": "docs/data/screening/ar2.json#/decisions/VSZM7CT6",
+            "base_sha256": "sha256:114a36d307946899b31e42dd9ebb05424df30cdd4170f88f3b2bcefaa989bd4a",
+            "agent_id": "/root/aggregation",
+            "model": "GPT-6",
+            "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+            "corrected_at": "2026-09-05T15:11:56.462117+00:00",
+            "source_binding": {
+              "record_id": "VSZM7CT6",
+              "source_path": "generated/markdown_clean/VSZM7CT6.md",
+              "source_sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+              "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+              "source_version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+              "source_version_type": "accepted_manuscript",
+              "bibliographic_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+              "preferred_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+              "is_preferred_version": false,
+              "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download"
+            },
+            "changes": [
+              {
+                "path": "/categories/Fairness",
+                "before": 2,
+                "after": 1,
+                "reason": "AM PDF p.11/manuscript p.10 mentions the Australian framework's fairness/privacy/transparency/accountability among wider education-ethics concerns. There is an explicit algorithmic fairness reference, but no central fairness study, metric, or dedicated intervention evaluation; level 1 matches the existing partial-reference scale."
+              },
+              {
+                "path": "/evidence/Soziale_Arbeit/0/term",
+                "before": "This paper explores possible future implications for social work education.",
+                "after": "this paper explores possible future implications for social work education.",
+                "reason": "The Griffith AM abstract, PDF p.4/manuscript p.3, continues the preceding sentence with lowercase 'this paper'; the publisher VOR's 'this article' belongs to another version. Preserve the exact AM wording."
+              },
+              {
+                "path": "/evidence/Soziale_Arbeit/0/snippet",
+                "before": "This paper explores possible future implications for social work education.",
+                "after": "this paper explores possible future implications for social work education.",
+                "reason": "The Griffith AM abstract, PDF p.4/manuscript p.3, continues the preceding sentence with lowercase 'this paper'; the publisher VOR's 'this article' belongs to another version. Preserve the exact AM wording."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
       "id": "2EBHMYU4",
       "title": "Intersectionality in Artificial Intelligence: Framing Concerns and Recommendations for Action",
       "author_year": "Ulnicane (2024)",
@@ -1140,6 +1837,9 @@
       "journal": "",
       "work_id": "work:3627182f-8335-5c7b-81e8-4d4daebd440a",
       "version_id": "version:e64033e0-573f-5401-8703-7666127c9dca",
+      "bibliographic_version_id": "version:e64033e0-573f-5401-8703-7666127c9dca",
+      "source_version_id": "version:e64033e0-573f-5401-8703-7666127c9dca",
+      "source_binding": null,
       "version_type": "version_of_record",
       "version_date": "2024",
       "peer_review_status": "not_established",
@@ -1382,6 +2082,9 @@
       "version_ids": [
         "version:e64033e0-573f-5401-8703-7666127c9dca"
       ],
+      "source_version_ids": [
+        "version:e64033e0-573f-5401-8703-7666127c9dca"
+      ],
       "source_records": [
         {
           "id": "2EBHMYU4",
@@ -1395,6 +2098,9 @@
           "journal": "",
           "work_id": "work:3627182f-8335-5c7b-81e8-4d4daebd440a",
           "version_id": "version:e64033e0-573f-5401-8703-7666127c9dca",
+          "bibliographic_version_id": "version:e64033e0-573f-5401-8703-7666127c9dca",
+          "source_version_id": "version:e64033e0-573f-5401-8703-7666127c9dca",
+          "source_binding": null,
           "version_type": "version_of_record",
           "version_date": "2024",
           "peer_review_status": "not_established",
@@ -1633,6 +2339,9 @@
       "journal": "",
       "work_id": "work:365293c9-c8ea-54dd-9f65-2f37976f1a31",
       "version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
+      "bibliographic_version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
+      "source_version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
+      "source_binding": null,
       "version_type": "unknown",
       "version_date": "June 12-15, 2023",
       "peer_review_status": "not_established",
@@ -1821,6 +2530,9 @@
       "version_ids": [
         "version:5cc8d78c-4578-5a0b-a269-b186f10fe049"
       ],
+      "source_version_ids": [
+        "version:5cc8d78c-4578-5a0b-a269-b186f10fe049"
+      ],
       "source_records": [
         {
           "id": "R7V99ERA",
@@ -1834,6 +2546,9 @@
           "journal": "",
           "work_id": "work:365293c9-c8ea-54dd-9f65-2f37976f1a31",
           "version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
+          "bibliographic_version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
+          "source_version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
+          "source_binding": null,
           "version_type": "unknown",
           "version_date": "June 12-15, 2023",
           "peer_review_status": "not_established",
@@ -2023,6 +2738,9 @@
       "journal": "",
       "work_id": "work:3dc3ced9-8261-5840-9d71-aa2dfc43af87",
       "version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
+      "bibliographic_version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
+      "source_version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
+      "source_binding": null,
       "version_type": "version_of_record",
       "version_date": "2021",
       "peer_review_status": "not_established",
@@ -2252,6 +2970,9 @@
       "version_ids": [
         "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a"
       ],
+      "source_version_ids": [
+        "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a"
+      ],
       "source_records": [
         {
           "id": "QUV5DQH3",
@@ -2265,6 +2986,9 @@
           "journal": "",
           "work_id": "work:3dc3ced9-8261-5840-9d71-aa2dfc43af87",
           "version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
+          "bibliographic_version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
+          "source_version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
+          "source_binding": null,
           "version_type": "version_of_record",
           "version_date": "2021",
           "peer_review_status": "not_established",
@@ -2492,6 +3216,9 @@
       "journal": "",
       "work_id": "work:4842d83e-8ed6-5633-b241-febb6e9c710f",
       "version_id": "version:0cf091a3-19ee-58b4-82db-a6ce24d7bcae",
+      "bibliographic_version_id": "version:0cf091a3-19ee-58b4-82db-a6ce24d7bcae",
+      "source_version_id": "version:0cf091a3-19ee-58b4-82db-a6ce24d7bcae",
+      "source_binding": null,
       "version_type": "unknown",
       "version_date": "",
       "peer_review_status": "not_established",
@@ -2584,6 +3311,9 @@
       "version_ids": [
         "version:0cf091a3-19ee-58b4-82db-a6ce24d7bcae"
       ],
+      "source_version_ids": [
+        "version:0cf091a3-19ee-58b4-82db-a6ce24d7bcae"
+      ],
       "source_records": [
         {
           "id": "FTJM5R8N",
@@ -2597,6 +3327,9 @@
           "journal": "",
           "work_id": "work:4842d83e-8ed6-5633-b241-febb6e9c710f",
           "version_id": "version:0cf091a3-19ee-58b4-82db-a6ce24d7bcae",
+          "bibliographic_version_id": "version:0cf091a3-19ee-58b4-82db-a6ce24d7bcae",
+          "source_version_id": "version:0cf091a3-19ee-58b4-82db-a6ce24d7bcae",
+          "source_binding": null,
           "version_type": "unknown",
           "version_date": "",
           "peer_review_status": "not_established",
@@ -2693,6 +3426,9 @@
       "journal": "",
       "work_id": "work:4b1bc38b-3228-5112-ac8f-026d8d4f7a2e",
       "version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
+      "bibliographic_version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
+      "source_version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
+      "source_binding": null,
       "version_type": "version_of_record",
       "version_date": "2024",
       "peer_review_status": "not_established",
@@ -2971,6 +3707,9 @@
       "version_ids": [
         "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670"
       ],
+      "source_version_ids": [
+        "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670"
+      ],
       "source_records": [
         {
           "id": "8MRNK6FX",
@@ -2984,6 +3723,9 @@
           "journal": "",
           "work_id": "work:4b1bc38b-3228-5112-ac8f-026d8d4f7a2e",
           "version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
+          "bibliographic_version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
+          "source_version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
+          "source_binding": null,
           "version_type": "version_of_record",
           "version_date": "2024",
           "peer_review_status": "not_established",
@@ -3191,6 +3933,9 @@
           "journal": "",
           "work_id": "work:4b1bc38b-3228-5112-ac8f-026d8d4f7a2e",
           "version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
+          "bibliographic_version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
+          "source_version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
+          "source_binding": null,
           "version_type": "version_of_record",
           "version_date": "2024",
           "peer_review_status": "not_established",
@@ -3401,6 +4146,9 @@
       "journal": "",
       "work_id": "work:56d6f68e-55d4-5741-85f5-014faceedd04",
       "version_id": "version:760b8567-f41d-5576-8229-d88a557e569c",
+      "bibliographic_version_id": "version:760b8567-f41d-5576-8229-d88a557e569c",
+      "source_version_id": "version:760b8567-f41d-5576-8229-d88a557e569c",
+      "source_binding": null,
       "version_type": "unknown",
       "version_date": "",
       "peer_review_status": "not_established",
@@ -3474,6 +4222,9 @@
       "version_ids": [
         "version:760b8567-f41d-5576-8229-d88a557e569c"
       ],
+      "source_version_ids": [
+        "version:760b8567-f41d-5576-8229-d88a557e569c"
+      ],
       "source_records": [
         {
           "id": "3ZNMTJ5B",
@@ -3487,6 +4238,9 @@
           "journal": "",
           "work_id": "work:56d6f68e-55d4-5741-85f5-014faceedd04",
           "version_id": "version:760b8567-f41d-5576-8229-d88a557e569c",
+          "bibliographic_version_id": "version:760b8567-f41d-5576-8229-d88a557e569c",
+          "source_version_id": "version:760b8567-f41d-5576-8229-d88a557e569c",
+          "source_binding": null,
           "version_type": "unknown",
           "version_date": "",
           "peer_review_status": "not_established",
@@ -3565,6 +4319,9 @@
       "journal": "",
       "work_id": "work:5e32c60e-f330-5cba-b414-c2fee079146c",
       "version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
+      "bibliographic_version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
+      "source_version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
+      "source_binding": null,
       "version_type": "unknown",
       "version_date": "2024",
       "peer_review_status": "not_established",
@@ -3836,6 +4593,9 @@
       "version_ids": [
         "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581"
       ],
+      "source_version_ids": [
+        "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581"
+      ],
       "source_records": [
         {
           "id": "EQV4DNQR",
@@ -3849,6 +4609,9 @@
           "journal": "",
           "work_id": "work:5e32c60e-f330-5cba-b414-c2fee079146c",
           "version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
+          "bibliographic_version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
+          "source_version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
+          "source_binding": null,
           "version_type": "unknown",
           "version_date": "2024",
           "peer_review_status": "not_established",
@@ -4107,6 +4870,587 @@
       ]
     },
     {
+      "id": "7L78MV2V",
+      "title": "Biases in large language models: Origins, inventory and discussion",
+      "author_year": "Navigli et al. (2023)",
+      "authors": "Navigli, R.; Conia, S.; Ross, B.",
+      "year": 2023,
+      "doi": "10.1145/3597307",
+      "url": "https://doi.org/10.1145/3597307",
+      "item_type": "journalarticle",
+      "journal": "",
+      "work_id": "work:61b5eb97-0fa5-5a1b-a3f7-3a892158e2d3",
+      "version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c",
+      "bibliographic_version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c",
+      "source_version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c",
+      "source_binding": null,
+      "version_type": "version_of_record",
+      "version_date": "2023",
+      "peer_review_status": "not_established",
+      "peer_review_basis": "unknown",
+      "preferred_version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c",
+      "latest_version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c",
+      "is_preferred_version": true,
+      "work_versions": [
+        {
+          "version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c",
+          "version_type": "version_of_record",
+          "version_date": "2023",
+          "identifiers": {
+            "doi": [
+              "10.1145/3597307"
+            ],
+            "zotero_key": [
+              "7L78MV2V"
+            ],
+            "url": [
+              "https://doi.org/10.1145/3597307"
+            ]
+          },
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "integrity_status": "current",
+          "access_status": "unknown",
+          "landing_url": "https://doi.org/10.1145/3597307",
+          "fulltext_url": "",
+          "relations": [],
+          "is_preferred": true,
+          "is_latest": true
+        }
+      ],
+      "identity_basis": "work_version_registry",
+      "knowledge_coverage": "linked",
+      "decision": "Include",
+      "reason": null,
+      "text_source": "raw",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "lifecycle_state": "ai-agent-reviewed",
+      "publication_basis": "ai-source-review",
+      "recorded_identity": {
+        "work_id": null,
+        "version_id": null
+      },
+      "ai_verification": {
+        "artifact": "generated/verification/screening-corrections-c.json#/corrections/7L78MV2V",
+        "sha256": "sha256:644af885ffb7a16e8c252a6b0fe1bc7357fbd32b6439d680768153dba5eea065",
+        "result": "accepted",
+        "review_type": "ai-source-review",
+        "agent_id": "/root/aggregation",
+        "model": "GPT-6",
+        "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+        "reviewed_at": "2026-09-05T14:45:48.120563+00:00",
+        "findings": "Die offene Statusfrage ist aufgelöst. Der Originalreview diskutiert in §4/[57] ausdrücklich einen negativen Befund zur Wirkung von Word-Embedding-Debiasing. Nach der bestehenden Regel für selbst synthetisierte Inventare trägt das Evaluated; reine Bias-Messung wäre unzureichend. Der ergänzende Abgleich mit der bezeichneten NAACL-Primärstudie bestätigt eine tatsächliche Evaluation zweier Verfahren. Korrigiert wird nur die irreführend allgemeine Notes-Begründung; Kategorien, Include, übrige Analysefelder und historische Autorität bleiben unverändert. Evaluated wird nicht als positive oder allgemeine Wirksamkeitsaussage gelesen.",
+        "canonical_binding": {
+          "paper_id": "7L78MV2V",
+          "work_id": "work:61b5eb97-0fa5-5a1b-a3f7-3a892158e2d3",
+          "version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c"
+        }
+      },
+      "verification": null,
+      "publication_approval": null,
+      "categories": [
+        {
+          "key": "Bias_Ungleichheit",
+          "level": 2,
+          "evidence": [
+            {
+              "term": "social bias evidenced in the text generated by language models",
+              "snippet": "…he choice of texts that make up a training corpus. Then, we survey the different types of social bias evidenced in the text generated by language models trained on such corpora, ranging from gender to age, from sexual orientation to ethnicity…",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:61b5eb97-0fa5-5a1b-a3f7-3a892158e2d3",
+              "version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c",
+              "recorded_work_id": "",
+              "recorded_version_id": "",
+              "source_record_id": "7L78MV2V"
+            }
+          ]
+        },
+        {
+          "key": "Diversitaet",
+          "level": 2,
+          "evidence": [
+            {
+              "term": "Increasing language and cultural diversity",
+              "snippet": "Increasing language and cultural diversity: Focusing on more languages implies focusing on different cultures and taking into accoun…",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:61b5eb97-0fa5-5a1b-a3f7-3a892158e2d3",
+              "version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c",
+              "recorded_work_id": "",
+              "recorded_version_id": "",
+              "source_record_id": "7L78MV2V"
+            }
+          ]
+        },
+        {
+          "key": "Fairness",
+          "level": 2,
+          "evidence": [
+            {
+              "term": "three generalized fairness metrics",
+              "snippet": "…sets of metrics used in hundreds of papers dealing with social bias can be unified under three generalized fairness metrics: pairwise comparison, background comparison, and multi-group comparison metrics [40]. Cer…",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:61b5eb97-0fa5-5a1b-a3f7-3a892158e2d3",
+              "version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c",
+              "recorded_work_id": "",
+              "recorded_version_id": "",
+              "source_record_id": "7L78MV2V"
+            }
+          ]
+        },
+        {
+          "key": "Feministisch",
+          "level": 1,
+          "evidence": [
+            {
+              "term": "People have multiple intersecting identities.",
+              "snippet": "People have multiple intersecting identities. In this context, intersectionality describes how different aspects of a person's social i…",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:61b5eb97-0fa5-5a1b-a3f7-3a892158e2d3",
+              "version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c",
+              "recorded_work_id": "",
+              "recorded_version_id": "",
+              "source_record_id": "7L78MV2V"
+            }
+          ]
+        },
+        {
+          "key": "Gender",
+          "level": 2,
+          "evidence": [
+            {
+              "term": "ranging from gender to age, from sexual orientation to ethnicity, and from relig",
+              "snippet": "…f social bias evidenced in the text generated by language models trained on such corpora, ranging from gender to age, from sexual orientation to ethnicity, and from religion to culture. We conclude with directions focused on measuring, reducing, and tackling",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:61b5eb97-0fa5-5a1b-a3f7-3a892158e2d3",
+              "version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c",
+              "recorded_work_id": "",
+              "recorded_version_id": "",
+              "source_record_id": "7L78MV2V"
+            }
+          ]
+        },
+        {
+          "key": "Generative_KI",
+          "level": 2,
+          "evidence": [
+            {
+              "term": "the pervasive issue of bias in the large language models",
+              "snippet": "In this article, we introduce and discuss the pervasive issue of bias in the large language models that are currently at the core of mainstream approaches to Natural Language Processing (N…",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:61b5eb97-0fa5-5a1b-a3f7-3a892158e2d3",
+              "version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c",
+              "recorded_work_id": "",
+              "recorded_version_id": "",
+              "source_record_id": "7L78MV2V"
+            }
+          ]
+        },
+        {
+          "key": "KI_Sonstige",
+          "level": 2,
+          "evidence": [
+            {
+              "term": "large-scale pretrained language models",
+              "snippet": "…field has witnessed a drastic change in paradigm with the advent and wide availability of large-scale pretrained language models, such as BERT [45], GPT [20, 107], T5 [108], and BART [78], which are now pervasive in ev…",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:61b5eb97-0fa5-5a1b-a3f7-3a892158e2d3",
+              "version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c",
+              "recorded_work_id": "",
+              "recorded_version_id": "",
+              "source_record_id": "7L78MV2V"
+            }
+          ]
+        },
+        {
+          "key": "Prompting",
+          "level": 1,
+          "evidence": [
+            {
+              "term": "by designing prompts [81], usually in natural language, to work in a zero-shot o",
+              "snippet": "…e task of interest by either fine-tuning [65, 109] on smaller, task-specific datasets, or by designing prompts [81], usually in natural language, to work in a zero-shot or few-shot setting. Hence, social biases can also be introduced by the datasets selected",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:61b5eb97-0fa5-5a1b-a3f7-3a892158e2d3",
+              "version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c",
+              "recorded_work_id": "",
+              "recorded_version_id": "",
+              "source_record_id": "7L78MV2V"
+            }
+          ]
+        }
+      ],
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Object_of_Critique",
+            "Research_Instrument"
+          ],
+          "AN_Prompt_Techniques": [
+            "ICL"
+          ],
+          "AN_Bias_Axes": [
+            "Age",
+            "Disability",
+            "Gender",
+            "Intersectional",
+            "Language_Culture",
+            "Nationality_Migration",
+            "Physical_Appearance",
+            "Race_Ethnicity",
+            "Religion",
+            "Sexual_Orientation_Identity",
+            "Socioeconomic"
+          ],
+          "AN_Harm_Types": [
+            "Derogatory_Language",
+            "Direct_Discrimination",
+            "Disparate_Performance",
+            "Erasure",
+            "Exclusionary_Norms",
+            "Indirect_Discrimination",
+            "Misrepresentation",
+            "Stereotyping",
+            "Toxicity"
+          ],
+          "AN_Mitigation_Stage": [
+            "In_Training",
+            "Organisational_Process",
+            "Pre_Processing"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Literaturreview"
+        },
+        "notes": "ICL beruht auf der ausdrücklich behandelten Zero-shot- und Few-shot-Aufgabenadaptation. Evaluated bezeichnet die in §4 (Understanding bias, Referenz [57], Gonen/Goldberg 2019) diskutierte negative Evaluation bestehender Word-Embedding-Debiasing-Verfahren: verbleibender Bias wird verdeckt statt vollständig entfernt. Dies ist synthetisierte Evaluation, keine eigene Mitigationsstudie dieses Reviews; die gesonderte Messung von Bias allein würde Evaluated nicht begründen. Die weiteren Empfehlungen zu ausgewogenen Trainingsdaten, Fine-Tuning und organisatorischer Zusammenarbeit gelten dadurch nicht sämtlich als evaluiert. Kein Nachweis allgemeiner Fairness-Wirksamkeit oder eines Transfers in die Soziale Arbeit.",
+        "undecidable": []
+      },
+      "ai_correction": {
+        "paper_id": "7L78MV2V",
+        "correction_id": "ai-analysis-correction:2026-09-05:7L78MV2V:aggregation-c",
+        "base_artifact": "docs/data/screening/ar2.json#/decisions/7L78MV2V",
+        "base_sha256": "sha256:5a0d8e629eb94f16c86b36baf454cfeab44eabdd405a5998817c75b6bc53813a",
+        "supersedes_annotation_id": "ar2:7L78MV2V",
+        "agent_id": "/root/aggregation",
+        "actor_type": "ai_agent",
+        "model": "GPT-6",
+        "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+        "corrected_at": "2026-09-05T14:45:48.120563+00:00",
+        "changes": [
+          {
+            "path": "/analysis/fields/AN_Notes",
+            "before": "ICL beruht auf der ausdrücklich behandelten Zero-shot- und Few-shot-Aufgabenadaptation. Als Literaturreview synthetisiert der Beitrag empirisch geprüfte Bias-Metriken und Mitigationsansätze; deshalb gilt die höchste erreichte Stufe Evaluated.",
+            "after": "ICL beruht auf der ausdrücklich behandelten Zero-shot- und Few-shot-Aufgabenadaptation. Evaluated bezeichnet die in §4 (Understanding bias, Referenz [57], Gonen/Goldberg 2019) diskutierte negative Evaluation bestehender Word-Embedding-Debiasing-Verfahren: verbleibender Bias wird verdeckt statt vollständig entfernt. Dies ist synthetisierte Evaluation, keine eigene Mitigationsstudie dieses Reviews; die gesonderte Messung von Bias allein würde Evaluated nicht begründen. Die weiteren Empfehlungen zu ausgewogenen Trainingsdaten, Fine-Tuning und organisatorischer Zusammenarbeit gelten dadurch nicht sämtlich als evaluiert. Kein Nachweis allgemeiner Fairness-Wirksamkeit oder eines Transfers in die Soziale Arbeit.",
+            "reason": "Die bisherige Begründung vermischt geprüfte Bias-Metriken mit der Evaluation einer Mitigation. §4 berichtet dagegen einen identifizierbaren negativen Debiasing-Befund; dieser trägt nach der bestehenden Syntheseregel Evaluated. Die Notes grenzen diesen konkreten Statusbeleg von den weiteren Empfehlungen ab."
+          }
+        ]
+      },
+      "aggregation_unit": "work",
+      "record_ids": [
+        "7L78MV2V"
+      ],
+      "corpus_record_ids": [
+        "7L78MV2V"
+      ],
+      "version_ids": [
+        "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c"
+      ],
+      "source_version_ids": [
+        "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c"
+      ],
+      "source_records": [
+        {
+          "id": "7L78MV2V",
+          "title": "Biases in large language models: Origins, inventory and discussion",
+          "author_year": "Navigli et al. (2023)",
+          "authors": "Navigli, R.; Conia, S.; Ross, B.",
+          "year": 2023,
+          "doi": "10.1145/3597307",
+          "url": "https://doi.org/10.1145/3597307",
+          "item_type": "journalarticle",
+          "journal": "",
+          "work_id": "work:61b5eb97-0fa5-5a1b-a3f7-3a892158e2d3",
+          "version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c",
+          "bibliographic_version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c",
+          "source_version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c",
+          "source_binding": null,
+          "version_type": "version_of_record",
+          "version_date": "2023",
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "preferred_version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c",
+          "latest_version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c",
+          "is_preferred_version": true,
+          "work_versions": [
+            {
+              "version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c",
+              "version_type": "version_of_record",
+              "version_date": "2023",
+              "identifiers": {
+                "doi": [
+                  "10.1145/3597307"
+                ],
+                "zotero_key": [
+                  "7L78MV2V"
+                ],
+                "url": [
+                  "https://doi.org/10.1145/3597307"
+                ]
+              },
+              "peer_review_status": "not_established",
+              "peer_review_basis": "unknown",
+              "integrity_status": "current",
+              "access_status": "unknown",
+              "landing_url": "https://doi.org/10.1145/3597307",
+              "fulltext_url": "",
+              "relations": [],
+              "is_preferred": true,
+              "is_latest": true
+            }
+          ],
+          "identity_basis": "work_version_registry",
+          "knowledge_coverage": "linked",
+          "decision": "Include",
+          "reason": null,
+          "text_source": "raw",
+          "reviewer": "ar2",
+          "actor": "agent",
+          "lifecycle_state": "ai-agent-reviewed",
+          "publication_basis": "ai-source-review",
+          "recorded_identity": {
+            "work_id": null,
+            "version_id": null
+          },
+          "ai_verification": {
+            "artifact": "generated/verification/screening-corrections-c.json#/corrections/7L78MV2V",
+            "sha256": "sha256:644af885ffb7a16e8c252a6b0fe1bc7357fbd32b6439d680768153dba5eea065",
+            "result": "accepted",
+            "review_type": "ai-source-review",
+            "agent_id": "/root/aggregation",
+            "model": "GPT-6",
+            "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+            "reviewed_at": "2026-09-05T14:45:48.120563+00:00",
+            "findings": "Die offene Statusfrage ist aufgelöst. Der Originalreview diskutiert in §4/[57] ausdrücklich einen negativen Befund zur Wirkung von Word-Embedding-Debiasing. Nach der bestehenden Regel für selbst synthetisierte Inventare trägt das Evaluated; reine Bias-Messung wäre unzureichend. Der ergänzende Abgleich mit der bezeichneten NAACL-Primärstudie bestätigt eine tatsächliche Evaluation zweier Verfahren. Korrigiert wird nur die irreführend allgemeine Notes-Begründung; Kategorien, Include, übrige Analysefelder und historische Autorität bleiben unverändert. Evaluated wird nicht als positive oder allgemeine Wirksamkeitsaussage gelesen.",
+            "canonical_binding": {
+              "paper_id": "7L78MV2V",
+              "work_id": "work:61b5eb97-0fa5-5a1b-a3f7-3a892158e2d3",
+              "version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c"
+            }
+          },
+          "verification": null,
+          "publication_approval": null,
+          "categories": [
+            {
+              "key": "Bias_Ungleichheit",
+              "level": 2,
+              "evidence": [
+                {
+                  "term": "social bias evidenced in the text generated by language models",
+                  "snippet": "…he choice of texts that make up a training corpus. Then, we survey the different types of social bias evidenced in the text generated by language models trained on such corpora, ranging from gender to age, from sexual orientation to ethnicity…",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:61b5eb97-0fa5-5a1b-a3f7-3a892158e2d3",
+                  "version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c",
+                  "recorded_work_id": "",
+                  "recorded_version_id": ""
+                }
+              ]
+            },
+            {
+              "key": "Diversitaet",
+              "level": 2,
+              "evidence": [
+                {
+                  "term": "Increasing language and cultural diversity",
+                  "snippet": "Increasing language and cultural diversity: Focusing on more languages implies focusing on different cultures and taking into accoun…",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:61b5eb97-0fa5-5a1b-a3f7-3a892158e2d3",
+                  "version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c",
+                  "recorded_work_id": "",
+                  "recorded_version_id": ""
+                }
+              ]
+            },
+            {
+              "key": "Fairness",
+              "level": 2,
+              "evidence": [
+                {
+                  "term": "three generalized fairness metrics",
+                  "snippet": "…sets of metrics used in hundreds of papers dealing with social bias can be unified under three generalized fairness metrics: pairwise comparison, background comparison, and multi-group comparison metrics [40]. Cer…",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:61b5eb97-0fa5-5a1b-a3f7-3a892158e2d3",
+                  "version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c",
+                  "recorded_work_id": "",
+                  "recorded_version_id": ""
+                }
+              ]
+            },
+            {
+              "key": "Feministisch",
+              "level": 1,
+              "evidence": [
+                {
+                  "term": "People have multiple intersecting identities.",
+                  "snippet": "People have multiple intersecting identities. In this context, intersectionality describes how different aspects of a person's social i…",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:61b5eb97-0fa5-5a1b-a3f7-3a892158e2d3",
+                  "version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c",
+                  "recorded_work_id": "",
+                  "recorded_version_id": ""
+                }
+              ]
+            },
+            {
+              "key": "Gender",
+              "level": 2,
+              "evidence": [
+                {
+                  "term": "ranging from gender to age, from sexual orientation to ethnicity, and from relig",
+                  "snippet": "…f social bias evidenced in the text generated by language models trained on such corpora, ranging from gender to age, from sexual orientation to ethnicity, and from religion to culture. We conclude with directions focused on measuring, reducing, and tackling",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:61b5eb97-0fa5-5a1b-a3f7-3a892158e2d3",
+                  "version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c",
+                  "recorded_work_id": "",
+                  "recorded_version_id": ""
+                }
+              ]
+            },
+            {
+              "key": "Generative_KI",
+              "level": 2,
+              "evidence": [
+                {
+                  "term": "the pervasive issue of bias in the large language models",
+                  "snippet": "In this article, we introduce and discuss the pervasive issue of bias in the large language models that are currently at the core of mainstream approaches to Natural Language Processing (N…",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:61b5eb97-0fa5-5a1b-a3f7-3a892158e2d3",
+                  "version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c",
+                  "recorded_work_id": "",
+                  "recorded_version_id": ""
+                }
+              ]
+            },
+            {
+              "key": "KI_Sonstige",
+              "level": 2,
+              "evidence": [
+                {
+                  "term": "large-scale pretrained language models",
+                  "snippet": "…field has witnessed a drastic change in paradigm with the advent and wide availability of large-scale pretrained language models, such as BERT [45], GPT [20, 107], T5 [108], and BART [78], which are now pervasive in ev…",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:61b5eb97-0fa5-5a1b-a3f7-3a892158e2d3",
+                  "version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c",
+                  "recorded_work_id": "",
+                  "recorded_version_id": ""
+                }
+              ]
+            },
+            {
+              "key": "Prompting",
+              "level": 1,
+              "evidence": [
+                {
+                  "term": "by designing prompts [81], usually in natural language, to work in a zero-shot o",
+                  "snippet": "…e task of interest by either fine-tuning [65, 109] on smaller, task-specific datasets, or by designing prompts [81], usually in natural language, to work in a zero-shot or few-shot setting. Hence, social biases can also be introduced by the datasets selected",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:61b5eb97-0fa5-5a1b-a3f7-3a892158e2d3",
+                  "version_id": "version:7516f9cc-8609-5c3b-a7e2-540b5a349e2c",
+                  "recorded_work_id": "",
+                  "recorded_version_id": ""
+                }
+              ]
+            }
+          ],
+          "analysis": {
+            "fields": {
+              "AN_Prompting_Role": [
+                "Object_of_Critique",
+                "Research_Instrument"
+              ],
+              "AN_Prompt_Techniques": [
+                "ICL"
+              ],
+              "AN_Bias_Axes": [
+                "Age",
+                "Disability",
+                "Gender",
+                "Intersectional",
+                "Language_Culture",
+                "Nationality_Migration",
+                "Physical_Appearance",
+                "Race_Ethnicity",
+                "Religion",
+                "Sexual_Orientation_Identity",
+                "Socioeconomic"
+              ],
+              "AN_Harm_Types": [
+                "Derogatory_Language",
+                "Direct_Discrimination",
+                "Disparate_Performance",
+                "Erasure",
+                "Exclusionary_Norms",
+                "Indirect_Discrimination",
+                "Misrepresentation",
+                "Stereotyping",
+                "Toxicity"
+              ],
+              "AN_Mitigation_Stage": [
+                "In_Training",
+                "Organisational_Process",
+                "Pre_Processing"
+              ],
+              "AN_Mitigation_Status": "Evaluated",
+              "AN_Population": [
+                "Not_SW_Specific"
+              ],
+              "AN_Coding_Basis": "Fulltext",
+              "Studientyp": "Literaturreview"
+            },
+            "notes": "ICL beruht auf der ausdrücklich behandelten Zero-shot- und Few-shot-Aufgabenadaptation. Evaluated bezeichnet die in §4 (Understanding bias, Referenz [57], Gonen/Goldberg 2019) diskutierte negative Evaluation bestehender Word-Embedding-Debiasing-Verfahren: verbleibender Bias wird verdeckt statt vollständig entfernt. Dies ist synthetisierte Evaluation, keine eigene Mitigationsstudie dieses Reviews; die gesonderte Messung von Bias allein würde Evaluated nicht begründen. Die weiteren Empfehlungen zu ausgewogenen Trainingsdaten, Fine-Tuning und organisatorischer Zusammenarbeit gelten dadurch nicht sämtlich als evaluiert. Kein Nachweis allgemeiner Fairness-Wirksamkeit oder eines Transfers in die Soziale Arbeit.",
+            "undecidable": []
+          },
+          "ai_correction": {
+            "paper_id": "7L78MV2V",
+            "correction_id": "ai-analysis-correction:2026-09-05:7L78MV2V:aggregation-c",
+            "base_artifact": "docs/data/screening/ar2.json#/decisions/7L78MV2V",
+            "base_sha256": "sha256:5a0d8e629eb94f16c86b36baf454cfeab44eabdd405a5998817c75b6bc53813a",
+            "supersedes_annotation_id": "ar2:7L78MV2V",
+            "agent_id": "/root/aggregation",
+            "actor_type": "ai_agent",
+            "model": "GPT-6",
+            "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+            "corrected_at": "2026-09-05T14:45:48.120563+00:00",
+            "changes": [
+              {
+                "path": "/analysis/fields/AN_Notes",
+                "before": "ICL beruht auf der ausdrücklich behandelten Zero-shot- und Few-shot-Aufgabenadaptation. Als Literaturreview synthetisiert der Beitrag empirisch geprüfte Bias-Metriken und Mitigationsansätze; deshalb gilt die höchste erreichte Stufe Evaluated.",
+                "after": "ICL beruht auf der ausdrücklich behandelten Zero-shot- und Few-shot-Aufgabenadaptation. Evaluated bezeichnet die in §4 (Understanding bias, Referenz [57], Gonen/Goldberg 2019) diskutierte negative Evaluation bestehender Word-Embedding-Debiasing-Verfahren: verbleibender Bias wird verdeckt statt vollständig entfernt. Dies ist synthetisierte Evaluation, keine eigene Mitigationsstudie dieses Reviews; die gesonderte Messung von Bias allein würde Evaluated nicht begründen. Die weiteren Empfehlungen zu ausgewogenen Trainingsdaten, Fine-Tuning und organisatorischer Zusammenarbeit gelten dadurch nicht sämtlich als evaluiert. Kein Nachweis allgemeiner Fairness-Wirksamkeit oder eines Transfers in die Soziale Arbeit.",
+                "reason": "Die bisherige Begründung vermischt geprüfte Bias-Metriken mit der Evaluation einer Mitigation. §4 berichtet dagegen einen identifizierbaren negativen Debiasing-Befund; dieser trägt nach der bestehenden Syntheseregel Evaluated. Die Notes grenzen diesen konkreten Statusbeleg von den weiteren Empfehlungen ab."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
       "id": "4ZL5Q48E",
       "title": "Algorithmic management in a work context",
       "author_year": "Jarrahi et al. (2021)",
@@ -4118,6 +5462,9 @@
       "journal": "",
       "work_id": "work:691469f6-881f-5e13-8df5-69dc64025556",
       "version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
+      "bibliographic_version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
+      "source_version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
+      "source_binding": null,
       "version_type": "version_of_record",
       "version_date": "2021",
       "peer_review_status": "not_established",
@@ -4304,6 +5651,9 @@
       "version_ids": [
         "version:7b302d9d-e176-554e-a8aa-5e02f7334833"
       ],
+      "source_version_ids": [
+        "version:7b302d9d-e176-554e-a8aa-5e02f7334833"
+      ],
       "source_records": [
         {
           "id": "4ZL5Q48E",
@@ -4317,6 +5667,9 @@
           "journal": "",
           "work_id": "work:691469f6-881f-5e13-8df5-69dc64025556",
           "version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
+          "bibliographic_version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
+          "source_version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
+          "source_binding": null,
           "version_type": "version_of_record",
           "version_date": "2021",
           "peer_review_status": "not_established",
@@ -4503,6 +5856,9 @@
       "journal": "",
       "work_id": "work:7473ae67-3f6b-5cb7-befc-df628bc87911",
       "version_id": "version:c3159829-537d-5900-9362-078e15396691",
+      "bibliographic_version_id": "version:c3159829-537d-5900-9362-078e15396691",
+      "source_version_id": "version:c3159829-537d-5900-9362-078e15396691",
+      "source_binding": null,
       "version_type": "version_of_record",
       "version_date": "2023",
       "peer_review_status": "not_established",
@@ -4595,6 +5951,9 @@
       "version_ids": [
         "version:c3159829-537d-5900-9362-078e15396691"
       ],
+      "source_version_ids": [
+        "version:c3159829-537d-5900-9362-078e15396691"
+      ],
       "source_records": [
         {
           "id": "J7V3AAQT",
@@ -4608,6 +5967,9 @@
           "journal": "",
           "work_id": "work:7473ae67-3f6b-5cb7-befc-df628bc87911",
           "version_id": "version:c3159829-537d-5900-9362-078e15396691",
+          "bibliographic_version_id": "version:c3159829-537d-5900-9362-078e15396691",
+          "source_version_id": "version:c3159829-537d-5900-9362-078e15396691",
+          "source_binding": null,
           "version_type": "version_of_record",
           "version_date": "2023",
           "peer_review_status": "not_established",
@@ -4693,6 +6055,288 @@
       ]
     },
     {
+      "id": "3GB9B4IJ",
+      "title": "Can LLMs reason about trust? A pilot study",
+      "author_year": "Debnath, A. (2025)",
+      "authors": "Debnath, A.; Cranefield, S.; Lorini, E.; Savarimuthu, B. T. R.",
+      "year": 2025,
+      "doi": "",
+      "url": "https://arxiv.org/html/2507.21075v1",
+      "item_type": "preprint",
+      "journal": "",
+      "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88",
+      "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+      "bibliographic_version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+      "source_version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+      "source_binding": null,
+      "version_type": "preprint",
+      "version_date": "2025-06-11",
+      "peer_review_status": "not_established",
+      "peer_review_basis": "unknown",
+      "preferred_version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+      "latest_version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+      "is_preferred_version": true,
+      "work_versions": [
+        {
+          "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+          "version_type": "preprint",
+          "version_date": "2025-06-11",
+          "identifiers": {
+            "zotero_key": [
+              "2YS85B49",
+              "3GB9B4IJ",
+              "BCBWSU3Z"
+            ],
+            "url": [
+              "https://arxiv.org/html/2507.21075v1"
+            ]
+          },
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "integrity_status": "current",
+          "access_status": "unknown",
+          "landing_url": "https://arxiv.org/html/2507.21075v1",
+          "fulltext_url": "",
+          "relations": [],
+          "is_preferred": true,
+          "is_latest": true
+        }
+      ],
+      "identity_basis": "work_version_registry",
+      "knowledge_coverage": "linked",
+      "decision": "Exclude",
+      "reason": "Not_relevant_topic",
+      "text_source": "raw",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "lifecycle_state": "ai-agent-reviewed",
+      "publication_basis": "ai-source-review",
+      "recorded_identity": {
+        "work_id": null,
+        "version_id": null
+      },
+      "ai_verification": {
+        "artifact": "docs/data/screening/ar2.json#/decisions/3GB9B4IJ",
+        "sha256": "sha256:57d869fb032166db3a9ad40166c23a555e9701b6dc66b245174fd3df919a5323",
+        "result": "accepted",
+        "review_type": "ai-source-review",
+        "agent_id": "/root/grounded_chat",
+        "model": "GPT-6",
+        "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+        "reviewed_at": "2026-09-05T14:53:17.674476+00:00",
+        "findings": "Independent source-grounded follow-up audit confirms Exclude/Not_relevant_topic under the two-dimensional screening rule. The paper evaluates LLM trust reasoning and explicit prompting for fictional PhD mentorship, with secondary computational/symbolic trust discussion; it does not investigate social work, structural bias, gender effects, diversity, feminism or algorithmic fairness. All three existing positive-category evidence terms match the original Paper text. The earlier wrong year is corrected for all three aliases by the now validated local metadata projection (2025-06-11; preprint; arXiv); official arXiv v1 identity, title and four authors match. This accepts the screening classification, not all empirical claims or general deployment validity.",
+        "canonical_binding": {
+          "paper_id": "3GB9B4IJ",
+          "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88",
+          "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3"
+        }
+      },
+      "verification": null,
+      "publication_approval": null,
+      "categories": [
+        {
+          "key": "Generative_KI",
+          "level": 2,
+          "evidence": [
+            {
+              "term": "In this paper we investigate the ability of Large Language Models (LLMs) to reas",
+              "snippet": "…for AI systems to assist users in understanding the social state of their relationships. In this paper we investigate the ability of Large Language Models (LLMs) to reason about trust between two individuals in an environment which requires fostering trust re",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88",
+              "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+              "recorded_work_id": "",
+              "recorded_version_id": "",
+              "source_record_id": "3GB9B4IJ"
+            }
+          ]
+        },
+        {
+          "key": "KI_Sonstige",
+          "level": 1,
+          "evidence": [
+            {
+              "term": "Within multi-agent systems (MAS), trust is typically modelled through two primar",
+              "snippet": "Within multi-agent systems (MAS), trust is typically modelled through two primary approaches: computational models, which define trust numerically based on prior performance and reputation [12], and socio-cognitive models [18]. While computational models are e",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88",
+              "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+              "recorded_work_id": "",
+              "recorded_version_id": "",
+              "source_record_id": "3GB9B4IJ"
+            }
+          ]
+        },
+        {
+          "key": "Prompting",
+          "level": 2,
+          "evidence": [
+            {
+              "term": "These elements were then combined together, as illustrated in Fig. 1, to constru",
+              "snippet": "…ectively reason about trust based on conversational interactions between two individuals. These elements were then combined together, as illustrated in Fig. 1, to construct a system prompt provided to the LLMs for trust analysis.",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88",
+              "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+              "recorded_work_id": "",
+              "recorded_version_id": "",
+              "source_record_id": "3GB9B4IJ"
+            }
+          ]
+        }
+      ],
+      "analysis": null,
+      "aggregation_unit": "work",
+      "record_ids": [
+        "3GB9B4IJ"
+      ],
+      "corpus_record_ids": [
+        "2YS85B49",
+        "3GB9B4IJ",
+        "BCBWSU3Z"
+      ],
+      "version_ids": [
+        "version:22472bba-e54e-5015-a13a-3e2aad654ba3"
+      ],
+      "source_version_ids": [
+        "version:22472bba-e54e-5015-a13a-3e2aad654ba3"
+      ],
+      "source_records": [
+        {
+          "id": "3GB9B4IJ",
+          "title": "Can LLMs reason about trust? A pilot study",
+          "author_year": "Debnath, A. (2025)",
+          "authors": "Debnath, A.; Cranefield, S.; Lorini, E.; Savarimuthu, B. T. R.",
+          "year": 2025,
+          "doi": "",
+          "url": "https://arxiv.org/html/2507.21075v1",
+          "item_type": "preprint",
+          "journal": "",
+          "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88",
+          "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+          "bibliographic_version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+          "source_version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+          "source_binding": null,
+          "version_type": "preprint",
+          "version_date": "2025-06-11",
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "preferred_version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+          "latest_version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+          "is_preferred_version": true,
+          "work_versions": [
+            {
+              "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+              "version_type": "preprint",
+              "version_date": "2025-06-11",
+              "identifiers": {
+                "zotero_key": [
+                  "2YS85B49",
+                  "3GB9B4IJ",
+                  "BCBWSU3Z"
+                ],
+                "url": [
+                  "https://arxiv.org/html/2507.21075v1"
+                ]
+              },
+              "peer_review_status": "not_established",
+              "peer_review_basis": "unknown",
+              "integrity_status": "current",
+              "access_status": "unknown",
+              "landing_url": "https://arxiv.org/html/2507.21075v1",
+              "fulltext_url": "",
+              "relations": [],
+              "is_preferred": true,
+              "is_latest": true
+            }
+          ],
+          "identity_basis": "work_version_registry",
+          "knowledge_coverage": "linked",
+          "decision": "Exclude",
+          "reason": "Not_relevant_topic",
+          "text_source": "raw",
+          "reviewer": "ar2",
+          "actor": "agent",
+          "lifecycle_state": "ai-agent-reviewed",
+          "publication_basis": "ai-source-review",
+          "recorded_identity": {
+            "work_id": null,
+            "version_id": null
+          },
+          "ai_verification": {
+            "artifact": "docs/data/screening/ar2.json#/decisions/3GB9B4IJ",
+            "sha256": "sha256:57d869fb032166db3a9ad40166c23a555e9701b6dc66b245174fd3df919a5323",
+            "result": "accepted",
+            "review_type": "ai-source-review",
+            "agent_id": "/root/grounded_chat",
+            "model": "GPT-6",
+            "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+            "reviewed_at": "2026-09-05T14:53:17.674476+00:00",
+            "findings": "Independent source-grounded follow-up audit confirms Exclude/Not_relevant_topic under the two-dimensional screening rule. The paper evaluates LLM trust reasoning and explicit prompting for fictional PhD mentorship, with secondary computational/symbolic trust discussion; it does not investigate social work, structural bias, gender effects, diversity, feminism or algorithmic fairness. All three existing positive-category evidence terms match the original Paper text. The earlier wrong year is corrected for all three aliases by the now validated local metadata projection (2025-06-11; preprint; arXiv); official arXiv v1 identity, title and four authors match. This accepts the screening classification, not all empirical claims or general deployment validity.",
+            "canonical_binding": {
+              "paper_id": "3GB9B4IJ",
+              "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88",
+              "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3"
+            }
+          },
+          "verification": null,
+          "publication_approval": null,
+          "categories": [
+            {
+              "key": "Generative_KI",
+              "level": 2,
+              "evidence": [
+                {
+                  "term": "In this paper we investigate the ability of Large Language Models (LLMs) to reas",
+                  "snippet": "…for AI systems to assist users in understanding the social state of their relationships. In this paper we investigate the ability of Large Language Models (LLMs) to reason about trust between two individuals in an environment which requires fostering trust re",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88",
+                  "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+                  "recorded_work_id": "",
+                  "recorded_version_id": ""
+                }
+              ]
+            },
+            {
+              "key": "KI_Sonstige",
+              "level": 1,
+              "evidence": [
+                {
+                  "term": "Within multi-agent systems (MAS), trust is typically modelled through two primar",
+                  "snippet": "Within multi-agent systems (MAS), trust is typically modelled through two primary approaches: computational models, which define trust numerically based on prior performance and reputation [12], and socio-cognitive models [18]. While computational models are e",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88",
+                  "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+                  "recorded_work_id": "",
+                  "recorded_version_id": ""
+                }
+              ]
+            },
+            {
+              "key": "Prompting",
+              "level": 2,
+              "evidence": [
+                {
+                  "term": "These elements were then combined together, as illustrated in Fig. 1, to constru",
+                  "snippet": "…ectively reason about trust based on conversational interactions between two individuals. These elements were then combined together, as illustrated in Fig. 1, to construct a system prompt provided to the LLMs for trust analysis.",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88",
+                  "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+                  "recorded_work_id": "",
+                  "recorded_version_id": ""
+                }
+              ]
+            }
+          ],
+          "analysis": null
+        }
+      ]
+    },
+    {
       "id": "T8R8RKX9",
       "title": "Gender, Race, and Intersectional Bias in Resume Screening via Language Model Retrieval",
       "author_year": "Wilson & Caliskan (2024)",
@@ -4704,6 +6348,9 @@
       "journal": "",
       "work_id": "work:904b0cbf-d423-5dde-ba01-40a61605b88c",
       "version_id": "version:0a158fff-18d3-5945-acb1-7bc096ba101f",
+      "bibliographic_version_id": "version:0a158fff-18d3-5945-acb1-7bc096ba101f",
+      "source_version_id": "version:0a158fff-18d3-5945-acb1-7bc096ba101f",
+      "source_binding": null,
       "version_type": "unknown",
       "version_date": "2024-10-16",
       "peer_review_status": "not_established",
@@ -4952,6 +6599,9 @@
       "version_ids": [
         "version:0a158fff-18d3-5945-acb1-7bc096ba101f"
       ],
+      "source_version_ids": [
+        "version:0a158fff-18d3-5945-acb1-7bc096ba101f"
+      ],
       "source_records": [
         {
           "id": "T8R8RKX9",
@@ -4965,6 +6615,9 @@
           "journal": "",
           "work_id": "work:904b0cbf-d423-5dde-ba01-40a61605b88c",
           "version_id": "version:0a158fff-18d3-5945-acb1-7bc096ba101f",
+          "bibliographic_version_id": "version:0a158fff-18d3-5945-acb1-7bc096ba101f",
+          "source_version_id": "version:0a158fff-18d3-5945-acb1-7bc096ba101f",
+          "source_binding": null,
           "version_type": "unknown",
           "version_date": "2024-10-16",
           "peer_review_status": "not_established",
@@ -5209,6 +6862,9 @@
       "journal": "",
       "work_id": "work:92f45258-5949-5fcb-b391-256884930baf",
       "version_id": "version:3b924963-3b65-56a4-b26c-80be911b4983",
+      "bibliographic_version_id": "version:3b924963-3b65-56a4-b26c-80be911b4983",
+      "source_version_id": "version:3b924963-3b65-56a4-b26c-80be911b4983",
+      "source_binding": null,
       "version_type": "version_of_record",
       "version_date": "2024",
       "peer_review_status": "not_established",
@@ -5357,6 +7013,9 @@
       "version_ids": [
         "version:3b924963-3b65-56a4-b26c-80be911b4983"
       ],
+      "source_version_ids": [
+        "version:3b924963-3b65-56a4-b26c-80be911b4983"
+      ],
       "source_records": [
         {
           "id": "WAYCKUZ8",
@@ -5370,6 +7029,9 @@
           "journal": "",
           "work_id": "work:92f45258-5949-5fcb-b391-256884930baf",
           "version_id": "version:3b924963-3b65-56a4-b26c-80be911b4983",
+          "bibliographic_version_id": "version:3b924963-3b65-56a4-b26c-80be911b4983",
+          "source_version_id": "version:3b924963-3b65-56a4-b26c-80be911b4983",
+          "source_binding": null,
           "version_type": "version_of_record",
           "version_date": "2024",
           "peer_review_status": "not_established",
@@ -5518,6 +7180,9 @@
       "journal": "",
       "work_id": "work:9cbefba0-b92b-59a3-8595-a1ac5e9fca72",
       "version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
+      "bibliographic_version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
+      "source_version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
+      "source_binding": null,
       "version_type": "version_of_record",
       "version_date": "2019",
       "peer_review_status": "not_established",
@@ -5711,6 +7376,9 @@
       "version_ids": [
         "version:4c9dae5b-4429-5d97-81f6-764be7b98368"
       ],
+      "source_version_ids": [
+        "version:4c9dae5b-4429-5d97-81f6-764be7b98368"
+      ],
       "source_records": [
         {
           "id": "A2P8MXMY",
@@ -5724,6 +7392,9 @@
           "journal": "",
           "work_id": "work:9cbefba0-b92b-59a3-8595-a1ac5e9fca72",
           "version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
+          "bibliographic_version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
+          "source_version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
+          "source_binding": null,
           "version_type": "version_of_record",
           "version_date": "2019",
           "peer_review_status": "not_established",
@@ -5917,6 +7588,9 @@
       "journal": "",
       "work_id": "work:9ee1a116-9225-5234-b189-b4ea3f93df14",
       "version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
+      "bibliographic_version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
+      "source_version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
+      "source_binding": null,
       "version_type": "version_of_record",
       "version_date": "2025",
       "peer_review_status": "not_established",
@@ -6161,6 +7835,9 @@
       "version_ids": [
         "version:a9e450c4-5ae0-53e4-988a-607828f551e5"
       ],
+      "source_version_ids": [
+        "version:a9e450c4-5ae0-53e4-988a-607828f551e5"
+      ],
       "source_records": [
         {
           "id": "UKKQKL7I",
@@ -6174,6 +7851,9 @@
           "journal": "",
           "work_id": "work:9ee1a116-9225-5234-b189-b4ea3f93df14",
           "version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
+          "bibliographic_version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
+          "source_version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
+          "source_binding": null,
           "version_type": "version_of_record",
           "version_date": "2025",
           "peer_review_status": "not_established",
@@ -6415,6 +8095,9 @@
       "journal": "",
       "work_id": "work:b4a52bdb-3182-5695-bbac-d3620ef7d3fe",
       "version_id": "version:95c6b86a-c983-5533-ae04-faee6251ec6d",
+      "bibliographic_version_id": "version:95c6b86a-c983-5533-ae04-faee6251ec6d",
+      "source_version_id": "version:95c6b86a-c983-5533-ae04-faee6251ec6d",
+      "source_binding": null,
       "version_type": "unknown",
       "version_date": "2017",
       "peer_review_status": "not_established",
@@ -6524,6 +8207,9 @@
       "version_ids": [
         "version:95c6b86a-c983-5533-ae04-faee6251ec6d"
       ],
+      "source_version_ids": [
+        "version:95c6b86a-c983-5533-ae04-faee6251ec6d"
+      ],
       "source_records": [
         {
           "id": "NSI6S5QE",
@@ -6537,6 +8223,9 @@
           "journal": "",
           "work_id": "work:b4a52bdb-3182-5695-bbac-d3620ef7d3fe",
           "version_id": "version:95c6b86a-c983-5533-ae04-faee6251ec6d",
+          "bibliographic_version_id": "version:95c6b86a-c983-5533-ae04-faee6251ec6d",
+          "source_version_id": "version:95c6b86a-c983-5533-ae04-faee6251ec6d",
+          "source_binding": null,
           "version_type": "unknown",
           "version_date": "2017",
           "peer_review_status": "not_established",
@@ -6638,6 +8327,585 @@
       ]
     },
     {
+      "id": "J5EF9W6M",
+      "title": "AI & Intersectionality: A Toolkit For Fairness & Inclusion",
+      "author_year": "DIVERSIFAIR Project (2024)",
+      "authors": "",
+      "year": 2024,
+      "doi": "",
+      "url": "https://diversifair-project.eu/wp-content/uploads/2025/01/Copie-de-INDUSTRY-Educ-Kits-A4-V2.pdf",
+      "item_type": "report",
+      "journal": "",
+      "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+      "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+      "bibliographic_version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+      "source_version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+      "source_binding": null,
+      "version_type": "unknown",
+      "version_date": "2024",
+      "peer_review_status": "not_established",
+      "peer_review_basis": "unknown",
+      "preferred_version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+      "latest_version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+      "is_preferred_version": true,
+      "work_versions": [
+        {
+          "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+          "version_type": "unknown",
+          "version_date": "2024",
+          "identifiers": {
+            "zotero_key": [
+              "J5EF9W6M"
+            ],
+            "url": [
+              "https://diversifair-project.eu/wp-content/uploads/2025/01/Copie-de-INDUSTRY-Educ-Kits-A4-V2.pdf"
+            ]
+          },
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "integrity_status": "current",
+          "access_status": "unknown",
+          "landing_url": "https://diversifair-project.eu/wp-content/uploads/2025/01/Copie-de-INDUSTRY-Educ-Kits-A4-V2.pdf",
+          "fulltext_url": "",
+          "relations": [],
+          "is_preferred": true,
+          "is_latest": true
+        }
+      ],
+      "identity_basis": "work_version_registry",
+      "knowledge_coverage": "fulltext_ready",
+      "decision": "Include",
+      "reason": null,
+      "text_source": "raw",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "lifecycle_state": "ai-agent-reviewed",
+      "publication_basis": "ai-source-review",
+      "recorded_identity": {
+        "work_id": "record:J5EF9W6M",
+        "version_id": null
+      },
+      "ai_verification": {
+        "artifact": "generated/verification/screening-corrections-c.json#/corrections/J5EF9W6M",
+        "sha256": "sha256:e8e1a19cc231d0235fef18ec806205f87f8e2fe9712fed667825b2ce34f2090d",
+        "result": "accepted",
+        "review_type": "ai-source-review",
+        "agent_id": "/root/aggregation",
+        "model": "GPT-6",
+        "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+        "reviewed_at": "2026-09-05T14:45:48.136265+00:00",
+        "findings": "Die offene Stufenzuordnung ist aufgelöst. Titel, DIVERSIFAIR-Projektbezug, Industrie-Fassung und November-2024-Datum sind im lokalen Originalvolltext vorhanden. Datenaudits/Diversifizierung und organisatorische Empfehlungen tragen Pre_Processing und Organisational_Process. Weder Monitoring noch ein Korrekturlog beschreiben einen technischen Inferenz- oder Nachverarbeitungseingriff. Intra_Processing und Post_Processing werden daher entfernt; Notes begründen die Zuordnung. Proposed bleibt angesichts der angekündigten Evaluation bestehen. Kategorien und Include bleiben unverändert; die bisherigen quellengetragenen Argumente zur intersektionalen Fairness werden nicht in eine Wirksamkeitsbehauptung umgedeutet.",
+        "canonical_binding": {
+          "paper_id": "J5EF9W6M",
+          "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+          "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2"
+        }
+      },
+      "verification": null,
+      "publication_approval": null,
+      "categories": [
+        {
+          "key": "AI_Literacies",
+          "level": 2,
+          "evidence": [
+            {
+              "term": "Building AI literacy is crucial for the policy sector to understand AI fundament",
+              "snippet": "Building AI literacy is crucial for the policy sector to understand AI fundamentals, such as machine learning and data ethics, while also raising awareness of intersectionality in AI.",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+              "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+              "recorded_work_id": "record:J5EF9W6M",
+              "recorded_version_id": "",
+              "source_record_id": "J5EF9W6M"
+            }
+          ]
+        },
+        {
+          "key": "Bias_Ungleichheit",
+          "level": 2,
+          "evidence": [
+            {
+              "term": "One significant issue is intersectional bias, where different forms of discrimin",
+              "snippet": "One significant issue is intersectional bias, where different forms of discrimination-such as racism, sexism, ableism, and colonialism-overlap and affect people in complex ways.",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+              "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+              "recorded_work_id": "record:J5EF9W6M",
+              "recorded_version_id": "",
+              "source_record_id": "J5EF9W6M"
+            }
+          ]
+        },
+        {
+          "key": "Diversitaet",
+          "level": 2,
+          "evidence": [
+            {
+              "term": "By focusing on fairness and inclusivity, policymakers can create AI systems that",
+              "snippet": "By focusing on fairness and inclusivity, policymakers can create AI systems that promote equality rather than worsen current inequalities.",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+              "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+              "recorded_work_id": "record:J5EF9W6M",
+              "recorded_version_id": "",
+              "source_record_id": "J5EF9W6M"
+            }
+          ]
+        },
+        {
+          "key": "Fairness",
+          "level": 2,
+          "evidence": [
+            {
+              "term": "Fairness in AI refers to designing systems that promote equitable outcomes for a",
+              "snippet": "Fairness in AI refers to designing systems that promote equitable outcomes for all individuals , regardless of identity.",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+              "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+              "recorded_work_id": "record:J5EF9W6M",
+              "recorded_version_id": "",
+              "source_record_id": "J5EF9W6M"
+            }
+          ]
+        },
+        {
+          "key": "Feministisch",
+          "level": 2,
+          "evidence": [
+            {
+              "term": "AI is not just a neutral tool but is co-created with society, and as such has ma",
+              "snippet": "AI is not just a neutral tool but is co-created with society, and as such has major political and social implications in reinforcing existing power relationships, discrimination, and structural inequalities.",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+              "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+              "recorded_work_id": "record:J5EF9W6M",
+              "recorded_version_id": "",
+              "source_record_id": "J5EF9W6M"
+            }
+          ]
+        },
+        {
+          "key": "Gender",
+          "level": 2,
+          "evidence": [
+            {
+              "term": "The Council of Europe's Gender Equality Strategy (2024-2029) calls for tackling",
+              "snippet": "The Council of Europe's Gender Equality Strategy (2024-2029) calls for tackling structural barriers and encouraging diversity in AI development.",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+              "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+              "recorded_work_id": "record:J5EF9W6M",
+              "recorded_version_id": "",
+              "source_record_id": "J5EF9W6M"
+            }
+          ]
+        },
+        {
+          "key": "KI_Sonstige",
+          "level": 2,
+          "evidence": [
+            {
+              "term": "AI algorithms are trained using large datasets so that they can identify pattern",
+              "snippet": "AI algorithms are trained using large datasets so that they can identify patterns, make predictions, recommend actions, and figure out what to do in unfamiliar situations, learning from new data and thus improving over time.",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+              "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+              "recorded_work_id": "record:J5EF9W6M",
+              "recorded_version_id": "",
+              "source_record_id": "J5EF9W6M"
+            }
+          ]
+        },
+        {
+          "key": "Soziale_Arbeit",
+          "level": 1,
+          "evidence": [
+            {
+              "term": "Without addressing these intersectional biases, AI systems risk perpetuating and",
+              "snippet": "Without addressing these intersectional biases, AI systems risk perpetuating and deepening existing inequalities in welfare and social services.",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+              "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+              "recorded_work_id": "record:J5EF9W6M",
+              "recorded_version_id": "",
+              "source_record_id": "J5EF9W6M"
+            }
+          ]
+        }
+      ],
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Race_Ethnicity",
+            "Intersectional",
+            "Disability",
+            "Socioeconomic",
+            "Nationality_Migration"
+          ],
+          "AN_Harm_Types": [
+            "Disparate_Performance",
+            "Exclusionary_Norms",
+            "Direct_Discrimination",
+            "Indirect_Discrimination"
+          ],
+          "AN_Mitigation_Stage": [
+            "Pre_Processing",
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Konzept"
+        },
+        "notes": "DIVERSIFAIR-Toolkit, Fassung November 2024, mit Schwerpunkt Industrie und Governance; Wohlfahrtsdienste sind Fallmaterial. Pre_Processing: Audit, Diversifizierung und Kontextanpassung der Datensätze (S.18). Organisational_Process: Beteiligung, Schulung, Aufsicht und Incident-/Korrekturlog (S.19–21,26). Allgemeines Monitoring und ‚corrective actions‘ verorten keinen technischen Inferenz- oder Ausgabeeingriff. Proposed bleibt: S.17 kündigt die weitere Evaluation der Empfehlungen an; daraus wird keine bereits geprüfte Mitigationswirkung abgeleitet.",
+        "undecidable": []
+      },
+      "ai_correction": {
+        "paper_id": "J5EF9W6M",
+        "correction_id": "ai-analysis-correction:2026-09-05:J5EF9W6M:aggregation-c",
+        "base_artifact": "docs/data/screening/ar2.json#/decisions/J5EF9W6M",
+        "base_sha256": "sha256:78ce2c3321eaa06a648f960cbfd87b79840a9dc11680194beca878b90593f53d",
+        "supersedes_annotation_id": "ar2:J5EF9W6M",
+        "agent_id": "/root/aggregation",
+        "actor_type": "ai_agent",
+        "model": "GPT-6",
+        "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+        "corrected_at": "2026-09-05T14:45:48.136265+00:00",
+        "changes": [
+          {
+            "path": "/analysis/fields/AN_Mitigation_Stage",
+            "before": [
+              "Pre_Processing",
+              "Intra_Processing",
+              "Post_Processing",
+              "Organisational_Process"
+            ],
+            "after": [
+              "Pre_Processing",
+              "Organisational_Process"
+            ],
+            "reason": "S.18 empfiehlt Datenaudits, Diversifizierung und Kontextanpassung der Daten; S.19–21 und S.26 tragen Schulung, Beteiligung, Governance und Monitoring. Ein Impact-Log und allgemeine Korrekturmaßnahmen spezifizieren weder einen technischen Eingriff während der Inferenz noch eine technische Änderung vorliegender Ausgaben; Intra_Processing und Post_Processing entfallen."
+          },
+          {
+            "path": "/analysis/fields/AN_Notes",
+            "before": "DIVERSIFAIR-Toolkit für Industrie und Governance. Wohlfahrtsdienste sind Fallmaterial, keine Zielpopulation.",
+            "after": "DIVERSIFAIR-Toolkit, Fassung November 2024, mit Schwerpunkt Industrie und Governance; Wohlfahrtsdienste sind Fallmaterial. Pre_Processing: Audit, Diversifizierung und Kontextanpassung der Datensätze (S.18). Organisational_Process: Beteiligung, Schulung, Aufsicht und Incident-/Korrekturlog (S.19–21,26). Allgemeines Monitoring und ‚corrective actions‘ verorten keinen technischen Inferenz- oder Ausgabeeingriff. Proposed bleibt: S.17 kündigt die weitere Evaluation der Empfehlungen an; daraus wird keine bereits geprüfte Mitigationswirkung abgeleitet.",
+            "reason": "Für jede behaltene Stufe wird der konkrete Quellenbezug genannt; die entfernten technischen Stufen und der unveränderte Vorschlagsstatus werden begründet."
+          }
+        ]
+      },
+      "aggregation_unit": "work",
+      "record_ids": [
+        "J5EF9W6M"
+      ],
+      "corpus_record_ids": [
+        "J5EF9W6M"
+      ],
+      "version_ids": [
+        "version:1f212027-d4ce-570f-960f-49a89d1b50c2"
+      ],
+      "source_version_ids": [
+        "version:1f212027-d4ce-570f-960f-49a89d1b50c2"
+      ],
+      "source_records": [
+        {
+          "id": "J5EF9W6M",
+          "title": "AI & Intersectionality: A Toolkit For Fairness & Inclusion",
+          "author_year": "DIVERSIFAIR Project (2024)",
+          "authors": "",
+          "year": 2024,
+          "doi": "",
+          "url": "https://diversifair-project.eu/wp-content/uploads/2025/01/Copie-de-INDUSTRY-Educ-Kits-A4-V2.pdf",
+          "item_type": "report",
+          "journal": "",
+          "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+          "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+          "bibliographic_version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+          "source_version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+          "source_binding": null,
+          "version_type": "unknown",
+          "version_date": "2024",
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "preferred_version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+          "latest_version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+          "is_preferred_version": true,
+          "work_versions": [
+            {
+              "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+              "version_type": "unknown",
+              "version_date": "2024",
+              "identifiers": {
+                "zotero_key": [
+                  "J5EF9W6M"
+                ],
+                "url": [
+                  "https://diversifair-project.eu/wp-content/uploads/2025/01/Copie-de-INDUSTRY-Educ-Kits-A4-V2.pdf"
+                ]
+              },
+              "peer_review_status": "not_established",
+              "peer_review_basis": "unknown",
+              "integrity_status": "current",
+              "access_status": "unknown",
+              "landing_url": "https://diversifair-project.eu/wp-content/uploads/2025/01/Copie-de-INDUSTRY-Educ-Kits-A4-V2.pdf",
+              "fulltext_url": "",
+              "relations": [],
+              "is_preferred": true,
+              "is_latest": true
+            }
+          ],
+          "identity_basis": "work_version_registry",
+          "knowledge_coverage": "fulltext_ready",
+          "decision": "Include",
+          "reason": null,
+          "text_source": "raw",
+          "reviewer": "ar2",
+          "actor": "agent",
+          "lifecycle_state": "ai-agent-reviewed",
+          "publication_basis": "ai-source-review",
+          "recorded_identity": {
+            "work_id": "record:J5EF9W6M",
+            "version_id": null
+          },
+          "ai_verification": {
+            "artifact": "generated/verification/screening-corrections-c.json#/corrections/J5EF9W6M",
+            "sha256": "sha256:e8e1a19cc231d0235fef18ec806205f87f8e2fe9712fed667825b2ce34f2090d",
+            "result": "accepted",
+            "review_type": "ai-source-review",
+            "agent_id": "/root/aggregation",
+            "model": "GPT-6",
+            "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+            "reviewed_at": "2026-09-05T14:45:48.136265+00:00",
+            "findings": "Die offene Stufenzuordnung ist aufgelöst. Titel, DIVERSIFAIR-Projektbezug, Industrie-Fassung und November-2024-Datum sind im lokalen Originalvolltext vorhanden. Datenaudits/Diversifizierung und organisatorische Empfehlungen tragen Pre_Processing und Organisational_Process. Weder Monitoring noch ein Korrekturlog beschreiben einen technischen Inferenz- oder Nachverarbeitungseingriff. Intra_Processing und Post_Processing werden daher entfernt; Notes begründen die Zuordnung. Proposed bleibt angesichts der angekündigten Evaluation bestehen. Kategorien und Include bleiben unverändert; die bisherigen quellengetragenen Argumente zur intersektionalen Fairness werden nicht in eine Wirksamkeitsbehauptung umgedeutet.",
+            "canonical_binding": {
+              "paper_id": "J5EF9W6M",
+              "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+              "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2"
+            }
+          },
+          "verification": null,
+          "publication_approval": null,
+          "categories": [
+            {
+              "key": "AI_Literacies",
+              "level": 2,
+              "evidence": [
+                {
+                  "term": "Building AI literacy is crucial for the policy sector to understand AI fundament",
+                  "snippet": "Building AI literacy is crucial for the policy sector to understand AI fundamentals, such as machine learning and data ethics, while also raising awareness of intersectionality in AI.",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+                  "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+                  "recorded_work_id": "record:J5EF9W6M",
+                  "recorded_version_id": ""
+                }
+              ]
+            },
+            {
+              "key": "Bias_Ungleichheit",
+              "level": 2,
+              "evidence": [
+                {
+                  "term": "One significant issue is intersectional bias, where different forms of discrimin",
+                  "snippet": "One significant issue is intersectional bias, where different forms of discrimination-such as racism, sexism, ableism, and colonialism-overlap and affect people in complex ways.",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+                  "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+                  "recorded_work_id": "record:J5EF9W6M",
+                  "recorded_version_id": ""
+                }
+              ]
+            },
+            {
+              "key": "Diversitaet",
+              "level": 2,
+              "evidence": [
+                {
+                  "term": "By focusing on fairness and inclusivity, policymakers can create AI systems that",
+                  "snippet": "By focusing on fairness and inclusivity, policymakers can create AI systems that promote equality rather than worsen current inequalities.",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+                  "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+                  "recorded_work_id": "record:J5EF9W6M",
+                  "recorded_version_id": ""
+                }
+              ]
+            },
+            {
+              "key": "Fairness",
+              "level": 2,
+              "evidence": [
+                {
+                  "term": "Fairness in AI refers to designing systems that promote equitable outcomes for a",
+                  "snippet": "Fairness in AI refers to designing systems that promote equitable outcomes for all individuals , regardless of identity.",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+                  "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+                  "recorded_work_id": "record:J5EF9W6M",
+                  "recorded_version_id": ""
+                }
+              ]
+            },
+            {
+              "key": "Feministisch",
+              "level": 2,
+              "evidence": [
+                {
+                  "term": "AI is not just a neutral tool but is co-created with society, and as such has ma",
+                  "snippet": "AI is not just a neutral tool but is co-created with society, and as such has major political and social implications in reinforcing existing power relationships, discrimination, and structural inequalities.",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+                  "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+                  "recorded_work_id": "record:J5EF9W6M",
+                  "recorded_version_id": ""
+                }
+              ]
+            },
+            {
+              "key": "Gender",
+              "level": 2,
+              "evidence": [
+                {
+                  "term": "The Council of Europe's Gender Equality Strategy (2024-2029) calls for tackling",
+                  "snippet": "The Council of Europe's Gender Equality Strategy (2024-2029) calls for tackling structural barriers and encouraging diversity in AI development.",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+                  "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+                  "recorded_work_id": "record:J5EF9W6M",
+                  "recorded_version_id": ""
+                }
+              ]
+            },
+            {
+              "key": "KI_Sonstige",
+              "level": 2,
+              "evidence": [
+                {
+                  "term": "AI algorithms are trained using large datasets so that they can identify pattern",
+                  "snippet": "AI algorithms are trained using large datasets so that they can identify patterns, make predictions, recommend actions, and figure out what to do in unfamiliar situations, learning from new data and thus improving over time.",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+                  "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+                  "recorded_work_id": "record:J5EF9W6M",
+                  "recorded_version_id": ""
+                }
+              ]
+            },
+            {
+              "key": "Soziale_Arbeit",
+              "level": 1,
+              "evidence": [
+                {
+                  "term": "Without addressing these intersectional biases, AI systems risk perpetuating and",
+                  "snippet": "Without addressing these intersectional biases, AI systems risk perpetuating and deepening existing inequalities in welfare and social services.",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+                  "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+                  "recorded_work_id": "record:J5EF9W6M",
+                  "recorded_version_id": ""
+                }
+              ]
+            }
+          ],
+          "analysis": {
+            "fields": {
+              "AN_Prompting_Role": [
+                "None"
+              ],
+              "AN_Prompt_Techniques": [
+                "None"
+              ],
+              "AN_Bias_Axes": [
+                "Gender",
+                "Race_Ethnicity",
+                "Intersectional",
+                "Disability",
+                "Socioeconomic",
+                "Nationality_Migration"
+              ],
+              "AN_Harm_Types": [
+                "Disparate_Performance",
+                "Exclusionary_Norms",
+                "Direct_Discrimination",
+                "Indirect_Discrimination"
+              ],
+              "AN_Mitigation_Stage": [
+                "Pre_Processing",
+                "Organisational_Process"
+              ],
+              "AN_Mitigation_Status": "Proposed",
+              "AN_Population": [
+                "Not_SW_Specific"
+              ],
+              "AN_Coding_Basis": "Fulltext",
+              "Studientyp": "Konzept"
+            },
+            "notes": "DIVERSIFAIR-Toolkit, Fassung November 2024, mit Schwerpunkt Industrie und Governance; Wohlfahrtsdienste sind Fallmaterial. Pre_Processing: Audit, Diversifizierung und Kontextanpassung der Datensätze (S.18). Organisational_Process: Beteiligung, Schulung, Aufsicht und Incident-/Korrekturlog (S.19–21,26). Allgemeines Monitoring und ‚corrective actions‘ verorten keinen technischen Inferenz- oder Ausgabeeingriff. Proposed bleibt: S.17 kündigt die weitere Evaluation der Empfehlungen an; daraus wird keine bereits geprüfte Mitigationswirkung abgeleitet.",
+            "undecidable": []
+          },
+          "ai_correction": {
+            "paper_id": "J5EF9W6M",
+            "correction_id": "ai-analysis-correction:2026-09-05:J5EF9W6M:aggregation-c",
+            "base_artifact": "docs/data/screening/ar2.json#/decisions/J5EF9W6M",
+            "base_sha256": "sha256:78ce2c3321eaa06a648f960cbfd87b79840a9dc11680194beca878b90593f53d",
+            "supersedes_annotation_id": "ar2:J5EF9W6M",
+            "agent_id": "/root/aggregation",
+            "actor_type": "ai_agent",
+            "model": "GPT-6",
+            "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+            "corrected_at": "2026-09-05T14:45:48.136265+00:00",
+            "changes": [
+              {
+                "path": "/analysis/fields/AN_Mitigation_Stage",
+                "before": [
+                  "Pre_Processing",
+                  "Intra_Processing",
+                  "Post_Processing",
+                  "Organisational_Process"
+                ],
+                "after": [
+                  "Pre_Processing",
+                  "Organisational_Process"
+                ],
+                "reason": "S.18 empfiehlt Datenaudits, Diversifizierung und Kontextanpassung der Daten; S.19–21 und S.26 tragen Schulung, Beteiligung, Governance und Monitoring. Ein Impact-Log und allgemeine Korrekturmaßnahmen spezifizieren weder einen technischen Eingriff während der Inferenz noch eine technische Änderung vorliegender Ausgaben; Intra_Processing und Post_Processing entfallen."
+              },
+              {
+                "path": "/analysis/fields/AN_Notes",
+                "before": "DIVERSIFAIR-Toolkit für Industrie und Governance. Wohlfahrtsdienste sind Fallmaterial, keine Zielpopulation.",
+                "after": "DIVERSIFAIR-Toolkit, Fassung November 2024, mit Schwerpunkt Industrie und Governance; Wohlfahrtsdienste sind Fallmaterial. Pre_Processing: Audit, Diversifizierung und Kontextanpassung der Datensätze (S.18). Organisational_Process: Beteiligung, Schulung, Aufsicht und Incident-/Korrekturlog (S.19–21,26). Allgemeines Monitoring und ‚corrective actions‘ verorten keinen technischen Inferenz- oder Ausgabeeingriff. Proposed bleibt: S.17 kündigt die weitere Evaluation der Empfehlungen an; daraus wird keine bereits geprüfte Mitigationswirkung abgeleitet.",
+                "reason": "Für jede behaltene Stufe wird der konkrete Quellenbezug genannt; die entfernten technischen Stufen und der unveränderte Vorschlagsstatus werden begründet."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
       "id": "BDI6XU5A",
       "title": "Gender und KI-Anwendungen. Trägt KI zum Genderproblem oder zu seiner Lösung bei?",
       "author_year": "Franken & Mauritz (n.d.)",
@@ -6649,6 +8917,9 @@
       "journal": "",
       "work_id": "work:bd83caf1-923f-5895-b6bb-9d558c619ceb",
       "version_id": "version:175a2d7b-dcd5-5cdb-80ae-84c37283e367",
+      "bibliographic_version_id": "version:175a2d7b-dcd5-5cdb-80ae-84c37283e367",
+      "source_version_id": "version:175a2d7b-dcd5-5cdb-80ae-84c37283e367",
+      "source_binding": null,
       "version_type": "unknown",
       "version_date": "",
       "peer_review_status": "not_established",
@@ -6889,6 +9160,9 @@
       "version_ids": [
         "version:175a2d7b-dcd5-5cdb-80ae-84c37283e367"
       ],
+      "source_version_ids": [
+        "version:175a2d7b-dcd5-5cdb-80ae-84c37283e367"
+      ],
       "source_records": [
         {
           "id": "BDI6XU5A",
@@ -6902,6 +9176,9 @@
           "journal": "",
           "work_id": "work:bd83caf1-923f-5895-b6bb-9d558c619ceb",
           "version_id": "version:175a2d7b-dcd5-5cdb-80ae-84c37283e367",
+          "bibliographic_version_id": "version:175a2d7b-dcd5-5cdb-80ae-84c37283e367",
+          "source_version_id": "version:175a2d7b-dcd5-5cdb-80ae-84c37283e367",
+          "source_binding": null,
           "version_type": "unknown",
           "version_date": "",
           "peer_review_status": "not_established",
@@ -7141,6 +9418,9 @@
       "journal": "",
       "work_id": "work:c177fe82-4b8c-53f6-b488-d01f2042ed3d",
       "version_id": "version:a3a47ba2-0586-5ab0-80d5-0ad259664b41",
+      "bibliographic_version_id": "version:a3a47ba2-0586-5ab0-80d5-0ad259664b41",
+      "source_version_id": "version:a3a47ba2-0586-5ab0-80d5-0ad259664b41",
+      "source_binding": null,
       "version_type": "unknown",
       "version_date": "2024",
       "peer_review_status": "not_established",
@@ -7386,6 +9666,9 @@
       "version_ids": [
         "version:a3a47ba2-0586-5ab0-80d5-0ad259664b41"
       ],
+      "source_version_ids": [
+        "version:a3a47ba2-0586-5ab0-80d5-0ad259664b41"
+      ],
       "source_records": [
         {
           "id": "THGC3PA2",
@@ -7399,6 +9682,9 @@
           "journal": "",
           "work_id": "work:c177fe82-4b8c-53f6-b488-d01f2042ed3d",
           "version_id": "version:a3a47ba2-0586-5ab0-80d5-0ad259664b41",
+          "bibliographic_version_id": "version:a3a47ba2-0586-5ab0-80d5-0ad259664b41",
+          "source_version_id": "version:a3a47ba2-0586-5ab0-80d5-0ad259664b41",
+          "source_binding": null,
           "version_type": "unknown",
           "version_date": "2024",
           "peer_review_status": "not_established",
@@ -7641,6 +9927,9 @@
       "journal": "",
       "work_id": "work:ce611f7b-8bda-5e6a-9ca9-3b46a8027694",
       "version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
+      "bibliographic_version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
+      "source_version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
+      "source_binding": null,
       "version_type": "unknown",
       "version_date": "2024",
       "peer_review_status": "not_established",
@@ -7946,6 +10235,9 @@
       "version_ids": [
         "version:3be96d59-a494-5a9b-b8ee-2234d73cd668"
       ],
+      "source_version_ids": [
+        "version:3be96d59-a494-5a9b-b8ee-2234d73cd668"
+      ],
       "source_records": [
         {
           "id": "4KMMPA6A",
@@ -7959,6 +10251,9 @@
           "journal": "",
           "work_id": "work:ce611f7b-8bda-5e6a-9ca9-3b46a8027694",
           "version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
+          "bibliographic_version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
+          "source_version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
+          "source_binding": null,
           "version_type": "unknown",
           "version_date": "2024",
           "peer_review_status": "not_established",
@@ -8261,6 +10556,9 @@
       "journal": "",
       "work_id": "work:f01ca4fe-7f9b-59f6-98d9-4e84559cd850",
       "version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
+      "bibliographic_version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
+      "source_version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
+      "source_binding": null,
       "version_type": "working_paper",
       "version_date": "2025/09/15",
       "peer_review_status": "not_established",
@@ -8463,6 +10761,9 @@
       "version_ids": [
         "version:8663473c-428f-5ffa-89b0-0b02502fe07d"
       ],
+      "source_version_ids": [
+        "version:8663473c-428f-5ffa-89b0-0b02502fe07d"
+      ],
       "source_records": [
         {
           "id": "BHXDU7VM",
@@ -8476,6 +10777,9 @@
           "journal": "",
           "work_id": "work:f01ca4fe-7f9b-59f6-98d9-4e84559cd850",
           "version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
+          "bibliographic_version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
+          "source_version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
+          "source_binding": null,
           "version_type": "working_paper",
           "version_date": "2025/09/15",
           "peer_review_status": "not_established",
@@ -8668,6 +10972,457 @@
       ]
     },
     {
+      "id": "P4YQIKJX",
+      "title": "Ethics & AI: A systematic review on ethical concerns and related strategies for designing with AI in healthcare",
+      "author_year": "Li et al. (2023)",
+      "authors": "Li, F.; Ruijs, N.; Lu, Y.",
+      "year": 2023,
+      "doi": "10.3390/ai4010003",
+      "url": "",
+      "item_type": "journalarticle",
+      "journal": "",
+      "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+      "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+      "bibliographic_version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+      "source_version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+      "source_binding": null,
+      "version_type": "version_of_record",
+      "version_date": "2023",
+      "peer_review_status": "not_established",
+      "peer_review_basis": "unknown",
+      "preferred_version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+      "latest_version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+      "is_preferred_version": true,
+      "work_versions": [
+        {
+          "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+          "version_type": "version_of_record",
+          "version_date": "2023",
+          "identifiers": {
+            "doi": [
+              "10.3390/ai4010003"
+            ],
+            "zotero_key": [
+              "P4YQIKJX"
+            ]
+          },
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "integrity_status": "current",
+          "access_status": "unknown",
+          "landing_url": "",
+          "fulltext_url": "",
+          "relations": [],
+          "is_preferred": true,
+          "is_latest": true
+        }
+      ],
+      "identity_basis": "work_version_registry",
+      "knowledge_coverage": "fulltext_ready",
+      "decision": "Include",
+      "reason": null,
+      "text_source": "raw",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "lifecycle_state": "ai-agent-reviewed",
+      "publication_basis": "ai-source-review",
+      "recorded_identity": {
+        "work_id": "doi:10.3390/ai4010003",
+        "version_id": null
+      },
+      "ai_verification": {
+        "artifact": "generated/verification/screening-corrections-c.json#/corrections/P4YQIKJX",
+        "sha256": "sha256:2af4cb0846073d07e949470ee9b585f8c85f81cad7059e5b798ad0055e3802e8",
+        "result": "accepted",
+        "review_type": "ai-source-review",
+        "agent_id": "/root/aggregation",
+        "model": "GPT-6",
+        "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+        "reviewed_at": "2026-09-05T14:45:48.136265+00:00",
+        "findings": "Die offene Stufenzuordnung ist aufgelöst. Titel, Li/Ruijs/Lu und DOI 10.3390/ai4010003 stimmen mit dem lokalen Publisher-PDF überein; Heftjahr 2023 und Online-Publikation 31.12.2022 sind im Dokument getrennt erkennbar. Pre_Processing und Organisational_Process tragen §3.1.4; die zusätzliche explizite Trainingsempfehlung in §3.10.2 trägt In_Training auf Vorschlagsebene. Validitätsprüfung ist keine Ausgabetransformation, allgemeine Kompensation benennt keine technische Phase. Nur Intra_Processing und Post_Processing entfallen. Notes halten die begrenzte Aussagekraft und den unveränderten Proposed-Status fest. Kategorien und Include bleiben unverändert.",
+        "canonical_binding": {
+          "paper_id": "P4YQIKJX",
+          "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+          "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38"
+        }
+      },
+      "verification": null,
+      "publication_approval": null,
+      "categories": [
+        {
+          "key": "Bias_Ungleichheit",
+          "level": 2,
+          "evidence": [
+            {
+              "term": "bias was the most frequently discussed ethical issue",
+              "snippet": "bias was the most frequently discussed ethical issue",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+              "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+              "recorded_work_id": "doi:10.3390/ai4010003",
+              "recorded_version_id": "",
+              "source_record_id": "P4YQIKJX"
+            }
+          ]
+        },
+        {
+          "key": "Fairness",
+          "level": 2,
+          "evidence": [
+            {
+              "term": "justice and fairness was found to be the most prevalent ethical issue",
+              "snippet": "justice and fairness was found to be the most prevalent ethical issue",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+              "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+              "recorded_work_id": "doi:10.3390/ai4010003",
+              "recorded_version_id": "",
+              "source_record_id": "P4YQIKJX"
+            }
+          ]
+        },
+        {
+          "key": "Gender",
+          "level": 1,
+          "evidence": [
+            {
+              "term": "gender bias",
+              "snippet": "gender bias",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+              "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+              "recorded_work_id": "doi:10.3390/ai4010003",
+              "recorded_version_id": "",
+              "source_record_id": "P4YQIKJX"
+            }
+          ]
+        },
+        {
+          "key": "KI_Sonstige",
+          "level": 2,
+          "evidence": [
+            {
+              "term": "AI techniques and their applications can help",
+              "snippet": "AI techniques and their applications can help",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+              "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+              "recorded_work_id": "doi:10.3390/ai4010003",
+              "recorded_version_id": "",
+              "source_record_id": "P4YQIKJX"
+            }
+          ]
+        }
+      ],
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Race_Ethnicity",
+            "Disability",
+            "Socioeconomic"
+          ],
+          "AN_Harm_Types": [
+            "Disparate_Performance",
+            "Exclusionary_Norms",
+            "Direct_Discrimination",
+            "Indirect_Discrimination",
+            "Misrepresentation"
+          ],
+          "AN_Mitigation_Stage": [
+            "Pre_Processing",
+            "In_Training",
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Health_Care"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Literaturreview"
+        },
+        "notes": "Systematischer Review ethischer Probleme und Strategien für KI im Gesundheitsbereich. Pre_Processing: ‚preprocessing the training dataset‘ (§3.1.4). In_Training: ausdrückliche Trainingsempfehlung für nachhaltige ML-Entscheidungshilfen in der Arbeitsmedizin (§3.10.2: ‚training these tools with the best-known algorithms‘); dies ist eine breite ethische Empfehlung, keine getestete Fairness-Trainingsmethode. Organisational_Process: Zusammenarbeit mit Ethik-, Sozialwissenschafts- und Regulierungsexpertise sowie ethische Prüfung. Die geforderte Validierung von Ausgaben/Subpopulationen ist keine berichtete Durchführung oder Ausgabetransformation. ‚Compensating‘ legt keinen technischen Zeitpunkt fest. Proposed bleibt; weder eine durchgeführte Inferenzintervention noch ein konkretes Post-Processing-Verfahren wird behauptet.",
+        "undecidable": []
+      },
+      "ai_correction": {
+        "paper_id": "P4YQIKJX",
+        "correction_id": "ai-analysis-correction:2026-09-05:P4YQIKJX:aggregation-c",
+        "base_artifact": "docs/data/screening/ar2.json#/decisions/P4YQIKJX",
+        "base_sha256": "sha256:5bc075daae8ba1fb0ad36173ca3583d8f08ac632e2787d02ddd1751fd25e2d5d",
+        "supersedes_annotation_id": "ar2:P4YQIKJX",
+        "agent_id": "/root/aggregation",
+        "actor_type": "ai_agent",
+        "model": "GPT-6",
+        "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+        "corrected_at": "2026-09-05T14:45:48.136265+00:00",
+        "changes": [
+          {
+            "path": "/analysis/fields/AN_Mitigation_Stage",
+            "before": [
+              "Pre_Processing",
+              "In_Training",
+              "Intra_Processing",
+              "Post_Processing",
+              "Organisational_Process"
+            ],
+            "after": [
+              "Pre_Processing",
+              "In_Training",
+              "Organisational_Process"
+            ],
+            "reason": "§3.1.4 nennt Datenvorverarbeitung und die Kooperation der Stakeholder. In_Training ist separat durch die ausdrücklich beim Training verortete Empfehlung für nachhaltige ML-Entscheidungshilfen in §3.10.2 belegt. Ökologische Validitätsprüfung, Fairness-Constraints und allgemeine Kompensation spezifizieren dagegen keinen technischen Inferenz- oder Ausgabeeingriff; Intra_Processing und Post_Processing entfallen."
+          },
+          {
+            "path": "/analysis/fields/AN_Notes",
+            "before": "Systematischer Review zu ethischen Problemen und Strategien für KI im Gesundheitsbereich.",
+            "after": "Systematischer Review ethischer Probleme und Strategien für KI im Gesundheitsbereich. Pre_Processing: ‚preprocessing the training dataset‘ (§3.1.4). In_Training: ausdrückliche Trainingsempfehlung für nachhaltige ML-Entscheidungshilfen in der Arbeitsmedizin (§3.10.2: ‚training these tools with the best-known algorithms‘); dies ist eine breite ethische Empfehlung, keine getestete Fairness-Trainingsmethode. Organisational_Process: Zusammenarbeit mit Ethik-, Sozialwissenschafts- und Regulierungsexpertise sowie ethische Prüfung. Die geforderte Validierung von Ausgaben/Subpopulationen ist keine berichtete Durchführung oder Ausgabetransformation. ‚Compensating‘ legt keinen technischen Zeitpunkt fest. Proposed bleibt; weder eine durchgeführte Inferenzintervention noch ein konkretes Post-Processing-Verfahren wird behauptet.",
+            "reason": "Die früher unbegründete Belegung aller Modellphasen wird durch separate Quellenzuordnung ersetzt; die tatsächlich vorhandene Trainingsempfehlung wird dabei erhalten und in ihrer Reichweite begrenzt."
+          }
+        ]
+      },
+      "aggregation_unit": "work",
+      "record_ids": [
+        "P4YQIKJX"
+      ],
+      "corpus_record_ids": [
+        "P4YQIKJX"
+      ],
+      "version_ids": [
+        "version:54cf8de3-1586-55df-b963-b7e57f1b8b38"
+      ],
+      "source_version_ids": [
+        "version:54cf8de3-1586-55df-b963-b7e57f1b8b38"
+      ],
+      "source_records": [
+        {
+          "id": "P4YQIKJX",
+          "title": "Ethics & AI: A systematic review on ethical concerns and related strategies for designing with AI in healthcare",
+          "author_year": "Li et al. (2023)",
+          "authors": "Li, F.; Ruijs, N.; Lu, Y.",
+          "year": 2023,
+          "doi": "10.3390/ai4010003",
+          "url": "",
+          "item_type": "journalarticle",
+          "journal": "",
+          "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+          "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+          "bibliographic_version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+          "source_version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+          "source_binding": null,
+          "version_type": "version_of_record",
+          "version_date": "2023",
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "preferred_version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+          "latest_version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+          "is_preferred_version": true,
+          "work_versions": [
+            {
+              "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+              "version_type": "version_of_record",
+              "version_date": "2023",
+              "identifiers": {
+                "doi": [
+                  "10.3390/ai4010003"
+                ],
+                "zotero_key": [
+                  "P4YQIKJX"
+                ]
+              },
+              "peer_review_status": "not_established",
+              "peer_review_basis": "unknown",
+              "integrity_status": "current",
+              "access_status": "unknown",
+              "landing_url": "",
+              "fulltext_url": "",
+              "relations": [],
+              "is_preferred": true,
+              "is_latest": true
+            }
+          ],
+          "identity_basis": "work_version_registry",
+          "knowledge_coverage": "fulltext_ready",
+          "decision": "Include",
+          "reason": null,
+          "text_source": "raw",
+          "reviewer": "ar2",
+          "actor": "agent",
+          "lifecycle_state": "ai-agent-reviewed",
+          "publication_basis": "ai-source-review",
+          "recorded_identity": {
+            "work_id": "doi:10.3390/ai4010003",
+            "version_id": null
+          },
+          "ai_verification": {
+            "artifact": "generated/verification/screening-corrections-c.json#/corrections/P4YQIKJX",
+            "sha256": "sha256:2af4cb0846073d07e949470ee9b585f8c85f81cad7059e5b798ad0055e3802e8",
+            "result": "accepted",
+            "review_type": "ai-source-review",
+            "agent_id": "/root/aggregation",
+            "model": "GPT-6",
+            "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+            "reviewed_at": "2026-09-05T14:45:48.136265+00:00",
+            "findings": "Die offene Stufenzuordnung ist aufgelöst. Titel, Li/Ruijs/Lu und DOI 10.3390/ai4010003 stimmen mit dem lokalen Publisher-PDF überein; Heftjahr 2023 und Online-Publikation 31.12.2022 sind im Dokument getrennt erkennbar. Pre_Processing und Organisational_Process tragen §3.1.4; die zusätzliche explizite Trainingsempfehlung in §3.10.2 trägt In_Training auf Vorschlagsebene. Validitätsprüfung ist keine Ausgabetransformation, allgemeine Kompensation benennt keine technische Phase. Nur Intra_Processing und Post_Processing entfallen. Notes halten die begrenzte Aussagekraft und den unveränderten Proposed-Status fest. Kategorien und Include bleiben unverändert.",
+            "canonical_binding": {
+              "paper_id": "P4YQIKJX",
+              "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+              "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38"
+            }
+          },
+          "verification": null,
+          "publication_approval": null,
+          "categories": [
+            {
+              "key": "Bias_Ungleichheit",
+              "level": 2,
+              "evidence": [
+                {
+                  "term": "bias was the most frequently discussed ethical issue",
+                  "snippet": "bias was the most frequently discussed ethical issue",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+                  "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+                  "recorded_work_id": "doi:10.3390/ai4010003",
+                  "recorded_version_id": ""
+                }
+              ]
+            },
+            {
+              "key": "Fairness",
+              "level": 2,
+              "evidence": [
+                {
+                  "term": "justice and fairness was found to be the most prevalent ethical issue",
+                  "snippet": "justice and fairness was found to be the most prevalent ethical issue",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+                  "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+                  "recorded_work_id": "doi:10.3390/ai4010003",
+                  "recorded_version_id": ""
+                }
+              ]
+            },
+            {
+              "key": "Gender",
+              "level": 1,
+              "evidence": [
+                {
+                  "term": "gender bias",
+                  "snippet": "gender bias",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+                  "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+                  "recorded_work_id": "doi:10.3390/ai4010003",
+                  "recorded_version_id": ""
+                }
+              ]
+            },
+            {
+              "key": "KI_Sonstige",
+              "level": 2,
+              "evidence": [
+                {
+                  "term": "AI techniques and their applications can help",
+                  "snippet": "AI techniques and their applications can help",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+                  "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+                  "recorded_work_id": "doi:10.3390/ai4010003",
+                  "recorded_version_id": ""
+                }
+              ]
+            }
+          ],
+          "analysis": {
+            "fields": {
+              "AN_Prompting_Role": [
+                "None"
+              ],
+              "AN_Prompt_Techniques": [
+                "None"
+              ],
+              "AN_Bias_Axes": [
+                "Gender",
+                "Race_Ethnicity",
+                "Disability",
+                "Socioeconomic"
+              ],
+              "AN_Harm_Types": [
+                "Disparate_Performance",
+                "Exclusionary_Norms",
+                "Direct_Discrimination",
+                "Indirect_Discrimination",
+                "Misrepresentation"
+              ],
+              "AN_Mitigation_Stage": [
+                "Pre_Processing",
+                "In_Training",
+                "Organisational_Process"
+              ],
+              "AN_Mitigation_Status": "Proposed",
+              "AN_Population": [
+                "Health_Care"
+              ],
+              "AN_Coding_Basis": "Fulltext",
+              "Studientyp": "Literaturreview"
+            },
+            "notes": "Systematischer Review ethischer Probleme und Strategien für KI im Gesundheitsbereich. Pre_Processing: ‚preprocessing the training dataset‘ (§3.1.4). In_Training: ausdrückliche Trainingsempfehlung für nachhaltige ML-Entscheidungshilfen in der Arbeitsmedizin (§3.10.2: ‚training these tools with the best-known algorithms‘); dies ist eine breite ethische Empfehlung, keine getestete Fairness-Trainingsmethode. Organisational_Process: Zusammenarbeit mit Ethik-, Sozialwissenschafts- und Regulierungsexpertise sowie ethische Prüfung. Die geforderte Validierung von Ausgaben/Subpopulationen ist keine berichtete Durchführung oder Ausgabetransformation. ‚Compensating‘ legt keinen technischen Zeitpunkt fest. Proposed bleibt; weder eine durchgeführte Inferenzintervention noch ein konkretes Post-Processing-Verfahren wird behauptet.",
+            "undecidable": []
+          },
+          "ai_correction": {
+            "paper_id": "P4YQIKJX",
+            "correction_id": "ai-analysis-correction:2026-09-05:P4YQIKJX:aggregation-c",
+            "base_artifact": "docs/data/screening/ar2.json#/decisions/P4YQIKJX",
+            "base_sha256": "sha256:5bc075daae8ba1fb0ad36173ca3583d8f08ac632e2787d02ddd1751fd25e2d5d",
+            "supersedes_annotation_id": "ar2:P4YQIKJX",
+            "agent_id": "/root/aggregation",
+            "actor_type": "ai_agent",
+            "model": "GPT-6",
+            "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+            "corrected_at": "2026-09-05T14:45:48.136265+00:00",
+            "changes": [
+              {
+                "path": "/analysis/fields/AN_Mitigation_Stage",
+                "before": [
+                  "Pre_Processing",
+                  "In_Training",
+                  "Intra_Processing",
+                  "Post_Processing",
+                  "Organisational_Process"
+                ],
+                "after": [
+                  "Pre_Processing",
+                  "In_Training",
+                  "Organisational_Process"
+                ],
+                "reason": "§3.1.4 nennt Datenvorverarbeitung und die Kooperation der Stakeholder. In_Training ist separat durch die ausdrücklich beim Training verortete Empfehlung für nachhaltige ML-Entscheidungshilfen in §3.10.2 belegt. Ökologische Validitätsprüfung, Fairness-Constraints und allgemeine Kompensation spezifizieren dagegen keinen technischen Inferenz- oder Ausgabeeingriff; Intra_Processing und Post_Processing entfallen."
+              },
+              {
+                "path": "/analysis/fields/AN_Notes",
+                "before": "Systematischer Review zu ethischen Problemen und Strategien für KI im Gesundheitsbereich.",
+                "after": "Systematischer Review ethischer Probleme und Strategien für KI im Gesundheitsbereich. Pre_Processing: ‚preprocessing the training dataset‘ (§3.1.4). In_Training: ausdrückliche Trainingsempfehlung für nachhaltige ML-Entscheidungshilfen in der Arbeitsmedizin (§3.10.2: ‚training these tools with the best-known algorithms‘); dies ist eine breite ethische Empfehlung, keine getestete Fairness-Trainingsmethode. Organisational_Process: Zusammenarbeit mit Ethik-, Sozialwissenschafts- und Regulierungsexpertise sowie ethische Prüfung. Die geforderte Validierung von Ausgaben/Subpopulationen ist keine berichtete Durchführung oder Ausgabetransformation. ‚Compensating‘ legt keinen technischen Zeitpunkt fest. Proposed bleibt; weder eine durchgeführte Inferenzintervention noch ein konkretes Post-Processing-Verfahren wird behauptet.",
+                "reason": "Die früher unbegründete Belegung aller Modellphasen wird durch separate Quellenzuordnung ersetzt; die tatsächlich vorhandene Trainingsempfehlung wird dabei erhalten und in ihrer Reichweite begrenzt."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
       "id": "8NG4ZEWE",
       "title": "Intersektionalität",
       "author_year": "Arnold et al. (2023)",
@@ -8679,6 +11434,9 @@
       "journal": "",
       "work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
       "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+      "bibliographic_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+      "source_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+      "source_binding": null,
       "version_type": "unknown",
       "version_date": "2023-04-03",
       "peer_review_status": "not_established",
@@ -8821,6 +11579,9 @@
       "version_ids": [
         "version:55533b0b-5613-5347-a46f-5a3ef7be2816"
       ],
+      "source_version_ids": [
+        "version:55533b0b-5613-5347-a46f-5a3ef7be2816"
+      ],
       "source_records": [
         {
           "id": "8NG4ZEWE",
@@ -8834,6 +11595,9 @@
           "journal": "",
           "work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
           "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+          "bibliographic_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+          "source_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+          "source_binding": null,
           "version_type": "unknown",
           "version_date": "2023-04-03",
           "peer_review_status": "not_established",
@@ -8977,6 +11741,9 @@
       "journal": "",
       "work_id": "work:f84da843-9f89-5484-9cde-38ea256a6a92",
       "version_id": "version:8684153b-225d-5ed2-b706-4df0d799f3d5",
+      "bibliographic_version_id": "version:8684153b-225d-5ed2-b706-4df0d799f3d5",
+      "source_version_id": "version:8684153b-225d-5ed2-b706-4df0d799f3d5",
+      "source_binding": null,
       "version_type": "version_of_record",
       "version_date": "2023",
       "peer_review_status": "not_established",
@@ -9175,6 +11942,9 @@
       "version_ids": [
         "version:8684153b-225d-5ed2-b706-4df0d799f3d5"
       ],
+      "source_version_ids": [
+        "version:8684153b-225d-5ed2-b706-4df0d799f3d5"
+      ],
       "source_records": [
         {
           "id": "MA3LBJS6",
@@ -9188,6 +11958,9 @@
           "journal": "",
           "work_id": "work:f84da843-9f89-5484-9cde-38ea256a6a92",
           "version_id": "version:8684153b-225d-5ed2-b706-4df0d799f3d5",
+          "bibliographic_version_id": "version:8684153b-225d-5ed2-b706-4df0d799f3d5",
+          "source_version_id": "version:8684153b-225d-5ed2-b706-4df0d799f3d5",
+          "source_binding": null,
           "version_type": "version_of_record",
           "version_date": "2023",
           "peer_review_status": "not_established",
@@ -9384,6 +12157,9 @@
       "journal": "",
       "work_id": "work:fdf4e7e1-80c8-56bd-9e16-9031a45ff712",
       "version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
+      "bibliographic_version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
+      "source_version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
+      "source_binding": null,
       "version_type": "unknown",
       "version_date": "April 29-May 5, 2022",
       "peer_review_status": "not_established",
@@ -9569,6 +12345,9 @@
       "version_ids": [
         "version:aabc867d-cc16-5889-8810-35e57e6b003f"
       ],
+      "source_version_ids": [
+        "version:aabc867d-cc16-5889-8810-35e57e6b003f"
+      ],
       "source_records": [
         {
           "id": "7FEFMCBZ",
@@ -9582,6 +12361,9 @@
           "journal": "",
           "work_id": "work:fdf4e7e1-80c8-56bd-9e16-9031a45ff712",
           "version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
+          "bibliographic_version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
+          "source_version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
+          "source_binding": null,
           "version_type": "unknown",
           "version_date": "April 29-May 5, 2022",
           "peer_review_status": "not_established",

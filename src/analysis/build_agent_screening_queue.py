@@ -73,6 +73,8 @@ def build_queue(repo: Path = REPO) -> dict[str, Any]:
     vault = json.loads(vault_path.read_text(encoding="utf-8"))
     fulltext = json.loads(fulltext_path.read_text(encoding="utf-8"))
     screening_states = _screening_states(repo)
+    registry_path = repo / "corpus/work_version_registry.json"
+    registry = json.loads(registry_path.read_text(encoding="utf-8")) if registry_path.is_file() else None
 
     work_groups: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for paper in vault["papers"]:
@@ -125,27 +127,38 @@ def build_queue(repo: Path = REPO) -> dict[str, Any]:
             else None
         )
         preferred_source = bool(representative.get("is_preferred_version", True))
+        selected_version_id = representative.get("version_id")
+        selected_version_type = representative.get("version_type", "unknown")
+        source_binding = representative.get("source_binding")
+        if source_binding:
+            from src.analysis.work_versions import source_binding_for_record
+            if registry is None or source_binding != source_binding_for_record(registry, representative_id, repo):
+                raise ValueError(f"{representative_id}: stale or unregistered alternative source binding")
+            selected_version_id = source_binding["source_version_id"]
+            selected_version_type = source_binding["source_version_type"]
         source_version_id = source.get("version_id")
-        version_matches = not source_version_id or source_version_id == representative.get(
-            "version_id"
-        )
-        ready = paper_source is not None and preferred_source and version_matches
+        version_matches = source_version_id == selected_version_id if source_binding else not source_version_id or source_version_id == selected_version_id
+        acceptable_source = preferred_source or bool(source_binding)
+        ready = paper_source is not None and acceptable_source and version_matches and not representative.get("source_hold")
         blockers: list[str] = []
         if paper_source is None:
             blockers.append("reviewed_fulltext_markdown_missing")
-        if not preferred_source:
+        if not acceptable_source:
             blockers.append("preferred_version_paper_source_missing")
         if not version_matches:
             blockers.append("paper_source_version_mismatch")
+        if representative.get("source_hold"):
+            blockers.append("source_hold")
         queued_records += len(unannotated)
         queue.append(
             {
                 "work_id": work_id,
                 "preferred_version_id": representative.get("preferred_version_id"),
                 "latest_version_id": representative.get("latest_version_id"),
-                "selected_version_id": representative.get("version_id"),
-                "selected_version_type": representative.get("version_type", "unknown"),
-                "selected_version_is_preferred": preferred_source,
+                "selected_version_id": selected_version_id,
+                "selected_version_type": selected_version_type,
+                "selected_version_is_preferred": selected_version_id == representative.get("preferred_version_id"),
+                "source_binding": source_binding,
                 "available_versions": representative.get("work_versions", []),
                 "representative_record_id": representative_id,
                 "record_ids": sorted(paper["id"] for paper in unannotated),
@@ -195,6 +208,8 @@ def build_queue(repo: Path = REPO) -> dict[str, Any]:
             "research_vault_sha256": _sha256(vault_path),
             "fulltext_manifest": fulltext_path.relative_to(repo).as_posix(),
             "fulltext_manifest_sha256": _sha256(fulltext_path),
+            "work_version_registry": registry_path.relative_to(repo).as_posix() if registry else None,
+            "work_version_registry_sha256": _sha256(registry_path) if registry else None,
             "productive_screening_dir": "docs/data/screening",
         },
         "counts": {

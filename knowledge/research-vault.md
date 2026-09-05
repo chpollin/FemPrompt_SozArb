@@ -10,9 +10,9 @@ status: complete
 language: de
 version: "0.7"
 created: 2026-07-18
-updated: 2026-08-24
+updated: 2026-09-05
 authors: [Christopher Pollin]
-generated-with: Codex (GPT-5.6)
+generated-with: Codex (GPT-5.6), Codex (GPT-6)
 topics: ["[[Grounded Vault]]", "[[Systematic Review]]", "[[Context Engineering]]"]
 related: [methods, data, governance, verification, testing, plan, standards]
 ---
@@ -37,11 +37,11 @@ Jede Ebene referenziert die unmittelbar darunterliegende Ebene. Diese Beschränk
 | `30_assertions/` | atomare, quellenübergreifend belegbare Aussagen | identifizierte Distillat-Aussagen |
 | `40_output/` | Literaturbericht, Paper und weitere Synthesen | Assertions |
 
-Die älteren Ordner `10_distillates/` und `20_claims/` bleiben als schreibgeschützte Migrationsquellen erhalten. Neue Artefakte verwenden die aktuelle Kette und den Begriff Assertion.
+Die älteren Ordner `10_distillates/` und `20_claims/` bleiben als schreibgeschützte Migrationsquellen erhalten. Auch `generated/distilled/` und die verlinkte Arbeitskollektion unter `generated/vault/Papers/` sind keine automatisch geprüfte aktive Assertion-Schicht. Neue Artefakte verwenden die aktuelle Kette und den Begriff Assertion.
 
 ## Quellen- und Rechtegrenze
 
-Volltexte Dritter und ihre vollständigen Markdown-Repräsentationen bleiben lokal, sofern keine quellenspezifische Lizenz die Veröffentlichung erlaubt. Git führt bibliografische Metadaten, eigene Prosa, zulässige Kurzzitate, Assertions und Ausgaben. Jede veröffentlichbare Quelldatei dokumentiert Herkunft, Lizenz und Konversionsprovenienz im Frontmatter.
+Der Ergebnisbuild übernimmt keine vollständigen Drittquellen oder die historische Arbeitskollektion. Lokale PDF-Binaries und bereits versionierte Arbeitsrepräsentationen sind getrennte Bestände; ein Ausschluss aus `build/site/` macht vorhandene Repository-Dateien oder ihre Git-Historie nicht privat. Die Ergebnisdaten enthalten bibliografische Metadaten, eigene Prosa, geprüfte Kurzzitate und deren Quellenprovenienz. Herkunft, Zugang und quellenspezifische Rechte bleiben getrennt dokumentiert.
 
 Der Quellenstatus wird vor der Annotation geklärt. Ein Paper kann als gebunden, konvertierbar, mehrdeutig, nicht verfügbar oder rechtegebunden geführt werden. Nur eine überprüfte Paper-Schicht darf die Belegbasis einer produktiven Annotation bilden.
 
@@ -54,7 +54,7 @@ Die Erzeugung umfasst vier kontrollierte Operationen.
 1. Ein Extraktionsprompt erzeugt eine strukturierte Darstellung der Paperinhalte und kennzeichnet Unsicherheit.
 2. Ein Formatierungsschritt überführt die Extraktion in das kanonische Markdown-Schema.
 3. Eine quellengestützte AI Agent Review prüft Belegdeckung, Polarität, Identität und die Trennung von Zitat und Paraphrase.
-4. Eine Domänenexpertin oder ein Domänenexperte verifiziert die wissenschaftlich verwendeten Aussagen und ihre Interpretation.
+4. Für die abschließende fachliche Verifikation prüft eine Domänenexpertin oder ein Domänenexperte die Aussagen und ihre Interpretation. Die ausdrücklich gekennzeichnete vorläufige KI-geprüfte Ergebnisausgabe kann schon auf Stufe 3 erfolgen, wenn die artefaktbezogenen Prüfbelege die [Freigaberegel](../config/publication_policy.json) erfüllen.
 
 Promptversion, Modell, Eingabetext, Ausgabepfad und Prüfergebnis gehören zur Provenienz der Distillation. Ein LLM-Wissensdestillat bleibt in PRISM eine eigene Referenzschicht. Es erfüllt das Paper-Evidence-Gate der Screeningannotation nicht.
 
@@ -88,7 +88,7 @@ Deterministische Validierung erscheint unter `checked.validation`. Sie prüft Sc
 
 `40_output/literature-report/` enthält die fachliche Synthese der eingeschlossenen Literatur. Die Kapitel führen über Assertions zu den Distillaten und weiter zum Papertext. Der Bericht ist die ausführliche Darstellung des Literaturwissens.
 
-`40_output/paper/paper.md` ist das kanonische Manuskript. Sein Methodenteil bezieht zusätzlich die dokumentierten Projektartefakte ein. Der Ergebnisteil verwendet die verifizierten Assertions des vollständigen analysierten Korpus. Eine frühere Datei `paper/draft.md` wurde in dieses Manuskript integriert; Git bewahrt ihre Entwicklungsgeschichte.
+`40_output/paper/paper.md` ist das kanonische Manuskript. Sein Methodenteil bezieht zusätzlich die dokumentierten Projektartefakte ein. Der vorläufige Ergebnisteil verwendet die bisher aktive, AI-geprüfte Assertion-Teilmenge und nennt deren Abdeckungs- und Autoritätsgrenzen. Die vollständige Korpusanalyse und fachlich verifizierte Synthese bleiben das Ziel. Eine frühere Datei `paper/draft.md` wurde in dieses Manuskript integriert; Git bewahrt ihre Entwicklungsgeschichte.
 
 ## Analyse über die Wissensstruktur
 
@@ -98,7 +98,26 @@ Die qualitative Analyse synthetisiert Assertions entlang der Forschungsfragen zu
 
 ## Aktueller Implementierungsstand
 
-Die aktive Ordnerstruktur, ein erster vertikaler Durchstich und der projektspezifische Validator sind eingerichtet. Die bisher angelegten Literatur-Assertions liegen unterhalb der Domänenverifikation. Der vollständige Korpusdurchgang, die quantitative Auswertung, die qualitative Synthese und die anschließende fachliche Verifikation bleiben auszuführen. Aktuelle Mengen und Abdeckungszustände stehen in den generierten Manifesten.
+Die aktive Ordnerstruktur, ein geprüfter Startausschnitt und der projektspezifische Validator sind eingerichtet. Der Startausschnitt vom 5. September 2026 besteht aus drei aktiven Publikationsdistillaten und drei Assertions. Die Beziehungen sind keine pauschale Eins-zu-eins-Zuordnung:
+
+| Aktives Distillat | Unterstützte Assertion |
+|---|---|
+| [Ahn: AI Literacy in der Sozialen Arbeit](../research-vault/20_distillates/publications/ahn-2025-ai-literacy-for-social-work.md) | [Integration in bestehende Kernkompetenzen](../research-vault/30_assertions/ahn-et-al-propose-integrating-ai-literacy-across-existing-core-competencies.md) |
+| [Kaneko: CoT und Gender Bias](../research-vault/20_distillates/publications/kaneko-2024-cot-and-gender-bias.md) | [Begrenzte berichtete CoT-Effekte](../research-vault/30_assertions/kaneko-et-al-report-cot-reduced-bias-in-specific-evaluations.md) und die gemeinsame Assertion zur Variation |
+| [Kamruzzaman: Dual-Process Prompting](../research-vault/20_distillates/publications/kamruzzaman-2024-dual-process-prompting.md) | Zusammen mit Kaneko: [Effekte variieren nach Modell und Bias-Kategorie](../research-vault/30_assertions/reported-prompting-effects-vary-across-models-and-bias-categories.md) |
+
+Diese Aussagen haben zugeschriebene KI-Quellenprüfungen, keine dadurch erfundene Domänenverifikation. Der Chat greift auf den [freigegebenen Assertion-Index](../docs/data/assertion_index.json) zu. Verbindungen im historischen Knowledge Graph beruhen auf Kategorie-Ko-Vorkommen; sie ersetzen keine belegte wissenschaftliche Beziehung zwischen Aussagen.
+
+Nicht alle vorgesehenen Papers sind aktiv distilliert, mit Assertions verbunden oder analysebereit. Für den Arbeitsstand gelten getrennte Kennzahlen:
+
+| Frage | Maßgeblicher Nachweis |
+|---|---|
+| Existiert ein verlinktes historisches Wissensdokument? | `knowledge_coverage` und Dokument-/Recordzahlen in [research_vault_v2.json](../docs/data/research_vault_v2.json); keine Qualitätsfreigabe |
+| Welche Aussagen dürfen im Ergebnis und Chat erscheinen? | [assertion_index.json](../docs/data/assertion_index.json) und seine aktuelle Prüfkette |
+| Welche Works tragen aktuelle Screening- und Analysewerte? | [literature_landscape.json](../docs/data/literature_landscape.json), mit angegebenen Nennern für Works und Records |
+| Was fehlt im gesamten Zielkorpus? | [Completion-Paket](../generated/completion/README.md), insbesondere `analysis_eligible`, offene Quellenprüfungen, Identitätskonflikte und ungebundene Kandidaten |
+
+Aktuelle Teilmengen lassen sich bereits deskriptiv auswerten. Eine abgeschlossene Gesamtsynthese setzt vollständige Entscheidungen für den Zielkorpus, tragfähige Quellen und Coding, geprüfte Assertions für die tatsächlich verwendeten Aussagen sowie die fachliche Prüfung des Berichts voraus. Exkludierte oder zurückgehaltene Arbeiten müssen dokumentiert werden; sie benötigen keine künstlich erzeugten Synthese-Assertions.
 
 ## Kanonische Prüfpfade
 

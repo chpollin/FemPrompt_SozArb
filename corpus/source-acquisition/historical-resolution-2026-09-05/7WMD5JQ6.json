@@ -1,0 +1,364 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          30
+        ]
+      ],
+      "date-time": "2026-07-30T14:42:46Z",
+      "timestamp": 1785422566477,
+      "version": "3.56.0"
+    },
+    "reference-count": 15,
+    "publisher": "Wiley",
+    "issue": "1",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              10,
+              16
+            ]
+          ],
+          "date-time": "2025-10-16T00:00:00Z",
+          "timestamp": 1760572800000
+        },
+        "content-version": "vor",
+        "delay-in-days": 15,
+        "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "asistdl.onlinelibrary.wiley.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Proceedings of the Association for Information Science and Technology"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2025,
+          10
+        ]
+      ]
+    },
+    "abstract": "<jats:title>ABSTRACT</jats:title>\n                  <jats:p>Digital literacy is well‐studied across disciplines, with established attention to core competencies and social inequalities. However, artificial intelligence (AI) literacy remains underexplored. To address this gap, we conducted a scoping review on AI literacy to: (1) consolidate current definitions and pinpoint conceptual gaps, (2) evaluate methodological approaches and their relevance in practice, and (3) examine how social inequalities are considered in AI literacy studies. Definitions of AI literacy are inconsistent across and within disciplines, and most studies do not consider social factors. Most definitions focus on knowledge and skill acquisition, framing AI literacy as a suite of acquired competencies. We argue that current understandings of AI literacy need to expand to include informed decision‐making, critical engagement, and resistance to technological coercion by taking an agency‐driven approach. These insights can guide researchers, educators, and policymakers in fostering an agency‐centered AI literacy that empowers individuals in an increasingly AI‐mediated world.</jats:p>",
+    "DOI": "10.1002/pra2.1472",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2025,
+          10,
+          17
+        ]
+      ],
+      "date-time": "2025-10-17T04:50:14Z",
+      "timestamp": 1760676614000
+    },
+    "page": "1575-1577",
+    "update-policy": "https://doi.org/10.1002/crossmark_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 2,
+    "title": [
+      "Toward Agency‐Centered\n                    <scp>AI</scp>\n                    Literacy: A Scoping Review"
+    ],
+    "prefix": "10.1002",
+    "volume": "62",
+    "author": [
+      {
+        "given": "Takuya",
+        "family": "Maeda",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Western University  Canada"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Hillary",
+        "family": "Anderson",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Western University  Canada"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Anabel",
+        "family": "Quan‐Haase",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Western University  Canada"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Katharine",
+        "family": "Willis",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Plymouth  UK"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Selena",
+        "family": "Gignac",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Western University  Canada"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "311",
+    "published-online": {
+      "date-parts": [
+        [
+          2025,
+          10,
+          16
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_2_8_2_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/1364557032000119616"
+      },
+      {
+        "key": "e_1_2_8_3_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1191/1478088706qp063oa"
+      },
+      {
+        "key": "e_1_2_8_4_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/2053951715622512"
+      },
+      {
+        "key": "e_1_2_8_5_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.48550/arXiv.2302.09319"
+      },
+      {
+        "issue": "2020",
+        "key": "e_1_2_8_6_1",
+        "first-page": "745",
+        "article-title": "Algorithmic knowledge gaps: A new horizon of (digital) inequality. International",
+        "volume": "14",
+        "author": "Cotter K.",
+        "year": "2020",
+        "journal-title": "Journal of Communication"
+      },
+      {
+        "key": "e_1_2_8_7_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.4324/9780203735657-10"
+      },
+      {
+        "key": "e_1_2_8_8_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1186/1748-5908-5-69"
+      },
+      {
+        "key": "e_1_2_8_9_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/s41539-024-00264-4"
+      },
+      {
+        "key": "e_1_2_8_10_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3313831.3376727"
+      },
+      {
+        "key": "e_1_2_8_11_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.caeai.2021.100041"
+      },
+      {
+        "key": "e_1_2_8_12_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1111/bjet.13411"
+      },
+      {
+        "key": "e_1_2_8_13_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/1369118X.2024.2363896"
+      },
+      {
+        "issue": "2017",
+        "key": "e_1_2_8_14_1",
+        "first-page": "452",
+        "article-title": "The compoundness and sequentiality of digital inequality",
+        "volume": "11",
+        "author": "Van Deursen A. J.",
+        "year": "2017",
+        "journal-title": "International Journal of Communication"
+      },
+      {
+        "key": "e_1_2_8_15_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/poi3.171"
+      },
+      {
+        "key": "e_1_2_8_16_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/14614448241232345"
+      }
+    ],
+    "container-title": [
+      "Proceedings of the Association for Information Science and Technology"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://asistdl.onlinelibrary.wiley.com/doi/pdf/10.1002/pra2.1472",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          11,
+          23
+        ]
+      ],
+      "date-time": "2025-11-23T22:09:02Z",
+      "timestamp": 1763935742000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://asistdl.onlinelibrary.wiley.com/doi/10.1002/pra2.1472"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          10
+        ]
+      ]
+    },
+    "references-count": 15,
+    "journal-issue": {
+      "issue": "1",
+      "published-print": {
+        "date-parts": [
+          [
+            2025,
+            10
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "10.1002/pra2.1472"
+    ],
+    "URL": "https://doi.org/10.1002/pra2.1472",
+    "archive": [
+      "Portico"
+    ],
+    "relation": {},
+    "ISSN": [
+      "2373-9231",
+      "2373-9231"
+    ],
+    "issn-type": [
+      {
+        "value": "2373-9231",
+        "type": "print"
+      },
+      {
+        "value": "2373-9231",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2025,
+          10
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2025-09-29",
+        "order": 2,
+        "name": "accepted",
+        "label": "Accepted",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      },
+      {
+        "value": "2025-10-16",
+        "order": 3,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

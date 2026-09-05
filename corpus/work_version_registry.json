@@ -1,7 +1,87 @@
 {
   "schema": "femprompt-work-version-registry/0.1",
-  "source_fingerprint": "sha256:54776fe1e16c058a7d402b9a38bf321644b52269c510ee771e841dfc8945951b",
+  "source_fingerprint": "sha256:ca34ea908bfda96726e7092dbbb0321ef4eeea36573a8bd94c45cb7d15f5297b",
   "sources": [
+    {
+      "path": "corpus/metadata_corrections.json",
+      "sha256": "6c21e503936cae01c07a88eb4e91a9ab66acc53cfc47c11d9d06ff397b1b3f78"
+    },
+    {
+      "path": "corpus/source-acquisition/checklist-resolution-2026-09-05/debnath-arxiv-metadata.json",
+      "sha256": "7f6d5cb01d26b6cd43ac7689b20d82f9f6a5b95a6a90b6a03d6eff574fd67303"
+    },
+    {
+      "path": "corpus/source-acquisition/checklist-resolution-2026-09-05/exrf-existing-doi-crossref.json",
+      "sha256": "87b08921e2c57d36467ed448a6c76114062ca4b8c63fb12d300453d223866b3e"
+    },
+    {
+      "path": "corpus/source-acquisition/checklist-resolution-2026-09-05/hodgson-2021-crossref.json",
+      "sha256": "bea299704700047ee8e47349fc48a00f94606c303348a347146d974d6c3ce74a"
+    },
+    {
+      "path": "corpus/source-acquisition/checklist-resolution-2026-09-05/hodgson-griffith-am-text.md",
+      "sha256": "eaa18a97253a97d8d0ef65a5464e02a01422341769d3b5be5dfc6988eb3af12f"
+    },
+    {
+      "path": "corpus/source-acquisition/checklist-resolution-2026-09-05/trudeau-2023-crossref.json",
+      "sha256": "8bad7e6e44633d486223d30b15ef699ae6915eb79685bbcdecaf68eba56f0e13"
+    },
+    {
+      "path": "corpus/source-acquisition/checklist-resolution-2026-09-05/trudeau-pmc-original.md",
+      "sha256": "028152c0cc60276390fa3b4a6c9f5b8c5964065a19b7b26992923499a6d293cd"
+    },
+    {
+      "path": "corpus/source-acquisition/historical-resolution-2026-09-05/CHJQ52DC-reviewed-text-snapshot.md",
+      "sha256": "776fae7570809043b44329258cde59db5af9441cb93bc9de7dedbf5531eaddca"
+    },
+    {
+      "path": "corpus/source-acquisition/historical-resolution-2026-09-05/asseri-history.txt",
+      "sha256": "630c00ade8d44b6ba7ed06c45b26355ad75e1e401200729829327a26349c65e3"
+    },
+    {
+      "path": "corpus/source-acquisition/historical-resolution-2026-09-05/asseri-v1.txt",
+      "sha256": "af3e41cf9b3475a6ad5b255942115a0928cb331afd40e72ddb126632304632eb"
+    },
+    {
+      "path": "corpus/source-acquisition/historical-resolution-2026-09-05/latif-history.txt",
+      "sha256": "ddc931d4f3e9a13d843fac2421e05b2ab5c179e4564a24548712a10e6c4e9494"
+    },
+    {
+      "path": "corpus/source-acquisition/historical-resolution-2026-09-05/latif-v2.txt",
+      "sha256": "f59619a08a897c02f336f05c97a868463cef553bce79a123c0a0984d09516e0e"
+    },
+    {
+      "path": "corpus/source-acquisition/historical-resolution-2026-09-05/latif-v4.txt",
+      "sha256": "fa9a2f3f7766fe5a5bd63ce65c9ad412122e42221e9c01e5453679fbac21c18f"
+    },
+    {
+      "path": "corpus/source-acquisition/residual-resolution-2026-09-05/hoeyer-wadmann-crossref.json",
+      "sha256": "c38394eca735a1eb9949071c6aa2d0896b9a14899c70289bd99b9f86c4bf415e"
+    },
+    {
+      "path": "corpus/source-acquisition/residual-resolution-2026-09-05/howard-url-identity.json",
+      "sha256": "665bd048bdc4e2e80ea0d10ad7e554641f25ee71ff4d2cf039dabc03edf1f526"
+    },
+    {
+      "path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-metadata.json",
+      "sha256": "caf3057760abe06a04b2bffe47e15b553f7afd9b7abd7184cb805993ddbfd498"
+    },
+    {
+      "path": "corpus/source-acquisition/residual-resolution-2026-09-05/kamruzzaman-url-identity.json",
+      "sha256": "53ed27871d002049fd867608ea8bce95de42cbbae6583d39d279976d1f500239"
+    },
+    {
+      "path": "corpus/source-acquisition/residual-resolution-2026-09-05/srinivasan-acl-metadata.json",
+      "sha256": "1bd368ea46f64845638e9e33731fdf77c0197ff712b7ea97b802d3cb428bf030"
+    },
+    {
+      "path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-metadata.json",
+      "sha256": "8c2861ec357bf69788ca8ae495ecd877aade1fba5c1b86a406b5251fbef56e71"
+    },
+    {
+      "path": "corpus/source_version_bindings.json",
+      "sha256": "eaf56ce0aec123e4cb03b2d55cb3423d1b2ca364cc7a1cd7c8885121d1da38b7"
+    },
     {
       "path": "corpus/zotero_export.json",
       "sha256": "a494ba7539919d79a5f2c0e421302050edac3e695a48a04923a085de9065816a"
@@ -9,6 +89,10 @@
     {
       "path": "docs/data/work_version_contract.json",
       "sha256": "5dbd9bc95abc36b3dedae2bcd476c54936023b644a7fc02bffc6226efcc1e6c0"
+    },
+    {
+      "path": "generated/markdown_clean/VSZM7CT6.md",
+      "sha256": "bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990"
     },
     {
       "path": "generated/round2-agent-review/identity.json",
@@ -25,16 +109,21 @@
     {
       "path": "generated/round2-intake.json",
       "sha256": "084a8123fc359ddd40920d0eb543ffb4bcaae3a1d4dfe3f6cad69b41215157a9"
+    },
+    {
+      "path": "generated/verification/historical-resolution-2026-09-05.json",
+      "sha256": "d0ed98ef36d51f6a8fc3220288a174fe7bc8556f100a5d8e76fa96d6c63caf2e"
     }
   ],
   "counts": {
     "works": 280,
-    "versions": 307,
+    "versions": 309,
     "zotero_records": 326,
     "round2_candidates": 24,
-    "works_with_multiple_versions": 20,
+    "works_with_multiple_versions": 22,
     "works_with_flags": 21,
-    "ambiguous_external_identifiers": 3
+    "ambiguous_external_identifiers": 3,
+    "bound_sources": 2
   },
   "works": [
     {
@@ -2389,7 +2478,16 @@
           "version_id": "version:ed0cecb4-269e-54d9-9f4c-0f2a35588a17"
         }
       ],
-      "flags": []
+      "flags": [],
+      "source_hold": {
+        "artifact": "generated/verification/historical-resolution-2026-09-05.json#/work_resolutions/work:1bbf69b4-ba85-5bc0-82e5-e3554b788658",
+        "sha256": "sha256:7bc3abd1f3868fe21a587f963dfe13ea2ba5d5501ef9b89d5fb808f3e3850d05",
+        "kind": "source_version_hold",
+        "reason": "Both exact preprints centrally study gender bias/fairness with BERT and GPT-3.5; v2 already uses GPT-3.5, so the historical exclusion rationale \"kein Bezug zu generativ\" is contradicted by the cited source. AI/ML plus explicit gender bias satisfies the two-dimensional topical rule even without demanding a social-work setting. Nevertheless, opposing consolidated human decisions cannot be converted into a new human consensus by this audit. Preserve the round-one conflict; the new Include is an attributed proposal. Current CHJQ52DC fulltext is v2 text despite its v4 binding, so version-specific synthesis is withheld pending repair.",
+        "agent_id": "/root/research_completion",
+        "model": "GPT-6",
+        "reviewed_at": "2026-09-05T14:46:15Z"
+      }
     },
     {
       "work_id": "work:1c7bb6b2-9c36-5199-a172-76003d7cb61f",
@@ -2688,6 +2786,51 @@
         {
           "title": "Problematising artificial intelligence in social work education: Challenges, issues and possibilities",
           "authors": [
+            "David Hodgson",
+            "Sophie Goldingay",
+            "Jennifer Boddy",
+            "Sharlene Nipperess",
+            "Lynelle Watts"
+          ],
+          "version_type": "accepted_manuscript",
+          "version_date": "2021",
+          "item_type": "",
+          "journal_or_repository": "Griffith Research Online",
+          "identifiers": {
+            "url": [
+              "https://hdl.handle.net/10072/407943"
+            ]
+          },
+          "peer_review_status": "peer_reviewed",
+          "peer_review_basis": "source_metadata",
+          "integrity_status": "current",
+          "access_status": "open_access",
+          "landing_url": "https://hdl.handle.net/10072/407943",
+          "fulltext_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download",
+          "license": "",
+          "source_lanes": [],
+          "evidence": [],
+          "provenance": [
+            {
+              "source": "corpus/source_version_bindings.json",
+              "reference": "#/records/VSZM7CT6",
+              "agent_id": "/root/aggregation",
+              "model": "GPT-6",
+              "reviewed_at": "2026-09-05T15:04:27.118395+00:00"
+            }
+          ],
+          "relations": [
+            {
+              "type": "isVersionOf",
+              "target_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e"
+            }
+          ],
+          "flags": [],
+          "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec"
+        },
+        {
+          "title": "Problematising artificial intelligence in social work education: Challenges, issues and possibilities",
+          "authors": [
             "D. Hodgson",
             "S. Goldingay",
             "J. Boddy",
@@ -2721,7 +2864,12 @@
               "reference": "VSZM7CT6"
             }
           ],
-          "relations": [],
+          "relations": [
+            {
+              "type": "hasVersion",
+              "target_version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec"
+            }
+          ],
           "flags": [],
           "version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e"
         }
@@ -2862,32 +3010,126 @@
         {
           "title": "Reasoning towards fairness: Mitigating bias in language models through reasoning-guided fine-tuning",
           "authors": [
-            "A. Furniturewala",
-            "A. Zhang",
-            "K. Chang"
+            "Sanchit Kabra",
+            "Akshita Jha",
+            "Chandan K. Reddy"
           ],
-          "version_type": "unknown",
-          "version_date": "2024",
-          "item_type": "report",
-          "journal_or_repository": "",
+          "version_type": "preprint",
+          "version_date": "2025-06-05",
+          "item_type": "preprint",
+          "journal_or_repository": "arXiv",
           "identifiers": {
+            "doi": [
+              "10.48550/arxiv.2504.05632"
+            ],
             "zotero_key": [
               "SQYLQFRU"
             ],
             "url": [
-              "https://powerdrill.ai/discover/summary-reasoning-towards-fairness-mitigating-bias-in-cm9af0g1h7sb507pn7f5qh32q"
+              "https://arxiv.org/abs/2504.05632v3"
             ]
           },
           "peer_review_status": "not_established",
           "peer_review_basis": "unknown",
           "integrity_status": "current",
           "access_status": "unknown",
-          "landing_url": "https://powerdrill.ai/discover/summary-reasoning-towards-fairness-mitigating-bias-in-cm9af0g1h7sb507pn7f5qh32q",
+          "landing_url": "https://arxiv.org/abs/2504.05632v3",
           "fulltext_url": "",
           "license": "",
           "source_lanes": [],
           "evidence": [],
           "provenance": [
+            {
+              "source": "corpus/metadata_corrections.json",
+              "reference": "SQYLQFRU",
+              "ai_metadata_correction": {
+                "record_id": "SQYLQFRU",
+                "base_sha256": "sha256:6a8c7d8d715a5fd9162fcd1d09f57b0fd7f0fd5754c2bb243b54663166f45865",
+                "agent_id": "/root/grounded_chat",
+                "model": "GPT-6",
+                "reviewed_at": "2026-09-05T15:40:49.955416+00:00",
+                "findings": "Exact title identity is confirmed by the original arXiv record; the secondary summary supplied incorrect authors and 2024 year. The selected original-source version is v3, revised 5 June 2025; first submission was 8 April 2025. The citation date here names the selected version, not a new distinct Work.",
+                "authority": "ai-source-reviewed-metadata",
+                "changes": [
+                  {
+                    "field": "creators",
+                    "before": [
+                      {
+                        "creatorType": "author",
+                        "firstName": "A.",
+                        "lastName": "Furniturewala"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "A.",
+                        "lastName": "Zhang"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "K.",
+                        "lastName": "Chang"
+                      }
+                    ],
+                    "after": [
+                      {
+                        "creatorType": "author",
+                        "firstName": "Sanchit",
+                        "lastName": "Kabra"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "Akshita",
+                        "lastName": "Jha"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "Chandan K.",
+                        "lastName": "Reddy"
+                      }
+                    ],
+                    "reason": "Exact title identity is confirmed by the original arXiv record; the secondary summary supplied incorrect authors and 2024 year. The selected original-source version is v3, revised 5 June 2025; first submission was 8 April 2025. The citation date here names the selected version, not a new distinct Work."
+                  },
+                  {
+                    "field": "date",
+                    "before": "2024",
+                    "after": "2025-06-05",
+                    "reason": "Exact title identity is confirmed by the original arXiv record; the secondary summary supplied incorrect authors and 2024 year. The selected original-source version is v3, revised 5 June 2025; first submission was 8 April 2025. The citation date here names the selected version, not a new distinct Work."
+                  },
+                  {
+                    "field": "itemType",
+                    "before": "report",
+                    "after": "preprint",
+                    "reason": "Exact title identity is confirmed by the original arXiv record; the secondary summary supplied incorrect authors and 2024 year. The selected original-source version is v3, revised 5 June 2025; first submission was 8 April 2025. The citation date here names the selected version, not a new distinct Work."
+                  },
+                  {
+                    "field": "repository",
+                    "before": null,
+                    "after": "arXiv",
+                    "reason": "Exact title identity is confirmed by the original arXiv record; the secondary summary supplied incorrect authors and 2024 year. The selected original-source version is v3, revised 5 June 2025; first submission was 8 April 2025. The citation date here names the selected version, not a new distinct Work."
+                  },
+                  {
+                    "field": "DOI",
+                    "before": "",
+                    "after": "10.48550/arXiv.2504.05632",
+                    "reason": "Exact title identity is confirmed by the original arXiv record; the secondary summary supplied incorrect authors and 2024 year. The selected original-source version is v3, revised 5 June 2025; first submission was 8 April 2025. The citation date here names the selected version, not a new distinct Work."
+                  },
+                  {
+                    "field": "url",
+                    "before": "https://powerdrill.ai/discover/summary-reasoning-towards-fairness-mitigating-bias-in-cm9af0g1h7sb507pn7f5qh32q",
+                    "after": "https://arxiv.org/abs/2504.05632v3",
+                    "reason": "Exact title identity is confirmed by the original arXiv record; the secondary summary supplied incorrect authors and 2024 year. The selected original-source version is v3, revised 5 June 2025; first submission was 8 April 2025. The citation date here names the selected version, not a new distinct Work."
+                  }
+                ],
+                "evidence": [
+                  {
+                    "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-metadata.json",
+                    "sha256": "sha256:caf3057760abe06a04b2bffe47e15b553f7afd9b7abd7184cb805993ddbfd498",
+                    "source_url": "https://arxiv.org/abs/2504.05632v3",
+                    "locator": "citation_meta; submission_history [v1] and [v3]; license_links"
+                  }
+                ]
+              }
+            },
             {
               "source": "zotero_export",
               "reference": "SQYLQFRU"
@@ -6280,7 +6522,7 @@
     },
     {
       "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
-      "canonical_title": "SWIFTSAGE: A new dual-module framework for better action planning in complex interactive reasoning tasks",
+      "canonical_title": "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks",
       "identity_status": "curated",
       "review_status": {
         "identity": "unreviewed",
@@ -6295,34 +6537,176 @@
       "preferred_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
       "versions": [
         {
-          "title": "SWIFTSAGE: A new dual-module framework for better action planning in complex interactive reasoning tasks",
+          "title": "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks",
           "authors": [
-            "S. Lin",
-            "M. Chen",
-            "W. Yih"
+            "Bill Yuchen Lin",
+            "Yicheng Fu",
+            "Karina Yang",
+            "Faeze Brahman",
+            "Shiyu Huang",
+            "Chandra Bhagavatula",
+            "Prithviraj Ammanabrolu",
+            "Yejin Choi",
+            "Xiang Ren"
           ],
           "version_type": "preprint",
-          "version_date": "2024",
-          "item_type": "report",
-          "journal_or_repository": "",
+          "version_date": "2023-12-06",
+          "item_type": "preprint",
+          "journal_or_repository": "arXiv",
           "identifiers": {
+            "doi": [
+              "10.48550/arxiv.2305.17390"
+            ],
             "zotero_key": [
               "RAY6G2R7"
             ],
             "url": [
-              "https://arxiv.org/html/2404.17218v3"
+              "https://arxiv.org/abs/2305.17390v2"
             ]
           },
           "peer_review_status": "not_established",
           "peer_review_basis": "unknown",
           "integrity_status": "current",
           "access_status": "unknown",
-          "landing_url": "https://arxiv.org/html/2404.17218v3",
+          "landing_url": "https://arxiv.org/abs/2305.17390v2",
           "fulltext_url": "",
           "license": "",
           "source_lanes": [],
           "evidence": [],
           "provenance": [
+            {
+              "source": "corpus/metadata_corrections.json",
+              "reference": "RAY6G2R7",
+              "ai_metadata_correction": {
+                "record_id": "RAY6G2R7",
+                "base_sha256": "sha256:b82c631ade7fb74ec58d8e36c0dca8e903338f6bfa3992b95a06290b62578c6d",
+                "agent_id": "/root/grounded_chat",
+                "model": "GPT-6",
+                "reviewed_at": "2026-09-05T15:40:49.955416+00:00",
+                "findings": "Explicit editorial reconciliation under the user-delegated instruction to fix the mixed record using best judgment: the unique SwiftSage name and dual-module/action-planning/complex-interactive-task description identify the Lin framework. The former authors also contain errors (only the Lin surname agrees), so this is not a claim to know the original user intention. Replace them with all nine original authors. The old URL is an unrelated Kamruzzaman/Kim paper and must be removed from this Work, with no alias or Work merge. v2 is dated 6 December 2023; first submission was 27 May 2023.",
+                "authority": "ai-source-reviewed-metadata",
+                "changes": [
+                  {
+                    "field": "title",
+                    "before": "SWIFTSAGE: A new dual-module framework for better action planning in complex interactive reasoning tasks",
+                    "after": "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks",
+                    "reason": "Explicit editorial reconciliation under the user-delegated instruction to fix the mixed record using best judgment: the unique SwiftSage name and dual-module/action-planning/complex-interactive-task description identify the Lin framework. The former authors also contain errors (only the Lin surname agrees), so this is not a claim to know the original user intention. Replace them with all nine original authors. The old URL is an unrelated Kamruzzaman/Kim paper and must be removed from this Work, with no alias or Work merge. v2 is dated 6 December 2023; first submission was 27 May 2023."
+                  },
+                  {
+                    "field": "creators",
+                    "before": [
+                      {
+                        "creatorType": "author",
+                        "firstName": "S.",
+                        "lastName": "Lin"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "M.",
+                        "lastName": "Chen"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "W.",
+                        "lastName": "Yih"
+                      }
+                    ],
+                    "after": [
+                      {
+                        "creatorType": "author",
+                        "firstName": "Bill Yuchen",
+                        "lastName": "Lin"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "Yicheng",
+                        "lastName": "Fu"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "Karina",
+                        "lastName": "Yang"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "Faeze",
+                        "lastName": "Brahman"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "Shiyu",
+                        "lastName": "Huang"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "Chandra",
+                        "lastName": "Bhagavatula"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "Prithviraj",
+                        "lastName": "Ammanabrolu"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "Yejin",
+                        "lastName": "Choi"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "Xiang",
+                        "lastName": "Ren"
+                      }
+                    ],
+                    "reason": "Explicit editorial reconciliation under the user-delegated instruction to fix the mixed record using best judgment: the unique SwiftSage name and dual-module/action-planning/complex-interactive-task description identify the Lin framework. The former authors also contain errors (only the Lin surname agrees), so this is not a claim to know the original user intention. Replace them with all nine original authors. The old URL is an unrelated Kamruzzaman/Kim paper and must be removed from this Work, with no alias or Work merge. v2 is dated 6 December 2023; first submission was 27 May 2023."
+                  },
+                  {
+                    "field": "date",
+                    "before": "2024",
+                    "after": "2023-12-06",
+                    "reason": "Explicit editorial reconciliation under the user-delegated instruction to fix the mixed record using best judgment: the unique SwiftSage name and dual-module/action-planning/complex-interactive-task description identify the Lin framework. The former authors also contain errors (only the Lin surname agrees), so this is not a claim to know the original user intention. Replace them with all nine original authors. The old URL is an unrelated Kamruzzaman/Kim paper and must be removed from this Work, with no alias or Work merge. v2 is dated 6 December 2023; first submission was 27 May 2023."
+                  },
+                  {
+                    "field": "itemType",
+                    "before": "report",
+                    "after": "preprint",
+                    "reason": "Explicit editorial reconciliation under the user-delegated instruction to fix the mixed record using best judgment: the unique SwiftSage name and dual-module/action-planning/complex-interactive-task description identify the Lin framework. The former authors also contain errors (only the Lin surname agrees), so this is not a claim to know the original user intention. Replace them with all nine original authors. The old URL is an unrelated Kamruzzaman/Kim paper and must be removed from this Work, with no alias or Work merge. v2 is dated 6 December 2023; first submission was 27 May 2023."
+                  },
+                  {
+                    "field": "repository",
+                    "before": null,
+                    "after": "arXiv",
+                    "reason": "Explicit editorial reconciliation under the user-delegated instruction to fix the mixed record using best judgment: the unique SwiftSage name and dual-module/action-planning/complex-interactive-task description identify the Lin framework. The former authors also contain errors (only the Lin surname agrees), so this is not a claim to know the original user intention. Replace them with all nine original authors. The old URL is an unrelated Kamruzzaman/Kim paper and must be removed from this Work, with no alias or Work merge. v2 is dated 6 December 2023; first submission was 27 May 2023."
+                  },
+                  {
+                    "field": "DOI",
+                    "before": "",
+                    "after": "10.48550/arXiv.2305.17390",
+                    "reason": "Explicit editorial reconciliation under the user-delegated instruction to fix the mixed record using best judgment: the unique SwiftSage name and dual-module/action-planning/complex-interactive-task description identify the Lin framework. The former authors also contain errors (only the Lin surname agrees), so this is not a claim to know the original user intention. Replace them with all nine original authors. The old URL is an unrelated Kamruzzaman/Kim paper and must be removed from this Work, with no alias or Work merge. v2 is dated 6 December 2023; first submission was 27 May 2023."
+                  },
+                  {
+                    "field": "url",
+                    "before": "https://arxiv.org/html/2404.17218v3",
+                    "after": "https://arxiv.org/abs/2305.17390v2",
+                    "reason": "Explicit editorial reconciliation under the user-delegated instruction to fix the mixed record using best judgment: the unique SwiftSage name and dual-module/action-planning/complex-interactive-task description identify the Lin framework. The former authors also contain errors (only the Lin surname agrees), so this is not a claim to know the original user intention. Replace them with all nine original authors. The old URL is an unrelated Kamruzzaman/Kim paper and must be removed from this Work, with no alias or Work merge. v2 is dated 6 December 2023; first submission was 27 May 2023."
+                  }
+                ],
+                "evidence": [
+                  {
+                    "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-metadata.json",
+                    "sha256": "sha256:8c2861ec357bf69788ca8ae495ecd877aade1fba5c1b86a406b5251fbef56e71",
+                    "source_url": "https://arxiv.org/abs/2305.17390v2",
+                    "locator": "citation_meta title/authors; submission_history [v1] and [v2]; abstract describes Swift/Sage action-planning modules"
+                  },
+                  {
+                    "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kamruzzaman-url-identity.json",
+                    "sha256": "sha256:53ed27871d002049fd867608ea8bce95de42cbbae6583d39d279976d1f500239",
+                    "source_url": "https://arxiv.org/abs/2404.17218v3",
+                    "locator": "citation_meta title/authors; submission_history [v3]"
+                  }
+                ]
+              }
+            },
             {
               "source": "zotero_export",
               "reference": "RAY6G2R7"
@@ -6348,20 +6732,19 @@
         "source:Kamruzzaman_2024_Prompting_techniques_for_reducing_social_bias_in.md"
       ],
       "source_lanes": [],
-      "latest_version_id": "version:eb085657-c0a4-564e-a9ec-614804323fc1",
-      "preferred_version_id": "version:eb085657-c0a4-564e-a9ec-614804323fc1",
+      "latest_version_id": "version:27a927ae-6f49-562f-bf62-9556487ad583",
+      "preferred_version_id": "version:27a927ae-6f49-562f-bf62-9556487ad583",
       "versions": [
         {
           "title": "Prompting techniques for reducing social bias in LLMs through System 1 and System 2 cognitive processes",
           "authors": [
-            "R. Chisca",
-            "A. Saltaformaggio",
-            "G. Verma"
+            "Mahammed Kamruzzaman",
+            "Gene Louis Kim"
           ],
           "version_type": "preprint",
-          "version_date": "2024",
-          "item_type": "report",
-          "journal_or_repository": "",
+          "version_date": "2024-09-23",
+          "item_type": "preprint",
+          "journal_or_repository": "arXiv",
           "identifiers": {
             "zotero_key": [
               "ACDF4FL9"
@@ -6381,13 +6764,91 @@
           "evidence": [],
           "provenance": [
             {
+              "source": "corpus/metadata_corrections.json",
+              "reference": "ACDF4FL9",
+              "ai_metadata_correction": {
+                "record_id": "ACDF4FL9",
+                "base_sha256": "sha256:a392866f9a748d5113271cd858cefa3a975639915974dc2a57d1194d289c62d8",
+                "agent_id": "/root/grounded_chat",
+                "model": "GPT-6",
+                "reviewed_at": "2026-09-05T15:40:49.955416+00:00",
+                "findings": "The stored full title and versioned arXiv URL agree exactly with Kamruzzaman/Kim, not Chisca/Saltaformaggio/Verma. Correct the author list and specify the already-linked v3 date (23 September 2024). Keep this alias in the existing Kamruzzaman Work, separate from SwiftSage. Do not upgrade it to arXiv v4 (2025) without a separate version binding.",
+                "authority": "ai-source-reviewed-metadata",
+                "changes": [
+                  {
+                    "field": "creators",
+                    "before": [
+                      {
+                        "creatorType": "author",
+                        "firstName": "R.",
+                        "lastName": "Chisca"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "A.",
+                        "lastName": "Saltaformaggio"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "G.",
+                        "lastName": "Verma"
+                      }
+                    ],
+                    "after": [
+                      {
+                        "creatorType": "author",
+                        "firstName": "Mahammed",
+                        "lastName": "Kamruzzaman"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "Gene Louis",
+                        "lastName": "Kim"
+                      }
+                    ],
+                    "reason": "The stored full title and versioned arXiv URL agree exactly with Kamruzzaman/Kim, not Chisca/Saltaformaggio/Verma. Correct the author list and specify the already-linked v3 date (23 September 2024). Keep this alias in the existing Kamruzzaman Work, separate from SwiftSage. Do not upgrade it to arXiv v4 (2025) without a separate version binding."
+                  },
+                  {
+                    "field": "date",
+                    "before": "2024",
+                    "after": "2024-09-23",
+                    "reason": "The stored full title and versioned arXiv URL agree exactly with Kamruzzaman/Kim, not Chisca/Saltaformaggio/Verma. Correct the author list and specify the already-linked v3 date (23 September 2024). Keep this alias in the existing Kamruzzaman Work, separate from SwiftSage. Do not upgrade it to arXiv v4 (2025) without a separate version binding."
+                  },
+                  {
+                    "field": "itemType",
+                    "before": "report",
+                    "after": "preprint",
+                    "reason": "The stored full title and versioned arXiv URL agree exactly with Kamruzzaman/Kim, not Chisca/Saltaformaggio/Verma. Correct the author list and specify the already-linked v3 date (23 September 2024). Keep this alias in the existing Kamruzzaman Work, separate from SwiftSage. Do not upgrade it to arXiv v4 (2025) without a separate version binding."
+                  },
+                  {
+                    "field": "repository",
+                    "before": null,
+                    "after": "arXiv",
+                    "reason": "The stored full title and versioned arXiv URL agree exactly with Kamruzzaman/Kim, not Chisca/Saltaformaggio/Verma. Correct the author list and specify the already-linked v3 date (23 September 2024). Keep this alias in the existing Kamruzzaman Work, separate from SwiftSage. Do not upgrade it to arXiv v4 (2025) without a separate version binding."
+                  }
+                ],
+                "evidence": [
+                  {
+                    "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kamruzzaman-url-identity.json",
+                    "sha256": "sha256:53ed27871d002049fd867608ea8bce95de42cbbae6583d39d279976d1f500239",
+                    "source_url": "https://arxiv.org/abs/2404.17218v3",
+                    "locator": "citation_meta title/authors; submission_history [v3]"
+                  }
+                ]
+              }
+            },
+            {
               "source": "zotero_export",
               "reference": "ACDF4FL9"
             }
           ],
           "relations": [
             {
-              "type": "isPreprintOf",
+              "type": "hasPreprint",
+              "target_version_id": "version:ea4229c1-d0cc-55f1-9ec7-d399b34fe9af"
+            },
+            {
+              "type": "hasPreprint",
               "target_version_id": "version:eb085657-c0a4-564e-a9ec-614804323fc1"
             }
           ],
@@ -6430,7 +6891,7 @@
           "relations": [
             {
               "type": "isPreprintOf",
-              "target_version_id": "version:eb085657-c0a4-564e-a9ec-614804323fc1"
+              "target_version_id": "version:27a927ae-6f49-562f-bf62-9556487ad583"
             }
           ],
           "flags": [],
@@ -6471,12 +6932,8 @@
           ],
           "relations": [
             {
-              "type": "hasPreprint",
+              "type": "isPreprintOf",
               "target_version_id": "version:27a927ae-6f49-562f-bf62-9556487ad583"
-            },
-            {
-              "type": "hasPreprint",
-              "target_version_id": "version:ea4229c1-d0cc-55f1-9ec7-d399b34fe9af"
             }
           ],
           "flags": [],
@@ -7575,9 +8032,7 @@
         "metadata": "unreviewed",
         "source": "unreviewed"
       },
-      "legacy_work_ids": [
-        "doi:10.1177/0950017020950021"
-      ],
+      "legacy_work_ids": [],
       "source_lanes": [],
       "latest_version_id": "version:d523f07b-3eed-5bf9-9073-62ffb923d65b",
       "preferred_version_id": "version:d523f07b-3eed-5bf9-9073-62ffb923d65b",
@@ -7585,31 +8040,103 @@
         {
           "title": "'Meaningless work': How the datafication of health reconfigures knowledge about work and erodes professional judgement",
           "authors": [
-            "S. Wadmann",
-            "K. Hoeyer"
+            "Klaus Hoeyer",
+            "Sarah Wadmann"
           ],
           "version_type": "version_of_record",
           "version_date": "2020",
           "item_type": "journalArticle",
-          "journal_or_repository": "",
+          "journal_or_repository": "Economy and Society",
           "identifiers": {
             "doi": [
-              "10.1177/0950017020950021"
+              "10.1080/03085147.2020.1733842"
             ],
             "zotero_key": [
               "LR8Z3YHP"
+            ],
+            "url": [
+              "https://doi.org/10.1080/03085147.2020.1733842"
             ]
           },
           "peer_review_status": "not_established",
           "peer_review_basis": "unknown",
           "integrity_status": "current",
           "access_status": "unknown",
-          "landing_url": "",
+          "landing_url": "https://doi.org/10.1080/03085147.2020.1733842",
           "fulltext_url": "",
           "license": "",
           "source_lanes": [],
           "evidence": [],
           "provenance": [
+            {
+              "source": "corpus/metadata_corrections.json",
+              "reference": "LR8Z3YHP",
+              "ai_metadata_correction": {
+                "record_id": "LR8Z3YHP",
+                "base_sha256": "sha256:a54fc5bea1aeab7b40ae48abdaac215734dae38419d5809ae68917e73fe4c923",
+                "agent_id": "/root/grounded_chat",
+                "model": "GPT-6",
+                "reviewed_at": "2026-09-05T15:40:49.955416+00:00",
+                "findings": "The distinctive full title matches the publisher-deposited Crossref record and University of Copenhagen publication record. The correct DOI is 10.1080/03085147.2020.1733842 and author order is Klaus Hoeyer then Sarah Wadmann; the existing 2020 year is correct. The former DOI must not remain an identity alias.",
+                "authority": "ai-source-reviewed-metadata",
+                "changes": [
+                  {
+                    "field": "DOI",
+                    "before": "10.1177/0950017020950021",
+                    "after": "10.1080/03085147.2020.1733842",
+                    "reason": "The distinctive full title matches the publisher-deposited Crossref record and University of Copenhagen publication record. The correct DOI is 10.1080/03085147.2020.1733842 and author order is Klaus Hoeyer then Sarah Wadmann; the existing 2020 year is correct. The former DOI must not remain an identity alias."
+                  },
+                  {
+                    "field": "creators",
+                    "before": [
+                      {
+                        "creatorType": "author",
+                        "firstName": "S.",
+                        "lastName": "Wadmann"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "K.",
+                        "lastName": "Hoeyer"
+                      }
+                    ],
+                    "after": [
+                      {
+                        "creatorType": "author",
+                        "firstName": "Klaus",
+                        "lastName": "Hoeyer"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "Sarah",
+                        "lastName": "Wadmann"
+                      }
+                    ],
+                    "reason": "The distinctive full title matches the publisher-deposited Crossref record and University of Copenhagen publication record. The correct DOI is 10.1080/03085147.2020.1733842 and author order is Klaus Hoeyer then Sarah Wadmann; the existing 2020 year is correct. The former DOI must not remain an identity alias."
+                  },
+                  {
+                    "field": "publicationTitle",
+                    "before": null,
+                    "after": "Economy and Society",
+                    "reason": "The distinctive full title matches the publisher-deposited Crossref record and University of Copenhagen publication record. The correct DOI is 10.1080/03085147.2020.1733842 and author order is Klaus Hoeyer then Sarah Wadmann; the existing 2020 year is correct. The former DOI must not remain an identity alias."
+                  },
+                  {
+                    "field": "url",
+                    "before": "",
+                    "after": "https://doi.org/10.1080/03085147.2020.1733842",
+                    "reason": "The distinctive full title matches the publisher-deposited Crossref record and University of Copenhagen publication record. The correct DOI is 10.1080/03085147.2020.1733842 and author order is Klaus Hoeyer then Sarah Wadmann; the existing 2020 year is correct. The former DOI must not remain an identity alias."
+                  }
+                ],
+                "evidence": [
+                  {
+                    "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/hoeyer-wadmann-crossref.json",
+                    "sha256": "sha256:c38394eca735a1eb9949071c6aa2d0896b9a14899c70289bd99b9f86c4bf415e",
+                    "source_url": "https://api.crossref.org/works/10.1080/03085147.2020.1733842",
+                    "locator": "message.title, author (ordered), DOI, container-title, published-online, published-print, license"
+                  }
+                ]
+              }
+            },
             {
               "source": "zotero_export",
               "reference": "LR8Z3YHP"
@@ -9258,9 +9785,9 @@
             "B. T. R. Savarimuthu"
           ],
           "version_type": "preprint",
-          "version_date": "2024",
-          "item_type": "journalArticle",
-          "journal_or_repository": "",
+          "version_date": "2025-06-11",
+          "item_type": "preprint",
+          "journal_or_repository": "arXiv",
           "identifiers": {
             "zotero_key": [
               "2YS85B49",
@@ -9281,6 +9808,132 @@
           "source_lanes": [],
           "evidence": [],
           "provenance": [
+            {
+              "source": "corpus/metadata_corrections.json",
+              "reference": "2YS85B49",
+              "ai_metadata_correction": {
+                "record_id": "2YS85B49",
+                "base_sha256": "sha256:c44e965d8525dadca0d9d34beca10481813519376700020133e88e6294386b60",
+                "agent_id": "/root/grounded_chat",
+                "model": "GPT-6",
+                "reviewed_at": "2026-09-05T14:50:29.175477+00:00",
+                "findings": "Official arXiv v1 metadata establishes submission 2025-06-11 and preprint repository; the shared URL identifies this expression for all three aliases.",
+                "authority": "ai-source-reviewed-metadata",
+                "changes": [
+                  {
+                    "field": "date",
+                    "before": "2024",
+                    "after": "2025-06-11",
+                    "reason": "Official arXiv v1 metadata establishes submission 2025-06-11 and preprint repository; the shared URL identifies this expression for all three aliases."
+                  },
+                  {
+                    "field": "itemType",
+                    "before": "journalArticle",
+                    "after": "preprint",
+                    "reason": "Official arXiv v1 metadata establishes submission 2025-06-11 and preprint repository; the shared URL identifies this expression for all three aliases."
+                  },
+                  {
+                    "field": "repository",
+                    "before": null,
+                    "after": "arXiv",
+                    "reason": "Official arXiv v1 metadata establishes submission 2025-06-11 and preprint repository; the shared URL identifies this expression for all three aliases."
+                  }
+                ],
+                "evidence": [
+                  {
+                    "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/debnath-arxiv-metadata.json",
+                    "sha256": "sha256:7f6d5cb01d26b6cd43ac7689b20d82f9f6a5b95a6a90b6a03d6eff574fd67303",
+                    "source_url": "https://arxiv.org/abs/2507.21075v1",
+                    "locator": "citation_meta.citation_date, citation_online_date; Submission history [v1]",
+                    "quote": "2025/06/11"
+                  }
+                ]
+              }
+            },
+            {
+              "source": "corpus/metadata_corrections.json",
+              "reference": "3GB9B4IJ",
+              "ai_metadata_correction": {
+                "record_id": "3GB9B4IJ",
+                "base_sha256": "sha256:06ab7f4635f83a3d78eed228eabb0ea160b514f3077a22689bbcaab4925f2d2d",
+                "agent_id": "/root/grounded_chat",
+                "model": "GPT-6",
+                "reviewed_at": "2026-09-05T14:50:29.175477+00:00",
+                "findings": "Official arXiv v1 metadata establishes submission 2025-06-11 and preprint repository; the shared URL identifies this expression for all three aliases.",
+                "authority": "ai-source-reviewed-metadata",
+                "changes": [
+                  {
+                    "field": "date",
+                    "before": "2024",
+                    "after": "2025-06-11",
+                    "reason": "Official arXiv v1 metadata establishes submission 2025-06-11 and preprint repository; the shared URL identifies this expression for all three aliases."
+                  },
+                  {
+                    "field": "itemType",
+                    "before": "journalArticle",
+                    "after": "preprint",
+                    "reason": "Official arXiv v1 metadata establishes submission 2025-06-11 and preprint repository; the shared URL identifies this expression for all three aliases."
+                  },
+                  {
+                    "field": "repository",
+                    "before": null,
+                    "after": "arXiv",
+                    "reason": "Official arXiv v1 metadata establishes submission 2025-06-11 and preprint repository; the shared URL identifies this expression for all three aliases."
+                  }
+                ],
+                "evidence": [
+                  {
+                    "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/debnath-arxiv-metadata.json",
+                    "sha256": "sha256:7f6d5cb01d26b6cd43ac7689b20d82f9f6a5b95a6a90b6a03d6eff574fd67303",
+                    "source_url": "https://arxiv.org/abs/2507.21075v1",
+                    "locator": "citation_meta.citation_date, citation_online_date; Submission history [v1]",
+                    "quote": "2025/06/11"
+                  }
+                ]
+              }
+            },
+            {
+              "source": "corpus/metadata_corrections.json",
+              "reference": "BCBWSU3Z",
+              "ai_metadata_correction": {
+                "record_id": "BCBWSU3Z",
+                "base_sha256": "sha256:e4cf232dd97f97d7c8ff04c155d427aebaf8d03ef30c62b7798a08898ff289be",
+                "agent_id": "/root/grounded_chat",
+                "model": "GPT-6",
+                "reviewed_at": "2026-09-05T14:50:29.175477+00:00",
+                "findings": "Official arXiv v1 metadata establishes submission 2025-06-11 and preprint repository; the shared URL identifies this expression for all three aliases.",
+                "authority": "ai-source-reviewed-metadata",
+                "changes": [
+                  {
+                    "field": "date",
+                    "before": "2024",
+                    "after": "2025-06-11",
+                    "reason": "Official arXiv v1 metadata establishes submission 2025-06-11 and preprint repository; the shared URL identifies this expression for all three aliases."
+                  },
+                  {
+                    "field": "itemType",
+                    "before": "journalArticle",
+                    "after": "preprint",
+                    "reason": "Official arXiv v1 metadata establishes submission 2025-06-11 and preprint repository; the shared URL identifies this expression for all three aliases."
+                  },
+                  {
+                    "field": "repository",
+                    "before": null,
+                    "after": "arXiv",
+                    "reason": "Official arXiv v1 metadata establishes submission 2025-06-11 and preprint repository; the shared URL identifies this expression for all three aliases."
+                  }
+                ],
+                "evidence": [
+                  {
+                    "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/debnath-arxiv-metadata.json",
+                    "sha256": "sha256:7f6d5cb01d26b6cd43ac7689b20d82f9f6a5b95a6a90b6a03d6eff574fd67303",
+                    "source_url": "https://arxiv.org/abs/2507.21075v1",
+                    "locator": "citation_meta.citation_date, citation_online_date; Submission history [v1]",
+                    "quote": "2025/06/11"
+                  }
+                ]
+              }
+            },
             {
               "source": "zotero_export",
               "reference": "2YS85B49"
@@ -10039,9 +10692,7 @@
         "metadata": "unreviewed",
         "source": "unreviewed"
       },
-      "legacy_work_ids": [
-        "doi:10.1016/j.childyouth.2023.107229"
-      ],
+      "legacy_work_ids": [],
       "source_lanes": [],
       "latest_version_id": "version:75660bfb-6982-59e7-ada4-3b60049ccd08",
       "preferred_version_id": "version:75660bfb-6982-59e7-ada4-3b60049ccd08",
@@ -10049,44 +10700,230 @@
         {
           "title": "Predicting successful placements for youth in child welfare with machine learning",
           "authors": [
-            "A. D. Spaulding",
-            "E. J. Valentine",
-            "S. R. Skinner",
-            "R. A. Gosnell",
-            "K. Tran",
-            "J. Hatfield",
-            "J. K. Johnson"
+            "Kimberlee J. Trudeau",
+            "Jichen Yang",
+            "Jiaming Di",
+            "Yi Lu",
+            "David R. Kraus"
           ],
           "version_type": "version_of_record",
           "version_date": "2023",
           "item_type": "journalArticle",
-          "journal_or_repository": "",
+          "journal_or_repository": "Children and Youth Services Review",
           "identifiers": {
             "doi": [
-              "10.1016/j.childyouth.2023.107229"
+              "10.1016/j.childyouth.2023.107117"
             ],
             "zotero_key": [
               "EXRF5629"
+            ],
+            "url": [
+              "https://doi.org/10.1016/j.childyouth.2023.107117"
             ]
           },
           "peer_review_status": "not_established",
           "peer_review_basis": "unknown",
           "integrity_status": "current",
           "access_status": "unknown",
-          "landing_url": "",
+          "landing_url": "https://doi.org/10.1016/j.childyouth.2023.107117",
           "fulltext_url": "",
           "license": "",
           "source_lanes": [],
           "evidence": [],
           "provenance": [
             {
+              "source": "corpus/metadata_corrections.json",
+              "reference": "EXRF5629",
+              "ai_metadata_correction": {
+                "record_id": "EXRF5629",
+                "base_sha256": "sha256:ad4e2948b7c1ae0acfc9d107a46971242081625f3b57fbad78eddf8899a8a58b",
+                "agent_id": "/root/grounded_chat",
+                "model": "GPT-6",
+                "reviewed_at": "2026-09-05T14:50:29.175477+00:00",
+                "findings": "The exact title and original PMC manuscript identify Trudeau/Yang/Di/Lu/Kraus, DOI107117. DOI107229 instead identifies the unrelated Koçhan/Aypay resilience study; preserve rejected old identifier only in audit history.",
+                "authority": "ai-source-reviewed-metadata",
+                "changes": [
+                  {
+                    "field": "DOI",
+                    "before": "10.1016/j.childyouth.2023.107229",
+                    "after": "10.1016/j.childyouth.2023.107117",
+                    "reason": "The exact title and original PMC manuscript identify Trudeau/Yang/Di/Lu/Kraus, DOI107117. DOI107229 instead identifies the unrelated Koçhan/Aypay resilience study; preserve rejected old identifier only in audit history."
+                  },
+                  {
+                    "field": "creators",
+                    "before": [
+                      {
+                        "creatorType": "author",
+                        "firstName": "A. D.",
+                        "lastName": "Spaulding"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "E. J.",
+                        "lastName": "Valentine"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "S. R.",
+                        "lastName": "Skinner"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "R. A.",
+                        "lastName": "Gosnell"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "K.",
+                        "lastName": "Tran"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "J.",
+                        "lastName": "Hatfield"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "J. K.",
+                        "lastName": "Johnson"
+                      }
+                    ],
+                    "after": [
+                      {
+                        "creatorType": "author",
+                        "firstName": "Kimberlee J.",
+                        "lastName": "Trudeau"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "Jichen",
+                        "lastName": "Yang"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "Jiaming",
+                        "lastName": "Di"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "Yi",
+                        "lastName": "Lu"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "David R.",
+                        "lastName": "Kraus"
+                      }
+                    ],
+                    "reason": "The exact title and original PMC manuscript identify Trudeau/Yang/Di/Lu/Kraus, DOI107117. DOI107229 instead identifies the unrelated Koçhan/Aypay resilience study; preserve rejected old identifier only in audit history."
+                  },
+                  {
+                    "field": "publicationTitle",
+                    "before": null,
+                    "after": "Children and Youth Services Review",
+                    "reason": "The exact title and original PMC manuscript identify Trudeau/Yang/Di/Lu/Kraus, DOI107117. DOI107229 instead identifies the unrelated Koçhan/Aypay resilience study; preserve rejected old identifier only in audit history."
+                  },
+                  {
+                    "field": "url",
+                    "before": "",
+                    "after": "https://doi.org/10.1016/j.childyouth.2023.107117",
+                    "reason": "The exact title and original PMC manuscript identify Trudeau/Yang/Di/Lu/Kraus, DOI107117. DOI107229 instead identifies the unrelated Koçhan/Aypay resilience study; preserve rejected old identifier only in audit history."
+                  },
+                  {
+                    "field": "abstractNote",
+                    "before": "Study developed machine learning models to predict treatment success for youth in various child welfare placement settings using data from 4,788 youth served by Children's Hope Alliance in North Carolina. Models aimed to distinguish which youth would succeed in high-cost residential psychiatric treatment versus community-based alternatives. Using Treatment Outcome Package (TOP) assessment data and gradient boosting algorithms, models achieved AUROCs >0.70 in predicting placement success. Addresses Family First Prevention Services Act requirement for right level of care determinations. Multiple raters per case improved model accuracy. Demonstrates feasibility of using existing clinical data to inform high-stakes placement decisions.",
+                    "after": "",
+                    "reason": "This is a synthetic summary with substantive errors, not an original abstract. The recovered PMC manuscript reports random-forest placement models, distinguishes them from XGBoost risk adjustment, and reports samples of 1,145 and 2,225 youth (not 4,788). Clear the projected abstract; preserve the original synthetic note in raw Zotero history and use the actual recovered source for fresh screening."
+                  }
+                ],
+                "evidence": [
+                  {
+                    "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/exrf-existing-doi-crossref.json",
+                    "sha256": "sha256:87b08921e2c57d36467ed448a6c76114062ca4b8c63fb12d300453d223866b3e",
+                    "source_url": "https://api.crossref.org/works/10.1016/j.childyouth.2023.107229",
+                    "locator": "message.DOI/title/author/volume/published-print"
+                  },
+                  {
+                    "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/trudeau-2023-crossref.json",
+                    "sha256": "sha256:8bad7e6e44633d486223d30b15ef699ae6915eb79685bbcdecaf68eba56f0e13",
+                    "source_url": "https://api.crossref.org/works/10.1016/j.childyouth.2023.107117",
+                    "locator": "message.DOI/title/author/volume/article-number"
+                  },
+                  {
+                    "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/trudeau-pmc-original.md",
+                    "sha256": "sha256:028152c0cc60276390fa3b4a6c9f5b8c5964065a19b7b26992923499a6d293cd",
+                    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10569152/",
+                    "locator": "Article header, DOI, author list, PMCID/NIHMS/PMID, author-manuscript and publication dates",
+                    "quote": "Author manuscript; available in PMC: 2024 Oct 1."
+                  },
+                  {
+                    "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/trudeau-pmc-original.md",
+                    "sha256": "sha256:028152c0cc60276390fa3b4a6c9f5b8c5964065a19b7b26992923499a6d293cd",
+                    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10569152/",
+                    "locator": "Study 1 Methods, Step 2",
+                    "quote": "in this project we built random forest classification models per domain"
+                  }
+                ]
+              }
+            },
+            {
               "source": "zotero_export",
               "reference": "EXRF5629"
             }
           ],
-          "relations": [],
+          "relations": [
+            {
+              "type": "hasVersion",
+              "target_version_id": "version:897684cb-05ac-541e-8872-c80a44062f26"
+            }
+          ],
           "flags": [],
           "version_id": "version:75660bfb-6982-59e7-ada4-3b60049ccd08"
+        },
+        {
+          "title": "Predicting successful placements for youth in child welfare with machine learning",
+          "authors": [
+            "Kimberlee J. Trudeau",
+            "Jichen Yang",
+            "Jiaming Di",
+            "Yi Lu",
+            "David R. Kraus"
+          ],
+          "version_type": "accepted_manuscript",
+          "version_date": "2023",
+          "item_type": "",
+          "journal_or_repository": "PubMed Central / NIH Manuscript Submission",
+          "identifiers": {
+            "url": [
+              "https://pmc.ncbi.nlm.nih.gov/articles/PMC10569152/"
+            ]
+          },
+          "peer_review_status": "peer_reviewed",
+          "peer_review_basis": "source_metadata",
+          "integrity_status": "current",
+          "access_status": "open_access",
+          "landing_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10569152/",
+          "fulltext_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10569152/",
+          "license": "",
+          "source_lanes": [],
+          "evidence": [],
+          "provenance": [
+            {
+              "source": "corpus/source_version_bindings.json",
+              "reference": "#/records/EXRF5629",
+              "agent_id": "/root/aggregation",
+              "model": "GPT-6",
+              "reviewed_at": "2026-09-05T15:04:27.118395+00:00"
+            }
+          ],
+          "relations": [
+            {
+              "type": "isVersionOf",
+              "target_version_id": "version:75660bfb-6982-59e7-ada4-3b60049ccd08"
+            }
+          ],
+          "flags": [],
+          "version_id": "version:897684cb-05ac-541e-8872-c80a44062f26"
         }
       ],
       "flags": []
@@ -11641,7 +12478,16 @@
           "version_id": "version:fdf4d4e8-faf0-572f-8f75-1efddb963ed8"
         }
       ],
-      "flags": []
+      "flags": [],
+      "source_hold": {
+        "artifact": "generated/verification/historical-resolution-2026-09-05.json#/work_resolutions/work:8e01ec71-65ff-5273-b5b9-a582fec48008",
+        "sha256": "sha256:844a3faa8d773503626a77033dd92bcc0c56e76b2089a616589b90e2ac74ef3b",
+        "kind": "integrity_hold",
+        "reason": "The v1 author block identifies Bushra Asseri, Estabrag Abdelaziz and Areej Al-Wabil. The historical \"Wrong Author\" exclusion of 5UAHQESQ is administrative; 6MJYP7ZX contains the same title with an explicit human Include, while EHQBHVYV is Duplicate. Thus the old content-decision contradiction is explained without rewriting history. A separate, decisive integrity fact blocks current use: official arXiv v2 was withdrawn on 2025-07-30 with the comment \"Research is incomplete\". The current registry incorrectly presents a 2023 Prakash/Lee Version of Record as preferred; this audit finds no evidence establishing that purported publication expression. Preserve historical Include but withhold the work from current synthesis and release pending exact-version reconciliation.",
+        "agent_id": "/root/research_completion",
+        "model": "GPT-6",
+        "reviewed_at": "2026-09-05T14:46:15Z"
+      }
     },
     {
       "work_id": "work:8e778c38-12c0-5ec7-883d-001521dcc4f7",
@@ -17768,7 +18614,7 @@
     },
     {
       "work_id": "work:ec94cf1c-87bf-5f4d-a840-9dd3b92eefab",
-      "canonical_title": "Worst of both worlds: A comparative analysis of error in language and vision-language models",
+      "canonical_title": "Worst of Both Worlds: Biases Compound in Pre-trained Vision-and-Language Models",
       "identity_status": "curated",
       "review_status": {
         "identity": "unreviewed",
@@ -17783,33 +18629,129 @@
       "preferred_version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
       "versions": [
         {
-          "title": "Worst of both worlds: A comparative analysis of error in language and vision-language models",
+          "title": "Worst of Both Worlds: Biases Compound in Pre-trained Vision-and-Language Models",
           "authors": [
-            "V. Srinivasan",
-            "Y. Bisk"
+            "Tejas Srinivasan",
+            "Yonatan Bisk"
           ],
-          "version_type": "preprint",
-          "version_date": "2024",
-          "item_type": "report",
-          "journal_or_repository": "",
+          "version_type": "unknown",
+          "version_date": "2022-07",
+          "item_type": "conferencePaper",
+          "journal_or_repository": "Association for Computational Linguistics",
           "identifiers": {
+            "doi": [
+              "10.18653/v1/2022.gebnlp-1.10"
+            ],
             "zotero_key": [
               "Z9DNTBFF"
             ],
             "url": [
-              "https://arxiv.org/html/2405.20152v1"
+              "https://aclanthology.org/2022.gebnlp-1.10"
             ]
           },
           "peer_review_status": "not_established",
           "peer_review_basis": "unknown",
           "integrity_status": "current",
           "access_status": "unknown",
-          "landing_url": "https://arxiv.org/html/2405.20152v1",
+          "landing_url": "https://aclanthology.org/2022.gebnlp-1.10",
           "fulltext_url": "",
           "license": "",
           "source_lanes": [],
           "evidence": [],
           "provenance": [
+            {
+              "source": "corpus/metadata_corrections.json",
+              "reference": "Z9DNTBFF",
+              "ai_metadata_correction": {
+                "record_id": "Z9DNTBFF",
+                "base_sha256": "sha256:2098aa48604dc172afc14610013a44541f44c0d90891ff31dab57a5735f3eab2",
+                "agent_id": "/root/grounded_chat",
+                "model": "GPT-6",
+                "reviewed_at": "2026-09-05T15:40:49.955416+00:00",
+                "findings": "Explicit editorial reconciliation under delegated best judgment: the distinctive Worst of Both Worlds title and Srinivasan/Bisk surnames identify the ACL 2022 paper. The former initial V. is corrected to Tejas; the previous paraphrased subtitle and 2024 date were wrong. The former URL points to Howard et al. (2024), a separate paper with different authors and title, and must not remain an alias of the corrected Work. No prior user intention is asserted.",
+                "authority": "ai-source-reviewed-metadata",
+                "changes": [
+                  {
+                    "field": "title",
+                    "before": "Worst of both worlds: A comparative analysis of error in language and vision-language models",
+                    "after": "Worst of Both Worlds: Biases Compound in Pre-trained Vision-and-Language Models",
+                    "reason": "Explicit editorial reconciliation under delegated best judgment: the distinctive Worst of Both Worlds title and Srinivasan/Bisk surnames identify the ACL 2022 paper. The former initial V. is corrected to Tejas; the previous paraphrased subtitle and 2024 date were wrong. The former URL points to Howard et al. (2024), a separate paper with different authors and title, and must not remain an alias of the corrected Work. No prior user intention is asserted."
+                  },
+                  {
+                    "field": "creators",
+                    "before": [
+                      {
+                        "creatorType": "author",
+                        "firstName": "V.",
+                        "lastName": "Srinivasan"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "Y.",
+                        "lastName": "Bisk"
+                      }
+                    ],
+                    "after": [
+                      {
+                        "creatorType": "author",
+                        "firstName": "Tejas",
+                        "lastName": "Srinivasan"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "Yonatan",
+                        "lastName": "Bisk"
+                      }
+                    ],
+                    "reason": "Explicit editorial reconciliation under delegated best judgment: the distinctive Worst of Both Worlds title and Srinivasan/Bisk surnames identify the ACL 2022 paper. The former initial V. is corrected to Tejas; the previous paraphrased subtitle and 2024 date were wrong. The former URL points to Howard et al. (2024), a separate paper with different authors and title, and must not remain an alias of the corrected Work. No prior user intention is asserted."
+                  },
+                  {
+                    "field": "date",
+                    "before": "2024",
+                    "after": "2022-07",
+                    "reason": "Explicit editorial reconciliation under delegated best judgment: the distinctive Worst of Both Worlds title and Srinivasan/Bisk surnames identify the ACL 2022 paper. The former initial V. is corrected to Tejas; the previous paraphrased subtitle and 2024 date were wrong. The former URL points to Howard et al. (2024), a separate paper with different authors and title, and must not remain an alias of the corrected Work. No prior user intention is asserted."
+                  },
+                  {
+                    "field": "itemType",
+                    "before": "report",
+                    "after": "conferencePaper",
+                    "reason": "Explicit editorial reconciliation under delegated best judgment: the distinctive Worst of Both Worlds title and Srinivasan/Bisk surnames identify the ACL 2022 paper. The former initial V. is corrected to Tejas; the previous paraphrased subtitle and 2024 date were wrong. The former URL points to Howard et al. (2024), a separate paper with different authors and title, and must not remain an alias of the corrected Work. No prior user intention is asserted."
+                  },
+                  {
+                    "field": "DOI",
+                    "before": "",
+                    "after": "10.18653/v1/2022.gebnlp-1.10",
+                    "reason": "Explicit editorial reconciliation under delegated best judgment: the distinctive Worst of Both Worlds title and Srinivasan/Bisk surnames identify the ACL 2022 paper. The former initial V. is corrected to Tejas; the previous paraphrased subtitle and 2024 date were wrong. The former URL points to Howard et al. (2024), a separate paper with different authors and title, and must not remain an alias of the corrected Work. No prior user intention is asserted."
+                  },
+                  {
+                    "field": "url",
+                    "before": "https://arxiv.org/html/2405.20152v1",
+                    "after": "https://aclanthology.org/2022.gebnlp-1.10/",
+                    "reason": "Explicit editorial reconciliation under delegated best judgment: the distinctive Worst of Both Worlds title and Srinivasan/Bisk surnames identify the ACL 2022 paper. The former initial V. is corrected to Tejas; the previous paraphrased subtitle and 2024 date were wrong. The former URL points to Howard et al. (2024), a separate paper with different authors and title, and must not remain an alias of the corrected Work. No prior user intention is asserted."
+                  },
+                  {
+                    "field": "publisher",
+                    "before": null,
+                    "after": "Association for Computational Linguistics",
+                    "reason": "Explicit editorial reconciliation under delegated best judgment: the distinctive Worst of Both Worlds title and Srinivasan/Bisk surnames identify the ACL 2022 paper. The former initial V. is corrected to Tejas; the previous paraphrased subtitle and 2024 date were wrong. The former URL points to Howard et al. (2024), a separate paper with different authors and title, and must not remain an alias of the corrected Work. No prior user intention is asserted."
+                  }
+                ],
+                "evidence": [
+                  {
+                    "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/srinivasan-acl-metadata.json",
+                    "sha256": "sha256:1bd368ea46f64845638e9e33731fdf77c0197ff712b7ea97b802d3cb428bf030",
+                    "source_url": "https://aclanthology.org/2022.gebnlp-1.10/",
+                    "locator": "Title and author header; Cite (ACL); BibTeX and MODS export; PDF link; licensing footer"
+                  },
+                  {
+                    "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/howard-url-identity.json",
+                    "sha256": "sha256:665bd048bdc4e2e80ea0d10ad7e554641f25ee71ff4d2cf039dabc03edf1f526",
+                    "source_url": "https://arxiv.org/abs/2405.20152v1",
+                    "locator": "citation_meta title/authors; submission_history [v1]"
+                  }
+                ]
+              }
+            },
             {
               "source": "zotero_export",
               "reference": "Z9DNTBFF"
@@ -20275,7 +21217,7 @@
       "work_id": "work:820f8901-9d1b-585b-aef6-84e612b5c603",
       "version_id": "version:92aa0241-136e-5cd0-9333-938b68c36e20"
     },
-    "doi:10.1016/j.childyouth.2023.107229": {
+    "doi:10.1016/j.childyouth.2023.107117": {
       "work_id": "work:80bb4056-d744-573e-bef8-17896d356d2e",
       "version_id": "version:75660bfb-6982-59e7-ada4-3b60049ccd08"
     },
@@ -20322,6 +21264,10 @@
     "doi:10.1080/02615479.2023.2195425": {
       "work_id": "work:5f49f95b-dcfe-5778-8376-a313cb039d4d",
       "version_id": "version:2e650cfc-0147-5778-ab55-ed2e17a4f86b"
+    },
+    "doi:10.1080/03085147.2020.1733842": {
+      "work_id": "work:62cbd3ab-96ea-50e4-b877-2f65571a8f83",
+      "version_id": "version:d523f07b-3eed-5bf9-9073-62ffb923d65b"
     },
     "doi:10.1080/0312407x.2025.2488345": {
       "work_id": "work:717e065c-570d-526f-86ae-2a24d9f03044",
@@ -20515,10 +21461,6 @@
       "work_id": "work:be57c16e-6050-5ec1-b680-fe786ad28150",
       "version_id": "version:e14a2b94-a1e3-5fed-b605-5b247f1032d9"
     },
-    "doi:10.1177/0950017020950021": {
-      "work_id": "work:62cbd3ab-96ea-50e4-b877-2f65571a8f83",
-      "version_id": "version:d523f07b-3eed-5bf9-9073-62ffb923d65b"
-    },
     "doi:10.1177/10497315251350933": {
       "work_id": "work:a8f897e9-c177-5304-b3c0-1cc5ffd86dd7",
       "version_id": "version:a95d2f59-0433-52d2-be61-b4af47026725"
@@ -20623,6 +21565,10 @@
       "work_id": "work:b0b83157-1c47-5074-a168-84dcb5b8f8b2",
       "version_id": "version:b5320eec-2c8d-5c06-a3fe-dda1a4bd2d28"
     },
+    "doi:10.18653/v1/2022.gebnlp-1.10": {
+      "work_id": "work:ec94cf1c-87bf-5f4d-a840-9dd3b92eefab",
+      "version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330"
+    },
     "doi:10.18653/v1/2023.findings-emnlp.575": {
       "work_id": "work:911db802-eb4b-502b-89b8-d4325036409f",
       "version_id": "version:20aa2ad6-fa2b-5845-8886-faacb95676dc"
@@ -20719,6 +21665,10 @@
       "work_id": "work:be146ab5-46d5-531d-9f2a-62aedf1e54e0",
       "version_id": "version:a969b9e7-dfaf-559b-a98a-f96a2084fa7c"
     },
+    "doi:10.48550/arxiv.2305.17390": {
+      "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+      "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460"
+    },
     "doi:10.48550/arxiv.2404.07475": {
       "work_id": "work:1406264b-e0cd-5dde-be3b-dbfd17fb0711",
       "version_id": "version:da1252ee-6ea2-5b9d-b829-ed65ab09713c"
@@ -20730,6 +21680,10 @@
     "doi:10.48550/arxiv.2502.21028": {
       "work_id": "work:66a2db59-a313-5f57-848f-8e987c9cd2da",
       "version_id": "version:5a86e619-97ec-5d78-9406-796aa1e5dc65"
+    },
+    "doi:10.48550/arxiv.2504.05632": {
+      "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+      "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
     },
     "doi:10.48550/arxiv.2506.18199": {
       "work_id": "work:f911df3d-1d6b-55f2-bc39-f06d4d4af206",
@@ -20786,6 +21740,10 @@
     "url:https://academic.oup.com/policyandsociety/article/44/1/1/7997395": {
       "work_id": "work:bb1312cc-da4b-570d-a6b5-2eeee9376d0e",
       "version_id": "version:d22a6746-c67e-55d3-ac46-234cf65063db"
+    },
+    "url:https://aclanthology.org/2022.gebnlp-1.10": {
+      "work_id": "work:ec94cf1c-87bf-5f4d-a840-9dd3b92eefab",
+      "version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330"
     },
     "url:https://aclanthology.org/2023.acl-long.530": {
       "work_id": "work:c097a2c9-625a-55e9-86d2-3ca5834d74ee",
@@ -20863,6 +21821,10 @@
       "work_id": "work:dc0ed550-b389-5fef-bfbe-1f9f335aa7a9",
       "version_id": "version:d05b8a44-c2b0-5a04-9cd0-73f6b59f0518"
     },
+    "url:https://arxiv.org/abs/2305.17390v2": {
+      "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+      "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460"
+    },
     "url:https://arxiv.org/abs/2311.14700": {
       "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
       "version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c"
@@ -20886,6 +21848,10 @@
     "url:https://arxiv.org/abs/2410.17433": {
       "work_id": "work:72974835-d5b2-55ee-bcb9-59ad87516280",
       "version_id": "version:54f7ee4b-36af-5a3d-ad91-71debfb41b91"
+    },
+    "url:https://arxiv.org/abs/2504.05632v3": {
+      "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+      "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
     },
     "url:https://arxiv.org/abs/2506.21898": {
       "work_id": "work:e71afce5-ff3c-58e5-b8b8-6089b5b46f4d",
@@ -20926,10 +21892,6 @@
     "url:https://arxiv.org/html/2405.01286v1": {
       "work_id": "work:df97aeb3-d0d0-511e-a919-6e535ce3cb3b",
       "version_id": "version:3a40ee22-5db9-569d-b8fc-8dfbed340b11"
-    },
-    "url:https://arxiv.org/html/2405.20152v1": {
-      "work_id": "work:ec94cf1c-87bf-5f4d-a840-9dd3b92eefab",
-      "version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330"
     },
     "url:https://arxiv.org/html/2406.05602v1": {
       "work_id": "work:6ba2b0bf-e408-5136-851a-bda85bc5439d",
@@ -21119,9 +22081,17 @@
       "work_id": "work:818283f6-92ba-562d-b678-b415cb3ae0b9",
       "version_id": "version:ec5bdb92-683c-5da5-a2e8-97ca5fe7df16"
     },
+    "url:https://doi.org/10.1016/j.childyouth.2023.107117": {
+      "work_id": "work:80bb4056-d744-573e-bef8-17896d356d2e",
+      "version_id": "version:75660bfb-6982-59e7-ada4-3b60049ccd08"
+    },
     "url:https://doi.org/10.1073/pnas.2416228122": {
       "work_id": "work:a6a8d34f-d4a3-5c26-b411-b0780dd1db28",
       "version_id": "version:048dd304-d17e-5ce3-a289-5c2c506bea17"
+    },
+    "url:https://doi.org/10.1080/03085147.2020.1733842": {
+      "work_id": "work:62cbd3ab-96ea-50e4-b877-2f65571a8f83",
+      "version_id": "version:d523f07b-3eed-5bf9-9073-62ffb923d65b"
     },
     "url:https://doi.org/10.1080/0312407x.2025.2488345": {
       "work_id": "work:717e065c-570d-526f-86ae-2a24d9f03044",
@@ -21339,6 +22309,10 @@
       "work_id": "work:3feda9e5-1823-50e7-ba69-45171a68314d",
       "version_id": "version:d955da6b-a771-5f23-86b0-46c1a95087e3"
     },
+    "url:https://hdl.handle.net/10072/407943": {
+      "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+      "version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec"
+    },
     "url:https://hdl.handle.net/20.500.12265/218": {
       "work_id": "work:5cc857bf-4bda-58c7-bee1-8fdfb4423836",
       "version_id": "version:c2c32fa6-26f7-55d2-8db6-ebb37aa68b12"
@@ -21487,13 +22461,13 @@
       "work_id": "work:0bc6596e-97fd-5a1e-9784-5f4b4d4a3c3e",
       "version_id": "version:05cf569a-4429-52b7-b588-9612b90c6e2e"
     },
+    "url:https://pmc.ncbi.nlm.nih.gov/articles/pmc10569152/": {
+      "work_id": "work:80bb4056-d744-573e-bef8-17896d356d2e",
+      "version_id": "version:897684cb-05ac-541e-8872-c80a44062f26"
+    },
     "url:https://pmc.ncbi.nlm.nih.gov/articles/pmc12307450": {
       "work_id": "work:02644be9-7d50-5d9e-a122-62e031e1263d",
       "version_id": "version:cb0ca879-cb67-5c4a-952a-f5d0969fe083"
-    },
-    "url:https://powerdrill.ai/discover/summary-reasoning-towards-fairness-mitigating-bias-in-cm9af0g1h7sb507pn7f5qh32q": {
-      "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
-      "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
     },
     "url:https://premierscience.com/pjai-24-524": {
       "work_id": "work:804f5cc7-54b8-5265-b473-1ce7deb1fdaf",
@@ -23155,10 +24129,6 @@
   "ambiguous_identifiers": {
     "url:https://arxiv.org/html/2404.17218v3": [
       {
-        "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
-        "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460"
-      },
-      {
         "work_id": "work:55f0efa8-e433-5588-9afe-3f708043a400",
         "version_id": "version:27a927ae-6f49-562f-bf62-9556487ad583"
       },
@@ -23220,7 +24190,6 @@
     "doi:10.1016/j.chb.2025.108563": "work:818283f6-92ba-562d-b678-b415cb3ae0b9",
     "doi:10.1016/j.chbah.2024.100062": "work:1a3134a5-7cab-528c-b832-9fc4c875d809",
     "doi:10.1016/j.chbr.2023.100338": "work:820f8901-9d1b-585b-aef6-84e612b5c603",
-    "doi:10.1016/j.childyouth.2023.107229": "work:80bb4056-d744-573e-bef8-17896d356d2e",
     "doi:10.1016/j.clsr.2024.106053": "work:3feda9e5-1823-50e7-ba69-45171a68314d",
     "doi:10.1017/cfl.2025.12": "work:e029e392-2ee3-5af1-bac3-1cbf39cdd23a",
     "doi:10.1038/s41467-025-68004-9": "work:1406264b-e0cd-5dde-be3b-dbfd17fb0711",
@@ -23280,7 +24249,6 @@
     "doi:10.1162/coli_a_00524": "work:5981ea67-23a9-5222-82c6-188b56279268",
     "doi:10.1177/00224871251325083": "work:d08ffd52-5a10-56dc-829f-b5e1335a1af1",
     "doi:10.1177/07356331251342081": "work:be57c16e-6050-5ec1-b680-fe786ad28150",
-    "doi:10.1177/0950017020950021": "work:62cbd3ab-96ea-50e4-b877-2f65571a8f83",
     "doi:10.1177/10497315251350933": "work:a8f897e9-c177-5304-b3c0-1cc5ffd86dd7",
     "doi:10.1177/13505068261419933": "work:45d9af93-79ae-5cea-834f-b465c751fc8d",
     "doi:10.1177/14407833241226800": "work:d5ef367d-7a49-52e5-a1d0-1424e8005b6d",
@@ -23471,5 +24439,30 @@
     "source:Zayed_2024_Scaling_implicit_bias_analysis_across.md": "work:6cb20b02-4d3c-58e4-8e53-05b3885b28ce",
     "title:critical literacy in an ai world": "work:be146ab5-46d5-531d-9f2a-62aedf1e54e0",
     "title:safety guardrails in large language models and selective refusal bias": "work:8111287c-84d0-5fe4-9bd5-fb5ded077905"
+  },
+  "source_index": {
+    "EXRF5629": {
+      "record_id": "EXRF5629",
+      "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/trudeau-pmc-original.md",
+      "source_sha256": "sha256:028152c0cc60276390fa3b4a6c9f5b8c5964065a19b7b26992923499a6d293cd",
+      "work_id": "work:80bb4056-d744-573e-bef8-17896d356d2e",
+      "source_version_id": "version:897684cb-05ac-541e-8872-c80a44062f26",
+      "source_version_type": "accepted_manuscript",
+      "bibliographic_version_id": "version:75660bfb-6982-59e7-ada4-3b60049ccd08",
+      "preferred_version_id": "version:75660bfb-6982-59e7-ada4-3b60049ccd08",
+      "is_preferred_version": false
+    },
+    "VSZM7CT6": {
+      "record_id": "VSZM7CT6",
+      "source_path": "generated/markdown_clean/VSZM7CT6.md",
+      "source_sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+      "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+      "source_version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+      "source_version_type": "accepted_manuscript",
+      "bibliographic_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+      "preferred_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+      "is_preferred_version": false,
+      "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download"
+    }
   }
 }

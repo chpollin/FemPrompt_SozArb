@@ -1,0 +1,13 @@
+{
+  "name": "hoeyer-wadmann-vor.pdf",
+  "requested_url": "https://researchprofiles.ku.dk/files/251374223/Meaningless_work_How_the_datafication_of_health_reconfigures_knowledge_about_work_and_erodes_professional_judgement_version_of_record_.pdf",
+  "accessed_at": "2026-09-05T15:18:52.223907+00:00",
+  "agent_id": "/root/grounded_chat",
+  "model": "GPT-6",
+  "tls_verification": "requests default certificate-chain and hostname verification enabled; alternate OpenSSL transport because curl Windows CRL service was offline",
+  "status": 403,
+  "resolved_url": "https://researchprofiles.ku.dk/files/251374223/Meaningless_work_How_the_datafication_of_health_reconfigures_knowledge_about_work_and_erodes_professional_judgement_version_of_record_.pdf",
+  "content_type": "text/html; charset=UTF-8",
+  "outcome": "request_failed",
+  "error": "403 Client Error: Forbidden for url: https://researchprofiles.ku.dk/files/251374223/Meaningless_work_How_the_datafication_of_health_reconfigures_knowledge_about_work_and_erodes_professional_judgement_version_of_record_.pdf"
+}

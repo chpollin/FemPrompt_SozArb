@@ -10,9 +10,9 @@ status: complete
 language: en
 version: "0.6"
 created: 2026-02-06
-updated: 2026-08-23
+updated: 2026-09-05
 authors: [Christopher Pollin]
-generated-with: Claude Code
+generated-with: Claude Code, Codex (GPT-6)
 related: [methods, governance, testing]
 ---
 
@@ -24,8 +24,11 @@ This checklist supports the source-curation quality check for Docling Markdown w
 |---|---|
 | Filename | |
 | PDF source | |
+| Exact Work / source Version | |
+| Source and Markdown SHA-256 | |
 | Reviewer | |
 | Date | |
+| Review scope and source locators | |
 | Confidence score | /100 |
 | Automatic status | PASS / WARN / FAIL |
 
@@ -47,7 +50,7 @@ Language quality: umlauts correct (ä, ö, ü, ß for German texts), accents cor
 
 ## 3. Table quality
 
-Completeness: the number of tables matches the PDF (plus or minus two tolerance), the important data tables are present.
+Completeness: account for every original table and identify any omitted content explicitly. A numeric tolerance does not establish completeness. Tables used for evidence or numerical findings must be readable and checked against the original; otherwise those findings remain unavailable in the Markdown representation.
 
 Formatting: table headers readable, columns aligned, data complete with no missing cells, captions present where in the original.
 
@@ -63,7 +66,7 @@ Hyphenation: line-break hyphenation resolved correctly (no "Metho-dology"), no w
 
 ## 5. Special elements
 
-Figures: marked as placeholders, figure captions present and readable, in-text references match the figure numbers.
+Figures: figure captions present and readable, in-text references match the figure numbers. A placeholder does not preserve visual evidence. If a finding depends on a figure, retain a source-bound visual representation or keep that finding blocked for downstream review.
 
 Formulas where present: readable, variables recognizable, subscripts and superscripts correct.
 
@@ -73,7 +76,7 @@ Citations: in-text citations recognizable, citation format consistent, no fragme
 
 Summarize the issues per category (structure, completeness, tables, artifacts, special elements) with a count and a severity (low, medium, high).
 
-Final verdict: PASS (usable for LLM summarization without restriction), PASS WITH ISSUES (usable with known minor defects), or FAIL (needs reconversion or manual correction).
+Final verdict: PASS (usable within the documented scope of the source check), PASS WITH ISSUES (usable with explicit, bounded defects), or FAIL (needs reconversion or manual correction). Conversion quality does not establish the truth of study findings or their methodological quality.
 
 Recommended action: none, document known issues and proceed, check tables manually, reconvert with different settings, manual editing required, or check the PDF source (quality, scan versus digital).
 
@@ -85,4 +88,4 @@ Tool: `src/distill/markdown_reviewer.html`. Start it via VS Code Live Server (ri
 
 Keyboard shortcuts: `1` PASS, `2` WARN, `3` FAIL, `0` reset, the arrow keys for navigation, `L` to toggle the list, `S` to toggle sync-scroll.
 
-Persistence: localStorage (automatic, across sessions), export to JSON (manual, the Export button), import from JSON (manual, the Import button). The export JSON carries the export timestamp, a summary counter (pass, warn, fail, pending), the total document count, and a filename-to-status map. Save exports as `generated/validation_reports/human_review_YYYY-MM-DD.json`. AI agents can read the exported JSON to identify problematic documents, compute statistics, and propose reconversion candidates. A person remains responsible for the source-curation verdict recorded by this checklist.
+Persistence: localStorage (automatic, across sessions), export to JSON (manual, the Export button), import from JSON (manual, the Import button). The export JSON carries the export timestamp, a summary counter (pass, warn, fail, pending), the total document count, and a filename-to-status map. Save actual human-check exports as `generated/validation_reports/human_review_YYYY-MM-DD.json`. This legacy export alone lacks the exact-version and evidence provenance required by current governed acquisition. Record those fields in the applicable source-QC manifest. An AI check must name its actual agent, available model, date and evidence, retain its AI authority tier, and must not be saved as an invented human verdict; see [governance](../governance.md).

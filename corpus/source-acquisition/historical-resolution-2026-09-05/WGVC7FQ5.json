@@ -1,0 +1,784 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          1
+        ]
+      ],
+      "date-time": "2026-09-01T15:37:37Z",
+      "timestamp": 1788277057869,
+      "version": "build-2803163510"
+    },
+    "reference-count": 114,
+    "publisher": "SAGE Publications",
+    "issue": "5",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              6,
+              18
+            ]
+          ],
+          "date-time": "2021-06-18T00:00:00Z",
+          "timestamp": 1623974400000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://journals.sagepub.com/page/policies/text-and-data-mining-license"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "journals.sagepub.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "New Media &amp; Society"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2022,
+          5
+        ]
+      ]
+    },
+    "abstract": "<jats:p>Artificial intelligence (AI) is (re)shaping communication and contributes to (commercial and informational) need satisfaction by means of mass personalization. However, the substantial personalization and targeting opportunities do not come without ethical challenges. Following an AI-for-social-good perspective, the authors systematically scrutinize the ethical challenges of deploying AI for mass personalization of communication content from a multi-stakeholder perspective. The conceptual analysis reveals interdependencies and tensions between ethical principles, which advocate the need of a basic understanding of AI inputs, functioning, agency, and outcomes. By this form of AI literacy, individuals could be empowered to interact with and treat mass-personalized content in a way that promotes individual and social good while preventing harm.</jats:p>",
+    "DOI": "10.1177/14614448211022702",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2021,
+          6,
+          18
+        ]
+      ],
+      "date-time": "2021-06-18T06:30:18Z",
+      "timestamp": 1623997818000
+    },
+    "page": "1258-1277",
+    "update-policy": "https://doi.org/10.1177/sage-journals-update-policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 184,
+    "title": [
+      "Artificial intelligence and mass personalization of communication content—An ethical and literacy perspective"
+    ],
+    "prefix": "10.1177",
+    "volume": "24",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0003-0895-3562",
+        "authenticated-orcid": false,
+        "given": "Erik",
+        "family": "Hermann",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "IHP—Leibniz-Institut für innovative Mikroelektronik, Germany"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "179",
+    "published-online": {
+      "date-parts": [
+        [
+          2021,
+          6,
+          18
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "bibr1-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/1461444816676645"
+      },
+      {
+        "key": "bibr2-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1126/science.aaa1160"
+      },
+      {
+        "key": "bibr3-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/0743915619858057"
+      },
+      {
+        "key": "bibr4-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.inffus.2019.12.012"
+      },
+      {
+        "key": "bibr5-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/1461444815614001"
+      },
+      {
+        "key": "bibr6-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10462-018-9654-y"
+      },
+      {
+        "key": "bibr7-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/009365087014003005"
+      },
+      {
+        "key": "bibr8-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1287/mksc.2019.1208"
+      },
+      {
+        "key": "bibr9-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/21670811.2019.1624185"
+      },
+      {
+        "key": "bibr10-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/21670811.2018.1521292"
+      },
+      {
+        "key": "bibr11-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/1461444820924631"
+      },
+      {
+        "key": "bibr12-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10676-013-9321-6"
+      },
+      {
+        "key": "bibr13-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10676-015-9380-y"
+      },
+      {
+        "key": "bibr14-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1023/A:1010076000182"
+      },
+      {
+        "key": "bibr15-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10676-012-9293-y"
+      },
+      {
+        "key": "bibr16-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1111/hcre.12114"
+      },
+      {
+        "key": "bibr17-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1098/rsta.2018.0080"
+      },
+      {
+        "key": "bibr18-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/1461444820925800"
+      },
+      {
+        "key": "bibr19-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.techfore.2020.120299"
+      },
+      {
+        "key": "bibr20-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/s42256-021-00296-0"
+      },
+      {
+        "key": "bibr21-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s00146-019-00927-6"
+      },
+      {
+        "key": "bibr22-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1515/popets-2015-0007"
+      },
+      {
+        "key": "bibr23-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.chb.2017.03.031"
+      },
+      {
+        "key": "bibr24-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1093/poq/nfw006"
+      },
+      {
+        "key": "bibr25-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/21670811.2018.1502045"
+      },
+      {
+        "key": "bibr26-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s11948-015-9733-2"
+      },
+      {
+        "key": "bibr27-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/s42256-019-0055-y"
+      },
+      {
+        "key": "bibr28-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s11023-018-9482-5"
+      },
+      {
+        "key": "bibr29-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s11948-020-00213-5"
+      },
+      {
+        "key": "bibr30-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/21670811.2019.1626752"
+      },
+      {
+        "key": "bibr31-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/1461444812472322"
+      },
+      {
+        "issue": "1",
+        "key": "bibr32-14614448211022702",
+        "first-page": "1",
+        "volume": "11",
+        "author": "Gunkel DJ",
+        "year": "2012",
+        "journal-title": "Communication+"
+      },
+      {
+        "key": "bibr33-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/21670811.2019.1681902"
+      },
+      {
+        "key": "bibr34-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/1461444819858691"
+      },
+      {
+        "key": "bibr35-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s11023-020-09517-8"
+      },
+      {
+        "key": "bibr36-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/21670811.2017.1338145"
+      },
+      {
+        "key": "bibr37-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1093/jcmc/zmz022"
+      },
+      {
+        "key": "bibr38-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/1745691616650285"
+      },
+      {
+        "key": "bibr39-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/21670811.2019.1623700"
+      },
+      {
+        "key": "bibr40-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/1369118X.2016.1271900"
+      },
+      {
+        "key": "bibr41-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s13347-014-0184-5"
+      },
+      {
+        "key": "bibr42-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/0956797611436349"
+      },
+      {
+        "key": "bibr43-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/s42256-019-0113-5"
+      },
+      {
+        "key": "bibr44-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/s42256-019-0088-2"
+      },
+      {
+        "key": "bibr45-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/0163443716643157"
+      },
+      {
+        "key": "bibr46-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1111/j.1460-2466.2006.00006.x"
+      },
+      {
+        "key": "bibr47-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/15213269.2015.1121829"
+      },
+      {
+        "key": "bibr48-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.bushor.2018.08.004"
+      },
+      {
+        "key": "bibr49-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/1369118X.2016.1154087"
+      },
+      {
+        "key": "bibr50-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1073/pnas.1912790117"
+      },
+      {
+        "key": "bibr51-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/1461444820924629"
+      },
+      {
+        "key": "bibr52-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.knosys.2016.08.014"
+      },
+      {
+        "key": "bibr53-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/2053951720951581"
+      },
+      {
+        "key": "bibr54-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/17512786.2019.1567271"
+      },
+      {
+        "key": "bibr55-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1126/science.aab1422"
+      },
+      {
+        "key": "bibr56-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1287/isre.2018.0800"
+      },
+      {
+        "key": "bibr57-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s13347-017-0279-x"
+      },
+      {
+        "key": "bibr58-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1257/aer.20191777"
+      },
+      {
+        "key": "bibr59-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/21670811.2019.1577147"
+      },
+      {
+        "key": "bibr60-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/21670811.2015.1081822"
+      },
+      {
+        "key": "bibr61-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/s42256-019-0115-3"
+      },
+      {
+        "key": "bibr62-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/0263276418818888"
+      },
+      {
+        "key": "bibr63-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/s42256-020-0214-1"
+      },
+      {
+        "key": "bibr64-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10551-018-3921-3"
+      },
+      {
+        "key": "bibr65-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.cobeha.2017.05.009"
+      },
+      {
+        "key": "bibr66-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.copsyc.2019.08.010"
+      },
+      {
+        "key": "bibr67-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1073/pnas.1710966114"
+      },
+      {
+        "key": "bibr68-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/jcpy.1092"
+      },
+      {
+        "key": "bibr69-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/0093650212466406"
+      },
+      {
+        "key": "bibr70-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s00146-020-00950-y"
+      },
+      {
+        "key": "bibr71-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/01972243.2020.1832636"
+      },
+      {
+        "key": "bibr72-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/21670811.2019.1601576"
+      },
+      {
+        "key": "bibr73-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/s42256-019-0114-4"
+      },
+      {
+        "key": "bibr74-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/2053951716679679"
+      },
+      {
+        "key": "bibr75-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/1369118X.2018.1444076"
+      },
+      {
+        "key": "bibr76-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1111/j.1467-9973.1985.tb00173.x"
+      },
+      {
+        "key": "bibr77-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10676-006-0008-0"
+      },
+      {
+        "key": "bibr78-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s11948-019-00165-5"
+      },
+      {
+        "key": "bibr79-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.chb.2018.07.043"
+      },
+      {
+        "key": "bibr80-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/1461444816686104"
+      },
+      {
+        "key": "bibr81-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/08838151.2011.521462"
+      },
+      {
+        "key": "bibr82-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10676-018-9496-y"
+      },
+      {
+        "key": "bibr83-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/s42256-019-0038-z"
+      },
+      {
+        "key": "bibr84-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10676-018-9452-x"
+      },
+      {
+        "key": "bibr85-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/s42256-019-0048-x"
+      },
+      {
+        "key": "bibr86-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s11948-020-00228-y"
+      },
+      {
+        "key": "bibr87-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1126/science.132.3429.741"
+      },
+      {
+        "key": "bibr88-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1073/pnas.1918279117"
+      },
+      {
+        "key": "bibr89-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/1369118X.2020.1718179"
+      },
+      {
+        "key": "bibr90-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1093/idpl/ipx022"
+      },
+      {
+        "key": "bibr91-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/1461444813477833"
+      },
+      {
+        "key": "bibr92-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1093/ct/qtz008"
+      },
+      {
+        "key": "bibr93-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1073/pnas.1920484117"
+      },
+      {
+        "key": "bibr94-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/per.2257"
+      },
+      {
+        "key": "bibr95-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jbusres.2020.11.030"
+      },
+      {
+        "key": "bibr96-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1111/j.1460-2466.2010.01497.x"
+      },
+      {
+        "key": "bibr97-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1093/jcmc/zmz026"
+      },
+      {
+        "key": "bibr98-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1111/j.1468-2958.2010.01377.x"
+      },
+      {
+        "key": "bibr99-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1017/CBO9781316493021"
+      },
+      {
+        "key": "bibr100-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1126/science.aat5991"
+      },
+      {
+        "key": "bibr101-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/s42256-019-0136-y"
+      },
+      {
+        "key": "bibr102-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s12525-020-00441-4"
+      },
+      {
+        "key": "bibr103-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/1461670X.2012.664341"
+      },
+      {
+        "key": "bibr104-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/21670811.2019.1685395"
+      },
+      {
+        "issue": "4",
+        "key": "bibr105-14614448211022702",
+        "first-page": "447",
+        "volume-title": "Digital Journalism",
+        "volume": "7",
+        "author": "Thurman N",
+        "year": "2019"
+      },
+      {
+        "key": "bibr106-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10676-009-9187-9"
+      },
+      {
+        "key": "bibr107-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1093/joc/jqx011"
+      },
+      {
+        "key": "bibr108-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10676-017-9440-6"
+      },
+      {
+        "key": "bibr109-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1126/science.131.3410.1355"
+      },
+      {
+        "key": "bibr110-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/1369118X.2016.1200645"
+      },
+      {
+        "key": "bibr111-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.chb.2020.106525"
+      },
+      {
+        "key": "bibr112-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10676-010-9242-6"
+      },
+      {
+        "key": "bibr113-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/0093650220961965"
+      },
+      {
+        "key": "bibr114-14614448211022702",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.14763/2016.1.401"
+      }
+    ],
+    "container-title": [
+      "New Media &amp; Society"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://journals.sagepub.com/doi/pdf/10.1177/14614448211022702",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://journals.sagepub.com/doi/full-xml/10.1177/14614448211022702",
+        "content-type": "application/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://journals.sagepub.com/doi/pdf/10.1177/14614448211022702",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2026,
+          5,
+          2
+        ]
+      ],
+      "date-time": "2026-05-02T03:52:08Z",
+      "timestamp": 1777693928000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://journals.sagepub.com/doi/10.1177/14614448211022702"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2021,
+          6,
+          18
+        ]
+      ]
+    },
+    "references-count": 114,
+    "journal-issue": {
+      "issue": "5",
+      "published-print": {
+        "date-parts": [
+          [
+            2022,
+            5
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "10.1177/14614448211022702"
+    ],
+    "URL": "https://doi.org/10.1177/14614448211022702",
+    "relation": {},
+    "ISSN": [
+      "1461-4448",
+      "1461-7315"
+    ],
+    "issn-type": [
+      {
+        "value": "1461-4448",
+        "type": "print"
+      },
+      {
+        "value": "1461-7315",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2021,
+          6,
+          18
+        ]
+      ]
+    }
+  }
+}

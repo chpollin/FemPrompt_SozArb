@@ -1,0 +1,95 @@
+{
+  "schema": "femprompt-screening-corrections/0.1",
+  "corrections": {
+    "7L78MV2V": {
+      "paper_id": "7L78MV2V",
+      "correction_id": "ai-analysis-correction:2026-09-05:7L78MV2V:aggregation-c",
+      "base_artifact": "docs/data/screening/ar2.json#/decisions/7L78MV2V",
+      "base_sha256": "sha256:5a0d8e629eb94f16c86b36baf454cfeab44eabdd405a5998817c75b6bc53813a",
+      "supersedes_annotation_id": "ar2:7L78MV2V",
+      "agent_id": "/root/aggregation",
+      "actor_type": "ai_agent",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "corrected_at": "2026-09-05T14:45:48.120563+00:00",
+      "changes": [
+        {
+          "path": "/analysis/fields/AN_Notes",
+          "before": "ICL beruht auf der ausdrücklich behandelten Zero-shot- und Few-shot-Aufgabenadaptation. Als Literaturreview synthetisiert der Beitrag empirisch geprüfte Bias-Metriken und Mitigationsansätze; deshalb gilt die höchste erreichte Stufe Evaluated.",
+          "after": "ICL beruht auf der ausdrücklich behandelten Zero-shot- und Few-shot-Aufgabenadaptation. Evaluated bezeichnet die in §4 (Understanding bias, Referenz [57], Gonen/Goldberg 2019) diskutierte negative Evaluation bestehender Word-Embedding-Debiasing-Verfahren: verbleibender Bias wird verdeckt statt vollständig entfernt. Dies ist synthetisierte Evaluation, keine eigene Mitigationsstudie dieses Reviews; die gesonderte Messung von Bias allein würde Evaluated nicht begründen. Die weiteren Empfehlungen zu ausgewogenen Trainingsdaten, Fine-Tuning und organisatorischer Zusammenarbeit gelten dadurch nicht sämtlich als evaluiert. Kein Nachweis allgemeiner Fairness-Wirksamkeit oder eines Transfers in die Soziale Arbeit.",
+          "reason": "Die bisherige Begründung vermischt geprüfte Bias-Metriken mit der Evaluation einer Mitigation. §4 berichtet dagegen einen identifizierbaren negativen Debiasing-Befund; dieser trägt nach der bestehenden Syntheseregel Evaluated. Die Notes grenzen diesen konkreten Statusbeleg von den weiteren Empfehlungen ab."
+        }
+      ]
+    },
+    "J5EF9W6M": {
+      "paper_id": "J5EF9W6M",
+      "correction_id": "ai-analysis-correction:2026-09-05:J5EF9W6M:aggregation-c",
+      "base_artifact": "docs/data/screening/ar2.json#/decisions/J5EF9W6M",
+      "base_sha256": "sha256:78ce2c3321eaa06a648f960cbfd87b79840a9dc11680194beca878b90593f53d",
+      "supersedes_annotation_id": "ar2:J5EF9W6M",
+      "agent_id": "/root/aggregation",
+      "actor_type": "ai_agent",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "corrected_at": "2026-09-05T14:45:48.136265+00:00",
+      "changes": [
+        {
+          "path": "/analysis/fields/AN_Mitigation_Stage",
+          "before": [
+            "Pre_Processing",
+            "Intra_Processing",
+            "Post_Processing",
+            "Organisational_Process"
+          ],
+          "after": [
+            "Pre_Processing",
+            "Organisational_Process"
+          ],
+          "reason": "S.18 empfiehlt Datenaudits, Diversifizierung und Kontextanpassung der Daten; S.19–21 und S.26 tragen Schulung, Beteiligung, Governance und Monitoring. Ein Impact-Log und allgemeine Korrekturmaßnahmen spezifizieren weder einen technischen Eingriff während der Inferenz noch eine technische Änderung vorliegender Ausgaben; Intra_Processing und Post_Processing entfallen."
+        },
+        {
+          "path": "/analysis/fields/AN_Notes",
+          "before": "DIVERSIFAIR-Toolkit für Industrie und Governance. Wohlfahrtsdienste sind Fallmaterial, keine Zielpopulation.",
+          "after": "DIVERSIFAIR-Toolkit, Fassung November 2024, mit Schwerpunkt Industrie und Governance; Wohlfahrtsdienste sind Fallmaterial. Pre_Processing: Audit, Diversifizierung und Kontextanpassung der Datensätze (S.18). Organisational_Process: Beteiligung, Schulung, Aufsicht und Incident-/Korrekturlog (S.19–21,26). Allgemeines Monitoring und ‚corrective actions‘ verorten keinen technischen Inferenz- oder Ausgabeeingriff. Proposed bleibt: S.17 kündigt die weitere Evaluation der Empfehlungen an; daraus wird keine bereits geprüfte Mitigationswirkung abgeleitet.",
+          "reason": "Für jede behaltene Stufe wird der konkrete Quellenbezug genannt; die entfernten technischen Stufen und der unveränderte Vorschlagsstatus werden begründet."
+        }
+      ]
+    },
+    "P4YQIKJX": {
+      "paper_id": "P4YQIKJX",
+      "correction_id": "ai-analysis-correction:2026-09-05:P4YQIKJX:aggregation-c",
+      "base_artifact": "docs/data/screening/ar2.json#/decisions/P4YQIKJX",
+      "base_sha256": "sha256:5bc075daae8ba1fb0ad36173ca3583d8f08ac632e2787d02ddd1751fd25e2d5d",
+      "supersedes_annotation_id": "ar2:P4YQIKJX",
+      "agent_id": "/root/aggregation",
+      "actor_type": "ai_agent",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "corrected_at": "2026-09-05T14:45:48.136265+00:00",
+      "changes": [
+        {
+          "path": "/analysis/fields/AN_Mitigation_Stage",
+          "before": [
+            "Pre_Processing",
+            "In_Training",
+            "Intra_Processing",
+            "Post_Processing",
+            "Organisational_Process"
+          ],
+          "after": [
+            "Pre_Processing",
+            "In_Training",
+            "Organisational_Process"
+          ],
+          "reason": "§3.1.4 nennt Datenvorverarbeitung und die Kooperation der Stakeholder. In_Training ist separat durch die ausdrücklich beim Training verortete Empfehlung für nachhaltige ML-Entscheidungshilfen in §3.10.2 belegt. Ökologische Validitätsprüfung, Fairness-Constraints und allgemeine Kompensation spezifizieren dagegen keinen technischen Inferenz- oder Ausgabeeingriff; Intra_Processing und Post_Processing entfallen."
+        },
+        {
+          "path": "/analysis/fields/AN_Notes",
+          "before": "Systematischer Review zu ethischen Problemen und Strategien für KI im Gesundheitsbereich.",
+          "after": "Systematischer Review ethischer Probleme und Strategien für KI im Gesundheitsbereich. Pre_Processing: ‚preprocessing the training dataset‘ (§3.1.4). In_Training: ausdrückliche Trainingsempfehlung für nachhaltige ML-Entscheidungshilfen in der Arbeitsmedizin (§3.10.2: ‚training these tools with the best-known algorithms‘); dies ist eine breite ethische Empfehlung, keine getestete Fairness-Trainingsmethode. Organisational_Process: Zusammenarbeit mit Ethik-, Sozialwissenschafts- und Regulierungsexpertise sowie ethische Prüfung. Die geforderte Validierung von Ausgaben/Subpopulationen ist keine berichtete Durchführung oder Ausgabetransformation. ‚Compensating‘ legt keinen technischen Zeitpunkt fest. Proposed bleibt; weder eine durchgeführte Inferenzintervention noch ein konkretes Post-Processing-Verfahren wird behauptet.",
+          "reason": "Die früher unbegründete Belegung aller Modellphasen wird durch separate Quellenzuordnung ersetzt; die tatsächlich vorhandene Trainingsempfehlung wird dabei erhalten und in ihrer Reichweite begrenzt."
+        }
+      ]
+    }
+  }
+}

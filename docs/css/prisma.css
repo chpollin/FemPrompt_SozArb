@@ -499,10 +499,14 @@ body.pt-fullscreen *, body.pt-fullscreen *::before, body.pt-fullscreen *::after 
 
 /* Workspace heading */
 .pt-wsbar-top {
-  display: flex; align-items: center; gap: 0.6rem;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem;
   padding: 0.2rem 0.1rem 0.7rem;
 }
 .pt-wsbar-title { font-family: var(--pt-serif); font-size: var(--pt-lg); font-weight: 600; color: var(--pt-ink); }
+.pt-workspace-mode { color: var(--pt-ink-3); font-size: var(--pt-xs); }
+.pt-edit-mode[aria-pressed="true"] { background: var(--pt-human-bg); border-color: var(--pt-human); color: var(--pt-human); }
+.pt-read-only-status { margin: 0; color: var(--pt-ink-3); font-size: var(--pt-sm); }
+.pt-read-only-note { padding: 1rem; }
 .pt-mode-switch {
   margin-left: auto; display: inline-flex; align-items: center; min-height: 30px; padding: 0 0.65rem;
   border: 1px solid var(--pt-human-line); border-radius: var(--pt-r-sm); color: var(--pt-human);

@@ -7,9 +7,9 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-06-09
-updated: 2026-08-24
+updated: 2026-09-05
 authors: [Christopher Pollin]
-generated-with: Claude Code (Claude Opus 4.8)
+generated-with: Claude Code (Claude Opus 4.8), Codex (GPT-6)
 method:
   name: Promptotyping
   url: https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin
@@ -287,6 +287,8 @@ The package is enriched by three source-check partitions before acquisition. `so
 
 The registry distinguishes `preferred_version_id` from `latest_version_id`. The preferred version is the highest-ranked available publication stage that is not withdrawn or retracted. The latest version is selected by recorded date. The distinction avoids treating chronological recency as publication authority. Version of Record and corrected Version of Record are preferred over manuscripts and Preprints when available. All known versions remain addressable. Peer-review status is stored separately because publication stage alone is not a quality judgement.
 
+`record_index` retains the bibliographic Version when a different accepted manuscript was actually read. The governed [source-binding manifest](../corpus/source_version_bindings.json) adds `source_index` and the corpus field `source_binding`, with exact source path/hash and source Version. Fulltext manifests and published quotations use that source Version while retaining `bibliographic_version_id` separately. Work-wide source holds restrict current synthesis even when a historical Include or earlier accepted review remains recorded.
+
 Every corpus record carries the canonical identity plus `legacy_work_id` for migration. Duplicate Zotero records of one Work remain distinct records. Screening coverage applies once at Work level. The full-text manifest, PRISM evidence, run manifests, Grounded Vault distillates, public publication records, and Assertions retain the exact Version used. The controlled vocabulary and selection rule live in `docs/data/work_version_contract.json`.
 
 `knowledge_coverage` records why a paper does or does not expose a knowledge document.
@@ -298,6 +300,8 @@ Every corpus record carries the canonical identity plus `legacy_work_id` for mig
 
 The metadata reports record links and distinct document paths separately. The Companion header uses both values so a duplicated record does not look like an additional knowledge document.
 
+These are availability measures for the historical working collection. `linked` does not mean that a distillate has a current source-review receipt, belongs to the active Vault, supports an Assertion or is eligible for SQ analysis. Bibliographic identity corrections can invalidate a same-title legacy knowledge document without suppressing a separately verified exact fulltext. [The Vault coverage guide](research-vault.md#aktueller-implementierungsstand) separates archive links, active Assertions, screening and whole-corpus readiness.
+
 ## Wissensdokument-Abdeckung
 
 Der Companion zählt Korpusrecords mit einem nichtleeren `knowledge_doc`-Verweis und weist die Zahl unterschiedlicher Dokumentpfade separat aus. Mehrere Zotero-Records können dasselbe Werk und dieselbe Datei referenzieren. Die aktuellen Werte stehen ausschließlich in `docs/data/research_vault_v2.json > meta`; dieser Vertragstext wiederholt keine veränderlichen Bestandszahlen.
@@ -308,9 +312,9 @@ Der Companion zählt Korpusrecords mit einem nichtleeren `knowledge_doc`-Verweis
 
 ## Published literature landscape
 
-`src/publish/generate_literature_landscape.py` joins the productive PRISM track with the corpus metadata and writes `docs/data/literature_landscape.json`. The public artifact contains only records whose lifecycle state is `publication-approved`. It excludes raw full text and browser-only recovery state.
+`src/publish/generate_literature_landscape.py` joins the productive PRISM track with the corpus metadata and writes `docs/data/literature_landscape.json`. The public artifact follows the explicit `config/publication_policy.json`; the authorised preliminary release admits source-bound AI-reviewed records with attributed artifact/source-hash-bound review receipts. It preserves their actual lifecycle status and excludes raw full text and browser-only recovery state.
 
-The generator is a fail-closed publication checkpoint. It withholds every record below `publication-approved`. An approved record still fails the build when it has an unknown Paper ID, an unknown category, a category value outside the vocabulary, a positive category without Paper evidence, an incomplete Include analysis, or an invalid final approval event. The output reports the source-annotation total and the withheld total separately. The Companion therefore exposes no governed record below publication approval as a public result.
+The generator is a fail-closed publication checkpoint. Without an explicit policy it requires `publication-approved`; the preliminary policy instead checks the exact AI review receipt, source identity and integrity holds. A release-eligible record still fails the build when it has an unknown Paper ID, an unknown category, a category value outside the vocabulary, a positive category without Paper evidence, or an incomplete Include analysis. Human approval claims additionally require a valid final approval event. The output reports the source-annotation total and the withheld total separately; preliminary AI review is never presented as domain-expert verification.
 
 The Literature Landscape uses only Include records for thematic aggregation. Exclude and Unclear remain part of the progress summary. Category combinations are multi-valued co-occurrences, and the analysis fields retain their multi-select semantics. Every matrix cell and profile value resolves to the supporting papers, their analysis fields, and the stored Paper evidence.
 
@@ -366,4 +370,3 @@ The tool is seeded with the existing review and the round-one data carried throu
 ## Document boundary
 
 Category definitions remain canonical in `categories.yaml`. [[methods]] describes the assessment pipeline, while [[specification]] describes the interface and its design system. This document defines the data substrate shared by both.
-

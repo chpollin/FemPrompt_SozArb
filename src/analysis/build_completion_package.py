@@ -22,8 +22,10 @@ from typing import Any
 
 import yaml
 
-from src.assess.artifact_verification import LEDGER_PATH, load_reviews, reviewed_screening_projection
+from src.assess.artifact_verification import LEDGER_PATH, artifact_hash, load_reviews, latest_screening_review, reviewed_screening_projection
 from src.file_hashing import file_sha256
+from src.analysis.historical_resolution import load_resolution, RESOLUTION_PATH
+from src.analysis.knowledge_coverage import build_knowledge_coverage
 
 REPO = Path(__file__).resolve().parents[2]
 OUTPUT = Path("generated/completion")
@@ -31,6 +33,7 @@ SEARCH = "corpus/deep-research/round2/Codex Websearch"
 READY = "generated/source-acquisition/codex-websearch-2026/source-readiness.json"
 FOLLOWUP = "corpus/deep-research/round2/targeted-followup-2026-09-05.json"
 MANUSCRIPT = "research-vault/40_output/paper/paper.md"
+RESIDUAL = "generated/verification/residual-resolution-2026-09-05.json"
 FIELDS = {
     "SQ1": ("AN_Prompt_Techniques", "AN_Mitigation_Status"),
     "SQ2": ("AN_Bias_Axes", "AN_Harm_Types", "AN_Mitigation_Stage", "AN_Mitigation_Status"),
@@ -87,24 +90,92 @@ def _csv(rows: list[dict], columns: list[str]) -> str:
     return stream.getvalue()
 
 
+def _historical_recovery_ris(issues: list[dict]) -> str:
+    """Prepare confirmed missing publications for import, not for inclusion."""
+    lines = []
+    for issue in issues:
+        resolution = issue.get("identity_resolution") or {}
+        metadata = resolution.get("external_identity") or {}
+        if issue.get("type") != "unmapped_human_record" or not resolution.get("external_identity_confirmed") or not metadata.get("DOI"):
+            continue
+        titles = metadata.get("title") or []
+        if not titles:
+            continue
+        lines.extend(["TY  - JOUR" if metadata.get("type") == "journal-article" else "TY  - CONF" if metadata.get("type") == "proceedings-article" else "TY  - GEN", "TI  - " + titles[0]])
+        for author in metadata.get("author", []):
+            name = ", ".join(part for part in (author.get("family"), author.get("given")) if part)
+            if name:
+                lines.append("AU  - " + name)
+        date = metadata.get("published-online") or metadata.get("published-print") or metadata.get("published") or {}
+        parts = date.get("date-parts") or []
+        if parts and parts[0]:
+            lines.append("PY  - " + str(parts[0][0]))
+        lines.extend(["DO  - " + metadata["DOI"], "UR  - https://doi.org/" + metadata["DOI"],
+                      f"N1  - Recovered historical record {issue['record_id']}; metadata verified by {resolution['agent_id']}, {resolution['model']}, {resolution['reviewed_at']}. Import candidate only; no new screening or human verification. Historical decisions remain in assessment/human_assessment.csv. Evidence: {RESOLUTION_PATH}.", "ER  -", ""])
+    return "\n".join(lines)
+
+
 def _latest_review_records(repo: Path) -> dict[str, dict]:
     """Retain negative outcomes for operator attention as well as accepted ones."""
-    path = repo / LEDGER_PATH
-    if not path.is_file():
+    reviews = load_reviews(repo)
+    return getattr(reviews, "latest", {})
+
+
+def _residual_progress(repo: Path, registry: dict, inputs: set[str]) -> dict[str, dict]:
+    """Expose attributed acquisition progress without opening a screening gate."""
+    if not (repo / RESIDUAL).is_file():
         return {}
-    latest = {}
-    for receipt in _json(path).get("reviews", []):
-        artifact = receipt["artifact"]
-        at = datetime.fromisoformat(receipt["reviewed_at"].replace("Z", "+00:00"))
-        prior = latest.get(artifact)
-        if prior is None or at >= datetime.fromisoformat(prior["reviewed_at"].replace("Z", "+00:00")):
-            latest[artifact] = receipt
-    return latest
+    report = _json(repo / RESIDUAL)
+    if report.get("schema") != "femprompt-residual-source-resolution/0.1":
+        raise ValueError("Unsupported residual resolution schema")
+    inputs.add(RESIDUAL)
+    scope = report["scope"]
+    if artifact_hash(repo, scope["original_queue"]) != scope["original_queue_sha256"]:
+        raise ValueError("Stale residual queue evidence")
+    inputs.add(scope["original_queue"])
+    for key, entry in report["records"].items():
+        if entry.get("record_id") != key or registry["record_index"].get(key) != entry["canonical_binding_before"]:
+            raise ValueError(f"Stale residual identity binding: {key}")
+        if not all(entry.get(field) for field in ("agent_id", "model", "reviewed_at", "finding", "next_step")):
+            raise ValueError(f"Unattributed residual resolution: {key}")
+        if datetime.fromisoformat(entry["reviewed_at"].replace("Z", "+00:00")).tzinfo is None:
+            raise ValueError(f"Residual review needs a timezone: {key}")
+        raw = entry["raw_metadata_reference"]
+        if artifact_hash(repo, raw) != entry["raw_record_sha256"]:
+            raise ValueError(f"Stale residual raw record: {key}")
+        inputs.add(raw.partition("#")[0])
+        evidence = [*entry.get("evidence", [])]
+        for followup in entry.get("follow_up_reviews", []):
+            if not all(followup.get(field) for field in ("agent_id", "model", "reviewed_at", "finding", "result")):
+                raise ValueError(f"Unattributed residual follow-up: {key}")
+            if datetime.fromisoformat(followup["reviewed_at"].replace("Z", "+00:00")).tzinfo is None:
+                raise ValueError(f"Residual follow-up needs a timezone: {key}")
+            if followup.get("canonical_binding_before") != entry["canonical_binding_before"] or artifact_hash(repo, followup["raw_metadata_reference"]) != followup["raw_record_sha256"]:
+                raise ValueError(f"Stale residual follow-up identity: {key}")
+            evidence.extend(followup.get("evidence", []))
+        if entry.get("original_text"):
+            evidence.append(entry["original_text"])
+        for source in evidence:
+            if artifact_hash(repo, source["source_path"]) != source["sha256"]:
+                raise ValueError(f"Stale residual source: {key}")
+            inputs.add(source["source_path"].partition("#")[0])
+    return report["records"]
 
 
 def _agent_records(repo: Path, inputs: set[str], reviews: dict | None = None, latest_reviews: dict | None = None) -> tuple[dict[str, list[dict]], list[dict]]:
-    reviews = reviews or {}
-    latest_reviews = latest_reviews or {}
+    reviews = reviews if reviews is not None else {}
+    # Retain negative-only ValidatedReviews and accept the older split-input API.
+    # Choose each artifact's newest receipt before resolving its whole family.
+    outcomes = {}
+    for source in (reviews, getattr(reviews, "latest", {}), latest_reviews if latest_reviews is not None else {}):
+        for artifact, receipt in source.items():
+            prior = outcomes.get(artifact)
+            at = datetime.fromisoformat(receipt["reviewed_at"].replace("Z", "+00:00"))
+            prior_at = datetime.fromisoformat(prior["reviewed_at"].replace("Z", "+00:00")) if prior else None
+            if at == prior_at and receipt != prior:
+                raise ValueError(f"Conflicting reviews at the same time: {artifact}")
+            if prior is None or at > prior_at:
+                outcomes[artifact] = receipt
     records: dict[str, list[dict]] = defaultdict(list)
     issues = []
     for path in sorted((repo / "docs/data/screening").glob("*.json")):
@@ -116,7 +187,8 @@ def _agent_records(repo: Path, inputs: set[str], reviews: dict | None = None, la
         for record_id, record in sorted(data.get("decisions", {}).items()):
             pointer = record_id.replace("~", "~0").replace("/", "~1")
             artifact = f"{relative}#/decisions/{pointer}"
-            projected, receipt, correction = reviewed_screening_projection(repo, artifact, record, reviews)
+            projected, receipt, correction = reviewed_screening_projection(repo, artifact, record, outcomes)
+            current_review = latest_screening_review(repo, artifact, outcomes)
             if receipt:
                 inputs.add(receipt["artifact"].partition("#")[0])
             annotation = next((a for a in record.get("annotations", []) if a.get("annotation_id") == record.get("active_annotation_id")), None)
@@ -130,9 +202,9 @@ def _agent_records(repo: Path, inputs: set[str], reviews: dict | None = None, la
                 "decision": body.get("decision"),
                 "analysis": projected.get("analysis", {}).get("fields", {}) if correction else body.get("analysis", {}).get("fields", {}),
                 "original_analysis": body.get("analysis", {}).get("fields", {}),
-                "current_ai_source_review": _review_summary(receipt),
-                "current_ai_review_result": receipt["result"] if receipt else latest_reviews.get(artifact, {}).get("result", "not_recorded"),
-                "latest_original_ai_source_review": _review_summary(latest_reviews.get(artifact)),
+                "current_ai_source_review": _review_summary(current_review),
+                "current_ai_review_result": current_review["result"] if current_review else "not_recorded",
+                "latest_original_ai_source_review": _review_summary(outcomes.get(artifact)),
                 "applied_ai_correction": correction,
                 "undecidable": body.get("analysis", {}).get("undecidable", {}),
                 "evidence_categories": sorted(body.get("evidence", {})),
@@ -199,7 +271,8 @@ def _assertions(repo: Path, inputs: set[str], reviews: dict | None = None) -> li
     return result
 
 
-def _work_rows(registry: dict, human: list[dict], agents: dict, queue: dict) -> tuple[list[dict], list[dict]]:
+def _work_rows(registry: dict, human: list[dict], agents: dict, queue: dict, resolution: dict | None = None) -> tuple[list[dict], list[dict]]:
+    resolution = resolution or {}
     index = registry["record_index"]
     works = {work["work_id"]: work for work in registry["works"]}
     human_by_record: dict[str, list[dict]] = defaultdict(list)
@@ -209,19 +282,23 @@ def _work_rows(registry: dict, human: list[dict], agents: dict, queue: dict) -> 
     for record_id, binding in index.items():
         record_groups[binding["work_id"]].append(record_id)
     queue_by_work = {row["work_id"]: row for row in queue.get("queue", [])}
-    unmapped = [{"type": "unmapped_human_record", "record_id": key, "historical_rows": human_by_record[key]} for key in sorted(human_by_record) if key not in index]
+    historical_bindings = {key: entry for key, entry in resolution.get("identity_resolutions", {}).items() if entry.get("outcome") == "resolved"}
+    unmapped = [{"type": "unmapped_human_record", "record_id": key, "historical_rows": human_by_record[key], "identity_resolution": resolution.get("identity_resolutions", {}).get(key)} for key in sorted(human_by_record) if key not in index and key not in historical_bindings]
     unmapped += [{"type": "unmapped_agent_record", "record_id": key} for key in sorted(agents) if key not in index]
     result = []
     for work_id, record_ids in sorted(record_groups.items()):
         work = works[work_id]
-        human_rows = [row for record_id in record_ids for row in human_by_record[record_id]]
+        bound_legacy = {key: entry for key, entry in historical_bindings.items() if entry["target_work_id"] == work_id}
+        human_rows = [row for record_id in [*record_ids, *bound_legacy] for row in human_by_record[record_id]]
+        work_resolution = resolution.get("work_resolutions", {}).get(work_id, {})
         agent_rows = [row for record_id in record_ids for row in agents.get(record_id, [])]
         human_decisions = sorted({row.get("Decision", "") for row in human_rows if row.get("Decision")})
         # Exclude/Duplicate is a record disposition, not a negative judgement of
         # the underlying work. Preserve it for audit, but do not invent a work
         # disagreement when another alias is explicitly included.
         duplicates = [row for row in human_rows if row.get("Decision") == "Exclude" and row.get("Exclusion_Reason", "").strip().casefold() == "duplicate"]
-        substantive_human = [row for row in human_rows if row not in duplicates]
+        metadata_ids = {item["record_id"] for item in work_resolution.get("administrative_record_dispositions", [])}
+        substantive_human = [row for row in human_rows if row not in duplicates and row["Zotero_Key"] not in metadata_ids]
         human_work_decisions = sorted({row.get("Decision", "") for row in substantive_human if row.get("Decision")})
         agent_decisions = sorted({row["decision"] for row in agent_rows if row["decision"]})
         open_reviews = sorted({row["record_id"] for row in agent_rows if row.get("current_ai_review_result") in {"changes_requested", "unverifiable"}})
@@ -231,10 +308,19 @@ def _work_rows(registry: dict, human: list[dict], agents: dict, queue: dict) -> 
         if len(agent_decisions) > 1:
             conflicts.append("conflicting_agent_decisions")
         if human_work_decisions and agent_decisions and human_work_decisions != agent_decisions:
-            conflicts.append("human_agent_decision_divergence")
+            if not (work_resolution.get("outcome") == "resolved" and work_resolution.get("resolution_kind", "").startswith("documented_round_specific")):
+                conflicts.append("human_agent_decision_divergence")
+        integrity_hold = bool(work_resolution.get("integrity_hold"))
+        source_hold = bool(work_resolution.get("withhold_from_current_synthesis"))
+        if integrity_hold:
+            conflicts.append("source_integrity_hold")
+        elif source_hold:
+            conflicts.append("source_version_hold")
         if open_reviews:
             conflicts.append("open_source_review")
         effective = human_work_decisions[0] if len(human_work_decisions) == 1 else agent_decisions[0] if not human_work_decisions and len(agent_decisions) == 1 else None
+        if work_resolution.get("outcome") == "resolved" and work_resolution.get("round1_effective_decision") != effective:
+            raise ValueError(f"Historical resolution differs from the retained human decision: {work_id}")
         eligible_agent_rows = [row for row in agent_rows if row["decision"] == "Include" and row["state"] in STATES[3:]]
         field_values, field_conflicts, field_undecidable = {}, {}, {}
         for name in sorted({name for names in FIELDS.values() for name in names} | {"AN_Coding_Basis", "AN_Prompting_Role", "Studientyp"}):
@@ -262,6 +348,10 @@ def _work_rows(registry: dict, human: list[dict], agents: dict, queue: dict) -> 
             actions.append("resolve_negative_source_review_before_using_affected_AI_coding")
         if effective == "Include" and not field_values:
             actions.append("complete_source_bound_SQ1_SQ2_SQ3_coding")
+        if work_resolution:
+            actions.extend(work_resolution.get("required_next_steps", []))
+        if source_hold:
+            actions.append("withhold_from_current_synthesis")
         result.append({
             "work_id": work_id, "title": work["canonical_title"], "record_ids": sorted(record_ids),
             "version_ids": sorted({index[key]["version_id"] for key in record_ids}),
@@ -270,6 +360,10 @@ def _work_rows(registry: dict, human: list[dict], agents: dict, queue: dict) -> 
             "human_decisions": human_decisions, "agent_decisions": agent_decisions,
             "human_substantive_decisions": human_work_decisions,
             "human_duplicate_record_ids": sorted(row["Zotero_Key"] for row in duplicates),
+            "human_metadata_error_record_ids": sorted(metadata_ids),
+            "historical_identity_bindings": bound_legacy,
+            "historical_resolution": work_resolution or None,
+            "integrity_hold": integrity_hold,
             "human_record_dispositions": [{"record_id": row["Zotero_Key"], "decision": row.get("Decision"), "reason": row.get("Exclusion_Reason"), "notes": row.get("Notes")} for row in human_rows],
             "effective_decision": effective,
             "decision_authority": "legacy_human" if human_work_decisions else "ai_review" if agent_decisions else "unassessed",
@@ -292,7 +386,7 @@ def _work_rows(registry: dict, human: list[dict], agents: dict, queue: dict) -> 
                 "corrected_at": row["applied_ai_correction"]["corrected_at"],
             } for row in agent_rows if row.get("applied_ai_correction")],
             "analysis_track": "recorded_ai_review",
-            "analysis_eligible": effective == "Include" and bool(eligible_agent_rows) and not open_reviews and not any(c.endswith("decisions") or c == "human_agent_decision_divergence" for c in conflicts),
+            "analysis_eligible": effective == "Include" and bool(eligible_agent_rows) and not open_reviews and not source_hold and not any(c.endswith("decisions") or c == "human_agent_decision_divergence" for c in conflicts),
             "analysis_fields": field_values, "analysis_conflicts": field_conflicts, "analysis_undecidable": field_undecidable,
             "conflicts": conflicts,
             "source_queue_status": queue_by_work.get(work_id, {}).get("queue_status"),
@@ -424,12 +518,22 @@ def build_package(repo: Path = REPO) -> dict:
     readiness = _json(repo / READY)
     followup = _json(repo / FOLLOWUP)
     schema = yaml.safe_load((repo / "assessment/categories.yaml").read_text(encoding="utf-8"))
-    agents, issues = _agent_records(repo, inputs, reviews, _latest_review_records(repo))
-    works, unmapped = _work_rows(registry, human, agents, queue)
+    agents, issues = _agent_records(repo, inputs, reviews, getattr(reviews, "latest", {}))
+    resolution = load_resolution(repo, registry, human, inputs)
+    if resolution:
+        inputs.add("src/analysis/historical_resolution.py")
+    works, unmapped = _work_rows(registry, human, agents, queue, resolution)
+    residual = _residual_progress(repo, registry, inputs)
+    for work in works:
+        progress = [residual[key] for key in work["record_ids"] if key in residual]
+        work["source_acquisition_progress"] = progress
+        work["next_actions"].extend(entry["next_step"] for entry in progress)
+        work["next_actions"].extend(review["recommended_disposition"] for entry in progress for review in entry.get("follow_up_reviews", []) if review.get("recommended_disposition"))
     issues.extend(unmapped)
     candidates = _candidate_rows(repo, package, readiness, registry, inputs)
     followup_candidates = _followup_rows(followup, registry)
     assertions = _assertions(repo, inputs, reviews)
+    knowledge_coverage = build_knowledge_coverage(repo, registry, inputs)
     source_records = [{"path": path, "sha256": _sha(repo / path)} for path in sorted(inputs)]
     fingerprint = "sha256:" + hashlib.sha256(_dump(source_records).encode("utf-8")).hexdigest()
     registry_extra = [work for work in registry["works"] if work["work_id"] not in {row["work_id"] for row in works}]
@@ -448,7 +552,10 @@ def build_package(repo: Path = REPO) -> dict:
             "works_with_open_ai_source_review": sum(bool(row["open_ai_source_review_record_ids"]) for row in works),
             "records_with_accepted_ai_correction": sum(len(row["corrected_ai_record_ids"]) for row in works),
             "unmapped_historical_human_records": sum(row["type"] == "unmapped_human_record" for row in issues),
+            "reconciled_historical_human_records": sum(len(row["historical_identity_bindings"]) for row in works),
+            "works_with_integrity_hold": sum(row["integrity_hold"] for row in works),
             "queued_source_works": len(queue.get("queue", [])),
+            "source_queue_works_with_newly_acquired_unbound_text": sum(bool(work["source_queue_status"]) and any(entry.get("original_text") for entry in work["source_acquisition_progress"]) for work in works),
             "canonical_decisions": dict(sorted(Counter(row["effective_decision"] or "unresolved" for row in works).items())),
             "candidates_2026": len(candidates), "candidates_2026_with_canonical_binding": sum(bool(row["canonical_bindings"]) for row in candidates),
             "candidates_2026_recorded_source_ready": sum(row["recorded_source_ready"] for row in candidates),
@@ -461,13 +568,17 @@ def build_package(repo: Path = REPO) -> dict:
             "assertion_states": dict(sorted(Counter(row["state"] for row in assertions).items())),
         },
         "works": works, "candidates_2026": candidates,
+        "historical_resolution_source": RESOLUTION_PATH if resolution else None,
+        "residual_resolution_source": RESIDUAL if residual else None,
         "targeted_followup": {"source": FOLLOWUP, **{key: followup.get(key) for key in ("search_date", "search_cutoff", "changes_main_search_cutoff", "search_type", "authority", "agent_id", "model", "model_id_status", "generated_at", "deduplication")}},
         "targeted_followup_candidates": followup_candidates,
         "registry_candidates_without_canonical_record": [{"work_id": work["work_id"], "title": work["canonical_title"], "flags": work.get("flags", []), "review_status": work.get("review_status", {}), "legacy_work_ids": work.get("legacy_work_ids", [])} for work in registry_extra],
         "analysis_tables": _analysis(works, schema), "analysis_field_definitions": schema["analysis_fields"],
         "assertions": assertions, "issues": issues,
+        "knowledge_coverage": knowledge_coverage,
         "interpretation_limits": [
             "Canonical counts use unique work_id; registry-only and unbound 2026 candidates are not silently pooled.",
+            "Stable Work IDs do not establish complete bibliographic deduplication. Shared knowledge documents and deferred identifier enrichments identify remaining reconciliation tasks; do not interpret current Work totals as a final count of distinct publications.",
             "Targeted gap-fill candidates form a separate identified, unbound and unscreened intake; neither the canonical nor the 2026-package denominator includes them.",
             "Human decisions retain priority; divergences and conflicting field values require explicit reconciliation.",
             "SQ tables describe recorded AI-review coding, not a completed full-corpus synthesis or human-verified result.",
@@ -480,6 +591,9 @@ def build_package(repo: Path = REPO) -> dict:
 
 def render_outputs(package: dict) -> dict[str, str]:
     counts = package["counts"]
+    coverage = package["knowledge_coverage"]
+    knowledge = coverage["counts"]
+    graph = coverage["graph"]
     fingerprint = package["source_fingerprint"]
     preamble = f"Source fingerprint: `{fingerprint}`. Deterministic internal preparation; no approval is created.\n"
     readme = "# Completion package\n\n" + preamble + f"""
@@ -496,7 +610,10 @@ Scope: existing corpus plus all already identified 2026 candidates (search cutof
 | Works with an unresolved negative AI source review | {counts['works_with_open_ai_source_review']} |
 | Records using an accepted immutable AI correction | {counts['records_with_accepted_ai_correction']} |
 | Historical human records missing canonical identity binding | {counts['unmapped_historical_human_records']} |
+| Historical human records reconciled to existing Works | {counts['reconciled_historical_human_records']} |
+| Works under a confirmed integrity hold | {counts['works_with_integrity_hold']} |
 | Source acquisition/screening queue | {counts['queued_source_works']} |
+| Queued Works with newly acquired text still requiring exact binding and source QC | {counts['source_queue_works_with_newly_acquired_unbound_text']} |
 | 2026 candidates | {counts['candidates_2026']} |
 | 2026 candidates with canonical binding | {counts['candidates_2026_with_canonical_binding']} |
 | 2026 candidates with recorded, locally hash-matching ready text | {counts['candidates_2026_current_ready_source']} |
@@ -506,11 +623,28 @@ Scope: existing corpus plus all already identified 2026 candidates (search cutof
 | Active assertions | {counts['active_assertions']} |
 | Assertions with current source-hash-bound AI review | {counts['active_assertions_with_current_ai_source_review']} |
 
+## Knowledge coverage
+
+| Availability measure (not verification) | Count |
+|---|---:|
+| Canonical records linked to an existing Knowledge Document | {knowledge['linked_records']} / {knowledge['canonical_records']} |
+| Distinct linked Knowledge Documents | {knowledge['distinct_linked_documents']} |
+| Work IDs with a linked Knowledge Document | {knowledge['linked_works']} / {knowledge['record_bound_works']} |
+| Work IDs without a linked Knowledge Document | {knowledge['works_without_linked_document']} |
+| Broken document links | {knowledge['broken_link_records']} |
+| Documents shared across multiple Work IDs (identity-review candidates) | {knowledge['shared_documents_across_works']} |
+| Canonical records mapped in the exploratory concept graph | {graph['canonical_mapped_records']} |
+| Graph keys without canonical record binding | {len(graph['unbound_record_keys'])} |
+
+`completion-package.json` → `knowledge_coverage` contains the exact missing-record/Work lists, shared-document identity candidates, unbound graph keys, isolated nodes, and the active versus legacy document inventory. Document availability does not establish scholarly verification or analysis eligibility. Graph edges represent concept co-occurrence, not supported scientific assertions. Stable Work IDs still require duplicate reconciliation; current totals are not a final count of distinct publications. The active Assertion slice above is the source-reviewed synthesis layer, while the larger linked archive remains a working input.
+
 Use `work-verification-queue.csv` to resolve discrepancies and missing coding per work. The complete JSON preserves each active annotation, recorded actors, models, event dates, and historical provenance gaps. Human annotations remain authoritative in their track; AI review is labelled separately and can be used according to the configured publication policy. No new human verification is inferred from old CSV rows.
 
-Accepted corrections are applied only as source-hash-bound projections. The JSON retains the original analysis, original review outcome, correction base artifact/hash, exact field differences and correcting agent/model/time. The work queue links each correction and its immutable basis with agent, model and dates. A negative original review is resolved for the projected coding only by a later accepted correction. Further review of corrected coding must target its correction artifact; review authority belongs to the exact artifact. Unresolved negative reviews remain open and their work is excluded from interim AI analysis counts.
+Accepted corrections are applied only as source-hash-bound projections. The JSON retains the original analysis, original review outcome, correction base artifact/hash, exact field differences and correcting agent/model/time. The work queue links each correction and its immutable basis with agent, model and dates. A negative original review is resolved for the projected coding only by an accepted review of its exact correction. Rejection and correction acceptance may share a timestamp only for the same agent/model and the exact original-hash-bound correction; other simultaneous conflicts fail closed. Further review of corrected coding must target its correction artifact; review authority belongs to the exact artifact. Unresolved negative reviews remain open and their work is excluded from interim AI analysis counts.
 
-An explicit historical `Exclude` / `Duplicate` disposition applies to the bibliographic record, not the work, and does not contradict an included alias. Other conflicting exclusions remain unresolved. `unmapped-historical-records.csv` retains legacy decisions that cannot currently be placed in the registry; they are not silently dropped into the canonical denominator.
+An explicit historical `Exclude` / `Duplicate` disposition applies to the bibliographic record, not the work, and does not contradict an included alias. Attributed source-grounded historical resolutions can additionally identify an author-error exclusion as an administrative metadata disposition; exact original row hashes and target Work bindings are checked before applying it. The original decision remains visible. Substantive human conflicts stay unresolved. Documented round-specific differences keep their separate human and AI decisions. Source/version and withdrawal holds prevent current synthesis regardless of the historical Include decision.
+
+`unmapped-historical-records.csv` retains legacy decisions that cannot currently be placed in the registry. `historical-recovery.ris` prepares independently confirmed missing publications for Zotero import; it does not create Zotero IDs, new inclusion decisions or verification events. The evidence and unresolved empty record are recorded in `generated/verification/historical-resolution-2026-09-05.json`.
 
 Use `candidate-2026-readiness.csv` for import, exact Work-Version binding, source exceptions and remaining preparation. Existing Zotero and manuscript files are not changed. Registry-only candidates are retained separately in `registry-candidate-queue.csv`; overlap with the 2026 package must be curated, so these counts cannot be added.
 
@@ -531,6 +665,8 @@ This directory is an internal operator package and is not a website release inpu
 | decision_authority | legacy_human, ai_review or unassessed; distinct tracks are never silently promoted. |
 | effective_decision | One consistent substantive human decision if recorded, otherwise one consistent AI decision; null on unresolved within-track conflict or absence. Explicit Exclude/Duplicate is a record disposition, not a substantive work exclusion. |
 | human_substantive_decisions / human_duplicate_record_ids | Work judgements and administrative duplicate records are distinct; all original dispositions and reasons remain in human_record_dispositions. |
+| historical_identity_bindings / human_metadata_error_record_ids | Attributed exact-row reconciliations link otherwise unbound historical decisions or separate documented metadata-error dispositions; they do not modify the Zotero library or historical CSV. |
+| historical_resolution / integrity_hold | Source-grounded conflict explanation, separate round-specific recommendation and any current source/withdrawal hold. A hold does not rewrite the historical decision and prevents current synthesis. |
 | human_verification | Historical CSV evidence or missing evidence; never a fabricated current lifecycle event. |
 | agent_records | Active annotation, lifecycle events, actor/model provenance, source references and legacy gaps as recorded. |
 | current_ai_source_review | Current accepted source-hash-bound review with actual agent, disclosed model, time and substantive findings; historical provenance remains separate. |
@@ -541,6 +677,8 @@ This directory is an internal operator package and is not a website release inpu
 | analysis_fields | Consistent coded values across Include annotations of the work; absent values remain missing. |
 | analysis_conflicts / analysis_undecidable | Conflicting or explicitly undecidable coding; excluded from that field's denominator. |
 | source_blockers / next_actions | Preparation actions for the operator, not automatic exclusion reasons. |
+| source_acquisition_progress | Attributed metadata corrections and original-text acquisitions, checked against raw record and evidence hashes. An acquired text alone does not establish screening readiness or scholarly verification. |
+| knowledge_coverage | Deterministic availability inventory with missing documents, identity-review candidates and concept-graph binding gaps. Active maturity labels are recorded literally and do not substitute for current review receipts. |
 | candidate_id / canonical_bindings | Search-package identity and explicit current Zotero/registry mapping; title similarity never binds identities. |
 | targeted_followup_candidates | Separate gap-fill intake; preserves original candidate metadata and status, gap rationale, required next steps, source access, exact-version details and identification provenance. |
 | targeted_followup.source / targeted_followup_candidates[].source_artifact | Fingerprinted intake JSON and exact original candidate pointer. Source reading is identification evidence, not a new screening or human-verification event. |
@@ -583,8 +721,9 @@ Controlled descriptive fields below come from `assessment/categories.yaml`. They
     return {
         "completion-package.json": _dump(package), "README.md": readme,
         "data-dictionary.md": dictionary, "synthesis-outline.md": outline,
-        "work-verification-queue.csv": _csv(package["works"], ["work_id", "title", "record_ids", "preferred_version_id", "human_decisions", "human_substantive_decisions", "human_duplicate_record_ids", "agent_decisions", "decision_authority", "human_verification", "agent_lifecycle_states", "current_ai_review_results", "corrected_ai_record_ids", "ai_correction_provenance", "open_ai_source_review_record_ids", "effective_decision", "analysis_eligible", "analysis_conflicts", "analysis_undecidable", "conflicts", "source_queue_status", "source_blockers", "next_actions"]),
+        "work-verification-queue.csv": _csv(package["works"], ["work_id", "title", "record_ids", "preferred_version_id", "human_decisions", "human_substantive_decisions", "human_duplicate_record_ids", "human_metadata_error_record_ids", "historical_identity_bindings", "historical_resolution", "integrity_hold", "agent_decisions", "decision_authority", "human_verification", "agent_lifecycle_states", "current_ai_review_results", "corrected_ai_record_ids", "ai_correction_provenance", "open_ai_source_review_record_ids", "effective_decision", "analysis_eligible", "analysis_conflicts", "analysis_undecidable", "conflicts", "source_queue_status", "source_blockers", "source_acquisition_progress", "next_actions"]),
         "unmapped-historical-records.csv": _csv([issue for issue in package["issues"] if issue["type"] == "unmapped_human_record"], ["record_id", "type", "historical_rows"]),
+        "historical-recovery.ris": _historical_recovery_ris(package["issues"]),
         "candidate-2026-readiness.csv": _csv(package["candidates_2026"], ["candidate_id", "title", "doi", "selected_version_date", "source_lanes", "zotero_status", "canonical_bindings", "source_readiness", "recorded_source_ready", "source_hash_matches", "screening_markdown_file", "screening_status", "conflicts_or_constraints", "pending_zotero_corrections", "next_actions"]),
         "targeted-followup-queue.json": _dump({"schema": "femprompt-targeted-followup-queue/0.1", "source_fingerprint": fingerprint, "scope": "separate_targeted_gap_fill_intake", "provenance": package["targeted_followup"], "candidates": package["targeted_followup_candidates"]}),
         "targeted-followup-queue.csv": _csv(package["targeted_followup_candidates"], ["candidate_id", "title", "year", "doi", "arxiv_id", "version", "gap", "status", "canonical_bindings", "source_access", "peer_review_evidence", "landing_url", "fulltext_url", "required_next_steps", "source_artifact", "identification_provenance", "authority_note"]),

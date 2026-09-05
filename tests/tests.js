@@ -94,6 +94,49 @@ var LS_KEY = 'femprompt-prisma-state/0.2';
 var lsBackup = null, lsReadable = false;
 try { lsBackup = localStorage.getItem(LS_KEY); lsReadable = true; } catch (e) {}
 
+test('PRISM defaults to reading without reviewer or folder setup', function() {
+    assertEqual(T.canEdit(), false);
+    var el = document.createElement('section');
+    T.renderData(el);
+    assertContains(el.textContent, 'Papers lesen');
+    assert(!el.querySelector('input, form, .pt-folder-action, .pt-change-folder'), 'no author setup in read mode');
+    assertEqual(T.selectReviewer('cp'), false, 'reviewer selection requires explicit editing');
+});
+
+test('read mode blocks annotation, analysis, reviewer imports and persistence even with a saved profile', function() {
+    var S = T.getState();
+    S.reviewer = 'reader'; S.index = 0;
+    S.reviewers.reader = { readPaper: { decision: 'Include', categories: { Gender: 2 }, evidence: {}, text_source: 'raw' } };
+    T.setPapers([{ id: 'readPaper' }]);
+    T.resetWork({ id: 'readPaper' });
+    T.getWork().reason = 'Not_relevant_topic';
+    var before = JSON.stringify(S.reviewers);
+    var draft = JSON.stringify(T.getWork());
+    var stored = localStorage.getItem(LS_KEY);
+    T.pinEvidence('Gender', 'gender', 'gender evidence', 'human');
+    T.unpinEvidence('Gender', 0);
+    T.editRecord({ id: 'readPaper' });
+    T.setAnalysis('readPaper', { fields: { Studientyp: 'Empirisch' } });
+    T.commit(); T.save();
+    assertEqual(T.importReviewerPayload({ decisions: { imported: { decision: 'Exclude' } } }, 'reader', true).reason, 'read-only');
+    assertEqual(JSON.stringify(S.reviewers), before, 'stored annotations untouched');
+    assertEqual(JSON.stringify(T.getWork()), draft, 'draft untouched by mutation entry points');
+    assertEqual(localStorage.getItem(LS_KEY), stored, 'read mode writes no browser cache');
+    S.reviewer = null; S.reviewers = {}; T.setPapers([]);
+});
+
+test('explicit editing reveals reviewer setup and returning to reading hides it', function() {
+    var el = document.createElement('section');
+    assertEqual(T.setEditMode(true), true);
+    T.renderData(el);
+    assert(!!el.querySelector('#pt-reviewer-key'), 'setup becomes available after opt-in');
+    T.setEditMode(false); T.renderData(el);
+    assert(!el.querySelector('#pt-reviewer-key'), 'returning to reading hides setup');
+});
+
+// The remaining fixtures exercise explicit authoring workflows and pure helpers.
+T.setEditMode(true);
+
 // ============================================================
 // Section A: decision derivation truth table
 // ============================================================

@@ -12,6 +12,7 @@
 # Source captures and generated research artifacts preserve source-exact text.
 # Their recorded hashes take precedence over Git's whitespace heuristic.
 corpus/deep-research/round2/** -whitespace
+corpus/source-acquisition/** -whitespace
 generated/markdown/** -whitespace
 generated/markdown_clean/** -whitespace
 generated/source-acquisition/** -whitespace

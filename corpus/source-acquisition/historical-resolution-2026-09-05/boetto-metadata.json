@@ -1,0 +1,521 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          8,
+          31
+        ]
+      ],
+      "date-time": "2026-08-31T11:04:24Z",
+      "timestamp": 1788174264264,
+      "version": "build-2803163510"
+    },
+    "reference-count": 49,
+    "publisher": "Informa UK Limited",
+    "issue": "3",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              4,
+              27
+            ]
+          ],
+          "date-time": "2025-04-27T00:00:00Z",
+          "timestamp": 1745712000000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "http://creativecommons.org/licenses/by-nc-nd/4.0/"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              4,
+              27
+            ]
+          ],
+          "date-time": "2025-04-27T00:00:00Z",
+          "timestamp": 1745712000000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.1080/policies-text-data-mining"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "www.tandfonline.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Australian Social Work"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          3
+        ]
+      ]
+    },
+    "DOI": "10.1080/0312407x.2025.2488345",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2025,
+          4,
+          27
+        ]
+      ],
+      "date-time": "2025-04-27T21:15:24Z",
+      "timestamp": 1745788524000
+    },
+    "page": "292-305",
+    "update-policy": "https://doi.org/10.1080/tandf_crossmark_01",
+    "source": "Crossref",
+    "is-referenced-by-count": 20,
+    "title": [
+      "Artificial Intelligence in Social Work: An EPIC Model for Practice"
+    ],
+    "prefix": "10.1080",
+    "volume": "79",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-3606-7878",
+        "authenticated-orcid": false,
+        "given": "Heather",
+        "family": "Boetto",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Charles Sturt University",
+            "place": [
+              "Wagga Wagga, Australia"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "301",
+    "published-online": {
+      "date-parts": [
+        [
+          2025,
+          4,
+          27
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_3_2_2_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1186/s12909-023-04698-z"
+      },
+      {
+        "key": "e_1_3_2_3_1",
+        "unstructured": "Australian Association of Social Workers. (2016). Social media information and communication technology: Part 3. https://www.aasw.asn.au/about-aasw/ethics-standards/ethics-and-practice-guidelines/"
+      },
+      {
+        "key": "e_1_3_2_4_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/s41746-024-01072-1"
+      },
+      {
+        "key": "e_1_3_2_5_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-031-06709-9_1"
+      },
+      {
+        "key": "e_1_3_2_6_1",
+        "volume-title": "The Fair and Responsible AI Workshop at the 2020 CHI Conference on Human Factors in Computing Systems",
+        "author": "Black E.",
+        "year": "2020",
+        "unstructured": "Black, E., Williams, J., Madaio, M. A., & Donti, P. L. (2020, April). A call for universities to develop requirements for community engagement in AI research. In The Fair and Responsible AI Workshop at the 2020 CHI Conference on Human Factors in Computing Systems. https://fair-ai.academicwebsite.com/publications/1480-a-call-for-universities-to-develop-requirements-for-community-engagement-in-ai-research"
+      },
+      {
+        "key": "e_1_3_2_7_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1056/AIpc2400545"
+      },
+      {
+        "key": "e_1_3_2_8_1",
+        "article-title": "Gender shades: Intersectional accuracy disparities in commercial gender classification",
+        "author": "Buolamwini J.",
+        "year": "2018",
+        "unstructured": "Buolamwini, J., & Gebru, T. (2018). Gender shades: Intersectional accuracy disparities in commercial gender classification. In Proceedings of Machine Learning Research 81:115, 2018 Conference on Fairness, Accountability, and Transparency (pp. 1–15). https://proceedings.mlr.press/v81/buolamwini18a.html",
+        "journal-title": "Proceedings of Machine Learning Research 81:115, 2018 Conference on Fairness, Accountability, and Transparency"
+      },
+      {
+        "key": "e_1_3_2_9_1",
+        "unstructured": "Canadian Association of Social Workers. (2014). Social media use and social work practice. https://www.casw-acts.ca/en/javascript%3A%20void%280%29%3B/casw-social-media-use-and-social-work-practice"
+      },
+      {
+        "key": "e_1_3_2_10_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s13347-020-00415-6"
+      },
+      {
+        "key": "e_1_3_2_11_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/17525098.2023.2176901"
+      },
+      {
+        "key": "e_1_3_2_12_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/20552076231183542"
+      },
+      {
+        "key": "e_1_3_2_13_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/02615479.2022.2057942"
+      },
+      {
+        "key": "e_1_3_2_14_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1353/hpu.2021.0065"
+      },
+      {
+        "key": "e_1_3_2_15_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.4324/9781003280392-2"
+      },
+      {
+        "key": "e_1_3_2_16_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3593013.3594094"
+      },
+      {
+        "key": "e_1_3_2_17_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/d41586-024-01588-2"
+      },
+      {
+        "key": "e_1_3_2_18_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.intell.2024.101832"
+      },
+      {
+        "key": "e_1_3_2_19_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.4324/9780429438813-32"
+      },
+      {
+        "key": "e_1_3_2_20_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1017/9781108669016.015"
+      },
+      {
+        "key": "e_1_3_2_21_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1093/bjsw/bcab168"
+      },
+      {
+        "key": "e_1_3_2_22_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-031-54252-7_3"
+      },
+      {
+        "key": "e_1_3_2_23_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3390/ijerph20064984"
+      },
+      {
+        "key": "e_1_3_2_24_1",
+        "unstructured": "International Federation of Social Workers. (2018). Global social work statement of ethical principles. https://www.ifsw.org/global-social-work-statement-of-ethical-principles/"
+      },
+      {
+        "key": "e_1_3_2_25_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/26408066.2022.2159777"
+      },
+      {
+        "key": "e_1_3_2_26_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/0261018320985463"
+      },
+      {
+        "key": "e_1_3_2_27_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s12525-021-00475-2"
+      },
+      {
+        "key": "e_1_3_2_28_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3390/educsci14020172"
+      },
+      {
+        "key": "e_1_3_2_29_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3389/fdgth.2023.1278186"
+      },
+      {
+        "key": "e_1_3_2_30_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/17483107.2023.2288241"
+      },
+      {
+        "key": "e_1_3_2_31_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/1369118X.2023.2234987"
+      },
+      {
+        "key": "e_1_3_2_32_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s00146-024-01994-0"
+      },
+      {
+        "key": "e_1_3_2_33_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.7577/pp.5108"
+      },
+      {
+        "key": "e_1_3_2_34_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/13691457.2022.2063806"
+      },
+      {
+        "key": "e_1_3_2_35_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1186/s13012-017-0641-5"
+      },
+      {
+        "key": "e_1_3_2_36_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s13347-022-00588-2"
+      },
+      {
+        "key": "e_1_3_2_37_1",
+        "unstructured": "National Association of Social Workers (NASW). (2017). Standards for technology in social work practice. https://www.socialworkers.org/LinkClick.aspx?fleticket=lcTcdsHUcng%3d&portalid=0"
+      },
+      {
+        "key": "e_1_3_2_38_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.artmed.2022.102395"
+      },
+      {
+        "key": "e_1_3_2_39_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1017/9781108669016.002"
+      },
+      {
+        "key": "e_1_3_2_40_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.55521/10-020-205"
+      },
+      {
+        "key": "e_1_3_2_41_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1017/9781108669016.002"
+      },
+      {
+        "key": "e_1_3_2_42_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-031-21448-6_2"
+      },
+      {
+        "key": "e_1_3_2_43_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/14614448241234040"
+      },
+      {
+        "key": "e_1_3_2_44_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.eswa.2023.122010"
+      },
+      {
+        "key": "e_1_3_2_45_1",
+        "unstructured": "United Nations. (2024). Seizing the opportunities of safe secure and trustworthy artificial intelligence systems for sustainable development. https://press.un.org/en/2024/ga12588.doc.htm"
+      },
+      {
+        "key": "e_1_3_2_46_1",
+        "volume-title": "Investigation into the use of ChatGPT by a child protection worker",
+        "author": "Victorian Government",
+        "year": "2024",
+        "unstructured": "Victorian Government. (2024). Investigation into the use of ChatGPT by a child protection worker. Office of Victorian Information Commissioner. https://ovic.vic.gov.au/regulatory-action/investigation-into-the-use-of-chatgpt-by-a-child-protection-worker/"
+      },
+      {
+        "key": "e_1_3_2_47_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1136/medethics-2021-107529"
+      },
+      {
+        "key": "e_1_3_2_48_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/2167702617691560"
+      },
+      {
+        "key": "e_1_3_2_49_1",
+        "volume-title": "The global risks report",
+        "author": "World Economic Forum",
+        "year": "2024",
+        "unstructured": "World Economic Forum. (2024). The global risks report (19th ed.). https://www.weforum.org/publications/global-risks-report-2024/",
+        "edition": "19"
+      },
+      {
+        "key": "e_1_3_2_50_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2196/47217"
+      }
+    ],
+    "container-title": [
+      "Australian Social Work"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://www.tandfonline.com/doi/pdf/10.1080/0312407X.2025.2488345",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://www.tandfonline.com/doi/full-xml/10.1080/0312407X.2025.2488345",
+        "content-type": "application/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://www.tandfonline.com/doi/pdf/10.1080/0312407X.2025.2488345",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2026,
+          6,
+          25
+        ]
+      ],
+      "date-time": "2026-06-25T03:07:29Z",
+      "timestamp": 1782356849000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://www.tandfonline.com/doi/full/10.1080/0312407X.2025.2488345"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          4,
+          27
+        ]
+      ]
+    },
+    "references-count": 49,
+    "journal-issue": {
+      "issue": "3",
+      "published-print": {
+        "date-parts": [
+          [
+            2026,
+            7,
+            3
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "10.1080/0312407X.2025.2488345"
+    ],
+    "URL": "https://doi.org/10.1080/0312407x.2025.2488345",
+    "relation": {},
+    "ISSN": [
+      "0312-407X",
+      "1447-0748"
+    ],
+    "issn-type": [
+      {
+        "value": "0312-407X",
+        "type": "print"
+      },
+      {
+        "value": "1447-0748",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2025,
+          4,
+          27
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "The publishing and review policy for this title is described in its Aims & Scope.",
+        "order": 1,
+        "name": "peerreview_statement",
+        "label": "Peer Review Statement"
+      },
+      {
+        "value": "http://www.tandfonline.com/action/journalInformation?show=aimsScope&journalCode=rasw20",
+        "URL": "http://www.tandfonline.com/action/journalInformation?show=aimsScope&journalCode=rasw20",
+        "order": 2,
+        "name": "aims_and_scope_url",
+        "label": "Aim & Scope"
+      },
+      {
+        "value": "2024-09-22",
+        "order": 0,
+        "name": "received",
+        "label": "Received",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      },
+      {
+        "value": "2025-03-30",
+        "order": 2,
+        "name": "accepted",
+        "label": "Accepted",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      },
+      {
+        "value": "2025-04-27",
+        "order": 3,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

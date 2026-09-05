@@ -214,9 +214,10 @@ def _validate_recorded_identity(
     version_id: Any,
     paper: dict[str, Any],
     allow_legacy: bool,
+    source_version_id: str | None = None,
 ) -> None:
     """Normalize only documented legacy identities, never conflicting ones."""
-    if version_id not in (None, "", paper.get("version_id")):
+    if version_id not in (None, "", paper.get("version_id"), source_version_id):
         raise ValueError(f"{paper_id}: recorded version identity differs from corpus")
     if work_id in (None, "", paper.get("work_id")):
         return
@@ -242,7 +243,9 @@ def _validate_and_transform_record(
     analysis_schema: dict[str, Any],
     allowed_categories: frozenset[str],
     ai_verification: dict[str, Any] | None = None,
+    repo: Path | None = None,
 ) -> dict[str, Any]:
+    repo = repo or REPO_ROOT
     outcome = decision.get("decision")
     if outcome not in DECISIONS:
         raise ValueError(f"{paper_id}: unsupported decision {outcome!r}")
@@ -250,6 +253,17 @@ def _validate_and_transform_record(
     bound_identity = binding == {"paper_id": paper_id, "work_id": paper.get("work_id"), "version_id": paper.get("version_id")}
     if binding is not None and not bound_identity:
         raise ValueError(f"{paper_id}: AI verification receipt canonical binding differs from corpus")
+    source_binding = (ai_verification or {}).get("source_binding")
+    source_body = None
+    if source_binding:
+        from src.assess.artifact_verification import review_source_binding, safe_path
+        registry = _read_json(repo / "corpus/work_version_registry.json")
+        source_binding = review_source_binding(repo, registry, ai_verification)
+        if source_binding != paper.get("source_binding"):
+            raise ValueError(f"{paper_id}: reviewed source binding differs from corpus")
+        source_body = " ".join(safe_path(repo, source_binding["source_path"]).read_text(encoding="utf-8").split())
+    elif paper.get("source_binding"):
+        raise ValueError(f"{paper_id}: governed manuscript requires explicit source-bound verification")
     _validate_recorded_identity(
         paper_id, decision.get("work_id"), decision.get("version_id"), paper, bound_identity
     )
@@ -263,13 +277,19 @@ def _validate_and_transform_record(
         evidence = _paper_evidence(decision, category)
         for passage in evidence:
             _validate_recorded_identity(
-                paper_id, passage["work_id"], passage["version_id"], paper, bound_identity
+                paper_id, passage["work_id"], passage["version_id"], paper, bound_identity,
+                source_binding["source_version_id"] if source_binding else None,
             )
+            if source_binding and any(" ".join(passage[field].split()) not in source_body for field in ("term", "snippet")):
+                raise ValueError(f"{paper_id}: category quotation does not resolve in the bound manuscript")
             if bound_identity:
                 passage["recorded_work_id"] = passage["work_id"]
                 passage["recorded_version_id"] = passage["version_id"]
                 passage["work_id"] = paper["work_id"]
-                passage["version_id"] = paper["version_id"]
+                passage["version_id"] = source_binding["source_version_id"] if source_binding else paper["version_id"]
+                if source_binding:
+                    passage["source_path"] = source_binding["source_path"]
+                    passage["source_sha256"] = source_binding["source_sha256"]
         if not evidence:
             raise ValueError(
                 f"{paper_id}: positive category {category} has no Paper evidence"
@@ -302,6 +322,9 @@ def _validate_and_transform_record(
         "journal": paper.get("journal", ""),
         "work_id": paper.get("work_id") or f"record:{paper_id}",
         "version_id": paper.get("version_id"),
+        "bibliographic_version_id": paper.get("version_id"),
+        "source_version_id": source_binding["source_version_id"] if source_binding else paper.get("version_id"),
+        "source_binding": deepcopy(source_binding),
         "version_type": paper.get("version_type", "unknown"),
         "version_date": paper.get("version_date", ""),
         "peer_review_status": paper.get("peer_review_status", "not_established"),
@@ -322,7 +345,7 @@ def _validate_and_transform_record(
         "recorded_identity": {"work_id": decision.get("work_id"), "version_id": decision.get("version_id")},
         "ai_verification": {
             key: deepcopy(ai_verification[key])
-            for key in ("artifact", "sha256", "result", "review_type", "agent_id", "model", "model_id_status", "reviewed_at", "findings", "canonical_binding", "field_changes")
+            for key in ("artifact", "sha256", "result", "review_type", "agent_id", "model", "model_id_status", "reviewed_at", "findings", "canonical_binding", "source_binding", "field_changes")
             if key in ai_verification
         } if ai_verification else None,
         "verification": {
@@ -391,6 +414,7 @@ def _aggregate_works(
         work["record_ids"] = sorted(record["id"] for record in aliases)
         work["corpus_record_ids"] = sorted(corpus_aliases[work_id])
         work["version_ids"] = sorted({record["version_id"] for record in aliases if record["version_id"]})
+        work["source_version_ids"] = sorted({record["source_version_id"] for record in aliases if record.get("source_version_id")})
         work["source_records"] = deepcopy(sorted(aliases, key=lambda record: record["id"]))
         for category in work["categories"]:
             category["evidence"] = [
@@ -412,8 +436,10 @@ def build(
     work_version_contract_path: Path = DEFAULT_WORK_VERSION_CONTRACT,
     publication_policy: dict[str, Any] | None = None,
     verification_receipts: dict[str, dict[str, Any]] | None = None,
+    repo: Path | None = None,
 ) -> dict[str, Any]:
     """Join and verify the productive track, returning deterministic public data."""
+    repo = repo or REPO_ROOT
     screening = _read_json(screening_path)
     try:
         from src.assess.screening_lifecycle import require_valid_document
@@ -442,7 +468,7 @@ def build(
         raise ValueError("Screening track has no decisions object")
 
     try:
-        screening_file = screening_path.relative_to(REPO_ROOT).as_posix()
+        screening_file = screening_path.relative_to(repo).as_posix()
     except ValueError:
         screening_file = screening_path.name
     allowed_states = set((publication_policy or {}).get("allowed_states", [PUBLICATION_STATE]))
@@ -451,10 +477,15 @@ def build(
 
     records = []
     withheld_total = 0
+    from src.analysis.historical_resolution import load_source_holds
+    source_holds = load_source_holds(repo)
     for paper_id in sorted(decisions):
         paper = paper_by_id.get(paper_id)
         if paper is None:
             raise ValueError(f"{paper_id}: screening decision has no corpus metadata")
+        if paper.get("source_hold") or paper.get("work_id") in source_holds:
+            withheld_total += 1
+            continue
         decision = decisions[paper_id]
         if not isinstance(decision, dict):
             raise ValueError(f"{paper_id}: decision must be an object")
@@ -468,7 +499,7 @@ def build(
             pointer_id = paper_id.replace("~", "~0").replace("/", "~1")
             artifact = f"{screening_file}#/decisions/{pointer_id}"
             decision, receipt, correction = reviewed_screening_projection(
-                REPO_ROOT, artifact, decision,
+                repo, artifact, decision,
                 verification_receipts if verification_receipts is not None else {},
             )
             if receipt is None or receipt.get("result") != "accepted":
@@ -483,13 +514,13 @@ def build(
                 raise ValueError(f"{paper_id}: AI verification receipt lacks attribution")
             if not any(
                 source.get("work_id") == paper.get("work_id")
-                and source.get("version_id") == paper.get("version_id")
+                and source.get("version_id") == (receipt.get("source_binding") or {}).get("source_version_id", paper.get("version_id"))
                 for source in receipt.get("evidence", []) if isinstance(source, dict)
             ):
                 raise ValueError(f"{paper_id}: AI verification receipt has no matching Work-Version evidence")
         records.append(
             _validate_and_transform_record(
-                paper_id, decision, paper, analysis_schema, categories, receipt
+                paper_id, decision, paper, analysis_schema, categories, receipt, repo
             )
         )
         if correction:

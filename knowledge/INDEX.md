@@ -15,9 +15,9 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-06-29
-updated: 2026-08-24
+updated: 2026-09-05
 authors: [Christopher Pollin]
-generated-with: Claude Code
+generated-with: Claude Code, Codex (GPT-6)
 related: [project, methods, specification, data, standards, governance, testing, verification, plan, journal, handoff, update-protocol, research-vault, analysis-divergence, analysis-sq-advisory]
 ---
 
@@ -67,6 +67,8 @@ This knowledge base follows the convention for Promptotyping documents. It fixes
 
 These documents describe the result and the decisions behind it, not how an agent session was organised. Lane, persona, and mission-control framing therefore stays out of the prose, while the content of an operator decision and its date remain recorded.
 
+Frontmatter such as `status: complete` describes the documentation artifact. It does not declare that the literature review, source coverage, distillation or manuscript is complete. Use the [completion package](../generated/completion/README.md), the [released Assertion index](../docs/data/assertion_index.json) and [[verification]] for those states. Dated ADRs and journal entries preserve their historical decisions; current publication rules are in [[governance#Publication boundary]].
+
 ## Glossary
 
 The project-constitutive terms, alphabetical. Sibling documents use these terms; this is where they are defined.
@@ -90,7 +92,7 @@ The degradation of an LLM's processing quality as the input grows longer (Hong e
 Agent-based LLM systems for iterative, autonomous literature search with cited synthesis. Four were used for identification (ChatGPT, Claude, Gemini, Perplexity).
 
 ### Distilled knowledge document
-A structured, source-specific reduction of a full text. It records metadata, method, central findings, relevant arguments, and traceable source anchors. Distillation is a context-engineering technique that reduces context-window load and context rot while preserving a route back to the full text.
+A structured, source-specific reduction of a full text. It records metadata, method, central findings, relevant arguments, and traceable source anchors. Distillation reduces the working context while retaining a route back to the full text. Historical generated documents are an archive of this transformation; only explicitly checked active distillates support the current Assertion chain. A document's existence, a corpus link, and an accepted source review are separate states; [[research-vault]] defines the coverage boundary.
 
 ### Divergence
 A disagreement between the human and the LLM assessment of a paper, on the decision or on a category. The motivating illustration for the infrastructure; classified into three patterns (Semantic Expansion, Implicit Field Membership, Keyword Inclusion). Divergence is reported as divergence, never as an error rate, because the human track has no independent inter-human baseline. The figures and the decomposition live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion.
@@ -105,7 +107,7 @@ The evidence structure `sources → Markdown → distilled knowledge documents �
 The separation of AI-agent runs by context, reviewer identity, input assignment, and output path. It limits direct cross-track contamination and makes execution conditions auditable. It does not establish epistemic independence between language models.
 
 ### Publication approval
-The explicit transition that permits a verified record or output to enter a public projection. Verification and publication approval remain separate events so that internally verified material can still be withheld.
+The person-attributed lifecycle transition from `verified` to `publication-approved`. It governs final scholarly release. The operator separately authorised a labelled preliminary AI-source-reviewed projection under `config/publication_policy.json`; this does not create a human approval event. [[governance#Publication boundary]] defines the two release bases.
 
 ### Publication version
 A separately addressable expression of one scholarly work, such as an author original, Preprint, Accepted Manuscript, proof, Version of Record, or corrected Version of Record. Its publication stage, date, identifiers, access state, integrity state, and peer-review status are recorded independently. Publication stage is descriptive metadata and does not establish scholarly quality.
@@ -129,7 +131,7 @@ A division of labour in which the agents process knowledge in fundamentally diff
 The totality of procedures, documentation structures, distinct control points, and responsibility assignments that make LLM contributions in research verifiable, traceable, and accountable. The project's guiding concept. Core principle: reliability is not a property of the system to be presupposed but a property of the process to be established.
 
 ### Evidence Companion
-The web-based academic companion publication at https://chpollin.github.io/FemPrompt_SozArb/. Five views render the corpus and its research layers. Knowledge Chat and Knowledge Graph operate on the distilled knowledge documents, the Literature Landscape operates on productive PRISM annotations, Categories presents the historical dual-assessment comparison, and Corpus is the reference layer.
+The working research application under `docs/` renders corpus metadata, the historical benchmark and legacy knowledge archive alongside productive research projections. Its grounded chat retrieves only released Assertions and their exact evidence, not the entire archive. The separately generated result site under `build/site/` contains the allowlisted source-reviewed subset and matching download. A local build does not establish what is currently deployed at the GitHub Pages address.
 
 ### Jagged frontier
 The uneven competence distribution of AI systems, strong on some tasks and weak on adjacent ones (Mollick). In this project, the LLM scores high agreement on explicit categories (Soziale_Arbeit, Feministisch) and low on interpretive ones (Gender).

@@ -10,7 +10,7 @@ Part of the [Elisabeth List Fellowship project "Diversity-Sensitive Engagement w
 
 ## Project Goal
 
-Systematic literature review on **feminist AI literacy** and **LLM bias** in the context of social work, building an epistemic infrastructure for LLM-assisted literature reviews. Documented in a paper for Forum Wissenschaft 2/2026 (submitted and editorially closed).
+Systematic literature review on **feminist AI literacy** and **LLM bias** in the context of social work, building an epistemic infrastructure for LLM-assisted literature reviews. An earlier article for Forum Wissenschaft 2/2026 is submitted and editorially closed. The current corpus completion and follow-up manuscript remain open.
 
 ## Corpus and Assessment
 
@@ -18,16 +18,13 @@ A corpus identified via four Deep Research systems, screened in two parallel, in
 
 | Track | Schema | Status |
 |-------|--------|--------|
-| Human | 10 binary categories | Complete |
-| LLM (10K) | 10 binary categories | Complete (the benchmark track) |
-| LLM (5D) | 5 ordinal dimensions | Complete (archived) |
+| Human | 10 binary categories | Historical assessment run complete |
+| LLM (10K) | 10 binary categories | Historical benchmark run complete |
+| LLM (5D) | 5 ordinal dimensions | Historical run complete (archived) |
 
 The benchmark serves as a motivating illustration of why reliability cannot be presupposed. It records a substantial, asymmetric divergence between the LLM and the expert judgments; the decomposition shows that the headline gap is dominated by human workflow exclusions (duplicates, no full text, wrong publication type) that a single-paper LLM cannot see, and on content-only decisions the include rates converge. The figures live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion.
 
-The Evidence Companion also provides an annotation-native literature landscape. It derives its matrix,
-analysis profiles, and evidence drill-down from the productive PRISM track through
-`src/publish/generate_literature_landscape.py`. Provisional tracks remain visibly provisional, and thematic
-aggregates include only included papers with complete analysis records.
+The result site provides an annotation-native literature landscape. It derives its matrix, analysis profiles and evidence drill-down from eligible productive PRISM records through `src/publish/generate_literature_landscape.py`. Thematic aggregates count included Works once and require complete analysis fields and current source-review support. These results cover the released subset; completed historical benchmark tracks do not establish whole-corpus readiness.
 
 The public application is framework-free and uses pinned local runtime assets. The ten review categories are generated from `assessment/categories.yaml` into one frontend schema. Corpus records carry a stable Work identity, an exact publication Version, and an explicit knowledge-document coverage status. The canonical registry retains Preprints, Accepted Manuscripts, Versions of Record, corrected Versions, and duplicate bibliographic records as distinct, traceable expressions of the same Work. Screening coverage applies once per Work; evidence remains bound to the Version read. The Literature Landscape stores its view, filters, profile, and selection in the URL.
 
@@ -39,7 +36,9 @@ Controlled agent reviews use [`prompts/prism-agent-reviewer-v1.1.md`](prompts/pr
 
 ## Research Vault
 
-Subject knowledge of the review lives in [`research-vault/`](research-vault/README.md) under the Grounded-Vault chain `00_sources → 10_markdown → 20_distillates → 30_assertions → 40_output`. Protected full texts remain local, while references, distillates, Assertions, and output documents retain resolvable links across adjacent layers. A distillate enters the active vault only after its evidence resolves against the reviewed Paper representation. Unresolved evidence remains in `research-vault/waitlist.md` for domain-expert verification. `src/publish/validate_research_vault.py` checks the active chain, and `src/publish/check_claims.py` remains the compatibility check for the legacy Claim layer.
+Subject knowledge of the review lives in [`research-vault/`](research-vault/README.md) under the Grounded-Vault chain `00_sources → 10_markdown → 20_distillates → 30_assertions → 40_output`. The active reviewed slice and its limits are documented in [`knowledge/research-vault.md`](knowledge/research-vault.md). It is distinct from the much larger historical collection in `generated/distilled/`, `generated/vault/Papers/` and the legacy Vault layers. A file or document link in that archive does not establish source support, active Assertion coverage or analysis eligibility.
+
+The project has **not distilled, linked and made every intended paper analysis-ready**. Current link coverage is reported in [`docs/data/research_vault_v2.json`](docs/data/research_vault_v2.json); released statements are listed in [`docs/data/assertion_index.json`](docs/data/assertion_index.json); remaining Work-level decisions, conflicts and analysis eligibility are in [`generated/completion/README.md`](generated/completion/README.md). These are different measures with different denominators. `validate_research_vault.py` checks the active chain, while `check_claims.py` remains the legacy Claim compatibility check.
 
 ## Testing
 
@@ -57,13 +56,13 @@ npm run pilot
 
 The build reconstructs the canonical corpus projections, source-readiness and completion queues, assertion index, downloads and a separate result site at `build/site/`. It uses the versioned local source representations and performs no new AI reviews or external API calls. `npm run check:data` checks input and output hashes without modifying files. Acquisition and fresh PDF conversion use the broader research environment; they are not needed to rebuild the versioned result.
 
-Preview the result with `python -m http.server 8766 --bind 127.0.0.1 --directory build/site`, then open `http://127.0.0.1:8766/index.html`. The historical Companion and PRISM remain local working tools under `docs/`. Deploy **only `build/site/`**. The manual Pages workflow checks and uploads that directory; select GitHub Actions as the repository's Pages source before using it. Running the local build does not update the existing live site.
+Preview the main project website with `npm run preview`, then open `http://127.0.0.1:8870/index.html`. PRISM is available at `http://127.0.0.1:8870/prisma.html`. The optional generated publication export remains at `/results/index.html`; it is not the project entry point. Use `npm run preview -- --port 8871` to select another port. There is no separate checklist website. Deploy **only `build/site/`**. The manual Pages workflow checks and uploads that directory; select GitHub Actions as the repository's Pages source before using it. Running the local build does not update the existing live site.
 
 ## Source-reviewed release and completion
 
 The operator-authorised policy in [`config/publication_policy.json`](config/publication_policy.json) permits explicitly labelled AI-source-reviewed results. Each accepted review records the agent, available model identity, UTC timestamp, findings, and hashes of the exact artifact and source. Deterministic validation does not create these reviews. Domain-expert verification and human publication approval retain their distinct lifecycle states.
 
-[`generated/verification/ai-source-reviews.json`](generated/verification/ai-source-reviews.json) is the review ledger. Negative findings remain recorded. Analysis corrections are separately attributed, hash-bound projections in `generated/verification/screening-corrections-*.json`; original screening annotations remain immutable. Public aggregations count Works once while retaining their bibliographic aliases, publication Versions and source evidence. The result ZIP and website use identical gated data. The working paper ZIP is a separate, explicitly provisional collection.
+[`generated/verification/ai-source-reviews.json`](generated/verification/ai-source-reviews.json) is the review ledger. It pins immutable review batches by their hashes instead of copying their complete receipts. Negative findings remain recorded. Corrections are separately attributed, hash-bound projections in `generated/verification/screening-corrections-*.json`; original screening annotations remain immutable. [`corpus/metadata_corrections.json`](corpus/metadata_corrections.json) reconciles proven metadata errors locally while preserving the raw Zotero export. External library synchronisation remains a separate action. Historical decision mappings and source integrity holds are documented in [`generated/verification/historical-resolution-2026-09-05.json`](generated/verification/historical-resolution-2026-09-05.json). Public aggregations count Works once while retaining their bibliographic aliases, publication Versions and source evidence. The result ZIP and website use identical gated data. The working paper ZIP is a separate, explicitly provisional collection.
 
 The grounded chat retrieves only released Assertions and their exact evidence blocks. Missing evidence produces a local explanation; a provider key is needed only for supported questions sent to the model. Model output must cite a supplied evidence identifier. This is a bounded retrieval aid, not a full-corpus or independently verified answer service.
 
@@ -83,8 +82,8 @@ generated/                 # Generated artifacts
   pdfs/                    # acquired PDFs
   markdown/                # PDF -> Markdown
   markdown_clean/          # cleaned Markdown (the raw-text source PRISM resolves)
-  distilled/               # distilled knowledge documents
-  vault/Papers/            # Generated source for the downloadable paper collection
+  distilled/               # Historical generated knowledge documents; not automatically reviewed
+  vault/Papers/            # Working paper collection; separate from the gated result ZIP
 src/                       # Pipeline and publishing scripts (acquire, distill, assess, publish)
 config/                    # Configuration (defaults.yaml)
 prompts/                   # Prompt changelog and governance
@@ -124,4 +123,4 @@ Full project documentation is in [`knowledge/`](knowledge/INDEX.md); start at th
 
 ---
 
-*Updated: 2026-08-24*
+*Updated: 2026-09-05*

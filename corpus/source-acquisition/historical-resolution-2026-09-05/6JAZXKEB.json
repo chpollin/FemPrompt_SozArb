@@ -1,0 +1,833 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          8,
+          31
+        ]
+      ],
+      "date-time": "2026-08-31T15:43:36Z",
+      "timestamp": 1788191016146,
+      "version": "build-2803163510"
+    },
+    "reference-count": 58,
+    "publisher": "Elsevier BV",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2022-01-01T00:00:00Z",
+          "timestamp": 1640995200000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2022-01-01T00:00:00Z",
+          "timestamp": 1640995200000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/legal/tdmrep-license"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              2,
+              8
+            ]
+          ],
+          "date-time": "2022-02-08T00:00:00Z",
+          "timestamp": 1644278400000
+        },
+        "content-version": "vor",
+        "delay-in-days": 38,
+        "URL": "http://creativecommons.org/licenses/by-nc-nd/4.0/"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "elsevier.com",
+        "sciencedirect.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Computers and Education: Artificial Intelligence"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2022
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.caeai.2022.100054",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2022,
+          2,
+          18
+        ]
+      ],
+      "date-time": "2022-02-18T02:35:05Z",
+      "timestamp": 1645151705000
+    },
+    "page": "100054",
+    "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 174,
+    "special_numbering": "C",
+    "title": [
+      "Using digital story writing as a pedagogy to develop AI literacy among primary students"
+    ],
+    "prefix": "10.1016",
+    "volume": "3",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-2380-7814",
+        "authenticated-orcid": false,
+        "given": "Davy Tsz Kit",
+        "family": "Ng",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Wanying",
+        "family": "Luo",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Helen Man Yi",
+        "family": "Chan",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-1557-2776",
+        "authenticated-orcid": false,
+        "given": "Samuel Kai Wah",
+        "family": "Chu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "78",
+    "reference": [
+      {
+        "issue": "3",
+        "key": "10.1016/j.caeai.2022.100054_bib1",
+        "first-page": "438",
+        "article-title": "Piaget’s constructivism, Papert’s constructionism: What’s the difference",
+        "volume": "5",
+        "author": "Ackermann",
+        "year": "2001",
+        "journal-title": "Future of learning group publication"
+      },
+      {
+        "key": "10.1016/j.caeai.2022.100054_bib2",
+        "series-title": "Proceedings of the 2020 conference on fairness, accountability, and transparency",
+        "article-title": "January). Fairness, accountability, transparency in AI at scale: Lessons from national programs",
+        "author": "Ahmad",
+        "year": "2020"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.caeai.2022.100054_bib3",
+        "doi-asserted-by": "crossref",
+        "first-page": "30",
+        "DOI": "10.2505/4/sc13_051_02_30",
+        "article-title": "The STEM of inquiry",
+        "volume": "51",
+        "author": "Ashbrook",
+        "year": "2013",
+        "journal-title": "Science and Children"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.caeai.2022.100054_bib4",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1080/23311983.2016.1181037",
+        "article-title": "Digital storytelling: New opportunities for humanities scholarship and pedagogy",
+        "volume": "3",
+        "author": "Barber",
+        "year": "2016",
+        "journal-title": "Cogent Arts & Humanities"
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.caeai.2022.100054_bib5",
+        "doi-asserted-by": "crossref",
+        "first-page": "490",
+        "DOI": "10.1080/13691180801999001",
+        "article-title": "Personal networks and the personal communication system: Using multiple media to connect",
+        "volume": "11",
+        "author": "Boase",
+        "year": "2008",
+        "journal-title": "Information, Communication & Society"
+      },
+      {
+        "key": "10.1016/j.caeai.2022.100054_bib6",
+        "article-title": "New frameworks for studying and assessing the development of computational thinking",
+        "volume": "Vol. 1",
+        "author": "Brennan",
+        "year": "2012"
+      },
+      {
+        "issue": "1–2",
+        "key": "10.1016/j.caeai.2022.100054_bib7",
+        "doi-asserted-by": "crossref",
+        "first-page": "191",
+        "DOI": "10.1080/07380569.2012.657994",
+        "article-title": "The practice of inquiry: A pedagogical ‘sweet spot’for digital literacy?",
+        "volume": "29",
+        "author": "Bruce",
+        "year": "2012",
+        "journal-title": "Computers in the Schools"
+      },
+      {
+        "key": "10.1016/j.caeai.2022.100054_bib8",
+        "article-title": "March). Irobot: Teaching the basics of artificial intelligence in high schools",
+        "volume": "Vol. 30",
+        "author": "Burgsteiner",
+        "year": "2016"
+      },
+      {
+        "key": "10.1016/j.caeai.2022.100054_bib68",
+        "series-title": "21st century skills development through inquiry-based learning from theory to practice",
+        "author": "Chu",
+        "year": "2021"
+      },
+      {
+        "key": "10.1016/j.caeai.2022.100054_bib11",
+        "series-title": "Best practices for mixed methods research in the health sciences",
+        "author": "Creswell",
+        "year": "2011"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.caeai.2022.100054_bib12",
+        "doi-asserted-by": "crossref",
+        "first-page": "11",
+        "DOI": "10.1162/INOV_a_00135",
+        "article-title": "The maker movement",
+        "volume": "7",
+        "author": "Dougherty",
+        "year": "2012",
+        "journal-title": "Innovations: Technology, governance, globalization"
+      },
+      {
+        "key": "10.1016/j.caeai.2022.100054_bib13",
+        "first-page": "104",
+        "article-title": "Inclusive AI literacy for kids around the world",
+        "author": "Druga",
+        "year": "2019",
+        "journal-title": "Proceedings of FabLearn"
+      },
+      {
+        "issue": "3–4",
+        "key": "10.1016/j.caeai.2022.100054_bib71",
+        "doi-asserted-by": "crossref",
+        "first-page": "125",
+        "DOI": "10.1080/1051144X.2020.1826224",
+        "article-title": "Multimodal literacies: Media affordances, semiotic resources and discourse communities",
+        "volume": "39",
+        "author": "Eisenlauer",
+        "year": "2020",
+        "journal-title": "Journal of Visual Literacy"
+      },
+      {
+        "key": "10.1016/j.caeai.2022.100054_bib15",
+        "series-title": "Digital storytelling guide for educators",
+        "author": "Frazel",
+        "year": "2010"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.caeai.2022.100054_bib16",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.1186/s42467-019-0003-z",
+        "article-title": "Responsible AI: Requirements and challenges",
+        "volume": "1",
+        "author": "Ghallab",
+        "year": "2019",
+        "journal-title": "AI Perspectives"
+      },
+      {
+        "key": "10.1016/j.caeai.2022.100054_bib17",
+        "series-title": "2020 IEEE international Conference on networking, Sensing and control (ICNSC)",
+        "first-page": "1",
+        "article-title": "October). K-9 artificial intelligence education in Qingdao: Issues, challenges and suggestions",
+        "author": "Gong",
+        "year": "2020"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.caeai.2022.100054_bib18",
+        "first-page": "23",
+        "article-title": "Language learning through a lens: The case for digital storytelling in the second language classroom",
+        "volume": "19",
+        "author": "Green",
+        "year": "2013",
+        "journal-title": "School Libraries Worldwide"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.caeai.2022.100054_bib19",
+        "doi-asserted-by": "crossref",
+        "first-page": "186",
+        "DOI": "10.1177/1524839909332600",
+        "article-title": "Digital storytelling: An emergent method for health promotion research and practice",
+        "volume": "10",
+        "author": "Gubrium",
+        "year": "2009",
+        "journal-title": "Health Promotion Practice"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.caeai.2022.100054_bib20",
+        "doi-asserted-by": "crossref",
+        "first-page": "68",
+        "DOI": "10.64152/10125/44263",
+        "article-title": "Fostering learner autonomy in English for science: A collaborative digital video project in a technological learning environment",
+        "volume": "15",
+        "author": "Hafner",
+        "year": "2011",
+        "journal-title": "Language, Learning and Technology"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.caeai.2022.100054_bib69",
+        "first-page": "99",
+        "article-title": "The ethics of AI ethics: An evaluation of guidelines. Minds and",
+        "volume": "30",
+        "author": "Hagendorff",
+        "year": "2020",
+        "journal-title": "Machines"
+      },
+      {
+        "key": "10.1016/j.caeai.2022.100054_bib21",
+        "series-title": "2018 Chinese automation congress (CAC)",
+        "first-page": "4135",
+        "article-title": "Design of AI+ curriculum for primary and secondary schools in Qingdao",
+        "author": "Han",
+        "year": "2018"
+      },
+      {
+        "key": "10.1016/j.caeai.2022.100054_bib22",
+        "series-title": "Writing program and writing center collaborations",
+        "first-page": "117",
+        "article-title": "How STEM can gain some STEAM: Crafting meaningful collaborations between STEM disciplines and inquiry-based writing programs",
+        "author": "Harrison",
+        "year": "2017"
+      },
+      {
+        "key": "10.1016/j.caeai.2022.100054_bib23",
+        "series-title": "2014 IEEE international professional communication conference (IPCC)",
+        "first-page": "1",
+        "article-title": "October). Using digital storytelling with infographics in STEM professional writing pedagogy",
+        "author": "Hill",
+        "year": "2014"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.caeai.2022.100054_bib24",
+        "doi-asserted-by": "crossref",
+        "first-page": "184",
+        "DOI": "10.3390/educsci9030184",
+        "article-title": "Educing AI-thinking in science, technology, engineering, arts, and mathematics (STEAM) education",
+        "volume": "9",
+        "author": "How",
+        "year": "2019",
+        "journal-title": "Education Sciences"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.caeai.2022.100054_bib25",
+        "doi-asserted-by": "crossref",
+        "first-page": "139",
+        "DOI": "10.1007/s40751-016-0020-x",
+        "article-title": "Digital making in elementary mathematics education",
+        "volume": "3",
+        "author": "Hughes",
+        "year": "2017",
+        "journal-title": "Digital Experiences in Mathematics Education"
+      },
+      {
+        "issue": "9",
+        "key": "10.1016/j.caeai.2022.100054_bib27",
+        "doi-asserted-by": "crossref",
+        "first-page": "389",
+        "DOI": "10.1038/s42256-019-0088-2",
+        "article-title": "The global landscape of AI ethics guidelines",
+        "volume": "1",
+        "author": "Jobin",
+        "year": "2019",
+        "journal-title": "Nature Machine Intelligence"
+      },
+      {
+        "key": "10.1016/j.caeai.2022.100054_bib28",
+        "series-title": "AI ethics is all about power",
+        "author": "Johnson",
+        "year": "2019"
+      },
+      {
+        "key": "10.1016/j.caeai.2022.100054_bib29",
+        "first-page": "107",
+        "article-title": "Scaffolds for scientific discovery learning. Handling complexity in learning environments",
+        "author": "de Jong",
+        "year": "2006",
+        "journal-title": "Theory and Research"
+      },
+      {
+        "key": "10.1016/j.caeai.2022.100054_bib30",
+        "series-title": "2020 IEEE Frontiers in Education Conference (FIE)",
+        "first-page": "1",
+        "article-title": "Designing digital literacy activities: An interdisciplinary and collaborative approach",
+        "author": "Julie",
+        "year": "2020"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.caeai.2022.100054_bib31",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.3991/ijet.v14i03.8326",
+        "article-title": "A learning process model to enhance digital literacy using critical inquiry through digital storytelling (CIDST)",
+        "volume": "14",
+        "author": "Kaeophanuek",
+        "year": "2019",
+        "journal-title": "International Journal of Emerging Technologies in Learning"
+      },
+      {
+        "key": "10.1016/j.caeai.2022.100054_bib32",
+        "series-title": "2016 IEEE Frontiers in Education Conference (FIE)",
+        "first-page": "1",
+        "article-title": "October). Artificial intelligence and computer science in education: From kindergarten to university",
+        "author": "Kandlhofer",
+        "year": "2016"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.caeai.2022.100054_bib33",
+        "doi-asserted-by": "crossref",
+        "first-page": "169",
+        "DOI": "10.1080/17439884.2011.553623",
+        "article-title": "A learning design for student‐generated digital storytelling",
+        "volume": "36",
+        "author": "Kearney",
+        "year": "2011",
+        "journal-title": "Learning, Media and Technology"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.caeai.2022.100054_bib35",
+        "first-page": "110",
+        "article-title": "Using inquiry-based strategies for enhancing students' STEM education learning",
+        "volume": "4",
+        "author": "Lai",
+        "year": "2018",
+        "journal-title": "Journal of Education in Science Environment and Health"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.caeai.2022.100054_bib36",
+        "doi-asserted-by": "crossref",
+        "first-page": "15",
+        "DOI": "10.1111/j.1365-2729.2011.00458.x",
+        "article-title": "A constructionist learning environment for teachers to model learning designs",
+        "volume": "29",
+        "author": "Laurillard",
+        "year": "2013",
+        "journal-title": "Journal of Computer Assisted Learning"
+      },
+      {
+        "key": "10.1016/j.caeai.2022.100054_bib37",
+        "series-title": "IFIP international conference on key competencies in the knowledge society",
+        "first-page": "210",
+        "article-title": "Digital literacy: A vital competence for 2010?",
+        "author": "Leahy",
+        "year": "2010"
+      },
+      {
+        "key": "10.1016/j.caeai.2022.100054_bib38",
+        "series-title": "Proceedings of the 52nd ACM technical symposium on computer science education",
+        "first-page": "191",
+        "article-title": "Developing middle school students’ AI literacy",
+        "author": "Lee",
+        "year": "2021"
+      },
+      {
+        "key": "10.1016/j.caeai.2022.100054_bib40",
+        "series-title": "Proceedings of the 2020 CHI conference on human factors in computing systems",
+        "first-page": "1",
+        "article-title": "April). What is AI literacy? Competencies and design considerations",
+        "author": "Long",
+        "year": "2020"
+      },
+      {
+        "key": "10.1016/j.caeai.2022.100054_bib43",
+        "series-title": "Reading and writing as ways of knowing and learning",
+        "author": "McGinley",
+        "year": "1988"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.caeai.2022.100054_bib45",
+        "doi-asserted-by": "crossref",
+        "first-page": "195",
+        "DOI": "10.24059/olj.v25i1.2454",
+        "article-title": "Motivating students to learn AI through social networking sites: A case study in Hong Kong",
+        "volume": "25",
+        "author": "Ng",
+        "year": "2021",
+        "journal-title": "Online Learning"
+      },
+      {
+        "key": "10.1016/j.caeai.2022.100054_bib46",
+        "first-page": "1",
+        "article-title": "Motivating students to learn STEM via engaging flight simulation activities",
+        "author": "Ng",
+        "year": "2021",
+        "journal-title": "Journal of Science Education and Technology"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.caeai.2022.100054_bib47",
+        "doi-asserted-by": "crossref",
+        "first-page": "504",
+        "DOI": "10.1002/pra2.487",
+        "article-title": "AI literacy: Definition, teaching, evaluation and ethical issues",
+        "volume": "58",
+        "author": "Ng",
+        "year": "2021",
+        "journal-title": "Proceedings of the Association for Information Science and Technology"
+      },
+      {
+        "key": "10.1016/j.caeai.2022.100054_bib48",
+        "article-title": "Conceptualizing AI literacy: An exploratory review",
+        "volume": "2",
+        "author": "Ng",
+        "year": "2021",
+        "journal-title": "Computers and Education: Artificial Intelligence"
+      },
+      {
+        "key": "10.1016/j.caeai.2022.100054_bib49",
+        "first-page": "1",
+        "article-title": "Engaging students in creative music making with musical instrument application in an online flipped classroom",
+        "author": "Ng",
+        "year": "2021",
+        "journal-title": "Education and Information Technologies"
+      },
+      {
+        "key": "10.1016/j.caeai.2022.100054_bib50",
+        "series-title": "Mindstorms: Children, computers, and powerful ideas",
+        "author": "Papert",
+        "year": "1980"
+      },
+      {
+        "key": "10.1016/j.caeai.2022.100054_bib51",
+        "doi-asserted-by": "crossref",
+        "first-page": "47",
+        "DOI": "10.1016/j.edurev.2015.02.003",
+        "article-title": "Phases of inquiry-based learning: Definitions and the inquiry cycle",
+        "volume": "14",
+        "author": "Pedaste",
+        "year": "2015",
+        "journal-title": "Educational Research Review"
+      },
+      {
+        "key": "10.1016/j.caeai.2022.100054_bib53",
+        "series-title": "Eighth international conference on technological ecosystems for enhancing multiculturality",
+        "first-page": "18",
+        "article-title": "Introducing artificial intelligence fundamentals with LearningML: Artificial intelligence made easy",
+        "author": "Rodríguez-García",
+        "year": "2020"
+      },
+      {
+        "issue": "6",
+        "key": "10.1016/j.caeai.2022.100054_bib54",
+        "doi-asserted-by": "crossref",
+        "first-page": "516",
+        "DOI": "10.1111/j.1365-2729.2011.00414.x",
+        "article-title": "How technology resources can be used to represent personal inquiry and support students' understanding of it across contexts",
+        "volume": "27",
+        "author": "Scanlon",
+        "year": "2011",
+        "journal-title": "Journal of Computer Assisted Learning"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.caeai.2022.100054_bib56",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.1186/s40594-020-00223-6",
+        "article-title": "Promoting a mixed-design model of scientific creativity through digital storytelling—the CCQ model for creativity",
+        "volume": "7",
+        "author": "Smyrnaiou",
+        "year": "2020",
+        "journal-title": "International Journal of STEM Education"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.caeai.2022.100054_bib58",
+        "doi-asserted-by": "crossref",
+        "first-page": "337",
+        "DOI": "10.1002/rrq.104",
+        "article-title": "Beyond vocabulary: Exploring cross‐disciplinary academic‐language proficiency and its association with reading comprehension",
+        "volume": "50",
+        "author": "Uccelli",
+        "year": "2015",
+        "journal-title": "Reading Research Quarterly"
+      },
+      {
+        "key": "10.1016/j.caeai.2022.100054_bib59",
+        "series-title": "2019 IEEE tenth international conference on technology for education (T4E)",
+        "first-page": "71",
+        "article-title": "Focusing on teacher education to introduce ai in schools: Perspectives and illustrative findings",
+        "author": "Vazhayil",
+        "year": "2019"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.caeai.2022.100054_bib60",
+        "doi-asserted-by": "crossref",
+        "first-page": "133",
+        "DOI": "10.1111/j.1365-2729.2006.00218.x",
+        "article-title": "Computer literacy and inquiry learning: When geeks learn less",
+        "volume": "23",
+        "author": "Wecker",
+        "year": "2007",
+        "journal-title": "Journal of Computer Assisted Learning"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.caeai.2022.100054_bib61",
+        "doi-asserted-by": "crossref",
+        "first-page": "20",
+        "DOI": "10.1145/3381884",
+        "article-title": "Broadening artificial intelligence education in K-12: Where to start?",
+        "volume": "11",
+        "author": "Wong",
+        "year": "2020",
+        "journal-title": "ACM Inroads"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.caeai.2022.100054_bib62",
+        "doi-asserted-by": "crossref",
+        "first-page": "279",
+        "DOI": "10.1007/s11423-012-9285-y",
+        "article-title": "Peer-feedback and revision process in a wiki mediated collaborative writing",
+        "volume": "61",
+        "author": "Woo",
+        "year": "2013",
+        "journal-title": "Educational Technology Research and Development"
+      },
+      {
+        "issue": "6",
+        "key": "10.1016/j.caeai.2022.100054_bib63",
+        "doi-asserted-by": "crossref",
+        "first-page": "312",
+        "DOI": "10.1038/s42256-020-0183-4",
+        "article-title": "Towards a new generation of artificial intelligence in China",
+        "volume": "2",
+        "author": "Wu",
+        "year": "2020",
+        "journal-title": "Nature Machine Intelligence"
+      },
+      {
+        "key": "10.1016/j.caeai.2022.100054_bib64",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.compedu.2020.103981",
+        "article-title": "Effect of digital writing instruction with tablets on primary school students' writing performance and writing knowledge",
+        "volume": "157",
+        "author": "Yamaç",
+        "year": "2020",
+        "journal-title": "Computers & Education"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.caeai.2022.100054_bib65",
+        "doi-asserted-by": "crossref",
+        "first-page": "221",
+        "DOI": "10.1016/j.compcom.2012.07.001",
+        "article-title": "Multimodal composing in digital storytelling",
+        "volume": "29",
+        "author": "Yang",
+        "year": "2012",
+        "journal-title": "Computers and Composition"
+      },
+      {
+        "key": "10.1016/j.caeai.2022.100054_bib66",
+        "series-title": "Society for information technology & teacher education international conference",
+        "first-page": "1264",
+        "article-title": "Educational uses of digital storytelling all around the world",
+        "author": "Yuksel",
+        "year": "2011"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.caeai.2022.100054_bib67",
+        "doi-asserted-by": "crossref",
+        "first-page": "181",
+        "DOI": "10.1016/j.compedu.2011.07.016",
+        "article-title": "Scaffolding strategies for supporting middle school students' online inquiry processes",
+        "volume": "58",
+        "author": "Zhang",
+        "year": "2012",
+        "journal-title": "Computers & Education"
+      }
+    ],
+    "container-title": [
+      "Computers and Education: Artificial Intelligence"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S2666920X22000091?httpAccept=text/xml",
+        "content-type": "text/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S2666920X22000091?httpAccept=text/plain",
+        "content-type": "text/plain",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          11,
+          13
+        ]
+      ],
+      "date-time": "2025-11-13T06:44:56Z",
+      "timestamp": 1763016296000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://linkinghub.elsevier.com/retrieve/pii/S2666920X22000091"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2022
+        ]
+      ]
+    },
+    "references-count": 58,
+    "alternative-id": [
+      "S2666920X22000091"
+    ],
+    "URL": "https://doi.org/10.1016/j.caeai.2022.100054",
+    "relation": {},
+    "ISSN": [
+      "2666-920X"
+    ],
+    "issn-type": [
+      {
+        "value": "2666-920X",
+        "type": "print"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2022
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "Elsevier",
+        "name": "publisher",
+        "label": "This article is maintained by"
+      },
+      {
+        "value": "Using digital story writing as a pedagogy to develop AI literacy among primary students",
+        "name": "articletitle",
+        "label": "Article Title"
+      },
+      {
+        "value": "Computers and Education: Artificial Intelligence",
+        "name": "journaltitle",
+        "label": "Journal Title"
+      },
+      {
+        "value": "https://doi.org/10.1016/j.caeai.2022.100054",
+        "name": "articlelink",
+        "label": "CrossRef DOI link to publisher maintained version"
+      },
+      {
+        "value": "article",
+        "name": "content_type",
+        "label": "Content Type"
+      },
+      {
+        "value": "© 2022 The Authors. Published by Elsevier Ltd.",
+        "name": "copyright",
+        "label": "Copyright"
+      }
+    ],
+    "article-number": "100054"
+  }
+}

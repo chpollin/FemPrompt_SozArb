@@ -1,28 +1,28 @@
 # Provisional source-bound synthesis outline
 
-Source fingerprint: `sha256:a3283c993e9cca8e685f4d4d00b6875f163a062ab6512fed5d9fa90aac462b81`. Deterministic internal preparation; no approval is created.
+Source fingerprint: `sha256:7987896e4010383aeb99bd39c9c0700077ef27833a08ea9f6f8221db9e84396e`. Deterministic internal preparation; no approval is created.
 
 This is a writing and verification plan, not a finished synthesis. The canonical manuscript remains `research-vault/40_output/paper/paper.md`. Tables count recorded coding; the statements below are existing assertion texts with their recorded authority, not new findings.
 
 ## SQ1: Prompting techniques and proposed, demonstrated or evaluated uses
 
-- `AN_Prompt_Techniques`: 16 coded works out of 143 works with recorded Include; 127 missing or unresolved. See the CSV for codes and contributing work IDs.
-- `AN_Mitigation_Status`: 16 coded works out of 143 works with recorded Include; 127 missing or unresolved. See the CSV for codes and contributing work IDs.
+- `AN_Prompt_Techniques`: 20 coded works out of 146 works with recorded Include; 126 missing or unresolved. See the CSV for codes and contributing work IDs.
+- `AN_Mitigation_Status`: 20 coded works out of 146 works with recorded Include; 126 missing or unresolved. See the CSV for codes and contributing work IDs.
 
 Before final prose, complete missing codes, reconcile conflicts, distinguish observed study findings from proposals, and assess design limitations. Do not infer that absent coding demonstrates a literature gap.
 
 ## SQ2: Bias axes, harm types, mitigation stages and evidence status
 
-- `AN_Bias_Axes`: 16 coded works out of 143 works with recorded Include; 127 missing or unresolved. See the CSV for codes and contributing work IDs.
-- `AN_Harm_Types`: 16 coded works out of 143 works with recorded Include; 127 missing or unresolved. See the CSV for codes and contributing work IDs.
-- `AN_Mitigation_Stage`: 16 coded works out of 143 works with recorded Include; 127 missing or unresolved. See the CSV for codes and contributing work IDs.
-- `AN_Mitigation_Status`: 16 coded works out of 143 works with recorded Include; 127 missing or unresolved. See the CSV for codes and contributing work IDs.
+- `AN_Bias_Axes`: 20 coded works out of 146 works with recorded Include; 126 missing or unresolved. See the CSV for codes and contributing work IDs.
+- `AN_Harm_Types`: 20 coded works out of 146 works with recorded Include; 126 missing or unresolved. See the CSV for codes and contributing work IDs.
+- `AN_Mitigation_Stage`: 20 coded works out of 146 works with recorded Include; 126 missing or unresolved. See the CSV for codes and contributing work IDs.
+- `AN_Mitigation_Status`: 20 coded works out of 146 works with recorded Include; 126 missing or unresolved. See the CSV for codes and contributing work IDs.
 
 Before final prose, complete missing codes, reconcile conflicts, distinguish observed study findings from proposals, and assess design limitations. Do not infer that absent coding demonstrates a literature gap.
 
 ## SQ3: Social work populations, settings, constraints and transfer limits
 
-- `AN_Population`: 16 coded works out of 143 works with recorded Include; 127 missing or unresolved. See the CSV for codes and contributing work IDs.
+- `AN_Population`: 20 coded works out of 146 works with recorded Include; 126 missing or unresolved. See the CSV for codes and contributing work IDs.
 
 Before final prose, complete missing codes, reconcile conflicts, distinguish observed study findings from proposals, and assess design limitations. Do not infer that absent coding demonstrates a literature gap.
 

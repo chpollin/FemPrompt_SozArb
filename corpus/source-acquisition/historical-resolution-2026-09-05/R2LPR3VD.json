@@ -1,0 +1,423 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          2
+        ]
+      ],
+      "date-time": "2026-09-02T12:41:40Z",
+      "timestamp": 1788352900372,
+      "version": "build-2803163510"
+    },
+    "reference-count": 29,
+    "publisher": "Association for Computing Machinery (ACM)",
+    "issue": "1",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2020,
+              2,
+              13
+            ]
+          ],
+          "date-time": "2020-02-13T00:00:00Z",
+          "timestamp": 1581552000000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://www.acm.org/publications/policies/copyright_policy#Background"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "dl.acm.org"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "ACM Inroads"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2020,
+          2,
+          13
+        ]
+      ]
+    },
+    "DOI": "10.1145/3381884",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2020,
+          2,
+          13
+        ]
+      ],
+      "date-time": "2020-02-13T17:22:17Z",
+      "timestamp": 1581614537000
+    },
+    "page": "20-29",
+    "update-policy": "https://doi.org/10.1145/crossmark-policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 193,
+    "title": [
+      "Broadening artificial intelligence education in K-12"
+    ],
+    "prefix": "10.1145",
+    "volume": "11",
+    "author": [
+      {
+        "given": "Gary K. W.",
+        "family": "Wong",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "The University of Hong Kong"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Xiaojuan",
+        "family": "Ma",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "The Hong Kong University of Science and Technology"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Pierre",
+        "family": "Dillenbourg",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "EPFL Swiss Federal Institute of Technology"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "John",
+        "family": "Huan",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "STEM Academy"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "320",
+    "published-online": {
+      "date-parts": [
+        [
+          2020,
+          2,
+          13
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_2_1_1_1",
+        "unstructured": "Australian Government: Department of Education and Training: https://www.education.gov.au/national-innovation-and-science-agenda. Accessed 2019 Mar 22.  Australian Government: Department of Education and Training: https://www.education.gov.au/national-innovation-and-science-agenda. Accessed 2019 Mar 22."
+      },
+      {
+        "key": "e_1_2_1_2_1",
+        "first-page": "2",
+        "volume": "14",
+        "author": "Brown N.C.C.",
+        "year": "2014",
+        "journal-title": "Restart: The Resurgence of Computer Science in UK Schools. ACM Transactions on Computing Education"
+      },
+      {
+        "key": "e_1_2_1_3_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.15388/ioi.2018.01"
+      },
+      {
+        "key": "e_1_2_1_4_1",
+        "unstructured": "CSTA's Computer Science Standards; https://drive.google.com/file/d/0B0TIX1G3mywqXzNWMVdKX0ITSkU/view. Accessed 2019 Feb 1.  CSTA's Computer Science Standards; https://drive.google.com/file/d/0B0TIX1G3mywqXzNWMVdKX0ITSkU/view. Accessed 2019 Feb 1."
+      },
+      {
+        "key": "e_1_2_1_5_1",
+        "volume-title": "General Studies Curriculum Guide for Primary Schools (Primary 1-Primary 6)",
+        "author": "Curriculum Development Council",
+        "year": "2017"
+      },
+      {
+        "key": "e_1_2_1_6_1",
+        "volume-title": "Kindergarten Education Curriculum Guide: Joyful Learning through Play Balanced Development All the Way",
+        "author": "Curriculum Development Council",
+        "year": "2017"
+      },
+      {
+        "key": "e_1_2_1_7_1",
+        "volume-title": "Technology Education: Key Learning Area Curriculum Guide (Primary 1-Secondary 6)",
+        "author": "Curriculum Development Council",
+        "year": "2017"
+      },
+      {
+        "key": "e_1_2_1_8_1",
+        "volume-title": "Information and Communication Technology: Curriculum and Assessment Guide (Secondary 4-6)",
+        "author": "Curriculum Development Council and the Hong Kong Examinations and Assessment Authority.",
+        "year": "2007"
+      },
+      {
+        "key": "e_1_2_1_9_1",
+        "volume-title": "Teaching Introductory Artificial Intelligence with Pac-Man. In Twenty-Fourth AAAI Conference on Artificial; https://www.aaai.org/ocs/index.php/EAAI/EAAI10/paper/viewFile/1954/2331",
+        "author": "DeNero J.",
+        "year": "2019"
+      },
+      {
+        "key": "e_1_2_1_10_1",
+        "unstructured": "Government of the Hong Kong Special Administrative Region's Budget Speech for 2019-2020; https://www.budget.gov.hk/2019/eng/budget14.html. Accessed 2019 Mar 22.  Government of the Hong Kong Special Administrative Region's Budget Speech for 2019-2020; https://www.budget.gov.hk/2019/eng/budget14.html. Accessed 2019 Mar 22."
+      },
+      {
+        "key": "e_1_2_1_11_1",
+        "volume-title": "International journal of technology and design education, 25, 2 (2015)",
+        "author": "Hallström J.",
+        "year": "2019"
+      },
+      {
+        "key": "e_1_2_1_12_1",
+        "volume-title": "Twenty-Fourth AAAI Conference on Artificial Intelligence; https://www.aaai.org/ocs/index.php/EAAI/EAAI10/paper/viewPaper/1746",
+        "author": "Heinze C.",
+        "year": "2019"
+      },
+      {
+        "key": "e_1_2_1_13_1",
+        "volume-title": "AI in the UK: ready, willing and able? (2018)",
+        "author": "House UK",
+        "year": "2017"
+      },
+      {
+        "key": "e_1_2_1_14_1",
+        "volume-title": "31st ASEE/IEEE Frontiers in Education Conference; http://fie2012",
+        "author": "Kumar A.N.",
+        "year": "2012"
+      },
+      {
+        "key": "e_1_2_1_15_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5281/zenodo.3240529"
+      },
+      {
+        "key": "e_1_2_1_16_1",
+        "volume-title": "Forbes",
+        "author": "Marr B.",
+        "year": "2019"
+      },
+      {
+        "key": "e_1_2_1_17_1",
+        "volume-title": "Trib Live",
+        "author": "Martines J.",
+        "year": "2019"
+      },
+      {
+        "key": "e_1_2_1_18_1",
+        "volume-title": "Second Symposium on Educational Advances in Artificial Intelligence; https://www.aaai.org/ocs/index.php/EAAI/EAAI11/paper/viewFile/3443/4011",
+        "author": "McGovern A.",
+        "year": "2019"
+      },
+      {
+        "key": "e_1_2_1_19_1",
+        "unstructured": "Ministry of Education of the People's Republic of China; http://en.moe.gov.cn/News/Top_News/201806/t20180612_339230.html. Accessed 2019 Feb 1.  Ministry of Education of the People's Republic of China; http://en.moe.gov.cn/News/Top_News/201806/t20180612_339230.html. Accessed 2019 Feb 1."
+      },
+      {
+        "key": "e_1_2_1_20_1",
+        "volume-title": "Asia Business Council (September",
+        "author": "Pau J.",
+        "year": "2019"
+      },
+      {
+        "key": "e_1_2_1_21_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/85.329752"
+      },
+      {
+        "key": "e_1_2_1_22_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.21061/jte.v8i2.a.4"
+      },
+      {
+        "key": "e_1_2_1_23_1",
+        "unstructured": "The Ministry of Education Singapore; https://www.moe.gov.sg/education/education-system/21st-century-competencies. Accessed 2019 Mar 22.  The Ministry of Education Singapore; https://www.moe.gov.sg/education/education-system/21st-century-competencies. Accessed 2019 Mar 22."
+      },
+      {
+        "key": "e_1_2_1_24_1",
+        "volume-title": "Thirty-Third AAAI Conference on Artificial Intelligence; https://github.com/touretzkyds/ai4k12/raw/master/documents/AAAI_Blue_Sky_2019",
+        "author": "Touretzky D.",
+        "year": "2019"
+      },
+      {
+        "key": "e_1_2_1_25_1",
+        "volume-title": "et al. A Model Curriculum for K-12 Computer Science: Final Report of the ACM K-12 Task Force Curriculum Committee",
+        "author": "Tucker A.",
+        "year": "2003"
+      },
+      {
+        "key": "e_1_2_1_26_1",
+        "volume-title": "The New York Times",
+        "author": "Tugend A.",
+        "year": "2019"
+      },
+      {
+        "key": "e_1_2_1_27_1",
+        "volume-title": "et al. Computer science in K-12 school curricula for the 21st century: Why, what and when? Educ Inf Technol",
+        "author": "Webb M.",
+        "year": "2017"
+      },
+      {
+        "key": "e_1_2_1_28_1",
+        "volume-title": "December 6",
+        "author": "Winick E.",
+        "year": "2017"
+      },
+      {
+        "key": "e_1_2_1_29_1",
+        "volume-title": "Proceedings of the Twenty-Fourth AAAI Conference on Artificial Intelligence; https://www.aaai.org/ocs/index.php/EAAI/EAAI10/pape/viewFile/1607/2339",
+        "author": "Wong D.",
+        "year": "2019"
+      }
+    ],
+    "container-title": [
+      "ACM Inroads"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://dl.acm.org/doi/10.1145/3381884",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://dl.acm.org/doi/pdf/10.1145/3381884",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          6,
+          17
+        ]
+      ],
+      "date-time": "2025-06-17T22:33:07Z",
+      "timestamp": 1750199587000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://dl.acm.org/doi/10.1145/3381884"
+      }
+    },
+    "subtitle": [
+      "where to start?"
+    ],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2020,
+          2,
+          13
+        ]
+      ]
+    },
+    "references-count": 29,
+    "journal-issue": {
+      "issue": "1",
+      "published-print": {
+        "date-parts": [
+          [
+            2020,
+            2,
+            13
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "10.1145/3381884"
+    ],
+    "URL": "https://doi.org/10.1145/3381884",
+    "relation": {},
+    "ISSN": [
+      "2153-2184",
+      "2153-2192"
+    ],
+    "issn-type": [
+      {
+        "value": "2153-2184",
+        "type": "print"
+      },
+      {
+        "value": "2153-2192",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2020,
+          2,
+          13
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2020-02-13",
+        "order": 2,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

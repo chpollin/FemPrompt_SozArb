@@ -1,0 +1,95 @@
+{
+  "schema": "femprompt-source-capture/0.1",
+  "agent_id": "/root/research_completion",
+  "model": "GPT-6",
+  "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+  "sources": [
+    {
+      "source_url": "https://www.bls.gov/news.release/archives/ocwage_04252023.htm",
+      "retrieved_at": "2026-09-05T16:34:15.182128+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source_url": "https://www.bls.gov/news.release/archives/ocwage_04032024.htm",
+      "retrieved_at": "2026-09-05T16:34:15.889200+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source_url": "https://www.bls.gov/news.release/archives/ocwage_04022025.htm",
+      "retrieved_at": "2026-09-05T16:34:16.182686+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source_url": "https://www.bls.gov/oes/2023/occupational-employment-and-wage-statistics-oews.htm",
+      "retrieved_at": "2026-09-05T16:34:16.457354+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source_url": "https://www.bls.gov/oes/oes_ques.htm",
+      "retrieved_at": "2026-09-05T16:34:16.743723+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source_url": "https://www.bls.gov/cps/data/aa2023/cpsaat11.htm",
+      "retrieved_at": "2026-09-05T16:34:17.027229+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ],
+  "web_tool_evidence": [
+    {
+      "source_path": "corpus/source-acquisition/bls-resolution-2026-09-05/release-2023-data-2022.txt",
+      "sha256": "sha256:7ea16288918bcdf0e59879dffec3dbfe2c03c739821cc4ca9c6841c8eb4abfbf",
+      "source_url": "https://www.bls.gov/news.release/archives/ocwage_04252023.htm",
+      "locator": "release header and report title, lines 175-181",
+      "capture_kind": "official_web_tool_excerpt_not_fulltext",
+      "agent_id": "/root/research_completion",
+      "reviewed_at": "2026-09-05T16:38:03.842248+00:00"
+    },
+    {
+      "source_path": "corpus/source-acquisition/bls-resolution-2026-09-05/release-2024-data-2023.txt",
+      "sha256": "sha256:0fa27efb8ffb1c961c04181fa17803867106890cec176e9bc780121282d8c48f",
+      "source_url": "https://www.bls.gov/news.release/archives/ocwage_04032024.htm",
+      "locator": "release header and report title, lines 175-181",
+      "capture_kind": "official_web_tool_excerpt_not_fulltext",
+      "agent_id": "/root/research_completion",
+      "reviewed_at": "2026-09-05T16:38:03.842248+00:00"
+    },
+    {
+      "source_path": "corpus/source-acquisition/bls-resolution-2026-09-05/release-2025-data-2024.txt",
+      "sha256": "sha256:e1fe49d0a7063155179229780cb6f6a987d8acfaf62e4eb458a2b9f47e534497",
+      "source_url": "https://www.bls.gov/news.release/archives/ocwage_04022025.htm",
+      "locator": "release header and report title, lines 175-181",
+      "capture_kind": "official_web_tool_excerpt_not_fulltext",
+      "agent_id": "/root/research_completion",
+      "reviewed_at": "2026-09-05T16:38:03.842248+00:00"
+    },
+    {
+      "source_path": "corpus/source-acquisition/bls-resolution-2026-09-05/oews-program-name.txt",
+      "sha256": "sha256:3606ce2a1af07f78dcc8293958f78990b46ac11a09436d0169565bf561f20677",
+      "source_url": "https://www.bls.gov/oes/2023/occupational-employment-and-wage-statistics-oews.htm",
+      "locator": "program-name paragraph",
+      "capture_kind": "official_web_tool_excerpt_not_fulltext",
+      "agent_id": "/root/research_completion",
+      "reviewed_at": "2026-09-05T16:38:03.842248+00:00"
+    },
+    {
+      "source_path": "corpus/source-acquisition/bls-resolution-2026-09-05/oews-faq.txt",
+      "sha256": "sha256:e57a37aad9a86a55b961491c3d1d6b88adbc4b6dc25c6247c1692d7532d0b48a",
+      "source_url": "https://www.bls.gov/oes/oes_ques.htm",
+      "locator": "C. Data we do not have, question 1",
+      "capture_kind": "official_web_tool_excerpt_not_fulltext",
+      "agent_id": "/root/research_completion",
+      "reviewed_at": "2026-09-05T16:38:03.842248+00:00"
+    },
+    {
+      "source_path": "corpus/source-acquisition/bls-resolution-2026-09-05/cps-2023-table11.txt",
+      "sha256": "sha256:b3f283c90324b901393b3a36b3598d6f8552c864f6f7d25863623e2b656b8897",
+      "source_url": "https://www.bls.gov/cps/data/aa2023/cpsaat11.htm",
+      "locator": "2023 annual-average Table 11, heading and Chief executives row",
+      "capture_kind": "official_web_tool_excerpt_not_fulltext",
+      "agent_id": "/root/research_completion",
+      "reviewed_at": "2026-09-05T16:38:03.842248+00:00"
+    }
+  ],
+  "capture_scope": "Official web-tool excerpts retained after direct requests returned 403; no complete original HTML or PDF was downloaded."
+}

@@ -1,0 +1,1364 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          8,
+          21
+        ]
+      ],
+      "date-time": "2026-08-21T12:10:02Z",
+      "timestamp": 1787314202280,
+      "version": "build-2736575974"
+    },
+    "reference-count": 116,
+    "publisher": "Springer Science and Business Media LLC",
+    "issue": "1",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              4,
+              1
+            ]
+          ],
+          "date-time": "2024-04-01T00:00:00Z",
+          "timestamp": 1711929600000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by/4.0"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              4,
+              1
+            ]
+          ],
+          "date-time": "2024-04-01T00:00:00Z",
+          "timestamp": 1711929600000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by/4.0"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100005714",
+        "name": "Technische Universität Darmstadt",
+        "doi-asserted-by": "crossref",
+        "id": [
+          {
+            "id": "10.13039/501100005714",
+            "id-type": "DOI",
+            "asserted-by": "crossref"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "link.springer.com"
+      ],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "Electron Markets"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2024,
+          12
+        ]
+      ]
+    },
+    "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>We draw on upper echelons theory to examine whether the AI literacy of a firm’s top management team (i.e., TMT AI literacy) has an effect on two firm characteristics paramount for value generation with AI—a firm’s AI orientation, enabling it to identify AI value potentials, and a firm’s AI implementation ability, empowering it to realize these value potentials. Building on the notion that TMT effects are contingent upon firm contexts, we consider the moderating influence of a firm’s type (i.e., startups vs. incumbents). To investigate these relationships, we leverage observational literacy data of 6986 executives from a professional social network (LinkedIn.com) and firm data from 10-K statements. Our findings indicate that TMT AI literacy positively affects AI orientation as well as AI implementation ability and that AI orientation mediates the effect of TMT AI literacy on AI implementation ability. Further, we show that the effect of TMT AI literacy on AI implementation ability is stronger in startups than in incumbent firms. We contribute to upper echelons literature by introducing AI literacy as a skill-oriented perspective on TMTs, which complements prior role-oriented TMT research, and by detailing AI literacy’s role for the upper echelons-based mechanism that explains value generation with AI.</jats:p>",
+    "DOI": "10.1007/s12525-024-00707-1",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2024,
+          4,
+          1
+        ]
+      ],
+      "date-time": "2024-04-01T06:02:18Z",
+      "timestamp": 1711951338000
+    },
+    "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 66,
+    "title": [
+      "AI Literacy for the top management: An upper echelons perspective on corporate AI orientation and implementation ability"
+    ],
+    "prefix": "10.1007",
+    "volume": "34",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0003-2464-9026",
+        "authenticated-orcid": false,
+        "given": "Marc",
+        "family": "Pinski",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Thomas",
+        "family": "Hofmann",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-7294-3097",
+        "authenticated-orcid": false,
+        "given": "Alexander",
+        "family": "Benlian",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "297",
+    "published-online": {
+      "date-parts": [
+        [
+          2024,
+          4,
+          1
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "707_CR1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1287/isre.2022.1171",
+        "author": "M Adam",
+        "year": "2022",
+        "unstructured": "Adam, M., Roethke, K., & Benlian, A. (2022). Human versus automated sales agents: How and Why customer responses shift across sales stages. Information Systems Research. https://doi.org/10.1287/isre.2022.1171",
+        "journal-title": "Information Systems Research"
+      },
+      {
+        "key": "707_CR2",
+        "doi-asserted-by": "publisher",
+        "first-page": "102002",
+        "DOI": "10.1016/j.labeco.2021.102002",
+        "volume": "71",
+        "author": "L Alekseeva",
+        "year": "2021",
+        "unstructured": "Alekseeva, L., Azar, J., Giné, M., Samila, S., & Taska, B. (2021). The demand for AI skills in the labor market. Labour Economics, 71, 102002. https://doi.org/10.1016/j.labeco.2021.102002",
+        "journal-title": "Labour Economics"
+      },
+      {
+        "issue": "4",
+        "key": "707_CR3",
+        "doi-asserted-by": "publisher",
+        "first-page": "288",
+        "DOI": "10.1002/sej.1170",
+        "volume": "7",
+        "author": "P Andries",
+        "year": "2013",
+        "unstructured": "Andries, P., Debackere, K., & van Looy, B. (2013). Simultaneous experimentation as a learning strategy: Business Model development under uncertainty. Strategic Entrepreneurship Journal, 7(4), 288–310. https://doi.org/10.1002/sej.1170",
+        "journal-title": "Strategic Entrepreneurship Journal"
+      },
+      {
+        "key": "707_CR4",
+        "unstructured": "Anton, E., Behne, A., & Teuteberg, F. (2020). The humans behind artificial intelligence - An operationalisation of AI competencies. In European Conference on Information Systems, virtual. https://aisel.aisnet.org/ecis2020_rp/141"
+      },
+      {
+        "key": "707_CR5",
+        "doi-asserted-by": "publisher",
+        "first-page": "82",
+        "DOI": "10.1016/j.inffus.2019.12.012",
+        "volume": "58",
+        "author": "AB Arrieta",
+        "year": "2020",
+        "unstructured": "Arrieta, A. B., Díaz-Rodríguez, N., Del Ser, J., Bennetot, A., Tabik, S., Barbado, A., Garcia, S., Gil-Lopez, S., Molina, D., Benjamins, R., Chatila, R., & Herrera, F. (2020). Explainable artificial intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI. Information Fusion, 58, 82–115. https://doi.org/10.1016/j.inffus.2019.12.012",
+        "journal-title": "Information Fusion"
+      },
+      {
+        "issue": "4",
+        "key": "707_CR6",
+        "doi-asserted-by": "publisher",
+        "first-page": "807",
+        "DOI": "10.25300/misq/2016/40:4.03",
+        "volume": "40",
+        "author": "B Baesens",
+        "year": "2016",
+        "unstructured": "Baesens, B., Bapna, R., Marsden, J. R., Vanthienen, J., & Zhao, J. L. (2016). Transformational Issues of big data and analytics in networked business. MIS Quarterly, 40(4), 807–818. https://doi.org/10.25300/misq/2016/40:4.03",
+        "journal-title": "MIS Quarterly"
+      },
+      {
+        "key": "707_CR7",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Baker, T., & Nelson, R. E. (2005). Creating something from nothing: Resource construction through entrepreneurial bricolage. Administrative Science Quarterly, 50, 329–366. https://doi.org/10.2189/asqu.2005.50.3.329",
+        "DOI": "10.2189/asqu.2005.50.3.329"
+      },
+      {
+        "issue": "3",
+        "key": "707_CR8",
+        "doi-asserted-by": "publisher",
+        "first-page": "359",
+        "DOI": "10.1521/jscp.1986.4.3.359",
+        "volume": "4",
+        "author": "A Bandura",
+        "year": "1986",
+        "unstructured": "Bandura, A. (1986). The explanatory and predictive scope of self-efficacy theory. Journal of Social and Clinical Psychology, 4(3), 359–373. https://doi.org/10.1521/jscp.1986.4.3.359",
+        "journal-title": "Journal of Social and Clinical Psychology"
+      },
+      {
+        "issue": "4",
+        "key": "707_CR9",
+        "doi-asserted-by": "publisher",
+        "first-page": "317",
+        "DOI": "10.1287/isre.14.4.317.24899",
+        "volume": "14",
+        "author": "G Bassellier",
+        "year": "2003",
+        "unstructured": "Bassellier, G., Benbasat, I., & Reich, B. H. (2003). The influence of business managers’ IT competence on championing IT. Information Systems Research, 14(4), 317–336. https://doi.org/10.1287/isre.14.4.317.24899",
+        "journal-title": "Information Systems Research"
+      },
+      {
+        "issue": "4",
+        "key": "707_CR10",
+        "doi-asserted-by": "publisher",
+        "first-page": "159",
+        "DOI": "10.1080/07421222.2001.11045660",
+        "volume": "17",
+        "author": "G Bassellier",
+        "year": "2015",
+        "unstructured": "Bassellier, G., Reich, B. H., & Benbasat, I. (2015). Information technology competence of business managers: A definition and research model. Journal of Management Information Systems, 17(4), 159–182. https://doi.org/10.1080/07421222.2001.11045660",
+        "journal-title": "Journal of Management Information Systems"
+      },
+      {
+        "key": "707_CR11",
+        "doi-asserted-by": "publisher",
+        "first-page": "193",
+        "DOI": "10.1016/j.techfore.2015.02.015",
+        "volume": "102",
+        "author": "M Baumers",
+        "year": "2016",
+        "unstructured": "Baumers, M., Dickens, P., Tuck, C., & Hague, R. (2016). The cost of additive manufacturing: machine productivity, economies of scale and technology-push. Technological Forecasting and Social Change, 102, 193–201. https://doi.org/10.1016/j.techfore.2015.02.015",
+        "journal-title": "Technological Forecasting and Social Change"
+      },
+      {
+        "issue": "2",
+        "key": "707_CR12",
+        "doi-asserted-by": "publisher",
+        "first-page": "557",
+        "DOI": "10.1287/isre.2021.1069",
+        "volume": "33",
+        "author": "A Benlian",
+        "year": "2022",
+        "unstructured": "Benlian, A. (2022). Sprint zeal or sprint fatigue? The benefits and burdens of agile ISD practices use for developer well-being. Information Systems Research, 33(2), 557–578. https://doi.org/10.1287/isre.2021.1069",
+        "journal-title": "Information Systems Research"
+      },
+      {
+        "issue": "2",
+        "key": "707_CR13",
+        "doi-asserted-by": "publisher",
+        "first-page": "104",
+        "DOI": "10.1016/j.jsis.2016.01.001",
+        "volume": "25",
+        "author": "A Benlian",
+        "year": "2016",
+        "unstructured": "Benlian, A., & Haffke, I. (2016). Does mutuality matter? Examining the bilateral nature and effects of CEO–CIO mutual understanding. The Journal of Strategic Information Systems, 25(2), 104–126. https://doi.org/10.1016/j.jsis.2016.01.001",
+        "journal-title": "The Journal of Strategic Information Systems"
+      },
+      {
+        "key": "707_CR14",
+        "doi-asserted-by": "publisher",
+        "first-page": "825",
+        "DOI": "10.1007/s12599-022-00764-w",
+        "volume": "64",
+        "author": "A Benlian",
+        "year": "2022",
+        "unstructured": "Benlian, A., Wiener, M., Cram, W. A., Krasnova, H., Maedche, A., Möhlmann, M., Recker, J., & Remus, U. (2022). Algorithmic management. Business & Information Systems Engineering, 64, 825–839. https://doi.org/10.1007/s12599-022-00764-w",
+        "journal-title": "Business & Information Systems Engineering"
+      },
+      {
+        "issue": "3",
+        "key": "707_CR15",
+        "doi-asserted-by": "publisher",
+        "first-page": "1433",
+        "DOI": "10.25300/MISQ/2021/16274",
+        "volume": "45",
+        "author": "N Berente",
+        "year": "2021",
+        "unstructured": "Berente, N., Gu, B., Recker, J., & Santhanam, R. (2021). Managing artificial intelligence. MIS Quarterly, 45(3), 1433–1450. https://doi.org/10.25300/MISQ/2021/16274",
+        "journal-title": "MIS Quarterly"
+      },
+      {
+        "issue": "3",
+        "key": "707_CR16",
+        "doi-asserted-by": "publisher",
+        "first-page": "458",
+        "DOI": "10.1177/0148558x17722919",
+        "volume": "34",
+        "author": "K Bochkay",
+        "year": "2017",
+        "unstructured": "Bochkay, K., & Levine, C. B. (2017). Using MD&A to improve earnings forecasts. Journal of Accounting, Auditing & Finance, 34(3), 458–482. https://doi.org/10.1177/0148558x17722919",
+        "journal-title": "Journal of Accounting, Auditing & Finance"
+      },
+      {
+        "issue": "11",
+        "key": "707_CR17",
+        "doi-asserted-by": "publisher",
+        "first-page": "2298",
+        "DOI": "10.1002/smj.2652",
+        "volume": "38",
+        "author": "B Bos",
+        "year": "2017",
+        "unstructured": "Bos, B., Faems, D., & Noseleit, F. (2017). Alliance concentration in multinational companies: Examining alliance portfolios, firm structure, and firm performance. Strategic Management Journal, 38(11), 2298–2309. https://doi.org/10.1002/smj.2652",
+        "journal-title": "Strategic Management Journal"
+      },
+      {
+        "issue": "4",
+        "key": "707_CR18",
+        "doi-asserted-by": "publisher",
+        "first-page": "110",
+        "DOI": "10.1177/1536504219865226",
+        "volume": "61",
+        "author": "JK-U Brock",
+        "year": "2019",
+        "unstructured": "Brock, J.K.-U., & von Wangenheim, F. (2019). Demystifying AI: What digital Transformation Leaders Can Teach You about realistic artificial intelligence. California Management Review, 61(4), 110–134. https://doi.org/10.1177/1536504219865226",
+        "journal-title": "California Management Review"
+      },
+      {
+        "key": "707_CR19",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Brynjolfsson, E., Li, D., & Raymond, L. R. (2023). Generative AI at work. National Bureau of Economic Research. https://doi.org/10.48550/arXiv.2304.11771",
+        "DOI": "10.48550/arXiv.2304.11771"
+      },
+      {
+        "issue": "6",
+        "key": "707_CR20",
+        "doi-asserted-by": "publisher",
+        "first-page": "749",
+        "DOI": "10.1016/j.jm.2004.06.001",
+        "volume": "30",
+        "author": "MA Carpenter",
+        "year": "2016",
+        "unstructured": "Carpenter, M. A., Geletkanycz, M. A., & Sanders, W. G. (2016). Upper echelons research revisited: Antecedents, elements, and consequences of top management team composition. Journal of Management, 30(6), 749–778. https://doi.org/10.1016/j.jm.2004.06.001",
+        "journal-title": "Journal of Management"
+      },
+      {
+        "key": "707_CR21",
+        "unstructured": "CB Insights. (2022). The complete list of unicorn companies. Retrieved 24 July 2022 from https://www.cbinsights.com/research-unicorn-companies"
+      },
+      {
+        "key": "707_CR22",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Cetindamar, D., Kitto, K., Wu, M., Zhang, Y., Abedin, B., & Knight, S. (2022). Explicating AI literacy of employees at digital workplaces. IEEE transactions on engineering management, 0, 1-14. https://doi.org/10.1109/tem.2021.3138503",
+        "DOI": "10.1109/tem.2021.3138503"
+      },
+      {
+        "issue": "10",
+        "key": "707_CR23",
+        "doi-asserted-by": "publisher",
+        "first-page": "1031",
+        "DOI": "10.1080/09537325.2011.621297",
+        "volume": "23",
+        "author": "D Cetindamar",
+        "year": "2011",
+        "unstructured": "Cetindamar, D., & Pala, O. (2011). Chief technology officer roles and performance. Technology Analysis & Strategic Management, 23(10), 1031–1046. https://doi.org/10.1080/09537325.2011.621297",
+        "journal-title": "Technology Analysis & Strategic Management"
+      },
+      {
+        "issue": "1",
+        "key": "707_CR24",
+        "doi-asserted-by": "publisher",
+        "first-page": "231",
+        "DOI": "10.2753/mis0742-1222270110",
+        "volume": "27",
+        "author": "DQ Chen",
+        "year": "2014",
+        "unstructured": "Chen, D. Q., Preston, D. S., & Xia, W. (2014). Antecedents and effects of CIO supply-side and demand-side leadership: A staged maturity model. Journal of Management Information Systems, 27(1), 231–272. https://doi.org/10.2753/mis0742-1222270110",
+        "journal-title": "Journal of Management Information Systems"
+      },
+      {
+        "issue": "1",
+        "key": "707_CR25",
+        "doi-asserted-by": "publisher",
+        "first-page": "37",
+        "DOI": "10.1177/001316446002000104",
+        "volume": "20",
+        "author": "J Cohen",
+        "year": "2016",
+        "unstructured": "Cohen, J. (2016). A coefficient of agreement for nominal scales. Educational and Psychological Measurement, 20(1), 37–46. https://doi.org/10.1177/001316446002000104",
+        "journal-title": "Educational and Psychological Measurement"
+      },
+      {
+        "key": "707_CR26",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Coombs, C., Hislop, D., Taneva, S. K., & Barnard, S. (2020). The strategic impacts of intelligent automation for knowledge and service work: An interdisciplinary review. The Journal of Strategic Information Systems, 29(4). https://doi.org/10.1016/j.jsis.2020.101600",
+        "DOI": "10.1016/j.jsis.2020.101600"
+      },
+      {
+        "issue": "1",
+        "key": "707_CR27",
+        "doi-asserted-by": "publisher",
+        "first-page": "259",
+        "DOI": "10.1080/07421222.2018.1550561",
+        "volume": "36",
+        "author": "K Craig",
+        "year": "2019",
+        "unstructured": "Craig, K., Thatcher, J. B., & Grover, V. (2019). The IT identity threat: A conceptual definition and operational measure. Journal of Management Information Systems, 36(1), 259–288. https://doi.org/10.1080/07421222.2018.1550561",
+        "journal-title": "Journal of Management Information Systems"
+      },
+      {
+        "issue": "2",
+        "key": "707_CR28",
+        "doi-asserted-by": "publisher",
+        "first-page": "319",
+        "DOI": "10.1016/j.respol.2011.12.001",
+        "volume": "41",
+        "author": "P Criscuolo",
+        "year": "2012",
+        "unstructured": "Criscuolo, P., Nicolaou, N., & Salter, A. (2012). The elixir (or burden) of youth? Exploring differences in innovation between start-ups and established firms. Research Policy, 41(2), 319–333. https://doi.org/10.1016/j.respol.2011.12.001",
+        "journal-title": "Research Policy"
+      },
+      {
+        "issue": "16",
+        "key": "707_CR29",
+        "doi-asserted-by": "publisher",
+        "first-page": "6597",
+        "DOI": "10.3390/su12166597",
+        "volume": "12",
+        "author": "Y Dai",
+        "year": "2020",
+        "unstructured": "Dai, Y., Chai, C.-S., Lin, P.-Y., Jong, M.S.-Y., Guo, Y., & Qin, J. (2020). Promoting students’ well-being by developing their readiness for the artificial intelligence age. Sustainability, 12(16), 6597. https://doi.org/10.3390/su12166597",
+        "journal-title": "Sustainability"
+      },
+      {
+        "key": "707_CR30",
+        "doi-asserted-by": "publisher",
+        "first-page": "6597",
+        "DOI": "10.3390/su12166597",
+        "volume": "12",
+        "author": "T Davenport",
+        "year": "2018",
+        "unstructured": "Davenport, T., & Bean, R. (2018). Big companies are embracing analytics, but most still don’t have a data-driven culture. Harvard Business Review., 12, 6597. https://doi.org/10.3390/su12166597",
+        "journal-title": "Harvard Business Review."
+      },
+      {
+        "issue": "5",
+        "key": "707_CR31",
+        "doi-asserted-by": "publisher",
+        "first-page": "289",
+        "DOI": "10.1007/s12599-014-0344-2",
+        "volume": "6",
+        "author": "S Debortoli",
+        "year": "2014",
+        "unstructured": "Debortoli, S., Müller, O., & vom Brocke, J. (2014). Comparing business intelligence and big data skills. Business & Information Systems Engineering, 6(5), 289–300. https://doi.org/10.1007/s12599-014-0344-2",
+        "journal-title": "Business & Information Systems Engineering"
+      },
+      {
+        "issue": "S1",
+        "key": "707_CR32",
+        "doi-asserted-by": "publisher",
+        "first-page": "S337",
+        "DOI": "10.1086/694106",
+        "volume": "36",
+        "author": "D Deming",
+        "year": "2018",
+        "unstructured": "Deming, D., & Kahn, L. B. (2018). Skill requirements across firms and labor markets: Evidence from job postings for professionals. Journal of Labor Economics, 36(S1), S337–S369. https://doi.org/10.1086/694106",
+        "journal-title": "Journal of Labor Economics"
+      },
+      {
+        "issue": "10",
+        "key": "707_CR33",
+        "doi-asserted-by": "publisher",
+        "first-page": "1913",
+        "DOI": "10.1080/21670811.2022.2119152",
+        "volume": "10",
+        "author": "M Deuze",
+        "year": "2022",
+        "unstructured": "Deuze, M., & Beckett, C. (2022). Imagination, algorithms and news: Developing AI literacy for journalism. Digital Journalism, 10(10), 1913–1918. https://doi.org/10.1080/21670811.2022.2119152",
+        "journal-title": "Digital Journalism"
+      },
+      {
+        "issue": "7",
+        "key": "707_CR34",
+        "doi-asserted-by": "publisher",
+        "first-page": "865",
+        "DOI": "10.1016/j.im.2014.08.004",
+        "volume": "51",
+        "author": "F Ding",
+        "year": "2014",
+        "unstructured": "Ding, F., Li, D., & George, J. F. (2014). Investigating the effects of IS strategic leadership on organizational benefits from the perspective of CIO strategic roles. Information & Management, 51(7), 865–879. https://doi.org/10.1016/j.im.2014.08.004",
+        "journal-title": "Information & Management"
+      },
+      {
+        "issue": "5",
+        "key": "707_CR35",
+        "doi-asserted-by": "publisher",
+        "first-page": "1709",
+        "DOI": "10.1007/s10796-021-10186-w",
+        "volume": "24",
+        "author": "IM Enholm",
+        "year": "2021",
+        "unstructured": "Enholm, I. M., Papagiannidis, E., Mikalef, P., & Krogstie, J. (2021). Artificial intelligence and business value: A literature review. Information Systems Frontiers, 24(5), 1709–1734. https://doi.org/10.1007/s10796-021-10186-w",
+        "journal-title": "Information Systems Frontiers"
+      },
+      {
+        "issue": "1",
+        "key": "707_CR36",
+        "first-page": "93",
+        "volume": "13",
+        "author": "Y Eshet-Alkalai",
+        "year": "2004",
+        "unstructured": "Eshet-Alkalai, Y. (2004). Digital literacy. Journal of Educational Multimedia and Hypermedia, 13(1), 93–106.",
+        "journal-title": "Journal of Educational Multimedia and Hypermedia"
+      },
+      {
+        "key": "707_CR37",
+        "unstructured": "FedEx Corporation. (2022). FedEx introduces AI-powered robotic sorting arm to drive operational efficiency at its Singapore hub. Retrieved 25.08.2023 from https://newsroom.fedex.com/newsroom/asia-english/fedex-introduces-ai-powered-robotic-sorting-arm-to-drive-operational-efficiency-at-its-singapore-hub"
+      },
+      {
+        "issue": "4",
+        "key": "707_CR38",
+        "doi-asserted-by": "publisher",
+        "first-page": "656",
+        "DOI": "10.1002/smj.3113",
+        "volume": "41",
+        "author": "R Fu",
+        "year": "2019",
+        "unstructured": "Fu, R., Tang, Y., & Chen, G. (2019). Chief sustainability officers and corporate social (ir)responsibility. Strategic Management Journal, 41(4), 656–680. https://doi.org/10.1002/smj.3113",
+        "journal-title": "Strategic Management Journal"
+      },
+      {
+        "issue": "4",
+        "key": "707_CR39",
+        "doi-asserted-by": "publisher",
+        "first-page": "374",
+        "DOI": "10.1080/08874417.2017.1289354",
+        "volume": "58",
+        "author": "A Gardiner",
+        "year": "2017",
+        "unstructured": "Gardiner, A., Aasheim, C., Rutner, P., & Williams, S. (2017). Skill requirements in big data: A content analysis of job advertisements. Journal of Computer Information Systems, 58(4), 374–384. https://doi.org/10.1080/08874417.2017.1289354",
+        "journal-title": "Journal of Computer Information Systems"
+      },
+      {
+        "key": "707_CR40",
+        "unstructured": "Gordon, C. (2022). Board directors and CEO AI literacy - A change imperative. Forbes magazine. Retrieved 28 February 2023 from https://www.forbes.com/sites/cindygordon/2020/08/03/why-board-directors-and-ceos-must-become-ai-literate/?sh=1ba1a7805036"
+      },
+      {
+        "issue": "4",
+        "key": "707_CR41",
+        "doi-asserted-by": "publisher",
+        "first-page": "824",
+        "DOI": "10.1287/mnsc.2013.1795",
+        "volume": "60",
+        "author": "M Guadalupe",
+        "year": "2014",
+        "unstructured": "Guadalupe, M., Li, H., & Wulf, J. (2014). Who lives in the C-suite? Organizational structure and the division of labor in top management. Management Science, 60(4), 824–844. https://doi.org/10.1287/mnsc.2013.1795",
+        "journal-title": "Management Science"
+      },
+      {
+        "key": "707_CR42",
+        "unstructured": "Haffke, I., Kalgovas, B., & Benlian, A. (2016). The role of the CIO and the CDO in an organization’s digital transformation. In International Conference on Information Systems, Dublin, Ireland."
+      },
+      {
+        "issue": "2",
+        "key": "707_CR43",
+        "doi-asserted-by": "publisher",
+        "first-page": "334",
+        "DOI": "10.2307/20159303",
+        "volume": "32",
+        "author": "DC Hambrick",
+        "year": "2007",
+        "unstructured": "Hambrick, D. C. (2007). Upper echelons theory: An update. The Academy of Management Review, 32(2), 334–343. https://doi.org/10.2307/20159303",
+        "journal-title": "The Academy of Management Review"
+      },
+      {
+        "issue": "2",
+        "key": "707_CR44",
+        "doi-asserted-by": "publisher",
+        "first-page": "193",
+        "DOI": "10.2307/258434",
+        "volume": "9",
+        "author": "DC Hambrick",
+        "year": "1984",
+        "unstructured": "Hambrick, D. C., & Mason, P. A. (1984). Upper echelons: The organization as a reflection of its top managers. The Academy of Management Review, 9(2), 193. https://doi.org/10.2307/258434",
+        "journal-title": "The Academy of Management Review"
+      },
+      {
+        "issue": "8",
+        "key": "707_CR45",
+        "doi-asserted-by": "publisher",
+        "first-page": "1490",
+        "DOI": "10.1002/smj.3156",
+        "volume": "41",
+        "author": "C Heavey",
+        "year": "2020",
+        "unstructured": "Heavey, C., Simsek, Z., Kyprianou, C., & Risius, M. (2020). How do strategic leaders engage with social media? A theoretical framework for research and practice. Strategic Management Journal, 41(8), 1490–1527. https://doi.org/10.1002/smj.3156",
+        "journal-title": "Strategic Management Journal"
+      },
+      {
+        "issue": "5",
+        "key": "707_CR46",
+        "doi-asserted-by": "publisher",
+        "first-page": "1258",
+        "DOI": "10.1177/14614448211022702",
+        "volume": "24",
+        "author": "E Hermann",
+        "year": "2021",
+        "unstructured": "Hermann, E. (2021). Artificial intelligence and mass personalization of communication content—An ethical and literacy perspective. New Media & Society, 24(5), 1258–1277. https://doi.org/10.1177/14614448211022702",
+        "journal-title": "New Media & Society"
+      },
+      {
+        "key": "707_CR47",
+        "unstructured": "Herper, M. (2017). MD Anderson benches IBM Watson in setback for artificial intelligence in medicine. Forbes Magazine. https://www.forbes.com/sites/matthewherper/2017/02/19/md-anderson-benches-ibm-watson-in-setback-for-artificial-intelligence-in-medicine/?sh=48f49dd13774 (visited on 2 February 2023)"
+      },
+      {
+        "key": "707_CR48",
+        "unstructured": "Heyder, T., & Posegga, O. (2021). Extending the foundations of AI literacy. In International Conference on Information Systems, Austin, USA. https://aisel.aisnet.org/icis2021/is_future_work/is_future_work/9"
+      },
+      {
+        "key": "707_CR49",
+        "unstructured": "Hunts, A. (2021). CTO vs. CIO – Who do I need? Retrieved 28 February 2023 from https://rocketloop.de/en/blog/cto-vs-cio/"
+      },
+      {
+        "key": "707_CR50",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Jalili, S., Amerzadeh, M., Moosavi, S., Keshavarz, A., Zaboli, R., Tabatabaee, S. S., & Kalhor, R. (2022). Relationship between strategic orientation and performance: the mediating role of green supply chain management for better performance [Article; Early Access]. International Journal of Human Rights in Health Care, 10. https://doi.org/10.1108/ijhrh-03-2022-0018",
+        "DOI": "10.1108/ijhrh-03-2022-0018"
+      },
+      {
+        "issue": "3",
+        "key": "707_CR51",
+        "doi-asserted-by": "publisher",
+        "first-page": "685",
+        "DOI": "10.1007/s12525-021-00475-2",
+        "volume": "31",
+        "author": "C Janiesch",
+        "year": "2021",
+        "unstructured": "Janiesch, C., Zschech, P., & Heinrich, K. (2021). Machine learning and deep learning. Electronic Markets, 31(3), 685–695. https://doi.org/10.1007/s12525-021-00475-2",
+        "journal-title": "Electronic Markets"
+      },
+      {
+        "issue": "1",
+        "key": "707_CR52",
+        "doi-asserted-by": "publisher",
+        "first-page": "5",
+        "DOI": "10.1007/s12599-020-00676-7",
+        "volume": "63",
+        "author": "J Jöhnk",
+        "year": "2020",
+        "unstructured": "Jöhnk, J., Weißert, M., & Wyrtki, K. (2020). Ready or Not, AI Comes— An interview study of organizational AI readiness factors. Business & Information Systems Engineering, 63(1), 5–20. https://doi.org/10.1007/s12599-020-00676-7",
+        "journal-title": "Business & Information Systems Engineering"
+      },
+      {
+        "key": "707_CR53",
+        "unstructured": "Keen, P. G. W. (1991). Shaping the future: Business design through information technology. Harvard Business School Press."
+      },
+      {
+        "key": "707_CR54",
+        "unstructured": "Kelly, J. (2020). U.S. lost over 60 million jobs—Now robots, tech and artificial intelligence will take millions more. Forbes Magazine. https://www.forbes.com/sites/jackkelly/2020/10/27/us-lost-over-60-million-jobs-now-robots-tech-and-artificial-intelligence-will-take-millions-more/?sh=4e2ab6ef1a52 (visited on 22 February 2023)"
+      },
+      {
+        "key": "707_CR55",
+        "doi-asserted-by": "publisher",
+        "first-page": "232",
+        "DOI": "10.1016/j.jbusres.2019.11.025",
+        "volume": "108",
+        "author": "H Kent Baker",
+        "year": "2020",
+        "unstructured": "Kent Baker, H., Pandey, N., Kumar, S., & Haldar, A. (2020). A bibliometric analysis of board diversity: Current status, development, and future research directions. Journal of Business Research, 108, 232–246. https://doi.org/10.1016/j.jbusres.2019.11.025",
+        "journal-title": "Journal of Business Research"
+      },
+      {
+        "issue": "2",
+        "key": "707_CR56",
+        "doi-asserted-by": "publisher",
+        "first-page": "83",
+        "DOI": "10.1007/s12599-020-00637-0",
+        "volume": "63",
+        "author": "GD Kerpedzhiev",
+        "year": "2020",
+        "unstructured": "Kerpedzhiev, G. D., König, U. M., Röglinger, M., & Rosemann, M. (2020). An exploration into future business process management capabilities in view of digitalization. Business & Information Systems Engineering, 63(2), 83–96. https://doi.org/10.1007/s12599-020-00637-0",
+        "journal-title": "Business & Information Systems Engineering"
+      },
+      {
+        "issue": "4",
+        "key": "707_CR57",
+        "doi-asserted-by": "publisher",
+        "first-page": "26",
+        "DOI": "10.5465/amp.2007.27895337",
+        "volume": "21",
+        "author": "KJ Klein",
+        "year": "2007",
+        "unstructured": "Klein, K. J., & Harrison, D. A. (2007). On the diversity of diversity: Tidy logic, Messier realities. Academy of Management Perspectives, 21(4), 26–33. https://doi.org/10.5465/amp.2007.27895337",
+        "journal-title": "Academy of Management Perspectives"
+      },
+      {
+        "issue": "3",
+        "key": "707_CR58",
+        "doi-asserted-by": "publisher",
+        "first-page": "347",
+        "DOI": "10.1016/j.bushor.2016.01.008",
+        "volume": "59",
+        "author": "T Kohler",
+        "year": "2016",
+        "unstructured": "Kohler, T. (2016). Corporate accelerators: Building bridges between corporations and startups. Business Horizons, 59(3), 347–357. https://doi.org/10.1016/j.bushor.2016.01.008",
+        "journal-title": "Business Horizons"
+      },
+      {
+        "key": "707_CR59",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Kortum, H., Rebstadt, J., & Thomas, O. (2022). Dissection of AI job advertisements: A text mining-based analysis of employee skills in the disciplines computer vision and natural language processing. In Proceedings of the 55th Hawaii International Conference on System Sciences, Virtual.",
+        "DOI": "10.24251/HICSS.2022.635"
+      },
+      {
+        "key": "707_CR60",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Kruse, L., Wunderlich, N., & Beck, R. (2019). Artificial intelligence for the financial services industry: What challenges organizations to succeed. 52nd Hawaii International Conference on System Sciences, Waimea, USA.",
+        "DOI": "10.24251/HICSS.2019.770"
+      },
+      {
+        "key": "707_CR61",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Leidig, P., & Salmela, H. (2020). A competency model for undergraduate programs in information systems. The Joint ACM/AIS IS2020 Task Force. https://doi.org/10.1145/3460863",
+        "DOI": "10.1145/3460863"
+      },
+      {
+        "issue": "1",
+        "key": "707_CR62",
+        "doi-asserted-by": "publisher",
+        "first-page": "31",
+        "DOI": "10.2307/259035",
+        "volume": "24",
+        "author": "DP Lepak",
+        "year": "1999",
+        "unstructured": "Lepak, D. P., & Snell, S. A. (1999). The human resource architecture: Toward a theory of human capital allocation and development. The Academy of Management Review, 24(1), 31. https://doi.org/10.2307/259035",
+        "journal-title": "The Academy of Management Review"
+      },
+      {
+        "issue": "1",
+        "key": "707_CR63",
+        "doi-asserted-by": "publisher",
+        "first-page": "164",
+        "DOI": "10.5465/amj.2020.0969",
+        "volume": "66",
+        "author": "P Leppänen",
+        "year": "2023",
+        "unstructured": "Leppänen, P., George, G., & Alexy, O. (2023). When do novel business models lead to high performance? A configurational approach to value drivers, competitive strategy, and firm environment. Academy of Management Journal, 66(1), 164–194. https://doi.org/10.5465/amj.2020.0969",
+        "journal-title": "Academy of Management Journal"
+      },
+      {
+        "issue": "3",
+        "key": "707_CR64",
+        "doi-asserted-by": "publisher",
+        "first-page": "1603",
+        "DOI": "10.25300/misq/2021/16523",
+        "volume": "45",
+        "author": "J Li",
+        "year": "2021",
+        "unstructured": "Li, J., Li, M., Wang, X., & Bennett Thatcher, J. (2021). Strategic directions for AI: The role of CIOs and boards of directors. MIS Quarterly, 45(3), 1603–1644. https://doi.org/10.25300/misq/2021/16523",
+        "journal-title": "MIS Quarterly"
+      },
+      {
+        "issue": "8",
+        "key": "707_CR65",
+        "doi-asserted-by": "publisher",
+        "first-page": "1457",
+        "DOI": "10.1111/j.1467-6486.2010.00949.x",
+        "volume": "47",
+        "author": "Y Li",
+        "year": "2010",
+        "unstructured": "Li, Y., Wei, Z., & Liu, Y. (2010). Strategic orientations, knowledge acquisition, and firm performance: The perspective of the vendor in cross-border outsourcing. Journal of Management Studies, 47(8), 1457–1482. https://doi.org/10.1111/j.1467-6486.2010.00949.x",
+        "journal-title": "Journal of Management Studies"
+      },
+      {
+        "key": "707_CR66",
+        "unstructured": "LinkedIn.com. (2023). About Linkedin. Retrieved 19 April 2023 from https://about.linkedin.com/"
+      },
+      {
+        "key": "707_CR67",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Long, D., & Magerko, B. (2020). What is AI literacy? Competencies and design considerations. In 2020 CHI conference on human factors in computing systems. Honolulu, USA. https://doi.org/10.1145/3313831.3376727",
+        "DOI": "10.1145/3313831.3376727"
+      },
+      {
+        "key": "707_CR68",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Mattke, J., Müller, L., & Maier, C. (2019). Paid, owned and earned media: A qualitative comparative analysis revealing attributes influencing consumer’s brand attitude in social media. In 52nd Hawaii International Conference on System Sciences, Hawaii, USA.",
+        "DOI": "10.24251/HICSS.2019.098"
+      },
+      {
+        "issue": "1",
+        "key": "707_CR69",
+        "doi-asserted-by": "publisher",
+        "first-page": "53",
+        "DOI": "10.1080/10580530.2020.1849465",
+        "volume": "39",
+        "author": "C Meske",
+        "year": "2020",
+        "unstructured": "Meske, C., Bunde, E., Schneider, J., & Gersch, M. (2020). Explainable artificial intelligence: objectives, stakeholders, and future research opportunities. Information Systems Management, 39(1), 53–63. https://doi.org/10.1080/10580530.2020.1849465",
+        "journal-title": "Information Systems Management"
+      },
+      {
+        "key": "707_CR70",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Mikalef, P., Fjørtoft, S. O., & Torvatn, H. Y. (2019). Developing an artificial intelligence capability: A theoretical framework for business value. In Business Information Systems Workshops. 409-416. https://doi.org/10.1007/978-3-030-36691-9_34",
+        "DOI": "10.1007/978-3-030-36691-9_34"
+      },
+      {
+        "issue": "3",
+        "key": "707_CR71",
+        "doi-asserted-by": "publisher",
+        "first-page": "103434",
+        "DOI": "10.1016/j.im.2021.103434",
+        "volume": "58",
+        "author": "P Mikalef",
+        "year": "2021",
+        "unstructured": "Mikalef, P., & Gupta, M. (2021). Artificial intelligence capability: Conceptualization, measurement calibration, and empirical study on its impact on organizational creativity and firm performance. Information & management, 58(3), 103434. https://doi.org/10.1016/j.im.2021.103434",
+        "journal-title": "Information & management"
+      },
+      {
+        "issue": "4",
+        "key": "707_CR72",
+        "doi-asserted-by": "publisher",
+        "first-page": "49",
+        "DOI": "10.1177/104225879101500407",
+        "volume": "15",
+        "author": "MP Miles",
+        "year": "2017",
+        "unstructured": "Miles, M. P., & Arnold, D. R. (2017). The relationship between marketing orientation and entrepreneurial orientation. Entrepreneurship Theory and Practice, 15(4), 49–66. https://doi.org/10.1177/104225879101500407",
+        "journal-title": "Entrepreneurship Theory and Practice"
+      },
+      {
+        "issue": "8",
+        "key": "707_CR73",
+        "doi-asserted-by": "publisher",
+        "first-page": "702",
+        "DOI": "10.1080/0965254x.2017.1384037",
+        "volume": "26",
+        "author": "M Mohiuddin Babu",
+        "year": "2017",
+        "unstructured": "Mohiuddin Babu, M. (2017). Impact of firm’s customer orientation on performance: the moderating role of interfunctional coordination and employee commitment. Journal of Strategic Marketing, 26(8), 702–722. https://doi.org/10.1080/0965254x.2017.1384037",
+        "journal-title": "Journal of Strategic Marketing"
+      },
+      {
+        "issue": "2",
+        "key": "707_CR74",
+        "doi-asserted-by": "publisher",
+        "first-page": "104",
+        "DOI": "10.1016/j.ijinfomgt.2008.05.009",
+        "volume": "29",
+        "author": "D Naranjo-Gil",
+        "year": "2009",
+        "unstructured": "Naranjo-Gil, D. (2009). Management information systems and strategic performances: The role of top team composition. International Journal of Information Management, 29(2), 104–110. https://doi.org/10.1016/j.ijinfomgt.2008.05.009",
+        "journal-title": "International Journal of Information Management"
+      },
+      {
+        "key": "707_CR75",
+        "doi-asserted-by": "publisher",
+        "first-page": "100041",
+        "DOI": "10.1016/j.caeai.2021.100041",
+        "volume": "2",
+        "author": "DTK Ng",
+        "year": "2021",
+        "unstructured": "Ng, D. T. K., Leung, J. K. L., Chu, S. K. W., & Qiao, M. S. (2021). Conceptualizing AI literacy: An exploratory review. Computers and Education: Artificial Intelligence, 2, 100041. https://doi.org/10.1016/j.caeai.2021.100041",
+        "journal-title": "Computers and Education: Artificial Intelligence"
+      },
+      {
+        "key": "707_CR76",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Ocasio, W. (1997). Towards an attention-based view of the firm. Strategic Management Journal, 18(S1), 187–206. https://doi.org/10.1002/(sici)1097-0266(199707)18:1+%3c187::Aid-smj936%3e3.0.Co;2-k",
+        "DOI": "10.1002/(sici)1097-0266(199707)18:1+%3c187::Aid-smj936%3e3.0.Co;2-k"
+      },
+      {
+        "key": "707_CR77",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Ocasio, W. (2011). Attention to attention. Organization science, 22(5), 1286–1296. https://doi.org/10.1287/orsc.1100.0602",
+        "DOI": "10.1287/orsc.1100.0602"
+      },
+      {
+        "key": "707_CR78",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Oehmichen, J., Schult, A., & Dong, J. Q. (2023). Successfully organizing AI innovation through collaboration with startups. MIS Quarterly Executive, 22(1). https://doi.org/10.17705/2msqe.00073",
+        "DOI": "10.17705/2msqe.00073"
+      },
+      {
+        "key": "707_CR79",
+        "unstructured": "Papagiannidis, E., Merete Enholm, I., Mikalef, P., & Krogstie, J. (2021). Structuring AI Resources to build an AI capability: A conceptual framework. In European Conference on Information Systems, Marrakesh, Morocco. https://aisel.aisnet.org/ecis2021_rip/47/"
+      },
+      {
+        "key": "707_CR80",
+        "doi-asserted-by": "publisher",
+        "first-page": "1024",
+        "DOI": "10.1016/j.procs.2022.01.301",
+        "volume": "200",
+        "author": "Y Peifer",
+        "year": "2022",
+        "unstructured": "Peifer, Y., Jeske, T., & Hille, S. (2022). Artificial intelligence and its impact on leaders and leadership. Procedia computer science, 200, 1024–1030. https://doi.org/10.1016/j.procs.2022.01.301",
+        "journal-title": "Procedia computer science"
+      },
+      {
+        "key": "707_CR81",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Peng, S., Kalliamvakou, E., Cihon, P., & Demirer, M. (2023). The impact of AI on developer productivity: Evidence from GitHub Copilot. arXiv. https://doi.org/10.48550/arXiv.2302.06590",
+        "DOI": "10.48550/arXiv.2302.06590"
+      },
+      {
+        "key": "707_CR82",
+        "unstructured": "Peppard, J., Edwards, C., & Lambert, R. (2011). Clarifying the ambiguous role of the CIO. MIS Quarterly Executive, 10(1). https://aisel.aisnet.org/misqe/vol10/iss1/3"
+      },
+      {
+        "key": "707_CR83",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1108/jeee-06-2021-0258",
+        "author": "A Pigola",
+        "year": "2022",
+        "unstructured": "Pigola, A., da Costa, P. R., van der Poel, N., & Yamaçake, F. T. R. (2022). New perspectives for dynamic capabilities in meeting needs of startups’ survival. Journal of Entrepreneurship in Emerging Economies. https://doi.org/10.1108/jeee-06-2021-0258",
+        "journal-title": "Journal of Entrepreneurship in Emerging Economies"
+      },
+      {
+        "key": "707_CR84",
+        "unstructured": "Pinski, M., & Benlian, A. (2023). AI literacy - towards measuring human competency in artificial intelligence. In 56th Hawaii International Conference on System Sciences, Lahaina, USA. https://hdl.handle.net/10125/102649"
+      },
+      {
+        "key": "707_CR85",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Pinski, M., Adam, M., & Benlian, A. (2023a). AI knowledge: Improving AI delegation through human enablement. In 2023 CHI conference on human factors in computing systems (CHI ’23), Hamburg. Germany. https://doi.org/10.1145/3544548.3580794",
+        "DOI": "10.1145/3544548.3580794"
+      },
+      {
+        "key": "707_CR86",
+        "unstructured": "Pinski, M., Haas, M., & Franz, A. (2023b). AiLingo – A design science approach to advancing non-expert adults’ AI literacy. In 44th International Conference on Information Systems, Hyderabad, India. https://aisel.aisnet.org/icis2023/learnandiscurricula/learnandiscurricula/10/"
+      },
+      {
+        "key": "707_CR87",
+        "unstructured": "Pumplun, L., Tauchert, C., & Heidt, M. (2019). A new organizational chassis for artificial intelligence - exploring organizational readiness factors. In European Conference on Information Systems, Stockholm-Uppsala, Sweden."
+      },
+      {
+        "issue": "1",
+        "key": "707_CR88",
+        "doi-asserted-by": "publisher",
+        "first-page": "257",
+        "DOI": "10.2753/mis0742-1222260110",
+        "volume": "26",
+        "author": "A Rai",
+        "year": "2014",
+        "unstructured": "Rai, A., Brown, P., & Tang, X. (2014). Organizational assimilation of electronic procurement innovations. Journal of Management Information Systems, 26(1), 257–296. https://doi.org/10.2753/mis0742-1222260110",
+        "journal-title": "Journal of Management Information Systems"
+      },
+      {
+        "issue": "4",
+        "key": "707_CR89",
+        "doi-asserted-by": "publisher",
+        "first-page": "817",
+        "DOI": "10.1016/j.dss.2007.10.006",
+        "volume": "44",
+        "author": "K Ramamurthy",
+        "year": "2008",
+        "unstructured": "Ramamurthy, K., Sen, A., & Sinha, A. P. (2008). An empirical investigation of the key determinants of data warehouse adoption. Decision support systems, 44(4), 817–841. https://doi.org/10.1016/j.dss.2007.10.006",
+        "journal-title": "Decision support systems"
+      },
+      {
+        "key": "707_CR90",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Rana, G., & Sharma, R. (2019). Emerging human resource management practices in Industry 4.0. Strategic HR Review, 18(4), 176-181. https://doi.org/10.1108/shr-01-2019-0003",
+        "DOI": "10.1108/shr-01-2019-0003"
+      },
+      {
+        "issue": "3",
+        "key": "707_CR91",
+        "doi-asserted-by": "publisher",
+        "first-page": "364",
+        "DOI": "10.1080/0960085x.2021.1955628",
+        "volume": "31",
+        "author": "NP Rana",
+        "year": "2021",
+        "unstructured": "Rana, N. P., Chatterjee, S., Dwivedi, Y. K., & Akter, S. (2021). Understanding dark side of artificial intelligence (AI) integrated business analytics: assessing firm’s operational inefficiency and competitiveness. European Journal of Information Systems, 31(3), 364–387. https://doi.org/10.1080/0960085x.2021.1955628",
+        "journal-title": "European Journal of Information Systems"
+      },
+      {
+        "key": "707_CR92",
+        "unstructured": "Ransbotham, S., Khodabandeh, S., Fehling, R., LaFountain, B., & Kiron, D. (2019). Winning with AI. MIT Sloan Management Review, 61180. https://sloanreview.mit.edu/projects/winning-with-ai/. Accessed 19 Apr 2023."
+      },
+      {
+        "key": "707_CR93",
+        "doi-asserted-by": "publisher",
+        "first-page": "232",
+        "DOI": "10.1016/j.jbusres.2020.05.053",
+        "volume": "117",
+        "author": "C Reis",
+        "year": "2020",
+        "unstructured": "Reis, C., Ruivo, P., Oliveira, T., & Faroleiro, P. (2020). Assessing the drivers of machine learning business value. Journal of Business Research, 117, 232–243. https://doi.org/10.1016/j.jbusres.2020.05.053",
+        "journal-title": "Journal of Business Research"
+      },
+      {
+        "issue": "2",
+        "key": "707_CR94",
+        "doi-asserted-by": "publisher",
+        "first-page": "327",
+        "DOI": "10.2307/3250941",
+        "volume": "24",
+        "author": "R Roepke",
+        "year": "2000",
+        "unstructured": "Roepke, R., Agarwal, R., & Ferratt, T. W. (2000). Aligning the IT human resource with business vision: The leadership initiative at 3M. MIS Quarterly, 24(2), 327. https://doi.org/10.2307/3250941",
+        "journal-title": "MIS Quarterly"
+      },
+      {
+        "key": "707_CR95",
+        "unstructured": "Romanko, O., & O’Mahony, M. (2022). The use of online job sites for measuring skills and labour market trends: A review (ESCoE technical report TR-19). https://www.escoe.ac.uk/publications/the-use-of-online-job-sitesfor-measuring-skills-and-labour-market-trends-a-review/"
+      },
+      {
+        "issue": "3",
+        "key": "707_CR96",
+        "doi-asserted-by": "publisher",
+        "first-page": "201",
+        "DOI": "10.1002/smj.376",
+        "volume": "25",
+        "author": "FT Rothaermel",
+        "year": "2004",
+        "unstructured": "Rothaermel, F. T., & Deeds, D. L. (2004). Exploration and exploitation alliances in biotechnology: a system of new product development. Strategic Management Journal, 25(3), 201–221. https://doi.org/10.1002/smj.376",
+        "journal-title": "Strategic Management Journal"
+      },
+      {
+        "key": "707_CR97",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Sambasivan, N., Kapania, S., Highfill, H., Akrong, D., Paritosh, P., & Aroyo, L. M. (2021). “Everyone wants to do the model work, not the data work”: Data cascades in high-stakes AI. In Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems.",
+        "DOI": "10.1145/3411764.3445518"
+      },
+      {
+        "key": "707_CR98",
+        "unstructured": "Scuik, C., & Hess, T. (2022). Governing digital transformation – the profiles of top managers. In Pacific Asia Conference on Information Systems, Taipeh-Sydney. https://aisel.aisnet.org/pacis2022/28"
+      },
+      {
+        "issue": "3",
+        "key": "707_CR99",
+        "doi-asserted-by": "publisher",
+        "first-page": "101734",
+        "DOI": "10.1016/j.jsis.2022.101734",
+        "volume": "31",
+        "author": "A Shollo",
+        "year": "2022",
+        "unstructured": "Shollo, A., Hopf, K., Thiess, T., & Müller, O. (2022). Shifting ML value creation mechanisms: A process model of ML value creation. The Journal of Strategic Information Systems, 31(3), 101734. https://doi.org/10.1016/j.jsis.2022.101734",
+        "journal-title": "The Journal of Strategic Information Systems"
+      },
+      {
+        "issue": "3",
+        "key": "707_CR100",
+        "doi-asserted-by": "publisher",
+        "first-page": "467",
+        "DOI": "10.2307/25148852",
+        "volume": "32",
+        "author": "A Sidorova",
+        "year": "2008",
+        "unstructured": "Sidorova, A., Evangelopoulos, N., Valacich, J. S., & Ramakrishnan, T. (2008). Uncovering the intellectual core of the information systems discipline. MIS Quarterly, 32(3), 467. https://doi.org/10.2307/25148852",
+        "journal-title": "MIS Quarterly"
+      },
+      {
+        "issue": "6",
+        "key": "707_CR101",
+        "doi-asserted-by": "publisher",
+        "first-page": "662",
+        "DOI": "10.2307/256987",
+        "volume": "42",
+        "author": "T Simons",
+        "year": "1999",
+        "unstructured": "Simons, T., Pelled, L. H., & Smith, K. A. (1999). Making use of difference: Diversity, debate, and decision comprehensiveness in top management teams. Academy of Management Journal, 42(6), 662–673. https://doi.org/10.2307/256987",
+        "journal-title": "Academy of Management Journal"
+      },
+      {
+        "issue": "5",
+        "key": "707_CR102",
+        "doi-asserted-by": "publisher",
+        "first-page": "271",
+        "DOI": "10.1016/j.im.2009.05.001",
+        "volume": "46",
+        "author": "MG Sobol",
+        "year": "2009",
+        "unstructured": "Sobol, M. G., & Klein, G. (2009). Relation of CIO background, IT infrastructure, and economic performance. Information & Management, 46(5), 271–278. https://doi.org/10.1016/j.im.2009.05.001",
+        "journal-title": "Information & Management"
+      },
+      {
+        "issue": "2",
+        "key": "707_CR103",
+        "doi-asserted-by": "publisher",
+        "first-page": "235",
+        "DOI": "10.1108/ejim-10-2019-0312",
+        "volume": "24",
+        "author": "A Steiber",
+        "year": "2020",
+        "unstructured": "Steiber, A., & Alänge, S. (2020). Corporate-startup collaboration: Effects on large firms’ business transformation. European Journal of Innovation Management, 24(2), 235–257. https://doi.org/10.1108/ejim-10-2019-0312",
+        "journal-title": "European Journal of Innovation Management"
+      },
+      {
+        "issue": "2",
+        "key": "707_CR104",
+        "doi-asserted-by": "publisher",
+        "first-page": "131",
+        "DOI": "10.1007/s13218-021-00724-8",
+        "volume": "35",
+        "author": "G Steinbauer",
+        "year": "2021",
+        "unstructured": "Steinbauer, G., Kandlhofer, M., Chklovski, T., Heintz, F., & Koenig, S. (2021). A differentiated discussion about AI education K-12. Kunstliche Intell (Oldenbourg), 35(2), 131–137. https://doi.org/10.1007/s13218-021-00724-8",
+        "journal-title": "Kunstliche Intell (Oldenbourg)"
+      },
+      {
+        "issue": "8",
+        "key": "707_CR105",
+        "doi-asserted-by": "publisher",
+        "first-page": "1688",
+        "DOI": "10.1002/smj.2423",
+        "volume": "37",
+        "author": "T Swift",
+        "year": "2016",
+        "unstructured": "Swift, T. (2016). The perilous leap between exploration and exploitation. Strategic Management Journal, 37(8), 1688–1698. https://doi.org/10.1002/smj.2423",
+        "journal-title": "Strategic Management Journal"
+      },
+      {
+        "issue": "6",
+        "key": "707_CR106",
+        "doi-asserted-by": "publisher",
+        "first-page": "1177",
+        "DOI": "10.1111/isj.12396",
+        "volume": "32",
+        "author": "J Toutaoui",
+        "year": "2022",
+        "unstructured": "Toutaoui, J., Benlian, A., & Hess, T. (2022). Managing paradoxes in bi-modal information technology functions: A multi-case study. Information Systems Journal, 32(6), 1177–1202. https://doi.org/10.1111/isj.12396",
+        "journal-title": "Information Systems Journal"
+      },
+      {
+        "key": "707_CR107",
+        "unstructured": "Uptake Technologies Inc. (2023). Uptake product offering. Retrieved 25.08.2023 from https://www.uptake.com/products"
+      },
+      {
+        "issue": "7",
+        "key": "707_CR108",
+        "doi-asserted-by": "publisher",
+        "first-page": "1893",
+        "DOI": "10.1108/bpmj-10-2019-0411",
+        "volume": "26",
+        "author": "S-L Wamba-Taguimdje",
+        "year": "2020",
+        "unstructured": "Wamba-Taguimdje, S.-L., Fosso Wamba, S., Kala Kamdjoug, J. R., & Tchatchouang Wanko, C. E. (2020). Influence of artificial intelligence (AI) on firm performance: The business value of AI-based transformation projects. Business process management Journal, 26(7), 1893–1924. https://doi.org/10.1108/bpmj-10-2019-0411",
+        "journal-title": "Business process management Journal"
+      },
+      {
+        "key": "707_CR109",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Wang, B., Rau, P.-L. P., & Yuan, T. (2022). Measuring user competence in using artificial intelligence: Validity and reliability of artificial intelligence literacy scale. Behaviour & Information Technology, 1-14. https://doi.org/10.1080/0144929x.2022.2072768",
+        "DOI": "10.1080/0144929x.2022.2072768"
+      },
+      {
+        "key": "707_CR110",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10796-022-10297-y",
+        "author": "M Weber",
+        "year": "2022",
+        "unstructured": "Weber, M., Engert, M., Schaffer, N., Weking, J., & Krcmar, H. (2022). Organizational capabilities for AI implementation—Coping with inscrutability and data dependency in AI. Information Systems Frontiers. https://doi.org/10.1007/s10796-022-10297-y",
+        "journal-title": "Information Systems Frontiers"
+      },
+      {
+        "key": "707_CR111",
+        "unstructured": "Williams, C. (2021). Four reasons your AI plan is failing (and how to fix them). International business machines (IBM). https://www.ibm.com/blogs/think/uk-en/four-reasons-your-ai-plan-is-failing-and-how-to-fix-them/. Accessed 28 Feb 2023."
+      },
+      {
+        "key": "707_CR112",
+        "unstructured": "World Economic Forum. (2022). Empowering AI leadership: AI c-suite toolkit. https://www.weforum.org/publications/empowering-ai-leadershipai-c-suite-toolkit/"
+      },
+      {
+        "key": "707_CR113",
+        "unstructured": "Yang, J., Blount, Y., & Amrollahi, A. (2021). Factors that influence the adoption of artificial intelligence by auditing firms. In International Conference on Information Systems. https://aisel.aisnet.org/icis2021/is_implement/is_implement/5"
+      },
+      {
+        "issue": "1",
+        "key": "707_CR114",
+        "doi-asserted-by": "publisher",
+        "first-page": "41",
+        "DOI": "10.1016/j.ijforecast.2010.05.009",
+        "volume": "27",
+        "author": "I Yaniv",
+        "year": "2011",
+        "unstructured": "Yaniv, I. (2011). Group diversity and decision quality: Amplification and attenuation of the framing effect. International Journal of Forecasting, 27(1), 41–49. https://doi.org/10.1016/j.ijforecast.2010.05.009",
+        "journal-title": "International Journal of Forecasting"
+      },
+      {
+        "issue": "1",
+        "key": "707_CR115",
+        "doi-asserted-by": "publisher",
+        "first-page": "88",
+        "DOI": "10.1111/jpim.12376",
+        "volume": "35",
+        "author": "F Zhang",
+        "year": "2018",
+        "unstructured": "Zhang, F., Wei, L., Yang, J., & Zhu, L. (2018). Roles of relationships between large shareholders and managers in radical innovation: A stewardship theory perspective. Journal of Product Innovation Management, 35(1), 88–105. https://doi.org/10.1111/jpim.12376",
+        "journal-title": "Journal of Product Innovation Management"
+      },
+      {
+        "issue": "2",
+        "key": "707_CR116",
+        "doi-asserted-by": "publisher",
+        "first-page": "197",
+        "DOI": "10.1086/651257",
+        "volume": "37",
+        "author": "X Zhao",
+        "year": "2010",
+        "unstructured": "Zhao, X., Lynch, J. G., & Chen, Q. (2010). Reconsidering Baron and Kenny: Myths and truths about mediation analysis. Journal of Consumer Research, 37(2), 197–206. https://doi.org/10.1086/651257",
+        "journal-title": "Journal of Consumer Research"
+      }
+    ],
+    "container-title": [
+      "Electronic Markets"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://link.springer.com/content/pdf/10.1007/s12525-024-00707-1.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://link.springer.com/article/10.1007/s12525-024-00707-1/fulltext.html",
+        "content-type": "text/html",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://link.springer.com/content/pdf/10.1007/s12525-024-00707-1.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2024,
+          12,
+          26
+        ]
+      ],
+      "date-time": "2024-12-26T03:25:40Z",
+      "timestamp": 1735183540000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://link.springer.com/10.1007/s12525-024-00707-1"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2024,
+          4,
+          1
+        ]
+      ]
+    },
+    "references-count": 116,
+    "journal-issue": {
+      "issue": "1",
+      "published-print": {
+        "date-parts": [
+          [
+            2024,
+            12
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "707"
+    ],
+    "URL": "https://doi.org/10.1007/s12525-024-00707-1",
+    "relation": {},
+    "ISSN": [
+      "1019-6781",
+      "1422-8890"
+    ],
+    "issn-type": [
+      {
+        "value": "1019-6781",
+        "type": "print"
+      },
+      {
+        "value": "1422-8890",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          4,
+          1
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "29 April 2023",
+        "order": 1,
+        "name": "received",
+        "label": "Received",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      },
+      {
+        "value": "21 February 2024",
+        "order": 2,
+        "name": "accepted",
+        "label": "Accepted",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      },
+      {
+        "value": "1 April 2024",
+        "order": 3,
+        "name": "first_online",
+        "label": "First Online",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      }
+    ],
+    "article-number": "24"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "schema": "femprompt-screening-corrections/0.2",
+  "scope": "Immutable AI correction of a previously screened source. Canonical bibliography and exact AM source are distinct; only the stated category level and quotation strings are projected. Original annotation, actor, lifecycle and Include decision remain unchanged.",
+  "corrections": {
+    "VSZM7CT6": {
+      "paper_id": "VSZM7CT6",
+      "base_artifact": "docs/data/screening/ar2.json#/decisions/VSZM7CT6",
+      "base_sha256": "sha256:114a36d307946899b31e42dd9ebb05424df30cdd4170f88f3b2bcefaa989bd4a",
+      "agent_id": "/root/aggregation",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "corrected_at": "2026-09-05T15:11:56.462117+00:00",
+      "source_binding": {
+        "record_id": "VSZM7CT6",
+        "source_path": "generated/markdown_clean/VSZM7CT6.md",
+        "source_sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+        "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+        "source_version_id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+        "source_version_type": "accepted_manuscript",
+        "bibliographic_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+        "preferred_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
+        "is_preferred_version": false,
+        "source_url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download"
+      },
+      "changes": [
+        {
+          "path": "/categories/Fairness",
+          "before": 2,
+          "after": 1,
+          "reason": "AM PDF p.11/manuscript p.10 mentions the Australian framework's fairness/privacy/transparency/accountability among wider education-ethics concerns. There is an explicit algorithmic fairness reference, but no central fairness study, metric, or dedicated intervention evaluation; level 1 matches the existing partial-reference scale."
+        },
+        {
+          "path": "/evidence/Soziale_Arbeit/0/term",
+          "before": "This paper explores possible future implications for social work education.",
+          "after": "this paper explores possible future implications for social work education.",
+          "reason": "The Griffith AM abstract, PDF p.4/manuscript p.3, continues the preceding sentence with lowercase 'this paper'; the publisher VOR's 'this article' belongs to another version. Preserve the exact AM wording."
+        },
+        {
+          "path": "/evidence/Soziale_Arbeit/0/snippet",
+          "before": "This paper explores possible future implications for social work education.",
+          "after": "this paper explores possible future implications for social work education.",
+          "reason": "The Griffith AM abstract, PDF p.4/manuscript p.3, continues the preceding sentence with lowercase 'this paper'; the publisher VOR's 'this article' belongs to another version. Preserve the exact AM wording."
+        }
+      ]
+    }
+  }
+}

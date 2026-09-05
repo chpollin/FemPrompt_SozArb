@@ -10,9 +10,9 @@ status: complete
 language: en
 version: "0.6"
 created: 2026-02-21
-updated: 2026-08-23
+updated: 2026-09-05
 authors: [Christopher Pollin]
-generated-with: Claude Code
+generated-with: Claude Code, Codex (GPT-6)
 topics: ["[[Epistemic Infrastructure]]", "[[Feminist AI]]"]
 related: [INDEX, methods, standards, governance, verification, plan, journal]
 ---
@@ -58,7 +58,7 @@ Primary audience: researchers with limited AI expertise.
 | Domain experts can verify, correct, and approve prepared records in PRISM | Implemented; execution over the intended corpus open |
 | Quantitative findings derive from committed data and executable scripts | Open for the completed corpus |
 | Qualitative findings derive from source-linked Assertions | Initial vertical slice implemented; complete synthesis open |
-| Public projections contain only publication-approved material | Implemented |
+| Public projections satisfy their explicit release policy and retain their actual authority | Implemented for the labelled AI-source-reviewed subset; final scholarly approval remains open |
 | Canonical literature report and paper receive domain-expert review | Open |
 
 ## Scope boundaries
@@ -80,7 +80,7 @@ The substantive strand answers SQ1 to SQ3 from the completed corpus. Its outputs
 
 ## Corpus
 
-The corpus was identified via four proprietary Deep Research systems (ChatGPT, Claude, Gemini, Perplexity) plus a limited manual search, curated in a Zotero group. It is English and German, spanning the late 2010s to 2025, focused on feminist AI literacies, generative AI, prompting, and social work. The exact counts, the provider distribution, and the acquisition loss chain are derivations from the data and live in the files under `assessment/` and `corpus/`.
+The initial corpus was identified via four proprietary Deep Research systems (ChatGPT, Claude, Gemini, Perplexity) plus a limited manual search and curated in a Zotero group. It covers English and German literature on feminist AI literacies, generative AI, prompting and social work. The completion target also includes the prepared 2026 intake and separately dated gap-filling candidates; their identification does not imply a curated identity or screening inclusion. The [completion package](../generated/completion/README.md) distinguishes these populations and their current denominators. The historical benchmark, linked knowledge archive and active source-reviewed synthesis remain separate subsets.
 
 ## Team
 
@@ -108,7 +108,7 @@ The asymmetry maps onto concrete risks and infrastructure measures:
 | Sycophancy | Prompt-induced over-attribution of categories | Negative constraints in prompts, calibration items, prompt versioning |
 | Paywall bias | Systematic underrepresentation of paywalled literature | Hierarchical acquisition strategy plus OA disclosure |
 | Prompt competence | Result dependence on prompt quality | Prompt governance: versioning, review, documentation |
-| Scholarly authority | AI review cannot establish a domain interpretation or public release | Domain-expert verification and separate publication approval |
+| Scholarly authority | AI source review can be mistaken for domain-expert verification | Attributed preliminary release policy; separate domain-expert verification and final scholarly approval |
 | Provider divergence | Different models yield different evidence bases | Multi-provider comparison, overlap analysis |
 | Resource asymmetry | Unequal access to frontier models and infrastructure | Cost transparency, open-source pipeline where possible |
 
@@ -155,7 +155,7 @@ Shanahan (Strange New Minds) coins the term for frontier LLMs: systems that oper
 
 ### Sycophancy (prompt conformity)
 
-The empirically documented tendency of LLMs to over-agree with prompt presuppositions; Malmqvist (2024) documents error-introduction rates of up to 40 percent for suggestive queries. Measures in the project: negative constraints in the assessment prompts (classify as Feminist only on explicit feminist theory, methods, perspective, or authors, not on mere proximity to gender topics; when uncertain, choose the more restrictive value; do not assign more than three or four categories unless the text genuinely addresses more), calibration items (a small control group with known correct classification), and prompt versioning (every change in `prompts/CHANGELOG.md`).
+The empirically documented tendency of LLMs to over-agree with prompt presuppositions; Malmqvist (2024) documents error-introduction rates of up to 40 percent for suggestive queries. Measures in the project: source-bound category decisions under the current codebook (gender proximity alone does not establish a feminist perspective; explicit and implicit approaches must meet the recorded definition, and every positive category needs its own evidence), calibration items (a small control group with known correct classification), and prompt versioning (every change in `prompts/CHANGELOG.md`).
 
 ### Situated knowledge (Haraway)
 

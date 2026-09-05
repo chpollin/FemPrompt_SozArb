@@ -20,17 +20,21 @@ import json
 import re
 import sys
 import uuid
+from datetime import datetime
 from pathlib import Path
 from typing import Any, Iterable
 
 from src.file_hashing import canonical_file_bytes, file_sha256
+from src.analysis.metadata_corrections import CORRECTIONS_PATH, apply_metadata_corrections
 from src.analysis.work_versions import (
     REGISTRY_PATH,
     REGISTRY_SCHEMA,
+    SOURCE_BINDINGS_PATH,
     load_contract,
     normalise_doi,
     normalise_title,
     select_version_ids,
+    source_binding_for_record,
     validate_registry,
     values,
 )
@@ -211,6 +215,9 @@ def _version_from_zotero(item: dict[str, Any]) -> dict[str, Any]:
             ],
         }
     )
+    if item.get("_metadata_correction"):
+        version["provenance"].append({"source": CORRECTIONS_PATH, "reference": item["key"],
+                                      "ai_metadata_correction": item["_metadata_correction"]})
     return version
 
 
@@ -499,6 +506,73 @@ def _source_fingerprint(paths: Iterable[Path]) -> str:
     return f"sha256:{digest.hexdigest()}"
 
 
+def apply_source_bindings(repo: Path, registry: dict, contract: dict) -> list[Path]:
+    """Register explicitly reviewed manuscript sources without moving record IDs."""
+    from copy import deepcopy
+    from src.assess.artifact_verification import artifact_hash, safe_path
+
+    manifest_path = repo / SOURCE_BINDINGS_PATH
+    if not manifest_path.is_file():
+        return []
+    manifest = _read_json(manifest_path)
+    if manifest.get("schema") != "femprompt-source-version-bindings/0.1" or not isinstance(manifest.get("records"), dict):
+        raise ValueError("Unsupported source-version binding manifest")
+    inputs = [manifest_path]
+    registry["source_index"] = {}
+    all_versions = {version["version_id"] for work in registry["works"] for version in work["versions"]}
+    for record_id, entry in sorted(manifest["records"].items()):
+        for field in ("agent_id", "model", "reviewed_at", "reason"):
+            if not isinstance(entry.get(field), str) or not entry[field].strip():
+                raise ValueError(f"{record_id}: source binding lacks {field}")
+        if datetime.fromisoformat(entry["reviewed_at"].replace("Z", "+00:00")).tzinfo is None:
+            raise ValueError(f"{record_id}: source binding timestamp needs a timezone")
+        canonical = registry["record_index"].get(record_id, {})
+        binding = deepcopy(entry.get("binding", {}))
+        work = next((item for item in registry["works"] if item["work_id"] == canonical.get("work_id")), None)
+        if not work or binding.get("work_id") != work["work_id"] or binding.get("bibliographic_version_id") != canonical.get("version_id"):
+            raise ValueError(f"{record_id}: source manifest targets another bibliographic identity")
+        bibliographic = next(item for item in work["versions"] if item["version_id"] == canonical["version_id"])
+        expected = entry.get("bibliographic_identity", {})
+        if not expected.get("title") or normalise_title(expected["title"]) != normalise_title(bibliographic.get("title")) or normalise_doi(expected.get("doi")) not in bibliographic.get("identifiers", {}).get("doi", []):
+            raise ValueError(f"{record_id}: source manifest bibliographic metadata is stale or uncorrected")
+        version = deepcopy(entry.get("version", {}))
+        if version.get("version_type") != "accepted_manuscript" or version.get("version_id") != binding.get("source_version_id") or version["version_id"] in all_versions:
+            raise ValueError(f"{record_id}: invalid or duplicate manuscript version")
+        identifiers = version.get("identifiers", {})
+        if set(identifiers) != {"url"} or not identifiers["url"] or normalise_title(version.get("title")) != normalise_title(bibliographic.get("title")):
+            raise ValueError(f"{record_id}: manuscript must have a distinct repository identity")
+        if version.get("relations") != [{"type": "isVersionOf", "target_version_id": canonical["version_id"]}]:
+            raise ValueError(f"{record_id}: manuscript relation must target its bibliographic version")
+        evidence = entry.get("evidence")
+        if not isinstance(evidence, list) or not evidence:
+            raise ValueError(f"{record_id}: source binding lacks identity evidence")
+        for source in evidence:
+            if artifact_hash(repo, source["source_path"]) != source.get("sha256") or not source.get("locator"):
+                raise ValueError(f"{record_id}: stale or incomplete source identity evidence")
+            path = safe_path(repo, source["source_path"].partition("#")[0])
+            inputs.append(path)
+            if source.get("quote") and " ".join(source["quote"].split()) not in " ".join(path.read_text(encoding="utf-8").split()):
+                raise ValueError(f"{record_id}: source identity quotation does not resolve")
+        version.setdefault("provenance", []).append({"source": SOURCE_BINDINGS_PATH, "reference": f"#/records/{record_id}", "agent_id": entry["agent_id"], "model": entry["model"], "reviewed_at": entry["reviewed_at"]})
+        work["versions"].append(version)
+        work["versions"].sort(key=lambda item: item["version_id"])
+        all_versions.add(version["version_id"])
+        latest, preferred = select_version_ids(work["versions"], contract)
+        if preferred != work["preferred_version_id"]:
+            raise ValueError(f"{record_id}: source-only addition changed preferred bibliography")
+        work["latest_version_id"] = latest
+        bibliographic["relations"].append({"type": "hasVersion", "target_version_id": version["version_id"]})
+        bibliographic["relations"].sort(key=lambda item: (item["type"], item["target_version_id"]))
+        for token in _identifier_tokens(identifiers):
+            if token in registry["identifier_index"] or token in registry["ambiguous_identifiers"]:
+                raise ValueError(f"{record_id}: source repository identifier collision")
+            registry["identifier_index"][token] = {"work_id": work["work_id"], "version_id": version["version_id"]}
+        registry["source_index"][record_id] = binding
+        source_binding_for_record(registry, record_id, repo)
+        inputs.append(repo / binding["source_path"])
+    return inputs
+
+
 def build_registry(repo: Path = REPO) -> dict[str, Any]:
     """Return the complete registry while reusing any established local IDs."""
     zotero_path = repo / "corpus" / "zotero_export.json"
@@ -510,7 +584,7 @@ def build_registry(repo: Path = REPO) -> dict[str, Any]:
     if previous_registry:
         validate_registry(previous_registry, contract)
     previous = _previous_maps(previous_registry)
-    zotero_items = _read_json(zotero_path)
+    zotero_items = apply_metadata_corrections(repo, _read_json(zotero_path))
     round2 = _read_json(round2_path)
     previous_works = {
         work["work_id"]: work for work in (previous_registry or {}).get("works", [])
@@ -559,6 +633,14 @@ def build_registry(repo: Path = REPO) -> dict[str, Any]:
                 bucket["legacy_work_ids"].update(
                     previous_work.get("legacy_work_ids", [])
                 )
+                # An explicitly disproven DOI is historical metadata, not an
+                # alias of the corrected work. Keep it only in the audit.
+                for change in item.get("_metadata_correction", {}).get("changes", []):
+                    if change.get("before") != change.get("after"):
+                        if change.get("field") == "DOI":
+                            bucket["legacy_work_ids"].discard(f"doi:{normalise_doi(change.get('before'))}")
+                        elif change.get("field") == "url":
+                            bucket["legacy_work_ids"].discard(f"url:{_normalise_url(change.get('before'))}")
             else:
                 bucket["legacy_work_ids"].add(
                     legacy_work_id
@@ -767,6 +849,12 @@ def build_registry(repo: Path = REPO) -> dict[str, Any]:
     if not previous_registry:
         inputs.append(corpus_path)
     inputs.extend(path for path in agent_paths if path.is_relative_to(repo))
+    if (repo / CORRECTIONS_PATH).is_file():
+        inputs.append(repo / CORRECTIONS_PATH)
+        inputs.extend(repo / evidence["source_path"].partition("#")[0]
+                      for item in zotero_items if item.get("_metadata_correction")
+                      for evidence in item["_metadata_correction"]["evidence"])
+        inputs = list(set(inputs))
     registry = {
         "schema": REGISTRY_SCHEMA,
         "source_fingerprint": _source_fingerprint(inputs),
@@ -799,6 +887,23 @@ def build_registry(repo: Path = REPO) -> dict[str, Any]:
         },
         "legacy_work_id_index": dict(sorted(legacy_index.items())),
     }
+    inputs.extend(apply_source_bindings(repo, registry, contract))
+    from src.analysis.historical_resolution import load_source_holds, RESOLUTION_PATH
+    source_holds = load_source_holds(repo)
+    for work in works:
+        if work["work_id"] in source_holds:
+            work["source_hold"] = source_holds[work["work_id"]]
+    if source_holds:
+        inputs.append(repo / RESOLUTION_PATH)
+        resolution = _read_json(repo / RESOLUTION_PATH)
+        inputs.extend(repo / source["source_path"].partition("#")[0] for entry in resolution.get("work_resolutions", {}).values() if entry.get("work_id") in source_holds for source in entry.get("evidence", []))
+    inputs = sorted(set(inputs), key=lambda path: path.as_posix())
+    registry["source_fingerprint"] = _source_fingerprint(inputs)
+    registry["sources"] = [{"path": path.relative_to(repo).as_posix(), "sha256": _sha256(path)} for path in inputs]
+    registry["counts"]["versions"] = sum(len(work["versions"]) for work in works)
+    registry["counts"]["works_with_multiple_versions"] = sum(len(work["versions"]) > 1 for work in works)
+    registry["counts"]["bound_sources"] = len(registry.get("source_index", {}))
+    registry["identifier_index"] = dict(sorted(registry["identifier_index"].items()))
     validate_registry(registry, contract)
     return registry
 

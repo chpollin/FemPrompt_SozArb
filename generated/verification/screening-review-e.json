@@ -1,0 +1,145 @@
+{
+  "schema": "femprompt-artifact-verification/0.1",
+  "reviews": [
+    {
+      "artifact": "docs/data/screening/ar2.json#/decisions/3GB9B4IJ",
+      "sha256": "sha256:57d869fb032166db3a9ad40166c23a555e9701b6dc66b245174fd3df919a5323",
+      "result": "accepted",
+      "review_type": "ai-source-review",
+      "agent_id": "/root/grounded_chat",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-05T14:53:17.674476+00:00",
+      "findings": "Independent source-grounded follow-up audit confirms Exclude/Not_relevant_topic under the two-dimensional screening rule. The paper evaluates LLM trust reasoning and explicit prompting for fictional PhD mentorship, with secondary computational/symbolic trust discussion; it does not investigate social work, structural bias, gender effects, diversity, feminism or algorithmic fairness. All three existing positive-category evidence terms match the original Paper text. The earlier wrong year is corrected for all three aliases by the now validated local metadata projection (2025-06-11; preprint; arXiv); official arXiv v1 identity, title and four authors match. This accepts the screening classification, not all empirical claims or general deployment validity.",
+      "review_scope": "Full main-text source-grounded audit of identity, all ten categories and decision derivation; no new blinded PRISM run or human verification. Structured analysis fields are not required for Exclude. Main text read locally and checked against official arXiv HTML; OCR-corrupted table cells were not used to infer numerical findings.",
+      "canonical_binding": {
+        "paper_id": "3GB9B4IJ",
+        "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88",
+        "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3"
+      },
+      "binding_reference": "corpus/work_version_registry.json#/record_index/3GB9B4IJ",
+      "binding_sha256": "sha256:a4a1a586dd0c11abc5348113c7ddd175330aaddd9918dc0ae7e94d4559fde0cd",
+      "evidence": [
+        {
+          "source_path": "generated/markdown_clean/Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study.md",
+          "sha256": "sha256:b67422d94a5bcab9072fd9f9a29530d91b3dbc5614984d8c55e23c371b0a5af4",
+          "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88",
+          "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+          "source_url": "https://arxiv.org/html/2507.21075v1",
+          "locator": "Abstract",
+          "quote": "the ability of Large Language Models (LLMs) to reason about trust"
+        },
+        {
+          "source_path": "generated/markdown_clean/Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study.md",
+          "sha256": "sha256:b67422d94a5bcab9072fd9f9a29530d91b3dbc5614984d8c55e23c371b0a5af4",
+          "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88",
+          "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+          "source_url": "https://arxiv.org/html/2507.21075v1",
+          "locator": "Section 3, The Concept of Trust",
+          "quote": "to construct a system prompt provided to the LLMs for trust analysis."
+        },
+        {
+          "source_path": "generated/markdown_clean/Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study.md",
+          "sha256": "sha256:b67422d94a5bcab9072fd9f9a29530d91b3dbc5614984d8c55e23c371b0a5af4",
+          "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88",
+          "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+          "source_url": "https://arxiv.org/html/2507.21075v1",
+          "locator": "Section 5, Conclusion and Future Work",
+          "quote": "symbolic AI offers a robust framework for representing trust through logical systems"
+        },
+        {
+          "source_path": "generated/markdown_clean/Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study.md",
+          "sha256": "sha256:b67422d94a5bcab9072fd9f9a29530d91b3dbc5614984d8c55e23c371b0a5af4",
+          "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88",
+          "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+          "source_url": "https://arxiv.org/html/2507.21075v1",
+          "locator": "Section 4, An Application of Testing Trust Reasoning",
+          "quote": "we consider the relation between a PhD student and their supervisor"
+        },
+        {
+          "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/debnath-arxiv-metadata.json",
+          "sha256": "sha256:7f6d5cb01d26b6cd43ac7689b20d82f9f6a5b95a6a90b6a03d6eff574fd67303",
+          "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88",
+          "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+          "source_url": "https://arxiv.org/abs/2507.21075v1",
+          "locator": "citation_meta.citation_date and submission_history",
+          "quote": "2025/06/11"
+        }
+      ],
+      "category_audit": {
+        "AI_Literacies": {
+          "score": 0,
+          "reason": "Model reasoning ability is evaluated, not human AI-literacy acquisition; the fictional research discussion does not establish a literacy study."
+        },
+        "Generative_KI": {
+          "score": 2,
+          "reason": "Four LLMs are the evaluated systems in two trust-reasoning and role-playing case studies."
+        },
+        "Prompting": {
+          "score": 2,
+          "reason": "Trust-theory system prompts, user dialogue prompts and role instructions are the operational research method in Sections3-4."
+        },
+        "KI_Sonstige": {
+          "score": 1,
+          "reason": "Computational/symbolic multi-agent trust models motivate the problem; Section5 proposes future symbolic-AI integration. A secondary explicit strand, without a separate implemented classical-model experiment."
+        },
+        "Soziale_Arbeit": {
+          "score": 0,
+          "reason": "Generic fictional PhD mentorship; no social-work practice, professional social-work education or target population examined."
+        },
+        "Bias_Ungleichheit": {
+          "score": 0,
+          "reason": "Hallucinations, trust and misjudgments are reported, without analysis of structural discrimination or group inequality."
+        },
+        "Gender": {
+          "score": 0,
+          "reason": "Gendered names and roles in fictional scenarios are not analysed as gender effects."
+        },
+        "Diversitaet": {
+          "score": 0,
+          "reason": "Inclusive environment is dialogue/generated-response content; no paper-level diversity or representation contribution."
+        },
+        "Feministisch": {
+          "score": 0,
+          "reason": "No feminist method or structural gender-power analysis."
+        },
+        "Fairness": {
+          "score": 0,
+          "reason": "No algorithmic fairness criteria, metric or fair-system intervention; trust/safety/ethics vocabulary alone is insufficient."
+        }
+      },
+      "metadata_projection": {
+        "record_ids": [
+          "2YS85B49",
+          "3GB9B4IJ",
+          "BCBWSU3Z"
+        ],
+        "validated_with": "src.analysis.metadata_corrections.apply_metadata_corrections",
+        "corrections": [
+          {
+            "reference": "corpus/metadata_corrections.json#/corrections/0",
+            "sha256": "sha256:f40b52b4678386758a0dd6d538190966a18af00a42249b1c7e37708b82b9444e"
+          },
+          {
+            "reference": "corpus/metadata_corrections.json#/corrections/1",
+            "sha256": "sha256:c40feca3f54d309ffed4fd153678c15fe0f78bf53cf56cb945a4d0dd7191122b"
+          },
+          {
+            "reference": "corpus/metadata_corrections.json#/corrections/2",
+            "sha256": "sha256:32afd63c3bb75d33797f73b2626d05d0871ec34c322fe6189ff9ebf2566d0b25"
+          }
+        ]
+      },
+      "quotation_check": {
+        "method": "Exact case-sensitive whitespace-normalized local original Paper text; official arXiv main-text corroboration",
+        "existing_positive_terms": 3,
+        "unmatched_terms": []
+      },
+      "limitations": [
+        "Local figure/table OCR contains corruption; no numerical synthesis or performance-quality endorsement is inferred.",
+        "Supplementary data and independent empirical replication were not inspected.",
+        "Metadata correction does not claim an external Zotero edit."
+      ]
+    }
+  ]
+}

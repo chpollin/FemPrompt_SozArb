@@ -1,0 +1,13 @@
+{
+  "name": "srinivasan-acl-metadata",
+  "requested_url": "https://aclanthology.org/2022.gebnlp-1.10/",
+  "accessed_at": "2026-09-05T15:24:21.442401+00:00",
+  "agent_id": "/root/grounded_chat",
+  "model": "GPT-6",
+  "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+  "status": 0,
+  "resolved_url": "https://aclanthology.org/2022.gebnlp-1.10/",
+  "content_type": null,
+  "outcome": "request_failed",
+  "error": "curl exit 35; HTTP 0; curl: (35) schannel: next InitializeSecurityContext failed: CRYPT_E_REVOCATION_OFFLINE (0x80092013) - Die Sperrfunktion konnte die Sperrung nicht überprüfen, da der Sperrserver offline war."
+}

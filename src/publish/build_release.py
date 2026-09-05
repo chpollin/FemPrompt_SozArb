@@ -31,6 +31,7 @@ PUBLIC_METADATA = (
     "id", "title", "authors", "author_year", "year", "doi", "url", "journal",
     "item_type", "work_id", "version_id", "version_type", "version_date",
     "peer_review_status", "peer_review_basis", "preferred_version_id", "latest_version_id",
+    "source_binding",
 )
 
 
@@ -100,7 +101,7 @@ def _source_note(paper: dict, assertions: list[dict], records: list[dict]) -> by
             lines += ["## Screening of the Work", "", f"Decision: {record['decision']}",
                       f"Authority: {record['lifecycle_state']}", ""]
             for source in record.get("source_records", [record]):
-                lines += [f"Screened source: `{source['id']}`; Version: `{source.get('version_id', '')}`."]
+                lines += [f"Screened source: `{source['id']}`; Source version: `{source.get('source_version_id') or source.get('version_id', '')}`; bibliographic version: `{source.get('version_id', '')}`."]
                 review = source.get("ai_verification") or {}
                 if review:
                     lines += [f"AI agent: {review.get('agent_id', '')}; model: {review.get('model', '')}; "
@@ -126,7 +127,7 @@ def build_files(repo: Path = ROOT) -> dict[str, bytes]:
         repo / "docs/data/screening/ar2.json", repo / "docs/data/research_vault_v2.json",
         repo / "docs/data/analysis_fields.json", repo / "docs/data/category_schema.json",
         repo / "docs/data/work_version_contract.json", publication_policy=policy,
-        verification_receipts=reviews,
+        verification_receipts=reviews, repo=repo,
     )
     corpus = json.loads((repo / "docs/data/research_vault_v2.json").read_text(encoding="utf-8"))
     evidence_records = {e["record_id"] for a in assertions["assertions"] for e in a["evidence"]}

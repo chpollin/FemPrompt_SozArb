@@ -10,18 +10,18 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-02-21
-updated: 2026-08-24
+updated: 2026-09-05
 authors: [Christopher Pollin]
-generated-with: Claude Code
+generated-with: Claude Code, Codex (GPT-6)
 topics: ["[[Systematic Review]]", "[[PRISMA]]"]
 related: [project, data, standards, plan, update-protocol, research-vault]
 ---
 
 This document describes how the systematic literature review was conducted, from methodological rationale to technical implementation. It carries both the conducted chain, from identification through acquisition, distillation, dual assessment, and screening to the build of `research-vault/`, and the methodological depth at each stage. The theoretical foundations are in [[project]] and the reporting standards in [[standards]]. The corpus and pipeline figures live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion. Concrete quantities are not restated here; the method is described by its structure, not by its run statistics. Dated snapshots of distributions live in artefacts such as `research-vault/waitlist.md`; fixed run dates of completed runs are exempt.
 
-**Active round-2 contract (2026-08-24).** Section 1.1 of [[update-protocol]] defines two operationally isolated agent screening tracks, a separate source-grounded AI Agent Review, and deferred verification of every round-2 record by the domain experts. ADR-034 records the workflow; ADR-035 fixes the separate meanings and authority of Validation, AI Agent Review, Verification, and publication approval. ADR-037 binds Work-level screening to exact publication-Version evidence. The conducted round-1 dual track retains its original comparative purpose and data authority.
+**Active round-2 contract.** [[update-protocol#Agent-assisted completion]] defines two operationally isolated agent screening tracks, a separate source-grounded AI Agent Review, and deferred domain-expert verification. ADR-034 records the workflow; ADR-035 distinguishes Validation, AI Agent Review, Verification and publication approval. ADR-037 binds Work-level screening to exact publication-Version evidence. The dated preliminary release policy of 2026-09-05 is defined in [[governance#Publication boundary]]. The conducted round-1 dual track retains its original comparative purpose and data authority.
 
-Two knowledge places frame the chain. `knowledge/` carries the steering knowledge about the work, `research-vault/` the object knowledge about what the literature says on the research question, with evidence chain and verification status ([[research-vault]]). Domain experts hold final scholarly authority over verification, interpretation, and publication approval. AI-agent-reviewed records remain available for internal analysis with their lifecycle state attached.
+Two knowledge places frame the chain. `knowledge/` carries the steering knowledge about the work, `research-vault/` the object knowledge about what the literature says on the research question, with evidence chain and verification status ([[research-vault]]). Domain experts hold final scholarly authority over verification, interpretation and publication approval. Explicitly labelled AI-source-reviewed records may support preliminary analysis and the authorised result release when their current artifact-specific evidence passes the configured gate.
 
 ## The chain in overview
 
@@ -33,13 +33,13 @@ Two knowledge places frame the chain. `knowledge/` carries the steering knowledg
 | 4 Dual assessment and benchmark | until March 2026 | Excel/Google Sheets, `src/assess/` | expert track (binding) |
 | 5 PRISM and Evidence Companion | February to July 2026 | `docs/` (vanilla JS, GitHub Pages) | PRISM screening |
 | 6 Preregistration and analysis-field freeze | June to July 2026 | [[update-protocol]], `assessment/categories.yaml` | operator freeze and amendments |
-| 7 Identification round 2 | from 2026-07-17 | versioned Deep Research runs, Zotero | Zotero curation complete; supplementary agentic search planned |
+| 7 Identification round 2 | from 2026-07-17 | versioned Deep Research runs, dated supplements, Zotero | Curated records and pending supplement candidates are tracked separately |
 | 8 Distillate audit | 2026-07-17 to 2026-07-18 | `src/assess/evidence_audit.py`, `waitlist_resolution.py` | stage-3 verification (open) |
 | 9 research-vault | from 2026-07-17 | `src/publish/build_research_vault.py`, `validate_research_vault.py`, `check_claims.py` | stage-3 verification, `verified` status (open) |
 
 ## System requirements
 
-Python 3.8 or later, on Windows, macOS, or Linux. Core packages installed via `pip install -r requirements.txt`: `anthropic` (Claude API), `pandas` and `openpyxl` (Excel processing), `pyzotero` (Zotero API), `docling` (PDF conversion), `python-dotenv` (environment). `pdfplumber` is an optional extra for the PDF-comparison validation layer (`src/acquire/validate_markdown_enhanced.py`), installed on demand with `pip install pdfplumber`; without it that comparison is disabled. Environment variables in a `.env` file (not committed): `ANTHROPIC_API_KEY`, `ZOTERO_API_KEY`.
+The reproducible offline build uses Python 3.11 or later, Node.js 22 and the pinned build dependencies. Follow the canonical [README setup](../README.md#testing); the result rebuild requires no API credentials and conducts no new source reading or distillation. Fresh acquisition, PDF conversion and LLM distillation use the broader research environment in `requirements.txt` and the credentials required by the selected script. Those optional research operations are separate from reproducing the versioned result.
 
 ## PRISMA 2020 framework
 
@@ -72,7 +72,7 @@ Scholarly authority. Zotero curation covers import, duplicate checking, metadata
 PDF acquisition over four fallback strategies (Zotero, DOI, Unpaywall, ArXiv), conversion to Markdown with Docling, four-layer validation, conservative post-processing.
 
 - Scripts: `src/acquire/download_zotero_pdfs.py`, `acquire_pdfs.py`, `convert_to_markdown.py`, `validate_markdown_enhanced.py`, `postprocess_markdown.py`.
-- Artefacts: `generated/markdown_clean/` is committed and is the canonical full-text basis of all later checks; PDFs (`generated/pdfs/`) and validation reports stay local (gitignored).
+- Artefacts: reviewed Markdown commonly resides in `generated/markdown_clean/`; the fulltext manifest and explicit source bindings identify the exact representation used, including separately acquired manuscripts. A filename alone does not establish source identity. PDF binaries (`generated/pdfs/`) remain local.
 - Deterministic validation identifies structural warnings. Direct AI-agent comparison of PDF and Markdown establishes whether the representation is operationally usable, requires repair, or needs an additional evidence modality. This source QC grants no domain-expert verification or publication authority.
 - Known failure mode, proven by machine in stage 8: individual full-text files contain a foreign paper (acquisition error), registered in `research-vault/waitlist.md`.
 
@@ -132,7 +132,7 @@ Artefacts: `assessment/human_assessment.csv` (the binding track), `assessment/ll
 
 Benchmark scripts (in `src/assess/`): `generate_papers_csv.py` (Zotero JSON to papers_full.csv), `run_llm_assessment.py` (the 10K assessment), `merge_assessments.py` (merge human and LLM strictly by Zotero_Key, after the merge bug fixed on 2026-03-27), `calculate_agreement.py` (Cohen's kappa and confusion matrix), `analyze_disagreements.py` (disagreement identification).
 
-Scholarly authority: the expert track supplies the binding round-1 record. Round 2 uses the lifecycle described below and reaches publication status only through domain-expert verification and publication approval.
+Scholarly authority: the expert track supplies the binding round-1 record. Round two preserves the distinct AI-review, domain-verification and publication-approval states. The labelled preliminary result release follows the explicit policy in [[governance#Publication boundary]]; it does not change a historical decision or grant human verification.
 
 ## Stage 5: PRISM as the binding screening surface
 
@@ -144,7 +144,7 @@ PRISM (`docs/prisma.html`, not to be confused with the PRISMA standard) is the e
 - ADR-024 (2026-07-01), three-level categories (nein/teilweise/ja) with the derived three-way decision Include/Unclear/Exclude.
 - Full text local (2026-07-01), `src/publish/build_fulltext.py` builds the reading layer `docs/data/fulltext/` from `generated/markdown_clean/`; it is gitignored because copyright-protected, and the public tool falls back to the metadata abstract.
 
-PRISM stores annotations from people and AI agents in the same record structure while retaining distinct actor types and roles. Evidence provenance separates the source layer (`paper` or `llm_distillate`) from the actor. Earlier expert and model judgements stay unavailable until the isolated decision is saved. Round-2 records move through `identified`, `curated`, `agent-annotated`, `ai-agent-reviewed`, `verified`, and `publication-approved`. Deterministic validation is stored separately as a check over the hash of a specific annotation. Domain-expert verification can accept, correct and accept, request changes, or reject. Corrections create a complete superseding annotation and preserve the earlier agent version. The public Literature Landscape admits only the final state. [[plan]] steers the remaining corpus completion, analysis, and verification work; [[standards]] records the conformance state per PRISMA and trAIce item.
+PRISM stores annotations from people and AI agents in the same record structure while retaining distinct actor types and roles. Evidence provenance separates the source layer (`paper` or `llm_distillate`) from the actor. Earlier expert and model judgements stay unavailable until the isolated decision is saved. Round-2 records move through `identified`, `curated`, `agent-annotated`, `ai-agent-reviewed`, `verified`, and `publication-approved`. Deterministic validation is stored separately as a check over the hash of a specific annotation. Domain-expert verification can accept, correct and accept, request changes, or reject; expert corrections create a complete superseding annotation. Attributed AI corrections use the bounded immutable sidecar contract. The public Literature Landscape enforces its configured release policy and retains the achieved authority, exact source Version and correction provenance. [[plan]] steers corpus completion and [[standards]] records reporting conformance.
 
 New screening captures use reviewer schema 0.4. The record and each Paper Beleg carry `work_id` and `version_id`; agent-run schema 1.3 additionally binds the selected and preferred versions to the hashed Paper source in both reviewer tracks. Deterministic transfer rejects a track whose version differs from its manifest assignment. Historical run schemas remain readable as conducted evidence.
 
@@ -251,7 +251,7 @@ The canonical implementation is `src/replay/replay_round1.py`, documented in `sr
 
 ## Quality assessment
 
-Bibliographic validation: DOI validation via the CrossRef API, author disambiguation via ORCID, journal verification against DOAJ and Beall's List. Alternative review standards consulted for the appraisal layer that a reporting standard does not cover: the JBI Manual (pluralistic evidence), Cochrane 6.5 (RoB 2, ROBINS-I), ENTREQ (qualitative syntheses), and MMAT (mixed methods).
+Bibliographic identity checks and study-quality appraisal are separate operations. Current source-review receipts document the primary metadata, author/title/DOI comparisons and source passages actually checked. They do not establish a completed corpus-wide quality appraisal. The JBI Manual, Cochrane risk-of-bias tools, ENTREQ and MMAT are methodological resources discussed for that later appraisal; mentioning a framework does not document its application. The appraisal method and results remain to be recorded before the synthesis makes claims about study quality or strength of evidence.
 
 ## Circularity as a field condition
 

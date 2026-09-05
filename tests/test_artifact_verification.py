@@ -30,6 +30,36 @@ def test_receipt_binds_artifact_and_source(tmp_path):
         validated_reviews(tmp_path, data)
 
 
+def test_indexed_ledger_preserves_outcomes_and_detects_changed_batch(tmp_path):
+    data = ledger(tmp_path)
+    negative = copy.deepcopy(data["reviews"][0])
+    negative.update(result="unverifiable", reviewed_at="2026-09-06T12:00:00Z")
+    data["reviews"].append(negative)
+    (tmp_path / "batch.json").write_text(json.dumps(data), encoding="utf-8")
+    index = {"schema": "femprompt-artifact-verification/0.2", "reviews": [],
+             "review_sources": [{"path": "batch.json", "sha256": artifact_hash(tmp_path, "batch.json")}]}
+    expected = validated_reviews(tmp_path, data)
+    actual = validated_reviews(tmp_path, index)
+    assert actual == expected and actual.latest == expected.latest
+    (tmp_path / "batch.json").write_text(json.dumps({**data, "reviews": data["reviews"][:1]}), encoding="utf-8")
+    with pytest.raises(ValueError, match="Stale review source batch"):
+        validated_reviews(tmp_path, index)
+
+
+def test_indexed_ledger_rejects_duplicate_receipts_and_nested_sources(tmp_path):
+    data = ledger(tmp_path)
+    (tmp_path / "batch.json").write_text(json.dumps(data), encoding="utf-8")
+    index = {"schema": "femprompt-artifact-verification/0.2", "reviews": list(data["reviews"]),
+             "review_sources": [{"path": "batch.json", "sha256": artifact_hash(tmp_path, "batch.json")}]}
+    with pytest.raises(ValueError, match="Duplicate receipt"):
+        validated_reviews(tmp_path, index)
+    index["reviews"] = []
+    (tmp_path / "batch.json").write_text(json.dumps(index), encoding="utf-8")
+    index["review_sources"][0]["sha256"] = artifact_hash(tmp_path, "batch.json")
+    with pytest.raises(ValueError, match="nested"):
+        validated_reviews(tmp_path, index)
+
+
 def test_latest_negative_review_withholds_previous_acceptance(tmp_path):
     data = ledger(tmp_path)
     next_review = copy.deepcopy(data["reviews"][0])

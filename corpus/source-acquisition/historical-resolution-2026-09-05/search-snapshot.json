@@ -1,0 +1,238 @@
+{
+  "schema": "femprompt-historical-search-snapshot/0.1",
+  "agent_id": "/root/research_completion",
+  "model": "GPT-6",
+  "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+  "reviewed_at": "2026-09-05T14:46:15Z",
+  "method": "Full scan of pre-existing corpus JSON/RIS/CSV and generated round-two intake/agent-review JSON; casefolded exact DOI, NFKC and HTML-stripped exact alphanumeric title, or original key. All nested registry Versions included. Newly captured sources from this audit are excluded from the search universe. A bibliographic mention is not a canonical identity.",
+  "files": [
+    {
+      "path": "corpus/deep-research/Claude.ris",
+      "sha256": "sha256:aa72a8ce5000aac43b81bb57a516ea18be28d4aac21fa7d8ef6e0ac83d49091d"
+    },
+    {
+      "path": "corpus/deep-research/Gemini.ris",
+      "sha256": "sha256:bc714d616a077defe1d04b6a7bf5b9f32ecfe649e1f581df35fc2ea148ccc6e6"
+    },
+    {
+      "path": "corpus/deep-research/OpenAI.ris",
+      "sha256": "sha256:8b2a1655c4187f30cd021dbc75ba1da8389f709ae0476df9da0165167744997d"
+    },
+    {
+      "path": "corpus/deep-research/Perplexity.ris",
+      "sha256": "sha256:2dcc24b8efe6594b83bd6156a8011a2635f5bfd0630b8cc70dffde6287c685da"
+    },
+    {
+      "path": "corpus/deep-research/round2/ChatGPT_deep-research.ris",
+      "sha256": "sha256:d8da56534b9afbb242960762f4cad55dac9200c35e82406dfb99dd32a06feb2a"
+    },
+    {
+      "path": "corpus/deep-research/round2/Claude_deep-research.ris",
+      "sha256": "sha256:5beef9dbee82e03f7fd1bb83d6d6b442ad0d08cea3272aeed7a949b7404e788f"
+    },
+    {
+      "path": "corpus/deep-research/round2/ClaudeCode_deep-research.ris",
+      "sha256": "sha256:1ec14b3c044c07e273e2bfdc91e913be861c5fabaa721c7f3b40ed03c0091d6d"
+    },
+    {
+      "path": "corpus/deep-research/round2/Codex Websearch/bibliographic-audit.json",
+      "sha256": "sha256:b9aa50dce822dd81f3fb0d06326aafaf0f650bc3af6b455900b4c80da51d1d6e"
+    },
+    {
+      "path": "corpus/deep-research/round2/Codex Websearch/codex-websearch-2026-package.json",
+      "sha256": "sha256:f36b3c0eb573589dea2cb3c2c3a12d5d8d3388b40bba10e4c6ce90818cfd3d19"
+    },
+    {
+      "path": "corpus/deep-research/round2/Codex Websearch/codex-websearch-2026-zotero-import.ris",
+      "sha256": "sha256:1a07ea7176c12f463fdd6b3661fdfed025a8f41586f69cbf9e7943513338cf5d"
+    },
+    {
+      "path": "corpus/deep-research/round2/Codex Websearch/enrichment/part-a.json",
+      "sha256": "sha256:abc12650da364bd209e2a6121c0b72d31147d2323cbdbdfc92b0f2109f001384"
+    },
+    {
+      "path": "corpus/deep-research/round2/Codex Websearch/enrichment/part-b.json",
+      "sha256": "sha256:3adc0575c915deebfc36db38094ea64ce0554d82704434cc1353478773077294"
+    },
+    {
+      "path": "corpus/deep-research/round2/Codex Websearch/enrichment/part-c.json",
+      "sha256": "sha256:1387d152c66eb2fa8eb65066114dbd9dfb66972cec9f6cc77c64a4371ff778a3"
+    },
+    {
+      "path": "corpus/deep-research/round2/Codex Websearch/raw/lane-a-social-work-2026.json",
+      "sha256": "sha256:89d83142aaa30f8682caaeb7c60343943723e3644077b8016bbbcdb9ba18dbe1"
+    },
+    {
+      "path": "corpus/deep-research/round2/Codex Websearch/raw/lane-b-gender-intersectionality-2026.json",
+      "sha256": "sha256:f13d2ced01a6b9ab2c45fbd423fe4cf062c90b3174d5bbda062a3fa160d24bdb"
+    },
+    {
+      "path": "corpus/deep-research/round2/Codex Websearch/raw/lane-c-prompt-bias-2026.json",
+      "sha256": "sha256:d9f297b85514709bac473c6bf59108b72e90605e94d408b303e4e4d9d9f69e21"
+    },
+    {
+      "path": "corpus/deep-research/round2/Codex Websearch/run-manifest.json",
+      "sha256": "sha256:62bdebfaf457647e4f8ccc17daa99952d8beeb7180899f3cad9d9034629457b9"
+    },
+    {
+      "path": "corpus/deep-research/round2/Codex Websearch/source-acquisition-plan.json",
+      "sha256": "sha256:bc5ef839df8d603cec84d3689bc840da6b7dad399e3c9674b20062bfecb63723"
+    },
+    {
+      "path": "corpus/deep-research/round2/Codex Websearch/source-recovery-audit.json",
+      "sha256": "sha256:b0d6e6d1aa5626a349b161a9fdba5931cc7ba3fd406335e64dc96460358ed671"
+    },
+    {
+      "path": "corpus/deep-research/round2/contextual-update-2026-08-24/lane-a-social-work.json",
+      "sha256": "sha256:568d9c05ff3e0171ccbfadb5d54144e4b6853dcfceba89b8cd2a96b71c09a15c"
+    },
+    {
+      "path": "corpus/deep-research/round2/contextual-update-2026-08-24/lane-b-feminist-social-work.json",
+      "sha256": "sha256:382f1facb1e9ceda8c42de6678dc249f978e10d58b580ee5df08705f07ff313f"
+    },
+    {
+      "path": "corpus/deep-research/round2/contextual-update-2026-08-24/lane-c-prompt-bias.json",
+      "sha256": "sha256:a05971cb18749bb74ab7156c94e0ea65694fea6302d4078b80a410bf7eaa5732"
+    },
+    {
+      "path": "corpus/deep-research/round2/Gemini_deep-research.ris",
+      "sha256": "sha256:43a63eef712022bda4437b034bc31df0abf46dc77a4fb8055875461c8e2dbb3c"
+    },
+    {
+      "path": "corpus/deep-research/round2/targeted-followup-2026-09-05.json",
+      "sha256": "sha256:0e763accb88cd32962b7f5a1f571407c961b6a2811349e8a3f840d65a81f13ea"
+    },
+    {
+      "path": "corpus/deep-research/round2/targeted-followup-2026-09-05.ris",
+      "sha256": "sha256:e3a94e18ea93b761eadb2fa762a23627062711eb81cd7b9a446e644611125763"
+    },
+    {
+      "path": "corpus/metadata_corrections.json",
+      "sha256": "sha256:e0cc77a74a639ade77bf9455b1ffc5e2e6e17f3dbb6847161c68578eda366bb3"
+    },
+    {
+      "path": "corpus/papers_metadata.csv",
+      "sha256": "sha256:1028a529dfae1d77aebba39baad46086f316e4769a99849ce5a4494a04b6ebeb"
+    },
+    {
+      "path": "corpus/source-acquisition/checklist-resolution-2026-09-05/acquisition-manifest.json",
+      "sha256": "sha256:0d8dae949581c2bc59ba9563a39ef1dca756d89e9cc428a36bad2168e3401588"
+    },
+    {
+      "path": "corpus/source-acquisition/checklist-resolution-2026-09-05/debnath-arxiv-metadata.json",
+      "sha256": "sha256:7f6d5cb01d26b6cd43ac7689b20d82f9f6a5b95a6a90b6a03d6eff574fd67303"
+    },
+    {
+      "path": "corpus/source-acquisition/checklist-resolution-2026-09-05/exrf-existing-doi-crossref.json",
+      "sha256": "sha256:87b08921e2c57d36467ed448a6c76114062ca4b8c63fb12d300453d223866b3e"
+    },
+    {
+      "path": "corpus/source-acquisition/checklist-resolution-2026-09-05/hodgson-2021-crossref.json",
+      "sha256": "sha256:bea299704700047ee8e47349fc48a00f94606c303348a347146d974d6c3ce74a"
+    },
+    {
+      "path": "corpus/source-acquisition/checklist-resolution-2026-09-05/trudeau-2023-crossref.json",
+      "sha256": "sha256:8bad7e6e44633d486223d30b15ef699ae6915eb79685bbcdecaf68eba56f0e13"
+    },
+    {
+      "path": "corpus/source_tool_mapping.json",
+      "sha256": "sha256:9feb96ce613a778cf76ac43f0b5dcd302170e0a8e5d8331bf3052cd0d5737c76"
+    },
+    {
+      "path": "corpus/work_version_registry.json",
+      "sha256": "sha256:150427488c4a76064693a18c0822f52814dd1cca207f9f97f9043079410f0e8d"
+    },
+    {
+      "path": "corpus/zotero_export.json",
+      "sha256": "sha256:a494ba7539919d79a5f2c0e421302050edac3e695a48a04923a085de9065816a"
+    },
+    {
+      "path": "generated/round2-intake.json",
+      "sha256": "sha256:084a8123fc359ddd40920d0eb543ffb4bcaae3a1d4dfe3f6cad69b41215157a9"
+    },
+    {
+      "path": "generated/round2-agent-review/identity.json",
+      "sha256": "sha256:b64103c2aa5476087028ee3354a9e4f187ab5d4ead4cdc5938ab410a610ce1d9"
+    },
+    {
+      "path": "generated/round2-agent-review/metadata.json",
+      "sha256": "sha256:2bf3aa00a12268fdd29967553cdd1c293b1de19ab42952872234486c999205cc"
+    },
+    {
+      "path": "generated/round2-agent-review/sources.json",
+      "sha256": "sha256:5bdd8db8bdbc022c5da7eb4848309ca14c03268f0172527d058f99e95e44b8f1"
+    }
+  ],
+  "matches": {
+    "6JAZXKEB": [],
+    "7WMD5JQ6": [],
+    "9MDIBETZ": [],
+    "CLADZZKS": [
+      {
+        "path": "corpus/papers_metadata.csv",
+        "matched": [
+          "exact_normalised_doi",
+          "normalised_exact_title"
+        ]
+      },
+      {
+        "path": "corpus/work_version_registry.json",
+        "matched": [
+          "exact_normalised_doi",
+          "normalised_exact_title"
+        ]
+      },
+      {
+        "path": "corpus/zotero_export.json",
+        "matched": [
+          "exact_normalised_doi",
+          "normalised_exact_title"
+        ]
+      }
+    ],
+    "DZ39L7GC": [],
+    "E35KJFXB": [],
+    "H8WRNPP7": [],
+    "JJLSMEQA": [],
+    "MQJEES7J": [],
+    "R2LPR3VD": [],
+    "UY65LIAI": [
+      {
+        "path": "corpus/deep-research/OpenAI.ris",
+        "matched": [
+          "exact_normalised_doi",
+          "normalised_exact_title"
+        ]
+      },
+      {
+        "path": "corpus/deep-research/Perplexity.ris",
+        "matched": [
+          "exact_normalised_doi",
+          "normalised_exact_title"
+        ]
+      },
+      {
+        "path": "corpus/papers_metadata.csv",
+        "matched": [
+          "exact_normalised_doi",
+          "normalised_exact_title"
+        ]
+      },
+      {
+        "path": "corpus/work_version_registry.json",
+        "matched": [
+          "exact_normalised_doi",
+          "normalised_exact_title"
+        ]
+      },
+      {
+        "path": "corpus/zotero_export.json",
+        "matched": [
+          "exact_normalised_doi",
+          "normalised_exact_title"
+        ]
+      }
+    ],
+    "WGVC7FQ5": []
+  }
+}

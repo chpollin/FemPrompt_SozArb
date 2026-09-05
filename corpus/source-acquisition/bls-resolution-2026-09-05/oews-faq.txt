@@ -1,0 +1,7 @@
+
+
+Capture: official BLS page excerpts returned by web browsing on 2026-09-05; line labels belong to that representation. These are excerpts, not a full downloaded report. Direct HTTP retrieval returned 403.
+
+L237:   1. cite150†Does OEWS produce estimates by age, race, sex, education, or any other demographic characteristics? L238: 
+L239: No. The OEWS survey does not gather demographic information. The BLS cite52†Current Population Survey program provides information on employment, unemployment, and weekly earnings by a variety of demographic characteristics.
+

@@ -1,0 +1,691 @@
+{
+  "schema": "femprompt-historical-identity-snapshot/0.1",
+  "agent_id": "/root/research_completion",
+  "model": "GPT-6",
+  "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+  "reviewed_at": "2026-09-05T14:46:15Z",
+  "origin": "corpus/work_version_registry.json",
+  "origin_sha256": "sha256:150427488c4a76064693a18c0822f52814dd1cca207f9f97f9043079410f0e8d",
+  "works": {
+    "work:1bbf69b4-ba85-5bc0-82e5-e3554b788658": {
+      "work_id": "work:1bbf69b4-ba85-5bc0-82e5-e3554b788658",
+      "canonical_title": "AI Gender Bias, Disparities, and Fairness: Does Training Data Matter?",
+      "identity_status": "curated",
+      "review_status": {
+        "identity": "unreviewed",
+        "metadata": "unreviewed",
+        "source": "unreviewed"
+      },
+      "legacy_work_ids": [
+        "source:Latif_2023_AI_Gender_Bias,_Disparities,_and_Fairness_Does.md"
+      ],
+      "source_lanes": [],
+      "latest_version_id": "version:ed0cecb4-269e-54d9-9f4c-0f2a35588a17",
+      "preferred_version_id": "version:ed0cecb4-269e-54d9-9f4c-0f2a35588a17",
+      "versions": [
+        {
+          "title": "AI gender bias, disparities, and fairness: Does training data matter?",
+          "authors": [
+            "E. Latif",
+            "X. Zhai",
+            "L. Liu"
+          ],
+          "version_type": "preprint",
+          "version_date": "2023",
+          "item_type": "report",
+          "journal_or_repository": "",
+          "identifiers": {
+            "zotero_key": [
+              "CSJS9JGH"
+            ],
+            "url": [
+              "https://arxiv.org/html/2312.10833v2"
+            ]
+          },
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "integrity_status": "current",
+          "access_status": "unknown",
+          "landing_url": "https://arxiv.org/html/2312.10833v2",
+          "fulltext_url": "",
+          "license": "",
+          "source_lanes": [],
+          "evidence": [],
+          "provenance": [
+            {
+              "source": "zotero_export",
+              "reference": "CSJS9JGH"
+            }
+          ],
+          "relations": [
+            {
+              "type": "isPreprintOf",
+              "target_version_id": "version:ed0cecb4-269e-54d9-9f4c-0f2a35588a17"
+            }
+          ],
+          "flags": [],
+          "version_id": "version:da2331e7-739b-5c3e-957e-201e341ac34c"
+        },
+        {
+          "title": "AI Gender Bias, Disparities, and Fairness: Does Training Data Matter?",
+          "authors": [
+            "E. Latif",
+            "X. Zhai",
+            "L. Liu"
+          ],
+          "version_type": "preprint",
+          "version_date": "2024",
+          "item_type": "journalArticle",
+          "journal_or_repository": "",
+          "identifiers": {
+            "zotero_key": [
+              "CHJQ52DC"
+            ],
+            "url": [
+              "https://arxiv.org/html/2312.10833v4"
+            ]
+          },
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "integrity_status": "current",
+          "access_status": "unknown",
+          "landing_url": "https://arxiv.org/html/2312.10833v4",
+          "fulltext_url": "",
+          "license": "",
+          "source_lanes": [],
+          "evidence": [],
+          "provenance": [
+            {
+              "source": "zotero_export",
+              "reference": "CHJQ52DC"
+            }
+          ],
+          "relations": [
+            {
+              "type": "hasPreprint",
+              "target_version_id": "version:da2331e7-739b-5c3e-957e-201e341ac34c"
+            }
+          ],
+          "flags": [],
+          "version_id": "version:ed0cecb4-269e-54d9-9f4c-0f2a35588a17"
+        }
+      ],
+      "flags": []
+    },
+    "work:717e065c-570d-526f-86ae-2a24d9f03044": {
+      "work_id": "work:717e065c-570d-526f-86ae-2a24d9f03044",
+      "canonical_title": "Artificial intelligence in social work: An EPIC model for practice",
+      "identity_status": "curated",
+      "review_status": {
+        "identity": "unreviewed",
+        "metadata": "unreviewed",
+        "source": "unreviewed"
+      },
+      "legacy_work_ids": [
+        "doi:10.1080/0312407x.2025.2488345"
+      ],
+      "source_lanes": [],
+      "latest_version_id": "version:7a2a88ab-de23-5113-aa95-aa6b39a002eb",
+      "preferred_version_id": "version:7a2a88ab-de23-5113-aa95-aa6b39a002eb",
+      "versions": [
+        {
+          "title": "Artificial intelligence in social work: An EPIC model for practice",
+          "authors": [
+            "S. Baker",
+            "M. Garkisch",
+            "F. Robards",
+            "H. Boetto",
+            "L. Goldkind",
+            "Y. Hamama-Raz",
+            "Z. Levitats",
+            "L. Levin",
+            "M. Ben-Ezra"
+          ],
+          "version_type": "version_of_record",
+          "version_date": "2025",
+          "item_type": "journalArticle",
+          "journal_or_repository": "",
+          "identifiers": {
+            "doi": [
+              "10.1080/0312407x.2025.2488345"
+            ],
+            "zotero_key": [
+              "AK7K4P97",
+              "GXZWBNJU",
+              "HSQW48VE",
+              "L48P8FBG",
+              "RR5MJRBZ",
+              "ZGM7K3H6"
+            ],
+            "url": [
+              "https://doi.org/10.1080/0312407X.2025.2488345",
+              "https://www.tandfonline.com/doi/full/10.1080/0312407X.2025.2488345"
+            ]
+          },
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "integrity_status": "current",
+          "access_status": "unknown",
+          "landing_url": "https://www.tandfonline.com/doi/full/10.1080/0312407X.2025.2488345",
+          "fulltext_url": "",
+          "license": "",
+          "source_lanes": [],
+          "evidence": [],
+          "provenance": [
+            {
+              "source": "zotero_export",
+              "reference": "AK7K4P97"
+            },
+            {
+              "source": "zotero_export",
+              "reference": "GXZWBNJU"
+            },
+            {
+              "source": "zotero_export",
+              "reference": "HSQW48VE"
+            },
+            {
+              "source": "zotero_export",
+              "reference": "L48P8FBG"
+            },
+            {
+              "source": "zotero_export",
+              "reference": "RR5MJRBZ"
+            },
+            {
+              "source": "zotero_export",
+              "reference": "ZGM7K3H6"
+            }
+          ],
+          "relations": [],
+          "flags": [],
+          "version_id": "version:7a2a88ab-de23-5113-aa95-aa6b39a002eb"
+        }
+      ],
+      "flags": []
+    },
+    "work:804f5cc7-54b8-5265-b473-1ce7deb1fdaf": {
+      "work_id": "work:804f5cc7-54b8-5265-b473-1ce7deb1fdaf",
+      "canonical_title": "Gender Bias in Artificial Intelligence: Empowering Women Through Digital Literacy",
+      "identity_status": "curated",
+      "review_status": {
+        "identity": "unreviewed",
+        "metadata": "unreviewed",
+        "source": "unreviewed"
+      },
+      "legacy_work_ids": [
+        "doi:10.70389/pjai.1000088"
+      ],
+      "source_lanes": [],
+      "latest_version_id": "version:3f383565-d0fc-5f40-a1d8-7359c6098ddb",
+      "preferred_version_id": "version:3f383565-d0fc-5f40-a1d8-7359c6098ddb",
+      "versions": [
+        {
+          "title": "Gender Bias in Artificial Intelligence: Empowering Women Through Digital Literacy",
+          "authors": [
+            "Syed Shah",
+            "S. S. Shah"
+          ],
+          "version_type": "version_of_record",
+          "version_date": "2025",
+          "item_type": "journalArticle",
+          "journal_or_repository": "",
+          "identifiers": {
+            "doi": [
+              "10.70389/pjai.1000088"
+            ],
+            "zotero_key": [
+              "9Y7ZFGI5",
+              "AIZGTQKG",
+              "BFG8VUK3"
+            ],
+            "url": [
+              "https://premierscience.com/pjai-24-524"
+            ]
+          },
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "integrity_status": "current",
+          "access_status": "unknown",
+          "landing_url": "https://premierscience.com/pjai-24-524",
+          "fulltext_url": "",
+          "license": "",
+          "source_lanes": [],
+          "evidence": [],
+          "provenance": [
+            {
+              "source": "zotero_export",
+              "reference": "9Y7ZFGI5"
+            },
+            {
+              "source": "zotero_export",
+              "reference": "AIZGTQKG"
+            },
+            {
+              "source": "zotero_export",
+              "reference": "BFG8VUK3"
+            }
+          ],
+          "relations": [],
+          "flags": [],
+          "version_id": "version:3f383565-d0fc-5f40-a1d8-7359c6098ddb"
+        }
+      ],
+      "flags": []
+    },
+    "work:8e01ec71-65ff-5273-b5b9-a582fec48008": {
+      "work_id": "work:8e01ec71-65ff-5273-b5b9-a582fec48008",
+      "canonical_title": "Prompt engineering techniques for mitigating cultural bias against Arabs and Muslims in large language models: A systematic review",
+      "identity_status": "curated",
+      "review_status": {
+        "identity": "unreviewed",
+        "metadata": "unreviewed",
+        "source": "unreviewed"
+      },
+      "legacy_work_ids": [
+        "source:Asseri_2025_Prompt_engineering_techniques_for_mitigating.md"
+      ],
+      "source_lanes": [],
+      "latest_version_id": "version:fdf4d4e8-faf0-572f-8f75-1efddb963ed8",
+      "preferred_version_id": "version:04fed931-77e4-551f-a65d-171b9355d611",
+      "versions": [
+        {
+          "title": "Prompt engineering techniques for mitigating cultural bias against Arabs and Muslims in large language models: A systematic review",
+          "authors": [
+            "A. Prakash",
+            "S. Lee"
+          ],
+          "version_type": "version_of_record",
+          "version_date": "2023",
+          "item_type": "journalArticle",
+          "journal_or_repository": "",
+          "identifiers": {
+            "zotero_key": [
+              "6MJYP7ZX"
+            ],
+            "url": [
+              "https://www.researchgate.net/publication/392942981_Prompt_Engineering_Techniques_for_Mitigating_Cultural_Bias_Against_Arabs_and_Muslims_in_Large_Language_Models_A_Systematic_Review"
+            ]
+          },
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "integrity_status": "current",
+          "access_status": "unknown",
+          "landing_url": "https://www.researchgate.net/publication/392942981_Prompt_Engineering_Techniques_for_Mitigating_Cultural_Bias_Against_Arabs_and_Muslims_in_Large_Language_Models_A_Systematic_Review",
+          "fulltext_url": "",
+          "license": "",
+          "source_lanes": [],
+          "evidence": [],
+          "provenance": [
+            {
+              "source": "zotero_export",
+              "reference": "6MJYP7ZX"
+            }
+          ],
+          "relations": [
+            {
+              "type": "hasPreprint",
+              "target_version_id": "version:ab927bf4-8220-592a-a140-2f7bcaf1bcdf"
+            },
+            {
+              "type": "hasPreprint",
+              "target_version_id": "version:fdf4d4e8-faf0-572f-8f75-1efddb963ed8"
+            }
+          ],
+          "flags": [],
+          "version_id": "version:04fed931-77e4-551f-a65d-171b9355d611"
+        },
+        {
+          "title": "Prompt Engineering Techniques for Mitigating Cultural Bias Against Arabs and Muslims in Large Language Models: A Systematic Review",
+          "authors": [
+            "K. Basseri",
+            "E. Abdelaziz",
+            "A. Al-Wabil"
+          ],
+          "version_type": "preprint",
+          "version_date": "2025",
+          "item_type": "report",
+          "journal_or_repository": "",
+          "identifiers": {
+            "zotero_key": [
+              "5UAHQESQ"
+            ],
+            "url": [
+              "https://arxiv.org/html/2506.18199v1"
+            ]
+          },
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "integrity_status": "current",
+          "access_status": "unknown",
+          "landing_url": "https://arxiv.org/html/2506.18199v1",
+          "fulltext_url": "",
+          "license": "",
+          "source_lanes": [],
+          "evidence": [],
+          "provenance": [
+            {
+              "source": "zotero_export",
+              "reference": "5UAHQESQ"
+            }
+          ],
+          "relations": [
+            {
+              "type": "isPreprintOf",
+              "target_version_id": "version:04fed931-77e4-551f-a65d-171b9355d611"
+            }
+          ],
+          "flags": [],
+          "version_id": "version:ab927bf4-8220-592a-a140-2f7bcaf1bcdf"
+        },
+        {
+          "title": "Prompt engineering techniques for mitigating cultural bias against Arabs and Muslims in large language models: A systematic review",
+          "authors": [
+            "B. Asseri",
+            "E. Abdelaziz",
+            "A. Al-Wabil"
+          ],
+          "version_type": "preprint",
+          "version_date": "2025",
+          "item_type": "report",
+          "journal_or_repository": "",
+          "identifiers": {
+            "zotero_key": [
+              "EHQBHVYV"
+            ],
+            "url": [
+              "https://arxiv.org/html/2506.18199"
+            ]
+          },
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "integrity_status": "current",
+          "access_status": "unknown",
+          "landing_url": "https://arxiv.org/html/2506.18199",
+          "fulltext_url": "",
+          "license": "",
+          "source_lanes": [],
+          "evidence": [],
+          "provenance": [
+            {
+              "source": "zotero_export",
+              "reference": "EHQBHVYV"
+            }
+          ],
+          "relations": [
+            {
+              "type": "isPreprintOf",
+              "target_version_id": "version:04fed931-77e4-551f-a65d-171b9355d611"
+            }
+          ],
+          "flags": [],
+          "version_id": "version:fdf4d4e8-faf0-572f-8f75-1efddb963ed8"
+        }
+      ],
+      "flags": []
+    },
+    "work:92f45258-5949-5fcb-b391-256884930baf": {
+      "work_id": "work:92f45258-5949-5fcb-b391-256884930baf",
+      "canonical_title": "Large Language Models and User Trust: Consequence of Self-Referential Learning Loop and the Deskilling of Health Care Professionals",
+      "identity_status": "curated",
+      "review_status": {
+        "identity": "unreviewed",
+        "metadata": "unreviewed",
+        "source": "unreviewed"
+      },
+      "legacy_work_ids": [
+        "doi:10.2196/56764"
+      ],
+      "source_lanes": [],
+      "latest_version_id": "version:3b924963-3b65-56a4-b26c-80be911b4983",
+      "preferred_version_id": "version:3b924963-3b65-56a4-b26c-80be911b4983",
+      "versions": [
+        {
+          "title": "Large Language Models and User Trust: Consequence of Self-Referential Learning Loop and the Deskilling of Health Care Professionals",
+          "authors": [
+            "A. Choudhury",
+            "Z. Chaudhry"
+          ],
+          "version_type": "version_of_record",
+          "version_date": "2024",
+          "item_type": "journalArticle",
+          "journal_or_repository": "",
+          "identifiers": {
+            "doi": [
+              "10.2196/56764"
+            ],
+            "zotero_key": [
+              "ED6C8LD2",
+              "WAYCKUZ8"
+            ],
+            "url": [
+              "https://www.jmir.org/2024/1/e56764"
+            ]
+          },
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "integrity_status": "current",
+          "access_status": "unknown",
+          "landing_url": "https://www.jmir.org/2024/1/e56764",
+          "fulltext_url": "",
+          "license": "",
+          "source_lanes": [],
+          "evidence": [],
+          "provenance": [
+            {
+              "source": "zotero_export",
+              "reference": "ED6C8LD2"
+            },
+            {
+              "source": "zotero_export",
+              "reference": "WAYCKUZ8"
+            }
+          ],
+          "relations": [],
+          "flags": [],
+          "version_id": "version:3b924963-3b65-56a4-b26c-80be911b4983"
+        }
+      ],
+      "flags": []
+    },
+    "work:c177fe82-4b8c-53f6-b488-d01f2042ed3d": {
+      "work_id": "work:c177fe82-4b8c-53f6-b488-d01f2042ed3d",
+      "canonical_title": "Feministische KI – Künstliche Intelligenz für alle? [Feminist AI – Artificial intelligence for everyone?]",
+      "identity_status": "curated",
+      "review_status": {
+        "identity": "unreviewed",
+        "metadata": "unreviewed",
+        "source": "unreviewed"
+      },
+      "legacy_work_ids": [
+        "source:Kubes_2024_Feministische_KI_–_Künstliche_Intelligenz_für.md"
+      ],
+      "source_lanes": [],
+      "latest_version_id": "version:a3a47ba2-0586-5ab0-80d5-0ad259664b41",
+      "preferred_version_id": "version:a3a47ba2-0586-5ab0-80d5-0ad259664b41",
+      "versions": [
+        {
+          "title": "Feministische KI – Künstliche Intelligenz für alle? [Feminist AI – Artificial intelligence for everyone?]",
+          "authors": [
+            "T. Kubes"
+          ],
+          "version_type": "unknown",
+          "version_date": "2024",
+          "item_type": "webpage",
+          "journal_or_repository": "",
+          "identifiers": {
+            "zotero_key": [
+              "THGC3PA2"
+            ],
+            "url": [
+              "https://blogs.fu-berlin.de/toolbox/2024/04/08/feministische-ki-kuenstliche-intelligenz-fuer-alle"
+            ]
+          },
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "integrity_status": "current",
+          "access_status": "unknown",
+          "landing_url": "https://blogs.fu-berlin.de/toolbox/2024/04/08/feministische-ki-kuenstliche-intelligenz-fuer-alle",
+          "fulltext_url": "",
+          "license": "",
+          "source_lanes": [],
+          "evidence": [],
+          "provenance": [
+            {
+              "source": "zotero_export",
+              "reference": "THGC3PA2"
+            }
+          ],
+          "relations": [],
+          "flags": [],
+          "version_id": "version:a3a47ba2-0586-5ab0-80d5-0ad259664b41"
+        }
+      ],
+      "flags": []
+    },
+    "work:ed020b30-3c7f-5c98-baa7-aa6071a7a02b": {
+      "work_id": "work:ed020b30-3c7f-5c98-baa7-aa6071a7a02b",
+      "canonical_title": "Conceptualizing AI literacy: An exploratory review",
+      "identity_status": "curated",
+      "review_status": {
+        "identity": "unreviewed",
+        "metadata": "unreviewed",
+        "source": "unreviewed"
+      },
+      "legacy_work_ids": [
+        "doi:10.1016/j.caeai.2021.100041"
+      ],
+      "source_lanes": [],
+      "latest_version_id": "version:d115eadc-8716-5c8e-9255-0c7a684d2e89",
+      "preferred_version_id": "version:d115eadc-8716-5c8e-9255-0c7a684d2e89",
+      "versions": [
+        {
+          "title": "Conceptualizing AI literacy: An exploratory review",
+          "authors": [
+            "Davy Tsz Kit Ng",
+            "Jac Ka Lok Leung",
+            "Samuel Kai Wah Chu",
+            "Maggie Shen Qiao"
+          ],
+          "version_type": "version_of_record",
+          "version_date": "2021",
+          "item_type": "journalArticle",
+          "journal_or_repository": "",
+          "identifiers": {
+            "doi": [
+              "10.1016/j.caeai.2021.100041"
+            ],
+            "zotero_key": [
+              "3AQ2K3BX",
+              "SE579V7B"
+            ],
+            "url": [
+              "https://linkinghub.elsevier.com/retrieve/pii/S2666920X21000357"
+            ]
+          },
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "integrity_status": "current",
+          "access_status": "unknown",
+          "landing_url": "https://linkinghub.elsevier.com/retrieve/pii/S2666920X21000357",
+          "fulltext_url": "",
+          "license": "",
+          "source_lanes": [],
+          "evidence": [],
+          "provenance": [
+            {
+              "source": "zotero_export",
+              "reference": "3AQ2K3BX"
+            },
+            {
+              "source": "zotero_export",
+              "reference": "SE579V7B"
+            }
+          ],
+          "relations": [],
+          "flags": [],
+          "version_id": "version:d115eadc-8716-5c8e-9255-0c7a684d2e89"
+        }
+      ],
+      "flags": []
+    }
+  },
+  "record_index": {
+    "3AQ2K3BX": {
+      "work_id": "work:ed020b30-3c7f-5c98-baa7-aa6071a7a02b",
+      "version_id": "version:d115eadc-8716-5c8e-9255-0c7a684d2e89"
+    },
+    "5UAHQESQ": {
+      "work_id": "work:8e01ec71-65ff-5273-b5b9-a582fec48008",
+      "version_id": "version:ab927bf4-8220-592a-a140-2f7bcaf1bcdf"
+    },
+    "6MJYP7ZX": {
+      "work_id": "work:8e01ec71-65ff-5273-b5b9-a582fec48008",
+      "version_id": "version:04fed931-77e4-551f-a65d-171b9355d611"
+    },
+    "9Y7ZFGI5": {
+      "work_id": "work:804f5cc7-54b8-5265-b473-1ce7deb1fdaf",
+      "version_id": "version:3f383565-d0fc-5f40-a1d8-7359c6098ddb"
+    },
+    "AIZGTQKG": {
+      "work_id": "work:804f5cc7-54b8-5265-b473-1ce7deb1fdaf",
+      "version_id": "version:3f383565-d0fc-5f40-a1d8-7359c6098ddb"
+    },
+    "AK7K4P97": {
+      "work_id": "work:717e065c-570d-526f-86ae-2a24d9f03044",
+      "version_id": "version:7a2a88ab-de23-5113-aa95-aa6b39a002eb"
+    },
+    "BFG8VUK3": {
+      "work_id": "work:804f5cc7-54b8-5265-b473-1ce7deb1fdaf",
+      "version_id": "version:3f383565-d0fc-5f40-a1d8-7359c6098ddb"
+    },
+    "CHJQ52DC": {
+      "work_id": "work:1bbf69b4-ba85-5bc0-82e5-e3554b788658",
+      "version_id": "version:ed0cecb4-269e-54d9-9f4c-0f2a35588a17"
+    },
+    "CSJS9JGH": {
+      "work_id": "work:1bbf69b4-ba85-5bc0-82e5-e3554b788658",
+      "version_id": "version:da2331e7-739b-5c3e-957e-201e341ac34c"
+    },
+    "ED6C8LD2": {
+      "work_id": "work:92f45258-5949-5fcb-b391-256884930baf",
+      "version_id": "version:3b924963-3b65-56a4-b26c-80be911b4983"
+    },
+    "EHQBHVYV": {
+      "work_id": "work:8e01ec71-65ff-5273-b5b9-a582fec48008",
+      "version_id": "version:fdf4d4e8-faf0-572f-8f75-1efddb963ed8"
+    },
+    "GXZWBNJU": {
+      "work_id": "work:717e065c-570d-526f-86ae-2a24d9f03044",
+      "version_id": "version:7a2a88ab-de23-5113-aa95-aa6b39a002eb"
+    },
+    "HSQW48VE": {
+      "work_id": "work:717e065c-570d-526f-86ae-2a24d9f03044",
+      "version_id": "version:7a2a88ab-de23-5113-aa95-aa6b39a002eb"
+    },
+    "L48P8FBG": {
+      "work_id": "work:717e065c-570d-526f-86ae-2a24d9f03044",
+      "version_id": "version:7a2a88ab-de23-5113-aa95-aa6b39a002eb"
+    },
+    "RR5MJRBZ": {
+      "work_id": "work:717e065c-570d-526f-86ae-2a24d9f03044",
+      "version_id": "version:7a2a88ab-de23-5113-aa95-aa6b39a002eb"
+    },
+    "SE579V7B": {
+      "work_id": "work:ed020b30-3c7f-5c98-baa7-aa6071a7a02b",
+      "version_id": "version:d115eadc-8716-5c8e-9255-0c7a684d2e89"
+    },
+    "THGC3PA2": {
+      "work_id": "work:c177fe82-4b8c-53f6-b488-d01f2042ed3d",
+      "version_id": "version:a3a47ba2-0586-5ab0-80d5-0ad259664b41"
+    },
+    "WAYCKUZ8": {
+      "work_id": "work:92f45258-5949-5fcb-b391-256884930baf",
+      "version_id": "version:3b924963-3b65-56a4-b26c-80be911b4983"
+    },
+    "ZGM7K3H6": {
+      "work_id": "work:717e065c-570d-526f-86ae-2a24d9f03044",
+      "version_id": "version:7a2a88ab-de23-5113-aa95-aa6b39a002eb"
+    }
+  }
+}

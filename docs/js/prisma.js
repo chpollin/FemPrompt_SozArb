@@ -26,6 +26,7 @@ let acceptanceMode = null;
 let trialMode = false;
 let runActor = 'human';
 let verificationMode = false;
+let editMode = false; // session-only opt-in; a normal reload always starts with reading
 const FS_SUPPORTED = typeof window.showDirectoryPicker === 'function';
 
 // Constants
@@ -213,11 +214,37 @@ let work = { pid: null, cats: {}, override: false, reason: null, overrideReason:
 
 function curDec() {
     if (!state.reviewer) return {};
-    if (!state.reviewers[state.reviewer]) state.reviewers[state.reviewer] = {};
+    if (!state.reviewers[state.reviewer]) {
+        if (!canEdit()) return {};
+        state.reviewers[state.reviewer] = {};
+    }
     return state.reviewers[state.reviewer];
 }
 
 function resetWork(p) { work = { pid: p.id, cats: {}, override: false, reason: null, overrideReason: null, evidence: {} }; }
+
+function canEdit() { return editMode && !acceptanceMode; }
+
+function setEditMode(enabled) {
+    if (acceptanceMode) return false;
+    editMode = !!enabled;
+    closePinMenu();
+    closeInfoPopover(false);
+    // The draft stays in memory; leaving edit mode never commits it. A saved record
+    // remains the reading projection until the user explicitly reopens the draft.
+    if (initialized) {
+        renderShell();
+        renderScreening();
+        if (canEdit()) {
+            focusDataInline();
+            if (!trialMode && !screeningHandle) restoreRepoConnection();
+        } else {
+            const toggle = document.getElementById('pt-edit-mode');
+            if (toggle) toggle.focus();
+        }
+    }
+    return canEdit();
+}
 
 // Persistence: localStorage cache + File System Access (repo files)
 
@@ -234,7 +261,7 @@ function serializeAll() {
 function storageKey() { return trialMode ? TRIAL_LS_KEY : LS_KEY; }
 
 function saveLocal() {
-    if (acceptanceMode) return;
+    if (!canEdit()) return;
     try { localStorage.setItem(storageKey(), JSON.stringify(serializeAll())); }
     catch (e) { console.warn('[PRISMA] local save failed:', e.message); }
 }
@@ -267,6 +294,7 @@ function loadLocal() {
 let writeChain = Promise.resolve();
 let writeVersion = 0;
 function save() {
+    if (!canEdit()) return;
     saveLocal();
     if (!state.reviewer) {
         setSaveStatus('needs-reviewer', 'Reviewer:innen-Kürzel festlegen, bevor die erste Entscheidung gespeichert wird.');
@@ -363,6 +391,7 @@ function setSaveStatus(kind, message) {
 }
 
 function selectReviewer(key) {
+    if (!canEdit()) return false;
     const normalized = normalizedReviewerKey(key);
     if (!normalized) return false;
     state.reviewer = normalized;
@@ -433,6 +462,7 @@ function mergeReviewerDecisions(fileDecisions, localDecisions) {
 // Backup imports always target the explicitly selected reviewer. The file name and an
 // outdated embedded reviewer value therefore cannot overwrite the other reviewer's track.
 function importReviewerPayload(obj, target, overwrite) {
+    if (!canEdit()) return { ok: false, reason: 'read-only' };
     if (!isReviewerId(target)) return { ok: false, reason: 'reviewer-required' };
     if (!obj || typeof obj !== 'object' || !obj.decisions || typeof obj.decisions !== 'object')
         return { ok: false, reason: 'invalid' };
@@ -471,6 +501,7 @@ function idbGet(k) {
 // keeps the connection target stable. A picked folder without a docs child is treated as
 // the reviewer folder itself, which is the pre-existing behaviour.
 async function resolveScopes(picked) {
+    if (!canEdit()) throw new Error('Zum Verbinden zuerst Bearbeiten aktivieren.');
     // drop the previous connection first: a failed resolution must not leave writes
     // pointing at the folder of an earlier session
     screeningHandle = null;
@@ -506,9 +537,11 @@ function setConnectedSaveStatus() {
 }
 
 async function connectRepo() {
+    if (!canEdit()) return;
     if (!FS_SUPPORTED) { alert('Dieser Browser kann den lokalen Arbeitsordner nicht direkt beschreiben. Öffne PRISM in einem Chromium-basierten Browser.'); return; }
     try {
         let handle = await window.showDirectoryPicker({ mode: 'readwrite' });
+        if (!canEdit()) return;
         dirHandle = handle;
         await idbSet('dir', handle);
         storedHandleAvailable = true;
@@ -527,12 +560,14 @@ async function connectRepo() {
 }
 
 async function reconnectRepo() {
-    if (!FS_SUPPORTED) return;
+    if (!canEdit() || !FS_SUPPORTED) return;
     try {
         let handle = await idbGet('dir');
+        if (!canEdit()) return;
         if (!handle) { storedHandleAvailable = false; renderData(document.getElementById('pt-data-inline')); return; }
         storedHandleAvailable = true;
         const perm = await handle.requestPermission({ mode: 'readwrite' });
+        if (!canEdit()) return;
         if (perm !== 'granted') {
             setSaveStatus('error', 'Schreibrecht nicht erteilt. Browser-Zwischenstand bleibt erhalten.');
             alert('Schreibrecht nicht erteilt.'); return;
@@ -551,13 +586,14 @@ async function reconnectRepo() {
 }
 
 async function restoreRepoConnection() {
-    if (!FS_SUPPORTED) return;
+    if (!canEdit() || !FS_SUPPORTED) return;
     try {
         const handle = await idbGet('dir');
-        if (!handle) return;
+        if (!handle || !canEdit()) return;
         storedHandleAvailable = true;
         dirHandle = handle;
         const permission = handle.queryPermission ? await handle.queryPermission({ mode: 'readwrite' }) : 'prompt';
+        if (!canEdit()) return;
         if (permission !== 'granted') {
             setSaveStatus('local', 'Arbeitsordner einmal freigeben, danach kann direkt gespeichert werden.');
             renderData(document.getElementById('pt-data-inline'));
@@ -576,7 +612,7 @@ async function restoreRepoConnection() {
 }
 
 async function loadAllReviewers() {
-    if (!screeningHandle) return;
+    if (!canEdit() || !screeningHandle) return;
     const found = {};
     const errors = {};
     const recoveries = {};
@@ -610,6 +646,7 @@ async function loadAllReviewers() {
             }
         }
     }
+    if (!canEdit()) return;
     reviewerFileErrors = errors;
     reviewerRecoveryPending = recoveries;
     // Apply resolved records. On a blocked conflict, the file stays untouched on disk
@@ -802,6 +839,7 @@ function sanitizeAnalysis(raw, textSource) {
 // screening fields (categories, decision, override, reason, evidence), so the
 // screening record stays byte-identical (the HARD boundary of FR-14).
 function setAnalysis(pid, raw) {
+    if (!canEdit()) return;
     const rec = curDec()[pid];
     if (!rec || rec.decision !== 'Include') return;
     rec.analysis = sanitizeAnalysis(raw, rec.text_source);
@@ -1008,6 +1046,9 @@ window.initializePrisma = function() {
     const requestedActor = query.get('actor');
     runActor = requestedActor === 'agent' ? 'agent' : 'human';
     if (trialMode && !requestedActor) runActor = 'agent';
+    // These URLs explicitly select an authoring workflow. Ordinary links, including
+    // paper deep links and cached reviewer profiles, confer no editing permission.
+    editMode = !query.get('review') && (trialMode || verificationMode || requestedActor === 'agent');
     loadLocal();
     const requestedReviewer = normalizedReviewerKey(query.get('reviewer'));
     if (trialMode && requestedReviewer) selectReviewer(requestedReviewer);
@@ -1031,7 +1072,7 @@ window.initializePrisma = function() {
     } else {
         renderShell();
         showSurface(state.surface || 'screening');
-        if (!trialMode) restoreRepoConnection();
+        if (canEdit() && !trialMode) restoreRepoConnection();
     }
     console.log('[PRISMA] initialized, ' + papers.length + ' papers, FS ' + (FS_SUPPORTED ? 'supported' : 'fallback'));
 };
@@ -1078,12 +1119,20 @@ function normalizeSurface() {
 function renderShell() {
     const root = document.getElementById('prisma-root');
     if (!root) return;
-    let html = '<div class="pt-wsbar-top"><span class="pt-wsbar-title">' + (verificationMode ? 'PRISM-Verifikation' : 'Screening') + '</span>' +
+    let html = '<div class="pt-wsbar-top"><span class="pt-wsbar-title">' + (verificationMode ? 'PRISM-Verifikation' : 'Screening') + '</span>';
+    if (!acceptanceMode && !trialMode && !verificationMode && runActor !== 'agent') {
+        html += '<span class="pt-workspace-mode" id="pt-workspace-mode" role="status">' + (canEdit() ? 'Bearbeitungsmodus' : 'Lesemodus') + '</span>' +
+            '<button class="pt-btn pt-edit-mode" id="pt-edit-mode" type="button" aria-pressed="' + canEdit() +
+            '" aria-describedby="pt-workspace-mode" title="' + (canEdit() ? 'Zum Lesemodus wechseln' : 'Bewertungen bearbeiten') + '">Bearbeiten</button>';
+    }
+    html +=
         '<a class="pt-mode-switch' + (verificationMode ? ' is-active' : '') + '" href="' + EC.escapeHtml(modeHref(!verificationMode)) + '">' +
         (verificationMode ? 'Zum Screening' : 'Verifikationsmodus') + '</a></div>';
     html += '<section class="pt-sync-inline" id="pt-data-inline" aria-label="Reviewer und Datenspeicherung"></section>';
     html += '<div class="pt-surface" id="pt-surface"></div>';
     root.innerHTML = html;
+    const toggle = root.querySelector('#pt-edit-mode');
+    if (toggle) toggle.addEventListener('click', function() { setEditMode(!canEdit()); });
     renderData(root.querySelector('#pt-data-inline'));
 }
 
@@ -1264,7 +1313,7 @@ function renderScreening() {
         renderedPaperId = p.id;
     }
     if (editingPid && editingPid !== p.id) editingPid = null; // navigating away abandons the edit; the record stays
-    const dec = editingPid === p.id ? null : curDec()[p.id]; // while editing, render the form, not the locked record
+    const dec = canEdit() && editingPid === p.id ? null : curDec()[p.id]; // saved records stay visible in read mode
     if (!dec && work.pid !== p.id) resetWork(p);
 
     const screened = Object.keys(curDec()).length;
@@ -1273,7 +1322,7 @@ function renderScreening() {
     let html = '<div class="pt-ws-bar">';
     html += '<span class="pt-ws-pos">Paper ' + (state.index + 1) + ' / ' + papers.length + '</span>';
     html += '<span class="pt-ws-progressbar"><span class="pt-ws-progressfill" style="width:' + pct + '%"></span></span>';
-    if (!acceptanceMode) {
+    if (canEdit()) {
         html += '<button class="pt-save-icon" id="pt-record" type="button" aria-label="Entscheidung speichern" title="Entscheidung speichern"' +
             ((dec || !state.reviewer || (!screeningHandle && !trialMode)) ? ' disabled' : '') + '>' +
             '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 3h12l2 2v16H5V3Zm2 2v5h9V5H7Zm1 9v5h8v-5H8Z"></path></svg>' +
@@ -1446,7 +1495,7 @@ function readingShellHtml(p, dec) {
         '<span class="pt-tag-mono" id="pt-intext-count"></span>' +
         '<button class="pt-intext-nav" id="pt-intext-prev" title="vorheriger Treffer">&lsaquo;</button>' +
         '<button class="pt-intext-nav" id="pt-intext-next" title="nächster Treffer">&rsaquo;</button>' +
-        '<button class="pt-btn pt-pin-hit" id="pt-pin-hit" disabled title="Aktuellen Treffer als Beleg anheften">Treffer anheften</button>' +
+        (canEdit() ? '<button class="pt-btn pt-pin-hit" id="pt-pin-hit" disabled title="Aktuellen Treffer als Beleg anheften">Treffer anheften</button>' : '') +
         '</div>';
     h += '<div class="pt-search-key" id="pt-search-key" hidden><span aria-hidden="true"></span>Aktueller Suchtreffer im Lesetext</div>';
     h += '<div class="pt-layer-band" id="pt-layer-band" hidden>LLM-Wissensdestillat aus dem Wissensdokument. Diese automatisch erzeugte Referenz ist vom Originaltext getrennt; Belege daraus erfüllen das Paper-Beleg-Gate nicht.</div>';
@@ -1601,6 +1650,7 @@ function snippetAround(el, term) {
 // new evidence. A paper pin starts an empty category at level 1 so evidence capture
 // cannot silently assert that the category is central.
 function pinEvidence(cat, term, snippet, origin) {
+    if (!canEdit()) return;
     origin = origin === 'ai' ? 'ai' : 'human';
     const sourceLayer = origin === 'ai' ? 'llm_distillate' : 'paper';
     term = (term || '').trim().slice(0, 80);
@@ -1619,6 +1669,7 @@ function pinEvidence(cat, term, snippet, origin) {
 }
 
 function unpinEvidence(cat, idx) {
+    if (!canEdit()) return;
     if (work.evidence[cat]) {
         work.evidence[cat].splice(idx, 1);
         if (!work.evidence[cat].length) delete work.evidence[cat];
@@ -1871,6 +1922,7 @@ function correctedAnnotationBody(record, value) {
 }
 
 function advanceVerification(record, target, details) {
+    if (!canEdit()) return { ok: false, message: 'Zum Ändern zuerst Bearbeiten aktivieren.' };
     if (!record || typeof record !== 'object') return { ok: false, message: 'Kein Decision Record geladen.' };
     if (!isLifecycleState(target)) return { ok: false, message: 'Unzulässiger Zielstatus.' };
     const reviewer = String(details && details.reviewer_id || '').trim();
@@ -1977,7 +2029,7 @@ function verificationPanelHtml(record) {
     const view = verificationView(record);
     const lifecycle = view.lifecycle, provenance = view.provenance || {}, activities = provenance.activities || [], actors = provenance.actors || [];
     const canAdvance = ['ai-agent-reviewed', 'verified'].indexOf(lifecycle.state) !== -1 &&
-        !!LIFECYCLE_NEXT[lifecycle.state] && !acceptanceMode && runActor === 'human';
+        !!LIFECYCLE_NEXT[lifecycle.state] && canEdit() && runActor === 'human';
     const target = LIFECYCLE_NEXT[lifecycle.state];
     let h = '<section class="pt-verification" aria-labelledby="pt-verification-title">';
     h += '<div class="pt-verification-head"><div><span class="pt-tag-mono">PRISM-Verifikation</span><h3 id="pt-verification-title">Nachweis- und Freigabestatus</h3></div>' +
@@ -2038,6 +2090,8 @@ function workingDecisionRecord() {
 // ---- right: assessment (categories + evidence + derived decision + collapsed AI) ----
 function assessInnerHtml(p, dec) {
     if (dec) return assessLockedHtml(p, dec);
+    if (!canEdit()) return '<div class="pt-rail-head"><span class="pt-rail-title">Bewertung</span></div>' +
+        '<div class="pt-rail-body"><p class="pt-muted pt-read-only-note">Für dieses Paper ist in diesem Browser keine eigene Bewertung geladen. Mit „Bearbeiten“ kannst du eine Bewertung erfassen oder deinen Arbeitsordner verbinden.</p></div>';
     let cats = work.cats;
     let h = '<div class="pt-rail-head"><span class="pt-rail-title">Deine Bewertung</span></div>';
     h += '<div class="pt-rail-body"><div class="pt-rail-scroll">';
@@ -2069,7 +2123,7 @@ function assessInnerHtml(p, dec) {
 function assessLockedHtml(p, dec) {
     let cats = dec.categories || {};
     const req = recordRequirements(dec);
-    let h = '<div class="pt-rail-head"><span class="pt-rail-title">Deine Bewertung</span>' +
+    let h = '<div class="pt-rail-head"><span class="pt-rail-title">' + (canEdit() ? 'Deine Bewertung' : 'Gespeicherte Bewertung') + '</span>' +
         '<span class="pt-spacer"></span><span class="pt-pill pt-pill-' + decCls(dec.decision) + ' pt-pill-lg">' + dec.decision + '</span></div>';
     h += '<div class="pt-rail-body"><div class="pt-rail-scroll">';
     if (dec.decision === 'Exclude' && dec.reason) h += '<div class="pt-seed-ref">Ausschlussgrund: <strong>' + EC.escapeHtml(dec.reason.replace(/_/g, ' ')) + '</strong></div>';
@@ -2085,8 +2139,8 @@ function assessLockedHtml(p, dec) {
         '<span class="pt-pill pt-pill-' + decCls(dec.decision) + '">' + dec.decision + '</span></div>' +
         '<span class="pt-actions-hint ' + (req.ok ? 'is-complete' : 'is-required') + '" role="status">' +
         (req.ok ? 'Vollständig erfasst.' : 'Noch erforderlich: ' + EC.escapeHtml(req.missing.join(', '))) + '</span>' +
-        '<div class="pt-actions">' + (acceptanceMode ? '' : '<button class="pt-revise-btn" id="pt-revise">Überarbeiten</button>') + '<span class="pt-spacer"></span>' +
-        '<button class="pt-next-btn" id="pt-next"' + (!req.ok ? ' disabled' : '') + '>' +
+        '<div class="pt-actions">' + (canEdit() ? '<button class="pt-revise-btn" id="pt-revise">Überarbeiten</button>' : '') + '<span class="pt-spacer"></span>' +
+        '<button class="pt-next-btn" id="pt-next"' + (canEdit() && !req.ok ? ' disabled' : '') + '>' +
         (acceptanceMode ? 'Anderer Abnahmefall' : (state.index < papers.length - 1 ? 'Nächstes offen' : 'Zum ersten offenen')) + ' &rarr;</button></div>' +
         '</div></div>';
     return h;
@@ -2287,7 +2341,7 @@ function refreshAssess() {
     if (!col) return;
     closeInfoPopover(false);
     let p = papers[state.index];
-    const dec = editingPid === p.id ? null : curDec()[p.id];
+    const dec = canEdit() && editingPid === p.id ? null : curDec()[p.id];
     col.innerHTML = assessInnerHtml(p, dec);
     bindAssess(p, dec);
 }
@@ -2352,7 +2406,7 @@ function bindInfoPopovers(root) {
 // Wire the analysis panel into the unsaved Include draft. The analysis remains in
 // work until the single disk action writes the complete record.
 function attachAnalysisPanel(dec, col) {
-    if (!dec || dec.decision !== 'Include' || !anFields.length) return;
+    if (!canEdit() || !dec || dec.decision !== 'Include' || !anFields.length) return;
     const panel = col.querySelector('.pt-anpanel');
     if (!panel) return;
 
@@ -2360,7 +2414,7 @@ function attachAnalysisPanel(dec, col) {
         const a = readAnalysis({ analysis: work.analysis });
         return { fields: JSON.parse(JSON.stringify(a.fields)), undecidable: JSON.parse(JSON.stringify(a.undecidable)) };
     }
-    function persist(next) { work.analysis = sanitizeAnalysis(next, currentTextSource); }
+    function persist(next) { if (canEdit()) work.analysis = sanitizeAnalysis(next, currentTextSource); }
     function rerender() { refreshAssess(); }
 
     panel.querySelectorAll('.pt-an-opt').forEach(function(btn) {
@@ -2465,7 +2519,7 @@ function attachScreening(p, dec) {
 
     // text-selection pinning in the reading column
     let doc = document.getElementById('pt-doc');
-    if (doc && !dec) {
+    if (canEdit() && doc && !dec) {
         doc.addEventListener('mouseup', function() {
             let sel = window.getSelection ? window.getSelection() : null;
             if (!sel || sel.isCollapsed) return;
@@ -2492,8 +2546,11 @@ function bindAssess(p, dec) {
         return;
     }
 
+    if (!canEdit()) return;
+
     col.querySelectorAll('.pt-chip').forEach(function(btn) {
         btn.addEventListener('click', function() {
+            if (!canEdit()) return;
             let c = btn.dataset.cat;
             const before = deriveDecision(work.cats);
             work.cats[c] = (catLevel(work.cats[c]) + 1) % 3; // cycle nein -> teilweise -> ja
@@ -2507,10 +2564,10 @@ function bindAssess(p, dec) {
         btn.addEventListener('click', function() { unpinEvidence(btn.dataset.cat, parseInt(btn.dataset.i, 10)); });
     });
     col.querySelectorAll('.pt-reason-chip').forEach(function(btn) {
-        btn.addEventListener('click', function() { work.reason = btn.dataset.reason; refreshAssess(); });
+        btn.addEventListener('click', function() { if (!canEdit()) return; work.reason = btn.dataset.reason; refreshAssess(); });
     });
     const ov = col.querySelector('#pt-override');
-    if (ov) ov.addEventListener('change', function() { work.override = ov.checked; if (!ov.checked) work.overrideReason = null; refreshAssess(); });
+    if (ov) ov.addEventListener('change', function() { if (!canEdit()) return; work.override = ov.checked; if (!ov.checked) work.overrideReason = null; refreshAssess(); });
     attachAnalysisPanel(workingDecisionRecord(), col);
 
     let rec = document.getElementById('pt-record');
@@ -2541,12 +2598,12 @@ function bindAssess(p, dec) {
                                 ? 'Bitte den Override zu Include begründen.' : 'Speichern ist noch nicht möglich.'))))))));
     }
     const ovr = col.querySelector('#pt-override-reason');
-    if (ovr) ovr.addEventListener('input', function() { work.overrideReason = ovr.value; syncRecord(); });
+    if (ovr) ovr.addEventListener('input', function() { if (!canEdit()) return; work.overrideReason = ovr.value; syncRecord(); });
     syncRecord();
 }
 
 function bindVerificationPanel(p, dec, col) {
-    if (!verificationMode) return;
+    if (!canEdit() || !verificationMode) return;
     const form = col.querySelector('#pt-verification-action');
     if (!form) return;
     const resultSelect = form.elements.result;
@@ -2559,7 +2616,7 @@ function bindVerificationPanel(p, dec, col) {
     syncCorrectionEditor();
     form.addEventListener('submit', function(event) {
         event.preventDefault();
-        if (runActor !== 'human' || acceptanceMode) return;
+        if (!canEdit() || runActor !== 'human') return;
         const target = LIFECYCLE_NEXT[verificationView(dec).lifecycle.state];
         const result = advanceVerification(dec, target, {
             reviewer_id: form.elements.reviewer_id && form.elements.reviewer_id.value,
@@ -2585,6 +2642,7 @@ function bindVerificationPanel(p, dec, col) {
 }
 
 function commit() {
+    if (!canEdit()) return;
     let p = papers[state.index];
     if (!state.reviewer) {
         setSaveStatus('needs-reviewer', 'Reviewer:innen-Kürzel festlegen, bevor die erste Entscheidung gespeichert wird.');
@@ -2640,6 +2698,7 @@ function commit() {
 // abandoning the edit (navigating away) loses nothing. Only human Belege were persisted,
 // so AI-origin evidence is not restored. (Browser-agent finding: revise was data loss.)
 function editRecord(p) {
+    if (!canEdit()) return;
     const dec = curDec()[p.id];
     if (!dec) return;
     work = {
@@ -2683,6 +2742,7 @@ function gotoNextOpen() {
 // The pin menu is a modal dialog: it takes focus on open, traps Tab inside, closes
 // on Escape, and restores focus to the trigger on close (browser-agent a11y finding).
 function openPinMenu(term, snippet) {
+    if (!canEdit()) return;
     pinTerm = term; pinSnippet = snippet;
     pinOrigin = state.readMode === 'ai' ? 'ai' : 'human'; // bind the Beleg to the layer the snippet was taken from
     let menu = document.getElementById('pt-pinmenu'); if (!menu) return;
@@ -2876,6 +2936,10 @@ function renderData(targetEl) {
     if (acceptanceMode) {
         el.innerHTML = '<div class="pt-acceptance-status"><strong>Abnahmeansicht</strong>' +
             '<span>Vorgeschlagene Testurteile. Diese Ansicht schreibt keine Forschungsdaten.</span></div>';
+        return;
+    }
+    if (!canEdit()) {
+        el.innerHTML = '<p class="pt-read-only-status">Papers lesen und durchsuchen. „Bearbeiten“ aktiviert Bewertungen und die Einrichtung des Arbeitsordners.</p>';
         return;
     }
     if (!state.reviewer) {
@@ -3144,6 +3208,7 @@ const TEST_HOOK = {
     reviewerFileText: reviewerFileText, sortedDecisions: sortedDecisions,
     isReviewerId: isReviewerId, normalizedReviewerKey: normalizedReviewerKey, reviewerPath: reviewerPath,
     selectReviewer: selectReviewer, importReviewerPayload: importReviewerPayload,
+    canEdit: canEdit, setEditMode: setEditMode,
     reviewerEnvelope: function(key) { return reviewerEnvelopes[key] ? JSON.parse(JSON.stringify(reviewerEnvelopes[key])) : null; },
     setReviewerEnvelope: function(key, payload) { reviewerEnvelopes[key] = JSON.parse(JSON.stringify(payload)); },
     validateReviewerPayload: validateReviewerPayload, save: save, saveStatus: function() { return saveStatus; },
