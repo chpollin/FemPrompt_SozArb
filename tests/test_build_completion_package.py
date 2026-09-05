@@ -72,6 +72,22 @@ def test_human_exclusion_is_never_overridden_by_agent_inclusion():
     assert "human_agent_decision_divergence" in rows[0]["conflicts"]
 
 
+def test_multiline_human_note_is_reproducible_across_git_line_endings():
+    import csv
+    import io
+
+    csv_text = 'Zotero_Key,Decision,Notes\r\nA,Exclude,"Author correction\r\nhttps://example.org/source\r\n"\r\n'
+    windows = list(csv.DictReader(io.StringIO(csv_text, newline="")))
+    git_stored = list(csv.DictReader(io.StringIO(csv_text.replace("\r\n", "\n"), newline="")))
+    original_hash = record_hash(windows)
+    windows_rows, _ = completion._work_rows(registry(), windows, {}, {})
+    stored_rows, _ = completion._work_rows(registry(), git_stored, {}, {})
+    assert windows_rows == stored_rows
+    assert record_hash(windows) == original_hash
+    assert "\r\n" in windows[0]["Notes"]
+    assert windows_rows[0]["human_record_dispositions"][0]["notes"] == "Author correction\nhttps://example.org/source\n"
+
+
 def test_explicit_duplicate_disposition_is_not_a_work_exclusion():
     human = [{"Zotero_Key": "A", "Decision": "Exclude", "Exclusion_Reason": "Duplicate"}, {"Zotero_Key": "B", "Decision": "Include"}]
     rows, _ = completion._work_rows(registry(), human, {}, {})

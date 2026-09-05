@@ -1,0 +1,50 @@
+[
+  {
+    "id": "Kabra_2025_Reasoning_Towards_Fairness_arxiv_v3",
+    "type": "article",
+    "title": "Reasoning Towards Fairness: Mitigating Bias in Language Models through Reasoning-Guided Fine-Tuning",
+    "author": [
+      {
+        "given": "Sanchit",
+        "family": "Kabra"
+      },
+      {
+        "given": "Akshita",
+        "family": "Jha"
+      },
+      {
+        "given": "Chandan K.",
+        "family": "Reddy"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          6,
+          5
+        ]
+      ]
+    },
+    "genre": "preprint",
+    "archive": "arXiv",
+    "archive_location": "arXiv:2504.05632v3",
+    "version": "3",
+    "DOI": "10.48550/arXiv.2504.05632",
+    "URL": "https://arxiv.org/abs/2504.05632v3",
+    "language": "en",
+    "femprompt-record-id": "SQYLQFRU",
+    "femprompt-work-id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+    "femprompt-version-id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+    "femprompt-version-type": "preprint",
+    "note": "Exact arXiv v3 dated 5 June 2025; first submitted 8 April 2025. Prepared from original arXiv version metadata for a grounded distillate; no artifact-review acceptance or human verification is claimed.",
+    "femprompt-prepared-by": {
+      "agent_id": "/root/research_completion",
+      "model": "GPT-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "prepared_at": "2026-09-05T19:08:56.010860+00:00",
+      "metadata_source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-metadata.json",
+      "metadata_source_sha256": "sha256:caf3057760abe06a04b2bffe47e15b553f7afd9b7abd7184cb805993ddbfd498"
+    }
+  }
+]

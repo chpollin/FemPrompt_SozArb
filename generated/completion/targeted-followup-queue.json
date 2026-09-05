@@ -357,5 +357,5 @@
   },
   "schema": "femprompt-targeted-followup-queue/0.1",
   "scope": "separate_targeted_gap_fill_intake",
-  "source_fingerprint": "sha256:7c559be485432bbc48769c5a72d1755633cd1996d8cec16d486e98dd0fdc1af3"
+  "source_fingerprint": "sha256:233004c51059be582e73dc0750db4b1df50993f07262931940b501802dca0db3"
 }

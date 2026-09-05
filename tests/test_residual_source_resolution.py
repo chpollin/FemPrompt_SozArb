@@ -23,12 +23,22 @@ def test_resolution_ledger_covers_the_audited_residual_cohort() -> None:
     queue = _json(QUEUE)
     records = {record["record_id"]: record for record in ledger["records"]}
     queued = {record["representative_record_id"]: record for record in queue["queue"]}
+    productive = _json(ROOT / "docs/data/screening/ar2.json")["decisions"]
 
-    assert set(records) == set(queued) | {"8NG4ZEWE"}
+    # The dated acquisition cohort stays fixed as later governed runs shrink
+    # the live queue. Leaving the queue requires a reviewed record of that Work.
+    assert set(records) == {
+        "SQYLQFRU", "RAY6G2R7", "ZQHP5G35", "LR8Z3YHP", "KI9GRGHB",
+        "5T55I5Z7", "XG7RFFC7", "Z9DNTBFF", "8NG4ZEWE",
+    }
     assert set(ledger["scope"]["record_ids"]) == set(records)
     assert "8NG4ZEWE" not in queued
     for record_id, record in records.items():
-        if record_id == "8NG4ZEWE":
+        if record_id not in queued:
+            assert productive[record_id]["work_id"] == record["work_id"]
+            assert productive[record_id]["lifecycle"]["state"] in {
+                "ai-agent-reviewed", "verified", "publication-approved",
+            }
             continue
         assert record["work_id"] == queued[record_id]["work_id"]
         assert record["version_id"] == queued[record_id]["selected_version_id"]

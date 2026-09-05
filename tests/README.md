@@ -38,6 +38,7 @@ The browser runner fetches the generated category schema, analysis vocabulary, a
 | `test_build_fulltext.py` | pytest: full-text identity checks, fail-closed ambiguity and mismatch handling, and atomic publication rollback. |
 | `test_screening_lifecycle.py` | pytest: schema-0.5 migration, role-gated lifecycle transitions, immutable corrections, and hash-bound validation receipts. |
 | `test_merge_ai_agent_product.py` | pytest: append-only productive merge, idempotence, divergent-overwrite refusal, and atomic output. |
+| `test_prism_roundtrip_cli.py` | Runs the real projection, transfer and track-validation CLIs against an archived coding packet; verifies explicit write-mode activation and unchanged source coding. |
 | `test_build_agent_screening_queue.py` | pytest: work-level human and AI coverage, alias handling, source readiness, and blocked queue generation. |
 | `test_build_round2_intake.py` | pytest: RIS lane parsing, cross-lane deduplication, corpus matching, Zotero-export drift, and intake gating. |
 | `test_round2_intake_package.py` | pytest: reconciliation of the three agent reviews, conflict withholding, safe RIS generation, and Version addressability. |

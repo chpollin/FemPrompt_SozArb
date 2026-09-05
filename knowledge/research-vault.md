@@ -98,13 +98,14 @@ Die qualitative Analyse synthetisiert Assertions entlang der Forschungsfragen zu
 
 ## Aktueller Implementierungsstand
 
-Die aktive Ordnerstruktur, ein geprüfter Startausschnitt und der projektspezifische Validator sind eingerichtet. Der Startausschnitt vom 5. September 2026 besteht aus drei aktiven Publikationsdistillaten und drei Assertions. Die Beziehungen sind keine pauschale Eins-zu-eins-Zuordnung:
+Die aktive Ordnerstruktur, ein geprüfter Teilbestand und der projektspezifische Validator sind eingerichtet. Die folgende Tabelle erschließt die aktive Belegkette; aktuelle Mengen und Prüfzustände stehen im generierten Completion-Paket. Die Beziehungen sind keine pauschale Eins-zu-eins-Zuordnung:
 
 | Aktives Distillat | Unterstützte Assertion |
 |---|---|
 | [Ahn: AI Literacy in der Sozialen Arbeit](../research-vault/20_distillates/publications/ahn-2025-ai-literacy-for-social-work.md) | [Integration in bestehende Kernkompetenzen](../research-vault/30_assertions/ahn-et-al-propose-integrating-ai-literacy-across-existing-core-competencies.md) |
 | [Kaneko: CoT und Gender Bias](../research-vault/20_distillates/publications/kaneko-2024-cot-and-gender-bias.md) | [Begrenzte berichtete CoT-Effekte](../research-vault/30_assertions/kaneko-et-al-report-cot-reduced-bias-in-specific-evaluations.md) und die gemeinsame Assertion zur Variation |
 | [Kamruzzaman: Dual-Process Prompting](../research-vault/20_distillates/publications/kamruzzaman-2024-dual-process-prompting.md) | Zusammen mit Kaneko: [Effekte variieren nach Modell und Bias-Kategorie](../research-vault/30_assertions/reported-prompting-effects-vary-across-models-and-bias-categories.md) |
+| [Kabra: Reasoning-guided Fine-Tuning](../research-vault/20_distillates/publications/kabra-2025-reasoning-guided-fine-tuning.md) | [Übertragung von Reasoning-Spuren durch Training](../research-vault/30_assertions/kabra-et-al-transfer-reasoning-through-fine-tuning-for-bias-mitigation.md); eine Methodenbeschreibung, keine pauschale Wirksamkeitsbehauptung |
 
 Diese Aussagen haben zugeschriebene KI-Quellenprüfungen, keine dadurch erfundene Domänenverifikation. Der Chat greift auf den [freigegebenen Assertion-Index](../docs/data/assertion_index.json) zu. Verbindungen im historischen Knowledge Graph beruhen auf Kategorie-Ko-Vorkommen; sie ersetzen keine belegte wissenschaftliche Beziehung zwischen Aussagen.
 

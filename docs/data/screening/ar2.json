@@ -3,7 +3,7 @@
   "reviewer": "ar2",
   "actor": "agent",
   "status": "ai-agent-reviewed",
-  "updated": "2026-08-26T19:31:07.611Z",
+  "updated": "2026-09-05T19:21:14.215Z",
   "ratification": {
     "run_id": "ratification-ar2-20260822",
     "method": "dual_blind_agent_review_with_independent_source_adjudication",
@@ -8371,6 +8371,832 @@
         ]
       }
     },
+    "RAY6G2R7": {
+      "categories": {
+        "Generative_KI": 2,
+        "Prompting": 2,
+        "KI_Sonstige": 1
+      },
+      "decision": "Exclude",
+      "override": false,
+      "reason": "Not_relevant_topic",
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "module, representing the deliberate thinking of System 2, utilizes LLMs, such as",
+            "snippet": "module, representing the deliberate thinking of System 2, utilizes LLMs, such as GPT-4, and is structured around two prompting stages: planning and grounding.",
+            "ts": "2026-09-05T19:21:14.215Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "RAY6G2R7",
+            "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+            "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "In the planning stage, we prompt LLMs to locate necessary items, plan and track ",
+            "snippet": "In the planning stage, we prompt LLMs to locate necessary items, plan and track subgoals, as well as detect and fix potential exceptions and mistakes.",
+            "ts": "2026-09-05T19:21:14.215Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "RAY6G2R7",
+            "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+            "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460"
+          },
+          {
+            "term": "In the grounding stage, we focus on utilizing LLMs to transform the output subgo",
+            "snippet": "In the grounding stage, we focus on utilizing LLMs to transform the output subgoals derived from the planning stage into a sequence of actions by demonstrating potential action templates.",
+            "ts": "2026-09-05T19:21:14.215Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "RAY6G2R7",
+            "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+            "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "In addition to the baseline methods evaluated in the ScienceWorld paper, such as",
+            "snippet": "In addition to the baseline methods evaluated in the ScienceWorld paper, such as DRRN, CALM, KG-A2C, and TDT, we incorporate three LLM-based prompting techniques:",
+            "ts": "2026-09-05T19:21:14.215Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "RAY6G2R7",
+            "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+            "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460"
+          },
+          {
+            "term": "It is evident that LLM-based methods outperform conventional agents due to their",
+            "snippet": "It is evident that LLM-based methods outperform conventional agents due to their superior generalization ability, albeit at a higher deployment cost.",
+            "ts": "2026-09-05T19:21:14.215Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "RAY6G2R7",
+            "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+            "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460"
+          }
+        ]
+      },
+      "ts": "2026-09-05T19:21:14.215Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+      "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+      "version_type": "preprint",
+      "preferred_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+      "selected_version_is_preferred": true,
+      "representative_record_id": "RAY6G2R7",
+      "provenance": {
+        "annotation_id": "ar2:RAY6G2R7",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "curation-provenance-unrecorded",
+            "type": "person",
+            "roles": [
+              "curation"
+            ],
+            "identity": {
+              "status": "legacy_gap",
+              "value": "unrecorded"
+            }
+          },
+          {
+            "id": "/root/source_reviewer_a",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "/root/source_reviewer_b",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "/root/source_review_check",
+            "type": "ai_agent",
+            "roles": [
+              "ai_agent_reviewer"
+            ],
+            "identity": {
+              "status": "recorded",
+              "reference": "OpenAI:GPT-6",
+              "provider": "OpenAI",
+              "model": "GPT-6",
+              "model_version": "runtime family disclosed; exact deployment version not exposed"
+            }
+          },
+          {
+            "id": "deterministic-validator",
+            "type": "software_agent",
+            "roles": [
+              "validation"
+            ]
+          }
+        ],
+        "activities": [
+          {
+            "id": "RAY6G2R7:agent-annotation",
+            "type": "screening",
+            "run_id": "recovered-arxiv-sources-2-20260905",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.2.md",
+              "version": "1.2",
+              "sha256": "3aea5ce1e84a3f2557aee507632552816792a27d698003517ae238e1ec96d8af"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "OpenAI:GPT-6",
+              "provider": "OpenAI",
+              "model": "GPT-6",
+              "model_version": "runtime family disclosed; exact deployment version not exposed"
+            },
+            "associated_actor_ids": [
+              "/root/source_reviewer_a",
+              "/root/source_reviewer_b"
+            ]
+          },
+          {
+            "id": "RAY6G2R7:ai-agent-review",
+            "type": "ai_agent_review",
+            "run_id": "recovered-arxiv-sources-2-20260905",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-ai-agent-review-v0.3.md",
+              "version": "0.3",
+              "sha256": "3f01c4485d4deb13419b8897def76139d46d2eea68fc28c5809659c775b3aa3f"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "OpenAI:GPT-6",
+              "provider": "OpenAI",
+              "model": "GPT-6",
+              "model_version": "runtime family disclosed; exact deployment version not exposed"
+            },
+            "associated_actor_ids": [
+              "/root/source_review_check"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:RAY6G2R7",
+            "type": "paper",
+            "reference": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-v2-text.md",
+            "sha256": "fd64251d9eed80eca0689fe3bad5e8ea15465746be71af1e38d7f8c9bdb553d1",
+            "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+            "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+            "version_type": "preprint"
+          }
+        ],
+        "derived_from": [
+          {
+            "id": "ai-agent-review",
+            "type": "ai_agent_review",
+            "reference": "tests/review-cases/agent-runs/recovered-arxiv-sources-2-20260905/ai-agent-review.json"
+          },
+          {
+            "id": "run-manifest",
+            "type": "run_manifest",
+            "reference": "tests/review-cases/agent-runs/recovered-arxiv-sources-2-20260905/run.json"
+          },
+          {
+            "id": "track:ar1",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/recovered-arxiv-sources-2-20260905/tracks/ar1.json"
+          },
+          {
+            "id": "track:ar2",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/recovered-arxiv-sources-2-20260905/tracks/ar2.json"
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "annotation_id": "ar2:RAY6G2R7",
+          "annotation_type": "screening_decision",
+          "at": "2026-09-05T19:21:14.215Z",
+          "actor_ids": [
+            "/root/source_reviewer_a",
+            "/root/source_reviewer_b"
+          ],
+          "body": {
+            "categories": {
+              "Generative_KI": 2,
+              "Prompting": 2,
+              "KI_Sonstige": 1
+            },
+            "decision": "Exclude",
+            "override": false,
+            "reason": "Not_relevant_topic",
+            "override_reason": null,
+            "evidence": {
+              "Generative_KI": [
+                {
+                  "term": "module, representing the deliberate thinking of System 2, utilizes LLMs, such as",
+                  "snippet": "module, representing the deliberate thinking of System 2, utilizes LLMs, such as GPT-4, and is structured around two prompting stages: planning and grounding.",
+                  "ts": "2026-09-05T19:21:14.215Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "RAY6G2R7",
+                  "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+                  "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460"
+                }
+              ],
+              "Prompting": [
+                {
+                  "term": "In the planning stage, we prompt LLMs to locate necessary items, plan and track ",
+                  "snippet": "In the planning stage, we prompt LLMs to locate necessary items, plan and track subgoals, as well as detect and fix potential exceptions and mistakes.",
+                  "ts": "2026-09-05T19:21:14.215Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "RAY6G2R7",
+                  "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+                  "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460"
+                },
+                {
+                  "term": "In the grounding stage, we focus on utilizing LLMs to transform the output subgo",
+                  "snippet": "In the grounding stage, we focus on utilizing LLMs to transform the output subgoals derived from the planning stage into a sequence of actions by demonstrating potential action templates.",
+                  "ts": "2026-09-05T19:21:14.215Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "RAY6G2R7",
+                  "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+                  "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460"
+                }
+              ],
+              "KI_Sonstige": [
+                {
+                  "term": "In addition to the baseline methods evaluated in the ScienceWorld paper, such as",
+                  "snippet": "In addition to the baseline methods evaluated in the ScienceWorld paper, such as DRRN, CALM, KG-A2C, and TDT, we incorporate three LLM-based prompting techniques:",
+                  "ts": "2026-09-05T19:21:14.215Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "RAY6G2R7",
+                  "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+                  "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460"
+                },
+                {
+                  "term": "It is evident that LLM-based methods outperform conventional agents due to their",
+                  "snippet": "It is evident that LLM-based methods outperform conventional agents due to their superior generalization ability, albeit at a higher deployment cost.",
+                  "ts": "2026-09-05T19:21:14.215Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "RAY6G2R7",
+                  "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+                  "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460"
+                }
+              ]
+            },
+            "text_source": "raw",
+            "ts": "2026-09-05T19:21:14.215Z",
+            "reviewer": "ar2",
+            "actor": "agent"
+          }
+        }
+      ],
+      "active_annotation_id": "ar2:RAY6G2R7",
+      "checks": [
+        {
+          "check_id": "RAY6G2R7:lifecycle-contract:2026-09-05T19:21:14.280Z",
+          "check_type": "lifecycle_contract",
+          "status": "passed",
+          "at": "2026-09-05T19:21:14.280Z",
+          "actor_id": "deterministic-validator",
+          "tool": {
+            "name": "src.assess.screening_lifecycle",
+            "version": "0.5"
+          },
+          "subject": {
+            "annotation_id": "ar2:RAY6G2R7",
+            "sha256": "cf1708342b421215fb8922ad3351786c11d4dd4a239d877796eb529bd0c98f81"
+          }
+        }
+      ],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "curated_corpus_snapshot",
+          "at": "2026-09-05T19:21:14.215Z",
+          "actor_ids": [
+            "curation-provenance-unrecorded"
+          ]
+        },
+        "state": "ai-agent-reviewed",
+        "events": [
+          {
+            "event_id": "RAY6G2R7:agent-annotation",
+            "event_type": "agent_annotation",
+            "from": "curated",
+            "to": "agent-annotated",
+            "at": "2026-09-05T19:21:14.215Z",
+            "activity_id": "RAY6G2R7:agent-annotation",
+            "actor_ids": [
+              "/root/source_reviewer_a",
+              "/root/source_reviewer_b"
+            ],
+            "result": "completed",
+            "annotation_id": "ar2:RAY6G2R7"
+          },
+          {
+            "event_id": "RAY6G2R7:ai-agent-review",
+            "event_type": "ai_agent_review",
+            "from": "agent-annotated",
+            "to": "ai-agent-reviewed",
+            "at": "2026-09-05T19:21:14.215Z",
+            "activity_id": "RAY6G2R7:ai-agent-review",
+            "actor_ids": [
+              "/root/source_review_check"
+            ],
+            "result": "accepted",
+            "annotation_id": "ar2:RAY6G2R7"
+          }
+        ]
+      }
+    },
+    "SQYLQFRU": {
+      "categories": {
+        "Generative_KI": 2,
+        "Prompting": 2,
+        "Bias_Ungleichheit": 2,
+        "Diversitaet": 1,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "We fine-tune these models to generate explicit reasoning traces jointly with the",
+            "snippet": "We fine-tune these models to generate explicit reasoning traces jointly with their final answers.",
+            "ts": "2026-09-05T19:21:14.215Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "SQYLQFRU",
+            "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+            "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "Specifically, we examine whether fine-tuning non-reasoning models (LLaMA 3.1 8B,",
+            "snippet": "Specifically, we examine whether fine-tuning non-reasoning models (LLaMA 3.1 8B, Mistral 7B, Phi-4) with ReGiFT yields less stereotypical responses than other popular instruction-tuning and prompting techniques.",
+            "ts": "2026-09-05T19:21:14.215Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "SQYLQFRU",
+            "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+            "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "In this work, we investigate the crucial relationship between model’s reasoning ",
+            "snippet": "In this work, we investigate the crucial relationship between model’s reasoning ability and fairness; and ask whether improved reasoning capabilities can mitigate harmful stereotypical responses, especially those arising due to shallow or flawed reasoning.",
+            "ts": "2026-09-05T19:21:14.215Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "SQYLQFRU",
+            "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+            "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "We then evaluate them on ambiguous and disambiguous contexts across three bias d",
+            "snippet": "We then evaluate them on ambiguous and disambiguous contexts across three bias dimensions: age, religion, and nationality of the BBQ dataset.",
+            "ts": "2026-09-05T19:21:14.215Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "SQYLQFRU",
+            "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+            "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
+          },
+          {
+            "term": "A higher Exact Match and LLM-as-judge accuracy score in ambiguous contexts is in",
+            "snippet": "A higher Exact Match and LLM-as-judge accuracy score in ambiguous contexts is indicative of models abstaining from defaulting to identity groups in their response.",
+            "ts": "2026-09-05T19:21:14.215Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "SQYLQFRU",
+            "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+            "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "To evaluate whether reasoning-guided fine-tuning mitigates stereotypes, we adopt",
+            "snippet": "To evaluate whether reasoning-guided fine-tuning mitigates stereotypes, we adopt a two-part evaluation framework that focuses on fairness evaluation on BBQ dataset. We focus on final answer correctness rather than intermediate reasoning:",
+            "ts": "2026-09-05T19:21:14.215Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "SQYLQFRU",
+            "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+            "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
+          }
+        ]
+      },
+      "ts": "2026-09-05T19:21:14.215Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+      "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+      "version_type": "preprint",
+      "preferred_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Research_Instrument",
+            "Object_of_Critique"
+          ],
+          "AN_Prompt_Techniques": [
+            "Thought_Generation",
+            "General_Guidance"
+          ],
+          "AN_Bias_Axes": [
+            "Age",
+            "Religion",
+            "Nationality_Migration"
+          ],
+          "AN_Harm_Types": [
+            "Stereotyping"
+          ],
+          "AN_Mitigation_Stage": [
+            "Pre_Processing",
+            "In_Training",
+            "Prompt_Practice"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Experimentell",
+          "AN_Notes": "Own experiments, not a synthesised evaluation. ReGiFT extracts SQuAD-v2 traces and retains only final-answer-correct examples (3.1, Algorithm 1: Pre_Processing); section 6 assesses Correct-Only, Incorrect-Only and Full-Set selection. Supervised fine-tuning jointly teaches traces and answers (3.2: In_Training). Section 5.2 and Table 3 assess a CoT prompting comparator (Prompt_Practice) and criticise prompt sensitivity and demographic generalisation. Prompting is Research_Instrument and Object_of_Critique. Thought_Generation comprises CoT and explicit think/answer prompts. General_Guidance, verbatim A.1: Answer each question using the information in the preceding background paragraph. If there is not enough information provided, answer with ‘Not in background.’ A.1 explicitly excludes demonstrations in the zero-shot prompt; no ICL. The abstention/context guidance is used, but its isolated mitigation efficacy is not tested. Evaluated denotes completed ReGiFT, data-selection, instruction-tuning and CoT intervention assessments with reported results, not universal effectiveness. Tables 1–3 report ReGiFT gains relative to base models on BBQ; CoT outcomes are mixed or negative. Age, Religion and Nationality_Migration are the three separately evaluated axes (4.1, 5; no interacting-axis analysis). Stereotyping is the explicit harm (Figures 1/3, A.5); demographic benchmark scenarios do not establish a social-work or professional-education setting. Study type Experimentell; population Not_SW_Specific; Fulltext plus all three original PNGs. Answer extraction, Unknown normalisation and LLM-as-Judge serve measurement (4.3, A.2–A.3); they do not establish Post_Processing, Intra_Processing or Organisational_Process mitigation. Correct final answers are an admitted proxy for trace validity (3.1 footnote), not direct verification of reasoning correctness. The paper limits its claim to stereotypes associated with flawed contextual reasoning and mid-sized models, without complete bias removal or demonstrated transfer to social-work practice. Numerical limitations: Tables 1 and 3 disagree on Mistral ReGiFT age (82.78/84.01 versus 82.58/83.91) and Phi-4 religion/nationality entries; section 5.2 overgeneralises CoT as modest gains. Several displayed overall entries also do not equal the mean of displayed ambiguous/disambiguous entries (e.g. Table 1 LLaMA base religion 12.45/66.52/49.48 and Table 4 Correct-Only age 70.04/89.13/75.59); the paper supplies no reconciliation. Table 5 is nonmonotonic and does not substantiate a universal 40% plateau; its prose mentions 50% although no 50% row is shown. Figure 4 shows printed means 139.62 and 243.81 tokens with undefined error bars and unspecified sample sizes; no confidence interval, statistical significance, trace-length causal effect or operational threshold is inferred. These limitations restrict quantitative synthesis, but the topical coding and completed-assessment status remain decidable."
+        },
+        "undecidable": {}
+      },
+      "representative_record_id": "SQYLQFRU",
+      "provenance": {
+        "annotation_id": "ar2:SQYLQFRU",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "curation-provenance-unrecorded",
+            "type": "person",
+            "roles": [
+              "curation"
+            ],
+            "identity": {
+              "status": "legacy_gap",
+              "value": "unrecorded"
+            }
+          },
+          {
+            "id": "/root/source_reviewer_a",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "/root/source_reviewer_b",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "/root/source_review_check",
+            "type": "ai_agent",
+            "roles": [
+              "ai_agent_reviewer"
+            ],
+            "identity": {
+              "status": "recorded",
+              "reference": "OpenAI:GPT-6",
+              "provider": "OpenAI",
+              "model": "GPT-6",
+              "model_version": "runtime family disclosed; exact deployment version not exposed"
+            }
+          },
+          {
+            "id": "deterministic-validator",
+            "type": "software_agent",
+            "roles": [
+              "validation"
+            ]
+          }
+        ],
+        "activities": [
+          {
+            "id": "SQYLQFRU:agent-annotation",
+            "type": "screening",
+            "run_id": "recovered-arxiv-sources-2-20260905",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.2.md",
+              "version": "1.2",
+              "sha256": "3aea5ce1e84a3f2557aee507632552816792a27d698003517ae238e1ec96d8af"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "OpenAI:GPT-6",
+              "provider": "OpenAI",
+              "model": "GPT-6",
+              "model_version": "runtime family disclosed; exact deployment version not exposed"
+            },
+            "associated_actor_ids": [
+              "/root/source_reviewer_a",
+              "/root/source_reviewer_b"
+            ]
+          },
+          {
+            "id": "SQYLQFRU:ai-agent-review",
+            "type": "ai_agent_review",
+            "run_id": "recovered-arxiv-sources-2-20260905",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-ai-agent-review-v0.3.md",
+              "version": "0.3",
+              "sha256": "3f01c4485d4deb13419b8897def76139d46d2eea68fc28c5809659c775b3aa3f"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "OpenAI:GPT-6",
+              "provider": "OpenAI",
+              "model": "GPT-6",
+              "model_version": "runtime family disclosed; exact deployment version not exposed"
+            },
+            "associated_actor_ids": [
+              "/root/source_review_check"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:SQYLQFRU",
+            "type": "paper",
+            "reference": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-v3-text.md",
+            "sha256": "bac6454052cd33fa790fde5c12b2bfc10fd340fb20433725feecd6a804283620",
+            "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+            "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+            "version_type": "preprint"
+          }
+        ],
+        "derived_from": [
+          {
+            "id": "ai-agent-review",
+            "type": "ai_agent_review",
+            "reference": "tests/review-cases/agent-runs/recovered-arxiv-sources-2-20260905/ai-agent-review.json"
+          },
+          {
+            "id": "run-manifest",
+            "type": "run_manifest",
+            "reference": "tests/review-cases/agent-runs/recovered-arxiv-sources-2-20260905/run.json"
+          },
+          {
+            "id": "track:ar1",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/recovered-arxiv-sources-2-20260905/tracks/ar1.json"
+          },
+          {
+            "id": "track:ar2",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/recovered-arxiv-sources-2-20260905/tracks/ar2.json"
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "annotation_id": "ar2:SQYLQFRU",
+          "annotation_type": "screening_decision",
+          "at": "2026-09-05T19:21:14.215Z",
+          "actor_ids": [
+            "/root/source_reviewer_a",
+            "/root/source_reviewer_b"
+          ],
+          "body": {
+            "categories": {
+              "Generative_KI": 2,
+              "Prompting": 2,
+              "Bias_Ungleichheit": 2,
+              "Diversitaet": 1,
+              "Fairness": 2
+            },
+            "decision": "Include",
+            "override": false,
+            "reason": null,
+            "override_reason": null,
+            "evidence": {
+              "Generative_KI": [
+                {
+                  "term": "We fine-tune these models to generate explicit reasoning traces jointly with the",
+                  "snippet": "We fine-tune these models to generate explicit reasoning traces jointly with their final answers.",
+                  "ts": "2026-09-05T19:21:14.215Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "SQYLQFRU",
+                  "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+                  "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
+                }
+              ],
+              "Prompting": [
+                {
+                  "term": "Specifically, we examine whether fine-tuning non-reasoning models (LLaMA 3.1 8B,",
+                  "snippet": "Specifically, we examine whether fine-tuning non-reasoning models (LLaMA 3.1 8B, Mistral 7B, Phi-4) with ReGiFT yields less stereotypical responses than other popular instruction-tuning and prompting techniques.",
+                  "ts": "2026-09-05T19:21:14.215Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "SQYLQFRU",
+                  "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+                  "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
+                }
+              ],
+              "Bias_Ungleichheit": [
+                {
+                  "term": "In this work, we investigate the crucial relationship between model’s reasoning ",
+                  "snippet": "In this work, we investigate the crucial relationship between model’s reasoning ability and fairness; and ask whether improved reasoning capabilities can mitigate harmful stereotypical responses, especially those arising due to shallow or flawed reasoning.",
+                  "ts": "2026-09-05T19:21:14.215Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "SQYLQFRU",
+                  "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+                  "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
+                }
+              ],
+              "Diversitaet": [
+                {
+                  "term": "We then evaluate them on ambiguous and disambiguous contexts across three bias d",
+                  "snippet": "We then evaluate them on ambiguous and disambiguous contexts across three bias dimensions: age, religion, and nationality of the BBQ dataset.",
+                  "ts": "2026-09-05T19:21:14.215Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "SQYLQFRU",
+                  "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+                  "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
+                },
+                {
+                  "term": "A higher Exact Match and LLM-as-judge accuracy score in ambiguous contexts is in",
+                  "snippet": "A higher Exact Match and LLM-as-judge accuracy score in ambiguous contexts is indicative of models abstaining from defaulting to identity groups in their response.",
+                  "ts": "2026-09-05T19:21:14.215Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "SQYLQFRU",
+                  "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+                  "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
+                }
+              ],
+              "Fairness": [
+                {
+                  "term": "To evaluate whether reasoning-guided fine-tuning mitigates stereotypes, we adopt",
+                  "snippet": "To evaluate whether reasoning-guided fine-tuning mitigates stereotypes, we adopt a two-part evaluation framework that focuses on fairness evaluation on BBQ dataset. We focus on final answer correctness rather than intermediate reasoning:",
+                  "ts": "2026-09-05T19:21:14.215Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "SQYLQFRU",
+                  "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+                  "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
+                }
+              ]
+            },
+            "analysis": {
+              "fields": {
+                "AN_Prompting_Role": [
+                  "Research_Instrument",
+                  "Object_of_Critique"
+                ],
+                "AN_Prompt_Techniques": [
+                  "Thought_Generation",
+                  "General_Guidance"
+                ],
+                "AN_Bias_Axes": [
+                  "Age",
+                  "Religion",
+                  "Nationality_Migration"
+                ],
+                "AN_Harm_Types": [
+                  "Stereotyping"
+                ],
+                "AN_Mitigation_Stage": [
+                  "Pre_Processing",
+                  "In_Training",
+                  "Prompt_Practice"
+                ],
+                "AN_Mitigation_Status": "Evaluated",
+                "AN_Population": [
+                  "Not_SW_Specific"
+                ],
+                "AN_Coding_Basis": "Fulltext",
+                "Studientyp": "Experimentell",
+                "AN_Notes": "Own experiments, not a synthesised evaluation. ReGiFT extracts SQuAD-v2 traces and retains only final-answer-correct examples (3.1, Algorithm 1: Pre_Processing); section 6 assesses Correct-Only, Incorrect-Only and Full-Set selection. Supervised fine-tuning jointly teaches traces and answers (3.2: In_Training). Section 5.2 and Table 3 assess a CoT prompting comparator (Prompt_Practice) and criticise prompt sensitivity and demographic generalisation. Prompting is Research_Instrument and Object_of_Critique. Thought_Generation comprises CoT and explicit think/answer prompts. General_Guidance, verbatim A.1: Answer each question using the information in the preceding background paragraph. If there is not enough information provided, answer with ‘Not in background.’ A.1 explicitly excludes demonstrations in the zero-shot prompt; no ICL. The abstention/context guidance is used, but its isolated mitigation efficacy is not tested. Evaluated denotes completed ReGiFT, data-selection, instruction-tuning and CoT intervention assessments with reported results, not universal effectiveness. Tables 1–3 report ReGiFT gains relative to base models on BBQ; CoT outcomes are mixed or negative. Age, Religion and Nationality_Migration are the three separately evaluated axes (4.1, 5; no interacting-axis analysis). Stereotyping is the explicit harm (Figures 1/3, A.5); demographic benchmark scenarios do not establish a social-work or professional-education setting. Study type Experimentell; population Not_SW_Specific; Fulltext plus all three original PNGs. Answer extraction, Unknown normalisation and LLM-as-Judge serve measurement (4.3, A.2–A.3); they do not establish Post_Processing, Intra_Processing or Organisational_Process mitigation. Correct final answers are an admitted proxy for trace validity (3.1 footnote), not direct verification of reasoning correctness. The paper limits its claim to stereotypes associated with flawed contextual reasoning and mid-sized models, without complete bias removal or demonstrated transfer to social-work practice. Numerical limitations: Tables 1 and 3 disagree on Mistral ReGiFT age (82.78/84.01 versus 82.58/83.91) and Phi-4 religion/nationality entries; section 5.2 overgeneralises CoT as modest gains. Several displayed overall entries also do not equal the mean of displayed ambiguous/disambiguous entries (e.g. Table 1 LLaMA base religion 12.45/66.52/49.48 and Table 4 Correct-Only age 70.04/89.13/75.59); the paper supplies no reconciliation. Table 5 is nonmonotonic and does not substantiate a universal 40% plateau; its prose mentions 50% although no 50% row is shown. Figure 4 shows printed means 139.62 and 243.81 tokens with undefined error bars and unspecified sample sizes; no confidence interval, statistical significance, trace-length causal effect or operational threshold is inferred. These limitations restrict quantitative synthesis, but the topical coding and completed-assessment status remain decidable."
+              },
+              "undecidable": {}
+            },
+            "text_source": "raw",
+            "ts": "2026-09-05T19:21:14.215Z",
+            "reviewer": "ar2",
+            "actor": "agent"
+          }
+        }
+      ],
+      "active_annotation_id": "ar2:SQYLQFRU",
+      "checks": [
+        {
+          "check_id": "SQYLQFRU:lifecycle-contract:2026-09-05T19:21:14.280Z",
+          "check_type": "lifecycle_contract",
+          "status": "passed",
+          "at": "2026-09-05T19:21:14.280Z",
+          "actor_id": "deterministic-validator",
+          "tool": {
+            "name": "src.assess.screening_lifecycle",
+            "version": "0.5"
+          },
+          "subject": {
+            "annotation_id": "ar2:SQYLQFRU",
+            "sha256": "1db78c2b977b60099a65253dfd7ed830956f32a170171863894a7c8ac434e93c"
+          }
+        }
+      ],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "curated_corpus_snapshot",
+          "at": "2026-09-05T19:21:14.215Z",
+          "actor_ids": [
+            "curation-provenance-unrecorded"
+          ]
+        },
+        "state": "ai-agent-reviewed",
+        "events": [
+          {
+            "event_id": "SQYLQFRU:agent-annotation",
+            "event_type": "agent_annotation",
+            "from": "curated",
+            "to": "agent-annotated",
+            "at": "2026-09-05T19:21:14.215Z",
+            "activity_id": "SQYLQFRU:agent-annotation",
+            "actor_ids": [
+              "/root/source_reviewer_a",
+              "/root/source_reviewer_b"
+            ],
+            "result": "completed",
+            "annotation_id": "ar2:SQYLQFRU"
+          },
+          {
+            "event_id": "SQYLQFRU:ai-agent-review",
+            "event_type": "ai_agent_review",
+            "from": "agent-annotated",
+            "to": "ai-agent-reviewed",
+            "at": "2026-09-05T19:21:14.215Z",
+            "activity_id": "SQYLQFRU:ai-agent-review",
+            "actor_ids": [
+              "/root/source_review_check"
+            ],
+            "result": "accepted",
+            "annotation_id": "ar2:SQYLQFRU"
+          }
+        ]
+      }
+    },
     "SSF5Q33W": {
       "categories": {
         "AI_Literacies": 1,
@@ -11423,6 +12249,26 @@
         "QUV5DQH3",
         "R7V99ERA",
         "VSZM7CT6"
+      ]
+    },
+    {
+      "run_id": "recovered-arxiv-sources-2-20260905",
+      "state": "ai-agent-reviewed",
+      "product": {
+        "path": "tests/review-cases/agent-runs/recovered-arxiv-sources-2-20260905/product-v0.5.json",
+        "sha256": "b8b809864e23e025e13e5944ef4e2ee5b8a248cbcc9c03e0e86eafdbf4d2ff49"
+      },
+      "review": {
+        "path": "tests/review-cases/agent-runs/recovered-arxiv-sources-2-20260905/ai-agent-review.json",
+        "sha256": "f918701fa5fc3ff65af29798cc97eb6713a13859f190dc3f016aa6b0286246c3"
+      },
+      "work_ids": [
+        "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+        "work:55caaab5-78b3-5803-8666-2edc0743a202"
+      ],
+      "record_ids": [
+        "RAY6G2R7",
+        "SQYLQFRU"
       ]
     },
     {

@@ -54,7 +54,7 @@ The project reaches completion when the following conditions hold.
 - Resolve the remaining identity conflicts and unavailable, ambiguous, or rights-restricted Paper sources recorded by the queue.
 - Reconcile historical residual-queue findings with the current [metadata corrections](../corpus/metadata_corrections.json), [source bindings](../corpus/source_version_bindings.json) and [completion queue](../generated/completion/README.md). Already applied local repairs must be preserved deliberately when the external Zotero library is curated and re-exported.
 - Reconcile every prepared Codex source-readiness record with the curated Zotero Work and exact Version. Preserve any difference between the preferred bibliographic Version and the acquired source Version.
-- Resolve the visual-evidence representation gap before using image-dependent findings in PRISM annotations.
+- Use the hash-bound original-PNG reading contract where text alone omits meaningful figures; every assigned reviewer must inspect the declared assets. Standalone image-based evidence annotations and unresolved visual gaps in the prepared intake remain separate work.
 - Bind or convert any further Paper representation only after its work identity has passed the source audit.
 - Rebuild the agent-screening queue after each source or corpus change.
 

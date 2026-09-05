@@ -1,0 +1,530 @@
+{
+  "schema": "femprompt-prisma-agent-run/1.3",
+  "run_id": "recovered-arxiv-sources-2-20260905",
+  "status": "completed",
+  "lifecycle": {
+    "baseline": "identified",
+    "state": "completed",
+    "target": "ai-agent-reviewed",
+    "events": [
+      {
+        "event_id": "recovered-arxiv-sources-2-20260905:started",
+        "event_type": "run_started",
+        "from": "prepared",
+        "to": "running",
+        "activity_id": "recovered-arxiv-sources-2-20260905:source-screening",
+        "at": "2026-09-05T19:03:07Z",
+        "actor_ids": [
+          "/root/source_reviewer_a",
+          "/root/source_reviewer_b"
+        ]
+      },
+      {
+        "event_id": "recovered-arxiv-sources-2-20260905:completed",
+        "event_type": "run_completed_after_review_and_integration",
+        "from": "running",
+        "to": "completed",
+        "activity_id": "recovered-arxiv-sources-2-20260905:deterministic-integration",
+        "at": "2026-09-05T19:27:58.836Z",
+        "actor_ids": [
+          "/root"
+        ]
+      }
+    ]
+  },
+  "model": {
+    "provider": "OpenAI",
+    "model": "GPT-6",
+    "model_version": "runtime family disclosed; exact deployment version not exposed",
+    "immutable_model_id": null
+  },
+  "prompt": {
+    "path": "prompts/prism-agent-reviewer-v1.2.md",
+    "version": "1.2",
+    "sha256": "3aea5ce1e84a3f2557aee507632552816792a27d698003517ae238e1ec96d8af"
+  },
+  "baseline": {
+    "commit": "0a6fb2f130aa33ecb4c6efadc3d1a105c30326b3"
+  },
+  "assignment": {
+    "complete": true,
+    "papers": [
+      {
+        "paper_id": "RAY6G2R7",
+        "title": "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks",
+        "authors": [
+          "Lin, Bill Yuchen",
+          "Fu, Yicheng",
+          "Yang, Karina",
+          "Brahman, Faeze",
+          "Huang, Shiyu",
+          "Bhagavatula, Chandra",
+          "Ammanabrolu, Prithviraj",
+          "Choi, Yejin",
+          "Ren, Xiang"
+        ],
+        "publication_date": "2023-12-06",
+        "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+        "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+        "version_type": "preprint",
+        "preferred_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+        "selected_version_is_preferred": true,
+        "record_ids": [
+          "RAY6G2R7"
+        ],
+        "human_coverage": false,
+        "ai_agent_review_coverage": false,
+        "source": {
+          "path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-v2-text.md",
+          "sha256": "fd64251d9eed80eca0689fe3bad5e8ea15465746be71af1e38d7f8c9bdb553d1",
+          "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+          "assets": [
+            {
+              "path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/swiftsage-2305.17390v2-page-2.png",
+              "sha256": "c353cb1a1745c8e455bccaf0f287e6fc4c1c5ccfddedcebf2352d170535cd6ba",
+              "media_type": "image/png",
+              "locator": "Original PDF page 2, Figure(s) 1; full_pdf_page_render",
+              "source_url": "https://arxiv.org/pdf/2305.17390v2",
+              "source_sha256": "193dbdfb2bcf9a155dda81eeab11a951628754bb69d3a91e0ccf89a9c005456f",
+              "license": "CC-BY-4.0"
+            },
+            {
+              "path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/swiftsage-2305.17390v2-page-5.png",
+              "sha256": "a52b0214660a4b6e9a657f4600e740cc4e5e2fad6075aa7e75d180567958e8ce",
+              "media_type": "image/png",
+              "locator": "Original PDF page 5, Figure(s) 2; full_pdf_page_render",
+              "source_url": "https://arxiv.org/pdf/2305.17390v2",
+              "source_sha256": "193dbdfb2bcf9a155dda81eeab11a951628754bb69d3a91e0ccf89a9c005456f",
+              "license": "CC-BY-4.0"
+            },
+            {
+              "path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/swiftsage-2305.17390v2-page-9.png",
+              "sha256": "d03bf00413fbd65c7ef60f3dabfff1cee966bfe02838536a1c1b22f961a3f98f",
+              "media_type": "image/png",
+              "locator": "Original PDF page 9, Figure(s) 3; full_pdf_page_render",
+              "source_url": "https://arxiv.org/pdf/2305.17390v2",
+              "source_sha256": "193dbdfb2bcf9a155dda81eeab11a951628754bb69d3a91e0ccf89a9c005456f",
+              "license": "CC-BY-4.0"
+            },
+            {
+              "path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/swiftsage-2305.17390v2-page-15.png",
+              "sha256": "beff42eb886a52f5c4ce0fd1ab3bb20b73811f0c4d400340c932829f737f2a1d",
+              "media_type": "image/png",
+              "locator": "Original PDF page 15, Figure(s) 4; full_pdf_page_render",
+              "source_url": "https://arxiv.org/pdf/2305.17390v2",
+              "source_sha256": "193dbdfb2bcf9a155dda81eeab11a951628754bb69d3a91e0ccf89a9c005456f",
+              "license": "CC-BY-4.0"
+            },
+            {
+              "path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/swiftsage-2305.17390v2-page-18.png",
+              "sha256": "314a51bdc0b3ee89d859c6e8d93348e0f87ce3b2a9c6256a78f950be5a6f8488",
+              "media_type": "image/png",
+              "locator": "Original PDF page 18, Figure(s) 5; full_pdf_page_render",
+              "source_url": "https://arxiv.org/pdf/2305.17390v2",
+              "source_sha256": "193dbdfb2bcf9a155dda81eeab11a951628754bb69d3a91e0ccf89a9c005456f",
+              "license": "CC-BY-4.0"
+            },
+            {
+              "path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/swiftsage-figure4.png",
+              "sha256": "0d5e30495ab0cd0d6531a618b18ab9540a0dfa09bb9ba1ae54ba4a95fce9faf8",
+              "media_type": "image/png",
+              "locator": "Original PDF page 15, Figure(s) 4; unaltered_original_figure_png",
+              "source_url": "https://arxiv.org/pdf/2305.17390v2",
+              "source_sha256": "193dbdfb2bcf9a155dda81eeab11a951628754bb69d3a91e0ccf89a9c005456f",
+              "license": "CC-BY-4.0"
+            }
+          ]
+        }
+      },
+      {
+        "paper_id": "SQYLQFRU",
+        "title": "Reasoning Towards Fairness: Mitigating Bias in Language Models through Reasoning-Guided Fine-Tuning",
+        "authors": [
+          "Kabra, Sanchit",
+          "Jha, Akshita",
+          "Reddy, Chandan K."
+        ],
+        "publication_date": "2025-06-05",
+        "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+        "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+        "version_type": "preprint",
+        "preferred_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+        "selected_version_is_preferred": true,
+        "record_ids": [
+          "SQYLQFRU"
+        ],
+        "human_coverage": false,
+        "ai_agent_review_coverage": false,
+        "source": {
+          "path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-v3-text.md",
+          "sha256": "bac6454052cd33fa790fde5c12b2bfc10fd340fb20433725feecd6a804283620",
+          "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+          "assets": [
+            {
+              "path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/kabra-2504.05632v3-page-2.png",
+              "sha256": "1fe0bb3d9726a6fec06b66dab08cc4d9eff3d8b9feda38da152acd66084e46a1",
+              "media_type": "image/png",
+              "locator": "Original PDF page 2, Figure(s) 1,2; full_pdf_page_render",
+              "source_url": "https://arxiv.org/pdf/2504.05632v3",
+              "source_sha256": "38d8bdd5fee5c45b151d153a2d2d96865b5d4164804eb321fd489df21aaf2ea7",
+              "license": "CC-BY-4.0"
+            },
+            {
+              "path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/kabra-2504.05632v3-page-7.png",
+              "sha256": "97ee9803cd792f65839b3271e4fc8b714473ec209b24c6e5c159f73188f9d3e8",
+              "media_type": "image/png",
+              "locator": "Original PDF page 7, Figure(s) 3; full_pdf_page_render",
+              "source_url": "https://arxiv.org/pdf/2504.05632v3",
+              "source_sha256": "38d8bdd5fee5c45b151d153a2d2d96865b5d4164804eb321fd489df21aaf2ea7",
+              "license": "CC-BY-4.0"
+            },
+            {
+              "path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/kabra-2504.05632v3-page-9.png",
+              "sha256": "7c4df10bb49855fd895e8d8110a801c7020a82fcd0c8f8dbff50aabb97016afc",
+              "media_type": "image/png",
+              "locator": "Original PDF page 9, Figure(s) 4; full_pdf_page_render",
+              "source_url": "https://arxiv.org/pdf/2504.05632v3",
+              "source_sha256": "38d8bdd5fee5c45b151d153a2d2d96865b5d4164804eb321fd489df21aaf2ea7",
+              "license": "CC-BY-4.0"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "isolation": {
+    "mode": "operational",
+    "epistemic_independence_claimed": false,
+    "explanation": "Each agent track uses a separate Codex context, reviewer identity, coding packet, report, and output path. Operational separation records execution conditions; it does not establish epistemic independence."
+  },
+  "actors": [
+    {
+      "id": "/root/source_reviewer_a",
+      "type": "ai_agent",
+      "role": "reviewer",
+      "reviewer_id": "ar1"
+    },
+    {
+      "id": "/root/source_reviewer_b",
+      "type": "ai_agent",
+      "role": "reviewer",
+      "reviewer_id": "ar2"
+    },
+    {
+      "id": "/root/source_review_check",
+      "type": "ai_agent",
+      "role": "ai_agent_reviewer"
+    }
+  ],
+  "timestamps": {
+    "created_at": "2026-09-05T19:02:39.932Z",
+    "started_at": "2026-09-05T19:03:07Z",
+    "completed_at": "2026-09-05T19:27:58.836Z"
+  },
+  "execution": {
+    "mode": "blinded_source_review_with_deterministic_prism_roundtrip",
+    "reason": "Operationally isolated agents create source-grounded coding packets. The orchestrator transfers validated packets deterministically through the production PRISM functions.",
+    "required_controls": [
+      "Reviewer agents may read only the frozen rules, manifest, assigned Paper sources, and their own output paths.",
+      "Reviewer agents may not inspect previous judgments, knowledge distillates, the other track, or productive screening data.",
+      "The orchestrator projects validated values mechanically and may not resolve substantive ambiguity during transfer.",
+      "Each isolated reviewer must visually inspect every original PNG in assignment.papers[].source.assets as well as reading the complete assigned text. Text quotations remain the coding-evidence contract; numeric graph claims require their original context and must not be inferred from unlabeled error bars."
+    ],
+    "coding_packet_validation": {
+      "command": "node tests/review-cases/validate-coding-packet.mjs tests/review-cases/agent-runs/recovered-arxiv-sources-2-20260905/run.json <reviewer-id>",
+      "result": "pass",
+      "records": 4
+    },
+    "frontend_roundtrip": {
+      "method": "deterministic_projection_with_prism_frontend_roundtrip",
+      "command": "node tests/review-cases/roundtrip-prism-track.mjs tests/review-cases/agent-runs/recovered-arxiv-sources-2-20260905/run.json <reviewer-id> <projection.json> <track.json>",
+      "result": "pass",
+      "records": 4,
+      "production_functions": [
+        "validateReviewerPayload",
+        "importReviewerPayload",
+        "recordRequirements",
+        "reviewerFileText"
+      ]
+    },
+    "protocol_basis": "knowledge/specification.md#ADR-037",
+    "transfer_implementation": {
+      "path": "tests/review-cases/roundtrip-prism-track.mjs",
+      "sha256": "b59811693479ca64e60526cc688f47ea7ad4c2a8bf8bfd31f2a7d3fb8d759d46",
+      "adjustment_after_baseline": "Explicit production setEditMode(true) before import fixes transfer rejection after the user-authorised default read-mode change. No coding values or screening criteria changed. Original packets and reports remain unchanged.",
+      "regression_test": "tests/test_prism_roundtrip_cli.py",
+      "test_result": "passed"
+    },
+    "track_comparison": {
+      "method": "exact_field_comparison_without_adjudication",
+      "adjudication_performed": false,
+      "records": {
+        "RAY6G2R7": {
+          "decisions": [
+            "Exclude",
+            "Exclude"
+          ],
+          "field_differences": [
+            {
+              "field": "categories/KI_Sonstige",
+              "ar1": "ja",
+              "ar2": "teilweise"
+            }
+          ]
+        },
+        "SQYLQFRU": {
+          "decisions": [
+            "Include",
+            "Include"
+          ],
+          "field_differences": [
+            {
+              "field": "analysis/AN_Notes",
+              "source_pointers": [
+                {
+                  "path": "tests/review-cases/agent-runs/recovered-arxiv-sources-2-20260905/tracks/ar1-coding.json",
+                  "pointer": "/decisions/SQYLQFRU/analysis/AN_Notes"
+                },
+                {
+                  "path": "tests/review-cases/agent-runs/recovered-arxiv-sources-2-20260905/tracks/ar2-coding.json",
+                  "pointer": "/decisions/SQYLQFRU/analysis/AN_Notes"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "tracks": [
+    {
+      "reviewer_id": "ar1",
+      "actor_id": "/root/source_reviewer_a",
+      "actor_type": "ai_agent",
+      "paper_ids": [
+        "RAY6G2R7",
+        "SQYLQFRU"
+      ],
+      "source_assignments": [
+        {
+          "paper_id": "RAY6G2R7",
+          "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+          "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-v2-text.md",
+          "source_sha256": "fd64251d9eed80eca0689fe3bad5e8ea15465746be71af1e38d7f8c9bdb553d1"
+        },
+        {
+          "paper_id": "SQYLQFRU",
+          "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+          "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-v3-text.md",
+          "source_sha256": "bac6454052cd33fa790fde5c12b2bfc10fd340fb20433725feecd6a804283620"
+        }
+      ],
+      "coding_packet": "tests/review-cases/agent-runs/recovered-arxiv-sources-2-20260905/tracks/ar1-coding.json",
+      "coding_packet_sha256": "5c1bf6bb4ee5044f8c0407316c6560bda3bbeec7ca34d67b3942d6098e7b71ff",
+      "report": "tests/review-cases/agent-runs/recovered-arxiv-sources-2-20260905/reports/ar1.md",
+      "report_sha256": "1539ef99f98d1e37c4ab19e81861629557e657f6468e51b2ffe7d458c064b16b",
+      "started_at": "2026-09-05T19:03:07Z",
+      "completed_at": "2026-09-05T19:12:23Z",
+      "output": {
+        "path": "tests/review-cases/agent-runs/recovered-arxiv-sources-2-20260905/tracks/ar1.json",
+        "sha256": "6d9b2426472ceb7eaa32ddf072da5d4583d0d3fe93c0bf22b68098a38e2826a0"
+      },
+      "projection": {
+        "path": "tests/review-cases/agent-runs/recovered-arxiv-sources-2-20260905/tracks/ar1-projection.json",
+        "sha256": "23641ebe5de402ceedac9a0245c4437c3909454b6938c62741f1543a94e07708"
+      },
+      "report_storage": {
+        "normalization": "UTF-8 LF storage required by repository .gitattributes; only CRLF to LF changed after agent completion, before the first archival commit. Report wording, source coding and judgments are unchanged.",
+        "sha256_as_created": "79741ec31def8104f3d7fa24ae95b07f13cfc743579fdca7f8ed10c732a5767d",
+        "sha256_as_stored": "1539ef99f98d1e37c4ab19e81861629557e657f6468e51b2ffe7d458c064b16b",
+        "captured_by": "/root"
+      }
+    },
+    {
+      "reviewer_id": "ar2",
+      "actor_id": "/root/source_reviewer_b",
+      "actor_type": "ai_agent",
+      "paper_ids": [
+        "RAY6G2R7",
+        "SQYLQFRU"
+      ],
+      "source_assignments": [
+        {
+          "paper_id": "RAY6G2R7",
+          "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+          "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-v2-text.md",
+          "source_sha256": "fd64251d9eed80eca0689fe3bad5e8ea15465746be71af1e38d7f8c9bdb553d1"
+        },
+        {
+          "paper_id": "SQYLQFRU",
+          "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+          "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-v3-text.md",
+          "source_sha256": "bac6454052cd33fa790fde5c12b2bfc10fd340fb20433725feecd6a804283620"
+        }
+      ],
+      "coding_packet": "tests/review-cases/agent-runs/recovered-arxiv-sources-2-20260905/tracks/ar2-coding.json",
+      "coding_packet_sha256": "3f5ad00fa61e0c123a374aaaf3a36a3f0c0c4c9486666ee1451a7317bcde8bf7",
+      "report": "tests/review-cases/agent-runs/recovered-arxiv-sources-2-20260905/reports/ar2.md",
+      "report_sha256": "fc1bb07def498f2cc5f1d018cf747836de648b45f0f108936d3ba00190a6463a",
+      "started_at": "2026-09-05T19:03:25Z",
+      "completed_at": "2026-09-05T19:11:09.670Z",
+      "output": {
+        "path": "tests/review-cases/agent-runs/recovered-arxiv-sources-2-20260905/tracks/ar2.json",
+        "sha256": "22d5f91778d53718a93f8edf23d4577407d58ba81732f6e8686708f27c4ad990"
+      },
+      "projection": {
+        "path": "tests/review-cases/agent-runs/recovered-arxiv-sources-2-20260905/tracks/ar2-projection.json",
+        "sha256": "ad8be6b8cc52317b3a34a89d0f95e50de494d385ed14617ceb9eb9f365c09980"
+      }
+    }
+  ],
+  "provenance": {
+    "activities": [
+      {
+        "id": "ai-agent-review-1",
+        "type": "ai_agent_review",
+        "run_id": "recovered-arxiv-sources-2-20260905",
+        "method": "source_grounded_ai_agent_review",
+        "prompt": {
+          "path": "prompts/prism-ai-agent-review-v0.3.md",
+          "version": "0.3",
+          "sha256": "3f01c4485d4deb13419b8897def76139d46d2eea68fc28c5809659c775b3aa3f"
+        },
+        "model": {
+          "provider": "OpenAI",
+          "model": "GPT-6",
+          "model_version": "runtime family disclosed; exact deployment version not exposed",
+          "immutable_model_id": null
+        },
+        "associated_actor_ids": [
+          "/root/source_review_check"
+        ],
+        "status": "completed",
+        "actor_id": "/root/source_review_check",
+        "actor_type": "ai_agent",
+        "input_track_ids": [
+          "ar1",
+          "ar2"
+        ],
+        "source_basis": "assigned paper/source records",
+        "started_at": "2026-09-05T19:14:38Z",
+        "completed_at": "2026-09-05T19:20:18.918Z",
+        "outputs": [
+          {
+            "kind": "ai_agent_review",
+            "path": "tests/review-cases/agent-runs/recovered-arxiv-sources-2-20260905/ai-agent-review.json",
+            "sha256": "f918701fa5fc3ff65af29798cc97eb6713a13859f190dc3f016aa6b0286246c3"
+          },
+          {
+            "kind": "ai_agent_review_report",
+            "path": "tests/review-cases/agent-runs/recovered-arxiv-sources-2-20260905/reports/ai-agent-review.md",
+            "sha256": "40dd28ca9e522e233da8abb8866a235f7bb19fc641ff82176e54845f759d729f"
+          },
+          {
+            "kind": "ai_agent_reviewed_product_v0.4",
+            "path": "tests/review-cases/agent-runs/recovered-arxiv-sources-2-20260905/product-v0.4.json",
+            "sha256": "f73921ef94cea0b5247612ed97f9776aa74728d031e946a0d22a6017e69ea663"
+          },
+          {
+            "kind": "ai_agent_reviewed_product_v0.5",
+            "path": "tests/review-cases/agent-runs/recovered-arxiv-sources-2-20260905/product-v0.5.json",
+            "sha256": "b8b809864e23e025e13e5944ef4e2ee5b8a248cbcc9c03e0e86eafdbf4d2ff49"
+          }
+        ],
+        "result": "accepted"
+      }
+    ]
+  },
+  "outputs": [
+    {
+      "kind": "agent_track",
+      "reviewer_id": "ar1",
+      "path": "tests/review-cases/agent-runs/recovered-arxiv-sources-2-20260905/tracks/ar1.json",
+      "sha256": "6d9b2426472ceb7eaa32ddf072da5d4583d0d3fe93c0bf22b68098a38e2826a0"
+    },
+    {
+      "kind": "agent_track",
+      "reviewer_id": "ar2",
+      "path": "tests/review-cases/agent-runs/recovered-arxiv-sources-2-20260905/tracks/ar2.json",
+      "sha256": "22d5f91778d53718a93f8edf23d4577407d58ba81732f6e8686708f27c4ad990"
+    },
+    {
+      "kind": "ai_agent_review",
+      "path": "tests/review-cases/agent-runs/recovered-arxiv-sources-2-20260905/ai-agent-review.json",
+      "sha256": "f918701fa5fc3ff65af29798cc97eb6713a13859f190dc3f016aa6b0286246c3"
+    },
+    {
+      "kind": "ai_agent_review_report",
+      "path": "tests/review-cases/agent-runs/recovered-arxiv-sources-2-20260905/reports/ai-agent-review.md",
+      "sha256": "40dd28ca9e522e233da8abb8866a235f7bb19fc641ff82176e54845f759d729f"
+    },
+    {
+      "kind": "ai_agent_reviewed_product_v0.4",
+      "path": "tests/review-cases/agent-runs/recovered-arxiv-sources-2-20260905/product-v0.4.json",
+      "sha256": "f73921ef94cea0b5247612ed97f9776aa74728d031e946a0d22a6017e69ea663"
+    },
+    {
+      "kind": "ai_agent_reviewed_product_v0.5",
+      "path": "tests/review-cases/agent-runs/recovered-arxiv-sources-2-20260905/product-v0.5.json",
+      "sha256": "b8b809864e23e025e13e5944ef4e2ee5b8a248cbcc9c03e0e86eafdbf4d2ff49"
+    }
+  ],
+  "publication_type_policy": "The ratified default scholarly-publication policy in the assigned reviewer prompt. These are already canonical corpus records; this source-recovery run does not change the original search window or admit new intake candidates.",
+  "source_preparation": {
+    "path": "corpus/source-acquisition/reading-assets-2026-09-05/qc.json",
+    "sha256": "12eef6d22922973c82513ff6343fcf476f84872f105a735512322761485b159e",
+    "scope": "Complete assigned article text plus all nine visually checked original PNG assets. No previous coding or distillate is an allowed source."
+  },
+  "rule_inputs": [
+    {
+      "path": "assessment/categories.yaml",
+      "sha256": "a62e4a20a9262cf2e0e2303b11b787f1b8e3189fed2be0719d4c74e84300741a"
+    },
+    {
+      "path": "knowledge/update-protocol.md",
+      "sha256": "0054e6b82df9e1c25d6cbf0aa59e3c230083c57c05ae1eb743e82883eaf9a9e4"
+    },
+    {
+      "path": "docs/data/analysis_fields.json",
+      "sha256": "e6a9b35cc41ba2a9b609ea758e6ba84fbe08996a4b0929f22fb06102c1d880d4"
+    }
+  ],
+  "integration": {
+    "method": "append_only_validated_product_merge",
+    "target": "docs/data/screening/ar2.json",
+    "integrated_at": "2026-09-05T19:21:59.756Z",
+    "base_commit": "0a6fb2f130aa33ecb4c6efadc3d1a105c30326b3",
+    "base_sha256": "sha256:97c1aace191c233a99dad8d091475ca49a0c6d6a5cb6737397e5f7444aacf399",
+    "preexisting_record_count": 30,
+    "preexisting_records_preserved": true,
+    "new_record_ids": [
+      "RAY6G2R7",
+      "SQYLQFRU"
+    ],
+    "new_record_hashes": {
+      "RAY6G2R7": "sha256:87794e647086fd7a99a7572c9e8c75b61d242cfa7392ecc75ecaf852ebb07ebf",
+      "SQYLQFRU": "sha256:ea4910f8366e87321efd8fb09c97ce2ef121c132c26f07468eeecbc3a846d740"
+    },
+    "resulting_sha256_at_merge": "sha256:e6e38a90de2ae953f61c3b0523c1bfda869c3ac14a6976786b0af054c59ac7a4",
+    "merge_command": "python -m src.assess.merge_ai_agent_product docs/data/screening/ar2.json tests/review-cases/agent-runs/recovered-arxiv-sources-2-20260905/product-v0.5.json docs/data/screening/ar2.json",
+    "id": "recovered-arxiv-sources-2-20260905:deterministic-integration",
+    "actor_id": "/root"
+  },
+  "orchestration": {
+    "actor_id": "/root",
+    "actor_type": "ai_agent",
+    "role": "orchestrator",
+    "model": {
+      "provider": "OpenAI",
+      "model": "GPT-6",
+      "model_version": "runtime family disclosed; exact deployment version not exposed",
+      "immutable_model_id": null
+    },
+    "scope": "Source binding, manifest capture, deterministic transfer and append-only integration; substantive decisions belong to the recorded separate reviewers."
+  },
+  "post_integration_artifact_review": {
+    "path": "generated/verification/recovered-source-artifact-reviews-2026-09-05.json",
+    "sha256": "sha256:5c69e87d54a9889cdcfaa2b774a73c5d5a07ee0eeaeff9b9f47df03f584061eb",
+    "recorded_scope": "Separate new-distillate/Assertion review and final projected-record review, individually attributed and timed in the batch."
+  }
+}

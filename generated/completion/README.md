@@ -1,6 +1,6 @@
 # Completion package
 
-Source fingerprint: `sha256:7c559be485432bbc48769c5a72d1755633cd1996d8cec16d486e98dd0fdc1af3`. Deterministic internal preparation; no approval is created.
+Source fingerprint: `sha256:233004c51059be582e73dc0750db4b1df50993f07262931940b501802dca0db3`. Deterministic internal preparation; no approval is created.
 
 Scope: existing corpus plus all already identified 2026 candidates (search cutoff 2026-08-24) and the separate targeted gap-fill intake from 2026-09-05. Candidate membership does not imply inclusion. New search should address a concrete evidence gap with excellent sources.
 
@@ -10,14 +10,14 @@ Scope: existing corpus plus all already identified 2026 candidates (search cutof
 | Canonical record-bound works | 257 |
 | All registry works, including pending candidates | 280 |
 | Works with recorded human annotations | 229 |
-| Works with recorded AI-review records | 29 |
+| Works with recorded AI-review records | 31 |
 | Works with decision or coding conflicts | 3 |
 | Works with an unresolved negative AI source review | 1 |
 | Records using an accepted immutable AI correction | 9 |
 | Historical human records missing canonical identity binding | 10 |
 | Historical human records reconciled to existing Works | 2 |
 | Works under a confirmed integrity hold | 1 |
-| Source acquisition/screening queue | 8 |
+| Source acquisition/screening queue | 6 |
 | Queued Works with newly acquired text still requiring exact binding and source QC | 0 |
 | 2026 candidates | 58 |
 | 2026 candidates with canonical binding | 0 |
@@ -25,8 +25,8 @@ Scope: existing corpus plus all already identified 2026 candidates (search cutof
 | Separate targeted gap-fill candidates | 3 |
 | Targeted gap-fill candidates with canonical binding | 0 |
 | Targeted gap-fill candidates with recorded fulltext reading | 2 |
-| Active assertions | 3 |
-| Assertions with current source-hash-bound AI review | 3 |
+| Active assertions | 4 |
+| Assertions with current source-hash-bound AI review | 4 |
 
 ## Knowledge coverage
 

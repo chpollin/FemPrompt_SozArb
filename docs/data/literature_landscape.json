@@ -6,7 +6,7 @@
     "reviewer": "ar2",
     "actor": "agent",
     "status": "ai-agent-reviewed",
-    "updated": "2026-08-26T19:31:07.611Z",
+    "updated": "2026-09-05T19:21:14.215Z",
     "publication_gate": "attributed-source-review",
     "allowed_states": [
       "ai-agent-reviewed",
@@ -20,28 +20,28 @@
     "corpus_total": 326,
     "corpus_record_total": 326,
     "corpus_work_total": 257,
-    "annotated_total": 28,
-    "published_record_total": 29,
-    "published_work_total": 28,
-    "source_annotated_total": 30,
-    "source_annotated_record_total": 30,
-    "source_annotated_work_total": 29,
+    "annotated_total": 30,
+    "published_record_total": 31,
+    "published_work_total": 30,
+    "source_annotated_total": 32,
+    "source_annotated_record_total": 32,
+    "source_annotated_work_total": 31,
     "withheld_total": 1,
     "withheld_record_total": 1,
     "unpublished_work_total": 1,
-    "included_total": 21,
-    "excluded_total": 6,
+    "included_total": 22,
+    "excluded_total": 7,
     "unclear_total": 1,
-    "thematic_total": 21,
+    "thematic_total": 22,
     "aggregation_unit": "work",
     "record_decision_counts": {
-      "Exclude": 6,
-      "Include": 22,
+      "Exclude": 7,
+      "Include": 23,
       "Unclear": 1
     },
     "work_decision_counts": {
-      "Exclude": 6,
-      "Include": 21,
+      "Exclude": 7,
+      "Include": 22,
       "Unclear": 1
     },
     "denominators": {
@@ -1821,6 +1821,541 @@
                 "reason": "The Griffith AM abstract, PDF p.4/manuscript p.3, continues the preceding sentence with lowercase 'this paper'; the publisher VOR's 'this article' belongs to another version. Preserve the exact AM wording."
               }
             ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "SQYLQFRU",
+      "title": "Reasoning towards fairness: Mitigating bias in language models through reasoning-guided fine-tuning",
+      "author_year": "Sanchit Kabra (2025)",
+      "authors": "Sanchit Kabra; Akshita Jha; Chandan K. Reddy",
+      "year": 2025,
+      "doi": "10.48550/arXiv.2504.05632",
+      "url": "https://arxiv.org/abs/2504.05632v3",
+      "item_type": "preprint",
+      "journal": "",
+      "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+      "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+      "bibliographic_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+      "source_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+      "source_binding": {
+        "record_id": "SQYLQFRU",
+        "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+        "bibliographic_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+        "source_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+        "source_version_type": "preprint",
+        "preferred_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+        "is_preferred_version": true,
+        "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-v3-text.md",
+        "source_sha256": "sha256:bac6454052cd33fa790fde5c12b2bfc10fd340fb20433725feecd6a804283620",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "Reasoning towards fairness: Mitigating bias in language models through reasoning-guided fine-tuning",
+          "doi": "10.48550/arxiv.2504.05632"
+        },
+        "version_identity": {
+          "title": "Reasoning towards fairness: Mitigating bias in language models through reasoning-guided fine-tuning",
+          "arxiv": "2504.05632v3"
+        }
+      },
+      "version_type": "preprint",
+      "version_date": "2025-06-05",
+      "peer_review_status": "not_established",
+      "peer_review_basis": "unknown",
+      "preferred_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+      "latest_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+      "is_preferred_version": true,
+      "work_versions": [
+        {
+          "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+          "version_type": "preprint",
+          "version_date": "2025-06-05",
+          "identifiers": {
+            "doi": [
+              "10.48550/arxiv.2504.05632"
+            ],
+            "zotero_key": [
+              "SQYLQFRU"
+            ],
+            "url": [
+              "https://arxiv.org/abs/2504.05632v3"
+            ]
+          },
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "integrity_status": "current",
+          "access_status": "unknown",
+          "landing_url": "https://arxiv.org/abs/2504.05632v3",
+          "fulltext_url": "",
+          "relations": [],
+          "is_preferred": true,
+          "is_latest": true
+        }
+      ],
+      "identity_basis": "work_version_registry",
+      "knowledge_coverage": "fulltext_ready",
+      "decision": "Include",
+      "reason": null,
+      "text_source": "raw",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "lifecycle_state": "ai-agent-reviewed",
+      "publication_basis": "ai-source-review",
+      "recorded_identity": {
+        "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+        "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
+      },
+      "ai_verification": {
+        "artifact": "docs/data/screening/ar2.json#/decisions/SQYLQFRU",
+        "sha256": "sha256:ea4910f8366e87321efd8fb09c97ce2ef121c132c26f07468eeecbc3a846d740",
+        "result": "accepted",
+        "review_type": "ai-source-review",
+        "agent_id": "/root/source_review_check",
+        "model": "GPT-6",
+        "model_id_status": "Runtime family disclosed; exact deployment ID not exposed; no immutable identifier claimed",
+        "reviewed_at": "2026-09-05T19:26:17.877758Z",
+        "findings": "Compared the entire schema-0.4 projection, schema-0.5 migrated record, annotation snapshot and the exact current productive record against the frozen AI review; all ten category values (including sparse zero/nein values), decision, reason, Work-Version identities, all source snippets and the complete applicable analysis match. Every final quote is retained completely within the 260-character snippet limit; lookup terms and snippets resolve in the original source. The annotation-body check hash matches. Both reviewer agents and the separate review actor/model/prompt are explicitly recorded; references resolve to this run and the frozen source review. Lifecycle remains ai-agent-reviewed, with no human verification or publication approval. The retained origin:human value is a legacy capture-origin field, accompanied by actor:agent and ai_agent provenance; it is not evidence of human review. Lifecycle event timestamps describe the migrated productive projection at 19:21:14.215Z, while actual screening/review execution times remain in the linked run/report/AI-review artifact and this receipt. The curation actor remains an explicit unrecorded legacy gap rather than an invented person. The exact ReGiFT Include record retains Generative_KI/Prompting/Bias_Ungleichheit/Fairness ja and Diversitaet teilweise; every controlled Include-analysis field and the full cautionary AN_Notes match the source-reviewed final coding. The repaired section 5.2 Prompting quotation retains the crucial comparison wording. Original-source methods/results support data preparation, fine-tuning and the evaluated CoT comparator, with Evaluated recording completed assessment, not efficacy. Table inconsistencies, mixed/negative CoT results, trace-quality proxy, nonmonotonic scaling and undefined graph uncertainty remain explicit. Complete original text and all three original PNGs were read during the preceding source review. No further substantive correction is required.",
+        "canonical_binding": {
+          "paper_id": "SQYLQFRU",
+          "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+          "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
+        },
+        "source_binding": {
+          "record_id": "SQYLQFRU",
+          "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+          "bibliographic_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+          "source_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+          "source_version_type": "preprint",
+          "preferred_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+          "is_preferred_version": true,
+          "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-v3-text.md",
+          "source_sha256": "sha256:bac6454052cd33fa790fde5c12b2bfc10fd340fb20433725feecd6a804283620",
+          "binding_mode": "existing_version",
+          "bibliographic_identity": {
+            "title": "Reasoning towards fairness: Mitigating bias in language models through reasoning-guided fine-tuning",
+            "doi": "10.48550/arxiv.2504.05632"
+          },
+          "version_identity": {
+            "title": "Reasoning towards fairness: Mitigating bias in language models through reasoning-guided fine-tuning",
+            "arxiv": "2504.05632v3"
+          }
+        }
+      },
+      "verification": null,
+      "publication_approval": null,
+      "categories": [
+        {
+          "key": "Bias_Ungleichheit",
+          "level": 2,
+          "evidence": [
+            {
+              "term": "In this work, we investigate the crucial relationship between model’s reasoning",
+              "snippet": "In this work, we investigate the crucial relationship between model’s reasoning ability and fairness; and ask whether improved reasoning capabilities can mitigate harmful stereotypical responses, especially those arising due to shallow or flawed reasoning.",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+              "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+              "recorded_work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+              "recorded_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+              "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-v3-text.md",
+              "source_sha256": "sha256:bac6454052cd33fa790fde5c12b2bfc10fd340fb20433725feecd6a804283620",
+              "source_record_id": "SQYLQFRU"
+            }
+          ]
+        },
+        {
+          "key": "Diversitaet",
+          "level": 1,
+          "evidence": [
+            {
+              "term": "We then evaluate them on ambiguous and disambiguous contexts across three bias d",
+              "snippet": "We then evaluate them on ambiguous and disambiguous contexts across three bias dimensions: age, religion, and nationality of the BBQ dataset.",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+              "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+              "recorded_work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+              "recorded_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+              "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-v3-text.md",
+              "source_sha256": "sha256:bac6454052cd33fa790fde5c12b2bfc10fd340fb20433725feecd6a804283620",
+              "source_record_id": "SQYLQFRU"
+            },
+            {
+              "term": "A higher Exact Match and LLM-as-judge accuracy score in ambiguous contexts is in",
+              "snippet": "A higher Exact Match and LLM-as-judge accuracy score in ambiguous contexts is indicative of models abstaining from defaulting to identity groups in their response.",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+              "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+              "recorded_work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+              "recorded_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+              "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-v3-text.md",
+              "source_sha256": "sha256:bac6454052cd33fa790fde5c12b2bfc10fd340fb20433725feecd6a804283620",
+              "source_record_id": "SQYLQFRU"
+            }
+          ]
+        },
+        {
+          "key": "Fairness",
+          "level": 2,
+          "evidence": [
+            {
+              "term": "To evaluate whether reasoning-guided fine-tuning mitigates stereotypes, we adopt",
+              "snippet": "To evaluate whether reasoning-guided fine-tuning mitigates stereotypes, we adopt a two-part evaluation framework that focuses on fairness evaluation on BBQ dataset. We focus on final answer correctness rather than intermediate reasoning:",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+              "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+              "recorded_work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+              "recorded_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+              "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-v3-text.md",
+              "source_sha256": "sha256:bac6454052cd33fa790fde5c12b2bfc10fd340fb20433725feecd6a804283620",
+              "source_record_id": "SQYLQFRU"
+            }
+          ]
+        },
+        {
+          "key": "Generative_KI",
+          "level": 2,
+          "evidence": [
+            {
+              "term": "We fine-tune these models to generate explicit reasoning traces jointly with the",
+              "snippet": "We fine-tune these models to generate explicit reasoning traces jointly with their final answers.",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+              "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+              "recorded_work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+              "recorded_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+              "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-v3-text.md",
+              "source_sha256": "sha256:bac6454052cd33fa790fde5c12b2bfc10fd340fb20433725feecd6a804283620",
+              "source_record_id": "SQYLQFRU"
+            }
+          ]
+        },
+        {
+          "key": "Prompting",
+          "level": 2,
+          "evidence": [
+            {
+              "term": "Specifically, we examine whether fine-tuning non-reasoning models (LLaMA 3.1 8B,",
+              "snippet": "Specifically, we examine whether fine-tuning non-reasoning models (LLaMA 3.1 8B, Mistral 7B, Phi-4) with ReGiFT yields less stereotypical responses than other popular instruction-tuning and prompting techniques.",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+              "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+              "recorded_work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+              "recorded_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+              "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-v3-text.md",
+              "source_sha256": "sha256:bac6454052cd33fa790fde5c12b2bfc10fd340fb20433725feecd6a804283620",
+              "source_record_id": "SQYLQFRU"
+            }
+          ]
+        }
+      ],
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Research_Instrument",
+            "Object_of_Critique"
+          ],
+          "AN_Prompt_Techniques": [
+            "Thought_Generation",
+            "General_Guidance"
+          ],
+          "AN_Bias_Axes": [
+            "Age",
+            "Religion",
+            "Nationality_Migration"
+          ],
+          "AN_Harm_Types": [
+            "Stereotyping"
+          ],
+          "AN_Mitigation_Stage": [
+            "Pre_Processing",
+            "In_Training",
+            "Prompt_Practice"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Experimentell"
+        },
+        "notes": "Own experiments, not a synthesised evaluation. ReGiFT extracts SQuAD-v2 traces and retains only final-answer-correct examples (3.1, Algorithm 1: Pre_Processing); section 6 assesses Correct-Only, Incorrect-Only and Full-Set selection. Supervised fine-tuning jointly teaches traces and answers (3.2: In_Training). Section 5.2 and Table 3 assess a CoT prompting comparator (Prompt_Practice) and criticise prompt sensitivity and demographic generalisation. Prompting is Research_Instrument and Object_of_Critique. Thought_Generation comprises CoT and explicit think/answer prompts. General_Guidance, verbatim A.1: Answer each question using the information in the preceding background paragraph. If there is not enough information provided, answer with ‘Not in background.’ A.1 explicitly excludes demonstrations in the zero-shot prompt; no ICL. The abstention/context guidance is used, but its isolated mitigation efficacy is not tested. Evaluated denotes completed ReGiFT, data-selection, instruction-tuning and CoT intervention assessments with reported results, not universal effectiveness. Tables 1–3 report ReGiFT gains relative to base models on BBQ; CoT outcomes are mixed or negative. Age, Religion and Nationality_Migration are the three separately evaluated axes (4.1, 5; no interacting-axis analysis). Stereotyping is the explicit harm (Figures 1/3, A.5); demographic benchmark scenarios do not establish a social-work or professional-education setting. Study type Experimentell; population Not_SW_Specific; Fulltext plus all three original PNGs. Answer extraction, Unknown normalisation and LLM-as-Judge serve measurement (4.3, A.2–A.3); they do not establish Post_Processing, Intra_Processing or Organisational_Process mitigation. Correct final answers are an admitted proxy for trace validity (3.1 footnote), not direct verification of reasoning correctness. The paper limits its claim to stereotypes associated with flawed contextual reasoning and mid-sized models, without complete bias removal or demonstrated transfer to social-work practice. Numerical limitations: Tables 1 and 3 disagree on Mistral ReGiFT age (82.78/84.01 versus 82.58/83.91) and Phi-4 religion/nationality entries; section 5.2 overgeneralises CoT as modest gains. Several displayed overall entries also do not equal the mean of displayed ambiguous/disambiguous entries (e.g. Table 1 LLaMA base religion 12.45/66.52/49.48 and Table 4 Correct-Only age 70.04/89.13/75.59); the paper supplies no reconciliation. Table 5 is nonmonotonic and does not substantiate a universal 40% plateau; its prose mentions 50% although no 50% row is shown. Figure 4 shows printed means 139.62 and 243.81 tokens with undefined error bars and unspecified sample sizes; no confidence interval, statistical significance, trace-length causal effect or operational threshold is inferred. These limitations restrict quantitative synthesis, but the topical coding and completed-assessment status remain decidable.",
+        "undecidable": []
+      },
+      "aggregation_unit": "work",
+      "record_ids": [
+        "SQYLQFRU"
+      ],
+      "corpus_record_ids": [
+        "SQYLQFRU"
+      ],
+      "version_ids": [
+        "version:8df649a5-eae4-54d8-9105-3768e0083beb"
+      ],
+      "source_version_ids": [
+        "version:8df649a5-eae4-54d8-9105-3768e0083beb"
+      ],
+      "source_records": [
+        {
+          "id": "SQYLQFRU",
+          "title": "Reasoning towards fairness: Mitigating bias in language models through reasoning-guided fine-tuning",
+          "author_year": "Sanchit Kabra (2025)",
+          "authors": "Sanchit Kabra; Akshita Jha; Chandan K. Reddy",
+          "year": 2025,
+          "doi": "10.48550/arXiv.2504.05632",
+          "url": "https://arxiv.org/abs/2504.05632v3",
+          "item_type": "preprint",
+          "journal": "",
+          "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+          "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+          "bibliographic_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+          "source_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+          "source_binding": {
+            "record_id": "SQYLQFRU",
+            "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+            "bibliographic_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+            "source_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+            "source_version_type": "preprint",
+            "preferred_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+            "is_preferred_version": true,
+            "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-v3-text.md",
+            "source_sha256": "sha256:bac6454052cd33fa790fde5c12b2bfc10fd340fb20433725feecd6a804283620",
+            "binding_mode": "existing_version",
+            "bibliographic_identity": {
+              "title": "Reasoning towards fairness: Mitigating bias in language models through reasoning-guided fine-tuning",
+              "doi": "10.48550/arxiv.2504.05632"
+            },
+            "version_identity": {
+              "title": "Reasoning towards fairness: Mitigating bias in language models through reasoning-guided fine-tuning",
+              "arxiv": "2504.05632v3"
+            }
+          },
+          "version_type": "preprint",
+          "version_date": "2025-06-05",
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "preferred_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+          "latest_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+          "is_preferred_version": true,
+          "work_versions": [
+            {
+              "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+              "version_type": "preprint",
+              "version_date": "2025-06-05",
+              "identifiers": {
+                "doi": [
+                  "10.48550/arxiv.2504.05632"
+                ],
+                "zotero_key": [
+                  "SQYLQFRU"
+                ],
+                "url": [
+                  "https://arxiv.org/abs/2504.05632v3"
+                ]
+              },
+              "peer_review_status": "not_established",
+              "peer_review_basis": "unknown",
+              "integrity_status": "current",
+              "access_status": "unknown",
+              "landing_url": "https://arxiv.org/abs/2504.05632v3",
+              "fulltext_url": "",
+              "relations": [],
+              "is_preferred": true,
+              "is_latest": true
+            }
+          ],
+          "identity_basis": "work_version_registry",
+          "knowledge_coverage": "fulltext_ready",
+          "decision": "Include",
+          "reason": null,
+          "text_source": "raw",
+          "reviewer": "ar2",
+          "actor": "agent",
+          "lifecycle_state": "ai-agent-reviewed",
+          "publication_basis": "ai-source-review",
+          "recorded_identity": {
+            "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+            "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
+          },
+          "ai_verification": {
+            "artifact": "docs/data/screening/ar2.json#/decisions/SQYLQFRU",
+            "sha256": "sha256:ea4910f8366e87321efd8fb09c97ce2ef121c132c26f07468eeecbc3a846d740",
+            "result": "accepted",
+            "review_type": "ai-source-review",
+            "agent_id": "/root/source_review_check",
+            "model": "GPT-6",
+            "model_id_status": "Runtime family disclosed; exact deployment ID not exposed; no immutable identifier claimed",
+            "reviewed_at": "2026-09-05T19:26:17.877758Z",
+            "findings": "Compared the entire schema-0.4 projection, schema-0.5 migrated record, annotation snapshot and the exact current productive record against the frozen AI review; all ten category values (including sparse zero/nein values), decision, reason, Work-Version identities, all source snippets and the complete applicable analysis match. Every final quote is retained completely within the 260-character snippet limit; lookup terms and snippets resolve in the original source. The annotation-body check hash matches. Both reviewer agents and the separate review actor/model/prompt are explicitly recorded; references resolve to this run and the frozen source review. Lifecycle remains ai-agent-reviewed, with no human verification or publication approval. The retained origin:human value is a legacy capture-origin field, accompanied by actor:agent and ai_agent provenance; it is not evidence of human review. Lifecycle event timestamps describe the migrated productive projection at 19:21:14.215Z, while actual screening/review execution times remain in the linked run/report/AI-review artifact and this receipt. The curation actor remains an explicit unrecorded legacy gap rather than an invented person. The exact ReGiFT Include record retains Generative_KI/Prompting/Bias_Ungleichheit/Fairness ja and Diversitaet teilweise; every controlled Include-analysis field and the full cautionary AN_Notes match the source-reviewed final coding. The repaired section 5.2 Prompting quotation retains the crucial comparison wording. Original-source methods/results support data preparation, fine-tuning and the evaluated CoT comparator, with Evaluated recording completed assessment, not efficacy. Table inconsistencies, mixed/negative CoT results, trace-quality proxy, nonmonotonic scaling and undefined graph uncertainty remain explicit. Complete original text and all three original PNGs were read during the preceding source review. No further substantive correction is required.",
+            "canonical_binding": {
+              "paper_id": "SQYLQFRU",
+              "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+              "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
+            },
+            "source_binding": {
+              "record_id": "SQYLQFRU",
+              "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+              "bibliographic_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+              "source_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+              "source_version_type": "preprint",
+              "preferred_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+              "is_preferred_version": true,
+              "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-v3-text.md",
+              "source_sha256": "sha256:bac6454052cd33fa790fde5c12b2bfc10fd340fb20433725feecd6a804283620",
+              "binding_mode": "existing_version",
+              "bibliographic_identity": {
+                "title": "Reasoning towards fairness: Mitigating bias in language models through reasoning-guided fine-tuning",
+                "doi": "10.48550/arxiv.2504.05632"
+              },
+              "version_identity": {
+                "title": "Reasoning towards fairness: Mitigating bias in language models through reasoning-guided fine-tuning",
+                "arxiv": "2504.05632v3"
+              }
+            }
+          },
+          "verification": null,
+          "publication_approval": null,
+          "categories": [
+            {
+              "key": "Bias_Ungleichheit",
+              "level": 2,
+              "evidence": [
+                {
+                  "term": "In this work, we investigate the crucial relationship between model’s reasoning",
+                  "snippet": "In this work, we investigate the crucial relationship between model’s reasoning ability and fairness; and ask whether improved reasoning capabilities can mitigate harmful stereotypical responses, especially those arising due to shallow or flawed reasoning.",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+                  "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+                  "recorded_work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+                  "recorded_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+                  "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-v3-text.md",
+                  "source_sha256": "sha256:bac6454052cd33fa790fde5c12b2bfc10fd340fb20433725feecd6a804283620"
+                }
+              ]
+            },
+            {
+              "key": "Diversitaet",
+              "level": 1,
+              "evidence": [
+                {
+                  "term": "We then evaluate them on ambiguous and disambiguous contexts across three bias d",
+                  "snippet": "We then evaluate them on ambiguous and disambiguous contexts across three bias dimensions: age, religion, and nationality of the BBQ dataset.",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+                  "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+                  "recorded_work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+                  "recorded_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+                  "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-v3-text.md",
+                  "source_sha256": "sha256:bac6454052cd33fa790fde5c12b2bfc10fd340fb20433725feecd6a804283620"
+                },
+                {
+                  "term": "A higher Exact Match and LLM-as-judge accuracy score in ambiguous contexts is in",
+                  "snippet": "A higher Exact Match and LLM-as-judge accuracy score in ambiguous contexts is indicative of models abstaining from defaulting to identity groups in their response.",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+                  "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+                  "recorded_work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+                  "recorded_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+                  "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-v3-text.md",
+                  "source_sha256": "sha256:bac6454052cd33fa790fde5c12b2bfc10fd340fb20433725feecd6a804283620"
+                }
+              ]
+            },
+            {
+              "key": "Fairness",
+              "level": 2,
+              "evidence": [
+                {
+                  "term": "To evaluate whether reasoning-guided fine-tuning mitigates stereotypes, we adopt",
+                  "snippet": "To evaluate whether reasoning-guided fine-tuning mitigates stereotypes, we adopt a two-part evaluation framework that focuses on fairness evaluation on BBQ dataset. We focus on final answer correctness rather than intermediate reasoning:",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+                  "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+                  "recorded_work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+                  "recorded_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+                  "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-v3-text.md",
+                  "source_sha256": "sha256:bac6454052cd33fa790fde5c12b2bfc10fd340fb20433725feecd6a804283620"
+                }
+              ]
+            },
+            {
+              "key": "Generative_KI",
+              "level": 2,
+              "evidence": [
+                {
+                  "term": "We fine-tune these models to generate explicit reasoning traces jointly with the",
+                  "snippet": "We fine-tune these models to generate explicit reasoning traces jointly with their final answers.",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+                  "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+                  "recorded_work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+                  "recorded_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+                  "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-v3-text.md",
+                  "source_sha256": "sha256:bac6454052cd33fa790fde5c12b2bfc10fd340fb20433725feecd6a804283620"
+                }
+              ]
+            },
+            {
+              "key": "Prompting",
+              "level": 2,
+              "evidence": [
+                {
+                  "term": "Specifically, we examine whether fine-tuning non-reasoning models (LLaMA 3.1 8B,",
+                  "snippet": "Specifically, we examine whether fine-tuning non-reasoning models (LLaMA 3.1 8B, Mistral 7B, Phi-4) with ReGiFT yields less stereotypical responses than other popular instruction-tuning and prompting techniques.",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+                  "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+                  "recorded_work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+                  "recorded_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+                  "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-v3-text.md",
+                  "source_sha256": "sha256:bac6454052cd33fa790fde5c12b2bfc10fd340fb20433725feecd6a804283620"
+                }
+              ]
+            }
+          ],
+          "analysis": {
+            "fields": {
+              "AN_Prompting_Role": [
+                "Research_Instrument",
+                "Object_of_Critique"
+              ],
+              "AN_Prompt_Techniques": [
+                "Thought_Generation",
+                "General_Guidance"
+              ],
+              "AN_Bias_Axes": [
+                "Age",
+                "Religion",
+                "Nationality_Migration"
+              ],
+              "AN_Harm_Types": [
+                "Stereotyping"
+              ],
+              "AN_Mitigation_Stage": [
+                "Pre_Processing",
+                "In_Training",
+                "Prompt_Practice"
+              ],
+              "AN_Mitigation_Status": "Evaluated",
+              "AN_Population": [
+                "Not_SW_Specific"
+              ],
+              "AN_Coding_Basis": "Fulltext",
+              "Studientyp": "Experimentell"
+            },
+            "notes": "Own experiments, not a synthesised evaluation. ReGiFT extracts SQuAD-v2 traces and retains only final-answer-correct examples (3.1, Algorithm 1: Pre_Processing); section 6 assesses Correct-Only, Incorrect-Only and Full-Set selection. Supervised fine-tuning jointly teaches traces and answers (3.2: In_Training). Section 5.2 and Table 3 assess a CoT prompting comparator (Prompt_Practice) and criticise prompt sensitivity and demographic generalisation. Prompting is Research_Instrument and Object_of_Critique. Thought_Generation comprises CoT and explicit think/answer prompts. General_Guidance, verbatim A.1: Answer each question using the information in the preceding background paragraph. If there is not enough information provided, answer with ‘Not in background.’ A.1 explicitly excludes demonstrations in the zero-shot prompt; no ICL. The abstention/context guidance is used, but its isolated mitigation efficacy is not tested. Evaluated denotes completed ReGiFT, data-selection, instruction-tuning and CoT intervention assessments with reported results, not universal effectiveness. Tables 1–3 report ReGiFT gains relative to base models on BBQ; CoT outcomes are mixed or negative. Age, Religion and Nationality_Migration are the three separately evaluated axes (4.1, 5; no interacting-axis analysis). Stereotyping is the explicit harm (Figures 1/3, A.5); demographic benchmark scenarios do not establish a social-work or professional-education setting. Study type Experimentell; population Not_SW_Specific; Fulltext plus all three original PNGs. Answer extraction, Unknown normalisation and LLM-as-Judge serve measurement (4.3, A.2–A.3); they do not establish Post_Processing, Intra_Processing or Organisational_Process mitigation. Correct final answers are an admitted proxy for trace validity (3.1 footnote), not direct verification of reasoning correctness. The paper limits its claim to stereotypes associated with flawed contextual reasoning and mid-sized models, without complete bias removal or demonstrated transfer to social-work practice. Numerical limitations: Tables 1 and 3 disagree on Mistral ReGiFT age (82.78/84.01 versus 82.58/83.91) and Phi-4 religion/nationality entries; section 5.2 overgeneralises CoT as modest gains. Several displayed overall entries also do not equal the mean of displayed ambiguous/disambiguous entries (e.g. Table 1 LLaMA base religion 12.45/66.52/49.48 and Table 4 Correct-Only age 70.04/89.13/75.59); the paper supplies no reconciliation. Table 5 is nonmonotonic and does not substantiate a universal 40% plateau; its prose mentions 50% although no 50% row is shown. Figure 4 shows printed means 139.62 and 243.81 tokens with undefined error bars and unspecified sample sizes; no confidence interval, statistical significance, trace-length causal effect or operational threshold is inferred. These limitations restrict quantitative synthesis, but the topical coding and completed-assessment status remain decidable.",
+            "undecidable": []
           }
         }
       ]
@@ -4131,6 +4666,428 @@
             "notes": "Der Text diskutiert Risiken und vorgeschlagene Gegenmaßnahmen. Prompting ist kein eigener Gegenstand.",
             "undecidable": []
           }
+        }
+      ]
+    },
+    {
+      "id": "RAY6G2R7",
+      "title": "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks",
+      "author_year": "Bill Yuchen Lin (2023)",
+      "authors": "Bill Yuchen Lin; Yicheng Fu; Karina Yang; Faeze Brahman; Shiyu Huang; Chandra Bhagavatula; Prithviraj Ammanabrolu; Yejin Choi; Xiang Ren",
+      "year": 2023,
+      "doi": "10.48550/arXiv.2305.17390",
+      "url": "https://arxiv.org/abs/2305.17390v2",
+      "item_type": "preprint",
+      "journal": "",
+      "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+      "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+      "bibliographic_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+      "source_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+      "source_binding": {
+        "record_id": "RAY6G2R7",
+        "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+        "bibliographic_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+        "source_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+        "source_version_type": "preprint",
+        "preferred_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+        "is_preferred_version": true,
+        "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-v2-text.md",
+        "source_sha256": "sha256:fd64251d9eed80eca0689fe3bad5e8ea15465746be71af1e38d7f8c9bdb553d1",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks",
+          "doi": "10.48550/arxiv.2305.17390"
+        },
+        "version_identity": {
+          "title": "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks",
+          "arxiv": "2305.17390v2"
+        }
+      },
+      "version_type": "preprint",
+      "version_date": "2023-12-06",
+      "peer_review_status": "not_established",
+      "peer_review_basis": "unknown",
+      "preferred_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+      "latest_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+      "is_preferred_version": true,
+      "work_versions": [
+        {
+          "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+          "version_type": "preprint",
+          "version_date": "2023-12-06",
+          "identifiers": {
+            "doi": [
+              "10.48550/arxiv.2305.17390"
+            ],
+            "zotero_key": [
+              "RAY6G2R7"
+            ],
+            "url": [
+              "https://arxiv.org/abs/2305.17390v2"
+            ]
+          },
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "integrity_status": "current",
+          "access_status": "unknown",
+          "landing_url": "https://arxiv.org/abs/2305.17390v2",
+          "fulltext_url": "",
+          "relations": [],
+          "is_preferred": true,
+          "is_latest": true
+        }
+      ],
+      "identity_basis": "work_version_registry",
+      "knowledge_coverage": "fulltext_ready",
+      "decision": "Exclude",
+      "reason": "Not_relevant_topic",
+      "text_source": "raw",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "lifecycle_state": "ai-agent-reviewed",
+      "publication_basis": "ai-source-review",
+      "recorded_identity": {
+        "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+        "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460"
+      },
+      "ai_verification": {
+        "artifact": "docs/data/screening/ar2.json#/decisions/RAY6G2R7",
+        "sha256": "sha256:87794e647086fd7a99a7572c9e8c75b61d242cfa7392ecc75ecaf852ebb07ebf",
+        "result": "accepted",
+        "review_type": "ai-source-review",
+        "agent_id": "/root/source_review_check",
+        "model": "GPT-6",
+        "model_id_status": "Runtime family disclosed; exact deployment ID not exposed; no immutable identifier claimed",
+        "reviewed_at": "2026-09-05T19:26:17.877758Z",
+        "findings": "Compared the entire schema-0.4 projection, schema-0.5 migrated record, annotation snapshot and the exact current productive record against the frozen AI review; all ten category values (including sparse zero/nein values), decision, reason, Work-Version identities, all source snippets and the complete applicable analysis match. Every final quote is retained completely within the 260-character snippet limit; lookup terms and snippets resolve in the original source. The annotation-body check hash matches. Both reviewer agents and the separate review actor/model/prompt are explicitly recorded; references resolve to this run and the frozen source review. Lifecycle remains ai-agent-reviewed, with no human verification or publication approval. The retained origin:human value is a legacy capture-origin field, accompanied by actor:agent and ai_agent provenance; it is not evidence of human review. Lifecycle event timestamps describe the migrated productive projection at 19:21:14.215Z, while actual screening/review execution times remain in the linked run/report/AI-review artifact and this receipt. The curation actor remains an explicit unrecorded legacy gap rather than an invented person. The exact SwiftSage Exclude record preserves Generative_KI/Prompting ja, KI_Sonstige teilweise and all six social categories nein, with Not_relevant_topic. Complete original text and six original PNGs were read during the preceding source review. The conventional-AI comparator passages support the resolved subordinate category; the agent architecture is generative. No Include analysis is applicable. Reward-versus-score pseudocode and exact-date source limitations remain in the frozen review; no new substantive correction is required.",
+        "canonical_binding": {
+          "paper_id": "RAY6G2R7",
+          "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+          "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460"
+        },
+        "source_binding": {
+          "record_id": "RAY6G2R7",
+          "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+          "bibliographic_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+          "source_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+          "source_version_type": "preprint",
+          "preferred_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+          "is_preferred_version": true,
+          "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-v2-text.md",
+          "source_sha256": "sha256:fd64251d9eed80eca0689fe3bad5e8ea15465746be71af1e38d7f8c9bdb553d1",
+          "binding_mode": "existing_version",
+          "bibliographic_identity": {
+            "title": "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks",
+            "doi": "10.48550/arxiv.2305.17390"
+          },
+          "version_identity": {
+            "title": "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks",
+            "arxiv": "2305.17390v2"
+          }
+        }
+      },
+      "verification": null,
+      "publication_approval": null,
+      "categories": [
+        {
+          "key": "Generative_KI",
+          "level": 2,
+          "evidence": [
+            {
+              "term": "module, representing the deliberate thinking of System 2, utilizes LLMs, such as",
+              "snippet": "module, representing the deliberate thinking of System 2, utilizes LLMs, such as GPT-4, and is structured around two prompting stages: planning and grounding.",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+              "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+              "recorded_work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+              "recorded_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+              "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-v2-text.md",
+              "source_sha256": "sha256:fd64251d9eed80eca0689fe3bad5e8ea15465746be71af1e38d7f8c9bdb553d1",
+              "source_record_id": "RAY6G2R7"
+            }
+          ]
+        },
+        {
+          "key": "KI_Sonstige",
+          "level": 1,
+          "evidence": [
+            {
+              "term": "In addition to the baseline methods evaluated in the ScienceWorld paper, such as",
+              "snippet": "In addition to the baseline methods evaluated in the ScienceWorld paper, such as DRRN, CALM, KG-A2C, and TDT, we incorporate three LLM-based prompting techniques:",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+              "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+              "recorded_work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+              "recorded_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+              "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-v2-text.md",
+              "source_sha256": "sha256:fd64251d9eed80eca0689fe3bad5e8ea15465746be71af1e38d7f8c9bdb553d1",
+              "source_record_id": "RAY6G2R7"
+            },
+            {
+              "term": "It is evident that LLM-based methods outperform conventional agents due to their",
+              "snippet": "It is evident that LLM-based methods outperform conventional agents due to their superior generalization ability, albeit at a higher deployment cost.",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+              "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+              "recorded_work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+              "recorded_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+              "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-v2-text.md",
+              "source_sha256": "sha256:fd64251d9eed80eca0689fe3bad5e8ea15465746be71af1e38d7f8c9bdb553d1",
+              "source_record_id": "RAY6G2R7"
+            }
+          ]
+        },
+        {
+          "key": "Prompting",
+          "level": 2,
+          "evidence": [
+            {
+              "term": "In the planning stage, we prompt LLMs to locate necessary items, plan and track",
+              "snippet": "In the planning stage, we prompt LLMs to locate necessary items, plan and track subgoals, as well as detect and fix potential exceptions and mistakes.",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+              "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+              "recorded_work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+              "recorded_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+              "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-v2-text.md",
+              "source_sha256": "sha256:fd64251d9eed80eca0689fe3bad5e8ea15465746be71af1e38d7f8c9bdb553d1",
+              "source_record_id": "RAY6G2R7"
+            },
+            {
+              "term": "In the grounding stage, we focus on utilizing LLMs to transform the output subgo",
+              "snippet": "In the grounding stage, we focus on utilizing LLMs to transform the output subgoals derived from the planning stage into a sequence of actions by demonstrating potential action templates.",
+              "source_layer": "paper",
+              "actor": "agent",
+              "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+              "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+              "recorded_work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+              "recorded_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+              "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-v2-text.md",
+              "source_sha256": "sha256:fd64251d9eed80eca0689fe3bad5e8ea15465746be71af1e38d7f8c9bdb553d1",
+              "source_record_id": "RAY6G2R7"
+            }
+          ]
+        }
+      ],
+      "analysis": null,
+      "aggregation_unit": "work",
+      "record_ids": [
+        "RAY6G2R7"
+      ],
+      "corpus_record_ids": [
+        "RAY6G2R7"
+      ],
+      "version_ids": [
+        "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460"
+      ],
+      "source_version_ids": [
+        "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460"
+      ],
+      "source_records": [
+        {
+          "id": "RAY6G2R7",
+          "title": "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks",
+          "author_year": "Bill Yuchen Lin (2023)",
+          "authors": "Bill Yuchen Lin; Yicheng Fu; Karina Yang; Faeze Brahman; Shiyu Huang; Chandra Bhagavatula; Prithviraj Ammanabrolu; Yejin Choi; Xiang Ren",
+          "year": 2023,
+          "doi": "10.48550/arXiv.2305.17390",
+          "url": "https://arxiv.org/abs/2305.17390v2",
+          "item_type": "preprint",
+          "journal": "",
+          "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+          "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+          "bibliographic_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+          "source_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+          "source_binding": {
+            "record_id": "RAY6G2R7",
+            "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+            "bibliographic_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+            "source_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+            "source_version_type": "preprint",
+            "preferred_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+            "is_preferred_version": true,
+            "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-v2-text.md",
+            "source_sha256": "sha256:fd64251d9eed80eca0689fe3bad5e8ea15465746be71af1e38d7f8c9bdb553d1",
+            "binding_mode": "existing_version",
+            "bibliographic_identity": {
+              "title": "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks",
+              "doi": "10.48550/arxiv.2305.17390"
+            },
+            "version_identity": {
+              "title": "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks",
+              "arxiv": "2305.17390v2"
+            }
+          },
+          "version_type": "preprint",
+          "version_date": "2023-12-06",
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "preferred_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+          "latest_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+          "is_preferred_version": true,
+          "work_versions": [
+            {
+              "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+              "version_type": "preprint",
+              "version_date": "2023-12-06",
+              "identifiers": {
+                "doi": [
+                  "10.48550/arxiv.2305.17390"
+                ],
+                "zotero_key": [
+                  "RAY6G2R7"
+                ],
+                "url": [
+                  "https://arxiv.org/abs/2305.17390v2"
+                ]
+              },
+              "peer_review_status": "not_established",
+              "peer_review_basis": "unknown",
+              "integrity_status": "current",
+              "access_status": "unknown",
+              "landing_url": "https://arxiv.org/abs/2305.17390v2",
+              "fulltext_url": "",
+              "relations": [],
+              "is_preferred": true,
+              "is_latest": true
+            }
+          ],
+          "identity_basis": "work_version_registry",
+          "knowledge_coverage": "fulltext_ready",
+          "decision": "Exclude",
+          "reason": "Not_relevant_topic",
+          "text_source": "raw",
+          "reviewer": "ar2",
+          "actor": "agent",
+          "lifecycle_state": "ai-agent-reviewed",
+          "publication_basis": "ai-source-review",
+          "recorded_identity": {
+            "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+            "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460"
+          },
+          "ai_verification": {
+            "artifact": "docs/data/screening/ar2.json#/decisions/RAY6G2R7",
+            "sha256": "sha256:87794e647086fd7a99a7572c9e8c75b61d242cfa7392ecc75ecaf852ebb07ebf",
+            "result": "accepted",
+            "review_type": "ai-source-review",
+            "agent_id": "/root/source_review_check",
+            "model": "GPT-6",
+            "model_id_status": "Runtime family disclosed; exact deployment ID not exposed; no immutable identifier claimed",
+            "reviewed_at": "2026-09-05T19:26:17.877758Z",
+            "findings": "Compared the entire schema-0.4 projection, schema-0.5 migrated record, annotation snapshot and the exact current productive record against the frozen AI review; all ten category values (including sparse zero/nein values), decision, reason, Work-Version identities, all source snippets and the complete applicable analysis match. Every final quote is retained completely within the 260-character snippet limit; lookup terms and snippets resolve in the original source. The annotation-body check hash matches. Both reviewer agents and the separate review actor/model/prompt are explicitly recorded; references resolve to this run and the frozen source review. Lifecycle remains ai-agent-reviewed, with no human verification or publication approval. The retained origin:human value is a legacy capture-origin field, accompanied by actor:agent and ai_agent provenance; it is not evidence of human review. Lifecycle event timestamps describe the migrated productive projection at 19:21:14.215Z, while actual screening/review execution times remain in the linked run/report/AI-review artifact and this receipt. The curation actor remains an explicit unrecorded legacy gap rather than an invented person. The exact SwiftSage Exclude record preserves Generative_KI/Prompting ja, KI_Sonstige teilweise and all six social categories nein, with Not_relevant_topic. Complete original text and six original PNGs were read during the preceding source review. The conventional-AI comparator passages support the resolved subordinate category; the agent architecture is generative. No Include analysis is applicable. Reward-versus-score pseudocode and exact-date source limitations remain in the frozen review; no new substantive correction is required.",
+            "canonical_binding": {
+              "paper_id": "RAY6G2R7",
+              "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+              "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460"
+            },
+            "source_binding": {
+              "record_id": "RAY6G2R7",
+              "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+              "bibliographic_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+              "source_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+              "source_version_type": "preprint",
+              "preferred_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+              "is_preferred_version": true,
+              "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-v2-text.md",
+              "source_sha256": "sha256:fd64251d9eed80eca0689fe3bad5e8ea15465746be71af1e38d7f8c9bdb553d1",
+              "binding_mode": "existing_version",
+              "bibliographic_identity": {
+                "title": "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks",
+                "doi": "10.48550/arxiv.2305.17390"
+              },
+              "version_identity": {
+                "title": "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks",
+                "arxiv": "2305.17390v2"
+              }
+            }
+          },
+          "verification": null,
+          "publication_approval": null,
+          "categories": [
+            {
+              "key": "Generative_KI",
+              "level": 2,
+              "evidence": [
+                {
+                  "term": "module, representing the deliberate thinking of System 2, utilizes LLMs, such as",
+                  "snippet": "module, representing the deliberate thinking of System 2, utilizes LLMs, such as GPT-4, and is structured around two prompting stages: planning and grounding.",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+                  "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+                  "recorded_work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+                  "recorded_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+                  "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-v2-text.md",
+                  "source_sha256": "sha256:fd64251d9eed80eca0689fe3bad5e8ea15465746be71af1e38d7f8c9bdb553d1"
+                }
+              ]
+            },
+            {
+              "key": "KI_Sonstige",
+              "level": 1,
+              "evidence": [
+                {
+                  "term": "In addition to the baseline methods evaluated in the ScienceWorld paper, such as",
+                  "snippet": "In addition to the baseline methods evaluated in the ScienceWorld paper, such as DRRN, CALM, KG-A2C, and TDT, we incorporate three LLM-based prompting techniques:",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+                  "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+                  "recorded_work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+                  "recorded_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+                  "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-v2-text.md",
+                  "source_sha256": "sha256:fd64251d9eed80eca0689fe3bad5e8ea15465746be71af1e38d7f8c9bdb553d1"
+                },
+                {
+                  "term": "It is evident that LLM-based methods outperform conventional agents due to their",
+                  "snippet": "It is evident that LLM-based methods outperform conventional agents due to their superior generalization ability, albeit at a higher deployment cost.",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+                  "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+                  "recorded_work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+                  "recorded_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+                  "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-v2-text.md",
+                  "source_sha256": "sha256:fd64251d9eed80eca0689fe3bad5e8ea15465746be71af1e38d7f8c9bdb553d1"
+                }
+              ]
+            },
+            {
+              "key": "Prompting",
+              "level": 2,
+              "evidence": [
+                {
+                  "term": "In the planning stage, we prompt LLMs to locate necessary items, plan and track",
+                  "snippet": "In the planning stage, we prompt LLMs to locate necessary items, plan and track subgoals, as well as detect and fix potential exceptions and mistakes.",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+                  "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+                  "recorded_work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+                  "recorded_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+                  "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-v2-text.md",
+                  "source_sha256": "sha256:fd64251d9eed80eca0689fe3bad5e8ea15465746be71af1e38d7f8c9bdb553d1"
+                },
+                {
+                  "term": "In the grounding stage, we focus on utilizing LLMs to transform the output subgo",
+                  "snippet": "In the grounding stage, we focus on utilizing LLMs to transform the output subgoals derived from the planning stage into a sequence of actions by demonstrating potential action templates.",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+                  "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+                  "recorded_work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+                  "recorded_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+                  "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-v2-text.md",
+                  "source_sha256": "sha256:fd64251d9eed80eca0689fe3bad5e8ea15465746be71af1e38d7f8c9bdb553d1"
+                }
+              ]
+            }
+          ],
+          "analysis": null
         }
       ]
     },

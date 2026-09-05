@@ -47,7 +47,7 @@ The decision record is the annotation unit. Its substantive fields stay stable w
   "preferred_version_id": "version:11111111-1111-5111-8111-111111111111",
   "selected_version_is_preferred": true,
   "categories": { "Generative_KI": 2, "Gender": 1 },
-  "decision": "Include",
+  "decision": "Unclear",
   "reason": null,
   "evidence": { "Gender": [{ "term": "…", "snippet": "…", "source_layer": "paper", "actor": "agent", "work_id": "work:11111111-1111-5111-8111-111111111111", "version_id": "version:11111111-1111-5111-8111-111111111111" }] },
   "text_source": "raw",
@@ -91,7 +91,7 @@ The decision record is the annotation unit. Its substantive fields stay stable w
       "annotation_type": "screening_decision",
       "at": "2026-08-23T11:00:00Z",
       "actor_ids": ["ai-screening:rr1"],
-      "body": { "categories": { "Generative_KI": 2, "Gender": 1 }, "decision": "Include", "reason": null, "evidence": { "Gender": [{ "term": "…", "snippet": "…", "source_layer": "paper", "actor": "agent" }] }, "text_source": "raw", "reviewer": "ar2", "actor": "agent" }
+      "body": { "categories": { "Generative_KI": 2, "Gender": 1 }, "decision": "Unclear", "reason": null, "evidence": { "Gender": [{ "term": "…", "snippet": "…", "source_layer": "paper", "actor": "agent" }] }, "text_source": "raw", "reviewer": "ar2", "actor": "agent" }
     }
   ],
   "active_annotation_id": "ar2:ABCD1234",

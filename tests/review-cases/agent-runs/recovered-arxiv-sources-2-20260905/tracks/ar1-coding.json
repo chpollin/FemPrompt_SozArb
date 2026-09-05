@@ -1,0 +1,143 @@
+{
+  "schema": "femprompt-prisma-coding-packet/0.1",
+  "run_id": "recovered-arxiv-sources-2-20260905",
+  "reviewer": "ar1",
+  "actor": "agent",
+  "actor_id": "/root/source_reviewer_a",
+  "actor_type": "ai_agent",
+  "source_mode": "blinded_source_review_with_deterministic_prism_roundtrip",
+  "model": {
+    "provider": "OpenAI",
+    "family": "GPT-6",
+    "exact_deployment_id": null,
+    "disclosure": "Runtime family disclosed; exact deployment ID not exposed."
+  },
+  "prompt": {
+    "path": "prompts/prism-agent-reviewer-v1.2.md",
+    "version": "1.2",
+    "sha256": "3aea5ce1e84a3f2557aee507632552816792a27d698003517ae238e1ec96d8af"
+  },
+  "decisions": {
+    "RAY6G2R7": {
+      "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-v2-text.md",
+      "source_sha256": "fd64251d9eed80eca0689fe3bad5e8ea15465746be71af1e38d7f8c9bdb553d1",
+      "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+      "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+      "identity_check": {
+        "status": "provisional",
+        "basis": "Korpustitel und extrahierter Titel stimmen nach Entfernung der Layout-Zeilenumbrüche überein. Alle neun Autor:innen stimmen mit der Zuweisung überein. Der Quellheader identifiziert arXiv:2305.17390v2; die sechs zugewiesenen Original-PNGs sind im Manifest an dieselbe Version gebunden. Text- und PNG-Hashes stimmen exakt mit dem Manifest überein. Das Jahr 2023 ist mit der stabilen arXiv-Kennung und dem Manifest konsistent; das konkrete Manifestdatum 2023-12-06 ist im zugewiesenen Papertext nicht als Publikationsdatum ausgewiesen und wurde nicht separat verifiziert. Vorläufiger Status ausschließlich wegen dieser Datums-Metadatenlücke; kein Titel- oder Quellenkennungskonflikt. Wissenschaftlicher Artikel mit Methoden, Experimenten, Autorenschaft und Quellenbasis; nach der manifestierten Publikationstypregel zulässig."
+      },
+      "categories": {
+        "AI_Literacies": "nein",
+        "Generative_KI": "ja",
+        "Prompting": "ja",
+        "KI_Sonstige": "ja",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "nein",
+        "Gender": "nein",
+        "Diversitaet": "nein",
+        "Feministisch": "nein",
+        "Fairness": "nein"
+      },
+      "evidence": {
+        "AI_Literacies": [],
+        "Generative_KI": [
+          "module, representing the deliberate thinking of System 2, utilizes LLMs, such as GPT-4, and is structured around two prompting stages: planning and grounding."
+        ],
+        "Prompting": [
+          "In the planning stage, we prompt LLMs to locate necessary items, plan and track subgoals, as well as detect and fix potential exceptions and mistakes.",
+          "In the grounding stage, we focus on utilizing LLMs to transform the output subgoals derived from the planning stage into a sequence of actions by demonstrating potential action templates."
+        ],
+        "KI_Sonstige": [
+          "It effectively integrates the strengths of behavior cloning (representing System 1) and prompting LLMs (emulating System 2), resulting in significant enhancements in task completion performance and efficiency.",
+          "We establish a heuristic algorithm to control the activation and deactivation of the two modules."
+        ],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [],
+        "Gender": [],
+        "Diversitaet": [],
+        "Feministisch": [],
+        "Fairness": []
+      },
+      "decision": "Exclude",
+      "reason": "Not_relevant_topic"
+    },
+    "SQYLQFRU": {
+      "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-v3-text.md",
+      "source_sha256": "bac6454052cd33fa790fde5c12b2bfc10fd340fb20433725feecd6a804283620",
+      "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+      "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+      "identity_check": {
+        "status": "provisional",
+        "basis": "Korpustitel und extrahierter Titel stimmen überein. Sanchit Kabra, Akshita Jha und Chandan K. Reddy stimmen mit der Zuweisung überein. Der Quellheader identifiziert arXiv:2504.05632v3; die drei zugewiesenen Original-PNGs sind im Manifest an dieselbe Version gebunden. Text- und PNG-Hashes stimmen exakt mit dem Manifest überein. Das Jahr 2025 ist mit der stabilen arXiv-Kennung und dem Manifest konsistent; das konkrete Manifestdatum 2025-06-05 ist im zugewiesenen Papertext nicht als Publikationsdatum ausgewiesen und wurde nicht separat verifiziert. Vorläufiger Status ausschließlich wegen dieser Datums-Metadatenlücke; kein Titel- oder Quellenkennungskonflikt. Die Originalseiten kennzeichnen das wissenschaftliche Manuskript als Preprint, under review. Autorenschaft, Methoden, Experimente und Quellenbasis erfüllen die manifestierte Publikationstypregel."
+      },
+      "categories": {
+        "AI_Literacies": "nein",
+        "Generative_KI": "ja",
+        "Prompting": "ja",
+        "KI_Sonstige": "nein",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "nein",
+        "Diversitaet": "teilweise",
+        "Feministisch": "nein",
+        "Fairness": "ja"
+      },
+      "evidence": {
+        "AI_Literacies": [],
+        "Generative_KI": [
+          "We conduct a comprehensive evaluation of multiple open-source LLMs, and find that larger models with stronger reasoning abilities exhibit substantially lower stereotypical bias on existing fairness benchmarks."
+        ],
+        "Prompting": [
+          "Our second research question compares the effectiveness of our proposed ReGiFT approach against widely used bias mitigation strategies. Specifically, we examine whether fine-tuning non-reasoning models (LLaMA 3.1 8B, Mistral 7B, Phi-4) with ReGiFT yields less stereotypical responses than other popular instruction-tuning and prompting techniques."
+        ],
+        "KI_Sonstige": [],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "In this work, we investigate the crucial relationship between model’s reasoning ability and fairness; and ask whether improved reasoning capabilities can mitigate harmful stereotypical responses, especially those arising due to shallow or flawed reasoning."
+        ],
+        "Gender": [],
+        "Diversitaet": [
+          "It tests model behavior in fairness-sensitive contexts by presenting ambiguous and disambiguous question–context pairs across several demographic axes.",
+          "We evaluate three different dimensions: religion, nationality, and age."
+        ],
+        "Feministisch": [],
+        "Fairness": [
+          "To evaluate whether reasoning-guided fine-tuning mitigates stereotypes, we adopt a two-part evaluation framework that focuses on fairness evaluation on BBQ dataset. We focus on final answer correctness rather than intermediate reasoning:"
+        ]
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": [
+          "Research_Instrument",
+          "Object_of_Critique"
+        ],
+        "AN_Prompt_Techniques": [
+          "Thought_Generation",
+          "General_Guidance"
+        ],
+        "AN_Bias_Axes": [
+          "Age",
+          "Religion",
+          "Nationality_Migration"
+        ],
+        "AN_Harm_Types": [
+          "Stereotyping"
+        ],
+        "AN_Mitigation_Stage": [
+          "Pre_Processing",
+          "In_Training",
+          "Prompt_Practice"
+        ],
+        "AN_Mitigation_Status": "Evaluated",
+        "AN_Population": [
+          "Not_SW_Specific"
+        ],
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Experimentell",
+        "AN_Notes": "Eigene Modellvergleichs- und Ablationsexperimente, keine synthetisierte Fremdevaluation. Prompting ist Forschungsinstrument (Zero-shot-Inferenz, Trace-Erzeugung, CoT-Vergleich und LLM-as-Judge; Abschnitte 4.3, 5.2, A.1 und A.3) und Kritikgegenstand (Abschnitt 5.2: Prompt-Sensitivität und mangelnde Generalisierung). Thought_Generation: CoT sowie explizite think/answer-Struktur. Die konkrete General_Guidance lautet in A.1 wörtlich: Answer each question using the information in the preceding background paragraph. If there is not enough information provided, answer with ‘Not in background.’ Keine ICL-Codierung: A.1 schließt Demonstrationen für den Zero-shot-Prompt ausdrücklich aus. Pre_Processing: Extraktion der SQuAD-v2-Reasoning-Traces und Auswahl ausschließlich final korrekt beantworteter Beispiele mit Exact Match (3.1, Algorithmus 1); die Correct-Only/Incorrect-Only/Full-Set-Ablation in Abschnitt 6 bewertet diese Auswahl. In_Training: Supervised Fine-Tuning mit Reasoning-Traces und Antworten (3.2). Prompt_Practice: selbst evaluierte CoT-Eingabeänderung in 5.2/A.1 und Kontextbindung/Abstentionsanweisung in A.1; keine eigenständige Wirksamkeitsisolation dieser General_Guidance behauptet. Evaluated bezeichnet die abgeschlossenen eigenen ReGiFT-, Datenauswahl- und CoT-Vergleiche. Tabellen 1 bis 3 berichten höhere BBQ-Exact-Match-/Judge-Accuracy-Werte für ReGiFT als für Basismodelle; die CoT-Ergebnisse in Tabelle 3 sind gemischt bis negativ. Der Status bedeutet keine vollständige Bias-Beseitigung. Die untersuchten Bias-Achsen sind ausschließlich Alter, Religion und Nationalität (4.1 und Ergebnistabellen); keine untersuchte Interaktion zweier Achsen, kein Gender-Fokus. Stereotyping ist der explizite Schadensmechanismus; Abbildungen 1 und 3 zeigen unbegründete religionsbezogene Täterzuschreibung, A.5 nationale und altersbezogene Zuschreibungen. Die Forschungsaufgaben sind allgemeines Reading Comprehension/BBQ, ohne untersuchte Sozialarbeitspraxis oder professionelle AI-Literacy-Bildung. Technische Answer-Extraktion, Unknown-Normalisierung und LLM-Judge dienen der Messung; daraus werden keine Post_Processing-, Intra_Processing- oder Organisational_Process-Mitigationsstufen abgeleitet. Quellenbegrenzungen: Finale Antwortkorrektheit wird als Proxy für Trace-Qualität verwendet; Fußnote in 3.1 räumt ein, dass dies nicht immer gilt. Abschnitt 5.2 behauptet modest gains durch CoT, obwohl Tabelle 3 mehrere Rückgänge ausweist. Tabellen 1 und 3 enthalten voneinander abweichende Werte, etwa Mistral-ReGiFT Age Ambig. 82.78 versus 82.58 und Phi-4 Base Religion; keine Zahlen wurden harmonisiert. Abbildung 4 auf der vollständig inspizierten Originalseite 9 zeigt Mittelwerte 139.62 und 243.81 mit nicht näher bezeichneten Fehlerbalken. Daraus werden weder eine Testsignifikanz noch ein Intervalltyp oder eine Verteilung rekonstruiert. Keine nicht entscheidbaren Analysefelder; die numerischen Quellenwidersprüche begrenzen quantitative Synthese, ändern aber nicht das topical Include oder den Nachweis einer abgeschlossenen Mitigationsevaluation."
+      }
+    }
+  }
+}

@@ -81,6 +81,14 @@ def _codes(value: Any) -> tuple[str, ...]:
     return tuple(sorted({str(item).strip() for item in values if str(item).strip()}))
 
 
+def _human_disposition(row: dict) -> dict:
+    """Project multiline CSV notes with LF without changing the source row."""
+    notes = row.get("Notes")
+    return {"record_id": row["Zotero_Key"], "decision": row.get("Decision"),
+            "reason": row.get("Exclusion_Reason"),
+            "notes": notes.replace("\r\n", "\n").replace("\r", "\n") if isinstance(notes, str) else notes}
+
+
 def _csv(rows: list[dict], columns: list[str]) -> str:
     stream = io.StringIO(newline="")
     writer = csv.DictWriter(stream, fieldnames=columns, lineterminator="\n", extrasaction="ignore")
@@ -364,7 +372,7 @@ def _work_rows(registry: dict, human: list[dict], agents: dict, queue: dict, res
             "historical_identity_bindings": bound_legacy,
             "historical_resolution": work_resolution or None,
             "integrity_hold": integrity_hold,
-            "human_record_dispositions": [{"record_id": row["Zotero_Key"], "decision": row.get("Decision"), "reason": row.get("Exclusion_Reason"), "notes": row.get("Notes")} for row in human_rows],
+            "human_record_dispositions": [_human_disposition(row) for row in human_rows],
             "effective_decision": effective,
             "decision_authority": "legacy_human" if human_work_decisions else "ai_review" if agent_decisions else "unassessed",
             "human_verification": "legacy_human_annotation_not_new_lifecycle_verification" if human_rows else "not_recorded",
@@ -672,7 +680,7 @@ This directory is an internal operator package and is not a website release inpu
 | version_ids / preferred_version_id | Exact linked expressions and preferred expression; an alternative source needs a recorded exception. |
 | decision_authority | legacy_human, ai_review or unassessed; distinct tracks are never silently promoted. |
 | effective_decision | One consistent substantive human decision if recorded, otherwise one consistent AI decision; null on unresolved within-track conflict or absence. Explicit Exclude/Duplicate is a record disposition, not a substantive work exclusion. |
-| human_substantive_decisions / human_duplicate_record_ids | Work judgements and administrative duplicate records are distinct; all original dispositions and reasons remain in human_record_dispositions. |
+| human_substantive_decisions / human_duplicate_record_ids | Work judgements and administrative duplicate records are distinct; all original dispositions and reasons remain in human_record_dispositions. Multiline note line endings use LF in this projection; original CSV rows remain unchanged. |
 | historical_identity_bindings / human_metadata_error_record_ids | Attributed exact-row reconciliations link otherwise unbound historical decisions or separate documented metadata-error dispositions; they do not modify the Zotero library or historical CSV. |
 | historical_resolution / integrity_hold | Source-grounded conflict explanation, separate round-specific recommendation and any current source/withdrawal hold. A hold does not rewrite the historical decision and prevents current synthesis. |
 | human_verification | Historical CSV evidence or missing evidence; never a fabricated current lifecycle event. |

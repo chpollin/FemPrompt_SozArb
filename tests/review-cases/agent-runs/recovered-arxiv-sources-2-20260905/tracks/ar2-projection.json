@@ -1,0 +1,219 @@
+{
+  "schema": "femprompt-prisma-reviewer/0.4",
+  "reviewer": "ar2",
+  "actor": "agent",
+  "updated": "2026-09-05T19:13:29.072Z",
+  "transcription": {
+    "run_id": "recovered-arxiv-sources-2-20260905",
+    "source_packet": "tests/review-cases/agent-runs/recovered-arxiv-sources-2-20260905/tracks/ar2-coding.json",
+    "source_packet_sha256": "3f5ad00fa61e0c123a374aaaf3a36a3f0c0c4c9486666ee1451a7317bcde8bf7",
+    "method": "deterministic_packet_projection_pending_prism_roundtrip"
+  },
+  "decisions": {
+    "RAY6G2R7": {
+      "categories": {
+        "Generative_KI": 2,
+        "Prompting": 2,
+        "KI_Sonstige": 1
+      },
+      "decision": "Exclude",
+      "override": false,
+      "reason": "Not_relevant_topic",
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "module, representing the deliberate thinking of System 2, utilizes LLMs, such as",
+            "snippet": "module, representing the deliberate thinking of System 2, utilizes LLMs, such as GPT-4, and is structured around two prompting stages: planning and grounding.",
+            "ts": "2026-09-05T19:13:29.072Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "RAY6G2R7",
+            "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+            "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "In the planning stage, we prompt LLMs to locate necessary items, plan and track ",
+            "snippet": "In the planning stage, we prompt LLMs to locate necessary items, plan and track subgoals, as well as detect and fix potential exceptions and mistakes.\nIn the grounding stage, we focus on utilizing LLMs to transform the output subgoals derived from the planning",
+            "ts": "2026-09-05T19:13:29.072Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "RAY6G2R7",
+            "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+            "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "In addition to the baseline methods evaluated in the ScienceWorld paper, such as",
+            "snippet": "In addition to the baseline methods evaluated in the ScienceWorld paper, such as DRRN, CALM, KG-A2C, and TDT, we incorporate three LLM-based prompting techniques:",
+            "ts": "2026-09-05T19:13:29.072Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "RAY6G2R7",
+            "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+            "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460"
+          },
+          {
+            "term": "It is evident that LLM-based methods outperform conventional agents due to their",
+            "snippet": "It is evident that LLM-based methods outperform conventional agents due to their superior generalization ability, albeit at a higher deployment cost.",
+            "ts": "2026-09-05T19:13:29.072Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "RAY6G2R7",
+            "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+            "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460"
+          }
+        ]
+      },
+      "ts": "2026-09-05T19:13:29.072Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+      "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+      "version_type": "preprint",
+      "preferred_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+      "selected_version_is_preferred": true
+    },
+    "SQYLQFRU": {
+      "categories": {
+        "Generative_KI": 2,
+        "Prompting": 2,
+        "Bias_Ungleichheit": 2,
+        "Diversitaet": 1,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "We fine-tune these models to generate explicit reasoning traces jointly with the",
+            "snippet": "We fine-tune these models to generate explicit reasoning traces jointly with their final answers.",
+            "ts": "2026-09-05T19:13:29.072Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "SQYLQFRU",
+            "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+            "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "Our second research question compares the effectiveness of our proposed ReGiFT a",
+            "snippet": "Our second research question compares the effectiveness of our proposed ReGiFT approach against widely used bias mitigation strategies. Specifically, we examine whether fine-tuning non-reasoning models (LLaMA 3.1 8B, Mistral 7B, Phi-4) with ReGiFT yields less ",
+            "ts": "2026-09-05T19:13:29.072Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "SQYLQFRU",
+            "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+            "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Our findings highlight that enhancing reasoning capabilities is an effective, fa",
+            "snippet": "Our findings highlight that enhancing reasoning capabilities is an effective, fairness-agnostic strategy for mitigating stereotypical bias caused by reasoning flaws.",
+            "ts": "2026-09-05T19:13:29.072Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "SQYLQFRU",
+            "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+            "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "We then evaluate them on ambiguous and disambiguous contexts across three bias d",
+            "snippet": "We then evaluate them on ambiguous and disambiguous contexts across three bias dimensions: age, religion, and nationality of the BBQ dataset.",
+            "ts": "2026-09-05T19:13:29.072Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "SQYLQFRU",
+            "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+            "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
+          },
+          {
+            "term": "A higher Exact Match and LLM-as-judge accuracy score in ambiguous contexts is in",
+            "snippet": "A higher Exact Match and LLM-as-judge accuracy score in ambiguous contexts is indicative of models abstaining from defaulting to identity groups in their response.",
+            "ts": "2026-09-05T19:13:29.072Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "SQYLQFRU",
+            "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+            "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "To evaluate whether reasoning-guided fine-tuning mitigates stereotypes, we adopt",
+            "snippet": "To evaluate whether reasoning-guided fine-tuning mitigates stereotypes, we adopt a two-part evaluation framework that focuses on fairness evaluation on BBQ dataset. We focus on final answer correctness rather than intermediate reasoning:",
+            "ts": "2026-09-05T19:13:29.072Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "SQYLQFRU",
+            "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+            "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
+          }
+        ]
+      },
+      "ts": "2026-09-05T19:13:29.072Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+      "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+      "version_type": "preprint",
+      "preferred_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Research_Instrument",
+            "Object_of_Critique"
+          ],
+          "AN_Prompt_Techniques": [
+            "Thought_Generation",
+            "General_Guidance"
+          ],
+          "AN_Bias_Axes": [
+            "Age",
+            "Religion",
+            "Nationality_Migration"
+          ],
+          "AN_Harm_Types": [
+            "Stereotyping"
+          ],
+          "AN_Mitigation_Stage": [
+            "Pre_Processing",
+            "In_Training",
+            "Prompt_Practice"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Experimentell",
+          "AN_Notes": "Own experiments, not a synthesised evaluation: ReGiFT selects SQuAD-v2 reasoning traces by final-answer correctness (section 3.1; Pre_Processing), uses these traces in supervised fine-tuning of LLaMA 3.1 8B, Mistral 7B and Phi-4 (3.2; In_Training), and evaluates performance on the age, religion and nationality subsets of BBQ (4–5; Tables 1–3). Tables 1–2 report higher Exact Match and LLM-as-judge accuracy for ReGiFT than for the corresponding base models; Evaluated refers to these completed mitigation experiments and to the CoT/instruction-tuning comparison, without implying universal efficacy or removal of bias. Section 5.2 evaluates CoT prompting as a mitigation comparator (Prompt_Practice) and critiques its sensitivity and limited generalisation. Thought_Generation is supported by the CoT instruction and tagged reasoning prompts in A.1. General_Guidance strategy, verbatim A.1: “Answer each question using the information in the preceding background paragraph. If there is not enough information provided, answer with ‘Not in background.’” A.3 also defines contextual/gold-answer judging criteria. Prompts are research instruments and an object of critique; there is no human AI-literacy curriculum. No in-context demonstrations are used in the reported zero-shot prompts. Demographic axes are evaluated separately: no interacting-axis or feminist analysis; Gender appears only in referenced works, not in the experiments. Stereotyping is the measured harm, illustrated by identity-group attributions (Figures 1 and 3; A.5). The real-estate and grandfather/grandson examples are benchmark scenarios, not social-work field settings. Final-answer correctness is an admitted proxy for trace validity (3.1), and the work targets stereotypes arising from reasoning flaws, not all societal bias (Limitations). Numerical limitations remain unresolved: Table 1 and Table 3 give different Mistral ReGiFT age ambiguous/overall scores (82.78/84.01 versus 82.58/83.91) and different Phi-4 religion and nationality entries; the prose claim that CoT yields modest gains is not uniformly supported by its mixed/negative Table 3 results. Figure 4 labels means 139.62 and 243.81 tokens, but the error-bar quantity and sample sizes are not defined in the assigned source; no confidence intervals, significance test, causal trace-length effect or usable threshold is inferred. All three assigned PNGs were visually inspected."
+        },
+        "undecidable": {}
+      }
+    }
+  }
+}

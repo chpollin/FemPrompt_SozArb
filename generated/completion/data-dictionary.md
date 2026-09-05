@@ -1,6 +1,6 @@
 # Data dictionary
 
-Source fingerprint: `sha256:7c559be485432bbc48769c5a72d1755633cd1996d8cec16d486e98dd0fdc1af3`. Deterministic internal preparation; no approval is created.
+Source fingerprint: `sha256:233004c51059be582e73dc0750db4b1df50993f07262931940b501802dca0db3`. Deterministic internal preparation; no approval is created.
 
 | Field / artifact | Meaning |
 |---|---|
@@ -9,7 +9,7 @@ Source fingerprint: `sha256:7c559be485432bbc48769c5a72d1755633cd1996d8cec16d486e
 | version_ids / preferred_version_id | Exact linked expressions and preferred expression; an alternative source needs a recorded exception. |
 | decision_authority | legacy_human, ai_review or unassessed; distinct tracks are never silently promoted. |
 | effective_decision | One consistent substantive human decision if recorded, otherwise one consistent AI decision; null on unresolved within-track conflict or absence. Explicit Exclude/Duplicate is a record disposition, not a substantive work exclusion. |
-| human_substantive_decisions / human_duplicate_record_ids | Work judgements and administrative duplicate records are distinct; all original dispositions and reasons remain in human_record_dispositions. |
+| human_substantive_decisions / human_duplicate_record_ids | Work judgements and administrative duplicate records are distinct; all original dispositions and reasons remain in human_record_dispositions. Multiline note line endings use LF in this projection; original CSV rows remain unchanged. |
 | historical_identity_bindings / human_metadata_error_record_ids | Attributed exact-row reconciliations link otherwise unbound historical decisions or separate documented metadata-error dispositions; they do not modify the Zotero library or historical CSV. |
 | historical_resolution / integrity_hold | Source-grounded conflict explanation, separate round-specific recommendation and any current source/withdrawal hold. A hold does not rewrite the historical decision and prevents current synthesis. |
 | human_verification | Historical CSV evidence or missing evidence; never a fabricated current lifecycle event. |

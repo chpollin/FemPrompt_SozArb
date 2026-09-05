@@ -50,6 +50,7 @@ The automated suites cover the following contracts.
 - Ordinary PRISM entry and reload start read-only even with a stored reviewer profile: no reviewer/folder setup, cache writes or disk writes occur. `Bearbeiten` enables editing; returning to reading preserves the unsaved draft. Explicit trial, agent and verification routes retain their workflows, and acceptance remains read-only.
 - Browser recovery and repository files reconcile per Paper without silent overwrite.
 - Agent coding packets pass through PRISM's production validation, import, record-requirement, and serialization functions.
+- The governed transfer CLI explicitly activates editing before import. A CLI regression checks the complete projection and roundtrip against an unchanged archived packet; a reviewer profile alone leaves normal reading mode intact.
 - Validation receipts bind to the hash of the checked annotation.
 - Lifecycle transitions require authorised actor roles and valid predecessor states.
 - Productive agent merges are append-only and reject divergent overwrite.

@@ -59,7 +59,7 @@ A run manifest establishes completed execution only when its lifecycle is comple
 - Continue unresolved residual cases from the [current completion queue](../generated/completion/README.md), preserving the already applied [metadata corrections](../corpus/metadata_corrections.json) and [exact source bindings](../corpus/source_version_bindings.json).
 - Import the conflict-free RIS package into Zotero, resolve the withheld records, and export the curated Zotero corpus before productive round-two screening.
 - Bind the prepared Codex Websearch sources to the curated Work-Version registry and recover the remaining accessible full texts.
-- Extend the PRISM evidence contract after Work-Version binding so the two validated visual source bundles can enter screening.
+- Bind the prepared intake's visual source bundles after Work-Version reconciliation. The run contract now supports hash-bound original PNGs as mandatory assigned reading when declared; standalone image-based category evidence remains outside the text-quotation contract.
 - Apply the governed coding and AI Agent Review workflow to every work that becomes source-ready.
 - Extend complete analysis coding and source-checked distillates for eligible literature, then generate Assertions for the qualitative synthesis. Recompute tables with their actual coverage denominators.
 - Have domain experts verify the prepared screening records, Assertions, report, and paper interpretation.

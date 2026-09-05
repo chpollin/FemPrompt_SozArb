@@ -1,28 +1,28 @@
 # Provisional source-bound synthesis outline
 
-Source fingerprint: `sha256:7c559be485432bbc48769c5a72d1755633cd1996d8cec16d486e98dd0fdc1af3`. Deterministic internal preparation; no approval is created.
+Source fingerprint: `sha256:233004c51059be582e73dc0750db4b1df50993f07262931940b501802dca0db3`. Deterministic internal preparation; no approval is created.
 
 This is a writing and verification plan, not a finished synthesis. The canonical manuscript remains `research-vault/40_output/paper/paper.md`. Tables count recorded coding; the statements below are existing assertion texts with their recorded authority, not new findings.
 
 ## SQ1: Prompting techniques and proposed, demonstrated or evaluated uses
 
-- `AN_Prompt_Techniques`: 20 coded works out of 146 works with recorded Include; 126 missing or unresolved. See the CSV for codes and contributing work IDs.
-- `AN_Mitigation_Status`: 20 coded works out of 146 works with recorded Include; 126 missing or unresolved. See the CSV for codes and contributing work IDs.
+- `AN_Prompt_Techniques`: 21 coded works out of 147 works with recorded Include; 126 missing or unresolved. See the CSV for codes and contributing work IDs.
+- `AN_Mitigation_Status`: 21 coded works out of 147 works with recorded Include; 126 missing or unresolved. See the CSV for codes and contributing work IDs.
 
 Before final prose, complete missing codes, reconcile conflicts, distinguish observed study findings from proposals, and assess design limitations. Do not infer that absent coding demonstrates a literature gap.
 
 ## SQ2: Bias axes, harm types, mitigation stages and evidence status
 
-- `AN_Bias_Axes`: 20 coded works out of 146 works with recorded Include; 126 missing or unresolved. See the CSV for codes and contributing work IDs.
-- `AN_Harm_Types`: 20 coded works out of 146 works with recorded Include; 126 missing or unresolved. See the CSV for codes and contributing work IDs.
-- `AN_Mitigation_Stage`: 20 coded works out of 146 works with recorded Include; 126 missing or unresolved. See the CSV for codes and contributing work IDs.
-- `AN_Mitigation_Status`: 20 coded works out of 146 works with recorded Include; 126 missing or unresolved. See the CSV for codes and contributing work IDs.
+- `AN_Bias_Axes`: 21 coded works out of 147 works with recorded Include; 126 missing or unresolved. See the CSV for codes and contributing work IDs.
+- `AN_Harm_Types`: 21 coded works out of 147 works with recorded Include; 126 missing or unresolved. See the CSV for codes and contributing work IDs.
+- `AN_Mitigation_Stage`: 21 coded works out of 147 works with recorded Include; 126 missing or unresolved. See the CSV for codes and contributing work IDs.
+- `AN_Mitigation_Status`: 21 coded works out of 147 works with recorded Include; 126 missing or unresolved. See the CSV for codes and contributing work IDs.
 
 Before final prose, complete missing codes, reconcile conflicts, distinguish observed study findings from proposals, and assess design limitations. Do not infer that absent coding demonstrates a literature gap.
 
 ## SQ3: Social work populations, settings, constraints and transfer limits
 
-- `AN_Population`: 20 coded works out of 146 works with recorded Include; 126 missing or unresolved. See the CSV for codes and contributing work IDs.
+- `AN_Population`: 21 coded works out of 147 works with recorded Include; 126 missing or unresolved. See the CSV for codes and contributing work IDs.
 
 Before final prose, complete missing codes, reconcile conflicts, distinguish observed study findings from proposals, and assess design limitations. Do not infer that absent coding demonstrates a literature gap.
 
@@ -37,6 +37,19 @@ Ahn et al. propose integrating AI literacy across existing core competencies.
 Current source review: `/root/research_completion`, GPT-6, `2026-09-05T12:20:05Z`. Compared the assertion and its distillate block s1 with the original Discussion. The verb propose matches the explicit author recommendation and avoids presenting the conceptual framework as empirically validated. The referenced Work-Version binding matches the active distillate. Future empirical testing remains open in the source. Accepted as an AI-reviewed report of a proposal, not human verification.
 
 - `research-vault/20_distillates/publications/ahn-2025-ai-literacy-for-social-work.md#^s1`; Work `work:70312fae-6975-587e-b409-06a82d50b6ce`; Version `version:7b79b88e-3857-5a65-8cfe-94478052d8ee`; distillate state `ai-agent-reviewed`.
+
+Review exact text, study conditions, direction of reported findings and transfer limits before expanding this statement. Preserve the AI-review and human-verification distinction.
+
+### Kabra et al. transfer reasoning traces through fine-tuning
+
+Recorded state: `ai-agent-reviewed`. Source: `research-vault/30_assertions/kabra-et-al-transfer-reasoning-through-fine-tuning-for-bias-mitigation.md`.
+
+Kabra, Jha and Reddy define ReGiFT as a fine-tuning procedure that transfers reasoning traces generated by a reasoning model to base models as training supervision.
+
+Current source review: `/root/source_review_check`, GPT-6, `2026-09-05T19:23:05.511878Z`. Accepted the single bounded method assertion: ReGiFT transfers generated reasoning traces as training supervision through fine-tuning. Both cited distillate anchors s1 and s2 were traced to and checked against original ReGiFT v3 passages in sections 3 and 3.2; the receipt cites that original source directly. The inference-time CoT distinction follows the section 3.2 comparison. The assertion correctly withholds universal bias-mitigation efficacy, trace correctness/faithfulness, consensus and human verification. Full final Markdown was read after promotion; original preparer attribution remains and current AI-review status is explicit. No substantive method correction was required.
+
+- `research-vault/20_distillates/publications/kabra-2025-reasoning-guided-fine-tuning.md#^s1`; Work `work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2`; Version `version:8df649a5-eae4-54d8-9105-3768e0083beb`; distillate state `ai-agent-reviewed`.
+- `research-vault/20_distillates/publications/kabra-2025-reasoning-guided-fine-tuning.md#^s2`; Work `work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2`; Version `version:8df649a5-eae4-54d8-9105-3768e0083beb`; distillate state `ai-agent-reviewed`.
 
 Review exact text, study conditions, direction of reported findings and transfer limits before expanding this statement. Preserve the AI-review and human-verification distinction.
 

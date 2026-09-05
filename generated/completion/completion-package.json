@@ -131,9 +131,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Prompt_Techniques",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ1",
@@ -148,22 +148,24 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Prompt_Techniques",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ1",
       "value": "Thought_Generation",
-      "work_count": 0,
-      "work_ids": []
+      "work_count": 1,
+      "work_ids": [
+        "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2"
+      ]
     },
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Prompt_Techniques",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ1",
@@ -174,9 +176,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Prompt_Techniques",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ1",
@@ -187,9 +189,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Prompt_Techniques",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ1",
@@ -200,9 +202,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Prompt_Techniques",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ1",
@@ -215,16 +217,17 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Prompt_Techniques",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ1",
       "value": "General_Guidance",
-      "work_count": 4,
+      "work_count": 5,
       "work_ids": [
         "work:1d6d18e8-3caa-5677-b0c0-b46ab20aab43",
+        "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
         "work:904b0cbf-d423-5dde-ba01-40a61605b88c",
         "work:ce611f7b-8bda-5e6a-9ca9-3b46a8027694",
         "work:f01ca4fe-7f9b-59f6-98d9-4e84559cd850"
@@ -233,9 +236,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Prompt_Techniques",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ1",
@@ -262,16 +265,17 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Mitigation_Status",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ1",
       "value": "Evaluated",
-      "work_count": 3,
+      "work_count": 4,
       "work_ids": [
         "work:0a676f75-d839-5eb9-b390-5921f1658895",
+        "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
         "work:61b5eb97-0fa5-5a1b-a3f7-3a892158e2d3",
         "work:fdf4e7e1-80c8-56bd-9e16-9031a45ff712"
       ]
@@ -279,9 +283,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Mitigation_Status",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ1",
@@ -294,9 +298,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Mitigation_Status",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ1",
@@ -322,9 +326,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Mitigation_Status",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ1",
@@ -338,9 +342,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Bias_Axes",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ2",
@@ -367,9 +371,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Bias_Axes",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ2",
@@ -394,9 +398,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Bias_Axes",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ2",
@@ -416,9 +420,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Bias_Axes",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ2",
@@ -436,16 +440,17 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Bias_Axes",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ2",
       "value": "Age",
-      "work_count": 6,
+      "work_count": 7,
       "work_ids": [
         "work:1d6d18e8-3caa-5677-b0c0-b46ab20aab43",
+        "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
         "work:3627182f-8335-5c7b-81e8-4d4daebd440a",
         "work:5e32c60e-f330-5cba-b414-c2fee079146c",
         "work:61b5eb97-0fa5-5a1b-a3f7-3a892158e2d3",
@@ -456,9 +461,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Bias_Axes",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ2",
@@ -479,9 +484,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Bias_Axes",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ2",
@@ -499,9 +504,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Bias_Axes",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ2",
@@ -517,16 +522,17 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Bias_Axes",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ2",
       "value": "Religion",
-      "work_count": 4,
+      "work_count": 5,
       "work_ids": [
         "work:1d6d18e8-3caa-5677-b0c0-b46ab20aab43",
+        "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
         "work:3627182f-8335-5c7b-81e8-4d4daebd440a",
         "work:61b5eb97-0fa5-5a1b-a3f7-3a892158e2d3",
         "work:ce611f7b-8bda-5e6a-9ca9-3b46a8027694"
@@ -535,9 +541,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Bias_Axes",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ2",
@@ -551,16 +557,17 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Bias_Axes",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ2",
       "value": "Nationality_Migration",
-      "work_count": 6,
+      "work_count": 7,
       "work_ids": [
         "work:1d6d18e8-3caa-5677-b0c0-b46ab20aab43",
+        "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
         "work:3627182f-8335-5c7b-81e8-4d4daebd440a",
         "work:5e32c60e-f330-5cba-b414-c2fee079146c",
         "work:61b5eb97-0fa5-5a1b-a3f7-3a892158e2d3",
@@ -571,9 +578,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Bias_Axes",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ2",
@@ -584,9 +591,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Bias_Axes",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ2",
@@ -599,9 +606,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Harm_Types",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ2",
@@ -615,9 +622,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Harm_Types",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ2",
@@ -641,9 +648,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Harm_Types",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ2",
@@ -659,9 +666,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Harm_Types",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ2",
@@ -685,9 +692,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Harm_Types",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ2",
@@ -707,18 +714,19 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Harm_Types",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ2",
       "value": "Stereotyping",
-      "work_count": 13,
+      "work_count": 14,
       "work_ids": [
         "work:0a676f75-d839-5eb9-b390-5921f1658895",
         "work:1d6d18e8-3caa-5677-b0c0-b46ab20aab43",
         "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
+        "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
         "work:3627182f-8335-5c7b-81e8-4d4daebd440a",
         "work:3dc3ced9-8261-5840-9d71-aa2dfc43af87",
         "work:4b1bc38b-3228-5112-ac8f-026d8d4f7a2e",
@@ -734,9 +742,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Harm_Types",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ2",
@@ -749,9 +757,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Harm_Types",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ2",
@@ -776,9 +784,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Harm_Types",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ2",
@@ -800,9 +808,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Harm_Types",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ2",
@@ -815,16 +823,17 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Mitigation_Stage",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ2",
       "value": "Pre_Processing",
-      "work_count": 10,
+      "work_count": 11,
       "work_ids": [
         "work:1d6d18e8-3caa-5677-b0c0-b46ab20aab43",
+        "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
         "work:3627182f-8335-5c7b-81e8-4d4daebd440a",
         "work:3dc3ced9-8261-5840-9d71-aa2dfc43af87",
         "work:4b1bc38b-3228-5112-ac8f-026d8d4f7a2e",
@@ -839,16 +848,17 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Mitigation_Stage",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ2",
       "value": "In_Training",
-      "work_count": 4,
+      "work_count": 5,
       "work_ids": [
         "work:1d6d18e8-3caa-5677-b0c0-b46ab20aab43",
+        "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
         "work:5e32c60e-f330-5cba-b414-c2fee079146c",
         "work:61b5eb97-0fa5-5a1b-a3f7-3a892158e2d3",
         "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083"
@@ -857,9 +867,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Mitigation_Stage",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ2",
@@ -870,9 +880,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Mitigation_Stage",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ2",
@@ -885,25 +895,26 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Mitigation_Stage",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ2",
       "value": "Prompt_Practice",
-      "work_count": 2,
+      "work_count": 3,
       "work_ids": [
         "work:1d6d18e8-3caa-5677-b0c0-b46ab20aab43",
+        "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
         "work:ce611f7b-8bda-5e6a-9ca9-3b46a8027694"
       ]
     },
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Mitigation_Stage",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ2",
@@ -933,9 +944,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Mitigation_Stage",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ2",
@@ -949,16 +960,17 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Mitigation_Status",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ2",
       "value": "Evaluated",
-      "work_count": 3,
+      "work_count": 4,
       "work_ids": [
         "work:0a676f75-d839-5eb9-b390-5921f1658895",
+        "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
         "work:61b5eb97-0fa5-5a1b-a3f7-3a892158e2d3",
         "work:fdf4e7e1-80c8-56bd-9e16-9031a45ff712"
       ]
@@ -966,9 +978,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Mitigation_Status",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ2",
@@ -981,9 +993,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Mitigation_Status",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ2",
@@ -1009,9 +1021,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Mitigation_Status",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ2",
@@ -1025,9 +1037,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Population",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ3",
@@ -1043,9 +1055,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Population",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ3",
@@ -1058,9 +1070,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Population",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ3",
@@ -1073,9 +1085,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Population",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ3",
@@ -1086,9 +1098,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Population",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ3",
@@ -1101,9 +1113,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Population",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ3",
@@ -1117,9 +1129,9 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Population",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ3",
@@ -1134,16 +1146,17 @@
     {
       "authority": "provisional_recorded_ai_review",
       "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
-      "denominator_ai_analysis_eligible_works": 20,
-      "denominator_field_coded_works": 20,
-      "denominator_recorded_include_works": 146,
+      "denominator_ai_analysis_eligible_works": 21,
+      "denominator_field_coded_works": 21,
+      "denominator_recorded_include_works": 147,
       "field": "AN_Population",
       "missing_or_unresolved_included_works": 126,
       "question": "SQ3",
       "value": "Not_SW_Specific",
-      "work_count": 12,
+      "work_count": 13,
       "work_ids": [
         "work:1d6d18e8-3caa-5677-b0c0-b46ab20aab43",
+        "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
         "work:3627182f-8335-5c7b-81e8-4d4daebd440a",
         "work:3dc3ced9-8261-5840-9d71-aa2dfc43af87",
         "work:5e32c60e-f330-5cba-b414-c2fee079146c",
@@ -1205,6 +1218,75 @@
       "title": "Ahn et al. propose integrating AI literacy across existing core competencies",
       "work_ids": [
         "work:70312fae-6975-587e-b409-06a82d50b6ce"
+      ]
+    },
+    {
+      "authority_note": "Recorded AI-review state is distinct from human verification; structural grounding does not verify meaning.",
+      "checked": {
+        "ai-agent-review": "2026-09-05",
+        "validation": "2026-09-05"
+      },
+      "current_ai_source_review": {
+        "agent_id": "/root/source_review_check",
+        "artifact": "research-vault/30_assertions/kabra-et-al-transfer-reasoning-through-fine-tuning-for-bias-mitigation.md",
+        "findings": "Accepted the single bounded method assertion: ReGiFT transfers generated reasoning traces as training supervision through fine-tuning. Both cited distillate anchors s1 and s2 were traced to and checked against original ReGiFT v3 passages in sections 3 and 3.2; the receipt cites that original source directly. The inference-time CoT distinction follows the section 3.2 comparison. The assertion correctly withholds universal bias-mitigation efficacy, trace correctness/faithfulness, consensus and human verification. Full final Markdown was read after promotion; original preparer attribution remains and current AI-review status is explicit. No substantive method correction was required.",
+        "model": "GPT-6",
+        "model_id_status": "Runtime family disclosed; exact deployment ID not exposed; no immutable identifier claimed",
+        "result": "accepted",
+        "reviewed_at": "2026-09-05T19:23:05.511878Z",
+        "sha256": "sha256:730a652c89b468bfaf3c20a06f098c9303636722cf6ca838b62c8fb89c83d486"
+      },
+      "path": "research-vault/30_assertions/kabra-et-al-transfer-reasoning-through-fine-tuning-for-bias-mitigation.md",
+      "sources": [
+        {
+          "anchor": "^s1",
+          "anchor_present": true,
+          "current_ai_source_review": {
+            "agent_id": "/root/source_review_check",
+            "artifact": "research-vault/20_distillates/publications/kabra-2025-reasoning-guided-fine-tuning.md",
+            "findings": "Accepted all three method statements and every quoted passage at its exact original-source locator: section 3 describes trace extraction followed by base-model fine-tuning; section 3.2 explicitly contrasts learned reasoning with inference-time CoT; section 4.1 reserves BBQ for evaluation. The broader method paragraph correctly names the trace model, SQuAD-v2, correct-final-answer selection and the three tested axes. Source footnote 2, Ethics/Limitations and visually inspected original Figures 1–4 support the stated boundaries; neither trace faithfulness, general efficacy, social-work transfer nor graph significance is asserted. Full final Markdown was read after promotion, including preserved preparation provenance and updated pending-review wording. CSL title/authors/exact version/date agree with the original-source text and separately checked original arXiv metadata. No substantive method correction was required; only accurately attributed AI-review maturity/provenance was updated.",
+            "model": "GPT-6",
+            "model_id_status": "Runtime family disclosed; exact deployment ID not exposed; no immutable identifier claimed",
+            "result": "accepted",
+            "reviewed_at": "2026-09-05T19:23:05.511878Z",
+            "sha256": "sha256:038942280c678580eae9084fb298a18b2c462350f7c5c05e56ce1e5284b7dfe5"
+          },
+          "distillate_state": "ai-agent-reviewed",
+          "exists": true,
+          "link": "[[20_distillates/publications/kabra-2025-reasoning-guided-fine-tuning#^s1]]",
+          "path": "research-vault/20_distillates/publications/kabra-2025-reasoning-guided-fine-tuning.md",
+          "record_id": "SQYLQFRU",
+          "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+          "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2"
+        },
+        {
+          "anchor": "^s2",
+          "anchor_present": true,
+          "current_ai_source_review": {
+            "agent_id": "/root/source_review_check",
+            "artifact": "research-vault/20_distillates/publications/kabra-2025-reasoning-guided-fine-tuning.md",
+            "findings": "Accepted all three method statements and every quoted passage at its exact original-source locator: section 3 describes trace extraction followed by base-model fine-tuning; section 3.2 explicitly contrasts learned reasoning with inference-time CoT; section 4.1 reserves BBQ for evaluation. The broader method paragraph correctly names the trace model, SQuAD-v2, correct-final-answer selection and the three tested axes. Source footnote 2, Ethics/Limitations and visually inspected original Figures 1–4 support the stated boundaries; neither trace faithfulness, general efficacy, social-work transfer nor graph significance is asserted. Full final Markdown was read after promotion, including preserved preparation provenance and updated pending-review wording. CSL title/authors/exact version/date agree with the original-source text and separately checked original arXiv metadata. No substantive method correction was required; only accurately attributed AI-review maturity/provenance was updated.",
+            "model": "GPT-6",
+            "model_id_status": "Runtime family disclosed; exact deployment ID not exposed; no immutable identifier claimed",
+            "result": "accepted",
+            "reviewed_at": "2026-09-05T19:23:05.511878Z",
+            "sha256": "sha256:038942280c678580eae9084fb298a18b2c462350f7c5c05e56ce1e5284b7dfe5"
+          },
+          "distillate_state": "ai-agent-reviewed",
+          "exists": true,
+          "link": "[[20_distillates/publications/kabra-2025-reasoning-guided-fine-tuning#^s2]]",
+          "path": "research-vault/20_distillates/publications/kabra-2025-reasoning-guided-fine-tuning.md",
+          "record_id": "SQYLQFRU",
+          "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+          "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2"
+        }
+      ],
+      "state": "ai-agent-reviewed",
+      "statement": "Kabra, Jha and Reddy define ReGiFT as a fine-tuning procedure that transfers reasoning traces generated by a reasoning model to base models as training supervision.",
+      "structural_grounding_complete": true,
+      "title": "Kabra et al. transfer reasoning traces through fine-tuning",
+      "work_ids": [
+        "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2"
       ]
     },
     {
@@ -3657,25 +3739,25 @@
     }
   ],
   "counts": {
-    "active_assertions": 3,
-    "active_assertions_with_current_ai_source_review": 3,
-    "ai_review_recorded_works": 29,
+    "active_assertions": 4,
+    "active_assertions_with_current_ai_source_review": 4,
+    "ai_review_recorded_works": 31,
     "assertion_states": {
-      "ai-agent-reviewed": 3
+      "ai-agent-reviewed": 4
     },
     "candidates_2026": 58,
     "candidates_2026_current_ready_source": 33,
     "candidates_2026_recorded_source_ready": 33,
     "candidates_2026_with_canonical_binding": 0,
     "canonical_decisions": {
-      "Exclude": 95,
-      "Include": 146,
-      "unresolved": 16
+      "Exclude": 96,
+      "Include": 147,
+      "unresolved": 14
     },
     "canonical_record_bound_works": 257,
     "canonical_records": 326,
     "human_annotated_works": 229,
-    "queued_source_works": 8,
+    "queued_source_works": 6,
     "reconciled_historical_human_records": 2,
     "records_with_accepted_ai_correction": 9,
     "registry_all_works": 280,
@@ -5314,11 +5396,12 @@
   "knowledge_coverage": {
     "active": {
       "counts_by_type": {
-        "assertion": 3,
-        "distillate": 3,
+        "assertion": 4,
+        "distillate": 4,
         "moc": 3
       },
       "distillate_work_ids": [
+        "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
         "work:70312fae-6975-587e-b409-06a82d50b6ce",
         "work:7644e99b-9dd1-545f-af98-ab7fed6643e6",
         "work:843c90a1-99ba-5cbf-9c92-df165923d2b2"
@@ -5329,6 +5412,12 @@
           "recorded_status": "ai-agent-reviewed",
           "type": "distillate",
           "work_id": "work:70312fae-6975-587e-b409-06a82d50b6ce"
+        },
+        {
+          "path": "research-vault/20_distillates/publications/kabra-2025-reasoning-guided-fine-tuning.md",
+          "recorded_status": "ai-agent-reviewed",
+          "type": "distillate",
+          "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2"
         },
         {
           "path": "research-vault/20_distillates/publications/kamruzzaman-2024-dual-process-prompting.md",
@@ -5363,6 +5452,11 @@
           "type": "assertion"
         },
         {
+          "path": "research-vault/30_assertions/kabra-et-al-transfer-reasoning-through-fine-tuning-for-bias-mitigation.md",
+          "recorded_status": "ai-agent-reviewed",
+          "type": "assertion"
+        },
+        {
           "path": "research-vault/30_assertions/kaneko-et-al-report-cot-reduced-bias-in-specific-evaluations.md",
           "recorded_status": "ai-agent-reviewed",
           "type": "assertion"
@@ -5374,7 +5468,7 @@
         }
       ],
       "recorded_status_counts": {
-        "ai-agent-reviewed": 6,
+        "ai-agent-reviewed": 8,
         "unrecorded": 3
       }
     },
@@ -6984,7 +7078,7 @@
     "targeted_followup_search_date": "2026-09-05",
     "targeted_gap_fill_candidates": true
   },
-  "source_fingerprint": "sha256:7c559be485432bbc48769c5a72d1755633cd1996d8cec16d486e98dd0fdc1af3",
+  "source_fingerprint": "sha256:233004c51059be582e73dc0750db4b1df50993f07262931940b501802dca0db3",
   "sources": [
     {
       "path": "assessment/categories.yaml",
@@ -7204,7 +7298,7 @@
     },
     {
       "path": "docs/data/screening/ar2.json",
-      "sha256": "97c1aace191c233a99dad8d091475ca49a0c6d6a5cb6737397e5f7444aacf399"
+      "sha256": "e6e38a90de2ae953f61c3b0523c1bfda869c3ac14a6976786b0af054c59ac7a4"
     },
     {
       "path": "docs/vault/Papers/-It happened to be the perfect thing-- Experiences of generative AI chatbots for mental health.md",
@@ -7940,7 +8034,7 @@
     },
     {
       "path": "generated/agent-screening-queue.json",
-      "sha256": "1c0ef90cc645459c15e8e8686a1294ef838b0af63534b2f415af2a6864672897"
+      "sha256": "7f80fa444959b25fe29f7f87a5a552077f45ca3a6f76a20cc669b6ffe65db5bc"
     },
     {
       "path": "generated/conformance/conformance_map.yaml",
@@ -9212,7 +9306,7 @@
     },
     {
       "path": "generated/verification/ai-source-reviews.json",
-      "sha256": "7559bfde50e4020d055056d3c6a1059cc8a9872195732619da2d7cedeb7b94fa"
+      "sha256": "f65d287029409c89b442dac94c1a42729d3b88decdb610fa89de12049cfc5f10"
     },
     {
       "path": "generated/verification/historical-resolution-2026-09-05.json",
@@ -9627,6 +9721,10 @@
       "sha256": "972081a107471839e52aac18b4c4daf59b14962b16d67da8906a05b45b8fa41d"
     },
     {
+      "path": "research-vault/20_distillates/publications/kabra-2025-reasoning-guided-fine-tuning.md",
+      "sha256": "038942280c678580eae9084fb298a18b2c462350f7c5c05e56ce1e5284b7dfe5"
+    },
+    {
       "path": "research-vault/20_distillates/publications/kamruzzaman-2024-dual-process-prompting.md",
       "sha256": "a1085eb826896eedba660e0ab98ca7f211803a913993608131a49fbac68451d6"
     },
@@ -9644,11 +9742,15 @@
     },
     {
       "path": "research-vault/30_assertions/MOC-Prompting-and-Bias-Mitigation.md",
-      "sha256": "32cd2f3594013fdbfed1c6e3d0d3cfa29acd0e042af5e7add8e74b3fa1475cf6"
+      "sha256": "4ed2b4d59d07b6d2129bb2b1da4a3ccafd22ca8b255bd38a95884d4ea0c433a6"
     },
     {
       "path": "research-vault/30_assertions/ahn-et-al-propose-integrating-ai-literacy-across-existing-core-competencies.md",
       "sha256": "97030c4b4049d47849421135a31e50d7cb1473814c21e2e925942e63f841df49"
+    },
+    {
+      "path": "research-vault/30_assertions/kabra-et-al-transfer-reasoning-through-fine-tuning-for-bias-mitigation.md",
+      "sha256": "730a652c89b468bfaf3c20a06f098c9303636722cf6ca838b62c8fb89c83d486"
     },
     {
       "path": "research-vault/30_assertions/kaneko-et-al-report-cot-reduced-bias-in-specific-evaluations.md",
@@ -9664,7 +9766,7 @@
     },
     {
       "path": "src/analysis/build_completion_package.py",
-      "sha256": "1f1fb5853e7fb6d019c3e57f59227b2590ba5a305d1d5ee6e64d18b3d40990a1"
+      "sha256": "c5b847ac6321f71203ca46728dfe7d693e2b28ec542ae673bda1ac12852e5850"
     },
     {
       "path": "src/analysis/historical_resolution.py",
@@ -12873,23 +12975,300 @@
       "work_id": "work:21fb26e6-0662-58b2-bb09-35d6c7c54bdd"
     },
     {
-      "agent_decisions": [],
-      "agent_lifecycle_states": [],
-      "agent_records": [],
+      "agent_decisions": [
+        "Include"
+      ],
+      "agent_lifecycle_states": [
+        "ai-agent-reviewed"
+      ],
+      "agent_records": [
+        {
+          "activities": [
+            {
+              "associated_actor_ids": [
+                "/root/source_reviewer_a",
+                "/root/source_reviewer_b"
+              ],
+              "id": "SQYLQFRU:agent-annotation",
+              "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+              "model": {
+                "model": "GPT-6",
+                "model_version": "runtime family disclosed; exact deployment version not exposed",
+                "provider": "OpenAI",
+                "reference": "OpenAI:GPT-6",
+                "status": "recorded"
+              },
+              "prompt": {
+                "reference": "prompts/prism-agent-reviewer-v1.2.md",
+                "sha256": "3aea5ce1e84a3f2557aee507632552816792a27d698003517ae238e1ec96d8af",
+                "status": "recorded",
+                "version": "1.2"
+              },
+              "run_id": "recovered-arxiv-sources-2-20260905",
+              "type": "screening"
+            },
+            {
+              "associated_actor_ids": [
+                "/root/source_review_check"
+              ],
+              "id": "SQYLQFRU:ai-agent-review",
+              "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+              "model": {
+                "model": "GPT-6",
+                "model_version": "runtime family disclosed; exact deployment version not exposed",
+                "provider": "OpenAI",
+                "reference": "OpenAI:GPT-6",
+                "status": "recorded"
+              },
+              "prompt": {
+                "reference": "prompts/prism-ai-agent-review-v0.3.md",
+                "sha256": "3f01c4485d4deb13419b8897def76139d46d2eea68fc28c5809659c775b3aa3f",
+                "status": "recorded",
+                "version": "0.3"
+              },
+              "run_id": "recovered-arxiv-sources-2-20260905",
+              "type": "ai_agent_review"
+            }
+          ],
+          "actors": [
+            {
+              "id": "curation-provenance-unrecorded",
+              "identity": {
+                "status": "legacy_gap",
+                "value": "unrecorded"
+              },
+              "roles": [
+                "curation"
+              ],
+              "type": "person"
+            },
+            {
+              "id": "/root/source_reviewer_a",
+              "roles": [
+                "screening"
+              ],
+              "type": "ai_agent"
+            },
+            {
+              "id": "/root/source_reviewer_b",
+              "roles": [
+                "screening"
+              ],
+              "type": "ai_agent"
+            },
+            {
+              "id": "/root/source_review_check",
+              "identity": {
+                "model": "GPT-6",
+                "model_version": "runtime family disclosed; exact deployment version not exposed",
+                "provider": "OpenAI",
+                "reference": "OpenAI:GPT-6",
+                "status": "recorded"
+              },
+              "roles": [
+                "ai_agent_reviewer"
+              ],
+              "type": "ai_agent"
+            },
+            {
+              "id": "deterministic-validator",
+              "roles": [
+                "validation"
+              ],
+              "type": "software_agent"
+            }
+          ],
+          "alias_of": null,
+          "analysis": {
+            "AN_Bias_Axes": [
+              "Age",
+              "Religion",
+              "Nationality_Migration"
+            ],
+            "AN_Coding_Basis": "Fulltext",
+            "AN_Harm_Types": [
+              "Stereotyping"
+            ],
+            "AN_Mitigation_Stage": [
+              "Pre_Processing",
+              "In_Training",
+              "Prompt_Practice"
+            ],
+            "AN_Mitigation_Status": "Evaluated",
+            "AN_Notes": "Own experiments, not a synthesised evaluation. ReGiFT extracts SQuAD-v2 traces and retains only final-answer-correct examples (3.1, Algorithm 1: Pre_Processing); section 6 assesses Correct-Only, Incorrect-Only and Full-Set selection. Supervised fine-tuning jointly teaches traces and answers (3.2: In_Training). Section 5.2 and Table 3 assess a CoT prompting comparator (Prompt_Practice) and criticise prompt sensitivity and demographic generalisation. Prompting is Research_Instrument and Object_of_Critique. Thought_Generation comprises CoT and explicit think/answer prompts. General_Guidance, verbatim A.1: Answer each question using the information in the preceding background paragraph. If there is not enough information provided, answer with ‘Not in background.’ A.1 explicitly excludes demonstrations in the zero-shot prompt; no ICL. The abstention/context guidance is used, but its isolated mitigation efficacy is not tested. Evaluated denotes completed ReGiFT, data-selection, instruction-tuning and CoT intervention assessments with reported results, not universal effectiveness. Tables 1–3 report ReGiFT gains relative to base models on BBQ; CoT outcomes are mixed or negative. Age, Religion and Nationality_Migration are the three separately evaluated axes (4.1, 5; no interacting-axis analysis). Stereotyping is the explicit harm (Figures 1/3, A.5); demographic benchmark scenarios do not establish a social-work or professional-education setting. Study type Experimentell; population Not_SW_Specific; Fulltext plus all three original PNGs. Answer extraction, Unknown normalisation and LLM-as-Judge serve measurement (4.3, A.2–A.3); they do not establish Post_Processing, Intra_Processing or Organisational_Process mitigation. Correct final answers are an admitted proxy for trace validity (3.1 footnote), not direct verification of reasoning correctness. The paper limits its claim to stereotypes associated with flawed contextual reasoning and mid-sized models, without complete bias removal or demonstrated transfer to social-work practice. Numerical limitations: Tables 1 and 3 disagree on Mistral ReGiFT age (82.78/84.01 versus 82.58/83.91) and Phi-4 religion/nationality entries; section 5.2 overgeneralises CoT as modest gains. Several displayed overall entries also do not equal the mean of displayed ambiguous/disambiguous entries (e.g. Table 1 LLaMA base religion 12.45/66.52/49.48 and Table 4 Correct-Only age 70.04/89.13/75.59); the paper supplies no reconciliation. Table 5 is nonmonotonic and does not substantiate a universal 40% plateau; its prose mentions 50% although no 50% row is shown. Figure 4 shows printed means 139.62 and 243.81 tokens with undefined error bars and unspecified sample sizes; no confidence interval, statistical significance, trace-length causal effect or operational threshold is inferred. These limitations restrict quantitative synthesis, but the topical coding and completed-assessment status remain decidable.",
+            "AN_Population": [
+              "Not_SW_Specific"
+            ],
+            "AN_Prompt_Techniques": [
+              "Thought_Generation",
+              "General_Guidance"
+            ],
+            "AN_Prompting_Role": [
+              "Research_Instrument",
+              "Object_of_Critique"
+            ],
+            "Studientyp": "Experimentell"
+          },
+          "annotation_id": "ar2:SQYLQFRU",
+          "applied_ai_correction": null,
+          "current_ai_review_result": "accepted",
+          "current_ai_source_review": {
+            "agent_id": "/root/source_review_check",
+            "artifact": "docs/data/screening/ar2.json#/decisions/SQYLQFRU",
+            "findings": "Compared the entire schema-0.4 projection, schema-0.5 migrated record, annotation snapshot and the exact current productive record against the frozen AI review; all ten category values (including sparse zero/nein values), decision, reason, Work-Version identities, all source snippets and the complete applicable analysis match. Every final quote is retained completely within the 260-character snippet limit; lookup terms and snippets resolve in the original source. The annotation-body check hash matches. Both reviewer agents and the separate review actor/model/prompt are explicitly recorded; references resolve to this run and the frozen source review. Lifecycle remains ai-agent-reviewed, with no human verification or publication approval. The retained origin:human value is a legacy capture-origin field, accompanied by actor:agent and ai_agent provenance; it is not evidence of human review. Lifecycle event timestamps describe the migrated productive projection at 19:21:14.215Z, while actual screening/review execution times remain in the linked run/report/AI-review artifact and this receipt. The curation actor remains an explicit unrecorded legacy gap rather than an invented person. The exact ReGiFT Include record retains Generative_KI/Prompting/Bias_Ungleichheit/Fairness ja and Diversitaet teilweise; every controlled Include-analysis field and the full cautionary AN_Notes match the source-reviewed final coding. The repaired section 5.2 Prompting quotation retains the crucial comparison wording. Original-source methods/results support data preparation, fine-tuning and the evaluated CoT comparator, with Evaluated recording completed assessment, not efficacy. Table inconsistencies, mixed/negative CoT results, trace-quality proxy, nonmonotonic scaling and undefined graph uncertainty remain explicit. Complete original text and all three original PNGs were read during the preceding source review. No further substantive correction is required.",
+            "model": "GPT-6",
+            "model_id_status": "Runtime family disclosed; exact deployment ID not exposed; no immutable identifier claimed",
+            "result": "accepted",
+            "reviewed_at": "2026-09-05T19:26:17.877758Z",
+            "sha256": "sha256:ea4910f8366e87321efd8fb09c97ce2ef121c132c26f07468eeecbc3a846d740"
+          },
+          "decision": "Include",
+          "events": [
+            {
+              "activity_id": "SQYLQFRU:agent-annotation",
+              "actor_ids": [
+                "/root/source_reviewer_a",
+                "/root/source_reviewer_b"
+              ],
+              "annotation_id": "ar2:SQYLQFRU",
+              "at": "2026-09-05T19:21:14.215Z",
+              "event_id": "SQYLQFRU:agent-annotation",
+              "event_type": "agent_annotation",
+              "from": "curated",
+              "result": "completed",
+              "to": "agent-annotated"
+            },
+            {
+              "activity_id": "SQYLQFRU:ai-agent-review",
+              "actor_ids": [
+                "/root/source_review_check"
+              ],
+              "annotation_id": "ar2:SQYLQFRU",
+              "at": "2026-09-05T19:21:14.215Z",
+              "event_id": "SQYLQFRU:ai-agent-review",
+              "event_type": "ai_agent_review",
+              "from": "agent-annotated",
+              "result": "accepted",
+              "to": "ai-agent-reviewed"
+            }
+          ],
+          "evidence_categories": [
+            "Bias_Ungleichheit",
+            "Diversitaet",
+            "Fairness",
+            "Generative_KI",
+            "Prompting"
+          ],
+          "latest_original_ai_source_review": {
+            "agent_id": "/root/source_review_check",
+            "artifact": "docs/data/screening/ar2.json#/decisions/SQYLQFRU",
+            "findings": "Compared the entire schema-0.4 projection, schema-0.5 migrated record, annotation snapshot and the exact current productive record against the frozen AI review; all ten category values (including sparse zero/nein values), decision, reason, Work-Version identities, all source snippets and the complete applicable analysis match. Every final quote is retained completely within the 260-character snippet limit; lookup terms and snippets resolve in the original source. The annotation-body check hash matches. Both reviewer agents and the separate review actor/model/prompt are explicitly recorded; references resolve to this run and the frozen source review. Lifecycle remains ai-agent-reviewed, with no human verification or publication approval. The retained origin:human value is a legacy capture-origin field, accompanied by actor:agent and ai_agent provenance; it is not evidence of human review. Lifecycle event timestamps describe the migrated productive projection at 19:21:14.215Z, while actual screening/review execution times remain in the linked run/report/AI-review artifact and this receipt. The curation actor remains an explicit unrecorded legacy gap rather than an invented person. The exact ReGiFT Include record retains Generative_KI/Prompting/Bias_Ungleichheit/Fairness ja and Diversitaet teilweise; every controlled Include-analysis field and the full cautionary AN_Notes match the source-reviewed final coding. The repaired section 5.2 Prompting quotation retains the crucial comparison wording. Original-source methods/results support data preparation, fine-tuning and the evaluated CoT comparator, with Evaluated recording completed assessment, not efficacy. Table inconsistencies, mixed/negative CoT results, trace-quality proxy, nonmonotonic scaling and undefined graph uncertainty remain explicit. Complete original text and all three original PNGs were read during the preceding source review. No further substantive correction is required.",
+            "model": "GPT-6",
+            "model_id_status": "Runtime family disclosed; exact deployment ID not exposed; no immutable identifier claimed",
+            "result": "accepted",
+            "reviewed_at": "2026-09-05T19:26:17.877758Z",
+            "sha256": "sha256:ea4910f8366e87321efd8fb09c97ce2ef121c132c26f07468eeecbc3a846d740"
+          },
+          "legacy_provenance_gaps": [
+            "actors[0].identity"
+          ],
+          "original_analysis": {
+            "AN_Bias_Axes": [
+              "Age",
+              "Religion",
+              "Nationality_Migration"
+            ],
+            "AN_Coding_Basis": "Fulltext",
+            "AN_Harm_Types": [
+              "Stereotyping"
+            ],
+            "AN_Mitigation_Stage": [
+              "Pre_Processing",
+              "In_Training",
+              "Prompt_Practice"
+            ],
+            "AN_Mitigation_Status": "Evaluated",
+            "AN_Notes": "Own experiments, not a synthesised evaluation. ReGiFT extracts SQuAD-v2 traces and retains only final-answer-correct examples (3.1, Algorithm 1: Pre_Processing); section 6 assesses Correct-Only, Incorrect-Only and Full-Set selection. Supervised fine-tuning jointly teaches traces and answers (3.2: In_Training). Section 5.2 and Table 3 assess a CoT prompting comparator (Prompt_Practice) and criticise prompt sensitivity and demographic generalisation. Prompting is Research_Instrument and Object_of_Critique. Thought_Generation comprises CoT and explicit think/answer prompts. General_Guidance, verbatim A.1: Answer each question using the information in the preceding background paragraph. If there is not enough information provided, answer with ‘Not in background.’ A.1 explicitly excludes demonstrations in the zero-shot prompt; no ICL. The abstention/context guidance is used, but its isolated mitigation efficacy is not tested. Evaluated denotes completed ReGiFT, data-selection, instruction-tuning and CoT intervention assessments with reported results, not universal effectiveness. Tables 1–3 report ReGiFT gains relative to base models on BBQ; CoT outcomes are mixed or negative. Age, Religion and Nationality_Migration are the three separately evaluated axes (4.1, 5; no interacting-axis analysis). Stereotyping is the explicit harm (Figures 1/3, A.5); demographic benchmark scenarios do not establish a social-work or professional-education setting. Study type Experimentell; population Not_SW_Specific; Fulltext plus all three original PNGs. Answer extraction, Unknown normalisation and LLM-as-Judge serve measurement (4.3, A.2–A.3); they do not establish Post_Processing, Intra_Processing or Organisational_Process mitigation. Correct final answers are an admitted proxy for trace validity (3.1 footnote), not direct verification of reasoning correctness. The paper limits its claim to stereotypes associated with flawed contextual reasoning and mid-sized models, without complete bias removal or demonstrated transfer to social-work practice. Numerical limitations: Tables 1 and 3 disagree on Mistral ReGiFT age (82.78/84.01 versus 82.58/83.91) and Phi-4 religion/nationality entries; section 5.2 overgeneralises CoT as modest gains. Several displayed overall entries also do not equal the mean of displayed ambiguous/disambiguous entries (e.g. Table 1 LLaMA base religion 12.45/66.52/49.48 and Table 4 Correct-Only age 70.04/89.13/75.59); the paper supplies no reconciliation. Table 5 is nonmonotonic and does not substantiate a universal 40% plateau; its prose mentions 50% although no 50% row is shown. Figure 4 shows printed means 139.62 and 243.81 tokens with undefined error bars and unspecified sample sizes; no confidence interval, statistical significance, trace-length causal effect or operational threshold is inferred. These limitations restrict quantitative synthesis, but the topical coding and completed-assessment status remain decidable.",
+            "AN_Population": [
+              "Not_SW_Specific"
+            ],
+            "AN_Prompt_Techniques": [
+              "Thought_Generation",
+              "General_Guidance"
+            ],
+            "AN_Prompting_Role": [
+              "Research_Instrument",
+              "Object_of_Critique"
+            ],
+            "Studientyp": "Experimentell"
+          },
+          "path": "docs/data/screening/ar2.json",
+          "record_id": "SQYLQFRU",
+          "state": "ai-agent-reviewed",
+          "undecidable": {},
+          "used_sources": [
+            {
+              "id": "paper:SQYLQFRU",
+              "reference": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-v3-text.md",
+              "sha256": "bac6454052cd33fa790fde5c12b2bfc10fd340fb20433725feecd6a804283620",
+              "type": "paper",
+              "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+              "version_type": "preprint",
+              "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2"
+            }
+          ]
+        }
+      ],
       "ai_correction_provenance": [],
       "analysis_conflicts": {},
-      "analysis_eligible": false,
-      "analysis_fields": {},
+      "analysis_eligible": true,
+      "analysis_fields": {
+        "AN_Bias_Axes": [
+          "Age",
+          "Nationality_Migration",
+          "Religion"
+        ],
+        "AN_Coding_Basis": [
+          "Fulltext"
+        ],
+        "AN_Harm_Types": [
+          "Stereotyping"
+        ],
+        "AN_Mitigation_Stage": [
+          "In_Training",
+          "Pre_Processing",
+          "Prompt_Practice"
+        ],
+        "AN_Mitigation_Status": [
+          "Evaluated"
+        ],
+        "AN_Population": [
+          "Not_SW_Specific"
+        ],
+        "AN_Prompt_Techniques": [
+          "General_Guidance",
+          "Thought_Generation"
+        ],
+        "AN_Prompting_Role": [
+          "Object_of_Critique",
+          "Research_Instrument"
+        ],
+        "Studientyp": [
+          "Experimentell"
+        ]
+      },
       "analysis_track": "recorded_ai_review",
       "analysis_undecidable": {},
       "conflicts": [],
       "corrected_ai_record_ids": [],
-      "current_ai_review_results": [],
+      "current_ai_review_results": [
+        "accepted"
+      ],
       "current_source_binding_record_ids": [
         "SQYLQFRU"
       ],
-      "decision_authority": "unassessed",
-      "effective_decision": null,
+      "decision_authority": "ai_review",
+      "effective_decision": "Include",
       "historical_identity_bindings": {},
       "historical_resolution": null,
       "human_decisions": [],
@@ -12903,7 +13282,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "execute_governed_source_screening"
+        "retain_ai_review_tier_and_record_any_further_review_at_artifact_level"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
@@ -13026,7 +13405,7 @@
         }
       ],
       "source_blockers": [],
-      "source_queue_status": "ready",
+      "source_queue_status": null,
       "title": "Reasoning towards fairness: Mitigating bias in language models through reasoning-guided fine-tuning",
       "version_ids": [
         "version:8df649a5-eae4-54d8-9105-3768e0083beb"
@@ -17385,9 +17764,190 @@
       "work_id": "work:54e08795-ce8f-5120-8c4b-e6cd672a25e5"
     },
     {
-      "agent_decisions": [],
-      "agent_lifecycle_states": [],
-      "agent_records": [],
+      "agent_decisions": [
+        "Exclude"
+      ],
+      "agent_lifecycle_states": [
+        "ai-agent-reviewed"
+      ],
+      "agent_records": [
+        {
+          "activities": [
+            {
+              "associated_actor_ids": [
+                "/root/source_reviewer_a",
+                "/root/source_reviewer_b"
+              ],
+              "id": "RAY6G2R7:agent-annotation",
+              "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+              "model": {
+                "model": "GPT-6",
+                "model_version": "runtime family disclosed; exact deployment version not exposed",
+                "provider": "OpenAI",
+                "reference": "OpenAI:GPT-6",
+                "status": "recorded"
+              },
+              "prompt": {
+                "reference": "prompts/prism-agent-reviewer-v1.2.md",
+                "sha256": "3aea5ce1e84a3f2557aee507632552816792a27d698003517ae238e1ec96d8af",
+                "status": "recorded",
+                "version": "1.2"
+              },
+              "run_id": "recovered-arxiv-sources-2-20260905",
+              "type": "screening"
+            },
+            {
+              "associated_actor_ids": [
+                "/root/source_review_check"
+              ],
+              "id": "RAY6G2R7:ai-agent-review",
+              "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+              "model": {
+                "model": "GPT-6",
+                "model_version": "runtime family disclosed; exact deployment version not exposed",
+                "provider": "OpenAI",
+                "reference": "OpenAI:GPT-6",
+                "status": "recorded"
+              },
+              "prompt": {
+                "reference": "prompts/prism-ai-agent-review-v0.3.md",
+                "sha256": "3f01c4485d4deb13419b8897def76139d46d2eea68fc28c5809659c775b3aa3f",
+                "status": "recorded",
+                "version": "0.3"
+              },
+              "run_id": "recovered-arxiv-sources-2-20260905",
+              "type": "ai_agent_review"
+            }
+          ],
+          "actors": [
+            {
+              "id": "curation-provenance-unrecorded",
+              "identity": {
+                "status": "legacy_gap",
+                "value": "unrecorded"
+              },
+              "roles": [
+                "curation"
+              ],
+              "type": "person"
+            },
+            {
+              "id": "/root/source_reviewer_a",
+              "roles": [
+                "screening"
+              ],
+              "type": "ai_agent"
+            },
+            {
+              "id": "/root/source_reviewer_b",
+              "roles": [
+                "screening"
+              ],
+              "type": "ai_agent"
+            },
+            {
+              "id": "/root/source_review_check",
+              "identity": {
+                "model": "GPT-6",
+                "model_version": "runtime family disclosed; exact deployment version not exposed",
+                "provider": "OpenAI",
+                "reference": "OpenAI:GPT-6",
+                "status": "recorded"
+              },
+              "roles": [
+                "ai_agent_reviewer"
+              ],
+              "type": "ai_agent"
+            },
+            {
+              "id": "deterministic-validator",
+              "roles": [
+                "validation"
+              ],
+              "type": "software_agent"
+            }
+          ],
+          "alias_of": null,
+          "analysis": {},
+          "annotation_id": "ar2:RAY6G2R7",
+          "applied_ai_correction": null,
+          "current_ai_review_result": "accepted",
+          "current_ai_source_review": {
+            "agent_id": "/root/source_review_check",
+            "artifact": "docs/data/screening/ar2.json#/decisions/RAY6G2R7",
+            "findings": "Compared the entire schema-0.4 projection, schema-0.5 migrated record, annotation snapshot and the exact current productive record against the frozen AI review; all ten category values (including sparse zero/nein values), decision, reason, Work-Version identities, all source snippets and the complete applicable analysis match. Every final quote is retained completely within the 260-character snippet limit; lookup terms and snippets resolve in the original source. The annotation-body check hash matches. Both reviewer agents and the separate review actor/model/prompt are explicitly recorded; references resolve to this run and the frozen source review. Lifecycle remains ai-agent-reviewed, with no human verification or publication approval. The retained origin:human value is a legacy capture-origin field, accompanied by actor:agent and ai_agent provenance; it is not evidence of human review. Lifecycle event timestamps describe the migrated productive projection at 19:21:14.215Z, while actual screening/review execution times remain in the linked run/report/AI-review artifact and this receipt. The curation actor remains an explicit unrecorded legacy gap rather than an invented person. The exact SwiftSage Exclude record preserves Generative_KI/Prompting ja, KI_Sonstige teilweise and all six social categories nein, with Not_relevant_topic. Complete original text and six original PNGs were read during the preceding source review. The conventional-AI comparator passages support the resolved subordinate category; the agent architecture is generative. No Include analysis is applicable. Reward-versus-score pseudocode and exact-date source limitations remain in the frozen review; no new substantive correction is required.",
+            "model": "GPT-6",
+            "model_id_status": "Runtime family disclosed; exact deployment ID not exposed; no immutable identifier claimed",
+            "result": "accepted",
+            "reviewed_at": "2026-09-05T19:26:17.877758Z",
+            "sha256": "sha256:87794e647086fd7a99a7572c9e8c75b61d242cfa7392ecc75ecaf852ebb07ebf"
+          },
+          "decision": "Exclude",
+          "events": [
+            {
+              "activity_id": "RAY6G2R7:agent-annotation",
+              "actor_ids": [
+                "/root/source_reviewer_a",
+                "/root/source_reviewer_b"
+              ],
+              "annotation_id": "ar2:RAY6G2R7",
+              "at": "2026-09-05T19:21:14.215Z",
+              "event_id": "RAY6G2R7:agent-annotation",
+              "event_type": "agent_annotation",
+              "from": "curated",
+              "result": "completed",
+              "to": "agent-annotated"
+            },
+            {
+              "activity_id": "RAY6G2R7:ai-agent-review",
+              "actor_ids": [
+                "/root/source_review_check"
+              ],
+              "annotation_id": "ar2:RAY6G2R7",
+              "at": "2026-09-05T19:21:14.215Z",
+              "event_id": "RAY6G2R7:ai-agent-review",
+              "event_type": "ai_agent_review",
+              "from": "agent-annotated",
+              "result": "accepted",
+              "to": "ai-agent-reviewed"
+            }
+          ],
+          "evidence_categories": [
+            "Generative_KI",
+            "KI_Sonstige",
+            "Prompting"
+          ],
+          "latest_original_ai_source_review": {
+            "agent_id": "/root/source_review_check",
+            "artifact": "docs/data/screening/ar2.json#/decisions/RAY6G2R7",
+            "findings": "Compared the entire schema-0.4 projection, schema-0.5 migrated record, annotation snapshot and the exact current productive record against the frozen AI review; all ten category values (including sparse zero/nein values), decision, reason, Work-Version identities, all source snippets and the complete applicable analysis match. Every final quote is retained completely within the 260-character snippet limit; lookup terms and snippets resolve in the original source. The annotation-body check hash matches. Both reviewer agents and the separate review actor/model/prompt are explicitly recorded; references resolve to this run and the frozen source review. Lifecycle remains ai-agent-reviewed, with no human verification or publication approval. The retained origin:human value is a legacy capture-origin field, accompanied by actor:agent and ai_agent provenance; it is not evidence of human review. Lifecycle event timestamps describe the migrated productive projection at 19:21:14.215Z, while actual screening/review execution times remain in the linked run/report/AI-review artifact and this receipt. The curation actor remains an explicit unrecorded legacy gap rather than an invented person. The exact SwiftSage Exclude record preserves Generative_KI/Prompting ja, KI_Sonstige teilweise and all six social categories nein, with Not_relevant_topic. Complete original text and six original PNGs were read during the preceding source review. The conventional-AI comparator passages support the resolved subordinate category; the agent architecture is generative. No Include analysis is applicable. Reward-versus-score pseudocode and exact-date source limitations remain in the frozen review; no new substantive correction is required.",
+            "model": "GPT-6",
+            "model_id_status": "Runtime family disclosed; exact deployment ID not exposed; no immutable identifier claimed",
+            "result": "accepted",
+            "reviewed_at": "2026-09-05T19:26:17.877758Z",
+            "sha256": "sha256:87794e647086fd7a99a7572c9e8c75b61d242cfa7392ecc75ecaf852ebb07ebf"
+          },
+          "legacy_provenance_gaps": [
+            "actors[0].identity"
+          ],
+          "original_analysis": {},
+          "path": "docs/data/screening/ar2.json",
+          "record_id": "RAY6G2R7",
+          "state": "ai-agent-reviewed",
+          "undecidable": {},
+          "used_sources": [
+            {
+              "id": "paper:RAY6G2R7",
+              "reference": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-v2-text.md",
+              "sha256": "fd64251d9eed80eca0689fe3bad5e8ea15465746be71af1e38d7f8c9bdb553d1",
+              "type": "paper",
+              "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+              "version_type": "preprint",
+              "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202"
+            }
+          ]
+        }
+      ],
       "ai_correction_provenance": [],
       "analysis_conflicts": {},
       "analysis_eligible": false,
@@ -17396,12 +17956,14 @@
       "analysis_undecidable": {},
       "conflicts": [],
       "corrected_ai_record_ids": [],
-      "current_ai_review_results": [],
+      "current_ai_review_results": [
+        "accepted"
+      ],
       "current_source_binding_record_ids": [
         "RAY6G2R7"
       ],
-      "decision_authority": "unassessed",
-      "effective_decision": null,
+      "decision_authority": "ai_review",
+      "effective_decision": "Exclude",
       "historical_identity_bindings": {},
       "historical_resolution": null,
       "human_decisions": [],
@@ -17415,7 +17977,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "execute_governed_source_screening"
+        "retain_ai_review_tier_and_record_any_further_review_at_artifact_level"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
@@ -17590,7 +18152,7 @@
         }
       ],
       "source_blockers": [],
-      "source_queue_status": "ready",
+      "source_queue_status": null,
       "title": "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks",
       "version_ids": [
         "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460"
@@ -31789,7 +32351,7 @@
       "human_record_dispositions": [
         {
           "decision": "Exclude",
-          "notes": "Wrong Author and Wrong title: AI through the looking glass: an empirical study of structural social\r\nhttps://doi.org/10.1007/s00146-024-02146-0\r\n",
+          "notes": "Wrong Author and Wrong title: AI through the looking glass: an empirical study of structural social\nhttps://doi.org/10.1007/s00146-024-02146-0\n",
           "reason": "Not relevant topic",
           "record_id": "PC75954S"
         }

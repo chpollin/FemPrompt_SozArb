@@ -172,6 +172,10 @@
     {
       "path": "generated/verification/screening-review-d.json",
       "sha256": "sha256:7a7b78612ec722b82c247f800e7df47b197226e4c32ec6a52d7b3dce83ddfa6c"
+    },
+    {
+      "path": "generated/verification/recovered-source-artifact-reviews-2026-09-05.json",
+      "sha256": "sha256:5c69e87d54a9889cdcfaa2b774a73c5d5a07ee0eeaeff9b9f47df03f584061eb"
     }
   ],
   "authority": "Immutable attributed source-review batches; exact hashes bind each batch. This index does not create new reviews or human verification."
