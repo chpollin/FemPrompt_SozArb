@@ -8,9 +8,9 @@ Versionierte Dokumentation aller Prompts, die in der Pipeline und im Assessment 
 
 | Prompt | Datei | Zeilen | Version | Status |
 |--------|-------|--------|---------|--------|
-| PRISM Agent Reviewer | `prompts/prism-agent-reviewer-v1.1.md` | -- | v1.1 | Aktiv; Coding-Paket und deterministischer PRISM-Transfer |
+| PRISM Agent Reviewer | `prompts/prism-agent-reviewer-v1.2.md` | -- | v1.2 | Aktiv; aktuelle Protokollabschnitte, unveränderte Kategorien und Schwellen |
 | PRISM Agent Reviewer, historisch | `prompts/prism-agent-reviewer.md` | -- | v1.0 | In den abgeschlossenen Läufen verwendet; Hash im Run-Manifest gesichert |
-| PRISM AI Agent Review | `prompts/prism-ai-agent-review-v0.2.md` | -- | v0.2 | Aktiv; quellengestützte Prüfung vor `ai-agent-reviewed` |
+| PRISM AI Agent Review | `prompts/prism-ai-agent-review-v0.3.md` | -- | v0.3 | Aktiv; aktuelle Protokollabschnitte, quellengestützte Prüfung vor `ai-agent-reviewed` |
 | PRISM Ratification Evaluator, historisch | `prompts/prism-ratification-evaluator.md` | -- | v0.1 | Im ratifizierten Zehn-Paper-Lauf verwendet; Hash im Konsensartefakt gesichert |
 | Deep-Research-Prompt | `prompts/deep-research-template.md` | -- | v1.0 (restauriert) | Template wiederhergestellt, instanziierter Prompt rekonstruiert |
 | SKE Stage 1: Extract & Classify | `src/distill/distill_knowledge.py` | 53-143 | v1.0 | Aktiv, 249 Docs produziert |
@@ -157,3 +157,7 @@ Versionierte Dokumentation aller Prompts, die in der Pipeline und im Assessment 
 ---
 
 *Aktualisiert: 2026-08-22*
+
+## 2026-09-05 · PRISM-Verweise nach Wissenskonsolidierung
+
+Reviewer v1.2 und AI Agent Review v0.3 ersetzen die nicht mehr vorhandenen Abschnittsnummern B/B.1/C durch die aktuellen Überschriften des Update-Protokolls. Der Review-Prompt benennt außerdem die bestehenden Validatorfelder `result: agreed|resolved`, Inputs, Hashes und Summary ausdrücklich und trennt sie vom späteren Lifecycle-Ausgang `accepted`. Die Kriterien bleiben unverändert. Run-Template und Skill verwenden den bestehenden Run-Vertrag 1.3 und die bestehende Capture-Projektion 0.4. Frühere Promptdateien und abgeschlossene Laufmanifeste bleiben unverändert.

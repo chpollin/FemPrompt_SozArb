@@ -15,7 +15,7 @@
     "immutable_model_id": null
   },
   "prompt": {
-    "path": "prompts/prism-agent-reviewer-v1.1.md",
+    "path": "prompts/prism-agent-reviewer-v1.2.md",
     "version": "replace-me",
     "sha256": "replace-me"
   },
@@ -157,7 +157,7 @@
         "run_id": null,
         "method": "source_grounded_ai_agent_review",
         "prompt": {
-          "path": "prompts/prism-ai-agent-review-v0.2.md",
+          "path": "prompts/prism-ai-agent-review-v0.3.md",
           "version": "replace-me",
           "sha256": "replace-me"
         },

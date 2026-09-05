@@ -28,7 +28,7 @@ OUTPUTS = (
 OUTPUT_DIRS = ("docs/data/fulltext", "generated/completion", "build/site")
 INPUT_GLOBS = (
     "src/**/*.py", "config/*.json", "assessment/*.csv", "assessment/*.yaml",
-    "corpus/**/*.json", "corpus/**/*.ris", "corpus/**/*.md", "corpus/**/*.txt", "corpus/papers_metadata.csv",
+    "corpus/**/*.json", "corpus/**/*.ris", "corpus/**/*.md", "corpus/**/*.txt", "corpus/**/*.png", "corpus/papers_metadata.csv",
     "generated/markdown/*.md", "generated/markdown_clean/*.md",
     "generated/distilled/**/*.json", "generated/distilled/**/*.md",
     "generated/source-acquisition/**/*.json", "generated/source-acquisition/**/*.md",

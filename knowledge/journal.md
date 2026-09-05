@@ -24,6 +24,12 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## PRISM and the epistemic infrastructure (2026)
 
+### 2026-09-05: Wiedergefundene arXiv-Quellen für neues Screening vorbereitet
+
+- **Quellenbasis.** SwiftSage und ReGiFT sind jetzt an ihre bereits bestehenden, exakt versionierten arXiv-Identitäten gebunden. Eine tatsächliche Text- und Bildprüfung durch `/root/research_completion` (GPT-6, genaue Deployment-Kennung nicht verfügbar) ist mit UTC-Zeit und Datei-Hashes dokumentiert. Die offenen Originalabbildungen ergänzen den Artikeltext; sie sind keine neue Publikationsversion.
+- **Vertrag.** Quellenbindungen können kontrolliert eine existierende Version referenzieren. Der Run-Validator prüft zusätzlich deklarierte PNGs, Herkunft, Lizenz und Byte-Hashes. Aktuelle Promptversionen reparieren veraltete Abschnittsverweise; historische Prompts bleiben unverändert. Die Completion-Queue trennt jetzt bereits erfolgte Quellenbindung von weiterhin ausstehendem Screening.
+- **Fortsetzung.** Die freigewordenen Quellen benötigen einen neuen Lauf mit zwei isolierten Reviewer-Kontexten und anschließender separater AI Agent Review. Quellen-QC allein ersetzt keine Annotation oder fachliche Verifikation.
+
 ### 2026-09-05: Konstruktives Review, KI-Quellenprüfung und konsistenter Ergebnisaufbau
 
 - **Auftrag.** Der Operator autorisierte die Umsetzung des Projektreviews mit Subagenten, Quellenprüfung durch benannte KI-Agenten mit Modell und Zeitpunkt, den gesamten bisherigen Korpus einschließlich vorbereitetem 2026-Intake und gezielte Ergänzungen bei sehr guter Passung.

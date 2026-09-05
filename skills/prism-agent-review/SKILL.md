@@ -9,7 +9,7 @@ Arbeite ausschließlich im SocialAI-Repository und behandle frühere Bewertungen
 
 ## Codex-nativer Run-Vertrag
 
-Künftige Läufe verwenden `femprompt-prisma-agent-run/1.2`. Das verbindliche
+Künftige Läufe verwenden `femprompt-prisma-agent-run/1.3`. Das verbindliche
 Template liegt unter `tests/review-cases/agent-runs/run-template.json`; vor dem
 Lauf wird es vollständig mit konkreten Werten befüllt und mit
 `node tests/review-cases/validate-run-contract.mjs <run.json>` geprüft. Das
@@ -26,7 +26,7 @@ werden im Manifest mit Hash gebunden.
 
 `execution.mode` lautet
 `blinded_source_review_with_deterministic_prism_roundtrip`. Nach bestandener
-Coding-Paket-Prüfung erzeugt der Orchestrator eine schema-0.3-Projektion und
+Coding-Paket-Prüfung erzeugt der Orchestrator eine schema-0.4-Projektion und
 führt sie durch `validateReviewerPayload`, `importReviewerPayload`,
 `recordRequirements` und `reviewerFileText` der produktiven PRISM-Logik. Der
 resultierende Track bleibt ein unverändertes Laufartefakt. Die sichtbare
@@ -59,8 +59,8 @@ epistemische Eigenschaft der Tracks oder der Prüfung ab.
 
 ## Vor jedem Lauf
 
-1. Lies `prompts/prism-agent-reviewer-v1.1.md` vollständig.
-2. Lies `assessment/categories.yaml` v1.3 sowie `knowledge/update-protocol.md`, Abschnitte B, B.1 und C.
+1. Lies `prompts/prism-agent-reviewer-v1.2.md` vollständig.
+2. Lies `assessment/categories.yaml` v1.3 sowie `knowledge/update-protocol.md`, Abschnitte „Eligibility“, „Text preparation and source gate“, „Agent-assisted completion“ sowie „Analysis coding“ einschließlich der datierten „Source-review clarification“.
 3. Lies das konkrete Laufmanifest. Verwende dessen Run-ID, Reviewer-Kürzel, Paper-IDs, Quellpfade und Zielpfade unverändert. Errate keinen Parameter.
 4. Prüfe den im Manifest eingetragenen Prompt-Hash gegen die tatsächlich verwendete Datei. Stoppe bei einer Abweichung.
 
@@ -83,7 +83,7 @@ epistemische Eigenschaft der Tracks oder der Prüfung ab.
 
 ## AI Agent Review und Integration
 
-Halte Reviewer-Track, AI Agent Review und produktive Forschungsdaten getrennt. Verwende `prompts/prism-ai-agent-review-v0.2.md` für die separate quellengestützte Prüfung. Eine produktive Übernahme ist nur zulässig, wenn:
+Halte Reviewer-Track, AI Agent Review und produktive Forschungsdaten getrennt. Verwende `prompts/prism-ai-agent-review-v0.3.md` für die separate quellengestützte Prüfung. Eine produktive Übernahme ist nur zulässig, wenn:
 
 - Zuweisung und exportierte ID-Menge exakt übereinstimmen,
 - Quellenidentität und Textbasis je Paper geprüft sind,

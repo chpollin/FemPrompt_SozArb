@@ -26,6 +26,57 @@ BLOCKED_INTEGRITY = {"withdrawn", "retracted"}
 SOURCE_BINDINGS_PATH = "corpus/source_version_bindings.json"
 
 
+def normalise_arxiv(value: object) -> str:
+    """Parse an arXiv identifier without discarding its revision, if present."""
+    text = str(value or "").strip().casefold()
+    if text.startswith(("http://", "https://")):
+        match = re.fullmatch(r"https?://(?:www\.)?arxiv\.org/(abs|pdf|html)/([^?#]+)", text)
+        if not match:
+            return ""
+        text = match[2]
+        if match[1] == "pdf" and text.endswith(".pdf"):
+            text = text[:-4]
+    else:
+        text = re.sub(r"^(?:arxiv:\s*|10\.48550/arxiv\.)", "", text)
+    return text if re.fullmatch(r"(?:\d{4}\.\d{4,5}|[a-z][a-z.-]*/\d{7})(?:v[1-9]\d*)?", text) else ""
+
+
+def validate_source_version_identity(version: dict, identity: object, *, require_revision: bool = True) -> None:
+    """Check a reviewed identity against one existing version, never just its work.
+
+    arXiv's DOI is shared by revisions. At least one registered arXiv identifier or
+    URL must pin the exact revision; conflicting revisions require registry repair.
+    """
+    if not isinstance(identity, dict) or set(identity) - {"title", "doi", "arxiv"}:
+        raise ValueError("source version identity contains unsupported metadata")
+    if not isinstance(identity.get("title"), str) or not identity["title"].strip() or normalise_title(identity["title"]) != normalise_title(version.get("title")):
+        raise ValueError("source version title differs from registered bibliography")
+    identifiers = version.get("identifiers", {})
+    dois = {normalise_doi(value) for value in values(identifiers.get("doi"))}
+    raw_arxiv = values(identifiers.get("arxiv"))
+    urls = values(identifiers.get("url")) + values(version.get("landing_url")) + values(version.get("fulltext_url"))
+    if any(not normalise_arxiv(value) for value in raw_arxiv) or any(
+        re.match(r"https?://(?:www\.)?arxiv\.org/", value, re.IGNORECASE) and not normalise_arxiv(value)
+        for value in urls
+    ):
+        raise ValueError("registered arXiv identifier or revision URL is malformed")
+    registered_arxiv = {
+        parsed for value in raw_arxiv + urls + list(dois) if (parsed := normalise_arxiv(value))
+    }
+    if not (identity.get("doi") or identity.get("arxiv")):
+        raise ValueError("source version identity needs a DOI or exact arXiv revision")
+    if "doi" in identity and (not isinstance(identity["doi"], str) or not identity["doi"].strip() or normalise_doi(identity["doi"]) not in dois):
+        raise ValueError("source version DOI differs from registered bibliography")
+    if "arxiv" in identity or (require_revision and registered_arxiv):
+        expected = normalise_arxiv(identity.get("arxiv"))
+        if not expected or not re.search(r"v[1-9]\d*$", expected):
+            raise ValueError("source version identity needs a pinned arXiv revision")
+        bases = {re.sub(r"v\d+$", "", item) for item in registered_arxiv}
+        revisions = {item for item in registered_arxiv if re.search(r"v[1-9]\d*$", item)}
+        if bases != {re.sub(r"v\d+$", "", expected)} or revisions != {expected}:
+            raise ValueError("registered arXiv revision is missing, conflicting or different from source identity")
+
+
 def source_binding_for_record(registry: dict, record_id: str, repo: Path | None = None) -> dict | None:
     """Resolve a governed reading source separately from the bibliographic record."""
     binding = registry.get("source_index", {}).get(record_id)
@@ -45,6 +96,12 @@ def source_binding_for_record(registry: dict, record_id: str, repo: Path | None 
         or binding.get("is_preferred_version") is not (version.get("version_id") == work.get("preferred_version_id"))
     ):
         raise ValueError(f"{record_id}: source binding crosses or misstates canonical Work-Version identity")
+    mode = binding.get("binding_mode")
+    if mode is not None or binding["source_version_id"] == canonical["version_id"]:
+        if mode != "existing_version" or binding["source_version_id"] != canonical["version_id"]:
+            raise ValueError(f"{record_id}: existing source binding must retain the exact bibliographic version")
+        validate_source_version_identity(version, binding.get("bibliographic_identity"), require_revision=False)
+        validate_source_version_identity(version, binding.get("version_identity"))
     reference = binding.get("source_path", "")
     if not isinstance(reference, str) or not reference or "\\" in reference or "#" in reference or Path(reference).is_absolute() or ".." in Path(reference).parts:
         raise ValueError(f"{record_id}: invalid source binding path")

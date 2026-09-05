@@ -5,11 +5,11 @@
   "authority_rule": "Any human annotation covers the canonical work; duplicate records do not trigger reassessment.",
   "sources": {
     "research_vault": "docs/data/research_vault_v2.json",
-    "research_vault_sha256": "8fa546b572392735ec0cdde69546386dd6b468208c1f17d88441e64947f828e8",
+    "research_vault_sha256": "18db7cd1bec08e321ebbbe8738b81c23e1f22f7ab3d1e765acfb2bf3ea868f13",
     "fulltext_manifest": "docs/data/fulltext_manifest.json",
-    "fulltext_manifest_sha256": "5a973ca0bf1b4034689f2806144842d67f27965b9cf39af1c8d830271e4722b1",
+    "fulltext_manifest_sha256": "860ea9a974e6aa8f4e1a7dc3b6f21abe89c4ee12a2741c03f8450cf3586d0c06",
     "work_version_registry": "corpus/work_version_registry.json",
-    "work_version_registry_sha256": "4bf2287066f307dab97054375d0e6ae5d8c43b6bc90866965d6dbb9f3ec6691d",
+    "work_version_registry_sha256": "df458e5abc8506402e25785e33b2fa083fc1f0bdd64c1c9a6ac2dfe1dd5c1591",
     "productive_screening_dir": "docs/data/screening"
   },
   "counts": {
@@ -20,13 +20,16 @@
     "unannotated_alias_records_covered_at_work_level": 5,
     "queued_records": 8,
     "queued_works": 8,
-    "ready_works": 0,
+    "ready_works": 2,
     "blocked_abstract_only_works": 4,
-    "blocked_without_text_works": 4
+    "blocked_without_text_works": 2
   },
   "gate": {
-    "status": "blocked",
-    "ready_work_ids": [],
+    "status": "partial",
+    "ready_work_ids": [
+      "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+      "work:55caaab5-78b3-5803-8666-2edc0743a202"
+    ],
     "required_action": "Acquire and review Paper Markdown for every blocked work before its agent run."
   },
   "queue": [
@@ -37,7 +40,26 @@
       "selected_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
       "selected_version_type": "preprint",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "SQYLQFRU",
+        "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+        "bibliographic_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+        "source_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+        "source_version_type": "preprint",
+        "preferred_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+        "is_preferred_version": true,
+        "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-v3-text.md",
+        "source_sha256": "sha256:bac6454052cd33fa790fde5c12b2bfc10fd340fb20433725feecd6a804283620",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "Reasoning towards fairness: Mitigating bias in language models through reasoning-guided fine-tuning",
+          "doi": "10.48550/arxiv.2504.05632"
+        },
+        "version_identity": {
+          "title": "Reasoning towards fairness: Mitigating bias in language models through reasoning-guided fine-tuning",
+          "arxiv": "2504.05632v3"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
@@ -74,16 +96,14 @@
       "doi": "10.48550/arXiv.2504.05632",
       "url": "https://arxiv.org/abs/2504.05632v3",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 54277,
+      "paper_source": "docs/data/fulltext/SQYLQFRU.md",
       "paper_source_work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
       "paper_source_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "f7fce2949ccf8773f78c0929f380b78686a2dcf29d8b71c4cb7721338ace8e6e",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
@@ -92,7 +112,26 @@
       "selected_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
       "selected_version_type": "preprint",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "RAY6G2R7",
+        "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+        "bibliographic_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+        "source_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+        "source_version_type": "preprint",
+        "preferred_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+        "is_preferred_version": true,
+        "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-v2-text.md",
+        "source_sha256": "sha256:fd64251d9eed80eca0689fe3bad5e8ea15465746be71af1e38d7f8c9bdb553d1",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks",
+          "doi": "10.48550/arxiv.2305.17390"
+        },
+        "version_identity": {
+          "title": "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks",
+          "arxiv": "2305.17390v2"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
@@ -129,16 +168,14 @@
       "doi": "10.48550/arXiv.2305.17390",
       "url": "https://arxiv.org/abs/2305.17390v2",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 61793,
+      "paper_source": "docs/data/fulltext/RAY6G2R7.md",
       "paper_source_work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
       "paper_source_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "d2756909961b531cb8281eee437d17762e3bfa2a0864b45fce9b4bcf2e04af15",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:5d44ca3d-827b-5f4e-a4f1-1ee40ec55c18",

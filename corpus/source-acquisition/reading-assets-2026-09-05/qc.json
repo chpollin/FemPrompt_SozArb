@@ -1,0 +1,420 @@
+{
+  "schema": "femprompt-source-qc/0.1",
+  "agent_id": "/root/research_completion",
+  "model": "GPT-6",
+  "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+  "started_at": "2026-09-05T18:34:44Z",
+  "reviewed_at": "2026-09-05T18:45:20.232477+00:00",
+  "scope": "Exact source identity, version, text and image representation quality only; no historical screening tracks consulted, no criteria coding or screening decision, no production data edits.",
+  "records": {
+    "RAY6G2R7": {
+      "paper_id": "RAY6G2R7",
+      "arxiv_version": "2305.17390v2",
+      "title": "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks",
+      "authors": [
+        "Lin, Bill Yuchen",
+        "Fu, Yicheng",
+        "Yang, Karina",
+        "Brahman, Faeze",
+        "Huang, Shiyu",
+        "Bhagavatula, Chandra",
+        "Ammanabrolu, Prithviraj",
+        "Choi, Yejin",
+        "Ren, Xiang"
+      ],
+      "version_date": "2023-12-06",
+      "first_submission_date": "2023-05-27",
+      "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-v2-text.md",
+      "sha256": "sha256:fd64251d9eed80eca0689fe3bad5e8ea15465746be71af1e38d7f8c9bdb553d1",
+      "source_url": "https://arxiv.org/html/2305.17390v2",
+      "local_text_lines": 2899,
+      "local_text_bytes": 64856,
+      "identity_result": "exact_version_title_authors_confirmed",
+      "fresh_html_response_sha256": "sha256:ef3b85048a65067643cb3c35109774c3fe6cfe85fdac51543998abd64ce7dbc1",
+      "fresh_html_response_matches_acquisition_log": true,
+      "local_body_identical_to_complete_article_text": true,
+      "coverage": "Abstract, sections 1-5, acknowledgements, 41 references, appendices A-C through C.3 and final Table 4",
+      "table_qc": "Four numbered tables; HTML row counts including headers/summaries are 35, 36, 35, 36. All cell text is retained, but grid, bolding and merged-header layout are flattened. Table 1 Overall SwiftSage 84.68, Table 3 Overall Swift-only 49.22/GPT-3.5 SwiftSage 62.22 and Table 4 Overall SwiftSage 757.07 tokens/action are readable and retain their correct table context. Exact numeric extraction must retain the original table header groups.",
+      "pdf_evidence": {
+        "source_url": "https://arxiv.org/pdf/2305.17390v2",
+        "retrieved_at": "2026-09-05T18:39:11.199877+00:00",
+        "status": 200,
+        "final_url": "https://arxiv.org/pdf/2305.17390v2",
+        "bytes": 3601309,
+        "sha256": "sha256:193dbdfb2bcf9a155dda81eeab11a951628754bb69d3a91e0ccf89a9c005456f",
+        "source_path": "tmp/source-binding-continuation/swiftsage-2305.17390v2.pdf"
+      },
+      "pdf_pages": 18,
+      "source_assets": [
+        {
+          "source_path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/swiftsage-2305.17390v2-page-2.png",
+          "sha256": "sha256:c353cb1a1745c8e455bccaf0f287e6fc4c1c5ccfddedcebf2352d170535cd6ba",
+          "media_type": "image/png",
+          "representation": "full_pdf_page_render",
+          "source_url": "https://arxiv.org/pdf/2305.17390v2",
+          "source_pdf_sha256": "sha256:193dbdfb2bcf9a155dda81eeab11a951628754bb69d3a91e0ccf89a9c005456f",
+          "page": 2,
+          "figures": [
+            1
+          ],
+          "render_method": "PyMuPDF page.get_pixmap(matrix=Matrix(1.7,1.7), alpha=False)",
+          "visually_reviewed": true,
+          "agent_id": "/root/research_completion",
+          "model": "GPT-6",
+          "reviewed_at": "2026-09-05T18:45:20.232477+00:00",
+          "license": "CC-BY-4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "license_evidence_url": "https://arxiv.org/abs/2305.17390v2",
+          "license_evidence_path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-metadata.json",
+          "license_evidence_sha256": "sha256:8c2861ec357bf69788ca8ae495ecd877aade1fba5c1b86a406b5251fbef56e71",
+          "license_evidence_locator": "license_links[0]",
+          "source_path_at_review": "tmp/source-binding-continuation/swiftsage-2305.17390v2-page-2.png"
+        },
+        {
+          "source_path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/swiftsage-2305.17390v2-page-5.png",
+          "sha256": "sha256:a52b0214660a4b6e9a657f4600e740cc4e5e2fad6075aa7e75d180567958e8ce",
+          "media_type": "image/png",
+          "representation": "full_pdf_page_render",
+          "source_url": "https://arxiv.org/pdf/2305.17390v2",
+          "source_pdf_sha256": "sha256:193dbdfb2bcf9a155dda81eeab11a951628754bb69d3a91e0ccf89a9c005456f",
+          "page": 5,
+          "figures": [
+            2
+          ],
+          "render_method": "PyMuPDF page.get_pixmap(matrix=Matrix(1.7,1.7), alpha=False)",
+          "visually_reviewed": true,
+          "agent_id": "/root/research_completion",
+          "model": "GPT-6",
+          "reviewed_at": "2026-09-05T18:45:20.232477+00:00",
+          "license": "CC-BY-4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "license_evidence_url": "https://arxiv.org/abs/2305.17390v2",
+          "license_evidence_path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-metadata.json",
+          "license_evidence_sha256": "sha256:8c2861ec357bf69788ca8ae495ecd877aade1fba5c1b86a406b5251fbef56e71",
+          "license_evidence_locator": "license_links[0]",
+          "source_path_at_review": "tmp/source-binding-continuation/swiftsage-2305.17390v2-page-5.png"
+        },
+        {
+          "source_path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/swiftsage-2305.17390v2-page-9.png",
+          "sha256": "sha256:d03bf00413fbd65c7ef60f3dabfff1cee966bfe02838536a1c1b22f961a3f98f",
+          "media_type": "image/png",
+          "representation": "full_pdf_page_render",
+          "source_url": "https://arxiv.org/pdf/2305.17390v2",
+          "source_pdf_sha256": "sha256:193dbdfb2bcf9a155dda81eeab11a951628754bb69d3a91e0ccf89a9c005456f",
+          "page": 9,
+          "figures": [
+            3
+          ],
+          "render_method": "PyMuPDF page.get_pixmap(matrix=Matrix(1.7,1.7), alpha=False)",
+          "visually_reviewed": true,
+          "agent_id": "/root/research_completion",
+          "model": "GPT-6",
+          "reviewed_at": "2026-09-05T18:45:20.232477+00:00",
+          "license": "CC-BY-4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "license_evidence_url": "https://arxiv.org/abs/2305.17390v2",
+          "license_evidence_path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-metadata.json",
+          "license_evidence_sha256": "sha256:8c2861ec357bf69788ca8ae495ecd877aade1fba5c1b86a406b5251fbef56e71",
+          "license_evidence_locator": "license_links[0]",
+          "source_path_at_review": "tmp/source-binding-continuation/swiftsage-2305.17390v2-page-9.png"
+        },
+        {
+          "source_path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/swiftsage-2305.17390v2-page-15.png",
+          "sha256": "sha256:beff42eb886a52f5c4ce0fd1ab3bb20b73811f0c4d400340c932829f737f2a1d",
+          "media_type": "image/png",
+          "representation": "full_pdf_page_render",
+          "source_url": "https://arxiv.org/pdf/2305.17390v2",
+          "source_pdf_sha256": "sha256:193dbdfb2bcf9a155dda81eeab11a951628754bb69d3a91e0ccf89a9c005456f",
+          "page": 15,
+          "figures": [
+            4
+          ],
+          "render_method": "PyMuPDF page.get_pixmap(matrix=Matrix(1.7,1.7), alpha=False)",
+          "visually_reviewed": true,
+          "agent_id": "/root/research_completion",
+          "model": "GPT-6",
+          "reviewed_at": "2026-09-05T18:45:20.232477+00:00",
+          "license": "CC-BY-4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "license_evidence_url": "https://arxiv.org/abs/2305.17390v2",
+          "license_evidence_path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-metadata.json",
+          "license_evidence_sha256": "sha256:8c2861ec357bf69788ca8ae495ecd877aade1fba5c1b86a406b5251fbef56e71",
+          "license_evidence_locator": "license_links[0]",
+          "source_path_at_review": "tmp/source-binding-continuation/swiftsage-2305.17390v2-page-15.png"
+        },
+        {
+          "source_path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/swiftsage-2305.17390v2-page-18.png",
+          "sha256": "sha256:314a51bdc0b3ee89d859c6e8d93348e0f87ce3b2a9c6256a78f950be5a6f8488",
+          "media_type": "image/png",
+          "representation": "full_pdf_page_render",
+          "source_url": "https://arxiv.org/pdf/2305.17390v2",
+          "source_pdf_sha256": "sha256:193dbdfb2bcf9a155dda81eeab11a951628754bb69d3a91e0ccf89a9c005456f",
+          "page": 18,
+          "figures": [
+            5
+          ],
+          "render_method": "PyMuPDF page.get_pixmap(matrix=Matrix(1.7,1.7), alpha=False)",
+          "visually_reviewed": true,
+          "agent_id": "/root/research_completion",
+          "model": "GPT-6",
+          "reviewed_at": "2026-09-05T18:45:20.232477+00:00",
+          "license": "CC-BY-4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "license_evidence_url": "https://arxiv.org/abs/2305.17390v2",
+          "license_evidence_path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-metadata.json",
+          "license_evidence_sha256": "sha256:8c2861ec357bf69788ca8ae495ecd877aade1fba5c1b86a406b5251fbef56e71",
+          "license_evidence_locator": "license_links[0]",
+          "source_path_at_review": "tmp/source-binding-continuation/swiftsage-2305.17390v2-page-18.png"
+        },
+        {
+          "source_path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/swiftsage-figure4.png",
+          "sha256": "sha256:0d5e30495ab0cd0d6531a618b18ab9540a0dfa09bb9ba1ae54ba4a95fce9faf8",
+          "media_type": "image/png",
+          "representation": "unaltered_original_figure_png",
+          "source_url": "https://arxiv.org/html/2305.17390v2/image.png",
+          "source_pdf_sha256": "sha256:193dbdfb2bcf9a155dda81eeab11a951628754bb69d3a91e0ccf89a9c005456f",
+          "page": 15,
+          "figures": [
+            4
+          ],
+          "html_locator": "A2.F4",
+          "visually_reviewed": true,
+          "agent_id": "/root/research_completion",
+          "model": "GPT-6",
+          "reviewed_at": "2026-09-05T18:45:20.232477+00:00",
+          "license": "CC-BY-4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "license_evidence_url": "https://arxiv.org/abs/2305.17390v2",
+          "license_evidence_path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-metadata.json",
+          "license_evidence_sha256": "sha256:8c2861ec357bf69788ca8ae495ecd877aade1fba5c1b86a406b5251fbef56e71",
+          "license_evidence_locator": "license_links[0]",
+          "source_path_at_review": "tmp/source-binding-continuation/swiftsage-figure4.png"
+        }
+      ],
+      "figure_qc": [
+        {
+          "figure": 1,
+          "page": 2,
+          "visual_content": "Four framework diagrams contrast per-step SayCan/ReAct, round-level Reflexion and conditional SwiftSage calls with an action buffer.",
+          "text_overlap": "The method distinction, demonstrations, planning/grounding and buffer are described in introduction and sections 2.3, 3.3-3.4.",
+          "remaining_limit": "Example dialogue and diagram edges are absent from Markdown; use the reviewed page if citing this comparison figure."
+        },
+        {
+          "figure": 2,
+          "page": 5,
+          "visual_content": "Worked melting-ice-cream task: failed stove activation triggers Sage, which plans an alternative heat source and buffers oven actions.",
+          "text_overlap": "The broken-stove exception, five planning questions, action templates and buffer are described in sections 3.2-3.4 and B.2-B.3.",
+          "remaining_limit": "Exact worked-example state, arrows and action sequence are only available in the image; do not invent a literal transcript from the caption."
+        },
+        {
+          "figure": 3,
+          "page": 9,
+          "visual_content": "30 task panels show blue SwiftSage, red ReAct and grey Oracle score/time trajectories, ordered by oracle task length.",
+          "text_overlap": "Section 4.3 explains overall efficiency and selected exceptions; Tables 1 and 4 give scores/cost metrics, but not these trajectories.",
+          "remaining_limit": "Curve coordinates, task-specific timing and path shapes are not reproduced in Markdown and were not numerically digitized. Do not infer exact effect sizes or statistical tests from this plot."
+        },
+        {
+          "figure": 4,
+          "page": 15,
+          "visual_content": "23-line illustrative pseudocode controlling Swift/Sage modes and an action buffer.",
+          "text_overlap": "Sections 3.4 and B.3 describe the switching logic, with additional buffer exception rules.",
+          "remaining_limit": "Separate faithful transcription supplied. Original line21 sums cumulative scores S rather than reward increments R; the Sage branch fills B without visibly assigning its first action to A_t before execution. Preserve both source discrepancies; this is not validated runnable code."
+        },
+        {
+          "figure": 5,
+          "page": 18,
+          "visual_content": "Trajectory overviews grouped into Short, Medium and Long tasks, with score/time axes and blue/grey/red agent curves.",
+          "text_overlap": "Appendix C.2-C.3 and Table 4 retain the broad efficiency/cost discussion.",
+          "remaining_limit": "Individual curve data and distributions are image-only and not digitized. Aggregate table values are not a reconstruction of these curves."
+        }
+      ],
+      "readiness": {
+        "source_identity_ready": true,
+        "complete_official_html_article_text": true,
+        "markdown_is_visually_complete": false,
+        "qc_result": "ready_for_source_review_with_declared_original_assets",
+        "conditions": [
+          "Version binding must expose the unchanged Markdown and all listed original page/figure assets to each reviewer.",
+          "Retain separate attributed supplementary transcription for SwiftSage Figure 4; never replace the original figure or repair its discrepancies silently."
+        ],
+        "not_claimed": [
+          "screening decision",
+          "criteria coding",
+          "human verification",
+          "study-quality approval",
+          "digitized trajectory data",
+          "an executable implementation"
+        ]
+      },
+      "supplementary_transcription": {
+        "source_path": "corpus/source-acquisition/reading-assets-2026-09-05/swiftsage-figure4-transcription.md",
+        "sha256": "sha256:b0d22b2b8ea71973824e9e5c373c397b5c6410f8f0795b79b6dbb37bd8273b62",
+        "kind": "attributed_manual_transcription_of_original_figure",
+        "original_asset_sha256": "sha256:0d5e30495ab0cd0d6531a618b18ab9540a0dfa09bb9ba1ae54ba4a95fce9faf8",
+        "source_path_at_review": "tmp/source-binding-continuation/swiftsage-figure4-transcription.md"
+      }
+    },
+    "SQYLQFRU": {
+      "paper_id": "SQYLQFRU",
+      "arxiv_version": "2504.05632v3",
+      "title": "Reasoning Towards Fairness: Mitigating Bias in Language Models through Reasoning-Guided Fine-Tuning",
+      "authors": [
+        "Kabra, Sanchit",
+        "Jha, Akshita",
+        "Reddy, Chandan K."
+      ],
+      "version_date": "2025-06-05",
+      "first_submission_date": "2025-04-08",
+      "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-v3-text.md",
+      "sha256": "sha256:bac6454052cd33fa790fde5c12b2bfc10fd340fb20433725feecd6a804283620",
+      "source_url": "https://arxiv.org/html/2504.05632v3",
+      "local_text_lines": 1596,
+      "local_text_bytes": 55758,
+      "identity_result": "exact_version_title_authors_confirmed",
+      "fresh_html_response_sha256": "sha256:b59816732e856e3c761ad0ef8a3fdf35949ebe49db675a2a83129c1420aab2e6",
+      "fresh_html_response_matches_acquisition_log": true,
+      "local_body_identical_to_complete_article_text": true,
+      "coverage": "Abstract, sections 1-7, ethics/reproducibility/limitations, 33 references, Appendix A.1-A.5 through A.5.4",
+      "table_qc": "Five numbered result tables, with 10, 10, 17, 5 and 7 HTML rows including header/model-group rows. A sixth HTML table is only an equation layout, not a sixth result table. All cells survive; grouped Age/Religion/Nationality and Ambig./Disambig./Overall headers require reconstruction from DOM/original view. Algorithm 1 is fully present as text. MathML visible strings and TeX annotations are duplicated, not separate equations. Appendix example tags rendered as inverted punctuation are already present in original HTML and must not be treated as clean executable prompt syntax.",
+      "pdf_evidence": {
+        "source_url": "https://arxiv.org/pdf/2504.05632v3",
+        "retrieved_at": "2026-09-05T18:39:11.201469+00:00",
+        "status": 200,
+        "final_url": "https://arxiv.org/pdf/2504.05632v3",
+        "bytes": 2874889,
+        "sha256": "sha256:38d8bdd5fee5c45b151d153a2d2d96865b5d4164804eb321fd489df21aaf2ea7",
+        "source_path": "tmp/source-binding-continuation/kabra-2504.05632v3.pdf"
+      },
+      "pdf_pages": 17,
+      "source_assets": [
+        {
+          "source_path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/kabra-2504.05632v3-page-2.png",
+          "sha256": "sha256:1fe0bb3d9726a6fec06b66dab08cc4d9eff3d8b9feda38da152acd66084e46a1",
+          "media_type": "image/png",
+          "representation": "full_pdf_page_render",
+          "source_url": "https://arxiv.org/pdf/2504.05632v3",
+          "source_pdf_sha256": "sha256:38d8bdd5fee5c45b151d153a2d2d96865b5d4164804eb321fd489df21aaf2ea7",
+          "page": 2,
+          "figures": [
+            1,
+            2
+          ],
+          "render_method": "PyMuPDF page.get_pixmap(matrix=Matrix(1.7,1.7), alpha=False)",
+          "visually_reviewed": true,
+          "agent_id": "/root/research_completion",
+          "model": "GPT-6",
+          "reviewed_at": "2026-09-05T18:45:20.232477+00:00",
+          "license": "CC-BY-4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "license_evidence_url": "https://arxiv.org/abs/2504.05632v3",
+          "license_evidence_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-metadata.json",
+          "license_evidence_sha256": "sha256:caf3057760abe06a04b2bffe47e15b553f7afd9b7abd7184cb805993ddbfd498",
+          "license_evidence_locator": "license_links[0]",
+          "source_path_at_review": "tmp/source-binding-continuation/kabra-2504.05632v3-page-2.png"
+        },
+        {
+          "source_path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/kabra-2504.05632v3-page-7.png",
+          "sha256": "sha256:97ee9803cd792f65839b3271e4fc8b714473ec209b24c6e5c159f73188f9d3e8",
+          "media_type": "image/png",
+          "representation": "full_pdf_page_render",
+          "source_url": "https://arxiv.org/pdf/2504.05632v3",
+          "source_pdf_sha256": "sha256:38d8bdd5fee5c45b151d153a2d2d96865b5d4164804eb321fd489df21aaf2ea7",
+          "page": 7,
+          "figures": [
+            3
+          ],
+          "render_method": "PyMuPDF page.get_pixmap(matrix=Matrix(1.7,1.7), alpha=False)",
+          "visually_reviewed": true,
+          "agent_id": "/root/research_completion",
+          "model": "GPT-6",
+          "reviewed_at": "2026-09-05T18:45:20.232477+00:00",
+          "license": "CC-BY-4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "license_evidence_url": "https://arxiv.org/abs/2504.05632v3",
+          "license_evidence_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-metadata.json",
+          "license_evidence_sha256": "sha256:caf3057760abe06a04b2bffe47e15b553f7afd9b7abd7184cb805993ddbfd498",
+          "license_evidence_locator": "license_links[0]",
+          "source_path_at_review": "tmp/source-binding-continuation/kabra-2504.05632v3-page-7.png"
+        },
+        {
+          "source_path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/kabra-2504.05632v3-page-9.png",
+          "sha256": "sha256:7c4df10bb49855fd895e8d8110a801c7020a82fcd0c8f8dbff50aabb97016afc",
+          "media_type": "image/png",
+          "representation": "full_pdf_page_render",
+          "source_url": "https://arxiv.org/pdf/2504.05632v3",
+          "source_pdf_sha256": "sha256:38d8bdd5fee5c45b151d153a2d2d96865b5d4164804eb321fd489df21aaf2ea7",
+          "page": 9,
+          "figures": [
+            4
+          ],
+          "render_method": "PyMuPDF page.get_pixmap(matrix=Matrix(1.7,1.7), alpha=False)",
+          "visually_reviewed": true,
+          "agent_id": "/root/research_completion",
+          "model": "GPT-6",
+          "reviewed_at": "2026-09-05T18:45:20.232477+00:00",
+          "license": "CC-BY-4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "license_evidence_url": "https://arxiv.org/abs/2504.05632v3",
+          "license_evidence_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-metadata.json",
+          "license_evidence_sha256": "sha256:caf3057760abe06a04b2bffe47e15b553f7afd9b7abd7184cb805993ddbfd498",
+          "license_evidence_locator": "license_links[0]",
+          "source_path_at_review": "tmp/source-binding-continuation/kabra-2504.05632v3-page-9.png"
+        }
+      ],
+      "figure_qc": [
+        {
+          "figure": 1,
+          "page": 2,
+          "visual_content": "Illustrative religion-bias QA compares a small base model, a larger reasoning model and a small reasoning-guided model, with transfer of reasoning traces.",
+          "text_overlap": "Introduction and methodology explain this conceptual transfer and correct abstention under insufficient context.",
+          "remaining_limit": "The literal illustrative context, answers and arrows are absent from Markdown. It is a conceptual example, not a numerical comparison of model populations."
+        },
+        {
+          "figure": 2,
+          "page": 2,
+          "visual_content": "Four-quadrant prior-work diagram: prompting vs instruction fine-tuning, crossed with reasoning vs non-reasoning. ReGiFT is placed at reasoning plus instruction fine-tuning.",
+          "text_overlap": "The inline SVG labels survive in Markdown and section 2 explains the approach; their spatial relations do not.",
+          "remaining_limit": "Use the image for quadrant placement. The authors categorization is a literature-positioning diagram, not independently verified performance evidence."
+        },
+        {
+          "figure": 3,
+          "page": 7,
+          "visual_content": "Two worked religion-bias QA comparisons: ambiguous context calls for abstention; disambiguating evidence changes the supported answer. Base-model and ReGiFT outputs appear side by side.",
+          "text_overlap": "Section 5.1 describes grounded reasoning and Appendix A.4-A.5 provides other text examples.",
+          "remaining_limit": "These exact figure examples and generated outputs are not in the Markdown. Other appendix examples are not substitutes for a quotation from Figure 3."
+        },
+        {
+          "figure": 4,
+          "page": 9,
+          "visual_content": "Two bars show mean reasoning lengths 139.62 tokens for correct and 243.81 for incorrect answers, with vertical error bars.",
+          "text_overlap": "Section 6 repeats both numerical means.",
+          "remaining_limit": "The visible error bars are not defined as SD, SE or confidence intervals by the figure/caption or adjacent paragraph; their exact values are not given. Do not code a dispersion measure or infer a significance test from the image."
+        }
+      ],
+      "readiness": {
+        "source_identity_ready": true,
+        "complete_official_html_article_text": true,
+        "markdown_is_visually_complete": false,
+        "qc_result": "ready_for_source_review_with_declared_original_assets",
+        "conditions": [
+          "Version binding must expose the unchanged Markdown and all listed original page assets to each reviewer."
+        ],
+        "not_claimed": [
+          "screening decision",
+          "criteria coding",
+          "human verification",
+          "study-quality approval",
+          "digitized trajectory data",
+          "an executable implementation"
+        ]
+      }
+    }
+  },
+  "relocation": {
+    "agent_id": "/root",
+    "model": "GPT-6",
+    "relocated_at": "2026-09-05T18:50:55.705627+00:00",
+    "original_receipt_sha256": "sha256:ee764c272f396bbb6fd2900d5547122a2f8fcf12c7129f49a479cbf142e51fef",
+    "scope": "Storage relocation only; original article text and image bytes, review identity, findings and review time remain unchanged. Local PDF paths record acquisition-time locations; PDFs are not a build dependency."
+  }
+}

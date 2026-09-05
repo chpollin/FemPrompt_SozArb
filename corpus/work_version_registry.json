@@ -1,6 +1,6 @@
 {
   "schema": "femprompt-work-version-registry/0.1",
-  "source_fingerprint": "sha256:ca34ea908bfda96726e7092dbbb0321ef4eeea36573a8bd94c45cb7d15f5297b",
+  "source_fingerprint": "sha256:cfade36de9c6727693e95ea87bef53cb1916c2b1916c4dfe214890add1702dff",
   "sources": [
     {
       "path": "corpus/metadata_corrections.json",
@@ -55,6 +55,46 @@
       "sha256": "fa9a2f3f7766fe5a5bd63ce65c9ad412122e42221e9c01e5453679fbac21c18f"
     },
     {
+      "path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/kabra-2504.05632v3-page-2.png",
+      "sha256": "1fe0bb3d9726a6fec06b66dab08cc4d9eff3d8b9feda38da152acd66084e46a1"
+    },
+    {
+      "path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/kabra-2504.05632v3-page-7.png",
+      "sha256": "97ee9803cd792f65839b3271e4fc8b714473ec209b24c6e5c159f73188f9d3e8"
+    },
+    {
+      "path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/kabra-2504.05632v3-page-9.png",
+      "sha256": "7c4df10bb49855fd895e8d8110a801c7020a82fcd0c8f8dbff50aabb97016afc"
+    },
+    {
+      "path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/swiftsage-2305.17390v2-page-15.png",
+      "sha256": "beff42eb886a52f5c4ce0fd1ab3bb20b73811f0c4d400340c932829f737f2a1d"
+    },
+    {
+      "path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/swiftsage-2305.17390v2-page-18.png",
+      "sha256": "314a51bdc0b3ee89d859c6e8d93348e0f87ce3b2a9c6256a78f950be5a6f8488"
+    },
+    {
+      "path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/swiftsage-2305.17390v2-page-2.png",
+      "sha256": "c353cb1a1745c8e455bccaf0f287e6fc4c1c5ccfddedcebf2352d170535cd6ba"
+    },
+    {
+      "path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/swiftsage-2305.17390v2-page-5.png",
+      "sha256": "a52b0214660a4b6e9a657f4600e740cc4e5e2fad6075aa7e75d180567958e8ce"
+    },
+    {
+      "path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/swiftsage-2305.17390v2-page-9.png",
+      "sha256": "d03bf00413fbd65c7ef60f3dabfff1cee966bfe02838536a1c1b22f961a3f98f"
+    },
+    {
+      "path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/swiftsage-figure4.png",
+      "sha256": "0d5e30495ab0cd0d6531a618b18ab9540a0dfa09bb9ba1ae54ba4a95fce9faf8"
+    },
+    {
+      "path": "corpus/source-acquisition/reading-assets-2026-09-05/qc.json",
+      "sha256": "12eef6d22922973c82513ff6343fcf476f84872f105a735512322761485b159e"
+    },
+    {
       "path": "corpus/source-acquisition/residual-resolution-2026-09-05/hoeyer-wadmann-crossref.json",
       "sha256": "c38394eca735a1eb9949071c6aa2d0896b9a14899c70289bd99b9f86c4bf415e"
     },
@@ -65,6 +105,10 @@
     {
       "path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-metadata.json",
       "sha256": "caf3057760abe06a04b2bffe47e15b553f7afd9b7abd7184cb805993ddbfd498"
+    },
+    {
+      "path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-v3-text.md",
+      "sha256": "bac6454052cd33fa790fde5c12b2bfc10fd340fb20433725feecd6a804283620"
     },
     {
       "path": "corpus/source-acquisition/residual-resolution-2026-09-05/kamruzzaman-url-identity.json",
@@ -79,8 +123,12 @@
       "sha256": "8c2861ec357bf69788ca8ae495ecd877aade1fba5c1b86a406b5251fbef56e71"
     },
     {
+      "path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-v2-text.md",
+      "sha256": "fd64251d9eed80eca0689fe3bad5e8ea15465746be71af1e38d7f8c9bdb553d1"
+    },
+    {
       "path": "corpus/source_version_bindings.json",
-      "sha256": "eaf56ce0aec123e4cb03b2d55cb3423d1b2ca364cc7a1cd7c8885121d1da38b7"
+      "sha256": "573a8f8925d7b9d94417fd75ca8f1c6780bf62d754c5e56ac916e3fa71c99207"
     },
     {
       "path": "corpus/zotero_export.json",
@@ -123,7 +171,7 @@
     "works_with_multiple_versions": 22,
     "works_with_flags": 21,
     "ambiguous_external_identifiers": 3,
-    "bound_sources": 2
+    "bound_sources": 4
   },
   "works": [
     {
@@ -24451,6 +24499,46 @@
       "bibliographic_version_id": "version:75660bfb-6982-59e7-ada4-3b60049ccd08",
       "preferred_version_id": "version:75660bfb-6982-59e7-ada4-3b60049ccd08",
       "is_preferred_version": false
+    },
+    "RAY6G2R7": {
+      "record_id": "RAY6G2R7",
+      "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+      "bibliographic_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+      "source_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+      "source_version_type": "preprint",
+      "preferred_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+      "is_preferred_version": true,
+      "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-v2-text.md",
+      "source_sha256": "sha256:fd64251d9eed80eca0689fe3bad5e8ea15465746be71af1e38d7f8c9bdb553d1",
+      "binding_mode": "existing_version",
+      "bibliographic_identity": {
+        "title": "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks",
+        "doi": "10.48550/arxiv.2305.17390"
+      },
+      "version_identity": {
+        "title": "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks",
+        "arxiv": "2305.17390v2"
+      }
+    },
+    "SQYLQFRU": {
+      "record_id": "SQYLQFRU",
+      "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+      "bibliographic_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+      "source_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+      "source_version_type": "preprint",
+      "preferred_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+      "is_preferred_version": true,
+      "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-v3-text.md",
+      "source_sha256": "sha256:bac6454052cd33fa790fde5c12b2bfc10fd340fb20433725feecd6a804283620",
+      "binding_mode": "existing_version",
+      "bibliographic_identity": {
+        "title": "Reasoning towards fairness: Mitigating bias in language models through reasoning-guided fine-tuning",
+        "doi": "10.48550/arxiv.2504.05632"
+      },
+      "version_identity": {
+        "title": "Reasoning towards fairness: Mitigating bias in language models through reasoning-guided fine-tuning",
+        "arxiv": "2504.05632v3"
+      }
     },
     "VSZM7CT6": {
       "record_id": "VSZM7CT6",

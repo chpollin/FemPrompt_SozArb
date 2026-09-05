@@ -55,6 +55,7 @@ The automated suites cover the following contracts.
 - Productive agent merges are append-only and reject divergent overwrite.
 - Public literature projections enforce the configured release policy; AI-reviewed records require attributed artifact/source-hash-bound receipts. The default publisher without an explicit policy retains its human publication-approval gate.
 - Accepted AI corrections preserve the original annotations and bind their exact original hash, bounded before/after fields and source-reviewed correction artifact. A separately bound manuscript cannot overwrite bibliographic identity.
+- Existing-Version source bindings preserve all Work/Version metadata and require exact title, identifier, arXiv revision and quoted source identity. Optional visual run assets require safe repository paths, real PNG bytes, exact image hashes and source/license provenance before and after execution; original-PDF hashes remain declared acquisition evidence.
 - The latest original/correction-family review governs both publication and completion. Later negative outcomes, missing correction tombstones, stale source hashes and conflicting simultaneous reviews cannot revive earlier acceptance.
 - Work-wide source or withdrawal holds exclude otherwise reviewed coding from current analysis and Assertion release.
 - Duplicate bibliographic records contribute once per Work to result aggregations; conflicting eligible codings stop publication.

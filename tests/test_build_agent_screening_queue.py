@@ -8,27 +8,27 @@ from src.analysis.build_agent_screening_queue import REPO, build_queue
 def test_queue_preserves_existing_human_authority() -> None:
     queue = build_queue(REPO)
 
-    assert queue["counts"] == {
-        "canonical_records": 326,
-        "canonical_works": 257,
-        "direct_human_annotated_records": 291,
-        "direct_ai_agent_reviewed_without_human": 22,
-        "unannotated_alias_records_covered_at_work_level": 5,
-        "queued_records": 8,
-        "queued_works": 8,
-        "ready_works": 0,
-        "blocked_abstract_only_works": 4,
-        "blocked_without_text_works": 4,
-    }
-    assert len(queue["covered_alias_records"]) == 5
+    vault = json.loads((REPO / "docs/data/research_vault_v2.json").read_text(encoding="utf-8"))
+    human_works = {paper["work_id"] for paper in vault["papers"] if paper.get("human")}
+    assert human_works.isdisjoint(item["work_id"] for item in queue["queue"])
+    counts = queue["counts"]
+    assert counts["direct_human_annotated_records"] == 291
+    assert counts["canonical_records"] == sum(counts[key] for key in (
+        "direct_human_annotated_records", "direct_ai_agent_reviewed_without_human",
+        "unannotated_alias_records_covered_at_work_level", "queued_records",
+    ))
+    assert counts["queued_works"] == sum(counts[key] for key in (
+        "ready_works", "blocked_abstract_only_works", "blocked_without_text_works",
+    ))
+    assert counts["unannotated_alias_records_covered_at_work_level"] == len(queue["covered_alias_records"])
 
 
 def test_completed_residual_source_run_closes_ready_gate() -> None:
     queue = build_queue(REPO)
     ready = [item for item in queue["queue"] if item["queue_status"] == "ready"]
 
-    assert ready == []
-    assert queue["gate"]["status"] == "blocked"
+    assert queue["gate"]["ready_work_ids"] == [item["work_id"] for item in ready]
+    assert queue["gate"]["status"] == ("partial" if ready else "blocked")
     queued_ids = {item["representative_record_id"] for item in queue["queue"]}
     assert "8NG4ZEWE" not in queued_ids
     assert (

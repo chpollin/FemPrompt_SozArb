@@ -339,7 +339,7 @@ def _work_rows(registry: dict, human: list[dict], agents: dict, queue: dict, res
         if conflicts:
             actions.append("reconcile_recorded_divergences_without_overwriting_human_track")
         if work_id in queue_by_work:
-            actions.append("resolve_source_blockers_then_governed_screening")
+            actions.append("execute_governed_source_screening" if queue_by_work[work_id].get("queue_status") == "ready" else "resolve_source_blockers_then_governed_screening")
         if human_rows:
             actions.append("retain_legacy_human_decision_and_document_historical_provenance_limits")
         if agent_rows:
@@ -394,6 +394,17 @@ def _work_rows(registry: dict, human: list[dict], agents: dict, queue: dict, res
             "next_actions": actions,
         })
     return result, unmapped
+
+
+def _attach_source_progress(work: dict, residual: dict, registry: dict) -> None:
+    """Keep dated acquisition findings while deriving outstanding work now."""
+    progress = [residual[key] for key in work["record_ids"] if key in residual]
+    bindings = registry.get("source_index", {})
+    work["source_acquisition_progress"] = progress
+    work["current_source_binding_record_ids"] = sorted(key for key in work["record_ids"] if key in bindings)
+    work["newly_acquired_text_requires_binding"] = any(entry.get("original_text") and entry["record_id"] not in bindings for entry in progress)
+    work["next_actions"].extend(entry["next_step"] for entry in progress if entry["record_id"] not in bindings)
+    work["next_actions"].extend(review["recommended_disposition"] for entry in progress for review in entry.get("follow_up_reviews", []) if review.get("recommended_disposition"))
 
 
 def _analysis(rows: list[dict], schema: dict) -> list[dict]:
@@ -525,10 +536,7 @@ def build_package(repo: Path = REPO) -> dict:
     works, unmapped = _work_rows(registry, human, agents, queue, resolution)
     residual = _residual_progress(repo, registry, inputs)
     for work in works:
-        progress = [residual[key] for key in work["record_ids"] if key in residual]
-        work["source_acquisition_progress"] = progress
-        work["next_actions"].extend(entry["next_step"] for entry in progress)
-        work["next_actions"].extend(review["recommended_disposition"] for entry in progress for review in entry.get("follow_up_reviews", []) if review.get("recommended_disposition"))
+        _attach_source_progress(work, residual, registry)
     issues.extend(unmapped)
     candidates = _candidate_rows(repo, package, readiness, registry, inputs)
     followup_candidates = _followup_rows(followup, registry)
@@ -555,7 +563,7 @@ def build_package(repo: Path = REPO) -> dict:
             "reconciled_historical_human_records": sum(len(row["historical_identity_bindings"]) for row in works),
             "works_with_integrity_hold": sum(row["integrity_hold"] for row in works),
             "queued_source_works": len(queue.get("queue", [])),
-            "source_queue_works_with_newly_acquired_unbound_text": sum(bool(work["source_queue_status"]) and any(entry.get("original_text") for entry in work["source_acquisition_progress"]) for work in works),
+            "source_queue_works_with_newly_acquired_unbound_text": sum(bool(work["source_queue_status"]) and work["newly_acquired_text_requires_binding"] for work in works),
             "canonical_decisions": dict(sorted(Counter(row["effective_decision"] or "unresolved" for row in works).items())),
             "candidates_2026": len(candidates), "candidates_2026_with_canonical_binding": sum(bool(row["canonical_bindings"]) for row in candidates),
             "candidates_2026_recorded_source_ready": sum(row["recorded_source_ready"] for row in candidates),
@@ -678,6 +686,7 @@ This directory is an internal operator package and is not a website release inpu
 | analysis_conflicts / analysis_undecidable | Conflicting or explicitly undecidable coding; excluded from that field's denominator. |
 | source_blockers / next_actions | Preparation actions for the operator, not automatic exclusion reasons. |
 | source_acquisition_progress | Attributed metadata corrections and original-text acquisitions, checked against raw record and evidence hashes. An acquired text alone does not establish screening readiness or scholarly verification. |
+| current_source_binding_record_ids / newly_acquired_text_requires_binding | Current registry bindings and remaining binding work, derived separately from dated acquisition findings. A resolved binding no longer creates a stale acquisition action; screening remains its own queue step. |
 | knowledge_coverage | Deterministic availability inventory with missing documents, identity-review candidates and concept-graph binding gaps. Active maturity labels are recorded literally and do not substitute for current review receipts. |
 | candidate_id / canonical_bindings | Search-package identity and explicit current Zotero/registry mapping; title similarity never binds identities. |
 | targeted_followup_candidates | Separate gap-fill intake; preserves original candidate metadata and status, gap rationale, required next steps, source access, exact-version details and identification provenance. |

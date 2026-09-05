@@ -31,6 +31,7 @@ from src.analysis.work_versions import (
     REGISTRY_SCHEMA,
     SOURCE_BINDINGS_PATH,
     load_contract,
+    normalise_arxiv,
     normalise_doi,
     normalise_title,
     select_version_ids,
@@ -507,7 +508,14 @@ def _source_fingerprint(paths: Iterable[Path]) -> str:
 
 
 def apply_source_bindings(repo: Path, registry: dict, contract: dict) -> list[Path]:
-    """Register explicitly reviewed manuscript sources without moving record IDs."""
+    """Bind reviewed sources without moving record IDs.
+
+    Manifest 0.2 adds ``binding_mode: existing_version`` with a
+    ``version_identity`` (title and DOI or revision-pinned arXiv ID). It permits
+    no ``version`` metadata and changes only source_index. The index retains
+    both reviewed identities for validation by consumers of the built registry.
+    The original manuscript-addition contract remains compatible with 0.1/0.2.
+    """
     from copy import deepcopy
     from src.assess.artifact_verification import artifact_hash, safe_path
 
@@ -515,12 +523,14 @@ def apply_source_bindings(repo: Path, registry: dict, contract: dict) -> list[Pa
     if not manifest_path.is_file():
         return []
     manifest = _read_json(manifest_path)
-    if manifest.get("schema") != "femprompt-source-version-bindings/0.1" or not isinstance(manifest.get("records"), dict):
+    if manifest.get("schema") not in {"femprompt-source-version-bindings/0.1", "femprompt-source-version-bindings/0.2"} or not isinstance(manifest.get("records"), dict):
         raise ValueError("Unsupported source-version binding manifest")
     inputs = [manifest_path]
     registry["source_index"] = {}
     all_versions = {version["version_id"] for work in registry["works"] for version in work["versions"]}
     for record_id, entry in sorted(manifest["records"].items()):
+        if not isinstance(entry, dict):
+            raise ValueError(f"{record_id}: source binding entry must be an object")
         for field in ("agent_id", "model", "reviewed_at", "reason"):
             if not isinstance(entry.get(field), str) or not entry[field].strip():
                 raise ValueError(f"{record_id}: source binding lacks {field}")
@@ -532,6 +542,56 @@ def apply_source_bindings(repo: Path, registry: dict, contract: dict) -> list[Pa
         if not work or binding.get("work_id") != work["work_id"] or binding.get("bibliographic_version_id") != canonical.get("version_id"):
             raise ValueError(f"{record_id}: source manifest targets another bibliographic identity")
         bibliographic = next(item for item in work["versions"] if item["version_id"] == canonical["version_id"])
+        mode = entry.get("binding_mode", "accepted_manuscript")
+        if mode not in {"accepted_manuscript", "existing_version"}:
+            raise ValueError(f"{record_id}: unsupported source binding mode")
+        evidence = entry.get("evidence")
+        if not isinstance(evidence, list) or not evidence:
+            raise ValueError(f"{record_id}: source binding lacks identity evidence")
+        for source in evidence:
+            if not isinstance(source, dict) or not isinstance(source.get("locator"), str) or not source["locator"].strip():
+                raise ValueError(f"{record_id}: stale or incomplete source identity evidence")
+            if artifact_hash(repo, source.get("source_path", "")) != source.get("sha256"):
+                raise ValueError(f"{record_id}: stale or incomplete source identity evidence")
+            path = safe_path(repo, source["source_path"].partition("#")[0])
+            inputs.append(path)
+            if source.get("quote") and (not isinstance(source["quote"], str) or " ".join(source["quote"].split()) not in " ".join(path.read_text(encoding="utf-8").split())):
+                raise ValueError(f"{record_id}: source identity quotation does not resolve")
+
+        if mode == "existing_version":
+            if manifest["schema"] != "femprompt-source-version-bindings/0.2":
+                raise ValueError(f"{record_id}: existing version bindings require manifest 0.2")
+            allowed_entry = {"binding_mode", "binding", "bibliographic_identity", "version_identity", "agent_id", "model", "reviewed_at", "reason", "evidence"}
+            allowed_binding = {"record_id", "work_id", "bibliographic_version_id", "source_version_id", "source_version_type", "preferred_version_id", "is_preferred_version", "source_path", "source_sha256"}
+            if set(entry) - allowed_entry or set(binding) != allowed_binding:
+                raise ValueError(f"{record_id}: existing version binding cannot supply new version metadata")
+            binding.update(binding_mode=mode, bibliographic_identity=deepcopy(entry.get("bibliographic_identity")),
+                           version_identity=deepcopy(entry.get("version_identity")))
+            # Validate before changing even source_index. In particular the source
+            # must be the record's already registered exact bibliographic version.
+            staged = {**registry, "source_index": {**registry["source_index"], record_id: binding}}
+            source_binding_for_record(staged, record_id, repo)
+            quotes = " ".join(source.get("quote") or "" for source in evidence
+                              if source.get("source_path") == binding["source_path"]
+                              and source.get("sha256") == binding["source_sha256"])
+            identity = binding["version_identity"]
+            if " " + normalise_title(identity["title"]) + " " not in " " + normalise_title(quotes) + " ":
+                raise ValueError(f"{record_id}: bound source evidence must quote its registered title")
+            identifier = normalise_arxiv(identity["arxiv"]) if identity.get("arxiv") else normalise_doi(identity["doi"])
+            if not re.search(r"(?<![\w.])" + re.escape(identifier) + r"(?![\w.])", quotes, re.IGNORECASE):
+                raise ValueError(f"{record_id}: bound source evidence must quote its exact version identifier")
+            if identity.get("arxiv"):
+                for source in evidence:
+                    source_url = str(source.get("source_url") or "")
+                    source_arxiv = normalise_arxiv(source_url) or normalise_arxiv(normalise_doi(source_url))
+                    if re.match(r"https?://(?:www\.)?arxiv\.org/", source_url, re.IGNORECASE) and not source_arxiv:
+                        raise ValueError(f"{record_id}: malformed arXiv evidence URL")
+                    if source_arxiv and source_arxiv != identifier:
+                        raise ValueError(f"{record_id}: source evidence URL differs from the exact arXiv revision")
+            registry["source_index"][record_id] = binding
+            inputs.append(repo / binding["source_path"])
+            continue
+
         expected = entry.get("bibliographic_identity", {})
         if not expected.get("title") or normalise_title(expected["title"]) != normalise_title(bibliographic.get("title")) or normalise_doi(expected.get("doi")) not in bibliographic.get("identifiers", {}).get("doi", []):
             raise ValueError(f"{record_id}: source manifest bibliographic metadata is stale or uncorrected")
@@ -543,16 +603,6 @@ def apply_source_bindings(repo: Path, registry: dict, contract: dict) -> list[Pa
             raise ValueError(f"{record_id}: manuscript must have a distinct repository identity")
         if version.get("relations") != [{"type": "isVersionOf", "target_version_id": canonical["version_id"]}]:
             raise ValueError(f"{record_id}: manuscript relation must target its bibliographic version")
-        evidence = entry.get("evidence")
-        if not isinstance(evidence, list) or not evidence:
-            raise ValueError(f"{record_id}: source binding lacks identity evidence")
-        for source in evidence:
-            if artifact_hash(repo, source["source_path"]) != source.get("sha256") or not source.get("locator"):
-                raise ValueError(f"{record_id}: stale or incomplete source identity evidence")
-            path = safe_path(repo, source["source_path"].partition("#")[0])
-            inputs.append(path)
-            if source.get("quote") and " ".join(source["quote"].split()) not in " ".join(path.read_text(encoding="utf-8").split()):
-                raise ValueError(f"{record_id}: source identity quotation does not resolve")
         version.setdefault("provenance", []).append({"source": SOURCE_BINDINGS_PATH, "reference": f"#/records/{record_id}", "agent_id": entry["agent_id"], "model": entry["model"], "reviewed_at": entry["reviewed_at"]})
         work["versions"].append(version)
         work["versions"].sort(key=lambda item: item["version_id"])

@@ -1,6 +1,6 @@
 # Data dictionary
 
-Source fingerprint: `sha256:7987896e4010383aeb99bd39c9c0700077ef27833a08ea9f6f8221db9e84396e`. Deterministic internal preparation; no approval is created.
+Source fingerprint: `sha256:7c559be485432bbc48769c5a72d1755633cd1996d8cec16d486e98dd0fdc1af3`. Deterministic internal preparation; no approval is created.
 
 | Field / artifact | Meaning |
 |---|---|
@@ -23,6 +23,7 @@ Source fingerprint: `sha256:7987896e4010383aeb99bd39c9c0700077ef27833a08ea9f6f82
 | analysis_conflicts / analysis_undecidable | Conflicting or explicitly undecidable coding; excluded from that field's denominator. |
 | source_blockers / next_actions | Preparation actions for the operator, not automatic exclusion reasons. |
 | source_acquisition_progress | Attributed metadata corrections and original-text acquisitions, checked against raw record and evidence hashes. An acquired text alone does not establish screening readiness or scholarly verification. |
+| current_source_binding_record_ids / newly_acquired_text_requires_binding | Current registry bindings and remaining binding work, derived separately from dated acquisition findings. A resolved binding no longer creates a stale acquisition action; screening remains its own queue step. |
 | knowledge_coverage | Deterministic availability inventory with missing documents, identity-review candidates and concept-graph binding gaps. Active maturity labels are recorded literally and do not substitute for current review receipts. |
 | candidate_id / canonical_bindings | Search-package identity and explicit current Zotero/registry mapping; title similarity never binds identities. |
 | targeted_followup_candidates | Separate gap-fill intake; preserves original candidate metadata and status, gap rationale, required next steps, source access, exact-version details and identification provenance. |

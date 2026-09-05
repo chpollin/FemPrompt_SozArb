@@ -1,5 +1,5 @@
 {
-  "schema": "femprompt-source-version-bindings/0.1",
+  "schema": "femprompt-source-version-bindings/0.2",
   "scope": "Reviewed reading-source identities only. Record index and preferred bibliographic versions remain unchanged; no screening or human authority is granted. Open access does not imply a general reuse licence.",
   "records": {
     "VSZM7CT6": {
@@ -162,6 +162,156 @@
           "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10569152/",
           "locator": "Study 1 Methods, Step 2",
           "quote": "in this project we built random forest classification models per domain"
+        }
+      ]
+    },
+    "RAY6G2R7": {
+      "binding_mode": "existing_version",
+      "agent_id": "/root/research_completion",
+      "model": "GPT-6",
+      "reviewed_at": "2026-09-05T18:45:20.232477+00:00",
+      "reason": "Exact pinned arXiv article and full text checked against fresh official HTML and original PDF. Text must be read together with all hash-bound original visual assets listed in the source QC receipt. This records source readiness only; no screening or human verification.",
+      "bibliographic_identity": {
+        "title": "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks",
+        "doi": "10.48550/arxiv.2305.17390"
+      },
+      "version_identity": {
+        "title": "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks",
+        "arxiv": "2305.17390v2"
+      },
+      "binding": {
+        "record_id": "RAY6G2R7",
+        "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+        "bibliographic_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+        "source_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+        "source_version_type": "preprint",
+        "preferred_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+        "is_preferred_version": true,
+        "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-v2-text.md",
+        "source_sha256": "sha256:fd64251d9eed80eca0689fe3bad5e8ea15465746be71af1e38d7f8c9bdb553d1"
+      },
+      "evidence": [
+        {
+          "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-v2-text.md",
+          "sha256": "sha256:fd64251d9eed80eca0689fe3bad5e8ea15465746be71af1e38d7f8c9bdb553d1",
+          "source_url": "https://arxiv.org/html/2305.17390v2",
+          "locator": "Article title and pinned original HTML source URL",
+          "quote": "SwiftSage\n: A Generative Agent with\nFast and Slow Thinking for Complex Interactive Tasks"
+        },
+        {
+          "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-v2-text.md",
+          "sha256": "sha256:fd64251d9eed80eca0689fe3bad5e8ea15465746be71af1e38d7f8c9bdb553d1",
+          "source_url": "https://arxiv.org/html/2305.17390v2",
+          "locator": "Acquisition header identifying exact arXiv revision",
+          "quote": "2305.17390v2"
+        },
+        {
+          "source_path": "corpus/source-acquisition/reading-assets-2026-09-05/qc.json",
+          "sha256": "sha256:12eef6d22922973c82513ff6343fcf476f84872f105a735512322761485b159e",
+          "source_url": "https://arxiv.org/pdf/2305.17390v2",
+          "locator": "Full text and visual source QC, records.RAY6G2R7"
+        },
+        {
+          "source_path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/swiftsage-2305.17390v2-page-2.png",
+          "sha256": "sha256:c353cb1a1745c8e455bccaf0f287e6fc4c1c5ccfddedcebf2352d170535cd6ba",
+          "source_url": "https://arxiv.org/pdf/2305.17390v2",
+          "locator": "Original PDF page 2, figures [1]; full_pdf_page_render"
+        },
+        {
+          "source_path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/swiftsage-2305.17390v2-page-5.png",
+          "sha256": "sha256:a52b0214660a4b6e9a657f4600e740cc4e5e2fad6075aa7e75d180567958e8ce",
+          "source_url": "https://arxiv.org/pdf/2305.17390v2",
+          "locator": "Original PDF page 5, figures [2]; full_pdf_page_render"
+        },
+        {
+          "source_path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/swiftsage-2305.17390v2-page-9.png",
+          "sha256": "sha256:d03bf00413fbd65c7ef60f3dabfff1cee966bfe02838536a1c1b22f961a3f98f",
+          "source_url": "https://arxiv.org/pdf/2305.17390v2",
+          "locator": "Original PDF page 9, figures [3]; full_pdf_page_render"
+        },
+        {
+          "source_path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/swiftsage-2305.17390v2-page-15.png",
+          "sha256": "sha256:beff42eb886a52f5c4ce0fd1ab3bb20b73811f0c4d400340c932829f737f2a1d",
+          "source_url": "https://arxiv.org/pdf/2305.17390v2",
+          "locator": "Original PDF page 15, figures [4]; full_pdf_page_render"
+        },
+        {
+          "source_path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/swiftsage-2305.17390v2-page-18.png",
+          "sha256": "sha256:314a51bdc0b3ee89d859c6e8d93348e0f87ce3b2a9c6256a78f950be5a6f8488",
+          "source_url": "https://arxiv.org/pdf/2305.17390v2",
+          "locator": "Original PDF page 18, figures [5]; full_pdf_page_render"
+        },
+        {
+          "source_path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/swiftsage-figure4.png",
+          "sha256": "sha256:0d5e30495ab0cd0d6531a618b18ab9540a0dfa09bb9ba1ae54ba4a95fce9faf8",
+          "source_url": "https://arxiv.org/pdf/2305.17390v2",
+          "locator": "Original PDF page 15, figures [4]; unaltered_original_figure_png"
+        }
+      ]
+    },
+    "SQYLQFRU": {
+      "binding_mode": "existing_version",
+      "agent_id": "/root/research_completion",
+      "model": "GPT-6",
+      "reviewed_at": "2026-09-05T18:45:20.232477+00:00",
+      "reason": "Exact pinned arXiv article and full text checked against fresh official HTML and original PDF. Text must be read together with all hash-bound original visual assets listed in the source QC receipt. This records source readiness only; no screening or human verification.",
+      "bibliographic_identity": {
+        "title": "Reasoning towards fairness: Mitigating bias in language models through reasoning-guided fine-tuning",
+        "doi": "10.48550/arxiv.2504.05632"
+      },
+      "version_identity": {
+        "title": "Reasoning towards fairness: Mitigating bias in language models through reasoning-guided fine-tuning",
+        "arxiv": "2504.05632v3"
+      },
+      "binding": {
+        "record_id": "SQYLQFRU",
+        "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+        "bibliographic_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+        "source_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+        "source_version_type": "preprint",
+        "preferred_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+        "is_preferred_version": true,
+        "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-v3-text.md",
+        "source_sha256": "sha256:bac6454052cd33fa790fde5c12b2bfc10fd340fb20433725feecd6a804283620"
+      },
+      "evidence": [
+        {
+          "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-v3-text.md",
+          "sha256": "sha256:bac6454052cd33fa790fde5c12b2bfc10fd340fb20433725feecd6a804283620",
+          "source_url": "https://arxiv.org/html/2504.05632v3",
+          "locator": "Article title and pinned original HTML source URL",
+          "quote": "Reasoning Towards Fairness: Mitigating Bias in Language Models through Reasoning-Guided Fine-Tuning"
+        },
+        {
+          "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-v3-text.md",
+          "sha256": "sha256:bac6454052cd33fa790fde5c12b2bfc10fd340fb20433725feecd6a804283620",
+          "source_url": "https://arxiv.org/html/2504.05632v3",
+          "locator": "Acquisition header identifying exact arXiv revision",
+          "quote": "2504.05632v3"
+        },
+        {
+          "source_path": "corpus/source-acquisition/reading-assets-2026-09-05/qc.json",
+          "sha256": "sha256:12eef6d22922973c82513ff6343fcf476f84872f105a735512322761485b159e",
+          "source_url": "https://arxiv.org/pdf/2504.05632v3",
+          "locator": "Full text and visual source QC, records.SQYLQFRU"
+        },
+        {
+          "source_path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/kabra-2504.05632v3-page-2.png",
+          "sha256": "sha256:1fe0bb3d9726a6fec06b66dab08cc4d9eff3d8b9feda38da152acd66084e46a1",
+          "source_url": "https://arxiv.org/pdf/2504.05632v3",
+          "locator": "Original PDF page 2, figures [1, 2]; full_pdf_page_render"
+        },
+        {
+          "source_path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/kabra-2504.05632v3-page-7.png",
+          "sha256": "sha256:97ee9803cd792f65839b3271e4fc8b714473ec209b24c6e5c159f73188f9d3e8",
+          "source_url": "https://arxiv.org/pdf/2504.05632v3",
+          "locator": "Original PDF page 7, figures [3]; full_pdf_page_render"
+        },
+        {
+          "source_path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/kabra-2504.05632v3-page-9.png",
+          "sha256": "sha256:7c4df10bb49855fd895e8d8110a801c7020a82fcd0c8f8dbff50aabb97016afc",
+          "source_url": "https://arxiv.org/pdf/2504.05632v3",
+          "locator": "Original PDF page 9, figures [4]; full_pdf_page_render"
         }
       ]
     }

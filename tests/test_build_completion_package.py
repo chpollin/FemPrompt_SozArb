@@ -247,6 +247,23 @@ def test_source_readiness_checks_bytes_and_does_not_invent_binding(tmp_path):
     assert "prepared_markdown_hash_unbound_or_mismatch" in rows[0]["conflicts_or_constraints"]
 
 
+@pytest.mark.parametrize("bound", [False, True])
+def test_acquisition_history_does_not_reopen_a_completed_source_binding(bound):
+    source_registry = registry()
+    source_registry["source_index"] = {"A": {"source_version_id": "version:one"}} if bound else {}
+    queue = {"queue": [{"work_id": "work:one", "queue_status": "ready" if bound else "blocked_missing_paper_source", "blockers": [] if bound else ["paper_source_missing"]}]}
+    works, _ = completion._work_rows(source_registry, [], {}, queue)
+    entry = {"record_id": "A", "original_text": {"source_path": "original.md"}, "next_step": "Bind the newly acquired text", "source_status": "acquired_unbound"}
+    completion._attach_source_progress(works[0], {"A": entry}, source_registry)
+    assert works[0]["source_acquisition_progress"][0]["source_status"] == "acquired_unbound"
+    assert works[0]["newly_acquired_text_requires_binding"] is not bound
+    assert (entry["next_step"] in works[0]["next_actions"]) is not bound
+    if bound:
+        assert "execute_governed_source_screening" in works[0]["next_actions"]
+        assert not works[0]["agent_records"]
+        assert not works[0]["analysis_eligible"]
+
+
 def test_targeted_followup_does_not_infer_identity_or_promote_source_access():
     candidate = {
         "candidate_id": "gap:one", "title": "One scholarly contribution", "status": "identified_not_screened",

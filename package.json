@@ -10,7 +10,7 @@
     "check:data": "python -X utf8 -m src.publish.build_project --check",
     "build:release": "python -X utf8 -m src.publish.build_release",
     "build:literature": "python -X utf8 -m src.publish.generate_literature_landscape --policy config/publication_policy.json --verification-ledger generated/verification/ai-source-reviews.json",
-    "test": "node tests/run.mjs && node tests/companion.mjs && node tests/chat.mjs && node tests/literature-landscape.mjs",
+    "test": "node tests/run.mjs && node tests/companion.mjs && node tests/chat.mjs && node tests/literature-landscape.mjs && node tests/review-cases/verify-source-assets.mjs",
     "test:python": "python -X utf8 -m pytest tests/ -q",
     "test:release": "node tests/browser/release.mjs",
     "check": "npm run check:data && npm test && npm run test:python && npm run test:release",

@@ -1,16 +1,16 @@
 {
   "meta": {
     "fulltext_projection_state": "complete",
-    "source_fingerprint": "sha256:367bd6f40edff4e562bfa6d289b1a0e8d1801ecb8720cfd6f9e88abcb6f2ea4e",
+    "source_fingerprint": "sha256:c35af76cc7e455a6071e0ba514bad94c16f873be2c2ffacbcd9c95391916d8b3",
     "total_papers": 326,
     "unique_works": 257,
     "knowledge_linked_records": 241,
     "distinct_knowledge_docs": 183,
     "knowledge_coverage": {
       "linked": 241,
-      "fulltext_ready": 50,
+      "fulltext_ready": 52,
       "identity_unresolved": 8,
-      "source_missing": 27
+      "source_missing": 25
     },
     "papers_with_human": 291,
     "benchmark_papers": 291,
@@ -21218,13 +21218,32 @@
           ]
         }
       },
-      "knowledge_coverage": "source_missing",
+      "knowledge_coverage": "fulltext_ready",
       "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
       "identity_basis": "work_version_registry",
       "legacy_work_id": "doi:10.48550/arxiv.2305.17390",
       "legacy_identity_basis": "doi",
       "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "RAY6G2R7",
+        "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+        "bibliographic_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+        "source_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+        "source_version_type": "preprint",
+        "preferred_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+        "is_preferred_version": true,
+        "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-v2-text.md",
+        "source_sha256": "sha256:fd64251d9eed80eca0689fe3bad5e8ea15465746be71af1e38d7f8c9bdb553d1",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks",
+          "doi": "10.48550/arxiv.2305.17390"
+        },
+        "version_identity": {
+          "title": "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks",
+          "arxiv": "2305.17390v2"
+        }
+      },
       "source_hold": null,
       "version_type": "preprint",
       "version_date": "2023-12-06",
@@ -22594,13 +22613,32 @@
           ]
         }
       },
-      "knowledge_coverage": "source_missing",
+      "knowledge_coverage": "fulltext_ready",
       "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
       "identity_basis": "work_version_registry",
       "legacy_work_id": "doi:10.48550/arxiv.2504.05632",
       "legacy_identity_basis": "doi",
       "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "SQYLQFRU",
+        "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+        "bibliographic_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+        "source_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+        "source_version_type": "preprint",
+        "preferred_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+        "is_preferred_version": true,
+        "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/kabra-arxiv-v3-text.md",
+        "source_sha256": "sha256:bac6454052cd33fa790fde5c12b2bfc10fd340fb20433725feecd6a804283620",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "Reasoning towards fairness: Mitigating bias in language models through reasoning-guided fine-tuning",
+          "doi": "10.48550/arxiv.2504.05632"
+        },
+        "version_identity": {
+          "title": "Reasoning towards fairness: Mitigating bias in language models through reasoning-guided fine-tuning",
+          "arxiv": "2504.05632v3"
+        }
+      },
       "source_hold": null,
       "version_type": "preprint",
       "version_date": "2025-06-05",

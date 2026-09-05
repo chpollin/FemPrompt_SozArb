@@ -1,6 +1,6 @@
 import { createHash } from 'node:crypto';
-import { existsSync, readFileSync } from 'node:fs';
-import { relative, resolve } from 'node:path';
+import { existsSync, readFileSync, realpathSync, statSync } from 'node:fs';
+import { isAbsolute, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = resolve(fileURLToPath(new URL('../..', import.meta.url)));
@@ -8,6 +8,7 @@ const LEGACY_RUN = 'tests/review-cases/agent-runs/ratification-ar2-20260822/run.
 const HASH = /^[a-f0-9]{64}$/i;
 const COMMIT = /^[a-f0-9]{7,64}$/i;
 const ISO = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{3})?Z$/;
+const PNG_SIGNATURE = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]);
 const FORBIDDEN_TERMS = [
   new RegExp(['agent', 'first'].join('-'), 'i'),
   new RegExp(['independent', 'source', 'adjudication'].join(' '), 'i'),
@@ -61,6 +62,66 @@ function requireTimestamp(value, label, errors, nullable = false) {
     errors.push(`${label} must be an ISO-8601 UTC timestamp`);
 }
 
+// Optional visual reading material does not create category evidence: coding
+// quotations remain bound to paper.source.path. PNG bytes are verified on every
+// validation, including prepared and completed runs. source_sha256 records the
+// original PDF's declared digest; it is format-checked, not rehashed or fetched.
+function validateSourceAssets(source, label, errors, seenPaths) {
+  if (!source || !Object.hasOwn(source, 'assets')) return;
+  if (!Array.isArray(source.assets) || !source.assets.length) {
+    errors.push(`${label}.assets must be a non-empty array when provided`);
+    return;
+  }
+  for (const [index, asset] of source.assets.entries()) {
+    const field = `${label}.assets[${index}]`;
+    if (!asset || typeof asset !== 'object' || Array.isArray(asset)) {
+      errors.push(`${field} must be an object`);
+      continue;
+    }
+    requireString(asset.path, `${field}.path`, errors);
+    requireHash(asset.sha256, `${field}.sha256`, errors);
+    requireString(asset.locator, `${field}.locator`, errors);
+    requireHash(asset.source_sha256, `${field}.source_sha256 (declared original-source digest)`, errors);
+    if (asset.media_type !== 'image/png') errors.push(`${field}.media_type must be image/png`);
+    if (asset.license !== 'CC-BY-4.0') errors.push(`${field}.license must be CC-BY-4.0`);
+    try {
+      if (isPlaceholder(asset.source_url) || /\s/.test(asset.source_url)) throw new Error();
+      const url = new URL(asset.source_url);
+      if (!['https:', 'http:'].includes(url.protocol) || !url.hostname || url.username || url.password) throw new Error();
+    } catch {
+      errors.push(`${field}.source_url must be an absolute HTTP(S) source URL without credentials`);
+    }
+    if (isPlaceholder(asset.path)) continue;
+    const path = asset.path.replaceAll('\\', '/');
+    if (path.startsWith('/') || /[:\x00-\x1f\x7f]/.test(path)
+        || path.split('/').some((part) => !part || part === '.' || part === '..') || !/\.png$/i.test(path)) {
+      errors.push(`${field}.path must be a safe relative repository PNG path`);
+      continue;
+    }
+    try {
+      const target = realpathSync(resolve(root, path));
+      const within = relative(realpathSync(root), target);
+      if (isAbsolute(within) || within === '..' || within.startsWith(`..${sep}`)) {
+        errors.push(`${field}.path escapes the repository through a symlink`);
+        continue;
+      }
+      if (!statSync(target).isFile()) {
+        errors.push(`${field}.path must identify an existing PNG file`);
+        continue;
+      }
+      const identity = process.platform === 'win32' ? target.toLowerCase() : target;
+      if (seenPaths.has(identity)) errors.push(`${field}.path duplicates another assigned asset`);
+      seenPaths.add(identity);
+      const bytes = readFileSync(target);
+      if (!bytes.subarray(0, PNG_SIGNATURE.length).equals(PNG_SIGNATURE)) errors.push(`${field}.path has no PNG signature`);
+      const actual = createHash('sha256').update(bytes).digest('hex');
+      if (actual !== String(asset.sha256).toLowerCase()) errors.push(`${field}.sha256 does not match PNG bytes`);
+    } catch (error) {
+      errors.push(`${field}.path is not an accessible repository PNG file (${error.code || 'read error'})`);
+    }
+  }
+}
+
 function validateOutput(output, label, errors, completed) {
   if (!output || typeof output !== 'object') {
     errors.push(`${label} is missing`);
@@ -79,8 +140,14 @@ function validateOutput(output, label, errors, completed) {
 export function validateManifest(run, { path = '<memory>', allowLegacy = true } = {}) {
   if (!run || typeof run !== 'object' || Array.isArray(run)) return { ok: false, legacy: false, errors: ['manifest must be an object'] };
 
-  if (allowLegacy && isLegacyPath(path) && run.schema === 'femprompt-prisma-agent-run/0.2')
-    return { ok: true, legacy: true, errors: [] };
+  if (allowLegacy && isLegacyPath(path) && run.schema === 'femprompt-prisma-agent-run/0.2') {
+    // Preserve the historical exemption without making newly attached images
+    // exempt from the optional asset contract.
+    const errors = [], assets = new Set();
+    for (const paper of Array.isArray(run.assignment?.papers) ? run.assignment.papers : [])
+      validateSourceAssets(paper?.source, `source for ${paper?.paper_id || '<paper>'}`, errors, assets);
+    return { ok: errors.length === 0, legacy: true, errors };
+  }
 
   const errors = [];
   const acceptedTransitionRun = run.schema === 'femprompt-prisma-agent-run/1.1'
@@ -123,6 +190,7 @@ export function validateManifest(run, { path = '<memory>', allowLegacy = true } 
   const paperIds = papers.map((paper) => paper?.paper_id);
   if (new Set(paperIds).size !== paperIds.length || paperIds.some(isPlaceholder)) errors.push('assignment paper IDs are incomplete or duplicated');
   const paperSources = new Map(papers.map((paper) => [paper?.paper_id, paper?.source]));
+  const assetPaths = new Set();
   for (const paper of papers) {
     requireString(paper?.work_id, `work_id for ${paper?.paper_id || '<paper>'}`, errors);
     if (versionAwareRun) {
@@ -145,6 +213,7 @@ export function validateManifest(run, { path = '<memory>', allowLegacy = true } 
       errors.push(`ai_agent_review_coverage for ${paper?.paper_id || '<paper>'} must be false`);
     requireString(paper?.source?.path, `source path for ${paper?.paper_id || '<paper>'}`, errors);
     requireHash(paper?.source?.sha256, `source hash for ${paper?.paper_id || '<paper>'}`, errors);
+    validateSourceAssets(paper?.source, `source for ${paper?.paper_id || '<paper>'}`, errors, assetPaths);
   }
 
   const isolation = run.isolation || {};

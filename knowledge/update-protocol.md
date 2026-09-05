@@ -95,6 +95,8 @@ PDFs are converted to Markdown with Docling. The conversion-review interface sup
 
 The Paper layer is the evidence basis for screening. The LLM-Wissensdestillat remains a separately labelled reference layer and cannot satisfy a positive-category evidence requirement.
 
+When text conversion omits figures, an assignment may additionally provide source-QC-reviewed original PNG pages or figures with exact hashes, page locators and documented CC BY 4.0 permission in `source.assets`. Every reviewer reads the complete assigned text and all listed images. The run validator checks these image bytes and paths before and after execution; the original PDF hash records the acquired source. Quantitative graph interpretation retains its stated limitations, and internal source inconsistencies remain explicit. Category evidence still requires a quotation from the assigned text. This makes visual material available for reading without claiming that PRISM already supports image-evidence pins or that all pending visual-evidence cases are resolved.
+
 ## Agent-assisted completion
 
 ### Operationally isolated tracks
@@ -198,5 +200,6 @@ Round-one expert and LLM divergence remains a separate comparative analysis gove
 | 2026-08-24 | Work-Version identity | Added stable Work identities, exact publication Version bindings, separate stage and peer-review metadata, and preferred-version source gates |
 | 2026-08-24 | Context-informed search supplement | Executed three dated Codex search lanes, retained the original round-two window, and prepared Tier-A candidates for Zotero curation without assigning screening decisions |
 | 2026-08-24 | Codex Websearch 2026 | Expanded the context-informed search through three deep 2026-only lanes and produced one deduplicated, audited Zotero package for the complete selected subset |
+| 2026-09-05 | Original visual reading assets | Allowed optional hash-bound, attributed CC BY 4.0 PNG representations alongside the exact Paper text; assigned reviewers must read every declared asset. Text quotation requirements, decision criteria and scholarly authority remain unchanged. Updated prompt versions repair section references and document the existing AI-review output schema. |
 
 Detailed execution evidence remains in run manifests, the prompt changelog, `corpus/deep-research/round2/LAUFPROTOKOLL.md`, [[journal]], and ADR-026 through ADR-037 in [[specification]].
