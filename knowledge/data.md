@@ -7,7 +7,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-06-09
-updated: 2026-09-05
+updated: 2026-09-20
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 4.8), Codex (GPT-6)
 method:
@@ -222,7 +222,7 @@ Round-trip must be lossless (FR-08 acceptance). The `schema` string is versioned
 
 ## Per-reviewer files and version-controlled persistence (implemented model)
 
-The shipped tool persists not as one session blob but as **one JSON per reviewer** under `docs/data/screening/`, so version control is the sync layer (see ADR-009, ADR-010). An editor enters a short key once, connects the project folder, and uses one disk action to save the complete paper record. The File System Access API writes the selected reviewer's file; localStorage preserves an unsaved recovery copy and never silently overwrites a conflicting disk record. GitHub Desktop handles versioning outside PRISM. The daily editor surface has no import workflow; the operator-only converter accepts screening records as a controlled migration seam and does not import analysis fields.
+The shipped tool persists not as one session blob but as one JSON per reviewer under `docs/data/screening/`, so version control is the sync layer (see ADR-009, ADR-010). An editor enters a short key once, connects the project folder, and uses one disk action to save the complete paper record. The File System Access API writes the selected reviewer's file; localStorage preserves an unsaved recovery copy and never silently overwrites a conflicting disk record. GitHub Desktop handles versioning outside PRISM. The daily editor surface has no import workflow; the operator-only converter accepts screening records as a controlled migration seam and does not import analysis fields.
 
 ```json
 // docs/data/screening/<reviewer>.json  (0.4 version-aware capture before lifecycle projection)
@@ -304,15 +304,15 @@ Every corpus record carries the canonical identity plus `legacy_work_id` for mig
 
 The metadata reports record links and distinct document paths separately. The Companion header uses both values so a duplicated record does not look like an additional knowledge document.
 
-These are availability measures for the historical working collection. `linked` does not mean that a distillate has a current source-review receipt, belongs to the active Vault, supports an Assertion or is eligible for SQ analysis. Bibliographic identity corrections can invalidate a same-title legacy knowledge document without suppressing a separately verified exact fulltext. [The Vault coverage guide](research-vault.md#aktueller-implementierungsstand) separates archive links, active Assertions, screening and whole-corpus readiness.
+These are availability measures for the historical working collection. `linked` does not mean that a distillate has a current source-review receipt, belongs to the active Vault, supports an Assertion or is eligible for SQ analysis. Bibliographic identity corrections can invalidate a same-title legacy knowledge document without suppressing a separately verified exact fulltext. [The Vault coverage guide](research-vault.md#current-implementation-state) separates archive links, active Assertions, screening and whole-corpus readiness.
 
-## Wissensdokument-Abdeckung
+## Knowledge-document coverage
 
-Der Companion zählt Korpusrecords mit einem nichtleeren `knowledge_doc`-Verweis und weist die Zahl unterschiedlicher Dokumentpfade separat aus. Mehrere Zotero-Records können dasselbe Werk und dieselbe Datei referenzieren. Die aktuellen Werte stehen ausschließlich in `docs/data/research_vault_v2.json > meta`; dieser Vertragstext wiederholt keine veränderlichen Bestandszahlen.
+The Companion counts corpus records with a non-empty `knowledge_doc` reference and reports the number of distinct document paths separately, because several Zotero records can reference the same Work and the same file. The current values stand only in `docs/data/research_vault_v2.json > meta`.
 
-`generate_docs_data.py` löst Dateinamen case-insensitiv auf, veröffentlicht die tatsächliche Schreibweise und verwirft mehrdeutige Matches. Nach der Publikation entfernt es Seiten unter `docs/vault/Papers/`, auf die kein aktueller Record verweist. Repository-Tests prüfen die exakte Dateischreibweise und die interne Konsistenz der Abdeckungszustände.
+`generate_docs_data.py` resolves filenames case-insensitively, publishes the actual spelling and discards ambiguous matches. After publication it removes pages under `docs/vault/Papers/` that no current record references. Repository tests check the exact file spelling and the internal consistency of the coverage states.
 
-`docs/data/knowledge_doc_bindings.json` hält ausschließlich explizit verifizierte Zuordnungen zwischen Records, Volltextquellen und veröffentlichten Wissensdokumenten. Titelkonflikte und mehrdeutige Quellenidentitäten bleiben gesperrt. Fuzzy Titel- oder Autor-Jahr-Matches sind Kandidaten für eine manuelle Klärung und erzeugen keinen veröffentlichten Link.
+`docs/data/knowledge_doc_bindings.json` holds only explicitly verified assignments between records, full-text sources and published knowledge documents. Title conflicts and ambiguous source identities stay blocked. Fuzzy title or author-year matches are candidates for manual clarification and produce no published link.
 
 ## Published literature landscape
 

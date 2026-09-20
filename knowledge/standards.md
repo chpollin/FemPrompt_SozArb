@@ -10,7 +10,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-06-09
-updated: 2026-08-24
+updated: 2026-09-20
 authors: [Christopher Pollin]
 generated-with: Claude Code, deep-research web synthesis and full-text extraction of the primary sources
 topics: ["[[PRISMA]]", "[[Reporting Standards]]", "[[AI in Evidence Synthesis]]"]
@@ -136,17 +136,21 @@ The project has two reporting situations. Round one is a conducted comparative e
 | RAISE Table 1: justification and performance evidence | Round-one benchmark, governed round-two runs, and [[verification]] provide the evidence structure | Partial until the completed workflow is verified |
 | RAISE Table 1: conflicts of interest in AI tool | Declaration required in the final manuscript | Gap |
 
-## Konformanzstand dieses Reviews
+## Conformance state of this review
 
-Der Item-für-Item-Status dieses Reviews gegen PRISMA 2020, PRISMA-trAIce und RAISE liegt als maschinenlesbares Artefakt in `generated/conformance/conformance_map.yaml`. Jeder Eintrag trägt Standard, Item-Kennung, Kurzbezeichnung, Status (reconstructable, partial, gap, not_applicable), Quellpfad oder benannte Lücke und die Nuance, die nicht in die Felder passt. Der Record-Generator speist sich aus dieser Datei. Die Round-one-Wiedergabe liefert die zählenden Werte, während die Konformanzbewertung die `partial`- und `gap`-Einträge in die transparente Berichterstattung übernimmt.
+The item-by-item status of this review against PRISMA 2020, PRISMA-trAIce and RAISE is the machine-readable artifact `generated/conformance/conformance_map.yaml`. Each entry carries the standard, the item identifier, a short label, the status (reconstructable, partial, gap, not_applicable), the source path or named gap, and the nuance that does not fit the fields. The record generator feeds on this file. The round-one replay supplies the count-bearing values, while the conformance assessment carries the `partial` and `gap` entries into the transparent reporting.
 
-Die zählenden Items behauptet der committete Replay `src/replay/replay_round1.py`. Er paart die Roh-CSVs über den `Zotero_Key`, reproduziert die kanonische `generated/benchmark-results/agreement_metrics.json` als Selbsttest und schreibt danach `flow_model.json` und `agreement_replay.json` nach `generated/benchmark-results/replay/`. Für ein zählendes Item bedeutet der Status `reconstructable`, dass sein Wert aus diesen Ausgaben hervorgeht. Der Record-Generator liest diese Ausgaben; frühere Handzählungen sind damit abgelöst.
+The committed replay `src/replay/replay_round1.py` asserts the count-bearing items. Its mechanism and outputs are described in [[methods#Round-one replay verification]]. For a count-bearing item the status `reconstructable` means that its value follows from these outputs. The record generator reads them, which replaces earlier hand counts.
 
-Die zentrale, retrospektiv unreparierbare Lücke ist das fehlende Runde-1-Protokoll (PRISMA-trAIce M1, PRISMA 24a-c). Der KI-Einsatz war in Runde 1 nicht vorab spezifiziert. Für Runde 2 lag ein erster Protokollstand vor den Suchen vor; einzelne operative Regeln wurden während oder nach der Ausführung als datierte Amendments festgelegt. Prospektive Konformanz wird deshalb nur für jene Operationen beansprucht, deren einschlägige Regeln nachweislich vorher committet waren.
+The central gap that cannot be repaired in retrospect is the missing round-one protocol (PRISMA-trAIce M1, PRISMA 24a-c). The use of AI was not specified in advance in round one. For round two an initial protocol state existed before the searches, and individual operational rules were fixed during or after execution as dated amendments. Prospective conformance is therefore claimed only for those operations whose relevant rules were demonstrably committed beforehand.
 
-Drei weitere benannte Lücken hängen am Korpus statt an einem Checklistenpunkt und tragen deshalb keine eigene Zeile im maschinenlesbaren Artefakt. Erstens Korpuspapiere, die durch den LLM-Strang liefen und in `assessment/human_assessment.csv` fehlen; sie stehen im Flow als Datensätze ohne bindende menschliche Entscheidung und werden nie stillschweigend eingeschlossen. Zweitens Teile der PDF-Beschaffung ohne vollständigen Audit-Trail, denn die Kette aus Beschaffung, Konvertierung und Destillation verliert auf jeder Stufe Material ([[methods]], Stage 2). Drittens Datensätze ohne Volltext als Folge ebendieser Verluste; die fehlgeschlagenen Konvertierungen sind in [[methods]] namentlich aufgeführt.
+Three further named gaps attach to the corpus instead of a checklist item and therefore carry no row of their own in the machine-readable artifact.
 
-Die Anwendbarkeit wird pro Unterpunkt begründet. Das Fehlen einer Meta-Analyse nimmt insbesondere Items 13a–d und 20a nicht aus: Auch eine qualitative Synthese muss ihre Studienzuordnung, Datenaufbereitung, Tabellen, Zusammenfassungsmethode und beitragenden Studien offenlegen. Items 13e–f und 20c–d bleiben bis zur konsolidierten Methoden- und Ergebnisdarstellung `partial`; qualitative Variation ist relevant, während bislang keine Sensitivitätsanalyse der Synthese dokumentiert ist. Eine nicht durchgeführte Analyse ist ausdrücklich zu benennen und nicht allein wegen der fehlenden Meta-Analyse als unzutreffend abzulegen. Die Karte kennzeichnet die nicht vorgesehenen Effektmass-, statistischen Synthese-, studienweisen Risk-of-Bias- und Gewissheitsverfahren gesondert; deren Fehlen bleibt eine mögliche methodische Begrenzung und bedeutet keine Qualitätsbewertung der Studien. Grundlage ist die offizielle erweiterte PRISMA-2020-Checkliste.
+1. Corpus papers that ran through the LLM track and are missing from `assessment/human_assessment.csv`. They stand in the flow as records without a binding human decision and are never silently included.
+2. Parts of the PDF acquisition without a complete audit trail, because the chain of acquisition, conversion and distillation loses material at every stage ([[methods]], Stage 2).
+3. Records without full text as a consequence of these losses. The failed conversions are listed by file name in [[methods]].
+
+Applicability is justified per sub-item. The absence of a meta-analysis does not exempt items 13a–d and 20a in particular, since a qualitative synthesis also has to disclose its study assignment, data preparation, tables, summary method and contributing studies. Items 13e–f and 20c–d stay `partial` until the consolidated presentation of methods and results exists. Qualitative variation is relevant, while no sensitivity analysis of the synthesis is documented so far. An analysis that was not carried out has to be named explicitly and cannot be filed as not applicable merely because there is no meta-analysis. The map marks the effect-measure, statistical-synthesis, per-study risk-of-bias and certainty procedures that are not planned separately. Their absence remains a possible methodological limitation and implies no quality assessment of the studies. The basis is the official expanded PRISMA 2020 checklist.
 
 ## Interpretation for this review
 
