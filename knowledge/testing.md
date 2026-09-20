@@ -10,7 +10,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-08-23
-updated: 2026-09-05
+updated: 2026-09-20
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6), Codex (GPT-6)
 topics: ["[[Software Testing]]", "[[Research Software]]"]
@@ -35,6 +35,7 @@ The test system establishes the technical behaviour of PRISM, the Evidence Compa
 | Codex Websearch 2026 | Strict selected-Version date boundary, cross-lane deduplication, Zotero-export withholding, bibliographic-audit reconciliation, unscreened lifecycle state | `python -m pytest tests/test_codex_websearch_2026.py` |
 | Codex source preparation | Rights gate, preferred/acquired Version separation, resumable PDF validation, repository-HTML representations, exact candidate coverage, agent-QC authority, repaired-source selection, visual-evidence blocking, and fail-closed Zotero binding | `python -m pytest tests/test_acquire_codex_websearch_2026.py tests/test_codex_source_readiness.py` |
 | Zotero group reconciliation | Normalisation, DOI-first matching, absence of write calls, refusal of keys with write permission, key redaction, deterministic offline report | `python -m pytest tests/test_zotero_group_reconcile.py` |
+| Zotero import residuals | Deduplication across the packages, version relations kept in the residual file, refusal to overwrite a prepared import, the unchanged leading package | `python -m pytest tests/test_zotero_import_residuals.py` |
 | Claim and Vault checks | Assertion anchors, adjacent-layer references, status discipline | `python -m src.publish.check_claims` and `python -m src.publish.validate_research_vault` |
 
 ## Guaranteed behaviours
