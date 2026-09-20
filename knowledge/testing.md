@@ -34,6 +34,7 @@ The test system establishes the technical behaviour of PRISM, the Evidence Compa
 | Contextual update intake | Cross-lane Tier-A deduplication, original-window preservation, Work-Version relation, Zotero target, unscreened lifecycle state | `python -m pytest tests/test_contextual_update_package.py` |
 | Codex Websearch 2026 | Strict selected-Version date boundary, cross-lane deduplication, Zotero-export withholding, bibliographic-audit reconciliation, unscreened lifecycle state | `python -m pytest tests/test_codex_websearch_2026.py` |
 | Codex source preparation | Rights gate, preferred/acquired Version separation, resumable PDF validation, repository-HTML representations, exact candidate coverage, agent-QC authority, repaired-source selection, visual-evidence blocking, and fail-closed Zotero binding | `python -m pytest tests/test_acquire_codex_websearch_2026.py tests/test_codex_source_readiness.py` |
+| Zotero group reconciliation | Normalisation, DOI-first matching, absence of write calls, refusal of keys with write permission, key redaction, deterministic offline report | `python -m pytest tests/test_zotero_group_reconcile.py` |
 | Claim and Vault checks | Assertion anchors, adjacent-layer references, status discipline | `python -m src.publish.check_claims` and `python -m src.publish.validate_research_vault` |
 
 ## Guaranteed behaviours

@@ -115,6 +115,23 @@ Agents prepare these steps and do not execute them. Each one changes an external
 - Acceptance session of PRISM with the domain experts. The user stories in [[specification]] were written by the technical lead as a user proxy, and the verification mode has been exercised by automated tests and agents only. The repository records no session in which the domain experts worked through prepared records in the tool.
 - Resolution of the works with conflicts or holds listed below.
 
+### Inspecting the group library before the import
+
+`src/acquire/zotero_group_reconcile.py` reads the `FemPrompt_SozArb` group library through the Zotero Web API and compares it with the prepared RIS files and with the lane files of July 2026. It prepares the import and the manual duplicate curation and takes neither step. The tool cannot write. Its API client exposes a fixed list of read methods, a run stops when the key carries any write permission, and a test inspects the module source for the write methods of the client library.
+
+A record counts as present when its normalised DOI equals that of a library item, or otherwise when normalised title and publication year are equal. A title that agrees under a different or missing year is listed as a candidate for inspection and is not counted as present. Author names play no part. The normalisation rules are documented in the module and covered by `tests/test_zotero_group_reconcile.py`.
+
+The report consists of `report.json` and `report.md` in `generated/zotero-reconcile/<date>/`. It gives the status of every RIS record with the matching Zotero key and the matched field, the overlap between the RIS files, candidate duplicate groups inside the library, the collections, tags and notes that carry lane names, the keys of `corpus/source_tool_mapping.json` that the library does not hold, and the library version returned by the API, so that a later run can detect a change. The date comes from the `--date` flag, and the tool does not read the clock.
+
+The project owner creates the key in the Zotero account settings on the page for new private keys, `https://www.zotero.org/settings/keys/new`. Personal library access stays switched off, the default group permission stays at none, and the per-group permission for `FemPrompt_SozArb` is set to read only. The key goes into the environment variable `ZOTERO_API_KEY` or into the git-ignored `.env` file in the repository root, and never into a committed file. The tool never prints the key and removes it from error messages of the client library.
+
+```
+python -m src.acquire.zotero_group_reconcile --date 2026-09-20
+python -m src.acquire.zotero_group_reconcile --date 2026-09-20 --offline
+```
+
+The second form compares against the committed `corpus/zotero_export.json` and needs neither key nor network. Its report of 2026-09-20 lies in `generated/zotero-reconcile/2026-09-20-offline/`. According to that report the committed export contains neither the item keys nor the collection keys that `corpus/source_tool_mapping.json` records for the import of July 2026, and the records of the lane files are absent from it apart from a record matched by title and year. The Git history shows in addition that the set of item keys in the export has not changed since the commit of 2026-02-02, and the commit of 2026-08-22 corrected the metadata of a single record. The export therefore predates the import of July 2026. Whether the group library holds these records can only be answered by a live run.
+
 ### Works with conflicts or holds
 
 `generated/completion/work-verification-queue.csv` is the source of truth for these states. The works are identified by title and Zotero record keys because the author metadata of the affected records is itself inconsistent.
@@ -129,7 +146,7 @@ The works in the source acquisition queue lack a reviewed Paper source. Their bl
 
 ### Conflicting statements in the record
 
-- `corpus/deep-research/round2/LAUFPROTOKOLL.md` records the Zotero import of lanes L1 to L3 as done by the operator on 2026-07-17 and the import of the L5 file as outstanding. `generated/round2-intake-package.json`, built on 2026-08-24 against the committed `corpus/zotero_export.json`, classifies the candidates of these lanes as import-ready or needing review and only one candidate as already curated. The repository does not show whether the committed export predates the import or covers a different collection. The group library should be inspected before `generated/round2-zotero-import.ris` is imported, so that no record enters twice.
+- `corpus/deep-research/round2/LAUFPROTOKOLL.md` records the Zotero import of lanes L1 to L3 as done by the operator on 2026-07-17 and the import of the L5 file as outstanding. `generated/round2-intake-package.json`, built on 2026-08-24 against the committed `corpus/zotero_export.json`, classifies the candidates of these lanes as import-ready or needing review and only one candidate as already curated. The offline reconciliation of 2026-09-20 and the Git history of the export indicate that the committed export predates the import, and the state of the group library itself is unconfirmed. The group library should be inspected before `generated/round2-zotero-import.ris` is imported, so that no record enters twice. [[#Inspecting the group library before the import]] describes the read-only tool for this inspection.
 
 ### Open decisions
 

@@ -24,6 +24,15 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## PRISM and the epistemic infrastructure (2026)
 
+### 2026-09-20: Read-only reconciliation of the Zotero group library
+
+- Scope. `src/acquire/zotero_group_reconcile.py` with its tests, a section in [[plan#Inspecting the group library before the import]], and the offline report under `generated/zotero-reconcile/2026-09-20-offline/`. Research data, existing generated artifacts and Zotero stayed untouched, and no network call was made.
+- Built. The tool reads the group library through whitelisted read methods of the client library, refuses a key with write permission, and matches RIS records by normalised DOI and then by normalised title plus year. It reuses the RIS parser of `src/analysis/build_round2_intake.py` and the key loading of `src/utils.py`. The lane files of July 2026 are reconciled beside the five prepared import files, because the contradiction in the record concerns exactly their records.
+- Found. The offline run against the committed export finds none of the prepared import records in the export. The item keys and collection keys that `corpus/source_tool_mapping.json` records for the July import are absent from the export as well. The Git history shows that the set of item keys in the export is unchanged since the commit of 2026-02-02, so the export predates the import. The question whether the library holds the records remains open until a live run. The export holds many groups of items with equal DOI or equal title and year, which the report lists as duplicate candidates.
+- Decided. The report states data and leaves counting to the reader. A title match under a different year is a candidate and not a match, since preprint and version of record often differ by a year. The new report folder is not covered by the build manifest. The new module is, because the manifest hashes every Python file under `src/`, so the manifest becomes current again with the next full build.
+- Checks. The new tests pass, and `ruff check` reports nothing for the two new files. The whole Python suite shows the same failures as before the change, all of which report the missing reading layer under `docs/data/fulltext/`. `npm run check:data` cannot run in this clone for the same reason.
+- Open. The live run needs a read-only key from the project owner. Notes are read only in the live run, since the committed export carries neither notes nor collection names.
+
 ### 2026-09-20: Knowledge base audited against the branch state and refactored
 
 - Scope. The session ran on `lane/knowledge-refactor-2026-09-20`, branched from `codex/consistent-research-release` at its commit of 2026-09-05. It changed `knowledge/`, `CLAUDE.md` and `README.md` and left code, data, generated artifacts and Zotero untouched.

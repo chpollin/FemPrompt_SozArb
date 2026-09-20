@@ -43,6 +43,7 @@ The browser runner fetches the generated category schema, analysis vocabulary, a
 | `test_build_round2_intake.py` | pytest: RIS lane parsing, cross-lane deduplication, corpus matching, Zotero-export drift, and intake gating. |
 | `test_round2_intake_package.py` | pytest: reconciliation of the three agent reviews, conflict withholding, safe RIS generation, and Version addressability. |
 | `test_work_versions.py` | pytest: Work-Version coverage, controlled stages, preferred/latest selection, relation integrity, and distinct Preprint/Version-of-Record expressions. |
+| `test_zotero_group_reconcile.py` | pytest: DOI and title normalisation, DOI-first matching, the absence of write calls in the module source, the read-method whitelist, refusal of keys with write permission, key redaction, and the deterministic offline report. |
 | `test_validate_research_vault.py` | pytest: the project-specific Grounded Vault status ladder, adjacent-layer anchors, required checks, and status ceilings. |
 
 ## What is covered
