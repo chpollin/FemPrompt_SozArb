@@ -5,15 +5,17 @@ project:
   repository: https://github.com/chpollin/FemPrompt_SozArb
 method:
   name: Promptotyping
-status: active
+status: complete
 language: en
 version: "0.7"
 created: 2026-09-05
-updated: 2026-09-05
-related: [plan, governance, methods, testing, verification, handoff]
+updated: 2026-09-20
+related: [INDEX, plan, governance, methods, testing, verification, handoff]
 ---
 
 # Constructive project review and implementation
+
+[[handoff]] and [[plan]] carry the state after 2026-09-05.
 
 The research infrastructure is usable and has a reproducible result build. The entire intended literature review is not complete: identified intake needs canonical source binding and screening, existing coding conflicts need resolution, and the full evidence synthesis and manuscript remain open. Current quantities and item states are generated in `generated/completion/README.md`; this document explains their implications without maintaining a second inventory.
 
@@ -38,8 +40,8 @@ The targeted source-review batches and the completion package carry the current 
 - The mitigation-status and processing-stage ambiguities were resolved against the existing codebook and original texts. The dated clarification is in `knowledge/update-protocol.md`; correction batch C preserves exact field changes and its source review.
 - Trust-pilot metadata was reconciled across its aliases and the original source was reviewed again. The original youth-placement record was found to contain another paper's DOI and invented author/abstract details. The title-matching original was located; local metadata and source binding were repaired, while a fresh screening remains required.
 - The social-work-education source is an Accepted Manuscript with textual differences from the Version of Record. Its exact source binding and narrowly scoped quotation/category correction preserve the preferred bibliographic Version and the original annotation.
-- Historical identity reconciliation recovers existing decisions without creating Zotero records. Wrong-author exclusions are separated from substantive content decisions where the original note and primary metadata establish that distinction. The Ng Include is no longer lost behind two administrative Duplicate records.
-- The Asseri review was withdrawn as incomplete. A current synthesis hold preserves the historical Include but prevents using the withdrawn findings as current support. The Latif conflict additionally exposes a v2 text served under a v4 binding. Its substantive human disagreement remains unresolved.
+- Historical identity reconciliation recovers existing decisions without creating Zotero records. Wrong-author exclusions are separated from substantive content decisions where the original note and primary metadata establish that distinction. The Include recorded for Ng (2022), *Using digital story writing as a pedagogy to develop AI literacy among primary students*, is no longer lost behind two administrative Duplicate records.
+- The systematic review on prompt engineering against cultural bias towards Arabs and Muslims (records `5UAHQESQ`, `6MJYP7ZX`, `EHQBHVYV`) was withdrawn by its author as incomplete. A current synthesis hold preserves the historical Include but prevents using the withdrawn findings as current support. The conflict on *AI Gender Bias, Disparities, and Fairness* (records `CHJQ52DC`, `CSJS9JGH`) additionally exposes a v2 text served under a v4 binding. Its substantive human disagreement remains unresolved. [[plan#Works with conflicts or holds]] carries the current state of both works.
 - The healthcare-trust and university-commentary differences are documented as round-specific scope/authority differences. Their historical human Exclude decisions remain intact; the newer AI assessment is a distinct record.
 - The canonical manuscript now contains a provisional synthesis linked to the reviewed Assertions, with explicit model, evidence and transfer limits. It does not claim a completed whole-corpus synthesis or a formal study-quality appraisal.
 
@@ -57,7 +59,7 @@ After source binding, complete coding and Assertion-based synthesis, the same st
 - A citable research-data release with its codebook, source provenance, limitations and release fingerprint.
 - Later literature updates that preserve the original search window and show what each new batch changes.
 
-Research priorities are applying the now documented mitigation-stage rules, resolving remaining source and Version conflicts, completing coding of newly bound candidates, study-quality appraisal and expanding the active Assertion chain. [The Vault coverage guide](research-vault.md#aktueller-implementierungsstand) distinguishes the historical knowledge archive, the active reviewed slice and analysis readiness. Practice recommendations require a stronger synthesis than the existence of a prompt technique in an individual paper. The preliminary AI-reviewed release and the final author-approved scholarly manuscript remain explicitly separate products.
+Research priorities are applying the now documented mitigation-stage rules, resolving remaining source and Version conflicts, completing coding of newly bound candidates, study-quality appraisal and expanding the active Assertion chain. [The Vault coverage guide](research-vault.md#current-implementation-state) distinguishes the historical knowledge archive, the active reviewed slice and analysis readiness. Practice recommendations require a stronger synthesis than the existence of a prompt technique in an individual paper. The preliminary AI-reviewed release and the final author-approved scholarly manuscript remain explicitly separate products.
 
 ## Operation
 

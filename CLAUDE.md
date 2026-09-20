@@ -1,7 +1,7 @@
 # Working Rules for Claude AI Assistant
 
 **Project:** FemPrompt SozArb, a systematic literature review on feminist AI literacies in social work
-**Last Updated:** 2026-08-24
+**Last Updated:** 2026-09-20
 
 **Operative update (2026-09-05):** The operator authorised an explicitly labelled AI-source-reviewed preliminary result release. Follow `config/publication_policy.json` and `knowledge/governance.md`; do not infer human verification or approval. Current completion state is in `generated/completion/README.md`. Build all projections with `npm run build`, verify with `npm run check`, and deploy only `build/site/`. Historical `docs/` remains the research working application. AI analysis corrections are hash-bound sidecars preserving immutable original annotations.
 
@@ -100,7 +100,7 @@ The benchmark (the human-LLM divergence and its decomposition, used as a motivat
 
 ### Knowledge documents
 
-`INDEX.md` provides navigation and the glossary. `project.md` carries identity, research questions, and theory. `methods.md`, `standards.md`, `specification.md`, and `data.md` describe the review method, reporting frame, PRISM decisions, and data substrate. `governance.md` defines authority and publication rules, `testing.md` the technical guarantees, and `verification.md` the evidence and authority state of externally relevant claims. `plan.md` carries the forward work, `journal.md` the decision provenance, and `handoff.md` the open process inbox. `update-protocol.md` governs round-two identification, screening, coding, and verification. `research-vault.md` defines the active Grounded Vault model. The paper lane contributes `analysis-divergence.md` and the draft `analysis-sq-advisory.md`. The per-item PRISMA and trAIce conformance state remains machine-readable in `generated/conformance/conformance_map.yaml`. Start at `INDEX.md`.
+`INDEX.md` provides navigation and the glossary. `project.md` carries identity, research questions, and theory. `methods.md`, `standards.md`, `specification.md`, and `data.md` describe the review method, reporting frame, PRISM decisions, and data substrate. `governance.md` defines authority and publication rules, `testing.md` the technical guarantees, and `verification.md` the evidence and authority state of externally relevant claims. `plan.md` carries the forward work and the steps that wait on the project owner, `journal.md` the decision provenance, and `handoff.md` the current result and continuation point of the working branch. `project-review-2026-09-05.md` is the dated review behind the source-reviewed release. `update-protocol.md` governs round-two identification, screening, coding, and verification. `research-vault.md` defines the active Grounded Vault model. The paper lane contributes `analysis-divergence.md` and the draft `analysis-sq-advisory.md`. The per-item PRISMA and trAIce conformance state remains machine-readable in `generated/conformance/conformance_map.yaml`. Start at `INDEX.md`.
 
 ### Key web files
 
@@ -173,7 +173,8 @@ Each piece of information has exactly ONE canonical location. Other files refere
 | Work identity, publication Version, and bibliographic relations | `corpus/work_version_registry.json` and `docs/data/work_version_contract.json` |
 | Theory and operationalization | `knowledge/project.md` |
 | Glossary | `knowledge/INDEX.md` |
-| Remaining work and operator decisions | `knowledge/plan.md` |
+| Remaining work, owner-gated steps and operator decisions | `knowledge/plan.md` |
+| Current result and continuation point | `knowledge/handoff.md` |
 | Authority, lifecycle and publication rules | `knowledge/governance.md` |
 | Technical guarantees | `knowledge/testing.md` |
 | Claim and artifact verification state | `knowledge/verification.md` |
@@ -187,7 +188,7 @@ Each piece of information has exactly ONE canonical location. Other files refere
 
 ### Session start
 
-1. Read `knowledge/INDEX.md` (the map), then `knowledge/plan.md` (current state and next steps).
+1. Read `knowledge/INDEX.md` (the map), then `knowledge/handoff.md` (current result and continuation point) and `knowledge/plan.md` (remaining work and owner-gated steps).
 2. Check `git status` and `git log -3` (branch and recent commits).
 3. Read `knowledge/journal.md` (last session, open items).
 4. Create a TodoWrite for multi-step tasks.

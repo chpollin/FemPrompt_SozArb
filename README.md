@@ -104,7 +104,8 @@ Full project documentation is in [`knowledge/`](knowledge/INDEX.md); start at th
 | [INDEX.md](knowledge/INDEX.md) | Navigation and glossary |
 | [project.md](knowledge/project.md) | Project goal, theoretical framework |
 | [methods.md](knowledge/methods.md) | PRISMA, assessment design, pipeline, scripts |
-| [plan.md](knowledge/plan.md) | Roadmap, current status, next steps |
+| [handoff.md](knowledge/handoff.md) | Current result and continuation point |
+| [plan.md](knowledge/plan.md) | Remaining work, completion criteria, steps that wait on the project owner |
 | [Project review](knowledge/project-review-2026-09-05.md) | Implemented fixes, unresolved source findings, completion and uses of the final data |
 | [specification.md](knowledge/specification.md) | PRISM requirements, user stories, ADR decision log, design system |
 | [data.md](knowledge/data.md) | The data substrate the tool consumes and produces |
@@ -123,4 +124,4 @@ Full project documentation is in [`knowledge/`](knowledge/INDEX.md); start at th
 
 ---
 
-*Updated: 2026-09-05*
+*Updated: 2026-09-20*

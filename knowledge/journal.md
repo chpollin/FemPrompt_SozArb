@@ -10,7 +10,7 @@ status: active
 language: de
 version: "0.7"
 created: 2026-02-18
-updated: 2026-09-05
+updated: 2026-09-20
 authors: [Christopher Pollin]
 generated-with: Claude Code
 related: [INDEX, plan, specification, governance, verification, handoff]
@@ -23,6 +23,15 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 ---
 
 ## PRISM and the epistemic infrastructure (2026)
+
+### 2026-09-20: Knowledge base audited against the branch state and refactored
+
+- Scope. The session ran on `lane/knowledge-refactor-2026-09-20`, branched from `codex/consistent-research-release` at its commit of 2026-09-05. It changed `knowledge/`, `CLAUDE.md` and `README.md` and left code, data, generated artifacts and Zotero untouched.
+- Changed. `handoff.md` now states the branch relation to `main`, the continuation point and the conditions of working in a clone. `plan.md` gained the section on steps that wait on the project owner (Zotero imports, promotion to `main`, deployment, acceptance session with the domain experts, works with conflicts or holds) and became the single home of the import instructions, to which `handoff.md` and `verification.md` link. `research-vault.md`, the conformance section of `standards.md`, the coverage section of `data.md` and the German ADR passages and template labels of `specification.md` were translated into English, which renamed the anchor of the implementation state to `Current implementation state`. `INDEX.md` lists the project review, describes the handoff by its actual function, gained a reading path for resuming work and has its glossary in alphabetical order. References to plan sections that were retired in the consolidation of 2026-08-23 were redirected in `methods.md` and `specification.md`. Corpus works are named by citation or by title and Zotero record key, because the author metadata of the held records is inconsistent.
+- Decided. The ADR register counts as a dated record like this journal, so figures inside ADR effects stay. `knowledge/project.md` was left unchanged because it is a hash-bound input of the build manifest and the completion package, and a change would require regenerated artifacts. No document was removed.
+- Found. The run log records the Zotero import of lanes L1 to L3 as done on 2026-07-17, while the intake package of 2026-08-24 does not find these candidates in the committed export. The discrepancy is marked in the plan and needs an inspection of the group library before the next import. `research-vault/README.md` still links the former German anchor of `research-vault.md`, and the link now resolves to the document without its section.
+- Checks. A link and path check over `knowledge/`, `CLAUDE.md` and `README.md` found no dead wikilink, anchor or relative link. `npm run check:data` and the completion package check could not run, because this clone lacks the ignored reading layer under `docs/data/fulltext/` and a build would write outside the allowed paths. `python -m src.publish.validate_research_vault` and `python -m src.publish.check_claims` passed. `python -m pytest tests/` ran with 369 passed and 10 failed, and all ten failures report the missing reading layer. `node_modules` is absent, so the JavaScript suites did not run.
+- Open. Older passages of the durable documents still use semicolons and colons as connectors. The owner-gated steps in the plan are unchanged in substance.
 
 ### 2026-09-05: Wiedergefundene Quellen codiert und die Wissenskette erweitert
 
