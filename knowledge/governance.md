@@ -10,7 +10,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-08-23
-updated: 2026-09-05
+updated: 2026-09-21
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6), Codex (GPT-6)
 topics: ["[[Research Governance]]", "[[Provenance]]", "[[Human-in-the-Loop]]"]
@@ -25,6 +25,7 @@ FemPrompt assigns each research operation a defined actor, evidence basis, autho
 
 | Operation | Actor | Recorded result | Authority established |
 |---|---|---|---|
+| Additive Zotero import | Agent under the operator's explicit authorisation of 2026-09-21 | Source-bound plan, new group records, read-back receipt and unchanged pre-existing items | Bibliographic ingestion only, with no screening or scholarly approval |
 | Source coding | AI agent or person | Annotation with evidence and provenance | `agent-annotated` for the governed agent path |
 | Deterministic validation | Software agent | Hash-bound check receipt | Structural or rule conformance stated by the check |
 | Source-grounded AI Agent Review | AI agent with reviewer role | Review report and lifecycle event | `ai-agent-reviewed` |

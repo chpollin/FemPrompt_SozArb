@@ -15,7 +15,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-06-29
-updated: 2026-09-20
+updated: 2026-09-21
 authors: [Christopher Pollin]
 generated-with: Claude Code, Codex (GPT-6)
 related: [project, methods, specification, data, standards, governance, testing, verification, plan, journal, handoff, update-protocol, research-vault, analysis-divergence, analysis-sq-advisory, project-review-2026-09-05]
@@ -60,6 +60,7 @@ In function order, not alphabetical.
 - Understand authority and publication boundaries: [[governance]], [[verification]].
 - Reproduce a technical guarantee: [[testing]], followed by the applicable command or test artifact.
 - Prepare the literature update: [[plan]] (source and corpus readiness), [[update-protocol]], [[standards]].
+- Add missing prepared references to Zotero: [[plan#Authorised additive Zotero import]] (authorisation, exact live plan, receipts and export boundary).
 - Prepare the follow-up paper's synthesis: [[analysis-divergence]] (section 5), [[analysis-sq-advisory]] (section 6, advisory).
 - Understand the research-vault: [[research-vault]] (the layer model and the current implementation state), `research-vault/README.md` (the built skeleton and its status).
 

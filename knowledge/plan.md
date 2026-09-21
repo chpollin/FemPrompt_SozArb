@@ -7,7 +7,7 @@ status: active
 language: en
 version: "0.7"
 created: 2026-06-09
-updated: 2026-09-20
+updated: 2026-09-21
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6), Codex (GPT-6), Claude Code
 method:
@@ -49,7 +49,7 @@ The project reaches completion when the following conditions hold.
 
 ### Source and corpus readiness
 
-- Review the conflict-marked intake records. The Zotero imports and the curated export are listed under [[#Waiting on the project owner]].
+- Review the conflict-marked intake records. [[#Authorised additive Zotero import]] governs the operator-authorised import. A fresh export must be reconciled with local metadata corrections before replacing the canonical corpus.
 - Resolve the remaining identity conflicts and unavailable, ambiguous, or rights-restricted Paper sources recorded by the queue.
 - Reconcile historical residual-queue findings with the current [metadata corrections](../corpus/metadata_corrections.json), [source bindings](../corpus/source_version_bindings.json) and [completion queue](../generated/completion/README.md). Already applied local repairs must be preserved deliberately when the external Zotero library is curated and re-exported.
 - Reconcile every prepared Codex source-readiness record with the curated Zotero Work and exact Version. Preserve any difference between the preferred bibliographic Version and the acquired source Version.
@@ -107,10 +107,10 @@ Domain-expert verification occurs after agent preparation of the intended corpus
 
 ## Waiting on the project owner
 
-Agents prepare these steps and do not execute them. Each one changes an external system, the main branch or the scholarly authority of a record.
+These steps still need an operator contribution. Additive Zotero import has its own explicit authorisation under [[#Authorised additive Zotero import]].
 
-- Zotero import and curation of the 2026 candidates. `corpus/deep-research/round2/Codex Websearch/codex-websearch-2026-zotero-import.ris` is the sole import source for its 2026 subset and goes into the `FemPrompt_SozArb` group library. The older pending packages `generated/round2-zotero-import.ris` and `generated/contextual-update-2026-08-24-zotero-import.ris` are reconciled against it before their residual records are imported. `generated/completion/historical-recovery.ris` prepares confirmed historical publications that are missing from the registry. The cleaned residual packages and the checklist for this import are prepared under `generated/zotero-import/`, described in [[#Residual packages and the import checklist]]. After curation of duplicates and Version relations, including the corrections in `generated/source-acquisition/residual-queue-9-20260826/resolution-ledger.json`, the library is exported to `corpus/zotero_export.json`.
-- Promotion of the branch to `main`. `codex/consistent-research-release` is ahead of `main` without diverging from it, and `lane/knowledge-refactor-2026-09-20` adds documentation changes on top. Merges to `main` are operator gates.
+- Curation of ambiguous duplicate and Version relations in Zotero remains separate from adding missing records. Existing group records are not silently merged or rewritten. Before replacing `corpus/zotero_export.json`, reconcile the fresh snapshot with `corpus/metadata_corrections.json` and `generated/source-acquisition/residual-queue-9-20260826/resolution-ledger.json` so hash-bound local repairs remain valid.
+- Promotion of implementation branches to `main`. Merges remain operator-gated. The local main inspected on 2026-09-21 already contains the September source-review work, knowledge refactor and read-only Zotero tooling. Earlier claims that those changes were absent from main are superseded by that inspection.
 - Deployment of the result site. `.github/workflows/pages.yml` runs only on manual dispatch from `main`, builds and checks the project, and uploads `build/site/`. The repository's Pages source must be set to GitHub Actions beforehand. Until then the live address serves the earlier state.
 - Acceptance session of PRISM with the domain experts. The user stories in [[specification]] were written by the technical lead as a user proxy, and the verification mode has been exercised by automated tests and agents only. The repository records no session in which the domain experts worked through prepared records in the tool.
 - Resolution of the works with conflicts or holds listed below.
@@ -130,7 +130,28 @@ python -m src.acquire.zotero_group_reconcile --date 2026-09-20
 python -m src.acquire.zotero_group_reconcile --date 2026-09-20 --offline
 ```
 
-The second form compares against the committed `corpus/zotero_export.json` and needs neither key nor network. Its report of 2026-09-20 lies in `generated/zotero-reconcile/2026-09-20-offline/`. According to that report the committed export contains neither the item keys nor the collection keys that `corpus/source_tool_mapping.json` records for the import of July 2026, and the records of the lane files are absent from it apart from a record matched by title and year. The Git history shows in addition that the set of item keys in the export has not changed since the commit of 2026-02-02, and the commit of 2026-08-22 corrected the metadata of a single record. The export therefore predates the import of July 2026. Whether the group library holds these records can only be answered by a live run.
+The second form compares against the committed `corpus/zotero_export.json` and needs neither key nor network. Its report of 2026-09-20 lies in `generated/zotero-reconcile/2026-09-20-offline/`. According to that report the committed export contains neither the item keys nor the collection keys that `corpus/source_tool_mapping.json` records for the import of July 2026, and the records of the lane files are absent from it apart from a record matched by title and year. The Git history shows in addition that the set of item keys in the export has not changed since the commit of 2026-02-02, and the commit of 2026-08-22 corrected the metadata of a single record. The export therefore predates the import of July 2026. The live inspection of 2026-09-21 confirmed the earlier imports, as recorded under [[#Conflicting statements in the record]].
+
+### Authorised additive Zotero import
+
+The operator explicitly authorised agents to add missing prepared records to the `FemPrompt_SozArb` group on 2026-09-21. `src/acquire/zotero_group_import.py` implements this scope with a key restricted to read/write access for group `6080294`. Personal library and other group access stay disabled. The separate read-only reconciliation tool keeps its original permission contract.
+
+The importer reads a consistent live snapshot and compares the prepared packages in their existing order, including the historical lane files. It writes a local plan containing each source hash, its identity decision and the exact new-item payload. The leading 2026 package is `corpus/deep-research/round2/Codex Websearch/codex-websearch-2026-zotero-import.ris`. Overlapping records in later packages are skipped. Matching uses normalised DOI and title/year. Different identifiers or years under an equal title, and conflicting titles under an equal DOI, are held for curation. Existing items are never updated or merged.
+
+RIS metadata is mapped into Zotero item templates. Tags and source notes are retained, and fields without a native destination go into Extra with their original field label. Creator names are split only where the RIS already supplies a comma separator. Bibliographic import establishes neither a screening decision nor domain-expert verification.
+
+```
+python -m src.acquire.zotero_group_import --out generated/zotero-sync/<run>
+python -m src.acquire.zotero_group_import --apply generated/zotero-sync/<run>/plan.json
+```
+
+Application rejects changed source files or a library version that differs from the prepared plan. Each creation carries the last library version as a precondition and is read back before the next write. Tag order is ignored during comparison because Zotero sorts tags, while author order remains significant. An uncertain write stops the run with a receipt. Continuation starts with a fresh live plan, which recognises items already created. Final snapshots establish whether the previously existing records stayed unchanged.
+
+Snapshots, plans and receipts live locally under the ignored `generated/zotero-sync/` directory. They must not be committed because a group snapshot may contain private notes. Export replacement and Work-Version reconciliation remain separate operations with their own checks.
+
+The completed live import of 2026-09-21 is evidenced by `generated/zotero-sync/2026-09-21/final-audit.json`. Every new record was read back and compared with its planned fields, and all pre-existing group records stayed unchanged. The prepared references are now represented in the library. The fresh flat export is retained beside the audit as `zotero-export-candidate.json`, pending reconciliation with the canonical corpus and its corrections.
+
+Two conservative identity holds were resolved against publication sources. DOI `10.1145/3381884` already exists as Zotero item `R2LPR3VD` with its full subtitle, as confirmed by the [institutional publication record](https://researchportal.hkust.edu.hk/en/publications/broadening-artificial-intelligence-education-in-k-12-where-to-sta/). DOI `10.26615/978-954-452-098-4-060` identifies the separate proceedings version confirmed by [ACL Anthology](https://aclanthology.org/2025.ranlp-1.60/) and [Crossref](https://api.crossref.org/works/10.26615%2F978-954-452-098-4-060). Its cited resolution and exact payload are in the local version-resolution plan, and the new Zotero item is `2RK458W2`. Existing preprint records were preserved. These are bibliographic identity checks and confer no screening authority.
 
 ### Residual packages and the import checklist
 
@@ -160,7 +181,7 @@ The works in the source acquisition queue lack a reviewed Paper source. Their bl
 
 ### Conflicting statements in the record
 
-- `corpus/deep-research/round2/LAUFPROTOKOLL.md` records the Zotero import of lanes L1 to L3 as done by the operator on 2026-07-17 and the import of the L5 file as outstanding. `generated/round2-intake-package.json`, built on 2026-08-24 against the committed `corpus/zotero_export.json`, classifies the candidates of these lanes as import-ready or needing review and only one candidate as already curated. The offline reconciliation of 2026-09-20 and the Git history of the export indicate that the committed export predates the import, and the state of the group library itself is unconfirmed. The group library should be inspected before `generated/round2-zotero-import.ris` is imported, so that no record enters twice. [[#Inspecting the group library before the import]] describes the read-only tool for this inspection.
+- `corpus/deep-research/round2/LAUFPROTOKOLL.md` records the Zotero import of lanes L1 to L3 as done by the operator on 2026-07-17. The live inspection on 2026-09-21 confirms that their records are in the group library. The conflicting intake and offline reports used an older committed export. Local evidence is under `generated/zotero-sync/2026-09-21/` and the import plans. The historical recovery package also matches existing group records. Its title-variant case was resolved under [[#Authorised additive Zotero import]].
 
 ### Open decisions
 

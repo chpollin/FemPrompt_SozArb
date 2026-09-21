@@ -10,7 +10,7 @@ status: active
 language: de
 version: "0.7"
 created: 2026-02-18
-updated: 2026-09-20
+updated: 2026-09-21
 authors: [Christopher Pollin]
 generated-with: Claude Code
 related: [INDEX, plan, specification, governance, verification, handoff]
@@ -23,6 +23,12 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 ---
 
 ## PRISM and the epistemic infrastructure (2026)
+
+### 2026-09-21: Authorised Zotero import and live reconciliation
+
+The operator authorised adding missing literature directly to the group library. A separate creation-only importer now preserves prepared RIS metadata, checks group-specific access, records a version-bound plan and reads back every creation. The live library confirmed the July imports and the historical recovery records, resolving the discrepancy caused by the stale repository export. Missing prepared references were added, including the proceedings version confirmed by ACL Anthology and Crossref. The title variant in the historical recovery was confirmed as an existing publication. Existing group records stayed unchanged. Local snapshots, receipts and the final audit are under `generated/zotero-sync/`, which is excluded from Git. [[plan#Authorised additive Zotero import]] owns the procedure and source references.
+
+The first write paused because Zotero sorted its tags. The comparison now treats tag order as immaterial while preserving author order, with a regression test. A fresh plan recognised the already created record, and the final audit verified it with every subsequent addition. The Zotero suites, Ruff and JavaScript checks passed. The full Python suite retains the previously documented missing-knowledge-document failure. The committed corpus export and its hash-bound corrections were preserved. Reconciliation of the fresh export is the next repository operation, before Work-Version binding or screening. The key supplied in chat was stored only in the ignored environment file, and replacement was recommended.
 
 ### 2026-09-20: Read-only reconciliation of the Zotero group library
 
