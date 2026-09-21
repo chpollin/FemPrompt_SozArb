@@ -35,7 +35,7 @@ In function order, not alphabetical.
 | [[data]] | The data substrate the PRISM tool consumes and produces | per schema change |
 | [[standards]] | The reporting standards implemented (PRISMA 2020, PRISMA-trAIce, RAISE), and this review's conformance state against them | rarely |
 | [[governance]] | Authority, lifecycle, correction, provenance, and publication rules for people, AI agents, and software agents | per governance decision |
-| [[testing]] | Technical guarantees, test layers, commands, and the manual acceptance boundary | per test-contract change |
+| [[testing]] | Setup, local preview, deployment, technical guarantees, test layers and the manual acceptance boundary | per test-contract change |
 | [[verification]] | Evidence and authority state of externally relevant claims and research artifacts | per verification event |
 | [[plan]] | Remaining work, completion criteria, and the operator decisions that still affect the result | per material change |
 | [[journal]] | Genesis: the chronological session log with decisions and learnings | per session |

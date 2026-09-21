@@ -76,9 +76,27 @@ The native browser permission dialogue for the File System Access API remains a 
 
 ## Clean-checkout verification
 
-A repository-only verification uses Python 3.11 or later, `requirements-build.txt`, `npm ci`, and `npx playwright install chromium`. Run `npm run build`, then `npm run check`, `npm run test:browser-companion`, and `npm run pilot`. The build reconstructs the ignored local reading layer, source queues, corpus projections and separate result site without external API calls. The read-only `check:data` rejects changed inputs, missing outputs or stale hashes. Hash-bearing research artifacts use canonical LF text so their checksums remain stable across operating systems. The browser pilot selects an available local port by default; `--port` remains available for explicit binding.
+Use Python 3.11 or later and Node.js 22. From the repository root, install the build dependencies and browser, then generate and verify the local outputs:
 
-`.github/workflows/quality.yml` runs the same gates in CI. `.github/workflows/pages.yml` is manually dispatched on main and uploads only the checked `build/site/` artifact. A successful local test does not establish that either remote workflow has run.
+```sh
+python -m pip install -r requirements-build.txt
+npm ci
+npx playwright install chromium
+npm run build
+npm run check
+npm run test:browser-companion
+npm run pilot
+```
+
+The build reconstructs the ignored local reading layer, source-readiness and completion queues, corpus projections, Assertion index, downloads and separate result site at `build/site/`. It uses the local source representations and performs no new AI reviews or external API calls. Fresh acquisition, PDF conversion and LLM distillation require the broader research environment described in [[methods]]. The read-only `npm run check:data` rejects changed inputs, missing outputs or stale hashes.
+
+Hash-bearing research artifacts use canonical LF text so their checksums remain stable across operating systems. The browser pilot selects an available local port by default, with `--port` available for explicit binding. The native folder-picker checks remain in [the manual checklist](../tests/manual-checklist.md). The committed replay checks the retrospective benchmark counts and agreement figures.
+
+## Local preview and deployment
+
+Run `npm run preview` and open [the project website](http://127.0.0.1:8870/index.html) or [PRISM](http://127.0.0.1:8870/prisma.html). The optional generated publication export is available at `/results/index.html`. Use `npm run preview -- --port 8871` to select another port.
+
+`.github/workflows/quality.yml` runs the automated gates in continuous integration. For deployment, select GitHub Actions as the repository's Pages source. The manually dispatched `.github/workflows/pages.yml` runs on `main`, builds and checks the result, and uploads only `build/site/`. A local build does not update the live site, and passing local checks does not establish that either remote workflow has run. Deployment requires the project owner's authorisation under [[plan]].
 
 ## Change gates
 

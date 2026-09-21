@@ -24,6 +24,10 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## PRISM and the epistemic infrastructure (2026)
 
+### 2026-09-21: Make the README a compact research introduction
+
+The README now introduces the research purpose, available materials, method and data flow, with a short explanation of Promptotyping and one documentation entry point. Technical setup, preview and deployment instructions now live in [[testing]], and [[methods]] links there. The introduction retains the distinction between AI source review and domain-expert verification, the incomplete corpus and manuscript state, bibliographic attribution and licences. Tables, the directory tree and internal implementation details were removed from the entry page. The former project URL failed DNS resolution, so the README now links to the current project site identified by the University of Graz. Relative links and heading anchors, the documentation routing, prose style and build freshness were checked.
+
 ### 2026-09-21: Integrate the live library and restore source-bound reading coverage
 
 The operator requested work with gpt-5.6-sol subagents across Zotero, knowledge documents and PRISM. The canonical corpus now admits the live library while preserving original raw records, metadata-correction hashes and historical annotation identities. Missing historical references were added to the authorised Zotero group with per-item read-back. A library-membership manifest records historical aliases without deleting existing records.

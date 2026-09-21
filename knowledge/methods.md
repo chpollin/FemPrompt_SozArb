@@ -10,7 +10,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-02-21
-updated: 2026-09-20
+updated: 2026-09-21
 authors: [Christopher Pollin]
 generated-with: Claude Code, Codex (GPT-6)
 topics: ["[[Systematic Review]]", "[[PRISMA]]"]
@@ -39,7 +39,7 @@ Two knowledge places frame the chain. `knowledge/` carries the steering knowledg
 
 ## System requirements
 
-The reproducible offline build uses Python 3.11 or later, Node.js 22 and the pinned build dependencies. Follow the canonical [README setup](../README.md#testing); the result rebuild requires no API credentials and conducts no new source reading or distillation. Fresh acquisition, PDF conversion and LLM distillation use the broader research environment in `requirements.txt` and the credentials required by the selected script. Those optional research operations are separate from reproducing the versioned result.
+The reproducible offline build uses Python 3.11 or later, Node.js 22 and the pinned build dependencies. Follow the canonical [setup and verification instructions](testing.md#clean-checkout-verification). The result rebuild requires no API credentials and conducts no new source reading or distillation. Fresh acquisition, PDF conversion and LLM distillation use the broader research environment in `requirements.txt` and the credentials required by the selected script. Those optional research operations are separate from reproducing the versioned result.
 
 ## PRISMA 2020 framework
 
