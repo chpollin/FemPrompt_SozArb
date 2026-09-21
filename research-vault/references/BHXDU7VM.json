@@ -1,0 +1,23 @@
+{
+  "id": "BHXDU7VM",
+  "type": "report",
+  "title": "How People Use ChatGPT",
+  "author": [
+    { "literal": "Aaron Chatterji" },
+    { "literal": "Thomas Cunningham" },
+    { "literal": "David J. Deming" },
+    { "literal": "Zoe Hitzig" },
+    { "literal": "Christopher Ong" },
+    { "literal": "Carl Yan Shan" },
+    { "literal": "Kevin Wadman" }
+  ],
+  "issued": {
+    "date-parts": [
+      [2025, 9]
+    ]
+  },
+  "publisher": "National Bureau of Economic Research",
+  "number": "34255",
+  "genre": "NBER Working Paper",
+  "URL": "https://www.nber.org/papers/w34255"
+}

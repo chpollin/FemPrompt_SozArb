@@ -1,0 +1,19 @@
+{
+  "id": "EXRF5629",
+  "type": "article-journal",
+  "title": "Predicting Successful Placements for Youth in Child Welfare with Machine Learning",
+  "author": [
+    {"family": "Trudeau", "given": "Kimberlee J."},
+    {"family": "Yang", "given": "Jichen"},
+    {"family": "Di", "given": "Jiaming"},
+    {"family": "Lu", "given": "Yi"},
+    {"family": "Kraus", "given": "David R."}
+  ],
+  "container-title": "Children and Youth Services Review",
+  "volume": "153",
+  "page": "107117",
+  "issued": {"date-parts": [[2023]]},
+  "DOI": "10.1016/j.childyouth.2023.107117",
+  "URL": "https://doi.org/10.1016/j.childyouth.2023.107117",
+  "note": "Corrected bibliographic identity from the Work-Version registry and its source-reviewed metadata correction. The active distillate is grounded in the Accepted Manuscript recorded separately in its source-representation block."
+}

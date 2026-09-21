@@ -2,7 +2,6 @@ import hashlib
 import json
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 LEDGER = (
     ROOT
@@ -22,26 +21,44 @@ def test_resolution_ledger_covers_the_audited_residual_cohort() -> None:
     ledger = _json(LEDGER)
     queue = _json(QUEUE)
     records = {record["record_id"]: record for record in ledger["records"]}
-    queued = {record["representative_record_id"]: record for record in queue["queue"]}
+    queued = {record["work_id"]: record for record in queue["queue"]}
     productive = _json(ROOT / "docs/data/screening/ar2.json")["decisions"]
+    registry = _json(ROOT / "corpus/work_version_registry.json")
+    versions = {
+        work["work_id"]: {version["version_id"] for version in work["versions"]}
+        for work in registry["works"]
+    }
 
     # The dated acquisition cohort stays fixed as later governed runs shrink
     # the live queue. Leaving the queue requires a reviewed record of that Work.
     assert set(records) == {
-        "SQYLQFRU", "RAY6G2R7", "ZQHP5G35", "LR8Z3YHP", "KI9GRGHB",
-        "5T55I5Z7", "XG7RFFC7", "Z9DNTBFF", "8NG4ZEWE",
+        "SQYLQFRU",
+        "RAY6G2R7",
+        "ZQHP5G35",
+        "LR8Z3YHP",
+        "KI9GRGHB",
+        "5T55I5Z7",
+        "XG7RFFC7",
+        "Z9DNTBFF",
+        "8NG4ZEWE",
     }
     assert set(ledger["scope"]["record_ids"]) == set(records)
-    assert "8NG4ZEWE" not in queued
+    assert records["8NG4ZEWE"]["work_id"] not in queued
     for record_id, record in records.items():
-        if record_id not in queued:
+        work_id = record["work_id"]
+        if work_id not in queued:
             assert productive[record_id]["work_id"] == record["work_id"]
             assert productive[record_id]["lifecycle"]["state"] in {
-                "ai-agent-reviewed", "verified", "publication-approved",
+                "ai-agent-reviewed",
+                "verified",
+                "publication-approved",
             }
             continue
-        assert record["work_id"] == queued[record_id]["work_id"]
-        assert record["version_id"] == queued[record_id]["selected_version_id"]
+        # Live Zotero additions may become the representative of the same Work.
+        assert record_id in queued[work_id]["record_ids"]
+        # The dated audited Version stays addressable when a later one is selected.
+        assert record["version_id"] in versions[work_id]
+        assert queued[work_id]["selected_version_id"] in versions[work_id]
         assert record["evidence_urls"]
         assert record["required_action"]
 

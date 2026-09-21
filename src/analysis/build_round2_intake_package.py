@@ -28,6 +28,7 @@ REPO = Path(__file__).resolve().parents[2]
 INTAKE_PATH = REPO / "generated" / "round2-intake.json"
 REGISTRY_PATH = REPO / "corpus" / "work_version_registry.json"
 REVIEW_DIR = REPO / "generated" / "round2-agent-review"
+INTAKE_SNAPSHOT_PATH = REVIEW_DIR / "intake-snapshot.json"
 REVIEW_PATHS = {
     "identity": REVIEW_DIR / "identity.json",
     "metadata": REVIEW_DIR / "metadata.json",
@@ -42,6 +43,15 @@ EXPECTED_SCHEMAS = {
 }
 CONFLICT_STATUSES = {"conflict", "possible_match", "ambiguous"}
 BLOCKED_STATUSES = {"insufficient", "unavailable"}
+MEMBERSHIP_FIELDS = {
+    "existing_corpus_candidates",
+    "existing_match_basis",
+    "intake_status",
+    "paper_source",
+    "screening_blockers",
+    "source_review",
+    "zotero_key",
+}
 
 
 def _sha256(path: Path) -> str:
@@ -50,6 +60,28 @@ def _sha256(path: Path) -> str:
 
 def _read_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def _reviewed_intake_semantics(intake: dict[str, Any]) -> dict[str, Any]:
+    """Project fields covered by the original reviews, excluding corpus membership."""
+    return {
+        "schema": intake.get("schema"),
+        "works": [
+            {key: value for key, value in work.items() if key not in MEMBERSHIP_FIELDS}
+            for work in intake.get("works", [])
+        ],
+    }
+
+
+def _assert_intake_semantics(
+    reviewed_snapshot: dict[str, Any], current_intake: dict[str, Any]
+) -> None:
+    if _reviewed_intake_semantics(current_intake) != _reviewed_intake_semantics(
+        reviewed_snapshot
+    ):
+        raise ValueError(
+            "current round-two intake changes reviewed bibliographic semantics"
+        )
 
 
 def _review_records(
@@ -69,7 +101,9 @@ def _review_records(
     if set(records) != candidate_ids:
         missing = sorted(candidate_ids - set(records))
         extra = sorted(set(records) - candidate_ids)
-        raise ValueError(f"{role}: candidate mismatch; missing={missing}, extra={extra}")
+        raise ValueError(
+            f"{role}: candidate mismatch; missing={missing}, extra={extra}"
+        )
     return records
 
 
@@ -85,11 +119,15 @@ def _import_status(
     statuses = {identity_status, metadata_status}
     if statuses & BLOCKED_STATUSES or "unreviewed" in statuses:
         return "blocked", [
-            status for status in (identity_status, metadata_status) if status != "confirmed"
+            status
+            for status in (identity_status, metadata_status)
+            if status != "confirmed"
         ]
     if statuses & CONFLICT_STATUSES:
         return "needs_review", [
-            status for status in (identity_status, metadata_status) if status != "confirmed"
+            status
+            for status in (identity_status, metadata_status)
+            if status != "confirmed"
         ]
     if statuses == {"confirmed"}:
         return "import_ready", []
@@ -146,9 +184,7 @@ def _ris_text(records: list[dict[str, Any]]) -> str:
             lines.append(f"PY  - {year.group(0)}")
         for doi in identifiers.get("doi", [])[:1]:
             lines.append(f"DO  - {doi}")
-        url = version.get("landing_url") or next(
-            iter(identifiers.get("url", [])), ""
-        )
+        url = version.get("landing_url") or next(iter(identifiers.get("url", [])), "")
         if url:
             lines.append(f"UR  - {url}")
         if version.get("journal_or_repository"):
@@ -173,11 +209,16 @@ def _ris_text(records: list[dict[str, Any]]) -> str:
 def build_package(repo: Path = REPO) -> tuple[dict[str, Any], str]:
     """Return the consolidated intake package and its import-ready RIS text."""
     intake_path = repo / "generated" / "round2-intake.json"
+    intake_snapshot_path = (
+        repo / "generated" / "round2-agent-review" / "intake-snapshot.json"
+    )
     registry_path = repo / "corpus" / "work_version_registry.json"
     intake = _read_json(intake_path)
+    reviewed_snapshot = _read_json(intake_snapshot_path)
+    _assert_intake_semantics(reviewed_snapshot, intake)
     registry = load_registry(registry_path)
-    intake_hash = _sha256(intake_path)
-    candidate_ids = {work["work_id"] for work in intake.get("works", [])}
+    intake_hash = _sha256(intake_snapshot_path)
+    candidate_ids = {work["work_id"] for work in reviewed_snapshot.get("works", [])}
     reviews = {
         role: _review_records(
             role,
@@ -241,7 +282,7 @@ def build_package(repo: Path = REPO) -> tuple[dict[str, Any], str]:
         status: sum(record["zotero_import_status"] == status for record in records)
         for status in ("already_curated", "import_ready", "needs_review", "blocked")
     }
-    inputs = [intake_path, registry_path]
+    inputs = [intake_path, intake_snapshot_path, registry_path]
     inputs.extend(
         repo / path.relative_to(REPO)
         for path in REVIEW_PATHS.values()

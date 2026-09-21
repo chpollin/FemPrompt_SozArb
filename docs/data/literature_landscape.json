@@ -17,31 +17,31 @@
     "provisional": true
   },
   "meta": {
-    "corpus_total": 326,
-    "corpus_record_total": 326,
-    "corpus_work_total": 257,
-    "annotated_total": 30,
-    "published_record_total": 31,
-    "published_work_total": 30,
+    "corpus_total": 463,
+    "corpus_record_total": 463,
+    "corpus_work_total": 361,
+    "annotated_total": 28,
+    "published_record_total": 29,
+    "published_work_total": 28,
     "source_annotated_total": 32,
     "source_annotated_record_total": 32,
     "source_annotated_work_total": 31,
-    "withheld_total": 1,
-    "withheld_record_total": 1,
-    "unpublished_work_total": 1,
-    "included_total": 22,
+    "withheld_total": 3,
+    "withheld_record_total": 3,
+    "unpublished_work_total": 3,
+    "included_total": 20,
     "excluded_total": 7,
     "unclear_total": 1,
-    "thematic_total": 22,
+    "thematic_total": 20,
     "aggregation_unit": "work",
     "record_decision_counts": {
       "Exclude": 7,
-      "Include": 23,
+      "Include": 21,
       "Unclear": 1
     },
     "work_decision_counts": {
       "Exclude": 7,
-      "Include": 22,
+      "Include": 20,
       "Unclear": 1
     },
     "denominators": {
@@ -1213,14 +1213,18 @@
               "10.1093/bjsw/bcab168"
             ],
             "zotero_key": [
+              "HDXTRBUK",
               "VSZM7CT6"
+            ],
+            "url": [
+              "https://doi.org/10.1093/bjsw/bcab168"
             ]
           },
           "peer_review_status": "not_established",
           "peer_review_basis": "unknown",
           "integrity_status": "current",
           "access_status": "unknown",
-          "landing_url": "",
+          "landing_url": "https://doi.org/10.1093/bjsw/bcab168",
           "fulltext_url": "",
           "relations": [
             {
@@ -1233,7 +1237,7 @@
         }
       ],
       "identity_basis": "work_version_registry",
-      "knowledge_coverage": "fulltext_ready",
+      "knowledge_coverage": "linked",
       "decision": "Include",
       "reason": null,
       "text_source": "raw",
@@ -1485,6 +1489,7 @@
         "VSZM7CT6"
       ],
       "corpus_record_ids": [
+        "HDXTRBUK",
         "VSZM7CT6"
       ],
       "version_ids": [
@@ -1561,14 +1566,18 @@
                   "10.1093/bjsw/bcab168"
                 ],
                 "zotero_key": [
+                  "HDXTRBUK",
                   "VSZM7CT6"
+                ],
+                "url": [
+                  "https://doi.org/10.1093/bjsw/bcab168"
                 ]
               },
               "peer_review_status": "not_established",
               "peer_review_basis": "unknown",
               "integrity_status": "current",
               "access_status": "unknown",
-              "landing_url": "",
+              "landing_url": "https://doi.org/10.1093/bjsw/bcab168",
               "fulltext_url": "",
               "relations": [
                 {
@@ -1581,7 +1590,7 @@
             }
           ],
           "identity_basis": "work_version_registry",
-          "knowledge_coverage": "fulltext_ready",
+          "knowledge_coverage": "linked",
           "decision": "Include",
           "reason": null,
           "text_source": "raw",
@@ -1876,7 +1885,8 @@
               "10.48550/arxiv.2504.05632"
             ],
             "zotero_key": [
-              "SQYLQFRU"
+              "SQYLQFRU",
+              "Z5287FAB"
             ],
             "url": [
               "https://arxiv.org/abs/2504.05632v3"
@@ -1894,7 +1904,7 @@
         }
       ],
       "identity_basis": "work_version_registry",
-      "knowledge_coverage": "fulltext_ready",
+      "knowledge_coverage": "linked",
       "decision": "Include",
       "reason": null,
       "text_source": "raw",
@@ -2092,7 +2102,8 @@
         "SQYLQFRU"
       ],
       "corpus_record_ids": [
-        "SQYLQFRU"
+        "SQYLQFRU",
+        "Z5287FAB"
       ],
       "version_ids": [
         "version:8df649a5-eae4-54d8-9105-3768e0083beb"
@@ -2152,7 +2163,8 @@
                   "10.48550/arxiv.2504.05632"
                 ],
                 "zotero_key": [
-                  "SQYLQFRU"
+                  "SQYLQFRU",
+                  "Z5287FAB"
                 ],
                 "url": [
                   "https://arxiv.org/abs/2504.05632v3"
@@ -2170,7 +2182,7 @@
             }
           ],
           "identity_basis": "work_version_registry",
-          "knowledge_coverage": "fulltext_ready",
+          "knowledge_coverage": "linked",
           "decision": "Include",
           "reason": null,
           "text_source": "raw",
@@ -2863,405 +2875,6 @@
       ]
     },
     {
-      "id": "R7V99ERA",
-      "title": "Examining risks of racial biases in NLP tools for child protective services",
-      "author_year": "Field et al. (2023)",
-      "authors": "Field, A.; Coston, A.; Gandhi, N.; Chouldechova, A.; Putnam-Hornstein, E.; Steier, D.; Tsvetkov, Y.",
-      "year": 2023,
-      "doi": "10.1145/3593013.3594094",
-      "url": "",
-      "item_type": "conferencepaper",
-      "journal": "",
-      "work_id": "work:365293c9-c8ea-54dd-9f65-2f37976f1a31",
-      "version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
-      "bibliographic_version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
-      "source_version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
-      "source_binding": null,
-      "version_type": "unknown",
-      "version_date": "June 12-15, 2023",
-      "peer_review_status": "not_established",
-      "peer_review_basis": "unknown",
-      "preferred_version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
-      "latest_version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
-      "is_preferred_version": true,
-      "work_versions": [
-        {
-          "version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
-          "version_type": "unknown",
-          "version_date": "June 12-15, 2023",
-          "identifiers": {
-            "doi": [
-              "10.1145/3593013.3594094"
-            ],
-            "zotero_key": [
-              "R7V99ERA"
-            ]
-          },
-          "peer_review_status": "not_established",
-          "peer_review_basis": "unknown",
-          "integrity_status": "current",
-          "access_status": "unknown",
-          "landing_url": "",
-          "fulltext_url": "",
-          "relations": [],
-          "is_preferred": true,
-          "is_latest": true
-        }
-      ],
-      "identity_basis": "work_version_registry",
-      "knowledge_coverage": "fulltext_ready",
-      "decision": "Include",
-      "reason": null,
-      "text_source": "raw",
-      "reviewer": "ar2",
-      "actor": "agent",
-      "lifecycle_state": "ai-agent-reviewed",
-      "publication_basis": "ai-source-review",
-      "recorded_identity": {
-        "work_id": "doi:10.1145/3593013.3594094",
-        "version_id": null
-      },
-      "ai_verification": {
-        "artifact": "generated/verification/screening-corrections-b.json#/corrections/R7V99ERA",
-        "sha256": "sha256:bee8d491c19f2462827f06c843db44898d2c4ad94e7ca4dc3629963570eb70b6",
-        "result": "accepted",
-        "review_type": "ai-source-review",
-        "agent_id": "/root/research_completion",
-        "model": "GPT-6",
-        "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
-        "reviewed_at": "2026-09-05T12:50:08Z",
-        "findings": "Rechecked the same original FAccT source after the proposed correction. AN_Mitigation_Status=None now accurately distinguishes the empirical racial-bias/model-performance audit from a mitigation intervention. It is consistent with AN_Mitigation_Stage=None and the source limitations. The one-field correction preserves Include, Empirisch and all other original coding. This receipt accepts the immutable correction projection only; the original annotation and its changes_requested receipt remain unchanged, and no human lifecycle state is granted.",
-        "canonical_binding": {
-          "paper_id": "R7V99ERA",
-          "work_id": "work:365293c9-c8ea-54dd-9f65-2f37976f1a31",
-          "version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049"
-        }
-      },
-      "verification": null,
-      "publication_approval": null,
-      "categories": [
-        {
-          "key": "Bias_Ungleichheit",
-          "level": 2,
-          "evidence": [
-            {
-              "term": "consistent racial bias in NER",
-              "snippet": "consistent racial bias in NER",
-              "source_layer": "paper",
-              "actor": "agent",
-              "work_id": "work:365293c9-c8ea-54dd-9f65-2f37976f1a31",
-              "version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
-              "recorded_work_id": "doi:10.1145/3593013.3594094",
-              "recorded_version_id": "",
-              "source_record_id": "R7V99ERA"
-            }
-          ]
-        },
-        {
-          "key": "Fairness",
-          "level": 2,
-          "evidence": [
-            {
-              "term": "algorithmic fairness",
-              "snippet": "algorithmic fairness",
-              "source_layer": "paper",
-              "actor": "agent",
-              "work_id": "work:365293c9-c8ea-54dd-9f65-2f37976f1a31",
-              "version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
-              "recorded_work_id": "doi:10.1145/3593013.3594094",
-              "recorded_version_id": "",
-              "source_record_id": "R7V99ERA"
-            }
-          ]
-        },
-        {
-          "key": "KI_Sonstige",
-          "level": 2,
-          "evidence": [
-            {
-              "term": "NLP models",
-              "snippet": "NLP models",
-              "source_layer": "paper",
-              "actor": "agent",
-              "work_id": "work:365293c9-c8ea-54dd-9f65-2f37976f1a31",
-              "version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
-              "recorded_work_id": "doi:10.1145/3593013.3594094",
-              "recorded_version_id": "",
-              "source_record_id": "R7V99ERA"
-            }
-          ]
-        },
-        {
-          "key": "Soziale_Arbeit",
-          "level": 2,
-          "evidence": [
-            {
-              "term": "child protective services (CPS)",
-              "snippet": "child protective services (CPS)",
-              "source_layer": "paper",
-              "actor": "agent",
-              "work_id": "work:365293c9-c8ea-54dd-9f65-2f37976f1a31",
-              "version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
-              "recorded_work_id": "doi:10.1145/3593013.3594094",
-              "recorded_version_id": "",
-              "source_record_id": "R7V99ERA"
-            }
-          ]
-        }
-      ],
-      "analysis": {
-        "fields": {
-          "AN_Prompting_Role": [
-            "None"
-          ],
-          "AN_Prompt_Techniques": [
-            "None"
-          ],
-          "AN_Bias_Axes": [
-            "Race_Ethnicity"
-          ],
-          "AN_Harm_Types": [
-            "Disparate_Performance",
-            "Direct_Discrimination",
-            "Indirect_Discrimination"
-          ],
-          "AN_Mitigation_Stage": [
-            "None"
-          ],
-          "AN_Mitigation_Status": "None",
-          "AN_Population": [
-            "Child_Family_Welfare"
-          ],
-          "AN_Coding_Basis": "Fulltext",
-          "Studientyp": "Empirisch"
-        },
-        "notes": "Empirische Evaluation von NLP-Komponenten und Risikoprognose in der Kinder- und Jugendhilfe.",
-        "undecidable": []
-      },
-      "ai_correction": {
-        "paper_id": "R7V99ERA",
-        "base_artifact": "docs/data/screening/ar2.json#/decisions/R7V99ERA",
-        "base_sha256": "sha256:c5987e6fd4781cb27733a7103f0d67d5b0ef235d93552761f14fbd88389df055",
-        "agent_id": "/root/research_completion",
-        "model": "GPT-6",
-        "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
-        "corrected_at": "2026-09-05T12:50:08Z",
-        "changes": [
-          {
-            "path": "/analysis/fields/AN_Mitigation_Status",
-            "before": "Evaluated",
-            "after": "None",
-            "reason": "Field et al. evaluate racial disparities in NLP components, not the effectiveness of a mitigating intervention. The record already has AN_Mitigation_Stage=None; source Limitations explicitly says the work does not develop deployable systems. Preserve empirical study type while removing the unsupported mitigation-efficacy interpretation."
-          }
-        ]
-      },
-      "aggregation_unit": "work",
-      "record_ids": [
-        "R7V99ERA"
-      ],
-      "corpus_record_ids": [
-        "R7V99ERA"
-      ],
-      "version_ids": [
-        "version:5cc8d78c-4578-5a0b-a269-b186f10fe049"
-      ],
-      "source_version_ids": [
-        "version:5cc8d78c-4578-5a0b-a269-b186f10fe049"
-      ],
-      "source_records": [
-        {
-          "id": "R7V99ERA",
-          "title": "Examining risks of racial biases in NLP tools for child protective services",
-          "author_year": "Field et al. (2023)",
-          "authors": "Field, A.; Coston, A.; Gandhi, N.; Chouldechova, A.; Putnam-Hornstein, E.; Steier, D.; Tsvetkov, Y.",
-          "year": 2023,
-          "doi": "10.1145/3593013.3594094",
-          "url": "",
-          "item_type": "conferencepaper",
-          "journal": "",
-          "work_id": "work:365293c9-c8ea-54dd-9f65-2f37976f1a31",
-          "version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
-          "bibliographic_version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
-          "source_version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
-          "source_binding": null,
-          "version_type": "unknown",
-          "version_date": "June 12-15, 2023",
-          "peer_review_status": "not_established",
-          "peer_review_basis": "unknown",
-          "preferred_version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
-          "latest_version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
-          "is_preferred_version": true,
-          "work_versions": [
-            {
-              "version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
-              "version_type": "unknown",
-              "version_date": "June 12-15, 2023",
-              "identifiers": {
-                "doi": [
-                  "10.1145/3593013.3594094"
-                ],
-                "zotero_key": [
-                  "R7V99ERA"
-                ]
-              },
-              "peer_review_status": "not_established",
-              "peer_review_basis": "unknown",
-              "integrity_status": "current",
-              "access_status": "unknown",
-              "landing_url": "",
-              "fulltext_url": "",
-              "relations": [],
-              "is_preferred": true,
-              "is_latest": true
-            }
-          ],
-          "identity_basis": "work_version_registry",
-          "knowledge_coverage": "fulltext_ready",
-          "decision": "Include",
-          "reason": null,
-          "text_source": "raw",
-          "reviewer": "ar2",
-          "actor": "agent",
-          "lifecycle_state": "ai-agent-reviewed",
-          "publication_basis": "ai-source-review",
-          "recorded_identity": {
-            "work_id": "doi:10.1145/3593013.3594094",
-            "version_id": null
-          },
-          "ai_verification": {
-            "artifact": "generated/verification/screening-corrections-b.json#/corrections/R7V99ERA",
-            "sha256": "sha256:bee8d491c19f2462827f06c843db44898d2c4ad94e7ca4dc3629963570eb70b6",
-            "result": "accepted",
-            "review_type": "ai-source-review",
-            "agent_id": "/root/research_completion",
-            "model": "GPT-6",
-            "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
-            "reviewed_at": "2026-09-05T12:50:08Z",
-            "findings": "Rechecked the same original FAccT source after the proposed correction. AN_Mitigation_Status=None now accurately distinguishes the empirical racial-bias/model-performance audit from a mitigation intervention. It is consistent with AN_Mitigation_Stage=None and the source limitations. The one-field correction preserves Include, Empirisch and all other original coding. This receipt accepts the immutable correction projection only; the original annotation and its changes_requested receipt remain unchanged, and no human lifecycle state is granted.",
-            "canonical_binding": {
-              "paper_id": "R7V99ERA",
-              "work_id": "work:365293c9-c8ea-54dd-9f65-2f37976f1a31",
-              "version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049"
-            }
-          },
-          "verification": null,
-          "publication_approval": null,
-          "categories": [
-            {
-              "key": "Bias_Ungleichheit",
-              "level": 2,
-              "evidence": [
-                {
-                  "term": "consistent racial bias in NER",
-                  "snippet": "consistent racial bias in NER",
-                  "source_layer": "paper",
-                  "actor": "agent",
-                  "work_id": "work:365293c9-c8ea-54dd-9f65-2f37976f1a31",
-                  "version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
-                  "recorded_work_id": "doi:10.1145/3593013.3594094",
-                  "recorded_version_id": ""
-                }
-              ]
-            },
-            {
-              "key": "Fairness",
-              "level": 2,
-              "evidence": [
-                {
-                  "term": "algorithmic fairness",
-                  "snippet": "algorithmic fairness",
-                  "source_layer": "paper",
-                  "actor": "agent",
-                  "work_id": "work:365293c9-c8ea-54dd-9f65-2f37976f1a31",
-                  "version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
-                  "recorded_work_id": "doi:10.1145/3593013.3594094",
-                  "recorded_version_id": ""
-                }
-              ]
-            },
-            {
-              "key": "KI_Sonstige",
-              "level": 2,
-              "evidence": [
-                {
-                  "term": "NLP models",
-                  "snippet": "NLP models",
-                  "source_layer": "paper",
-                  "actor": "agent",
-                  "work_id": "work:365293c9-c8ea-54dd-9f65-2f37976f1a31",
-                  "version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
-                  "recorded_work_id": "doi:10.1145/3593013.3594094",
-                  "recorded_version_id": ""
-                }
-              ]
-            },
-            {
-              "key": "Soziale_Arbeit",
-              "level": 2,
-              "evidence": [
-                {
-                  "term": "child protective services (CPS)",
-                  "snippet": "child protective services (CPS)",
-                  "source_layer": "paper",
-                  "actor": "agent",
-                  "work_id": "work:365293c9-c8ea-54dd-9f65-2f37976f1a31",
-                  "version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
-                  "recorded_work_id": "doi:10.1145/3593013.3594094",
-                  "recorded_version_id": ""
-                }
-              ]
-            }
-          ],
-          "analysis": {
-            "fields": {
-              "AN_Prompting_Role": [
-                "None"
-              ],
-              "AN_Prompt_Techniques": [
-                "None"
-              ],
-              "AN_Bias_Axes": [
-                "Race_Ethnicity"
-              ],
-              "AN_Harm_Types": [
-                "Disparate_Performance",
-                "Direct_Discrimination",
-                "Indirect_Discrimination"
-              ],
-              "AN_Mitigation_Stage": [
-                "None"
-              ],
-              "AN_Mitigation_Status": "None",
-              "AN_Population": [
-                "Child_Family_Welfare"
-              ],
-              "AN_Coding_Basis": "Fulltext",
-              "Studientyp": "Empirisch"
-            },
-            "notes": "Empirische Evaluation von NLP-Komponenten und Risikoprognose in der Kinder- und Jugendhilfe.",
-            "undecidable": []
-          },
-          "ai_correction": {
-            "paper_id": "R7V99ERA",
-            "base_artifact": "docs/data/screening/ar2.json#/decisions/R7V99ERA",
-            "base_sha256": "sha256:c5987e6fd4781cb27733a7103f0d67d5b0ef235d93552761f14fbd88389df055",
-            "agent_id": "/root/research_completion",
-            "model": "GPT-6",
-            "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
-            "corrected_at": "2026-09-05T12:50:08Z",
-            "changes": [
-              {
-                "path": "/analysis/fields/AN_Mitigation_Status",
-                "before": "Evaluated",
-                "after": "None",
-                "reason": "Field et al. evaluate racial disparities in NLP components, not the effectiveness of a mitigating intervention. The record already has AN_Mitigation_Stage=None; source Limitations explicitly says the work does not develop deployable systems. Preserve empirical study type while removing the unsupported mitigation-efficacy interpretation."
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
       "id": "QUV5DQH3",
       "title": "When Good Algorithms Go Sexist: Why and How to Advance AI Gender Equity",
       "author_year": "Smith & Rustagi (2021)",
@@ -3275,7 +2888,26 @@
       "version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
       "bibliographic_version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
       "source_version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "QUV5DQH3",
+        "work_id": "work:3dc3ced9-8261-5840-9d71-aa2dfc43af87",
+        "bibliographic_version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
+        "source_version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown_clean/QUV5DQH3.md",
+        "source_sha256": "sha256:e5f3106b938f608704fa0809264ce0914030730aec95910259145ff71c6c0293",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "When Good Algorithms Go Sexist: Why and How to Advance AI Gender Equity",
+          "doi": "10.48558/a179-b138"
+        },
+        "version_identity": {
+          "title": "When Good Algorithms Go Sexist: Why and How to Advance AI Gender Equity",
+          "doi": "10.48558/a179-b138"
+        }
+      },
       "version_type": "version_of_record",
       "version_date": "2021",
       "peer_review_status": "not_established",
@@ -3293,6 +2925,7 @@
               "10.48558/a179-b138"
             ],
             "zotero_key": [
+              "ET4MMZGH",
               "QUV5DQH3"
             ],
             "url": [
@@ -3311,7 +2944,7 @@
         }
       ],
       "identity_basis": "work_version_registry",
-      "knowledge_coverage": "fulltext_ready",
+      "knowledge_coverage": "linked",
       "decision": "Include",
       "reason": null,
       "text_source": "raw",
@@ -3355,6 +2988,8 @@
               "version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
               "recorded_work_id": "doi:10.48558/a179-b138",
               "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/QUV5DQH3.md",
+              "source_sha256": "sha256:e5f3106b938f608704fa0809264ce0914030730aec95910259145ff71c6c0293",
               "source_record_id": "QUV5DQH3"
             }
           ]
@@ -3372,6 +3007,8 @@
               "version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
               "recorded_work_id": "doi:10.48558/a179-b138",
               "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/QUV5DQH3.md",
+              "source_sha256": "sha256:e5f3106b938f608704fa0809264ce0914030730aec95910259145ff71c6c0293",
               "source_record_id": "QUV5DQH3"
             }
           ]
@@ -3389,6 +3026,8 @@
               "version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
               "recorded_work_id": "doi:10.48558/a179-b138",
               "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/QUV5DQH3.md",
+              "source_sha256": "sha256:e5f3106b938f608704fa0809264ce0914030730aec95910259145ff71c6c0293",
               "source_record_id": "QUV5DQH3"
             }
           ]
@@ -3406,6 +3045,8 @@
               "version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
               "recorded_work_id": "doi:10.48558/a179-b138",
               "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/QUV5DQH3.md",
+              "source_sha256": "sha256:e5f3106b938f608704fa0809264ce0914030730aec95910259145ff71c6c0293",
               "source_record_id": "QUV5DQH3"
             }
           ]
@@ -3423,6 +3064,8 @@
               "version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
               "recorded_work_id": "doi:10.48558/a179-b138",
               "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/QUV5DQH3.md",
+              "source_sha256": "sha256:e5f3106b938f608704fa0809264ce0914030730aec95910259145ff71c6c0293",
               "source_record_id": "QUV5DQH3"
             }
           ]
@@ -3440,6 +3083,8 @@
               "version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
               "recorded_work_id": "doi:10.48558/a179-b138",
               "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/QUV5DQH3.md",
+              "source_sha256": "sha256:e5f3106b938f608704fa0809264ce0914030730aec95910259145ff71c6c0293",
               "source_record_id": "QUV5DQH3"
             }
           ]
@@ -3457,6 +3102,8 @@
               "version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
               "recorded_work_id": "doi:10.48558/a179-b138",
               "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/QUV5DQH3.md",
+              "source_sha256": "sha256:e5f3106b938f608704fa0809264ce0914030730aec95910259145ff71c6c0293",
               "source_record_id": "QUV5DQH3"
             }
           ]
@@ -3500,6 +3147,7 @@
         "QUV5DQH3"
       ],
       "corpus_record_ids": [
+        "ET4MMZGH",
         "QUV5DQH3"
       ],
       "version_ids": [
@@ -3523,7 +3171,26 @@
           "version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
           "bibliographic_version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
           "source_version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
-          "source_binding": null,
+          "source_binding": {
+            "record_id": "QUV5DQH3",
+            "work_id": "work:3dc3ced9-8261-5840-9d71-aa2dfc43af87",
+            "bibliographic_version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
+            "source_version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
+            "source_version_type": "version_of_record",
+            "preferred_version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
+            "is_preferred_version": true,
+            "source_path": "generated/markdown_clean/QUV5DQH3.md",
+            "source_sha256": "sha256:e5f3106b938f608704fa0809264ce0914030730aec95910259145ff71c6c0293",
+            "binding_mode": "existing_version",
+            "bibliographic_identity": {
+              "title": "When Good Algorithms Go Sexist: Why and How to Advance AI Gender Equity",
+              "doi": "10.48558/a179-b138"
+            },
+            "version_identity": {
+              "title": "When Good Algorithms Go Sexist: Why and How to Advance AI Gender Equity",
+              "doi": "10.48558/a179-b138"
+            }
+          },
           "version_type": "version_of_record",
           "version_date": "2021",
           "peer_review_status": "not_established",
@@ -3541,6 +3208,7 @@
                   "10.48558/a179-b138"
                 ],
                 "zotero_key": [
+                  "ET4MMZGH",
                   "QUV5DQH3"
                 ],
                 "url": [
@@ -3559,7 +3227,7 @@
             }
           ],
           "identity_basis": "work_version_registry",
-          "knowledge_coverage": "fulltext_ready",
+          "knowledge_coverage": "linked",
           "decision": "Include",
           "reason": null,
           "text_source": "raw",
@@ -3602,7 +3270,9 @@
                   "work_id": "work:3dc3ced9-8261-5840-9d71-aa2dfc43af87",
                   "version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
                   "recorded_work_id": "doi:10.48558/a179-b138",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/QUV5DQH3.md",
+                  "source_sha256": "sha256:e5f3106b938f608704fa0809264ce0914030730aec95910259145ff71c6c0293"
                 }
               ]
             },
@@ -3618,7 +3288,9 @@
                   "work_id": "work:3dc3ced9-8261-5840-9d71-aa2dfc43af87",
                   "version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
                   "recorded_work_id": "doi:10.48558/a179-b138",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/QUV5DQH3.md",
+                  "source_sha256": "sha256:e5f3106b938f608704fa0809264ce0914030730aec95910259145ff71c6c0293"
                 }
               ]
             },
@@ -3634,7 +3306,9 @@
                   "work_id": "work:3dc3ced9-8261-5840-9d71-aa2dfc43af87",
                   "version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
                   "recorded_work_id": "doi:10.48558/a179-b138",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/QUV5DQH3.md",
+                  "source_sha256": "sha256:e5f3106b938f608704fa0809264ce0914030730aec95910259145ff71c6c0293"
                 }
               ]
             },
@@ -3650,7 +3324,9 @@
                   "work_id": "work:3dc3ced9-8261-5840-9d71-aa2dfc43af87",
                   "version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
                   "recorded_work_id": "doi:10.48558/a179-b138",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/QUV5DQH3.md",
+                  "source_sha256": "sha256:e5f3106b938f608704fa0809264ce0914030730aec95910259145ff71c6c0293"
                 }
               ]
             },
@@ -3666,7 +3342,9 @@
                   "work_id": "work:3dc3ced9-8261-5840-9d71-aa2dfc43af87",
                   "version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
                   "recorded_work_id": "doi:10.48558/a179-b138",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/QUV5DQH3.md",
+                  "source_sha256": "sha256:e5f3106b938f608704fa0809264ce0914030730aec95910259145ff71c6c0293"
                 }
               ]
             },
@@ -3682,7 +3360,9 @@
                   "work_id": "work:3dc3ced9-8261-5840-9d71-aa2dfc43af87",
                   "version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
                   "recorded_work_id": "doi:10.48558/a179-b138",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/QUV5DQH3.md",
+                  "source_sha256": "sha256:e5f3106b938f608704fa0809264ce0914030730aec95910259145ff71c6c0293"
                 }
               ]
             },
@@ -3698,7 +3378,9 @@
                   "work_id": "work:3dc3ced9-8261-5840-9d71-aa2dfc43af87",
                   "version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
                   "recorded_work_id": "doi:10.48558/a179-b138",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/QUV5DQH3.md",
+                  "source_sha256": "sha256:e5f3106b938f608704fa0809264ce0914030730aec95910259145ff71c6c0293"
                 }
               ]
             }
@@ -3758,9 +3440,9 @@
       "version_date": "",
       "peer_review_status": "not_established",
       "peer_review_basis": "unknown",
-      "preferred_version_id": "version:0cf091a3-19ee-58b4-82db-a6ce24d7bcae",
-      "latest_version_id": "version:0cf091a3-19ee-58b4-82db-a6ce24d7bcae",
-      "is_preferred_version": true,
+      "preferred_version_id": "version:289ac267-2c86-54d2-a7ea-80ab49a289f3",
+      "latest_version_id": "version:289ac267-2c86-54d2-a7ea-80ab49a289f3",
+      "is_preferred_version": false,
       "work_versions": [
         {
           "version_id": "version:0cf091a3-19ee-58b4-82db-a6ce24d7bcae",
@@ -3780,7 +3462,42 @@
           "access_status": "unknown",
           "landing_url": "https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference",
           "fulltext_url": "",
-          "relations": [],
+          "relations": [
+            {
+              "type": "isVersionOf",
+              "target_version_id": "version:289ac267-2c86-54d2-a7ea-80ab49a289f3"
+            }
+          ],
+          "is_preferred": false,
+          "is_latest": false
+        },
+        {
+          "version_id": "version:289ac267-2c86-54d2-a7ea-80ab49a289f3",
+          "version_type": "unknown",
+          "version_date": "2025-09-10",
+          "identifiers": {
+            "doi": [
+              "10.64434/tml.20250910"
+            ],
+            "zotero_key": [
+              "978AV9KZ"
+            ],
+            "url": [
+              "https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference"
+            ]
+          },
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "integrity_status": "current",
+          "access_status": "unknown",
+          "landing_url": "https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference",
+          "fulltext_url": "",
+          "relations": [
+            {
+              "type": "hasVersion",
+              "target_version_id": "version:0cf091a3-19ee-58b4-82db-a6ce24d7bcae"
+            }
+          ],
           "is_preferred": true,
           "is_latest": true
         }
@@ -3841,6 +3558,7 @@
         "FTJM5R8N"
       ],
       "corpus_record_ids": [
+        "978AV9KZ",
         "FTJM5R8N"
       ],
       "version_ids": [
@@ -3869,9 +3587,9 @@
           "version_date": "",
           "peer_review_status": "not_established",
           "peer_review_basis": "unknown",
-          "preferred_version_id": "version:0cf091a3-19ee-58b4-82db-a6ce24d7bcae",
-          "latest_version_id": "version:0cf091a3-19ee-58b4-82db-a6ce24d7bcae",
-          "is_preferred_version": true,
+          "preferred_version_id": "version:289ac267-2c86-54d2-a7ea-80ab49a289f3",
+          "latest_version_id": "version:289ac267-2c86-54d2-a7ea-80ab49a289f3",
+          "is_preferred_version": false,
           "work_versions": [
             {
               "version_id": "version:0cf091a3-19ee-58b4-82db-a6ce24d7bcae",
@@ -3891,7 +3609,42 @@
               "access_status": "unknown",
               "landing_url": "https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference",
               "fulltext_url": "",
-              "relations": [],
+              "relations": [
+                {
+                  "type": "isVersionOf",
+                  "target_version_id": "version:289ac267-2c86-54d2-a7ea-80ab49a289f3"
+                }
+              ],
+              "is_preferred": false,
+              "is_latest": false
+            },
+            {
+              "version_id": "version:289ac267-2c86-54d2-a7ea-80ab49a289f3",
+              "version_type": "unknown",
+              "version_date": "2025-09-10",
+              "identifiers": {
+                "doi": [
+                  "10.64434/tml.20250910"
+                ],
+                "zotero_key": [
+                  "978AV9KZ"
+                ],
+                "url": [
+                  "https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference"
+                ]
+              },
+              "peer_review_status": "not_established",
+              "peer_review_basis": "unknown",
+              "integrity_status": "current",
+              "access_status": "unknown",
+              "landing_url": "https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference",
+              "fulltext_url": "",
+              "relations": [
+                {
+                  "type": "hasVersion",
+                  "target_version_id": "version:0cf091a3-19ee-58b4-82db-a6ce24d7bcae"
+                }
+              ],
               "is_preferred": true,
               "is_latest": true
             }
@@ -3982,6 +3735,7 @@
             ],
             "zotero_key": [
               "8MRNK6FX",
+              "JFVQIWE5",
               "SSF5Q33W"
             ],
             "url": [
@@ -4000,7 +3754,7 @@
         }
       ],
       "identity_basis": "work_version_registry",
-      "knowledge_coverage": "fulltext_ready",
+      "knowledge_coverage": "linked",
       "decision": "Include",
       "reason": null,
       "text_source": "raw",
@@ -4237,6 +3991,7 @@
       ],
       "corpus_record_ids": [
         "8MRNK6FX",
+        "JFVQIWE5",
         "SSF5Q33W"
       ],
       "version_ids": [
@@ -4279,6 +4034,7 @@
                 ],
                 "zotero_key": [
                   "8MRNK6FX",
+                  "JFVQIWE5",
                   "SSF5Q33W"
                 ],
                 "url": [
@@ -4297,7 +4053,7 @@
             }
           ],
           "identity_basis": "work_version_registry",
-          "knowledge_coverage": "fulltext_ready",
+          "knowledge_coverage": "linked",
           "decision": "Include",
           "reason": null,
           "text_source": "raw",
@@ -4489,6 +4245,7 @@
                 ],
                 "zotero_key": [
                   "8MRNK6FX",
+                  "JFVQIWE5",
                   "SSF5Q33W"
                 ],
                 "url": [
@@ -4507,7 +4264,7 @@
             }
           ],
           "identity_basis": "work_version_registry",
-          "knowledge_coverage": "fulltext_ready",
+          "knowledge_coverage": "linked",
           "decision": "Include",
           "reason": null,
           "text_source": "raw",
@@ -4720,6 +4477,7 @@
               "10.48550/arxiv.2305.17390"
             ],
             "zotero_key": [
+              "ATWBQI7C",
               "RAY6G2R7"
             ],
             "url": [
@@ -4738,7 +4496,7 @@
         }
       ],
       "identity_basis": "work_version_registry",
-      "knowledge_coverage": "fulltext_ready",
+      "knowledge_coverage": "linked",
       "decision": "Exclude",
       "reason": "Not_relevant_topic",
       "text_source": "raw",
@@ -4879,6 +4637,7 @@
         "RAY6G2R7"
       ],
       "corpus_record_ids": [
+        "ATWBQI7C",
         "RAY6G2R7"
       ],
       "version_ids": [
@@ -4939,6 +4698,7 @@
                   "10.48550/arxiv.2305.17390"
                 ],
                 "zotero_key": [
+                  "ATWBQI7C",
                   "RAY6G2R7"
                 ],
                 "url": [
@@ -4957,7 +4717,7 @@
             }
           ],
           "identity_basis": "work_version_registry",
-          "knowledge_coverage": "fulltext_ready",
+          "knowledge_coverage": "linked",
           "decision": "Exclude",
           "reason": "Not_relevant_topic",
           "text_source": "raw",
@@ -5107,7 +4867,7 @@
       "source_version_id": "version:760b8567-f41d-5576-8229-d88a557e569c",
       "source_binding": null,
       "version_type": "unknown",
-      "version_date": "",
+      "version_date": "n.d.",
       "peer_review_status": "not_established",
       "peer_review_basis": "unknown",
       "preferred_version_id": "version:760b8567-f41d-5576-8229-d88a557e569c",
@@ -5117,10 +4877,11 @@
         {
           "version_id": "version:760b8567-f41d-5576-8229-d88a557e569c",
           "version_type": "unknown",
-          "version_date": "",
+          "version_date": "n.d.",
           "identifiers": {
             "zotero_key": [
-              "3ZNMTJ5B"
+              "3ZNMTJ5B",
+              "FKJH2278"
             ],
             "url": [
               "https://www.feminist-ai.com/academy"
@@ -5174,7 +4935,8 @@
         "3ZNMTJ5B"
       ],
       "corpus_record_ids": [
-        "3ZNMTJ5B"
+        "3ZNMTJ5B",
+        "FKJH2278"
       ],
       "version_ids": [
         "version:760b8567-f41d-5576-8229-d88a557e569c"
@@ -5199,7 +4961,7 @@
           "source_version_id": "version:760b8567-f41d-5576-8229-d88a557e569c",
           "source_binding": null,
           "version_type": "unknown",
-          "version_date": "",
+          "version_date": "n.d.",
           "peer_review_status": "not_established",
           "peer_review_basis": "unknown",
           "preferred_version_id": "version:760b8567-f41d-5576-8229-d88a557e569c",
@@ -5209,10 +4971,11 @@
             {
               "version_id": "version:760b8567-f41d-5576-8229-d88a557e569c",
               "version_type": "unknown",
-              "version_date": "",
+              "version_date": "n.d.",
               "identifiers": {
                 "zotero_key": [
-                  "3ZNMTJ5B"
+                  "3ZNMTJ5B",
+                  "FKJH2278"
                 ],
                 "url": [
                   "https://www.feminist-ai.com/academy"
@@ -5293,6 +5056,7 @@
           "version_date": "2024",
           "identifiers": {
             "zotero_key": [
+              "8JR5AGRG",
               "EQV4DNQR"
             ],
             "url": [
@@ -5311,7 +5075,7 @@
         }
       ],
       "identity_basis": "work_version_registry",
-      "knowledge_coverage": "fulltext_ready",
+      "knowledge_coverage": "linked",
       "decision": "Include",
       "reason": null,
       "text_source": "raw",
@@ -5545,6 +5309,7 @@
         "EQV4DNQR"
       ],
       "corpus_record_ids": [
+        "8JR5AGRG",
         "EQV4DNQR"
       ],
       "version_ids": [
@@ -5583,6 +5348,7 @@
               "version_date": "2024",
               "identifiers": {
                 "zotero_key": [
+                  "8JR5AGRG",
                   "EQV4DNQR"
                 ],
                 "url": [
@@ -5601,7 +5367,7 @@
             }
           ],
           "identity_basis": "work_version_registry",
-          "knowledge_coverage": "fulltext_ready",
+          "knowledge_coverage": "linked",
           "decision": "Include",
           "reason": null,
           "text_source": "raw",
@@ -6421,7 +6187,26 @@
       "version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
       "bibliographic_version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
       "source_version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "4ZL5Q48E",
+        "work_id": "work:691469f6-881f-5e13-8df5-69dc64025556",
+        "bibliographic_version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
+        "source_version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown_clean/4ZL5Q48E.md",
+        "source_sha256": "sha256:2037703b31fda721dcb4e76a841e326b3e636982d8da08fbbb5b55b2bd22299d",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "Algorithmic management in a work context",
+          "doi": "10.1177/20539517211020332"
+        },
+        "version_identity": {
+          "title": "Algorithmic management in a work context",
+          "doi": "10.1177/20539517211020332"
+        }
+      },
       "version_type": "version_of_record",
       "version_date": "2021",
       "peer_review_status": "not_established",
@@ -6439,14 +6224,18 @@
               "10.1177/20539517211020332"
             ],
             "zotero_key": [
-              "4ZL5Q48E"
+              "4ZL5Q48E",
+              "9KDFMECH"
+            ],
+            "url": [
+              "https://doi.org/10.1177/20539517211020332"
             ]
           },
           "peer_review_status": "not_established",
           "peer_review_basis": "unknown",
           "integrity_status": "current",
           "access_status": "unknown",
-          "landing_url": "",
+          "landing_url": "https://doi.org/10.1177/20539517211020332",
           "fulltext_url": "",
           "relations": [],
           "is_preferred": true,
@@ -6454,7 +6243,7 @@
         }
       ],
       "identity_basis": "work_version_registry",
-      "knowledge_coverage": "fulltext_ready",
+      "knowledge_coverage": "linked",
       "decision": "Include",
       "reason": null,
       "text_source": "raw",
@@ -6497,6 +6286,8 @@
               "version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
               "recorded_work_id": "doi:10.1177/20539517211020332",
               "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/4ZL5Q48E.md",
+              "source_sha256": "sha256:2037703b31fda721dcb4e76a841e326b3e636982d8da08fbbb5b55b2bd22299d",
               "source_record_id": "4ZL5Q48E"
             }
           ]
@@ -6514,6 +6305,8 @@
               "version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
               "recorded_work_id": "doi:10.1177/20539517211020332",
               "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/4ZL5Q48E.md",
+              "source_sha256": "sha256:2037703b31fda721dcb4e76a841e326b3e636982d8da08fbbb5b55b2bd22299d",
               "source_record_id": "4ZL5Q48E"
             }
           ]
@@ -6531,6 +6324,8 @@
               "version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
               "recorded_work_id": "doi:10.1177/20539517211020332",
               "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/4ZL5Q48E.md",
+              "source_sha256": "sha256:2037703b31fda721dcb4e76a841e326b3e636982d8da08fbbb5b55b2bd22299d",
               "source_record_id": "4ZL5Q48E"
             }
           ]
@@ -6548,6 +6343,8 @@
               "version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
               "recorded_work_id": "doi:10.1177/20539517211020332",
               "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/4ZL5Q48E.md",
+              "source_sha256": "sha256:2037703b31fda721dcb4e76a841e326b3e636982d8da08fbbb5b55b2bd22299d",
               "source_record_id": "4ZL5Q48E"
             }
           ]
@@ -6565,6 +6362,8 @@
               "version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
               "recorded_work_id": "doi:10.1177/20539517211020332",
               "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/4ZL5Q48E.md",
+              "source_sha256": "sha256:2037703b31fda721dcb4e76a841e326b3e636982d8da08fbbb5b55b2bd22299d",
               "source_record_id": "4ZL5Q48E"
             }
           ]
@@ -6603,7 +6402,8 @@
         "4ZL5Q48E"
       ],
       "corpus_record_ids": [
-        "4ZL5Q48E"
+        "4ZL5Q48E",
+        "9KDFMECH"
       ],
       "version_ids": [
         "version:7b302d9d-e176-554e-a8aa-5e02f7334833"
@@ -6626,7 +6426,26 @@
           "version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
           "bibliographic_version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
           "source_version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
-          "source_binding": null,
+          "source_binding": {
+            "record_id": "4ZL5Q48E",
+            "work_id": "work:691469f6-881f-5e13-8df5-69dc64025556",
+            "bibliographic_version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
+            "source_version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
+            "source_version_type": "version_of_record",
+            "preferred_version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
+            "is_preferred_version": true,
+            "source_path": "generated/markdown_clean/4ZL5Q48E.md",
+            "source_sha256": "sha256:2037703b31fda721dcb4e76a841e326b3e636982d8da08fbbb5b55b2bd22299d",
+            "binding_mode": "existing_version",
+            "bibliographic_identity": {
+              "title": "Algorithmic management in a work context",
+              "doi": "10.1177/20539517211020332"
+            },
+            "version_identity": {
+              "title": "Algorithmic management in a work context",
+              "doi": "10.1177/20539517211020332"
+            }
+          },
           "version_type": "version_of_record",
           "version_date": "2021",
           "peer_review_status": "not_established",
@@ -6644,14 +6463,18 @@
                   "10.1177/20539517211020332"
                 ],
                 "zotero_key": [
-                  "4ZL5Q48E"
+                  "4ZL5Q48E",
+                  "9KDFMECH"
+                ],
+                "url": [
+                  "https://doi.org/10.1177/20539517211020332"
                 ]
               },
               "peer_review_status": "not_established",
               "peer_review_basis": "unknown",
               "integrity_status": "current",
               "access_status": "unknown",
-              "landing_url": "",
+              "landing_url": "https://doi.org/10.1177/20539517211020332",
               "fulltext_url": "",
               "relations": [],
               "is_preferred": true,
@@ -6659,7 +6482,7 @@
             }
           ],
           "identity_basis": "work_version_registry",
-          "knowledge_coverage": "fulltext_ready",
+          "knowledge_coverage": "linked",
           "decision": "Include",
           "reason": null,
           "text_source": "raw",
@@ -6701,7 +6524,9 @@
                   "work_id": "work:691469f6-881f-5e13-8df5-69dc64025556",
                   "version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
                   "recorded_work_id": "doi:10.1177/20539517211020332",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/4ZL5Q48E.md",
+                  "source_sha256": "sha256:2037703b31fda721dcb4e76a841e326b3e636982d8da08fbbb5b55b2bd22299d"
                 }
               ]
             },
@@ -6717,7 +6542,9 @@
                   "work_id": "work:691469f6-881f-5e13-8df5-69dc64025556",
                   "version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
                   "recorded_work_id": "doi:10.1177/20539517211020332",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/4ZL5Q48E.md",
+                  "source_sha256": "sha256:2037703b31fda721dcb4e76a841e326b3e636982d8da08fbbb5b55b2bd22299d"
                 }
               ]
             },
@@ -6733,7 +6560,9 @@
                   "work_id": "work:691469f6-881f-5e13-8df5-69dc64025556",
                   "version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
                   "recorded_work_id": "doi:10.1177/20539517211020332",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/4ZL5Q48E.md",
+                  "source_sha256": "sha256:2037703b31fda721dcb4e76a841e326b3e636982d8da08fbbb5b55b2bd22299d"
                 }
               ]
             },
@@ -6749,7 +6578,9 @@
                   "work_id": "work:691469f6-881f-5e13-8df5-69dc64025556",
                   "version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
                   "recorded_work_id": "doi:10.1177/20539517211020332",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/4ZL5Q48E.md",
+                  "source_sha256": "sha256:2037703b31fda721dcb4e76a841e326b3e636982d8da08fbbb5b55b2bd22299d"
                 }
               ]
             },
@@ -6765,7 +6596,9 @@
                   "work_id": "work:691469f6-881f-5e13-8df5-69dc64025556",
                   "version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
                   "recorded_work_id": "doi:10.1177/20539517211020332",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/4ZL5Q48E.md",
+                  "source_sha256": "sha256:2037703b31fda721dcb4e76a841e326b3e636982d8da08fbbb5b55b2bd22299d"
                 }
               ]
             }
@@ -6815,7 +6648,26 @@
       "version_id": "version:c3159829-537d-5900-9362-078e15396691",
       "bibliographic_version_id": "version:c3159829-537d-5900-9362-078e15396691",
       "source_version_id": "version:c3159829-537d-5900-9362-078e15396691",
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "J7V3AAQT",
+        "work_id": "work:7473ae67-3f6b-5cb7-befc-df628bc87911",
+        "bibliographic_version_id": "version:c3159829-537d-5900-9362-078e15396691",
+        "source_version_id": "version:c3159829-537d-5900-9362-078e15396691",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:c3159829-537d-5900-9362-078e15396691",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown_clean/J7V3AAQT.md",
+        "source_sha256": "sha256:aba6edd8b0cbd65560fbc48979125c316f9c8df3117e9664aab62737c61f85c1",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "A chatbot for mental health support: Exploring the impact of Emohaa on reducing mental distress in China",
+          "doi": "10.3389/fdgth.2023.1133987"
+        },
+        "version_identity": {
+          "title": "A chatbot for mental health support: Exploring the impact of Emohaa on reducing mental distress in China",
+          "doi": "10.3389/fdgth.2023.1133987"
+        }
+      },
       "version_type": "version_of_record",
       "version_date": "2023",
       "peer_review_status": "not_established",
@@ -6833,14 +6685,18 @@
               "10.3389/fdgth.2023.1133987"
             ],
             "zotero_key": [
+              "C83QEMBM",
               "J7V3AAQT"
+            ],
+            "url": [
+              "https://doi.org/10.3389/fdgth.2023.1133987"
             ]
           },
           "peer_review_status": "not_established",
           "peer_review_basis": "unknown",
           "integrity_status": "current",
           "access_status": "unknown",
-          "landing_url": "",
+          "landing_url": "https://doi.org/10.3389/fdgth.2023.1133987",
           "fulltext_url": "",
           "relations": [],
           "is_preferred": true,
@@ -6848,7 +6704,7 @@
         }
       ],
       "identity_basis": "work_version_registry",
-      "knowledge_coverage": "fulltext_ready",
+      "knowledge_coverage": "linked",
       "decision": "Exclude",
       "reason": "Not_relevant_topic",
       "text_source": "raw",
@@ -6892,6 +6748,8 @@
               "version_id": "version:c3159829-537d-5900-9362-078e15396691",
               "recorded_work_id": "doi:10.3389/fdgth.2023.1133987",
               "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/J7V3AAQT.md",
+              "source_sha256": "sha256:aba6edd8b0cbd65560fbc48979125c316f9c8df3117e9664aab62737c61f85c1",
               "source_record_id": "J7V3AAQT"
             }
           ]
@@ -6903,6 +6761,7 @@
         "J7V3AAQT"
       ],
       "corpus_record_ids": [
+        "C83QEMBM",
         "J7V3AAQT"
       ],
       "version_ids": [
@@ -6926,7 +6785,26 @@
           "version_id": "version:c3159829-537d-5900-9362-078e15396691",
           "bibliographic_version_id": "version:c3159829-537d-5900-9362-078e15396691",
           "source_version_id": "version:c3159829-537d-5900-9362-078e15396691",
-          "source_binding": null,
+          "source_binding": {
+            "record_id": "J7V3AAQT",
+            "work_id": "work:7473ae67-3f6b-5cb7-befc-df628bc87911",
+            "bibliographic_version_id": "version:c3159829-537d-5900-9362-078e15396691",
+            "source_version_id": "version:c3159829-537d-5900-9362-078e15396691",
+            "source_version_type": "version_of_record",
+            "preferred_version_id": "version:c3159829-537d-5900-9362-078e15396691",
+            "is_preferred_version": true,
+            "source_path": "generated/markdown_clean/J7V3AAQT.md",
+            "source_sha256": "sha256:aba6edd8b0cbd65560fbc48979125c316f9c8df3117e9664aab62737c61f85c1",
+            "binding_mode": "existing_version",
+            "bibliographic_identity": {
+              "title": "A chatbot for mental health support: Exploring the impact of Emohaa on reducing mental distress in China",
+              "doi": "10.3389/fdgth.2023.1133987"
+            },
+            "version_identity": {
+              "title": "A chatbot for mental health support: Exploring the impact of Emohaa on reducing mental distress in China",
+              "doi": "10.3389/fdgth.2023.1133987"
+            }
+          },
           "version_type": "version_of_record",
           "version_date": "2023",
           "peer_review_status": "not_established",
@@ -6944,14 +6822,18 @@
                   "10.3389/fdgth.2023.1133987"
                 ],
                 "zotero_key": [
+                  "C83QEMBM",
                   "J7V3AAQT"
+                ],
+                "url": [
+                  "https://doi.org/10.3389/fdgth.2023.1133987"
                 ]
               },
               "peer_review_status": "not_established",
               "peer_review_basis": "unknown",
               "integrity_status": "current",
               "access_status": "unknown",
-              "landing_url": "",
+              "landing_url": "https://doi.org/10.3389/fdgth.2023.1133987",
               "fulltext_url": "",
               "relations": [],
               "is_preferred": true,
@@ -6959,7 +6841,7 @@
             }
           ],
           "identity_basis": "work_version_registry",
-          "knowledge_coverage": "fulltext_ready",
+          "knowledge_coverage": "linked",
           "decision": "Exclude",
           "reason": "Not_relevant_topic",
           "text_source": "raw",
@@ -7002,7 +6884,9 @@
                   "work_id": "work:7473ae67-3f6b-5cb7-befc-df628bc87911",
                   "version_id": "version:c3159829-537d-5900-9362-078e15396691",
                   "recorded_work_id": "doi:10.3389/fdgth.2023.1133987",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/J7V3AAQT.md",
+                  "source_sha256": "sha256:aba6edd8b0cbd65560fbc48979125c316f9c8df3117e9664aab62737c61f85c1"
                 }
               ]
             }
@@ -7060,7 +6944,7 @@
         }
       ],
       "identity_basis": "work_version_registry",
-      "knowledge_coverage": "linked",
+      "knowledge_coverage": "identity_unresolved",
       "decision": "Exclude",
       "reason": "Not_relevant_topic",
       "text_source": "raw",
@@ -7209,7 +7093,7 @@
             }
           ],
           "identity_basis": "work_version_registry",
-          "knowledge_coverage": "linked",
+          "knowledge_coverage": "identity_unresolved",
           "decision": "Exclude",
           "reason": "Not_relevant_topic",
           "text_source": "raw",
@@ -8157,14 +8041,18 @@
               "10.3390/socsci8100281"
             ],
             "zotero_key": [
-              "A2P8MXMY"
+              "A2P8MXMY",
+              "QZRHHAE2"
+            ],
+            "url": [
+              "https://doi.org/10.3390/socsci8100281"
             ]
           },
           "peer_review_status": "not_established",
           "peer_review_basis": "unknown",
           "integrity_status": "current",
           "access_status": "unknown",
-          "landing_url": "",
+          "landing_url": "https://doi.org/10.3390/socsci8100281",
           "fulltext_url": "",
           "relations": [],
           "is_preferred": true,
@@ -8328,7 +8216,8 @@
         "A2P8MXMY"
       ],
       "corpus_record_ids": [
-        "A2P8MXMY"
+        "A2P8MXMY",
+        "QZRHHAE2"
       ],
       "version_ids": [
         "version:4c9dae5b-4429-5d97-81f6-764be7b98368"
@@ -8369,14 +8258,18 @@
                   "10.3390/socsci8100281"
                 ],
                 "zotero_key": [
-                  "A2P8MXMY"
+                  "A2P8MXMY",
+                  "QZRHHAE2"
+                ],
+                "url": [
+                  "https://doi.org/10.3390/socsci8100281"
                 ]
               },
               "peer_review_status": "not_established",
               "peer_review_basis": "unknown",
               "integrity_status": "current",
               "access_status": "unknown",
-              "landing_url": "",
+              "landing_url": "https://doi.org/10.3390/socsci8100281",
               "fulltext_url": "",
               "relations": [],
               "is_preferred": true,
@@ -8565,6 +8458,7 @@
               "10.11586/2025078"
             ],
             "zotero_key": [
+              "M62T5ICP",
               "UKKQKL7I"
             ],
             "url": [
@@ -8583,7 +8477,7 @@
         }
       ],
       "identity_basis": "work_version_registry",
-      "knowledge_coverage": "fulltext_ready",
+      "knowledge_coverage": "linked",
       "decision": "Include",
       "reason": null,
       "text_source": "raw",
@@ -8787,6 +8681,7 @@
         "UKKQKL7I"
       ],
       "corpus_record_ids": [
+        "M62T5ICP",
         "UKKQKL7I"
       ],
       "version_ids": [
@@ -8828,6 +8723,7 @@
                   "10.11586/2025078"
                 ],
                 "zotero_key": [
+                  "M62T5ICP",
                   "UKKQKL7I"
                 ],
                 "url": [
@@ -8846,7 +8742,7 @@
             }
           ],
           "identity_basis": "work_version_registry",
-          "knowledge_coverage": "fulltext_ready",
+          "knowledge_coverage": "linked",
           "decision": "Include",
           "reason": null,
           "text_source": "raw",
@@ -9069,6 +8965,7 @@
           "version_date": "2017",
           "identifiers": {
             "zotero_key": [
+              "3TWV7VWW",
               "NSI6S5QE"
             ],
             "url": [
@@ -9159,6 +9056,7 @@
         "NSI6S5QE"
       ],
       "corpus_record_ids": [
+        "3TWV7VWW",
         "NSI6S5QE"
       ],
       "version_ids": [
@@ -9197,6 +9095,7 @@
               "version_date": "2017",
               "identifiers": {
                 "zotero_key": [
+                  "3TWV7VWW",
                   "NSI6S5QE"
                 ],
                 "url": [
@@ -9312,6 +9211,7 @@
           "version_date": "2024",
           "identifiers": {
             "zotero_key": [
+              "AHUSFEEA",
               "J5EF9W6M"
             ],
             "url": [
@@ -9330,7 +9230,7 @@
         }
       ],
       "identity_basis": "work_version_registry",
-      "knowledge_coverage": "fulltext_ready",
+      "knowledge_coverage": "linked",
       "decision": "Include",
       "reason": null,
       "text_source": "raw",
@@ -9573,6 +9473,7 @@
         "J5EF9W6M"
       ],
       "corpus_record_ids": [
+        "AHUSFEEA",
         "J5EF9W6M"
       ],
       "version_ids": [
@@ -9611,6 +9512,7 @@
               "version_date": "2024",
               "identifiers": {
                 "zotero_key": [
+                  "AHUSFEEA",
                   "J5EF9W6M"
                 ],
                 "url": [
@@ -9629,7 +9531,7 @@
             }
           ],
           "identity_basis": "work_version_registry",
-          "knowledge_coverage": "fulltext_ready",
+          "knowledge_coverage": "linked",
           "decision": "Include",
           "reason": null,
           "text_source": "raw",
@@ -9881,9 +9783,9 @@
       "version_date": "",
       "peer_review_status": "not_established",
       "peer_review_basis": "unknown",
-      "preferred_version_id": "version:175a2d7b-dcd5-5cdb-80ae-84c37283e367",
-      "latest_version_id": "version:175a2d7b-dcd5-5cdb-80ae-84c37283e367",
-      "is_preferred_version": true,
+      "preferred_version_id": "version:ccdb5896-271a-5b88-a272-f2b8b8cedcaf",
+      "latest_version_id": "version:ccdb5896-271a-5b88-a272-f2b8b8cedcaf",
+      "is_preferred_version": false,
       "work_versions": [
         {
           "version_id": "version:175a2d7b-dcd5-5cdb-80ae-84c37283e367",
@@ -9903,7 +9805,42 @@
           "access_status": "unknown",
           "landing_url": "https://www.fh-bielefeld.de/multimedia/Fachbereiche/Wirtschaft+und+Gesundheit/ Forschung/Denkfabrik+Digitalisierte+Arbeitswelt/geki_Abschlussbericht.pdf",
           "fulltext_url": "",
-          "relations": [],
+          "relations": [
+            {
+              "type": "isVersionOf",
+              "target_version_id": "version:ccdb5896-271a-5b88-a272-f2b8b8cedcaf"
+            }
+          ],
+          "is_preferred": false,
+          "is_latest": false
+        },
+        {
+          "version_id": "version:ccdb5896-271a-5b88-a272-f2b8b8cedcaf",
+          "version_type": "unknown",
+          "version_date": "2021",
+          "identifiers": {
+            "doi": [
+              "10.57720/5510"
+            ],
+            "zotero_key": [
+              "JFDBPUBN"
+            ],
+            "url": [
+              "https://www.hsbi.de/publikationsserver/download/5510/5548/GeKI_Abschlussbericht.pdf"
+            ]
+          },
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "integrity_status": "current",
+          "access_status": "unknown",
+          "landing_url": "https://www.hsbi.de/publikationsserver/download/5510/5548/GeKI_Abschlussbericht.pdf",
+          "fulltext_url": "",
+          "relations": [
+            {
+              "type": "hasVersion",
+              "target_version_id": "version:175a2d7b-dcd5-5cdb-80ae-84c37283e367"
+            }
+          ],
           "is_preferred": true,
           "is_latest": true
         }
@@ -10112,7 +10049,8 @@
         "BDI6XU5A"
       ],
       "corpus_record_ids": [
-        "BDI6XU5A"
+        "BDI6XU5A",
+        "JFDBPUBN"
       ],
       "version_ids": [
         "version:175a2d7b-dcd5-5cdb-80ae-84c37283e367"
@@ -10140,9 +10078,9 @@
           "version_date": "",
           "peer_review_status": "not_established",
           "peer_review_basis": "unknown",
-          "preferred_version_id": "version:175a2d7b-dcd5-5cdb-80ae-84c37283e367",
-          "latest_version_id": "version:175a2d7b-dcd5-5cdb-80ae-84c37283e367",
-          "is_preferred_version": true,
+          "preferred_version_id": "version:ccdb5896-271a-5b88-a272-f2b8b8cedcaf",
+          "latest_version_id": "version:ccdb5896-271a-5b88-a272-f2b8b8cedcaf",
+          "is_preferred_version": false,
           "work_versions": [
             {
               "version_id": "version:175a2d7b-dcd5-5cdb-80ae-84c37283e367",
@@ -10162,7 +10100,42 @@
               "access_status": "unknown",
               "landing_url": "https://www.fh-bielefeld.de/multimedia/Fachbereiche/Wirtschaft+und+Gesundheit/ Forschung/Denkfabrik+Digitalisierte+Arbeitswelt/geki_Abschlussbericht.pdf",
               "fulltext_url": "",
-              "relations": [],
+              "relations": [
+                {
+                  "type": "isVersionOf",
+                  "target_version_id": "version:ccdb5896-271a-5b88-a272-f2b8b8cedcaf"
+                }
+              ],
+              "is_preferred": false,
+              "is_latest": false
+            },
+            {
+              "version_id": "version:ccdb5896-271a-5b88-a272-f2b8b8cedcaf",
+              "version_type": "unknown",
+              "version_date": "2021",
+              "identifiers": {
+                "doi": [
+                  "10.57720/5510"
+                ],
+                "zotero_key": [
+                  "JFDBPUBN"
+                ],
+                "url": [
+                  "https://www.hsbi.de/publikationsserver/download/5510/5548/GeKI_Abschlussbericht.pdf"
+                ]
+              },
+              "peer_review_status": "not_established",
+              "peer_review_basis": "unknown",
+              "integrity_status": "current",
+              "access_status": "unknown",
+              "landing_url": "https://www.hsbi.de/publikationsserver/download/5510/5548/GeKI_Abschlussbericht.pdf",
+              "fulltext_url": "",
+              "relations": [
+                {
+                  "type": "hasVersion",
+                  "target_version_id": "version:175a2d7b-dcd5-5cdb-80ae-84c37283e367"
+                }
+              ],
               "is_preferred": true,
               "is_latest": true
             }
@@ -10410,7 +10383,7 @@
         }
       ],
       "identity_basis": "work_version_registry",
-      "knowledge_coverage": "fulltext_ready",
+      "knowledge_coverage": "linked",
       "decision": "Include",
       "reason": null,
       "text_source": "raw",
@@ -10674,7 +10647,7 @@
             }
           ],
           "identity_basis": "work_version_registry",
-          "knowledge_coverage": "fulltext_ready",
+          "knowledge_coverage": "linked",
           "decision": "Include",
           "reason": null,
           "text_source": "raw",
@@ -11515,7 +11488,28 @@
       "version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
       "bibliographic_version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
       "source_version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "BHXDU7VM",
+        "work_id": "work:f01ca4fe-7f9b-59f6-98d9-4e84559cd850",
+        "bibliographic_version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
+        "source_version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
+        "source_version_type": "working_paper",
+        "preferred_version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown_clean/BHXDU7VM.md",
+        "source_sha256": "sha256:49a17523925a989ed5903ded9a6fdd747176bfdc9355bfc80d0048246b364400",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "How People Use ChatGPT",
+          "report_number": "34255",
+          "url": "https://www.nber.org/papers/w34255"
+        },
+        "version_identity": {
+          "title": "How People Use ChatGPT",
+          "report_number": "34255",
+          "url": "https://www.nber.org/papers/w34255"
+        }
+      },
       "version_type": "working_paper",
       "version_date": "2025/09/15",
       "peer_review_status": "not_established",
@@ -11530,6 +11524,7 @@
           "version_date": "2025/09/15",
           "identifiers": {
             "zotero_key": [
+              "6TAA76Q4",
               "BHXDU7VM"
             ],
             "url": [
@@ -11548,7 +11543,7 @@
         }
       ],
       "identity_basis": "work_version_registry",
-      "knowledge_coverage": "fulltext_ready",
+      "knowledge_coverage": "linked",
       "decision": "Include",
       "reason": null,
       "text_source": "raw",
@@ -11591,6 +11586,8 @@
               "version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
               "recorded_work_id": "record:BHXDU7VM",
               "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/BHXDU7VM.md",
+              "source_sha256": "sha256:49a17523925a989ed5903ded9a6fdd747176bfdc9355bfc80d0048246b364400",
               "source_record_id": "BHXDU7VM"
             }
           ]
@@ -11608,6 +11605,8 @@
               "version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
               "recorded_work_id": "record:BHXDU7VM",
               "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/BHXDU7VM.md",
+              "source_sha256": "sha256:49a17523925a989ed5903ded9a6fdd747176bfdc9355bfc80d0048246b364400",
               "source_record_id": "BHXDU7VM"
             }
           ]
@@ -11625,6 +11624,8 @@
               "version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
               "recorded_work_id": "record:BHXDU7VM",
               "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/BHXDU7VM.md",
+              "source_sha256": "sha256:49a17523925a989ed5903ded9a6fdd747176bfdc9355bfc80d0048246b364400",
               "source_record_id": "BHXDU7VM"
             }
           ]
@@ -11642,6 +11643,8 @@
               "version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
               "recorded_work_id": "record:BHXDU7VM",
               "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/BHXDU7VM.md",
+              "source_sha256": "sha256:49a17523925a989ed5903ded9a6fdd747176bfdc9355bfc80d0048246b364400",
               "source_record_id": "BHXDU7VM"
             }
           ]
@@ -11713,6 +11716,7 @@
         "BHXDU7VM"
       ],
       "corpus_record_ids": [
+        "6TAA76Q4",
         "BHXDU7VM"
       ],
       "version_ids": [
@@ -11736,7 +11740,28 @@
           "version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
           "bibliographic_version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
           "source_version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
-          "source_binding": null,
+          "source_binding": {
+            "record_id": "BHXDU7VM",
+            "work_id": "work:f01ca4fe-7f9b-59f6-98d9-4e84559cd850",
+            "bibliographic_version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
+            "source_version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
+            "source_version_type": "working_paper",
+            "preferred_version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
+            "is_preferred_version": true,
+            "source_path": "generated/markdown_clean/BHXDU7VM.md",
+            "source_sha256": "sha256:49a17523925a989ed5903ded9a6fdd747176bfdc9355bfc80d0048246b364400",
+            "binding_mode": "existing_version",
+            "bibliographic_identity": {
+              "title": "How People Use ChatGPT",
+              "report_number": "34255",
+              "url": "https://www.nber.org/papers/w34255"
+            },
+            "version_identity": {
+              "title": "How People Use ChatGPT",
+              "report_number": "34255",
+              "url": "https://www.nber.org/papers/w34255"
+            }
+          },
           "version_type": "working_paper",
           "version_date": "2025/09/15",
           "peer_review_status": "not_established",
@@ -11751,6 +11776,7 @@
               "version_date": "2025/09/15",
               "identifiers": {
                 "zotero_key": [
+                  "6TAA76Q4",
                   "BHXDU7VM"
                 ],
                 "url": [
@@ -11769,7 +11795,7 @@
             }
           ],
           "identity_basis": "work_version_registry",
-          "knowledge_coverage": "fulltext_ready",
+          "knowledge_coverage": "linked",
           "decision": "Include",
           "reason": null,
           "text_source": "raw",
@@ -11811,7 +11837,9 @@
                   "work_id": "work:f01ca4fe-7f9b-59f6-98d9-4e84559cd850",
                   "version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
                   "recorded_work_id": "record:BHXDU7VM",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/BHXDU7VM.md",
+                  "source_sha256": "sha256:49a17523925a989ed5903ded9a6fdd747176bfdc9355bfc80d0048246b364400"
                 }
               ]
             },
@@ -11827,7 +11855,9 @@
                   "work_id": "work:f01ca4fe-7f9b-59f6-98d9-4e84559cd850",
                   "version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
                   "recorded_work_id": "record:BHXDU7VM",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/BHXDU7VM.md",
+                  "source_sha256": "sha256:49a17523925a989ed5903ded9a6fdd747176bfdc9355bfc80d0048246b364400"
                 }
               ]
             },
@@ -11843,7 +11873,9 @@
                   "work_id": "work:f01ca4fe-7f9b-59f6-98d9-4e84559cd850",
                   "version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
                   "recorded_work_id": "record:BHXDU7VM",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/BHXDU7VM.md",
+                  "source_sha256": "sha256:49a17523925a989ed5903ded9a6fdd747176bfdc9355bfc80d0048246b364400"
                 }
               ]
             },
@@ -11859,7 +11891,9 @@
                   "work_id": "work:f01ca4fe-7f9b-59f6-98d9-4e84559cd850",
                   "version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
                   "recorded_work_id": "record:BHXDU7VM",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/BHXDU7VM.md",
+                  "source_sha256": "sha256:49a17523925a989ed5903ded9a6fdd747176bfdc9355bfc80d0048246b364400"
                 }
               ]
             }
@@ -11942,7 +11976,26 @@
       "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
       "bibliographic_version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
       "source_version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "P4YQIKJX",
+        "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+        "bibliographic_version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+        "source_version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown_clean/P4YQIKJX.md",
+        "source_sha256": "sha256:a4f670474ec99e6c7d888653b43044fd775ebd6dde861dfe2e886c30a8cbf42d",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "Ethics & AI: A systematic review on ethical concerns and related strategies for designing with AI in healthcare",
+          "doi": "10.3390/ai4010003"
+        },
+        "version_identity": {
+          "title": "Ethics & AI: A systematic review on ethical concerns and related strategies for designing with AI in healthcare",
+          "doi": "10.3390/ai4010003"
+        }
+      },
       "version_type": "version_of_record",
       "version_date": "2023",
       "peer_review_status": "not_established",
@@ -11960,14 +12013,18 @@
               "10.3390/ai4010003"
             ],
             "zotero_key": [
+              "INQNDHTI",
               "P4YQIKJX"
+            ],
+            "url": [
+              "https://doi.org/10.3390/ai4010003"
             ]
           },
           "peer_review_status": "not_established",
           "peer_review_basis": "unknown",
           "integrity_status": "current",
           "access_status": "unknown",
-          "landing_url": "",
+          "landing_url": "https://doi.org/10.3390/ai4010003",
           "fulltext_url": "",
           "relations": [],
           "is_preferred": true,
@@ -11975,7 +12032,7 @@
         }
       ],
       "identity_basis": "work_version_registry",
-      "knowledge_coverage": "fulltext_ready",
+      "knowledge_coverage": "linked",
       "decision": "Include",
       "reason": null,
       "text_source": "raw",
@@ -12019,6 +12076,8 @@
               "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
               "recorded_work_id": "doi:10.3390/ai4010003",
               "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/P4YQIKJX.md",
+              "source_sha256": "sha256:a4f670474ec99e6c7d888653b43044fd775ebd6dde861dfe2e886c30a8cbf42d",
               "source_record_id": "P4YQIKJX"
             }
           ]
@@ -12036,6 +12095,8 @@
               "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
               "recorded_work_id": "doi:10.3390/ai4010003",
               "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/P4YQIKJX.md",
+              "source_sha256": "sha256:a4f670474ec99e6c7d888653b43044fd775ebd6dde861dfe2e886c30a8cbf42d",
               "source_record_id": "P4YQIKJX"
             }
           ]
@@ -12053,6 +12114,8 @@
               "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
               "recorded_work_id": "doi:10.3390/ai4010003",
               "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/P4YQIKJX.md",
+              "source_sha256": "sha256:a4f670474ec99e6c7d888653b43044fd775ebd6dde861dfe2e886c30a8cbf42d",
               "source_record_id": "P4YQIKJX"
             }
           ]
@@ -12070,6 +12133,8 @@
               "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
               "recorded_work_id": "doi:10.3390/ai4010003",
               "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/P4YQIKJX.md",
+              "source_sha256": "sha256:a4f670474ec99e6c7d888653b43044fd775ebd6dde861dfe2e886c30a8cbf42d",
               "source_record_id": "P4YQIKJX"
             }
           ]
@@ -12152,6 +12217,7 @@
         "P4YQIKJX"
       ],
       "corpus_record_ids": [
+        "INQNDHTI",
         "P4YQIKJX"
       ],
       "version_ids": [
@@ -12175,7 +12241,26 @@
           "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
           "bibliographic_version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
           "source_version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
-          "source_binding": null,
+          "source_binding": {
+            "record_id": "P4YQIKJX",
+            "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+            "bibliographic_version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+            "source_version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+            "source_version_type": "version_of_record",
+            "preferred_version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+            "is_preferred_version": true,
+            "source_path": "generated/markdown_clean/P4YQIKJX.md",
+            "source_sha256": "sha256:a4f670474ec99e6c7d888653b43044fd775ebd6dde861dfe2e886c30a8cbf42d",
+            "binding_mode": "existing_version",
+            "bibliographic_identity": {
+              "title": "Ethics & AI: A systematic review on ethical concerns and related strategies for designing with AI in healthcare",
+              "doi": "10.3390/ai4010003"
+            },
+            "version_identity": {
+              "title": "Ethics & AI: A systematic review on ethical concerns and related strategies for designing with AI in healthcare",
+              "doi": "10.3390/ai4010003"
+            }
+          },
           "version_type": "version_of_record",
           "version_date": "2023",
           "peer_review_status": "not_established",
@@ -12193,14 +12278,18 @@
                   "10.3390/ai4010003"
                 ],
                 "zotero_key": [
+                  "INQNDHTI",
                   "P4YQIKJX"
+                ],
+                "url": [
+                  "https://doi.org/10.3390/ai4010003"
                 ]
               },
               "peer_review_status": "not_established",
               "peer_review_basis": "unknown",
               "integrity_status": "current",
               "access_status": "unknown",
-              "landing_url": "",
+              "landing_url": "https://doi.org/10.3390/ai4010003",
               "fulltext_url": "",
               "relations": [],
               "is_preferred": true,
@@ -12208,7 +12297,7 @@
             }
           ],
           "identity_basis": "work_version_registry",
-          "knowledge_coverage": "fulltext_ready",
+          "knowledge_coverage": "linked",
           "decision": "Include",
           "reason": null,
           "text_source": "raw",
@@ -12251,7 +12340,9 @@
                   "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
                   "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
                   "recorded_work_id": "doi:10.3390/ai4010003",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/P4YQIKJX.md",
+                  "source_sha256": "sha256:a4f670474ec99e6c7d888653b43044fd775ebd6dde861dfe2e886c30a8cbf42d"
                 }
               ]
             },
@@ -12267,7 +12358,9 @@
                   "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
                   "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
                   "recorded_work_id": "doi:10.3390/ai4010003",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/P4YQIKJX.md",
+                  "source_sha256": "sha256:a4f670474ec99e6c7d888653b43044fd775ebd6dde861dfe2e886c30a8cbf42d"
                 }
               ]
             },
@@ -12283,7 +12376,9 @@
                   "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
                   "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
                   "recorded_work_id": "doi:10.3390/ai4010003",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/P4YQIKJX.md",
+                  "source_sha256": "sha256:a4f670474ec99e6c7d888653b43044fd775ebd6dde861dfe2e886c30a8cbf42d"
                 }
               ]
             },
@@ -12299,7 +12394,9 @@
                   "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
                   "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
                   "recorded_work_id": "doi:10.3390/ai4010003",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/P4YQIKJX.md",
+                  "source_sha256": "sha256:a4f670474ec99e6c7d888653b43044fd775ebd6dde861dfe2e886c30a8cbf42d"
                 }
               ]
             }
@@ -12408,7 +12505,8 @@
           "version_date": "2023-04-03",
           "identifiers": {
             "zotero_key": [
-              "8NG4ZEWE"
+              "8NG4ZEWE",
+              "IUHC62RX"
             ],
             "url": [
               "https://wb-erwachsenenbildung.net/intersektionalitaet"
@@ -12531,7 +12629,8 @@
         "8NG4ZEWE"
       ],
       "corpus_record_ids": [
-        "8NG4ZEWE"
+        "8NG4ZEWE",
+        "IUHC62RX"
       ],
       "version_ids": [
         "version:55533b0b-5613-5347-a46f-5a3ef7be2816"
@@ -12569,7 +12668,8 @@
               "version_date": "2023-04-03",
               "identifiers": {
                 "zotero_key": [
-                  "8NG4ZEWE"
+                  "8NG4ZEWE",
+                  "IUHC62RX"
                 ],
                 "url": [
                   "https://wb-erwachsenenbildung.net/intersektionalitaet"
@@ -12739,7 +12839,7 @@
         }
       ],
       "identity_basis": "work_version_registry",
-      "knowledge_coverage": "fulltext_ready",
+      "knowledge_coverage": "linked",
       "decision": "Include",
       "reason": null,
       "text_source": "raw",
@@ -12956,7 +13056,7 @@
             }
           ],
           "identity_basis": "work_version_registry",
-          "knowledge_coverage": "fulltext_ready",
+          "knowledge_coverage": "linked",
           "decision": "Include",
           "reason": null,
           "text_source": "raw",
@@ -13097,398 +13197,6 @@
               "Studientyp": "Theoretisch"
             },
             "notes": "Der konzeptionelle Beitrag behandelt arbeitsfeldübergreifende Beratung, Altenhilfe sowie Kinder- und Jugendhilfe. Alter und Gender erscheinen als Anwendungs- oder Literaturkontext, werden jedoch nicht als eigene Bias-Achsen analysiert.",
-            "undecidable": []
-          }
-        }
-      ]
-    },
-    {
-      "id": "7FEFMCBZ",
-      "title": "How child welfare workers reduce racial disparities in algorithmic decisions",
-      "author_year": "Cheng et al. (2022)",
-      "authors": "Cheng, H.-F.; Stapleton, L.; Kawakami, A.; Sivaraman, V.; Cheng, Y.; Qing, D.; Perer, A.; Holstein, K.; Wu, Z. S.; Zhu, H.",
-      "year": 2022,
-      "doi": "10.1145/3491102.3501831",
-      "url": "",
-      "item_type": "conferencepaper",
-      "journal": "",
-      "work_id": "work:fdf4e7e1-80c8-56bd-9e16-9031a45ff712",
-      "version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
-      "bibliographic_version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
-      "source_version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
-      "source_binding": null,
-      "version_type": "unknown",
-      "version_date": "April 29-May 5, 2022",
-      "peer_review_status": "not_established",
-      "peer_review_basis": "unknown",
-      "preferred_version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
-      "latest_version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
-      "is_preferred_version": true,
-      "work_versions": [
-        {
-          "version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
-          "version_type": "unknown",
-          "version_date": "April 29-May 5, 2022",
-          "identifiers": {
-            "doi": [
-              "10.1145/3491102.3501831"
-            ],
-            "zotero_key": [
-              "7FEFMCBZ"
-            ]
-          },
-          "peer_review_status": "not_established",
-          "peer_review_basis": "unknown",
-          "integrity_status": "current",
-          "access_status": "unknown",
-          "landing_url": "",
-          "fulltext_url": "",
-          "relations": [],
-          "is_preferred": true,
-          "is_latest": true
-        }
-      ],
-      "identity_basis": "work_version_registry",
-      "knowledge_coverage": "fulltext_ready",
-      "decision": "Include",
-      "reason": null,
-      "text_source": "raw",
-      "reviewer": "ar2",
-      "actor": "agent",
-      "lifecycle_state": "ai-agent-reviewed",
-      "publication_basis": "ai-source-review",
-      "recorded_identity": {
-        "work_id": "doi:10.1145/3491102.3501831",
-        "version_id": null
-      },
-      "ai_verification": {
-        "artifact": "docs/data/screening/ar2.json#/decisions/7FEFMCBZ",
-        "sha256": "sha256:4f2adcd6bc70926d493e7ae0eefc8bf04114ce22031683ede0891a41ea79f591",
-        "result": "accepted",
-        "review_type": "ai-source-review",
-        "agent_id": "/root/aggregation",
-        "model": "GPT-6 (exact deployment identifier unavailable)",
-        "reviewed_at": "2026-09-05T12:46:25.450951+00:00",
-        "findings": "Titel, Autorengruppe und CHI-2022-DOI 10.1145/3491102.3501831 passen. Historische Call-Screening-Daten und qualitative Interviews bilden eine Mixed-Methods-Studie zur Mensch-AFST-Zusammenarbeit. Gemessene Black-white-Screen-in-Unterschiede (20 gegenüber 9 Prozentpunkten) tragen Bias, Fairness, Race_Ethnicity und Evaluated für diesen organisatorischen Entscheidungsprozess; §7.2 empfiehlt diversere Mitarbeitende als ergänzenden Aspekt. Das Analyseprofil ist quellengerecht. Die Interpretation bleibt eingeschränkt: §7.3 trennt geringere Disparität von nachgewiesener Gerechtigkeit und weist auf verschiedene Zeiträume der quantitativen und qualitativen Daten hin; keine pauschale Praxiswirksamkeit ableiten.",
-        "canonical_binding": {
-          "paper_id": "7FEFMCBZ",
-          "work_id": "work:fdf4e7e1-80c8-56bd-9e16-9031a45ff712",
-          "version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f"
-        }
-      },
-      "verification": null,
-      "publication_approval": null,
-      "categories": [
-        {
-          "key": "Bias_Ungleichheit",
-          "level": 2,
-          "evidence": [
-            {
-              "term": "reduced the disparity in screen-in rate between Black and white children",
-              "snippet": "reduced the disparity in screen-in rate between Black and white children",
-              "source_layer": "paper",
-              "actor": "agent",
-              "work_id": "work:fdf4e7e1-80c8-56bd-9e16-9031a45ff712",
-              "version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
-              "recorded_work_id": "doi:10.1145/3491102.3501831",
-              "recorded_version_id": "",
-              "source_record_id": "7FEFMCBZ"
-            }
-          ]
-        },
-        {
-          "key": "Diversitaet",
-          "level": 1,
-          "evidence": [
-            {
-              "term": "increase diversity among the child welfare workers",
-              "snippet": "increase diversity among the child welfare workers",
-              "source_layer": "paper",
-              "actor": "agent",
-              "work_id": "work:fdf4e7e1-80c8-56bd-9e16-9031a45ff712",
-              "version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
-              "recorded_work_id": "doi:10.1145/3491102.3501831",
-              "recorded_version_id": "",
-              "source_record_id": "7FEFMCBZ"
-            }
-          ]
-        },
-        {
-          "key": "Fairness",
-          "level": 2,
-          "evidence": [
-            {
-              "term": "algorithmic fairness",
-              "snippet": "algorithmic fairness",
-              "source_layer": "paper",
-              "actor": "agent",
-              "work_id": "work:fdf4e7e1-80c8-56bd-9e16-9031a45ff712",
-              "version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
-              "recorded_work_id": "doi:10.1145/3491102.3501831",
-              "recorded_version_id": "",
-              "source_record_id": "7FEFMCBZ"
-            }
-          ]
-        },
-        {
-          "key": "KI_Sonstige",
-          "level": 2,
-          "evidence": [
-            {
-              "term": "machine learning to estimate risk",
-              "snippet": "machine learning to estimate risk",
-              "source_layer": "paper",
-              "actor": "agent",
-              "work_id": "work:fdf4e7e1-80c8-56bd-9e16-9031a45ff712",
-              "version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
-              "recorded_work_id": "doi:10.1145/3491102.3501831",
-              "recorded_version_id": "",
-              "source_record_id": "7FEFMCBZ"
-            }
-          ]
-        },
-        {
-          "key": "Soziale_Arbeit",
-          "level": 2,
-          "evidence": [
-            {
-              "term": "child welfare call screen workers",
-              "snippet": "child welfare call screen workers",
-              "source_layer": "paper",
-              "actor": "agent",
-              "work_id": "work:fdf4e7e1-80c8-56bd-9e16-9031a45ff712",
-              "version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
-              "recorded_work_id": "doi:10.1145/3491102.3501831",
-              "recorded_version_id": "",
-              "source_record_id": "7FEFMCBZ"
-            }
-          ]
-        }
-      ],
-      "analysis": {
-        "fields": {
-          "AN_Prompting_Role": [
-            "None"
-          ],
-          "AN_Prompt_Techniques": [
-            "None"
-          ],
-          "AN_Bias_Axes": [
-            "Race_Ethnicity"
-          ],
-          "AN_Harm_Types": [
-            "Disparate_Performance"
-          ],
-          "AN_Mitigation_Stage": [
-            "Organisational_Process"
-          ],
-          "AN_Mitigation_Status": "Evaluated",
-          "AN_Population": [
-            "Child_Family_Welfare"
-          ],
-          "AN_Coding_Basis": "Fulltext",
-          "Studientyp": "Empirisch"
-        },
-        "notes": "Empirische Mixed-Methods-Studie zur Zusammenarbeit von Fachkräften und Risikoalgorithmus im Kinderschutz.",
-        "undecidable": []
-      },
-      "aggregation_unit": "work",
-      "record_ids": [
-        "7FEFMCBZ"
-      ],
-      "corpus_record_ids": [
-        "7FEFMCBZ"
-      ],
-      "version_ids": [
-        "version:aabc867d-cc16-5889-8810-35e57e6b003f"
-      ],
-      "source_version_ids": [
-        "version:aabc867d-cc16-5889-8810-35e57e6b003f"
-      ],
-      "source_records": [
-        {
-          "id": "7FEFMCBZ",
-          "title": "How child welfare workers reduce racial disparities in algorithmic decisions",
-          "author_year": "Cheng et al. (2022)",
-          "authors": "Cheng, H.-F.; Stapleton, L.; Kawakami, A.; Sivaraman, V.; Cheng, Y.; Qing, D.; Perer, A.; Holstein, K.; Wu, Z. S.; Zhu, H.",
-          "year": 2022,
-          "doi": "10.1145/3491102.3501831",
-          "url": "",
-          "item_type": "conferencepaper",
-          "journal": "",
-          "work_id": "work:fdf4e7e1-80c8-56bd-9e16-9031a45ff712",
-          "version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
-          "bibliographic_version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
-          "source_version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
-          "source_binding": null,
-          "version_type": "unknown",
-          "version_date": "April 29-May 5, 2022",
-          "peer_review_status": "not_established",
-          "peer_review_basis": "unknown",
-          "preferred_version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
-          "latest_version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
-          "is_preferred_version": true,
-          "work_versions": [
-            {
-              "version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
-              "version_type": "unknown",
-              "version_date": "April 29-May 5, 2022",
-              "identifiers": {
-                "doi": [
-                  "10.1145/3491102.3501831"
-                ],
-                "zotero_key": [
-                  "7FEFMCBZ"
-                ]
-              },
-              "peer_review_status": "not_established",
-              "peer_review_basis": "unknown",
-              "integrity_status": "current",
-              "access_status": "unknown",
-              "landing_url": "",
-              "fulltext_url": "",
-              "relations": [],
-              "is_preferred": true,
-              "is_latest": true
-            }
-          ],
-          "identity_basis": "work_version_registry",
-          "knowledge_coverage": "fulltext_ready",
-          "decision": "Include",
-          "reason": null,
-          "text_source": "raw",
-          "reviewer": "ar2",
-          "actor": "agent",
-          "lifecycle_state": "ai-agent-reviewed",
-          "publication_basis": "ai-source-review",
-          "recorded_identity": {
-            "work_id": "doi:10.1145/3491102.3501831",
-            "version_id": null
-          },
-          "ai_verification": {
-            "artifact": "docs/data/screening/ar2.json#/decisions/7FEFMCBZ",
-            "sha256": "sha256:4f2adcd6bc70926d493e7ae0eefc8bf04114ce22031683ede0891a41ea79f591",
-            "result": "accepted",
-            "review_type": "ai-source-review",
-            "agent_id": "/root/aggregation",
-            "model": "GPT-6 (exact deployment identifier unavailable)",
-            "reviewed_at": "2026-09-05T12:46:25.450951+00:00",
-            "findings": "Titel, Autorengruppe und CHI-2022-DOI 10.1145/3491102.3501831 passen. Historische Call-Screening-Daten und qualitative Interviews bilden eine Mixed-Methods-Studie zur Mensch-AFST-Zusammenarbeit. Gemessene Black-white-Screen-in-Unterschiede (20 gegenüber 9 Prozentpunkten) tragen Bias, Fairness, Race_Ethnicity und Evaluated für diesen organisatorischen Entscheidungsprozess; §7.2 empfiehlt diversere Mitarbeitende als ergänzenden Aspekt. Das Analyseprofil ist quellengerecht. Die Interpretation bleibt eingeschränkt: §7.3 trennt geringere Disparität von nachgewiesener Gerechtigkeit und weist auf verschiedene Zeiträume der quantitativen und qualitativen Daten hin; keine pauschale Praxiswirksamkeit ableiten.",
-            "canonical_binding": {
-              "paper_id": "7FEFMCBZ",
-              "work_id": "work:fdf4e7e1-80c8-56bd-9e16-9031a45ff712",
-              "version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f"
-            }
-          },
-          "verification": null,
-          "publication_approval": null,
-          "categories": [
-            {
-              "key": "Bias_Ungleichheit",
-              "level": 2,
-              "evidence": [
-                {
-                  "term": "reduced the disparity in screen-in rate between Black and white children",
-                  "snippet": "reduced the disparity in screen-in rate between Black and white children",
-                  "source_layer": "paper",
-                  "actor": "agent",
-                  "work_id": "work:fdf4e7e1-80c8-56bd-9e16-9031a45ff712",
-                  "version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
-                  "recorded_work_id": "doi:10.1145/3491102.3501831",
-                  "recorded_version_id": ""
-                }
-              ]
-            },
-            {
-              "key": "Diversitaet",
-              "level": 1,
-              "evidence": [
-                {
-                  "term": "increase diversity among the child welfare workers",
-                  "snippet": "increase diversity among the child welfare workers",
-                  "source_layer": "paper",
-                  "actor": "agent",
-                  "work_id": "work:fdf4e7e1-80c8-56bd-9e16-9031a45ff712",
-                  "version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
-                  "recorded_work_id": "doi:10.1145/3491102.3501831",
-                  "recorded_version_id": ""
-                }
-              ]
-            },
-            {
-              "key": "Fairness",
-              "level": 2,
-              "evidence": [
-                {
-                  "term": "algorithmic fairness",
-                  "snippet": "algorithmic fairness",
-                  "source_layer": "paper",
-                  "actor": "agent",
-                  "work_id": "work:fdf4e7e1-80c8-56bd-9e16-9031a45ff712",
-                  "version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
-                  "recorded_work_id": "doi:10.1145/3491102.3501831",
-                  "recorded_version_id": ""
-                }
-              ]
-            },
-            {
-              "key": "KI_Sonstige",
-              "level": 2,
-              "evidence": [
-                {
-                  "term": "machine learning to estimate risk",
-                  "snippet": "machine learning to estimate risk",
-                  "source_layer": "paper",
-                  "actor": "agent",
-                  "work_id": "work:fdf4e7e1-80c8-56bd-9e16-9031a45ff712",
-                  "version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
-                  "recorded_work_id": "doi:10.1145/3491102.3501831",
-                  "recorded_version_id": ""
-                }
-              ]
-            },
-            {
-              "key": "Soziale_Arbeit",
-              "level": 2,
-              "evidence": [
-                {
-                  "term": "child welfare call screen workers",
-                  "snippet": "child welfare call screen workers",
-                  "source_layer": "paper",
-                  "actor": "agent",
-                  "work_id": "work:fdf4e7e1-80c8-56bd-9e16-9031a45ff712",
-                  "version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
-                  "recorded_work_id": "doi:10.1145/3491102.3501831",
-                  "recorded_version_id": ""
-                }
-              ]
-            }
-          ],
-          "analysis": {
-            "fields": {
-              "AN_Prompting_Role": [
-                "None"
-              ],
-              "AN_Prompt_Techniques": [
-                "None"
-              ],
-              "AN_Bias_Axes": [
-                "Race_Ethnicity"
-              ],
-              "AN_Harm_Types": [
-                "Disparate_Performance"
-              ],
-              "AN_Mitigation_Stage": [
-                "Organisational_Process"
-              ],
-              "AN_Mitigation_Status": "Evaluated",
-              "AN_Population": [
-                "Child_Family_Welfare"
-              ],
-              "AN_Coding_Basis": "Fulltext",
-              "Studientyp": "Empirisch"
-            },
-            "notes": "Empirische Mixed-Methods-Studie zur Zusammenarbeit von Fachkräften und Risikoalgorithmus im Kinderschutz.",
             "undecidable": []
           }
         }

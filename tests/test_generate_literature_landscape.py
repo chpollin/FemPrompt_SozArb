@@ -9,6 +9,7 @@ from pathlib import Path
 import pytest
 
 from src.assess import screening_lifecycle
+from src.assess.artifact_verification import artifact_hash
 
 ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location(
@@ -28,9 +29,15 @@ def _write(path: Path, payload: dict[str, object]) -> Path:
 def test_source_hold_withholds_even_previously_publication_approved_record(tmp_path):
     screening, corpus = _fixture()
     # A restrictive current-source hold does not rewrite historical approval.
-    corpus["papers"][0]["source_hold"] = {"kind": "integrity_hold", "reason": "Source withdrawn"}
+    corpus["papers"][0]["source_hold"] = {
+        "kind": "integrity_hold",
+        "reason": "Source withdrawn",
+    }
     _approve_record(screening["decisions"]["P1"], "P1")
-    data = landscape.build(_write(tmp_path / "screening.json", screening), _write(tmp_path / "corpus.json", corpus))
+    data = landscape.build(
+        _write(tmp_path / "screening.json", screening),
+        _write(tmp_path / "corpus.json", corpus),
+    )
     assert data["meta"]["published_record_total"] == 0
     assert data["meta"]["withheld_total"] == len(screening["decisions"])
 
@@ -331,7 +338,9 @@ def _add_approved_alias(screening, corpus):
     return screening["decisions"]["P3"]
 
 
-def test_approved_aliases_count_once_and_retain_evidence_provenance(tmp_path: Path) -> None:
+def test_approved_aliases_count_once_and_retain_evidence_provenance(
+    tmp_path: Path,
+) -> None:
     screening, corpus = _fixture()
     alias = _add_approved_alias(screening, corpus)
     alias["evidence"]["Gender"][0]["snippet"] = "Another version measures gender bias."
@@ -353,13 +362,19 @@ def test_approved_aliases_count_once_and_retain_evidence_provenance(tmp_path: Pa
     assert work["record_ids"] == ["P1", "P3"]
     assert len(work["version_ids"]) == 2
     assert [record["id"] for record in work["source_records"]] == ["P1", "P3"]
-    evidence = next(category["evidence"] for category in work["categories"] if category["key"] == "Gender")
+    evidence = next(
+        category["evidence"]
+        for category in work["categories"]
+        if category["key"] == "Gender"
+    )
     assert {item["source_record_id"] for item in evidence} == {"P1", "P3"}
     assert {item["version_id"] for item in evidence} == set(work["version_ids"])
 
 
 @pytest.mark.parametrize("conflict", ["decision", "category", "analysis"])
-def test_conflicting_approved_work_annotations_fail_closed(tmp_path: Path, conflict: str) -> None:
+def test_conflicting_approved_work_annotations_fail_closed(
+    tmp_path: Path, conflict: str
+) -> None:
     screening, corpus = _fixture()
     alias = _add_approved_alias(screening, corpus)
     if conflict == "decision":
@@ -377,7 +392,9 @@ def test_conflicting_approved_work_annotations_fail_closed(tmp_path: Path, confl
         )
 
 
-def test_unapproved_alias_cannot_contribute_evidence_or_block_approved_work(tmp_path: Path) -> None:
+def test_unapproved_alias_cannot_contribute_evidence_or_block_approved_work(
+    tmp_path: Path,
+) -> None:
     screening, corpus = _fixture()
     _add_approved_alias(screening, corpus)
     alias = screening["decisions"]["P3"]
@@ -398,22 +415,35 @@ def test_unapproved_alias_cannot_contribute_evidence_or_block_approved_work(tmp_
 
 def _ai_receipt(record):
     from src.assess.artifact_verification import record_hash
+
     return {
-        "artifact": "screening.json#/decisions/P1", "sha256": record_hash(record),
-        "result": "accepted", "review_type": "ai-source-review",
-        "agent_id": "named-reviewer", "model": "test-model", "reviewed_at": "2026-09-05T12:00:00Z",
+        "artifact": "screening.json#/decisions/P1",
+        "sha256": record_hash(record),
+        "result": "accepted",
+        "review_type": "ai-source-review",
+        "agent_id": "named-reviewer",
+        "model": "test-model",
+        "reviewed_at": "2026-09-05T12:00:00Z",
         "findings": "Coding checked against the source.",
-        "evidence": [{"work_id": record["work_id"], "version_id": record["version_id"]}],
+        "evidence": [
+            {"work_id": record["work_id"], "version_id": record["version_id"]}
+        ],
     }
 
 
-def test_explicit_policy_publishes_attributed_ai_review_without_human_authority(tmp_path: Path):
+def test_explicit_policy_publishes_attributed_ai_review_without_human_authority(
+    tmp_path: Path,
+):
     screening, corpus = _fixture()
     receipt = _ai_receipt(screening["decisions"]["P1"])
     original = deepcopy(screening)
     result = landscape.build(
-        _write(tmp_path / "screening.json", screening), _write(tmp_path / "corpus.json", corpus),
-        publication_policy={"allowed_states": ["ai-agent-reviewed"], "public_label": "KI-quellengeprüft"},
+        _write(tmp_path / "screening.json", screening),
+        _write(tmp_path / "corpus.json", corpus),
+        publication_policy={
+            "allowed_states": ["ai-agent-reviewed"],
+            "public_label": "KI-quellengeprüft",
+        },
         verification_receipts={receipt["artifact"]: receipt},
     )
     assert result["meta"]["published_work_total"] == 1
@@ -431,7 +461,8 @@ def test_ai_receipt_alone_cannot_override_default_human_approval_policy(tmp_path
     screening, corpus = _fixture()
     receipt = _ai_receipt(screening["decisions"]["P1"])
     result = landscape.build(
-        _write(tmp_path / "screening.json", screening), _write(tmp_path / "corpus.json", corpus),
+        _write(tmp_path / "screening.json", screening),
+        _write(tmp_path / "corpus.json", corpus),
         verification_receipts={receipt["artifact"]: receipt},
     )
     assert result["records"] == []
@@ -454,7 +485,8 @@ def test_build_keeps_correction_revocation_from_validated_receipts(tmp_path: Pat
         {accepted["artifact"]: accepted, revoked["artifact"]: revoked},
     )
     result = landscape.build(
-        _write(tmp_path / "screening.json", screening), _write(tmp_path / "corpus.json", corpus),
+        _write(tmp_path / "screening.json", screening),
+        _write(tmp_path / "corpus.json", corpus),
         publication_policy={"allowed_states": ["ai-agent-reviewed"]},
         verification_receipts=reviews,
     )
@@ -464,9 +496,155 @@ def test_build_keeps_correction_revocation_from_validated_receipts(tmp_path: Pat
 
 def _bound_ai_receipt(record, paper):
     receipt = _ai_receipt(record)
-    receipt["canonical_binding"] = {"paper_id": paper["id"], "work_id": paper["work_id"], "version_id": paper["version_id"]}
-    receipt["evidence"] = [{"work_id": paper["work_id"], "version_id": paper["version_id"]}]
+    receipt["canonical_binding"] = {
+        "paper_id": paper["id"],
+        "work_id": paper["work_id"],
+        "version_id": paper["version_id"],
+    }
+    receipt["evidence"] = [
+        {"work_id": paper["work_id"], "version_id": paper["version_id"]}
+    ]
     return receipt
+
+
+def _existing_version_receipt_fixture(tmp_path: Path):
+    screening, corpus = _fixture()
+    decision = screening["decisions"]["P1"]
+    paper = corpus["papers"][0]
+    (tmp_path / "source.md").write_text(
+        "The study evaluates a language model.\nThe analysis measures gender bias.\n",
+        encoding="utf-8",
+    )
+    binding = {
+        "record_id": "P1",
+        "work_id": paper["work_id"],
+        "bibliographic_version_id": paper["version_id"],
+        "source_version_id": paper["version_id"],
+        "source_version_type": "version_of_record",
+        "preferred_version_id": paper["version_id"],
+        "is_preferred_version": True,
+        "source_path": "source.md",
+        "source_sha256": artifact_hash(tmp_path, "source.md"),
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+            "title": paper["title"],
+            "doi": paper["doi"],
+        },
+        "version_identity": {"title": paper["title"], "doi": paper["doi"]},
+    }
+    paper["source_binding"] = binding
+    receipt = _bound_ai_receipt(decision, paper)
+    receipt["evidence"] = [
+        {
+            "source_path": binding["source_path"],
+            "sha256": binding["source_sha256"],
+            "work_id": binding["work_id"],
+            "version_id": binding["source_version_id"],
+        }
+    ]
+    schema = json.loads(
+        (ROOT / "docs/data/analysis_fields.json").read_text(encoding="utf-8")
+    )
+    return decision, paper, receipt, schema
+
+
+def test_historical_receipt_accepts_exact_existing_version_source(tmp_path: Path):
+    decision, paper, receipt, schema = _existing_version_receipt_fixture(tmp_path)
+
+    result = landscape._validate_and_transform_record(
+        "P1",
+        decision,
+        paper,
+        schema,
+        frozenset(decision["categories"]),
+        receipt,
+        repo=tmp_path,
+    )
+
+    assert result["source_binding"] == paper["source_binding"]
+    assert result["source_version_id"] == paper["version_id"]
+
+
+def test_build_withholds_stale_source_review_without_blocking_valid_records(
+    tmp_path: Path,
+):
+    screening, corpus = _fixture()
+    paper = corpus["papers"][0]
+    (tmp_path / "current-source.md").write_text(
+        "The study evaluates a language model.\n"
+        "The analysis measures gender bias.\n",
+        encoding="utf-8",
+    )
+    paper["source_binding"] = {
+        "record_id": "P1",
+        "work_id": paper["work_id"],
+        "bibliographic_version_id": paper["version_id"],
+        "source_version_id": paper["version_id"],
+        "source_version_type": "version_of_record",
+        "preferred_version_id": paper["version_id"],
+        "is_preferred_version": True,
+        "source_path": "current-source.md",
+        "source_sha256": artifact_hash(tmp_path, "current-source.md"),
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {"title": paper["title"], "doi": paper["doi"]},
+        "version_identity": {"title": paper["title"], "doi": paper["doi"]},
+    }
+    stale = _bound_ai_receipt(screening["decisions"]["P1"], paper)
+    stale["evidence"] = [
+        {
+            "source_path": "previous-source.md",
+            "sha256": "sha256:" + "0" * 64,
+            "work_id": paper["work_id"],
+            "version_id": paper["version_id"],
+        }
+    ]
+    valid = _ai_receipt(screening["decisions"]["P2"])
+    valid["artifact"] = "screening.json#/decisions/P2"
+
+    result = landscape.build(
+        _write(tmp_path / "screening.json", screening),
+        _write(tmp_path / "corpus.json", corpus),
+        publication_policy={"allowed_states": ["ai-agent-reviewed"]},
+        verification_receipts={
+            stale["artifact"]: stale,
+            valid["artifact"]: valid,
+        },
+        repo=tmp_path,
+    )
+
+    assert [record["record_ids"] for record in result["records"]] == [["P2"]]
+    assert result["meta"]["withheld_record_total"] == 1
+
+
+@pytest.mark.parametrize(
+    "defect",
+    ["changed_source_hash", "different_version", "no_evidence", "accepted_manuscript"],
+)
+def test_historical_receipt_rejects_nonidentical_source_binding(
+    tmp_path: Path, defect: str
+):
+    decision, paper, receipt, schema = _existing_version_receipt_fixture(tmp_path)
+    if defect == "changed_source_hash":
+        receipt["evidence"][0]["sha256"] = "sha256:" + "0" * 64
+    elif defect == "different_version":
+        paper["source_binding"]["source_version_id"] = "version:other"
+    elif defect == "no_evidence":
+        receipt["evidence"] = []
+    else:
+        paper["source_binding"]["binding_mode"] = "accepted_manuscript"
+        paper["source_binding"]["source_version_id"] = "version:manuscript"
+        paper["source_binding"]["source_version_type"] = "accepted_manuscript"
+
+    with pytest.raises(ValueError, match="explicit source-bound verification"):
+        landscape._validate_and_transform_record(
+            "P1",
+            decision,
+            paper,
+            schema,
+            frozenset(decision["categories"]),
+            receipt,
+            repo=tmp_path,
+        )
 
 
 @pytest.mark.parametrize("legacy_work", [None, "record:P1", "doi:10.1234/one"])
@@ -477,35 +655,48 @@ def test_receipt_projects_only_recognized_legacy_identity(tmp_path: Path, legacy
     _sync_annotation(record)
     receipt = _bound_ai_receipt(record, corpus["papers"][0])
     result = landscape.build(
-        _write(tmp_path / "screening.json", screening), _write(tmp_path / "corpus.json", corpus),
+        _write(tmp_path / "screening.json", screening),
+        _write(tmp_path / "corpus.json", corpus),
         publication_policy={"allowed_states": ["ai-agent-reviewed"]},
         verification_receipts={receipt["artifact"]: receipt},
     )
     projected = result["records"][0]
     assert projected["work_id"] == corpus["papers"][0]["work_id"]
-    assert projected["recorded_identity"] == {"work_id": legacy_work, "version_id": None}
-    assert projected["categories"][0]["evidence"][0]["version_id"] == corpus["papers"][0]["version_id"]
+    assert projected["recorded_identity"] == {
+        "work_id": legacy_work,
+        "version_id": None,
+    }
+    assert (
+        projected["categories"][0]["evidence"][0]["version_id"]
+        == corpus["papers"][0]["version_id"]
+    )
 
 
-@pytest.mark.parametrize("target,field,value", [
-    ("record", "work_id", "unknown:unmapped-original"),
-    ("record", "work_id", "record:P2"),
-    ("record", "work_id", "doi:10.1234/other"),
-    ("record", "work_id", "work:22222222-2222-5222-8222-222222222222"),
-    ("record", "version_id", "version:22222222-2222-5222-8222-222222222222"),
-    ("evidence", "work_id", "work:22222222-2222-5222-8222-222222222222"),
-    ("evidence", "version_id", "version:22222222-2222-5222-8222-222222222222"),
-])
-def test_receipt_cannot_relabel_unknown_or_conflicting_record_and_evidence_identity(tmp_path: Path, target, field, value):
+@pytest.mark.parametrize(
+    "target,field,value",
+    [
+        ("record", "work_id", "unknown:unmapped-original"),
+        ("record", "work_id", "record:P2"),
+        ("record", "work_id", "doi:10.1234/other"),
+        ("record", "work_id", "work:22222222-2222-5222-8222-222222222222"),
+        ("record", "version_id", "version:22222222-2222-5222-8222-222222222222"),
+        ("evidence", "work_id", "work:22222222-2222-5222-8222-222222222222"),
+        ("evidence", "version_id", "version:22222222-2222-5222-8222-222222222222"),
+    ],
+)
+def test_receipt_cannot_relabel_unknown_or_conflicting_record_and_evidence_identity(
+    tmp_path: Path, target, field, value
+):
     screening, corpus = _fixture()
     record = screening["decisions"]["P1"]
     subject = record if target == "record" else record["evidence"]["Gender"][0]
     subject[field] = value
     _sync_annotation(record)
     receipt = _bound_ai_receipt(record, corpus["papers"][0])
-    with pytest.raises(ValueError, match="recorded (work|version) identity"):
+    with pytest.raises(ValueError, match=r"recorded (work|version) identity"):
         landscape.build(
-            _write(tmp_path / "screening.json", screening), _write(tmp_path / "corpus.json", corpus),
+            _write(tmp_path / "screening.json", screening),
+            _write(tmp_path / "corpus.json", corpus),
             publication_policy={"allowed_states": ["ai-agent-reviewed"]},
             verification_receipts={receipt["artifact"]: receipt},
         )
@@ -523,7 +714,8 @@ def test_mismatched_or_unattributed_ai_receipt_fails_closed(tmp_path: Path, defe
         receipt["evidence"][0]["work_id"] = "work:another-work"
     with pytest.raises(ValueError, match="AI verification receipt"):
         landscape.build(
-            _write(tmp_path / "screening.json", screening), _write(tmp_path / "corpus.json", corpus),
+            _write(tmp_path / "screening.json", screening),
+            _write(tmp_path / "corpus.json", corpus),
             publication_policy={"allowed_states": ["ai-agent-reviewed"]},
             verification_receipts={receipt["artifact"]: receipt},
         )

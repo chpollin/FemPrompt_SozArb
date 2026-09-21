@@ -12,9 +12,10 @@ from __future__ import annotations
 import json
 import re
 import unicodedata
+from collections.abc import Iterable
 from copy import deepcopy
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any
 
 from src.file_hashing import file_sha256
 
@@ -30,7 +31,9 @@ def normalise_arxiv(value: object) -> str:
     """Parse an arXiv identifier without discarding its revision, if present."""
     text = str(value or "").strip().casefold()
     if text.startswith(("http://", "https://")):
-        match = re.fullmatch(r"https?://(?:www\.)?arxiv\.org/(abs|pdf|html)/([^?#]+)", text)
+        match = re.fullmatch(
+            r"https?://(?:www\.)?arxiv\.org/(abs|pdf|html)/([^?#]+)", text
+        )
         if not match:
             return ""
         text = match[2]
@@ -38,53 +41,122 @@ def normalise_arxiv(value: object) -> str:
             text = text[:-4]
     else:
         text = re.sub(r"^(?:arxiv:\s*|10\.48550/arxiv\.)", "", text)
-    return text if re.fullmatch(r"(?:\d{4}\.\d{4,5}|[a-z][a-z.-]*/\d{7})(?:v[1-9]\d*)?", text) else ""
+    return (
+        text
+        if re.fullmatch(r"(?:\d{4}\.\d{4,5}|[a-z][a-z.-]*/\d{7})(?:v[1-9]\d*)?", text)
+        else ""
+    )
 
 
-def validate_source_version_identity(version: dict, identity: object, *, require_revision: bool = True) -> None:
+def validate_source_version_identity(
+    version: dict, identity: object, *, require_revision: bool = True
+) -> None:
     """Check a reviewed identity against one existing version, never just its work.
 
     arXiv's DOI is shared by revisions. At least one registered arXiv identifier or
     URL must pin the exact revision; conflicting revisions require registry repair.
+    DOI-less NBER working papers use the report number encoded in their registered
+    canonical URL. No other report or web-page identity is inferred from a URL.
     """
-    if not isinstance(identity, dict) or set(identity) - {"title", "doi", "arxiv"}:
+    if not isinstance(identity, dict) or set(identity) - {
+        "title",
+        "doi",
+        "arxiv",
+        "report_number",
+        "url",
+    }:
         raise ValueError("source version identity contains unsupported metadata")
-    if not isinstance(identity.get("title"), str) or not identity["title"].strip() or normalise_title(identity["title"]) != normalise_title(version.get("title")):
+    if (
+        not isinstance(identity.get("title"), str)
+        or not identity["title"].strip()
+        or normalise_title(identity["title"]) != normalise_title(version.get("title"))
+    ):
         raise ValueError("source version title differs from registered bibliography")
     identifiers = version.get("identifiers", {})
     dois = {normalise_doi(value) for value in values(identifiers.get("doi"))}
     raw_arxiv = values(identifiers.get("arxiv"))
-    urls = values(identifiers.get("url")) + values(version.get("landing_url")) + values(version.get("fulltext_url"))
+    urls = (
+        values(identifiers.get("url"))
+        + values(version.get("landing_url"))
+        + values(version.get("fulltext_url"))
+    )
     if any(not normalise_arxiv(value) for value in raw_arxiv) or any(
-        re.match(r"https?://(?:www\.)?arxiv\.org/", value, re.IGNORECASE) and not normalise_arxiv(value)
+        re.match(r"https?://(?:www\.)?arxiv\.org/", value, re.IGNORECASE)
+        and not normalise_arxiv(value)
         for value in urls
     ):
         raise ValueError("registered arXiv identifier or revision URL is malformed")
     registered_arxiv = {
-        parsed for value in raw_arxiv + urls + list(dois) if (parsed := normalise_arxiv(value))
+        parsed
+        for value in raw_arxiv + urls + list(dois)
+        if (parsed := normalise_arxiv(value))
     }
+    report_identity = identity.get("report_number") or identity.get("url")
+    if report_identity:
+        if set(identity) != {"title", "report_number", "url"}:
+            raise ValueError(
+                "working-paper identity needs title, report number and URL"
+            )
+        if version.get("version_type") != "working_paper":
+            raise ValueError("report-number identity is restricted to working papers")
+        registered_urls = set(values(identifiers.get("url"))) | set(
+            values(version.get("landing_url"))
+        )
+        url = identity.get("url")
+        if not isinstance(url, str) or url not in registered_urls:
+            raise ValueError("working-paper URL differs from registered bibliography")
+        match = re.fullmatch(r"https://www\.nber\.org/papers/w([1-9]\d*)", url)
+        if not match or str(identity.get("report_number") or "") != match[1]:
+            raise ValueError("working-paper number differs from registered NBER URL")
+        return
     if not (identity.get("doi") or identity.get("arxiv")):
-        raise ValueError("source version identity needs a DOI or exact arXiv revision")
-    if "doi" in identity and (not isinstance(identity["doi"], str) or not identity["doi"].strip() or normalise_doi(identity["doi"]) not in dois):
+        raise ValueError(
+            "source version identity needs a DOI, exact arXiv revision or registered NBER working-paper number"
+        )
+    if "doi" in identity and (
+        not isinstance(identity["doi"], str)
+        or not identity["doi"].strip()
+        or normalise_doi(identity["doi"]) not in dois
+    ):
         raise ValueError("source version DOI differs from registered bibliography")
     if "arxiv" in identity or (require_revision and registered_arxiv):
         expected = normalise_arxiv(identity.get("arxiv"))
         if not expected or not re.search(r"v[1-9]\d*$", expected):
             raise ValueError("source version identity needs a pinned arXiv revision")
         bases = {re.sub(r"v\d+$", "", item) for item in registered_arxiv}
-        revisions = {item for item in registered_arxiv if re.search(r"v[1-9]\d*$", item)}
+        revisions = {
+            item for item in registered_arxiv if re.search(r"v[1-9]\d*$", item)
+        }
         if bases != {re.sub(r"v\d+$", "", expected)} or revisions != {expected}:
-            raise ValueError("registered arXiv revision is missing, conflicting or different from source identity")
+            raise ValueError(
+                "registered arXiv revision is missing, conflicting or different from source identity"
+            )
 
 
-def source_binding_for_record(registry: dict, record_id: str, repo: Path | None = None) -> dict | None:
+def source_binding_for_record(
+    registry: dict, record_id: str, repo: Path | None = None
+) -> dict | None:
     """Resolve a governed reading source separately from the bibliographic record."""
     binding = registry.get("source_index", {}).get(record_id)
     if binding is None:
         return None
     canonical = registry.get("record_index", {}).get(record_id, {})
-    work = next((item for item in registry.get("works", []) if item["work_id"] == canonical.get("work_id")), {})
-    version = next((item for item in work.get("versions", []) if item["version_id"] == binding.get("source_version_id")), {})
+    work = next(
+        (
+            item
+            for item in registry.get("works", [])
+            if item["work_id"] == canonical.get("work_id")
+        ),
+        {},
+    )
+    version = next(
+        (
+            item
+            for item in work.get("versions", [])
+            if item["version_id"] == binding.get("source_version_id")
+        ),
+        {},
+    )
     if (
         binding.get("record_id") != record_id
         or binding.get("work_id") != canonical.get("work_id")
@@ -93,23 +165,43 @@ def source_binding_for_record(registry: dict, record_id: str, repo: Path | None 
         or binding.get("source_version_type") != version.get("version_type")
         or version.get("integrity_status") in BLOCKED_INTEGRITY
         or binding.get("preferred_version_id") != work.get("preferred_version_id")
-        or binding.get("is_preferred_version") is not (version.get("version_id") == work.get("preferred_version_id"))
+        or binding.get("is_preferred_version")
+        is not (version.get("version_id") == work.get("preferred_version_id"))
     ):
-        raise ValueError(f"{record_id}: source binding crosses or misstates canonical Work-Version identity")
+        raise ValueError(
+            f"{record_id}: source binding crosses or misstates canonical Work-Version identity"
+        )
     mode = binding.get("binding_mode")
     if mode is not None or binding["source_version_id"] == canonical["version_id"]:
-        if mode != "existing_version" or binding["source_version_id"] != canonical["version_id"]:
-            raise ValueError(f"{record_id}: existing source binding must retain the exact bibliographic version")
-        validate_source_version_identity(version, binding.get("bibliographic_identity"), require_revision=False)
+        if (
+            mode != "existing_version"
+            or binding["source_version_id"] != canonical["version_id"]
+        ):
+            raise ValueError(
+                f"{record_id}: existing source binding must retain the exact bibliographic version"
+            )
+        validate_source_version_identity(
+            version, binding.get("bibliographic_identity"), require_revision=False
+        )
         validate_source_version_identity(version, binding.get("version_identity"))
     reference = binding.get("source_path", "")
-    if not isinstance(reference, str) or not reference or "\\" in reference or "#" in reference or Path(reference).is_absolute() or ".." in Path(reference).parts:
+    if (
+        not isinstance(reference, str)
+        or not reference
+        or "\\" in reference
+        or "#" in reference
+        or Path(reference).is_absolute()
+        or ".." in Path(reference).parts
+    ):
         raise ValueError(f"{record_id}: invalid source binding path")
     if not re.fullmatch(r"sha256:[0-9a-f]{64}", str(binding.get("source_sha256", ""))):
         raise ValueError(f"{record_id}: invalid source binding hash")
     if repo is not None:
         path = (repo / reference).resolve()
-        if not path.is_relative_to(repo.resolve()) or "sha256:" + file_sha256(path) != binding["source_sha256"]:
+        if (
+            not path.is_relative_to(repo.resolve())
+            or "sha256:" + file_sha256(path) != binding["source_sha256"]
+        ):
             raise ValueError(f"{record_id}: stale source binding")
     return deepcopy(binding)
 
@@ -147,8 +239,7 @@ def load_contract(path: Path = CONTRACT_PATH) -> dict[str, Any]:
 def version_ranks(contract: dict[str, Any]) -> dict[str, int]:
     """Return the configured preference rank per version type."""
     return {
-        item["key"]: int(item["preference_rank"])
-        for item in contract["version_types"]
+        item["key"]: int(item["preference_rank"]) for item in contract["version_types"]
     }
 
 
@@ -269,9 +360,13 @@ def validate_registry(registry: dict[str, Any], contract: dict[str, Any]) -> Non
                 raise ValueError(f"{version_id}: unknown integrity_status")
         latest, preferred = select_version_ids(versions, contract)
         if work.get("latest_version_id") != latest:
-            raise ValueError(f"{work_id}: latest_version_id does not follow the contract")
+            raise ValueError(
+                f"{work_id}: latest_version_id does not follow the contract"
+            )
         if work.get("preferred_version_id") != preferred:
-            raise ValueError(f"{work_id}: preferred_version_id does not follow the contract")
+            raise ValueError(
+                f"{work_id}: preferred_version_id does not follow the contract"
+            )
 
     for work in registry.get("works", []):
         for version in work["versions"]:
@@ -280,7 +375,9 @@ def validate_registry(registry: dict[str, Any], contract: dict[str, Any]) -> Non
                     raise ValueError(f"{version['version_id']}: unknown relation type")
                 target = relation.get("target_version_id")
                 if target not in version_ids:
-                    raise ValueError(f"{version['version_id']}: unknown relation target {target}")
+                    raise ValueError(
+                        f"{version['version_id']}: unknown relation target {target}"
+                    )
                 if version_to_work[target] != work["work_id"]:
                     raise ValueError(
                         f"{version['version_id']}: relation crosses work boundary"

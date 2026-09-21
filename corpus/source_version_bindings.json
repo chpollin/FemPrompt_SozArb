@@ -314,6 +314,1174 @@
           "locator": "Original PDF page 9, figures [4]; full_pdf_page_render"
         }
       ]
+    },
+    "S2DN9CFC": {
+      "binding_mode": "existing_version",
+      "agent_id": "/root/source_preparation",
+      "model": "gpt-5.6-sol",
+      "reviewed_at": "2026-09-21T13:24:57.020962+02:00",
+      "reason": "The complete acquired article text identifies the registered article title. The governed acquisition manifest records the same DOI, version-of-record source and exact source hash. This binds the reviewed reading source without changing bibliographic identity or granting screening authority.",
+      "bibliographic_identity": {
+        "title": "Beyond �painting in pink�: A critical case study of all-girls generative AI workshops in a European makerspace and implications for gender equity in computing",
+        "doi": "10.1016/j.caeai.2026.100602"
+      },
+      "version_identity": {
+        "title": "Beyond �painting in pink�: A critical case study of all-girls generative AI workshops in a European makerspace and implications for gender equity in computing",
+        "doi": "10.1016/j.caeai.2026.100602"
+      },
+      "binding": {
+        "record_id": "S2DN9CFC",
+        "work_id": "work:88488d25-08d0-5719-8948-5bff2e7d43cf",
+        "bibliographic_version_id": "version:ea23f511-1667-56d4-8b7e-b46394a73f86",
+        "source_version_id": "version:ea23f511-1667-56d4-8b7e-b46394a73f86",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:ea23f511-1667-56d4-8b7e-b46394a73f86",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/4dd9fd2a26f9d7eea07a.md",
+        "source_sha256": "sha256:c0d19894593d8c2209a4c40a59a35d20a251a15f8b1db25e737368fee1ffc16c"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/4dd9fd2a26f9d7eea07a.md",
+          "sha256": "sha256:c0d19894593d8c2209a4c40a59a35d20a251a15f8b1db25e737368fee1ffc16c",
+          "source_url": "https://discovery.ucl.ac.uk/id/eprint/10225293/1/1-s2.0-S2666920X26000640-main-2.pdf",
+          "locator": "PDF page 1, article title",
+          "quote": "Beyond ' painting in pink ' : A critical case study of all-girls generative AI workshops in a European makerspace and implications for gender equity in computing"
+        },
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/4dd9fd2a26f9d7eea07a.md",
+          "sha256": "sha256:c0d19894593d8c2209a4c40a59a35d20a251a15f8b1db25e737368fee1ffc16c",
+          "source_url": "https://discovery.ucl.ac.uk/id/eprint/10225293/1/1-s2.0-S2666920X26000640-main-2.pdf",
+          "locator": "PDF page 1, DOI",
+          "quote": "10.1016/j.caeai.2026.100602"
+        }
+      ]
+    },
+    "UGN4TS5R": {
+      "binding_mode": "existing_version",
+      "agent_id": "/root/source_preparation",
+      "model": "gpt-5.6-sol",
+      "reviewed_at": "2026-09-21T13:24:57.020962+02:00",
+      "reason": "The complete official repository HTML identifies the registered article title, DOI and version of record. This binds the reviewed reading source without changing bibliographic identity or granting screening authority.",
+      "bibliographic_identity": {
+        "title": "Implicit Gender, Racial, and Ethnic Biases in Large Language Models: An Audit Study of Automated Psychiatric Diagnoses",
+        "doi": "10.1016/j.mcpdig.2026.100344"
+      },
+      "version_identity": {
+        "title": "Implicit Gender, Racial, and Ethnic Biases in Large Language Models: An Audit Study of Automated Psychiatric Diagnoses",
+        "doi": "10.1016/j.mcpdig.2026.100344"
+      },
+      "binding": {
+        "record_id": "UGN4TS5R",
+        "work_id": "work:e62005d4-d179-5cef-af39-3aca00c24a04",
+        "bibliographic_version_id": "version:26f29a81-72da-5a66-8302-ba39cafbae87",
+        "source_version_id": "version:26f29a81-72da-5a66-8302-ba39cafbae87",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:26f29a81-72da-5a66-8302-ba39cafbae87",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/html-markdown/166a9834b422f052b7c5.md",
+        "source_sha256": "sha256:5568a06471911bf9d102f9caf87159966469807bd990ef8a837d52585de186f5"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/html-markdown/166a9834b422f052b7c5.md",
+          "sha256": "sha256:5568a06471911bf9d102f9caf87159966469807bd990ef8a837d52585de186f5",
+          "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13217584/",
+          "locator": "Article heading",
+          "quote": "Implicit Gender, Racial, and Ethnic Biases in Large Language Models: An Audit Study of Automated Psychiatric Diagnoses"
+        },
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/html-markdown/166a9834b422f052b7c5.md",
+          "sha256": "sha256:5568a06471911bf9d102f9caf87159966469807bd990ef8a837d52585de186f5",
+          "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13217584/",
+          "locator": "Article metadata, DOI",
+          "quote": "10.1016/j.mcpdig.2026.100344"
+        }
+      ]
+    },
+    "88CFIG8R": {
+      "binding_mode": "existing_version",
+      "agent_id": "/root/source_preparation",
+      "model": "gpt-5.6-sol",
+      "reviewed_at": "2026-09-21T13:24:57.020962+02:00",
+      "reason": "The complete acquired article text identifies the registered article title and DOI. This binds the reviewed reading source without changing bibliographic identity or granting screening authority.",
+      "bibliographic_identity": {
+        "title": "Are future social workers ready for AI? Fears, barriers, and learning needs in higher education",
+        "doi": "10.1080/02615479.2026.2631708"
+      },
+      "version_identity": {
+        "title": "Are future social workers ready for AI? Fears, barriers, and learning needs in higher education",
+        "doi": "10.1080/02615479.2026.2631708"
+      },
+      "binding": {
+        "record_id": "88CFIG8R",
+        "work_id": "work:1004a5c5-f980-5475-ad36-952eab77b516",
+        "bibliographic_version_id": "version:834d178c-fc76-51f3-bddf-b86e25436742",
+        "source_version_id": "version:834d178c-fc76-51f3-bddf-b86e25436742",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:834d178c-fc76-51f3-bddf-b86e25436742",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/4875ad9321dfcfc0aa52.md",
+        "source_sha256": "sha256:62cec11670505fe2b2cea73052cd5d8b0a48cddc4e5a5ccab46cd0ace12005e5"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/4875ad9321dfcfc0aa52.md",
+          "sha256": "sha256:62cec11670505fe2b2cea73052cd5d8b0a48cddc4e5a5ccab46cd0ace12005e5",
+          "source_url": "https://academica-e.unavarra.es/server/api/core/bitstreams/ecc4e165-4064-452e-9db6-6632e2450d6b/content",
+          "locator": "PDF page 1, article title and DOI",
+          "quote": "Are future social workers ready for AI? Fears, barriers, and learning needs in higher education"
+        },
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/4875ad9321dfcfc0aa52.md",
+          "sha256": "sha256:62cec11670505fe2b2cea73052cd5d8b0a48cddc4e5a5ccab46cd0ace12005e5",
+          "source_url": "https://academica-e.unavarra.es/server/api/core/bitstreams/ecc4e165-4064-452e-9db6-6632e2450d6b/content",
+          "locator": "PDF page 1, DOI",
+          "quote": "10.1080/02615479.2026.2631708"
+        }
+      ]
+    },
+    "QRK7C3JK": {
+      "binding_mode": "existing_version",
+      "agent_id": "/root/source_preparation",
+      "model": "gpt-5.6-sol",
+      "reviewed_at": "2026-09-21T13:24:57.020962+02:00",
+      "reason": "The complete acquired article text identifies the registered article title and DOI. This binds the reviewed reading source without changing bibliographic identity or granting screening authority. A separate source-representation receipt documents direct visual inspection of the table-to-image mapping without granting scholarly or human-review authority.",
+      "bibliographic_identity": {
+        "title": "Towards a framework for digital literacy in social work education in a time of artificial intelligence",
+        "doi": "10.1080/02615479.2026.2660786"
+      },
+      "version_identity": {
+        "title": "Towards a framework for digital literacy in social work education in a time of artificial intelligence",
+        "doi": "10.1080/02615479.2026.2660786"
+      },
+      "binding": {
+        "record_id": "QRK7C3JK",
+        "work_id": "work:ac777aa0-e02b-5a2e-8ddd-19dfdd0110ec",
+        "bibliographic_version_id": "version:c2db337e-61b4-5717-bfb5-56cd6de7d117",
+        "source_version_id": "version:c2db337e-61b4-5717-bfb5-56cd6de7d117",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:c2db337e-61b4-5717-bfb5-56cd6de7d117",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/3cb613d559a8c57c13c1.md",
+        "source_sha256": "sha256:93ff941db75f745dc31191edecf3339916094c0bdf8c98f5bf57f704660fe979"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/3cb613d559a8c57c13c1.md",
+          "sha256": "sha256:93ff941db75f745dc31191edecf3339916094c0bdf8c98f5bf57f704660fe979",
+          "source_url": "https://mau.diva-portal.org/smash/get/diva2%3A2053633/FULLTEXT01.pdf",
+          "locator": "PDF page 1, article title and DOI",
+          "quote": "Towards a framework for digital literacy in social work education in a time of artificial intelligence"
+        },
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/3cb613d559a8c57c13c1.md",
+          "sha256": "sha256:93ff941db75f745dc31191edecf3339916094c0bdf8c98f5bf57f704660fe979",
+          "source_url": "https://mau.diva-portal.org/smash/get/diva2%3A2053633/FULLTEXT01.pdf",
+          "locator": "PDF page 1, DOI",
+          "quote": "10.1080/02615479.2026.2660786"
+        },
+        {
+          "source_path": "corpus/source-acquisition/QRK7C3JK-visual-qc/visual-qc.json",
+          "sha256": "sha256:80cf236335c783c568300074c468ab1cf778cee363fcd183c4b269c419ac1bdb",
+          "locator": "inspection.rendered_pdf_pages and inspection.table_mapping_verified",
+          "quote": "This is a direct visual inspection of the bound publication PDF for source-representation quality control."
+        }
+      ]
+    },
+    "I355NWWT": {
+      "binding_mode": "existing_version",
+      "agent_id": "/root/source_preparation",
+      "model": "gpt-5.6-sol",
+      "reviewed_at": "2026-09-21T13:24:57.020962+02:00",
+      "reason": "The complete acquired article text identifies the registered article title and DOI. This binds the reviewed reading source without changing bibliographic identity or granting screening authority.",
+      "bibliographic_identity": {
+        "title": "Generative KI in der Beratung: Empirische Befunde mit Blick auf Nutzungsbedingungen von Chatbots",
+        "doi": "10.21240/dimesoz/2026/1/57"
+      },
+      "version_identity": {
+        "title": "Generative KI in der Beratung: Empirische Befunde mit Blick auf Nutzungsbedingungen von Chatbots",
+        "doi": "10.21240/dimesoz/2026/1/57"
+      },
+      "binding": {
+        "record_id": "I355NWWT",
+        "work_id": "work:b385e0cf-739b-5592-b5f0-c9d7fd2ead0a",
+        "bibliographic_version_id": "version:5989a776-e0b2-54c3-bd41-ecffe3d9b85b",
+        "source_version_id": "version:5989a776-e0b2-54c3-bd41-ecffe3d9b85b",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:5989a776-e0b2-54c3-bd41-ecffe3d9b85b",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/2b57266b9d8b015d2ac2.md",
+        "source_sha256": "sha256:6bbcd7269af590ab46faeb1ddf489cc33bfde18f3799ece52b7ec3074f74ffbb"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/2b57266b9d8b015d2ac2.md",
+          "sha256": "sha256:6bbcd7269af590ab46faeb1ddf489cc33bfde18f3799ece52b7ec3074f74ffbb",
+          "source_url": "https://www.dime-sozial.de/index.php/dimesoz/article/download/57/24",
+          "locator": "PDF article citation, title",
+          "quote": "Generative KI in der Beratung: empirische Befunde mit Blick auf Nutzungsbedingungen von Chatbots"
+        },
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/2b57266b9d8b015d2ac2.md",
+          "sha256": "sha256:6bbcd7269af590ab46faeb1ddf489cc33bfde18f3799ece52b7ec3074f74ffbb",
+          "source_url": "https://www.dime-sozial.de/index.php/dimesoz/article/download/57/24",
+          "locator": "PDF article citation, DOI",
+          "quote": "10.21240/dimesoz/2026/1/57"
+        }
+      ]
+    },
+    "FR8Z2998": {
+      "binding_mode": "existing_version",
+      "agent_id": "/root/source_preparation",
+      "model": "gpt-5.6-sol",
+      "reviewed_at": "2026-09-21T13:24:57.020962+02:00",
+      "reason": "The complete acquired article text identifies the registered article title and DOI. This binds the reviewed reading source without changing bibliographic identity or granting screening authority.",
+      "bibliographic_identity": {
+        "title": "Patient Cognitive Bias in Large Language Model-Supported Health Consultations: Simulation-Based Comparative Study",
+        "doi": "10.2196/85770"
+      },
+      "version_identity": {
+        "title": "Patient Cognitive Bias in Large Language Model-Supported Health Consultations: Simulation-Based Comparative Study",
+        "doi": "10.2196/85770"
+      },
+      "binding": {
+        "record_id": "FR8Z2998",
+        "work_id": "work:0acf6fa2-7f5e-53c4-a1d1-30ab1ae8d310",
+        "bibliographic_version_id": "version:8bffb8fc-6a26-5e82-a77f-1a0f5c8b7794",
+        "source_version_id": "version:8bffb8fc-6a26-5e82-a77f-1a0f5c8b7794",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:8bffb8fc-6a26-5e82-a77f-1a0f5c8b7794",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/aff73b4c6b2eab31b8f7.md",
+        "source_sha256": "sha256:401ad82df917c2ba9ae1e22a0cb706c9f2b6460e3c82f1d8a6a8cf1333988239"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/aff73b4c6b2eab31b8f7.md",
+          "sha256": "sha256:401ad82df917c2ba9ae1e22a0cb706c9f2b6460e3c82f1d8a6a8cf1333988239",
+          "source_url": "https://www.jmir.org/2026/1/e85770/PDF",
+          "locator": "PDF page 1, article title",
+          "quote": "Patient Cognitive Bias in Large Language Model-Supported Health Consultations: Simulation-Based Comparative Study"
+        },
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/aff73b4c6b2eab31b8f7.md",
+          "sha256": "sha256:401ad82df917c2ba9ae1e22a0cb706c9f2b6460e3c82f1d8a6a8cf1333988239",
+          "source_url": "https://www.jmir.org/2026/1/e85770/PDF",
+          "locator": "PDF page 1, DOI",
+          "quote": "10.2196/85770"
+        }
+      ]
+    },
+    "D267IQ4C": {
+      "binding_mode": "existing_version",
+      "agent_id": "/root/source_preparation",
+      "model": "gpt-5.6-sol",
+      "reviewed_at": "2026-09-21T13:24:57.020962+02:00",
+      "reason": "The complete acquired article text identifies the registered article title and DOI. This binds the reviewed reading source without changing bibliographic identity or granting screening authority.",
+      "bibliographic_identity": {
+        "title": "Generative AI in Youth Mental Health Apps: Rapid Review",
+        "doi": "10.2196/90589"
+      },
+      "version_identity": {
+        "title": "Generative AI in Youth Mental Health Apps: Rapid Review",
+        "doi": "10.2196/90589"
+      },
+      "binding": {
+        "record_id": "D267IQ4C",
+        "work_id": "work:7eb826eb-db16-5ae7-8201-3339f108ae93",
+        "bibliographic_version_id": "version:cd86e948-9250-5850-a227-9cb0b762cd50",
+        "source_version_id": "version:cd86e948-9250-5850-a227-9cb0b762cd50",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:cd86e948-9250-5850-a227-9cb0b762cd50",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/926800fc523bebd0420c.md",
+        "source_sha256": "sha256:dbf3a15387a52c3c622dbdaabfd358396a89b16c6b73db6e65f2ecf82d3f355d"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/926800fc523bebd0420c.md",
+          "sha256": "sha256:dbf3a15387a52c3c622dbdaabfd358396a89b16c6b73db6e65f2ecf82d3f355d",
+          "source_url": "https://mental.jmir.org/2026/1/e90589/PDF",
+          "locator": "PDF page 1, article title",
+          "quote": "Generative AI in Youth Mental Health Apps: Rapid Review"
+        },
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/926800fc523bebd0420c.md",
+          "sha256": "sha256:dbf3a15387a52c3c622dbdaabfd358396a89b16c6b73db6e65f2ecf82d3f355d",
+          "source_url": "https://mental.jmir.org/2026/1/e90589/PDF",
+          "locator": "PDF page 1, DOI",
+          "quote": "10.2196/90589"
+        }
+      ]
+    },
+    "RH8MC67Z": {
+      "binding_mode": "existing_version",
+      "agent_id": "/root/source_preparation",
+      "model": "gpt-5.6-sol",
+      "reviewed_at": "2026-09-21T13:24:57.020962+02:00",
+      "reason": "The complete publisher article text contains the registered title and exact DOI. This records source identity only and grants no screening or human verification authority.",
+      "bibliographic_identity": {
+        "title": "New model, old risks: sociodemographic bias and adversarial hallucinations vulnerability in GPT-5",
+        "doi": "10.1038/s41746-026-02584-8"
+      },
+      "version_identity": {
+        "title": "New model, old risks: sociodemographic bias and adversarial hallucinations vulnerability in GPT-5",
+        "doi": "10.1038/s41746-026-02584-8"
+      },
+      "binding": {
+        "record_id": "RH8MC67Z",
+        "work_id": "work:ca3ae89d-5ddd-5036-a44d-165c58097219",
+        "bibliographic_version_id": "version:16b6e46e-829c-5531-b8cd-967ddca17abe",
+        "source_version_id": "version:16b6e46e-829c-5531-b8cd-967ddca17abe",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:16b6e46e-829c-5531-b8cd-967ddca17abe",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/1e429407d9b091311a65.md",
+        "source_sha256": "sha256:b3d2bf83c7c3404322c30d5e811e27ac80fb7ccfb560fd348e92f9fdd5efdd77"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/1e429407d9b091311a65.md",
+          "sha256": "sha256:b3d2bf83c7c3404322c30d5e811e27ac80fb7ccfb560fd348e92f9fdd5efdd77",
+          "source_url": "https://www.nature.com/articles/s41746-026-02584-8.pdf",
+          "locator": "Article heading",
+          "quote": "New model, old risks: sociodemographic bias and adversarial hallucinations vulnerability in GPT-5"
+        },
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/1e429407d9b091311a65.md",
+          "sha256": "sha256:b3d2bf83c7c3404322c30d5e811e27ac80fb7ccfb560fd348e92f9fdd5efdd77",
+          "source_url": "https://www.nature.com/articles/s41746-026-02584-8.pdf",
+          "locator": "Supplementary-information DOI statement",
+          "quote": "10.1038/s41746-026-02584-8"
+        }
+      ]
+    },
+    "K7NW3W34": {
+      "binding_mode": "existing_version",
+      "agent_id": "/root/source_preparation",
+      "model": "gpt-5.6-sol",
+      "reviewed_at": "2026-09-21T13:24:57.020962+02:00",
+      "reason": "The repository cover identifies the Publisher's PDF as Version of record, and the complete text contains the registered title and exact DOI. This records source identity only.",
+      "bibliographic_identity": {
+        "title": "A kind of magic? Artificial intelligence-assisted recording: developing principles for an AI-informed social work curriculum",
+        "doi": "10.1080/02615479.2026.2669634"
+      },
+      "version_identity": {
+        "title": "A kind of magic? Artificial intelligence-assisted recording: developing principles for an AI-informed social work curriculum",
+        "doi": "10.1080/02615479.2026.2669634"
+      },
+      "binding": {
+        "record_id": "K7NW3W34",
+        "work_id": "work:677ea395-cc39-50b4-9979-496e0f17665d",
+        "bibliographic_version_id": "version:17e4bb2a-0324-58ef-97f3-0cc9cd352ab5",
+        "source_version_id": "version:17e4bb2a-0324-58ef-97f3-0cc9cd352ab5",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:17e4bb2a-0324-58ef-97f3-0cc9cd352ab5",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/e9fb8b7679eaf1023485.md",
+        "source_sha256": "sha256:4dbc41e4a458cf82e1784ad5190b2a6b211a63488e2c0aaa557b67304aca5737"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/e9fb8b7679eaf1023485.md",
+          "sha256": "sha256:4dbc41e4a458cf82e1784ad5190b2a6b211a63488e2c0aaa557b67304aca5737",
+          "source_url": "https://discovery.dundee.ac.uk/ws/files/169373072/A_kind_of_magic_Artificial_intelligence-assisted_recording_developing_principles_for_an_AI-informed_social_work_curriculum.pdf",
+          "locator": "Repository cover and article title",
+          "quote": "A kind of magic? Artificial intelligence-assisted recording: developing principles for an AI-informed social work curriculum"
+        },
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/e9fb8b7679eaf1023485.md",
+          "sha256": "sha256:4dbc41e4a458cf82e1784ad5190b2a6b211a63488e2c0aaa557b67304aca5737",
+          "source_url": "https://discovery.dundee.ac.uk/ws/files/169373072/A_kind_of_magic_Artificial_intelligence-assisted_recording_developing_principles_for_an_AI-informed_social_work_curriculum.pdf",
+          "locator": "Repository cover DOI",
+          "quote": "10.1080/02615479.2026.2669634"
+        }
+      ]
+    },
+    "AZJW38MF": {
+      "binding_mode": "existing_version",
+      "agent_id": "/root/source_preparation",
+      "model": "gpt-5.6-sol",
+      "reviewed_at": "2026-09-21T13:24:57.020962+02:00",
+      "reason": "The repository cover identifies the Publisher's PDF as Version of record, and the complete text contains the registered title and exact DOI. This records source identity only.",
+      "bibliographic_identity": {
+        "title": "The (Un)Fair Algorithm: Socio-Technical Ethics Work for Artificial Intelligence in Social Work",
+        "doi": "10.1080/17496535.2026.2619945"
+      },
+      "version_identity": {
+        "title": "The (Un)Fair Algorithm: Socio-Technical Ethics Work for Artificial Intelligence in Social Work",
+        "doi": "10.1080/17496535.2026.2619945"
+      },
+      "binding": {
+        "record_id": "AZJW38MF",
+        "work_id": "work:2c625fa2-a2f8-5d59-b6a0-f148d542c902",
+        "bibliographic_version_id": "version:6ff337db-5679-509b-b8db-13f9d4be1baf",
+        "source_version_id": "version:6ff337db-5679-509b-b8db-13f9d4be1baf",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:6ff337db-5679-509b-b8db-13f9d4be1baf",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/e9be7a01361ab7bae7bb.md",
+        "source_sha256": "sha256:322a7c9026f85204f9a15ffac69723e8eb12cc125df25276e77aa01e0e062148"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/e9be7a01361ab7bae7bb.md",
+          "sha256": "sha256:322a7c9026f85204f9a15ffac69723e8eb12cc125df25276e77aa01e0e062148",
+          "source_url": "https://www.ucviden.dk/ws/files/285358215/The_Un_Fair_Algorithm_Socio-Technical_Ethics_Work_for_Artificial_Intelligence_in_Social_Work.pdf",
+          "locator": "Repository citation and Version-of-record cover",
+          "quote": "The (Un)Fair Algorithm: Socio-Technical Ethics Work for Artificial Intelligence in Social Work"
+        },
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/e9be7a01361ab7bae7bb.md",
+          "sha256": "sha256:322a7c9026f85204f9a15ffac69723e8eb12cc125df25276e77aa01e0e062148",
+          "source_url": "https://www.ucviden.dk/ws/files/285358215/The_Un_Fair_Algorithm_Socio-Technical_Ethics_Work_for_Artificial_Intelligence_in_Social_Work.pdf",
+          "locator": "Repository cover DOI",
+          "quote": "10.1080/17496535.2026.2619945"
+        }
+      ]
+    },
+    "A7U389P5": {
+      "binding_mode": "existing_version",
+      "agent_id": "/root/source_preparation",
+      "model": "gpt-5.6-sol",
+      "reviewed_at": "2026-09-21T13:24:57.020962+02:00",
+      "reason": "The repository cover identifies the Publisher's PDF as Version of record, and the complete text contains the registered title and exact DOI. This records source identity only.",
+      "bibliographic_identity": {
+        "title": "Mitigating medical bias in large language models by prompt engineering: an empirical study of effectiveness and trade-offs",
+        "doi": "10.1098/rsta.2025.0125"
+      },
+      "version_identity": {
+        "title": "Mitigating medical bias in large language models by prompt engineering: an empirical study of effectiveness and trade-offs",
+        "doi": "10.1098/rsta.2025.0125"
+      },
+      "binding": {
+        "record_id": "A7U389P5",
+        "work_id": "work:e2d886f7-c01f-50cc-9ce2-e65f7be00157",
+        "bibliographic_version_id": "version:6d97fb15-5ef8-5e1e-8ad1-2303d8edfc28",
+        "source_version_id": "version:6d97fb15-5ef8-5e1e-8ad1-2303d8edfc28",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:6d97fb15-5ef8-5e1e-8ad1-2303d8edfc28",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/136b6db72d8a7b8d390c.md",
+        "source_sha256": "sha256:e7ddd2f304de117bc74a28cf164a7793a53d9b956a484ae11d07a845efed57da"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/136b6db72d8a7b8d390c.md",
+          "sha256": "sha256:e7ddd2f304de117bc74a28cf164a7793a53d9b956a484ae11d07a845efed57da",
+          "source_url": "https://kclpure.kcl.ac.uk/ws/files/383343620/MitigatingMedicalBias_Xiao_GoldVoR.pdf",
+          "locator": "Repository citation and Version-of-record cover",
+          "quote": "Mitigating Medical Bias in Large Language Models by Prompt Engineering: An Empirical Study of Effectiveness and Trade-offs"
+        },
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/136b6db72d8a7b8d390c.md",
+          "sha256": "sha256:e7ddd2f304de117bc74a28cf164a7793a53d9b956a484ae11d07a845efed57da",
+          "source_url": "https://kclpure.kcl.ac.uk/ws/files/383343620/MitigatingMedicalBias_Xiao_GoldVoR.pdf",
+          "locator": "Repository cover DOI",
+          "quote": "10.1098/rsta.2025.0125"
+        }
+      ]
+    },
+    "NN49FMDP": {
+      "binding_mode": "existing_version",
+      "agent_id": "/root/source_preparation",
+      "model": "gpt-5.6-sol",
+      "reviewed_at": "2026-09-21T13:24:57.020962+02:00",
+      "reason": "The complete journal article text contains the registered title and exact DOI. This records source identity only.",
+      "bibliographic_identity": {
+        "title": "Pensar críticamente la inteligencia artificial en la escuela: un estudio de caso desde una perspectiva de género",
+        "doi": "10.21556/edutec.2026.96.4777"
+      },
+      "version_identity": {
+        "title": "Pensar críticamente la inteligencia artificial en la escuela: un estudio de caso desde una perspectiva de género",
+        "doi": "10.21556/edutec.2026.96.4777"
+      },
+      "binding": {
+        "record_id": "NN49FMDP",
+        "work_id": "work:ad093524-5d10-5430-838d-3360c0d710cc",
+        "bibliographic_version_id": "version:72ebb1a5-b986-5df5-86d2-429ddcdb6268",
+        "source_version_id": "version:72ebb1a5-b986-5df5-86d2-429ddcdb6268",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:72ebb1a5-b986-5df5-86d2-429ddcdb6268",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/152b1aa29e0dddabe838.md",
+        "source_sha256": "sha256:6937360f3e72c85cb21e45eb19d0ed59e33b1320592ad4da32ed1b2608686058"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/152b1aa29e0dddabe838.md",
+          "sha256": "sha256:6937360f3e72c85cb21e45eb19d0ed59e33b1320592ad4da32ed1b2608686058",
+          "source_url": "https://edutec.es/revista/index.php/edutec-e/article/download/4777/1657",
+          "locator": "Article title",
+          "quote": "Pensar críticamente la inteligencia artificial en la escuela: un estudio de caso desde una perspectiva de género"
+        },
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/152b1aa29e0dddabe838.md",
+          "sha256": "sha256:6937360f3e72c85cb21e45eb19d0ed59e33b1320592ad4da32ed1b2608686058",
+          "source_url": "https://edutec.es/revista/index.php/edutec-e/article/download/4777/1657",
+          "locator": "Article citation DOI",
+          "quote": "10.21556/edutec.2026.96.4777"
+        }
+      ]
+    },
+    "9EP4IC4T": {
+      "binding_mode": "existing_version",
+      "agent_id": "/root/source_preparation",
+      "model": "gpt-5.6-sol",
+      "reviewed_at": "2026-09-21T13:24:57.020962+02:00",
+      "reason": "The complete JMIR article text contains the registered title and exact DOI. This records source identity only.",
+      "bibliographic_identity": {
+        "title": "Ethics and Fairness Considerations in AI-Based Deception Detection Technologies for Mental Health Applications: Focus Group Study",
+        "doi": "10.2196/86633"
+      },
+      "version_identity": {
+        "title": "Ethics and Fairness Considerations in AI-Based Deception Detection Technologies for Mental Health Applications: Focus Group Study",
+        "doi": "10.2196/86633"
+      },
+      "binding": {
+        "record_id": "9EP4IC4T",
+        "work_id": "work:7f8d6ea5-b9ea-55b6-8b7c-312cabf4a2a9",
+        "bibliographic_version_id": "version:689d32b7-8d4c-5ef8-b6a1-bd98323715fd",
+        "source_version_id": "version:689d32b7-8d4c-5ef8-b6a1-bd98323715fd",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:689d32b7-8d4c-5ef8-b6a1-bd98323715fd",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/2e6aa61930deea324751.md",
+        "source_sha256": "sha256:16fffb7438de2ed8cbf62ab4b19919a51a05484d97275f0ff2ea32a72c5868bc"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/2e6aa61930deea324751.md",
+          "sha256": "sha256:16fffb7438de2ed8cbf62ab4b19919a51a05484d97275f0ff2ea32a72c5868bc",
+          "source_url": "https://ai.jmir.org/2026/1/e86633/PDF",
+          "locator": "Article heading",
+          "quote": "Ethics and Fairness Considerations in AI-Based Deception Detection Technologies for Mental Health Applications: Focus Group Study"
+        },
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/2e6aa61930deea324751.md",
+          "sha256": "sha256:16fffb7438de2ed8cbf62ab4b19919a51a05484d97275f0ff2ea32a72c5868bc",
+          "source_url": "https://ai.jmir.org/2026/1/e86633/PDF",
+          "locator": "Journal citation DOI",
+          "quote": "10.2196/86633"
+        }
+      ]
+    },
+    "ZH6T88D5": {
+      "binding_mode": "existing_version",
+      "agent_id": "/root/source_preparation",
+      "model": "gpt-5.6-sol",
+      "reviewed_at": "2026-09-21T13:24:57.020962+02:00",
+      "reason": "The complete Frontiers article text contains the registered title, exact DOI and publisher copyright statement. This records source identity only.",
+      "bibliographic_identity": {
+        "title": "AI-generated visual disinformation and digital equity: an intersectional analysis of algorithmic vulnerabilities among marginalised communities",
+        "doi": "10.3389/fhumd.2026.1791655"
+      },
+      "version_identity": {
+        "title": "AI-generated visual disinformation and digital equity: an intersectional analysis of algorithmic vulnerabilities among marginalised communities",
+        "doi": "10.3389/fhumd.2026.1791655"
+      },
+      "binding": {
+        "record_id": "ZH6T88D5",
+        "work_id": "work:f7d29922-360f-5874-8d4c-cf7f7451f638",
+        "bibliographic_version_id": "version:24a21eca-b319-5127-9194-4b0f14c3410e",
+        "source_version_id": "version:24a21eca-b319-5127-9194-4b0f14c3410e",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:24a21eca-b319-5127-9194-4b0f14c3410e",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/c38bdbce0e8dbb82ce3f.md",
+        "source_sha256": "sha256:acb13f04478c9fcac19655f74e7d43f8539ffb6b7fcb68473f7f86dfa58405b0"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/c38bdbce0e8dbb82ce3f.md",
+          "sha256": "sha256:acb13f04478c9fcac19655f74e7d43f8539ffb6b7fcb68473f7f86dfa58405b0",
+          "source_url": "https://www.frontiersin.org/journals/human-dynamics/articles/10.3389/fhumd.2026.1791655/pdf",
+          "locator": "Article citation title",
+          "quote": "AI-generated visual disinformation and digital equity: an intersectional analysis of algorithmic vulnerabilities among marginalised communities"
+        },
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/c38bdbce0e8dbb82ce3f.md",
+          "sha256": "sha256:acb13f04478c9fcac19655f74e7d43f8539ffb6b7fcb68473f7f86dfa58405b0",
+          "source_url": "https://www.frontiersin.org/journals/human-dynamics/articles/10.3389/fhumd.2026.1791655/pdf",
+          "locator": "Article DOI",
+          "quote": "10.3389/fhumd.2026.1791655"
+        }
+      ]
+    },
+    "4ZL5Q48E": {
+      "binding_mode": "existing_version",
+      "agent_id": "/root/source_preparation",
+      "model": "gpt-5.6-sol",
+      "reviewed_at": "2026-09-21T14:05:00+02:00",
+      "reason": "The unchanged Docling Markdown source contains the registered title and exact DOI. This records source identity only and grants no screening, AI review or human verification authority.",
+      "bibliographic_identity": {
+        "title": "Algorithmic management in a work context",
+        "doi": "10.1177/20539517211020332"
+      },
+      "version_identity": {
+        "title": "Algorithmic management in a work context",
+        "doi": "10.1177/20539517211020332"
+      },
+      "binding": {
+        "record_id": "4ZL5Q48E",
+        "work_id": "work:691469f6-881f-5e13-8df5-69dc64025556",
+        "bibliographic_version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
+        "source_version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown_clean/4ZL5Q48E.md",
+        "source_sha256": "sha256:2037703b31fda721dcb4e76a841e326b3e636982d8da08fbbb5b55b2bd22299d"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/markdown_clean/4ZL5Q48E.md",
+          "sha256": "sha256:2037703b31fda721dcb4e76a841e326b3e636982d8da08fbbb5b55b2bd22299d",
+          "source_url": "https://doi.org/10.1177/20539517211020332",
+          "locator": "Article title",
+          "quote": "Algorithmic management in a work context"
+        },
+        {
+          "source_path": "generated/markdown_clean/4ZL5Q48E.md",
+          "sha256": "sha256:2037703b31fda721dcb4e76a841e326b3e636982d8da08fbbb5b55b2bd22299d",
+          "source_url": "https://doi.org/10.1177/20539517211020332",
+          "locator": "Article DOI",
+          "quote": "10.1177/20539517211020332"
+        }
+      ]
+    },
+    "J7V3AAQT": {
+      "binding_mode": "existing_version",
+      "agent_id": "/root/source_preparation",
+      "model": "gpt-5.6-sol",
+      "reviewed_at": "2026-09-21T14:05:00+02:00",
+      "reason": "The unchanged Docling Markdown source contains the registered title and exact DOI. This records source identity only and grants no screening, AI review or human verification authority.",
+      "bibliographic_identity": {
+        "title": "A chatbot for mental health support: Exploring the impact of Emohaa on reducing mental distress in China",
+        "doi": "10.3389/fdgth.2023.1133987"
+      },
+      "version_identity": {
+        "title": "A chatbot for mental health support: Exploring the impact of Emohaa on reducing mental distress in China",
+        "doi": "10.3389/fdgth.2023.1133987"
+      },
+      "binding": {
+        "record_id": "J7V3AAQT",
+        "work_id": "work:7473ae67-3f6b-5cb7-befc-df628bc87911",
+        "bibliographic_version_id": "version:c3159829-537d-5900-9362-078e15396691",
+        "source_version_id": "version:c3159829-537d-5900-9362-078e15396691",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:c3159829-537d-5900-9362-078e15396691",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown_clean/J7V3AAQT.md",
+        "source_sha256": "sha256:aba6edd8b0cbd65560fbc48979125c316f9c8df3117e9664aab62737c61f85c1"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/markdown_clean/J7V3AAQT.md",
+          "sha256": "sha256:aba6edd8b0cbd65560fbc48979125c316f9c8df3117e9664aab62737c61f85c1",
+          "source_url": "https://doi.org/10.3389/fdgth.2023.1133987",
+          "locator": "Article title",
+          "quote": "A chatbot for mental health support: exploring the impact of Emohaa on reducing mental distress in China"
+        },
+        {
+          "source_path": "generated/markdown_clean/J7V3AAQT.md",
+          "sha256": "sha256:aba6edd8b0cbd65560fbc48979125c316f9c8df3117e9664aab62737c61f85c1",
+          "source_url": "https://doi.org/10.3389/fdgth.2023.1133987",
+          "locator": "Article DOI",
+          "quote": "10.3389/fdgth.2023.1133987"
+        }
+      ]
+    },
+    "AK7K4P97": {
+      "binding_mode": "existing_version",
+      "agent_id": "/root/source_preparation",
+      "model": "gpt-5.6-sol",
+      "reviewed_at": "2026-09-21T14:05:00+02:00",
+      "reason": "The unchanged Docling Markdown source contains the registered title and exact DOI. This records source identity only and grants no screening, AI review or human verification authority.",
+      "bibliographic_identity": {
+        "title": "Artificial intelligence in social work: An EPIC model for practice",
+        "doi": "10.1080/0312407x.2025.2488345"
+      },
+      "version_identity": {
+        "title": "Artificial intelligence in social work: An EPIC model for practice",
+        "doi": "10.1080/0312407x.2025.2488345"
+      },
+      "binding": {
+        "record_id": "AK7K4P97",
+        "work_id": "work:717e065c-570d-526f-86ae-2a24d9f03044",
+        "bibliographic_version_id": "version:7a2a88ab-de23-5113-aa95-aa6b39a002eb",
+        "source_version_id": "version:7a2a88ab-de23-5113-aa95-aa6b39a002eb",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:7a2a88ab-de23-5113-aa95-aa6b39a002eb",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown_clean/Baker_2025_Artificial_intelligence_in_social_work_An_EPIC.md",
+        "source_sha256": "sha256:f49c7419289238b9d1e01a8547e2f1181b34ea9d02537a37f2c4eebd7202c99e"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/markdown_clean/Baker_2025_Artificial_intelligence_in_social_work_An_EPIC.md",
+          "sha256": "sha256:f49c7419289238b9d1e01a8547e2f1181b34ea9d02537a37f2c4eebd7202c99e",
+          "source_url": "https://doi.org/10.1080/0312407x.2025.2488345",
+          "locator": "Article title",
+          "quote": "Artificial Intelligence in Social Work: An EPIC Model for Practice"
+        },
+        {
+          "source_path": "generated/markdown_clean/Baker_2025_Artificial_intelligence_in_social_work_An_EPIC.md",
+          "sha256": "sha256:f49c7419289238b9d1e01a8547e2f1181b34ea9d02537a37f2c4eebd7202c99e",
+          "source_url": "https://doi.org/10.1080/0312407x.2025.2488345",
+          "locator": "Article DOI",
+          "quote": "10.1080/0312407X.2025.2488345"
+        }
+      ]
+    },
+    "P4YQIKJX": {
+      "binding_mode": "existing_version",
+      "agent_id": "/root/source_preparation",
+      "model": "gpt-5.6-sol",
+      "reviewed_at": "2026-09-21T14:05:00+02:00",
+      "reason": "The unchanged repository Markdown source identifies the registered title and exact DOI and explicitly labels the document as the publisher's PDF and Version of Record. This records source identity only and grants no screening, AI review or human verification authority.",
+      "bibliographic_identity": {
+        "title": "Ethics & AI: A systematic review on ethical concerns and related strategies for designing with AI in healthcare",
+        "doi": "10.3390/ai4010003"
+      },
+      "version_identity": {
+        "title": "Ethics & AI: A systematic review on ethical concerns and related strategies for designing with AI in healthcare",
+        "doi": "10.3390/ai4010003"
+      },
+      "binding": {
+        "record_id": "P4YQIKJX",
+        "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+        "bibliographic_version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+        "source_version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown_clean/P4YQIKJX.md",
+        "source_sha256": "sha256:a4f670474ec99e6c7d888653b43044fd775ebd6dde861dfe2e886c30a8cbf42d"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/markdown_clean/P4YQIKJX.md",
+          "sha256": "sha256:a4f670474ec99e6c7d888653b43044fd775ebd6dde861dfe2e886c30a8cbf42d",
+          "source_url": "https://doi.org/10.3390/ai4010003",
+          "locator": "Repository cover, page 1, article title",
+          "quote": "Ethics &amp; AI: A systematic review on ethical concerns and related strategies for designing with AI in healthcare"
+        },
+        {
+          "source_path": "generated/markdown_clean/P4YQIKJX.md",
+          "sha256": "sha256:a4f670474ec99e6c7d888653b43044fd775ebd6dde861dfe2e886c30a8cbf42d",
+          "source_url": "https://doi.org/10.3390/ai4010003",
+          "locator": "Repository cover, page 1, DOI",
+          "quote": "10.3390/ai4010003"
+        },
+        {
+          "source_path": "generated/markdown_clean/P4YQIKJX.md",
+          "sha256": "sha256:a4f670474ec99e6c7d888653b43044fd775ebd6dde861dfe2e886c30a8cbf42d",
+          "source_url": "https://doi.org/10.3390/ai4010003",
+          "locator": "Repository cover, page 1, document version",
+          "quote": "Publisher's PDF, also known as Version of Record (includes final page, issue and volume numbers)"
+        }
+      ]
+    },
+    "QI7MDZU4": {
+      "binding_mode": "existing_version",
+      "agent_id": "/root",
+      "model": "GPT-6",
+      "reviewed_at": "2026-09-21T12:21:44.243293+00:00",
+      "reason": "The unchanged article text supplies the registered title. The official ACL Anthology page supplies the exact title, DOI and direct PDF URL; committed acquisition and readiness provenance links that PDF byte hash to this exact Markdown hash. This records source identity only. Root independently rechecked the source hash and literal quotations at the recorded time; the preparation agent did not supply a reliable event timestamp. Prepared by /root/source_preparation using gpt-5.6-sol. Root model family is runtime-disclosed; its exact deployment identifier is unavailable.",
+      "bibliographic_identity": {
+        "title": "InsideOut: Measuring and Mitigating Insider–Outsider Bias in Interview Script Generation",
+        "doi": "10.18653/v1/2026.acl-long.1094"
+      },
+      "version_identity": {
+        "title": "InsideOut: Measuring and Mitigating Insider–Outsider Bias in Interview Script Generation",
+        "doi": "10.18653/v1/2026.acl-long.1094"
+      },
+      "publisher_evidence": {
+        "path": "corpus/source-acquisition/acl-publisher-bindings-2026-09-21/QI7MDZU4.json",
+        "sha256": "sha256:582df8ee6d51cb542826d8df205ceb27e1b4d5f530738118259316574de91ec5"
+      },
+      "binding": {
+        "record_id": "QI7MDZU4",
+        "work_id": "work:2707a834-08fe-5819-a92c-4afb47ca08c5",
+        "bibliographic_version_id": "version:6a3c613d-1545-5827-95d0-8ee4a95e5256",
+        "source_version_id": "version:6a3c613d-1545-5827-95d0-8ee4a95e5256",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:6a3c613d-1545-5827-95d0-8ee4a95e5256",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/c42b463f9ba115503a58.md",
+        "source_sha256": "sha256:e37a2f6c550e965d331c0b9f2b4d4a8bc316f17bc14b65bf14d54fc233e46f56"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/c42b463f9ba115503a58.md",
+          "sha256": "sha256:e37a2f6c550e965d331c0b9f2b4d4a8bc316f17bc14b65bf14d54fc233e46f56",
+          "source_url": "https://aclanthology.org/2026.acl-long.1094",
+          "locator": "Article heading",
+          "quote": "InsideOut: Measuring and Mitigating Insider-Outsider Bias in Interview Script Generation"
+        }
+      ]
+    },
+    "WK8IJUXQ": {
+      "binding_mode": "existing_version",
+      "agent_id": "/root",
+      "model": "GPT-6",
+      "reviewed_at": "2026-09-21T12:21:44.243293+00:00",
+      "reason": "The unchanged article text supplies the registered title. The official ACL Anthology page supplies the exact title, DOI and direct PDF URL; committed acquisition and readiness provenance links that PDF byte hash to this exact Markdown hash. This records source identity only. Root independently rechecked the source hash and literal quotations at the recorded time; the preparation agent did not supply a reliable event timestamp. Prepared by /root/source_preparation using gpt-5.6-sol. Root model family is runtime-disclosed; its exact deployment identifier is unavailable.",
+      "bibliographic_identity": {
+        "title": "Multi-Persona Thinking for Bias Mitigation in Large Language Models",
+        "doi": "10.18653/v1/2026.findings-acl.1389"
+      },
+      "version_identity": {
+        "title": "Multi-Persona Thinking for Bias Mitigation in Large Language Models",
+        "doi": "10.18653/v1/2026.findings-acl.1389"
+      },
+      "publisher_evidence": {
+        "path": "corpus/source-acquisition/acl-publisher-bindings-2026-09-21/WK8IJUXQ.json",
+        "sha256": "sha256:1614fe0aea68c0fd06449bd50b747ec0a5da19d1ad3458155af7b08db1f16281"
+      },
+      "binding": {
+        "record_id": "WK8IJUXQ",
+        "work_id": "work:d3e1b501-39ff-5531-a410-391d0ae61c77",
+        "bibliographic_version_id": "version:a2473563-f6d9-540f-b84f-8e146f0938dd",
+        "source_version_id": "version:a2473563-f6d9-540f-b84f-8e146f0938dd",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:a2473563-f6d9-540f-b84f-8e146f0938dd",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/d3bd00602e07cf40396c.md",
+        "source_sha256": "sha256:ea23c855efffddf5d5f539b80715dc9e11f45c296b3d54b25e435ed9eec91643"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/d3bd00602e07cf40396c.md",
+          "sha256": "sha256:ea23c855efffddf5d5f539b80715dc9e11f45c296b3d54b25e435ed9eec91643",
+          "source_url": "https://aclanthology.org/2026.findings-acl.1389",
+          "locator": "Article heading",
+          "quote": "Multi-Persona Thinking for Bias Mitigation in Large Language Models"
+        }
+      ]
+    },
+    "XPWCK65R": {
+      "binding_mode": "existing_version",
+      "agent_id": "/root",
+      "model": "GPT-6",
+      "reviewed_at": "2026-09-21T12:21:44.243293+00:00",
+      "reason": "The unchanged article text supplies the registered title. The official ACL Anthology page supplies the exact title, DOI and direct PDF URL; committed acquisition and readiness provenance links that PDF byte hash to this exact Markdown hash. This records source identity only. Root independently rechecked the source hash and literal quotations at the recorded time; the preparation agent did not supply a reliable event timestamp. Prepared by /root/source_preparation using gpt-5.6-sol. Root model family is runtime-disclosed; its exact deployment identifier is unavailable.",
+      "bibliographic_identity": {
+        "title": "Mitigating Cultural Bias in LLMs via Multi-Agent Cultural Debate",
+        "doi": "10.18653/v1/2026.findings-acl.418"
+      },
+      "version_identity": {
+        "title": "Mitigating Cultural Bias in LLMs via Multi-Agent Cultural Debate",
+        "doi": "10.18653/v1/2026.findings-acl.418"
+      },
+      "publisher_evidence": {
+        "path": "corpus/source-acquisition/acl-publisher-bindings-2026-09-21/XPWCK65R.json",
+        "sha256": "sha256:87611bce962095277a419734d58644514cc5fecbb6eaaff87984b2e8f29cb258"
+      },
+      "binding": {
+        "record_id": "XPWCK65R",
+        "work_id": "work:6c8a1072-fcca-5fbd-8611-08774ef0ad7f",
+        "bibliographic_version_id": "version:69fc5b26-5038-5dd2-9bef-f0403caae732",
+        "source_version_id": "version:69fc5b26-5038-5dd2-9bef-f0403caae732",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:69fc5b26-5038-5dd2-9bef-f0403caae732",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/a1c7e9db9a3dc6caff54.md",
+        "source_sha256": "sha256:0aa4087d1d261b8e702f3f8c42aff5f75647809fc338226ecd0bf3451dbbff96"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/a1c7e9db9a3dc6caff54.md",
+          "sha256": "sha256:0aa4087d1d261b8e702f3f8c42aff5f75647809fc338226ecd0bf3451dbbff96",
+          "source_url": "https://aclanthology.org/2026.findings-acl.418",
+          "locator": "Article heading",
+          "quote": "Mitigating Cultural Bias in LLMs via Multi-Agent Cultural Debate"
+        }
+      ]
+    },
+    "STQU6H42": {
+      "binding_mode": "existing_version",
+      "agent_id": "/root",
+      "model": "GPT-6",
+      "reviewed_at": "2026-09-21T12:21:44.243293+00:00",
+      "reason": "The unchanged article text supplies the registered title. The official ACL Anthology page supplies the exact title, DOI and direct PDF URL; committed acquisition and readiness provenance links that PDF byte hash to this exact Markdown hash. This records source identity only. Root independently rechecked the source hash and literal quotations at the recorded time; the preparation agent did not supply a reliable event timestamp. Prepared by /root/source_preparation using gpt-5.6-sol. Root model family is runtime-disclosed; its exact deployment identifier is unavailable.",
+      "bibliographic_identity": {
+        "title": "Persona-Assigned Large Language Models Exhibit Human-Like Motivated Reasoning",
+        "doi": "10.18653/v1/2026.findings-acl.585"
+      },
+      "version_identity": {
+        "title": "Persona-Assigned Large Language Models Exhibit Human-Like Motivated Reasoning",
+        "doi": "10.18653/v1/2026.findings-acl.585"
+      },
+      "publisher_evidence": {
+        "path": "corpus/source-acquisition/acl-publisher-bindings-2026-09-21/STQU6H42.json",
+        "sha256": "sha256:e0845e9e3fbb6fb546d878939d82fcb90e729371d0da58c97762127bcb098308"
+      },
+      "binding": {
+        "record_id": "STQU6H42",
+        "work_id": "work:0fb6cbb2-9d40-5815-9680-3e9f14f27e16",
+        "bibliographic_version_id": "version:0606f0c5-0aa6-5cae-b273-2b8619630c6f",
+        "source_version_id": "version:0606f0c5-0aa6-5cae-b273-2b8619630c6f",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:0606f0c5-0aa6-5cae-b273-2b8619630c6f",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/4dbe6aa9dfa229e88746.md",
+        "source_sha256": "sha256:6ebe509cb9eb59315760f1de2ad87b7b1b17ddc641640782c15895073dd7740f"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/4dbe6aa9dfa229e88746.md",
+          "sha256": "sha256:6ebe509cb9eb59315760f1de2ad87b7b1b17ddc641640782c15895073dd7740f",
+          "source_url": "https://aclanthology.org/2026.findings-acl.585",
+          "locator": "Article heading",
+          "quote": "Persona-Assigned Large Language Models Exhibit Human-Like Motivated Reasoning"
+        }
+      ]
+    },
+    "T57U8T2K": {
+      "binding_mode": "existing_version",
+      "agent_id": "/root",
+      "model": "GPT-6",
+      "reviewed_at": "2026-09-21T12:21:44.243293+00:00",
+      "reason": "The unchanged article text supplies the registered title. The official ACL Anthology page supplies the exact title, DOI and direct PDF URL; committed acquisition and readiness provenance links that PDF byte hash to this exact Markdown hash. This records source identity only. Root independently rechecked the source hash and literal quotations at the recorded time; the preparation agent did not supply a reliable event timestamp. Prepared by /root/source_preparation using gpt-5.6-sol. Root model family is runtime-disclosed; its exact deployment identifier is unavailable.",
+      "bibliographic_identity": {
+        "title": "I Am Not Them: Persistent Outgroup Bias in Large Language Models Arising from Social Identity Persona Setting",
+        "doi": "10.63317/2hn5gs6yh5m2"
+      },
+      "version_identity": {
+        "title": "I Am Not Them: Persistent Outgroup Bias in Large Language Models Arising from Social Identity Persona Setting",
+        "doi": "10.63317/2hn5gs6yh5m2"
+      },
+      "publisher_evidence": {
+        "path": "corpus/source-acquisition/acl-publisher-bindings-2026-09-21/T57U8T2K.json",
+        "sha256": "sha256:782d8e99ccd8c6f47d15236146d4f8f81f26c4ac977c100a83528e2d2dcdd39a"
+      },
+      "binding": {
+        "record_id": "T57U8T2K",
+        "work_id": "work:6eab81e9-e9ba-57eb-abc0-6c00d7061314",
+        "bibliographic_version_id": "version:7e635266-bdb5-5f56-b3a4-b3ac24907c1b",
+        "source_version_id": "version:7e635266-bdb5-5f56-b3a4-b3ac24907c1b",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:7e635266-bdb5-5f56-b3a4-b3ac24907c1b",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/f403809ad4503150093a.md",
+        "source_sha256": "sha256:452e783653dedcb51fbc1fe1c2966f6804a613d5846e5720844e0d6bd77ea192"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/f403809ad4503150093a.md",
+          "sha256": "sha256:452e783653dedcb51fbc1fe1c2966f6804a613d5846e5720844e0d6bd77ea192",
+          "source_url": "https://aclanthology.org/2026.lrec-1.217",
+          "locator": "Article heading",
+          "quote": "I Am Not Them: Persistent Outgroup Bias in Large Language Models Arising from Social Identity Persona Setting"
+        }
+      ]
+    },
+    "BHXDU7VM": {
+      "binding_mode": "existing_version",
+      "agent_id": "/root",
+      "model": "GPT-6",
+      "reviewed_at": "2026-09-21T12:21:44.243293+00:00",
+      "reason": "The unchanged NBER working paper text supplies the registered title and the report number derived from the registered official NBER paper URL. This records the exact existing working-paper source identity only. Root independently rechecked the source hash and literal quotations at the recorded time; the preparation agent did not supply a reliable event timestamp. Prepared by /root/source_preparation using gpt-5.6-sol. Root model family is runtime-disclosed; its exact deployment identifier is unavailable.",
+      "bibliographic_identity": {
+        "title": "How People Use ChatGPT",
+        "report_number": "34255",
+        "url": "https://www.nber.org/papers/w34255"
+      },
+      "version_identity": {
+        "title": "How People Use ChatGPT",
+        "report_number": "34255",
+        "url": "https://www.nber.org/papers/w34255"
+      },
+      "binding": {
+        "record_id": "BHXDU7VM",
+        "work_id": "work:f01ca4fe-7f9b-59f6-98d9-4e84559cd850",
+        "bibliographic_version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
+        "source_version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
+        "source_version_type": "working_paper",
+        "preferred_version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown_clean/BHXDU7VM.md",
+        "source_sha256": "sha256:49a17523925a989ed5903ded9a6fdd747176bfdc9355bfc80d0048246b364400"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/markdown_clean/BHXDU7VM.md",
+          "sha256": "sha256:49a17523925a989ed5903ded9a6fdd747176bfdc9355bfc80d0048246b364400",
+          "locator": "First-page series header",
+          "quote": "Working Paper 34255"
+        },
+        {
+          "source_path": "generated/markdown_clean/BHXDU7VM.md",
+          "sha256": "sha256:49a17523925a989ed5903ded9a6fdd747176bfdc9355bfc80d0048246b364400",
+          "locator": "First-page citation block",
+          "quote": "How People Use ChatGPT"
+        }
+      ]
+    },
+    "QUV5DQH3": {
+      "binding_mode": "existing_version",
+      "agent_id": "/root",
+      "model": "GPT-6",
+      "reviewed_at": "2026-09-21T12:23:41.617374+00:00",
+      "reason": "Root independently confirmed the exact article title and DOI through the current official SSIR publisher page and DOI redirect, also checked by /root/prism_assessment using gpt-5.6-sol. Evidence is recorded in corpus/source-acquisition/quv5dqh3-identity/identity.json. The unchanged Markdown article body contains the title; its synthetic metadata supplies the independently confirmed DOI. The original HTML acquisition bytes are unavailable and were not rehashed. Root checked this Markdown hash and literal evidence at the recorded time. This records identity only; it does not grant review authority. Initial binding prepared by /root/source_preparation using gpt-5.6-sol; its proposed future event timestamp was discarded.",
+      "bibliographic_identity": {
+        "title": "When Good Algorithms Go Sexist: Why and How to Advance AI Gender Equity",
+        "doi": "10.48558/a179-b138"
+      },
+      "version_identity": {
+        "title": "When Good Algorithms Go Sexist: Why and How to Advance AI Gender Equity",
+        "doi": "10.48558/a179-b138"
+      },
+      "binding": {
+        "record_id": "QUV5DQH3",
+        "work_id": "work:3dc3ced9-8261-5840-9d71-aa2dfc43af87",
+        "bibliographic_version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
+        "source_version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown_clean/QUV5DQH3.md",
+        "source_sha256": "sha256:e5f3106b938f608704fa0809264ce0914030730aec95910259145ff71c6c0293"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/markdown_clean/QUV5DQH3.md",
+          "sha256": "sha256:e5f3106b938f608704fa0809264ce0914030730aec95910259145ff71c6c0293",
+          "locator": "Article heading",
+          "quote": "When Good Algorithms Go Sexist: Why and How to Advance AI Gender Equity"
+        },
+        {
+          "source_path": "generated/markdown_clean/QUV5DQH3.md",
+          "sha256": "sha256:e5f3106b938f608704fa0809264ce0914030730aec95910259145ff71c6c0293",
+          "locator": "Verified source metadata",
+          "quote": "verified_doi: 10.48558/A179-B138"
+        }
+      ]
+    },
+    "7FEFMCBZ": {
+      "binding_mode": "existing_version",
+      "agent_id": "/root",
+      "model": "GPT-6",
+      "reviewed_at": "2026-09-21T12:21:44.243293+00:00",
+      "reason": "The unchanged original Markdown conversion contains the registered article title and DOI on the first page. The registered version type remains unknown; this records source identity without version or review-status promotion. Root independently rechecked the source hash and literal quotations at the recorded time; the preparation agent did not supply a reliable event timestamp. Prepared by /root/source_preparation using gpt-5.6-sol. Root model family is runtime-disclosed; its exact deployment identifier is unavailable.",
+      "bibliographic_identity": {
+        "title": "How child welfare workers reduce racial disparities in algorithmic decisions",
+        "doi": "10.1145/3491102.3501831"
+      },
+      "version_identity": {
+        "title": "How child welfare workers reduce racial disparities in algorithmic decisions",
+        "doi": "10.1145/3491102.3501831"
+      },
+      "binding": {
+        "record_id": "7FEFMCBZ",
+        "work_id": "work:fdf4e7e1-80c8-56bd-9e16-9031a45ff712",
+        "bibliographic_version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
+        "source_version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
+        "source_version_type": "unknown",
+        "preferred_version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown/7FEFMCBZ.md",
+        "source_sha256": "sha256:f3b71cdb2bd086d8249f95159d51482d091a3b9cdfe7c9587162b5d3c044e36d"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/markdown/7FEFMCBZ.md",
+          "sha256": "sha256:f3b71cdb2bd086d8249f95159d51482d091a3b9cdfe7c9587162b5d3c044e36d",
+          "locator": "Article heading and first-page DOI",
+          "quote": "How Child Welfare Workers Reduce Racial Disparities in Algorithmic Decisions\n\n## Hao-Fei Cheng ∗"
+        },
+        {
+          "source_path": "generated/markdown/7FEFMCBZ.md",
+          "sha256": "sha256:f3b71cdb2bd086d8249f95159d51482d091a3b9cdfe7c9587162b5d3c044e36d",
+          "locator": "First-page DOI",
+          "quote": "https://doi.org/10.1145/3491102.3501831"
+        }
+      ]
+    },
+    "R7V99ERA": {
+      "binding_mode": "existing_version",
+      "agent_id": "/root",
+      "model": "GPT-6",
+      "reviewed_at": "2026-09-21T12:21:44.243293+00:00",
+      "reason": "The unchanged original Markdown conversion contains the registered article title and DOI on the first page. The registered version type remains unknown; this records source identity without version or review-status promotion. Root independently rechecked the source hash and literal quotations at the recorded time; the preparation agent did not supply a reliable event timestamp. Prepared by /root/source_preparation using gpt-5.6-sol. Root model family is runtime-disclosed; its exact deployment identifier is unavailable.",
+      "bibliographic_identity": {
+        "title": "Examining risks of racial biases in NLP tools for child protective services",
+        "doi": "10.1145/3593013.3594094"
+      },
+      "version_identity": {
+        "title": "Examining risks of racial biases in NLP tools for child protective services",
+        "doi": "10.1145/3593013.3594094"
+      },
+      "binding": {
+        "record_id": "R7V99ERA",
+        "work_id": "work:365293c9-c8ea-54dd-9f65-2f37976f1a31",
+        "bibliographic_version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
+        "source_version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
+        "source_version_type": "unknown",
+        "preferred_version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown/R7V99ERA.md",
+        "source_sha256": "sha256:9555c30e0bac19f16810d62e566a4a7d6dd51c0e3e40b05b4a82d13fd69dd674"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/markdown/R7V99ERA.md",
+          "sha256": "sha256:9555c30e0bac19f16810d62e566a4a7d6dd51c0e3e40b05b4a82d13fd69dd674",
+          "locator": "Article heading",
+          "quote": "Examining risks of racial biases in NLP tools for child protective services"
+        },
+        {
+          "source_path": "generated/markdown/R7V99ERA.md",
+          "sha256": "sha256:9555c30e0bac19f16810d62e566a4a7d6dd51c0e3e40b05b4a82d13fd69dd674",
+          "locator": "First-page DOI",
+          "quote": "https://doi.org/10.1145/3593013.3594094"
+        }
+      ]
+    },
+    "978AV9KZ": {
+      "binding_mode": "existing_version",
+      "agent_id": "/root",
+      "model": "GPT-6",
+      "reviewed_at": "2026-09-21T12:21:44.243293+00:00",
+      "reason": "The unchanged official article projection contains the registered title and DOI. It is bound to the newer live Zotero record whose exact existing version carries that DOI; the historical DOI-less record remains unchanged and unbound. This records source identity only. Root independently rechecked the source hash and literal quotations at the recorded time; the preparation agent did not supply a reliable event timestamp. Prepared by /root/source_preparation using gpt-5.6-sol. Root model family is runtime-disclosed; its exact deployment identifier is unavailable.",
+      "bibliographic_identity": {
+        "title": "Defeating Nondeterminism in LLM Inference",
+        "doi": "10.64434/tml.20250910"
+      },
+      "version_identity": {
+        "title": "Defeating Nondeterminism in LLM Inference",
+        "doi": "10.64434/tml.20250910"
+      },
+      "binding": {
+        "record_id": "978AV9KZ",
+        "work_id": "work:4842d83e-8ed6-5633-b241-febb6e9c710f",
+        "bibliographic_version_id": "version:289ac267-2c86-54d2-a7ea-80ab49a289f3",
+        "source_version_id": "version:289ac267-2c86-54d2-a7ea-80ab49a289f3",
+        "source_version_type": "unknown",
+        "preferred_version_id": "version:289ac267-2c86-54d2-a7ea-80ab49a289f3",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown_clean/FTJM5R8N.md",
+        "source_sha256": "sha256:06cb8ae6cbf58054af2449750c5eb0512a425262cd1e77be1ff27a2fbc102fd8"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/markdown_clean/FTJM5R8N.md",
+          "sha256": "sha256:06cb8ae6cbf58054af2449750c5eb0512a425262cd1e77be1ff27a2fbc102fd8",
+          "source_url": "https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference",
+          "locator": "Article BibTeX citation",
+          "quote": "title = {Defeating Nondeterminism in LLM Inference}"
+        },
+        {
+          "source_path": "generated/markdown_clean/FTJM5R8N.md",
+          "sha256": "sha256:06cb8ae6cbf58054af2449750c5eb0512a425262cd1e77be1ff27a2fbc102fd8",
+          "source_url": "https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference",
+          "locator": "Article BibTeX citation",
+          "quote": "doi = {10.64434/tml.20250910}"
+        }
+      ]
     }
   }
 }

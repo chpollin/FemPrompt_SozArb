@@ -1,0 +1,53 @@
+{
+  "schema": "femprompt-publisher-source-binding-evidence/0.1",
+  "record_id": "WK8IJUXQ",
+  "captured_at": "2026-09-21",
+  "publisher": "ACL Anthology",
+  "landing_page_url": "https://aclanthology.org/2026.findings-acl.1389/",
+  "captured_page_path": "corpus/source-acquisition/acl-publisher-bindings-2026-09-21/WK8IJUXQ.metadata.txt",
+  "captured_page_sha256": "sha256:1ce4decb9bf03d36176827b74a3c0bc84b8c831d06306d7ef496847e956a2a3d",
+  "publisher_metadata": {
+    "citation_title": "Multi-Persona Thinking for Bias Mitigation in Large Language Models",
+    "citation_doi": "10.18653/v1/2026.findings-acl.1389",
+    "citation_pdf_url": "https://aclanthology.org/2026.findings-acl.1389.pdf"
+  },
+  "acquisition_pdf": {
+    "path": "generated/pdfs/audit-2026-09-21/d3bd00602e07cf40396c.pdf",
+    "sha256": "sha256:03ea7e0a3372129c1259b07f8aa866b4432d216651df980bcac43b99c55efc11"
+  },
+  "publisher_pdf_download_verification": {
+    "url": "https://aclanthology.org/2026.findings-acl.1389.pdf",
+    "sha256": "sha256:03ea7e0a3372129c1259b07f8aa866b4432d216651df980bcac43b99c55efc11",
+    "matches_acquisition_pdf_bytes": true
+  },
+  "readiness_markdown": {
+    "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/d3bd00602e07cf40396c.md",
+    "sha256": "sha256:ea23c855efffddf5d5f539b80715dc9e11f45c296b3d54b25e435ed9eec91643",
+    "declared_readiness_sha256": "sha256:ea23c855efffddf5d5f539b80715dc9e11f45c296b3d54b25e435ed9eec91643",
+    "matches_declared_readiness_hash": true
+  },
+  "version_evidence": {
+    "status": "publisher_metadata_and_exact_pdf_bytes_confirmed",
+    "version_type": "version_of_record",
+    "basis": "The official ACL Anthology landing page identifies one proceedings item by exact citation title and DOI and supplies its direct PDF URL. The PDF downloaded from that URL is byte-identical to the locally acquired PDF from which the unchanged readiness Markdown representation was prepared.",
+    "authority_limit": "Source identity and publication-version evidence only; no peer-review, screening, AI-review or human-verification status is asserted."
+  },
+  "registered_identity": {
+    "work_id": "work:d3e1b501-39ff-5531-a410-391d0ae61c77",
+    "bibliographic_version_id": "version:a2473563-f6d9-540f-b84f-8e146f0938dd",
+    "title": "Multi-Persona Thinking for Bias Mitigation in Large Language Models",
+    "doi": "10.18653/v1/2026.findings-acl.1389"
+  },
+  "verification": {
+    "citation_title_exact_match": true,
+    "citation_doi_exact_match": true,
+    "citation_pdf_url_is_direct_https_pdf": true,
+    "publisher_pdf_bytes_match_acquisition_pdf": true,
+    "readiness_markdown_hash_matches": true
+  },
+  "raw_page_capture": {
+    "url": "https://aclanthology.org/2026.findings-acl.1389/",
+    "local_path": "corpus/source-acquisition/acl-publisher-bindings-2026-09-21/WK8IJUXQ.html",
+    "sha256": "sha256:319bc9f9bc30d2649cd44db34a441ffd07ef0f9d4dd87a64f74293d5a27b57fb"
+  }
+}

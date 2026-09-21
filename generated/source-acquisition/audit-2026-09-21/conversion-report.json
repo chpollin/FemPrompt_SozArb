@@ -1,0 +1,124 @@
+{
+  "timestamp": "2026-09-21T13:14:24.298984",
+  "input_dir": "generated\\pdfs\\audit-2026-09-21-changed-hash",
+  "output_dir": "generated\\source-acquisition\\audit-2026-09-21\\markdown-new-bytes",
+  "total_files": 4,
+  "converted": 4,
+  "skipped": 0,
+  "failed": 0,
+  "low_quality": 0,
+  "files": [
+    {
+      "input": "136b6db72d8a7b8d390c.pdf",
+      "output": "136b6db72d8a7b8d390c.md",
+      "file_hash": "8a714977d1f3d61cc954d0666263209b",
+      "success": true,
+      "duration_seconds": 31.95,
+      "metrics": {
+        "total_chars": 84418,
+        "total_lines": 477,
+        "total_words": 8314,
+        "headings": 37,
+        "heading_levels": {
+          "h2": 37
+        },
+        "tables": 3,
+        "lists": 25,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 215,
+        "avg_line_length": 320.4
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "5fa4fb41e396f11b2c6e.pdf",
+      "output": "5fa4fb41e396f11b2c6e.md",
+      "file_hash": "986c38205120fc8fb07f202233c90a7f",
+      "success": true,
+      "duration_seconds": 26.93,
+      "metrics": {
+        "total_chars": 76546,
+        "total_lines": 527,
+        "total_words": 10005,
+        "headings": 33,
+        "heading_levels": {
+          "h2": 33
+        },
+        "tables": 4,
+        "lists": 37,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 231,
+        "avg_line_length": 256.8
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "96199ea06371c4cdbed4.pdf",
+      "output": "96199ea06371c4cdbed4.md",
+      "file_hash": "74d12c285c741ab82c868f9f9a399247",
+      "success": true,
+      "duration_seconds": 52.08,
+      "metrics": {
+        "total_chars": 202206,
+        "total_lines": 848,
+        "total_words": 21535,
+        "headings": 34,
+        "heading_levels": {
+          "h2": 34
+        },
+        "tables": 22,
+        "lists": 81,
+        "figures": 0,
+        "code_blocks": 5,
+        "links": 0,
+        "empty_lines": 342,
+        "avg_line_length": 398.0
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "e9fb8b7679eaf1023485.pdf",
+      "output": "e9fb8b7679eaf1023485.md",
+      "file_hash": "acd52bd3af0aaf92f25990f8ac4e523d",
+      "success": true,
+      "duration_seconds": 17.17,
+      "metrics": {
+        "total_chars": 68359,
+        "total_lines": 445,
+        "total_words": 9632,
+        "headings": 27,
+        "heading_levels": {
+          "h2": 27
+        },
+        "tables": 0,
+        "lists": 43,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 220,
+        "avg_line_length": 301.8
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    }
+  ]
+}

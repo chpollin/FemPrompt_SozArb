@@ -27,6 +27,8 @@ from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
+from src.analysis.metadata_corrections import apply_metadata_corrections
+
 REPO = Path(__file__).resolve().parents[2]
 ROUND2_DIR = REPO / "corpus" / "deep-research" / "round2"
 DEFAULT_OUTPUT = REPO / "generated" / "round2-intake.json"
@@ -164,6 +166,16 @@ def _round1_identities(repo: Path) -> tuple[set[str], set[str]]:
     return dois, titles
 
 
+def _source_reviews(repo: Path) -> dict[str, dict[str, Any]]:
+    path = repo / "generated" / "round2-agent-review" / "sources.json"
+    if not path.is_file():
+        return {}
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    if payload.get("schema") != "femprompt-round2-source-review/0.1":
+        raise ValueError(f"unsupported round-two source-review schema: {path}")
+    return {record["input_work_id"]: record for record in payload.get("records", [])}
+
+
 def build_manifest(repo: Path = REPO) -> dict[str, Any]:
     """Return the deterministic intake snapshot for the committed repository."""
     lane_records: list[tuple[str, str, dict[str, list[str]]]] = []
@@ -197,8 +209,11 @@ def build_manifest(repo: Path = REPO) -> dict[str, Any]:
 
     zotero_path = repo / "corpus" / "zotero_export.json"
     mapping_path = repo / "corpus" / "source_tool_mapping.json"
-    zotero_items = json.loads(zotero_path.read_text(encoding="utf-8"))
+    zotero_items = apply_metadata_corrections(
+        repo, json.loads(zotero_path.read_text(encoding="utf-8"))
+    )
     source_mapping = json.loads(mapping_path.read_text(encoding="utf-8"))
+    source_reviews = _source_reviews(repo)
     committed_keys = {item.get("key") for item in zotero_items if item.get("key")}
     committed_by_doi: dict[str, list[str]] = defaultdict(list)
     committed_by_title: dict[str, list[str]] = defaultdict(list)
@@ -214,6 +229,8 @@ def build_manifest(repo: Path = REPO) -> dict[str, Any]:
             committed_by_title[title].append(key)
 
     existing_corpus_matches = 0
+    curated_zotero_matches = 0
+    ambiguous_zotero_matches = 0
     for work in works:
         doi_matches = committed_by_doi.get(work["doi"], []) if work["doi"] else []
         title_matches = committed_by_title.get(work["normalised_title"], [])
@@ -224,6 +241,30 @@ def build_manifest(repo: Path = REPO) -> dict[str, Any]:
         )
         if candidate_keys:
             existing_corpus_matches += 1
+        if len(candidate_keys) == 1:
+            curated_zotero_matches += 1
+            work["zotero_key"] = candidate_keys[0]
+            work["intake_status"] = "curated_zotero_identity_present"
+            work["screening_blockers"] = [
+                "paper_source_not_addressable_by_canonical_id"
+            ]
+        elif len(candidate_keys) > 1:
+            ambiguous_zotero_matches += 1
+            work["intake_status"] = "ambiguous_zotero_candidates"
+            work["screening_blockers"] = [
+                "multiple_curated_zotero_candidates_require_explicit_resolution",
+                "paper_source_not_addressable_by_canonical_id",
+            ]
+        review = source_reviews.get(work["work_id"])
+        work["source_review"] = (
+            {
+                "status": review.get("source_status"),
+                "reference": "generated/round2-agent-review/sources.json",
+                "authority": "source_discovery_only",
+            }
+            if review
+            else None
+        )
 
     mapped_keys = source_mapping.get("source_tool_mapping", {})
     mapping_only = {
@@ -260,6 +301,8 @@ def build_manifest(repo: Path = REPO) -> dict[str, Any]:
             "candidate_works_with_existing_corpus_match": existing_corpus_matches,
             "candidate_works_absent_from_committed_export": len(works)
             - existing_corpus_matches,
+            "candidate_works_with_curated_zotero_key": curated_zotero_matches,
+            "candidate_works_with_ambiguous_zotero_candidates": ambiguous_zotero_matches,
             "round2_zotero_keys_missing_from_committed_export": len(mapping_only),
             "screening_ready_works": 0,
         },
@@ -275,11 +318,9 @@ def build_manifest(repo: Path = REPO) -> dict[str, Any]:
         },
         "gate": {
             "status": "blocked",
-            "reason": "round2_candidates_absent_from_committed_corpus_projection",
+            "reason": "paper_sources_not_reviewed_and_addressable_by_canonical_id",
             "required_actions": [
-                "import_l5_ris_into_zotero_and_preserve_lane_attribution",
-                "export_the_curated_zotero_library_to_corpus/zotero_export.json",
-                "regenerate_corpus/papers_metadata.csv_and_source_tool_mapping.json",
+                "resolve_multiple_zotero_candidates_without_implicit_duplicate_selection",
                 "acquire_and_review_each_round2_paper_markdown_source",
                 "rerun_this_manifest_until_screening_ready_works_equals_24",
             ],
@@ -322,9 +363,8 @@ def main() -> None:
         f"{counts['distinct_candidate_works']} distinct round-two works"
     )
     print(
-        "WARNUNG: productive screening remains blocked; "
-        f"{counts['round2_zotero_keys_missing_from_committed_export']} mapped Zotero keys "
-        "are absent from the committed export and L5 intake is pending",
+        "WARNUNG: productive screening remains blocked; reviewed Paper sources are "
+        "not yet addressable by the curated Zotero identity",
         file=sys.stderr,
     )
 

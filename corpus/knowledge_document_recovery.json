@@ -1,0 +1,515 @@
+{
+  "schema": "femprompt-knowledge-document-recovery/1.0",
+  "bindings": {
+    "3K9RDWLY": {
+      "source_file": "Pinski_2023_AI_Literacy_-_Towards_Measuring_Human_Competency.md",
+      "source_path": "docs/data/fulltext/3K9RDWLY.md",
+      "source_sha256": "sha256:b3eca05ee097e5435687e103a43a95b666ee796ed0b756a7de1286463a85d179",
+      "knowledge_source_path": "generated/vault/Papers/AI Literacy - Towards Measuring Human Competency in Artificial Intelligence.md",
+      "knowledge_source_sha256": "sha256:09fb749b0f2537dc69b400bef5255d4c34c4d50da8dc94ca7e8892fa0c78f0b1",
+      "bibliographic_evidence": {
+        "title": "AI Literacy - Towards Measuring Human Competency in Artificial Intelligence",
+        "doi": "10.24251/HICSS.2023.021",
+        "knowledge_title": "AI Literacy - Towards Measuring Human Competency in Artificial Intelligence"
+      },
+      "identity_basis": "manifest-source-file+doi+embedded-distillate",
+      "authority": {
+        "status": "historical_unreviewed",
+        "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      }
+    },
+    "3XMBE43Z": {
+      "source_file": "Voutyrakou_2025_Algorithmic_Governance_Gender_Bias_in.md",
+      "source_path": "docs/data/fulltext/3XMBE43Z.md",
+      "source_sha256": "sha256:0786e31d31575f8e54e1530e888907a31d730470e63e335c44ea3ac8405bba14",
+      "knowledge_source_path": "generated/vault/Papers/Algorithmic Governance- Gender Bias in AI-Generated Policymaking-.md",
+      "knowledge_source_sha256": "sha256:4b672ebc852c46e43503be1e3774900c8bcec0a9478d079b5c0a54fe62b6ead2",
+      "bibliographic_evidence": {
+        "title": "Algorithmic Governance: Gender Bias in AI-Generated Policymaking?",
+        "doi": "10.1007/s44230-025-00109-2",
+        "knowledge_title": "Algorithmic Governance: Gender Bias in AI-Generated Policymaking?"
+      },
+      "identity_basis": "manifest-source-file+doi+embedded-distillate",
+      "authority": {
+        "status": "historical_unreviewed",
+        "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      }
+    },
+    "8MDXCTA6": {
+      "source_file": "Hall_2024_A_systematic_review_of_sophisticated_predictive.md",
+      "source_path": "docs/data/fulltext/8MDXCTA6.md",
+      "source_sha256": "sha256:53276e3d2ca3c9bb698dc8aa9a424896355082ef048dbb8b260ec4949b984340",
+      "knowledge_source_path": "generated/vault/Papers/A systematic review of sophisticated predictive and prescriptive analytics in child welfare- Accurac.md",
+      "knowledge_source_sha256": "sha256:a9a4d59cca71835f215a5969e9ae3c21aed4291605ba8fbd3def7ccb17712b71",
+      "bibliographic_evidence": {
+        "title": "A systematic review of sophisticated predictive and prescriptive analytics in child welfare: Accuracy, equity, and bias",
+        "doi": "10.1007/s10560-023-00931-2",
+        "knowledge_title": "A systematic review of sophisticated predictive and prescriptive analytics in child welfare: Accuracy, equity, and bias"
+      },
+      "identity_basis": "manifest-source-file+doi+embedded-distillate",
+      "authority": {
+        "status": "historical_unreviewed",
+        "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      }
+    },
+    "8MRNK6FX": {
+      "source_file": "Unknown_2024_Research.md",
+      "source_path": "docs/data/fulltext/8MRNK6FX.md",
+      "source_sha256": "sha256:e6f8a59a5dd2f43422eb7f7362efa97e1578f147361128a4027d92a2945c6388",
+      "knowledge_source_path": "generated/vault/Papers/Research on the application risks and countermeasures of ChatGPT generative artificial intelligence .md",
+      "knowledge_source_sha256": "sha256:2b64171c76461498f1eaffdc2407b1295b4f17117fe8ba0d7d92ce955703e984",
+      "bibliographic_evidence": {
+        "title": "Research on the application risks and countermeasures of ChatGPT generative artificial intelligence in social work",
+        "doi": "10.23977/jaip.2024.070222",
+        "knowledge_title": "Research on the application risks and countermeasures of ChatGPT generative artificial intelligence in social work"
+      },
+      "identity_basis": "manifest-source-file+doi+embedded-distillate",
+      "authority": {
+        "status": "historical_unreviewed",
+        "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      }
+    },
+    "AIZGTQKG": {
+      "source_file": "Shah_2025_Gender_Bias_in_Artificial_Intelligence_Empowering.md",
+      "source_path": "docs/data/fulltext/AIZGTQKG.md",
+      "source_sha256": "sha256:c158b2a4924dcce1a3e026a18c9f0d6c52a6db53d9b379f1e3a3c4fd30717153",
+      "knowledge_source_path": "generated/vault/Papers/Gender Bias in Artificial Intelligence- Empowering Women Through Digital Literacy.md",
+      "knowledge_source_sha256": "sha256:bc852e752d76929f9e67af78219c8d2ca03f85ec13afaf4ecc26628a50b6ec50",
+      "bibliographic_evidence": {
+        "title": "Gender Bias in Artificial Intelligence: Empowering Women Through Digital Literacy",
+        "doi": "10.70389/PJAI.1000088",
+        "knowledge_title": "Gender bias in artificial intelligence: Empowering women through digital literacy"
+      },
+      "identity_basis": "manifest-source-file+doi+embedded-distillate",
+      "authority": {
+        "status": "historical_unreviewed",
+        "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      }
+    },
+    "AXEIVEW3": {
+      "source_file": "Lanzetta_2024_Artificial_Intelligence_Competence_Needs_for.md",
+      "source_path": "docs/data/fulltext/AXEIVEW3.md",
+      "source_sha256": "sha256:586d33a2b450cbe15573a986c4ac25bbf34d74e0c8ff09ec32f4f8df204377a4",
+      "knowledge_source_path": "generated/distilled/Lanzetta_2024_Artificial_Intelligence_Competence_Needs_for.md",
+      "knowledge_source_sha256": "sha256:8b292b6897af3b8017f3a926a4d7c830f547de0db8961648343d0f467be3d4a9",
+      "bibliographic_evidence": {
+        "title": "Artificial Intelligence Competence Needs for Youth Workers",
+        "knowledge_title": "Artificial Intelligence Competence Needs for Youth Workers",
+        "year": 2024
+      },
+      "identity_basis": "manifest-source-file+semantic-title+year",
+      "authority": {
+        "status": "historical_unreviewed",
+        "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      }
+    },
+    "CF6T2RD7": {
+      "source_file": "Reamer_2023_Artificial_Intelligence_in_Social_Work_Emerging.md",
+      "source_path": "docs/data/fulltext/CF6T2RD7.md",
+      "source_sha256": "sha256:3c2b9d392413ac7e031207954e2d2824d4beccbdf348d95b916880d3c83e0b1c",
+      "knowledge_source_path": "generated/distilled/Reamer_2023_Artificial_Intelligence_in_Social_Work_Emerging.md",
+      "knowledge_source_sha256": "sha256:41534a439db0aa5baaa563891b72b0fc49dcdcee2c0a96463df9f40495a02b4c",
+      "bibliographic_evidence": {
+        "title": "Artificial intelligence in social work: Emerging ethical issues",
+        "knowledge_title": "Artificial Intelligence in Social Work: Emerging Ethical Issues",
+        "year": 2023
+      },
+      "identity_basis": "manifest-source-file+semantic-title+year",
+      "authority": {
+        "status": "historical_unreviewed",
+        "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      }
+    },
+    "CY5IMM6G": {
+      "source_file": "Ahn_2025_Artificial_Intelligence_(AI)_literacy_for_social.md",
+      "source_path": "docs/data/fulltext/CY5IMM6G.md",
+      "source_sha256": "sha256:8c5d18b2ccdeefea740dbdb2ff8bad2416c3996b75b28fa868e76a9b4a12ef53",
+      "knowledge_source_path": "generated/vault/Papers/Artificial Intelligence (AI) Literacy for Social Work- Implications for Core Competencies.md",
+      "knowledge_source_sha256": "sha256:25d869c14cc23560c3f9e045850f9dab8ea00e15944f4c3e44cd1a708588fe63",
+      "bibliographic_evidence": {
+        "title": "Artificial Intelligence (AI) literacy for social work: Implications for core competencies",
+        "doi": "10.1086/735187",
+        "knowledge_title": "Artificial Intelligence (AI) literacy for social work: Implications for core competencies"
+      },
+      "identity_basis": "manifest-source-file+doi+embedded-distillate",
+      "authority": {
+        "status": "historical_unreviewed",
+        "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      }
+    },
+    "DJEVSR8D": {
+      "source_file": "Ahrweiler_2025_AI_FORA_–_Artificial_Intelligence_for_Assessment.md",
+      "source_path": "docs/data/fulltext/DJEVSR8D.md",
+      "source_sha256": "sha256:b5d04b4836a4162bfaf9f786fdc60d2ddd47c73b93024080b950d34f19ea1e74",
+      "knowledge_source_path": "generated/vault/Papers/AI FORA – Artificial Intelligence for Assessment- Fairness bei der Verteilung öffentlicher sozialer .md",
+      "knowledge_source_sha256": "sha256:86f09f4b185df3dbcdfca42b8d2ed3bb20d5a432381f718bf26e959eccf6f4c1",
+      "bibliographic_evidence": {
+        "title": "AI FORA – Artificial Intelligence for Assessment: Fairness bei der Verteilung öffentlicher sozialer Leistungen",
+        "year": "2025",
+        "knowledge_title": "AI FORA – Artificial Intelligence for Assessment: Fairness bei der Verteilung öffentlicher sozialer Leistungen"
+      },
+      "identity_basis": "manifest-source-file+title+year+embedded-distillate",
+      "authority": {
+        "status": "historical_unreviewed",
+        "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      }
+    },
+    "EQV4DNQR": {
+      "source_file": "UNESCO_2024_Bias_against_women_and_girls_in_large_language.md",
+      "source_path": "docs/data/fulltext/EQV4DNQR.md",
+      "source_sha256": "sha256:310b748342f2e2e1baf84e6a0d43843450927847b0cd595402458517c2ef024f",
+      "knowledge_source_path": "generated/vault/Papers/Challenging systematic prejudices- an Investigation into Gender Bias in Large Language Models.md",
+      "knowledge_source_sha256": "sha256:618ec1643cd9db66757e35684b6ba87c3dfa0f104d5bcc4eb100f33d5a121424",
+      "bibliographic_evidence": {
+        "title": "Challenging systematic prejudices: an Investigation into Gender Bias in Large Language Models",
+        "year": "2024",
+        "knowledge_title": "Challenging systematic prejudices: an Investigation into Gender Bias in Large Language Models"
+      },
+      "identity_basis": "manifest-source-file+title+year+embedded-distillate",
+      "authority": {
+        "status": "historical_unreviewed",
+        "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      }
+    },
+    "EXVG7MQR": {
+      "source_file": "Reamer_2023_Artificial_Intelligence_in_Social_Work_Emerging.md",
+      "source_path": "docs/data/fulltext/EXVG7MQR.md",
+      "source_sha256": "sha256:3c2b9d392413ac7e031207954e2d2824d4beccbdf348d95b916880d3c83e0b1c",
+      "knowledge_source_path": "generated/distilled/Reamer_2023_Artificial_Intelligence_in_Social_Work_Emerging.md",
+      "knowledge_source_sha256": "sha256:41534a439db0aa5baaa563891b72b0fc49dcdcee2c0a96463df9f40495a02b4c",
+      "bibliographic_evidence": {
+        "title": "Artificial intelligence in social work: Emerging ethical issues",
+        "knowledge_title": "Artificial Intelligence in Social Work: Emerging Ethical Issues",
+        "year": 2023
+      },
+      "identity_basis": "manifest-source-file+semantic-title+year",
+      "authority": {
+        "status": "historical_unreviewed",
+        "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      }
+    },
+    "FJQ6XYHH": {
+      "source_file": "Kong_2025_Artificial_Intelligence_(AI)_literacy_–_an.md",
+      "source_path": "docs/data/fulltext/FJQ6XYHH.md",
+      "source_sha256": "sha256:bd520801a628df96140f2cbd81813b748cc3160e93f653c66be97d53a98e94b9",
+      "knowledge_source_path": "generated/vault/Papers/Artificial Intelligence (AI) literacy – an argument for AI literacy in education.md",
+      "knowledge_source_sha256": "sha256:c16eb5087a6059c5c891d4ac842a443440c803e0f8cb4667285124ec98a7cae2",
+      "bibliographic_evidence": {
+        "title": "Artificial Intelligence (AI) literacy – an argument for AI literacy in education",
+        "doi": "10.1080/14703297.2024.2332744",
+        "knowledge_title": "Artificial Intelligence (AI) literacy – an argument for AI literacy in education"
+      },
+      "identity_basis": "manifest-source-file+doi+embedded-distillate",
+      "authority": {
+        "status": "historical_unreviewed",
+        "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      }
+    },
+    "HN7KKNYV": {
+      "source_file": "Reamer_2023_Artificial_Intelligence_in_Social_Work_Emerging.md",
+      "source_path": "docs/data/fulltext/HN7KKNYV.md",
+      "source_sha256": "sha256:3c2b9d392413ac7e031207954e2d2824d4beccbdf348d95b916880d3c83e0b1c",
+      "knowledge_source_path": "generated/distilled/Reamer_2023_Artificial_Intelligence_in_Social_Work_Emerging.md",
+      "knowledge_source_sha256": "sha256:41534a439db0aa5baaa563891b72b0fc49dcdcee2c0a96463df9f40495a02b4c",
+      "bibliographic_evidence": {
+        "title": "Artificial intelligence in social work: Emerging ethical issues",
+        "knowledge_title": "Artificial Intelligence in Social Work: Emerging Ethical Issues",
+        "year": 2023
+      },
+      "identity_basis": "manifest-source-file+semantic-title+year",
+      "authority": {
+        "status": "historical_unreviewed",
+        "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      }
+    },
+    "IUN7Z56I": {
+      "source_file": "Reamer_2023_Artificial_Intelligence_in_Social_Work_Emerging.md",
+      "source_path": "docs/data/fulltext/IUN7Z56I.md",
+      "source_sha256": "sha256:3c2b9d392413ac7e031207954e2d2824d4beccbdf348d95b916880d3c83e0b1c",
+      "knowledge_source_path": "generated/distilled/Reamer_2023_Artificial_Intelligence_in_Social_Work_Emerging.md",
+      "knowledge_source_sha256": "sha256:41534a439db0aa5baaa563891b72b0fc49dcdcee2c0a96463df9f40495a02b4c",
+      "bibliographic_evidence": {
+        "title": "Artificial intelligence in social work: Emerging ethical issues",
+        "knowledge_title": "Artificial Intelligence in Social Work: Emerging Ethical Issues",
+        "year": 2023
+      },
+      "identity_basis": "manifest-source-file+semantic-title+year",
+      "authority": {
+        "status": "historical_unreviewed",
+        "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      }
+    },
+    "J5EF9W6M": {
+      "source_file": "Project_2024_Intersectionality.md",
+      "source_path": "docs/data/fulltext/J5EF9W6M.md",
+      "source_sha256": "sha256:0e68f50a12c1b96a6d1d874f5c34163bcae55882bcf7f620ee6f4eb42e109cee",
+      "knowledge_source_path": "generated/vault/Papers/AI & Intersectionality- A Toolkit For Fairness & Inclusion.md",
+      "knowledge_source_sha256": "sha256:d6c4e09af033bd820bcace7b8413725121cc47ca301a5b43cac6ed0325c60bad",
+      "bibliographic_evidence": {
+        "title": "AI & Intersectionality: A Toolkit For Fairness & Inclusion",
+        "year": "2024",
+        "knowledge_title": "AI & Intersectionality: A Toolkit For Fairness & Inclusion"
+      },
+      "identity_basis": "manifest-source-file+title+year+embedded-distillate",
+      "authority": {
+        "status": "historical_unreviewed",
+        "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      }
+    },
+    "L6PH7GDL": {
+      "source_file": "Linnemann_2025_Künstliche_Intelligenz_in_der_Sozialen_Arbeit.md",
+      "source_path": "docs/data/fulltext/L6PH7GDL.md",
+      "source_sha256": "sha256:1f1fc4eb12a881f8eee1975285da07a2cdbe5ff881601e60432aad26f2e75552",
+      "knowledge_source_path": "generated/vault/Papers/Künstliche Intelligenz in der Sozialen Arbeit- Grundlagen für Theorie und Praxis.md",
+      "knowledge_source_sha256": "sha256:6ee2b5b364c1036e32162d43bb9dab9b0c79eaaa72279b46390d16bfd3dd56fb",
+      "bibliographic_evidence": {
+        "title": "Künstliche Intelligenz in der Sozialen Arbeit: Grundlagen für Theorie und Praxis",
+        "year": "2025",
+        "knowledge_title": "Künstliche Intelligenz in der Sozialen Arbeit: Grundlagen für Theorie und Praxis"
+      },
+      "identity_basis": "manifest-source-file+title+year+embedded-distillate",
+      "authority": {
+        "status": "historical_unreviewed",
+        "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      }
+    },
+    "MA3LBJS6": {
+      "source_file": "Linnemann_2023_Bedeutung_von_Künstlicher_Intelligenz_in_der.md",
+      "source_path": "docs/data/fulltext/MA3LBJS6.md",
+      "source_sha256": "sha256:29d119217981f46b3af7a8a64d29740c26e4f094f84b55d4ef57819d27534fff",
+      "knowledge_source_path": "generated/vault/Papers/Bedeutung von Künstlicher Intelligenz in der Sozialen Arbeit- Eine exemplarische arbeitsfeldübergrei.md",
+      "knowledge_source_sha256": "sha256:473ead070fc670814f3bb13da234d2e04464d6532bb5e062b02ddf60d79273a4",
+      "bibliographic_evidence": {
+        "title": "Bedeutung von Künstlicher Intelligenz in der Sozialen Arbeit: Eine exemplarische arbeitsfeldübergreifende Betrachtung des Natural Language Processing (NLP)",
+        "doi": "10.1007/s12592-023-00455-7",
+        "knowledge_title": "Bedeutung von Künstlicher Intelligenz in der Sozialen Arbeit: Eine exemplarische arbeitsfeldübergreifende Betrachtung des Natural Language Processing (NLP)"
+      },
+      "identity_basis": "manifest-source-file+doi+embedded-distillate",
+      "authority": {
+        "status": "historical_unreviewed",
+        "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      }
+    },
+    "QD2CXE9I": {
+      "source_file": "An_2025_Measuring_gender_and_racial_biases_in_large.md",
+      "source_path": "docs/data/fulltext/QD2CXE9I.md",
+      "source_sha256": "sha256:50297a7aaa93e0e457903b3cec03033a714df0c77378548ee260c378576ea728",
+      "knowledge_source_path": "generated/vault/Papers/Measuring gender and racial biases in large language models- Intersectional evidence from automated .md",
+      "knowledge_source_sha256": "sha256:90f57106c9122eb87b4d34f13974a8207f9e823952eeb042d51dc6654f21108d",
+      "bibliographic_evidence": {
+        "title": "Measuring gender and racial biases in large language models: Intersectional evidence from automated resume evaluation",
+        "doi": "10.1093/pnasnexus/pgaf089",
+        "knowledge_title": "Measuring gender and racial biases in large language models"
+      },
+      "identity_basis": "manifest-source-file+doi+embedded-distillate",
+      "authority": {
+        "status": "historical_unreviewed",
+        "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      }
+    },
+    "QVNJIQJG": {
+      "source_file": "Strauß_2024_CAIL_–_Critical_AI_Literacy_Kritische.md",
+      "source_path": "docs/data/fulltext/QVNJIQJG.md",
+      "source_sha256": "sha256:fb1d609c42370087d371d6ae893a51b3ab6e31a0fa4a6704ef403339e7d3371e",
+      "knowledge_source_path": "generated/vault/Papers/CAIL – Critical AI Literacy- Kritische Technikkompetenz für konstruktiven Umgang mit KI-basierter Te.md",
+      "knowledge_source_sha256": "sha256:76802166f6cff179381ab992b6fee354826fcd27595c37ae35a4e3b4c33bb291",
+      "bibliographic_evidence": {
+        "title": "CAIL – Critical AI Literacy: Kritische Technikkompetenz für konstruktiven Umgang mit KI-basierter Technologie in Betrieben",
+        "year": "2024",
+        "knowledge_title": "CAIL – Critical AI Literacy: Kritische Technikkompetenz für konstruktiven Umgang mit KI-basierter Technologie in Betrieben"
+      },
+      "identity_basis": "manifest-source-file+title+year+embedded-distillate",
+      "authority": {
+        "status": "historical_unreviewed",
+        "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      }
+    },
+    "QXDK8Z6I": {
+      "source_file": "Himmelreich_2022_Artificial_Intelligence_and_Structural_Injustice.md",
+      "source_path": "docs/data/fulltext/QXDK8Z6I.md",
+      "source_sha256": "sha256:839ae76ea5864837ef8ce3477e79ba9a0df979f6f1512ce1e5018c70e485bb6c",
+      "knowledge_source_path": "generated/vault/Papers/Artificial Intelligence and Structural Injustice- Foundations for Equity, Values, and Responsibility.md",
+      "knowledge_source_sha256": "sha256:3cb2eb74f5297755f5a7a9d672f476b97b154528d4b46f8daddc0f8b2588c9d8",
+      "bibliographic_evidence": {
+        "title": "Artificial Intelligence and Structural Injustice: Foundations for Equity, Values, and Responsibility",
+        "year": "2022",
+        "knowledge_title": "Artificial Intelligence and Structural Injustice: Foundations for Equity, Values, and Responsibility"
+      },
+      "identity_basis": "manifest-source-file+title+year+embedded-distillate",
+      "authority": {
+        "status": "historical_unreviewed",
+        "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      }
+    },
+    "R5QQTD95": {
+      "source_file": "Schönauer_2025_Akzeptanz_von_KI_und_organisationale.md",
+      "source_path": "docs/data/fulltext/R5QQTD95.md",
+      "source_sha256": "sha256:3852bf1ec9b9d71d9896bc9ad68915797116f09266a724dbc9188dfeb87a9b0b",
+      "knowledge_source_path": "generated/vault/Papers/Akzeptanz von KI und organisationale Rahmenbedingungen in der Sozialen Arbeit – Eine empirische Unte.md",
+      "knowledge_source_sha256": "sha256:218a26307ea9bf74e490b4b7dd17c1e7317a852a92b097fb9688f576eff6b069",
+      "bibliographic_evidence": {
+        "title": "Akzeptanz von KI und organisationale Rahmenbedingungen in der Sozialen Arbeit – Eine empirische Untersuchung aus der Perspektive von Berufseinsteiger:innen",
+        "doi": "10.1007/s12054-025-00783-3",
+        "knowledge_title": "Akzeptanz von KI und organisationale Rahmenbedingungen in der Sozialen Arbeit – Eine empirische Untersuchung aus der Perspektive von Berufseinsteiger:innen"
+      },
+      "identity_basis": "manifest-source-file+doi+embedded-distillate",
+      "authority": {
+        "status": "historical_unreviewed",
+        "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      }
+    },
+    "THGC3PA2": {
+      "source_file": "Kubes_2024_Feministische_KI_–_Künstliche_Intelligenz_für.md",
+      "source_path": "docs/data/fulltext/THGC3PA2.md",
+      "source_sha256": "sha256:747bd3f519fc3cdf276b77e1a7e6ef1590419ad49633e9e4c8d2afff47c18563",
+      "knowledge_source_path": "generated/vault/Papers/Feministische KI – Künstliche Intelligenz für alle- [Feminist AI – Artificial intelligence for every.md",
+      "knowledge_source_sha256": "sha256:150c007ad02e03c526a39549695d7b932a81dec8e10517a103abc6a7774d85b0",
+      "bibliographic_evidence": {
+        "title": "Feministische KI – Künstliche Intelligenz für alle? [Feminist AI – Artificial intelligence for everyone?]",
+        "year": "2024",
+        "knowledge_title": "Feministische KI – Künstliche Intelligenz für alle? [Feminist AI – Artificial intelligence for everyone?]"
+      },
+      "identity_basis": "manifest-source-file+title+year+embedded-distillate",
+      "authority": {
+        "status": "historical_unreviewed",
+        "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      }
+    },
+    "UKKQKL7I": {
+      "source_file": "Washington_2025_Fragile.md",
+      "source_path": "docs/data/fulltext/UKKQKL7I.md",
+      "source_sha256": "sha256:b6d6befb0c5bc33a7d2b21efbfadaa0e1bed62bc3d84b465da02cb9e29e20535",
+      "knowledge_source_path": "generated/vault/Papers/Fragile Foundations- Hidden Risks of Generative AI.md",
+      "knowledge_source_sha256": "sha256:db93b8954f2942648ff856754020b6c3cf037a55cd869d3cea4471a14c6e71b9",
+      "bibliographic_evidence": {
+        "title": "Fragile Foundations: Hidden Risks of Generative AI",
+        "doi": "10.11586/2025078",
+        "knowledge_title": "Fragile Foundations: Hidden Risks of Generative AI"
+      },
+      "identity_basis": "manifest-source-file+doi+embedded-distillate",
+      "authority": {
+        "status": "historical_unreviewed",
+        "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      }
+    },
+    "VFD9ENG6": {
+      "source_file": "Gohar_2023_A_Survey_on_Intersectional_Fairness_in_Machine.md",
+      "source_path": "docs/data/fulltext/VFD9ENG6.md",
+      "source_sha256": "sha256:7ba93ef6d1c8371c4538681a38d859014cda2b2eef76d18f081716356fbd45f2",
+      "knowledge_source_path": "generated/vault/Papers/A Survey on Intersectional Fairness in Machine Learning- Notions, Mitigation, and Challenges.md",
+      "knowledge_source_sha256": "sha256:e584a68c928063587f784b4d6ad5a316e55569fab5a688e15bc0efe102f01edb",
+      "bibliographic_evidence": {
+        "title": "A Survey on Intersectional Fairness in Machine Learning: Notions, Mitigation, and Challenges",
+        "year": "2023",
+        "knowledge_title": "A Survey on Intersectional Fairness in Machine Learning: Notions, Mitigation, and Challenges"
+      },
+      "identity_basis": "manifest-source-file+title+year+embedded-distillate",
+      "authority": {
+        "status": "historical_unreviewed",
+        "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      }
+    },
+    "WTLVG29I": {
+      "source_file": "Reamer_2023_Artificial_Intelligence_in_Social_Work_Emerging.md",
+      "source_path": "docs/data/fulltext/WTLVG29I.md",
+      "source_sha256": "sha256:3c2b9d392413ac7e031207954e2d2824d4beccbdf348d95b916880d3c83e0b1c",
+      "knowledge_source_path": "generated/distilled/Reamer_2023_Artificial_Intelligence_in_Social_Work_Emerging.md",
+      "knowledge_source_sha256": "sha256:41534a439db0aa5baaa563891b72b0fc49dcdcee2c0a96463df9f40495a02b4c",
+      "bibliographic_evidence": {
+        "title": "Artificial intelligence in social work: Emerging ethical issues",
+        "knowledge_title": "Artificial Intelligence in Social Work: Emerging Ethical Issues",
+        "year": 2023
+      },
+      "identity_basis": "manifest-source-file+semantic-title+year",
+      "authority": {
+        "status": "historical_unreviewed",
+        "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      }
+    },
+    "X2QQ4JH6": {
+      "source_file": "Reamer_2023_Artificial_Intelligence_in_Social_Work_Emerging.md",
+      "source_path": "docs/data/fulltext/X2QQ4JH6.md",
+      "source_sha256": "sha256:3c2b9d392413ac7e031207954e2d2824d4beccbdf348d95b916880d3c83e0b1c",
+      "knowledge_source_path": "generated/distilled/Reamer_2023_Artificial_Intelligence_in_Social_Work_Emerging.md",
+      "knowledge_source_sha256": "sha256:41534a439db0aa5baaa563891b72b0fc49dcdcee2c0a96463df9f40495a02b4c",
+      "bibliographic_evidence": {
+        "title": "Artificial Intelligence in Social Work: Emerging Ethical Issues",
+        "knowledge_title": "Artificial Intelligence in Social Work: Emerging Ethical Issues",
+        "year": 2023
+      },
+      "identity_basis": "manifest-source-file+semantic-title+year",
+      "authority": {
+        "status": "historical_unreviewed",
+        "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      }
+    },
+    "X7ZGW6CN": {
+      "source_file": "Ciston_2024_Intersectional_Artificial_Intelligence_Is.md",
+      "source_path": "docs/data/fulltext/X7ZGW6CN.md",
+      "source_sha256": "sha256:d8776af9e214133520748185587b3d2481457e6a1048b52ae82e58fabb4fcf3f",
+      "knowledge_source_path": "generated/vault/Papers/Intersectional Artificial Intelligence Is Essential- Polyvocal, Multimodal, Experimental Methods to .md",
+      "knowledge_source_sha256": "sha256:9f89a0d9dcf9efd7f9a63a120c190d550efd0195ebde5bc439b6c3bdeb951a04",
+      "bibliographic_evidence": {
+        "title": "Intersectional Artificial Intelligence Is Essential: Polyvocal, Multimodal, Experimental Methods to Save AI",
+        "doi": "10.7559/CITARJ.V11I2.665",
+        "knowledge_title": "Intersectional Artificial Intelligence Is Essential: Polyvocal, Multimodal, Experimental Methods to Save AI"
+      },
+      "identity_basis": "manifest-source-file+doi+embedded-distillate",
+      "authority": {
+        "status": "historical_unreviewed",
+        "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      }
+    },
+    "Y8J3HI9J": {
+      "source_file": "Lin_2022_Artificial_Intelligence_in_a_Structurally_Unjust.md",
+      "source_path": "docs/data/fulltext/Y8J3HI9J.md",
+      "source_sha256": "sha256:deb53ea745d78df40fe6403e4cdf431aa9312743a06e3d3c4bf62eba0bc888ba",
+      "knowledge_source_path": "generated/vault/Papers/Artificial Intelligence in a Structurally Unjust Society.md",
+      "knowledge_source_sha256": "sha256:7eeee43d13d313ad0a8c44df1fcd88f438b8334dc4d038332252e472a336929a",
+      "bibliographic_evidence": {
+        "title": "Artificial Intelligence in a Structurally Unjust Society",
+        "year": "2022",
+        "knowledge_title": "Artificial Intelligence in a Structurally Unjust Society"
+      },
+      "identity_basis": "manifest-source-file+title+year+embedded-distillate",
+      "authority": {
+        "status": "historical_unreviewed",
+        "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      }
+    },
+    "YN9JAREI": {
+      "source_file": "Gengler_2024_Faires_KI-Prompting_–_Ein_Leitfaden_für.md",
+      "source_path": "docs/data/fulltext/YN9JAREI.md",
+      "source_sha256": "sha256:cd8198308c8c200a2b2c33eb33e6defb30735196acfe9d0ba9d559a43fff6afe",
+      "knowledge_source_path": "generated/vault/Papers/Faires KI-Prompting – Ein Leitfaden für Unternehmen.md",
+      "knowledge_source_sha256": "sha256:b87e1584a59afac6806b005a97a80038f005bf64d375a98d413d410fc357c645",
+      "bibliographic_evidence": {
+        "title": "Faires KI-Prompting – Ein Leitfaden für Unternehmen",
+        "year": "2024",
+        "knowledge_title": "Faires KI-Prompting – Ein Leitfaden für Unternehmen"
+      },
+      "identity_basis": "manifest-source-file+title+year+embedded-distillate",
+      "authority": {
+        "status": "historical_unreviewed",
+        "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      }
+    },
+    "Z9BIKVS3": {
+      "source_file": "Laine_2025_Avoiding_Catastrophe_Through_Intersectionality_in.md",
+      "source_path": "docs/data/fulltext/Z9BIKVS3.md",
+      "source_sha256": "sha256:59e9ce9aea7b45de0f269bb10f1df2ffe8f97e8d8aac932e4ff79ad62e8bb534",
+      "knowledge_source_path": "generated/distilled/Laine_2025_Avoiding_Catastrophe_Through_Intersectionality_in.md",
+      "knowledge_source_sha256": "sha256:e097cf89de9fab4d6a2f32192e4aa50f8be3b4707294366d5102684048ae9d12",
+      "bibliographic_evidence": {
+        "title": "Avoiding Catastrophe Through Intersectionality in Global AI Governance",
+        "knowledge_title": "Avoiding Catastrophe Through Intersectionality in Global AI Governance",
+        "year": 2025
+      },
+      "identity_basis": "manifest-source-file+title+year",
+      "authority": {
+        "status": "historical_unreviewed",
+        "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      }
+    }
+  }
+}

@@ -60,6 +60,7 @@ In function order, not alphabetical.
 - Understand authority and publication boundaries: [[governance]], [[verification]].
 - Reproduce a technical guarantee: [[testing]], followed by the applicable command or test artifact.
 - Prepare the literature update: [[plan]] (source and corpus readiness), [[update-protocol]], [[standards]].
+- Check source and knowledge-document coverage: `generated/literature-readiness.json` and its CSV projection, rebuilt by `npm run build`. The inventory distinguishes live Zotero membership, reading material, knowledge-document authority and remaining preparation.
 - Add missing prepared references to Zotero: [[plan#Authorised additive Zotero import]] (authorisation, exact live plan, receipts and export boundary).
 - Prepare the follow-up paper's synthesis: [[analysis-divergence]] (section 5), [[analysis-sq-advisory]] (section 6, advisory).
 - Understand the research-vault: [[research-vault]] (the layer model and the current implementation state), `research-vault/README.md` (the built skeleton and its status).

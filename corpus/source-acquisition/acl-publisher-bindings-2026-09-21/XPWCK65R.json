@@ -1,0 +1,53 @@
+{
+  "schema": "femprompt-publisher-source-binding-evidence/0.1",
+  "record_id": "XPWCK65R",
+  "captured_at": "2026-09-21",
+  "publisher": "ACL Anthology",
+  "landing_page_url": "https://aclanthology.org/2026.findings-acl.418/",
+  "captured_page_path": "corpus/source-acquisition/acl-publisher-bindings-2026-09-21/XPWCK65R.metadata.txt",
+  "captured_page_sha256": "sha256:3900eeb73db0147ce38c1f859751327b92a9f248abd9f13a00d229def78f1891",
+  "publisher_metadata": {
+    "citation_title": "Mitigating Cultural Bias in LLMs via Multi-Agent Cultural Debate",
+    "citation_doi": "10.18653/v1/2026.findings-acl.418",
+    "citation_pdf_url": "https://aclanthology.org/2026.findings-acl.418.pdf"
+  },
+  "acquisition_pdf": {
+    "path": "generated/pdfs/audit-2026-09-21/a1c7e9db9a3dc6caff54.pdf",
+    "sha256": "sha256:08e96f6380e33de13447d82033a21ccc23fd201d5ffa97ef3d862ca2cd8e80a4"
+  },
+  "publisher_pdf_download_verification": {
+    "url": "https://aclanthology.org/2026.findings-acl.418.pdf",
+    "sha256": "sha256:08e96f6380e33de13447d82033a21ccc23fd201d5ffa97ef3d862ca2cd8e80a4",
+    "matches_acquisition_pdf_bytes": true
+  },
+  "readiness_markdown": {
+    "path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/a1c7e9db9a3dc6caff54.md",
+    "sha256": "sha256:0aa4087d1d261b8e702f3f8c42aff5f75647809fc338226ecd0bf3451dbbff96",
+    "declared_readiness_sha256": "sha256:0aa4087d1d261b8e702f3f8c42aff5f75647809fc338226ecd0bf3451dbbff96",
+    "matches_declared_readiness_hash": true
+  },
+  "version_evidence": {
+    "status": "publisher_metadata_and_exact_pdf_bytes_confirmed",
+    "version_type": "version_of_record",
+    "basis": "The official ACL Anthology landing page identifies one proceedings item by exact citation title and DOI and supplies its direct PDF URL. The PDF downloaded from that URL is byte-identical to the locally acquired PDF from which the unchanged readiness Markdown representation was prepared.",
+    "authority_limit": "Source identity and publication-version evidence only; no peer-review, screening, AI-review or human-verification status is asserted."
+  },
+  "registered_identity": {
+    "work_id": "work:6c8a1072-fcca-5fbd-8611-08774ef0ad7f",
+    "bibliographic_version_id": "version:69fc5b26-5038-5dd2-9bef-f0403caae732",
+    "title": "Mitigating Cultural Bias in LLMs via Multi-Agent Cultural Debate",
+    "doi": "10.18653/v1/2026.findings-acl.418"
+  },
+  "verification": {
+    "citation_title_exact_match": true,
+    "citation_doi_exact_match": true,
+    "citation_pdf_url_is_direct_https_pdf": true,
+    "publisher_pdf_bytes_match_acquisition_pdf": true,
+    "readiness_markdown_hash_matches": true
+  },
+  "raw_page_capture": {
+    "url": "https://aclanthology.org/2026.findings-acl.418/",
+    "local_path": "corpus/source-acquisition/acl-publisher-bindings-2026-09-21/XPWCK65R.html",
+    "sha256": "sha256:61dc1a61e6f815cc3abd7406d019c4c83026550e9ecc6df0f32662f38284578e"
+  }
+}

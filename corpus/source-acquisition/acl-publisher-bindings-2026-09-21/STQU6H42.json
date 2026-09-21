@@ -1,0 +1,53 @@
+{
+  "schema": "femprompt-publisher-source-binding-evidence/0.1",
+  "record_id": "STQU6H42",
+  "captured_at": "2026-09-21",
+  "publisher": "ACL Anthology",
+  "landing_page_url": "https://aclanthology.org/2026.findings-acl.585/",
+  "captured_page_path": "corpus/source-acquisition/acl-publisher-bindings-2026-09-21/STQU6H42.metadata.txt",
+  "captured_page_sha256": "sha256:4d5265cc12c59ec81b7e7c6f1adaca8ad8ca3d2126989752339b572906045cae",
+  "publisher_metadata": {
+    "citation_title": "Persona-Assigned Large Language Models Exhibit Human-Like Motivated Reasoning",
+    "citation_doi": "10.18653/v1/2026.findings-acl.585",
+    "citation_pdf_url": "https://aclanthology.org/2026.findings-acl.585.pdf"
+  },
+  "acquisition_pdf": {
+    "path": "generated/pdfs/audit-2026-09-21/4dbe6aa9dfa229e88746.pdf",
+    "sha256": "sha256:dc4990dc9f3cb28400c454221e2c51d653a2eae9a2a8d196f456f353639cbc51"
+  },
+  "publisher_pdf_download_verification": {
+    "url": "https://aclanthology.org/2026.findings-acl.585.pdf",
+    "sha256": "sha256:dc4990dc9f3cb28400c454221e2c51d653a2eae9a2a8d196f456f353639cbc51",
+    "matches_acquisition_pdf_bytes": true
+  },
+  "readiness_markdown": {
+    "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/4dbe6aa9dfa229e88746.md",
+    "sha256": "sha256:6ebe509cb9eb59315760f1de2ad87b7b1b17ddc641640782c15895073dd7740f",
+    "declared_readiness_sha256": "sha256:6ebe509cb9eb59315760f1de2ad87b7b1b17ddc641640782c15895073dd7740f",
+    "matches_declared_readiness_hash": true
+  },
+  "version_evidence": {
+    "status": "publisher_metadata_and_exact_pdf_bytes_confirmed",
+    "version_type": "version_of_record",
+    "basis": "The official ACL Anthology landing page identifies one proceedings item by exact citation title and DOI and supplies its direct PDF URL. The PDF downloaded from that URL is byte-identical to the locally acquired PDF from which the unchanged readiness Markdown representation was prepared.",
+    "authority_limit": "Source identity and publication-version evidence only; no peer-review, screening, AI-review or human-verification status is asserted."
+  },
+  "registered_identity": {
+    "work_id": "work:0fb6cbb2-9d40-5815-9680-3e9f14f27e16",
+    "bibliographic_version_id": "version:0606f0c5-0aa6-5cae-b273-2b8619630c6f",
+    "title": "Persona-Assigned Large Language Models Exhibit Human-Like Motivated Reasoning",
+    "doi": "10.18653/v1/2026.findings-acl.585"
+  },
+  "verification": {
+    "citation_title_exact_match": true,
+    "citation_doi_exact_match": true,
+    "citation_pdf_url_is_direct_https_pdf": true,
+    "publisher_pdf_bytes_match_acquisition_pdf": true,
+    "readiness_markdown_hash_matches": true
+  },
+  "raw_page_capture": {
+    "url": "https://aclanthology.org/2026.findings-acl.585/",
+    "local_path": "corpus/source-acquisition/acl-publisher-bindings-2026-09-21/STQU6H42.html",
+    "sha256": "sha256:a5dbf0c58dab4dd982b52c5a1b94f2eb7c805f4c65797ad80d1ee7c44adeff1d"
+  }
+}

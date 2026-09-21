@@ -45,6 +45,22 @@ try {
 const r = window.__TEST_RESULTS__;
 console.log('title:', window.document.title);
 if (!r) { console.error('no __TEST_RESULTS__ produced (exposure hook missing?)'); process.exit(1); }
+const readiness = window.__PRISMA_TEST__;
+const readinessChecks = [
+  ['source readiness: substantive abstract is labelled as an abstract',
+    /Metadaten-Abstract/.test(readiness.sourcePillHtml({ abstract: 'A substantive abstract that is long enough to support category screening and records the source basis without pretending that a full text was read. This sentence keeps the fixture above the quality threshold.' }))],
+  ['source readiness: known metadata boilerplate is labelled as missing paper text',
+    /kein Papertext/.test(readiness.sourcePillHtml({ abstract: 'Founded in 1920, the NBER is a private, non-profit, non-partisan organization.' }))],
+  ['identity readiness: Work and Version are both required',
+    readiness.paperIdentityReady({ work_id: 'work:test', version_id: 'version:test' }) &&
+      !readiness.paperIdentityReady({ work_id: 'work:test' }) &&
+      !readiness.paperIdentityReady({ version_id: 'version:test' })]
+];
+for (const [name, ok] of readinessChecks) {
+  r.total++;
+  if (ok) r.pass++;
+  else { r.fail++; r.results.push({ name, ok: false, err: 'readiness contract failed' }); }
+}
 for (const c of r.results) if (!c.ok) console.log('FAIL  ' + c.name + '  >>  ' + c.err);
 console.log('\n' + (r.fail ? 'FAIL' : 'PASS') + ' ' + r.pass + '/' + r.total);
 process.exit(r.fail ? 1 : 0);

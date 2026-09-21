@@ -1,0 +1,14 @@
+{
+  "record_id": "QUV5DQH3",
+  "checked_at": "2026-09-21T12:23:41.617374+00:00",
+  "checked_by": "/root",
+  "model": "GPT-6",
+  "source_url": "https://ssir.org/articles/entry/when_good_algorithms_go_sexist_why_and_how_to_advance_ai_gender_equity",
+  "doi_resolution_url": "https://doi.org/10.48558/A179-B138",
+  "doi_redirects_to_source_url": true,
+  "observed_title": "When Good Algorithms Go Sexist: Why and How to Advance AI Gender Equity",
+  "observed_doi": "10.48558/a179-b138",
+  "publisher_quote": "DOI: 10.48558/a179-b138",
+  "original_acquisition_audit": "generated/source-acquisition/oa-batch-b/source-audit.md",
+  "verification_limit": "Root and a gpt-5.6-sol subagent independently read the current official publisher page and DOI redirect. The original HTML bytes are unavailable, so their acquisition hash was not reverified. The unchanged semantic Markdown projection retains the matching article title and publisher identity metadata. This confirms source identity, not scholarly review."
+}

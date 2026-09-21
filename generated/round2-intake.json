@@ -8,28 +8,28 @@
       "lane": "L1",
       "source": "OpenAI",
       "path": "corpus/deep-research/round2/ChatGPT_deep-research.ris",
-      "sha256": "d8da56534b9afbb242960762f4cad55dac9200c35e82406dfb99dd32a06feb2a",
+      "sha256": "3974074f44026b3eba29495c7a196372b8e68ced1f5534449274fa05572b7e36",
       "records": 5
     },
     {
       "lane": "L2",
       "source": "Claude",
       "path": "corpus/deep-research/round2/Claude_deep-research.ris",
-      "sha256": "5beef9dbee82e03f7fd1bb83d6d6b442ad0d08cea3272aeed7a949b7404e788f",
+      "sha256": "4cbaebfa6a5ea72520d41d1157fd990e49358e7c539fea0fc3779e12b0118e41",
       "records": 8
     },
     {
       "lane": "L3",
       "source": "Gemini",
       "path": "corpus/deep-research/round2/Gemini_deep-research.ris",
-      "sha256": "43a63eef712022bda4437b034bc31df0abf46dc77a4fb8055875461c8e2dbb3c",
+      "sha256": "c554dc403ae26923ebf11697aaed18881820f3bd3a20e0b0f48026c824dd3717",
       "records": 8
     },
     {
       "lane": "L5",
       "source": "ClaudeCode",
       "path": "corpus/deep-research/round2/ClaudeCode_deep-research.ris",
-      "sha256": "1ec14b3c044c07e273e2bfdc91e913be861c5fabaa721c7f3b40ed03c0091d6d",
+      "sha256": "271c8547cea6598973b69b7a4d240e39df5814c618278e3a6206d3eaf97e64e6",
       "records": 8
     }
   ],
@@ -41,10 +41,12 @@
     "works_present_in_l1_l3": 19,
     "works_only_in_l5": 5,
     "works_with_l5_attribution": 8,
-    "committed_zotero_records": 326,
-    "candidate_works_with_existing_corpus_match": 1,
-    "candidate_works_absent_from_committed_export": 23,
-    "round2_zotero_keys_missing_from_committed_export": 21,
+    "committed_zotero_records": 436,
+    "candidate_works_with_existing_corpus_match": 24,
+    "candidate_works_absent_from_committed_export": 0,
+    "candidate_works_with_curated_zotero_key": 22,
+    "candidate_works_with_ambiguous_zotero_candidates": 2,
+    "round2_zotero_keys_missing_from_committed_export": 0,
     "screening_ready_works": 0
   },
   "lane_counts": {
@@ -55,46 +57,18 @@
   },
   "committed_state": {
     "zotero_export": "corpus/zotero_export.json",
-    "zotero_export_sha256": "a494ba7539919d79a5f2c0e421302050edac3e695a48a04923a085de9065816a",
+    "zotero_export_sha256": "62a01070fb7d46aaee2e93d1fe1774c9f63ed7f82e39f2bdd9f3e61824b1ab2e",
     "source_mapping": "corpus/source_tool_mapping.json",
-    "source_mapping_sha256": "9feb96ce613a778cf76ac43f0b5dcd302170e0a8e5d8331bf3052cd0d5737c76",
-    "mapping_only_keys_by_source": {
-      "Claude": 8,
-      "Gemini": 8,
-      "OpenAI": 5
-    },
-    "mapping_only_keys": [
-      "5DLTP2YA",
-      "5G2VPZR8",
-      "6IU5JG5Y",
-      "7B6V8MN6",
-      "8YZKPS42",
-      "9Y7H9WXQ",
-      "BKYNQZHQ",
-      "CCAKPEGY",
-      "DALR26DL",
-      "DL7G37W9",
-      "EF9TQIRK",
-      "H958FXZR",
-      "IYUPQPTA",
-      "MN2K9JW8",
-      "NJUBGV8X",
-      "PS8KVDVS",
-      "UIBZW4IK",
-      "UNGYENLB",
-      "VXDH5KWP",
-      "VYCF5NCB",
-      "YW3UAXFP"
-    ],
+    "source_mapping_sha256": "4e49cf87d6045ec09a3dc5a4d8a9bfdb83b140d39281e3e4312923bd3f497153",
+    "mapping_only_keys_by_source": {},
+    "mapping_only_keys": [],
     "cross_round_matches": []
   },
   "gate": {
     "status": "blocked",
-    "reason": "round2_candidates_absent_from_committed_corpus_projection",
+    "reason": "paper_sources_not_reviewed_and_addressable_by_canonical_id",
     "required_actions": [
-      "import_l5_ris_into_zotero_and_preserve_lane_attribution",
-      "export_the_curated_zotero_library_to_corpus/zotero_export.json",
-      "regenerate_corpus/papers_metadata.csv_and_source_tool_mapping.json",
+      "resolve_multiple_zotero_candidates_without_implicit_duplicate_selection",
       "acquire_and_review_each_round2_paper_markdown_source",
       "rerun_this_manifest_until_screening_ready_works_equals_24"
     ]
@@ -124,15 +98,23 @@
           "source": "Claude"
         }
       ],
-      "intake_status": "zotero_import_logged_export_pending",
+      "intake_status": "ambiguous_zotero_candidates",
       "zotero_key": null,
       "paper_source": null,
       "screening_blockers": [
-        "curated_zotero_identity_missing_from_committed_corpus",
+        "multiple_curated_zotero_candidates_require_explicit_resolution",
         "paper_source_not_addressable_by_canonical_id"
       ],
-      "existing_corpus_candidates": [],
-      "existing_match_basis": null
+      "existing_corpus_candidates": [
+        "5DLTP2YA",
+        "9Y7H9WXQ"
+      ],
+      "existing_match_basis": "doi",
+      "source_review": {
+        "status": "abstract_only",
+        "reference": "generated/round2-agent-review/sources.json",
+        "authority": "source_discovery_only"
+      }
     },
     {
       "work_id": "doi:10.1007/978-3-031-80119-8_6",
@@ -155,15 +137,21 @@
           "source": "OpenAI"
         }
       ],
-      "intake_status": "zotero_import_logged_export_pending",
-      "zotero_key": null,
+      "intake_status": "curated_zotero_identity_present",
+      "zotero_key": "VYCF5NCB",
       "paper_source": null,
       "screening_blockers": [
-        "curated_zotero_identity_missing_from_committed_corpus",
         "paper_source_not_addressable_by_canonical_id"
       ],
-      "existing_corpus_candidates": [],
-      "existing_match_basis": null
+      "existing_corpus_candidates": [
+        "VYCF5NCB"
+      ],
+      "existing_match_basis": "doi",
+      "source_review": {
+        "status": "abstract_only",
+        "reference": "generated/round2-agent-review/sources.json",
+        "authority": "source_discovery_only"
+      }
     },
     {
       "work_id": "doi:10.1007/s43681-026-01161-9",
@@ -183,15 +171,21 @@
           "source": "OpenAI"
         }
       ],
-      "intake_status": "zotero_import_logged_export_pending",
-      "zotero_key": null,
+      "intake_status": "curated_zotero_identity_present",
+      "zotero_key": "8YZKPS42",
       "paper_source": null,
       "screening_blockers": [
-        "curated_zotero_identity_missing_from_committed_corpus",
         "paper_source_not_addressable_by_canonical_id"
       ],
-      "existing_corpus_candidates": [],
-      "existing_match_basis": null
+      "existing_corpus_candidates": [
+        "8YZKPS42"
+      ],
+      "existing_match_basis": "doi",
+      "source_review": {
+        "status": "fulltext_available",
+        "reference": "generated/round2-agent-review/sources.json",
+        "authority": "source_discovery_only"
+      }
     },
     {
       "work_id": "doi:10.1145/3715275.3732210",
@@ -211,17 +205,21 @@
           "source": "OpenAI"
         }
       ],
-      "intake_status": "zotero_import_logged_export_pending",
-      "zotero_key": null,
+      "intake_status": "curated_zotero_identity_present",
+      "zotero_key": "6IU5JG5Y",
       "paper_source": null,
       "screening_blockers": [
-        "curated_zotero_identity_missing_from_committed_corpus",
         "paper_source_not_addressable_by_canonical_id"
       ],
       "existing_corpus_candidates": [
-        "Y6SAPNT2"
+        "6IU5JG5Y"
       ],
-      "existing_match_basis": "normalised_title_only"
+      "existing_match_basis": "doi",
+      "source_review": {
+        "status": "fulltext_available",
+        "reference": "generated/round2-agent-review/sources.json",
+        "authority": "source_discovery_only"
+      }
     },
     {
       "work_id": "doi:10.21240/zfhe/sh-ki-1/09",
@@ -246,15 +244,21 @@
           "source": "OpenAI"
         }
       ],
-      "intake_status": "zotero_import_logged_export_pending",
-      "zotero_key": null,
+      "intake_status": "curated_zotero_identity_present",
+      "zotero_key": "MN2K9JW8",
       "paper_source": null,
       "screening_blockers": [
-        "curated_zotero_identity_missing_from_committed_corpus",
         "paper_source_not_addressable_by_canonical_id"
       ],
-      "existing_corpus_candidates": [],
-      "existing_match_basis": null
+      "existing_corpus_candidates": [
+        "MN2K9JW8"
+      ],
+      "existing_match_basis": "doi",
+      "source_review": {
+        "status": "fulltext_available",
+        "reference": "generated/round2-agent-review/sources.json",
+        "authority": "source_discovery_only"
+      }
     },
     {
       "work_id": "doi:10.1038/s41467-025-68004-9",
@@ -287,15 +291,23 @@
           "source": "ClaudeCode"
         }
       ],
-      "intake_status": "zotero_import_logged_export_pending",
+      "intake_status": "ambiguous_zotero_candidates",
       "zotero_key": null,
       "paper_source": null,
       "screening_blockers": [
-        "curated_zotero_identity_missing_from_committed_corpus",
+        "multiple_curated_zotero_candidates_require_explicit_resolution",
         "paper_source_not_addressable_by_canonical_id"
       ],
-      "existing_corpus_candidates": [],
-      "existing_match_basis": null
+      "existing_corpus_candidates": [
+        "H958FXZR",
+        "NJUBGV8X"
+      ],
+      "existing_match_basis": "doi",
+      "source_review": {
+        "status": "fulltext_available",
+        "reference": "generated/round2-agent-review/sources.json",
+        "authority": "source_discovery_only"
+      }
     },
     {
       "work_id": "doi:10.3389/fsoc.2025.1602947",
@@ -315,15 +327,21 @@
           "source": "Claude"
         }
       ],
-      "intake_status": "zotero_import_logged_export_pending",
-      "zotero_key": null,
+      "intake_status": "curated_zotero_identity_present",
+      "zotero_key": "IYUPQPTA",
       "paper_source": null,
       "screening_blockers": [
-        "curated_zotero_identity_missing_from_committed_corpus",
         "paper_source_not_addressable_by_canonical_id"
       ],
-      "existing_corpus_candidates": [],
-      "existing_match_basis": null
+      "existing_corpus_candidates": [
+        "IYUPQPTA"
+      ],
+      "existing_match_basis": "doi",
+      "source_review": {
+        "status": "fulltext_available",
+        "reference": "generated/round2-agent-review/sources.json",
+        "authority": "source_discovery_only"
+      }
     },
     {
       "work_id": "doi:10.1007/s00146-025-02556-8",
@@ -348,15 +366,21 @@
           "source": "ClaudeCode"
         }
       ],
-      "intake_status": "zotero_import_logged_export_pending",
-      "zotero_key": null,
+      "intake_status": "curated_zotero_identity_present",
+      "zotero_key": "BKYNQZHQ",
       "paper_source": null,
       "screening_blockers": [
-        "curated_zotero_identity_missing_from_committed_corpus",
         "paper_source_not_addressable_by_canonical_id"
       ],
-      "existing_corpus_candidates": [],
-      "existing_match_basis": null
+      "existing_corpus_candidates": [
+        "BKYNQZHQ"
+      ],
+      "existing_match_basis": "doi",
+      "source_review": {
+        "status": "fulltext_available",
+        "reference": "generated/round2-agent-review/sources.json",
+        "authority": "source_discovery_only"
+      }
     },
     {
       "work_id": "doi:10.1145/3769994.3770037",
@@ -385,15 +409,21 @@
           "source": "ClaudeCode"
         }
       ],
-      "intake_status": "zotero_import_logged_export_pending",
-      "zotero_key": null,
+      "intake_status": "curated_zotero_identity_present",
+      "zotero_key": "DALR26DL",
       "paper_source": null,
       "screening_blockers": [
-        "curated_zotero_identity_missing_from_committed_corpus",
         "paper_source_not_addressable_by_canonical_id"
       ],
-      "existing_corpus_candidates": [],
-      "existing_match_basis": null
+      "existing_corpus_candidates": [
+        "DALR26DL"
+      ],
+      "existing_match_basis": "doi",
+      "source_review": {
+        "status": "fulltext_available",
+        "reference": "generated/round2-agent-review/sources.json",
+        "authority": "source_discovery_only"
+      }
     },
     {
       "work_id": "doi:10.3390/educsci15091143",
@@ -413,15 +443,21 @@
           "source": "Claude"
         }
       ],
-      "intake_status": "zotero_import_logged_export_pending",
-      "zotero_key": null,
+      "intake_status": "curated_zotero_identity_present",
+      "zotero_key": "VXDH5KWP",
       "paper_source": null,
       "screening_blockers": [
-        "curated_zotero_identity_missing_from_committed_corpus",
         "paper_source_not_addressable_by_canonical_id"
       ],
-      "existing_corpus_candidates": [],
-      "existing_match_basis": null
+      "existing_corpus_candidates": [
+        "VXDH5KWP"
+      ],
+      "existing_match_basis": "doi",
+      "source_review": {
+        "status": "fulltext_available",
+        "reference": "generated/round2-agent-review/sources.json",
+        "authority": "source_discovery_only"
+      }
     },
     {
       "work_id": "doi:10.1007/978-3-032-07830-8_12",
@@ -441,15 +477,21 @@
           "source": "Claude"
         }
       ],
-      "intake_status": "zotero_import_logged_export_pending",
-      "zotero_key": null,
+      "intake_status": "curated_zotero_identity_present",
+      "zotero_key": "5G2VPZR8",
       "paper_source": null,
       "screening_blockers": [
-        "curated_zotero_identity_missing_from_committed_corpus",
         "paper_source_not_addressable_by_canonical_id"
       ],
-      "existing_corpus_candidates": [],
-      "existing_match_basis": null
+      "existing_corpus_candidates": [
+        "5G2VPZR8"
+      ],
+      "existing_match_basis": "doi",
+      "source_review": {
+        "status": "abstract_only",
+        "reference": "generated/round2-agent-review/sources.json",
+        "authority": "source_discovery_only"
+      }
     },
     {
       "work_id": "doi:10.1177/13505068261419933",
@@ -469,15 +511,21 @@
           "source": "Claude"
         }
       ],
-      "intake_status": "zotero_import_logged_export_pending",
-      "zotero_key": null,
+      "intake_status": "curated_zotero_identity_present",
+      "zotero_key": "7B6V8MN6",
       "paper_source": null,
       "screening_blockers": [
-        "curated_zotero_identity_missing_from_committed_corpus",
         "paper_source_not_addressable_by_canonical_id"
       ],
-      "existing_corpus_candidates": [],
-      "existing_match_basis": null
+      "existing_corpus_candidates": [
+        "7B6V8MN6"
+      ],
+      "existing_match_basis": "doi",
+      "source_review": {
+        "status": "fulltext_available",
+        "reference": "generated/round2-agent-review/sources.json",
+        "authority": "source_discovery_only"
+      }
     },
     {
       "work_id": "doi:10.48550/arxiv.2604.20677",
@@ -499,15 +547,21 @@
           "source": "Gemini"
         }
       ],
-      "intake_status": "zotero_import_logged_export_pending",
-      "zotero_key": null,
+      "intake_status": "curated_zotero_identity_present",
+      "zotero_key": "PS8KVDVS",
       "paper_source": null,
       "screening_blockers": [
-        "curated_zotero_identity_missing_from_committed_corpus",
         "paper_source_not_addressable_by_canonical_id"
       ],
-      "existing_corpus_candidates": [],
-      "existing_match_basis": null
+      "existing_corpus_candidates": [
+        "PS8KVDVS"
+      ],
+      "existing_match_basis": "doi",
+      "source_review": {
+        "status": "fulltext_available",
+        "reference": "generated/round2-agent-review/sources.json",
+        "authority": "source_discovery_only"
+      }
     },
     {
       "work_id": "doi:10.3828/dap.2026.7",
@@ -527,15 +581,21 @@
           "source": "Gemini"
         }
       ],
-      "intake_status": "zotero_import_logged_export_pending",
-      "zotero_key": null,
+      "intake_status": "curated_zotero_identity_present",
+      "zotero_key": "EF9TQIRK",
       "paper_source": null,
       "screening_blockers": [
-        "curated_zotero_identity_missing_from_committed_corpus",
         "paper_source_not_addressable_by_canonical_id"
       ],
-      "existing_corpus_candidates": [],
-      "existing_match_basis": null
+      "existing_corpus_candidates": [
+        "EF9TQIRK"
+      ],
+      "existing_match_basis": "doi",
+      "source_review": {
+        "status": "fulltext_available",
+        "reference": "generated/round2-agent-review/sources.json",
+        "authority": "source_discovery_only"
+      }
     },
     {
       "work_id": "doi:10.1080/17439884.2026.2652638",
@@ -557,15 +617,21 @@
           "source": "Gemini"
         }
       ],
-      "intake_status": "zotero_import_logged_export_pending",
-      "zotero_key": null,
+      "intake_status": "curated_zotero_identity_present",
+      "zotero_key": "UNGYENLB",
       "paper_source": null,
       "screening_blockers": [
-        "curated_zotero_identity_missing_from_committed_corpus",
         "paper_source_not_addressable_by_canonical_id"
       ],
-      "existing_corpus_candidates": [],
-      "existing_match_basis": null
+      "existing_corpus_candidates": [
+        "UNGYENLB"
+      ],
+      "existing_match_basis": "doi",
+      "source_review": {
+        "status": "fulltext_available",
+        "reference": "generated/round2-agent-review/sources.json",
+        "authority": "source_discovery_only"
+      }
     },
     {
       "work_id": "doi:10.1108/ijssp-02-2026-0125",
@@ -587,15 +653,21 @@
           "source": "Gemini"
         }
       ],
-      "intake_status": "zotero_import_logged_export_pending",
-      "zotero_key": null,
+      "intake_status": "curated_zotero_identity_present",
+      "zotero_key": "CCAKPEGY",
       "paper_source": null,
       "screening_blockers": [
-        "curated_zotero_identity_missing_from_committed_corpus",
         "paper_source_not_addressable_by_canonical_id"
       ],
-      "existing_corpus_candidates": [],
-      "existing_match_basis": null
+      "existing_corpus_candidates": [
+        "CCAKPEGY"
+      ],
+      "existing_match_basis": "doi",
+      "source_review": {
+        "status": "fulltext_available",
+        "reference": "generated/round2-agent-review/sources.json",
+        "authority": "source_discovery_only"
+      }
     },
     {
       "work_id": "title:critical literacy in an ai world",
@@ -616,15 +688,21 @@
           "source": "Gemini"
         }
       ],
-      "intake_status": "zotero_import_logged_export_pending",
-      "zotero_key": null,
+      "intake_status": "curated_zotero_identity_present",
+      "zotero_key": "UIBZW4IK",
       "paper_source": null,
       "screening_blockers": [
-        "curated_zotero_identity_missing_from_committed_corpus",
         "paper_source_not_addressable_by_canonical_id"
       ],
-      "existing_corpus_candidates": [],
-      "existing_match_basis": null
+      "existing_corpus_candidates": [
+        "UIBZW4IK"
+      ],
+      "existing_match_basis": "normalised_title_only",
+      "source_review": {
+        "status": "abstract_only",
+        "reference": "generated/round2-agent-review/sources.json",
+        "authority": "source_discovery_only"
+      }
     },
     {
       "work_id": "title:safety guardrails in large language models and selective refusal bias",
@@ -647,15 +725,21 @@
           "source": "Gemini"
         }
       ],
-      "intake_status": "zotero_import_logged_export_pending",
-      "zotero_key": null,
+      "intake_status": "curated_zotero_identity_present",
+      "zotero_key": "DL7G37W9",
       "paper_source": null,
       "screening_blockers": [
-        "curated_zotero_identity_missing_from_committed_corpus",
         "paper_source_not_addressable_by_canonical_id"
       ],
-      "existing_corpus_candidates": [],
-      "existing_match_basis": null
+      "existing_corpus_candidates": [
+        "DL7G37W9"
+      ],
+      "existing_match_basis": "normalised_title_only",
+      "source_review": {
+        "status": "ambiguous",
+        "reference": "generated/round2-agent-review/sources.json",
+        "authority": "source_discovery_only"
+      }
     },
     {
       "work_id": "doi:10.31995/jgv.2026.v17i01",
@@ -675,15 +759,21 @@
           "source": "Gemini"
         }
       ],
-      "intake_status": "zotero_import_logged_export_pending",
-      "zotero_key": null,
+      "intake_status": "curated_zotero_identity_present",
+      "zotero_key": "YW3UAXFP",
       "paper_source": null,
       "screening_blockers": [
-        "curated_zotero_identity_missing_from_committed_corpus",
         "paper_source_not_addressable_by_canonical_id"
       ],
-      "existing_corpus_candidates": [],
-      "existing_match_basis": null
+      "existing_corpus_candidates": [
+        "YW3UAXFP"
+      ],
+      "existing_match_basis": "doi",
+      "source_review": {
+        "status": "fulltext_available",
+        "reference": "generated/round2-agent-review/sources.json",
+        "authority": "source_discovery_only"
+      }
     },
     {
       "work_id": "doi:10.1215/2834703x-12095946",
@@ -703,15 +793,21 @@
           "source": "ClaudeCode"
         }
       ],
-      "intake_status": "zotero_import_pending",
-      "zotero_key": null,
+      "intake_status": "curated_zotero_identity_present",
+      "zotero_key": "B347MWKT",
       "paper_source": null,
       "screening_blockers": [
-        "curated_zotero_identity_missing_from_committed_corpus",
         "paper_source_not_addressable_by_canonical_id"
       ],
-      "existing_corpus_candidates": [],
-      "existing_match_basis": null
+      "existing_corpus_candidates": [
+        "B347MWKT"
+      ],
+      "existing_match_basis": "doi",
+      "source_review": {
+        "status": "abstract_only",
+        "reference": "generated/round2-agent-review/sources.json",
+        "authority": "source_discovery_only"
+      }
     },
     {
       "work_id": "doi:10.1177/14614448261435197",
@@ -733,15 +829,21 @@
           "source": "ClaudeCode"
         }
       ],
-      "intake_status": "zotero_import_pending",
-      "zotero_key": null,
+      "intake_status": "curated_zotero_identity_present",
+      "zotero_key": "NPFRWPAN",
       "paper_source": null,
       "screening_blockers": [
-        "curated_zotero_identity_missing_from_committed_corpus",
         "paper_source_not_addressable_by_canonical_id"
       ],
-      "existing_corpus_candidates": [],
-      "existing_match_basis": null
+      "existing_corpus_candidates": [
+        "NPFRWPAN"
+      ],
+      "existing_match_basis": "doi",
+      "source_review": {
+        "status": "fulltext_available",
+        "reference": "generated/round2-agent-review/sources.json",
+        "authority": "source_discovery_only"
+      }
     },
     {
       "work_id": "doi:10.1111/ejed.70602",
@@ -763,15 +865,21 @@
           "source": "ClaudeCode"
         }
       ],
-      "intake_status": "zotero_import_pending",
-      "zotero_key": null,
+      "intake_status": "curated_zotero_identity_present",
+      "zotero_key": "BBSHTIMH",
       "paper_source": null,
       "screening_blockers": [
-        "curated_zotero_identity_missing_from_committed_corpus",
         "paper_source_not_addressable_by_canonical_id"
       ],
-      "existing_corpus_candidates": [],
-      "existing_match_basis": null
+      "existing_corpus_candidates": [
+        "BBSHTIMH"
+      ],
+      "existing_match_basis": "doi",
+      "source_review": {
+        "status": "fulltext_available",
+        "reference": "generated/round2-agent-review/sources.json",
+        "authority": "source_discovery_only"
+      }
     },
     {
       "work_id": "doi:10.1080/14680777.2025.2593317",
@@ -794,15 +902,21 @@
           "source": "ClaudeCode"
         }
       ],
-      "intake_status": "zotero_import_pending",
-      "zotero_key": null,
+      "intake_status": "curated_zotero_identity_present",
+      "zotero_key": "UV9AI4X3",
       "paper_source": null,
       "screening_blockers": [
-        "curated_zotero_identity_missing_from_committed_corpus",
         "paper_source_not_addressable_by_canonical_id"
       ],
-      "existing_corpus_candidates": [],
-      "existing_match_basis": null
+      "existing_corpus_candidates": [
+        "UV9AI4X3"
+      ],
+      "existing_match_basis": "doi",
+      "source_review": {
+        "status": "abstract_only",
+        "reference": "generated/round2-agent-review/sources.json",
+        "authority": "source_discovery_only"
+      }
     },
     {
       "work_id": "doi:10.2991/978-94-6239-618-0_20",
@@ -827,15 +941,21 @@
           "source": "ClaudeCode"
         }
       ],
-      "intake_status": "zotero_import_pending",
-      "zotero_key": null,
+      "intake_status": "curated_zotero_identity_present",
+      "zotero_key": "V8SBEH4E",
       "paper_source": null,
       "screening_blockers": [
-        "curated_zotero_identity_missing_from_committed_corpus",
         "paper_source_not_addressable_by_canonical_id"
       ],
-      "existing_corpus_candidates": [],
-      "existing_match_basis": null
+      "existing_corpus_candidates": [
+        "V8SBEH4E"
+      ],
+      "existing_match_basis": "doi",
+      "source_review": {
+        "status": "fulltext_available",
+        "reference": "generated/round2-agent-review/sources.json",
+        "authority": "source_discovery_only"
+      }
     }
   ]
 }

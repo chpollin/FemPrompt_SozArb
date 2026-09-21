@@ -1,0 +1,24 @@
+{
+  "id": "978AV9KZ",
+  "type": "article-journal",
+  "title": "Defeating Nondeterminism in LLM Inference",
+  "author": [
+    {
+      "literal": "Horace He"
+    },
+    {
+      "literal": "Thinking Machines Lab"
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2025,
+        9
+      ]
+    ]
+  },
+  "container-title": "Thinking Machines Lab: Connectionism",
+  "DOI": "10.64434/tml.20250910",
+  "URL": "https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference/"
+}

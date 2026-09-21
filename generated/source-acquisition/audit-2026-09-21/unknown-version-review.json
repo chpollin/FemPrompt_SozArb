@@ -1,0 +1,128 @@
+{
+  "schema": "femprompt-source-version-evidence-review/0.1",
+  "reviewed_at": "2026-09-21T13:24:57.020962+02:00",
+  "authority": "source_identity_review_only",
+  "method": "Full Markdown was checked for the registered title, exact DOI and explicit publication-version evidence. For the five conference records rechecked after registry correction, the recovered original PDF was also searched across all extracted pages, PDF metadata and link annotations. Missing evidence remains missing; no version is inferred from title similarity or an acquisition-plan assertion.",
+  "counts": {
+    "reviewed": 22,
+    "original_text_supports_registered_version": 7,
+    "registry_version_metadata_requires_correction": 1,
+    "original_text_lacks_exact_version_identifier": 14
+  },
+  "records": {
+    "RH8MC67Z": {
+      "status": "original_text_supports_registered_version",
+      "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/1e429407d9b091311a65.md",
+      "evidence": "Registered title and DOI 10.1038/s41746-026-02584-8 occur in the complete publisher article text."
+    },
+    "K7NW3W34": {
+      "status": "original_text_supports_registered_version",
+      "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/e9fb8b7679eaf1023485.md",
+      "evidence": "Repository cover states Publisher's PDF, also known as Version of record; registered title and DOI 10.1080/02615479.2026.2669634 occur in the text."
+    },
+    "AZJW38MF": {
+      "status": "original_text_supports_registered_version",
+      "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/e9be7a01361ab7bae7bb.md",
+      "evidence": "Repository cover states Publisher's PDF, also known as Version of record; registered title and DOI 10.1080/17496535.2026.2619945 occur in the text."
+    },
+    "A7U389P5": {
+      "status": "original_text_supports_registered_version",
+      "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/136b6db72d8a7b8d390c.md",
+      "evidence": "Repository cover states Publisher's PDF, also known as Version of record; registered title and DOI 10.1098/rsta.2025.0125 occur in the text."
+    },
+    "NN49FMDP": {
+      "status": "original_text_supports_registered_version",
+      "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/152b1aa29e0dddabe838.md",
+      "evidence": "Registered title and DOI 10.21556/edutec.2026.96.4777 occur in the complete journal article text."
+    },
+    "9EP4IC4T": {
+      "status": "original_text_supports_registered_version",
+      "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/2e6aa61930deea324751.md",
+      "evidence": "Registered title and DOI 10.2196/86633 occur in the complete JMIR article text."
+    },
+    "ZH6T88D5": {
+      "status": "original_text_supports_registered_version",
+      "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/c38bdbce0e8dbb82ce3f.md",
+      "evidence": "Registered title, DOI 10.3389/fhumd.2026.1791655 and publisher copyright statement occur in the complete Frontiers article text."
+    },
+    "TFMETSCH": {
+      "status": "registry_version_metadata_requires_correction",
+      "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/febcd242f416adc86eb1.md",
+      "evidence": "Source is recorded as a preprint while the registry version type is unknown and the registered ICLR expression is not the same established version."
+    },
+    "QI7MDZU4": {
+      "status": "original_text_lacks_exact_version_identifier",
+      "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/c42b463f9ba115503a58.md",
+      "evidence": "The registered title is present and the registry now identifies the publication version, but exact DOI 10.18653/v1/2026.acl-long.1094 is absent from the converted text, the recovered original PDF text, PDF metadata and link annotations. Other DOI links in the PDF are references only."
+    },
+    "WK8IJUXQ": {
+      "status": "original_text_lacks_exact_version_identifier",
+      "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/d3bd00602e07cf40396c.md",
+      "evidence": "The registered title is present and the registry now identifies the publication version, but exact DOI 10.18653/v1/2026.findings-acl.1389 is absent from the converted text, the recovered original PDF text, PDF metadata and link annotations. Other DOI links in the PDF are references only."
+    },
+    "XPWCK65R": {
+      "status": "original_text_lacks_exact_version_identifier",
+      "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/a1c7e9db9a3dc6caff54.md",
+      "evidence": "The registered title is present and the registry now identifies the publication version, but exact DOI 10.18653/v1/2026.findings-acl.418 is absent from the converted text, the recovered original PDF text, PDF metadata and link annotations. Other DOI links in the PDF are references only."
+    },
+    "STQU6H42": {
+      "status": "original_text_lacks_exact_version_identifier",
+      "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/4dbe6aa9dfa229e88746.md",
+      "evidence": "The registered title is present and the registry now identifies the publication version, but exact DOI 10.18653/v1/2026.findings-acl.585 is absent from the converted text, the recovered original PDF text, PDF metadata and link annotations. Other DOI links in the PDF are references only."
+    },
+    "T57U8T2K": {
+      "status": "original_text_lacks_exact_version_identifier",
+      "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/f403809ad4503150093a.md",
+      "evidence": "The registered title is present and the registry now identifies the publication version, but exact DOI 10.63317/2hn5gs6yh5m2 is absent from the converted text, the recovered original PDF text, PDF metadata and link annotations. Other DOI links in the PDF are references only."
+    },
+    "EFMF4449": {
+      "status": "original_text_lacks_exact_version_identifier",
+      "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/20972ab37764965190de.md",
+      "evidence": "Publisher article text and publication date are present, but the exact DOI is absent from the converted source."
+    },
+    "KJWMQSMN": {
+      "status": "original_text_lacks_exact_version_identifier",
+      "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/014fa29a31624d80e530.md",
+      "evidence": "Publisher article text and publication date are present, but the exact DOI is absent from the converted source."
+    },
+    "8YZKPS42": {
+      "status": "original_text_lacks_exact_version_identifier",
+      "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/eb3406e6b996a77368bd.md",
+      "evidence": "Publisher article text and publication date are present, but the exact DOI is absent from the converted source."
+    },
+    "65NGEK5Q": {
+      "status": "original_text_lacks_exact_version_identifier",
+      "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/5fa4fb41e396f11b2c6e.md",
+      "evidence": "The title is present, but the exact DOI is absent and the source text does not explicitly establish the publication Version."
+    },
+    "ZFRE26IV": {
+      "status": "original_text_lacks_exact_version_identifier",
+      "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/45a89ba69a2b7d1a99cd.md",
+      "evidence": "Publisher article and licence text are present, but the exact DOI is absent from the converted source."
+    },
+    "AJBX2WAW": {
+      "status": "original_text_lacks_exact_version_identifier",
+      "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/7cbaa5fc7bd51c3642ad.md",
+      "evidence": "The title is present, but the exact DOI and explicit publication-Version evidence are absent."
+    },
+    "EUTEI9EJ": {
+      "status": "original_text_lacks_exact_version_identifier",
+      "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/050d5f410967dd9371a0.md",
+      "evidence": "The conversion does not resolve the registered title and exact DOI as primary source evidence."
+    },
+    "Z599JJFT": {
+      "status": "original_text_lacks_exact_version_identifier",
+      "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/fe0639bed94ac912274d.md",
+      "evidence": "The title is present, but the exact DOI and explicit publication-Version evidence are absent."
+    },
+    "XRQE5VM2": {
+      "status": "original_text_lacks_exact_version_identifier",
+      "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/8a561b548035e4512084.md",
+      "evidence": "The title is present, but the exact DOI and explicit publication-Version evidence are absent."
+    }
+  },
+  "withheld_exact_match_candidates": {
+    "KUVUZMDU": "The original Markdown contains the title but not DOI 10.1038/s44360-026-00152-8. A generated identity header is not evidence.",
+    "5WNZMJJQ": "The original Markdown contains the title but omits DOI 10.55121/jele.v2i1.1050. A generated identity header is not evidence."
+  }
+}

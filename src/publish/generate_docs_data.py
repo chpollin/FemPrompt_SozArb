@@ -24,20 +24,27 @@ import json
 import os
 import re
 import tempfile
+from collections.abc import Mapping, Sequence
 from pathlib import Path
-from typing import Any, Mapping, Sequence
+from typing import Any
 
-from src.analysis.work_versions import load_registry, lookup_by_record
 from src.analysis.metadata_corrections import corrected_csv_metadata
+from src.analysis.work_versions import load_registry, lookup_by_record
 from src.file_hashing import canonical_file_bytes
+from src.publish.project_active_distillates import project_active_distillates
+from src.publish.project_recovered_knowledge import project_recovered_knowledge
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 
 INPUT_LLM = REPO_ROOT / "assessment" / "llm_assessment_10k.csv"
 INPUT_HUMAN = REPO_ROOT / "assessment" / "human_assessment.csv"
-INPUT_DISAGREEMENTS = REPO_ROOT / "generated" / "benchmark-results" / "disagreements.csv"
+INPUT_DISAGREEMENTS = (
+    REPO_ROOT / "generated" / "benchmark-results" / "disagreements.csv"
+)
 INPUT_METRICS = REPO_ROOT / "generated" / "benchmark-results" / "agreement_metrics.json"
 INPUT_METADATA = REPO_ROOT / "corpus" / "papers_metadata.csv"
+INPUT_ZOTERO = REPO_ROOT / "corpus" / "zotero_export.json"
+INPUT_ZOTERO_SYNC = REPO_ROOT / "corpus" / "zotero_sync.json"
 INPUT_FULLTEXT_MANIFEST = REPO_ROOT / "docs" / "data" / "fulltext_manifest.json"
 INPUT_KNOWLEDGE_BINDINGS = REPO_ROOT / "docs" / "data" / "knowledge_doc_bindings.json"
 INPUT_CATEGORY_SCHEMA = REPO_ROOT / "docs" / "data" / "category_schema.json"
@@ -55,16 +62,22 @@ CATEGORIES = [item["key"] for item in CATEGORY_SCHEMA["categories"]]
 
 def safe_title(title: str) -> str:
     """Convert title to safe filename, matching generate_vault_v2.py logic."""
-    return re.sub(r'[<>:"/\\|?*\n\r]', '-', title).strip('. ')
+    return re.sub(r'[<>:"/\\|?*\n\r]', "-", title).strip(". ")
 
 
-def resolve_case_preserving_filename(directory: str | Path, filename: str) -> str | None:
+def resolve_case_preserving_filename(
+    directory: str | Path, filename: str
+) -> str | None:
     """Return the on-disk filename for a unique case-insensitive match."""
     directory = Path(directory)
     if not directory.is_dir():
         return None
 
-    matches = [entry for entry in os.listdir(directory) if entry.casefold() == filename.casefold()]
+    matches = [
+        entry.name
+        for entry in directory.iterdir()
+        if entry.name.casefold() == filename.casefold()
+    ]
     if len(matches) != 1:
         return None
     return matches[0]
@@ -73,6 +86,27 @@ def resolve_case_preserving_filename(directory: str | Path, filename: str) -> st
 def knowledge_doc_identity_allowed(manifest_entry: Mapping[str, Any]) -> bool:
     """Reject a document link when the fulltext gate found an identity conflict."""
     return manifest_entry.get("reason") not in {"ambiguous", "title_mismatch"}
+
+
+def embedded_knowledge_source_file(path: Path) -> tuple[str | None, bool]:
+    """Read the nested Paper frontmatter without failing on long Windows paths."""
+    target = str(path.resolve())
+    if os.name == "nt" and not target.startswith("\\\\?\\"):
+        target = f"\\\\?\\{target}"
+    try:
+        with Path(target).open(encoding="utf-8", errors="replace") as document:
+            text = document.read()
+    except OSError:
+        return None, False
+    marker = text.find("## Full Text")
+    nested = text[marker:] if marker != -1 else text
+    values = {
+        match.strip().strip('"')
+        for match in re.findall(r"^source_file:\s*(.+?)\s*$", nested, re.MULTILINE)
+    }
+    if len(values) != 1:
+        return None, len(values) > 1
+    return next(iter(values)), False
 
 
 def normalize_doi(value: object) -> str:
@@ -110,6 +144,7 @@ def work_version_projection(
         raise ValueError(f"{key}: absent from the canonical Work-Version registry")
     work, version = resolved
     from src.analysis.work_versions import source_binding_for_record
+
     source_binding = source_binding_for_record(dict(registry), key)
     return {
         "source_binding": source_binding,
@@ -124,8 +159,7 @@ def work_version_projection(
         "integrity_status": version["integrity_status"],
         "preferred_version_id": work["preferred_version_id"],
         "latest_version_id": work["latest_version_id"],
-        "is_preferred_version": version["version_id"]
-        == work["preferred_version_id"],
+        "is_preferred_version": version["version_id"] == work["preferred_version_id"],
         "work_versions": [
             {
                 "version_id": item["version_id"],
@@ -156,7 +190,10 @@ def knowledge_coverage(
         return "linked"
     if manifest_entry.get("reason") in {"ambiguous", "title_mismatch"}:
         return "identity_unresolved"
-    if manifest_entry.get("source_file") and manifest_entry.get("src") in {"clean", "raw"}:
+    if manifest_entry.get("source_file") and manifest_entry.get("src") in {
+        "clean",
+        "raw",
+    }:
         return "fulltext_ready"
     return "source_missing"
 
@@ -164,7 +201,9 @@ def knowledge_coverage(
 def source_fingerprint(paths: Sequence[str | Path]) -> str:
     """Hash canonical LF text inputs; binary input bytes remain unchanged."""
     digest = hashlib.sha256()
-    for filepath in sorted((Path(path) for path in paths), key=lambda path: path.as_posix()):
+    for filepath in sorted(
+        (Path(path) for path in paths), key=lambda path: path.as_posix()
+    ):
         digest.update(filepath.relative_to(REPO_ROOT).as_posix().encode("utf-8"))
         digest.update(canonical_file_bytes(filepath))
     return f"sha256:{digest.hexdigest()}"
@@ -188,7 +227,7 @@ def write_json_atomic(filepath: str | Path, payload: Mapping[str, Any]) -> None:
             temporary = Path(output.name)
             json.dump(payload, output, ensure_ascii=False, indent=2)
             output.write("\n")
-        os.replace(temporary, target)
+        temporary.replace(target)
     finally:
         if temporary and temporary.exists():
             temporary.unlink()
@@ -205,6 +244,11 @@ def prune_unreferenced_knowledge_docs(
         for paper in papers
         if paper.get("knowledge_doc")
     }
+    referenced.update(
+        Path(str(paper["knowledge_doc_candidate"]["path"])).name
+        for paper in papers
+        if paper.get("knowledge_doc_candidate", {}).get("path")
+    )
     removed = [
         path
         for path in sorted(paper_directory.glob("*.md"))
@@ -237,6 +281,60 @@ def ja_nein_to_bool(val: object) -> bool | None:
     return None  # blank or unknown
 
 
+def corpus_metadata() -> dict[str, dict[str, Any]]:
+    """Preserve benchmark metadata while admitting unassessed Zotero records."""
+    metadata = {
+        row["Zotero_Key"].strip(): row
+        for row in read_csv(INPUT_METADATA)
+        if row.get("Zotero_Key")
+    }
+    items = json.loads(INPUT_ZOTERO.read_text(encoding="utf-8"))
+    keys = [item["key"] for item in items]
+    if len(keys) != len(set(keys)):
+        raise ValueError("Duplicate Zotero record keys")
+    for item in items:
+        metadata.setdefault(
+            item["key"],
+            {
+                "Zotero_Key": item["key"],
+                "Title": item.get("title", ""),
+                "Authors": "; ".join(
+                    " ".join(
+                        filter(
+                            None,
+                            (
+                                creator.get("firstName"),
+                                creator.get("lastName") or creator.get("name"),
+                            ),
+                        )
+                    )
+                    for creator in item.get("creators", [])
+                    if creator.get("creatorType") == "author"
+                ),
+                "Year": (
+                    re.search(r"\b(?:19|20)\d{2}\b", item.get("date", "")) or [""]
+                )[0],
+                "DOI": item.get("DOI", ""),
+                "URL": item.get("url", ""),
+                "Abstract": item.get("abstractNote", ""),
+                "Item_Type": item.get("itemType", ""),
+                "Journal": item.get("publicationTitle", ""),
+            },
+        )
+    return corrected_csv_metadata(REPO_ROOT, metadata)
+
+
+def corpus_assessment_rows(
+    metadata: Mapping[str, Any], llm_rows: list[dict[str, str]]
+) -> list[dict[str, str]]:
+    """Append unassessed records without manufacturing benchmark decisions."""
+    assessed = {row["Zotero_Key"].strip() for row in llm_rows}
+    return [
+        *llm_rows,
+        *({"Zotero_Key": key} for key in metadata if key not in assessed),
+    ]
+
+
 def parse_llm_row(
     row: Mapping[str, str],
     metadata_by_key: Mapping[str, Mapping[str, str]],
@@ -252,7 +350,7 @@ def parse_llm_row(
     positive_cats = []
     for cat in CATEGORIES:
         val = ja_nein_to_bool(row.get(cat))
-        all_cats[cat] = 1 if val else 0
+        all_cats[cat] = None if val is None else int(val)
         if val:
             positive_cats.append(cat)
 
@@ -262,12 +360,18 @@ def parse_llm_row(
     except (ValueError, TypeError):
         year = None
 
-    # Check if vault knowledge doc exists.
+    version_projection = work_version_projection(key, work_version_registry)
+
+    # A legacy title locates a candidate only. The nested source identity, manifest,
+    # and canonical source Version must all agree before it becomes a public link.
     title = meta.get("Title") or row.get("Title", "")
     knowledge_doc = None
+    knowledge_doc_candidate = None
     manifest_entry = (fulltext_manifest or {}).get(key, {})
     metadata_correction = meta.get("_metadata_correction") or {}
-    invalidated_knowledge = bool(metadata_correction.get("invalidate_knowledge_doc")) or any(
+    invalidated_knowledge = bool(
+        metadata_correction.get("invalidate_knowledge_doc")
+    ) or any(
         change.get("field") in {"DOI", "creators", "title"}
         and change.get("before") != change.get("after")
         for change in metadata_correction.get("changes", [])
@@ -281,24 +385,62 @@ def parse_llm_row(
         }
         if binding:
             bound_filename = Path(binding["knowledge_doc"]).name
-            vault_filename = resolve_case_preserving_filename(VAULT_PAPERS_DIR, bound_filename)
-            if manifest_entry.get("source_file") != binding.get("source_file"):
-                vault_filename = None
+            vault_filename = resolve_case_preserving_filename(
+                VAULT_PAPERS_DIR, bound_filename
+            )
+            candidate_basis = "explicit_binding"
         elif expected_filename.casefold() in governed_filenames:
             vault_filename = None
+            candidate_basis = "title_collides_with_governed_document"
         else:
-            vault_filename = resolve_case_preserving_filename(VAULT_PAPERS_DIR, expected_filename)
-        if vault_filename and (not binding or knowledge_doc_identity_allowed(manifest_entry)):
-            knowledge_doc = f"vault/Papers/{vault_filename}"
+            vault_filename = resolve_case_preserving_filename(
+                VAULT_PAPERS_DIR, expected_filename
+            )
+            candidate_basis = "legacy_title_candidate"
+        if vault_filename:
+            candidate_path = Path(VAULT_PAPERS_DIR) / vault_filename
+            embedded_source, embedded_ambiguous = embedded_knowledge_source_file(
+                candidate_path
+            )
+            manifest_source = manifest_entry.get("source_file")
+            source_binding = (version_projection or {}).get("source_binding") or {}
+            expected_work = source_binding.get("work_id") or (
+                version_projection or {}
+            ).get("work_id")
+            expected_version = source_binding.get("source_version_id") or (
+                version_projection or {}
+            ).get("version_id")
+            version_matches = not version_projection or (
+                manifest_entry.get("work_id") == expected_work
+                and manifest_entry.get("version_id") == expected_version
+            )
+            reasons = []
+            if embedded_ambiguous:
+                reasons.append("embedded_source_file_ambiguous")
+            if not knowledge_doc_identity_allowed(manifest_entry):
+                reasons.append("manifest_identity_not_allowed")
+            if not manifest_source or embedded_source != manifest_source:
+                reasons.append("embedded_source_file_mismatch")
+            if binding and binding.get("source_file") != manifest_source:
+                reasons.append("explicit_binding_source_file_mismatch")
+            if not version_matches:
+                reasons.append("manifest_source_version_mismatch")
+            if reasons:
+                knowledge_doc_candidate = {
+                    "path": f"vault/Papers/{vault_filename}",
+                    "basis": candidate_basis,
+                    "embedded_source_file": embedded_source,
+                    "manifest_source_file": manifest_source,
+                    "reasons": reasons,
+                }
+            else:
+                knowledge_doc = f"vault/Papers/{vault_filename}"
 
     doi = meta.get("DOI", "") or ""
     legacy_work_id, legacy_identity_basis = derive_work_identity(
         key, doi, manifest_entry
     )
-    version_projection = work_version_projection(key, work_version_registry)
-    work_id = (
-        version_projection["work_id"] if version_projection else legacy_work_id
-    )
+    work_id = version_projection["work_id"] if version_projection else legacy_work_id
     identity_basis = (
         version_projection["identity_basis"]
         if version_projection
@@ -308,7 +450,11 @@ def parse_llm_row(
     return {
         "id": key,
         "title": title,
-        "author_year": (f"{meta.get('Authors', '').split(';')[0]} ({year})" if meta.get("_metadata_correction") else row.get("Author_Year", "")),
+        "author_year": (
+            f"{meta.get('Authors', '').split(';')[0]} ({year})"
+            if meta.get("_metadata_correction") or not row.get("Author_Year")
+            else row["Author_Year"]
+        ),
         "authors": meta.get("Authors", ""),
         "year": year,
         "doi": doi,
@@ -316,35 +462,55 @@ def parse_llm_row(
         "abstract": (meta.get("Abstract", "") or "")[:500],
         "item_type": (meta.get("Item_Type", "") or "").lower(),
         "journal": meta.get("Journal", "") or "",
-        **({"ai_metadata_correction": meta["_metadata_correction"]} if meta.get("_metadata_correction") else {}),
+        **(
+            {"ai_metadata_correction": meta["_metadata_correction"]}
+            if meta.get("_metadata_correction")
+            else {}
+        ),
         "knowledge_doc": knowledge_doc,
-        **({"knowledge_doc_invalidation": {"reason": "bibliographic_identity_corrected", "basis": metadata_correction}} if invalidated_knowledge else {}),
+        **(
+            {"knowledge_doc_candidate": knowledge_doc_candidate}
+            if knowledge_doc_candidate
+            else {}
+        ),
+        **(
+            {
+                "knowledge_doc_invalidation": {
+                    "reason": "bibliographic_identity_corrected",
+                    "basis": metadata_correction,
+                }
+            }
+            if invalidated_knowledge
+            else {}
+        ),
         "knowledge_coverage": knowledge_coverage(knowledge_doc, manifest_entry),
         "work_id": work_id,
         "identity_basis": identity_basis,
         "legacy_work_id": legacy_work_id,
         "legacy_identity_basis": legacy_identity_basis,
         "version_id": version_projection["version_id"] if version_projection else None,
-        "source_binding": version_projection["source_binding"] if version_projection else None,
-        "source_hold": version_projection["source_hold"] if version_projection else None,
+        "source_binding": version_projection["source_binding"]
+        if version_projection
+        else None,
+        "source_hold": version_projection["source_hold"]
+        if version_projection
+        else None,
         "version_type": (
             version_projection["version_type"] if version_projection else "unknown"
         ),
-        "version_date": version_projection["version_date"] if version_projection else "",
+        "version_date": version_projection["version_date"]
+        if version_projection
+        else "",
         "peer_review_status": (
             version_projection["peer_review_status"]
             if version_projection
             else "not_established"
         ),
         "peer_review_basis": (
-            version_projection["peer_review_basis"]
-            if version_projection
-            else "unknown"
+            version_projection["peer_review_basis"] if version_projection else "unknown"
         ),
         "integrity_status": (
-            version_projection["integrity_status"]
-            if version_projection
-            else "unknown"
+            version_projection["integrity_status"] if version_projection else "unknown"
         ),
         "preferred_version_id": (
             version_projection["preferred_version_id"] if version_projection else None
@@ -359,6 +525,7 @@ def parse_llm_row(
             version_projection["work_versions"] if version_projection else []
         ),
         "llm": {
+            "assessment_status": "assessed" if row.get("Decision") else "unassessed",
             "decision": row.get("Decision", ""),
             "categories": positive_cats,
             "all_categories": all_cats,
@@ -410,12 +577,20 @@ def load_disagreements(filepath: str | Path) -> dict[str, dict[str, Any]]:
         if not pid:
             continue
         affected_raw = row.get("affected_categories", "")
-        affected = [c.strip() for c in affected_raw.split(",") if c.strip()] if affected_raw else []
+        affected = (
+            [c.strip() for c in affected_raw.split(",") if c.strip()]
+            if affected_raw
+            else []
+        )
 
         severity_raw = row.get("severity", "")
         try:
             severity_int = int(severity_raw)
-            severity = "high" if severity_int >= 3 else ("medium" if severity_int == 2 else "low")
+            severity = (
+                "high"
+                if severity_int >= 3
+                else ("medium" if severity_int == 2 else "low")
+            )
         except (ValueError, TypeError):
             severity = severity_raw.lower() if severity_raw else "unknown"
 
@@ -428,14 +603,20 @@ def load_disagreements(filepath: str | Path) -> dict[str, dict[str, Any]]:
 
 
 def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Publish the Evidence Companion data set.")
+    parser = argparse.ArgumentParser(
+        description="Publish the Evidence Companion data set."
+    )
     parser.add_argument(
         "--output",
         type=Path,
         default=OUTPUT_VAULT,
         help="JSON target (default: docs/data/research_vault_v2.json)",
     )
-    parser.add_argument("--prepare-fulltext", action="store_true", help="Project current identities before the full-text manifest exists; the build must run the normal projection afterward.")
+    parser.add_argument(
+        "--prepare-fulltext",
+        action="store_true",
+        help="Project current identities before the full-text manifest exists; the build must run the normal projection afterward.",
+    )
     return parser.parse_args(argv)
 
 
@@ -444,9 +625,7 @@ def main(argv: Sequence[str] | None = None) -> None:
     print("Loading input files...")
 
     # Load metadata (for abstract, DOI, etc.)
-    metadata_rows = read_csv(INPUT_METADATA)
-    metadata_by_key = {r["Zotero_Key"].strip(): r for r in metadata_rows if r.get("Zotero_Key")}
-    metadata_by_key = corrected_csv_metadata(REPO_ROOT, metadata_by_key)
+    metadata_by_key = corpus_metadata()
     print(f"  Metadata: {len(metadata_by_key)} papers")
 
     fulltext_manifest = {}
@@ -460,6 +639,22 @@ def main(argv: Sequence[str] | None = None) -> None:
     print(f"  Explicit knowledge bindings: {len(knowledge_bindings)} records")
 
     work_version_registry = load_registry(INPUT_WORK_VERSION_REGISTRY)
+    active_distillates = project_active_distillates(REPO_ROOT)
+    recovered_knowledge = project_recovered_knowledge(REPO_ROOT, fulltext_manifest)
+    for documents in (active_distillates, recovered_knowledge):
+        for bound_key, document in list(documents.items()):
+            reference = work_version_registry["record_index"][bound_key]
+            for alias, alias_reference in work_version_registry["record_index"].items():
+                if alias_reference == reference:
+                    documents.setdefault(alias, document)
+    sync = (
+        json.loads(INPUT_ZOTERO_SYNC.read_text(encoding="utf-8"))
+        if INPUT_ZOTERO_SYNC.is_file()
+        else {}
+    )
+    live_keys = set(sync.get("live_record_ids", []))
+    if live_keys - set(metadata_by_key):
+        raise ValueError("Live Zotero records are absent from the corpus projection")
     print(
         "  Work-Version registry: "
         f"{work_version_registry['counts']['works']} works / "
@@ -496,7 +691,7 @@ def main(argv: Sequence[str] | None = None) -> None:
     print("\nBuilding paper records...")
     papers = []
 
-    for row in llm_rows:
+    for row in corpus_assessment_rows(metadata_by_key, llm_rows):
         key = row.get("Zotero_Key", "").strip()
         paper = parse_llm_row(
             row,
@@ -505,6 +700,31 @@ def main(argv: Sequence[str] | None = None) -> None:
             knowledge_bindings,
             work_version_registry,
         )
+        if key in recovered_knowledge:
+            if paper.get("knowledge_doc_invalidation"):
+                raise ValueError(
+                    f"{key}: historical recovery would override a metadata invalidation"
+                )
+            paper.update(recovered_knowledge[key])
+            paper["knowledge_coverage"] = "linked"
+        if key in active_distillates:
+            active = active_distillates[key]
+            if any(
+                paper[field] != active[field] for field in ("work_id", "version_id")
+            ):
+                raise ValueError(f"{key}: active distillate crosses projected identity")
+            paper.update(active)
+            paper["knowledge_coverage"] = "linked"
+            paper.pop("knowledge_doc_invalidation", None)
+        if sync:
+            paper["zotero_library"] = {
+                "group_id": sync["group_id"],
+                "observed_on": sync["observed_on"],
+                "record_ids": [key]
+                if key in live_keys
+                else sync["historical_to_live"].get(key, []),
+                "historical_record": key not in live_keys,
+            }
 
         # Attach human assessment if available
         if key in human_by_key:
@@ -517,7 +737,7 @@ def main(argv: Sequence[str] | None = None) -> None:
             human_dec = h["decision"]
 
             if llm_dec and human_dec:
-                paper["benchmark"]["agreement"] = (llm_dec == human_dec)
+                paper["benchmark"]["agreement"] = llm_dec == human_dec
 
         papers.append(paper)
 
@@ -544,13 +764,16 @@ def main(argv: Sequence[str] | None = None) -> None:
     print(f"  Total papers: {len(papers)}")
     papers_with_human = sum(1 for p in papers if p["benchmark"]["has_human"])
     papers_with_decision = sum(
-        1 for p in papers
-        if p["benchmark"]["has_human"] and p["human"]["decision"] and p["llm"]["decision"]
+        1
+        for p in papers
+        if p["benchmark"]["has_human"]
+        and p["human"]["decision"]
+        and p["llm"]["decision"]
     )
     disagreement_count = sum(
-        1 for p in papers
-        if p["benchmark"]["has_human"]
-        and p["benchmark"]["agreement"] is False
+        1
+        for p in papers
+        if p["benchmark"]["has_human"] and p["benchmark"]["agreement"] is False
     )
     print(f"  Papers with human assessment: {papers_with_human}")
     print(f"  Papers with both decisions: {papers_with_decision}")
@@ -569,8 +792,15 @@ def main(argv: Sequence[str] | None = None) -> None:
     # LLM include/exclude stats
     llm_include = sum(1 for p in papers if p["llm"]["decision"] == "Include")
     llm_exclude = sum(1 for p in papers if p["llm"]["decision"] == "Exclude")
-    human_include = sum(1 for p in papers if p["human"] and p["human"]["decision"] == "Include")
-    human_total = sum(1 for p in papers if p["human"] and p["human"]["decision"] in ("Include", "Exclude"))
+    llm_assessed = llm_include + llm_exclude
+    human_include = sum(
+        1 for p in papers if p["human"] and p["human"]["decision"] == "Include"
+    )
+    human_total = sum(
+        1
+        for p in papers
+        if p["human"] and p["human"]["decision"] in ("Include", "Exclude")
+    )
     coverage_counts = {
         status: sum(1 for paper in papers if paper["knowledge_coverage"] == status)
         for status in (
@@ -589,6 +819,11 @@ def main(argv: Sequence[str] | None = None) -> None:
         INPUT_DISAGREEMENTS,
         INPUT_METRICS,
         INPUT_METADATA,
+        INPUT_ZOTERO,
+        *([INPUT_ZOTERO_SYNC] if INPUT_ZOTERO_SYNC.is_file() else []),
+        *sorted(
+            (REPO_ROOT / "research-vault/20_distillates/publications").glob("*.md")
+        ),
         *([] if args.prepare_fulltext else [INPUT_FULLTEXT_MANIFEST]),
         INPUT_KNOWLEDGE_BINDINGS,
         INPUT_CATEGORY_SCHEMA,
@@ -599,7 +834,9 @@ def main(argv: Sequence[str] | None = None) -> None:
     # Build output JSON
     output = {
         "meta": {
-            "fulltext_projection_state": "preparation" if args.prepare_fulltext else "complete",
+            "fulltext_projection_state": "preparation"
+            if args.prepare_fulltext
+            else "complete",
             "source_fingerprint": source_fingerprint(source_files),
             "total_papers": len(papers),
             "unique_works": len({paper["work_id"] for paper in papers}),
@@ -610,10 +847,16 @@ def main(argv: Sequence[str] | None = None) -> None:
             "benchmark_papers": metrics["decision"]["n"],
             "kappa_overall": metrics["decision"]["cohens_kappa"],
             "kappa_interpretation": metrics["decision"]["kappa_interpretation"],
-            "llm_include_rate": round(llm_include / len(papers) * 100, 1) if papers else 0,
+            "llm_include_rate": round(llm_include / llm_assessed * 100, 1)
+            if llm_assessed
+            else 0,
+            "llm_assessed_count": llm_assessed,
+            "llm_unassessed_count": len(papers) - llm_assessed,
             "llm_include_count": llm_include,
             "llm_exclude_count": llm_exclude,
-            "human_include_rate": round(human_include / human_total * 100, 1) if human_total else 0,
+            "human_include_rate": round(human_include / human_total * 100, 1)
+            if human_total
+            else 0,
             "human_include_count": human_include,
             "human_total_with_decision": human_total,
             "disagreement_count": disagreement_count,

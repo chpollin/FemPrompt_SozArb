@@ -1,0 +1,29 @@
+{
+  "id": "A7U389P5",
+  "type": "article-journal",
+  "title": "Mitigating medical bias in large language models by prompt engineering: an empirical study of effectiveness and trade-offs",
+  "author": [
+    {
+      "family": "Xiao",
+      "given": "Ying"
+    },
+    {
+      "family": "Chen",
+      "given": "Zhenpeng"
+    },
+    {
+      "family": "Zhang",
+      "given": "Jie"
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2026
+      ]
+    ]
+  },
+  "DOI": "10.1098/rsta.2025.0125",
+  "URL": "https://royalsocietypublishing.org/doi/10.1098/rsta.2025.0125",
+  "note": "Source-bound version_of_record identity from the Work-Version registry."
+}

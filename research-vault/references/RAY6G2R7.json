@@ -1,0 +1,22 @@
+{
+  "id": "RAY6G2R7",
+  "type": "article",
+  "title": "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks",
+  "author": [
+    {"family": "Lin", "given": "Bill Yuchen"},
+    {"family": "Fu", "given": "Yicheng"},
+    {"family": "Yang", "given": "Karina"},
+    {"family": "Brahman", "given": "Faeze"},
+    {"family": "Huang", "given": "Shiyu"},
+    {"family": "Bhagavatula", "given": "Chandra"},
+    {"family": "Ammanabrolu", "given": "Prithviraj"},
+    {"family": "Choi", "given": "Yejin"},
+    {"family": "Ren", "given": "Xiang"}
+  ],
+  "container-title": "arXiv",
+  "issued": {"date-parts": [[2023, 12, 6]]},
+  "DOI": "10.48550/arXiv.2305.17390",
+  "URL": "https://arxiv.org/abs/2305.17390v2",
+  "version": "v2",
+  "note": "Corrected preprint identity from the Work-Version registry and its source-reviewed metadata correction."
+}

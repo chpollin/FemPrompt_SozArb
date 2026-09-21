@@ -1,0 +1,3 @@
+<meta content="Mitigating Cultural Bias in LLMs via Multi-Agent Cultural Debate" name=citation_title>
+<meta content="10.18653/v1/2026.findings-acl.418" name=citation_doi>
+<meta content="https://aclanthology.org/2026.findings-acl.418.pdf" name=citation_pdf_url>

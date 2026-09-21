@@ -1,0 +1,33 @@
+{
+  "id": "9EP4IC4T",
+  "type": "article-journal",
+  "title": "Ethics and Fairness Considerations in AI-Based Deception Detection Technologies for Mental Health Applications: Focus Group Study",
+  "author": [
+    {
+      "family": "King",
+      "given": "Sayde Leya"
+    },
+    {
+      "family": "Bhaskar",
+      "given": "Serena"
+    },
+    {
+      "family": "Woodward",
+      "given": "Julia"
+    },
+    {
+      "family": "Neal",
+      "given": "Tempestt"
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2026
+      ]
+    ]
+  },
+  "DOI": "10.2196/86633",
+  "URL": "https://ai.jmir.org/2026/1/e86633/",
+  "note": "Source-bound version_of_record identity from the Work-Version registry."
+}

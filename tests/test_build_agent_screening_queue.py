@@ -8,19 +8,35 @@ from src.analysis.build_agent_screening_queue import REPO, build_queue
 def test_queue_preserves_existing_human_authority() -> None:
     queue = build_queue(REPO)
 
-    vault = json.loads((REPO / "docs/data/research_vault_v2.json").read_text(encoding="utf-8"))
+    vault = json.loads(
+        (REPO / "docs/data/research_vault_v2.json").read_text(encoding="utf-8")
+    )
     human_works = {paper["work_id"] for paper in vault["papers"] if paper.get("human")}
     assert human_works.isdisjoint(item["work_id"] for item in queue["queue"])
     counts = queue["counts"]
-    assert counts["direct_human_annotated_records"] == 291
-    assert counts["canonical_records"] == sum(counts[key] for key in (
-        "direct_human_annotated_records", "direct_ai_agent_reviewed_without_human",
-        "unannotated_alias_records_covered_at_work_level", "queued_records",
-    ))
-    assert counts["queued_works"] == sum(counts[key] for key in (
-        "ready_works", "blocked_abstract_only_works", "blocked_without_text_works",
-    ))
-    assert counts["unannotated_alias_records_covered_at_work_level"] == len(queue["covered_alias_records"])
+    assert counts["direct_human_annotated_records"] == sum(
+        bool(paper.get("human")) for paper in vault["papers"]
+    )
+    assert counts["canonical_records"] == sum(
+        counts[key]
+        for key in (
+            "direct_human_annotated_records",
+            "direct_ai_agent_reviewed_without_human",
+            "unannotated_alias_records_covered_at_work_level",
+            "queued_records",
+        )
+    )
+    assert counts["queued_works"] == sum(
+        counts[key]
+        for key in (
+            "ready_works",
+            "blocked_abstract_only_works",
+            "blocked_without_text_works",
+        )
+    )
+    assert counts["unannotated_alias_records_covered_at_work_level"] == len(
+        queue["covered_alias_records"]
+    )
 
 
 def test_completed_residual_source_run_closes_ready_gate() -> None:

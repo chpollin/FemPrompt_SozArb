@@ -1,0 +1,3 @@
+<meta content="Multi-Persona Thinking for Bias Mitigation in Large Language Models" name=citation_title>
+<meta content="10.18653/v1/2026.findings-acl.1389" name=citation_doi>
+<meta content="https://aclanthology.org/2026.findings-acl.1389.pdf" name=citation_pdf_url>

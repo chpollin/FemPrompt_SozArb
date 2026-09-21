@@ -21,7 +21,6 @@ from typing import Any
 
 import yaml
 
-
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_VAULT = REPO_ROOT / "research-vault"
 WORK_VERSION_REGISTRY = REPO_ROOT / "corpus" / "work_version_registry.json"
@@ -33,12 +32,14 @@ TYPE_FOLDERS = {
     "chapter": "40_output/",
 }
 STATUS_RANK = {
+    "preparation": -1,
     "grounded": 0,
     "ai-agent-reviewed": 1,
     "verified": 2,
     "publication-approved": 3,
 }
 REQUIRED_CHECKS = {
+    "preparation": ("quote",),
     "grounded": (),
     "ai-agent-reviewed": ("validation", "ai-agent-review"),
     "verified": ("validation", "ai-agent-review", "verification"),
@@ -248,6 +249,7 @@ def _check_distillate(
     document: Document,
     references: set[str],
     record_index: dict[str, dict[str, str]],
+    registry: dict[str, Any],
     report: ValidationReport,
 ) -> None:
     metadata = document.metadata
@@ -266,11 +268,59 @@ def _check_distillate(
     if record_index:
         expected = record_index.get(record_id)
         if expected is None:
-            report.errors.append(f"{document.key}: record-id is absent from the registry")
+            report.errors.append(
+                f"{document.key}: record-id is absent from the registry"
+            )
         elif expected != {"work_id": work_id, "version_id": version_id}:
             report.errors.append(
                 f"{document.key}: work-version source identity differs from the registry"
             )
+    if metadata.get("status") == "preparation":
+        prepared_by = metadata.get("prepared-by")
+        if not isinstance(prepared_by, dict) or not prepared_by.get("agent-id"):
+            report.errors.append(
+                f"{document.key}: preparation requires prepared-by.agent-id"
+            )
+        if not isinstance(prepared_by, dict) or not prepared_by.get("model"):
+            report.errors.append(
+                f"{document.key}: preparation requires prepared-by.model"
+            )
+        source = metadata.get("source-representation")
+        required_source_fields = ("path", "sha256", "version-id", "version-type")
+        if not isinstance(source, dict):
+            report.errors.append(
+                f"{document.key}: preparation requires source-representation"
+            )
+        else:
+            for field_name in required_source_fields:
+                if not source.get(field_name):
+                    report.errors.append(
+                        f"{document.key}: source-representation.{field_name} is required"
+                    )
+            if registry:
+                from src.analysis.work_versions import source_binding_for_record
+
+                expected_source = source_binding_for_record(
+                    registry, record_id, REPO_ROOT
+                )
+                if expected_source is None:
+                    report.errors.append(
+                        f"{document.key}: no canonical source binding for preparation"
+                    )
+                else:
+                    projected_source = {
+                        "path": expected_source["source_path"],
+                        "sha256": expected_source["source_sha256"],
+                        "version-id": expected_source["source_version_id"],
+                        "version-type": expected_source["source_version_type"],
+                    }
+                    if any(
+                        source.get(key) != value
+                        for key, value in projected_source.items()
+                    ):
+                        report.errors.append(
+                            f"{document.key}: source-representation differs from the canonical source binding"
+                        )
     if "quote" not in (metadata.get("checked") or {}):
         report.errors.append(f"{document.key}: checked.quote is required")
     in_statements = False
@@ -349,6 +399,7 @@ def validate_vault(vault: Path = DEFAULT_VAULT) -> ValidationReport:
     documents = _documents(vault, report)
     references = _reference_ids(vault)
     record_index: dict[str, dict[str, str]] = {}
+    registry: dict[str, Any] = {}
     if vault.resolve() == DEFAULT_VAULT.resolve() and WORK_VERSION_REGISTRY.exists():
         registry = json.loads(WORK_VERSION_REGISTRY.read_text(encoding="utf-8"))
         record_index = registry.get("record_index", {})
@@ -356,7 +407,7 @@ def validate_vault(vault: Path = DEFAULT_VAULT) -> ValidationReport:
         _check_metadata(document, report)
         document_type = document.metadata.get("type")
         if document_type == "distillate":
-            _check_distillate(document, references, record_index, report)
+            _check_distillate(document, references, record_index, registry, report)
         elif document_type == "assertion":
             _check_assertion(document, documents, report)
         elif document_type == "chapter":

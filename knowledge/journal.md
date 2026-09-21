@@ -24,6 +24,18 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## PRISM and the epistemic infrastructure (2026)
 
+### 2026-09-21: Integrate the live library and restore source-bound reading coverage
+
+The operator requested work with gpt-5.6-sol subagents across Zotero, knowledge documents and PRISM. The canonical corpus now admits the live library while preserving original raw records, metadata-correction hashes and historical annotation identities. Missing historical references were added to the authorised Zotero group with per-item read-back. A library-membership manifest records historical aliases without deleting existing records.
+
+PRISM now projects unassessed corpus records independently of the benchmark table. Unassessed categories stay null, while the paired benchmark remains unchanged. Exact source-version aliases share the same governed reading representation. An archived intake snapshot preserves the scope of earlier agent reviews, and the package builder rejects later changes to their bibliographic inputs.
+
+The knowledge layer gains an attributed preparation state with separate bibliographic and source Version identities. Existing distillates were restored through source and document hashes. New source-specific drafts remain unreviewed, and an independent reading pass corrected unsupported fairness claims before integration. Windows path handling was repaired for existing long-named documents. The reproducible literature-readiness inventory records remaining source and knowledge gaps without granting scholarly authority.
+
+The source binding now admits publisher-confirmed ACL proceedings and an NBER working paper through exact identifiers and acquisition provenance. Preparation notes distinguish technical source identity from unknown publication versions and scholarly review. Visual inspection of the critical digital-literacy article checked the published prompt tables against its illustrations. PRISM still lacks a structured visual-evidence annotation field, so that inspection does not establish productive visual-screening readiness. Future timestamps proposed in source-binding preparation were discarded and replaced by the actual time of root verification, with preparation provenance retained.
+
+Older AI screening receipts are withheld when their source path or hash differs from a newly bound reading source. Valid records continue through publication, while malformed identities and review receipts still stop the build. The original annotations and receipts remain unchanged. The complete build and check workflow passed, including source-bound Vault validation, Python and browser checks. The live-corpus browser trial exercised category evidence, preparation-document display, saving, export and reload without writing productive research annotations.
+
 ### 2026-09-21: Authorised Zotero import and live reconciliation
 
 The operator authorised adding missing literature directly to the group library. A separate creation-only importer now preserves prepared RIS metadata, checks group-specific access, records a version-bound plan and reads back every creation. The live library confirmed the July imports and the historical recovery records, resolving the discrepancy caused by the stale repository export. Missing prepared references were added, including the proceedings version confirmed by ACL Anthology and Crossref. The title variant in the historical recovery was confirmed as an existing publication. Existing group records stayed unchanged. Local snapshots, receipts and the final audit are under `generated/zotero-sync/`, which is excluded from Git. [[plan#Authorised additive Zotero import]] owns the procedure and source references.

@@ -109,7 +109,7 @@ CURATED_SOURCE_OVERRIDES = {
     },
     "4KMMPA6A": {
         "source": "clean",
-        "file": "Gengler_2024_Faires_KI-Prompting_–_Ein_Leitfaden_für.md",
+        "file": "Gengler_2024_Faires_KI-Prompting_–_Ein_Leitfaden_für.md",  # noqa: RUF001 - literal source filename
         "title_evidence": "Faires KI-Prompting Ein Leitfaden für Unternehmen",
     },
     "EQV4DNQR": {
@@ -190,7 +190,9 @@ def drop_running_headers(text: str) -> str:
     def is_header(s: str) -> bool:
         return bool(s) and len(s) <= 6 and counts[s] >= 5 and not s.startswith("#")
 
-    return "\n".join(ln for ln, s in zip(lines, stripped) if not is_header(s))
+    return "\n".join(
+        ln for ln, s in zip(lines, stripped, strict=True) if not is_header(s)
+    )
 
 
 def embedded_source_metadata(served_md: Path) -> dict[str, object]:
@@ -226,6 +228,15 @@ def embedded_source_file(served_md: Path) -> str | None:
     return source_file if isinstance(source_file, str) else None
 
 
+def local_source_filename(value: object) -> str | None:
+    """Return a conversion basename, rejecting paths outside a source directory."""
+    if not isinstance(value, str) or not value:
+        return None
+    if Path(value).name != value or "\\" in value or ":" in value:
+        raise ValueError("Knowledge source must name a local source file")
+    return value
+
+
 GENERIC_HEADINGS = {
     "abstract",
     "acknowledgements",
@@ -250,7 +261,7 @@ def substantive_heading(value: str) -> str | None:
     value = html.unescape(value).strip()
     prefixed = re.match(
         r"^(?:research[- ]?article|original paper|article|viewpoint|forum)\s*"
-        r"(?:[:\-–—]\s*)?(.+)$",
+        r"(?:[:\-\u2013\u2014]\s*)?(.+)$",
         value,
         re.IGNORECASE,
     )
@@ -457,9 +468,12 @@ def identity_conflicts(
     metadata = metadata or {}
     expected_year = paper.get("year")
     source_year = metadata.get("year")
-    if isinstance(expected_year, int) and isinstance(source_year, int):
-        if expected_year != source_year:
-            conflicts.append("year")
+    if (
+        isinstance(expected_year, int)
+        and isinstance(source_year, int)
+        and expected_year != source_year
+    ):
+        conflicts.append("year")
 
     expected_author = first_author_surname(paper.get("authors"))
     source_authors = metadata.get("authors")
@@ -559,17 +573,34 @@ def resolve_docling(
 ) -> tuple[Path | None, str | None]:
     """Cascade: exact source_file from the knowledge doc, then first-author-year prefix."""
     registry_path = ROOT / "corpus/work_version_registry.json"
-    registry = json.loads(registry_path.read_text(encoding="utf-8")) if registry_path.is_file() else {}
-    if registry.get("source_index", {}).get(paper.get("id")) and not paper.get("source_binding"):
-        raise ValueError(f"{paper.get('id')}: corpus is missing the governed source binding")
+    registry = (
+        json.loads(registry_path.read_text(encoding="utf-8"))
+        if registry_path.is_file()
+        else {}
+    )
+    if registry.get("source_index", {}).get(paper.get("id")) and not paper.get(
+        "source_binding"
+    ):
+        raise ValueError(
+            f"{paper.get('id')}: corpus is missing the governed source binding"
+        )
     if paper.get("source_binding"):
         from src.analysis.work_versions import source_binding_for_record
+
         binding = source_binding_for_record(registry, str(paper.get("id", "")), ROOT)
-        if binding != paper["source_binding"] or binding.get("work_id") != paper.get("work_id") or binding.get("bibliographic_version_id") != paper.get("version_id"):
-            raise ValueError(f"{paper.get('id')}: corpus source binding differs from canonical registry")
+        if (
+            binding != paper["source_binding"]
+            or binding.get("work_id") != paper.get("work_id")
+            or binding.get("bibliographic_version_id") != paper.get("version_id")
+        ):
+            raise ValueError(
+                f"{paper.get('id')}: corpus source binding differs from canonical registry"
+            )
         path = ROOT / binding["source_path"]
         if identity_conflicts(paper, path):
-            raise ValueError(f"{paper.get('id')}: bound manuscript conflicts with bibliography")
+            raise ValueError(
+                f"{paper.get('id')}: bound manuscript conflicts with bibliography"
+            )
         label = "clean" if path.parent == CLEAN_DIR else "raw"
         return path, label
     override_path, override_label = curated_source(paper)
@@ -579,25 +610,29 @@ def resolve_docling(
     # manifest exists. Requiring the displayed Knowledge Document here would
     # create a manifest -> document link -> source -> manifest cycle.
     bindings_path = ROOT / "docs/data/knowledge_doc_bindings.json"
-    bindings = json.loads(bindings_path.read_text(encoding="utf-8")).get("bindings", {}) if bindings_path.is_file() else {}
+    bindings = (
+        json.loads(bindings_path.read_text(encoding="utf-8")).get("bindings", {})
+        if bindings_path.is_file()
+        else {}
+    )
     binding = bindings.get(paper.get("id"))
     if binding:
-        filename = binding["source_file"]
-        if Path(filename).name != filename or "\\" in filename or ":" in filename:
+        filename = local_source_filename(binding["source_file"])
+        if filename is None:
             raise ValueError("Knowledge source binding must name a local source file")
         for directory, label in ((CLEAN_DIR, "clean"), (RAW_DIR, "raw")):
             path = directory / filename
             if path.is_file():
                 return verified_source(paper, path, label)
-        raise ValueError(f"{paper.get('id')}: curated Knowledge Document source is missing")
+        raise ValueError(
+            f"{paper.get('id')}: curated Knowledge Document source is missing"
+        )
     kd = paper.get("knowledge_doc")
     explicit_mismatch = False
     rejected: set[tuple[str, str]] = set()
     if isinstance(kd, str) and kd:
         metadata = embedded_source_metadata(DOCS / kd)
-        sf = metadata.get("source_file")
-        if not isinstance(sf, str):
-            sf = None
+        sf = local_source_filename(metadata.get("source_file"))
         if sf:
             if (CLEAN_DIR / sf).exists():
                 resolved = verified_source(
@@ -615,6 +650,26 @@ def resolve_docling(
                     return resolved
                 explicit_mismatch = True
                 rejected.add(("raw", sf))
+    elif isinstance(candidate := paper.get("knowledge_doc_candidate"), dict):
+        candidate_path = candidate.get("path")
+        if isinstance(candidate_path, str) and candidate_path:
+            candidate_doc = DOCS / candidate_path
+            metadata = embedded_source_metadata(candidate_doc)
+            sf = local_source_filename(metadata.get("source_file"))
+            if sf:
+                for directory, label in ((CLEAN_DIR, "clean"), (RAW_DIR, "raw")):
+                    path = directory / sf
+                    if not path.is_file():
+                        continue
+                    if identity_conflicts(paper, path, metadata):
+                        explicit_mismatch = True
+                        rejected.add((label, sf))
+                        continue
+                    resolved = verified_source(paper, path, label, metadata=metadata)
+                    if resolved[0]:
+                        return resolved
+                    explicit_mismatch = True
+                    rejected.add((label, sf))
     key = author_year_key(paper)
     if len(key) > 5:
         for idx, base, label in (
@@ -638,7 +693,7 @@ def resolve_docling(
                     path = base / filename
                     resolved = verified_source(paper, path, label)
                     if resolved[0]:
-                        candidates = source_titles(path) + [filename_title(path)]
+                        candidates = [*source_titles(path), filename_title(path)]
                         ranked.append(
                             (title_similarity(expected, candidates), filename)
                         )

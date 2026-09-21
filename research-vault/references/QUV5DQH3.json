@@ -1,0 +1,14 @@
+{
+  "id": "QUV5DQH3",
+  "type": "article-magazine",
+  "title": "When Good Algorithms Go Sexist: Why and How to Advance AI Gender Equity",
+  "author": [
+    { "family": "Smith", "given": "Genevieve" },
+    { "family": "Rustagi", "given": "Ishita" }
+  ],
+  "issued": { "date-parts": [[2021, 3, 31]] },
+  "container-title": "Stanford Social Innovation Review",
+  "DOI": "10.48558/A179-B138",
+  "URL": "https://ssir.org/articles/entry/when_good_algorithms_go_sexist_why_and_how_to_advance_ai_gender_equity",
+  "note": "Source-bound version_of_record identity from the Work-Version registry."
+}

@@ -357,6 +357,16 @@ test('reading shell labels the generated reference as LLM-Wissensdestillat', fun
     assertNotContains(html, 'KI-Extraktion');
     assertContains(html, 'class="pt-reading-surface" aria-label="Papertext"');
 });
+test('reading shell identifies preparation knowledge as unreviewed LLM work', function() {
+    var html = T.readingShellHtml({
+        id: 'prepared-paper',
+        title: 'Prepared paper',
+        abstract: new Array(140).join('a'),
+        knowledge_authority: { status: 'preparation' }
+    }, null);
+    assertContains(html, 'LLM-Ausarbeitung, noch nicht separat geprüft.');
+    assertNotContains(html, 'LLM-Wissensdestillat aus dem Wissensdokument');
+});
 test('web source URLs move to metadata and repeated URL-only lines leave the paper body', function() {
     var canonical = 'https://www.articulate.com/blog/how-to-create-inclusive-ai-images-a-guide-to-bias-free-prompting/';
     var converted = 'https://www.articulate.com/blog/how-to-create-inclusive-ai-images-a-guide-to-bias-freeprompting/';
@@ -707,6 +717,30 @@ test('splitDocLayers returns no AI layer when the doc has no Kernbefund (abstrac
     assertEqual(L.ai, '');
     assertContains(L.paper, 'only an abstract');
 });
+test('splitDocLayers treats a source-bound preparation note including frontmatter as AI-only', function() {
+    var note = [
+        '---',
+        'type: distillate',
+        'reference: RH8MC67Z',
+        'status: preparation',
+        'prepared-by:',
+        '  artifact-review-status: unreviewed',
+        '---',
+        '# Distillate: GPT-5 sociodemographic bias and adversarial hallucinations',
+        '## Core statements',
+        'A snapshot experiment tested identical clinical vignettes.',
+        '## Method and scope',
+        'The source supports this bounded finding for its reported design.',
+        '## Review boundary',
+        'This preparation is source-bound and unreviewed.'
+    ].join('\n');
+    var L = T.splitDocLayers(note);
+    assertEqual(L.paper, '', 'preparation metadata is never presented as original paper text');
+    assertContains(L.ai, 'status: preparation');
+    assertContains(L.ai, 'Core statements');
+    assertContains(L.ai, 'Method and scope');
+    assertContains(L.ai, 'source-bound and unreviewed');
+});
 test('a paper Beleg starts at teilweise, an LLM-distillate Beleg leaves the category unset', function() {
     var tc = T.TECH_CATS[0], sc = T.SOCIAL_CATS[0];
     T.resetWork({ id: 'm3Paper' });
@@ -879,10 +913,16 @@ if (window.__SEED_PAPERS__ && window.__SEED_PAPERS__.length) {
     test('FR-05: the real seed reproduces the canonical benchmark marginals', function() {
         T.setPapers(window.__SEED_PAPERS__);
         var f = T.computeFlow(T.SEED);
-        assertEqual(f.total, 326, 'corpus size');
+        assertEqual(f.total, window.__SEED_PAPERS__.length, 'current corpus size');
         assertEqual(f.aiScreened, 326, 'AI track covers all identified records');
         assertEqual(f.aiIncl, 232, 'AI Include');
         assertEqual(f.aiExcl, 94, 'AI Exclude');
+        var benchmarkPapers = window.__SEED_PAPERS__.filter(function(p) {
+            return p.llm && p.llm.assessment_status !== 'unassessed';
+        });
+        T.setPapers(benchmarkPapers);
+        f = T.computeFlow(T.SEED);
+        assertEqual(f.total, 326, 'benchmark corpus size');
         assertEqual(f.humanScreened, 291, 'human track on the paired subset');
         assertEqual(f.humanIncl, 134, 'human Include within the paired subset');
         assertEqual(f.humanExcl, 157, 'human Exclude within the paired subset');

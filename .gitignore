@@ -109,3 +109,15 @@ tests/browser/out/
 # Advisory-track intermediates (regenerable via src/analysis/build_advisory_manifest.py; merged into sq_extraction.json)
 generated/analysis-advisory/inputs/
 generated/analysis-advisory/extract/
+
+# Newly reacquired third-party full texts remain local pending source review.
+generated/source-acquisition/audit-*/markdown-new-bytes/
+
+# Rebuilt from source-bound research-vault documents and recovery manifests.
+docs/vault/Papers/active-*.md
+docs/vault/Papers/recovered-*.md
+generated/literature-readiness.json
+generated/literature-readiness.csv
+
+# Keep complete publisher captures local; only minimal metadata evidence is versioned.
+corpus/source-acquisition/acl-publisher-bindings-2026-09-21/*.html

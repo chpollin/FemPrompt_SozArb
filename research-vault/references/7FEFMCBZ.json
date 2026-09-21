@@ -1,0 +1,22 @@
+{
+  "id": "7FEFMCBZ",
+  "type": "paper-conference",
+  "title": "How Child Welfare Workers Reduce Racial Disparities in Algorithmic Decisions",
+  "author": [
+    { "family": "Cheng", "given": "Hao-Fei" },
+    { "family": "Stapleton", "given": "Logan" },
+    { "family": "Kawakami", "given": "Anna" },
+    { "family": "Sivaraman", "given": "Venkatesh" },
+    { "family": "Cheng", "given": "Yanghuidi" },
+    { "family": "Qing", "given": "Diana" },
+    { "family": "Perer", "given": "Adam" },
+    { "family": "Holstein", "given": "Kenneth" },
+    { "family": "Wu", "given": "Zhiwei Steven" },
+    { "family": "Zhu", "given": "Haiyi" }
+  ],
+  "issued": { "date-parts": [[2022]] },
+  "container-title": "CHI Conference on Human Factors in Computing Systems",
+  "DOI": "10.1145/3491102.3501831",
+  "URL": "https://doi.org/10.1145/3491102.3501831",
+  "note": "Source-bound identity from the Work-Version registry; registered version type remains unknown."
+}

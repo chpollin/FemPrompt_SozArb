@@ -1,0 +1,19 @@
+{
+  "id": "R7V99ERA",
+  "type": "paper-conference",
+  "title": "Examining Risks of Racial Biases in NLP Tools for Child Protective Services",
+  "author": [
+    { "family": "Field", "given": "Anjalie" },
+    { "family": "Coston", "given": "Amanda" },
+    { "family": "Gandhi", "given": "Nupoor" },
+    { "family": "Chouldechova", "given": "Alexandra" },
+    { "family": "Putnam-Hornstein", "given": "Emily" },
+    { "family": "Steier", "given": "David" },
+    { "family": "Tsvetkov", "given": "Yulia" }
+  ],
+  "issued": { "date-parts": [[2023]] },
+  "container-title": "2023 ACM Conference on Fairness, Accountability, and Transparency",
+  "DOI": "10.1145/3593013.3594094",
+  "URL": "https://doi.org/10.1145/3593013.3594094",
+  "note": "Source-bound identity from the Work-Version registry; registered version type remains unknown."
+}

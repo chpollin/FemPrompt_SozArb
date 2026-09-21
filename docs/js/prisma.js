@@ -135,6 +135,14 @@ function bindRecordIdentity(record, paper) {
     return record;
 }
 
+function paperIdentityReady(paper) {
+    return !!(paper && paper.work_id && paper.version_id);
+}
+
+function paperIdentityRequired(paper) {
+    return !!(paper && Object.prototype.hasOwnProperty.call(paper, 'identity_basis'));
+}
+
 function applyLifecycleContract() {
     const contract = window.__LIFECYCLE_CONTRACT__ ||
         (EC && EC.getLifecycleContract ? EC.getLifecycleContract() : null);
@@ -894,15 +902,15 @@ function harmTypesHint(analysis) {
 }
 
 // Split a served knowledge document into its two epistemic layers (M3, ADR-016).
-// Every served doc concatenates a paper layer (Abstract, Key Concepts, Full Text)
-// and a machine-extraction layer that starts at "## Kernbefund" (Forschungsfrage,
-// Methodik, Kategorie-Evidenz, ...). The boundary is the first Kernbefund heading,
-// pulled up over a repeated H1 title that heads the extraction. A doc without that
-// heading (abstract-only fallback) has no AI layer.
+// Historical served docs concatenate a paper layer (Abstract, Key Concepts, Full Text)
+// and a machine-extraction layer that starts at "## Kernbefund". Current source-bound
+// preparation docs are distillates throughout, so their frontmatter and title also stay
+// in the AI layer rather than being exposed as original paper text.
 function splitDocLayers(md) {
     let lines = (md || '').split(/\r?\n/);
     let b = -1;
     for (let i = 0; i < lines.length; i++) {
+        if (/^##\s+Core statements\b/i.test(lines[i])) return { paper: '', ai: md || '' };
         if (/^##\s+Kernbefund\b/.test(lines[i])) { b = i; break; }
     }
     if (b === -1) return { paper: md || '', ai: '' };
@@ -1222,6 +1230,12 @@ function abstractQuality(p) {
     return { ok: true };
 }
 
+
+function abstractUsableForReading(p) {
+    const quality = abstractQuality(p);
+    return quality.ok || (!!(p && String(p.abstract || '').trim()) && /^Sehr kurzes Abstract/.test(quality.note || ''));
+}
+
 // The initial paper is screenable when the currently known paper layer contains
 // substantive text: a manifest-backed full text or a non-boilerplate abstract.
 // A knowledge document is only the LLM reference layer and never qualifies here.
@@ -1432,7 +1446,7 @@ function bindCorpusItems() {
 // ---- center: reading column (full text + in-text search) ----
 function sourcePillHtml(p) {
     if (hasFullText(p)) return '<span class="pt-pill pt-source-pill pt-pill-ghost">Volltext</span>';
-    if (p.abstract && p.abstract.trim()) return '<span class="pt-pill pt-source-pill pt-pill-warn">Metadaten-Abstract</span>';
+    if (abstractUsableForReading(p)) return '<span class="pt-pill pt-source-pill pt-pill-warn">Metadaten-Abstract</span>';
     return '<span class="pt-pill pt-source-pill pt-pill-warn">kein Papertext</span>';
 }
 
@@ -1457,6 +1471,10 @@ function doiHref(raw) {
 
 function readingShellHtml(p, dec) {
     const aq = abstractQuality(p);
+    const authority = p.knowledge_authority || {};
+    const layerNote = authority.status === 'preparation'
+        ? 'LLM-Ausarbeitung, noch nicht separat geprüft. Sie ist vom Originaltext getrennt. Belege daraus erfüllen das Paper-Beleg-Gate nicht.'
+        : 'LLM-Wissensdestillat aus dem Wissensdokument. Diese automatisch erzeugte Referenz ist vom Originaltext getrennt; Belege daraus erfüllen das Paper-Beleg-Gate nicht.';
     let h = '<div class="pt-read pt-read-screen"><div class="pt-read-inner">';
     h += '<div class="pt-paper-head"><div class="pt-read-meta">';
     h += sourcePillHtml(p);
@@ -1498,7 +1516,7 @@ function readingShellHtml(p, dec) {
         (canEdit() ? '<button class="pt-btn pt-pin-hit" id="pt-pin-hit" disabled title="Aktuellen Treffer als Beleg anheften">Treffer anheften</button>' : '') +
         '</div>';
     h += '<div class="pt-search-key" id="pt-search-key" hidden><span aria-hidden="true"></span>Aktueller Suchtreffer im Lesetext</div>';
-    h += '<div class="pt-layer-band" id="pt-layer-band" hidden>LLM-Wissensdestillat aus dem Wissensdokument. Diese automatisch erzeugte Referenz ist vom Originaltext getrennt; Belege daraus erfüllen das Paper-Beleg-Gate nicht.</div>';
+    h += '<div class="pt-layer-band" id="pt-layer-band" hidden>' + EC.escapeHtml(layerNote) + '</div>';
     h += '<div class="pt-doc" id="pt-doc"><p class="pt-muted">Volltext lädt…</p></div>';
     h += '</article></div></div>';
     return h;
@@ -1529,7 +1547,7 @@ function applyReading(token, p, full, kdmd) {
     if (full && full.trim()) {
         docHtmlPaper = renderMarkdown(paperBodyMarkdown(full, p));
         currentTextSource = 'raw';
-    } else if (p.abstract && p.abstract.trim()) {
+    } else if (abstractUsableForReading(p)) {
         docHtmlPaper = '<p class="pt-doc-p">' + inlineMd(p.abstract) + '</p>';
         currentTextSource = 'abstract';
     } else {
@@ -2092,6 +2110,8 @@ function assessInnerHtml(p, dec) {
     if (dec) return assessLockedHtml(p, dec);
     if (!canEdit()) return '<div class="pt-rail-head"><span class="pt-rail-title">Bewertung</span></div>' +
         '<div class="pt-rail-body"><p class="pt-muted pt-read-only-note">Für dieses Paper ist in diesem Browser keine eigene Bewertung geladen. Mit „Bearbeiten“ kannst du eine Bewertung erfassen oder deinen Arbeitsordner verbinden.</p></div>';
+    if (paperIdentityRequired(p) && !paperIdentityReady(p)) return '<div class="pt-rail-head"><span class="pt-rail-title">Bewertung</span></div>' +
+        '<div class="pt-rail-body"><p class="pt-muted pt-read-only-note">Dieses Paper ist noch nicht an ein Werk und eine genaue Fassung gebunden. Die Kategorien können erst nach der bibliografischen Zuordnung erfasst und gespeichert werden.</p></div>';
     let cats = work.cats;
     let h = '<div class="pt-rail-head"><span class="pt-rail-title">Deine Bewertung</span></div>';
     h += '<div class="pt-rail-body"><div class="pt-rail-scroll">';
@@ -2644,6 +2664,11 @@ function bindVerificationPanel(p, dec, col) {
 function commit() {
     if (!canEdit()) return;
     let p = papers[state.index];
+    if (paperIdentityRequired(p) && !paperIdentityReady(p)) {
+        setSaveStatus('error', 'Bewertung nicht gespeichert: Werk- oder Fassungsbindung fehlt.');
+        renderData(document.getElementById('pt-data-inline'));
+        return;
+    }
     if (!state.reviewer) {
         setSaveStatus('needs-reviewer', 'Reviewer:innen-Kürzel festlegen, bevor die erste Entscheidung gespeichert wird.');
         focusDataInline(); return;
@@ -3203,6 +3228,7 @@ const TEST_HOOK = {
     renderMarkdown: renderMarkdown, splitDocLayers: splitDocLayers, paperBodyMarkdown: paperBodyMarkdown,
     readingShellHtml: readingShellHtml, normalizedDoi: normalizedDoi, doiHref: doiHref,
     normalizedSourceUrl: normalizedSourceUrl, urlOnlyLine: urlOnlyLine, sameSourceUrl: sameSourceUrl, authorDisplay: authorDisplay,
+    sourcePillHtml: sourcePillHtml, paperIdentityReady: paperIdentityReady,
     // generated report text and persistence payload
     disclosureMarkdown: disclosureMarkdown, reviewerPayload: reviewerPayload,
     reviewerFileText: reviewerFileText, sortedDecisions: sortedDecisions,
@@ -3222,7 +3248,7 @@ const TEST_HOOK = {
     getWork: function() { return work; },
     curDec: curDec, resetWork: resetWork, refreshAssess: refreshAssess,
     pinEvidence: pinEvidence, unpinEvidence: unpinEvidence, commit: commit, editRecord: editRecord,
-    evidenceListHtml: evidenceListHtml, chipHtml: chipHtml, statusLabel: statusLabel,
+    assessInnerHtml: assessInnerHtml, evidenceListHtml: evidenceListHtml, chipHtml: chipHtml, statusLabel: statusLabel,
     corpusListHtml: corpusListHtml, corpusSearchResults: corpusSearchResults,
     setCorpusQuery: function(x) { corpusQuery = String(x || ''); },
     setCorpusIndex: function(x) { corpusIndex = x; }, isScreenable: isScreenable, firstEntryIndex: firstEntryIndex,

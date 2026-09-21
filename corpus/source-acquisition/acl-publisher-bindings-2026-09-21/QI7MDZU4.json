@@ -1,0 +1,53 @@
+{
+  "schema": "femprompt-publisher-source-binding-evidence/0.1",
+  "record_id": "QI7MDZU4",
+  "captured_at": "2026-09-21",
+  "publisher": "ACL Anthology",
+  "landing_page_url": "https://aclanthology.org/2026.acl-long.1094/",
+  "captured_page_path": "corpus/source-acquisition/acl-publisher-bindings-2026-09-21/QI7MDZU4.metadata.txt",
+  "captured_page_sha256": "sha256:53f09e2ffd69b799832396148a25fda199784be37fc4381a46f58eebc14b47ac",
+  "publisher_metadata": {
+    "citation_title": "InsideOut: Measuring and Mitigating Insider–Outsider Bias in Interview Script Generation",
+    "citation_doi": "10.18653/v1/2026.acl-long.1094",
+    "citation_pdf_url": "https://aclanthology.org/2026.acl-long.1094.pdf"
+  },
+  "acquisition_pdf": {
+    "path": "generated/pdfs/audit-2026-09-21/c42b463f9ba115503a58.pdf",
+    "sha256": "sha256:bde6c75c0a8ea7b2a5d3316218dee8963aaad1951e882eb8a9ecb9912918bf77"
+  },
+  "publisher_pdf_download_verification": {
+    "url": "https://aclanthology.org/2026.acl-long.1094.pdf",
+    "sha256": "sha256:bde6c75c0a8ea7b2a5d3316218dee8963aaad1951e882eb8a9ecb9912918bf77",
+    "matches_acquisition_pdf_bytes": true
+  },
+  "readiness_markdown": {
+    "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/c42b463f9ba115503a58.md",
+    "sha256": "sha256:e37a2f6c550e965d331c0b9f2b4d4a8bc316f17bc14b65bf14d54fc233e46f56",
+    "declared_readiness_sha256": "sha256:e37a2f6c550e965d331c0b9f2b4d4a8bc316f17bc14b65bf14d54fc233e46f56",
+    "matches_declared_readiness_hash": true
+  },
+  "version_evidence": {
+    "status": "publisher_metadata_and_exact_pdf_bytes_confirmed",
+    "version_type": "version_of_record",
+    "basis": "The official ACL Anthology landing page identifies one proceedings item by exact citation title and DOI and supplies its direct PDF URL. The PDF downloaded from that URL is byte-identical to the locally acquired PDF from which the unchanged readiness Markdown representation was prepared.",
+    "authority_limit": "Source identity and publication-version evidence only; no peer-review, screening, AI-review or human-verification status is asserted."
+  },
+  "registered_identity": {
+    "work_id": "work:2707a834-08fe-5819-a92c-4afb47ca08c5",
+    "bibliographic_version_id": "version:6a3c613d-1545-5827-95d0-8ee4a95e5256",
+    "title": "InsideOut: Measuring and Mitigating Insider–Outsider Bias in Interview Script Generation",
+    "doi": "10.18653/v1/2026.acl-long.1094"
+  },
+  "verification": {
+    "citation_title_exact_match": true,
+    "citation_doi_exact_match": true,
+    "citation_pdf_url_is_direct_https_pdf": true,
+    "publisher_pdf_bytes_match_acquisition_pdf": true,
+    "readiness_markdown_hash_matches": true
+  },
+  "raw_page_capture": {
+    "url": "https://aclanthology.org/2026.acl-long.1094/",
+    "local_path": "corpus/source-acquisition/acl-publisher-bindings-2026-09-21/QI7MDZU4.html",
+    "sha256": "sha256:cd96ace781b48199c98be5f91fb6c02cb5f644edddb5a5d682303528d657e6e4"
+  }
+}

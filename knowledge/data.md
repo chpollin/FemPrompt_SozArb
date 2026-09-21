@@ -7,7 +7,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-06-09
-updated: 2026-09-20
+updated: 2026-09-21
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 4.8), Codex (GPT-6)
 method:
@@ -25,6 +25,12 @@ related: [specification, methods, standards]
 This document describes the substrate the PRISMA screening tool consumes and produces. The canonical persisted unit is one JSON file per reviewer or consolidated agent track. Schema `femprompt-prisma-reviewer/0.5` adds embedded provenance, immutable annotation versions, deterministic check receipts, and a record-level lifecycle to the version-aware evidence and text-source fields of schema 0.4. Annotations from people and AI agents use the same structural form and retain distinct actor types and roles. The comparative round-1 corpus continues to store the consolidated expert and LLM decisions as sibling fields for replay and divergence analysis. The category schema and inclusion logic come from `assessment/categories.yaml`. What the data means lives here; what the tool does with it lives in [[specification]].
 
 ## Category schema (reused, not redefined)
+
+Corpus membership comes from `corpus/zotero_export.json`, including records without a benchmark annotation. The historical raw records remain immutable inputs to the hash-bound metadata corrections. Later live records are appended. `corpus/zotero_sync.json` identifies the observed live group membership and confirmed historical aliases, so the corpus and live library have explicit, different denominators. The Work-Version registry preserves established identities when it admits these aliases.
+
+PRISM projects unassessed categories as null and leaves the decision empty. Historical benchmark annotations retain their original category values and recorded authorship. An existing human annotation that becomes addressable after a live import remains a human annotation. Corpus membership alone adds no screening decision. The benchmark comparison continues to use its original assessed subset.
+
+Historical knowledge-document titles only identify candidates. Publication requires a matching embedded source filename and exact manifest identity. Rejected candidates retain their diagnostic reasons. Hash-bound recoveries and active preparation distillates use their respective source contracts. `generated/literature-readiness.json` reports missing source material and knowledge documents separately from the technical ability to annotate an available abstract.
 
 Ten three-level categories (nein/teilweise/ja = 0/1/2), split into two dimensions, with the three-way derivation from [[methods]] (ADR-024). The existing benchmark annotations (human and LLM `all_categories`) stay binary 0/1 and are read as-is; a legacy boolean coerces to ja. A new Paper-Beleg starts an empty category at teilweise and leaves the centrality judgement explicit (ADR-030).
 

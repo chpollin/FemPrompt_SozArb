@@ -38,6 +38,7 @@ The test system establishes the technical behaviour of PRISM, the Evidence Compa
 | Zotero import residuals | Deduplication across the packages, version relations kept in the residual file, refusal to overwrite a prepared import, the unchanged leading package | `python -m pytest tests/test_zotero_import_residuals.py` |
 | Authorised Zotero import | Group-limited access, preservation of real RIS metadata, held identity conflicts, stale-plan rejection, creation-only writes, receipt after uncertain response, semantic tag read-back and duplicate-free continuation | `python -m pytest tests/test_zotero_group_import.py` |
 | Claim and Vault checks | Assertion anchors, adjacent-layer references, status discipline | `python -m src.publish.check_claims` and `python -m src.publish.validate_research_vault` |
+| Library and knowledge coverage | Complete live membership, preserved benchmark annotations, null categories for unassessed records, source-bound active and recovered documents, independent reporting of missing full text and knowledge documents | `python -m pytest tests/test_generate_docs_data.py tests/test_project_active_distillates.py tests/test_project_recovered_knowledge.py tests/test_literature_readiness.py` |
 
 ## Guaranteed behaviours
 
@@ -66,6 +67,8 @@ The automated suites cover the following contracts.
 - The result-site allowlist excludes raw screening files and full-text assets, and its downloadable research JSON is byte-identical to the site data.
 - Grounded chat contexts contain released Assertions and exact source evidence; no-evidence queries remain local and provider answers require supplied evidence identifiers.
 - Grounded Vault outputs cannot exceed the authority state of their supporting layer.
+- Preparation distillates retain their named producer and unreviewed status. Their exact source path, hash and publication Version must match the canonical binding before projection. Historical document recovery checks the source and document hashes without upgrading the original interpretation.
+- All live Zotero keys enter the canonical corpus. Historical annotation keys remain available through explicit aliases. Unassessed records have empty decisions and null categories, and they do not alter the original benchmark denominator.
 
 ## Manual acceptance boundary
 

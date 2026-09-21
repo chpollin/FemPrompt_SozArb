@@ -1,0 +1,15 @@
+{
+  "id": "XPWCK65R",
+  "type": "paper-conference",
+  "title": "Mitigating Cultural Bias in LLMs via Multi-Agent Cultural Debate",
+  "author": [],
+  "issued": {
+    "date-parts": [
+      [
+        2026
+      ]
+    ]
+  },
+  "DOI": "10.18653/v1/2026.findings-acl.418",
+  "URL": "https://aclanthology.org/2026.findings-acl.418/"
+}

@@ -29,30 +29,35 @@ def _real_paper(paper_id: str) -> dict[str, object]:
     return next(paper for paper in papers if paper["id"] == paper_id)
 
 
-def test_curated_source_binding_bootstraps_without_a_displayed_knowledge_document(tmp_path, monkeypatch):
+def test_curated_source_binding_bootstraps_without_a_displayed_knowledge_document(
+    tmp_path, monkeypatch
+):
     data = tmp_path / "docs/data"
     data.mkdir(parents=True)
     clean = tmp_path / "clean"
     clean.mkdir()
     source = clean / "Pilot_2026_study.md"
     source.write_text("# Pilot study\n\nStudy text.\n", encoding="utf-8")
-    (data / "knowledge_doc_bindings.json").write_text(json.dumps({"bindings": {"X": {"source_file": source.name}}}), encoding="utf-8")
+    (data / "knowledge_doc_bindings.json").write_text(
+        json.dumps({"bindings": {"X": {"source_file": source.name}}}), encoding="utf-8"
+    )
     monkeypatch.setattr(bf, "ROOT", tmp_path)
     monkeypatch.setattr(bf, "CLEAN_DIR", clean)
     assert bf.resolve_docling(_paper("Pilot 2026"), {}, {}) == (source, "clean")
-    source.write_text("# Unrelated publication about a different question\n", encoding="utf-8")
+    source.write_text(
+        "# Unrelated publication about a different question\n", encoding="utf-8"
+    )
     assert bf.resolve_docling(_paper("Pilot 2026"), {}, {}) == (None, "mismatch")
 
 
 @pytest.mark.parametrize("paper_id", ["3GB9B4IJ", "2YS85B49", "BCBWSU3Z"])
-def test_corrected_debnath_year_preserves_exact_known_conversion(paper_id):
+def test_corrected_debnath_year_rejects_stale_candidate_version(paper_id):
     paper = _real_paper(paper_id)
     paper.update(year=2025, author_year="A. Debnath (2025)")
     clean_idx = {bf.norm(path.stem): path.name for path in bf.CLEAN_DIR.glob("*.md")}
     raw_idx = {bf.norm(path.stem): path.name for path in bf.RAW_DIR.glob("*.md")}
-    path, src = bf.resolve_docling(paper, clean_idx, raw_idx)
-    assert src == "clean"
-    assert path.name == "Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study.md"
+
+    assert bf.resolve_docling(paper, clean_idx, raw_idx) == (None, "mismatch")
 
 
 def test_unique_fallback_resolves(
@@ -222,7 +227,7 @@ def test_generic_headings_are_not_title_candidates(tmp_path: Path) -> None:
 
 def test_identical_title_with_doi_author_and_year_conflicts_is_refused() -> None:
     paper = _real_paper("JZ4P8V8S")
-    knowledge_doc = bf.DOCS / str(paper["knowledge_doc"])
+    knowledge_doc = bf.DOCS / str(paper["knowledge_doc_candidate"]["path"])
     metadata = bf.embedded_source_metadata(knowledge_doc)
     source = bf.CLEAN_DIR / str(metadata["source_file"])
 
@@ -236,7 +241,7 @@ def test_identical_title_with_doi_author_and_year_conflicts_is_refused() -> None
 
 def test_filename_does_not_override_a_different_substantive_title() -> None:
     paper = _real_paper("4LY3SA4E")
-    knowledge_doc = bf.DOCS / str(paper["knowledge_doc"])
+    knowledge_doc = bf.DOCS / str(paper["knowledge_doc_candidate"]["path"])
     metadata = bf.embedded_source_metadata(knowledge_doc)
     source = bf.CLEAN_DIR / str(metadata["source_file"])
 
@@ -254,6 +259,50 @@ def test_corrected_publication_title_matches_verified_source() -> None:
     assert bf.titles_match(str(paper["title"]), bf.source_titles(source))
     assert bf.titles_corroborate(str(paper["title"]), bf.source_titles(source))
     assert bf.verified_source(paper, source, "clean", metadata) == (source, "clean")
+
+
+def test_rejected_knowledge_candidate_can_supply_verified_xiyx5hjs_source() -> None:
+    paper = _real_paper("XIYX5HJS").copy()
+    # Reproduce the preparation pass before the current full-text manifest exists.
+    candidate = paper.get("knowledge_doc") or paper["knowledge_doc_candidate"]["path"]
+    paper["knowledge_doc"] = None
+    paper["knowledge_doc_candidate"] = {"path": candidate}
+    clean_idx = {bf.norm(path.stem): path.name for path in bf.CLEAN_DIR.glob("*.md")}
+    raw_idx = {bf.norm(path.stem): path.name for path in bf.RAW_DIR.glob("*.md")}
+
+    path, source = bf.resolve_docling(paper, clean_idx, raw_idx)
+
+    assert source == "clean"
+    assert path is not None
+    assert path.name == (
+        "Ricaurte Quijano_2024_Towards_Substantive_Equality_in_Artificial.md"
+    )
+
+
+@pytest.mark.parametrize("paper_id", ["WTLVG29I", "AXEIVEW3"])
+def test_foreign_rejected_candidate_cannot_supply_source(paper_id: str) -> None:
+    paper = _real_paper(paper_id).copy()
+    paper["knowledge_doc"] = None
+
+    assert bf.resolve_docling(paper, {}, {}) == (None, "mismatch")
+
+
+def test_embedded_source_rejects_parent_path(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    docs = tmp_path / "docs"
+    candidate = docs / "vault" / "Candidate.md"
+    candidate.parent.mkdir(parents=True)
+    candidate.write_text(
+        "## Full Text\n\n---\nsource_file: ../Foreign.md\n---\n",
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(bf, "DOCS", docs)
+    paper = _paper("Pilot (2026)")
+    paper["knowledge_doc_candidate"] = {"path": "vault/Candidate.md"}
+
+    with pytest.raises(ValueError, match="local source file"):
+        bf.resolve_docling(paper, {}, {})
 
 
 @pytest.mark.parametrize(

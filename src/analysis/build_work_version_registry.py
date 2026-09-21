@@ -16,16 +16,21 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import html
 import json
 import re
 import sys
 import uuid
+from collections.abc import Iterable
 from datetime import datetime
+from html.parser import HTMLParser
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any
 
-from src.file_hashing import canonical_file_bytes, file_sha256
-from src.analysis.metadata_corrections import CORRECTIONS_PATH, apply_metadata_corrections
+from src.analysis.metadata_corrections import (
+    CORRECTIONS_PATH,
+    apply_metadata_corrections,
+)
 from src.analysis.work_versions import (
     REGISTRY_PATH,
     REGISTRY_SCHEMA,
@@ -39,6 +44,7 @@ from src.analysis.work_versions import (
     validate_registry,
     values,
 )
+from src.file_hashing import canonical_file_bytes, file_sha256
 
 REPO = Path(__file__).resolve().parents[2]
 ZOTERO_PATH = REPO / "corpus" / "zotero_export.json"
@@ -73,6 +79,151 @@ VERSION_TYPE_ALIASES = {
     "reissued_book_chapter_version": "version_of_record",
     "repository_copy_of_version_of_record": "version_of_record",
 }
+
+PUBLISHER_BINDING_DIR = "corpus/source-acquisition/acl-publisher-bindings-2026-09-21"
+CODEX_ACQUISITION_PATH = (
+    "generated/source-acquisition/codex-websearch-2026/acquisition-manifest.json"
+)
+CODEX_READINESS_PATH = (
+    "generated/source-acquisition/codex-websearch-2026/source-readiness.json"
+)
+
+
+class _CitationMetaParser(HTMLParser):
+    """Collect the three publisher fields used by the narrow ACL identity gate."""
+
+    def __init__(self) -> None:
+        super().__init__()
+        self.values: dict[str, str] = {}
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag != "meta":
+            return
+        attributes = dict(attrs)
+        name = attributes.get("name")
+        if name in {"citation_title", "citation_doi", "citation_pdf_url"}:
+            self.values[name] = str(attributes.get("content") or "")
+
+
+def _acl_publisher_identity_evidence(
+    repo: Path,
+    record_id: str,
+    reference: dict[str, Any],
+    binding: dict[str, Any],
+    identity: dict[str, Any],
+) -> tuple[str, list[Path]]:
+    """Validate official ACL metadata against the committed conversion provenance."""
+    from src.assess.artifact_verification import artifact_hash, safe_path
+
+    if set(reference) != {"path", "sha256"}:
+        raise ValueError(f"{record_id}: malformed publisher identity evidence")
+    evidence_path = str(reference.get("path") or "")
+    expected_prefix = f"{PUBLISHER_BINDING_DIR}/{record_id}.json"
+    if evidence_path != expected_prefix or artifact_hash(
+        repo, evidence_path
+    ) != reference.get("sha256"):
+        raise ValueError(f"{record_id}: stale publisher identity evidence")
+    evidence = _read_json(safe_path(repo, evidence_path))
+    page_reference = str(evidence.get("captured_page_path") or "")
+    raw_capture = evidence.get("raw_page_capture") or {}
+    if (
+        evidence.get("record_id") != record_id
+        or page_reference != f"{PUBLISHER_BINDING_DIR}/{record_id}.metadata.txt"
+        or artifact_hash(repo, page_reference) != evidence.get("captured_page_sha256")
+        or raw_capture.get("url") != evidence.get("landing_page_url")
+        or raw_capture.get("local_path") != f"{PUBLISHER_BINDING_DIR}/{record_id}.html"
+        or not re.fullmatch(r"sha256:[0-9a-f]{64}", str(raw_capture.get("sha256")))
+    ):
+        raise ValueError(f"{record_id}: stale publisher metadata capture")
+
+    parser = _CitationMetaParser()
+    page_path = safe_path(repo, page_reference)
+    parser.feed(page_path.read_text(encoding="utf-8"))
+    title = parser.values.get("citation_title", "")
+    doi = normalise_doi(parser.values.get("citation_doi"))
+    pdf_url = parser.values.get("citation_pdf_url", "")
+    landing_url = str(evidence.get("landing_page_url") or "")
+    if (
+        normalise_title(title) != normalise_title(identity.get("title"))
+        or doi != normalise_doi(identity.get("doi"))
+        or not re.fullmatch(r"https://aclanthology\.org/[^/?#]+/", landing_url)
+        or pdf_url != landing_url.rstrip("/") + ".pdf"
+    ):
+        raise ValueError(
+            f"{record_id}: publisher metadata differs from registered identity"
+        )
+
+    acquisition_path = safe_path(repo, CODEX_ACQUISITION_PATH)
+    acquisition = _read_json(acquisition_path)
+    acquisition_records = [
+        item
+        for item in acquisition.get("records", [])
+        if normalise_doi(item.get("doi")) == doi and item.get("source_url") == pdf_url
+    ]
+    if len(acquisition_records) != 1:
+        raise ValueError(
+            f"{record_id}: publisher PDF lacks unique acquisition provenance"
+        )
+    acquisition_record = acquisition_records[0]
+    pdf_hash = "sha256:" + str(acquisition_record.get("sha256") or "")
+    acquisition_evidence = evidence.get("acquisition_pdf", {})
+    publisher_download = evidence.get("publisher_pdf_download_verification", {})
+    if (
+        not re.fullmatch(r"sha256:[0-9a-f]{64}", pdf_hash)
+        or acquisition_evidence.get("sha256") != pdf_hash
+        or publisher_download.get("url") != pdf_url
+        or publisher_download.get("sha256") != pdf_hash
+    ):
+        raise ValueError(
+            f"{record_id}: publisher PDF hash differs from acquisition provenance"
+        )
+
+    readiness_path = safe_path(repo, CODEX_READINESS_PATH)
+    readiness = _read_json(readiness_path)
+    readiness_records = [
+        item
+        for item in readiness.get("records", [])
+        if item.get("screening_markdown_file") == binding.get("source_path")
+    ]
+    if len(readiness_records) != 1:
+        raise ValueError(
+            f"{record_id}: source Markdown lacks unique readiness provenance"
+        )
+    readiness_record = readiness_records[0]
+    representation = readiness_record.get("local_representation") or {}
+    repair = readiness_record.get("repair_qc") or {}
+    markdown_hash = "sha256:" + str(
+        readiness_record.get("screening_markdown_sha256") or ""
+    )
+    markdown_evidence = evidence.get("readiness_markdown", {})
+    representation_matches = representation.get("markdown_file") == binding.get(
+        "source_path"
+    ) and representation.get("markdown_sha256") == markdown_hash.removeprefix("sha256:")
+    approved_repair_matches = repair.get(
+        "decision"
+    ) == "approved_for_screening" and repair.get("repaired_markdown") == binding.get(
+        "source_path"
+    )
+    if (
+        normalise_doi(readiness_record.get("doi")) != doi
+        or representation.get("source_sha256") != pdf_hash.removeprefix("sha256:")
+        or not (representation_matches or approved_repair_matches)
+        or binding.get("source_sha256") != markdown_hash
+        or artifact_hash(repo, binding.get("source_path", "")) != markdown_hash
+        or markdown_evidence.get("path") != binding.get("source_path")
+        or markdown_evidence.get("sha256") != markdown_hash
+    ):
+        raise ValueError(
+            f"{record_id}: source Markdown differs from readiness provenance"
+        )
+    return f"{title} {parser.values['citation_doi']}", [
+        safe_path(repo, evidence_path),
+        page_path,
+        acquisition_path,
+        readiness_path,
+    ]
+
+
 NON_RECORD_VERSION_TYPES = {
     "authors_original",
     "submitted_manuscript_under_review",
@@ -157,6 +308,18 @@ def _infer_version_type(item_type: object, identifiers: dict[str, list[str]]) ->
         return "working_paper"
     if str(item_type or "").casefold() == "journalarticle":
         return "version_of_record"
+    if (
+        str(item_type or "").casefold() == "conferencepaper"
+        and any(
+            url.startswith("https://aclanthology.org/")
+            for url in identifiers.get("url", [])
+        )
+        and any(
+            doi.startswith(("10.18653/v1/", "10.63317/"))
+            for doi in identifiers.get("doi", [])
+        )
+    ):
+        return "version_of_record"
     return "unknown"
 
 
@@ -217,8 +380,13 @@ def _version_from_zotero(item: dict[str, Any]) -> dict[str, Any]:
         }
     )
     if item.get("_metadata_correction"):
-        version["provenance"].append({"source": CORRECTIONS_PATH, "reference": item["key"],
-                                      "ai_metadata_correction": item["_metadata_correction"]})
+        version["provenance"].append(
+            {
+                "source": CORRECTIONS_PATH,
+                "reference": item["key"],
+                "ai_metadata_correction": item["_metadata_correction"],
+            }
+        )
     return version
 
 
@@ -228,7 +396,9 @@ def _version_from_round2(work: dict[str, Any]) -> dict[str, Any]:
     version.update(
         {
             "title": str(work.get("title") or "").strip(),
-            "authors": [str(author).strip() for author in work.get("authors", []) if author],
+            "authors": [
+                str(author).strip() for author in work.get("authors", []) if author
+            ],
             "version_type": _infer_version_type("", identifiers),
             "version_date": str(work.get("year") or ""),
             "identifiers": identifiers,
@@ -290,7 +460,9 @@ def _version_from_agent(
     version.update(
         {
             "title": str(raw.get("title") or raw.get("canonical_title") or "").strip(),
-            "authors": [str(author).strip() for author in raw.get("authors", []) if author],
+            "authors": [
+                str(author).strip() for author in raw.get("authors", []) if author
+            ],
             "version_type": version_type,
             "version_date": str(
                 raw.get("publication_date")
@@ -312,7 +484,9 @@ def _version_from_agent(
             "landing_url": landing_url,
             "fulltext_url": fulltext_url,
             "license": str(raw.get("license") or "").strip(),
-            "evidence": raw.get("evidence", []) if isinstance(raw.get("evidence"), list) else [],
+            "evidence": raw.get("evidence", [])
+            if isinstance(raw.get("evidence"), list)
+            else [],
             "provenance": [
                 {
                     "source": f"round2_agent_{role}",
@@ -344,7 +518,11 @@ def _merge_version(target: dict[str, Any], source: dict[str, Any]) -> None:
     for field in VERSION_FIELDS:
         incoming = source.get(field)
         current = target.get(field)
-        default = field in {"version_type", "integrity_status", "access_status"} and current in {
+        default = field in {
+            "version_type",
+            "integrity_status",
+            "access_status",
+        } and current in {
             "unknown",
             "current",
         }
@@ -354,11 +532,17 @@ def _merge_version(target: dict[str, Any], source: dict[str, Any]) -> None:
         )
         if incoming and (not current or default):
             target[field] = incoming
-        elif incoming and current and incoming != current and field in {
-            "version_type",
-            "peer_review_status",
-            "integrity_status",
-        }:
+        elif (
+            incoming
+            and current
+            and incoming != current
+            and field
+            in {
+                "version_type",
+                "peer_review_status",
+                "integrity_status",
+            }
+        ):
             _merge_list(
                 target["flags"],
                 [f"{field}_conflict:{current}|{incoming}"],
@@ -418,9 +602,7 @@ def _stable_work_id(
     aliases: set[str], versions: list[dict[str, Any]], previous: dict[str, Any]
 ) -> str:
     candidates = {
-        previous["legacy"][alias]
-        for alias in aliases
-        if alias in previous["legacy"]
+        previous["legacy"][alias] for alias in aliases if alias in previous["legacy"]
     }
     for version in versions:
         for key in version.get("identifiers", {}).get("zotero_key", []):
@@ -430,7 +612,9 @@ def _stable_work_id(
             if token in previous["identifier_work"]:
                 candidates.add(previous["identifier_work"][token])
     if len(candidates) > 1:
-        raise ValueError(f"new relation would merge established works: {sorted(candidates)}")
+        raise ValueError(
+            f"new relation would merge established works: {sorted(candidates)}"
+        )
     if candidates:
         return next(iter(candidates))
     seeds = sorted(
@@ -446,9 +630,7 @@ def _stable_work_id(
     return f"work:{uuid.uuid5(WORK_NAMESPACE, chr(10).join(seeds))}"
 
 
-def _stable_version_id(
-    version: dict[str, Any], previous: dict[str, Any]
-) -> str:
+def _stable_version_id(version: dict[str, Any], previous: dict[str, Any]) -> str:
     candidates = {
         previous["identifier_version"][token]
         for token in _identifier_tokens(version.get("identifiers", {}))
@@ -511,37 +693,66 @@ def apply_source_bindings(repo: Path, registry: dict, contract: dict) -> list[Pa
     """Bind reviewed sources without moving record IDs.
 
     Manifest 0.2 adds ``binding_mode: existing_version`` with a
-    ``version_identity`` (title and DOI or revision-pinned arXiv ID). It permits
-    no ``version`` metadata and changes only source_index. The index retains
-    both reviewed identities for validation by consumers of the built registry.
-    The original manuscript-addition contract remains compatible with 0.1/0.2.
+    ``version_identity`` (title and DOI, revision-pinned arXiv ID, or a registered
+    NBER working-paper number). It permits no ``version`` metadata and changes
+    only source_index. The index retains both reviewed identities for validation
+    by consumers of the built registry. The original manuscript-addition contract
+    remains compatible with 0.1/0.2.
     """
     from copy import deepcopy
+
     from src.assess.artifact_verification import artifact_hash, safe_path
 
     manifest_path = repo / SOURCE_BINDINGS_PATH
     if not manifest_path.is_file():
         return []
     manifest = _read_json(manifest_path)
-    if manifest.get("schema") not in {"femprompt-source-version-bindings/0.1", "femprompt-source-version-bindings/0.2"} or not isinstance(manifest.get("records"), dict):
+    if manifest.get("schema") not in {
+        "femprompt-source-version-bindings/0.1",
+        "femprompt-source-version-bindings/0.2",
+    } or not isinstance(manifest.get("records"), dict):
         raise ValueError("Unsupported source-version binding manifest")
     inputs = [manifest_path]
     registry["source_index"] = {}
-    all_versions = {version["version_id"] for work in registry["works"] for version in work["versions"]}
+    all_versions = {
+        version["version_id"]
+        for work in registry["works"]
+        for version in work["versions"]
+    }
     for record_id, entry in sorted(manifest["records"].items()):
         if not isinstance(entry, dict):
             raise ValueError(f"{record_id}: source binding entry must be an object")
         for field in ("agent_id", "model", "reviewed_at", "reason"):
             if not isinstance(entry.get(field), str) or not entry[field].strip():
                 raise ValueError(f"{record_id}: source binding lacks {field}")
-        if datetime.fromisoformat(entry["reviewed_at"].replace("Z", "+00:00")).tzinfo is None:
+        if (
+            datetime.fromisoformat(entry["reviewed_at"].replace("Z", "+00:00")).tzinfo
+            is None
+        ):
             raise ValueError(f"{record_id}: source binding timestamp needs a timezone")
         canonical = registry["record_index"].get(record_id, {})
         binding = deepcopy(entry.get("binding", {}))
-        work = next((item for item in registry["works"] if item["work_id"] == canonical.get("work_id")), None)
-        if not work or binding.get("work_id") != work["work_id"] or binding.get("bibliographic_version_id") != canonical.get("version_id"):
-            raise ValueError(f"{record_id}: source manifest targets another bibliographic identity")
-        bibliographic = next(item for item in work["versions"] if item["version_id"] == canonical["version_id"])
+        work = next(
+            (
+                item
+                for item in registry["works"]
+                if item["work_id"] == canonical.get("work_id")
+            ),
+            None,
+        )
+        if (
+            not work
+            or binding.get("work_id") != work["work_id"]
+            or binding.get("bibliographic_version_id") != canonical.get("version_id")
+        ):
+            raise ValueError(
+                f"{record_id}: source manifest targets another bibliographic identity"
+            )
+        bibliographic = next(
+            item
+            for item in work["versions"]
+            if item["version_id"] == canonical["version_id"]
+        )
         mode = entry.get("binding_mode", "accepted_manuscript")
         if mode not in {"accepted_manuscript", "existing_version"}:
             raise ValueError(f"{record_id}: unsupported source binding mode")
@@ -549,74 +760,205 @@ def apply_source_bindings(repo: Path, registry: dict, contract: dict) -> list[Pa
         if not isinstance(evidence, list) or not evidence:
             raise ValueError(f"{record_id}: source binding lacks identity evidence")
         for source in evidence:
-            if not isinstance(source, dict) or not isinstance(source.get("locator"), str) or not source["locator"].strip():
-                raise ValueError(f"{record_id}: stale or incomplete source identity evidence")
-            if artifact_hash(repo, source.get("source_path", "")) != source.get("sha256"):
-                raise ValueError(f"{record_id}: stale or incomplete source identity evidence")
+            if (
+                not isinstance(source, dict)
+                or not isinstance(source.get("locator"), str)
+                or not source["locator"].strip()
+            ):
+                raise ValueError(
+                    f"{record_id}: stale or incomplete source identity evidence"
+                )
+            if artifact_hash(repo, source.get("source_path", "")) != source.get(
+                "sha256"
+            ):
+                raise ValueError(
+                    f"{record_id}: stale or incomplete source identity evidence"
+                )
             path = safe_path(repo, source["source_path"].partition("#")[0])
             inputs.append(path)
-            if source.get("quote") and (not isinstance(source["quote"], str) or " ".join(source["quote"].split()) not in " ".join(path.read_text(encoding="utf-8").split())):
-                raise ValueError(f"{record_id}: source identity quotation does not resolve")
+            if source.get("quote") and (
+                not isinstance(source["quote"], str)
+                or " ".join(source["quote"].split())
+                not in " ".join(path.read_text(encoding="utf-8").split())
+            ):
+                raise ValueError(
+                    f"{record_id}: source identity quotation does not resolve"
+                )
 
         if mode == "existing_version":
             if manifest["schema"] != "femprompt-source-version-bindings/0.2":
-                raise ValueError(f"{record_id}: existing version bindings require manifest 0.2")
-            allowed_entry = {"binding_mode", "binding", "bibliographic_identity", "version_identity", "agent_id", "model", "reviewed_at", "reason", "evidence"}
-            allowed_binding = {"record_id", "work_id", "bibliographic_version_id", "source_version_id", "source_version_type", "preferred_version_id", "is_preferred_version", "source_path", "source_sha256"}
+                raise ValueError(
+                    f"{record_id}: existing version bindings require manifest 0.2"
+                )
+            allowed_entry = {
+                "binding_mode",
+                "binding",
+                "bibliographic_identity",
+                "version_identity",
+                "publisher_evidence",
+                "agent_id",
+                "model",
+                "reviewed_at",
+                "reason",
+                "evidence",
+            }
+            allowed_binding = {
+                "record_id",
+                "work_id",
+                "bibliographic_version_id",
+                "source_version_id",
+                "source_version_type",
+                "preferred_version_id",
+                "is_preferred_version",
+                "source_path",
+                "source_sha256",
+            }
             if set(entry) - allowed_entry or set(binding) != allowed_binding:
-                raise ValueError(f"{record_id}: existing version binding cannot supply new version metadata")
-            binding.update(binding_mode=mode, bibliographic_identity=deepcopy(entry.get("bibliographic_identity")),
-                           version_identity=deepcopy(entry.get("version_identity")))
+                raise ValueError(
+                    f"{record_id}: existing version binding cannot supply new version metadata"
+                )
+            binding.update(
+                binding_mode=mode,
+                bibliographic_identity=deepcopy(entry.get("bibliographic_identity")),
+                version_identity=deepcopy(entry.get("version_identity")),
+            )
             # Validate before changing even source_index. In particular the source
             # must be the record's already registered exact bibliographic version.
-            staged = {**registry, "source_index": {**registry["source_index"], record_id: binding}}
+            staged = {
+                **registry,
+                "source_index": {**registry["source_index"], record_id: binding},
+            }
             source_binding_for_record(staged, record_id, repo)
-            quotes = " ".join(source.get("quote") or "" for source in evidence
-                              if source.get("source_path") == binding["source_path"]
-                              and source.get("sha256") == binding["source_sha256"])
+            quotes = " ".join(
+                source.get("quote") or ""
+                for source in evidence
+                if source.get("source_path") == binding["source_path"]
+                and source.get("sha256") == binding["source_sha256"]
+            )
             identity = binding["version_identity"]
-            if " " + normalise_title(identity["title"]) + " " not in " " + normalise_title(quotes) + " ":
-                raise ValueError(f"{record_id}: bound source evidence must quote its registered title")
-            identifier = normalise_arxiv(identity["arxiv"]) if identity.get("arxiv") else normalise_doi(identity["doi"])
-            if not re.search(r"(?<![\w.])" + re.escape(identifier) + r"(?![\w.])", quotes, re.IGNORECASE):
-                raise ValueError(f"{record_id}: bound source evidence must quote its exact version identifier")
+            publisher_evidence = entry.get("publisher_evidence")
+            if publisher_evidence is not None:
+                publisher_quotes, publisher_inputs = _acl_publisher_identity_evidence(
+                    repo,
+                    record_id,
+                    publisher_evidence,
+                    binding,
+                    identity,
+                )
+                quotes = f"{quotes} {publisher_quotes}"
+                inputs.extend(publisher_inputs)
+            if (
+                " " + normalise_title(identity["title"]) + " "
+                not in " " + normalise_title(html.unescape(quotes)) + " "
+            ):
+                raise ValueError(
+                    f"{record_id}: bound source evidence must quote its registered title"
+                )
+            if identity.get("report_number"):
+                identifier = f"Working Paper {identity['report_number']}"
+            else:
+                identifier = (
+                    normalise_arxiv(identity["arxiv"])
+                    if identity.get("arxiv")
+                    else normalise_doi(identity["doi"])
+                )
+            if not re.search(
+                r"(?<![\w.])" + re.escape(identifier) + r"(?![\w.])",
+                quotes,
+                re.IGNORECASE,
+            ):
+                raise ValueError(
+                    f"{record_id}: bound source evidence must quote its exact version identifier"
+                )
             if identity.get("arxiv"):
                 for source in evidence:
                     source_url = str(source.get("source_url") or "")
-                    source_arxiv = normalise_arxiv(source_url) or normalise_arxiv(normalise_doi(source_url))
-                    if re.match(r"https?://(?:www\.)?arxiv\.org/", source_url, re.IGNORECASE) and not source_arxiv:
+                    source_arxiv = normalise_arxiv(source_url) or normalise_arxiv(
+                        normalise_doi(source_url)
+                    )
+                    if (
+                        re.match(
+                            r"https?://(?:www\.)?arxiv\.org/", source_url, re.IGNORECASE
+                        )
+                        and not source_arxiv
+                    ):
                         raise ValueError(f"{record_id}: malformed arXiv evidence URL")
                     if source_arxiv and source_arxiv != identifier:
-                        raise ValueError(f"{record_id}: source evidence URL differs from the exact arXiv revision")
+                        raise ValueError(
+                            f"{record_id}: source evidence URL differs from the exact arXiv revision"
+                        )
             registry["source_index"][record_id] = binding
             inputs.append(repo / binding["source_path"])
             continue
 
         expected = entry.get("bibliographic_identity", {})
-        if not expected.get("title") or normalise_title(expected["title"]) != normalise_title(bibliographic.get("title")) or normalise_doi(expected.get("doi")) not in bibliographic.get("identifiers", {}).get("doi", []):
-            raise ValueError(f"{record_id}: source manifest bibliographic metadata is stale or uncorrected")
+        if (
+            not expected.get("title")
+            or normalise_title(expected["title"])
+            != normalise_title(bibliographic.get("title"))
+            or normalise_doi(expected.get("doi"))
+            not in bibliographic.get("identifiers", {}).get("doi", [])
+        ):
+            raise ValueError(
+                f"{record_id}: source manifest bibliographic metadata is stale or uncorrected"
+            )
         version = deepcopy(entry.get("version", {}))
-        if version.get("version_type") != "accepted_manuscript" or version.get("version_id") != binding.get("source_version_id") or version["version_id"] in all_versions:
+        if (
+            version.get("version_type") != "accepted_manuscript"
+            or version.get("version_id") != binding.get("source_version_id")
+            or version["version_id"] in all_versions
+        ):
             raise ValueError(f"{record_id}: invalid or duplicate manuscript version")
         identifiers = version.get("identifiers", {})
-        if set(identifiers) != {"url"} or not identifiers["url"] or normalise_title(version.get("title")) != normalise_title(bibliographic.get("title")):
-            raise ValueError(f"{record_id}: manuscript must have a distinct repository identity")
-        if version.get("relations") != [{"type": "isVersionOf", "target_version_id": canonical["version_id"]}]:
-            raise ValueError(f"{record_id}: manuscript relation must target its bibliographic version")
-        version.setdefault("provenance", []).append({"source": SOURCE_BINDINGS_PATH, "reference": f"#/records/{record_id}", "agent_id": entry["agent_id"], "model": entry["model"], "reviewed_at": entry["reviewed_at"]})
+        if (
+            set(identifiers) != {"url"}
+            or not identifiers["url"]
+            or normalise_title(version.get("title"))
+            != normalise_title(bibliographic.get("title"))
+        ):
+            raise ValueError(
+                f"{record_id}: manuscript must have a distinct repository identity"
+            )
+        if version.get("relations") != [
+            {"type": "isVersionOf", "target_version_id": canonical["version_id"]}
+        ]:
+            raise ValueError(
+                f"{record_id}: manuscript relation must target its bibliographic version"
+            )
+        version.setdefault("provenance", []).append(
+            {
+                "source": SOURCE_BINDINGS_PATH,
+                "reference": f"#/records/{record_id}",
+                "agent_id": entry["agent_id"],
+                "model": entry["model"],
+                "reviewed_at": entry["reviewed_at"],
+            }
+        )
         work["versions"].append(version)
         work["versions"].sort(key=lambda item: item["version_id"])
         all_versions.add(version["version_id"])
         latest, preferred = select_version_ids(work["versions"], contract)
         if preferred != work["preferred_version_id"]:
-            raise ValueError(f"{record_id}: source-only addition changed preferred bibliography")
+            raise ValueError(
+                f"{record_id}: source-only addition changed preferred bibliography"
+            )
         work["latest_version_id"] = latest
-        bibliographic["relations"].append({"type": "hasVersion", "target_version_id": version["version_id"]})
-        bibliographic["relations"].sort(key=lambda item: (item["type"], item["target_version_id"]))
+        bibliographic["relations"].append(
+            {"type": "hasVersion", "target_version_id": version["version_id"]}
+        )
+        bibliographic["relations"].sort(
+            key=lambda item: (item["type"], item["target_version_id"])
+        )
         for token in _identifier_tokens(identifiers):
-            if token in registry["identifier_index"] or token in registry["ambiguous_identifiers"]:
+            if (
+                token in registry["identifier_index"]
+                or token in registry["ambiguous_identifiers"]
+            ):
                 raise ValueError(f"{record_id}: source repository identifier collision")
-            registry["identifier_index"][token] = {"work_id": work["work_id"], "version_id": version["version_id"]}
+            registry["identifier_index"][token] = {
+                "work_id": work["work_id"],
+                "version_id": version["version_id"],
+            }
         registry["source_index"][record_id] = binding
         source_binding_for_record(registry, record_id, repo)
         inputs.append(repo / binding["source_path"])
@@ -634,6 +976,18 @@ def build_registry(repo: Path = REPO) -> dict[str, Any]:
     if previous_registry:
         validate_registry(previous_registry, contract)
     previous = _previous_maps(previous_registry)
+    sync_path = repo / "corpus/zotero_sync.json"
+    synced_aliases: dict[str, set[str]] = {}
+    if sync_path.is_file():
+        sync = _read_json(sync_path)
+        if sync.get("schema") != "femprompt-zotero-library-reconciliation/0.1":
+            raise ValueError("Unsupported Zotero reconciliation schema")
+        for historical, live_keys in sync.get("historical_to_live", {}).items():
+            if historical in previous["record"]:
+                for live_key in live_keys:
+                    synced_aliases.setdefault(live_key, set()).add(
+                        previous["record"][historical]["work_id"]
+                    )
     zotero_items = apply_metadata_corrections(repo, _read_json(zotero_path))
     round2 = _read_json(round2_path)
     previous_works = {
@@ -645,8 +999,7 @@ def build_registry(repo: Path = REPO) -> dict[str, Any]:
         legacy_by_record = {
             paper["id"]: paper.get("legacy_work_id") or paper.get("work_id")
             for paper in corpus.get("papers", [])
-            if paper.get("id")
-            and (paper.get("legacy_work_id") or paper.get("work_id"))
+            if paper.get("id") and (paper.get("legacy_work_id") or paper.get("work_id"))
         }
 
     buckets: dict[str, dict[str, Any]] = {}
@@ -659,6 +1012,18 @@ def build_registry(repo: Path = REPO) -> dict[str, Any]:
         previous_reference = previous["record"].get(key)
         if previous_reference:
             bucket_id = f"previous:{previous_reference['work_id']}"
+        elif key in synced_aliases:
+            if len(synced_aliases[key]) != 1:
+                raise ValueError(f"{key}: reconciled aliases span established works")
+            bucket_id = f"previous:{next(iter(synced_aliases[key]))}"
+        elif matched_work_ids := {
+            previous["identifier_work"][token]
+            for token in _identifier_tokens(version.get("identifiers", {}))
+            if token in previous["identifier_work"]
+        }:
+            if len(matched_work_ids) != 1:
+                raise ValueError(f"{key}: imported identifiers span established works")
+            bucket_id = f"previous:{next(iter(matched_work_ids))}"
         elif legacy_work_id and not legacy_work_id.startswith("record:"):
             bucket_id = f"legacy:{legacy_work_id}"
         else:
@@ -688,9 +1053,13 @@ def build_registry(repo: Path = REPO) -> dict[str, Any]:
                 for change in item.get("_metadata_correction", {}).get("changes", []):
                     if change.get("before") != change.get("after"):
                         if change.get("field") == "DOI":
-                            bucket["legacy_work_ids"].discard(f"doi:{normalise_doi(change.get('before'))}")
+                            bucket["legacy_work_ids"].discard(
+                                f"doi:{normalise_doi(change.get('before'))}"
+                            )
                         elif change.get("field") == "url":
-                            bucket["legacy_work_ids"].discard(f"url:{_normalise_url(change.get('before'))}")
+                            bucket["legacy_work_ids"].discard(
+                                f"url:{_normalise_url(change.get('before'))}"
+                            )
             else:
                 bucket["legacy_work_ids"].add(
                     legacy_work_id
@@ -714,7 +1083,15 @@ def build_registry(repo: Path = REPO) -> dict[str, Any]:
         round2_doi = normalise_doi(work.get("doi"))
         if round2_doi and round2_doi in doi_bucket:
             existing.append(doi_bucket[round2_doi])
-        bucket_id = existing[0] if existing else f"round2:{input_work_id}"
+        previous_work_id = previous["legacy"].get(input_work_id)
+        # Intake title matches cannot merge a previously adjudicated candidate.
+        bucket_id = (
+            f"previous:{previous_work_id}"
+            if previous_work_id
+            else existing[0]
+            if existing
+            else f"round2:{input_work_id}"
+        )
         bucket = buckets.setdefault(
             bucket_id,
             {
@@ -835,9 +1212,7 @@ def build_registry(repo: Path = REPO) -> dict[str, Any]:
             )
         preferred_version["relations"] = sorted(
             preferred_version["relations"],
-            key=lambda relation: (
-                relation["type"], relation["target_version_id"]
-            ),
+            key=lambda relation: (relation["type"], relation["target_version_id"]),
         )
         preferred = next(
             version for version in versions if version["version_id"] == preferred_id
@@ -845,7 +1220,10 @@ def build_registry(repo: Path = REPO) -> dict[str, Any]:
         work = {
             "work_id": work_id,
             "canonical_title": preferred.get("title")
-            or next((version.get("title") for version in versions if version.get("title")), ""),
+            or next(
+                (version.get("title") for version in versions if version.get("title")),
+                "",
+            ),
             "identity_status": (
                 "curated"
                 if any(version["identifiers"].get("zotero_key") for version in versions)
@@ -885,7 +1263,9 @@ def build_registry(repo: Path = REPO) -> dict[str, Any]:
                 previous_reference = identifier_index.get(token)
                 if previous_reference and previous_reference != reference:
                     if token.startswith("doi:") or token.startswith("arxiv:"):
-                        raise ValueError(f"strong external identifier collision: {token}")
+                        raise ValueError(
+                            f"strong external identifier collision: {token}"
+                        )
                     ambiguous_identifiers[token] = [previous_reference, reference]
                     del identifier_index[token]
                     continue
@@ -896,14 +1276,19 @@ def build_registry(repo: Path = REPO) -> dict[str, Any]:
         round2_path,
         repo / "docs" / "data" / "work_version_contract.json",
     ]
+    if sync_path.is_file():
+        inputs.append(sync_path)
     if not previous_registry:
         inputs.append(corpus_path)
     inputs.extend(path for path in agent_paths if path.is_relative_to(repo))
     if (repo / CORRECTIONS_PATH).is_file():
         inputs.append(repo / CORRECTIONS_PATH)
-        inputs.extend(repo / evidence["source_path"].partition("#")[0]
-                      for item in zotero_items if item.get("_metadata_correction")
-                      for evidence in item["_metadata_correction"]["evidence"])
+        inputs.extend(
+            repo / evidence["source_path"].partition("#")[0]
+            for item in zotero_items
+            if item.get("_metadata_correction")
+            for evidence in item["_metadata_correction"]["evidence"]
+        )
         inputs = list(set(inputs))
     registry = {
         "schema": REGISTRY_SCHEMA,
@@ -920,7 +1305,9 @@ def build_registry(repo: Path = REPO) -> dict[str, Any]:
             "versions": sum(len(work["versions"]) for work in works),
             "zotero_records": len(record_index),
             "round2_candidates": len(candidate_index),
-            "works_with_multiple_versions": sum(len(work["versions"]) > 1 for work in works),
+            "works_with_multiple_versions": sum(
+                len(work["versions"]) > 1 for work in works
+            ),
             "works_with_flags": sum(bool(work["flags"]) for work in works),
             "ambiguous_external_identifiers": len(ambiguous_identifiers),
         },
@@ -938,7 +1325,17 @@ def build_registry(repo: Path = REPO) -> dict[str, Any]:
         "legacy_work_id_index": dict(sorted(legacy_index.items())),
     }
     inputs.extend(apply_source_bindings(repo, registry, contract))
-    from src.analysis.historical_resolution import load_source_holds, RESOLUTION_PATH
+    # Exact bibliographic aliases share the reviewed source representation.
+    for bound_key, binding in list(registry.get("source_index", {}).items()):
+        for key, reference in registry["record_index"].items():
+            if (
+                key not in registry["source_index"]
+                and reference == registry["record_index"][bound_key]
+            ):
+                registry["source_index"][key] = {**binding, "record_id": key}
+                source_binding_for_record(registry, key, repo)
+    from src.analysis.historical_resolution import RESOLUTION_PATH, load_source_holds
+
     source_holds = load_source_holds(repo)
     for work in works:
         if work["work_id"] in source_holds:
@@ -946,12 +1343,22 @@ def build_registry(repo: Path = REPO) -> dict[str, Any]:
     if source_holds:
         inputs.append(repo / RESOLUTION_PATH)
         resolution = _read_json(repo / RESOLUTION_PATH)
-        inputs.extend(repo / source["source_path"].partition("#")[0] for entry in resolution.get("work_resolutions", {}).values() if entry.get("work_id") in source_holds for source in entry.get("evidence", []))
+        inputs.extend(
+            repo / source["source_path"].partition("#")[0]
+            for entry in resolution.get("work_resolutions", {}).values()
+            if entry.get("work_id") in source_holds
+            for source in entry.get("evidence", [])
+        )
     inputs = sorted(set(inputs), key=lambda path: path.as_posix())
     registry["source_fingerprint"] = _source_fingerprint(inputs)
-    registry["sources"] = [{"path": path.relative_to(repo).as_posix(), "sha256": _sha256(path)} for path in inputs]
+    registry["sources"] = [
+        {"path": path.relative_to(repo).as_posix(), "sha256": _sha256(path)}
+        for path in inputs
+    ]
     registry["counts"]["versions"] = sum(len(work["versions"]) for work in works)
-    registry["counts"]["works_with_multiple_versions"] = sum(len(work["versions"]) > 1 for work in works)
+    registry["counts"]["works_with_multiple_versions"] = sum(
+        len(work["versions"]) > 1 for work in works
+    )
     registry["counts"]["bound_sources"] = len(registry.get("source_index", {}))
     registry["identifier_index"] = dict(sorted(registry["identifier_index"].items()))
     validate_registry(registry, contract)

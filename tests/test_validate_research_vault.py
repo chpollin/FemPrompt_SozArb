@@ -6,7 +6,6 @@ from pathlib import Path
 
 from src.publish.validate_research_vault import validate_vault
 
-
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -100,6 +99,59 @@ def test_complete_ai_agent_reviewed_chain_is_valid(tmp_path: Path) -> None:
     report = validate_vault(_fixture(tmp_path))
 
     assert report.errors == []
+
+
+def test_unreviewed_preparation_records_actor_and_exact_source(tmp_path: Path) -> None:
+    vault = _fixture(tmp_path)
+    distillate = vault / "20_distillates" / "publications" / "source.md"
+    content = distillate.read_text(encoding="utf-8")
+    content = content.replace("status: ai-agent-reviewed", "status: preparation")
+    content = content.replace(
+        "checked:\n  quote: 2026-08-23\n  validation: 2026-08-23\n  ai-agent-review: 2026-08-23",
+        """checked:
+  quote: 2026-08-23
+prepared-by:
+  agent-id: /root/test
+  model: test-model
+source-representation:
+  path: source.md
+  sha256: sha256:test
+  version-id: version:source
+  version-type: accepted_manuscript""",
+    )
+    distillate.write_text(content, encoding="utf-8")
+    (vault / "30_assertions" / "result.md").unlink()
+    (vault / "40_output" / "report" / "chapter.md").unlink()
+
+    report = validate_vault(vault)
+
+    assert report.errors == []
+
+
+def test_preparation_does_not_imply_ai_agent_review(tmp_path: Path) -> None:
+    vault = _fixture(tmp_path)
+    distillate = vault / "20_distillates" / "publications" / "source.md"
+    distillate.write_text(
+        distillate.read_text(encoding="utf-8")
+        .replace("status: ai-agent-reviewed", "status: preparation")
+        .replace(
+            "checked:\n  quote: 2026-08-23\n  validation: 2026-08-23\n  ai-agent-review: 2026-08-23",
+            """checked:
+  quote: 2026-08-23
+prepared-by:
+  agent-id: /root/test
+  model: test-model
+source-representation:
+  path: source.md
+  sha256: sha256:test
+  version-id: version:source
+  version-type: accepted_manuscript""",
+        ),
+        encoding="utf-8",
+    )
+    report = validate_vault(vault)
+
+    assert any("status exceeds grounding" in error for error in report.errors)
 
 
 def test_verified_status_requires_an_artifact_local_verification_date(

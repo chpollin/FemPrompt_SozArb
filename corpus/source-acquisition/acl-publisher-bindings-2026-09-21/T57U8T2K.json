@@ -1,0 +1,53 @@
+{
+  "schema": "femprompt-publisher-source-binding-evidence/0.1",
+  "record_id": "T57U8T2K",
+  "captured_at": "2026-09-21",
+  "publisher": "ACL Anthology",
+  "landing_page_url": "https://aclanthology.org/2026.lrec-1.217/",
+  "captured_page_path": "corpus/source-acquisition/acl-publisher-bindings-2026-09-21/T57U8T2K.metadata.txt",
+  "captured_page_sha256": "sha256:a03bc4a442e43cff419f8b37c66da0af47b628862b02d434338acc95e86e9a6c",
+  "publisher_metadata": {
+    "citation_title": "I Am Not Them: Persistent Outgroup Bias in Large Language Models Arising from Social Identity Persona Setting",
+    "citation_doi": "10.63317/2hn5gs6yh5m2",
+    "citation_pdf_url": "https://aclanthology.org/2026.lrec-1.217.pdf"
+  },
+  "acquisition_pdf": {
+    "path": "generated/pdfs/audit-2026-09-21/f403809ad4503150093a.pdf",
+    "sha256": "sha256:29df384119ce99fb97eddbc4dd6016bde767b72170a66178974e81c74eafed68"
+  },
+  "publisher_pdf_download_verification": {
+    "url": "https://aclanthology.org/2026.lrec-1.217.pdf",
+    "sha256": "sha256:29df384119ce99fb97eddbc4dd6016bde767b72170a66178974e81c74eafed68",
+    "matches_acquisition_pdf_bytes": true
+  },
+  "readiness_markdown": {
+    "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/f403809ad4503150093a.md",
+    "sha256": "sha256:452e783653dedcb51fbc1fe1c2966f6804a613d5846e5720844e0d6bd77ea192",
+    "declared_readiness_sha256": "sha256:452e783653dedcb51fbc1fe1c2966f6804a613d5846e5720844e0d6bd77ea192",
+    "matches_declared_readiness_hash": true
+  },
+  "version_evidence": {
+    "status": "publisher_metadata_and_exact_pdf_bytes_confirmed",
+    "version_type": "version_of_record",
+    "basis": "The official ACL Anthology landing page identifies one proceedings item by exact citation title and DOI and supplies its direct PDF URL. The PDF downloaded from that URL is byte-identical to the locally acquired PDF from which the unchanged readiness Markdown representation was prepared.",
+    "authority_limit": "Source identity and publication-version evidence only; no peer-review, screening, AI-review or human-verification status is asserted."
+  },
+  "registered_identity": {
+    "work_id": "work:6eab81e9-e9ba-57eb-abc0-6c00d7061314",
+    "bibliographic_version_id": "version:7e635266-bdb5-5f56-b3a4-b3ac24907c1b",
+    "title": "I Am Not Them: Persistent Outgroup Bias in Large Language Models Arising from Social Identity Persona Setting",
+    "doi": "10.63317/2hn5gs6yh5m2"
+  },
+  "verification": {
+    "citation_title_exact_match": true,
+    "citation_doi_exact_match": true,
+    "citation_pdf_url_is_direct_https_pdf": true,
+    "publisher_pdf_bytes_match_acquisition_pdf": true,
+    "readiness_markdown_hash_matches": true
+  },
+  "raw_page_capture": {
+    "url": "https://aclanthology.org/2026.lrec-1.217/",
+    "local_path": "corpus/source-acquisition/acl-publisher-bindings-2026-09-21/T57U8T2K.html",
+    "sha256": "sha256:9e57b782964d07cc9a58b84a2937105c35c271a9d84e276d8f0f6b0a6743d39c"
+  }
+}

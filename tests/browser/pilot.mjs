@@ -314,6 +314,25 @@ try {
   await waitInit();
   const n = await hook(page, 'window.EC.getAllPapers().length');
   check('cold load: fixture corpus of three papers', n === 3, n);
+  const readinessBoundary = await page.evaluate(() => {
+    const T = window.__PRISMA_TEST__;
+    const shortSource = T.sourcePillHtml({ id: 'SHORT', abstract: 'Founded in 1920, the NBER is a private, non-profit, non-partisan organization.' });
+    T.setEditMode(true);
+    const unboundRail = T.assessInnerHtml({ id: 'UNBOUND', title: 'Unbound source', identity_basis: 'pending' }, null);
+    T.setEditMode(false);
+    return {
+      shortSource,
+      unboundRail,
+      bound: T.paperIdentityReady({ work_id: 'work:pilot', version_id: 'version:pilot' }),
+      missingVersion: T.paperIdentityReady({ work_id: 'work:pilot' })
+    };
+  });
+  check('source readiness: fragments are absent and unbound records cannot open category controls',
+    /kein Papertext/.test(readinessBoundary.shortSource) &&
+      /noch nicht an ein Werk/.test(readinessBoundary.unboundRail) &&
+      !/pt-chip/.test(readinessBoundary.unboundRail) &&
+      readinessBoundary.bound && !readinessBoundary.missingVersion,
+    readinessBoundary);
   check('cold load: reading is available without reviewer setup or annotation controls', await page.evaluate(() =>
     !window.__PRISMA_TEST__.canEdit() && !document.querySelector('#pt-reviewer-key, .pt-folder-action, #pt-record, #pt-pin-hit, .pt-chip') &&
       document.querySelector('#pt-edit-mode')?.getAttribute('aria-pressed') === 'false' && !!document.querySelector('#pt-doc')));

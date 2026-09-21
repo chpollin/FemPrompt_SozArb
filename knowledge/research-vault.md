@@ -10,7 +10,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-07-18
-updated: 2026-09-20
+updated: 2026-09-21
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6), Codex (GPT-6), Claude Code
 topics: ["[[Grounded Vault]]", "[[Systematic Review]]", "[[Context Engineering]]"]
@@ -58,6 +58,8 @@ Generation comprises four controlled operations.
 
 Prompt version, LLM, input text, output path and review result belong to the provenance of a distillation. In PRISM an LLM-Wissensdestillat remains a reference layer of its own. It does not satisfy the Paper-evidence gate of the screening annotation.
 
+A publication preparation records both the bibliographic Version and the hash-bound source representation. An Accepted Manuscript may therefore support a document whose citation identifies the Version of Record. The publisher checks this relationship against the canonical source binding and exposes the preparation status in PRISM. Historical document recoveries retain their unreviewed authority and bind the existing document to its verified reading source.
+
 ## Assertions
 
 An Assertion states exactly one scholarly relevant proposition. It points to one or more identified statements in the distillates. Several sources can support, qualify or contradict an Assertion.
@@ -77,6 +79,7 @@ Report Assertions and paper Assertions form one body of knowledge. The field for
 
 | Status | Meaning | Authorised activity |
 |---|---|---|
+| `preparation` | Attributed source-specific LLM draft with checked quotations and an exact source binding, awaiting separate review | source reading and distillate preparation |
 | `grounded` | All required references to the layer below resolve | deterministic anchor and schema check |
 | `ai-agent-reviewed` | An AI agent has checked statement and evidence chain against the assigned sources | source-grounded AI Agent Review |
 | `verified` | A domain expert has confirmed evidence and scholarly interpretation | person-attributed verification |

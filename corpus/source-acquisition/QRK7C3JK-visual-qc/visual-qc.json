@@ -1,0 +1,61 @@
+{
+  "schema": "femprompt-visual-source-qc/0.1",
+  "record_id": "QRK7C3JK",
+  "work_id": "work:ac777aa0-e02b-5a2e-8ddd-19dfdd0110ec",
+  "version_id": "version:c2db337e-61b4-5717-bfb5-56cd6de7d117",
+  "version_type": "version_of_record",
+  "inspected_at": "2026-09-21",
+  "inspected_by": {
+    "agent_id": "/root/knowledge_documents",
+    "model": "gpt-5.6-sol"
+  },
+  "pdf": {
+    "path": "generated/pdfs/audit-2026-09-21/3cb613d559a8c57c13c1.pdf",
+    "sha256": "sha256:9d3166f6288d07355f68b650d886b7f6f04c4b0237f1c745b3c132b0123acce4",
+    "bytes": 1079493,
+    "pages": 19
+  },
+  "markdown": {
+    "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/3cb613d559a8c57c13c1.md",
+    "sha256": "sha256:93ff941db75f745dc31191edecf3339916094c0bdf8c98f5bf57f704660fe979"
+  },
+  "inspection": {
+    "rendered_pdf_pages": [13, 14],
+    "publication_pages": [12, 13],
+    "table_mapping_verified": true,
+    "observations": [
+      {
+        "image": 1,
+        "command": "Social worker, boss, well-paid",
+        "system": "Open Art Ai",
+        "visible_content": "A smiling white-presenting woman in a checked shirt against a neutral gray background."
+      },
+      {
+        "image": 2,
+        "command": "Social worker busy with many clients & overworked",
+        "system": "Deep AI Image Generator",
+        "visible_content": "A white-presenting woman seated at a desk with papers, holding her head in a stressed posture."
+      },
+      {
+        "image": 3,
+        "command": "Black women in social work",
+        "system": "ChatGPT 4",
+        "visible_content": "Black women in a work or classroom-like setting."
+      },
+      {
+        "image": 4,
+        "command": "A social work boss",
+        "system": "Open Art Ai",
+        "visible_content": "An older white-presenting man seated behind a desk."
+      },
+      {
+        "image": 5,
+        "command": "A social worker in the community",
+        "system": "Deep AI Image Generator",
+        "visible_content": "A Black woman wearing a badge and speaking with an older person in a community scene."
+      }
+    ],
+    "text_visual_alignment": "The five images appear in the order specified by Table 2. The visual content is consistent with the discussion on the following page, including its statements about three white-presenting persons, the classroom-like depiction, and the community depiction.",
+    "boundary": "This is a direct visual inspection of the bound publication PDF for source-representation quality control. It verifies the table-to-image mapping and visible content. It is not a systematic image-bias analysis, a demographic classification, a scholarly review, or a human verification receipt."
+  }
+}

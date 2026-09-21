@@ -1,0 +1,78 @@
+{
+  "schema": "femprompt-registry-version-metadata-evidence/0.1",
+  "reviewed_at": "2026-09-21T13:24:57.020962+02:00",
+  "scope": "Evidence for registry metadata correction only; no registry or metadata-corrections mutation by this review",
+  "records": {
+    "TFMETSCH": {
+      "recommended_bibliographic_values": {
+        "version_type": "version_of_record",
+        "version_date": "2026-04-23",
+        "item_type": "conferencePaper",
+        "journal_or_repository": "The Fourteenth International Conference on Learning Representations",
+        "landing_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/71c3451f6cd6a4f82bb822db25cea4fd-Abstract-Conference.html",
+        "peer_review_status": "not_established"
+      },
+      "evidence": "The registered URL is the official ICLR 2026 proceedings expression. The locally acquired source is arXiv:2510.00232 and remains a distinct preprint; it must not bind to this bibliographic Version without a separate registered preprint Version."
+    },
+    "QI7MDZU4": {
+      "recommended_bibliographic_values": {
+        "version_type": "version_of_record",
+        "version_date": "2026-07-02",
+        "item_type": "conferencePaper",
+        "journal_or_repository": "Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics",
+        "doi": "10.18653/v1/2026.acl-long.1094",
+        "landing_url": "https://aclanthology.org/2026.acl-long.1094",
+        "peer_review_status": "not_established"
+      },
+      "evidence": "The DOI and official ACL Anthology URL identify the published proceedings paper; the complete acquired text has the same registered title."
+    },
+    "WK8IJUXQ": {
+      "recommended_bibliographic_values": {
+        "version_type": "version_of_record",
+        "version_date": "2026-07-02",
+        "item_type": "conferencePaper",
+        "journal_or_repository": "Findings of the Association for Computational Linguistics: ACL 2026",
+        "doi": "10.18653/v1/2026.findings-acl.1389",
+        "landing_url": "https://aclanthology.org/2026.findings-acl.1389",
+        "peer_review_status": "not_established"
+      },
+      "evidence": "The DOI and official ACL Anthology URL identify the published Findings proceedings paper; the complete acquired text has the same registered title."
+    },
+    "XPWCK65R": {
+      "recommended_bibliographic_values": {
+        "version_type": "version_of_record",
+        "version_date": "2026-07-02",
+        "item_type": "conferencePaper",
+        "journal_or_repository": "Findings of the Association for Computational Linguistics: ACL 2026",
+        "doi": "10.18653/v1/2026.findings-acl.418",
+        "landing_url": "https://aclanthology.org/2026.findings-acl.418",
+        "peer_review_status": "not_established"
+      },
+      "evidence": "The DOI and official ACL Anthology URL identify the published Findings proceedings paper; the complete acquired text has the same registered title."
+    },
+    "STQU6H42": {
+      "recommended_bibliographic_values": {
+        "version_type": "version_of_record",
+        "version_date": "2026-07-02",
+        "item_type": "conferencePaper",
+        "journal_or_repository": "Findings of the Association for Computational Linguistics: ACL 2026",
+        "doi": "10.18653/v1/2026.findings-acl.585",
+        "landing_url": "https://aclanthology.org/2026.findings-acl.585",
+        "peer_review_status": "not_established"
+      },
+      "evidence": "The DOI and official ACL Anthology URL identify the published Findings proceedings paper; the complete acquired text has the same registered title."
+    },
+    "T57U8T2K": {
+      "recommended_bibliographic_values": {
+        "version_type": "version_of_record",
+        "version_date": "2026-05-13",
+        "item_type": "conferencePaper",
+        "journal_or_repository": "Proceedings of the 2026 Joint International Conference on Computational Linguistics, Language Resources and Evaluation",
+        "doi": "10.63317/2hn5gs6yh5m2",
+        "landing_url": "https://aclanthology.org/2026.lrec-1.217",
+        "peer_review_status": "not_established"
+      },
+      "evidence": "The DOI and official ACL Anthology URL identify the published LREC proceedings paper; the complete acquired text has the same registered title."
+    }
+  }
+}
