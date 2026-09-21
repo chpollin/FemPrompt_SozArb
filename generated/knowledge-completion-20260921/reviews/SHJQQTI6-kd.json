@@ -1,0 +1,34 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "SHJQQTI6",
+  "knowledge_document": "research-vault/20_distillates/publications/completion-shjqqti6-intersectional-fairness-machine-learning.md",
+  "knowledge_document_sha256": "sha256:4f678f3d9b711c35798380cf67f2d6bf02283152256f2f5c2fb18585ba2e5420",
+  "source_path": "corpus/source-acquisition/completion-20260921/SHJQQTI6.md",
+  "source_sha256": "sha256:f466d925774a262694f248f1639b373102d521d48f7065acd7d8fa3013421c9d",
+  "conversion_qc_path": "generated/source-acquisition/completion-20260921/conversion-qc/conversion-qc.json",
+  "conversion_qc_sha256": "sha256:72936d4a095ef40a2040ce27d71590b0b75f26dfbaf6554e43a0c05035546749",
+  "reviewed_at": "2026-09-21T18:51:06.812084Z",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Independent source-bound review of identity, research question, method, findings, limitations, literal quotations, category relevance and documented conversion boundaries. This receipt grants no human verification, conversion repair or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Core statements; Research question and method; Main findings; Quotations",
+      "finding": "The retained prose supports the distinction between independent and intersectional groups, the named families of fairness notions, the general mitigation approaches, subgroup-selection risks, stakeholder requirement and limited real-world evaluation. All three displayed quotations resolve exactly. The document makes no dataset-level claim requiring the damaged Table 1 row alignment and does not reproduce or interpret a missing formula."
+    },
+    {
+      "severity": "note",
+      "location": "Assessment relevance",
+      "finding": "KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness and Gender are supported by the survey scope and examples. The document correctly withholds Generative_KI, Prompting, Soziale_Arbeit, AI_Literacies and a feminist-method claim."
+    },
+    {
+      "severity": "material-boundary",
+      "location": "Source representation and Limitations",
+      "finding": "The separate conversion QC remains changes_required because three figures, ten displayed formulas and exact Table 1 row alignment are absent. This knowledge-document acceptance covers only claims supported by retained prose. It does not accept the conversion as complete, restore the missing evidence or support claims about formal definitions, visual taxonomy, multicalibration hierarchy or dataset-specific demographic mappings."
+    }
+  ]
+}

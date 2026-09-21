@@ -13,7 +13,7 @@ import sys
 from pathlib import Path
 from typing import Any
 
-from src.file_hashing import file_sha256
+from src.file_hashing import file_sha256, filesystem_path
 
 ROOT = Path(__file__).resolve().parents[2]
 MANIFEST = "generated/build-manifest.json"
@@ -84,8 +84,20 @@ INPUT_GLOBS = (
     "package-lock.json",
     "requirements-build.txt",
 )
-LOCAL_INPUT_PATHS = {"docs/js/config.local.js"}
-LOCAL_INPUT_PREFIXES = ("generated/distilled/_evidence_audit/",)
+LOCAL_INPUT_PATHS = {
+    "docs/js/config.local.js",
+    "corpus/source-acquisition/completion-20260921/SHJQQTI6.md",
+    "corpus/source-acquisition/completion-20260921/SHJQQTI6-repaired.md",
+    "corpus/source-acquisition/completion-20260921/SHJQQTI6-repaired-r2.md",
+    "corpus/source-acquisition/completion-20260921/J4K3XA52-repaired.md",
+}
+LOCAL_INPUT_PREFIXES = (
+    "generated/distilled/_evidence_audit/",
+    # Only the attributed, bound representations are build inputs. Unedited
+    # converter outputs are retained locally for inspection and provenance.
+    "generated/source-acquisition/completion-20260921/oa-markdown/",
+    "generated/source-acquisition/completion-20260921/docling/",
+)
 
 
 def file_hash(path: Path) -> str:
@@ -95,17 +107,27 @@ def file_hash(path: Path) -> str:
 def snapshot(repo: Path) -> dict[str, Any]:
     outputs = {repo / name for name in OUTPUTS}
     for name in OUTPUT_DIRS:
-        outputs.update(p for p in (repo / name).rglob("*") if p.is_file())
-    missing = sorted(p.relative_to(repo).as_posix() for p in outputs if not p.is_file())
+        outputs.update(
+            p for p in (repo / name).rglob("*") if filesystem_path(p).is_file()
+        )
+    missing = sorted(
+        p.relative_to(repo).as_posix()
+        for p in outputs
+        if not filesystem_path(p).is_file()
+    )
     if missing:
         raise ValueError("Missing build outputs: " + ", ".join(missing))
     inputs = {
         p
         for pattern in INPUT_GLOBS
         for p in repo.glob(pattern)
-        if p.is_file()
+        if filesystem_path(p).is_file()
         and p.relative_to(repo).as_posix() not in LOCAL_INPUT_PATHS
         and not p.relative_to(repo).as_posix().startswith(LOCAL_INPUT_PREFIXES)
+        and not p.relative_to(repo).match(
+            "generated/source-acquisition/audit-*/markdown-new-bytes/*.md"
+        )
+        and not ("conversion-qc" in p.parts and p.suffix.lower() in {".png", ".jpg"})
     } - outputs
     return {
         "schema": "femprompt-project-build/0.1",

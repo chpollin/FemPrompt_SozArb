@@ -1,0 +1,32 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "AZJW38MF",
+  "knowledge_document": "research-vault/20_distillates/publications/azjw38mf-socio-technical-ethics-work.md",
+  "knowledge_document_sha256": "sha256:0fb8ed55261f80c5de2cb35042f06ef3d8d4ec004fe5a071e2b24e936d514c7a",
+  "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/e9be7a01361ab7bae7bb.md",
+  "source_sha256": "sha256:322a7c9026f85204f9a15ffac69723e8eb12cc125df25276e77aa01e0e062148",
+  "reviewed_at": "2026-09-21T18:38:31.604060Z",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Administrative follow-up review of the authority wording and preservation of the previously source-reviewed substantive content. This receipt grants no human verification or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Substantive sections before Review boundary",
+      "finding": "The source-reviewed substantive statements, method, findings, limitations, quotations and category relevance are unchanged from the accepted prior-review artifact. The current source artifact still matches its reviewed hash."
+    },
+    {
+      "severity": "note",
+      "location": "Review boundary and frontmatter authority fields",
+      "finding": "The revised boundary now delegates the current review state to the frontmatter and receipt while retaining the explicit domain-expert-verification and publication-approval boundary. Administrative authority metadata does not alter the scholarly claims."
+    },
+    {
+      "severity": "note",
+      "location": "Prior review provenance",
+      "finding": "Compared against accepted receipt corpus/knowledge-reviews/2026-09-21/AZJW38MF-initial.json and the exact prior artifact hash recorded there."
+    }
+  ]
+}

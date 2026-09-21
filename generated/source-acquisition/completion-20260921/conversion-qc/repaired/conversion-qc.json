@@ -1,0 +1,51 @@
+{
+  "schema": "femprompt-conversion-qc/0.1",
+  "created_at": "2026-09-21T18:59:31.554531Z",
+  "scope": "Independent visual and textual review of the controlled SHJQQTI6 conversion repair. This QC grants no scientific acceptance, screening decision, registry authority, or publication authority.",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "method": [
+    "Verified the PDF, repaired Markdown, repair manifest, and supplied page-image hashes using the canonical artifact_hash contract.",
+    "Visually inspected original rendered PDF pages 1, 2, 3, 4, 5, and 7 at full available resolution.",
+    "Compared equations (1) through (9), the unnumbered multiaccuracy constraint, all 13 Table 1 rows, and the nodes, memberships, edges, nesting, labels, and directional relation described for Figures 1 through 3.",
+    "Compared the original and repaired Markdown with a zero-context diff to confirm that body changes are confined to declared metadata, copyright reference, figures, formulas, the multiaccuracy insertion, and Table 1."
+  ],
+  "records": [
+    {
+      "record_id": "SHJQQTI6",
+      "pdf_path": "generated/pdfs/completion-20260921/SHJQQTI6-ijcai-2023-0742.pdf",
+      "pdf_sha256": "sha256:a9ad4b0eb784fa77ff163f84cf533669fa0ef980cc4a9aae79dcaf8b8b9d6bd0",
+      "markdown_path": "corpus/source-acquisition/completion-20260921/SHJQQTI6-repaired.md",
+      "markdown_sha256": "sha256:e1e640d81ae93a71176f8d24d73558c3cc116c60f3f7e4eb540921b531d274f8",
+      "repair_manifest_path": "generated/source-acquisition/completion-20260921/conversion-qc/SHJQQTI6-repair-manifest.json",
+      "repair_manifest_sha256": "sha256:92ac9ce2d504c8d1ef34e84451cc1de75aa9a18cc87cf8430d921dc85a525169",
+      "pages_total": 9,
+      "pages_visually_inspected": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7
+      ],
+      "result": "changes_required",
+      "structure": {
+        "headings": "Article headings and the unchanged Docling body remain in source order.",
+        "reading_order": "The repaired file preserves the earlier linearized prose; declared insertions occur at the corresponding source locations.",
+        "tables": "All 13 Table 1 dataset rows match the original page 7 Type, Dataset, and Demographics cells, including the source spelling Compass.",
+        "figures": "Figure 1 memberships and Figure 2 taxonomy nodes and edges match the rendered originals. Figure 3 has the correct nested MC1=MA, MC2, MCk, MC order and complexity meaning, but its geometric arrow direction is described incorrectly.",
+        "formulas": "Equations (1) through (9) and the unnumbered multiaccuracy constraint match the rendered mathematical expressions, variables, bounds, conditioning, operators, and equation numbers."
+      },
+      "losses": [
+        "Figure 3 states that the diagonal arrow points inward and down. In the rendered original it points from the lower-left toward the nested regions at the upper-right. The semantic statement that complexity increases toward full multicalibration is correct, but the claimed visual direction is not.",
+        "The inherited standalone not-equal glyph after Equation (7) remains detached from the following prose and should be removed or restored to its source phrase during mathematical copy-edit.",
+        "Text descriptions do not reproduce the original figures visual layout or color encoding.",
+        "Existing OCR and spacing defects elsewhere in the unchanged Docling body remain.",
+        "The mathematical transcription has been independently compared visually but has not received specialist mathematical copy-editing."
+      ],
+      "assessment": "The equations and reconstructed table are faithful, and Figures 1 and 2 are accurately described. Correct the false geometric direction in the Figure 3 description and resolve the detached glyph after Equation (7) before accepting the repaired representation for text assessment."
+    }
+  ]
+}

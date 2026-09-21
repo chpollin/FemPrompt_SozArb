@@ -11,11 +11,12 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import sys
 from dataclasses import dataclass, field
-from datetime import date
+from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -275,7 +276,7 @@ def _check_distillate(
             report.errors.append(
                 f"{document.key}: work-version source identity differs from the registry"
             )
-    if metadata.get("status") == "preparation":
+    if metadata.get("status") == "preparation" or metadata.get("source-review"):
         prepared_by = metadata.get("prepared-by")
         if not isinstance(prepared_by, dict) or not prepared_by.get("agent-id"):
             report.errors.append(
@@ -321,6 +322,11 @@ def _check_distillate(
                         report.errors.append(
                             f"{document.key}: source-representation differs from the canonical source binding"
                         )
+    if metadata.get("source-review") or (
+        STATUS_RANK.get(metadata.get("status"), -1) >= 1
+        and not _unchanged_historical_review(document)
+    ):
+        _check_source_review(document, report)
     if "quote" not in (metadata.get("checked") or {}):
         report.errors.append(f"{document.key}: checked.quote is required")
     in_statements = False
@@ -336,6 +342,80 @@ def _check_distillate(
                 )
     if statement_count == 0:
         report.errors.append(f"{document.key}: no core statements")
+
+
+def _unchanged_historical_review(document: Document) -> bool:
+    """Preserve prior authority only for its exact, frozen historical artifact."""
+    from src.assess.artifact_verification import artifact_hash
+
+    baseline = REPO_ROOT / "corpus/knowledge-reviews/historical-authority-baseline.json"
+    try:
+        reference = document.path.relative_to(REPO_ROOT).as_posix()
+        payload = json.loads(baseline.read_text(encoding="utf-8"))
+        record = payload["records"][reference]
+        return (
+            payload["schema"] == "femprompt-historical-knowledge-authority/1.0"
+            and record["record_id"] == document.metadata["record-id"]
+            and record["historical_status"] == document.metadata["status"]
+            and record["sha256"] == artifact_hash(REPO_ROOT, reference)
+        )
+    except (KeyError, TypeError, ValueError, OSError):
+        return False
+
+
+def _check_source_review(document: Document, report: ValidationReport) -> None:
+    """Keep a reviewed preparation tied to its immutable review and unchanged text."""
+    from src.assess.artifact_verification import artifact_hash, safe_path
+
+    try:
+        reference = document.metadata["source-review"]
+        if artifact_hash(REPO_ROOT, reference["path"]) != reference["sha256"]:
+            raise ValueError("source review receipt hash changed")
+        receipt = json.loads(
+            safe_path(REPO_ROOT, reference["path"]).read_text(encoding="utf-8")
+        )
+        reviewer = receipt["reviewer"]
+        reviewed_at = datetime.fromisoformat(
+            receipt["reviewed_at"].replace("Z", "+00:00")
+        )
+        if (
+            receipt["schema"] != "femprompt-knowledge-document-source-review/1.0"
+            or receipt["result"] != "accepted"
+            or receipt["knowledge_document"]
+            != document.path.relative_to(REPO_ROOT).as_posix()
+            or receipt["record_id"] != document.metadata["record-id"]
+            or not reviewer["model"]
+            or not reviewer["agent_id"]
+            or reviewer["agent_id"] == document.metadata["prepared-by"]["agent-id"]
+            or reviewed_at.tzinfo is None
+            or reviewed_at > datetime.now(timezone.utc)
+            or not receipt["findings"]
+        ):
+            raise ValueError("invalid or non-independent source review")
+        subject = receipt["validated_subject"]
+        if set(subject["source_metadata"]) != {
+            "record-id",
+            "work-id",
+            "version-id",
+            "version-type",
+            "source-representation",
+        }:
+            raise ValueError("incomplete reviewed source identity")
+        digest = "sha256:" + hashlib.sha256(document.body.encode("utf-8")).hexdigest()
+        if subject["body_sha256"] != digest or any(
+            document.metadata.get(field) != value
+            for field, value in subject["source_metadata"].items()
+        ):
+            raise ValueError("reviewed document content or source identity changed")
+        source = document.metadata["source-representation"]
+        if (
+            receipt["source_path"] != source["path"]
+            or receipt["source_sha256"] != source["sha256"]
+            or artifact_hash(REPO_ROOT, source["path"]) != source["sha256"]
+        ):
+            raise ValueError("reviewed source changed")
+    except (KeyError, TypeError, ValueError, OSError) as error:
+        report.errors.append(f"{document.key}: source review is invalid: {error}")
 
 
 def _check_assertion(

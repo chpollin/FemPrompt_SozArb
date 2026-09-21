@@ -21,10 +21,12 @@ import os
 import re
 import sys
 from collections import Counter
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
 from src.analysis.historical_resolution import RESOLUTION_PATH, load_source_holds
+from src.file_hashing import file_sha256
 
 REPO = Path(__file__).resolve().parents[2]
 DEFAULT_JSON = REPO / "generated" / "literature-readiness.json"
@@ -101,12 +103,25 @@ def _source_details(
         and manifest_entry.get("version_id") == expected_version
     )
     available = kind in {"clean", "raw"} and source_path.is_file()
+    governed_binding = bool(
+        available
+        and exact_binding
+        and binding
+        and manifest_entry.get("source_binding") == binding
+    )
     return {
         "source_kind": kind,
         "source_path": source_path.relative_to(repo).as_posix() if available else None,
         "source_markdown_sha256": _sha256(source_path) if available else None,
         "text_available": available,
         "canonical_binding_matches": exact_binding,
+        "source_identity_review": (
+            "governed_binding"
+            if governed_binding
+            else "legacy_candidate"
+            if available
+            else "unavailable"
+        ),
     }
 
 
@@ -119,6 +134,53 @@ def _assessment(paper: dict[str, Any]) -> dict[str, Any]:
         "human_present": bool(human.get("decision")),
         "human_decision": human.get("decision"),
     }
+
+
+def _conversion_reviews(
+    repo: Path, active_sources: set[tuple[str, str]] | None = None
+) -> tuple[dict[tuple[str, str], dict], list[Path]]:
+    """Match observed conversion checks only to the exact inspected Markdown."""
+    from src.assess.artifact_verification import artifact_hash
+
+    reviews = {}
+    paths = sorted(repo.glob("generated/source-acquisition/**/conversion-qc.json"))
+    for path in paths:
+        report = _read_json(path)
+        if report.get("schema") != "femprompt-conversion-qc/0.1":
+            raise ValueError(f"Unsupported conversion review: {path}")
+        reviewed_at = datetime.fromisoformat(
+            report["created_at"].replace("Z", "+00:00")
+        )
+        if (
+            not report.get("reviewer", {}).get("agent_id")
+            or not report.get("reviewer", {}).get("model")
+            or reviewed_at.tzinfo is None
+            or reviewed_at > datetime.now(timezone.utc)
+        ):
+            raise ValueError(f"Invalid conversion review provenance: {path}")
+        for record in report["records"]:
+            source = record["markdown_path"]
+            digest = record["markdown_sha256"]
+            key = (source, digest)
+            # A superseded local conversion remains an audit record. Its receipt
+            # never supplies authority for a different, currently bound source.
+            if active_sources is not None and key not in active_sources:
+                continue
+            if artifact_hash(repo, source) != digest:
+                raise ValueError(f"Conversion review source changed: {source}")
+            result = record["result"]
+            if result not in {"accepted_for_text_assessment", "changes_required"}:
+                raise ValueError(f"Invalid conversion review result: {result}")
+            entry = {
+                "result": result,
+                "artifact": path.relative_to(repo).as_posix(),
+                "record_id": record["record_id"],
+                "limitations": record.get("losses", []),
+            }
+            if key in reviews and reviews[key]["result"] != result:
+                raise ValueError(f"Conflicting conversion reviews: {source}")
+            reviews[key] = entry
+    return reviews, paths
 
 
 def build_readiness(
@@ -141,6 +203,12 @@ def build_readiness(
     )
 
     source_holds = load_source_holds(repo)
+    active_sources = {
+        (binding["source_path"], binding["source_sha256"])
+        for paper in papers
+        if (binding := paper.get("source_binding"))
+    }
+    conversion_reviews, conversion_paths = _conversion_reviews(repo, active_sources)
     records: list[dict[str, Any]] = []
     seen: set[str] = set()
     for paper in papers:
@@ -156,6 +224,10 @@ def build_readiness(
             and registry_identity.get("version_id") == paper.get("version_id")
         )
         source = _source_details(repo, paper, manifest.get(record_id, {}))
+        source_binding = paper.get("source_binding") or {}
+        conversion_review = conversion_reviews.get(
+            (source_binding.get("source_path"), source_binding.get("source_sha256"))
+        )
         abstract_quality = _abstract_quality(str(paper.get("abstract") or ""))
         technical_reviewable = bool(
             exact_ids
@@ -184,6 +256,12 @@ def build_readiness(
             missing.append("acquire_canonical_version_fulltext")
             if abstract_quality != "usable":
                 missing.append("record_substantive_abstract_if_fulltext_unavailable")
+        elif source["source_identity_review"] != "governed_binding":
+            missing.append("review_and_bind_exact_source_version")
+        if source["text_available"] and conversion_review is None:
+            missing.append("check_conversion_fidelity_against_original")
+        elif conversion_review and conversion_review["result"] == "changes_required":
+            missing.append("repair_recorded_conversion_losses")
         if not knowledge_doc:
             missing.append("create_source_bound_knowledge_document")
         if knowledge_doc and not knowledge_exists:
@@ -210,6 +288,10 @@ def build_readiness(
                     else {}
                 ),
                 **source,
+                "conversion_review": conversion_review,
+                "conversion_review_result": (
+                    conversion_review["result"] if conversion_review else "not_recorded"
+                ),
                 "abstract_quality": abstract_quality,
                 "knowledge_doc": knowledge_doc,
                 "knowledge_doc_exists": knowledge_exists,
@@ -231,13 +313,20 @@ def build_readiness(
             f"extra={sorted(live_keys - canonical_live_keys)}"
         )
     works = {record["work_id"] for record in records if record["work_id"]}
-    input_paths = [corpus_path, manifest_path, registry_path, zotero_path]
+    input_paths = [
+        corpus_path,
+        manifest_path,
+        registry_path,
+        zotero_path,
+        *conversion_paths,
+    ]
     if (repo / RESOLUTION_PATH).is_file():
         input_paths.append(repo / RESOLUTION_PATH)
     if live_snapshot_path:
         input_paths.append(live_snapshot_path.resolve())
     return {
         "schema": "femprompt-literature-readiness/1.0",
+        "input_hash_contract": "text-crlf-to-lf",
         "authority": "Technical inventory only; no review or scientific authority is promoted.",
         "inputs": [
             {
@@ -246,7 +335,7 @@ def build_readiness(
                     if path.is_relative_to(repo.resolve())
                     else str(path)
                 ),
-                "sha256": _sha256(path),
+                "sha256": file_sha256(path),
             }
             for path in input_paths
         ],
@@ -272,6 +361,9 @@ def build_readiness(
             "knowledge_authorities": dict(
                 sorted(Counter(r["knowledge_authority"] for r in records).items())
             ),
+            "conversion_reviews": dict(
+                sorted(Counter(r["conversion_review_result"] for r in records).items())
+            ),
         },
         "records": records,
     }
@@ -294,6 +386,8 @@ def _csv_text(payload: dict[str, Any]) -> str:
         "source_markdown_sha256",
         "text_available",
         "canonical_binding_matches",
+        "source_identity_review",
+        "conversion_review_result",
         "abstract_quality",
         "knowledge_doc",
         "knowledge_doc_exists",

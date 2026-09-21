@@ -1,0 +1,64 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "Z9DNTBFF",
+  "knowledge_document": "research-vault/20_distillates/publications/completion-z9dntbff-gender-bias-vision-language-models.md",
+  "knowledge_document_sha256": "sha256:edde2d0283f6a3d38457e315080371e4498d9872e4fa334db9c96d6310babf0a",
+  "source_path": "corpus/source-acquisition/completion-20260921/Z9DNTBFF.identity-bound.md",
+  "source_sha256": "sha256:729606223c6f936d78f837d285ae84f5d18f010b62af7dfa793cce64119fd3c0",
+  "reviewed_at": "2026-09-21T19:10:59.534436Z",
+  "reviewer": {
+    "agent_id": "/root/source_completion",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Hash-corrected independent source-bound review. The knowledge document and source content are unchanged from the superseded review; this receipt uses src.assess.artifact_verification.artifact_hash for repository text artifacts and grants no human verification, promotion or publication authority.",
+  "supersedes": "generated/knowledge-completion-20260921/reviews/Z9DNTBFF-new-kd.json",
+  "hash_correction": {
+    "reason": "The superseded receipt used a raw-byte SHA-256 for the Markdown source. Repository verification requires the normalized text hash returned by src.assess.artifact_verification.artifact_hash.",
+    "original_source_raw_sha256": "sha256:6ea8258a839719d6e4f3b6539cc5fa01031f5f7833c8c65209b302ae47f6983b",
+    "corrected_source_artifact_hash": "sha256:729606223c6f936d78f837d285ae84f5d18f010b62af7dfa793cce64119fd3c0",
+    "content_reverified_unchanged": true
+  },
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Identity and quotations",
+      "finding": "The ACL Version of Record title, authors, DOI and publication context match the reference. All three literal quotations resolve exactly in the bound source."
+    },
+    {
+      "severity": "note",
+      "location": "Research question, method and findings",
+      "finding": "The document accurately describes the controlled vision-language bias probes, the preliminary object sets and the expanded survey-derived set. It preserves the paper’s distinction between observed model behavior and broader interpretation."
+    },
+    {
+      "severity": "note",
+      "location": "Assessment relevance",
+      "finding": "KI_Sonstige, Gender and Bias_Ungleichheit are central under categories.yaml. Diversitaet is appropriately described as relevant through the explicit non-binary and transgender limitation and the call for more inclusive datasets. Fairness, Generative_KI, Prompting, AI_Literacies, Feministisch and Soziale_Arbeit are correctly not asserted."
+    },
+    {
+      "severity": "note",
+      "location": "Conversion boundary",
+      "finding": "The conversion does not decode several formulas and does not preserve the visual content of figures. The knowledge document states this boundary and avoids figure-dependent quantitative claims."
+    }
+  ],
+  "validated_subject": {
+    "validated_at": "2026-09-21T19:11:58.824808+00:00",
+    "validator": "/root integration; document and source hashes plus literal quotation checks",
+    "body_sha256": "sha256:31373478f5a699d5860bf9e394d4ecf6be7e681ba4f43c044184d7f17a18ef23",
+    "source_metadata": {
+      "record-id": "Z9DNTBFF",
+      "work-id": "work:ec94cf1c-87bf-5f4d-a840-9dd3b92eefab",
+      "version-id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
+      "version-type": "version_of_record",
+      "source-representation": {
+        "path": "corpus/source-acquisition/completion-20260921/Z9DNTBFF.identity-bound.md",
+        "sha256": "sha256:729606223c6f936d78f837d285ae84f5d18f010b62af7dfa793cce64119fd3c0",
+        "version-id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
+        "version-type": "version_of_record",
+        "source-url": "https://aclanthology.org/2022.gebnlp-1.10/",
+        "is-preferred-version": true,
+        "boundary": "The preparing agent read the complete hash-bound Docling conversion. Conversion QC for this representation was not complete at preparation time. Formulae were marked as not decoded, and figures and visual layout were not independently inspected. The source hash follows the repository artifact_hash contract, which normalises CRLF to LF for text files."
+      }
+    }
+  }
+}

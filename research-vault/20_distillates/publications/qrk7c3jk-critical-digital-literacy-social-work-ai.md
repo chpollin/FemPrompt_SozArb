@@ -7,18 +7,20 @@ work-id: work:ac777aa0-e02b-5a2e-8ddd-19dfdd0110ec
 version-id: version:c2db337e-61b4-5717-bfb5-56cd6de7d117
 version-type: version_of_record
 topics:
-  - "[[AI Literacies]]"
-  - "[[Bias and Fairness]]"
-status: preparation
+- '[[AI Literacies]]'
+- '[[Bias and Fairness]]'
+status: ai-agent-reviewed
 checked:
   quote: 2026-09-21
+  validation: '2026-09-21'
+  ai-agent-review: '2026-09-21'
 created: 2026-09-21
-updated: 2026-09-21
+updated: '2026-09-21'
 prepared-by:
   agent-id: /root/knowledge_documents
   model: gpt-5.6-sol
   prepared-at: 2026-09-21
-  artifact-review-status: unreviewed
+  artifact-review-status: ai-agent-reviewed
 source-representation:
   path: generated/source-acquisition/codex-websearch-2026/markdown-clean/3cb613d559a8c57c13c1.md
   sha256: sha256:93ff941db75f745dc31191edecf3339916094c0bdf8c98f5bf57f704660fe979
@@ -27,6 +29,9 @@ source-representation:
   source-url: https://doi.org/10.1080/02615479.2026.2660786
   is-preferred-version: true
   boundary: The preparing agent read the complete hash-bound Markdown representation and inspected publication pages 12 and 13 in the hash-verified publisher PDF. The visual-QC record is corpus/source-acquisition/QRK7C3JK-visual-qc/visual-qc.json. No separate scholarly review has occurred.
+source-review:
+  path: corpus/knowledge-reviews/2026-09-21/QRK7C3JK-r2.json
+  sha256: sha256:fec3bbe69c7e4d1349ea59f3dc1e89017c14ca0bb0d9e063748a312d0e3e2b16
 ---
 
 # Distillate: Critical digital literacy for social work education in a time of artificial intelligence
@@ -59,7 +64,7 @@ The illustrative case presents five image prompts executed with Open Art Ai, Dee
 
 ## Assessment relevance
 
-`AI_Literacies` and `Soziale_Arbeit` are central because the article proposes a curricular framework for critically engaging with AI in social work education. `Generative_KI` is relevant through the discussion of text and image generation. `Prompting` is relevant because the illustrative teaching case records five prompts and uses their outputs for critical comparison. `Bias_Ungleichheit`, `Diversitaet` and `Fairness` are central analytical concerns. Decolonial perspectives structure the proposed literacy framework, but decoloniality is not a separate category in the controlled assessment vocabulary. `Gender` is visible in the illustrative outputs, but the article does not conduct a systematic gender analysis. The framework draws on decolonial and anti-oppressive scholarship rather than presenting a specifically feminist method.
+`AI_Literacies` and `Soziale_Arbeit` are central because the article proposes a curricular framework for critically engaging with AI in social work education. `Generative_KI` is relevant through the discussion of text and image generation. `Prompting` is relevant because the illustrative teaching case records five prompts and uses their outputs for critical comparison. `Bias_Ungleichheit` and `Diversitaet` are central through the analysis of algorithmic bias, exclusion, representation and decolonial critique. The source does not analyse algorithmic fairness, a fair machine-learning system, a fairness metric or a debiasing method, so it does not establish `Fairness` under the controlled definition. Decolonial perspectives structure the proposed literacy framework, but decoloniality is not a separate category in the controlled assessment vocabulary. `Gender` is visible in the illustrative outputs, but the article does not conduct a systematic gender analysis. The framework draws on decolonial and anti-oppressive scholarship rather than presenting a specifically feminist method.
 
 ## Limitations
 
@@ -71,4 +76,4 @@ The generated Markdown preserves the commands, systems, captions, and discussion
 
 ## Review boundary
 
-This preparation was produced from the complete hash-bound local source and a direct inspection of the relevant publisher-PDF pages. Quotations and the table-to-image mapping were checked. Its `preparation` status is unreviewed and grants no scholarly-review authority.
+This document was prepared from the source representation identified in its metadata. The current review state and its supporting receipt are recorded in the frontmatter. AI review does not establish domain-expert verification or publication approval.

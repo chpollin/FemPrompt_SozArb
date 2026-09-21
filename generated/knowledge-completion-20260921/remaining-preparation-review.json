@@ -1,0 +1,217 @@
+[
+  {
+    "record_id": "P4YQIKJX",
+    "knowledge_document": "research-vault/20_distillates/publications/healthcare-ai-ethics-systematic-review.md",
+    "source": {
+      "path": "generated/markdown_clean/P4YQIKJX.md",
+      "sha256": "sha256:a4f670474ec99e6c7d888653b43044fd775ebd6dde861dfe2e886c30a8cbf42d",
+      "version-id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+      "version-type": "version_of_record",
+      "source-url": "https://doi.org/10.3390/ai4010003",
+      "is-preferred-version": true,
+      "boundary": "The preparing agent read the complete hash-bound Publisher PDF Markdown representation and checked the quoted passages. No separate scholarly review has occurred."
+    }
+  },
+  {
+    "record_id": "QI7MDZU4",
+    "knowledge_document": "research-vault/20_distillates/publications/insideout-cultural-bias-interview-generation.md",
+    "source": {
+      "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/c42b463f9ba115503a58.md",
+      "sha256": "sha256:e37a2f6c550e965d331c0b9f2b4d4a8bc316f17bc14b65bf14d54fc233e46f56",
+      "version-id": "version:6a3c613d-1545-5827-95d0-8ee4a95e5256",
+      "version-type": "version_of_record",
+      "source-url": "https://aclanthology.org/2026.acl-long.1094/",
+      "is-preferred-version": true,
+      "boundary": "The preparing agent read the complete hash-bound ACL proceedings Markdown representation and checked the quoted passages. No separate scholarly review has occurred."
+    }
+  },
+  {
+    "record_id": "K7NW3W34",
+    "knowledge_document": "research-vault/20_distillates/publications/k7nw3w34-ai-assisted-social-work-recording.md",
+    "source": {
+      "path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/e9fb8b7679eaf1023485.md",
+      "sha256": "sha256:4dbc41e4a458cf82e1784ad5190b2a6b211a63488e2c0aaa557b67304aca5737",
+      "version-id": "version:17e4bb2a-0324-58ef-97f3-0cc9cd352ab5",
+      "version-type": "version_of_record",
+      "is-preferred-version": true,
+      "boundary": "The preparing agent read the complete hash-bound local text. Linearised tables were available; figures were not independently inspected. Source identity review does not constitute review of this distillate."
+    }
+  },
+  {
+    "record_id": "XPWCK65R",
+    "knowledge_document": "research-vault/20_distillates/publications/multi-agent-cultural-debate.md",
+    "source": {
+      "path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/a1c7e9db9a3dc6caff54.md",
+      "sha256": "sha256:0aa4087d1d261b8e702f3f8c42aff5f75647809fc338226ecd0bf3451dbbff96",
+      "version-id": "version:69fc5b26-5038-5dd2-9bef-f0403caae732",
+      "version-type": "version_of_record",
+      "source-url": "https://aclanthology.org/2026.findings-acl.418/",
+      "is-preferred-version": true,
+      "boundary": "The preparing agent read the complete hash-bound ACL proceedings Markdown representation and checked the quoted passages. No separate scholarly review has occurred."
+    }
+  },
+  {
+    "record_id": "WK8IJUXQ",
+    "knowledge_document": "research-vault/20_distillates/publications/multi-persona-thinking-bias-mitigation.md",
+    "source": {
+      "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/d3bd00602e07cf40396c.md",
+      "sha256": "sha256:ea23c855efffddf5d5f539b80715dc9e11f45c296b3d54b25e435ed9eec91643",
+      "version-id": "version:a2473563-f6d9-540f-b84f-8e146f0938dd",
+      "version-type": "version_of_record",
+      "source-url": "https://aclanthology.org/2026.findings-acl.1389/",
+      "is-preferred-version": true,
+      "boundary": "The preparing agent read the complete hash-bound ACL proceedings Markdown representation and checked the quoted passages. No separate scholarly review has occurred."
+    }
+  },
+  {
+    "record_id": "NN49FMDP",
+    "knowledge_document": "research-vault/20_distillates/publications/nn49fmdp-critical-ai-school-gender.md",
+    "source": {
+      "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/152b1aa29e0dddabe838.md",
+      "sha256": "sha256:6937360f3e72c85cb21e45eb19d0ed59e33b1320592ad4da32ed1b2608686058",
+      "version-id": "version:72ebb1a5-b986-5df5-86d2-429ddcdb6268",
+      "version-type": "version_of_record",
+      "is-preferred-version": true,
+      "boundary": "The preparing agent read the complete hash-bound local text. Linearised tables were available; figures were not independently inspected. Source identity review does not constitute review of this distillate."
+    }
+  },
+  {
+    "record_id": "FR8Z2998",
+    "knowledge_document": "research-vault/20_distillates/publications/patient-bias-llm-health-consultations.md",
+    "source": {
+      "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/aff73b4c6b2eab31b8f7.md",
+      "sha256": "sha256:401ad82df917c2ba9ae1e22a0cb706c9f2b6460e3c82f1d8a6a8cf1333988239",
+      "version-id": "version:8bffb8fc-6a26-5e82-a77f-1a0f5c8b7794",
+      "version-type": "version_of_record",
+      "source-url": "https://www.jmir.org/2026/1/e85770",
+      "is-preferred-version": true,
+      "boundary": "The preparing agent read the complete hash-bound Markdown source representation and checked the quoted passages. No separate AI source review or domain-expert verification has occurred."
+    }
+  },
+  {
+    "record_id": "T57U8T2K",
+    "knowledge_document": "research-vault/20_distillates/publications/persistent-outgroup-bias-personas.md",
+    "source": {
+      "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/f403809ad4503150093a.md",
+      "sha256": "sha256:452e783653dedcb51fbc1fe1c2966f6804a613d5846e5720844e0d6bd77ea192",
+      "version-id": "version:7e635266-bdb5-5f56-b3a4-b3ac24907c1b",
+      "version-type": "version_of_record",
+      "source-url": "https://aclanthology.org/2026.lrec-1.217/",
+      "is-preferred-version": true,
+      "boundary": "The preparing agent read the complete hash-bound ACL proceedings Markdown representation and checked the quoted passages. No separate scholarly review has occurred."
+    }
+  },
+  {
+    "record_id": "STQU6H42",
+    "knowledge_document": "research-vault/20_distillates/publications/persona-motivated-reasoning.md",
+    "source": {
+      "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/4dbe6aa9dfa229e88746.md",
+      "sha256": "sha256:6ebe509cb9eb59315760f1de2ad87b7b1b17ddc641640782c15895073dd7740f",
+      "version-id": "version:0606f0c5-0aa6-5cae-b273-2b8619630c6f",
+      "version-type": "version_of_record",
+      "source-url": "https://aclanthology.org/2026.findings-acl.585/",
+      "is-preferred-version": true,
+      "boundary": "The preparing agent read the complete hash-bound ACL proceedings Markdown representation and checked the quoted passages. No separate scholarly review has occurred."
+    }
+  },
+  {
+    "record_id": "QRK7C3JK",
+    "knowledge_document": "research-vault/20_distillates/publications/qrk7c3jk-critical-digital-literacy-social-work-ai.md",
+    "source": {
+      "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/3cb613d559a8c57c13c1.md",
+      "sha256": "sha256:93ff941db75f745dc31191edecf3339916094c0bdf8c98f5bf57f704660fe979",
+      "version-id": "version:c2db337e-61b4-5717-bfb5-56cd6de7d117",
+      "version-type": "version_of_record",
+      "source-url": "https://doi.org/10.1080/02615479.2026.2660786",
+      "is-preferred-version": true,
+      "boundary": "The preparing agent read the complete hash-bound Markdown representation and inspected publication pages 12 and 13 in the hash-verified publisher PDF. The visual-QC record is corpus/source-acquisition/QRK7C3JK-visual-qc/visual-qc.json. No separate scholarly review has occurred."
+    }
+  },
+  {
+    "record_id": "QUV5DQH3",
+    "knowledge_document": "research-vault/20_distillates/publications/quv5dqh3-gender-equity-algorithms.md",
+    "source": {
+      "path": "generated/markdown_clean/QUV5DQH3.md",
+      "sha256": "sha256:e5f3106b938f608704fa0809264ce0914030730aec95910259145ff71c6c0293",
+      "version-id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
+      "version-type": "version_of_record",
+      "is-preferred-version": true,
+      "boundary": "The preparing agent read the complete hash-bound official HTML representation. The local capture includes the complete article followed by a repeated teaser and subscription notice. Source identity review does not constitute review of this distillate."
+    }
+  },
+  {
+    "record_id": "R7V99ERA",
+    "knowledge_document": "research-vault/20_distillates/publications/r7v99era-racial-bias-nlp-child-protective-services.md",
+    "source": {
+      "path": "generated/markdown/R7V99ERA.md",
+      "sha256": "sha256:9555c30e0bac19f16810d62e566a4a7d6dd51c0e3e40b05b4a82d13fd69dd674",
+      "version-id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
+      "version-type": "unknown",
+      "is-preferred-version": true,
+      "boundary": "The preparing agent read the complete hash-bound proceedings conversion, including appendices and linearised tables. Figures were available only as captions or image placeholders and were not independently inspected. Source identity review does not constitute review of this distillate."
+    }
+  },
+  {
+    "record_id": "RAY6G2R7",
+    "knowledge_document": "research-vault/20_distillates/publications/ray6g2r7-swiftsage-generative-agent.md",
+    "source": {
+      "path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-v2-text.md",
+      "sha256": "sha256:fd64251d9eed80eca0689fe3bad5e8ea15465746be71af1e38d7f8c9bdb553d1",
+      "version-id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+      "version-type": "preprint",
+      "source-url": "https://arxiv.org/abs/2305.17390v2",
+      "is-preferred-version": true,
+      "boundary": "The preparing agent read the complete local arXiv v2 text representation and checked the quoted passages. Equations and tables were available as linearised text, while source images were not independently inspected. No separate AI source review or domain-expert verification has occurred."
+    }
+  },
+  {
+    "record_id": "RH8MC67Z",
+    "knowledge_document": "research-vault/20_distillates/publications/rh8mc67z-gpt5-sociodemographic-bias.md",
+    "source": {
+      "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/1e429407d9b091311a65.md",
+      "sha256": "sha256:b3d2bf83c7c3404322c30d5e811e27ac80fb7ccfb560fd348e92f9fdd5efdd77",
+      "version-id": "version:16b6e46e-829c-5531-b8cd-967ddca17abe",
+      "version-type": "version_of_record",
+      "is-preferred-version": true,
+      "boundary": "The preparing agent read the complete hash-bound local text. Linearised tables were available; figures were not independently inspected. Source identity review does not constitute review of this distillate."
+    }
+  },
+  {
+    "record_id": "88CFIG8R",
+    "knowledge_document": "research-vault/20_distillates/publications/social-work-students-ai-readiness.md",
+    "source": {
+      "path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/4875ad9321dfcfc0aa52.md",
+      "sha256": "sha256:62cec11670505fe2b2cea73052cd5d8b0a48cddc4e5a5ccab46cd0ace12005e5",
+      "version-id": "version:834d178c-fc76-51f3-bddf-b86e25436742",
+      "version-type": "version_of_record",
+      "source-url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2631708",
+      "is-preferred-version": true,
+      "boundary": "The preparing agent read the complete hash-bound Markdown source representation and checked the quoted passages. No separate AI source review or domain-expert verification has occurred."
+    }
+  },
+  {
+    "record_id": "VSZM7CT6",
+    "knowledge_document": "research-vault/20_distillates/publications/vszm7ct6-ai-social-work-education.md",
+    "source": {
+      "path": "generated/markdown_clean/VSZM7CT6.md",
+      "sha256": "sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990",
+      "version-id": "version:458a63b0-a6ad-5596-95e6-8555b75eb1ec",
+      "version-type": "accepted_manuscript",
+      "source-url": "https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download",
+      "is-preferred-version": false,
+      "boundary": "The preparing agent read the complete local Accepted Manuscript representation and checked the quoted passages. No separate AI source review or domain-expert verification has occurred."
+    }
+  },
+  {
+    "record_id": "ZH6T88D5",
+    "knowledge_document": "research-vault/20_distillates/publications/zh6t88d5-visual-disinformation-digital-equity.md",
+    "source": {
+      "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/c38bdbce0e8dbb82ce3f.md",
+      "sha256": "sha256:acb13f04478c9fcac19655f74e7d43f8539ffb6b7fcb68473f7f86dfa58405b0",
+      "version-id": "version:24a21eca-b319-5127-9194-4b0f14c3410e",
+      "version-type": "version_of_record",
+      "is-preferred-version": true,
+      "boundary": "The preparing agent read the complete hash-bound local text. Linearised tables were available; figures were not independently inspected. Source identity review does not constitute review of this distillate."
+    }
+  }
+]

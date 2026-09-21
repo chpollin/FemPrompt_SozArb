@@ -7,17 +7,19 @@ work-id: work:4842d83e-8ed6-5633-b241-febb6e9c710f
 version-id: version:289ac267-2c86-54d2-a7ea-80ab49a289f3
 version-type: unknown
 topics:
-  - "[[Reproducible LLM inference]]"
-status: preparation
+- '[[Reproducible LLM inference]]'
+status: ai-agent-reviewed
 checked:
   quote: 2026-09-21
+  validation: '2026-09-21'
+  ai-agent-review: '2026-09-21'
 created: 2026-09-21
-updated: 2026-09-21
+updated: '2026-09-21'
 prepared-by:
   agent-id: /root/knowledge_documents
   model: gpt-5.6-sol
   prepared-at: 2026-09-21
-  artifact-review-status: unreviewed
+  artifact-review-status: ai-agent-reviewed
 source-representation:
   path: generated/markdown_clean/FTJM5R8N.md
   sha256: sha256:06cb8ae6cbf58054af2449750c5eb0512a425262cd1e77be1ff27a2fbc102fd8
@@ -26,6 +28,9 @@ source-representation:
   source-url: https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference/
   is-preferred-version: true
   boundary: The preparing agent read the complete hash-bound official article projection and checked the quoted passages. Bibliographic identity follows the BibTeX supplied in the article body. The registered source version type remains unknown. No separate scholarly review has occurred.
+source-review:
+  path: corpus/knowledge-reviews/2026-09-21/978AV9KZ-authority.json
+  sha256: sha256:8fa8d14cab81c76b6df46dcd7d2db274d3ba963c1e54a8daed0f86f041647014
 ---
 
 # Distillate: Reproducible large language model inference through batch-invariant kernels
@@ -72,4 +77,4 @@ The registered bibliographic version type is `unknown` and remains so here. The 
 
 ## Review boundary
 
-This preparation was produced from the complete hash-bound local source. Quotations were checked. Its `preparation` status is unreviewed and grants no scholarly-review authority.
+This document was prepared from the source representation identified in its metadata. The current review state and its supporting receipt are recorded in the frontmatter. AI review does not establish domain-expert verification or publication approval.

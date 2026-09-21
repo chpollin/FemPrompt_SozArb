@@ -1,0 +1,118 @@
+{
+  "schema": "femprompt-oa-acquisition-run/0.1",
+  "created_at": "2026-09-21T18:22:00+00:00",
+  "records": [
+    {
+      "record_id": "JRG3B3LE",
+      "requested_url": "https://arxiv.org/pdf/2406.05602v1",
+      "resolved_url": "https://arxiv.org/pdf/2406.05602v1",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "bytes": 19139104,
+      "valid_pdf": true,
+      "error": null,
+      "pdf_path": "generated/pdfs/completion-20260921/oa-batch/JRG3B3LE.pdf",
+      "sha256": "57eb268459d8a70d410ea1ef1b1cc3d225675816619f31376862b85e44b41867"
+    },
+    {
+      "record_id": "Z9DNTBFF",
+      "requested_url": "https://aclanthology.org/2022.gebnlp-1.10.pdf",
+      "resolved_url": "https://aclanthology.org/2022.gebnlp-1.10.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "bytes": 14591258,
+      "valid_pdf": true,
+      "error": null,
+      "pdf_path": "generated/pdfs/completion-20260921/oa-batch/Z9DNTBFF.pdf",
+      "sha256": "cc714d9d7f9ecdcbc39667b9a2cc6b9a23096f4f30896db54d8a63c9f765236e"
+    },
+    {
+      "record_id": "V8SBEH4E",
+      "requested_url": "https://www.atlantis-press.com/article/126022241.pdf",
+      "resolved_url": "https://www.atlantis-press.com/article/126022241.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf;charset=utf-8",
+      "bytes": 629521,
+      "valid_pdf": true,
+      "error": null,
+      "pdf_path": "generated/pdfs/completion-20260921/oa-batch/V8SBEH4E.pdf",
+      "sha256": "8d49f4a714cca406922aade14fa44dbbfca6b35035826f7bfe99cd00e59b31c3"
+    },
+    {
+      "record_id": "9ZKZQM63",
+      "requested_url": "https://arxiv.org/pdf/2406.12033v2",
+      "resolved_url": "https://arxiv.org/pdf/2406.12033v2",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "bytes": 489460,
+      "valid_pdf": true,
+      "error": null,
+      "pdf_path": "generated/pdfs/completion-20260921/oa-batch/9ZKZQM63.pdf",
+      "sha256": "9f6440e8d8a449814c181ef16bc5e1d42ea1cc9b93c5fbbdbbfd008813677e31"
+    },
+    {
+      "record_id": "J4K3XA52",
+      "requested_url": "https://link.springer.com/content/pdf/10.1186/s12911-025-03118-0.pdf",
+      "resolved_url": "https://link.springer.com/content/pdf/10.1186/s12911-025-03118-0.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "bytes": 2206444,
+      "valid_pdf": true,
+      "error": null,
+      "pdf_path": "generated/pdfs/completion-20260921/oa-batch/J4K3XA52.pdf",
+      "sha256": "ed1fce4e7bfae9a79230ded8be149df1552b39f4807c176b463a4e0a38c92c1a"
+    },
+    {
+      "record_id": "KI9GRGHB",
+      "requested_url": "https://www.tandfonline.com/doi/pdf/10.1080/0960085X.2021.1934130",
+      "resolved_url": "https://www.tandfonline.com/doi/pdf/10.1080/0960085X.2021.1934130",
+      "http_status": 403,
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 5691,
+      "valid_pdf": false,
+      "error": null
+    },
+    {
+      "record_id": "LR8Z3YHP",
+      "requested_url": "https://www.tandfonline.com/doi/pdf/10.1080/03085147.2020.1733842",
+      "resolved_url": "https://www.tandfonline.com/doi/pdf/10.1080/03085147.2020.1733842",
+      "http_status": 403,
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 5691,
+      "valid_pdf": false,
+      "error": null
+    },
+    {
+      "record_id": "ZQHP5G35",
+      "requested_url": "https://www.tandfonline.com/doi/pdf/10.1080/1369118X.2021.1934069",
+      "resolved_url": "https://www.tandfonline.com/doi/pdf/10.1080/1369118X.2021.1934069",
+      "http_status": 403,
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 5691,
+      "valid_pdf": false,
+      "error": null
+    },
+    {
+      "record_id": "5T55I5Z7",
+      "requested_url": "https://unesdoc.unesco.org/in/rest/annotationSVC/DownloadWatermarkedAttachment/attach_import_ab07646d-c784-4a4e-96a1-3be7855b6f76?_=374174eng.pdf&to=54&from=1",
+      "resolved_url": "https://unesdoc.unesco.org/in/rest/annotationSVC/DownloadWatermarkedAttachment/attach_import_ab07646d-c784-4a4e-96a1-3be7855b6f76?_=374174eng.pdf&to=54&from=1",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "bytes": 2029119,
+      "valid_pdf": true,
+      "error": null,
+      "pdf_path": "generated/pdfs/completion-20260921/oa-batch/5T55I5Z7.pdf",
+      "sha256": "bc599ff023beaa3defb6819dab8fc386b3baee1b2108120e784a0adc7bd41029"
+    },
+    {
+      "record_id": "SIHIUMFZ",
+      "requested_url": "https://www.journals.uchicago.edu/doi/pdf/10.1086/735590",
+      "resolved_url": "https://www.journals.uchicago.edu/doi/pdf/10.1086/735590",
+      "http_status": 403,
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 5652,
+      "valid_pdf": false,
+      "error": null
+    }
+  ]
+}

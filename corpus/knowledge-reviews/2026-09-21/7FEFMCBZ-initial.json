@@ -1,0 +1,46 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "7FEFMCBZ",
+  "knowledge_document": "research-vault/20_distillates/publications/7fefmcbz-child-welfare-worker-algorithm-disparities.md",
+  "knowledge_document_sha256": "sha256:c8870fc8941d52c302d0368b002d7ad24d352b57d396e759770b411e79543f95",
+  "source_path": "generated/markdown/7FEFMCBZ.md",
+  "source_sha256": "sha256:f3b71cdb2bd086d8249f95159d51482d091a3b9cdfe7c9587162b5d3c044e36d",
+  "reviewed_at": "2026-09-21T18:15:52.297973Z",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Independent source-bound review of identity, research question, method, findings, limitations, quotations and category relevance. This receipt grants no human verification or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Method and scope",
+      "finding": "The pre/post referral counts, counterfactual score threshold, participant roles and mixed-method design agree with the source."
+    },
+    {
+      "severity": "note",
+      "location": "Core statements; Limitations",
+      "finding": "The 20% versus 9% disparity finding and the caution against causal attribution are accurately bounded. Both quotations resolve exactly; the uninspected-figures boundary is retained."
+    }
+  ],
+  "validated_subject": {
+    "validated_at": "2026-09-21T18:27:37.802347+00:00",
+    "validator": "/root integration; document and source hashes plus literal quotation checks",
+    "body_sha256": "sha256:4b1ae4453efc99823377241b39618fd86bb7751880f3fb1b647de76e93e6b488",
+    "source_metadata": {
+      "record-id": "7FEFMCBZ",
+      "work-id": "work:fdf4e7e1-80c8-56bd-9e16-9031a45ff712",
+      "version-id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
+      "version-type": "unknown",
+      "source-representation": {
+        "path": "generated/markdown/7FEFMCBZ.md",
+        "sha256": "sha256:f3b71cdb2bd086d8249f95159d51482d091a3b9cdfe7c9587162b5d3c044e36d",
+        "version-id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
+        "version-type": "unknown",
+        "is-preferred-version": true,
+        "boundary": "The preparing agent read the complete hash-bound proceedings conversion, including appendices and linearised tables. Figures were available only as captions or image placeholders and were not independently inspected. Source identity review does not constitute review of this distillate."
+      }
+    }
+  }
+}

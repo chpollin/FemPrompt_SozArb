@@ -1,0 +1,27 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "AZJW38MF",
+  "knowledge_document": "research-vault/20_distillates/publications/azjw38mf-socio-technical-ethics-work.md",
+  "knowledge_document_sha256": "sha256:99ea7047a201d1b9041feb63c4445865bbb5d1d75fe16752ce8c1a0319d90ae3",
+  "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/e9be7a01361ab7bae7bb.md",
+  "source_sha256": "sha256:322a7c9026f85204f9a15ffac69723e8eb12cc125df25276e77aa01e0e062148",
+  "reviewed_at": "2026-09-21T19:08:00Z",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Independent source-bound review of identity, research question, method, findings, limitations, quotations and category relevance. This receipt grants no human verification or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Core statements; Method and scope; Limitations",
+      "finding": "The organisational ethnography, AICA child-counselling case, participant roles and four analytical axes agree with the source. The quoted method phrase resolves exactly."
+    },
+    {
+      "severity": "note",
+      "location": "Assessment relevance",
+      "finding": "AI_Literacies is supported by the explicit technological-awareness and critical-reflection argument. KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit and Fairness are bounded to the socio-technical ethics case."
+    }
+  ]
+}

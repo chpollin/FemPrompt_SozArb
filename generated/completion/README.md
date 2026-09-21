@@ -1,6 +1,6 @@
 # Completion package
 
-Source fingerprint: `sha256:12968be6c0d225dfc0f1d3ee27349da2e51111d50d97a6046fd9091da5a8f704`. Deterministic internal preparation; no approval is created.
+Source fingerprint: `sha256:0c8485cdd6a830be445d3e5064c55bba32847de99aa0cf8ee0e5983578242975`. Deterministic internal preparation; no approval is created.
 
 Scope: existing corpus plus all already identified 2026 candidates (search cutoff 2026-08-24) and the separate targeted gap-fill intake from 2026-09-05. Candidate membership does not imply inclusion. New search should address a concrete evidence gap with excellent sources.
 
@@ -11,12 +11,12 @@ Scope: existing corpus plus all already identified 2026 candidates (search cutof
 | All registry works, including pending candidates | 362 |
 | Works with recorded human annotations | 238 |
 | Works with recorded AI-review records | 31 |
-| Works with decision or coding conflicts | 3 |
+| Works with decision or coding conflicts | 4 |
 | Works with an unresolved negative AI source review | 1 |
 | Records using an accepted immutable AI correction | 9 |
 | Historical human records missing canonical identity binding | 1 |
 | Historical human records reconciled to existing Works | 0 |
-| Works under a confirmed integrity hold | 1 |
+| Works under a confirmed integrity hold | 2 |
 | Source acquisition/screening queue | 101 |
 | Queued Works with newly acquired text still requiring exact binding and source QC | 0 |
 | 2026 candidates | 58 |
@@ -32,11 +32,11 @@ Scope: existing corpus plus all already identified 2026 candidates (search cutof
 
 | Availability measure (not verification) | Count |
 |---|---:|
-| Canonical records linked to an existing Knowledge Document | 257 / 463 |
-| Distinct linked Knowledge Documents | 192 |
-| Work IDs with a linked Knowledge Document | 190 / 361 |
-| Work IDs without a linked Knowledge Document | 171 |
-| Broken document links | 1 |
+| Canonical records linked to an existing Knowledge Document | 269 / 463 |
+| Distinct linked Knowledge Documents | 199 |
+| Work IDs with a linked Knowledge Document | 197 / 361 |
+| Work IDs without a linked Knowledge Document | 164 |
+| Broken document links | 0 |
 | Documents shared across multiple Work IDs (identity-review candidates) | 3 |
 | Canonical records mapped in the exploratory concept graph | 208 |
 | Graph keys without canonical record binding | 12 |

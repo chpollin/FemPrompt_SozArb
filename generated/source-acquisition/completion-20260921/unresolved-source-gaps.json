@@ -1,0 +1,2327 @@
+{
+  "schema": "femprompt-unresolved-source-gaps/0.1",
+  "created_at": "2026-09-21T18:20:59.2058235+00:00",
+  "authority": "Observed residual source gaps only. Missing access remains incomplete preparation and no source identity or scholarly authority is inferred.",
+  "records": [
+    {
+      "record_id": "KI9GRGHB",
+      "title": "Theorising algorithmic justice",
+      "work_id": "work:a6e813e5-57e0-555c-92f9-1155ffc79f42",
+      "version_id": "version:e3428c27-954b-565a-9d89-d546870301b3",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "https://doi.org/10.1080/0960085X.2021.1934130"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "AMYZFAPH",
+      "title": "Recommendations for social work researchers and journal editors on the use of generative AI and large language models",
+      "work_id": "work:e1ca8a4c-5cc2-5e35-b3cc-375950a07405",
+      "version_id": "version:0e874262-87ce-5928-962b-758a55a98646",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "https://doi.org/10.1086/726021"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "LR8Z3YHP",
+      "title": "'Meaningless work': How the datafication of health reconfigures knowledge about work and erodes professional judgement",
+      "work_id": "work:62cbd3ab-96ea-50e4-b877-2f65571a8f83",
+      "version_id": "version:d523f07b-3eed-5bf9-9073-62ffb923d65b",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "https://doi.org/10.1080/03085147.2020.1733842"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "ZQHP5G35",
+      "title": "Data and rights in the digital welfare state: the case of Denmark",
+      "work_id": "work:5d44ca3d-827b-5f4e-a4f1-1ee40ec55c18",
+      "version_id": "version:d25aa754-f559-54ef-bd2f-4f8d0bec38a5",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "https://doi.org/10.1080/1369118X.2021.1934069"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "ZITLBM8A",
+      "title": "ChatGPT for social work science: Ethical challenges and opportunities",
+      "work_id": "work:c54f89d4-e79b-5fd8-9426-6b51b36669e2",
+      "version_id": "version:c9a7b396-f86c-50ed-8808-6dc5c513627b",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "https://doi.org/10.1086/726042"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "QI5AYE4V",
+      "title": "Algorithmic decision-making in social work practice and pedagogy: Confronting the competency/critique dilemma",
+      "work_id": "work:5f49f95b-dcfe-5778-8376-a313cb039d4d",
+      "version_id": "version:2e650cfc-0147-5778-ab55-ed2e17a4f86b",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "https://www.tandfonline.com/doi/full/10.1080/02615479.2023.2195425"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "44AA6ETH",
+      "title": "Das verflixte Problem mit Klassifikationen: Zum Einfluss der Digitalisierung auf die Soziale Diagnostik in der Sozialen Arbeit",
+      "work_id": "work:4f5b1e4d-e7b1-55a5-91ad-e582dd7039cb",
+      "version_id": "version:875b8253-994d-5663-b156-95a45fd01056",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": "title_mismatch",
+      "abstract_quality": "usable",
+      "recorded_urls": [],
+      "acquisition_report": {
+        "filename": "Schneider_2024_Das_verflixte_Problem_mit_Klassifikationen_Zum.pdf",
+        "downloaded": false,
+        "error": null
+      },
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "D4FY2S3R",
+      "title": "Künstliche Intelligenz in der Sozialen Arbeit – Zwischen Bedenken und Optionen",
+      "work_id": "work:ab633e4f-8784-5097-a181-0363f5fb59d6",
+      "version_id": "version:832e01be-777e-5d22-87a9-036e1a55b6e8",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "https://www.beltz.de/fachmedien/sozialpaedagogik_soziale_arbeit/zeitschriften/theorie_und_praxis_der_sozialen_arbeit/artikel/53521-kuenstliche-intelligenz-in-der-sozialen-arbeit-zwischen-bedenken-und-optionen.html"
+      ],
+      "acquisition_report": {
+        "filename": "Gravelmann_2024_Künstliche_Intelligenz_in_der_Sozialen_Arbeit_–.pdf",
+        "downloaded": false,
+        "error": null
+      },
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "HZKE8T8I",
+      "title": "Künstliche Intelligenz in der Sozialen Arbeit – Zwischen Bedenken und Optionen",
+      "work_id": "work:ab633e4f-8784-5097-a181-0363f5fb59d6",
+      "version_id": "version:60b794df-a554-5730-9078-6101f64e1af8",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "https://content-select.com/de/portal/media/view/66472512-3a7c-4fef-b8e6-a5d3ac1b0002"
+      ],
+      "acquisition_report": {
+        "filename": "Gravelmann_2024_Künstliche_Intelligenz_in_der_Sozialen_Arbeit_–.pdf",
+        "downloaded": false,
+        "error": null
+      },
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "FTJM5R8N",
+      "title": "Defeating Nondeterminism in LLM Inference",
+      "work_id": "work:4842d83e-8ed6-5633-b241-febb6e9c710f",
+      "version_id": "version:0cf091a3-19ee-58b4-82db-a6ce24d7bcae",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": "title_mismatch",
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "EJEFPZGA",
+      "title": "Navigating the Nexus of Trust: Prompt Engineering, Professional Judgment, and the Integration of Large Language Models in Social Work",
+      "work_id": "work:711ab6fc-5732-5611-8e0b-8475906a9cd1",
+      "version_id": "version:e1469ba1-67db-55a3-8ab5-acabce3cd90a",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "usable",
+      "recorded_urls": [],
+      "acquisition_report": {
+        "filename": "[Author not specified]_2025_Navigating_the_Nexus_of_Trust_Prompt_Engineering,.pdf",
+        "downloaded": false,
+        "error": null
+      },
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "XG7RFFC7",
+      "title": "Occupational employment statistics",
+      "work_id": "work:e3fcbaca-43ce-552e-85d8-0c743c12fee2",
+      "version_id": "version:ee62fefd-c381-5494-87e4-6accdce35fbe",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://www.bls.gov/oes"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "JRG3B3LE",
+      "title": "Homoglyph unlearning: A novel approach to bias mitigation",
+      "work_id": "work:6ba2b0bf-e408-5136-851a-bda85bc5439d",
+      "version_id": "version:77973a34-baba-5574-8502-e62a0c3393ca",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://arxiv.org/html/2406.05602v1"
+      ],
+      "acquisition_report": {
+        "filename": "Struppek_2024_Homoglyph_unlearning_A_novel_approach_to_bias.pdf",
+        "downloaded": false,
+        "error": "\nCode: 404\nURL: https://api.zotero.org/groups/6080294/items/VWMPP255/file?locale=en-US\nMethod: GET\nResponse: Not found"
+      },
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "Z9DNTBFF",
+      "title": "Worst of Both Worlds: Biases Compound in Pre-trained Vision-and-Language Models",
+      "work_id": "work:ec94cf1c-87bf-5f4d-a840-9dd3b92eefab",
+      "version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://aclanthology.org/2022.gebnlp-1.10"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "W8DFWR9L",
+      "title": "Mitigating age-related bias in large language models: Strategies for responsible artificial intelligence development",
+      "work_id": "work:0e595be5-eb17-5bbf-917f-20a5404bbf8a",
+      "version_id": "version:fc29fddc-76bb-5212-80b4-e6ea2697696c",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://pubsonline.informs.org/doi/10.1287/ijoc.2024.0645"
+      ],
+      "acquisition_report": {
+        "filename": "Shin_2025_Mitigating_age-related_bias_in_large_language.pdf",
+        "downloaded": false,
+        "error": null
+      },
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "GCN42PAM",
+      "title": "Mitigating age-related bias in large language models: Strategies for responsible artificial intelligence development",
+      "work_id": "work:c38f96d8-de83-5faf-8eeb-3dd02eb32a14",
+      "version_id": "version:f8afe9ad-faaa-5597-b7a0-1c7353eb93c5",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://pubsonline.informs.org/doi/10.1287/ijoc.2024.0645"
+      ],
+      "acquisition_report": {
+        "filename": "Birru_2024_Mitigating_age-related_bias_in_large_language.pdf",
+        "downloaded": false,
+        "error": null
+      },
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "QUU8QDPQ",
+      "title": "Keynote Summary: The New Jim Code: Reimagining the Default Settings of Technology & Society",
+      "work_id": "work:69c47ce6-4bda-5846-9aa8-e4226fad9587",
+      "version_id": "version:730a3006-8436-523b-8b58-b3e70b7f7ac0",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "https://dl.acm.org/doi/10.1145/3589139"
+      ],
+      "acquisition_report": {
+        "filename": "Benjamin_2023_Keynote_Summary_The_New_Jim_Code_Reimagining_the.pdf",
+        "downloaded": false,
+        "error": null
+      },
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "U75LP6SV",
+      "title": "The Algorithmic Auditing Landscape: A Social Justice Approach",
+      "work_id": "work:b255cd2c-e040-5560-a555-13897c2af0bf",
+      "version_id": "version:3d44a186-3977-510e-b50e-57499b11d68a",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "https://dl.acm.org/doi/10.1145/3630659.3630671"
+      ],
+      "acquisition_report": {
+        "filename": "Raji_2024_The_Algorithmic_Auditing_Landscape_A_Social.pdf",
+        "downloaded": false,
+        "error": null
+      },
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "C485NKYA",
+      "title": "AI Countergovernance: Lessons Learned from Canada and Paris",
+      "work_id": "work:9d6ff213-173c-5c1b-9430-887641bd4654",
+      "version_id": "version:41f297df-6f78-5562-bf80-22caf3791c53",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": "title_mismatch",
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "https://techpolicy.press/ai-countergovernance-lessons-learned-from-canada-and-paris"
+      ],
+      "acquisition_report": {
+        "filename": "Attard-Frost_2025_AI_Countergovernance_Lessons_Learned_from_Canada.pdf",
+        "downloaded": false,
+        "error": null
+      },
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "SWB86AYC",
+      "title": "Generative AI and the Future of Digital Literacy: Opportunities for Gender Inclusion",
+      "work_id": "work:42a27e1c-f75f-5191-ba3a-08568aed07eb",
+      "version_id": "version:9fb6924b-3e08-50fa-a92e-9bfe341f0da3",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "usable",
+      "recorded_urls": [],
+      "acquisition_report": {
+        "filename": "Hartshorne_2025_Generative_AI_and_the_Future_of_Digital_Literacy.pdf",
+        "downloaded": false,
+        "error": null
+      },
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "5T55I5Z7",
+      "title": "ARTIFICIAL INTELLIGENCE and GENDER EQUALITY",
+      "work_id": "work:b440aa78-e9c1-5b93-8d4d-2200924a02cd",
+      "version_id": "version:09999996-2035-5d96-8058-aa9bb3c2b668",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "unesdoc.unesco.org/in/rest/annotationSVC/DownloadWatermarkedAttachment/attach_import_ab07646d-c784-4a4e-96a1-3be7855b6f76?_=374174eng.pdf&to=54&from=1"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "4KMMPA6A",
+      "title": "Faires KIPrompting – Ein Leitfaden für Unternehmen. BSP Business and Law School – Hochschule für Management und Recht",
+      "work_id": "work:ce611f7b-8bda-5e6a-9ca9-3b46a8027694",
+      "version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": "title_mismatch",
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "https://www.businessschool-berlin.de/files/Business-School-Berlin/Publikation/Faires-KI-Prompting-Ein-Leitfaden-fuer-Unternehmen%202024.pdf"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "2RK458W2",
+      "title": "Prompting Techniques for Reducing Social Bias in LLMs through System 1 and System 2 Cognitive Processes",
+      "work_id": "work:0047ae4b-70f2-53bc-ae76-87aa24cec7ac",
+      "version_id": "version:8f30cc62-ffe6-5001-8f4d-759391b0878d",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": "title_mismatch",
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://aclanthology.org/2025.ranlp-1.60"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "V8SBEH4E",
+      "title": "Algorithm beyond Neutrality: Feminist Approaches to Redefining Artificial Intelligence",
+      "work_id": "work:ce1b3961-e4e4-5bd2-a6a8-b97ef7fbc90f",
+      "version_id": "version:2c5cc7f8-4580-5ff0-b423-f45df473a82c",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "https://www.atlantis-press.com/article/126022241.pdf",
+        "https://www.atlantis-press.com/proceedings/aihle-25/126022241",
+        "https://doi.org/10.2991/978-94-6239-618-0_20"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "9ZKZQM63",
+      "title": "Unveiling and Mitigating Bias in Mental Health Analysis with Large Language Models",
+      "work_id": "work:5aaa355e-8f65-5850-a132-43fa3458195e",
+      "version_id": "version:c517e367-0d9c-5d26-ad49-db0c2aa52ec1",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://arxiv.org/abs/2406.12033v2"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "SIHIUMFZ",
+      "title": "Artificial Intelligence and Cultural Context: An Empirical Investigation of Large Language Models’ Performance on Chinese Social Work Professional Standards",
+      "work_id": "work:5214816c-608d-55ba-98f3-2a3a3357b7ac",
+      "version_id": "version:30542a01-3d46-56f4-b146-0759591eb3ce",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://www.journals.uchicago.edu/doi/abs/10.1086/735590"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "J4K3XA52",
+      "title": "Evaluating gender bias in large language models in long-term care",
+      "work_id": "work:73eda891-2e28-587a-a7fb-a950323a0dad",
+      "version_id": "version:38ec2a2e-9a8f-5837-bd7d-7efad6f0f743",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://link.springer.com/article/10.1186/s12911-025-03118-0"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "JD5JZ3KR",
+      "title": "Mitigating Anchoring Bias When Using AI in Social Work Research: Responsible Conduct of AI-Assisted Research",
+      "work_id": "work:cfe60968-caff-5fda-a10e-f204b31115c9",
+      "version_id": "version:30132234-87e5-5656-8dd8-64f9e1ecf211",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://jswve.org/volume-22/issue-1/item-06"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "IPH8G42U",
+      "title": "Paying the Cognitive Debt: An Experiential Learning Framework for Integrating AI in Social Work Education",
+      "work_id": "work:4ffc2ade-42d9-52a0-ab34-275b1555e19d",
+      "version_id": "version:480e112e-281c-51f3-a413-690ad078b651",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://www.mdpi.com/2227-7102/15/10/1304"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "UWQGNPSE",
+      "title": "Rethinking Prompt-based Debiasing in Large Language Model",
+      "work_id": "work:b86204c8-abca-51c2-a398-a9a78c8aba08",
+      "version_id": "version:d99b5b23-2a00-5a6d-b237-405a40788716",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://aclanthology.org/2025.findings-acl.1361"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "DENAHEUW",
+      "title": "Designing a framework for ethnography-driven prompt engineering in social work",
+      "work_id": "work:e769d36a-8e1e-5b9b-9e22-301723be1c24",
+      "version_id": "version:7536e6e4-ca23-5f63-b0f7-4ee6be9147c6",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://www.ht.csr-pub.eu/index.php/ht/article/view/460"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "63UVG3ZU",
+      "title": "Making Accurate Judgements in Child Welfare: Comparing ChatGPT With Qualified Social Workers",
+      "work_id": "work:3120ff22-ca6c-526b-8107-98006fcd39e4",
+      "version_id": "version:57834fb2-0641-5369-9d41-ccb6d87ae888",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://orca.cardiff.ac.uk/id/eprint/178748"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "7GB5U4HK",
+      "title": "Can a Large Language Model Judge a Child’s Statement?: A Comparative Analysis of ChatGPT and Human Experts in Credibility Assessment",
+      "work_id": "work:7932a8e0-53aa-5105-9d0a-86603d8aff25",
+      "version_id": "version:f9ae9b0a-3357-5517-ace2-6717db0e941f",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://doi.org/10.1080/26408066.2025.2547211"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "Z6QC4HW9",
+      "title": "Gender Bias in LLM Hiring Decisions: Evidence from a Japanese Context and Evaluation of Mitigation Strategies",
+      "work_id": "work:6b23f3bc-ecce-551d-b7f4-8c1b00fcf117",
+      "version_id": "version:6c3f114f-3fd1-5751-a224-23bf9353cb86",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://arxiv.org/abs/2606.18649"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "BX2UPC4N",
+      "title": "Prompting Fairness: Integrating Causality to Debias Large Language Models",
+      "work_id": "work:04a0acc2-9533-58d5-b53c-7d931f30d34f",
+      "version_id": "version:01823f24-d998-5b14-a34f-63a5598f2d8c",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://proceedings.iclr.cc/paper_files/paper/2025/hash/9f26a2d143a227376dff99a279f93f99-Abstract-Conference.html"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "AITNC2I9",
+      "title": "Toward True Neutrality: Evaluating Inference-Time Debiasing Strategies for Gender Coreference Resolution in LLMs",
+      "work_id": "work:78ab2081-865c-5e19-b831-19fe7c2574d0",
+      "version_id": "version:bc4057d5-713b-5cea-afe4-02a31ca5f6fe",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://aclanthology.org/2025.paclic-1.19"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "UV9AI4X3",
+      "title": "From salad bar feminism to denotative portraiture: How neoliberalism shapes feminism in AI-Generated visuals",
+      "work_id": "work:88f2c72f-f921-556b-9ff3-9bd58eb35e38",
+      "version_id": "version:a9cda7a1-73f0-56ac-9ba0-c2243306ed00",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://www.tandfonline.com/doi/abs/10.1080/14680777.2025.2593317",
+        "https://doi.org/10.1080/14680777.2025.2593317"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "BBSHTIMH",
+      "title": "AI For Whom? Participation, Power and Educational Pathways in the Age of Artificial Intelligence",
+      "work_id": "work:07d0801a-2468-5738-b788-0e265e95976a",
+      "version_id": "version:fa8ae028-3693-5596-9fc9-eaba9ef5ad26",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://onlinelibrary.wiley.com/doi/pdf/10.1111/ejed.70602",
+        "https://onlinelibrary.wiley.com/doi/10.1111/ejed.70602",
+        "https://doi.org/10.1111/ejed.70602"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "NPFRWPAN",
+      "title": "Gender bias in text-to-image generative artificial intelligence: Neglect and stereotypical presentations across three popular platforms",
+      "work_id": "work:38dda3f3-a302-5518-ae71-9d25ce9728c7",
+      "version_id": "version:4e9177dc-2b3f-56bd-9b7b-c8cfa7cb3620",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://journals.sagepub.com/doi/pdf/10.1177/14614448261435197?download=true",
+        "https://journals.sagepub.com/doi/abs/10.1177/14614448261435197",
+        "https://doi.org/10.1177/14614448261435197"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "B347MWKT",
+      "title": "The Politics of Prompt Engineering",
+      "work_id": "work:0414138e-c8db-522b-8e98-94913418d861",
+      "version_id": "version:4d90b6fb-fe66-5801-a9c2-0ee51f58b94f",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://read.dukeupress.edu/critical-ai/article/doi/10.1215/2834703X-12095946/406205/The-Politics-of-Prompt-Engineering",
+        "https://doi.org/10.1215/2834703x-12095946"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "5WNZMJJQ",
+      "title": "Artificial Intelligence and Case-Based Learning in Social Work Education: Pedagogical Considerations and Future Directions",
+      "work_id": "work:2a9dcaf7-01d3-52a7-a0a2-1a9f06dceee5",
+      "version_id": "version:11b76c55-15ea-53e5-b244-1a3cb13350b7",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://doi.org/10.55121/jele.v2i1.1050"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "VIHZB2CS",
+      "title": "Gender Representation in Large Language Models: A Cross-Linguistic and Cross-Model Analysis",
+      "work_id": "work:1bf0286b-2c77-5cc6-9f86-c387c306c504",
+      "version_id": "version:a13783ed-0853-5212-9157-cc55ecc1537b",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://www.aup-online.com/content/journals/10.5117/CCR2026.2.11.URMA"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "RBZGHG5U",
+      "title": "Generative AI and Agentic AI",
+      "work_id": "work:c8ee6229-4d78-51b8-be80-0831d5e650a5",
+      "version_id": "version:d8aaa300-de73-5dc9-ae86-57d882e00c48",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://doi.org/10.4324/9781003755081-5"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "D698593N",
+      "title": "Prompt Engineering for Social Workers",
+      "work_id": "work:8e5f6b11-3ff1-5e33-8123-5193fbea9502",
+      "version_id": "version:3d85c91a-a939-59c0-a336-cc48c8afb02b",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://doi.org/10.4324/9781003755081-10"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "AUM6JXT9",
+      "title": "Social Work Ethics and Generative AI",
+      "work_id": "work:86b69226-9f64-5bc8-a892-6e65d94a16b6",
+      "version_id": "version:9316f494-4768-5b3e-92e3-2f9123d0477b",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://doi.org/10.4324/9781003627920-14"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "Z2RSS6SH",
+      "title": "Intelligence artificielle et travail social, une ressource au service des professionnels ?",
+      "work_id": "work:b3f64b11-e34c-58f2-bbcb-c91add9d5e16",
+      "version_id": "version:d5882086-a22e-5fee-bd1a-c8530a8f3f23",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://doi.org/10.3917/vsoc.052.0029"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "XRQE5VM2",
+      "title": "IA, salud mental y género: Un mapeo sistemático de las ciencias sociales y humanas en América Latina",
+      "work_id": "work:7350cc88-47a1-5497-8c7e-14f2ca8aae6c",
+      "version_id": "version:d3d54d63-7ff2-5b49-9ff0-fbc135706e03",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://ojs.revistacts.net/index.php/CTS/article/view/1259"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "Z599JJFT",
+      "title": "Sesgos de género y modelos de IA generativa: Aproximaciones desde una experiencia de análisis cualitativo desde la generación de imágenes",
+      "work_id": "work:feb70530-663a-5606-8a38-0eb3a39f35fa",
+      "version_id": "version:d73787f7-c991-5112-bfa5-4649aa3e4420",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://ojs.revistacts.net/index.php/CTS/article/view/1258"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "ZXVBZQGS",
+      "title": "No Free Lunch in Language Model Bias Mitigation? Targeted Bias Reduction Can Exacerbate Unmitigated LLM Biases",
+      "work_id": "work:fa2c7082-9f5a-5906-93ad-27af9cc6fc7a",
+      "version_id": "version:acacd002-d68d-50b3-ac25-75d212e56138",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://www.mdpi.com/2673-2688/7/1/24"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "EUTEI9EJ",
+      "title": "Análisis de la desinformación y los sesgos de género generados por la inteligencia artificial",
+      "work_id": "work:bfc73f5a-39eb-5331-bddb-b897f3bbe650",
+      "version_id": "version:0a8a413f-8255-5966-beef-6ab490b8e9a7",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://is.uv.mx/index.php/IS/article/view/3001"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "AJBX2WAW",
+      "title": "Semantic Stability, Response Strategies, and Bias Analysis of Generative Artificial Intelligence in Psychological Health Education",
+      "work_id": "work:a68f9db2-cf06-54f2-b8a9-7beb11e0bc9e",
+      "version_id": "version:312e7ac8-3ec8-5cd4-8e6a-27e7422423f8",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://jps.ecnu.edu.cn/EN/10.16719/j.cnki.1671-6981.20260201"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "ZFRE26IV",
+      "title": "Algorithmic bias in clinical resource allocation by a large language model: a cross-sectional in-silico evaluation of 13,608 decisions",
+      "work_id": "work:fa73d2ef-033a-5e5b-8bc5-f774136b020c",
+      "version_id": "version:5edb0cf7-6a2a-57d3-b219-a7e79204f3e4",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://link.springer.com/article/10.1186/s12910-026-01496-2"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "RZ8ADW94",
+      "title": "Generative AI So White: Racial Biases in AI Imagery Across the United States and China",
+      "work_id": "work:bd56a9b4-b852-5918-88bb-8f6ad888fa6c",
+      "version_id": "version:a09ed976-2c89-5576-b75e-c8bc5fe32913",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://journals.sagepub.com/doi/10.1177/10755470261428542"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "5TDNQD4B",
+      "title": "Bias Bytes: A Study Examining Disability Bias in ChatGPT Job Recommendation",
+      "work_id": "work:6cefc242-e12f-5be0-830d-33952ecad5e7",
+      "version_id": "version:c79c4136-5304-5115-9a43-85569cd84085",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://journals.sagepub.com/doi/10.1177/10522263261449121"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "8MM5BZN8",
+      "title": "The Adoption of Generative AI by Social Workers in Practice: A Scoping Review",
+      "work_id": "work:f4196a02-dca2-57b3-9858-23487b191908",
+      "version_id": "version:ef97d953-1b4f-5269-b8ae-53e8074cdbb7",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://doi.org/10.1177/10497315261469433"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "NQ5ZNGIK",
+      "title": "Mitigating Disability Bias in Hiring: The Role of Inclusion-Focused Generative AI in Complex HR Decisions",
+      "work_id": "work:e2a638bd-caa4-5f73-a532-6f9e7767693e",
+      "version_id": "version:4abdfd4b-d5f2-519b-a4d9-90ded1546b60",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://onlinelibrary.wiley.com/doi/10.1111/1748-8583.70044"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "ZETPJ8EC",
+      "title": "Same Prompt, Different Care? Evaluating Inequities in AI-Generated Mental Health Support for Immigrant Communities",
+      "work_id": "work:42607135-da86-5d16-a8da-32f4625eddcb",
+      "version_id": "version:e7c3c933-7fbc-51fb-ac76-34924cf4ab58",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://doi.org/10.1086/743397"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "T2URTGBE",
+      "title": "Using ChatGPT for Qualitative Social Media Analysis: Insights for Cross-Cultural Social Work",
+      "work_id": "work:da7ca8ae-1095-5199-a51a-b9cce3e8c07c",
+      "version_id": "version:a82bfb0b-58d7-560a-b4d6-ea27ea34bb70",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://doi.org/10.1086/740605"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "XD28QSM7",
+      "title": "Accuracy and Readability of Large Language Models’ Responses to Frequently Asked Questions on Social Assistance",
+      "work_id": "work:5afec464-2212-543d-9b3f-abb12a282783",
+      "version_id": "version:650905c5-093e-5a04-b006-a308cf303d3f",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://doi.org/10.1086/740347"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "65NGEK5Q",
+      "title": "Small Models Achieve Large Language Model Performance: Evaluating Reasoning-Enabled AI for Secure Child Welfare Research",
+      "work_id": "work:aada8ec1-ce81-50d6-90c3-c9b2787d6a5b",
+      "version_id": "version:2986caa0-11f1-53f1-b8dc-d126271b4748",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://doi.org/10.1080/26408066.2026.2616711"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "DGPSXRCB",
+      "title": "Artificial intelligence: a neoliberal tool to better manage social inequalities?",
+      "work_id": "work:a2194871-3b0b-5750-9b17-ddee423cb40a",
+      "version_id": "version:0ae78713-7b93-5a5b-9946-4550af5f3653",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://www.tandfonline.com/doi/full/10.1080/13691457.2025.2607705"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "SV7RABKM",
+      "title": "ChatGPT in Social Work? Insights from MSW Students",
+      "work_id": "work:d3e51cd3-1781-55c6-abc7-80ced266a26e",
+      "version_id": "version:0697bf35-4dab-5567-b75d-af72656580eb",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://doi.org/10.1080/10437797.2025.2594423"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "9AVG53AQ",
+      "title": "AI-Generated Images of Social Workers in Healthcare and Implications for Professional Identity",
+      "work_id": "work:48e00f1e-369a-59d9-8883-f6d8cea1a7bc",
+      "version_id": "version:3cc1ce6f-015b-536d-ba38-17daac2d04db",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://doi.org/10.1080/0312407X.2026.2627220"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "DHKP5FGN",
+      "title": "AI-enhanced ethical decision-making in social work: development and testing of an application-specific language model",
+      "work_id": "work:fb07e9e8-562c-5c51-9aa7-f1faa654c172",
+      "version_id": "version:98b08f9c-56a3-5a66-9734-8abd00bea1fe",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://doi.org/10.1080/02650533.2026.2683352"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "I7BQH4U4",
+      "title": "Promoting AI literacy in social work education: lessons from an interdisciplinary course for social work students",
+      "work_id": "work:68b57d67-221a-5e96-8d7b-153b4b26c91a",
+      "version_id": "version:4963e528-6f09-54ee-bd14-3ecc26cb76ca",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2635471"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "WHGCH3XS",
+      "title": "Innovating social work pedagogy: generative AI for critical competency development in evidence-based practice",
+      "work_id": "work:14ff652e-92a8-5982-bf91-a64c26254d13",
+      "version_id": "version:e26e796c-188a-5f12-8ed2-36f8b960f2bc",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2617512"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "UFTH283E",
+      "title": "Large language models exhibit stigmatizing behaviour in contextual judgements of health conditions",
+      "work_id": "work:be71f040-2a73-5980-8dc4-e7bb83aa4575",
+      "version_id": "version:61b696cc-357e-5b21-a943-02455f394fa7",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://www.nature.com/articles/s44360-026-00164-4"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "KUVUZMDU",
+      "title": "Addressing benchmarking gaps in large language models for health and medicine with dynamic red-teaming",
+      "work_id": "work:f43c0a7f-e499-5be3-8deb-a100f15cafab",
+      "version_id": "version:13610000-bc8f-53c8-a01f-0a9ab5d2c33c",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://www.nature.com/articles/s44360-026-00152-8"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "T7FGTQF4",
+      "title": "Inclusive generative AI and the dynamics of inequality: A capability-resource model of adoption disparities",
+      "work_id": "work:83bb860d-1a78-5961-8b53-d8f0498ad6a8",
+      "version_id": "version:5f6c22bc-8829-55cd-b2d9-96432cb1b62b",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://www.sciencedirect.com/science/article/pii/S0160791X26001910"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "XQCZTTIK",
+      "title": "Integrating diversity, equity, and inclusion in generative AI applications for healthcare education: a scoping review",
+      "work_id": "work:c7e78e57-eccc-510a-810a-491bf50ecb85",
+      "version_id": "version:d2459533-5048-50ca-ada3-6f9649c4897a",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://www.sciencedirect.com/science/article/pii/S1386505626003229"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "EWPPFD7U",
+      "title": "Can AI reduce gender bias? The case of AI-generated audio conversations in Google's NotebookLM",
+      "work_id": "work:f66a5701-d3b8-5c56-91b4-3dfb9ab82387",
+      "version_id": "version:c2dcd2d3-9339-5bc3-aa6d-9a606950cbac",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://doi.org/10.1016/j.chbr.2026.101246"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "SK6VDF5B",
+      "title": "Existing and future use cases, and safety and ethical considerations for AI in body image, and eating disorder prevention",
+      "work_id": "work:8b252014-a5d5-5f43-b84b-421872669f02",
+      "version_id": "version:e3d34567-d5d5-5b21-a2e1-04477d965774",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://uwe-repository.worktribe.com/output/15715301/existing-and-future-use-cases-and-safety-and-ethical-considerations-for-ai-in-body-image-and-eating-disorder-prevention"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "2JSZR47F",
+      "title": "An ethical framework for assessing artificial intelligence as augmentation or automation in social work",
+      "work_id": "work:b5b557a0-a651-5a88-b70c-1b05374e5b06",
+      "version_id": "version:b1e947e9-1a11-575d-8316-457534f59271",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://doi.org/10.1007/s44155-026-00463-x"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "KJWMQSMN",
+      "title": "Toward substantive intersectional algorithmic fairness: desiderata for a feminist approach",
+      "work_id": "work:34294df8-8138-5c66-8137-b0c1a6afa3ff",
+      "version_id": "version:7549e3c1-700e-5337-8718-3d08f77c0685",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://link.springer.com/article/10.1007/s43681-025-00926-y"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "EFMF4449",
+      "title": "Teachers’ perceptions of generative AI in gender-inclusive STEM education: a grounded theory study",
+      "work_id": "work:45373e2c-7027-53c3-b5c6-fe3200ae53c4",
+      "version_id": "version:d73695ad-f9cd-5319-9a3b-bbb4562e4d60",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://link.springer.com/article/10.1007/s10639-026-13908-2"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "6N9ANHXA",
+      "title": "The Role of Generative AI in Transforming Social Work Practice",
+      "work_id": "work:8c24bcba-b32b-52ce-961a-18b40cd0a22e",
+      "version_id": "version:20768b9f-d2d8-513a-aacd-989458319fbb",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://doi.org/10.1007/978-3-032-27336-9_4"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "TFMETSCH",
+      "title": "BiasFreeBench: a Benchmark for Mitigating Bias in Large Language Model Responses",
+      "work_id": "work:acf1ac10-2b58-5eab-b1ff-5a139ee5afce",
+      "version_id": "version:766d4fbd-f251-567f-a0f9-d1dced745cb4",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://proceedings.iclr.cc/paper_files/paper/2026/hash/71c3451f6cd6a4f82bb822db25cea4fd-Abstract-Conference.html"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "DZ5EAPXR",
+      "title": "Sycophantic AI decreases prosocial intentions and promotes dependence",
+      "work_id": "work:e56cb050-aad5-5a20-8994-ac450ec25bc0",
+      "version_id": "version:39bcf800-7995-56e3-b029-3faa4b943087",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://doi.org/10.1126/science.aec8352"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "YW3UAXFP",
+      "title": "Feminist AI: Confronting Bias, Power, and the Promise of Justice-Oriented Technology",
+      "work_id": "work:0079c902-19b5-5e78-8b23-06cda81b2792",
+      "version_id": "version:f53b3141-0510-5d5c-be61-d13fd9f6dbb1",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://anubooks.com/uploads/session_pdf/178230309029.%20Rashmi%20Singh%20280-291.pdf",
+        "https://anubooks.com/view?file=4585&session_id=jgv-vol-xvii-no1-jan-june-2026-272"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "DL7G37W9",
+      "title": "Safety guardrails in large language models and selective refusal bias",
+      "work_id": "work:79601e71-971d-574c-a299-65b068101286",
+      "version_id": "version:87a50285-872a-54be-8f00-3f9c0821fc29",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://aclanthology.org/2026.findings-acl.550.pdf"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "UIBZW4IK",
+      "title": "Critical Literacy in an AI World",
+      "work_id": "work:be146ab5-46d5-531d-9f2a-62aedf1e54e0",
+      "version_id": "version:905a8962-d611-5436-bc3d-a3ff7c01d4e8",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://www.routledge.com/Critical-Literacy-in-an-AI-World/Mills-Gutierrez/p/book/9781032886985"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "CCAKPEGY",
+      "title": "Does being literate in AI make workplaces more equal? The mediating role of psychological capital",
+      "work_id": "work:7bec80be-f7f9-516a-8845-7215f683db24",
+      "version_id": "version:e03cf66b-d85b-5eaa-b058-48adf89d499f",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://www.emerald.com/insight/content/doi/10.1108/IJSSP-02-2026-0125/full/html",
+        "https://doi.org/10.1108/ijssp-02-2026-0125"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "UNGYENLB",
+      "title": "Metacognitive AI literacy: going beyond the AI skills gap agenda",
+      "work_id": "work:3b02e536-2608-5664-8375-e41cd0501530",
+      "version_id": "version:033cce35-c84f-53e1-a545-74658072cf4e",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://www.tandfonline.com/doi/pdf/10.1080/17439884.2026.2652638",
+        "https://www.tandfonline.com/doi/full/10.1080/17439884.2026.2652638",
+        "https://doi.org/10.1080/17439884.2026.2652638"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "EF9TQIRK",
+      "title": "Unveiling gender bias in AI: A classroom reflection on media representation and AI literacy in postgraduate education",
+      "work_id": "work:f23df8e7-b57c-555e-8a09-afa5a74b659f",
+      "version_id": "version:dc44ccb1-e081-5ebf-9be5-51c76b6c087d",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://www.liverpooluniversitypress.co.uk/doi/pdf/10.3828/dap.2026.7",
+        "https://doi.org/10.3828/dap.2026.7"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "PS8KVDVS",
+      "title": "Intersectional Fairness in Large Language Models",
+      "work_id": "work:4ceaffbe-54e4-5865-acd6-bffa1af7ac55",
+      "version_id": "version:fd1523e6-e133-59e5-897b-cc675bb0ca36",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "NJUBGV8X",
+      "title": "Intersectional biases in narratives produced by open-ended prompting of generative language models",
+      "work_id": "work:1406264b-e0cd-5dde-be3b-dbfd17fb0711",
+      "version_id": "version:bc8447b9-95ae-50fd-8bfd-b216a224d60d",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://www.nature.com/articles/s41467-025-68004-9.pdf",
+        "https://www.nature.com/articles/s41467-025-68004-9"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "7B6V8MN6",
+      "title": "Feminist knowledges in the age of AI",
+      "work_id": "work:45d9af93-79ae-5cea-834f-b465c751fc8d",
+      "version_id": "version:015ac934-7770-50e6-887a-5f91f983250f",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "https://journals.sagepub.com/doi/pdf/10.1177/13505068261419933?download=true",
+        "https://doi.org/10.1177/13505068261419933",
+        "https://journals.sagepub.com/doi/10.1177/13505068261419933"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "5G2VPZR8",
+      "title": "AI Ethics for the Global Majority: Lessons from Decolonial Feminist Bioethics",
+      "work_id": "work:e0680eb6-6ddd-5f4a-ae90-29d2359cba3e",
+      "version_id": "version:8d61d60c-3868-5b40-9560-a49d995f7686",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "https://link.springer.com/chapter/10.1007/978-3-032-07830-8_12",
+        "https://doi.org/10.1007/978-3-032-07830-8_12"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "9Y7H9WXQ",
+      "title": "Ethical AI Through a Feminist Lens: Challenging Power and Redefining Technology",
+      "work_id": "work:702fdf21-e0e7-5903-a2e7-d64ce0842858",
+      "version_id": "version:160018b8-4787-5e6c-95b1-32341cc4aec6",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "https://www.taylorfrancis.com/chapters/edit/10.1201/9781003585527-19",
+        "https://doi.org/10.1201/9781003585527-19",
+        "https://www.routledge.com/Handbook-of-Global-Philosophies-on-AI-Ethics-Toward-Sustainable-Futures/Singh-Ramachandran/p/book/9781032955643",
+        "https://www.taylorfrancis.com/chapters/edit/10.1201/9781003585527-19/ethical-ai-feminist-lens-eva-gengler-marco-wedel"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "VXDH5KWP",
+      "title": "AI Literacy and Gender Bias: Comparative Perspectives from the UK and Indonesia",
+      "work_id": "work:c8ae8d5b-fcdc-5cac-9969-519b06516912",
+      "version_id": "version:3da2b173-7839-5e9e-9453-155987bdc1b9",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "https://www.mdpi.com/2227-7102/15/9/1143/pdf",
+        "https://www.mdpi.com/2227-7102/15/9/1143"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "DALR26DL",
+      "title": "\"Grillz on a hijabi\": Intersectional Identities in Fostering Critical AI Literacy",
+      "work_id": "work:0956e6b6-04d8-5572-a9a0-9018c23788a2",
+      "version_id": "version:0ca609ef-3735-5101-918e-b8053c7ff43d",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "https://doi.org/10.1145/3769994.3770037",
+        "https://dl.acm.org/doi/10.1145/3769994.3770037"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "BKYNQZHQ",
+      "title": "A Critique of Human-Centred AI: A Plea for a Feminist AI Framework (FAIF)",
+      "work_id": "work:46be07be-83b3-59c5-946e-b41472558493",
+      "version_id": "version:ad149ad0-134b-5935-b766-37dca94bfab2",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s00146-025-02556-8.pdf",
+        "https://link.springer.com/article/10.1007/s00146-025-02556-8",
+        "https://doi.org/10.1007/s00146-025-02556-8"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "IYUPQPTA",
+      "title": "Black feminism and Artificial Intelligence: the possibilities and limitations of contesting discriminatory AI from a critical social theory perspective",
+      "work_id": "work:cb1293bf-0c88-59cb-ac2c-ee567a14cd25",
+      "version_id": "version:8af3af2f-f4ab-5fcc-884f-65d3a46ad101",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "https://www.frontiersin.org/journals/sociology/articles/10.3389/fsoc.2025.1602947/pdf",
+        "https://www.frontiersin.org/journals/sociology/articles/10.3389/fsoc.2025.1602947/full"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "H958FXZR",
+      "title": "Intersectional biases in narratives produced by open-ended prompting of generative language models",
+      "work_id": "work:1406264b-e0cd-5dde-be3b-dbfd17fb0711",
+      "version_id": "version:bc8447b9-95ae-50fd-8bfd-b216a224d60d",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "https://www.nature.com/articles/s41467-025-68004-9.pdf",
+        "https://www.nature.com/articles/s41467-025-68004-9"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "MN2K9JW8",
+      "title": "Verbesserung der KI-Literacy von Lehrenden im Hochschulbereich",
+      "work_id": "work:76eafb72-f674-51b7-b980-05ca1e500f58",
+      "version_id": "version:5ac914e1-ddd5-5d98-b3d5-06ba5549d622",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "https://www.zfhe.at/index.php/zfhe/article/download/2086/1324",
+        "https://zfhe.at/index.php/zfhe/article/view/2086",
+        "https://www.zfhe.at/index.php/zfhe/article/view/2086"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "8YZKPS42",
+      "title": "Beyond inclusion: feminist AI for transformative justice in STEM",
+      "work_id": "work:0b69246b-4c05-5e2f-a22e-1416ec893b1d",
+      "version_id": "version:47a79a31-c2f5-5529-ac37-3681eb291579",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s43681-026-01161-9.pdf",
+        "https://link.springer.com/article/10.1007/s43681-026-01161-9",
+        "https://doi.org/10.1007/s43681-026-01161-9"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "VYCF5NCB",
+      "title": "Power Imbalances in Society and AI: On the Need to Expand the Feminist Approach",
+      "work_id": "work:f50cd1ef-241a-515c-b970-b491ce2b97f7",
+      "version_id": "version:d7049b2f-05f3-5294-a543-a920cee57574",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "https://link.springer.com/book/10.1007/978-3-031-80119-8",
+        "https://doi.org/10.1007/978-3-031-80119-8_6",
+        "https://link.springer.com/chapter/10.1007/978-3-031-80119-8_6"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "5DLTP2YA",
+      "title": "Ethical AI through a Feminist Lens: Challenging Power and Redefining Technology",
+      "work_id": "work:702fdf21-e0e7-5903-a2e7-d64ce0842858",
+      "version_id": "version:160018b8-4787-5e6c-95b1-32341cc4aec6",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "https://www.taylorfrancis.com/chapters/edit/10.1201/9781003585527-19",
+        "https://doi.org/10.1201/9781003585527-19",
+        "https://www.routledge.com/Handbook-of-Global-Philosophies-on-AI-Ethics-Toward-Sustainable-Futures/Singh-Ramachandran/p/book/9781032955643",
+        "https://www.taylorfrancis.com/chapters/edit/10.1201/9781003585527-19/ethical-ai-feminist-lens-eva-gengler-marco-wedel"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "WUMNU3W5",
+      "title": "AI literacy and its implications for prompt engineering strategies",
+      "work_id": "work:395de8af-225b-54df-9dcd-19a709c2dcc8",
+      "version_id": "version:7911be25-05c3-5920-b48b-b1f30942d5a2",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://linkinghub.elsevier.com/retrieve/pii/S2666920X24000262"
+      ],
+      "acquisition_report": {
+        "filename": "Knoth_2024_AI_literacy_and_its_implications_for_prompt.pdf",
+        "downloaded": false,
+        "error": null
+      },
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "VIKH8BAI",
+      "title": "AI literacy and its implications for prompt engineering strategies",
+      "work_id": "work:395de8af-225b-54df-9dcd-19a709c2dcc8",
+      "version_id": "version:7911be25-05c3-5920-b48b-b1f30942d5a2",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://linkinghub.elsevier.com/retrieve/pii/S2666920X24000262"
+      ],
+      "acquisition_report": {
+        "filename": "Knoth_2024_AI_literacy_and_its_implications_for_prompt.pdf",
+        "downloaded": false,
+        "error": null
+      },
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "AHUSFEEA",
+      "title": "AI & Intersectionality: A Toolkit For Fairness & Inclusion",
+      "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+      "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "https://diversifair-project.eu/wp-content/uploads/2025/01/Copie-de-INDUSTRY-Educ-Kits-A4-V2.pdf"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "review_knowledge_document_before_authority_promotion"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "FKJH2278",
+      "title": "feminist AI | ACADEMY",
+      "work_id": "work:56d6f68e-55d4-5741-85f5-014faceedd04",
+      "version_id": "version:760b8567-f41d-5576-8229-d88a557e569c",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "https://www.feminist-ai.com/academy"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "5NSMD7XV",
+      "title": "ARTIFICIAL INTELLIGENCE and GENDER EQUALITY",
+      "work_id": "work:b440aa78-e9c1-5b93-8d4d-2200924a02cd",
+      "version_id": "version:961c964f-d2ae-5131-a0d2-a9529c52d980",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "https://unesdoc.unesco.org/ark:/48223/pf0000374174"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "IUHC62RX",
+      "title": "Intersektionalität",
+      "work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
+      "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://wb-erwachsenenbildung.net/intersektionalitaet"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "8JR5AGRG",
+      "title": "Challenging systematic prejudices: an Investigation into Gender Bias in Large Language Models",
+      "work_id": "work:5e32c60e-f330-5cba-b414-c2fee079146c",
+      "version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": "title_mismatch",
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "https://discovery.ucl.ac.uk/id/eprint/10188772/1/Unesco_results.pdf"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "review_knowledge_document_before_authority_promotion"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "JFDBPUBN",
+      "title": "Gender und KI-Anwendungen. Trägt KI zum Genderproblem oder zu seiner Lösung bei?",
+      "work_id": "work:bd83caf1-923f-5895-b6bb-9d558c619ceb",
+      "version_id": "version:ccdb5896-271a-5b88-a272-f2b8b8cedcaf",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://www.hsbi.de/publikationsserver/download/5510/5548/GeKI_Abschlussbericht.pdf"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "H3NC9SMQ",
+      "title": "Worst of Both Worlds: Biases Compound in Pre-trained Vision-and-Language Models",
+      "work_id": "work:ec94cf1c-87bf-5f4d-a840-9dd3b92eefab",
+      "version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://aclanthology.org/2022.gebnlp-1.10"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "HIHNAJZN",
+      "title": "Occupational employment statistics",
+      "work_id": "work:e3fcbaca-43ce-552e-85d8-0c743c12fee2",
+      "version_id": "version:ee62fefd-c381-5494-87e4-6accdce35fbe",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://www.bls.gov/oes"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "JFVQIWE5",
+      "title": "Research on the application risks and countermeasures of ChatGPT generative artificial intelligence in social work",
+      "work_id": "work:4b1bc38b-3228-5112-ac8f-026d8d4f7a2e",
+      "version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "missing",
+      "recorded_urls": [
+        "https://www.clausiuspress.com/article/12988.html"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "record_substantive_abstract_if_fulltext_unavailable",
+        "review_knowledge_document_before_authority_promotion"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "M62T5ICP",
+      "title": "Fragile Foundations: Hidden Risks of Generative AI",
+      "work_id": "work:9ee1a116-9225-5234-b189-b4ea3f93df14",
+      "version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "https://www.bertelsmann-stiftung.de/doi/10.11586/2025078"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "review_knowledge_document_before_authority_promotion"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "MD5RVIUW",
+      "title": "Data and rights in the digital welfare state: the case of Denmark",
+      "work_id": "work:5d44ca3d-827b-5f4e-a4f1-1ee40ec55c18",
+      "version_id": "version:d25aa754-f559-54ef-bd2f-4f8d0bec38a5",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "https://doi.org/10.1080/1369118X.2021.1934069"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "9SHEQHDW",
+      "title": "'Meaningless work': How the datafication of health reconfigures knowledge about work and erodes professional judgement",
+      "work_id": "work:62cbd3ab-96ea-50e4-b877-2f65571a8f83",
+      "version_id": "version:d523f07b-3eed-5bf9-9073-62ffb923d65b",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "https://doi.org/10.1080/03085147.2020.1733842"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "3TWV7VWW",
+      "title": "NASW, ASWB, CSWE, & CSWA standards for technology in social work practice",
+      "work_id": "work:b4a52bdb-3182-5695-bbac-d3620ef7d3fe",
+      "version_id": "version:95c6b86a-c983-5533-ae04-faee6251ec6d",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "https://www.socialworkers.org/Practice/NASW-Practice-Standards-Guidelines/Standards-for-Technology-in-Social-Work-Practice"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    },
+    {
+      "record_id": "DQA3PEZJ",
+      "title": "Theorising algorithmic justice",
+      "work_id": "work:a6e813e5-57e0-555c-92f9-1155ffc79f42",
+      "version_id": "version:e3428c27-954b-565a-9d89-d546870301b3",
+      "source_hold": null,
+      "source_hold_reason": null,
+      "source_identity_issue": null,
+      "abstract_quality": "usable",
+      "recorded_urls": [
+        "https://doi.org/10.1080/0960085X.2021.1934130"
+      ],
+      "acquisition_report": null,
+      "remaining_steps": [
+        "acquire_canonical_version_fulltext",
+        "create_source_bound_knowledge_document"
+      ],
+      "status": "explicit_source_gap"
+    }
+  ]
+}

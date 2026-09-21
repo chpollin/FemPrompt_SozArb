@@ -1,0 +1,29 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "AMYZFAPH",
+  "knowledge_document": "research-vault/20_distillates/publications/completion-amyzfaph-generative-ai-social-work-research.md",
+  "knowledge_document_sha256": "sha256:f5eb142b4002dc2f1652177ebc073ebbd8dee0a4f1f329b98d2d933ec9208f82",
+  "source_path": "generated/markdown_clean/Victor_2023_Recommendations_for_social_work_researchers_and.md",
+  "source_sha256": "sha256:faee9d1c7150bfe9d53dbfc620c2237d70e32fe737a2fdaa4e7116a3e6ac7225",
+  "conversion_qc_path": "generated/source-acquisition/completion-20260921/conversion-qc/conversion-qc.json",
+  "conversion_qc_sha256": "sha256:72936d4a095ef40a2040ce27d71590b0b75f26dfbaf6554e43a0c05035546749",
+  "reviewed_at": "2026-09-21T18:54:01.364336Z",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Independent source-bound follow-up review of the corrected category assessment and preservation of the previously reviewed content. This receipt grants no human verification or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Assessment relevance",
+      "finding": "The unsupported Fairness assignment has been removed. Bias_Ungleichheit remains supported by the explicit discussion of training-data bias, discriminatory outcomes and harms to marginalised groups. The document now correctly states that algorithmic-fairness criteria, fair ML and fairness metrics are absent."
+    },
+    {
+      "severity": "note",
+      "location": "All other substantive sections and quotations",
+      "finding": "Reconstructing only the prior category wording reproduces the exact artifact_hash from AMYZFAPH-kd.json. All other claims and all four exact source quotations are unchanged, and the canonical source hash remains stable."
+    }
+  ]
+}

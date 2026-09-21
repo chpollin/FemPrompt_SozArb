@@ -1,0 +1,27 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "9EP4IC4T",
+  "knowledge_document": "research-vault/20_distillates/publications/9ep4ic4t-deception-detection-mental-health.md",
+  "knowledge_document_sha256": "sha256:eb4f655f57caf23a05390b826ec958c5ccd5d23e4b5564667cc2b9938cd9616a",
+  "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/2e6aa61930deea324751.md",
+  "source_sha256": "sha256:16fffb7438de2ed8cbf62ab4b19919a51a05484d97275f0ff2ea32a72c5868bc",
+  "reviewed_at": "2026-09-21T18:34:25.148124Z",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "changes_requested",
+  "scope": "Independent source-bound review of identity, research question, method, findings, limitations, quotations and category relevance. This receipt grants no human verification or publication authority.",
+  "findings": [
+    {
+      "severity": "material",
+      "location": "Core statements, quotations for s2 and s4",
+      "finding": "Two displayed quotations do not resolve as exact substrings of the bound Markdown because the source preserves doubled Docling whitespace. The source contains “systems  may  struggle  to  accurately  interpret nonverbal...” and “applied to  the  remaining  transcripts  through  an  iterative...”. Replace the normalized quotations with exact source substrings or use the project-approved whitespace-normalized quotation contract explicitly."
+    },
+    {
+      "severity": "note",
+      "location": "Method and scope; Assessment relevance; Limitations",
+      "finding": "The corrected document accurately reports the six focus groups, dual-role sample, hypothetical scenario, coding process, privacy and bias concerns, deployment recommendations and sample limitations. AI_Literacies has been removed. The remaining category claims are bounded to the source."
+    }
+  ]
+}

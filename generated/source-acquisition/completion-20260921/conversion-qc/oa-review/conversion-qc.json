@@ -1,0 +1,131 @@
+{
+  "schema": "femprompt-conversion-qc/0.1",
+  "created_at": "2026-09-21T19:11:02.310121+00:00",
+  "scope": "Independent conversion-fidelity review of four identity-bound open-access sources for controlled-corpus text assessment. This QC grants no scientific acceptance, screening decision, registry authority, or publication authority.",
+  "reviewer": {
+    "agent_id": "/root/knowledge_completion",
+    "model": "gpt-5.6-sol"
+  },
+  "method": [
+    "Resolved each PDF through generated/source-acquisition/completion-20260921/oa-acquisition-results.json and compared it with the corresponding canonical identity-bound Markdown.",
+    "Rendered every PDF page with Poppler pdftoppm at 90 DPI, inspected complete contact sheets, and separately inspected pages carrying methods, figures, tables, or formulas at full rendered resolution.",
+    "Compared headings, reading order, image placeholders, tables, formulas, captions, and adjacent explanatory prose. Converter quality scores were not treated as fidelity evidence.",
+    "Computed PDF, canonical Markdown, and contact-sheet hashes with src.assess.artifact_verification.artifact_hash."
+  ],
+  "records": [
+    {
+      "record_id": "Z9DNTBFF",
+      "pdf_path": "generated/pdfs/completion-20260921/oa-batch/Z9DNTBFF.pdf",
+      "pdf_sha256": "sha256:cc714d9d7f9ecdcbc39667b9a2cc6b9a23096f4f30896db54d8a63c9f765236e",
+      "markdown_path": "corpus/source-acquisition/completion-20260921/Z9DNTBFF.identity-bound.md",
+      "markdown_sha256": "sha256:729606223c6f936d78f837d285ae84f5d18f010b62af7dfa793cce64119fd3c0",
+      "pages_total": 9,
+      "pages_visually_inspected": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "result": "changes_required",
+      "structure": {
+        "headings": "Title, numbered sections, references, and appendices occur in source order.",
+        "reading_order": "The two-column article is largely linearized in correct reading order.",
+        "tables": "Tables 1 and 2 retain text, but Table 1 loses its two example images. Table 3 and the Appendix A image grid are image placeholders.",
+        "figures": "Figures 1 through 5 and their subfigures are image placeholders. Captions and qualitative prose survive, but plotted values, entity positions, example images, and visual comparisons do not.",
+        "formulas": "Six displayed probability, association, and bias-score definitions are replaced by formula-not-decoded placeholders."
+      },
+      "losses": [
+        "The six displayed definitions needed to reproduce the three association scores and the aggregate bias score are absent.",
+        "Figures 2 through 5 lose the quantitative score values and entity-level distributions that support the central comparison of pre-training, language-context, and visual-context bias.",
+        "Table 3 loses the images and exact paired probabilities used to demonstrate predictions that override visual evidence.",
+        "Figure 1 and Appendix A lose the visual examples used to define and document the case study."
+      ],
+      "assessment": "The prose supports the qualitative conclusions, but the missing formal definitions and quantitative visual evidence prevent complete text-only assessment of the method and results. Repair must transcribe the formulas and preserve the argument-bearing values or faithful structured descriptions from Figures 2 through 5 and Table 3.",
+      "inspection_artifacts": [{
+        "path": "generated/source-acquisition/completion-20260921/conversion-qc/oa-review/Z9DNTBFF-contact-sheet.jpg",
+        "sha256": "sha256:fb0ade9c2d77e0bfca6f60fd2de9495e1ed3e2389b596e1a5946545a5d63bd00",
+        "purpose": "all-page visual contact sheet; individual 90 DPI page renders are retained in the same directory for detail inspection"
+      }]
+    },
+    {
+      "record_id": "V8SBEH4E",
+      "pdf_path": "generated/pdfs/completion-20260921/oa-batch/V8SBEH4E.pdf",
+      "pdf_sha256": "sha256:8d49f4a714cca406922aade14fa44dbbfca6b35035826f7bfe99cd00e59b31c3",
+      "markdown_path": "corpus/source-acquisition/completion-20260921/V8SBEH4E.identity-bound.md",
+      "markdown_sha256": "sha256:e899385c54b3118d6eec98a0195a659ff18fc33c4c0dcc3a9e8cccda7a244353",
+      "pages_total": 14,
+      "pages_visually_inspected": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+      "result": "accepted_for_text_assessment",
+      "structure": {
+        "headings": "All substantive sections remain in source order, although several numbered headings contain OCR-confused glyphs.",
+        "reading_order": "Single-column prose remains sequential across the article.",
+        "tables": "The PDF contains no substantive tables.",
+        "figures": "Survey pie charts are image placeholders, while each chart's response percentages and interpretation are stated in the adjacent Markdown prose.",
+        "formulas": "No formulas are present."
+      },
+      "losses": [
+        "Eight image placeholders omit the publisher mark, survey pie charts, and licence graphic.",
+        "Several section headings have OCR substitutions such as ϭ and Đ, and list bullets contain stray glyphs.",
+        "The charts' color encoding and layout are absent, but their assessment-relevant values are repeated in prose."
+      ],
+      "assessment": "The research question, small survey design, participant limitations, response values, discussion, and conclusion remain readable. The missing charts are redundant with adjacent numerical prose, so the representation is accepted for text assessment with cautious heading normalization and PDF consultation for visual presentation.",
+      "inspection_artifacts": [{
+        "path": "generated/source-acquisition/completion-20260921/conversion-qc/oa-review/V8SBEH4E-contact-sheet.jpg",
+        "sha256": "sha256:28a7a8e7cff775265c090009b9fab8ed4cdd883e958a229918be015f31f0ab53",
+        "purpose": "all-page visual contact sheet; individual 90 DPI page renders are retained in the same directory for detail inspection"
+      }]
+    },
+    {
+      "record_id": "9ZKZQM63",
+      "pdf_path": "generated/pdfs/completion-20260921/oa-batch/9ZKZQM63.pdf",
+      "pdf_sha256": "sha256:9f6440e8d8a449814c181ef16bc5e1d42ea1cc9b93c5fbbdbbfd008813677e31",
+      "markdown_path": "corpus/source-acquisition/completion-20260921/9ZKZQM63.identity-bound.md",
+      "markdown_sha256": "sha256:bce7b8de4b1bb063064193b7e230d1825cd235f72add20aca038807e281cf14c",
+      "pages_total": 17,
+      "pages_visually_inspected": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+      "result": "changes_required",
+      "structure": {
+        "headings": "Article sections and appendices occur in source order.",
+        "reading_order": "The two-column article and appendix are largely linearized correctly.",
+        "tables": "Tables 1 through 5 and appendix prompt and demographic tables are present as Markdown, including the main model, prompting, and error-analysis values.",
+        "figures": "Figures 1 through 3 are image placeholders. Their captions and surrounding prose survive, but the pipeline topology and plotted per-model and per-demographic values do not.",
+        "formulas": "The article expresses its metric definitions in prose and contains no omitted displayed formula."
+      },
+      "losses": [
+        "Figure 1 loses the evaluation and mitigation workflow, including the decision loop from clinically accepted Equalized Odds scores back to bias-mitigation prompting.",
+        "Figure 2 loses the complete ordered model-scale plot of average F1 and Equalized Odds scores.",
+        "Figure 3 loses the demographic-factor series for average F1 and Equalized Odds across MentalRoBERTa, Gemma-2B, Llama3-8B, and GPT-4.",
+        "Adjacent prose states the principal trends and selected values, and Table 4 preserves prompting results, but it does not reproduce all plotted values."
+      ],
+      "assessment": "The tables preserve most quantitative results, yet the missing pipeline and two central plots leave assessment-relevant method relations and demographic series unavailable from Markdown alone. Repair must provide faithful structured descriptions or values for Figures 1 through 3 before text-only acceptance.",
+      "inspection_artifacts": [{
+        "path": "generated/source-acquisition/completion-20260921/conversion-qc/oa-review/9ZKZQM63-contact-sheet.jpg",
+        "sha256": "sha256:42ca7d88b85ec98cf06acfd5b3313a4dbdc63531becd23decc2678cee12b00c0",
+        "purpose": "all-page visual contact sheet; individual 90 DPI page renders are retained in the same directory for detail inspection"
+      }]
+    },
+    {
+      "record_id": "J4K3XA52",
+      "pdf_path": "generated/pdfs/completion-20260921/oa-batch/J4K3XA52.pdf",
+      "pdf_sha256": "sha256:ed1fce4e7bfae9a79230ded8be149df1552b39f4807c176b463a4e0a38c92c1a",
+      "markdown_path": "corpus/source-acquisition/completion-20260921/J4K3XA52.identity-bound.md",
+      "markdown_sha256": "sha256:9622630861435a8d4cfe9baa48d6e9e03395cdddfd6d6d243aa288508e794da5",
+      "pages_total": 14,
+      "pages_visually_inspected": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+      "result": "changes_required",
+      "structure": {
+        "headings": "Article sections, supplementary information, declarations, and references occur in source order.",
+        "reading_order": "The two-column article is substantially linearized in correct order.",
+        "tables": "Tables 1 through 9 are represented, but dense tables contain row and cell fusion. Table 5 notably merges adjacent entries and separates some adjusted p-values from their rows.",
+        "figures": "No argument-bearing figures are present. The image placeholders correspond to publisher or supplementary graphic matter.",
+        "formulas": "The counterfactual fairness definition and the mixed-effects and Poisson regression specifications are replaced by three formula-not-decoded placeholders; variable explanations remain."
+      },
+      "losses": [
+        "Equations 1 through 3 are absent, including the formal counterfactual criterion and both fitted model specifications.",
+        "Dense result tables lose reliable row alignment in places. In Table 5, values for Primary, Case, Arrangement, Number, Require, Receive, Unable, and their adjusted p-values are fused or displaced.",
+        "Spacing artifacts occur throughout, but most prose remains readable."
+      ],
+      "assessment": "The narrative findings and many table values remain available, but the missing equations and corrupted alignment in a central word-level results table prevent reliable text-only assessment of the statistical method and exact results. Repair must transcribe Equations 1 through 3 and restore source-faithful table row boundaries and cells.",
+      "inspection_artifacts": [{
+        "path": "generated/source-acquisition/completion-20260921/conversion-qc/oa-review/J4K3XA52-contact-sheet.jpg",
+        "sha256": "sha256:834b08110b9e4d995bf9e3fda422543dcd7dbb54a56ad3fc074af3285cab11f3",
+        "purpose": "all-page visual contact sheet; individual 90 DPI page renders are retained in the same directory for detail inspection"
+      }]
+    }
+  ]
+}

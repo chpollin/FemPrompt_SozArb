@@ -7,17 +7,19 @@ work-id: work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083
 version-id: version:54cf8de3-1586-55df-b963-b7e57f1b8b38
 version-type: version_of_record
 topics:
-  - "[[Bias and Fairness]]"
-status: preparation
+- '[[Bias and Fairness]]'
+status: ai-agent-reviewed
 checked:
   quote: 2026-09-21
+  validation: '2026-09-21'
+  ai-agent-review: '2026-09-21'
 created: 2026-09-21
-updated: 2026-09-21
+updated: '2026-09-21'
 prepared-by:
   agent-id: /root/knowledge_documents
   model: gpt-5.6-sol
   prepared-at: 2026-09-21
-  artifact-review-status: unreviewed
+  artifact-review-status: ai-agent-reviewed
 source-representation:
   path: generated/markdown_clean/P4YQIKJX.md
   sha256: sha256:a4f670474ec99e6c7d888653b43044fd775ebd6dde861dfe2e886c30a8cbf42d
@@ -26,6 +28,9 @@ source-representation:
   source-url: https://doi.org/10.3390/ai4010003
   is-preferred-version: true
   boundary: The preparing agent read the complete hash-bound Publisher PDF Markdown representation and checked the quoted passages. No separate scholarly review has occurred.
+source-review:
+  path: corpus/knowledge-reviews/2026-09-21/P4YQIKJX.json
+  sha256: sha256:fabe5622adbdbf5e4cd7ed22e6c048436ccd64f83ff0c5c114084102bb16d123
 ---
 
 # Distillate: Ethics & AI: A systematic review on ethical concerns and related strategies for designing with AI in healthcare
@@ -58,4 +63,4 @@ The search covers literature available through September 2020 and includes heter
 
 ## Review boundary
 
-This preparation was produced from the complete hash-bound local source. Quotations were checked. Its `preparation` status is unreviewed and grants no scholarly-review authority.
+This document was prepared from the source representation identified in its metadata. The current review state and its supporting receipt are recorded in the frontmatter. AI review does not establish domain-expert verification or publication approval.

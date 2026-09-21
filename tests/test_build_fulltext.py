@@ -4,6 +4,7 @@ publisher also preserves the previous complete build when a new run fails."""
 
 import importlib.util
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -27,6 +28,79 @@ def _paper(
 def _real_paper(paper_id: str) -> dict[str, object]:
     papers = json.loads(bf.DATA_IN.read_text(encoding="utf-8"))["papers"]
     return next(paper for paper in papers if paper["id"] == paper_id)
+
+
+@pytest.mark.skipif(os.name != "nt", reason="Windows extended path regression")
+def test_long_checkout_retains_embedded_identity_and_manifest_input(
+    tmp_path, monkeypatch
+):
+    from src.file_hashing import canonical_file_bytes, filesystem_path
+    from src.publish import build_project
+
+    original = next((ROOT / "docs/vault/Papers").glob("Feministische Netzpolitik*.md"))
+    metadata = bf.embedded_source_metadata(original)
+    assert metadata.get("title")
+    repo = tmp_path / "portable-completion-20260921"
+    target = repo / "docs/vault/Papers" / original.name
+    while len(str(target)) <= 260:
+        repo = repo / "portable-completion-20260921"
+        target = repo / "docs/vault/Papers" / original.name
+    filesystem_path(target.parent).mkdir(parents=True)
+    filesystem_path(target).write_bytes(canonical_file_bytes(original))
+    assert bf.embedded_source_metadata(target) == metadata
+    monkeypatch.setattr(build_project, "OUTPUTS", ())
+    monkeypatch.setattr(build_project, "OUTPUT_DIRS", ())
+    assert build_project.snapshot(repo)["inputs"] == {
+        target.relative_to(repo).as_posix(): build_project.file_hash(original)
+    }
+    from src.analysis.knowledge_coverage import build_knowledge_coverage
+    from src.publish import build_screening_index
+
+    paper = _real_paper("NUVZI357")
+    paper["knowledge_doc"] = target.relative_to(repo / "docs").as_posix()
+    data = repo / "docs/data"
+    data.mkdir()
+    projection = data / "research_vault_v2.json"
+    projection.write_text(json.dumps({"papers": [paper]}), encoding="utf-8")
+    registry = {"record_index": {paper["id"]: {"work_id": paper["work_id"]}}}
+    coverage = build_knowledge_coverage(repo, registry, set())
+    assert coverage["counts"]["linked_records"] == 1
+    assert coverage["broken_document_links"] == []
+    monkeypatch.setattr(build_screening_index, "ROOT", repo)
+    monkeypatch.setattr(build_screening_index, "DOCS", repo / "docs")
+    monkeypatch.setattr(build_screening_index, "DATA_IN", projection)
+    output = data / "fulltext_index.json"
+    monkeypatch.setattr(build_screening_index, "INDEX_OUT", output)
+    assert build_screening_index.main() == 0
+    indexed = json.loads(output.read_text(encoding="utf-8"))["papers"][paper["id"]]
+    assert indexed["src"] == "kd"
+    assert indexed["x"] == build_screening_index.to_plain(
+        canonical_file_bytes(original).decode("utf-8")
+    )
+
+
+@pytest.mark.parametrize("paper_id", ["FTJM5R8N", "4KMMPA6A"])
+def test_legacy_match_cannot_borrow_another_registered_work_or_version(paper_id):
+    paper = _real_paper(paper_id)
+    clean_idx = {bf.norm(path.stem): path.name for path in bf.CLEAN_DIR.glob("*.md")}
+    raw_idx = {bf.norm(path.stem): path.name for path in bf.RAW_DIR.glob("*.md")}
+    assert bf.resolve_docling(paper, clean_idx, raw_idx) == (None, "mismatch")
+
+
+def test_exact_governed_version_retains_its_reading_source():
+    paper = _real_paper("978AV9KZ")
+    path, label = bf.resolve_docling(paper, {}, {})
+    assert path == bf.CLEAN_DIR / "FTJM5R8N.md"
+    assert label == "clean"
+
+
+def test_incorrect_survey_title_cannot_match_a_foreign_registered_title():
+    paper = _real_paper("SHJQQTI6")
+    paper["title"] = (
+        "A Survey on Intersectional Fairness in Machine Learning: Opportunities and Challenges"
+    )
+    source = bf.RAW_DIR / "Gohar_2023_Survey.md"
+    assert bf.verified_source(paper, source, "raw") == (None, "mismatch")
 
 
 def test_curated_source_binding_bootstraps_without_a_displayed_knowledge_document(
@@ -312,11 +386,9 @@ def test_embedded_source_rejects_parent_path(
         ("A2P8MXMY", "clean"),
         ("BHXDU7VM", "clean"),
         ("QUV5DQH3", "clean"),
-        ("FTJM5R8N", "clean"),
         ("3ZNMTJ5B", "raw"),
         ("8MRNK6FX", "raw"),
         ("SSF5Q33W", "raw"),
-        ("4KMMPA6A", "clean"),
         ("EQV4DNQR", "raw"),
         ("J5EF9W6M", "raw"),
         ("NSI6S5QE", "clean"),

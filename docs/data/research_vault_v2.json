@@ -1,16 +1,16 @@
 {
   "meta": {
     "fulltext_projection_state": "complete",
-    "source_fingerprint": "sha256:f35dd88c5089f2ed5a062f8591410a9c5d4286e1400a4dae18378653232ca7e7",
+    "source_fingerprint": "sha256:8916cbeb249bbef986e3637901ff22915f6c8d5f4b3d09c2027dc73cd721d252",
     "total_papers": 463,
     "unique_works": 361,
-    "knowledge_linked_records": 258,
-    "distinct_knowledge_docs": 193,
+    "knowledge_linked_records": 269,
+    "distinct_knowledge_docs": 199,
     "knowledge_coverage": {
-      "linked": 258,
-      "fulltext_ready": 15,
-      "identity_unresolved": 69,
-      "source_missing": 121
+      "linked": 269,
+      "fulltext_ready": 12,
+      "identity_unresolved": 67,
+      "source_missing": 115
     },
     "papers_with_human": 302,
     "benchmark_papers": 291,
@@ -209,12 +209,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/knowledge_documents",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/markdown_clean/BHXDU7VM.md",
@@ -3025,32 +3025,113 @@
     {
       "id": "AMYZFAPH",
       "title": "Recommendations for social work researchers and journal editors on the use of generative AI and large language models",
-      "author_year": "Perron et al. (2023)",
-      "authors": "Perron, B. E.; Victor, B. G.; Hodge, D. R.; Vaughn, M. G.; Salas-Wright, C. P.",
+      "author_year": "Bryan G. Victor (2023)",
+      "authors": "Bryan G. Victor; Rebeccah L. Sokol; Lauri Goldkind; Brian E. Perron",
       "year": 2023,
       "doi": "10.1086/726021",
       "url": "",
       "abstract": "Evidence-based recommendations for social work researchers using generative AI and LLMs, addressing prompt engineering and critical engagement with AI outputs. Examines how LLMs can improve research efficiency through facilitating literature reviews, data analysis, and writing assistance while emphasizing need for critical evaluation of AI-generated content. Discusses concerns about over-reliance on AI potentially diminishing research quality when researchers don't engage in critical thinking or",
       "item_type": "journalarticle",
       "journal": "",
-      "knowledge_doc": null,
-      "knowledge_doc_candidate": {
-        "path": "vault/Papers/Recommendations for social work researchers and journal editors on the use of generative AI and large language models.md",
-        "basis": "legacy_title_candidate",
-        "embedded_source_file": "Victor_2023_Recommendations_for_social_work_researchers_and.md",
-        "manifest_source_file": null,
-        "reasons": [
-          "manifest_identity_not_allowed",
-          "embedded_source_file_mismatch"
+      "ai_metadata_correction": {
+        "record_id": "AMYZFAPH",
+        "base_sha256": "sha256:073df79baeb2c0a455064857d90b7db5725bc0129bee9ff4c60256019ae2f58d",
+        "agent_id": "/root",
+        "model": "gpt-6",
+        "reviewed_at": "2026-09-21T18:15:32.418786+00:00",
+        "findings": "Read title-page author sequence in the preserved publisher conversion and checked the reconciled live Zotero records. Historical alias authors disagree with the original publication. Live group records already have the correct author sequence; no external change is needed.",
+        "authority": "ai-source-reviewed-metadata",
+        "changes": [
+          {
+            "field": "creators",
+            "before": [
+              {
+                "creatorType": "author",
+                "firstName": "B. E.",
+                "lastName": "Perron"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "B. G.",
+                "lastName": "Victor"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "D. R.",
+                "lastName": "Hodge"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "M. G.",
+                "lastName": "Vaughn"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "C. P.",
+                "lastName": "Salas-Wright"
+              }
+            ],
+            "after": [
+              {
+                "creatorType": "author",
+                "firstName": "Bryan G.",
+                "lastName": "Victor"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "Rebeccah L.",
+                "lastName": "Sokol"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "Lauri",
+                "lastName": "Goldkind"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "Brian E.",
+                "lastName": "Perron"
+              }
+            ],
+            "reason": "Restore the author sequence printed in the original publication, preserving the historical record and its annotations."
+          }
+        ],
+        "evidence": [
+          {
+            "source_path": "generated/markdown_clean/Victor_2023_Recommendations_for_social_work_researchers_and.md",
+            "sha256": "sha256:faee9d1c7150bfe9d53dbfc620c2237d70e32fe737a2fdaa4e7116a3e6ac7225",
+            "source_url": "https://doi.org/10.1086/726021",
+            "locator": "Publisher title page and author block in existing Docling conversion"
+          }
         ]
       },
-      "knowledge_coverage": "identity_unresolved",
+      "knowledge_doc": "vault/Papers/active-completion-amyzfaph-generative-ai-social-work-research.md",
+      "knowledge_coverage": "linked",
       "work_id": "work:e1ca8a4c-5cc2-5e35-b3cc-375950a07405",
       "identity_basis": "work_version_registry",
       "legacy_work_id": "doi:10.1086/726021",
       "legacy_identity_basis": "doi",
       "version_id": "version:0e874262-87ce-5928-962b-758a55a98646",
-      "source_binding": null,
+      "source_binding": {
+        "work_id": "work:e1ca8a4c-5cc2-5e35-b3cc-375950a07405",
+        "bibliographic_version_id": "version:0e874262-87ce-5928-962b-758a55a98646",
+        "source_version_id": "version:0e874262-87ce-5928-962b-758a55a98646",
+        "preferred_version_id": "version:0e874262-87ce-5928-962b-758a55a98646",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown_clean/Victor_2023_Recommendations_for_social_work_researchers_and.md",
+        "record_id": "AMYZFAPH",
+        "source_version_type": "version_of_record",
+        "source_sha256": "sha256:faee9d1c7150bfe9d53dbfc620c2237d70e32fe737a2fdaa4e7116a3e6ac7225",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "Recommendations for social work researchers and journal editors on the use of generative AI and large language models",
+          "doi": "10.1086/726021"
+        },
+        "version_identity": {
+          "title": "Recommendations for social work researchers and journal editors on the use of generative AI and large language models",
+          "doi": "10.1086/726021"
+        }
+      },
       "source_hold": null,
       "version_type": "version_of_record",
       "version_date": "2023",
@@ -3120,6 +3201,24 @@
         "disagreement_type": null,
         "severity": null,
         "affected_categories": []
+      },
+      "knowledge_authority": {
+        "status": "ai-agent-reviewed",
+        "prepared_by": {
+          "agent-id": "/root/knowledge_completion",
+          "model": "gpt-5.6-sol",
+          "prepared-at": "2026-09-21",
+          "artifact-review-status": "ai-agent-reviewed"
+        },
+        "source_representation": {
+          "path": "generated/markdown_clean/Victor_2023_Recommendations_for_social_work_researchers_and.md",
+          "sha256": "sha256:faee9d1c7150bfe9d53dbfc620c2237d70e32fe737a2fdaa4e7116a3e6ac7225",
+          "version-id": "version:0e874262-87ce-5928-962b-758a55a98646",
+          "version-type": "version_of_record",
+          "source-url": "https://doi.org/10.1086/726021",
+          "is-preferred-version": true,
+          "boundary": "The preparing agent read the complete hash-bound Docling conversion. Its text was available in linearised form, while visual page layout was not independently inspected. The source hash follows the repository artifact_hash contract, which normalises CRLF to LF for text files."
+        }
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -3259,12 +3358,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/knowledge_documents",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/markdown_clean/VSZM7CT6.md",
@@ -3541,12 +3640,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/knowledge_documents",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "corpus/source-acquisition/checklist-resolution-2026-09-05/trudeau-pmc-original.md",
@@ -3766,12 +3865,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/prism_assessment",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/markdown/7FEFMCBZ.md",
@@ -4121,12 +4220,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/knowledge_documents",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/markdown_clean/P4YQIKJX.md",
@@ -4255,12 +4354,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/prism_assessment",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/markdown/R7V99ERA.md",
@@ -4385,12 +4484,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/knowledge_documents",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/markdown_clean/4ZL5Q48E.md",
@@ -4518,14 +4617,33 @@
       "abstract": "Critical analysis examining fairness and justice implications of predictive algorithms in child protection from both statistical and social justice perspectives. Identifies fundamental problems with using child protection system data: biased sample frames reflecting reporting patterns rather than actual abuse incidence, feedback loops amplifying discrimination, and spurious correlations conflating system surveillance with genuine risk. Demonstrates racial and socioeconomic disparities in child w",
       "item_type": "journalarticle",
       "journal": "",
-      "knowledge_doc": null,
-      "knowledge_coverage": "fulltext_ready",
+      "knowledge_doc": "vault/Papers/active-completion-a2p8mxmy-algorithmic-justice-child-protection.md",
+      "knowledge_coverage": "linked",
       "work_id": "work:9cbefba0-b92b-59a3-8595-a1ac5e9fca72",
       "identity_basis": "work_version_registry",
       "legacy_work_id": "doi:10.3390/socsci8100281",
       "legacy_identity_basis": "doi",
       "version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "A2P8MXMY",
+        "work_id": "work:9cbefba0-b92b-59a3-8595-a1ac5e9fca72",
+        "bibliographic_version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
+        "source_version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown_clean/A2P8MXMY.md",
+        "source_sha256": "sha256:d32cb4bb6e523b1930be2d9ff12d1b78ef1790886d02c13a2014c56e0ca0b025",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "Algorithmic justice in child protection: Statistical fairness, social justice and the implications for practice",
+          "doi": "10.3390/socsci8100281"
+        },
+        "version_identity": {
+          "title": "Algorithmic justice in child protection: Statistical fairness, social justice and the implications for practice",
+          "doi": "10.3390/socsci8100281"
+        }
+      },
       "source_hold": null,
       "version_type": "version_of_record",
       "version_date": "2019",
@@ -4595,6 +4713,24 @@
         "severity": null,
         "affected_categories": []
       },
+      "knowledge_authority": {
+        "status": "ai-agent-reviewed",
+        "prepared_by": {
+          "agent-id": "/root/knowledge_completion",
+          "model": "gpt-5.6-sol",
+          "prepared-at": "2026-09-21",
+          "artifact-review-status": "ai-agent-reviewed"
+        },
+        "source_representation": {
+          "path": "generated/markdown_clean/A2P8MXMY.md",
+          "sha256": "sha256:d32cb4bb6e523b1930be2d9ff12d1b78ef1790886d02c13a2014c56e0ca0b025",
+          "version-id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
+          "version-type": "version_of_record",
+          "source-url": "https://www.mdpi.com/2076-0760/8/10/281",
+          "is-preferred-version": true,
+          "boundary": "The preparing agent read the complete hash-bound Markdown conversion, including the linearised article text and references. Figures were present only as image placeholders and were not independently inspected. The source binding received a separate identity review, while this distillate remains unreviewed."
+        }
+      },
       "zotero_library": {
         "group_id": "6080294",
         "observed_on": "2026-09-21",
@@ -4607,32 +4743,98 @@
     {
       "id": "ZITLBM8A",
       "title": "ChatGPT for social work science: Ethical challenges and opportunities",
-      "author_year": "Singer et al. (2023)",
-      "authors": "Singer, J. B.; Victor, B. G.; Perron, B. E.",
+      "author_year": "Desmond Upton Patton (2023)",
+      "authors": "Desmond Upton Patton; Aviv Y. Landau; Siva Mathiyazhagan",
       "year": 2023,
       "doi": "10.1086/726042",
       "url": "",
       "abstract": "Invited paper exploring opportunities and ethical challenges of deploying ChatGPT and large language models specifically for social work science. Describes potential uses of ChatGPT in social work research while examining critical ethical concerns related to algorithmic bias, data quality, and risk of replacing human expertise with AI-generated content. Offers preliminary recommendations for ethical ChatGPT use in social work research, emphasizing need for researchers to critically evaluate AI o",
       "item_type": "journalarticle",
       "journal": "",
-      "knowledge_doc": null,
-      "knowledge_doc_candidate": {
-        "path": "vault/Papers/ChatGPT for Social Work Science- Ethical Challenges and Opportunities.md",
-        "basis": "legacy_title_candidate",
-        "embedded_source_file": "Patton_2023_ChatGPT_for_Social_Work_Science_Ethical.md",
-        "manifest_source_file": null,
-        "reasons": [
-          "manifest_identity_not_allowed",
-          "embedded_source_file_mismatch"
+      "ai_metadata_correction": {
+        "record_id": "ZITLBM8A",
+        "base_sha256": "sha256:47610b98e0327b23a7e2f10908b5620a8a7bd2c5f03977d3ba47393eb420ece0",
+        "agent_id": "/root",
+        "model": "gpt-6",
+        "reviewed_at": "2026-09-21T18:15:32.418786+00:00",
+        "findings": "Read title-page author sequence in the preserved publisher conversion and checked the reconciled live Zotero records. Historical alias authors disagree with the original publication. Live group records already have the correct author sequence; no external change is needed.",
+        "authority": "ai-source-reviewed-metadata",
+        "changes": [
+          {
+            "field": "creators",
+            "before": [
+              {
+                "creatorType": "author",
+                "firstName": "J. B.",
+                "lastName": "Singer"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "B. G.",
+                "lastName": "Victor"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "B. E.",
+                "lastName": "Perron"
+              }
+            ],
+            "after": [
+              {
+                "creatorType": "author",
+                "firstName": "Desmond Upton",
+                "lastName": "Patton"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "Aviv Y.",
+                "lastName": "Landau"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "Siva",
+                "lastName": "Mathiyazhagan"
+              }
+            ],
+            "reason": "Restore the author sequence printed in the original publication, preserving the historical record and its annotations."
+          }
+        ],
+        "evidence": [
+          {
+            "source_path": "generated/markdown_clean/Patton_2023_ChatGPT_for_Social_Work_Science_Ethical.md",
+            "sha256": "sha256:fbd051643e9b25e079948ddeef2d9a7d70e0a1a1343f5b8e953a233e25a96330",
+            "source_url": "https://doi.org/10.1086/726042",
+            "locator": "Publisher title page and author block in existing Docling conversion"
+          }
         ]
       },
-      "knowledge_coverage": "identity_unresolved",
+      "knowledge_doc": "vault/Papers/active-completion-zitlbm8a-chatgpt-social-work-science.md",
+      "knowledge_coverage": "linked",
       "work_id": "work:c54f89d4-e79b-5fd8-9426-6b51b36669e2",
       "identity_basis": "work_version_registry",
       "legacy_work_id": "doi:10.1086/726042",
       "legacy_identity_basis": "doi",
       "version_id": "version:c9a7b396-f86c-50ed-8808-6dc5c513627b",
-      "source_binding": null,
+      "source_binding": {
+        "work_id": "work:c54f89d4-e79b-5fd8-9426-6b51b36669e2",
+        "bibliographic_version_id": "version:c9a7b396-f86c-50ed-8808-6dc5c513627b",
+        "source_version_id": "version:c9a7b396-f86c-50ed-8808-6dc5c513627b",
+        "preferred_version_id": "version:c9a7b396-f86c-50ed-8808-6dc5c513627b",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown_clean/Patton_2023_ChatGPT_for_Social_Work_Science_Ethical.md",
+        "record_id": "ZITLBM8A",
+        "source_version_type": "version_of_record",
+        "source_sha256": "sha256:fbd051643e9b25e079948ddeef2d9a7d70e0a1a1343f5b8e953a233e25a96330",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "ChatGPT for social work science: Ethical challenges and opportunities",
+          "doi": "10.1086/726042"
+        },
+        "version_identity": {
+          "title": "ChatGPT for social work science: Ethical challenges and opportunities",
+          "doi": "10.1086/726042"
+        }
+      },
       "source_hold": null,
       "version_type": "version_of_record",
       "version_date": "2023",
@@ -4701,6 +4903,24 @@
         "severity": null,
         "affected_categories": []
       },
+      "knowledge_authority": {
+        "status": "ai-agent-reviewed",
+        "prepared_by": {
+          "agent-id": "/root/knowledge_completion",
+          "model": "gpt-5.6-sol",
+          "prepared-at": "2026-09-21",
+          "artifact-review-status": "ai-agent-reviewed"
+        },
+        "source_representation": {
+          "path": "generated/markdown_clean/Patton_2023_ChatGPT_for_Social_Work_Science_Ethical.md",
+          "sha256": "sha256:fbd051643e9b25e079948ddeef2d9a7d70e0a1a1343f5b8e953a233e25a96330",
+          "version-id": "version:c9a7b396-f86c-50ed-8808-6dc5c513627b",
+          "version-type": "version_of_record",
+          "source-url": "https://doi.org/10.1086/726042",
+          "is-preferred-version": true,
+          "boundary": "The preparing agent read the complete hash-bound Docling conversion. Its text was available in linearised form, while visual page layout was not independently inspected. The source hash follows the repository artifact_hash contract, which normalises CRLF to LF for text files."
+        }
+      },
       "zotero_library": {
         "group_id": "6080294",
         "observed_on": "2026-09-21",
@@ -4713,32 +4933,108 @@
     {
       "id": "QI5AYE4V",
       "title": "Algorithmic decision-making in social work practice and pedagogy: Confronting the competency/critique dilemma",
-      "author_year": "McDonald et al. (2023)",
-      "authors": "McDonald, C.; Marston, G.; Buckley, A.",
+      "author_year": "Paul James (2023)",
+      "authors": "Paul James; Jason Lal; Ashley Liao; Liam Magee; Karen Soldatic",
       "year": 2023,
       "doi": "10.1080/02615479.2023.2195425",
       "url": "",
       "abstract": "Explores tensions between training social workers for technologically-driven environments and engaging students in critical theories acknowledging unequal power distributions that technological change reinforces. Introduces algorithmic literacy centered on understanding critical limitations of algorithmic decision-making systems. Argues that adding social work subjects on ADM alone proves insufficient; students need opportunities to develop algorithmic literacy enabling them to ask appropriate q",
       "item_type": "journalarticle",
       "journal": "",
-      "knowledge_doc": null,
-      "knowledge_doc_candidate": {
-        "path": "vault/Papers/Algorithmic decision-making in social work practice and pedagogy- confronting the competency-critique dilemma.md",
-        "basis": "legacy_title_candidate",
-        "embedded_source_file": "James_2023_Algorithmic_decision-making_in_social_work.md",
-        "manifest_source_file": null,
-        "reasons": [
-          "manifest_identity_not_allowed",
-          "embedded_source_file_mismatch"
+      "ai_metadata_correction": {
+        "record_id": "QI5AYE4V",
+        "base_sha256": "sha256:857565220880af6b8927fbd395700b9531ac1145253dbbab692bb4f4d83298b9",
+        "agent_id": "/root",
+        "model": "gpt-6",
+        "reviewed_at": "2026-09-21T18:15:32.418786+00:00",
+        "findings": "Read title-page author sequence in the preserved publisher conversion and checked the reconciled live Zotero records. Historical alias authors disagree with the original publication. Live group records already have the correct author sequence; no external change is needed.",
+        "authority": "ai-source-reviewed-metadata",
+        "changes": [
+          {
+            "field": "creators",
+            "before": [
+              {
+                "creatorType": "author",
+                "firstName": "C.",
+                "lastName": "McDonald"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "G.",
+                "lastName": "Marston"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "A.",
+                "lastName": "Buckley"
+              }
+            ],
+            "after": [
+              {
+                "creatorType": "author",
+                "firstName": "Paul",
+                "lastName": "James"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "Jason",
+                "lastName": "Lal"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "Ashley",
+                "lastName": "Liao"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "Liam",
+                "lastName": "Magee"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "Karen",
+                "lastName": "Soldatic"
+              }
+            ],
+            "reason": "Restore the author sequence printed in the original publication, preserving the historical record and its annotations."
+          }
+        ],
+        "evidence": [
+          {
+            "source_path": "generated/markdown_clean/James_2023_Algorithmic_decision-making_in_social_work.md",
+            "sha256": "sha256:0eaf52a70efb9579f2b1b8bf5df9e674cf57690b8e3f78c654d2bfea232ea95a",
+            "source_url": "https://doi.org/10.1080/02615479.2023.2195425",
+            "locator": "Publisher title page and author block in existing Docling conversion"
+          }
         ]
       },
-      "knowledge_coverage": "identity_unresolved",
+      "knowledge_doc": "vault/Papers/active-completion-qi5aye4v-algorithmic-decision-making-pedagogy.md",
+      "knowledge_coverage": "linked",
       "work_id": "work:5f49f95b-dcfe-5778-8376-a313cb039d4d",
       "identity_basis": "work_version_registry",
       "legacy_work_id": "doi:10.1080/02615479.2023.2195425",
       "legacy_identity_basis": "doi",
       "version_id": "version:2e650cfc-0147-5778-ab55-ed2e17a4f86b",
-      "source_binding": null,
+      "source_binding": {
+        "work_id": "work:5f49f95b-dcfe-5778-8376-a313cb039d4d",
+        "bibliographic_version_id": "version:2e650cfc-0147-5778-ab55-ed2e17a4f86b",
+        "source_version_id": "version:2e650cfc-0147-5778-ab55-ed2e17a4f86b",
+        "preferred_version_id": "version:2e650cfc-0147-5778-ab55-ed2e17a4f86b",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown_clean/James_2023_Algorithmic_decision-making_in_social_work.md",
+        "record_id": "QI5AYE4V",
+        "source_version_type": "version_of_record",
+        "source_sha256": "sha256:0eaf52a70efb9579f2b1b8bf5df9e674cf57690b8e3f78c654d2bfea232ea95a",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "Algorithmic decision-making in social work practice and pedagogy: Confronting the competency/critique dilemma",
+          "doi": "10.1080/02615479.2023.2195425"
+        },
+        "version_identity": {
+          "title": "Algorithmic decision-making in social work practice and pedagogy: Confronting the competency/critique dilemma",
+          "doi": "10.1080/02615479.2023.2195425"
+        }
+      },
       "source_hold": null,
       "version_type": "version_of_record",
       "version_date": "2023",
@@ -4806,6 +5102,24 @@
         "disagreement_type": null,
         "severity": null,
         "affected_categories": []
+      },
+      "knowledge_authority": {
+        "status": "ai-agent-reviewed",
+        "prepared_by": {
+          "agent-id": "/root/knowledge_completion",
+          "model": "gpt-5.6-sol",
+          "prepared-at": "2026-09-21",
+          "artifact-review-status": "ai-agent-reviewed"
+        },
+        "source_representation": {
+          "path": "generated/markdown_clean/James_2023_Algorithmic_decision-making_in_social_work.md",
+          "sha256": "sha256:0eaf52a70efb9579f2b1b8bf5df9e674cf57690b8e3f78c654d2bfea232ea95a",
+          "version-id": "version:2e650cfc-0147-5778-ab55-ed2e17a4f86b",
+          "version-type": "version_of_record",
+          "source-url": "https://doi.org/10.1080/02615479.2023.2195425",
+          "is-preferred-version": true,
+          "boundary": "The preparing agent read the complete hash-bound Docling conversion. Its text and linearised cases were available, while figures and visual page layout were not independently inspected. The source hash follows the repository artifact_hash contract, which normalises CRLF to LF for text files."
+        }
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -5035,12 +5349,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/knowledge_documents",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/markdown_clean/J7V3AAQT.md",
@@ -7371,12 +7685,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/knowledge_documents",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/markdown_clean/Baker_2025_Artificial_intelligence_in_social_work_An_EPIC.md",
@@ -9326,12 +9640,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/knowledge_documents",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/markdown_clean/Baker_2025_Artificial_intelligence_in_social_work_An_EPIC.md",
@@ -9477,24 +9791,33 @@
       "abstract": "The world is experiencing an accelerating digital transformation. One aspect of this is the implementation of...[source](https://www.google.com/search?q=https://www.aminer.cn/pub/645d0410d68f896efa94d024/algorithmic-decision-making-in-social-work-practice-and-pedagogy-confronting-the-competency)",
       "item_type": "journalarticle",
       "journal": "",
-      "knowledge_doc": null,
-      "knowledge_doc_candidate": {
-        "path": "vault/Papers/Algorithmic decision-making in social work practice and pedagogy- confronting the competency-critique dilemma.md",
-        "basis": "legacy_title_candidate",
-        "embedded_source_file": "James_2023_Algorithmic_decision-making_in_social_work.md",
-        "manifest_source_file": null,
-        "reasons": [
-          "manifest_identity_not_allowed",
-          "embedded_source_file_mismatch"
-        ]
-      },
-      "knowledge_coverage": "identity_unresolved",
+      "knowledge_doc": "vault/Papers/active-completion-qi5aye4v-algorithmic-decision-making-pedagogy.md",
+      "knowledge_coverage": "linked",
       "work_id": "work:5f49f95b-dcfe-5778-8376-a313cb039d4d",
       "identity_basis": "work_version_registry",
       "legacy_work_id": "doi:10.1080/02615479.2023.2195425",
       "legacy_identity_basis": "doi",
       "version_id": "version:2e650cfc-0147-5778-ab55-ed2e17a4f86b",
-      "source_binding": null,
+      "source_binding": {
+        "work_id": "work:5f49f95b-dcfe-5778-8376-a313cb039d4d",
+        "bibliographic_version_id": "version:2e650cfc-0147-5778-ab55-ed2e17a4f86b",
+        "source_version_id": "version:2e650cfc-0147-5778-ab55-ed2e17a4f86b",
+        "preferred_version_id": "version:2e650cfc-0147-5778-ab55-ed2e17a4f86b",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown_clean/James_2023_Algorithmic_decision-making_in_social_work.md",
+        "record_id": "H59BNSX8",
+        "source_version_type": "version_of_record",
+        "source_sha256": "sha256:0eaf52a70efb9579f2b1b8bf5df9e674cf57690b8e3f78c654d2bfea232ea95a",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "Algorithmic decision-making in social work practice and pedagogy: Confronting the competency/critique dilemma",
+          "doi": "10.1080/02615479.2023.2195425"
+        },
+        "version_identity": {
+          "title": "Algorithmic decision-making in social work practice and pedagogy: Confronting the competency/critique dilemma",
+          "doi": "10.1080/02615479.2023.2195425"
+        }
+      },
       "source_hold": null,
       "version_type": "version_of_record",
       "version_date": "2023",
@@ -9582,6 +9905,24 @@
         "disagreement_type": null,
         "severity": null,
         "affected_categories": []
+      },
+      "knowledge_authority": {
+        "status": "ai-agent-reviewed",
+        "prepared_by": {
+          "agent-id": "/root/knowledge_completion",
+          "model": "gpt-5.6-sol",
+          "prepared-at": "2026-09-21",
+          "artifact-review-status": "ai-agent-reviewed"
+        },
+        "source_representation": {
+          "path": "generated/markdown_clean/James_2023_Algorithmic_decision-making_in_social_work.md",
+          "sha256": "sha256:0eaf52a70efb9579f2b1b8bf5df9e674cf57690b8e3f78c654d2bfea232ea95a",
+          "version-id": "version:2e650cfc-0147-5778-ab55-ed2e17a4f86b",
+          "version-type": "version_of_record",
+          "source-url": "https://doi.org/10.1080/02615479.2023.2195425",
+          "is-preferred-version": true,
+          "boundary": "The preparing agent read the complete hash-bound Docling conversion. Its text and linearised cases were available, while figures and visual page layout were not independently inspected. The source hash follows the repository artifact_hash contract, which normalises CRLF to LF for text files."
+        }
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -9952,14 +10293,33 @@
       "abstract": "Ethical framework for using LLMs in social work research. Recommends transparency, verification, authorship integrity, anti-plagiarism, and inclusion/social justice to counter bias. Positions LLMs as assistive tools requiring critical human oversight.",
       "item_type": "journalarticle",
       "journal": "",
-      "knowledge_doc": "vault/Papers/ChatGPT for Social Work Science- Ethical Challenges and Opportunities.md",
+      "knowledge_doc": "vault/Papers/active-completion-zitlbm8a-chatgpt-social-work-science.md",
       "knowledge_coverage": "linked",
       "work_id": "work:c54f89d4-e79b-5fd8-9426-6b51b36669e2",
       "identity_basis": "work_version_registry",
       "legacy_work_id": "doi:10.1086/726042",
       "legacy_identity_basis": "doi",
       "version_id": "version:c9a7b396-f86c-50ed-8808-6dc5c513627b",
-      "source_binding": null,
+      "source_binding": {
+        "work_id": "work:c54f89d4-e79b-5fd8-9426-6b51b36669e2",
+        "bibliographic_version_id": "version:c9a7b396-f86c-50ed-8808-6dc5c513627b",
+        "source_version_id": "version:c9a7b396-f86c-50ed-8808-6dc5c513627b",
+        "preferred_version_id": "version:c9a7b396-f86c-50ed-8808-6dc5c513627b",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown_clean/Patton_2023_ChatGPT_for_Social_Work_Science_Ethical.md",
+        "record_id": "LGYFN6JK",
+        "source_version_type": "version_of_record",
+        "source_sha256": "sha256:fbd051643e9b25e079948ddeef2d9a7d70e0a1a1343f5b8e953a233e25a96330",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "ChatGPT for social work science: Ethical challenges and opportunities",
+          "doi": "10.1086/726042"
+        },
+        "version_identity": {
+          "title": "ChatGPT for social work science: Ethical challenges and opportunities",
+          "doi": "10.1086/726042"
+        }
+      },
       "source_hold": null,
       "version_type": "version_of_record",
       "version_date": "2023",
@@ -10049,6 +10409,24 @@
         "disagreement_type": null,
         "severity": null,
         "affected_categories": []
+      },
+      "knowledge_authority": {
+        "status": "ai-agent-reviewed",
+        "prepared_by": {
+          "agent-id": "/root/knowledge_completion",
+          "model": "gpt-5.6-sol",
+          "prepared-at": "2026-09-21",
+          "artifact-review-status": "ai-agent-reviewed"
+        },
+        "source_representation": {
+          "path": "generated/markdown_clean/Patton_2023_ChatGPT_for_Social_Work_Science_Ethical.md",
+          "sha256": "sha256:fbd051643e9b25e079948ddeef2d9a7d70e0a1a1343f5b8e953a233e25a96330",
+          "version-id": "version:c9a7b396-f86c-50ed-8808-6dc5c513627b",
+          "version-type": "version_of_record",
+          "source-url": "https://doi.org/10.1086/726042",
+          "is-preferred-version": true,
+          "boundary": "The preparing agent read the complete hash-bound Docling conversion. Its text was available in linearised form, while visual page layout was not independently inspected. The source hash follows the repository artifact_hash contract, which normalises CRLF to LF for text files."
+        }
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -10356,12 +10734,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/knowledge_documents",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/markdown_clean/Baker_2025_Artificial_intelligence_in_social_work_An_EPIC.md",
@@ -14381,11 +14759,11 @@
       "item_type": "blogpost",
       "journal": "",
       "knowledge_doc": null,
-      "knowledge_coverage": "fulltext_ready",
+      "knowledge_coverage": "identity_unresolved",
       "work_id": "work:4842d83e-8ed6-5633-b241-febb6e9c710f",
       "identity_basis": "work_version_registry",
-      "legacy_work_id": "source:FTJM5R8N.md",
-      "legacy_identity_basis": "verified_fulltext",
+      "legacy_work_id": "record:FTJM5R8N",
+      "legacy_identity_basis": "record",
       "version_id": "version:0cf091a3-19ee-58b4-82db-a6ce24d7bcae",
       "source_binding": null,
       "source_hold": null,
@@ -17450,12 +17828,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/knowledge_documents",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/markdown_clean/Baker_2025_Artificial_intelligence_in_social_work_An_EPIC.md",
@@ -17504,7 +17882,15 @@
       "legacy_identity_basis": "doi",
       "version_id": "version:5cd6dab4-d38a-5462-9439-c412a06c9e78",
       "source_binding": null,
-      "source_hold": null,
+      "source_hold": {
+        "artifact": "generated/verification/historical-resolution-2026-09-05.json#/work_resolutions/work:f911df3d-1d6b-55f2-bc39-f06d4d4af206",
+        "sha256": "sha256:0f0c9a2a1475669624bb8c23bb993b94e36359c164568b0136a17915aa5e31e6",
+        "kind": "integrity_hold",
+        "reason": "These separately registered records identify DOI 10.48550/arXiv.2506.18199. The official arXiv page, rechecked on 2026-09-21, identifies v2 as withdrawn with the comment Research is incomplete. The local v1 text and the unpinned bibliography do not establish a current, eligible source. Extend the existing source-integrity restriction to these records without merging Work IDs, changing historical annotations, or mislabelling v1 as the withdrawn revision.",
+        "agent_id": "/root",
+        "model": "gpt-6-astra",
+        "reviewed_at": "2026-09-21T18:42:39.727669+00:00"
+      },
       "version_type": "preprint",
       "version_date": "2024",
       "peer_review_status": "not_established",
@@ -17609,14 +17995,33 @@
       "abstract": "Develops \"disruptive-disrupting\" framework for analyzing generative AI in social work research with concrete recommendations for researchers and journal editors. Emphasizes transparency and accountability requiring researchers to fully document AI use, disclose prompts, and take responsibility for AI-generated content. Argues that continuous education about AI construction, limitations, and ethical considerations is essential for developing appropriate trust in LLM systems.",
       "item_type": "journalarticle",
       "journal": "",
-      "knowledge_doc": "vault/Papers/Recommendations for social work researchers and journal editors on the use of generative AI and large language models.md",
+      "knowledge_doc": "vault/Papers/active-completion-amyzfaph-generative-ai-social-work-research.md",
       "knowledge_coverage": "linked",
       "work_id": "work:e1ca8a4c-5cc2-5e35-b3cc-375950a07405",
       "identity_basis": "work_version_registry",
       "legacy_work_id": "doi:10.1086/726021",
       "legacy_identity_basis": "doi",
       "version_id": "version:0e874262-87ce-5928-962b-758a55a98646",
-      "source_binding": null,
+      "source_binding": {
+        "work_id": "work:e1ca8a4c-5cc2-5e35-b3cc-375950a07405",
+        "bibliographic_version_id": "version:0e874262-87ce-5928-962b-758a55a98646",
+        "source_version_id": "version:0e874262-87ce-5928-962b-758a55a98646",
+        "preferred_version_id": "version:0e874262-87ce-5928-962b-758a55a98646",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown_clean/Victor_2023_Recommendations_for_social_work_researchers_and.md",
+        "record_id": "4PK8UN82",
+        "source_version_type": "version_of_record",
+        "source_sha256": "sha256:faee9d1c7150bfe9d53dbfc620c2237d70e32fe737a2fdaa4e7116a3e6ac7225",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "Recommendations for social work researchers and journal editors on the use of generative AI and large language models",
+          "doi": "10.1086/726021"
+        },
+        "version_identity": {
+          "title": "Recommendations for social work researchers and journal editors on the use of generative AI and large language models",
+          "doi": "10.1086/726021"
+        }
+      },
       "source_hold": null,
       "version_type": "version_of_record",
       "version_date": "2023",
@@ -17708,6 +18113,24 @@
         "disagreement_type": null,
         "severity": null,
         "affected_categories": []
+      },
+      "knowledge_authority": {
+        "status": "ai-agent-reviewed",
+        "prepared_by": {
+          "agent-id": "/root/knowledge_completion",
+          "model": "gpt-5.6-sol",
+          "prepared-at": "2026-09-21",
+          "artifact-review-status": "ai-agent-reviewed"
+        },
+        "source_representation": {
+          "path": "generated/markdown_clean/Victor_2023_Recommendations_for_social_work_researchers_and.md",
+          "sha256": "sha256:faee9d1c7150bfe9d53dbfc620c2237d70e32fe737a2fdaa4e7116a3e6ac7225",
+          "version-id": "version:0e874262-87ce-5928-962b-758a55a98646",
+          "version-type": "version_of_record",
+          "source-url": "https://doi.org/10.1086/726021",
+          "is-preferred-version": true,
+          "boundary": "The preparing agent read the complete hash-bound Docling conversion. Its text was available in linearised form, while visual page layout was not independently inspected. The source hash follows the repository artifact_hash contract, which normalises CRLF to LF for text files."
+        }
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -19376,12 +19799,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/knowledge_documents",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/markdown_clean/Baker_2025_Artificial_intelligence_in_social_work_An_EPIC.md",
@@ -19584,7 +20007,15 @@
       "legacy_identity_basis": "doi",
       "version_id": "version:5cd6dab4-d38a-5462-9439-c412a06c9e78",
       "source_binding": null,
-      "source_hold": null,
+      "source_hold": {
+        "artifact": "generated/verification/historical-resolution-2026-09-05.json#/work_resolutions/work:f911df3d-1d6b-55f2-bc39-f06d4d4af206",
+        "sha256": "sha256:0f0c9a2a1475669624bb8c23bb993b94e36359c164568b0136a17915aa5e31e6",
+        "kind": "integrity_hold",
+        "reason": "These separately registered records identify DOI 10.48550/arXiv.2506.18199. The official arXiv page, rechecked on 2026-09-21, identifies v2 as withdrawn with the comment Research is incomplete. The local v1 text and the unpinned bibliography do not establish a current, eligible source. Extend the existing source-integrity restriction to these records without merging Work IDs, changing historical annotations, or mislabelling v1 as the withdrawn revision.",
+        "agent_id": "/root",
+        "model": "gpt-6-astra",
+        "reviewed_at": "2026-09-21T18:42:39.727669+00:00"
+      },
       "version_type": "preprint",
       "version_date": "2024",
       "peer_review_status": "not_established",
@@ -19689,14 +20120,33 @@
       "abstract": "Develops \"disruptive-disrupting\" framework for analyzing generative AI in social work research with concrete recommendations for researchers and journal editors. Emphasizes transparency and accountability requiring researchers to fully document AI use, disclose prompts, and take responsibility for AI-generated content. Argues that continuous education about AI construction, limitations, and ethical considerations is essential for developing appropriate trust in LLM systems.",
       "item_type": "journalarticle",
       "journal": "",
-      "knowledge_doc": "vault/Papers/Recommendations for social work researchers and journal editors on the use of generative AI and large language models.md",
+      "knowledge_doc": "vault/Papers/active-completion-amyzfaph-generative-ai-social-work-research.md",
       "knowledge_coverage": "linked",
       "work_id": "work:e1ca8a4c-5cc2-5e35-b3cc-375950a07405",
       "identity_basis": "work_version_registry",
       "legacy_work_id": "doi:10.1086/726021",
       "legacy_identity_basis": "doi",
       "version_id": "version:0e874262-87ce-5928-962b-758a55a98646",
-      "source_binding": null,
+      "source_binding": {
+        "work_id": "work:e1ca8a4c-5cc2-5e35-b3cc-375950a07405",
+        "bibliographic_version_id": "version:0e874262-87ce-5928-962b-758a55a98646",
+        "source_version_id": "version:0e874262-87ce-5928-962b-758a55a98646",
+        "preferred_version_id": "version:0e874262-87ce-5928-962b-758a55a98646",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown_clean/Victor_2023_Recommendations_for_social_work_researchers_and.md",
+        "record_id": "9YYPYEGY",
+        "source_version_type": "version_of_record",
+        "source_sha256": "sha256:faee9d1c7150bfe9d53dbfc620c2237d70e32fe737a2fdaa4e7116a3e6ac7225",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "Recommendations for social work researchers and journal editors on the use of generative AI and large language models",
+          "doi": "10.1086/726021"
+        },
+        "version_identity": {
+          "title": "Recommendations for social work researchers and journal editors on the use of generative AI and large language models",
+          "doi": "10.1086/726021"
+        }
+      },
       "source_hold": null,
       "version_type": "version_of_record",
       "version_date": "2023",
@@ -19788,6 +20238,24 @@
         "disagreement_type": null,
         "severity": null,
         "affected_categories": []
+      },
+      "knowledge_authority": {
+        "status": "ai-agent-reviewed",
+        "prepared_by": {
+          "agent-id": "/root/knowledge_completion",
+          "model": "gpt-5.6-sol",
+          "prepared-at": "2026-09-21",
+          "artifact-review-status": "ai-agent-reviewed"
+        },
+        "source_representation": {
+          "path": "generated/markdown_clean/Victor_2023_Recommendations_for_social_work_researchers_and.md",
+          "sha256": "sha256:faee9d1c7150bfe9d53dbfc620c2237d70e32fe737a2fdaa4e7116a3e6ac7225",
+          "version-id": "version:0e874262-87ce-5928-962b-758a55a98646",
+          "version-type": "version_of_record",
+          "source-url": "https://doi.org/10.1086/726021",
+          "is-preferred-version": true,
+          "boundary": "The preparing agent read the complete hash-bound Docling conversion. Its text was available in linearised form, while visual page layout was not independently inspected. The source hash follows the repository artifact_hash contract, which normalises CRLF to LF for text files."
+        }
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -21294,12 +21762,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/knowledge_documents",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/markdown_clean/Baker_2025_Artificial_intelligence_in_social_work_An_EPIC.md",
@@ -21714,7 +22182,15 @@
       "legacy_identity_basis": "doi",
       "version_id": "version:5cd6dab4-d38a-5462-9439-c412a06c9e78",
       "source_binding": null,
-      "source_hold": null,
+      "source_hold": {
+        "artifact": "generated/verification/historical-resolution-2026-09-05.json#/work_resolutions/work:f911df3d-1d6b-55f2-bc39-f06d4d4af206",
+        "sha256": "sha256:0f0c9a2a1475669624bb8c23bb993b94e36359c164568b0136a17915aa5e31e6",
+        "kind": "integrity_hold",
+        "reason": "These separately registered records identify DOI 10.48550/arXiv.2506.18199. The official arXiv page, rechecked on 2026-09-21, identifies v2 as withdrawn with the comment Research is incomplete. The local v1 text and the unpinned bibliography do not establish a current, eligible source. Extend the existing source-integrity restriction to these records without merging Work IDs, changing historical annotations, or mislabelling v1 as the withdrawn revision.",
+        "agent_id": "/root",
+        "model": "gpt-6-astra",
+        "reviewed_at": "2026-09-21T18:42:39.727669+00:00"
+      },
       "version_type": "preprint",
       "version_date": "2024",
       "peer_review_status": "not_established",
@@ -21823,14 +22299,33 @@
       "abstract": "Develops \"disruptive-disrupting\" framework for analyzing generative AI in social work research with concrete recommendations for researchers and journal editors. Emphasizes transparency and accountability requiring researchers to fully document AI use, disclose prompts, and take responsibility for AI-generated content. Argues that continuous education about AI construction, limitations, and ethical considerations is essential for developing appropriate trust in LLM systems.",
       "item_type": "journalarticle",
       "journal": "",
-      "knowledge_doc": "vault/Papers/Recommendations for social work researchers and journal editors on the use of generative AI and large language models.md",
+      "knowledge_doc": "vault/Papers/active-completion-amyzfaph-generative-ai-social-work-research.md",
       "knowledge_coverage": "linked",
       "work_id": "work:e1ca8a4c-5cc2-5e35-b3cc-375950a07405",
       "identity_basis": "work_version_registry",
       "legacy_work_id": "doi:10.1086/726021",
       "legacy_identity_basis": "doi",
       "version_id": "version:0e874262-87ce-5928-962b-758a55a98646",
-      "source_binding": null,
+      "source_binding": {
+        "work_id": "work:e1ca8a4c-5cc2-5e35-b3cc-375950a07405",
+        "bibliographic_version_id": "version:0e874262-87ce-5928-962b-758a55a98646",
+        "source_version_id": "version:0e874262-87ce-5928-962b-758a55a98646",
+        "preferred_version_id": "version:0e874262-87ce-5928-962b-758a55a98646",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown_clean/Victor_2023_Recommendations_for_social_work_researchers_and.md",
+        "record_id": "U3AJIXAJ",
+        "source_version_type": "version_of_record",
+        "source_sha256": "sha256:faee9d1c7150bfe9d53dbfc620c2237d70e32fe737a2fdaa4e7116a3e6ac7225",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "Recommendations for social work researchers and journal editors on the use of generative AI and large language models",
+          "doi": "10.1086/726021"
+        },
+        "version_identity": {
+          "title": "Recommendations for social work researchers and journal editors on the use of generative AI and large language models",
+          "doi": "10.1086/726021"
+        }
+      },
       "source_hold": null,
       "version_type": "version_of_record",
       "version_date": "2023",
@@ -21922,6 +22417,24 @@
         "disagreement_type": null,
         "severity": null,
         "affected_categories": []
+      },
+      "knowledge_authority": {
+        "status": "ai-agent-reviewed",
+        "prepared_by": {
+          "agent-id": "/root/knowledge_completion",
+          "model": "gpt-5.6-sol",
+          "prepared-at": "2026-09-21",
+          "artifact-review-status": "ai-agent-reviewed"
+        },
+        "source_representation": {
+          "path": "generated/markdown_clean/Victor_2023_Recommendations_for_social_work_researchers_and.md",
+          "sha256": "sha256:faee9d1c7150bfe9d53dbfc620c2237d70e32fe737a2fdaa4e7116a3e6ac7225",
+          "version-id": "version:0e874262-87ce-5928-962b-758a55a98646",
+          "version-type": "version_of_record",
+          "source-url": "https://doi.org/10.1086/726021",
+          "is-preferred-version": true,
+          "boundary": "The preparing agent read the complete hash-bound Docling conversion. Its text was available in linearised form, while visual page layout was not independently inspected. The source hash follows the repository artifact_hash contract, which normalises CRLF to LF for text files."
+        }
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -22726,106 +23239,33 @@
           }
         ]
       },
-      "knowledge_doc": null,
-      "knowledge_doc_invalidation": {
-        "reason": "bibliographic_identity_corrected",
-        "basis": {
-          "record_id": "Z9DNTBFF",
-          "base_sha256": "sha256:2098aa48604dc172afc14610013a44541f44c0d90891ff31dab57a5735f3eab2",
-          "agent_id": "/root/grounded_chat",
-          "model": "GPT-6",
-          "reviewed_at": "2026-09-05T15:40:49.955416+00:00",
-          "findings": "Explicit editorial reconciliation under delegated best judgment: the distinctive Worst of Both Worlds title and Srinivasan/Bisk surnames identify the ACL 2022 paper. The former initial V. is corrected to Tejas; the previous paraphrased subtitle and 2024 date were wrong. The former URL points to Howard et al. (2024), a separate paper with different authors and title, and must not remain an alias of the corrected Work. No prior user intention is asserted.",
-          "authority": "ai-source-reviewed-metadata",
-          "changes": [
-            {
-              "field": "title",
-              "before": "Worst of both worlds: A comparative analysis of error in language and vision-language models",
-              "after": "Worst of Both Worlds: Biases Compound in Pre-trained Vision-and-Language Models",
-              "reason": "Explicit editorial reconciliation under delegated best judgment: the distinctive Worst of Both Worlds title and Srinivasan/Bisk surnames identify the ACL 2022 paper. The former initial V. is corrected to Tejas; the previous paraphrased subtitle and 2024 date were wrong. The former URL points to Howard et al. (2024), a separate paper with different authors and title, and must not remain an alias of the corrected Work. No prior user intention is asserted."
-            },
-            {
-              "field": "creators",
-              "before": [
-                {
-                  "creatorType": "author",
-                  "firstName": "V.",
-                  "lastName": "Srinivasan"
-                },
-                {
-                  "creatorType": "author",
-                  "firstName": "Y.",
-                  "lastName": "Bisk"
-                }
-              ],
-              "after": [
-                {
-                  "creatorType": "author",
-                  "firstName": "Tejas",
-                  "lastName": "Srinivasan"
-                },
-                {
-                  "creatorType": "author",
-                  "firstName": "Yonatan",
-                  "lastName": "Bisk"
-                }
-              ],
-              "reason": "Explicit editorial reconciliation under delegated best judgment: the distinctive Worst of Both Worlds title and Srinivasan/Bisk surnames identify the ACL 2022 paper. The former initial V. is corrected to Tejas; the previous paraphrased subtitle and 2024 date were wrong. The former URL points to Howard et al. (2024), a separate paper with different authors and title, and must not remain an alias of the corrected Work. No prior user intention is asserted."
-            },
-            {
-              "field": "date",
-              "before": "2024",
-              "after": "2022-07",
-              "reason": "Explicit editorial reconciliation under delegated best judgment: the distinctive Worst of Both Worlds title and Srinivasan/Bisk surnames identify the ACL 2022 paper. The former initial V. is corrected to Tejas; the previous paraphrased subtitle and 2024 date were wrong. The former URL points to Howard et al. (2024), a separate paper with different authors and title, and must not remain an alias of the corrected Work. No prior user intention is asserted."
-            },
-            {
-              "field": "itemType",
-              "before": "report",
-              "after": "conferencePaper",
-              "reason": "Explicit editorial reconciliation under delegated best judgment: the distinctive Worst of Both Worlds title and Srinivasan/Bisk surnames identify the ACL 2022 paper. The former initial V. is corrected to Tejas; the previous paraphrased subtitle and 2024 date were wrong. The former URL points to Howard et al. (2024), a separate paper with different authors and title, and must not remain an alias of the corrected Work. No prior user intention is asserted."
-            },
-            {
-              "field": "DOI",
-              "before": "",
-              "after": "10.18653/v1/2022.gebnlp-1.10",
-              "reason": "Explicit editorial reconciliation under delegated best judgment: the distinctive Worst of Both Worlds title and Srinivasan/Bisk surnames identify the ACL 2022 paper. The former initial V. is corrected to Tejas; the previous paraphrased subtitle and 2024 date were wrong. The former URL points to Howard et al. (2024), a separate paper with different authors and title, and must not remain an alias of the corrected Work. No prior user intention is asserted."
-            },
-            {
-              "field": "url",
-              "before": "https://arxiv.org/html/2405.20152v1",
-              "after": "https://aclanthology.org/2022.gebnlp-1.10/",
-              "reason": "Explicit editorial reconciliation under delegated best judgment: the distinctive Worst of Both Worlds title and Srinivasan/Bisk surnames identify the ACL 2022 paper. The former initial V. is corrected to Tejas; the previous paraphrased subtitle and 2024 date were wrong. The former URL points to Howard et al. (2024), a separate paper with different authors and title, and must not remain an alias of the corrected Work. No prior user intention is asserted."
-            },
-            {
-              "field": "publisher",
-              "before": null,
-              "after": "Association for Computational Linguistics",
-              "reason": "Explicit editorial reconciliation under delegated best judgment: the distinctive Worst of Both Worlds title and Srinivasan/Bisk surnames identify the ACL 2022 paper. The former initial V. is corrected to Tejas; the previous paraphrased subtitle and 2024 date were wrong. The former URL points to Howard et al. (2024), a separate paper with different authors and title, and must not remain an alias of the corrected Work. No prior user intention is asserted."
-            }
-          ],
-          "evidence": [
-            {
-              "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/srinivasan-acl-metadata.json",
-              "sha256": "sha256:1bd368ea46f64845638e9e33731fdf77c0197ff712b7ea97b802d3cb428bf030",
-              "source_url": "https://aclanthology.org/2022.gebnlp-1.10/",
-              "locator": "Title and author header; Cite (ACL); BibTeX and MODS export; PDF link; licensing footer"
-            },
-            {
-              "source_path": "corpus/source-acquisition/residual-resolution-2026-09-05/howard-url-identity.json",
-              "sha256": "sha256:665bd048bdc4e2e80ea0d10ad7e554641f25ee71ff4d2cf039dabc03edf1f526",
-              "source_url": "https://arxiv.org/abs/2405.20152v1",
-              "locator": "citation_meta title/authors; submission_history [v1]"
-            }
-          ]
-        }
-      },
-      "knowledge_coverage": "source_missing",
+      "knowledge_doc": "vault/Papers/active-completion-z9dntbff-gender-bias-vision-language-models.md",
+      "knowledge_coverage": "linked",
       "work_id": "work:ec94cf1c-87bf-5f4d-a840-9dd3b92eefab",
       "identity_basis": "work_version_registry",
       "legacy_work_id": "doi:10.18653/v1/2022.gebnlp-1.10",
       "legacy_identity_basis": "doi",
       "version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "Z9DNTBFF",
+        "work_id": "work:ec94cf1c-87bf-5f4d-a840-9dd3b92eefab",
+        "bibliographic_version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
+        "source_version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
+        "is_preferred_version": true,
+        "source_path": "corpus/source-acquisition/completion-20260921/Z9DNTBFF.identity-bound.md",
+        "source_sha256": "sha256:729606223c6f936d78f837d285ae84f5d18f010b62af7dfa793cce64119fd3c0",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "Worst of Both Worlds: Biases Compound in Pre-trained Vision-and-Language Models",
+          "doi": "10.18653/v1/2022.gebnlp-1.10"
+        },
+        "version_identity": {
+          "title": "Worst of Both Worlds: Biases Compound in Pre-trained Vision-and-Language Models",
+          "doi": "10.18653/v1/2022.gebnlp-1.10"
+        }
+      },
       "source_hold": null,
       "version_type": "version_of_record",
       "version_date": "2022-07",
@@ -22892,6 +23332,24 @@
         "disagreement_type": null,
         "severity": null,
         "affected_categories": []
+      },
+      "knowledge_authority": {
+        "status": "ai-agent-reviewed",
+        "prepared_by": {
+          "agent-id": "/root/knowledge_completion",
+          "model": "gpt-5.6-sol",
+          "prepared-at": "2026-09-21",
+          "artifact-review-status": "ai-agent-reviewed"
+        },
+        "source_representation": {
+          "path": "corpus/source-acquisition/completion-20260921/Z9DNTBFF.identity-bound.md",
+          "sha256": "sha256:729606223c6f936d78f837d285ae84f5d18f010b62af7dfa793cce64119fd3c0",
+          "version-id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
+          "version-type": "version_of_record",
+          "source-url": "https://aclanthology.org/2022.gebnlp-1.10/",
+          "is-preferred-version": true,
+          "boundary": "The preparing agent read the complete hash-bound Docling conversion. Conversion QC for this representation was not complete at preparation time. Formulae were marked as not decoded, and figures and visual layout were not independently inspected. The source hash follows the repository artifact_hash contract, which normalises CRLF to LF for text files."
+        }
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -23935,12 +24393,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/knowledge_documents",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-v2-text.md",
@@ -24854,12 +25312,22 @@
       "abstract": "",
       "item_type": "report",
       "journal": "",
-      "knowledge_doc": "vault/Papers/Debiasing prompts for gender bias in large language models.md",
-      "knowledge_coverage": "linked",
+      "knowledge_doc": null,
+      "knowledge_doc_candidate": {
+        "path": "vault/Papers/Debiasing prompts for gender bias in large language models.md",
+        "basis": "legacy_title_candidate",
+        "embedded_source_file": "Kaneko_2024_Debiasing_prompts_for_gender_bias_in_large.md",
+        "manifest_source_file": null,
+        "reasons": [
+          "manifest_identity_not_allowed",
+          "embedded_source_file_mismatch"
+        ]
+      },
+      "knowledge_coverage": "identity_unresolved",
       "work_id": "work:990eedb3-3515-5180-87eb-2288399e3222",
       "identity_basis": "work_version_registry",
-      "legacy_work_id": "source:Kaneko_2024_Debiasing_prompts_for_gender_bias_in_large.md",
-      "legacy_identity_basis": "verified_fulltext",
+      "legacy_work_id": "record:55ZR64VU",
+      "legacy_identity_basis": "record",
       "version_id": "version:e062e7e2-fc9b-5939-874a-9db16ad5f8e0",
       "source_binding": null,
       "source_hold": null,
@@ -28407,11 +28875,11 @@
       "item_type": "journalarticle",
       "journal": "",
       "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved",
+      "knowledge_coverage": "fulltext_ready",
       "work_id": "work:4cab8171-b278-509a-989f-32e20446537d",
       "identity_basis": "work_version_registry",
-      "legacy_work_id": "record:SSH3LVN6",
-      "legacy_identity_basis": "record",
+      "legacy_work_id": "source:Ulnicane_2024_Artificial_Intelligence_and_Intersectionality.md",
+      "legacy_identity_basis": "verified_fulltext",
       "version_id": "version:f480d29f-0aef-5b6f-99ed-5886ed9c6d82",
       "source_binding": null,
       "source_hold": null,
@@ -36861,8 +37329,8 @@
     },
     {
       "id": "SHJQQTI6",
-      "title": "A Survey on Intersectional Fairness in Machine Learning: Opportunities and Challenges",
-      "author_year": "Gohar & Cheng (2023)",
+      "title": "A Survey on Intersectional Fairness in Machine Learning: Notions, Mitigation, and Challenges",
+      "author_year": "Gohar, U. (2023)",
       "authors": "Gohar, U.; Cheng, L.",
       "year": 2023,
       "doi": "10.24963/ijcai.2023/742",
@@ -36870,14 +37338,59 @@
       "abstract": "Comprehensive survey examining intersectional fairness in machine learning systems beyond traditional binary fairness approaches. Presents taxonomy of intersectional fairness concepts showing how multiple sensitive attributes interact to create unique discrimination forms. Identifies challenges including data sparsity for intersectional groups and bias mitigation complexity. Demonstrates applications in NLP systems, ranking algorithms, and image recognition. Shows traditional fairness metrics fa",
       "item_type": "conferencepaper",
       "journal": "",
-      "knowledge_doc": null,
-      "knowledge_coverage": "fulltext_ready",
+      "ai_metadata_correction": {
+        "record_id": "SHJQQTI6",
+        "base_sha256": "sha256:c2ea8d7f14c10abb68c1185f3d0a7662b7de15703269af65b43973b890adcf6f",
+        "agent_id": "/root",
+        "model": "gpt-6",
+        "reviewed_at": "2026-09-21T18:24:42.238915+00:00",
+        "findings": "Checked the official IJCAI proceedings page and the independently acquired, exact publisher PDF. DOI and authors identify the Notions, Mitigation, and Challenges article. Applied the same title-only correction to the live group with item-version protection and verified all unrelated fields by read-back.",
+        "authority": "ai-source-reviewed-metadata",
+        "changes": [
+          {
+            "field": "title",
+            "before": "A Survey on Intersectional Fairness in Machine Learning: Opportunities and Challenges",
+            "after": "A Survey on Intersectional Fairness in Machine Learning: Notions, Mitigation, and Challenges",
+            "reason": "Restore the actual title published under the existing DOI."
+          }
+        ],
+        "evidence": [
+          {
+            "source_path": "corpus/source-acquisition/completion-20260921/shjqqti6-publisher-metadata.txt",
+            "sha256": "sha256:1f126fb6c993122d0ab5f479cfe51e14d1aa99abdc0d3dd49533826bac998c46",
+            "source_url": "https://www.ijcai.org/proceedings/2023/742",
+            "locator": "Official proceedings title, authors and DOI in minimal publisher metadata capture",
+            "quote": "A Survey on Intersectional Fairness in Machine Learning: Notions, Mitigation, and Challenges"
+          }
+        ]
+      },
+      "knowledge_doc": "vault/Papers/active-completion-shjqqti6-intersectional-fairness-machine-learning.md",
+      "knowledge_coverage": "linked",
       "work_id": "work:6ef2b617-d42a-5df1-b3d6-081bec49e4a2",
       "identity_basis": "work_version_registry",
       "legacy_work_id": "doi:10.24963/ijcai.2023/742",
       "legacy_identity_basis": "doi",
       "version_id": "version:8c9eb11a-47da-5afe-8a50-a00659cb9455",
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "SHJQQTI6",
+        "work_id": "work:6ef2b617-d42a-5df1-b3d6-081bec49e4a2",
+        "bibliographic_version_id": "version:8c9eb11a-47da-5afe-8a50-a00659cb9455",
+        "source_version_id": "version:8c9eb11a-47da-5afe-8a50-a00659cb9455",
+        "source_version_type": "unknown",
+        "preferred_version_id": "version:8c9eb11a-47da-5afe-8a50-a00659cb9455",
+        "is_preferred_version": true,
+        "source_path": "corpus/source-acquisition/completion-20260921/SHJQQTI6-reading.md",
+        "source_sha256": "sha256:3ff6ed0113e1c1f4eb3d1447f5b3bf2a7fa03a7195345560215a6cb070d36c76",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "A Survey on Intersectional Fairness in Machine Learning: Notions, Mitigation, and Challenges",
+          "doi": "10.24963/ijcai.2023/742"
+        },
+        "version_identity": {
+          "title": "A Survey on Intersectional Fairness in Machine Learning: Notions, Mitigation, and Challenges",
+          "doi": "10.24963/ijcai.2023/742"
+        }
+      },
       "source_hold": null,
       "version_type": "unknown",
       "version_date": "2023",
@@ -36958,6 +37471,24 @@
         "disagreement_type": null,
         "severity": null,
         "affected_categories": []
+      },
+      "knowledge_authority": {
+        "status": "ai-agent-reviewed",
+        "prepared_by": {
+          "agent-id": "/root/knowledge_completion",
+          "model": "gpt-5.6-sol",
+          "prepared-at": "2026-09-21",
+          "artifact-review-status": "ai-agent-reviewed"
+        },
+        "source_representation": {
+          "path": "corpus/source-acquisition/completion-20260921/SHJQQTI6-reading.md",
+          "sha256": "sha256:3ff6ed0113e1c1f4eb3d1447f5b3bf2a7fa03a7195345560215a6cb070d36c76",
+          "version-id": "version:8c9eb11a-47da-5afe-8a50-a00659cb9455",
+          "version-type": "unknown",
+          "source-url": "https://www.ijcai.org/proceedings/2023/742",
+          "is-preferred-version": true,
+          "boundary": "The complete publisher conversion is supplemented by attributed reconstructions of the equations, table and semantic figure descriptions. Independent visual conversion QC accepts this representation for text assessment. Original figure layout and specialist mathematical copy-editing remain outside that check."
+        }
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -39386,12 +39917,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/prism_assessment",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/markdown_clean/QUV5DQH3.md",
@@ -39423,11 +39954,11 @@
       "item_type": "report",
       "journal": "",
       "knowledge_doc": null,
-      "knowledge_coverage": "fulltext_ready",
+      "knowledge_coverage": "identity_unresolved",
       "work_id": "work:ce611f7b-8bda-5e6a-9ca9-3b46a8027694",
       "identity_basis": "work_version_registry",
-      "legacy_work_id": "source:Gengler_2024_Faires_KI-Prompting_–_Ein_Leitfaden_für.md",
-      "legacy_identity_basis": "verified_fulltext",
+      "legacy_work_id": "record:4KMMPA6A",
+      "legacy_identity_basis": "record",
       "version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
       "source_binding": null,
       "source_hold": null,
@@ -39910,14 +40441,33 @@
       "abstract": "Der Konferenzbeitrag widerlegt die Annahme algorithmischer Neutralität aus feministischer Perspektive. Die Autoren zeigen, wie KI-Systeme Ungleichheiten perpetuieren und eingeschriebene Machtverhältnisse reflektieren, und erschließen Cyberfeminismus und verwandte Theorierahmen als Werkzeuge für inklusiveres, transparenteres KI-Design. Gefordert werden ethisch verantwortliche KI-Systeme, die tradierte Machtstrukturen herausfordern. Eine ergänzende Befragung ergab, dass Befragte algorithmischen Bi",
       "item_type": "conferencepaper",
       "journal": "",
-      "knowledge_doc": null,
-      "knowledge_coverage": "source_missing",
+      "knowledge_doc": "vault/Papers/active-completion-v8sbeh4e-feminist-ai-neutrality.md",
+      "knowledge_coverage": "linked",
       "work_id": "work:ce1b3961-e4e4-5bd2-a6a8-b97ef7fbc90f",
       "identity_basis": "work_version_registry",
       "legacy_work_id": "doi:10.2991/978-94-6239-618-0_20",
       "legacy_identity_basis": "doi",
       "version_id": "version:2c5cc7f8-4580-5ff0-b423-f45df473a82c",
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "V8SBEH4E",
+        "work_id": "work:ce1b3961-e4e4-5bd2-a6a8-b97ef7fbc90f",
+        "bibliographic_version_id": "version:2c5cc7f8-4580-5ff0-b423-f45df473a82c",
+        "source_version_id": "version:2c5cc7f8-4580-5ff0-b423-f45df473a82c",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:2c5cc7f8-4580-5ff0-b423-f45df473a82c",
+        "is_preferred_version": true,
+        "source_path": "corpus/source-acquisition/completion-20260921/V8SBEH4E.identity-bound.md",
+        "source_sha256": "sha256:e899385c54b3118d6eec98a0195a659ff18fc33c4c0dcc3a9e8cccda7a244353",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "Algorithm beyond Neutrality: Feminist Approaches to Redefining Artificial Intelligence",
+          "doi": "10.2991/978-94-6239-618-0_20"
+        },
+        "version_identity": {
+          "title": "Algorithm beyond Neutrality: Feminist Approaches to Redefining Artificial Intelligence",
+          "doi": "10.2991/978-94-6239-618-0_20"
+        }
+      },
       "source_hold": null,
       "version_type": "version_of_record",
       "version_date": "2026",
@@ -39981,6 +40531,24 @@
         "severity": null,
         "affected_categories": []
       },
+      "knowledge_authority": {
+        "status": "ai-agent-reviewed",
+        "prepared_by": {
+          "agent-id": "/root/knowledge_completion",
+          "model": "gpt-5.6-sol",
+          "prepared-at": "2026-09-21",
+          "artifact-review-status": "ai-agent-reviewed"
+        },
+        "source_representation": {
+          "path": "corpus/source-acquisition/completion-20260921/V8SBEH4E.identity-bound.md",
+          "sha256": "sha256:e899385c54b3118d6eec98a0195a659ff18fc33c4c0dcc3a9e8cccda7a244353",
+          "version-id": "version:2c5cc7f8-4580-5ff0-b423-f45df473a82c",
+          "version-type": "version_of_record",
+          "source-url": "https://www.atlantis-press.com/proceedings/aihle-25/126022241",
+          "is-preferred-version": true,
+          "boundary": "The preparing agent read the complete hash-bound Docling conversion. Conversion QC for this representation was not complete at preparation time. Figures and visual layout were not independently inspected. The source hash follows the repository artifact_hash contract, which normalises CRLF to LF for text files."
+        }
+      },
       "zotero_library": {
         "group_id": "6080294",
         "observed_on": "2026-09-21",
@@ -40001,14 +40569,33 @@
       "abstract": "",
       "item_type": "manuscript",
       "journal": "",
-      "knowledge_doc": null,
-      "knowledge_coverage": "source_missing",
+      "knowledge_doc": "vault/Papers/active-completion-9zkzqm63-bias-mental-health-llms.md",
+      "knowledge_coverage": "linked",
       "work_id": "work:5aaa355e-8f65-5850-a132-43fa3458195e",
       "identity_basis": "work_version_registry",
       "legacy_work_id": "doi:10.48550/arxiv.2406.12033",
       "legacy_identity_basis": "doi",
       "version_id": "version:c517e367-0d9c-5d26-ad49-db0c2aa52ec1",
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "9ZKZQM63",
+        "work_id": "work:5aaa355e-8f65-5850-a132-43fa3458195e",
+        "bibliographic_version_id": "version:c517e367-0d9c-5d26-ad49-db0c2aa52ec1",
+        "source_version_id": "version:c517e367-0d9c-5d26-ad49-db0c2aa52ec1",
+        "source_version_type": "preprint",
+        "preferred_version_id": "version:c517e367-0d9c-5d26-ad49-db0c2aa52ec1",
+        "is_preferred_version": true,
+        "source_path": "corpus/source-acquisition/completion-20260921/9ZKZQM63.identity-bound.md",
+        "source_sha256": "sha256:bce7b8de4b1bb063064193b7e230d1825cd235f72add20aca038807e281cf14c",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "Unveiling and Mitigating Bias in Mental Health Analysis with Large Language Models",
+          "doi": "10.48550/arxiv.2406.12033"
+        },
+        "version_identity": {
+          "title": "Unveiling and Mitigating Bias in Mental Health Analysis with Large Language Models",
+          "arxiv": "2406.12033v2"
+        }
+      },
       "source_hold": null,
       "version_type": "preprint",
       "version_date": "2024/06/19",
@@ -40070,6 +40657,24 @@
         "disagreement_type": null,
         "severity": null,
         "affected_categories": []
+      },
+      "knowledge_authority": {
+        "status": "ai-agent-reviewed",
+        "prepared_by": {
+          "agent-id": "/root/knowledge_completion",
+          "model": "gpt-5.6-sol",
+          "prepared-at": "2026-09-21",
+          "artifact-review-status": "ai-agent-reviewed"
+        },
+        "source_representation": {
+          "path": "corpus/source-acquisition/completion-20260921/9ZKZQM63.identity-bound.md",
+          "sha256": "sha256:bce7b8de4b1bb063064193b7e230d1825cd235f72add20aca038807e281cf14c",
+          "version-id": "version:c517e367-0d9c-5d26-ad49-db0c2aa52ec1",
+          "version-type": "preprint",
+          "source-url": "https://arxiv.org/pdf/2406.12033v2",
+          "is-preferred-version": true,
+          "boundary": "The preparing agent read the complete hash-bound Docling conversion of arXiv revision 2406.12033v2. Conversion QC for this representation was not complete at preparation time. Figures and visual layout were not independently inspected. The source hash follows the repository artifact_hash contract, which normalises CRLF to LF for text files."
+        }
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -40181,14 +40786,33 @@
       "abstract": "",
       "item_type": "journalarticle",
       "journal": "BMC Medical Informatics and Decision Making",
-      "knowledge_doc": null,
-      "knowledge_coverage": "source_missing",
+      "knowledge_doc": "vault/Papers/active-completion-j4k3xa52-gender-bias-long-term-care-llms.md",
+      "knowledge_coverage": "linked",
       "work_id": "work:73eda891-2e28-587a-a7fb-a950323a0dad",
       "identity_basis": "work_version_registry",
       "legacy_work_id": "doi:10.1186/s12911-025-03118-0",
       "legacy_identity_basis": "doi",
       "version_id": "version:38ec2a2e-9a8f-5837-bd7d-7efad6f0f743",
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "J4K3XA52",
+        "work_id": "work:73eda891-2e28-587a-a7fb-a950323a0dad",
+        "bibliographic_version_id": "version:38ec2a2e-9a8f-5837-bd7d-7efad6f0f743",
+        "source_version_id": "version:38ec2a2e-9a8f-5837-bd7d-7efad6f0f743",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:38ec2a2e-9a8f-5837-bd7d-7efad6f0f743",
+        "is_preferred_version": true,
+        "source_path": "corpus/source-acquisition/completion-20260921/J4K3XA52-reading.md",
+        "source_sha256": "sha256:c7f0d251037326c79a930f63ae0de319b8336f7081326bc48ee906f0eace57c2",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "Evaluating gender bias in large language models in long-term care",
+          "doi": "10.1186/s12911-025-03118-0"
+        },
+        "version_identity": {
+          "title": "Evaluating gender bias in large language models in long-term care",
+          "doi": "10.1186/s12911-025-03118-0"
+        }
+      },
       "source_hold": null,
       "version_type": "version_of_record",
       "version_date": "2025/08/11",
@@ -40250,6 +40874,24 @@
         "disagreement_type": null,
         "severity": null,
         "affected_categories": []
+      },
+      "knowledge_authority": {
+        "status": "ai-agent-reviewed",
+        "prepared_by": {
+          "agent-id": "/root/knowledge_completion",
+          "model": "gpt-5.6-sol",
+          "prepared-at": "2026-09-21",
+          "artifact-review-status": "ai-agent-reviewed"
+        },
+        "source_representation": {
+          "path": "corpus/source-acquisition/completion-20260921/J4K3XA52-reading.md",
+          "sha256": "sha256:c7f0d251037326c79a930f63ae0de319b8336f7081326bc48ee906f0eace57c2",
+          "version-id": "version:38ec2a2e-9a8f-5837-bd7d-7efad6f0f743",
+          "version-type": "version_of_record",
+          "source-url": "https://doi.org/10.1186/s12911-025-03118-0",
+          "is-preferred-version": true,
+          "boundary": "The complete publisher text retains source-specific attribution and independently checked repairs to Equations 1-3 and Tables 5 and 9. Visual QC accepts the final text representation. Specialist mathematical copy-editing remains outside the review."
+        }
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -41583,12 +42225,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/knowledge_documents",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/f403809ad4503150093a.md",
@@ -42520,12 +43162,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/prism_assessment",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/c38bdbce0e8dbb82ce3f.md",
@@ -42736,12 +43378,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/knowledge_documents",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/926800fc523bebd0420c.md",
@@ -42863,12 +43505,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/prism_assessment",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/2e6aa61930deea324751.md",
@@ -42989,12 +43631,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/knowledge_documents",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/aff73b4c6b2eab31b8f7.md",
@@ -43116,12 +43758,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/prism_assessment",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/152b1aa29e0dddabe838.md",
@@ -43242,12 +43884,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/knowledge_documents",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/2b57266b9d8b015d2ac2.md",
@@ -43369,12 +44011,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/knowledge_documents",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/4dbe6aa9dfa229e88746.md",
@@ -43496,12 +44138,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/knowledge_documents",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/a1c7e9db9a3dc6caff54.md",
@@ -43623,12 +44265,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/knowledge_documents",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/d3bd00602e07cf40396c.md",
@@ -43750,12 +44392,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/knowledge_documents",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/c42b463f9ba115503a58.md",
@@ -44417,12 +45059,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/prism_assessment",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/136b6db72d8a7b8d390c.md",
@@ -44903,12 +45545,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/prism_assessment",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/e9be7a01361ab7bae7bb.md",
@@ -45389,12 +46031,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/prism_assessment",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/e9fb8b7679eaf1023485.md",
@@ -45515,12 +46157,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/knowledge_documents",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/3cb613d559a8c57c13c1.md",
@@ -45732,12 +46374,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/knowledge_documents",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/4875ad9321dfcfc0aa52.md",
@@ -46129,12 +46771,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/prism_assessment",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/1e429407d9b091311a65.md",
@@ -46345,12 +46987,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/knowledge_documents",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/source-acquisition/codex-websearch-2026/html-markdown/166a9834b422f052b7c5.md",
@@ -46652,12 +47294,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/knowledge_documents",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/4dd9fd2a26f9d7eea07a.md",
@@ -51437,12 +52079,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/prism_assessment",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/markdown_clean/QUV5DQH3.md",
@@ -52145,12 +52787,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/knowledge_documents",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-v2-text.md",
@@ -52182,14 +52824,33 @@
       "abstract": "",
       "item_type": "conferencepaper",
       "journal": "",
-      "knowledge_doc": null,
-      "knowledge_coverage": "source_missing",
+      "knowledge_doc": "vault/Papers/active-completion-z9dntbff-gender-bias-vision-language-models.md",
+      "knowledge_coverage": "linked",
       "work_id": "work:ec94cf1c-87bf-5f4d-a840-9dd3b92eefab",
       "identity_basis": "work_version_registry",
       "legacy_work_id": "doi:10.18653/v1/2022.gebnlp-1.10",
       "legacy_identity_basis": "doi",
       "version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "H3NC9SMQ",
+        "work_id": "work:ec94cf1c-87bf-5f4d-a840-9dd3b92eefab",
+        "bibliographic_version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
+        "source_version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
+        "is_preferred_version": true,
+        "source_path": "corpus/source-acquisition/completion-20260921/Z9DNTBFF.identity-bound.md",
+        "source_sha256": "sha256:729606223c6f936d78f837d285ae84f5d18f010b62af7dfa793cce64119fd3c0",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "Worst of Both Worlds: Biases Compound in Pre-trained Vision-and-Language Models",
+          "doi": "10.18653/v1/2022.gebnlp-1.10"
+        },
+        "version_identity": {
+          "title": "Worst of Both Worlds: Biases Compound in Pre-trained Vision-and-Language Models",
+          "doi": "10.18653/v1/2022.gebnlp-1.10"
+        }
+      },
       "source_hold": null,
       "version_type": "version_of_record",
       "version_date": "2022-07",
@@ -52252,6 +52913,24 @@
         "disagreement_type": null,
         "severity": null,
         "affected_categories": []
+      },
+      "knowledge_authority": {
+        "status": "ai-agent-reviewed",
+        "prepared_by": {
+          "agent-id": "/root/knowledge_completion",
+          "model": "gpt-5.6-sol",
+          "prepared-at": "2026-09-21",
+          "artifact-review-status": "ai-agent-reviewed"
+        },
+        "source_representation": {
+          "path": "corpus/source-acquisition/completion-20260921/Z9DNTBFF.identity-bound.md",
+          "sha256": "sha256:729606223c6f936d78f837d285ae84f5d18f010b62af7dfa793cce64119fd3c0",
+          "version-id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
+          "version-type": "version_of_record",
+          "source-url": "https://aclanthology.org/2022.gebnlp-1.10/",
+          "is-preferred-version": true,
+          "boundary": "The preparing agent read the complete hash-bound Docling conversion. Conversion QC for this representation was not complete at preparation time. Formulae were marked as not decoded, and figures and visual layout were not independently inspected. The source hash follows the repository artifact_hash contract, which normalises CRLF to LF for text files."
+        }
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -52483,12 +53162,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/knowledge_documents",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/markdown_clean/FTJM5R8N.md",
@@ -52802,12 +53481,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/knowledge_documents",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/markdown_clean/J7V3AAQT.md",
@@ -52839,14 +53518,33 @@
       "abstract": "Critical analysis examining fairness and justice implications of predictive algorithms in child protection from both statistical and social justice perspectives. Identifies fundamental problems with using child protection system data: biased sample frames reflecting reporting patterns rather than actual abuse incidence, feedback loops amplifying discrimination, and spurious correlations conflating system surveillance with genuine risk. Demonstrates racial and socioeconomic disparities in child w",
       "item_type": "journalarticle",
       "journal": "",
-      "knowledge_doc": null,
-      "knowledge_coverage": "source_missing",
+      "knowledge_doc": "vault/Papers/active-completion-a2p8mxmy-algorithmic-justice-child-protection.md",
+      "knowledge_coverage": "linked",
       "work_id": "work:9cbefba0-b92b-59a3-8595-a1ac5e9fca72",
       "identity_basis": "work_version_registry",
       "legacy_work_id": "doi:10.3390/socsci8100281",
       "legacy_identity_basis": "doi",
       "version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "QZRHHAE2",
+        "work_id": "work:9cbefba0-b92b-59a3-8595-a1ac5e9fca72",
+        "bibliographic_version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
+        "source_version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown_clean/A2P8MXMY.md",
+        "source_sha256": "sha256:d32cb4bb6e523b1930be2d9ff12d1b78ef1790886d02c13a2014c56e0ca0b025",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "Algorithmic justice in child protection: Statistical fairness, social justice and the implications for practice",
+          "doi": "10.3390/socsci8100281"
+        },
+        "version_identity": {
+          "title": "Algorithmic justice in child protection: Statistical fairness, social justice and the implications for practice",
+          "doi": "10.3390/socsci8100281"
+        }
+      },
       "source_hold": null,
       "version_type": "version_of_record",
       "version_date": "2019",
@@ -52909,6 +53607,24 @@
         "disagreement_type": null,
         "severity": null,
         "affected_categories": []
+      },
+      "knowledge_authority": {
+        "status": "ai-agent-reviewed",
+        "prepared_by": {
+          "agent-id": "/root/knowledge_completion",
+          "model": "gpt-5.6-sol",
+          "prepared-at": "2026-09-21",
+          "artifact-review-status": "ai-agent-reviewed"
+        },
+        "source_representation": {
+          "path": "generated/markdown_clean/A2P8MXMY.md",
+          "sha256": "sha256:d32cb4bb6e523b1930be2d9ff12d1b78ef1790886d02c13a2014c56e0ca0b025",
+          "version-id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
+          "version-type": "version_of_record",
+          "source-url": "https://www.mdpi.com/2076-0760/8/10/281",
+          "is-preferred-version": true,
+          "boundary": "The preparing agent read the complete hash-bound Markdown conversion, including the linearised article text and references. Figures were present only as image placeholders and were not independently inspected. The source binding received a separate identity review, while this distillate remains unreviewed."
+        }
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -53112,12 +53828,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/knowledge_documents",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/markdown_clean/4ZL5Q48E.md",
@@ -53240,12 +53956,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/prism_assessment",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/markdown/R7V99ERA.md",
@@ -53367,12 +54083,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/knowledge_documents",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/markdown_clean/P4YQIKJX.md",
@@ -53586,12 +54302,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/prism_assessment",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/markdown/7FEFMCBZ.md",
@@ -53821,12 +54537,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/knowledge_documents",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "corpus/source-acquisition/checklist-resolution-2026-09-05/trudeau-pmc-original.md",
@@ -53970,12 +54686,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/knowledge_documents",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/markdown_clean/VSZM7CT6.md",
@@ -54188,12 +54904,12 @@
         "affected_categories": []
       },
       "knowledge_authority": {
-        "status": "preparation",
+        "status": "ai-agent-reviewed",
         "prepared_by": {
           "agent-id": "/root/knowledge_documents",
           "model": "gpt-5.6-sol",
           "prepared-at": "2026-09-21",
-          "artifact-review-status": "unreviewed"
+          "artifact-review-status": "ai-agent-reviewed"
         },
         "source_representation": {
           "path": "generated/markdown_clean/BHXDU7VM.md",

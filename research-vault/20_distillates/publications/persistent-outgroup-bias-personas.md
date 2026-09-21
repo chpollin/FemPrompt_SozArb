@@ -7,17 +7,19 @@ work-id: work:6eab81e9-e9ba-57eb-abc0-6c00d7061314
 version-id: version:7e635266-bdb5-5f56-b3a4-b3ac24907c1b
 version-type: version_of_record
 topics:
-  - "[[Bias and Fairness]]"
-status: preparation
+- '[[Bias and Fairness]]'
+status: ai-agent-reviewed
 checked:
   quote: 2026-09-21
+  validation: '2026-09-21'
+  ai-agent-review: '2026-09-21'
 created: 2026-09-21
-updated: 2026-09-21
+updated: '2026-09-21'
 prepared-by:
   agent-id: /root/knowledge_documents
   model: gpt-5.6-sol
   prepared-at: 2026-09-21
-  artifact-review-status: unreviewed
+  artifact-review-status: ai-agent-reviewed
 source-representation:
   path: generated/source-acquisition/codex-websearch-2026/markdown-clean/f403809ad4503150093a.md
   sha256: sha256:452e783653dedcb51fbc1fe1c2966f6804a613d5846e5720844e0d6bd77ea192
@@ -26,6 +28,9 @@ source-representation:
   source-url: https://aclanthology.org/2026.lrec-1.217/
   is-preferred-version: true
   boundary: The preparing agent read the complete hash-bound ACL proceedings Markdown representation and checked the quoted passages. No separate scholarly review has occurred.
+source-review:
+  path: corpus/knowledge-reviews/2026-09-21/T57U8T2K.json
+  sha256: sha256:083687b2dc026e137f2d7c2f325a1f8074f2bc6c8707d049f33eb7dcfa362953
 ---
 
 # Distillate: I Am Not Them: Persistent Outgroup Bias in Large Language Models Arising from Social Identity Persona Setting
@@ -58,4 +63,4 @@ The evidence is restricted to political and gender domains, English, a United St
 
 ## Review boundary
 
-This preparation was produced from the complete hash-bound local ACL source. Quotations were checked. Its `preparation` status is unreviewed and grants no scholarly-review authority.
+This document was prepared from the source representation identified in its metadata. The current review state and its supporting receipt are recorded in the frontmatter. AI review does not establish domain-expert verification or publication approval.

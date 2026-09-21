@@ -197,8 +197,10 @@ def drop_running_headers(text: str) -> str:
 
 def embedded_source_metadata(served_md: Path) -> dict[str, object]:
     """Return the source identity embedded below a knowledge doc's full-text marker."""
+    from src.file_hashing import filesystem_path
+
     try:
-        md = served_md.read_text(encoding="utf-8", errors="replace")
+        md = filesystem_path(served_md).read_text(encoding="utf-8", errors="replace")
     except OSError:
         return {}
     i = md.find("## Full Text")
@@ -486,6 +488,41 @@ def identity_conflicts(
     return conflicts
 
 
+def registered_source_conflicts(paper: dict[str, object], path: Path) -> bool:
+    """Keep a fuzzy legacy match from borrowing another registered Work or Version."""
+    registry_path = ROOT / "corpus/work_version_registry.json"
+    if not paper.get("work_id") or not registry_path.is_file():
+        return False
+    registry = json.loads(registry_path.read_text(encoding="utf-8"))
+    source_work = registry.get("legacy_work_id_index", {}).get(f"source:{path.name}")
+    # A differently named raw conversion may contain the same foreign source.
+    # Exact registered titles outrank fuzzy topic overlap in the legacy cascade.
+    document_titles = {norm(title) for title in source_titles(path)}
+    exact_title = norm(str(paper.get("title") or "")) in document_titles
+    if source_work and source_work != paper["work_id"] and not exact_title:
+        return True
+    if not exact_title and any(
+        work["work_id"] != paper["work_id"]
+        and norm(work.get("canonical_title", "")) in document_titles
+        for work in registry.get("works", [])
+    ):
+        return True
+    try:
+        source_path = path.relative_to(ROOT).as_posix()
+    except ValueError:
+        return False
+    bindings = [
+        binding
+        for binding in registry.get("source_index", {}).values()
+        if binding.get("source_path") == source_path
+    ]
+    return bool(bindings) and not any(
+        binding.get("work_id") == paper["work_id"]
+        and binding.get("bibliographic_version_id") == paper.get("version_id")
+        for binding in bindings
+    )
+
+
 def verified_source(
     paper: dict[str, object],
     path: Path,
@@ -494,7 +531,7 @@ def verified_source(
 ) -> tuple[Path | None, str]:
     """Fail closed on identity conflicts or an unsupported filename-only match."""
     conflicts = identity_conflicts(paper, path, metadata)
-    if "doi" in conflicts:
+    if "doi" in conflicts or registered_source_conflicts(paper, path):
         return None, "mismatch"
     expected = str(paper.get("title") or "")
     document_titles = source_titles(path)
@@ -537,6 +574,8 @@ def curated_source(paper: dict[str, object]) -> tuple[Path | None, str | None]:
     path = base / override["file"]
     if not path.exists():
         raise FileNotFoundError(f"curated full-text source is missing: {path}")
+    if registered_source_conflicts(paper, path):
+        return None, "mismatch"
 
     evidence = override["title_evidence"]
     expected = str(paper.get("title") or "")
@@ -606,6 +645,8 @@ def resolve_docling(
     override_path, override_label = curated_source(paper)
     if override_path is not None:
         return override_path, override_label
+    if override_label == "mismatch":
+        return None, override_label
     # These curated source filenames must also resolve before a generated
     # manifest exists. Requiring the displayed Knowledge Document here would
     # create a manifest -> document link -> source -> manifest cycle.

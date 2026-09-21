@@ -1,0 +1,218 @@
+{
+  "schema": "femprompt-conversion-qc/0.1",
+  "created_at": "2026-09-21T18:46:48.333164+00:00",
+  "scope": "Conversion fidelity for controlled-corpus text assessment only. This QC grants no scientific acceptance, screening decision, or publication authority.",
+  "method": [
+    "Verified PDF and Markdown hashes using canonical project hashing.",
+    "Rendered every PDF page with Poppler pdftoppm at 80 DPI and visually inspected the complete contact sheet for headings, reading order, tables, figures, formulas, and references.",
+    "Inspected SHJQQTI6 pages 1, 2, 3, and 7 separately at full rendered resolution because they contain argument-bearing figures, equations, and the table.",
+    "Read the Markdown headings and the passages surrounding all image, table, and formula placeholders; compared them with the corresponding rendered pages.",
+    "Did not use converter quality scores as fidelity evidence."
+  ],
+  "records": [
+    {
+      "record_id": "AMYZFAPH",
+      "pdf_path": "pipeline/pdfs/Victor_2023_Recommendations_for_social_work_researchers_and.pdf",
+      "markdown_path": "generated/markdown_clean/Victor_2023_Recommendations_for_social_work_researchers_and.md",
+      "pages_total": 15,
+      "pages_visually_inspected": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "result": "accepted_for_text_assessment",
+      "structure": {
+        "headings": "Title and section hierarchy occur in source reading order through conclusion, author notes, acknowledgments, and references.",
+        "reading_order": "Single-column prose remains sequential across all pages.",
+        "tables": "No tables are present in the original PDF.",
+        "figures": "No figures or argument-bearing illustrations are present in the original PDF.",
+        "formulas": "No formulas are present."
+      },
+      "losses": [
+        "The ligatures fi and fl are emitted throughout as /uniFB01 and /uniFB02 tokens, including headings.",
+        "Several word boundaries are joined, including \"introducechallenges\", \"LLMshavethepotential\", and \"Theadvent\".",
+        "Running headers, folios, and page boundaries are not represented."
+      ],
+      "assessment": "The complete prose argument and reference section remain readable and ordered. Ligature and spacing defects require cautious quotation cleanup but do not remove a substantive passage.",
+      "pdf_sha256": "sha256:087d2c926b2104071788bc98875198004025161a92d1ac6ce498ecf3b4047c80",
+      "markdown_sha256": "sha256:faee9d1c7150bfe9d53dbfc620c2237d70e32fe737a2fdaa4e7116a3e6ac7225",
+      "inspection_artifacts": [
+        {
+          "path": "generated/source-acquisition/completion-20260921/conversion-qc/AMYZFAPH-contact-sheet.jpg",
+          "sha256": "sha256:aca9371ea350c1cc301e23f176ef95c086a8fef9395d6990fd23c3298334c20d",
+          "purpose": "all-page visual contact sheet rendered at 80 DPI"
+        }
+      ]
+    },
+    {
+      "record_id": "ZITLBM8A",
+      "pdf_path": "pipeline/pdfs/Patton_2023_ChatGPT_for_Social_Work_Science_Ethical.pdf",
+      "markdown_path": "generated/markdown_clean/Patton_2023_ChatGPT_for_Social_Work_Science_Ethical.md",
+      "pages_total": 10,
+      "pages_visually_inspected": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "result": "accepted_for_text_assessment",
+      "structure": {
+        "headings": "Title and nested topical headings remain in source order through recommendations, conclusion, author notes, acknowledgments, and references.",
+        "reading_order": "Single-column prose remains sequential across all pages.",
+        "tables": "No tables are present in the original PDF.",
+        "figures": "No figures or argument-bearing illustrations are present in the original PDF.",
+        "formulas": "No formulas are present."
+      },
+      "losses": [
+        "The ligatures fi and fl are emitted throughout as /uniFB01 and /uniFB02 tokens, including the confidentiality heading.",
+        "The abstract contains multiple joined words, including \"workscience,exploringopportunitiesandethicalchallengesrelated\" and \"thedeployment\".",
+        "Running headers, folios, and page boundaries are not represented."
+      ],
+      "assessment": "The argument, recommendation list, conclusion, and references remain present and ordered. Token fusion is concentrated but also occurs elsewhere, so exact quotation requires consultation of the PDF.",
+      "pdf_sha256": "sha256:cc2744f7a45f1fe010dc56e0ce42ecbadbd1d383847ad37453937c5ac63084d2",
+      "markdown_sha256": "sha256:fbd051643e9b25e079948ddeef2d9a7d70e0a1a1343f5b8e953a233e25a96330",
+      "inspection_artifacts": [
+        {
+          "path": "generated/source-acquisition/completion-20260921/conversion-qc/ZITLBM8A-contact-sheet.jpg",
+          "sha256": "sha256:6b3e42d1fcb58238595d2f8f5017d534bc47a5c3b48da7cdd5f82bef5b05b0ee",
+          "purpose": "all-page visual contact sheet rendered at 80 DPI"
+        }
+      ]
+    },
+    {
+      "record_id": "QI5AYE4V",
+      "pdf_path": "pipeline/pdfs/James_2023_Algorithmic_decision-making_in_social_work.pdf",
+      "markdown_path": "generated/markdown_clean/James_2023_Algorithmic_decision-making_in_social_work.md",
+      "pages_total": 19,
+      "pages_visually_inspected": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "result": "accepted_for_text_assessment",
+      "structure": {
+        "headings": "Publisher cover, article title, Introduction, case sections, education discussion, conclusion, disclosures, contributor notes, ORCID, and references are present in source order.",
+        "reading_order": "The article body follows the two-column source reading order. Publisher-cover metadata and first-page contact/licence matter interrupt the opening paragraph in Markdown but do not delete its continuation.",
+        "tables": "No tables are present in the original article.",
+        "figures": "No argument-bearing figures are present. The PDF contains a publisher cover with journal branding and navigation icons; Markdown substitutes image placeholders for these non-substantive elements.",
+        "formulas": "No formulas are present."
+      },
+      "losses": [
+        "Publisher branding, cover icons, and small decorative marks are represented only by image placeholders.",
+        "The publisher cover and first-page contact/licence metadata are interleaved with the opening article text.",
+        "A stray glyph \"曲\" appears in the publisher-cover metadata.",
+        "Running headers, folios, and page boundaries are not represented."
+      ],
+      "assessment": "The substantive prose, case discussions, conclusion, and references remain readable. The interleaved front matter should be skipped when assessing the opening argument.",
+      "pdf_sha256": "sha256:8926f87e6c42a9344ee47d2f67941090b03bfd4ee4a8eed8fe3a76c05709d3e7",
+      "markdown_sha256": "sha256:0eaf52a70efb9579f2b1b8bf5df9e674cf57690b8e3f78c654d2bfea232ea95a",
+      "inspection_artifacts": [
+        {
+          "path": "generated/source-acquisition/completion-20260921/conversion-qc/QI5AYE4V-contact-sheet.jpg",
+          "sha256": "sha256:5b09e175d24282e2460dfd60c829b51da810edd0b0147ff203cb162363eb35c7",
+          "purpose": "all-page visual contact sheet rendered at 80 DPI"
+        }
+      ]
+    },
+    {
+      "record_id": "SHJQQTI6",
+      "pdf_path": "generated/pdfs/completion-20260921/SHJQQTI6-ijcai-2023-0742.pdf",
+      "markdown_path": "corpus/source-acquisition/completion-20260921/SHJQQTI6.md",
+      "pages_total": 9,
+      "pages_visually_inspected": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "result": "changes_required",
+      "structure": {
+        "headings": "Title, numbered sections and subsections, acknowledgments, and references occur in source order.",
+        "reading_order": "Two-column prose is largely linearized in the correct order.",
+        "tables": "Table 1 on PDF page 7 is present as Markdown, but multiple datasets and demographic values are collapsed into four broad rows, losing the source row alignment needed for dataset-level claims.",
+        "figures": "Figures 1, 2, and 3 on PDF pages 1 to 3 are replaced by image placeholders. Captions survive, while the group-set diagram, taxonomy, and multicalibration hierarchy do not.",
+        "formulas": "Ten displayed definitions or equations on PDF pages 2 to 5 are replaced by formula-not-decoded placeholders."
+      },
+      "losses": [
+        "Figures 1 to 3 lose all visual content despite retaining captions.",
+        "Ten displayed formulas are absent, including the formal definitions central to subgroup, calibration-based, metric-based, differential, max-min, probabilistic, and demographic-free fairness.",
+        "Table 1 loses dataset-by-dataset row boundaries and therefore cannot support exact demographic mappings.",
+        "Minor token joins and OCR defects include \"Wepresent\", \"highstake\", and \"mutilcalibration\".",
+        "The bound Markdown adds publisher DOI provenance and page markers; these additions do not restore the missing formulas, figures, or table alignment."
+      ],
+      "assessment": "Ordinary prose can be read, but the missing definitions, diagrams, and table alignment prevent complete assessment of the survey argument from Markdown alone. Use the PDF for any claim about formal notions, taxonomy, hierarchy, or dataset attributes.",
+      "pdf_sha256": "sha256:a9ad4b0eb784fa77ff163f84cf533669fa0ef980cc4a9aae79dcaf8b8b9d6bd0",
+      "markdown_sha256": "sha256:f466d925774a262694f248f1639b373102d521d48f7065acd7d8fa3013421c9d",
+      "inspection_artifacts": [
+        {
+          "path": "generated/source-acquisition/completion-20260921/conversion-qc/SHJQQTI6-contact-sheet.jpg",
+          "sha256": "sha256:fb7ce77d8b75d50dd721c45b7f96649da2871a730d57f6523d26ced39f00fe27",
+          "purpose": "all-page visual contact sheet rendered at 80 DPI"
+        },
+        {
+          "path": "generated/source-acquisition/completion-20260921/conversion-qc/SHJQQTI6-1.jpg",
+          "sha256": "sha256:d383713a926bd66b7bfd7034bc3c21cfc21465c6b2c61338bfeeddbb889112eb",
+          "purpose": "detail render of PDF page 1 at 80 DPI"
+        },
+        {
+          "path": "generated/source-acquisition/completion-20260921/conversion-qc/SHJQQTI6-2.jpg",
+          "sha256": "sha256:baa1bcf281ca904e846a0df7f2bc104d3480f40871ec13edb87d3e4ed6fd3724",
+          "purpose": "detail render of PDF page 2 at 80 DPI"
+        },
+        {
+          "path": "generated/source-acquisition/completion-20260921/conversion-qc/SHJQQTI6-3.jpg",
+          "sha256": "sha256:612e4270b9cc1df4962a54d1aef8ca855ba9cba1e811f0b23c4ab33314c1a803",
+          "purpose": "detail render of PDF page 3 at 80 DPI"
+        },
+        {
+          "path": "generated/source-acquisition/completion-20260921/conversion-qc/SHJQQTI6-7.jpg",
+          "sha256": "sha256:0c3dd0dfe03b6a10098e109611d14c00b5cc0b81491f137dcb6fd993c121e665",
+          "purpose": "detail render of PDF page 7 at 80 DPI"
+        }
+      ]
+    }
+  ],
+  "reviewer": {
+    "agent_id": "/root/source_completion",
+    "model": "gpt-5.6-sol"
+  }
+}

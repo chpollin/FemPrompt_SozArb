@@ -721,6 +721,231 @@
         }
       ],
       "identity_audit": "generated/verification/residual-resolution-2026-09-05.json#/records/Z9DNTBFF"
+    },
+    {
+      "record_id": "AMYZFAPH",
+      "base_sha256": "sha256:073df79baeb2c0a455064857d90b7db5725bc0129bee9ff4c60256019ae2f58d",
+      "authority": "ai-source-reviewed-metadata",
+      "agent_id": "/root",
+      "model": "gpt-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-21T18:15:32.418786+00:00",
+      "findings": "Read title-page author sequence in the preserved publisher conversion and checked the reconciled live Zotero records. Historical alias authors disagree with the original publication. Live group records already have the correct author sequence; no external change is needed.",
+      "changes": [
+        {
+          "field": "creators",
+          "before": [
+            {
+              "creatorType": "author",
+              "firstName": "B. E.",
+              "lastName": "Perron"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "B. G.",
+              "lastName": "Victor"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "D. R.",
+              "lastName": "Hodge"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "M. G.",
+              "lastName": "Vaughn"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "C. P.",
+              "lastName": "Salas-Wright"
+            }
+          ],
+          "after": [
+            {
+              "creatorType": "author",
+              "firstName": "Bryan G.",
+              "lastName": "Victor"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "Rebeccah L.",
+              "lastName": "Sokol"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "Lauri",
+              "lastName": "Goldkind"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "Brian E.",
+              "lastName": "Perron"
+            }
+          ],
+          "reason": "Restore the author sequence printed in the original publication, preserving the historical record and its annotations."
+        }
+      ],
+      "evidence": [
+        {
+          "source_path": "generated/markdown_clean/Victor_2023_Recommendations_for_social_work_researchers_and.md",
+          "sha256": "sha256:faee9d1c7150bfe9d53dbfc620c2237d70e32fe737a2fdaa4e7116a3e6ac7225",
+          "source_url": "https://doi.org/10.1086/726021",
+          "locator": "Publisher title page and author block in existing Docling conversion"
+        }
+      ]
+    },
+    {
+      "record_id": "ZITLBM8A",
+      "base_sha256": "sha256:47610b98e0327b23a7e2f10908b5620a8a7bd2c5f03977d3ba47393eb420ece0",
+      "authority": "ai-source-reviewed-metadata",
+      "agent_id": "/root",
+      "model": "gpt-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-21T18:15:32.418786+00:00",
+      "findings": "Read title-page author sequence in the preserved publisher conversion and checked the reconciled live Zotero records. Historical alias authors disagree with the original publication. Live group records already have the correct author sequence; no external change is needed.",
+      "changes": [
+        {
+          "field": "creators",
+          "before": [
+            {
+              "creatorType": "author",
+              "firstName": "J. B.",
+              "lastName": "Singer"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "B. G.",
+              "lastName": "Victor"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "B. E.",
+              "lastName": "Perron"
+            }
+          ],
+          "after": [
+            {
+              "creatorType": "author",
+              "firstName": "Desmond Upton",
+              "lastName": "Patton"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "Aviv Y.",
+              "lastName": "Landau"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "Siva",
+              "lastName": "Mathiyazhagan"
+            }
+          ],
+          "reason": "Restore the author sequence printed in the original publication, preserving the historical record and its annotations."
+        }
+      ],
+      "evidence": [
+        {
+          "source_path": "generated/markdown_clean/Patton_2023_ChatGPT_for_Social_Work_Science_Ethical.md",
+          "sha256": "sha256:fbd051643e9b25e079948ddeef2d9a7d70e0a1a1343f5b8e953a233e25a96330",
+          "source_url": "https://doi.org/10.1086/726042",
+          "locator": "Publisher title page and author block in existing Docling conversion"
+        }
+      ]
+    },
+    {
+      "record_id": "QI5AYE4V",
+      "base_sha256": "sha256:857565220880af6b8927fbd395700b9531ac1145253dbbab692bb4f4d83298b9",
+      "authority": "ai-source-reviewed-metadata",
+      "agent_id": "/root",
+      "model": "gpt-6",
+      "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+      "reviewed_at": "2026-09-21T18:15:32.418786+00:00",
+      "findings": "Read title-page author sequence in the preserved publisher conversion and checked the reconciled live Zotero records. Historical alias authors disagree with the original publication. Live group records already have the correct author sequence; no external change is needed.",
+      "changes": [
+        {
+          "field": "creators",
+          "before": [
+            {
+              "creatorType": "author",
+              "firstName": "C.",
+              "lastName": "McDonald"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "G.",
+              "lastName": "Marston"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "A.",
+              "lastName": "Buckley"
+            }
+          ],
+          "after": [
+            {
+              "creatorType": "author",
+              "firstName": "Paul",
+              "lastName": "James"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "Jason",
+              "lastName": "Lal"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "Ashley",
+              "lastName": "Liao"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "Liam",
+              "lastName": "Magee"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "Karen",
+              "lastName": "Soldatic"
+            }
+          ],
+          "reason": "Restore the author sequence printed in the original publication, preserving the historical record and its annotations."
+        }
+      ],
+      "evidence": [
+        {
+          "source_path": "generated/markdown_clean/James_2023_Algorithmic_decision-making_in_social_work.md",
+          "sha256": "sha256:0eaf52a70efb9579f2b1b8bf5df9e674cf57690b8e3f78c654d2bfea232ea95a",
+          "source_url": "https://doi.org/10.1080/02615479.2023.2195425",
+          "locator": "Publisher title page and author block in existing Docling conversion"
+        }
+      ]
+    },
+    {
+      "record_id": "SHJQQTI6",
+      "base_sha256": "sha256:c2ea8d7f14c10abb68c1185f3d0a7662b7de15703269af65b43973b890adcf6f",
+      "authority": "ai-source-reviewed-metadata",
+      "agent_id": "/root",
+      "model": "gpt-6",
+      "reviewed_at": "2026-09-21T18:24:42.238915+00:00",
+      "findings": "Checked the official IJCAI proceedings page and the independently acquired, exact publisher PDF. DOI and authors identify the Notions, Mitigation, and Challenges article. Applied the same title-only correction to the live group with item-version protection and verified all unrelated fields by read-back.",
+      "changes": [
+        {
+          "field": "title",
+          "before": "A Survey on Intersectional Fairness in Machine Learning: Opportunities and Challenges",
+          "after": "A Survey on Intersectional Fairness in Machine Learning: Notions, Mitigation, and Challenges",
+          "reason": "Restore the actual title published under the existing DOI."
+        }
+      ],
+      "evidence": [
+        {
+          "source_path": "corpus/source-acquisition/completion-20260921/shjqqti6-publisher-metadata.txt",
+          "sha256": "sha256:1f126fb6c993122d0ab5f479cfe51e14d1aa99abdc0d3dd49533826bac998c46",
+          "source_url": "https://www.ijcai.org/proceedings/2023/742",
+          "locator": "Official proceedings title, authors and DOI in minimal publisher metadata capture",
+          "quote": "A Survey on Intersectional Fairness in Machine Learning: Notions, Mitigation, and Challenges"
+        }
+      ]
     }
   ]
 }

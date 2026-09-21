@@ -5,11 +5,11 @@
   "authority_rule": "Any human annotation covers the canonical work; duplicate records do not trigger reassessment.",
   "sources": {
     "research_vault": "docs/data/research_vault_v2.json",
-    "research_vault_sha256": "9af5ce97e4f63320d75fdbd35deccdc768cb842d2c55d2345d52a302edcb15e6",
+    "research_vault_sha256": "f09b0ce0edf3c8eaf0259fbc59f795525be256ded65cc7a33c34e01ab6d1d4d0",
     "fulltext_manifest": "docs/data/fulltext_manifest.json",
-    "fulltext_manifest_sha256": "f22310ff9827a98a1c392124c8132d0d99f2d90c323bf434ed287b586f0476ca",
+    "fulltext_manifest_sha256": "0684f60c4fd9f9b3f474de025e2868dc80e98947fba94850a683abab03a5f077",
     "work_version_registry": "corpus/work_version_registry.json",
-    "work_version_registry_sha256": "b9943ada9671ddb41178da1428829f36fefe4b38ace72e67d897e3fb225736a0",
+    "work_version_registry_sha256": "bbe1e2898d879e157195ebf4ec7718cc463b3254c7aedcc5132c7dd8b3f89298",
     "productive_screening_dir": "docs/data/screening"
   },
   "counts": {
@@ -20,9 +20,9 @@
     "unannotated_alias_records_covered_at_work_level": 27,
     "queued_records": 110,
     "queued_works": 101,
-    "ready_works": 19,
-    "blocked_abstract_only_works": 17,
-    "blocked_without_text_works": 65
+    "ready_works": 23,
+    "blocked_abstract_only_works": 16,
+    "blocked_without_text_works": 62
   },
   "gate": {
     "status": "partial",
@@ -32,9 +32,11 @@
       "work:1004a5c5-f980-5475-ad36-952eab77b516",
       "work:2707a834-08fe-5819-a92c-4afb47ca08c5",
       "work:2c625fa2-a2f8-5d59-b6a0-f148d542c902",
+      "work:5aaa355e-8f65-5850-a132-43fa3458195e",
       "work:677ea395-cc39-50b4-9979-496e0f17665d",
       "work:6c8a1072-fcca-5fbd-8611-08774ef0ad7f",
       "work:6eab81e9-e9ba-57eb-abc0-6c00d7061314",
+      "work:73eda891-2e28-587a-a7fb-a950323a0dad",
       "work:7eb826eb-db16-5ae7-8201-3339f108ae93",
       "work:7f8d6ea5-b9ea-55b6-8b7c-312cabf4a2a9",
       "work:88488d25-08d0-5719-8948-5bff2e7d43cf",
@@ -42,9 +44,11 @@
       "work:ad093524-5d10-5430-838d-3360c0d710cc",
       "work:b385e0cf-739b-5592-b5f0-c9d7fd2ead0a",
       "work:ca3ae89d-5ddd-5036-a44d-165c58097219",
+      "work:ce1b3961-e4e4-5bd2-a6a8-b97ef7fbc90f",
       "work:d3e1b501-39ff-5531-a410-391d0ae61c77",
       "work:e2d886f7-c01f-50cc-9ce2-e65f7be00157",
       "work:e62005d4-d179-5cef-af39-3aca00c24a04",
+      "work:ec94cf1c-87bf-5f4d-a840-9dd3b92eefab",
       "work:f7d29922-360f-5874-8d4c-cf7f7451f638"
     ],
     "required_action": "Acquire and review Paper Markdown for every blocked work before its agent run."
@@ -1995,7 +1999,26 @@
       "selected_version_id": "version:c517e367-0d9c-5d26-ad49-db0c2aa52ec1",
       "selected_version_type": "preprint",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "9ZKZQM63",
+        "work_id": "work:5aaa355e-8f65-5850-a132-43fa3458195e",
+        "bibliographic_version_id": "version:c517e367-0d9c-5d26-ad49-db0c2aa52ec1",
+        "source_version_id": "version:c517e367-0d9c-5d26-ad49-db0c2aa52ec1",
+        "source_version_type": "preprint",
+        "preferred_version_id": "version:c517e367-0d9c-5d26-ad49-db0c2aa52ec1",
+        "is_preferred_version": true,
+        "source_path": "corpus/source-acquisition/completion-20260921/9ZKZQM63.identity-bound.md",
+        "source_sha256": "sha256:bce7b8de4b1bb063064193b7e230d1825cd235f72add20aca038807e281cf14c",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "Unveiling and Mitigating Bias in Mental Health Analysis with Large Language Models",
+          "doi": "10.48550/arxiv.2406.12033"
+        },
+        "version_identity": {
+          "title": "Unveiling and Mitigating Bias in Mental Health Analysis with Large Language Models",
+          "arxiv": "2406.12033v2"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:c517e367-0d9c-5d26-ad49-db0c2aa52ec1",
@@ -2032,16 +2055,14 @@
       "doi": "10.48550/arxiv.2406.12033",
       "url": "https://arxiv.org/abs/2406.12033v2",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 71044,
+      "paper_source": "docs/data/fulltext/9ZKZQM63.md",
       "paper_source_work_id": "work:5aaa355e-8f65-5850-a132-43fa3458195e",
       "paper_source_version_id": "version:c517e367-0d9c-5d26-ad49-db0c2aa52ec1",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "8697ee2355c86115953759910a5bc50182b4142e492d668473596592df61559a",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:5afec464-2212-543d-9b3f-abb12a282783",
@@ -2712,7 +2733,26 @@
       "selected_version_id": "version:38ec2a2e-9a8f-5837-bd7d-7efad6f0f743",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "J4K3XA52",
+        "work_id": "work:73eda891-2e28-587a-a7fb-a950323a0dad",
+        "bibliographic_version_id": "version:38ec2a2e-9a8f-5837-bd7d-7efad6f0f743",
+        "source_version_id": "version:38ec2a2e-9a8f-5837-bd7d-7efad6f0f743",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:38ec2a2e-9a8f-5837-bd7d-7efad6f0f743",
+        "is_preferred_version": true,
+        "source_path": "corpus/source-acquisition/completion-20260921/J4K3XA52-reading.md",
+        "source_sha256": "sha256:c7f0d251037326c79a930f63ae0de319b8336f7081326bc48ee906f0eace57c2",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "Evaluating gender bias in large language models in long-term care",
+          "doi": "10.1186/s12911-025-03118-0"
+        },
+        "version_identity": {
+          "title": "Evaluating gender bias in large language models in long-term care",
+          "doi": "10.1186/s12911-025-03118-0"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:38ec2a2e-9a8f-5837-bd7d-7efad6f0f743",
@@ -2749,16 +2789,14 @@
       "doi": "10.1186/s12911-025-03118-0",
       "url": "https://link.springer.com/article/10.1186/s12911-025-03118-0",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 77341,
+      "paper_source": "docs/data/fulltext/J4K3XA52.md",
       "paper_source_work_id": "work:73eda891-2e28-587a-a7fb-a950323a0dad",
       "paper_source_version_id": "version:38ec2a2e-9a8f-5837-bd7d-7efad6f0f743",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "14ad4e82f011467f955b927408c96d9f2b36181d61d1232f4cce1b51fa4bafab",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:76eafb72-f674-51b7-b980-05ca1e500f58",
@@ -4977,7 +5015,26 @@
       "selected_version_id": "version:2c5cc7f8-4580-5ff0-b423-f45df473a82c",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "V8SBEH4E",
+        "work_id": "work:ce1b3961-e4e4-5bd2-a6a8-b97ef7fbc90f",
+        "bibliographic_version_id": "version:2c5cc7f8-4580-5ff0-b423-f45df473a82c",
+        "source_version_id": "version:2c5cc7f8-4580-5ff0-b423-f45df473a82c",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:2c5cc7f8-4580-5ff0-b423-f45df473a82c",
+        "is_preferred_version": true,
+        "source_path": "corpus/source-acquisition/completion-20260921/V8SBEH4E.identity-bound.md",
+        "source_sha256": "sha256:e899385c54b3118d6eec98a0195a659ff18fc33c4c0dcc3a9e8cccda7a244353",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "Algorithm beyond Neutrality: Feminist Approaches to Redefining Artificial Intelligence",
+          "doi": "10.2991/978-94-6239-618-0_20"
+        },
+        "version_identity": {
+          "title": "Algorithm beyond Neutrality: Feminist Approaches to Redefining Artificial Intelligence",
+          "doi": "10.2991/978-94-6239-618-0_20"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:2c5cc7f8-4580-5ff0-b423-f45df473a82c",
@@ -5015,16 +5072,14 @@
       "doi": "10.2991/978-94-6239-618-0_20",
       "url": "https://www.atlantis-press.com/proceedings/aihle-25/126022241",
       "abstract_available": true,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 16797,
+      "paper_source": "docs/data/fulltext/V8SBEH4E.md",
       "paper_source_work_id": "work:ce1b3961-e4e4-5bd2-a6a8-b97ef7fbc90f",
       "paper_source_version_id": "version:2c5cc7f8-4580-5ff0-b423-f45df473a82c",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "55386087cb72afdd7640d96ecb3e5a8b207ca4af2de94adea66601ca25f10172",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:cfe60968-caff-5fda-a10e-f204b31115c9",
@@ -5689,7 +5744,26 @@
       "selected_version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "H3NC9SMQ",
+        "work_id": "work:ec94cf1c-87bf-5f4d-a840-9dd3b92eefab",
+        "bibliographic_version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
+        "source_version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
+        "is_preferred_version": true,
+        "source_path": "corpus/source-acquisition/completion-20260921/Z9DNTBFF.identity-bound.md",
+        "source_sha256": "sha256:729606223c6f936d78f837d285ae84f5d18f010b62af7dfa793cce64119fd3c0",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "Worst of Both Worlds: Biases Compound in Pre-trained Vision-and-Language Models",
+          "doi": "10.18653/v1/2022.gebnlp-1.10"
+        },
+        "version_identity": {
+          "title": "Worst of Both Worlds: Biases Compound in Pre-trained Vision-and-Language Models",
+          "doi": "10.18653/v1/2022.gebnlp-1.10"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
@@ -5728,16 +5802,14 @@
       "doi": "10.18653/v1/2022.gebnlp-1.10",
       "url": "https://aclanthology.org/2022.gebnlp-1.10/",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 29126,
+      "paper_source": "docs/data/fulltext/H3NC9SMQ.md",
       "paper_source_work_id": "work:ec94cf1c-87bf-5f4d-a840-9dd3b92eefab",
       "paper_source_version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "4423f1af6b9a4e63feed7861318e4defde9d04583d015b09eb612f86a5388c3b",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:f23df8e7-b57c-555e-8a09-afa5a74b659f",

@@ -7,18 +7,20 @@ work-id: work:f01ca4fe-7f9b-59f6-98d9-4e84559cd850
 version-id: version:8663473c-428f-5ffa-89b0-0b02502fe07d
 version-type: working_paper
 topics:
-  - "[[Generative AI use]]"
-  - "[[Gender and technology use]]"
-status: preparation
+- '[[Generative AI use]]'
+- '[[Gender and technology use]]'
+status: ai-agent-reviewed
 checked:
   quote: 2026-09-21
+  validation: '2026-09-21'
+  ai-agent-review: '2026-09-21'
 created: 2026-09-21
-updated: 2026-09-21
+updated: '2026-09-21'
 prepared-by:
   agent-id: /root/knowledge_documents
   model: gpt-5.6-sol
   prepared-at: 2026-09-21
-  artifact-review-status: unreviewed
+  artifact-review-status: ai-agent-reviewed
 source-representation:
   path: generated/markdown_clean/BHXDU7VM.md
   sha256: sha256:49a17523925a989ed5903ded9a6fdd747176bfdc9355bfc80d0048246b364400
@@ -27,6 +29,9 @@ source-representation:
   source-url: https://www.nber.org/papers/w34255
   is-preferred-version: true
   boundary: The preparing agent read the complete hash-bound NBER working-paper Markdown representation and checked the quoted passages. The source states that NBER working papers are circulated for discussion and have not been peer reviewed. No separate scholarly review has occurred.
+source-review:
+  path: corpus/knowledge-reviews/2026-09-21/BHXDU7VM-authority.json
+  sha256: sha256:2ccf59da1cc8565d185d9dd2ce3e047079396c6a7c5c2c86517f6ef9db7a8abd
 ---
 
 # Distillate: How people use ChatGPT
@@ -73,4 +78,4 @@ Gender is inferred from first names in aggregated datasets. Ambiguous or conflic
 
 ## Review boundary
 
-This preparation was produced from the complete hash-bound local source. Quotations were checked. Its `preparation` status is unreviewed and grants no scholarly-review authority.
+This document was prepared from the source representation identified in its metadata. The current review state and its supporting receipt are recorded in the frontmatter. AI review does not establish domain-expert verification or publication approval.

@@ -1,0 +1,46 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "AZJW38MF",
+  "knowledge_document": "research-vault/20_distillates/publications/azjw38mf-socio-technical-ethics-work.md",
+  "knowledge_document_sha256": "sha256:99ea7047a201d1b9041feb63c4445865bbb5d1d75fe16752ce8c1a0319d90ae3",
+  "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/e9be7a01361ab7bae7bb.md",
+  "source_sha256": "sha256:322a7c9026f85204f9a15ffac69723e8eb12cc125df25276e77aa01e0e062148",
+  "reviewed_at": "2026-09-21T19:08:00Z",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Independent source-bound review of identity, research question, method, findings, limitations, quotations and category relevance. This receipt grants no human verification or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Core statements; Method and scope; Limitations",
+      "finding": "The organisational ethnography, AICA child-counselling case, participant roles and four analytical axes agree with the source. The quoted method phrase resolves exactly."
+    },
+    {
+      "severity": "note",
+      "location": "Assessment relevance",
+      "finding": "AI_Literacies is supported by the explicit technological-awareness and critical-reflection argument. KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit and Fairness are bounded to the socio-technical ethics case."
+    }
+  ],
+  "validated_subject": {
+    "validated_at": "2026-09-21T18:33:07.660168+00:00",
+    "validator": "/root integration; document and source hashes plus literal quotation checks",
+    "body_sha256": "sha256:a6e8ca15df2d0cd82de493f5320ee40c2d88ae329b79aff2ed42fbd013963ca4",
+    "source_metadata": {
+      "record-id": "AZJW38MF",
+      "work-id": "work:2c625fa2-a2f8-5d59-b6a0-f148d542c902",
+      "version-id": "version:6ff337db-5679-509b-b8db-13f9d4be1baf",
+      "version-type": "version_of_record",
+      "source-representation": {
+        "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/e9be7a01361ab7bae7bb.md",
+        "sha256": "sha256:322a7c9026f85204f9a15ffac69723e8eb12cc125df25276e77aa01e0e062148",
+        "version-id": "version:6ff337db-5679-509b-b8db-13f9d4be1baf",
+        "version-type": "version_of_record",
+        "is-preferred-version": true,
+        "boundary": "The preparing agent read the complete hash-bound local text. Linearised tables were available; figures were not independently inspected. Source identity review does not constitute review of this distillate."
+      }
+    }
+  }
+}

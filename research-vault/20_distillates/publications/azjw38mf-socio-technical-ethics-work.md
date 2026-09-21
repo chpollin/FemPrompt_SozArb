@@ -7,18 +7,20 @@ work-id: work:2c625fa2-a2f8-5d59-b6a0-f148d542c902
 version-id: version:6ff337db-5679-509b-b8db-13f9d4be1baf
 version-type: version_of_record
 topics:
-  - "[[Artificial Intelligence]]"
-  - "[[Fairness]]"
-status: preparation
+- '[[Artificial Intelligence]]'
+- '[[Fairness]]'
+status: ai-agent-reviewed
 checked:
   quote: 2026-09-21
+  validation: '2026-09-21'
+  ai-agent-review: '2026-09-21'
 created: 2026-09-21
-updated: 2026-09-21
+updated: '2026-09-21'
 prepared-by:
   agent-id: /root/prism_assessment
   model: gpt-5.6-sol
   prepared-at: 2026-09-21
-  artifact-review-status: unreviewed
+  artifact-review-status: ai-agent-reviewed
 source-representation:
   path: generated/source-acquisition/codex-websearch-2026/markdown-clean/e9be7a01361ab7bae7bb.md
   sha256: sha256:322a7c9026f85204f9a15ffac69723e8eb12cc125df25276e77aa01e0e062148
@@ -26,6 +28,9 @@ source-representation:
   version-type: version_of_record
   is-preferred-version: true
   boundary: The preparing agent read the complete hash-bound local text. Linearised tables were available; figures were not independently inspected. Source identity review does not constitute review of this distillate.
+source-review:
+  path: corpus/knowledge-reviews/2026-09-21/AZJW38MF-authority.json
+  sha256: sha256:8e114a35294415a3f10575836e142500dc67332b3e100f98f9e02b66d8aa4a78
 ---
 
 # Distillate: Socio-technical ethics work for AI in social work
@@ -52,4 +57,4 @@ The study concerns one pseudonymised Scandinavian NGO and a particular retrieval
 
 ## Review boundary
 
-This preparation is source-bound and unreviewed. It grants no separate AI source-review, human verification, scientific acceptance or publication authority.
+This document was prepared from the source representation identified in its metadata. The current review state and its supporting receipt are recorded in the frontmatter. AI review does not establish domain-expert verification or publication approval.

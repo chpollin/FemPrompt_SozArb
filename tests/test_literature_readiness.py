@@ -1,8 +1,50 @@
 """Dataset-backed tests for the literature readiness inventory."""
 
 import json
+import pytest
 
-from src.analysis.build_literature_readiness import REPO, build_readiness
+from src.analysis.build_literature_readiness import (
+    REPO,
+    build_readiness,
+    _conversion_reviews,
+)
+
+
+def test_available_text_without_conversion_review_still_has_qc_gap() -> None:
+    records = build_readiness(REPO)["records"]
+    unchecked = [
+        r for r in records if r["text_available"] and r["conversion_review"] is None
+    ]
+    assert unchecked
+    assert all(
+        "check_conversion_fidelity_against_original" in r["missing_steps"]
+        for r in unchecked
+    )
+    checked = next(r for r in records if r["record_id"] == "AMYZFAPH")
+    assert checked["conversion_review_result"] == "accepted_for_text_assessment"
+    assert "check_conversion_fidelity_against_original" not in checked["missing_steps"]
+
+
+def test_conversion_review_rejects_changed_source_bytes(tmp_path) -> None:
+    report = json.loads(
+        (
+            REPO
+            / "generated/source-acquisition/completion-20260921/conversion-qc/conversion-qc.json"
+        ).read_text(encoding="utf-8")
+    )
+    record = report["records"][0]
+    path = tmp_path / record["markdown_path"]
+    path.parent.mkdir(parents=True)
+    path.write_text("Changed source representation", encoding="utf-8")
+    receipt = tmp_path / "generated/source-acquisition/review/conversion-qc.json"
+    receipt.parent.mkdir(parents=True)
+    receipt.write_text(json.dumps({**report, "records": [record]}), encoding="utf-8")
+    with pytest.raises(ValueError, match="Conversion review source changed"):
+        _conversion_reviews(tmp_path)
+    reviews, _paths = _conversion_reviews(tmp_path, set())
+    assert reviews == {}, (
+        "A superseded conversion cannot grant current review authority"
+    )
 
 
 def test_inventory_covers_every_canonical_and_live_key_once() -> None:
@@ -49,6 +91,20 @@ def test_unreviewed_knowledge_never_becomes_review_authority() -> None:
         "review_knowledge_document_before_authority_promotion"
         in record["missing_steps"]
         for record in unreviewed
+    )
+
+
+def test_readable_legacy_text_still_needs_exact_version_review() -> None:
+    records = build_readiness(REPO)["records"]
+    legacy = [r for r in records if r["source_identity_review"] == "legacy_candidate"]
+    governed = [r for r in records if r["source_identity_review"] == "governed_binding"]
+    assert legacy and governed
+    assert all(
+        "review_and_bind_exact_source_version" in r["missing_steps"] for r in legacy
+    )
+    assert all(
+        "review_and_bind_exact_source_version" not in r["missing_steps"]
+        for r in governed
     )
 
 

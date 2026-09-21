@@ -2778,40 +2778,41 @@
     },
     {
       "id": "AMYZFAPH",
+      "stem": "Victor_2023_Recommendations_for_social_work_researchers_and",
       "title": "Recommendations for social work researchers and journal editors on the use of generative AI and large language models",
-      "authors": "Perron, B. E.; Victor, B. G.; Hodge, D. R.; Vaughn, M. G.; Salas-Wright, C. P.",
-      "author_year": "Perron et al. (2023)",
+      "author_year": "Bryan G. Victor (2023)",
       "year": 2023,
       "doi": "10.1086/726021",
       "url": "",
-      "item_type": "journalarticle",
-      "journal": "",
-      "work_id": "work:e1ca8a4c-5cc2-5e35-b3cc-375950a07405",
-      "version_id": "version:0e874262-87ce-5928-962b-758a55a98646",
-      "version_type": "version_of_record",
-      "version_date": "2023",
-      "peer_review_status": "not_established",
-      "peer_review_basis": "unknown",
-      "preferred_version_id": "version:0e874262-87ce-5928-962b-758a55a98646",
-      "latest_version_id": "version:0e874262-87ce-5928-962b-758a55a98646",
-      "is_preferred_version": true,
-      "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved",
       "abstract": "Evidence-based recommendations for social work researchers using generative AI and LLMs, addressing prompt engineering and critical engagement with AI outputs. Examines how LLMs can improve research efficiency through facilitating literature reviews, data analysis, and writing assistance while emphasizing need for critical evaluation of AI-generated content. Discusses concerns about over-reliance on AI potentially diminishing research quality when researchers don't engage in critical thinking or",
-      "stem": "_thin_AMYZFAPH",
-      "concepts": [],
-      "knowledge_summary": null,
-      "knowledge_sections": null,
       "stages": {
         "identification": {
           "in_zotero": true
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "linked"
         },
-        "ske": null,
+        "ske": {
+          "stage1_categories": {
+            "AI_Literacies": true,
+            "Generative_KI": true,
+            "Prompting": false,
+            "KI_Sonstige": true,
+            "Soziale_Arbeit": true,
+            "Bias_Ungleichheit": true,
+            "Gender": false,
+            "Diversitaet": true,
+            "Feministisch": false,
+            "Fairness": true
+          },
+          "stage1_arguments_count": 3,
+          "stage1_key_finding": "Generative KI und LLMs bieten sowohl transformatives Potenzial als auch erhebliche Risiken für die Sozialarbeitsforschung; es werden spezifische Empfehlungen für Forscher und Herausgeber entwickelt, d",
+          "stage3_completeness": 92,
+          "stage3_correctness": 98,
+          "stage3_overall": 94
+        },
         "assessment": {
           "llm": {
             "assessment_status": "assessed",
@@ -2838,7 +2839,38 @@
           },
           "agreement": "llm_only"
         }
-      }
+      },
+      "concepts": [
+        "AI Literacy in Academic Practice",
+        "Algorithmic Bias in Academic Research",
+        "Disruptive-Disrupting Framework",
+        "Generative AI in Research",
+        "Large Language Model Hallucinations",
+        "Peer Review Quality Control for AI-Generated Content",
+        "Research Ethics in Vulnerable Populations",
+        "Research Transparency and Accountability"
+      ],
+      "knowledge_summary": "Generative KI und LLMs bieten sowohl transformatives Potenzial als auch erhebliche Risiken für die Sozialarbeitsforschung; es werden spezifische Empfehlungen für Forscher und Herausgeber entwickelt, die Chancen maximieren und Risiken (Bias, Datenschutz, Qualität) minimieren.",
+      "knowledge_sections": {
+        "kernbefund": "Generative KI und LLMs bieten sowohl transformatives Potenzial als auch erhebliche Risiken für die Sozialarbeitsforschung; es werden spezifische Empfehlungen für Forscher und Herausgeber entwickelt, die Chancen maximieren und Risiken (Bias, Datenschutz, Qualität) minimieren.",
+        "forschungsfrage": "Wie sollten Forscher und Zeitschriftenredakteure in der Sozialen Arbeit generative KI und Large Language Models verantwortungsvoll und ethisch in der Forschung einsetzen?",
+        "methodik": "Theoretisch/Review - Disruptive-Disrupting Framework kombiniert mit systematischer Analyse bestehender Richtlinien von Nature, Science, JAMA, Elsevier, COPE und PNAS.\n**Datenbasis:** nicht empirisch - konzeptionelle und guideline-basierte Analyse mit praktischen Fallbeispielen",
+        "hauptargumente": "- Generative KI und LLMs haben disruptives Potenzial zur Verbesserung von Literaturrecherchen, qualitativer und quantitativer Datenanalyse sowie Manuskriptwriting in der Sozialarbeitsforschung, können aber durch Automatisierung wesentlicher Forschungsschritte die Qualität gefährden.\n- Diese Technologien sind gleichzeitig 'disrupting' in ihrer Fähigkeit, Bias zu reproduzieren, Datenschutzverletzungen zu verursachen, Falschinformationen zu generieren und die Reproduzierbarkeit von Ergebnissen zu gefährden, was spezifische ethische Kontrollen erfordert.\n- Forscher müssen vor Einsatz dieser Technologien tiefes Verständnis ihrer Konstruktion, ethischen Implikationen und Limitationen entwickeln und volle Verantwortung für KI-generierte Inhalte übernehmen; Herausgeber müssen robuste Quality-Control- und Transparenzverfahren implementieren."
+      },
+      "authors": "Bryan G. Victor; Rebeccah L. Sokol; Lauri Goldkind; Brian E. Perron",
+      "item_type": "journalarticle",
+      "journal": "",
+      "work_id": "work:e1ca8a4c-5cc2-5e35-b3cc-375950a07405",
+      "version_id": "version:0e874262-87ce-5928-962b-758a55a98646",
+      "version_type": "version_of_record",
+      "version_date": "2023",
+      "peer_review_status": "not_established",
+      "peer_review_basis": "unknown",
+      "preferred_version_id": "version:0e874262-87ce-5928-962b-758a55a98646",
+      "latest_version_id": "version:0e874262-87ce-5928-962b-758a55a98646",
+      "is_preferred_version": true,
+      "knowledge_doc": "vault/Papers/active-completion-amyzfaph-generative-ai-social-work-research.md",
+      "knowledge_coverage": "linked"
     },
     {
       "id": "VSZM7CT6",
@@ -3421,7 +3453,7 @@
         "conversion": {
           "pdf_acquired": null,
           "markdown_converted": true,
-          "knowledge_coverage": "fulltext_ready"
+          "knowledge_coverage": "linked"
         },
         "ske": null,
         "assessment": {
@@ -3467,45 +3499,46 @@
       "preferred_version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
       "latest_version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
       "is_preferred_version": true,
-      "knowledge_doc": null,
-      "knowledge_coverage": "fulltext_ready"
+      "knowledge_doc": "vault/Papers/active-completion-a2p8mxmy-algorithmic-justice-child-protection.md",
+      "knowledge_coverage": "linked"
     },
     {
       "id": "ZITLBM8A",
+      "stem": "Patton_2023_ChatGPT_for_Social_Work_Science_Ethical",
       "title": "ChatGPT for social work science: Ethical challenges and opportunities",
-      "authors": "Singer, J. B.; Victor, B. G.; Perron, B. E.",
-      "author_year": "Singer et al. (2023)",
+      "author_year": "Desmond Upton Patton (2023)",
       "year": 2023,
       "doi": "10.1086/726042",
       "url": "",
-      "item_type": "journalarticle",
-      "journal": "",
-      "work_id": "work:c54f89d4-e79b-5fd8-9426-6b51b36669e2",
-      "version_id": "version:c9a7b396-f86c-50ed-8808-6dc5c513627b",
-      "version_type": "version_of_record",
-      "version_date": "2023",
-      "peer_review_status": "not_established",
-      "peer_review_basis": "unknown",
-      "preferred_version_id": "version:c9a7b396-f86c-50ed-8808-6dc5c513627b",
-      "latest_version_id": "version:c9a7b396-f86c-50ed-8808-6dc5c513627b",
-      "is_preferred_version": true,
-      "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved",
       "abstract": "Invited paper exploring opportunities and ethical challenges of deploying ChatGPT and large language models specifically for social work science. Describes potential uses of ChatGPT in social work research while examining critical ethical concerns related to algorithmic bias, data quality, and risk of replacing human expertise with AI-generated content. Offers preliminary recommendations for ethical ChatGPT use in social work research, emphasizing need for researchers to critically evaluate AI o",
-      "stem": "_thin_ZITLBM8A",
-      "concepts": [],
-      "knowledge_summary": null,
-      "knowledge_sections": null,
       "stages": {
         "identification": {
           "in_zotero": true
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "linked"
         },
-        "ske": null,
+        "ske": {
+          "stage1_categories": {
+            "AI_Literacies": true,
+            "Generative_KI": true,
+            "Prompting": true,
+            "KI_Sonstige": true,
+            "Soziale_Arbeit": true,
+            "Bias_Ungleichheit": true,
+            "Gender": false,
+            "Diversitaet": true,
+            "Feministisch": false,
+            "Fairness": true
+          },
+          "stage1_arguments_count": 3,
+          "stage1_key_finding": "ChatGPT bietet innovative Möglichkeiten für die Sozialarbeitswissenschaft (Forschungsdesign, Qualitative Datenanalyse, Textbearbeitung), erfordert jedoch strenge ethische Richtlinien bezüglich Bias, D",
+          "stage3_completeness": 0,
+          "stage3_correctness": 0,
+          "stage3_overall": 0
+        },
         "assessment": {
           "llm": {
             "assessment_status": "assessed",
@@ -3532,44 +3565,76 @@
           },
           "agreement": "llm_only"
         }
-      }
-    },
-    {
-      "id": "QI5AYE4V",
-      "title": "Algorithmic decision-making in social work practice and pedagogy: Confronting the competency/critique dilemma",
-      "authors": "McDonald, C.; Marston, G.; Buckley, A.",
-      "author_year": "McDonald et al. (2023)",
-      "year": 2023,
-      "doi": "10.1080/02615479.2023.2195425",
-      "url": "",
+      },
+      "concepts": [
+        "AI Literacy in Professional Practice",
+        "Algorithmic Bias in Large Language Models",
+        "Algorithmic Fairness and Social Justice",
+        "Antiracist Research Framework",
+        "Data Privacy and Informed Consent in AI Systems",
+        "Equitable Access to AI Tools for Researchers",
+        "Prompt Engineering for Inclusive Research",
+        "Scientific Integrity and Source Verification"
+      ],
+      "knowledge_summary": "ChatGPT bietet innovative Möglichkeiten für die Sozialarbeitswissenschaft (Forschungsdesign, Qualitative Datenanalyse, Textbearbeitung), erfordert jedoch strenge ethische Richtlinien bezüglich Bias, Datenschutz, Transparenz und sozialer Gerechtigkeit. Die Profession muss ein umfassendes ethisches Framework entwickeln.",
+      "knowledge_sections": {
+        "kernbefund": "ChatGPT bietet innovative Möglichkeiten für die Sozialarbeitswissenschaft (Forschungsdesign, Qualitative Datenanalyse, Textbearbeitung), erfordert jedoch strenge ethische Richtlinien bezüglich Bias, Datenschutz, Transparenz und sozialer Gerechtigkeit. Die Profession muss ein umfassendes ethisches Framework entwickeln.",
+        "forschungsfrage": "Welche Chancen und ethischen Herausforderungen entstehen durch die Anwendung von ChatGPT und anderen Large Language Models in der sozialarbeiterischen Forschung?",
+        "methodik": "Theoretisch/Normativ - konzeptionelle Analyse und Policy-Empfehlungen ohne empirische Datenerhebung\n**Datenbasis:** nicht empirisch - Literaturbasierte konzeptionelle Analyse und Fallbeispiele",
+        "hauptargumente": "- ChatGPT kann als Werkzeug zur Verbesserung qualitativer Forschungsmethoden (Themengenerierung, Transkriptbearbeitung, Interviewprotokolle) und zur Förderung von Innovationen in der Sozialarbeitswissenschaft dienen, insbesondere für ressourcenbenachteiligte Forscherinnen und Forscher sowie BIPOC-Scholars.\n- ChatGPT perpetuiert und verstärkt bestehende Bias durch Training auf nicht-verifizierten Internet-Daten, die Eurozentrische und weiße Perspektiven überrepräsentieren und Arbeiten von BIPOC-Autoren, Menschen mit Behinderungen und LGBTQIA+-Personen marginalisieren.\n- Kritische ethische und rechtliche Herausforderungen entstehen durch fehlende Transparenz bezüglich Datenschutz, Einwilligungsfragen, potenzielles Plagiarismus und die Produktion von unverifizierbaren, quellenlos generierten Informationen, die die Integrität wissenschaftlicher Arbeit gefährden."
+      },
+      "authors": "Desmond Upton Patton; Aviv Y. Landau; Siva Mathiyazhagan",
       "item_type": "journalarticle",
       "journal": "",
-      "work_id": "work:5f49f95b-dcfe-5778-8376-a313cb039d4d",
-      "version_id": "version:2e650cfc-0147-5778-ab55-ed2e17a4f86b",
+      "work_id": "work:c54f89d4-e79b-5fd8-9426-6b51b36669e2",
+      "version_id": "version:c9a7b396-f86c-50ed-8808-6dc5c513627b",
       "version_type": "version_of_record",
       "version_date": "2023",
       "peer_review_status": "not_established",
       "peer_review_basis": "unknown",
-      "preferred_version_id": "version:2e650cfc-0147-5778-ab55-ed2e17a4f86b",
-      "latest_version_id": "version:2e650cfc-0147-5778-ab55-ed2e17a4f86b",
+      "preferred_version_id": "version:c9a7b396-f86c-50ed-8808-6dc5c513627b",
+      "latest_version_id": "version:c9a7b396-f86c-50ed-8808-6dc5c513627b",
       "is_preferred_version": true,
-      "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved",
+      "knowledge_doc": "vault/Papers/active-completion-zitlbm8a-chatgpt-social-work-science.md",
+      "knowledge_coverage": "linked"
+    },
+    {
+      "id": "QI5AYE4V",
+      "stem": "James_2023_Algorithmic_decision-making_in_social_work",
+      "title": "Algorithmic decision-making in social work practice and pedagogy: Confronting the competency/critique dilemma",
+      "author_year": "Paul James (2023)",
+      "year": 2023,
+      "doi": "10.1080/02615479.2023.2195425",
+      "url": "",
       "abstract": "Explores tensions between training social workers for technologically-driven environments and engaging students in critical theories acknowledging unequal power distributions that technological change reinforces. Introduces algorithmic literacy centered on understanding critical limitations of algorithmic decision-making systems. Argues that adding social work subjects on ADM alone proves insufficient; students need opportunities to develop algorithmic literacy enabling them to ask appropriate q",
-      "stem": "_thin_QI5AYE4V",
-      "concepts": [],
-      "knowledge_summary": null,
-      "knowledge_sections": null,
       "stages": {
         "identification": {
           "in_zotero": true
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "linked"
         },
-        "ske": null,
+        "ske": {
+          "stage1_categories": {
+            "AI_Literacies": true,
+            "Generative_KI": false,
+            "Prompting": false,
+            "KI_Sonstige": true,
+            "Soziale_Arbeit": true,
+            "Bias_Ungleichheit": true,
+            "Gender": false,
+            "Diversitaet": true,
+            "Feministisch": false,
+            "Fairness": true
+          },
+          "stage1_arguments_count": 3,
+          "stage1_key_finding": "Sozialarbeitseducation muss ein Spannungsverhältnis zwischen technischer Kompetenz und kritischer Analyse auflösen, indem sie theoriegeleitet und praxisorientiert ADM-Systeme als Werkzeuge (nicht als ",
+          "stage3_completeness": 88,
+          "stage3_correctness": 93,
+          "stage3_overall": 91
+        },
         "assessment": {
           "llm": {
             "assessment_status": "assessed",
@@ -3596,7 +3661,38 @@
           },
           "agreement": "llm_only"
         }
-      }
+      },
+      "concepts": [
+        "Algorithmic Bias in Welfare Systems",
+        "Algorithmic Decision-Making (ADM) Systems",
+        "Algorithmic Fairness in Social Work",
+        "Algorithmic Literacy",
+        "Black Box Transparency in Algorithmic Systems",
+        "Competency/Critique Dilemma",
+        "Intersectional Vulnerability and ADM",
+        "Social Work Pedagogy and Curriculum Development"
+      ],
+      "knowledge_summary": "Sozialarbeitseducation muss ein Spannungsverhältnis zwischen technischer Kompetenz und kritischer Analyse auflösen, indem sie theoriegeleitet und praxisorientiert ADM-Systeme als Werkzeuge (nicht als Rahmen) behandelt, um sowohl ihre positiven als auch ihre diskriminierenden Potenziale zu adressieren.",
+      "knowledge_sections": {
+        "kernbefund": "Sozialarbeitseducation muss ein Spannungsverhältnis zwischen technischer Kompetenz und kritischer Analyse auflösen, indem sie theoriegeleitet und praxisorientiert ADM-Systeme als Werkzeuge (nicht als Rahmen) behandelt, um sowohl ihre positiven als auch ihre diskriminierenden Potenziale zu adressieren.",
+        "forschungsfrage": "Wie kann Sozialarbeitspädagogik Studierende sowohl auf die technische Kompetenz im Umgang mit algorithmischen Entscheidungssystemen als auch auf deren kritische Reflexion vorbereiten?",
+        "methodik": "Theoretisch und konzeptionell; Case-Study-Analyse von drei Fallbeispielen (AFST, COMPAS, NDIS) plus zwei zusätzliche Fälle (Heat List, HEALER); Curriculumentwicklung basierend auf Fallstudien\n**Datenbasis:** Keine primären empirischen Daten; qualitative Analyse von vier dokumentierten Algorithmen-Fallstudien in Sozialarbeit, Justizvollzug und Wohlfahrt",
+        "hauptargumente": "- Algorithmische Entscheidungssysteme werden zunehmend in Sozialarbeit implementiert, ohne dass Sozialarbeiter angemessen geschult werden; dies erzeugt ein Dilemma zwischen technischer Kompetenz und kritischer Reflexion.\n- Die bisherige Pädagogik 'normalisiert' Technologieeinsatz kritiklos oder lehrt Kritik getrennt von Technik-Verständnis; stattdessen braucht es eine integrierte, theorieinformierte Pädagogik, die ADM-Systeme als Werkzeuge innerhalb sozialer Machtstrukturen versteht.\n- Case-Studies zeigen, dass ADM-Systeme zwar Bias reduzieren können (z.B. AFST), aber oft neue Verzerrungen einführen, Transparenzmangel ('Black Box') schaffen und die Advocacy-Fähigkeit von Sozialarbeitern unterminieren; Studierende müssen lernen, solche Systeme kritisch zu hinterfragen."
+      },
+      "authors": "Paul James; Jason Lal; Ashley Liao; Liam Magee; Karen Soldatic",
+      "item_type": "journalarticle",
+      "journal": "",
+      "work_id": "work:5f49f95b-dcfe-5778-8376-a313cb039d4d",
+      "version_id": "version:2e650cfc-0147-5778-ab55-ed2e17a4f86b",
+      "version_type": "version_of_record",
+      "version_date": "2023",
+      "peer_review_status": "not_established",
+      "peer_review_basis": "unknown",
+      "preferred_version_id": "version:2e650cfc-0147-5778-ab55-ed2e17a4f86b",
+      "latest_version_id": "version:2e650cfc-0147-5778-ab55-ed2e17a4f86b",
+      "is_preferred_version": true,
+      "knowledge_doc": "vault/Papers/active-completion-qi5aye4v-algorithmic-decision-making-pedagogy.md",
+      "knowledge_coverage": "linked"
     },
     {
       "id": "WTLVG29I",
@@ -7618,10 +7714,28 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "linked"
         },
-        "ske": null,
+        "ske": {
+          "stage1_categories": {
+            "AI_Literacies": true,
+            "Generative_KI": false,
+            "Prompting": false,
+            "KI_Sonstige": true,
+            "Soziale_Arbeit": true,
+            "Bias_Ungleichheit": true,
+            "Gender": false,
+            "Diversitaet": true,
+            "Feministisch": false,
+            "Fairness": true
+          },
+          "stage1_arguments_count": 3,
+          "stage1_key_finding": "Sozialarbeitseducation muss ein Spannungsverhältnis zwischen technischer Kompetenz und kritischer Analyse auflösen, indem sie theoriegeleitet und praxisorientiert ADM-Systeme als Werkzeuge (nicht als ",
+          "stage3_completeness": 88,
+          "stage3_correctness": 93,
+          "stage3_overall": 91
+        },
         "assessment": {
           "human": {
             "decision": "Include",
@@ -7670,9 +7784,23 @@
           "agreement": "agree"
         }
       },
-      "concepts": [],
-      "knowledge_summary": null,
-      "knowledge_sections": null,
+      "concepts": [
+        "Algorithmic Bias in Welfare Systems",
+        "Algorithmic Decision-Making (ADM) Systems",
+        "Algorithmic Fairness in Social Work",
+        "Algorithmic Literacy",
+        "Black Box Transparency in Algorithmic Systems",
+        "Competency/Critique Dilemma",
+        "Intersectional Vulnerability and ADM",
+        "Social Work Pedagogy and Curriculum Development"
+      ],
+      "knowledge_summary": "Sozialarbeitseducation muss ein Spannungsverhältnis zwischen technischer Kompetenz und kritischer Analyse auflösen, indem sie theoriegeleitet und praxisorientiert ADM-Systeme als Werkzeuge (nicht als Rahmen) behandelt, um sowohl ihre positiven als auch ihre diskriminierenden Potenziale zu adressieren.",
+      "knowledge_sections": {
+        "kernbefund": "Sozialarbeitseducation muss ein Spannungsverhältnis zwischen technischer Kompetenz und kritischer Analyse auflösen, indem sie theoriegeleitet und praxisorientiert ADM-Systeme als Werkzeuge (nicht als Rahmen) behandelt, um sowohl ihre positiven als auch ihre diskriminierenden Potenziale zu adressieren.",
+        "forschungsfrage": "Wie kann Sozialarbeitspädagogik Studierende sowohl auf die technische Kompetenz im Umgang mit algorithmischen Entscheidungssystemen als auch auf deren kritische Reflexion vorbereiten?",
+        "methodik": "Theoretisch und konzeptionell; Case-Study-Analyse von drei Fallbeispielen (AFST, COMPAS, NDIS) plus zwei zusätzliche Fälle (Heat List, HEALER); Curriculumentwicklung basierend auf Fallstudien\n**Datenbasis:** Keine primären empirischen Daten; qualitative Analyse von vier dokumentierten Algorithmen-Fallstudien in Sozialarbeit, Justizvollzug und Wohlfahrt",
+        "hauptargumente": "- Algorithmische Entscheidungssysteme werden zunehmend in Sozialarbeit implementiert, ohne dass Sozialarbeiter angemessen geschult werden; dies erzeugt ein Dilemma zwischen technischer Kompetenz und kritischer Reflexion.\n- Die bisherige Pädagogik 'normalisiert' Technologieeinsatz kritiklos oder lehrt Kritik getrennt von Technik-Verständnis; stattdessen braucht es eine integrierte, theorieinformierte Pädagogik, die ADM-Systeme als Werkzeuge innerhalb sozialer Machtstrukturen versteht.\n- Case-Studies zeigen, dass ADM-Systeme zwar Bias reduzieren können (z.B. AFST), aber oft neue Verzerrungen einführen, Transparenzmangel ('Black Box') schaffen und die Advocacy-Fähigkeit von Sozialarbeitern unterminieren; Studierende müssen lernen, solche Systeme kritisch zu hinterfragen."
+      },
       "authors": "James, P.; Lal, J.; Liao, A.; Magee, L.; Soldatic, K.",
       "item_type": "journalarticle",
       "journal": "",
@@ -7685,8 +7813,8 @@
       "preferred_version_id": "version:2e650cfc-0147-5778-ab55-ed2e17a4f86b",
       "latest_version_id": "version:2e650cfc-0147-5778-ab55-ed2e17a4f86b",
       "is_preferred_version": true,
-      "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved"
+      "knowledge_doc": "vault/Papers/active-completion-qi5aye4v-algorithmic-decision-making-pedagogy.md",
+      "knowledge_coverage": "linked"
     },
     {
       "id": "RAV6DAFQ",
@@ -8156,7 +8284,7 @@
       "preferred_version_id": "version:c9a7b396-f86c-50ed-8808-6dc5c513627b",
       "latest_version_id": "version:c9a7b396-f86c-50ed-8808-6dc5c513627b",
       "is_preferred_version": true,
-      "knowledge_doc": "vault/Papers/ChatGPT for Social Work Science- Ethical Challenges and Opportunities.md",
+      "knowledge_doc": "vault/Papers/active-completion-zitlbm8a-chatgpt-social-work-science.md",
       "knowledge_coverage": "linked"
     },
     {
@@ -11879,8 +12007,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": true,
-          "knowledge_coverage": "fulltext_ready"
+          "markdown_converted": null,
+          "knowledge_coverage": "identity_unresolved"
         },
         "ske": null,
         "assessment": {
@@ -11923,7 +12051,7 @@
       "latest_version_id": "version:289ac267-2c86-54d2-a7ea-80ab49a289f3",
       "is_preferred_version": false,
       "knowledge_doc": null,
-      "knowledge_coverage": "fulltext_ready"
+      "knowledge_coverage": "identity_unresolved"
     },
     {
       "id": "MPCZVZEW",
@@ -14760,7 +14888,7 @@
       "preferred_version_id": "version:0e874262-87ce-5928-962b-758a55a98646",
       "latest_version_id": "version:0e874262-87ce-5928-962b-758a55a98646",
       "is_preferred_version": true,
-      "knowledge_doc": "vault/Papers/Recommendations for social work researchers and journal editors on the use of generative AI and large language models.md",
+      "knowledge_doc": "vault/Papers/active-completion-amyzfaph-generative-ai-social-work-research.md",
       "knowledge_coverage": "linked"
     },
     {
@@ -16511,7 +16639,7 @@
       "preferred_version_id": "version:0e874262-87ce-5928-962b-758a55a98646",
       "latest_version_id": "version:0e874262-87ce-5928-962b-758a55a98646",
       "is_preferred_version": true,
-      "knowledge_doc": "vault/Papers/Recommendations for social work researchers and journal editors on the use of generative AI and large language models.md",
+      "knowledge_doc": "vault/Papers/active-completion-amyzfaph-generative-ai-social-work-research.md",
       "knowledge_coverage": "linked"
     },
     {
@@ -18387,7 +18515,7 @@
       "preferred_version_id": "version:0e874262-87ce-5928-962b-758a55a98646",
       "latest_version_id": "version:0e874262-87ce-5928-962b-758a55a98646",
       "is_preferred_version": true,
-      "knowledge_doc": "vault/Papers/Recommendations for social work researchers and journal editors on the use of generative AI and large language models.md",
+      "knowledge_doc": "vault/Papers/active-completion-amyzfaph-generative-ai-social-work-research.md",
       "knowledge_coverage": "linked"
     },
     {
@@ -18918,8 +19046,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "linked"
         },
         "ske": null,
         "assessment": {
@@ -18963,8 +19091,8 @@
       "preferred_version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
       "latest_version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
       "is_preferred_version": true,
-      "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_doc": "vault/Papers/active-completion-z9dntbff-gender-bias-vision-language-models.md",
+      "knowledge_coverage": "linked"
     },
     {
       "id": "W8DFWR9L",
@@ -20154,8 +20282,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": true,
-          "knowledge_coverage": "linked"
+          "markdown_converted": null,
+          "knowledge_coverage": "identity_unresolved"
         },
         "ske": null,
         "assessment": {
@@ -20223,8 +20351,8 @@
       "preferred_version_id": "version:e062e7e2-fc9b-5939-874a-9db16ad5f8e0",
       "latest_version_id": "version:e062e7e2-fc9b-5939-874a-9db16ad5f8e0",
       "is_preferred_version": true,
-      "knowledge_doc": "vault/Papers/Debiasing prompts for gender bias in large language models.md",
-      "knowledge_coverage": "linked"
+      "knowledge_doc": null,
+      "knowledge_coverage": "identity_unresolved"
     },
     {
       "id": "7IVS7X63",
@@ -22774,8 +22902,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -22844,7 +22972,7 @@
       "latest_version_id": "version:f480d29f-0aef-5b6f-99ed-5886ed9c6d82",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "QZJL6KBZ",
@@ -30113,8 +30241,8 @@
     {
       "id": "SHJQQTI6",
       "stem": "_thin_SHJQQTI6",
-      "title": "A Survey on Intersectional Fairness in Machine Learning: Opportunities and Challenges",
-      "author_year": "Gohar & Cheng (2023)",
+      "title": "A Survey on Intersectional Fairness in Machine Learning: Notions, Mitigation, and Challenges",
+      "author_year": "Gohar, U. (2023)",
       "year": 2023,
       "doi": "10.24963/ijcai.2023/742",
       "url": "",
@@ -30126,7 +30254,7 @@
         "conversion": {
           "pdf_acquired": null,
           "markdown_converted": true,
-          "knowledge_coverage": "fulltext_ready"
+          "knowledge_coverage": "linked"
         },
         "ske": null,
         "assessment": {
@@ -30189,8 +30317,8 @@
       "preferred_version_id": "version:8c9eb11a-47da-5afe-8a50-a00659cb9455",
       "latest_version_id": "version:8c9eb11a-47da-5afe-8a50-a00659cb9455",
       "is_preferred_version": true,
-      "knowledge_doc": null,
-      "knowledge_coverage": "fulltext_ready"
+      "knowledge_doc": "vault/Papers/active-completion-shjqqti6-intersectional-fairness-machine-learning.md",
+      "knowledge_coverage": "linked"
     },
     {
       "id": "9Y7ZFGI5",
@@ -32298,8 +32426,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": true,
-          "knowledge_coverage": "fulltext_ready"
+          "markdown_converted": null,
+          "knowledge_coverage": "identity_unresolved"
         },
         "ske": null,
         "assessment": {
@@ -32347,7 +32475,7 @@
       "latest_version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "fulltext_ready"
+      "knowledge_coverage": "identity_unresolved"
     },
     {
       "id": "3ZNMTJ5B",
@@ -32666,8 +32794,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "linked"
         },
         "ske": null,
         "assessment": {
@@ -32706,8 +32834,8 @@
       "preferred_version_id": "version:2c5cc7f8-4580-5ff0-b423-f45df473a82c",
       "latest_version_id": "version:2c5cc7f8-4580-5ff0-b423-f45df473a82c",
       "is_preferred_version": true,
-      "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_doc": "vault/Papers/active-completion-v8sbeh4e-feminist-ai-neutrality.md",
+      "knowledge_coverage": "linked"
     },
     {
       "id": "9ZKZQM63",
@@ -32724,8 +32852,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "linked"
         },
         "ske": null,
         "assessment": {
@@ -32764,8 +32892,8 @@
       "preferred_version_id": "version:c517e367-0d9c-5d26-ad49-db0c2aa52ec1",
       "latest_version_id": "version:c517e367-0d9c-5d26-ad49-db0c2aa52ec1",
       "is_preferred_version": true,
-      "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_doc": "vault/Papers/active-completion-9zkzqm63-bias-mental-health-llms.md",
+      "knowledge_coverage": "linked"
     },
     {
       "id": "SIHIUMFZ",
@@ -32840,8 +32968,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "linked"
         },
         "ske": null,
         "assessment": {
@@ -32880,8 +33008,8 @@
       "preferred_version_id": "version:38ec2a2e-9a8f-5837-bd7d-7efad6f0f743",
       "latest_version_id": "version:38ec2a2e-9a8f-5837-bd7d-7efad6f0f743",
       "is_preferred_version": true,
-      "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_doc": "vault/Papers/active-completion-j4k3xa52-gender-bias-long-term-care-llms.md",
+      "knowledge_coverage": "linked"
     },
     {
       "id": "JD5JZ3KR",
@@ -39865,8 +39993,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "linked"
         },
         "ske": null,
         "assessment": {
@@ -39905,8 +40033,8 @@
       "preferred_version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
       "latest_version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
       "is_preferred_version": true,
-      "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_doc": "vault/Papers/active-completion-z9dntbff-gender-bias-vision-language-models.md",
+      "knowledge_coverage": "linked"
     },
     {
       "id": "HIHNAJZN",
@@ -40259,8 +40387,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "linked"
         },
         "ske": null,
         "assessment": {
@@ -40299,8 +40427,8 @@
       "preferred_version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
       "latest_version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
       "is_preferred_version": true,
-      "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_doc": "vault/Papers/active-completion-a2p8mxmy-algorithmic-justice-child-protection.md",
+      "knowledge_coverage": "linked"
     },
     {
       "id": "MD5RVIUW",
@@ -41309,7 +41437,7 @@
         "frequency": 3,
         "papers_count": 3,
         "definition": "Kritische Analyse von Algorithmen und automatisierten Entscheidungssystemen in sozialen Diensten hinsichtlich ihrer gerechten Anwendung gegenüber verschiedenen Klientelgruppen, insbesondere zur Vermeidung diskriminierender Kategorisierung vulnerabler Bevölkerungsgruppen.",
-        "cluster": "bridge"
+        "cluster": "sozial"
       },
       {
         "id": "Algorithmic Fairness in Child Welfare",
@@ -41533,7 +41661,7 @@
         "frequency": 2,
         "papers_count": 2,
         "definition": "Erweiterte Kompetenzen von Sozialarbeitern im Umgang mit KI-Systemen, einschließlich kritischen Verständnisses von Funktionsweise, Limitationen und ethischen Implikationen. 92% der Studienteilnehmer fordern formalisierte Schulungsprogramme.",
-        "cluster": "sozial"
+        "cluster": "bridge"
       },
       {
         "id": "Algorithmic Fairness Auditing",
@@ -41733,7 +41861,7 @@
         "frequency": 2,
         "papers_count": 2,
         "definition": "Kombinierte Fähigkeit, technische Funktionsweise algorithmischer Systeme zu verstehen und deren soziale Auswirkungen sowie kritische Limitations kritisch zu reflektieren.",
-        "cluster": "bridge"
+        "cluster": "sozial"
       },
       {
         "id": "Algorithmic Bias in Welfare Systems",
@@ -41741,7 +41869,7 @@
         "frequency": 2,
         "papers_count": 2,
         "definition": "Die systematische Diskriminierung vulnerabler Gruppen durch automatisierte Entscheidungssysteme in Sozialleistungsprogrammen, die strukturelle Ungleichheit verstärkt und marginalisierte Communities überproportional schadet.",
-        "cluster": "bridge"
+        "cluster": "sozial"
       },
       {
         "id": "Feminist Science and Technology Studies (STS)",
@@ -51825,7 +51953,7 @@
         "description": "Einträge mit verknüpftem Wissensdokument oder bereitstehendem Volltext",
         "type": "deterministic",
         "input": 463,
-        "output": 273,
+        "output": 281,
         "unit": "corpus_record",
         "prompt": null,
         "limitations": [
@@ -51838,10 +51966,10 @@
         "name": "Structured Knowledge Extraction",
         "description": "Kanonisch verknüpfte Wissensdokumente",
         "type": "probabilistic",
-        "input": 273,
-        "output": 258,
+        "input": 281,
+        "output": 269,
         "unit": "corpus_record",
-        "distinct_documents": 193,
+        "distinct_documents": 199,
         "prompts": {
           "stage1": "Du bist ein Experte für wissenschaftliche Literaturanalyse im Bereich KI, Soziale Arbeit und Gender Studies.\n\n# PAPER (Markdown-Format)\n[PAPER-INHALT]\n\n# AUFGABE\nExtrahiere alle relevanten Informationen und klassifiziere das Paper nach 10 Kategorien.\nAntworte im JSON-Format (kein Markdown-Codeblock, nur reines JSON).\n\n{\n  \"metadata\": {\n    \"title\": \"Vollständiger Titel des Papers\",\n    \"authors\": [\"Autor1\", \"Autor2\"],\n    \"year\": 2024,\n    \"type\": \"journalArticle|conferencePaper|report|book|thesis|workingPaper\",\n    \"language\": \"en|de|other\"\n  },\n  \"core\": {\n    \"research_question\": \"Die zentrale Forschungsfrage (1 Satz)\",\n    \"methodology\": \"Ansatz und Methoden (kurz: Empirisch/Theoretisch/Mixed/Review + spezifische Methoden)\",\n    \"key_finding\": \"Wichtigster Befund oder Beitrag (1-2 Sätze)\",\n    \"data_basis\": \"Datenbasis falls empirisch (z.B. n=125 Surveys, 50 Interviews)\"\n  },\n  \"arguments\": [\n    \"Hauptargument 1 (1-2 Sätze)\",\n    \"Hauptargument 2 (1-2 Sätze)\",\n    \"Hauptargument 3 (1-2 Sätze)\"\n  ],\n  \"categories\": {\n    \"AI_Literacies\": true,\n    \"Generative_KI\": false,\n    \"Prompting\": false,\n    \"KI_Sonstige\": true,\n    \"Soziale_Arbeit\": true,\n    \"Bias_Ungleichheit\": true,\n    \"Gender\": false,\n    \"Diversitaet\": true,\n    \"Feministisch\": false,\n    \"Fairness\": true\n  },\n  \"category_evidence\": {\n    \"AI_Literacies\": \"Direktes Zitat oder Paraphrase als Evidenz\",\n    \"KI_Sonstige\": \"Evidenz...\",\n    \"Soziale_Arbeit\": \"Evidenz...\",\n    \"Bias_Ungleichheit\": \"Evidenz...\",\n    \"Diversitaet\": \"Evidenz...\",\n    \"Fairness\": \"Evidenz...\"\n  },\n  \"references\": [\n    {\"author\": \"Buolamwini\", \"year\": 2018, \"short_title\": \"Gender Shades\"},\n    {\"author\": \"D'Ignazio & Klein\", \"year\": 2020, \"short_title\": \"Data Feminism\"},\n    {\"author\": \"Eubanks\", \"year\": 2019, \"short_title\": \"Automating Inequality\"}\n  ],\n  \"assessment\": {\n    \"domain_fit\": \"Wie relevant ist das Paper für die Schnittstelle AI/Soziale Arbeit/Gender? (1-2 Sätze)\",\n    \"unique_contribution\": \"Was ist der besond",
           "stage2_note": "Stufe 2 ist deterministisch: Python-Template.",
@@ -51871,8 +51999,8 @@
         "name": "Wissenssammlung",
         "description": "Verknüpfte Wissensdokumente; kein Maß für den Abschluss der Synthese",
         "type": "mixed",
-        "input": 258,
-        "output": 258,
+        "input": 269,
+        "output": 269,
         "unit": "corpus_record",
         "prompt": null,
         "limitations": [
@@ -52087,18 +52215,18 @@
     }
   ],
   "meta": {
-    "source_fingerprint": "sha256:f35dd88c5089f2ed5a062f8591410a9c5d4286e1400a4dae18378653232ca7e7",
+    "source_fingerprint": "sha256:8916cbeb249bbef986e3637901ff22915f6c8d5f4b3d09c2027dc73cd721d252",
     "total_papers": 463,
     "corpus_record_total": 463,
     "corpus_work_total": 361,
     "aggregation_unit": "record",
-    "knowledge_docs": 193,
-    "knowledge_linked_records": 258,
+    "knowledge_docs": 199,
+    "knowledge_linked_records": 269,
     "knowledge_coverage": {
-      "fulltext_ready": 15,
-      "identity_unresolved": 69,
-      "linked": 258,
-      "source_missing": 121
+      "fulltext_ready": 12,
+      "identity_unresolved": 67,
+      "linked": 269,
+      "source_missing": 115
     },
     "human_assessed": 302,
     "llm_assessed": 326,
@@ -52150,7 +52278,7 @@
       "knowledge_docs": "distinct_knowledge_doc_paths"
     },
     "exported_journeys": 463,
-    "enriched_journeys": 197,
+    "enriched_journeys": 201,
     "divergence_items": 142,
     "concepts_count": 136,
     "pattern_distribution": {},

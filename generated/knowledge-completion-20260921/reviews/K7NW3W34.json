@@ -1,0 +1,32 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "K7NW3W34",
+  "knowledge_document": "research-vault/20_distillates/publications/k7nw3w34-ai-assisted-social-work-recording.md",
+  "knowledge_document_sha256": "sha256:e3fb0af09b171973b6dcd16cf0d5ff524c94fcd90296336c0cdd59232ecdd6ab",
+  "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/e9fb8b7679eaf1023485.md",
+  "source_sha256": "sha256:4dbc41e4a458cf82e1784ad5190b2a6b211a63488e2c0aaa557b67304aca5737",
+  "reviewed_at": "2026-09-21T19:01:14.723489Z",
+  "reviewer": {
+    "agent_id": "/root/source_completion",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "changes_requested",
+  "scope": "Independent full-text, source-bound review of statements, method, category relevance, quotations and conversion limits. This receipt grants no human verification, screening-state change, domain-expert verification or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Core statements; Method and scope",
+      "finding": "The quotation resolves exactly. The baseline mixed-method design, 152 survey respondents, two focus groups with seven participants, 255 free-text responses, five tensions and five curriculum propositions agree with the source."
+    },
+    {
+      "severity": "error",
+      "location": "Assessment relevance",
+      "finding": "The category list overstates Fairness and excludes Bias_Ungleichheit. The paper addresses discriminatory narratives, algorithmic bias, unequal accessibility and equity, which support Bias_Ungleichheit. It does not study algorithmic-fairness metrics or evaluate a fair-ML/debiasing method, so Fairness is not established under assessment/categories.yaml. Replace Fairness with Bias_Ungleichheit or qualify the category claim."
+    },
+    {
+      "severity": "note",
+      "location": "Limitations; conversion boundary",
+      "finding": "The baseline-before-sustained-use boundary, single Scottish local authority and nonrepresentativeness are accurate. Linearised source tables were available and figures were not independently inspected; the reviewed sample and curriculum claims are stated in prose and do not require figure interpretation."
+    }
+  ]
+}

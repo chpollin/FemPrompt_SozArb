@@ -7,19 +7,21 @@ work-id: work:365293c9-c8ea-54dd-9f65-2f37976f1a31
 version-id: version:5cc8d78c-4578-5a0b-a269-b186f10fe049
 version-type: unknown
 topics:
-  - "[[Artificial Intelligence]]"
-  - "[[Social Work]]"
-  - "[[Fairness]]"
-status: preparation
+- '[[Artificial Intelligence]]'
+- '[[Social Work]]'
+- '[[Fairness]]'
+status: ai-agent-reviewed
 checked:
   quote: 2026-09-21
+  validation: '2026-09-21'
+  ai-agent-review: '2026-09-21'
 created: 2026-09-21
-updated: 2026-09-21
+updated: '2026-09-21'
 prepared-by:
   agent-id: /root/prism_assessment
   model: gpt-5.6-sol
   prepared-at: 2026-09-21
-  artifact-review-status: unreviewed
+  artifact-review-status: ai-agent-reviewed
 source-representation:
   path: generated/markdown/R7V99ERA.md
   sha256: sha256:9555c30e0bac19f16810d62e566a4a7d6dd51c0e3e40b05b4a82d13fd69dd674
@@ -27,6 +29,9 @@ source-representation:
   version-type: unknown
   is-preferred-version: true
   boundary: The preparing agent read the complete hash-bound proceedings conversion, including appendices and linearised tables. Figures were available only as captions or image placeholders and were not independently inspected. Source identity review does not constitute review of this distillate.
+source-review:
+  path: corpus/knowledge-reviews/2026-09-21/R7V99ERA.json
+  sha256: sha256:8731a2232f41b2d501037ca3ae6515acae8dc1808c4078d8b327fb736d22f4e3
 ---
 
 # Distillate: Racial bias risks in child-protective-services NLP
@@ -55,4 +60,4 @@ Race is recorded as perceived by workers, and the main comparisons reduce the da
 
 ## Review boundary
 
-This preparation is source-bound and unreviewed. It grants no separate AI source-review, human verification, scientific acceptance or publication authority.
+This document was prepared from the source representation identified in its metadata. The current review state and its supporting receipt are recorded in the frontmatter. AI review does not establish domain-expert verification or publication approval.

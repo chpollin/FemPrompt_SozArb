@@ -7,17 +7,19 @@ work-id: work:6c8a1072-fcca-5fbd-8611-08774ef0ad7f
 version-id: version:69fc5b26-5038-5dd2-9bef-f0403caae732
 version-type: version_of_record
 topics:
-  - "[[Bias and Fairness]]"
-status: preparation
+- '[[Bias and Fairness]]'
+status: ai-agent-reviewed
 checked:
   quote: 2026-09-21
+  validation: '2026-09-21'
+  ai-agent-review: '2026-09-21'
 created: 2026-09-21
-updated: 2026-09-21
+updated: '2026-09-21'
 prepared-by:
   agent-id: /root/knowledge_documents
   model: gpt-5.6-sol
   prepared-at: 2026-09-21
-  artifact-review-status: unreviewed
+  artifact-review-status: ai-agent-reviewed
 source-representation:
   path: generated/source-acquisition/codex-websearch-2026/markdown-repaired/a1c7e9db9a3dc6caff54.md
   sha256: sha256:0aa4087d1d261b8e702f3f8c42aff5f75647809fc338226ecd0bf3451dbbff96
@@ -26,6 +28,9 @@ source-representation:
   source-url: https://aclanthology.org/2026.findings-acl.418/
   is-preferred-version: true
   boundary: The preparing agent read the complete hash-bound ACL proceedings Markdown representation and checked the quoted passages. No separate scholarly review has occurred.
+source-review:
+  path: corpus/knowledge-reviews/2026-09-21/XPWCK65R.json
+  sha256: sha256:040493bc5374f1561d0c67d666f48b6bbf6ce6d1ffc8b25c0bd2d3bd7ea8da80
 ---
 
 # Distillate: Mitigating Cultural Bias in LLMs via Multi-Agent Cultural Debate
@@ -58,4 +63,4 @@ CEBiasBench covers five cultural domains and discrete labels, omitting finer int
 
 ## Review boundary
 
-This preparation was produced from the complete hash-bound local ACL source. Quotations were checked. Its `preparation` status is unreviewed and grants no scholarly-review authority.
+This document was prepared from the source representation identified in its metadata. The current review state and its supporting receipt are recorded in the frontmatter. AI review does not establish domain-expert verification or publication approval.

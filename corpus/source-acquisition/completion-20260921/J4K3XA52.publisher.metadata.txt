@@ -1,0 +1,136 @@
+source_url: https://link.springer.com/article/10.1186/s12911-025-03118-0
+raw_html_sha256: sha256:cb0e22fe6351d23a831c6cf20cbaf298a5824a8939627d78bf1411207c0ecfc5
+dc.title: Evaluating gender bias in large language models in long-term care
+citation_pdf_url: https://link.springer.com/content/pdf/10.1186/s12911-025-03118-0.pdf
+citation_fulltext_html_url: https://link.springer.com/article/10.1186/s12911-025-03118-0
+citation_journal_title: BMC Medical Informatics and Decision Making
+citation_journal_abbrev: BMC Med Inform Decis Mak
+citation_publisher: BioMed Central
+citation_issn: 1472-6947
+citation_title: Evaluating gender bias in large language models in long-term care
+citation_volume: 25
+citation_issue: 1
+citation_publication_date: 2025/12
+citation_online_date: 2025/08/11
+citation_firstpage: 274
+citation_article_type: Research
+citation_language: en
+dc.identifier: doi:10.1186/s12911-025-03118-0
+citation_doi: 10.1186/s12911-025-03118-0
+citation_springer_api_url: http://api.springer.com/xmldata/jats?q=doi:10.1186/s12911-025-03118-0&api_key=
+citation_reference: Local Government Assocation. Artificial intelligence use cases, 2024. 
+                  https://web.archive.org/web/20240904192138/https://www.local.gov.uk/our-support/cyber-digital-and-technology/artificial-intelligence-hub/artificial-intelligence-use
+                  
+                . [Accessed: 2024-09-04].
+citation_reference: Local Government: State of the Sector: AI Research Report. Technical report, local government association. 2024. 
+                  https://web.archive.org/web/20240906174435/https://www.local.gov.uk/sites/default/files/documents/Local%20Government%20State%20of%20the%20Sector%20AI%20Research%20Report%202024%20-%20UPDATED_3.pdf
+                  
+                . [Accessed: 2024-09-06].
+citation_reference: Google Cloud. MedLM: Generative AI fine-tuned for the healthcare industry, 2024. 
+                  https://web.archive.org/web/20240804062023/https://cloud.google.com/blog/topics/healthcare-life-sciences/introducing-medlm-for-the-healthcare-industry
+                  
+                . [Accessed: 2024-09-01].
+citation_reference: citation_journal_title=Writ Commun; citation_title=Time, the written record, and professional practice: The case of contemporary social work; citation_author=T Lillis, M Leedham, A Twiner; citation_volume=37; citation_publication_date=2020; citation_pages=431-86; citation_doi=10.1177/0741088320938804; citation_id=CR4
+citation_reference: citation_journal_title=Ann Fam Med; citation_title=Tethered to the EHR: Primary care physician workload assessment using EHR event log data and time-motion observations; citation_author=BG Arndt, JW Beasley, MD Watkinson, JL Temte, W-J Tuan, CA Sinsky, VJ Gilchrist; citation_volume=15; citation_issue=5; citation_publication_date=2017; citation_pages=419-26; citation_doi=10.1370/afm.2121; citation_id=CR5
+citation_reference: Miller E, Barrie K. Setting the bar for social work in Scotland. 2022.
+citation_reference: Preston-Shoot M, Braye S, Preston O, Allen K, Spreadbury K. Analysis of safeguarding adult reviews April 2017–March 2019: findings for sector-led improvement. Local government association. 2020. 
+                  https://www.local.gov.uk/publications/analysis-safeguarding-adult-reviewsapril-2017-march-2019
+                  
+                .
+citation_reference: Biden JR. Executive order on the safe, secure, and trustworthy development and use of artificial intelligence. 2023.
+citation_reference: HM Treasury. Spring budget. 2024. 
+                  https://www.gov.uk/government/publications/spring-budget-2024/spring-budget-2024-html
+                  
+                . [Accessed: 2024-07-25].
+citation_reference: citation_title=Regulation of the European Parliament and of the council laying down harmonised rules on artificial intelligence (artificial intelligence Act) and amending certain union legislative acts: Annexes; citation_publication_date=2024; citation_id=CR10
+citation_reference: EU AI act: First regulation on artificial intelligence, June 2023. 
+                  https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence
+                  
+                . Last updated: 18-06-2024- 16:29, Accessed: 2024-09-23.
+citation_reference: citation_journal_title=Nat Med; citation_title=Adapted large language models can outperform medical experts in clinical text summarization; citation_author=D Van Veen, C Van Uden, L Blankemeier, J-B Delbrouck, A Aali, C Bluethgen, A Pareek, M Polacin, EP Reis, A Seehofnerová; citation_volume=30; citation_issue=4; citation_publication_date=2024; citation_pages=1134-42; citation_doi=10.1038/s41591-024-02855-5; citation_id=CR12
+citation_reference: citation_journal_title=Int J Med Inf; citation_title=The role of electronic medical records in improving the quality of health care services: Comparative study; citation_author=O Ayaad, A Alloubani, EA ALhajaa, M Farhan, S Abuseif, AA Hroub, L Akhu-Zaheya; citation_volume=127; citation_publication_date=2019; citation_pages=63-67; citation_doi=10.1016/j.ijmedinf.2019.04.014; citation_id=CR13
+citation_reference: citation_journal_title=BMJ Qual Saf; citation_title=Quality of patient record keeping: An indicator of the quality of care?; citation_author=M Zegers, MC de Bruijne, P Spreeuwenberg, C Wagner, PP Groenewegen, G van der Wal; citation_volume=20; citation_issue=4; citation_publication_date=2011; citation_pages=314-18; citation_doi=10.1136/bmjqs.2009.038976; citation_id=CR14
+citation_reference: citation_journal_title=Crit Care Med; citation_title=The effect of two different electronic health record user interfaces on intensive care provider task load, errors of cognition, and performance; citation_author=A Ahmed, S Chandra, V Herasevich, O Gajic, BW Pickering; citation_volume=39; citation_issue=7; citation_publication_date=2011; citation_pages=1626-34; citation_doi=10.1097/CCM.0b013e31821858a0; citation_id=CR15
+citation_reference: Bolukbasi T, Chang K-W, Zou JY, Saligrama V, Kalai AT. Man is to computer programmer as woman is to homemaker? debiasing word embeddings. Adv Neural Inf Process Syst. 2016;29.
+citation_reference: citation_journal_title=Science; citation_title=Semantics derived automatically from language corpora contain human-like biases; citation_author=A Caliskan, JJ Bryson, A Narayanan; citation_volume=356; citation_issue=6334; citation_publication_date=2017; citation_pages=183-86; citation_doi=10.1126/science.aal4230; citation_id=CR17
+citation_reference: Goodman KE, Paul HY, Morgan DJ. AI-Generated clinical summaries require more than accuracy. JAMA. 2024.
+citation_reference: citation_journal_title=Trans Assoc Comput Linguist; citation_title=Gender bias in machine translation; citation_author=B Savoldi, M Gaido, L Bentivogli, M Negri, M Turchi; citation_volume=9; citation_publication_date=2021; citation_pages=845-74; citation_doi=10.1162/tacl_a_00401; citation_id=CR19
+citation_reference: Armstrong L, Liu A, MacNeil S, Metaxa D. The silicon ceiling: auditing GPT’s race and gender biases in hiring. Proceedings of the 4th ACM Conference on Equity and Access in Algorithms, Mechanisms, and Optimization. 2024:1–18.
+citation_reference: Chen E, Zhan R-J, Lin Y-B, Chen H-H. From structured prompts to open narratives: measuring gender bias in LLMs through open-ended storytelling. Preprint arXiv:2503.15904, 2025.
+citation_reference: Kotek H, Dockum R, Sun D. Gender bias and stereotypes in large language models. Proceedings of the ACM collective intelligence conference. 2023:12–24.
+citation_reference: citation_journal_title=The Lancet Digit Health; citation_title=Assessing the potential of GPT-4 to perpetuate racial and gender biases in health care: A model evaluation study; citation_author=T Zack, E Lehman, M Suzgun, JA Rodriguez, LA Celi, J Gichoya, D Jurafsky, P Szolovits, DW Bates, R-E-E Abdulnour; citation_volume=6; citation_issue=1; citation_publication_date=2024; citation_pages=e12-22; citation_doi=10.1016/S2589-7500(23)00225-X; citation_id=CR23
+citation_reference: citation_journal_title=Comput Linguist; citation_title=Bias and fairness in large language models: A survey; citation_author=IO Gallegos, RA Rossi, J Barrow, MM Tanjim, S Kim, F Dernoncourt, Y Tong, R Zhang, NK Ahmed; citation_volume=50; citation_issue=3; citation_publication_date=2024; citation_pages=1097-179; citation_doi=10.1162/coli_a_00524; citation_id=CR24
+citation_reference: Pfohl SR, Cole-Lewis H, Sayres R, Neal D, Asiedu M, Dieng A, Tomasev N, Rashid QM, Azizi S, Rostamzadeh N, et al. A toolbox for surfacing health equity harms and biases in large language models. Nat Med. 2024;1–11.
+citation_reference: citation_journal_title=Nat Lang Process J; citation_title=Gender bias in transformers: A comprehensive review of detection and mitigation strategies; citation_author=P Nemani, YD Joel, P Vijay, FF Liza; citation_volume=6; citation_publication_date=2024; citation_pages=100047; citation_doi=10.1016/j.nlp.2023.100047; citation_id=CR26
+citation_reference: Shan Z, Diana ER, Zhou J. Gender Inclusivity Fairness Index (GIFI): a multilevel framework for evaluating gender diversity in large language models. Preprint arXiv:2506.15568, 2025.
+citation_reference: Meta AI. Introducing Meta Llama 3: the most capable openly available LLM to date, 2024a. 
+                  https://ai.meta.com/blog/meta-llama-3/
+                  
+                . [Accessed: 2024-07-14].
+citation_reference: Team G, Mesnard T, Hardin C, Dadashi R, Bhupatiraju S, Pathak S, Sifre L, Rivière M, Kale MS, Love J, et al. Gemma: Open models based on gemini research and technology. Preprint arXiv:2403.08295, 2024.
+citation_reference: Roberts A, Raffel C, Lee K, Matena M, Shazeer N, Liu PJ, Narang S, Wei L, Zhou Y. Exploring the limits of transfer learning with a unified text-to-text transformer. Google, Tech. Rep., 2019.
+citation_reference: Lewis M, Liu Y, Goyal N, Ghazvininejad M, Mohamed A, Levy O, Stoyanov V, Zettlemoyer L. Bart: denoising sequence-to-sequence pre-training for natural language generation, translation, and comprehension. Preprint arXiv:1910.13461, 2019.
+citation_reference: Sharma S, Dey M, Sinha K. Evaluating gender bias in natural language inference. arXiv preprint arXiv:2105.05541, 2021.
+citation_reference: citation_title=Computer sciences and mathematics Forum; citation_publication_date=2022; citation_id=CR33; citation_author=S Katsarou; citation_author=B Rodríguez-Gálvez; citation_author=J Shanahan; citation_publisher=MDPI
+citation_reference: Steen J, Markert K. Investigating gender bias in news summarization. Preprint arXiv:2309.08047, 2023.
+citation_reference: Kusner MJ, Loftus J, Russell C, Silva R. Counterfactual fairness. Adv Neural Inf Process Syst. 2017;30.
+citation_reference: citation_journal_title=Int J Res in Mark; citation_title=More than a feeling: Accuracy and application of sentiment analysis; citation_author=J Hartmann, M Heitmann, C Siebert, C Schamp; citation_volume=40; citation_issue=1; citation_publication_date=2023; citation_pages=75-87; citation_doi=10.1016/j.ijresmar.2022.05.005; citation_id=CR36
+citation_reference: Liu Y, Ott M, Goyal N, Jingfei D, Joshi M, Chen D, Levy O, Lewis M, Zettlemoyer L, Stoyanov V. Roberta: a robustly optimized bert pretraining approach. Preprint arXiv:1907.11692, 2019.
+citation_reference: Sheng E, Chang K-W, Natarajan P, Peng N. The woman worked as a babysitter: on biases in language generation. arXiv preprint arXiv:1909.01326, 2019.
+citation_reference: Lik Xun Yuan. Distilbert-base-multilingual-cased-sentiments-student (revision 2e33845). 2023. 
+                  https://huggingface.co/lxyuan/distilbert-base-multilingual-cased-sentiments-student
+                  
+                .
+citation_reference: Sanh V, Debut L, Chaumond J, Wolf T. DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter. In NeurIPS 
+                  
+                    
+                  
+                  $$EMC^2$$
+                . Workshop; 2019.
+citation_reference: citation_journal_title=J R Stat Soc Series B Stat Methodol; citation_title=Controlling the false discovery rate: A practical and powerful approach to multiple testing; citation_author=Y Benjamini, Y Hochberg; citation_volume=57; citation_issue=1; citation_publication_date=1995; citation_pages=289-300; citation_doi=10.1111/j.2517-6161.1995.tb02031.x; citation_id=CR41
+citation_reference: Ioannis Kosmidis. Brglm2: Bias reduction in generalized linear models. 2023. 
+                  https://CRAN.R-project.org/package=brglm2
+                  
+                . R package version 0.9.2.
+citation_reference: Prabhakaran V, Hutchinson B, Mitchell M. Perturbation sensitivity analysis to detect unintended model biases. Preprint arXiv:1910.04210, 2019.
+citation_reference: Garg S, Perot V, Limtiaco N, Taly A, Chi EH, Beutel A. Counterfactual fairness in text classification through robustness. Proceedings of the 2019 AAAI/ACM Conference on AI, Ethics, and Society. 2019:219–26.
+citation_reference: Wolf T, Debut L, Sanh V, Chaumond J, Delangue C, Moi A, Cistac P, Rault T, Louf R, Funtowicz M, et al. Huggingface’s transformers: state-of-the-art natural language processing. arXiv preprint arXiv:1910.03771, 2019.
+citation_reference: Honnibal M, Montani I. spaCy 3: natural language understanding with bloom embeddings, convolutional neural networks and incremental parsing. 2021. 
+                  https://spacy.io/
+                  
+                .
+citation_reference: citation_title=Python 3 reference manual; citation_publication_date=2009; citation_id=CR47; citation_author=G Van Rossum; citation_author=FL Drake; citation_publisher=CreateSpace
+citation_reference: Yuan LXBLC. 2024. 
+                  https://huggingface.co/facebook/bart-large-cnn
+                  
+                . [Accessed: 2024-07-25].
+citation_reference: Google. T5 base, 2024a. 
+                  https://huggingface.co/google-t5/t5-base
+                  
+                . [Accessed: 2024-07-25].
+citation_reference: Google. Gemma 7b-it, 2024b. 
+                  https://huggingface.co/google/gemma-7b-it
+                  
+                . [Accessed: 2024-07-25].
+citation_reference: Meta AI. Llama3-8b-Instruct. 2024. 
+                  https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct
+                  
+                . [Accessed: 2024-07-25].
+citation_reference: R Core Team. R: A Language and Environment for Statistical Computing. R Foundation for Statistical Computing, Vienna, Austria, 2024. 
+                  https://www.R-project.org/
+                  
+                .
+citation_reference: Sam Rickman. Evaluating gender bias in LLMs in long-term care. 2024. 
+                  https://github.com/samrickman/evaluate-llm-gender-bias-ltc
+                  
+                . [Accessed: 2024-08-11].
+citation_reference: Lenth RV. Emmeans: estimated marginal means, aka least-squares means. 2024. 
+                  https://rvlenth.github.io/emmeans/
+                  
+                . R package version 1.10.2.
+citation_reference: citation_journal_title=Trans Assoc Comput Linguist; citation_title=Benchmarking large language models for news summarization; citation_author=T Zhang, F Ladhak, E Durmus, P Liang, K McKeown, TB Hashimoto; citation_volume=12; citation_publication_date=2024; citation_pages=39-57; citation_doi=10.1162/tacl_a_00632; citation_id=CR55
+citation_reference: Dinan E, Fan A, Ledell W, Weston J, Kiela D, Williams A. Multi-dimensional gender bias classification. arXiv preprint arXiv:2005.00614, 2020.
+citation_author: Rickman, Sam
+citation_author_email: s.w.rickman@lse.ac.uk
+citation_author_institution: Care Policy and Evaluation Centre, London, UK
+citation_cover_date: 2025/12/01

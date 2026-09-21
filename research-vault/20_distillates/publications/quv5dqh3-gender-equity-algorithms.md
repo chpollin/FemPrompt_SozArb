@@ -7,19 +7,21 @@ work-id: work:3dc3ced9-8261-5840-9d71-aa2dfc43af87
 version-id: version:950d71ce-958d-55e9-804d-1bb5f3a0a41a
 version-type: version_of_record
 topics:
-  - "[[Artificial Intelligence]]"
-  - "[[Gender]]"
-  - "[[Fairness]]"
-status: preparation
+- '[[Artificial Intelligence]]'
+- '[[Gender]]'
+- '[[Fairness]]'
+status: ai-agent-reviewed
 checked:
   quote: 2026-09-21
+  validation: '2026-09-21'
+  ai-agent-review: '2026-09-21'
 created: 2026-09-21
-updated: 2026-09-21
+updated: '2026-09-21'
 prepared-by:
   agent-id: /root/prism_assessment
   model: gpt-5.6-sol
   prepared-at: 2026-09-21
-  artifact-review-status: unreviewed
+  artifact-review-status: ai-agent-reviewed
 source-representation:
   path: generated/markdown_clean/QUV5DQH3.md
   sha256: sha256:e5f3106b938f608704fa0809264ce0914030730aec95910259145ff71c6c0293
@@ -27,6 +29,9 @@ source-representation:
   version-type: version_of_record
   is-preferred-version: true
   boundary: The preparing agent read the complete hash-bound official HTML representation. The local capture includes the complete article followed by a repeated teaser and subscription notice. Source identity review does not constitute review of this distillate.
+source-review:
+  path: corpus/knowledge-reviews/2026-09-21/QUV5DQH3.json
+  sha256: sha256:6c53ece84bd322f2f9f82901de9340b760993e57042a17120e551dc2c4dd55b6
 ---
 
 # Distillate: Gender equity in algorithm design and governance
@@ -55,4 +60,4 @@ The article does not specify a reproducible search, sampling or coding protocol 
 
 ## Review boundary
 
-This preparation is source-bound and unreviewed. It grants no separate AI source-review, human verification, scientific acceptance or publication authority.
+This document was prepared from the source representation identified in its metadata. The current review state and its supporting receipt are recorded in the frontmatter. AI review does not establish domain-expert verification or publication approval.

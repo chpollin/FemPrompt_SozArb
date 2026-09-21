@@ -1,6 +1,6 @@
 # Provisional source-bound synthesis outline
 
-Source fingerprint: `sha256:12968be6c0d225dfc0f1d3ee27349da2e51111d50d97a6046fd9091da5a8f704`. Deterministic internal preparation; no approval is created.
+Source fingerprint: `sha256:0c8485cdd6a830be445d3e5064c55bba32847de99aa0cf8ee0e5983578242975`. Deterministic internal preparation; no approval is created.
 
 This is a writing and verification plan, not a finished synthesis. The canonical manuscript remains `research-vault/40_output/paper/paper.md`. Tables count recorded coding; the statements below are existing assertion texts with their recorded authority, not new findings.
 

@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-09-21T20:15:07.843104",
+  "input_dir": "generated\\pdfs\\completion-20260921\\shjqqti6-input",
+  "output_dir": "generated\\source-acquisition\\completion-20260921\\docling",
+  "total_files": 1,
+  "converted": 1,
+  "skipped": 0,
+  "failed": 0,
+  "low_quality": 0,
+  "files": [
+    {
+      "input": "SHJQQTI6.pdf",
+      "output": "SHJQQTI6.md",
+      "file_hash": "73d7c7613bd20d0b57112fa21ca45ff6",
+      "success": true,
+      "duration_seconds": 10.39,
+      "metrics": {
+        "total_chars": 53423,
+        "total_lines": 343,
+        "total_words": 8076,
+        "headings": 25,
+        "heading_levels": {
+          "h2": 25
+        },
+        "tables": 1,
+        "lists": 73,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 141,
+        "avg_line_length": 262.8
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    }
+  ]
+}

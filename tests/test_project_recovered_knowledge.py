@@ -104,6 +104,25 @@ def test_skips_recovery_before_fulltext_manifest_exists(tmp_path):
     assert not (repo / "docs/vault/Papers").exists()
 
 
+def test_canonical_recovery_accepts_only_line_ending_changes(tmp_path):
+    repo, fulltext_manifest = _repo(tmp_path)
+    manifest_path = repo / "corpus/knowledge_document_recovery.json"
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    manifest.update(
+        schema="femprompt-knowledge-document-recovery/1.1",
+        hash_contract="text-crlf-to-lf",
+    )
+    _write_json(manifest_path, manifest)
+    source = repo / "generated/vault/Papers/source-title.md"
+    original = source.read_bytes()
+    source.write_bytes(original.replace(b"\n", b"\r\n"))
+    project_recovered_knowledge(repo, fulltext_manifest)
+    assert (repo / "docs/vault/Papers/recovered-RECORD.md").read_bytes() == original
+    source.write_bytes(original.replace(b"Historical", b"Altered"))
+    with pytest.raises(ValueError, match="knowledge document hash differs"):
+        project_recovered_knowledge(repo, fulltext_manifest)
+
+
 @pytest.mark.parametrize(
     ("path", "message"),
     [

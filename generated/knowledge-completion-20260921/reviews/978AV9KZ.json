@@ -1,0 +1,27 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "978AV9KZ",
+  "knowledge_document": "research-vault/20_distillates/publications/978av9kz-defeating-nondeterminism-llm-inference.md",
+  "knowledge_document_sha256": "sha256:845554761d18299c41b1e6fbbb6945a135cae3ece13e9586b89bc95be7e975aa",
+  "source_path": "generated/markdown_clean/FTJM5R8N.md",
+  "source_sha256": "sha256:06cb8ae6cbf58054af2449750c5eb0512a425262cd1e77be1ff27a2fbc102fd8",
+  "reviewed_at": "2026-09-21T18:15:52.298973Z",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Independent source-bound review of identity, research question, method, findings, limitations, quotations and category relevance. This receipt grants no human verification or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Research question and method; Main findings",
+      "finding": "The kernel-level account, vLLM implementation, model and experiment descriptions, 80 unique ordinary outputs and 1,000 identical batch-invariant outputs agree with the bound official article projection."
+    },
+    {
+      "severity": "note",
+      "location": "Limitations; Assessment relevance",
+      "finding": "The document correctly limits reproducibility to the described stack, preserves unknown version type and excludes Prompting as a substantive topic. All four quotations resolve exactly."
+    }
+  ]
+}

@@ -3767,8 +3767,8 @@
     "targeted_followup_recorded_fulltext_read": 2,
     "targeted_followup_with_canonical_binding": 0,
     "unmapped_historical_human_records": 1,
-    "works_with_conflicts": 3,
-    "works_with_integrity_hold": 1,
+    "works_with_conflicts": 4,
+    "works_with_integrity_hold": 2,
     "works_with_open_ai_source_review": 1
   },
   "historical_resolution_source": "generated/verification/historical-resolution-2026-09-05.json",
@@ -3861,7 +3861,7 @@
     "active": {
       "counts_by_type": {
         "assertion": 4,
-        "distillate": 35,
+        "distillate": 44,
         "moc": 3
       },
       "distillate_work_ids": [
@@ -3876,12 +3876,16 @@
         "work:3dc3ced9-8261-5840-9d71-aa2dfc43af87",
         "work:4842d83e-8ed6-5633-b241-febb6e9c710f",
         "work:55caaab5-78b3-5803-8666-2edc0743a202",
+        "work:5aaa355e-8f65-5850-a132-43fa3458195e",
+        "work:5f49f95b-dcfe-5778-8376-a313cb039d4d",
         "work:677ea395-cc39-50b4-9979-496e0f17665d",
         "work:691469f6-881f-5e13-8df5-69dc64025556",
         "work:6c8a1072-fcca-5fbd-8611-08774ef0ad7f",
         "work:6eab81e9-e9ba-57eb-abc0-6c00d7061314",
+        "work:6ef2b617-d42a-5df1-b3d6-081bec49e4a2",
         "work:70312fae-6975-587e-b409-06a82d50b6ce",
         "work:717e065c-570d-526f-86ae-2a24d9f03044",
+        "work:73eda891-2e28-587a-a7fb-a950323a0dad",
         "work:7473ae67-3f6b-5cb7-befc-df628bc87911",
         "work:7644e99b-9dd1-545f-af98-ab7fed6643e6",
         "work:7eb826eb-db16-5ae7-8201-3339f108ae93",
@@ -3889,13 +3893,18 @@
         "work:80bb4056-d744-573e-bef8-17896d356d2e",
         "work:843c90a1-99ba-5cbf-9c92-df165923d2b2",
         "work:88488d25-08d0-5719-8948-5bff2e7d43cf",
+        "work:9cbefba0-b92b-59a3-8595-a1ac5e9fca72",
         "work:ac777aa0-e02b-5a2e-8ddd-19dfdd0110ec",
         "work:ad093524-5d10-5430-838d-3360c0d710cc",
         "work:b385e0cf-739b-5592-b5f0-c9d7fd2ead0a",
+        "work:c54f89d4-e79b-5fd8-9426-6b51b36669e2",
         "work:ca3ae89d-5ddd-5036-a44d-165c58097219",
+        "work:ce1b3961-e4e4-5bd2-a6a8-b97ef7fbc90f",
         "work:d3e1b501-39ff-5531-a410-391d0ae61c77",
+        "work:e1ca8a4c-5cc2-5e35-b3cc-375950a07405",
         "work:e2d886f7-c01f-50cc-9ce2-e65f7be00157",
         "work:e62005d4-d179-5cef-af39-3aca00c24a04",
+        "work:ec94cf1c-87bf-5f4d-a840-9dd3b92eefab",
         "work:f01ca4fe-7f9b-59f6-98d9-4e84559cd850",
         "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
         "work:f7d29922-360f-5874-8d4c-cf7f7451f638",
@@ -3904,25 +3913,25 @@
       "documents": [
         {
           "path": "research-vault/20_distillates/publications/7fefmcbz-child-welfare-worker-algorithm-disparities.md",
-          "recorded_status": "preparation",
+          "recorded_status": "ai-agent-reviewed",
           "type": "distillate",
           "work_id": "work:fdf4e7e1-80c8-56bd-9e16-9031a45ff712"
         },
         {
           "path": "research-vault/20_distillates/publications/978av9kz-defeating-nondeterminism-llm-inference.md",
-          "recorded_status": "preparation",
+          "recorded_status": "ai-agent-reviewed",
           "type": "distillate",
           "work_id": "work:4842d83e-8ed6-5633-b241-febb6e9c710f"
         },
         {
           "path": "research-vault/20_distillates/publications/9ep4ic4t-deception-detection-mental-health.md",
-          "recorded_status": "preparation",
+          "recorded_status": "ai-agent-reviewed",
           "type": "distillate",
           "work_id": "work:7f8d6ea5-b9ea-55b6-8b7c-312cabf4a2a9"
         },
         {
           "path": "research-vault/20_distillates/publications/a7u389p5-medical-bias-prompt-engineering.md",
-          "recorded_status": "preparation",
+          "recorded_status": "ai-agent-reviewed",
           "type": "distillate",
           "work_id": "work:e2d886f7-c01f-50cc-9ce2-e65f7be00157"
         },
@@ -3934,79 +3943,133 @@
         },
         {
           "path": "research-vault/20_distillates/publications/algorithmic-management-work-context.md",
-          "recorded_status": "preparation",
+          "recorded_status": "ai-agent-reviewed",
           "type": "distillate",
           "work_id": "work:691469f6-881f-5e13-8df5-69dc64025556"
         },
         {
           "path": "research-vault/20_distillates/publications/azjw38mf-socio-technical-ethics-work.md",
-          "recorded_status": "preparation",
+          "recorded_status": "ai-agent-reviewed",
           "type": "distillate",
           "work_id": "work:2c625fa2-a2f8-5d59-b6a0-f148d542c902"
         },
         {
           "path": "research-vault/20_distillates/publications/bhxdu7vm-how-people-use-chatgpt.md",
-          "recorded_status": "preparation",
+          "recorded_status": "ai-agent-reviewed",
           "type": "distillate",
           "work_id": "work:f01ca4fe-7f9b-59f6-98d9-4e84559cd850"
         },
         {
+          "path": "research-vault/20_distillates/publications/completion-9zkzqm63-bias-mental-health-llms.md",
+          "recorded_status": "ai-agent-reviewed",
+          "type": "distillate",
+          "work_id": "work:5aaa355e-8f65-5850-a132-43fa3458195e"
+        },
+        {
+          "path": "research-vault/20_distillates/publications/completion-a2p8mxmy-algorithmic-justice-child-protection.md",
+          "recorded_status": "ai-agent-reviewed",
+          "type": "distillate",
+          "work_id": "work:9cbefba0-b92b-59a3-8595-a1ac5e9fca72"
+        },
+        {
+          "path": "research-vault/20_distillates/publications/completion-amyzfaph-generative-ai-social-work-research.md",
+          "recorded_status": "ai-agent-reviewed",
+          "type": "distillate",
+          "work_id": "work:e1ca8a4c-5cc2-5e35-b3cc-375950a07405"
+        },
+        {
+          "path": "research-vault/20_distillates/publications/completion-j4k3xa52-gender-bias-long-term-care-llms.md",
+          "recorded_status": "ai-agent-reviewed",
+          "type": "distillate",
+          "work_id": "work:73eda891-2e28-587a-a7fb-a950323a0dad"
+        },
+        {
+          "path": "research-vault/20_distillates/publications/completion-qi5aye4v-algorithmic-decision-making-pedagogy.md",
+          "recorded_status": "ai-agent-reviewed",
+          "type": "distillate",
+          "work_id": "work:5f49f95b-dcfe-5778-8376-a313cb039d4d"
+        },
+        {
+          "path": "research-vault/20_distillates/publications/completion-shjqqti6-intersectional-fairness-machine-learning.md",
+          "recorded_status": "ai-agent-reviewed",
+          "type": "distillate",
+          "work_id": "work:6ef2b617-d42a-5df1-b3d6-081bec49e4a2"
+        },
+        {
+          "path": "research-vault/20_distillates/publications/completion-v8sbeh4e-feminist-ai-neutrality.md",
+          "recorded_status": "ai-agent-reviewed",
+          "type": "distillate",
+          "work_id": "work:ce1b3961-e4e4-5bd2-a6a8-b97ef7fbc90f"
+        },
+        {
+          "path": "research-vault/20_distillates/publications/completion-z9dntbff-gender-bias-vision-language-models.md",
+          "recorded_status": "ai-agent-reviewed",
+          "type": "distillate",
+          "work_id": "work:ec94cf1c-87bf-5f4d-a840-9dd3b92eefab"
+        },
+        {
+          "path": "research-vault/20_distillates/publications/completion-zitlbm8a-chatgpt-social-work-science.md",
+          "recorded_status": "ai-agent-reviewed",
+          "type": "distillate",
+          "work_id": "work:c54f89d4-e79b-5fd8-9426-6b51b36669e2"
+        },
+        {
           "path": "research-vault/20_distillates/publications/demographic-bias-psychiatric-llm-diagnoses.md",
-          "recorded_status": "preparation",
+          "recorded_status": "ai-agent-reviewed",
           "type": "distillate",
           "work_id": "work:e62005d4-d179-5cef-af39-3aca00c24a04"
         },
         {
           "path": "research-vault/20_distillates/publications/emohaa-mental-health-chatbot.md",
-          "recorded_status": "preparation",
+          "recorded_status": "ai-agent-reviewed",
           "type": "distillate",
           "work_id": "work:7473ae67-3f6b-5cb7-befc-df628bc87911"
         },
         {
           "path": "research-vault/20_distillates/publications/epic-model-ai-social-work.md",
-          "recorded_status": "preparation",
+          "recorded_status": "ai-agent-reviewed",
           "type": "distillate",
           "work_id": "work:717e065c-570d-526f-86ae-2a24d9f03044"
         },
         {
           "path": "research-vault/20_distillates/publications/exrf5629-child-welfare-placement-prediction.md",
-          "recorded_status": "preparation",
+          "recorded_status": "ai-agent-reviewed",
           "type": "distillate",
           "work_id": "work:80bb4056-d744-573e-bef8-17896d356d2e"
         },
         {
           "path": "research-vault/20_distillates/publications/gender-equity-generative-ai-workshops.md",
-          "recorded_status": "preparation",
+          "recorded_status": "ai-agent-reviewed",
           "type": "distillate",
           "work_id": "work:88488d25-08d0-5719-8948-5bff2e7d43cf"
         },
         {
           "path": "research-vault/20_distillates/publications/generative-ai-social-debt-counselling.md",
-          "recorded_status": "preparation",
+          "recorded_status": "ai-agent-reviewed",
           "type": "distillate",
           "work_id": "work:b385e0cf-739b-5592-b5f0-c9d7fd2ead0a"
         },
         {
           "path": "research-vault/20_distillates/publications/generative-ai-youth-mental-health-apps.md",
-          "recorded_status": "preparation",
+          "recorded_status": "ai-agent-reviewed",
           "type": "distillate",
           "work_id": "work:7eb826eb-db16-5ae7-8201-3339f108ae93"
         },
         {
           "path": "research-vault/20_distillates/publications/healthcare-ai-ethics-systematic-review.md",
-          "recorded_status": "preparation",
+          "recorded_status": "ai-agent-reviewed",
           "type": "distillate",
           "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083"
         },
         {
           "path": "research-vault/20_distillates/publications/insideout-cultural-bias-interview-generation.md",
-          "recorded_status": "preparation",
+          "recorded_status": "ai-agent-reviewed",
           "type": "distillate",
           "work_id": "work:2707a834-08fe-5819-a92c-4afb47ca08c5"
         },
         {
           "path": "research-vault/20_distillates/publications/k7nw3w34-ai-assisted-social-work-recording.md",
-          "recorded_status": "preparation",
+          "recorded_status": "ai-agent-reviewed",
           "type": "distillate",
           "work_id": "work:677ea395-cc39-50b4-9979-496e0f17665d"
         },
@@ -4030,85 +4093,85 @@
         },
         {
           "path": "research-vault/20_distillates/publications/multi-agent-cultural-debate.md",
-          "recorded_status": "preparation",
+          "recorded_status": "ai-agent-reviewed",
           "type": "distillate",
           "work_id": "work:6c8a1072-fcca-5fbd-8611-08774ef0ad7f"
         },
         {
           "path": "research-vault/20_distillates/publications/multi-persona-thinking-bias-mitigation.md",
-          "recorded_status": "preparation",
+          "recorded_status": "ai-agent-reviewed",
           "type": "distillate",
           "work_id": "work:d3e1b501-39ff-5531-a410-391d0ae61c77"
         },
         {
           "path": "research-vault/20_distillates/publications/nn49fmdp-critical-ai-school-gender.md",
-          "recorded_status": "preparation",
+          "recorded_status": "ai-agent-reviewed",
           "type": "distillate",
           "work_id": "work:ad093524-5d10-5430-838d-3360c0d710cc"
         },
         {
           "path": "research-vault/20_distillates/publications/patient-bias-llm-health-consultations.md",
-          "recorded_status": "preparation",
+          "recorded_status": "ai-agent-reviewed",
           "type": "distillate",
           "work_id": "work:0acf6fa2-7f5e-53c4-a1d1-30ab1ae8d310"
         },
         {
           "path": "research-vault/20_distillates/publications/persistent-outgroup-bias-personas.md",
-          "recorded_status": "preparation",
+          "recorded_status": "ai-agent-reviewed",
           "type": "distillate",
           "work_id": "work:6eab81e9-e9ba-57eb-abc0-6c00d7061314"
         },
         {
           "path": "research-vault/20_distillates/publications/persona-motivated-reasoning.md",
-          "recorded_status": "preparation",
+          "recorded_status": "ai-agent-reviewed",
           "type": "distillate",
           "work_id": "work:0fb6cbb2-9d40-5815-9680-3e9f14f27e16"
         },
         {
           "path": "research-vault/20_distillates/publications/qrk7c3jk-critical-digital-literacy-social-work-ai.md",
-          "recorded_status": "preparation",
+          "recorded_status": "ai-agent-reviewed",
           "type": "distillate",
           "work_id": "work:ac777aa0-e02b-5a2e-8ddd-19dfdd0110ec"
         },
         {
           "path": "research-vault/20_distillates/publications/quv5dqh3-gender-equity-algorithms.md",
-          "recorded_status": "preparation",
+          "recorded_status": "ai-agent-reviewed",
           "type": "distillate",
           "work_id": "work:3dc3ced9-8261-5840-9d71-aa2dfc43af87"
         },
         {
           "path": "research-vault/20_distillates/publications/r7v99era-racial-bias-nlp-child-protective-services.md",
-          "recorded_status": "preparation",
+          "recorded_status": "ai-agent-reviewed",
           "type": "distillate",
           "work_id": "work:365293c9-c8ea-54dd-9f65-2f37976f1a31"
         },
         {
           "path": "research-vault/20_distillates/publications/ray6g2r7-swiftsage-generative-agent.md",
-          "recorded_status": "preparation",
+          "recorded_status": "ai-agent-reviewed",
           "type": "distillate",
           "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202"
         },
         {
           "path": "research-vault/20_distillates/publications/rh8mc67z-gpt5-sociodemographic-bias.md",
-          "recorded_status": "preparation",
+          "recorded_status": "ai-agent-reviewed",
           "type": "distillate",
           "work_id": "work:ca3ae89d-5ddd-5036-a44d-165c58097219"
         },
         {
           "path": "research-vault/20_distillates/publications/social-work-students-ai-readiness.md",
-          "recorded_status": "preparation",
+          "recorded_status": "ai-agent-reviewed",
           "type": "distillate",
           "work_id": "work:1004a5c5-f980-5475-ad36-952eab77b516"
         },
         {
           "path": "research-vault/20_distillates/publications/vszm7ct6-ai-social-work-education.md",
-          "recorded_status": "preparation",
+          "recorded_status": "ai-agent-reviewed",
           "type": "distillate",
           "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5"
         },
         {
           "path": "research-vault/20_distillates/publications/zh6t88d5-visual-disinformation-digital-equity.md",
-          "recorded_status": "preparation",
+          "recorded_status": "ai-agent-reviewed",
           "type": "distillate",
           "work_id": "work:f7d29922-360f-5874-8d4c-cf7f7451f638"
         },
@@ -4149,29 +4212,21 @@
         }
       ],
       "recorded_status_counts": {
-        "ai-agent-reviewed": 8,
-        "preparation": 31,
+        "ai-agent-reviewed": 48,
         "unrecorded": 3
       }
     },
-    "broken_document_links": [
-      {
-        "knowledge_doc": "vault/Papers/Social work in the age of artificial intelligence- A rights-based framework for evidence-based practice through social psychology, group dynamics, and institutional analysis.md",
-        "reason": "document_file_missing",
-        "record_id": "PYN6HB3E",
-        "work_id": "work:332127f6-30b4-5b23-82f3-8e1730ab0254"
-      }
-    ],
+    "broken_document_links": [],
     "counts": {
-      "broken_link_records": 1,
+      "broken_link_records": 0,
       "canonical_records": 463,
-      "distinct_linked_documents": 192,
-      "linked_records": 257,
-      "linked_works": 190,
-      "missing_link_records": 205,
+      "distinct_linked_documents": 199,
+      "linked_records": 269,
+      "linked_works": 197,
+      "missing_link_records": 194,
       "record_bound_works": 361,
       "shared_documents_across_works": 3,
-      "works_without_linked_document": 171
+      "works_without_linked_document": 164
     },
     "definitions": {
       "active_status": "Literal document maturity metadata only. Current source-bound review receipts are evaluated separately by the assertion and completion builders.",
@@ -4263,6 +4318,7 @@
         "2WHGF83D",
         "2YS85B49",
         "4LY3SA4E",
+        "55ZR64VU",
         "5T55I5Z7",
         "5UAHQESQ",
         "64DQYVVB",
@@ -4278,7 +4334,6 @@
         "CLKAD87H",
         "DGLWM93D",
         "E4G328PD",
-        "H59BNSX8",
         "H7E3N6VR",
         "HJ7BHX8J",
         "HLBXNWAZ",
@@ -4295,7 +4350,6 @@
         "N7J2ZRFP",
         "NUVZI357",
         "NVZA58ML",
-        "PYN6HB3E",
         "Q4LK53XW",
         "QFPTW4VL",
         "QIQR449A",
@@ -4674,6 +4728,11 @@
       },
       {
         "reason": "no_document_link",
+        "record_id": "55ZR64VU",
+        "work_id": "work:990eedb3-3515-5180-87eb-2288399e3222"
+      },
+      {
+        "reason": "no_document_link",
         "record_id": "5DLTP2YA",
         "work_id": "work:702fdf21-e0e7-5903-a2e7-d64ce0842858"
       },
@@ -4829,16 +4888,6 @@
       },
       {
         "reason": "no_document_link",
-        "record_id": "9ZKZQM63",
-        "work_id": "work:5aaa355e-8f65-5850-a132-43fa3458195e"
-      },
-      {
-        "reason": "no_document_link",
-        "record_id": "A2P8MXMY",
-        "work_id": "work:9cbefba0-b92b-59a3-8595-a1ac5e9fca72"
-      },
-      {
-        "reason": "no_document_link",
         "record_id": "A776TPGG",
         "work_id": "work:4c307a06-8f57-5dd6-8cd6-cb7aaf20d574"
       },
@@ -4856,11 +4905,6 @@
         "reason": "no_document_link",
         "record_id": "AJBX2WAW",
         "work_id": "work:a68f9db2-cf06-54f2-b8a9-7beb11e0bc9e"
-      },
-      {
-        "reason": "no_document_link",
-        "record_id": "AMYZFAPH",
-        "work_id": "work:e1ca8a4c-5cc2-5e35-b3cc-375950a07405"
       },
       {
         "reason": "no_document_link",
@@ -5054,16 +5098,6 @@
       },
       {
         "reason": "no_document_link",
-        "record_id": "H3NC9SMQ",
-        "work_id": "work:ec94cf1c-87bf-5f4d-a840-9dd3b92eefab"
-      },
-      {
-        "reason": "no_document_link",
-        "record_id": "H59BNSX8",
-        "work_id": "work:5f49f95b-dcfe-5778-8376-a313cb039d4d"
-      },
-      {
-        "reason": "no_document_link",
         "record_id": "H7E3N6VR",
         "work_id": "work:5e332779-1c0f-5453-b27c-c62b11e97045"
       },
@@ -5121,11 +5155,6 @@
         "reason": "no_document_link",
         "record_id": "IYUPQPTA",
         "work_id": "work:cb1293bf-0c88-59cb-ac2c-ee567a14cd25"
-      },
-      {
-        "reason": "no_document_link",
-        "record_id": "J4K3XA52",
-        "work_id": "work:73eda891-2e28-587a-a7fb-a950323a0dad"
       },
       {
         "reason": "no_document_link",
@@ -5289,11 +5318,6 @@
       },
       {
         "reason": "no_document_link",
-        "record_id": "QI5AYE4V",
-        "work_id": "work:5f49f95b-dcfe-5778-8376-a313cb039d4d"
-      },
-      {
-        "reason": "no_document_link",
         "record_id": "QIQR449A",
         "work_id": "work:ca6040b6-cfdb-5d4a-8f00-8ad7af0046fc"
       },
@@ -5311,11 +5335,6 @@
         "reason": "no_document_link",
         "record_id": "QZJL6KBZ",
         "work_id": "work:274c5f4c-1ca0-5503-b76e-dbd4c2b731ad"
-      },
-      {
-        "reason": "no_document_link",
-        "record_id": "QZRHHAE2",
-        "work_id": "work:9cbefba0-b92b-59a3-8595-a1ac5e9fca72"
       },
       {
         "reason": "no_document_link",
@@ -5351,11 +5370,6 @@
         "reason": "no_document_link",
         "record_id": "SHDNTZJZ",
         "work_id": "work:190638a5-2d71-5ad6-af0f-c97f18e938e9"
-      },
-      {
-        "reason": "no_document_link",
-        "record_id": "SHJQQTI6",
-        "work_id": "work:6ef2b617-d42a-5df1-b3d6-081bec49e4a2"
       },
       {
         "reason": "no_document_link",
@@ -5461,11 +5475,6 @@
         "reason": "no_document_link",
         "record_id": "UWQGNPSE",
         "work_id": "work:b86204c8-abca-51c2-a398-a9a78c8aba08"
-      },
-      {
-        "reason": "no_document_link",
-        "record_id": "V8SBEH4E",
-        "work_id": "work:ce1b3961-e4e4-5bd2-a6a8-b97ef7fbc90f"
       },
       {
         "reason": "no_document_link",
@@ -5589,11 +5598,6 @@
       },
       {
         "reason": "no_document_link",
-        "record_id": "Z9DNTBFF",
-        "work_id": "work:ec94cf1c-87bf-5f4d-a840-9dd3b92eefab"
-      },
-      {
-        "reason": "no_document_link",
         "record_id": "ZAU6P4BK",
         "work_id": "work:374ffb8c-c284-5be3-9050-86a7f02aced0"
       },
@@ -5606,11 +5610,6 @@
         "reason": "no_document_link",
         "record_id": "ZFRE26IV",
         "work_id": "work:fa73d2ef-033a-5e5b-8bc5-f774136b020c"
-      },
-      {
-        "reason": "no_document_link",
-        "record_id": "ZITLBM8A",
-        "work_id": "work:c54f89d4-e79b-5fd8-9426-6b51b36669e2"
       },
       {
         "reason": "no_document_link",
@@ -5850,12 +5849,6 @@
       },
       {
         "record_ids": [
-          "PYN6HB3E"
-        ],
-        "work_id": "work:332127f6-30b4-5b23-82f3-8e1730ab0254"
-      },
-      {
-        "record_ids": [
           "KJWMQSMN"
         ],
         "work_id": "work:34294df8-8138-5c66-8137-b0c1a6afa3ff"
@@ -6046,12 +6039,6 @@
       },
       {
         "record_ids": [
-          "9ZKZQM63"
-        ],
-        "work_id": "work:5aaa355e-8f65-5850-a132-43fa3458195e"
-      },
-      {
-        "record_ids": [
           "XD28QSM7"
         ],
         "work_id": "work:5afec464-2212-543d-9b3f-abb12a282783"
@@ -6080,13 +6067,6 @@
           "H7E3N6VR"
         ],
         "work_id": "work:5e332779-1c0f-5453-b27c-c62b11e97045"
-      },
-      {
-        "record_ids": [
-          "H59BNSX8",
-          "QI5AYE4V"
-        ],
-        "work_id": "work:5f49f95b-dcfe-5778-8376-a313cb039d4d"
       },
       {
         "record_ids": [
@@ -6139,12 +6119,6 @@
       },
       {
         "record_ids": [
-          "SHJQQTI6"
-        ],
-        "work_id": "work:6ef2b617-d42a-5df1-b3d6-081bec49e4a2"
-      },
-      {
-        "record_ids": [
           "5DLTP2YA",
           "9Y7H9WXQ"
         ],
@@ -6185,12 +6159,6 @@
           "XRQE5VM2"
         ],
         "work_id": "work:7350cc88-47a1-5497-8c7e-14f2ca8aae6c"
-      },
-      {
-        "record_ids": [
-          "J4K3XA52"
-        ],
-        "work_id": "work:73eda891-2e28-587a-a7fb-a950323a0dad"
       },
       {
         "record_ids": [
@@ -6298,6 +6266,12 @@
       },
       {
         "record_ids": [
+          "55ZR64VU"
+        ],
+        "work_id": "work:990eedb3-3515-5180-87eb-2288399e3222"
+      },
+      {
+        "record_ids": [
           "2FUXNFZS"
         ],
         "work_id": "work:9ad5daa2-9b05-5ea0-afb0-cbac15231f0d"
@@ -6307,13 +6281,6 @@
           "LMW8DZ78"
         ],
         "work_id": "work:9b7469ac-981a-5eb9-8cd7-a73f5a019f4a"
-      },
-      {
-        "record_ids": [
-          "A2P8MXMY",
-          "QZRHHAE2"
-        ],
-        "work_id": "work:9cbefba0-b92b-59a3-8595-a1ac5e9fca72"
       },
       {
         "record_ids": [
@@ -6550,12 +6517,6 @@
       },
       {
         "record_ids": [
-          "V8SBEH4E"
-        ],
-        "work_id": "work:ce1b3961-e4e4-5bd2-a6a8-b97ef7fbc90f"
-      },
-      {
-        "record_ids": [
           "4KMMPA6A"
         ],
         "work_id": "work:ce611f7b-8bda-5e6a-9ca9-3b46a8027694"
@@ -6626,13 +6587,6 @@
           "DENAHEUW"
         ],
         "work_id": "work:e769d36a-8e1e-5b9b-9e22-301723be1c24"
-      },
-      {
-        "record_ids": [
-          "H3NC9SMQ",
-          "Z9DNTBFF"
-        ],
-        "work_id": "work:ec94cf1c-87bf-5f4d-a840-9dd3b92eefab"
       },
       {
         "record_ids": [
@@ -6757,7 +6711,7 @@
     "targeted_followup_search_date": "2026-09-05",
     "targeted_gap_fill_candidates": true
   },
-  "source_fingerprint": "sha256:12968be6c0d225dfc0f1d3ee27349da2e51111d50d97a6046fd9091da5a8f704",
+  "source_fingerprint": "sha256:0c8485cdd6a830be445d3e5064c55bba32847de99aa0cf8ee0e5983578242975",
   "sources": [
     {
       "path": "assessment/categories.yaml",
@@ -6937,7 +6891,7 @@
     },
     {
       "path": "corpus/work_version_registry.json",
-      "sha256": "b9943ada9671ddb41178da1428829f36fefe4b38ace72e67d897e3fb225736a0"
+      "sha256": "bbe1e2898d879e157195ebf4ec7718cc463b3254c7aedcc5132c7dd8b3f89298"
     },
     {
       "path": "corpus/zotero_export.json",
@@ -6973,7 +6927,7 @@
     },
     {
       "path": "docs/data/research_vault_v2.json",
-      "sha256": "9af5ce97e4f63320d75fdbd35deccdc768cb842d2c55d2345d52a302edcb15e6"
+      "sha256": "f09b0ce0edf3c8eaf0259fbc59f795525be256ded65cc7a33c34e01ab6d1d4d0"
     },
     {
       "path": "docs/data/screening/ar2.json",
@@ -7088,10 +7042,6 @@
       "sha256": "145e2f16ab805628ae1796200d7f62f8b73530e9d12ab7a332db34bcb86e2938"
     },
     {
-      "path": "docs/vault/Papers/ChatGPT for Social Work Science- Ethical Challenges and Opportunities.md",
-      "sha256": "4498b77a35522f115c95b7c4a84cdd684c4aaffa17220639bb9feb0c9cb7b625"
-    },
-    {
       "path": "docs/vault/Papers/Clinical Social Workers’ Perceptions of Large Language Models in Practice- Resistance to Automation and Prospects for Integration.md",
       "sha256": "6cce4757ff88fbd8156c04bb89ef555eb49bd79486ec42774b36deaf9d0ae7a7"
     },
@@ -7122,10 +7072,6 @@
     {
       "path": "docs/vault/Papers/Datafied ageing futures- Regimes of anticipation and participatory futuring.md",
       "sha256": "b0a689bf78d408934652cebc3e74d016e819a1ce1934a08b8604697343ea0cdf"
-    },
-    {
-      "path": "docs/vault/Papers/Debiasing prompts for gender bias in large language models.md",
-      "sha256": "334d74f1bfd1ea24c98289109c1955efc4ecc60b5fca161c7ba22e733cf46952"
     },
     {
       "path": "docs/vault/Papers/Decision support and algorithmic support- The construction of algorithms and professional discretion in social work.md",
@@ -7400,10 +7346,6 @@
       "sha256": "67dbe3e369217142c87f38c64a0a94b1e96a4ff44ebe5dae609e9505c065ae41"
     },
     {
-      "path": "docs/vault/Papers/Recommendations for social work researchers and journal editors on the use of generative AI and large language models.md",
-      "sha256": "084cdffb8dbdc29b1d212b4401736756b18c74a97a9fa3505f0d6b1b7b0855a8"
-    },
-    {
       "path": "docs/vault/Papers/Reflexive prompt engineering- A framework for responsible prompt engineering and AI interaction design.md",
       "sha256": "016af6197cdd2fcc39121d0635fd94b36ca32a67fd23409f60c381fa5fe794c8"
     },
@@ -7414,6 +7356,10 @@
     {
       "path": "docs/vault/Papers/Social work and artificial intelligence- Collaboration and challenges.md",
       "sha256": "46b787ed90f370bd4f7794788e46a9fc592bfe9dd241a69729bc242e1654448e"
+    },
+    {
+      "path": "docs/vault/Papers/Social work in the age of artificial intelligence- A rights-based framework for evidence-based practice through social psychology, group dynamics, and institutional analysis.md",
+      "sha256": "88349f23f50f111151ba8fb677b35b93748388f2c74e92792366175eabd88526"
     },
     {
       "path": "docs/vault/Papers/Tech workers' perspectives on ethical issues in AI development- Foregrounding feminist approaches.md",
@@ -7501,71 +7447,107 @@
     },
     {
       "path": "docs/vault/Papers/active-7fefmcbz-child-welfare-worker-algorithm-disparities.md",
-      "sha256": "c8870fc8941d52c302d0368b002d7ad24d352b57d396e759770b411e79543f95"
+      "sha256": "f3ad815b1b4182aa6aafde9af94eb63e8b92ad860dfebf7a3d87c7f2d6611800"
     },
     {
       "path": "docs/vault/Papers/active-978av9kz-defeating-nondeterminism-llm-inference.md",
-      "sha256": "845554761d18299c41b1e6fbbb6945a135cae3ece13e9586b89bc95be7e975aa"
+      "sha256": "041ef24c9a810002cfc3e5ef25ea6030c81689f6fa58169be9ebf455813e201d"
     },
     {
       "path": "docs/vault/Papers/active-9ep4ic4t-deception-detection-mental-health.md",
-      "sha256": "9967854e765ff838ef18d569e1917223317cb2347b07ebe0d109b40b87b7698f"
+      "sha256": "c9cf309b53dbeb39b11213fa835f4ce630d50287d715e1917d4f76d828d002d9"
     },
     {
       "path": "docs/vault/Papers/active-a7u389p5-medical-bias-prompt-engineering.md",
-      "sha256": "cfed6e7846c83177f8b853eb385373553a60698e8cbe17c9d702ea46d362833a"
+      "sha256": "4ea695a01da2f2e0baae972d00d63ab27710696a37b91fd43039e69c653590a7"
     },
     {
       "path": "docs/vault/Papers/active-algorithmic-management-work-context.md",
-      "sha256": "c4ed2d4172a73489645464939bb7b5f026beb9d1810c9ed0eb5f15bce345d215"
+      "sha256": "c8b694ba60ff8888b2b849f590f137cc19bb21d3d870aad5a42f25e03a99d407"
     },
     {
       "path": "docs/vault/Papers/active-azjw38mf-socio-technical-ethics-work.md",
-      "sha256": "99ea7047a201d1b9041feb63c4445865bbb5d1d75fe16752ce8c1a0319d90ae3"
+      "sha256": "898a80fbc4841357c26c4b2d287a0a11bb1f4adb7b27bb24a42ec8de95835fbd"
     },
     {
       "path": "docs/vault/Papers/active-bhxdu7vm-how-people-use-chatgpt.md",
-      "sha256": "e21307261bb14abdad0cb5b75393b0d9d316d06dcdfba76e99a8396e0bbbcde4"
+      "sha256": "c52775744b4ff9fdf15c03e8c14c6d0fadd6f43432f91dcffa4987c116ad39b9"
+    },
+    {
+      "path": "docs/vault/Papers/active-completion-9zkzqm63-bias-mental-health-llms.md",
+      "sha256": "4ae3afa3381fc4cd93ec67e1cdf2cb5bcebe06a92fdee1ef8a391cf03833c246"
+    },
+    {
+      "path": "docs/vault/Papers/active-completion-a2p8mxmy-algorithmic-justice-child-protection.md",
+      "sha256": "1c7c62234e699a93fae5145ba48df11285e33584faeb531c917bd43c12f44030"
+    },
+    {
+      "path": "docs/vault/Papers/active-completion-amyzfaph-generative-ai-social-work-research.md",
+      "sha256": "f1ea83461a388a5ff2daf21e0f744b1b56488b961a0e954e1bcd8d2d3fee2333"
+    },
+    {
+      "path": "docs/vault/Papers/active-completion-j4k3xa52-gender-bias-long-term-care-llms.md",
+      "sha256": "0d93249358669140ae7c164cd941b7f7bbca3e9413cb060871d26407761de2ea"
+    },
+    {
+      "path": "docs/vault/Papers/active-completion-qi5aye4v-algorithmic-decision-making-pedagogy.md",
+      "sha256": "8449ef00faf824cab9c76c31f4922b91b4ce74d916e7952f889a08ee24619e56"
+    },
+    {
+      "path": "docs/vault/Papers/active-completion-shjqqti6-intersectional-fairness-machine-learning.md",
+      "sha256": "46ad3017eee5ec599270c628a6fe81184479126eb5e6cbf97863cd108b1c7f87"
+    },
+    {
+      "path": "docs/vault/Papers/active-completion-v8sbeh4e-feminist-ai-neutrality.md",
+      "sha256": "0d4e37734a198f9294af6c9cfec691ee2af9c750fb2680882b9cd5ccb5fd93a5"
+    },
+    {
+      "path": "docs/vault/Papers/active-completion-z9dntbff-gender-bias-vision-language-models.md",
+      "sha256": "848453d93c789a8a3861152f25abe1d3fe40b0f091557a3c99a8a246ca55a979"
+    },
+    {
+      "path": "docs/vault/Papers/active-completion-zitlbm8a-chatgpt-social-work-science.md",
+      "sha256": "18332c2342ef464ce796aa068c872c28bf7442ee65cb345b9cf104b4f1bcfb43"
     },
     {
       "path": "docs/vault/Papers/active-demographic-bias-psychiatric-llm-diagnoses.md",
-      "sha256": "0eb4cd5e754022d021c974b5f43531335ac24b07a331151e7d18c30a3d7b876c"
+      "sha256": "e4206738d20c0fdb85fff590003f375c20d85719edfa6133a1b5e0a244ceff72"
     },
     {
       "path": "docs/vault/Papers/active-emohaa-mental-health-chatbot.md",
-      "sha256": "7a349592597fe05bb2054f442a94e1d0c8555cac57edd96da3e07d93b1320bc1"
+      "sha256": "590a36ddc3aa37a0ee21725500699c538f48d94ee7cec4eac1f1e54075e240b7"
     },
     {
       "path": "docs/vault/Papers/active-epic-model-ai-social-work.md",
-      "sha256": "1687218866347b0bc127dbd94d37068133760ce2f6c8f315f1cedec2436f992e"
+      "sha256": "ef3ae04a5bde8b27e37034e52a514565e9cf79f491008ebe89dccb3f2a330b19"
     },
     {
       "path": "docs/vault/Papers/active-exrf5629-child-welfare-placement-prediction.md",
-      "sha256": "4f5e6beda5c082df73a3cf952508e72d73707162c795be437aaf04704be830af"
+      "sha256": "b668360658f2e962833f46e796b95ce0e439be25b0a295148d946f43071db07b"
     },
     {
       "path": "docs/vault/Papers/active-gender-equity-generative-ai-workshops.md",
-      "sha256": "b54c4b2ac8dceeb70738091a0a78df630496c4c8f8b968d32f52dd6da18694a6"
+      "sha256": "e3f74330c97c97cfe392172ebfebaf122024058612147e7bddcf406881e905bb"
     },
     {
       "path": "docs/vault/Papers/active-generative-ai-social-debt-counselling.md",
-      "sha256": "599b6d6bac30f214527cdc71d6e0a8959ac8c0ed2c062de1cf3a0622baf50ea8"
+      "sha256": "041f6650e3c0a2ecafeddb3cc58677ffa16229988750d453c024f60e3432c0be"
     },
     {
       "path": "docs/vault/Papers/active-generative-ai-youth-mental-health-apps.md",
-      "sha256": "91c2b86118a09401adb623946e3487452043974f97d56b67c40836307d5f4207"
+      "sha256": "81e8814be233ab31d4827ec1ce5fa42bcaea60401603563ccee305394a89c9af"
     },
     {
       "path": "docs/vault/Papers/active-healthcare-ai-ethics-systematic-review.md",
-      "sha256": "ee24b62b40666def72657cd21b4e03843266cddacb3ede76f9654745958ce7ac"
+      "sha256": "8af5f503bdee3de01f04d8c0fc20ac530f6cdb8a84d4e488ef310f66101b49ee"
     },
     {
       "path": "docs/vault/Papers/active-insideout-cultural-bias-interview-generation.md",
-      "sha256": "68e7a78a7748efb6f47501afd4e18e0be4f7c379c6bdd37419c06df668e93989"
+      "sha256": "56d893775098c7ee5078b8004964a9ba95b4b23f3275af580641085bbcbdbc06"
     },
     {
       "path": "docs/vault/Papers/active-k7nw3w34-ai-assisted-social-work-recording.md",
-      "sha256": "d3c044f4e9fe75ff16cdf06d0235b05dbe9183ea45305c394317c348762f76b3"
+      "sha256": "256b7e11fa2fd91231ead48f125a86a7fe8bdea7ebbff54ff89d99ff5c80835f"
     },
     {
       "path": "docs/vault/Papers/active-kabra-2025-reasoning-guided-fine-tuning.md",
@@ -7573,59 +7555,59 @@
     },
     {
       "path": "docs/vault/Papers/active-multi-agent-cultural-debate.md",
-      "sha256": "c46c11900f068aa1df4f62433f48511fcfbbc735250db608182b5352e79f826e"
+      "sha256": "05c13f215f11f60768ed6fb798a75cea56cb0ecfc12488c49bbaa8ae61c988cc"
     },
     {
       "path": "docs/vault/Papers/active-multi-persona-thinking-bias-mitigation.md",
-      "sha256": "ca767b430041e44ae21a4cd6988211cc24f1c07fe410fea0a77517043e0e38a3"
+      "sha256": "414036e3305c84cae24e13269367871a1aea2a792312ba941b15679541ae26c1"
     },
     {
       "path": "docs/vault/Papers/active-nn49fmdp-critical-ai-school-gender.md",
-      "sha256": "1005bea845f6ebecaa4ebc9c1ca471d84eef3f05b12b6e143c1e56809c27ddac"
+      "sha256": "856803cb5fa531822f9709d710291ac8be5f8f29ccd153f3c115fe6c866018e0"
     },
     {
       "path": "docs/vault/Papers/active-patient-bias-llm-health-consultations.md",
-      "sha256": "33a1b373c1b48d6c936a04dcf9afddb4ca74cdaa0bf935851b0c1a734ce2b17a"
+      "sha256": "ee1423b3268afa1bb234b11c45dec57bbb66584bdc6e51cba49266395bfb9715"
     },
     {
       "path": "docs/vault/Papers/active-persistent-outgroup-bias-personas.md",
-      "sha256": "8f987cf8cf0ed18d01da75e6af5b0b0d16224052000d0cd715f8f22f456adbd9"
+      "sha256": "6025299f9b4eaf4626718947231bf084341c5f27f60fe3d60b761bfd3a9b5563"
     },
     {
       "path": "docs/vault/Papers/active-persona-motivated-reasoning.md",
-      "sha256": "7ed9c10c6a2d6b1a3c18be56f7ebaba67464158e780e26399a52d7a60a057ac7"
+      "sha256": "4943a05311b0f252f662ebf183dc6571a1c6a229e3c51f6c3d6e0825ef66f090"
     },
     {
       "path": "docs/vault/Papers/active-qrk7c3jk-critical-digital-literacy-social-work-ai.md",
-      "sha256": "bd515d67a73d9c240ae8f70ff8b681ce251b4f826090f83ee66be79700b2e85c"
+      "sha256": "a6ea8226d70d3c0511d23a93b67a48ad9281392f075d7f4b96cc3046d9d3dc56"
     },
     {
       "path": "docs/vault/Papers/active-quv5dqh3-gender-equity-algorithms.md",
-      "sha256": "06f7613c989b4f7799a928b292c5452283133aa614d40dc5bf7c7a86893a0695"
+      "sha256": "cd79c9af924f37e39145893349f584306fe3c50b3f1a9b79555ba97a306c2ac0"
     },
     {
       "path": "docs/vault/Papers/active-r7v99era-racial-bias-nlp-child-protective-services.md",
-      "sha256": "d1f60b071213c4c80c82083239ffef5172b0e8069a8185b622283be9b5f36aba"
+      "sha256": "2af035512772add7de95679727c6c57d0b86e7d11503ad8740381742a93eb25a"
     },
     {
       "path": "docs/vault/Papers/active-ray6g2r7-swiftsage-generative-agent.md",
-      "sha256": "eddb7755c75e7197c12583c20f1d5d814de7bacc69f5d73447b1e5d8ac1894d1"
+      "sha256": "ad61131b04eede585641de85b0293c97498829654f1017083e81f2b3f0665d0c"
     },
     {
       "path": "docs/vault/Papers/active-rh8mc67z-gpt5-sociodemographic-bias.md",
-      "sha256": "8517efafc1264794b3121bcefb3c65f787acfb3093998bf99cacc9499cc5ba71"
+      "sha256": "9964280b587404c6f298784e6cedc6e6ef684c41ad25973ed27edfec7197bf6d"
     },
     {
       "path": "docs/vault/Papers/active-social-work-students-ai-readiness.md",
-      "sha256": "810c7392394b2eeb56f2f5c6f4aff2d5d777e04fafa2642e6289a7136464b7d8"
+      "sha256": "2fe16cc829790f2039313fa09414a1b12e6fe4416df819f6b879960633267610"
     },
     {
       "path": "docs/vault/Papers/active-vszm7ct6-ai-social-work-education.md",
-      "sha256": "734db44170a89feeebdec4ff5dafcfcf1acdb9798762c7dee4c50031133f8b2b"
+      "sha256": "39a1b277f788fa79e613f023efc4bfdafa6c4f563a3d277884e129a517e02793"
     },
     {
       "path": "docs/vault/Papers/active-zh6t88d5-visual-disinformation-digital-equity.md",
-      "sha256": "cc70238a95393adbac0ab33a604db56d32a98c270c176f6a367ed185dd050168"
+      "sha256": "5d58368ccba1781673174f6e7551bbe6f6aeaa633dd9b60c634af3375de9768c"
     },
     {
       "path": "docs/vault/Papers/recovered-3K9RDWLY.md",
@@ -7749,7 +7731,7 @@
     },
     {
       "path": "generated/agent-screening-queue.json",
-      "sha256": "e2d20686ff9531bcf9a1e4ecf42d47f6757d1f0829a92483eada1a8d678b9125"
+      "sha256": "dc1c0a9587e495371e4b6b4a44259091d933d733dcb579936477afef91af0c20"
     },
     {
       "path": "generated/conformance/conformance_map.yaml",
@@ -9025,7 +9007,7 @@
     },
     {
       "path": "generated/verification/historical-resolution-2026-09-05.json",
-      "sha256": "d0ed98ef36d51f6a8fc3220288a174fe7bc8556f100a5d8e76fa96d6c63caf2e"
+      "sha256": "a56f428eca131ba2b21292c983d883be7fe687195243f4dec5c9ced5af8a1d60"
     },
     {
       "path": "generated/verification/residual-resolution-2026-09-05.json",
@@ -9433,19 +9415,19 @@
     },
     {
       "path": "research-vault/20_distillates/publications/7fefmcbz-child-welfare-worker-algorithm-disparities.md",
-      "sha256": "c8870fc8941d52c302d0368b002d7ad24d352b57d396e759770b411e79543f95"
+      "sha256": "f3ad815b1b4182aa6aafde9af94eb63e8b92ad860dfebf7a3d87c7f2d6611800"
     },
     {
       "path": "research-vault/20_distillates/publications/978av9kz-defeating-nondeterminism-llm-inference.md",
-      "sha256": "845554761d18299c41b1e6fbbb6945a135cae3ece13e9586b89bc95be7e975aa"
+      "sha256": "041ef24c9a810002cfc3e5ef25ea6030c81689f6fa58169be9ebf455813e201d"
     },
     {
       "path": "research-vault/20_distillates/publications/9ep4ic4t-deception-detection-mental-health.md",
-      "sha256": "9967854e765ff838ef18d569e1917223317cb2347b07ebe0d109b40b87b7698f"
+      "sha256": "c9cf309b53dbeb39b11213fa835f4ce630d50287d715e1917d4f76d828d002d9"
     },
     {
       "path": "research-vault/20_distillates/publications/a7u389p5-medical-bias-prompt-engineering.md",
-      "sha256": "cfed6e7846c83177f8b853eb385373553a60698e8cbe17c9d702ea46d362833a"
+      "sha256": "4ea695a01da2f2e0baae972d00d63ab27710696a37b91fd43039e69c653590a7"
     },
     {
       "path": "research-vault/20_distillates/publications/ahn-2025-ai-literacy-for-social-work.md",
@@ -9453,55 +9435,91 @@
     },
     {
       "path": "research-vault/20_distillates/publications/algorithmic-management-work-context.md",
-      "sha256": "c4ed2d4172a73489645464939bb7b5f026beb9d1810c9ed0eb5f15bce345d215"
+      "sha256": "c8b694ba60ff8888b2b849f590f137cc19bb21d3d870aad5a42f25e03a99d407"
     },
     {
       "path": "research-vault/20_distillates/publications/azjw38mf-socio-technical-ethics-work.md",
-      "sha256": "99ea7047a201d1b9041feb63c4445865bbb5d1d75fe16752ce8c1a0319d90ae3"
+      "sha256": "898a80fbc4841357c26c4b2d287a0a11bb1f4adb7b27bb24a42ec8de95835fbd"
     },
     {
       "path": "research-vault/20_distillates/publications/bhxdu7vm-how-people-use-chatgpt.md",
-      "sha256": "e21307261bb14abdad0cb5b75393b0d9d316d06dcdfba76e99a8396e0bbbcde4"
+      "sha256": "c52775744b4ff9fdf15c03e8c14c6d0fadd6f43432f91dcffa4987c116ad39b9"
+    },
+    {
+      "path": "research-vault/20_distillates/publications/completion-9zkzqm63-bias-mental-health-llms.md",
+      "sha256": "4ae3afa3381fc4cd93ec67e1cdf2cb5bcebe06a92fdee1ef8a391cf03833c246"
+    },
+    {
+      "path": "research-vault/20_distillates/publications/completion-a2p8mxmy-algorithmic-justice-child-protection.md",
+      "sha256": "1c7c62234e699a93fae5145ba48df11285e33584faeb531c917bd43c12f44030"
+    },
+    {
+      "path": "research-vault/20_distillates/publications/completion-amyzfaph-generative-ai-social-work-research.md",
+      "sha256": "f1ea83461a388a5ff2daf21e0f744b1b56488b961a0e954e1bcd8d2d3fee2333"
+    },
+    {
+      "path": "research-vault/20_distillates/publications/completion-j4k3xa52-gender-bias-long-term-care-llms.md",
+      "sha256": "0d93249358669140ae7c164cd941b7f7bbca3e9413cb060871d26407761de2ea"
+    },
+    {
+      "path": "research-vault/20_distillates/publications/completion-qi5aye4v-algorithmic-decision-making-pedagogy.md",
+      "sha256": "8449ef00faf824cab9c76c31f4922b91b4ce74d916e7952f889a08ee24619e56"
+    },
+    {
+      "path": "research-vault/20_distillates/publications/completion-shjqqti6-intersectional-fairness-machine-learning.md",
+      "sha256": "46ad3017eee5ec599270c628a6fe81184479126eb5e6cbf97863cd108b1c7f87"
+    },
+    {
+      "path": "research-vault/20_distillates/publications/completion-v8sbeh4e-feminist-ai-neutrality.md",
+      "sha256": "0d4e37734a198f9294af6c9cfec691ee2af9c750fb2680882b9cd5ccb5fd93a5"
+    },
+    {
+      "path": "research-vault/20_distillates/publications/completion-z9dntbff-gender-bias-vision-language-models.md",
+      "sha256": "848453d93c789a8a3861152f25abe1d3fe40b0f091557a3c99a8a246ca55a979"
+    },
+    {
+      "path": "research-vault/20_distillates/publications/completion-zitlbm8a-chatgpt-social-work-science.md",
+      "sha256": "18332c2342ef464ce796aa068c872c28bf7442ee65cb345b9cf104b4f1bcfb43"
     },
     {
       "path": "research-vault/20_distillates/publications/demographic-bias-psychiatric-llm-diagnoses.md",
-      "sha256": "0eb4cd5e754022d021c974b5f43531335ac24b07a331151e7d18c30a3d7b876c"
+      "sha256": "e4206738d20c0fdb85fff590003f375c20d85719edfa6133a1b5e0a244ceff72"
     },
     {
       "path": "research-vault/20_distillates/publications/emohaa-mental-health-chatbot.md",
-      "sha256": "7a349592597fe05bb2054f442a94e1d0c8555cac57edd96da3e07d93b1320bc1"
+      "sha256": "590a36ddc3aa37a0ee21725500699c538f48d94ee7cec4eac1f1e54075e240b7"
     },
     {
       "path": "research-vault/20_distillates/publications/epic-model-ai-social-work.md",
-      "sha256": "1687218866347b0bc127dbd94d37068133760ce2f6c8f315f1cedec2436f992e"
+      "sha256": "ef3ae04a5bde8b27e37034e52a514565e9cf79f491008ebe89dccb3f2a330b19"
     },
     {
       "path": "research-vault/20_distillates/publications/exrf5629-child-welfare-placement-prediction.md",
-      "sha256": "4f5e6beda5c082df73a3cf952508e72d73707162c795be437aaf04704be830af"
+      "sha256": "b668360658f2e962833f46e796b95ce0e439be25b0a295148d946f43071db07b"
     },
     {
       "path": "research-vault/20_distillates/publications/gender-equity-generative-ai-workshops.md",
-      "sha256": "b54c4b2ac8dceeb70738091a0a78df630496c4c8f8b968d32f52dd6da18694a6"
+      "sha256": "e3f74330c97c97cfe392172ebfebaf122024058612147e7bddcf406881e905bb"
     },
     {
       "path": "research-vault/20_distillates/publications/generative-ai-social-debt-counselling.md",
-      "sha256": "599b6d6bac30f214527cdc71d6e0a8959ac8c0ed2c062de1cf3a0622baf50ea8"
+      "sha256": "041f6650e3c0a2ecafeddb3cc58677ffa16229988750d453c024f60e3432c0be"
     },
     {
       "path": "research-vault/20_distillates/publications/generative-ai-youth-mental-health-apps.md",
-      "sha256": "91c2b86118a09401adb623946e3487452043974f97d56b67c40836307d5f4207"
+      "sha256": "81e8814be233ab31d4827ec1ce5fa42bcaea60401603563ccee305394a89c9af"
     },
     {
       "path": "research-vault/20_distillates/publications/healthcare-ai-ethics-systematic-review.md",
-      "sha256": "ee24b62b40666def72657cd21b4e03843266cddacb3ede76f9654745958ce7ac"
+      "sha256": "8af5f503bdee3de01f04d8c0fc20ac530f6cdb8a84d4e488ef310f66101b49ee"
     },
     {
       "path": "research-vault/20_distillates/publications/insideout-cultural-bias-interview-generation.md",
-      "sha256": "68e7a78a7748efb6f47501afd4e18e0be4f7c379c6bdd37419c06df668e93989"
+      "sha256": "56d893775098c7ee5078b8004964a9ba95b4b23f3275af580641085bbcbdbc06"
     },
     {
       "path": "research-vault/20_distillates/publications/k7nw3w34-ai-assisted-social-work-recording.md",
-      "sha256": "d3c044f4e9fe75ff16cdf06d0235b05dbe9183ea45305c394317c348762f76b3"
+      "sha256": "256b7e11fa2fd91231ead48f125a86a7fe8bdea7ebbff54ff89d99ff5c80835f"
     },
     {
       "path": "research-vault/20_distillates/publications/kabra-2025-reasoning-guided-fine-tuning.md",
@@ -9517,59 +9535,59 @@
     },
     {
       "path": "research-vault/20_distillates/publications/multi-agent-cultural-debate.md",
-      "sha256": "c46c11900f068aa1df4f62433f48511fcfbbc735250db608182b5352e79f826e"
+      "sha256": "05c13f215f11f60768ed6fb798a75cea56cb0ecfc12488c49bbaa8ae61c988cc"
     },
     {
       "path": "research-vault/20_distillates/publications/multi-persona-thinking-bias-mitigation.md",
-      "sha256": "ca767b430041e44ae21a4cd6988211cc24f1c07fe410fea0a77517043e0e38a3"
+      "sha256": "414036e3305c84cae24e13269367871a1aea2a792312ba941b15679541ae26c1"
     },
     {
       "path": "research-vault/20_distillates/publications/nn49fmdp-critical-ai-school-gender.md",
-      "sha256": "1005bea845f6ebecaa4ebc9c1ca471d84eef3f05b12b6e143c1e56809c27ddac"
+      "sha256": "856803cb5fa531822f9709d710291ac8be5f8f29ccd153f3c115fe6c866018e0"
     },
     {
       "path": "research-vault/20_distillates/publications/patient-bias-llm-health-consultations.md",
-      "sha256": "33a1b373c1b48d6c936a04dcf9afddb4ca74cdaa0bf935851b0c1a734ce2b17a"
+      "sha256": "ee1423b3268afa1bb234b11c45dec57bbb66584bdc6e51cba49266395bfb9715"
     },
     {
       "path": "research-vault/20_distillates/publications/persistent-outgroup-bias-personas.md",
-      "sha256": "8f987cf8cf0ed18d01da75e6af5b0b0d16224052000d0cd715f8f22f456adbd9"
+      "sha256": "6025299f9b4eaf4626718947231bf084341c5f27f60fe3d60b761bfd3a9b5563"
     },
     {
       "path": "research-vault/20_distillates/publications/persona-motivated-reasoning.md",
-      "sha256": "7ed9c10c6a2d6b1a3c18be56f7ebaba67464158e780e26399a52d7a60a057ac7"
+      "sha256": "4943a05311b0f252f662ebf183dc6571a1c6a229e3c51f6c3d6e0825ef66f090"
     },
     {
       "path": "research-vault/20_distillates/publications/qrk7c3jk-critical-digital-literacy-social-work-ai.md",
-      "sha256": "bd515d67a73d9c240ae8f70ff8b681ce251b4f826090f83ee66be79700b2e85c"
+      "sha256": "a6ea8226d70d3c0511d23a93b67a48ad9281392f075d7f4b96cc3046d9d3dc56"
     },
     {
       "path": "research-vault/20_distillates/publications/quv5dqh3-gender-equity-algorithms.md",
-      "sha256": "06f7613c989b4f7799a928b292c5452283133aa614d40dc5bf7c7a86893a0695"
+      "sha256": "cd79c9af924f37e39145893349f584306fe3c50b3f1a9b79555ba97a306c2ac0"
     },
     {
       "path": "research-vault/20_distillates/publications/r7v99era-racial-bias-nlp-child-protective-services.md",
-      "sha256": "d1f60b071213c4c80c82083239ffef5172b0e8069a8185b622283be9b5f36aba"
+      "sha256": "2af035512772add7de95679727c6c57d0b86e7d11503ad8740381742a93eb25a"
     },
     {
       "path": "research-vault/20_distillates/publications/ray6g2r7-swiftsage-generative-agent.md",
-      "sha256": "eddb7755c75e7197c12583c20f1d5d814de7bacc69f5d73447b1e5d8ac1894d1"
+      "sha256": "ad61131b04eede585641de85b0293c97498829654f1017083e81f2b3f0665d0c"
     },
     {
       "path": "research-vault/20_distillates/publications/rh8mc67z-gpt5-sociodemographic-bias.md",
-      "sha256": "8517efafc1264794b3121bcefb3c65f787acfb3093998bf99cacc9499cc5ba71"
+      "sha256": "9964280b587404c6f298784e6cedc6e6ef684c41ad25973ed27edfec7197bf6d"
     },
     {
       "path": "research-vault/20_distillates/publications/social-work-students-ai-readiness.md",
-      "sha256": "810c7392394b2eeb56f2f5c6f4aff2d5d777e04fafa2642e6289a7136464b7d8"
+      "sha256": "2fe16cc829790f2039313fa09414a1b12e6fe4416df819f6b879960633267610"
     },
     {
       "path": "research-vault/20_distillates/publications/vszm7ct6-ai-social-work-education.md",
-      "sha256": "734db44170a89feeebdec4ff5dafcfcf1acdb9798762c7dee4c50031133f8b2b"
+      "sha256": "39a1b277f788fa79e613f023efc4bfdafa6c4f563a3d277884e129a517e02793"
     },
     {
       "path": "research-vault/20_distillates/publications/zh6t88d5-visual-disinformation-digital-equity.md",
-      "sha256": "cc70238a95393adbac0ab33a604db56d32a98c270c176f6a367ed185dd050168"
+      "sha256": "5d58368ccba1781673174f6e7551bbe6f6aeaa633dd9b60c634af3375de9768c"
     },
     {
       "path": "research-vault/30_assertions/MOC-AI-Literacy.md",
@@ -9613,7 +9631,7 @@
     },
     {
       "path": "src/analysis/knowledge_coverage.py",
-      "sha256": "9326b1b7bd56cfe1484883768d4256108493010c15c60e202710769c563e110f"
+      "sha256": "0a2cc4318159335f6dc5c35728521a9e63f6db0fb99cb9ac4fe2e78c177bc684"
     },
     {
       "path": "src/assess/artifact_verification.py",
@@ -9621,7 +9639,7 @@
     },
     {
       "path": "src/file_hashing.py",
-      "sha256": "0279e1a6b04f96052c594b6df9b84f619434b002dfbed14ced088c4cc201a7be"
+      "sha256": "ba44793866e0fabe003b58a5165bc2e09fab85e70c02b7323f080f6043b95cd4"
     }
   ],
   "status": "provisional_internal_preparation",
@@ -20178,7 +20196,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "9ZKZQM63"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -20194,7 +20214,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:c517e367-0d9c-5d26-ad49-db0c2aa52ec1",
@@ -20202,10 +20222,8 @@
         "9ZKZQM63"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "title": "Unveiling and Mitigating Bias in Mental Health Analysis with Large Language Models",
       "version_ids": [
         "version:c517e367-0d9c-5d26-ad49-db0c2aa52ec1"
@@ -21105,7 +21123,10 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "H59BNSX8",
+        "QI5AYE4V"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Include",
       "historical_identity_bindings": {},
@@ -23284,7 +23305,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "SHJQQTI6"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -23323,7 +23346,7 @@
       "source_acquisition_progress": [],
       "source_blockers": [],
       "source_queue_status": null,
-      "title": "A Survey on Intersectional Fairness in Machine Learning: Opportunities and Challenges",
+      "title": "A Survey on Intersectional Fairness in Machine Learning: Notions, Mitigation, and Challenges",
       "version_ids": [
         "version:8c9eb11a-47da-5afe-8a50-a00659cb9455"
       ],
@@ -24367,7 +24390,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "J4K3XA52"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -24383,7 +24408,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:38ec2a2e-9a8f-5837-bd7d-7efad6f0f743",
@@ -24391,10 +24416,8 @@
         "J4K3XA52"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "title": "Evaluating gender bias in large language models in long-term care",
       "version_ids": [
         "version:38ec2a2e-9a8f-5837-bd7d-7efad6f0f743"
@@ -29355,7 +29378,10 @@
       "current_ai_review_results": [
         "accepted"
       ],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "A2P8MXMY",
+        "QZRHHAE2"
+      ],
       "decision_authority": "ai_review",
       "effective_decision": "Include",
       "historical_identity_bindings": {},
@@ -34016,7 +34042,10 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "LGYFN6JK",
+        "ZITLBM8A"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Include",
       "historical_identity_bindings": {},
@@ -34663,7 +34692,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "V8SBEH4E"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -34679,7 +34710,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:2c5cc7f8-4580-5ff0-b423-f45df473a82c",
@@ -34687,10 +34718,8 @@
         "V8SBEH4E"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "title": "Algorithm beyond Neutrality: Feminist Approaches to Redefining Artificial Intelligence",
       "version_ids": [
         "version:2c5cc7f8-4580-5ff0-b423-f45df473a82c"
@@ -36374,7 +36403,12 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "4PK8UN82",
+        "9YYPYEGY",
+        "AMYZFAPH",
+        "U3AJIXAJ"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Include",
       "historical_identity_bindings": {},
@@ -37471,7 +37505,10 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "H3NC9SMQ",
+        "Z9DNTBFF"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -37487,8 +37524,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening",
-        "Acquire the official ACL 2022 PDF linked in primary_version, bind the proceedings version, and screen it. The Howard source remains separate."
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
@@ -37628,10 +37664,8 @@
           "source_status": "original_identity_resolved_fulltext_not_acquired"
         }
       ],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "title": "Worst of Both Worlds: Biases Compound in Pre-trained Vision-and-Language Models",
       "version_ids": [
         "version:5cc89bf8-9652-519b-9e31-d77a07848330"
@@ -39523,14 +39557,57 @@
       "analysis_fields": {},
       "analysis_track": "recorded_ai_review",
       "analysis_undecidable": {},
-      "conflicts": [],
+      "conflicts": [
+        "source_integrity_hold"
+      ],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
       "current_source_binding_record_ids": [],
       "decision_authority": "legacy_human",
       "effective_decision": "Exclude",
       "historical_identity_bindings": {},
-      "historical_resolution": null,
+      "historical_resolution": {
+        "administrative_record_dispositions": [],
+        "agent_id": "/root",
+        "base_registry_work_sha256": "sha256:b76392cdc0768dd5583035c72c0793575644338da9c81fab8278c346cb008c97",
+        "evidence": [
+          {
+            "locator": "Withdrawal banner and submission history",
+            "quote": "This paper has been withdrawn by Bushra Asseri",
+            "sha256": "sha256:630c00ade8d44b6ba7ed06c45b26355ad75e1e401200729829327a26349c65e3",
+            "source_path": "corpus/source-acquisition/historical-resolution-2026-09-05/asseri-history.txt",
+            "source_url": "https://arxiv.org/abs/2506.18199"
+          },
+          {
+            "locator": "Comments",
+            "quote": "Research is incomplete",
+            "sha256": "sha256:630c00ade8d44b6ba7ed06c45b26355ad75e1e401200729829327a26349c65e3",
+            "source_path": "corpus/source-acquisition/historical-resolution-2026-09-05/asseri-history.txt",
+            "source_url": "https://arxiv.org/abs/2506.18199"
+          }
+        ],
+        "historical_rows": [],
+        "human_annotations_unchanged": true,
+        "integrity_hold": true,
+        "model": "gpt-6-astra",
+        "outcome": "pending",
+        "reason": "These separately registered records identify DOI 10.48550/arXiv.2506.18199. The official arXiv page, rechecked on 2026-09-21, identifies v2 as withdrawn with the comment Research is incomplete. The local v1 text and the unpinned bibliography do not establish a current, eligible source. Extend the existing source-integrity restriction to these records without merging Work IDs, changing historical annotations, or mislabelling v1 as the withdrawn revision.",
+        "record_ids": [
+          "Y4BMCI2J",
+          "25XSMXKT",
+          "GUMWKBN6"
+        ],
+        "related_existing_hold_work_id": "work:8e01ec71-65ff-5273-b5b9-a582fec48008",
+        "required_next_steps": [
+          "reconcile_exact_arxiv_revision_and_duplicate_work_relationship",
+          "retain_withdrawal_notice_and_do_not_use_withheld_findings_in_current_synthesis"
+        ],
+        "resolution_kind": "withdrawn_arxiv_work_with_unresolved_exact_version",
+        "reviewed_at": "2026-09-21T18:42:39.727669+00:00",
+        "withhold_from_current_synthesis": true,
+        "work_id": "work:f911df3d-1d6b-55f2-bc39-f06d4d4af206",
+        "workflow_action": "withhold_from_current_synthesis"
+      },
       "human_decisions": [
         "Exclude"
       ],
@@ -39568,11 +39645,15 @@
         "Exclude"
       ],
       "human_verification": "legacy_human_annotation_not_new_lifecycle_verification",
-      "integrity_hold": false,
+      "integrity_hold": true,
       "legacy_human_provenance_note": "Consolidated historical expert CSV; no new named reviewer, review date, or lifecycle event inferred.",
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "retain_legacy_human_decision_and_document_historical_provenance_limits"
+        "reconcile_recorded_divergences_without_overwriting_human_track",
+        "retain_legacy_human_decision_and_document_historical_provenance_limits",
+        "reconcile_exact_arxiv_revision_and_duplicate_work_relationship",
+        "retain_withdrawal_notice_and_do_not_use_withheld_findings_in_current_synthesis",
+        "withhold_from_current_synthesis"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:5cd6dab4-d38a-5462-9439-c412a06c9e78",

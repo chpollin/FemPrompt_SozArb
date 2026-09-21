@@ -7,18 +7,20 @@ work-id: work:1dff2609-2e68-5911-bf56-71ad8122b6a5
 version-id: version:b2b10532-00e5-592e-8f16-6a4d6191dc2e
 version-type: version_of_record
 topics:
-  - "[[AI Literacy]]"
-  - "[[Generative AI in Social Work]]"
-status: preparation
+- '[[AI Literacy]]'
+- '[[Generative AI in Social Work]]'
+status: ai-agent-reviewed
 checked:
   quote: 2026-09-21
+  validation: '2026-09-21'
+  ai-agent-review: '2026-09-21'
 created: 2026-09-21
-updated: 2026-09-21
+updated: '2026-09-21'
 prepared-by:
   agent-id: /root/knowledge_documents
   model: gpt-5.6-sol
   prepared-at: 2026-09-21
-  artifact-review-status: unreviewed
+  artifact-review-status: ai-agent-reviewed
 source-representation:
   path: generated/markdown_clean/VSZM7CT6.md
   sha256: sha256:bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990
@@ -27,6 +29,9 @@ source-representation:
   source-url: https://research-repository.griffith.edu.au/bitstreams/23504f2f-932b-4a2f-b8c7-b3f05c2aa51e/download
   is-preferred-version: false
   boundary: The preparing agent read the complete local Accepted Manuscript representation and checked the quoted passages. No separate AI source review or domain-expert verification has occurred.
+source-review:
+  path: corpus/knowledge-reviews/2026-09-21/VSZM7CT6-r2.json
+  sha256: sha256:60e079213cfd42416cad78b03dde44484b301479bb2afdaf0c44023c071f9ad1
 ---
 
 # Distillate: Artificial intelligence in social work education
@@ -68,7 +73,7 @@ The discussion of simulation and automated teaching remains conditional. Virtual
 - `AI_Literacies` is substantively present through the curricular emphasis on critical understanding, judgement and preparation for digital practice.
 - `KI_Sonstige` is substantively present because the article considers machine learning, automated decision systems, tutoring and simulation beyond generative systems.
 - `Soziale_Arbeit` is central because the argument addresses social work education, professional values and implications for practice preparation.
-- `Bias_Ungleichheit`, `Gender`, `Diversitaet` and `Fairness` are relevant through the discussion of structural inequity, marginalisation and discriminatory effects. The article does not operationalise or measure these categories.
+- `Bias_Ungleichheit` is substantively present through the discussion of structural inequity, marginalisation and discriminatory effects. The mentions of racial and gender stereotypes, marginalised groups and fairness form part of this broad ethical argument. The article does not adopt an explicit gender perspective, analyse representation or inclusion as a distinct subject, or examine algorithmic fairness, a fair machine-learning system or a fairness metric. It therefore does not establish `Gender`, `Diversitaet` or `Fairness` under the controlled definitions.
 - `Generative_KI` and `Prompting` are absent as substantive topics because the article predates the current focus on generative Large Language Models and prompt-based interaction.
 - `Feministisch` is not established. The paper cites gender inequality and critical posthumanist work, but it does not present an explicit feminist theory or method.
 
@@ -87,4 +92,4 @@ The discussion of simulation and automated teaching remains conditional. Virtual
 
 ## Review boundary
 
-This preparation was produced by the attributed LLM agent from the complete hash-bound local source representation. The quotations were checked against that representation. The `preparation` status records an unreviewed artifact and grants no AI source-review, domain-expert verification or publication authority.
+This document was prepared from the source representation identified in its metadata. The current review state and its supporting receipt are recorded in the frontmatter. AI review does not establish domain-expert verification or publication approval.

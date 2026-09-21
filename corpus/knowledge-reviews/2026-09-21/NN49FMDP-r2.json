@@ -1,0 +1,51 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "NN49FMDP",
+  "knowledge_document": "research-vault/20_distillates/publications/nn49fmdp-critical-ai-school-gender.md",
+  "knowledge_document_sha256": "sha256:37bf2b9b72b6cbd1f21dfcaf852ad5330700a564778c00e6ff7e2fef4fe68319",
+  "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/152b1aa29e0dddabe838.md",
+  "source_sha256": "sha256:6937360f3e72c85cb21e45eb19d0ed59e33b1320592ad4da32ed1b2608686058",
+  "reviewed_at": "2026-09-21T19:11:30.020568Z",
+  "reviewer": {
+    "agent_id": "/root/source_completion",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Independent follow-up review of the corrected category assessment and the complete artifact difference against the unchanged hash-bound source. This receipt grants no human verification, screening-state change, promotion or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Assessment relevance",
+      "finding": "The corrected paragraph retains AI_Literacies, Generative_KI, Bias_Ungleichheit, Gender and Feministisch, all supported by the study’s critical-gender analysis of generative-AI teaching proposals and workplace inequality. It correctly declines to infer Diversitaet from teachers’ disciplinary variety and removes Fairness because the study does not evaluate a fairness metric, fair-ML system or debiasing method."
+    },
+    {
+      "severity": "note",
+      "location": "Whole-document difference",
+      "finding": "Beyond the category paragraph, the correction removes the Fairness topic link and revises the review-boundary wording. Those edits align with the controlled category definition and preserve the preparation, domain-review and publication boundaries. The remaining substantive content and quotation are unchanged from the prior reviewed artifact."
+    },
+    {
+      "severity": "note",
+      "location": "Source binding",
+      "finding": "The source artifact still matches the prior reviewed SHA-256. The case-study design, selected final projects, coding approach, central finding and conversion-limit statements remain source-supported."
+    }
+  ],
+  "validated_subject": {
+    "validated_at": "2026-09-21T19:11:58.884905+00:00",
+    "validator": "/root integration; document and source hashes plus literal quotation checks",
+    "body_sha256": "sha256:f83cd4ce49e3a8e5ec4a41e031c8d00e5fa4e86723df307599d67900dad343f9",
+    "source_metadata": {
+      "record-id": "NN49FMDP",
+      "work-id": "work:ad093524-5d10-5430-838d-3360c0d710cc",
+      "version-id": "version:72ebb1a5-b986-5df5-86d2-429ddcdb6268",
+      "version-type": "version_of_record",
+      "source-representation": {
+        "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/152b1aa29e0dddabe838.md",
+        "sha256": "sha256:6937360f3e72c85cb21e45eb19d0ed59e33b1320592ad4da32ed1b2608686058",
+        "version-id": "version:72ebb1a5-b986-5df5-86d2-429ddcdb6268",
+        "version-type": "version_of_record",
+        "is-preferred-version": true,
+        "boundary": "The preparing agent read the complete hash-bound local text. Linearised tables were available; figures were not independently inspected. Source identity review does not constitute review of this distillate."
+      }
+    }
+  }
+}

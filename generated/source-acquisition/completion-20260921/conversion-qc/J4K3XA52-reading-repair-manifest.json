@@ -1,0 +1,20 @@
+{
+  "schema": "femprompt-conversion-repair/0.1",
+  "record_id": "J4K3XA52",
+  "created_at": "2026-09-21T19:23:51.827152+00:00",
+  "producer": {
+    "agent_id": "/root",
+    "model": "gpt-6"
+  },
+  "original_markdown_path": "corpus/source-acquisition/completion-20260921/J4K3XA52-repaired.md",
+  "original_markdown_sha256": "sha256:e9f9dce39b5b812d346e48d4d5ff42f63c0c67b4d39f06145ee1f7f81a77b633",
+  "repaired_markdown_path": "corpus/source-acquisition/completion-20260921/J4K3XA52-reading.md",
+  "repaired_markdown_sha256": "sha256:c7f0d251037326c79a930f63ae0de319b8336f7081326bc48ee906f0eace57c2",
+  "previous_repair_manifest": "generated/source-acquisition/completion-20260921/conversion-qc/J4K3XA52-repair-manifest.json",
+  "changes": [
+    "Preserve all five Male/Female example pairs in Table 9 from PDF page 10.",
+    "Rejoin the underweight example and restore the omitted fractured-neck and healthcare-needs sentence endings in the reassessment example.",
+    "Remove PDF line-wrap hyphenation inside the table and retain all other article content."
+  ],
+  "result": "repaired_pending_independent_review"
+}

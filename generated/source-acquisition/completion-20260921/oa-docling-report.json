@@ -1,0 +1,176 @@
+{
+  "timestamp": "2026-09-21T20:23:29.897544",
+  "input_dir": "generated\\pdfs\\completion-20260921\\oa-batch",
+  "output_dir": "generated\\source-acquisition\\completion-20260921\\oa-markdown",
+  "total_files": 6,
+  "converted": 6,
+  "skipped": 0,
+  "failed": 0,
+  "low_quality": 0,
+  "files": [
+    {
+      "input": "5T55I5Z7.pdf",
+      "output": "5T55I5Z7.md",
+      "file_hash": "17a8906eb04ed4ec1ad4eb269f4c2bb2",
+      "success": true,
+      "duration_seconds": 33.47,
+      "metrics": {
+        "total_chars": 202123,
+        "total_lines": 1454,
+        "total_words": 27670,
+        "headings": 84,
+        "heading_levels": {
+          "h2": 84
+        },
+        "tables": 4,
+        "lists": 407,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 575,
+        "avg_line_length": 228.3
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "9ZKZQM63.pdf",
+      "output": "9ZKZQM63.md",
+      "file_hash": "a56287491cbc0247c5a67fd69e5dafe4",
+      "success": true,
+      "duration_seconds": 22.84,
+      "metrics": {
+        "total_chars": 87951,
+        "total_lines": 552,
+        "total_words": 10668,
+        "headings": 35,
+        "heading_levels": {
+          "h2": 35
+        },
+        "tables": 5,
+        "lists": 56,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 234,
+        "avg_line_length": 274.8
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "J4K3XA52.pdf",
+      "output": "J4K3XA52.md",
+      "file_hash": "29662366b715d0d4cfea383ffd0f4c64",
+      "success": true,
+      "duration_seconds": 50.95,
+      "metrics": {
+        "total_chars": 93253,
+        "total_lines": 571,
+        "total_words": 13545,
+        "headings": 43,
+        "heading_levels": {
+          "h2": 43
+        },
+        "tables": 11,
+        "lists": 22,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 190,
+        "avg_line_length": 243.3
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "JRG3B3LE.pdf",
+      "output": "JRG3B3LE.md",
+      "file_hash": "44eea866cce763191245fce853bae98d",
+      "success": true,
+      "duration_seconds": 35.74,
+      "metrics": {
+        "total_chars": 65748,
+        "total_lines": 451,
+        "total_words": 8619,
+        "headings": 21,
+        "heading_levels": {
+          "h2": 21
+        },
+        "tables": 10,
+        "lists": 43,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 160,
+        "avg_line_length": 224.4
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "V8SBEH4E.pdf",
+      "output": "V8SBEH4E.md",
+      "file_hash": "a3991a8f4a99c56fc3a326dc7115d38b",
+      "success": true,
+      "duration_seconds": 9.74,
+      "metrics": {
+        "total_chars": 16957,
+        "total_lines": 261,
+        "total_words": 2595,
+        "headings": 29,
+        "heading_levels": {
+          "h2": 29
+        },
+        "tables": 0,
+        "lists": 40,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 130,
+        "avg_line_length": 127.5
+      },
+      "quality_score": 100,
+      "quality_issues": [],
+      "status": "converted"
+    },
+    {
+      "input": "Z9DNTBFF.pdf",
+      "output": "Z9DNTBFF.md",
+      "file_hash": "a5957ccfb1a4a809c74aa37014406007",
+      "success": true,
+      "duration_seconds": 10.29,
+      "metrics": {
+        "total_chars": 29829,
+        "total_lines": 285,
+        "total_words": 4591,
+        "headings": 19,
+        "heading_levels": {
+          "h2": 19
+        },
+        "tables": 2,
+        "lists": 21,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 137,
+        "avg_line_length": 199.6
+      },
+      "quality_score": 100,
+      "quality_issues": [],
+      "status": "converted"
+    }
+  ]
+}

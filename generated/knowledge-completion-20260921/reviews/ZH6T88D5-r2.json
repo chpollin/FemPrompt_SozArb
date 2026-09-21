@@ -1,0 +1,38 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "ZH6T88D5",
+  "knowledge_document": "research-vault/20_distillates/publications/zh6t88d5-visual-disinformation-digital-equity.md",
+  "knowledge_document_sha256": "sha256:53d46b3d8c2945f53832cc8acd9ccf9c21cfff315d1985b53019e744e6714c0a",
+  "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/c38bdbce0e8dbb82ce3f.md",
+  "source_sha256": "sha256:acb13f04478c9fcac19655f74e7d43f8539ffb6b7fcb68473f7f86dfa58405b0",
+  "reviewed_at": "2026-09-21T19:19:11.621602+00:00",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "supersedes": "generated/knowledge-completion-20260921/reviews/ZH6T88D5.json",
+  "scope": "Independent source-bound follow-up review of the corrected knowledge document, including method, findings, limitations, literal quotations and controlled-category relevance. This receipt grants no human verification or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Research question and method",
+      "finding": "The revised document accurately identifies the mini review and narrative synthesis, October-to-December 2025 searches across the five named databases and repositories, inclusion scope, approximately 50-source corpus, four thematic domains and intersectional and social-identity frameworks."
+    },
+    {
+      "severity": "note",
+      "location": "Findings and limitations",
+      "finding": "The revised findings accurately distinguish generative production, platform amplification, intersecting vulnerability mechanisms, moderation disparities, the conceptual vulnerability matrix and proposed governance and literacy interventions. The limitations correctly distinguish this synthesis from an original audit, meta-analysis or prevalence estimate and retain the figure-inspection boundary."
+    },
+    {
+      "severity": "note",
+      "location": "Assessment relevance",
+      "finding": "Generative_KI, AI_Literacies, Bias_Ungleichheit, Gender, Diversitaet and Feministisch are supported by the source. Fairness is correctly excluded under the controlled definition because the paper discusses equity and accountability without analyzing fair ML, fairness metrics or a debiasing method."
+    },
+    {
+      "severity": "note",
+      "location": "Quotations",
+      "finding": "All four revised quotations resolve exactly in the bound source and provide locators for the central vulnerability, synthesis-boundary, governance and community-literacy claims."
+    }
+  ]
+}

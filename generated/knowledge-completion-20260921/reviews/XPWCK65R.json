@@ -1,0 +1,32 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "XPWCK65R",
+  "knowledge_document": "research-vault/20_distillates/publications/multi-agent-cultural-debate.md",
+  "knowledge_document_sha256": "sha256:fd92bd74c4e9164395a5d82339cd98f78c178b8bbf377b776de82b5cbbb1e137",
+  "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/a1c7e9db9a3dc6caff54.md",
+  "source_sha256": "sha256:0aa4087d1d261b8e702f3f8c42aff5f75647809fc338226ecd0bf3451dbbff96",
+  "reviewed_at": "2026-09-21T19:01:14.724488Z",
+  "reviewer": {
+    "agent_id": "/root/source_completion",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Independent full-text, source-bound review of statements, method, category relevance, quotations and conversion limits. This receipt grants no human verification, screening-state change, domain-expert verification or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Core statements; Research question and method",
+      "finding": "Both quotations resolve. The source supports bilingual CEBiasBench, direct generation versus Multi-Agent Cultural Debate, cultural personas and structured deliberation. The English GPT-4o condition reports 57.6/86.0 for MACD and 47.6/69.0 for direct generation under the two named evaluation routes."
+    },
+    {
+      "severity": "note",
+      "location": "Assessment relevance",
+      "finding": "The category mapping is grounded in explicit prompt-language experiments, cultural personas, bias measures and mitigation. No claim extends the study to Gender or Soziale_Arbeit."
+    },
+    {
+      "severity": "note",
+      "location": "Limitations; conversion boundary",
+      "finding": "Five cultural domains, discrete labels and absence of repeated multi-run evaluation are correctly bounded. Linearised tables support the numeric claims; figure content is not needed for them."
+    }
+  ]
+}

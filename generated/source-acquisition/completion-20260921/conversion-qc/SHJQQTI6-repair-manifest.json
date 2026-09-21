@@ -1,0 +1,114 @@
+{
+  "schema": "femprompt-conversion-repair/0.1",
+  "created_at": "2026-09-21T18:56:13.706238+00:00",
+  "record_id": "SHJQQTI6",
+  "authority": "Conversion repair only. This artifact does not grant scientific acceptance, screening authority, registry authority, or publication status.",
+  "primary_source": {
+    "path": "generated/pdfs/completion-20260921/SHJQQTI6-ijcai-2023-0742.pdf",
+    "sha256": "sha256:a9ad4b0eb784fa77ff163f84cf533669fa0ef980cc4a9aae79dcaf8b8b9d6bd0",
+    "source_url": "https://www.ijcai.org/proceedings/2023/0742.pdf",
+    "copyright_permission_url": "https://www.ijcai.org/past_conferences"
+  },
+  "original_conversion": {
+    "path": "corpus/source-acquisition/completion-20260921/SHJQQTI6.md",
+    "sha256": "sha256:f466d925774a262694f248f1639b373102d521d48f7065acd7d8fa3013421c9d"
+  },
+  "repaired_conversion": {
+    "path": "corpus/source-acquisition/completion-20260921/SHJQQTI6-repaired.md",
+    "sha256": "sha256:e1e640d81ae93a71176f8d24d73558c3cc116c60f3f7e4eb540921b531d274f8"
+  },
+  "method": [
+    "Rendered and visually read the original IJCAI PDF pages containing every missing formula, figure, and table.",
+    "Transcribed nine numbered display equations and the unnumbered multiaccuracy constraint as LaTeX.",
+    "Reconstructed Table 1 with one Markdown row per original dataset.",
+    "Replaced the three image placeholders with text descriptions that preserve labels, membership relations, taxonomy edges, and hierarchy.",
+    "Created the repaired file from the bound conversion and changed only frontmatter, the required visible copyright reference, the nine formula placeholders, the three figure placeholders, the collapsed table, and an added transcription of the already present inline multiaccuracy constraint."
+  ],
+  "changes": [
+    {
+      "kind": "frontmatter_and_copyright_reference",
+      "original_pages": [
+        1
+      ],
+      "detail": "Added required source URL, original authors, DOI, concrete IJCAI permission statement and URL, converter lineage, original conversion hash, and a visible linked copyright-holder reference."
+    },
+    {
+      "kind": "figure_description",
+      "original_pages": [
+        1,
+        2,
+        3
+      ],
+      "count": 3,
+      "detail": "Figure 1 preserves matrix cell memberships and independent, intersectional, and gerrymandering group sets. Figure 2 preserves taxonomy nodes and edges. Figure 3 preserves the nested MC1=MA, MC2, MCk, MC hierarchy and complexity direction."
+    },
+    {
+      "kind": "formula_transcription",
+      "original_pages": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "count": 10,
+      "detail": "Equations (1) through (9) and the unnumbered multiaccuracy constraint were transcribed as LaTeX from the rendered original."
+    },
+    {
+      "kind": "table_reconstruction",
+      "original_pages": [
+        7
+      ],
+      "count": 13,
+      "detail": "Table 1 now has one row for each dataset with its exact Type and Demographics entries."
+    }
+  ],
+  "limits": [
+    "Text descriptions preserve the semantic content inspected in Figures 1 to 3 but do not reproduce their visual layout or color encoding.",
+    "The mathematical transcription was checked visually against the publisher PDF but has not received an independent mathematical copy-edit.",
+    "Existing OCR and spacing defects elsewhere in the Docling body remain unchanged.",
+    "The IJCAI permission is recorded as the concrete publication permission supplied for this task; no Creative Commons licence is claimed."
+  ],
+  "visual_evidence": [
+    {
+      "page": 1,
+      "path": "generated/source-acquisition/completion-20260921/conversion-qc/SHJQQTI6-repair-1.png",
+      "sha256": "sha256:3d75eb010165f6bcff6c4323dd8b8211da62533bd83e4c9cc450973720227327",
+      "inspection_focus": "Figure 1 and article identity"
+    },
+    {
+      "page": 2,
+      "path": "generated/source-acquisition/completion-20260921/conversion-qc/SHJQQTI6-repair-2.png",
+      "sha256": "sha256:0096f3efe3d8721daab0f0a484d0b431dd04014952b67363d513bccd1c1ed9d9",
+      "inspection_focus": "Figure 2, equations 1 to 3, and unnumbered multiaccuracy constraint"
+    },
+    {
+      "page": 3,
+      "path": "generated/source-acquisition/completion-20260921/conversion-qc/SHJQQTI6-repair-3.png",
+      "sha256": "sha256:092c4ff81d9ff07cb22d0025869aa6efb8ee1d0a2021891ab8b0153c9f417f99",
+      "inspection_focus": "Figure 3 and equations 4 to 6"
+    },
+    {
+      "page": 4,
+      "path": "generated/source-acquisition/completion-20260921/conversion-qc/SHJQQTI6-repair-4.png",
+      "sha256": "sha256:5a57563612dc3ea7689af953fbb8bc3edee748dbc91bd816e5e53cc5fe52f690",
+      "inspection_focus": "equation 7"
+    },
+    {
+      "page": 5,
+      "path": "generated/source-acquisition/completion-20260921/conversion-qc/SHJQQTI6-repair-5.png",
+      "sha256": "sha256:1415dfb2fa27a3e4efedbfcaffd81b79fc3dfcdbd6c50ff5a358dbf209380e44",
+      "inspection_focus": "equations 8 and 9"
+    },
+    {
+      "page": 7,
+      "path": "generated/source-acquisition/completion-20260921/conversion-qc/SHJQQTI6-repair-7.png",
+      "sha256": "sha256:bb5c0355518987babf9bc8183d6d9a634581a38c630cfbfce14c693773f34e5a",
+      "inspection_focus": "Table 1 row boundaries"
+    }
+  ],
+  "result": "repair_ready_for_independent_visual_review",
+  "original_docling_body": {
+    "path": "generated/source-acquisition/completion-20260921/docling/SHJQQTI6.md",
+    "sha256": "sha256:424ddf5785349b77ef328799e6969ffc425753ad9a6386aac154aaaca712e00d"
+  }
+}

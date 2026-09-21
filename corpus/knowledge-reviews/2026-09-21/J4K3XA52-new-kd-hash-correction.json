@@ -1,0 +1,64 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "J4K3XA52",
+  "knowledge_document": "research-vault/20_distillates/publications/completion-j4k3xa52-gender-bias-long-term-care-llms.md",
+  "knowledge_document_sha256": "sha256:74ae2e84d5419915c6091d9ea7c35a18bc9ef3294c0d02c7462a6bc55972139b",
+  "source_path": "corpus/source-acquisition/completion-20260921/J4K3XA52.identity-bound.md",
+  "source_sha256": "sha256:9622630861435a8d4cfe9baa48d6e9e03395cdddfd6d6d243aa288508e794da5",
+  "reviewed_at": "2026-09-21T19:10:59.539948Z",
+  "reviewer": {
+    "agent_id": "/root/source_completion",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Hash-corrected independent source-bound review. The knowledge document and source content are unchanged from the superseded review; this receipt uses src.assess.artifact_verification.artifact_hash for repository text artifacts and grants no human verification, promotion or publication authority.",
+  "supersedes": "generated/knowledge-completion-20260921/reviews/J4K3XA52-new-kd.json",
+  "hash_correction": {
+    "reason": "The superseded receipt used a raw-byte SHA-256 for the Markdown source. Repository verification requires the normalized text hash returned by src.assess.artifact_verification.artifact_hash.",
+    "original_source_raw_sha256": "sha256:948a95ef7396123cbf7056f5d9eddcb1109e97edbfbe7d9662f7bcf5c2670d7b",
+    "corrected_source_artifact_hash": "sha256:9622630861435a8d4cfe9baa48d6e9e03395cdddfd6d6d243aa288508e794da5",
+    "content_reverified_unchanged": true
+  },
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Identity and quotations",
+      "finding": "The BMC Version of Record title, sole author, DOI and publication metadata match the reference. All three literal quotations resolve exactly, including the source’s spacing artifacts in the third quotation."
+    },
+    {
+      "severity": "note",
+      "location": "Research question, method and findings",
+      "finding": "The document accurately describes gender-swapped adult-social-care records, four summarisation models, multiple output lengths, sentiment, theme and word-frequency comparisons, and robustness work. It preserves the distinction between observed summary differences and possible downstream allocation effects."
+    },
+    {
+      "severity": "note",
+      "location": "Assessment relevance",
+      "finding": "Generative_KI, Gender, Bias_Ungleichheit and Fairness are central. Soziale_Arbeit is supported as relevant by the direct use of local-authority adult social care records and implications for care allocation. The document correctly does not infer broader diversity, feminist, prompting or literacy categories."
+    },
+    {
+      "severity": "note",
+      "location": "Conversion boundary",
+      "finding": "The counterfactual-fairness formula is not decoded and image content is not preserved, while the tables are textually available. The document flags these limits and does not claim visual inspection or fabricate missing content."
+    }
+  ],
+  "validated_subject": {
+    "validated_at": "2026-09-21T19:11:58.866904+00:00",
+    "validator": "/root integration; document and source hashes plus literal quotation checks",
+    "body_sha256": "sha256:b9c5f14234bf803b3370e4a3fa5694aba3f453bf806b1f85d25cf78977bddea9",
+    "source_metadata": {
+      "record-id": "J4K3XA52",
+      "work-id": "work:73eda891-2e28-587a-a7fb-a950323a0dad",
+      "version-id": "version:38ec2a2e-9a8f-5837-bd7d-7efad6f0f743",
+      "version-type": "version_of_record",
+      "source-representation": {
+        "path": "corpus/source-acquisition/completion-20260921/J4K3XA52.identity-bound.md",
+        "sha256": "sha256:9622630861435a8d4cfe9baa48d6e9e03395cdddfd6d6d243aa288508e794da5",
+        "version-id": "version:38ec2a2e-9a8f-5837-bd7d-7efad6f0f743",
+        "version-type": "version_of_record",
+        "source-url": "https://doi.org/10.1186/s12911-025-03118-0",
+        "is-preferred-version": true,
+        "boundary": "The preparing agent read the complete hash-bound Docling conversion. Conversion QC for this representation was not complete at preparation time. Formulae were marked as not decoded, and figures and visual layout were not independently inspected. The source hash follows the repository artifact_hash contract, which normalises CRLF to LF for text files."
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "femprompt-historical-knowledge-authority/1.0",
+  "recorded_at": "2026-09-21T19:16:52.100362+00:00",
+  "source_commit": "fc853e2d23cfa7229bdd512ed5c95dce5daf201a",
+  "scope": "Preserve only the exact unchanged historical distillates already carrying AI review before the receipt contract. This baseline grants no new source review. Any document change requires an independent source-bound receipt.",
+  "records": {
+    "research-vault/20_distillates/publications/ahn-2025-ai-literacy-for-social-work.md": {
+      "sha256": "sha256:972081a107471839e52aac18b4c4daf59b14962b16d67da8906a05b45b8fa41d",
+      "record_id": "ZJS2J7E7",
+      "historical_status": "ai-agent-reviewed"
+    },
+    "research-vault/20_distillates/publications/kabra-2025-reasoning-guided-fine-tuning.md": {
+      "sha256": "sha256:038942280c678580eae9084fb298a18b2c462350f7c5c05e56ce1e5284b7dfe5",
+      "record_id": "SQYLQFRU",
+      "historical_status": "ai-agent-reviewed"
+    },
+    "research-vault/20_distillates/publications/kamruzzaman-2024-dual-process-prompting.md": {
+      "sha256": "sha256:a1085eb826896eedba660e0ab98ca7f211803a913993608131a49fbac68451d6",
+      "record_id": "7W3RGSSG",
+      "historical_status": "ai-agent-reviewed"
+    },
+    "research-vault/20_distillates/publications/kaneko-2024-cot-and-gender-bias.md": {
+      "sha256": "sha256:55698c0f23b02bc85989d43330860316d078f543b9d7c17c6a5dc1d082b9f8d3",
+      "record_id": "CYZQ6XPK",
+      "historical_status": "ai-agent-reviewed"
+    }
+  }
+}

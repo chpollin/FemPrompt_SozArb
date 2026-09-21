@@ -1,0 +1,22 @@
+{
+  "schema": "femprompt-source-mismatch/0.1",
+  "observed_at": "2026-09-21T18:33:39.566921+00:00",
+  "record_id": "JRG3B3LE",
+  "expected_title": "Homoglyph unlearning: A novel approach to bias mitigation",
+  "registered_url": "https://arxiv.org/html/2406.05602v1",
+  "attempted_pdf_url": "https://arxiv.org/pdf/2406.05602v1",
+  "resolved_title": "Can Prompt Modifiers Control Bias? A Comparative Analysis of Text-to-Image Generative Models",
+  "resolved_authors": [
+    "Philip Wootaek Shin",
+    "Jihyun Janice Ahn",
+    "Wenpeng Yin",
+    "Jesse Thomason",
+    "Vijaykrishnan Narayanan"
+  ],
+  "source_path": "generated/source-acquisition/completion-20260921/oa-markdown/JRG3B3LE.md",
+  "source_sha256": "sha256:955095b708faf8a9dfc0017946d2d72a8b74c5954962e173a97331e1342a4f87",
+  "source_url": "https://arxiv.org/pdf/2406.05602v1",
+  "locator": "page 1 title and author block",
+  "disposition": "do_not_bind",
+  "reason": "The registered URL resolves to a different Work. The acquired source cannot be relabelled as JRG3B3LE."
+}

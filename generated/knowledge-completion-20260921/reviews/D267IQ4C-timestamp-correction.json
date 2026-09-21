@@ -1,0 +1,32 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "D267IQ4C",
+  "knowledge_document": "research-vault/20_distillates/publications/generative-ai-youth-mental-health-apps.md",
+  "knowledge_document_sha256": "sha256:91c2b86118a09401adb623946e3487452043974f97d56b67c40836307d5f4207",
+  "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/926800fc523bebd0420c.md",
+  "source_sha256": "sha256:dbf3a15387a52c3c622dbdaabfd358396a89b16c6b73db6e65f2ecf82d3f355d",
+  "reviewed_at": "2026-09-21T18:39:49.746502Z",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "changes_requested",
+  "scope": "Independent source-bound review of identity, research question, method, findings, limitations, quotations and category relevance. This receipt grants no human verification or publication authority.",
+  "findings": [
+    {
+      "severity": "material",
+      "location": "Assessment relevance",
+      "finding": "KI_Sonstige is asserted alongside Generative_KI without a distinct substantive classic-ML, predictive, robotic or computer-vision topic. Diversitaet is inferred from the youth age range and access context, but the review does not thereby establish diversity, inclusion or representation as a study focus. Remove these categories or provide direct source evidence meeting their definitions."
+    },
+    {
+      "severity": "note",
+      "location": "Research question and method; Main findings; Limitations",
+      "finding": "The rapid-review design, age range, search period, small heterogeneous evidence base, chatbot predominance and limited outcome evidence agree with the source. The quotations resolve exactly."
+    }
+  ],
+  "supersedes": "generated/knowledge-completion-20260921/reviews/D267IQ4C.json",
+  "timestamp_correction": {
+    "reason": "The superseded receipt used a manually assigned future UTC timestamp rather than the observed UTC clock at persistence time.",
+    "scope": "Timestamp correction only. The reviewed artifact hashes, result, scope and findings are preserved verbatim."
+  }
+}

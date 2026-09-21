@@ -1,0 +1,9 @@
+Source: https://www.ijcai.org/proceedings/2023/742
+Observed: 2026-09-21T19:07:42.349401+00:00
+Title: A Survey on Intersectional Fairness in Machine Learning: Notions, Mitigation, and Challenges
+Authors: Usman Gohar; Lu Cheng
+DOI: 10.24963/ijcai.2023/742
+Proceedings: IJCAI 2023, Survey Track, pages 6619-6627
+
+Rights source: https://www.ijcai.org/past_conferences
+Permission: You can publish any version of the paper published at IJCAI, IF a reference and a link to the copyright holder (IJCAI Organization) are clearly visible .

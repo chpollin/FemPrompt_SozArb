@@ -1,0 +1,32 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "J7V3AAQT",
+  "knowledge_document": "research-vault/20_distillates/publications/emohaa-mental-health-chatbot.md",
+  "knowledge_document_sha256": "sha256:7a349592597fe05bb2054f442a94e1d0c8555cac57edd96da3e07d93b1320bc1",
+  "source_path": "generated/markdown_clean/J7V3AAQT.md",
+  "source_sha256": "sha256:aba6edd8b0cbd65560fbc48979125c316f9c8df3117e9664aab62737c61f85c1",
+  "reviewed_at": "2026-09-21T18:39:49.743484Z",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "changes_requested",
+  "scope": "Independent source-bound review of identity, research question, method, findings, limitations, quotations and category relevance. This receipt grants no human verification or publication authority.",
+  "findings": [
+    {
+      "severity": "material",
+      "location": "Assessment relevance",
+      "finding": "Prompting is assigned to the combined conversational intervention, but the study does not treat prompt engineering, prompt strategies or input design as an object. Remove Prompting unless an exact source passage establishes substantive input-design evidence."
+    },
+    {
+      "severity": "note",
+      "location": "Research question and method; Main findings; Limitations",
+      "finding": "The three-arm randomized trial, ITT and per-protocol boundaries, outcomes and inability to isolate ES-Bot effects agree with the source. The quotations resolve exactly."
+    }
+  ],
+  "supersedes": "generated/knowledge-completion-20260921/reviews/J7V3AAQT.json",
+  "timestamp_correction": {
+    "reason": "The superseded receipt used a manually assigned future UTC timestamp rather than the observed UTC clock at persistence time.",
+    "scope": "Timestamp correction only. The reviewed artifact hashes, result, scope and findings are preserved verbatim."
+  }
+}

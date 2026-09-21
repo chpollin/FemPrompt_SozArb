@@ -1,0 +1,47 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "RH8MC67Z",
+  "knowledge_document": "research-vault/20_distillates/publications/rh8mc67z-gpt5-sociodemographic-bias.md",
+  "knowledge_document_sha256": "sha256:25bca9520b7807b99dff4eaee12e199f2e954c1a68172d79a20b53cd7355f668",
+  "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/1e429407d9b091311a65.md",
+  "source_sha256": "sha256:b3d2bf83c7c3404322c30d5e811e27ac80fb7ccfb560fd348e92f9fdd5efdd77",
+  "reviewed_at": "2026-09-21T19:19:11.618539+00:00",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "supersedes": "generated/knowledge-completion-20260921/reviews/RH8MC67Z.json",
+  "scope": "Independent source-bound follow-up review of the corrected knowledge document, including method, findings, limitations, literal quotations and controlled-category relevance. This receipt grants no human verification or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Assessment relevance",
+      "finding": "Gender is now correctly included because gender and sexual-identity labels, including transgender women and intersectional Black transgender women, are experimental conditions whose recommendation differences are analyzed."
+    },
+    {
+      "severity": "note",
+      "location": "Method, findings and limitations",
+      "finding": "The 500 vignettes, control plus 31 labels, adversarial false-chart element, 65 percent unmitigated and 7.67 percent mitigated hallucination rates remain accurate. The quotation is exact; snapshot, descriptive-subgroup and visual limits remain explicit."
+    }
+  ],
+  "validated_subject": {
+    "validated_at": "2026-09-21T19:20:04.246331+00:00",
+    "validator": "/root integration; document and source hashes plus literal quotation checks",
+    "body_sha256": "sha256:827845c4ef9b42e3746873bc6b235c3a9cc2588e6f155b9091368c04eb797d9e",
+    "source_metadata": {
+      "record-id": "RH8MC67Z",
+      "work-id": "work:ca3ae89d-5ddd-5036-a44d-165c58097219",
+      "version-id": "version:16b6e46e-829c-5531-b8cd-967ddca17abe",
+      "version-type": "version_of_record",
+      "source-representation": {
+        "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/1e429407d9b091311a65.md",
+        "sha256": "sha256:b3d2bf83c7c3404322c30d5e811e27ac80fb7ccfb560fd348e92f9fdd5efdd77",
+        "version-id": "version:16b6e46e-829c-5531-b8cd-967ddca17abe",
+        "version-type": "version_of_record",
+        "is-preferred-version": true,
+        "boundary": "The preparing agent read the complete hash-bound local text. Linearised tables were available; figures were not independently inspected. Source identity review does not constitute review of this distillate."
+      }
+    }
+  }
+}

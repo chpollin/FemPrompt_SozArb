@@ -1,0 +1,44 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "9ZKZQM63",
+  "knowledge_document": "research-vault/20_distillates/publications/completion-9zkzqm63-bias-mental-health-llms.md",
+  "knowledge_document_sha256": "sha256:c0ee015217fbe45748c8689940aeb3df1ac25c34dba26097213f74e57dd3fae9",
+  "source_path": "corpus/source-acquisition/completion-20260921/9ZKZQM63.identity-bound.md",
+  "source_sha256": "sha256:bce7b8de4b1bb063064193b7e230d1825cd235f72add20aca038807e281cf14c",
+  "reviewed_at": "2026-09-21T19:10:59.537950Z",
+  "reviewer": {
+    "agent_id": "/root/source_completion",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Hash-corrected independent source-bound review. The knowledge document and source content are unchanged from the superseded review; this receipt uses src.assess.artifact_verification.artifact_hash for repository text artifacts and grants no human verification, promotion or publication authority.",
+  "supersedes": "generated/knowledge-completion-20260921/reviews/9ZKZQM63-new-kd.json",
+  "hash_correction": {
+    "reason": "The superseded receipt used a raw-byte SHA-256 for the Markdown source. Repository verification requires the normalized text hash returned by src.assess.artifact_verification.artifact_hash.",
+    "original_source_raw_sha256": "sha256:47799ad8b0419427129b26219e3b05f5091cbbc216a16553ccde669405b41623",
+    "corrected_source_artifact_hash": "sha256:bce7b8de4b1bb063064193b7e230d1825cd235f72add20aca038807e281cf14c",
+    "content_reverified_unchanged": true
+  },
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Identity and quotations",
+      "finding": "The bound artifact is explicitly arXiv revision 2406.12033v2 and matches the reference title, seven authors, revision and DOI identity. All three literal quotations resolve exactly."
+    },
+    {
+      "severity": "note",
+      "location": "Research question, method and findings",
+      "finding": "The document correctly reports ten LLMs, eight datasets, seven demographic factors with sixty variants, zero-shot and few-shot chain-of-thought settings, four fairness-aware prompt strategies, weighted F1 and equalized-odds evaluation, and manual error analysis. It does not turn reported mitigation into elimination of bias or deployment readiness."
+    },
+    {
+      "severity": "note",
+      "location": "Assessment relevance",
+      "finding": "Generative_KI, Prompting, Bias_Ungleichheit, Diversitaet and Fairness are central. Gender is substantively evaluated as one bias axis and is therefore supported. The document correctly avoids Social Work, AI_Literacies and Feministisch classifications."
+    },
+    {
+      "severity": "note",
+      "location": "Conversion boundary",
+      "finding": "Figures are not visually recoverable and some formula content is not decoded. The document identifies those limits and does not reproduce figure-dependent numerical comparisons."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "UGN4TS5R",
+  "knowledge_document": "research-vault/20_distillates/publications/demographic-bias-psychiatric-llm-diagnoses.md",
+  "knowledge_document_sha256": "sha256:f4e6d6360234c792d4a08f8594cdb5ecc25133cdcbffb4223cce84dd4dc9af9f",
+  "source_path": "generated/source-acquisition/codex-websearch-2026/html-markdown/166a9834b422f052b7c5.md",
+  "source_sha256": "sha256:5568a06471911bf9d102f9caf87159966469807bd990ef8a837d52585de186f5",
+  "reviewed_at": "2026-09-21T18:38:31.608499Z",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Administrative follow-up review of the authority wording and preservation of the previously source-reviewed substantive content. This receipt grants no human verification or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Substantive sections before Review boundary",
+      "finding": "The source-reviewed substantive statements, method, findings, limitations, quotations and category relevance are unchanged from the accepted prior-review artifact. The current source artifact still matches its reviewed hash."
+    },
+    {
+      "severity": "note",
+      "location": "Review boundary and frontmatter authority fields",
+      "finding": "The revised boundary now delegates the current review state to the frontmatter and receipt while retaining the explicit domain-expert-verification and publication-approval boundary. Administrative authority metadata does not alter the scholarly claims."
+    },
+    {
+      "severity": "note",
+      "location": "Prior review provenance",
+      "finding": "Compared against accepted receipt corpus/knowledge-reviews/2026-09-21/UGN4TS5R-initial.json and the exact prior artifact hash recorded there."
+    }
+  ]
+}

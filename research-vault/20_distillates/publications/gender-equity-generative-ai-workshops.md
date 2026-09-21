@@ -7,17 +7,19 @@ work-id: work:88488d25-08d0-5719-8948-5bff2e7d43cf
 version-id: version:ea23f511-1667-56d4-8b7e-b46394a73f86
 version-type: version_of_record
 topics:
-  - "[[Generative AI]]"
-status: preparation
+- '[[Generative AI]]'
+status: ai-agent-reviewed
 checked:
   quote: 2026-09-21
+  validation: '2026-09-21'
+  ai-agent-review: '2026-09-21'
 created: 2026-09-21
-updated: 2026-09-21
+updated: '2026-09-21'
 prepared-by:
   agent-id: /root/knowledge_documents
   model: gpt-5.6-sol
   prepared-at: 2026-09-21
-  artifact-review-status: unreviewed
+  artifact-review-status: ai-agent-reviewed
 source-representation:
   path: generated/source-acquisition/codex-websearch-2026/markdown-repaired/4dd9fd2a26f9d7eea07a.md
   sha256: sha256:c0d19894593d8c2209a4c40a59a35d20a251a15f8b1db25e737368fee1ffc16c
@@ -26,6 +28,9 @@ source-representation:
   source-url: https://discovery.ucl.ac.uk/id/eprint/10225293
   is-preferred-version: true
   boundary: The preparing agent read the complete hash-bound Markdown source representation and checked the quoted passages. No separate AI source review or domain-expert verification has occurred.
+source-review:
+  path: corpus/knowledge-reviews/2026-09-21/S2DN9CFC-authority.json
+  sha256: sha256:f66c0db1d9e54815983aa2a873b0542bca254a8d8097363ad4b6b51e8467b3eb
 ---
 
 # Distillate: Beyond “painting in pink”: A critical case study of all-girls generative AI workshops in a European makerspace and implications for gender equity in computing
@@ -58,4 +63,4 @@ The small sample and one makerspace limit transfer. The study reports situated p
 
 ## Review boundary
 
-This preparation was produced by the attributed LLM agent from the complete hash-bound local source representation. The quotations were checked against that representation. The `preparation` status records an unreviewed artifact and grants no AI source-review, domain-expert verification or publication authority.
+This document was prepared from the source representation identified in its metadata. The current review state and its supporting receipt are recorded in the frontmatter. AI review does not establish domain-expert verification or publication approval.

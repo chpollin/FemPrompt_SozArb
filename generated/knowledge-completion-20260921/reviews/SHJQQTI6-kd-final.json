@@ -1,0 +1,39 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "SHJQQTI6",
+  "knowledge_document": "research-vault/20_distillates/publications/completion-shjqqti6-intersectional-fairness-machine-learning.md",
+  "knowledge_document_sha256": "sha256:d86cdf7914da6dd31c463dbfe1195f95c1bed789d536b526e45dbe5231c74c0f",
+  "source_path": "corpus/source-acquisition/completion-20260921/SHJQQTI6-reading.md",
+  "source_sha256": "sha256:3ff6ed0113e1c1f4eb3d1447f5b3bf2a7fa03a7195345560215a6cb070d36c76",
+  "conversion_qc_path": "generated/source-acquisition/completion-20260921/conversion-qc/final/conversion-qc.json",
+  "conversion_qc_sha256": "sha256:1b89b7c45fc934d12af238c306bcc15ce68dd6d37049c116bb4878c5374634aa",
+  "reviewed_at": "2026-09-21T19:12:04.561056+00:00",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "changes_requested",
+  "scope": "Independent source-bound final review of identity, research question, method, findings, limitations, literal quotations and controlled-category relevance against the repaired reading representation. This receipt grants no human verification or publication authority.",
+  "findings": [
+    {
+      "severity": "error",
+      "location": "Assessment relevance",
+      "finding": "Feministisch is incorrectly omitted. The controlled category explicitly includes intersectional analyses as an implicitly feminist approach. This survey makes intersectionality its organizing analytic framework, derives it from Crenshaw’s theory, repeatedly analyzes interacting race and gender discrimination, and applies that framework to fairness notions and mitigation. Add Feministisch while preserving that the paper does not develop an explicit feminist method."
+    },
+    {
+      "severity": "note",
+      "location": "Identity, research question and method",
+      "finding": "The IJCAI survey identity, taxonomy purpose, representative-literature approach, covered fairness notions, mitigation branches and absence of a systematic-search protocol agree with the complete bound reading source."
+    },
+    {
+      "severity": "note",
+      "location": "Main findings and limitations",
+      "finding": "The computational trade-offs, risks to small or missing subgroups, stakeholder participation, dataset inclusion, auditing, causal analysis and limited real-world evaluation are accurately represented. The document preserves the conversion limits for semantic figure descriptions and mathematical copy-editing."
+    },
+    {
+      "severity": "note",
+      "location": "Quotations and remaining categories",
+      "finding": "All three quotations resolve exactly in the bound source. KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet and Fairness are supported. Generative_KI, Prompting, Soziale_Arbeit and AI_Literacies are correctly treated as non-substantive."
+    }
+  ]
+}

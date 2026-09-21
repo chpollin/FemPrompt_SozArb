@@ -7,17 +7,19 @@ work-id: work:0fb6cbb2-9d40-5815-9680-3e9f14f27e16
 version-id: version:0606f0c5-0aa6-5cae-b273-2b8619630c6f
 version-type: version_of_record
 topics:
-  - "[[Bias and Fairness]]"
-status: preparation
+- '[[Bias and Fairness]]'
+status: ai-agent-reviewed
 checked:
   quote: 2026-09-21
+  validation: '2026-09-21'
+  ai-agent-review: '2026-09-21'
 created: 2026-09-21
-updated: 2026-09-21
+updated: '2026-09-21'
 prepared-by:
   agent-id: /root/knowledge_documents
   model: gpt-5.6-sol
   prepared-at: 2026-09-21
-  artifact-review-status: unreviewed
+  artifact-review-status: ai-agent-reviewed
 source-representation:
   path: generated/source-acquisition/codex-websearch-2026/markdown-clean/4dbe6aa9dfa229e88746.md
   sha256: sha256:6ebe509cb9eb59315760f1de2ad87b7b1b17ddc641640782c15895073dd7740f
@@ -26,6 +28,9 @@ source-representation:
   source-url: https://aclanthology.org/2026.findings-acl.585/
   is-preferred-version: true
   boundary: The preparing agent read the complete hash-bound ACL proceedings Markdown representation and checked the quoted passages. No separate scholarly review has occurred.
+source-review:
+  path: corpus/knowledge-reviews/2026-09-21/STQU6H42.json
+  sha256: sha256:db2dff39999927d4b95c2e8861e3f70f157d47fa44a52eef4a37fefebff6febd
 ---
 
 # Distillate: Persona-Assigned Large Language Models Exhibit Human-Like Motivated Reasoning
@@ -58,4 +63,4 @@ The study uses two reasoning tasks, simple demographic personas and binary gende
 
 ## Review boundary
 
-This preparation was produced from the complete hash-bound local ACL source. Quotations were checked. Its `preparation` status is unreviewed and grants no scholarly-review authority.
+This document was prepared from the source representation identified in its metadata. The current review state and its supporting receipt are recorded in the frontmatter. AI review does not establish domain-expert verification or publication approval.

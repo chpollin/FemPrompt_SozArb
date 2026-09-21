@@ -7,18 +7,20 @@ work-id: work:80bb4056-d744-573e-bef8-17896d356d2e
 version-id: version:75660bfb-6982-59e7-ada4-3b60049ccd08
 version-type: version_of_record
 topics:
-  - "[[Algorithmic Decision Support in Social Work]]"
-  - "[[Bias and Fairness]]"
-status: preparation
+- '[[Algorithmic Decision Support in Social Work]]'
+- '[[Bias and Fairness]]'
+status: ai-agent-reviewed
 checked:
   quote: 2026-09-21
+  validation: '2026-09-21'
+  ai-agent-review: '2026-09-21'
 created: 2026-09-21
-updated: 2026-09-21
+updated: '2026-09-21'
 prepared-by:
   agent-id: /root/knowledge_documents
   model: gpt-5.6-sol
   prepared-at: 2026-09-21
-  artifact-review-status: unreviewed
+  artifact-review-status: ai-agent-reviewed
 source-representation:
   path: corpus/source-acquisition/checklist-resolution-2026-09-05/trudeau-pmc-original.md
   sha256: sha256:028152c0cc60276390fa3b4a6c9f5b8c5964065a19b7b26992923499a6d293cd
@@ -27,6 +29,9 @@ source-representation:
   source-url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10569152/
   is-preferred-version: false
   boundary: The preparing agent read the complete local Accepted Manuscript representation and checked the quoted passages. No separate AI source review or domain-expert verification has occurred.
+source-review:
+  path: corpus/knowledge-reviews/2026-09-21/EXRF5629-r2.json
+  sha256: sha256:6da33b9b86f0f0e583ae7794d6f0c7daeb4e4d10c55ffcc03cd73b7eb67be391
 ---
 
 # Distillate: Machine-learning support for child-welfare placement decisions
@@ -70,10 +75,7 @@ The ethical discussion recognises risks from biased historical data and unequal 
 - `KI_Sonstige` is central because the study develops supervised machine-learning models for placement prediction.
 - `Soziale_Arbeit` is central through child welfare, placement teams and decisions about care settings.
 - `Bias_Ungleichheit` and `Fairness` are substantively relevant because the article discusses differential placement by race, possible perpetuation of social bias, risk-of-bias guidance and models fitted with and without race variables.
-- `Diversitaet` is present through demographic representation and race-related analysis, but the paper does not establish a broader diversity framework or report subgroup-performance monitoring.
-- `Gender` is present as a demographic and potential fairness dimension, but the study does not centre gender analysis.
-- `AI_Literacies` is indirectly relevant through the need for practitioners to interpret predictions and limits. The article does not define or evaluate an AI-literacy intervention.
-- `Generative_KI`, `Prompting` and `Feministisch` are absent as substantive topics.
+- `Generative_KI`, `Prompting`, `AI_Literacies`, `Gender`, `Diversitaet` and `Feministisch` are absent as substantive topics. Demographic predictors do not make gender or diversity an object of the study, and the article does not study practitioner competencies or an AI-literacy intervention.
 
 ## Limitations
 
@@ -90,4 +92,4 @@ The ethical discussion recognises risks from biased historical data and unequal 
 
 ## Review boundary
 
-This preparation was produced by the attributed LLM agent from the complete hash-bound local source representation. The quotations were checked against that representation. The `preparation` status records an unreviewed artifact and grants no AI source-review, domain-expert verification or publication authority.
+This document was prepared from the source representation identified in its metadata. The current review state and its supporting receipt are recorded in the frontmatter. AI review does not establish domain-expert verification or publication approval.

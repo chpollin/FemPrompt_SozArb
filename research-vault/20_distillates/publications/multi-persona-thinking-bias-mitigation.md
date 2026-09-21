@@ -7,17 +7,19 @@ work-id: work:d3e1b501-39ff-5531-a410-391d0ae61c77
 version-id: version:a2473563-f6d9-540f-b84f-8e146f0938dd
 version-type: version_of_record
 topics:
-  - "[[Bias and Fairness]]"
-status: preparation
+- '[[Bias and Fairness]]'
+status: ai-agent-reviewed
 checked:
   quote: 2026-09-21
+  validation: '2026-09-21'
+  ai-agent-review: '2026-09-21'
 created: 2026-09-21
-updated: 2026-09-21
+updated: '2026-09-21'
 prepared-by:
   agent-id: /root/knowledge_documents
   model: gpt-5.6-sol
   prepared-at: 2026-09-21
-  artifact-review-status: unreviewed
+  artifact-review-status: ai-agent-reviewed
 source-representation:
   path: generated/source-acquisition/codex-websearch-2026/markdown-clean/d3bd00602e07cf40396c.md
   sha256: sha256:ea23c855efffddf5d5f539b80715dc9e11f45c296b3d54b25e435ed9eec91643
@@ -26,6 +28,9 @@ source-representation:
   source-url: https://aclanthology.org/2026.findings-acl.1389/
   is-preferred-version: true
   boundary: The preparing agent read the complete hash-bound ACL proceedings Markdown representation and checked the quoted passages. No separate scholarly review has occurred.
+source-review:
+  path: corpus/knowledge-reviews/2026-09-21/WK8IJUXQ.json
+  sha256: sha256:c080ea6fedb654bbd38e11ecaeb1b1409b3468c4cb16689ad24451961b0feb48
 ---
 
 # Distillate: Multi-Persona Thinking for Bias Mitigation in Large Language Models
@@ -58,4 +63,4 @@ Multiple personas increase latency and inference cost. Predefined binary persona
 
 ## Review boundary
 
-This preparation was produced from the complete hash-bound local ACL source. Quotations were checked. Its `preparation` status is unreviewed and grants no scholarly-review authority.
+This document was prepared from the source representation identified in its metadata. The current review state and its supporting receipt are recorded in the frontmatter. AI review does not establish domain-expert verification or publication approval.

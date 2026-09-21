@@ -2178,6 +2178,48 @@
       "integrity_hold": false,
       "withhold_from_current_synthesis": false,
       "source_access_note": "The existing fulltext was read. The official indexed article matches its content; one current direct URL opening returned the blog home page, so the cited archived local representation remains the audit source."
+    },
+    "work:f911df3d-1d6b-55f2-bc39-f06d4d4af206": {
+      "agent_id": "/root",
+      "model": "gpt-6-astra",
+      "reviewed_at": "2026-09-21T18:42:39.727669+00:00",
+      "work_id": "work:f911df3d-1d6b-55f2-bc39-f06d4d4af206",
+      "record_ids": [
+        "Y4BMCI2J",
+        "25XSMXKT",
+        "GUMWKBN6"
+      ],
+      "outcome": "pending",
+      "resolution_kind": "withdrawn_arxiv_work_with_unresolved_exact_version",
+      "base_registry_work_sha256": "sha256:b76392cdc0768dd5583035c72c0793575644338da9c81fab8278c346cb008c97",
+      "historical_rows": [],
+      "administrative_record_dispositions": [],
+      "human_annotations_unchanged": true,
+      "reason": "These separately registered records identify DOI 10.48550/arXiv.2506.18199. The official arXiv page, rechecked on 2026-09-21, identifies v2 as withdrawn with the comment Research is incomplete. The local v1 text and the unpinned bibliography do not establish a current, eligible source. Extend the existing source-integrity restriction to these records without merging Work IDs, changing historical annotations, or mislabelling v1 as the withdrawn revision.",
+      "evidence": [
+        {
+          "source_path": "corpus/source-acquisition/historical-resolution-2026-09-05/asseri-history.txt",
+          "sha256": "sha256:630c00ade8d44b6ba7ed06c45b26355ad75e1e401200729829327a26349c65e3",
+          "source_url": "https://arxiv.org/abs/2506.18199",
+          "locator": "Withdrawal banner and submission history",
+          "quote": "This paper has been withdrawn by Bushra Asseri"
+        },
+        {
+          "source_path": "corpus/source-acquisition/historical-resolution-2026-09-05/asseri-history.txt",
+          "sha256": "sha256:630c00ade8d44b6ba7ed06c45b26355ad75e1e401200729829327a26349c65e3",
+          "source_url": "https://arxiv.org/abs/2506.18199",
+          "locator": "Comments",
+          "quote": "Research is incomplete"
+        }
+      ],
+      "required_next_steps": [
+        "reconcile_exact_arxiv_revision_and_duplicate_work_relationship",
+        "retain_withdrawal_notice_and_do_not_use_withheld_findings_in_current_synthesis"
+      ],
+      "integrity_hold": true,
+      "withhold_from_current_synthesis": true,
+      "workflow_action": "withhold_from_current_synthesis",
+      "related_existing_hold_work_id": "work:8e01ec71-65ff-5273-b5b9-a582fec48008"
     }
   },
   "counts": {
@@ -2196,5 +2238,12 @@
     "The absent pre-specified round-one protocol and missing individual expert provenance cannot be recreated.",
     "The nine externally identified publications absent from the corpus require explicit curation, not false assignment to existing Works.",
     "The withdrawn Asseri work is retained historically but withheld from current synthesis."
+  ],
+  "amendments": [
+    {
+      "observed_at": "2026-09-21T18:42:39.727669+00:00",
+      "work_id": "work:f911df3d-1d6b-55f2-bc39-f06d4d4af206",
+      "reason": "Extend the confirmed withdrawal restriction to separately registered live-library records while preserving the original dated audit scope."
+    }
   ]
 }

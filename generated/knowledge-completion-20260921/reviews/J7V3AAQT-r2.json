@@ -1,0 +1,27 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "J7V3AAQT",
+  "knowledge_document": "research-vault/20_distillates/publications/emohaa-mental-health-chatbot.md",
+  "knowledge_document_sha256": "sha256:14463d29a822cc89e3496a721edb7c29e5c68da7b7cd6cfcf4c0043b0b7c91c0",
+  "source_path": "generated/markdown_clean/J7V3AAQT.md",
+  "source_sha256": "sha256:aba6edd8b0cbd65560fbc48979125c316f9c8df3117e9664aab62737c61f85c1",
+  "reviewed_at": "2026-09-21T18:40:45.805014Z",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Independent source-bound follow-up review of the corrected knowledge document, including identity, method, findings, limitations, quotations, category relevance and authority boundary. This receipt grants no human verification or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Assessment relevance",
+      "finding": "The earlier unsupported Prompting assignment has been removed. Generative_KI is limited to ES-Bot, while KI_Sonstige is grounded in the template-based CBT-Bot intervention. Social-work and fairness claims remain excluded."
+    },
+    {
+      "severity": "note",
+      "location": "Research question and method; Main findings; Limitations; Quotations",
+      "finding": "The three-arm randomized design, ITT and per-protocol boundaries, outcome pattern and inability to isolate ES-Bot efficacy agree with the source. Both displayed quotations resolve exactly."
+    }
+  ]
+}

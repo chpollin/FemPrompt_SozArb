@@ -1,0 +1,54 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "4ZL5Q48E",
+  "knowledge_document": "research-vault/20_distillates/publications/algorithmic-management-work-context.md",
+  "knowledge_document_sha256": "sha256:c4ed2d4172a73489645464939bb7b5f026beb9d1810c9ed0eb5f15bce345d215",
+  "source_path": "generated/markdown_clean/4ZL5Q48E.md",
+  "source_sha256": "sha256:2037703b31fda721dcb4e76a841e326b3e636982d8da08fbbb5b55b2bd22299d",
+  "reviewed_at": "2026-09-21T18:15:52.300972Z",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Independent source-bound review of identity, research question, method, findings, limitations, quotations and category relevance. This receipt grants no human verification or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Research question and method; Main findings",
+      "finding": "The conceptual sociotechnical method, treatment of organizational power, algorithmic competencies, resistance/complacency and technical/organizational opacity agree with the source."
+    },
+    {
+      "severity": "note",
+      "location": "Assessment relevance; Limitations",
+      "finding": "KI_Sonstige is central; inequality and fairness relevance is grounded in power, discrimination and accountability. The document correctly states that the article supplies a research agenda rather than causal or prevalence estimates. Both quotations resolve exactly."
+    }
+  ],
+  "hash_normalization": {
+    "knowledge_document_sha256": {
+      "original_raw_sha256": "sha256:bf9a7607b02f8eab794272cbfaa4ddc7725df8e69214593f235ff955624c8c3b",
+      "normalized_sha256": "sha256:c4ed2d4172a73489645464939bb7b5f026beb9d1810c9ed0eb5f15bce345d215",
+      "method": "UTF-8 text CRLF to LF, canonical artifact_hash"
+    }
+  },
+  "validated_subject": {
+    "validated_at": "2026-09-21T18:33:07.650658+00:00",
+    "validator": "/root integration; document and source hashes plus literal quotation checks",
+    "body_sha256": "sha256:e4955fad917b753c133d3079df1e8f3c491ad7b0d46456d6f10961b74e2de32c",
+    "source_metadata": {
+      "record-id": "4ZL5Q48E",
+      "work-id": "work:691469f6-881f-5e13-8df5-69dc64025556",
+      "version-id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
+      "version-type": "version_of_record",
+      "source-representation": {
+        "path": "generated/markdown_clean/4ZL5Q48E.md",
+        "sha256": "sha256:2037703b31fda721dcb4e76a841e326b3e636982d8da08fbbb5b55b2bd22299d",
+        "version-id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
+        "version-type": "version_of_record",
+        "source-url": "https://doi.org/10.1177/20539517211020332",
+        "is-preferred-version": true,
+        "boundary": "The preparing agent read the complete hash-bound Markdown source representation and checked the quoted passages. No separate AI source review or domain-expert verification has occurred."
+      }
+    }
+  }
+}

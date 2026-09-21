@@ -1,0 +1,88 @@
+{
+  "schema": "femprompt-source-identity-resolution/0.1",
+  "created_at": "2026-09-21T18:17:10.4769228+00:00",
+  "record_id": "SHJQQTI6",
+  "live_item_version": 496,
+  "authority": "Source identity and conversion evidence only. No screening, scholarly verification, or publication authority is granted.",
+  "finding": "The DOI and official IJCAI source identify the article titled A Survey on Intersectional Fairness in Machine Learning: Notions, Mitigation, and Challenges. The live and canonical title Opportunities and Challenges is unsupported. The existing local Gohar source is the correct work, although the current served Markdown was converted from a different PDF copy than the official proceedings PDF.",
+  "bibliographic_change": {
+    "field": "title",
+    "old": "A Survey on Intersectional Fairness in Machine Learning: Opportunities and Challenges",
+    "new": "A Survey on Intersectional Fairness in Machine Learning: Notions, Mitigation, and Challenges",
+    "creators": [
+      "Usman Gohar",
+      "Lu Cheng"
+    ],
+    "DOI": "10.24963/ijcai.2023/742",
+    "proceedings": "Proceedings of the Thirty-Second International Joint Conference on Artificial Intelligence",
+    "track": "Survey Track",
+    "pages": "6619-6627",
+    "date": "2023"
+  },
+  "evidence": [
+    {
+      "source_path": "generated/pdfs/completion-20260921/SHJQQTI6-ijcai-2023-0742.pdf",
+      "source_url": "https://www.ijcai.org/proceedings/2023/0742.pdf",
+      "sha256": "a9ad4b0eb784fa77ff163f84cf533669fa0ef980cc4a9aae79dcaf8b8b9d6bd0",
+      "locator": "official proceedings PDF, page 1",
+      "quote": "A Survey on Intersectional Fairness in Machine Learning: Notions, Mitigation, and Challenges"
+    },
+    {
+      "source_path": "generated/source-acquisition/completion-20260921/docling/SHJQQTI6.md",
+      "source_url": "https://www.ijcai.org/proceedings/2023/0742.pdf",
+      "sha256": "ca51cd5574bfbc6f9a28caba70d28bc636bc9ef7a5c89be346be5c412ba59459",
+      "locator": "page marker 1, article heading and author block",
+      "quote": "Usman Gohar 1 , Lu Cheng 2"
+    },
+    {
+      "source_path": "generated/source-acquisition/completion-20260921/docling-report.json",
+      "source_url": "https://www.ijcai.org/proceedings/2023/0742.pdf",
+      "sha256": "29ca6e1b5b449c35c9ad7bf262c87fc3f82c27b164119b48721ea50bd84059b8",
+      "locator": "files[0]",
+      "quote": "quality_score 95"
+    }
+  ],
+  "local_source_comparison": {
+    "official_pdf_sha256": "a9ad4b0eb784fa77ff163f84cf533669fa0ef980cc4a9aae79dcaf8b8b9d6bd0",
+    "existing_exact_official_copy": "pipeline/pdfs/Gohar_2023_Survey.pdf",
+    "existing_exact_official_copy_sha256": "a9ad4b0eb784fa77ff163f84cf533669fa0ef980cc4a9aae79dcaf8b8b9d6bd0",
+    "currently_converted_copy": "pipeline/pdfs/Gohar_2023_A_Survey_on_Intersectional_Fairness_in_Machine.pdf",
+    "currently_converted_copy_sha256": "fe1c936c33d39562b88ec33a16e4262400a002aed0d07ee0760663bfc7324b7f",
+    "assessment": "Both local PDFs state the same title and authors. The 277093-byte copy is byte-identical to the official IJCAI proceedings download and is therefore the exact preferred reading source."
+  },
+  "conversion_qc": {
+    "converter": "Docling",
+    "result": "converted",
+    "quality_score": 95,
+    "pages_present": "1-9",
+    "headings": "The title, authors, abstract, numbered sections, acknowledgements, and references are present in reading order.",
+    "tables": "The report detected one table. Its structure requires visual checking before any claim depends on row-level values.",
+    "figures": "Figure placeholders and captions are present. The Markdown does not preserve the visual content, so figure-dependent interpretation remains outside the text-only representation.",
+    "text_issues": [
+      "The abstract contains the joined token Wepresent.",
+      "Some body tokens lose spaces, including highstake.",
+      "The converter reports very long average line length."
+    ],
+    "fitness": "Suitable for title, author, abstract, section, and ordinary running-text assessment. Table values and figure content require consultation of the official PDF."
+  },
+  "existing_version_binding_proposal": {
+    "binding_mode": "existing_version",
+    "record_id": "SHJQQTI6",
+    "work_id": "work:6ef2b617-d42a-5df1-b3d6-081bec49e4a2",
+    "bibliographic_version_id": "version:8c9eb11a-47da-5afe-8a50-a00659cb9455",
+    "source_version_id": "version:8c9eb11a-47da-5afe-8a50-a00659cb9455",
+    "source_version_type": "version_of_record",
+    "preferred_version_id": "version:8c9eb11a-47da-5afe-8a50-a00659cb9455",
+    "is_preferred_version": true,
+    "source_path": "generated/source-acquisition/completion-20260921/docling/SHJQQTI6.md",
+    "source_sha256": "sha256:ca51cd5574bfbc6f9a28caba70d28bc636bc9ef7a5c89be346be5c412ba59459",
+    "source_url": "https://www.ijcai.org/proceedings/2023/0742.pdf",
+    "condition": "Apply after correcting the canonical and live title with optimistic version protection. Preserve the existing assessment records and their identifiers."
+  },
+  "integrated_representation": {
+    "path": "corpus/source-acquisition/completion-20260921/SHJQQTI6.md",
+    "sha256": "sha256:f466d925774a262694f248f1639b373102d521d48f7065acd7d8fa3013421c9d",
+    "metadata_origin": "https://www.ijcai.org/proceedings/2023/742",
+    "transformation": "Prepend explicitly attributed publisher DOI metadata. Preserve the complete original Docling body unchanged."
+  }
+}

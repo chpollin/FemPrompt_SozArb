@@ -7,17 +7,19 @@ work-id: work:e62005d4-d179-5cef-af39-3aca00c24a04
 version-id: version:26f29a81-72da-5a66-8302-ba39cafbae87
 version-type: version_of_record
 topics:
-  - "[[Generative AI]]"
-status: preparation
+- '[[Generative AI]]'
+status: ai-agent-reviewed
 checked:
   quote: 2026-09-21
+  validation: '2026-09-21'
+  ai-agent-review: '2026-09-21'
 created: 2026-09-21
-updated: 2026-09-21
+updated: '2026-09-21'
 prepared-by:
   agent-id: /root/knowledge_documents
   model: gpt-5.6-sol
   prepared-at: 2026-09-21
-  artifact-review-status: unreviewed
+  artifact-review-status: ai-agent-reviewed
 source-representation:
   path: generated/source-acquisition/codex-websearch-2026/html-markdown/166a9834b422f052b7c5.md
   sha256: sha256:5568a06471911bf9d102f9caf87159966469807bd990ef8a837d52585de186f5
@@ -26,6 +28,9 @@ source-representation:
   source-url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13217584
   is-preferred-version: true
   boundary: The preparing agent read the complete hash-bound Markdown source representation and checked the quoted passages. No separate AI source review or domain-expert verification has occurred.
+source-review:
+  path: corpus/knowledge-reviews/2026-09-21/UGN4TS5R-authority.json
+  sha256: sha256:439f94b34256eceaf50284064666b750d2e55f2c7360e641b2076f1b817e3292
 ---
 
 # Distillate: Implicit Gender, Racial, and Ethnic Biases in Large Language Models: An Audit Study of Automated Psychiatric Diagnoses
@@ -58,4 +63,4 @@ Holding symptoms constant isolates differential model treatment but cannot repre
 
 ## Review boundary
 
-This preparation was produced by the attributed LLM agent from the complete hash-bound local source representation. The quotations were checked against that representation. The `preparation` status records an unreviewed artifact and grants no AI source-review, domain-expert verification or publication authority.
+This document was prepared from the source representation identified in its metadata. The current review state and its supporting receipt are recorded in the frontmatter. AI review does not establish domain-expert verification or publication approval.

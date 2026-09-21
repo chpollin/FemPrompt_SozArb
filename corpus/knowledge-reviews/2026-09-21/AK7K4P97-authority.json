@@ -1,0 +1,52 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "AK7K4P97",
+  "knowledge_document": "research-vault/20_distillates/publications/epic-model-ai-social-work.md",
+  "knowledge_document_sha256": "sha256:be849cc744822346c74ce54dffe1a0a05b50cc2b1df363076010d4569a7bedab",
+  "source_path": "generated/markdown_clean/Baker_2025_Artificial_intelligence_in_social_work_An_EPIC.md",
+  "source_sha256": "sha256:f49c7419289238b9d1e01a8547e2f1181b34ea9d02537a37f2c4eebd7202c99e",
+  "reviewed_at": "2026-09-21T18:38:31.602061Z",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Administrative follow-up review of the authority wording and preservation of the previously source-reviewed substantive content. This receipt grants no human verification or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Substantive sections before Review boundary",
+      "finding": "The source-reviewed substantive statements, method, findings, limitations, quotations and category relevance are unchanged from the accepted prior-review artifact. The current source artifact still matches its reviewed hash."
+    },
+    {
+      "severity": "note",
+      "location": "Review boundary and frontmatter authority fields",
+      "finding": "The revised boundary now delegates the current review state to the frontmatter and receipt while retaining the explicit domain-expert-verification and publication-approval boundary. Administrative authority metadata does not alter the scholarly claims."
+    },
+    {
+      "severity": "note",
+      "location": "Prior review provenance",
+      "finding": "Compared against accepted receipt corpus/knowledge-reviews/2026-09-21/AK7K4P97-initial.json and the exact prior artifact hash recorded there."
+    }
+  ],
+  "validated_subject": {
+    "validated_at": "2026-09-21T18:41:39.054431+00:00",
+    "validator": "/root integration; document and source hashes plus literal quotation checks",
+    "body_sha256": "sha256:d0cdd9327534963a436cf26b7a740caf111aff48e6a4d0a2c030f512e0a45632",
+    "source_metadata": {
+      "record-id": "AK7K4P97",
+      "work-id": "work:717e065c-570d-526f-86ae-2a24d9f03044",
+      "version-id": "version:7a2a88ab-de23-5113-aa95-aa6b39a002eb",
+      "version-type": "version_of_record",
+      "source-representation": {
+        "path": "generated/markdown_clean/Baker_2025_Artificial_intelligence_in_social_work_An_EPIC.md",
+        "sha256": "sha256:f49c7419289238b9d1e01a8547e2f1181b34ea9d02537a37f2c4eebd7202c99e",
+        "version-id": "version:7a2a88ab-de23-5113-aa95-aa6b39a002eb",
+        "version-type": "version_of_record",
+        "source-url": "https://www.tandfonline.com/doi/full/10.1080/0312407X.2025.2488345",
+        "is-preferred-version": true,
+        "boundary": "Complete source read; quotes checked. No separate scholarly review."
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "EXRF5629",
+  "knowledge_document": "research-vault/20_distillates/publications/exrf5629-child-welfare-placement-prediction.md",
+  "knowledge_document_sha256": "sha256:4f5e6beda5c082df73a3cf952508e72d73707162c795be437aaf04704be830af",
+  "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/trudeau-pmc-original.md",
+  "source_sha256": "sha256:028152c0cc60276390fa3b4a6c9f5b8c5964065a19b7b26992923499a6d293cd",
+  "reviewed_at": "2026-09-21T19:08:04Z",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "changes_requested",
+  "scope": "Independent source-bound review of identity, research question, method, findings, limitations, quotations and category relevance. This receipt grants no human verification or publication authority.",
+  "findings": [
+    {
+      "severity": "material",
+      "location": "Assessment relevance, Gender",
+      "finding": "The paper uses sex or gender as a demographic predictor and discusses possible bias, but does not centre a gender analysis. The category definition expressly excludes demographic sex data without a gender focus. Mark Gender absent unless stronger source evidence is identified."
+    },
+    {
+      "severity": "material",
+      "location": "Assessment relevance, AI_Literacies",
+      "finding": "The document infers AI_Literacies from the need for practitioners to interpret predictions. The paper does not study competencies, skills, knowledge or a literacy intervention. Remove this category or supply direct evidence that makes literacy a substantive object."
+    },
+    {
+      "severity": "note",
+      "location": "Research question; Method and study scope; Main arguments; Limitations",
+      "finding": "The two predictive studies, Treatment Outcome Package data, modelling approaches, decision-support boundary and limitations agree with the accepted-manuscript source. All four quotations resolve exactly. The project open negative AI source review remains an independent authority state."
+    }
+  ]
+}

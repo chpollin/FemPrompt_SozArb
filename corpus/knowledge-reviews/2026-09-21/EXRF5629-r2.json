@@ -1,0 +1,52 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "EXRF5629",
+  "knowledge_document": "research-vault/20_distillates/publications/exrf5629-child-welfare-placement-prediction.md",
+  "knowledge_document_sha256": "sha256:ae85ff0c0136e22c1c3e74bc85aae838ed8784a6ccdf950ac3b6c44bae6ad5bb",
+  "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/trudeau-pmc-original.md",
+  "source_sha256": "sha256:028152c0cc60276390fa3b4a6c9f5b8c5964065a19b7b26992923499a6d293cd",
+  "reviewed_at": "2026-09-21T18:40:45.806518Z",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Independent source-bound follow-up review of the corrected knowledge document, including identity, method, findings, limitations, quotations, category relevance and authority boundary. This receipt grants no human verification or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Assessment relevance",
+      "finding": "The earlier Gender and AI_Literacies overcoding has been removed. KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit and Fairness remain supported by the placement-prediction design and explicit bias discussion."
+    },
+    {
+      "severity": "note",
+      "location": "Method and study scope; Main arguments; Limitations; Quotations",
+      "finding": "The two modelling studies, data source, random-forest classification, separate XGBoost risk adjustment, decision-support boundary and limitations agree with the Accepted Manuscript. All four quotations resolve exactly."
+    },
+    {
+      "severity": "note",
+      "location": "Authority boundary",
+      "finding": "This review does not replace the project’s additional historical negative authority evidence. The current document preserves the separate Version-of-Record and Accepted-Manuscript identities."
+    }
+  ],
+  "validated_subject": {
+    "validated_at": "2026-09-21T18:41:39.106309+00:00",
+    "validator": "/root integration; document and source hashes plus literal quotation checks",
+    "body_sha256": "sha256:8906ec7100229bdf7daf346e499ccfa1b089a2ca33d5cbd04067292a4cfae06f",
+    "source_metadata": {
+      "record-id": "EXRF5629",
+      "work-id": "work:80bb4056-d744-573e-bef8-17896d356d2e",
+      "version-id": "version:75660bfb-6982-59e7-ada4-3b60049ccd08",
+      "version-type": "version_of_record",
+      "source-representation": {
+        "path": "corpus/source-acquisition/checklist-resolution-2026-09-05/trudeau-pmc-original.md",
+        "sha256": "sha256:028152c0cc60276390fa3b4a6c9f5b8c5964065a19b7b26992923499a6d293cd",
+        "version-id": "version:897684cb-05ac-541e-8872-c80a44062f26",
+        "version-type": "accepted_manuscript",
+        "source-url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10569152/",
+        "is-preferred-version": false,
+        "boundary": "The preparing agent read the complete local Accepted Manuscript representation and checked the quoted passages. No separate AI source review or domain-expert verification has occurred."
+      }
+    }
+  }
+}

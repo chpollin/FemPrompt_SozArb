@@ -1,0 +1,49 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "AMYZFAPH",
+  "knowledge_document": "research-vault/20_distillates/publications/completion-amyzfaph-generative-ai-social-work-research.md",
+  "knowledge_document_sha256": "sha256:f5eb142b4002dc2f1652177ebc073ebbd8dee0a4f1f329b98d2d933ec9208f82",
+  "source_path": "generated/markdown_clean/Victor_2023_Recommendations_for_social_work_researchers_and.md",
+  "source_sha256": "sha256:faee9d1c7150bfe9d53dbfc620c2237d70e32fe737a2fdaa4e7116a3e6ac7225",
+  "conversion_qc_path": "generated/source-acquisition/completion-20260921/conversion-qc/conversion-qc.json",
+  "conversion_qc_sha256": "sha256:72936d4a095ef40a2040ce27d71590b0b75f26dfbaf6554e43a0c05035546749",
+  "reviewed_at": "2026-09-21T18:54:01.364336Z",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Independent source-bound follow-up review of the corrected category assessment and preservation of the previously reviewed content. This receipt grants no human verification or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Assessment relevance",
+      "finding": "The unsupported Fairness assignment has been removed. Bias_Ungleichheit remains supported by the explicit discussion of training-data bias, discriminatory outcomes and harms to marginalised groups. The document now correctly states that algorithmic-fairness criteria, fair ML and fairness metrics are absent."
+    },
+    {
+      "severity": "note",
+      "location": "All other substantive sections and quotations",
+      "finding": "Reconstructing only the prior category wording reproduces the exact artifact_hash from AMYZFAPH-kd.json. All other claims and all four exact source quotations are unchanged, and the canonical source hash remains stable."
+    }
+  ],
+  "validated_subject": {
+    "validated_at": "2026-09-21T18:54:58.275840+00:00",
+    "validator": "/root integration; document and source hashes plus literal quotation checks",
+    "body_sha256": "sha256:c6182967ba7904cbdc33af97aa4755517a5b211fbbac0dab23f701a6f723c3bf",
+    "source_metadata": {
+      "record-id": "AMYZFAPH",
+      "work-id": "work:e1ca8a4c-5cc2-5e35-b3cc-375950a07405",
+      "version-id": "version:0e874262-87ce-5928-962b-758a55a98646",
+      "version-type": "version_of_record",
+      "source-representation": {
+        "path": "generated/markdown_clean/Victor_2023_Recommendations_for_social_work_researchers_and.md",
+        "sha256": "sha256:faee9d1c7150bfe9d53dbfc620c2237d70e32fe737a2fdaa4e7116a3e6ac7225",
+        "version-id": "version:0e874262-87ce-5928-962b-758a55a98646",
+        "version-type": "version_of_record",
+        "source-url": "https://doi.org/10.1086/726021",
+        "is-preferred-version": true,
+        "boundary": "The preparing agent read the complete hash-bound Docling conversion. Its text was available in linearised form, while visual page layout was not independently inspected. The source hash follows the repository artifact_hash contract, which normalises CRLF to LF for text files."
+      }
+    }
+  }
+}

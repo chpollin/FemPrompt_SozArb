@@ -1,5 +1,5 @@
 {
-  "schema": "femprompt-knowledge-document-recovery/1.0",
+  "schema": "femprompt-knowledge-document-recovery/1.1",
   "bindings": {
     "3K9RDWLY": {
       "source_file": "Pinski_2023_AI_Literacy_-_Towards_Measuring_Human_Competency.md",
@@ -91,7 +91,7 @@
       "source_path": "docs/data/fulltext/AXEIVEW3.md",
       "source_sha256": "sha256:586d33a2b450cbe15573a986c4ac25bbf34d74e0c8ff09ec32f4f8df204377a4",
       "knowledge_source_path": "generated/distilled/Lanzetta_2024_Artificial_Intelligence_Competence_Needs_for.md",
-      "knowledge_source_sha256": "sha256:8b292b6897af3b8017f3a926a4d7c830f547de0db8961648343d0f467be3d4a9",
+      "knowledge_source_sha256": "sha256:505f48b50cb4a3052b2ad8bd084e44afefde35f325e92f37d120390f028b6a14",
       "bibliographic_evidence": {
         "title": "Artificial Intelligence Competence Needs for Youth Workers",
         "knowledge_title": "Artificial Intelligence Competence Needs for Youth Workers",
@@ -101,6 +101,9 @@
       "authority": {
         "status": "historical_unreviewed",
         "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      },
+      "legacy_raw_hashes": {
+        "knowledge_source_sha256": "sha256:8b292b6897af3b8017f3a926a4d7c830f547de0db8961648343d0f467be3d4a9"
       }
     },
     "CF6T2RD7": {
@@ -108,7 +111,7 @@
       "source_path": "docs/data/fulltext/CF6T2RD7.md",
       "source_sha256": "sha256:3c2b9d392413ac7e031207954e2d2824d4beccbdf348d95b916880d3c83e0b1c",
       "knowledge_source_path": "generated/distilled/Reamer_2023_Artificial_Intelligence_in_Social_Work_Emerging.md",
-      "knowledge_source_sha256": "sha256:41534a439db0aa5baaa563891b72b0fc49dcdcee2c0a96463df9f40495a02b4c",
+      "knowledge_source_sha256": "sha256:244ec1bc97784c89704ac905e2cc2e8048427af2ed44e9bf9e2321dd2636c4aa",
       "bibliographic_evidence": {
         "title": "Artificial intelligence in social work: Emerging ethical issues",
         "knowledge_title": "Artificial Intelligence in Social Work: Emerging Ethical Issues",
@@ -118,6 +121,9 @@
       "authority": {
         "status": "historical_unreviewed",
         "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      },
+      "legacy_raw_hashes": {
+        "knowledge_source_sha256": "sha256:41534a439db0aa5baaa563891b72b0fc49dcdcee2c0a96463df9f40495a02b4c"
       }
     },
     "CY5IMM6G": {
@@ -176,7 +182,7 @@
       "source_path": "docs/data/fulltext/EXVG7MQR.md",
       "source_sha256": "sha256:3c2b9d392413ac7e031207954e2d2824d4beccbdf348d95b916880d3c83e0b1c",
       "knowledge_source_path": "generated/distilled/Reamer_2023_Artificial_Intelligence_in_Social_Work_Emerging.md",
-      "knowledge_source_sha256": "sha256:41534a439db0aa5baaa563891b72b0fc49dcdcee2c0a96463df9f40495a02b4c",
+      "knowledge_source_sha256": "sha256:244ec1bc97784c89704ac905e2cc2e8048427af2ed44e9bf9e2321dd2636c4aa",
       "bibliographic_evidence": {
         "title": "Artificial intelligence in social work: Emerging ethical issues",
         "knowledge_title": "Artificial Intelligence in Social Work: Emerging Ethical Issues",
@@ -186,6 +192,9 @@
       "authority": {
         "status": "historical_unreviewed",
         "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      },
+      "legacy_raw_hashes": {
+        "knowledge_source_sha256": "sha256:41534a439db0aa5baaa563891b72b0fc49dcdcee2c0a96463df9f40495a02b4c"
       }
     },
     "FJQ6XYHH": {
@@ -210,7 +219,7 @@
       "source_path": "docs/data/fulltext/HN7KKNYV.md",
       "source_sha256": "sha256:3c2b9d392413ac7e031207954e2d2824d4beccbdf348d95b916880d3c83e0b1c",
       "knowledge_source_path": "generated/distilled/Reamer_2023_Artificial_Intelligence_in_Social_Work_Emerging.md",
-      "knowledge_source_sha256": "sha256:41534a439db0aa5baaa563891b72b0fc49dcdcee2c0a96463df9f40495a02b4c",
+      "knowledge_source_sha256": "sha256:244ec1bc97784c89704ac905e2cc2e8048427af2ed44e9bf9e2321dd2636c4aa",
       "bibliographic_evidence": {
         "title": "Artificial intelligence in social work: Emerging ethical issues",
         "knowledge_title": "Artificial Intelligence in Social Work: Emerging Ethical Issues",
@@ -220,6 +229,9 @@
       "authority": {
         "status": "historical_unreviewed",
         "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      },
+      "legacy_raw_hashes": {
+        "knowledge_source_sha256": "sha256:41534a439db0aa5baaa563891b72b0fc49dcdcee2c0a96463df9f40495a02b4c"
       }
     },
     "IUN7Z56I": {
@@ -227,7 +239,7 @@
       "source_path": "docs/data/fulltext/IUN7Z56I.md",
       "source_sha256": "sha256:3c2b9d392413ac7e031207954e2d2824d4beccbdf348d95b916880d3c83e0b1c",
       "knowledge_source_path": "generated/distilled/Reamer_2023_Artificial_Intelligence_in_Social_Work_Emerging.md",
-      "knowledge_source_sha256": "sha256:41534a439db0aa5baaa563891b72b0fc49dcdcee2c0a96463df9f40495a02b4c",
+      "knowledge_source_sha256": "sha256:244ec1bc97784c89704ac905e2cc2e8048427af2ed44e9bf9e2321dd2636c4aa",
       "bibliographic_evidence": {
         "title": "Artificial intelligence in social work: Emerging ethical issues",
         "knowledge_title": "Artificial Intelligence in Social Work: Emerging Ethical Issues",
@@ -237,6 +249,9 @@
       "authority": {
         "status": "historical_unreviewed",
         "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      },
+      "legacy_raw_hashes": {
+        "knowledge_source_sha256": "sha256:41534a439db0aa5baaa563891b72b0fc49dcdcee2c0a96463df9f40495a02b4c"
       }
     },
     "J5EF9W6M": {
@@ -414,7 +429,7 @@
       "source_path": "docs/data/fulltext/WTLVG29I.md",
       "source_sha256": "sha256:3c2b9d392413ac7e031207954e2d2824d4beccbdf348d95b916880d3c83e0b1c",
       "knowledge_source_path": "generated/distilled/Reamer_2023_Artificial_Intelligence_in_Social_Work_Emerging.md",
-      "knowledge_source_sha256": "sha256:41534a439db0aa5baaa563891b72b0fc49dcdcee2c0a96463df9f40495a02b4c",
+      "knowledge_source_sha256": "sha256:244ec1bc97784c89704ac905e2cc2e8048427af2ed44e9bf9e2321dd2636c4aa",
       "bibliographic_evidence": {
         "title": "Artificial intelligence in social work: Emerging ethical issues",
         "knowledge_title": "Artificial Intelligence in Social Work: Emerging Ethical Issues",
@@ -424,6 +439,9 @@
       "authority": {
         "status": "historical_unreviewed",
         "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      },
+      "legacy_raw_hashes": {
+        "knowledge_source_sha256": "sha256:41534a439db0aa5baaa563891b72b0fc49dcdcee2c0a96463df9f40495a02b4c"
       }
     },
     "X2QQ4JH6": {
@@ -431,7 +449,7 @@
       "source_path": "docs/data/fulltext/X2QQ4JH6.md",
       "source_sha256": "sha256:3c2b9d392413ac7e031207954e2d2824d4beccbdf348d95b916880d3c83e0b1c",
       "knowledge_source_path": "generated/distilled/Reamer_2023_Artificial_Intelligence_in_Social_Work_Emerging.md",
-      "knowledge_source_sha256": "sha256:41534a439db0aa5baaa563891b72b0fc49dcdcee2c0a96463df9f40495a02b4c",
+      "knowledge_source_sha256": "sha256:244ec1bc97784c89704ac905e2cc2e8048427af2ed44e9bf9e2321dd2636c4aa",
       "bibliographic_evidence": {
         "title": "Artificial Intelligence in Social Work: Emerging Ethical Issues",
         "knowledge_title": "Artificial Intelligence in Social Work: Emerging Ethical Issues",
@@ -441,6 +459,9 @@
       "authority": {
         "status": "historical_unreviewed",
         "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      },
+      "legacy_raw_hashes": {
+        "knowledge_source_sha256": "sha256:41534a439db0aa5baaa563891b72b0fc49dcdcee2c0a96463df9f40495a02b4c"
       }
     },
     "X7ZGW6CN": {
@@ -499,7 +520,7 @@
       "source_path": "docs/data/fulltext/Z9BIKVS3.md",
       "source_sha256": "sha256:59e9ce9aea7b45de0f269bb10f1df2ffe8f97e8d8aac932e4ff79ad62e8bb534",
       "knowledge_source_path": "generated/distilled/Laine_2025_Avoiding_Catastrophe_Through_Intersectionality_in.md",
-      "knowledge_source_sha256": "sha256:e097cf89de9fab4d6a2f32192e4aa50f8be3b4707294366d5102684048ae9d12",
+      "knowledge_source_sha256": "sha256:08bb6d32df8a0b4d50cefb811d06bf9751cf68105a9deeb4492443c645fcf507",
       "bibliographic_evidence": {
         "title": "Avoiding Catastrophe Through Intersectionality in Global AI Governance",
         "knowledge_title": "Avoiding Catastrophe Through Intersectionality in Global AI Governance",
@@ -509,7 +530,17 @@
       "authority": {
         "status": "historical_unreviewed",
         "note": "Recovered historical knowledge document. Source and bibliographic identity are checked, but the original LLM content has not been independently reviewed or promoted."
+      },
+      "legacy_raw_hashes": {
+        "knowledge_source_sha256": "sha256:e097cf89de9fab4d6a2f32192e4aa50f8be3b4707294366d5102684048ae9d12"
       }
     }
+  },
+  "hash_contract": "text-crlf-to-lf",
+  "hash_migration": {
+    "checked_at": "2026-09-21T19:32:35.139719+00:00",
+    "previous_schema": "femprompt-knowledge-document-recovery/1.0",
+    "previous_manifest_raw_sha256": "sha256:e8af2a83675064258356915fa30eb4b4eb2cc40334f2ba214dd9d3bc7860c0bb",
+    "scope": "All prior byte-exact source and knowledge hashes verified before normalising CRLF to LF. Only line endings differ; content, identities and historical_unreviewed authority remain unchanged."
   }
 }

@@ -1,0 +1,32 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "NN49FMDP",
+  "knowledge_document": "research-vault/20_distillates/publications/nn49fmdp-critical-ai-school-gender.md",
+  "knowledge_document_sha256": "sha256:b0ec485cd10d6c48f180eab149ab0570de433a6411694e731009776d72aee639",
+  "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/152b1aa29e0dddabe838.md",
+  "source_sha256": "sha256:6937360f3e72c85cb21e45eb19d0ed59e33b1320592ad4da32ed1b2608686058",
+  "reviewed_at": "2026-09-21T19:01:14.735933Z",
+  "reviewer": {
+    "agent_id": "/root/source_completion",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "changes_requested",
+  "scope": "Independent full-text, source-bound review of statements, method, category relevance, quotations and conversion limits. This receipt grants no human verification, screening-state change, domain-expert verification or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Core statements; Method and scope",
+      "finding": "The quotation resolves exactly. The source supports a Spanish-language case study of 25 final course projects, a five-category binary coding matrix, qualitative content analysis and the finding that few proposals connect generative AI, gender bias and employment inequality."
+    },
+    {
+      "severity": "error",
+      "location": "Assessment relevance",
+      "finding": "AI_Literacies, Generative_KI, Bias_Ungleichheit, Gender and Feministisch are grounded. Diversitaet is not established merely because teachers came from different disciplines or because the study concerns gender inequality. Fairness is also not established under the controlled definition because the paper does not study algorithmic-fairness metrics, fair-ML systems or a debiasing method. Remove Diversitaet and Fairness unless the document cites a source passage that satisfies those category definitions."
+    },
+    {
+      "severity": "note",
+      "location": "Limitations; conversion boundary",
+      "finding": "The limitation to selected course projects rather than measured learning or later practice is accurate. Tables are linearised; figures and layout were not independently inspected, and the reviewed claims do not require their visual content."
+    }
+  ]
+}

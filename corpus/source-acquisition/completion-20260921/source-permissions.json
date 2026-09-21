@@ -1,0 +1,92 @@
+{
+  "records": [
+    {
+      "record_id": "Z9DNTBFF",
+      "source_path": "corpus/source-acquisition/completion-20260921/Z9DNTBFF.identity-bound.md",
+      "sha256": "sha256:729606223c6f936d78f837d285ae84f5d18f010b62af7dfa793cce64119fd3c0",
+      "licence": "CC-BY-4.0",
+      "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://aclanthology.org/faq/copyright/",
+      "checked_at": "2026-09-21T18:52:32.349457+00:00",
+      "authority": "Local source attribution and reuse record; no scholarly approval or publication deployment.",
+      "integration": {
+        "agent_id": "/root",
+        "model": "gpt-6-astra",
+        "observed_at": "2026-09-21T18:52:32.349457+00:00",
+        "prior_source_sha256": "sha256:48117dfbbeb72eb37b1e8a3e5c2fc52c6756a76c289137025221017a219b1ace",
+        "change": "Record original authorship, stable source, applicable third-party licence and conversion provenance. Original Docling body unchanged."
+      }
+    },
+    {
+      "record_id": "V8SBEH4E",
+      "source_path": "corpus/source-acquisition/completion-20260921/V8SBEH4E.identity-bound.md",
+      "sha256": "sha256:e899385c54b3118d6eec98a0195a659ff18fc33c4c0dcc3a9e8cccda7a244353",
+      "licence": "CC-BY-NC-4.0",
+      "licence_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "evidence_url": "https://www.atlantis-press.com/proceedings/aihle-25/126022241",
+      "checked_at": "2026-09-21T18:52:32.359965+00:00",
+      "authority": "Local source attribution and reuse record; no scholarly approval or publication deployment.",
+      "integration": {
+        "agent_id": "/root",
+        "model": "gpt-6-astra",
+        "observed_at": "2026-09-21T18:52:32.359965+00:00",
+        "prior_source_sha256": "sha256:edb273fef5e7e2fce0a7ba2b7eeb84d5db4503483744b344e9003b9dd39b671b",
+        "change": "Record original authorship, stable source, applicable third-party licence and conversion provenance. Original Docling body unchanged."
+      }
+    },
+    {
+      "record_id": "9ZKZQM63",
+      "source_path": "corpus/source-acquisition/completion-20260921/9ZKZQM63.identity-bound.md",
+      "sha256": "sha256:bce7b8de4b1bb063064193b7e230d1825cd235f72add20aca038807e281cf14c",
+      "licence": "CC-BY-NC-SA-4.0",
+      "licence_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "evidence_url": "https://arxiv.org/abs/2406.12033v2",
+      "checked_at": "2026-09-21T18:52:32.367473+00:00",
+      "authority": "Local source attribution and reuse record; no scholarly approval or publication deployment.",
+      "integration": {
+        "agent_id": "/root",
+        "model": "gpt-6-astra",
+        "observed_at": "2026-09-21T18:52:32.367473+00:00",
+        "prior_source_sha256": "sha256:d91068c781673c59a72166804c0479fedea1ec04ca48e77615a5c59ef71aebd2",
+        "change": "Record original authorship, stable source, applicable third-party licence and conversion provenance. Original Docling body unchanged."
+      }
+    },
+    {
+      "record_id": "J4K3XA52",
+      "source_path": "corpus/source-acquisition/completion-20260921/J4K3XA52.identity-bound.md",
+      "sha256": "sha256:9622630861435a8d4cfe9baa48d6e9e03395cdddfd6d6d243aa288508e794da5",
+      "licence": "CC-BY-4.0",
+      "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1186/s12911-025-03118-0",
+      "checked_at": "2026-09-21T18:52:32.375986+00:00",
+      "authority": "Local source attribution and reuse record; no scholarly approval or publication deployment.",
+      "integration": {
+        "agent_id": "/root",
+        "model": "gpt-6-astra",
+        "observed_at": "2026-09-21T18:52:32.375986+00:00",
+        "prior_source_sha256": "sha256:a5f1ffe8f1961c87da185d3cbb7e665e77297fc6cb8aae2c7f1f38ca5eddaa8a",
+        "change": "Record original authorship, stable source, applicable third-party licence and conversion provenance. Original Docling body unchanged."
+      }
+    },
+    {
+      "record_id": "SHJQQTI6",
+      "source_path": "corpus/source-acquisition/completion-20260921/SHJQQTI6-reading.md",
+      "sha256": "sha256:3ff6ed0113e1c1f4eb3d1447f5b3bf2a7fa03a7195345560215a6cb070d36c76",
+      "licence": "IJCAI permission with visible copyright-holder attribution",
+      "licence_url": "https://www.ijcai.org/past_conferences",
+      "evidence_url": "https://www.ijcai.org/past_conferences",
+      "checked_at": "2026-09-21T19:26:56.513421+00:00",
+      "authority": "Attributed local reading representation with explicit repairs and independent conversion QC; no scholarly approval or deployment."
+    },
+    {
+      "record_id": "J4K3XA52",
+      "source_path": "corpus/source-acquisition/completion-20260921/J4K3XA52-reading.md",
+      "sha256": "sha256:c7f0d251037326c79a930f63ae0de319b8336f7081326bc48ee906f0eace57c2",
+      "licence": "CC-BY-4.0",
+      "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1186/s12911-025-03118-0",
+      "checked_at": "2026-09-21T19:26:56.514418+00:00",
+      "authority": "Attributed local reading representation with explicit repairs and independent conversion QC; no scholarly approval or deployment."
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 import copy
 import json
+from pathlib import Path
 
 import pytest
 
@@ -11,6 +12,18 @@ from src.analysis.historical_resolution import (
 )
 from src.assess.artifact_verification import artifact_hash, record_hash
 from src.publish.serve import resolve_target
+
+
+def test_withdrawal_hold_covers_separately_registered_live_records():
+    repo = Path(__file__).resolve().parents[1]
+    registry = json.loads(
+        (repo / "corpus/work_version_registry.json").read_text(encoding="utf-8")
+    )
+    holds = load_source_holds(repo)
+    for key in ("Y4BMCI2J", "25XSMXKT", "GUMWKBN6"):
+        identity = registry["record_index"][key]
+        assert holds[identity["work_id"]]["kind"] == "integrity_hold"
+        assert "2506.18199" in holds[identity["work_id"]]["reason"]
 
 
 def fixture(repo):

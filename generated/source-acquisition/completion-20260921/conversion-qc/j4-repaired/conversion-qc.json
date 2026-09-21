@@ -1,0 +1,55 @@
+{
+  "schema": "femprompt-conversion-qc/0.1",
+  "created_at": "2026-09-21T19:21:07.645875+00:00",
+  "scope": "Independent visual and textual review of the J4K3XA52 repaired Markdown against the Version of Record PDF. This QC grants no scientific acceptance, screening decision, registry authority, Knowledge Document authority, human verification, or publication authority.",
+  "reviewer": {
+    "agent_id": "/root/knowledge_completion",
+    "model": "gpt-5.6-sol"
+  },
+  "method": [
+    "Verified the current repaired Markdown, repair manifest, PDF, and inspection-artifact hashes with src.assess.artifact_verification.artifact_hash.",
+    "Inspected the complete 14-page PDF contact sheet and the full rendered pages containing Equations 1 through 3 and Tables 1 through 9.",
+    "Compared every displayed term in Equations 1 through 3, every Table 5 row and cell, and the row and cell alignment of Tables 1 through 4 and 6 through 9 against the rendered publisher PDF.",
+    "Did not treat the repair manifest or converter quality scores as fidelity evidence."
+  ],
+  "records": [
+    {
+      "record_id": "J4K3XA52",
+      "pdf_path": "generated/pdfs/completion-20260921/oa-batch/J4K3XA52.pdf",
+      "pdf_sha256": "sha256:ed1fce4e7bfae9a79230ded8be149df1552b39f4807c176b463a4e0a38c92c1a",
+      "markdown_path": "corpus/source-acquisition/completion-20260921/J4K3XA52-repaired.md",
+      "markdown_sha256": "sha256:e9f9dce39b5b812d346e48d4d5ff42f63c0c67b4d39f06145ee1f7f81a77b633",
+      "repair_manifest_path": "generated/source-acquisition/completion-20260921/conversion-qc/J4K3XA52-repair-manifest.json",
+      "repair_manifest_sha256": "sha256:a9e2ee725ff348065f7016ea4638aa355cc2d15291cbbd75d608be2b0ee8ad27",
+      "pages_total": 14,
+      "pages_visually_inspected": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+      "result": "changes_required",
+      "structure": {
+        "headings": "Article headings and reading order remain unchanged and readable.",
+        "formulas": "Equations 1 through 3 are restored with the variables, subscripts, protected-attribute substitution, interaction term, random effects, and equation numbers shown in the PDF.",
+        "tables": "Tables 1 through 8 preserve their assessment-relevant rows and cells. All 66 Table 5 data rows across pages 8 and 9 match the printed female and male counts, direction, coefficient, significance, regression p-value, chi-square or Fisher p-value, and adjusted p-value. Table 9 does not preserve its three source rows: two source examples are split across multiple Markdown rows, severing sentence continuations from their paired male and female cells.",
+        "figures": "The article contains no argument-bearing figures. Existing image placeholders represent publisher or supplementary graphic matter."
+      },
+      "verified_repairs": [
+        "Equation 1 matches the printed counterfactual-fairness equality for all y.",
+        "Equation 2 matches the printed mixed-effects sentiment specification.",
+        "Equation 3 matches the printed Poisson word-count specification.",
+        "Table 5 faithfully separates the previously fused Primary and Case rows, Require and Receive rows, and the displaced adjusted p-values. The source spelling Instal and the printed 0.001* value for T5 Gardening are preserved.",
+        "Tables 1 through 4 and 6 through 8 retain their source row relationships and assessment-relevant values or examples."
+      ],
+      "losses": [
+        "Table 9 source row 2 is split after 'currently underweight and has'; the continuation 'been advised by his GP to increase his food intake' and its female counterpart appear as a separate Markdown row.",
+        "Table 9 source row 3 is split after 'reassessment after a serious fall and'; the continuation containing hospital treatment for delirium, chest infection, and Covid-19 and the paired female summary appear as a separate Markdown row.",
+        "Because Table 9 is evidence for underemphasis of women's health needs, these broken pairings remain assessment-relevant rather than merely presentational."
+      ],
+      "assessment": "The formula and Table 5 repairs hold against the publisher PDF, and Tables 1 through 8 are usable for text assessment. The repaired representation is not yet accepted because Table 9 still breaks two gender-swapped example pairs across false Markdown rows. Restore the three source rows with each male and female example kept in its original paired cell, then obtain independent re-review.",
+      "inspection_artifacts": [
+        {
+          "path": "generated/source-acquisition/completion-20260921/conversion-qc/oa-review/J4K3XA52-contact-sheet.jpg",
+          "sha256": "sha256:834b08110b9e4d995bf9e3fda422543dcd7dbb54a56ad3fc074af3285cab11f3",
+          "purpose": "all-page visual contact sheet; individual 90 DPI page renders in the same directory were used for formula and table inspection"
+        }
+      ]
+    }
+  ]
+}

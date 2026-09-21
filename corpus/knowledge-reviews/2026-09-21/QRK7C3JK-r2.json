@@ -1,0 +1,48 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "QRK7C3JK",
+  "knowledge_document": "research-vault/20_distillates/publications/qrk7c3jk-critical-digital-literacy-social-work-ai.md",
+  "knowledge_document_sha256": "sha256:0e55d5a17da225a9fc8d56fe6b2cfeae129279601ba2c2a273296c9691cb685a",
+  "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/3cb613d559a8c57c13c1.md",
+  "source_sha256": "sha256:93ff941db75f745dc31191edecf3339916094c0bdf8c98f5bf57f704660fe979",
+  "reviewed_at": "2026-09-21T19:19:11.616538+00:00",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "supersedes": "generated/knowledge-completion-20260921/reviews/QRK7C3JK.json",
+  "scope": "Independent source-bound follow-up review of the corrected knowledge document, including method, findings, limitations, literal quotations and controlled-category relevance. This receipt grants no human verification or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Assessment relevance",
+      "finding": "Fairness is now correctly excluded under the controlled definition. AI_Literacies, Soziale_Arbeit, Generative_KI, Prompting, Bias_Ungleichheit and Diversitaet remain supported; Gender and Feministisch remain correctly bounded."
+    },
+    {
+      "severity": "note",
+      "location": "Method, findings, quotations and visual boundary",
+      "finding": "The integrative-review method, 60-to-22 selection, three themes, bounded five-prompt teaching case and limitations remain source-accurate. All four quotations are exact. The separate visual-QC boundary remains explicit."
+    }
+  ],
+  "validated_subject": {
+    "validated_at": "2026-09-21T19:20:04.235823+00:00",
+    "validator": "/root integration; document and source hashes plus literal quotation checks",
+    "body_sha256": "sha256:726071e645bd508eef2f636c1a04718cd0ac7505a939967587bf3e655c53deab",
+    "source_metadata": {
+      "record-id": "QRK7C3JK",
+      "work-id": "work:ac777aa0-e02b-5a2e-8ddd-19dfdd0110ec",
+      "version-id": "version:c2db337e-61b4-5717-bfb5-56cd6de7d117",
+      "version-type": "version_of_record",
+      "source-representation": {
+        "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/3cb613d559a8c57c13c1.md",
+        "sha256": "sha256:93ff941db75f745dc31191edecf3339916094c0bdf8c98f5bf57f704660fe979",
+        "version-id": "version:c2db337e-61b4-5717-bfb5-56cd6de7d117",
+        "version-type": "version_of_record",
+        "source-url": "https://doi.org/10.1080/02615479.2026.2660786",
+        "is-preferred-version": true,
+        "boundary": "The preparing agent read the complete hash-bound Markdown representation and inspected publication pages 12 and 13 in the hash-verified publisher PDF. The visual-QC record is corpus/source-acquisition/QRK7C3JK-visual-qc/visual-qc.json. No separate scholarly review has occurred."
+      }
+    }
+  }
+}

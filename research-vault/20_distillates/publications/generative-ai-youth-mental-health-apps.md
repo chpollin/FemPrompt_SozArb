@@ -7,17 +7,19 @@ work-id: work:7eb826eb-db16-5ae7-8201-3339f108ae93
 version-id: version:cd86e948-9250-5850-a227-9cb0b762cd50
 version-type: version_of_record
 topics:
-  - "[[Generative AI]]"
-status: preparation
+- '[[Generative AI]]'
+status: ai-agent-reviewed
 checked:
   quote: 2026-09-21
+  validation: '2026-09-21'
+  ai-agent-review: '2026-09-21'
 created: 2026-09-21
-updated: 2026-09-21
+updated: '2026-09-21'
 prepared-by:
   agent-id: /root/knowledge_documents
   model: gpt-5.6-sol
   prepared-at: 2026-09-21
-  artifact-review-status: unreviewed
+  artifact-review-status: ai-agent-reviewed
 source-representation:
   path: generated/source-acquisition/codex-websearch-2026/markdown-clean/926800fc523bebd0420c.md
   sha256: sha256:dbf3a15387a52c3c622dbdaabfd358396a89b16c6b73db6e65f2ecf82d3f355d
@@ -26,6 +28,9 @@ source-representation:
   source-url: https://doi.org/10.2196/90589
   is-preferred-version: true
   boundary: The preparing agent read the complete hash-bound Markdown source representation and checked the quoted passages. No separate AI source review or domain-expert verification has occurred.
+source-review:
+  path: corpus/knowledge-reviews/2026-09-21/D267IQ4C-r2.json
+  sha256: sha256:5050643a5b23f9c6f8ca7795081f1b667067b8fa0ac742c5f7e9d82949e14a08
 ---
 
 # Distillate: Generative AI in Youth Mental Health Apps: Rapid Review
@@ -50,7 +55,7 @@ Chatbots and conversational interfaces were the main integration form. Included 
 
 ## Assessment relevance
 
-`Generative_KI` is central through generative conversational apps. `KI_Sonstige` and `Diversitaet` are relevant to digital mental-health access and youth populations. The review does not directly study social work, prompting or demographic fairness.
+`Generative_KI` is central through generative conversational apps. The review does not establish classic machine learning, diversity, social work, prompting or demographic fairness as substantive topics.
 
 ## Limitations
 
@@ -58,4 +63,4 @@ Only five heterogeneous studies were included, usually with small samples and sh
 
 ## Review boundary
 
-This preparation was produced by the attributed LLM agent from the complete hash-bound local source representation. The quotations were checked against that representation. The `preparation` status records an unreviewed artifact and grants no AI source-review, domain-expert verification or publication authority.
+This document was prepared from the source representation identified in its metadata. The current review state and its supporting receipt are recorded in the frontmatter. AI review does not establish domain-expert verification or publication approval.

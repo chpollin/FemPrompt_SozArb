@@ -7,18 +7,20 @@ work-id: work:55caaab5-78b3-5803-8666-2edc0743a202
 version-id: version:e8b1830e-e8cd-5ab9-8794-acbb79c01460
 version-type: preprint
 topics:
-  - "[[Agentic AI]]"
-  - "[[Prompting]]"
-status: preparation
+- '[[Agentic AI]]'
+- '[[Prompting]]'
+status: ai-agent-reviewed
 checked:
   quote: 2026-09-21
+  validation: '2026-09-21'
+  ai-agent-review: '2026-09-21'
 created: 2026-09-21
-updated: 2026-09-21
+updated: '2026-09-21'
 prepared-by:
   agent-id: /root/knowledge_documents
   model: gpt-5.6-sol
   prepared-at: 2026-09-21
-  artifact-review-status: unreviewed
+  artifact-review-status: ai-agent-reviewed
 source-representation:
   path: corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-v2-text.md
   sha256: sha256:fd64251d9eed80eca0689fe3bad5e8ea15465746be71af1e38d7f8c9bdb553d1
@@ -27,6 +29,9 @@ source-representation:
   source-url: https://arxiv.org/abs/2305.17390v2
   is-preferred-version: true
   boundary: The preparing agent read the complete local arXiv v2 text representation and checked the quoted passages. Equations and tables were available as linearised text, while source images were not independently inspected. No separate AI source review or domain-expert verification has occurred.
+source-review:
+  path: corpus/knowledge-reviews/2026-09-21/RAY6G2R7.json
+  sha256: sha256:352e8586e204301a07c62deb2c4c95fe04cf430d25cccf0af2513d9f1e8b58c7
 ---
 
 # Distillate: SwiftSage as a prompted generative agent
@@ -89,4 +94,4 @@ The empirical results support performance claims within ScienceWorld. They do no
 
 ## Review boundary
 
-This preparation was produced by the attributed LLM agent from the complete hash-bound local source representation. The quotations were checked against that representation. The `preparation` status records an unreviewed artifact and grants no AI source-review, domain-expert verification or publication authority.
+This document was prepared from the source representation identified in its metadata. The current review state and its supporting receipt are recorded in the frontmatter. AI review does not establish domain-expert verification or publication approval.

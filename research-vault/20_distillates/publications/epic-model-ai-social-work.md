@@ -6,17 +6,20 @@ record-id: AK7K4P97
 work-id: work:717e065c-570d-526f-86ae-2a24d9f03044
 version-id: version:7a2a88ab-de23-5113-aa95-aa6b39a002eb
 version-type: version_of_record
-topics: ["[[Artificial Intelligence in Social Work]]"]
-status: preparation
+topics:
+- '[[Artificial Intelligence in Social Work]]'
+status: ai-agent-reviewed
 checked:
   quote: 2026-09-21
+  validation: '2026-09-21'
+  ai-agent-review: '2026-09-21'
 created: 2026-09-21
-updated: 2026-09-21
+updated: '2026-09-21'
 prepared-by:
   agent-id: /root/knowledge_documents
   model: gpt-5.6-sol
   prepared-at: 2026-09-21
-  artifact-review-status: unreviewed
+  artifact-review-status: ai-agent-reviewed
 source-representation:
   path: generated/markdown_clean/Baker_2025_Artificial_intelligence_in_social_work_An_EPIC.md
   sha256: sha256:f49c7419289238b9d1e01a8547e2f1181b34ea9d02537a37f2c4eebd7202c99e
@@ -25,6 +28,9 @@ source-representation:
   source-url: https://www.tandfonline.com/doi/full/10.1080/0312407X.2025.2488345
   is-preferred-version: true
   boundary: Complete source read; quotes checked. No separate scholarly review.
+source-review:
+  path: corpus/knowledge-reviews/2026-09-21/AK7K4P97-authority.json
+  sha256: sha256:d99a912bf92bb013cc3e81e6ae48bd569d90af6f22b8b0f80a21b34506645fd0
 ---
 
 # Distillate: Artificial intelligence in social work: An EPIC model for practice
@@ -53,5 +59,4 @@ The conceptual model requires empirical implementation research with practitione
 
 ## Review boundary
 
-This LLM preparation uses the complete hash-bound source. It remains unreviewed and carries no scholarly-review authority.
-
+This document was prepared from the source representation identified in its metadata. The current review state and its supporting receipt are recorded in the frontmatter. AI review does not establish domain-expert verification or publication approval.

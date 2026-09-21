@@ -7,18 +7,20 @@ work-id: work:ca3ae89d-5ddd-5036-a44d-165c58097219
 version-id: version:16b6e46e-829c-5531-b8cd-967ddca17abe
 version-type: version_of_record
 topics:
-  - "[[Artificial Intelligence]]"
-  - "[[Fairness]]"
-status: preparation
+- '[[Artificial Intelligence]]'
+- '[[Fairness]]'
+status: ai-agent-reviewed
 checked:
   quote: 2026-09-21
+  validation: '2026-09-21'
+  ai-agent-review: '2026-09-21'
 created: 2026-09-21
-updated: 2026-09-21
+updated: '2026-09-21'
 prepared-by:
   agent-id: /root/prism_assessment
   model: gpt-5.6-sol
   prepared-at: 2026-09-21
-  artifact-review-status: unreviewed
+  artifact-review-status: ai-agent-reviewed
 source-representation:
   path: generated/source-acquisition/codex-websearch-2026/markdown-clean/1e429407d9b091311a65.md
   sha256: sha256:b3d2bf83c7c3404322c30d5e811e27ac80fb7ccfb560fd348e92f9fdd5efdd77
@@ -26,6 +28,9 @@ source-representation:
   version-type: version_of_record
   is-preferred-version: true
   boundary: The preparing agent read the complete hash-bound local text. Linearised tables were available; figures were not independently inspected. Source identity review does not constitute review of this distillate.
+source-review:
+  path: corpus/knowledge-reviews/2026-09-21/RH8MC67Z-r2.json
+  sha256: sha256:33c54c80a55ef0b4cb2c9520520249068a89e4218a10d68ec23ce7f08156793e
 ---
 
 # Distillate: GPT-5 sociodemographic bias and adversarial hallucinations
@@ -44,7 +49,7 @@ A snapshot experiment tested identical clinical vignettes with 31 sociodemograph
 
 ## Assessment relevance
 
-The paper provides substantive evidence for `Generative_KI`, `Prompting`, `Bias_Ungleichheit`, `Diversitaet`, `Fairness`. Categories outside this list are not established by the study. Category relevance records subject matter and does not decide inclusion.
+The paper provides substantive evidence for `Generative_KI`, `Prompting`, `Bias_Ungleichheit`, `Diversitaet`, `Fairness` and `Gender`. Gender is an experimental variable rather than incidental demographic reporting. The labels include transgender women and intersectional Black transgender women, and the study analyses resulting differences in recommendations. Categories outside this list are not established by the study. Category relevance records subject matter and does not decide inclusion.
 
 ## Limitations
 
@@ -52,4 +57,4 @@ The evaluation is a time-bound model snapshot. Subgroup differences are descript
 
 ## Review boundary
 
-This preparation is source-bound and unreviewed. It grants no separate AI source-review, human verification, scientific acceptance or publication authority.
+This document was prepared from the source representation identified in its metadata. The current review state and its supporting receipt are recorded in the frontmatter. AI review does not establish domain-expert verification or publication approval.

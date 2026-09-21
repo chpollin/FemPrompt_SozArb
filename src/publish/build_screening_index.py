@@ -32,13 +32,17 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 DOCS = ROOT / "docs"
 DATA_IN = DOCS / "data" / "research_vault_v2.json"
 INDEX_OUT = DOCS / "data" / "fulltext_index.json"
 
 FRONTMATTER_RE = re.compile(r"^---\s*\n.*?\n---\s*\n", re.DOTALL)
 # embedded yaml blocks (the note repeats a frontmatter inside "## Full Text")
-EMBEDDED_YAML_RE = re.compile(r"\n---\s*\n(?:[^\n]*:[^\n]*\n|\s*\n|- [^\n]*\n)+?---\s*\n")
+EMBEDDED_YAML_RE = re.compile(
+    r"\n---\s*\n(?:[^\n]*:[^\n]*\n|\s*\n|- [^\n]*\n)+?---\s*\n"
+)
 HTML_COMMENT_RE = re.compile(r"<!--.*?-->", re.DOTALL)
 WIKILINK_RE = re.compile(r"\[\[([^\]|]+)\|([^\]]+)\]\]")
 WIKILINK2_RE = re.compile(r"\[\[([^\]]+)\]\]")
@@ -65,6 +69,8 @@ def to_plain(md: str) -> str:
 
 
 def main() -> int:
+    from src.file_hashing import filesystem_path
+
     if not DATA_IN.exists():
         print(f"ERROR: {DATA_IN} not found", file=sys.stderr)
         return 1
@@ -82,7 +88,7 @@ def main() -> int:
         text = ""
         src = "none"
         if kd:
-            fp = DOCS / kd
+            fp = filesystem_path(DOCS / kd)
             if fp.exists():
                 text = to_plain(fp.read_text(encoding="utf-8", errors="replace"))
                 src = "kd"
@@ -117,7 +123,9 @@ def main() -> int:
         },
         "papers": out,
     }
-    INDEX_OUT.write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    INDEX_OUT.write_text(
+        json.dumps(payload, ensure_ascii=False, separators=(",", ":")), encoding="utf-8"
+    )
     size_kb = INDEX_OUT.stat().st_size / 1024
     print(f"Wrote {INDEX_OUT.relative_to(ROOT)}")
     print(f"  papers: {len(out)}  (kd={n_kd}, abstract={n_abs}, none={n_none})")

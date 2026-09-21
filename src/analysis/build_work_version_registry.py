@@ -862,8 +862,12 @@ def apply_source_bindings(repo: Path, registry: dict, contract: dict) -> list[Pa
                     if identity.get("arxiv")
                     else normalise_doi(identity["doi"])
                 )
+            identifier_pattern = re.escape(identifier)
+            if identity.get("doi") and not identity.get("arxiv"):
+                # Docling can insert spaces around the printed DOI separator.
+                identifier_pattern = identifier_pattern.replace("/", r"\s*/\s*")
             if not re.search(
-                r"(?<![\w.])" + re.escape(identifier) + r"(?![\w.])",
+                r"(?<![\w.])" + identifier_pattern + r"(?![\w.])",
                 quotes,
                 re.IGNORECASE,
             ):

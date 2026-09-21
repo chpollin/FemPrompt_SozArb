@@ -1,0 +1,32 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "FR8Z2998",
+  "knowledge_document": "research-vault/20_distillates/publications/patient-bias-llm-health-consultations.md",
+  "knowledge_document_sha256": "sha256:2157ba91cdb6654099d8d13dea6d9e49428d6230c383bde602aa2e83c28768d9",
+  "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/aff73b4c6b2eab31b8f7.md",
+  "source_sha256": "sha256:401ad82df917c2ba9ae1e22a0cb706c9f2b6460e3c82f1d8a6a8cf1333988239",
+  "reviewed_at": "2026-09-21T19:01:14.736933Z",
+  "reviewer": {
+    "agent_id": "/root/source_completion",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "changes_requested",
+  "scope": "Independent full-text, source-bound review of statements, method, category relevance, quotations and conversion limits. This receipt grants no human verification, screening-state change, domain-expert verification or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Core statements; Research question and method",
+      "finding": "Both quotations resolve. The source supports six models, 1,273 MedQA-USMLE cases, three-round consultations, three prompting interventions, four temperatures and the dual-system comparison. The statements about biased-error alignment and partial performance recovery are properly bounded to the simulation."
+    },
+    {
+      "severity": "error",
+      "location": "Assessment relevance",
+      "finding": "Bias_Ungleichheit and Fairness are unsupported under assessment/categories.yaml. The paper studies patient cognitive framing and diagnostic reliability, explicitly distinct from demographic or structural inequality; it does not evaluate algorithmic fairness. Keep Generative_KI and Prompting, and remove Bias_Ungleichheit and Fairness. The current sentence acknowledging cognitive rather than demographic bias conflicts with calling those categories central."
+    },
+    {
+      "severity": "note",
+      "location": "Limitations; conversion boundary",
+      "finding": "The simulation, model, dialogue and deployment-safety limits are accurate. Numeric results are available in linearised prose and tables; figure captions corroborate conditions, while no reviewed claim requires interpreting an uninspected plot."
+    }
+  ]
+}

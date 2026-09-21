@@ -1,0 +1,52 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "T57U8T2K",
+  "knowledge_document": "research-vault/20_distillates/publications/persistent-outgroup-bias-personas.md",
+  "knowledge_document_sha256": "sha256:beea5f86fd2c1b3a4aa6817ae7fcfa2d63d7b68c0f0cfb2c1caf96dab30818ef",
+  "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/f403809ad4503150093a.md",
+  "source_sha256": "sha256:452e783653dedcb51fbc1fe1c2966f6804a613d5846e5720844e0d6bd77ea192",
+  "reviewed_at": "2026-09-21T19:01:14.737933Z",
+  "reviewer": {
+    "agent_id": "/root/source_completion",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Independent full-text, source-bound review of statements, method, category relevance, quotations and conversion limits. This receipt grants no human verification, screening-state change, domain-expert verification or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Core statements; Research question and method",
+      "finding": "Both quotations resolve. The source supports persona-induced ingroup favouritism and outgroup bias, Likert-anchored political and gender experiments, and reassignment to the initially disfavoured identity as a tested prompt-level mitigation."
+    },
+    {
+      "severity": "note",
+      "location": "Assessment relevance",
+      "finding": "Generative_KI, Prompting, Bias_Ungleichheit, Gender and Fairness are grounded in the explicit persona manipulation, measured group bias and debiasing comparison. Diversitaet is bounded to intergroup treatment, while the document correctly excludes Soziale_Arbeit."
+    },
+    {
+      "severity": "note",
+      "location": "Limitations; conversion boundary",
+      "finding": "The political/gender, English, United States, selected-model and binary-group limits agree with the source. Figures are not needed for the qualitative claims because the relevant effects and statistics are also reported in prose and linearised tables."
+    }
+  ],
+  "validated_subject": {
+    "validated_at": "2026-09-21T19:05:56.055895+00:00",
+    "validator": "/root integration; document and source hashes plus literal quotation checks",
+    "body_sha256": "sha256:5a92719af363ebb9e0847957d6f80d934aa90e9877d3a395fa3fd69e2588092f",
+    "source_metadata": {
+      "record-id": "T57U8T2K",
+      "work-id": "work:6eab81e9-e9ba-57eb-abc0-6c00d7061314",
+      "version-id": "version:7e635266-bdb5-5f56-b3a4-b3ac24907c1b",
+      "version-type": "version_of_record",
+      "source-representation": {
+        "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/f403809ad4503150093a.md",
+        "sha256": "sha256:452e783653dedcb51fbc1fe1c2966f6804a613d5846e5720844e0d6bd77ea192",
+        "version-id": "version:7e635266-bdb5-5f56-b3a4-b3ac24907c1b",
+        "version-type": "version_of_record",
+        "source-url": "https://aclanthology.org/2026.lrec-1.217/",
+        "is-preferred-version": true,
+        "boundary": "The preparing agent read the complete hash-bound ACL proceedings Markdown representation and checked the quoted passages. No separate scholarly review has occurred."
+      }
+    }
+  }
+}

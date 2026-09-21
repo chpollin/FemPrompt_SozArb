@@ -1,0 +1,51 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "K7NW3W34",
+  "knowledge_document": "research-vault/20_distillates/publications/k7nw3w34-ai-assisted-social-work-recording.md",
+  "knowledge_document_sha256": "sha256:e76e75c5a4f1bdfb42d16c699a359a94d53dff64661d74109bbeb7ed2b27bf05",
+  "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/e9fb8b7679eaf1023485.md",
+  "source_sha256": "sha256:4dbc41e4a458cf82e1784ad5190b2a6b211a63488e2c0aaa557b67304aca5737",
+  "reviewed_at": "2026-09-21T19:11:30.014569Z",
+  "reviewer": {
+    "agent_id": "/root/source_completion",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Independent follow-up review of the corrected category assessment and the complete artifact difference against the unchanged hash-bound source. This receipt grants no human verification, screening-state change, promotion or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Assessment relevance",
+      "finding": "The corrected paragraph now supports Bias_Ungleichheit with the source’s discussion of ingrained discriminatory narratives, structural inequalities, algorithmic bias, unequal access, equity and inclusion. It correctly removes Fairness because the study does not evaluate a fairness metric, fair-ML system or debiasing method. Diversitaet remains supported by the substantive treatment of neurodivergent practitioners, differential access and inclusion."
+    },
+    {
+      "severity": "note",
+      "location": "Whole-document difference",
+      "finding": "Beyond the category paragraph, the correction removes the Fairness topic link and revises the review-boundary wording. Those edits are consistent with the corrected category finding and preserve the preparation, domain-review and publication boundaries. The remaining substantive content and quotation are unchanged from the prior reviewed artifact."
+    },
+    {
+      "severity": "note",
+      "location": "Source binding",
+      "finding": "The source artifact still matches the prior reviewed SHA-256. The method, sample, findings and conversion-limit statements remain source-supported."
+    }
+  ],
+  "validated_subject": {
+    "validated_at": "2026-09-21T19:11:58.875905+00:00",
+    "validator": "/root integration; document and source hashes plus literal quotation checks",
+    "body_sha256": "sha256:c3c0ae6657b11b2b89462fe65547b8da7d9727e406253439376db5644e28ee78",
+    "source_metadata": {
+      "record-id": "K7NW3W34",
+      "work-id": "work:677ea395-cc39-50b4-9979-496e0f17665d",
+      "version-id": "version:17e4bb2a-0324-58ef-97f3-0cc9cd352ab5",
+      "version-type": "version_of_record",
+      "source-representation": {
+        "path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/e9fb8b7679eaf1023485.md",
+        "sha256": "sha256:4dbc41e4a458cf82e1784ad5190b2a6b211a63488e2c0aaa557b67304aca5737",
+        "version-id": "version:17e4bb2a-0324-58ef-97f3-0cc9cd352ab5",
+        "version-type": "version_of_record",
+        "is-preferred-version": true,
+        "boundary": "The preparing agent read the complete hash-bound local text. Linearised tables were available; figures were not independently inspected. Source identity review does not constitute review of this distillate."
+      }
+    }
+  }
+}

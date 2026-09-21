@@ -58,7 +58,13 @@ Generation comprises four controlled operations.
 
 Prompt version, LLM, input text, output path and review result belong to the provenance of a distillation. In PRISM an LLM-Wissensdestillat remains a reference layer of its own. It does not satisfy the Paper-evidence gate of the screening annotation.
 
-A publication preparation records both the bibliographic Version and the hash-bound source representation. An Accepted Manuscript may therefore support a document whose citation identifies the Version of Record. The publisher checks this relationship against the canonical source binding and exposes the preparation status in PRISM. Historical document recoveries retain their unreviewed authority and bind the existing document to its verified reading source.
+A publication preparation records both the bibliographic Version and the hash-bound source representation. An Accepted Manuscript may therefore support a document whose citation identifies the Version of Record. The publisher checks this relationship against the canonical source binding and exposes the preparation status in PRISM. Historical document recoveries retain their unreviewed authority and bind the existing document to its verified reading source. The recovery manifest declares its text-hash contract. Its canonical form normalises CRLF to LF, preserves previous byte-exact hashes as migration evidence and grants no additional review authority.
+
+A newly reviewed preparation carries a `source-review` reference to an immutable receipt under `corpus/knowledge-reviews/`. The receipt identifies a separate reviewing agent, its actual review time and findings, the reviewed document and the source hash. Integration checks preserve the reviewed body and source metadata while allowing the recorded review state to advance. The validator rejects changed content, changed sources, altered receipts and future review timestamps. Earlier negative receipts remain available beside a later accepted revision. The [historical authority baseline](../corpus/knowledge-reviews/historical-authority-baseline.json) preserves only the exact unchanged documents that carried review authority before this contract. Any change to those documents requires a current receipt, and the baseline grants no new source review.
+
+The literature-readiness inventory also joins recorded conversion checks by exact source path and hash. Readable text without such a check remains an explicit fidelity gap. A failed conversion check records the missing formulas, tables or figures and remains separate from the knowledge-document review.
+
+A knowledge-document review has artifact-local authority. It does not accept an earlier screening decision, resolve a Work-level hold, establish the fidelity of uninspected source figures or grant domain-expert verification.
 
 ## Assertions
 

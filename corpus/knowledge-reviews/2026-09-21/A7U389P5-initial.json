@@ -1,0 +1,32 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "A7U389P5",
+  "knowledge_document": "research-vault/20_distillates/publications/a7u389p5-medical-bias-prompt-engineering.md",
+  "knowledge_document_sha256": "sha256:cfed6e7846c83177f8b853eb385373553a60698e8cbe17c9d702ea46d362833a",
+  "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/136b6db72d8a7b8d390c.md",
+  "source_sha256": "sha256:e7ddd2f304de117bc74a28cf164a7793a53d9b956a484ae11d07a845efed57da",
+  "reviewed_at": "2026-09-21T18:15:52.299973Z",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "changes_requested",
+  "scope": "Independent source-bound review of identity, research question, method, findings, limitations, quotations and category relevance. This receipt grants no human verification or publication authority.",
+  "findings": [
+    {
+      "severity": "material",
+      "location": "Core statements",
+      "finding": "The sole quotation, “effectiveness and trade-offs,” is a title fragment and does not substantiate the stated empirical finding that effects depend on model, strategy and wording. Replace or supplement it with exact result passages, including Finding 3 or the conclusion."
+    },
+    {
+      "severity": "material",
+      "location": "Method and scope",
+      "finding": "The method summary omits the five evaluated models, AMQA counterfactual variants and the four prompting strategies plus baseline. These details are needed to assess the breadth of the claim and are explicit in the bound source."
+    },
+    {
+      "severity": "note",
+      "location": "Assessment relevance; Limitations",
+      "finding": "Generative_KI, Prompting, Bias_Ungleichheit, Gender, Diversitaet and Fairness are supported. The benchmark and generalizability limits agree with the source."
+    }
+  ]
+}

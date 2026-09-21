@@ -1,0 +1,29 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "AMYZFAPH",
+  "knowledge_document": "research-vault/20_distillates/publications/completion-amyzfaph-generative-ai-social-work-research.md",
+  "knowledge_document_sha256": "sha256:eababe16bc50ccbe4d19b4017643d833f9b781dbd45a97c7679431a5734d8ace",
+  "source_path": "generated/markdown_clean/Victor_2023_Recommendations_for_social_work_researchers_and.md",
+  "source_sha256": "sha256:faee9d1c7150bfe9d53dbfc620c2237d70e32fe737a2fdaa4e7116a3e6ac7225",
+  "conversion_qc_path": "generated/source-acquisition/completion-20260921/conversion-qc/conversion-qc.json",
+  "conversion_qc_sha256": "sha256:72936d4a095ef40a2040ce27d71590b0b75f26dfbaf6554e43a0c05035546749",
+  "reviewed_at": "2026-09-21T18:51:06.806576Z",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "changes_requested",
+  "scope": "Independent source-bound review of identity, research question, method, findings, limitations, literal quotations, category relevance and documented conversion boundaries. This receipt grants no human verification, conversion repair or publication authority.",
+  "findings": [
+    {
+      "severity": "material",
+      "location": "Assessment relevance, Fairness",
+      "finding": "The article substantively discusses model and training-data bias, discriminatory outcomes and harms to marginalised groups, which supports Bias_Ungleichheit. It does not analyse algorithmic-fairness criteria, fair-ML systems or fairness metrics as required by the Fairness category definition. Remove Fairness or identify direct source evidence that makes algorithmic fairness a substantive topic."
+    },
+    {
+      "severity": "note",
+      "location": "Research question and method; Main findings; Limitations; Quotations",
+      "finding": "The conceptual and normative design, disruptive/disrupting framing, selective policy review, accountability recommendations and limitations agree with the complete source. All four quotations resolve exactly. Conversion QC accepts the representation for text assessment and records only ligature, spacing and page-layout losses."
+    }
+  ]
+}

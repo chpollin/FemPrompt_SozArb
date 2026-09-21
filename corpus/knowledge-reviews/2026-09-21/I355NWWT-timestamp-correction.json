@@ -1,0 +1,32 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "I355NWWT",
+  "knowledge_document": "research-vault/20_distillates/publications/generative-ai-social-debt-counselling.md",
+  "knowledge_document_sha256": "sha256:599b6d6bac30f214527cdc71d6e0a8959ac8c0ed2c062de1cf3a0622baf50ea8",
+  "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/2b57266b9d8b015d2ac2.md",
+  "source_sha256": "sha256:6bbcd7269af590ab46faeb1ddf489cc33bfde18f3799ece52b7ec3074f74ffbb",
+  "reviewed_at": "2026-09-21T18:39:49.746502Z",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "changes_requested",
+  "scope": "Independent source-bound review of identity, research question, method, findings, limitations, quotations and category relevance. This receipt grants no human verification or publication authority.",
+  "findings": [
+    {
+      "severity": "material",
+      "location": "Opening summary; Research question and method; Main findings",
+      "finding": "The document presents chatbot support conditions and rejection of a uniform chatbot format as empirical findings. The source states that no chatbot-specific data were collected because AI use was not yet widespread at the time. Recast the empirical basis as broader digital social and debt counselling, and label chatbot claims as transfer or outlook arguments."
+    },
+    {
+      "severity": "note",
+      "location": "Assessment relevance; Limitations",
+      "finding": "Soziale_Arbeit and the professional training and participation discussion support the stated practice and AI_Literacies relevance. The document correctly avoids claims of demonstrated chatbot effectiveness, but that limitation does not repair the empirical overstatement."
+    }
+  ],
+  "supersedes": "generated/knowledge-completion-20260921/reviews/I355NWWT.json",
+  "timestamp_correction": {
+    "reason": "The superseded receipt used a manually assigned future UTC timestamp rather than the observed UTC clock at persistence time.",
+    "scope": "Timestamp correction only. The reviewed artifact hashes, result, scope and findings are preserved verbatim."
+  }
+}

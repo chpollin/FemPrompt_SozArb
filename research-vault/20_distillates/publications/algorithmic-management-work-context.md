@@ -7,17 +7,19 @@ work-id: work:691469f6-881f-5e13-8df5-69dc64025556
 version-id: version:7b302d9d-e176-554e-a8aa-5e02f7334833
 version-type: version_of_record
 topics:
-  - "[[Artificial Intelligence]]"
-status: preparation
+- '[[Artificial Intelligence]]'
+status: ai-agent-reviewed
 checked:
   quote: 2026-09-21
+  validation: '2026-09-21'
+  ai-agent-review: '2026-09-21'
 created: 2026-09-21
-updated: 2026-09-21
+updated: '2026-09-21'
 prepared-by:
   agent-id: /root/knowledge_documents
   model: gpt-5.6-sol
   prepared-at: 2026-09-21
-  artifact-review-status: unreviewed
+  artifact-review-status: ai-agent-reviewed
 source-representation:
   path: generated/markdown_clean/4ZL5Q48E.md
   sha256: sha256:2037703b31fda721dcb4e76a841e326b3e636982d8da08fbbb5b55b2bd22299d
@@ -26,6 +28,9 @@ source-representation:
   source-url: https://doi.org/10.1177/20539517211020332
   is-preferred-version: true
   boundary: The preparing agent read the complete hash-bound Markdown source representation and checked the quoted passages. No separate AI source review or domain-expert verification has occurred.
+source-review:
+  path: corpus/knowledge-reviews/2026-09-21/4ZL5Q48E-authority.json
+  sha256: sha256:fbc6ffa5253b223ae23a584b1019d877655430b02bef6e00c18af1193e9bfbb2
 ---
 
 # Distillate: Algorithmic management in a work context
@@ -58,4 +63,4 @@ The paper develops a conceptual agenda and does not estimate prevalence, causal 
 
 ## Review boundary
 
-This preparation was produced by the attributed LLM agent from the complete hash-bound local source representation. The quotations were checked against that representation. The `preparation` status records an unreviewed artifact and grants no AI source-review, domain-expert verification or publication authority.
+This document was prepared from the source representation identified in its metadata. The current review state and its supporting receipt are recorded in the frontmatter. AI review does not establish domain-expert verification or publication approval.

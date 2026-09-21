@@ -1,0 +1,49 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "QI5AYE4V",
+  "knowledge_document": "research-vault/20_distillates/publications/completion-qi5aye4v-algorithmic-decision-making-pedagogy.md",
+  "knowledge_document_sha256": "sha256:36c4174ca5edf9c411b344d3b36079fcedb3243a3cf8ff35091b007dfa729908",
+  "source_path": "generated/markdown_clean/James_2023_Algorithmic_decision-making_in_social_work.md",
+  "source_sha256": "sha256:0eaf52a70efb9579f2b1b8bf5df9e674cf57690b8e3f78c654d2bfea232ea95a",
+  "conversion_qc_path": "generated/source-acquisition/completion-20260921/conversion-qc/conversion-qc.json",
+  "conversion_qc_sha256": "sha256:72936d4a095ef40a2040ce27d71590b0b75f26dfbaf6554e43a0c05035546749",
+  "reviewed_at": "2026-09-21T18:51:06.811079Z",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Independent source-bound review of identity, research question, method, findings, limitations, literal quotations, category relevance and documented conversion boundaries. This receipt grants no human verification, conversion repair or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Research question and method; Main findings; Limitations; Quotations",
+      "finding": "The conceptual competency/critique argument, paired tensions, selected case method, technical-critical pedagogy and limits of case-based illustration agree with the complete source. All three displayed quotations resolve exactly, and the unquoted pedagogy claim is directly supported by the case-study and education sections."
+    },
+    {
+      "severity": "note",
+      "location": "Assessment relevance",
+      "finding": "KI_Sonstige, Soziale_Arbeit, AI_Literacies, Bias_Ungleichheit, Diversitaet and Fairness are supported by the algorithmic-decision and pedagogical focus. Gender and feminism are correctly withheld as independent categories. Conversion QC accepts the substantive text and identifies only interleaved publisher matter and non-substantive visual losses."
+    }
+  ],
+  "validated_subject": {
+    "validated_at": "2026-09-21T18:54:58.293247+00:00",
+    "validator": "/root integration; document and source hashes plus literal quotation checks",
+    "body_sha256": "sha256:347f02be16be9c6542ccf44cd36cc64a055a0e13dca9754b857bbd669583389a",
+    "source_metadata": {
+      "record-id": "QI5AYE4V",
+      "work-id": "work:5f49f95b-dcfe-5778-8376-a313cb039d4d",
+      "version-id": "version:2e650cfc-0147-5778-ab55-ed2e17a4f86b",
+      "version-type": "version_of_record",
+      "source-representation": {
+        "path": "generated/markdown_clean/James_2023_Algorithmic_decision-making_in_social_work.md",
+        "sha256": "sha256:0eaf52a70efb9579f2b1b8bf5df9e674cf57690b8e3f78c654d2bfea232ea95a",
+        "version-id": "version:2e650cfc-0147-5778-ab55-ed2e17a4f86b",
+        "version-type": "version_of_record",
+        "source-url": "https://doi.org/10.1080/02615479.2023.2195425",
+        "is-preferred-version": true,
+        "boundary": "The preparing agent read the complete hash-bound Docling conversion. Its text and linearised cases were available, while figures and visual page layout were not independently inspected. The source hash follows the repository artifact_hash contract, which normalises CRLF to LF for text files."
+      }
+    }
+  }
+}

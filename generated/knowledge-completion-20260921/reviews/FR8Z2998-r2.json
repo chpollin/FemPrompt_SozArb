@@ -1,0 +1,32 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "FR8Z2998",
+  "knowledge_document": "research-vault/20_distillates/publications/patient-bias-llm-health-consultations.md",
+  "knowledge_document_sha256": "sha256:00e9a1b28dec19d0cd3a686df76d034f93e5bd36f59a50b3e9771bb4be9d1655",
+  "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/aff73b4c6b2eab31b8f7.md",
+  "source_sha256": "sha256:401ad82df917c2ba9ae1e22a0cb706c9f2b6460e3c82f1d8a6a8cf1333988239",
+  "reviewed_at": "2026-09-21T19:11:30.025567Z",
+  "reviewer": {
+    "agent_id": "/root/source_completion",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Independent follow-up review of the corrected category assessment and the complete artifact difference against the unchanged hash-bound source. This receipt grants no human verification, screening-state change, promotion or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Assessment relevance",
+      "finding": "The corrected paragraph retains Generative_KI and Prompting and now clearly distinguishes patient cognitive framing from demographic or structural inequality. Removing Bias_Ungleichheit and Fairness follows categories.yaml because the study neither examines protected-group inequality nor evaluates algorithmic-fairness methods."
+    },
+    {
+      "severity": "note",
+      "location": "Whole-document difference",
+      "finding": "The substantive correction is confined to Assessment relevance. The review-boundary wording was also revised but preserves the preparation, domain-review and publication limits. The remaining claims, method, findings, quotations and limitations are unchanged from the prior reviewed artifact."
+    },
+    {
+      "severity": "note",
+      "location": "Source binding",
+      "finding": "The source artifact still matches the prior reviewed SHA-256. The six-model simulation, prompt interventions, temperature comparison, dual-system evaluation and bounded conclusions remain source-supported."
+    }
+  ]
+}

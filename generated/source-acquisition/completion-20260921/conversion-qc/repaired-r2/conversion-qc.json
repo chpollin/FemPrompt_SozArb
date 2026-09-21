@@ -1,0 +1,51 @@
+{
+  "schema": "femprompt-conversion-qc/0.1",
+  "created_at": "2026-09-21T19:06:21.132498+00:00",
+  "scope": "Independent visual and textual follow-up review of the immutable SHJQQTI6 repair r2. This QC grants no scientific acceptance, screening decision, registry authority, or publication authority.",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "method": [
+    "Re-inspected the original rendered PDF pages 3 and 4 and compared them with the r2 repair at the two changed locations.",
+    "Verified that all other r2 bytes are identical to the previously reviewed repair and retained the earlier page-by-page checks of equations (1) through (9), the unnumbered multiaccuracy constraint, Figures 1 through 3, and all 13 Table 1 rows.",
+    "Computed the PDF, r2 Markdown, repair-manifest, and page-image hashes with the canonical artifact_hash contract."
+  ],
+  "records": [
+    {
+      "record_id": "SHJQQTI6",
+      "pdf_path": "generated/pdfs/completion-20260921/SHJQQTI6-ijcai-2023-0742.pdf",
+      "pdf_sha256": "sha256:a9ad4b0eb784fa77ff163f84cf533669fa0ef980cc4a9aae79dcaf8b8b9d6bd0",
+      "markdown_path": "corpus/source-acquisition/completion-20260921/SHJQQTI6-repaired-r2.md",
+      "markdown_sha256": "sha256:8c403b18ea3c34527d91283ef549554121cadce8c9b9b40b8fe8786b8dc7663b",
+      "repair_manifest_path": "generated/source-acquisition/completion-20260921/conversion-qc/SHJQQTI6-repair-manifest.json",
+      "repair_manifest_sha256": "sha256:92ac9ce2d504c8d1ef34e84451cc1de75aa9a18cc87cf8430d921dc85a525169",
+      "supersedes_qc_path": "generated/source-acquisition/completion-20260921/conversion-qc/repaired/conversion-qc.json",
+      "supersedes_qc_sha256": "sha256:8b009eb3dd9802566fa2eefb5c3f3ba8ec4888c623aafd48bf38461447173491",
+      "pages_total": 9,
+      "pages_visually_inspected": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7
+      ],
+      "result": "accepted_for_text_assessment",
+      "structure": {
+        "headings": "Article headings and reading order remain unchanged.",
+        "tables": "All 13 Table 1 rows retain the values independently checked against original page 7.",
+        "figures": "Figures 1 and 2 retain their checked memberships and taxonomy. Figure 3 retains the correct nesting and complexity relation while r2 removes the unnecessary geometric direction claim.",
+        "formulas": "Equations (1) through (9) and the unnumbered multiaccuracy constraint retain the expressions independently checked against pages 2 through 5. The prose after Equation (7) now restores the original condition s ≠ s′."
+      },
+      "correction_to_previous_qc": "The prior QC incorrectly described the original Figure 3 arrow as lower-left toward upper-right. Direct re-inspection shows the red arrow runs from upper-left toward lower-right. Repair r2 makes no geometric direction claim and accurately preserves the labelled relation that complexity increases from multiaccuracy toward full multicalibration.",
+      "limits": [
+        "Text descriptions preserve inspected semantic content but do not reproduce figure layout or color encoding.",
+        "Existing OCR and spacing defects elsewhere in the unchanged Docling body remain.",
+        "The mathematical transcription has been independently compared visually but has not received specialist mathematical copy-editing.",
+        "Acceptance is limited to use as a text-assessment representation and does not establish scholarly verification."
+      ],
+      "assessment": "The two defects recorded in the earlier QC are resolved. The r2 representation is accepted for text assessment within the stated visual and copy-editing limits."
+    }
+  ]
+}

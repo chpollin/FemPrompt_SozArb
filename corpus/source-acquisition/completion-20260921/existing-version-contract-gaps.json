@@ -1,0 +1,41 @@
+{
+  "schema": "femprompt-existing-version-contract-gaps/0.1",
+  "observed_at": "2026-09-21T18:40:35.618313+00:00",
+  "contract": "src/analysis/work_versions.py::validate_source_version_identity",
+  "rule": "An existing-version source identity requires a registered DOI, an exact registered arXiv revision, or a registered NBER working-paper number.",
+  "records": [
+    {
+      "record_id": "XCS4YCQH",
+      "registered_version_id": "version:406f4328-7ff9-5fba-b0c2-90845db5a5d7",
+      "observed_identifier": "https://data.europa.eu/doi/10.2760/38842",
+      "identifier_registration": "URL only",
+      "disposition": "do_not_bind",
+      "reason": "The builder may not infer a DOI identity from a generic registered URL."
+    },
+    {
+      "record_id": "7QQV7R9S",
+      "registered_version_id": "version:89e4e84f-7a62-5bc0-847d-d28b3a6a0d56",
+      "observed_identifier": "https://basw.co.uk/articles/looking-future-social-work-and-artificial-intelligence",
+      "identifier_registration": "URL only",
+      "disposition": "do_not_bind",
+      "reason": "The registered Version has no DOI, exact arXiv revision, or NBER report number."
+    },
+    {
+      "record_id": "QFPTW4VL",
+      "registered_version_id": "version:66dcd8c4-c9aa-59aa-a8fd-9f78fcc423b6",
+      "observed_identifier": "https://www.edps.europa.eu/data-protection/our-work/publications/techdispatch/2023-09-20-techdispatch-human-oversight-automated-decision-making_en",
+      "identifier_registration": "URL only",
+      "disposition": "do_not_bind",
+      "reason": "The registered Version has no DOI, exact arXiv revision, or NBER report number."
+    },
+    {
+      "record_id": "5T55I5Z7",
+      "registered_version_id": "version:09999996-2035-5d96-8058-aa9bb3c2b668",
+      "preferred_version_id": "version:961c964f-d2ae-5131-a0d2-a9529c52d980",
+      "observed_identifier": "unesdoc.unesco.org/in/rest/annotationSVC/DownloadWatermarkedAttachment/attach_import_ab07646d-c784-4a4e-96a1-3be7855b6f76?_=374174eng.pdf&to=54&from=1",
+      "identifier_registration": "URL only",
+      "disposition": "do_not_bind",
+      "reason": "The record Version has no eligible pinned identifier and is not the preferred Version."
+    }
+  ]
+}

@@ -121,3 +121,18 @@ generated/literature-readiness.csv
 
 # Keep complete publisher captures local; only minimal metadata evidence is versioned.
 corpus/source-acquisition/acl-publisher-bindings-2026-09-21/*.html
+
+# Original converter outputs and inspection renders remain local. Reviewed source
+# representations retain their own attribution and rights metadata under corpus/.
+generated/source-acquisition/completion-20260921/oa-markdown/
+generated/source-acquisition/completion-20260921/docling/
+generated/source-acquisition/completion-20260921/conversion-qc/*.jpg
+generated/source-acquisition/completion-20260921/conversion-qc/**/*.jpg
+generated/source-acquisition/completion-20260921/conversion-qc/**/*.png
+generated/source-acquisition/completion-20260921/conversion-qc/*.png
+generated/source-acquisition/completion-20260921/conversion-qc/*-layout.txt
+corpus/source-acquisition/completion-20260921/SHJQQTI6.md
+corpus/source-acquisition/completion-20260921/SHJQQTI6-repaired.md
+corpus/source-acquisition/completion-20260921/SHJQQTI6-repaired-r2.md
+corpus/source-acquisition/completion-20260921/*.publisher.html
+corpus/source-acquisition/completion-20260921/J4K3XA52-repaired.md

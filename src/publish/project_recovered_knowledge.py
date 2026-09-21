@@ -7,9 +7,12 @@ import json
 from pathlib import Path
 from typing import Any
 
+from src.file_hashing import canonical_file_bytes
 
-def _sha256(path: Path) -> str:
-    return "sha256:" + hashlib.sha256(path.read_bytes()).hexdigest()
+
+def _sha256(path: Path, canonical: bool = False) -> str:
+    data = canonical_file_bytes(path) if canonical else path.read_bytes()
+    return "sha256:" + hashlib.sha256(data).hexdigest()
 
 
 def _bibliographic_record(registry: dict[str, Any], record_id: str) -> dict[str, Any]:
@@ -55,6 +58,14 @@ def project_recovered_knowledge(
     manifest_path = repo / "corpus/knowledge_document_recovery.json"
     registry_path = repo / "corpus/work_version_registry.json"
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    if manifest.get("schema") not in {
+        "femprompt-knowledge-document-recovery/1.0",
+        "femprompt-knowledge-document-recovery/1.1",
+    }:
+        raise ValueError("Unsupported knowledge recovery schema")
+    canonical = manifest["schema"] == "femprompt-knowledge-document-recovery/1.1"
+    if canonical and manifest.get("hash_contract") != "text-crlf-to-lf":
+        raise ValueError("Missing canonical knowledge recovery hash contract")
     registry = json.loads(registry_path.read_text(encoding="utf-8"))
     destination = repo / "docs/vault/Papers"
     destination.mkdir(parents=True, exist_ok=True)
@@ -72,13 +83,14 @@ def project_recovered_knowledge(
         source_path = repo / binding["source_path"]
         if (
             not source_path.is_file()
-            or _sha256(source_path) != binding["source_sha256"]
+            or _sha256(source_path, canonical) != binding["source_sha256"]
         ):
             raise ValueError(f"{record_id}: recovery source hash differs")
         knowledge_source = repo / binding["knowledge_source_path"]
         if (
             not knowledge_source.is_file()
-            or _sha256(knowledge_source) != binding["knowledge_source_sha256"]
+            or _sha256(knowledge_source, canonical)
+            != binding["knowledge_source_sha256"]
         ):
             raise ValueError(f"{record_id}: recovered knowledge document hash differs")
         version = _bibliographic_record(registry, record_id)
@@ -87,7 +99,11 @@ def project_recovered_knowledge(
         filename = f"recovered-{record_id}.md"
         expected_files.add(filename)
         target = destination / filename
-        body = knowledge_source.read_bytes()
+        body = (
+            canonical_file_bytes(knowledge_source)
+            if canonical
+            else knowledge_source.read_bytes()
+        )
         if not target.exists() or target.read_bytes() != body:
             target.write_bytes(body)
         projected[record_id] = {

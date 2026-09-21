@@ -1,0 +1,51 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "7FEFMCBZ",
+  "knowledge_document": "research-vault/20_distillates/publications/7fefmcbz-child-welfare-worker-algorithm-disparities.md",
+  "knowledge_document_sha256": "sha256:68a460b1086c6ceb0c07af31c9f8cb13ea16ffcede82ecbe149e85556c02e9c4",
+  "source_path": "generated/markdown/7FEFMCBZ.md",
+  "source_sha256": "sha256:f3b71cdb2bd086d8249f95159d51482d091a3b9cdfe7c9587162b5d3c044e36d",
+  "reviewed_at": "2026-09-21T18:38:31.599061Z",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Administrative follow-up review of the authority wording and preservation of the previously source-reviewed substantive content. This receipt grants no human verification or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Substantive sections before Review boundary",
+      "finding": "The source-reviewed substantive statements, method, findings, limitations, quotations and category relevance are unchanged from the accepted prior-review artifact. The current source artifact still matches its reviewed hash."
+    },
+    {
+      "severity": "note",
+      "location": "Review boundary and frontmatter authority fields",
+      "finding": "The revised boundary now delegates the current review state to the frontmatter and receipt while retaining the explicit domain-expert-verification and publication-approval boundary. Administrative authority metadata does not alter the scholarly claims."
+    },
+    {
+      "severity": "note",
+      "location": "Prior review provenance",
+      "finding": "Compared against accepted receipt corpus/knowledge-reviews/2026-09-21/7FEFMCBZ-initial.json and the exact prior artifact hash recorded there."
+    }
+  ],
+  "validated_subject": {
+    "validated_at": "2026-09-21T18:41:39.010426+00:00",
+    "validator": "/root integration; document and source hashes plus literal quotation checks",
+    "body_sha256": "sha256:50aa8753d9529546f89cf3d71b43b04644e8738e78f86733c3a26c55f62fa3a9",
+    "source_metadata": {
+      "record-id": "7FEFMCBZ",
+      "work-id": "work:fdf4e7e1-80c8-56bd-9e16-9031a45ff712",
+      "version-id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
+      "version-type": "unknown",
+      "source-representation": {
+        "path": "generated/markdown/7FEFMCBZ.md",
+        "sha256": "sha256:f3b71cdb2bd086d8249f95159d51482d091a3b9cdfe7c9587162b5d3c044e36d",
+        "version-id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
+        "version-type": "unknown",
+        "is-preferred-version": true,
+        "boundary": "The preparing agent read the complete hash-bound proceedings conversion, including appendices and linearised tables. Figures were available only as captions or image placeholders and were not independently inspected. Source identity review does not constitute review of this distillate."
+      }
+    }
+  }
+}

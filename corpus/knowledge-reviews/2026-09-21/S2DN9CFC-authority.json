@@ -1,0 +1,52 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "S2DN9CFC",
+  "knowledge_document": "research-vault/20_distillates/publications/gender-equity-generative-ai-workshops.md",
+  "knowledge_document_sha256": "sha256:a5727e8e43c8d5d5cf1e21824548f4db8946335f269ccc390a4557af8afc3ae0",
+  "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/4dd9fd2a26f9d7eea07a.md",
+  "source_sha256": "sha256:c0d19894593d8c2209a4c40a59a35d20a251a15f8b1db25e737368fee1ffc16c",
+  "reviewed_at": "2026-09-21T18:38:31.606500Z",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Administrative follow-up review of the authority wording and preservation of the previously source-reviewed substantive content. This receipt grants no human verification or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Substantive sections before Review boundary",
+      "finding": "The source-reviewed substantive statements, method, findings, limitations, quotations and category relevance are unchanged from the accepted prior-review artifact. The current source artifact still matches its reviewed hash."
+    },
+    {
+      "severity": "note",
+      "location": "Review boundary and frontmatter authority fields",
+      "finding": "The revised boundary now delegates the current review state to the frontmatter and receipt while retaining the explicit domain-expert-verification and publication-approval boundary. Administrative authority metadata does not alter the scholarly claims."
+    },
+    {
+      "severity": "note",
+      "location": "Prior review provenance",
+      "finding": "Compared against accepted receipt corpus/knowledge-reviews/2026-09-21/S2DN9CFC-initial.json and the exact prior artifact hash recorded there."
+    }
+  ],
+  "validated_subject": {
+    "validated_at": "2026-09-21T18:41:39.081731+00:00",
+    "validator": "/root integration; document and source hashes plus literal quotation checks",
+    "body_sha256": "sha256:e1f028d24920ece9213d86db3acd0c964f06dd5d48f3c53840058ef5d9ced90c",
+    "source_metadata": {
+      "record-id": "S2DN9CFC",
+      "work-id": "work:88488d25-08d0-5719-8948-5bff2e7d43cf",
+      "version-id": "version:ea23f511-1667-56d4-8b7e-b46394a73f86",
+      "version-type": "version_of_record",
+      "source-representation": {
+        "path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/4dd9fd2a26f9d7eea07a.md",
+        "sha256": "sha256:c0d19894593d8c2209a4c40a59a35d20a251a15f8b1db25e737368fee1ffc16c",
+        "version-id": "version:ea23f511-1667-56d4-8b7e-b46394a73f86",
+        "version-type": "version_of_record",
+        "source-url": "https://discovery.ucl.ac.uk/id/eprint/10225293",
+        "is-preferred-version": true,
+        "boundary": "The preparing agent read the complete hash-bound Markdown source representation and checked the quoted passages. No separate AI source review or domain-expert verification has occurred."
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "P4YQIKJX",
+  "knowledge_document": "research-vault/20_distillates/publications/healthcare-ai-ethics-systematic-review.md",
+  "knowledge_document_sha256": "sha256:62f8b28565ac44a2bb4135e358b2660da341cc7f51e9ff8de6b4f6cb167e1d20",
+  "source_path": "generated/markdown_clean/P4YQIKJX.md",
+  "source_sha256": "sha256:a4f670474ec99e6c7d888653b43044fd775ebd6dde861dfe2e886c30a8cbf42d",
+  "reviewed_at": "2026-09-21T19:01:14.720272Z",
+  "reviewer": {
+    "agent_id": "/root/source_completion",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Independent full-text, source-bound review of statements, method, category relevance, quotations and conversion limits. This receipt grants no human verification, screening-state change, domain-expert verification or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Core statements; Research question and method",
+      "finding": "Both quotations resolve in the source. The PRISMA-guided review searched five named sources, screened 122 full documents and subjected 45 documents to full-text analysis; its synthesis reports 12 main ethical issues and 19 sub-issues."
+    },
+    {
+      "severity": "note",
+      "location": "Main arguments; Assessment relevance",
+      "finding": "The broad healthcare-AI ethics taxonomy and source-reported strategies support KI_Sonstige, Bias_Ungleichheit and Fairness. The document correctly excludes generative AI, prompting, social work and feminist methodology."
+    },
+    {
+      "severity": "note",
+      "location": "Limitations; conversion boundary",
+      "finding": "The September 2020 search boundary, mixture of academic and grey literature, and non-evaluative status of most strategies are grounded. Tables are linearised and Figure 1 is only captioned, but no reviewed claim depends on unread visual values."
+    }
+  ]
+}

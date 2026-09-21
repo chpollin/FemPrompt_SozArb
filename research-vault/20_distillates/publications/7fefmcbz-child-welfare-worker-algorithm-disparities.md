@@ -7,19 +7,21 @@ work-id: work:fdf4e7e1-80c8-56bd-9e16-9031a45ff712
 version-id: version:aabc867d-cc16-5889-8810-35e57e6b003f
 version-type: unknown
 topics:
-  - "[[Artificial Intelligence]]"
-  - "[[Social Work]]"
-  - "[[Fairness]]"
-status: preparation
+- '[[Artificial Intelligence]]'
+- '[[Social Work]]'
+- '[[Fairness]]'
+status: ai-agent-reviewed
 checked:
   quote: 2026-09-21
+  validation: '2026-09-21'
+  ai-agent-review: '2026-09-21'
 created: 2026-09-21
-updated: 2026-09-21
+updated: '2026-09-21'
 prepared-by:
   agent-id: /root/prism_assessment
   model: gpt-5.6-sol
   prepared-at: 2026-09-21
-  artifact-review-status: unreviewed
+  artifact-review-status: ai-agent-reviewed
 source-representation:
   path: generated/markdown/7FEFMCBZ.md
   sha256: sha256:f3b71cdb2bd086d8249f95159d51482d091a3b9cdfe7c9587162b5d3c044e36d
@@ -27,6 +29,9 @@ source-representation:
   version-type: unknown
   is-preferred-version: true
   boundary: The preparing agent read the complete hash-bound proceedings conversion, including appendices and linearised tables. Figures were available only as captions or image placeholders and were not independently inspected. Source identity review does not constitute review of this distillate.
+source-review:
+  path: corpus/knowledge-reviews/2026-09-21/7FEFMCBZ-authority.json
+  sha256: sha256:fa8ab4dfa6bba43a02c136dfa32dcf36b320cbf239fe941b83aecce96cdb553b
 ---
 
 # Distillate: Worker discretion and racial disparities in child-welfare screening
@@ -56,4 +61,4 @@ The quantitative observations cover 2016 to 2018, whereas the qualitative fieldw
 
 ## Review boundary
 
-This preparation is source-bound and unreviewed. It grants no separate AI source-review, human verification, scientific acceptance or publication authority.
+This document was prepared from the source representation identified in its metadata. The current review state and its supporting receipt are recorded in the frontmatter. AI review does not establish domain-expert verification or publication approval.

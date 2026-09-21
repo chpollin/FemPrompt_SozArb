@@ -1,0 +1,44 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "V8SBEH4E",
+  "knowledge_document": "research-vault/20_distillates/publications/completion-v8sbeh4e-feminist-ai-neutrality.md",
+  "knowledge_document_sha256": "sha256:76d03eaa11bc5300381dea4e58d218edf8060e98bd0205fc0f9f8a91bb66167c",
+  "source_path": "corpus/source-acquisition/completion-20260921/V8SBEH4E.identity-bound.md",
+  "source_sha256": "sha256:e899385c54b3118d6eec98a0195a659ff18fc33c4c0dcc3a9e8cccda7a244353",
+  "reviewed_at": "2026-09-21T19:10:59.535940Z",
+  "reviewer": {
+    "agent_id": "/root/source_completion",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Hash-corrected independent source-bound review. The knowledge document and source content are unchanged from the superseded review; this receipt uses src.assess.artifact_verification.artifact_hash for repository text artifacts and grants no human verification, promotion or publication authority.",
+  "supersedes": "generated/knowledge-completion-20260921/reviews/V8SBEH4E-new-kd.json",
+  "hash_correction": {
+    "reason": "The superseded receipt used a raw-byte SHA-256 for the Markdown source. Repository verification requires the normalized text hash returned by src.assess.artifact_verification.artifact_hash.",
+    "original_source_raw_sha256": "sha256:ddd3528665f834adcd80ab01479a5b19351d9d12f4f3cf0e6ea377e0da6a0a56",
+    "corrected_source_artifact_hash": "sha256:e899385c54b3118d6eec98a0195a659ff18fc33c4c0dcc3a9e8cccda7a244353",
+    "content_reverified_unchanged": true
+  },
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Identity and quotations",
+      "finding": "The Atlantis Press chapter title, six credited authors including the literal-name author Tikaram, DOI, venue and pages match the reference. All three literal quotations resolve exactly in the bound source."
+    },
+    {
+      "severity": "note",
+      "location": "Research question, method and findings",
+      "finding": "The document accurately separates the feminist literature discussion from the small local Likert survey and records the recruitment and sample limitations. It does not repeat internally inconsistent percentage totals from the source."
+    },
+    {
+      "severity": "note",
+      "location": "Assessment relevance",
+      "finding": "KI_Sonstige, Gender, Feministisch, Bias_Ungleichheit, Diversitaet and Fairness are directly supported. AI_Literacies is cautiously marked relevant through the explicit recommendation that developers combine technical knowledge with feminist and racial theory. No unsupported Social Work, generative-AI or prompting relevance is claimed."
+    },
+    {
+      "severity": "note",
+      "location": "Conversion boundary",
+      "finding": "Survey-result figures were not visually preserved by the conversion. The knowledge document flags this and limits its claims to statements recoverable from the text and tables."
+    }
+  ]
+}

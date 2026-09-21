@@ -1,0 +1,52 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "BHXDU7VM",
+  "knowledge_document": "research-vault/20_distillates/publications/bhxdu7vm-how-people-use-chatgpt.md",
+  "knowledge_document_sha256": "sha256:00c9d51aa0e18b27b3996cd1a886d1c37aa308be55a4a914a8d5302822aa765d",
+  "source_path": "generated/markdown_clean/BHXDU7VM.md",
+  "source_sha256": "sha256:49a17523925a989ed5903ded9a6fdd747176bfdc9355bfc80d0048246b364400",
+  "reviewed_at": "2026-09-21T18:38:31.605501Z",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Administrative follow-up review of the authority wording and preservation of the previously source-reviewed substantive content. This receipt grants no human verification or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Substantive sections before Review boundary",
+      "finding": "The source-reviewed substantive statements, method, findings, limitations, quotations and category relevance are unchanged from the accepted prior-review artifact. The current source artifact still matches its reviewed hash."
+    },
+    {
+      "severity": "note",
+      "location": "Review boundary and frontmatter authority fields",
+      "finding": "The revised boundary now delegates the current review state to the frontmatter and receipt while retaining the explicit domain-expert-verification and publication-approval boundary. Administrative authority metadata does not alter the scholarly claims."
+    },
+    {
+      "severity": "note",
+      "location": "Prior review provenance",
+      "finding": "Compared against accepted receipt corpus/knowledge-reviews/2026-09-21/BHXDU7VM-initial.json and the exact prior artifact hash recorded there."
+    }
+  ],
+  "validated_subject": {
+    "validated_at": "2026-09-21T18:41:39.072555+00:00",
+    "validator": "/root integration; document and source hashes plus literal quotation checks",
+    "body_sha256": "sha256:6d2523a0e1aa9eda0d13ac084daecc77cc4a9da9cb53caa353b4bdd7c55b5e7c",
+    "source_metadata": {
+      "record-id": "BHXDU7VM",
+      "work-id": "work:f01ca4fe-7f9b-59f6-98d9-4e84559cd850",
+      "version-id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
+      "version-type": "working_paper",
+      "source-representation": {
+        "path": "generated/markdown_clean/BHXDU7VM.md",
+        "sha256": "sha256:49a17523925a989ed5903ded9a6fdd747176bfdc9355bfc80d0048246b364400",
+        "version-id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
+        "version-type": "working_paper",
+        "source-url": "https://www.nber.org/papers/w34255",
+        "is-preferred-version": true,
+        "boundary": "The preparing agent read the complete hash-bound NBER working-paper Markdown representation and checked the quoted passages. The source states that NBER working papers are circulated for discussion and have not been peer reviewed. No separate scholarly review has occurred."
+      }
+    }
+  }
+}

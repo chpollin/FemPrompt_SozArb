@@ -1,0 +1,27 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "S2DN9CFC",
+  "knowledge_document": "research-vault/20_distillates/publications/gender-equity-generative-ai-workshops.md",
+  "knowledge_document_sha256": "sha256:b54c4b2ac8dceeb70738091a0a78df630496c4c8f8b968d32f52dd6da18694a6",
+  "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/4dd9fd2a26f9d7eea07a.md",
+  "source_sha256": "sha256:c0d19894593d8c2209a4c40a59a35d20a251a15f8b1db25e737368fee1ffc16c",
+  "reviewed_at": "2026-09-21T19:08:05Z",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Independent source-bound review of identity, research question, method, findings, limitations, quotations and category relevance. This receipt grants no human verification or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Research question and method; Main findings; Limitations",
+      "finding": "The all-girls makerspace case, interviews, reflective sessions, fieldnotes, generated-image corpus, feminist framing, reported barriers and participant-boundary limitation agree with the source. The quotations resolve exactly."
+    },
+    {
+      "severity": "note",
+      "location": "Assessment relevance",
+      "finding": "Generative_KI, Gender, Diversitaet, Feministisch, Fairness and AI_Literacies are supported by the intervention, analytical framework and prompt-language participation barrier. The document correctly excludes social work as the study domain."
+    }
+  ]
+}

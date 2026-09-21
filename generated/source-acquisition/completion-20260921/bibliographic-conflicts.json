@@ -1,0 +1,289 @@
+{
+  "schema": "femprompt-bibliographic-conflict-evidence/0.1",
+  "created_at": "2026-09-21T18:13:51.5410223+00:00",
+  "authority": "Source evidence and correction proposals only. This artifact does not edit Zotero, canonical registries, historical annotations, or scholarly lifecycle state.",
+  "baseline": {
+    "path": "generated/zotero-sync/completion-20260921/baseline.json",
+    "library_id": 6080294,
+    "library_version": 1391,
+    "observed_on": "2026-09-21",
+    "membership_result": "The historical keys AMYZFAPH, ZITLBM8A, and QI5AYE4V are absent from the live group. Their reconciled live records are already bibliographically correct. H59BNSX8 is live and already correct for title, creators, DOI, and online publication year."
+  },
+  "sources": [
+    {
+      "source_id": "publisher-726021",
+      "source_path": "pipeline/pdfs/Victor_2023_Recommendations_for_social_work_researchers_and.pdf",
+      "source_url": "https://www.journals.uchicago.edu/doi/10.1086/726021",
+      "sha256": "087d2c926b2104071788bc98875198004025161a92d1ac6ce498ecf3b4047c80",
+      "locator": "publisher PDF page 1; publisher landing-page lines 33-44",
+      "quote": "Bryan G. Victor, Rebeccah L. Sokol, Lauri Goldkind, and Brian E. Perron",
+      "markdown_source_path": "generated/markdown_clean/Victor_2023_Recommendations_for_social_work_researchers_and.md",
+      "markdown_sha256": "a137e62be12fd65ce26832f12c01234be43654ae3ddc49a82e4a01cef2198726",
+      "markdown_locator": "article heading, author block, abstract DOI",
+      "supports": [
+        "title",
+        "creators",
+        "DOI",
+        "publication date"
+      ]
+    },
+    {
+      "source_id": "publisher-726042",
+      "source_path": "pipeline/pdfs/Patton_2023_ChatGPT_for_Social_Work_Science_Ethical.pdf",
+      "source_url": "https://www.journals.uchicago.edu/doi/10.1086/726042",
+      "sha256": "cc2744f7a45f1fe010dc56e0ce42ecbadbd1d383847ad37453937c5ac63084d2",
+      "locator": "publisher PDF page 1; publisher landing-page lines 33-44",
+      "quote": "Desmond Upton Patton, Aviv Y. Landau, and Siva Mathiyazhagan",
+      "markdown_source_path": "generated/markdown_clean/Patton_2023_ChatGPT_for_Social_Work_Science_Ethical.md",
+      "markdown_sha256": "bfe6c6fbcb14c1f069c40f2a30f4f588b7c7a1a96adcfba4d56d6001c37057f5",
+      "markdown_locator": "article heading, author block, abstract DOI",
+      "supports": [
+        "title",
+        "creators",
+        "DOI",
+        "publication date"
+      ]
+    },
+    {
+      "source_id": "publisher-2195425",
+      "source_path": "pipeline/pdfs/James_2023_Algorithmic_decision-making_in_social_work.pdf",
+      "source_url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2023.2195425",
+      "sha256": "8926f87e6c42a9344ee47d2f67941090b03bfd4ee4a8eed8fe3a76c05709d3e7",
+      "locator": "publisher PDF page 1",
+      "quote": "Paul James, Jason Lal, Ashley Liao, Liam Magee & Karen Soldatic",
+      "markdown_source_path": "generated/markdown_clean/James_2023_Algorithmic_decision-making_in_social_work.md",
+      "markdown_sha256": "d55e76e6763cf4d54af3e77bb06256ec9077eeb84f28d6ca2ad313a7cc3b02e6",
+      "markdown_locator": "publisher cover, citation block, online-publication statement",
+      "supports": [
+        "title",
+        "creators",
+        "DOI",
+        "online publication date",
+        "issue publication year",
+        "volume",
+        "issue",
+        "pages"
+      ]
+    }
+  ],
+  "records": [
+    {
+      "record_key": "AMYZFAPH",
+      "record_state": "historical_alias_absent_from_live_group",
+      "live_equivalents": [
+        "4PK8UN82",
+        "9YYPYEGY",
+        "U3AJIXAJ"
+      ],
+      "identity": {
+        "DOI": "10.1086/726021",
+        "source_id": "publisher-726021"
+      },
+      "changes": [
+        {
+          "field": "creators",
+          "old": [
+            "B. E. Perron",
+            "B. G. Victor",
+            "D. R. Hodge",
+            "M. G. Vaughn",
+            "C. P. Salas-Wright"
+          ],
+          "new": [
+            "Bryan G. Victor",
+            "Rebeccah L. Sokol",
+            "Lauri Goldkind",
+            "Brian E. Perron"
+          ],
+          "evidence": "publisher-726021"
+        },
+        {
+          "field": "title",
+          "old": "Recommendations for social work researchers and journal editors on the use of generative AI and large language models",
+          "new": "Recommendations for Social Work Researchers and Journal Editors on the Use of Generative AI and Large Language Models",
+          "evidence": "publisher-726021"
+        }
+      ],
+      "apply_boundary": "Apply only to the local historical alias or canonical projection. The live equivalents already carry the correct creator sequence, DOI, date, and publication identity."
+    },
+    {
+      "record_key": "ZITLBM8A",
+      "record_state": "historical_alias_absent_from_live_group",
+      "live_equivalents": [
+        "LGYFN6JK"
+      ],
+      "identity": {
+        "DOI": "10.1086/726042",
+        "source_id": "publisher-726042"
+      },
+      "changes": [
+        {
+          "field": "creators",
+          "old": [
+            "J. B. Singer",
+            "B. G. Victor",
+            "B. E. Perron"
+          ],
+          "new": [
+            "Desmond Upton Patton",
+            "Aviv Y. Landau",
+            "Siva Mathiyazhagan"
+          ],
+          "evidence": "publisher-726042"
+        },
+        {
+          "field": "title",
+          "old": "ChatGPT for social work science: Ethical challenges and opportunities",
+          "new": "ChatGPT for Social Work Science: Ethical Challenges and Opportunities",
+          "evidence": "publisher-726042"
+        }
+      ],
+      "apply_boundary": "Apply only to the local historical alias or canonical projection. LGYFN6JK already carries the correct title, creators, DOI, and date."
+    },
+    {
+      "record_key": "QI5AYE4V",
+      "record_state": "historical_alias_absent_from_live_group",
+      "live_equivalents": [
+        "H59BNSX8"
+      ],
+      "identity": {
+        "DOI": "10.1080/02615479.2023.2195425",
+        "source_id": "publisher-2195425"
+      },
+      "changes": [
+        {
+          "field": "creators",
+          "old": [
+            "C. McDonald",
+            "G. Marston",
+            "A. Buckley"
+          ],
+          "new": [
+            "Paul James",
+            "Jason Lal",
+            "Ashley Liao",
+            "Liam Magee",
+            "Karen Soldatic"
+          ],
+          "evidence": "publisher-2195425"
+        },
+        {
+          "field": "title",
+          "old": "Algorithmic decision-making in social work practice and pedagogy: Confronting the competency/critique dilemma",
+          "new": "Algorithmic decision-making in social work practice and pedagogy: confronting the competency/critique dilemma",
+          "evidence": "publisher-2195425"
+        }
+      ],
+      "apply_boundary": "Apply only to the local historical alias or canonical projection. H59BNSX8 already carries the correct title, creators, DOI, and online publication year."
+    },
+    {
+      "record_key": "H59BNSX8",
+      "record_state": "live_record",
+      "live_item_version": 396,
+      "identity": {
+        "DOI": "10.1080/02615479.2023.2195425",
+        "source_id": "publisher-2195425"
+      },
+      "changes": [],
+      "date_interpretation": {
+        "current_live_value": "2023",
+        "online_publication_date": "2023-03-27",
+        "issue_publication_year": "2024",
+        "issue_citation": "Social Work Education 43(6), 1552-1569",
+        "proposal": "Retain 2023 where the Zotero date field denotes first online publication. Record the 2024 issue year and issue citation as version metadata rather than replacing the online year without an explicit field policy."
+      },
+      "apply_boundary": "No live Zotero patch is supported by this conflict review."
+    },
+    {
+      "record_key": "4PK8UN82",
+      "record_state": "live_record",
+      "live_item_version": 118,
+      "changes": [],
+      "apply_boundary": "No live Zotero patch is supported."
+    },
+    {
+      "record_key": "9YYPYEGY",
+      "record_state": "live_record",
+      "live_item_version": 114,
+      "changes": [],
+      "apply_boundary": "No live Zotero patch is supported."
+    },
+    {
+      "record_key": "U3AJIXAJ",
+      "record_state": "live_record",
+      "live_item_version": 110,
+      "changes": [],
+      "apply_boundary": "No live Zotero patch is supported."
+    },
+    {
+      "record_key": "LGYFN6JK",
+      "record_state": "live_record",
+      "live_item_version": 214,
+      "changes": [],
+      "apply_boundary": "No live Zotero patch is supported."
+    }
+  ],
+  "existing_version_binding_proposals": [
+    {
+      "binding_mode": "existing_version",
+      "record_ids": [
+        "AMYZFAPH",
+        "4PK8UN82",
+        "9YYPYEGY",
+        "U3AJIXAJ"
+      ],
+      "work_id": "work:e1ca8a4c-5cc2-5e35-b3cc-375950a07405",
+      "source_version_id": "version:0e874262-87ce-5928-962b-758a55a98646",
+      "bibliographic_version_id": "version:0e874262-87ce-5928-962b-758a55a98646",
+      "preferred_version_id": "version:0e874262-87ce-5928-962b-758a55a98646",
+      "source_version_type": "version_of_record",
+      "is_preferred_version": true,
+      "source_path": "generated/markdown_clean/Victor_2023_Recommendations_for_social_work_researchers_and.md",
+      "source_sha256": "sha256:a137e62be12fd65ce26832f12c01234be43654ae3ddc49a82e4a01cef2198726",
+      "source_url": "https://www.journals.uchicago.edu/doi/10.1086/726021",
+      "evidence": "publisher-726021",
+      "condition": "Bind after the canonical projection applies the documented historical author correction. Do not rewrite immutable historical annotations."
+    },
+    {
+      "binding_mode": "existing_version",
+      "record_ids": [
+        "ZITLBM8A",
+        "LGYFN6JK"
+      ],
+      "work_id": "work:c54f89d4-e79b-5fd8-9426-6b51b36669e2",
+      "source_version_id": "version:c9a7b396-f86c-50ed-8808-6dc5c513627b",
+      "bibliographic_version_id": "version:c9a7b396-f86c-50ed-8808-6dc5c513627b",
+      "preferred_version_id": "version:c9a7b396-f86c-50ed-8808-6dc5c513627b",
+      "source_version_type": "version_of_record",
+      "is_preferred_version": true,
+      "source_path": "generated/markdown_clean/Patton_2023_ChatGPT_for_Social_Work_Science_Ethical.md",
+      "source_sha256": "sha256:bfe6c6fbcb14c1f069c40f2a30f4f588b7c7a1a96adcfba4d56d6001c37057f5",
+      "source_url": "https://www.journals.uchicago.edu/doi/10.1086/726042",
+      "evidence": "publisher-726042",
+      "condition": "Bind after the canonical projection applies the documented historical author correction. Do not rewrite immutable historical annotations."
+    },
+    {
+      "binding_mode": "existing_version",
+      "record_ids": [
+        "QI5AYE4V",
+        "H59BNSX8"
+      ],
+      "work_id": "work:5f49f95b-dcfe-5778-8376-a313cb039d4d",
+      "source_version_id": "version:2e650cfc-0147-5778-ab55-ed2e17a4f86b",
+      "bibliographic_version_id": "version:2e650cfc-0147-5778-ab55-ed2e17a4f86b",
+      "preferred_version_id": "version:2e650cfc-0147-5778-ab55-ed2e17a4f86b",
+      "source_version_type": "version_of_record",
+      "is_preferred_version": true,
+      "source_path": "generated/markdown_clean/James_2023_Algorithmic_decision-making_in_social_work.md",
+      "source_sha256": "sha256:d55e76e6763cf4d54af3e77bb06256ec9077eeb84f28d6ca2ad313a7cc3b02e6",
+      "source_url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2023.2195425",
+      "evidence": "publisher-2195425",
+      "condition": "Bind after the canonical projection applies the documented historical author correction. Preserve 2023 as the recorded online year and 2024 as issue-version metadata."
+    }
+  ],
+  "conclusions": [
+    "The current Zotero group does not require a creator, title, DOI, or date patch for this batch.",
+    "The historical aliases remain valid annotation identities and require corrected bibliographic projection rather than deletion or silent reassignment.",
+    "All three exact publisher PDFs already exist locally and have prior Docling conversions. Readiness failures therefore arise from source binding and historical identity reconciliation, not source absence."
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "I355NWWT",
+  "knowledge_document": "research-vault/20_distillates/publications/generative-ai-social-debt-counselling.md",
+  "knowledge_document_sha256": "sha256:b46317a4b1e2ddf44eb7377ea79442f01c2ac2902bec2f99f3dcb95610f0ef3b",
+  "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/2b57266b9d8b015d2ac2.md",
+  "source_sha256": "sha256:6bbcd7269af590ab46faeb1ddf489cc33bfde18f3799ece52b7ec3074f74ffbb",
+  "reviewed_at": "2026-09-21T18:40:45.807523Z",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Independent source-bound follow-up review of the corrected knowledge document, including identity, method, findings, limitations, quotations, category relevance and authority boundary. This receipt grants no human verification or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Opening summary; Research question and method; Main findings; Limitations",
+      "finding": "The corrected document now identifies the empirical basis as digital and hybrid social and debt counselling and labels chatbot claims as prospective transfer arguments. The survey sample, group discussions, timing and absence of chatbot-specific data agree with the source."
+    },
+    {
+      "severity": "note",
+      "location": "Assessment relevance; Quotations",
+      "finding": "Generative_KI, Soziale_Arbeit and AI_Literacies are supported by the prospective application, counselling domain and explicit discussion of client competencies and practitioner training. All three quotations resolve exactly."
+    }
+  ],
+  "validated_subject": {
+    "validated_at": "2026-09-21T18:41:39.114310+00:00",
+    "validator": "/root integration; document and source hashes plus literal quotation checks",
+    "body_sha256": "sha256:b0f3fe987e2e64b9a3a15edb4432e378d2b6a7bbf3e98da2429db0473b8d8786",
+    "source_metadata": {
+      "record-id": "I355NWWT",
+      "work-id": "work:b385e0cf-739b-5592-b5f0-c9d7fd2ead0a",
+      "version-id": "version:5989a776-e0b2-54c3-bd41-ecffe3d9b85b",
+      "version-type": "version_of_record",
+      "source-representation": {
+        "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/2b57266b9d8b015d2ac2.md",
+        "sha256": "sha256:6bbcd7269af590ab46faeb1ddf489cc33bfde18f3799ece52b7ec3074f74ffbb",
+        "version-id": "version:5989a776-e0b2-54c3-bd41-ecffe3d9b85b",
+        "version-type": "version_of_record",
+        "source-url": "https://www.dime-sozial.de/index.php/dimesoz/article/view/57",
+        "is-preferred-version": true,
+        "boundary": "The preparing agent read the complete hash-bound Markdown source representation and checked the quoted passages. No separate AI source review or domain-expert verification has occurred."
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "QUV5DQH3",
+  "knowledge_document": "research-vault/20_distillates/publications/quv5dqh3-gender-equity-algorithms.md",
+  "knowledge_document_sha256": "sha256:37d738a0f84d3bf5898f607705c3c12f033f63bade7dba54923df5167e0bce30",
+  "source_path": "generated/markdown_clean/QUV5DQH3.md",
+  "source_sha256": "sha256:e5f3106b938f608704fa0809264ce0914030730aec95910259145ff71c6c0293",
+  "reviewed_at": "2026-09-21T19:08:07.386528+00:00",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Independent source-bound review of identity, research question, method, findings, limitations, literal quotations and controlled-category relevance. This receipt grants no human verification or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Identity, method and findings",
+      "finding": "The expert synthesis, tracked case collection, 59 gender-bias cases, six harm types, and proposed actions for leaders and developers agree with the complete official HTML article."
+    },
+    {
+      "severity": "note",
+      "location": "Assessment relevance",
+      "finding": "KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch and Fairness are supported by the source’s gender-lens audits, feminist data practices, participatory design, gender expertise and proposed fair-system governance. AI_Literacies is correctly bounded as advocated training rather than an evaluated intervention."
+    },
+    {
+      "severity": "note",
+      "location": "Evidence limits",
+      "finding": "The two quotations are exact. The document clearly states that the selected cases do not support prevalence estimates and that the capture contains repeated site material."
+    }
+  ],
+  "validated_subject": {
+    "validated_at": "2026-09-21T19:09:11.760091+00:00",
+    "validator": "/root integration; document and source hashes plus literal quotation checks",
+    "body_sha256": "sha256:7d7b908a2753a25553574caf8e72d949f538bb4fa5fdf4f491c5e774be810524",
+    "source_metadata": {
+      "record-id": "QUV5DQH3",
+      "work-id": "work:3dc3ced9-8261-5840-9d71-aa2dfc43af87",
+      "version-id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
+      "version-type": "version_of_record",
+      "source-representation": {
+        "path": "generated/markdown_clean/QUV5DQH3.md",
+        "sha256": "sha256:e5f3106b938f608704fa0809264ce0914030730aec95910259145ff71c6c0293",
+        "version-id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
+        "version-type": "version_of_record",
+        "is-preferred-version": true,
+        "boundary": "The preparing agent read the complete hash-bound official HTML representation. The local capture includes the complete article followed by a repeated teaser and subscription notice. Source identity review does not constitute review of this distillate."
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "9EP4IC4T",
+  "knowledge_document": "research-vault/20_distillates/publications/9ep4ic4t-deception-detection-mental-health.md",
+  "knowledge_document_sha256": "sha256:a8bf0042cd2b9e30c9b36da3a15aed77774e61df61a7f43b346abf0ac41812cf",
+  "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/2e6aa61930deea324751.md",
+  "source_sha256": "sha256:16fffb7438de2ed8cbf62ab4b19919a51a05484d97275f0ff2ea32a72c5868bc",
+  "reviewed_at": "2026-09-21T18:40:45.810528Z",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Independent source-bound follow-up review of the corrected knowledge document, including identity, method, findings, limitations, quotations, category relevance and authority boundary. This receipt grants no human verification or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Core statements, quotations s1 through s4",
+      "finding": "All four displayed quotations now resolve as exact substrings of the bound Markdown, including the preserved Docling whitespace in s2 and s4."
+    },
+    {
+      "severity": "note",
+      "location": "Method and scope; Assessment relevance; Limitations",
+      "finding": "The focus-group design, dual-role sample, hypothetical scenario, coding process, privacy and bias findings, deployment recommendations and limitations agree with the source. AI_Literacies remains correctly excluded."
+    }
+  ],
+  "validated_subject": {
+    "validated_at": "2026-09-21T18:41:39.131264+00:00",
+    "validator": "/root integration; document and source hashes plus literal quotation checks",
+    "body_sha256": "sha256:3a5aafb4be642fbb6c9440cf3596c8c646cf90ce40a1dc4c3689115a7d37c52c",
+    "source_metadata": {
+      "record-id": "9EP4IC4T",
+      "work-id": "work:7f8d6ea5-b9ea-55b6-8b7c-312cabf4a2a9",
+      "version-id": "version:689d32b7-8d4c-5ef8-b6a1-bd98323715fd",
+      "version-type": "version_of_record",
+      "source-representation": {
+        "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/2e6aa61930deea324751.md",
+        "sha256": "sha256:16fffb7438de2ed8cbf62ab4b19919a51a05484d97275f0ff2ea32a72c5868bc",
+        "version-id": "version:689d32b7-8d4c-5ef8-b6a1-bd98323715fd",
+        "version-type": "version_of_record",
+        "is-preferred-version": true,
+        "boundary": "The preparing agent read the complete hash-bound local text. Linearised tables were available; figures were not independently inspected. Source identity review does not constitute review of this distillate."
+      }
+    }
+  }
+}

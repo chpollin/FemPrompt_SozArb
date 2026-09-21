@@ -7,17 +7,19 @@ work-id: work:0acf6fa2-7f5e-53c4-a1d1-30ab1ae8d310
 version-id: version:8bffb8fc-6a26-5e82-a77f-1a0f5c8b7794
 version-type: version_of_record
 topics:
-  - "[[Generative AI]]"
-status: preparation
+- '[[Generative AI]]'
+status: ai-agent-reviewed
 checked:
   quote: 2026-09-21
+  validation: '2026-09-21'
+  ai-agent-review: '2026-09-21'
 created: 2026-09-21
-updated: 2026-09-21
+updated: '2026-09-21'
 prepared-by:
   agent-id: /root/knowledge_documents
   model: gpt-5.6-sol
   prepared-at: 2026-09-21
-  artifact-review-status: unreviewed
+  artifact-review-status: ai-agent-reviewed
 source-representation:
   path: generated/source-acquisition/codex-websearch-2026/markdown-clean/aff73b4c6b2eab31b8f7.md
   sha256: sha256:401ad82df917c2ba9ae1e22a0cb706c9f2b6460e3c82f1d8a6a8cf1333988239
@@ -26,6 +28,9 @@ source-representation:
   source-url: https://www.jmir.org/2026/1/e85770
   is-preferred-version: true
   boundary: The preparing agent read the complete hash-bound Markdown source representation and checked the quoted passages. No separate AI source review or domain-expert verification has occurred.
+source-review:
+  path: corpus/knowledge-reviews/2026-09-21/FR8Z2998-r2.json
+  sha256: sha256:fbcf632c19792d4c2362f09852b43666a3c91cdf9d736acb159c9d2c9bddc1d1
 ---
 
 # Distillate: Patient Cognitive Bias in Large Language Model-Supported Health Consultations: Simulation-Based Comparative Study
@@ -50,7 +55,7 @@ Biased patient framing reduced diagnostic accuracy and aligned errors with prefe
 
 ## Assessment relevance
 
-`Generative_KI`, `Prompting`, `Bias_Ungleichheit` and `Fairness` are central through interactive diagnosis and mitigation. The bias studied is cognitive framing rather than demographic inequality. Social work is absent.
+`Generative_KI` and `Prompting` are central through interactive diagnosis and the tested prompt strategies. The study examines patient cognitive framing and diagnostic reliability rather than demographic or structural inequality, so `Bias_Ungleichheit` is not established. It does not evaluate algorithmic-fairness metrics, fair-machine-learning systems or demographic debiasing, so `Fairness` is not established. Social work is absent.
 
 ## Limitations
 
@@ -58,4 +63,4 @@ Simulated patients and examination cases do not reproduce clinical care. Results
 
 ## Review boundary
 
-This preparation was produced by the attributed LLM agent from the complete hash-bound local source representation. The quotations were checked against that representation. The `preparation` status records an unreviewed artifact and grants no AI source-review, domain-expert verification or publication authority.
+This document was prepared from the source representation identified in its metadata. The current review state and its supporting receipt are recorded in the frontmatter. AI review does not establish domain-expert verification or publication approval.

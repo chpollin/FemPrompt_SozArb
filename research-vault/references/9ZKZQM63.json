@@ -1,0 +1,20 @@
+{
+  "id": "9ZKZQM63",
+  "type": "article",
+  "title": "Unveiling and Mitigating Bias in Mental Health Analysis with Large Language Models",
+  "author": [
+    { "family": "Wang", "given": "Yuqing" },
+    { "family": "Zhao", "given": "Yun" },
+    { "family": "Keller", "given": "Sara Alessandra" },
+    { "family": "de Hond", "given": "Anne" },
+    { "family": "van Buchem", "given": "Marieke M." },
+    { "family": "Pillai", "given": "Malvika" },
+    { "family": "Hernandez-Boussard", "given": "Tina" }
+  ],
+  "issued": { "date-parts": [[2024, 6, 19]] },
+  "container-title": "arXiv",
+  "number": "2406.12033v2",
+  "DOI": "10.48550/arXiv.2406.12033",
+  "URL": "https://arxiv.org/abs/2406.12033v2",
+  "note": "Source-bound arXiv revision 2406.12033v2 from the canonical binding."
+}

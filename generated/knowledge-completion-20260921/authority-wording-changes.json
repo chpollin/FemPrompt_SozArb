@@ -1,0 +1,62 @@
+[
+  {
+    "record_id": "4ZL5Q48E",
+    "knowledge_document": "research-vault/20_distillates/publications/algorithmic-management-work-context.md",
+    "prior_receipt": "corpus/knowledge-reviews/2026-09-21/4ZL5Q48E-initial.json",
+    "change": "Review boundary now refers to current frontmatter authority instead of freezing the initial preparation status. All other body text unchanged."
+  },
+  {
+    "record_id": "7FEFMCBZ",
+    "knowledge_document": "research-vault/20_distillates/publications/7fefmcbz-child-welfare-worker-algorithm-disparities.md",
+    "prior_receipt": "corpus/knowledge-reviews/2026-09-21/7FEFMCBZ-initial.json",
+    "change": "Review boundary now refers to current frontmatter authority instead of freezing the initial preparation status. All other body text unchanged."
+  },
+  {
+    "record_id": "978AV9KZ",
+    "knowledge_document": "research-vault/20_distillates/publications/978av9kz-defeating-nondeterminism-llm-inference.md",
+    "prior_receipt": "corpus/knowledge-reviews/2026-09-21/978AV9KZ-initial.json",
+    "change": "Review boundary now refers to current frontmatter authority instead of freezing the initial preparation status. All other body text unchanged."
+  },
+  {
+    "record_id": "AK7K4P97",
+    "knowledge_document": "research-vault/20_distillates/publications/epic-model-ai-social-work.md",
+    "prior_receipt": "corpus/knowledge-reviews/2026-09-21/AK7K4P97-initial.json",
+    "change": "Review boundary now refers to current frontmatter authority instead of freezing the initial preparation status. All other body text unchanged."
+  },
+  {
+    "record_id": "AZJW38MF",
+    "knowledge_document": "research-vault/20_distillates/publications/azjw38mf-socio-technical-ethics-work.md",
+    "prior_receipt": "corpus/knowledge-reviews/2026-09-21/AZJW38MF-initial.json",
+    "change": "Review boundary now refers to current frontmatter authority instead of freezing the initial preparation status. All other body text unchanged."
+  },
+  {
+    "record_id": "BHXDU7VM",
+    "knowledge_document": "research-vault/20_distillates/publications/bhxdu7vm-how-people-use-chatgpt.md",
+    "prior_receipt": "corpus/knowledge-reviews/2026-09-21/BHXDU7VM-initial.json",
+    "change": "Review boundary now refers to current frontmatter authority instead of freezing the initial preparation status. All other body text unchanged."
+  },
+  {
+    "record_id": "S2DN9CFC",
+    "knowledge_document": "research-vault/20_distillates/publications/gender-equity-generative-ai-workshops.md",
+    "prior_receipt": "corpus/knowledge-reviews/2026-09-21/S2DN9CFC-initial.json",
+    "change": "Review boundary now refers to current frontmatter authority instead of freezing the initial preparation status. All other body text unchanged."
+  },
+  {
+    "record_id": "UGN4TS5R",
+    "knowledge_document": "research-vault/20_distillates/publications/demographic-bias-psychiatric-llm-diagnoses.md",
+    "prior_receipt": "corpus/knowledge-reviews/2026-09-21/UGN4TS5R-initial.json",
+    "change": "Review boundary now refers to current frontmatter authority instead of freezing the initial preparation status. All other body text unchanged."
+  },
+  {
+    "record_id": "A2P8MXMY",
+    "knowledge_document": "research-vault/20_distillates/publications/completion-a2p8mxmy-algorithmic-justice-child-protection.md",
+    "prior_receipt": "generated/knowledge-completion-20260921/reviews/A2P8MXMY-kd.json",
+    "change": "Review boundary now refers to current frontmatter authority instead of freezing the initial preparation status. All other body text unchanged."
+  },
+  {
+    "record_id": "A7U389P5",
+    "knowledge_document": "research-vault/20_distillates/publications/a7u389p5-medical-bias-prompt-engineering.md",
+    "prior_receipt": "generated/knowledge-completion-20260921/reviews/A7U389P5-r2.json",
+    "change": "Review boundary now refers to current frontmatter authority instead of freezing the initial preparation status. All other body text unchanged."
+  }
+]

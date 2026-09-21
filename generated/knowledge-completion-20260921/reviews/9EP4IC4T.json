@@ -1,0 +1,32 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "9EP4IC4T",
+  "knowledge_document": "research-vault/20_distillates/publications/9ep4ic4t-deception-detection-mental-health.md",
+  "knowledge_document_sha256": "sha256:65b7150979574f4c17097db6a958d79ff7e7e26cd7c9e885149930e809b56a2d",
+  "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/2e6aa61930deea324751.md",
+  "source_sha256": "sha256:16fffb7438de2ed8cbf62ab4b19919a51a05484d97275f0ff2ea32a72c5868bc",
+  "reviewed_at": "2026-09-21T18:15:52.299973Z",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "changes_requested",
+  "scope": "Independent source-bound review of identity, research question, method, findings, limitations, quotations and category relevance. This receipt grants no human verification or publication authority.",
+  "findings": [
+    {
+      "severity": "material",
+      "location": "Assessment relevance",
+      "finding": "AI_Literacies is asserted, but the paper studies stakeholder views, ethical safeguards and deployment recommendations rather than competencies, skills or knowledge for handling AI as defined by assessment/categories.yaml. Remove AI_Literacies or cite a source passage that makes competency development a substantive object."
+    },
+    {
+      "severity": "material",
+      "location": "Core statements; Method and scope",
+      "finding": "One short quotation, “exacerbate power imbalances,” anchors only one concern. The broader claims about confidentiality, false positives, cultural sensitivity and equitable deployment, and the inductive/deductive thematic design lack claim-local source quotations or locators. Add exact passages from Abstract Results, Methods/Qualitative Analysis, and RQ3 discussion."
+    },
+    {
+      "severity": "note",
+      "location": "Limitations",
+      "finding": "The hypothetical scenario, small dual-role sample and demographic skew are accurately reported."
+    }
+  ]
+}

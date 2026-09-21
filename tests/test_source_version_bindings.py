@@ -289,6 +289,43 @@ def write_source_manifest(repo, manifest):
     )
 
 
+@pytest.mark.parametrize("wrong_identifier", [False, True])
+def test_printed_doi_spacing_preserves_exact_identifier(tmp_path, wrong_identifier):
+    manifest = json.loads(
+        (REPO / "corpus/source_version_bindings.json").read_text(encoding="utf-8")
+    )
+    entry = deepcopy(manifest["records"]["A2P8MXMY"])
+    registry = json.loads(
+        (REPO / "corpus/work_version_registry.json").read_text(encoding="utf-8")
+    )
+    source_path = entry["binding"]["source_path"]
+    source = (REPO / source_path).read_text(encoding="utf-8")
+    assert "10.3390 / socsci8100281" in source
+    if wrong_identifier:
+        source = source.replace("10.3390 / socsci8100281", "10.1086/726021")
+        for evidence in entry["evidence"]:
+            evidence["quote"] = evidence["quote"].replace(
+                "10.3390 / socsci8100281", "10.1086/726021"
+            )
+    destination = tmp_path / source_path
+    destination.parent.mkdir(parents=True)
+    destination.write_text(source, encoding="utf-8")
+    digest = artifact_hash(tmp_path, source_path)
+    entry["binding"]["source_sha256"] = digest
+    for evidence in entry["evidence"]:
+        evidence["sha256"] = digest
+    (tmp_path / "corpus").mkdir()
+    write_source_manifest(
+        tmp_path, {"schema": manifest["schema"], "records": {"A2P8MXMY": entry}}
+    )
+    if wrong_identifier:
+        with pytest.raises(ValueError, match="exact version identifier"):
+            apply_source_bindings(tmp_path, registry, load_contract())
+    else:
+        apply_source_bindings(tmp_path, registry, load_contract())
+        assert registry["source_index"]["A2P8MXMY"]["source_sha256"] == digest
+
+
 @pytest.mark.parametrize("arxiv", [True, False])
 def test_existing_source_binding_changes_only_source_index(tmp_path, arxiv):
     registry, manifest, binding = existing_source_fixture(tmp_path, arxiv=arxiv)
@@ -905,4 +942,10 @@ def test_production_bindings_keep_vor_and_historical_source_holds():
         )
         assert binding["source_version_id"] != binding["bibliographic_version_id"]
         assert binding["source_version_type"] == "accepted_manuscript"
-    assert len([work for work in registry["works"] if work.get("source_hold")]) == 2
+    held_work_ids = {
+        work["work_id"] for work in registry["works"] if work.get("source_hold")
+    }
+    assert {
+        registry["record_index"][key]["work_id"] for key in ("CHJQ52DC", "Y4BMCI2J")
+    } <= held_work_ids
+    assert "work:8e01ec71-65ff-5273-b5b9-a582fec48008" in held_work_ids

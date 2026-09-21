@@ -1,0 +1,33 @@
+{
+  "schema": "femprompt-source-version-binding-independent-review/1.0",
+  "record_id": "A2P8MXMY",
+  "candidate_path": "generated/knowledge-completion-20260921/source-version-binding-candidates.json",
+  "candidate_sha256": "sha256:fab75cb09a51fc82b6f972c1eeb0bbdb681e33ce72b74ccaac3b78e9fad69598",
+  "source_path": "generated/markdown_clean/A2P8MXMY.md",
+  "source_sha256": "sha256:d32cb4bb6e523b1930be2d9ff12d1b78ef1790886d02c13a2014c56e0ca0b025",
+  "reviewed_at": "2026-09-21T18:16:48.881155Z",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Independent source-identity review only. This receipt grants no scholarly verification, screening authority or publication authority.",
+  "findings": [
+    {
+      "location": "Source page 1, article heading",
+      "finding": "The unchanged local conversion contains the exact registered article title and sole author."
+    },
+    {
+      "location": "Source page 1, publication line",
+      "finding": "The source states Received 5 August 2019, Accepted 26 September 2019 and Published 8 October 2019."
+    },
+    {
+      "location": "Source page 1, journal footer",
+      "finding": "The source identifies Social Sciences 2019, volume 8, article 281 and DOI 10.3390/socsci8100281. The spaced Docling representation normalizes to the exact registered DOI."
+    },
+    {
+      "location": "Candidate publisher evidence",
+      "finding": "The unhashed external publisher-page assertion is not needed for acceptance because the bound local Version-of-Record page itself supplies title, author, publication date, journal citation and DOI."
+    }
+  ]
+}

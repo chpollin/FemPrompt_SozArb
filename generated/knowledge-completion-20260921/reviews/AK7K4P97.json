@@ -1,0 +1,27 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "AK7K4P97",
+  "knowledge_document": "research-vault/20_distillates/publications/epic-model-ai-social-work.md",
+  "knowledge_document_sha256": "sha256:1687218866347b0bc127dbd94d37068133760ce2f6c8f315f1cedec2436f992e",
+  "source_path": "generated/markdown_clean/Baker_2025_Artificial_intelligence_in_social_work_An_EPIC.md",
+  "source_sha256": "sha256:f49c7419289238b9d1e01a8547e2f1181b34ea9d02537a37f2c4eebd7202c99e",
+  "reviewed_at": "2026-09-21T19:08:03Z",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Independent source-bound review of identity, research question, method, findings, limitations, quotations and category relevance. This receipt grants no human verification or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Core statements; Method and scope; Limitations",
+      "finding": "The EPIC components, conceptual scope and need for empirical implementation research agree with the exact bound source. The quotations resolve exactly."
+    },
+    {
+      "severity": "note",
+      "location": "Source identity",
+      "finding": "The artifact_hash-normalized source hash matches the canonical source binding. The differing raw-byte SHA-256 results from line-ending normalization and is not an identity conflict."
+    }
+  ]
+}

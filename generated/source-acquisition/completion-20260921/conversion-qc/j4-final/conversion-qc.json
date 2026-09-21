@@ -1,0 +1,59 @@
+{
+  "schema": "femprompt-conversion-qc/0.1",
+  "created_at": "2026-09-21T19:24:28.106859+00:00",
+  "scope": "Independent final visual and textual review of the J4K3XA52 reading representation against the Version of Record PDF. This QC grants no scientific acceptance, screening decision, registry authority, Knowledge Document authority, human verification, or publication authority.",
+  "reviewer": {
+    "agent_id": "/root/knowledge_completion",
+    "model": "gpt-5.6-sol"
+  },
+  "method": [
+    "Verified the final reading, repair manifest, prior reviewed source, PDF, and inspection-artifact hashes with src.assess.artifact_verification.artifact_hash.",
+    "Compared the final reading with the previously reviewed J4K3XA52-repaired.md. The only source-body change is the reconstruction of Table 9; other differences are provenance metadata and the repair note.",
+    "Re-inspected original PDF page 10 at full rendered resolution and compared all five printed Male and Female example pairs with the final Markdown cells.",
+    "Retained the earlier independent checks of Equations 1 through 3, all 66 Table 5 data rows, and Tables 1 through 8 because the diff proves those source-body regions are byte-identical to the independently reviewed representation."
+  ],
+  "records": [
+    {
+      "record_id": "J4K3XA52",
+      "pdf_path": "generated/pdfs/completion-20260921/oa-batch/J4K3XA52.pdf",
+      "pdf_sha256": "sha256:ed1fce4e7bfae9a79230ded8be149df1552b39f4807c176b463a4e0a38c92c1a",
+      "markdown_path": "corpus/source-acquisition/completion-20260921/J4K3XA52-reading.md",
+      "markdown_sha256": "sha256:c7f0d251037326c79a930f63ae0de319b8336f7081326bc48ee906f0eace57c2",
+      "repair_manifest_path": "generated/source-acquisition/completion-20260921/conversion-qc/J4K3XA52-reading-repair-manifest.json",
+      "repair_manifest_sha256": "sha256:7b2c4c3d27993a56fb35b6ba4f763aee9e00a82d70c9bbae1a538d2154cbb23a",
+      "previous_reviewed_markdown_path": "corpus/source-acquisition/completion-20260921/J4K3XA52-repaired.md",
+      "previous_reviewed_markdown_sha256": "sha256:e9f9dce39b5b812d346e48d4d5ff42f63c0c67b4d39f06145ee1f7f81a77b633",
+      "pages_total": 14,
+      "pages_visually_inspected": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+      "result": "accepted_for_text_assessment",
+      "structure": {
+        "headings": "Article headings and reading order remain readable and unchanged from the reviewed representation.",
+        "formulas": "Equations 1 through 3 retain the independently checked counterfactual-fairness equality, mixed-effects sentiment specification, and Poisson word-count specification.",
+        "tables": "Tables 1 through 8 retain their independently checked rows and cells. Table 9 now preserves the five distinct paired examples printed on PDF page 10: carers, Mental Health Act, underweight, reassessment after a fall with fractured neck, and hospitalisation with delirium, chest infection, and Covid-19.",
+        "figures": "The article contains no argument-bearing figures. Existing image placeholders represent publisher or supplementary graphic matter."
+      },
+      "correction_to_previous_qc": "The earlier j4-repaired QC incorrectly stated that source Table 9 contained three paired rows and proposed merging line fragments into three pairs. Direct re-inspection of PDF page 10 establishes five distinct Male and Female example pairs. The final reading correctly preserves all five and restores the omitted endings 'fractured bone in his neck' and 'healthcare needs'.",
+      "verified_repairs": [
+        "The carers pair matches the first printed row.",
+        "The Mental Health Act and Specialist Clinical Nurse pair matches the second printed row.",
+        "The underweight and inadequate-food-intake pair matches the third printed row without a false line-break row.",
+        "The reassessment pair matches the fourth printed row and restores the fractured-neck and healthcare-needs endings.",
+        "The hospitalisation pair matches the fifth printed row and retains delirium, chest infection, Covid-19, and subsequent health complications.",
+        "Equations 1 through 3, Table 5, and Tables 1 through 8 are unchanged from the prior independently checked source body."
+      ],
+      "losses": [
+        "The reading remains a linearised representation and does not reproduce publisher typography, column layout, or visual table styling.",
+        "Minor spacing and source-conversion artifacts remain elsewhere in the unchanged prose.",
+        "Acceptance is limited to conversion fidelity for text assessment and does not establish scholarly verification or publication approval."
+      ],
+      "assessment": "The five Table 9 pairs now match the publisher PDF, and the previously verified formula and table repairs remain unchanged. The representation is accepted for text assessment within the stated layout and copy-editing limits.",
+      "inspection_artifacts": [
+        {
+          "path": "generated/source-acquisition/completion-20260921/conversion-qc/oa-review/J4K3XA52-contact-sheet.jpg",
+          "sha256": "sha256:834b08110b9e4d995bf9e3fda422543dcd7dbb54a56ad3fc074af3285cab11f3",
+          "purpose": "all-page visual contact sheet; the retained full page-10 render was used to verify the five Table 9 pairs"
+        }
+      ]
+    }
+  ]
+}

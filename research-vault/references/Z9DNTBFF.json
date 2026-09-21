@@ -1,0 +1,16 @@
+{
+  "id": "Z9DNTBFF",
+  "type": "paper-conference",
+  "title": "Worst of Both Worlds: Biases Compound in Pre-trained Vision-and-Language Models",
+  "author": [
+    { "family": "Srinivasan", "given": "Tejas" },
+    { "family": "Bisk", "given": "Yonatan" }
+  ],
+  "issued": { "date-parts": [[2022, 7]] },
+  "container-title": "Proceedings of the 4th Workshop on Gender Bias in Natural Language Processing (GeBNLP)",
+  "page": "77-85",
+  "publisher": "Association for Computational Linguistics",
+  "DOI": "10.18653/v1/2022.gebnlp-1.10",
+  "URL": "https://aclanthology.org/2022.gebnlp-1.10/",
+  "note": "Source-bound Version of Record identity. Title, authors, date and identifier follow the attributed metadata correction and ACL primary source."
+}

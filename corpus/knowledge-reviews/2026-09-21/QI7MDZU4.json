@@ -1,0 +1,52 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "QI7MDZU4",
+  "knowledge_document": "research-vault/20_distillates/publications/insideout-cultural-bias-interview-generation.md",
+  "knowledge_document_sha256": "sha256:4c5e042cc7eb2cbfff3eeb3bcb7b397bad43a6394c7dc43c29fa86ed6bafc006",
+  "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/c42b463f9ba115503a58.md",
+  "source_sha256": "sha256:e37a2f6c550e965d331c0b9f2b4d4a8bc316f17bc14b65bf14d54fc233e46f56",
+  "reviewed_at": "2026-09-21T19:01:14.722488Z",
+  "reviewer": {
+    "agent_id": "/root/source_completion",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Independent full-text, source-bound review of statements, method, category relevance, quotations and conversion limits. This receipt grants no human verification, screening-state change, domain-expert verification or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Core statements; Research question and method",
+      "finding": "Both quotations resolve exactly. The source supports 4,000 prompts across ten cultures, five evaluated models, three metrics and a 500-prompt mitigation subset. The stated 88%, 89.70% and 82.54% results are reported for the named conditions."
+    },
+    {
+      "severity": "note",
+      "location": "Assessment relevance",
+      "finding": "Generative_KI and Prompting follow from interview-script generation and inference-time FIP/MFA interventions. Bias_Ungleichheit, Diversitaet and Fairness follow from the explicitly measured cultural insider-outsider disparity and mitigation; Gender and Soziale_Arbeit are correctly excluded as study domains."
+    },
+    {
+      "severity": "note",
+      "location": "Limitations; conversion boundary",
+      "finding": "The limited culture set, text-only output, absent systematic multilingual analysis and scale constraints are source-grounded. Several appendix formulas are undecoded, but the reviewed benchmark and mitigation claims resolve in prose and linearised tables and do not rely on those formulas."
+    }
+  ],
+  "validated_subject": {
+    "validated_at": "2026-09-21T19:05:56.027382+00:00",
+    "validator": "/root integration; document and source hashes plus literal quotation checks",
+    "body_sha256": "sha256:f5a1e98cb4f582a98bab848334f2f4f40e8d7e2e25b81b6208188a67c3f54edb",
+    "source_metadata": {
+      "record-id": "QI7MDZU4",
+      "work-id": "work:2707a834-08fe-5819-a92c-4afb47ca08c5",
+      "version-id": "version:6a3c613d-1545-5827-95d0-8ee4a95e5256",
+      "version-type": "version_of_record",
+      "source-representation": {
+        "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/c42b463f9ba115503a58.md",
+        "sha256": "sha256:e37a2f6c550e965d331c0b9f2b4d4a8bc316f17bc14b65bf14d54fc233e46f56",
+        "version-id": "version:6a3c613d-1545-5827-95d0-8ee4a95e5256",
+        "version-type": "version_of_record",
+        "source-url": "https://aclanthology.org/2026.acl-long.1094/",
+        "is-preferred-version": true,
+        "boundary": "The preparing agent read the complete hash-bound ACL proceedings Markdown representation and checked the quoted passages. No separate scholarly review has occurred."
+      }
+    }
+  }
+}

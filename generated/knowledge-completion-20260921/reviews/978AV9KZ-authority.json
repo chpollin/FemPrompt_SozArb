@@ -1,0 +1,32 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "978AV9KZ",
+  "knowledge_document": "research-vault/20_distillates/publications/978av9kz-defeating-nondeterminism-llm-inference.md",
+  "knowledge_document_sha256": "sha256:d79f10ff5a4c866f84ecb28dc4247f210d2f6e35d79381a3bbd4650fce978832",
+  "source_path": "generated/markdown_clean/FTJM5R8N.md",
+  "source_sha256": "sha256:06cb8ae6cbf58054af2449750c5eb0512a425262cd1e77be1ff27a2fbc102fd8",
+  "reviewed_at": "2026-09-21T18:38:31.601060Z",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Administrative follow-up review of the authority wording and preservation of the previously source-reviewed substantive content. This receipt grants no human verification or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Substantive sections before Review boundary",
+      "finding": "The source-reviewed substantive statements, method, findings, limitations, quotations and category relevance are unchanged from the accepted prior-review artifact. The current source artifact still matches its reviewed hash."
+    },
+    {
+      "severity": "note",
+      "location": "Review boundary and frontmatter authority fields",
+      "finding": "The revised boundary now delegates the current review state to the frontmatter and receipt while retaining the explicit domain-expert-verification and publication-approval boundary. Administrative authority metadata does not alter the scholarly claims."
+    },
+    {
+      "severity": "note",
+      "location": "Prior review provenance",
+      "finding": "Compared against accepted receipt corpus/knowledge-reviews/2026-09-21/978AV9KZ-initial.json and the exact prior artifact hash recorded there."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "D267IQ4C",
+  "knowledge_document": "research-vault/20_distillates/publications/generative-ai-youth-mental-health-apps.md",
+  "knowledge_document_sha256": "sha256:4e5e14971db83585f00ac3e62510840fbea96569ad9fee228040839a0a625db9",
+  "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/926800fc523bebd0420c.md",
+  "source_sha256": "sha256:dbf3a15387a52c3c622dbdaabfd358396a89b16c6b73db6e65f2ecf82d3f355d",
+  "reviewed_at": "2026-09-21T18:40:45.808527Z",
+  "reviewer": {
+    "agent_id": "/root/source_preparation",
+    "model": "gpt-5.6-sol"
+  },
+  "result": "accepted",
+  "scope": "Independent source-bound follow-up review of the corrected knowledge document, including identity, method, findings, limitations, quotations, category relevance and authority boundary. This receipt grants no human verification or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Assessment relevance",
+      "finding": "The earlier KI_Sonstige and Diversitaet overcoding has been removed. Generative_KI is the sole asserted category and is directly supported by the rapid-review scope."
+    },
+    {
+      "severity": "note",
+      "location": "Research question and method; Main findings; Limitations; Quotations",
+      "finding": "The five-study evidence base, age range, database window, chatbot predominance and limited heterogeneous outcome evidence agree with the source. Both quotations resolve exactly."
+    }
+  ]
+}
