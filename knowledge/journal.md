@@ -24,6 +24,10 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## PRISM and the epistemic infrastructure (2026)
 
+### 2026-09-21: Define controlled completion of the literature preparation
+
+The operator requested an explicit completion plan after clarification that Zotero membership, Markdown availability, knowledge documents and PRISM usability were incomplete. [[plan#Controlled corpus completion]] now defines the target scope, ordered acceptance checks, bounded subagent responsibilities and a first batch based on the documented bibliographic conflicts. Missing sources remain gaps, while technical preparation, AI review and domain-expert verification retain separate completion claims. [[handoff]] points to this sequence. The current literature-readiness inventory was checked before planning. No Zotero records, source representations or assessments were changed in this planning step.
+
 ### 2026-09-21: Make the README a compact research introduction
 
 The README now introduces the research purpose, available materials, method and data flow, with a short explanation of Promptotyping and one documentation entry point. Technical setup, preview and deployment instructions now live in [[testing]], and [[methods]] links there. The introduction retains the distinction between AI source review and domain-expert verification, the incomplete corpus and manuscript state, bibliographic attribution and licences. Tables, the directory tree and internal implementation details were removed from the entry page. The former project URL failed DNS resolution, so the README now links to the current project site identified by the University of Graz. Relative links and heading anchors, the documentation routing, prose style and build freshness were checked.

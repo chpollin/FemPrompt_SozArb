@@ -30,7 +30,7 @@ The live Zotero imports of 2026-09-21 cover the prepared packages and the missin
 
 ## Continuation point
 
-The operator authorised additive Zotero writes and completion of the source and knowledge-document coverage on 2026-09-21. [[plan#Authorised additive Zotero import]] governs local snapshots and receipts. Continue with the unresolved source-version matches and the remaining source-specific distillates. The preparation state in [[research-vault]] permits attributed, unreviewed documents while preserving separate source review and expert verification. Rebuild with `npm run build` after changes, and screen source-ready works under [[update-protocol#Agent-assisted completion]].
+The operator authorised additive Zotero writes and completion of the source and knowledge-document coverage on 2026-09-21. [[plan#Authorised additive Zotero import]] governs local snapshots and receipts. Follow [[plan#Controlled corpus completion]], starting with the documented bibliographic conflicts as a bounded end-to-end batch before extending the procedure across the remaining corpus. The preparation state in [[research-vault]] permits attributed, unreviewed documents while preserving separate source review and expert verification. Rebuild with `npm run build` after changes, and screen source-ready works under [[update-protocol#Agent-assisted completion]].
 
 Completed steps stay closed. The run `recovered-arxiv-sources-2-20260905` finished source binding, isolated coding and separate AI Agent Review for its two recovered arXiv sources. The mitigation-stage clarification in [[update-protocol#Source-review clarification, 5 September 2026]] and the correction batches under `generated/verification/` are documented and need no blanket manual repetition.
 

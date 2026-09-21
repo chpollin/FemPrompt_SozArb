@@ -45,6 +45,38 @@ The project reaches completion when the following conditions hold.
 7. Each public artifact meets its explicit release policy; the final scholarly manuscript additionally has a human publication-approval event. Preliminary AI-source-reviewed results retain their own attributed review basis.
 8. The repository documents a reproducible setup path for a subsequent update or another review corpus.
 
+## Controlled corpus completion
+
+The immediate goal is complete, inspectable preparation for assessment in PRISM across the existing corpus and prepared intake. A source is ready when its live Zotero identity, exact reading version, checked Markdown representation and source-linked knowledge document resolve together in the tool. Completed scholarly coding and domain-expert verification are separate achievements under [[update-protocol#Agent-assisted completion]]. Planning this sequence does not execute external writes or grant publication approval.
+
+### Scope and evidence
+
+Use the existing literature-readiness inventory and completion queues as the working register. Reconcile them with a fresh Zotero observation before execution. Every intended publication retains its live keys, historical aliases, exact reading version, available artifacts and concrete unresolved issue. Bibliographic records of the same verified publication version may share a reading text and knowledge document. Preprints and published versions retain their distinct source identities. A historical exclusion does not silently remove a work from the requested preparation scope.
+
+Missing access, an unresolved identity or a withdrawn source remains an explicit gap. Recording the reason does not establish completed preparation. Any narrowed target corpus must be an explicit scope decision. Existing source holds under [[#Works with conflicts or holds]] remain binding.
+
+### Sequence and acceptance checks
+
+1. Establish the baseline. Reconcile live Zotero membership, Work-Version identities, available full texts, existing Markdown, knowledge documents and PRISM links. Acceptance requires every intended record to appear once in the register, with aliases distinguished from distinct versions. Preserve the dated baseline and identify the next missing artifact or decision per item.
+
+2. Correct the bibliography. Compare disputed titles, author lists, identifiers and dates with publication sources. Distinguish online publication dates from issue dates. Prepare field-level corrections with old values, proposed values and source evidence, beginning with the documented conflicts under [[#Source and corpus readiness]]. Existing-item changes require a separately scoped apply operation beyond the creation-only importer described under [[#Authorised additive Zotero import]]. Each applied correction must check the current library version and be read back. Preserve annotation identities and record duplicate relationships without silently deleting or merging records. Acceptance requires agreement between the verified bibliography, live Zotero data and canonical projection for the affected item.
+
+3. Obtain the exact reading sources. Reuse existing attachments and acquisition evidence before seeking publisher or repository copies. Record the acquired publication version separately from the preferred bibliographic version, along with its origin and content hash. Acceptance requires source identity supported by the document and publication metadata. If access or identity remains unresolved, record the concrete missing source or decision and continue with other eligible works.
+
+4. Prepare Markdown and check conversion fidelity. Reuse valid conversions and run Docling for missing or unsuitable ones. Inspect the resulting text against the source, including headings, reading order, tables and figures where they carry an argument. Retain source files, original conversions and attributed repairs separately. Acceptance requires a readable representation with exact source provenance and no unresolved conversion loss that would affect assessment. A successful converter exit alone is insufficient. Visual evidence that PRISM cannot yet represent remains a separate implementation dependency.
+
+5. Complete source-specific knowledge documents. Recover a historical document only when its source identity can be verified. Create or revise the document from the checked full text, covering the research question, method, findings, limitations and category-relevant evidence. Check literal quotations and their locations. Record the producer and actual review state. A separate agent reviews the draft against the source before recording AI review. Acceptance requires a valid document linked to the exact reading version and an explicit review result. Technical validation never grants domain-expert verification.
+
+6. Integrate and exercise PRISM. Rebuild the corpus and reading projections. Check every intended record for the correct source, knowledge document and ten-category schema. Unassessed categories remain unset. Check representative browser cases for reading, evidence capture, assessment, saving, export and reload in an isolated trial. Acceptance requires the complete per-record integrity check and the applicable browser and automated tests. A record shown in the corpus or an abstract-only assessment does not establish full-text or knowledge-document completeness.
+
+7. Reconcile the finished batch and the full corpus. Read back the affected Zotero records and rebuild the inventory. Compare expected records, version relationships and artifacts with the baseline. Report source availability, Markdown QC, knowledge-document review and PRISM usability separately. Declare complete preparation only when every intended publication version satisfies the preceding conditions. Remaining gaps and required inputs must be named explicitly. Scholarly assessment and publication follow their own existing contracts.
+
+### Execution with subagents
+
+Use the requested gpt-5.6-sol subagents for bounded assignments. Source and metadata work precedes dependent knowledge preparation. A separate reviewer checks knowledge drafts and source support. The main agent owns canonical registry and PRISM integration, verifies delegated results against real artifacts and resolves cross-file dependencies. Agents receive explicit record lists, permitted write paths and source references. Concurrent assignments use separate files, and no agent changes shared registries independently. If the requested model is unavailable, report the capacity limit and defer that assignment or perform explicitly attributed main-agent work without silently switching the delegated model.
+
+Begin with the already documented author and publication-date conflicts as a bounded end-to-end batch. Confirm its Zotero, source, Markdown, knowledge-document and PRISM checks before extending the same procedure to other works. After each batch, state what was actually verified, what remains blocked and the concrete source or decision needed to proceed. Preserve valid earlier work and immutable historical annotations. Push, merge and deployment retain the existing owner-controlled boundary.
+
 ## Remaining work
 
 ### Source and corpus readiness
