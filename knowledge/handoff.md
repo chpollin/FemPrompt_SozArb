@@ -20,54 +20,97 @@ related: [INDEX, plan, journal, governance, verification, testing]
 
 ## Current result
 
-The knowledge curation removes completed provenance tasks and the resolved first-batch instruction from [[plan]]. Zotero commands now live in [[methods#Zotero reconciliation and import]], and the existing write authority lives in [[governance#Authorised additive Zotero import]]. Project criteria describe the accepted statement-level scope without claiming its implementation. The historical publication ADR retains its original effect and links to the current policy. Research artifacts and review receipts retain their recorded content.
+Continue on `refactor/provenance-readiness`, tracking `origin/refactor/provenance-readiness`. The implementation and knowledge curation through commit `dc4816b` were pushed and the remote hash was verified on 22 September 2026. This branch also contains the preceding repository consolidation and source-preparation work. Checking out `main` alone does not retrieve the latest changes. No result-site deployment was performed during this work.
 
-The follow-up branch `refactor/provenance-readiness` preserves conversion-review attribution, time, scope and checked file identities in the literature-readiness JSON and CSV. The completion projection reconciles candidate identifiers with the canonical registry and dated Zotero membership. Title-derived matches cannot establish a bibliographic Version, and conflicting or ambiguous matches remain unbound. Reading-source readiness and review authority retain their existing checks.
+The technical refactor and repository knowledge curation are complete within their recorded scope. The literature review, full-corpus preparation and manuscript remain unfinished. [[plan]] owns remaining work, [[verification]] owns the evidence and authority register, and [[journal]] preserves the detailed decision history.
 
-The operator accepts human verification of individual statements or fields and selected comparative literature synthesis as the first analytical output. [[governance#Verification scope decision, 22 September 2026]] and [[research-vault#Comparative synthesis scope]] record those decisions. Field-level human review and its PRISM interface still require implementation under [[plan#Provenance and verification alignment]]. The substantive question answered by a field acceptance and the public projection of mixed-authority content remain to be defined. Existing publication rules remain active.
+## Agreed goals and remaining work
 
-Local `main` inspected on 2026-09-22 contains the Zotero integration, source-bound preparation and repository consolidation. The additional FemPrompt worktrees have been removed after their local source files were copied and verified by SHA-256. Their histories remain reachable from `main`. Full-text preparation now shares registry and binding inputs within each invocation, and knowledge projection indexes aliases by exact Work-Version identity. [[data#Local source preservation]] records the retained source locations. These changes have not been pushed or deployed.
+The following goals describe the project rather than completed achievements. Current item-level evidence lives in the [completion package](../generated/completion/README.md) and `generated/literature-readiness.json`.
 
-The constructive project review of 2026-09-05 is implemented on this line. It comprises canonical Work aggregation, derived inventory and rates, consistent downloads, source-bound Assertion retrieval, attributed AI review receipts, immutable analysis corrections, and an allowlisted preliminary result site. [[project-review-2026-09-05]] records the findings and their remedies, [[governance#Publication boundary]] the release rule. The productive agent track `docs/data/screening/ar2.json` stands at `ai-agent-reviewed`. No record carries domain-expert verification or publication approval.
+| Goal | Established work | Remaining work and canonical owner |
+|---|---|---|
+| Make the AI-assisted research process traceable | Governed runs distinguish human, AI-agent and software contributions. Review projections retain attribution, scope and source identities | Implement human review of individual statements or fields, with content and evidence dependencies. [[governance]] and [[plan#Provenance and verification alignment]] |
+| Prepare the intended literature corpus | Zotero imports, canonical membership, Work-Version identities and source-backed metadata corrections are recorded | Resolve remaining source access, identity, exact reading-Version and conversion gaps. [[plan#Source and corpus readiness]] |
+| Provide reliable reading material and source-specific knowledge | Checked representations, attributed active distillates and independent source-review receipts exist for a subset | Complete the intended coverage and retain explicit losses in figures, tables and formulas. [[research-vault]] and [[data#Knowledge-document coverage]] |
+| Annotate the corpus with source evidence | The agent workflow provides isolated coding, deterministic PRISM transfer and separate AI Agent Review | Process newly source-ready works and unresolved or invalidated coding. [[update-protocol#Agent-assisted completion]] |
+| Provide PRISM as a usable research tool | Reading, evidence capture, correction, storage, export and reload have technical test coverage | Implement field-level verification and conduct an acceptance session with domain experts. Native folder permission and physical saving still need the manual environment check. [[specification]] and [[testing#Manual acceptance boundary]] |
+| Compare prompting techniques and their evidence | Controlled analysis fields, descriptive tables and initial source-linked Assertions exist | Compare proposed, demonstrated and evaluated uses across tasks and study conditions. [[research-vault#Comparative synthesis scope]] |
+| Analyse bias, harms and mitigation | Coding vocabulary and preliminary descriptive projections exist | Develop source-grounded comparisons of harm mechanisms, intervention points, reported effects and limitations. [[update-protocol#Analysis coding]] |
+| Identify requirements specific to social work | Analysis fields cover populations, practice contexts and domain constraints | Synthesize institutional conditions, affected groups and gaps in general prompting guidance. [[project#Research questions]] |
+| Enable and conduct domain-expert verification | Whole-record verification is implemented. Statement- or field-level verification is accepted as the target scope | Implement that scope and have experts verify the specific findings and interpretations used. Existing AI reviews confer no human authority. [[governance#Verification scope decision, 22 September 2026]] |
+| Produce a source-grounded literature report | A report structure and initial grounded findings exist | Complete comparative synthesis, contradictory evidence and research gaps through the shared Assertion layer. `research-vault/40_output/literature-report/` |
+| Finish the scholarly result paper | One canonical manuscript draft exists | Integrate the completed findings, verify substantive claims and interpretation, and obtain a decision on authorship, venue and final submission. `research-vault/40_output/paper/paper.md` |
+| Make results reproducible with their actual review status | The build, round-one replay and policy-filtered preliminary AI-reviewed result projection are implemented | Define publication of mixed-authority content before changing the publisher. Preserve historical review and approval events. [[governance#Publication boundary]] and [[testing]] |
 
-The literature review and the manuscript are unfinished. `generated/completion/README.md` holds the current quantities and the per-work and per-candidate queues, and [[plan]] lists the remaining work.
+## Decisions to preserve
 
-The live Zotero imports of 2026-09-21 cover the prepared packages and the missing historical references. Every successful creation was read back. Existing group entries remained unchanged during those imports. The subsequent controlled completion corrected the source-verified title of `SHJQQTI6` through a separately scoped operation and preserved its other fields. The canonical corpus preserves the original raw records and appends the live additions, retaining hash-bound corrections and historical annotation keys. `corpus/zotero_sync.json` records live membership and reconciled historical aliases. PRISM projects the complete corpus and leaves newly admitted, unassessed categories unset. [[data]] defines this distinction.
+- Human verification may cover an individual statement or field. Acceptance applies only to the named content and its checked evidence basis. It does not verify the containing document or a derived interpretation automatically.
+- The first analytical output is comparative literature synthesis. Reported findings, study conditions, contradictions and limitations can be prepared now. Practice recommendations require a separate decision and appraisal of study quality and transfer conditions.
+- The substantive question answered by a field acceptance remains to be clarified, including faithful source coding and further scholarly interpretation. Publication of records containing differently reviewed parts also remains to be defined.
+- Field-level verification is not yet implemented in PRISM. The current whole-record lifecycle and publication policy remain active. The proposal to remove an additional publication-approval step has not been implemented. Final manuscript submission remains an explicit human decision.
+- The operator authorised additive Zotero writes and controlled source preparation on 21 September 2026. [[governance#Authorised additive Zotero import]] preserves the creation-only scope and credential boundaries. Existing-item corrections require their own scoped operation.
+
+## Completed work to retain
+
+- The additional FemPrompt worktrees were consolidated after preserving and comparing local source bytes. Their histories are retained. Full-text preparation shares registry inputs within each invocation, and knowledge aliases resolve by exact Work-Version identity.
+- Source-backed bibliographic corrections and live Zotero additions were integrated while preserving historical raw records and annotation keys. Valid previous imports and reviews must not be repeated merely because older reports describe them as pending.
+- Conversion-review projections retain recorded reviewer, time, scope and checked file identities in JSON and CSV. Candidate completion uses exact selected-Version identifiers, keeps observed library membership separate and withholds conflicting or ambiguous bindings.
+- The knowledge curation removed completed tasks and duplicated instructions from the plan. Zotero commands now belong to [[methods#Zotero reconciliation and import]], authority to [[governance]], and evidence state to [[verification]]. Historical decisions retain their original meaning.
+- The run `recovered-arxiv-sources-2-20260905` and the recorded correction batches are complete within their scope. [[update-protocol#Source-review clarification, 5 September 2026]] remains applicable. Research data, original annotations and review receipts were preserved.
 
 ## Continuation point
 
-The operator authorised additive Zotero writes and completion of the source and knowledge-document coverage on 2026-09-21. [[governance#Authorised additive Zotero import]] governs local snapshots and receipts. Continue [[plan#Controlled corpus completion]] from the current inventory. The documented initial author conflicts have source-backed corrections, and the first source-to-PRISM batch has passed its checks. Recovered reading sources and independently reviewed knowledge documents are integrated. The dated acquisition evidence and knowledge-review receipts distinguish completed checks from remaining source, conversion and review gaps. The preparation state in [[research-vault]] permits attributed, unreviewed documents while preserving separate source review and expert verification. Rebuild with `npm run build` after changes, and screen source-ready works under [[update-protocol#Agent-assisted completion]].
+1. Restore the laptop checkout and run the checks below before interpreting missing generated files as research gaps.
+2. Read [[plan#Source and corpus readiness]] with the current completion and literature-readiness inventories. Select unresolved items and inspect their actual source files and valid receipts before acquiring, converting or reviewing material again. In particular, documented formula and figure losses and exact reading-Version gaps remain real work.
+3. Continue source preparation and knowledge-document coverage under [[plan#Controlled corpus completion]]. Screen eligible works under [[update-protocol#Agent-assisted completion]]. Source availability alone does not establish a completed annotation or review.
+4. Continue the field-verification implementation under [[plan#Provenance and verification alignment]], preserving the existing whole-record path. Resolve the open review meaning and mixed-authority publication questions before treating them as settled requirements.
+5. Prepare comparative analysis and source-linked Assertions using declared coverage and limitations. Domain experts must check the resulting scholarly claims before those claims receive human-verification status.
 
-Completed steps stay closed. The run `recovered-arxiv-sources-2-20260905` finished source binding, isolated coding and separate AI Agent Review for its two recovered arXiv sources. The mitigation-stage clarification in [[update-protocol#Source-review clarification, 5 September 2026]] and the correction batches under `generated/verification/` are documented and need no blanket manual repetition.
+Bounded `gpt-5.6-sol` assignments can prepare sources or knowledge drafts for explicit record lists, while a separate reviewer checks source support. The lead owns shared registry and PRISM integration and verifies delegated results against real artifacts. Source or withdrawal holds under [[plan#Works with conflicts or holds]] remain active across affected aliases. AI corrections remain immutable sidecars, and future Zotero exports must be reconciled with `corpus/metadata_corrections.json`.
 
-The works and separately registered aliases under a conflict or hold retain those restrictions. They are named in [[plan#Works with conflicts or holds]].
+## Laptop checkout and local material
 
-AI corrections retain the original annotations and carry a newly reviewed sidecar artifact. Local metadata corrections in `corpus/metadata_corrections.json` must be reconciled deliberately with any future Zotero export.
+Run these commands in the existing FemPrompt repository. Inspect `git status` first and preserve any laptop-only changes before switching. If the local branch has diverged, inspect the differing commits instead of resetting it.
 
-## Working in this clone
+```powershell
+git status
+git fetch origin
+git switch refactor/provenance-readiness
+git pull --ff-only
+```
 
-### Pending personal-vault alignment
+Install missing build dependencies through [[testing#Clean-checkout verification]]. For a new environment that procedure includes `python -m pip install -r requirements-build.txt`, `npm ci` and `npx playwright install chromium`. With dependencies available, run:
 
-A task started in the personal Obsidian vault must update `Projects/SocialAI/SocialAI Literature Review und PRISM.md`. Its PRISM section still says that the read-only entry has not reached local `main`. The inspected consolidation and browser checks recorded below establish the local implementation. They do not establish the deployed state. Replace that obsolete branch claim with the current behaviour and align the verification scope and comparative-synthesis description with [[governance]] and [[research-vault]]. Check the related `Projects/SocialAI/Project Overview SocialAI.md` and `Projects/SocialAI/SocialAI Paper-Pipeline.md` for the same conceptual decisions. Preserve the final manuscript submission decision and historical case study. These files were read but remain unchanged because this session started outside the vault.
+```powershell
+npm run build
+npm run check
+npm run preview
+```
 
-### Reproduction and local sources
+The build reconstructs ignored reading projections and needs no external API key. Open PRISM at `http://127.0.0.1:8870/prisma.html` and the Companion at `http://127.0.0.1:8870/index.html`. The generated result view is served at `/results/index.html`. Follow [[testing]] for additional checks appropriate to later changes.
 
-`knowledge/project.md` is a hash-bound input of `generated/build-manifest.json` and of the completion package. A change to that file requires `npm run build` and a commit of the regenerated artifacts, otherwise `npm run check:data` fails.
+| Material | Availability after checkout |
+|---|---|
+| Versioned code, project knowledge, research data, reviewed source representations and committed receipts | Retrieved through Git on the named branch |
+| Generated reading layer, readiness inventories and local result site | Rebuilt by `npm run build` |
+| Original PDFs and local acquisition evidence under `pipeline/`, `generated/pdfs/` and ignored portions of `generated/source-acquisition/` | Require a separate private transfer if absent on the laptop. Preserve relative paths and compare the relevant recorded hashes before source review |
+| `generated/local-source-preservation/` and the private `refactor-preservation/` inventory in the Git common directory | Local preservation material, absent from an ordinary checkout. [[data#Local source preservation]] records its role |
+| `generated/zotero-sync/`, local credentials and `.vault_cache/` | Not transferred by Git. Preserve private receipts separately, provision credentials locally when needed, and do not commit these materials |
+| Personal Obsidian vault | A separate working copy requiring its own synchronization |
 
-A fresh clone lacks the ignored local reading layer under `docs/data/fulltext/`. `npm run check:data` and `python -m src.analysis.build_completion_package --check` therefore fail until `npm run build` has reconstructed it. The build needs no network access and no API key. Setup and gates are described in [[testing#Clean-checkout verification]].
+A successful build from versioned representations does not establish that original PDFs are available for further visual review. No private source transfer to the laptop was performed in this session. A change to `knowledge/project.md` requires a rebuild because it is a hash-bound build input.
 
-`npm run preview` serves the working application from `docs/` with the Evidence Companion at `/index.html` and PRISM at `/prisma.html`. The generated result export is available under `/results/index.html`. PRISM opens in read mode, and `Bearbeiten` enables reviewer setup, annotation and saving.
+## Pending personal-vault alignment
 
-Third-party PDF binaries remain under the ignored local source directory. Their verified SHA-256 values are retained in the acquisition manifests. Versioned Markdown, repairs, visual assets, source audits and readiness records provide the reproducible repository state.
+A task started in the personal Obsidian vault must update `Projects/SocialAI/SocialAI Literature Review und PRISM.md`. Replace the obsolete assertion that read-only PRISM has not reached local `main`, and align verification granularity and comparative synthesis with [[governance]] and [[research-vault]]. The local implementation and its tests are established. The deployed state was not checked during this handoff.
+
+Check `Projects/SocialAI/Project Overview SocialAI.md` and `Projects/SocialAI/SocialAI Paper-Pipeline.md` against the same decisions. Preserve the final manuscript submission decision and the historical case study. These vault documents were read but remain unchanged under the outside-vault write boundary.
 
 ## Verification state
 
-The knowledge curation passed the complete build and project checks, including the result-site browser suite. The lead checked the subagent's findings against the actual diff and corrected the import credential explanation. Changed local references, frontmatter and prose were reviewed. Protected research inputs and review receipts retain their byte hashes, and generated completion differences are confined to the changed project-input fingerprint and source manifest. The personal-vault alignment above remains unperformed.
+The implementation and knowledge curation passed the full build, freshness checks, JavaScript and Python suites and result-site browser tests. The consolidation also passed the Companion browser checks, PRISM pilot and tracked-only checkout reproduction. Targeted Python lint and formatting checks passed for the changed code. Independent review findings were corrected and the lead checked the resulting files. [[journal]] retains the distinct verification rounds.
 
-The provenance-readiness changes passed the full build, freshness check, JavaScript and Python suites, result-site browser tests, targeted Ruff rules and formatting checks. Independent review found and resolved a title-match identity error before acceptance. The build-manifest comparison confines output changes to completion and literature-readiness projections. Original research inputs and review receipts remain byte-identical to the pre-change snapshot. Knowledge links and the revised prose were checked. No new human verification or publication-policy migration was performed.
+Protected research inputs and review receipts retained their byte hashes. The documentation curation changed generated completion data only through the updated project-input fingerprint. Local reference checks and the prose self-check cover the revised knowledge documents. These checks establish technical behaviour and preservation, not domain-expert acceptance.
 
-The consolidation check of 2026-09-22 passed the complete build, project checks, Companion browser checks and PRISM pilot. Repeated builds produced identical manifests, and a Git archive export without private PDFs, credentials or caches reproduced the same manifest and passed the same suites. Research projections remained unchanged, and original research files and retained local sources matched their recorded byte hashes. The local preview served PRISM, the Companion and the result export successfully. These observations establish local technical behaviour. The native folder permission check of `tests/manual-checklist.md` and scholarly verification by domain experts remain open. [[verification]] holds the authority state per claim family.
-
-The previously reported missing-document failure was traced to Windows path length handling. The documents existed, and the download and projection helpers now read their extended paths. Source and knowledge-document checks also exposed historical title-based mislinks, which are withheld or replaced by hash-bound recoveries. The importer retains the existing script-pipeline layout and dependency setup. No package migration or type-checker configuration was introduced. The latest [[journal]] entry records the completed integration checks.
-
-The clean installation reported an existing `npm audit` advisory for the indirect development dependency `undici`. Its lockfile entry was unchanged by this refactor. Dependency remediation remains separate from the verified source-preparation changes.
+The native browser folder permission and physical-write check, expert usability acceptance and outstanding scholarly verification remain open. The earlier clean dependency installation reported an `undici` development-dependency advisory, recorded in [[journal]]. No dependency remediation, new human review or deployment was performed by this documentation work.
