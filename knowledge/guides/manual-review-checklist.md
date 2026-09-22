@@ -10,7 +10,7 @@ status: complete
 language: en
 version: "0.6"
 created: 2026-02-06
-updated: 2026-09-05
+updated: 2026-09-22
 authors: [Christopher Pollin]
 generated-with: Claude Code, Codex (GPT-6)
 related: [methods, governance, testing]
@@ -29,7 +29,6 @@ This checklist supports the source-curation quality check for Docling Markdown w
 | Reviewer | |
 | Date | |
 | Review scope and source locators | |
-| Confidence score | /100 |
 | Automatic status | PASS / WARN / FAIL |
 
 ## 1. Structural integrity

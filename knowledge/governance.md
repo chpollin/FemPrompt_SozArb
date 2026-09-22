@@ -76,6 +76,14 @@ AI corrections live in immutable, attributed sidecar artifacts under `generated/
 
 Later negative reviews of a screening record or its correction family suppress earlier acceptances; they never reactivate an older coding. One attributed review session may reject the exact original and accept its hash-bound correction at the same timestamp when agent, model and original/base hash match. Other conflicting simultaneous family outcomes stop publication. Canonical projection permits only an explicitly checked mapping of missing or recognised matching legacy identifiers; foreign Work/Version evidence cannot be relabelled by attaching a receipt.
 
+## Authorised additive Zotero import
+
+The operator authorised agents to add missing prepared records to the `FemPrompt_SozArb` group on 21 September 2026. `src/acquire/zotero_group_import.py` implements creation-only writes using a key with read/write permission only for group `6080294`. Personal library and other group access remain disabled. Existing items are neither updated nor merged by this importer. The separate reconciliation tool retains its read-only credential contract.
+
+Each import uses a source-hash-bound plan and a consistent live library snapshot. Application checks the library version and reads back every creation. Uncertain writes stop with a receipt and require reconciliation before continuation. Existing-item corrections require their own explicitly scoped operation and evidence. [[methods#Zotero reconciliation and import]] owns the commands, matching rules and persistence procedure.
+
+Local snapshots, payload plans and receipts remain under ignored `generated/zotero-sync/` because they may contain private notes. The completed imports and the separately authorised title correction are documented in [[journal]]. The canonical corpus preserves original raw records and appends reconciled additions, while `corpus/zotero_sync.json` records membership and confirmed aliases. This authority grants bibliographic ingestion only.
+
 ## Targeted reconciliation and data maintenance
 
 The indexed AI-review ledger uses hash-pinned immutable batches. It resolves the complete positive and negative review history before applying the latest-outcome rule. A changed, missing, nested or duplicated batch fails validation; an unlisted new file cannot grant publication.

@@ -618,6 +618,8 @@ Effect. Schema 0.5, the deterministic lifecycle validator, the PRISM verificatio
 
 Status. Accepted and implemented on 2026-08-23.
 
+Current relation. The later [[governance#Publication boundary]] permits the separately authorised preliminary AI-source-reviewed projection. The effect below records the original publication gate. The whole-record lifecycle remains implemented, while [[governance#Verification scope decision, 22 September 2026]] defines the accepted field-level scope and its outstanding implementation.
+
 Context. The terms `validated`, `verified`, and Machine Review had carried overlapping meanings. A deterministic schema can establish formal conformance, an AI agent can assess source support, and a domain expert can judge scholarly correctness. Collapsing these operations into one status would overstate the authority of technical and AI-based checks and would make later expert corrections difficult to reconstruct.
 
 Decision. Deterministic scripts and schemas write artifact-local `checks`; they do not advance the lifecycle. Source-grounded assessment by an AI actor is named AI Agent Review and can establish `ai-agent-reviewed`. Domain experts record `accepted`, `corrected_and_accepted`, `changes_requested`, or `rejected`. The first two establish `verified`. A correction appends a complete annotation version with a field-level diff, reason, person, timestamp, and `supersedes`; the original agent annotation remains immutable. Publication approval is a separate person-attributed transition from `verified` to `publication-approved`.

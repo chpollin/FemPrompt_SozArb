@@ -10,7 +10,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-02-21
-updated: 2026-09-21
+updated: 2026-09-22
 authors: [Christopher Pollin]
 generated-with: Claude Code, Codex (GPT-6)
 topics: ["[[Systematic Review]]", "[[PRISMA]]"]
@@ -156,9 +156,9 @@ Round 2 began with an initial protocol draft, but it was not fully prospective. 
 
 In parallel, the analysis questions were operationalized. The chain with dates:
 
-1. Analysis-field design with sub-questions SQ1 to SQ3 and closed vocabularies in [[update-protocol]], sections A to F.
+1. Analysis-field design with sub-questions SQ1 to SQ3 and closed vocabularies in [[update-protocol]], under Analysis coding.
 2. Advisory LLM pilot on a stratified sample of already-included papers, fill rates and ambiguities in [[update-protocol]] (2026-07-17).
-3. Operator clarification of the study aim and freeze (2026-07-17); the analysis fields stand as the `analysis_fields` block in `assessment/categories.yaml` v1.3, including the new field `AN_Prompting_Role`; the eligibility content stayed unchanged at v1.2. The pilot revisions are frozen in section B.1 of the protocol.
+3. Operator clarification of the study aim and freeze (2026-07-17); the analysis fields stand as the `analysis_fields` block in `assessment/categories.yaml` v1.3, including the new field `AN_Prompting_Role`; the eligibility content stayed unchanged at v1.2. The protocol retains the pilot revisions and their dated amendment history.
 4. The five §10 open points of the preregistration were answered on 2026-07-17 by dated amendment, documented in `corpus/deep-research/round2/LAUFPROTOKOLL.md` (prompt provenance, window July 2025 to June 2026, freeze before screening start rather than before first search, full-batch screening, L5 yes).
 
 Scholarly authority resides in the operator freeze and the dated amendments.
@@ -169,10 +169,10 @@ Execution from 2026-07-17, logged per lane in `corpus/deep-research/round2/LAUFP
 
 - L1 ChatGPT, L2 Claude, and L3 Gemini ran. L4 Perplexity was dropped in round 2 after access ended. The earlier L5 Claude Code lane remains documented in the run record.
 - A dated context-informed supplement ran on 24 August 2026 through three operationally separate Codex subagent lanes. The committed lane records cover direct social-work applications, feminist and inequality research, and prompt-based bias mitigation. The supplement did not redefine the original publication window. Every candidate records whether its publication date falls before, within, or after that window. Tier A controls candidate transfer into the Zotero intake package and carries no PRISM inclusion authority.
-- The `Codex Websearch` expansion then repeated these three scopes under a strict 2026 selected-Version rule and a broader primary-source search. It preserved Tier A, Tier B, and exclusions at lane level, deduplicated Tier A by DOI, stable external identifier, and normalised title, and audited every selected record against the committed Zotero export. The final RIS remains an identification package pending Zotero curation and source preparation.
+- The `Codex Websearch` expansion then repeated these three scopes under a strict 2026 selected-Version rule and a broader primary-source search. It preserved Tier A, Tier B, and exclusions at lane level, deduplicated Tier A by DOI, stable external identifier, and normalised title, and audited every selected record against the committed Zotero export. The RIS remains an identification artifact. Its prepared records entered Zotero and the canonical corpus through the documented September imports. Reading-source preparation and screening retain their separate checks.
 - Dedup ran preregistered before screening, by DOI and normalized title against the existing corpus and within the round, no match against round 1.
-- Zotero import L1 to L3 is done (operator, 2026-07-17), `corpus/source_tool_mapping.json` regenerated; the import of the L5 RIS is outstanding. The later intake package does not find these lanes in the committed Zotero export, and [[plan#Conflicting statements in the record]] marks the discrepancy.
-- An advisory LLM screening pass over the distinct round-two candidates lies in `assessment/round2-screening-advisory.md`, with its dated result distribution recorded there. The current production path uses two operationally isolated Codex screening tracks, separate source-grounded AI Agent Review, and deferred domain-expert verification. Completed governed runs have reached `ai-agent-reviewed`. All works with a reviewed Paper representation in the current queue have passed this path. The generated queue and intake manifest identify the remaining source, identity, and corpus-ingestion gates.
+- The dated July record documents the initial imports. The live reconciliation and additive imports of 21 September resolved the stale-export discrepancy and prepared missing references. `corpus/zotero_sync.json` records membership and historical aliases. [[journal#2026-09-21: Authorised Zotero import and live reconciliation]] preserves the execution history, and [[#Zotero reconciliation and import]] defines the procedure.
+- An advisory LLM screening pass over the distinct round-two candidates lies in `assessment/round2-screening-advisory.md`, with its dated result distribution recorded there. The current production path uses two operationally isolated Codex screening tracks, separate source-grounded AI Agent Review, and deferred domain-expert verification. Completed governed runs have reached `ai-agent-reviewed`. Completed runs establish review only for their exact assigned artifacts. Recovered or newly bound sources can require fresh coding. The generated completion package, queue and intake manifest identify the remaining source, identity, and corpus-ingestion gates.
 
 Scholarly authority resides in Zotero curation and the later PRISM domain verification.
 
@@ -262,6 +262,56 @@ LLMs are used to examine literature on the use of LLMs; feminist AI literacies a
 `src/publish/build_downloads.py` derives `docs/downloads/vault.zip` from the unique knowledge-document paths already resolved in `research_vault_v2.json`. Short deterministic filenames avoid Windows path-length failures; the record index preserves every alias and exact Work-Version binding. This is an explicitly provisional working collection. `generate_vault_v2.py` delegates archive creation to that same builder instead of maintaining another selection implementation.
 
 `src/publish/build_release.py` constructs the separate result ZIP and website from the same policy-filtered Assertion and literature projections. No historical working collection is copied into the result site. `generate_promptotyping_data_v2.py` derives its coverage and rates from the canonical corpus instead of fixed totals or an independent title join. The earlier generated concept, divergence, pipeline, and MOC notes remain retired. Run the complete offline graph through `python -m src.publish.build_project`; `--check` verifies all managed inputs and outputs without writing.
+
+## Zotero reconciliation and import
+
+[[governance#Authorised additive Zotero import]] defines the permitted writes. The canonical membership snapshot is `corpus/zotero_sync.json`. Bibliographic membership, exact publication-Version binding and reading-source readiness remain separate states.
+
+### Inspecting the group library before the import
+
+`src/acquire/zotero_group_reconcile.py` reads the `FemPrompt_SozArb` group library through the Zotero Web API and compares it with the prepared RIS files and with the lane files of July 2026. It prepares the import and the manual duplicate curation and takes neither step. The tool cannot write. Its API client exposes a fixed list of read methods, a run stops when the key carries any write permission, and a test inspects the module source for the write methods of the client library.
+
+A record counts as present when its normalised DOI equals that of a library item, or otherwise when normalised title and publication year are equal. A title that agrees under a different or missing year is listed as a candidate for inspection and is not counted as present. Author names play no part. The normalisation rules are documented in the module and covered by `tests/test_zotero_group_reconcile.py`.
+
+The report consists of `report.json` and `report.md` in `generated/zotero-reconcile/<date>/`. It gives the status of every RIS record with the matching Zotero key and the matched field, the overlap between the RIS files, candidate duplicate groups inside the library, the collections, tags and notes that carry lane names, the keys of `corpus/source_tool_mapping.json` that the library does not hold, and the library version returned by the API, so that a later run can detect a change. The date comes from the `--date` flag, and the tool does not read the clock.
+
+The project owner creates the key in the Zotero account settings on the page for new private keys, `https://www.zotero.org/settings/keys/new`. Personal library access stays switched off, the default group permission stays at none, and the per-group permission for `FemPrompt_SozArb` is set to read only. The key goes into the environment variable `ZOTERO_API_KEY` or into the git-ignored `.env` file in the repository root, and never into a committed file. The tool never prints the key and removes it from error messages of the client library.
+
+```
+python -m src.acquire.zotero_group_reconcile --date 2026-09-20
+python -m src.acquire.zotero_group_reconcile --date 2026-09-20 --offline
+```
+
+The second form compares against the committed export without a key or network access. An offline report describes that export at the time of execution. It does not establish current live membership. The stale-export discrepancy and completed imports are recorded in [[journal#2026-09-21: Authorised Zotero import and live reconciliation]].
+
+### Applying an additive import
+
+Use the group-only read/write key defined in [[governance#Authorised additive Zotero import]] for the importer. The read-only reconciliation key cannot apply an import, and the reconciliation tool rejects the importer's write-enabled key. Store either credential only through the existing local environment or ignored `.env` route.
+
+The importer reads a consistent live snapshot and compares the prepared packages in their existing order, including the historical lane files. It writes a local plan containing each source hash, its identity decision and the exact new-item payload. The leading 2026 package is `corpus/deep-research/round2/Codex Websearch/codex-websearch-2026-zotero-import.ris`. Overlapping records in later packages are skipped. Matching uses normalised DOI and title/year. Different identifiers or years under an equal title, and conflicting titles under an equal DOI, are held for curation. Existing items are never updated or merged.
+
+RIS metadata is mapped into Zotero item templates. Tags and source notes are retained, and fields without a native destination go into Extra with their original field label. Creator names are split only where the RIS already supplies a comma separator. Bibliographic import establishes neither a screening decision nor domain-expert verification.
+
+```
+python -m src.acquire.zotero_group_import --out generated/zotero-sync/<run>
+python -m src.acquire.zotero_group_import --apply generated/zotero-sync/<run>/plan.json
+```
+
+Application rejects changed source files or a library version that differs from the prepared plan. Each creation carries the last library version as a precondition and is read back before the next write. Tag order is ignored during comparison because Zotero sorts tags, while author order remains significant. An uncertain write stops the run with a receipt. Continuation starts with a fresh live plan, which recognises items already created. Final snapshots establish whether the previously existing records stayed unchanged.
+
+Snapshots, plans and receipts live locally under the ignored `generated/zotero-sync/` directory. They must not be committed because a group snapshot may contain private notes. Export replacement and Work-Version reconciliation remain separate operations with their own checks.
+
+### Residual packages and the import checklist
+
+`src/acquire/zotero_import_residuals.py` prepares deduplicated files for a later import. It reads the prepared packages in a fixed order, the leading `codex-websearch-2026-zotero-import.ris` first, then the older packages in its configured order and last the lane files of July 2026, and writes for every following package a cleaned residual RIS file that holds only the records no earlier package carries. The leading package is read and never written. Every kept record is copied verbatim out of its source file, so the tags, keywords and candidate notes of the package reach Zotero unchanged. Across the leading package and all residual files each record occurs once, which a test asserts against the repository packages.
+
+The matching rules are those of the reconciliation tool, normalised DOI first and then normalised title plus publication year, with author names playing no part. Two situations keep a record although an earlier package carries its title, the years differing or one of them missing, and title and year agreeing while both records carry a different DOI. Such a record stays in the residual file and appears in the checklist as a version relation, because the import plan asks for distinct Preprint, Accepted Manuscript, proceedings and Version-of-Record expressions to be retained as related Versions rather than merged.
+
+The output directory is named by the `--date` flag, the clock is not read, and a run into an existing directory is refused, so a prepared import cannot be overwritten silently. Beside the residual files the run writes `import-checklist.md`, which gives the import order with the source hashes, the records of the leading package, per following package the records to import and the records left out with the record that covers them, the version relations, the duplicate groups the committed export already holds, and the outstanding metadata corrections of `bibliographic-audit.json` with their Zotero key where the export holds one. The checklist states data and leaves counting to the reader.
+
+```
+python -m src.acquire.zotero_import_residuals --date 2026-09-20
+```
 
 ## Directory structure
 

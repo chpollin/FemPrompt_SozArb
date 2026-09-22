@@ -10,7 +10,7 @@ status: complete
 language: en
 version: "0.6"
 created: 2026-02-21
-updated: 2026-09-05
+updated: 2026-09-22
 authors: [Christopher Pollin]
 generated-with: Claude Code, Codex (GPT-6)
 topics: ["[[Epistemic Infrastructure]]", "[[Feminist AI]]"]
@@ -51,22 +51,20 @@ Primary audience: researchers with limited AI expertise.
 
 ## Success criteria
 
-| Criterion | Status |
-|---|---|
-| Round-one comparative assessment and replay remain reconstructable | Implemented |
-| Round-two agent runs preserve source, prompt, model, actor, and lifecycle provenance | Implemented for governed runs; complete corpus open |
-| Domain experts can verify, correct, and approve prepared records in PRISM | Implemented; execution over the intended corpus open |
-| Quantitative findings derive from committed data and executable scripts | Open for the completed corpus |
-| Qualitative findings derive from source-linked Assertions | Initial vertical slice implemented; complete synthesis open |
-| Public projections satisfy their explicit release policy and retain their actual authority | Implemented for the labelled AI-source-reviewed subset; final scholarly approval remains open |
-| Canonical literature report and paper receive domain-expert review | Open |
+- The intended corpus has explicit Work and Version identities, source-linked reading material and documented preparation gaps.
+- Research contributions identify their producer, inputs and actual checks. Historical round-one assessments remain reconstructable.
+- PRISM supports reading, evidence inspection, correction and reliable saving. Scholarly verification identifies the exact statement, field or whole artifact checked and its evidence basis.
+- Comparative findings answer SQ1 to SQ3 through reproducible descriptive analysis and source-linked Assertions, retaining study conditions, contradictory evidence and limitations.
+- The literature report and paper receive domain-expert verification of their substantive claims and interpretations. Publication follows the policy applicable to each output, and submission requires a decision over the final manuscript.
+
+[[verification]] records the available evidence, [[specification]] the implemented tool contract, and [[plan]] the remaining work. These criteria state the target rather than a software or scholarly completion claim.
 
 ## Scope boundaries
 
 | Boundary | Consequence |
 |---|---|
-| Empirical claims | The project is a qualitative review plus its epistemic infrastructure and makes no empirical claim. The round-one human and LLM divergence is a motivating illustration, not a finding to defend, and no inter-human baseline was set up that would carry one |
-| Prompting guidance | The review synthesises reported practices and evidence; a practice guide can be derived later |
+| Empirical claims | The project reports descriptive findings from the recorded assessments and the reviewed literature. The round-one comparison measures divergence between documented products. Its missing independent inter-human baseline prevents treating that divergence as an LLM error rate or a general accuracy claim. [[analysis-divergence]] defines the interpretation limits |
+| Prompting guidance | The first analytical output is comparative literature synthesis. Practice recommendations require a separate appraisal of study quality and transfer conditions under [[research-vault#Comparative synthesis scope]] |
 | Experimental efficacy testing | The project reports experiments found in the literature and conducts no new prompting experiment |
 | Tool audience | PRISM serves research teams and domain experts working on a review |
 | Scholarly authority | Domain experts verify interpretations and approve publication |
@@ -137,9 +135,9 @@ The design principle made concrete across the three phases:
 
 Phase 1 covers identification and curation. Deep Research systems propose literature. Researchers supplement the search, curate Zotero metadata, resolve duplicates, attach sources, and review Docling Markdown.
 
-Phase 2 covers screening and analysis coding. Round one retains its separately recorded consolidated expert and LLM assessments. Round two assigns source coding to operationally isolated AI agents, uses deterministic PRISM transfer, and conducts a separate source-grounded AI Agent Review. Domain experts later verify or correct every intended productive record.
+Phase 2 covers screening and analysis coding. Round one retains its separately recorded consolidated expert and LLM assessments. Round two assigns source coding to operationally isolated AI agents, uses deterministic PRISM transfer, and conducts a separate source-grounded AI Agent Review. Domain experts verify or correct the statements and fields used in the synthesis, or a whole record when that is the declared review scope. The current implementation and the authorised target scope are distinguished in [[governance#Verification scope decision, 22 September 2026]].
 
-Phase 3 covers knowledge synthesis and publication. Distillation produces source-linked knowledge documents, Assertions consolidate atomic findings, and deterministic scripts compute quantitative results. Domain experts verify the resulting scholarly interpretation. An authorised person records publication approval for each public artifact.
+Phase 3 covers knowledge synthesis and publication. Distillation produces source-linked knowledge documents, Assertions consolidate atomic findings, and deterministic scripts compute quantitative results. Domain experts verify the resulting scholarly interpretation. Public outputs follow their declared release policy. The authorised preliminary AI-reviewed projection retains its actual review basis. The final manuscript requires human verification and an explicit submission decision under [[governance#Publication boundary]].
 
 ### Artificial epistemic authorities (Hauswald 2025)
 

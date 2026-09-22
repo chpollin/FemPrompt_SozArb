@@ -10,18 +10,20 @@ status: active
 language: en
 version: "0.6"
 created: 2026-07-17
-updated: 2026-09-05
+updated: 2026-09-22
 ---
 
 # Research Vault
 
-This folder carries the review's subject knowledge and the evidence chains used by the literature report and the paper. Its active production model follows the canonical Grounded Vault layer chain. Its check vocabulary is a project profile: AI-based source review is named AI Agent Review and deterministic validation remains separate from maturity status.
+This folder carries the review's subject knowledge and the evidence chains used by the literature report and the paper. The following diagram names the conceptual Grounded Vault layers. AI-based source review is named AI Agent Review, and deterministic validation remains separate from maturity status.
 
 ```text
 00_sources → 10_markdown → 20_distillates → 30_assertions → 40_output
 ```
 
-Each layer references only the layer immediately below it. Output chapters cite Assertions, Assertions cite identified distillate statements, and distillate statements cite a Markdown block, a verified publication quotation, or a deterministic data computation.
+The source and Markdown layers currently use holdings outside this folder, including `corpus/source-acquisition/`, `generated/markdown_clean/` and the local source stores described in [Data](../knowledge/data.md#local-source-preservation). There are no `00_sources/` or `10_markdown/` directories here. The active subject-knowledge folders are `20_distillates/`, `30_assertions/` and `40_output/`.
+
+Output chapters cite Assertions, Assertions cite identified distillate statements, and distillate statements cite a Markdown block, a verified publication quotation, or a deterministic data computation. These links express the evidence chain across the actual storage locations.
 
 ## Current migration state
 
@@ -39,7 +41,7 @@ The canonical chain is being introduced without rewriting the legacy evidence re
 
 The legacy `status: grounded` records only the former link check. It does not establish canonical Grounded Vault validation, AI Agent Review, or domain-expert verification. Legacy files remain unchanged until their content has been migrated through the current chain.
 
-The active source-reviewed slice is still small and does not cover the full corpus. [The canonical Vault guide](../knowledge/research-vault.md#aktueller-implementierungsstand) identifies its distillates, Assertions and coverage measures. A legacy document, topic-map link or category co-occurrence does not establish a reviewed scientific claim. Current released assertions are listed in [assertion_index.json](../docs/data/assertion_index.json); whole-corpus readiness is tracked in the [completion package](../generated/completion/README.md).
+The active source-reviewed slice is still small and does not cover the full corpus. [The canonical Vault guide](../knowledge/research-vault.md#current-implementation-state) identifies its distillates, Assertions and coverage measures. A legacy document, topic-map link or category co-occurrence does not establish a reviewed scientific claim. Current released assertions are listed in [assertion_index.json](../docs/data/assertion_index.json); whole-corpus readiness is tracked in the [completion package](../generated/completion/README.md).
 
 ## Output separation
 

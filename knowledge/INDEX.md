@@ -63,7 +63,7 @@ In function order, not alphabetical.
 - Reproduce a technical guarantee: [[testing]], followed by the applicable command or test artifact.
 - Prepare the literature update: [[plan]] (source and corpus readiness), [[update-protocol]], [[standards]].
 - Check source and knowledge-document coverage: `generated/literature-readiness.json` and its CSV projection, rebuilt by `npm run build`. The inventory distinguishes live Zotero membership, reading material, knowledge-document authority and remaining preparation.
-- Add missing prepared references to Zotero: [[plan#Authorised additive Zotero import]] (authorisation, exact live plan, receipts and export boundary).
+- Add missing prepared references to Zotero: [[governance#Authorised additive Zotero import]] (write scope), [[methods#Zotero reconciliation and import]] (commands and receipts).
 - Prepare the follow-up paper's synthesis: [[analysis-divergence]] (section 5), [[analysis-sq-advisory]] (section 6, advisory).
 - Understand the research-vault: [[research-vault]] (the layer model and the current implementation state), `research-vault/README.md` (the built skeleton and its status).
 
@@ -152,7 +152,7 @@ The documented tendency of LLMs to over-agree with a prompt's presuppositions. C
 A deterministic script or schema check of an artifact against explicit structural, referential, or rule-based requirements. Its result is recorded under `checks` with tool, timestamp, subject hash, and status. Validation does not advance the scholarly lifecycle and does not establish the correctness of an interpretation.
 
 ### Verification
-The documented domain-expert assessment of an annotation, Assertion, or output against its evidence and scholarly meaning. Deterministic validation and source-grounded AI Agent Review are separate controls with lower authority.
+The documented domain-expert assessment of a named statement, field, annotation, Assertion, or output against its evidence and scholarly meaning. The accepted scope applies only to the checked content. [[governance#Verification scope decision, 22 September 2026]] distinguishes target-level verification from the current whole-record implementation. Deterministic validation and source-grounded AI Agent Review are separate controls with lower authority.
 
 ### Work and Work-Version Registry
 A Work is the stable project identity for one intellectual publication, independent of the expressions through which it is available. `corpus/work_version_registry.json` assigns a stable `work_id`, separate `version_id` values, exact record bindings, relations between versions, and distinct preferred and latest versions. Screening coverage is evaluated at Work level; evidence, full text, distillates, and Assertions retain the exact Version used.
