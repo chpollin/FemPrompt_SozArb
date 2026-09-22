@@ -49,6 +49,8 @@ The automated suites cover the following contracts.
 - Source identity conflicts fail closed before a full text can enter screening. Normalized filename collisions retain all candidates and cannot silently select an ambiguous fallback.
 - Full-text publication loads the Work-Version registry and explicit source bindings once per invocation. A later invocation reads fresh inputs.
 - Knowledge-document aliases share content only within the exact Work-Version binding, preserving existing-document precedence.
+- Conversion-review projections retain the original recorded reviewer, time, scope and checked file identities in JSON and CSV. Displaying a receipt grants no new review authority.
+- Completion candidates require an unambiguous selected-Version identifier for canonical binding. Title-derived Zotero matches cannot establish that binding, conflicting Versions withhold it, and observed library membership remains visible independently of binding or source readiness.
 - Every record represented in the canonical registry resolves to one stable Work and exact bibliographic Version; all Version relations stay inside that Work. Unbound supplement candidates remain explicitly pending.
 - Preferred and latest Versions are derived independently, and a retracted Version cannot become preferred.
 - Full-text manifests, new reviewer files, agent runs, evidence items, active distillates, and public projections retain exact Work-Version bindings.

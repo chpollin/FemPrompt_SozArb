@@ -24,6 +24,14 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## PRISM and the epistemic infrastructure (2026)
 
+### 2026-09-22: Preserve preparation provenance and define scoped verification
+
+The operator accepts human verification of individual statements or fields and selected comparative literature synthesis as the first analytical output. [[governance#Verification scope decision, 22 September 2026]] limits acceptance to the checked content and evidence basis. [[research-vault#Comparative synthesis scope]] connects reported findings, conditions and limitations without granting practice-transfer claims. The question answered by an individual acceptance and the publication of mixed-authority content remain open. [[plan#Provenance and verification alignment]] records the remaining implementation, including field-level review and its PRISM interface.
+
+Bounded `gpt-5.6-sol` tasks corrected existing preparation projections. Conversion-review metadata was already recorded in the receipts and now survives JSON and CSV projection. Completion candidates resolve through exact selected-Version identifiers and retain library membership separately from reading-source readiness. Independent review exposed a title-derived Zotero match that could falsely establish identity. The correction rejects that route and preserves ambiguous or conflicting candidates for inspection. Historical reviews and publication rules remain unchanged.
+
+The lead verified the full build, project checks, result-site browser tests and targeted Python lint and formatting checks. Original research inputs and receipts retain their byte hashes. The build-manifest comparison shows changed completion and readiness outputs only. Revised knowledge links and prose were checked. The work remains on `refactor/provenance-readiness` without a push or deployment.
+
 ### 2026-09-22: Consolidate working directories and simplify source preparation
 
 The authorised consolidation preserved local sources and acquisition evidence by verified byte hashes before removing the additional worktrees. Local `main` contains their histories and the refactor. Historical `pipeline/` sources remain in place because provenance records still reference them. [[data#Local source preservation]] defines the retained locations. Full-text preparation now loads the registry and explicit bindings once per invocation, preserves ambiguous filename candidates and retains governed source precedence. Knowledge projection indexes aliases by exact Work-Version identity. The shorter `CLAUDE.md` routes to canonical knowledge while retaining operational rules and the local Handoff convention.

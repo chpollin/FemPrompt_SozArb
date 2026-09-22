@@ -1412,11 +1412,44 @@
   "candidates_2026": [
     {
       "candidate_id": "codex-websearch-2026:arxiv:2505.13995",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.1126/science.aec8352",
+            "url:https://doi.org/10.1126/science.aec8352"
+          ],
+          "record_ids": [
+            "DZ5EAPXR"
+          ],
+          "version_id": "version:39bcf800-7995-56e3-b029-3faa4b943087",
+          "work_id": "work:e56cb050-aad5-5a20-8994-ac450ec25bc0"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.1126/science.aec8352",
+            "url:https://doi.org/10.1126/science.aec8352"
+          ],
+          "record_ids": [
+            "DZ5EAPXR"
+          ],
+          "version_id": "version:39bcf800-7995-56e3-b029-3faa4b943087",
+          "work_id": "work:e56cb050-aad5-5a20-8994-ac450ec25bc0"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "DZ5EAPXR",
+          "version_id": "version:39bcf800-7995-56e3-b029-3faa4b943087",
+          "work_id": "work:e56cb050-aad5-5a20-8994-ac450ec25bc0"
+        }
+      ],
       "conflicts_or_constraints": [
         "source_uses_alternative_publication_version"
       ],
       "doi": "10.1126/science.aec8352",
+      "live_zotero_membership_observed": true,
       "local_source_version": {
         "authors": [
           "Myra Cheng",
@@ -1433,9 +1466,11 @@
         "version_type": "preprint"
       },
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "curate_exact_source_version_and_document_preferred_version_exception",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "DZ5EAPXR"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -1473,11 +1508,42 @@
     },
     {
       "candidate_id": "codex-websearch-2026:arxiv:2510.00232",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "url:https://proceedings.iclr.cc/paper_files/paper/2026/hash/71c3451f6cd6a4f82bb822db25cea4fd-abstract-conference.html"
+          ],
+          "record_ids": [
+            "TFMETSCH"
+          ],
+          "version_id": "version:766d4fbd-f251-567f-a0f9-d1dced745cb4",
+          "work_id": "work:acf1ac10-2b58-5eab-b1ff-5a139ee5afce"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "url:https://proceedings.iclr.cc/paper_files/paper/2026/hash/71c3451f6cd6a4f82bb822db25cea4fd-abstract-conference.html"
+          ],
+          "record_ids": [
+            "TFMETSCH"
+          ],
+          "version_id": "version:766d4fbd-f251-567f-a0f9-d1dced745cb4",
+          "work_id": "work:acf1ac10-2b58-5eab-b1ff-5a139ee5afce"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "TFMETSCH",
+          "version_id": "version:766d4fbd-f251-567f-a0f9-d1dced745cb4",
+          "work_id": "work:acf1ac10-2b58-5eab-b1ff-5a139ee5afce"
+        }
+      ],
       "conflicts_or_constraints": [
         "source_uses_alternative_publication_version"
       ],
       "doi": null,
+      "live_zotero_membership_observed": true,
       "local_source_version": {
         "authors": [
           "Xin Xu",
@@ -1494,9 +1560,11 @@
         "version_type": "preprint"
       },
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "curate_exact_source_version_and_document_preferred_version_exception",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "TFMETSCH"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -1521,14 +1589,49 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.1007/978-3-032-27336-9_4",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.1007/978-3-032-27336-9_4",
+            "url:https://doi.org/10.1007/978-3-032-27336-9_4"
+          ],
+          "record_ids": [
+            "6N9ANHXA"
+          ],
+          "version_id": "version:20768b9f-d2d8-513a-aacd-989458319fbb",
+          "work_id": "work:8c24bcba-b32b-52ce-961a-18b40cd0a22e"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.1007/978-3-032-27336-9_4",
+            "url:https://doi.org/10.1007/978-3-032-27336-9_4"
+          ],
+          "record_ids": [
+            "6N9ANHXA"
+          ],
+          "version_id": "version:20768b9f-d2d8-513a-aacd-989458319fbb",
+          "work_id": "work:8c24bcba-b32b-52ce-961a-18b40cd0a22e"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "6N9ANHXA",
+          "version_id": "version:20768b9f-d2d8-513a-aacd-989458319fbb",
+          "work_id": "work:8c24bcba-b32b-52ce-961a-18b40cd0a22e"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.1007/978-3-032-27336-9_4",
+      "live_zotero_membership_observed": true,
       "local_source_version": {},
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "acquire_or_complete_source_preparation",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "6N9ANHXA"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -1555,9 +1658,40 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.1007/s10639-026-13908-2",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.1007/s10639-026-13908-2"
+          ],
+          "record_ids": [
+            "EFMF4449"
+          ],
+          "version_id": "version:d73695ad-f9cd-5319-9a3b-bbb4562e4d60",
+          "work_id": "work:45373e2c-7027-53c3-b5c6-fe3200ae53c4"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.1007/s10639-026-13908-2"
+          ],
+          "record_ids": [
+            "EFMF4449"
+          ],
+          "version_id": "version:d73695ad-f9cd-5319-9a3b-bbb4562e4d60",
+          "work_id": "work:45373e2c-7027-53c3-b5c6-fe3200ae53c4"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "EFMF4449",
+          "version_id": "version:d73695ad-f9cd-5319-9a3b-bbb4562e4d60",
+          "work_id": "work:45373e2c-7027-53c3-b5c6-fe3200ae53c4"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.1007/s10639-026-13908-2",
+      "live_zotero_membership_observed": true,
       "local_source_version": {
         "authors": [],
         "date": null,
@@ -1567,8 +1701,10 @@
         "version_type": "not_established"
       },
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "EFMF4449"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -1594,9 +1730,40 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.1007/s43681-025-00926-y",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.1007/s43681-025-00926-y"
+          ],
+          "record_ids": [
+            "KJWMQSMN"
+          ],
+          "version_id": "version:7549e3c1-700e-5337-8718-3d08f77c0685",
+          "work_id": "work:34294df8-8138-5c66-8137-b0c1a6afa3ff"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.1007/s43681-025-00926-y"
+          ],
+          "record_ids": [
+            "KJWMQSMN"
+          ],
+          "version_id": "version:7549e3c1-700e-5337-8718-3d08f77c0685",
+          "work_id": "work:34294df8-8138-5c66-8137-b0c1a6afa3ff"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "KJWMQSMN",
+          "version_id": "version:7549e3c1-700e-5337-8718-3d08f77c0685",
+          "work_id": "work:34294df8-8138-5c66-8137-b0c1a6afa3ff"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.1007/s43681-025-00926-y",
+      "live_zotero_membership_observed": true,
       "local_source_version": {
         "authors": [],
         "date": null,
@@ -1606,8 +1773,10 @@
         "version_type": "not_established"
       },
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "KJWMQSMN"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -1633,9 +1802,40 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.1007/s43681-026-01161-9",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.1007/s43681-026-01161-9"
+          ],
+          "record_ids": [
+            "8YZKPS42"
+          ],
+          "version_id": "version:47a79a31-c2f5-5529-ac37-3681eb291579",
+          "work_id": "work:0b69246b-4c05-5e2f-a22e-1416ec893b1d"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.1007/s43681-026-01161-9"
+          ],
+          "record_ids": [
+            "8YZKPS42"
+          ],
+          "version_id": "version:47a79a31-c2f5-5529-ac37-3681eb291579",
+          "work_id": "work:0b69246b-4c05-5e2f-a22e-1416ec893b1d"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "8YZKPS42",
+          "version_id": "version:47a79a31-c2f5-5529-ac37-3681eb291579",
+          "work_id": "work:0b69246b-4c05-5e2f-a22e-1416ec893b1d"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.1007/s43681-026-01161-9",
+      "live_zotero_membership_observed": true,
       "local_source_version": {
         "authors": [],
         "date": null,
@@ -1645,8 +1845,10 @@
         "version_type": "not_established"
       },
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "8YZKPS42"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -1672,9 +1874,42 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.1007/s44155-026-00463-x",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.1007/s44155-026-00463-x",
+            "url:https://doi.org/10.1007/s44155-026-00463-x"
+          ],
+          "record_ids": [
+            "2JSZR47F"
+          ],
+          "version_id": "version:b1e947e9-1a11-575d-8316-457534f59271",
+          "work_id": "work:b5b557a0-a651-5a88-b70c-1b05374e5b06"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.1007/s44155-026-00463-x",
+            "url:https://doi.org/10.1007/s44155-026-00463-x"
+          ],
+          "record_ids": [
+            "2JSZR47F"
+          ],
+          "version_id": "version:b1e947e9-1a11-575d-8316-457534f59271",
+          "work_id": "work:b5b557a0-a651-5a88-b70c-1b05374e5b06"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "2JSZR47F",
+          "version_id": "version:b1e947e9-1a11-575d-8316-457534f59271",
+          "work_id": "work:b5b557a0-a651-5a88-b70c-1b05374e5b06"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.1007/s44155-026-00463-x",
+      "live_zotero_membership_observed": true,
       "local_source_version": {
         "authors": [
           "Kwangseon Hwang"
@@ -1690,8 +1925,10 @@
         "version_type": "accepted_manuscript"
       },
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "2JSZR47F"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -1719,14 +1956,47 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.1016/j.bodyim.2026.102042",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.1016/j.bodyim.2026.102042"
+          ],
+          "record_ids": [
+            "SK6VDF5B"
+          ],
+          "version_id": "version:e3d34567-d5d5-5b21-a2e1-04477d965774",
+          "work_id": "work:8b252014-a5d5-5f43-b84b-421872669f02"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.1016/j.bodyim.2026.102042"
+          ],
+          "record_ids": [
+            "SK6VDF5B"
+          ],
+          "version_id": "version:e3d34567-d5d5-5b21-a2e1-04477d965774",
+          "work_id": "work:8b252014-a5d5-5f43-b84b-421872669f02"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "SK6VDF5B",
+          "version_id": "version:e3d34567-d5d5-5b21-a2e1-04477d965774",
+          "work_id": "work:8b252014-a5d5-5f43-b84b-421872669f02"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.1016/j.bodyim.2026.102042",
+      "live_zotero_membership_observed": true,
       "local_source_version": {},
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "acquire_or_complete_source_preparation",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "SK6VDF5B"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -1752,9 +2022,40 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.1016/j.caeai.2026.100602",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.1016/j.caeai.2026.100602"
+          ],
+          "record_ids": [
+            "S2DN9CFC"
+          ],
+          "version_id": "version:ea23f511-1667-56d4-8b7e-b46394a73f86",
+          "work_id": "work:88488d25-08d0-5719-8948-5bff2e7d43cf"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.1016/j.caeai.2026.100602"
+          ],
+          "record_ids": [
+            "S2DN9CFC"
+          ],
+          "version_id": "version:ea23f511-1667-56d4-8b7e-b46394a73f86",
+          "work_id": "work:88488d25-08d0-5719-8948-5bff2e7d43cf"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "S2DN9CFC",
+          "version_id": "version:ea23f511-1667-56d4-8b7e-b46394a73f86",
+          "work_id": "work:88488d25-08d0-5719-8948-5bff2e7d43cf"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.1016/j.caeai.2026.100602",
+      "live_zotero_membership_observed": true,
       "local_source_version": {
         "authors": [
           "Qian Liu",
@@ -1775,8 +2076,10 @@
         "version_type": "version_of_record"
       },
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "S2DN9CFC"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -1802,14 +2105,47 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.1016/j.chbr.2026.101246",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.1016/j.chbr.2026.101246"
+          ],
+          "record_ids": [
+            "EWPPFD7U"
+          ],
+          "version_id": "version:c2dcd2d3-9339-5bc3-aa6d-9a606950cbac",
+          "work_id": "work:f66a5701-d3b8-5c56-91b4-3dfb9ab82387"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.1016/j.chbr.2026.101246"
+          ],
+          "record_ids": [
+            "EWPPFD7U"
+          ],
+          "version_id": "version:c2dcd2d3-9339-5bc3-aa6d-9a606950cbac",
+          "work_id": "work:f66a5701-d3b8-5c56-91b4-3dfb9ab82387"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "EWPPFD7U",
+          "version_id": "version:c2dcd2d3-9339-5bc3-aa6d-9a606950cbac",
+          "work_id": "work:f66a5701-d3b8-5c56-91b4-3dfb9ab82387"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.1016/j.chbr.2026.101246",
+      "live_zotero_membership_observed": true,
       "local_source_version": {},
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "acquire_or_complete_source_preparation",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "EWPPFD7U"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -1835,14 +2171,47 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.1016/j.ijmedinf.2026.106582",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.1016/j.ijmedinf.2026.106582"
+          ],
+          "record_ids": [
+            "XQCZTTIK"
+          ],
+          "version_id": "version:d2459533-5048-50ca-ada3-6f9649c4897a",
+          "work_id": "work:c7e78e57-eccc-510a-810a-491bf50ecb85"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.1016/j.ijmedinf.2026.106582"
+          ],
+          "record_ids": [
+            "XQCZTTIK"
+          ],
+          "version_id": "version:d2459533-5048-50ca-ada3-6f9649c4897a",
+          "work_id": "work:c7e78e57-eccc-510a-810a-491bf50ecb85"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "XQCZTTIK",
+          "version_id": "version:d2459533-5048-50ca-ada3-6f9649c4897a",
+          "work_id": "work:c7e78e57-eccc-510a-810a-491bf50ecb85"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.1016/j.ijmedinf.2026.106582",
+      "live_zotero_membership_observed": true,
       "local_source_version": {},
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "acquire_or_complete_source_preparation",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "XQCZTTIK"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -1867,9 +2236,40 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.1016/j.mcpdig.2026.100344",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.1016/j.mcpdig.2026.100344"
+          ],
+          "record_ids": [
+            "UGN4TS5R"
+          ],
+          "version_id": "version:26f29a81-72da-5a66-8302-ba39cafbae87",
+          "work_id": "work:e62005d4-d179-5cef-af39-3aca00c24a04"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.1016/j.mcpdig.2026.100344"
+          ],
+          "record_ids": [
+            "UGN4TS5R"
+          ],
+          "version_id": "version:26f29a81-72da-5a66-8302-ba39cafbae87",
+          "work_id": "work:e62005d4-d179-5cef-af39-3aca00c24a04"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "UGN4TS5R",
+          "version_id": "version:26f29a81-72da-5a66-8302-ba39cafbae87",
+          "work_id": "work:e62005d4-d179-5cef-af39-3aca00c24a04"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.1016/j.mcpdig.2026.100344",
+      "live_zotero_membership_observed": true,
       "local_source_version": {
         "authors": [
           "Sachin R. Pendse",
@@ -1889,8 +2289,10 @@
         "version_type": "version_of_record"
       },
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "UGN4TS5R"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -1916,14 +2318,47 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.1016/j.techsoc.2026.103402",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.1016/j.techsoc.2026.103402"
+          ],
+          "record_ids": [
+            "T7FGTQF4"
+          ],
+          "version_id": "version:5f6c22bc-8829-55cd-b2d9-96432cb1b62b",
+          "work_id": "work:83bb860d-1a78-5961-8b53-d8f0498ad6a8"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.1016/j.techsoc.2026.103402"
+          ],
+          "record_ids": [
+            "T7FGTQF4"
+          ],
+          "version_id": "version:5f6c22bc-8829-55cd-b2d9-96432cb1b62b",
+          "work_id": "work:83bb860d-1a78-5961-8b53-d8f0498ad6a8"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "T7FGTQF4",
+          "version_id": "version:5f6c22bc-8829-55cd-b2d9-96432cb1b62b",
+          "work_id": "work:83bb860d-1a78-5961-8b53-d8f0498ad6a8"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.1016/j.techsoc.2026.103402",
+      "live_zotero_membership_observed": true,
       "local_source_version": {},
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "acquire_or_complete_source_preparation",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "T7FGTQF4"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -1948,9 +2383,40 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.1038/s41746-026-02584-8",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.1038/s41746-026-02584-8"
+          ],
+          "record_ids": [
+            "RH8MC67Z"
+          ],
+          "version_id": "version:16b6e46e-829c-5531-b8cd-967ddca17abe",
+          "work_id": "work:ca3ae89d-5ddd-5036-a44d-165c58097219"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.1038/s41746-026-02584-8"
+          ],
+          "record_ids": [
+            "RH8MC67Z"
+          ],
+          "version_id": "version:16b6e46e-829c-5531-b8cd-967ddca17abe",
+          "work_id": "work:ca3ae89d-5ddd-5036-a44d-165c58097219"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "RH8MC67Z",
+          "version_id": "version:16b6e46e-829c-5531-b8cd-967ddca17abe",
+          "work_id": "work:ca3ae89d-5ddd-5036-a44d-165c58097219"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.1038/s41746-026-02584-8",
+      "live_zotero_membership_observed": true,
       "local_source_version": {
         "authors": [],
         "date": null,
@@ -1960,8 +2426,10 @@
         "version_type": "not_established"
       },
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "RH8MC67Z"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -1987,9 +2455,42 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.1038/s44360-026-00152-8",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.1038/s44360-026-00152-8",
+            "url:https://www.nature.com/articles/s44360-026-00152-8"
+          ],
+          "record_ids": [
+            "KUVUZMDU"
+          ],
+          "version_id": "version:13610000-bc8f-53c8-a01f-0a9ab5d2c33c",
+          "work_id": "work:f43c0a7f-e499-5be3-8deb-a100f15cafab"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.1038/s44360-026-00152-8",
+            "url:https://www.nature.com/articles/s44360-026-00152-8"
+          ],
+          "record_ids": [
+            "KUVUZMDU"
+          ],
+          "version_id": "version:13610000-bc8f-53c8-a01f-0a9ab5d2c33c",
+          "work_id": "work:f43c0a7f-e499-5be3-8deb-a100f15cafab"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "KUVUZMDU",
+          "version_id": "version:13610000-bc8f-53c8-a01f-0a9ab5d2c33c",
+          "work_id": "work:f43c0a7f-e499-5be3-8deb-a100f15cafab"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.1038/s44360-026-00152-8",
+      "live_zotero_membership_observed": true,
       "local_source_version": {
         "authors": [
           "Jiazhen Pan",
@@ -2022,8 +2523,10 @@
         "version_type": "version_of_record"
       },
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "KUVUZMDU"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -2049,14 +2552,47 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.1038/s44360-026-00164-4",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.1038/s44360-026-00164-4"
+          ],
+          "record_ids": [
+            "UFTH283E"
+          ],
+          "version_id": "version:61b696cc-357e-5b21-a943-02455f394fa7",
+          "work_id": "work:be71f040-2a73-5980-8dc4-e7bb83aa4575"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.1038/s44360-026-00164-4"
+          ],
+          "record_ids": [
+            "UFTH283E"
+          ],
+          "version_id": "version:61b696cc-357e-5b21-a943-02455f394fa7",
+          "work_id": "work:be71f040-2a73-5980-8dc4-e7bb83aa4575"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "UFTH283E",
+          "version_id": "version:61b696cc-357e-5b21-a943-02455f394fa7",
+          "work_id": "work:be71f040-2a73-5980-8dc4-e7bb83aa4575"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.1038/s44360-026-00164-4",
+      "live_zotero_membership_observed": true,
       "local_source_version": {},
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "acquire_or_complete_source_preparation",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "UFTH283E"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -2082,14 +2618,47 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.1080/02615479.2026.2617512",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.1080/02615479.2026.2617512"
+          ],
+          "record_ids": [
+            "WHGCH3XS"
+          ],
+          "version_id": "version:e26e796c-188a-5f12-8ed2-36f8b960f2bc",
+          "work_id": "work:14ff652e-92a8-5982-bf91-a64c26254d13"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.1080/02615479.2026.2617512"
+          ],
+          "record_ids": [
+            "WHGCH3XS"
+          ],
+          "version_id": "version:e26e796c-188a-5f12-8ed2-36f8b960f2bc",
+          "work_id": "work:14ff652e-92a8-5982-bf91-a64c26254d13"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "WHGCH3XS",
+          "version_id": "version:e26e796c-188a-5f12-8ed2-36f8b960f2bc",
+          "work_id": "work:14ff652e-92a8-5982-bf91-a64c26254d13"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.1080/02615479.2026.2617512",
+      "live_zotero_membership_observed": true,
       "local_source_version": {},
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "acquire_or_complete_source_preparation",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "WHGCH3XS"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -2115,9 +2684,40 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.1080/02615479.2026.2631708",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.1080/02615479.2026.2631708"
+          ],
+          "record_ids": [
+            "88CFIG8R"
+          ],
+          "version_id": "version:834d178c-fc76-51f3-bddf-b86e25436742",
+          "work_id": "work:1004a5c5-f980-5475-ad36-952eab77b516"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.1080/02615479.2026.2631708"
+          ],
+          "record_ids": [
+            "88CFIG8R"
+          ],
+          "version_id": "version:834d178c-fc76-51f3-bddf-b86e25436742",
+          "work_id": "work:1004a5c5-f980-5475-ad36-952eab77b516"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "88CFIG8R",
+          "version_id": "version:834d178c-fc76-51f3-bddf-b86e25436742",
+          "work_id": "work:1004a5c5-f980-5475-ad36-952eab77b516"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.1080/02615479.2026.2631708",
+      "live_zotero_membership_observed": true,
       "local_source_version": {
         "authors": [
           "Sacramento Pinazo-Hernandis",
@@ -2135,8 +2735,10 @@
         "version_type": "version_of_record"
       },
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "88CFIG8R"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -2163,11 +2765,42 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.1080/02615479.2026.2635471",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.1080/02615479.2026.2635471"
+          ],
+          "record_ids": [
+            "I7BQH4U4"
+          ],
+          "version_id": "version:4963e528-6f09-54ee-bd14-3ecc26cb76ca",
+          "work_id": "work:68b57d67-221a-5e96-8d7b-153b4b26c91a"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.1080/02615479.2026.2635471"
+          ],
+          "record_ids": [
+            "I7BQH4U4"
+          ],
+          "version_id": "version:4963e528-6f09-54ee-bd14-3ecc26cb76ca",
+          "work_id": "work:68b57d67-221a-5e96-8d7b-153b4b26c91a"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "I7BQH4U4",
+          "version_id": "version:4963e528-6f09-54ee-bd14-3ecc26cb76ca",
+          "work_id": "work:68b57d67-221a-5e96-8d7b-153b4b26c91a"
+        }
+      ],
       "conflicts_or_constraints": [
         "source_uses_alternative_publication_version"
       ],
       "doi": "10.1080/02615479.2026.2635471",
+      "live_zotero_membership_observed": true,
       "local_source_version": {
         "authors": [
           "Joshua Weber",
@@ -2183,9 +2816,11 @@
         "version_type": "version_of_record_online_first"
       },
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "curate_exact_source_version_and_document_preferred_version_exception",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "I7BQH4U4"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -2211,9 +2846,40 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.1080/02615479.2026.2660786",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.1080/02615479.2026.2660786"
+          ],
+          "record_ids": [
+            "QRK7C3JK"
+          ],
+          "version_id": "version:c2db337e-61b4-5717-bfb5-56cd6de7d117",
+          "work_id": "work:ac777aa0-e02b-5a2e-8ddd-19dfdd0110ec"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.1080/02615479.2026.2660786"
+          ],
+          "record_ids": [
+            "QRK7C3JK"
+          ],
+          "version_id": "version:c2db337e-61b4-5717-bfb5-56cd6de7d117",
+          "work_id": "work:ac777aa0-e02b-5a2e-8ddd-19dfdd0110ec"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "QRK7C3JK",
+          "version_id": "version:c2db337e-61b4-5717-bfb5-56cd6de7d117",
+          "work_id": "work:ac777aa0-e02b-5a2e-8ddd-19dfdd0110ec"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.1080/02615479.2026.2660786",
+      "live_zotero_membership_observed": true,
       "local_source_version": {
         "authors": [
           "Michael Wallengren-Lynch"
@@ -2230,9 +2896,11 @@
         "version_type": "version_of_record"
       },
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "acquire_or_complete_source_preparation",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "QRK7C3JK"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -2259,9 +2927,40 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.1080/02615479.2026.2669634",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.1080/02615479.2026.2669634"
+          ],
+          "record_ids": [
+            "K7NW3W34"
+          ],
+          "version_id": "version:17e4bb2a-0324-58ef-97f3-0cc9cd352ab5",
+          "work_id": "work:677ea395-cc39-50b4-9979-496e0f17665d"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.1080/02615479.2026.2669634"
+          ],
+          "record_ids": [
+            "K7NW3W34"
+          ],
+          "version_id": "version:17e4bb2a-0324-58ef-97f3-0cc9cd352ab5",
+          "work_id": "work:677ea395-cc39-50b4-9979-496e0f17665d"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "K7NW3W34",
+          "version_id": "version:17e4bb2a-0324-58ef-97f3-0cc9cd352ab5",
+          "work_id": "work:677ea395-cc39-50b4-9979-496e0f17665d"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.1080/02615479.2026.2669634",
+      "live_zotero_membership_observed": true,
       "local_source_version": {
         "authors": [],
         "date": null,
@@ -2271,8 +2970,10 @@
         "version_type": "not_established"
       },
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "K7NW3W34"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -2298,14 +2999,49 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.1080/02650533.2026.2683352",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.1080/02650533.2026.2683352",
+            "url:https://doi.org/10.1080/02650533.2026.2683352"
+          ],
+          "record_ids": [
+            "DHKP5FGN"
+          ],
+          "version_id": "version:98b08f9c-56a3-5a66-9734-8abd00bea1fe",
+          "work_id": "work:fb07e9e8-562c-5c51-9aa7-f1faa654c172"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.1080/02650533.2026.2683352",
+            "url:https://doi.org/10.1080/02650533.2026.2683352"
+          ],
+          "record_ids": [
+            "DHKP5FGN"
+          ],
+          "version_id": "version:98b08f9c-56a3-5a66-9734-8abd00bea1fe",
+          "work_id": "work:fb07e9e8-562c-5c51-9aa7-f1faa654c172"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "DHKP5FGN",
+          "version_id": "version:98b08f9c-56a3-5a66-9734-8abd00bea1fe",
+          "work_id": "work:fb07e9e8-562c-5c51-9aa7-f1faa654c172"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.1080/02650533.2026.2683352",
+      "live_zotero_membership_observed": true,
       "local_source_version": {},
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "acquire_or_complete_source_preparation",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "DHKP5FGN"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -2332,14 +3068,49 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.1080/0312407x.2026.2627220",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.1080/0312407x.2026.2627220",
+            "url:https://doi.org/10.1080/0312407x.2026.2627220"
+          ],
+          "record_ids": [
+            "9AVG53AQ"
+          ],
+          "version_id": "version:3cc1ce6f-015b-536d-ba38-17daac2d04db",
+          "work_id": "work:48e00f1e-369a-59d9-8883-f6d8cea1a7bc"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.1080/0312407x.2026.2627220",
+            "url:https://doi.org/10.1080/0312407x.2026.2627220"
+          ],
+          "record_ids": [
+            "9AVG53AQ"
+          ],
+          "version_id": "version:3cc1ce6f-015b-536d-ba38-17daac2d04db",
+          "work_id": "work:48e00f1e-369a-59d9-8883-f6d8cea1a7bc"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "9AVG53AQ",
+          "version_id": "version:3cc1ce6f-015b-536d-ba38-17daac2d04db",
+          "work_id": "work:48e00f1e-369a-59d9-8883-f6d8cea1a7bc"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.1080/0312407x.2026.2627220",
+      "live_zotero_membership_observed": true,
       "local_source_version": {},
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "acquire_or_complete_source_preparation",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "9AVG53AQ"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -2368,14 +3139,49 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.1080/10437797.2025.2594423",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.1080/10437797.2025.2594423",
+            "url:https://doi.org/10.1080/10437797.2025.2594423"
+          ],
+          "record_ids": [
+            "SV7RABKM"
+          ],
+          "version_id": "version:0697bf35-4dab-5567-b75d-af72656580eb",
+          "work_id": "work:d3e51cd3-1781-55c6-abc7-80ced266a26e"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.1080/10437797.2025.2594423",
+            "url:https://doi.org/10.1080/10437797.2025.2594423"
+          ],
+          "record_ids": [
+            "SV7RABKM"
+          ],
+          "version_id": "version:0697bf35-4dab-5567-b75d-af72656580eb",
+          "work_id": "work:d3e51cd3-1781-55c6-abc7-80ced266a26e"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "SV7RABKM",
+          "version_id": "version:0697bf35-4dab-5567-b75d-af72656580eb",
+          "work_id": "work:d3e51cd3-1781-55c6-abc7-80ced266a26e"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.1080/10437797.2025.2594423",
+      "live_zotero_membership_observed": true,
       "local_source_version": {},
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "acquire_or_complete_source_preparation",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "SV7RABKM"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -2402,14 +3208,47 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.1080/13691457.2025.2607705",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.1080/13691457.2025.2607705"
+          ],
+          "record_ids": [
+            "DGPSXRCB"
+          ],
+          "version_id": "version:0ae78713-7b93-5a5b-9946-4550af5f3653",
+          "work_id": "work:a2194871-3b0b-5750-9b17-ddee423cb40a"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.1080/13691457.2025.2607705"
+          ],
+          "record_ids": [
+            "DGPSXRCB"
+          ],
+          "version_id": "version:0ae78713-7b93-5a5b-9946-4550af5f3653",
+          "work_id": "work:a2194871-3b0b-5750-9b17-ddee423cb40a"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "DGPSXRCB",
+          "version_id": "version:0ae78713-7b93-5a5b-9946-4550af5f3653",
+          "work_id": "work:a2194871-3b0b-5750-9b17-ddee423cb40a"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.1080/13691457.2025.2607705",
+      "live_zotero_membership_observed": true,
       "local_source_version": {},
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "acquire_or_complete_source_preparation",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "DGPSXRCB"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -2435,9 +3274,40 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.1080/17496535.2026.2619945",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.1080/17496535.2026.2619945"
+          ],
+          "record_ids": [
+            "AZJW38MF"
+          ],
+          "version_id": "version:6ff337db-5679-509b-b8db-13f9d4be1baf",
+          "work_id": "work:2c625fa2-a2f8-5d59-b6a0-f148d542c902"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.1080/17496535.2026.2619945"
+          ],
+          "record_ids": [
+            "AZJW38MF"
+          ],
+          "version_id": "version:6ff337db-5679-509b-b8db-13f9d4be1baf",
+          "work_id": "work:2c625fa2-a2f8-5d59-b6a0-f148d542c902"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "AZJW38MF",
+          "version_id": "version:6ff337db-5679-509b-b8db-13f9d4be1baf",
+          "work_id": "work:2c625fa2-a2f8-5d59-b6a0-f148d542c902"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.1080/17496535.2026.2619945",
+      "live_zotero_membership_observed": true,
       "local_source_version": {
         "authors": [],
         "date": null,
@@ -2447,8 +3317,10 @@
         "version_type": "not_established"
       },
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "AZJW38MF"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -2474,11 +3346,44 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.1080/26408066.2026.2616711",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.1080/26408066.2026.2616711",
+            "url:https://doi.org/10.1080/26408066.2026.2616711"
+          ],
+          "record_ids": [
+            "65NGEK5Q"
+          ],
+          "version_id": "version:2986caa0-11f1-53f1-b8dc-d126271b4748",
+          "work_id": "work:aada8ec1-ce81-50d6-90c3-c9b2787d6a5b"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.1080/26408066.2026.2616711",
+            "url:https://doi.org/10.1080/26408066.2026.2616711"
+          ],
+          "record_ids": [
+            "65NGEK5Q"
+          ],
+          "version_id": "version:2986caa0-11f1-53f1-b8dc-d126271b4748",
+          "work_id": "work:aada8ec1-ce81-50d6-90c3-c9b2787d6a5b"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "65NGEK5Q",
+          "version_id": "version:2986caa0-11f1-53f1-b8dc-d126271b4748",
+          "work_id": "work:aada8ec1-ce81-50d6-90c3-c9b2787d6a5b"
+        }
+      ],
       "conflicts_or_constraints": [
         "pending_zotero_metadata_corrections"
       ],
       "doi": "10.1080/26408066.2026.2616711",
+      "live_zotero_membership_observed": true,
       "local_source_version": {
         "authors": [],
         "date": null,
@@ -2488,9 +3393,11 @@
         "version_type": "not_established"
       },
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "apply_evidenced_metadata_corrections_in_Zotero",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "65NGEK5Q"
       ],
       "pending_zotero_corrections": [
         {
@@ -2527,14 +3434,49 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.1086/740347",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.1086/740347",
+            "url:https://doi.org/10.1086/740347"
+          ],
+          "record_ids": [
+            "XD28QSM7"
+          ],
+          "version_id": "version:650905c5-093e-5a04-b006-a308cf303d3f",
+          "work_id": "work:5afec464-2212-543d-9b3f-abb12a282783"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.1086/740347",
+            "url:https://doi.org/10.1086/740347"
+          ],
+          "record_ids": [
+            "XD28QSM7"
+          ],
+          "version_id": "version:650905c5-093e-5a04-b006-a308cf303d3f",
+          "work_id": "work:5afec464-2212-543d-9b3f-abb12a282783"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "XD28QSM7",
+          "version_id": "version:650905c5-093e-5a04-b006-a308cf303d3f",
+          "work_id": "work:5afec464-2212-543d-9b3f-abb12a282783"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.1086/740347",
+      "live_zotero_membership_observed": true,
       "local_source_version": {},
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "acquire_or_complete_source_preparation",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "XD28QSM7"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -2562,14 +3504,49 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.1086/740605",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.1086/740605",
+            "url:https://doi.org/10.1086/740605"
+          ],
+          "record_ids": [
+            "T2URTGBE"
+          ],
+          "version_id": "version:a82bfb0b-58d7-560a-b4d6-ea27ea34bb70",
+          "work_id": "work:da7ca8ae-1095-5199-a51a-b9cce3e8c07c"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.1086/740605",
+            "url:https://doi.org/10.1086/740605"
+          ],
+          "record_ids": [
+            "T2URTGBE"
+          ],
+          "version_id": "version:a82bfb0b-58d7-560a-b4d6-ea27ea34bb70",
+          "work_id": "work:da7ca8ae-1095-5199-a51a-b9cce3e8c07c"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "T2URTGBE",
+          "version_id": "version:a82bfb0b-58d7-560a-b4d6-ea27ea34bb70",
+          "work_id": "work:da7ca8ae-1095-5199-a51a-b9cce3e8c07c"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.1086/740605",
+      "live_zotero_membership_observed": true,
       "local_source_version": {},
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "acquire_or_complete_source_preparation",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "T2URTGBE"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -2597,14 +3574,49 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.1086/743397",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.1086/743397",
+            "url:https://doi.org/10.1086/743397"
+          ],
+          "record_ids": [
+            "ZETPJ8EC"
+          ],
+          "version_id": "version:e7c3c933-7fbc-51fb-ac76-34924cf4ab58",
+          "work_id": "work:42607135-da86-5d16-a8da-32f4625eddcb"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.1086/743397",
+            "url:https://doi.org/10.1086/743397"
+          ],
+          "record_ids": [
+            "ZETPJ8EC"
+          ],
+          "version_id": "version:e7c3c933-7fbc-51fb-ac76-34924cf4ab58",
+          "work_id": "work:42607135-da86-5d16-a8da-32f4625eddcb"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "ZETPJ8EC",
+          "version_id": "version:e7c3c933-7fbc-51fb-ac76-34924cf4ab58",
+          "work_id": "work:42607135-da86-5d16-a8da-32f4625eddcb"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.1086/743397",
+      "live_zotero_membership_observed": true,
       "local_source_version": {},
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "acquire_or_complete_source_preparation",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "ZETPJ8EC"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -2631,9 +3643,40 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.1098/rsta.2025.0125",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.1098/rsta.2025.0125"
+          ],
+          "record_ids": [
+            "A7U389P5"
+          ],
+          "version_id": "version:6d97fb15-5ef8-5e1e-8ad1-2303d8edfc28",
+          "work_id": "work:e2d886f7-c01f-50cc-9ce2-e65f7be00157"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.1098/rsta.2025.0125"
+          ],
+          "record_ids": [
+            "A7U389P5"
+          ],
+          "version_id": "version:6d97fb15-5ef8-5e1e-8ad1-2303d8edfc28",
+          "work_id": "work:e2d886f7-c01f-50cc-9ce2-e65f7be00157"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "A7U389P5",
+          "version_id": "version:6d97fb15-5ef8-5e1e-8ad1-2303d8edfc28",
+          "work_id": "work:e2d886f7-c01f-50cc-9ce2-e65f7be00157"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.1098/rsta.2025.0125",
+      "live_zotero_membership_observed": true,
       "local_source_version": {
         "authors": [],
         "date": null,
@@ -2643,8 +3686,10 @@
         "version_type": "not_established"
       },
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "A7U389P5"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -2670,14 +3715,47 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.1111/1748-8583.70044",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.1111/1748-8583.70044"
+          ],
+          "record_ids": [
+            "NQ5ZNGIK"
+          ],
+          "version_id": "version:4abdfd4b-d5f2-519b-a4d9-90ded1546b60",
+          "work_id": "work:e2a638bd-caa4-5f73-a532-6f9e7767693e"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.1111/1748-8583.70044"
+          ],
+          "record_ids": [
+            "NQ5ZNGIK"
+          ],
+          "version_id": "version:4abdfd4b-d5f2-519b-a4d9-90ded1546b60",
+          "work_id": "work:e2a638bd-caa4-5f73-a532-6f9e7767693e"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "NQ5ZNGIK",
+          "version_id": "version:4abdfd4b-d5f2-519b-a4d9-90ded1546b60",
+          "work_id": "work:e2a638bd-caa4-5f73-a532-6f9e7767693e"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.1111/1748-8583.70044",
+      "live_zotero_membership_observed": true,
       "local_source_version": {},
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "acquire_or_complete_source_preparation",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "NQ5ZNGIK"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -2703,14 +3781,49 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.1177/10497315261469433",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.1177/10497315261469433",
+            "url:https://doi.org/10.1177/10497315261469433"
+          ],
+          "record_ids": [
+            "8MM5BZN8"
+          ],
+          "version_id": "version:ef97d953-1b4f-5269-b8ae-53e8074cdbb7",
+          "work_id": "work:f4196a02-dca2-57b3-9858-23487b191908"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.1177/10497315261469433",
+            "url:https://doi.org/10.1177/10497315261469433"
+          ],
+          "record_ids": [
+            "8MM5BZN8"
+          ],
+          "version_id": "version:ef97d953-1b4f-5269-b8ae-53e8074cdbb7",
+          "work_id": "work:f4196a02-dca2-57b3-9858-23487b191908"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "8MM5BZN8",
+          "version_id": "version:ef97d953-1b4f-5269-b8ae-53e8074cdbb7",
+          "work_id": "work:f4196a02-dca2-57b3-9858-23487b191908"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.1177/10497315261469433",
+      "live_zotero_membership_observed": true,
       "local_source_version": {},
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "acquire_or_complete_source_preparation",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "8MM5BZN8"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -2737,14 +3850,47 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.1177/10522263261449121",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.1177/10522263261449121"
+          ],
+          "record_ids": [
+            "5TDNQD4B"
+          ],
+          "version_id": "version:c79c4136-5304-5115-9a43-85569cd84085",
+          "work_id": "work:6cefc242-e12f-5be0-830d-33952ecad5e7"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.1177/10522263261449121"
+          ],
+          "record_ids": [
+            "5TDNQD4B"
+          ],
+          "version_id": "version:c79c4136-5304-5115-9a43-85569cd84085",
+          "work_id": "work:6cefc242-e12f-5be0-830d-33952ecad5e7"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "5TDNQD4B",
+          "version_id": "version:c79c4136-5304-5115-9a43-85569cd84085",
+          "work_id": "work:6cefc242-e12f-5be0-830d-33952ecad5e7"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.1177/10522263261449121",
+      "live_zotero_membership_observed": true,
       "local_source_version": {},
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "acquire_or_complete_source_preparation",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "5TDNQD4B"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -2769,17 +3915,50 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.1177/10755470261428542",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.1177/10755470261428542"
+          ],
+          "record_ids": [
+            "RZ8ADW94"
+          ],
+          "version_id": "version:a09ed976-2c89-5576-b75e-c8bc5fe32913",
+          "work_id": "work:bd56a9b4-b852-5918-88bb-8f6ad888fa6c"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.1177/10755470261428542"
+          ],
+          "record_ids": [
+            "RZ8ADW94"
+          ],
+          "version_id": "version:a09ed976-2c89-5576-b75e-c8bc5fe32913",
+          "work_id": "work:bd56a9b4-b852-5918-88bb-8f6ad888fa6c"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "RZ8ADW94",
+          "version_id": "version:a09ed976-2c89-5576-b75e-c8bc5fe32913",
+          "work_id": "work:bd56a9b4-b852-5918-88bb-8f6ad888fa6c"
+        }
+      ],
       "conflicts_or_constraints": [
         "pending_zotero_metadata_corrections"
       ],
       "doi": "10.1177/10755470261428542",
+      "live_zotero_membership_observed": true,
       "local_source_version": {},
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "acquire_or_complete_source_preparation",
         "apply_evidenced_metadata_corrections_in_Zotero",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "RZ8ADW94"
       ],
       "pending_zotero_corrections": [
         {
@@ -2813,9 +3992,40 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.1186/s12910-026-01496-2",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.1186/s12910-026-01496-2"
+          ],
+          "record_ids": [
+            "ZFRE26IV"
+          ],
+          "version_id": "version:5edb0cf7-6a2a-57d3-b219-a7e79204f3e4",
+          "work_id": "work:fa73d2ef-033a-5e5b-8bc5-f774136b020c"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.1186/s12910-026-01496-2"
+          ],
+          "record_ids": [
+            "ZFRE26IV"
+          ],
+          "version_id": "version:5edb0cf7-6a2a-57d3-b219-a7e79204f3e4",
+          "work_id": "work:fa73d2ef-033a-5e5b-8bc5-f774136b020c"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "ZFRE26IV",
+          "version_id": "version:5edb0cf7-6a2a-57d3-b219-a7e79204f3e4",
+          "work_id": "work:fa73d2ef-033a-5e5b-8bc5-f774136b020c"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.1186/s12910-026-01496-2",
+      "live_zotero_membership_observed": true,
       "local_source_version": {
         "authors": [],
         "date": null,
@@ -2825,8 +4035,10 @@
         "version_type": "not_established"
       },
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "ZFRE26IV"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -2852,9 +4064,40 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.16719/j.cnki.1671-6981.20260201",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.16719/j.cnki.1671-6981.20260201"
+          ],
+          "record_ids": [
+            "AJBX2WAW"
+          ],
+          "version_id": "version:312e7ac8-3ec8-5cd4-8e6a-27e7422423f8",
+          "work_id": "work:a68f9db2-cf06-54f2-b8a9-7beb11e0bc9e"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.16719/j.cnki.1671-6981.20260201"
+          ],
+          "record_ids": [
+            "AJBX2WAW"
+          ],
+          "version_id": "version:312e7ac8-3ec8-5cd4-8e6a-27e7422423f8",
+          "work_id": "work:a68f9db2-cf06-54f2-b8a9-7beb11e0bc9e"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "AJBX2WAW",
+          "version_id": "version:312e7ac8-3ec8-5cd4-8e6a-27e7422423f8",
+          "work_id": "work:a68f9db2-cf06-54f2-b8a9-7beb11e0bc9e"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.16719/j.cnki.1671-6981.20260201",
+      "live_zotero_membership_observed": true,
       "local_source_version": {
         "authors": [],
         "date": null,
@@ -2864,8 +4107,10 @@
         "version_type": "not_established"
       },
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "AJBX2WAW"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -2891,9 +4136,42 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.18653/v1/2026.acl-long.1094",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.18653/v1/2026.acl-long.1094",
+            "url:https://aclanthology.org/2026.acl-long.1094"
+          ],
+          "record_ids": [
+            "QI7MDZU4"
+          ],
+          "version_id": "version:6a3c613d-1545-5827-95d0-8ee4a95e5256",
+          "work_id": "work:2707a834-08fe-5819-a92c-4afb47ca08c5"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.18653/v1/2026.acl-long.1094",
+            "url:https://aclanthology.org/2026.acl-long.1094"
+          ],
+          "record_ids": [
+            "QI7MDZU4"
+          ],
+          "version_id": "version:6a3c613d-1545-5827-95d0-8ee4a95e5256",
+          "work_id": "work:2707a834-08fe-5819-a92c-4afb47ca08c5"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "QI7MDZU4",
+          "version_id": "version:6a3c613d-1545-5827-95d0-8ee4a95e5256",
+          "work_id": "work:2707a834-08fe-5819-a92c-4afb47ca08c5"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.18653/v1/2026.acl-long.1094",
+      "live_zotero_membership_observed": true,
       "local_source_version": {
         "authors": [
           "Yixin Wan",
@@ -2907,8 +4185,10 @@
         "version_type": "proceedings_version"
       },
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "QI7MDZU4"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -2934,9 +4214,42 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.18653/v1/2026.findings-acl.1389",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.18653/v1/2026.findings-acl.1389",
+            "url:https://aclanthology.org/2026.findings-acl.1389"
+          ],
+          "record_ids": [
+            "WK8IJUXQ"
+          ],
+          "version_id": "version:a2473563-f6d9-540f-b84f-8e146f0938dd",
+          "work_id": "work:d3e1b501-39ff-5531-a410-391d0ae61c77"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.18653/v1/2026.findings-acl.1389",
+            "url:https://aclanthology.org/2026.findings-acl.1389"
+          ],
+          "record_ids": [
+            "WK8IJUXQ"
+          ],
+          "version_id": "version:a2473563-f6d9-540f-b84f-8e146f0938dd",
+          "work_id": "work:d3e1b501-39ff-5531-a410-391d0ae61c77"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "WK8IJUXQ",
+          "version_id": "version:a2473563-f6d9-540f-b84f-8e146f0938dd",
+          "work_id": "work:d3e1b501-39ff-5531-a410-391d0ae61c77"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.18653/v1/2026.findings-acl.1389",
+      "live_zotero_membership_observed": true,
       "local_source_version": {
         "authors": [
           "Yuxing Chen",
@@ -2951,8 +4264,10 @@
         "version_type": "proceedings_version"
       },
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "WK8IJUXQ"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -2978,9 +4293,42 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.18653/v1/2026.findings-acl.418",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.18653/v1/2026.findings-acl.418",
+            "url:https://aclanthology.org/2026.findings-acl.418"
+          ],
+          "record_ids": [
+            "XPWCK65R"
+          ],
+          "version_id": "version:69fc5b26-5038-5dd2-9bef-f0403caae732",
+          "work_id": "work:6c8a1072-fcca-5fbd-8611-08774ef0ad7f"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.18653/v1/2026.findings-acl.418",
+            "url:https://aclanthology.org/2026.findings-acl.418"
+          ],
+          "record_ids": [
+            "XPWCK65R"
+          ],
+          "version_id": "version:69fc5b26-5038-5dd2-9bef-f0403caae732",
+          "work_id": "work:6c8a1072-fcca-5fbd-8611-08774ef0ad7f"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "XPWCK65R",
+          "version_id": "version:69fc5b26-5038-5dd2-9bef-f0403caae732",
+          "work_id": "work:6c8a1072-fcca-5fbd-8611-08774ef0ad7f"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.18653/v1/2026.findings-acl.418",
+      "live_zotero_membership_observed": true,
       "local_source_version": {
         "authors": [
           "Qian Tan",
@@ -2996,8 +4344,10 @@
         "version_type": "proceedings_version"
       },
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "XPWCK65R"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -3023,9 +4373,42 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.18653/v1/2026.findings-acl.585",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.18653/v1/2026.findings-acl.585",
+            "url:https://aclanthology.org/2026.findings-acl.585"
+          ],
+          "record_ids": [
+            "STQU6H42"
+          ],
+          "version_id": "version:0606f0c5-0aa6-5cae-b273-2b8619630c6f",
+          "work_id": "work:0fb6cbb2-9d40-5815-9680-3e9f14f27e16"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.18653/v1/2026.findings-acl.585",
+            "url:https://aclanthology.org/2026.findings-acl.585"
+          ],
+          "record_ids": [
+            "STQU6H42"
+          ],
+          "version_id": "version:0606f0c5-0aa6-5cae-b273-2b8619630c6f",
+          "work_id": "work:0fb6cbb2-9d40-5815-9680-3e9f14f27e16"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "STQU6H42",
+          "version_id": "version:0606f0c5-0aa6-5cae-b273-2b8619630c6f",
+          "work_id": "work:0fb6cbb2-9d40-5815-9680-3e9f14f27e16"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.18653/v1/2026.findings-acl.585",
+      "live_zotero_membership_observed": true,
       "local_source_version": {
         "authors": [
           "Saloni Dash",
@@ -3040,8 +4423,10 @@
         "version_type": "proceedings_version"
       },
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "STQU6H42"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -3067,9 +4452,42 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.21240/dimesoz/2026/1/57",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.21240/dimesoz/2026/1/57",
+            "url:https://www.dime-sozial.de/index.php/dimesoz/article/view/57"
+          ],
+          "record_ids": [
+            "I355NWWT"
+          ],
+          "version_id": "version:5989a776-e0b2-54c3-bd41-ecffe3d9b85b",
+          "work_id": "work:b385e0cf-739b-5592-b5f0-c9d7fd2ead0a"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.21240/dimesoz/2026/1/57",
+            "url:https://www.dime-sozial.de/index.php/dimesoz/article/view/57"
+          ],
+          "record_ids": [
+            "I355NWWT"
+          ],
+          "version_id": "version:5989a776-e0b2-54c3-bd41-ecffe3d9b85b",
+          "work_id": "work:b385e0cf-739b-5592-b5f0-c9d7fd2ead0a"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "I355NWWT",
+          "version_id": "version:5989a776-e0b2-54c3-bd41-ecffe3d9b85b",
+          "work_id": "work:b385e0cf-739b-5592-b5f0-c9d7fd2ead0a"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.21240/dimesoz/2026/1/57",
+      "live_zotero_membership_observed": true,
       "local_source_version": {
         "authors": [
           "Fabian Beloch",
@@ -3084,8 +4502,10 @@
         "version_type": "version_of_record"
       },
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "I355NWWT"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -3113,9 +4533,40 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.21556/edutec.2026.96.4777",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.21556/edutec.2026.96.4777"
+          ],
+          "record_ids": [
+            "NN49FMDP"
+          ],
+          "version_id": "version:72ebb1a5-b986-5df5-86d2-429ddcdb6268",
+          "work_id": "work:ad093524-5d10-5430-838d-3360c0d710cc"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.21556/edutec.2026.96.4777"
+          ],
+          "record_ids": [
+            "NN49FMDP"
+          ],
+          "version_id": "version:72ebb1a5-b986-5df5-86d2-429ddcdb6268",
+          "work_id": "work:ad093524-5d10-5430-838d-3360c0d710cc"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "NN49FMDP",
+          "version_id": "version:72ebb1a5-b986-5df5-86d2-429ddcdb6268",
+          "work_id": "work:ad093524-5d10-5430-838d-3360c0d710cc"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.21556/edutec.2026.96.4777",
+      "live_zotero_membership_observed": true,
       "local_source_version": {
         "authors": [],
         "date": null,
@@ -3125,8 +4576,10 @@
         "version_type": "not_established"
       },
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "NN49FMDP"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -3152,9 +4605,42 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.2196/85770",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.2196/85770",
+            "url:https://www.jmir.org/2026/1/e85770"
+          ],
+          "record_ids": [
+            "FR8Z2998"
+          ],
+          "version_id": "version:8bffb8fc-6a26-5e82-a77f-1a0f5c8b7794",
+          "work_id": "work:0acf6fa2-7f5e-53c4-a1d1-30ab1ae8d310"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.2196/85770",
+            "url:https://www.jmir.org/2026/1/e85770"
+          ],
+          "record_ids": [
+            "FR8Z2998"
+          ],
+          "version_id": "version:8bffb8fc-6a26-5e82-a77f-1a0f5c8b7794",
+          "work_id": "work:0acf6fa2-7f5e-53c4-a1d1-30ab1ae8d310"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "FR8Z2998",
+          "version_id": "version:8bffb8fc-6a26-5e82-a77f-1a0f5c8b7794",
+          "work_id": "work:0acf6fa2-7f5e-53c4-a1d1-30ab1ae8d310"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.2196/85770",
+      "live_zotero_membership_observed": true,
       "local_source_version": {
         "authors": [
           "Yi Zuo",
@@ -3168,8 +4654,10 @@
         "version_type": "version_of_record"
       },
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "FR8Z2998"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -3195,9 +4683,40 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.2196/86633",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.2196/86633"
+          ],
+          "record_ids": [
+            "9EP4IC4T"
+          ],
+          "version_id": "version:689d32b7-8d4c-5ef8-b6a1-bd98323715fd",
+          "work_id": "work:7f8d6ea5-b9ea-55b6-8b7c-312cabf4a2a9"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.2196/86633"
+          ],
+          "record_ids": [
+            "9EP4IC4T"
+          ],
+          "version_id": "version:689d32b7-8d4c-5ef8-b6a1-bd98323715fd",
+          "work_id": "work:7f8d6ea5-b9ea-55b6-8b7c-312cabf4a2a9"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "9EP4IC4T",
+          "version_id": "version:689d32b7-8d4c-5ef8-b6a1-bd98323715fd",
+          "work_id": "work:7f8d6ea5-b9ea-55b6-8b7c-312cabf4a2a9"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.2196/86633",
+      "live_zotero_membership_observed": true,
       "local_source_version": {
         "authors": [],
         "date": null,
@@ -3207,8 +4726,10 @@
         "version_type": "not_established"
       },
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "9EP4IC4T"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -3234,9 +4755,42 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.2196/90589",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.2196/90589",
+            "url:https://doi.org/10.2196/90589"
+          ],
+          "record_ids": [
+            "D267IQ4C"
+          ],
+          "version_id": "version:cd86e948-9250-5850-a227-9cb0b762cd50",
+          "work_id": "work:7eb826eb-db16-5ae7-8201-3339f108ae93"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.2196/90589",
+            "url:https://doi.org/10.2196/90589"
+          ],
+          "record_ids": [
+            "D267IQ4C"
+          ],
+          "version_id": "version:cd86e948-9250-5850-a227-9cb0b762cd50",
+          "work_id": "work:7eb826eb-db16-5ae7-8201-3339f108ae93"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "D267IQ4C",
+          "version_id": "version:cd86e948-9250-5850-a227-9cb0b762cd50",
+          "work_id": "work:7eb826eb-db16-5ae7-8201-3339f108ae93"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.2196/90589",
+      "live_zotero_membership_observed": true,
       "local_source_version": {
         "authors": [
           "Helene Høgsdal",
@@ -3253,8 +4807,10 @@
         "version_type": "version_of_record"
       },
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "D267IQ4C"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -3283,9 +4839,40 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.25009/is.v11i21.3001",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.25009/is.v11i21.3001"
+          ],
+          "record_ids": [
+            "EUTEI9EJ"
+          ],
+          "version_id": "version:0a8a413f-8255-5966-beef-6ab490b8e9a7",
+          "work_id": "work:bfc73f5a-39eb-5331-bddb-b897f3bbe650"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.25009/is.v11i21.3001"
+          ],
+          "record_ids": [
+            "EUTEI9EJ"
+          ],
+          "version_id": "version:0a8a413f-8255-5966-beef-6ab490b8e9a7",
+          "work_id": "work:bfc73f5a-39eb-5331-bddb-b897f3bbe650"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "EUTEI9EJ",
+          "version_id": "version:0a8a413f-8255-5966-beef-6ab490b8e9a7",
+          "work_id": "work:bfc73f5a-39eb-5331-bddb-b897f3bbe650"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.25009/is.v11i21.3001",
+      "live_zotero_membership_observed": true,
       "local_source_version": {
         "authors": [],
         "date": null,
@@ -3295,8 +4882,10 @@
         "version_type": "not_established"
       },
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "EUTEI9EJ"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -3322,9 +4911,40 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.3389/fhumd.2026.1791655",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.3389/fhumd.2026.1791655"
+          ],
+          "record_ids": [
+            "ZH6T88D5"
+          ],
+          "version_id": "version:24a21eca-b319-5127-9194-4b0f14c3410e",
+          "work_id": "work:f7d29922-360f-5874-8d4c-cf7f7451f638"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.3389/fhumd.2026.1791655"
+          ],
+          "record_ids": [
+            "ZH6T88D5"
+          ],
+          "version_id": "version:24a21eca-b319-5127-9194-4b0f14c3410e",
+          "work_id": "work:f7d29922-360f-5874-8d4c-cf7f7451f638"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "ZH6T88D5",
+          "version_id": "version:24a21eca-b319-5127-9194-4b0f14c3410e",
+          "work_id": "work:f7d29922-360f-5874-8d4c-cf7f7451f638"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.3389/fhumd.2026.1791655",
+      "live_zotero_membership_observed": true,
       "local_source_version": {
         "authors": [],
         "date": null,
@@ -3334,8 +4954,10 @@
         "version_type": "not_established"
       },
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "ZH6T88D5"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -3361,11 +4983,44 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.3390/ai7010024",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.3390/ai7010024",
+            "url:https://www.mdpi.com/2673-2688/7/1/24"
+          ],
+          "record_ids": [
+            "ZXVBZQGS"
+          ],
+          "version_id": "version:acacd002-d68d-50b3-ac25-75d212e56138",
+          "work_id": "work:fa2c7082-9f5a-5906-93ad-27af9cc6fc7a"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.3390/ai7010024",
+            "url:https://www.mdpi.com/2673-2688/7/1/24"
+          ],
+          "record_ids": [
+            "ZXVBZQGS"
+          ],
+          "version_id": "version:acacd002-d68d-50b3-ac25-75d212e56138",
+          "work_id": "work:fa2c7082-9f5a-5906-93ad-27af9cc6fc7a"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "ZXVBZQGS",
+          "version_id": "version:acacd002-d68d-50b3-ac25-75d212e56138",
+          "work_id": "work:fa2c7082-9f5a-5906-93ad-27af9cc6fc7a"
+        }
+      ],
       "conflicts_or_constraints": [
         "source_uses_alternative_publication_version"
       ],
       "doi": "10.3390/ai7010024",
+      "live_zotero_membership_observed": true,
       "local_source_version": {
         "authors": [
           "Shireen Chand",
@@ -3379,9 +5034,11 @@
         "version_type": "preprint"
       },
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "curate_exact_source_version_and_document_preferred_version_exception",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "ZXVBZQGS"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -3407,9 +5064,40 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.35362/issn.1850-0013-1258",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.35362/issn.1850-0013-1258"
+          ],
+          "record_ids": [
+            "Z599JJFT"
+          ],
+          "version_id": "version:d73787f7-c991-5112-bfa5-4649aa3e4420",
+          "work_id": "work:feb70530-663a-5606-8a38-0eb3a39f35fa"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.35362/issn.1850-0013-1258"
+          ],
+          "record_ids": [
+            "Z599JJFT"
+          ],
+          "version_id": "version:d73787f7-c991-5112-bfa5-4649aa3e4420",
+          "work_id": "work:feb70530-663a-5606-8a38-0eb3a39f35fa"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "Z599JJFT",
+          "version_id": "version:d73787f7-c991-5112-bfa5-4649aa3e4420",
+          "work_id": "work:feb70530-663a-5606-8a38-0eb3a39f35fa"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.35362/issn.1850-0013-1258",
+      "live_zotero_membership_observed": true,
       "local_source_version": {
         "authors": [],
         "date": null,
@@ -3419,9 +5107,11 @@
         "version_type": "not_established"
       },
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "acquire_or_complete_source_preparation",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "Z599JJFT"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -3447,9 +5137,40 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.35362/issn.1850-0013-1259",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.35362/issn.1850-0013-1259"
+          ],
+          "record_ids": [
+            "XRQE5VM2"
+          ],
+          "version_id": "version:d3d54d63-7ff2-5b49-9ff0-fbc135706e03",
+          "work_id": "work:7350cc88-47a1-5497-8c7e-14f2ca8aae6c"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.35362/issn.1850-0013-1259"
+          ],
+          "record_ids": [
+            "XRQE5VM2"
+          ],
+          "version_id": "version:d3d54d63-7ff2-5b49-9ff0-fbc135706e03",
+          "work_id": "work:7350cc88-47a1-5497-8c7e-14f2ca8aae6c"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "XRQE5VM2",
+          "version_id": "version:d3d54d63-7ff2-5b49-9ff0-fbc135706e03",
+          "work_id": "work:7350cc88-47a1-5497-8c7e-14f2ca8aae6c"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.35362/issn.1850-0013-1259",
+      "live_zotero_membership_observed": true,
       "local_source_version": {
         "authors": [],
         "date": null,
@@ -3459,8 +5180,10 @@
         "version_type": "not_established"
       },
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "XRQE5VM2"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -3486,14 +5209,49 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.3917/vsoc.052.0029",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.3917/vsoc.052.0029",
+            "url:https://doi.org/10.3917/vsoc.052.0029"
+          ],
+          "record_ids": [
+            "Z2RSS6SH"
+          ],
+          "version_id": "version:d5882086-a22e-5fee-bd1a-c8530a8f3f23",
+          "work_id": "work:b3f64b11-e34c-58f2-bbcb-c91add9d5e16"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.3917/vsoc.052.0029",
+            "url:https://doi.org/10.3917/vsoc.052.0029"
+          ],
+          "record_ids": [
+            "Z2RSS6SH"
+          ],
+          "version_id": "version:d5882086-a22e-5fee-bd1a-c8530a8f3f23",
+          "work_id": "work:b3f64b11-e34c-58f2-bbcb-c91add9d5e16"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "Z2RSS6SH",
+          "version_id": "version:d5882086-a22e-5fee-bd1a-c8530a8f3f23",
+          "work_id": "work:b3f64b11-e34c-58f2-bbcb-c91add9d5e16"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.3917/vsoc.052.0029",
+      "live_zotero_membership_observed": true,
       "local_source_version": {},
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "acquire_or_complete_source_preparation",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "Z2RSS6SH"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -3520,14 +5278,49 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.4324/9781003627920-14",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.4324/9781003627920-14",
+            "url:https://doi.org/10.4324/9781003627920-14"
+          ],
+          "record_ids": [
+            "AUM6JXT9"
+          ],
+          "version_id": "version:9316f494-4768-5b3e-92e3-2f9123d0477b",
+          "work_id": "work:86b69226-9f64-5bc8-a892-6e65d94a16b6"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.4324/9781003627920-14",
+            "url:https://doi.org/10.4324/9781003627920-14"
+          ],
+          "record_ids": [
+            "AUM6JXT9"
+          ],
+          "version_id": "version:9316f494-4768-5b3e-92e3-2f9123d0477b",
+          "work_id": "work:86b69226-9f64-5bc8-a892-6e65d94a16b6"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "AUM6JXT9",
+          "version_id": "version:9316f494-4768-5b3e-92e3-2f9123d0477b",
+          "work_id": "work:86b69226-9f64-5bc8-a892-6e65d94a16b6"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.4324/9781003627920-14",
+      "live_zotero_membership_observed": true,
       "local_source_version": {},
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "acquire_or_complete_source_preparation",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "AUM6JXT9"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -3554,14 +5347,49 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.4324/9781003755081-10",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.4324/9781003755081-10",
+            "url:https://doi.org/10.4324/9781003755081-10"
+          ],
+          "record_ids": [
+            "D698593N"
+          ],
+          "version_id": "version:3d85c91a-a939-59c0-a336-cc48c8afb02b",
+          "work_id": "work:8e5f6b11-3ff1-5e33-8123-5193fbea9502"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.4324/9781003755081-10",
+            "url:https://doi.org/10.4324/9781003755081-10"
+          ],
+          "record_ids": [
+            "D698593N"
+          ],
+          "version_id": "version:3d85c91a-a939-59c0-a336-cc48c8afb02b",
+          "work_id": "work:8e5f6b11-3ff1-5e33-8123-5193fbea9502"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "D698593N",
+          "version_id": "version:3d85c91a-a939-59c0-a336-cc48c8afb02b",
+          "work_id": "work:8e5f6b11-3ff1-5e33-8123-5193fbea9502"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.4324/9781003755081-10",
+      "live_zotero_membership_observed": true,
       "local_source_version": {},
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "acquire_or_complete_source_preparation",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "D698593N"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -3588,14 +5416,49 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.4324/9781003755081-5",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.4324/9781003755081-5",
+            "url:https://doi.org/10.4324/9781003755081-5"
+          ],
+          "record_ids": [
+            "RBZGHG5U"
+          ],
+          "version_id": "version:d8aaa300-de73-5dc9-ae86-57d882e00c48",
+          "work_id": "work:c8ee6229-4d78-51b8-be80-0831d5e650a5"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.4324/9781003755081-5",
+            "url:https://doi.org/10.4324/9781003755081-5"
+          ],
+          "record_ids": [
+            "RBZGHG5U"
+          ],
+          "version_id": "version:d8aaa300-de73-5dc9-ae86-57d882e00c48",
+          "work_id": "work:c8ee6229-4d78-51b8-be80-0831d5e650a5"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "RBZGHG5U",
+          "version_id": "version:d8aaa300-de73-5dc9-ae86-57d882e00c48",
+          "work_id": "work:c8ee6229-4d78-51b8-be80-0831d5e650a5"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.4324/9781003755081-5",
+      "live_zotero_membership_observed": true,
       "local_source_version": {},
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "acquire_or_complete_source_preparation",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "RBZGHG5U"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -3622,14 +5485,47 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.5117/ccr2026.2.11.urma",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.5117/ccr2026.2.11.urma"
+          ],
+          "record_ids": [
+            "VIHZB2CS"
+          ],
+          "version_id": "version:a13783ed-0853-5212-9157-cc55ecc1537b",
+          "work_id": "work:1bf0286b-2c77-5cc6-9f86-c387c306c504"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.5117/ccr2026.2.11.urma"
+          ],
+          "record_ids": [
+            "VIHZB2CS"
+          ],
+          "version_id": "version:a13783ed-0853-5212-9157-cc55ecc1537b",
+          "work_id": "work:1bf0286b-2c77-5cc6-9f86-c387c306c504"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "VIHZB2CS",
+          "version_id": "version:a13783ed-0853-5212-9157-cc55ecc1537b",
+          "work_id": "work:1bf0286b-2c77-5cc6-9f86-c387c306c504"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.5117/ccr2026.2.11.urma",
+      "live_zotero_membership_observed": true,
       "local_source_version": {},
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "acquire_or_complete_source_preparation",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "VIHZB2CS"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -3655,9 +5551,42 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.55121/jele.v2i1.1050",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.55121/jele.v2i1.1050",
+            "url:https://doi.org/10.55121/jele.v2i1.1050"
+          ],
+          "record_ids": [
+            "5WNZMJJQ"
+          ],
+          "version_id": "version:11b76c55-15ea-53e5-b244-1a3cb13350b7",
+          "work_id": "work:2a9dcaf7-01d3-52a7-a0a2-1a9f06dceee5"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.55121/jele.v2i1.1050",
+            "url:https://doi.org/10.55121/jele.v2i1.1050"
+          ],
+          "record_ids": [
+            "5WNZMJJQ"
+          ],
+          "version_id": "version:11b76c55-15ea-53e5-b244-1a3cb13350b7",
+          "work_id": "work:2a9dcaf7-01d3-52a7-a0a2-1a9f06dceee5"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "5WNZMJJQ",
+          "version_id": "version:11b76c55-15ea-53e5-b244-1a3cb13350b7",
+          "work_id": "work:2a9dcaf7-01d3-52a7-a0a2-1a9f06dceee5"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.55121/jele.v2i1.1050",
+      "live_zotero_membership_observed": true,
       "local_source_version": {
         "authors": [
           "Mark Taylor"
@@ -3671,8 +5600,10 @@
         "version_type": "version_of_record"
       },
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "5WNZMJJQ"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -3700,9 +5631,42 @@
     },
     {
       "candidate_id": "codex-websearch-2026:doi:10.63317/2hn5gs6yh5m2",
-      "canonical_bindings": [],
+      "canonical_binding_candidates": [
+        {
+          "evidence_tokens": [
+            "doi:10.63317/2hn5gs6yh5m2",
+            "url:https://aclanthology.org/2026.lrec-1.217"
+          ],
+          "record_ids": [
+            "T57U8T2K"
+          ],
+          "version_id": "version:7e635266-bdb5-5f56-b3a4-b3ac24907c1b",
+          "work_id": "work:6eab81e9-e9ba-57eb-abc0-6c00d7061314"
+        }
+      ],
+      "canonical_binding_evidence": [
+        {
+          "evidence_tokens": [
+            "doi:10.63317/2hn5gs6yh5m2",
+            "url:https://aclanthology.org/2026.lrec-1.217"
+          ],
+          "record_ids": [
+            "T57U8T2K"
+          ],
+          "version_id": "version:7e635266-bdb5-5f56-b3a4-b3ac24907c1b",
+          "work_id": "work:6eab81e9-e9ba-57eb-abc0-6c00d7061314"
+        }
+      ],
+      "canonical_bindings": [
+        {
+          "record_id": "T57U8T2K",
+          "version_id": "version:7e635266-bdb5-5f56-b3a4-b3ac24907c1b",
+          "work_id": "work:6eab81e9-e9ba-57eb-abc0-6c00d7061314"
+        }
+      ],
       "conflicts_or_constraints": [],
       "doi": "10.63317/2hn5gs6yh5m2",
+      "live_zotero_membership_observed": true,
       "local_source_version": {
         "authors": [],
         "date": null,
@@ -3712,8 +5676,10 @@
         "version_type": "not_established"
       },
       "next_actions": [
-        "import_or_match_in_Zotero_then_export_and_rebuild_registry",
         "perform_governed_screening_and_record_AI_review_provenance"
+      ],
+      "observed_live_zotero_record_ids": [
+        "T57U8T2K"
       ],
       "pending_zotero_corrections": [],
       "preferred_version": {
@@ -3748,7 +5714,8 @@
     "candidates_2026": 58,
     "candidates_2026_current_ready_source": 33,
     "candidates_2026_recorded_source_ready": 33,
-    "candidates_2026_with_canonical_binding": 0,
+    "candidates_2026_with_canonical_binding": 58,
+    "candidates_2026_with_observed_live_zotero_membership": 58,
     "canonical_decisions": {
       "Exclude": 98,
       "Include": 154,
@@ -6711,7 +8678,7 @@
     "targeted_followup_search_date": "2026-09-05",
     "targeted_gap_fill_candidates": true
   },
-  "source_fingerprint": "sha256:0c8485cdd6a830be445d3e5064c55bba32847de99aa0cf8ee0e5983578242975",
+  "source_fingerprint": "sha256:e37eb781b2606365748fdc3c77f3bf5bb4b621a1b5155ce4545b3c5e2a9838bd",
   "sources": [
     {
       "path": "assessment/categories.yaml",
@@ -6896,6 +8863,10 @@
     {
       "path": "corpus/zotero_export.json",
       "sha256": "a6bddc7f5da07b5d4b6a9c67ccc861658cec4eeff317c32b075068117a551b68"
+    },
+    {
+      "path": "corpus/zotero_sync.json",
+      "sha256": "a68c1242fa39cb279c830e374d5ec07d174dad2763e8773cbc2db6b8e07d272b"
     },
     {
       "path": "docs/data/concept_graph.json",
@@ -9623,7 +11594,7 @@
     },
     {
       "path": "src/analysis/build_completion_package.py",
-      "sha256": "c8c15f2185f8e73a37967203a24a22c510fc52d278f4e43a60b45ad4da1a4cb4"
+      "sha256": "703c9aab392eb9e0eb23a5ef0d1a6eba0f15927291ebbcd77d88534699904dc1"
     },
     {
       "path": "src/analysis/historical_resolution.py",

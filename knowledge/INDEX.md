@@ -50,6 +50,7 @@ In function order, not alphabetical.
 ## Reading paths
 
 - Resume the work: [[handoff]] (current result and continuation point), [[plan]] (remaining work and what waits on the project owner), the newest [[journal]] entry.
+- Implement target-level human verification through [[governance#Verification scope decision, 22 September 2026]] and [[plan#Provenance and verification alignment]]. The comparative analysis follows [[research-vault#Comparative synthesis scope]].
 - Inspect retained local sources through [[data#Local source preservation]] and reproduce source-preparation guarantees through [[testing]].
 - Onboarding a new collaborator: [[project]], [[methods]], [[specification]]. The reviewing colleagues use `docs/onboarding.html` instead; nothing on their path requires this knowledge base.
 - Describe the method in the follow-up paper: [[methods]] (the chain and the depth, including the replay verification), [[standards]] (the conformance state and the named gaps).

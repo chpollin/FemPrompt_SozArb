@@ -7,13 +7,28 @@ import pytest
 import yaml
 
 from src.analysis import build_completion_package as completion
-from src.assess.artifact_verification import artifact_hash, record_hash, validated_reviews, latest_screening_review, reviewed_screening_projection
+from src.assess.artifact_verification import (
+    artifact_hash,
+    latest_screening_review,
+    record_hash,
+    reviewed_screening_projection,
+    validated_reviews,
+)
 
 
 def registry():
     return {
-        "record_index": {"A": {"work_id": "work:one", "version_id": "version:one"}, "B": {"work_id": "work:one", "version_id": "version:two"}},
-        "works": [{"work_id": "work:one", "canonical_title": "One scholarly contribution", "preferred_version_id": "version:two"}],
+        "record_index": {
+            "A": {"work_id": "work:one", "version_id": "version:one"},
+            "B": {"work_id": "work:one", "version_id": "version:two"},
+        },
+        "works": [
+            {
+                "work_id": "work:one",
+                "canonical_title": "One scholarly contribution",
+                "preferred_version_id": "version:two",
+            }
+        ],
     }
 
 
@@ -23,14 +38,30 @@ def test_residual_progress_checks_sources_without_inventing_screening(tmp_path):
     (tmp_path / "queue.json").write_text("{}", encoding="utf-8")
     (tmp_path / "raw.json").write_text('[{"key":"A"}]', encoding="utf-8")
     (tmp_path / "original.md").write_text("Original article", encoding="utf-8")
-    entry = {"record_id": "A", "canonical_binding_before": registry()["record_index"]["A"],
-             "agent_id": "test", "model": "test", "reviewed_at": "2026-09-05T12:00:00Z",
-             "finding": "Original acquired", "next_step": "Bind and screen",
-             "raw_metadata_reference": "raw.json#/0", "raw_record_sha256": artifact_hash(tmp_path, "raw.json#/0"),
-             "scholarly_screening_status": "not_performed_in_this_task",
-             "original_text": {"source_path": "original.md", "sha256": artifact_hash(tmp_path, "original.md")}}
-    report = {"schema": "femprompt-residual-source-resolution/0.1", "records": {"A": entry},
-              "scope": {"original_queue": "queue.json", "original_queue_sha256": artifact_hash(tmp_path, "queue.json")}}
+    entry = {
+        "record_id": "A",
+        "canonical_binding_before": registry()["record_index"]["A"],
+        "agent_id": "test",
+        "model": "test",
+        "reviewed_at": "2026-09-05T12:00:00Z",
+        "finding": "Original acquired",
+        "next_step": "Bind and screen",
+        "raw_metadata_reference": "raw.json#/0",
+        "raw_record_sha256": artifact_hash(tmp_path, "raw.json#/0"),
+        "scholarly_screening_status": "not_performed_in_this_task",
+        "original_text": {
+            "source_path": "original.md",
+            "sha256": artifact_hash(tmp_path, "original.md"),
+        },
+    }
+    report = {
+        "schema": "femprompt-residual-source-resolution/0.1",
+        "records": {"A": entry},
+        "scope": {
+            "original_queue": "queue.json",
+            "original_queue_sha256": artifact_hash(tmp_path, "queue.json"),
+        },
+    }
     report_path.write_text(json.dumps(report), encoding="utf-8")
     inputs = set()
     result = completion._residual_progress(tmp_path, registry(), inputs)
@@ -43,19 +74,30 @@ def test_residual_progress_checks_sources_without_inventing_screening(tmp_path):
 
 def agent(record_id, techniques=None, decision="Include"):
     return {
-        "record_id": record_id, "decision": decision, "state": "ai-agent-reviewed",
-        "analysis": {"AN_Prompt_Techniques": techniques or ["None"]}, "undecidable": {},
+        "record_id": record_id,
+        "decision": decision,
+        "state": "ai-agent-reviewed",
+        "analysis": {"AN_Prompt_Techniques": techniques or ["None"]},
+        "undecidable": {},
     }
 
 
 def schema():
-    return yaml.safe_load((completion.REPO / "assessment/categories.yaml").read_text(encoding="utf-8"))
+    return yaml.safe_load(
+        (completion.REPO / "assessment/categories.yaml").read_text(encoding="utf-8")
+    )
 
 
 def test_aliases_count_one_work_and_preserve_both_versions():
-    rows, issues = completion._work_rows(registry(), [], {"A": [agent("A", ["ICL"])], "B": [agent("B", ["ICL"])]}, {})
+    rows, issues = completion._work_rows(
+        registry(), [], {"A": [agent("A", ["ICL"])], "B": [agent("B", ["ICL"])]}, {}
+    )
     tables = completion._analysis(rows, schema())
-    icl = next(row for row in tables if row["field"] == "AN_Prompt_Techniques" and row["value"] == "ICL")
+    icl = next(
+        row
+        for row in tables
+        if row["field"] == "AN_Prompt_Techniques" and row["value"] == "ICL"
+    )
     assert not issues
     assert len(rows) == 1
     assert rows[0]["version_ids"] == ["version:one", "version:two"]
@@ -78,18 +120,26 @@ def test_multiline_human_note_is_reproducible_across_git_line_endings():
 
     csv_text = 'Zotero_Key,Decision,Notes\r\nA,Exclude,"Author correction\r\nhttps://example.org/source\r\n"\r\n'
     windows = list(csv.DictReader(io.StringIO(csv_text, newline="")))
-    git_stored = list(csv.DictReader(io.StringIO(csv_text.replace("\r\n", "\n"), newline="")))
+    git_stored = list(
+        csv.DictReader(io.StringIO(csv_text.replace("\r\n", "\n"), newline=""))
+    )
     original_hash = record_hash(windows)
     windows_rows, _ = completion._work_rows(registry(), windows, {}, {})
     stored_rows, _ = completion._work_rows(registry(), git_stored, {}, {})
     assert windows_rows == stored_rows
     assert record_hash(windows) == original_hash
     assert "\r\n" in windows[0]["Notes"]
-    assert windows_rows[0]["human_record_dispositions"][0]["notes"] == "Author correction\nhttps://example.org/source\n"
+    assert (
+        windows_rows[0]["human_record_dispositions"][0]["notes"]
+        == "Author correction\nhttps://example.org/source\n"
+    )
 
 
 def test_explicit_duplicate_disposition_is_not_a_work_exclusion():
-    human = [{"Zotero_Key": "A", "Decision": "Exclude", "Exclusion_Reason": "Duplicate"}, {"Zotero_Key": "B", "Decision": "Include"}]
+    human = [
+        {"Zotero_Key": "A", "Decision": "Exclude", "Exclusion_Reason": "Duplicate"},
+        {"Zotero_Key": "B", "Decision": "Include"},
+    ]
     rows, _ = completion._work_rows(registry(), human, {}, {})
     assert rows[0]["effective_decision"] == "Include"
     assert rows[0]["human_duplicate_record_ids"] == ["A"]
@@ -98,18 +148,35 @@ def test_explicit_duplicate_disposition_is_not_a_work_exclusion():
 
 
 def test_conflicting_alias_codes_are_not_arbitrarily_merged():
-    rows, _ = completion._work_rows(registry(), [], {"A": [agent("A", ["ICL"])], "B": [agent("B", ["Role_Persona"])]}, {})
+    rows, _ = completion._work_rows(
+        registry(),
+        [],
+        {"A": [agent("A", ["ICL"])], "B": [agent("B", ["Role_Persona"])]},
+        {},
+    )
     assert "AN_Prompt_Techniques" in rows[0]["analysis_conflicts"]
     tables = completion._analysis(rows, schema())
-    assert all(row["work_count"] == 0 and row["denominator_field_coded_works"] == 0 for row in tables if row["field"] == "AN_Prompt_Techniques")
+    assert all(
+        row["work_count"] == 0 and row["denominator_field_coded_works"] == 0
+        for row in tables
+        if row["field"] == "AN_Prompt_Techniques"
+    )
 
 
 def test_missing_and_explicit_none_are_different():
     rows, _ = completion._work_rows(registry(), [], {"A": [agent("A")]}, {})
     tables = completion._analysis(rows, schema())
-    explicit_none = next(row for row in tables if row["field"] == "AN_Prompt_Techniques" and row["value"] == "None")
+    explicit_none = next(
+        row
+        for row in tables
+        if row["field"] == "AN_Prompt_Techniques" and row["value"] == "None"
+    )
     assert explicit_none["work_count"] == 1
-    assert all(row["denominator_field_coded_works"] == 0 for row in tables if row["field"] == "AN_Population")
+    assert all(
+        row["denominator_field_coded_works"] == 0
+        for row in tables
+        if row["field"] == "AN_Population"
+    )
 
 
 def test_undecidable_coding_is_excluded_from_field_denominator():
@@ -117,39 +184,87 @@ def test_undecidable_coding_is_excluded_from_field_denominator():
     record["undecidable"] = {"AN_Prompt_Techniques": {"reason": "source ambiguity"}}
     rows, _ = completion._work_rows(registry(), [], {"A": [record]}, {})
     tables = completion._analysis(rows, schema())
-    assert all(row["denominator_field_coded_works"] == 0 for row in tables if row["field"] == "AN_Prompt_Techniques")
+    assert all(
+        row["denominator_field_coded_works"] == 0
+        for row in tables
+        if row["field"] == "AN_Prompt_Techniques"
+    )
 
 
 def test_accepted_correction_resolves_review_without_mutating_history(tmp_path):
     artifact = "docs/data/screening/ar2.json#/decisions/A"
     original = {
-        "decision": "Include", "analysis": {"fields": {"AN_Mitigation_Status": "Evaluated"}},
-        "active_annotation_id": "original-agent-annotation", "lifecycle": {"state": "ai-agent-reviewed"},
+        "decision": "Include",
+        "analysis": {"fields": {"AN_Mitigation_Status": "Evaluated"}},
+        "active_annotation_id": "original-agent-annotation",
+        "lifecycle": {"state": "ai-agent-reviewed"},
     }
-    original["annotations"] = [{"annotation_id": "original-agent-annotation", "body": {
-        "decision": "Include", "analysis": {"fields": {"AN_Mitigation_Status": "Evaluated"}},
-    }}]
+    original["annotations"] = [
+        {
+            "annotation_id": "original-agent-annotation",
+            "body": {
+                "decision": "Include",
+                "analysis": {"fields": {"AN_Mitigation_Status": "Evaluated"}},
+            },
+        }
+    ]
     raw_path = tmp_path / "docs/data/screening/ar2.json"
     raw_path.parent.mkdir(parents=True)
-    raw_path.write_text(json.dumps({"schema": "femprompt-prisma-reviewer/0.2", "decisions": {"A": original}}), encoding="utf-8")
+    raw_path.write_text(
+        json.dumps(
+            {"schema": "femprompt-prisma-reviewer/0.2", "decisions": {"A": original}}
+        ),
+        encoding="utf-8",
+    )
     raw_bytes = raw_path.read_bytes()
     correction_path = tmp_path / "generated/verification/corrections.json"
     correction_path.parent.mkdir(parents=True)
     correction = {
-        "paper_id": "A", "base_artifact": artifact, "base_sha256": record_hash(original),
-        "agent_id": "/test/reviewer", "model": "test-model", "corrected_at": "2026-09-05T12:50:00Z",
-        "changes": [{"path": "/analysis/fields/AN_Mitigation_Status", "before": "Evaluated", "after": "None", "reason": "Source evaluates bias but no mitigation intervention."}],
+        "paper_id": "A",
+        "base_artifact": artifact,
+        "base_sha256": record_hash(original),
+        "agent_id": "/test/reviewer",
+        "model": "test-model",
+        "corrected_at": "2026-09-05T12:50:00Z",
+        "changes": [
+            {
+                "path": "/analysis/fields/AN_Mitigation_Status",
+                "before": "Evaluated",
+                "after": "None",
+                "reason": "Source evaluates bias but no mitigation intervention.",
+            }
+        ],
     }
-    correction_path.write_text(json.dumps({"schema": "femprompt-screening-corrections/0.1", "corrections": {"A": correction}}), encoding="utf-8")
+    correction_path.write_text(
+        json.dumps(
+            {
+                "schema": "femprompt-screening-corrections/0.1",
+                "corrections": {"A": correction},
+            }
+        ),
+        encoding="utf-8",
+    )
     reference = "generated/verification/corrections.json#/corrections/A"
     accepted = {
-        "artifact": reference, "sha256": artifact_hash(tmp_path, reference), "result": "accepted",
-        "agent_id": "/test/reviewer", "model": "test-model", "reviewed_at": "2026-09-05T12:51:00Z",
+        "artifact": reference,
+        "sha256": artifact_hash(tmp_path, reference),
+        "result": "accepted",
+        "agent_id": "/test/reviewer",
+        "model": "test-model",
+        "reviewed_at": "2026-09-05T12:51:00Z",
         "findings": "Corrected analysis matches the source.",
     }
-    negative = dict(accepted, artifact=artifact, sha256=record_hash(original), result="changes_requested", reviewed_at="2026-09-05T12:40:00Z")
+    negative = dict(
+        accepted,
+        artifact=artifact,
+        sha256=record_hash(original),
+        result="changes_requested",
+        reviewed_at="2026-09-05T12:40:00Z",
+    )
     inputs = set()
-    agents, issues = completion._agent_records(tmp_path, inputs, {reference: accepted}, {artifact: negative})
+    agents, issues = completion._agent_records(
+        tmp_path, inputs, {reference: accepted}, {artifact: negative}
+    )
     record = agents["A"][0]
     assert not issues
     assert record["analysis"]["AN_Mitigation_Status"] == "None"
@@ -165,11 +280,19 @@ def test_accepted_correction_resolves_review_without_mutating_history(tmp_path):
     rows, _ = completion._work_rows(registry(), [], agents, {})
     assert rows[0]["corrected_ai_record_ids"] == ["A"]
     assert rows[0]["ai_correction_provenance"][0]["base_artifact"] == artifact
-    assert rows[0]["ai_correction_provenance"][0]["base_sha256"] == record_hash(original)
+    assert rows[0]["ai_correction_provenance"][0]["base_sha256"] == record_hash(
+        original
+    )
     assert rows[0]["ai_correction_provenance"][0]["model"] == "test-model"
     assert rows[0]["open_ai_source_review_record_ids"] == []
     assert rows[0]["analysis_eligible"]
-    table = next(row for row in completion._analysis(rows, schema()) if row["question"] == "SQ1" and row["field"] == "AN_Mitigation_Status" and row["value"] == "None")
+    table = next(
+        row
+        for row in completion._analysis(rows, schema())
+        if row["question"] == "SQ1"
+        and row["field"] == "AN_Mitigation_Status"
+        and row["value"] == "None"
+    )
     assert table["work_count"] == 1
 
 
@@ -186,34 +309,87 @@ def test_unresolved_negative_source_review_stays_open_and_out_of_analysis():
 
 def _family_review_fixture(tmp_path):
     artifact = "docs/data/screening/ar2.json#/decisions/A"
-    body = {"decision": "Include", "analysis": {"fields": {"AN_Prompt_Techniques": ["ICL"]}}}
-    original = {**body, "active_annotation_id": "original", "annotations": [{"annotation_id": "original", "body": body}], "lifecycle": {"state": "ai-agent-reviewed"}}
+    body = {
+        "decision": "Include",
+        "analysis": {"fields": {"AN_Prompt_Techniques": ["ICL"]}},
+    }
+    original = {
+        **body,
+        "active_annotation_id": "original",
+        "annotations": [{"annotation_id": "original", "body": body}],
+        "lifecycle": {"state": "ai-agent-reviewed"},
+    }
     path = tmp_path / "docs/data/screening/ar2.json"
     path.parent.mkdir(parents=True)
-    path.write_text(json.dumps({"schema": "femprompt-prisma-reviewer/0.2", "decisions": {"A": original}}), encoding="utf-8")
+    path.write_text(
+        json.dumps(
+            {"schema": "femprompt-prisma-reviewer/0.2", "decisions": {"A": original}}
+        ),
+        encoding="utf-8",
+    )
     (tmp_path / "source.md").write_text("A supported finding.", encoding="utf-8")
-    receipt = {"artifact": artifact, "sha256": record_hash(original), "result": "accepted", "review_type": "ai-source-review", "agent_id": "test-reviewer", "model": "test-model", "reviewed_at": "2026-09-05T12:00:00Z", "findings": "Fixture source review.", "evidence": [{"source_path": "source.md", "sha256": artifact_hash(tmp_path, "source.md"), "work_id": "work:one", "version_id": "version:one", "locator": "paragraph 1", "quote": "A supported finding."}]}
+    receipt = {
+        "artifact": artifact,
+        "sha256": record_hash(original),
+        "result": "accepted",
+        "review_type": "ai-source-review",
+        "agent_id": "test-reviewer",
+        "model": "test-model",
+        "reviewed_at": "2026-09-05T12:00:00Z",
+        "findings": "Fixture source review.",
+        "evidence": [
+            {
+                "source_path": "source.md",
+                "sha256": artifact_hash(tmp_path, "source.md"),
+                "work_id": "work:one",
+                "version_id": "version:one",
+                "locator": "paragraph 1",
+                "quote": "A supported finding.",
+            }
+        ],
+    }
     return artifact, original, receipt
 
 
 @pytest.mark.parametrize("all_acceptances_revoked", [False, True])
 @pytest.mark.parametrize("missing_correction", [False, True])
-def test_later_negative_correction_is_current_and_excluded_from_completion_analysis(tmp_path, all_acceptances_revoked, missing_correction):
+def test_later_negative_correction_is_current_and_excluded_from_completion_analysis(
+    tmp_path, all_acceptances_revoked, missing_correction
+):
     artifact, original, accepted = _family_review_fixture(tmp_path)
     correction_artifact = "generated/verification/corrections.json#/corrections/A"
-    negative = dict(accepted, artifact=correction_artifact, sha256="sha256:" + "0" * 64, result="changes_requested", reviewed_at="2026-09-05T14:00:00Z", base_artifact=artifact, findings="The newer correction does not match its source.")
+    negative = dict(
+        accepted,
+        artifact=correction_artifact,
+        sha256="sha256:" + "0" * 64,
+        result="changes_requested",
+        reviewed_at="2026-09-05T14:00:00Z",
+        base_artifact=artifact,
+        findings="The newer correction does not match its source.",
+    )
     if not missing_correction:
         correction_path = tmp_path / "generated/verification/corrections.json"
         correction_path.parent.mkdir(parents=True)
-        correction_path.write_text(json.dumps({"corrections": {"A": {"base_artifact": artifact}}}), encoding="utf-8")
+        correction_path.write_text(
+            json.dumps({"corrections": {"A": {"base_artifact": artifact}}}),
+            encoding="utf-8",
+        )
         negative.pop("base_artifact")  # Exercise correlation through artifact bytes.
     entries = [accepted, negative]
     if all_acceptances_revoked:
-        entries.append(dict(accepted, result="unverifiable", reviewed_at="2026-09-05T13:00:00Z"))
-    reviews = validated_reviews(tmp_path, {"schema": "femprompt-artifact-verification/0.1", "reviews": entries})
+        entries.append(
+            dict(accepted, result="unverifiable", reviewed_at="2026-09-05T13:00:00Z")
+        )
+    reviews = validated_reviews(
+        tmp_path, {"schema": "femprompt-artifact-verification/0.1", "reviews": entries}
+    )
     assert bool(reviews) is not all_acceptances_revoked
     assert latest_screening_review(tmp_path, artifact, reviews) == negative
-    assert reviewed_screening_projection(tmp_path, artifact, original, reviews) == (original, None, None)
+    assert reviewed_screening_projection(tmp_path, artifact, original, reviews) == (
+        original,
+        None,
+        None,
+    )
     agents, issues = completion._agent_records(tmp_path, set(), reviews)
     row = agents["A"][0]
     assert not issues
@@ -221,57 +397,355 @@ def test_later_negative_correction_is_current_and_excluded_from_completion_analy
     assert row["current_ai_source_review"]["artifact"] == correction_artifact
     assert row["current_ai_source_review"]["findings"] == negative["findings"]
     assert row["applied_ai_correction"] is None
-    assert row["decision"] == "Include" and row["analysis"] == original["analysis"]["fields"]
+    assert (
+        row["decision"] == "Include"
+        and row["analysis"] == original["analysis"]["fields"]
+    )
     works, _ = completion._work_rows(registry(), [], agents, {})
     assert works[0]["open_ai_source_review_record_ids"] == ["A"]
     assert works[0]["analysis_eligible"] is False
-    assert all(cell["work_count"] == 0 for cell in completion._analysis(works, schema()))
+    assert all(
+        cell["work_count"] == 0 for cell in completion._analysis(works, schema())
+    )
 
 
 def test_completion_fails_closed_for_simultaneous_conflicting_family_reviews(tmp_path):
     artifact, _, accepted = _family_review_fixture(tmp_path)
-    negative = dict(accepted, artifact="missing-correction.json#/corrections/A", result="changes_requested", base_artifact=artifact)
-    reviews = validated_reviews(tmp_path, {"schema": "femprompt-artifact-verification/0.1", "reviews": [accepted, negative]})
+    negative = dict(
+        accepted,
+        artifact="missing-correction.json#/corrections/A",
+        result="changes_requested",
+        base_artifact=artifact,
+    )
+    reviews = validated_reviews(
+        tmp_path,
+        {
+            "schema": "femprompt-artifact-verification/0.1",
+            "reviews": [accepted, negative],
+        },
+    )
     with pytest.raises(ValueError, match="Conflicting screening family reviews"):
         completion._agent_records(tmp_path, set(), reviews)
 
 
 @pytest.mark.parametrize("integrity_hold", [False, True])
-def test_source_hold_excludes_current_accepted_coding_from_completion_analysis(integrity_hold):
+def test_source_hold_excludes_current_accepted_coding_from_completion_analysis(
+    integrity_hold,
+):
     reviewed = agent("A", ["ICL"])
     reviewed["current_ai_review_result"] = "accepted"
-    resolution = {"work_resolutions": {"work:one": {"withhold_from_current_synthesis": True, "integrity_hold": integrity_hold}}}
+    resolution = {
+        "work_resolutions": {
+            "work:one": {
+                "withhold_from_current_synthesis": True,
+                "integrity_hold": integrity_hold,
+            }
+        }
+    }
     works, _ = completion._work_rows(registry(), [], {"A": [reviewed]}, {}, resolution)
     assert works[0]["current_ai_review_results"] == ["accepted"]
     assert works[0]["effective_decision"] == "Include"
     assert works[0]["analysis_eligible"] is False
-    assert ("source_integrity_hold" if integrity_hold else "source_version_hold") in works[0]["conflicts"]
-    assert all(cell["work_count"] == 0 for cell in completion._analysis(works, schema()))
+    assert (
+        "source_integrity_hold" if integrity_hold else "source_version_hold"
+    ) in works[0]["conflicts"]
+    assert all(
+        cell["work_count"] == 0 for cell in completion._analysis(works, schema())
+    )
 
 
 def test_source_readiness_checks_bytes_and_does_not_invent_binding(tmp_path):
     source = tmp_path / "source.md"
     source.write_text("prepared source", encoding="utf-8")
-    package = {"records": [{"candidate_id": "candidate:one", "title": "Existing title", "matched_zotero_keys": []}]}
-    ready = {"records": [{"candidate_id": "candidate:one", "screening_source_ready": True, "screening_markdown_file": "source.md", "screening_markdown_sha256": hashlib.sha256(source.read_bytes()).hexdigest()}]}
-    rows = completion._candidate_rows(tmp_path, package, ready, registry(), set())
+    package = {
+        "records": [
+            {
+                "candidate_id": "candidate:one",
+                "title": "Existing title",
+                "matched_zotero_keys": [],
+            }
+        ]
+    }
+    ready = {
+        "records": [
+            {
+                "candidate_id": "candidate:one",
+                "screening_source_ready": True,
+                "screening_markdown_file": "source.md",
+                "screening_markdown_sha256": hashlib.sha256(
+                    source.read_bytes()
+                ).hexdigest(),
+            }
+        ]
+    }
+    rows = completion._candidate_rows(
+        tmp_path, package, ready, registry(), {"live_record_ids": []}, set()
+    )
     assert rows[0]["source_hash_matches"]
     assert rows[0]["canonical_bindings"] == []
     source.write_text("changed source", encoding="utf-8")
-    rows = completion._candidate_rows(tmp_path, package, ready, registry(), set())
+    rows = completion._candidate_rows(
+        tmp_path, package, ready, registry(), {"live_record_ids": []}, set()
+    )
     assert not rows[0]["source_hash_matches"]
-    assert "prepared_markdown_hash_unbound_or_mismatch" in rows[0]["conflicts_or_constraints"]
+    assert (
+        "prepared_markdown_hash_unbound_or_mismatch"
+        in rows[0]["conflicts_or_constraints"]
+    )
+
+
+def test_candidate_uses_selected_version_binding_and_reports_live_membership():
+    source_registry = json.loads(
+        (completion.REPO / "corpus/work_version_registry.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    source_package = json.loads(
+        (
+            completion.REPO / completion.SEARCH / "codex-websearch-2026-package.json"
+        ).read_text(encoding="utf-8")
+    )
+    zotero_sync = json.loads(
+        (completion.REPO / completion.ZOTERO_SYNC).read_text(encoding="utf-8")
+    )
+    candidate = next(row for row in source_package["records"] if row.get("doi"))
+    expected = completion._candidate_binding_candidates(candidate, source_registry)
+    candidate = {**candidate, "matched_zotero_keys": [expected[0]["record_ids"][0]]}
+    rows = completion._candidate_rows(
+        completion.REPO,
+        {"records": [candidate]},
+        {"records": []},
+        source_registry,
+        zotero_sync,
+        set(),
+    )
+    match = rows[0]["canonical_binding_evidence"]
+    assert len(match) == 1
+    assert (
+        match[0]["version_id"]
+        == source_registry["identifier_index"][f"doi:{candidate['doi'].casefold()}"][
+            "version_id"
+        ]
+    )
+    assert rows[0]["observed_live_zotero_record_ids"]
+    assert rows[0]["live_zotero_membership_observed"]
+    assert (
+        "resolve_exact_candidate_identity_and_rebuild_registry"
+        not in rows[0]["next_actions"]
+    )
+
+
+def test_title_matched_key_without_identifier_is_observed_but_unbound():
+    source_registry = json.loads(
+        (completion.REPO / "corpus/work_version_registry.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    source_package = json.loads(
+        (
+            completion.REPO / completion.SEARCH / "codex-websearch-2026-package.json"
+        ).read_text(encoding="utf-8")
+    )
+    zotero_sync = json.loads(
+        (completion.REPO / completion.ZOTERO_SYNC).read_text(encoding="utf-8")
+    )
+    source = next(row for row in source_package["records"] if row.get("doi"))
+    key = completion._candidate_binding_candidates(source, source_registry)[0][
+        "record_ids"
+    ][0]
+    candidate = {
+        "candidate_id": source["candidate_id"],
+        "title": source["title"],
+        "matched_zotero_keys": [key],
+    }
+    row = completion._candidate_rows(
+        completion.REPO,
+        {"records": [candidate]},
+        {"records": []},
+        source_registry,
+        zotero_sync,
+        set(),
+    )[0]
+    assert row["canonical_bindings"] == []
+    assert row["canonical_binding_evidence"] == []
+    assert row["observed_live_zotero_record_ids"] == [key]
+    assert row["live_zotero_membership_observed"]
+
+
+def test_explicit_key_for_different_version_withholds_selected_binding():
+    source_registry = json.loads(
+        (completion.REPO / "corpus/work_version_registry.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    source_package = json.loads(
+        (
+            completion.REPO / completion.SEARCH / "codex-websearch-2026-package.json"
+        ).read_text(encoding="utf-8")
+    )
+    zotero_sync = json.loads(
+        (completion.REPO / completion.ZOTERO_SYNC).read_text(encoding="utf-8")
+    )
+    candidate = next(row for row in source_package["records"] if row.get("doi"))
+    selected = completion._candidate_binding_candidates(candidate, source_registry)[0]
+    conflicting_key = next(
+        key
+        for key in zotero_sync["live_record_ids"]
+        if source_registry["record_index"].get(key)
+        and source_registry["record_index"][key]
+        != {"work_id": selected["work_id"], "version_id": selected["version_id"]}
+    )
+    candidate = {**candidate, "matched_zotero_keys": [conflicting_key]}
+    row = completion._candidate_rows(
+        completion.REPO,
+        {"records": [candidate]},
+        {"records": []},
+        source_registry,
+        zotero_sync,
+        set(),
+    )[0]
+    assert row["canonical_bindings"] == []
+    assert row["canonical_binding_evidence"] == []
+    assert (
+        "matched_zotero_key_conflicts_with_selected_version"
+        in row["conflicts_or_constraints"]
+    )
+    assert conflicting_key in row["observed_live_zotero_record_ids"]
+
+
+def test_ambiguous_identifier_preserves_observed_membership_without_binding():
+    source_registry = json.loads(
+        (completion.REPO / "corpus/work_version_registry.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    zotero_sync = json.loads(
+        (completion.REPO / completion.ZOTERO_SYNC).read_text(encoding="utf-8")
+    )
+    token, references = next(
+        (token, references)
+        for token, references in source_registry["ambiguous_identifiers"].items()
+        if token.startswith("url:")
+        and any(
+            indexed in references and key in zotero_sync["live_record_ids"]
+            for key, indexed in source_registry["record_index"].items()
+        )
+    )
+    assert token.startswith("url:")
+    reference = next(
+        reference
+        for reference in references
+        if any(
+            indexed == reference and key in zotero_sync["live_record_ids"]
+            for key, indexed in source_registry["record_index"].items()
+        )
+    )
+    key = next(
+        key
+        for key, indexed in source_registry["record_index"].items()
+        if indexed == reference and key in zotero_sync["live_record_ids"]
+    )
+    candidate = {
+        "candidate_id": "derived:" + key,
+        "title": next(
+            work["canonical_title"]
+            for work in source_registry["works"]
+            if work["work_id"] == reference["work_id"]
+        ),
+        "preferred_version": {"landing_url": token.removeprefix("url:")},
+        "matched_zotero_keys": [key],
+    }
+    row = completion._candidate_rows(
+        completion.REPO,
+        {"records": [candidate]},
+        {"records": []},
+        source_registry,
+        zotero_sync,
+        set(),
+    )[0]
+    assert row["canonical_bindings"] == []
+    assert row["canonical_binding_evidence"] == []
+    assert "ambiguous_selected_version_identifier" in row["conflicts_or_constraints"]
+    assert row["observed_live_zotero_record_ids"] == [key]
+
+
+def test_candidate_never_binds_by_title_or_multiple_selected_version_matches():
+    source_registry = json.loads(
+        (completion.REPO / "corpus/work_version_registry.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    source_package = json.loads(
+        (
+            completion.REPO / completion.SEARCH / "codex-websearch-2026-package.json"
+        ).read_text(encoding="utf-8")
+    )
+    zotero_sync = json.loads(
+        (completion.REPO / completion.ZOTERO_SYNC).read_text(encoding="utf-8")
+    )
+    first, second = [row for row in source_package["records"] if row.get("doi")][:2]
+    conflicting = {**first, "preferred_version": second["preferred_version"]}
+    rows = completion._candidate_rows(
+        completion.REPO,
+        {"records": [conflicting]},
+        {"records": []},
+        source_registry,
+        zotero_sync,
+        set(),
+    )
+    assert rows[0]["canonical_bindings"] == []
+    assert (
+        "multiple_exact_selected_version_matches" in rows[0]["conflicts_or_constraints"]
+    )
+    assert not rows[0]["live_zotero_membership_observed"]
+    assert (
+        rows[0]["next_actions"][0]
+        == "resolve_exact_candidate_identity_and_rebuild_registry"
+    )
+
+    title_only = {
+        "candidate_id": first["candidate_id"],
+        "title": first["title"],
+        "matched_zotero_keys": [],
+    }
+    row = completion._candidate_rows(
+        completion.REPO,
+        {"records": [title_only]},
+        {"records": []},
+        source_registry,
+        zotero_sync,
+        set(),
+    )[0]
+    assert row["canonical_bindings"] == []
 
 
 @pytest.mark.parametrize("bound", [False, True])
 def test_acquisition_history_does_not_reopen_a_completed_source_binding(bound):
     source_registry = registry()
-    source_registry["source_index"] = {"A": {"source_version_id": "version:one"}} if bound else {}
-    queue = {"queue": [{"work_id": "work:one", "queue_status": "ready" if bound else "blocked_missing_paper_source", "blockers": [] if bound else ["paper_source_missing"]}]}
+    source_registry["source_index"] = (
+        {"A": {"source_version_id": "version:one"}} if bound else {}
+    )
+    queue = {
+        "queue": [
+            {
+                "work_id": "work:one",
+                "queue_status": "ready" if bound else "blocked_missing_paper_source",
+                "blockers": [] if bound else ["paper_source_missing"],
+            }
+        ]
+    }
     works, _ = completion._work_rows(source_registry, [], {}, queue)
-    entry = {"record_id": "A", "original_text": {"source_path": "original.md"}, "next_step": "Bind the newly acquired text", "source_status": "acquired_unbound"}
+    entry = {
+        "record_id": "A",
+        "original_text": {"source_path": "original.md"},
+        "next_step": "Bind the newly acquired text",
+        "source_status": "acquired_unbound",
+    }
     completion._attach_source_progress(works[0], {"A": entry}, source_registry)
-    assert works[0]["source_acquisition_progress"][0]["source_status"] == "acquired_unbound"
+    assert (
+        works[0]["source_acquisition_progress"][0]["source_status"]
+        == "acquired_unbound"
+    )
     assert works[0]["newly_acquired_text_requires_binding"] is not bound
     assert (entry["next_step"] in works[0]["next_actions"]) is not bound
     if bound:
@@ -282,12 +756,23 @@ def test_acquisition_history_does_not_reopen_a_completed_source_binding(bound):
 
 def test_targeted_followup_does_not_infer_identity_or_promote_source_access():
     candidate = {
-        "candidate_id": "gap:one", "title": "One scholarly contribution", "status": "identified_not_screened",
-        "zotero_key": None, "work_id": None, "version_id": None,
+        "candidate_id": "gap:one",
+        "title": "One scholarly contribution",
+        "status": "identified_not_screened",
+        "zotero_key": None,
+        "work_id": None,
+        "version_id": None,
         "source_access": {"basis": "fulltext_read", "read_sections": ["methods"]},
-        "gap": "Concrete missing setting", "required_next_steps": ["canonical_work_version_binding", "regular_screening"],
+        "gap": "Concrete missing setting",
+        "required_next_steps": ["canonical_work_version_binding", "regular_screening"],
     }
-    followup = {"schema": "femprompt-targeted-followup/0.1", "candidates": [candidate], "agent_id": "/test/identifier", "model": "test-model", "generated_at": "2026-09-05T12:00:00Z"}
+    followup = {
+        "schema": "femprompt-targeted-followup/0.1",
+        "candidates": [candidate],
+        "agent_id": "/test/identifier",
+        "model": "test-model",
+        "generated_at": "2026-09-05T12:00:00Z",
+    }
     row = completion._followup_rows(followup, registry())[0]
     assert row["canonical_bindings"] == []
     assert row["status"] == "identified_not_screened"
@@ -300,19 +785,61 @@ def test_targeted_followup_does_not_infer_identity_or_promote_source_access():
 
 def test_full_package_has_explicit_denominators_and_no_promoted_authority():
     package = completion.build_package()
-    assert len({row["work_id"] for row in package["works"]}) == package["counts"]["canonical_record_bound_works"]
-    assert package["counts"]["registry_all_works"] >= package["counts"]["canonical_record_bound_works"]
+    assert (
+        len({row["work_id"] for row in package["works"]})
+        == package["counts"]["canonical_record_bound_works"]
+    )
+    assert (
+        package["counts"]["registry_all_works"]
+        >= package["counts"]["canonical_record_bound_works"]
+    )
     assert package["counts"]["candidates_2026"] == len(package["candidates_2026"])
     assert package["counts"]["candidates_2026"] == 58
-    assert package["counts"]["targeted_followup_candidates"] == len(package["targeted_followup_candidates"]) == 3
+    assert package["counts"]["candidates_2026_with_canonical_binding"] == 58
+    assert (
+        package["counts"]["candidates_2026_with_observed_live_zotero_membership"] == 58
+    )
+    assert all(
+        "multiple_exact_selected_version_matches" not in row["conflicts_or_constraints"]
+        for row in package["candidates_2026"]
+    )
+    alternative_sources = [
+        row
+        for row in package["candidates_2026"]
+        if "source_uses_alternative_publication_version"
+        in row["conflicts_or_constraints"]
+    ]
+    assert alternative_sources
+    assert all(row["canonical_bindings"] for row in alternative_sources)
+    assert all(
+        "curate_exact_source_version_and_document_preferred_version_exception"
+        in row["next_actions"]
+        for row in alternative_sources
+    )
+    assert (
+        package["counts"]["targeted_followup_candidates"]
+        == len(package["targeted_followup_candidates"])
+        == 3
+    )
     assert package["counts"]["targeted_followup_with_canonical_binding"] == 0
     assert package["counts"]["targeted_followup_recorded_fulltext_read"] == 2
-    assert all(row["status"] == "identified_not_screened" for row in package["targeted_followup_candidates"])
+    assert all(
+        row["status"] == "identified_not_screened"
+        for row in package["targeted_followup_candidates"]
+    )
     assert completion.FOLLOWUP in {source["path"] for source in package["sources"]}
-    assert all(row["scope"] == "included_in_completion_target_pending_curation_and_screening" for row in package["candidates_2026"])
-    assert all(row["authority"] == "provisional_recorded_ai_review" for row in package["analysis_tables"])
+    assert all(
+        row["scope"] == "included_in_completion_target_pending_curation_and_screening"
+        for row in package["candidates_2026"]
+    )
+    assert all(
+        row["authority"] == "provisional_recorded_ai_review"
+        for row in package["analysis_tables"]
+    )
     assert all(issue["type"] == "unmapped_human_record" for issue in package["issues"])
-    assert package["counts"]["unmapped_historical_human_records"] == len(package["issues"])
+    assert package["counts"]["unmapped_historical_human_records"] == len(
+        package["issues"]
+    )
 
 
 def test_check_detects_any_missing_or_changed_managed_output(tmp_path, monkeypatch):
@@ -334,5 +861,8 @@ def test_conformance_uses_current_manuscript_and_synthesis_subitems():
     assert "paper/draft.md" not in text
     items = {row["item_id"]: row for row in yaml.safe_load(text)["prisma_2020"]}
     assert "13" not in items
-    assert all(items[key]["status"] != "not_applicable" for key in ("13a", "13b", "13c", "13d", "20a"))
+    assert all(
+        items[key]["status"] != "not_applicable"
+        for key in ("13a", "13b", "13c", "13d", "20a")
+    )
     assert (completion.REPO / completion.MANUSCRIPT).is_file()

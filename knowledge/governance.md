@@ -10,7 +10,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-08-23
-updated: 2026-09-21
+updated: 2026-09-22
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6), Codex (GPT-6)
 topics: ["[[Research Governance]]", "[[Provenance]]", "[[Human-in-the-Loop]]"]
@@ -39,6 +39,14 @@ Deterministic validation evaluates explicit machine-readable requirements. AI Ag
 The canonical order is `identified → curated → agent-annotated → ai-agent-reviewed → verified → publication-approved`. Every transition records a timestamp, an activity, and an actor reference. The state describes achieved authority for one artifact. It does not propagate automatically to a derived Assertion, report passage, figure, or paper claim.
 
 Round one retains its conducted comparative design. Its consolidated expert annotation governs the round-one corpus decision, while the separately recorded LLM assessment supports the divergence analysis. Round two uses operationally isolated AI-agent tracks, deterministic PRISM transfer, separate source-grounded AI Agent Review, deferred domain-expert verification, and a separate publication decision.
+
+## Verification scope decision, 22 September 2026
+
+The operator accepts domain-expert verification of individual statements or fields. An accepted review applies only to the named content and its evidence basis in the checked version. Other fields, the containing document and derived interpretations retain their own authority. A whole-record verification remains possible when that is the declared review scope.
+
+The current PRISM lifecycle still implements whole-record verification. It cannot yet record the newly authorised field-level review without promoting the parent record. [[plan#Provenance and verification alignment]] defines the implementation gap. No existing record or receipt is reinterpreted as a field-level human review.
+
+The proposed simplification would remove a mandatory additional publication-approval action after sufficient human verification of the content being released. The following publication contract still describes the current implementation. Existing approval events remain historical evidence. The exact release projection for mixed-authority records, its purpose and rights boundaries still need to be settled before the current publisher changes. The authorised preliminary AI-reviewed release keeps its own attributed basis. Manuscript submission remains an explicit decision over the final manuscript.
 
 ## Provenance requirements
 

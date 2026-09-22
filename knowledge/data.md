@@ -32,6 +32,12 @@ Local sources recovered from retired worktrees retain their established relative
 
 The private preservation inventory is under `refactor-preservation/` in the directory returned by `git rev-parse --git-common-dir`. It records original paths, destinations, byte sizes and SHA-256 comparisons. Credentials remain at their original local location and are excluded from the file inventory. The consolidation recorded in [[journal]] preserved source bytes before retiring the worktrees.
 
+## Preparation evidence
+
+The completion package resolves intake candidates through exact identifiers of the selected bibliographic Version. Historical Zotero matches can originate in title comparison, so they only confirm an identifier binding or expose a conflicting Version. Observed library membership remains separate from accepted bibliographic binding and checked reading-source readiness. The projection retains ambiguous matches as diagnostic candidates and records accepted binding evidence separately.
+
+The literature-readiness inventory retains the recorded conversion reviewer, receipt time, scope, source paths and hashes alongside the conversion result. Its JSON and CSV projections expose the same recorded review evidence. These fields describe the existing receipt and grant no new review authority.
+
 ## Category schema (reused, not redefined)
 
 Corpus membership comes from `corpus/zotero_export.json`, including records without a benchmark annotation. The historical raw records remain immutable inputs to the hash-bound metadata corrections. Later live records are appended. `corpus/zotero_sync.json` identifies the observed live group membership and confirmed historical aliases, so the corpus and live library have explicit, different denominators. The Work-Version registry preserves established identities when it admits these aliases.

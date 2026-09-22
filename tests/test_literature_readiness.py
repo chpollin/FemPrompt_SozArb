@@ -1,12 +1,16 @@
 """Dataset-backed tests for the literature readiness inventory."""
 
+import csv
+import io
 import json
+
 import pytest
 
 from src.analysis.build_literature_readiness import (
     REPO,
-    build_readiness,
     _conversion_reviews,
+    _csv_text,
+    build_readiness,
 )
 
 
@@ -23,6 +27,21 @@ def test_available_text_without_conversion_review_still_has_qc_gap() -> None:
     checked = next(r for r in records if r["record_id"] == "AMYZFAPH")
     assert checked["conversion_review_result"] == "accepted_for_text_assessment"
     assert "check_conversion_fidelity_against_original" not in checked["missing_steps"]
+
+    receipt_path = (
+        REPO
+        / "generated/source-acquisition/completion-20260921/conversion-qc/conversion-qc.json"
+    )
+    receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
+    receipt_record = next(
+        record for record in receipt["records"] if record["record_id"] == "AMYZFAPH"
+    )
+    review = checked["conversion_review"]
+    assert review["created_at"] == receipt["created_at"]
+    assert review["reviewer"] == receipt["reviewer"]
+    assert review["scope"] == receipt["scope"]
+    for field in ("pdf_path", "pdf_sha256", "markdown_path", "markdown_sha256"):
+        assert review[field] == receipt_record[field]
 
 
 def test_conversion_review_rejects_changed_source_bytes(tmp_path) -> None:
@@ -45,6 +64,27 @@ def test_conversion_review_rejects_changed_source_bytes(tmp_path) -> None:
     assert reviews == {}, (
         "A superseded conversion cannot grant current review authority"
     )
+
+
+def test_csv_preserves_conversion_review_evidence() -> None:
+    payload = build_readiness(REPO)
+    csv_records = {
+        record["record_id"]: record
+        for record in csv.DictReader(io.StringIO(_csv_text(payload)))
+    }
+    json_records = {record["record_id"]: record for record in payload["records"]}
+
+    reviewed_id = "AMYZFAPH"
+    assert (
+        json.loads(csv_records[reviewed_id]["conversion_review"])
+        == json_records[reviewed_id]["conversion_review"]
+    )
+    missing_id = next(
+        record["record_id"]
+        for record in payload["records"]
+        if record["conversion_review"] is None
+    )
+    assert csv_records[missing_id]["conversion_review"] == ""
 
 
 def test_inventory_covers_every_canonical_and_live_key_once() -> None:

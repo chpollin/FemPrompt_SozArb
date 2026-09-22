@@ -10,7 +10,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-07-18
-updated: 2026-09-21
+updated: 2026-09-22
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6), Codex (GPT-6), Claude Code
 topics: ["[[Grounded Vault]]", "[[Systematic Review]]", "[[Context Engineering]]"]
@@ -104,6 +104,16 @@ Deterministic validation appears under `checked.validation`. It checks schema, a
 The quantitative analysis uses structured annotations and Assertion metadata. These include categories, co-occurrences, evidence types, populations, practice fields, methods and gaps. Every number is produced by an executable script over the canonical data.
 
 The qualitative analysis synthesises Assertions along the research questions on prompting techniques, bias axes and mitigation approaches, and domain-specific requirements. Topic modelling can serve as exploratory orientation over full texts, distillates, annotations, keywords and Vault relations. The scholarly interpretation of the topics takes place against the evidence-bound knowledge structure.
+
+### Comparative synthesis scope
+
+The operator selected comparative literature synthesis on 22 September 2026. The analysis compares reported findings, study conditions, contradictions and limitations. Deriving practice recommendations would require an additional decision and appraisal of study quality and transfer conditions.
+
+The comparison connects each finding to its Work and exact source Version, task, population or practice context, method, observed result, limitations and source locators. Proposed, demonstrated and evaluated approaches retain the distinctions already defined in [[update-protocol#Analysis coding]]. Missing reporting, unresolved coding and contradictory findings remain different conditions.
+
+Structured fields support reproducible descriptive comparisons. Source-bound knowledge documents preserve arguments and qualifications beyond those fields. Cross-source interpretations become separate Assertions with supporting and contradicting evidence. Their verification does not follow automatically from a checked input. [[governance#Verification scope decision, 22 September 2026]] defines the accepted granularity of human review.
+
+The comparison records insufficient study reporting and conflicting findings explicitly. Source-backed explanations can be prepared now. Cases that require a substantive judgement are presented with their evidence for domain-expert review. Field-level acceptance must state whether it checks faithful coding of the source or a further scholarly interpretation. The current synthesis scope grants no empirical efficacy or practice-transfer claim beyond what the cited studies support.
 
 ## Current implementation state
 

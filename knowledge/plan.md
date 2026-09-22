@@ -45,6 +45,19 @@ The project reaches completion when the following conditions hold.
 7. Each public artifact meets its explicit release policy; the final scholarly manuscript additionally has a human publication-approval event. Preliminary AI-source-reviewed results retain their own attributed review basis.
 8. The repository documents a reproducible setup path for a subsequent update or another review corpus.
 
+## Provenance and verification alignment
+
+The accepted scope permits human verification of individual fields or statements and first produces comparative literature synthesis. [[governance#Verification scope decision, 22 September 2026]] owns the authority rule, and [[research-vault#Comparative synthesis scope]] owns the analytical scope.
+
+1. Preserve recorded provenance in existing projections. Expose recorded conversion reviewer, time, scope and exact source hashes without inventing missing attribution or changing source-review authority.
+2. Reconcile completion actions with dated library membership, bibliographic Version bindings and the separately acquired source Version. Exact bibliographic matching does not grant reading-source readiness or erase an integrity hold.
+3. Implement human review targets at field or statement level without promoting their parent. Bind the reviewed content and its evidence dependencies to an identified person, actual review time, declared scope and outcome. A change to relevant evidence invalidates the review even if the field value or statement text is unchanged. Unrelated field changes need not invalidate an otherwise unchanged target.
+4. Project current verification coverage per target and expose it in PRISM. Preserve the existing whole-record path and historical events until compatibility has been checked. Human verification receipts remain separate from AI-review receipts and deterministic checks.
+5. Define publication of mixed-authority content before simplifying the publisher. Determine which verified fields, statements and necessary context belong to the result view. Preserve historical approvals and the existing preliminary AI-reviewed policy. A target-level verification must never make unrelated contents public or verified.
+6. Check the integrated behaviour with changed-source, stale-review, rejected-review and mixed-scope cases. Keep field coverage, review validity and actual scholarly correctness as separate acceptance claims.
+
+Clarify the substantive question answered by a field-level acceptance and the public projection of mixed-authority material. Comparative analysis proceeds with explicit source limitations and contradictory findings. Concrete interpretive disagreements go to domain-expert review with their evidence. These questions do not block source preparation, truthful inventory corrections or preparation of the comparative synthesis.
+
 ## Controlled corpus completion
 
 The immediate goal is complete, inspectable preparation for assessment in PRISM across the existing corpus and prepared intake. A source is ready when its live Zotero identity, exact reading version, checked Markdown representation and source-linked knowledge document resolve together in the tool. Completed scholarly coding and domain-expert verification are separate achievements under [[update-protocol#Agent-assisted completion]]. Planning this sequence does not execute external writes or grant publication approval.

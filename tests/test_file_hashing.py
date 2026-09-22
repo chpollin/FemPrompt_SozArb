@@ -11,10 +11,12 @@ from src.analysis import build_work_version_registry as registry
 from src.publish import generate_docs_data as docs_data
 
 
-@pytest.mark.parametrize("suffix", [".md", ".json", ".csv", ".ris", ".py", ".mjs", ".YAML"])
+@pytest.mark.parametrize(
+    "suffix", [".md", ".json", ".csv", ".ris", ".py", ".mjs", ".YAML"]
+)
 def test_canonical_file_hash_ignores_only_text_crlf(tmp_path, suffix):
     path = tmp_path / f"input{suffix}"
-    lf = "first line\nsecond ä line\n".encode("utf-8")
+    lf = "first line\nsecond ä line\n".encode()
     path.write_bytes(lf)
     expected = file_hashing.file_sha256(path)
     path.write_bytes(lf.replace(b"\n", b"\r\n"))
@@ -35,7 +37,9 @@ def test_binary_and_unknown_file_hashes_remain_byte_exact(tmp_path, suffix):
     assert file_hashing.file_sha256(path) != expected
 
 
-@pytest.mark.parametrize("builder", ["docs_data", "registry", "registry_file", "queue", "completion"])
+@pytest.mark.parametrize(
+    "builder", ["docs_data", "registry", "registry_file", "queue", "completion"]
+)
 def test_build_fingerprints_use_same_text_contract(tmp_path, monkeypatch, builder):
     monkeypatch.setattr(docs_data, "REPO_ROOT", tmp_path)
     monkeypatch.setattr(registry, "REPO", tmp_path)
@@ -65,10 +69,32 @@ def test_completion_keeps_acquisition_hash_byte_exact(tmp_path):
     original = b"source\r\ntext\r\n"
     source.write_bytes(original)
     candidates = {"records": [{"candidate_id": "one", "title": "One"}]}
-    readiness = {"records": [{"candidate_id": "one", "screening_source_ready": True,
-        "screening_markdown_file": "source.md", "screening_markdown_sha256": hashlib.sha256(original).hexdigest()}]}
-    rows = completion._candidate_rows(tmp_path, candidates, readiness, {"record_index": {}}, set())
+    readiness = {
+        "records": [
+            {
+                "candidate_id": "one",
+                "screening_source_ready": True,
+                "screening_markdown_file": "source.md",
+                "screening_markdown_sha256": hashlib.sha256(original).hexdigest(),
+            }
+        ]
+    }
+    rows = completion._candidate_rows(
+        tmp_path,
+        candidates,
+        readiness,
+        {"record_index": {}},
+        {"live_record_ids": []},
+        set(),
+    )
     assert rows[0]["source_hash_matches"]
     source.write_bytes(original.replace(b"\r\n", b"\n"))
-    rows = completion._candidate_rows(tmp_path, candidates, readiness, {"record_index": {}}, set())
+    rows = completion._candidate_rows(
+        tmp_path,
+        candidates,
+        readiness,
+        {"record_index": {}},
+        {"live_record_ids": []},
+        set(),
+    )
     assert not rows[0]["source_hash_matches"]

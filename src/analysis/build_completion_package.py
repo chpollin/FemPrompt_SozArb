@@ -22,6 +22,10 @@ from typing import Any
 
 import yaml
 
+from src.analysis.build_work_version_registry import (
+    _identifier_map,
+    _identifier_tokens,
+)
 from src.analysis.historical_resolution import RESOLUTION_PATH, load_resolution
 from src.analysis.knowledge_coverage import build_knowledge_coverage
 from src.assess.artifact_verification import (
@@ -40,6 +44,7 @@ READY = "generated/source-acquisition/codex-websearch-2026/source-readiness.json
 FOLLOWUP = "corpus/deep-research/round2/targeted-followup-2026-09-05.json"
 MANUSCRIPT = "research-vault/40_output/paper/paper.md"
 RESIDUAL = "generated/verification/residual-resolution-2026-09-05.json"
+ZOTERO_SYNC = "corpus/zotero_sync.json"
 FIELDS = {
     "SQ1": ("AN_Prompt_Techniques", "AN_Mitigation_Status"),
     "SQ2": (
@@ -777,8 +782,52 @@ def _analysis(rows: list[dict], schema: dict) -> list[dict]:
     return output
 
 
+def _candidate_identifier_tokens(candidate: dict) -> set[str]:
+    """Identify the selected bibliographic Version without using source copies."""
+    identifiers: dict[str, list[str]] = defaultdict(list)
+    if candidate.get("doi"):
+        identifiers["doi"].append(candidate["doi"])
+    preferred = candidate.get("preferred_version") or {}
+    if isinstance(preferred, dict):
+        raw = preferred.get("identifiers") or {}
+        if raw.get("doi"):
+            identifiers["doi"].append(raw["doi"])
+        identifier = str(preferred.get("identifier") or "")
+        if identifier.casefold().startswith("arxiv:"):
+            identifiers["arxiv"].append(identifier)
+        if preferred.get("landing_url"):
+            identifiers["url"].append(preferred["landing_url"])
+    return _identifier_tokens(_identifier_map(identifiers))
+
+
+def _candidate_binding_candidates(candidate: dict, registry: dict) -> list[dict]:
+    """Resolve selected-Version evidence without collapsing related Versions."""
+    evidence: dict[tuple[str, str], set[str]] = defaultdict(set)
+    for token in _candidate_identifier_tokens(candidate):
+        if reference := registry.get("identifier_index", {}).get(token):
+            evidence[(reference["work_id"], reference["version_id"])].add(token)
+    return [
+        {
+            "work_id": work_id,
+            "version_id": version_id,
+            "evidence_tokens": sorted(tokens),
+            "record_ids": sorted(
+                record_id
+                for record_id, reference in registry["record_index"].items()
+                if reference == {"work_id": work_id, "version_id": version_id}
+            ),
+        }
+        for (work_id, version_id), tokens in sorted(evidence.items())
+    ]
+
+
 def _candidate_rows(
-    repo: Path, package: dict, readiness: dict, registry: dict, inputs: set[str]
+    repo: Path,
+    package: dict,
+    readiness: dict,
+    registry: dict,
+    zotero_sync: dict,
+    inputs: set[str],
 ) -> list[dict]:
     ready = {row["candidate_id"]: row for row in readiness.get("records", [])}
     result = []
@@ -787,11 +836,55 @@ def _candidate_rows(
     ):
         preparation = ready.get(candidate["candidate_id"], {})
         keys = candidate.get("matched_zotero_keys", [])
-        bindings = [
-            dict(record_id=key, **registry["record_index"][key])
+        binding_candidates = _candidate_binding_candidates(candidate, registry)
+        live_ids = set(zotero_sync.get("live_record_ids", []))
+        explicit_references = {
+            (reference["work_id"], reference["version_id"])
             for key in keys
-            if key in registry["record_index"]
-        ]
+            if (reference := registry["record_index"].get(key))
+        }
+        selected_reference = (
+            (
+                binding_candidates[0]["work_id"],
+                binding_candidates[0]["version_id"],
+            )
+            if len(binding_candidates) == 1
+            else None
+        )
+        selected_tokens = _candidate_identifier_tokens(candidate)
+        ambiguous = bool(
+            selected_tokens & set(registry.get("ambiguous_identifiers", {}))
+        )
+        explicit_conflict = bool(
+            selected_reference
+            and explicit_references
+            and explicit_references != {selected_reference}
+        )
+        binding_accepted = bool(
+            selected_reference and not ambiguous and not explicit_conflict
+        )
+        bindings = (
+            [
+                {"record_id": record_id, **registry["record_index"][record_id]}
+                for record_id in binding_candidates[0]["record_ids"]
+            ]
+            if binding_accepted
+            else []
+        )
+        observed_live_ids = sorted(
+            {
+                *(
+                    key
+                    for key in keys
+                    if key in registry["record_index"] and key in live_ids
+                ),
+                *(
+                    binding["record_id"]
+                    for binding in bindings
+                    if binding["record_id"] in live_ids
+                ),
+            }
+        )
         markdown = preparation.get("screening_markdown_file")
         exists = bool(markdown and (repo / markdown).is_file())
         expected = preparation.get("screening_markdown_sha256")
@@ -807,9 +900,13 @@ def _candidate_rows(
             and hashlib.sha256((repo / markdown).read_bytes()).hexdigest() == expected
         )
         conflicts = []
-        if len({binding["work_id"] for binding in bindings}) > 1:
-            conflicts.append("multiple_canonical_works_for_candidate")
-        if len(bindings) != len(keys):
+        if len(binding_candidates) > 1:
+            conflicts.append("multiple_exact_selected_version_matches")
+        if ambiguous:
+            conflicts.append("ambiguous_selected_version_identifier")
+        if explicit_conflict:
+            conflicts.append("matched_zotero_key_conflicts_with_selected_version")
+        if any(key not in registry["record_index"] for key in keys):
             conflicts.append("matched_zotero_key_missing_from_registry")
         if markdown and not exists:
             conflicts.append("prepared_markdown_missing_locally")
@@ -828,7 +925,7 @@ def _candidate_rows(
             conflicts.append("pending_zotero_metadata_corrections")
         actions = []
         if not bindings:
-            actions.append("import_or_match_in_Zotero_then_export_and_rebuild_registry")
+            actions.append("resolve_exact_candidate_identity_and_rebuild_registry")
         if not preparation.get("screening_source_ready") or not hash_matches:
             actions.append("acquire_or_complete_source_preparation")
         if alternative:
@@ -847,6 +944,12 @@ def _candidate_rows(
                 "source_lanes": candidate.get("source_lanes", []),
                 "zotero_status": candidate.get("zotero_status"),
                 "canonical_bindings": bindings,
+                "canonical_binding_evidence": binding_candidates
+                if binding_accepted
+                else [],
+                "canonical_binding_candidates": binding_candidates,
+                "observed_live_zotero_record_ids": observed_live_ids,
+                "live_zotero_membership_observed": bool(observed_live_ids),
                 "source_readiness": preparation.get("source_readiness", "not_recorded"),
                 "recorded_source_ready": bool(
                     preparation.get("screening_source_ready")
@@ -949,7 +1052,11 @@ def build_package(repo: Path = REPO) -> dict:
     for work in works:
         _attach_source_progress(work, residual, registry)
     issues.extend(unmapped)
-    candidates = _candidate_rows(repo, package, readiness, registry, inputs)
+    zotero_sync = _json(repo / ZOTERO_SYNC)
+    inputs.add(ZOTERO_SYNC)
+    candidates = _candidate_rows(
+        repo, package, readiness, registry, zotero_sync, inputs
+    )
     followup_candidates = _followup_rows(followup, registry)
     assertions = _assertions(repo, inputs, reviews)
     knowledge_coverage = build_knowledge_coverage(repo, registry, inputs)
@@ -1020,6 +1127,9 @@ def build_package(repo: Path = REPO) -> dict:
             "candidates_2026": len(candidates),
             "candidates_2026_with_canonical_binding": sum(
                 bool(row["canonical_bindings"]) for row in candidates
+            ),
+            "candidates_2026_with_observed_live_zotero_membership": sum(
+                row["live_zotero_membership_observed"] for row in candidates
             ),
             "candidates_2026_recorded_source_ready": sum(
                 row["recorded_source_ready"] for row in candidates
@@ -1307,6 +1417,10 @@ Controlled descriptive fields below come from `assessment/categories.yaml`. They
                 "source_lanes",
                 "zotero_status",
                 "canonical_bindings",
+                "canonical_binding_evidence",
+                "canonical_binding_candidates",
+                "observed_live_zotero_record_ids",
+                "live_zotero_membership_observed",
                 "source_readiness",
                 "recorded_source_ready",
                 "source_hash_matches",

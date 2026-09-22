@@ -10,7 +10,7 @@ status: active
 language: en
 version: "0.7"
 created: 2026-08-23
-updated: 2026-09-20
+updated: 2026-09-22
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6), Codex (GPT-6)
 topics: ["[[Verification]]", "[[Evidence Synthesis]]", "[[Research Integrity]]"]
@@ -57,7 +57,7 @@ A run manifest establishes completed execution only when its lifecycle is comple
 
 - Resolve the source, identity, and metadata blocks recorded in `generated/round2-intake-package.json` and `generated/agent-screening-queue.json`.
 - Continue unresolved residual cases from the [current completion queue](../generated/completion/README.md) and the works named in [[plan#Works with conflicts or holds]], preserving the already applied [metadata corrections](../corpus/metadata_corrections.json) and [exact source bindings](../corpus/source_version_bindings.json).
-- Complete the Zotero imports and the curated export listed in [[plan#Waiting on the project owner]] before further productive round-two screening.
+- Use the completed imports and canonical membership recorded in `corpus/zotero_sync.json` as the bibliographic baseline. Reconcile residual exact-Version and reading-source gaps through [[plan#Source and corpus readiness]]. A prepared source without a current binding remains unavailable for productive screening even when its bibliographic record is already in Zotero.
 - Bind the prepared Codex Websearch sources to the curated Work-Version registry and recover the remaining accessible full texts.
 - Bind the prepared intake's visual source bundles after Work-Version reconciliation. The run contract now supports hash-bound original PNGs as mandatory assigned reading when declared; standalone image-based category evidence remains outside the text-quotation contract.
 - Apply the governed coding and AI Agent Review workflow to every work that becomes source-ready.

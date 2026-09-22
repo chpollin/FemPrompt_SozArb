@@ -175,6 +175,13 @@ def _conversion_reviews(
                 "result": result,
                 "artifact": path.relative_to(repo).as_posix(),
                 "record_id": record["record_id"],
+                "created_at": report["created_at"],
+                "reviewer": dict(report["reviewer"]),
+                "scope": report.get("scope"),
+                "pdf_path": record.get("pdf_path"),
+                "pdf_sha256": record.get("pdf_sha256"),
+                "markdown_path": record["markdown_path"],
+                "markdown_sha256": record["markdown_sha256"],
                 "limitations": record.get("losses", []),
             }
             if key in reviews and reviews[key]["result"] != result:
@@ -387,6 +394,7 @@ def _csv_text(payload: dict[str, Any]) -> str:
         "text_available",
         "canonical_binding_matches",
         "source_identity_review",
+        "conversion_review",
         "conversion_review_result",
         "abstract_quality",
         "knowledge_doc",
@@ -402,6 +410,11 @@ def _csv_text(payload: dict[str, Any]) -> str:
     for record in payload["records"]:
         row = {field: record.get(field) for field in fields}
         row["live_zotero_ids"] = "|".join(record["live_zotero_ids"])
+        row["conversion_review"] = (
+            json.dumps(record["conversion_review"], ensure_ascii=False, sort_keys=True)
+            if record["conversion_review"] is not None
+            else ""
+        )
         row["missing_steps"] = "|".join(record["missing_steps"])
         writer.writerow(row)
     return output.getvalue()
