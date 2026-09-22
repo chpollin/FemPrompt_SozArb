@@ -10,7 +10,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-08-23
-updated: 2026-09-21
+updated: 2026-09-22
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6), Codex (GPT-6)
 topics: ["[[Software Testing]]", "[[Research Software]]"]
@@ -46,7 +46,9 @@ The automated suites cover the following contracts.
 
 - Every positive category requires Paper-layer evidence.
 - Include records require complete analysis coding under the controlled vocabulary.
-- Source identity conflicts fail closed before a full text can enter screening.
+- Source identity conflicts fail closed before a full text can enter screening. Normalized filename collisions retain all candidates and cannot silently select an ambiguous fallback.
+- Full-text publication loads the Work-Version registry and explicit source bindings once per invocation. A later invocation reads fresh inputs.
+- Knowledge-document aliases share content only within the exact Work-Version binding, preserving existing-document precedence.
 - Every record represented in the canonical registry resolves to one stable Work and exact bibliographic Version; all Version relations stay inside that Work. Unbound supplement candidates remain explicitly pending.
 - Preferred and latest Versions are derived independently, and a retracted Version cannot become preferred.
 - Full-text manifests, new reviewer files, agent runs, evidence items, active distillates, and public projections retain exact Work-Version bindings.

@@ -50,7 +50,7 @@ In function order, not alphabetical.
 ## Reading paths
 
 - Resume the work: [[handoff]] (current result and continuation point), [[plan]] (remaining work and what waits on the project owner), the newest [[journal]] entry.
-- Consolidate the working directories and simplify source preparation: [[plan#Repository consolidation and source-preparation refactor]] (source preservation, bounded implementation, delegated ownership and acceptance checks).
+- Inspect retained local sources through [[data#Local source preservation]] and reproduce source-preparation guarantees through [[testing]].
 - Onboarding a new collaborator: [[project]], [[methods]], [[specification]]. The reviewing colleagues use `docs/onboarding.html` instead; nothing on their path requires this knowledge base.
 - Describe the method in the follow-up paper: [[methods]] (the chain and the depth, including the replay verification), [[standards]] (the conformance state and the named gaps).
 - Prepare the qualitative coding: [[update-protocol]] (fields, pilot findings, and coding procedure).

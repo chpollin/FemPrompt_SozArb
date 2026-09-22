@@ -24,11 +24,17 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## PRISM and the epistemic infrastructure (2026)
 
+### 2026-09-22: Consolidate working directories and simplify source preparation
+
+The authorised consolidation preserved local sources and acquisition evidence by verified byte hashes before removing the additional worktrees. Local `main` contains their histories and the refactor. Historical `pipeline/` sources remain in place because provenance records still reference them. [[data#Local source preservation]] defines the retained locations. Full-text preparation now loads the registry and explicit bindings once per invocation, preserves ambiguous filename candidates and retains governed source precedence. Knowledge projection indexes aliases by exact Work-Version identity. The shorter `CLAUDE.md` routes to canonical knowledge while retaining operational rules and the local Handoff convention.
+
+Bounded implementation tasks and a separate read-only review used the requested `gpt-5.6-sol` subagents. The lead checked their changes and preservation evidence. The complete project suites, Companion browser checks, PRISM pilot, targeted Ruff rules and formatting checks passed. Repeated builds and a tracked-only Git export produced identical manifests. Research outputs and original source bytes were preserved. The native browser permission check remains manual. The clean dependency installation reported an existing `undici` development-dependency advisory. No push, deployment or new scholarly review occurred. [[handoff]] and [[plan#Controlled corpus completion]] retain the research continuation point.
+
 ### 2026-09-22: Explore repository consolidation and define the refactor
 
 The operator requested an implementation plan preceded by exploration with `gpt-5.6-sol` subagents. Separate read-only tasks examined worktree preservation, the source-to-publication flow and the project knowledge. The lead verified the branch relationships, compared local source hashes and inspected the proposed refactor against the current code. All worktree histories are contained in the current working branch, but the merge-preparation worktree retains local sources absent from the main source stores. The historical `pipeline/` folder also retains source material, so a clean Git status cannot justify deletion.
 
-[[plan#Repository consolidation and source-preparation refactor]] defines preservation before removal, invocation-local full-text inputs, indexed alias projection and a shorter action layer. The Python publication build and frontend without a bundler are compatible. The documented corpus-projection sequence and local Handoff convention remain in force. The existing build-freshness check, JavaScript suites and Python suite passed. The worktree cleanup, source transfers, code refactor, full rebuild, browser pilot and clean-checkout reproduction were not executed in this planning session.
+The implementation plan recorded in commit `4d07201` defines preservation before removal, invocation-local full-text inputs, indexed alias projection and a shorter action layer. The resulting preservation contract is maintained in [[data#Local source preservation]]. The Python publication build and frontend without a bundler are compatible. The documented corpus-projection sequence and local Handoff convention remain in force. The existing build-freshness check, JavaScript suites and Python suite passed. The worktree cleanup, source transfers, code refactor, full rebuild, browser pilot and clean-checkout reproduction were not executed in this planning session.
 
 ### 2026-09-21: Execute source-bound preparation and independent document review
 

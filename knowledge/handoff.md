@@ -10,7 +10,7 @@ status: active
 language: en
 version: "0.7"
 created: 2026-08-23
-updated: 2026-09-21
+updated: 2026-09-22
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6), Claude Code
 related: [INDEX, plan, journal, governance, verification, testing]
@@ -20,7 +20,7 @@ related: [INDEX, plan, journal, governance, verification, testing]
 
 ## Current result
 
-Local `main` inspected on 2026-09-21 includes the September source-review implementation, knowledge refactor and read-only Zotero tooling. The previous handoff's claim that those changes were absent from `main` is superseded by the observed history. The additive Zotero integration is developed on `codex/zotero-group-import`. Deployment has not been inspected in this session.
+Local `main` inspected on 2026-09-22 contains the Zotero integration, source-bound preparation and repository consolidation. The additional FemPrompt worktrees have been removed after their local source files were copied and verified by SHA-256. Their histories remain reachable from `main`. Full-text preparation now shares registry and binding inputs within each invocation, and knowledge projection indexes aliases by exact Work-Version identity. [[data#Local source preservation]] records the retained source locations. These changes have not been pushed or deployed.
 
 The constructive project review of 2026-09-05 is implemented on this line. It comprises canonical Work aggregation, derived inventory and rates, consistent downloads, source-bound Assertion retrieval, attributed AI review receipts, immutable analysis corrections, and an allowlisted preliminary result site. [[project-review-2026-09-05]] records the findings and their remedies, [[governance#Publication boundary]] the release rule. The productive agent track `docs/data/screening/ar2.json` stands at `ai-agent-reviewed`. No record carries domain-expert verification or publication approval.
 
@@ -50,6 +50,8 @@ Third-party PDF binaries remain under the ignored local source directory. Their 
 
 ## Verification state
 
-The session close of 2026-09-05 in [[journal]] records the passing build, the automated suites, the browser pilot and a repository-only Windows reproduction. These are local runs, and the journal documents no CI run for this state. The native folder permission check of `tests/manual-checklist.md` and the scholarly verification by domain experts are open. [[verification]] holds the authority state per claim family.
+The consolidation check of 2026-09-22 passed the complete build, project checks, Companion browser checks and PRISM pilot. Repeated builds produced identical manifests, and a Git archive export without private PDFs, credentials or caches reproduced the same manifest and passed the same suites. Research projections remained unchanged, and original research files and retained local sources matched their recorded byte hashes. The local preview served PRISM, the Companion and the result export successfully. These observations establish local technical behaviour. The native folder permission check of `tests/manual-checklist.md` and scholarly verification by domain experts remain open. [[verification]] holds the authority state per claim family.
 
 The previously reported missing-document failure was traced to Windows path length handling. The documents existed, and the download and projection helpers now read their extended paths. Source and knowledge-document checks also exposed historical title-based mislinks, which are withheld or replaced by hash-bound recoveries. The importer retains the existing script-pipeline layout and dependency setup. No package migration or type-checker configuration was introduced. The latest [[journal]] entry records the completed integration checks.
+
+The clean installation reported an existing `npm audit` advisory for the indirect development dependency `undici`. Its lockfile entry was unchanged by this refactor. Dependency remediation remains separate from the verified source-preparation changes.
