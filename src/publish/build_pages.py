@@ -113,15 +113,23 @@ def subpage_header(active: str, extra: str = "") -> str:
                 f'class="{onboarding_cls}">Onboarding</a>'
             )
     extra_block = f"\n            {extra}" if extra else ""
+    # The working tool keeps only the brand line so the workspace gets the height (ADR-039).
+    brand = (
+        """<a href="index.html" class="brand-link">
+                        <h1>Feministische AI Literacies</h1>
+                    </a>"""
+        if active == "prisma"
+        else """<a href="index.html" class="brand-link">
+                        <h1>Feministische AI Literacies</h1>
+                        <p class="subtitle">Systematischer Review &middot; Interaktive Evidenz</p>
+                    </a>
+                    <p class="header-authors">Pollin, Sackl-Sharif, Klinger &amp; Steiner (2026)</p>"""
+    )
     return f"""<header>
         <div class="header-content">
             <div class="header-top">
                 <div class="header-brand">
-                    <a href="index.html" class="brand-link">
-                        <h1>Feministische AI Literacies</h1>
-                        <p class="subtitle">Systematischer Review &middot; Interaktive Evidenz</p>
-                    </a>
-                    <p class="header-authors">Pollin, Sackl-Sharif, Klinger &amp; Steiner (2026)</p>
+                    {brand}
                 </div>
                 <nav class="header-nav" aria-label="Hauptnavigation">
                     <a href="index.html#chat" class="nav-link">Wissens-Chat</a>
@@ -178,7 +186,7 @@ PAGES = {
     "onboarding.html": {
         "head": head(
             "Onboarding -- Feministische AI Literacies",
-            "Einstieg in das PRISM-Screening für Reviewer:innen.",
+            "Anleitung für die fachliche Prüfung vorbereiteter Records in PRISM.",
             fav=favicon("F", 60), fonts=FONTS_COMPANION,
         ),
         "header": "onboarding",
@@ -192,6 +200,7 @@ PAGES = {
             extra_css='<link rel="stylesheet" href="css/prisma.css?v=20260822-20">',
         ),
         "header": "prisma",
+        "footer": False,  # the working tool keeps its full height for the three-pane workspace (ADR-039)
     },
 }
 
@@ -206,10 +215,12 @@ def render_pages() -> dict[str, str]:
     for fname, cfg in PAGES.items():
         path = DOCS / fname
         html = path.read_text(encoding="utf-8")
-        for label, pattern, replacement in (
-            ("head", HEAD_RE, cfg["head"]),
-            ("footer", FOOTER_RE, FOOTER),
-        ):
+        regions = [("head", HEAD_RE, cfg["head"])]
+        if cfg.get("footer", True):
+            regions.append(("footer", FOOTER_RE, FOOTER))
+        elif FOOTER_RE.search(html):
+            raise SystemExit(f"{fname}: footer present on a page declared without one")
+        for label, pattern, replacement in regions:
             if not pattern.search(html):
                 raise SystemExit(f"{fname}: no <{label}> region found")
             html = pattern.sub(lambda m, r=replacement: r, html, count=1)

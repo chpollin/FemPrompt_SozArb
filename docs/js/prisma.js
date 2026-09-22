@@ -94,6 +94,9 @@ const TRAICE = [
 const LS_KEY = 'femprompt-prisma-state/0.2';
 const TRIAL_LS_KEY = 'femprompt-prisma-trial-state/0.1';
 const REVIEWER_SCHEMA = 'femprompt-prisma-reviewer/0.4'; // 0.4 binds decisions and paper evidence to an exact work version.
+// Additive envelope extension (ADR-040). The reviewer schema is untouched, so an
+// existing 0.5 record stays valid and an older reader ignores the extra block.
+const VERIFICATION_SCHEMA = 'femprompt-prisma-verification/0.1';
 const SEED = 'seed'; // built-in reviewer = the existing expert assessment (paper.human)
 const REVIEWER_KEY_PATTERN = /^[A-Za-z][A-Za-z0-9_-]{1,11}$/;
 const LIFECYCLE_STATES = [];
@@ -185,6 +188,12 @@ let storedHandleAvailable = false;
 let reviewerFileErrors = {};   // reviewerKey -> blocking read/validation error for an existing file
 let reviewerRecoveryPending = {}; // reviewerKey -> browser records newer than the connected file
 const reviewerEnvelopes = {};  // reviewerKey -> loaded top-level JSON, preserved across decision writes
+// The expert verifies the productive agent track, not their own capture, so the
+// subject record and the file that receives the verification event are different
+// files. agentTrack holds a deep copy: a display projection can then never reach
+// the in-memory track that a save would serialize back into the agent's own file.
+let agentTrack = { reviewer: null, records: {} };
+const verificationRecords = {}; // reviewerKey -> verification events this reviewer recorded
 let corpusIndex = null;        // id -> { t, ay, kd, src, n, x } for corpus full-text search
 let corpusIndexPromise = null;
 let corpusQuery = '';          // current corpus-wide search (left pane)
@@ -247,8 +256,8 @@ function setEditMode(enabled) {
             focusDataInline();
             if (!trialMode && !screeningHandle) restoreRepoConnection();
         } else {
-            const toggle = document.getElementById('pt-edit-mode');
-            if (toggle) toggle.focus();
+            const reader = document.getElementById('pt-read-mode') || document.getElementById('pt-edit-mode');
+            if (reader) reader.focus();
         }
     }
     return canEdit();
@@ -262,6 +271,7 @@ function serializeAll() {
         config: { reviewer: state.reviewer, reviewerSelected: !!state.reviewer,
                   perspective: state.perspective, disclosure: state.disclosure },
         reviewers: state.reviewers,
+        verifications: verificationRecords,
         checklist: state.checklist
     };
 }
@@ -288,6 +298,10 @@ function loadLocal() {
             if (o.config.disclosure) state.disclosure = o.config.disclosure;
         }
         state.reviewers = o.reviewers || {};
+        if (o.verifications && typeof o.verifications === 'object')
+            Object.keys(o.verifications).forEach(function(key) {
+                if (Array.isArray(o.verifications[key])) verificationRecords[key] = o.verifications[key];
+            });
         state.checklist = o.checklist || {};
         if (state.reviewer) saveStatus = trialMode ? {
             kind: 'ready',
@@ -355,6 +369,11 @@ function reviewerPayload(key) {
         if (paper) bindRecordIdentity(record, paper);
         payload.decisions[paperId] = record;
     });
+    const verifications = verificationRecords[key];
+    if (Array.isArray(verifications) && verifications.length) {
+        payload.verification_schema = VERIFICATION_SCHEMA;
+        payload.verifications = JSON.parse(JSON.stringify(verifications));
+    }
     return payload;
 }
 
@@ -478,6 +497,8 @@ function importReviewerPayload(obj, target, overwrite) {
         return { ok: false, reason: 'occupied' };
     state.reviewers[target] = normalizedReviewerDecisions(obj.decisions, target);
     reviewerEnvelopes[target] = JSON.parse(JSON.stringify(obj));
+    adoptVerifications(target, obj);
+    adoptAgentTrack();
     save();
     return { ok: true, reviewer: target, count: Object.keys(obj.decisions).length };
 }
@@ -646,6 +667,7 @@ async function loadAllReviewers() {
                 const merged = mergeReviewerDecisions(disk, local);
                 found[key] = merged.decisions;
                 reviewerEnvelopes[key] = JSON.parse(JSON.stringify(obj));
+                adoptVerifications(key, obj);
                 if (merged.recovered) recoveries[key] = true;
                 if (merged.conflict) errors[key] = merged.conflict;
             } catch (e) {
@@ -660,7 +682,135 @@ async function loadAllReviewers() {
     // Apply resolved records. On a blocked conflict, the file stays untouched on disk
     // while the browser recovery remains in memory and localStorage.
     Object.keys(found).forEach(function(k) { state.reviewers[k] = found[k]; });
+    adoptAgentTrack();
     saveLocal();
+}
+
+// --- productive agent track and its expert verification layer ---
+
+// The operative criterion is the record state, not the envelope label: the agent
+// track is the connected file whose decisions were carried to ai-agent-reviewed.
+function isAgentTrackPayload(obj) {
+    if (!obj || obj.actor !== 'agent' || !obj.decisions || typeof obj.decisions !== 'object') return false;
+    return Object.keys(obj.decisions).some(function(id) {
+        const record = obj.decisions[id];
+        return !!(record && record.lifecycle && record.lifecycle.state === 'ai-agent-reviewed');
+    });
+}
+
+function adoptVerifications(key, payload) {
+    const entries = payload && Array.isArray(payload.verifications) ? payload.verifications : null;
+    if (entries) verificationRecords[key] = JSON.parse(JSON.stringify(entries));
+    else if (!verificationRecords[key]) verificationRecords[key] = [];
+}
+
+function adoptAgentTrack() {
+    let chosen = null;
+    Object.keys(reviewerEnvelopes).sort().forEach(function(key) {
+        if (!isAgentTrackPayload(reviewerEnvelopes[key])) return;
+        if (!chosen || String(reviewerEnvelopes[key].updated || '') > String(reviewerEnvelopes[chosen].updated || ''))
+            chosen = key;
+    });
+    agentTrack = chosen
+        ? { reviewer: chosen, records: JSON.parse(JSON.stringify(reviewerEnvelopes[chosen].decisions || {})) }
+        : { reviewer: null, records: {} };
+    projectExpertVerifications();
+}
+
+// Expert verification lives in the expert's own file. The agent record shown in
+// verification mode is the projection of that file onto the untouched agent track,
+// rebuilt at load time rather than written back into the agent's file.
+function projectExpertVerifications() {
+    if (!agentTrack.reviewer) return;
+    Object.keys(verificationRecords).forEach(function(key) {
+        (verificationRecords[key] || []).forEach(function(entry) {
+            if (!entry || entry.paper_id === undefined) return;
+            if (entry.subject && entry.subject.reviewer && entry.subject.reviewer !== agentTrack.reviewer) return;
+            const record = agentTrack.records[entry.paper_id];
+            if (record) projectVerification(record, entry);
+        });
+    });
+}
+
+function projectVerification(record, entry) {
+    if (!record || !entry || !entry.event || !entry.event.event_id) return record;
+    ensureVerificationContract(record);
+    const known = record.lifecycle.events.some(function(event) { return event.event_id === entry.event.event_id; });
+    if (known) return record;
+    applyVerificationProvenance(record, entry.reviewer_id, actorIds(entry.actor_ids), entry.activity_id,
+        entry.event.event_type !== 'publication_approval');
+    if (entry.annotation && entry.annotation.body) {
+        record.annotations.push(JSON.parse(JSON.stringify(entry.annotation)));
+        record.active_annotation_id = entry.annotation.annotation_id;
+        applyAnnotationBody(record, entry.annotation.body);
+    }
+    record.lifecycle.events.push(JSON.parse(JSON.stringify(entry.event)));
+    if (isLifecycleState(entry.event.to)) record.lifecycle.state = entry.event.to;
+    return record;
+}
+
+// In verification mode the subject is the productive agent record for this paper.
+// Where the track holds none, the expert's own saved record remains the subject,
+// which keeps legacy captures inspectable instead of hiding them.
+function verificationSubject(p) {
+    if (!verificationMode || !p) return null;
+    const agentRecord = agentTrack.records[p.id];
+    if (agentRecord) return { record: agentRecord, reviewer: agentTrack.reviewer, agent: true };
+    const own = curDec()[p.id];
+    return own ? { record: own, reviewer: state.reviewer, agent: false } : null;
+}
+
+function displayRecord(p) {
+    if (verificationMode) {
+        const subject = verificationSubject(p);
+        return subject ? subject.record : null;
+    }
+    return canEdit() && editingPid === p.id ? null : curDec()[p.id]; // saved records stay visible in read mode
+}
+
+// A paper is in the expert's queue while its agent record carries an AI Agent Review
+// and no domain-expert verification has advanced it.
+function awaitsVerification(paperId) {
+    const record = agentTrack.records[paperId];
+    return !!record && verificationView(record).lifecycle.state === 'ai-agent-reviewed';
+}
+
+// The hash the deterministic validator recorded over the exact annotation. PRISM
+// computes no hash of its own, so an agent record without a check receipt is bound
+// by annotation id alone and says so instead of carrying an invented value.
+function subjectRecordHash(record, annotationId) {
+    const checks = (record && Array.isArray(record.checks)) ? record.checks : [];
+    let hash = null;
+    checks.forEach(function(check) {
+        const subject = check && check.subject;
+        if (!subject || !subject.sha256) return;
+        if (annotationId && subject.annotation_id && subject.annotation_id !== annotationId) return;
+        hash = subject.sha256;
+    });
+    return hash;
+}
+
+function verificationEntry(paperId, subject, annotationId, event, reviewerId, correction) {
+    const hash = subjectRecordHash(subject.record, annotationId);
+    const entry = {
+        verification_id: verificationEventId(),
+        paper_id: paperId,
+        subject: {
+            reviewer: subject.reviewer || null,
+            annotation_id: annotationId || null,
+            record_sha256: hash || null,
+            hash_status: hash ? 'deterministic_check_receipt' : 'not_recorded'
+        },
+        reviewer_id: String(reviewerId || '').trim(),
+        actor_ids: actorIds(event.actor_ids),
+        activity_id: event.activity_id,
+        result: event.result,
+        note: event.note,
+        at: event.at,
+        event: JSON.parse(JSON.stringify(event))
+    };
+    if (correction) entry.annotation = JSON.parse(JSON.stringify(correction));
+    return entry;
 }
 
 async function writeReviewerText(targetHandle, key, text) {
@@ -1127,21 +1277,38 @@ function normalizeSurface() {
 function renderShell() {
     const root = document.getElementById('prisma-root');
     if (!root) return;
-    let html = '<div class="pt-wsbar-top"><span class="pt-wsbar-title">' + (verificationMode ? 'PRISM-Verifikation' : 'Screening') + '</span>';
+    root.innerHTML = '<div class="pt-surface" id="pt-surface"></div>';
+}
+
+// Workspace controls live at the top of the corpus column so the reading and
+// assessment panes start directly below the site header.
+function workspaceBarHtml() {
+    let html = '<div class="pt-wsbar-top"><div class="pt-mode-seg" role="group" aria-label="Arbeitsmodus">';
     if (!acceptanceMode && !trialMode && !verificationMode && runActor !== 'agent') {
-        html += '<span class="pt-workspace-mode" id="pt-workspace-mode" role="status">' + (canEdit() ? 'Bearbeitungsmodus' : 'Lesemodus') + '</span>' +
-            '<button class="pt-btn pt-edit-mode" id="pt-edit-mode" type="button" aria-pressed="' + canEdit() +
-            '" aria-describedby="pt-workspace-mode" title="' + (canEdit() ? 'Zum Lesemodus wechseln' : 'Bewertungen bearbeiten') + '">Bearbeiten</button>';
+        html += '<span class="pt-sr-only" id="pt-workspace-mode" role="status">' + (canEdit() ? 'Bearbeitungsmodus' : 'Lesemodus') + '</span>' +
+            '<button class="pt-seg-btn pt-read-mode" id="pt-read-mode" type="button" aria-pressed="' + !canEdit() +
+            '" title="Papers lesen und durchsuchen, ohne etwas zu ändern.">Lesen</button>' +
+            '<button class="pt-seg-btn pt-edit-mode" id="pt-edit-mode" type="button" aria-pressed="' + canEdit() +
+            '" aria-describedby="pt-workspace-mode" title="Kürzel, Arbeitsordner, Bewertungen und Speichern freischalten. Ein ungespeicherter Entwurf bleibt beim Wechsel erhalten.">Bearbeiten</button>';
+    } else if (verificationMode) {
+        html += '<a class="pt-seg-btn pt-mode-switch" href="' + EC.escapeHtml(modeHref(false)) + '" title="Zurück zum Screening">Screening</a>';
     }
-    html +=
-        '<a class="pt-mode-switch' + (verificationMode ? ' is-active' : '') + '" href="' + EC.escapeHtml(modeHref(!verificationMode)) + '">' +
-        (verificationMode ? 'Zum Screening' : 'Verifikationsmodus') + '</a></div>';
+    if (!acceptanceMode && !trialMode && runActor !== 'agent') {
+        html += verificationMode
+            ? '<span class="pt-seg-btn is-active" aria-current="page">Verifizieren</span>'
+            : '<a class="pt-seg-btn pt-mode-switch" href="' + EC.escapeHtml(modeHref(true)) + '" title="Nachweis- und Freigabestatus prüfen und das fachliche Ergebnis protokollieren.">Verifizieren</a>';
+    }
+    html += '</div></div>';
     html += '<section class="pt-sync-inline" id="pt-data-inline" aria-label="Reviewer und Datenspeicherung"></section>';
-    html += '<div class="pt-surface" id="pt-surface"></div>';
-    root.innerHTML = html;
-    const toggle = root.querySelector('#pt-edit-mode');
-    if (toggle) toggle.addEventListener('click', function() { setEditMode(!canEdit()); });
-    renderData(root.querySelector('#pt-data-inline'));
+    return html;
+}
+
+function bindWorkspaceBar(container) {
+    const toggle = container.querySelector('#pt-edit-mode');
+    if (toggle) toggle.addEventListener('click', function() { if (!canEdit()) setEditMode(true); });
+    const reader = container.querySelector('#pt-read-mode');
+    if (reader) reader.addEventListener('click', function() { if (canEdit()) setEditMode(false); });
+    renderData(container.querySelector('#pt-data-inline'));
 }
 
 // showSurface keeps its name for the test hook and browser traces.
@@ -1327,15 +1494,15 @@ function renderScreening() {
         renderedPaperId = p.id;
     }
     if (editingPid && editingPid !== p.id) editingPid = null; // navigating away abandons the edit; the record stays
-    const dec = canEdit() && editingPid === p.id ? null : curDec()[p.id]; // saved records stay visible in read mode
+    const dec = displayRecord(p);
     if (!dec && work.pid !== p.id) resetWork(p);
 
     const screened = Object.keys(curDec()).length;
     const pct = papers.length ? Math.round(screened / papers.length * 100) : 0;
 
     let html = '<div class="pt-ws-bar">';
-    html += '<span class="pt-ws-pos">Paper ' + (state.index + 1) + ' / ' + papers.length + '</span>';
-    html += '<span class="pt-ws-progressbar"><span class="pt-ws-progressfill" style="width:' + pct + '%"></span></span>';
+    html += '<span class="pt-ws-pos">' + (state.index + 1) + ' / ' + papers.length + '</span>' +
+        '<span class="pt-ws-done" title="Von dir erfasste Papers (' + pct + ' %)">' + screened + ' erfasst</span>';
     if (canEdit()) {
         html += '<button class="pt-save-icon" id="pt-record" type="button" aria-label="Entscheidung speichern" title="Entscheidung speichern"' +
             ((dec || !state.reviewer || (!screeningHandle && !trialMode)) ? ' disabled' : '') + '>' +
@@ -1344,15 +1511,17 @@ function renderScreening() {
     }
     html += '<span class="pt-spacer"></span>';
     html += '</div>';
+    const positionBar = html;
 
-    html += '<div class="pt-ws pt-ws-screen">';
-    html += corpusHtml();
+    html = '<div class="pt-ws pt-ws-screen">';
+    html += corpusHtml(positionBar);
     html += readingShellHtml(p, dec);
     html += '<aside class="pt-rail" id="pt-assess-col">' + assessInnerHtml(p, dec) + '</aside>';
     html += '<div class="pt-pinmenu" id="pt-pinmenu" hidden></div>';
     html += '</div>';
 
     el.innerHTML = html;
+    bindWorkspaceBar(el);
     // the load starts first: it raises readingPending synchronously, so the commit gate
     // that attachScreening evaluates sees this paper's load rather than the previous one
     loadReadingInto(p);
@@ -1368,11 +1537,10 @@ function renderScreening() {
 }
 
 // ---- left: corpus navigator with full-text search ----
-function corpusHtml() {
+function corpusHtml(positionBar) {
     let d = curDec();
     const total = acceptanceMode ? Object.keys(d).length : papers.length;
-    let h = '<aside class="pt-nav"><div class="pt-nav-head"><span class="pt-nav-title-main">Korpus</span>' +
-        '<span class="pt-tag-mono">' + Object.keys(d).length + ' / ' + total + '</span></div>';
+    let h = '<aside class="pt-nav"><div class="pt-nav-tools">' + workspaceBarHtml() + (positionBar || '') + '</div>';
     h += '<div class="pt-corpus-search"><input id="pt-corpus-q" aria-label="Korpus durchsuchen: Metadaten und Wissensindex" placeholder="Korpus durchsuchen" value="' + EC.escapeHtml(corpusQuery) + '">' +
         '<span class="pt-corpus-hint" id="pt-corpus-hint"></span></div>';
     h += '<div class="pt-nav-list' + (corpusQuery.trim() ? ' is-searching' : '') + '" id="pt-corpus-list">' + corpusListHtml() + '</div></aside>';
@@ -1404,10 +1572,14 @@ function corpusListHtml() {
         const badge = q ? '<span class="pt-hit-badge">' + EC.escapeHtml(result.kind === 'Text'
             ? result.count + ' Texttreffer' : result.kind) + '</span>' : '';
         const idLabel = result.kind === 'Paper-ID' || !p.doi ? 'ID ' + p.id : 'DOI ' + p.doi;
+        // The expert's queue: an agent record under AI Agent Review that no
+        // domain-expert verification has advanced yet. Own decision dots stay as they are.
+        const queued = verificationMode && awaitsVerification(p.id);
         return '<button class="pt-nav-item' + (i === state.index ? ' active' : '') + '" data-i="' + i +
             '" data-match-kind="' + EC.escapeHtml(result.kind || '') + '">' +
             '<span class="pt-nav-dot pt-dot-' + st + '" aria-hidden="true"></span>' +
             '<span class="pt-sr-only">' + statusLabel(st) + '</span>' +
+            (queued ? '<span class="pt-nav-verify" aria-hidden="true"></span><span class="pt-sr-only">Agentenkodierung offen zur Verifikation</span>' : '') +
             '<span class="pt-nav-text"><span class="pt-nav-t">' + EC.escapeHtml(p.title || '(ohne Titel)') + '</span>' +
             '<span class="pt-nav-m">' + EC.escapeHtml(p.author_year || p.authors || 'Autor:in/Jahr unbekannt') + '</span>' +
             (q ? '<span class="pt-nav-id mono">' + EC.escapeHtml(idLabel) + '</span>' : '') + '</span>' + badge + '</button>';
@@ -1478,7 +1650,6 @@ function readingShellHtml(p, dec) {
     let h = '<div class="pt-read pt-read-screen"><div class="pt-read-inner">';
     h += '<div class="pt-paper-head"><div class="pt-read-meta">';
     h += sourcePillHtml(p);
-    h += '<span class="pt-pill pt-pill-ghost">' + EC.escapeHtml(versionLabel(p.version_type)) + '</span>';
     if (dec) h += '<span class="pt-pill pt-pill-human pt-pill-right">erfasst</span>';
     h += '</div>';
     h += '<h1 class="pt-paper-title" id="pt-paper-title" tabindex="-1">' + EC.escapeHtml(p.title || '(ohne Titel)') + '</h1>';
@@ -1488,19 +1659,21 @@ function readingShellHtml(p, dec) {
         '<div><dt>Autor:innen</dt><dd>' + EC.escapeHtml(authorDisplay(p)) + '</dd></div>' +
         '<div><dt>Jahr</dt><dd>' + EC.escapeHtml(p.publication_year || p.year || 'nicht angegeben') + '</dd></div>' +
         (p.journal ? '<div><dt>Publikation</dt><dd>' + EC.escapeHtml(p.journal) + '</dd></div>' : '') +
+        (doi ? '<div><dt>DOI</dt><dd class="mono"><a class="pt-doi-link" href="' + EC.escapeHtml(doiHref(doi)) +
+            '" target="_blank" rel="noopener noreferrer" title="DOI ' + EC.escapeHtml(doi) + ' öffnen">' + EC.escapeHtml(doi) + '</a></dd></div>' : '') +
+        (sourceUrl ? '<div><dt>Quelle</dt><dd><a class="pt-source-link" href="' + EC.escapeHtml(sourceUrl) +
+            '" target="_blank" rel="noopener noreferrer">Webseite öffnen</a></dd></div>' : '') +
+        '<details class="pt-paper-identity"><summary>Fassung und Identität</summary><div class="pt-paper-identity-body">' +
+        '<div><dt>Paper-ID</dt><dd class="mono">' + EC.escapeHtml(p.id) + '</dd></div>' +
         '<div><dt>Fassung</dt><dd>' + EC.escapeHtml(versionLabel(p.version_type)) +
             (p.is_preferred_version ? ' · bevorzugte Fassung' : '') + '</dd></div>' +
         '<div><dt>Begutachtung</dt><dd>' + EC.escapeHtml(peerReviewLabel(p.peer_review_status)) + '</dd></div>' +
-        (doi ? '<div><dt>DOI</dt><dd class="mono"><a class="pt-doi-link" href="' + EC.escapeHtml(doiHref(doi)) +
-            '" target="_blank" rel="noopener noreferrer" title="DOI ' + EC.escapeHtml(doi) + ' öffnen">' + EC.escapeHtml(doi) + '</a></dd></div>' : '') +
-        '<div><dt>Paper-ID</dt><dd class="mono">' + EC.escapeHtml(p.id) + '</dd></div>' +
         (p.work_id ? '<div><dt>Werk-ID</dt><dd class="mono">' + EC.escapeHtml(p.work_id) + '</dd></div>' : '') +
         (p.version_id ? '<div><dt>Fassungs-ID</dt><dd class="mono">' + EC.escapeHtml(p.version_id) + '</dd></div>' : '') +
         ((p.work_versions || []).length > 1 ? '<div><dt>Bekannte Fassungen</dt><dd>' +
             EC.escapeHtml(p.work_versions.map(function(item) { return versionLabel(item.version_type); }).join(' · ')) +
             '</dd></div>' : '') +
-        (sourceUrl ? '<div><dt>Quelle</dt><dd><a class="pt-source-link" href="' + EC.escapeHtml(sourceUrl) +
-            '" target="_blank" rel="noopener noreferrer">Webseite öffnen</a></dd></div>' : '') + '</dl></div>';
+        '</div></details></dl></div>';
     if (!aq.ok && !p.knowledge_doc) h += '<div class="pt-aq-warn">Achtung: ' + EC.escapeHtml(aq.note) + '</div>';
 
     h += '<article class="pt-reading-surface" aria-label="Papertext">';
@@ -1575,11 +1748,32 @@ function referenceLayerAvailable() {
     return !!(docHtmlAi && paper && (acceptanceMode || (runActor !== 'agent' && curDec()[paper.id])));
 }
 
+// Converted full texts often start with publisher front matter; the reading pane opens
+// at the first heading (preferably the abstract) so the reviewer starts at the paper.
+function jumpToFirstHeading(doc) {
+    const read = doc.closest('.pt-read');
+    if (!read) return;
+    window.setTimeout(function() {
+        const headings = doc.querySelectorAll('h1, h2, h3');
+        let target = null;
+        headings.forEach(function(h) { if (!target && /abstract|zusammenfassung|summary/i.test(h.textContent)) target = h; });
+        if (!target) target = headings[0];
+        if (!target) return;
+        const offset = target.getBoundingClientRect().top - read.getBoundingClientRect().top + read.scrollTop;
+        // short front matter stays in view together with title and metadata; only a long
+        // publisher preamble (longer than the pane) is skipped
+        if (offset < read.clientHeight * 0.8) return;
+        const bar = read.querySelector('.pt-intext-bar');
+        read.scrollTop = Math.max(0, offset - (bar ? bar.getBoundingClientRect().height + 12 : 12));
+    }, 0);
+}
+
 function activeLayerHtml() { return state.readMode === 'ai' && referenceLayerAvailable() ? docHtmlAi : docHtmlPaper; }
 
 function paintActiveLayer() {
     let d = document.getElementById('pt-doc'); if (!d) return;
     docHtmlCurrent = activeLayerHtml();
+    if (state.readMode === 'full') jumpToFirstHeading(d);
     d.innerHTML = docHtmlCurrent || '<div class="pt-notext"><strong>Kein lesbarer Text.</strong> ' +
         'Für dieses Paper liegt weder Volltext noch Abstract vor. Eine am Text belegbare Bewertung ist hier nicht möglich; ' +
         'Quelle prüfen oder als No full text ausschließen.</div>';
@@ -1693,25 +1887,6 @@ function unpinEvidence(cat, idx) {
         if (!work.evidence[cat].length) delete work.evidence[cat];
     }
     refreshAssess();
-}
-
-// Existing annotations are revealed only after the reviewer has saved a decision.
-function seedRefHtml(p) {
-    const seed = seedDecision(p);
-    if (!seed) return '';
-    const setCats = ALL_CATS.filter(function(c) { return seed.categories[c]; });
-    let h = '<div class="pt-reference-card"><span class="pt-tag-mono">Frühere Expert:innen-Referenz</span>' +
-        '<strong class="pt-dec-' + seed.decision.toLowerCase() + '">' + seed.decision + '</strong>';
-    if (setCats.length) h += '<div class="pt-seed-cats">' + setCats.map(function(c) {
-        return '<span class="pt-pill pt-pill-human">' + EC.escapeHtml(CAT_LABELS[c]) + '</span>';
-    }).join('') + '</div>';
-    const bm = p.benchmark;
-    if (bm && bm.agreement === 'disagree') {
-        const aff = (bm.affected_categories || []).map(function(c) { return CAT_LABELS[c] || c; });
-        h += '<div class="pt-diverg"><span class="pt-pill pt-pill-warn">Frühere Abweichung</span>' +
-            (aff.length ? '<span class="pt-muted">' + EC.escapeHtml(aff.join(', ')) + '</span>' : '') + '</div>';
-    }
-    return h + '</div>';
 }
 
 function paperEvidenceMissing(cats, evidence) {
@@ -1939,6 +2114,46 @@ function correctedAnnotationBody(record, value) {
     return { ok: true, body: body, changes: changes };
 }
 
+// One path records the expert's actors and activity on a record, whether the event
+// is taken here or projected from the expert's file onto the agent track at load.
+function applyVerificationProvenance(record, reviewer, actors, activity, isVerification) {
+    ensureVerificationContract(record);
+    const role = isVerification ? 'domain_expert' : 'publication_approval';
+    const named = actorIds([].concat(actors || [], reviewer ? [reviewer] : []));
+    const provenanceActors = record.provenance.actors = record.provenance.actors || [];
+    named.forEach(function(id) {
+        let actor = provenanceActors.find(function(item) { return item.id === id; });
+        if (!actor) { actor = { id: id, type: 'person', roles: [] }; provenanceActors.push(actor); }
+        actor.type = 'person';
+        actor.roles = actorIds(actor.roles);
+        if (actor.roles.indexOf(role) === -1) actor.roles.push(role);
+    });
+    if (!activity) return record;
+    let activityRecord = record.provenance.activities.find(function(item) { return item.id === activity; });
+    if (!activityRecord) {
+        activityRecord = {
+            id: activity,
+            type: isVerification ? 'domain_expert_verification' : 'publication_approval',
+            run_id: activity,
+            method: isVerification
+                ? 'prism_domain_expert_verification'
+                : 'prism_publication_approval',
+            prompt: {
+                status: 'recorded',
+                reference: 'knowledge/update-protocol.md#1.1-agent-assisted-completion-and-deferred-verification'
+            },
+            model: { status: 'not_applicable', value: 'not_applicable' },
+            associated_actor_ids: []
+        };
+        record.provenance.activities.push(activityRecord);
+    }
+    activityRecord.associated_actor_ids = actorIds(activityRecord.associated_actor_ids);
+    named.forEach(function(id) {
+        if (activityRecord.associated_actor_ids.indexOf(id) === -1) activityRecord.associated_actor_ids.push(id);
+    });
+    return record;
+}
+
 function advanceVerification(record, target, details) {
     if (!canEdit()) return { ok: false, message: 'Zum Ändern zuerst Bearbeiten aktivieren.' };
     if (!record || typeof record !== 'object') return { ok: false, message: 'Kein Decision Record geladen.' };
@@ -1981,40 +2196,7 @@ function advanceVerification(record, target, details) {
         at: at, activity_id: activity, actor_ids: actors,
         annotation_id: record.active_annotation_id
     };
-    const role = isVerification ? 'domain_expert' : 'publication_approval';
-    const provenanceActors = record.provenance.actors = record.provenance.actors || [];
-    actors.forEach(function(id) {
-        let actor = provenanceActors.find(function(item) { return item.id === id; });
-        if (!actor) { actor = { id: id, type: 'person', roles: [] }; provenanceActors.push(actor); }
-        actor.type = 'person';
-        actor.roles = actorIds(actor.roles);
-        if (actor.roles.indexOf(role) === -1) actor.roles.push(role);
-    });
-    let namedReviewer = provenanceActors.find(function(item) { return item.id === reviewer; });
-    if (!namedReviewer) { namedReviewer = { id: reviewer, type: 'person', roles: [] }; provenanceActors.push(namedReviewer); }
-    namedReviewer.type = 'person';
-    namedReviewer.roles = actorIds(namedReviewer.roles);
-    if (namedReviewer.roles.indexOf(role) === -1) namedReviewer.roles.push(role);
-    let activityRecord = record.provenance.activities.find(function(item) { return item.id === activity; });
-    if (!activityRecord) {
-        activityRecord = {
-            id: activity,
-            type: event.event_type,
-            run_id: activity,
-            method: isVerification
-                ? 'prism_domain_expert_verification'
-                : 'prism_publication_approval',
-            prompt: {
-                status: 'recorded',
-                reference: 'knowledge/update-protocol.md#1.1-agent-assisted-completion-and-deferred-verification'
-            },
-            model: { status: 'not_applicable', value: 'not_applicable' },
-            associated_actor_ids: []
-        };
-        record.provenance.activities.push(activityRecord);
-    }
-    activityRecord.associated_actor_ids = actorIds(activityRecord.associated_actor_ids);
-    actors.forEach(function(id) { if (activityRecord.associated_actor_ids.indexOf(id) === -1) activityRecord.associated_actor_ids.push(id); });
+    applyVerificationProvenance(record, reviewer, actors, activity, isVerification);
     if (correction) {
         const correctionId = verificationEventId();
         record.annotations.push({
@@ -2033,7 +2215,10 @@ function advanceVerification(record, target, details) {
     }
     record.lifecycle.events.push(event);
     record.lifecycle.state = actualTarget;
-    return { ok: true, event: event, record: record };
+    return {
+        ok: true, event: event, record: record, reviewer_id: reviewer,
+        annotation: correction ? record.annotations[record.annotations.length - 1] : null
+    };
 }
 
 function verificationValue(value, empty) {
@@ -2041,6 +2226,58 @@ function verificationValue(value, empty) {
     if (Array.isArray(value)) return value.length ? EC.escapeHtml(value.join(', ')) : '<span class="pt-verify-empty">' + EC.escapeHtml(empty || 'Keine Angabe') + '</span>';
     if (typeof value === 'object') return EC.escapeHtml(JSON.stringify(value));
     return EC.escapeHtml(String(value));
+}
+
+// Provenance carries structured references. Rendering them as raw JSON made the
+// panel unreadable exactly where the expert has to judge the evidence basis, so
+// each kind is resolved to the line a reader can act on.
+function verificationEmpty(text) { return '<span class="pt-verify-empty">' + EC.escapeHtml(text) + '</span>'; }
+
+function hashPrefix(value) {
+    const hash = String(value || '').trim();
+    return hash ? hash.slice(0, 12) : '';
+}
+
+function provenanceRefLabel(item) {
+    if (item === null || item === undefined || item === '') return '';
+    if (typeof item !== 'object') return String(item);
+    const label = String(item.path || item.reference || item.id || item.name || '').trim();
+    const hash = hashPrefix(item.sha256 || item.hash);
+    let text = item.type && label ? item.type + ': ' + label : (label || String(item.type || ''));
+    if (!text) return '';
+    if (hash) text += ' · ' + hash;
+    return text;
+}
+
+function promptLabel(prompt) {
+    if (!prompt) return null;
+    if (typeof prompt !== 'object') return String(prompt);
+    if (prompt.status === 'legacy_gap' || prompt.status === 'unrecorded') return null;
+    const reference = String(prompt.reference || prompt.id || prompt.path || '').trim();
+    const version = String(prompt.version || '').trim();
+    if (!reference && !version) return null;
+    return version ? (reference ? reference + ' · v' + version : 'v' + version) : reference;
+}
+
+function modelLabel(model) {
+    if (!model) return null;
+    if (typeof model !== 'object') return String(model);
+    if (model.status === 'not_applicable') return 'nicht zutreffend';
+    if (model.status === 'legacy_gap') return null;
+    const id = String(model.id || model.value || model.reference || model.name || '').trim();
+    return id && id !== 'unrecorded' ? id : null;
+}
+
+function verificationLabelValue(text, empty) {
+    return text ? EC.escapeHtml(text) : verificationEmpty(empty || 'nicht überliefert');
+}
+
+function verificationRefList(items, empty) {
+    const labels = (Array.isArray(items) ? items : []).map(provenanceRefLabel).filter(function(label) { return !!label; });
+    if (!labels.length) return verificationEmpty(empty);
+    return '<ul class="pt-verify-refs">' + labels.map(function(label) {
+        return '<li>' + EC.escapeHtml(label) + '</li>';
+    }).join('') + '</ul>';
 }
 
 function verificationPanelHtml(record) {
@@ -2057,11 +2294,11 @@ function verificationPanelHtml(record) {
         '<div><dt>Annotation</dt><dd>' + verificationValue(provenance.annotation_id) + ' · ' + verificationValue(provenance.annotation_type) + '</dd></div>' +
         '<div><dt>Actors</dt><dd>' + verificationValue(actors.map(function(actor) { return actor.id + ' (' + actor.type + '; ' + actor.roles.join(', ') + ')'; })) + '</dd></div></dl>';
     h += '<div class="pt-verification-provenance"><h4>Ausführungsprovenienz</h4>' + (activities.length ? activities.map(function(activity) {
-        return '<div class="pt-verification-activity"><p><strong>' + EC.escapeHtml(activity.id) + '</strong> · ' + EC.escapeHtml(activity.type) + '</p><dl class="pt-verification-grid"><div><dt>Run</dt><dd>' + verificationValue(activity.run_id) + '</dd></div><div><dt>Methode</dt><dd>' + verificationValue(activity.method) + '</dd></div><div><dt>Prompt</dt><dd>' + verificationValue(activity.prompt) + '</dd></div><div><dt>Modell</dt><dd>' + verificationValue(activity.model) + '</dd></div><div><dt>Actors</dt><dd>' + verificationValue(activity.associated_actor_ids) + '</dd></div></dl></div>';
+        return '<div class="pt-verification-activity"><p><strong>' + EC.escapeHtml(activity.id) + '</strong> · ' + EC.escapeHtml(activity.type) + '</p><dl class="pt-verification-grid"><div><dt>Run</dt><dd>' + verificationValue(activity.run_id) + '</dd></div><div><dt>Methode</dt><dd>' + verificationValue(activity.method) + '</dd></div><div><dt>Prompt</dt><dd>' + verificationLabelValue(promptLabel(activity.prompt)) + '</dd></div><div><dt>Modell</dt><dd>' + verificationLabelValue(modelLabel(activity.model)) + '</dd></div><div><dt>Actors</dt><dd>' + verificationValue(activity.associated_actor_ids) + '</dd></div></dl></div>';
     }).join('') : '<p class="pt-muted">Keine Aktivitätsprovenienz.</p>');
     if (provenance.legacy_gap) h += '<p class="pt-legacy-gap"><strong>legacy_gap:</strong> ' + EC.escapeHtml(String(provenance.legacy_gap)) + '</p>';
     h += '</div>';
-    h += '<div class="pt-verification-tracks"><h4>Quellen und abgeleitete Artefakte</h4><p><strong>Quellen:</strong> ' + verificationValue(provenance.used_sources, 'Keine Quellenprovenienz') + '</p><p><strong>Abgeleitet aus:</strong> ' + verificationValue(provenance.derived_from, 'Keine abgeleiteten Artefakte') + '</p></div>';
+    h += '<div class="pt-verification-tracks"><h4>Quellen und abgeleitete Artefakte</h4><p><strong>Quellen:</strong></p>' + verificationRefList(provenance.used_sources, 'Keine Quellenprovenienz') + '<p><strong>Abgeleitet aus:</strong></p>' + verificationRefList(provenance.derived_from, 'Keine abgeleiteten Artefakte') + '</div>';
     h += '<div class="pt-verification-annotations"><h4>Annotationen</h4>' + (view.annotations.length ? '<ol>' + view.annotations.map(function(annotation) {
         const active = annotation.annotation_id === view.active_annotation_id ? ' · aktiv' : '';
         const supersedes = annotation.supersedes ? ' · ersetzt ' + annotation.supersedes : '';
@@ -2108,13 +2345,20 @@ function workingDecisionRecord() {
 // ---- right: assessment (categories + evidence + derived decision + collapsed AI) ----
 function assessInnerHtml(p, dec) {
     if (dec) return assessLockedHtml(p, dec);
-    if (!canEdit()) return '<div class="pt-rail-head"><span class="pt-rail-title">Bewertung</span></div>' +
-        '<div class="pt-rail-body"><p class="pt-muted pt-read-only-note">Für dieses Paper ist in diesem Browser keine eigene Bewertung geladen. Mit „Bearbeiten“ kannst du eine Bewertung erfassen oder deinen Arbeitsordner verbinden.</p></div>';
+    // Verification judges the productive agent record. Without one for this paper the
+    // ordinary capture rail would invite the expert to write an own coding instead,
+    // so the rail names the missing subject and offers no capture controls.
+    if (verificationMode) return '<div class="pt-rail-head"><span class="pt-rail-title">Agentenkodierung</span></div>' +
+        '<div class="pt-rail-body"><div class="pt-rail-scroll">' +
+        '<p class="pt-muted" id="pt-verification-missing" role="status">Keine Agentenkodierung im verbundenen Arbeitsordner.</p>' +
+        referenceProposalsHtml(p, false) + '</div></div>';
+    if (!canEdit()) return '<div class="pt-rail-body"><div class="pt-rail-scroll">' + referenceProposalsHtml(p, false) + '</div></div>';
     if (paperIdentityRequired(p) && !paperIdentityReady(p)) return '<div class="pt-rail-head"><span class="pt-rail-title">Bewertung</span></div>' +
         '<div class="pt-rail-body"><p class="pt-muted pt-read-only-note">Dieses Paper ist noch nicht an ein Werk und eine genaue Fassung gebunden. Die Kategorien können erst nach der bibliografischen Zuordnung erfasst und gespeichert werden.</p></div>';
     let cats = work.cats;
     let h = '<div class="pt-rail-head"><span class="pt-rail-title">Deine Bewertung</span></div>';
     h += '<div class="pt-rail-body"><div class="pt-rail-scroll">';
+    h += referenceProposalsHtml(p, true);
     h += dimHtml('Gegenstand', TECH_CATS, cats, false);
     h += dimHtml('Perspektive', SOCIAL_CATS, cats, false);
     h += evidenceListHtml(work.evidence, false);
@@ -2143,7 +2387,12 @@ function assessInnerHtml(p, dec) {
 function assessLockedHtml(p, dec) {
     let cats = dec.categories || {};
     const req = recordRequirements(dec);
-    let h = '<div class="pt-rail-head"><span class="pt-rail-title">' + (canEdit() ? 'Deine Bewertung' : 'Gespeicherte Bewertung') + '</span>' +
+    // In verification mode the rail shows the agent's coding, not the expert's own
+    // assessment; naming it and its actor keeps the authorship of what is judged explicit.
+    const agentSubject = verificationMode && dec.actor === 'agent';
+    const title = agentSubject ? 'Agentenkodierung' : (canEdit() ? 'Deine Bewertung' : 'Gespeicherte Bewertung');
+    let h = '<div class="pt-rail-head"><span class="pt-rail-title">' + title + '</span>' +
+        (agentSubject ? '<span class="pt-rail-actor mono">' + EC.escapeHtml(dec.reviewer || 'Agent') + '</span>' : '') +
         '<span class="pt-spacer"></span><span class="pt-pill pt-pill-' + decCls(dec.decision) + ' pt-pill-lg">' + dec.decision + '</span></div>';
     h += '<div class="pt-rail-body"><div class="pt-rail-scroll">';
     if (dec.decision === 'Exclude' && dec.reason) h += '<div class="pt-seed-ref">Ausschlussgrund: <strong>' + EC.escapeHtml(dec.reason.replace(/_/g, ' ')) + '</strong></div>';
@@ -2152,14 +2401,14 @@ function assessLockedHtml(p, dec) {
     h += dimHtml('Perspektive', SOCIAL_CATS, cats, true);
     h += evidenceListHtml(dec.evidence || {}, true);
     h += analysisPanelHtml(dec, true);
-    h += referenceComparisonHtml(p);
+    h += referenceProposalsHtml(p, false);
     if (verificationMode) h += verificationPanelHtml(dec);
     h += '</div><div class="pt-action-dock pt-action-dock-locked">' +
-        '<div class="pt-record-summary"><span class="pt-tag-mono">Gespeicherte Entscheidung</span>' +
+        '<div class="pt-record-summary"><span class="pt-tag-mono">' + (agentSubject ? 'Agentenentscheidung' : 'Gespeicherte Entscheidung') + '</span>' +
         '<span class="pt-pill pt-pill-' + decCls(dec.decision) + '">' + dec.decision + '</span></div>' +
         '<span class="pt-actions-hint ' + (req.ok ? 'is-complete' : 'is-required') + '" role="status">' +
         (req.ok ? 'Vollständig erfasst.' : 'Noch erforderlich: ' + EC.escapeHtml(req.missing.join(', '))) + '</span>' +
-        '<div class="pt-actions">' + (canEdit() ? '<button class="pt-revise-btn" id="pt-revise">Überarbeiten</button>' : '') + '<span class="pt-spacer"></span>' +
+        '<div class="pt-actions">' + (canEdit() && !agentSubject ? '<button class="pt-revise-btn" id="pt-revise">Überarbeiten</button>' : '') + '<span class="pt-spacer"></span>' +
         '<button class="pt-next-btn" id="pt-next"' + (canEdit() && !req.ok ? ' disabled' : '') + '>' +
         (acceptanceMode ? 'Anderer Abnahmefall' : (state.index < papers.length - 1 ? 'Nächstes offen' : 'Zum ersten offenen')) + ' &rarr;</button></div>' +
         '</div></div>';
@@ -2214,8 +2463,12 @@ function evidenceListHtml(evidence, locked) {
             ((EC.CAT_COLORS && EC.CAT_COLORS[c]) || 'var(--pt-human)') + '"></span>' + EC.escapeHtml(CAT_LABELS[c]) + '</div>';
         (evidence[c] || []).forEach(function(ev, i) {
             let origin = evidenceLayer(ev) === 'llm_distillate' ? 'ai' : 'human';
+            // Source layer and the actor who pinned it are separate facts (ADR-030).
+            // Without the actor mark an agent pin reads as the expert's own.
+            const byAgent = ev && ev.actor === 'agent';
             h += '<div class="pt-evid-item">' +
                 '<span class="pt-evid-origin pt-evid-origin-' + origin + '">' + (origin === 'ai' ? 'LLM' : 'Paper') + '</span>' +
+                (byAgent ? '<span class="pt-evid-actor" title="Von einem Agenten angeheftet">Agent<span class="pt-sr-only"> hat diesen Beleg angeheftet</span></span>' : '') +
                 '<span class="pt-evid-snip">' + EC.escapeHtml(ev.snippet || ev.term) + '</span>' +
                 (locked ? '' : '<button class="pt-evid-x" data-cat="' + c + '" data-i="' + i + '" title="Beleg entfernen">&times;</button>') + '</div>';
         });
@@ -2321,47 +2574,53 @@ function logicInner(cats, override) {
     return h;
 }
 
-function automaticReferenceHtml(p) {
-    let a = aiProposal(p);
-    if (!a) return '';
-    const on = ALL_CATS.filter(function(c) { return a.categories[c]; });
-    let h = '<div class="pt-reference-card"><span class="pt-tag-mono">Frühere automatische Klassifikation</span>' +
-        '<strong class="pt-dec-' + decCls(a.decision) + '">' + a.decision + '</strong>' +
-        '<div class="pt-tag-mono">Automatisch zugeordnete Kategorien</div><div class="pt-chips-static">';
-    h += on.length ? on.map(function(c) { return '<span class="pt-pill pt-pill-ai">' + CAT_LABELS[c] + '</span>'; }).join('') : '<span class="pt-muted">keine</span>';
-    h += '</div>';
-    if (a.reasoning) h += '<p class="pt-ai-reason">' + EC.escapeHtml(a.reasoning) + '</p>';
-    h += '<p class="pt-ai-foot">Historische automatische Referenz; sie war vor dem Speichern der eigenen Entscheidung ausgeblendet.</p></div>';
-    return h;
-}
 
-function referenceComparisonHtml(p) {
+// Visible references for human reviewers (ADR-038): the consolidated round-one expert
+// decision and the round-one LLM assessment. Agent runs stay reference-blind. Taking over
+// the LLM proposal only pre-sets category levels; every level still needs its own Paper
+// evidence before the record can be saved, so no model reasoning enters the record.
+function referenceProposalsHtml(p, editable) {
     if (runActor === 'agent') return '';
-    const hasSeed = !!seedDecision(p), hasAutomatic = !!aiProposal(p);
-    if (!hasSeed && !hasAutomatic) return '';
-    return '<details class="pt-reference-comparison"><summary>Frühere Referenzen vergleichen</summary>' +
-        '<p class="pt-muted">Dieser Bereich wird erst nach der gespeicherten eigenen Entscheidung angeboten.</p>' +
-        '<div class="pt-reference-content"></div></details>';
+    const seed = seedDecision(p), llm = aiProposal(p);
+    if (!seed && !llm) return '';
+    let h = '<div class="pt-references" id="pt-references">';
+    if (seed) {
+        const setCats = ALL_CATS.filter(function(c) { return seed.categories[c]; });
+        h += '<div class="pt-reference-card pt-reference-human"><span class="pt-tag-mono">Expert:innen-Entscheidung, Runde 1</span>' +
+            '<strong class="pt-dec-' + decCls(seed.decision) + '">' + EC.escapeHtml(seed.decision) + '</strong>' +
+            (setCats.length ? '<div class="pt-chips-static">' + setCats.map(function(c) { return '<span class="pt-pill pt-pill-human">' + EC.escapeHtml(CAT_LABELS[c]) + '</span>'; }).join('') + '</div>' : '') +
+            '</div>';
+    }
+    if (llm) {
+        const on = ALL_CATS.filter(function(c) { return llm.categories[c]; });
+        h += '<div class="pt-reference-card pt-reference-llm"><span class="pt-tag-mono"><span class="pt-llm-mark" aria-hidden="true">✦</span> LLM-Vorschlag, Runde 1</span>' +
+            '<strong class="pt-dec-' + decCls(llm.decision) + '">' + EC.escapeHtml(llm.decision) + '</strong>' +
+            (on.length ? '<div class="pt-chips-static">' + on.map(function(c) { return '<span class="pt-pill pt-pill-ai">' + EC.escapeHtml(CAT_LABELS[c]) + '</span>'; }).join('') : '<span class="pt-muted">keine Kategorie</span>') + '</div>' +
+            (llm.reasoning ? '<details class="pt-llm-reasoning"><summary>Begründung des Modells</summary><p class="pt-ai-reason">' + EC.escapeHtml(llm.reasoning) + '</p></details>' : '') +
+            (editable ? '<button type="button" class="pt-btn pt-btn-sm pt-adopt-proposal" id="pt-adopt-proposal">Vorschlag übernehmen</button>' +
+                '<span class="pt-muted">Setzt die Kategorien auf „teilweise“. Jede Kategorie braucht weiterhin einen Beleg aus dem Papertext.</span>' : '') +
+            '</div>';
+    }
+    return h + '</div>';
 }
 
-function bindReferenceComparison(p, col) {
-    const comparison = col.querySelector('.pt-reference-comparison');
-    if (!comparison) return;
-    comparison.addEventListener('toggle', function() {
-        if (!comparison.open || comparison.dataset.loaded === 'true') return;
-        const content = comparison.querySelector('.pt-reference-content');
-        if (!content) return;
-        content.innerHTML = seedRefHtml(p) + automaticReferenceHtml(p);
-        comparison.dataset.loaded = 'true';
+function adoptLlmProposal(p) {
+    const llm = aiProposal(p);
+    if (!llm || !canEdit()) return;
+    ALL_CATS.forEach(function(c) {
+        if (llm.categories[c] && catLevel(work.cats[c]) === 0) work.cats[c] = 1;
     });
+    refreshAssess();
 }
+
+
 
 function refreshAssess() {
     let col = document.getElementById('pt-assess-col');
     if (!col) return;
     closeInfoPopover(false);
     let p = papers[state.index];
-    const dec = canEdit() && editingPid === p.id ? null : curDec()[p.id];
+    const dec = displayRecord(p);
     col.innerHTML = assessInnerHtml(p, dec);
     bindAssess(p, dec);
 }
@@ -2555,9 +2814,10 @@ function attachScreening(p, dec) {
 function bindAssess(p, dec) {
     let col = document.getElementById('pt-assess-col'); if (!col) return;
     bindInfoPopovers(col);
+    const adopt = col.querySelector('#pt-adopt-proposal');
+    if (adopt) adopt.addEventListener('click', function() { adoptLlmProposal(p); });
 
     if (dec) {
-        bindReferenceComparison(p, col);
         bindVerificationPanel(p, dec, col);
         const rev = col.querySelector('#pt-revise');
         if (rev) rev.addEventListener('click', function() { editRecord(p); });
@@ -2637,8 +2897,21 @@ function bindVerificationPanel(p, dec, col) {
     form.addEventListener('submit', function(event) {
         event.preventDefault();
         if (!canEdit() || runActor !== 'human') return;
-        const target = LIFECYCLE_NEXT[verificationView(dec).lifecycle.state];
-        const result = advanceVerification(dec, target, {
+        const status = col.querySelector('#pt-verification-status');
+        const subject = verificationSubject(p) || { record: dec, reviewer: state.reviewer, agent: false };
+        if (subject.agent && !state.reviewer) {
+            if (status) status.textContent = 'Vor dem Protokollieren ein Reviewer:innen-Kürzel festlegen.';
+            return;
+        }
+        // The judged annotation is the one the agent record carries now; a correction
+        // appends a later version, so the subject reference is captured beforehand.
+        const judged = verificationView(subject.record).active_annotation_id ||
+            (subject.record.provenance && subject.record.provenance.annotation_id) || null;
+        // The agent file is read-only for this session: the transition runs on a copy,
+        // and that copy becomes the display projection once the event is recorded.
+        const working = subject.agent ? JSON.parse(JSON.stringify(subject.record)) : subject.record;
+        const target = LIFECYCLE_NEXT[verificationView(working).lifecycle.state];
+        const result = advanceVerification(working, target, {
             reviewer_id: form.elements.reviewer_id && form.elements.reviewer_id.value,
             actor_ids: form.elements.actor_ids && form.elements.actor_ids.value,
             activity_id: form.elements.activity_id && form.elements.activity_id.value,
@@ -2646,16 +2919,22 @@ function bindVerificationPanel(p, dec, col) {
             note: form.elements.note && form.elements.note.value,
             corrected_annotation: form.elements.corrected_annotation && form.elements.corrected_annotation.value
         });
-        const status = col.querySelector('#pt-verification-status');
         if (!result.ok) {
             if (status) status.textContent = result.message;
             return;
+        }
+        if (subject.agent) {
+            if (!Array.isArray(verificationRecords[state.reviewer])) verificationRecords[state.reviewer] = [];
+            verificationRecords[state.reviewer].push(
+                verificationEntry(p.id, subject, judged, result.event, result.reviewer_id, result.annotation));
+            agentTrack.records[p.id] = working;
         }
         verificationNotice = target === 'verified'
             ? (result.event.to === 'verified'
                 ? 'Fachliche Verifikation wurde protokolliert.'
                 : 'Das fachliche Prüfergebnis wurde ohne Statusfreigabe protokolliert.')
             : 'Öffentliche Freigabe wurde protokolliert.';
+        if (subject.agent) verificationNotice += ' Ziel: ' + reviewerPath(state.reviewer) + '.';
         save();
         renderScreening();
     });
@@ -2963,18 +3242,17 @@ function renderData(targetEl) {
             '<span>Vorgeschlagene Testurteile. Diese Ansicht schreibt keine Forschungsdaten.</span></div>';
         return;
     }
-    if (!canEdit()) {
-        el.innerHTML = '<p class="pt-read-only-status">Papers lesen und durchsuchen. „Bearbeiten“ aktiviert Bewertungen und die Einrichtung des Arbeitsordners.</p>';
-        return;
-    }
+    if (!canEdit()) { el.innerHTML = ''; el.hidden = true; return; }
+    el.hidden = false;
     if (!state.reviewer) {
+        const rule = '2–12 Zeichen: Buchstaben, Ziffern, _ oder -; Beginn mit Buchstabe. Wird klein geschrieben gespeichert.';
         el.innerHTML = '<form class="pt-reviewer-setup" id="pt-reviewer-setup" novalidate>' +
-            '<label for="pt-reviewer-key"><span>Reviewer:innen-Kürzel</span>' +
+            '<label for="pt-reviewer-key"><span class="pt-sr-only">Reviewer:innen-Kürzel</span>' +
             '<input id="pt-reviewer-key" name="reviewer" type="text" required minlength="2" maxlength="12" ' +
-            'pattern="[A-Za-z][A-Za-z0-9_-]{1,11}" autocomplete="off" spellcheck="false" ' +
-            'aria-describedby="pt-reviewer-help pt-reviewer-error" placeholder="z. B. cp"></label>' +
+            'pattern="[A-Za-z][A-Za-z0-9_-]{1,11}" autocomplete="off" spellcheck="false" title="' + rule + '" ' +
+            'aria-describedby="pt-reviewer-help pt-reviewer-error" placeholder="Dein Kürzel"></label>' +
             '<button class="pt-btn pt-reviewer-set" type="submit">Kürzel festlegen</button>' +
-            '<span class="pt-reviewer-help" id="pt-reviewer-help">2–12 Zeichen: Buchstaben, Ziffern, _ oder -; Beginn mit Buchstabe.</span>' +
+            '<span class="pt-reviewer-help pt-sr-only" id="pt-reviewer-help">' + rule + '</span>' +
             '<span class="pt-reviewer-error" id="pt-reviewer-error" role="status" aria-live="polite"></span></form>' +
             '<p class="pt-save-status pt-save-' + saveStatus.kind + '" id="pt-save-status" role="status" aria-live="polite">' +
             EC.escapeHtml(saveStatus.message) + '</p>';
@@ -2984,7 +3262,7 @@ function renderData(targetEl) {
             const input = el.querySelector('#pt-reviewer-key');
             if (!selectReviewer(input.value)) {
                 input.setAttribute('aria-invalid', 'true');
-                el.querySelector('#pt-reviewer-error').textContent = 'Ungültiges Kürzel. Verwende 2–12 erlaubte Zeichen.';
+                el.querySelector('#pt-reviewer-error').textContent = 'Ungültiges Kürzel. ' + rule;
                 input.focus();
                 return;
             }
@@ -3045,6 +3323,17 @@ function validateReviewerPayload(obj) {
         return !d || ['Include', 'Exclude', 'Unclear'].indexOf(d.decision) === -1;
     });
     if (badDecision) return { ok: false, message: 'ungültige Decision bei Paper ' + badDecision + '.' };
+    // Additive verification layer (ADR-040): absent in every historical file, and
+    // structurally checked where present so a damaged block cannot be silently kept.
+    if (Object.prototype.hasOwnProperty.call(obj, 'verifications')) {
+        if (!Array.isArray(obj.verifications))
+            return { ok: false, message: 'Feld "verifications" ist ungültig.' };
+        const badVerification = obj.verifications.find(function(entry) {
+            return !entry || typeof entry !== 'object' || !entry.paper_id || !entry.result ||
+                !entry.event || typeof entry.event !== 'object' || !entry.event.event_id;
+        });
+        if (badVerification) return { ok: false, message: 'unvollständiger Verifikationseintrag im Feld "verifications".' };
+    }
     if (obj.schema === REVIEWER_SCHEMA) {
         const badVersion = Object.keys(obj.decisions).find(function(id) {
             const decision = obj.decisions[id], paper = papers.find(function(item) { return item.id === id; });
@@ -3262,6 +3551,17 @@ const TEST_HOOK = {
     verificationPanelHtml: verificationPanelHtml, actorIds: actorIds,
     annotationBody: annotationBody, annotationDiff: annotationDiff,
     correctedAnnotationBody: correctedAnnotationBody, VERIFICATION_RESULTS: VERIFICATION_RESULTS,
+    // verification subject, expert-file record and its load-time projection (ADR-040)
+    VERIFICATION_SCHEMA: VERIFICATION_SCHEMA, isAgentTrackPayload: isAgentTrackPayload,
+    verificationSubject: verificationSubject, displayRecord: displayRecord,
+    awaitsVerification: awaitsVerification, subjectRecordHash: subjectRecordHash,
+    verificationEntry: verificationEntry, projectVerification: projectVerification,
+    agentTrack: function() { return JSON.parse(JSON.stringify(agentTrack)); },
+    setAgentTrack: function(reviewer, records) { agentTrack = { reviewer: reviewer, records: JSON.parse(JSON.stringify(records || {})) }; },
+    verifications: function(key) { return JSON.parse(JSON.stringify(verificationRecords[key] || [])); },
+    setVerifications: function(key, entries) { verificationRecords[key] = JSON.parse(JSON.stringify(entries || [])); },
+    provenanceRefLabel: provenanceRefLabel, promptLabel: promptLabel, modelLabel: modelLabel,
+    verificationRefList: verificationRefList,
     // analysis coding panel (FR-14, ADR-026)
     setAnalysisFields: function(d) { applyAnalysisVocab(d); },
     anVersion: function() { return anVocabVersion; },

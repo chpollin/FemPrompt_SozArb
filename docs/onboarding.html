@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Onboarding -- Feministische AI Literacies</title>
-    <meta name="description" content="Einstieg in das PRISM-Screening für Reviewer:innen.">
+    <meta name="description" content="Anleitung für die fachliche Prüfung vorbereiteter Records in PRISM.">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%231e3a5f'/><text x='50' y='68' font-size='60' font-family='serif' font-weight='bold' fill='white' text-anchor='middle'>F</text></svg>">
     <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="css/tokens.css">
@@ -44,79 +44,159 @@
 
     <main class="page-content">
         <article class="prose">
-            <h2>Onboarding für das Screening</h2>
-            <p>Für das Screening brauchst du Chrome oder Edge und einen lokalen Klon des bereitgestellten
-            Projektordners. PRISM schreibt deine Entscheidungen direkt in diesen Klon.</p>
+            <h2>Anleitung für die fachliche Prüfung in PRISM</h2>
+            <p>PRISM ist das Prüfwerkzeug des Reviews. AI Agents haben die Papers gelesen, kategorisiert und mit
+            Textstellen belegt. Eine getrennte AI Agent Review hat diese Kodierung gegen den Quelltext geprüft.
+            Deine Aufgabe ist die fachliche Verifikation dieser vorbereiteten Records. Erst deine protokollierte
+            Entscheidung gibt einem Record wissenschaftliche Autorität. Ein Record ohne dein Prüfergebnis bleibt
+            als AI-geprüft gekennzeichnet und gilt nicht als menschlich verifiziert.</p>
 
-            <h3><i class="fas fa-circle-info"></i> Aufgabe</h3>
-            <p>Du liest jedes Paper und belegst deine Bewertung mit Textstellen. Beide Reviewer:innen bearbeiten
-            den vollständigen Korpus unabhängig voneinander. Die Abstimmung abweichender Entscheidungen folgt
-            nach dem Screening.</p>
+            <h3><i class="fas fa-circle-info"></i> Was du brauchst</h3>
+            <ul>
+                <li>Chrome oder Edge. Andere Browser können den Arbeitsordner nicht beschreiben.</li>
+                <li>GitHub Desktop mit einem Klon des Repositoriums. Die Volltexte bringt ein Klon nicht mit; die
+                    Projektleitung legt sie beim gemeinsamen Einrichten in den Klon. PRISM schreibt deine
+                    Entscheidungen in diesen Ordner unter <code>docs/data/screening/</code>.</li>
+                <li>Die Adresse von PRISM. Die Seite läuft im Browser und braucht keine Installation.</li>
+            </ul>
+
+            <h3><i class="fas fa-eye"></i> Lesemodus und Bearbeitungsmodus</h3>
+            <p>Oben in der linken Spalte steht ein Umschalter mit den Knöpfen &bdquo;Lesen&ldquo; und
+            &bdquo;Bearbeiten&ldquo; und daneben der Link &bdquo;Verifizieren&ldquo;. PRISM startet im Lesemodus.
+            Dort kannst du Papers lesen, durchsuchen und gespeicherte Bewertungen ansehen, ohne etwas zu
+            verändern. Nur im Bearbeitungsmodus sind Kürzel, Arbeitsordner, Bewertungen und das Speichern
+            verfügbar. Im Verifikationsmodus zeigt derselbe Umschalter &bdquo;Screening&ldquo; und
+            &bdquo;Verifizieren&ldquo;, und die Bearbeitung ist dort von Beginn an aktiv. Ein Wechsel zwischen
+            Lesen und Bearbeiten lässt einen begonnenen Entwurf stehen. Nach einem Neuladen der Seite bist du
+            wieder im Lesemodus, gespeicherte Entscheidungen bleiben im Browser erhalten, ein noch nicht
+            gespeicherter Entwurf nicht.</p>
 
             <h3><i class="fas fa-sliders"></i> Einmalige Einrichtung</h3>
             <ol>
-                <li><strong>Kürzel festlegen.</strong> Trage ein kurzes persönliches Kürzel mit zwei bis zwölf Zeichen
-                    ein. Das Kürzel bestimmt die Datei <code>docs/data/screening/&lt;kürzel&gt;.json</code>.</li>
-                <li><strong>Arbeitsordner verbinden.</strong> Wähle die Wurzel des lokalen Projektordners. PRISM löst
-                    darin <code>docs/data/screening/</code> auf und zeigt den genauen Zielpfad.</li>
-                <li><strong>Status prüfen.</strong> Nach der Verbindung bleibt nur eine kompakte Zeile mit Kürzel,
-                    Zielpfad und Ordnerstatus sichtbar. Über &bdquo;Ordner ändern&ldquo; lässt sich die Verbindung bei
-                    Bedarf ersetzen.</li>
+                <li>Klicke auf &bdquo;Bearbeiten&ldquo;.</li>
+                <li>Trage in das Feld mit dem Platzhalter &bdquo;Dein Kürzel&ldquo; ein persönliches Kürzel ein und
+                    bestätige mit &bdquo;Kürzel festlegen&ldquo;. Erlaubt sind zwei bis zwölf Zeichen aus
+                    Buchstaben, Ziffern, Unterstrich und Bindestrich, beginnend mit einem Buchstaben. PRISM
+                    speichert das Kürzel klein geschrieben und blendet die Regel erst ein, wenn eine Eingabe sie
+                    verletzt. Das Kürzel bestimmt deine Datei
+                    <code>docs/data/screening/&lt;kürzel&gt;.json</code> und erscheint in jedem Prüfereignis.
+                    Verwende in allen Sitzungen dasselbe Kürzel.</li>
+                <li>Klicke auf &bdquo;Arbeitsordner wählen&ldquo; und wähle die Wurzel deiner lokalen Projektkopie. Der Browser
+                    fragt einmal nach Schreibrecht. Danach nennt die linke Spalte den verbundenen Ordner, und
+                    &bdquo;Ordner ändern&ldquo; führt zu einer anderen Auswahl.</li>
+                <li>Beim nächsten Öffnen im selben Browser heißt der Knopf &bdquo;Arbeitsordner freigeben&ldquo;,
+                    ein Klick genügt. Fehlt der gespeicherte Ordner, erscheint wieder
+                    &bdquo;Arbeitsordner wählen&ldquo;.</li>
             </ol>
 
-            <h3><i class="fas fa-list-ol"></i> Ein Paper bearbeiten</h3>
+            <h3><i class="fas fa-list-check"></i> Einen Record prüfen</h3>
+            <p>Der Link &bdquo;Verifizieren&ldquo; oben in der linken Spalte öffnet den Verifikationsmodus. Sobald
+            zu einem Paper ein gespeicherter Record vorliegt, ergänzt er die Bewertungsspalte um den Abschnitt
+            &bdquo;Nachweis- und Freigabestatus&ldquo; und das Prüfformular.</p>
             <ol>
-                <li><strong>Paper lesen.</strong> Die Metadaten stehen kompakt über dem Dokument. Ein DOI und eine
-                    vorhandene Webquelle sind verlinkt. Der Hinweis &bdquo;Metadaten-Abstract&ldquo; kennzeichnet fehlenden
-                    Volltext.</li>
-                <li><strong>Text durchsuchen.</strong> Das Suchfeld in der Lesespalte springt mit Enter zum nächsten
-                    Treffer. Die Korpussuche zeigt vollständige Titel, Autor:innen, Jahr und Paper-ID, damit gleiche
-                    Treffer unterscheidbar bleiben.</li>
-                <li><strong>Beleg anheften.</strong> Markiere eine tragende Textstelle oder hefte den aktiven
-                    Suchtreffer an eine Kategorie. Jede gewählte Kategorie braucht mindestens einen Beleg aus dem
-                    Papertext.</li>
-                <li><strong>Kategorien bewerten.</strong> Die Stufen lauten nein, teilweise und ja. Die Definition
-                    jeder Kategorie sowie die Beleganleitung stehen in den zugehörigen Info-Schaltern.</li>
-                <li><strong>Ableitung prüfen.</strong> Der Bewertungsbereich zeigt nur das Ergebnis Include, Unclear
-                    oder Exclude. Der Info-Schalter erklärt die Ableitungsregel. Ein Override erfordert die passende
-                    Begründung.</li>
-                <li><strong>Include codieren.</strong> Bei Include werden Studientyp und die erforderlichen
-                    Analysefelder ausgefüllt. PRISM übernimmt die gelesene Textquelle als Codierbasis. Bei Volltext
-                    ist <code>AN_Harm_Types</code> erforderlich.</li>
-                <li><strong>Speichern.</strong> Klicke auf das Diskettensymbol neben der Paperzahl. Der Knopf wird
-                    erst aktiv, wenn alle Muss-Kriterien erfüllt sind. PRISM schreibt anschließend die vollständige
-                    Reviewer-Datei in den verbundenen Arbeitsordner.</li>
+                <li>Öffne das Paper. Über dem Titel steht als kleine Angabe die Textquelle, &bdquo;Volltext&ldquo;,
+                    &bdquo;Metadaten-Abstract&ldquo; oder &bdquo;kein Papertext&ldquo;.
+                    &bdquo;Metadaten-Abstract&ldquo; bedeutet, dass kein Volltext vorliegt und die Kodierung nur
+                    auf dem Abstract beruht. Unter dem Titel stehen Autor:innen, Jahr, Publikation, DOI und die
+                    Quelle, die beiden letzten als Link. Paper-ID, Fassung, Begutachtung, Werk-ID und Fassungs-ID
+                    liegen im zugeklappten Block &bdquo;Fassung und Identität&ldquo;. Die Lesespalte öffnet an der
+                    ersten Überschrift, nach Möglichkeit dem Abstract.</li>
+                <li>Lies die Kodierung. Jede Kategorie trägt eine Stufe (nein, teilweise, ja) und mindestens einen
+                    Beleg aus dem Papertext. Belege aus dem Papertext sind als &bdquo;Paper&ldquo; markiert, Belege
+                    aus dem Wissensdestillat als &bdquo;LLM&ldquo;. Der Info-Schalter neben jeder Kategorie zeigt
+                    ihre Definition, der Info-Schalter über der Belegliste die Beleganleitung. Die Ableitung zu
+                    Include, Unclear oder Exclude folgt einer festen Regel, die der Info-Schalter neben dem
+                    Ergebnis im Bearbeitungsmodus erklärt.</li>
+                <li>Prüfe die Belege gegen den Text. Das Suchfeld in der Lesespalte springt mit Enter zum nächsten
+                    Treffer. Ein Beleg trägt, wenn die Textstelle die Kategorie tatsächlich stützt. Eine
+                    Paraphrase des Modells oder eine Stelle, die gegen die Kategorie spricht, trägt nicht.</li>
+                <li>Bei Include prüfe zusätzlich Studientyp und die Analysefelder mit dem Präfix <code>AN_</code>, etwa
+                    <code>AN_Prompt_Techniques</code>, <code>AN_Bias_Axes</code>, <code>AN_Harm_Types</code>,
+                    <code>AN_Mitigation_Stage</code> und <code>AN_Population</code>. Sie sind die Grundlage der
+                    späteren Auswertung.</li>
+                <li>Sieh dir im Abschnitt &bdquo;Nachweis- und Freigabestatus&ldquo; an, wer die Kodierung erstellt hat, mit
+                    welchem Modell und Prompt, und was die AI Agent Review festgestellt hat.</li>
+                <li>Trage dein Ergebnis im Formular &bdquo;Fachliche Verifikation&ldquo; ein. Es erscheint nur bei
+                    einem Record im Status <code>ai-agent-reviewed</code>. Die drei Felder Reviewer-ID,
+                    Actor-ID(s) und Activity-ID füllst du mit deinem Kürzel, deinem Kürzel und einer Kennung aus
+                    Kürzel und Datum, etwa <code>verify-ab-2026-10-01</code>. Mehrere Actor-IDs trennst du mit
+                    Leerzeichen oder Komma. Wähle unter &bdquo;Prüfergebnis&ldquo; eines der vier Ergebnisse,
+                    schreibe unter &bdquo;Begründung&ldquo; eine kurze fachliche Begründung und klicke auf
+                    &bdquo;Fachliches Ergebnis protokollieren&ldquo;.</li>
             </ol>
 
-            <h3><i class="fas fa-check-circle"></i> Muss-Kriterien</h3>
+            <h3><i class="fas fa-scale-balanced"></i> Die vier Prüfergebnisse</h3>
             <ul>
-                <li>Kürzel und Arbeitsordner sind festgelegt.</li>
-                <li>Jede gewählte Kategorie besitzt einen Beleg aus der Paper-Ebene.</li>
-                <li>Exclude besitzt einen kontrollierten Ausschlussgrund.</li>
-                <li>Ein Override zu Include besitzt eine schriftliche Begründung.</li>
-                <li>Include besitzt eine vollständige und widerspruchsfreie Analyse.</li>
-                <li>Die gelesene Textquelle ist vollständig geladen und im Datensatz vermerkt.</li>
+                <li>Akzeptiert. Kodierung, Belege und Entscheidung tragen. Der Record wechselt in den Status
+                    <code>verified</code>.</li>
+                <li>Korrigiert und akzeptiert. Das Formular blendet das Feld &bdquo;Korrigierte Annotation als
+                    JSON&ldquo; mit der vollständigen Annotation ein. Dort änderst du die betroffenen Werte,
+                    mindestens eine Änderung ist erforderlich. PRISM speichert deine Fassung als neue Version, die
+                    Kodierung des Agenten bleibt unverändert erhalten und nachvollziehbar. Der Record wechselt in
+                    den Status <code>verified</code>.</li>
+                <li>Änderungen erforderlich. Der Record braucht eine Überarbeitung, die du nicht selbst vornimmst,
+                    etwa weil ein Volltext fehlt oder eine Quellenfassung falsch ist. Beschreibe in der
+                    Begründung, was fehlt. Das Ergebnis wird protokolliert, der Status bleibt unverändert.</li>
+                <li>Abgelehnt. Die Kodierung ist in ihrer Substanz nicht haltbar. Begründe das mit Bezug auf den
+                    Text. Das Ergebnis wird protokolliert, der Status bleibt unverändert.</li>
             </ul>
+            <p>Dein Prüfergebnis gilt für den ganzen Record in der geprüften Fassung. Es macht ihn nicht
+            öffentlich, die Freigabe zur Veröffentlichung ist ein eigener, späterer Schritt. Ein Record, dessen
+            Quelle sich nach deiner Prüfung ändert, muss neu geprüft werden.</p>
+
+            <h3><i class="fas fa-floppy-disk"></i> Speichern</h3>
+            <p>Oben in der linken Spalte stehen die Position im Korpus, etwa &bdquo;4 / 463&ldquo;, die Zahl der
+            von dir erfassten Papers und das Diskettensymbol. Das Symbol schreibt den aktuellen Stand in deine
+            Datei im Arbeitsordner. Es wird erst aktiv, wenn Kürzel und Arbeitsordner festgelegt sind, der
+            Papertext geladen ist und der Record vollständig ist, also jede bewertete Kategorie einen Paper-Beleg
+            trägt, bei Include die Analyse-Codierung ausgefüllt ist, bei Exclude ein Ausschlussgrund gewählt ist
+            und ein Override zu Include begründet ist. Der Hinweis unter der Bewertung nennt, was noch fehlt. Ein
+            Paper ohne Bindung an Werk und Fassung zeigt statt der Kategorien einen Hinweis und lässt sich nicht
+            erfassen. Der Speicherstatus meldet Zielpfad, Erfolg oder Fehler. Bei einem Fehler bleibt dein
+            Stand im Browser erhalten, beende die Sitzung erst nach einer bestätigten Speicherung. Arbeite mit
+            einem einzigen PRISM-Tab, weil zwei gleichzeitig offene Tabs mit demselben Kürzel einander
+            überschreiben.</p>
+
+            <h3><i class="fas fa-paper-plane"></i> Deine Datei an das Projekt zurückgeben</h3>
+            <p>PRISM führt keine Git-Aktion aus. Der Arbeitsordner ist ein Klon des Repositoriums in GitHub Desktop.
+            Vor jeder Sitzung holst du dort den aktuellen Stand (&bdquo;Fetch origin&ldquo; und &bdquo;Pull&ldquo;), nach der
+            Sitzung committest du deine Datei <code>docs/data/screening/&lt;kürzel&gt;.json</code> mit einer kurzen
+            Nachricht und klickst auf &bdquo;Push origin&ldquo;. Andere Dateien lässt du unangetastet. Die Datei enthält
+            alle deine Prüfereignisse und Korrekturen. Sie wird im Projekt mit den Agentenrecords zusammengeführt,
+            deren Original unverändert bleibt.</p>
 
             <h3><i class="fas fa-layer-group"></i> LLM-Wissensdestillat</h3>
-            <p>Das LLM-Wissensdestillat ist ein automatisch erzeugtes Referenzdokument. Es wird erst nach der
-            gespeicherten eigenen Entscheidung angeboten und kann anschließend zur Einordnung geöffnet werden.
-            Seine Textstellen erfüllen das Paper-Belegkriterium nicht.</p>
+            <p>Zu vielen Papers gibt es ein automatisch erzeugtes Wissensdokument. Es wird erst nach deiner
+            gespeicherten Entscheidung angeboten, dann steht über dem Lesetext ein Umschalter zwischen
+            &bdquo;Volltext&ldquo; und &bdquo;LLM-Wissensdestillat&ldquo;. Das Destillat dient der Einordnung.
+            Seine Textstellen stammen aus einer Modellzusammenfassung und erfüllen das Belegkriterium nicht.</p>
 
-            <h3><i class="fas fa-floppy-disk"></i> Speichern und Versionieren</h3>
-            <p>Der Speicherstatus meldet den Zielpfad, den erfolgreichen Schreibvorgang oder einen Fehler. Bei einem
-            Schreibfehler bleibt der Browser-Zwischenstand erhalten. Beende die Sitzung erst nach einer bestätigten
-            Dateispeicherung.</p>
-            <p>Commit und Push erfolgen anschließend in GitHub Desktop. PRISM führt keine Git-Aktion aus und erzeugt
-            keine Commit-Nachricht.</p>
-
-            <h3><i class="fas fa-circle-question"></i> Häufige Fälle</h3>
-            <p><strong>Ein Paper hat keinen lesbaren Text.</strong> Der Ausschlussgrund &bdquo;No full text&ldquo; ist
-            vorgesehen, wenn weder Volltext noch ein ausreichender Abstract vorliegt.</p>
-            <p><strong>Frühere Bewertungen.</strong> Frühere fachliche oder automatische Einschätzungen erscheinen
-            erst nach deiner gespeicherten Entscheidung im eingeklappten Vergleich.</p>
-            <p><strong>Abweichende Entscheidungen.</strong> Die beiden Dateien bleiben während des Screenings getrennt.
-            Der spätere Abgleich verändert die Quelldateien nicht.</p>
+            <h3><i class="fas fa-circle-question"></i> Besondere Fälle</h3>
+            <ul>
+                <li>Ein Paper zeigt &bdquo;Metadaten-Abstract&ldquo; oder &bdquo;kein Papertext&ldquo;. Kodierung
+                    und Prüfung beruhen dann auf dem Abstract. Ist auch der Abstract unzureichend, ist der
+                    Ausschlussgrund &bdquo;No full text&ldquo; vorgesehen.</li>
+                <li>Du widersprichst der Kodierung in einzelnen Punkten. Wähle &bdquo;Korrigiert und akzeptiert&ldquo; und
+                    ändere die Werte in der Annotation. Das Original bleibt erhalten.</li>
+                <li>Ein älterer Record zeigt keinen AI-Agent-Review-Status. Der Abschnitt &bdquo;Nachweis- und
+                    Freigabestatus&ldquo; meldet dann, dass der Record zuerst durch den aktuellen
+                    Projektionsworkflow in Schema 0.5 überführt werden muss. Lass ihn aus und melde ihn.</li>
+                <li>PRISM meldet, dass eine bestehende Reviewer-Datei nicht lesbar ist und nicht überschrieben
+                    wird. Dann widersprechen sich Browser- und Dateistand bei einem Paper oder die Datei selbst
+                    ist fehlerhaft. Das Speichern bleibt gesperrt, die Datei auf der Platte bleibt unberührt.
+                    Melde den Fall der Projektleitung, statt die Datei selbst zu überschreiben.</li>
+                <li>Über der Bewertung stehen in beiden Modi die Entscheidung der ersten Runde und der
+                    LLM-Vorschlag der ersten Runde, gekennzeichnet als &bdquo;Expert:innen-Entscheidung, Runde
+                    1&ldquo; und &bdquo;LLM-Vorschlag, Runde 1&ldquo;. Solange zu einem Paper kein eigener Record
+                    gespeichert ist, zeigt die rechte Spalte im Lesemodus nur diese beiden Karten. Im
+                    Bearbeitungsmodus setzt &bdquo;Vorschlag übernehmen&ldquo; die vorgeschlagenen Kategorien auf
+                    &bdquo;teilweise&ldquo;, Belege und Ableitung bleiben deine Arbeit.</li>
+                <li>Papers mit einer Expert:innen-Entscheidung aus der ersten Runde sind erledigt. Diese Entscheidung
+                    gilt, ein neuer Record ist dazu nicht nötig. Deine Aufgabe sind die Neuzugänge 2026 und die
+                    agentisch kodierten Records.</li>
+                <li>In der Korpusliste erscheint der Statuspunkt erst, wenn zu dem Paper eine eigene Entscheidung
+                    vorliegt.</li>
+            </ul>
         </article>
     </main>
 

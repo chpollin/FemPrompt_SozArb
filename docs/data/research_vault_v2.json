@@ -1,16 +1,16 @@
 {
   "meta": {
     "fulltext_projection_state": "complete",
-    "source_fingerprint": "sha256:8916cbeb249bbef986e3637901ff22915f6c8d5f4b3d09c2027dc73cd721d252",
+    "source_fingerprint": "sha256:4c85343a2285f625dc953712f6ec1ce2bc333490c609580be52e0d3f9752eee8",
     "total_papers": 463,
     "unique_works": 361,
     "knowledge_linked_records": 269,
     "distinct_knowledge_docs": 199,
     "knowledge_coverage": {
       "linked": 269,
-      "fulltext_ready": 12,
+      "fulltext_ready": 14,
       "identity_unresolved": 67,
-      "source_missing": 115
+      "source_missing": 113
     },
     "papers_with_human": 302,
     "benchmark_papers": 291,
@@ -46195,13 +46195,32 @@
       "item_type": "journalarticle",
       "journal": "Social Work Education",
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing",
+      "knowledge_coverage": "fulltext_ready",
       "work_id": "work:68b57d67-221a-5e96-8d7b-153b4b26c91a",
       "identity_basis": "work_version_registry",
       "legacy_work_id": "doi:10.1080/02615479.2026.2635471",
       "legacy_identity_basis": "doi",
       "version_id": "version:4963e528-6f09-54ee-bd14-3ecc26cb76ca",
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "I7BQH4U4",
+        "work_id": "work:68b57d67-221a-5e96-8d7b-153b4b26c91a",
+        "bibliographic_version_id": "version:4963e528-6f09-54ee-bd14-3ecc26cb76ca",
+        "source_version_id": "version:4963e528-6f09-54ee-bd14-3ecc26cb76ca",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:4963e528-6f09-54ee-bd14-3ecc26cb76ca",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/62d8ff0c669bf7e511d0.md",
+        "source_sha256": "sha256:9717c1909c38d594051e0df966235976466019248ec3ff2acf88dce7f45330c6",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "Promoting AI literacy in social work education: lessons from an interdisciplinary course for social work students",
+          "doi": "10.1080/02615479.2026.2635471"
+        },
+        "version_identity": {
+          "title": "Promoting AI literacy in social work education: lessons from an interdisciplinary course for social work students",
+          "doi": "10.1080/02615479.2026.2635471"
+        }
+      },
       "source_hold": null,
       "version_type": "version_of_record",
       "version_date": "2026-02-24",
@@ -47422,13 +47441,24 @@
       "item_type": "journalarticle",
       "journal": "Discover Social Science and Health",
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing",
+      "knowledge_coverage": "fulltext_ready",
       "work_id": "work:b5b557a0-a651-5a88-b70c-1b05374e5b06",
       "identity_basis": "work_version_registry",
       "legacy_work_id": "doi:10.1007/s44155-026-00463-x",
       "legacy_identity_basis": "doi",
       "version_id": "version:b1e947e9-1a11-575d-8316-457534f59271",
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "2JSZR47F",
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/f30907f71818e5803100.md",
+        "source_sha256": "sha256:52124fc9de6eaea544d9608c02ff14aec8835a2ec15c40c0faca69e0a4c9b25a",
+        "work_id": "work:b5b557a0-a651-5a88-b70c-1b05374e5b06",
+        "source_version_id": "version:9774cb8d-4196-5492-8453-b4ba69a10f92",
+        "source_version_type": "accepted_manuscript",
+        "bibliographic_version_id": "version:b1e947e9-1a11-575d-8316-457534f59271",
+        "preferred_version_id": "version:b1e947e9-1a11-575d-8316-457534f59271",
+        "is_preferred_version": false,
+        "source_url": "https://link.springer.com/content/pdf/10.1007/s44155-026-00463-x_reference.pdf"
+      },
       "source_hold": null,
       "version_type": "version_of_record",
       "version_date": "2026-08-05",
@@ -47439,6 +47469,30 @@
       "latest_version_id": "version:b1e947e9-1a11-575d-8316-457534f59271",
       "is_preferred_version": true,
       "work_versions": [
+        {
+          "version_id": "version:9774cb8d-4196-5492-8453-b4ba69a10f92",
+          "version_type": "accepted_manuscript",
+          "version_date": "2026-07-29",
+          "identifiers": {
+            "url": [
+              "https://link.springer.com/content/pdf/10.1007/s44155-026-00463-x_reference.pdf"
+            ]
+          },
+          "peer_review_status": "peer_reviewed",
+          "peer_review_basis": "source_metadata",
+          "integrity_status": "current",
+          "access_status": "open_access",
+          "landing_url": "",
+          "fulltext_url": "https://link.springer.com/content/pdf/10.1007/s44155-026-00463-x_reference.pdf",
+          "relations": [
+            {
+              "type": "isVersionOf",
+              "target_version_id": "version:b1e947e9-1a11-575d-8316-457534f59271"
+            }
+          ],
+          "is_preferred": false,
+          "is_latest": false
+        },
         {
           "version_id": "version:b1e947e9-1a11-575d-8316-457534f59271",
           "version_type": "version_of_record",
@@ -47460,7 +47514,12 @@
           "access_status": "unknown",
           "landing_url": "https://doi.org/10.1007/s44155-026-00463-x",
           "fulltext_url": "",
-          "relations": [],
+          "relations": [
+            {
+              "type": "hasVersion",
+              "target_version_id": "version:9774cb8d-4196-5492-8453-b4ba69a10f92"
+            }
+          ],
           "is_preferred": true,
           "is_latest": true
         }

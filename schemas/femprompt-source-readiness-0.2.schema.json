@@ -1,0 +1,291 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dhcraft.org/FemPrompt_SozArb/schemas/femprompt-source-readiness-0.2.schema.json",
+  "title": "femprompt-source-readiness/0.2",
+  "$comment": "Local source-preparation ledger for the Codex Websearch 2026 expansion at generated/source-acquisition/codex-websearch-2026/source-readiness.json. Writer: src/acquire/build_codex_source_readiness.py (build_readiness; the readiness, queue-status and blocker vocabularies come from its _source_state). Readers: src/analysis/build_completion_package.py and src/publish/build_project.py, which treats the file as a build output. Readiness means a prepared representation may enter screening after identity binding; it establishes no inclusion, verification or publication approval.",
+  "type": "object",
+  "required": ["schema", "scope", "authority", "sources", "counts", "records"],
+  "additionalProperties": true,
+  "properties": {
+    "schema": { "const": "femprompt-source-readiness/0.2" },
+    "scope": { "type": "string", "minLength": 1 },
+    "authority": { "type": "string", "minLength": 1 },
+    "sources": {
+      "type": "object",
+      "additionalProperties": {
+        "oneOf": [
+          { "$ref": "#/$defs/sourceRef" },
+          { "type": "array", "items": { "$ref": "#/$defs/sourceRef" } },
+          { "type": "null" }
+        ]
+      }
+    },
+    "counts": {
+      "type": "object",
+      "required": ["candidates", "source_readiness"],
+      "additionalProperties": { "type": "integer", "minimum": 0 },
+      "properties": {
+        "source_readiness": {
+          "type": "object",
+          "propertyNames": { "$ref": "#/$defs/readinessState" },
+          "additionalProperties": { "type": "integer", "minimum": 0 }
+        }
+      }
+    },
+    "records": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/record" }
+    }
+  },
+  "$defs": {
+    "sha256Bare": {
+      "type": "string",
+      "pattern": "^[0-9a-fA-F]{64}$"
+    },
+    "sourceRef": {
+      "type": "object",
+      "required": ["path", "sha256"],
+      "additionalProperties": false,
+      "properties": {
+        "path": { "type": "string", "minLength": 1 },
+        "sha256": { "$ref": "#/$defs/sha256Bare" }
+      }
+    },
+    "candidateId": {
+      "type": "string",
+      "pattern": "^codex-websearch-2026:[a-z]+:.+$"
+    },
+    "partialDate": {
+      "type": "string",
+      "pattern": "^[0-9]{4}(-[0-9]{2}(-[0-9]{2})?)?$"
+    },
+    "readinessState": {
+      "enum": [
+        "fulltext_access_not_available",
+        "automatic_acquisition_failed",
+        "conversion_validation_missing",
+        "agent_qc_pending",
+        "agent_qc_approved",
+        "agent_qc_approved_after_repair",
+        "visual_evidence_support_required",
+        "repair_required"
+      ]
+    },
+    "nextAction": {
+      "enum": [
+        "lawful_fulltext_source_required",
+        "alternative_source_or_operator_download_required",
+        "format_specific_or_operator_acquisition_required",
+        "conversion_validation_required",
+        "agent_source_qc_required",
+        "zotero_identity_binding_pending",
+        "prism_visual_evidence_not_representable",
+        "source_representation_repair_required"
+      ]
+    },
+    "localSourceVersion": {
+      "$comment": "Descriptive source-version record; only the relation vocabulary is controlled, because the labels name concrete publication situations.",
+      "type": ["object", "null"],
+      "required": ["version_type", "relation_to_preferred"],
+      "additionalProperties": true,
+      "properties": {
+        "title": { "type": ["string", "null"] },
+        "authors": { "type": "array", "items": { "type": "string" } },
+        "date": { "type": ["string", "null"] },
+        "identifier": { "type": ["string", "object", "null"] },
+        "version_type": { "type": "string", "minLength": 1 },
+        "relation_to_preferred": {
+          "enum": [
+            "preferred_version",
+            "alternative_recorded_version",
+            "not_established"
+          ]
+        },
+        "relation_basis": { "type": "string" },
+        "source_version_label": { "type": "string" }
+      }
+    },
+    "record": {
+      "type": "object",
+      "required": [
+        "candidate_id",
+        "title",
+        "doi",
+        "preferred_version",
+        "local_source_version",
+        "acquisition",
+        "source_recovery",
+        "local_representation",
+        "conversion_validation",
+        "agent_qc",
+        "repair_qc",
+        "visual_evidence_assessment",
+        "visual_evidence_manifest",
+        "source_readiness",
+        "screening_source_ready",
+        "screening_markdown_file",
+        "screening_markdown_sha256",
+        "canonical_queue_status",
+        "next_required_action"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "candidate_id": { "$ref": "#/$defs/candidateId" },
+        "title": { "type": "string", "minLength": 1 },
+        "doi": {
+          "type": ["string", "null"],
+          "pattern": "^10\\.[0-9]{4,9}/\\S+$"
+        },
+        "preferred_version": {
+          "type": "object",
+          "required": ["type", "date"],
+          "additionalProperties": true,
+          "properties": {
+            "type": { "type": "string", "minLength": 1 },
+            "date": { "$ref": "#/$defs/partialDate" }
+          }
+        },
+        "local_source_version": { "$ref": "#/$defs/localSourceVersion" },
+        "acquisition": {
+          "type": "object",
+          "required": ["access_status", "status", "local_pdf_name", "sha256", "error"],
+          "additionalProperties": true,
+          "properties": {
+            "access_status": {
+              "enum": ["open_access", "restricted", "publisher_access"]
+            },
+            "automated_candidate": { "type": ["boolean", "null"] },
+            "eligibility_reason": {
+              "enum": ["confirmed_open_fulltext_url", "access_not_confirmed_open"]
+            },
+            "status": {
+              "enum": ["already_available", "failed", "not_automatically_attempted"]
+            },
+            "local_pdf_name": { "type": ["string", "null"] },
+            "sha256": {
+              "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/sha256Bare" }]
+            },
+            "error": { "type": ["string", "null"] }
+          }
+        },
+        "source_recovery": {
+          "type": ["object", "null"],
+          "required": ["status", "alternative_url"],
+          "additionalProperties": true,
+          "properties": {
+            "status": { "type": "string", "minLength": 1 },
+            "alternative_url": { "type": "string", "minLength": 1 },
+            "version_type": { "type": "string" },
+            "relation_to_preferred": {
+              "$comment": "Free prose here, unlike the controlled token in local_source_version.",
+              "type": "string"
+            }
+          }
+        },
+        "local_representation": {
+          "type": ["object", "null"],
+          "required": [
+            "format",
+            "source_file",
+            "source_sha256",
+            "markdown_file",
+            "markdown_sha256",
+            "source_storage",
+            "source_version"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "format": { "enum": ["pdf", "html"] },
+            "source_file": { "type": "string", "minLength": 1 },
+            "source_sha256": { "$ref": "#/$defs/sha256Bare" },
+            "markdown_file": { "type": "string", "minLength": 1 },
+            "markdown_sha256": { "$ref": "#/$defs/sha256Bare" },
+            "source_storage": { "const": "local_only_not_committed" },
+            "source_version": { "$ref": "#/$defs/localSourceVersion" }
+          }
+        },
+        "conversion_validation": {
+          "type": ["object", "null"],
+          "required": ["status", "issues"],
+          "additionalProperties": true,
+          "properties": {
+            "status": { "enum": ["PASS", "WARNING", "HTML_SOURCE_MANIFEST"] },
+            "confidence": { "type": ["number", "null"] },
+            "issues": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "agent_qc": {
+          "type": ["object", "null"],
+          "required": ["decision"],
+          "additionalProperties": true,
+          "properties": {
+            "decision": {
+              "enum": ["approved_for_screening", "requires_reconversion"]
+            },
+            "identity_match": { "type": ["boolean", "null"] },
+            "body_complete": { "type": ["boolean", "null"] }
+          }
+        },
+        "repair_qc": {
+          "type": ["object", "null"],
+          "required": ["decision", "issues_remaining"],
+          "additionalProperties": true,
+          "properties": {
+            "decision": {
+              "enum": ["approved_for_screening", "requires_reconversion"]
+            },
+            "repaired_markdown": { "type": ["string", "null"] },
+            "issues_remaining": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "visual_evidence_assessment": { "type": ["string", "null"] },
+        "visual_evidence_manifest": {
+          "type": ["object", "null"],
+          "required": ["path", "sha256"],
+          "additionalProperties": true,
+          "properties": {
+            "path": { "type": "string", "minLength": 1 },
+            "sha256": { "$ref": "#/$defs/sha256Bare" },
+            "image_count": { "type": "integer", "minimum": 1 },
+            "pdf_pages": {
+              "type": "array",
+              "items": { "type": "integer", "minimum": 1 }
+            },
+            "table_ids": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "source_readiness": { "$ref": "#/$defs/readinessState" },
+        "screening_source_ready": { "type": "boolean" },
+        "screening_markdown_file": { "type": ["string", "null"] },
+        "screening_markdown_sha256": {
+          "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/sha256Bare" }]
+        },
+        "canonical_queue_status": {
+          "enum": ["pending_zotero_identity_binding", "blocked"]
+        },
+        "next_required_action": { "$ref": "#/$defs/nextAction" }
+      },
+      "allOf": [
+        {
+          "$comment": "The queue status follows readiness; a blocked record cannot claim a ready source.",
+          "if": {
+            "properties": { "screening_source_ready": { "const": true } },
+            "required": ["screening_source_ready"]
+          },
+          "then": {
+            "properties": {
+              "canonical_queue_status": {
+                "const": "pending_zotero_identity_binding"
+              },
+              "screening_markdown_file": { "type": "string", "minLength": 1 },
+              "screening_markdown_sha256": { "$ref": "#/$defs/sha256Bare" }
+            }
+          },
+          "else": {
+            "properties": { "canonical_queue_status": { "const": "blocked" } }
+          }
+        }
+      ]
+    }
+  }
+}

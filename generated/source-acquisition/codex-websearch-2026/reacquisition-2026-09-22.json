@@ -1,0 +1,937 @@
+{
+  "schema": "femprompt-source-reacquisition/0.1",
+  "run_id": "reacquisition-2026-09-22",
+  "date": "2026-09-22",
+  "scope": "The fifteen works of generated/source-acquisition/codex-websearch-2026/fehlende-volltexte-2026.xlsx that had no usable full text.",
+  "method": "Open-access routes only: Unpaywall (mailto office@dhcraft.org), OpenAlex, Crossref, Semantic Scholar, arXiv, OpenAIRE, publisher and repository landing or full-text endpoints, and web search for author preprints and institutional repository copies. No paywall circumvention, no shadow library, no ResearchGate.",
+  "result_vocabulary": {
+    "acquired-oa": "An openly served full-text representation was retrieved and stored locally.",
+    "oa-abstract-only": "No openly served full text; a public abstract is available.",
+    "license-blocked": "A full-text endpoint exists but is served only under subscription or text-and-data-mining entitlement, answering with HTTP 403 or a redirect to authentication.",
+    "not-available": "No openly served representation and no public abstract were found."
+  },
+  "authority": "Local source preparation only. Acquisition establishes no screening readiness, no inclusion, no domain-expert verification and no publication approval.",
+  "counts": {
+    "works": 15,
+    "acquired-oa": 1,
+    "oa-abstract-only": 3,
+    "license-blocked": 8,
+    "not-available": 3
+  },
+  "zotero_additions": {
+    "ris_path": "generated/source-acquisition/codex-websearch-2026/zotero-additions-2026-09-22.ris",
+    "record_count": 0,
+    "finding": "Every work on the list, row 15 included, is already a member of the live Zotero group 6080294. Row 15 corresponds to key SIHIUMFZ. The RIS file is therefore written without records so that a later run of src.acquire.zotero_group_import cannot create duplicates.",
+    "evidence": [
+      "corpus/zotero_sync.json live_record_ids, observed 2026-09-21",
+      "corpus/zotero_export.json record with DOI 10.1086/735590 and key SIHIUMFZ",
+      "corpus/work_version_registry.json record_index SIHIUMFZ -> work:5214816c-608d-55ba-98f3-2a3a3357b7ac"
+    ]
+  },
+  "records": [
+    {
+      "nr": 1,
+      "zotero_key": "6N9ANHXA",
+      "zotero_key_state": "member of live group 6080294 per corpus/zotero_sync.json, observed 2026-09-21",
+      "title": "The Role of Generative AI in Transforming Social Work Practice",
+      "doi": "10.1007/978-3-032-27336-9_4",
+      "candidate_id": "codex-websearch-2026:doi:10.1007/978-3-032-27336-9_4",
+      "unpaywall": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "journal_is_oa": false,
+        "oa_locations": []
+      },
+      "routes_tried": [
+        {
+          "route": "unpaywall",
+          "url": "https://api.unpaywall.org/v2/10.1007/978-3-032-27336-9_4",
+          "http_status": 200
+        },
+        {
+          "route": "openalex",
+          "url": "https://api.openalex.org/works/doi:10.1007/978-3-032-27336-9_4",
+          "http_status": 200
+        },
+        {
+          "route": "crossref",
+          "url": "https://api.crossref.org/works/10.1007/978-3-032-27336-9_4",
+          "http_status": 200
+        },
+        {
+          "route": "semanticscholar",
+          "url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1007/978-3-032-27336-9_4",
+          "http_status": 404
+        },
+        {
+          "route": "arxiv",
+          "url": "http://export.arxiv.org/api/query?search_query=ti%3A%22The+Role+of+Generative+AI+in+Transforming+Social+Work+Practice%22&max_results=5",
+          "http_status": 200
+        },
+        {
+          "route": "openaire",
+          "url": "https://api.openaire.eu/search/publications?doi=10.1007%2F978-3-032-27336-9_4&format=json",
+          "http_status": 200
+        },
+        {
+          "route": "publisher_or_repository_fulltext_endpoint",
+          "url": "https://link.springer.com/content/pdf/10.1007/978-3-032-27336-9_4.pdf",
+          "http_status": 200,
+          "final_url": "https://link.springer.com/chapter/10.1007/978-3-032-27336-9_4",
+          "content_type": "text/html; charset=utf-8",
+          "served_pdf": false
+        }
+      ],
+      "result": "license-blocked",
+      "license_statement": "Crossref licence records: Springer Nature text-and-data-mining terms (https://www.springernature.com/gp/researchers/text-and-data-mining) for the tdm and vor content versions. No open-content licence recorded; Unpaywall oa_status 'closed'.",
+      "file": null,
+      "sha256": null
+    },
+    {
+      "nr": 2,
+      "zotero_key": "XQCZTTIK",
+      "zotero_key_state": "member of live group 6080294 per corpus/zotero_sync.json, observed 2026-09-21",
+      "title": "Integrating diversity, equity, and inclusion in generative AI applications for healthcare education: a scoping review",
+      "doi": "10.1016/j.ijmedinf.2026.106582",
+      "candidate_id": "codex-websearch-2026:doi:10.1016/j.ijmedinf.2026.106582",
+      "unpaywall": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "journal_is_oa": false,
+        "oa_locations": []
+      },
+      "routes_tried": [
+        {
+          "route": "unpaywall",
+          "url": "https://api.unpaywall.org/v2/10.1016/j.ijmedinf.2026.106582",
+          "http_status": 200
+        },
+        {
+          "route": "openalex",
+          "url": "https://api.openalex.org/works/doi:10.1016/j.ijmedinf.2026.106582",
+          "http_status": 200
+        },
+        {
+          "route": "crossref",
+          "url": "https://api.crossref.org/works/10.1016/j.ijmedinf.2026.106582",
+          "http_status": 200
+        },
+        {
+          "route": "semanticscholar",
+          "url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1016/j.ijmedinf.2026.106582",
+          "http_status": 200
+        },
+        {
+          "route": "arxiv",
+          "url": "http://export.arxiv.org/api/query?search_query=ti%3A%22Integrating+diversity++equity++and+inclusion+in+generative+AI+applications+for+healthcare+education++a+scoping+review%22&max_results=5",
+          "http_status": 200
+        },
+        {
+          "route": "openaire",
+          "url": "https://api.openaire.eu/search/publications?doi=10.1016%2Fj.ijmedinf.2026.106582&format=json",
+          "http_status": 200
+        },
+        {
+          "route": "publisher_or_repository_fulltext_endpoint",
+          "url": "https://doi.org/10.1016/j.ijmedinf.2026.106582",
+          "http_status": 200,
+          "final_url": "https://linkinghub.elsevier.com/retrieve/pii/S1386505626003229",
+          "content_type": "text/html;charset=UTF-8",
+          "served_pdf": false
+        }
+      ],
+      "result": "license-blocked",
+      "license_statement": "Crossref licence records: Elsevier user licence (https://www.elsevier.com/tdm/userlicense/1.0/) and STM article-sharing policies, all for text-and-data-mining. No open-content licence recorded; Unpaywall oa_status 'closed'.",
+      "file": null,
+      "sha256": null
+    },
+    {
+      "nr": 3,
+      "zotero_key": "T7FGTQF4",
+      "zotero_key_state": "member of live group 6080294 per corpus/zotero_sync.json, observed 2026-09-21",
+      "title": "Inclusive generative AI and the dynamics of inequality: A capability-resource model of adoption disparities",
+      "doi": "10.1016/j.techsoc.2026.103402",
+      "candidate_id": "codex-websearch-2026:doi:10.1016/j.techsoc.2026.103402",
+      "unpaywall": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "journal_is_oa": false,
+        "oa_locations": []
+      },
+      "routes_tried": [
+        {
+          "route": "unpaywall",
+          "url": "https://api.unpaywall.org/v2/10.1016/j.techsoc.2026.103402",
+          "http_status": 200
+        },
+        {
+          "route": "openalex",
+          "url": "https://api.openalex.org/works/doi:10.1016/j.techsoc.2026.103402",
+          "http_status": 200
+        },
+        {
+          "route": "crossref",
+          "url": "https://api.crossref.org/works/10.1016/j.techsoc.2026.103402",
+          "http_status": 200
+        },
+        {
+          "route": "semanticscholar",
+          "url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1016/j.techsoc.2026.103402",
+          "http_status": 200
+        },
+        {
+          "route": "arxiv",
+          "url": "http://export.arxiv.org/api/query?search_query=ti%3A%22Inclusive+generative+AI+and+the+dynamics+of+inequality++A+capability+resource+model+of+adoption+disparities%22&max_results=5",
+          "http_status": 200
+        },
+        {
+          "route": "openaire",
+          "url": "https://api.openaire.eu/search/publications?doi=10.1016%2Fj.techsoc.2026.103402&format=json",
+          "http_status": 200
+        },
+        {
+          "route": "publisher_or_repository_fulltext_endpoint",
+          "url": "https://doi.org/10.1016/j.techsoc.2026.103402",
+          "http_status": 200,
+          "final_url": "https://linkinghub.elsevier.com/retrieve/pii/S0160791X26001910",
+          "content_type": "text/html;charset=UTF-8",
+          "served_pdf": false
+        }
+      ],
+      "result": "license-blocked",
+      "license_statement": "Crossref licence records: Elsevier user licence (https://www.elsevier.com/tdm/userlicense/1.0/) and STM article-sharing policies, all for text-and-data-mining. No open-content licence recorded; Unpaywall oa_status 'closed'.",
+      "file": null,
+      "sha256": null
+    },
+    {
+      "nr": 4,
+      "zotero_key": "UFTH283E",
+      "zotero_key_state": "member of live group 6080294 per corpus/zotero_sync.json, observed 2026-09-21",
+      "title": "Large language models exhibit stigmatizing behaviour in contextual judgements of health conditions",
+      "doi": "10.1038/s44360-026-00164-4",
+      "candidate_id": "codex-websearch-2026:doi:10.1038/s44360-026-00164-4",
+      "unpaywall": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "journal_is_oa": false,
+        "oa_locations": []
+      },
+      "routes_tried": [
+        {
+          "route": "unpaywall",
+          "url": "https://api.unpaywall.org/v2/10.1038/s44360-026-00164-4",
+          "http_status": 200
+        },
+        {
+          "route": "openalex",
+          "url": "https://api.openalex.org/works/doi:10.1038/s44360-026-00164-4",
+          "http_status": 200
+        },
+        {
+          "route": "crossref",
+          "url": "https://api.crossref.org/works/10.1038/s44360-026-00164-4",
+          "http_status": 200
+        },
+        {
+          "route": "semanticscholar",
+          "url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1038/s44360-026-00164-4",
+          "http_status": 200
+        },
+        {
+          "route": "arxiv",
+          "url": "http://export.arxiv.org/api/query?search_query=ti%3A%22Large+language+models+exhibit+stigmatizing+behaviour+in+contextual+judgements+of+health+conditions%22&max_results=5",
+          "http_status": 200
+        },
+        {
+          "route": "openaire",
+          "url": "https://api.openaire.eu/search/publications?doi=10.1038%2Fs44360-026-00164-4&format=json",
+          "http_status": 200
+        },
+        {
+          "route": "publisher_or_repository_fulltext_endpoint",
+          "url": "https://www.nature.com/articles/s44360-026-00164-4.pdf",
+          "http_status": 200,
+          "final_url": "https://www.nature.com/articles/s44360-026-00164-4",
+          "content_type": "text/html; charset=utf-8",
+          "served_pdf": false
+        }
+      ],
+      "result": "license-blocked",
+      "license_statement": "Crossref licence records: Springer Nature text-and-data-mining terms (https://www.springernature.com/gp/researchers/text-and-data-mining) for the tdm and vor content versions. No open-content licence recorded; Unpaywall oa_status 'closed'.",
+      "file": null,
+      "sha256": null,
+      "note": "A 53-page PDF acquired by an earlier run on the same day lies at generated/pdfs/reacquisition-2026-09-22/e955efa2609ed1c51e0a.pdf. Its first page identifies it as the publisher Supplementary Information, in the format provided by the authors and unedited, not the article full text. It is therefore not counted as an acquired full text and was left untouched."
+    },
+    {
+      "nr": 5,
+      "zotero_key": "WHGCH3XS",
+      "zotero_key_state": "member of live group 6080294 per corpus/zotero_sync.json, observed 2026-09-21",
+      "title": "Innovating social work pedagogy: generative AI for critical competency development in evidence-based practice",
+      "doi": "10.1080/02615479.2026.2617512",
+      "candidate_id": "codex-websearch-2026:doi:10.1080/02615479.2026.2617512",
+      "unpaywall": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "journal_is_oa": false,
+        "oa_locations": []
+      },
+      "routes_tried": [
+        {
+          "route": "unpaywall",
+          "url": "https://api.unpaywall.org/v2/10.1080/02615479.2026.2617512",
+          "http_status": 200
+        },
+        {
+          "route": "openalex",
+          "url": "https://api.openalex.org/works/doi:10.1080/02615479.2026.2617512",
+          "http_status": 200
+        },
+        {
+          "route": "crossref",
+          "url": "https://api.crossref.org/works/10.1080/02615479.2026.2617512",
+          "http_status": 200
+        },
+        {
+          "route": "semanticscholar",
+          "url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1080/02615479.2026.2617512",
+          "http_status": 200
+        },
+        {
+          "route": "arxiv",
+          "url": "http://export.arxiv.org/api/query?search_query=ti%3A%22Innovating+social+work+pedagogy++generative+AI+for+critical+competency+development+in+evidence+based+practice%22&max_results=5",
+          "http_status": 200
+        },
+        {
+          "route": "openaire",
+          "url": "https://api.openaire.eu/search/publications?doi=10.1080%2F02615479.2026.2617512&format=json",
+          "http_status": 200
+        },
+        {
+          "route": "publisher_or_repository_fulltext_endpoint",
+          "url": "https://www.tandfonline.com/doi/pdf/10.1080/02615479.2026.2617512",
+          "http_status": 403,
+          "final_url": "https://www.tandfonline.com/doi/pdf/10.1080/02615479.2026.2617512",
+          "content_type": "text/html; charset=UTF-8",
+          "served_pdf": false
+        }
+      ],
+      "result": "license-blocked",
+      "license_statement": "No licence recorded in Crossref. Unpaywall oa_status 'closed'; Taylor & Francis subscription content.",
+      "file": null,
+      "sha256": null
+    },
+    {
+      "nr": 6,
+      "zotero_key": "DHKP5FGN",
+      "zotero_key_state": "member of live group 6080294 per corpus/zotero_sync.json, observed 2026-09-21",
+      "title": "AI-enhanced ethical decision-making in social work: development and testing of an application-specific language model",
+      "doi": "10.1080/02650533.2026.2683352",
+      "candidate_id": "codex-websearch-2026:doi:10.1080/02650533.2026.2683352",
+      "unpaywall": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "journal_is_oa": false,
+        "oa_locations": []
+      },
+      "routes_tried": [
+        {
+          "route": "unpaywall",
+          "url": "https://api.unpaywall.org/v2/10.1080/02650533.2026.2683352",
+          "http_status": 200
+        },
+        {
+          "route": "openalex",
+          "url": "https://api.openalex.org/works/doi:10.1080/02650533.2026.2683352",
+          "http_status": 200
+        },
+        {
+          "route": "crossref",
+          "url": "https://api.crossref.org/works/10.1080/02650533.2026.2683352",
+          "http_status": 200
+        },
+        {
+          "route": "semanticscholar",
+          "url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1080/02650533.2026.2683352",
+          "http_status": 200
+        },
+        {
+          "route": "arxiv",
+          "url": "http://export.arxiv.org/api/query?search_query=ti%3A%22AI+enhanced+ethical+decision+making+in+social+work++development+and+testing+of+an+application+specific+language+model%22&max_results=5",
+          "http_status": 200
+        },
+        {
+          "route": "openaire",
+          "url": "https://api.openaire.eu/search/publications?doi=10.1080%2F02650533.2026.2683352&format=json",
+          "http_status": 200
+        },
+        {
+          "route": "publisher_or_repository_fulltext_endpoint",
+          "url": "https://www.tandfonline.com/doi/pdf/10.1080/02650533.2026.2683352",
+          "http_status": 403,
+          "final_url": "https://www.tandfonline.com/doi/pdf/10.1080/02650533.2026.2683352",
+          "content_type": "text/html; charset=UTF-8",
+          "served_pdf": false
+        }
+      ],
+      "result": "license-blocked",
+      "license_statement": "No licence recorded in Crossref. Unpaywall oa_status 'closed'; Taylor & Francis subscription content.",
+      "file": null,
+      "sha256": null
+    },
+    {
+      "nr": 7,
+      "zotero_key": "SV7RABKM",
+      "zotero_key_state": "member of live group 6080294 per corpus/zotero_sync.json, observed 2026-09-21",
+      "title": "ChatGPT in Social Work? Insights from MSW Students",
+      "doi": "10.1080/10437797.2025.2594423",
+      "candidate_id": "codex-websearch-2026:doi:10.1080/10437797.2025.2594423",
+      "unpaywall": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "journal_is_oa": false,
+        "oa_locations": []
+      },
+      "routes_tried": [
+        {
+          "route": "unpaywall",
+          "url": "https://api.unpaywall.org/v2/10.1080/10437797.2025.2594423",
+          "http_status": 200
+        },
+        {
+          "route": "openalex",
+          "url": "https://api.openalex.org/works/doi:10.1080/10437797.2025.2594423",
+          "http_status": 200
+        },
+        {
+          "route": "crossref",
+          "url": "https://api.crossref.org/works/10.1080/10437797.2025.2594423",
+          "http_status": 200
+        },
+        {
+          "route": "semanticscholar",
+          "url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1080/10437797.2025.2594423",
+          "http_status": 200
+        },
+        {
+          "route": "arxiv",
+          "url": "http://export.arxiv.org/api/query?search_query=ti%3A%22ChatGPT+in+Social+Work++Insights+from+MSW+Students%22&max_results=5",
+          "http_status": 200
+        },
+        {
+          "route": "openaire",
+          "url": "https://api.openaire.eu/search/publications?doi=10.1080%2F10437797.2025.2594423&format=json",
+          "http_status": 200
+        },
+        {
+          "route": "publisher_or_repository_fulltext_endpoint",
+          "url": "https://www.tandfonline.com/doi/pdf/10.1080/10437797.2025.2594423",
+          "http_status": 403,
+          "final_url": "https://www.tandfonline.com/doi/pdf/10.1080/10437797.2025.2594423",
+          "content_type": "text/html; charset=UTF-8",
+          "served_pdf": false
+        }
+      ],
+      "result": "license-blocked",
+      "license_statement": "No licence recorded in Crossref. Unpaywall oa_status 'closed'; Taylor & Francis subscription content.",
+      "file": null,
+      "sha256": null
+    },
+    {
+      "nr": 8,
+      "zotero_key": "ZETPJ8EC",
+      "zotero_key_state": "member of live group 6080294 per corpus/zotero_sync.json, observed 2026-09-21",
+      "title": "Same Prompt, Different Care? Evaluating Inequities in AI-Generated Mental Health Support for Immigrant Communities",
+      "doi": "10.1086/743397",
+      "candidate_id": "codex-websearch-2026:doi:10.1086/743397",
+      "unpaywall": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "journal_is_oa": false,
+        "oa_locations": []
+      },
+      "routes_tried": [
+        {
+          "route": "unpaywall",
+          "url": "https://api.unpaywall.org/v2/10.1086/743397",
+          "http_status": 200
+        },
+        {
+          "route": "openalex",
+          "url": "https://api.openalex.org/works/doi:10.1086/743397",
+          "http_status": 200
+        },
+        {
+          "route": "crossref",
+          "url": "https://api.crossref.org/works/10.1086/743397",
+          "http_status": 200
+        },
+        {
+          "route": "semanticscholar",
+          "url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1086/743397",
+          "http_status": 504
+        },
+        {
+          "route": "arxiv",
+          "url": "http://export.arxiv.org/api/query?search_query=ti%3A%22Same+Prompt++Different+Care++Evaluating+Inequities+in+AI+Generated+Mental+Health+Support+for+Immigrant+Communities%22&max_results=5",
+          "http_status": 200
+        },
+        {
+          "route": "openaire",
+          "url": "https://api.openaire.eu/search/publications?doi=10.1086%2F743397&format=json",
+          "http_status": 200
+        },
+        {
+          "route": "publisher_or_repository_fulltext_endpoint",
+          "url": "https://www.journals.uchicago.edu/doi/pdf/10.1086/743397",
+          "http_status": 403,
+          "final_url": "https://www.journals.uchicago.edu/doi/pdf/10.1086/743397",
+          "content_type": "text/html; charset=UTF-8",
+          "served_pdf": false
+        }
+      ],
+      "result": "license-blocked",
+      "license_statement": "No licence recorded in Crossref. Unpaywall oa_status 'closed'; University of Chicago Press subscription content.",
+      "file": null,
+      "sha256": null,
+      "note": "No preprint or repository copy located through Unpaywall, OpenAlex, Semantic Scholar, arXiv title search or web search."
+    },
+    {
+      "nr": 9,
+      "zotero_key": "8MM5BZN8",
+      "zotero_key_state": "member of live group 6080294 per corpus/zotero_sync.json, observed 2026-09-21",
+      "title": "The Adoption of Generative AI by Social Workers in Practice: A Scoping Review",
+      "doi": "10.1177/10497315261469433",
+      "candidate_id": "codex-websearch-2026:doi:10.1177/10497315261469433",
+      "unpaywall": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "journal_is_oa": false,
+        "oa_locations": []
+      },
+      "routes_tried": [
+        {
+          "route": "unpaywall",
+          "url": "https://api.unpaywall.org/v2/10.1177/10497315261469433",
+          "http_status": 200
+        },
+        {
+          "route": "openalex",
+          "url": "https://api.openalex.org/works/doi:10.1177/10497315261469433",
+          "http_status": 200
+        },
+        {
+          "route": "crossref",
+          "url": "https://api.crossref.org/works/10.1177/10497315261469433",
+          "http_status": 200
+        },
+        {
+          "route": "semanticscholar",
+          "url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1177/10497315261469433",
+          "http_status": 200
+        },
+        {
+          "route": "arxiv",
+          "url": "http://export.arxiv.org/api/query?search_query=ti%3A%22The+Adoption+of+Generative+AI+by+Social+Workers+in+Practice++A+Scoping+Review%22&max_results=5",
+          "http_status": 200
+        },
+        {
+          "route": "openaire",
+          "url": "https://api.openaire.eu/search/publications?doi=10.1177%2F10497315261469433&format=json",
+          "http_status": 200
+        },
+        {
+          "route": "publisher_or_repository_fulltext_endpoint",
+          "url": "https://journals.sagepub.com/doi/pdf/10.1177/10497315261469433",
+          "http_status": 403,
+          "final_url": "https://journals.sagepub.com/doi/pdf/10.1177/10497315261469433",
+          "content_type": "text/html; charset=UTF-8",
+          "served_pdf": false
+        }
+      ],
+      "result": "oa-abstract-only",
+      "license_statement": "Crossref licence records: SAGE text-and-data-mining licence (https://journals.sagepub.com/page/policies/text-and-data-mining-license). No open-content licence recorded; Unpaywall oa_status 'closed'. The Crossref abstract is public.",
+      "file": null,
+      "sha256": null
+    },
+    {
+      "nr": 10,
+      "zotero_key": "5TDNQD4B",
+      "zotero_key_state": "member of live group 6080294 per corpus/zotero_sync.json, observed 2026-09-21",
+      "title": "Bias Bytes: A Study Examining Disability Bias in ChatGPT Job Recommendation",
+      "doi": "10.1177/10522263261449121",
+      "candidate_id": "codex-websearch-2026:doi:10.1177/10522263261449121",
+      "unpaywall": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "journal_is_oa": false,
+        "oa_locations": []
+      },
+      "routes_tried": [
+        {
+          "route": "unpaywall",
+          "url": "https://api.unpaywall.org/v2/10.1177/10522263261449121",
+          "http_status": 200
+        },
+        {
+          "route": "openalex",
+          "url": "https://api.openalex.org/works/doi:10.1177/10522263261449121",
+          "http_status": 200
+        },
+        {
+          "route": "crossref",
+          "url": "https://api.crossref.org/works/10.1177/10522263261449121",
+          "http_status": 200
+        },
+        {
+          "route": "semanticscholar",
+          "url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1177/10522263261449121",
+          "http_status": 200
+        },
+        {
+          "route": "arxiv",
+          "url": "http://export.arxiv.org/api/query?search_query=ti%3A%22Bias+Bytes++A+Study+Examining+Disability+Bias+in+ChatGPT+Job+Recommendation%22&max_results=5",
+          "http_status": 200
+        },
+        {
+          "route": "openaire",
+          "url": "https://api.openaire.eu/search/publications?doi=10.1177%2F10522263261449121&format=json",
+          "http_status": 200
+        },
+        {
+          "route": "publisher_or_repository_fulltext_endpoint",
+          "url": "https://journals.sagepub.com/doi/pdf/10.1177/10522263261449121",
+          "http_status": 403,
+          "final_url": "https://journals.sagepub.com/doi/pdf/10.1177/10522263261449121",
+          "content_type": "text/html; charset=UTF-8",
+          "served_pdf": false
+        }
+      ],
+      "result": "oa-abstract-only",
+      "license_statement": "Crossref licence records: SAGE text-and-data-mining licence (https://journals.sagepub.com/page/policies/text-and-data-mining-license). No open-content licence recorded; Unpaywall oa_status 'closed'. The Crossref abstract is public.",
+      "file": null,
+      "sha256": null,
+      "note": "No preprint or repository copy located. Web search returned a different disability-bias study (arXiv 2402.01732), not this work."
+    },
+    {
+      "nr": 11,
+      "zotero_key": "Z2RSS6SH",
+      "zotero_key_state": "member of live group 6080294 per corpus/zotero_sync.json, observed 2026-09-21",
+      "title": "Intelligence artificielle et travail social, une ressource au service des professionnels ?",
+      "doi": "10.3917/vsoc.052.0029",
+      "candidate_id": "codex-websearch-2026:doi:10.3917/vsoc.052.0029",
+      "unpaywall": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "journal_is_oa": false,
+        "oa_locations": []
+      },
+      "routes_tried": [
+        {
+          "route": "unpaywall",
+          "url": "https://api.unpaywall.org/v2/10.3917/vsoc.052.0029",
+          "http_status": 200
+        },
+        {
+          "route": "openalex",
+          "url": "https://api.openalex.org/works/doi:10.3917/vsoc.052.0029",
+          "http_status": 200
+        },
+        {
+          "route": "crossref",
+          "url": "https://api.crossref.org/works/10.3917/vsoc.052.0029",
+          "http_status": 200
+        },
+        {
+          "route": "semanticscholar",
+          "url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.3917/vsoc.052.0029",
+          "http_status": 200
+        },
+        {
+          "route": "arxiv",
+          "url": "http://export.arxiv.org/api/query?search_query=ti%3A%22Intelligence+artificielle+et+travail+social++une+ressource+au+service+des+professionnels%22&max_results=5",
+          "http_status": 200
+        },
+        {
+          "route": "openaire",
+          "url": "https://api.openaire.eu/search/publications?doi=10.3917%2Fvsoc.052.0029&format=json",
+          "http_status": 200
+        },
+        {
+          "route": "publisher_or_repository_fulltext_endpoint",
+          "url": "https://shs.cairn.info/revue-vie-sociale-2025-4-page-29?lang=fr",
+          "http_status": 403,
+          "final_url": "https://shs.cairn.info/revue-vie-sociale-2025-4-page-29?lang=fr",
+          "content_type": "text/html;charset=utf-8",
+          "served_pdf": false
+        }
+      ],
+      "result": "oa-abstract-only",
+      "license_statement": "No licence recorded in Crossref. Unpaywall oa_status 'closed'; Cairn/ERES subscription content. The Crossref abstract is public.",
+      "file": null,
+      "sha256": null
+    },
+    {
+      "nr": 12,
+      "zotero_key": "AUM6JXT9",
+      "zotero_key_state": "member of live group 6080294 per corpus/zotero_sync.json, observed 2026-09-21",
+      "title": "Social Work Ethics and Generative AI",
+      "doi": "10.4324/9781003627920-14",
+      "candidate_id": "codex-websearch-2026:doi:10.4324/9781003627920-14",
+      "unpaywall": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "journal_is_oa": false,
+        "oa_locations": []
+      },
+      "routes_tried": [
+        {
+          "route": "unpaywall",
+          "url": "https://api.unpaywall.org/v2/10.4324/9781003627920-14",
+          "http_status": 200
+        },
+        {
+          "route": "openalex",
+          "url": "https://api.openalex.org/works/doi:10.4324/9781003627920-14",
+          "http_status": 200
+        },
+        {
+          "route": "crossref",
+          "url": "https://api.crossref.org/works/10.4324/9781003627920-14",
+          "http_status": 200
+        },
+        {
+          "route": "semanticscholar",
+          "url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.4324/9781003627920-14",
+          "http_status": 404
+        },
+        {
+          "route": "arxiv",
+          "url": "http://export.arxiv.org/api/query?search_query=ti%3A%22Social+Work+Ethics+and+Generative+AI%22&max_results=5",
+          "http_status": 200
+        },
+        {
+          "route": "openaire",
+          "url": "https://api.openaire.eu/search/publications?doi=10.4324%2F9781003627920-14&format=json",
+          "http_status": 200
+        },
+        {
+          "route": "publisher_or_repository_fulltext_endpoint",
+          "url": "https://www.taylorfrancis.com/chapters/edit/10.4324/9781003627920-14/",
+          "http_status": 403,
+          "final_url": "https://www.taylorfrancis.com/chapters/edit/10.4324/9781003627920-14/",
+          "content_type": "text/html; charset=UTF-8",
+          "served_pdf": false
+        }
+      ],
+      "result": "not-available",
+      "license_statement": "No licence recorded in Crossref. Unpaywall oa_status 'closed'; Routledge/Taylor & Francis book chapter, no full-text endpoint recorded in Crossref.",
+      "file": null,
+      "sha256": null
+    },
+    {
+      "nr": 13,
+      "zotero_key": "D698593N",
+      "zotero_key_state": "member of live group 6080294 per corpus/zotero_sync.json, observed 2026-09-21",
+      "title": "Prompt Engineering for Social Workers",
+      "doi": "10.4324/9781003755081-10",
+      "candidate_id": "codex-websearch-2026:doi:10.4324/9781003755081-10",
+      "unpaywall": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "journal_is_oa": false,
+        "oa_locations": []
+      },
+      "routes_tried": [
+        {
+          "route": "unpaywall",
+          "url": "https://api.unpaywall.org/v2/10.4324/9781003755081-10",
+          "http_status": 200
+        },
+        {
+          "route": "openalex",
+          "url": "https://api.openalex.org/works/doi:10.4324/9781003755081-10",
+          "http_status": 200
+        },
+        {
+          "route": "crossref",
+          "url": "https://api.crossref.org/works/10.4324/9781003755081-10",
+          "http_status": 200
+        },
+        {
+          "route": "semanticscholar",
+          "url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.4324/9781003755081-10",
+          "http_status": 404
+        },
+        {
+          "route": "arxiv",
+          "url": "http://export.arxiv.org/api/query?search_query=ti%3A%22Prompt+Engineering+for+Social+Workers%22&max_results=5",
+          "http_status": 200
+        },
+        {
+          "route": "openaire",
+          "url": "https://api.openaire.eu/search/publications?doi=10.4324%2F9781003755081-10&format=json",
+          "http_status": 200
+        },
+        {
+          "route": "publisher_or_repository_fulltext_endpoint",
+          "url": "https://www.taylorfrancis.com/chapters/edit/10.4324/9781003755081-10/",
+          "http_status": 403,
+          "final_url": "https://www.taylorfrancis.com/chapters/edit/10.4324/9781003755081-10/",
+          "content_type": "text/html; charset=UTF-8",
+          "served_pdf": false
+        }
+      ],
+      "result": "not-available",
+      "license_statement": "No licence recorded in Crossref. Unpaywall oa_status 'closed'; Routledge/Taylor & Francis book chapter, no full-text endpoint recorded in Crossref.",
+      "file": null,
+      "sha256": null
+    },
+    {
+      "nr": 14,
+      "zotero_key": "RBZGHG5U",
+      "zotero_key_state": "member of live group 6080294 per corpus/zotero_sync.json, observed 2026-09-21",
+      "title": "Generative AI and Agentic AI",
+      "doi": "10.4324/9781003755081-5",
+      "candidate_id": "codex-websearch-2026:doi:10.4324/9781003755081-5",
+      "unpaywall": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "journal_is_oa": false,
+        "oa_locations": []
+      },
+      "routes_tried": [
+        {
+          "route": "unpaywall",
+          "url": "https://api.unpaywall.org/v2/10.4324/9781003755081-5",
+          "http_status": 200
+        },
+        {
+          "route": "openalex",
+          "url": "https://api.openalex.org/works/doi:10.4324/9781003755081-5",
+          "http_status": 200
+        },
+        {
+          "route": "crossref",
+          "url": "https://api.crossref.org/works/10.4324/9781003755081-5",
+          "http_status": 200
+        },
+        {
+          "route": "semanticscholar",
+          "url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.4324/9781003755081-5",
+          "http_status": 404
+        },
+        {
+          "route": "arxiv",
+          "url": "http://export.arxiv.org/api/query?search_query=ti%3A%22Generative+AI+and+Agentic+AI%22&max_results=5",
+          "http_status": 200
+        },
+        {
+          "route": "openaire",
+          "url": "https://api.openaire.eu/search/publications?doi=10.4324%2F9781003755081-5&format=json",
+          "http_status": 200
+        },
+        {
+          "route": "publisher_or_repository_fulltext_endpoint",
+          "url": "https://www.taylorfrancis.com/chapters/edit/10.4324/9781003755081-5/",
+          "http_status": 403,
+          "final_url": "https://www.taylorfrancis.com/chapters/edit/10.4324/9781003755081-5/",
+          "content_type": "text/html; charset=UTF-8",
+          "served_pdf": false
+        }
+      ],
+      "result": "not-available",
+      "license_statement": "No licence recorded in Crossref. Unpaywall oa_status 'closed'; Routledge/Taylor & Francis book chapter, no full-text endpoint recorded in Crossref.",
+      "file": null,
+      "sha256": null
+    },
+    {
+      "nr": 15,
+      "zotero_key": "SIHIUMFZ",
+      "zotero_key_state": "member of live group 6080294 per corpus/zotero_sync.json, observed 2026-09-21",
+      "title": "Artificial Intelligence and Cultural Context: An Empirical Investigation of LLMs' Performance on Chinese Social Work Professional Standards",
+      "doi": "10.1086/735590",
+      "candidate_id": "codex-websearch-2026:doi:10.1086/735590",
+      "unpaywall": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "journal_is_oa": false,
+        "oa_locations": []
+      },
+      "routes_tried": [
+        {
+          "route": "unpaywall",
+          "url": "https://api.unpaywall.org/v2/10.1086/735590",
+          "http_status": 200
+        },
+        {
+          "route": "openalex",
+          "url": "https://api.openalex.org/works/doi:10.1086/735590",
+          "http_status": 200
+        },
+        {
+          "route": "crossref",
+          "url": "https://api.crossref.org/works/10.1086/735590",
+          "http_status": 200
+        },
+        {
+          "route": "semanticscholar",
+          "url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1086/735590",
+          "http_status": 200
+        },
+        {
+          "route": "arxiv",
+          "url": "http://export.arxiv.org/api/query?search_query=ti%3A%22Artificial+Intelligence+and+Cultural+Context++An+Empirical+Investigation+of+LLMs++Performance+on+Chinese+Social+Work+Professional+Standards%22&max_results=5",
+          "http_status": 200
+        },
+        {
+          "route": "openaire",
+          "url": "https://api.openaire.eu/search/publications?doi=10.1086%2F735590&format=json",
+          "http_status": 200
+        },
+        {
+          "route": "publisher_or_repository_fulltext_endpoint",
+          "url": "https://arxiv.org/pdf/2412.14971v1",
+          "http_status": 200,
+          "final_url": "https://arxiv.org/pdf/2412.14971v1",
+          "content_type": "application/pdf",
+          "served_pdf": true
+        }
+      ],
+      "result": "acquired-oa",
+      "license_statement": "arXiv submission 2412.14971v1 is distributed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (http://creativecommons.org/licenses/by-nc-sa/4.0/), read from the licence block of https://arxiv.org/abs/2412.14971v1. The Version of Record at 10.1086/735590 carries no open licence in Crossref and remains closed in Unpaywall.",
+      "file": "generated/pdfs/reacquisition-2026-09-22/oa/f34607d11846d4580bc4.pdf",
+      "sha256": "eca218e2549932f56601635153170cede4b7183af6da76e8fa5a7a84d4a1bfad",
+      "note": "The list records the work as not yet in Zotero. It is in fact a member of the live group as key SIHIUMFZ (corpus/zotero_sync.json, observed 2026-09-21; corpus/zotero_export.json record with DOI 10.1086/735590). No RIS import is required. The acquired text is the author preprint, not the Version of Record; the version binding remains a separate decision.",
+      "bytes": 704590,
+      "acquired_from": "https://arxiv.org/pdf/2412.14971v1",
+      "source_version": {
+        "version_type": "preprint",
+        "arxiv_id": "2412.14971v1",
+        "date": "2024-12-19",
+        "arxiv_declared_doi": "10.1086/735590",
+        "title_as_served": "AI and Cultural Context: An Empirical Investigation of Large Language Models' Performance on Chinese Social Work Professional Standards",
+        "relation_to_preferred": "alternative_recorded_version"
+      },
+      "markdown_raw": {
+        "path": "generated/source-acquisition/codex-websearch-2026/reacquisition-2026-09-22/markdown-raw/f34607d11846d4580bc4.md",
+        "sha256": "e6c21f1c501e6c3fa66129239074f627564649fc2e01d9dbdf481fb2aaaf924a"
+      },
+      "markdown_clean": {
+        "path": "generated/source-acquisition/codex-websearch-2026/reacquisition-2026-09-22/markdown-clean/f34607d11846d4580bc4.md",
+        "sha256": "1c068ad4138e3189ae739a64d33292d2d739d08fb5b74766ecbc2464b24a4db1"
+      },
+      "conversion": {
+        "converter": "docling via src.acquire.convert_to_markdown",
+        "quality_score": 100,
+        "postprocessor": "src.acquire.postprocess_markdown",
+        "conversion_report": "generated/source-acquisition/codex-websearch-2026/reacquisition-2026-09-22/conversion-report.json",
+        "postprocess_report": "generated/source-acquisition/codex-websearch-2026/reacquisition-2026-09-22/postprocess-report.json"
+      },
+      "readiness": {
+        "state": "converted_not_source_reviewed",
+        "basis": "A clean Markdown text exists for the acquired preprint. Agent source QC, identity binding to work:5214816c-608d-55ba-98f3-2a3a3357b7ac and its Version chain, and screening readiness are not established by this run.",
+        "codex_readiness_ledger": "not extended; this work is absent from codex-websearch-2026-package.json, and src.acquire.build_codex_source_readiness --check confirms the committed ledger is unchanged."
+      }
+    }
+  ]
+}

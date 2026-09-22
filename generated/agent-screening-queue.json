@@ -5,11 +5,11 @@
   "authority_rule": "Any human annotation covers the canonical work; duplicate records do not trigger reassessment.",
   "sources": {
     "research_vault": "docs/data/research_vault_v2.json",
-    "research_vault_sha256": "f09b0ce0edf3c8eaf0259fbc59f795525be256ded65cc7a33c34e01ab6d1d4d0",
+    "research_vault_sha256": "1b758fb4a667104d35fb437052d7705e0b2bd98e719d03fcbbfb3107d2ae267f",
     "fulltext_manifest": "docs/data/fulltext_manifest.json",
-    "fulltext_manifest_sha256": "0684f60c4fd9f9b3f474de025e2868dc80e98947fba94850a683abab03a5f077",
+    "fulltext_manifest_sha256": "c16a2d600de40524c224335a122cc1ffc69d6d1c38c776ca37e206cf673e49d3",
     "work_version_registry": "corpus/work_version_registry.json",
-    "work_version_registry_sha256": "bbe1e2898d879e157195ebf4ec7718cc463b3254c7aedcc5132c7dd8b3f89298",
+    "work_version_registry_sha256": "0867995d898c0b7c2fb28fe05687f6e12fa3bce00843986948611b828b94882f",
     "productive_screening_dir": "docs/data/screening"
   },
   "counts": {
@@ -20,9 +20,9 @@
     "unannotated_alias_records_covered_at_work_level": 27,
     "queued_records": 110,
     "queued_works": 101,
-    "ready_works": 23,
+    "ready_works": 25,
     "blocked_abstract_only_works": 16,
-    "blocked_without_text_works": 62
+    "blocked_without_text_works": 60
   },
   "gate": {
     "status": "partial",
@@ -34,6 +34,7 @@
       "work:2c625fa2-a2f8-5d59-b6a0-f148d542c902",
       "work:5aaa355e-8f65-5850-a132-43fa3458195e",
       "work:677ea395-cc39-50b4-9979-496e0f17665d",
+      "work:68b57d67-221a-5e96-8d7b-153b4b26c91a",
       "work:6c8a1072-fcca-5fbd-8611-08774ef0ad7f",
       "work:6eab81e9-e9ba-57eb-abc0-6c00d7061314",
       "work:73eda891-2e28-587a-a7fb-a950323a0dad",
@@ -43,6 +44,7 @@
       "work:ac777aa0-e02b-5a2e-8ddd-19dfdd0110ec",
       "work:ad093524-5d10-5430-838d-3360c0d710cc",
       "work:b385e0cf-739b-5592-b5f0-c9d7fd2ead0a",
+      "work:b5b557a0-a651-5a88-b70c-1b05374e5b06",
       "work:ca3ae89d-5ddd-5036-a44d-165c58097219",
       "work:ce1b3961-e4e4-5bd2-a6a8-b97ef7fbc90f",
       "work:d3e1b501-39ff-5531-a410-391d0ae61c77",
@@ -2312,7 +2314,26 @@
       "selected_version_id": "version:4963e528-6f09-54ee-bd14-3ecc26cb76ca",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "I7BQH4U4",
+        "work_id": "work:68b57d67-221a-5e96-8d7b-153b4b26c91a",
+        "bibliographic_version_id": "version:4963e528-6f09-54ee-bd14-3ecc26cb76ca",
+        "source_version_id": "version:4963e528-6f09-54ee-bd14-3ecc26cb76ca",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:4963e528-6f09-54ee-bd14-3ecc26cb76ca",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/62d8ff0c669bf7e511d0.md",
+        "source_sha256": "sha256:9717c1909c38d594051e0df966235976466019248ec3ff2acf88dce7f45330c6",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "Promoting AI literacy in social work education: lessons from an interdisciplinary course for social work students",
+          "doi": "10.1080/02615479.2026.2635471"
+        },
+        "version_identity": {
+          "title": "Promoting AI literacy in social work education: lessons from an interdisciplinary course for social work students",
+          "doi": "10.1080/02615479.2026.2635471"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:4963e528-6f09-54ee-bd14-3ecc26cb76ca",
@@ -2349,16 +2370,14 @@
       "doi": "10.1080/02615479.2026.2635471",
       "url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2635471",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 53197,
+      "paper_source": "docs/data/fulltext/I7BQH4U4.md",
       "paper_source_work_id": "work:68b57d67-221a-5e96-8d7b-153b4b26c91a",
       "paper_source_version_id": "version:4963e528-6f09-54ee-bd14-3ecc26cb76ca",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "fd8db9077dfb37f1a4bddf5f1a5aa9eaf5ec9fa1202b5ae1d547749feadb6186",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:6b23f3bc-ecce-551d-b7f4-8c1b00fcf117",
@@ -4336,11 +4355,46 @@
       "work_id": "work:b5b557a0-a651-5a88-b70c-1b05374e5b06",
       "preferred_version_id": "version:b1e947e9-1a11-575d-8316-457534f59271",
       "latest_version_id": "version:b1e947e9-1a11-575d-8316-457534f59271",
-      "selected_version_id": "version:b1e947e9-1a11-575d-8316-457534f59271",
-      "selected_version_type": "version_of_record",
-      "selected_version_is_preferred": true,
-      "source_binding": null,
+      "selected_version_id": "version:9774cb8d-4196-5492-8453-b4ba69a10f92",
+      "selected_version_type": "accepted_manuscript",
+      "selected_version_is_preferred": false,
+      "source_binding": {
+        "record_id": "2JSZR47F",
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/f30907f71818e5803100.md",
+        "source_sha256": "sha256:52124fc9de6eaea544d9608c02ff14aec8835a2ec15c40c0faca69e0a4c9b25a",
+        "work_id": "work:b5b557a0-a651-5a88-b70c-1b05374e5b06",
+        "source_version_id": "version:9774cb8d-4196-5492-8453-b4ba69a10f92",
+        "source_version_type": "accepted_manuscript",
+        "bibliographic_version_id": "version:b1e947e9-1a11-575d-8316-457534f59271",
+        "preferred_version_id": "version:b1e947e9-1a11-575d-8316-457534f59271",
+        "is_preferred_version": false,
+        "source_url": "https://link.springer.com/content/pdf/10.1007/s44155-026-00463-x_reference.pdf"
+      },
       "available_versions": [
+        {
+          "version_id": "version:9774cb8d-4196-5492-8453-b4ba69a10f92",
+          "version_type": "accepted_manuscript",
+          "version_date": "2026-07-29",
+          "identifiers": {
+            "url": [
+              "https://link.springer.com/content/pdf/10.1007/s44155-026-00463-x_reference.pdf"
+            ]
+          },
+          "peer_review_status": "peer_reviewed",
+          "peer_review_basis": "source_metadata",
+          "integrity_status": "current",
+          "access_status": "open_access",
+          "landing_url": "",
+          "fulltext_url": "https://link.springer.com/content/pdf/10.1007/s44155-026-00463-x_reference.pdf",
+          "relations": [
+            {
+              "type": "isVersionOf",
+              "target_version_id": "version:b1e947e9-1a11-575d-8316-457534f59271"
+            }
+          ],
+          "is_preferred": false,
+          "is_latest": false
+        },
         {
           "version_id": "version:b1e947e9-1a11-575d-8316-457534f59271",
           "version_type": "version_of_record",
@@ -4362,7 +4416,12 @@
           "access_status": "unknown",
           "landing_url": "https://doi.org/10.1007/s44155-026-00463-x",
           "fulltext_url": "",
-          "relations": [],
+          "relations": [
+            {
+              "type": "hasVersion",
+              "target_version_id": "version:9774cb8d-4196-5492-8453-b4ba69a10f92"
+            }
+          ],
           "is_preferred": true,
           "is_latest": true
         }
@@ -4376,16 +4435,14 @@
       "doi": "10.1007/s44155-026-00463-x",
       "url": "https://doi.org/10.1007/s44155-026-00463-x",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 76789,
+      "paper_source": "docs/data/fulltext/2JSZR47F.md",
       "paper_source_work_id": "work:b5b557a0-a651-5a88-b70c-1b05374e5b06",
-      "paper_source_version_id": "version:b1e947e9-1a11-575d-8316-457534f59271",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_version_id": "version:9774cb8d-4196-5492-8453-b4ba69a10f92",
+      "paper_source_sha256": "ce08f6de880b2db03f10ab69f45065e2a084a26cb87c5a1b274c7349362dec94",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:b86204c8-abca-51c2-a398-a9a78c8aba08",

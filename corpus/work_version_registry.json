@@ -1,6 +1,6 @@
 {
   "schema": "femprompt-work-version-registry/0.1",
-  "source_fingerprint": "sha256:6fbd66ae5d0d6cba4f01e22d15b821aac2d5aac184b386e5315a0b35a8a2dd4b",
+  "source_fingerprint": "sha256:5d52637b8f4ddae24ae46ae69aacf2534282b12b290307cb6ccdac8468cc79ac",
   "sources": [
     {
       "path": "corpus/metadata_corrections.json",
@@ -196,7 +196,7 @@
     },
     {
       "path": "corpus/source_version_bindings.json",
-      "sha256": "e3bd2a6118deb581a7f828ad32c7760e84510667dab40675ac352d1ef0e5c376"
+      "sha256": "414676e73360b3b40fc0339f16d1950f5c25f74e40ce5570bbe1ac689b627df3"
     },
     {
       "path": "corpus/zotero_export.json",
@@ -319,6 +319,10 @@
       "sha256": "6ebe509cb9eb59315760f1de2ad87b7b1b17ddc641640782c15895073dd7740f"
     },
     {
+      "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/62d8ff0c669bf7e511d0.md",
+      "sha256": "9717c1909c38d594051e0df966235976466019248ec3ff2acf88dce7f45330c6"
+    },
+    {
       "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/926800fc523bebd0420c.md",
       "sha256": "dbf3a15387a52c3c622dbdaabfd358396a89b16c6b73db6e65f2ecf82d3f355d"
     },
@@ -363,6 +367,10 @@
       "sha256": "4dbc41e4a458cf82e1784ad5190b2a6b211a63488e2c0aaa557b67304aca5737"
     },
     {
+      "path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/f30907f71818e5803100.md",
+      "sha256": "52124fc9de6eaea544d9608c02ff14aec8835a2ec15c40c0faca69e0a4c9b25a"
+    },
+    {
       "path": "generated/source-acquisition/codex-websearch-2026/source-readiness.json",
       "sha256": "efad3e9948ef3b20bf2aca6f163e5fa14739576a56f61721b198f2d49ce7acb3"
     },
@@ -373,13 +381,13 @@
   ],
   "counts": {
     "works": 362,
-    "versions": 394,
+    "versions": 395,
     "zotero_records": 463,
     "round2_candidates": 24,
-    "works_with_multiple_versions": 25,
+    "works_with_multiple_versions": 26,
     "works_with_flags": 21,
     "ambiguous_external_identifiers": 4,
-    "bound_sources": 64
+    "bound_sources": 66
   },
   "works": [
     {
@@ -18949,6 +18957,47 @@
       "versions": [
         {
           "title": "An ethical framework for assessing artificial intelligence as augmentation or automation in social work",
+          "authors": [
+            "Kwangseon Hwang"
+          ],
+          "version_type": "accepted_manuscript",
+          "version_date": "2026-07-29",
+          "item_type": "",
+          "journal_or_repository": "Discover Social Science and Health (article in press)",
+          "identifiers": {
+            "url": [
+              "https://link.springer.com/content/pdf/10.1007/s44155-026-00463-x_reference.pdf"
+            ]
+          },
+          "peer_review_status": "peer_reviewed",
+          "peer_review_basis": "source_metadata",
+          "integrity_status": "current",
+          "access_status": "open_access",
+          "landing_url": "",
+          "fulltext_url": "https://link.springer.com/content/pdf/10.1007/s44155-026-00463-x_reference.pdf",
+          "license": "CC BY-NC-ND 4.0",
+          "source_lanes": [],
+          "evidence": [],
+          "provenance": [
+            {
+              "source": "corpus/source_version_bindings.json",
+              "reference": "#/records/2JSZR47F",
+              "agent_id": "claude-code/source_version_binding",
+              "model": "Claude Opus (Claude Code)",
+              "reviewed_at": "2026-09-22T11:20:51.402632+02:00"
+            }
+          ],
+          "relations": [
+            {
+              "type": "isVersionOf",
+              "target_version_id": "version:b1e947e9-1a11-575d-8316-457534f59271"
+            }
+          ],
+          "flags": [],
+          "version_id": "version:9774cb8d-4196-5492-8453-b4ba69a10f92"
+        },
+        {
+          "title": "An ethical framework for assessing artificial intelligence as augmentation or automation in social work",
           "authors": [],
           "version_type": "version_of_record",
           "version_date": "2026-08-05",
@@ -18980,7 +19029,12 @@
               "reference": "2JSZR47F"
             }
           ],
-          "relations": [],
+          "relations": [
+            {
+              "type": "hasVersion",
+              "target_version_id": "version:9774cb8d-4196-5492-8453-b4ba69a10f92"
+            }
+          ],
           "flags": [],
           "version_id": "version:b1e947e9-1a11-575d-8316-457534f59271"
         }
@@ -29238,6 +29292,10 @@
       "work_id": "work:e0680eb6-6ddd-5f4a-ae90-29d2359cba3e",
       "version_id": "version:8d61d60c-3868-5b40-9560-a49d995f7686"
     },
+    "url:https://link.springer.com/content/pdf/10.1007/s44155-026-00463-x_reference.pdf": {
+      "work_id": "work:b5b557a0-a651-5a88-b70c-1b05374e5b06",
+      "version_id": "version:9774cb8d-4196-5492-8453-b4ba69a10f92"
+    },
     "url:https://linkinghub.elsevier.com/retrieve/pii/s0007681325001673": {
       "work_id": "work:83ec30fa-8907-5505-8f43-c4539cb2d821",
       "version_id": "version:847f6c8c-f497-5934-82ba-5292e21b8da1"
@@ -32102,6 +32160,18 @@
     "title:safety guardrails in large language models and selective refusal bias": "work:8111287c-84d0-5fe4-9bd5-fb5ded077905"
   },
   "source_index": {
+    "2JSZR47F": {
+      "record_id": "2JSZR47F",
+      "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/f30907f71818e5803100.md",
+      "source_sha256": "sha256:52124fc9de6eaea544d9608c02ff14aec8835a2ec15c40c0faca69e0a4c9b25a",
+      "work_id": "work:b5b557a0-a651-5a88-b70c-1b05374e5b06",
+      "source_version_id": "version:9774cb8d-4196-5492-8453-b4ba69a10f92",
+      "source_version_type": "accepted_manuscript",
+      "bibliographic_version_id": "version:b1e947e9-1a11-575d-8316-457534f59271",
+      "preferred_version_id": "version:b1e947e9-1a11-575d-8316-457534f59271",
+      "is_preferred_version": false,
+      "source_url": "https://link.springer.com/content/pdf/10.1007/s44155-026-00463-x_reference.pdf"
+    },
     "4ZL5Q48E": {
       "record_id": "4ZL5Q48E",
       "work_id": "work:691469f6-881f-5e13-8df5-69dc64025556",
@@ -32413,6 +32483,26 @@
       "version_identity": {
         "title": "Generative KI in der Beratung: Empirische Befunde mit Blick auf Nutzungsbedingungen von Chatbots",
         "doi": "10.21240/dimesoz/2026/1/57"
+      }
+    },
+    "I7BQH4U4": {
+      "record_id": "I7BQH4U4",
+      "work_id": "work:68b57d67-221a-5e96-8d7b-153b4b26c91a",
+      "bibliographic_version_id": "version:4963e528-6f09-54ee-bd14-3ecc26cb76ca",
+      "source_version_id": "version:4963e528-6f09-54ee-bd14-3ecc26cb76ca",
+      "source_version_type": "version_of_record",
+      "preferred_version_id": "version:4963e528-6f09-54ee-bd14-3ecc26cb76ca",
+      "is_preferred_version": true,
+      "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/62d8ff0c669bf7e511d0.md",
+      "source_sha256": "sha256:9717c1909c38d594051e0df966235976466019248ec3ff2acf88dce7f45330c6",
+      "binding_mode": "existing_version",
+      "bibliographic_identity": {
+        "title": "Promoting AI literacy in social work education: lessons from an interdisciplinary course for social work students",
+        "doi": "10.1080/02615479.2026.2635471"
+      },
+      "version_identity": {
+        "title": "Promoting AI literacy in social work education: lessons from an interdisciplinary course for social work students",
+        "doi": "10.1080/02615479.2026.2635471"
       }
     },
     "J4K3XA52": {

@@ -36042,8 +36042,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -36083,7 +36083,7 @@
       "latest_version_id": "version:4963e528-6f09-54ee-bd14-3ecc26cb76ca",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "88CFIG8R",
@@ -36738,8 +36738,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -36779,7 +36779,7 @@
       "latest_version_id": "version:b1e947e9-1a11-575d-8316-457534f59271",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "KJWMQSMN",
@@ -51953,7 +51953,7 @@
         "description": "Einträge mit verknüpftem Wissensdokument oder bereitstehendem Volltext",
         "type": "deterministic",
         "input": 463,
-        "output": 281,
+        "output": 283,
         "unit": "corpus_record",
         "prompt": null,
         "limitations": [
@@ -51966,7 +51966,7 @@
         "name": "Structured Knowledge Extraction",
         "description": "Kanonisch verknüpfte Wissensdokumente",
         "type": "probabilistic",
-        "input": 281,
+        "input": 283,
         "output": 269,
         "unit": "corpus_record",
         "distinct_documents": 199,
@@ -52215,7 +52215,7 @@
     }
   ],
   "meta": {
-    "source_fingerprint": "sha256:8916cbeb249bbef986e3637901ff22915f6c8d5f4b3d09c2027dc73cd721d252",
+    "source_fingerprint": "sha256:4c85343a2285f625dc953712f6ec1ce2bc333490c609580be52e0d3f9752eee8",
     "total_papers": 463,
     "corpus_record_total": 463,
     "corpus_work_total": 361,
@@ -52223,10 +52223,10 @@
     "knowledge_docs": 199,
     "knowledge_linked_records": 269,
     "knowledge_coverage": {
-      "fulltext_ready": 12,
+      "fulltext_ready": 14,
       "identity_unresolved": 67,
       "linked": 269,
-      "source_missing": 115
+      "source_missing": 113
     },
     "human_assessed": 302,
     "llm_assessed": 326,

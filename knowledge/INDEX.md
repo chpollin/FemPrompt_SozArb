@@ -121,6 +121,12 @@ The evidence structure `sources → Markdown → distilled knowledge documents �
 ### Jagged frontier
 The uneven competence distribution of AI systems, strong on some tasks and weak on adjacent ones (Mollick). In this project, the LLM scores high agreement on explicit categories (Soziale_Arbeit, Feministisch) and low on interpretive ones (Gender).
 
+### Kernbefund
+The German term for the core finding of a distilled knowledge document. It is the heading at which the LLM-Wissensdestillat layer begins in PRISM, and it is used untranslated in code, data and prose.
+
+### Neuzugänge 2026
+The German term used in prose for the 2026 intake candidates. The data layer keeps `candidate` and `candidate_index` unchanged.
+
 ### Operational isolation
 The separation of AI-agent runs by context, reviewer identity, input assignment, and output path. It limits direct cross-track contamination and makes execution conditions auditable. It does not establish epistemic independence between language models.
 

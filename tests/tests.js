@@ -98,7 +98,7 @@ test('PRISM defaults to reading without reviewer or folder setup', function() {
     assertEqual(T.canEdit(), false);
     var el = document.createElement('section');
     T.renderData(el);
-    assertContains(el.textContent, 'Papers lesen');
+    assertEqual(el.textContent.trim(), '', 'read mode renders no standing setup prose; the hint lives on the edit button');
     assert(!el.querySelector('input, form, .pt-folder-action, .pt-change-folder'), 'no author setup in read mode');
     assertEqual(T.selectReviewer('cp'), false, 'reviewer selection requires explicit editing');
 });
@@ -1158,7 +1158,7 @@ function mountAssessCol() {
     return host;
 }
 
-test('unsaved assessment hides Seed and automatic classification and renders a sticky action dock', function() {
+test('unsaved assessment shows the round-one references as labelled proposals and renders a sticky action dock (ADR-038)', function() {
     mountAssessCol();
     var p = { id: 'pBlind', title: 'X', human: { decision: 'Include', all_categories: {} },
         llm: { decision: 'Exclude', all_categories: {}, reasoning: 'prior rationale' } };
@@ -1166,30 +1166,45 @@ test('unsaved assessment hides Seed and automatic classification and renders a s
     T.getState().reviewer = 'rBlind'; T.getState().reviewers.rBlind = {}; T.getState().index = 0;
     T.resetWork(p); T.refreshAssess();
     var html = document.getElementById('pt-assess-col').innerHTML;
-    assertNotContains(html, 'Frühere Expert:innen-Referenz');
-    assertNotContains(html, 'prior rationale');
+    assertContains(html, 'Expert:innen-Entscheidung, Runde 1');
+    assertContains(html, 'LLM-Vorschlag, Runde 1');
+    assertContains(html, 'prior rationale');
+    assertContains(html, 'id="pt-adopt-proposal"', 'the LLM proposal offers a takeover on an open assessment');
     assertContains(html, 'pt-action-dock');
     assertContains(html, 'data-info-target="pt-evid-help"', 'evidence help is an accessible button popover');
     assertNotContains(html, 'Text markieren und als Beleg', 'static reading instruction is absent from the assessment');
 });
 
-test('saved assessment offers prior references only in a collapsed comparison', function() {
+test('round-one references are visible on the saved assessment and labelled by origin (ADR-038)', function() {
     mountAssessCol();
     var p = { id: 'pCompare', title: 'X', human: { decision: 'Include', all_categories: {} },
         llm: { decision: 'Exclude', all_categories: {}, reasoning: 'prior rationale' } };
     T.setPapers([p]); T.getState().reviewer = 'rCompare'; T.getState().reviewers.rCompare = {}; T.getState().index = 0;
     T.getState().reviewers.rCompare.pCompare = { decision: 'Exclude', categories: {}, evidence: {}, reason: 'Duplicate' };
     T.refreshAssess();
-    var comparison = document.querySelector('#pt-assess-col .pt-reference-comparison');
-    assert(comparison && !comparison.open, 'comparison is present and collapsed');
-    assertNotContains(comparison.innerHTML, 'Frühere Expert:innen-Referenz');
-    assertNotContains(comparison.innerHTML, 'Frühere automatische Klassifikation');
-    assertNotContains(comparison.innerHTML, 'prior rationale');
-    comparison.open = true;
-    comparison.dispatchEvent(new Event('toggle'));
-    assertContains(comparison.innerHTML, 'Frühere Expert:innen-Referenz');
-    assertContains(comparison.innerHTML, 'Frühere automatische Klassifikation');
-    assertContains(comparison.innerHTML, 'prior rationale');
+    var refs = document.querySelector('#pt-assess-col #pt-references');
+    assert(refs, 'reference block is rendered without any toggle');
+    assert(!document.querySelector('#pt-assess-col .pt-reference-comparison'), 'no collapsed comparison remains');
+    assertContains(refs.innerHTML, 'Expert:innen-Entscheidung, Runde 1');
+    assertContains(refs.innerHTML, 'LLM-Vorschlag, Runde 1');
+    assertContains(refs.innerHTML, 'prior rationale');
+    assert(!refs.querySelector('#pt-adopt-proposal'), 'a saved record offers no proposal takeover');
+});
+
+test('the LLM proposal can be adopted into an open assessment as teilweise levels only (ADR-038)', function() {
+    mountAssessCol();
+    var tech = T.TECH_CATS[0], soc = T.SOCIAL_CATS[0], other = T.TECH_CATS[1];
+    var cats = {}; cats[tech] = 1; cats[soc] = 1;
+    var p = { id: 'pAdopt', title: 'X', llm: { decision: 'Include', all_categories: cats, reasoning: 'model view' } };
+    T.setPapers([p]); T.getState().reviewer = 'rAdopt'; T.getState().reviewers.rAdopt = {}; T.getState().index = 0;
+    T.resetWork(p); T.refreshAssess();
+    var button = document.querySelector('#pt-assess-col #pt-adopt-proposal');
+    assert(button, 'adopt button is offered on an open assessment');
+    button.click();
+    var work = T.getWork();
+    assert(work.cats[tech] === 1 && work.cats[soc] === 1, 'proposed categories become teilweise');
+    assert(!work.cats[other], 'unproposed categories stay untouched');
+    assert(T.recordRequirements(T.workingDecisionRecord()).ok === false, 'adopted levels still need Paper evidence before saving');
 });
 
 test('a chip click cycles nein/teilweise/ja and re-renders the derived decision (ADR-024)', function() {
@@ -1946,6 +1961,64 @@ test('verification panel separates the expert and publication states and exposes
     assertContains(approvedHtml, 'agent_capture');
     assertContains(approvedHtml, 'Öffentliche Freigabe ist dokumentiert.');
     assertNotContains(approvedHtml, 'Fachliches Ergebnis protokollieren');
+});
+
+test('a verification event is bound to the agent subject and written into the expert file (ADR-040)', function() {
+    var subjectRecord = {
+        decision: 'Exclude', reviewer: 'ar2', actor: 'agent', reason: 'Not_relevant_topic',
+        active_annotation_id: 'ar2:pVerify',
+        checks: [{ check_type: 'lifecycle_validation', status: 'passed', actor_id: 'validator-1',
+            subject: { annotation_id: 'ar2:pVerify', sha256: 'abc123' } }],
+        lifecycle: { baseline: { state: 'curated', basis: 'controlled_intake', at: null, actor_ids: [] },
+            state: 'ai-agent-reviewed', events: [] }
+    };
+    var event = { event_id: 'ev-1', event_type: 'domain_expert_verification', from: 'ai-agent-reviewed',
+        to: 'verified', result: 'accepted', note: 'Belege geprüft.', at: '2026-09-22T10:00:00.000Z',
+        activity_id: 'expert-verification-1', actor_ids: ['ev'] };
+    var entry = T.verificationEntry('pVerify', { record: subjectRecord, reviewer: 'ar2', agent: true },
+        'ar2:pVerify', event, 'ev', null);
+    assertEqual(entry.paper_id, 'pVerify');
+    assertEqual(entry.reviewer_id, 'ev');
+    assertEqual(entry.result, 'accepted');
+    assertEqual(entry.subject.reviewer, 'ar2', 'the entry names the agent track it judges');
+    assertEqual(entry.subject.annotation_id, 'ar2:pVerify');
+    assertEqual(entry.subject.record_sha256, 'abc123');
+    assertEqual(entry.subject.hash_status, 'deterministic_check_receipt');
+    assertEqual(entry.event.event_type, 'domain_expert_verification');
+    assert(!!entry.verification_id, 'the entry carries its own identifier');
+
+    // Without a deterministic check receipt the entry says so instead of inventing a hash.
+    var unbound = T.verificationEntry('pVerify', { record: { lifecycle: subjectRecord.lifecycle }, reviewer: 'ar2', agent: true },
+        'ar2:pVerify', event, 'ev', null);
+    assertEqual(unbound.subject.record_sha256, null);
+    assertEqual(unbound.subject.hash_status, 'not_recorded');
+
+    var before = JSON.parse(JSON.stringify(T.getState().reviewers));
+    T.getState().reviewers.ev = T.getState().reviewers.ev || {};
+    T.setVerifications('ev', [entry]);
+    T.setVerifications('ar2', []);
+    var expertFile = JSON.parse(T.reviewerFileText('ev'));
+    assertEqual(expertFile.reviewer, 'ev');
+    assertEqual(expertFile.verification_schema, T.VERIFICATION_SCHEMA);
+    assertEqual(expertFile.verification_schema, 'femprompt-prisma-verification/0.1');
+    assertEqual(expertFile.verifications.length, 1);
+    assertEqual(expertFile.verifications[0].event.event_id, 'ev-1');
+    assert(!expertFile.decisions.pVerify, 'verifying writes no screening decision of the expert');
+    assert(T.validateReviewerPayload(expertFile).ok, 'the written expert file validates');
+    var agentFile = JSON.parse(T.reviewerFileText('ar2'));
+    assert(!Object.prototype.hasOwnProperty.call(agentFile, 'verifications'),
+        'the agent file receives no verification block');
+    assert(!Object.prototype.hasOwnProperty.call(agentFile, 'verification_schema'));
+
+    var damaged = JSON.parse(JSON.stringify(expertFile));
+    damaged.verifications = [{ paper_id: 'pVerify', result: 'accepted' }];
+    var rejected = T.validateReviewerPayload(damaged);
+    assert(!rejected.ok, 'an incomplete verification entry is rejected on load');
+    assertContains(rejected.message, 'Verifikationseintrag');
+
+    T.setVerifications('ev', []);
+    T.setVerifications('ar2', []);
+    T.getState().reviewers = before;
 });
 
 // ============================================================

@@ -1,0 +1,632 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dhcraft.org/FemPrompt_SozArb/schemas/femprompt-completion-package-1.0.schema.json",
+  "title": "femprompt-completion-package/1.0",
+  "$comment": "Provisional internal preparation package at generated/completion/completion-package.json. Writer: src/analysis/build_completion_package.py (build_package). Readers: src/publish/build_project.py, which treats generated/completion/ as a build output directory, and the knowledge documents that cite its counts. It joins the canonical registry, the productive PRISM track, the Codex Websearch 2026 candidates, the active Assertions and the knowledge coverage. Identity, hash and review-receipt fields are pinned; narrative, counting and analysis blocks stay open so content can grow without a schema change.",
+  "type": "object",
+  "required": [
+    "schema",
+    "status",
+    "authority",
+    "scope",
+    "source_fingerprint",
+    "counts",
+    "works",
+    "candidates_2026",
+    "assertions",
+    "knowledge_coverage",
+    "analysis_field_definitions",
+    "analysis_tables",
+    "interpretation_limits",
+    "issues",
+    "registry_candidates_without_canonical_record",
+    "targeted_followup",
+    "targeted_followup_candidates",
+    "sources"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "schema": { "const": "femprompt-completion-package/1.0" },
+    "status": { "type": "string", "minLength": 1 },
+    "authority": { "type": "string", "minLength": 1 },
+    "scope": { "type": "object" },
+    "source_fingerprint": { "$ref": "#/$defs/sha256Prefixed" },
+    "historical_resolution_source": { "type": ["string", "null"] },
+    "residual_resolution_source": { "type": ["string", "null"] },
+    "counts": {
+      "type": "object",
+      "additionalProperties": {
+        "oneOf": [
+          { "type": "integer", "minimum": 0 },
+          {
+            "type": "object",
+            "additionalProperties": { "type": "integer", "minimum": 0 }
+          }
+        ]
+      }
+    },
+    "interpretation_limits": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "analysis_field_definitions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name"],
+        "additionalProperties": true,
+        "properties": { "name": { "type": "string", "minLength": 1 } }
+      }
+    },
+    "analysis_tables": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["field", "value", "work_count", "work_ids", "authority"],
+        "additionalProperties": true,
+        "properties": {
+          "field": { "type": "string", "minLength": 1 },
+          "value": { "type": "string", "minLength": 1 },
+          "question": { "type": "string" },
+          "authority": { "type": "string", "minLength": 1 },
+          "work_count": { "type": "integer", "minimum": 0 },
+          "work_ids": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/workId" }
+          }
+        }
+      }
+    },
+    "works": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/work" }
+    },
+    "candidates_2026": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/candidate" }
+    },
+    "assertions": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/assertion" }
+    },
+    "knowledge_coverage": {
+      "type": "object",
+      "required": ["schema", "counts", "definitions"],
+      "additionalProperties": true,
+      "properties": {
+        "schema": { "const": "femprompt-knowledge-coverage/0.1" },
+        "counts": {
+          "type": "object",
+          "additionalProperties": { "type": "integer", "minimum": 0 }
+        },
+        "definitions": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        },
+        "records_without_document_link": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["record_id", "reason"],
+            "additionalProperties": true,
+            "properties": {
+              "record_id": { "$ref": "#/$defs/zoteroKey" },
+              "work_id": { "$ref": "#/$defs/workId" },
+              "reason": { "type": "string", "minLength": 1 }
+            }
+          }
+        },
+        "works_without_document": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["work_id", "record_ids"],
+            "additionalProperties": true,
+            "properties": {
+              "work_id": { "$ref": "#/$defs/workId" },
+              "record_ids": {
+                "type": "array",
+                "items": { "$ref": "#/$defs/zoteroKey" }
+              }
+            }
+          }
+        },
+        "shared_documents_across_works": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["knowledge_doc", "record_ids", "work_ids"],
+            "additionalProperties": true,
+            "properties": {
+              "knowledge_doc": { "type": "string", "minLength": 1 },
+              "record_ids": {
+                "type": "array",
+                "items": { "$ref": "#/$defs/zoteroKey" }
+              },
+              "work_ids": {
+                "type": "array",
+                "items": { "$ref": "#/$defs/workId" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "record_id"],
+        "additionalProperties": true,
+        "properties": {
+          "type": { "type": "string", "minLength": 1 },
+          "record_id": { "$ref": "#/$defs/zoteroKey" }
+        }
+      }
+    },
+    "registry_candidates_without_canonical_record": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["work_id", "title"],
+        "additionalProperties": true,
+        "properties": {
+          "work_id": { "$ref": "#/$defs/workId" },
+          "title": { "type": "string" }
+        }
+      }
+    },
+    "targeted_followup": {
+      "type": "object",
+      "required": ["authority", "search_date", "generated_at"],
+      "additionalProperties": true,
+      "properties": {
+        "authority": { "type": "string", "minLength": 1 },
+        "search_date": { "$ref": "#/$defs/isoDate" },
+        "search_cutoff": { "$ref": "#/$defs/isoDate" },
+        "generated_at": { "$ref": "#/$defs/timestamp" },
+        "deduplication": {
+          "type": "object",
+          "additionalProperties": true,
+          "properties": {
+            "sources": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["path", "sha256"],
+                "additionalProperties": true,
+                "properties": {
+                  "path": { "type": "string", "minLength": 1 },
+                  "sha256": { "$ref": "#/$defs/sha256Prefixed" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "targeted_followup_candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["candidate_id", "canonical_bindings", "authority_note"],
+        "additionalProperties": true,
+        "properties": {
+          "candidate_id": { "type": "string", "minLength": 1 },
+          "authority_note": { "type": "string", "minLength": 1 },
+          "accessed_on": { "$ref": "#/$defs/isoDate" },
+          "canonical_bindings": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/canonicalBinding" }
+          }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "sha256"],
+        "additionalProperties": false,
+        "properties": {
+          "path": { "type": "string", "minLength": 1 },
+          "sha256": { "$ref": "#/$defs/sha256Bare" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "sha256Prefixed": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-fA-F]{64}$"
+    },
+    "sha256Bare": {
+      "type": "string",
+      "pattern": "^[0-9a-fA-F]{64}$"
+    },
+    "workId": {
+      "type": "string",
+      "pattern": "^work:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "versionId": {
+      "type": "string",
+      "pattern": "^version:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "zoteroKey": {
+      "type": "string",
+      "pattern": "^[A-Z0-9]{8}$"
+    },
+    "isoDate": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "partialDate": {
+      "type": "string",
+      "$comment": "Year, year-month or full date. The Codex Websearch builder accepts a candidate whose selected Version carries only a year or a year and month, so the completion projection cannot require a full date.",
+      "pattern": "^$|^[0-9]{4}(-[0-9]{2}(-[0-9]{2})?)?$"
+    },
+    "timestamp": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.[0-9]+)?(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "decisionValue": { "enum": ["Include", "Exclude", "Unclear"] },
+    "lifecycleState": {
+      "enum": [
+        "identified",
+        "curated",
+        "agent-annotated",
+        "ai-agent-reviewed",
+        "verified",
+        "publication-approved"
+      ]
+    },
+    "canonicalBinding": {
+      "type": "object",
+      "required": ["record_id", "work_id", "version_id"],
+      "additionalProperties": true,
+      "properties": {
+        "record_id": { "$ref": "#/$defs/zoteroKey" },
+        "work_id": { "$ref": "#/$defs/workId" },
+        "version_id": { "$ref": "#/$defs/versionId" }
+      }
+    },
+    "aiSourceReview": {
+      "$comment": "A recorded AI source review receipt. It binds an exact artifact hash and time and never stands for domain-expert verification.",
+      "type": ["object", "null"],
+      "required": ["agent_id", "model", "artifact", "sha256", "reviewed_at", "result", "findings"],
+      "additionalProperties": true,
+      "properties": {
+        "agent_id": { "type": "string", "minLength": 1 },
+        "model": { "type": "string", "minLength": 1 },
+        "model_id_status": { "type": "string" },
+        "artifact": { "type": "string", "minLength": 1 },
+        "sha256": { "$ref": "#/$defs/sha256Prefixed" },
+        "reviewed_at": { "$ref": "#/$defs/timestamp" },
+        "result": {
+          "enum": [
+            "accepted",
+            "corrected_and_accepted",
+            "changes_requested",
+            "rejected",
+            "unverifiable"
+          ]
+        },
+        "findings": { "type": "string", "minLength": 1 }
+      }
+    },
+    "work": {
+      "type": "object",
+      "required": [
+        "work_id",
+        "title",
+        "record_ids",
+        "version_ids",
+        "preferred_version_id",
+        "decision_authority",
+        "effective_decision",
+        "agent_records",
+        "source_queue_status"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "work_id": { "$ref": "#/$defs/workId" },
+        "title": { "type": "string" },
+        "record_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/zoteroKey" }
+        },
+        "version_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/versionId" }
+        },
+        "preferred_version_id": { "$ref": "#/$defs/versionId" },
+        "decision_authority": { "type": "string", "minLength": 1 },
+        "effective_decision": {
+          "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/decisionValue" }]
+        },
+        "agent_decisions": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/decisionValue" }
+        },
+        "human_decisions": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "agent_lifecycle_states": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/lifecycleState" }
+        },
+        "human_record_ids": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/zoteroKey" }
+        },
+        "corrected_ai_record_ids": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/zoteroKey" }
+        },
+        "open_ai_source_review_record_ids": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/zoteroKey" }
+        },
+        "current_source_binding_record_ids": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/zoteroKey" }
+        },
+        "integrity_hold": { "type": "boolean" },
+        "analysis_eligible": { "type": "boolean" },
+        "source_queue_status": {
+          "type": ["string", "null"],
+          "minLength": 1,
+          "$comment": "Null where the agent screening queue holds no entry for this Work, which is the state of a Work that never entered the queue rather than a queue state of its own."
+        },
+        "source_blockers": { "type": "array", "items": { "type": "string" } },
+        "next_actions": { "type": "array", "items": { "type": "string" } },
+        "ai_correction_provenance": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["record_id", "artifact", "base_artifact", "base_sha256", "corrected_at"],
+            "additionalProperties": true,
+            "properties": {
+              "record_id": { "$ref": "#/$defs/zoteroKey" },
+              "artifact": { "type": "string", "minLength": 1 },
+              "base_artifact": { "type": "string", "minLength": 1 },
+              "base_sha256": { "$ref": "#/$defs/sha256Prefixed" },
+              "corrected_at": { "$ref": "#/$defs/timestamp" },
+              "reviewed_at": { "$ref": "#/$defs/timestamp" }
+            }
+          }
+        },
+        "agent_records": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/agentRecord" }
+        }
+      }
+    },
+    "agentRecord": {
+      "type": "object",
+      "required": [
+        "annotation_id",
+        "decision",
+        "current_ai_review_result",
+        "current_ai_source_review",
+        "latest_original_ai_source_review"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "annotation_id": { "type": "string", "minLength": 1 },
+        "decision": { "$ref": "#/$defs/decisionValue" },
+        "alias_of": {
+          "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/zoteroKey" }]
+        },
+        "current_ai_review_result": {
+          "enum": [
+            "accepted",
+            "corrected_and_accepted",
+            "changes_requested",
+            "rejected",
+            "unverifiable"
+          ]
+        },
+        "current_ai_source_review": { "$ref": "#/$defs/aiSourceReview" },
+        "latest_original_ai_source_review": { "$ref": "#/$defs/aiSourceReview" },
+        "evidence_categories": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "legacy_provenance_gaps": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "applied_ai_correction": {
+          "type": ["object", "null"],
+          "required": ["paper_id", "base_artifact", "base_sha256", "corrected_at", "changes"],
+          "additionalProperties": true,
+          "properties": {
+            "paper_id": { "$ref": "#/$defs/zoteroKey" },
+            "base_artifact": { "type": "string", "minLength": 1 },
+            "base_sha256": { "$ref": "#/$defs/sha256Prefixed" },
+            "corrected_at": { "$ref": "#/$defs/timestamp" },
+            "supersedes_annotation_id": { "type": "string", "minLength": 1 },
+            "actor_type": { "enum": ["person", "ai_agent", "software_agent"] },
+            "changes": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["path", "reason"],
+                "additionalProperties": true,
+                "properties": {
+                  "path": { "type": "string", "pattern": "^/" },
+                  "reason": { "type": "string", "minLength": 1 }
+                }
+              }
+            },
+            "source_binding": {
+              "type": "object",
+              "required": ["record_id", "work_id", "source_path", "source_sha256"],
+              "additionalProperties": true,
+              "properties": {
+                "record_id": { "$ref": "#/$defs/zoteroKey" },
+                "work_id": { "$ref": "#/$defs/workId" },
+                "source_version_id": { "$ref": "#/$defs/versionId" },
+                "bibliographic_version_id": { "$ref": "#/$defs/versionId" },
+                "preferred_version_id": { "$ref": "#/$defs/versionId" },
+                "source_path": { "type": "string", "minLength": 1 },
+                "source_sha256": { "$ref": "#/$defs/sha256Prefixed" }
+              }
+            }
+          }
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["event_id", "event_type", "from", "to", "at", "result"],
+            "additionalProperties": true,
+            "properties": {
+              "event_id": { "type": "string", "minLength": 1 },
+              "event_type": { "type": "string", "minLength": 1 },
+              "from": { "$ref": "#/$defs/lifecycleState" },
+              "to": { "$ref": "#/$defs/lifecycleState" },
+              "at": { "$ref": "#/$defs/timestamp" },
+              "result": { "type": "string", "minLength": 1 }
+            }
+          }
+        }
+      }
+    },
+    "candidate": {
+      "type": "object",
+      "required": [
+        "candidate_id",
+        "title",
+        "canonical_bindings",
+        "screening_status",
+        "source_readiness",
+        "recorded_source_ready",
+        "scope"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "candidate_id": {
+          "type": "string",
+          "pattern": "^codex-websearch-2026:[a-z]+:.+$"
+        },
+        "title": { "type": "string", "minLength": 1 },
+        "doi": {
+          "type": ["string", "null"],
+          "pattern": "^10\\.[0-9]{4,9}/\\S+$"
+        },
+        "canonical_bindings": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/canonicalBinding" }
+        },
+        "canonical_binding_candidates": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/bindingCandidate" }
+        },
+        "canonical_binding_evidence": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/bindingCandidate" }
+        },
+        "observed_live_zotero_record_ids": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/zoteroKey" }
+        },
+        "live_zotero_membership_observed": { "type": "boolean" },
+        "recorded_source_ready": { "type": "boolean" },
+        "source_hash_matches": { "type": "boolean" },
+        "screening_status": { "const": "identified_not_screened" },
+        "source_readiness": { "type": "string", "minLength": 1 },
+        "screening_markdown_file": { "type": ["string", "null"] },
+        "screening_markdown_sha256": {
+          "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/sha256Bare" }]
+        },
+        "selected_version_date": { "$ref": "#/$defs/partialDate" },
+        "zotero_status": { "type": "string", "minLength": 1 },
+        "scope": { "type": "string", "minLength": 1 }
+      }
+    },
+    "bindingCandidate": {
+      "type": "object",
+      "required": ["work_id", "version_id", "record_ids", "evidence_tokens"],
+      "additionalProperties": true,
+      "properties": {
+        "work_id": { "$ref": "#/$defs/workId" },
+        "version_id": { "$ref": "#/$defs/versionId" },
+        "record_ids": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/zoteroKey" }
+        },
+        "evidence_tokens": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^[a-z_]+:.+$" }
+        }
+      }
+    },
+    "assertion": {
+      "type": "object",
+      "required": [
+        "path",
+        "title",
+        "statement",
+        "state",
+        "work_ids",
+        "sources",
+        "authority_note",
+        "structural_grounding_complete"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "path": { "type": "string", "minLength": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "statement": { "type": "string", "minLength": 1 },
+        "state": { "$ref": "#/$defs/lifecycleState" },
+        "authority_note": { "type": "string", "minLength": 1 },
+        "structural_grounding_complete": { "type": "boolean" },
+        "work_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/workId" }
+        },
+        "current_ai_source_review": { "$ref": "#/$defs/aiSourceReview" },
+        "checked": {
+          "type": "object",
+          "additionalProperties": { "$ref": "#/$defs/isoDate" }
+        },
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "path",
+              "anchor",
+              "anchor_present",
+              "exists",
+              "record_id",
+              "work_id",
+              "version_id",
+              "distillate_state"
+            ],
+            "additionalProperties": true,
+            "properties": {
+              "path": { "type": "string", "minLength": 1 },
+              "link": { "type": "string", "minLength": 1 },
+              "anchor": { "type": "string", "pattern": "^\\^[A-Za-z0-9_-]+$" },
+              "anchor_present": { "type": "boolean" },
+              "exists": { "type": "boolean" },
+              "record_id": { "$ref": "#/$defs/zoteroKey" },
+              "work_id": { "$ref": "#/$defs/workId" },
+              "version_id": { "$ref": "#/$defs/versionId" },
+              "distillate_state": { "$ref": "#/$defs/lifecycleState" },
+              "current_ai_source_review": { "$ref": "#/$defs/aiSourceReview" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

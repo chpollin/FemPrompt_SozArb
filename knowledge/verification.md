@@ -45,6 +45,14 @@ This register states which externally relevant project claims have a reproducibl
 | Public Literature Landscape | The explicit policy and current source-review ledger govern Work-level aggregation; aliases and exact Versions remain inspectable | Attributed AI-source-reviewed subset; unresolved records withheld and no human authority inferred |
 | Active distillates and Assertions | The [active Vault guide](research-vault.md#current-implementation-state) identifies the starting slice; source passages, locators, artifact/source hashes and named AI attribution are checked | Source-reviewed active slice; neither legacy document links nor Graph co-occurrences extend its evidence coverage |
 
+## The domain-expert verification path in PRISM
+
+The route `docs/prisma.html?verify=1` opens the session in which a domain expert records the verification event that this register tracks. Its subject is the productive agent record for the current paper, resolved from the connected working folder rather than from a track the expert selects, and the assessment rail names it as the agent coding of that track. The expert keeps their own reviewer key. The recorded outcome, one of accepted, corrected and accepted, changes requested, or rejected, together with a publication approval taken afterwards, is appended to the expert's own reviewer file `docs/data/screening/<key>.json` under `verification_schema` `femprompt-prisma-verification/0.1` and the array `verifications`. The agent file is never written.
+
+Each entry binds the paper, the agent track and the annotation it judges, the hash a deterministic validator recorded over that annotation or an explicit statement that no receipt exists, the expert and actor identifiers, the activity, the reason, and the complete lifecycle event. A correction carries the superseding annotation with its field-level differences, so the agent's original interpretation stays readable beside the expert's. When the folder is connected again, the expert file is projected onto a copy of the agent track, which is how the tool shows the achieved lifecycle state without persisting a derived record. The contract is ADR-040 in [[specification]], and the authority boundaries it preserves are those of ADR-035.
+
+A recorded event establishes the authority of exactly the annotation it names. It extends to no derived Assertion, report section or paper claim, and a later correction of the agent record requires its own event.
+
 ## Rules for external claims
 
 Count-bearing statements in the paper, report, and Evidence Companion must derive from committed data and an executable generator or replay. Qualitative literature statements must cite Assertions whose supporting distillates and source anchors resolve. A verified screening record does not verify a derived Assertion automatically. Each derived artifact receives its own evidence check and authority event.

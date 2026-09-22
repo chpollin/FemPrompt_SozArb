@@ -8678,7 +8678,7 @@
     "targeted_followup_search_date": "2026-09-05",
     "targeted_gap_fill_candidates": true
   },
-  "source_fingerprint": "sha256:985495e96e0438f31cec1fbcae92f1566f3c0745598e113d03f156e517497c93",
+  "source_fingerprint": "sha256:061b83f9e16516535e1670b9e8e29677abf817ee763890b3c10be44083695ba6",
   "sources": [
     {
       "path": "assessment/categories.yaml",
@@ -8858,7 +8858,7 @@
     },
     {
       "path": "corpus/work_version_registry.json",
-      "sha256": "bbe1e2898d879e157195ebf4ec7718cc463b3254c7aedcc5132c7dd8b3f89298"
+      "sha256": "0867995d898c0b7c2fb28fe05687f6e12fa3bce00843986948611b828b94882f"
     },
     {
       "path": "corpus/zotero_export.json",
@@ -8898,7 +8898,7 @@
     },
     {
       "path": "docs/data/research_vault_v2.json",
-      "sha256": "f09b0ce0edf3c8eaf0259fbc59f795525be256ded65cc7a33c34e01ab6d1d4d0"
+      "sha256": "1b758fb4a667104d35fb437052d7705e0b2bd98e719d03fcbbfb3107d2ae267f"
     },
     {
       "path": "docs/data/screening/ar2.json",
@@ -9702,7 +9702,7 @@
     },
     {
       "path": "generated/agent-screening-queue.json",
-      "sha256": "dc1c0a9587e495371e4b6b4a44259091d933d733dcb579936477afef91af0c20"
+      "sha256": "c0260eb352c37e4abcd4d599818f5fe68892b317365e99dc1f4af895d52bb3e8"
     },
     {
       "path": "generated/conformance/conformance_map.yaml",
@@ -24314,7 +24314,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "I7BQH4U4"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -24330,7 +24332,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:4963e528-6f09-54ee-bd14-3ecc26cb76ca",
@@ -24338,10 +24340,8 @@
         "I7BQH4U4"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "title": "Promoting AI literacy in social work education: lessons from an interdisciplinary course for social work students",
       "version_ids": [
         "version:4963e528-6f09-54ee-bd14-3ecc26cb76ca"
@@ -33781,7 +33781,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "2JSZR47F"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -33797,7 +33799,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:b1e947e9-1a11-575d-8316-457534f59271",
@@ -33805,10 +33807,8 @@
         "2JSZR47F"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "title": "An ethical framework for assessing artificial intelligence as augmentation or automation in social work",
       "version_ids": [
         "version:b1e947e9-1a11-575d-8316-457534f59271"

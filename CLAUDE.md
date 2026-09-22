@@ -37,6 +37,8 @@ In this project, `knowledge/handoff.md` is the rolling current-state and continu
 - Read the actual callers and data flow before changing shared behavior. Preserve existing files and modules where they serve the task.
 - Keep the frontend as vanilla JavaScript without a frontend bundler or runtime framework. The Python build produces data projections and the result site. These are separate parts of the architecture.
 - Use IIFE modules through `window.EC`, the existing `pt-*` design tokens and pinned local assets under `docs/vendor/`. System fonts avoid remote font requests. Apply the detailed [interface requirements](knowledge/specification.md).
+- Head, header, navigation and footer of every page in `docs/` are propagated by `src/publish/build_pages.py`. Edit the generator, never the markup. PRISM carries the slim header and no footer (ADR-039).
+- PRISM shows the round-one expert decision and the round-one LLM proposal as labelled references in human sessions. The takeover sets category levels only, never evidence, and agent runs stay reference-blind (ADR-038).
 - The optional Knowledge Chat retains its explicit-request and tab-scoped key contract in [specification](knowledge/specification.md). Never commit credentials or contact the provider before the user requests a response.
 - Use `pathlib.Path` and UTF-8 for Python. Preserve the existing script-pipeline layout for bounded edits. Use the established long-path and canonical-text-hash helpers where required. Truncate generated title components to 100 characters for Windows path compatibility.
 - Category definitions come from `assessment/categories.yaml`. Change the source and regenerate its projections rather than editing `docs/data/category_schema.json` directly.
@@ -45,21 +47,19 @@ In this project, `knowledge/handoff.md` is the rolling current-state and continu
 ## Change verification and Git
 
 - Run `npm test` and `python -m pytest tests/` before committing. Run `python -m src.publish.check_claims` when the claims layer changes and `npm run pilot` before integrating changes to the screening path. Apply the additional change gates in [testing](knowledge/testing.md).
-- Run `npm run build` before the integrated `npm run check` when build inputs change. A fresh clone must reconstruct its ignored local reading layer before freshness checks can pass. Follow [clean-checkout verification](knowledge/testing.md#clean-checkout-verification).
+- Run `npm run build` before the integrated `npm run check` when build inputs change. The full-text reading layer under `docs/data/fulltext/` is rights-gated and git-ignored: rebuild it locally before freshness checks, and never assume a clone can read papers, a verification session needs a prepared project folder. Follow [clean-checkout verification](knowledge/testing.md#clean-checkout-verification).
 - Branch off `main` for substantial work. Commit coherent verified changes with an imperative `type: description` message. Merges, pushes and deployment require the operator's instruction. Never force-push `main`.
 - Never commit credentials, licensed source PDFs or full texts, browser output or `.vault_cache/`. A reviewed open-access representation requires source-specific rights and conversion provenance. Governed reviewer records and reproducibility manifests are research data and may be committed after their validation gates pass.
 
 ## Documentation
 
-- Write repository documentation and code in English. The journal retains its bilingual history. Apply the operator's prose style and use no emojis.
+- Write repository documentation and code in English. The user-facing pages under `docs/` and the interface labels they describe stay German. The journal retains its bilingual history. Apply the operator's prose style and use no emojis.
 - Keep one canonical owner for each subject and link to it. Update the responsible knowledge document and add one compact journal entry for each substantive session.
 - Authored knowledge documents carry `title`, `project`, `method`, `status`, `created` and `updated`. Preserve the repository's shared `version` convention. Document maturity does not declare research completion.
 - Keep volatile quantities in their generated data and views. Describe findings qualitatively in durable prose. Dates and quantities in historical journal entries remain part of their original record.
 
 ## Interpretation and compatibility constraints
 
-- Use `Kernbefund` for Core Finding.
 - Historical benchmark values before the Zotero-key pairing correction are superseded. Use the canonical benchmark data and [divergence analysis](knowledge/analysis-divergence.md). The agreement output's `meta.total_papers` denotes the union of assessment tracks rather than the corpus.
-- `human_yes_rate` and `agent_yes_rate` use the 0 to 100 scale. `Source_Tool` is often empty, and provider attribution relies on Zotero collections.
 - Source matching uses the established cascade and explicit Work-Version bindings. Filename similarity alone grants no source identity. Category interpretation remains a research decision under [methods](knowledge/methods.md).
-- A D3 Sankey link needs `fill: none` and a stroke width. Windows `nul` is a reserved device name and must not enter the tracked tree.
+- Data quirks and rendering details live with their canonical owner, see [data](knowledge/data.md) and the design system in [specification](knowledge/specification.md). Windows `nul` is a reserved device name and must not enter the tracked tree.

@@ -1860,6 +1860,126 @@
           "quote": "10.1186/s12911-025-03118-0"
         }
       ]
+    },
+    "I7BQH4U4": {
+      "binding_mode": "existing_version",
+      "agent_id": "claude-code/source_version_binding",
+      "model": "Claude Opus (Claude Code)",
+      "reviewed_at": "2026-09-22T11:20:51.402632+02:00",
+      "reason": "The bound Markdown is the publisher-typeset Taylor and Francis open-access article, acquired as a repository copy from the FHNW institutional repository. Its first page carries the registered title, the article DOI and the online publication date 24 February 2026 that the registry records for this version, so the reading source represents the registered Version of Record and introduces no additional bibliographic identity.",
+      "bibliographic_identity": {
+        "title": "Promoting AI literacy in social work education: lessons from an interdisciplinary course for social work students",
+        "doi": "10.1080/02615479.2026.2635471"
+      },
+      "version_identity": {
+        "title": "Promoting AI literacy in social work education: lessons from an interdisciplinary course for social work students",
+        "doi": "10.1080/02615479.2026.2635471"
+      },
+      "binding": {
+        "record_id": "I7BQH4U4",
+        "work_id": "work:68b57d67-221a-5e96-8d7b-153b4b26c91a",
+        "bibliographic_version_id": "version:4963e528-6f09-54ee-bd14-3ecc26cb76ca",
+        "source_version_id": "version:4963e528-6f09-54ee-bd14-3ecc26cb76ca",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:4963e528-6f09-54ee-bd14-3ecc26cb76ca",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/62d8ff0c669bf7e511d0.md",
+        "source_sha256": "sha256:9717c1909c38d594051e0df966235976466019248ec3ff2acf88dce7f45330c6"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/62d8ff0c669bf7e511d0.md",
+          "sha256": "sha256:9717c1909c38d594051e0df966235976466019248ec3ff2acf88dce7f45330c6",
+          "source_url": "https://irf.fhnw.ch/server/api/core/bitstreams/58e87312-aca1-4b37-9e15-988182c55803/content",
+          "locator": "PDF page 1, article title heading",
+          "quote": "Promoting AI literacy in social work education: lessons from an interdisciplinary course for social work students"
+        },
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/62d8ff0c669bf7e511d0.md",
+          "sha256": "sha256:9717c1909c38d594051e0df966235976466019248ec3ff2acf88dce7f45330c6",
+          "source_url": "https://irf.fhnw.ch/server/api/core/bitstreams/58e87312-aca1-4b37-9e15-988182c55803/content",
+          "locator": "PDF page 1, citation line with DOI and online publication date",
+          "quote": "To cite this article: Joshua Weber &amp; Lauri Goldkind (24 Feb 2026): Promoting AI literacy in social work education: lessons from an interdisciplinary course for social work students, Social Work Education, DOI: 10.1080/02615479.2026.2635471"
+        }
+      ]
+    },
+    "2JSZR47F": {
+      "agent_id": "claude-code/source_version_binding",
+      "model": "Claude Opus (Claude Code)",
+      "reviewed_at": "2026-09-22T11:20:51.402632+02:00",
+      "reason": "The acquired Springer PDF is the unedited article-in-press manuscript of the registered article. Its first page is labelled Article in Press, records acceptance on 29 July 2026, states that an unedited version of the manuscript is provided before final publication, and cites the same DOI as the registered Version of Record. The reading source is therefore the accepted manuscript of the same Work and is bound as a separate, non-preferred source version.",
+      "bibliographic_identity": {
+        "title": "An ethical framework for assessing artificial intelligence as augmentation or automation in social work",
+        "doi": "10.1007/s44155-026-00463-x"
+      },
+      "binding": {
+        "record_id": "2JSZR47F",
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/f30907f71818e5803100.md",
+        "source_sha256": "sha256:52124fc9de6eaea544d9608c02ff14aec8835a2ec15c40c0faca69e0a4c9b25a",
+        "work_id": "work:b5b557a0-a651-5a88-b70c-1b05374e5b06",
+        "source_version_id": "version:9774cb8d-4196-5492-8453-b4ba69a10f92",
+        "source_version_type": "accepted_manuscript",
+        "bibliographic_version_id": "version:b1e947e9-1a11-575d-8316-457534f59271",
+        "preferred_version_id": "version:b1e947e9-1a11-575d-8316-457534f59271",
+        "is_preferred_version": false,
+        "source_url": "https://link.springer.com/content/pdf/10.1007/s44155-026-00463-x_reference.pdf"
+      },
+      "version": {
+        "title": "An ethical framework for assessing artificial intelligence as augmentation or automation in social work",
+        "authors": [
+          "Kwangseon Hwang"
+        ],
+        "version_type": "accepted_manuscript",
+        "version_date": "2026-07-29",
+        "item_type": "",
+        "journal_or_repository": "Discover Social Science and Health (article in press)",
+        "identifiers": {
+          "url": [
+            "https://link.springer.com/content/pdf/10.1007/s44155-026-00463-x_reference.pdf"
+          ]
+        },
+        "peer_review_status": "peer_reviewed",
+        "peer_review_basis": "source_metadata",
+        "integrity_status": "current",
+        "access_status": "open_access",
+        "landing_url": "",
+        "fulltext_url": "https://link.springer.com/content/pdf/10.1007/s44155-026-00463-x_reference.pdf",
+        "license": "CC BY-NC-ND 4.0",
+        "source_lanes": [],
+        "evidence": [],
+        "provenance": [],
+        "relations": [
+          {
+            "type": "isVersionOf",
+            "target_version_id": "version:b1e947e9-1a11-575d-8316-457534f59271"
+          }
+        ],
+        "flags": [],
+        "version_id": "version:9774cb8d-4196-5492-8453-b4ba69a10f92"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/f30907f71818e5803100.md",
+          "sha256": "sha256:52124fc9de6eaea544d9608c02ff14aec8835a2ec15c40c0faca69e0a4c9b25a",
+          "source_url": "https://link.springer.com/content/pdf/10.1007/s44155-026-00463-x_reference.pdf",
+          "locator": "PDF page 1, article title heading",
+          "quote": "An ethical framework for assessing artificial intelligence as augmentation or automation in social work"
+        },
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/f30907f71818e5803100.md",
+          "sha256": "sha256:52124fc9de6eaea544d9608c02ff14aec8835a2ec15c40c0faca69e0a4c9b25a",
+          "source_url": "https://link.springer.com/content/pdf/10.1007/s44155-026-00463-x_reference.pdf",
+          "locator": "PDF page 1, citation line with DOI",
+          "quote": "Cite this article as: Hwang K. An ethical framework for assessing artificial intelligence as augmentation or automation in social work. Discov Soc Sci Health (2026). https://doi.org/10.1007/ s44155-026-00463-x"
+        },
+        {
+          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/f30907f71818e5803100.md",
+          "sha256": "sha256:52124fc9de6eaea544d9608c02ff14aec8835a2ec15c40c0faca69e0a4c9b25a",
+          "source_url": "https://link.springer.com/content/pdf/10.1007/s44155-026-00463-x_reference.pdf",
+          "locator": "PDF page 1, article-in-press statement",
+          "quote": "We are providing an unedited version of this manuscript to give early access to its findings. Before final publication, the manuscript will undergo further editing."
+        }
+      ]
     }
   }
 }

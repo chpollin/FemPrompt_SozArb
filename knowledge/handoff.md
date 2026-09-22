@@ -38,7 +38,7 @@ The following goals describe the project rather than completed achievements. Cur
 | Compare prompting techniques and their evidence | Controlled analysis fields, descriptive tables and initial source-linked Assertions exist | Compare proposed, demonstrated and evaluated uses across tasks and study conditions. [[research-vault#Comparative synthesis scope]] |
 | Analyse bias, harms and mitigation | Coding vocabulary and preliminary descriptive projections exist | Develop source-grounded comparisons of harm mechanisms, intervention points, reported effects and limitations. [[update-protocol#Analysis coding]] |
 | Identify requirements specific to social work | Analysis fields cover populations, practice contexts and domain constraints | Synthesize institutional conditions, affected groups and gaps in general prompting guidance. [[project#Research questions]] |
-| Enable and conduct domain-expert verification | Whole-record verification is implemented. Statement- or field-level verification is accepted as the target scope | Implement that scope and have experts verify the specific findings and interpretations used. Existing AI reviews confer no human authority. [[governance#Verification scope decision, 22 September 2026]] |
+| Enable and conduct domain-expert verification | Whole-record verification is implemented for the agent track; the path under an expert's own reviewer key was found broken on 22 September 2026 and is under repair. Statement- or field-level verification is accepted as the target scope | Implement that scope and have experts verify the specific findings and interpretations used. Existing AI reviews confer no human authority. [[governance#Verification scope decision, 22 September 2026]] |
 | Produce a source-grounded literature report | A report structure and initial grounded findings exist | Complete comparative synthesis, contradictory evidence and research gaps through the shared Assertion layer. `research-vault/40_output/literature-report/` |
 | Finish the scholarly result paper | One canonical manuscript draft exists | Integrate the completed findings, verify substantive claims and interpretation, and obtain a decision on authorship, venue and final submission. `research-vault/40_output/paper/paper.md` |
 | Make results reproducible with their actual review status | The build, round-one replay and policy-filtered preliminary AI-reviewed result projection are implemented | Define publication of mixed-authority content before changing the publisher. Preserve historical review and approval events. [[governance#Publication boundary]] and [[testing]] |
@@ -64,7 +64,7 @@ The following goals describe the project rather than completed achievements. Cur
 1. Restore the laptop checkout and run the checks below before interpreting missing generated files as research gaps.
 2. Read [[plan#Source and corpus readiness]] with the current completion and literature-readiness inventories. Select unresolved items and inspect their actual source files and valid receipts before acquiring, converting or reviewing material again. In particular, documented formula and figure losses and exact reading-Version gaps remain real work.
 3. Continue source preparation and knowledge-document coverage under [[plan#Controlled corpus completion]]. Screen eligible works under [[update-protocol#Agent-assisted completion]]. Source availability alone does not establish a completed annotation or review.
-4. Continue the field-verification implementation under [[plan#Provenance and verification alignment]], preserving the existing whole-record path. Resolve the open review meaning and mixed-authority publication questions before treating them as settled requirements.
+4. Repair the defects blocking the first expert verification session, then continue the field-verification implementation under [[plan#Provenance and verification alignment]], preserving the existing whole-record path. The experts' scope is the 2026 intake and the agent-coded records; round-one annotations stay valid. Resolve the open review meaning and mixed-authority publication questions before treating them as settled requirements.
 5. Prepare comparative analysis and source-linked Assertions using declared coverage and limitations. Domain experts must check the resulting scholarly claims before those claims receive human-verification status.
 
 Bounded `gpt-5.6-sol` assignments can prepare sources or knowledge drafts for explicit record lists, while a separate reviewer checks source support. The lead owns shared registry and PRISM integration and verifies delegated results against real artifacts. Source or withdrawal holds under [[plan#Works with conflicts or holds]] remain active across affected aliases. AI corrections remain immutable sidecars, and future Zotero exports must be reconciled with `corpus/metadata_corrections.json`.
@@ -100,12 +100,6 @@ The build reconstructs ignored reading projections and needs no external API key
 | Personal Obsidian vault | A separate working copy requiring its own synchronization |
 
 A successful build from versioned representations does not establish that original PDFs are available for further visual review. No private source transfer to the laptop was performed in this session. A change to `knowledge/project.md` requires a rebuild because it is a hash-bound build input.
-
-## Pending personal-vault alignment
-
-A task started in the personal Obsidian vault must update `Projects/SocialAI/SocialAI Literature Review und PRISM.md`. Replace the obsolete assertion that read-only PRISM has not reached local `main`, and align verification granularity and comparative synthesis with [[governance]] and [[research-vault]]. The local implementation and its tests are established. The deployed state was not checked during this handoff.
-
-Check `Projects/SocialAI/Project Overview SocialAI.md` and `Projects/SocialAI/SocialAI Paper-Pipeline.md` against the same decisions. Preserve the final manuscript submission decision and the historical case study. These vault documents were read but remain unchanged under the outside-vault write boundary.
 
 ## Verification state
 

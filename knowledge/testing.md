@@ -55,7 +55,9 @@ The automated suites cover the following contracts.
 - Preferred and latest Versions are derived independently, and a retracted Version cannot become preferred.
 - Full-text manifests, new reviewer files, agent runs, evidence items, active distillates, and public projections retain exact Work-Version bindings.
 - Reviewer files serialize deterministically and preserve actor and source provenance.
-- Ordinary PRISM entry and reload start read-only even with a stored reviewer profile: no reviewer/folder setup, cache writes or disk writes occur. `Bearbeiten` enables editing; returning to reading preserves the unsaved draft. Explicit trial, agent and verification routes retain their workflows, and acceptance remains read-only.
+- Ordinary PRISM entry and reload start read-only even with a stored reviewer profile: no reviewer/folder setup, cache writes or disk writes occur. `Bearbeiten` enables editing; returning to reading preserves the unsaved draft. The explicit trial and agent routes open their authoring workflows, and acceptance remains read-only.
+- The verification route `prisma.html?verify=1` opens an editing session whose subject is the productive agent record for the current paper, taken from the connected working folder without selecting a track. The rail heads it as the agent coding and offers no revision control; a paper without an agent record names the missing subject instead of offering a capture. A recorded verification or publication-approval event is written into the verifying expert's own file under `verification_schema` and `verifications`, the agent file is never written, its loaded envelope stays identical, and a reload projects the expert file back onto the agent track. Provenance renders as readable text.
+- The PRISM workspace holds its one-screen layout at 1440x900 and 1280x800 in screening and in verification: the document itself does not scroll, the reading column carries no horizontal overflow, and it keeps at least 60 percent of the viewport height.
 - Browser recovery and repository files reconcile per Paper without silent overwrite.
 - Agent coding packets pass through PRISM's production validation, import, record-requirement, and serialization functions.
 - The governed transfer CLI explicitly activates editing before import. A CLI regression checks the complete projection and roundtrip against an unchanged archived packet; a reviewer profile alone leaves normal reading mode intact.
@@ -115,3 +117,4 @@ Run `npm run preview` and open [the project website](http://127.0.0.1:8870/index
 | Codex Websearch source acquisition or QC | Source-acquisition and readiness tests; both builders with `--check` |
 | Grounded Vault model or Assertions | Grounded Vault validator and claim-anchor check |
 | Paper figures or count-bearing claims | Canonical replay and the applicable analysis generator |
+| Governed or generated JSON shape, or a schema in `schemas/` | `python -m pytest tests/test_schemas.py` and `npm run check:schemas` |

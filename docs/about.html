@@ -45,44 +45,75 @@
     <main class="page-content">
         <article class="prose">
             <h2>Ueber das Projekt</h2>
-            <p>Diese Seite ist die interaktive Begleitpublikation zu:</p>
-            <blockquote class="info-cite">
-                Pollin, C., Sackl-Sharif, S., Klinger, S. &amp; Steiner, C. (2026).
-                Deep-Research-gestuetzte Literature-Reviews: Feministische AI Literacies in der Sozialen Arbeit.
-                <em>Forum Wissenschaft</em>, 2/2026.
-            </blockquote>
+            <p>FemPrompt SozArb ist ein qualitativer Literature Review zu generativer KI, Gender und Bias
+            in der Sozialen Arbeit, zusammen mit der epistemischen Infrastruktur, die die KI-gestuetzten
+            Forschungsoperationen nachvollziehbar haelt. Das Projekt gehoert zum Elisabeth-List-Fellowship
+            "Diversitaetssensibler Umgang mit Kuenstlicher Intelligenz" an der Universitaet Graz.
+            Diese Seite ist die interaktive Begleitpublikation dazu.</p>
 
-            <h3>Methodik</h3>
-            <p>Wissenschaftliche Publikationen zu feministischen AI Literacies im Feld der Sozialen Arbeit
-            wurden durch einen fuenfstufigen Workflow verarbeitet: Identifikation (Deep Research mit 4 Providern),
-            PDF-Akquise (4 Fallback-Strategien), Markdown-Konversion (Docling), Wissensextraktion
-            (Claude Haiku 4.5) und Assessment nach 10 Kategorien.</p>
+            <h3>Fragestellung</h3>
+            <p>Die methodische Leitfrage richtet sich darauf, wie LLMs und KI-Agenten so in einen
+            qualitativen Literature Review eingebunden werden koennen, dass jeder Beitrag zurechenbar
+            bleibt, die Verarbeitung erneut ausfuehrbar ist und die abschliessende wissenschaftliche
+            Autoritaet bei Fachexpert:innen liegt. Inhaltlich erhebt der Review die in der Literatur
+            diskutierten Prompting-Techniken, die Zuordnung von Bias-Achsen und Schadensformen zu
+            Mitigationsstufen sowie die fachspezifischen Randbedingungen der Sozialen Arbeit.</p>
 
-            <h3>Duale Bewertung</h3>
-            <p>Zwei unabhaengige Bewertungspfade klassifizieren nach identischem 10-Kategorien-Schema:</p>
+            <h3>Arbeitskette</h3>
+            <p>Der Korpus durchlaeuft neun dokumentierte Stufen, von der Identifikation ueber Beschaffung
+            und Textkonversion, Wissensdestillation, Bewertung, Screening in PRISM, Praeregistrierung und
+            Feldfreeze, zweite Identifikationsrunde und Destillat-Audit bis zur Research Vault mit ihrer
+            Evidenzkette. Jede Stufe haelt fest, welcher Akteur gearbeitet hat, auf welcher Quelle und
+            welche Pruefung tatsaechlich stattgefunden hat. Die Kette endet nicht mit der Verarbeitung,
+            sondern mit fachlicher Verifikation und einer gesonderten Publikationsfreigabe. Die
+            <a href="methoden.html">Methodenseite</a> beschreibt die Stufen im Einzelnen.</p>
+
+            <h3>Rollen und Autoritaet</h3>
+            <p>Drei Beitragsarten bleiben operativ und begrifflich getrennt:</p>
             <ul>
-                <li><strong>Expert:innen</strong> -- manuelle Bewertung durch Fachwissenschaftler:innen, ohne vollstaendige Abdeckung</li>
-                <li><strong>LLM</strong> -- automatisierte Bewertung des gesamten Korpus durch Claude Haiku 4.5</li>
+                <li>KI-Screening-Agenten kodieren die Quellen in getrennten Kontexten mit eigener
+                Identitaet, eigener Zuweisung und eigenem Ausgabepfad.</li>
+                <li>Eine gesondert beauftragte KI-Pruefung (AI Agent Review) prueft diese Kodierungen
+                gegen die Quelle und haelt Befunde, Fundstellen und Artefakt-Hashes fest.</li>
+                <li>Fachexpert:innen verifizieren die vorbereiteten Datensaetze oder korrigieren sie,
+                wobei eine Korrektur eine neue Annotationsversion mit Begruendung anlegt und die
+                urspruengliche Agentenannotation unveraendert bestehen laesst.</li>
             </ul>
+            <p>Deterministische Pruefskripte stellen Form- und Regelkonformitaet fest und bewegen den
+            Lebenszyklus nicht weiter. Die KI-Pruefung stellt Quellendeckung fest und begruendet keine
+            menschliche Verifikation. Die abschliessende wissenschaftliche Autoritaet ueber Verifikation,
+            Interpretation und Freigabe liegt bei den Fachexpert:innen.</p>
 
-            <h3>Warum die Infrastruktur noetig ist (illustrierend)</h3>
-            <p>Als motivierende Illustration, nicht als eigenstaendiger Befund, zeigt sich, dass das LLM deutlich mehr
-            Publikationen einschliesst als die Expert:innen, mit asymmetrischer Divergenz
-            (das LLM ueberinkludiert oefter als umgekehrt). Die Divergenzen folgen drei Mustern: semantische Expansion,
-            implizite Feldzugehoerigkeit und Keyword-Inklusion. Die Uebereinstimmung auf Entscheidungsebene liegt nahe
-            dem Zufallsniveau; eine Prevalenz-Korrektur (PABAK) hebt das nicht auf, sondern liegt darunter.
-            Aussagekraeftig sind die Konfusionsmatrix und die Kappa-Werte je Kategorie, nicht das einzelne Gesamt-Kappa.
-            Die konkreten Raten und Fallzahlen rendert der
-            <a href="index.html#vergleich">Kategorien-Explorer</a> aus den Daten.</p>
+            <h3>Publikationsgrenze</h3>
+            <p>Die hier oeffentlich gezeigten Ergebnisse beruhen auf ausgewiesener KI-Quellenpruefung ohne
+            menschliche Verifikation. Ein Datensatz erreicht die Ergebnisprojektion nur mit einem aktuellen
+            angenommenen Pruefbeleg, der Agentenidentitaet, Modellangabe, Zeitstempel, Befunde, Fundstellen
+            und passende Hashes fuehrt. Ein Etikett allein genuegt nicht, und ein fehlender oder veralteter
+            Beleg haelt den Datensatz zurueck. Diese Erlaubnis hebt keinen Datensatz auf den Status
+            verifiziert oder publikationsfreigegeben.</p>
 
-            <h3>Zitationsvorschlag</h3>
-            <p class="info-cite-suggestion">Pollin, C., Sackl-Sharif, S., Klinger, S. &amp; Steiner, C. (2026).
-            Feministische AI Literacies -- Interaktive Evidenz [Web-Anwendung].
+            <h3>Zitation</h3>
+            <p>Die Begleitpublikation gehoert zu einem Beitrag, der fuer <em>Forum Wissenschaft</em> 2/2026
+            in Vorbereitung ist. Die Entscheidung ueber das Manuskript steht aus, weshalb dieser Vorschlag
+            weder eine feste Autor:innenreihung noch eine abgeschlossene Veroeffentlichung nennt.</p>
+            <p class="info-cite-suggestion">FemPrompt SozArb (2026). Feministische AI Literacies,
+            Interaktive Evidenz [Web-Anwendung]. Universitaet Graz.
             <a href="https://chpollin.github.io/FemPrompt_SozArb/">https://chpollin.github.io/FemPrompt_SozArb/</a></p>
 
-            <h3>Technologie</h3>
-            <p>Vanilla JavaScript, Chart.js, D3.js, Gemini 3 Flash. Kein Framework, kein Build-Tool.
-            Quellcode: <a href="https://github.com/chpollin/FemPrompt_SozArb" target="_blank" rel="noopener">GitHub</a>.</p>
+            <h3>Technik</h3>
+            <p>Vanilla JavaScript ohne Framework und ohne Frontend-Bundler, D3.js fuer die Visualisierungen
+            und Font Awesome fuer die Icons, beide lokal unter <code>docs/vendor/</code> gepinnt.
+            Systemschriften vermeiden entfernte Font-Anfragen. Der optionale Wissens-Chat ruft ein
+            Gemini-Modell erst auf ausdrueckliche Anfrage und mit einem Schluessel auf, den die nutzende
+            Person selbst im Tab hinterlegt. Die Datenprojektionen und die Ergebnisseite erzeugt eine
+            Python-Pipeline. Quellcode:
+            <a href="https://github.com/chpollin/FemPrompt_SozArb" target="_blank" rel="noopener">GitHub</a>.</p>
+
+            <h3>Lizenz</h3>
+            <p>Der Code steht unter der MIT-Lizenz, Dokumentation und Wissensdokumente unter
+            <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.
+            Die zugrunde liegenden Publikationen und fremde Forschungsdaten behalten ihre eigenen Rechte
+            und Lizenzen.</p>
         </article>
     </main>
 

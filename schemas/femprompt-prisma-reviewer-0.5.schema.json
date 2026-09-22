@@ -1,0 +1,555 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dhcraft.org/FemPrompt_SozArb/schemas/femprompt-prisma-reviewer-0.5.schema.json",
+  "title": "femprompt-prisma-reviewer/0.5",
+  "$comment": "Productive PRISM reviewer track with embedded provenance and lifecycle, at docs/data/screening/<reviewer>.json. Writer: src/assess/screening_lifecycle.py (migrate/validate, projecting a 0.4 capture to 0.5) together with src/assess/merge_ai_agent_product.py for the append-only agent merge; PRISM itself writes the 0.4 capture shape in docs/js/prisma.js. Readers: docs/js/prisma.js (validateReviewerPayload, loadReviewerFiles), src/analysis/build_agent_screening_queue.py, src/analysis/build_completion_package.py. Lifecycle states, roles, check types and results are owned by docs/data/screening_lifecycle_contract.json; categories and exclusion reasons by assessment/categories.yaml and its projection docs/data/category_schema.json. Earlier schema 0.3 reviewer files are out of scope for this file.",
+  "type": "object",
+  "required": ["schema", "reviewer", "actor", "updated", "decisions"],
+  "additionalProperties": true,
+  "properties": {
+    "schema": { "const": "femprompt-prisma-reviewer/0.5" },
+    "reviewer": { "$ref": "#/$defs/reviewerId" },
+    "actor": { "$ref": "#/$defs/actor" },
+    "updated": { "$ref": "#/$defs/timestamp" },
+    "status": { "$ref": "#/$defs/lifecycleState" },
+    "verification_schema": {
+      "$comment": "Optional. Present only when the track carries domain-expert verification records, written together with `verifications` by reviewerPayload in docs/js/prisma.js. The verification record shape is owned by its own schema and stays unconstrained here.",
+      "type": "string",
+      "pattern": "^femprompt-prisma-verification/[0-9]+\\.[0-9]+$"
+    },
+    "verifications": {
+      "$comment": "Optional. Accompanies `verification_schema`; the item shape belongs to that schema.",
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "decisions": {
+      "type": "object",
+      "propertyNames": { "$ref": "#/$defs/zoteroKey" },
+      "additionalProperties": { "$ref": "#/$defs/decision" }
+    },
+    "ratification": {
+      "$comment": "Descriptive run record; only its hash and identity fields are pinned.",
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "consensus_sha256": { "$ref": "#/$defs/sha256Bare" },
+        "input_tracks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["reviewer", "path", "sha256"],
+            "additionalProperties": true,
+            "properties": {
+              "reviewer": { "$ref": "#/$defs/reviewerId" },
+              "path": { "type": "string", "minLength": 1 },
+              "sha256": { "$ref": "#/$defs/sha256Bare" }
+            }
+          }
+        },
+        "operator_acceptance": {
+          "type": "object",
+          "additionalProperties": true,
+          "properties": {
+            "status": { "type": "string", "minLength": 1 },
+            "accepted_at": { "$ref": "#/$defs/timestamp" }
+          }
+        }
+      }
+    },
+    "review_runs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["run_id", "state", "record_ids", "product", "review"],
+        "additionalProperties": true,
+        "properties": {
+          "run_id": { "type": "string", "minLength": 1 },
+          "state": { "$ref": "#/$defs/lifecycleState" },
+          "record_ids": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/zoteroKey" }
+          },
+          "work_ids": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/workReference" }
+          },
+          "product": { "$ref": "#/$defs/artifactRef" },
+          "review": { "$ref": "#/$defs/artifactRef" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "sha256Bare": {
+      "$comment": "Hex is matched case-insensitively: the productive track carries both lowercase and one uppercase prompt digest.",
+      "type": "string",
+      "pattern": "^[0-9a-fA-F]{64}$"
+    },
+    "workId": {
+      "type": "string",
+      "pattern": "^work:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "versionId": {
+      "type": "string",
+      "pattern": "^version:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "workReference": {
+      "$comment": "The canonical Work identity is work:<uuid>. The productive ar2 track additionally carries legacy Work aliases (record:<zotero key>, doi:<doi>) in this position, which the registry resolves through legacy_work_id_index. Both forms are accepted here; a bare or otherwise shaped string is not.",
+      "anyOf": [
+        { "$ref": "#/$defs/workId" },
+        { "type": "string", "pattern": "^[a-z_]+:.+$" }
+      ]
+    },
+    "zoteroKey": {
+      "type": "string",
+      "pattern": "^[A-Z0-9]{8}$"
+    },
+    "reviewerId": {
+      "$comment": "Save validation: two to twelve filename-safe characters, starting with a letter, canonicalised to lowercase.",
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_-]{1,11}$"
+    },
+    "timestamp": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.[0-9]+)?(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "actor": { "enum": ["human", "agent"] },
+    "lifecycleState": {
+      "enum": [
+        "identified",
+        "curated",
+        "agent-annotated",
+        "ai-agent-reviewed",
+        "verified",
+        "publication-approved"
+      ]
+    },
+    "role": {
+      "enum": [
+        "curation",
+        "screening",
+        "ai_agent_reviewer",
+        "domain_expert",
+        "publication_approval",
+        "validation"
+      ]
+    },
+    "category": {
+      "enum": [
+        "AI_Literacies",
+        "Generative_KI",
+        "Prompting",
+        "KI_Sonstige",
+        "Soziale_Arbeit",
+        "Bias_Ungleichheit",
+        "Gender",
+        "Diversitaet",
+        "Feministisch",
+        "Fairness"
+      ]
+    },
+    "artifactRef": {
+      "type": "object",
+      "required": ["path", "sha256"],
+      "additionalProperties": true,
+      "properties": {
+        "path": { "type": "string", "minLength": 1 },
+        "sha256": { "$ref": "#/$defs/sha256Bare" }
+      }
+    },
+    "recordedValue": {
+      "$comment": "A recorded prompt or model reference, or an explicit legacy gap. Missing historical detail stays 'unrecorded' and is never reconstructed.",
+      "type": "object",
+      "required": ["status"],
+      "additionalProperties": true,
+      "properties": {
+        "status": { "enum": ["recorded", "legacy_gap", "not_applicable"] },
+        "value": { "type": "string" },
+        "reference": { "type": "string" },
+        "sha256": { "$ref": "#/$defs/sha256Bare" }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": { "status": { "const": "legacy_gap" } },
+            "required": ["status"]
+          },
+          "then": {
+            "required": ["value"],
+            "properties": { "value": { "const": "unrecorded" } }
+          }
+        }
+      ]
+    },
+    "evidenceItem": {
+      "type": "object",
+      "required": ["term", "snippet", "source_layer", "actor"],
+      "additionalProperties": true,
+      "properties": {
+        "term": { "type": "string" },
+        "snippet": { "type": "string" },
+        "ts": { "$ref": "#/$defs/timestamp" },
+        "source_layer": { "enum": ["paper", "llm_distillate"] },
+        "actor": { "$ref": "#/$defs/actor" },
+        "origin": {
+          "$comment": "Legacy compatibility field retained additively next to source_layer and actor.",
+          "enum": ["human", "ai"]
+        },
+        "paper_id": { "$ref": "#/$defs/zoteroKey" },
+        "work_id": { "$ref": "#/$defs/workId" },
+        "version_id": { "$ref": "#/$defs/versionId" }
+      }
+    },
+    "annotationBody": {
+      "$comment": "The effective annotation body. Substantive coding is checked here; the analysis block stays open because its vocabulary lives in docs/data/analysis_fields.json.",
+      "type": "object",
+      "required": ["categories", "decision", "evidence", "reviewer", "actor"],
+      "additionalProperties": true,
+      "properties": {
+        "categories": { "$ref": "#/$defs/categories" },
+        "decision": { "enum": ["Include", "Exclude", "Unclear"] },
+        "reason": { "$ref": "#/$defs/exclusionReason" },
+        "override": { "type": "boolean" },
+        "override_reason": { "type": ["string", "null"] },
+        "evidence": { "$ref": "#/$defs/evidenceMap" },
+        "text_source": { "enum": ["raw", "abstract", "none"] },
+        "ts": { "$ref": "#/$defs/timestamp" },
+        "reviewer": { "$ref": "#/$defs/reviewerId" },
+        "actor": { "$ref": "#/$defs/actor" },
+        "analysis": { "type": "object" }
+      }
+    },
+    "categories": {
+      "type": "object",
+      "propertyNames": { "$ref": "#/$defs/category" },
+      "additionalProperties": { "enum": [0, 1, 2] }
+    },
+    "evidenceMap": {
+      "type": "object",
+      "propertyNames": { "$ref": "#/$defs/category" },
+      "additionalProperties": {
+        "type": "array",
+        "items": { "$ref": "#/$defs/evidenceItem" }
+      }
+    },
+    "exclusionReason": {
+      "oneOf": [
+        { "type": "null" },
+        {
+          "enum": [
+            "Duplicate",
+            "Not_relevant_topic",
+            "Wrong_publication_type",
+            "No_full_text",
+            "Language"
+          ]
+        }
+      ]
+    },
+    "decision": {
+      "type": "object",
+      "required": [
+        "categories",
+        "decision",
+        "evidence",
+        "reviewer",
+        "actor",
+        "ts",
+        "provenance",
+        "annotations",
+        "active_annotation_id",
+        "checks",
+        "lifecycle"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "categories": { "$ref": "#/$defs/categories" },
+        "decision": { "enum": ["Include", "Exclude", "Unclear"] },
+        "reason": { "$ref": "#/$defs/exclusionReason" },
+        "override": { "type": "boolean" },
+        "override_reason": { "type": ["string", "null"] },
+        "evidence": { "$ref": "#/$defs/evidenceMap" },
+        "text_source": { "enum": ["raw", "abstract", "none"] },
+        "ts": { "$ref": "#/$defs/timestamp" },
+        "reviewer": { "$ref": "#/$defs/reviewerId" },
+        "actor": { "$ref": "#/$defs/actor" },
+        "analysis": {
+          "type": "object",
+          "additionalProperties": true,
+          "properties": {
+            "fields": { "type": "object" },
+            "undecidable": { "type": "object" }
+          }
+        },
+        "work_id": { "$ref": "#/$defs/workReference" },
+        "version_id": { "$ref": "#/$defs/versionId" },
+        "preferred_version_id": { "$ref": "#/$defs/versionId" },
+        "selected_version_is_preferred": { "type": "boolean" },
+        "version_type": {
+          "enum": [
+            "authors_original",
+            "submitted_manuscript_under_review",
+            "preprint",
+            "working_paper",
+            "accepted_manuscript",
+            "proof",
+            "version_of_record",
+            "corrected_version_of_record",
+            "enhanced_version_of_record",
+            "unknown"
+          ]
+        },
+        "representative_record_id": { "$ref": "#/$defs/zoteroKey" },
+        "alias_of": { "$ref": "#/$defs/zoteroKey" },
+        "active_annotation_id": { "type": "string", "minLength": 1 },
+        "provenance": { "$ref": "#/$defs/provenance" },
+        "annotations": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/annotation" }
+        },
+        "checks": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/check" }
+        },
+        "lifecycle": { "$ref": "#/$defs/lifecycle" }
+      }
+    },
+    "annotation": {
+      "type": "object",
+      "required": [
+        "annotation_id",
+        "annotation_type",
+        "at",
+        "actor_ids",
+        "body"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "annotation_id": { "type": "string", "minLength": 1 },
+        "annotation_type": {
+          "enum": ["screening_decision", "domain_expert_correction"]
+        },
+        "at": { "$ref": "#/$defs/timestamp" },
+        "actor_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "supersedes": { "type": "string", "minLength": 1 },
+        "reason": { "type": "string" },
+        "changes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["path"],
+            "additionalProperties": true,
+            "properties": {
+              "path": {
+                "$comment": "JSON Pointer into the annotation body.",
+                "type": "string",
+                "pattern": "^/"
+              }
+            }
+          }
+        },
+        "body": { "$ref": "#/$defs/annotationBody" }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "annotation_id",
+        "annotation_type",
+        "actors",
+        "activities",
+        "used_sources"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "annotation_id": { "type": "string", "minLength": 1 },
+        "annotation_type": { "type": "string", "minLength": 1 },
+        "actors": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["id", "type", "roles"],
+            "additionalProperties": true,
+            "properties": {
+              "id": { "type": "string", "minLength": 1 },
+              "type": { "enum": ["person", "ai_agent", "software_agent"] },
+              "roles": {
+                "type": "array",
+                "minItems": 1,
+                "items": { "$ref": "#/$defs/role" }
+              },
+              "identity": { "$ref": "#/$defs/recordedValue" }
+            }
+          }
+        },
+        "activities": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["id", "type", "run_id", "method", "associated_actor_ids"],
+            "additionalProperties": true,
+            "properties": {
+              "id": { "type": "string", "minLength": 1 },
+              "type": { "type": "string", "minLength": 1 },
+              "run_id": { "type": "string", "minLength": 1 },
+              "method": { "type": "string", "minLength": 1 },
+              "prompt": { "$ref": "#/$defs/recordedValue" },
+              "model": { "$ref": "#/$defs/recordedValue" },
+              "associated_actor_ids": {
+                "type": "array",
+                "minItems": 1,
+                "items": { "type": "string", "minLength": 1 }
+              }
+            }
+          }
+        },
+        "used_sources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "type", "reference"],
+            "additionalProperties": true,
+            "properties": {
+              "id": { "type": "string", "minLength": 1 },
+              "type": { "type": "string", "minLength": 1 },
+              "reference": { "type": "string", "minLength": 1 },
+              "sha256": { "$ref": "#/$defs/sha256Bare" },
+              "work_id": { "$ref": "#/$defs/workId" },
+              "version_id": { "$ref": "#/$defs/versionId" },
+              "version_type": { "type": "string" }
+            }
+          }
+        },
+        "derived_from": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "type", "reference"],
+            "additionalProperties": true,
+            "properties": {
+              "id": { "type": "string", "minLength": 1 },
+              "type": { "type": "string", "minLength": 1 },
+              "reference": { "type": "string", "minLength": 1 }
+            }
+          }
+        }
+      }
+    },
+    "check": {
+      "$comment": "Validation receipts bind to the hash of the checked annotation; a passed check establishes structural conformance only.",
+      "type": "object",
+      "required": ["check_id", "check_type", "status", "at", "actor_id", "tool", "subject"],
+      "additionalProperties": true,
+      "properties": {
+        "check_id": { "type": "string", "minLength": 1 },
+        "check_type": {
+          "enum": [
+            "lifecycle_contract",
+            "schema_validation",
+            "source_identity_validation",
+            "transcription_validation"
+          ]
+        },
+        "status": { "enum": ["passed", "failed"] },
+        "at": { "$ref": "#/$defs/timestamp" },
+        "actor_id": { "type": "string", "minLength": 1 },
+        "tool": {
+          "type": "object",
+          "required": ["name", "version"],
+          "additionalProperties": true,
+          "properties": {
+            "name": { "type": "string", "minLength": 1 },
+            "version": { "type": "string", "minLength": 1 }
+          }
+        },
+        "subject": {
+          "type": "object",
+          "required": ["annotation_id", "sha256"],
+          "additionalProperties": true,
+          "properties": {
+            "annotation_id": { "type": "string", "minLength": 1 },
+            "sha256": { "$ref": "#/$defs/sha256Bare" }
+          }
+        }
+      }
+    },
+    "lifecycle": {
+      "type": "object",
+      "required": ["baseline", "state", "events"],
+      "additionalProperties": true,
+      "properties": {
+        "baseline": {
+          "type": "object",
+          "required": ["state", "basis", "at", "actor_ids"],
+          "additionalProperties": true,
+          "properties": {
+            "state": { "$ref": "#/$defs/lifecycleState" },
+            "basis": { "type": "string", "minLength": 1 },
+            "at": { "$ref": "#/$defs/timestamp" },
+            "actor_ids": {
+              "type": "array",
+              "minItems": 1,
+              "items": { "type": "string", "minLength": 1 }
+            }
+          }
+        },
+        "state": { "$ref": "#/$defs/lifecycleState" },
+        "events": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "event_id",
+              "event_type",
+              "from",
+              "to",
+              "at",
+              "activity_id",
+              "actor_ids",
+              "result"
+            ],
+            "additionalProperties": true,
+            "properties": {
+              "event_id": { "type": "string", "minLength": 1 },
+              "event_type": {
+                "enum": [
+                  "agent_annotation",
+                  "ai_agent_review",
+                  "domain_expert_verification",
+                  "publication_approval"
+                ]
+              },
+              "from": { "$ref": "#/$defs/lifecycleState" },
+              "to": { "$ref": "#/$defs/lifecycleState" },
+              "at": { "$ref": "#/$defs/timestamp" },
+              "activity_id": { "type": "string", "minLength": 1 },
+              "actor_ids": {
+                "type": "array",
+                "minItems": 1,
+                "items": { "type": "string", "minLength": 1 }
+              },
+              "result": {
+                "enum": [
+                  "completed",
+                  "accepted",
+                  "corrected_and_accepted",
+                  "changes_requested",
+                  "rejected",
+                  "approved"
+                ]
+              },
+              "annotation_id": { "type": "string", "minLength": 1 }
+            }
+          }
+        }
+      }
+    }
+  }
+}

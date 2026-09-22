@@ -1,3 +1,4 @@
 # Offline publishers and their tests. Full acquisition/LLM dependencies remain in requirements.txt.
 PyYAML==6.0.2
+jsonschema==4.25.0
 pytest==8.4.2

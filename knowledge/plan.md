@@ -47,6 +47,8 @@ The accepted scope permits human verification of individual fields or statements
 2. Project current verification coverage per target and expose it in PRISM. Preserve the existing whole-record path and historical events until compatibility has been checked. Human verification receipts remain separate from AI-review receipts and deterministic checks.
 3. Define publication of mixed-authority content before simplifying the publisher. Determine which verified fields, statements and necessary context belong to the result view. Preserve historical approvals and the existing preliminary AI-reviewed policy. A target-level verification must never make unrelated contents public or verified.
 4. Check the integrated behaviour with changed-source, stale-review, rejected-review and mixed-scope cases. Keep field coverage, review validity and actual scholarly correctness as separate acceptance claims.
+5. Make the verification path reachable for a domain expert under their own reviewer key. The browser test of 22 September 2026 showed that the verification panel and form appear only while the agent track (`ar2`) is the selected reviewer, that the recorded verification is written into the agent file rather than the expert's own file, that the provenance block renders source and derivation objects as `[object Object]` and prompt and model as raw JSON, and that an agent record is headed `Deine Bewertung` without marking its actor. These four defects block the first verification session and precede field-level verification.
+6. Superseded on 22 September 2026: the round-one expert annotations are valid corpus decisions and need no new verification event. The experts' scope is the 2026 intake and the agent-coded records.
 
 Clarify the substantive question answered by a field-level acceptance and the public projection of mixed-authority material. Comparative analysis proceeds with explicit source limitations and contradictory findings. Concrete interpretive disagreements go to domain-expert review with their evidence. These questions do not block source preparation, truthful inventory corrections or preparation of the comparative synthesis.
 
@@ -118,7 +120,7 @@ Exploratory topics become scholarly findings only through interpretation against
 
 ### Domain-expert verification
 
-- Present the completed prepared corpus in PRISM verification mode.
+- Present the 2026 intake and the agent-coded records in PRISM verification mode; round-one annotations stay valid without a new verification event.
 - Record accepted, corrected and accepted, changes requested, or rejected for each reviewed statement, field or explicitly scoped whole record. Use the existing whole-record path only when that entire record was checked. Field-level recording depends on [[#Provenance and verification alignment]].
 - Preserve each correction as a superseding annotation with a field-level difference record.
 - Verify the Assertions that support the literature report and the paper.
@@ -139,6 +141,8 @@ Agent preparation supplies the evidence for domain-expert verification. The acce
 
 - Confirm the native Chromium directory-permission and physical-write path in a disposable clone.
 - Exercise the setup path with a person who did not build PRISM before extracting a reusable configuration guide.
+- Prepare and hand over the domain experts' GitHub Desktop clone with the built full-text layer, since `docs/data/fulltext/` is git-ignored and a plain clone shows abstracts only.
+- Decide whether the source-binding contract accepts acquisition receipts (publisher landing URL and PDF hash) as identity evidence. Eleven prepared 2026 reading texts fail the current quoted-DOI rule because the conversion dropped the running headers.
 
 ## Waiting on the project owner
 

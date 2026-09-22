@@ -7,7 +7,8 @@
   "scripts": {
     "preview": "python -X utf8 -m src.publish.serve",
     "build": "python -X utf8 -m src.publish.build_project",
-    "check:data": "python -X utf8 -m src.publish.build_project --check",
+    "check:data": "python -X utf8 -m src.publish.build_project --check && npm run check:schemas",
+    "check:schemas": "python -X utf8 -m src.publish.validate_schemas",
     "build:release": "python -X utf8 -m src.publish.build_release",
     "build:literature": "python -X utf8 -m src.publish.generate_literature_landscape --policy config/publication_policy.json --verification-ledger generated/verification/ai-source-reviews.json",
     "test": "node tests/run.mjs && node tests/companion.mjs && node tests/chat.mjs && node tests/literature-landscape.mjs && node tests/review-cases/verify-source-assets.mjs",
