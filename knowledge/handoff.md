@@ -20,7 +20,7 @@ related: [INDEX, plan, journal, governance, verification, testing]
 
 ## Current result
 
-Continue on `main`, tracking `origin/main`. On 22 September 2026 the operator requested all completed work on `main`. The provenance refactor, knowledge curation and laptop handoff were integrated by fast-forward from `refactor/provenance-readiness`, preserving the preceding repository consolidation and source-preparation history. No result-site deployment was performed during this work.
+Continue on `main`, tracking `origin/main`. The session of 22 September 2026 on the laptop was pushed in full: visible round-one references (ADR-038), the quiet workspace (ADR-039), the repaired expert verification path (ADR-040), the rewritten onboarding and about pages, JSON schema validation in the check chain, and the open-access reacquisition record. The partners were told by mail on the same day that PRISM, the guide and the Zotero group are ready and that the missing full texts are listed in an Excel sheet. The next session runs on the desktop after `git pull --ff-only`. GitHub Pages serves `docs/` from `main`, so the pushed state is the one the partners see.
 
 The technical refactor and repository knowledge curation are complete within their recorded scope. The literature review, full-corpus preparation and manuscript remain unfinished. [[plan]] owns remaining work, [[verification]] owns the evidence and authority register, and [[journal]] preserves the detailed decision history.
 
@@ -38,7 +38,7 @@ The following goals describe the project rather than completed achievements. Cur
 | Compare prompting techniques and their evidence | Controlled analysis fields, descriptive tables and initial source-linked Assertions exist | Compare proposed, demonstrated and evaluated uses across tasks and study conditions. [[research-vault#Comparative synthesis scope]] |
 | Analyse bias, harms and mitigation | Coding vocabulary and preliminary descriptive projections exist | Develop source-grounded comparisons of harm mechanisms, intervention points, reported effects and limitations. [[update-protocol#Analysis coding]] |
 | Identify requirements specific to social work | Analysis fields cover populations, practice contexts and domain constraints | Synthesize institutional conditions, affected groups and gaps in general prompting guidance. [[project#Research questions]] |
-| Enable and conduct domain-expert verification | Whole-record verification is implemented for the agent track; the path under an expert's own reviewer key was found broken on 22 September 2026 and is under repair. Statement- or field-level verification is accepted as the target scope | Implement that scope and have experts verify the specific findings and interpretations used. Existing AI reviews confer no human authority. [[governance#Verification scope decision, 22 September 2026]] |
+| Enable and conduct domain-expert verification | Whole-record verification is implemented for the agent track and writes into the expert's own reviewer file (ADR-040), covered by the browser pilot. Statement- or field-level verification is accepted as the target scope | Implement that scope and have experts verify the specific findings and interpretations used. Existing AI reviews confer no human authority. [[governance#Verification scope decision, 22 September 2026]] |
 | Produce a source-grounded literature report | A report structure and initial grounded findings exist | Complete comparative synthesis, contradictory evidence and research gaps through the shared Assertion layer. `research-vault/40_output/literature-report/` |
 | Finish the scholarly result paper | One canonical manuscript draft exists | Integrate the completed findings, verify substantive claims and interpretation, and obtain a decision on authorship, venue and final submission. `research-vault/40_output/paper/paper.md` |
 | Make results reproducible with their actual review status | The build, round-one replay and policy-filtered preliminary AI-reviewed result projection are implemented | Define publication of mixed-authority content before changing the publisher. Preserve historical review and approval events. [[governance#Publication boundary]] and [[testing]] |
@@ -61,17 +61,17 @@ The following goals describe the project rather than completed achievements. Cur
 
 ## Continuation point
 
-1. Restore the laptop checkout and run the checks below before interpreting missing generated files as research gaps.
+1. Restore the desktop checkout with `git pull --ff-only` and run the checks below before interpreting missing generated files as research gaps. The private material of the laptop session that Git does not carry is the converted open-access preprint under `generated/source-acquisition/codex-websearch-2026/reacquisition-2026-09-22/` and the PDF under `generated/pdfs/reacquisition-2026-09-22/oa/`; the reacquisition JSON records their hashes.
 2. Read [[plan#Source and corpus readiness]] with the current completion and literature-readiness inventories. Select unresolved items and inspect their actual source files and valid receipts before acquiring, converting or reviewing material again. In particular, documented formula and figure losses and exact reading-Version gaps remain real work.
 3. Continue source preparation and knowledge-document coverage under [[plan#Controlled corpus completion]]. Screen eligible works under [[update-protocol#Agent-assisted completion]]. Source availability alone does not establish a completed annotation or review.
-4. Repair the defects blocking the first expert verification session, then continue the field-verification implementation under [[plan#Provenance and verification alignment]], preserving the existing whole-record path. The experts' scope is the 2026 intake and the agent-coded records; round-one annotations stay valid. Resolve the open review meaning and mixed-authority publication questions before treating them as settled requirements.
+4. Decide the binding-contract extension recorded in [[plan#Technical follow-up]], then bind the eleven 2026 reading texts whose converted Markdown lost its DOI and rebuild the registry. Run the analysis-coding agent over the included works with full text and the AI Agent Review afterwards, so the experts find prepared records. Before the partner meeting, prepare a clone with the reading layer for the colleagues and walk the folder-permission checklist once in Chrome. Then continue the field-verification implementation under [[plan#Provenance and verification alignment]], preserving the whole-record path. The experts' scope is the 2026 intake and the agent-coded records, round-one annotations stay valid.
 5. Prepare comparative analysis and source-linked Assertions using declared coverage and limitations. Domain experts must check the resulting scholarly claims before those claims receive human-verification status.
 
 Bounded `gpt-5.6-sol` assignments can prepare sources or knowledge drafts for explicit record lists, while a separate reviewer checks source support. The lead owns shared registry and PRISM integration and verifies delegated results against real artifacts. Source or withdrawal holds under [[plan#Works with conflicts or holds]] remain active across affected aliases. AI corrections remain immutable sidecars, and future Zotero exports must be reconciled with `corpus/metadata_corrections.json`.
 
-## Laptop checkout and local material
+## Checkout and local material
 
-Run these commands in the existing FemPrompt repository. Inspect `git status` first and preserve any laptop-only changes before switching. If the local branch has diverged, inspect the differing commits instead of resetting it.
+Run these commands in the existing FemPrompt repository on the machine taking over. Inspect `git status` first and preserve any machine-local changes before switching. If the local branch has diverged, inspect the differing commits instead of resetting it.
 
 ```powershell
 git status
@@ -94,16 +94,16 @@ The build reconstructs ignored reading projections and needs no external API key
 |---|---|
 | Versioned code, project knowledge, research data, reviewed source representations and committed receipts | Retrieved through Git on the named branch |
 | Generated reading layer, readiness inventories and local result site | Rebuilt by `npm run build` |
-| Original PDFs and local acquisition evidence under `pipeline/`, `generated/pdfs/` and ignored portions of `generated/source-acquisition/` | Require a separate private transfer if absent on the laptop. Preserve relative paths and compare the relevant recorded hashes before source review |
+| Original PDFs and local acquisition evidence under `pipeline/`, `generated/pdfs/` and ignored portions of `generated/source-acquisition/` | Require a separate private transfer if absent on the machine. Preserve relative paths and compare the relevant recorded hashes before source review |
 | `generated/local-source-preservation/` and the private `refactor-preservation/` inventory in the Git common directory | Local preservation material, absent from an ordinary checkout. [[data#Local source preservation]] records its role |
-| `generated/zotero-sync/`, local credentials and `.vault_cache/` | Not transferred by Git. Preserve private receipts separately, provision credentials locally when needed, and do not commit these materials |
+| `generated/zotero-sync/`, local credentials and `.vault_cache/` | Not transferred by Git. Preserve private receipts separately, provision credentials locally when needed, and do not commit these materials. The laptop `.env` held no `ZOTERO_API_KEY`, so group writes need the key on the desktop |
 | Personal Obsidian vault | A separate working copy requiring its own synchronization |
 
-A successful build from versioned representations does not establish that original PDFs are available for further visual review. No private source transfer to the laptop was performed in this session. A change to `knowledge/project.md` requires a rebuild because it is a hash-bound build input.
+A successful build from versioned representations does not establish that original PDFs are available for further visual review. No private source transfer between the machines was performed in this session. A change to `knowledge/project.md` requires a rebuild because it is a hash-bound build input.
 
 ## Verification state
 
-The implementation and knowledge curation passed the full build, freshness checks, JavaScript and Python suites and result-site browser tests. The consolidation also passed the Companion browser checks, PRISM pilot and tracked-only checkout reproduction. Targeted Python lint and formatting checks passed for the changed code. Independent review findings were corrected and the lead checked the resulting files. [[journal]] retains the distinct verification rounds.
+The session of 22 September 2026 passed the full build, freshness checks, schema validation, JavaScript and Python suites, the PRISM pilot including the verification end-to-end check and layout invariants, and the result-site browser tests. Earlier, the implementation and knowledge curation passed the full build, freshness checks, JavaScript and Python suites and result-site browser tests. The consolidation also passed the Companion browser checks, PRISM pilot and tracked-only checkout reproduction. Targeted Python lint and formatting checks passed for the changed code. Independent review findings were corrected and the lead checked the resulting files. [[journal]] retains the distinct verification rounds.
 
 Protected research inputs and review receipts retained their byte hashes. The documentation curation changed generated completion data only through the updated project-input fingerprint. Local reference checks and the prose self-check cover the revised knowledge documents. These checks establish technical behaviour and preservation, not domain-expert acceptance.
 
