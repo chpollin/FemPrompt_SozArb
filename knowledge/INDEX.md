@@ -15,7 +15,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-06-29
-updated: 2026-09-21
+updated: 2026-09-22
 authors: [Christopher Pollin]
 generated-with: Claude Code, Codex (GPT-6)
 related: [project, methods, specification, data, standards, governance, testing, verification, plan, journal, handoff, update-protocol, research-vault, analysis-divergence, analysis-sq-advisory, project-review-2026-09-05]
@@ -50,6 +50,7 @@ In function order, not alphabetical.
 ## Reading paths
 
 - Resume the work: [[handoff]] (current result and continuation point), [[plan]] (remaining work and what waits on the project owner), the newest [[journal]] entry.
+- Consolidate the working directories and simplify source preparation: [[plan#Repository consolidation and source-preparation refactor]] (source preservation, bounded implementation, delegated ownership and acceptance checks).
 - Onboarding a new collaborator: [[project]], [[methods]], [[specification]]. The reviewing colleagues use `docs/onboarding.html` instead; nothing on their path requires this knowledge base.
 - Describe the method in the follow-up paper: [[methods]] (the chain and the depth, including the replay verification), [[standards]] (the conformance state and the named gaps).
 - Prepare the qualitative coding: [[update-protocol]] (fields, pilot findings, and coding procedure).

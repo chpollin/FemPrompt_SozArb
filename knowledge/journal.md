@@ -10,7 +10,7 @@ status: active
 language: de
 version: "0.7"
 created: 2026-02-18
-updated: 2026-09-21
+updated: 2026-09-22
 authors: [Christopher Pollin]
 generated-with: Claude Code
 related: [INDEX, plan, specification, governance, verification, handoff]
@@ -23,6 +23,12 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 ---
 
 ## PRISM and the epistemic infrastructure (2026)
+
+### 2026-09-22: Explore repository consolidation and define the refactor
+
+The operator requested an implementation plan preceded by exploration with `gpt-5.6-sol` subagents. Separate read-only tasks examined worktree preservation, the source-to-publication flow and the project knowledge. The lead verified the branch relationships, compared local source hashes and inspected the proposed refactor against the current code. All worktree histories are contained in the current working branch, but the merge-preparation worktree retains local sources absent from the main source stores. The historical `pipeline/` folder also retains source material, so a clean Git status cannot justify deletion.
+
+[[plan#Repository consolidation and source-preparation refactor]] defines preservation before removal, invocation-local full-text inputs, indexed alias projection and a shorter action layer. The Python publication build and frontend without a bundler are compatible. The documented corpus-projection sequence and local Handoff convention remain in force. The existing build-freshness check, JavaScript suites and Python suite passed. The worktree cleanup, source transfers, code refactor, full rebuild, browser pilot and clean-checkout reproduction were not executed in this planning session.
 
 ### 2026-09-21: Execute source-bound preparation and independent document review
 
