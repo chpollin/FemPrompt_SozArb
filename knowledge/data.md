@@ -7,7 +7,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-06-09
-updated: 2026-09-21
+updated: 2026-09-22
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 4.8), Codex (GPT-6)
 method:
@@ -23,6 +23,14 @@ related: [specification, methods, standards]
 ---
 
 This document describes the substrate the PRISMA screening tool consumes and produces. The canonical persisted unit is one JSON file per reviewer or consolidated agent track. Schema `femprompt-prisma-reviewer/0.5` adds embedded provenance, immutable annotation versions, deterministic check receipts, and a record-level lifecycle to the version-aware evidence and text-source fields of schema 0.4. Annotations from people and AI agents use the same structural form and retain distinct actor types and roles. The comparative round-1 corpus continues to store the consolidated expert and LLM decisions as sibling fields for replay and divergence analysis. The category schema and inclusion logic come from `assessment/categories.yaml`. What the data means lives here; what the tool does with it lives in [[specification]].
+
+## Local source preservation
+
+Current acquisition uses the documented source stores under `generated/`. The local `pipeline/` tree also retains historical PDFs, conversion images and validation records. Source-review records under `generated/source-acquisition/completion-20260921/` still name concrete `pipeline/pdfs/` paths. Those paths remain valid evidence locations until a deliberate migration updates their provenance. The folder's exclusion from Git does not make its contents disposable.
+
+Local sources recovered from retired worktrees retain their established relative paths under `generated/pdfs/` and `generated/source-acquisition/`. Historical reading projections, temporary acquisition material, visual inspection outputs and earlier benchmark logs are preserved under the ignored `generated/local-source-preservation/` tree. That tree lies outside the publisher's input patterns and the result-site allowlist. Retaining a file there grants no source binding, screening readiness or review authority.
+
+The private preservation inventory is under `refactor-preservation/` in the directory returned by `git rev-parse --git-common-dir`. It records original paths, destinations, byte sizes and SHA-256 comparisons. Credentials remain at their original local location and are excluded from the file inventory. The consolidation recorded in [[journal]] preserved source bytes before retiring the worktrees.
 
 ## Category schema (reused, not redefined)
 

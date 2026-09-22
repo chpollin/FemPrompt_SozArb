@@ -1,251 +1,65 @@
-# Working Rules for Claude AI Assistant
-
-**Project:** FemPrompt SozArb, a systematic literature review on feminist AI literacies in social work
-**Last Updated:** 2026-09-20
-
-**Operative update (2026-09-05):** The operator authorised an explicitly labelled AI-source-reviewed preliminary result release. Follow `config/publication_policy.json` and `knowledge/governance.md`; do not infer human verification or approval. Current completion state is in `generated/completion/README.md`. Build all projections with `npm run build`, verify with `npm run check`, and deploy only `build/site/`. Historical `docs/` remains the research working application. AI analysis corrections are hash-bound sidecars preserving immutable original annotations.
-
----
-
-## Core Argument
-
-This project implements a traceable workflow for an LLM- and agent-assisted literature review. Reliability is established through recorded evidence, provenance, deterministic validation, source-grounded AI Agent Review, domain-expert verification, and publication approval. PRISM (`docs/prisma.html`) is the governed screening and verification surface. The Grounded Vault carries source-linked knowledge into the literature report and the follow-up paper.
-
-Round one used a comparative expert and LLM assessment under the same ten-category schema. Its divergence remains a motivating illustration and a demonstration of what per-decision records make analysable. Round two uses controlled intake, two operationally isolated AI-agent tracks, a separate source-grounded AI Agent Review, and deferred verification by domain experts. Operational isolation records execution conditions and supports no claim of epistemic independence. Every productive record follows the lifecycle `identified → curated → agent-annotated → ai-agent-reviewed → verified → publication-approved`.
-
-The Forum Wissenschaft 2/2026 paper is submitted and editorially closed; it was written on Google Docs and is not maintained in this repository. The remaining work is tracked in `knowledge/plan.md`. It comprises source and corpus readiness, governed round-two agent annotation, full-corpus analysis, Assertion-backed synthesis, domain-expert verification, and publication approval. The canonical manuscript is `research-vault/40_output/paper/paper.md`. Its methodological integration question frames the paper, while SQ1 to SQ3 report the workflow's yield for social-work researchers planning an LLM-assisted review.
-
----
-
-## No volatile quantities
-
-Costs and metrics (dollar totals, token counts, kappas, confusion-matrix cells, include rates, corpus and pipeline counts) are NOT hand-maintained in the prose of this file or the knowledge docs. They drift and contradict each other. Numbers live in the data (`generated/benchmark-results/`, `docs/data/`) and in the Evidence Companion that renders them. State findings qualitatively and point there. This file names structural constants (ten categories, four Deep Research models, three pipeline stages) but not run statistics.
-
----
-
-## Key Terminology
-
-Use these terms consistently. They are defined in `knowledge/INDEX.md` (glossary).
-
-| Term | Definition |
-|------|------------|
-| Epistemic infrastructure | Systematic arrangement of tools, decision rules, distinct control points, and responsibility assignments that establishes reliability in a research process |
-| Distilled knowledge document | Source-specific structured reduction of a full text with traceable source anchors |
-| Assertion | Atomic evidence-linked statement over one or more distilled knowledge documents |
-| Work | Stable project identity for one scholarly contribution across bibliographic records and publication expressions |
-| Publication Version | Exact Preprint, Accepted Manuscript, proof, Version of Record, corrected Version, or other expression used as evidence |
-| Work-Version registry | Canonical mapping from Zotero records and intake candidates to one Work and one exact Version |
-| Round-1 dual assessment track | Separately recorded expert and LLM assessments used for the first-round comparison |
-| Operational isolation | Separate agent contexts, browser states, assignments, and outputs without an epistemic-independence claim |
-| Source-grounded AI Agent Review | AI-agent check of annotations and evidence against the Paper source |
-| Validation | Deterministic check of structural, referential, or rule conformance; it grants no scholarly authority |
-| Verification | Domain-expert assessment of an artifact against its evidence and scholarly meaning |
-| Final scholarly authority | Domain-expert responsibility for verification, interpretation, and publication approval |
-| Screening lifecycle | Ordered authority states from identification through publication approval |
-| Grounded Vault | Evidence chain from sources through Markdown, distillates, Assertions, and outputs |
-| Confabulation | Generation of coherent but factually unsupported claims (preferred over "hallucination") |
-| Context rot | Degradation of LLM processing quality with increasing input length (Hong et al. 2025) |
-| Sycophancy | LLM tendency to over-agree with prompt presuppositions |
-| Deep Research | Agent-based LLM systems for iterative, autonomous literature search |
-| Evidence Companion | The web-based academic companion publication at chpollin.github.io/FemPrompt_SozArb |
-| PRISM | This project's screening tool (`docs/prisma.html`), distinct from the PRISMA reporting standard |
-
----
-
-## Project Overview
-
-The corpus flows from identification through Zotero curation, Work-Version reconciliation, PDF acquisition, reviewed Docling Markdown, agent annotation, AI Agent Review, internal Grounded Vault synthesis and analysis, artifact-local domain-expert verification, and publication approval. Screening coverage is Work-level; full texts, evidence, distillates, and Assertions retain exact Version provenance.
-
-Three publication layers:
-1. **Distilled knowledge** (`generated/distilled/`): source-grounded paper distillates with stage and verification artefacts.
-2. **Evidence Companion** (`docs/index.html` plus subpages): five views (Knowledge Chat, Knowledge Graph, Literature Landscape, Categories, Corpus), live at https://chpollin.github.io/FemPrompt_SozArb/.
-3. **Paper**: Forum Wissenschaft 2/2026, submitted and closed (on Google Docs). The follow-up paper is led by the infrastructure and the review method, not by a results claim.
-
-`research-vault/` is the curated subject-knowledge layer. `generated/vault/Papers/` is only the generated source of the downloadable paper collection; the former concept, divergence, pipeline, and MOC projections are retired.
-
-The benchmark (the human-LLM divergence and its decomposition, used as a motivating illustration) and all figures live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion; do not restate them here.
-
-### Assessment tracks
-
-| Track | Method | Schema | Status |
-|-------|--------|--------|--------|
-| Human | Google Sheets | 10 binary categories | Complete |
-| LLM (5D) | Claude Haiku 4.5 | 5 ordinal dimensions | Complete (archived) |
-| LLM (10K) | Claude Haiku 4.5 | 10 binary categories | Complete (the benchmark track) |
-
----
-
-## Repository Structure
-
-### Directories
-
-| Directory | Contents | Edit? |
-|-----------|----------|-------|
-| `knowledge/` | **Single source of truth** for all project documentation (see `knowledge/INDEX.md`) | Yes, with care |
-| `generated/distilled/` | Distilled knowledge documents | Read-only |
-| `generated/distilled/_stage1_json/`, `_verification/` | Stage-1 JSON extractions, verification reports | Read-only |
-| `generated/vault/Papers/` | Generated source of the downloadable Obsidian paper collection | Generated |
-| `docs/`, `docs/data/` | GitHub Pages web interfaces and generated JSON | Actively edited |
-| `generated/benchmark-results/` | Benchmark results; `replay/` holds the committed round-1 replay outputs | Complete |
-| `assessment/` | LLM 5D and human assessment | Complete |
-| `src/publish/` | Deterministic publishers for paper notes, Companion data, schema, and literature landscape | Actively edited |
-| `src/replay/` | Round-1 replay (`replay_round1.py`, self-test against the canonical benchmark) | Yes, with care |
-| `research-vault/` | Subject knowledge in the Grounded-Vault chain; protected source and Markdown layers remain local, while legacy `10_distillates/` and `20_claims/` are read-only migration sources | Yes, with care |
-| `tests/` | PRISM test layers: jsdom harness, Companion smoke suite, browser pilot, pytest, manual checklist | Yes, with care |
-| `paper/` | Expert questions and historical manuscript planning; the canonical paper is `research-vault/40_output/paper/paper.md` | Yes, with care |
-| `config/` | `defaults.yaml` (now lists `generated/` paths; the restructure superseded its do-not-change note) | Yes, with care |
-| `.vault_cache/` | LLM API cache (reproducible) | Do not change |
-| `prompts/` | Versioned prompt governance and changelog | Edit only through a documented prompt version or status change |
-| `skills/prism-agent-review/` | Project-local workflow for controlled PRISM agent tracks and source-grounded AI Agent Review | Follow the canonical prompt and run manifest |
-
-### Knowledge documents
-
-`INDEX.md` provides navigation and the glossary. `project.md` carries identity, research questions, and theory. `methods.md`, `standards.md`, `specification.md`, and `data.md` describe the review method, reporting frame, PRISM decisions, and data substrate. `governance.md` defines authority and publication rules, `testing.md` the technical guarantees, and `verification.md` the evidence and authority state of externally relevant claims. `plan.md` carries the forward work and the steps that wait on the project owner, `journal.md` the decision provenance, and `handoff.md` the current result and continuation point of the working branch. `project-review-2026-09-05.md` is the dated review behind the source-reviewed release. `update-protocol.md` governs round-two identification, screening, coding, and verification. `research-vault.md` defines the active Grounded Vault model. The paper lane contributes `analysis-divergence.md` and the draft `analysis-sq-advisory.md`. The per-item PRISMA and trAIce conformance state remains machine-readable in `generated/conformance/conformance_map.yaml`. Start at `INDEX.md`.
-
-### Key web files
-
-| File | Purpose |
-|------|---------|
-| `docs/index.html` | Evidence Companion (5-view SPA, default Knowledge Chat) |
-| `docs/prisma.html` | PRISM screening tool |
-| `docs/onboarding.html` | Reviewer onboarding (German walkthrough for the two colleagues) |
-| `docs/js/research-app.js` | Corpus table, modal tabs, navigation, export |
-| `docs/js/wissenschat.js` | Knowledge Chat (Gemini 3 Flash, streaming, citations) |
-| `docs/js/wissensnetz.js` | Knowledge Graph (D3 force graph, divergence mode) |
-| `docs/js/literaturbild.js` | Annotation-native Literature Landscape with evidence drill-down |
-| `docs/js/kategorien.js` | Categories Explorer |
-| `docs/js/prisma.js`, `prisma-data.js`, `prisma-import.js` | PRISM logic, data shim, Excel bridge |
-| `docs/css/tokens.css`, `research.css`, `literaturbild.css`, `prisma.css` | Shared tokens and view-specific styles |
-| `generated/benchmark-results/agreement_metrics.json` | Canonical benchmark metrics |
-| `assessment/categories.yaml` | Canonical category definitions |
-
----
-
-## Evidence Companion (`docs/index.html`)
-
-Academic companion publication. Framework-free vanilla JavaScript with pinned local D3 and Font Awesome assets.
-
-**Live:** https://chpollin.github.io/FemPrompt_SozArb/
-
-| View | Content | JS file |
-|------|---------|---------|
-| Knowledge Chat (default) | Gemini 3 Flash Q&A, inline citations to Corpus | `wissenschat.js` |
-| Knowledge Graph | D3 force graph, cluster layout, divergence mode | `wissensnetz.js` |
-| Literature Landscape | PRISM category matrix, analysis profiles, Paper-evidence drill-down | `literaturbild.js` |
-| Categories | Ten-category spectrum, rate comparison, divergence papers | `kategorien.js` |
-| Corpus (reference layer) | Sortable table, filters, detail modal, export | `research-app.js` |
-
-Subpages: `about.html`, `methoden.html`, `help.html`, `onboarding.html`.
-
-Architecture rules: no build tool and no framework. Runtime libraries are pinned under `docs/vendor/`; npm is used for the test harness and controlled vendor refreshes. IIFE modules communicate through `window.EC`. System font stacks avoid remote font requests. `assessment/categories.yaml` is the canonical source for categories, decision options, and exclusion reasons; `docs/data/category_schema.json` is its generated frontend projection. The chat API key stays in `sessionStorage` for the current tab. Questions and selected research data are sent only when the user calls the model provider. Data lives in `docs/data/research_vault_v2.json`, `concept_graph.json`, `promptotyping_v2.json`, and `literature_landscape.json`. Markdown export produces one concatenated file without a runtime archive library.
-
----
-
-## Pipeline
-
-Workflow: Zotero papers, Work-Version reconciliation, PDF acquisition (four fallback strategies), Markdown conversion (Docling), three-stage distillation (extract JSON, format Markdown, verify). The acquisition, conversion, and distillation loss chain is quantified in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion, not here.
-
-Knowledge document structure: YAML frontmatter (title, authors, year, type, language, processed, source_file, confidence); sections Core Finding, Research Question, Methodology, Main Arguments, Category Evidence, Assessment Relevance, Key References. Categories live in `_stage1_json/` as booleans, not in the Markdown frontmatter.
-
----
-
-## Data Flow (JSON)
-
-`promptotyping_v2.json` (generated by `src/publish/generate_promptotyping_data_v2.py`): `meta` (totals, disagreements, kappa, confusion_matrix, rates, pattern_distribution, asymmetry), `papers`, `concepts` (nodes and edges), `divergences`. Note: `meta.total_papers` in the agreement JSONs is the union of the two assessment tracks, not the corpus (see the comment in `src/assess/calculate_agreement.py`).
-
-`research_vault_v2.json` (generated by `src/publish/generate_docs_data.py`): for the Evidence Companion.
-
-`corpus/work_version_registry.json` (generated by `src/analysis/build_work_version_registry.py`): canonical Work and publication-Version identity, record and candidate bindings, preferred/latest selection, peer-review basis, relations, conflicts, and provenance. `docs/data/work_version_contract.json` defines the controlled vocabulary and selection rule.
-
-`literature_landscape.json` (generated by `src/publish/generate_literature_landscape.py`): the verified, annotation-native Companion projection of the productive PRISM track. Its thematic records are Include-only, while progress retains all annotated decisions and source status.
-
----
-
-## Canonical Locations (Redundancy Rules)
-
-Each piece of information has exactly ONE canonical location. Other files reference, never duplicate.
-
-| Information | Canonical Location |
-|-------------|-------------------|
-| Benchmark figures, the divergence and its decomposition | the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion |
-| Script reference, pipeline method | `knowledge/methods.md` |
-| Category definitions | `assessment/categories.yaml` |
-| Work identity, publication Version, and bibliographic relations | `corpus/work_version_registry.json` and `docs/data/work_version_contract.json` |
-| Theory and operationalization | `knowledge/project.md` |
-| Glossary | `knowledge/INDEX.md` |
-| Remaining work, owner-gated steps and operator decisions | `knowledge/plan.md` |
-| Current result and continuation point | `knowledge/handoff.md` |
-| Authority, lifecycle and publication rules | `knowledge/governance.md` |
-| Technical guarantees | `knowledge/testing.md` |
-| Claim and artifact verification state | `knowledge/verification.md` |
-| Standards (PRISMA, trAIce, RAISE) | `knowledge/standards.md` |
-| Work journal | `knowledge/journal.md` |
-| Subject knowledge of the literature (what the sources say, in which check state) | `research-vault/`, modelled in `knowledge/research-vault.md` |
-
----
-
-## Working Conventions
-
-### Session start
-
-1. Read `knowledge/INDEX.md` (the map), then `knowledge/handoff.md` (current result and continuation point) and `knowledge/plan.md` (remaining work and owner-gated steps).
-2. Check `git status` and `git log -3` (branch and recent commits).
-3. Read `knowledge/journal.md` (last session, open items).
-4. Create a TodoWrite for multi-step tasks.
-
-### Documentation rules
-
-- Language: English for all documentation and code (the journal is a bilingual historical log).
-- No emojis in documentation files.
-- No volatile quantities in prose (see the section above); the date lives in the frontmatter `updated` field, not in a footer.
-- Frontmatter Pflichtkern on every authored knowledge doc: `title, project, method, status, created, updated`; `version` is shared repo-wide; `status` is document maturity, not operative status.
-- Tables for comparisons, lists for enumerations.
-- Update the journal for every substantive session.
-
-### Gates before committing
-
-`npm test` (jsdom harness and Companion smoke suite), `python -m pytest tests/`, and `python -m src.publish.check_claims` when the claims layer was touched. The browser pilot (`npm run pilot`) runs before anything that changes the screening path. A green anchor check is the precondition of the `grounded` status of the claims layer, not a formality.
-
-### Git workflow
-
-- Commit format: `[type]: [description]` (feat, fix, docs, refactor, test, chore).
-- Commit frequently after each logical change.
-- Branch off main for substantial work; NEVER force-push to main.
-- Do not commit secrets, licensed PDFs or full texts, disposable browser output, or `.vault_cache/`. A verified open-access source conversion may be committed when its frontmatter records the stable source, authorship, licence, and conversion provenance. Governed reviewer records and reproducibility manifests are versioned research data and may be committed after their validation gates pass.
-
-### Code rules
-
-- Always read before editing; do not change code not read first.
-- Prefer existing files; do not create new files when editing suffices.
-- IIFE pattern for vanilla JS; CSS inherits from `research.css` with the `pt-*` namespace.
-- Python: `pathlib.Path`, force UTF-8, respect Windows MAX_PATH (truncate titles to 100 chars).
-
-### TodoWrite
-
-Use for multi-step tasks (three or more steps) and long operations. Mark `in_progress` before work and `completed` immediately after; only one task `in_progress` at a time.
-
----
-
-## Known Issues and Gotchas
-
-| Problem | Solution |
-|---------|----------|
-| Windows `nul` file | Ignore (reserved device name, not git-tracked) |
-| "Kernaussage" vs "Kernbefund" | Correct is "Kernbefund" (Core Finding) |
-| Benchmark numbers | The merge bug (sequential ID instead of Zotero_Key, fixed 2026-03-27) made all pre-fix figures wrong. The canonical figures live in the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion; the union-vs-corpus and disagreement-count caveats apply. Do not resurrect old numbers from history. |
-| Source_Tool field | Mostly empty; the provider split is a Zotero-Collections estimate |
-| D3 Sankey links invisible | Use `fill: none` plus `stroke-width`, not `fill` |
-| Title matching | Five-strategy cascade (Stage1-JSON, KD-YAML, filename prefix, author+year, fuzzy) |
-| Windows MAX_PATH | Truncate filenames to 100 chars before the suffix |
-| `human_yes_rate` / `agent_yes_rate` | Scale 0 to 100, not 0 to 1 |
-| Gender category definition | The definition says "explicit gender focus" but experts read feminist theory as gender-relevant; Sonnet follows it literally, Haiku looser. Consider broadening it. |
-
----
-
-## Current completion boundary
-
-The identified corpus, the round-one benchmark, PRISM, the Evidence Companion, and the initial Grounded Vault layers exist. The review is complete when the intended corpus has a reviewed source basis, every productive round-two record has passed the governed lifecycle, the literature analysis is derived from the completed records, Assertions support the report and paper, and domain experts have verified the scholarly outputs. Public projections additionally require publication approval. `knowledge/plan.md` is the canonical forward record.
-
----
-
-*This file is for Claude (me) only. Users should read `knowledge/INDEX.md` instead.*
+# Working rules for FemPrompt SozArb
+
+FemPrompt is a literature review on feminist AI literacies in social work. Project identity and research questions live in [knowledge/project.md](knowledge/project.md), and [knowledge/INDEX.md](knowledge/INDEX.md) owns the glossary and knowledge navigation.
+
+## Session entry
+
+1. Read [knowledge/INDEX.md](knowledge/INDEX.md), [knowledge/handoff.md](knowledge/handoff.md) and the relevant work in [knowledge/plan.md](knowledge/plan.md).
+2. Check `git status`, `git log -3` and the latest entry in [knowledge/journal.md](knowledge/journal.md). Verify state-dependent statements against the current files.
+3. Read the canonical documents relevant to the change before editing. Record a concise execution plan for multi-step work using the current harness's available facilities.
+
+In this project, `knowledge/handoff.md` is the rolling current-state and continuation record. This explicit local convention takes precedence over the generic Process Inbox convention.
+
+| Work | Canonical entry |
+|---|---|
+| Review method, pipeline and script usage | [methods](knowledge/methods.md) |
+| PRISM requirements, architecture decisions and design system | [specification](knowledge/specification.md) |
+| Corpus, Work-Version identity, schemas and local source storage | [data](knowledge/data.md) |
+| Authority, corrections, rights and publication | [governance](knowledge/governance.md) |
+| Setup, local preview, build and technical checks | [testing](knowledge/testing.md) |
+| Evidence and scholarly verification state | [verification](knowledge/verification.md) |
+| Reporting standards | [standards](knowledge/standards.md) |
+| Round-two intake, coding and source review | [update protocol](knowledge/update-protocol.md) |
+| Source-linked subject knowledge and manuscript | [research vault](knowledge/research-vault.md) |
+
+## Research and publication boundaries
+
+- Follow [governance](knowledge/governance.md) and `config/publication_policy.json`. The explicitly authorised preliminary release carries attributed AI source review. Technical validation grants no human verification or publication approval.
+- Build with `npm run build`, verify with `npm run check` and deploy only `build/site/`. The working application under `docs/` includes internal research surfaces and local reading assets. Deployment requires the operator's instruction.
+- Preserve historical annotations and source identity. Corrections follow the hash-bound sidecar and review-receipt contracts. Resolve a changed export deliberately against existing metadata corrections.
+- Treat `generated/distilled/`, including its stage-one JSON and verification records, as historical read-only research material. The legacy `research-vault/10_distillates/` and `20_claims/` are read-only migration sources. New active material follows the [research-vault contract](knowledge/research-vault.md).
+- Preserve local sources under `pipeline/` and `generated/local-source-preservation/` according to [local source preservation](knowledge/data.md#local-source-preservation). They are excluded from Git. A clean Git status does not establish that local data can be deleted. Leave `.vault_cache/` intact.
+- Change prompts through a recorded prompt version or status change. Follow `skills/prism-agent-review/` and its canonical prompt and run manifest for governed annotation work.
+- The canonical manuscript is `research-vault/40_output/paper/paper.md`. The submitted Forum Wissenschaft 2/2026 paper is editorially closed and maintained on Google Docs. Remaining work belongs in [plan](knowledge/plan.md).
+
+## Implementation rules
+
+- Read the actual callers and data flow before changing shared behavior. Preserve existing files and modules where they serve the task.
+- Keep the frontend as vanilla JavaScript without a frontend bundler or runtime framework. The Python build produces data projections and the result site. These are separate parts of the architecture.
+- Use IIFE modules through `window.EC`, the existing `pt-*` design tokens and pinned local assets under `docs/vendor/`. System fonts avoid remote font requests. Apply the detailed [interface requirements](knowledge/specification.md).
+- The optional Knowledge Chat retains its explicit-request and tab-scoped key contract in [specification](knowledge/specification.md). Never commit credentials or contact the provider before the user requests a response.
+- Use `pathlib.Path` and UTF-8 for Python. Preserve the existing script-pipeline layout for bounded edits. Use the established long-path and canonical-text-hash helpers where required. Truncate generated title components to 100 characters for Windows path compatibility.
+- Category definitions come from `assessment/categories.yaml`. Change the source and regenerate its projections rather than editing `docs/data/category_schema.json` directly.
+- Generated artifacts are changed through their generators. Inspect input and output fingerprints after a source edit. `knowledge/project.md` is also a build input.
+
+## Change verification and Git
+
+- Run `npm test` and `python -m pytest tests/` before committing. Run `python -m src.publish.check_claims` when the claims layer changes and `npm run pilot` before integrating changes to the screening path. Apply the additional change gates in [testing](knowledge/testing.md).
+- Run `npm run build` before the integrated `npm run check` when build inputs change. A fresh clone must reconstruct its ignored local reading layer before freshness checks can pass. Follow [clean-checkout verification](knowledge/testing.md#clean-checkout-verification).
+- Branch off `main` for substantial work. Commit coherent verified changes with an imperative `type: description` message. Merges, pushes and deployment require the operator's instruction. Never force-push `main`.
+- Never commit credentials, licensed source PDFs or full texts, browser output or `.vault_cache/`. A reviewed open-access representation requires source-specific rights and conversion provenance. Governed reviewer records and reproducibility manifests are research data and may be committed after their validation gates pass.
+
+## Documentation
+
+- Write repository documentation and code in English. The journal retains its bilingual history. Apply the operator's prose style and use no emojis.
+- Keep one canonical owner for each subject and link to it. Update the responsible knowledge document and add one compact journal entry for each substantive session.
+- Authored knowledge documents carry `title`, `project`, `method`, `status`, `created` and `updated`. Preserve the repository's shared `version` convention. Document maturity does not declare research completion.
+- Keep volatile quantities in their generated data and views. Describe findings qualitatively in durable prose. Dates and quantities in historical journal entries remain part of their original record.
+
+## Interpretation and compatibility constraints
+
+- Use `Kernbefund` for Core Finding.
+- Historical benchmark values before the Zotero-key pairing correction are superseded. Use the canonical benchmark data and [divergence analysis](knowledge/analysis-divergence.md). The agreement output's `meta.total_papers` denotes the union of assessment tracks rather than the corpus.
+- `human_yes_rate` and `agent_yes_rate` use the 0 to 100 scale. `Source_Tool` is often empty, and provider attribution relies on Zotero collections.
+- Source matching uses the established cascade and explicit Work-Version bindings. Filename similarity alone grants no source identity. Category interpretation remains a research decision under [methods](knowledge/methods.md).
+- A D3 Sankey link needs `fill: none` and a stroke width. Windows `nul` is a reserved device name and must not enter the tracked tree.

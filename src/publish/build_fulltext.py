@@ -26,6 +26,8 @@ from tempfile import TemporaryDirectory
 ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
+from src.analysis.work_versions import source_binding_for_record  # noqa: E402
+
 DOCS = ROOT / "docs"
 DATA_IN = DOCS / "data" / "research_vault_v2.json"
 CLEAN_DIR = ROOT / "generated" / "markdown_clean"
@@ -488,12 +490,16 @@ def identity_conflicts(
     return conflicts
 
 
-def registered_source_conflicts(paper: dict[str, object], path: Path) -> bool:
+def registered_source_conflicts(
+    paper: dict[str, object],
+    path: Path,
+    registry: dict[str, object] | None = None,
+) -> bool:
     """Keep a fuzzy legacy match from borrowing another registered Work or Version."""
-    registry_path = ROOT / "corpus/work_version_registry.json"
-    if not paper.get("work_id") or not registry_path.is_file():
+    if registry is None:
+        registry, _ = load_resolution_context()
+    if not paper.get("work_id") or not registry:
         return False
-    registry = json.loads(registry_path.read_text(encoding="utf-8"))
     source_work = registry.get("legacy_work_id_index", {}).get(f"source:{path.name}")
     # A differently named raw conversion may contain the same foreign source.
     # Exact registered titles outrank fuzzy topic overlap in the legacy cascade.
@@ -528,10 +534,11 @@ def verified_source(
     path: Path,
     label: str,
     metadata: dict[str, object] | None = None,
+    registry: dict[str, object] | None = None,
 ) -> tuple[Path | None, str]:
     """Fail closed on identity conflicts or an unsupported filename-only match."""
     conflicts = identity_conflicts(paper, path, metadata)
-    if "doi" in conflicts or registered_source_conflicts(paper, path):
+    if "doi" in conflicts or registered_source_conflicts(paper, path, registry):
         return None, "mismatch"
     expected = str(paper.get("title") or "")
     document_titles = source_titles(path)
@@ -563,7 +570,9 @@ def author_year_key(paper: dict[str, object]) -> str:
     return norm(last) + (year.group(0) if year else "")
 
 
-def curated_source(paper: dict[str, object]) -> tuple[Path | None, str | None]:
+def curated_source(
+    paper: dict[str, object], registry: dict[str, object] | None = None
+) -> tuple[Path | None, str | None]:
     """Resolve a recorded identity repair while retaining deterministic guards."""
     paper_id = str(paper.get("id") or "")
     override = CURATED_SOURCE_OVERRIDES.get(paper_id)
@@ -574,7 +583,7 @@ def curated_source(paper: dict[str, object]) -> tuple[Path | None, str | None]:
     path = base / override["file"]
     if not path.exists():
         raise FileNotFoundError(f"curated full-text source is missing: {path}")
-    if registered_source_conflicts(paper, path):
+    if registered_source_conflicts(paper, path, registry):
         return None, "mismatch"
 
     evidence = override["title_evidence"]
@@ -607,16 +616,49 @@ def clean(text: str) -> str:
     return text.strip() + "\n"
 
 
-def resolve_docling(
-    paper: dict[str, object], clean_idx: dict[str, str], raw_idx: dict[str, str]
-) -> tuple[Path | None, str | None]:
-    """Cascade: exact source_file from the knowledge doc, then first-author-year prefix."""
+def filename_index(paths: list[Path]) -> dict[str, tuple[str, ...]]:
+    """Retain every filename when distinct stems share one normalised key."""
+    grouped: dict[str, list[str]] = {}
+    for path in paths:
+        grouped.setdefault(norm(path.stem), []).append(path.name)
+    return {key: tuple(sorted(names)) for key, names in grouped.items()}
+
+
+def load_resolution_context() -> tuple[dict[str, object], dict[str, object]]:
+    """Load invocation-scoped identity and knowledge-source bindings."""
     registry_path = ROOT / "corpus/work_version_registry.json"
     registry = (
         json.loads(registry_path.read_text(encoding="utf-8"))
         if registry_path.is_file()
         else {}
     )
+    bindings_path = ROOT / "docs/data/knowledge_doc_bindings.json"
+    knowledge_bindings = (
+        json.loads(bindings_path.read_text(encoding="utf-8")).get("bindings", {})
+        if bindings_path.is_file()
+        else {}
+    )
+    return registry, knowledge_bindings
+
+
+def resolve_docling(
+    paper: dict[str, object],
+    clean_idx: dict[str, str | tuple[str, ...]],
+    raw_idx: dict[str, str | tuple[str, ...]],
+    registry: dict[str, object] | None = None,
+    knowledge_bindings: dict[str, object] | None = None,
+) -> tuple[Path | None, str | None]:
+    """Resolve a source using invocation context and the legacy match cascade.
+
+    String index values remain accepted for direct callers that predate collision-safe
+    indexes. The publisher supplies tuples and retains every normalised filename.
+    """
+    if registry is None or knowledge_bindings is None:
+        loaded_registry, loaded_bindings = load_resolution_context()
+        registry = loaded_registry if registry is None else registry
+        knowledge_bindings = (
+            loaded_bindings if knowledge_bindings is None else knowledge_bindings
+        )
     if registry.get("source_index", {}).get(paper.get("id")) and not paper.get(
         "source_binding"
     ):
@@ -624,8 +666,6 @@ def resolve_docling(
             f"{paper.get('id')}: corpus is missing the governed source binding"
         )
     if paper.get("source_binding"):
-        from src.analysis.work_versions import source_binding_for_record
-
         binding = source_binding_for_record(registry, str(paper.get("id", "")), ROOT)
         if (
             binding != paper["source_binding"]
@@ -642,7 +682,7 @@ def resolve_docling(
             )
         label = "clean" if path.parent == CLEAN_DIR else "raw"
         return path, label
-    override_path, override_label = curated_source(paper)
+    override_path, override_label = curated_source(paper, registry)
     if override_path is not None:
         return override_path, override_label
     if override_label == "mismatch":
@@ -650,13 +690,7 @@ def resolve_docling(
     # These curated source filenames must also resolve before a generated
     # manifest exists. Requiring the displayed Knowledge Document here would
     # create a manifest -> document link -> source -> manifest cycle.
-    bindings_path = ROOT / "docs/data/knowledge_doc_bindings.json"
-    bindings = (
-        json.loads(bindings_path.read_text(encoding="utf-8")).get("bindings", {})
-        if bindings_path.is_file()
-        else {}
-    )
-    binding = bindings.get(paper.get("id"))
+    binding = knowledge_bindings.get(str(paper.get("id") or ""))
     if binding:
         filename = local_source_filename(binding["source_file"])
         if filename is None:
@@ -664,7 +698,7 @@ def resolve_docling(
         for directory, label in ((CLEAN_DIR, "clean"), (RAW_DIR, "raw")):
             path = directory / filename
             if path.is_file():
-                return verified_source(paper, path, label)
+                return verified_source(paper, path, label, registry=registry)
         raise ValueError(
             f"{paper.get('id')}: curated Knowledge Document source is missing"
         )
@@ -677,7 +711,7 @@ def resolve_docling(
         if sf:
             if (CLEAN_DIR / sf).exists():
                 resolved = verified_source(
-                    paper, CLEAN_DIR / sf, "clean", metadata=metadata
+                    paper, CLEAN_DIR / sf, "clean", metadata=metadata, registry=registry
                 )
                 if resolved[0]:
                     return resolved
@@ -685,7 +719,7 @@ def resolve_docling(
                 rejected.add(("clean", sf))
             if (RAW_DIR / sf).exists():
                 resolved = verified_source(
-                    paper, RAW_DIR / sf, "raw", metadata=metadata
+                    paper, RAW_DIR / sf, "raw", metadata=metadata, registry=registry
                 )
                 if resolved[0]:
                     return resolved
@@ -706,7 +740,9 @@ def resolve_docling(
                         explicit_mismatch = True
                         rejected.add((label, sf))
                         continue
-                    resolved = verified_source(paper, path, label, metadata=metadata)
+                    resolved = verified_source(
+                        paper, path, label, metadata=metadata, registry=registry
+                    )
                     if resolved[0]:
                         return resolved
                     explicit_mismatch = True
@@ -719,11 +755,19 @@ def resolve_docling(
         ):
             hits = sorted(
                 fn
-                for stem_norm, fn in idx.items()
-                if stem_norm.startswith(key) and (label, fn) not in rejected
+                for stem_norm, indexed_names in idx.items()
+                if stem_norm.startswith(key)
+                for fn in (
+                    (indexed_names,)
+                    if isinstance(indexed_names, str)
+                    else indexed_names
+                )
+                if (label, fn) not in rejected
             )
             if len(hits) == 1:
-                resolved = verified_source(paper, base / hits[0], label)
+                resolved = verified_source(
+                    paper, base / hits[0], label, registry=registry
+                )
                 if resolved[0]:
                     return resolved
                 explicit_mismatch = True
@@ -732,7 +776,7 @@ def resolve_docling(
                 ranked: list[tuple[float, str]] = []
                 for filename in hits:
                     path = base / filename
-                    resolved = verified_source(paper, path, label)
+                    resolved = verified_source(paper, path, label, registry=registry)
                     if resolved[0]:
                         candidates = [*source_titles(path), filename_title(path)]
                         ranked.append(
@@ -788,8 +832,9 @@ def main() -> int:
         print(f"ERROR: {DATA_IN} not found", file=sys.stderr)
         return 1
     papers = json.loads(DATA_IN.read_text(encoding="utf-8")).get("papers", [])
-    clean_idx = {norm(p.name[:-3]): p.name for p in CLEAN_DIR.glob("*.md")}
-    raw_idx = {norm(p.name[:-3]): p.name for p in RAW_DIR.glob("*.md")}
+    registry, knowledge_bindings = load_resolution_context()
+    clean_idx = filename_index(list(CLEAN_DIR.glob("*.md")))
+    raw_idx = filename_index(list(RAW_DIR.glob("*.md")))
 
     OUT_DIR.parent.mkdir(parents=True, exist_ok=True)
     manifest: dict[str, dict[str, object]] = {}
@@ -804,7 +849,9 @@ def main() -> int:
             pid = paper.get("id")
             if not isinstance(pid, str) or not pid:
                 continue
-            path, src = resolve_docling(paper, clean_idx, raw_idx)
+            path, src = resolve_docling(
+                paper, clean_idx, raw_idx, registry, knowledge_bindings
+            )
             if not path:
                 manifest[pid] = {
                     "src": "none",

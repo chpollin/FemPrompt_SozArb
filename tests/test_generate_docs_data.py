@@ -320,6 +320,36 @@ def test_published_records_and_fulltext_manifest_share_exact_version_identity() 
         assert source["preferred_version_id"] == paper["preferred_version_id"]
 
 
+def test_record_aliases_share_only_exact_registry_versions() -> None:
+    registry = json.loads(
+        (ROOT / "corpus/work_version_registry.json").read_text(encoding="utf-8")
+    )
+    record_index = registry["record_index"]
+    aliases_by_version = docs_data.build_record_alias_index(record_index)
+    shared_document = dict(record_index["25XSMXKT"])
+    existing_document = dict(record_index["GUMWKBN6"])
+    documents = {
+        "25XSMXKT": shared_document,
+        "GUMWKBN6": existing_document,
+        "2SLISKSW": dict(record_index["2SLISKSW"]),
+    }
+
+    docs_data.propagate_record_aliases(
+        documents,
+        record_index,
+        aliases_by_version,
+    )
+
+    assert record_index["25XSMXKT"] == record_index["GUMWKBN6"]
+    assert documents["GUMWKBN6"] is existing_document
+    assert documents["Y4BMCI2J"] is shared_document
+    assert record_index["2SLISKSW"]["work_id"] == record_index["Z9BIKVS3"]["work_id"]
+    assert (
+        record_index["2SLISKSW"]["version_id"] != record_index["Z9BIKVS3"]["version_id"]
+    )
+    assert "Z9BIKVS3" not in documents
+
+
 def test_atomic_write_preserves_previous_file_when_serialization_fails(
     tmp_path: Path,
     monkeypatch,

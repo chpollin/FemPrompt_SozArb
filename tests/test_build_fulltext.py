@@ -171,6 +171,33 @@ def test_ambiguous_fallback_is_refused(
     assert src == "ambiguous"
 
 
+def test_normalised_filename_collision_retains_both_real_source_variants(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    real_paper = _real_paper("BHXDU7VM")
+    real_source = ROOT / str(real_paper["source_binding"]["source_path"])
+    clean_dir = tmp_path / "clean"
+    clean_dir.mkdir()
+    first = clean_dir / "Chatterji_2025_How_People_Use_ChatGPT.md"
+    second = clean_dir / "Chatterji-2025-How-People-Use-ChatGPT.md"
+    for target in (first, second):
+        target.write_bytes(real_source.read_bytes())
+    monkeypatch.setattr(bf, "CLEAN_DIR", clean_dir)
+    paper = {
+        "id": "collision-fixture",
+        "title": real_paper["title"],
+        "author_year": real_paper["author_year"],
+        "authors": real_paper["authors"],
+        "year": real_paper["year"],
+    }
+
+    clean_idx = bf.filename_index(list(clean_dir.glob("*.md")))
+    path, source = bf.resolve_docling(paper, clean_idx, {}, {}, {})
+
+    assert clean_idx[bf.norm(first.stem)] == tuple(sorted((first.name, second.name)))
+    assert (path, source) == (None, "ambiguous")
+
+
 def test_ambiguous_clean_does_not_fall_through_to_raw(
     tmp_path: Path, monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -620,6 +647,64 @@ def test_main_publishes_assets_and_manifest_as_one_build(
     assert published["src"] == "clean"
     assert published["work_id"] == "work:test"
     assert published["version_id"] == "version:test"
+
+
+def test_main_loads_fresh_resolution_context_once_per_invocation(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    papers = [_real_paper(paper_id) for paper_id in ("ZLMLP53P", "T8R8RKX9")]
+    registry = json.loads(
+        (ROOT / "corpus/work_version_registry.json").read_text(encoding="utf-8")
+    )
+    knowledge_bindings = json.loads(
+        (ROOT / "docs/data/knowledge_doc_bindings.json").read_text(encoding="utf-8")
+    )
+    _configure_build(tmp_path, monkeypatch)
+    bf.DATA_IN.write_text(
+        json.dumps({"papers": papers}),
+        encoding="utf-8",
+    )
+    corpus = tmp_path / "corpus"
+    corpus.mkdir()
+    registry_path = corpus / "work_version_registry.json"
+    bindings_path = tmp_path / "docs/data/knowledge_doc_bindings.json"
+    observed: list[tuple[bool, bool]] = []
+    loads = 0
+    real_loader = bf.load_resolution_context
+
+    def count_loads() -> tuple[dict[str, object], dict[str, object]]:
+        nonlocal loads
+        loads += 1
+        return real_loader()
+
+    def capture_context(
+        paper: dict[str, object],
+        clean_idx: dict[str, tuple[str, ...]],
+        raw_idx: dict[str, tuple[str, ...]],
+        registry: dict[str, object],
+        knowledge_bindings: dict[str, object],
+    ) -> tuple[None, None]:
+        paper_id = paper["id"]
+        observed.append(
+            (
+                paper_id in registry.get("record_index", {}),
+                paper_id in knowledge_bindings,
+            )
+        )
+        return None, None
+
+    monkeypatch.setattr(bf, "load_resolution_context", count_loads)
+    monkeypatch.setattr(bf, "resolve_docling", capture_context)
+    registry_path.write_text(json.dumps(registry), encoding="utf-8")
+    bindings_path.write_text(json.dumps(knowledge_bindings), encoding="utf-8")
+    assert bf.main() == 0
+
+    registry_path.write_text(json.dumps({"record_index": {}}), encoding="utf-8")
+    bindings_path.write_text(json.dumps({"bindings": {}}), encoding="utf-8")
+    assert bf.main() == 0
+
+    assert loads == 2
+    assert observed == [(True, True), (True, True), (False, False), (False, False)]
 
 
 def test_main_preserves_previous_build_when_generation_fails(

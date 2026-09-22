@@ -620,6 +620,28 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     return parser.parse_args(argv)
 
 
+def build_record_alias_index(
+    record_index: dict[str, dict[str, str]],
+) -> dict[tuple[str, str], list[str]]:
+    aliases_by_version: dict[tuple[str, str], list[str]] = {}
+    for record_id, reference in record_index.items():
+        exact_reference = (reference["work_id"], reference["version_id"])
+        aliases_by_version.setdefault(exact_reference, []).append(record_id)
+    return aliases_by_version
+
+
+def propagate_record_aliases(
+    documents: dict[str, dict[str, Any]],
+    record_index: dict[str, dict[str, str]],
+    aliases_by_version: dict[tuple[str, str], list[str]],
+) -> None:
+    for bound_key, document in list(documents.items()):
+        reference = record_index[bound_key]
+        exact_reference = (reference["work_id"], reference["version_id"])
+        for alias in aliases_by_version[exact_reference]:
+            documents.setdefault(alias, document)
+
+
 def main(argv: Sequence[str] | None = None) -> None:
     args = parse_args(argv)
     print("Loading input files...")
@@ -641,12 +663,10 @@ def main(argv: Sequence[str] | None = None) -> None:
     work_version_registry = load_registry(INPUT_WORK_VERSION_REGISTRY)
     active_distillates = project_active_distillates(REPO_ROOT)
     recovered_knowledge = project_recovered_knowledge(REPO_ROOT, fulltext_manifest)
+    record_index = work_version_registry["record_index"]
+    aliases_by_version = build_record_alias_index(record_index)
     for documents in (active_distillates, recovered_knowledge):
-        for bound_key, document in list(documents.items()):
-            reference = work_version_registry["record_index"][bound_key]
-            for alias, alias_reference in work_version_registry["record_index"].items():
-                if alias_reference == reference:
-                    documents.setdefault(alias, document)
+        propagate_record_aliases(documents, record_index, aliases_by_version)
     sync = (
         json.loads(INPUT_ZOTERO_SYNC.read_text(encoding="utf-8"))
         if INPUT_ZOTERO_SYNC.is_file()

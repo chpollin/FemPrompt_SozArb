@@ -45,9 +45,12 @@ missing_pdfs.csv
 # Pipeline generated images (too large for Git, ~2-3 GB)
 generated/pdf_images/
 
-# Dissolved pre-restructure pipeline/ tree (moved to generated/ and src/ on 2026-06-30);
-# a ~3.5 GB untracked leftover on disk (pdf_images, pdfs, scripts, validation_reports)
+# Historical local acquisition sources, still referenced by source-review records.
+# Preserve these paths until a provenance-aware source migration replaces them.
 pipeline/
+
+# Local sources and historical outputs retained when consolidating worktrees.
+generated/local-source-preservation/
 
 # Pipeline runtime/test artifacts
 .pipeline_status.json
