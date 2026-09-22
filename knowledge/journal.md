@@ -24,6 +24,10 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## PRISM and the epistemic infrastructure (2026)
 
+### 2026-09-22: Integrate the completed work on main
+
+The operator requested that all completed work be available on `main` for continuation on the laptop. The provenance-readiness branch was integrated by fast-forward after checking local and remote ancestry. [[handoff]] now directs the next session to `main`, and the completed branch-promotion task was removed from [[plan]]. Research data and implementation remain unchanged by this integration. Deployment and transfer of ignored local sources remain separate operations.
+
 ### 2026-09-22: Curate the active knowledge contracts
 
 The working plan no longer repeats completed provenance work, resolved initial bibliographic repairs or the import execution history. Zotero commands and matching rules now belong to [[methods#Zotero reconciliation and import]], while [[governance#Authorised additive Zotero import]] preserves the creation-only authority, distinct credential requirements and private-receipt boundary. Historical entries retain their decisions and follow the moved references. The unused modularisation suggestion was removed from remaining work.

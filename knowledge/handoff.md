@@ -20,7 +20,7 @@ related: [INDEX, plan, journal, governance, verification, testing]
 
 ## Current result
 
-Continue on `refactor/provenance-readiness`, tracking `origin/refactor/provenance-readiness`. The implementation and knowledge curation through commit `dc4816b` were pushed and the remote hash was verified on 22 September 2026. This branch also contains the preceding repository consolidation and source-preparation work. Checking out `main` alone does not retrieve the latest changes. No result-site deployment was performed during this work.
+Continue on `main`, tracking `origin/main`. On 22 September 2026 the operator requested all completed work on `main`. The provenance refactor, knowledge curation and laptop handoff were integrated by fast-forward from `refactor/provenance-readiness`, preserving the preceding repository consolidation and source-preparation history. No result-site deployment was performed during this work.
 
 The technical refactor and repository knowledge curation are complete within their recorded scope. The literature review, full-corpus preparation and manuscript remain unfinished. [[plan]] owns remaining work, [[verification]] owns the evidence and authority register, and [[journal]] preserves the detailed decision history.
 
@@ -76,7 +76,7 @@ Run these commands in the existing FemPrompt repository. Inspect `git status` fi
 ```powershell
 git status
 git fetch origin
-git switch refactor/provenance-readiness
+git switch main
 git pull --ff-only
 ```
 

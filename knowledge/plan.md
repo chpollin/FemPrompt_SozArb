@@ -145,7 +145,6 @@ Agent preparation supplies the evidence for domain-expert verification. The acce
 These steps still need an operator contribution. Additive Zotero import has its own explicit authorisation under [[governance#Authorised additive Zotero import]].
 
 - Curation of ambiguous duplicate and Version relations in Zotero remains separate from adding missing records. Existing group records are not silently merged or rewritten. The canonical corpus retains historical records alongside live additions. `corpus/zotero_sync.json` records their library membership and confirmed aliases, while the metadata corrections and source holds remain in force.
-- Promotion of implementation branches to `main`. Merges remain operator-gated. [[handoff]] identifies the integrated baseline and the current follow-up branch.
 - Deployment of the result site. `.github/workflows/pages.yml` runs only on manual dispatch from `main`, builds and checks the project, and uploads `build/site/`. The repository's Pages source must be set to GitHub Actions beforehand. A local build does not establish the deployed state, which must be checked when deployment is commissioned.
 - Acceptance session of PRISM with the domain experts. The user stories in [[specification]] were written by the technical lead as a user proxy, and the verification mode has been exercised by automated tests and agents only. The repository records no session in which the domain experts worked through prepared records in the tool.
 - Resolution of the works with conflicts or holds listed below.
