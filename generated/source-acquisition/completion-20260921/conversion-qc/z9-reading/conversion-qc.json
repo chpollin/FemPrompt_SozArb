@@ -1,0 +1,106 @@
+{
+  "schema": "femprompt-conversion-qc/0.1",
+  "created_at": "2026-09-29T12:35:00+00:00",
+  "scope": "Independent conversion QC of the Z9DNTBFF reading copy and its figure assets against the Version of Record PDF, limited to the repairs claimed in the reading repair manifest and to preservation of the identity-bound body. This QC grants no scientific acceptance, screening decision, registry authority, Knowledge Document authority, human verification, or publication authority.",
+  "reviewer": {
+    "agent_id": "claude-code/conversion-qc-reviewer",
+    "model": "claude-opus-5-5",
+    "independence": "Separate agent instance without access to the producer's working context. The producer claude-code/source-repair ran on the same model, so this review is independent of the production run but not of the model family."
+  },
+  "method": [
+    "Verified the PDF, reading copy, identity-bound conversion, repair manifest, asset manifest and all five PNG assets with src.assess.artifact_verification.artifact_hash; every hash matches its manifest.",
+    "Diffed the LF-normalised reading copy against the identity-bound conversion. The only removed line is the front-matter transformation statement; every body line is preserved and all additions are front matter, the repair-provenance paragraph, LaTeX equations and blockquoted repair notes.",
+    "Compared the five PNG assets pixel by pixel with the embedded image XObjects on PDF pages 3 to 5 (PyMuPDF). All five are identical in RGB samples; their soft masks are fully opaque.",
+    "Rendered PDF pages 1 to 5 and 8 at 200 dpi and page regions at 400 to 500 dpi and compared every equation, the Table 1 score column, Table 2 rows, Table 3 probabilities and marks, and the Figure 1 and Table 4 descriptions.",
+    "Measured Figures 2 to 4 on the asset rasters independently: located the 2-pixel tick marks left of the y-axis spine, fitted the linear scale (maximum tick residual 0.003), and read bar ends, arrow tips and arrow shaft ends from colour masks of the plotted blue and orange.",
+    "Measured Figures 5a and 5b on the asset rasters: located the x-axis ticks (residual below 0.001), detected dot runs by colour along the axis row, and resolved overlapping dots from dot diameter and top-edge profiles."
+  ],
+  "records": [
+    {
+      "record_id": "Z9DNTBFF",
+      "pdf_path": "generated/pdfs/completion-20260921/oa-batch/Z9DNTBFF.pdf",
+      "pdf_sha256": "sha256:cc714d9d7f9ecdcbc39667b9a2cc6b9a23096f4f30896db54d8a63c9f765236e",
+      "markdown_path": "corpus/source-acquisition/completion-20260921/Z9DNTBFF-reading.md",
+      "markdown_sha256": "sha256:2c894a137e3318bef2866b38c8d25f7660585706530bbfd4102081a579f003ae",
+      "identity_bound_markdown_path": "corpus/source-acquisition/completion-20260921/Z9DNTBFF.identity-bound.md",
+      "identity_bound_markdown_sha256": "sha256:729606223c6f936d78f837d285ae84f5d18f010b62af7dfa793cce64119fd3c0",
+      "repair_manifest_path": "generated/source-acquisition/completion-20260921/conversion-qc/Z9DNTBFF-reading-repair-manifest.json",
+      "repair_manifest_sha256": "sha256:79b2278ee2d7fefa4fcace9bf79d210609159a84aebc0bb97a40980a718321cf",
+      "reading_assets_path": "corpus/source-acquisition/completion-20260921/reading-assets/Z9DNTBFF-assets.json",
+      "reading_assets_sha256": "sha256:9f4ddfc9f08d57400eb298314c5d13f14b470a5eaa8db9fefd015f128fa60420",
+      "asset_sha256": {
+        "Z9DNTBFF-figure-2.png": "sha256:61ebc0a7b6689dadd84c2563b349efe0fea531bfedf14c6235335b964480a243",
+        "Z9DNTBFF-figure-3.png": "sha256:dc60adc01b340bb0450bc02ec584c1eb6f2e2933e2493380d0eda91b9604d98b",
+        "Z9DNTBFF-figure-4.png": "sha256:322b0022f56e94dd1e7fdf5b3100280f7a05a3997081e27ee738e122061aa856",
+        "Z9DNTBFF-figure-5a.png": "sha256:4d478a5269c2566323ee2b9c76c8b994a717913a51216d0dc69d0a35325d04a2",
+        "Z9DNTBFF-figure-5b.png": "sha256:47151872b1847e555de449ae1fae2c5fc5b1adb6a2ad2f970879bd5de62f5c68"
+      },
+      "pages_total": 9,
+      "pages_visually_inspected": [1, 2, 3, 4, 5, 8],
+      "result": "changes_required",
+      "structure": {
+        "headings": "Unchanged from the identity-bound conversion.",
+        "formulas": "All displayed equations on PDF pages 2 to 4 match their LaTeX transcriptions: P_{L/VL}(E|g), S(E,g), S_L(E,g) as expectation over I_E, the averaged visual probability over I_g, B(E) = S(E,f) - S(E,m), and the two-line S_L(E,m/f) and B_L^{VLBert}(E) definition.",
+        "tables": "Table 1 association-score column matches all three rows, including the man -> person modification. Table 2 now carries the three printed rows with purse/briefcase, apron/suit and wine/beer. Table 3 probabilities 0.0018, 0.4944, 0.084 and 0.067 and their check and cross marks match the page.",
+        "figures": "Figures 2, 3, 4 and 5a match the independent measurements. Figure 5b has wrong values for the labelled positive entities and a false statement about the unlabelled dots."
+      },
+      "verified_repairs": [
+        "Equations on pages 2, 3 and 4 match the printed displays.",
+        "Table 1 association-score column and image description (the same photograph of a man drinking beer from a glass in both image rows) match page 2.",
+        "Table 2 row alignment and the restored entity wine match page 3.",
+        "Figure 2 (asset figure-2): all twelve tip values agree with the independent reading within 0.01 (for example male briefcase tip measured 1.08, recorded 1.09). Shaft ends agree within 0.01. The measured head length is 0.15 to 0.16 for every full arrow, which confirms the stated constant of about 0.15.",
+        "Figure 3 (asset figure-3): all eleven visible bars agree within 0.01 (purse 0.86 / -1.15, briefcase -0.14 / 0.40, apron 0.35 / 0.05, suit -0.06 / 0.07, wine -0.03 / 0.03, beer male 0.28); no blue bar exists for female beer.",
+        "Figure 4 (asset figure-4): all twelve bars agree within 0.01 (purse 2.55 / 0.45, briefcase 2.83 / 3.97, apron 5.59 / 4.72, suit 1.90 / 2.11, wine 2.61 / 2.60, beer 1.64 / 2.33).",
+        "Figure 5a (asset figure-5a): all 39 recorded positions agree with the independent reading within about 0.01, and the colour assignment of each label matches the dot colour (22 orange, 17 blue).",
+        "Table 3 and Table 4 image descriptions match pages 4 and 8.",
+        "Assets are the unmodified embedded rasters and the photographs are not reproduced."
+      ],
+      "open_points_review": [
+        "Figure 5a open point is stated accurately. The plot carries 39 legible labels and 39 separable dots (22 orange, 17 blue) while the caption names 40 entities. Top-edge profiles of every overlapping run are consistent with the labelled number of dots, so a hidden fortieth dot cannot be located; it would have to coincide almost exactly with another dot.",
+        "Figure 2 arrow open point is stated accurately. The paper does not say whether shaft end or tip marks the score, and both columns are recorded consistently."
+      ],
+      "required_changes": [
+        {
+          "location": "Z9DNTBFF-reading.md, repair note Figure 5b (reading-copy line 313)",
+          "severity": "blocking",
+          "finding": "The labelled positive entities are assigned to the wrong dots. The label aviator stands over the dot at about 0.63 and the label cigar over the dot at about 0.90 (raster x 1626 and 1824 against ticks at 0.5 = 1529.5 and 1.0 = 1901.5, 0.00134 units per pixel). The note records aviator 0.31 and cigar 0.63.",
+          "required": "Record aviator at about 0.63 and cigar at about 0.90."
+        },
+        {
+          "location": "Z9DNTBFF-reading.md, repair note Figure 5b (reading-copy line 313)",
+          "severity": "blocking",
+          "finding": "The sentence 'All unlabelled dots lie between about -0.9 and just below 0.0, so aviator and cigar are the only entities with a positive difference' is false. Five unlabelled dots lie above zero, two at about 0.09 and 0.11 and three at about 0.27, 0.27 and 0.31. The leftmost unlabelled dot is at about -0.89.",
+          "required": "State that unlabelled dots range from about -0.89 to about 0.31, with five unlabelled dots above zero, and drop the claim that aviator and cigar are the only positive entities."
+        },
+        {
+          "location": "Z9DNTBFF-reading.md, repair note Figure 5b (reading-copy line 313)",
+          "severity": "minor",
+          "finding": "The number line is described as running from about -1.4 to 1.0. The printed ticks run from -1.0 to 1.0 and the axis arrows reach about -1.5 and 1.5; -1.4 is the position of the cat dot, not an axis bound.",
+          "required": "Describe the axis as ticked from -1.0 to 1.0 with arrows to about +/-1.5."
+        },
+        {
+          "location": "Z9DNTBFF-reading.md, repair note Figure 3 (reading-copy line 188)",
+          "severity": "minor",
+          "finding": "The note states a resolution of about 0.005 score units per pixel. The Figure 3 raster resolves 0.0024 units per pixel (Figure 2: 0.0046, Figure 4: 0.0059, where 'about 0.005' holds). The recorded values themselves are correct.",
+          "required": "State about 0.0024 score units per pixel for Figure 3."
+        },
+        {
+          "location": "Z9DNTBFF-reading.md, repair note Figure 1 (reading-copy line 51)",
+          "severity": "minor",
+          "finding": "The bottom-row man carries a brown checked handbag; the note calls it a 'travel bag'. The figure's argument, stated in the introduction, is that the visual evidence shows a purse which the model overrides, so the wording weakens the described visual evidence. The purse bar reaches about 43 percent of the briefcase bar, which 'roughly half' approximates.",
+          "required": "Describe the bag as a brown checked handbag."
+        }
+      ],
+      "non_blocking_observations": [
+        "Figure 3 plot frame runs down to about -1.30 rather than the stated 'about -1.2'; the ticks run from -1.0 to 1.0.",
+        "A jersey position of -1.864 rounds to -1.86 rather than the recorded -1.87, and steak lies at about -0.53 to -0.54 because its dot is cut by the -0.5 tick; both are within the stated 0.01 uncertainty."
+      ],
+      "losses": [
+        "The reading remains a linearised representation; photographs of Figure 1 and Tables 1, 3 and 4 are described, not reproduced.",
+        "Plot values are readings of rasters, not values reported by the authors."
+      ],
+      "assessment": "Equations, tables and the measured values of Figures 2, 3, 4 and 5a are faithful, and no source-body line was lost. The Figure 5b repair note assigns the labelled positive entities to the wrong dots and states a false distribution of the unlabelled dots, which misrepresents the only quantitative content of that panel. The reading copy is not accepted and the record stays bound to the identity-bound conversion until the listed changes are made and re-reviewed.",
+      "inspection_artifacts": []
+    }
+  ]
+}
