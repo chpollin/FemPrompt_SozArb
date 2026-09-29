@@ -10,7 +10,7 @@ status: active
 language: de
 version: "0.7"
 created: 2026-02-18
-updated: 2026-09-22
+updated: 2026-09-29
 authors: [Christopher Pollin]
 generated-with: Claude Code
 related: [INDEX, plan, specification, governance, verification, handoff]
@@ -23,6 +23,12 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 ---
 
 ## PRISM and the epistemic infrastructure (2026)
+
+### 2026-09-29: Remove copyrighted full texts from the public repository
+
+The operator decided that copyrighted, paywalled full texts may no longer be tracked. The Docling conversions, the cleaned and repaired source-acquisition Markdown and the captured article texts without a recorded licence left the Git index and are now ignored. Texts whose exact file carries a recorded licence or permission that allows redistribution stay versioned. The history was not rewritten, so earlier commits still contain the removed files.
+
+A clean clone previously rebuilt its outputs from the tracked texts, and the committed build manifest hashed them. Hash-bound records now resolve absent texts through `generated/local-fulltext-ledger.json`, and the text-free `docs/data/fulltext_manifest.json` is versioned as the resolution record. Builds with and without the texts produced byte-identical committed outputs. The source fingerprints of the registry and its dependants changed once, because they now digest file hashes instead of bytes. Tests that resolve real conversions skip with a named reason where the texts are absent. Canonical rules live in [[data#Local-only full texts]]. The untracked `reacquisition-2026-09-22/` folder on the desktop still contributes non-text inputs to the desktop build manifest and needs a deliberate commit-or-ignore decision.
 
 ### 2026-09-22: Referenzen sichtbar, Werkzeugleiste in der Korpusspalte, Anleitung für die Verifikationsrolle
 

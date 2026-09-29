@@ -10,7 +10,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-08-23
-updated: 2026-09-22
+updated: 2026-09-29
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6), Codex (GPT-6)
 topics: ["[[Research Governance]]", "[[Provenance]]", "[[Human-in-the-Loop]]"]
@@ -73,6 +73,8 @@ The operator authorised an explicitly attributed AI-source-reviewed result relea
 AI corrections live in immutable, attributed sidecar artifacts under `generated/verification/screening-corrections-*.json`. Each binds the original record hash, field-level before/after values, reason, actor and time. A later source-review receipt checks the correction. Contract 0.1 permits supported `AN_` analysis changes; contract 0.2 additionally permits the explicitly bounded Fairness 2→1 adjustment and exact existing Paper-quotation corrections against a separately registered source Version. The publisher preserves the derived decision, original screening document and historical annotations. A changed base record invalidates its correction. Bibliographic/version conflicts remain withheld until an attributed metadata or exact-source reconciliation has actually resolved them. Ambiguous interpretation remains explicit until reviewed. A review of a corrected projection must target its correction artifact; a review of the original record remains attached to that original artifact.
 
 `build/site/` is the allowlisted result artifact. It contains released source-linked Assertions, reviewed Work-level screening, selected bibliographic metadata and a download built from those same datasets. `docs/` contains the working PRISM/Companion surfaces and must not be deployed wholesale. The repository remains an attributed research working record; the result-site boundary does not make existing repository files or Git history private. Human verification and approval remain necessary for the final scholarly manuscript, as distinguished from this labelled preliminary release.
+
+Third-party full texts are not part of the public repository since the operator decision of 29 September 2026. A text stays versioned only when a repository record names that exact file together with a licence or permission that allows redistribution. [[data#Local-only full texts]] names the excluded paths, the retained exceptions and the hash ledger that keeps committed outputs reproducible without the texts. Commits before that date still contain the excluded files, because the history was not rewritten.
 
 Later negative reviews of a screening record or its correction family suppress earlier acceptances; they never reactivate an older coding. One attributed review session may reject the exact original and accept its hash-bound correction at the same timestamp when agent, model and original/base hash match. Other conflicting simultaneous family outcomes stop publication. Canonical projection permits only an explicitly checked mapping of missing or recognised matching legacy identifiers; foreign Work/Version evidence cannot be relabelled by attaching a receipt.
 
