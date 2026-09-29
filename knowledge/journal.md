@@ -24,6 +24,12 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## PRISM and the epistemic infrastructure (2026)
 
+### 2026-09-29: Second conversion QC of Z9DNTBFF and the blocked Knowledge Document revision
+
+A second reviewer instance, separate from the producer, the correction and the first reviewer, remeasured every required change of *Worst of Both Worlds* on the figure rasters and the rendered PDF and accepted the corrected reading copy for text assessment. Only the four corrected lines differ from the version the first QC saw, the assets are unchanged, and every identity-bound body line is preserved. The receipt lives in `conversion-qc/z9-reading-r2/`, a separate directory because the readiness inventory reads receipts only under the name `conversion-qc.json`.
+
+A producer revision of the mental-health bias Knowledge Document answered the requested review changes. It names equalized odds, counts six factors plus their combinations, adds the four encoder baselines, marks the synthetic-identity remark as the document's own inference, records where the plotted Figure 3 values contradict the authors' claim about nationality and replaces the stale conversion limitation. The revision stays uncommitted. The validator requires the `source-representation` of a prepared or reviewed distillate to equal the canonical binding, so the build stops whenever distillate and binding disagree, whichever of them changes first. Revision, review and rebinding have to land together, as they did for `J4K3XA52`. The `Z9DNTBFF` Knowledge Document was therefore not revised.
+
 ### 2026-09-29: Z9DNTBFF figure-note corrections and the 9ZKZQM63 Knowledge Document review
 
 The corrections required by the conversion QC of *Worst of Both Worlds* were remeasured on the figure rasters and the rendered PDF before they were applied. In Figure 5b aviator lies at about 0.63 and cigar at about 0.90, five unlabelled dots lie above zero and the axis is ticked from -1.0 to 1.0. Figure 3 resolves about 0.0024 score units per pixel, and the Figure 1 bag is a checked handbag. Both non-blocking observations held on the raster, so the Figure 3 frame and the Figure 5a jersey position were corrected as well. The repair manifest records the correction as an event and the copy awaits a new independent QC, because a correction by the repairing side cannot accept itself.
