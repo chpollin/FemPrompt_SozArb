@@ -8678,7 +8678,7 @@
     "targeted_followup_search_date": "2026-09-05",
     "targeted_gap_fill_candidates": true
   },
-  "source_fingerprint": "sha256:0ab4b0df536e7b657b2bf8f1718b0224dae3af4279a20b5befebeb5cae674c93",
+  "source_fingerprint": "sha256:5b3f6a30a747f83a64df54f5719af800fa74a95a03a52bf879f0cc1237bfc82c",
   "sources": [
     {
       "path": "assessment/categories.yaml",
@@ -8858,7 +8858,7 @@
     },
     {
       "path": "corpus/work_version_registry.json",
-      "sha256": "8f7cf78af59a8c7266cc6d7eef8b73bda6ad3efb0a45f47172c21982b22a3c54"
+      "sha256": "77e727596ebdd9cacc6da341e265e8aec2558b48352768db5ca1d617e103b1e7"
     },
     {
       "path": "corpus/zotero_export.json",
@@ -8898,7 +8898,7 @@
     },
     {
       "path": "docs/data/research_vault_v2.json",
-      "sha256": "534bfe7ce8e2b8b49ef42795e1f993ba94f63f0f6c1f8913b0f56a5834746971"
+      "sha256": "78683e583bf628011dcc7bcdb59f69b5706e361eb07d2744b1049e0b2c4edbeb"
     },
     {
       "path": "docs/data/screening/ar2.json",
@@ -9446,7 +9446,7 @@
     },
     {
       "path": "docs/vault/Papers/active-completion-9zkzqm63-bias-mental-health-llms.md",
-      "sha256": "4ae3afa3381fc4cd93ec67e1cdf2cb5bcebe06a92fdee1ef8a391cf03833c246"
+      "sha256": "8c23bf30bfbeeb1becf01c33fab0dcd2f0ae24a17f5dcdc73fe0e72d4baeb78c"
     },
     {
       "path": "docs/vault/Papers/active-completion-a2p8mxmy-algorithmic-justice-child-protection.md",
@@ -9702,7 +9702,7 @@
     },
     {
       "path": "generated/agent-screening-queue.json",
-      "sha256": "f634c9859527d7d81f9d1da89fcea953415b8662e35ba00bcb841bc3b4955bb4"
+      "sha256": "6e1ac8b225b42511aa69eff5e7ea1a45ffd3ca11c1cac02567185a2c2a5db0b3"
     },
     {
       "path": "generated/conformance/conformance_map.yaml",
@@ -11418,7 +11418,7 @@
     },
     {
       "path": "research-vault/20_distillates/publications/completion-9zkzqm63-bias-mental-health-llms.md",
-      "sha256": "4ae3afa3381fc4cd93ec67e1cdf2cb5bcebe06a92fdee1ef8a391cf03833c246"
+      "sha256": "8c23bf30bfbeeb1becf01c33fab0dcd2f0ae24a17f5dcdc73fe0e72d4baeb78c"
     },
     {
       "path": "research-vault/20_distillates/publications/completion-a2p8mxmy-algorithmic-justice-child-protection.md",

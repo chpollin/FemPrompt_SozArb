@@ -5,11 +5,11 @@
   "authority_rule": "Any human annotation covers the canonical work; duplicate records do not trigger reassessment.",
   "sources": {
     "research_vault": "docs/data/research_vault_v2.json",
-    "research_vault_sha256": "534bfe7ce8e2b8b49ef42795e1f993ba94f63f0f6c1f8913b0f56a5834746971",
+    "research_vault_sha256": "78683e583bf628011dcc7bcdb59f69b5706e361eb07d2744b1049e0b2c4edbeb",
     "fulltext_manifest": "docs/data/fulltext_manifest.json",
-    "fulltext_manifest_sha256": "b6a31433de756b79f8f4cbad45dc44410e93e51d6a500e2eb24a558d73776712",
+    "fulltext_manifest_sha256": "f6e51e889b4d61f1705a336e507ce50cdb87273a381614f57491384d67470d7b",
     "work_version_registry": "corpus/work_version_registry.json",
-    "work_version_registry_sha256": "8f7cf78af59a8c7266cc6d7eef8b73bda6ad3efb0a45f47172c21982b22a3c54",
+    "work_version_registry_sha256": "77e727596ebdd9cacc6da341e265e8aec2558b48352768db5ca1d617e103b1e7",
     "productive_screening_dir": "docs/data/screening"
   },
   "counts": {
@@ -2067,8 +2067,8 @@
         "source_version_type": "preprint",
         "preferred_version_id": "version:c517e367-0d9c-5d26-ad49-db0c2aa52ec1",
         "is_preferred_version": true,
-        "source_path": "corpus/source-acquisition/completion-20260921/9ZKZQM63.identity-bound.md",
-        "source_sha256": "sha256:bce7b8de4b1bb063064193b7e230d1825cd235f72add20aca038807e281cf14c",
+        "source_path": "corpus/source-acquisition/completion-20260921/9ZKZQM63-reading.md",
+        "source_sha256": "sha256:0be1f93d2dff95efc22b80c177dfb648ef9f78f6a3fa62fac2ebefcfdfa20b0f",
         "binding_mode": "existing_version",
         "bibliographic_identity": {
           "title": "Unveiling and Mitigating Bias in Mental Health Analysis with Large Language Models",
@@ -2116,11 +2116,11 @@
       "url": "https://arxiv.org/abs/2406.12033v2",
       "abstract_available": false,
       "source_status": "raw",
-      "source_chars": 71044,
+      "source_chars": 75470,
       "paper_source": "docs/data/fulltext/9ZKZQM63.md",
       "paper_source_work_id": "work:5aaa355e-8f65-5850-a132-43fa3458195e",
       "paper_source_version_id": "version:c517e367-0d9c-5d26-ad49-db0c2aa52ec1",
-      "paper_source_sha256": "8697ee2355c86115953759910a5bc50182b4142e492d668473596592df61559a",
+      "paper_source_sha256": "772a646c978807da26bde663a13d9af40fd3d42b856d90f0a04e4eeea3d5d048",
       "queue_status": "ready",
       "blockers": []
     },

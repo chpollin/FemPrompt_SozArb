@@ -1,6 +1,6 @@
 {
   "schema": "femprompt-work-version-registry/0.1",
-  "source_fingerprint": "sha256:eba01f3a926312dac2cfdb4487b9ae4f38664e3c55f9037463723aed3c6e9d50",
+  "source_fingerprint": "sha256:2ab680461a8e67bb082a059f42b666559ff5751e5968f3faded3f2c236795ade",
   "sources": [
     {
       "path": "corpus/metadata_corrections.json",
@@ -75,8 +75,8 @@
       "sha256": "028152c0cc60276390fa3b4a6c9f5b8c5964065a19b7b26992923499a6d293cd"
     },
     {
-      "path": "corpus/source-acquisition/completion-20260921/9ZKZQM63.identity-bound.md",
-      "sha256": "bce7b8de4b1bb063064193b7e230d1825cd235f72add20aca038807e281cf14c"
+      "path": "corpus/source-acquisition/completion-20260921/9ZKZQM63-reading.md",
+      "sha256": "0be1f93d2dff95efc22b80c177dfb648ef9f78f6a3fa62fac2ebefcfdfa20b0f"
     },
     {
       "path": "corpus/source-acquisition/completion-20260921/J4K3XA52-reading.md",
@@ -196,7 +196,7 @@
     },
     {
       "path": "corpus/source_version_bindings.json",
-      "sha256": "ae5b240a7e15d2bc83600f45b323d86510f83ea8940848b0c6b742045083e45d"
+      "sha256": "276c00dd0e54270ec209b8cfb23a4e73596c926ce3279fc9ba4fe3122721768d"
     },
     {
       "path": "corpus/zotero_export.json",
@@ -32410,8 +32410,8 @@
       "source_version_type": "preprint",
       "preferred_version_id": "version:c517e367-0d9c-5d26-ad49-db0c2aa52ec1",
       "is_preferred_version": true,
-      "source_path": "corpus/source-acquisition/completion-20260921/9ZKZQM63.identity-bound.md",
-      "source_sha256": "sha256:bce7b8de4b1bb063064193b7e230d1825cd235f72add20aca038807e281cf14c",
+      "source_path": "corpus/source-acquisition/completion-20260921/9ZKZQM63-reading.md",
+      "source_sha256": "sha256:0be1f93d2dff95efc22b80c177dfb648ef9f78f6a3fa62fac2ebefcfdfa20b0f",
       "binding_mode": "existing_version",
       "bibliographic_identity": {
         "title": "Unveiling and Mitigating Bias in Mental Health Analysis with Large Language Models",

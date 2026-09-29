@@ -1,0 +1,84 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "9ZKZQM63",
+  "knowledge_document": "research-vault/20_distillates/publications/completion-9zkzqm63-bias-mental-health-llms.md",
+  "knowledge_document_sha256": "sha256:626fe396591adebfff0c01b75da1df908d7d75395b6f6cd397050d80b38125d2",
+  "source_path": "corpus/source-acquisition/completion-20260921/9ZKZQM63-reading.md",
+  "source_sha256": "sha256:0be1f93d2dff95efc22b80c177dfb648ef9f78f6a3fa62fac2ebefcfdfa20b0f",
+  "conversion_qc_path": "generated/source-acquisition/completion-20260921/conversion-qc/9z-reading/conversion-qc.json",
+  "conversion_qc_sha256": "sha256:f3872e71fd18fa510c422db50daf729f915a80e73601b39308c7c4d92e545082",
+  "reviewed_at": "2026-09-29T13:20:48+00:00",
+  "reviewer": {
+    "agent_id": "claude-code/kd-final-reviewer-2",
+    "model": "claude-opus-5-5"
+  },
+  "result": "accepted",
+  "scope": "Final source-bound review of the uncommitted revision by claude-code/kd-revision-producer, as revised by claude-code/orchestrator on the basis of 9ZKZQM63-reading-kd-r2.json, against the reading copy accepted for text assessment. It covers identity, research question, method, every Figure 2, Table 2, Table 4 and Figure 3 value, the Table 4 reference-row sentence against the Table 2 zero-shot and few-shot CoT rows per dataset, core statement s3, the three quotations and their locators, each change requested in 9ZKZQM63-reading-kd.json and 9ZKZQM63-reading-kd-r2.json, the marking of inferences, controlled-category relevance and the conversion boundary. knowledge_document_sha256 identifies the reviewed revision before its review-state fields were set; validated_subject binds the unchanged body. The reviewer authored neither the revision nor an earlier receipt. This receipt grants no human verification, promotion or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Main findings, second paragraph, reference-row sentences",
+      "finding": "Correct against Table 2. The dataset column of Table 4 is empty in the conversion; the block order Dreaddit, IRF, MultiWD follows section 4.5 and the Gemma-2B reference rows (69.4/50.0, 43.8/47.9, 71.2/41.2) equal its zero-shot rows on those datasets. Llama3-8B and GPT-4 references equal the few-shot CoT rows on Dreaddit (72.5/45.7, 78.1/38.2) and IRF (54.8/42.1, 63.7/32.4) and the zero-shot rows on MultiWD (75.6/30.3, 79.8/25.2), where the few-shot CoT values are 77.2/32.5 and 81.6/27.3. The change requested in 9ZKZQM63-reading-kd-r2.json is made."
+    },
+    {
+      "severity": "note",
+      "location": "Core statements, s3",
+      "finding": "'Against the reference row' replaces the single reference prompt, as requested in 9ZKZQM63-reading-kd-r2.json. The statement holds: all 36 fairness-aware cells of Table 4 lie below their reference EO, and the section 4.5 quotation supports the authors' overall reading without overstating it."
+    },
+    {
+      "severity": "note",
+      "location": "Main findings, first paragraph (Figure 2)",
+      "finding": "Every value holds against the Figure 2 repair table: MentalRoBERTa 70.1 F1 and 17.8 EO against the best language-model values 66.2 F1 and 23.9 EO, both from GPT-4; TinyLlama 47.0/35.9, Gemma-2B 47.7/38.8 and Phi-3-mini 47.9/35.5 below 48 F1 and above 35 EO; Gemma-7B 58.4 F1 above Llama2-13B 55.1; Llama3-8B 30.2 EO above Llama2-7B 26.0. The persistence of ambiguity and sentiment errors agrees with Table 3 and section 4.4."
+    },
+    {
+      "severity": "note",
+      "location": "Main findings, second paragraph (Table 2 and Table 4)",
+      "finding": "GPT-4 on SWMH (10.5 to 12.3) and Llama3-8B on MultiWD (30.3 to 32.5) are correct Table 2 examples of few-shot CoT raising EO, and further cells show the same, so the hedge 'in several evaluated settings' is needed. The three models, the three expert-selected datasets with unacceptable EO, FC as the lowest EO in each of the nine combinations and F1 within 2.3 points of the reference agree with Table 4 and section 4.5."
+    },
+    {
+      "severity": "note",
+      "location": "Main findings, third paragraph (Figure 3)",
+      "finding": "Religion has the lowest average F1 for Gemma-2B (0.457) and Llama3-8B (0.582) and the highest average EO for Gemma-2B (0.409) and GPT-4 (0.253); nationality has the highest average F1 for all four models (0.709, 0.493, 0.614, 0.682) and the highest EO for none. The comparison is marked as the document's own plot reading, and the authors' claim (sections 4.3 and 5) is reported rather than adopted."
+    },
+    {
+      "severity": "note",
+      "location": "Quotations and locators",
+      "finding": "All three displayed quotations resolve exactly once in the reading copy, at lines 54 (section 1), 291 (section 4.5) and 320 (section 5); their locators hold."
+    },
+    {
+      "severity": "note",
+      "location": "Research question and method; Limitations",
+      "finding": "The changes requested in 9ZKZQM63-reading-kd.json remain in place: equalized odds as defined in section 3.5, six single factors plus combinations with 24 expert combinations and 60 variants per sample (sections 1 and 3.2), the four BERT-based baselines (section 3.3), the section 6 limitation and the synthetic-identity remark marked as the document's inference. The Limitations paragraph and the source-representation boundary agree with the 9z-reading conversion QC (accepted for text assessment, plot readings rather than author tables, no figure graphics under CC BY-NC-SA 4.0)."
+    },
+    {
+      "severity": "note",
+      "location": "Core statement s4",
+      "finding": "'Autonomous' and 'critical mental-health tasks' narrow the quoted section 5 sentence, which says the models remain inadequate for real-world deployment, especially for suicide. The narrowing agrees with the ethical-considerations statement that the models should complement rather than replace professional diagnosis and does not overstate the source; no change is required."
+    },
+    {
+      "severity": "note",
+      "location": "Assessment relevance",
+      "finding": "Unchanged from the reviewed prior version and still supported. Generative_KI, Prompting, Bias_Ungleichheit, Diversitaet and Fairness are central, Gender is one evaluated factor and part of combinations, and Soziale_Arbeit, AI_Literacies and Feministisch are correctly excluded."
+    }
+  ],
+  "validated_subject": {
+    "validated_at": "2026-09-29T13:21:43.840675+00:00",
+    "validator": "claude-code/kd-final-reviewer-2 integration; document body and source hashes plus literal quotation checks",
+    "body_sha256": "sha256:e51d54b55b22412421eb68a175ddcd84568eecb206af624a4838c8ba5df263ca",
+    "source_metadata": {
+      "record-id": "9ZKZQM63",
+      "work-id": "work:5aaa355e-8f65-5850-a132-43fa3458195e",
+      "version-id": "version:c517e367-0d9c-5d26-ad49-db0c2aa52ec1",
+      "version-type": "preprint",
+      "source-representation": {
+        "path": "corpus/source-acquisition/completion-20260921/9ZKZQM63-reading.md",
+        "sha256": "sha256:0be1f93d2dff95efc22b80c177dfb648ef9f78f6a3fa62fac2ebefcfdfa20b0f",
+        "version-id": "version:c517e367-0d9c-5d26-ad49-db0c2aa52ec1",
+        "version-type": "preprint",
+        "source-url": "https://arxiv.org/pdf/2406.12033v2",
+        "is-preferred-version": true,
+        "boundary": "The complete arXiv 2406.12033v2 text retains source-specific attribution and an independently checked repair that describes Figure 1 and records the Figure 2 and 3 values computed from the vector plot geometry. Conversion QC accepts the reading copy for text assessment. Figure values are plot readings rather than tables published by the authors, and no figure graphics are attached because the CC BY-NC-SA 4.0 licence does not meet the image contract."
+      }
+    }
+  }
+}

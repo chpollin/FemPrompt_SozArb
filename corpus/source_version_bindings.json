@@ -1779,10 +1779,10 @@
     },
     "9ZKZQM63": {
       "binding_mode": "existing_version",
-      "agent_id": "/root/source_completion",
-      "model": "gpt-5.6-sol",
-      "reviewed_at": "2026-09-21T18:40:35.618313+00:00",
-      "reason": "The acquired full text and its title block were read. The exact existing Version was checked against the attributed primary publisher or repository identifier recorded above the unchanged Docling body. This binding records source readiness without changing screening or scholarly authority.",
+      "agent_id": "claude-code/kd-final-reviewer-2",
+      "model": "claude-opus-5-5",
+      "reviewed_at": "2026-09-29T13:22:31.270016+00:00",
+      "reason": "The exact arXiv 2406.12033v2 reading copy repairs Figure 1 and records the Figure 2 and 3 values computed from the vector plot geometry. Independent conversion QC accepts it for text assessment, and a separate source-bound review accepts the revised Knowledge Document against it. All canonical Work and Version identifiers remain unchanged; this binding records source readiness without changing screening or scholarly authority.",
       "bibliographic_identity": {
         "title": "Unveiling and Mitigating Bias in Mental Health Analysis with Large Language Models",
         "doi": "10.48550/arxiv.2406.12033"
@@ -1799,20 +1799,20 @@
         "source_version_type": "preprint",
         "preferred_version_id": "version:c517e367-0d9c-5d26-ad49-db0c2aa52ec1",
         "is_preferred_version": true,
-        "source_path": "corpus/source-acquisition/completion-20260921/9ZKZQM63.identity-bound.md",
-        "source_sha256": "sha256:bce7b8de4b1bb063064193b7e230d1825cd235f72add20aca038807e281cf14c"
+        "source_path": "corpus/source-acquisition/completion-20260921/9ZKZQM63-reading.md",
+        "source_sha256": "sha256:0be1f93d2dff95efc22b80c177dfb648ef9f78f6a3fa62fac2ebefcfdfa20b0f"
       },
       "evidence": [
         {
-          "source_path": "corpus/source-acquisition/completion-20260921/9ZKZQM63.identity-bound.md",
-          "sha256": "sha256:bce7b8de4b1bb063064193b7e230d1825cd235f72add20aca038807e281cf14c",
+          "source_path": "corpus/source-acquisition/completion-20260921/9ZKZQM63-reading.md",
+          "sha256": "sha256:0be1f93d2dff95efc22b80c177dfb648ef9f78f6a3fa62fac2ebefcfdfa20b0f",
           "source_url": "https://arxiv.org/pdf/2406.12033v2",
           "locator": "Attributed primary source identity header",
           "quote": "Unveiling and Mitigating Bias in Mental Health Analysis with Large Language Models"
         },
         {
-          "source_path": "corpus/source-acquisition/completion-20260921/9ZKZQM63.identity-bound.md",
-          "sha256": "sha256:bce7b8de4b1bb063064193b7e230d1825cd235f72add20aca038807e281cf14c",
+          "source_path": "corpus/source-acquisition/completion-20260921/9ZKZQM63-reading.md",
+          "sha256": "sha256:0be1f93d2dff95efc22b80c177dfb648ef9f78f6a3fa62fac2ebefcfdfa20b0f",
           "source_url": "https://arxiv.org/pdf/2406.12033v2",
           "locator": "Attributed primary source identity header",
           "quote": "2406.12033v2"
