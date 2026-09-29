@@ -1,0 +1,64 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "Z9DNTBFF",
+  "knowledge_document": "research-vault/20_distillates/publications/completion-z9dntbff-gender-bias-vision-language-models.md",
+  "knowledge_document_sha256": "sha256:7edf7199b347384976fdc81148a7e4ca815867897314bb331a2672f128252750",
+  "source_path": "corpus/source-acquisition/completion-20260921/Z9DNTBFF-reading.md",
+  "source_sha256": "sha256:588046a149fe3426fdf07d03c77097a212b60da2578e5747ad8b9e8c08b4f910",
+  "conversion_qc_path": "generated/source-acquisition/completion-20260921/conversion-qc/z9-reading-r2/conversion-qc.json",
+  "conversion_qc_sha256": "sha256:0d2ddbcd5aa0ea22e7374da70d1e9beb912d67bab6cfaacd9c0f7cb9ae4663d1",
+  "reviewed_at": "2026-09-29T13:25:14+00:00",
+  "reviewer": {
+    "agent_id": "claude-code/kd-final-reviewer-2",
+    "model": "claude-opus-5-5"
+  },
+  "result": "changes_requested",
+  "scope": "Source-bound review of the uncommitted revision by claude-code/kd-revision-producer-2 against the reading copy accepted for text assessment by the second conversion QC (conversion-qc/z9-reading-r2/, resting on conversion-qc/z9-reading/ with sha256:c596d683dd3be456d6139fd9edf6ca08b11b79c3110cc34c158a71ebb2b4f14e for the unchanged lines). It covers identity, research question, method, every Figure 3, Figure 4, Table 3, Figure 5a and Figure 5b value, the three quotations and their locators, the marking and hedging of the document's own inferences, the agreement of boundary and Limitations with both QC receipts, and controlled-category relevance. The reviewer authored neither the revision nor an earlier receipt and does not author the requested change. The revision stays uncommitted and the binding unchanged. This receipt grants no human verification, promotion or publication authority.",
+  "findings": [
+    {
+      "severity": "minor",
+      "location": "Main findings, fourth paragraph (Figure 5b), last sentence ('The figure therefore supports a masculine skew added by pre-training, which the title calls compounding, rather than a uniform strengthening of every stereotype learned in language.')",
+      "finding": "The relative clause 'which the title calls compounding' tells the reader what the authors mean by the compounding in their title. The paper never defines the term. Its abstract frames the question as how biases of vision and language models 'interact in multimodal settings', section 1 reports the pre-training shift beside the influence of gender cues in both the language and the visual context, and section 7 summarises the case study as influence from both contexts, so the title can equally refer to biases from both modalities combining. Equating it with the pre-training skew is an unsupported attribution to the authors inside an otherwise sound inference. Drop the clause, or state that the paper does not define the compounding named in its title and that this document reads Figure 5b as one form of it. The rest of the inference stands: the signs agree with the Figure 5a labels (jersey, whiskey, beer and scotch masculine, cat and scarf feminine, cigar masculine) and with the caption of Figure 5b on cat and cigar."
+    },
+    {
+      "severity": "note",
+      "location": "Main findings, first paragraph (Figures 3 and 4)",
+      "finding": "Every value holds against the repair notes at reading-copy lines 188-197 and 207-216 and the independent measurements of the first QC: purse 0.86 and -1.15 in Figure 3, briefcase, apron and beer differing by agent gender, suit (-0.06, 0.07) and wine (-0.03, 0.03) near zero; in Figure 4 all twelve bars positive, purse 2.55 against 0.45, apron 5.59 against 4.72, briefcase 3.97 against 2.83, beer 2.33 against 1.64. The authors' conclusion on pre-training (section 4.2) is attributed to them."
+    },
+    {
+      "severity": "note",
+      "location": "Core statement s3 and Main findings, second paragraph (Table 3)",
+      "finding": "Correct against reading-copy lines 232-237. The check mark on purse identifies the left bag as the purse, so the man's image receives purse 0.0018 and briefcase 0.4944 and the woman's image purse 0.084 and briefcase 0.067 against the correct briefcase. In both the stereotypically gendered bag receives the higher probability, as s3 states. The paper reports no override rate. The inference that aggregate visual scores show gender-dependent use of visual evidence while the override rests on selected examples is marked 'as a reading of this document' and does not exceed Figure 4 and section 4.4."
+    },
+    {
+      "severity": "note",
+      "location": "Main findings, third paragraph (Figure 5a)",
+      "finding": "The four exceptions are complete against the 39 rows at reading-copy lines 269-307. Among masculine labels only bat (0.05) and aviator (about 0.57) lie on the positive side, among feminine labels only punch (about -0.85) and wine (-0.44) on the negative side. The authors' statement is taken from section 5 and the Figure 5a caption."
+    },
+    {
+      "severity": "note",
+      "location": "Main findings, fourth paragraph (Figure 5b)",
+      "finding": "The six largest shifts towards men (cat -1.41, jersey -1.33, scarf -1.25, whiskey -1.17, beer -1.05, scotch about -1.01) are the labelled dots below the unlabelled minimum of about -0.89, and the seven positive dots (cigar 0.90, aviator 0.63 and five unlabelled between about 0.09 and 0.31) match reading-copy line 313 and the second QC."
+    },
+    {
+      "severity": "note",
+      "location": "Quotations and locators",
+      "finding": "All three displayed quotations resolve exactly once in the reading copy, at lines 84 (section 2), 226 (section 4.4) and 331 (section 7); their locators hold."
+    },
+    {
+      "severity": "note",
+      "location": "Research question and method",
+      "finding": "The association and bias scores agree with the equations at reading-copy lines 110 and 145 and the sign convention at line 147. Three entity pairs with six images each of men and women (section 4.1) and 40 entities retained from a survey of ten people (footnote 4) are correct."
+    },
+    {
+      "severity": "note",
+      "location": "source-representation boundary and Limitations",
+      "finding": "Both agree with the two QC receipts: repaired equations, Table 1 score column, Table 2 row alignment and Table 3 probabilities, Figures 2 to 5 measured on the embedded rasters, acceptance for text assessment only by the second QC, plot readings rather than author values, five CC BY 4.0 raster assets, photographs of Figure 1 and Tables 1, 3 and 4 described and not reproduced, 39 legible labels against 40 entities in Figure 5a."
+    },
+    {
+      "severity": "note",
+      "location": "Assessment relevance",
+      "finding": "Unchanged from the prior version and still supported. KI_Sonstige, Gender and Bias_Ungleichheit are central, Diversitaet rests on the section 7 limitation, and Fairness, Soziale_Arbeit, Generative_KI, Prompting, AI_Literacies and Feministisch are correctly excluded."
+    }
+  ]
+}
