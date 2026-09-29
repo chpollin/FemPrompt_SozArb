@@ -72,5 +72,15 @@ def canonical_file_bytes(path: Path) -> bytes:
 
 
 def file_sha256(path: Path) -> str:
-    """Return a bare hexadecimal SHA-256 for canonical build-input bytes."""
+    """Return a bare hexadecimal SHA-256 for canonical build-input bytes.
+
+    A local-only full text absent from this checkout resolves to its ledgered hash,
+    so hash-bound outputs do not depend on whether a machine holds the texts.
+    """
+    if not filesystem_path(path).is_file():
+        from src.local_sources import absent_sha256
+
+        recorded = absent_sha256(Path(__file__).resolve().parents[1], path)
+        if recorded:
+            return recorded
     return hashlib.sha256(canonical_file_bytes(path)).hexdigest()

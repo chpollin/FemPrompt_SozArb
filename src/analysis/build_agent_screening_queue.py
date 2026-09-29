@@ -26,6 +26,7 @@ from pathlib import Path
 from typing import Any
 
 from src.file_hashing import file_sha256
+from src.local_sources import available as text_available
 
 REPO = Path(__file__).resolve().parents[2]
 DEFAULT_OUTPUT = REPO / "generated" / "agent-screening-queue.json"
@@ -123,7 +124,7 @@ def build_queue(repo: Path = REPO) -> dict[str, Any]:
         source_path = repo / "docs" / "data" / "fulltext" / f"{representative_id}.md"
         paper_source = (
             source_path.relative_to(repo).as_posix()
-            if source_status in {"clean", "raw"} and source_path.exists()
+            if source_status in {"clean", "raw"} and text_available(repo, source_path)
             else None
         )
         preferred_source = bool(representative.get("is_preferred_version", True))

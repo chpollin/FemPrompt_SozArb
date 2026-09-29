@@ -45,9 +45,13 @@ from __future__ import annotations
 import json
 import re
 import unicodedata
+import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
+if str(REPO) not in sys.path:
+    sys.path.insert(0, str(REPO))
+from src.local_sources import texts_available  # noqa: E402
 DISTILLED = REPO / "generated" / "distilled"
 STAGE1 = DISTILLED / "_stage1_json"
 CLEAN = REPO / "generated" / "markdown_clean"
@@ -227,6 +231,10 @@ def title_key(s: str) -> str:
 
 
 def main() -> None:
+    # Without the texts every paper would fall to WAIT and a later build_research_vault
+    # run would de-migrate valid distillates.
+    if not texts_available(REPO):
+        raise SystemExit("waitlist_resolution: " + "local third-party full texts are absent from this checkout (excluded from Git); run it where the texts are present")
     fulltexts: dict[str, Fulltext] = {}
     for f in sorted(CLEAN.glob("*.md")):
         fulltexts[f.stem] = Fulltext(f)

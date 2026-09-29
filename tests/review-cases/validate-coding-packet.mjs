@@ -1,7 +1,8 @@
-import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+
+import { sourceSha256, sourceText } from './local-sources.mjs';
 
 const root = resolve(fileURLToPath(new URL('../..', import.meta.url)));
 const categories = [
@@ -28,10 +29,6 @@ const exclusionReasons = new Set(['Duplicate', 'Not_relevant_topic', 'Wrong_publ
 
 function json(path) {
   return JSON.parse(readFileSync(resolve(root, path), 'utf8'));
-}
-
-function sha256(path) {
-  return createHash('sha256').update(readFileSync(resolve(root, path))).digest('hex');
 }
 
 function normalizedText(value) {
@@ -112,7 +109,7 @@ export function validateCodingPacket(packet, run, reviewerId) {
       continue;
     }
     if (record.source_path !== assignment.source_path) errors.push(`${label}.source_path differs from manifest`);
-    if (sha256(assignment.source_path) !== assignment.source_sha256.toLowerCase()) errors.push(`${label} source hash differs from manifest`);
+    if (sourceSha256(root, assignment.source_path) !== assignment.source_sha256.toLowerCase()) errors.push(`${label} source hash differs from manifest`);
     if (!['verified', 'provisional'].includes(record.identity_check?.status) || !String(record.identity_check?.basis || '').trim())
       errors.push(`${label}.identity_check must be verified or provisional and explained`);
 
@@ -141,11 +138,12 @@ export function validateCodingPacket(packet, run, reviewerId) {
       errors.push(`${label}.reason must be null outside Exclude`);
     }
 
-    const paperText = normalizedText(readFileSync(resolve(root, assignment.source_path), 'utf8'));
+    const source = sourceText(root, assignment.source_path);
+    const paperText = source === null ? null : normalizedText(source);
     for (const [category, quotes] of Object.entries(record.evidence || {})) {
       for (const [index, quote] of quotes.entries()) {
         const normalizedQuote = normalizedText(quote);
-        if (!normalizedQuote || !paperText.includes(normalizedQuote))
+        if (!normalizedQuote || (paperText !== null && !paperText.includes(normalizedQuote)))
           errors.push(`${label}.${category} evidence[${index}] is absent from its assigned source: ${String(quote).slice(0, 80)}`);
       }
     }

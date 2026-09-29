@@ -36,6 +36,8 @@ from src.assess.artifact_verification import (
     reviewed_screening_projection,
 )
 from src.file_hashing import file_sha256
+from src.local_sources import absent_sha256
+from src.local_sources import available as text_available
 
 REPO = Path(__file__).resolve().parents[2]
 OUTPUT = Path("generated/completion")
@@ -886,7 +888,7 @@ def _candidate_rows(
             }
         )
         markdown = preparation.get("screening_markdown_file")
-        exists = bool(markdown and (repo / markdown).is_file())
+        exists = bool(markdown and text_available(repo, repo / markdown))
         expected = preparation.get("screening_markdown_sha256")
         if exists:
             if not (repo / markdown).resolve().is_relative_to(repo.resolve()):
@@ -894,10 +896,15 @@ def _candidate_rows(
             inputs.add(markdown)
         # Acquisition hashes retain their original byte-exact contract. Only
         # this builder's new input fingerprints use canonical LF text bytes.
+        # An absent local full text is compared through its ledgered LF hash.
         hash_matches = bool(
             exists
             and expected
-            and hashlib.sha256((repo / markdown).read_bytes()).hexdigest() == expected
+            and (
+                absent_sha256(repo, repo / markdown)
+                or hashlib.sha256((repo / markdown).read_bytes()).hexdigest()
+            )
+            == expected
         )
         conflicts = []
         if len(binding_candidates) > 1:

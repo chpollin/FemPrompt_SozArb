@@ -27,6 +27,7 @@ ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 from src.analysis.work_versions import source_binding_for_record  # noqa: E402
+from src.local_sources import texts_available  # noqa: E402
 
 DOCS = ROOT / "docs"
 DATA_IN = DOCS / "data" / "research_vault_v2.json"
@@ -827,11 +828,38 @@ def _publish_staged(stage_assets: Path, stage_manifest: Path) -> None:
         raise
 
 
+def check_recorded_manifest(papers: list[dict[str, object]]) -> None:
+    """Keep the committed resolution usable where the texts themselves are absent.
+
+    Resolution reads the texts, so a checkout without them reuses the committed
+    manifest. Its identity fields must still match the current corpus; a changed
+    corpus requires a rebuild on a machine that holds the texts.
+    """
+    if not MANIFEST.is_file():
+        raise RuntimeError(f"{MANIFEST.relative_to(ROOT)} is missing and cannot be rebuilt without the local full texts")
+    manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    ids = {paper["id"] for paper in papers if isinstance(paper.get("id"), str) and paper["id"]}
+    stale = sorted(ids ^ set(manifest))
+    for paper in papers:
+        entry = manifest.get(paper.get("id"))
+        if entry and any(entry.get(key) != value for key, value in source_identity(paper).items()):
+            stale.append(str(paper["id"]))
+    if stale:
+        raise RuntimeError(
+            "The recorded full-text resolution no longer matches the corpus; rebuild on a "
+            "machine holding the local full texts: " + ", ".join(stale[:20])
+        )
+
+
 def main() -> int:
     if not DATA_IN.exists():
         print(f"ERROR: {DATA_IN} not found", file=sys.stderr)
         return 1
     papers = json.loads(DATA_IN.read_text(encoding="utf-8")).get("papers", [])
+    if not texts_available(ROOT):
+        check_recorded_manifest(papers)
+        print("local full texts absent: kept the committed resolution manifest, wrote no reading files")
+        return 0
     registry, knowledge_bindings = load_resolution_context()
     clean_idx = filename_index(list(CLEAN_DIR.glob("*.md")))
     raw_idx = filename_index(list(RAW_DIR.glob("*.md")))

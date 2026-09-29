@@ -12,6 +12,9 @@ from pathlib import Path
 from typing import Any
 
 REPO = Path(__file__).resolve().parents[2]
+if str(REPO) not in sys.path:
+    sys.path.insert(0, str(REPO))
+from src.local_sources import absent_sha256  # noqa: E402
 SEARCH_DIR = REPO / "corpus" / "deep-research" / "round2" / "Codex Websearch"
 PACKAGE_PATH = SEARCH_DIR / "codex-websearch-2026-package.json"
 PLAN_PATH = SEARCH_DIR / "source-acquisition-plan.json"
@@ -75,8 +78,12 @@ def _verified_repo_file(
     if not path.is_file():
         if allow_missing_with_recorded_hash and expected_sha256:
             return expected_sha256
-        raise ValueError(f"missing or invalid repository file: {relative_path}")
-    actual_sha256 = _sha256_path(path)
+        recorded = absent_sha256(repo, path)
+        if not recorded:
+            raise ValueError(f"missing or invalid repository file: {relative_path}")
+        actual_sha256 = recorded
+    else:
+        actual_sha256 = _sha256_path(path)
     if expected_sha256 and actual_sha256 != expected_sha256:
         raise ValueError(f"checksum mismatch for repository file: {relative_path}")
     return actual_sha256

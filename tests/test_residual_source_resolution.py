@@ -1,6 +1,8 @@
-import hashlib
 import json
 from pathlib import Path
+
+from src.file_hashing import file_sha256
+from src.local_sources import available as text_available
 
 ROOT = Path(__file__).resolve().parents[1]
 LEDGER = (
@@ -72,12 +74,10 @@ def test_only_reviewed_intersectionality_source_is_ready() -> None:
     }
 
     assert ready == {"8NG4ZEWE"}
+    # The reading copy is local-only; the ledger holds its hash in a clean clone.
     source = ROOT / records["8NG4ZEWE"]["paper_source"]
-    assert source.exists()
-    assert (
-        hashlib.sha256(source.read_bytes()).hexdigest()
-        == records["8NG4ZEWE"]["paper_source_sha256"]
-    )
+    assert text_available(ROOT, source)
+    assert file_sha256(source) == records["8NG4ZEWE"]["paper_source_sha256"]
 
 
 def test_bibliographic_corrections_remain_exact() -> None:

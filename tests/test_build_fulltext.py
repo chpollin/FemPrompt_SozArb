@@ -18,6 +18,15 @@ bf = importlib.util.module_from_spec(spec)
 sys.modules["build_fulltext"] = bf
 spec.loader.exec_module(bf)
 
+from src.local_sources import texts_available  # noqa: E402
+
+# These cases resolve real conversions, which stay local and are absent from a clean
+# clone. Without the texts they would pass vacuously, so they are skipped instead.
+needs_texts = pytest.mark.skipif(
+    not texts_available(ROOT),
+    reason="local third-party full texts are not in this checkout (excluded from Git)",
+)
+
 
 def _paper(
     author_year: str, kd: str | None = None, title: str = "Pilot study"
@@ -79,6 +88,7 @@ def test_long_checkout_retains_embedded_identity_and_manifest_input(
     )
 
 
+@needs_texts
 @pytest.mark.parametrize("paper_id", ["FTJM5R8N", "4KMMPA6A"])
 def test_legacy_match_cannot_borrow_another_registered_work_or_version(paper_id):
     paper = _real_paper(paper_id)
@@ -94,6 +104,7 @@ def test_exact_governed_version_retains_its_reading_source():
     assert label == "clean"
 
 
+@needs_texts
 def test_incorrect_survey_title_cannot_match_a_foreign_registered_title():
     paper = _real_paper("SHJQQTI6")
     paper["title"] = (
@@ -124,6 +135,7 @@ def test_curated_source_binding_bootstraps_without_a_displayed_knowledge_documen
     assert bf.resolve_docling(_paper("Pilot 2026"), {}, {}) == (None, "mismatch")
 
 
+@needs_texts
 @pytest.mark.parametrize("paper_id", ["3GB9B4IJ", "2YS85B49", "BCBWSU3Z"])
 def test_corrected_debnath_year_rejects_stale_candidate_version(paper_id):
     paper = _real_paper(paper_id)
@@ -171,6 +183,7 @@ def test_ambiguous_fallback_is_refused(
     assert src == "ambiguous"
 
 
+@needs_texts
 def test_normalised_filename_collision_retains_both_real_source_variants(
     tmp_path: Path, monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -326,6 +339,7 @@ def test_generic_headings_are_not_title_candidates(tmp_path: Path) -> None:
     assert bf.source_titles(source) == ["Target framework for accountable AI"]
 
 
+@needs_texts
 def test_identical_title_with_doi_author_and_year_conflicts_is_refused() -> None:
     paper = _real_paper("JZ4P8V8S")
     knowledge_doc = bf.DOCS / str(paper["knowledge_doc_candidate"]["path"])
@@ -340,6 +354,7 @@ def test_identical_title_with_doi_author_and_year_conflicts_is_refused() -> None
     assert bf.verified_source(paper, source, "clean", metadata) == (None, "mismatch")
 
 
+@needs_texts
 def test_filename_does_not_override_a_different_substantive_title() -> None:
     paper = _real_paper("4LY3SA4E")
     knowledge_doc = bf.DOCS / str(paper["knowledge_doc_candidate"]["path"])
@@ -351,6 +366,7 @@ def test_filename_does_not_override_a_different_substantive_title() -> None:
     assert bf.verified_source(paper, source, "clean", metadata) == (None, "mismatch")
 
 
+@needs_texts
 def test_corrected_publication_title_matches_verified_source() -> None:
     paper = _real_paper("T8R8RKX9")
     knowledge_doc = bf.DOCS / str(paper["knowledge_doc"])
@@ -362,6 +378,7 @@ def test_corrected_publication_title_matches_verified_source() -> None:
     assert bf.verified_source(paper, source, "clean", metadata) == (source, "clean")
 
 
+@needs_texts
 def test_rejected_knowledge_candidate_can_supply_verified_xiyx5hjs_source() -> None:
     paper = _real_paper("XIYX5HJS").copy()
     # Reproduce the preparation pass before the current full-text manifest exists.
@@ -380,6 +397,7 @@ def test_rejected_knowledge_candidate_can_supply_verified_xiyx5hjs_source() -> N
     )
 
 
+@needs_texts
 @pytest.mark.parametrize("paper_id", ["WTLVG29I", "AXEIVEW3"])
 def test_foreign_rejected_candidate_cannot_supply_source(paper_id: str) -> None:
     paper = _real_paper(paper_id).copy()
@@ -427,6 +445,7 @@ def test_embedded_source_rejects_parent_path(
         ("8NG4ZEWE", "clean"),
     ],
 )
+@needs_texts
 def test_curated_source_repairs_resolve_exact_records(
     paper_id: str, source: str
 ) -> None:
@@ -436,6 +455,7 @@ def test_curated_source_repairs_resolve_exact_records(
     assert label == source
 
 
+@needs_texts
 def test_same_title_does_not_bridge_different_un_women_work() -> None:
     paper = _real_paper("5T55I5Z7")
     source = (
@@ -447,6 +467,7 @@ def test_same_title_does_not_bridge_different_un_women_work() -> None:
     assert "5T55I5Z7" not in bf.CURATED_SOURCE_OVERRIDES
 
 
+@needs_texts
 @pytest.mark.parametrize("paper_id", ["KI9GRGHB", "ZQHP5G35", "LR8Z3YHP"])
 def test_batch_a_unresolved_records_remain_fail_closed(paper_id: str) -> None:
     paper = _real_paper(paper_id)
@@ -457,6 +478,7 @@ def test_batch_a_unresolved_records_remain_fail_closed(paper_id: str) -> None:
     assert bf.resolve_docling(paper, clean_idx, raw_idx) == (None, None)
 
 
+@needs_texts
 @pytest.mark.parametrize("paper_id", ["5T55I5Z7", "XG7RFFC7"])
 def test_batch_c_conflicts_remain_unbound(paper_id: str) -> None:
     paper = _real_paper(paper_id)
@@ -539,6 +561,7 @@ def test_same_author_year_with_another_title_is_refused(
     assert src == "mismatch"
 
 
+@needs_texts
 def test_real_ulnicane_titles_do_not_cross_match() -> None:
     wrong = (
         ROOT
@@ -659,7 +682,11 @@ def test_main_loads_fresh_resolution_context_once_per_invocation(
     knowledge_bindings = json.loads(
         (ROOT / "docs/data/knowledge_doc_bindings.json").read_text(encoding="utf-8")
     )
-    _configure_build(tmp_path, monkeypatch)
+    clean_dir, _, _ = _configure_build(tmp_path, monkeypatch)
+    # A local text makes the temporary checkout resolve instead of reusing a manifest.
+    (clean_dir / "Placeholder_2026_text.md").write_text(
+        "# Placeholder\n", encoding="utf-8"
+    )
     bf.DATA_IN.write_text(
         json.dumps({"papers": papers}),
         encoding="utf-8",

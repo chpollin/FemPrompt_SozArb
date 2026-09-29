@@ -44,7 +44,8 @@ from src.analysis.work_versions import (
     validate_registry,
     values,
 )
-from src.file_hashing import canonical_file_bytes, file_sha256
+from src.file_hashing import file_sha256
+from src.local_sources import read_text
 
 REPO = Path(__file__).resolve().parents[2]
 ZOTERO_PATH = REPO / "corpus" / "zotero_export.json"
@@ -682,10 +683,12 @@ def _agent_payloads() -> tuple[dict[str, dict[str, Any]], list[Path]]:
 
 
 def _source_fingerprint(paths: Iterable[Path]) -> str:
+    # Digest per-file hashes rather than bytes, so local-only full texts resolve to
+    # their ledgered hash where the texts are absent.
     digest = hashlib.sha256()
     for path in sorted(paths, key=lambda item: item.as_posix()):
         digest.update(path.relative_to(REPO).as_posix().encode("utf-8"))
-        digest.update(canonical_file_bytes(path))
+        digest.update(file_sha256(path).encode("ascii"))
     return f"sha256:{digest.hexdigest()}"
 
 
@@ -776,10 +779,13 @@ def apply_source_bindings(repo: Path, registry: dict, contract: dict) -> list[Pa
                 )
             path = safe_path(repo, source["source_path"].partition("#")[0])
             inputs.append(path)
+            body = read_text(repo, path) if source.get("quote") else None
             if source.get("quote") and (
                 not isinstance(source["quote"], str)
-                or " ".join(source["quote"].split())
-                not in " ".join(path.read_text(encoding="utf-8").split())
+                or (
+                    body is not None
+                    and " ".join(source["quote"].split()) not in " ".join(body.split())
+                )
             ):
                 raise ValueError(
                     f"{record_id}: source identity quotation does not resolve"

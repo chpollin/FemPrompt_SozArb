@@ -7,6 +7,7 @@ from datetime import datetime
 from pathlib import Path
 
 from src.assess.artifact_verification import artifact_hash, record_hash, safe_path
+from src.local_sources import read_text
 
 RESOLUTION_PATH = "generated/verification/historical-resolution-2026-09-05.json"
 
@@ -102,10 +103,10 @@ def load_resolution(
                     "Historical resolution evidence lacks a source locator"
                 )
             if source.get("quote"):
-                text = safe_path(repo, reference.partition("#")[0]).read_text(
-                    encoding="utf-8"
-                )
-                if " ".join(source["quote"].split()) not in " ".join(text.split()):
+                text = read_text(repo, safe_path(repo, reference.partition("#")[0]))
+                if text is not None and " ".join(source["quote"].split()) not in " ".join(
+                    text.split()
+                ):
                     raise ValueError(
                         f"Historical resolution quote does not resolve: {reference}"
                     )

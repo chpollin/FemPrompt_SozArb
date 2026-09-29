@@ -3,6 +3,7 @@ import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import { sourceSha256 } from './local-sources.mjs';
 import { validateCodingPacket } from './validate-coding-packet.mjs';
 
 const root = resolve(fileURLToPath(new URL('../..', import.meta.url)));
@@ -40,7 +41,7 @@ export function validateAiAgentReview(review, run) {
   for (const paper of run.assignment.papers) {
     const input = sourceInputs[paper.paper_id];
     if (!input || input.path !== paper.source.path) errors.push(`input source ${paper.paper_id} differs from manifest`);
-    else if (input.sha256 !== paper.source.sha256 || input.sha256 !== sha256(input.path))
+    else if (input.sha256 !== paper.source.sha256 || input.sha256 !== sourceSha256(root, input.path))
       errors.push(`input source ${paper.paper_id} hash differs`);
   }
   if (Object.keys(sourceInputs).length !== run.assignment.papers.length) errors.push('input source count differs from manifest');

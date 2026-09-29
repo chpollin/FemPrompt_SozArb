@@ -98,9 +98,31 @@ build/
 # Local-only full texts for the PRISM reading pane (built by src/publish/build_fulltext.py
 # from generated/markdown_clean/). Mostly copyrighted paywalled papers, so the reading pane
 # reads them from a local clone but they are NEVER published to the public GitHub Pages site.
-# Publishing publicly is a separate, rights-gated decision.
+# Publishing publicly is a separate, rights-gated decision. The text-free resolution record
+# docs/data/fulltext_manifest.json is versioned so builds without the texts stay identical.
 docs/data/fulltext/
-docs/data/fulltext_manifest.json
+
+# Third-party full texts stay local (operator decision of 2026-09-29): Docling conversions,
+# cleaned and repaired Markdown and captured article text without a recorded licence that
+# permits redistribution. generated/local-fulltext-ledger.json records their hashes.
+# Keep this block aligned with PATTERNS in src/local_sources.py.
+generated/markdown/
+generated/markdown_clean/
+generated/source-acquisition/**/markdown-raw/
+generated/source-acquisition/**/markdown-clean/
+generated/source-acquisition/**/markdown-repaired/
+generated/source-acquisition/**/html-markdown/
+generated/source-acquisition/**/validation-md/
+generated/source-acquisition/oa-batch-a/*-clean/
+generated/source-acquisition/oa-batch-a/*-output/
+generated/source-acquisition/oa-batch-a/*-input/
+generated/source-acquisition/oa-batch-b/markdown-input/
+corpus/source-acquisition/historical-resolution-2026-09-05/*-reviewed-text-snapshot.md
+corpus/source-acquisition/historical-resolution-2026-09-05/asseri-v1.txt
+corpus/source-acquisition/historical-resolution-2026-09-05/latif-v2.txt
+corpus/source-acquisition/historical-resolution-2026-09-05/latif-v4.txt
+corpus/source-acquisition/checklist-resolution-2026-09-05/hodgson-griffith-am-text.md
+corpus/source-acquisition/checklist-resolution-2026-09-05/trudeau-pmc-original.md
 
 # research-vault protected layers. Third-party full texts and the anchor layer that
 # embeds them. Same rights-gated rationale as docs/data/fulltext/, never pushed to the
