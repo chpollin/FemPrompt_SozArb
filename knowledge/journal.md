@@ -24,6 +24,12 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## PRISM and the epistemic infrastructure (2026)
 
+### 2026-09-29: Z9DNTBFF figure-note corrections and the 9ZKZQM63 Knowledge Document review
+
+The corrections required by the conversion QC of *Worst of Both Worlds* were remeasured on the figure rasters and the rendered PDF before they were applied. In Figure 5b aviator lies at about 0.63 and cigar at about 0.90, five unlabelled dots lie above zero and the axis is ticked from -1.0 to 1.0. Figure 3 resolves about 0.0024 score units per pixel, and the Figure 1 bag is a checked handbag. Both non-blocking observations held on the raster, so the Figure 3 frame and the Figure 5a jersey position were corrected as well. The repair manifest records the correction as an event and the copy awaits a new independent QC, because a correction by the repairing side cannot accept itself.
+
+The mental-health bias study was not rebound. A source-bound review of its Knowledge Document against the accepted reading copy found every quotation and locator intact but requested changes. The document names the fairness metric equality of opportunity where the paper uses equalized odds, and its Limitations paragraph describes the unreviewed conversion that the rebinding would replace. The reviewer did not make these changes, since the `J4K3XA52` precedent separates the producer of a revision from its reviewer. The newly readable figure values also contradict the paper's statement that the models struggle more with nationality, which a later revision must not repeat.
+
 ### 2026-09-29: Independent conversion QC of the repaired reading copies
 
 A separate reviewer instance checked the two repaired reading copies against their PDFs and recomputed every claimed value rather than reading the repair manifests. Both copies preserve every line of their identity-bound body. The mental-health bias study (`9ZKZQM63`) is accepted for text assessment, because its Figure 2 and Figure 3 tables equal the vector geometry of the PDF and the Figure 1 pipeline description matches the page. *Worst of Both Worlds* (`Z9DNTBFF`) needs changes. Its equations, tables and the readings of Figures 2 to 5a hold and the figure assets are pixel-identical to the embedded rasters, but the Figure 5b note places aviator and cigar on the wrong dots and wrongly states that no unlabelled entity lies above zero. The receipts live in `conversion-qc/9z-reading/` and `conversion-qc/z9-reading/`.
