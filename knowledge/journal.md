@@ -24,6 +24,12 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## PRISM and the epistemic infrastructure (2026)
 
+### 2026-09-29: Independent conversion QC of the repaired reading copies
+
+A separate reviewer instance checked the two repaired reading copies against their PDFs and recomputed every claimed value rather than reading the repair manifests. Both copies preserve every line of their identity-bound body. The mental-health bias study (`9ZKZQM63`) is accepted for text assessment, because its Figure 2 and Figure 3 tables equal the vector geometry of the PDF and the Figure 1 pipeline description matches the page. *Worst of Both Worlds* (`Z9DNTBFF`) needs changes. Its equations, tables and the readings of Figures 2 to 5a hold and the figure assets are pixel-identical to the embedded rasters, but the Figure 5b note places aviator and cigar on the wrong dots and wrongly states that no unlabelled entity lies above zero. The receipts live in `conversion-qc/9z-reading/` and `conversion-qc/z9-reading/`.
+
+The accepted copy was not rebound. The build rejects a binding whose Knowledge Document still names the identity-bound source, and the `J4K3XA52` precedent paired the rebinding with a fresh source-bound review of the distillate, which lay outside this session's write scope.
+
 ### 2026-09-29: Acquisition receipts as binding evidence
 
 The operator accepted publisher acquisition receipts as identity evidence for existing-Version source bindings whose converted Markdown lost the printed DOI (ADR-041). The receipt is a typed entry field that the registry builder re-derives from the committed acquisition manifest, the readiness ledger and the local PDF. The title quotation stays mandatory and the quoted-DOI path is unchanged. Repository and preprint copies do not qualify, because their retrieval does not show identity with the registered Version.

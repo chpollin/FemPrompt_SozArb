@@ -1,0 +1,58 @@
+{
+  "schema": "femprompt-conversion-qc/0.1",
+  "created_at": "2026-09-29T12:35:00+00:00",
+  "scope": "Independent conversion QC of the 9ZKZQM63 reading copy against the arXiv v2 PDF, limited to the repairs claimed in the reading repair manifest and to preservation of the identity-bound body. This QC grants no scientific acceptance, screening decision, registry authority, Knowledge Document authority, human verification, or publication authority.",
+  "reviewer": {
+    "agent_id": "claude-code/conversion-qc-reviewer",
+    "model": "claude-opus-5-5",
+    "independence": "Separate agent instance without access to the producer's working context. The producer claude-code/source-repair ran on the same model, so this review is independent of the production run but not of the model family."
+  },
+  "method": [
+    "Verified the PDF, reading copy, identity-bound conversion and repair manifest with src.assess.artifact_verification.artifact_hash; every hash matches its manifest. The PDF text layer carries arXiv:2406.12033v2.",
+    "Diffed the LF-normalised reading copy against the identity-bound conversion. The only removed line is the front-matter transformation statement; every body line is preserved and all additions are front matter, the repair-provenance paragraph and blockquoted repair notes.",
+    "Rendered PDF pages 2, 7 and 8 at 200 dpi and compared the Figure 1 node, edge and quotation transcription with the page.",
+    "Recomputed Figure 2 from the PDF vector drawings of page 7: y-axis tick segments at 0 to 70 (2.61 pt per 10 points), filled bar rectangles of the F1 and EO colours and the dashed-line markers, and matched them to the printed x-axis model labels.",
+    "Recomputed Figure 3 from the PDF vector drawings of page 8: tick segments of both panels against their printed labels, filled marker paths grouped by colour, and the colour-to-factor mapping from the legend's own marker order."
+  ],
+  "records": [
+    {
+      "record_id": "9ZKZQM63",
+      "pdf_path": "generated/pdfs/completion-20260921/oa-batch/9ZKZQM63.pdf",
+      "pdf_sha256": "sha256:9f6440e8d8a449814c181ef16bc5e1d42ea1cc9b93c5fbbdbbfd008813677e31",
+      "markdown_path": "corpus/source-acquisition/completion-20260921/9ZKZQM63-reading.md",
+      "markdown_sha256": "sha256:0be1f93d2dff95efc22b80c177dfb648ef9f78f6a3fa62fac2ebefcfdfa20b0f",
+      "identity_bound_markdown_path": "corpus/source-acquisition/completion-20260921/9ZKZQM63.identity-bound.md",
+      "identity_bound_markdown_sha256": "sha256:bce7b8de4b1bb063064193b7e230d1825cd235f72add20aca038807e281cf14c",
+      "repair_manifest_path": "generated/source-acquisition/completion-20260921/conversion-qc/9ZKZQM63-reading-repair-manifest.json",
+      "repair_manifest_sha256": "sha256:2f3b4cfdac4f49c06153b1a4988739a32a4c94cef1bb3a59e4b6934ba4291f37",
+      "pages_total": 17,
+      "pages_visually_inspected": [2, 7, 8],
+      "result": "accepted_for_text_assessment",
+      "structure": {
+        "headings": "Unchanged from the identity-bound conversion.",
+        "formulas": "The article has no displayed formula; the earlier oa-review found none omitted.",
+        "tables": "Tables 1 to 5 are unchanged from the identity-bound conversion, which the earlier oa-review found complete.",
+        "figures": "Figure 1 is a faithful structured description of the pipeline. Figures 2 and 3 carry every plotted value as a table that matches the vector coordinates."
+      },
+      "verified_repairs": [
+        "Figure 1 (page 2): START, User Query with the dashed Raw Data -> Demographic Enrichment -> query inset, LLM, LLM Response, Automatic Evaluations, the 'Clinically-accepted EO score?' decision with Yes to END and No to Bias Mitigation through Prompts, and the edge from the mitigation prompt back to the LLM match the page. The three quoted prompt and response texts match the printed wording.",
+        "Figure 2 (page 7): all 28 values (14 models, F1 and EO) equal the vector bar heights and the marker centres at one decimal, and the model order and spellings (including MentaLLama (7B) and MentaLlama (13B)) match the printed x-axis labels.",
+        "Figure 3a (page 8): all 28 F1 values equal the vector marker positions at three decimals; Combination at Llama3-8B computes to 0.5995 and is recorded as 0.599, within the stated 0.001.",
+        "Figure 3b (page 8): all 28 EO values equal the vector marker positions at three decimals.",
+        "The colour-to-factor assignment follows the legend order (Gender, Age, Race, Religion; Sexuality, Nationality, Combination), verified from the legend marker positions.",
+        "The statement that the panels are labelled in percent but carry fractions (0.45 to 0.70 and 0.20 to 0.40) matches the printed tick labels."
+      ],
+      "open_points_review": [
+        "The recorded open point is accurate. No figure images are attached because CC BY-NC-SA 4.0 does not meet the CC BY 4.0 condition of the original-image reading contract."
+      ],
+      "required_changes": [],
+      "losses": [
+        "The reading remains a linearised representation and does not reproduce the figure graphics, icons or layout.",
+        "Figure values are computed from the plot geometry and are readings of the plot, not a table published by the authors; the reading copy labels them as such.",
+        "Acceptance is limited to conversion fidelity for text assessment and does not establish scholarly verification or publication approval."
+      ],
+      "assessment": "Every repair claimed in the manifest matches the PDF, the plotted values were recomputed independently from the vector geometry with no discrepancy beyond the stated rounding, and no source-body line was lost. The reading copy resolves the three losses recorded by the oa-review and is accepted for text assessment.",
+      "inspection_artifacts": []
+    }
+  ]
+}
