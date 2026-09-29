@@ -5,11 +5,11 @@
   "authority_rule": "Any human annotation covers the canonical work; duplicate records do not trigger reassessment.",
   "sources": {
     "research_vault": "docs/data/research_vault_v2.json",
-    "research_vault_sha256": "78683e583bf628011dcc7bcdb59f69b5706e361eb07d2744b1049e0b2c4edbeb",
+    "research_vault_sha256": "59b8b3ab7dec5a8dcd89c9f527320fb41f41e6147bffa45cfe6a50a7006f6cde",
     "fulltext_manifest": "docs/data/fulltext_manifest.json",
-    "fulltext_manifest_sha256": "f6e51e889b4d61f1705a336e507ce50cdb87273a381614f57491384d67470d7b",
+    "fulltext_manifest_sha256": "b5420fa64d46db03261ec20a2947dbc9d332984dc54f00b24db654629d2649af",
     "work_version_registry": "corpus/work_version_registry.json",
-    "work_version_registry_sha256": "77e727596ebdd9cacc6da341e265e8aec2558b48352768db5ca1d617e103b1e7",
+    "work_version_registry_sha256": "54321b0a78c07359ce439361a3b901f0e54cea323d9f0765bab730caefc74ba6",
     "productive_screening_dir": "docs/data/screening"
   },
   "counts": {
@@ -5901,8 +5901,8 @@
         "source_version_type": "version_of_record",
         "preferred_version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
         "is_preferred_version": true,
-        "source_path": "corpus/source-acquisition/completion-20260921/Z9DNTBFF.identity-bound.md",
-        "source_sha256": "sha256:729606223c6f936d78f837d285ae84f5d18f010b62af7dfa793cce64119fd3c0",
+        "source_path": "corpus/source-acquisition/completion-20260921/Z9DNTBFF-reading.md",
+        "source_sha256": "sha256:588046a149fe3426fdf07d03c77097a212b60da2578e5747ad8b9e8c08b4f910",
         "binding_mode": "existing_version",
         "bibliographic_identity": {
           "title": "Worst of Both Worlds: Biases Compound in Pre-trained Vision-and-Language Models",
@@ -5952,11 +5952,11 @@
       "url": "https://aclanthology.org/2022.gebnlp-1.10/",
       "abstract_available": false,
       "source_status": "raw",
-      "source_chars": 29126,
+      "source_chars": 37155,
       "paper_source": "docs/data/fulltext/H3NC9SMQ.md",
       "paper_source_work_id": "work:ec94cf1c-87bf-5f4d-a840-9dd3b92eefab",
       "paper_source_version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
-      "paper_source_sha256": "4423f1af6b9a4e63feed7861318e4defde9d04583d015b09eb612f86a5388c3b",
+      "paper_source_sha256": "736d3cca410818c6b18fa5fad5888dc507b61b137dc4103e5753fa8a7cc70f72",
       "queue_status": "ready",
       "blockers": []
     },

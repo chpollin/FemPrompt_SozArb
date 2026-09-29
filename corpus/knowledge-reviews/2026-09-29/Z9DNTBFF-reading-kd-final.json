@@ -1,0 +1,89 @@
+{
+  "schema": "femprompt-knowledge-document-source-review/1.0",
+  "record_id": "Z9DNTBFF",
+  "knowledge_document": "research-vault/20_distillates/publications/completion-z9dntbff-gender-bias-vision-language-models.md",
+  "knowledge_document_sha256": "sha256:7c2f05cdf4c0ae63a8a512ee7617efa754382c8841b6dc4280408734e3896b34",
+  "source_path": "corpus/source-acquisition/completion-20260921/Z9DNTBFF-reading.md",
+  "source_sha256": "sha256:588046a149fe3426fdf07d03c77097a212b60da2578e5747ad8b9e8c08b4f910",
+  "conversion_qc_path": "generated/source-acquisition/completion-20260921/conversion-qc/z9-reading-r2/conversion-qc.json",
+  "conversion_qc_sha256": "sha256:0d2ddbcd5aa0ea22e7374da70d1e9beb912d67bab6cfaacd9c0f7cb9ae4663d1",
+  "reviewed_at": "2026-09-29T13:30:35+00:00",
+  "reviewer": {
+    "agent_id": "claude-code/kd-final-reviewer-3",
+    "model": "claude-opus-5-5"
+  },
+  "result": "accepted",
+  "scope": "Final source-bound review of the uncommitted revision by claude-code/kd-revision-producer-2, as revised by claude-code/orchestrator on the basis of Z9DNTBFF-reading-kd.json, against the reading copy accepted for text assessment by the second conversion QC (conversion-qc/z9-reading-r2/, resting on conversion-qc/z9-reading/ with sha256:c596d683dd3be456d6139fd9edf6ca08b11b79c3110cc34c158a71ebb2b4f14e for the unchanged lines). It covers identity, research question, method, every Figure 3, Figure 4, Table 3, Figure 5a and Figure 5b value, the completeness of the Figure 5a exceptions, the three quotations and their locators, the marking and hedging of the document's own inferences, the agreement of boundary and Limitations with both QC receipts, controlled-category relevance and the change requested in Z9DNTBFF-reading-kd.json. knowledge_document_sha256 identifies the reviewed revision before its review-state fields were set; validated_subject binds the unchanged body. The reviewer authored neither the revision nor an earlier receipt. This receipt grants no human verification, promotion or publication authority.",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Whole document, diff against the version reviewed in Z9DNTBFF-reading-kd.json",
+      "finding": "Re-inserting the clause ', which the title calls compounding,' after 'added by pre-training' and removing the revised-by block reproduces exactly sha256:7edf7199b347384976fdc81148a7e4ca815867897314bb331a2672f128252750, the knowledge_document_sha256 of the previous receipt. The revision therefore differs from the reviewed version only in the requested change and its attribution."
+    },
+    {
+      "severity": "note",
+      "location": "Main findings, fourth paragraph (Figure 5b), last sentence",
+      "finding": "The change requested in Z9DNTBFF-reading-kd.json is made by dropping the clause, so the document no longer attributes a meaning of 'compounding' to the authors. The remaining sentence continues the inference marked 'As an inference of this document' and holds: jersey, whiskey, beer and scotch are masculine-labelled with negative Figure 5a positions (-1.86, -1.70, about -1.61, about -2.07), cat and scarf feminine-labelled with positive positions (1.09, 0.46), and cigar masculine-labelled at about -1.30. A negative Figure 5b difference therefore strengthens the first four and weakens cat and scarf, and the positive cigar difference weakens its masculine association, as the Figure 5b caption states for cat and cigar. The sentence reads grammatically and introduces no new claim."
+    },
+    {
+      "severity": "note",
+      "location": "Main findings, first paragraph (Figures 3 and 4)",
+      "finding": "Every value holds against the repair notes at reading-copy lines 188-197 and 207-216, which the first QC confirmed within 0.01: Figure 3 purse 0.86 and -1.15, briefcase, apron and beer differing by agent gender, suit (-0.06, 0.07) and wine (-0.03, 0.03) near zero; Figure 4 with all twelve bars positive, purse 2.55 against 0.45, apron 5.59 against 4.72, briefcase 3.97 against 2.83, beer 2.33 against 1.64. The pre-training conclusion is attributed to the authors (section 4.2, line 182)."
+    },
+    {
+      "severity": "note",
+      "location": "Core statement s3 and Main findings, second paragraph (Table 3)",
+      "finding": "Correct against reading-copy lines 232-237: the check mark on purse for the left image identifies the patterned bag as the purse; purse 0.0018 and briefcase 0.4944 for the man, purse 0.084 and briefcase 0.067 for the woman with the briefcase. In both the stereotypically gendered bag receives the higher probability, as s3 states. The paper reports no override rate, and the inference about gender-dependent use of visual evidence is marked as a reading of this document."
+    },
+    {
+      "severity": "note",
+      "location": "Main findings, third paragraph (Figure 5a)",
+      "finding": "The four exceptions are complete: a scan of all 39 rows at reading-copy lines 269-307 finds only bat (0.05) and aviator (about 0.57) among masculine labels on the positive side and only punch (about -0.85) and wine (-0.44) among feminine labels on the negative side. The authors' statement is taken from section 5 (line 251) and the Figure 5a caption."
+    },
+    {
+      "severity": "note",
+      "location": "Main findings, fourth paragraph (Figure 5b values)",
+      "finding": "Cat -1.41, jersey -1.33, scarf -1.25, whiskey -1.17, beer -1.05 and scotch about -1.01 are the labelled dots below the unlabelled minimum of about -0.89; cigar 0.90, aviator 0.63 and five unlabelled dots between about 0.09 and 0.31 make the seven positive dots. All agree with reading-copy line 313 and the remeasurement of the second QC. The authors' reading is taken from the Figure 5b caption and line 317."
+    },
+    {
+      "severity": "note",
+      "location": "Quotations and locators",
+      "finding": "All three displayed quotations resolve exactly once in the reading copy, at lines 84 (section 2), 226 (section 4.4) and 331 (section 7); their locators hold. The paraphrase 'serious limitation' in s4 rests on the section 7 wording 'unrealistically simplistic treatment of gender' and 'even more serious concerns' and does not overstate it."
+    },
+    {
+      "severity": "note",
+      "location": "Research question and method",
+      "finding": "The two research questions follow line 84. The association and bias scores agree with the equations at lines 110 and 145 and the sign convention at line 147. Three entity pairs with six images each of men and women (section 4.1, line 157) and 40 entities retained by majority agreement of ten surveyed people (footnote 4, line 255) are correct."
+    },
+    {
+      "severity": "note",
+      "location": "source-representation boundary and Limitations",
+      "finding": "Both agree with the two QC receipts and the reading-copy provenance: six displayed equations, the Table 1 score column, the Table 2 row alignment and the Table 3 probabilities repaired, Figures 2 to 5 measured on the embedded rasters, acceptance for text assessment only by the second QC, plot readings rather than author values, five CC BY 4.0 raster assets, photographs of Figure 1 and Tables 1, 3 and 4 described and not reproduced, 39 legible labels against 40 entities in Figure 5a and mostly unlabelled Figure 5b dots. The single-architecture, English-only, binary-gender and small-survey limitations follow footnotes 2 to 4 and section 7."
+    },
+    {
+      "severity": "note",
+      "location": "Assessment relevance",
+      "finding": "Unchanged and still supported. KI_Sonstige, Gender and Bias_Ungleichheit are central, Diversitaet rests on the section 7 limitation and its call for inclusive probes and data, and Fairness, Soziale_Arbeit, Generative_KI, Prompting, AI_Literacies and Feministisch are correctly excluded."
+    }
+  ],
+  "validated_subject": {
+    "validated_at": "2026-09-29T13:31:40.353137+00:00",
+    "validator": "claude-code/kd-final-reviewer-3 integration; document body and source hashes plus literal quotation checks",
+    "body_sha256": "sha256:e7396515cd2f8a52e310e87b14afcf96e74519f4fe59053ea0988e4fe77873b4",
+    "source_metadata": {
+      "record-id": "Z9DNTBFF",
+      "work-id": "work:ec94cf1c-87bf-5f4d-a840-9dd3b92eefab",
+      "version-id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
+      "version-type": "version_of_record",
+      "source-representation": {
+        "path": "corpus/source-acquisition/completion-20260921/Z9DNTBFF-reading.md",
+        "sha256": "sha256:588046a149fe3426fdf07d03c77097a212b60da2578e5747ad8b9e8c08b4f910",
+        "version-id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
+        "version-type": "version_of_record",
+        "source-url": "https://aclanthology.org/2022.gebnlp-1.10/",
+        "is-preferred-version": true,
+        "boundary": "The complete Version of Record text retains source-specific attribution and independently checked repairs to the six displayed equations, the Table 1 score column, the Table 2 row alignment and the Table 3 probabilities, with Figures 2 to 5 measured on their embedded rasters. A second independent conversion QC accepts the corrected reading copy for text assessment. Figure values are plot readings rather than values reported by the authors. The five figure rasters are bound as hash-bound CC BY 4.0 reading assets, while the photographs of Figure 1 and Tables 1, 3 and 4 are described and not reproduced."
+      }
+    }
+  }
+}

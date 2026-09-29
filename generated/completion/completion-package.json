@@ -8678,7 +8678,7 @@
     "targeted_followup_search_date": "2026-09-05",
     "targeted_gap_fill_candidates": true
   },
-  "source_fingerprint": "sha256:5b3f6a30a747f83a64df54f5719af800fa74a95a03a52bf879f0cc1237bfc82c",
+  "source_fingerprint": "sha256:6ec05bc9c713e4ccf49b9a2e6f5466b2187c58c764498979f742f53adfa2502d",
   "sources": [
     {
       "path": "assessment/categories.yaml",
@@ -8858,7 +8858,7 @@
     },
     {
       "path": "corpus/work_version_registry.json",
-      "sha256": "77e727596ebdd9cacc6da341e265e8aec2558b48352768db5ca1d617e103b1e7"
+      "sha256": "54321b0a78c07359ce439361a3b901f0e54cea323d9f0765bab730caefc74ba6"
     },
     {
       "path": "corpus/zotero_export.json",
@@ -8898,7 +8898,7 @@
     },
     {
       "path": "docs/data/research_vault_v2.json",
-      "sha256": "78683e583bf628011dcc7bcdb59f69b5706e361eb07d2744b1049e0b2c4edbeb"
+      "sha256": "59b8b3ab7dec5a8dcd89c9f527320fb41f41e6147bffa45cfe6a50a7006f6cde"
     },
     {
       "path": "docs/data/screening/ar2.json",
@@ -9474,7 +9474,7 @@
     },
     {
       "path": "docs/vault/Papers/active-completion-z9dntbff-gender-bias-vision-language-models.md",
-      "sha256": "848453d93c789a8a3861152f25abe1d3fe40b0f091557a3c99a8a246ca55a979"
+      "sha256": "5566bb866310888b859c184dd2e826eeb0eb1252a2d91c8a8c2b6334f0e79116"
     },
     {
       "path": "docs/vault/Papers/active-completion-zitlbm8a-chatgpt-social-work-science.md",
@@ -9702,7 +9702,7 @@
     },
     {
       "path": "generated/agent-screening-queue.json",
-      "sha256": "6e1ac8b225b42511aa69eff5e7ea1a45ffd3ca11c1cac02567185a2c2a5db0b3"
+      "sha256": "81e3f34e2a0c1288e903c2e59391a391cc12198e1a8b102add7540a46e23feab"
     },
     {
       "path": "generated/conformance/conformance_map.yaml",
@@ -11446,7 +11446,7 @@
     },
     {
       "path": "research-vault/20_distillates/publications/completion-z9dntbff-gender-bias-vision-language-models.md",
-      "sha256": "848453d93c789a8a3861152f25abe1d3fe40b0f091557a3c99a8a246ca55a979"
+      "sha256": "5566bb866310888b859c184dd2e826eeb0eb1252a2d91c8a8c2b6334f0e79116"
     },
     {
       "path": "research-vault/20_distillates/publications/completion-zitlbm8a-chatgpt-social-work-science.md",

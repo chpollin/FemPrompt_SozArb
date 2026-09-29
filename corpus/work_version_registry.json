@@ -1,6 +1,6 @@
 {
   "schema": "femprompt-work-version-registry/0.1",
-  "source_fingerprint": "sha256:2ab680461a8e67bb082a059f42b666559ff5751e5968f3faded3f2c236795ade",
+  "source_fingerprint": "sha256:295cce4bf876a884c14b4089185b2a784ac06e8c01bb27da4f46024ec4cf81c7",
   "sources": [
     {
       "path": "corpus/metadata_corrections.json",
@@ -91,8 +91,8 @@
       "sha256": "e899385c54b3118d6eec98a0195a659ff18fc33c4c0dcc3a9e8cccda7a244353"
     },
     {
-      "path": "corpus/source-acquisition/completion-20260921/Z9DNTBFF.identity-bound.md",
-      "sha256": "729606223c6f936d78f837d285ae84f5d18f010b62af7dfa793cce64119fd3c0"
+      "path": "corpus/source-acquisition/completion-20260921/Z9DNTBFF-reading.md",
+      "sha256": "588046a149fe3426fdf07d03c77097a212b60da2578e5747ad8b9e8c08b4f910"
     },
     {
       "path": "corpus/source-acquisition/completion-20260921/shjqqti6-publisher-metadata.txt",
@@ -196,7 +196,7 @@
     },
     {
       "path": "corpus/source_version_bindings.json",
-      "sha256": "276c00dd0e54270ec209b8cfb23a4e73596c926ce3279fc9ba4fe3122721768d"
+      "sha256": "8d45ba39004cd0f09c398bb45a2e1be8ccaf6e411d4491142b913c0fd45a7d86"
     },
     {
       "path": "corpus/zotero_export.json",
@@ -33215,8 +33215,8 @@
       "source_version_type": "version_of_record",
       "preferred_version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
       "is_preferred_version": true,
-      "source_path": "corpus/source-acquisition/completion-20260921/Z9DNTBFF.identity-bound.md",
-      "source_sha256": "sha256:729606223c6f936d78f837d285ae84f5d18f010b62af7dfa793cce64119fd3c0",
+      "source_path": "corpus/source-acquisition/completion-20260921/Z9DNTBFF-reading.md",
+      "source_sha256": "sha256:588046a149fe3426fdf07d03c77097a212b60da2578e5747ad8b9e8c08b4f910",
       "binding_mode": "existing_version",
       "bibliographic_identity": {
         "title": "Worst of Both Worlds: Biases Compound in Pre-trained Vision-and-Language Models",
@@ -33700,8 +33700,8 @@
       "source_version_type": "version_of_record",
       "preferred_version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
       "is_preferred_version": true,
-      "source_path": "corpus/source-acquisition/completion-20260921/Z9DNTBFF.identity-bound.md",
-      "source_sha256": "sha256:729606223c6f936d78f837d285ae84f5d18f010b62af7dfa793cce64119fd3c0",
+      "source_path": "corpus/source-acquisition/completion-20260921/Z9DNTBFF-reading.md",
+      "source_sha256": "sha256:588046a149fe3426fdf07d03c77097a212b60da2578e5747ad8b9e8c08b4f910",
       "binding_mode": "existing_version",
       "bibliographic_identity": {
         "title": "Worst of Both Worlds: Biases Compound in Pre-trained Vision-and-Language Models",

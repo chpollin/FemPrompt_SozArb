@@ -1695,10 +1695,10 @@
     },
     "Z9DNTBFF": {
       "binding_mode": "existing_version",
-      "agent_id": "/root/source_completion",
-      "model": "gpt-5.6-sol",
-      "reviewed_at": "2026-09-21T18:40:35.618313+00:00",
-      "reason": "The acquired full text and its title block were read. The exact existing Version was checked against the attributed primary publisher or repository identifier recorded above the unchanged Docling body. This binding records source readiness without changing screening or scholarly authority.",
+      "agent_id": "claude-code/kd-final-reviewer-3",
+      "model": "claude-opus-5-5",
+      "reviewed_at": "2026-09-29T13:32:11.803909+00:00",
+      "reason": "The exact Version-of-Record reading copy repairs the six displayed equations, the Table 1 score column, the Table 2 row alignment and the Table 3 probabilities and records the Figure 2 to 5 values measured on the embedded rasters, which are bound as CC BY 4.0 reading assets. A second independent conversion QC accepts it for text assessment, and a separate source-bound review accepts the revised Knowledge Document against it. All canonical Work and Version identifiers remain unchanged; this binding records source readiness without changing screening or scholarly authority.",
       "bibliographic_identity": {
         "title": "Worst of Both Worlds: Biases Compound in Pre-trained Vision-and-Language Models",
         "doi": "10.18653/v1/2022.gebnlp-1.10"
@@ -1715,20 +1715,20 @@
         "source_version_type": "version_of_record",
         "preferred_version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
         "is_preferred_version": true,
-        "source_path": "corpus/source-acquisition/completion-20260921/Z9DNTBFF.identity-bound.md",
-        "source_sha256": "sha256:729606223c6f936d78f837d285ae84f5d18f010b62af7dfa793cce64119fd3c0"
+        "source_path": "corpus/source-acquisition/completion-20260921/Z9DNTBFF-reading.md",
+        "source_sha256": "sha256:588046a149fe3426fdf07d03c77097a212b60da2578e5747ad8b9e8c08b4f910"
       },
       "evidence": [
         {
-          "source_path": "corpus/source-acquisition/completion-20260921/Z9DNTBFF.identity-bound.md",
-          "sha256": "sha256:729606223c6f936d78f837d285ae84f5d18f010b62af7dfa793cce64119fd3c0",
+          "source_path": "corpus/source-acquisition/completion-20260921/Z9DNTBFF-reading.md",
+          "sha256": "sha256:588046a149fe3426fdf07d03c77097a212b60da2578e5747ad8b9e8c08b4f910",
           "source_url": "https://aclanthology.org/2022.gebnlp-1.10/",
           "locator": "Attributed primary source identity header",
           "quote": "Worst of Both Worlds: Biases Compound in Pre-trained Vision-and-Language Models"
         },
         {
-          "source_path": "corpus/source-acquisition/completion-20260921/Z9DNTBFF.identity-bound.md",
-          "sha256": "sha256:729606223c6f936d78f837d285ae84f5d18f010b62af7dfa793cce64119fd3c0",
+          "source_path": "corpus/source-acquisition/completion-20260921/Z9DNTBFF-reading.md",
+          "sha256": "sha256:588046a149fe3426fdf07d03c77097a212b60da2578e5747ad8b9e8c08b4f910",
           "source_url": "https://aclanthology.org/2022.gebnlp-1.10/",
           "locator": "Attributed primary source identity header",
           "quote": "10.18653/v1/2022.gebnlp-1.10"
