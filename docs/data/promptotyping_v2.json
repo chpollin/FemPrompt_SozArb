@@ -861,9 +861,9 @@
       "id": "XCS4YCQH",
       "stem": "European Commission. Joint Research Centre._2017_DigComp_2.1_the_digital_competence_framework_for",
       "title": "DigComp 2.1: the digital competence framework for citizens with eight proficiency levels and examples of use.",
-      "author_year": "European Commission. Joint Research Centre. (2017)",
+      "author_year": " (2017)",
       "year": 2017,
-      "doi": "",
+      "doi": "10.2760/38842",
       "url": "https://data.europa.eu/doi/10.2760/38842",
       "abstract": "",
       "stages": {
@@ -872,8 +872,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -930,7 +930,7 @@
       "latest_version_id": "version:406f4328-7ff9-5fba-b0c2-90845db5a5d7",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "SY8LNID7",
@@ -13959,9 +13959,9 @@
       "id": "QFPTW4VL",
       "stem": "European Data Protection Supervisor_2023_Explainable_Artificial_Intelligence",
       "title": "Explainable Artificial Intelligence",
-      "author_year": "European Data Protection Supervisor (2023)",
+      "author_year": " (2023)",
       "year": 2023,
-      "doi": "",
+      "doi": "10.2804/802043",
       "url": "https://www.edps.europa.eu/system/files/2023-11/23-11-16_techdispatch_xai_en.pdf",
       "abstract": "Emphasizes the necessity of Explainable AI (XAI) to ensure human-centered, transparent, and ethical AI systems. By increasing transparency and comprehensibility of algorithmic decisions, XAI enables individuals—including those from marginalized groups—to participate meaningfully in digital decision-making and challenge unjust outcomes.",
       "stages": {
@@ -13970,8 +13970,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -14039,7 +14039,7 @@
       "latest_version_id": "version:66dcd8c4-c9aa-59aa-a8fd-9f78fcc423b6",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "DUV4TUG3",
@@ -51953,7 +51953,7 @@
         "description": "Einträge mit verknüpftem Wissensdokument oder bereitstehendem Volltext",
         "type": "deterministic",
         "input": 463,
-        "output": 290,
+        "output": 292,
         "unit": "corpus_record",
         "prompt": null,
         "limitations": [
@@ -51966,7 +51966,7 @@
         "name": "Structured Knowledge Extraction",
         "description": "Kanonisch verknüpfte Wissensdokumente",
         "type": "probabilistic",
-        "input": 290,
+        "input": 292,
         "output": 269,
         "unit": "corpus_record",
         "distinct_documents": 199,
@@ -52215,7 +52215,7 @@
     }
   ],
   "meta": {
-    "source_fingerprint": "sha256:21931f9ca4a56bd28c7120c61273ab74dbc4120397c86b6222e60ce69e8c2c66",
+    "source_fingerprint": "sha256:91b42a876a6881d8e470eb55e14b138c7c0e972c1a5e55b0bda5cd9883faa173",
     "total_papers": 463,
     "corpus_record_total": 463,
     "corpus_work_total": 361,
@@ -52223,10 +52223,10 @@
     "knowledge_docs": 199,
     "knowledge_linked_records": 269,
     "knowledge_coverage": {
-      "fulltext_ready": 21,
+      "fulltext_ready": 23,
       "identity_unresolved": 67,
       "linked": 269,
-      "source_missing": 106
+      "source_missing": 104
     },
     "human_assessed": 302,
     "llm_assessed": 326,

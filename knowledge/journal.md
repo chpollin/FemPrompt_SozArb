@@ -30,6 +30,8 @@ The operator accepted publisher acquisition receipts as identity evidence for ex
 
 Seven prepared 2026 reading texts were bound under this rule after the agent recomputed each local PDF hash and found title and DOI in its text layer. They now enter the agent-screening queue as ready. The remaining unbound 2026 texts are listed with their concrete blocker in [[plan#Source and corpus readiness]]; one of them carries a registered Spanish title that the English article does not print.
 
+Two located reports from the registered-identifier gaps received their DOI from the document itself. The DigComp 2.1 report of the Joint Research Centre and the EDPS TechDispatch on explainable AI print separate DOIs for their HTML or print and PDF editions, and the Zotero URL of each record names the PDF edition. Attributed local metadata corrections register those DOIs, after which both reading copies bind under the unchanged quoted-DOI rule. The BASW guidance and the duplicated UNESCO report stay unbound for the reasons recorded in the plan.
+
 ### 2026-09-22: Referenzen sichtbar, Werkzeugleiste in der Korpusspalte, Anleitung für die Verifikationsrolle
 
 Der Operator hat die Ausblendung der Runde-eins-Referenzen aufgehoben. Die Entscheidung der Expertinnen und die LLM-Einschätzung aus Runde eins stehen jetzt in menschlichen Sitzungen mit Herkunftskennzeichnung über der Bewertung, und der LLM-Vorschlag lässt sich als Kategoriestufen übernehmen. Die Belegpflicht aus dem Papertext und die Ableitungsregel bleiben unverändert; Agentenläufe bleiben referenzblind. ADR-038 ersetzt die Ausblendungsregel aus FR-03, die alten Vergleichsfunktionen sind gelöscht, und der Unit-Test zum eingeklappten Vergleich prüft nun die sichtbaren Referenzen und die stufenbeschränkte Übernahme.

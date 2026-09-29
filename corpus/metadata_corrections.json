@@ -946,6 +946,58 @@
           "quote": "A Survey on Intersectional Fairness in Machine Learning: Notions, Mitigation, and Challenges"
         }
       ]
+    },
+    {
+      "record_id": "XCS4YCQH",
+      "base_sha256": "sha256:a279dc8bf1dcf7a4bc495ab97cd7c0c06ea0231357bb57d0982c84f260d9df27",
+      "authority": "ai-source-reviewed-metadata",
+      "agent_id": "claude-code/source-binding",
+      "model": "claude-opus-5-5",
+      "reviewed_at": "2026-09-29T11:57:02+00:00",
+      "findings": "The registered Zotero URL https://data.europa.eu/doi/10.2760/38842 is the Publications Office resolver for the DOI of the PDF edition. The local PDF prints this DOI in the PDF row of the imprint (PDF page 4) and on the back cover (page 48); the print edition carries the separate DOI 10.2760/836968. The empty DOI field is filled with the PDF-edition DOI that the record URL already names.",
+      "changes": [
+        {
+          "field": "DOI",
+          "before": "",
+          "after": "10.2760/38842",
+          "reason": "The registered Zotero URL https://data.europa.eu/doi/10.2760/38842 is the Publications Office resolver for the DOI of the PDF edition. The local PDF prints this DOI in the PDF row of the imprint (PDF page 4) and on the back cover (page 48); the print edition carries the separate DOI 10.2760/836968. The empty DOI field is filled with the PDF-edition DOI that the record URL already names."
+        }
+      ],
+      "evidence": [
+        {
+          "source_path": "generated/markdown_clean/European Commission. Joint Research Centre._2017_DigComp_2.1_the_digital_competence_framework_for.md",
+          "sha256": "sha256:bd02951d8c3b4d40b7c12379c8156039cee63561c52750c81f0a4b8d22bfc600",
+          "source_url": "https://data.europa.eu/doi/10.2760/38842",
+          "locator": "Imprint page, PDF edition row (PDF page 4)",
+          "quote": "| PDF   | ISBN 978-92-79-68006-9 ISSN 1831-9424 doi:10.2760/38842   |"
+        }
+      ]
+    },
+    {
+      "record_id": "QFPTW4VL",
+      "base_sha256": "sha256:87fbfe0583d55b1337c4b1482d93854c495379f94d8145a6cf44560ec2b21615",
+      "authority": "ai-source-reviewed-metadata",
+      "agent_id": "claude-code/source-binding",
+      "model": "claude-opus-5-5",
+      "reviewed_at": "2026-09-29T11:57:02+00:00",
+      "findings": "The registered Zotero URL is the EDPS PDF https://www.edps.europa.eu/system/files/2023-11/23-11-16_techdispatch_xai_en.pdf. The local PDF prints two imprint rows on PDF page 2, HTML with doi 10.2804/132319 and PDF with doi 10.2804/802043. The empty DOI field is filled with the DOI of the PDF edition that the record URL names.",
+      "changes": [
+        {
+          "field": "DOI",
+          "before": "",
+          "after": "10.2804/802043",
+          "reason": "The registered Zotero URL is the EDPS PDF https://www.edps.europa.eu/system/files/2023-11/23-11-16_techdispatch_xai_en.pdf. The local PDF prints two imprint rows on PDF page 2, HTML with doi 10.2804/132319 and PDF with doi 10.2804/802043. The empty DOI field is filled with the DOI of the PDF edition that the record URL names."
+        }
+      ],
+      "evidence": [
+        {
+          "source_path": "generated/markdown_clean/European Data Protection Supervisor_2023_Explainable_Artificial_Intelligence.md",
+          "sha256": "sha256:e3433776d7060bdc5e2ad5c5764fa3a6933af0362e6d593deb3226f2e677e52b",
+          "source_url": "https://www.edps.europa.eu/system/files/2023-11/23-11-16_techdispatch_xai_en.pdf",
+          "locator": "Imprint, PDF edition row (PDF page 2)",
+          "quote": "PDF ISBN 978-92-9242-716-0        ISSN 2599-932X         doi: 10.2804/802043"
+        }
+      ]
     }
   ]
 }

@@ -8678,7 +8678,7 @@
     "targeted_followup_search_date": "2026-09-05",
     "targeted_gap_fill_candidates": true
   },
-  "source_fingerprint": "sha256:cc5eebd17acda24619e958b48e77716269ad6386388e4628c6f2526b2a1ee7a0",
+  "source_fingerprint": "sha256:576a38273624713ef632dac299931870f9d1c1eb5760583ff7a861cc5ecce8f1",
   "sources": [
     {
       "path": "assessment/categories.yaml",
@@ -8858,7 +8858,7 @@
     },
     {
       "path": "corpus/work_version_registry.json",
-      "sha256": "fa8bb5f2bb125bef3ebdd02b8c6884f5b549e910d4b8b0676b3cdbf41570be4b"
+      "sha256": "bcdde7b3f9342f3b93486e059747c7cba2dc5c33d66461fc9376d1dfb4e8a20a"
     },
     {
       "path": "corpus/zotero_export.json",
@@ -8898,7 +8898,7 @@
     },
     {
       "path": "docs/data/research_vault_v2.json",
-      "sha256": "1e2c9159e5add47d056a292432f99eaa35245600df6775351a8f8b5e324afdb2"
+      "sha256": "3a364fc8beef5351e0fb2880687326ce03f9d1b9f29bf63cbfb650a7c86e83a6"
     },
     {
       "path": "docs/data/screening/ar2.json",
@@ -9702,7 +9702,7 @@
     },
     {
       "path": "generated/agent-screening-queue.json",
-      "sha256": "79d22ead96baaa993e06e5308e028423d5bb7ebfdb787e4fcde9db183e8ff781"
+      "sha256": "3f9ad1b8f9bbe4da91c40f1e743438feae3c04d30c2488a61cc53d28eacf71fa"
     },
     {
       "path": "generated/conformance/conformance_map.yaml",
@@ -32926,7 +32926,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "XCS4YCQH"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Exclude",
       "historical_identity_bindings": {},
@@ -39793,7 +39795,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "QFPTW4VL"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Exclude",
       "historical_identity_bindings": {},

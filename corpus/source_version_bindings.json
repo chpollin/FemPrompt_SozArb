@@ -2281,6 +2281,90 @@
           "quote": "IA, salud mental y género. Un mapeo sistemático de las ciencias sociales y humanas en América Latina"
         }
       ]
+    },
+    "XCS4YCQH": {
+      "binding_mode": "existing_version",
+      "agent_id": "claude-code/source-binding",
+      "model": "claude-opus-5-5",
+      "reviewed_at": "2026-09-29T11:57:03+00:00",
+      "reason": "The bound Markdown quotes the report title and the DOI of the PDF edition that the registered record URL names; the DOI was registered through the attributed local metadata correction of the same session. The Markdown was checked against the local PDF (sha256:e048ffe555d647832c0e90645356c42ecf5f14f68af486a8258e1dfc2eb1184d) by text coverage. This records source identity only.",
+      "bibliographic_identity": {
+        "title": "DigComp 2.1: the digital competence framework for citizens with eight proficiency levels and examples of use.",
+        "doi": "10.2760/38842"
+      },
+      "version_identity": {
+        "title": "DigComp 2.1: the digital competence framework for citizens with eight proficiency levels and examples of use.",
+        "doi": "10.2760/38842"
+      },
+      "binding": {
+        "record_id": "XCS4YCQH",
+        "work_id": "work:aef35fcd-35ac-5570-a8bd-484424e0c690",
+        "bibliographic_version_id": "version:406f4328-7ff9-5fba-b0c2-90845db5a5d7",
+        "source_version_id": "version:406f4328-7ff9-5fba-b0c2-90845db5a5d7",
+        "source_version_type": "unknown",
+        "preferred_version_id": "version:406f4328-7ff9-5fba-b0c2-90845db5a5d7",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown_clean/European Commission. Joint Research Centre._2017_DigComp_2.1_the_digital_competence_framework_for.md",
+        "source_sha256": "sha256:bd02951d8c3b4d40b7c12379c8156039cee63561c52750c81f0a4b8d22bfc600"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/markdown_clean/European Commission. Joint Research Centre._2017_DigComp_2.1_the_digital_competence_framework_for.md",
+          "sha256": "sha256:bd02951d8c3b4d40b7c12379c8156039cee63561c52750c81f0a4b8d22bfc600",
+          "source_url": "https://data.europa.eu/doi/10.2760/38842",
+          "locator": "Title before the executive summary",
+          "quote": "DigComp 2.1: The Digital Competence Framework for Citizens with eight proficiency levels and examples of use"
+        },
+        {
+          "source_path": "generated/markdown_clean/European Commission. Joint Research Centre._2017_DigComp_2.1_the_digital_competence_framework_for.md",
+          "sha256": "sha256:bd02951d8c3b4d40b7c12379c8156039cee63561c52750c81f0a4b8d22bfc600",
+          "source_url": "https://data.europa.eu/doi/10.2760/38842",
+          "locator": "Imprint page, PDF edition row (PDF page 4)",
+          "quote": "| PDF   | ISBN 978-92-79-68006-9 ISSN 1831-9424 doi:10.2760/38842   |"
+        }
+      ]
+    },
+    "QFPTW4VL": {
+      "binding_mode": "existing_version",
+      "agent_id": "claude-code/source-binding",
+      "model": "claude-opus-5-5",
+      "reviewed_at": "2026-09-29T11:57:03+00:00",
+      "reason": "The bound Markdown quotes the report title and the DOI of the PDF edition that the registered record URL names; the DOI was registered through the attributed local metadata correction of the same session. The Markdown was checked against the local PDF (sha256:0c74a2085a7078540d01acf634bebef6811b0ed3117f1bf1f567d7fbb6804e07) by text coverage. This records source identity only.",
+      "bibliographic_identity": {
+        "title": "Explainable Artificial Intelligence",
+        "doi": "10.2804/802043"
+      },
+      "version_identity": {
+        "title": "Explainable Artificial Intelligence",
+        "doi": "10.2804/802043"
+      },
+      "binding": {
+        "record_id": "QFPTW4VL",
+        "work_id": "work:ed655453-e773-5587-87a4-e33a1ca5ab6d",
+        "bibliographic_version_id": "version:66dcd8c4-c9aa-59aa-a8fd-9f78fcc423b6",
+        "source_version_id": "version:66dcd8c4-c9aa-59aa-a8fd-9f78fcc423b6",
+        "source_version_type": "unknown",
+        "preferred_version_id": "version:66dcd8c4-c9aa-59aa-a8fd-9f78fcc423b6",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown_clean/European Data Protection Supervisor_2023_Explainable_Artificial_Intelligence.md",
+        "source_sha256": "sha256:e3433776d7060bdc5e2ad5c5764fa3a6933af0362e6d593deb3226f2e677e52b"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/markdown_clean/European Data Protection Supervisor_2023_Explainable_Artificial_Intelligence.md",
+          "sha256": "sha256:e3433776d7060bdc5e2ad5c5764fa3a6933af0362e6d593deb3226f2e677e52b",
+          "source_url": "https://www.edps.europa.eu/system/files/2023-11/23-11-16_techdispatch_xai_en.pdf",
+          "locator": "Title page",
+          "quote": "EDPS TechDispatch on Explainable Artificial Intelligence"
+        },
+        {
+          "source_path": "generated/markdown_clean/European Data Protection Supervisor_2023_Explainable_Artificial_Intelligence.md",
+          "sha256": "sha256:e3433776d7060bdc5e2ad5c5764fa3a6933af0362e6d593deb3226f2e677e52b",
+          "source_url": "https://www.edps.europa.eu/system/files/2023-11/23-11-16_techdispatch_xai_en.pdf",
+          "locator": "Imprint, PDF edition row (PDF page 2)",
+          "quote": "PDF ISBN 978-92-9242-716-0        ISSN 2599-932X         doi: 10.2804/802043"
+        }
+      ]
     }
   }
 }

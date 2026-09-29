@@ -1,10 +1,10 @@
 {
   "schema": "femprompt-work-version-registry/0.1",
-  "source_fingerprint": "sha256:496c69b8544dfad5e19c650c7b56a7b92fa341719f3a5ff012bbad220c260c2e",
+  "source_fingerprint": "sha256:212a70809317d12cd416c192ba744bd39c18e7c6770832b9739150ced69cf41b",
   "sources": [
     {
       "path": "corpus/metadata_corrections.json",
-      "sha256": "a6cc460400e27451ca0e4ce3cfd666da21dd2981673f2eead55e671236ab213c"
+      "sha256": "d9c673779871589d669c8a8b8fa99a46156a372454365832b1e91e585eec0e12"
     },
     {
       "path": "corpus/source-acquisition/QRK7C3JK-visual-qc/visual-qc.json",
@@ -196,7 +196,7 @@
     },
     {
       "path": "corpus/source_version_bindings.json",
-      "sha256": "4ea51a35f44051c4496a64b7ac803c91c778bba0ba7b085e3aa92cb37f14cb56"
+      "sha256": "ae5b240a7e15d2bc83600f45b323d86510f83ea8940848b0c6b742045083e45d"
     },
     {
       "path": "corpus/zotero_export.json",
@@ -233,6 +233,14 @@
     {
       "path": "generated/markdown_clean/Baker_2025_Artificial_intelligence_in_social_work_An_EPIC.md",
       "sha256": "f49c7419289238b9d1e01a8547e2f1181b34ea9d02537a37f2c4eebd7202c99e"
+    },
+    {
+      "path": "generated/markdown_clean/European Commission. Joint Research Centre._2017_DigComp_2.1_the_digital_competence_framework_for.md",
+      "sha256": "bd02951d8c3b4d40b7c12379c8156039cee63561c52750c81f0a4b8d22bfc600"
+    },
+    {
+      "path": "generated/markdown_clean/European Data Protection Supervisor_2023_Explainable_Artificial_Intelligence.md",
+      "sha256": "e3433776d7060bdc5e2ad5c5764fa3a6933af0362e6d593deb3226f2e677e52b"
     },
     {
       "path": "generated/markdown_clean/FTJM5R8N.md",
@@ -415,7 +423,7 @@
     "works_with_multiple_versions": 26,
     "works_with_flags": 21,
     "ambiguous_external_identifiers": 4,
-    "bound_sources": 73
+    "bound_sources": 75
   },
   "works": [
     {
@@ -18253,6 +18261,9 @@
           "item_type": "book",
           "journal_or_repository": "",
           "identifiers": {
+            "doi": [
+              "10.2760/38842"
+            ],
             "zotero_key": [
               "XCS4YCQH"
             ],
@@ -18270,6 +18281,36 @@
           "source_lanes": [],
           "evidence": [],
           "provenance": [
+            {
+              "source": "corpus/metadata_corrections.json",
+              "reference": "XCS4YCQH",
+              "ai_metadata_correction": {
+                "record_id": "XCS4YCQH",
+                "base_sha256": "sha256:a279dc8bf1dcf7a4bc495ab97cd7c0c06ea0231357bb57d0982c84f260d9df27",
+                "agent_id": "claude-code/source-binding",
+                "model": "claude-opus-5-5",
+                "reviewed_at": "2026-09-29T11:57:02+00:00",
+                "findings": "The registered Zotero URL https://data.europa.eu/doi/10.2760/38842 is the Publications Office resolver for the DOI of the PDF edition. The local PDF prints this DOI in the PDF row of the imprint (PDF page 4) and on the back cover (page 48); the print edition carries the separate DOI 10.2760/836968. The empty DOI field is filled with the PDF-edition DOI that the record URL already names.",
+                "authority": "ai-source-reviewed-metadata",
+                "changes": [
+                  {
+                    "field": "DOI",
+                    "before": "",
+                    "after": "10.2760/38842",
+                    "reason": "The registered Zotero URL https://data.europa.eu/doi/10.2760/38842 is the Publications Office resolver for the DOI of the PDF edition. The local PDF prints this DOI in the PDF row of the imprint (PDF page 4) and on the back cover (page 48); the print edition carries the separate DOI 10.2760/836968. The empty DOI field is filled with the PDF-edition DOI that the record URL already names."
+                  }
+                ],
+                "evidence": [
+                  {
+                    "source_path": "generated/markdown_clean/European Commission. Joint Research Centre._2017_DigComp_2.1_the_digital_competence_framework_for.md",
+                    "sha256": "sha256:bd02951d8c3b4d40b7c12379c8156039cee63561c52750c81f0a4b8d22bfc600",
+                    "source_url": "https://data.europa.eu/doi/10.2760/38842",
+                    "locator": "Imprint page, PDF edition row (PDF page 4)",
+                    "quote": "| PDF   | ISBN 978-92-79-68006-9 ISSN 1831-9424 doi:10.2760/38842   |"
+                  }
+                ]
+              }
+            },
             {
               "source": "zotero_export",
               "reference": "XCS4YCQH"
@@ -24180,6 +24221,9 @@
           "item_type": "report",
           "journal_or_repository": "",
           "identifiers": {
+            "doi": [
+              "10.2804/802043"
+            ],
             "zotero_key": [
               "QFPTW4VL"
             ],
@@ -24197,6 +24241,36 @@
           "source_lanes": [],
           "evidence": [],
           "provenance": [
+            {
+              "source": "corpus/metadata_corrections.json",
+              "reference": "QFPTW4VL",
+              "ai_metadata_correction": {
+                "record_id": "QFPTW4VL",
+                "base_sha256": "sha256:87fbfe0583d55b1337c4b1482d93854c495379f94d8145a6cf44560ec2b21615",
+                "agent_id": "claude-code/source-binding",
+                "model": "claude-opus-5-5",
+                "reviewed_at": "2026-09-29T11:57:02+00:00",
+                "findings": "The registered Zotero URL is the EDPS PDF https://www.edps.europa.eu/system/files/2023-11/23-11-16_techdispatch_xai_en.pdf. The local PDF prints two imprint rows on PDF page 2, HTML with doi 10.2804/132319 and PDF with doi 10.2804/802043. The empty DOI field is filled with the DOI of the PDF edition that the record URL names.",
+                "authority": "ai-source-reviewed-metadata",
+                "changes": [
+                  {
+                    "field": "DOI",
+                    "before": "",
+                    "after": "10.2804/802043",
+                    "reason": "The registered Zotero URL is the EDPS PDF https://www.edps.europa.eu/system/files/2023-11/23-11-16_techdispatch_xai_en.pdf. The local PDF prints two imprint rows on PDF page 2, HTML with doi 10.2804/132319 and PDF with doi 10.2804/802043. The empty DOI field is filled with the DOI of the PDF edition that the record URL names."
+                  }
+                ],
+                "evidence": [
+                  {
+                    "source_path": "generated/markdown_clean/European Data Protection Supervisor_2023_Explainable_Artificial_Intelligence.md",
+                    "sha256": "sha256:e3433776d7060bdc5e2ad5c5764fa3a6933af0362e6d593deb3226f2e677e52b",
+                    "source_url": "https://www.edps.europa.eu/system/files/2023-11/23-11-16_techdispatch_xai_en.pdf",
+                    "locator": "Imprint, PDF edition row (PDF page 2)",
+                    "quote": "PDF ISBN 978-92-9242-716-0        ISSN 2599-932X         doi: 10.2804/802043"
+                  }
+                ]
+              }
+            },
             {
               "source": "zotero_export",
               "reference": "QFPTW4VL"
@@ -28247,6 +28321,14 @@
     "doi:10.26615/978-954-452-098-4-060": {
       "work_id": "work:0047ae4b-70f2-53bc-ae76-87aa24cec7ac",
       "version_id": "version:8f30cc62-ffe6-5001-8f4d-759391b0878d"
+    },
+    "doi:10.2760/38842": {
+      "work_id": "work:aef35fcd-35ac-5570-a8bd-484424e0c690",
+      "version_id": "version:406f4328-7ff9-5fba-b0c2-90845db5a5d7"
+    },
+    "doi:10.2804/802043": {
+      "work_id": "work:ed655453-e773-5587-87a4-e33a1ca5ab6d",
+      "version_id": "version:66dcd8c4-c9aa-59aa-a8fd-9f78fcc423b6"
     },
     "doi:10.2991/978-94-6239-618-0_20": {
       "work_id": "work:ce1b3961-e4e4-5bd2-a6a8-b97ef7fbc90f",
@@ -32733,6 +32815,26 @@
         "doi": "10.3390/ai4010003"
       }
     },
+    "QFPTW4VL": {
+      "record_id": "QFPTW4VL",
+      "work_id": "work:ed655453-e773-5587-87a4-e33a1ca5ab6d",
+      "bibliographic_version_id": "version:66dcd8c4-c9aa-59aa-a8fd-9f78fcc423b6",
+      "source_version_id": "version:66dcd8c4-c9aa-59aa-a8fd-9f78fcc423b6",
+      "source_version_type": "unknown",
+      "preferred_version_id": "version:66dcd8c4-c9aa-59aa-a8fd-9f78fcc423b6",
+      "is_preferred_version": true,
+      "source_path": "generated/markdown_clean/European Data Protection Supervisor_2023_Explainable_Artificial_Intelligence.md",
+      "source_sha256": "sha256:e3433776d7060bdc5e2ad5c5764fa3a6933af0362e6d593deb3226f2e677e52b",
+      "binding_mode": "existing_version",
+      "bibliographic_identity": {
+        "title": "Explainable Artificial Intelligence",
+        "doi": "10.2804/802043"
+      },
+      "version_identity": {
+        "title": "Explainable Artificial Intelligence",
+        "doi": "10.2804/802043"
+      }
+    },
     "QI5AYE4V": {
       "work_id": "work:5f49f95b-dcfe-5778-8376-a313cb039d4d",
       "bibliographic_version_id": "version:2e650cfc-0147-5778-ab55-ed2e17a4f86b",
@@ -33043,6 +33145,26 @@
       "version_identity": {
         "title": "Multi-Persona Thinking for Bias Mitigation in Large Language Models",
         "doi": "10.18653/v1/2026.findings-acl.1389"
+      }
+    },
+    "XCS4YCQH": {
+      "record_id": "XCS4YCQH",
+      "work_id": "work:aef35fcd-35ac-5570-a8bd-484424e0c690",
+      "bibliographic_version_id": "version:406f4328-7ff9-5fba-b0c2-90845db5a5d7",
+      "source_version_id": "version:406f4328-7ff9-5fba-b0c2-90845db5a5d7",
+      "source_version_type": "unknown",
+      "preferred_version_id": "version:406f4328-7ff9-5fba-b0c2-90845db5a5d7",
+      "is_preferred_version": true,
+      "source_path": "generated/markdown_clean/European Commission. Joint Research Centre._2017_DigComp_2.1_the_digital_competence_framework_for.md",
+      "source_sha256": "sha256:bd02951d8c3b4d40b7c12379c8156039cee63561c52750c81f0a4b8d22bfc600",
+      "binding_mode": "existing_version",
+      "bibliographic_identity": {
+        "title": "DigComp 2.1: the digital competence framework for citizens with eight proficiency levels and examples of use.",
+        "doi": "10.2760/38842"
+      },
+      "version_identity": {
+        "title": "DigComp 2.1: the digital competence framework for citizens with eight proficiency levels and examples of use.",
+        "doi": "10.2760/38842"
       }
     },
     "XPWCK65R": {
