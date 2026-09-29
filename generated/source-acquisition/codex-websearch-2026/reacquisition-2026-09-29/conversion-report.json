@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-09-29T14:14:17.847959",
+  "input_dir": "generated\\pdfs\\reacquisition-2026-09-22\\oa",
+  "output_dir": "generated\\source-acquisition\\codex-websearch-2026\\reacquisition-2026-09-29\\markdown-raw",
+  "total_files": 1,
+  "converted": 1,
+  "skipped": 0,
+  "failed": 0,
+  "low_quality": 0,
+  "files": [
+    {
+      "input": "f34607d11846d4580bc4.pdf",
+      "output": "f34607d11846d4580bc4.md",
+      "file_hash": "08b3758ecc6228a99cc2827c489552b6",
+      "success": true,
+      "duration_seconds": 26.97,
+      "metrics": {
+        "total_chars": 82203,
+        "total_lines": 792,
+        "total_words": 11636,
+        "headings": 50,
+        "heading_levels": {
+          "h2": 50
+        },
+        "tables": 5,
+        "lists": 92,
+        "figures": 0,
+        "code_blocks": 13,
+        "links": 0,
+        "empty_lines": 364,
+        "avg_line_length": 203.4
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    }
+  ]
+}

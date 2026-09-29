@@ -1,0 +1,43 @@
+{
+  "schema": "femprompt-conversion-qc/0.1",
+  "created_at": "2026-09-29T12:16:39+00:00",
+  "scope": "Source QC of the re-converted arXiv 2412.14971v1 author preprint against its PDF. This QC grants no source binding, scientific acceptance, screening decision, registry authority or publication authority.",
+  "reviewer": {
+    "agent_id": "claude-code/source-preparation",
+    "model": "claude-opus-5-5"
+  },
+  "method": [
+    "Verified the PDF hash against the acquisition record generated/source-acquisition/codex-websearch-2026/reacquisition-2026-09-22.json before conversion.",
+    "Compared the word tokens of the PDF text layer with the Markdown; the missing share is below 0.1 percent and consists of DOI fragments in references.",
+    "Rendered PDF pages 16 to 18 and 22 with PyMuPDF, inspected Figures 1 to 3 and Table 5 visually, and compared Tables 1 to 5, headings, page order, Chinese terms and the appendix examples with the Markdown."
+  ],
+  "records": [
+    {
+      "record_id": "SIHIUMFZ",
+      "pdf_path": "generated/pdfs/reacquisition-2026-09-22/oa/f34607d11846d4580bc4.pdf",
+      "pdf_sha256": "sha256:eca218e2549932f56601635153170cede4b7183af6da76e8fa5a7a84d4a1bfad",
+      "markdown_path": "generated/source-acquisition/codex-websearch-2026/reacquisition-2026-09-29/markdown-clean/f34607d11846d4580bc4.md",
+      "markdown_sha256": "sha256:e69914d82f577595dc7c8ad7155964ce9e06787baecef44b0a46035810ed3db9",
+      "pages_total": 41,
+      "pages_visually_inspected": [
+        16,
+        17,
+        18,
+        22
+      ],
+      "result": "changes_required",
+      "structure": {
+        "headings": "Title, abstract, methods, results, discussion, references and Appendix A occur in source order; the running head repeats as a first line.",
+        "reading_order": "Single-column manuscript text is sequential across all 41 pages.",
+        "tables": "Tables 1 to 5 are present as Markdown with their cells; Table 5 matches the printed rows on PDF page 22 (printed page 21).",
+        "figures": "Figures 1 to 3 on PDF pages 16 to 18 (printed pages 15 to 17) are image placeholders; their captions and notes survive.",
+        "formulas": "No displayed formulas are present."
+      },
+      "losses": [
+        "Figure 1 loses its printed value labels. Combined composite scores: Qwen 152.0, Ernie 150.0, Claude 139.0, Gemini 139.0, ChatGPT 135.5, Mistral 133.0, DeepSeek 130.5, Moonshot 128.5. Composite score by test, applied knowledge then jurisprudence: Qwen 69.0 and 83.0, Ernie 66.0 and 84.0, Claude 66.0 and 73.0, Gemini 68.0 and 71.0, ChatGPT 66.0 and 69.5, Mistral 62.0 and 71.0, DeepSeek 59.5 and 71.0, Moonshot 65.0 and 63.5. Each pair sums to the combined score.",
+        "Figures 2 and 3 lose the per-model raw and normalized single-select and select-all-that-apply scores, which the figures plot without value labels; the prose states only medians, ranges and selected values."
+      ],
+      "assessment": "The text and tables are complete and readable. A reading copy must add the Figure 1 values and a structured description of Figures 2 and 3 before text-only acceptance. The source is the submitted author manuscript, whose title differs from the registered Version of Record."
+    }
+  ]
+}

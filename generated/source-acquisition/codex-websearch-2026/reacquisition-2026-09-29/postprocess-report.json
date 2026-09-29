@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-09-29T14:14:45.547056",
+  "input_dir": "generated\\source-acquisition\\codex-websearch-2026\\reacquisition-2026-09-29\\markdown-raw",
+  "output_dir": "generated\\source-acquisition\\codex-websearch-2026\\reacquisition-2026-09-29\\markdown-clean",
+  "in_place": false,
+  "documents": [
+    {
+      "filename": "f34607d11846d4580bc4.md",
+      "original_chars": 82331,
+      "final_chars": 81647,
+      "chars_removed": 684,
+      "hyphenations_fixed": 0,
+      "page_numbers_removed": 0,
+      "repeated_headers_removed": 15,
+      "excessive_newlines_fixed": 77,
+      "all_caps_removed": 0,
+      "artifact_score_before": 32.0,
+      "artifact_score_after": 0.0
+    }
+  ]
+}

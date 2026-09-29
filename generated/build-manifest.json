@@ -2119,6 +2119,12 @@
     "generated/source-acquisition/codex-websearch-2026/reacquisition-2026-09-22/markdown-clean/f34607d11846d4580bc4.md": "d65f9d2c8120e9df5b08ed79a414de24e1a5f4eafde7bcc0b51ab9233faf2cbd",
     "generated/source-acquisition/codex-websearch-2026/reacquisition-2026-09-22/markdown-raw/f34607d11846d4580bc4.md": "4c447c0a6779933987118ab0d7eb4623417ea9359591ae35646df5a41bd6d6af",
     "generated/source-acquisition/codex-websearch-2026/reacquisition-2026-09-22/postprocess-report.json": "826f0256c5cc79a7d40e99ffadad65c19a2fd381a844296ba64da3900b47824d",
+    "generated/source-acquisition/codex-websearch-2026/reacquisition-2026-09-29.json": "e38062aa6e6607f8237f706adc587f33c3ff4852f9dc792d1a055f74270c7270",
+    "generated/source-acquisition/codex-websearch-2026/reacquisition-2026-09-29/conversion-qc.json": "331b474d0d759e7dfca412c8742d26010a967d979f64422dcb5e5adc7eb7b5e6",
+    "generated/source-acquisition/codex-websearch-2026/reacquisition-2026-09-29/conversion-report.json": "37bb4c053b7759ea47d8479732280c60c67c9e43286f55a26632826497f9cac1",
+    "generated/source-acquisition/codex-websearch-2026/reacquisition-2026-09-29/markdown-clean/f34607d11846d4580bc4.md": "e69914d82f577595dc7c8ad7155964ce9e06787baecef44b0a46035810ed3db9",
+    "generated/source-acquisition/codex-websearch-2026/reacquisition-2026-09-29/markdown-raw/f34607d11846d4580bc4.md": "cc16ee0acf8af6d408fbbcd5a835aaa89bd05839567e73f470ced2dfb8f957a3",
+    "generated/source-acquisition/codex-websearch-2026/reacquisition-2026-09-29/postprocess-report.json": "6b5e86a92325966a2a5adea62ddd0229b957257362b63ea68dfdd360754d07a6",
     "generated/source-acquisition/codex-websearch-2026/validation/manual_review_queue_20260824_1618.csv": "c2eeb674d35ce043bed6097ac7793eea31f53b2603b0f9fc45de63b054882e0d",
     "generated/source-acquisition/codex-websearch-2026/validation/manual_review_queue_20260824_1626.csv": "5ee6a231744ab82f648514f4c1c104bd6a3a420a96e0110e90b712dab5ee7b34",
     "generated/source-acquisition/codex-websearch-2026/validation/manual_review_queue_20260824_1635.csv": "a1ffed942bfdaa3cc7c3d31e3ea8111634ddee54b43b0c4c16b13537fac9a689",
@@ -3024,7 +3030,7 @@
     "generated/completion/unmapped-historical-records.csv": "3b75c8d5489a494d8dc7626b8c7fca87127cadde109162a25b1449debd9fbb39",
     "generated/completion/work-verification-queue.csv": "e87844980c129d875c37778e3a2c13b8eac7fcbebdaf64f4b43716e0a4c51323",
     "generated/literature-readiness.csv": "0ff4b1822349c65ead61f7dd130c777f302422d46521e27559f16769db1d26e3",
-    "generated/literature-readiness.json": "f7ce1baa13cb137b5a2ddcf2ba2e137702a90602a921004a9ead90d5d1a2b58f",
+    "generated/literature-readiness.json": "fc9fbb9bd63b5f4d06d07082a1e8ebc8eb4e93cb0ae18ad9a66459182bc9cbd6",
     "generated/source-acquisition/codex-websearch-2026/source-readiness.json": "efad3e9948ef3b20bf2aca6f163e5fa14739576a56f61721b198f2d49ce7acb3"
   },
   "authority": "Deterministic generation only; AI source review and human verification are separate recorded activities."

@@ -1,0 +1,46 @@
+{
+  "schema": "femprompt-source-reacquisition/0.1",
+  "run_id": "reacquisition-2026-09-29",
+  "date": "2026-09-29",
+  "scope": "Re-download on the desktop of the one open-access preprint acquired on the laptop in reacquisition-2026-09-22, its conversion and source QC.",
+  "authority": "Local source preparation only. It establishes no source binding, screening readiness, inclusion, domain-expert verification or publication approval.",
+  "records": [
+    {
+      "zotero_key": "SIHIUMFZ",
+      "doi": "10.1086/735590",
+      "prior_record": "generated/source-acquisition/codex-websearch-2026/reacquisition-2026-09-22.json",
+      "download": {
+        "url": "https://arxiv.org/pdf/2412.14971v1",
+        "retrieved_at": "2026-09-29T12:16:39+00:00",
+        "http_status": 200,
+        "content_type": "application/pdf",
+        "bytes": 704590,
+        "sha256": "sha256:eca218e2549932f56601635153170cede4b7183af6da76e8fa5a7a84d4a1bfad",
+        "matches_prior_record": true,
+        "file": "generated/pdfs/reacquisition-2026-09-22/oa/f34607d11846d4580bc4.pdf",
+        "storage": "local only, ignored by Git"
+      },
+      "licence": "CC-BY-NC-SA-4.0 for arXiv 2412.14971v1, as recorded in the prior licence statement",
+      "conversion": {
+        "converter": "docling 2.60.0 via src.acquire.convert_to_markdown",
+        "postprocessor": "src.acquire.postprocess_markdown",
+        "markdown_raw": {
+          "path": "generated/source-acquisition/codex-websearch-2026/reacquisition-2026-09-29/markdown-raw/f34607d11846d4580bc4.md",
+          "sha256": "sha256:cc16ee0acf8af6d408fbbcd5a835aaa89bd05839567e73f470ced2dfb8f957a3"
+        },
+        "markdown_clean": {
+          "path": "generated/source-acquisition/codex-websearch-2026/reacquisition-2026-09-29/markdown-clean/f34607d11846d4580bc4.md",
+          "sha256": "sha256:e69914d82f577595dc7c8ad7155964ce9e06787baecef44b0a46035810ed3db9"
+        },
+        "conversion_report": "generated/source-acquisition/codex-websearch-2026/reacquisition-2026-09-29/conversion-report.json",
+        "postprocess_report": "generated/source-acquisition/codex-websearch-2026/reacquisition-2026-09-29/postprocess-report.json",
+        "note": "The laptop conversion of 2026-09-22 is not on this machine; this is a new conversion of the identical PDF in a separate directory and does not recreate the laptop files."
+      },
+      "source_qc": "generated/source-acquisition/codex-websearch-2026/reacquisition-2026-09-29/conversion-qc.json",
+      "binding": {
+        "state": "not_bound",
+        "reason": "The registry holds only the Version of Record 10.1086/735590 for this work. The acquired text is the arXiv 2412.14971v1 submitted author manuscript with a different title, so neither an existing-version binding nor the accepted-manuscript addition applies. Binding needs the preprint registered as its own Version, for instance through an additive Zotero record, or a contract extension for preprint sources, and a reading copy that repairs the figure losses."
+      }
+    }
+  ]
+}
