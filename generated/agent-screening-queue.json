@@ -5,11 +5,11 @@
   "authority_rule": "Any human annotation covers the canonical work; duplicate records do not trigger reassessment.",
   "sources": {
     "research_vault": "docs/data/research_vault_v2.json",
-    "research_vault_sha256": "1b758fb4a667104d35fb437052d7705e0b2bd98e719d03fcbbfb3107d2ae267f",
+    "research_vault_sha256": "1e2c9159e5add47d056a292432f99eaa35245600df6775351a8f8b5e324afdb2",
     "fulltext_manifest": "docs/data/fulltext_manifest.json",
-    "fulltext_manifest_sha256": "c16a2d600de40524c224335a122cc1ffc69d6d1c38c776ca37e206cf673e49d3",
+    "fulltext_manifest_sha256": "f2d80747541b1dffe9920dd2ffd255bd21ede5d117b63fd64da0b412dc1742dc",
     "work_version_registry": "corpus/work_version_registry.json",
-    "work_version_registry_sha256": "0867995d898c0b7c2fb28fe05687f6e12fa3bce00843986948611b828b94882f",
+    "work_version_registry_sha256": "fa8bb5f2bb125bef3ebdd02b8c6884f5b549e910d4b8b0676b3cdbf41570be4b",
     "productive_screening_dir": "docs/data/screening"
   },
   "counts": {
@@ -20,27 +20,32 @@
     "unannotated_alias_records_covered_at_work_level": 27,
     "queued_records": 110,
     "queued_works": 101,
-    "ready_works": 25,
-    "blocked_abstract_only_works": 16,
-    "blocked_without_text_works": 60
+    "ready_works": 32,
+    "blocked_abstract_only_works": 15,
+    "blocked_without_text_works": 54
   },
   "gate": {
     "status": "partial",
     "ready_work_ids": [
       "work:0acf6fa2-7f5e-53c4-a1d1-30ab1ae8d310",
+      "work:0b69246b-4c05-5e2f-a22e-1416ec893b1d",
       "work:0fb6cbb2-9d40-5815-9680-3e9f14f27e16",
       "work:1004a5c5-f980-5475-ad36-952eab77b516",
       "work:2707a834-08fe-5819-a92c-4afb47ca08c5",
       "work:2c625fa2-a2f8-5d59-b6a0-f148d542c902",
+      "work:34294df8-8138-5c66-8137-b0c1a6afa3ff",
+      "work:45373e2c-7027-53c3-b5c6-fe3200ae53c4",
       "work:5aaa355e-8f65-5850-a132-43fa3458195e",
       "work:677ea395-cc39-50b4-9979-496e0f17665d",
       "work:68b57d67-221a-5e96-8d7b-153b4b26c91a",
       "work:6c8a1072-fcca-5fbd-8611-08774ef0ad7f",
       "work:6eab81e9-e9ba-57eb-abc0-6c00d7061314",
+      "work:7350cc88-47a1-5497-8c7e-14f2ca8aae6c",
       "work:73eda891-2e28-587a-a7fb-a950323a0dad",
       "work:7eb826eb-db16-5ae7-8201-3339f108ae93",
       "work:7f8d6ea5-b9ea-55b6-8b7c-312cabf4a2a9",
       "work:88488d25-08d0-5719-8948-5bff2e7d43cf",
+      "work:a68f9db2-cf06-54f2-b8a9-7beb11e0bc9e",
       "work:ac777aa0-e02b-5a2e-8ddd-19dfdd0110ec",
       "work:ad093524-5d10-5430-838d-3360c0d710cc",
       "work:b385e0cf-739b-5592-b5f0-c9d7fd2ead0a",
@@ -51,7 +56,9 @@
       "work:e2d886f7-c01f-50cc-9ce2-e65f7be00157",
       "work:e62005d4-d179-5cef-af39-3aca00c24a04",
       "work:ec94cf1c-87bf-5f4d-a840-9dd3b92eefab",
-      "work:f7d29922-360f-5874-8d4c-cf7f7451f638"
+      "work:f43c0a7f-e499-5be3-8deb-a100f15cafab",
+      "work:f7d29922-360f-5874-8d4c-cf7f7451f638",
+      "work:fa73d2ef-033a-5e5b-8bc5-f774136b020c"
     ],
     "required_action": "Acquire and review Paper Markdown for every blocked work before its agent run."
   },
@@ -557,7 +564,26 @@
       "selected_version_id": "version:47a79a31-c2f5-5529-ac37-3681eb291579",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "8YZKPS42",
+        "work_id": "work:0b69246b-4c05-5e2f-a22e-1416ec893b1d",
+        "bibliographic_version_id": "version:47a79a31-c2f5-5529-ac37-3681eb291579",
+        "source_version_id": "version:47a79a31-c2f5-5529-ac37-3681eb291579",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:47a79a31-c2f5-5529-ac37-3681eb291579",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/eb3406e6b996a77368bd.md",
+        "source_sha256": "sha256:79016b7af0d493ce7491226cd171ae860548f04d4aa577bb0014abb191666cdc",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "Beyond inclusion: feminist AI for transformative justice in STEM",
+          "doi": "10.1007/s43681-026-01161-9"
+        },
+        "version_identity": {
+          "title": "Beyond inclusion: feminist AI for transformative justice in STEM",
+          "doi": "10.1007/s43681-026-01161-9"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:47a79a31-c2f5-5529-ac37-3681eb291579",
@@ -627,16 +653,14 @@
       "doi": "10.1007/s43681-026-01161-9",
       "url": "https://link.springer.com/article/10.1007/s43681-026-01161-9",
       "abstract_available": true,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 49700,
+      "paper_source": "docs/data/fulltext/8YZKPS42.md",
       "paper_source_work_id": "work:0b69246b-4c05-5e2f-a22e-1416ec893b1d",
       "paper_source_version_id": "version:47a79a31-c2f5-5529-ac37-3681eb291579",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "1f82301f742e7d1234dd349521466414a1844eeed57241e5969f3afab99421cc",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:0fb6cbb2-9d40-5815-9680-3e9f14f27e16",
@@ -1273,7 +1297,26 @@
       "selected_version_id": "version:7549e3c1-700e-5337-8718-3d08f77c0685",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "KJWMQSMN",
+        "work_id": "work:34294df8-8138-5c66-8137-b0c1a6afa3ff",
+        "bibliographic_version_id": "version:7549e3c1-700e-5337-8718-3d08f77c0685",
+        "source_version_id": "version:7549e3c1-700e-5337-8718-3d08f77c0685",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:7549e3c1-700e-5337-8718-3d08f77c0685",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/014fa29a31624d80e530.md",
+        "source_sha256": "sha256:56072f3397613215e25c4c4792143bc82739e25c1c12feae65d0ad6b4e8465bd",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "Toward substantive intersectional algorithmic fairness: desiderata for a feminist approach",
+          "doi": "10.1007/s43681-025-00926-y"
+        },
+        "version_identity": {
+          "title": "Toward substantive intersectional algorithmic fairness: desiderata for a feminist approach",
+          "doi": "10.1007/s43681-025-00926-y"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:7549e3c1-700e-5337-8718-3d08f77c0685",
@@ -1310,16 +1353,14 @@
       "doi": "10.1007/s43681-025-00926-y",
       "url": "https://link.springer.com/article/10.1007/s43681-025-00926-y",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 120633,
+      "paper_source": "docs/data/fulltext/KJWMQSMN.md",
       "paper_source_work_id": "work:34294df8-8138-5c66-8137-b0c1a6afa3ff",
       "paper_source_version_id": "version:7549e3c1-700e-5337-8718-3d08f77c0685",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "7e13f5003cbd37ecb4f911168ded39c9ee39a9d1681ad471dd7b81f649a93fc2",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:38dda3f3-a302-5518-ae71-9d25ce9728c7",
@@ -1552,7 +1593,26 @@
       "selected_version_id": "version:d73695ad-f9cd-5319-9a3b-bbb4562e4d60",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "EFMF4449",
+        "work_id": "work:45373e2c-7027-53c3-b5c6-fe3200ae53c4",
+        "bibliographic_version_id": "version:d73695ad-f9cd-5319-9a3b-bbb4562e4d60",
+        "source_version_id": "version:d73695ad-f9cd-5319-9a3b-bbb4562e4d60",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:d73695ad-f9cd-5319-9a3b-bbb4562e4d60",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/20972ab37764965190de.md",
+        "source_sha256": "sha256:f354295d2eb7911bc5e772ecd89db25a96dfbf53b9f2e459c136fd9be76e09a2",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "Teachers’ perceptions of generative AI in gender-inclusive STEM education: a grounded theory study",
+          "doi": "10.1007/s10639-026-13908-2"
+        },
+        "version_identity": {
+          "title": "Teachers’ perceptions of generative AI in gender-inclusive STEM education: a grounded theory study",
+          "doi": "10.1007/s10639-026-13908-2"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:d73695ad-f9cd-5319-9a3b-bbb4562e4d60",
@@ -1589,16 +1649,14 @@
       "doi": "10.1007/s10639-026-13908-2",
       "url": "https://link.springer.com/article/10.1007/s10639-026-13908-2",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 113959,
+      "paper_source": "docs/data/fulltext/EFMF4449.md",
       "paper_source_work_id": "work:45373e2c-7027-53c3-b5c6-fe3200ae53c4",
       "paper_source_version_id": "version:d73695ad-f9cd-5319-9a3b-bbb4562e4d60",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "91c906c15a907076ebf6275c5e759f3f5bbc54f248469685fd780f1372e6a4c1",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:45d9af93-79ae-5cea-834f-b465c751fc8d",
@@ -2697,7 +2755,26 @@
       "selected_version_id": "version:d3d54d63-7ff2-5b49-9ff0-fbc135706e03",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "XRQE5VM2",
+        "work_id": "work:7350cc88-47a1-5497-8c7e-14f2ca8aae6c",
+        "bibliographic_version_id": "version:d3d54d63-7ff2-5b49-9ff0-fbc135706e03",
+        "source_version_id": "version:d3d54d63-7ff2-5b49-9ff0-fbc135706e03",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:d3d54d63-7ff2-5b49-9ff0-fbc135706e03",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/8a561b548035e4512084.md",
+        "source_sha256": "sha256:da5913c3c50c6326b42d669767b5dd85b232197827c3859e1e1bd62618cb8cc8",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "IA, salud mental y género: Un mapeo sistemático de las ciencias sociales y humanas en América Latina",
+          "doi": "10.35362/issn.1850-0013-1259"
+        },
+        "version_identity": {
+          "title": "IA, salud mental y género: Un mapeo sistemático de las ciencias sociales y humanas en América Latina",
+          "doi": "10.35362/issn.1850-0013-1259"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:d3d54d63-7ff2-5b49-9ff0-fbc135706e03",
@@ -2734,16 +2811,14 @@
       "doi": "10.35362/issn.1850-0013-1259",
       "url": "https://ojs.revistacts.net/index.php/CTS/article/view/1259",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 84889,
+      "paper_source": "docs/data/fulltext/XRQE5VM2.md",
       "paper_source_work_id": "work:7350cc88-47a1-5497-8c7e-14f2ca8aae6c",
       "paper_source_version_id": "version:d3d54d63-7ff2-5b49-9ff0-fbc135706e03",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "87adc43fa7b96952fcd6ad8b159b2e116df16485a3c7fc658b2f291bcd69df7e",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:73eda891-2e28-587a-a7fb-a950323a0dad",
@@ -3783,7 +3858,26 @@
       "selected_version_id": "version:312e7ac8-3ec8-5cd4-8e6a-27e7422423f8",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "AJBX2WAW",
+        "work_id": "work:a68f9db2-cf06-54f2-b8a9-7beb11e0bc9e",
+        "bibliographic_version_id": "version:312e7ac8-3ec8-5cd4-8e6a-27e7422423f8",
+        "source_version_id": "version:312e7ac8-3ec8-5cd4-8e6a-27e7422423f8",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:312e7ac8-3ec8-5cd4-8e6a-27e7422423f8",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/7cbaa5fc7bd51c3642ad.md",
+        "source_sha256": "sha256:0be805ae3a3f7b36b1cee62fc14a5dac9fadef125704bbd385b524eaeb565448",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "Semantic Stability, Response Strategies, and Bias Analysis of Generative Artificial Intelligence in Psychological Health Education",
+          "doi": "10.16719/j.cnki.1671-6981.20260201"
+        },
+        "version_identity": {
+          "title": "Semantic Stability, Response Strategies, and Bias Analysis of Generative Artificial Intelligence in Psychological Health Education",
+          "doi": "10.16719/j.cnki.1671-6981.20260201"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:312e7ac8-3ec8-5cd4-8e6a-27e7422423f8",
@@ -3820,16 +3914,14 @@
       "doi": "10.16719/j.cnki.1671-6981.20260201",
       "url": "https://jps.ecnu.edu.cn/EN/10.16719/j.cnki.1671-6981.20260201",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 28933,
+      "paper_source": "docs/data/fulltext/AJBX2WAW.md",
       "paper_source_work_id": "work:a68f9db2-cf06-54f2-b8a9-7beb11e0bc9e",
       "paper_source_version_id": "version:312e7ac8-3ec8-5cd4-8e6a-27e7422423f8",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "bfca60168de2629cd4933ce2003972fb0f7ee29c494d5fe20dd99248b2c865d8",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:a6e813e5-57e0-555c-92f9-1155ffc79f42",
@@ -5985,7 +6077,26 @@
       "selected_version_id": "version:13610000-bc8f-53c8-a01f-0a9ab5d2c33c",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "KUVUZMDU",
+        "work_id": "work:f43c0a7f-e499-5be3-8deb-a100f15cafab",
+        "bibliographic_version_id": "version:13610000-bc8f-53c8-a01f-0a9ab5d2c33c",
+        "source_version_id": "version:13610000-bc8f-53c8-a01f-0a9ab5d2c33c",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:13610000-bc8f-53c8-a01f-0a9ab5d2c33c",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/98a0f77c12e1ee6328c0.md",
+        "source_sha256": "sha256:d03d737f0083c774926dd5a46f0aaa1dcf410c8811c5b4b352f445ad194c1a3c",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "Addressing benchmarking gaps in large language models for health and medicine with dynamic red-teaming",
+          "doi": "10.1038/s44360-026-00152-8"
+        },
+        "version_identity": {
+          "title": "Addressing benchmarking gaps in large language models for health and medicine with dynamic red-teaming",
+          "doi": "10.1038/s44360-026-00152-8"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:13610000-bc8f-53c8-a01f-0a9ab5d2c33c",
@@ -6022,16 +6133,14 @@
       "doi": "10.1038/s44360-026-00152-8",
       "url": "https://www.nature.com/articles/s44360-026-00152-8",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 87515,
+      "paper_source": "docs/data/fulltext/KUVUZMDU.md",
       "paper_source_work_id": "work:f43c0a7f-e499-5be3-8deb-a100f15cafab",
       "paper_source_version_id": "version:13610000-bc8f-53c8-a01f-0a9ab5d2c33c",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "9b48f70fd1569e4c740be38defa9e996ab6307be4b47aa3bd8311b98ffb7be89",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:f50cd1ef-241a-515c-b970-b491ce2b97f7",
@@ -6363,7 +6472,26 @@
       "selected_version_id": "version:5edb0cf7-6a2a-57d3-b219-a7e79204f3e4",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "ZFRE26IV",
+        "work_id": "work:fa73d2ef-033a-5e5b-8bc5-f774136b020c",
+        "bibliographic_version_id": "version:5edb0cf7-6a2a-57d3-b219-a7e79204f3e4",
+        "source_version_id": "version:5edb0cf7-6a2a-57d3-b219-a7e79204f3e4",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:5edb0cf7-6a2a-57d3-b219-a7e79204f3e4",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/45a89ba69a2b7d1a99cd.md",
+        "source_sha256": "sha256:5c7cb91faec1be1c693e21d341e256c4ebe0b089145a0e4a016cc8cee9987f87",
+        "binding_mode": "existing_version",
+        "bibliographic_identity": {
+          "title": "Algorithmic bias in clinical resource allocation by a large language model: a cross-sectional in-silico evaluation of 13,608 decisions",
+          "doi": "10.1186/s12910-026-01496-2"
+        },
+        "version_identity": {
+          "title": "Algorithmic bias in clinical resource allocation by a large language model: a cross-sectional in-silico evaluation of 13,608 decisions",
+          "doi": "10.1186/s12910-026-01496-2"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:5edb0cf7-6a2a-57d3-b219-a7e79204f3e4",
@@ -6400,16 +6528,14 @@
       "doi": "10.1186/s12910-026-01496-2",
       "url": "https://link.springer.com/article/10.1186/s12910-026-01496-2",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 49855,
+      "paper_source": "docs/data/fulltext/ZFRE26IV.md",
       "paper_source_work_id": "work:fa73d2ef-033a-5e5b-8bc5-f774136b020c",
       "paper_source_version_id": "version:5edb0cf7-6a2a-57d3-b219-a7e79204f3e4",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "0c410acf3159873a20ea1f3d46ea1b42185e7eacc2eb4097efd2d4a15fc573f5",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:fb07e9e8-562c-5c51-9aa7-f1faa654c172",

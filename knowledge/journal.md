@@ -28,6 +28,8 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 The operator accepted publisher acquisition receipts as identity evidence for existing-Version source bindings whose converted Markdown lost the printed DOI (ADR-041). The receipt is a typed entry field that the registry builder re-derives from the committed acquisition manifest, the readiness ledger and the local PDF; the title quotation stays mandatory and the quoted-DOI path is unchanged. Repository and preprint copies do not qualify, because their retrieval does not show identity with the registered Version.
 
+Seven prepared 2026 reading texts were bound under this rule after the agent recomputed each local PDF hash and found title and DOI in its text layer. They now enter the agent-screening queue as ready. The remaining unbound 2026 texts are listed with their concrete blocker in [[plan#Source and corpus readiness]]; one of them carries a registered Spanish title that the English article does not print.
+
 ### 2026-09-22: Referenzen sichtbar, Werkzeugleiste in der Korpusspalte, Anleitung für die Verifikationsrolle
 
 Der Operator hat die Ausblendung der Runde-eins-Referenzen aufgehoben. Die Entscheidung der Expertinnen und die LLM-Einschätzung aus Runde eins stehen jetzt in menschlichen Sitzungen mit Herkunftskennzeichnung über der Bewertung, und der LLM-Vorschlag lässt sich als Kategoriestufen übernehmen. Die Belegpflicht aus dem Papertext und die Ableitungsregel bleiben unverändert; Agentenläufe bleiben referenzblind. ADR-038 ersetzt die Ausblendungsregel aus FR-03, die alten Vergleichsfunktionen sind gelöscht, und der Unit-Test zum eingeklappten Vergleich prüft nun die sichtbaren Referenzen und die stufenbeschränkte Übernahme.

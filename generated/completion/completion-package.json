@@ -8678,7 +8678,7 @@
     "targeted_followup_search_date": "2026-09-05",
     "targeted_gap_fill_candidates": true
   },
-  "source_fingerprint": "sha256:061b83f9e16516535e1670b9e8e29677abf817ee763890b3c10be44083695ba6",
+  "source_fingerprint": "sha256:cc5eebd17acda24619e958b48e77716269ad6386388e4628c6f2526b2a1ee7a0",
   "sources": [
     {
       "path": "assessment/categories.yaml",
@@ -8858,7 +8858,7 @@
     },
     {
       "path": "corpus/work_version_registry.json",
-      "sha256": "0867995d898c0b7c2fb28fe05687f6e12fa3bce00843986948611b828b94882f"
+      "sha256": "fa8bb5f2bb125bef3ebdd02b8c6884f5b549e910d4b8b0676b3cdbf41570be4b"
     },
     {
       "path": "corpus/zotero_export.json",
@@ -8898,7 +8898,7 @@
     },
     {
       "path": "docs/data/research_vault_v2.json",
-      "sha256": "1b758fb4a667104d35fb437052d7705e0b2bd98e719d03fcbbfb3107d2ae267f"
+      "sha256": "1e2c9159e5add47d056a292432f99eaa35245600df6775351a8f8b5e324afdb2"
     },
     {
       "path": "docs/data/screening/ar2.json",
@@ -9702,7 +9702,7 @@
     },
     {
       "path": "generated/agent-screening-queue.json",
-      "sha256": "c0260eb352c37e4abcd4d599818f5fe68892b317365e99dc1f4af895d52bb3e8"
+      "sha256": "79d22ead96baaa993e06e5308e028423d5bb7ebfdb787e4fcde9db183e8ff781"
     },
     {
       "path": "generated/conformance/conformance_map.yaml",
@@ -12989,7 +12989,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "8YZKPS42"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -13005,7 +13007,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:47a79a31-c2f5-5529-ac37-3681eb291579",
@@ -13013,10 +13015,8 @@
         "8YZKPS42"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "title": "Beyond inclusion: feminist AI for transformative justice in STEM",
       "version_ids": [
         "version:47a79a31-c2f5-5529-ac37-3681eb291579"
@@ -16811,7 +16811,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "KJWMQSMN"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -16827,7 +16829,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:7549e3c1-700e-5337-8718-3d08f77c0685",
@@ -16835,10 +16837,8 @@
         "KJWMQSMN"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "title": "Toward substantive intersectional algorithmic fairness: desiderata for a feminist approach",
       "version_ids": [
         "version:7549e3c1-700e-5337-8718-3d08f77c0685"
@@ -19309,7 +19309,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "EFMF4449"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -19325,7 +19327,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:d73695ad-f9cd-5319-9a3b-bbb4562e4d60",
@@ -19333,10 +19335,8 @@
         "EFMF4449"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "title": "Teachers’ perceptions of generative AI in gender-inclusive STEM education: a grounded theory study",
       "version_ids": [
         "version:d73695ad-f9cd-5319-9a3b-bbb4562e4d60"
@@ -26196,7 +26196,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "XRQE5VM2"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -26212,7 +26214,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:d3d54d63-7ff2-5b49-9ff0-fbc135706e03",
@@ -26220,10 +26222,8 @@
         "XRQE5VM2"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "title": "IA, salud mental y género: Un mapeo sistemático de las ciencias sociales y humanas en América Latina",
       "version_ids": [
         "version:d3d54d63-7ff2-5b49-9ff0-fbc135706e03"
@@ -32112,7 +32112,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "AJBX2WAW"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -32128,7 +32130,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:312e7ac8-3ec8-5cd4-8e6a-27e7422423f8",
@@ -32136,10 +32138,8 @@
         "AJBX2WAW"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "title": "Semantic Stability, Response Strategies, and Bias Analysis of Generative Artificial Intelligence in Psychological Health Education",
       "version_ids": [
         "version:312e7ac8-3ec8-5cd4-8e6a-27e7422423f8"
@@ -40728,7 +40728,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "KUVUZMDU"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -40744,7 +40746,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:13610000-bc8f-53c8-a01f-0a9ab5d2c33c",
@@ -40752,10 +40754,8 @@
         "KUVUZMDU"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "title": "Addressing benchmarking gaps in large language models for health and medicine with dynamic red-teaming",
       "version_ids": [
         "version:13610000-bc8f-53c8-a01f-0a9ab5d2c33c"
@@ -41702,7 +41702,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "ZFRE26IV"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -41718,7 +41720,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:5edb0cf7-6a2a-57d3-b219-a7e79204f3e4",
@@ -41726,10 +41728,8 @@
         "ZFRE26IV"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "title": "Algorithmic bias in clinical resource allocation by a large language model: a cross-sectional in-silico evaluation of 13,608 decisions",
       "version_ids": [
         "version:5edb0cf7-6a2a-57d3-b219-a7e79204f3e4"

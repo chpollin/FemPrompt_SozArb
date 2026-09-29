@@ -1,6 +1,6 @@
 {
   "schema": "femprompt-work-version-registry/0.1",
-  "source_fingerprint": "sha256:5d52637b8f4ddae24ae46ae69aacf2534282b12b290307cb6ccdac8468cc79ac",
+  "source_fingerprint": "sha256:496c69b8544dfad5e19c650c7b56a7b92fa341719f3a5ff012bbad220c260c2e",
   "sources": [
     {
       "path": "corpus/metadata_corrections.json",
@@ -196,7 +196,7 @@
     },
     {
       "path": "corpus/source_version_bindings.json",
-      "sha256": "414676e73360b3b40fc0339f16d1950f5c25f74e40ce5570bbe1ac689b627df3"
+      "sha256": "4ea51a35f44051c4496a64b7ac803c91c778bba0ba7b085e3aa92cb37f14cb56"
     },
     {
       "path": "corpus/zotero_export.json",
@@ -291,6 +291,10 @@
       "sha256": "5568a06471911bf9d102f9caf87159966469807bd990ef8a837d52585de186f5"
     },
     {
+      "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/014fa29a31624d80e530.md",
+      "sha256": "56072f3397613215e25c4c4792143bc82739e25c1c12feae65d0ad6b4e8465bd"
+    },
+    {
       "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/136b6db72d8a7b8d390c.md",
       "sha256": "e7ddd2f304de117bc74a28cf164a7793a53d9b956a484ae11d07a845efed57da"
     },
@@ -301,6 +305,10 @@
     {
       "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/1e429407d9b091311a65.md",
       "sha256": "b3d2bf83c7c3404322c30d5e811e27ac80fb7ccfb560fd348e92f9fdd5efdd77"
+    },
+    {
+      "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/20972ab37764965190de.md",
+      "sha256": "f354295d2eb7911bc5e772ecd89db25a96dfbf53b9f2e459c136fd9be76e09a2"
     },
     {
       "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/2b57266b9d8b015d2ac2.md",
@@ -315,6 +323,10 @@
       "sha256": "93ff941db75f745dc31191edecf3339916094c0bdf8c98f5bf57f704660fe979"
     },
     {
+      "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/45a89ba69a2b7d1a99cd.md",
+      "sha256": "5c7cb91faec1be1c693e21d341e256c4ebe0b089145a0e4a016cc8cee9987f87"
+    },
+    {
       "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/4dbe6aa9dfa229e88746.md",
       "sha256": "6ebe509cb9eb59315760f1de2ad87b7b1b17ddc641640782c15895073dd7740f"
     },
@@ -323,8 +335,16 @@
       "sha256": "9717c1909c38d594051e0df966235976466019248ec3ff2acf88dce7f45330c6"
     },
     {
+      "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/8a561b548035e4512084.md",
+      "sha256": "da5913c3c50c6326b42d669767b5dd85b232197827c3859e1e1bd62618cb8cc8"
+    },
+    {
       "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/926800fc523bebd0420c.md",
       "sha256": "dbf3a15387a52c3c622dbdaabfd358396a89b16c6b73db6e65f2ecf82d3f355d"
+    },
+    {
+      "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/98a0f77c12e1ee6328c0.md",
+      "sha256": "d03d737f0083c774926dd5a46f0aaa1dcf410c8811c5b4b352f445ad194c1a3c"
     },
     {
       "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/aff73b4c6b2eab31b8f7.md",
@@ -347,6 +367,10 @@
       "sha256": "322a7c9026f85204f9a15ffac69723e8eb12cc125df25276e77aa01e0e062148"
     },
     {
+      "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/eb3406e6b996a77368bd.md",
+      "sha256": "79016b7af0d493ce7491226cd171ae860548f04d4aa577bb0014abb191666cdc"
+    },
+    {
       "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/f403809ad4503150093a.md",
       "sha256": "452e783653dedcb51fbc1fe1c2966f6804a613d5846e5720844e0d6bd77ea192"
     },
@@ -357,6 +381,10 @@
     {
       "path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/4dd9fd2a26f9d7eea07a.md",
       "sha256": "c0d19894593d8c2209a4c40a59a35d20a251a15f8b1db25e737368fee1ffc16c"
+    },
+    {
+      "path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/7cbaa5fc7bd51c3642ad.md",
+      "sha256": "0be805ae3a3f7b36b1cee62fc14a5dac9fadef125704bbd385b524eaeb565448"
     },
     {
       "path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/a1c7e9db9a3dc6caff54.md",
@@ -387,7 +415,7 @@
     "works_with_multiple_versions": 26,
     "works_with_flags": 21,
     "ambiguous_external_identifiers": 4,
-    "bound_sources": 66
+    "bound_sources": 73
   },
   "works": [
     {
@@ -32232,6 +32260,26 @@
         "doi": "10.1080/02615479.2026.2631708"
       }
     },
+    "8YZKPS42": {
+      "record_id": "8YZKPS42",
+      "work_id": "work:0b69246b-4c05-5e2f-a22e-1416ec893b1d",
+      "bibliographic_version_id": "version:47a79a31-c2f5-5529-ac37-3681eb291579",
+      "source_version_id": "version:47a79a31-c2f5-5529-ac37-3681eb291579",
+      "source_version_type": "version_of_record",
+      "preferred_version_id": "version:47a79a31-c2f5-5529-ac37-3681eb291579",
+      "is_preferred_version": true,
+      "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/eb3406e6b996a77368bd.md",
+      "source_sha256": "sha256:79016b7af0d493ce7491226cd171ae860548f04d4aa577bb0014abb191666cdc",
+      "binding_mode": "existing_version",
+      "bibliographic_identity": {
+        "title": "Beyond inclusion: feminist AI for transformative justice in STEM",
+        "doi": "10.1007/s43681-026-01161-9"
+      },
+      "version_identity": {
+        "title": "Beyond inclusion: feminist AI for transformative justice in STEM",
+        "doi": "10.1007/s43681-026-01161-9"
+      }
+    },
     "978AV9KZ": {
       "record_id": "978AV9KZ",
       "work_id": "work:4842d83e-8ed6-5633-b241-febb6e9c710f",
@@ -32330,6 +32378,26 @@
       "version_identity": {
         "title": "Mitigating medical bias in large language models by prompt engineering: an empirical study of effectiveness and trade-offs",
         "doi": "10.1098/rsta.2025.0125"
+      }
+    },
+    "AJBX2WAW": {
+      "record_id": "AJBX2WAW",
+      "work_id": "work:a68f9db2-cf06-54f2-b8a9-7beb11e0bc9e",
+      "bibliographic_version_id": "version:312e7ac8-3ec8-5cd4-8e6a-27e7422423f8",
+      "source_version_id": "version:312e7ac8-3ec8-5cd4-8e6a-27e7422423f8",
+      "source_version_type": "version_of_record",
+      "preferred_version_id": "version:312e7ac8-3ec8-5cd4-8e6a-27e7422423f8",
+      "is_preferred_version": true,
+      "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-repaired/7cbaa5fc7bd51c3642ad.md",
+      "source_sha256": "sha256:0be805ae3a3f7b36b1cee62fc14a5dac9fadef125704bbd385b524eaeb565448",
+      "binding_mode": "existing_version",
+      "bibliographic_identity": {
+        "title": "Semantic Stability, Response Strategies, and Bias Analysis of Generative Artificial Intelligence in Psychological Health Education",
+        "doi": "10.16719/j.cnki.1671-6981.20260201"
+      },
+      "version_identity": {
+        "title": "Semantic Stability, Response Strategies, and Bias Analysis of Generative Artificial Intelligence in Psychological Health Education",
+        "doi": "10.16719/j.cnki.1671-6981.20260201"
       }
     },
     "AK7K4P97": {
@@ -32432,6 +32500,26 @@
       "version_identity": {
         "title": "Generative AI in Youth Mental Health Apps: Rapid Review",
         "doi": "10.2196/90589"
+      }
+    },
+    "EFMF4449": {
+      "record_id": "EFMF4449",
+      "work_id": "work:45373e2c-7027-53c3-b5c6-fe3200ae53c4",
+      "bibliographic_version_id": "version:d73695ad-f9cd-5319-9a3b-bbb4562e4d60",
+      "source_version_id": "version:d73695ad-f9cd-5319-9a3b-bbb4562e4d60",
+      "source_version_type": "version_of_record",
+      "preferred_version_id": "version:d73695ad-f9cd-5319-9a3b-bbb4562e4d60",
+      "is_preferred_version": true,
+      "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/20972ab37764965190de.md",
+      "source_sha256": "sha256:f354295d2eb7911bc5e772ecd89db25a96dfbf53b9f2e459c136fd9be76e09a2",
+      "binding_mode": "existing_version",
+      "bibliographic_identity": {
+        "title": "Teachers’ perceptions of generative AI in gender-inclusive STEM education: a grounded theory study",
+        "doi": "10.1007/s10639-026-13908-2"
+      },
+      "version_identity": {
+        "title": "Teachers’ perceptions of generative AI in gender-inclusive STEM education: a grounded theory study",
+        "doi": "10.1007/s10639-026-13908-2"
       }
     },
     "EXRF5629": {
@@ -32563,6 +32651,46 @@
       "version_identity": {
         "title": "A kind of magic? Artificial intelligence-assisted recording: developing principles for an AI-informed social work curriculum",
         "doi": "10.1080/02615479.2026.2669634"
+      }
+    },
+    "KJWMQSMN": {
+      "record_id": "KJWMQSMN",
+      "work_id": "work:34294df8-8138-5c66-8137-b0c1a6afa3ff",
+      "bibliographic_version_id": "version:7549e3c1-700e-5337-8718-3d08f77c0685",
+      "source_version_id": "version:7549e3c1-700e-5337-8718-3d08f77c0685",
+      "source_version_type": "version_of_record",
+      "preferred_version_id": "version:7549e3c1-700e-5337-8718-3d08f77c0685",
+      "is_preferred_version": true,
+      "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/014fa29a31624d80e530.md",
+      "source_sha256": "sha256:56072f3397613215e25c4c4792143bc82739e25c1c12feae65d0ad6b4e8465bd",
+      "binding_mode": "existing_version",
+      "bibliographic_identity": {
+        "title": "Toward substantive intersectional algorithmic fairness: desiderata for a feminist approach",
+        "doi": "10.1007/s43681-025-00926-y"
+      },
+      "version_identity": {
+        "title": "Toward substantive intersectional algorithmic fairness: desiderata for a feminist approach",
+        "doi": "10.1007/s43681-025-00926-y"
+      }
+    },
+    "KUVUZMDU": {
+      "record_id": "KUVUZMDU",
+      "work_id": "work:f43c0a7f-e499-5be3-8deb-a100f15cafab",
+      "bibliographic_version_id": "version:13610000-bc8f-53c8-a01f-0a9ab5d2c33c",
+      "source_version_id": "version:13610000-bc8f-53c8-a01f-0a9ab5d2c33c",
+      "source_version_type": "version_of_record",
+      "preferred_version_id": "version:13610000-bc8f-53c8-a01f-0a9ab5d2c33c",
+      "is_preferred_version": true,
+      "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/98a0f77c12e1ee6328c0.md",
+      "source_sha256": "sha256:d03d737f0083c774926dd5a46f0aaa1dcf410c8811c5b4b352f445ad194c1a3c",
+      "binding_mode": "existing_version",
+      "bibliographic_identity": {
+        "title": "Addressing benchmarking gaps in large language models for health and medicine with dynamic red-teaming",
+        "doi": "10.1038/s44360-026-00152-8"
+      },
+      "version_identity": {
+        "title": "Addressing benchmarking gaps in large language models for health and medicine with dynamic red-teaming",
+        "doi": "10.1038/s44360-026-00152-8"
       }
     },
     "NN49FMDP": {
@@ -32937,6 +33065,26 @@
         "doi": "10.18653/v1/2026.findings-acl.418"
       }
     },
+    "XRQE5VM2": {
+      "record_id": "XRQE5VM2",
+      "work_id": "work:7350cc88-47a1-5497-8c7e-14f2ca8aae6c",
+      "bibliographic_version_id": "version:d3d54d63-7ff2-5b49-9ff0-fbc135706e03",
+      "source_version_id": "version:d3d54d63-7ff2-5b49-9ff0-fbc135706e03",
+      "source_version_type": "version_of_record",
+      "preferred_version_id": "version:d3d54d63-7ff2-5b49-9ff0-fbc135706e03",
+      "is_preferred_version": true,
+      "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/8a561b548035e4512084.md",
+      "source_sha256": "sha256:da5913c3c50c6326b42d669767b5dd85b232197827c3859e1e1bd62618cb8cc8",
+      "binding_mode": "existing_version",
+      "bibliographic_identity": {
+        "title": "IA, salud mental y género: Un mapeo sistemático de las ciencias sociales y humanas en América Latina",
+        "doi": "10.35362/issn.1850-0013-1259"
+      },
+      "version_identity": {
+        "title": "IA, salud mental y género: Un mapeo sistemático de las ciencias sociales y humanas en América Latina",
+        "doi": "10.35362/issn.1850-0013-1259"
+      }
+    },
     "Z9DNTBFF": {
       "record_id": "Z9DNTBFF",
       "work_id": "work:ec94cf1c-87bf-5f4d-a840-9dd3b92eefab",
@@ -32955,6 +33103,26 @@
       "version_identity": {
         "title": "Worst of Both Worlds: Biases Compound in Pre-trained Vision-and-Language Models",
         "doi": "10.18653/v1/2022.gebnlp-1.10"
+      }
+    },
+    "ZFRE26IV": {
+      "record_id": "ZFRE26IV",
+      "work_id": "work:fa73d2ef-033a-5e5b-8bc5-f774136b020c",
+      "bibliographic_version_id": "version:5edb0cf7-6a2a-57d3-b219-a7e79204f3e4",
+      "source_version_id": "version:5edb0cf7-6a2a-57d3-b219-a7e79204f3e4",
+      "source_version_type": "version_of_record",
+      "preferred_version_id": "version:5edb0cf7-6a2a-57d3-b219-a7e79204f3e4",
+      "is_preferred_version": true,
+      "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/45a89ba69a2b7d1a99cd.md",
+      "source_sha256": "sha256:5c7cb91faec1be1c693e21d341e256c4ebe0b089145a0e4a016cc8cee9987f87",
+      "binding_mode": "existing_version",
+      "bibliographic_identity": {
+        "title": "Algorithmic bias in clinical resource allocation by a large language model: a cross-sectional in-silico evaluation of 13,608 decisions",
+        "doi": "10.1186/s12910-026-01496-2"
+      },
+      "version_identity": {
+        "title": "Algorithmic bias in clinical resource allocation by a large language model: a cross-sectional in-silico evaluation of 13,608 decisions",
+        "doi": "10.1186/s12910-026-01496-2"
       }
     },
     "ZH6T88D5": {
