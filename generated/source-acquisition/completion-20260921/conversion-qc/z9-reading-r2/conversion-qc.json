@@ -1,0 +1,76 @@
+{
+  "schema": "femprompt-conversion-qc/0.1",
+  "created_at": "2026-09-29T12:58:32+00:00",
+  "scope": "Second independent conversion QC of the corrected Z9DNTBFF reading copy against the Version of Record PDF. It checks every change required by the first QC (conversion-qc/z9-reading/conversion-qc.json), both adopted non-blocking observations, the correction event in the reading repair manifest, and that no other line of the reading copy or asset changed since the version the first QC reviewed. The unchanged equations, tables and Figure 2 to 5a readings rest on the first QC, whose subject lines are proven byte-identical here. This QC grants no scientific acceptance, screening decision, registry authority, Knowledge Document authority, human verification, or publication authority.",
+  "reviewer": {
+    "agent_id": "claude-code/conversion-qc-reviewer-2",
+    "model": "claude-opus-5-5",
+    "independence": "Separate agent instance without access to the working context of the producer (claude-code/source-repair), of the correction (claude-code/source-repair-correction) or of the first reviewer (claude-code/conversion-qc-reviewer). All ran on the same model, so this review is independent of those runs but not of the model family."
+  },
+  "method": [
+    "Recomputed with src.assess.artifact_verification.artifact_hash the PDF (cc714d9d...236e), the reading copy, the identity-bound conversion, the asset manifest, all five PNG assets and the first QC receipt; each equals the value recorded in the repair manifest, its correction event and the asset manifest.",
+    "Diffed the reading copy at d9d25e2~1 (LF hash 2c894a13...03ae, the version the first QC reviewed) against HEAD (588046a1...b910). Exactly four lines differ, reading-copy lines 51, 188, 271 and 313, and no reading asset changed. Diffed HEAD against the identity-bound conversion: the only removed line is the front-matter transformation statement, so every body line is preserved.",
+    "Compared all five PNG assets with the embedded image XObjects of PDF pages 3 to 5 (PyMuPDF); all are identical in RGB samples.",
+    "Figure 5b: located the four-pixel x-axis ticks on the asset raster at x 412-415, 784-787, 1156-1159, 1528-1531 and 1900-1903 (linear fit residual below 1e-15, 0.001344 units per pixel), the axis line and arrow tips at x 41 and 2274 (-1.50 and 1.50), and blue dot runs within 20 rows of the axis row 182; overlapping runs were resolved against the 23-pixel dot diameter.",
+    "Figure 3: located the y-axis tick rows 51, 261, 471, 681 and 891 left of the spine at column 250 (0.00238 units per pixel) and the spine down to row 1017 (-1.30).",
+    "Figure 5a: located the eleven x-axis ticks (0.00242 units per pixel, maximum residual 0.0009) and orange dot runs along axis row 208; jersey run x 371-399, steak as right end of the run x 868-946 cut by the -0.5 tick at x 947-950.",
+    "Figure 1: rendered PDF page 1 at 400 and 600 dpi and inspected the bottom-row photograph and the bar chart."
+  ],
+  "records": [
+    {
+      "record_id": "Z9DNTBFF",
+      "pdf_path": "generated/pdfs/completion-20260921/oa-batch/Z9DNTBFF.pdf",
+      "pdf_sha256": "sha256:cc714d9d7f9ecdcbc39667b9a2cc6b9a23096f4f30896db54d8a63c9f765236e",
+      "markdown_path": "corpus/source-acquisition/completion-20260921/Z9DNTBFF-reading.md",
+      "markdown_sha256": "sha256:588046a149fe3426fdf07d03c77097a212b60da2578e5747ad8b9e8c08b4f910",
+      "previous_markdown_sha256": "sha256:2c894a137e3318bef2866b38c8d25f7660585706530bbfd4102081a579f003ae",
+      "identity_bound_markdown_path": "corpus/source-acquisition/completion-20260921/Z9DNTBFF.identity-bound.md",
+      "identity_bound_markdown_sha256": "sha256:729606223c6f936d78f837d285ae84f5d18f010b62af7dfa793cce64119fd3c0",
+      "repair_manifest_path": "generated/source-acquisition/completion-20260921/conversion-qc/Z9DNTBFF-reading-repair-manifest.json",
+      "repair_manifest_sha256": "sha256:694b3b493a38b55194612aff5e826b3c29371c96f7615582d6367271c0136b44",
+      "previous_conversion_qc_path": "generated/source-acquisition/completion-20260921/conversion-qc/z9-reading/conversion-qc.json",
+      "previous_conversion_qc_sha256": "sha256:c596d683dd3be456d6139fd9edf6ca08b11b79c3110cc34c158a71ebb2b4f14e",
+      "reading_assets_path": "corpus/source-acquisition/completion-20260921/reading-assets/Z9DNTBFF-assets.json",
+      "reading_assets_sha256": "sha256:9f4ddfc9f08d57400eb298314c5d13f14b470a5eaa8db9fefd015f128fa60420",
+      "asset_sha256": {
+        "Z9DNTBFF-figure-2.png": "sha256:61ebc0a7b6689dadd84c2563b349efe0fea531bfedf14c6235335b964480a243",
+        "Z9DNTBFF-figure-3.png": "sha256:dc60adc01b340bb0450bc02ec584c1eb6f2e2933e2493380d0eda91b9604d98b",
+        "Z9DNTBFF-figure-4.png": "sha256:322b0022f56e94dd1e7fdf5b3100280f7a05a3997081e27ee738e122061aa856",
+        "Z9DNTBFF-figure-5a.png": "sha256:4d478a5269c2566323ee2b9c76c8b994a717913a51216d0dc69d0a35325d04a2",
+        "Z9DNTBFF-figure-5b.png": "sha256:47151872b1847e555de449ae1fae2c5fc5b1adb6a2ad2f970879bd5de62f5c68"
+      },
+      "pages_total": 9,
+      "pages_visually_inspected": [1, 3, 5],
+      "result": "accepted_for_text_assessment",
+      "structure": {
+        "headings": "Unchanged since the first QC and from the identity-bound conversion.",
+        "formulas": "Unchanged since the first QC, which accepted every displayed equation.",
+        "tables": "Unchanged since the first QC, which accepted Tables 1 to 3 and the Table 4 description.",
+        "figures": "Figures 2, 4 and the Figure 5a table except the jersey row are unchanged since the first QC. The corrected Figure 1, Figure 3, Figure 5a jersey and Figure 5b notes match the independent measurements below."
+      },
+      "verified_repairs": [
+        "Required change 1, Figure 5b (line 313): aviator 0.63 and cigar 0.90 are correct. The dot under the aviator label spans x 1615-1637 (centre 0.630), the dot under the cigar label x 1813-1835 (centre 0.896).",
+        "Required change 2, Figure 5b (line 313): the false claim that aviator and cigar are the only positive entities is removed. The unlabelled dots range from about -0.89 (leftmost dot centre x 493.5, -0.892) to about 0.31 (x 1389, 0.311). Exactly five unlabelled dots lie above zero: a 36-pixel run x 1214-1249 holding two dots at 0.091 and 0.108, a 28-pixel run x 1344-1371 holding two overlapping dots at 0.266 and 0.272, and a single dot at 0.311. The recorded 0.09, 0.11, 0.27, 0.27 and 0.31 and the note that the two dots at about 0.27 overlap match. The last run left of zero ends at x 1155, directly at the zero tick (x 1156-1159), and no blue pixel lies between x 1160 and 1213, so no dot is hidden at or just above zero.",
+        "Required change 3, Figure 5b (line 313): the axis is ticked from -1.0 to 1.0 and the axis arrows end at x 41 and 2274, i.e. -1.50 and 1.50, as now stated.",
+        "Required change 4, Figure 3 (line 188): 0.0024 score units per pixel is correct (210 pixels per 0.5).",
+        "Required change 5, Figure 1 (line 51): the bottom-row man carries a brown checked handbag, as now stated; the photograph shows a checkerboard-patterned brown bag with two top handles.",
+        "Adopted observation, Figure 3 (line 188): ticks run from -1.0 to 1.0 and the plot frame reaches row 1017, about -1.30, as now stated.",
+        "Adopted observation, Figure 5a (line 271): the jersey dot spans x 371-399, centre -1.864, so -1.86 is correct. Steak is kept at -0.54; its dot is cut by the -0.5 tick, and a 29-pixel dot whose right edge lies between x 946 and 950 has its centre at -0.541 to -0.531, so -0.54 lies within the stated 0.01 uncertainty.",
+        "The unchanged labelled Figure 5b values (cat -1.41, jersey -1.33, scarf -1.25, whiskey -1.17, beer -1.05, scotch about -1.01) agree with the remeasured dot centres -1.409, -1.327, -1.253, -1.171, -1.053 and about -1.01.",
+        "The correction event records the first QC's hash, the previous and corrected reading-copy hashes and the rechecked PDF hash correctly, and its six listed changes are exactly the four changed lines."
+      ],
+      "open_points_review": [
+        "Both open points of the repair manifest remain accurate and unchanged: 39 legible labels against 40 entities in the Figure 5a caption, and the undeclared shaft-or-tip reading of the Figure 2 arrows."
+      ],
+      "required_changes": [],
+      "non_blocking_observations": [],
+      "losses": [
+        "The reading remains a linearised representation; the photographs of Figure 1 and Tables 1, 3 and 4 are described, not reproduced.",
+        "Plot values are readings of rasters, not values reported by the authors; the reading copy labels them as such.",
+        "Acceptance is limited to conversion fidelity for text assessment and does not establish scholarly verification or publication approval."
+      ],
+      "assessment": "Every blocking and minor change required by the first QC and both adopted observations are applied correctly and match independent measurement on the asset rasters and the rendered PDF. No other line of the reading copy and no asset changed, and every identity-bound body line is preserved. Together with the first QC's acceptance of the unchanged equations, tables and figure readings, the corrected reading copy is accepted for text assessment.",
+      "inspection_artifacts": []
+    }
+  ]
+}

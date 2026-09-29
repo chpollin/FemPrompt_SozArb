@@ -1586,6 +1586,7 @@
     "generated/source-acquisition/completion-20260921/conversion-qc/oa-review/conversion-qc.json": "2e640f41cc74f274859c4aaa91d4add9222318dfd3a0c09f2690b7e0426900a7",
     "generated/source-acquisition/completion-20260921/conversion-qc/repaired-r2/conversion-qc.json": "2acfd09e0beff7e7095bd3316357eb3a8c6d3c5729b23781fc95421f21eb5dfa",
     "generated/source-acquisition/completion-20260921/conversion-qc/repaired/conversion-qc.json": "8b009eb3dd9802566fa2eefb5c3f3ba8ec4888c623aafd48bf38461447173491",
+    "generated/source-acquisition/completion-20260921/conversion-qc/z9-reading-r2/conversion-qc.json": "0d2ddbcd5aa0ea22e7374da70d1e9beb912d67bab6cfaacd9c0f7cb9ae4663d1",
     "generated/source-acquisition/completion-20260921/conversion-qc/z9-reading/conversion-qc.json": "c596d683dd3be456d6139fd9edf6ca08b11b79c3110cc34c158a71ebb2b4f14e",
     "generated/source-acquisition/completion-20260921/docling-report.json": "e8909ec18f818a70a15f0eba8f3299d4c0f24c0ec5e19cbda16f575a8df9ce22",
     "generated/source-acquisition/completion-20260921/local-reuse-candidates.json": "6da81926219cc646010b30d97665d1146f1a9cf98fa3d44286c1a944dae5c5c8",
@@ -2129,7 +2130,7 @@
     "generated/completion/unmapped-historical-records.csv": "3b75c8d5489a494d8dc7626b8c7fca87127cadde109162a25b1449debd9fbb39",
     "generated/completion/work-verification-queue.csv": "e87844980c129d875c37778e3a2c13b8eac7fcbebdaf64f4b43716e0a4c51323",
     "generated/literature-readiness.csv": "0ff4b1822349c65ead61f7dd130c777f302422d46521e27559f16769db1d26e3",
-    "generated/literature-readiness.json": "27d37e84a5f1ede7028ec503c81432ff85e48f971c23f83ab20233af73fca874",
+    "generated/literature-readiness.json": "e7ea333c55e01131ea69b744e5c90f0173cce37315b5f04673b0eb4605b763b3",
     "generated/local-fulltext-ledger.json": "2c943b83d66cad727e9567d82b3d960422f654364fd128effff308b590972d23",
     "generated/source-acquisition/codex-websearch-2026/source-readiness.json": "efad3e9948ef3b20bf2aca6f163e5fa14739576a56f61721b198f2d49ce7acb3"
   },
