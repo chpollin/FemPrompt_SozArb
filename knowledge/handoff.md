@@ -10,7 +10,7 @@ status: active
 language: en
 version: "0.7"
 created: 2026-08-23
-updated: 2026-09-22
+updated: 2026-09-29
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6), Claude Code
 related: [INDEX, plan, journal, governance, verification, testing]
@@ -61,10 +61,10 @@ The following goals describe the project rather than completed achievements. Cur
 
 ## Continuation point
 
-1. Restore the desktop checkout with `git pull --ff-only` and run the checks below before interpreting missing generated files as research gaps. The private material of the laptop session that Git does not carry is the converted open-access preprint under `generated/source-acquisition/codex-websearch-2026/reacquisition-2026-09-22/` and the PDF under `generated/pdfs/reacquisition-2026-09-22/oa/`; the reacquisition JSON records their hashes.
+1. Restore the desktop checkout with `git pull --ff-only` and run the checks below before interpreting missing generated files as research gaps. The private material of the laptop session that Git does not carry is the converted open-access preprint under `generated/source-acquisition/codex-websearch-2026/reacquisition-2026-09-22/` and the PDF under `generated/pdfs/reacquisition-2026-09-22/oa/`; the reacquisition JSON records their hashes. On the desktop the PDF was downloaded again with a matching hash and converted into the committed `reacquisition-2026-09-29/` directory, so the build manifest still lists the four absent laptop files until the laptop state is reconciled.
 2. Read [[plan#Source and corpus readiness]] with the current completion and literature-readiness inventories. Select unresolved items and inspect their actual source files and valid receipts before acquiring, converting or reviewing material again. In particular, documented formula and figure losses and exact reading-Version gaps remain real work.
 3. Continue source preparation and knowledge-document coverage under [[plan#Controlled corpus completion]]. Screen eligible works under [[update-protocol#Agent-assisted completion]]. Source availability alone does not establish a completed annotation or review.
-4. Decide the binding-contract extension recorded in [[plan#Technical follow-up]], then bind the eleven 2026 reading texts whose converted Markdown lost its DOI and rebuild the registry. Run the analysis-coding agent over the included works with full text and the AI Agent Review afterwards, so the experts find prepared records. Before the partner meeting, prepare a clone with the reading layer for the colleagues and walk the folder-permission checklist once in Chrome. Then continue the field-verification implementation under [[plan#Provenance and verification alignment]], preserving the whole-record path. The experts' scope is the 2026 intake and the agent-coded records, round-one annotations stay valid.
+4. The acquisition-receipt contract (ADR-041) bound the 2026 reading texts that qualify. The remaining unbound texts and their blockers stand in [[plan#Source and corpus readiness]]. Run the analysis-coding agent over the included works with full text and the AI Agent Review afterwards, so the experts find prepared records. Before the partner meeting, prepare a clone with the reading layer for the colleagues and walk the folder-permission checklist once in Chrome. Then continue the field-verification implementation under [[plan#Provenance and verification alignment]], preserving the whole-record path. The experts' scope is the 2026 intake and the agent-coded records, round-one annotations stay valid.
 5. Prepare comparative analysis and source-linked Assertions using declared coverage and limitations. Domain experts must check the resulting scholarly claims before those claims receive human-verification status.
 
 Bounded `gpt-5.6-sol` assignments can prepare sources or knowledge drafts for explicit record lists, while a separate reviewer checks source support. The lead owns shared registry and PRISM integration and verifies delegated results against real artifacts. Source or withdrawal holds under [[plan#Works with conflicts or holds]] remain active across affected aliases. AI corrections remain immutable sidecars, and future Zotero exports must be reconciled with `corpus/metadata_corrections.json`.
