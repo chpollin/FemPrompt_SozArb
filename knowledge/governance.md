@@ -10,7 +10,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-08-23
-updated: 2026-09-22
+updated: 2026-09-29
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6), Codex (GPT-6)
 topics: ["[[Research Governance]]", "[[Provenance]]", "[[Human-in-the-Loop]]"]
@@ -92,7 +92,7 @@ Local bibliographic corrections are explicit AI-source-reviewed projections in `
 
 `generated/verification/historical-resolution-2026-09-05.json` documents exact-row identity mappings, administrative author-error dispositions, round-specific differences and integrity findings. The completion builder checks historical row hashes, canonical target identities and source evidence before applying these interpretations. Historical human decisions remain unchanged. An attributed explanation of a metadata-error exclusion can expose an already recorded substantive Include; it does not create a new human Include. Conflicting substantive human decisions remain visible. A source or withdrawal hold restricts current synthesis and release without rewriting that historical decision or falsely declaring every publication expression retracted.
 
-Alternative source Versions are bound separately from the bibliographic record and preferred Version in `corpus/source_version_bindings.json`. A narrowly scoped correction of an existing category level or exact quotation must preserve the derived decision and authority, match the original record and pass source-Version and quotation checks. It cannot change lifecycle state, invent a human actor or turn a new inclusion decision into a minor correction.
+Alternative source Versions are bound separately from the bibliographic record and preferred Version in `corpus/source_version_bindings.json`. On 29 September 2026 the operator accepted a publisher acquisition receipt, the registered landing URL together with the SHA-256 of the PDF acquired from that publisher, as identity evidence for an existing-Version binding whose converted Markdown lost the printed DOI. The receipt is re-derived from the committed acquisition evidence and the local file rather than trusted, and it grants source identity only. ADR-041 in [[specification]] records the contract. A narrowly scoped correction of an existing category level or exact quotation must preserve the derived decision and authority, match the original record and pass source-Version and quotation checks. It cannot change lifecycle state, invent a human actor or turn a new inclusion decision into a minor correction.
 
 ## Canonical carriers
 

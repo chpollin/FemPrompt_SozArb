@@ -10,7 +10,7 @@ status: active
 language: de
 version: "0.7"
 created: 2026-02-18
-updated: 2026-09-22
+updated: 2026-09-29
 authors: [Christopher Pollin]
 generated-with: Claude Code
 related: [INDEX, plan, specification, governance, verification, handoff]
@@ -23,6 +23,10 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 ---
 
 ## PRISM and the epistemic infrastructure (2026)
+
+### 2026-09-29: Acquisition receipts as binding evidence
+
+The operator accepted publisher acquisition receipts as identity evidence for existing-Version source bindings whose converted Markdown lost the printed DOI (ADR-041). The receipt is a typed entry field that the registry builder re-derives from the committed acquisition manifest, the readiness ledger and the local PDF; the title quotation stays mandatory and the quoted-DOI path is unchanged. Repository and preprint copies do not qualify, because their retrieval does not show identity with the registered Version.
 
 ### 2026-09-22: Referenzen sichtbar, Werkzeugleiste in der Korpusspalte, Anleitung für die Verifikationsrolle
 

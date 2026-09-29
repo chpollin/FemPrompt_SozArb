@@ -105,6 +105,59 @@ class _CitationMetaParser(HTMLParser):
             self.values[name] = str(attributes.get("content") or "")
 
 
+def _codex_readiness_markdown(
+    repo: Path,
+    record_id: str,
+    binding: dict[str, Any],
+    doi: str,
+    pdf_hash: str,
+    *,
+    require_ready: bool = False,
+) -> Path:
+    """Tie the bound Markdown to one checked Codex readiness record and PDF hash."""
+    from src.assess.artifact_verification import artifact_hash, safe_path
+
+    readiness_path = safe_path(repo, CODEX_READINESS_PATH)
+    readiness = _read_json(readiness_path)
+    readiness_records = [
+        item
+        for item in readiness.get("records", [])
+        if item.get("screening_markdown_file") == binding.get("source_path")
+    ]
+    if len(readiness_records) != 1:
+        raise ValueError(
+            f"{record_id}: source Markdown lacks unique readiness provenance"
+        )
+    readiness_record = readiness_records[0]
+    representation = readiness_record.get("local_representation") or {}
+    repair = readiness_record.get("repair_qc") or {}
+    markdown_hash = "sha256:" + str(
+        readiness_record.get("screening_markdown_sha256") or ""
+    )
+    representation_matches = representation.get("markdown_file") == binding.get(
+        "source_path"
+    ) and representation.get("markdown_sha256") == markdown_hash.removeprefix("sha256:")
+    approved_repair_matches = repair.get(
+        "decision"
+    ) == "approved_for_screening" and repair.get("repaired_markdown") == binding.get(
+        "source_path"
+    )
+    if (
+        normalise_doi(readiness_record.get("doi")) != doi
+        or (
+            require_ready and readiness_record.get("screening_source_ready") is not True
+        )
+        or representation.get("source_sha256") != pdf_hash.removeprefix("sha256:")
+        or not (representation_matches or approved_repair_matches)
+        or binding.get("source_sha256") != markdown_hash
+        or artifact_hash(repo, binding.get("source_path", "")) != markdown_hash
+    ):
+        raise ValueError(
+            f"{record_id}: source Markdown differs from readiness provenance"
+        )
+    return readiness_path
+
+
 def _acl_publisher_identity_evidence(
     repo: Path,
     record_id: str,
@@ -178,41 +231,11 @@ def _acl_publisher_identity_evidence(
             f"{record_id}: publisher PDF hash differs from acquisition provenance"
         )
 
-    readiness_path = safe_path(repo, CODEX_READINESS_PATH)
-    readiness = _read_json(readiness_path)
-    readiness_records = [
-        item
-        for item in readiness.get("records", [])
-        if item.get("screening_markdown_file") == binding.get("source_path")
-    ]
-    if len(readiness_records) != 1:
-        raise ValueError(
-            f"{record_id}: source Markdown lacks unique readiness provenance"
-        )
-    readiness_record = readiness_records[0]
-    representation = readiness_record.get("local_representation") or {}
-    repair = readiness_record.get("repair_qc") or {}
-    markdown_hash = "sha256:" + str(
-        readiness_record.get("screening_markdown_sha256") or ""
-    )
+    readiness_path = _codex_readiness_markdown(repo, record_id, binding, doi, pdf_hash)
     markdown_evidence = evidence.get("readiness_markdown", {})
-    representation_matches = representation.get("markdown_file") == binding.get(
+    if markdown_evidence.get("path") != binding.get(
         "source_path"
-    ) and representation.get("markdown_sha256") == markdown_hash.removeprefix("sha256:")
-    approved_repair_matches = repair.get(
-        "decision"
-    ) == "approved_for_screening" and repair.get("repaired_markdown") == binding.get(
-        "source_path"
-    )
-    if (
-        normalise_doi(readiness_record.get("doi")) != doi
-        or representation.get("source_sha256") != pdf_hash.removeprefix("sha256:")
-        or not (representation_matches or approved_repair_matches)
-        or binding.get("source_sha256") != markdown_hash
-        or artifact_hash(repo, binding.get("source_path", "")) != markdown_hash
-        or markdown_evidence.get("path") != binding.get("source_path")
-        or markdown_evidence.get("sha256") != markdown_hash
-    ):
+    ) or markdown_evidence.get("sha256") != binding.get("source_sha256"):
         raise ValueError(
             f"{record_id}: source Markdown differs from readiness provenance"
         )
@@ -222,6 +245,103 @@ def _acl_publisher_identity_evidence(
         acquisition_path,
         readiness_path,
     ]
+
+
+ACQUISITION_RECEIPT_KIND = "publisher_acquisition_receipt"
+ACQUISITION_RECEIPT_FIELDS = {
+    "kind",
+    "candidate_id",
+    "landing_url",
+    "pdf_url",
+    "pdf_path",
+    "pdf_sha256",
+}
+
+
+def _url_host(value: object) -> str:
+    match = re.fullmatch(r"https://([^/?#:]+)(?:[/?#].*)?", str(value or ""))
+    return match[1].casefold() if match else ""
+
+
+def _acquisition_receipt_identity_evidence(
+    repo: Path,
+    record_id: str,
+    receipt: object,
+    binding: dict[str, Any],
+    identity: dict[str, Any],
+    version: dict[str, Any],
+) -> list[Path]:
+    """Check a publisher acquisition receipt as DOI identity evidence.
+
+    Operator decision of 2026-09-29: when Docling dropped the running header
+    that printed the DOI, the publisher landing URL and the SHA-256 of the PDF
+    acquired from that publisher identify the exact Version instead. The
+    receipt is re-derived, never trusted: the landing URL must be registered
+    for the bound Version, the PDF must come from the same publisher host, and
+    the committed acquisition manifest, the readiness ledger and the local PDF
+    must all carry the receipt hash. A clean checkout has no PDF (third-party
+    binaries stay local), so there the committed acquisition hash chain is the
+    check and the file comparison runs wherever the PDF is present.
+    """
+    from src.assess.artifact_verification import safe_path
+
+    if (
+        not isinstance(receipt, dict)
+        or set(receipt) != ACQUISITION_RECEIPT_FIELDS
+        or receipt.get("kind") != ACQUISITION_RECEIPT_KIND
+    ):
+        raise ValueError(f"{record_id}: malformed acquisition receipt")
+    if set(identity) != {"title", "doi"}:
+        raise ValueError(f"{record_id}: acquisition receipt identifies DOIs only")
+    doi = normalise_doi(identity["doi"])
+    landing_url = str(receipt["landing_url"])
+    pdf_url = str(receipt["pdf_url"])
+    registered_urls = set(values(version.get("landing_url"))) | set(
+        values((version.get("identifiers") or {}).get("url"))
+    )
+    host = _url_host(landing_url)
+    if (
+        landing_url not in registered_urls
+        or not host
+        or host == "doi.org"
+        or _url_host(pdf_url) != host
+    ):
+        raise ValueError(
+            f"{record_id}: acquisition receipt is not a registered publisher landing"
+        )
+    pdf_hash = str(receipt["pdf_sha256"])
+    if not re.fullmatch(r"sha256:[0-9a-f]{64}", pdf_hash):
+        raise ValueError(f"{record_id}: acquisition receipt lacks a PDF hash")
+
+    acquisition_path = safe_path(repo, CODEX_ACQUISITION_PATH)
+    acquisition = _read_json(acquisition_path)
+    matches = [
+        item
+        for item in acquisition.get("records", [])
+        if item.get("candidate_id") == receipt["candidate_id"]
+    ]
+    if len(matches) != 1:
+        raise ValueError(f"{record_id}: acquisition receipt lacks a unique record")
+    record = matches[0]
+    pdf_directory = str(acquisition.get("local_pdf_directory") or "").rstrip("/")
+    if (
+        normalise_doi(record.get("doi")) != doi
+        or record.get("source_url") != pdf_url
+        or _url_host(record.get("resolved_url")) != host
+        or record.get("validation") != "valid_pdf_container"
+        or "sha256:" + str(record.get("sha256") or "") != pdf_hash
+        or receipt["pdf_path"] != f"{pdf_directory}/{record.get('local_pdf_name')}"
+    ):
+        raise ValueError(
+            f"{record_id}: acquisition receipt differs from the acquisition manifest"
+        )
+    pdf_path = safe_path(repo, receipt["pdf_path"])
+    if pdf_path.is_file() and "sha256:" + file_sha256(pdf_path) != pdf_hash:
+        raise ValueError(f"{record_id}: acquired PDF differs from its receipt hash")
+    readiness_path = _codex_readiness_markdown(
+        repo, record_id, binding, doi, pdf_hash, require_ready=True
+    )
+    return [acquisition_path, readiness_path]
 
 
 NON_RECORD_VERSION_TYPES = {
@@ -796,6 +916,7 @@ def apply_source_bindings(repo: Path, registry: dict, contract: dict) -> list[Pa
                 "bibliographic_identity",
                 "version_identity",
                 "publisher_evidence",
+                "acquisition_receipt",
                 "agent_id",
                 "model",
                 "reviewed_at",
@@ -837,6 +958,26 @@ def apply_source_bindings(repo: Path, registry: dict, contract: dict) -> list[Pa
             )
             identity = binding["version_identity"]
             publisher_evidence = entry.get("publisher_evidence")
+            receipt = entry.get("acquisition_receipt")
+            if receipt is not None:
+                if publisher_evidence is not None:
+                    raise ValueError(
+                        f"{record_id}: source binding mixes identity evidence kinds"
+                    )
+                inputs.extend(
+                    _acquisition_receipt_identity_evidence(
+                        repo,
+                        record_id,
+                        receipt,
+                        binding,
+                        identity,
+                        next(
+                            item
+                            for item in work["versions"]
+                            if item["version_id"] == binding["source_version_id"]
+                        ),
+                    )
+                )
             if publisher_evidence is not None:
                 publisher_quotes, publisher_inputs = _acl_publisher_identity_evidence(
                     repo,
@@ -866,7 +1007,8 @@ def apply_source_bindings(repo: Path, registry: dict, contract: dict) -> list[Pa
             if identity.get("doi") and not identity.get("arxiv"):
                 # Docling can insert spaces around the printed DOI separator.
                 identifier_pattern = identifier_pattern.replace("/", r"\s*/\s*")
-            if not re.search(
+            # A checked acquisition receipt replaces the printed DOI quotation.
+            if receipt is None and not re.search(
                 r"(?<![\w.])" + identifier_pattern + r"(?![\w.])",
                 quotes,
                 re.IGNORECASE,

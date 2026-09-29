@@ -7,7 +7,7 @@ status: active
 language: en
 version: "0.7"
 created: 2026-06-09
-updated: 2026-09-22
+updated: 2026-09-29
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6), Codex (GPT-6), Claude Code
 method:
@@ -143,7 +143,6 @@ Agent preparation supplies the evidence for domain-expert verification. The acce
 - Confirm the native Chromium directory-permission and physical-write path in a disposable clone.
 - Exercise the setup path with a person who did not build PRISM before extracting a reusable configuration guide.
 - Prepare and hand over the domain experts' GitHub Desktop clone with the built full-text layer, since `docs/data/fulltext/` is git-ignored and a plain clone shows abstracts only.
-- Decide whether the source-binding contract accepts acquisition receipts (publisher landing URL and PDF hash) as identity evidence. Eleven prepared 2026 reading texts fail the current quoted-DOI rule because the conversion dropped the running headers.
 
 ## Waiting on the project owner
 

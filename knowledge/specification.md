@@ -7,7 +7,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-06-09
-updated: 2026-09-22
+updated: 2026-09-29
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 4.8), Codex (GPT-6)
 method:
@@ -685,3 +685,15 @@ Decision. In verification mode the subject of the session is the productive agen
 Rationale. The authority boundary of ADR-035 requires that the agent annotation and the expert judgement of it stay distinguishable artifacts with distinguishable authors. Writing the event into the file of the track under review would let an expert action silently change an agent's productive output and would make the annotation and its verification indistinguishable in provenance. Keeping the event in the expert's file preserves the person attribution that NFR-04 requires, keeps the agent artifact byte-stable for its own hash bindings, and makes the verification layer additive for every historical reviewer file. Projection at load time keeps the displayed state complete without persisting a derived record anywhere.
 
 Effect. `docs/js/prisma.js` carries `VERIFICATION_SCHEMA`, `verificationRecords`, `isAgentTrackPayload`, `adoptAgentTrack`, `adoptVerifications`, `projectExpertVerifications`, `projectVerification`, `verificationSubject`, `displayRecord`, `awaitsVerification`, `subjectRecordHash` and `verificationEntry`; `reviewerPayload` serializes the layer, `validateReviewerPayload` checks it structurally where present, `provenanceRefLabel`, `promptLabel` and `modelLabel` render provenance, and `assessLockedHtml` names the agent subject. The corpus list marks papers whose agent record awaits verification. The browser pilot drives the path end to end against an isolated fixture track and asserts the target file, the untouched agent file, the readable provenance, the heading and the projection after a reload; it also holds the layout invariants for the one-screen workspace at 1440x900 and 1280x800. A unit test fixes the entry shape and the expert-file serialization. `tests/manual-checklist.md` covers the native folder path of a verification session.
+
+### ADR-041 Publisher acquisition receipts as source-identity evidence
+
+Status. Accepted by the operator on 2026-09-29 and implemented the same day.
+
+Context. An existing-Version source binding had to quote both the registered title and the exact DOI from the bound Markdown or from committed ACL publisher metadata. Several prepared 2026 reading texts came from publisher PDFs whose DOI appears only in a running header or footer, which Docling dropped during conversion. Their acquisition evidence already recorded the publisher URL and the PDF hash, but the contract had no way to use it.
+
+Decision. A binding entry may carry `acquisition_receipt` with `kind: publisher_acquisition_receipt`, the acquisition candidate, the publisher landing URL, the acquired PDF URL, the local PDF path and the PDF SHA-256. It replaces only the DOI quotation. The title quotation from the bound Markdown remains mandatory, and a receipt cannot be combined with ACL publisher evidence. The registry builder accepts the receipt only when the version identity is a DOI registered for the bound Version, the landing URL is registered for that Version and is not a DOI resolver, the PDF URL and the resolved acquisition URL lie on the landing host, the committed acquisition manifest holds exactly one record for the candidate with the same DOI, PDF URL, PDF hash and local file name, the readiness ledger ties that PDF hash to the bound Markdown hash with approved source QC, and the local PDF, when present, has the receipt hash. The quoted-DOI evidence stays valid and unchanged.
+
+Rationale. The DOI printed in a lost header and the DOI under which the publisher served the PDF identify the same Version, provided the retrieval is recorded and the bytes can be rechecked. Requiring the publisher host excludes repository and preprint copies, whose identity with the Version of Record the retrieval cannot show. Third-party PDFs stay out of Git, so a clean checkout checks the committed hash chain, while every machine holding the PDF also checks the bytes.
+
+Effect. `_acquisition_receipt_identity_evidence` and the shared readiness check `_codex_readiness_markdown` in `src/analysis/build_work_version_registry.py`, the `acquisition_receipt` definition in `schemas/femprompt-source-version-bindings-0.2.schema.json`, and receipt tests in `tests/test_source_version_bindings.py` that fail when a receipt with a wrong hash, a changed local PDF, a mismatched DOI, an unregistered landing URL, a foreign PDF host or a DOI-resolver landing is accepted. [[governance#Targeted reconciliation and data maintenance]] records the authority.

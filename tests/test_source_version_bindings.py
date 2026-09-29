@@ -949,3 +949,166 @@ def test_production_bindings_keep_vor_and_historical_source_holds():
         registry["record_index"][key]["work_id"] for key in ("CHJQ52DC", "Y4BMCI2J")
     } <= held_work_ids
     assert "work:8e01ec71-65ff-5273-b5b9-a582fec48008" in held_work_ids
+
+
+def receipt_fixture(tmp_path):
+    """An existing-version binding whose Markdown lost the printed DOI."""
+    import hashlib
+
+    registry, manifest, binding = existing_source_fixture(tmp_path, arxiv=False)
+    version = registry["works"][0]["versions"][0]
+    version["landing_url"] = "https://publisher.test/article/10.1234/example"
+    (tmp_path / "source.md").write_text(
+        "# Example work\nReviewed original full text without its running header.\n",
+        encoding="utf-8",
+    )
+    markdown_hash = artifact_hash(tmp_path, "source.md")
+    pdf = tmp_path / "generated/pdfs/codex-websearch-2026/abc.pdf"
+    pdf.parent.mkdir(parents=True)
+    pdf.write_bytes(b"%PDF-1.7 publisher bytes")
+    pdf_hash = hashlib.sha256(pdf.read_bytes()).hexdigest()
+    pdf_url = "https://publisher.test/content/pdf/10.1234/example.pdf"
+    acquisition_dir = tmp_path / "generated/source-acquisition/codex-websearch-2026"
+    acquisition_dir.mkdir(parents=True)
+    (acquisition_dir / "acquisition-manifest.json").write_text(
+        json.dumps(
+            {
+                "local_pdf_directory": "generated/pdfs/codex-websearch-2026",
+                "records": [
+                    {
+                        "candidate_id": "candidate:1",
+                        "doi": "10.1234/example",
+                        "source_url": pdf_url,
+                        "resolved_url": pdf_url,
+                        "validation": "valid_pdf_container",
+                        "local_pdf_name": "abc.pdf",
+                        "sha256": pdf_hash,
+                    }
+                ],
+            }
+        ),
+        encoding="utf-8",
+    )
+    (acquisition_dir / "source-readiness.json").write_text(
+        json.dumps(
+            {
+                "records": [
+                    {
+                        "candidate_id": "candidate:1",
+                        "doi": "10.1234/example",
+                        "screening_source_ready": True,
+                        "screening_markdown_file": "source.md",
+                        "screening_markdown_sha256": markdown_hash.removeprefix(
+                            "sha256:"
+                        ),
+                        "local_representation": {
+                            "markdown_file": "source.md",
+                            "markdown_sha256": markdown_hash.removeprefix("sha256:"),
+                            "source_sha256": pdf_hash,
+                        },
+                    }
+                ]
+            }
+        ),
+        encoding="utf-8",
+    )
+    binding["source_sha256"] = markdown_hash
+    entry = manifest["records"]["P1"]
+    entry["evidence"] = [
+        {
+            "source_path": "source.md",
+            "sha256": markdown_hash,
+            "locator": "article heading",
+            "quote": "Example work",
+        }
+    ]
+    entry["acquisition_receipt"] = {
+        "kind": "publisher_acquisition_receipt",
+        "candidate_id": "candidate:1",
+        "landing_url": version["landing_url"],
+        "pdf_url": pdf_url,
+        "pdf_path": "generated/pdfs/codex-websearch-2026/abc.pdf",
+        "pdf_sha256": "sha256:" + pdf_hash,
+    }
+    write_source_manifest(tmp_path, manifest)
+    return registry, manifest, pdf
+
+
+def test_acquisition_receipt_replaces_lost_doi_quotation(tmp_path):
+    registry, manifest, pdf = receipt_fixture(tmp_path)
+    apply_source_bindings(tmp_path, registry, load_contract())
+    assert registry["source_index"]["P1"]["source_path"] == "source.md"
+    # Without the receipt the unchanged quoted-DOI rule still refuses the text.
+    (tmp_path / "plain").mkdir()
+    registry, manifest, _pdf = receipt_fixture(tmp_path / "plain")
+    del manifest["records"]["P1"]["acquisition_receipt"]
+    write_source_manifest(tmp_path / "plain", manifest)
+    with pytest.raises(ValueError, match="exact version identifier"):
+        apply_source_bindings(tmp_path / "plain", registry, load_contract())
+
+
+def test_acquisition_receipt_without_local_pdf_uses_committed_hash_chain(tmp_path):
+    registry, _manifest, pdf = receipt_fixture(tmp_path)
+    pdf.unlink()
+    apply_source_bindings(tmp_path, registry, load_contract())
+    assert "P1" in registry["source_index"]
+
+
+@pytest.mark.parametrize(
+    ("problem", "message"),
+    [
+        ("receipt_hash", "differs from the acquisition manifest"),
+        ("local_pdf", "acquired PDF differs from its receipt hash"),
+        ("acquisition_doi", "differs from the acquisition manifest"),
+        ("identity_doi", "differs from the acquisition manifest"),
+        ("landing_url", "not a registered publisher landing"),
+        ("pdf_host", "not a registered publisher landing"),
+        ("doi_resolver_landing", "not a registered publisher landing"),
+        ("untyped", "malformed acquisition receipt"),
+        ("readiness_pdf_hash", "differs from readiness provenance"),
+        ("readiness_not_ready", "differs from readiness provenance"),
+    ],
+)
+def test_acquisition_receipt_is_checked_not_trusted(tmp_path, problem, message):
+    registry, manifest, pdf = receipt_fixture(tmp_path)
+    entry = manifest["records"]["P1"]
+    receipt = entry["acquisition_receipt"]
+    acquisition_path = (
+        tmp_path
+        / "generated/source-acquisition/codex-websearch-2026/acquisition-manifest.json"
+    )
+    acquisition = json.loads(acquisition_path.read_text(encoding="utf-8"))
+    version = registry["works"][0]["versions"][0]
+    if problem == "receipt_hash":
+        receipt["pdf_sha256"] = "sha256:" + "0" * 64
+    elif problem == "local_pdf":
+        pdf.write_bytes(b"%PDF-1.7 other bytes")
+    elif problem == "acquisition_doi":
+        acquisition["records"][0]["doi"] = "10.1234/other"
+    elif problem == "identity_doi":
+        entry["version_identity"]["doi"] = "10.1234/other"
+        version["identifiers"]["doi"].append("10.1234/other")
+    elif problem == "landing_url":
+        receipt["landing_url"] = "https://publisher.test/article/unregistered"
+    elif problem == "pdf_host":
+        receipt["pdf_url"] = acquisition["records"][0]["source_url"] = (
+            "https://repository.test/example.pdf"
+        )
+    elif problem == "doi_resolver_landing":
+        version["landing_url"] = receipt["landing_url"] = (
+            "https://doi.org/10.1234/example"
+        )
+    elif problem == "untyped":
+        del receipt["kind"]
+    elif problem.startswith("readiness"):
+        readiness_path = acquisition_path.with_name("source-readiness.json")
+        readiness = json.loads(readiness_path.read_text(encoding="utf-8"))
+        if problem == "readiness_pdf_hash":
+            readiness["records"][0]["local_representation"]["source_sha256"] = "1" * 64
+        else:
+            readiness["records"][0]["screening_source_ready"] = False
+        readiness_path.write_text(json.dumps(readiness), encoding="utf-8")
+    acquisition_path.write_text(json.dumps(acquisition), encoding="utf-8")
+    write_source_manifest(tmp_path, manifest)
+    with pytest.raises(ValueError, match=message):
+        apply_source_bindings(tmp_path, registry, load_contract())

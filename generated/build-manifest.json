@@ -2578,7 +2578,7 @@
     "src/analysis/build_literature_readiness.py": "be8991ad283bda26741d90565e5247cdb5e7cb760590203bc06dcb041484da59",
     "src/analysis/build_round2_intake.py": "f65b3785a4a111795d6decf754a4b664f16109d79d3d5c4450cc6255232d7049",
     "src/analysis/build_round2_intake_package.py": "16b9abf208589383bdbfd2d9295dc1b61ae8d3a622188a947c83d45df625cb89",
-    "src/analysis/build_work_version_registry.py": "ee6a949a597bfd0e0dc340496bc425fd73dbcd729edfd541fb5d99d57f0c1b43",
+    "src/analysis/build_work_version_registry.py": "be9867076e807a5f9f12046408a66a150d506a74df075a22e53aeb65db0c6598",
     "src/analysis/historical_resolution.py": "b653dfefbe1cc8c43e0f85d20634b14087281882cf871d6742e3735dae4013f5",
     "src/analysis/knowledge_coverage.py": "0a2cc4318159335f6dc5c35728521a9e63f6db0fb99cb9ac4fe2e78c177bc684",
     "src/analysis/metadata_corrections.py": "9f35bd21fcca54a096e569a341a0f2e27396a84e7892c66e9430517170a4a002",

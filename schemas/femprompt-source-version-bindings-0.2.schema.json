@@ -142,6 +142,20 @@
             "sha256": { "$ref": "#/$defs/sha256Prefixed" }
           }
         },
+        "acquisition_receipt": {
+          "$comment": "Typed identity evidence accepted by the operator decision of 2026-09-29 when the converted Markdown lost the printed DOI. The reader re-derives it from the committed acquisition manifest, the readiness ledger and, where present, the local PDF; it never replaces the title quotation.",
+          "type": "object",
+          "required": ["kind", "candidate_id", "landing_url", "pdf_url", "pdf_path", "pdf_sha256"],
+          "additionalProperties": false,
+          "properties": {
+            "kind": { "const": "publisher_acquisition_receipt" },
+            "candidate_id": { "type": "string", "minLength": 1 },
+            "landing_url": { "type": "string", "pattern": "^https://" },
+            "pdf_url": { "type": "string", "pattern": "^https://" },
+            "pdf_path": { "type": "string", "minLength": 1 },
+            "pdf_sha256": { "$ref": "#/$defs/sha256Prefixed" }
+          }
+        },
         "version": {
           "$comment": "Only a manuscript-adding binding supplies new Version metadata; see the existing_version branch below.",
           "type": "object",
@@ -183,6 +197,7 @@
               "bibliographic_identity": true,
               "version_identity": true,
               "publisher_evidence": true,
+              "acquisition_receipt": true,
               "agent_id": true,
               "model": true,
               "reviewed_at": true,
