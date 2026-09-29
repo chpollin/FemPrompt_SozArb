@@ -87,6 +87,26 @@
       "evidence_url": "https://link.springer.com/article/10.1186/s12911-025-03118-0",
       "checked_at": "2026-09-21T19:26:56.514418+00:00",
       "authority": "Attributed local reading representation with explicit repairs and independent conversion QC; no scholarly approval or deployment."
+    },
+    {
+      "record_id": "Z9DNTBFF",
+      "source_path": "corpus/source-acquisition/completion-20260921/Z9DNTBFF-reading.md",
+      "sha256": "sha256:2c894a137e3318bef2866b38c8d25f7660585706530bbfd4102081a579f003ae",
+      "licence": "CC-BY-4.0",
+      "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://aclanthology.org/faq/copyright/",
+      "checked_at": "2026-09-29T12:10:35+00:00",
+      "authority": "Attributed local reading representation with explicit repairs pending independent conversion QC; no scholarly approval or deployment."
+    },
+    {
+      "record_id": "9ZKZQM63",
+      "source_path": "corpus/source-acquisition/completion-20260921/9ZKZQM63-reading.md",
+      "sha256": "sha256:0be1f93d2dff95efc22b80c177dfb648ef9f78f6a3fa62fac2ebefcfdfa20b0f",
+      "licence": "CC-BY-NC-SA-4.0",
+      "licence_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "evidence_url": "https://arxiv.org/abs/2406.12033v2",
+      "checked_at": "2026-09-29T12:10:35+00:00",
+      "authority": "Attributed local reading representation with explicit repairs pending independent conversion QC; no scholarly approval or deployment."
     }
   ]
 }
