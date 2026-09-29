@@ -38,6 +38,12 @@ The JSSWR author preprint was downloaded again from arXiv with the byte hash rec
 
 The repaired source binding of `EXRF5629` validates against its hash, and its Work is covered only by the negatively reviewed agent record, so it is eligible for fresh governed screening from the bound PMC manuscript.
 
+### 2026-09-29: Remove copyrighted full texts from the public repository
+
+The operator decided that copyrighted, paywalled full texts may no longer be tracked. The Docling conversions, the cleaned and repaired source-acquisition Markdown and the captured article texts without a recorded licence left the Git index and are now ignored. Texts whose exact file carries a recorded licence or permission that allows redistribution stay versioned. The history was not rewritten, so earlier commits still contain the removed files.
+
+A clean clone previously rebuilt its outputs from the tracked texts, and the committed build manifest hashed them. Hash-bound records now resolve absent texts through `generated/local-fulltext-ledger.json`, and the text-free `docs/data/fulltext_manifest.json` is versioned as the resolution record. Builds with and without the texts produced byte-identical committed outputs. The source fingerprints of the registry and its dependants changed once, because they now digest file hashes instead of bytes. Tests that resolve real conversions skip with a named reason where the texts are absent. Canonical rules live in [[data#Local-only full texts]]. The untracked `reacquisition-2026-09-22/` folder on the desktop still contributes non-text inputs to the desktop build manifest and needs a deliberate commit-or-ignore decision.
+
 ### 2026-09-22: Referenzen sichtbar, Werkzeugleiste in der Korpusspalte, Anleitung für die Verifikationsrolle
 
 Der Operator hat die Ausblendung der Runde-eins-Referenzen aufgehoben. Die Entscheidung der Expertinnen und die LLM-Einschätzung aus Runde eins stehen jetzt in menschlichen Sitzungen mit Herkunftskennzeichnung über der Bewertung, und der LLM-Vorschlag lässt sich als Kategoriestufen übernehmen. Die Belegpflicht aus dem Papertext und die Ableitungsregel bleiben unverändert; Agentenläufe bleiben referenzblind. ADR-038 ersetzt die Ausblendungsregel aus FR-03, die alten Vergleichsfunktionen sind gelöscht, und der Unit-Test zum eingeklappten Vergleich prüft nun die sichtbaren Referenzen und die stufenbeschränkte Übernahme.

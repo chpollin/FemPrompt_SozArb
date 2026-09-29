@@ -7,10 +7,16 @@ import json
 from pathlib import Path
 from typing import Any
 
-from src.file_hashing import canonical_file_bytes
+from src.file_hashing import canonical_file_bytes, file_sha256, filesystem_path
 
 
-def _sha256(path: Path, canonical: bool = False) -> str:
+def _sha256(path: Path, canonical: bool = False) -> str | None:
+    if not filesystem_path(path).is_file():
+        # An absent local-only full text resolves to its ledgered canonical hash.
+        try:
+            return "sha256:" + file_sha256(path)
+        except OSError:
+            return None
     data = canonical_file_bytes(path) if canonical else path.read_bytes()
     return "sha256:" + hashlib.sha256(data).hexdigest()
 
@@ -81,10 +87,7 @@ def project_recovered_knowledge(
                 f"{record_id}: full-text manifest source differs from recovery binding"
             )
         source_path = repo / binding["source_path"]
-        if (
-            not source_path.is_file()
-            or _sha256(source_path, canonical) != binding["source_sha256"]
-        ):
+        if _sha256(source_path, canonical) != binding["source_sha256"]:
             raise ValueError(f"{record_id}: recovery source hash differs")
         knowledge_source = repo / binding["knowledge_source_path"]
         if (

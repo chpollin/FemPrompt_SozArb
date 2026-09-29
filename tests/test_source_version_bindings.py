@@ -22,6 +22,7 @@ from src.assess.artifact_verification import (
     reviewed_screening_projection,
     validated_reviews,
 )
+from src.local_sources import texts_available
 from src.publish import (
     build_fulltext,
     generate_docs_data,
@@ -289,6 +290,10 @@ def write_source_manifest(repo, manifest):
     )
 
 
+@pytest.mark.skipif(
+    not texts_available(REPO),
+    reason="local third-party full texts are not in this checkout (excluded from Git)",
+)
 @pytest.mark.parametrize("wrong_identifier", [False, True])
 def test_printed_doi_spacing_preserves_exact_identifier(tmp_path, wrong_identifier):
     manifest = json.loads(

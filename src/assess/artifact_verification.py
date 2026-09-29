@@ -13,6 +13,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
+from src.local_sources import absent_sha256, read_text
+
 SCHEMA = "femprompt-artifact-verification/0.1"
 INDEX_SCHEMA = "femprompt-artifact-verification/0.2"
 POLICY_PATH = "config/publication_policy.json"
@@ -46,6 +48,9 @@ def artifact_hash(repo: Path, reference: str) -> str:
     path = safe_path(repo, filename)
     if separator:
         return record_hash(_json_value(repo, reference))
+    recorded = absent_sha256(repo, path)
+    if recorded:
+        return "sha256:" + recorded
     data = path.read_bytes()
     if path.suffix.lower() in {".md", ".json", ".yaml", ".yml", ".csv", ".txt", ".ris"}:
         data = data.replace(b"\r\n", b"\n")
@@ -97,7 +102,10 @@ def screening_correction(repo: Path, receipt: dict, decision: dict, artifact: st
         source_binding = review_source_binding(repo, registry, receipt)
         if not source_binding or source_binding["record_id"] != paper_id or correction.get("source_binding") != source_binding:
             raise ValueError("Source correction requires its exact governed manuscript binding")
-        source_body = " ".join(safe_path(repo, source_binding["source_path"]).read_text(encoding="utf-8").split())
+        if artifact_hash(repo, source_binding["source_path"]) != source_binding["source_sha256"]:
+            raise ValueError("Source correction manuscript differs from its binding")
+        body = read_text(repo, safe_path(repo, source_binding["source_path"]))
+        source_body = None if body is None else " ".join(body.split())
     for change in changes:
         path = change.get("path", "")
         tokens = path.split("/")
@@ -114,7 +122,7 @@ def screening_correction(repo: Path, receipt: dict, decision: dict, artifact: st
             raise ValueError(f"Correction path does not resolve: {path}") from None
         if tokens[-1] not in fields or fields[tokens[-1]] != change.get("before") or "after" not in change or not change.get("reason"):
             raise ValueError(f"Correction does not match original analysis: {path}")
-        if quote_path and (fields.get("source_layer") != "paper" or not isinstance(change["after"], str) or not change["after"].strip() or " ".join(change["after"].split()) not in source_body):
+        if quote_path and (fields.get("source_layer") != "paper" or not isinstance(change["after"], str) or not change["after"].strip() or (source_body is not None and " ".join(change["after"].split()) not in source_body)):
             raise ValueError(f"Corrected quotation does not resolve in the bound manuscript: {path}")
         fields[tokens[-1]] = deepcopy(change["after"])
         paths.add(path)
@@ -127,7 +135,7 @@ def screening_correction(repo: Path, receipt: dict, decision: dict, artifact: st
             raise ValueError("AI source correction would change the derived screening decision")
         for category in projected.get("categories", {}):
             passages = [item for item in projected.get("evidence", {}).get(category, []) if item.get("source_layer") == "paper"]
-            if not passages or any(not isinstance(item.get(field), str) or not item[field].strip() or " ".join(item[field].split()) not in source_body for item in passages for field in ("term", "snippet")):
+            if not passages or any(not isinstance(item.get(field), str) or not item[field].strip() or (source_body is not None and " ".join(item[field].split()) not in source_body) for item in passages for field in ("term", "snippet")):
                 raise ValueError(f"Positive category evidence does not resolve in the bound manuscript: {category}")
     return projected, correction
 
@@ -304,8 +312,8 @@ outcomes can describe obsolete artifacts without blocking an unrelated release.
             if artifact_hash(repo, source["source_path"]) != source["sha256"]:
                 raise ValueError(f"Stale source in AI review: {source['source_path']}")
             if source.get("quote"):
-                body = safe_path(repo, source["source_path"]).read_text(encoding="utf-8")
-                if " ".join(source["quote"].split()) not in " ".join(body.split()):
+                body = read_text(repo, safe_path(repo, source["source_path"]))
+                if body is not None and " ".join(source["quote"].split()) not in " ".join(body.split()):
                     raise ValueError(f"Review quotation does not resolve: {artifact}")
         expected_identity = {"work_id": source_binding["work_id"], "version_id": source_binding["source_version_id"]} if source_binding else binding
         if expected_identity and not any(all(source[key] == expected_identity[key] for key in ("work_id", "version_id")) and (not source_binding or (source["source_path"] == source_binding["source_path"] and source["sha256"] == source_binding["source_sha256"])) for source in evidence):

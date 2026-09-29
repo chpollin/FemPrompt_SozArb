@@ -24,9 +24,13 @@ import hashlib
 import json
 import re
 import unicodedata
+import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
+if str(REPO) not in sys.path:
+    sys.path.insert(0, str(REPO))
+from src.local_sources import texts_available  # noqa: E402
 DISTILLED = REPO / "generated" / "distilled"
 STAGE1 = DISTILLED / "_stage1_json"
 CLEAN = REPO / "generated" / "markdown_clean"
@@ -159,6 +163,9 @@ def resolve_fulltext(stem: str, meta_title: str, by_base, by_title) -> tuple[Pat
 
 
 def main() -> None:
+    # Without the texts every anchor would read as unresolved and overwrite a valid audit.
+    if not texts_available(REPO):
+        raise SystemExit("evidence_audit: " + "local third-party full texts are absent from this checkout (excluded from Git); run it where the texts are present")
     OUT.mkdir(parents=True, exist_ok=True)
     by_base, by_title = build_clean_index()
 

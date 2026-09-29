@@ -14,7 +14,6 @@ from __future__ import annotations
 
 import argparse
 import csv
-import hashlib
 import io
 import json
 import os
@@ -27,6 +26,7 @@ from typing import Any
 
 from src.analysis.historical_resolution import RESOLUTION_PATH, load_source_holds
 from src.file_hashing import file_sha256
+from src.local_sources import available as text_available
 
 REPO = Path(__file__).resolve().parents[2]
 DEFAULT_JSON = REPO / "generated" / "literature-readiness.json"
@@ -38,7 +38,7 @@ def _read_json(path: Path) -> Any:
 
 
 def _sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return file_sha256(path)
 
 
 def _abstract_quality(text: str) -> str:
@@ -102,7 +102,7 @@ def _source_details(
         and manifest_entry.get("work_id") == expected_work
         and manifest_entry.get("version_id") == expected_version
     )
-    available = kind in {"clean", "raw"} and source_path.is_file()
+    available = kind in {"clean", "raw"} and text_available(repo, source_path)
     governed_binding = bool(
         available
         and exact_binding

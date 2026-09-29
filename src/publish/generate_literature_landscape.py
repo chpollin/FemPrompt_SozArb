@@ -46,6 +46,21 @@ def _read_json(path: Path) -> dict[str, Any]:
     return data
 
 
+def _bound_source_body(repo: Path, binding: dict) -> str | None:
+    """Return the whitespace-normalised bound manuscript, or None where it is local-only.
+
+    The binding hash is checked first; an absent local full text resolves to its
+    ledgered hash, and its quotation check runs on machines that hold the text.
+    """
+    from src.assess.artifact_verification import artifact_hash, safe_path
+    from src.local_sources import read_text
+
+    if artifact_hash(repo, binding["source_path"]) != binding["source_sha256"]:
+        raise ValueError(f"{binding.get('record_id')}: bound manuscript differs from its binding")
+    body = read_text(repo, safe_path(repo, binding["source_path"]))
+    return None if body is None else " ".join(body.split())
+
+
 def _paper_evidence(decision: dict[str, Any], category: str) -> list[dict[str, str]]:
     passages = decision.get("evidence", {}).get(category, [])
     result = []
@@ -302,7 +317,7 @@ def _validate_and_transform_record(
     source_binding = (ai_verification or {}).get("source_binding")
     source_body = None
     if source_binding:
-        from src.assess.artifact_verification import review_source_binding, safe_path
+        from src.assess.artifact_verification import review_source_binding
 
         if paper.get("source_binding") and source_binding != paper["source_binding"]:
             raise StaleSourceVerificationError(
@@ -312,11 +327,7 @@ def _validate_and_transform_record(
         source_binding = review_source_binding(repo, registry, ai_verification)
         if source_binding != paper.get("source_binding"):
             raise ValueError(f"{paper_id}: reviewed source binding differs from corpus")
-        source_body = " ".join(
-            safe_path(repo, source_binding["source_path"])
-            .read_text(encoding="utf-8")
-            .split()
-        )
+        source_body = _bound_source_body(repo, source_binding)
     elif paper.get("source_binding"):
         if not _historical_receipt_matches_existing_version_source(
             paper_id, paper, ai_verification or {}
@@ -324,14 +335,8 @@ def _validate_and_transform_record(
             raise StaleSourceVerificationError(
                 f"{paper_id}: governed manuscript requires explicit source-bound verification"
             )
-        from src.assess.artifact_verification import safe_path
-
         source_binding = deepcopy(paper["source_binding"])
-        source_body = " ".join(
-            safe_path(repo, source_binding["source_path"])
-            .read_text(encoding="utf-8")
-            .split()
-        )
+        source_body = _bound_source_body(repo, source_binding)
     _validate_recorded_identity(
         paper_id,
         decision.get("work_id"),
@@ -356,7 +361,7 @@ def _validate_and_transform_record(
                 bound_identity,
                 source_binding["source_version_id"] if source_binding else None,
             )
-            if source_binding and any(
+            if source_body is not None and any(
                 " ".join(passage[field].split()) not in source_body
                 for field in ("term", "snippet")
             ):

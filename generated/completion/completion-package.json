@@ -8678,7 +8678,7 @@
     "targeted_followup_search_date": "2026-09-05",
     "targeted_gap_fill_candidates": true
   },
-  "source_fingerprint": "sha256:576a38273624713ef632dac299931870f9d1c1eb5760583ff7a861cc5ecce8f1",
+  "source_fingerprint": "sha256:0ab4b0df536e7b657b2bf8f1718b0224dae3af4279a20b5befebeb5cae674c93",
   "sources": [
     {
       "path": "assessment/categories.yaml",
@@ -8858,7 +8858,7 @@
     },
     {
       "path": "corpus/work_version_registry.json",
-      "sha256": "bcdde7b3f9342f3b93486e059747c7cba2dc5c33d66461fc9376d1dfb4e8a20a"
+      "sha256": "8f7cf78af59a8c7266cc6d7eef8b73bda6ad3efb0a45f47172c21982b22a3c54"
     },
     {
       "path": "corpus/zotero_export.json",
@@ -8898,7 +8898,7 @@
     },
     {
       "path": "docs/data/research_vault_v2.json",
-      "sha256": "3a364fc8beef5351e0fb2880687326ce03f9d1b9f29bf63cbfb650a7c86e83a6"
+      "sha256": "534bfe7ce8e2b8b49ef42795e1f993ba94f63f0f6c1f8913b0f56a5834746971"
     },
     {
       "path": "docs/data/screening/ar2.json",
@@ -9702,7 +9702,7 @@
     },
     {
       "path": "generated/agent-screening-queue.json",
-      "sha256": "3f9ad1b8f9bbe4da91c40f1e743438feae3c04d30c2488a61cc53d28eacf71fa"
+      "sha256": "f634c9859527d7d81f9d1da89fcea953415b8662e35ba00bcb841bc3b4955bb4"
     },
     {
       "path": "generated/conformance/conformance_map.yaml",
@@ -11594,11 +11594,11 @@
     },
     {
       "path": "src/analysis/build_completion_package.py",
-      "sha256": "703c9aab392eb9e0eb23a5ef0d1a6eba0f15927291ebbcd77d88534699904dc1"
+      "sha256": "fc9e709756a9c31009205112fbbf1ea61a137d963b94e6224c4f4ba80512a6aa"
     },
     {
       "path": "src/analysis/historical_resolution.py",
-      "sha256": "b653dfefbe1cc8c43e0f85d20634b14087281882cf871d6742e3735dae4013f5"
+      "sha256": "e4a2453df76fa05d7adeae3a306dd8cb01a1a0800d1c2d76412fbf1038ae014f"
     },
     {
       "path": "src/analysis/knowledge_coverage.py",
@@ -11606,11 +11606,11 @@
     },
     {
       "path": "src/assess/artifact_verification.py",
-      "sha256": "0a959d9f4c8d0fcdf78f8312f8bd64412b9e2e2ee32d2ff5fdb26ea91a9f3167"
+      "sha256": "ccbec81e847edd2167e86aa8ac2673378a5881307139adf65fbde3a33dbb8887"
     },
     {
       "path": "src/file_hashing.py",
-      "sha256": "ba44793866e0fabe003b58a5165bc2e09fab85e70c02b7323f080f6043b95cd4"
+      "sha256": "f53974009d3447c87c6a505c4678bc386ff3c05ba272574fb81bf1cb530a7ce5"
     }
   ],
   "status": "provisional_internal_preparation",

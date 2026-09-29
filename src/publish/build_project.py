@@ -14,6 +14,7 @@ from pathlib import Path
 from typing import Any
 
 from src.file_hashing import file_sha256, filesystem_path
+from src.local_sources import LEDGER, is_local_fulltext, texts_available, write_ledger
 
 ROOT = Path(__file__).resolve().parents[2]
 MANIFEST = "generated/build-manifest.json"
@@ -25,6 +26,7 @@ OUTPUTS = (
     "docs/data/promptotyping_v2.json",
     "docs/data/fulltext_index.json",
     "docs/data/fulltext_manifest.json",
+    LEDGER,
     "docs/data/literature_landscape.json",
     "docs/data/assertion_index.json",
     "generated/agent-screening-queue.json",
@@ -33,7 +35,9 @@ OUTPUTS = (
     "generated/literature-readiness.json",
     "generated/literature-readiness.csv",
 )
-OUTPUT_DIRS = ("docs/data/fulltext", "generated/completion", "build/site")
+# docs/data/fulltext/ holds the local reading copies of the texts themselves. It exists
+# only where the texts do, so it stays outside the committed manifest.
+OUTPUT_DIRS = ("generated/completion", "build/site")
 INPUT_GLOBS = (
     "src/**/*.py",
     "config/*.json",
@@ -45,8 +49,6 @@ INPUT_GLOBS = (
     "corpus/**/*.txt",
     "corpus/**/*.png",
     "corpus/papers_metadata.csv",
-    "generated/markdown/*.md",
-    "generated/markdown_clean/*.md",
     "generated/distilled/**/*.json",
     "generated/distilled/**/*.md",
     "generated/source-acquisition/**/*.json",
@@ -124,6 +126,7 @@ def snapshot(repo: Path) -> dict[str, Any]:
         if filesystem_path(p).is_file()
         and p.relative_to(repo).as_posix() not in LOCAL_INPUT_PATHS
         and not p.relative_to(repo).as_posix().startswith(LOCAL_INPUT_PREFIXES)
+        and not is_local_fulltext(p.relative_to(repo).as_posix())
         and not p.relative_to(repo).match(
             "generated/source-acquisition/audit-*/markdown-new-bytes/*.md"
         )
@@ -187,6 +190,15 @@ def _run(module: str, *args: str) -> None:
 def build() -> None:
     if sys.version_info < (3, 11):
         raise RuntimeError("The reproducible build requires Python 3.11 or later")
+    local_texts = texts_available(ROOT)
+    if local_texts:
+        write_ledger(ROOT)
+        print("OK: local full texts present; ledger refreshed", flush=True)
+    else:
+        print(
+            "OK: local full texts absent; using the committed ledger and resolution records",
+            flush=True,
+        )
     for module in (
         "src.publish.build_category_schema",
         "src.publish.build_analysis_fields",
@@ -198,6 +210,9 @@ def build() -> None:
     # needed, and an old corpus cannot label a new manuscript binding as VOR.
     _run("src.publish.generate_docs_data", "--prepare-fulltext")
     _run("src.publish.build_fulltext")
+    if local_texts:
+        # Record the rebuilt reading copies, which recovery bindings reference by hash.
+        write_ledger(ROOT)
     _run("src.publish.generate_docs_data")
     for module in (
         "src.publish.generate_promptotyping_data_v2",

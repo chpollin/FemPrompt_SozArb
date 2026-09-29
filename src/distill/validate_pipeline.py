@@ -117,7 +117,8 @@ class PipelineValidator:
         md_dir = self.root / "generated" / "markdown"
 
         if not md_dir.exists():
-            self.error(2, f"Markdown directory not found: {md_dir}")
+            # Full texts are local-only (excluded from Git); a clean clone lacks them.
+            self.warn(2, f"Markdown directory not found, stage skipped (local full texts absent): {md_dir}")
             return
 
         pdfs = {p.stem for p in pdf_dir.glob("*.pdf")} if pdf_dir.exists() else set()
@@ -146,7 +147,7 @@ class PipelineValidator:
         clean_dir = self.root / "generated" / "markdown_clean"
 
         if not clean_dir.exists():
-            self.warn(3, f"Clean markdown directory not found: {clean_dir}")
+            self.warn(3, f"Clean markdown directory not found, stage skipped (local full texts absent): {clean_dir}")
             return
 
         mds = {m.stem for m in md_dir.glob("*.md")} if md_dir.exists() else set()

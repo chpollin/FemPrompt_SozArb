@@ -10,7 +10,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-08-23
-updated: 2026-09-22
+updated: 2026-09-29
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6), Codex (GPT-6)
 topics: ["[[Software Testing]]", "[[Research Software]]"]
@@ -38,6 +38,7 @@ The test system establishes the technical behaviour of PRISM, the Evidence Compa
 | Zotero import residuals | Deduplication across the packages, version relations kept in the residual file, refusal to overwrite a prepared import, the unchanged leading package | `python -m pytest tests/test_zotero_import_residuals.py` |
 | Authorised Zotero import | Group-limited access, preservation of real RIS metadata, held identity conflicts, stale-plan rejection, creation-only writes, receipt after uncertain response, semantic tag read-back and duplicate-free continuation | `python -m pytest tests/test_zotero_group_import.py` |
 | Claim and Vault checks | Assertion anchors, adjacent-layer references, status discipline | `python -m src.publish.check_claims` and `python -m src.publish.validate_research_vault` |
+| Local-only full texts | Path classification aligned with `.gitignore`, ledger hashes, absent and partial local stores | `python -m pytest tests/test_local_sources.py` |
 | Library and knowledge coverage | Complete live membership, preserved benchmark annotations, null categories for unassessed records, source-bound active and recovered documents, independent reporting of missing full text and knowledge documents | `python -m pytest tests/test_generate_docs_data.py tests/test_project_active_distillates.py tests/test_project_recovered_knowledge.py tests/test_literature_readiness.py` |
 
 ## Guaranteed behaviours
@@ -71,6 +72,7 @@ The automated suites cover the following contracts.
 - Work-wide source or withdrawal holds exclude otherwise reviewed coding from current analysis and Assertion release.
 - Duplicate bibliographic records contribute once per Work to result aggregations; conflicting eligible codings stop publication.
 - The result-site allowlist excludes raw screening files and full-text assets, and its downloadable research JSON is byte-identical to the site data.
+- Committed build outputs do not depend on whether a checkout holds the local full texts. Absent texts resolve to their ledgered hashes, and a partial local store stops the build.
 - Grounded chat contexts contain released Assertions and exact source evidence; no-evidence queries remain local and provider answers require supplied evidence identifiers.
 - Grounded Vault outputs cannot exceed the authority state of their supporting layer.
 - Preparation distillates retain their named producer and unreviewed status. Their exact source path, hash and publication Version must match the canonical binding before projection. Historical document recovery checks the source and document hashes without upgrading the original interpretation.
@@ -94,7 +96,9 @@ npm run test:browser-companion
 npm run pilot
 ```
 
-The build reconstructs the ignored local reading layer, source-readiness and completion queues, corpus projections, Assertion index, downloads and separate result site at `build/site/`. It uses the local source representations and performs no new AI reviews or external API calls. Fresh acquisition, PDF conversion and LLM distillation require the broader research environment described in [[methods]]. The read-only `npm run check:data` rejects changed inputs, missing outputs or stale hashes.
+The build reconstructs the source-readiness and completion queues, corpus projections, Assertion index, downloads and separate result site at `build/site/`. It performs no new AI reviews or external API calls. Fresh acquisition, PDF conversion and LLM distillation require the broader research environment described in [[methods]]. The read-only `npm run check:data` rejects changed inputs, missing outputs or stale hashes.
+
+A fresh clone and continuous integration lack the third-party full texts, which stay local ([[data#Local-only full texts]]). The build then reports that the texts are absent, keeps the versioned `docs/data/fulltext_manifest.json`, resolves hash-bound source references through `generated/local-fulltext-ledger.json` and writes no reading layer. Its committed outputs are byte-identical to a build on a machine that holds the texts. That build additionally rebuilds the reading layer under `docs/data/fulltext/`, refreshes the ledger and runs the quotation re-checks against the texts. Tests that resolve real conversions are skipped with the reason that the local full texts are absent, and `tests/test_local_sources.py` covers the ledger contract itself. A verification session still needs a prepared project folder with the texts.
 
 Hash-bearing research artifacts use canonical LF text so their checksums remain stable across operating systems. The browser pilot selects an available local port by default, with `--port` available for explicit binding. The native folder-picker checks remain in [the manual checklist](../tests/manual-checklist.md). The committed replay checks the retrospective benchmark counts and agreement figures.
 

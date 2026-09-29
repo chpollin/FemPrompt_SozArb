@@ -10,7 +10,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-02-21
-updated: 2026-09-22
+updated: 2026-09-29
 authors: [Christopher Pollin]
 generated-with: Claude Code, Codex (GPT-6)
 topics: ["[[Systematic Review]]", "[[PRISMA]]"]
@@ -178,14 +178,14 @@ Scholarly authority resides in Zotero curation and the later PRISM domain verifi
 
 ## Stage 8: Distillate audit against the paraphrase-not-quote error class
 
-Precondition of the research-vault migration ([[research-vault]]). The check is whether category evidence of the distillates marked as a quote stands character-exact in the committed full text.
+Precondition of the research-vault migration ([[research-vault]]). The check is whether category evidence of the distillates marked as a quote stands character-exact in the local full text.
 
 1. Stage 1, deterministic pre-check (2026-07-17), `src/assess/evidence_audit.py`, finding classes OK, P, F, D, G.
 2. Stage 2, adversarial machine check of the hard candidates, advisory (2026-07-17).
 3. Stage 1b, deterministic re-check (2026-07-18), `src/assess/waitlist_resolution.py`, an artefact-tolerant contiguous-verbatim re-match that fully resolved the D class and proved a large part of the F candidates to be matcher or Docling artefacts.
 4. Stage 3, the domain-expert verification of the remaining F, G, and U cases, is outstanding; the order by severity is fixed in `research-vault/waitlist.md`.
 
-The check reports (`generated/distilled/_evidence_audit/`) are gitignored and local; the deterministic stages are regenerable from the committed inputs, the advisory stage-2 judgments as LLM judgments are not. Side finding of a shingle-Jaccard scan over the full texts: source-duplicate groups and the acquisition errors named in stage 2.
+The check reports (`generated/distilled/_evidence_audit/`) are gitignored and local; the deterministic stages are regenerable where the local full texts are present and refuse to run without them, the advisory stage-2 judgments as LLM judgments are not. Side finding of a shingle-Jaccard scan over the full texts: source-duplicate groups and the acquisition errors named in stage 2.
 
 Scholarly authority resides in the outstanding stage-3 domain verification.
 
@@ -213,7 +213,7 @@ Domain experts establish scholarly authority for the Assertions and output inter
 | Artefact | Location | Status |
 |---|---|---|
 | RIS, Zotero export, provenance mapping | `corpus/` | committed |
-| full texts converted | `generated/markdown_clean/` | committed |
+| full texts converted, raw and cleaned | `generated/markdown/`, `generated/markdown_clean/`, conversion folders under `generated/source-acquisition/` | local, gitignored since 2026-09-29, hashes in `generated/local-fulltext-ledger.json` ([[data#Local-only full texts]]) |
 | PDFs, validation reports, audit reports | `generated/pdfs/`, `generated/validation_reports*/`, `generated/distilled/_evidence_audit/` | local, gitignored |
 | distillates (pipeline output) | `generated/distilled/` including `_stage1_json/`, `_verification/` | committed |
 | assessment data of both tracks | `assessment/` | committed |

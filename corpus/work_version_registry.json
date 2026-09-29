@@ -1,6 +1,6 @@
 {
   "schema": "femprompt-work-version-registry/0.1",
-  "source_fingerprint": "sha256:212a70809317d12cd416c192ba744bd39c18e7c6770832b9739150ced69cf41b",
+  "source_fingerprint": "sha256:eba01f3a926312dac2cfdb4487b9ae4f38664e3c55f9037463723aed3c6e9d50",
   "sources": [
     {
       "path": "corpus/metadata_corrections.json",

@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { sourceText } from './local-sources.mjs';
 import { validateManifest } from './validate-run-contract.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
@@ -92,9 +93,14 @@ for (const track of run.tracks) {
       }
     }
 
-    if (expected.source_path) {
-      const source = normalizedText(bytes(expected.source_path).toString('utf8'));
-      const served = normalizedText(bytes(`docs/data/fulltext/${id}.md`).toString('utf8'));
+    const sourceBody = expected.source_path ? sourceText(root, expected.source_path) : null;
+    const servedBody = expected.source_path ? sourceText(root, `docs/data/fulltext/${id}.md`) : null;
+    if (expected.source_path && (sourceBody === null || servedBody === null)) {
+      console.log(`SKIP ${track.reviewer}/${id}: quote re-check needs the local full texts, which are absent here`);
+      assert(actual.text_source === 'raw', `${track.reviewer}/${id}: PRISM did not record raw full text`);
+    } else if (expected.source_path) {
+      const source = normalizedText(sourceBody);
+      const served = normalizedText(servedBody);
       for (const quote of Object.values(expected.evidence || {}).flat()) {
         const normalizedQuote = normalizedText(quote);
         assert(source.includes(normalizedQuote), `${track.reviewer}/${id}: quote absent from assigned source`);

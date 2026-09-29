@@ -45,8 +45,8 @@ ZOTERO = REPO / "corpus" / "zotero_export.json"
 TODAY = "2026-07-18"
 
 # Same-source doublets: keep exactly one distillate per fulltext identity
-# group (shingle-Jaccard J over the committed markdown_clean fulltexts,
-# scan of 2026-07-18). The kept twin is named in the evidence.
+# group (shingle-Jaccard J over the local markdown_clean fulltexts,
+# scan of 2026-07-18; recorded here, not recomputed). The kept twin is named in the evidence.
 CURATION_EXCLUDE = {
     "Unknown_Artificial_Intelligence_in_Social_Work_An_EPIC":
         "Quellendublette von Baker_2025_Artificial_intelligence_in_social_work_An_EPIC "

@@ -14,7 +14,9 @@ def plan():
         (correction.REPO / "corpus/zotero_export.json").read_text(encoding="utf-8")
     )
     before = copy.deepcopy(next(item for item in raw if item["key"] == "SHJQQTI6"))
-    source = "generated/markdown/Gohar_2023_Survey.md"
+    # A tracked, permission-recorded reading text of the same work; the original
+    # Docling conversion stays local and is absent from a clean clone.
+    source = "corpus/source-acquisition/completion-20260921/SHJQQTI6-reading.md"
     return {
         "group_id": correction.GROUP_ID,
         "before": before,
