@@ -48,7 +48,7 @@ Figure 1: Visual-linguistic models (like VL-BERT) encode gender biases, which (a
 
 <!-- image -->
 
-> Repair note, Figure 1 (PDF page 1). Two rows show the same pipeline. A photograph enters VL-BERT together with the caption "the person is carrying a [MASK]", and a bar chart without axis values compares the predictions purse and briefcase. Top row: a woman carrying a brown handbag; the purse bar is much taller than the briefcase bar. Bottom row: a man carrying a brown patterned travel bag; the briefcase bar is taller than the purse bar, which reaches roughly half its height.
+> Repair note, Figure 1 (PDF page 1). Two rows show the same pipeline. A photograph enters VL-BERT together with the caption "the person is carrying a [MASK]", and a bar chart without axis values compares the predictions purse and briefcase. Top row: a woman carrying a brown handbag; the purse bar is much taller than the briefcase bar. Bottom row: a man carrying a brown checked handbag; the briefcase bar is taller than the purse bar, which reaches roughly half its height.
 
 there are relatively few works at the intersection of the two. As we build models that include multiple input modalities, each containing their own biases and artefacts, we must be cognizant about how each of them are influencing model decisions.
 
@@ -185,7 +185,7 @@ Figure 3: Language association scores S L ( E,m/f ) . Positive association score
 
 <!-- image -->
 
-> Repair note, Figure 3 (PDF page 3; asset `reading-assets/Z9DNTBFF-figure-3.png`). Grouped bars, female blue and male orange, y-axis from about -1.2 to 1.0. Values measured on the embedded figure raster against its printed axis ticks, at about 0.005 score units per pixel, and rounded to two decimals; they are readings of the plot, not values reported by the authors. The female bar for beer is not visible, so its score is indistinguishable from zero in the plot.
+> Repair note, Figure 3 (PDF page 3; asset `reading-assets/Z9DNTBFF-figure-3.png`). Grouped bars, female blue and male orange, y-axis ticked from -1.0 to 1.0 with the plot frame reaching down to about -1.3. Values measured on the embedded figure raster against its printed axis ticks, at about 0.0024 score units per pixel, and rounded to two decimals; they are readings of the plot, not values reported by the authors. The female bar for beer is not visible, so its score is indistinguishable from zero in the plot.
 >
 > | Entity | Female | Male |
 > |---|---|---|
@@ -268,7 +268,7 @@ We can also investigate the effect of visuallinguistic pretraining by comparing 
 > |---|---|---|
 > | scotch | masculine | ~-2.07 |
 > | briefcase | masculine | ~-2.06 |
-> | jersey | masculine | -1.87 |
+> | jersey | masculine | -1.86 |
 > | whiskey | masculine | -1.70 |
 > | suit | masculine | ~-1.62 |
 > | beer | masculine | ~-1.61 |
@@ -310,7 +310,7 @@ We can also investigate the effect of visuallinguistic pretraining by comparing 
 
 <!-- image -->
 
-> Repair note, Figure 5b (PDF page 5; asset `reading-assets/Z9DNTBFF-figure-5b.png`). A number line from about -1.4 (VL-BERT more masculine) to 1.0 (VL-BERT more feminine) with unlabelled dots except for the extremes. Measured dot centres of the labelled entities: cat -1.41, jersey -1.33, scarf -1.25, whiskey -1.17, beer -1.05, scotch about -1.01, aviator 0.31, cigar 0.63. All unlabelled dots lie between about -0.9 and just below 0.0, so aviator and cigar are the only entities with a positive difference. Positions are readings of the plot, not values reported by the authors.
+> Repair note, Figure 5b (PDF page 5; asset `reading-assets/Z9DNTBFF-figure-5b.png`). A number line ticked from -1.0 to 1.0, with axis arrows reaching about -1.5 (VL-BERT more masculine) and 1.5 (VL-BERT more feminine); dots are unlabelled except for the extremes. Measured dot centres of the labelled entities: cat -1.41, jersey -1.33, scarf -1.25, whiskey -1.17, beer -1.05, scotch about -1.01, aviator 0.63, cigar 0.90. The unlabelled dots range from about -0.89 to about 0.31. Five of them lie above zero, at about 0.09, 0.11, 0.27, 0.27 and 0.31, where the two dots at about 0.27 overlap. Positions are readings of the plot, not values reported by the authors.
 
 Figure 5
 

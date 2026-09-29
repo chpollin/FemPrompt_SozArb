@@ -9,7 +9,7 @@
   "original_markdown_path": "corpus/source-acquisition/completion-20260921/Z9DNTBFF.identity-bound.md",
   "original_markdown_sha256": "sha256:729606223c6f936d78f837d285ae84f5d18f010b62af7dfa793cce64119fd3c0",
   "repaired_markdown_path": "corpus/source-acquisition/completion-20260921/Z9DNTBFF-reading.md",
-  "repaired_markdown_sha256": "sha256:2c894a137e3318bef2866b38c8d25f7660585706530bbfd4102081a579f003ae",
+  "repaired_markdown_sha256": "sha256:588046a149fe3426fdf07d03c77097a212b60da2578e5747ad8b9e8c08b4f910",
   "pdf_path": "generated/pdfs/completion-20260921/oa-batch/Z9DNTBFF.pdf",
   "pdf_sha256": "sha256:cc714d9d7f9ecdcbc39667b9a2cc6b9a23096f4f30896db54d8a63c9f765236e",
   "conversion_qc_basis": "generated/source-acquisition/completion-20260921/conversion-qc/oa-review/conversion-qc.json",
@@ -93,5 +93,53 @@
     "Figure 5a carries 39 legible labels while the caption names 40 entities.",
     "Figure 2 draws arrows; the paper does not state whether shaft end or tip marks the score, so both are recorded."
   ],
-  "result": "repaired_pending_independent_review"
+  "result": "repaired_pending_independent_review",
+  "correction_events": [
+    {
+      "corrected_at": "2026-09-29T15:30:00+00:00",
+      "producer": {
+        "agent_id": "claude-code/source-repair-correction",
+        "model": "claude-opus-5-5"
+      },
+      "basis_conversion_qc": "generated/source-acquisition/completion-20260921/conversion-qc/z9-reading/conversion-qc.json",
+      "basis_conversion_qc_sha256": "sha256:c596d683dd3be456d6139fd9edf6ca08b11b79c3110cc34c158a71ebb2b4f14e",
+      "previous_markdown_sha256": "sha256:2c894a137e3318bef2866b38c8d25f7660585706530bbfd4102081a579f003ae",
+      "corrected_markdown_sha256": "sha256:588046a149fe3426fdf07d03c77097a212b60da2578e5747ad8b9e8c08b4f910",
+      "pdf_sha256_rechecked": "sha256:cc714d9d7f9ecdcbc39667b9a2cc6b9a23096f4f30896db54d8a63c9f765236e",
+      "method": [
+        "Recomputed the PDF and asset hashes before measuring; both match the manifests.",
+        "Figure 5b: located the four-pixel x-axis ticks on the asset raster at x 412-415, 784-787, 1156-1159, 1528-1531 and 1900-1903 (744 pixels per unit, 0.00134 units per pixel) and the axis line from x 41 to 2274; detected blue dot runs along the axis row and separated overlapping runs by run width against the 23-pixel dot diameter and by flat top-edge profiles.",
+        "Figure 3: located the y-axis ticks at rows 51, 261, 471, 681 and 891 (210 pixels per 0.5, 0.0024 units per pixel) and the plot frame down to row 1017.",
+        "Figure 5a: remeasured the jersey dot on the asset raster (run x 371-399, centre -1.863) and the steak dot, whose right edge is cut by the -0.5 tick (centre about -0.53 to -0.54).",
+        "Figure 1: rendered PDF page 1 at 500 dpi and inspected the bottom-row photograph and bars."
+      ],
+      "changes": [
+        {
+          "location": "Repair note, Figure 5b",
+          "change": "aviator 0.31 -> 0.63 (dot centre x 1626), cigar 0.63 -> 0.90 (x 1824)."
+        },
+        {
+          "location": "Repair note, Figure 5b",
+          "change": "Replaced the false statement that all unlabelled dots lie between about -0.9 and just below 0.0 with the measured range from about -0.89 (x 493) to about 0.31 (x 1389) and the five unlabelled dots above zero at about 0.09, 0.11, 0.27, 0.27 and 0.31."
+        },
+        {
+          "location": "Repair note, Figure 5b",
+          "change": "Axis described as ticked from -1.0 to 1.0 with arrows to about -1.5 and 1.5 instead of running from about -1.4 to 1.0."
+        },
+        {
+          "location": "Repair note, Figure 3",
+          "change": "Resolution about 0.005 -> about 0.0024 score units per pixel; axis described as ticked from -1.0 to 1.0 with the frame reaching down to about -1.3 instead of from about -1.2 (adopted non-blocking observation)."
+        },
+        {
+          "location": "Repair note, Figure 1",
+          "change": "Bottom-row bag described as a brown checked handbag instead of a brown patterned travel bag."
+        },
+        {
+          "location": "Repair note, Figure 5a table",
+          "change": "jersey -1.87 -> -1.86 (adopted non-blocking observation). steak kept at -0.54, since the measured -0.53 to -0.54 lies within the stated uncertainty."
+        }
+      ],
+      "authority": "Correction of the reading copy only. It records no conversion-QC acceptance; the copy awaits a new independent conversion QC."
+    }
+  ]
 }
