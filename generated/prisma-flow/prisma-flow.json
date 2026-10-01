@@ -1,0 +1,767 @@
+{
+  "schema": "femprompt-prisma-flow/0.1",
+  "generator": "src/replay/prisma_flow.py",
+  "identity_rule": "Records are the same find when they share a normalised DOI, an arXiv id or a normalised title (transitively). Sources are processed in execution order; a find is a duplicate of an earlier source when it matches a record an earlier source transferred or a library item added before the source started.",
+  "inputs": {
+    "assessment/human_assessment.csv": "sha256:fa07a6af582c2c66a3a62bca4d2eb729a1850625adb1405553585b8a029bc00b",
+    "assessment/llm_assessment_10k.csv": "sha256:c795f2a61d92ab9cee01f12ee290a751ee8cf5dc3aa0d4d10a310bd375e053f5",
+    "assessment/papers_full.csv": "sha256:8ddd79403f7cd40aea15e02dedfcdc0aa85c1b5bcf7bd24f7f0b4e365c986e1f",
+    "corpus/deep-research/Claude.ris": "sha256:aa72a8ce5000aac43b81bb57a516ea18be28d4aac21fa7d8ef6e0ac83d49091d",
+    "corpus/deep-research/Gemini.ris": "sha256:bc714d616a077defe1d04b6a7bf5b9f32ecfe649e1f581df35fc2ea148ccc6e6",
+    "corpus/deep-research/OpenAI.ris": "sha256:8b2a1655c4187f30cd021dbc75ba1da8389f709ae0476df9da0165167744997d",
+    "corpus/deep-research/Perplexity.ris": "sha256:2dcc24b8efe6594b83bd6156a8011a2635f5bfd0630b8cc70dffde6287c685da",
+    "corpus/deep-research/round2/ChatGPT_deep-research.ris": "sha256:d8da56534b9afbb242960762f4cad55dac9200c35e82406dfb99dd32a06feb2a",
+    "corpus/deep-research/round2/ClaudeCode_deep-research.ris": "sha256:1ec14b3c044c07e273e2bfdc91e913be861c5fabaa721c7f3b40ed03c0091d6d",
+    "corpus/deep-research/round2/Claude_deep-research.ris": "sha256:5beef9dbee82e03f7fd1bb83d6d6b442ad0d08cea3272aeed7a949b7404e788f",
+    "corpus/deep-research/round2/Codex Websearch/codex-websearch-2026-package.json": "sha256:f36b3c0eb573589dea2cb3c2c3a12d5d8d3388b40bba10e4c6ce90818cfd3d19",
+    "corpus/deep-research/round2/Codex Websearch/raw/lane-a-social-work-2026.json": "sha256:89d83142aaa30f8682caaeb7c60343943723e3644077b8016bbbcdb9ba18dbe1",
+    "corpus/deep-research/round2/Codex Websearch/raw/lane-b-gender-intersectionality-2026.json": "sha256:f13d2ced01a6b9ab2c45fbd423fe4cf062c90b3174d5bbda062a3fa160d24bdb",
+    "corpus/deep-research/round2/Codex Websearch/raw/lane-c-prompt-bias-2026.json": "sha256:d9f297b85514709bac473c6bf59108b72e90605e94d408b303e4e4d9d9f69e21",
+    "corpus/deep-research/round2/Gemini_deep-research.ris": "sha256:43a63eef712022bda4437b034bc31df0abf46dc77a4fb8055875461c8e2dbb3c",
+    "corpus/deep-research/round2/contextual-update-2026-08-24/lane-a-social-work.json": "sha256:568d9c05ff3e0171ccbfadb5d54144e4b6853dcfceba89b8cd2a96b71c09a15c",
+    "corpus/deep-research/round2/contextual-update-2026-08-24/lane-b-feminist-social-work.json": "sha256:382f1facb1e9ceda8c42de6678dc249f978e10d58b580ee5df08705f07ff313f",
+    "corpus/deep-research/round2/contextual-update-2026-08-24/lane-c-prompt-bias.json": "sha256:a05971cb18749bb74ab7156c94e0ea65694fea6302d4078b80a410bf7eaa5732",
+    "corpus/deep-research/round2/targeted-followup-2026-09-05.json": "sha256:0e763accb88cd32962b7f5a1f571407c961b6a2811349e8a3f840d65a81f13ea",
+    "corpus/source_tool_mapping.json": "sha256:9feb96ce613a778cf76ac43f0b5dcd302170e0a8e5d8331bf3052cd0d5737c76",
+    "corpus/zotero_export.json": "sha256:a6bddc7f5da07b5d4b6a9c67ccc861658cec4eeff317c32b075068117a551b68",
+    "corpus/zotero_sync.json": "sha256:a68c1242fa39cb279c830e374d5ec07d174dad2763e8773cbc2db6b8e07d272b",
+    "docs/data/research_vault_v2.json": "sha256:54cd3455775c905c78a6314a0c067a0b4737dfc2d437070f0f4bb7ceac5e78e0",
+    "generated/completion/completion-package.json": "sha256:b206055765629fd35241b04c3d2d3a64fc739008418322b1fb234f441a144a98",
+    "generated/contextual-update-2026-08-24-intake-package.json": "sha256:b7266d89cd632346c67d0e4f7b09a574edfd11888a61c29731785c2c05e31a48",
+    "generated/round2-intake-package.json": "sha256:b83bb42daff38d23ce3d7981797d92aabc15caf415e600c5558f03e4ef465d1a"
+  },
+  "sources": [
+    {
+      "source_id": "round1_deep_research",
+      "label": "Round 1, four deep-research systems (restored RIS) plus manual search",
+      "period": "2025-10",
+      "replay_flow_model": {
+        "identification": {
+          "source_file": "assessment/papers_full.csv",
+          "identified_records": 326,
+          "duplicates_flagged": 100,
+          "records_after_dedup": 226
+        },
+        "denominators": {
+          "note": "The benchmark meta counts the UNION of the two assessment tracks, not the corpus. Corpus (papers_full) and union differ.",
+          "corpus_papers_full": 326,
+          "union_of_tracks": 338,
+          "paired_both_tracks": 291,
+          "human_track_total": 303,
+          "llm_track_total": 326,
+          "human_only": 12,
+          "llm_only": 35
+        },
+        "screening_tracks": {
+          "human": {
+            "screened": 303,
+            "in_corpus": 291,
+            "human_only_outside_corpus": 12
+          },
+          "llm_10k": {
+            "screened": 326
+          }
+        },
+        "human_decisions": {
+          "include": 142,
+          "exclude": 161,
+          "total": 303
+        },
+        "human_exclusion_reasons": {
+          "controlled_vocabulary": {
+            "Duplicate": 67,
+            "No_full_text": 10,
+            "Not_relevant_topic": 54,
+            "Wrong_publication_type": 17
+          },
+          "out_of_vocabulary": {
+            "No relevant topic": 1,
+            "Other": 5
+          },
+          "empty_on_exclude": 7,
+          "workflow_criteria": [
+            "Duplicate",
+            "No_full_text",
+            "Wrong_publication_type"
+          ]
+        },
+        "llm_decisions": {
+          "include": 232,
+          "exclude": 94,
+          "total": 326
+        },
+        "included_per_track": {
+          "human": 142,
+          "llm_10k": 232
+        },
+        "human_assessment_flag_check": {
+          "status": "consistent",
+          "has_ha_yes_count": 291,
+          "human_decisions_on_corpus": 291,
+          "missing_flags": [],
+          "extra_flags": []
+        }
+      },
+      "identification": {
+        "records_identified_library": 326,
+        "per_system_zotero_collection_records": {
+          "ChatGPT": 6,
+          "Claude": 15,
+          "Gemini": 3,
+          "Perplexity": 10
+        },
+        "per_system_restored_ris": {
+          "R1-ChatGPT": {
+            "restored_ris_records": 6,
+            "distinct_finds": 6
+          },
+          "R1-Claude": {
+            "restored_ris_records": 15,
+            "distinct_finds": 15
+          },
+          "R1-Gemini": {
+            "restored_ris_records": 3,
+            "distinct_finds": 3
+          },
+          "R1-Perplexity": {
+            "restored_ris_records": 10,
+            "distinct_finds": 10
+          }
+        },
+        "restored_ris_records_total": 34,
+        "restored_ris_distinct_finds": 32,
+        "restored_ris_duplicates_within_or_across_systems": 2,
+        "records_without_system_attribution": {
+          "no_collection": 30,
+          "thematic_collection_without_system_attribution": 262
+        },
+        "attribution_note": "Only records of the four per-system Zotero collections and the restored RIS files carry a system. The remaining library records sit in thematic collections or none; whether they came from a deep-research system or the manual search is not recorded in the committed data.",
+        "later_round1_era_records_outside_papers_full": 14,
+        "later_round1_era_records_with_expert_decision": 11
+      },
+      "deduplication": {
+        "duplicates_flagged_in_library": 100,
+        "records_after_flagged_duplicates": 226,
+        "expert_exclusions_as_duplicate": 67,
+        "actor": "Zotero curation flag and expert screening decision, reported separately"
+      },
+      "screening": {
+        "actor": "consolidated expert assessment (Excel workflow)",
+        "records_screened": 303,
+        "records_screened_in_library": 291,
+        "records_screened_outside_papers_full": 12,
+        "records_excluded": 161,
+        "exclusion_reasons": {
+          "Duplicate": 67,
+          "No relevant topic": 1,
+          "No_full_text": 10,
+          "Not_relevant_topic": 54,
+          "Other": 5,
+          "Wrong_publication_type": 17
+        },
+        "exclusions_without_reason": 7,
+        "reports_not_retrieved": 10,
+        "included": 142,
+        "llm_track_advisory": {
+          "include": 232,
+          "exclude": 94,
+          "total": 326
+        },
+        "library_records_without_expert_decision": 35
+      }
+    },
+    {
+      "source_id": "round2_deep_research",
+      "round": "round2",
+      "label": "Round 2, deep-research lanes L1 to L3 and L5 (L4 Perplexity dropped)",
+      "start_date": "2026-07-17",
+      "lanes": {
+        "L1": {
+          "system": "ChatGPT",
+          "path": "corpus/deep-research/round2/ChatGPT_deep-research.ris",
+          "records_identified": 5,
+          "records_by_lane_status": {
+            "transferred": 5
+          },
+          "duplicates_within_lane": 0
+        },
+        "L2": {
+          "system": "Claude",
+          "path": "corpus/deep-research/round2/Claude_deep-research.ris",
+          "records_identified": 8,
+          "records_by_lane_status": {
+            "transferred": 8
+          },
+          "duplicates_within_lane": 0
+        },
+        "L3": {
+          "system": "Gemini",
+          "path": "corpus/deep-research/round2/Gemini_deep-research.ris",
+          "records_identified": 8,
+          "records_by_lane_status": {
+            "transferred": 8
+          },
+          "duplicates_within_lane": 0
+        },
+        "L5": {
+          "system": "Claude Code",
+          "path": "corpus/deep-research/round2/ClaudeCode_deep-research.ris",
+          "records_identified": 8,
+          "records_by_lane_status": {
+            "transferred": 8
+          },
+          "duplicates_within_lane": 0
+        }
+      },
+      "records_identified": 29,
+      "duplicates_within_lanes": 0,
+      "duplicates_across_lanes": 5,
+      "distinct_finds": 24,
+      "duplicates_of_earlier_sources": 1,
+      "marked_ineligible_by_ai_agent": 0,
+      "transferred_new_finds": 23,
+      "selected_finds_any_status": 24,
+      "selected_finds_matching_any_earlier_record": 1,
+      "outcome_of_transferred_finds": {
+        "expert_include": 0,
+        "expert_exclude": 0,
+        "expert_unresolved": 0,
+        "ai_review_include_pending_verification": 0,
+        "ai_review_exclude_pending_verification": 0,
+        "open_fulltext_ready": 1,
+        "open_fulltext_not_retrieved": 22,
+        "open_not_queued": 0,
+        "not_in_library": 0
+      }
+    },
+    {
+      "source_id": "contextual_update_2026_08_24",
+      "round": "round2_supplement",
+      "label": "Contextual update 2026-08-24, three Codex subagent lanes, Tier A transferred",
+      "start_date": "2026-08-24",
+      "lanes": {
+        "CU-A": {
+          "system": "Codex contextual",
+          "path": "corpus/deep-research/round2/contextual-update-2026-08-24/lane-a-social-work.json",
+          "records_identified": 29,
+          "records_by_lane_status": {
+            "excluded_by_ai_agent": 5,
+            "tier_b": 17,
+            "transferred": 7
+          },
+          "duplicates_within_lane": 0,
+          "aggregate_exclusion_entries_not_counted": 1
+        },
+        "CU-B": {
+          "system": "Codex contextual",
+          "path": "corpus/deep-research/round2/contextual-update-2026-08-24/lane-b-feminist-social-work.json",
+          "records_identified": 22,
+          "records_by_lane_status": {
+            "excluded_by_ai_agent": 7,
+            "tier_b": 7,
+            "transferred": 8
+          },
+          "duplicates_within_lane": 0
+        },
+        "CU-C": {
+          "system": "Codex contextual",
+          "path": "corpus/deep-research/round2/contextual-update-2026-08-24/lane-c-prompt-bias.json",
+          "records_identified": 34,
+          "records_by_lane_status": {
+            "excluded_by_ai_agent": 16,
+            "tier_b": 10,
+            "transferred": 8
+          },
+          "duplicates_within_lane": 0,
+          "aggregate_exclusion_entries_not_counted": 1
+        }
+      },
+      "records_identified": 85,
+      "duplicates_within_lanes": 0,
+      "duplicates_across_lanes": 6,
+      "distinct_finds": 79,
+      "duplicates_of_earlier_sources": 5,
+      "marked_ineligible_by_ai_agent": 52,
+      "transferred_new_finds": 22,
+      "selected_finds_any_status": 23,
+      "selected_finds_matching_any_earlier_record": 1,
+      "outcome_of_transferred_finds": {
+        "expert_include": 0,
+        "expert_exclude": 0,
+        "expert_unresolved": 0,
+        "ai_review_include_pending_verification": 0,
+        "ai_review_exclude_pending_verification": 0,
+        "open_fulltext_ready": 8,
+        "open_fulltext_not_retrieved": 14,
+        "open_not_queued": 0,
+        "not_in_library": 0
+      }
+    },
+    {
+      "source_id": "codex_websearch_2026",
+      "round": "round2_supplement",
+      "label": "Codex Websearch 2026, three lanes, 2026 Versions only, Tier A transferred",
+      "start_date": "2026-08-24",
+      "lanes": {
+        "CW-A": {
+          "system": "Codex Websearch",
+          "path": "corpus/deep-research/round2/Codex Websearch/raw/lane-a-social-work-2026.json",
+          "records_identified": 51,
+          "records_by_lane_status": {
+            "excluded_by_ai_agent": 16,
+            "tier_b": 12,
+            "transferred": 23
+          },
+          "duplicates_within_lane": 0,
+          "aggregate_exclusion_entries_not_counted": 1
+        },
+        "CW-B": {
+          "system": "Codex Websearch",
+          "path": "corpus/deep-research/round2/Codex Websearch/raw/lane-b-gender-intersectionality-2026.json",
+          "records_identified": 56,
+          "records_by_lane_status": {
+            "excluded_by_ai_agent": 17,
+            "tier_b": 6,
+            "transferred": 33
+          },
+          "duplicates_within_lane": 0
+        },
+        "CW-C": {
+          "system": "Codex Websearch",
+          "path": "corpus/deep-research/round2/Codex Websearch/raw/lane-c-prompt-bias-2026.json",
+          "records_identified": 41,
+          "records_by_lane_status": {
+            "excluded_by_ai_agent": 12,
+            "tier_b": 16,
+            "transferred": 13
+          },
+          "duplicates_within_lane": 0
+        }
+      },
+      "records_identified": 148,
+      "duplicates_within_lanes": 0,
+      "duplicates_across_lanes": 19,
+      "distinct_finds": 129,
+      "duplicates_of_earlier_sources": 19,
+      "marked_ineligible_by_ai_agent": 66,
+      "transferred_new_finds": 44,
+      "selected_finds_any_status": 58,
+      "selected_finds_matching_any_earlier_record": 27,
+      "outcome_of_transferred_finds": {
+        "expert_include": 0,
+        "expert_exclude": 0,
+        "expert_unresolved": 0,
+        "ai_review_include_pending_verification": 0,
+        "ai_review_exclude_pending_verification": 0,
+        "open_fulltext_ready": 13,
+        "open_fulltext_not_retrieved": 31,
+        "open_not_queued": 0,
+        "not_in_library": 0
+      }
+    },
+    {
+      "source_id": "targeted_followup_2026_09_05",
+      "round": "round2_supplement",
+      "label": "Targeted gap follow-up 2026-09-05",
+      "start_date": "2026-09-05",
+      "lanes": {
+        "TF": {
+          "system": "Targeted follow-up",
+          "path": "corpus/deep-research/round2/targeted-followup-2026-09-05.json",
+          "records_identified": 3,
+          "records_by_lane_status": {
+            "transferred": 3
+          },
+          "duplicates_within_lane": 0
+        }
+      },
+      "records_identified": 3,
+      "duplicates_within_lanes": 0,
+      "duplicates_across_lanes": 0,
+      "distinct_finds": 3,
+      "duplicates_of_earlier_sources": 0,
+      "marked_ineligible_by_ai_agent": 0,
+      "transferred_new_finds": 3,
+      "selected_finds_any_status": 3,
+      "selected_finds_matching_any_earlier_record": 0,
+      "outcome_of_transferred_finds": {
+        "expert_include": 0,
+        "expert_exclude": 0,
+        "expert_unresolved": 0,
+        "ai_review_include_pending_verification": 0,
+        "ai_review_exclude_pending_verification": 0,
+        "open_fulltext_ready": 2,
+        "open_fulltext_not_retrieved": 1,
+        "open_not_queued": 0,
+        "not_in_library": 0
+      }
+    }
+  ],
+  "multiple_finds": {
+    "rule": "Same find when records share a normalised DOI, an arXiv id or a normalised title, transitively.",
+    "round1_systems": {
+      "systems": [
+        "R1-ChatGPT",
+        "R1-Claude",
+        "R1-Gemini",
+        "R1-Perplexity"
+      ],
+      "matrix": {
+        "R1-ChatGPT": {
+          "R1-ChatGPT": 6,
+          "R1-Claude": 0,
+          "R1-Gemini": 0,
+          "R1-Perplexity": 1
+        },
+        "R1-Claude": {
+          "R1-ChatGPT": 0,
+          "R1-Claude": 15,
+          "R1-Gemini": 0,
+          "R1-Perplexity": 1
+        },
+        "R1-Gemini": {
+          "R1-ChatGPT": 0,
+          "R1-Claude": 0,
+          "R1-Gemini": 3,
+          "R1-Perplexity": 0
+        },
+        "R1-Perplexity": {
+          "R1-ChatGPT": 1,
+          "R1-Claude": 1,
+          "R1-Gemini": 0,
+          "R1-Perplexity": 10
+        }
+      },
+      "distinct_finds": 32,
+      "finds_by_number_of_systems": {
+        "1": 30,
+        "2": 2
+      },
+      "finds_by_two_or_more_systems": 2
+    },
+    "round2_systems": {
+      "systems": [
+        "L1",
+        "L2",
+        "L3",
+        "L5"
+      ],
+      "matrix": {
+        "L1": {
+          "L1": 5,
+          "L2": 1,
+          "L3": 0,
+          "L5": 0
+        },
+        "L2": {
+          "L1": 1,
+          "L2": 8,
+          "L3": 1,
+          "L5": 3
+        },
+        "L3": {
+          "L1": 0,
+          "L2": 1,
+          "L3": 8,
+          "L5": 1
+        },
+        "L5": {
+          "L1": 0,
+          "L2": 3,
+          "L3": 1,
+          "L5": 8
+        }
+      },
+      "distinct_finds": 24,
+      "finds_by_number_of_systems": {
+        "1": 20,
+        "2": 3,
+        "3": 1
+      },
+      "finds_by_two_or_more_systems": 4
+    },
+    "deep_research_products_pooled": {
+      "systems": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Perplexity",
+        "Claude Code"
+      ],
+      "matrix": {
+        "ChatGPT": {
+          "ChatGPT": 11,
+          "Claude": 1,
+          "Gemini": 0,
+          "Perplexity": 1,
+          "Claude Code": 0
+        },
+        "Claude": {
+          "ChatGPT": 1,
+          "Claude": 23,
+          "Gemini": 1,
+          "Perplexity": 1,
+          "Claude Code": 3
+        },
+        "Gemini": {
+          "ChatGPT": 0,
+          "Claude": 1,
+          "Gemini": 11,
+          "Perplexity": 0,
+          "Claude Code": 1
+        },
+        "Perplexity": {
+          "ChatGPT": 1,
+          "Claude": 1,
+          "Gemini": 0,
+          "Perplexity": 10,
+          "Claude Code": 0
+        },
+        "Claude Code": {
+          "ChatGPT": 0,
+          "Claude": 3,
+          "Gemini": 1,
+          "Perplexity": 0,
+          "Claude Code": 8
+        }
+      },
+      "distinct_finds": 56,
+      "finds_by_number_of_systems": {
+        "1": 50,
+        "2": 5,
+        "3": 1
+      },
+      "finds_by_two_or_more_systems": 6
+    },
+    "all_identification_systems": {
+      "systems": [
+        "R1 ChatGPT",
+        "R1 Claude",
+        "R1 Gemini",
+        "R1 Perplexity",
+        "R2 ChatGPT",
+        "R2 Claude",
+        "R2 Gemini",
+        "R2 Claude Code",
+        "Codex contextual",
+        "Codex Websearch",
+        "Targeted follow-up"
+      ],
+      "matrix": {
+        "R1 ChatGPT": {
+          "R1 ChatGPT": 6,
+          "R1 Claude": 0,
+          "R1 Gemini": 0,
+          "R1 Perplexity": 1,
+          "R2 ChatGPT": 0,
+          "R2 Claude": 0,
+          "R2 Gemini": 0,
+          "R2 Claude Code": 0,
+          "Codex contextual": 0,
+          "Codex Websearch": 0,
+          "Targeted follow-up": 0
+        },
+        "R1 Claude": {
+          "R1 ChatGPT": 0,
+          "R1 Claude": 15,
+          "R1 Gemini": 0,
+          "R1 Perplexity": 1,
+          "R2 ChatGPT": 0,
+          "R2 Claude": 0,
+          "R2 Gemini": 0,
+          "R2 Claude Code": 0,
+          "Codex contextual": 0,
+          "Codex Websearch": 0,
+          "Targeted follow-up": 0
+        },
+        "R1 Gemini": {
+          "R1 ChatGPT": 0,
+          "R1 Claude": 0,
+          "R1 Gemini": 3,
+          "R1 Perplexity": 0,
+          "R2 ChatGPT": 0,
+          "R2 Claude": 0,
+          "R2 Gemini": 0,
+          "R2 Claude Code": 0,
+          "Codex contextual": 0,
+          "Codex Websearch": 0,
+          "Targeted follow-up": 0
+        },
+        "R1 Perplexity": {
+          "R1 ChatGPT": 1,
+          "R1 Claude": 1,
+          "R1 Gemini": 0,
+          "R1 Perplexity": 10,
+          "R2 ChatGPT": 0,
+          "R2 Claude": 0,
+          "R2 Gemini": 0,
+          "R2 Claude Code": 0,
+          "Codex contextual": 0,
+          "Codex Websearch": 0,
+          "Targeted follow-up": 0
+        },
+        "R2 ChatGPT": {
+          "R1 ChatGPT": 0,
+          "R1 Claude": 0,
+          "R1 Gemini": 0,
+          "R1 Perplexity": 0,
+          "R2 ChatGPT": 5,
+          "R2 Claude": 1,
+          "R2 Gemini": 0,
+          "R2 Claude Code": 0,
+          "Codex contextual": 0,
+          "Codex Websearch": 1,
+          "Targeted follow-up": 0
+        },
+        "R2 Claude": {
+          "R1 ChatGPT": 0,
+          "R1 Claude": 0,
+          "R1 Gemini": 0,
+          "R1 Perplexity": 0,
+          "R2 ChatGPT": 1,
+          "R2 Claude": 8,
+          "R2 Gemini": 1,
+          "R2 Claude Code": 3,
+          "Codex contextual": 0,
+          "Codex Websearch": 0,
+          "Targeted follow-up": 0
+        },
+        "R2 Gemini": {
+          "R1 ChatGPT": 0,
+          "R1 Claude": 0,
+          "R1 Gemini": 0,
+          "R1 Perplexity": 0,
+          "R2 ChatGPT": 0,
+          "R2 Claude": 1,
+          "R2 Gemini": 8,
+          "R2 Claude Code": 1,
+          "Codex contextual": 0,
+          "Codex Websearch": 0,
+          "Targeted follow-up": 0
+        },
+        "R2 Claude Code": {
+          "R1 ChatGPT": 0,
+          "R1 Claude": 0,
+          "R1 Gemini": 0,
+          "R1 Perplexity": 0,
+          "R2 ChatGPT": 0,
+          "R2 Claude": 3,
+          "R2 Gemini": 1,
+          "R2 Claude Code": 8,
+          "Codex contextual": 0,
+          "Codex Websearch": 0,
+          "Targeted follow-up": 0
+        },
+        "Codex contextual": {
+          "R1 ChatGPT": 0,
+          "R1 Claude": 0,
+          "R1 Gemini": 0,
+          "R1 Perplexity": 0,
+          "R2 ChatGPT": 0,
+          "R2 Claude": 0,
+          "R2 Gemini": 0,
+          "R2 Claude Code": 0,
+          "Codex contextual": 79,
+          "Codex Websearch": 40,
+          "Targeted follow-up": 0
+        },
+        "Codex Websearch": {
+          "R1 ChatGPT": 0,
+          "R1 Claude": 0,
+          "R1 Gemini": 0,
+          "R1 Perplexity": 0,
+          "R2 ChatGPT": 1,
+          "R2 Claude": 0,
+          "R2 Gemini": 0,
+          "R2 Claude Code": 0,
+          "Codex contextual": 40,
+          "Codex Websearch": 126,
+          "Targeted follow-up": 0
+        },
+        "Targeted follow-up": {
+          "R1 ChatGPT": 0,
+          "R1 Claude": 0,
+          "R1 Gemini": 0,
+          "R1 Perplexity": 0,
+          "R2 ChatGPT": 0,
+          "R2 Claude": 0,
+          "R2 Gemini": 0,
+          "R2 Claude Code": 0,
+          "Codex contextual": 0,
+          "Codex Websearch": 0,
+          "Targeted follow-up": 3
+        }
+      },
+      "distinct_finds": 223,
+      "finds_by_number_of_systems": {
+        "1": 176,
+        "2": 46,
+        "3": 1
+      },
+      "finds_by_two_or_more_systems": 47
+    }
+  },
+  "current_state": {
+    "records": {
+      "library_records": 463,
+      "with_consolidated_expert_decision": 302,
+      "open": 161,
+      "open_by_origin": {
+        "historical_record_without_live_library_item": 34,
+        "live_reimport_of_historical_record": 27,
+        "round1_era_addition_without_expert_decision": 3,
+        "round1_library_record_without_expert_decision": 1,
+        "round2_identification_import": 96
+      },
+      "open_round2_imports_by_import_source": {
+        "corpus/deep-research/round2/ClaudeCode_deep-research.ris": 1,
+        "corpus/deep-research/round2/Codex Websearch/codex-websearch-2026-zotero-import.ris": 57,
+        "corpus/deep-research/round2/targeted-followup-2026-09-05.ris": 3,
+        "generated/contextual-update-2026-08-24-zotero-import.ris": 10,
+        "generated/round2-zotero-import.ris": 4,
+        "lane collection import 2026-07-17": 21
+      },
+      "note": "Historical records without a live item and their live re-imports describe the same publication twice at record level. The Work level counts each publication once."
+    },
+    "works": {
+      "works": 361,
+      "by_decision_authority": {
+        "ai_review:Exclude": 8,
+        "ai_review:Include": 16,
+        "legacy_human:Exclude": 90,
+        "legacy_human:Include": 138,
+        "legacy_human:None": 1,
+        "unassessed:None": 108
+      },
+      "by_outcome": {
+        "expert_include": 138,
+        "expert_exclude": 90,
+        "expert_unresolved": 1,
+        "ai_review_include_pending_verification": 16,
+        "ai_review_exclude_pending_verification": 8,
+        "open_fulltext_ready": 25,
+        "open_fulltext_not_retrieved": 76,
+        "open_not_queued": 7
+      }
+    },
+    "fulltext_availability_records": {
+      "fulltext_ready": 14,
+      "identity_unresolved": 67,
+      "linked": 269,
+      "source_missing": 113
+    }
+  },
+  "package_crosscheck": {
+    "round2_intake_package": {
+      "candidates": 24
+    },
+    "contextual_intake_package": {
+      "selected_records": 23
+    },
+    "codex_websearch_package": {
+      "lane_tier_a_rows": 69,
+      "distinct_tier_a_candidates": 58,
+      "previously_identified": 27
+    }
+  }
+}

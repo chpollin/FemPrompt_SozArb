@@ -152,9 +152,32 @@ Three further named gaps attach to the corpus instead of a checklist item and th
 
 Applicability is justified per sub-item. The absence of a meta-analysis does not exempt items 13a–d and 20a in particular, since a qualitative synthesis also has to disclose its study assignment, data preparation, tables, summary method and contributing studies. Items 13e–f and 20c–d stay `partial` until the consolidated presentation of methods and results exists. Qualitative variation is relevant, while no sensitivity analysis of the synthesis is documented so far. An analysis that was not carried out has to be named explicitly and cannot be filed as not applicable merely because there is no meta-analysis. The map marks the effect-measure, statistical-synthesis, per-study risk-of-bias and certainty procedures that are not planned separately. Their absence remains a possible methodological limitation and implies no quality assessment of the studies. The basis is the official expanded PRISMA 2020 checklist.
 
+## Identification and selection reporting
+
+PRISMA 2020 conformance for identification and selection rests on `generated/prisma-flow/`, produced by `src/replay/prisma_flow.py` as described in [[methods#PRISMA flow per identification source]]. It reports per source, lane and round the records identified, duplicates removed within lanes, across lanes and against earlier rounds, records marked ineligible by an AI agent, transferred records, the reports without a retrieved full text and the current decision state. Its round-one counts equal the canonical replay. This supplies the count-bearing content of PRISMA 2020 items 16a and 16b and of the flow diagram for both rounds.
+
+The declared deviation concerns PRISMA 2020 items 6 and 7 (information sources and search strategy) and the PRISMA-S items on database searching. Identification used AI-assisted deep research and agent web searches instead of bibliographic databases, supplemented in round one by a limited manual search. The report names each system, its execution date and its prompt or protocol, and treats the deep-research systems as "other methods" in the PRISMA 2020 flow template for new reviews. A search strategy in the sense of item 7 exists only as a natural-language prompt, which a deep-research system turns into searches that it does not disclose, so the searches themselves are not reproducible. The deviation is a property of the method and is reported as such.
+
+PRISMA-trAIce items bearing on identification and selection:
+
+- M2 tool identity. Products are named per lane. Model versions are missing for round one and for the round-two lanes L1 to L3, and the Codex runs record that the runtime did not expose a model identifier.
+- M3 stage and task. Identification by deep research, Tier assignment by Codex agent lanes, deduplication by a deterministic rule and screening are separate activities in the flow.
+- M6 prompts. The round-two prompt, the Gemini conversion prompt and the Codex lane protocols are committed. The instantiated round-one prompt is lost.
+- R1 flow diagram with AI and human split. The flow attributes Tier B and agent exclusions to the AI agent, deduplication to the deterministic rule, the round-one decisions to the consolidated expert assessment, and current round-two decisions to AI review pending domain-expert verification.
+
+Known gaps of the identification record:
+
+1. The executed round-one prompts are lost. Only the parametric template was restored from Git history.
+2. The round-one conversion of system outputs to RIS is documented but not reproducible.
+3. Most round-one records carry no recoverable system attribution, so per-system round-one counts are lower bounds and the round-one multiple-finds matrix covers only the restored RIS.
+4. The round-two run record `corpus/deep-research/round2/LAUFPROTOKOLL.md` holds fields the operator still has to fill. These are the end date of the declared execution window, the answer "Prompt unverändert eingefügt: ja/nein je Lane", the model version (`[Modellversion Operator]`) for L1 ChatGPT, L2 Claude and L3 Gemini, and the confirmation that the prompt was pasted unchanged (`[Operator bestätigen]`) for the same three lanes. The checklist item on the Zotero import of L5 remains unticked, although the L5 records reached the library through the September imports, so the operator should confirm or correct it.
+5. The run record states no match against round one. The recomputed flow finds one L1 record that matches a round-one library record by title, because the July check compared against the restored round-one RIS only.
+
 ## Open reporting decision on PRISMA-ScR
 
 [[analysis-methods#Mapping layer]] proposes to report the descriptive mapping layer of the literature analysis by PRISMA-ScR (Tricco et al. 2018) in addition to PRISMA 2020 and PRISMA-trAIce. The proposal follows from the mapping layer's grounding in the JBI scoping-review methodology. PRISMA-trAIce is formulated as an extension of PRISMA 2020, while its AI disclosure items describe tool use independently of the review type, so the combination would keep the recorded conformance work. The operator has not decided on the proposal. PRISMA-ScR is therefore not an applied standard of this review. The conformance map carries no PRISMA-ScR items, and the mapping table above stays limited to PRISMA 2020, PRISMA-trAIce and RAISE. An adoption would add the PRISMA-ScR items to `generated/conformance/conformance_map.yaml` and require a decision on how the scoping-review and the systematic-review reporting of the two rounds relate.
+
+Recommendation, pending the operator's decision. PRISMA-ScR fits the descriptive mapping layer and should be adopted for it, with PRISMA 2020 and PRISMA-trAIce kept for identification, selection and AI disclosure. The mapping layer charts coded fields and evidence-and-gap matrices without a risk-of-bias assessment, effect measures or certainty rating. PRISMA 2020 records these as gaps, while PRISMA-ScR treats critical appraisal as optional (its item 12) and asks for charting methods and a summary of the charted evidence that the mapping outputs already provide. The flow reporting in `generated/prisma-flow/` serves both checklists, since PRISMA-ScR item 14 asks for the same selection flow. The argument against adoption is that a second checklist invites readers to take the whole review for a scoping review, so the paper would have to state that PRISMA-ScR covers the mapping layer alone.
 
 ## Interpretation for this review
 

@@ -33,7 +33,7 @@ OUTPUTS = (
     "generated/literature-readiness.json",
     "generated/literature-readiness.csv",
 )
-OUTPUT_DIRS = ("docs/data/fulltext", "generated/completion", "build/site")
+OUTPUT_DIRS = ("docs/data/fulltext", "generated/completion", "generated/prisma-flow", "build/site")
 INPUT_GLOBS = (
     "src/**/*.py",
     "config/*.json",
@@ -217,6 +217,7 @@ def build() -> None:
         "generated/verification/ai-source-reviews.json",
     )
     _run("src.analysis.build_completion_package")
+    _run("src.replay.prisma_flow")
     _run("src.analysis.build_literature_readiness")
     _run("src.publish.build_downloads")
     _run("src.publish.build_release")

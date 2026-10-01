@@ -1,0 +1,179 @@
+scope,system_a,system_b,shared_finds
+round1_systems,R1-ChatGPT,R1-ChatGPT,6
+round1_systems,R1-ChatGPT,R1-Claude,0
+round1_systems,R1-ChatGPT,R1-Gemini,0
+round1_systems,R1-ChatGPT,R1-Perplexity,1
+round1_systems,R1-Claude,R1-ChatGPT,0
+round1_systems,R1-Claude,R1-Claude,15
+round1_systems,R1-Claude,R1-Gemini,0
+round1_systems,R1-Claude,R1-Perplexity,1
+round1_systems,R1-Gemini,R1-ChatGPT,0
+round1_systems,R1-Gemini,R1-Claude,0
+round1_systems,R1-Gemini,R1-Gemini,3
+round1_systems,R1-Gemini,R1-Perplexity,0
+round1_systems,R1-Perplexity,R1-ChatGPT,1
+round1_systems,R1-Perplexity,R1-Claude,1
+round1_systems,R1-Perplexity,R1-Gemini,0
+round1_systems,R1-Perplexity,R1-Perplexity,10
+round2_systems,L1,L1,5
+round2_systems,L1,L2,1
+round2_systems,L1,L3,0
+round2_systems,L1,L5,0
+round2_systems,L2,L1,1
+round2_systems,L2,L2,8
+round2_systems,L2,L3,1
+round2_systems,L2,L5,3
+round2_systems,L3,L1,0
+round2_systems,L3,L2,1
+round2_systems,L3,L3,8
+round2_systems,L3,L5,1
+round2_systems,L5,L1,0
+round2_systems,L5,L2,3
+round2_systems,L5,L3,1
+round2_systems,L5,L5,8
+deep_research_products_pooled,ChatGPT,ChatGPT,11
+deep_research_products_pooled,ChatGPT,Claude,1
+deep_research_products_pooled,ChatGPT,Gemini,0
+deep_research_products_pooled,ChatGPT,Perplexity,1
+deep_research_products_pooled,ChatGPT,Claude Code,0
+deep_research_products_pooled,Claude,ChatGPT,1
+deep_research_products_pooled,Claude,Claude,23
+deep_research_products_pooled,Claude,Gemini,1
+deep_research_products_pooled,Claude,Perplexity,1
+deep_research_products_pooled,Claude,Claude Code,3
+deep_research_products_pooled,Gemini,ChatGPT,0
+deep_research_products_pooled,Gemini,Claude,1
+deep_research_products_pooled,Gemini,Gemini,11
+deep_research_products_pooled,Gemini,Perplexity,0
+deep_research_products_pooled,Gemini,Claude Code,1
+deep_research_products_pooled,Perplexity,ChatGPT,1
+deep_research_products_pooled,Perplexity,Claude,1
+deep_research_products_pooled,Perplexity,Gemini,0
+deep_research_products_pooled,Perplexity,Perplexity,10
+deep_research_products_pooled,Perplexity,Claude Code,0
+deep_research_products_pooled,Claude Code,ChatGPT,0
+deep_research_products_pooled,Claude Code,Claude,3
+deep_research_products_pooled,Claude Code,Gemini,1
+deep_research_products_pooled,Claude Code,Perplexity,0
+deep_research_products_pooled,Claude Code,Claude Code,8
+all_identification_systems,R1 ChatGPT,R1 ChatGPT,6
+all_identification_systems,R1 ChatGPT,R1 Claude,0
+all_identification_systems,R1 ChatGPT,R1 Gemini,0
+all_identification_systems,R1 ChatGPT,R1 Perplexity,1
+all_identification_systems,R1 ChatGPT,R2 ChatGPT,0
+all_identification_systems,R1 ChatGPT,R2 Claude,0
+all_identification_systems,R1 ChatGPT,R2 Gemini,0
+all_identification_systems,R1 ChatGPT,R2 Claude Code,0
+all_identification_systems,R1 ChatGPT,Codex contextual,0
+all_identification_systems,R1 ChatGPT,Codex Websearch,0
+all_identification_systems,R1 ChatGPT,Targeted follow-up,0
+all_identification_systems,R1 Claude,R1 ChatGPT,0
+all_identification_systems,R1 Claude,R1 Claude,15
+all_identification_systems,R1 Claude,R1 Gemini,0
+all_identification_systems,R1 Claude,R1 Perplexity,1
+all_identification_systems,R1 Claude,R2 ChatGPT,0
+all_identification_systems,R1 Claude,R2 Claude,0
+all_identification_systems,R1 Claude,R2 Gemini,0
+all_identification_systems,R1 Claude,R2 Claude Code,0
+all_identification_systems,R1 Claude,Codex contextual,0
+all_identification_systems,R1 Claude,Codex Websearch,0
+all_identification_systems,R1 Claude,Targeted follow-up,0
+all_identification_systems,R1 Gemini,R1 ChatGPT,0
+all_identification_systems,R1 Gemini,R1 Claude,0
+all_identification_systems,R1 Gemini,R1 Gemini,3
+all_identification_systems,R1 Gemini,R1 Perplexity,0
+all_identification_systems,R1 Gemini,R2 ChatGPT,0
+all_identification_systems,R1 Gemini,R2 Claude,0
+all_identification_systems,R1 Gemini,R2 Gemini,0
+all_identification_systems,R1 Gemini,R2 Claude Code,0
+all_identification_systems,R1 Gemini,Codex contextual,0
+all_identification_systems,R1 Gemini,Codex Websearch,0
+all_identification_systems,R1 Gemini,Targeted follow-up,0
+all_identification_systems,R1 Perplexity,R1 ChatGPT,1
+all_identification_systems,R1 Perplexity,R1 Claude,1
+all_identification_systems,R1 Perplexity,R1 Gemini,0
+all_identification_systems,R1 Perplexity,R1 Perplexity,10
+all_identification_systems,R1 Perplexity,R2 ChatGPT,0
+all_identification_systems,R1 Perplexity,R2 Claude,0
+all_identification_systems,R1 Perplexity,R2 Gemini,0
+all_identification_systems,R1 Perplexity,R2 Claude Code,0
+all_identification_systems,R1 Perplexity,Codex contextual,0
+all_identification_systems,R1 Perplexity,Codex Websearch,0
+all_identification_systems,R1 Perplexity,Targeted follow-up,0
+all_identification_systems,R2 ChatGPT,R1 ChatGPT,0
+all_identification_systems,R2 ChatGPT,R1 Claude,0
+all_identification_systems,R2 ChatGPT,R1 Gemini,0
+all_identification_systems,R2 ChatGPT,R1 Perplexity,0
+all_identification_systems,R2 ChatGPT,R2 ChatGPT,5
+all_identification_systems,R2 ChatGPT,R2 Claude,1
+all_identification_systems,R2 ChatGPT,R2 Gemini,0
+all_identification_systems,R2 ChatGPT,R2 Claude Code,0
+all_identification_systems,R2 ChatGPT,Codex contextual,0
+all_identification_systems,R2 ChatGPT,Codex Websearch,1
+all_identification_systems,R2 ChatGPT,Targeted follow-up,0
+all_identification_systems,R2 Claude,R1 ChatGPT,0
+all_identification_systems,R2 Claude,R1 Claude,0
+all_identification_systems,R2 Claude,R1 Gemini,0
+all_identification_systems,R2 Claude,R1 Perplexity,0
+all_identification_systems,R2 Claude,R2 ChatGPT,1
+all_identification_systems,R2 Claude,R2 Claude,8
+all_identification_systems,R2 Claude,R2 Gemini,1
+all_identification_systems,R2 Claude,R2 Claude Code,3
+all_identification_systems,R2 Claude,Codex contextual,0
+all_identification_systems,R2 Claude,Codex Websearch,0
+all_identification_systems,R2 Claude,Targeted follow-up,0
+all_identification_systems,R2 Gemini,R1 ChatGPT,0
+all_identification_systems,R2 Gemini,R1 Claude,0
+all_identification_systems,R2 Gemini,R1 Gemini,0
+all_identification_systems,R2 Gemini,R1 Perplexity,0
+all_identification_systems,R2 Gemini,R2 ChatGPT,0
+all_identification_systems,R2 Gemini,R2 Claude,1
+all_identification_systems,R2 Gemini,R2 Gemini,8
+all_identification_systems,R2 Gemini,R2 Claude Code,1
+all_identification_systems,R2 Gemini,Codex contextual,0
+all_identification_systems,R2 Gemini,Codex Websearch,0
+all_identification_systems,R2 Gemini,Targeted follow-up,0
+all_identification_systems,R2 Claude Code,R1 ChatGPT,0
+all_identification_systems,R2 Claude Code,R1 Claude,0
+all_identification_systems,R2 Claude Code,R1 Gemini,0
+all_identification_systems,R2 Claude Code,R1 Perplexity,0
+all_identification_systems,R2 Claude Code,R2 ChatGPT,0
+all_identification_systems,R2 Claude Code,R2 Claude,3
+all_identification_systems,R2 Claude Code,R2 Gemini,1
+all_identification_systems,R2 Claude Code,R2 Claude Code,8
+all_identification_systems,R2 Claude Code,Codex contextual,0
+all_identification_systems,R2 Claude Code,Codex Websearch,0
+all_identification_systems,R2 Claude Code,Targeted follow-up,0
+all_identification_systems,Codex contextual,R1 ChatGPT,0
+all_identification_systems,Codex contextual,R1 Claude,0
+all_identification_systems,Codex contextual,R1 Gemini,0
+all_identification_systems,Codex contextual,R1 Perplexity,0
+all_identification_systems,Codex contextual,R2 ChatGPT,0
+all_identification_systems,Codex contextual,R2 Claude,0
+all_identification_systems,Codex contextual,R2 Gemini,0
+all_identification_systems,Codex contextual,R2 Claude Code,0
+all_identification_systems,Codex contextual,Codex contextual,79
+all_identification_systems,Codex contextual,Codex Websearch,40
+all_identification_systems,Codex contextual,Targeted follow-up,0
+all_identification_systems,Codex Websearch,R1 ChatGPT,0
+all_identification_systems,Codex Websearch,R1 Claude,0
+all_identification_systems,Codex Websearch,R1 Gemini,0
+all_identification_systems,Codex Websearch,R1 Perplexity,0
+all_identification_systems,Codex Websearch,R2 ChatGPT,1
+all_identification_systems,Codex Websearch,R2 Claude,0
+all_identification_systems,Codex Websearch,R2 Gemini,0
+all_identification_systems,Codex Websearch,R2 Claude Code,0
+all_identification_systems,Codex Websearch,Codex contextual,40
+all_identification_systems,Codex Websearch,Codex Websearch,126
+all_identification_systems,Codex Websearch,Targeted follow-up,0
+all_identification_systems,Targeted follow-up,R1 ChatGPT,0
+all_identification_systems,Targeted follow-up,R1 Claude,0
+all_identification_systems,Targeted follow-up,R1 Gemini,0
+all_identification_systems,Targeted follow-up,R1 Perplexity,0
+all_identification_systems,Targeted follow-up,R2 ChatGPT,0
+all_identification_systems,Targeted follow-up,R2 Claude,0
+all_identification_systems,Targeted follow-up,R2 Gemini,0
+all_identification_systems,Targeted follow-up,R2 Claude Code,0
+all_identification_systems,Targeted follow-up,Codex contextual,0
+all_identification_systems,Targeted follow-up,Codex Websearch,0
+all_identification_systems,Targeted follow-up,Targeted follow-up,3

@@ -24,6 +24,14 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## PRISM and the epistemic infrastructure (2026)
 
+### 2026-10-01: PRISMA flow per identification source
+
+The paper promises PRISMA reporting, but only round one had a reproducible flow. `src/replay/prisma_flow.py` now derives the flow for every source and lane from the committed lane records and writes `generated/prisma-flow/` in the project build. Round one is taken from the replay itself, so the two cannot diverge. The later sources are deduplicated in execution order by DOI, arXiv identifier and normalised title, and each transferred find is followed to its current Work-level decision. Multiple-finds matrices across the deep-research systems replace the meeting's "duplicates across databases". A separately written verification script, run by an independent agent without access to the generator, produced the same counts in every compared box after one correction in the generator, which had read semicolon-separated and listed DOIs of exclusion entries as a single invalid DOI.
+
+Two findings change the record. Most round-one records carry no recoverable system attribution, so round-one per-system counts are lower bounds. The July run record reports no overlap with round one because it checked only the restored RIS, while one L1 record matches a round-one library record by title.
+
+Open. The operator fills the listed fields of the round-two run record and decides on PRISMA-ScR for the mapping layer ([[standards#Identification and selection reporting]]). The Zotero collection hierarchy may recover the round-one attribution.
+
 ### 2026-10-01: Human screening without AI pre-assessment
 
 The team decided in its meeting that the human reviewers work without any AI pre-assessment, because a visible model or agent judgement anchors their decision. PRISM therefore shows human sessions neither the LLM proposal nor the productive agent record. The subject of an edit is the own record, else the consolidated expert decision as prefill, else an empty draft, so a paper with only an agent record starts empty and counts as open, and list colours and the category filter follow only human annotations ([[specification#ADR-044 No AI pre-assessment in human sessions (supersedes the LLM reference of ADR-038, the human verification path of ADR-040 and the agent-record parts of ADR-042)]]). The agent track stays untouched as a separate track for the comparison of AI and human assessment in the methods paper. The human verification path was removed from the editing flow, while its data model and existing entries stay readable. The LLM-Wissensdestillat already opened only after the own record is saved and keeps that rule.

@@ -46,6 +46,22 @@ them. The script uses only the Python standard library.
    `llm_assessment_{haiku,haiku_kd,sonnet,sonnet_kd}.csv` against the human
    track, full and content-only, reported mechanically by kappa (plan.md V1).
 
+## PRISMA flow per identification source
+
+`prisma_flow.py` extends the replay to every identification source of both
+rounds and writes `generated/prisma-flow/` (JSON, CSV, Markdown and the
+multiple-finds matrices). It runs as a step of `npm run build`; it writes no
+timestamp, so its outputs are a deterministic function of the hashed inputs.
+
+```bash
+python -m src.replay.prisma_flow
+python -m src.replay.prisma_flow --check
+```
+
+Round one is taken from `build_flow_model` of this replay. The method and the
+identity rule are documented in `knowledge/methods.md`, section PRISMA flow per
+identification source.
+
 ## Normalization provenance
 
 `normalize_decision` is byte-for-byte from `src/assess/merge_assessments.py`.

@@ -2630,7 +2630,7 @@
     "src/publish/build_downloads.py": "b755f5e5836bb118758c6ca3b10493976390f60764d475e2551bf9da7ee063c0",
     "src/publish/build_fulltext.py": "1bf5064ee740243b09bf77a566e82932b819fd472079f7f92aa49b6e09531e8f",
     "src/publish/build_pages.py": "90c0efea55383ff0ec460e58c27c40e523453d8ed44878202f00b13e9652292c",
-    "src/publish/build_project.py": "df80b280265c0ccae77890b129e604bd7d953a25519386c401f4d3ad8d952b9a",
+    "src/publish/build_project.py": "9a5c15dadc7a2c774b82f5adf641f8e66f0cb2cfbbd0920df738158c28bebb90",
     "src/publish/build_release.py": "c117bda13f7885334136e6a59649569de61fe2e939da0a09628d5df5b9b2feb0",
     "src/publish/build_research_vault.py": "b95f466e7001419b727cfbf0806011021f91c527fb65740ee88213f3c9f9707f",
     "src/publish/build_screening_index.py": "afd580c5b4d1b9555c2660c4f1457d4a0e9e69b99602182e9bc431f26f9f774d",
@@ -2644,6 +2644,7 @@
     "src/publish/serve.py": "d47a3824d6e0341fd55e77fe77462c36b924bc234683312f611cc069ea567393",
     "src/publish/validate_research_vault.py": "d393fed73f4ccb92ac4f33a5e4491fdc0026bc88b993de2aac54a9cda3849d3c",
     "src/publish/validate_schemas.py": "094f494de5a17dece60d6c6e96b07b75cbb5ef4fb6e3b96f49fd55ed94c8d1a8",
+    "src/replay/prisma_flow.py": "e5d5381d395d5e70564d039be5f9a7da817da0c9a91b964ae324db84091f1cec",
     "src/replay/replay_round1.py": "858003f561176884e6c90b814c8e4d18e9f22f51e6cbd649fa2efeacd5e2be82",
     "src/utils.py": "6a0d15d3ffca773f382a10a6235c6ae1e07816164af39ebad474b51457481fbc",
     "tests/review-cases/agent-runs/agent-v03-10-20260822/run.json": "3be87bd277544a4b6f0a61162b3baedd8a74f5dda1dd7f2fad425ad2e7c0b669",
@@ -3036,6 +3037,10 @@
     "generated/completion/work-verification-queue.csv": "8e85de93b192ec8ada0f8ca27411a2167377302a648f0db2311f26d535e4a0ff",
     "generated/literature-readiness.csv": "47b7662e10c790d1a2fa2b62c216f2e0e9f13b9ec4b940e4855c283e43d4d4de",
     "generated/literature-readiness.json": "3d02685805887bf8491f9ff5787c0b595242550485d528040ed02b89d904826b",
+    "generated/prisma-flow/multiple-finds.csv": "98151b306d9c56202b29a6ba543849de0c0ba4aa75eec5dbf7c3977ad01d22a0",
+    "generated/prisma-flow/prisma-flow.csv": "a35bbd01d461d101d97066c6f987f7976d4cab6da81b7d09a78acf6233250562",
+    "generated/prisma-flow/prisma-flow.json": "bf322ce92c495899ee5a0e9a37bc21174ad637e24e882608b7ab5f54aca14e2b",
+    "generated/prisma-flow/prisma-flow.md": "b909fd9f6f84d214b844c26959646d6d68379b1f98fdd9635c949816a2d4143d",
     "generated/source-acquisition/codex-websearch-2026/source-readiness.json": "79faf508076894d04b86ebc049de711e1b0e559f19a5529b30f3da74ae1922f1"
   },
   "authority": "Deterministic generation only; AI source review and human verification are separate recorded activities."
