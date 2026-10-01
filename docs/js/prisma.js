@@ -4279,6 +4279,8 @@ const TEST_HOOK = {
     isReviewerId: isReviewerId, normalizedReviewerKey: normalizedReviewerKey, reviewerPath: reviewerPath,
     selectReviewer: selectReviewer, importReviewerPayload: importReviewerPayload,
     canEdit: canEdit, setEditMode: setEditMode,
+    // A governed transfer of an agent packet runs as an agent session (ADR-044 refuses agent keys to humans).
+    setRunActor: function(actor) { runActor = actor === 'agent' ? 'agent' : 'human'; },
     reviewerEnvelope: function(key) { return reviewerEnvelopes[key] ? JSON.parse(JSON.stringify(reviewerEnvelopes[key])) : null; },
     setReviewerEnvelope: function(key, payload) { reviewerEnvelopes[key] = JSON.parse(JSON.stringify(payload)); },
     validateReviewerPayload: validateReviewerPayload, save: save, saveStatus: function() { return saveStatus; },

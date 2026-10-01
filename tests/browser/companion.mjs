@@ -47,7 +47,11 @@ try {
   });
 
   const cov = landscape.meta.analysis_coverage;
-  const coded = Math.min(...Object.entries(cov.fields).filter(([key]) => key.startsWith('AN_')).map(([, f]) => f.value + f.none + f.undecidable));
+  // Fields added by a later codebook version are not collected for earlier annotations;
+  // the baseline fields decide the coded count.
+  const later = new Set(JSON.parse(readFileSync(resolve(docs, 'data', 'analysis_fields.json'))).fields
+    .filter((field) => field.introduced_in).map((field) => field.name));
+  const coded = Math.min(...Object.entries(cov.fields).filter(([key]) => key.startsWith('AN_') && !later.has(key)).map(([, f]) => f.value + f.none + f.undecidable));
   const visibleView = () => page.evaluate(() => [...document.querySelectorAll('.view-content')].filter((node) => node.offsetParent !== null).map((node) => node.id).join());
   const hashParams = () => new URLSearchParams(new URL(page.url()).hash.slice(1));
 
