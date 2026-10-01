@@ -15,10 +15,10 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-06-29
-updated: 2026-09-22
+updated: 2026-10-01
 authors: [Christopher Pollin]
 generated-with: Claude Code, Codex (GPT-6)
-related: [project, methods, specification, data, standards, governance, testing, verification, plan, journal, handoff, update-protocol, research-vault, analysis-divergence, analysis-sq-advisory, project-review-2026-09-05]
+related: [project, methods, specification, data, standards, governance, testing, verification, plan, journal, handoff, update-protocol, research-vault, analysis-methods, analysis-divergence, analysis-sq-advisory, project-review-2026-09-05]
 ---
 
 This is the knowledge base of FemPrompt SozArb, a qualitative literature review on feminist AI literacy and LLM bias in social work. It documents both review rounds, the comparative round-one benchmark, the agent-assisted round-two workflow, PRISM, and the Grounded Vault. PRISM is the governed screening and verification surface. Concrete numbers live in `generated/benchmark-results/`, `docs/data/`, and their generated views. This index identifies the canonical documents and defines the terms that connect them.
@@ -42,6 +42,7 @@ In function order, not alphabetical.
 | [[handoff]] | Current result of the working branch, continuation point for the next session, and conditions of working in a clone | per session close |
 | [[project-review-2026-09-05]] | Dated review of 2026-09-05 with the findings, the implemented remedies and the uses of the completed data | closed |
 | [[update-protocol]] | The round-2 pre-registration, the analysis-field design, the pilot findings, the coding procedure, and the RIS procedure | until round 2 starts |
+| [[analysis-methods]] | The methodological basis of the literature analysis, with the mapping and synthesis frame, the tiered analysis plan, statistical reservations, validation of LLM-assisted analysis, appraisal tools and open disputes | per method decision |
 | [[analysis-divergence]] | The licensed round-1 divergence analysis the follow-up paper's empirical section cites, decomposed and read off named replay keys | per replay change |
 | [[analysis-sq-advisory]] | The advisory SQ1 to SQ3 interpretation that will be replaced by governed full-corpus analysis and domain-expert verification | per coding run |
 | [[research-vault]] | The Grounded-Vault layer model and the distillate audit as its migration precondition | until the research-vault is grounded |
@@ -55,6 +56,7 @@ In function order, not alphabetical.
 - Onboarding a new collaborator: [[project]], [[methods]], [[specification]]. The reviewing colleagues use `docs/onboarding.html` instead; nothing on their path requires this knowledge base.
 - Describe the method in the follow-up paper: [[methods]] (the chain and the depth, including the replay verification), [[standards]] (the conformance state and the named gaps).
 - Prepare the qualitative coding: [[update-protocol]] (fields, pilot findings, and coding procedure).
+- Plan or run the literature analysis: [[analysis-methods]] (frame, analysis tiers, statistical reservations and validation design).
 - Inspect the benchmark: the data (`generated/benchmark-results/`, `docs/data/`) and the Evidence Companion; the committed replay (`src/replay/`) re-derives and asserts the figures, described in [[methods]].
 - Understand a tool decision: [[specification]] (the Decisions section with the ADR register, and the design system), [[journal]].
 - Understand the divergence (the motivating illustration and demonstration): [[methods]], [[analysis-divergence]].

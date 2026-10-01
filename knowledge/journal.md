@@ -24,6 +24,10 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## PRISM and the epistemic infrastructure (2026)
 
+### 2026-10-01: Methodische Grundlage der Literaturanalyse
+
+`knowledge/analysis-methods.md` legt die Analyse in zwei Schichten fest, eine Kartierung als JBI-Scoping-Review mit PRISMA-ScR und Evidence-and-Gap-Maps und eine Synthese als Best-Fit-Framework-Synthese über Assertions. Ob Critical Interpretive Synthesis oder Meta-Narrative Review die interpretative Schicht trägt, entscheidet die Projektleitung. Die Analysen sind in drei Stufen geordnet, nach aktuellem Datenstand, nach vollständiger fachlich verifizierter Kodierung und explorativ mit Validierungspflicht. Alle Literaturangaben wurden über DOI oder Verlags- und Indexseite aufgelöst. Zwei Befunde betreffen bestehende Festlegungen. Eine blinde Referenzkodierung widerspricht dem geltenden ADR-038, weil PRISM die Runde-eins-Referenzen in jeder menschlichen Sitzung zeigt. Schätzer für teilweise Verifikation setzen eine zufällig gezogene Verifikationsstichprobe voraus, die der zugewiesene Verifikationsumfang nicht liefert. PRISMA-ScR ist in `standards.md` noch nicht als angewandter Standard geführt.
+
 ### 2026-09-22: Referenzen sichtbar, Werkzeugleiste in der Korpusspalte, Anleitung für die Verifikationsrolle
 
 Der Operator hat die Ausblendung der Runde-eins-Referenzen aufgehoben. Die Entscheidung der Expertinnen und die LLM-Einschätzung aus Runde eins stehen jetzt in menschlichen Sitzungen mit Herkunftskennzeichnung über der Bewertung, und der LLM-Vorschlag lässt sich als Kategoriestufen übernehmen. Die Belegpflicht aus dem Papertext und die Ableitungsregel bleiben unverändert; Agentenläufe bleiben referenzblind. ADR-038 ersetzt die Ausblendungsregel aus FR-03, die alten Vergleichsfunktionen sind gelöscht, und der Unit-Test zum eingeklappten Vergleich prüft nun die sichtbaren Referenzen und die stufenbeschränkte Übernahme.
