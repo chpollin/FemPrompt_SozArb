@@ -10,7 +10,7 @@ status: active
 language: de
 version: "0.7"
 created: 2026-02-18
-updated: 2026-09-22
+updated: 2026-10-01
 authors: [Christopher Pollin]
 generated-with: Claude Code
 related: [INDEX, plan, specification, governance, verification, handoff]
@@ -23,6 +23,10 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 ---
 
 ## PRISM and the epistemic infrastructure (2026)
+
+### 2026-10-01: Öffentlicher Evidence Companion auf der Ergebnisseite
+
+Die allowlistete Ergebnisseite wird zum öffentlichen Evidence Companion. Statt Literaturbild und Inventarzeile führt sie über die Hauptfrage zu je einer Antwortseite pro Teilfrage mit Befunden, Karte, offenen Codierungen und beitragenden Werken. Dazu kommen Matrix, Netz, Korpus, Werkansicht, Aussagen, Chat und Methode, und jeder Zustand steht im URL-Hash. Die Methodenprüfung des Leads hat drei Darstellungsregeln festgelegt. Eine Zelle oder Kante zählt gemeinsame Codierung im selben Werk, einwertige Felder heißen „des Werks“ und werden keiner einzelnen Technik zugeschrieben, und die Zeile „n von N eingeschlossenen Werken codiert“ steht vor jedem Ergebnis, wobei leere Zellen bei offenen Codierungen als nicht bestimmbar gelten. Offen bleiben deutsche Feldlabels in der Vokabularquelle, die Schlüssel von `meta.analysis_coverage`, ein explizites Teilfragenfeld für Aussagen und feldbezogene Belegstellen. Die Gestaltung steht in [[specification#Public Evidence Companion]].
 
 ### 2026-09-22: Referenzen sichtbar, Werkzeugleiste in der Korpusspalte, Anleitung für die Verifikationsrolle
 

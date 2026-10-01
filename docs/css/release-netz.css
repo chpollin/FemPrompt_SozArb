@@ -1,0 +1,205 @@
+/* Dimension colour classes; shape carries the same distinction in the SVG itself. */
+.netz-dim-0 { --dim: var(--cat-ai-lit); }
+.netz-dim-1 { --dim: var(--cat-gen-ki); }
+.netz-dim-2 { --dim: var(--cat-prompt); }
+.netz-dim-3 { --dim: var(--cat-ki-sonst); }
+.netz-dim-4 { --dim: var(--cat-soz-arb); }
+.netz-dim-5 { --dim: var(--cat-bias); }
+.netz-dim-6 { --dim: var(--cat-gender); }
+.netz-dim-7 { --dim: var(--cat-divers); }
+.netz-dim-8 { --dim: var(--cat-femin); }
+.netz-dim-9 { --dim: var(--cat-fairness); }
+
+.netz-controls { align-items: flex-start; }
+
+.netz-fields {
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius-md);
+    padding: var(--space-xs) var(--space-md) var(--space-sm);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs) var(--space-lg);
+    min-inline-size: 0;
+}
+
+.netz-fields legend { padding-inline: var(--space-xs); font-size: var(--text-sm); color: var(--gray-600); }
+
+/* Selectors repeat .netz-controls to outrank the shared .controls label and input rules. */
+.netz-controls .netz-check,
+.netz-controls .netz-works-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    min-block-size: 1.75rem;
+    font-size: var(--text-base);
+    font-weight: 400;
+    color: var(--gray-900);
+}
+
+.netz-controls input[type="checkbox"] {
+    min-block-size: 0;
+    inline-size: 1.125rem;
+    block-size: 1.125rem;
+    padding: 0;
+    accent-color: var(--primary-dark);
+}
+
+/* The bipartite layout only exists at wide widths; the script uses the same query. */
+.netz-controls .netz-works-toggle { display: none; }
+@media (min-width: 64rem) { .netz-controls .netz-works-toggle { display: inline-flex; } }
+
+.release-main .netz-heading {
+    margin-block: var(--space-lg) var(--space-sm);
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.release-main .netz-heading:empty { display: none; }
+
+.netz-heading-dim {
+    margin-inline-start: var(--space-md);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    font-weight: 400;
+    color: var(--gray-600);
+}
+
+.netz-figure { overflow-x: auto; }
+
+.netz-graph {
+    display: block;
+    inline-size: 100%;
+    block-size: auto;
+    max-block-size: 90vh;
+    min-inline-size: 46rem;
+}
+
+.netz-graph text { font-family: var(--font-body); }
+
+.netz-label { font-size: 13px; fill: var(--gray-900); }
+
+.netz-label,
+.netz-count-inline {
+    paint-order: stroke;
+    stroke: Canvas;
+    stroke-width: 3px;
+    stroke-linejoin: round;
+}
+
+.netz-count-inline { font-weight: 600; fill: var(--gray-600); }
+
+.netz-glyph { fill: var(--gray-600); }
+
+.netz-item { cursor: pointer; }
+.netz-item:focus { outline: none; }
+
+.netz-line {
+    stroke: var(--dim);
+    stroke-opacity: 0.7;
+    stroke-linecap: round;
+}
+
+.netz-ring,
+.netz-hit { fill: none; stroke: transparent; stroke-linecap: round; pointer-events: stroke; }
+.netz-ring { pointer-events: none; }
+
+.netz-edge:hover .netz-ring { stroke: var(--gray-400); }
+.netz-edge:focus-visible .netz-ring { stroke: var(--gray-900); }
+
+.netz-edge.is-selected .netz-line { stroke-opacity: 1; }
+
+.netz-count-box { fill: Canvas; stroke: var(--gray-400); stroke-width: 1; }
+.netz-count { font-size: 12px; font-weight: 600; fill: var(--gray-900); }
+.netz-edge:hover .netz-count-box { stroke: var(--gray-700); }
+.netz-edge:focus-visible .netz-count-box { stroke: var(--gray-900); stroke-width: 2.5; }
+.netz-edge.is-selected .netz-count-box { fill: var(--gray-800); stroke: var(--gray-900); }
+.netz-edge.is-selected .netz-count { fill: var(--gray-50); }
+
+.netz-marker { fill: var(--dim); stroke: var(--gray-800); stroke-width: 1.5; stroke-linejoin: round; }
+
+/* Filled hit shapes: circles and rects need fill to be hit and stroke to show focus. */
+circle.netz-hit,
+rect.netz-hit { fill: transparent; stroke: transparent; pointer-events: all; }
+.netz-node:hover .netz-hit,
+.netz-term:hover .netz-hit,
+.netz-work:hover .netz-hit { stroke: var(--gray-400); stroke-width: 1.5; }
+.netz-node:focus-visible .netz-hit,
+.netz-term:focus-visible .netz-hit,
+.netz-work:focus-visible .netz-hit { stroke: var(--gray-900); stroke-width: 2.5; }
+
+.netz-term.is-selected .netz-label { font-weight: 700; }
+.netz-term.is-selected .netz-hit { stroke: var(--gray-700); stroke-width: 1.5; }
+
+.netz-ego rect { fill: var(--primary-dark); }
+.netz-ego text { font-size: 14px; font-weight: 600; fill: var(--gray-50); }
+
+.netz-dot { fill: var(--gray-600); }
+
+.netz-link { stroke: var(--dim); stroke-opacity: 0.35; stroke-width: 1; }
+.netz-link.is-selected { stroke-opacity: 1; stroke-width: 2; }
+
+.netz-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs) var(--space-lg);
+    margin-block: var(--space-md);
+    padding: 0;
+    list-style: none;
+    font-size: var(--text-sm);
+    color: var(--gray-700);
+}
+
+.netz-legend li { display: inline-flex; align-items: center; gap: var(--space-xs); }
+
+.netz-legend-marker { fill: var(--dim); stroke: var(--gray-800); stroke-width: 1.5; stroke-linejoin: round; flex: none; }
+
+/* Positioned so the absolutely placed .sr-only spans scroll with the table instead of widening the page. */
+.netz-list-wrap { position: relative; overflow-x: auto; container-type: inline-size; margin-block-end: var(--space-xl); }
+
+.netz-list {
+    inline-size: 100%;
+    border-collapse: collapse;
+    font-size: var(--text-base);
+}
+
+.netz-list caption {
+    padding-block: var(--space-sm);
+    text-align: start;
+    font-weight: 600;
+}
+
+.netz-list th,
+.netz-list td {
+    padding: var(--space-xs) var(--space-sm);
+    border-block-end: 1px solid var(--gray-200);
+    text-align: start;
+    vertical-align: middle;
+}
+
+.netz-list thead th { color: var(--gray-600); font-size: var(--text-sm); font-weight: 600; }
+.netz-list tbody th { font-weight: 400; }
+.netz-list tr.is-selected { background: var(--gray-100); }
+
+.netz-list button {
+    min-block-size: 1.75rem;
+    padding: 0 var(--space-sm);
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius-sm);
+    background: Canvas;
+    color: var(--gray-900);
+    font: inherit;
+    font-size: var(--text-sm);
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.netz-list button:hover { border-color: var(--gray-600); }
+.netz-list button[aria-pressed="true"] { background: var(--gray-800); border-color: var(--gray-800); color: var(--gray-50); }
+
+@container (inline-size < 34rem) {
+    .netz-list th,
+    .netz-list td { padding-inline: var(--space-xs); }
+    .netz-list button { padding-inline: var(--space-xs); }
+}

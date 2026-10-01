@@ -3,49 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feministische AI Literacies – Quellengeprüfte Evidenz</title>
-    <meta name="description" content="Quellengeprüfte Aussagen zu KI, Gender und Sozialer Arbeit mit nachvollziehbarer KI-Prüfung.">
+    <title>Feministische AI Literacies</title>
+    <meta name="description" content="Quellengeprüfte Codierungen und Aussagen zu generativer KI, Gender und Bias in der Sozialen Arbeit mit ausgewiesenem Prüfstand.">
     <link rel="stylesheet" href="css/tokens.css">
     <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="css/research.css">
-    <link rel="stylesheet" href="css/literaturbild.css">
     <link rel="stylesheet" href="css/release.css">
+    <link rel="stylesheet" href="css/release-netz.css">
 </head>
 <body>
-<header><div class="header-content">
-    <a class="brand-link" href="index.html"><h1>Feministische AI Literacies</h1></a>
-    <p>Generative KI, Gender und Soziale Arbeit</p>
-    <nav aria-label="Ansichten" class="release-nav">
-        <button data-view="evidence" aria-pressed="true">Belegte Aussagen</button>
-        <button data-view="literature" aria-pressed="false">Literaturbild</button>
-        <button data-view="chat" aria-pressed="false">Wissens-Chat</button>
-        <a href="downloads/research-data.zip">Datensatz herunterladen</a>
+<a class="skip-link" href="#main">Zum Inhalt</a>
+<header class="release-header"><div class="header-content">
+    <a class="brand-link" href="#view=fragen">Feministische AI Literacies</a>
+    <nav aria-label="Ansichten" id="release-nav">
+        <ul role="list">
+            <li><a data-nav="fragen" href="#view=fragen">Fragen</a></li>
+            <li><a data-nav="matrix" href="#view=matrix">Matrix</a></li>
+            <li><a data-nav="netz" href="#view=netz">Netz</a></li>
+            <li><a data-nav="korpus" href="#view=korpus">Korpus</a></li>
+            <li><a data-nav="aussagen" href="#view=aussagen">Aussagen</a></li>
+            <li><a data-nav="chat" href="#view=chat">Chat</a></li>
+            <li><a data-nav="methode" href="#view=methode">Methode</a></li>
+        </ul>
     </nav>
 </div></header>
-<main>
-    <section class="release-intro" aria-label="Prüfstatus">
-        <p class="release-kicker">Nachvollziehbare KI-Quellenprüfung</p>
-        <p>Jede veröffentlichte Aussage führt zu ihrer Quelle und nennt den prüfenden KI-Agenten,
-            das Modell und den Zeitpunkt. Eine menschliche Fachprüfung wird gesondert ausgewiesen.</p>
-        <p id="release-counts" aria-live="polite">Lade den geprüften Datenstand …</p>
-        <p class="release-note">Die Sammlung wächst. Sie zeigt den bereits quellengeprüften Teilbestand;
-            der vollständige Literaturreview ist noch in Bearbeitung.</p>
+<main id="main" class="release-main">
+    <p id="release-error" class="release-error" role="alert" hidden></p>
+
+    <section id="view-fragen" data-view-root="fragen" hidden>
+        <h1 id="fragen-title"></h1>
+        <ol class="sq-list" id="sq-list"></ol>
+        <p class="sq-more"><a href="#view=korpus">Korpus durchsuchen</a> · <a href="#view=methode">Methode und Prüfstand</a></p>
     </section>
-    <section id="release-evidence" class="release-view">
-        <label for="evidence-search">Aussagen und Quellen durchsuchen</label>
-        <input id="evidence-search" class="search-box" type="search" placeholder="Zum Beispiel Prompting oder AI Literacy">
-        <div id="assertion-list" aria-live="polite"></div>
+
+    <section id="view-frage" data-view-root="frage" hidden>
+        <div id="frage-root"></div>
     </section>
-    <section id="release-literature" class="release-view" hidden><div id="literaturbild-root"></div></section>
-    <section id="release-chat" class="release-view" hidden><div class="chat-window" id="chat-container"></div></section>
+
+    <section id="view-matrix" data-view-root="matrix" hidden>
+        <h1>Matrix</h1>
+        <div class="controls" id="matrix-controls" role="group" aria-label="Matrix einstellen">
+            <label>Zeilen <select id="matrix-rows"></select></label>
+            <label>Spalten <select id="matrix-cols"></select></label>
+            <label>Jahr <select id="matrix-year"></select></label>
+            <label>Studientyp <select id="matrix-study"></select></label>
+            <label>Prüfstand <select id="matrix-status"></select></label>
+        </div>
+        <div id="matrix-denominator" class="denominators"></div>
+        <div id="matrix-wrap" class="matrix-wrap" role="region" tabindex="0"></div>
+        <p class="mark-legend" id="matrix-legend"></p>
+        <section id="worklist" class="worklist-section" aria-labelledby="worklist-title" hidden></section>
+    </section>
+
+    <section id="view-netz" data-view-root="netz" hidden>
+        <h1>Netz</h1>
+        <div id="netz-root"></div>
+    </section>
+
+    <section id="view-korpus" data-view-root="korpus" hidden>
+        <h1>Korpus</h1>
+        <div id="korpus-root"></div>
+    </section>
+
+    <section id="view-aussagen" data-view-root="aussagen" hidden>
+        <h1>Aussagen</h1>
+        <div class="controls">
+            <label>Suche <input id="evidence-search" type="search" autocomplete="off"></label>
+        </div>
+        <p id="assertion-count" class="result-count" aria-live="polite"></p>
+        <div id="assertion-list"></div>
+    </section>
+
+    <section id="view-chat" data-view-root="chat" hidden>
+        <h1>Chat</h1>
+        <div class="chat-window" id="chat-container"></div>
+    </section>
+
+    <section id="view-methode" data-view-root="methode" hidden>
+        <h1>Methode</h1>
+        <div id="methode-root"></div>
+    </section>
+
+    <section id="view-werk" data-view-root="werk" hidden>
+        <div id="werk-root"></div>
+    </section>
 </main>
-<footer class="site-footer"><p>
+<footer class="site-footer release-footer"><p>
+    <a href="downloads/research-data.zip">Datensatz</a> ·
     <a href="downloads/data-dictionary.md">Datenbeschreibung</a> ·
     <a href="data/release_manifest.json">Versionsnachweis</a> ·
     <a href="https://github.com/chpollin/FemPrompt_SozArb">Forschungsprojekt und Arbeitsstände</a>
 </p></footer>
 <script src="js/public-release.js"></script>
-<script src="js/literaturbild.js"></script>
+<script src="js/release-model.js"></script>
+<script src="js/release-matrix.js"></script>
+<script src="js/release-netz.js"></script>
+<script src="js/release-werk.js"></script>
+<script src="js/release-fragen.js"></script>
 <script src="js/wissenschat.js"></script>
 </body>
 </html>

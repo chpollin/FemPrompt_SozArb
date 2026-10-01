@@ -1,77 +1,214 @@
-// The result site reuses PRISM's literature and grounded-chat modules.
+// Public Evidence Companion: hash router, shared rendering helpers, Aussagen view.
+// View modules (release-*.js) register through EC.registerView before boot.
 (function () {
 'use strict';
-let release = { meta: {}, papers: [] };
-let assertions = [];
-const subscribers = [];
-let state = { view: 'evidence', litView: 'matrix', litYear: 'all', litSource: 'all', litStudy: 'all', litProfile: 'AN_Prompting_Role', litSelection: null };
-function escapeHtml(value) { const node = document.createElement('span'); node.textContent = String(value == null ? '' : value); return node.innerHTML.replace(/"/g, '&quot;').replace(/'/g, '&#39;'); }
-function syncHash() {
-    const params = new URLSearchParams();
-    Object.keys(state).forEach(function (key) { if (state[key] != null) params.set(key, state[key]); });
-    history.replaceState(null, '', '#' + params.toString());
+
+const SITE_TITLE = 'Feministische AI Literacies';
+const EC = window.EC = window.EC || {};
+const views = {};
+const lastParams = {};
+const NAV_OF_VIEW = { frage: 'fragen' };
+let model = null;
+let currentView = null;
+let booted = false;
+
+function esc(value) {
+    return String(value == null ? '' : value).replace(/[&<>"']/g, function (char) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char];
+    });
 }
-const store = {
-    get: function () { return state; },
-    set: function (patch) { state = Object.assign({}, state, patch); syncHash(); subscribers.forEach(function (f) { f(state); }); },
-    subscribe: function (callback) { subscribers.push(callback); return function () { const i = subscribers.indexOf(callback); if (i >= 0) subscribers.splice(i, 1); }; }
-};
-window.EC = {
-    escapeHtml: escapeHtml, store: store, CATEGORIES: [], CAT_COLORS: {},
-    getAllPapers: function () { return release.papers; },
-    getMeta: function () { return Object.assign({total_papers: release.papers.length}, release.meta); },
-    getKappas: function () { return {}; }, getConceptData: function () { return null; },
-    getDivergencePatterns: function () { return null; },
-    paperStatus: function () { return {label: 'KI-quellengeprüft'}; },
-    navigateToPaper: function (id) {
-        const paper = release.papers.find(function (p) { return p.id === id; });
-        if (!paper) return false;
-        selectView('evidence'); document.getElementById('evidence-search').value = paper.title; renderAssertions(paper.title); return true;
+
+function safeUrl(value) {
+    const url = String(value || '').trim();
+    return /^https?:\/\//i.test(url) ? url : '';
+}
+
+function parseHash() {
+    const params = {};
+    new URLSearchParams(location.hash.replace(/^#/, '')).forEach(function (value, key) { params[key] = value; });
+    if (!params.view || !views[params.view]) params.view = 'fragen';
+    return params;
+}
+
+function hashOf(params) {
+    const search = new URLSearchParams();
+    search.set('view', params.view);
+    Object.keys(params).filter(function (key) {
+        return key !== 'view' && params[key] != null && params[key] !== '' && params[key] !== 'all';
+    }).sort().forEach(function (key) { search.set(key, params[key]); });
+    return '#' + search.toString();
+}
+
+// Every view state lives in the hash. Control changes push a history entry so
+// browser back restores the previous state; typing in a search box replaces it.
+function go(params, options) {
+    const hash = hashOf(params);
+    if (options && options.replace) {
+        history.replaceState(null, '', hash);
+        render();
+    } else if (hash !== location.hash) {
+        location.hash = hash;
+    } else {
+        render();
     }
-};
-function selectView(view) {
-    if (['evidence', 'literature', 'chat'].indexOf(view) < 0) view = 'evidence';
-    document.querySelectorAll('.release-view').forEach(function (node) { node.hidden = node.id !== 'release-' + view; });
-    document.querySelectorAll('.release-nav button').forEach(function (node) { node.setAttribute('aria-pressed', String(node.dataset.view === view)); });
-    store.set({view: view});
 }
-function restoreLocation() {
-    const hash = new URLSearchParams(location.hash.slice(1));
-    const defaults = { view: 'evidence', litView: 'matrix', litYear: 'all', litSource: 'all', litStudy: 'all', litProfile: 'AN_Prompting_Role', litSelection: null };
-    Object.keys(defaults).forEach(function (key) { state[key] = hash.has(key) ? hash.get(key) : defaults[key]; });
-    selectView(state.view);
+
+function href(params) { return hashOf(params); }
+
+function statusMark(status, options) {
+    const verified = status === 'verified';
+    const label = verified ? 'fachlich verifiziert' : (model ? model.publicLabel : 'KI-quellengeprüft');
+    const extra = options && options.full && !verified ? ' · nicht fachlich verifiziert' : '';
+    return '<span class="status-mark status-mark--' + (verified ? 'verified' : 'ki') + '">' +
+        '<span class="mark-glyph" aria-hidden="true">' + (verified ? '●' : '◆') + '</span> ' + esc(label + extra) + '</span>';
 }
-function renderAssertions(query) {
-    const words = String(query || '').toLocaleLowerCase('de').split(/\s+/).filter(Boolean);
-    const selected = assertions.filter(function (a) { const text = JSON.stringify(a).toLocaleLowerCase('de'); return words.every(function (word) { return text.indexOf(word) >= 0; }); });
-    const root = document.getElementById('assertion-list');
-    if (!selected.length) { root.innerHTML = '<p>Für diese Auswahl liegen noch keine quellengeprüften Aussagen vor.</p>'; return; }
-    root.innerHTML = selected.map(function (a) {
-        const review = a.review || {};
-        return '<article class="assertion-card"><h2>' + escapeHtml(a.statement) + '</h2>' +
-            '<p class="assertion-review">KI-Agent: ' + escapeHtml(review.agent_id) + ' · Modell: ' + escapeHtml(review.model) + ' · Prüfung: ' + escapeHtml(review.reviewed_at) + '</p>' +
-            '<details><summary>Belege und Prüfbegründung</summary><p>' + escapeHtml(review.findings) + '</p>' +
-            a.evidence.map(function (e) { const url = /^https?:\/\//i.test(e.source_url) ? e.source_url : ''; return '<blockquote>' + escapeHtml(e.quote) + '</blockquote><p>' + (url ? '<a target="_blank" rel="noopener" href="' + escapeHtml(url) + '">' + escapeHtml(e.title) + '</a>' : escapeHtml(e.title)) + ' · ' + escapeHtml(e.locator) + '</p><p class="assertion-review">' + escapeHtml(e.work_id) + ' · ' + escapeHtml(e.version_id) + '</p>'; }).join('') + '</details></article>';
+
+function workCount(count) { return count + (count === 1 ? ' Werk' : ' Werke'); }
+
+function versionLabel(value) {
+    const labels = (model && model.landscape.version_type_labels) || {};
+    return labels[value] || (value ? String(value).replace(/_/g, ' ') : '');
+}
+
+function highlight(text, term) {
+    const body = String(text || '');
+    const needle = String(term || '').trim();
+    const at = needle ? body.indexOf(needle) : -1;
+    if (at < 0) return esc(body);
+    return esc(body.slice(0, at)) + '<mark>' + esc(needle) + '</mark>' + esc(body.slice(at + needle.length));
+}
+
+function renderAssertion(assertion, options) {
+    const level = (options && options.level) || 2;
+    const review = assertion.review || {};
+    const status = assertion.status === 'verified' || assertion.status === 'publication-approved' ? 'verified' : 'ki';
+    const evidence = assertion.evidence.map(function (item) {
+        const work = model.workById(item.work_id);
+        const url = safeUrl(item.source_url);
+        const workLink = work ? '<a href="' + esc(href({ view: 'werk', id: work.id })) + '">' + esc(item.author_year || item.title) + '</a>'
+            : esc(item.author_year || item.title);
+        return '<li class="evidence-item"><blockquote class="evidence-quote">' + esc(item.quote) + '</blockquote>' +
+            '<p class="evidence-locator">' + workLink + ' · ' + esc(item.locator) +
+            (item.version_type ? ' · ' + esc(versionLabel(item.version_type)) : '') +
+            (url ? ' · <a href="' + esc(url) + '" target="_blank" rel="noopener">Quelle öffnen</a>' : '') + '</p></li>';
     }).join('');
+    return '<article class="assertion" data-assertion-id="' + esc(assertion.id) + '">' +
+        '<h' + level + ' class="assertion-statement">' + esc(assertion.statement) + '</h' + level + '>' +
+        '<p class="assertion-meta">' + statusMark(status) +
+        (assertion.topics && assertion.topics.length ? ' · ' + esc(assertion.topics.join(', ')) : '') + '</p>' +
+        '<ul class="evidence-list" role="list">' + evidence + '</ul>' +
+        '<details class="assertion-review"><summary>Prüfnachweis</summary>' +
+        '<p class="review-line">KI-Agent ' + esc(review.agent_id) + ' · Modell ' + esc(review.model) +
+        ' · geprüft ' + esc(review.reviewed_at) + '</p><p>' + esc(review.findings) + '</p></details></article>';
 }
+
+function registerView(name, view) { views[name] = view; }
+
+function updateNav(view) {
+    const active = NAV_OF_VIEW[view] || view;
+    document.querySelectorAll('[data-nav]').forEach(function (link) {
+        const name = link.dataset.nav;
+        // A view whose module is not shipped keeps no navigation entry, so dropping
+        // its script tag removes the view entirely.
+        link.parentElement.hidden = !views[name];
+        if (name === active) link.setAttribute('aria-current', 'page');
+        else link.removeAttribute('aria-current');
+        link.setAttribute('href', href(lastParams[name] || { view: name }));
+    });
+}
+
+function render() {
+    if (!model) return;
+    const params = parseHash();
+    const view = views[params.view];
+    const changed = params.view !== currentView;
+    document.querySelectorAll('[data-view-root]').forEach(function (node) {
+        node.hidden = node.dataset.viewRoot !== params.view;
+    });
+    currentView = params.view;
+    view.render(params, { changed: changed });
+    if (!NAV_OF_VIEW[params.view] && params.view !== 'werk') lastParams[params.view] = params;
+    updateNav(params.view);
+    document.title = (view.title ? view.title(params) + ' · ' : '') + SITE_TITLE;
+    if (changed && booted) {
+        const heading = document.querySelector('[data-view-root="' + params.view + '"] h1');
+        if (heading) { heading.setAttribute('tabindex', '-1'); heading.focus({ preventScroll: false }); }
+    }
+}
+
+registerView('aussagen', {
+    title: function () { return 'Aussagen'; },
+    init: function () {
+        document.getElementById('evidence-search').addEventListener('input', function (event) {
+            const params = parseHash();
+            params.q = event.target.value;
+            go(params, { replace: true });
+        });
+    },
+    render: function (params) {
+        const input = document.getElementById('evidence-search');
+        const query = params.q || '';
+        if (input.value !== query) input.value = query;
+        const words = EC.fold(query).split(/\s+/).filter(Boolean);
+        const selected = model.assertions.filter(function (assertion) {
+            const text = EC.fold(JSON.stringify(assertion));
+            return words.every(function (word) { return text.indexOf(word) >= 0; });
+        });
+        const count = document.getElementById('assertion-count');
+        count.textContent = words.length ? selected.length + (selected.length === 1 ? ' Aussage' : ' Aussagen') : '';
+        const list = document.getElementById('assertion-list');
+        list.innerHTML = selected.length ? selected.map(function (assertion) { return renderAssertion(assertion); }).join('')
+            : '<p class="empty-state">Keine quellengeprüfte Aussage enthält diese Suchbegriffe.</p>';
+    },
+});
+
+registerView('chat', {
+    title: function () { return 'Chat'; },
+    render: function () {
+        const container = document.getElementById('chat-container');
+        if (container.dataset.initialized !== 'true' && window.initWissensChat) {
+            container.dataset.initialized = 'true';
+            window.initWissensChat();
+        }
+    },
+});
+
+Object.assign(EC, {
+    escapeHtml: esc, esc: esc, safeUrl: safeUrl, go: go, href: href, parseHash: parseHash,
+    statusMark: statusMark, workCount: workCount, versionLabel: versionLabel, highlight: highlight,
+    renderAssertion: renderAssertion, registerView: registerView,
+    // The grounded chat links a cited record to its Work.
+    navigateToPaper: function (recordId) {
+        const work = model && model.workById(recordId);
+        if (!work) return false;
+        go({ view: 'werk', id: work.id });
+        return true;
+    },
+});
+
 document.addEventListener('DOMContentLoaded', async function () {
+    async function read(path) {
+        const response = await fetch(path);
+        if (!response.ok) throw new Error('Der geprüfte Datenstand ist nicht verfügbar (' + path + ').');
+        return response.json();
+    }
     try {
-        async function read(path) { const response = await fetch(path); if (!response.ok) throw new Error('Geprüfter Datenstand nicht verfügbar: ' + path); return response.json(); }
-        const payload = await Promise.all([read('data/public_release.json'), read('data/assertion_index.json'), read('data/category_schema.json')]);
-        release = payload[0]; assertions = payload[1].assertions;
-        payload[2].categories.forEach(function (category) { window.EC.CATEGORIES.push(category.key); window.EC.CAT_COLORS[category.key] = category.color; });
-        document.getElementById('release-counts').textContent = release.meta.assertion_count + ' belegte Aussagen · ' + release.meta.work_count + ' Werke · ' + release.meta.record_count + ' bibliografische Einträge';
-        renderAssertions('');
-        document.getElementById('evidence-search').addEventListener('input', function (event) { renderAssertions(event.target.value); });
-        document.querySelectorAll('.release-nav button').forEach(function (node) { node.addEventListener('click', function () { selectView(node.dataset.view); }); });
-        restoreLocation();
-        if (window.initLiteraturbild) window.initLiteraturbild();
-        if (window.initWissensChat) window.initWissensChat();
-        selectView(state.view);
-        window.addEventListener('hashchange', restoreLocation);
+        const payload = await Promise.all([
+            read('data/public_release.json'), read('data/assertion_index.json'), read('data/category_schema.json'),
+            read('data/analysis_fields.json'), read('data/literature_landscape.json'),
+        ]);
+        model = EC.createModel({
+            release: payload[0], assertions: payload[1], schema: payload[2], fields: payload[3], landscape: payload[4],
+        });
+        EC.model = model;
+        Object.keys(views).forEach(function (name) { if (views[name].init) views[name].init(model); });
+        window.addEventListener('hashchange', render);
+        render();
+        booted = true;
     } catch (error) {
-        document.getElementById('release-counts').className = 'release-error';
-        document.getElementById('release-counts').textContent = error.message;
+        const node = document.getElementById('release-error');
+        node.textContent = error.message;
+        node.hidden = false;
     }
 });
 })();
