@@ -1064,7 +1064,7 @@ test('the category toggle is the shared chip with a pressed state, a colour and 
 
 test('statusLabel maps the list state to a text equivalent', function() {
     assertEqual(T.statusLabel('erfasst'), 'erfasst');
-    assertEqual(T.statusLabel('expert'), 'vorbelegt, nicht bestätigt');
+    assertEqual(T.statusLabel('expert'), 'erfasst, Expert:innen-Entscheidung');
     assertEqual(T.statusLabel('agent'), 'Agentenkodierung zu prüfen');
     assertEqual(T.statusLabel('none'), 'offen');
 });
@@ -2266,12 +2266,12 @@ test('list filters: status counts, category AND filter on the current annotation
     assertEqual(T.visibleRows().length, 1, 'several chips combine with AND');
     S.catFilter = [];
     S.statusFilter = 'erfasst';
-    assertEqual(T.visibleRows().map(function(r) { return r.paper.id; }).join('|'), 'F2');
+    assertEqual(T.visibleRows().map(function(r) { return r.paper.id; }).join('|'), 'F1|F2', 'expert decisions of the Excel workflow count as done');
     S.statusFilter = 'offen';
-    assertEqual(T.visibleRows().length, 2, 'prefilled but unconfirmed papers are open');
-    assertEqual(T.capturedCount(), 1, 'the counter ignores filters');
+    assertEqual(T.visibleRows().map(function(r) { return r.paper.id; }).join('|'), 'F3');
+    assertEqual(T.capturedCount(), 2, 'the counter ignores filters');
     var filters = T.filtersHtml();
-    assertContains(filters, 'data-status="offen" aria-pressed="true">Offen <span class="pt-seg-count">2</span>');
+    assertContains(filters, 'data-status="offen" aria-pressed="true">Offen <span class="pt-seg-count">1</span>');
     S.statusFilter = 'alle';
     T.setManifestReachable(false); T.setFsSupported(undefined);
     delete S.reviewers.cp;

@@ -1855,7 +1855,7 @@ function isScreenable(p) {
 
 function firstEntryIndex() {
     for (let i = 0; i < papers.length; i++) {
-        if (!isCaptured(papers[i]) && isScreenable(papers[i])) return i;
+        if (!isDone(papers[i]) && isScreenable(papers[i])) return i;
     }
     for (let i = 0; i < papers.length; i++) { if (isScreenable(papers[i])) return i; }
     return 0;
@@ -1944,9 +1944,16 @@ function paperSubject(p) {
     return { kind: 'empty', record: null };
 }
 
-// "Erfasst" is the reviewer's own work: an own saved record or an own verification.
+// Own work: an own saved record or an own verification.
 function isCaptured(p) {
     return !!ownRecord(p) || (referencesAllowed() && ownVerificationEntries(p.id).length > 0);
+}
+
+// "Erfasst" in list, filter and counter: own work, or a decision of the consolidated
+// expert assessment (the earlier Excel workflow), which the operator counts as done.
+// Only agent-coded and unassessed papers stay open.
+function isDone(p) {
+    return isCaptured(p) || !!expertAssessment(p);
 }
 
 function listState(p) {
@@ -1958,7 +1965,7 @@ function listState(p) {
 const LIST_STATE_LABELS = {
     erfasst: 'erfasst',
     agent: 'Agentenkodierung zu prüfen',
-    expert: 'vorbelegt, nicht bestätigt',
+    expert: 'erfasst, Expert:innen-Entscheidung',
     none: 'offen'
 };
 
@@ -1969,10 +1976,10 @@ function currentCategories(p) {
     return subject.record ? (subject.record.categories || {}) : {};
 }
 
-// The status filter concerns the reviewer's own records, so it exists only where
-// editing does.
+// The status filter separates done (own work or an expert decision) from open papers,
+// which is meaningful in the read-only published copy as well.
 function statusFilterAvailable() {
-    return !acceptanceMode && (trialMode || localEditingAvailable());
+    return !acceptanceMode;
 }
 
 function matchesCategoryFilter(p) {
@@ -1982,8 +1989,8 @@ function matchesCategoryFilter(p) {
 }
 
 function matchesStatusFilter(p, status) {
-    if (status === 'erfasst') return isCaptured(p);
-    if (status === 'offen') return !isCaptured(p);
+    if (status === 'erfasst') return isDone(p);
+    if (status === 'offen') return !isDone(p);
     return true;
 }
 
@@ -2055,7 +2062,7 @@ function renderScreening() {
 
 function capturedCount() {
     if (acceptanceMode) return 0;
-    return papers.reduce(function(n, p) { return n + (isCaptured(p) ? 1 : 0); }, 0);
+    return papers.reduce(function(n, p) { return n + (isDone(p) ? 1 : 0); }, 0);
 }
 
 function positionBarHtml() {
@@ -2082,7 +2089,7 @@ function filtersHtml() {
     if (statusFilterAvailable()) {
         const base = baseRows();
         const counts = { alle: base.length, offen: 0, erfasst: 0 };
-        base.forEach(function(row) { if (isCaptured(row.paper)) counts.erfasst++; else counts.offen++; });
+        base.forEach(function(row) { if (isDone(row.paper)) counts.erfasst++; else counts.offen++; });
         h += '<div class="pt-status-seg" role="group" aria-label="Status">';
         [['alle', 'Alle'], ['offen', 'Offen'], ['erfasst', 'Erfasst']].forEach(function(item) {
             h += '<button type="button" class="pt-seg-btn" data-status="' + item[0] + '" aria-pressed="' + (state.statusFilter === item[0]) + '">' +
@@ -3903,7 +3910,7 @@ function gotoNextOpen() {
     const at = rows.findIndex(function(row) { return row.index === state.index; });
     for (let k = 1; k <= rows.length; k++) {
         const row = rows[(at + k + rows.length) % rows.length];
-        if (row && row.index !== state.index && !isCaptured(row.paper)) {
+        if (row && row.index !== state.index && !isDone(row.paper)) {
             state.index = row.index;
             renderScreening();
             return;
@@ -4335,7 +4342,7 @@ const TEST_HOOK = {
     curDec: curDec, resetWork: resetWork, refreshAssess: refreshAssess,
     pinEvidence: pinEvidence, unpinEvidence: unpinEvidence, commit: commit, saveCurrent: saveCurrent,
     railHtml: railHtml, evidenceListHtml: evidenceListHtml, chipHtml: chipHtml, categoryChipHtml: categoryChipHtml,
-    statusLabel: statusLabel, listState: listState, isCaptured: isCaptured, paperSubject: paperSubject,
+    statusLabel: statusLabel, listState: listState, isCaptured: isCaptured, isDone: isDone, paperSubject: paperSubject,
     draftFor: draftFor, saveGate: saveGate, saveMode: saveMode, workDirty: function() { return !!work.dirty; },
     setWork: function(w) { work = w; }, markDirty: markDirty, drafts: function() { return JSON.parse(JSON.stringify(drafts)); },
     capturedCount: capturedCount, visibleRows: visibleRows, filtersHtml: filtersHtml, readFilterQuery: readFilterQuery,

@@ -178,7 +178,8 @@ body.pt-fullscreen [hidden] { display: none !important; }
 .pt-nav-item:hover { background: var(--pt-surface-3); }
 .pt-nav-item.active { background: var(--pt-surface); box-shadow: var(--pt-shadow-sm), inset 0 0 0 1px var(--pt-border-2); }
 .pt-nav-mark { flex: none; width: 11px; height: 11px; margin-top: 3px; border-radius: 50%; }
-.pt-mark-expert { border: 1.5px solid var(--pt-ink-3); }
+.pt-mark-expert { background: var(--pt-ink-3); position: relative; }
+.pt-mark-expert::after { content: ""; position: absolute; left: 3.5px; top: 1.5px; width: 3px; height: 6px; border: solid #fff; border-width: 0 1.5px 1.5px 0; transform: rotate(45deg); }
 .pt-mark-agent { border: 1.5px dashed var(--pt-ai); }
 .pt-mark-erfasst { background: var(--pt-human); position: relative; }
 .pt-mark-erfasst::after { content: ""; position: absolute; left: 3.5px; top: 1.5px; width: 3px; height: 6px; border: solid #fff; border-width: 0 1.5px 1.5px 0; transform: rotate(45deg); }

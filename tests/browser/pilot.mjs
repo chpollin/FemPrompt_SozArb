@@ -1102,7 +1102,8 @@ try {
   check('no page errors during the session', consoleErrors.length === 0, consoleErrors);
 
   // Editing exists only in a local project copy: without the local full-text manifest the
-  // page is read-only and offers no switch, no key field, no save and no status filter.
+  // page is read-only and offers no switch, no key field and no save; the status and
+  // category filters stay.
   const publicContext = await browser.newContext({ viewport: { width: 1440, height: 900 } });
   await installFixtureRoutes(publicContext);
   await publicContext.route('**/data/fulltext_manifest.json', (route) => route.fulfill({ status: 404, body: '' }));
@@ -1110,8 +1111,8 @@ try {
   await publicPage.goto(base + '/prisma.html?verify=1&paper=PILOT-B');
   await publicPage.waitForFunction(() => window.__PRISMA_TEST__ && document.querySelector('#pt-doc'), null, { timeout: 15000 });
   check('published copy: without the local manifest PRISM is read-only without a mode switch', await publicPage.evaluate(() =>
-    !window.__PRISMA_TEST__.canEdit() && !document.querySelector('.pt-mode-seg, #pt-reviewer-key, #pt-record, .pt-status-seg') &&
-      !!document.querySelector('.pt-cat-filter')));
+    !window.__PRISMA_TEST__.canEdit() && !document.querySelector('.pt-mode-seg, #pt-reviewer-key, #pt-record') &&
+      !!document.querySelector('.pt-cat-filter') && !!document.querySelector('.pt-status-seg')));
   await publicContext.close();
   check('local copy: with the manifest and File System Access the switch is offered', await page.evaluate(() =>
     window.__PRISMA_TEST__.localEditingAvailable() && document.querySelectorAll('.pt-mode-seg button').length === 2));
