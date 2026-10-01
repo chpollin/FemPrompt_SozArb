@@ -1,4 +1,4 @@
-// Chromium acceptance run for the public Evidence Companion and Literature Landscape.
+// Chromium acceptance run for the internal working application docs/index.html and its Literaturbild.
 import { chromium } from 'playwright';
 import { createServer } from 'node:http';
 import { existsSync, readFileSync, statSync } from 'node:fs';

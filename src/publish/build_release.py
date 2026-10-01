@@ -21,8 +21,8 @@ from src.assess.artifact_verification import load_publication_policy, load_revie
 
 ROOT = Path(__file__).resolve().parents[2]
 PUBLIC_FILES = (
-    "css/tokens.css", "css/research.css", "css/literaturbild.css", "css/release.css",
-    "js/public-release.js", "js/literaturbild.js", "js/wissenschat.js",
+    "css/tokens.css", "css/research.css", "css/release.css",
+    "js/public-release.js", "js/wissenschat.js",
     "js/release-model.js", "js/release-matrix.js", "js/release-netz.js", "js/release-werk.js",
     "js/release-fragen.js", "css/release-netz.css",
     "vendor/fontawesome/css/all.min.css", "vendor/fontawesome/LICENSE.txt",

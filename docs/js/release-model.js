@@ -188,7 +188,8 @@ function createModel(input) {
 
     // Reader for the pipeline coverage block. It follows the contract in knowledge/data.md (Analysis field states and coverage):
     // per field value, none, undecidable, absent, not_coded and withheld, which sum to
-    // scope.work_total. A released record without the field counts as not coded here.
+    // scope.work_total. Absent means a coded work without an entry for this field and
+    // stays apart from works that are not coded at all.
     function pipelineCoverage(dimId) {
         const meta = landscape.meta || {};
         const block = meta.analysis_coverage;
@@ -201,7 +202,7 @@ function createModel(input) {
             .some(function (n) { return n === null; })) return null;
         return {
             in_scope: total, coded: num('value'), none: num('none'), undecidable: num('undecidable'),
-            not_coded: num('not_coded') + num('absent'), withheld: num('withheld'),
+            not_coded: num('not_coded'), absent: num('absent'), withheld: num('withheld'),
         };
     }
 

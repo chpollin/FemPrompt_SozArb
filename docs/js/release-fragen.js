@@ -82,14 +82,17 @@ function openSection(item) {
         const pipeline = model.pipelineCoverage(field);
         const notCoded = pipeline && pipeline.not_coded != null ? pipeline.not_coded : own.not_coded;
         const undecidable = pipeline && pipeline.undecidable != null ? pipeline.undecidable : own.undecidable;
+        // One denominator per line: the pipeline scope when its figures are used, else the released works.
+        const inScope = pipeline && pipeline.in_scope != null ? pipeline.in_scope : own.in_scope;
         const parts = ['<span aria-hidden="true">?</span> ' + notCoded + ' noch nicht codiert', undecidable + ' nicht entscheidbar'];
+        if (pipeline && pipeline.absent) parts.push(pipeline.absent + ' ohne Angabe');
         if (pipeline && pipeline.withheld != null) parts.push(pipeline.withheld + ' zurückgehalten');
         const open = model.includes.filter(function (work) {
             const state = model.stateOf(work, field).state;
             return state === 'absent' || state === 'undecidable';
         });
         return '<div class="open-field" data-field="' + EC.esc(field) + '"><h3>' + EC.esc(dim.label) + '</h3>' +
-            '<p class="denominator">' + own.in_scope + ' Include-Werke · ' + parts.join(' · ') + '</p>' +
+            '<p class="denominator">' + inScope + ' Include-Werke · ' + parts.join(' · ') + '</p>' +
             (open.length ? '<ul class="open-works" role="list">' + open.map(function (work) {
                 const state = model.stateOf(work, field).state === 'undecidable' ? 'nicht entscheidbar' : 'noch nicht codiert';
                 return '<li><a href="' + EC.esc(EC.href({ view: 'werk', id: work.id })) + '">' + EC.esc(work.authorYear || work.title) +

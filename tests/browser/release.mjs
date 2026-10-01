@@ -55,7 +55,7 @@ const withPipeline = EC.createModel({ schema, fields, landscape: { meta: { analy
   scope: { work_total: 12 },
   fields: { AN_Bias_Axes: { value: 5, none: 1, undecidable: 1, absent: 1, not_coded: 1, withheld: 3 } } } }, records: [] } });
 const piped = withPipeline.pipelineCoverage('AN_Bias_Axes');
-check('model: pipeline coverage follows the data contract', piped.withheld === 3 && piped.not_coded === 2 &&
+check('model: pipeline coverage follows the data contract', piped.withheld === 3 && piped.not_coded === 1 && piped.absent === 1 &&
   withPipeline.codedSummary([], ['AN_Bias_Axes'], true).total === 12 &&
   withPipeline.codedSummary([], ['AN_Bias_Axes'], true).coded === 7);
 const realCoverage = landscape.meta && landscape.meta.analysis_coverage;

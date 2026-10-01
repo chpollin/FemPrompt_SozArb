@@ -151,6 +151,7 @@ function coverageLine(selection, dimId, axis, filtered) {
     ];
     if (dim.kind === 'field') parts.push(figures.undecidable + ' nicht entscheidbar');
     parts.push('<span aria-hidden="true">?</span> ' + figures.not_coded + ' noch nicht codiert');
+    if (pipeline && !filtered && pipeline.absent) parts.push(pipeline.absent + ' ohne Angabe');
     if (pipeline && pipeline.withheld != null) parts.push(pipeline.withheld + ' zurückgehalten');
     return '<p class="denominator" data-axis="' + axis + '" data-dim="' + EC.esc(dimId) + '"><span class="denominator-label">' +
         EC.esc(dim.label) + '</span> ' + parts.join(' · ') + '</p>';
