@@ -618,6 +618,23 @@
           "ar1",
           "ar2"
         ],
+        "integrated_into_productive_track": false,
+        "not_pooled_reason": "not_named_by_productive_track",
+        "pooled": false,
+        "review_artifact": "tests/review-cases/agent-runs/codebook-v14-pilot-10-20261001/ai-agent-review.json",
+        "review_results": {
+          "agreed": 1,
+          "resolved": 9
+        },
+        "run_id": "codebook-v14-pilot-10-20261001",
+        "run_schema": "femprompt-prisma-agent-run/1.4",
+        "run_status": "completed"
+      },
+      {
+        "coding_packets": [
+          "ar1",
+          "ar2"
+        ],
         "integrated_into_productive_track": true,
         "not_pooled_reason": null,
         "pooled": true,
@@ -31597,7 +31614,7 @@
     "targeted_followup_search_date": "2026-09-05",
     "targeted_gap_fill_candidates": true
   },
-  "source_fingerprint": "sha256:3cbbd82a523022bb3b847ca363213de18acc7ccb2a5d73f0680eb9e51d06b834",
+  "source_fingerprint": "sha256:98c1fa7e33f60d5c3ca8ad7aafca368312c443270adc9733896c72ccc7717c76",
   "sources": [
     {
       "path": "assessment/categories.yaml",
@@ -33925,7 +33942,7 @@
     },
     {
       "path": "knowledge/project.md",
-      "sha256": "f8e1733221f0842cb5393ac5fb794a5f76bc3b37d55769fc5e27837dd10e06eb"
+      "sha256": "fe2f878aca0a940a086372c3c57eaa31714f1d37fefcfb06cc7d6444dc7c3027"
     },
     {
       "path": "research-vault/10_distillates/A+ Alliance_2024_Incubating_Feminist_AI_Executive_Summary_2021-2024.md",
@@ -34602,6 +34619,22 @@
     {
       "path": "tests/review-cases/agent-runs/agent-v03-2ebh-20260822/run.json",
       "sha256": "a600b8cdea11c3afda96290e0bd21959d47b81eaa3b1a80a9d4327a0774310dc"
+    },
+    {
+      "path": "tests/review-cases/agent-runs/codebook-v14-pilot-10-20261001/ai-agent-review.json",
+      "sha256": "197a36c1eaff7667b41a179e66bb18821b66ecd127ce0ed403066d230252cf8f"
+    },
+    {
+      "path": "tests/review-cases/agent-runs/codebook-v14-pilot-10-20261001/run.json",
+      "sha256": "2de3501e353caff3b3836a80cb6c41d56cc4f665e369e879fd4f6d62909905a8"
+    },
+    {
+      "path": "tests/review-cases/agent-runs/codebook-v14-pilot-10-20261001/tracks/ar1-coding.json",
+      "sha256": "cce2a7e35488ce860fe27bc59789593a4cbf9ffd7984aa8fb6bb67c181128d6c"
+    },
+    {
+      "path": "tests/review-cases/agent-runs/codebook-v14-pilot-10-20261001/tracks/ar2-coding.json",
+      "sha256": "7eefcf6b93d5b1a5a93182b3e7d8b1efa8d82add5e4c0e47b6065a33c5762eac"
     },
     {
       "path": "tests/review-cases/agent-runs/oa-sources-13-20260823/ai-agent-review.json",
