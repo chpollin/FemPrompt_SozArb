@@ -484,10 +484,34 @@ try {
   await page.waitForFunction(() => document.querySelectorAll('#pt-corpus-list .pt-nav-item').length === 3, null, { timeout: 5000 });
   await gotoPaper('PILOT-A');
   const toggle = page.locator('#pt-assess-col .pt-dim .category-chip[data-cat="Prompting"]');
-  check('category toggle: the definition is the accessible description, no separate info button', await page.evaluate(() => {
+  check('category toggle: the inline codebook panel is the accessible description, no tooltip and no info button', await page.evaluate(() => {
     const chip = document.querySelector('#pt-assess-col .pt-dim .category-chip[data-cat="Prompting"]');
-    return chip && chip.title.length > 20 && !document.querySelector('#pt-assess-col .pt-info-btn');
+    const panel = document.getElementById('pt-cat-def');
+    return chip && !chip.title && chip.getAttribute('aria-describedby') === 'pt-cat-def' && panel && panel.hidden &&
+      !document.querySelector('#pt-assess-col .pt-info-btn');
   }));
+  // point 4: the codebook definition and the negative example appear verbatim at the toggle
+  // under focus or pointer, and leave again with it
+  const codebook = await page.evaluate(async () => (await (await fetch('data/category_schema.json')).json()).categories);
+  const defPanel = () => page.evaluate(() => {
+    const panel = document.getElementById('pt-cat-def');
+    return { hidden: !panel || panel.hidden, cat: panel && panel.getAttribute('data-cat'), text: panel ? panel.textContent : '' };
+  });
+  const codebookShown = (shown, key) => {
+    const entry = codebook.find((c) => c.key === key);
+    return !shown.hidden && shown.cat === key && shown.text.includes(entry.definition) &&
+      entry.examples_negative.every((example) => shown.text.includes('Zählt nicht: ' + example) || shown.text.includes(example));
+  };
+  await toggle.focus();
+  const onFocus = await defPanel();
+  check('codebook panel: keyboard focus on a toggle shows its definition and what does not count', codebookShown(onFocus, 'Prompting') && /Zählt nicht:/.test(onFocus.text), onFocus);
+  await page.hover('#pt-assess-col .pt-dim .category-chip[data-cat="Gender"]');
+  const onHover = await defPanel();
+  check('codebook panel: the pointer on Gender shows the Gender definition and negative example verbatim', codebookShown(onHover, 'Gender'), onHover);
+  await page.mouse.move(5, 5);
+  check('codebook panel: leaving the pointer returns to the focused toggle', codebookShown(await defPanel(), 'Prompting'));
+  await page.focus('#pt-intext');
+  check('codebook panel: without focus or pointer on a toggle the panel is gone', (await defPanel()).hidden);
   await toggle.focus();
   await page.keyboard.press('Space');
   const keyboardToggle = await page.evaluate(() => {
@@ -1126,7 +1150,11 @@ try {
     '## Mark Deuze &amp; Charlie Beckett', '', 'To cite this article: Mark Deuze &amp; Charlie Beckett (2022) Pilot paper C', '',
     'To link to this article:', '', 'Published online: 28 Sep 2022.', '', 'Submit your article to this journal', '', 'Article views: 4190', '',
     'View related articles', '', 'View Crossmark data', '', 'Citing articles: 64 View citing articles', '', 'CrossMark', '',
-    '## ARTICLE COMMENTARY', '', 'Mark Deuze &amp; Charlie Beckett frame the normative dimension of literacy.', '',
+    '## ARTICLE COMMENTARY', '', 'Mark Deuze a and Charlie Beckett b', '',
+    'Mark Deuze &amp; Charlie Beckett frame the normative dimension of literacy.', '',
+    // converter glyph codes as they stand in YDW5TX8M, 4ZL5Q48E and 9WIGR47Y
+    '- /C15 the business of news and journalism as a profession', '- /C15 knowledge about artificial intelligence', '',
+    'Franchises of mobile games like Pok /C19 emon and Letouz /C19 e E travel. /C211 The Author(s) 2024', '',
     'A second paragraph names literacy again, so the search has more than one hit.'].join('\n');
   await reviewContext.route('**/data/research_vault_v2.json', (route) => route.fulfill({ contentType: 'application/json', body: JSON.stringify(reviewVault) }));
   await reviewContext.route('**/data/fulltext_manifest.json', (route) => route.fulfill({ contentType: 'application/json', body: JSON.stringify(reviewManifest) }));
@@ -1144,9 +1172,41 @@ try {
     return { first: doc.firstElementChild && doc.firstElementChild.textContent, text: doc.textContent };
   });
   check('cover page: the reading text opens at the first real heading after the publisher sheet',
-    reading.first === 'ARTICLE COMMENTARY' && !/ISSN|To cite this article|Submit your article|Article views|CrossMark/.test(reading.text), reading);
+    reading.first === 'Article commentary' && !/ISSN|To cite this article|Submit your article|Article views|CrossMark/.test(reading.text), reading);
   check('entities: the converter ampersand shows as "&", never as "&amp;"',
     reading.text.includes('Mark Deuze & Charlie Beckett frame') && !reading.text.includes('&amp;'), reading.text.slice(0, 120));
+  // second UI round of 1 October 2026: glyph codes, front matter, heading case, no
+  // counter, no highlighting, and a Lesen panel with the assigned categories only
+  const round2 = await reviewPage.evaluate(() => {
+    const doc = document.getElementById('pt-doc');
+    const front = Array.from(doc.querySelectorAll('.pt-doc-front'));
+    const body = Array.from(doc.querySelectorAll('p.pt-doc-p')).find((p) => p.textContent.startsWith('Mark Deuze & Charlie Beckett frame'));
+    const chrome = document.body.innerText.replace(doc.innerText, '');
+    const rail = document.getElementById('pt-assess-col');
+    return {
+      glyphCodes: (doc.textContent.match(/\/C\d+/g) || []).length,
+      items: Array.from(doc.querySelectorAll('.pt-doc-ul li')).map((li) => li.textContent),
+      glyphText: doc.textContent.includes('Pokémon') && doc.textContent.includes('Letouzé E') && doc.textContent.includes('© The Author(s) 2024'),
+      front: front.map((el) => el.textContent),
+      frontSmaller: front.length > 0 && body && parseFloat(getComputedStyle(front[0]).fontSize) < parseFloat(getComputedStyle(body).fontSize) &&
+        getComputedStyle(front[0]).color !== getComputedStyle(body).color,
+      bodyFront: body ? body.classList.contains('pt-doc-front') : null,
+      marks: doc.querySelectorAll('mark').length,
+      middots: (chrome.match(/·/g) || []).length + (document.title.match(/·/g) || []).length,
+      counter: !!document.querySelector('.pt-ws-pos') || /\d+\s*\/\s*\d+/.test(document.querySelector('.pt-nav-tools').textContent),
+      railCats: Array.from(rail.querySelectorAll('.pt-dim .category-chip')).map((c) => c.dataset.cat),
+      railAi: /\b(LLM|KI-Vorbewertung|Agent|Modell|Prompt)\b/.test(rail.textContent)
+    };
+  });
+  check('glyph codes: /C15 bullets, /C19 accents and /C211 render as characters, no code stays',
+    round2.glyphCodes === 0 && round2.glyphText && round2.items[0] === 'the business of news and journalism as a profession', round2);
+  check('front matter: the byline is kept but set smaller and muted, the sentence about the authors stays text',
+    round2.front.includes('Mark Deuze a and Charlie Beckett b') && round2.frontSmaller && round2.bodyFront === false, round2.front);
+  check('reading text: no highlighting without a search, no middle dot in the interface',
+    round2.marks === 0 && round2.middots === 0, { marks: round2.marks, middots: round2.middots });
+  check('position: no "n / N" counter above the list', !round2.counter);
+  check('panel in Lesen: only the assigned categories, nothing from an AI track',
+    round2.railCats.join('|') === 'AI_Literacies|Bias_Ungleichheit' && !round2.railAi, round2.railCats);
   const head = await reviewPage.evaluate((doi) => {
     const link = document.querySelector('.pt-paper-metadata .pt-doi-link');
     const dd = link && link.closest('dd');
@@ -1182,7 +1242,12 @@ try {
 
   await reviewPage.getByRole('button', { name: 'Bearbeiten', exact: true }).click();
   await reviewPage.waitForFunction(() => window.__PRISMA_TEST__.canEdit() && document.getElementById('pt-verdict-edit'));
-  const counter = await reviewPage.evaluate(() => ({ bar: document.querySelector('.pt-nav-tools .pt-ws-bar')?.textContent || '', done: !!document.querySelector('.pt-ws-done') }));
+  const editRail = await reviewPage.evaluate(() => ({
+    chips: document.querySelectorAll('#pt-assess-col .pt-dim .category-chip').length,
+    basis: document.getElementById('pt-text-basis')?.textContent
+  }));
+  check('panel in Bearbeiten: all ten toggles and the text basis of the draft', editRail.chips === 10 && editRail.basis === 'Textbasis: Volltext', editRail);
+  const counter =await reviewPage.evaluate(() => ({ bar: document.querySelector('.pt-nav-tools .pt-ws-bar')?.textContent || '', done: !!document.querySelector('.pt-ws-done') }));
   check('position bar: no "n von N erfasst" counter repeats the Erfasst facet', !counter.done && !/erfasst/.test(counter.bar), counter);
   const closed = await reviewPage.evaluate(() => ({ open: document.getElementById('pt-verdict-edit').open,
     visibleReason: !!Array.from(document.querySelectorAll('#pt-verdict-edit .pt-reason-chip')).find((b) => b.checkVisibility()) }));

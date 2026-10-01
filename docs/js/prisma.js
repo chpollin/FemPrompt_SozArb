@@ -37,6 +37,7 @@ const SOCIAL_CATS = [];
 const ALL_CATS = [];
 const CAT_LABELS = {};
 const CAT_DEFS = {};
+const CAT_NEGATIVE = {}; // codebook examples_negative, shown verbatim beside the toggle while editing
 const CAT_COLOR = {};
 const EXCLUSION_REASONS = [];
 const EXCLUSION_LABELS = {};
@@ -54,12 +55,13 @@ function applyCategorySchema() {
     SOCIAL_CATS.splice(0, SOCIAL_CATS.length, ...groups.perspective);
     ALL_CATS.splice(0, ALL_CATS.length, ...TECH_CATS, ...SOCIAL_CATS);
     EXCLUSION_REASONS.splice(0, EXCLUSION_REASONS.length, ...schema.exclusion_reasons);
-    [CAT_LABELS, CAT_DEFS, CAT_COLOR, EXCLUSION_LABELS].forEach(function(map) {
+    [CAT_LABELS, CAT_DEFS, CAT_NEGATIVE, CAT_COLOR, EXCLUSION_LABELS].forEach(function(map) {
         Object.keys(map).forEach(function(key) { delete map[key]; });
     });
     categories.forEach(function(category) {
         CAT_LABELS[category.key] = category.label;
         CAT_DEFS[category.key] = category.definition;
+        CAT_NEGATIVE[category.key] = Array.isArray(category.examples_negative) ? category.examples_negative.slice() : [];
         CAT_COLOR[category.key] = category.color;
     });
     const labels = schema.exclusion_reason_labels || {};
@@ -1487,9 +1489,29 @@ function authorDisplay(paper) {
 // is decoded once here, at its entry into the reader, never in the stored file whose
 // hash binds the source. One pass, so "&amp;lt;" becomes the literal "&lt;" of the PDF.
 function decodeConverterEntities(text) {
-    return String(text || '').replace(/&(amp|lt|gt);/g, function(match, name) {
+    return decodeConverterGlyphs(String(text || '').replace(/&(amp|lt|gt);/g, function(match, name) {
         return { amp: '&', lt: '<', gt: '>' }[name];
-    });
+    }));
+}
+
+// Docling writes glyphs of the publishers' symbol fonts without a Unicode mapping as
+// "/C" plus the glyph number, set off by spaces. The table holds only the numbers met
+// in the reading layer, each read off its context there: /C15 opens bulleted list items
+// (YDW5TX8M), /C19 is an acute accent before its letter ("Pok /C19 emon", "Letouz /C19 e"),
+// /C0 a minus and /C2 a multiplication sign in statistics (C83QEMBM), /C211 the copyright
+// sign of a SAGE footer (9WIGR47Y). An unknown number stays visible rather than guessed.
+const CONVERTER_GLYPHS = { 0: '−', 2: '×', 15: '•', 211: '©' };
+function decodeConverterGlyphs(text) {
+    return String(text || '')
+        // a bullet glyph after a list marker repeats the marker
+        .replace(/^(\s*[-*]\s+)\/C15\s+/gm, '$1')
+        .replace(/(\S) ?\/C19 ?([A-Za-z])/g, function(match, before, letter) {
+            return before + (letter + '́').normalize('NFC');
+        })
+        .replace(/ ?\/C0 (?=\d)/g, ' −')
+        .replace(/\/C(\d{1,3})(?![0-9])/g, function(match, number) {
+            return Object.prototype.hasOwnProperty.call(CONVERTER_GLYPHS, number) ? CONVERTER_GLYPHS[number] : match;
+        });
 }
 
 // Publisher cover pages (Taylor & Francis download sheet, ACM Digital Library sheet)
@@ -1681,11 +1703,68 @@ function glossaryPairs(lines, start) {
     return { pairs: pairs, next: k };
 }
 
-function renderMarkdown(md) {
+// Converted headings often keep the all-caps setting of the PDF ("ABSTRACT", "1 INTRODUCTION").
+// They are set in sentence case. Short words other than function words keep their
+// capitals, so "CCS CONCEPTS" reads "CCS concepts" and "AI LITERACY" keeps its "AI". A
+// letter-spaced heading ("A R T I C L E I N F O") has no recoverable word boundaries and
+// stays as written.
+const HEADING_KEEP_LOWER = /^(a|an|the|of|in|on|at|to|for|and|or|by|as|is|its|vs|und|der|die|das|den|dem|des|im|zu|zur|zum|von|mit|für|auf|aus|bei|ein)$/i;
+function headingCase(text) {
+    const value = String(text || '');
+    const letters = value.match(/\p{L}/gu) || [];
+    if (letters.length < 4 || /\p{Ll}/u.test(value) || /^(?:\p{Lu} ){2,}\p{Lu}(?!\p{L})/u.test(value.trim())) return value;
+    let first = true;
+    return value.split(/(\s+)/).map(function(word) {
+        if (!/\p{L}/u.test(word)) return word;
+        const bare = word.replace(/[^\p{L}]/gu, '');
+        let next = bare.length <= 3 && !HEADING_KEEP_LOWER.test(bare) ? word : word.toLowerCase();
+        if (first) next = next.replace(/\p{L}/u, function(ch) { return ch.toUpperCase(); });
+        first = false;
+        return next;
+    }).join('');
+}
+
+// Author and affiliation lines at the head of a converted full text are de-emphasised at
+// render time and stay in the text, so search and pins still reach them. A short block
+// counts when it names an author of the structured record or reads as an affiliation or
+// contact line. Only the lead of the text is examined: it ends at an introduction
+// heading, at the second long paragraph or after a fixed number of blocks.
+const FRONT_MATTER_LINE = /(^contact\b|universit|institut|department|dept\.|faculty|fakultät|school of|college|hochschule|centre|center for|laborator|e-?mail|corresponding|orcid|@|edited by|received|accepted|revised|published online|handling editor)/i;
+const BODY_START_HEADING = /^(?:\d+(?:\.\d+)*\.?\s+)?(introduction|einleitung|einführung|background|hintergrund|main)\b/i;
+const FRONT_LEAD_BLOCKS = 14;
+const FRONT_MAX_CHARS = 300;
+const FRONT_MAX_WORDS = 18;
+function authorSurnames(paper) {
+    return String((paper && paper.authors) || '').split(';').map(function(name) {
+        const parts = name.split(',');
+        const surname = parts.length > 1 ? parts[0] : name.trim().split(/\s+/).pop();
+        return String(surname || '').trim();
+    }).filter(function(name) { return name.replace(/[^\p{L}]/gu, '').length >= 3; });
+}
+function frontMatterTest(paper) {
+    const names = authorSurnames(paper).map(function(name) { return name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); });
+    const author = names.length ? new RegExp('(?:^|[^\\p{L}])(?:' + names.join('|') + ')(?!\\p{L})', 'u') : null;
+    return function(text) {
+        const value = String(text || '').trim();
+        if (!value || value.length > FRONT_MAX_CHARS || /^(keywords?|key words|schlüsselwörter)\b/i.test(value)) return false;
+        // a byline names the authors without ending as a sentence; a sentence about them is text
+        if (author && author.test(value) && !/[.!?]["')\]]?$/.test(value)) return true;
+        // an affiliation is a list of names and places, not a sentence; a contact address
+        // marks the line whatever its length
+        return FRONT_MATTER_LINE.test(value) && (value.indexOf('@') !== -1 || value.split(/\s+/).length <= FRONT_MAX_WORDS);
+    };
+}
+
+// opts.paper marks the Paper layer: only there are front matter and heading case read.
+function renderMarkdown(md, opts) {
     md = replaceGlyphNames(stripFrontmatter(md));
     let lines = md.split(/\r?\n/);
     let out = [], i = 0, inList = false;
     function closeList() { if (inList) { out.push('</ul>'); inList = false; } }
+    const paperLayer = !!(opts && opts.paper);
+    const isFront = paperLayer ? frontMatterTest(opts.paper) : function() { return false; };
+    let lead = paperLayer, blocks = 0, longParagraphs = 0;
+    function leadBlock() { if (lead && ++blocks > FRONT_LEAD_BLOCKS) lead = false; }
     while (i < lines.length) {
         const ln = lines[i];
         if (/^---\s*$/.test(ln)) {
@@ -1705,8 +1784,16 @@ function renderMarkdown(md) {
         const hm = ln.match(/^(#{1,6})\s+(.*)$/);
         if (hm) {
             closeList();
+            leadBlock();
+            if (lead && BODY_START_HEADING.test(hm[2].trim())) lead = false;
+            // an author name set as a heading is front matter, not a section
+            if (lead && hm[2].length <= 120 && hm[2].indexOf(':') === -1 && !FRONT_MATTER_LINE.test(hm[2]) && isFront(hm[2])) {
+                out.push('<p class="pt-doc-p pt-doc-front">' + inlineMd(hm[2]) + '</p>');
+                i++;
+                continue;
+            }
             const lvl = Math.min(hm[1].length, 4);
-            out.push('<h' + lvl + ' class="pt-doc-h' + lvl + '">' + inlineMd(hm[2]) + '</h' + lvl + '>');
+            out.push('<h' + lvl + ' class="pt-doc-h' + lvl + '">' + inlineMd(paperLayer ? headingCase(hm[2]) : hm[2]) + '</h' + lvl + '>');
             i++;
             if (GLOSSARY_HEADING.test(hm[2])) {
                 const glossary = glossaryPairs(lines, i);
@@ -1727,7 +1814,12 @@ function renderMarkdown(md) {
             continue;
         }
         const lm = ln.match(/^\s*[-*]\s+(.*)$/);
-        if (lm) { if (!inList) { out.push('<ul class="pt-doc-ul">'); inList = true; } out.push('<li>' + inlineMd(lm[1]) + '</li>'); i++; continue; }
+        if (lm) {
+            if (!inList) { out.push('<ul class="pt-doc-ul">'); inList = true; leadBlock(); }
+            out.push((lead && isFront(lm[1]) ? '<li class="pt-doc-front">' : '<li>') + inlineMd(lm[1]) + '</li>');
+            i++;
+            continue;
+        }
         const bm = ln.match(/^>\s?(.*)$/);
         if (bm) { closeList(); out.push('<blockquote class="pt-doc-q">' + inlineMd(bm[1]) + '</blockquote>'); i++; continue; }
         closeList();
@@ -1735,7 +1827,11 @@ function renderMarkdown(md) {
         while (i < lines.length && !/^\s*$/.test(lines[i]) && !/^#{1,6}\s/.test(lines[i]) &&
                !/^\s*[-*]\s/.test(lines[i]) && !/^---\s*$/.test(lines[i]) && !/^>\s?/.test(lines[i]) &&
                !isTableStart(lines, i)) { para.push(lines[i]); i++; }
-        out.push('<p class="pt-doc-p">' + inlineMd(para.join(' ')) + '</p>');
+        const text = para.join(' ');
+        leadBlock();
+        const front = lead && isFront(text);
+        if (lead && !front && text.length > 400 && ++longParagraphs >= 2) lead = false;
+        out.push('<p class="pt-doc-p' + (front ? ' pt-doc-front' : '') + '">' + inlineMd(text) + '</p>');
     }
     closeList();
     return out.join('');
@@ -2273,10 +2369,7 @@ function renderScreening() {
 // ---- left: corpus navigator with filters and full-text search ----
 
 function positionBarHtml() {
-    const rows = visibleRows();
-    const at = rows.findIndex(function(row) { return row.index === state.index; });
     let html = '<div class="pt-ws-bar">';
-    html += '<span class="pt-ws-pos" aria-label="Position in der Liste">' + (at === -1 ? '–' : (at + 1)) + ' / ' + rows.length + '</span>';
     if (canEdit() && !acceptanceMode) {
         const gate = saveGate(papers[state.index]);
         html += '<span class="pt-spacer"></span>';
@@ -2323,11 +2416,11 @@ function filtersHtml() {
         h += '</div>';
     }
     if (statusFilterAvailable() && state.statusFilter === 'offen') return h + '</div>';
+    // one compact wrapping row; the thin separator stands between Gegenstand and Perspektive
     h += '<div class="category-chips pt-cat-filter" role="group" aria-label="Nach Kategorien der aktuellen Annotation filtern">';
-    [['Gegenstand', TECH_CATS], ['Perspektive', SOCIAL_CATS]].forEach(function(group, index) {
+    [TECH_CATS, SOCIAL_CATS].forEach(function(group, index) {
         if (index) h += '<span class="chip-group-sep" aria-hidden="true"></span>';
-        h += '<span class="chip-group-label">' + group[0] + '</span>';
-        group[1].forEach(function(c) {
+        group.forEach(function(c) {
             h += categoryChipHtml(c, state.catFilter.indexOf(c) !== -1 ? 2 : 0, { compact: true, filter: true });
         });
     });
@@ -2585,7 +2678,7 @@ function applyReading(token, p, full, kdmd) {
     readingPending = false;
     docHtmlAi = kdmd ? renderMarkdown(splitDocLayers(kdmd).ai || '') : '';
     if (full && full.trim()) {
-        docHtmlPaper = renderMarkdown(paperBodyMarkdown(full, p));
+        docHtmlPaper = renderMarkdown(paperBodyMarkdown(full, p), { paper: p });
         currentTextSource = 'raw';
     } else if (abstractUsableForReading(p)) {
         docHtmlPaper = '<p class="pt-doc-p">' + inlineMd(replaceGlyphNames(p.abstract)) + '</p>';
@@ -3418,7 +3511,7 @@ function categoryChipHtml(cat, level, opts) {
     return '<button type="button" class="category-chip' + (opts.compact ? ' category-chip--compact' : '') +
         (opts.expertBasis ? ' pt-chip-expert' : '') + '" data-cat="' + EC.escapeHtml(cat) + '" data-level="' +
         (lvl === 1 ? 'teilweise' : (lvl === 2 ? 'ja' : 'nein')) + '" aria-pressed="' + pressed + '" style="--chip-color:' +
-        EC.escapeHtml(CAT_COLOR[cat] || '') + '" title="' + EC.escapeHtml(description.join(' ').trim()) + '"' +
+        EC.escapeHtml(CAT_COLOR[cat] || '') + '"' + (opts.inlineDefinition ? ' aria-describedby="pt-cat-def"' : ' title="' + EC.escapeHtml(description.join(' ').trim()) + '"') +
         (opts.disabled ? ' disabled' : '') + '>' +
         '<span class="chip-dot" aria-hidden="true"></span><span class="chip-label">' + EC.escapeHtml(CAT_LABELS[cat] || cat) + '</span>' +
         (lvl === 1 && !opts.filter ? '<span class="pt-sr-only">, teilweise</span>' : '') +
@@ -3540,11 +3633,63 @@ function referenceProposalsHtml(p, subject) {
     return h + '</section>';
 }
 
+// Lesen lists only the categories the record assigns; Bearbeiten offers all ten toggles.
 function dimHtml(label, keys, cats, editable, basis) {
     const headId = 'pt-dim-' + label.toLowerCase();
+    const shown = editable ? keys : keys.filter(function(c) { return catLevel(cats[c]) > 0; });
     return '<div class="pt-dim"><h3 class="pt-sub-head" id="' + headId + '">' + label + '</h3><div class="category-chips" role="group" aria-labelledby="' + headId + '">' +
-        keys.map(function(c) { return categoryChipHtml(c, cats[c], { disabled: !editable, expertBasis: !!(basis && basis[c]) }); }).join('') +
+        (shown.length ? shown.map(function(c) {
+            return categoryChipHtml(c, cats[c], { disabled: !editable, expertBasis: !!(basis && basis[c]), inlineDefinition: editable });
+        }).join('') : '<span class="pt-dim-none">keine</span>') +
         '</div></div>';
+}
+
+// The codebook text of one category, verbatim from category_schema.json: the definition
+// and what does not count (examples_negative). It fills the panel below the toggles while
+// a toggle has focus or the pointer.
+function categoryDefinitionHtml(cat) {
+    const negative = CAT_NEGATIVE[cat] || [];
+    return '<p class="pt-cat-def-name">' + EC.escapeHtml(CAT_LABELS[cat] || cat) + '</p>' +
+        '<p class="pt-cat-def-text">' + EC.escapeHtml(CAT_DEFS[cat] || '') + '</p>' +
+        (negative.length ? '<p class="pt-cat-def-neg"><span class="pt-cat-def-label">Zählt nicht:</span> ' +
+            negative.map(function(example) { return EC.escapeHtml(example); }).join('; ') + '</p>' : '');
+}
+
+function bindCategoryDefinitions(col) {
+    const panel = col.querySelector('#pt-cat-def');
+    if (!panel) return;
+    let hovered = null;
+    const show = function() {
+        const focused = document.activeElement && col.contains(document.activeElement) &&
+            document.activeElement.matches('.pt-dim .category-chip') ? document.activeElement : null;
+        const chip = hovered || focused;
+        if (!chip) { panel.hidden = true; panel.removeAttribute('data-cat'); return; }
+        if (panel.getAttribute('data-cat') !== chip.dataset.cat) {
+            panel.innerHTML = categoryDefinitionHtml(chip.dataset.cat);
+            panel.setAttribute('data-cat', chip.dataset.cat);
+        }
+        panel.hidden = false;
+    };
+    col.querySelectorAll('.pt-dim .category-chip').forEach(function(chip) {
+        chip.addEventListener('mouseenter', function() { hovered = chip; show(); });
+        chip.addEventListener('mouseleave', function() { if (hovered === chip) hovered = null; show(); });
+        chip.addEventListener('focus', show);
+        // the blur fires before the next element takes focus
+        chip.addEventListener('blur', function() { window.setTimeout(show, 0); });
+    });
+    show();
+}
+
+const TEXT_SOURCE_LABELS = { raw: 'Volltext', abstract: 'nur Abstract', none: 'kein Papertext' };
+
+// The text basis of what the panel shows: the stored text_source of an own record, the
+// text currently read for a draft. An expert prefill names none, since the earlier Excel
+// workflow did not record it.
+function textBasisHtml(subject, editable, record) {
+    let label = null;
+    if (editable) label = readingPending ? 'Text lädt' : TEXT_SOURCE_LABELS[currentTextSource];
+    else if (subject.kind === 'own' && record) label = TEXT_SOURCE_LABELS[record.text_source];
+    return label ? '<p class="pt-text-basis" id="pt-text-basis">Textbasis: ' + label + '</p>' : '';
 }
 
 function reasonChipsHtml(record, editable) {
@@ -3603,11 +3748,16 @@ function railHtml(p) {
     const verdict = expertAdoptedExclusion(record);
     if (verdict) h += verdictLineHtml(record);
     h += '<p class="pt-provenance" id="pt-provenance">' + EC.escapeHtml(provenance) + '</p>';
+    h += textBasisHtml(subject, editable, record);
     h += '<div class="pt-rail-body">';
     const cats = record ? (record.categories || {}) : {};
     const basis = record ? (record.evidence_basis || {}) : {};
-    h += dimHtml('Gegenstand', TECH_CATS, cats, editable, basis);
-    h += dimHtml('Perspektive', SOCIAL_CATS, cats, editable, basis);
+    // without a record, Lesen has no assignment to list
+    if (editable || (record && !(subject.kind === 'empty' && !work.dirty))) {
+        h += dimHtml('Gegenstand', TECH_CATS, cats, editable, basis);
+        h += dimHtml('Perspektive', SOCIAL_CATS, cats, editable, basis);
+    }
+    if (editable) h += '<div class="pt-cat-def" id="pt-cat-def" role="note" hidden></div>';
     if (record && verdict) {
         if (editable) h += '<details class="pt-verdict-edit" id="pt-verdict-edit"' + (verdictEditOpenFor === p.id ? ' open' : '') +
             '><summary>Ausschluss ändern</summary>' + overrideHtml(record, editable) + reasonChipsHtml(record, editable) + '</details>';
@@ -3620,7 +3770,7 @@ function railHtml(p) {
         h += analysisEntryHtml(record, editable);
     }
     h += referenceProposalsHtml(p, subject);
-    if (subject.kind === 'own' && isGovernedRecord(subject.record)) h += provenanceHtml(subject.record);
+    if (subject.kind === 'own' && isGovernedRecord(subject.record) && (runActor === 'agent' || acceptanceMode)) h += provenanceHtml(subject.record);
     h += '</div>';
     h += dockHtml(p, subject, editable);
     return h;
@@ -3901,6 +4051,7 @@ function bindAssess(p) {
         const entry = document.getElementById('pt-open-analysis'); if (entry) entry.focus();
     });
     if (!editable) return;
+    bindCategoryDefinitions(col);
     const verdictEdit = col.querySelector('#pt-verdict-edit');
     if (verdictEdit) verdictEdit.addEventListener('toggle', function() { verdictEditOpenFor = verdictEdit.open ? p.id : null; });
     attachAnalysisStep(col);

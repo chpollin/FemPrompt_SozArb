@@ -42,6 +42,11 @@ def test_public_category_schema_matches_canonical_yaml() -> None:
     ]
     assert all(item["definition"] for item in payload["categories"])
     assert all(item["label"] and item["color"] for item in payload["categories"])
+    gender = next(item for item in payload["categories"] if item["key"] == "Gender")
+    assert gender["examples_negative"] == [
+        "Demografische Daten enthalten Geschlecht, aber kein Gender-Fokus"
+    ]
+    assert all(item["examples_negative"] for item in payload["categories"])
 
 
 def test_committed_schema_is_reproducible() -> None:

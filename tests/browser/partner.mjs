@@ -126,6 +126,16 @@ try {
   paperId = await page.evaluate(() => window.EC.getAllPapers()[window.__PRISMA_TEST__.getState().index].id);
   const assigned = JSON.parse(readFileSync(join(root, 'docs/data/screening/assignment.json'), 'utf8')).assignments[paperId];
   check('4 list: Offen plus Zuteilung opens a paper assigned to the reviewer', assigned === key, { paperId, assigned });
+  // the codebook text of the real schema at the toggle under focus, and no position counter
+  await page.focus('#pt-assess-col .pt-dim .category-chip[data-cat="Gender"]');
+  const codebookPanel = await page.evaluate(async () => {
+    const gender = (await (await fetch('data/category_schema.json')).json()).categories.find((c) => c.key === 'Gender');
+    const panel = document.getElementById('pt-cat-def');
+    return { shown: !!panel && !panel.hidden && panel.textContent.includes(gender.definition) &&
+        gender.examples_negative.every((example) => panel.textContent.includes(example)),
+      counter: /\d+\s*\/\s*\d+/.test(document.querySelector('.pt-nav-tools').textContent) };
+  });
+  check('4b codebook: focus on Gender shows its definition and negative example, no "n / N" counter', codebookPanel.shown && !codebookPanel.counter, codebookPanel);
 
   // one Paper Beleg from the in-text search, then an exclusion reason, then the disk action
   const term = await page.evaluate(() => {
