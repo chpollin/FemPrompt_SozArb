@@ -333,9 +333,12 @@ EC.registerView('matrix', {
     title: function () { return 'Matrix'; },
     init: function (instance) {
         model = instance;
-        // The view container holding the matrix controls: #view-matrix in release.html,
-        // the Literaturbild section in index.html.
-        const root = document.getElementById('matrix-controls').closest('section');
+        // The view container holding the matrix controls is #view-matrix in release.html.
+        // The working application has its own Literaturbild (literaturbild.js) and uses
+        // only the shared helpers below, which need the model.
+        const controls = document.getElementById('matrix-controls');
+        if (!controls) return;
+        const root = controls.closest('section');
         root.addEventListener('change', function (event) {
             const target = event.target;
             const params = Object.assign({ view: 'matrix' }, matrixParams(EC.parseHash()), { cell: EC.parseHash().cell });

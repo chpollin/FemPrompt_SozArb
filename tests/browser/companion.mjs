@@ -218,27 +218,152 @@ try {
     await page.locator('#frage-root .matrix-wrap').count() === 0);
   check('no navigation tab is pressed on an answer page', await page.locator('.nav-view-btn[aria-pressed="true"]').count() === 0);
 
+  // Literaturbild, the evidence-and-gap map of literaturbild.js. The expected counts of
+  // the overview (expert categories against publication year, every identified Work)
+  // are recomputed here from the corpus file, independently of the module.
+  const recordsByWork = new Map();
+  vault.papers.forEach((p) => {
+    const id = p.work_id || p.id;
+    if (!recordsByWork.has(id)) recordsByWork.set(id, []);
+    recordsByWork.get(id).push(p);
+  });
+  const expectedCell = {};
+  recordsByWork.forEach((records) => {
+    const rep = records.find((p) => p.is_preferred_version) || records[0];
+    const year = rep.year ? String(rep.year) : 'oj';
+    const cats = new Set();
+    let coded = false;
+    records.forEach((p) => {
+      const h = p.benchmark && p.benchmark.has_human && p.human && p.human.all_categories;
+      if (!h) return;
+      coded = true;
+      Object.keys(h).forEach((key) => { if (h[key] === 1) cats.add(key); });
+    });
+    if (!coded) return;
+    (cats.size ? [...cats] : ['__none']).forEach((cat) => { expectedCell[cat + '|' + year] = (expectedCell[cat + '|' + year] || 0) + 1; });
+  });
+  const lbCells = () => page.locator('#lb-table button.lb-cell').evaluateAll((cells) =>
+    cells.map((cell) => ({ key: cell.dataset.row + '|' + cell.dataset.col, state: cell.dataset.state, count: Number(cell.dataset.count) })));
   await page.goto(`${base}/index.html#view=literaturbild`, { waitUntil: 'networkidle' });
-  await page.waitForSelector('#view-literaturbild #matrix-table');
-  check('Literaturbild shows the evidence-and-gap matrix',
+  await page.waitForSelector('#view-literaturbild #lb-table');
+  check('Literaturbild shows the evidence-and-gap map',
     await visibleView() === 'view-literaturbild' && await page.locator('#tab-literaturbild[aria-pressed="true"]').count() === 1);
-  check('the matrix shows n. b. while coding is open', await page.locator('#matrix-table td[data-state="undetermined"]').count() > 0);
-  await page.locator('#matrix-table button.matrix-cell[data-state="value"]').first().click();
-  await page.waitForSelector('#worklist:not([hidden])');
+  const overview = await lbCells();
+  const wrongCounts = overview.filter((cell) => cell.count !== (expectedCell[cell.key] || 0));
+  check('the overview counts Works per expert category and year as the corpus has them',
+    overview.length > 0 && wrongCounts.length === 0, JSON.stringify(wrongCounts.slice(0, 3)));
+  check('an empty cell is either a marked gap or not determinable, never blank',
+    overview.filter((cell) => !cell.count).every((cell) => cell.state === 'gap' || cell.state === 'open') &&
+    overview.some((cell) => cell.state === 'gap') && overview.some((cell) => cell.state === 'open'));
+  check('gap and n. b. cells differ in form and accessible name', await page.evaluate(() => {
+    const gap = document.querySelector('#lb-table button.lb-cell[data-state="gap"]');
+    const open = document.querySelector('#lb-table button.lb-cell[data-state="open"]');
+    return gap.getAttribute('aria-label').includes('Lücke') && open.getAttribute('aria-label').includes('nicht bestimmbar') &&
+      getComputedStyle(gap).backgroundImage.includes('gradient') && getComputedStyle(open).borderTopStyle === 'dotted';
+  }));
+  check('the active basis shows in its control', await page.locator('#lb-root [data-basis="alle"][aria-pressed="true"]').count() === 1 &&
+    (await page.locator('#lb-denom .lb-denom-main').innerText()).includes('identifizierten Werken'));
+  const offered = await page.locator('#lb-rows option').evaluateAll((options) => options.map((o) => o.value));
+  check('only dimensions with coverage are offered, codebook 1.4 fields not yet',
+    offered.includes('kategorie') && offered.includes('AN_Bias_Axes') && !offered.includes('AN_Task') && !offered.includes('AN_Coding_Basis'), offered.join());
+
+  await page.locator('#lb-rows').selectOption('AN_Bias_Axes');
+  await page.waitForFunction(() => new URLSearchParams(location.hash.slice(1)).get('rows') === 'AN_Bias_Axes');
+  check('a dimension switch re-renders the map and writes the hash',
+    (await page.locator('#lb-table .lb-corner').innerText()).startsWith('Bias-Achsen') && !hashParams().has('cell'));
+  check('AI-coded dimensions are labelled as such in the select and the denominator',
+    (await page.locator('#lb-rows option[value="AN_Bias_Axes"]').innerText()).includes('(KI)') &&
+    await page.locator('#lb-denom .lb-tag', { hasText: 'KI-codiert' }).count() === 1);
+  await page.locator('#lb-root [data-preset="sq2"]').click();
+  await page.waitForFunction(() => new URLSearchParams(location.hash.slice(1)).get('cols') === 'AN_Harm_Types');
+  check('a sub-question map sets both axes and shows as pressed',
+    await page.locator('#lb-root [data-preset="sq2"][aria-pressed="true"]').count() === 1 && hashParams().get('rows') === 'AN_Bias_Axes');
+
+  const valueCell = page.locator('#lb-table button.lb-cell[data-state="value"]').first();
+  const lbCount = Number(await valueCell.getAttribute('data-count'));
+  await valueCell.click();
+  await page.waitForSelector('#lb-detail:not([hidden])');
   const cellUrl = page.url();
-  check('a cell writes its state into the hash', hashParams().has('cell'));
+  check('a cell lists its contributing Works', hashParams().has('cell') && await page.locator("#lb-detail .lb-item").count() === lbCount);
+  check('each listed Work names author and year, decision and text basis and links to Korpus and PRISM', await page.evaluate(() =>
+    [...document.querySelectorAll('#lb-detail .lb-item')].every((item) =>
+      item.querySelector('.lb-item-title').getAttribute('href').startsWith('#view=korpus&paper=') &&
+      item.querySelector('.lb-prism').getAttribute('href').startsWith('prisma.html?paper=') &&
+      /(Include|Exclude|Unclear|offen)/.test(item.querySelector('.lb-item-meta').textContent) &&
+      /(Volltext|Abstract|kein)/.test(item.querySelector('.lb-item-meta').textContent))));
+  check('the selected cell keeps keyboard focus', await page.evaluate(() => document.activeElement.matches('button.lb-cell[aria-pressed="true"]')));
   await page.reload({ waitUntil: 'networkidle' });
-  await page.waitForSelector('#worklist:not([hidden])');
-  check('a matrix deep link survives reload', page.url() === cellUrl);
+  await page.waitForSelector('#lb-detail:not([hidden])');
+  check('dimensions and cell survive reload', page.url() === cellUrl && await page.locator('#lb-table button.lb-cell[aria-pressed="true"]').count() === 1);
   await page.goBack({ waitUntil: 'networkidle' });
-  await page.waitForFunction(() => document.getElementById('worklist').hidden);
-  check('Back closes the work list', !hashParams().has('cell'));
+  await page.waitForFunction(() => document.getElementById('lb-detail').hidden);
+  check('Back closes the work list', !hashParams().has('cell') && hashParams().get('cols') === 'AN_Harm_Types');
   await page.goForward({ waitUntil: 'networkidle' });
-  await page.waitForSelector('#worklist:not([hidden])');
+  await page.waitForSelector('#lb-detail:not([hidden])');
   check('Forward reopens it', page.url() === cellUrl);
 
-  const workHref = await page.locator('#worklist .work-title a').first().getAttribute('href');
-  await page.locator('#worklist .work-title a').first().click();
+  await page.locator('#lb-root [data-preset="ueberblick"]').click();
+  await page.locator('#lb-root [data-basis="include"]').click();
+  await page.waitForFunction(() => new URLSearchParams(location.hash.slice(1)).get('basis') === 'include');
+  check('the Include basis shows in its control and in the denominator',
+    await page.locator('#lb-root [data-basis="include"][aria-pressed="true"]').count() === 1 &&
+    (await page.locator('#lb-denom .lb-denom-main').innerText()).includes('eingeschlossenen Werken'));
+  const included = await lbCells();
+  check('under the Include basis no cell counts more than under all identified Works',
+    included.every((cell) => cell.count <= (expectedCell[cell.key] || 0)));
+  await page.locator('#lb-table button.lb-cell[data-state="gap"]').first().click();
+  await page.waitForSelector('#lb-detail:not([hidden])');
+  check('a gap cell opens and states the gap', (await page.locator('#lb-detail .lb-detail-count').innerText()).startsWith('Lücke'));
+  await page.reload({ waitUntil: 'networkidle' });
+  await page.waitForSelector('#lb-detail:not([hidden])');
+  check('basis and gap cell survive reload', hashParams().get('basis') === 'include' &&
+    await page.locator('#lb-table button.lb-cell[data-state="gap"][aria-pressed="true"]').count() === 1);
+
+  await page.locator('#lb-table button.lb-cell[data-ri="0"][data-ci="0"]').focus();
+  await page.keyboard.press('ArrowRight');
+  await page.keyboard.press('ArrowDown');
+  check('arrow keys move through the grid', await page.evaluate(() => document.activeElement.dataset.ri === '1' && document.activeElement.dataset.ci === '1'));
+  check('one cell is in the tab order', await page.locator('#lb-table button.lb-cell[tabindex="0"]').count() === 1);
+  await page.keyboard.press('Enter');
+  await page.waitForFunction(() => document.querySelector('#lb-table button.lb-cell[data-ri="1"][data-ci="1"]').getAttribute('aria-pressed') === 'true');
+  await page.keyboard.press('Escape');
+  await page.waitForFunction(() => document.getElementById('lb-detail').hidden);
+  check('Enter selects a cell and Escape clears it with focus kept in the grid',
+    !hashParams().has('cell') && await page.evaluate(() => document.activeElement.matches('button.lb-cell')));
+
+  await page.goto(`${base}/index.html#view=literaturbild&rows=AN_Bias_Axes&cols=AN_Harm_Types`, { waitUntil: 'networkidle' });
+  await page.waitForSelector('#lb-table');
+  await page.locator('#lb-table button.lb-cell[data-state="value"]').first().click();
+  await page.waitForSelector('#lb-detail:not([hidden])');
+  const korpusTitle = (await page.locator('#lb-detail .lb-item-title').first().innerText()).trim();
+  await page.locator('#lb-detail .lb-item-title').first().click();
+  await page.waitForSelector('#paper-modal.active');
+  check('a listed Work opens its Korpus detail', await visibleView() === 'view-korpus' &&
+    (await page.locator('#modal-title').innerText()).trim() === korpusTitle);
+  for (const width of [1440, 1280, 390]) {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto(`${base}/index.html#view=literaturbild&cell=Gender%7C2024`, { waitUntil: 'networkidle' });
+    await page.waitForSelector('#lb-detail:not([hidden])');
+    check(`at ${width} px the map scrolls only inside its own container and the controls fit`, await page.evaluate(() =>
+      document.documentElement.scrollWidth <= window.innerWidth + 1 &&
+      [...document.querySelectorAll('#lb-root .lb-controls > *')].every((node) => node.getBoundingClientRect().right <= window.innerWidth + 1)));
+  }
+  await page.setViewportSize({ width: 1440, height: 900 });
+
+  await page.goto(`${base}/index.html#view=frage&sq=2`, { waitUntil: 'networkidle' });
+  await page.waitForSelector('#frage-root .answer[data-sq="2"]');
+  const frageCell = page.locator('#frage-root a.matrix-cell').first();
+  if (await frageCell.count()) {
+    const target = new URLSearchParams((await frageCell.getAttribute('href')).slice(1));
+    await frageCell.click();
+    await page.waitForSelector('#lb-detail:not([hidden])');
+    check('a matrix cell of an answer page opens the same cell in Literaturbild',
+      await visibleView() === 'view-literaturbild' && hashParams().get('cell') === target.get('cell'));
+    await page.goto(`${base}/index.html#view=frage&sq=2`, { waitUntil: 'networkidle' });
+    await page.waitForSelector('#frage-root .answer[data-sq="2"]');
+  }
+  const workHref = await page.locator('#frage-werke .work-title a').first().getAttribute('href');
+  await page.locator('#frage-werke .work-title a').first().click();
   await page.waitForSelector('#werk-root .werk');
   check('the work view opens inside the page', workHref.startsWith('#view=werk&id=') && await visibleView() === 'view-werk');
   check('work categories use the shared chip markup', await page.locator('#werk-root .werk-categories .category-chip[data-cat]').count() > 0);
