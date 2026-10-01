@@ -1583,6 +1583,38 @@ function publisherCoverEnd(lines) {
     return end;
 }
 
+// Elsevier pre-proof PDFs repeat "Journal Pre-proof" as a page header, which the
+// conversion leaves as a heading, as a line of its own and glued to paragraph ends, so
+// the exact phrase is removed wherever it stands. "Accepted Manuscript" is removed only
+// as a line of its own, since in licence sentences and as the version value "Accepted
+// Manuscript (AM)" of a repository cover sheet it is text. Render time only.
+function withoutConverterBoilerplate(lines) {
+    return lines.filter(function(line) {
+        return !/^(?:#{1,6}\s+)?(?:Journal Pre-proof|Accepted Manuscript)\s*$/i.test(line.trim());
+    }).map(function(line) {
+        return line.indexOf('Journal Pre-proof') === -1 ? line : line.replace(/\s*Journal Pre-proof(?=\s|$)/g, '');
+    });
+}
+
+// Headings that may stand before the first body section without ending the front part,
+// as they occur in the reading layer (ACM classification, Royal Society front matter).
+const FRONT_HEADING = /^(?:abstract|zusammenfassung|kurzfassung|summary|key ?words?|schlüsselwörter|highlights|article info|ccs concepts|acm reference format|subject areas|author for correspondence)\b/i;
+
+// A heading that repeats the record title is dropped wherever it stands before the
+// first body section heading, since the structured title above the text carries it.
+// The comparison ignores case, punctuation and whitespace.
+function withoutTitleHeadings(lines, title) {
+    if (!title) return lines;
+    let front = true;
+    return lines.filter(function(line) {
+        const hm = front && line.trim().match(/^#{1,6}\s+(.*)$/);
+        if (!hm) return true;
+        if (normalizedLine(hm[1]) === title) return false;
+        if (!FRONT_HEADING.test(hm[1].trim())) front = false;
+        return true;
+    });
+}
+
 // Full-text sources vary between publisher Markdown and Docling output. Prefer an
 // explicit Abstract/Zusammenfassung heading near the document start. Otherwise only
 // remove a leading title and metadata lines that match the structured corpus record;
@@ -1595,14 +1627,15 @@ function paperBodyMarkdown(md, paper) {
         const candidate = urlOnlyLine(line);
         return !candidate || !sameSourceUrl(candidate, sourceUrl);
     });
+    lines = withoutConverterBoilerplate(lines);
+    const title = normalizedLine(paper && paper.title);
     const abstractAt = lines.findIndex(function(line, i) {
         return i < 100 && /^#{1,6}\s+(abstract|zusammenfassung|kurzfassung)\s*$/i.test(line.trim());
     });
-    if (abstractAt !== -1) return lines.slice(abstractAt).join('\n').trim();
+    if (abstractAt !== -1) return withoutTitleHeadings(lines.slice(abstractAt), title).join('\n').trim();
 
     lines = lines.slice(publisherCoverEnd(lines));
     while (lines.length && !lines[0].trim()) lines.shift();
-    const title = normalizedLine(paper && paper.title);
     if (lines.length && title && normalizedLine(lines[0]) === title) lines.shift();
     // Docling often sets the title as a heading below the journal line; the structured
     // title above the text already carries it
@@ -1610,6 +1643,7 @@ function paperBodyMarkdown(md, paper) {
         return i < 40 && /^#{1,6}\s/.test(line.trim()) && normalizedLine(line.trim().replace(/^#{1,6}\s+/, '')) === title;
     }) : -1;
     if (titleHeading !== -1) lines.splice(titleHeading, 1);
+    lines = withoutTitleHeadings(lines, title);
     while (lines.length && !lines[0].trim()) lines.shift();
     const known = [paper && paper.authors, paper && paper.author_year, paper && paper.journal]
         .map(normalizedLine).filter(Boolean);
@@ -1755,6 +1789,10 @@ function frontMatterTest(paper) {
     };
 }
 
+// The keyword segment must follow a finished sentence of the same paragraph, so a
+// paragraph that opens with "Keywords:" stays as the source sets it.
+const TRAILING_KEYWORDS = /^(.*\S[.!?)\]])\s+(?:KEYWORDS?|KEY WORDS|Keywords?|Key words)\s*[:：]\s*(\S.*)$/;
+
 // opts.paper marks the Paper layer: only there are front matter and heading case read.
 function renderMarkdown(md, opts) {
     md = replaceGlyphNames(stripFrontmatter(md));
@@ -1829,6 +1867,15 @@ function renderMarkdown(md, opts) {
                !isTableStart(lines, i)) { para.push(lines[i]); i++; }
         const text = para.join(' ');
         leadBlock();
+        // a keyword list the conversion glued to the end of the abstract gets its own line;
+        // only the last source line is read, so no following section is taken for keywords
+        const keywords = lead && para[para.length - 1].match(TRAILING_KEYWORDS);
+        if (keywords) {
+            out.push('<p class="pt-doc-p">' + inlineMd(para.slice(0, -1).concat(keywords[1]).join(' ')) + '</p>' +
+                '<p class="pt-doc-p pt-doc-keywords">Schlüsselwörter: ' + inlineMd(keywords[2]) + '</p>');
+            if (text.length > 400 && ++longParagraphs >= 2) lead = false;
+            continue;
+        }
         const front = lead && isFront(text);
         if (lead && !front && text.length > 400 && ++longParagraphs >= 2) lead = false;
         out.push('<p class="pt-doc-p' + (front ? ' pt-doc-front' : '') + '">' + inlineMd(text) + '</p>');
@@ -2416,13 +2463,14 @@ function filtersHtml() {
         h += '</div>';
     }
     if (statusFilterAvailable() && state.statusFilter === 'offen') return h + '</div>';
-    // one compact wrapping row; the thin separator stands between Gegenstand and Perspektive
-    h += '<div class="category-chips pt-cat-filter" role="group" aria-label="Nach Kategorien der aktuellen Annotation filtern">';
-    [TECH_CATS, SOCIAL_CATS].forEach(function(group, index) {
-        if (index) h += '<span class="chip-group-sep" aria-hidden="true"></span>';
-        group.forEach(function(c) {
+    // Gegenstand and Perspektive each wrap on their own, set apart by a gap
+    h += '<div class="pt-cat-filter" role="group" aria-label="Nach Kategorien der aktuellen Annotation filtern">';
+    [['Gegenstand', TECH_CATS], ['Perspektive', SOCIAL_CATS]].forEach(function(group) {
+        h += '<div class="pt-cat-filter-group" role="group" aria-label="' + group[0] + '">';
+        group[1].forEach(function(c) {
             h += categoryChipHtml(c, state.catFilter.indexOf(c) !== -1 ? 2 : 0, { compact: true, filter: true });
         });
+        h += '</div>';
     });
     h += '</div></div>';
     return h;
@@ -2471,7 +2519,7 @@ function corpusListHtml() {
             (tabStop ? '' : ' tabindex="-1"') +
             (active ? ' aria-current="true"' : '') + ' data-state="' + st + '" data-match-kind="' + EC.escapeHtml(result.kind || '') + '">' +
             '<span class="pt-nav-mark pt-mark-' + st + '" aria-hidden="true"></span>' +
-            '<span class="pt-nav-text"><span class="pt-nav-t">' + EC.escapeHtml(p.title || '(ohne Titel)') + '</span>' +
+            '<span class="pt-nav-text"><span class="pt-nav-t" title="' + EC.escapeHtml(p.title || '(ohne Titel)') + '">' + EC.escapeHtml(p.title || '(ohne Titel)') + '</span>' +
             '<span class="pt-nav-m">' + EC.escapeHtml(p.author_year || p.authors || 'Autor:in/Jahr unbekannt') +
             (who ? '<span class="pt-nav-assignee">, ' + EC.escapeHtml(who) + '</span>' : '') +
             (drafts[p.id] && drafts[p.id].dirty ? '<span class="pt-nav-draft">, nicht gespeichert</span>' : '') + '</span>' +
@@ -2529,6 +2577,11 @@ function bindCorpusItems() {
 
 function bindFilters() {
     const filters = document.querySelector('.pt-nav .pt-list-filters'); if (!filters) return;
+    // a label that does not fit its column takes the whole row instead of being cut
+    filters.querySelectorAll('.pt-cat-filter-group .category-chip').forEach(function(chip) {
+        const label = chip.querySelector('.chip-label');
+        if (label && label.scrollWidth > label.clientWidth) chip.classList.add('is-wide');
+    });
     filters.querySelectorAll('[data-status]').forEach(function(btn) {
         btn.addEventListener('click', function() {
             state.statusFilter = btn.dataset.status;
@@ -3596,14 +3649,21 @@ function evidenceRowsHtml(record, editable) {
                     '" aria-label="Beleg zu ' + EC.escapeHtml(CAT_LABELS[c]) + ' entfernen">&times;</button>' : '') + '</li>');
         });
     });
+    // a label line with the categories as small chips beneath it
     const summary = function(cats, cls, text) {
         if (!cats.length) return;
-        rows.push('<li class="pt-evid-row pt-evid-summary ' + cls + '"><span class="pt-evid-snip">' + text + ' ' +
-            cats.map(function(c) { return '<span class="pt-evid-named">' + dotOf(c) + EC.escapeHtml(CAT_LABELS[c]) + '</span>'; }).join(' ') +
-            '</span></li>');
+        rows.push('<li class="pt-evid-summary ' + cls + '"><span class="pt-evid-label">' + text + '</span>' +
+            '<span class="pt-evid-chips">' + cats.map(function(c) {
+                return '<span class="category-chip category-chip--compact" style="--chip-color:' + EC.escapeHtml(CAT_COLOR[c] || '') + '">' +
+                    '<span class="chip-dot" aria-hidden="true"></span><span class="chip-label">' + EC.escapeHtml(CAT_LABELS[c]) + '</span></span>';
+            }).join('') + '</span></li>');
     };
-    summary(expertOnly, 'is-basis', 'Expert:innen-Urteil, ohne Textbeleg:');
-    if (!editable) summary(missing, 'is-missing', 'Paper-Beleg fehlt:'); // while editing, the dock hint names it
+    if (!rows.length && expertOnly.length && !missing.length) {
+        rows.push('<li class="pt-evid-summary is-basis"><span class="pt-evid-label">Alle Kategorien ohne Textbeleg (Expert:innen-Urteil)</span></li>');
+    } else {
+        summary(expertOnly, 'is-basis', 'Expert:innen-Urteil, ohne Textbeleg');
+    }
+    if (!editable) summary(missing, 'is-missing', 'Paper-Beleg fehlt'); // while editing, the dock hint names it
     if (!rows.length) return '';
     return '<section class="pt-evid" aria-labelledby="pt-evid-title"><h3 class="pt-sub-head" id="pt-evid-title">Belege</h3><ul class="pt-evid-list">' + rows.join('') + '</ul></section>';
 }
@@ -4664,7 +4724,7 @@ const TEST_HOOK = {
     EXCLUSION_REASONS: EXCLUSION_REASONS, SEED: SEED, REVIEWER_SCHEMA: REVIEWER_SCHEMA,
     // decision logic
     deriveDecision: deriveDecision, finalDecisionOf: finalDecisionOf, divergent: divergent,
-    abstractQuality: abstractQuality, evidenceCount: evidenceCount,
+    abstractQuality: abstractQuality, evidenceCount: evidenceCount, evidenceRowsHtml: evidenceRowsHtml,
     aiProposal: aiProposal, humanDecision: humanDecision, expertAssessment: expertAssessment,
     // aggregation
     computeFlow: computeFlow,

@@ -157,9 +157,17 @@ body.pt-fullscreen [hidden] { display: none !important; }
 
 .pt-list-filters { display: grid; gap: 0.45rem; padding: 0.15rem 0.75rem 0.5rem; }
 .pt-seg-row { display: flex; flex-wrap: wrap; gap: 0.4rem; justify-self: start; }
-.pt-cat-filter { gap: 0.2rem; }
-.pt-cat-filter .chip-group-sep { height: 0.9rem; margin: 0 0.15rem; background: var(--pt-border-2); }
-.pt-cat-filter .category-chip--compact { padding: 0 0.38rem 0 0.3rem; min-height: 1.3rem; gap: 0.25rem; font-size: 0.66rem; }
+/* one grid of two columns, each as wide as its widest chip, so the chips align and share
+   their column width; each group starts on a new row, and the second is set apart by a
+   spacer row instead of a separator glyph. A label that still does not fit takes both
+   columns (bindFilters). */
+.pt-cat-filter { display: grid; grid-template-columns: repeat(2, minmax(0, max-content)); justify-content: start; gap: 0.2rem; }
+.pt-cat-filter-group { display: contents; }
+.pt-cat-filter-group + .pt-cat-filter-group::before { content: ""; grid-column: 1 / -1; height: 0.2rem; }
+.pt-cat-filter-group > :first-child { grid-column-start: 1; }
+.pt-cat-filter .category-chip--compact { min-width: 0; padding: 0 0.3rem 0 0.25rem; min-height: 1.3rem; gap: 0.2rem; font-size: 0.66rem; }
+.pt-cat-filter .chip-label { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pt-cat-filter .category-chip.is-wide { grid-column: 1 / -1; }
 .pt-cat-filter .category-chip--compact .chip-dot { width: 7px; height: 7px; }
 
 .pt-corpus-search { padding: 0 0.75rem 0.5rem; }
@@ -287,6 +295,7 @@ body.pt-fullscreen [hidden] { display: none !important; }
 .pt-doc-p { margin: 0 0 0.9rem; text-wrap: pretty; }
 /* author, affiliation and contact lines at the head of a full text, kept but set back */
 .pt-doc .pt-doc-front { font-family: var(--pt-sans); font-size: var(--pt-xs); line-height: 1.45; color: var(--pt-ink-3); margin-bottom: 0.35rem; }
+.pt-doc .pt-doc-keywords { font-family: var(--pt-sans); font-size: var(--pt-xs); line-height: 1.45; color: var(--pt-ink-3); }
 .pt-doc-ul { margin: 0 0 0.9rem; padding-left: 1.3rem; }
 .pt-doc-ul li { margin-bottom: 0.35rem; }
 .pt-doc-q { margin: 0 0 0.9rem; padding: 0.4rem 0.9rem; border-left: 3px solid var(--pt-border-2); color: var(--pt-ink-2); font-style: italic; }
@@ -357,11 +366,12 @@ body.pt-fullscreen [hidden] { display: none !important; }
 .pt-evid-row { display: flex; align-items: center; gap: 0.35rem; min-width: 0; font-size: var(--pt-xs); line-height: 1.35; }
 .pt-evid-cat { flex: none; font-weight: 600; color: var(--pt-ink); }
 .pt-evid-snip { min-width: 0; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--pt-ink-2); font-family: var(--pt-serif); }
-.pt-evid-summary .pt-evid-snip { white-space: normal; font-family: var(--pt-sans); line-height: 1.5; }
-.pt-evid-row.is-basis .pt-evid-snip { color: var(--pt-ink-3); }
-.pt-evid-row.is-missing .pt-evid-snip { color: var(--pt-warn-ink); font-weight: 600; }
-.pt-evid-named { display: inline-flex; align-items: center; gap: 0.2rem; margin-right: 0.35rem; color: var(--pt-ink-2); white-space: nowrap; }
-.pt-evid-named .chip-dot { width: 7px; height: 7px; }
+.pt-evid-summary { display: grid; gap: 0.2rem; margin-top: 0.2rem; font-size: var(--pt-xs); line-height: 1.35; }
+.pt-evid-summary.is-basis .pt-evid-label { color: var(--pt-ink-3); }
+.pt-evid-summary.is-missing .pt-evid-label { color: var(--pt-warn-ink); font-weight: 600; }
+.pt-evid-chips { display: flex; flex-wrap: wrap; gap: 0.2rem; }
+.pt-evid-chips .category-chip--compact { padding: 0 0.38rem 0 0.3rem; min-height: 1.3rem; gap: 0.25rem; font-size: 0.66rem; }
+.pt-evid-chips .chip-dot { width: 7px; height: 7px; }
 .pt-evid-origin { flex: none; font-size: var(--pt-2xs); font-weight: 600; padding: 0 0.3rem; border: 1px solid var(--pt-ai-line); border-radius: var(--pt-r-sm); background: var(--pt-ai-bg); color: var(--pt-ai); }
 .pt-evid-x { flex: none; border: none; background: none; color: var(--pt-ink-3); cursor: pointer; font-size: var(--pt-md); line-height: 1; padding: 0 2px; }
 .pt-evid-x:hover { color: var(--pt-exclude); }

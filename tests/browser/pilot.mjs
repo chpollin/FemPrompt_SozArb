@@ -1276,6 +1276,89 @@ try {
   check('review fixes: no script errors', reviewErrors.length === 0, reviewErrors);
   await reviewContext.close();
 
+  // third UI round of 1 October 2026: a pre-proof text as the reading layer has it for
+  // VP6SXQHY, with the record title repeated as a heading after the abstract, the keyword
+  // list and the page header glued to the abstract, and an expert decision without Belege
+  const preproofContext = await browser.newContext({ viewport: { width: 1440, height: 900 }, locale: 'de-AT' });
+  await installFixtureRoutes(preproofContext);
+  const preproofTitle = 'Pilot paper D: a canvas for assessing literacy';
+  const preproofVault = JSON.parse(fixture('vault.json'));
+  preproofVault.papers.push({ id: 'PILOT-D', title: preproofTitle, author_year: 'Pilot (2025)', authors: 'Pilot, Paula', year: 2025,
+    doi: '', url: '', abstract: '', item_type: 'journalArticle', journal: 'Pilot Horizons',
+    human: { decision: 'Include', categories: ['AI_Literacies', 'Soziale_Arbeit'],
+      all_categories: { AI_Literacies: 1, Generative_KI: 0, Prompting: 0, KI_Sonstige: 0, Soziale_Arbeit: 1, Bias_Ungleichheit: 0, Gender: 0, Diversitaet: 0, Feministisch: 0, Fairness: 0 } } });
+  const preproofManifest = JSON.parse(fixture('fulltext_manifest.json'));
+  preproofManifest['PILOT-D'] = { src: 'clean', chars: 900, source_file: 'pilot_d_fixture.md' };
+  const preproofText = ['## Journal Pre-proof', '', preproofTitle, '', '## ' + preproofTitle.toUpperCase().replace(':', ' :'), '',
+    'Paula Pilot * Corresponding author Journal Pre-proof', '', '## ABSTRACT', '',
+    'Organisations must build literacy across all levels. KEYWORDS : AI literacy; Upskilling; Digital transformation Journal Pre-proof', '',
+    '## ' + preproofTitle, '', '## 1. The case for literacy', '',
+    'Literacy is no longer optional. Journal Pre-proof', '', 'Journal Pre-proof', '', 'A second paragraph keeps its text.'].join('\n');
+  await preproofContext.route('**/data/research_vault_v2.json', (route) => route.fulfill({ contentType: 'application/json', body: JSON.stringify(preproofVault) }));
+  await preproofContext.route('**/data/fulltext_manifest.json', (route) => route.fulfill({ contentType: 'application/json', body: JSON.stringify(preproofManifest) }));
+  await preproofContext.route('**/data/fulltext/PILOT-D.md', (route) => route.fulfill({ contentType: 'text/markdown', body: preproofText }));
+  const preproofPage = await preproofContext.newPage();
+  const preproofErrors = [];
+  preproofPage.on('pageerror', (e) => preproofErrors.push(String(e)));
+  await preproofPage.goto(base + '/prisma.html?paper=PILOT-D');
+  await preproofPage.waitForFunction(() => window.__PRISMA_TEST__ && document.querySelector('#pt-doc .pt-doc-p'), null, { timeout: 15000 });
+  const round3 = await preproofPage.evaluate(() => {
+    const doc = document.getElementById('pt-doc');
+    const keywords = Array.from(doc.querySelectorAll('.pt-doc-keywords'));
+    const abstract = Array.from(doc.querySelectorAll('p.pt-doc-p')).find((p) => p.textContent.startsWith('Organisations must'));
+    const evid = document.querySelector('#pt-assess-col .pt-evid');
+    return {
+      heads: Array.from(doc.querySelectorAll('h1, h2, h3, h4')).map((h) => h.textContent),
+      abstract: abstract && abstract.textContent,
+      keywords: keywords.map((k) => k.textContent),
+      keywordsMuted: keywords.length > 0 && abstract && parseFloat(getComputedStyle(keywords[0]).fontSize) < parseFloat(getComputedStyle(abstract).fontSize) &&
+        getComputedStyle(keywords[0]).color !== getComputedStyle(abstract).color,
+      preproof: (doc.textContent.match(/Journal Pre-proof/g) || []).length,
+      kept: doc.textContent.includes('Literacy is no longer optional.') && doc.textContent.includes('A second paragraph keeps its text.'),
+      evidence: evid ? Array.from(evid.querySelectorAll('li')).map((li) => li.textContent) : null,
+      evidenceChips: evid ? evid.querySelectorAll('.category-chip').length : -1
+    };
+  });
+  check('title: a heading repeating the record title after the abstract is dropped, the first section stays',
+    round3.heads.join('|') === 'Abstract|1. The case for literacy', round3.heads);
+  check('keywords: the trailing keyword segment leaves the abstract as its own muted line',
+    round3.abstract === 'Organisations must build literacy across all levels.' &&
+      round3.keywords.join('|') === 'Schlüsselwörter: AI literacy; Upskilling; Digital transformation' && round3.keywordsMuted, round3);
+  check('boilerplate: "Journal Pre-proof" is gone as heading, line and paragraph end, the text around it stays',
+    round3.preproof === 0 && round3.kept, { preproof: round3.preproof, kept: round3.kept });
+  check('Belege: an expert decision without any Beleg reads as one line',
+    JSON.stringify(round3.evidence) === JSON.stringify(['Alle Kategorien ohne Textbeleg (Expert:innen-Urteil)']) && round3.evidenceChips === 0, round3.evidence);
+  const mixed = await preproofPage.evaluate(() => {
+    const box = document.createElement('div');
+    box.innerHTML = window.__PRISMA_TEST__.evidenceRowsHtml({
+      categories: { AI_Literacies: 2, Gender: 2, Fairness: 2 },
+      evidence: { Gender: [{ snippet: 'gendered scripts of care', source_layer: 'paper', actor: 'human' }] },
+      evidence_basis: { AI_Literacies: 'expert_assessment', Fairness: 'expert_assessment' }
+    }, false);
+    const row = box.querySelector('.pt-evid-summary.is-basis');
+    return row ? { label: row.querySelector('.pt-evid-label')?.textContent,
+      chips: Array.from(row.querySelectorAll('.pt-evid-chips .category-chip')).map((c) => c.textContent), bullets: /•/.test(row.textContent) } : null;
+  });
+  check('Belege: categories without a Beleg beside pinned ones stand as a label line with category chips beneath',
+    mixed && mixed.label === 'Expert:innen-Urteil, ohne Textbeleg' && mixed.chips.join('|') === 'AI Literacies|Fairness' && !mixed.bullets, mixed);
+  const listEntry = await preproofPage.evaluate((title) => {
+    const t = document.querySelector('#pt-corpus-list .pt-nav-item.active .pt-nav-t');
+    const groups = Array.from(document.querySelectorAll('.pt-cat-filter-group'));
+    const chips = Array.from(document.querySelectorAll('.pt-cat-filter .category-chip'));
+    return { tooltip: t && t.getAttribute('title') === title, name: t && t.closest('button').textContent.startsWith(title),
+      groups: groups.map((g) => g.getAttribute('aria-label') + ':' + g.querySelectorAll('.category-chip').length),
+      separator: !!document.querySelector('.pt-cat-filter .chip-group-sep'),
+      heights: [...new Set(chips.map((c) => Math.round(c.getBoundingClientRect().height)))].length,
+      clipped: chips.filter((c) => { const l = c.querySelector('.chip-label'); return l.scrollWidth > l.clientWidth; }).length };
+  }, preproofTitle);
+  check('list: the full title is the native tooltip and opens the accessible name', listEntry.tooltip && listEntry.name, listEntry);
+  check('category filter: Gegenstand and Perspektive as two groups without a separator glyph, chips of one height, no label cut',
+    listEntry.groups.join('|') === 'Gegenstand:4|Perspektive:6' && !listEntry.separator && listEntry.heights === 1 && listEntry.clipped === 0, listEntry);
+  await preproofPage.screenshot({ path: join(outDir, '11-preproof-lesen.png') });
+  trace.screenshots.push('11-preproof-lesen.png');
+  check('third round: no script errors', preproofErrors.length === 0, preproofErrors);
+  await preproofContext.close();
+
   // 9 the pending-reading gate and the out-of-order load, each in a fresh profile so the
   // full-text cache is empty and the delayed route is really in flight
   const delayedContext = async () => {
