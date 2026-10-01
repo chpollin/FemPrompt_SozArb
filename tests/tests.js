@@ -115,7 +115,7 @@ test('read mode blocks annotation, analysis, reviewer imports and persistence ev
     var stored = localStorage.getItem(LS_KEY);
     T.pinEvidence('Gender', 'gender', 'gender evidence', 'human');
     T.unpinEvidence('Gender', 0);
-    T.editRecord({ id: 'readPaper' });
+    T.saveCurrent();
     T.setAnalysis('readPaper', { fields: { Studientyp: 'Empirisch' } });
     T.commit(); T.save();
     assertEqual(T.importReviewerPayload({ decisions: { imported: { decision: 'Exclude' } } }, 'reader', true).reason, 'read-only');
@@ -235,11 +235,11 @@ test('computeFlow on an empty corpus returns zeroed lanes', function() {
     assertEqual(f.total, 0); assertEqual(f.aiScreened, 0); assertEqual(f.humanScreened, 0);
     assertEqual(Object.keys(f.humanReasons).length, 0);
 });
-test('humanDecision / aiProposal / seedDecision return null for missing tracks', function() {
+test('humanDecision / aiProposal / expertAssessment return null for missing tracks', function() {
     assertEqual(T.humanDecision({ id: 'x' }, T.SEED), null);
     assertEqual(T.humanDecision({ id: 'x' }, 'unknownReviewer'), null);
     assertEqual(T.aiProposal({ id: 'x' }), null);
-    assertEqual(T.seedDecision({ id: 'x' }), null);
+    assertEqual(T.expertAssessment({ id: 'x' }), null);
 });
 test('humanDecision (reviewer perspective) carries reason and source', function() {
     T.getState().reviewers.r2 = { px: { decision: 'Exclude', reason: 'Duplicate', categories: { Gender: true } } };
@@ -348,14 +348,16 @@ test('DOI metadata normalizes resolver forms and renders a safe compact link', f
     assertContains(html, 'href="https://doi.org/10.1234/example.test"');
     assertContains(html, 'target="_blank" rel="noopener noreferrer"');
     assertContains(html, '>10.1234/example.test</a>');
-    assertContains(html, '<dt>Paper-ID</dt><dd class="mono">doi-paper</dd>', 'operational identity remains visible beside the DOI');
+    assertNotContains(html, 'doi-paper', 'internal identifiers stay out of the interface');
+    assertNotContains(html, '<details', 'the reading header has no disclosure element');
 });
 test('reading shell labels the generated reference as LLM-Wissensdestillat', function() {
     var html = T.readingShellHtml({ id: 'layer-paper', title: 'Layer paper', abstract: new Array(140).join('a') }, null);
     assertContains(html, '>LLM-Wissensdestillat</button>');
-    assertContains(html, 'LLM-Wissensdestillat aus dem Wissensdokument');
+    assertContains(html, '>Papertext</button>');
+    assertContains(html, 'LLM-Wissensdestillat, nicht der Papertext. Belege von hier zählen nicht als Paper-Beleg.');
     assertNotContains(html, 'KI-Extraktion');
-    assertContains(html, 'class="pt-reading-surface" aria-label="Papertext"');
+    assertContains(html, 'class="pt-reading-surface" id="pt-reading-surface" aria-label="Papertext"');
 });
 test('reading shell identifies preparation knowledge as unreviewed LLM work', function() {
     var html = T.readingShellHtml({
@@ -364,8 +366,8 @@ test('reading shell identifies preparation knowledge as unreviewed LLM work', fu
         abstract: new Array(140).join('a'),
         knowledge_authority: { status: 'preparation' }
     }, null);
-    assertContains(html, 'LLM-Ausarbeitung, noch nicht separat geprüft.');
-    assertNotContains(html, 'LLM-Wissensdestillat aus dem Wissensdokument');
+    assertContains(html, 'LLM-Ausarbeitung, noch nicht geprüft');
+    assertNotContains(html, 'LLM-Wissensdestillat, nicht der Papertext');
 });
 test('web source URLs move to metadata and repeated URL-only lines leave the paper body', function() {
     var canonical = 'https://www.articulate.com/blog/how-to-create-inclusive-ai-images-a-guide-to-bias-free-prompting/';
@@ -392,14 +394,14 @@ test('corpus search ranks an exact title first and labels unambiguous match kind
     assertEqual(results.map(function(x) { return x.paper.id; }).join('|'), 'S1|S2|S3');
     assertEqual(results.map(function(x) { return x.kind; }).join('|'), 'Exakter Titel|Titel|Autor:in/Jahr');
 });
-test('corpus search shows the matched Paper-ID even when the record also has a DOI', function() {
+test('corpus search names a Paper-ID match without showing internal identifiers', function() {
     T.setPapers([{ id: 'S-DOI', title: 'Identified paper', author_year: 'A (2024)', doi: '10.1/identified' }]);
     T.setCorpusIndex({ 'S-DOI': { x: 'body' } });
     T.setCorpusQuery('S-DOI');
     var html = T.corpusListHtml();
-    assertContains(html, 'ID S-DOI');
-    assertContains(html, '>Paper-ID</span>');
-    assertNotContains(html, 'DOI 10.1/identified', 'the identity search result shows the value that matched');
+    assertContains(html, '>Paper-ID</span>', 'the match kind is named');
+    assertNotContains(html, 'ID S-DOI', 'the identifier itself is not displayed');
+    assertNotContains(html, 'DOI 10.1/identified', 'the DOI appears only for a DOI match');
     T.setCorpusQuery('');
 });
 
@@ -512,6 +514,8 @@ test('a loaded 0.5 agent envelope round-trips status, ratification, metadata, an
     assertEqual(written.decisions.p04.lifecycle.baseline.state, 'agent-annotated');
     assert(written.updated !== source.updated, 'only the updated field is refreshed');
     delete T.getState().reviewers.a04;
+    T.setReviewerEnvelope('a04', null);
+    T.setServedAgentEnvelope(null);
 });
 test('file/browser recovery merge keeps the newer record and every local-only record', function() {
     var merged = T.mergeReviewerDecisions(
@@ -639,9 +643,10 @@ test('commit: every selected category requires a paper-layer Beleg', function() 
     T.commit();
     assert(T.curDec()['c-evidence'], 'record is stored after every selected category has paper evidence');
 });
-test('exclusion reason vocabulary is the controlled five-value set', function() {
+test('exclusion reason vocabulary is the controlled set with the expert confirmation reason (ADR-042)', function() {
     assertEqual(T.EXCLUSION_REASONS.join('|'),
-        'Duplicate|Not_relevant_topic|Wrong_publication_type|No_full_text|Language');
+        'Duplicate|Not_relevant_topic|Wrong_publication_type|No_full_text|Language|Consolidated_expert_exclusion');
+    assertEqual(T.EXPERT_EXCLUSION_REASON, 'Consolidated_expert_exclusion');
 });
 test('disclosureMarkdown covers the screening count and references external M9/R2 evaluation (ADR-017)', function() {
     T.setPapers([
@@ -667,21 +672,23 @@ test('pinEvidence separates paper source from the acting reviewer', function() {
     assertEqual(T.getWork().evidence.Gender[0].source_layer, 'paper');
     assertEqual(T.getWork().evidence.Gender[0].actor, 'human');
 });
-test('evidenceListHtml labels paper and LLM-distillate evidence by source layer', function() {
+test('evidenceListHtml marks only deviating evidence sources (LLM layer, agent actor)', function() {
     var ev = {
         Gender: [{ term: 'h', snippet: 'human snippet', origin: 'human' }],
-        Prompting: [{ term: 'a', snippet: 'ai snippet', origin: 'ai' }]
+        Prompting: [{ term: 'a', snippet: 'ai snippet', origin: 'ai' }],
+        Fairness: [{ term: 'g', snippet: 'agent snippet', source_layer: 'paper', actor: 'agent' }]
     };
     var html = T.evidenceListHtml(ev, true);
-    assertContains(html, 'pt-evid-origin-human">Paper');
-    assertContains(html, 'pt-evid-origin-ai">LLM');
+    assertContains(html, '<span class="pt-evid-origin">LLM</span>');
+    assertContains(html, '<span class="pt-evid-origin">Agent</span>');
+    assertEqual((html.match(/pt-evid-origin/g) || []).length, 2, 'an ordinary Paper pin carries no origin mark');
     assertContains(html, 'human snippet');
     assertContains(html, 'ai snippet');
 });
 test('evidenceListHtml defaults a legacy Beleg without provenance to the paper layer', function() {
     var html = T.evidenceListHtml({ Fairness: [{ term: 'x', snippet: 'legacy snippet' }] }, true);
-    assertContains(html, 'pt-evid-origin-human">Paper');
-    assertNotContains(html, 'pt-evid-origin-ai');
+    assertContains(html, 'legacy snippet');
+    assertNotContains(html, '>LLM<');
 });
 // ============================================================
 // M3: reading-column layer split and binding separation (ADR-016)
@@ -768,7 +775,7 @@ test('an LLM-distillate Beleg is stored, labelled, and stays advisory', function
     var w = T.getWork();
     assertEqual(w.evidence[sc][0].origin, 'ai');
     assert(!w.cats[sc], 'AI Beleg does not set the category');
-    assertContains(T.evidenceListHtml(w.evidence, false), 'pt-evid-origin-ai">LLM');
+    assertContains(T.evidenceListHtml(w.evidence, false), '<span class="pt-evid-origin">LLM</span>');
 });
 
 // ============================================================
@@ -899,8 +906,8 @@ test('reviewer schema 0.1 to current: a pre-evidence file loads and is written b
     assertEqual(T.evidenceCount(file.decisions.mg1), 0, 'missing evidence map reads as zero, no throw');
     // a legacy Beleg without origin renders as a human pin (ADR-015 backward compatibility)
     var html = T.evidenceListHtml(file.decisions.mg2.evidence, true);
-    assertContains(html, 'pt-evid-origin-human">Paper');
-    assertNotContains(html, 'pt-evid-origin-ai');
+    assertContains(html, 'legacy beleg, no origin');
+    assertNotContains(html, '>LLM<');
     // re-exporting stamps the current schema, completing the upgrade to 0.3
     assertEqual(T.reviewerPayload('old').schema, 'femprompt-prisma-reviewer/0.4');
     delete S.reviewers.old;
@@ -1025,37 +1032,42 @@ test('backup validation requires schema 0.1-0.3, known paper ids and valid decis
 // Section I: accessibility (Cut 3) and screenable entry (O4)
 // ============================================================
 
-test('chipHtml exposes state and a separately focusable definition control', function() {
+test('the category toggle is the shared chip with a pressed state, a colour and its definition (ADR-042)', function() {
     var ja = T.chipHtml('AI_Literacies', true, false);
-    assertContains(ja, ', ja"');
-    assertContains(ja, 'data-level="2"');
+    assertContains(ja, 'class="category-chip"');
+    assertContains(ja, 'aria-pressed="true"');
+    assertContains(ja, 'data-level="ja"');
+    assertContains(ja, '--chip-color:#5b8c5a');
     var nein = T.chipHtml('AI_Literacies', false, false);
-    assertContains(nein, ', nein"');
-    assertContains(nein, 'data-level="0"');
+    assertContains(nein, 'aria-pressed="false"');
+    assertContains(nein, 'data-level="nein"');
     var teil = T.chipHtml('AI_Literacies', 1, false);
-    assertContains(teil, ', teilweise"');
-    assertContains(teil, 'data-level="1"');
-    // category change and definition are separate keyboard targets
-    assertContains(nein, 'class="pt-chip-box" aria-hidden="true"');
-    assertContains(nein, 'class="pt-info-btn pt-chip-info"');
-    assertContains(nein, 'aria-controls="pt-chip-tip-AI_Literacies"');
-    assertContains(nein, 'aria-expanded="false"');
-    assert(nein.indexOf('title="') === -1, 'no native title on the chip');
+    assertContains(teil, 'aria-pressed="mixed"');
+    assertContains(teil, 'data-level="teilweise"');
+    assertContains(teil, '<span class="pt-sr-only">, teilweise</span>', 'teilweise is spoken, not only coloured');
+    assertContains(nein, 'title="', 'the definition is the accessible description');
+    assertContains(nein, '>AI Literacies</span>', 'the label stays visible text');
+    assertNotContains(nein, 'pt-info-btn', 'no separate definition button');
+    assertContains(T.chipHtml('AI_Literacies', 2, true), ' disabled', 'read-only chips are disabled');
+    var basis = T.categoryChipHtml('Gender', 2, { expertBasis: true });
+    assertContains(basis, 'Expert:innen-Urteil, ohne Textbeleg.');
 });
 
-test('statusLabel maps the colour-coded decision state to a text equivalent', function() {
-    assertEqual(T.statusLabel('include'), 'eingeschlossen');
-    assertEqual(T.statusLabel('exclude'), 'ausgeschlossen');
+test('statusLabel maps the list state to a text equivalent', function() {
+    assertEqual(T.statusLabel('erfasst'), 'erfasst');
+    assertEqual(T.statusLabel('expert'), 'vorbelegt, nicht bestätigt');
+    assertEqual(T.statusLabel('agent'), 'Agentenkodierung zu prüfen');
     assertEqual(T.statusLabel('none'), 'offen');
 });
 
-test('corpusListHtml hides the colour dot from AT and gives the status a text equivalent', function() {
+test('corpusListHtml hides the state mark from AT and gives the state a text equivalent', function() {
     T.setPapers([{ id: 'pCL', title: 'X', author_year: 'A 2020' }]);
     var prevRev = T.getState().reviewer;
     T.getState().reviewer = 'rCL'; T.getState().reviewers.rCL = {};
     var html = T.corpusListHtml();
-    assertContains(html, 'pt-nav-dot pt-dot-none" aria-hidden="true"');
-    assertContains(html, '<span class="pt-sr-only">offen</span>');
+    assertContains(html, 'pt-nav-mark pt-mark-none" aria-hidden="true"');
+    assertContains(html, '<span class="pt-sr-only">, offen</span>');
+    assertNotContains(html, '>offen<', 'open is not printed visibly on each entry');
     delete T.getState().reviewers.rCL;
     T.getState().reviewer = prevRev;
 });
@@ -1091,7 +1103,7 @@ test('paper query selects a known paper and falls back normally for an unknown i
     T.getState().reviewer = prevRev;
 });
 
-test('editRecord rehydrates work and keeps the committed decision until re-commit (no data loss on revise)', function() {
+test('an own saved record seeds the draft and survives until a changed draft is saved', function() {
     T.setPapers([{ id: 'pED', title: 'X', knowledge_doc: 'd.md' }]);
     var prevRev = T.getState().reviewer;
     T.getState().reviewer = 'rED'; T.getState().reviewers.rED = {}; T.getState().index = 0;
@@ -1099,12 +1111,13 @@ test('editRecord rehydrates work and keeps the committed decision until re-commi
         categories: { AI_Literacies: true, Soziale_Arbeit: true }, decision: 'Include',
         override: false, reason: null, evidence: { AI_Literacies: [{ term: 't', snippet: 's', origin: 'human' }] }
     };
-    T.editRecord({ id: 'pED' });
-    var w = T.getWork();
-    assertEqual(w.pid, 'pED', 'work is bound to the edited paper');
-    assert(w.cats.AI_Literacies && w.cats.Soziale_Arbeit, 'categories are rehydrated into work, not blanked');
-    assertEqual((w.evidence.AI_Literacies || []).length, 1, 'evidence is rehydrated into work');
-    assert(!!T.curDec().pED, 'the committed decision survives the edit (no eager delete)');
+    var w = T.draftFor({ id: 'pED' });
+    assertEqual(w.pid, 'pED', 'draft is bound to the paper');
+    assertEqual(w.seed, 'own');
+    assert(w.cats.AI_Literacies === 2 && w.cats.Soziale_Arbeit === 2, 'categories are rehydrated as levels');
+    assertEqual((w.evidence.AI_Literacies || []).length, 1, 'evidence is rehydrated');
+    assertEqual(w.dirty, false, 'an untouched draft is not a change');
+    assert(!!T.curDec().pED, 'the saved record stays until a save');
     delete T.getState().reviewers.rED;
     T.getState().reviewer = prevRev;
 });
@@ -1158,37 +1171,38 @@ function mountAssessCol() {
     return host;
 }
 
-test('unsaved assessment shows the round-one references as labelled proposals and renders a sticky action dock (ADR-038)', function() {
+test('an open assessment shows the expert and LLM references without round wording (ADR-042)', function() {
     mountAssessCol();
     var p = { id: 'pBlind', title: 'X', human: { decision: 'Include', all_categories: {} },
-        llm: { decision: 'Exclude', all_categories: {}, reasoning: 'prior rationale' } };
+        llm: { decision: 'Exclude', all_categories: {}, reasoning: 'Prior rationale. Second sentence.' } };
     T.setPapers([p]);
     T.getState().reviewer = 'rBlind'; T.getState().reviewers.rBlind = {}; T.getState().index = 0;
     T.resetWork(p); T.refreshAssess();
     var html = document.getElementById('pt-assess-col').innerHTML;
-    assertContains(html, 'Expert:innen-Entscheidung, Runde 1');
-    assertContains(html, 'LLM-Vorschlag, Runde 1');
-    assertContains(html, 'prior rationale');
+    assertContains(html, 'LLM-Vorschlag');
+    assertContains(html, 'Prior rationale.', 'the first sentence of the reasoning is shown');
+    assertNotContains(html, 'Second sentence.</p>', 'the rest stays in the title');
+    assertNotContains(html, 'Runde', 'no round wording');
     assertContains(html, 'id="pt-adopt-proposal"', 'the LLM proposal offers a takeover on an open assessment');
     assertContains(html, 'pt-action-dock');
-    assertContains(html, 'data-info-target="pt-evid-help"', 'evidence help is an accessible button popover');
-    assertNotContains(html, 'Text markieren und als Beleg', 'static reading instruction is absent from the assessment');
+    assertNotContains(html, '<details class="pt-llm-reasoning"', 'the reasoning is no disclosure');
 });
 
-test('round-one references are visible on the saved assessment and labelled by origin (ADR-038)', function() {
+test('references stay visible on a saved assessment in read mode and offer no takeover (ADR-038)', function() {
     mountAssessCol();
-    var p = { id: 'pCompare', title: 'X', human: { decision: 'Include', all_categories: {} },
+    var p = { id: 'pCompare', title: 'X', human: { decision: 'Include', all_categories: { Prompting: 1, Gender: 1 } },
         llm: { decision: 'Exclude', all_categories: {}, reasoning: 'prior rationale' } };
     T.setPapers([p]); T.getState().reviewer = 'rCompare'; T.getState().reviewers.rCompare = {}; T.getState().index = 0;
     T.getState().reviewers.rCompare.pCompare = { decision: 'Exclude', categories: {}, evidence: {}, reason: 'Duplicate' };
+    T.setEditMode(false);
     T.refreshAssess();
     var refs = document.querySelector('#pt-assess-col #pt-references');
     assert(refs, 'reference block is rendered without any toggle');
-    assert(!document.querySelector('#pt-assess-col .pt-reference-comparison'), 'no collapsed comparison remains');
-    assertContains(refs.innerHTML, 'Expert:innen-Entscheidung, Runde 1');
-    assertContains(refs.innerHTML, 'LLM-Vorschlag, Runde 1');
-    assertContains(refs.innerHTML, 'prior rationale');
-    assert(!refs.querySelector('#pt-adopt-proposal'), 'a saved record offers no proposal takeover');
+    assertContains(refs.innerHTML, 'Expert:innen-Entscheidung', 'the expert decision is a reference when it is not the subject');
+    assertContains(refs.innerHTML, 'LLM-Vorschlag');
+    assert(!refs.querySelector('#pt-adopt-proposal'), 'a read-only record offers no proposal takeover');
+    assertContains(document.getElementById('pt-provenance').textContent, 'Deine Bewertung');
+    T.setEditMode(true);
 });
 
 test('the LLM proposal can be adopted into an open assessment as teilweise levels only (ADR-038)', function() {
@@ -1207,40 +1221,35 @@ test('the LLM proposal can be adopted into an open assessment as teilweise level
     assert(T.recordRequirements(T.workingDecisionRecord()).ok === false, 'adopted levels still need Paper evidence before saving');
 });
 
-test('a chip click cycles nein/teilweise/ja and re-renders the derived decision (ADR-024)', function() {
+test('a toggle click switches a category on and off and re-renders the decision (ADR-042)', function() {
     mountAssessCol();
     var tech = T.TECH_CATS[0], soc = T.SOCIAL_CATS[0];
     T.setPapers([{ id: 'pJ1', title: 'X' }]);
     var prevRev = T.getState().reviewer;
     T.getState().reviewer = 'rJ'; T.getState().reviewers.rJ = {}; T.getState().index = 0;
     T.resetWork({ id: 'pJ1' });
-    T.refreshAssess(); // renders chips + the derived pill and binds the click handlers
+    T.refreshAssess();
 
-    function chip(cat) { return document.querySelector('#pt-assess-col .pt-chip[data-cat="' + cat + '"]'); }
-    function derived() { return document.querySelector('#pt-assess-col .pt-logic-row .pt-pill').textContent; }
+    function chip(cat) { return document.querySelector('#pt-assess-col .pt-dim .category-chip[data-cat="' + cat + '"]'); }
+    function decision() { return document.getElementById('pt-decision').textContent; }
 
-    assert(chip(tech), 'a technical chip is rendered and clickable');
-    assertEqual(derived(), 'Exclude', 'empty set derives Exclude');
-
-    chip(tech).click();                                  // tech -> teilweise (1)
-    assertEqual(T.getWork().cats[tech], 1, 'first click sets teilweise');
-    assertEqual(chip(tech).dataset.level, '1', 're-rendered chip shows level 1');
-    assertEqual(derived(), 'Exclude', 'one dimension teilweise is still Exclude');
-
-    chip(soc).click();                                   // soc -> teilweise (1)
-    assertEqual(derived(), 'Unclear', 'both dimensions teilweise derives Unclear');
-
-    chip(tech).click();                                  // tech -> ja (2)
-    assertEqual(T.getWork().cats[tech], 2, 'second click sets ja');
-    assertEqual(derived(), 'Unclear', 'ja plus teilweise is still Unclear');
-
-    chip(soc).click();                                   // soc -> ja (2)
-    assertEqual(derived(), 'Include', 'both dimensions ja derives Include');
-
-    chip(tech).click();                                  // tech -> nein (0), wraps
-    assertEqual(T.getWork().cats[tech], 0, 'third click wraps to nein');
-    assertEqual(derived(), 'Exclude', 'dropping a dimension to nein derives Exclude');
-
+    assert(chip(tech), 'a technical toggle is rendered and clickable');
+    assertEqual(decision(), 'Exclude', 'empty set derives Exclude');
+    chip(tech).click();
+    assertEqual(T.getWork().cats[tech], 2, 'a click switches the category on (ja)');
+    assertEqual(chip(tech).getAttribute('aria-pressed'), 'true');
+    assertEqual(decision(), 'Exclude', 'one dimension is still Exclude');
+    chip(soc).click();
+    assertEqual(decision(), 'Include', 'both dimensions ja derives Include');
+    chip(tech).click();
+    assert(!T.getWork().cats[tech], 'a second click switches it off');
+    assertEqual(decision(), 'Exclude');
+    T.getWork().cats[tech] = 1; T.refreshAssess();
+    assertEqual(chip(tech).getAttribute('aria-pressed'), 'mixed', 'teilweise is a distinct state');
+    assertEqual(decision(), 'Unclear');
+    chip(tech).click();
+    assertEqual(T.getWork().cats[tech], 2, 'teilweise is raised to ja');
+    assert(T.workDirty(), 'every click marks the draft as changed');
     delete T.getState().reviewers.rJ;
     T.getState().reviewer = prevRev;
 });
@@ -1258,7 +1267,7 @@ test('a chip click that flips the derived decision clears a now-stale override (
     assert(T.getWork().override, 'override is set before the flipping click');
 
     // dropping tech to nein flips the derivation Include -> Exclude, so the override is void
-    document.querySelector('#pt-assess-col .pt-chip[data-cat="' + tech + '"]').click();
+    document.querySelector('#pt-assess-col .pt-dim .category-chip[data-cat="' + tech + '"]').click();
     assertEqual(T.getWork().override, false, 'the flip clears the stale override');
     assert(!T.getWork().overrideReason, 'and its justification');
 
@@ -1552,7 +1561,7 @@ test('edit and re-commit preserves the analysis codes of an Include record; a ch
     assert(T.curDec().cyc1.analysis, 'analysis captured on the committed Include');
     // Ueberarbeiten + erneut erfassen, unchanged decision: the codes must survive the cycle
     T.getState().index = 0;
-    T.editRecord({ id: 'cyc1' });
+    T.setWork(T.draftFor({ id: 'cyc1' }));
     T.commit();
     var rec = T.curDec().cyc1;
     assertEqual(rec.decision, 'Include');
@@ -1561,8 +1570,8 @@ test('edit and re-commit preserves the analysis codes of an Include record; a ch
     assert(rec.analysis.undecidable.AN_Harm_Types === true, 'undecidable toggles intact');
     // revising to Exclude drops the codes, deliberately: excluded papers carry no AN codes (coding rule 1)
     T.getState().index = 0;
-    T.editRecord({ id: 'cyc1' });
-    T.getWork().cats = { Prompting: true }; // tech only -> derived Exclude
+    T.setWork(T.draftFor({ id: 'cyc1' }));
+    T.getWork().cats = { Prompting: 2 }; // tech only -> derived Exclude
     T.getWork().reason = 'Not_relevant_topic';
     T.commit();
     var rec2 = T.curDec().cyc1;
@@ -1667,7 +1676,7 @@ test('commit records text_source of the shown text; the file form and current sc
     assertEqual(rec.text_source, 'raw');
     var txt = T.reviewerFileText('r1');
     assertContains(txt, '"text_source": "raw"');
-    assertContains(txt, '"schema": "femprompt-prisma-reviewer/0.4"');
+    assertContains(txt, '"schema": "femprompt-prisma-reviewer/0.5"', 'a file of governed human records is written as 0.5');
     T.getState().index = 1;
     T.resetWork(tsFix[1]);
     T.loadReadingInto(tsFix[1]);
@@ -1931,13 +1940,14 @@ test('expert review can request changes or append a correction without overwriti
     assertEqual(record.active_annotation_id, record.annotations[1].annotation_id);
 });
 
-test('verification requires explicit reviewer, actor, and activity identifiers', function() {
+test('verification requires identifiers, and a note only for outcomes that do not accept', function() {
     var base = { lifecycle: { baseline: { state: 'ai-agent-reviewed', basis: 'test', at: null, actor_ids: [] }, state: 'ai-agent-reviewed', events: [] }, provenance: T.verificationView({}).provenance };
     [
         [{ reviewer_id: '', actor_ids: 'expert-1', activity_id: 'a-1', note: 'x' }, 'Reviewer-ID'],
         [{ reviewer_id: 'expert-1', actor_ids: '', activity_id: 'a-1', note: 'x' }, 'Actor-ID'],
         [{ reviewer_id: 'expert-1', actor_ids: 'expert-1', activity_id: '', note: 'x' }, 'Activity-ID'],
-        [{ reviewer_id: 'expert-1', actor_ids: 'expert-1', activity_id: 'a-1', note: '' }, 'Begründung']
+        [{ reviewer_id: 'expert-1', actor_ids: 'expert-1', activity_id: 'a-1', note: '', result: 'changes_requested' }, 'Notiz'],
+        [{ reviewer_id: 'expert-1', actor_ids: 'expert-1', activity_id: 'a-1', note: ' ', result: 'rejected' }, 'Notiz']
     ].forEach(function(row) {
         var record = JSON.parse(JSON.stringify(base));
         var result = T.advanceVerification(record, 'verified', row[0]);
@@ -1948,19 +1958,22 @@ test('verification requires explicit reviewer, actor, and activity identifiers',
     });
 });
 
-test('verification panel separates the expert and publication states and exposes legacy_gap', function() {
-    var legacyHtml = T.verificationPanelHtml({ decision: 'Exclude', reviewer: 'ar2', actor: 'agent' });
-    assertContains(legacyHtml, 'PRISM-Verifikation');
-    assertContains(legacyHtml, 'keinen gouvernierten AI-Agent-Review-Status');
-    assertNotContains(legacyHtml, 'Fachliches Ergebnis protokollieren');
-    assertContains(legacyHtml, 'legacy_gap');
-    var approvedHtml = T.verificationPanelHtml({
-        lifecycle: { baseline: { state: 'ai-agent-reviewed', basis: 'agent_capture', at: '2026-08-23T10:00:00.000Z', actor_ids: ['agent-1'] }, state: 'publication-approved', events: [] },
+test('provenance and history render as text in the rail (ADR-040, ADR-042)', function() {
+    var legacyHtml = T.provenanceHtml({ decision: 'Exclude', reviewer: 'ar2', actor: 'agent' });
+    assertContains(legacyHtml, '<summary>Provenienz</summary>');
+    assertContains(legacyHtml, 'nicht vollständig überliefert');
+    assertNotContains(legacyHtml, '[object Object]');
+    var record = {
+        lifecycle: { baseline: { state: 'curated', basis: 'agent_capture', at: '2026-08-23T10:00:00.000Z', actor_ids: ['agent-1'] }, state: 'verified', events: [
+            { event_id: 'e1', event_type: 'ai_agent_review', from: 'agent-annotated', to: 'ai-agent-reviewed', result: 'accepted', at: '2026-08-23T10:00:00.000Z' },
+            { event_id: 'e2', event_type: 'domain_expert_verification', from: 'ai-agent-reviewed', to: 'verified', result: 'accepted', at: '2026-10-01T10:00:00.000Z' }
+        ] },
         provenance: { annotation_id: 'ann-1', annotation_type: 'decision', activities: [], actors: [], used_sources: [], derived_from: [] }
-    });
-    assertContains(approvedHtml, 'agent_capture');
-    assertContains(approvedHtml, 'Öffentliche Freigabe ist dokumentiert.');
-    assertNotContains(approvedHtml, 'Fachliches Ergebnis protokollieren');
+    };
+    var history = T.historyHtml(record);
+    assertContains(history, 'KI-geprüft 23.08.2026');
+    assertContains(history, 'fachlich verifiziert 01.10.2026');
+    assertNotContains(history, 'ai-agent-reviewed', 'stored state values are shown with German names');
 });
 
 test('a verification event is bound to the agent subject and written into the expert file (ADR-040)', function() {
@@ -2019,6 +2032,337 @@ test('a verification event is bound to the agent subject and written into the ex
     T.setVerifications('ev', []);
     T.setVerifications('ar2', []);
     T.getState().reviewers = before;
+});
+
+// ============================================================
+// Section N: one assessment surface over the current annotation (ADR-042)
+// ============================================================
+
+var W1 = 'work:11111111-1111-5111-8111-111111111111', V1 = 'version:11111111-1111-5111-8111-111111111111';
+
+function agentRecordFixture(pid, overrides) {
+    var body = {
+        categories: { Generative_KI: 2, Gender: 2 }, decision: 'Include', override: false, reason: null, override_reason: null,
+        evidence: {
+            Generative_KI: [{ term: 'g', snippet: 'generative evidence', source_layer: 'paper', actor: 'agent' }],
+            Gender: [{ term: 'gender', snippet: 'gender evidence', source_layer: 'paper', actor: 'agent' }]
+        },
+        analysis: T.sanitizeAnalysis(completeAnalysis('abstract'), 'abstract'),
+        text_source: 'abstract', ts: '2026-08-23T10:00:00.000Z', reviewer: 'ar2', actor: 'agent'
+    };
+    var record = JSON.parse(JSON.stringify(body));
+    record.provenance = {
+        annotation_id: 'ar2:' + pid, annotation_type: 'screening_decision',
+        actors: [{ id: 'agent-1', type: 'ai_agent', roles: ['screening'] }, { id: 'review-1', type: 'ai_agent', roles: ['ai_agent_reviewer'] }],
+        activities: [{ id: pid + ':ai-agent-review', type: 'ai_agent_review', run_id: 'run-1', method: 'source_grounded_ai_agent_review', associated_actor_ids: ['review-1'] }],
+        used_sources: [{ id: 'paper:' + pid, type: 'paper', reference: pid }], derived_from: []
+    };
+    record.annotations = [{ annotation_id: 'ar2:' + pid, annotation_type: 'screening_decision', at: body.ts, actor_ids: ['agent-1'], body: body }];
+    record.active_annotation_id = 'ar2:' + pid;
+    record.checks = [{ check_id: 'c1', check_type: 'lifecycle_contract', status: 'passed', at: body.ts, actor_id: 'validator-1',
+        tool: { name: 'x', version: '1' }, subject: { annotation_id: 'ar2:' + pid, sha256: 'a'.repeat(64) } }];
+    record.lifecycle = { baseline: { state: 'curated', basis: 'controlled_intake', at: body.ts, actor_ids: ['agent-1'] }, state: 'ai-agent-reviewed',
+        events: [{ event_id: pid + ':ai-agent-review', event_type: 'ai_agent_review', from: 'agent-annotated', to: 'ai-agent-reviewed', result: 'accepted', at: body.ts, activity_id: pid + ':ai-agent-review', actor_ids: ['review-1'] }] };
+    return Object.assign(record, overrides || {});
+}
+
+function agentEnvelope(records) {
+    return { schema: 'femprompt-prisma-reviewer/0.5', reviewer: 'ar2', actor: 'agent', updated: '2026-09-05T00:00:00.000Z', decisions: records };
+}
+
+test('the expert decision maps 1 to ja and 0 or null to nein, and never seeds from the LLM (ADR-042)', function() {
+    var p = { id: 'map1', human: { decision: 'Include', all_categories: { AI_Literacies: 1, Gender: 1, Prompting: 0, Fairness: null } },
+        llm: { decision: 'Include', all_categories: { Feministisch: 1 } } };
+    var e = T.expertAssessment(p);
+    assertEqual(JSON.stringify(e.categories), JSON.stringify({ AI_Literacies: 2, Gender: 2 }));
+    assertEqual(e.decision, 'Include');
+    assertEqual(e.override, false);
+    T.setPapers([p]);
+    T.getState().reviewer = 'rMap'; T.getState().reviewers.rMap = {};
+    var subject = T.paperSubject(p);
+    assertEqual(subject.kind, 'expert');
+    assert(!subject.record.categories.Feministisch, 'the LLM proposal never seeds the subject');
+    var llmOnly = { id: 'map2', llm: { decision: 'Include', all_categories: { Gender: 1 } } };
+    T.setPapers([llmOnly]);
+    assertEqual(T.paperSubject(llmOnly).kind, 'empty', 'a paper with only an LLM assessment starts empty');
+    delete T.getState().reviewers.rMap;
+});
+
+test('an expert Exclude with both groups set keeps Exclude through a recorded deviation (ADR-042)', function() {
+    var p = { id: 'ovr1', human: { decision: 'Exclude', all_categories: { Prompting: 1, Gender: 1 } } };
+    var e = T.expertAssessment(p);
+    assertEqual(T.deriveDecision(e.categories), 'Include', 'the rule alone would include');
+    assertEqual(e.decision, 'Exclude');
+    assertEqual(e.override, true, 'the deviation is an explicit override');
+    assertEqual(e.reason, 'Consolidated_expert_exclusion');
+    assertEqual(T.finalDecisionOf(e.categories, e.override), 'Exclude');
+    if (window.__SEED_PAPERS__ && window.__SEED_PAPERS__.length) {
+        var cases = window.__SEED_PAPERS__.map(T.expertAssessment).filter(function(x) { return x && x.decision === 'Exclude' && x.override; });
+        assertEqual(cases.length, 73, 'the corpus holds the known expert Excludes with both groups set');
+        assert(cases.every(function(x) { return x.reason === 'Consolidated_expert_exclusion'; }), 'each carries the confirmation reason');
+        var unmapped = window.__SEED_PAPERS__.filter(function(x) { return x.human && x.human.decision && !T.expertAssessment(x); });
+        assertEqual(unmapped.length, 0, 'every expert decision can be prefilled as it stands');
+    }
+});
+
+test('saving an expert prefill writes an own record with provenance and no verification event (ADR-042)', function() {
+    var p = { id: 'EXP1', title: 'X', work_id: W1, version_id: V1, version_type: 'version_of_record', preferred_version_id: V1,
+        is_preferred_version: true, human: { decision: 'Exclude', all_categories: { AI_Literacies: 1, Gender: 1 } } };
+    T.setPapers([p]);
+    var S = T.getState();
+    S.reviewer = 'cp'; S.reviewers.cp = {}; S.index = 0;
+    T.setTextSource('abstract');
+    T.setWork(T.draftFor(p));
+    T.getWork().cats.Prompting = 2; // a raised category needs its own Paper Beleg
+    T.markDirty();
+    assertEqual(T.commit(), false, 'an added category without a Paper Beleg blocks the save');
+    T.setWork(T.draftFor(p));
+    assertEqual(T.getWork().dirty, true, 'the changed draft is kept per paper');
+    delete T.getWork().cats.Prompting;
+    assert(T.commit(), 'the unchanged expert levels save without Paper Belege');
+    var rec = S.reviewers.cp.EXP1;
+    assertEqual(rec.decision, 'Exclude');
+    assertEqual(rec.override, true);
+    assertEqual(rec.reason, 'Consolidated_expert_exclusion');
+    assertEqual(JSON.stringify(rec.evidence_basis), JSON.stringify({ AI_Literacies: 'expert_assessment', Gender: 'expert_assessment' }));
+    var derived = rec.provenance.derived_from[0];
+    assertEqual(derived.type, 'consolidated_expert_assessment');
+    assertEqual(derived.reference, 'docs/data/research_vault_v2.json#EXP1.human');
+    assertEqual(derived.mapping, '1=ja');
+    assertEqual(rec.lifecycle.baseline.basis, 'legacy_import');
+    assertEqual(rec.lifecycle.state, 'curated');
+    assertEqual(rec.lifecycle.events.length, 0, 'a confirmed expert prefill is never a verified event');
+    assertEqual(rec.provenance.actors[0].type, 'person');
+    assertEqual(rec.annotations[0].body.evidence_basis.Gender, 'expert_assessment');
+    assert(T.recordRequirements(rec).ok, 'the saved record is complete');
+    var file = JSON.parse(T.reviewerFileText('cp'));
+    assertEqual(file.schema, 'femprompt-prisma-reviewer/0.5');
+    assertEqual(file.reviewer, 'cp');
+    assertEqual(T.listState(p), 'erfasst');
+    delete S.reviewers.cp;
+});
+
+test('a lowered expert level is no longer the expert judgement and needs a Paper Beleg', function() {
+    var p = { id: 'EXP2', title: 'X', human: { decision: 'Exclude', all_categories: { AI_Literacies: 1 } } };
+    T.setPapers([p]);
+    var S = T.getState();
+    S.reviewer = 'cp'; S.reviewers.cp = {}; S.index = 0;
+    T.setTextSource('abstract');
+    T.setWork(T.draftFor(p));
+    T.getWork().cats.AI_Literacies = 1;
+    var rec = T.workingDecisionRecord();
+    assert(!rec.evidence_basis, 'the changed level carries no expert basis');
+    assertEqual(T.paperEvidenceMissing(rec.categories, rec.evidence, rec.evidence_basis).join('|'), 'AI_Literacies');
+    delete S.reviewers.cp;
+});
+
+test('saving over an agent record writes a verification entry and never a decision of the reviewer (ADR-040, ADR-042)', function() {
+    var p = { id: 'AG1', title: 'X' };
+    T.setPapers([p]);
+    var S = T.getState();
+    S.reviewer = 'ev'; S.reviewers.ev = {}; S.index = 0;
+    T.setVerifications('ev', []);
+    var envelope = agentEnvelope({ AG1: agentRecordFixture('AG1') });
+    var snapshot = JSON.stringify(envelope);
+    T.setServedAgentEnvelope(envelope);
+    assertEqual(T.paperSubject(p).kind, 'agent');
+    assertEqual(T.listState(p), 'agent');
+    T.setTextSource('abstract');
+    T.setWork(T.draftFor(p));
+    assertEqual(T.saveMode(p, T.paperSubject(p)), 'verify');
+    T.verifyAgentRecord(p);
+    var entries = T.verifications('ev');
+    assertEqual(entries.length, 1);
+    assertEqual(entries[0].result, 'accepted', 'an unchanged draft is accepted');
+    assertEqual(entries[0].reviewer_id, 'ev');
+    assertEqual(entries[0].actor_ids.join(','), 'ev', 'actor ids come from the key, not from typed fields');
+    assert(/^prism-session-/.test(entries[0].activity_id), 'one activity id per session');
+    assert(!entries[0].note, 'acceptance needs no note');
+    assertEqual(S.reviewers.ev.AG1, undefined, 'the agent paper never enters the reviewer decisions');
+    var file = JSON.parse(T.reviewerFileText('ev'));
+    assert(!file.decisions.AG1, 'the file holds no decision for the agent paper');
+    assertEqual(file.verifications.length, 1);
+    assertEqual(JSON.stringify(envelope), snapshot, 'the served agent envelope is untouched');
+    assertEqual(T.agentTrack().records.AG1.lifecycle.state, 'verified', 'the projection shows the verification');
+    assertEqual(T.listState(p), 'erfasst', 'an own verification counts as captured');
+    T.setVerifications('ev', []);
+    T.setServedAgentEnvelope(null);
+    delete S.reviewers.ev;
+});
+
+test('a changed agent draft becomes a correction; requesting changes needs a note', function() {
+    var p = { id: 'AG2', title: 'X' };
+    T.setPapers([p]);
+    var S = T.getState();
+    S.reviewer = 'ev'; S.reviewers.ev = {}; S.index = 0;
+    T.setVerifications('ev', []);
+    T.setServedAgentEnvelope(agentEnvelope({ AG2: agentRecordFixture('AG2') }));
+    T.setTextSource('abstract');
+    T.setWork(T.draftFor(p));
+    T.getWork().verifyResult = 'changes_requested';
+    T.verifyAgentRecord(p);
+    assertEqual(T.verifications('ev').length, 0, 'changes requested without a note are refused');
+    T.getWork().verifyNote = 'Gender-Beleg prüfen.';
+    T.verifyAgentRecord(p);
+    assertEqual(T.verifications('ev')[0].result, 'changes_requested');
+    assertEqual(T.agentTrack().records.AG2.lifecycle.state, 'ai-agent-reviewed', 'the state does not advance');
+    T.setWork(T.draftFor(p));
+    T.getWork().cats.Gender = 1; // lowered by the reviewer, the agent pin remains
+    T.markDirty();
+    T.verifyAgentRecord(p);
+    var last = T.verifications('ev')[1];
+    assertEqual(last.result, 'corrected_and_accepted');
+    assert(last.annotation && last.annotation.body.categories.Gender === 1, 'the correction body comes from the draft');
+    assert(last.annotation.changes.some(function(change) { return change.path === '/categories/Gender'; }), 'with a field-level diff');
+    assertContains(last.annotation.reason, '/categories/Gender', 'a correction without a note names the changed fields');
+    assertEqual(T.agentTrack().records.AG2.lifecycle.state, 'verified');
+    assertEqual(S.reviewers.ev.AG2, undefined);
+    T.setVerifications('ev', []);
+    T.setServedAgentEnvelope(null);
+    delete S.reviewers.ev;
+});
+
+test('the mode switch has exactly two states and exists only with local editing (ADR-042)', function() {
+    T.setManifestReachable(true); T.setFsSupported(true);
+    var html = T.workspaceBarHtml();
+    var host = document.createElement('div'); host.innerHTML = html;
+    var buttons = host.querySelectorAll('.pt-mode-seg button');
+    assertEqual(buttons.length, 2);
+    assertEqual(buttons[0].textContent, 'Lesen');
+    assertEqual(buttons[1].textContent, 'Bearbeiten');
+    assertNotContains(html, 'Verifizieren');
+    assertNotContains(html, 'verify=1');
+    T.setManifestReachable(false);
+    assertNotContains(T.workspaceBarHtml(), 'pt-mode-seg', 'without the local manifest there is no switch');
+    T.setManifestReachable(true); T.setFsSupported(false);
+    assertNotContains(T.workspaceBarHtml(), 'pt-mode-seg', 'without File System Access there is no switch');
+    T.setFsSupported(undefined); T.setManifestReachable(false);
+});
+
+test('list filters: status counts, category AND filter on the current annotation, counter independent of filters', function() {
+    var papersFix = [
+        { id: 'F1', title: 'a', human: { decision: 'Include', all_categories: { Prompting: 1, Gender: 1 } } },
+        { id: 'F2', title: 'b', human: { decision: 'Exclude', all_categories: { Prompting: 1 } } },
+        { id: 'F3', title: 'c', llm: { decision: 'Include', all_categories: { Gender: 1 } } }
+    ];
+    T.setPapers(papersFix);
+    var S = T.getState();
+    S.reviewer = 'cp'; S.reviewers.cp = { F2: { decision: 'Exclude', reason: 'Duplicate', categories: {}, evidence: {} } };
+    T.setManifestReachable(true); T.setFsSupported(true);
+    S.statusFilter = 'alle'; S.catFilter = [];
+    assertEqual(T.visibleRows().length, 3);
+    S.catFilter = ['Gender'];
+    assertEqual(T.visibleRows().map(function(r) { return r.paper.id; }).join('|'), 'F1', 'the LLM proposal never counts for the filter');
+    S.catFilter = ['Gender', 'Prompting'];
+    assertEqual(T.visibleRows().length, 1, 'several chips combine with AND');
+    S.catFilter = [];
+    S.statusFilter = 'erfasst';
+    assertEqual(T.visibleRows().map(function(r) { return r.paper.id; }).join('|'), 'F2');
+    S.statusFilter = 'offen';
+    assertEqual(T.visibleRows().length, 2, 'prefilled but unconfirmed papers are open');
+    assertEqual(T.capturedCount(), 1, 'the counter ignores filters');
+    var filters = T.filtersHtml();
+    assertContains(filters, 'data-status="offen" aria-pressed="true">Offen <span class="pt-seg-count">2</span>');
+    S.statusFilter = 'alle';
+    T.setManifestReachable(false); T.setFsSupported(undefined);
+    delete S.reviewers.cp;
+});
+
+test('reserved and agent keys cannot become a reviewer key', function() {
+    var S = T.getState();
+    var before = S.reviewer;
+    assertEqual(T.selectReviewer('seed'), false, 'the built-in expert reference key is reserved');
+    assertEqual(T.selectReviewer('acceptance'), false);
+    assertEqual(T.selectReviewer('ar2'), false, 'the productive agent track key is refused');
+    assertEqual(S.reviewer, before);
+});
+
+test('the browser snapshot holds own work and changed drafts, never a loaded agent track', function() {
+    var S = T.getState();
+    S.reviewer = 'cp'; S.reviewers = { cp: { a: { decision: 'Exclude', reason: 'Duplicate', categories: {} } }, ar2: { b: { decision: 'Include' } } };
+    T.setReviewerEnvelope('ar2', agentEnvelope({ b: agentRecordFixture('b') }));
+    var snap = T.serializeAll();
+    assert(snap.reviewers.cp && !snap.reviewers.ar2, 'the agent track stays out of the snapshot');
+    T.setPapers([{ id: 'dr1' }]);
+    S.index = 0;
+    T.setWork(T.draftFor({ id: 'dr1' }));
+    T.getWork().cats.Gender = 2;
+    T.markDirty();
+    assert(T.serializeAll().drafts.dr1, 'a changed draft is persisted');
+    T.resetWork({ id: 'dr1' });
+    assert(!T.serializeAll().drafts.dr1);
+    T.setReviewerEnvelope('ar2', null);
+    S.reviewers = {};
+});
+
+test('the written file names the key it belongs to and keeps an existing Work-Version binding', function() {
+    var S = T.getState();
+    T.setPapers([{ id: 'B1', work_id: W1, version_id: V1, version_type: 'version_of_record' }]);
+    T.setReviewerEnvelope('kx', { schema: 'femprompt-prisma-reviewer/0.4', reviewer: 'someone-else', actor: 'human', decisions: {} });
+    S.reviewers.kx = { B1: { decision: 'Exclude', reason: 'Duplicate', categories: {}, evidence: {},
+        work_id: 'work:22222222-2222-5222-8222-222222222222', version_id: 'version:22222222-2222-5222-8222-222222222222', version_type: 'preprint' } };
+    var file = JSON.parse(T.reviewerFileText('kx'));
+    assertEqual(file.reviewer, 'kx', 'a stale embedded reviewer is corrected');
+    assertEqual(file.decisions.B1.version_id, 'version:22222222-2222-5222-8222-222222222222', 'an existing binding is never rebound');
+    assertEqual(T.recordProblem('B1', S.reviewers.kx.B1, 'femprompt-prisma-reviewer/0.5'), 'Werk- oder Fassungsbindung weicht vom Korpus ab');
+    delete S.reviewers.kx;
+    T.setReviewerEnvelope('kx', null);
+});
+
+test('verification events from browser and file are united by event id', function() {
+    T.setVerifications('vx', [{ paper_id: 'p', result: 'accepted', event: { event_id: 'local-1' } }]);
+    var localOnly = T.adoptVerifications('vx', { verifications: [{ paper_id: 'p', result: 'accepted', event: { event_id: 'disk-1' } }] });
+    assert(localOnly, 'a browser-only event marks the track for recovery');
+    assertEqual(T.verifications('vx').map(function(e) { return e.event.event_id; }).join('|'), 'disk-1|local-1');
+    T.setVerifications('vx', []);
+});
+
+test('a same-paper divergence can be resolved by keeping the file or the browser version', function() {
+    var merged = T.mergeReviewerDecisions({ p: { decision: 'Include', ts: 'x' } }, { p: { decision: 'Exclude', ts: 'x' } });
+    assert(merged.conflict && merged.conflictDetail.pid === 'p');
+    assertEqual(T.resolveReviewerConflict('nobody', 'disk'), false, 'without a recorded conflict nothing changes');
+});
+
+test('recordRequirements also checks the exclusion reason and the derivation of a loaded record', function() {
+    var req = T.recordRequirements({ decision: 'Exclude', categories: {}, evidence: {} });
+    assert(!req.ok && req.missing.indexOf('Ausschlussgrund') !== -1);
+    var inconsistent = T.recordRequirements({ decision: 'Include', categories: {}, evidence: {}, reason: null });
+    assert(inconsistent.missing.some(function(m) { return /passt nicht/.test(m); }), 'a decision that contradicts its categories is incomplete');
+});
+
+test('the reader renders pipe tables and glossaries and resolves glyph names', function() {
+    var table = T.renderMarkdown('## Document History\n\n| Version | Date | Author(s) |\n|-----------|------------|------|\n| V0.1 | 03/05/2024 | A <b> |\n| V1.0 | 07/06/2024 | B |\n\nAfter.');
+    assertContains(table, '<div class="pt-doc-table"><table><thead><tr><th>Version</th><th>Date</th><th>Author(s)</th></tr></thead>');
+    assertContains(table, '<td>V1.0</td>');
+    assertContains(table, '&lt;b&gt;', 'cell text is escaped');
+    assertContains(table, '<p class="pt-doc-p">After.</p>');
+    assertNotContains(table, '|-----', 'the separator row is not shown');
+    var glossary = T.renderMarkdown('## ACRONYMS AND ABBREVIATIONS\n\nADT\n\nAccessible Digital Textbooks\n\nAI\n\nArtificial Intelligence\n\nAI HLEG\n\nHigh-Level Expert Group on AI\n\n## 1. Introduction\n\nText.');
+    assertContains(glossary, '<dl class="pt-doc-dl"><div><dt>ADT</dt><dd>Accessible Digital Textbooks</dd></div>');
+    assertContains(glossary, '<dt>AI HLEG</dt><dd>High-Level Expert Group on AI</dd>');
+    assertContains(glossary, '<h2 class="pt-doc-h2">1. Introduction</h2>');
+    var prose = T.renderMarkdown('## Abbreviations\n\nThis paragraph explains the abbreviations used in the report.\n\nIt is prose.');
+    assertNotContains(prose, '<dl', 'prose under such a heading stays paragraphs');
+    assertEqual(T.replaceGlyphNames('/uni25CF and de/uniFB01ned /uniFB01eld'), '● and defined field');
+    assertContains(T.renderMarkdown('| A | B |\n|---|---|\n| /uni25CF | x |'), '<td>●</td>');
+    assertEqual(T.normalizeSearchText('de/uniFB01ned'), 'defined', 'search sees the resolved letters');
+});
+
+test('a pinned search hit takes its snippet at the active hit, not at the first occurrence', function() {
+    var p = document.createElement('p');
+    p.innerHTML = 'alpha term one ' + new Array(30).join('filler ') + 'beta <mark>term</mark> two';
+    document.body.appendChild(p);
+    var snippet = T.snippetAround(p.querySelector('mark'), 'term');
+    assertContains(snippet, 'beta term two');
+    assertNotContains(snippet, 'alpha', 'the earlier occurrence is not used');
+    document.body.removeChild(p);
+});
+
+test('reading metadata shows version and review only where they change the reading, and no identifiers', function() {
+    var html = T.versionMetaHtml({ version_type: 'preprint', preferred_version_id: 'v2', is_preferred_version: false, peer_review_status: 'not_peer_reviewed' });
+    assertContains(html, 'nicht die bevorzugte Fassung');
+    assertContains(html, 'pt-meta-warn');
+    assertNotContains(T.versionMetaHtml({ version_type: 'unknown', peer_review_status: 'not_established' }), '<div', 'unknown values are left out');
 });
 
 // ============================================================

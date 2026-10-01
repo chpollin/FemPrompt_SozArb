@@ -19,17 +19,18 @@ function escapeHtml(s) {
 }
 
 let papers = [];
+let corpusFingerprint = null;
 
-// prisma.js reads only getAllPapers, escapeHtml, and CAT_COLORS; the kappa/meta
-// surface this shim used to carry was never read on prisma.html (getKappas/getMeta
-// belong to the Companion data layer for wissenschat.js and kategorien.js).
+// The minimal window.EC surface prisma.js reads. The corpus fingerprint binds a record
+// derived from the consolidated expert decision to the projection it was read from.
 window.EC = {
     escapeHtml: escapeHtml,
     CAT_COLORS: CAT_COLORS,
     getCategorySchema: function() { return CATEGORY_SCHEMA; },
     getLifecycleContract: function() { return LIFECYCLE_CONTRACT; },
     getWorkVersionContract: function() { return WORK_VERSION_CONTRACT; },
-    getAllPapers: function() { return papers; }
+    getAllPapers: function() { return papers; },
+    getCorpusFingerprint: function() { return corpusFingerprint; }
 };
 
 const scriptUrl = document.currentScript && document.currentScript.src
@@ -46,6 +47,7 @@ Promise.all(['research_vault_v2.json', 'category_schema.json', 'screening_lifecy
 }))
     .then(function(payloads) {
         papers = payloads[0].papers || [];
+        corpusFingerprint = (payloads[0].meta && payloads[0].meta.source_fingerprint) || null;
         Object.assign(CATEGORY_SCHEMA, payloads[1]);
         Object.assign(LIFECYCLE_CONTRACT, payloads[2]);
         Object.assign(WORK_VERSION_CONTRACT, payloads[3]);

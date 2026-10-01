@@ -1,19 +1,17 @@
 // PRISMA Screening Tool (PRISM) -- standalone evidence-grounded screening instrument.
 // The screening view is built around reading and searching the paper's original full text
-// (the full-text layer; the generated knowledge distillate is a separate reference layer) and pinning
-// found passages as Belege (evidence) on categories. AI is reduced to an optional
-// collapsed suggestion; human and AI assessment are brought together, not scored against
-// each other -- the human-AI comparison surface (matrix, kappa, divergence) was removed
-// (knowledge/specification.md ADR-014), and with ADR-017 its last vestige is gone too:
-// the in-tool kappa and confusion matrix of the AI-disclosure line. AI-human agreement
-// is evaluated outside the tool on the benchmark corpus (PRISMA-trAIce M9/R2 by reference).
+// (the Paper layer; the generated knowledge distillate is a separate reference layer) and
+// pinning found passages as Belege (evidence) on categories. Agreement metrics live outside
+// the tool (ADR-014/017, PRISMA-trAIce M9/R2 by reference).
 //
-// One screening workspace (ADR-020/028). Editors set a short reviewer key and
-// connect the local repository once; the daily workflow has one save action.
-// Human decision is binding (RAISE); the AI proposal is advisory and stored separately
-// so the flow diagram splits AI from human decisions (PRISMA-trAIce R1).
-// Persistence: after an explicit reviewer key, File System Access writes
-// one JSON per reviewer (schema 0.4) into docs/data/screening/<reviewer>.json.
+// One workspace with two modes, Lesen and Bearbeiten (ADR-042). Each paper shows its
+// current annotation, resolved as own saved record > productive agent record > consolidated
+// expert decision as prefilled draft > empty draft. The LLM assessment is a labelled
+// reference and never seeds a draft. Saving an own draft writes the reviewer's decision
+// record; saving over an agent record writes a verification entry into the reviewer's own
+// file and never touches the agent file (ADR-040).
+// Persistence: after an explicit reviewer key, File System Access writes one JSON per
+// reviewer into docs/data/screening/<reviewer>.json.
 // Runs on prisma.html via the window.EC shim from prisma-data.js.
 // See knowledge/specification.md (requirements, ADRs, design system), knowledge/data.md.
 
@@ -25,9 +23,10 @@ let initialized = false;
 let acceptanceMode = null;
 let trialMode = false;
 let runActor = 'human';
-let verificationMode = false;
 let editMode = false; // session-only opt-in; a normal reload always starts with reading
-const FS_SUPPORTED = typeof window.showDirectoryPicker === 'function';
+const FS_NATIVE = typeof window.showDirectoryPicker === 'function';
+let fsOverride = null; // test seam for the capability branches
+function fsSupported() { return fsOverride === null ? FS_NATIVE : fsOverride; }
 
 // Constants
 
@@ -38,7 +37,9 @@ const SOCIAL_CATS = [];
 const ALL_CATS = [];
 const CAT_LABELS = {};
 const CAT_DEFS = {};
+const CAT_COLOR = {};
 const EXCLUSION_REASONS = [];
+const EXCLUSION_LABELS = {};
 
 function applyCategorySchema() {
     const schema = window.__CATEGORY_SCHEMA__ ||
@@ -53,52 +54,69 @@ function applyCategorySchema() {
     SOCIAL_CATS.splice(0, SOCIAL_CATS.length, ...groups.perspective);
     ALL_CATS.splice(0, ALL_CATS.length, ...TECH_CATS, ...SOCIAL_CATS);
     EXCLUSION_REASONS.splice(0, EXCLUSION_REASONS.length, ...schema.exclusion_reasons);
-    Object.keys(CAT_LABELS).forEach(function(key) { delete CAT_LABELS[key]; });
-    Object.keys(CAT_DEFS).forEach(function(key) { delete CAT_DEFS[key]; });
+    [CAT_LABELS, CAT_DEFS, CAT_COLOR, EXCLUSION_LABELS].forEach(function(map) {
+        Object.keys(map).forEach(function(key) { delete map[key]; });
+    });
     categories.forEach(function(category) {
         CAT_LABELS[category.key] = category.label;
         CAT_DEFS[category.key] = category.definition;
+        CAT_COLOR[category.key] = category.color;
     });
+    const labels = schema.exclusion_reason_labels || {};
+    schema.exclusion_reasons.forEach(function(code) { EXCLUSION_LABELS[code] = labels[code] || code.replace(/_/g, ' '); });
 }
+
+function reasonLabel(code) { return EXCLUSION_LABELS[code] || String(code || '').replace(/_/g, ' '); }
+
+// The confirmation reason for a consolidated expert Exclude (ADR-042). It lets an
+// expert exclusion be confirmed without inventing a substantive reason.
+const EXPERT_EXCLUSION_REASON = 'Consolidated_expert_exclusion';
 
 // The headless harness injects the built schema before evaluating this file and
 // exercises pure functions without starting the full application.
 if (window.__CATEGORY_SCHEMA__) applyCategorySchema();
 
+// Disclosure defaults of the round-one LLM assessment, read by disclosureMarkdown.
 const MODEL_DEFAULT = {
     name: 'Claude Haiku 4.5', id: 'claude-haiku-4-5', date: '2026-03-15',
-    prompt: 'v2.1', temperature: '0.0', maxTokens: '1024', threshold: '0.5'
+    prompt: 'v2.1', temperature: '0.0', maxTokens: '1024', threshold: '0.5',
+    stage: 'Screening', conflicts: 'none'
 };
-
-// PRISMA-trAIce 17 items (Holst et al. 2025, JMIR AI; abridged verbatim). 14 non-optional, 3 optional.
-const TRAICE = [
-    { id: 'T1', sec: 'Title', lvl: 'optional', auto: false, text: 'Indicate AI assistance in the title/subtitle if AI played a substantial role (e.g. primary screening, data extraction).' },
-    { id: 'A1', sec: 'Abstract', lvl: 'optional', auto: false, text: 'Summarise the AI tool(s) used, the SLR stage(s) applied, and their primary role.' },
-    { id: 'I1', sec: 'Introduction', lvl: 'recommended', auto: false, text: 'State the rationale for using AI tools for specific tasks (volume, efficiency, novel methods).' },
-    { id: 'M1', sec: 'Methods', lvl: 'mandatory', auto: false, text: 'State whether AI use was pre-specified in the protocol and where it can be accessed; report deviations.' },
-    { id: 'M2', sec: 'Methods', lvl: 'mandatory', auto: true, text: 'For each tool: name, version, developer/provider; how to access; for custom tools, how to replicate.' },
-    { id: 'M3', sec: 'Methods', lvl: 'mandatory', auto: true, text: 'The specific SLR stage(s) and the precise task(s) the AI performed at each stage.' },
-    { id: 'M4', sec: 'Methods', lvl: 'mandatory', auto: true, text: 'Input data provided to the tool (search results, abstracts, full texts; training/calibration data).' },
-    { id: 'M5', sec: 'Methods', lvl: 'mandatory', auto: true, text: 'Output data: format (e.g. structured JSON, labels with confidence) and any automated post-processing.' },
-    { id: 'M6', sec: 'Methods', lvl: 'mandatory', auto: false, text: 'Prompt engineering: full prompts, key parameters (temperature, max tokens, top-p), iterative refinement.' },
-    { id: 'M7', sec: 'Methods', lvl: 'highly recommended', auto: false, text: 'For non-LLM tools: algorithms/models; settings (e.g. classification thresholds, active-learning parameters).' },
-    { id: 'M8', sec: 'Methods', lvl: 'mandatory', auto: true, text: 'Human-AI interaction and oversight: reviewers validating AI outputs, independence, proportion verified, discrepancy resolution.' },
-    { id: 'M9', sec: 'Methods', lvl: 'mandatory', auto: true, text: 'Methods to evaluate AI performance: reference standard (consensus human decisions); metrics (accuracy, kappa); bias analyses.' },
-    { id: 'M10', sec: 'Methods', lvl: 'recommended', auto: true, text: 'Data governance: how input/output/intermediate data was managed and stored; privacy, copyright/ToS compliance.' },
-    { id: 'R1', sec: 'Results', lvl: 'mandatory', auto: true, text: 'Flow diagram and text distinguish records included/excluded by AI vs human at each screening stage; report numbers processed by AI.' },
-    { id: 'R2', sec: 'Results', lvl: 'mandatory', auto: true, text: 'Report AI performance evaluation results (from M9): quantitative results and AI-human agreement.' },
-    { id: 'D1', sec: 'Discussion', lvl: 'recommended', auto: false, text: 'Limitations of AI use (technical issues, biases, hallucinations) and how they may have influenced the review.' },
-    { id: 'D2', sec: 'Discussion', lvl: 'optional', auto: false, text: 'The experience of using AI: benefits, challenges, usability, implications for future reviews.' }
-];
 
 const LS_KEY = 'femprompt-prisma-state/0.2';
 const TRIAL_LS_KEY = 'femprompt-prisma-trial-state/0.1';
-const REVIEWER_SCHEMA = 'femprompt-prisma-reviewer/0.4'; // 0.4 binds decisions and paper evidence to an exact work version.
+// 0.4 is the isolated capture shape of agent trial runs and historical files. A file
+// whose records all carry the embedded provenance and lifecycle contract is written as
+// 0.5, which is what new human records from PRISM satisfy (ADR-042).
+const REVIEWER_SCHEMA = 'femprompt-prisma-reviewer/0.4';
+const GOVERNED_SCHEMA = 'femprompt-prisma-reviewer/0.5';
 // Additive envelope extension (ADR-040). The reviewer schema is untouched, so an
 // existing 0.5 record stays valid and an older reader ignores the extra block.
 const VERIFICATION_SCHEMA = 'femprompt-prisma-verification/0.1';
 const SEED = 'seed'; // built-in reviewer = the existing expert assessment (paper.human)
 const REVIEWER_KEY_PATTERN = /^[A-Za-z][A-Za-z0-9_-]{1,11}$/;
+// Keys that name built-in tracks. 'seed' collides with the expert reference and
+// 'acceptance' with the read-only review fixture.
+const RESERVED_KEYS = [SEED, 'acceptance'];
+// Productive agent tracks served with the working application. Read mode loads them
+// over HTTP so the corpus list can show agent records without a connected folder; a
+// connected folder supersedes them. They are never written by PRISM.
+const SERVED_AGENT_TRACKS = ['ar2'];
+const LIFECYCLE_LABELS = {
+    identified: 'identifiziert',
+    curated: 'kuratiert',
+    'agent-annotated': 'agentisch kodiert',
+    'ai-agent-reviewed': 'KI-geprüft',
+    verified: 'fachlich verifiziert',
+    'publication-approved': 'zur Veröffentlichung freigegeben'
+};
+const RESULT_LABELS = {
+    accepted: 'bestätigt',
+    corrected_and_accepted: 'korrigiert und bestätigt',
+    changes_requested: 'Änderungen angefordert',
+    rejected: 'abgelehnt',
+    approved: 'freigegeben'
+};
 const LIFECYCLE_STATES = [];
 const LIFECYCLE_NEXT = {};
 const LIFECYCLE_TRANSITIONS = {};
@@ -121,18 +139,24 @@ function applyWorkVersionContract() {
 function versionLabel(value) { return VERSION_LABELS[value] || value || 'Version ungeklärt'; }
 function peerReviewLabel(value) { return PEER_REVIEW_LABELS[value] || 'Peer-Review nicht belegt'; }
 
+// Binds a record that carries no Work-Version identity yet. An existing binding is
+// provenance of what was read and is never rebound to the current corpus version;
+// validateReviewerPayload reports a mismatch instead.
 function bindRecordIdentity(record, paper) {
     if (!paper.work_id || !paper.version_id) return record;
-    record.work_id = paper.work_id || null;
-    record.version_id = paper.version_id || null;
-    record.version_type = paper.version_type || 'unknown';
-    record.preferred_version_id = paper.preferred_version_id || paper.version_id || null;
-    record.selected_version_is_preferred = !!paper.is_preferred_version;
+    if (!record.work_id || !record.version_id) {
+        record.work_id = paper.work_id;
+        record.version_id = paper.version_id;
+        record.version_type = paper.version_type || 'unknown';
+        record.preferred_version_id = paper.preferred_version_id || paper.version_id;
+        record.selected_version_is_preferred = !!paper.is_preferred_version;
+    }
     Object.keys(record.evidence || {}).forEach(function(category) {
         (record.evidence[category] || []).forEach(function(item) {
+            if (item.work_id && item.version_id) return;
             item.paper_id = paper.id;
-            item.work_id = paper.work_id || null;
-            item.version_id = paper.version_id || null;
+            item.work_id = record.work_id;
+            item.version_id = record.version_id;
         });
     });
     return record;
@@ -170,14 +194,13 @@ if (window.__LIFECYCLE_CONTRACT__) applyLifecycleContract();
 // State
 
 const state = {
-    surface: 'screening',
     reviewer: null,        // explicit filename-safe reviewer key; drives the data file
-    perspective: null,     // current reviewer source for project records; never silently falls back to seed
     index: 0,
     readMode: 'full',      // reading layer: 'full' (paper text) or 'ai' (LLM knowledge distillate)
     reviewers: {},         // reviewerKey -> { paperId -> decision }
-    checklist: {},
-    disclosure: {}
+    disclosure: {},        // in-memory disclosure parameters for disclosureMarkdown (operator utility)
+    statusFilter: 'alle',  // corpus list: 'alle' | 'offen' | 'erfasst'
+    catFilter: []          // corpus list: categories the current annotation must carry (AND)
 };
 
 let papers = [];
@@ -185,15 +208,25 @@ let dirHandle = null;          // connected File System Access directory handle 
 let screeningHandle = null;    // docs/data/screening within it: where reviewer files are read and written
 let connectScope = 'screening'; // 'root' when the picked folder is the repo root, else 'screening'
 let storedHandleAvailable = false;
+// A connection resolves the folder and merges its files before PRISM may write. Without
+// this guard a save between the two steps would replace the file with the browser state.
+let connecting = false;
+let folderIdentity = null;     // name of the connected folder; the browser snapshot belongs to it
 let reviewerFileErrors = {};   // reviewerKey -> blocking read/validation error for an existing file
+let reviewerConflicts = {};    // reviewerKey -> { pid, disk, local } awaiting an explicit choice
 let reviewerRecoveryPending = {}; // reviewerKey -> browser records newer than the connected file
 const reviewerEnvelopes = {};  // reviewerKey -> loaded top-level JSON, preserved across decision writes
-// The expert verifies the productive agent track, not their own capture, so the
-// subject record and the file that receives the verification event are different
-// files. agentTrack holds a deep copy: a display projection can then never reach
-// the in-memory track that a save would serialize back into the agent's own file.
+const quarantinedRecords = {}; // reviewerKey -> { paperId -> record } kept verbatim on write, not loaded
+const lastDiskText = {};       // reviewerKey -> file text last read or written in this session
+// The reviewer verifies the productive agent track, so the subject record and the file
+// that receives the verification event are different files. agentTrack holds a deep
+// copy: a display projection can never reach a track a save would serialize.
 let agentTrack = { reviewer: null, records: {} };
+let servedAgentEnvelope = null; // HTTP-served agent track, used while no folder supplies one
 const verificationRecords = {}; // reviewerKey -> verification events this reviewer recorded
+// Unsaved drafts per paper. A draft starts as a copy of the current annotation and is
+// kept (and persisted in the browser) only once the reviewer changes something.
+const drafts = {};
 let corpusIndex = null;        // id -> { t, ay, kd, src, n, x } for corpus full-text search
 let corpusIndexPromise = null;
 let corpusQuery = '';          // current corpus-wide search (left pane)
@@ -204,8 +237,9 @@ let fulltextManifest = null;     // id -> { src, chars, work_id, version_id }; n
 // analysis_fields block, served as docs/data/analysis_fields.json (built by
 // src/publish/build_analysis_fields.py). anFields is the single source the panel's
 // closed selections read from; there is no hand-kept second list in this file.
-let anFields = [];               // [ { name, multi, values[, optional, binding_when, free_text] } ]
+let anFields = [];               // [ { name, multi, values[, optional, binding_when, free_text, label, value_labels] } ]
 let anStudyTypes = [];
+let anStudyTypeLabels = {};
 let anVocabVersion = '';
 let docHtmlCurrent = '';       // rendered HTML of the active layer (for re-highlight)
 let docHtmlPaper = '';         // rendered paper layer (verbatim text)
@@ -214,20 +248,26 @@ let docMarks = [], docMarkIdx = 0;
 let appliedInTextQuery = '';
 let pendingInText = null;      // in-text query to apply once the document has loaded
 let pinTerm = '', pinSnippet = '', pinOrigin = 'human'; // pinOrigin = source layer of the staged snippet
-let pinReturnFocus = null, pinKeyHandler = null; // pin-menu dialog focus restore + keydown trap
+let pinReturnFocus = null, pinKeyHandler = null, pinOutsideHandler = null;
 let focusReadingOnRender = false; // move focus to the paper heading after a paper switch (a11y)
-let editingPid = null; // a committed paper reopened for editing; its record stays until re-commit
 let renderedPaperId = null;
+let railStep = 'assess';       // 'assess' | 'analysis': the Include analysis coding is its own step
 let readToken = 0;             // monotonic load token; a reading response for a stale token is dropped
 let readingPending = false;    // true between a reading load and its applied response; commit waits for it
 let currentTextSource = 'none'; // paper-layer text actually shown: 'raw' | 'abstract' | 'none' (ADR-027)
-let saveStatus = { kind: 'needs-reviewer', message: 'Einmal Reviewer:innen-Kürzel festlegen.' };
-let openInfoTrigger = null;
-let infoGlobalBound = false;
-let verificationNotice = '';
+let saveStatus = { kind: 'needs-reviewer', message: 'Kürzel festlegen.' };
+let sessionActivity = null;    // one activity id per editing session for verification events
+let editChannel = null;        // BroadcastChannel that detects a second editing tab
+let secondTabNotice = '';
 
 // the in-progress (pre-commit) decision for the open paper
-let work = { pid: null, cats: {}, override: false, reason: null, overrideReason: null, evidence: {} };
+let work = emptyWork(null);
+
+function emptyWork(pid) {
+    return { pid: pid, cats: {}, override: false, reason: null, overrideReason: null, evidence: {},
+        analysis: undefined, seed: null, expertBasis: null, derivedFromExpert: false,
+        verifyResult: 'accept', verifyNote: '', dirty: false };
+}
 
 function curDec() {
     if (!state.reviewer) return {};
@@ -238,7 +278,12 @@ function curDec() {
     return state.reviewers[state.reviewer];
 }
 
-function resetWork(p) { work = { pid: p.id, cats: {}, override: false, reason: null, overrideReason: null, evidence: {} }; }
+// Test and integration seam: an empty draft for a paper, replacing any stored one.
+function resetWork(p) {
+    work = emptyWork(p.id);
+    if (p && p.id) delete drafts[p.id];
+    return work;
+}
 
 function canEdit() { return editMode && !acceptanceMode; }
 
@@ -246,9 +291,9 @@ function setEditMode(enabled) {
     if (acceptanceMode) return false;
     editMode = !!enabled;
     closePinMenu();
-    closeInfoPopover(false);
-    // The draft stays in memory; leaving edit mode never commits it. A saved record
-    // remains the reading projection until the user explicitly reopens the draft.
+    railStep = 'assess';
+    // The draft stays in memory; leaving edit mode never commits it.
+    if (canEdit()) announceEditing();
     if (initialized) {
         renderShell();
         renderScreening();
@@ -263,25 +308,76 @@ function setEditMode(enabled) {
     return canEdit();
 }
 
+function sessionActivityId() {
+    if (!sessionActivity) sessionActivity = 'prism-session-' + verificationEventId().replace(/^prism-/, '');
+    return sessionActivity;
+}
+
+// Two tabs editing with the same key would overwrite each other's file. The channel
+// only warns; the re-read before every write is what prevents the loss.
+function announceEditing() {
+    if (trialMode || typeof window.BroadcastChannel !== 'function') return;
+    try {
+        if (!editChannel) {
+            editChannel = new window.BroadcastChannel('femprompt-prisma-editing');
+            editChannel.onmessage = function(event) {
+                const data = event && event.data;
+                if (!data || !canEdit()) return;
+                if (data.type === 'editing' && data.reviewer && data.reviewer === state.reviewer) {
+                    secondTabNotice = 'PRISM ist mit diesem Kürzel in einem zweiten Tab zum Bearbeiten geöffnet.';
+                    editChannel.postMessage({ type: 'present', reviewer: state.reviewer });
+                    renderData(document.getElementById('pt-data-inline'));
+                } else if (data.type === 'present' && data.reviewer === state.reviewer) {
+                    secondTabNotice = 'PRISM ist mit diesem Kürzel in einem zweiten Tab zum Bearbeiten geöffnet.';
+                    renderData(document.getElementById('pt-data-inline'));
+                }
+            };
+        }
+        if (state.reviewer) editChannel.postMessage({ type: 'editing', reviewer: state.reviewer });
+    } catch (e) { editChannel = null; }
+}
+
 // Persistence: localStorage cache + File System Access (repo files)
 
+// The browser snapshot holds the reviewer's own work: human tracks, own verification
+// events and changed drafts. Loaded agent tracks stay out, they live in their files.
 function serializeAll() {
+    const reviewers = {};
+    Object.keys(state.reviewers).forEach(function(key) {
+        if (isAgentTrackPayload(reviewerEnvelopes[key])) return;
+        reviewers[key] = state.reviewers[key];
+    });
+    const changed = {};
+    Object.keys(drafts).forEach(function(pid) { if (drafts[pid] && drafts[pid].dirty) changed[pid] = drafts[pid]; });
+    const verifications = {};
+    Object.keys(verificationRecords).forEach(function(key) {
+        if (reviewers[key] || key === state.reviewer) verifications[key] = verificationRecords[key];
+    });
     return {
         schema: storageKey(),
-        config: { reviewer: state.reviewer, reviewerSelected: !!state.reviewer,
-                  perspective: state.perspective, disclosure: state.disclosure },
-        reviewers: state.reviewers,
-        verifications: verificationRecords,
-        checklist: state.checklist
+        config: { reviewer: state.reviewer, reviewerSelected: !!state.reviewer, folder: folderIdentity },
+        reviewers: reviewers,
+        verifications: verifications,
+        drafts: changed
     };
 }
 
 function storageKey() { return trialMode ? TRIAL_LS_KEY : LS_KEY; }
 
 function saveLocal() {
-    if (!canEdit()) return;
-    try { localStorage.setItem(storageKey(), JSON.stringify(serializeAll())); }
-    catch (e) { console.warn('[PRISMA] local save failed:', e.message); }
+    if (!canEdit()) return false;
+    try {
+        localStorage.setItem(storageKey(), JSON.stringify(serializeAll()));
+        return true;
+    } catch (e) {
+        console.warn('[PRISMA] local save failed:', e.message);
+        return false;
+    }
+}
+
+function validLocalRecord(record) {
+    return !!(record && typeof record === 'object' && !Array.isArray(record) &&
+        ['Include', 'Exclude', 'Unclear'].indexOf(record.decision) !== -1);
 }
 
 function loadLocal() {
@@ -292,66 +388,151 @@ function loadLocal() {
         if (o.config) {
             // Older builds silently defaulted everyone to reviewer1. Only an explicit
             // selection marker and a filename-safe key are trusted during migration.
-            if (o.config.reviewerSelected && isReviewerId(o.config.reviewer))
-                state.reviewer = o.config.reviewer;
-            if (o.config.perspective) state.perspective = o.config.perspective;
-            if (o.config.disclosure) state.disclosure = o.config.disclosure;
+            if (o.config.reviewerSelected && isReviewerId(o.config.reviewer) && !reservedKey(o.config.reviewer))
+                state.reviewer = normalizedReviewerKey(o.config.reviewer);
+            if (typeof o.config.folder === 'string') folderIdentity = o.config.folder;
         }
-        state.reviewers = o.reviewers || {};
+        const reviewers = o.reviewers && typeof o.reviewers === 'object' ? o.reviewers : {};
+        state.reviewers = {};
+        Object.keys(reviewers).forEach(function(key) {
+            if (!isReviewerId(key) || !reviewers[key] || typeof reviewers[key] !== 'object') return;
+            const track = {};
+            Object.keys(reviewers[key]).forEach(function(pid) {
+                if (validLocalRecord(reviewers[key][pid])) track[pid] = reviewers[key][pid];
+            });
+            state.reviewers[key] = track;
+        });
         if (o.verifications && typeof o.verifications === 'object')
             Object.keys(o.verifications).forEach(function(key) {
                 if (Array.isArray(o.verifications[key])) verificationRecords[key] = o.verifications[key];
             });
-        state.checklist = o.checklist || {};
+        if (o.drafts && typeof o.drafts === 'object')
+            Object.keys(o.drafts).forEach(function(pid) {
+                const draft = o.drafts[pid];
+                if (draft && typeof draft === 'object' && draft.pid === pid && draft.cats && typeof draft.cats === 'object')
+                    drafts[pid] = Object.assign(emptyWork(pid), draft, { dirty: true });
+            });
         if (state.reviewer) saveStatus = trialMode ? {
             kind: 'ready',
             message: 'Isolierter Testlauf aus diesem Browser geladen.'
         } : {
             kind: 'dirty',
-            message: 'Zwischenstand aus dem Browser geladen; Datendatei nach dem Verbinden abgleichen.'
+            message: 'Zwischenstand aus dem Browser geladen. Mit dem Arbeitsordner verbinden, um ihn abzugleichen.'
         };
     } catch (e) { console.warn('[PRISMA] local load failed:', e.message); }
 }
 
 let writeChain = Promise.resolve();
 let writeVersion = 0;
+// Returns a promise that resolves true once the file holds the current state.
 function save() {
-    if (!canEdit()) return;
-    saveLocal();
+    if (!canEdit()) return Promise.resolve(false);
+    const localOk = saveLocal();
     if (!state.reviewer) {
-        setSaveStatus('needs-reviewer', 'Reviewer:innen-Kürzel festlegen, bevor die erste Entscheidung gespeichert wird.');
-        return;
+        setSaveStatus('needs-reviewer', 'Kürzel festlegen, bevor gespeichert wird.');
+        return Promise.resolve(false);
     }
     if (trialMode) {
-        setSaveStatus('saved', 'Testlauf im Browser gespeichert. Forschungsdaten bleiben unverändert.');
+        setSaveStatus(localOk ? 'saved' : 'error', localOk
+            ? 'Testlauf im Browser gespeichert. Forschungsdaten bleiben unverändert.'
+            : 'Testlauf konnte im Browser nicht gespeichert werden.');
         renderData(document.getElementById('pt-data-inline'));
-        return;
+        return Promise.resolve(localOk);
     }
     const key = state.reviewer;
     if (reviewerFileErrors[key]) {
-        setSaveStatus('error', 'Bestehende Datei ' + reviewerPath(key) + ' ist nicht lesbar und wird nicht überschrieben.');
+        setSaveStatus('error', 'Bestehende Datei ' + reviewerPath(key) + ' wird nicht überschrieben: ' + reviewerFileErrors[key]);
         renderData(document.getElementById('pt-data-inline'));
-        return;
+        return Promise.resolve(false);
     }
-    setSaveStatus('dirty', screeningHandle
-        ? 'Änderungen vorhanden; Speicherung wird vorbereitet.'
-        : 'Nur im Browser gespeichert; die Datendatei ist noch nicht aktualisiert.');
-    // serialize repo writes so rapid screening cannot overlap createWritable on the same file
-    if (screeningHandle) {
-        const targetHandle = screeningHandle;
-        const text = reviewerFileText(key);
-        const version = ++writeVersion;
-        setSaveStatus('saving', 'Speichert in ' + reviewerPath(key) + ' …');
-        writeChain = writeChain.then(function() { return writeReviewerText(targetHandle, key, text); }).then(function() {
-            reviewerRecoveryPending[key] = false;
-            if (state.reviewer === key && version === writeVersion && screeningHandle === targetHandle)
-                setSaveStatus('saved', 'Gespeichert in ' + reviewerPath(key) + '.');
-        }).catch(function(e) {
-            if (state.reviewer === key && version === writeVersion)
-                setSaveStatus('error', 'Speichern fehlgeschlagen: ' + (e.message || e));
-            console.warn('[PRISMA] file write failed:', e);
+    if (connecting) {
+        setSaveStatus('dirty', 'Der Arbeitsordner wird noch abgeglichen. Danach erneut speichern.');
+        return Promise.resolve(false);
+    }
+    if (!screeningHandle) {
+        setSaveStatus(localOk ? 'dirty' : 'error', localOk
+            ? 'Nur im Browser gespeichert. Die Datei ist noch nicht aktualisiert.'
+            : 'Nicht gespeichert. Der Browser-Zwischenspeicher ist voll oder gesperrt.');
+        return Promise.resolve(false);
+    }
+    if (!localOk) setSaveStatus('error', 'Browser-Zwischenspeicher voll oder gesperrt. Die Datei wird trotzdem geschrieben.');
+    // writes are serialized so rapid screening cannot overlap createWritable on one file;
+    // each job keeps the handle, key and state it was queued with
+    const targetHandle = screeningHandle;
+    const text = reviewerFileText(key);
+    const version = ++writeVersion;
+    setSaveStatus('saving', 'Speichert in ' + reviewerPath(key) + ' …');
+    const job = writeChain.then(function() {
+        return writeReviewerFile(targetHandle, key, text);
+    }).then(function() {
+        reviewerRecoveryPending[key] = false;
+        if (state.reviewer === key && version === writeVersion && screeningHandle === targetHandle)
+            setSaveStatus('saved', 'Gespeichert in ' + reviewerPath(key) + '.');
+        return true;
+    }).catch(function(e) {
+        if (state.reviewer === key && version === writeVersion)
+            setSaveStatus('error', 'Speichern fehlgeschlagen: ' + (e.message || e));
+        console.warn('[PRISMA] file write failed:', e);
+        renderData(document.getElementById('pt-data-inline'));
+        return false;
+    });
+    writeChain = job;
+    return job;
+}
+
+async function readReviewerText(targetHandle, key) {
+    let fh;
+    try { fh = await targetHandle.getFileHandle(key + '.json'); } catch (e) { return null; }
+    if (!fh || typeof fh.getFile !== 'function') return null;
+    const file = await fh.getFile();
+    const text = await file.text();
+    // a write that failed after the file was created leaves it empty; that counts as absent
+    return text && text.trim() ? text : null;
+}
+
+// Re-read before every write. A file changed outside this session (a second tab, a
+// git pull) is merged per paper by timestamp; a divergence that cannot be ordered
+// blocks the write and offers an explicit choice instead of overwriting either side.
+async function writeReviewerFile(targetHandle, key, text) {
+    const current = await readReviewerText(targetHandle, key);
+    if (current !== null && current !== lastDiskText[key]) {
+        let obj;
+        try { obj = JSON.parse(current); } catch (e) { obj = null; }
+        const check = obj ? validateReviewerEnvelope(obj) : { ok: false, message: 'kein gültiges JSON' };
+        if (!check.ok) {
+            reviewerFileErrors[key] = 'Die Datei wurde außerhalb von PRISM verändert und ist nicht lesbar (' + check.message + ').';
+            throw new Error(reviewerFileErrors[key]);
+        }
+        const usable = {}, held = {};
+        Object.keys(obj.decisions).forEach(function(pid) {
+            if (recordProblem(pid, obj.decisions[pid], obj.schema)) held[pid] = obj.decisions[pid];
+            else usable[pid] = obj.decisions[pid];
         });
+        const merged = mergeReviewerDecisions(normalizedReviewerDecisions(usable, key), state.reviewers[key] || {});
+        if (merged.conflict) {
+            reviewerFileErrors[key] = merged.conflict;
+            reviewerConflicts[key] = merged.conflictDetail;
+            throw new Error(merged.conflict);
+        }
+        state.reviewers[key] = merged.decisions;
+        quarantinedRecords[key] = held;
+        reviewerEnvelopes[key] = JSON.parse(JSON.stringify(obj));
+        adoptVerifications(key, obj);
+        adoptAgentTrack();
+        text = reviewerFileText(key);
     }
+    const fh = await targetHandle.getFileHandle(key + '.json', { create: true });
+    const w = await fh.createWritable();
+    await w.write(text);
+    await w.close();
+    lastDiskText[key] = text;
+    return true;
+}
+
+function isGovernedRecord(record) {
+    return !!(record && record.provenance && typeof record.provenance === 'object' &&
+        Array.isArray(record.annotations) && record.annotations.length && record.active_annotation_id &&
+        Array.isArray(record.checks) && record.lifecycle && record.lifecycle.baseline);
 }
 
 function reviewerPayload(key) {
@@ -359,16 +540,24 @@ function reviewerPayload(key) {
     const payload = loaded ? JSON.parse(JSON.stringify(loaded)) : {
         schema: REVIEWER_SCHEMA, reviewer: key, actor: runActor
     };
-    if (/^femprompt-prisma-reviewer\/0\.[1234]$/.test(payload.schema || ''))
-        payload.schema = REVIEWER_SCHEMA;
+    // the file name owns the reviewer role; a stale embedded value is corrected
+    payload.reviewer = key;
     payload.updated = new Date().toISOString();
     payload.decisions = {};
+    const quarantined = quarantinedRecords[key] || {};
+    Object.keys(quarantined).forEach(function(paperId) {
+        payload.decisions[paperId] = JSON.parse(JSON.stringify(quarantined[paperId]));
+    });
     Object.keys(state.reviewers[key] || {}).forEach(function(paperId) {
         const record = JSON.parse(JSON.stringify(state.reviewers[key][paperId]));
         const paper = papers.find(function(item) { return item.id === paperId; });
         if (paper) bindRecordIdentity(record, paper);
         payload.decisions[paperId] = record;
     });
+    const ids = Object.keys(payload.decisions);
+    if (/^femprompt-prisma-reviewer\/0\.[1234]$/.test(payload.schema || ''))
+        payload.schema = ids.length && ids.every(function(id) { return isGovernedRecord(payload.decisions[id]); })
+            ? GOVERNED_SCHEMA : REVIEWER_SCHEMA;
     const verifications = verificationRecords[key];
     if (Array.isArray(verifications) && verifications.length) {
         payload.verification_schema = VERIFICATION_SCHEMA;
@@ -397,6 +586,16 @@ function normalizedReviewerKey(key) {
 
 function isReviewerId(key) { return normalizedReviewerKey(key) !== null; }
 
+function reservedKey(key) {
+    const normalized = normalizedReviewerKey(key);
+    if (!normalized) return false;
+    if (RESERVED_KEYS.indexOf(normalized) !== -1) return true;
+    // a human key must never address an agent track file
+    if (runActor === 'human' && SERVED_AGENT_TRACKS.indexOf(normalized) !== -1) return true;
+    if (runActor === 'human' && isAgentTrackPayload(reviewerEnvelopes[normalized])) return true;
+    return agentTrack.reviewer === normalized && runActor === 'human';
+}
+
 function reviewerPath(key) {
     if (!key) return 'Kürzel festlegen';
     return trialMode ? 'isolierter Testlauf/' + key + '.json' : 'docs/data/screening/' + key + '.json';
@@ -415,27 +614,28 @@ function setSaveStatus(kind, message) {
         status.className = 'pt-save-status pt-save-' + kind;
         status.textContent = message;
     }
+    if (kind === 'error' || kind === 'saved') announce(message);
 }
 
 function selectReviewer(key) {
     if (!canEdit()) return false;
     const normalized = normalizedReviewerKey(key);
-    if (!normalized) return false;
+    if (!normalized || reservedKey(normalized)) return false;
     state.reviewer = normalized;
     if (!state.reviewers[normalized]) state.reviewers[normalized] = {};
-    state.perspective = normalized;
     saveLocal();
+    announceEditing();
     const fileError = reviewerFileErrors[normalized];
     const recovery = reviewerRecoveryPending[normalized];
     setSaveStatus(fileError ? 'error' : (recovery ? 'dirty' : (trialMode ? 'ready' : (screeningHandle ? 'ready' : 'local'))), fileError
-        ? 'Bestehende Datei ' + reviewerPath(normalized) + ' ist nicht lesbar: ' + fileError + ' Sie wird nicht verändert.'
+        ? 'Bestehende Datei ' + reviewerPath(normalized) + ' wird nicht verändert: ' + fileError
         : (recovery
-            ? 'Neuere Browser-Änderungen wurden wiederhergestellt. Mit der Diskette in die Reviewer-Datei schreiben.'
+            ? 'Neuere Browser-Änderungen wurden wiederhergestellt. Mit der Diskette in die Datei schreiben.'
         : (trialMode
             ? 'Isolierter Testlauf bereit. Ergebnisse bleiben in diesem Browser-Ursprung.'
             : (screeningHandle
                 ? 'Bereit: ' + reviewerPath(normalized) + ' ist verbunden.'
-                : 'Kürzel gespeichert. Jetzt einmal den lokalen Arbeitsordner wählen.'))));
+                : 'Arbeitsordner wählen.'))));
     return true;
 }
 
@@ -454,13 +654,15 @@ function recordTimestamp(record) {
 
 // The repository file and the browser recovery copy can diverge after a failed
 // physical write. Merge by paper and keep the newer timestamp. A same-paper
-// conflict without comparable timestamps is blocked instead of guessed.
+// conflict without comparable timestamps is blocked instead of guessed; the detail
+// lets the reviewer choose one side explicitly (resolveReviewerConflict).
 function mergeReviewerDecisions(fileDecisions, localDecisions) {
     const disk = JSON.parse(JSON.stringify(fileDecisions || {}));
     const local = JSON.parse(JSON.stringify(localDecisions || {}));
     const merged = disk;
     let recovered = false;
     let conflict = null;
+    let conflictDetail = null;
     Object.keys(local).forEach(function(pid) {
         if (!disk[pid]) {
             merged[pid] = local[pid];
@@ -476,14 +678,32 @@ function mergeReviewerDecisions(fileDecisions, localDecisions) {
         }
         // Keep the browser recovery in memory while the conflicting file remains
         // untouched on disk. The blocking error prevents either version overwriting
-        // the other until the operator resolves the record explicitly.
+        // the other until the reviewer chooses one side.
+        conflictDetail = { pid: pid, disk: disk[pid], local: local[pid] };
         merged[pid] = local[pid];
         conflict = 'Browser- und Dateistand widersprechen sich bei Paper ' + pid +
             (diskTs !== null && localTs !== null
                 ? ' trotz identischem Zeitstempel.'
                 : ' ohne vergleichbare Zeitstempel.');
     });
-    return { decisions: merged, recovered: recovered, conflict: conflict };
+    return { decisions: merged, recovered: recovered, conflict: conflict, conflictDetail: conflictDetail };
+}
+
+// The reviewer resolves a blocked same-paper divergence by keeping either the file or
+// the browser version. The other version is dropped deliberately, never by a guess.
+function resolveReviewerConflict(key, keep) {
+    const detail = reviewerConflicts[key];
+    if (!canEdit() || !detail || (keep !== 'disk' && keep !== 'local')) return false;
+    if (!state.reviewers[key]) state.reviewers[key] = {};
+    state.reviewers[key][detail.pid] = JSON.parse(JSON.stringify(keep === 'disk' ? detail.disk : detail.local));
+    delete reviewerConflicts[key];
+    delete reviewerFileErrors[key];
+    reviewerRecoveryPending[key] = keep === 'local';
+    saveLocal();
+    setSaveStatus(keep === 'disk' ? 'ready' : 'dirty', keep === 'disk'
+        ? 'Dateistand übernommen.'
+        : 'Browserstand übernommen. Mit der Diskette in die Datei schreiben.');
+    return true;
 }
 
 // Backup imports always target the explicitly selected reviewer. The file name and an
@@ -548,11 +768,50 @@ async function resolveScopes(picked) {
     }
 }
 
+// The browser snapshot and the in-memory tracks belong to one working folder. Another
+// folder starts clean, so records of one clone never reach the file of another.
+async function bindFolder(handle) {
+    let other = false;
+    if (dirHandle && dirHandle !== handle && typeof handle.isSameEntry === 'function') {
+        try { other = !(await handle.isSameEntry(dirHandle)); } catch (e) { other = true; }
+    } else if (!dirHandle && folderIdentity && handle && handle.name && folderIdentity !== handle.name) {
+        other = true;
+    }
+    if (other) {
+        state.reviewers = {};
+        [reviewerEnvelopes, quarantinedRecords, lastDiskText, verificationRecords, drafts].forEach(function(map) {
+            Object.keys(map).forEach(function(key) { delete map[key]; });
+        });
+        reviewerFileErrors = {};
+        reviewerConflicts = {};
+        reviewerRecoveryPending = {};
+        agentTrack = { reviewer: null, records: {} };
+        work = emptyWork(null);
+    }
+    folderIdentity = handle && handle.name ? handle.name : null;
+    return other;
+}
+
+async function connectHandle(handle) {
+    connecting = true;
+    try {
+        await bindFolder(handle);
+        dirHandle = handle;
+        await resolveScopes(handle);
+        await loadAllReviewers();
+    } finally {
+        connecting = false;
+    }
+    setConnectedSaveStatus();
+    renderData(document.getElementById('pt-data-inline'));
+    renderScreening();
+}
+
 function setConnectedSaveStatus() {
     const fileError = state.reviewer && reviewerFileErrors[state.reviewer];
     if (fileError) {
         setSaveStatus('error', 'Bestehende Datei ' + reviewerPath(state.reviewer) +
-            ' ist nicht lesbar: ' + fileError + ' Sie wird nicht verändert.');
+            ' wird nicht verändert: ' + fileError);
         return;
     }
     if (state.reviewer && reviewerRecoveryPending[state.reviewer]) {
@@ -561,37 +820,32 @@ function setConnectedSaveStatus() {
         return;
     }
     setSaveStatus(state.reviewer ? 'ready' : 'needs-reviewer', state.reviewer
-        ? 'Arbeitsordner verbunden. Ziel: ' + reviewerPath(state.reviewer) + '.'
-        : 'Arbeitsordner verbunden. Vor dem Speichern Kürzel festlegen.');
+        ? 'Arbeitsordner verbunden.'
+        : 'Arbeitsordner verbunden. Kürzel festlegen.');
 }
 
 async function connectRepo() {
     if (!canEdit()) return;
-    if (!FS_SUPPORTED) { alert('Dieser Browser kann den lokalen Arbeitsordner nicht direkt beschreiben. Öffne PRISM in einem Chromium-basierten Browser.'); return; }
+    if (!fsSupported()) { setSaveStatus('error', 'Lokales Speichern braucht einen Chromium-basierten Browser.'); return; }
     try {
-        let handle = await window.showDirectoryPicker({ mode: 'readwrite' });
+        const handle = await window.showDirectoryPicker({ mode: 'readwrite' });
         if (!canEdit()) return;
-        dirHandle = handle;
         await idbSet('dir', handle);
         storedHandleAvailable = true;
-        await resolveScopes(handle);
-        await loadAllReviewers();
-        setConnectedSaveStatus();
-        renderData(document.getElementById('pt-data-inline'));
-        showSurface(state.surface);
+        await connectHandle(handle);
     } catch (e) {
         if (e.name !== 'AbortError') {
             console.warn('[PRISMA] connect failed:', e);
             setSaveStatus('error', 'Verbindung fehlgeschlagen: ' + (e.message || e.name) + '. Browser-Zwischenstand bleibt erhalten.');
-            alert('Verbindung fehlgeschlagen: ' + (e.message || e.name) + '.');
+            renderData(document.getElementById('pt-data-inline'));
         }
     }
 }
 
 async function reconnectRepo() {
-    if (!canEdit() || !FS_SUPPORTED) return;
+    if (!canEdit() || !fsSupported()) return;
     try {
-        let handle = await idbGet('dir');
+        const handle = await idbGet('dir');
         if (!canEdit()) return;
         if (!handle) { storedHandleAvailable = false; renderData(document.getElementById('pt-data-inline')); return; }
         storedHandleAvailable = true;
@@ -599,40 +853,31 @@ async function reconnectRepo() {
         if (!canEdit()) return;
         if (perm !== 'granted') {
             setSaveStatus('error', 'Schreibrecht nicht erteilt. Browser-Zwischenstand bleibt erhalten.');
-            alert('Schreibrecht nicht erteilt.'); return;
+            renderData(document.getElementById('pt-data-inline'));
+            return;
         }
-        dirHandle = handle;
-        await resolveScopes(handle);
-        await loadAllReviewers();
-        setConnectedSaveStatus();
-        renderData(document.getElementById('pt-data-inline'));
-        showSurface(state.surface);
+        await connectHandle(handle);
     } catch (e) {
         console.warn('[PRISMA] reconnect failed:', e);
         setSaveStatus('error', 'Erneutes Verbinden fehlgeschlagen: ' + (e.message || e.name) + '.');
-        alert('Erneutes Verbinden fehlgeschlagen: ' + (e.message || e.name) + '.');
+        renderData(document.getElementById('pt-data-inline'));
     }
 }
 
 async function restoreRepoConnection() {
-    if (!canEdit() || !FS_SUPPORTED) return;
+    if (!canEdit() || !fsSupported()) return;
     try {
         const handle = await idbGet('dir');
         if (!handle || !canEdit()) return;
         storedHandleAvailable = true;
-        dirHandle = handle;
         const permission = handle.queryPermission ? await handle.queryPermission({ mode: 'readwrite' }) : 'prompt';
         if (!canEdit()) return;
         if (permission !== 'granted') {
-            setSaveStatus('local', 'Arbeitsordner einmal freigeben, danach kann direkt gespeichert werden.');
+            setSaveStatus('local', 'Arbeitsordner einmal freigeben.');
             renderData(document.getElementById('pt-data-inline'));
             return;
         }
-        await resolveScopes(handle);
-        await loadAllReviewers();
-        setConnectedSaveStatus();
-        renderData(document.getElementById('pt-data-inline'));
-        renderScreening();
+        await connectHandle(handle);
     } catch (e) {
         console.warn('[PRISMA] saved folder restore failed:', e);
         setSaveStatus('error', 'Gespeicherter Arbeitsordner konnte nicht verbunden werden.');
@@ -640,45 +885,82 @@ async function restoreRepoConnection() {
     }
 }
 
+// One record of a reviewer file that cannot be used: an unknown paper, an invalid
+// decision value, or a human record bound to a different Work-Version than the corpus.
+function recordProblem(id, record, schema) {
+    if (!record || typeof record !== 'object' || Array.isArray(record)) return 'kein Record-Objekt';
+    if (papers.length && !papers.some(function(p) { return p.id === id; })) return 'unbekannte Paper-ID';
+    if (['Include', 'Exclude', 'Unclear'].indexOf(record.decision) === -1) return 'ungültige Decision';
+    if (record.reason !== undefined && record.reason !== null && typeof record.reason !== 'string') return 'ungültiger Ausschlussgrund';
+    if (record.reason && EXCLUSION_REASONS.length && EXCLUSION_REASONS.indexOf(record.reason) === -1) return 'unbekannter Ausschlussgrund';
+    const paper = papers.find(function(item) { return item.id === id; });
+    if (schema === REVIEWER_SCHEMA && paperIdentityReady(paper) && (!record.work_id || !record.version_id || !record.version_type))
+        return 'Werk- oder Fassungsbindung fehlt';
+    // agent tracks carry legacy Work aliases; only PRISM's own human captures are held
+    // to the exact binding of the current corpus
+    if (paper && record.actor !== 'agent' && (schema === REVIEWER_SCHEMA || schema === GOVERNED_SCHEMA) &&
+            record.work_id && record.version_id && paper.work_id && paper.version_id &&
+            (record.work_id !== paper.work_id || record.version_id !== paper.version_id))
+        return 'Werk- oder Fassungsbindung weicht vom Korpus ab';
+    return null;
+}
+
 async function loadAllReviewers() {
     if (!canEdit() || !screeningHandle) return;
     const found = {};
     const errors = {};
+    const conflicts = {};
     const recoveries = {};
+    const texts = {};
     for await (const entry of screeningHandle.values()) {
-        if (entry.kind === 'file' && /\.json$/.test(entry.name)) {
-            const fileKey = entry.name.replace(/\.json$/, '');
-            const key = normalizedReviewerKey(fileKey);
-            if (!key) continue;
-            if (key !== fileKey) {
-                errors[key] = 'Der Dateiname muss in kanonischer Kleinschreibung vorliegen.';
-                continue;
-            }
-            try {
-                let f = await entry.getFile();
-                let obj = JSON.parse(await f.text());
-                const check = validateReviewerPayload(obj);
-                if (!check.ok) throw new Error(check.message);
-                // The canonical filename owns the reviewer role. This repairs the
-                // historical case where reviewer2.json still embedded reviewer1 and
-                // prevents the two files from collapsing into one in-memory track.
-                const disk = normalizedReviewerDecisions(obj.decisions || {}, key);
-                const local = normalizedReviewerDecisions(state.reviewers[key] || {}, key);
-                const merged = mergeReviewerDecisions(disk, local);
-                found[key] = merged.decisions;
-                reviewerEnvelopes[key] = JSON.parse(JSON.stringify(obj));
-                adoptVerifications(key, obj);
-                if (merged.recovered) recoveries[key] = true;
-                if (merged.conflict) errors[key] = merged.conflict;
-            } catch (e) {
-                errors[key] = e && e.message ? e.message : String(e);
-                console.warn('[PRISMA] could not read', entry.name, e);
-            }
+        if (entry.kind !== 'file' || !/\.json$/.test(entry.name)) continue;
+        const fileKey = entry.name.replace(/\.json$/, '');
+        const key = normalizedReviewerKey(fileKey);
+        if (!key) continue;
+        if (key !== fileKey) {
+            errors[key] = 'Der Dateiname muss in kanonischer Kleinschreibung vorliegen.';
+            continue;
+        }
+        try {
+            const f = await entry.getFile();
+            const text = await f.text();
+            if (!text.trim()) continue; // an interrupted first write leaves an empty file
+            const obj = JSON.parse(text);
+            const check = validateReviewerEnvelope(obj);
+            if (!check.ok) throw new Error(check.message);
+            if (key === state.reviewer && runActor === 'human' && isAgentTrackPayload(obj))
+                throw new Error('Das Kürzel gehört zu einer Agentenspur.');
+            // Single unusable records are kept verbatim for the next write but not
+            // loaded, so one damaged record cannot lock the whole file.
+            const usable = {};
+            const held = {};
+            Object.keys(obj.decisions).forEach(function(pid) {
+                if (recordProblem(pid, obj.decisions[pid], obj.schema)) held[pid] = obj.decisions[pid];
+                else usable[pid] = obj.decisions[pid];
+            });
+            quarantinedRecords[key] = held;
+            // The canonical filename owns the reviewer role. This repairs the
+            // historical case where reviewer2.json still embedded reviewer1 and
+            // prevents the two files from collapsing into one in-memory track.
+            const disk = normalizedReviewerDecisions(usable, key);
+            const local = normalizedReviewerDecisions(state.reviewers[key] || {}, key);
+            const merged = mergeReviewerDecisions(disk, local);
+            found[key] = merged.decisions;
+            reviewerEnvelopes[key] = JSON.parse(JSON.stringify(obj));
+            texts[key] = text;
+            if (adoptVerifications(key, obj)) recoveries[key] = true;
+            if (merged.recovered) recoveries[key] = true;
+            if (merged.conflict) { errors[key] = merged.conflict; conflicts[key] = merged.conflictDetail; }
+        } catch (e) {
+            errors[key] = e && e.message ? e.message : String(e);
+            console.warn('[PRISMA] could not read', entry.name, e);
         }
     }
     if (!canEdit()) return;
     reviewerFileErrors = errors;
+    reviewerConflicts = conflicts;
     reviewerRecoveryPending = recoveries;
+    Object.keys(texts).forEach(function(k) { lastDiskText[k] = texts[k]; });
     // Apply resolved records. On a blocked conflict, the file stays untouched on disk
     // while the browser recovery remains in memory and localStorage.
     Object.keys(found).forEach(function(k) { state.reviewers[k] = found[k]; });
@@ -698,10 +980,23 @@ function isAgentTrackPayload(obj) {
     });
 }
 
+// Union by event id: an event recorded in the browser but not yet written to the file
+// survives the connection and marks the track for recovery. Returns that marker.
 function adoptVerifications(key, payload) {
-    const entries = payload && Array.isArray(payload.verifications) ? payload.verifications : null;
-    if (entries) verificationRecords[key] = JSON.parse(JSON.stringify(entries));
-    else if (!verificationRecords[key]) verificationRecords[key] = [];
+    const disk = payload && Array.isArray(payload.verifications) ? payload.verifications : [];
+    const local = Array.isArray(verificationRecords[key]) ? verificationRecords[key] : [];
+    const seen = {};
+    const out = [];
+    let localOnly = false;
+    disk.concat(local).forEach(function(entry, index) {
+        const id = entry && entry.event && entry.event.event_id;
+        if (!id || seen[id]) return;
+        seen[id] = true;
+        if (index >= disk.length) localOnly = true;
+        out.push(JSON.parse(JSON.stringify(entry)));
+    });
+    verificationRecords[key] = out;
+    return localOnly;
 }
 
 function adoptAgentTrack() {
@@ -711,15 +1006,42 @@ function adoptAgentTrack() {
         if (!chosen || String(reviewerEnvelopes[key].updated || '') > String(reviewerEnvelopes[chosen].updated || ''))
             chosen = key;
     });
-    agentTrack = chosen
-        ? { reviewer: chosen, records: JSON.parse(JSON.stringify(reviewerEnvelopes[chosen].decisions || {})) }
+    const source = chosen ? reviewerEnvelopes[chosen] : servedAgentEnvelope;
+    agentTrack = source
+        ? { reviewer: chosen || normalizedReviewerKey(source.reviewer), records: JSON.parse(JSON.stringify(source.decisions || {})) }
         : { reviewer: null, records: {} };
     projectExpertVerifications();
 }
 
-// Expert verification lives in the expert's own file. The agent record shown in
-// verification mode is the projection of that file onto the untouched agent track,
-// rebuilt at load time rather than written back into the agent's file.
+// Read mode shows agent records without a connected folder. The served track is
+// validated like a file and never written.
+function loadServedAgentTracks() {
+    if (runActor !== 'human' || trialMode || acceptanceMode || typeof fetch !== 'function') return Promise.resolve(null);
+    return Promise.all(SERVED_AGENT_TRACKS.map(function(key) {
+        return fetch('data/screening/' + key + '.json')
+            .then(function(r) { return r.ok ? r.json() : null; })
+            .catch(function() { return null; });
+    })).then(function(payloads) {
+        const usable = payloads.filter(function(obj) {
+            return obj && validateReviewerEnvelope(obj).ok && isAgentTrackPayload(obj);
+        });
+        servedAgentEnvelope = usable.length ? usable[0] : null;
+        if (servedAgentEnvelope) {
+            const decisions = {};
+            Object.keys(servedAgentEnvelope.decisions).forEach(function(pid) {
+                if (!recordProblem(pid, servedAgentEnvelope.decisions[pid], servedAgentEnvelope.schema))
+                    decisions[pid] = servedAgentEnvelope.decisions[pid];
+            });
+            servedAgentEnvelope = Object.assign({}, servedAgentEnvelope, { decisions: decisions });
+        }
+        adoptAgentTrack();
+        return servedAgentEnvelope;
+    });
+}
+
+// Expert verification lives in the expert's own file. The agent record shown is the
+// projection of that file onto the untouched agent track, rebuilt at load time rather
+// than written back into the agent's file.
 function projectExpertVerifications() {
     if (!agentTrack.reviewer) return;
     Object.keys(verificationRecords).forEach(function(key) {
@@ -749,26 +1071,7 @@ function projectVerification(record, entry) {
     return record;
 }
 
-// In verification mode the subject is the productive agent record for this paper.
-// Where the track holds none, the expert's own saved record remains the subject,
-// which keeps legacy captures inspectable instead of hiding them.
-function verificationSubject(p) {
-    if (!verificationMode || !p) return null;
-    const agentRecord = agentTrack.records[p.id];
-    if (agentRecord) return { record: agentRecord, reviewer: agentTrack.reviewer, agent: true };
-    const own = curDec()[p.id];
-    return own ? { record: own, reviewer: state.reviewer, agent: false } : null;
-}
-
-function displayRecord(p) {
-    if (verificationMode) {
-        const subject = verificationSubject(p);
-        return subject ? subject.record : null;
-    }
-    return canEdit() && editingPid === p.id ? null : curDec()[p.id]; // saved records stay visible in read mode
-}
-
-// A paper is in the expert's queue while its agent record carries an AI Agent Review
+// A paper is in the review queue while its agent record carries an AI Agent Review
 // and no domain-expert verification has advanced it.
 function awaitsVerification(paperId) {
     const record = agentTrack.records[paperId];
@@ -805,21 +1108,12 @@ function verificationEntry(paperId, subject, annotationId, event, reviewerId, co
         actor_ids: actorIds(event.actor_ids),
         activity_id: event.activity_id,
         result: event.result,
-        note: event.note,
         at: event.at,
         event: JSON.parse(JSON.stringify(event))
     };
+    if (event.note) entry.note = event.note;
     if (correction) entry.annotation = JSON.parse(JSON.stringify(correction));
     return entry;
-}
-
-async function writeReviewerText(targetHandle, key, text) {
-    if (!targetHandle || !isReviewerId(key)) return false;
-    const fh = await targetHandle.getFileHandle(key + '.json', { create: true });
-    const w = await fh.createWritable();
-    await w.write(text);
-    await w.close();
-    return true;
 }
 
 // Corpus full-text index (FR-12 corpus search) + document fetch (FR-11)
@@ -833,8 +1127,7 @@ function loadCorpusIndex() {
     return corpusIndexPromise;
 }
 
-// Fetch the served knowledge document for a paper (FR-11). Single pluggable seam:
-// swapping in raw local full text (copyright-gated) only changes this function.
+// The served knowledge document of a paper, which carries the LLM-Wissensdestillat layer.
 function fetchPaperText(p) {
     if (!p.knowledge_doc) return Promise.resolve(null);
     if (textCache[p.id] !== undefined) return Promise.resolve(textCache[p.id]);
@@ -847,12 +1140,22 @@ function fetchPaperText(p) {
 // The Docling full texts live in docs/data/fulltext/ (gitignored, local clone only, mostly
 // copyrighted). The manifest says which papers have one, so abstract-only papers show that
 // state and no 404 is fired for them.
+// The manifest is excluded from version control and never published, so its presence
+// also tells PRISM that it runs from a local project copy, the precondition for
+// editing (ADR-042).
+let manifestReachable = false;
 function loadFulltextManifest() {
     if (fulltextManifest !== null) return Promise.resolve(fulltextManifest);
     return fetch('data/fulltext_manifest.json')
-        .then(function(r) { return r.ok ? r.json() : {}; })
+        .then(function(r) { manifestReachable = !!r.ok; return r.ok ? r.json() : {}; })
         .then(function(d) { fulltextManifest = d || {}; return fulltextManifest; })
-        .catch(function() { fulltextManifest = {}; return fulltextManifest; });
+        .catch(function() { manifestReachable = false; fulltextManifest = {}; return fulltextManifest; });
+}
+
+// Editing writes into a local clone through File System Access. The published copy
+// has neither, so it renders read-only without a mode switch.
+function localEditingAvailable() {
+    return fsSupported() && manifestReachable;
 }
 
 function hasFullText(p) {
@@ -878,7 +1181,7 @@ function countOcc(hay, needle) {
 }
 
 function normalizeSearchText(value) {
-    return String(value || '').toLowerCase().replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss')
+    return replaceGlyphNames(String(value || '')).normalize('NFKC').toLowerCase().replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss')
         .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
         .toLowerCase().replace(/\s+/g, ' ').trim();
 }
@@ -914,6 +1217,7 @@ function applyAnalysisVocab(d) {
     if (!d) return;
     anFields = Array.isArray(d.fields) ? d.fields : [];
     anStudyTypes = Array.isArray(d.study_types) ? d.study_types : [];
+    anStudyTypeLabels = (d.study_type && d.study_type.value_labels) || {};
     anVocabVersion = d.version || '';
 }
 function loadAnalysisFields() {
@@ -1048,7 +1352,7 @@ function harmTypesHint(analysis) {
     if (f.AN_Coding_Basis !== 'Fulltext') return '';
     if (u.AN_Harm_Types) return '';
     if ((f.AN_Harm_Types || []).length) return '';
-    return 'Bei Volltext-Basis ist AN_Harm_Types erforderlich. Wähle einen Code einschließlich None oder markiere das Feld als nicht entscheidbar.';
+    return 'Bei Volltext-Basis erforderlich.';
 }
 
 // Split a served knowledge document into its two epistemic layers (M3, ADR-016).
@@ -1151,8 +1455,80 @@ function inlineMd(s) {
     return s;
 }
 
+// Docling writes PDF glyphs without a Unicode mapping as /uniXXXX. Exactly four hex
+// digits are read, because a longer match would swallow following letters
+// ("/uniFB01eld" is "field", not U+FB01E). Ligatures resolve to their letters so that
+// search and pins see ordinary text.
+function replaceGlyphNames(value) {
+    return String(value || '').replace(/\/uni([0-9A-Fa-f]{4})/g, function(match, hex) {
+        const cp = parseInt(hex, 16);
+        if (cp >= 0xD800 && cp <= 0xDFFF) return match;
+        const ch = String.fromCodePoint(cp);
+        return cp >= 0xFB00 && cp <= 0xFB06 ? ch.normalize('NFKC') : ch;
+    });
+}
+
+function isTableSeparator(line) {
+    const value = String(line || '');
+    return value.indexOf('|') !== -1 && /^\s*\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)*\|?\s*$/.test(value);
+}
+
+function isTableStart(lines, i) {
+    return /^\s*\|/.test(lines[i] || '') && isTableSeparator(lines[i + 1]);
+}
+
+function tableCells(line) {
+    let s = String(line || '').trim();
+    if (s.charAt(0) === '|') s = s.slice(1);
+    if (s.charAt(s.length - 1) === '|') s = s.slice(0, -1);
+    return s.split('|').map(function(cell) { return cell.trim(); });
+}
+
+// GFM pipe table: the header row precedes the |---| separator. Cells pass through the
+// same escaping as paragraphs. The wrapper scrolls horizontally so the reading pane
+// itself never does.
+function renderTable(lines, i) {
+    const head = tableCells(lines[i]);
+    let k = i + 2;
+    const rows = [];
+    while (k < lines.length && /^\s*\|/.test(lines[k])) { rows.push(tableCells(lines[k])); k++; }
+    const width = Math.max(head.length, rows.reduce(function(m, r) { return Math.max(m, r.length); }, 0));
+    const cells = function(row, tag) {
+        let out = '';
+        for (let c = 0; c < width; c++) out += '<' + tag + '>' + inlineMd(row[c] || '') + '</' + tag + '>';
+        return out;
+    };
+    const html = '<div class="pt-doc-table"><table><thead><tr>' + cells(head, 'th') + '</tr></thead><tbody>' +
+        rows.map(function(row) { return '<tr>' + cells(row, 'td') + '</tr>'; }).join('') + '</tbody></table></div>';
+    return { html: html, next: k };
+}
+
+const GLOSSARY_HEADING = /acronyms|abbreviations|glossary|abk(ü|ue)rzungen|akronyme/i;
+
+// Under an acronym heading, alternating one-line paragraphs of a short term and its
+// expansion become a definition list. The pattern is read conservatively and stops at
+// the first block that breaks it, so ordinary prose is never reshaped.
+function glossaryPairs(lines, start) {
+    const pairs = [];
+    let k = start;
+    const blank = function(n) { return n >= lines.length || !lines[n].trim(); };
+    for (;;) {
+        let a = k;
+        while (a < lines.length && !lines[a].trim()) a++;
+        if (a >= lines.length || /^#{1,6}\s/.test(lines[a]) || !blank(a + 1)) break;
+        let b = a + 1;
+        while (b < lines.length && !lines[b].trim()) b++;
+        if (b >= lines.length || /^#{1,6}\s/.test(lines[b]) || !blank(b + 1)) break;
+        const term = lines[a].trim(), definition = lines[b].trim();
+        if (term.length > 15 || /[.!?;:,]/.test(term) || /^[-*>|]/.test(term) || /^[-*>|]/.test(definition)) break;
+        pairs.push([term, definition]);
+        k = b + 1;
+    }
+    return { pairs: pairs, next: k };
+}
+
 function renderMarkdown(md) {
-    md = stripFrontmatter(md);
+    md = replaceGlyphNames(stripFrontmatter(md));
     let lines = md.split(/\r?\n/);
     let out = [], i = 0, inList = false;
     function closeList() { if (inList) { out.push('</ul>'); inList = false; } }
@@ -1173,7 +1549,29 @@ function renderMarkdown(md) {
         }
         if (/^\s*$/.test(ln)) { closeList(); i++; continue; }
         const hm = ln.match(/^(#{1,6})\s+(.*)$/);
-        if (hm) { closeList(); const lvl = Math.min(hm[1].length, 4); out.push('<h' + lvl + ' class="pt-doc-h' + lvl + '">' + inlineMd(hm[2]) + '</h' + lvl + '>'); i++; continue; }
+        if (hm) {
+            closeList();
+            const lvl = Math.min(hm[1].length, 4);
+            out.push('<h' + lvl + ' class="pt-doc-h' + lvl + '">' + inlineMd(hm[2]) + '</h' + lvl + '>');
+            i++;
+            if (GLOSSARY_HEADING.test(hm[2])) {
+                const glossary = glossaryPairs(lines, i);
+                if (glossary.pairs.length >= 2) {
+                    out.push('<dl class="pt-doc-dl">' + glossary.pairs.map(function(pair) {
+                        return '<div><dt>' + inlineMd(pair[0]) + '</dt><dd>' + inlineMd(pair[1]) + '</dd></div>';
+                    }).join('') + '</dl>');
+                    i = glossary.next;
+                }
+            }
+            continue;
+        }
+        if (isTableStart(lines, i)) {
+            closeList();
+            const table = renderTable(lines, i);
+            out.push(table.html);
+            i = table.next;
+            continue;
+        }
         const lm = ln.match(/^\s*[-*]\s+(.*)$/);
         if (lm) { if (!inList) { out.push('<ul class="pt-doc-ul">'); inList = true; } out.push('<li>' + inlineMd(lm[1]) + '</li>'); i++; continue; }
         const bm = ln.match(/^>\s?(.*)$/);
@@ -1181,7 +1579,8 @@ function renderMarkdown(md) {
         closeList();
         const para = [ln]; i++;
         while (i < lines.length && !/^\s*$/.test(lines[i]) && !/^#{1,6}\s/.test(lines[i]) &&
-               !/^\s*[-*]\s/.test(lines[i]) && !/^---\s*$/.test(lines[i]) && !/^>\s?/.test(lines[i])) { para.push(lines[i]); i++; }
+               !/^\s*[-*]\s/.test(lines[i]) && !/^---\s*$/.test(lines[i]) && !/^>\s?/.test(lines[i]) &&
+               !isTableStart(lines, i)) { para.push(lines[i]); i++; }
         out.push('<p class="pt-doc-p">' + inlineMd(para.join(' ')) + '</p>');
     }
     closeList();
@@ -1200,45 +1599,49 @@ window.initializePrisma = function() {
     papers = (EC && EC.getAllPapers) ? (EC.getAllPapers() || []) : [];
     const query = new URLSearchParams(window.location.search);
     trialMode = query.get('trial') === '1';
-    verificationMode = query.get('verify') === '1';
     const requestedActor = query.get('actor');
     runActor = requestedActor === 'agent' ? 'agent' : 'human';
     if (trialMode && !requestedActor) runActor = 'agent';
-    // These URLs explicitly select an authoring workflow. Ordinary links, including
-    // paper deep links and cached reviewer profiles, confer no editing permission.
-    editMode = !query.get('review') && (trialMode || verificationMode || requestedActor === 'agent');
+    readFilterQuery(query);
     loadLocal();
     const requestedReviewer = normalizedReviewerKey(query.get('reviewer'));
-    if (trialMode && requestedReviewer) selectReviewer(requestedReviewer);
-    normalizeSurface();
     const requestedPaper = query.get('paper');
     const requestedReview = query.get('review');
-    state.index = startIndexForPaper(requestedPaper); // O4 plus a read-only direct-paper link
     loadCorpusIndex(); // background: ready by the time the user runs a corpus search
-    loadFulltextManifest().then(function() { if (initialized) refreshSourcePill(); }); // background: full-text availability for the reading pane
-    loadAnalysisFields().then(function() { // background: the frozen AN_ vocabulary for the Include analysis panel (FR-14)
-        if (initialized && state.surface === 'screening') {
-            refreshAssess();
-            refreshCorpusList();
-        }
+    loadAnalysisFields().then(function() { // background: the frozen AN_ vocabulary for the analysis step (FR-14)
+        if (initialized) { refreshAssess(); refreshCorpusList(); }
     });
     if (requestedReview) {
         const root = document.getElementById('prisma-root');
         if (root) root.innerHTML = '<section class="pt-shell"><h2>Screening</h2>' +
             '<div class="pt-acceptance-status" role="status">Abnahmeansicht wird geladen&hellip;</div></section>';
+        loadFulltextManifest().then(function() { if (initialized) refreshSourcePill(); });
         loadAcceptanceReview(requestedReview, requestedPaper);
-    } else {
-        renderShell();
-        showSurface(state.surface || 'screening');
-        if (canEdit() && !trialMode) restoreRepoConnection();
+        return;
     }
-    console.log('[PRISMA] initialized, ' + papers.length + ' papers, FS ' + (FS_SUPPORTED ? 'supported' : 'fallback'));
+    // The first paint waits for the manifest and the served agent track: the manifest
+    // decides whether editing is offered, the track which annotation a paper shows.
+    Promise.all([loadFulltextManifest(), loadServedAgentTracks()]).then(function() {
+        // Trial and agent URLs explicitly select an authoring workflow. ?verify=1 is the
+        // former verification entry and opens Bearbeiten where editing is available.
+        // Ordinary links, including paper deep links and cached reviewer profiles,
+        // confer no editing permission.
+        editMode = trialMode || requestedActor === 'agent' ||
+            (query.get('verify') === '1' && localEditingAvailable());
+        if (trialMode && requestedReviewer) selectReviewer(requestedReviewer);
+        state.index = startIndexForPaper(requestedPaper);
+        if (canEdit()) announceEditing();
+        renderShell();
+        renderScreening();
+        if (canEdit() && !trialMode) restoreRepoConnection();
+        console.log('[PRISMA] initialized, ' + papers.length + ' papers, local editing ' + (localEditingAvailable() ? 'available' : 'unavailable'));
+    });
 };
 
 function loadAcceptanceReview(slug, requestedPaper) {
     if (!/^[a-z0-9-]+$/.test(slug || '')) {
         renderShell();
-        showSurface('screening');
+        renderScreening();
         setSaveStatus('error', 'Ungültiger Abnahmefall.');
         renderData(document.getElementById('pt-data-inline'));
         return;
@@ -1257,49 +1660,53 @@ function loadAcceptanceReview(slug, requestedPaper) {
             state.index = papers.findIndex(function(paper) { return !!state.reviewers.acceptance[paper.id]; });
         if (state.index < 0) throw new Error('keine bekannten Paper im Abnahmefall');
         renderShell();
-        showSurface('screening');
+        renderScreening();
     }).catch(function(error) {
         acceptanceMode = null;
         renderShell();
-        showSurface('screening');
+        renderScreening();
         setSaveStatus('error', 'Abnahmefall konnte nicht geladen werden: ' + (error.message || error));
         renderData(document.getElementById('pt-data-inline'));
     });
 }
 
-// The editor always lands on screening; report generation remains an internal helper.
-function normalizeSurface() {
-    state.surface = 'screening';
-}
+// Shell
 
-// Shell + sub-navigation
-
+// The live region sits outside every re-rendered container, so status changes are
+// announced once instead of being lost with the replaced markup.
 function renderShell() {
     const root = document.getElementById('prisma-root');
     if (!root) return;
-    root.innerHTML = '<div class="pt-surface" id="pt-surface"></div>';
+    root.innerHTML = '<div class="pt-surface" id="pt-surface"></div>' +
+        '<div class="pt-sr-only" id="pt-live" role="status" aria-live="polite"></div>';
+}
+
+let announceTimer = null;
+function announce(message) {
+    const live = document.getElementById('pt-live');
+    if (!live || !message) return;
+    live.textContent = '';
+    clearTimeout(announceTimer);
+    announceTimer = setTimeout(function() { live.textContent = message; }, 30);
+}
+
+function modeSwitchAvailable() {
+    return !acceptanceMode && !trialMode && runActor !== 'agent' && localEditingAvailable();
 }
 
 // Workspace controls live at the top of the corpus column so the reading and
-// assessment panes start directly below the site header.
+// assessment panes start directly below the site header. The published copy cannot
+// edit, so it renders no switch at all.
 function workspaceBarHtml() {
-    let html = '<div class="pt-wsbar-top"><div class="pt-mode-seg" role="group" aria-label="Arbeitsmodus">';
-    if (!acceptanceMode && !trialMode && !verificationMode && runActor !== 'agent') {
-        html += '<span class="pt-sr-only" id="pt-workspace-mode" role="status">' + (canEdit() ? 'Bearbeitungsmodus' : 'Lesemodus') + '</span>' +
-            '<button class="pt-seg-btn pt-read-mode" id="pt-read-mode" type="button" aria-pressed="' + !canEdit() +
-            '" title="Papers lesen und durchsuchen, ohne etwas zu ändern.">Lesen</button>' +
+    let html = '';
+    if (modeSwitchAvailable()) {
+        html += '<div class="pt-wsbar-top"><div class="pt-mode-seg" role="group" aria-label="Arbeitsmodus">' +
+            '<button class="pt-seg-btn pt-read-mode" id="pt-read-mode" type="button" aria-pressed="' + !canEdit() + '">Lesen</button>' +
             '<button class="pt-seg-btn pt-edit-mode" id="pt-edit-mode" type="button" aria-pressed="' + canEdit() +
-            '" aria-describedby="pt-workspace-mode" title="Kürzel, Arbeitsordner, Bewertungen und Speichern freischalten. Ein ungespeicherter Entwurf bleibt beim Wechsel erhalten.">Bearbeiten</button>';
-    } else if (verificationMode) {
-        html += '<a class="pt-seg-btn pt-mode-switch" href="' + EC.escapeHtml(modeHref(false)) + '" title="Zurück zum Screening">Screening</a>';
+            '" title="Kürzel, Arbeitsordner, Bewertungen und Speichern. Ein ungespeicherter Entwurf bleibt beim Wechsel erhalten.">Bearbeiten</button>' +
+            '</div></div>';
     }
-    if (!acceptanceMode && !trialMode && runActor !== 'agent') {
-        html += verificationMode
-            ? '<span class="pt-seg-btn is-active" aria-current="page">Verifizieren</span>'
-            : '<a class="pt-seg-btn pt-mode-switch" href="' + EC.escapeHtml(modeHref(true)) + '" title="Nachweis- und Freigabestatus prüfen und das fachliche Ergebnis protokollieren.">Verifizieren</a>';
-    }
-    html += '</div></div>';
-    html += '<section class="pt-sync-inline" id="pt-data-inline" aria-label="Reviewer und Datenspeicherung"></section>';
+    html += '<section class="pt-sync-inline" id="pt-data-inline" aria-label="Kürzel und Arbeitsordner"></section>';
     return html;
 }
 
@@ -1311,9 +1718,9 @@ function bindWorkspaceBar(container) {
     renderData(container.querySelector('#pt-data-inline'));
 }
 
-// showSurface keeps its name for the test hook and browser traces.
+// Kept for the test hook and browser traces; PRISM has one surface.
 function showSurface() {
-    state.surface = 'screening'; saveLocal();
+    saveLocal();
     renderScreening();
 }
 
@@ -1325,13 +1732,29 @@ function focusDataInline() {
 
 function surfaceEl() { return document.getElementById('pt-surface'); }
 
-function modeHref(wantVerification) {
-    const url = new URL(window.location.href);
-    if (wantVerification) url.searchParams.set('verify', '1');
-    else url.searchParams.delete('verify');
+// URL state: the open paper and the list filters, so a reload or a shared link
+// restores the same view. Other parameters (trial, actor, reviewer, review) stay.
+function readFilterQuery(query) {
+    const status = query.get('status');
+    state.statusFilter = status === 'offen' || status === 'erfasst' ? status : 'alle';
+    const cats = String(query.get('cats') || '').split(',').filter(function(c) { return ALL_CATS.indexOf(c) !== -1; });
+    state.catFilter = cats.filter(function(c, i) { return cats.indexOf(c) === i; });
+}
+
+function syncUrl() {
+    if (!window.history || typeof window.history.replaceState !== 'function') return;
+    let url;
+    try { url = new URL(window.location.href); } catch (e) { return; }
     const paper = papers[state.index];
     if (paper && paper.id) url.searchParams.set('paper', paper.id);
-    return url.pathname.split('/').pop() + (url.search || '');
+    if (state.statusFilter !== 'alle' && statusFilterAvailable()) url.searchParams.set('status', state.statusFilter);
+    else url.searchParams.delete('status');
+    if (state.catFilter.length) url.searchParams.set('cats', state.catFilter.join(','));
+    else url.searchParams.delete('cats');
+    const next = url.pathname + url.search + url.hash;
+    if (next !== window.location.pathname + window.location.search + window.location.hash) {
+        try { window.history.replaceState(null, '', next); } catch (e) { /* sandboxed frames refuse it */ }
+    }
 }
 
 // Decision helpers
@@ -1342,7 +1765,7 @@ function aiProposal(paper) {
 }
 
 function humanDecision(paper, persp) {
-    persp = persp || state.perspective;
+    persp = persp || state.reviewer;
     if (persp === SEED) {
         if (paper.human && paper.human.decision)
             return { decision: paper.human.decision, categories: paper.human.all_categories || {}, source: SEED };
@@ -1352,16 +1775,10 @@ function humanDecision(paper, persp) {
     return d ? { decision: d.decision, categories: d.categories || {}, reason: d.reason, source: persp } : null;
 }
 
-function seedDecision(paper) {
-    if (paper.human && paper.human.decision)
-        return { decision: paper.human.decision, categories: paper.human.all_categories || {} };
-    return null;
-}
-
-// Categories are three-level (nein/teilweise/ja = 0/1/2). Legacy boolean and a pinned
-// human Beleg coerce to ja; anything falsy is nein.
+// Categories are three-level (nein/teilweise/ja = 0/1/2). A legacy boolean and the
+// historical import strings coerce like their numbers; anything else is nein.
 const CAT_STATE = ['nein', 'teilweise', 'ja'];
-function catLevel(v) { return v === true || v === 2 ? 2 : (v === 1 ? 1 : 0); }
+function catLevel(v) { return v === true || v === 2 || v === '2' ? 2 : (v === 1 || v === '1' ? 1 : 0); }
 function dimLevel(keys, cats) {
     return keys.reduce(function(m, c) { const l = catLevel(cats[c]); return l > m ? l : m; }, 0);
 }
@@ -1369,7 +1786,7 @@ function decCls(d) { return d === 'Include' ? 'include' : (d === 'Unclear' ? 'un
 
 // The three levels map to a three-way derived decision: both dimensions with a "ja" ->
 // Include; both at least "teilweise" but not both "ja" -> Unclear; any dimension entirely
-// "nein" -> Exclude (ADR: three-level screening).
+// "nein" -> Exclude (ADR-024).
 function deriveDecision(cats) {
     const tech = dimLevel(TECH_CATS, cats);
     const soc = dimLevel(SOCIAL_CATS, cats);
@@ -1388,19 +1805,42 @@ function finalDecisionOf(cats, override) {
 
 function divergent(h, a) { return h && a && h.decision !== a.decision; }
 
-function abstractQuality(p) {
-    let a = (p.abstract || '').trim();
-    if (!a) return { ok: false, note: 'Kein Abstract vorhanden; bitte die Volltextquelle prüfen.' };
-    if (/National Bureau of Economic Research|Founded in 1920, the NBER|private, non-profit, non-partisan organization/i.test(a))
-        return { ok: false, note: 'Wirkt wie Verlags-Boilerplate (NBER), nicht das Paper-Abstract.' };
-    if (a.length < 120) return { ok: false, note: 'Sehr kurzes Abstract, evtl. unvollständig.' };
-    return { ok: true };
+// The consolidated round-one expert decision as a prefill (ADR-042). The binary
+// categories map 1 to ja, 0 and null to nein. The decision is an independent fact and
+// is taken over as it stands: where the derivation rule disagrees (expert Excludes
+// with both groups set), the override records the deliberate deviation.
+const EXPERT_OVERRIDE_REASON = 'Expert:innen-Entscheidung übernommen';
+function expertAssessment(paper) {
+    const h = paper && paper.human;
+    if (!h || (h.decision !== 'Include' && h.decision !== 'Exclude')) return null;
+    const cats = {};
+    ALL_CATS.forEach(function(c) {
+        const v = (h.all_categories || {})[c];
+        if (v === 1 || v === true || v === '1') cats[c] = 2;
+    });
+    const override = finalDecisionOf(cats, false) !== h.decision;
+    if (finalDecisionOf(cats, override) !== h.decision) return null;
+    return {
+        categories: cats,
+        decision: h.decision,
+        override: override,
+        reason: h.decision === 'Exclude' ? EXPERT_EXCLUSION_REASON : null,
+        override_reason: override && h.decision === 'Include' ? EXPERT_OVERRIDE_REASON : null,
+        evidence: {}
+    };
 }
 
+function abstractQuality(p) {
+    let a = (p.abstract || '').trim();
+    if (!a) return { ok: false, usable: false, note: 'Kein Abstract vorhanden; bitte die Volltextquelle prüfen.' };
+    if (/National Bureau of Economic Research|Founded in 1920, the NBER|private, non-profit, non-partisan organization/i.test(a))
+        return { ok: false, usable: false, note: 'Wirkt wie Verlags-Boilerplate (NBER), nicht das Paper-Abstract.' };
+    if (a.length < 120) return { ok: false, usable: true, note: 'Sehr kurzes Abstract, evtl. unvollständig.' };
+    return { ok: true, usable: true };
+}
 
 function abstractUsableForReading(p) {
-    const quality = abstractQuality(p);
-    return quality.ok || (!!(p && String(p.abstract || '').trim()) && /^Sehr kurzes Abstract/.test(quality.note || ''));
+    return !!(p && abstractQuality(p).usable);
 }
 
 // The initial paper is screenable when the currently known paper layer contains
@@ -1411,10 +1851,8 @@ function isScreenable(p) {
 }
 
 function firstEntryIndex() {
-    const d = curDec();
     for (let i = 0; i < papers.length; i++) {
-        const rec = d[papers[i].id];
-        if ((!rec || !recordRequirements(rec).ok) && isScreenable(papers[i])) return i;
+        if (!isCaptured(papers[i]) && isScreenable(papers[i])) return i;
     }
     for (let i = 0; i < papers.length; i++) { if (isScreenable(papers[i])) return i; }
     return 0;
@@ -1443,15 +1881,8 @@ function evidenceCount(rec) {
     }, 0);
 }
 
-// Aggregation (computed quietly for the report layer)
-
-// The human-AI agreement metrics (computeMatrix, cohenKappa, kappaLabel) were
-// removed with ADR-017: the tool computed kappa over its own loaded corpus, a
-// different set from the benchmark CSVs, so an in-tool number could only diverge
-// from the data. Agreement lives in the benchmark data and the Evidence Companion,
-// not in this tool. The disclosure keeps M9/R2 by reference. computeFlow stays:
-// the flow diagram needs the per-track counts.
-
+// Aggregation for the operator utilities. Agreement metrics were removed with
+// ADR-017; computeFlow stays because the flow diagram needs the per-track counts.
 function computeFlow(persp) {
     let f = { total: papers.length, aiScreened: 0, aiIncl: 0, aiUnclear: 0, aiExcl: 0,
               humanScreened: 0, humanIncl: 0, humanUnclear: 0, humanExcl: 0, humanReasons: {} };
@@ -1478,7 +1909,96 @@ function computeFlow(persp) {
     return f;
 }
 
-function reviewerLabel(k) { return k === SEED ? 'Frühere Expert:innen-Referenz' : k; }
+// Subject of a paper (ADR-042): the annotation a paper currently carries, in the order
+// own saved record > productive agent record > consolidated expert decision > none.
+// The LLM assessment never becomes a subject. Agent runs and acceptance views see only
+// their own track.
+
+function referencesAllowed() { return runActor === 'human' && !trialMode && !acceptanceMode; }
+
+function ownRecord(p) {
+    if (!p || !state.reviewer || !state.reviewers[state.reviewer]) return null;
+    return state.reviewers[state.reviewer][p.id] || null;
+}
+
+function ownVerificationEntries(paperId) {
+    if (!state.reviewer) return [];
+    return (verificationRecords[state.reviewer] || []).filter(function(entry) {
+        return entry && entry.paper_id === paperId;
+    });
+}
+
+function paperSubject(p) {
+    if (!p) return { kind: 'empty', record: null };
+    const own = ownRecord(p);
+    if (own) return { kind: 'own', record: own };
+    if (referencesAllowed()) {
+        const agent = agentTrack.records[p.id];
+        if (agent) return { kind: 'agent', record: agent, reviewer: agentTrack.reviewer };
+        const expert = expertAssessment(p);
+        if (expert) return { kind: 'expert', record: expert };
+    }
+    return { kind: 'empty', record: null };
+}
+
+// "Erfasst" is the reviewer's own work: an own saved record or an own verification.
+function isCaptured(p) {
+    return !!ownRecord(p) || (referencesAllowed() && ownVerificationEntries(p.id).length > 0);
+}
+
+function listState(p) {
+    if (isCaptured(p)) return 'erfasst';
+    const subject = paperSubject(p);
+    return subject.kind === 'agent' ? 'agent' : (subject.kind === 'expert' ? 'expert' : 'none');
+}
+
+const LIST_STATE_LABELS = {
+    erfasst: 'erfasst',
+    agent: 'Agentenkodierung zu prüfen',
+    expert: 'vorbelegt, nicht bestätigt',
+    none: 'offen'
+};
+
+function statusLabel(st) { return LIST_STATE_LABELS[st] || 'offen'; }
+
+function currentCategories(p) {
+    const subject = paperSubject(p);
+    return subject.record ? (subject.record.categories || {}) : {};
+}
+
+// The status filter concerns the reviewer's own records, so it exists only where
+// editing does.
+function statusFilterAvailable() {
+    return !acceptanceMode && (trialMode || localEditingAvailable());
+}
+
+function matchesCategoryFilter(p) {
+    if (!state.catFilter.length) return true;
+    const cats = currentCategories(p);
+    return state.catFilter.every(function(c) { return catLevel(cats[c]) > 0; });
+}
+
+function matchesStatusFilter(p, status) {
+    if (status === 'erfasst') return isCaptured(p);
+    if (status === 'offen') return !isCaptured(p);
+    return true;
+}
+
+// Rows before the status filter: the corpus search (if any) and the category filter.
+function baseRows() {
+    let rows = papers.map(function(p, index) { return { paper: p, index: index, kind: '', count: 0 }; });
+    if (acceptanceMode) rows = rows.filter(function(row) { return !!curDec()[row.paper.id]; });
+    if (corpusQuery.trim() && corpusIndex) {
+        rows = corpusSearchResults(corpusQuery);
+        if (acceptanceMode) rows = rows.filter(function(row) { return !!curDec()[row.paper.id]; });
+    }
+    return rows.filter(function(row) { return matchesCategoryFilter(row.paper); });
+}
+
+function visibleRows() {
+    const status = statusFilterAvailable() ? state.statusFilter : 'alle';
+    return baseRows().filter(function(row) { return matchesStatusFilter(row.paper, status); });
+}
 
 // Surface: Screening (read + search + pin evidence)
 
@@ -1488,146 +2008,224 @@ function renderScreening() {
     if (state.index < 0) state.index = 0;
     if (state.index >= papers.length) state.index = papers.length - 1;
 
-    let p = papers[state.index];
+    const p = papers[state.index];
     if (renderedPaperId !== p.id) {
         state.readMode = 'full';
         renderedPaperId = p.id;
+        railStep = 'assess';
     }
-    if (editingPid && editingPid !== p.id) editingPid = null; // navigating away abandons the edit; the record stays
-    const dec = displayRecord(p);
-    if (!dec && work.pid !== p.id) resetWork(p);
+    if (canEdit()) work = draftFor(p);
+    const oldList = document.getElementById('pt-corpus-list');
+    const listScroll = oldList ? oldList.scrollTop : null;
 
-    const screened = Object.keys(curDec()).length;
-    const pct = papers.length ? Math.round(screened / papers.length * 100) : 0;
-
-    let html = '<div class="pt-ws-bar">';
-    html += '<span class="pt-ws-pos">' + (state.index + 1) + ' / ' + papers.length + '</span>' +
-        '<span class="pt-ws-done" title="Von dir erfasste Papers (' + pct + ' %)">' + screened + ' erfasst</span>';
-    if (canEdit()) {
-        html += '<button class="pt-save-icon" id="pt-record" type="button" aria-label="Entscheidung speichern" title="Entscheidung speichern"' +
-            ((dec || !state.reviewer || (!screeningHandle && !trialMode)) ? ' disabled' : '') + '>' +
-            '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 3h12l2 2v16H5V3Zm2 2v5h9V5H7Zm1 9v5h8v-5H8Z"></path></svg>' +
-            '<span class="pt-sr-only">Entscheidung speichern</span></button>';
-    }
-    html += '<span class="pt-spacer"></span>';
-    html += '</div>';
-    const positionBar = html;
-
-    html = '<div class="pt-ws pt-ws-screen">';
-    html += corpusHtml(positionBar);
-    html += readingShellHtml(p, dec);
-    html += '<aside class="pt-rail" id="pt-assess-col">' + assessInnerHtml(p, dec) + '</aside>';
+    let html = '<div class="pt-ws pt-ws-screen">';
+    html += corpusHtml();
+    html += readingShellHtml(p);
+    html += '<aside class="pt-rail" id="pt-assess-col" aria-label="Bewertung">' + railHtml(p) + '</aside>';
     html += '<div class="pt-pinmenu" id="pt-pinmenu" hidden></div>';
     html += '</div>';
 
     el.innerHTML = html;
     bindWorkspaceBar(el);
-    // the load starts first: it raises readingPending synchronously, so the commit gate
+    // the load starts first: it raises readingPending synchronously, so the save gate
     // that attachScreening evaluates sees this paper's load rather than the previous one
     loadReadingInto(p);
-    attachScreening(p, dec);
+    attachScreening(p);
+    const list = document.getElementById('pt-corpus-list');
+    if (list) {
+        if (listScroll !== null) list.scrollTop = listScroll;
+        const active = list.querySelector('.pt-nav-item.active');
+        if (active && typeof active.scrollIntoView === 'function') active.scrollIntoView({ block: 'nearest' });
+    }
+    syncUrl();
 
     // keyboard flow: after a paper switch (corpus pick, next-open), move focus to the
     // paper heading so the reader does not lose its place to document body (a11y).
     if (focusReadingOnRender) {
         focusReadingOnRender = false;
         const title = document.getElementById('pt-paper-title');
-        if (title && typeof title.focus === 'function') title.focus();
+        if (title && typeof title.focus === 'function') title.focus({ preventScroll: true });
     }
 }
 
-// ---- left: corpus navigator with full-text search ----
-function corpusHtml(positionBar) {
-    let d = curDec();
-    const total = acceptanceMode ? Object.keys(d).length : papers.length;
-    let h = '<aside class="pt-nav"><div class="pt-nav-tools">' + workspaceBarHtml() + (positionBar || '') + '</div>';
-    h += '<div class="pt-corpus-search"><input id="pt-corpus-q" aria-label="Korpus durchsuchen: Metadaten und Wissensindex" placeholder="Korpus durchsuchen" value="' + EC.escapeHtml(corpusQuery) + '">' +
-        '<span class="pt-corpus-hint" id="pt-corpus-hint"></span></div>';
+// ---- left: corpus navigator with filters and full-text search ----
+
+function capturedCount() {
+    if (acceptanceMode) return 0;
+    return papers.reduce(function(n, p) { return n + (isCaptured(p) ? 1 : 0); }, 0);
+}
+
+function positionBarHtml() {
+    const rows = visibleRows();
+    const at = rows.findIndex(function(row) { return row.index === state.index; });
+    let html = '<div class="pt-ws-bar">';
+    html += '<span class="pt-ws-pos" aria-label="Position in der Liste">' + (at === -1 ? '–' : (at + 1)) + ' / ' + rows.length + '</span>';
+    if (canEdit() && !acceptanceMode) {
+        const gate = saveGate(papers[state.index]);
+        html += '<span class="pt-ws-done">' + capturedCount() + ' von ' + papers.length + ' erfasst</span>';
+        html += '<span class="pt-spacer"></span>';
+        if (gate.storage) html += '<span class="pt-save-hint" id="pt-save-hint">' + EC.escapeHtml(gate.storage) + '</span>';
+        const label = gate.ok ? gate.label : 'Speichern nicht möglich: ' + (gate.storage || gate.reasons[0] || gate.label);
+        html += '<button class="pt-save-icon" id="pt-record" type="button" aria-label="' + EC.escapeHtml(label) +
+            '" title="' + EC.escapeHtml(label) + '"' + (gate.ok ? '' : ' disabled') + '>' +
+            '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 3h12l2 2v16H5V3Zm2 2v5h9V5H7Zm1 9v5h8v-5H8Z"></path></svg></button>';
+    }
+    html += '</div>';
+    return html;
+}
+
+function filtersHtml() {
+    let h = '<div class="pt-list-filters">';
+    if (statusFilterAvailable()) {
+        const base = baseRows();
+        const counts = { alle: base.length, offen: 0, erfasst: 0 };
+        base.forEach(function(row) { if (isCaptured(row.paper)) counts.erfasst++; else counts.offen++; });
+        h += '<div class="pt-status-seg" role="group" aria-label="Status">';
+        [['alle', 'Alle'], ['offen', 'Offen'], ['erfasst', 'Erfasst']].forEach(function(item) {
+            h += '<button type="button" class="pt-seg-btn" data-status="' + item[0] + '" aria-pressed="' + (state.statusFilter === item[0]) + '">' +
+                item[1] + ' <span class="pt-seg-count">' + counts[item[0]] + '</span></button>';
+        });
+        h += '</div>';
+    }
+    h += '<div class="category-chips pt-cat-filter" role="group" aria-label="Nach Kategorien der aktuellen Annotation filtern">';
+    [['Gegenstand', TECH_CATS], ['Perspektive', SOCIAL_CATS]].forEach(function(group, index) {
+        if (index) h += '<span class="chip-group-sep" aria-hidden="true"></span>';
+        h += '<span class="chip-group-label">' + group[0] + '</span>';
+        group[1].forEach(function(c) {
+            h += categoryChipHtml(c, state.catFilter.indexOf(c) !== -1 ? 2 : 0, { compact: true, filter: true });
+        });
+    });
+    h += '</div></div>';
+    return h;
+}
+
+function corpusHtml() {
+    let h = '<aside class="pt-nav" aria-label="Dokumente"><div class="pt-nav-tools">' + workspaceBarHtml() + positionBarHtml() + '</div>';
+    h += filtersHtml();
+    h += '<div class="pt-corpus-search"><input id="pt-corpus-q" type="search" aria-label="Korpus durchsuchen" placeholder="Korpus durchsuchen" value="' +
+        EC.escapeHtml(corpusQuery) + '"></div>';
     h += '<div class="pt-nav-list' + (corpusQuery.trim() ? ' is-searching' : '') + '" id="pt-corpus-list">' + corpusListHtml() + '</div></aside>';
     return h;
 }
 
-// Text equivalent for the colour-only status dot in the corpus list (a screen reader
-// otherwise hears nothing for the decision state), browser-agent a11y finding.
-function statusLabel(st) {
-    return st === 'include' ? 'eingeschlossen' : st === 'exclude' ? 'ausgeschlossen'
-        : st === 'unclear' ? 'unklar' : st === 'incomplete' ? 'unvollständig' : 'offen';
+function categoryDotsHtml(cats) {
+    const set = ALL_CATS.filter(function(c) { return catLevel(cats[c]) > 0; });
+    if (!set.length) return '';
+    return '<span class="pt-nav-cats" aria-hidden="true">' + set.map(function(c) {
+        return '<span class="chip-dot' + (catLevel(cats[c]) === 1 ? ' is-partial' : '') + '" style="--chip-color:' +
+            EC.escapeHtml(CAT_COLOR[c] || '') + '"></span>';
+    }).join('') + '</span>';
 }
 
 function corpusListHtml() {
-    let d = curDec();
-    let q = corpusQuery.trim();
-    let rows = papers.map(function(p, index) { return { paper: p, index: index, kind: '', count: 0 }; });
-    if (acceptanceMode) rows = rows.filter(function(result) { return !!d[result.paper.id]; });
-    if (q) {
-        if (!corpusIndex) return '<p class="pt-muted pt-corpus-empty">Such-Index lädt…</p>';
-        rows = corpusSearchResults(q);
-        if (acceptanceMode) rows = rows.filter(function(result) { return !!d[result.paper.id]; });
-        if (!rows.length) return '<p class="pt-muted pt-corpus-empty">Keine Treffer für &bdquo;' + EC.escapeHtml(corpusQuery) + '&ldquo;.</p>';
-    }
+    const q = corpusQuery.trim();
+    if (q && !corpusIndex) return '<p class="pt-muted pt-corpus-empty">Such-Index lädt…</p>';
+    const rows = visibleRows();
+    if (!rows.length) return '<p class="pt-muted pt-corpus-empty">' + (q
+        ? 'Keine Treffer für &bdquo;' + EC.escapeHtml(corpusQuery) + '&ldquo;.'
+        : 'Keine Dokumente in dieser Auswahl.') + '</p>';
     return rows.map(function(result) {
         const p = result.paper, i = result.index;
-        let rec = d[p.id];
-        let st = rec ? (recordRequirements(rec).ok ? rec.decision.toLowerCase() : 'incomplete') : 'none';
+        const st = listState(p);
+        const cats = currentCategories(p);
+        const catNames = ALL_CATS.filter(function(c) { return catLevel(cats[c]) > 0; }).map(function(c) { return CAT_LABELS[c]; });
         const badge = q ? '<span class="pt-hit-badge">' + EC.escapeHtml(result.kind === 'Text'
             ? result.count + ' Texttreffer' : result.kind) + '</span>' : '';
-        const idLabel = result.kind === 'Paper-ID' || !p.doi ? 'ID ' + p.id : 'DOI ' + p.doi;
-        // The expert's queue: an agent record under AI Agent Review that no
-        // domain-expert verification has advanced yet. Own decision dots stay as they are.
-        const queued = verificationMode && awaitsVerification(p.id);
-        return '<button class="pt-nav-item' + (i === state.index ? ' active' : '') + '" data-i="' + i +
-            '" data-match-kind="' + EC.escapeHtml(result.kind || '') + '">' +
-            '<span class="pt-nav-dot pt-dot-' + st + '" aria-hidden="true"></span>' +
-            '<span class="pt-sr-only">' + statusLabel(st) + '</span>' +
-            (queued ? '<span class="pt-nav-verify" aria-hidden="true"></span><span class="pt-sr-only">Agentenkodierung offen zur Verifikation</span>' : '') +
+        const active = i === state.index;
+        return '<button type="button" class="pt-nav-item' + (active ? ' active' : '') + '" data-i="' + i + '"' +
+            (active ? ' aria-current="true"' : '') + ' data-state="' + st + '" data-match-kind="' + EC.escapeHtml(result.kind || '') + '">' +
+            '<span class="pt-nav-mark pt-mark-' + st + '" aria-hidden="true"></span>' +
             '<span class="pt-nav-text"><span class="pt-nav-t">' + EC.escapeHtml(p.title || '(ohne Titel)') + '</span>' +
             '<span class="pt-nav-m">' + EC.escapeHtml(p.author_year || p.authors || 'Autor:in/Jahr unbekannt') + '</span>' +
-            (q ? '<span class="pt-nav-id mono">' + EC.escapeHtml(idLabel) + '</span>' : '') + '</span>' + badge + '</button>';
+            (q && result.kind === 'DOI' && p.doi ? '<span class="pt-nav-id">DOI ' + EC.escapeHtml(p.doi) + '</span>' : '') +
+            '</span>' + categoryDotsHtml(cats) + badge +
+            '<span class="pt-sr-only">, ' + statusLabel(st) + (catNames.length ? ', ' + EC.escapeHtml(catNames.join(', ')) : '') + '</span>' +
+            '</button>';
     }).join('');
 }
 
 function refreshCorpusList() {
-    let list = document.getElementById('pt-corpus-list');
-    if (list) { list.innerHTML = corpusListHtml(); bindCorpusItems(); }
-    let hint = document.getElementById('pt-corpus-hint');
-    if (hint) {
-        let q = corpusQuery.trim();
-        if (!q) hint.textContent = '';
-        else if (!corpusIndex) hint.textContent = '';
-        else {
-            let results = corpusSearchResults(q);
-            if (acceptanceMode) results = results.filter(function(result) { return !!curDec()[result.paper.id]; });
-            hint.textContent = results.length + ' Ergebnisse';
-        }
+    const list = document.getElementById('pt-corpus-list');
+    if (list) {
+        const scroll = list.scrollTop;
+        list.innerHTML = corpusListHtml();
+        list.scrollTop = scroll;
+        bindCorpusItems();
+        list.classList.toggle('is-searching', !!corpusQuery.trim());
     }
-    if (list) list.classList.toggle('is-searching', !!corpusQuery.trim());
+    const nav = document.querySelector('.pt-nav-tools .pt-ws-bar');
+    if (nav) nav.outerHTML = positionBarHtml();
+    const bar = document.querySelector('.pt-nav-tools .pt-ws-bar');
+    const record = bar && bar.querySelector('#pt-record');
+    if (record) record.addEventListener('click', saveCurrent);
+    const filters = document.querySelector('.pt-nav .pt-list-filters');
+    if (filters) { filters.outerHTML = filtersHtml(); bindFilters(); }
+}
+
+function openPaper(index) {
+    state.index = index;
+    focusReadingOnRender = true;
+    renderScreening();
 }
 
 function bindCorpusItems() {
-    let list = document.getElementById('pt-corpus-list'); if (!list) return;
+    const list = document.getElementById('pt-corpus-list'); if (!list) return;
     list.querySelectorAll('.pt-nav-item').forEach(function(btn) {
         btn.addEventListener('click', function() {
-            state.index = parseInt(btn.dataset.i, 10);
             pendingInText = corpusQuery.trim() && btn.dataset.matchKind === 'Text' ? corpusQuery.trim() : null;
-            focusReadingOnRender = true;
-            renderScreening();
+            openPaper(parseInt(btn.dataset.i, 10));
+        });
+    });
+}
+
+function bindFilters() {
+    const filters = document.querySelector('.pt-nav .pt-list-filters'); if (!filters) return;
+    filters.querySelectorAll('[data-status]').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            state.statusFilter = btn.dataset.status;
+            refreshCorpusList();
+            syncUrl();
+            const again = document.querySelector('.pt-nav [data-status="' + state.statusFilter + '"]');
+            if (again) again.focus();
+        });
+    });
+    filters.querySelectorAll('.category-chip[data-cat]').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            const c = btn.dataset.cat;
+            const at = state.catFilter.indexOf(c);
+            if (at === -1) state.catFilter.push(c); else state.catFilter.splice(at, 1);
+            refreshCorpusList();
+            syncUrl();
+            const again = document.querySelector('.pt-nav .pt-cat-filter [data-cat="' + c + '"]');
+            if (again) again.focus();
         });
     });
 }
 
 // ---- center: reading column (full text + in-text search) ----
-function sourcePillHtml(p) {
-    if (hasFullText(p)) return '<span class="pt-pill pt-source-pill pt-pill-ghost">Volltext</span>';
-    if (abstractUsableForReading(p)) return '<span class="pt-pill pt-source-pill pt-pill-warn">Metadaten-Abstract</span>';
-    return '<span class="pt-pill pt-source-pill pt-pill-warn">kein Papertext</span>';
+
+// The source mark appears only when the Paper layer is not a full text.
+function sourceMarkHtml(p) {
+    if (hasFullText(p)) return '';
+    return '<div class="pt-source-mark"><dt>Textbasis</dt><dd>' +
+        (abstractUsableForReading(p) ? 'Metadaten-Abstract' : 'kein Papertext') + '</dd></div>';
 }
 
-// The first paint can precede the full-text manifest; once it resolves, the pill of the
-// open paper is corrected in place (no re-render, so typed search text is kept).
+// Kept as the test seam for the source state: an empty string means full text.
+function sourcePillHtml(p) {
+    const mark = sourceMarkHtml(p);
+    return mark ? '<span class="pt-source-state">' + (abstractUsableForReading(p) ? 'Metadaten-Abstract' : 'kein Papertext') + '</span>' : '';
+}
+
+// The first paint can precede the full-text manifest in the acceptance view; once it
+// resolves, the mark of the open paper is corrected in place.
 function refreshSourcePill() {
-    const pill = document.querySelector('.pt-read-meta .pt-source-pill');
-    if (!pill || !papers.length) return;
-    pill.outerHTML = sourcePillHtml(papers[state.index]);
+    const meta = document.querySelector('.pt-paper-metadata');
+    if (!meta || !papers.length) return;
+    const old = meta.querySelector('.pt-source-mark');
+    if (old) old.remove();
+    const mark = sourceMarkHtml(papers[state.index]);
+    if (mark) meta.insertAdjacentHTML('beforeend', mark);
 }
 
 function normalizedDoi(raw) {
@@ -1641,17 +2239,28 @@ function doiHref(raw) {
     return doi ? 'https://doi.org/' + doi.split('/').map(encodeURIComponent).join('/') : '';
 }
 
-function readingShellHtml(p, dec) {
-    const aq = abstractQuality(p);
+// Publication version and peer review appear only where they change how the text is
+// read: a non-preferred version and a missing or pending review are flagged.
+function versionMetaHtml(p) {
+    let h = '';
+    if (p.version_type && p.version_type !== 'unknown')
+        h += '<div><dt>Fassung</dt><dd>' + EC.escapeHtml(versionLabel(p.version_type)) + '</dd></div>';
+    if (p.preferred_version_id && p.is_preferred_version === false)
+        h += '<div class="pt-meta-warn"><dt>Hinweis</dt><dd>nicht die bevorzugte Fassung</dd></div>';
+    if (p.peer_review_status === 'peer_reviewed')
+        h += '<div><dt>Begutachtung</dt><dd>' + EC.escapeHtml(peerReviewLabel(p.peer_review_status)) + '</dd></div>';
+    else if (p.peer_review_status === 'under_review' || p.peer_review_status === 'not_peer_reviewed')
+        h += '<div class="pt-meta-warn"><dt>Begutachtung</dt><dd>' + EC.escapeHtml(peerReviewLabel(p.peer_review_status)) + '</dd></div>';
+    return h;
+}
+
+function readingShellHtml(p) {
     const authority = p.knowledge_authority || {};
     const layerNote = authority.status === 'preparation'
-        ? 'LLM-Ausarbeitung, noch nicht separat geprüft. Sie ist vom Originaltext getrennt. Belege daraus erfüllen das Paper-Beleg-Gate nicht.'
-        : 'LLM-Wissensdestillat aus dem Wissensdokument. Diese automatisch erzeugte Referenz ist vom Originaltext getrennt; Belege daraus erfüllen das Paper-Beleg-Gate nicht.';
-    let h = '<div class="pt-read pt-read-screen"><div class="pt-read-inner">';
-    h += '<div class="pt-paper-head"><div class="pt-read-meta">';
-    h += sourcePillHtml(p);
-    if (dec) h += '<span class="pt-pill pt-pill-human pt-pill-right">erfasst</span>';
-    h += '</div>';
+        ? 'LLM-Ausarbeitung, noch nicht geprüft, nicht der Papertext. Belege von hier zählen nicht als Paper-Beleg.'
+        : 'LLM-Wissensdestillat, nicht der Papertext. Belege von hier zählen nicht als Paper-Beleg.';
+    let h = '<div class="pt-read pt-read-screen">';
+    h += '<div class="pt-paper-head">';
     h += '<h1 class="pt-paper-title" id="pt-paper-title" tabindex="-1">' + EC.escapeHtml(p.title || '(ohne Titel)') + '</h1>';
     const doi = normalizedDoi(p.doi);
     const sourceUrl = normalizedSourceUrl(p.url);
@@ -1663,40 +2272,29 @@ function readingShellHtml(p, dec) {
             '" target="_blank" rel="noopener noreferrer" title="DOI ' + EC.escapeHtml(doi) + ' öffnen">' + EC.escapeHtml(doi) + '</a></dd></div>' : '') +
         (sourceUrl ? '<div><dt>Quelle</dt><dd><a class="pt-source-link" href="' + EC.escapeHtml(sourceUrl) +
             '" target="_blank" rel="noopener noreferrer">Webseite öffnen</a></dd></div>' : '') +
-        '<details class="pt-paper-identity"><summary>Fassung und Identität</summary><div class="pt-paper-identity-body">' +
-        '<div><dt>Paper-ID</dt><dd class="mono">' + EC.escapeHtml(p.id) + '</dd></div>' +
-        '<div><dt>Fassung</dt><dd>' + EC.escapeHtml(versionLabel(p.version_type)) +
-            (p.is_preferred_version ? ' · bevorzugte Fassung' : '') + '</dd></div>' +
-        '<div><dt>Begutachtung</dt><dd>' + EC.escapeHtml(peerReviewLabel(p.peer_review_status)) + '</dd></div>' +
-        (p.work_id ? '<div><dt>Werk-ID</dt><dd class="mono">' + EC.escapeHtml(p.work_id) + '</dd></div>' : '') +
-        (p.version_id ? '<div><dt>Fassungs-ID</dt><dd class="mono">' + EC.escapeHtml(p.version_id) + '</dd></div>' : '') +
-        ((p.work_versions || []).length > 1 ? '<div><dt>Bekannte Fassungen</dt><dd>' +
-            EC.escapeHtml(p.work_versions.map(function(item) { return versionLabel(item.version_type); }).join(' · ')) +
-            '</dd></div>' : '') +
-        '</div></details></dl></div>';
-    if (!aq.ok && !p.knowledge_doc) h += '<div class="pt-aq-warn">Achtung: ' + EC.escapeHtml(aq.note) + '</div>';
-
-    h += '<article class="pt-reading-surface" aria-label="Papertext">';
+        versionMetaHtml(p) + sourceMarkHtml(p) + '</dl>';
     h += '<div class="pt-layer-toggle" id="pt-layer-toggle" hidden>' +
-        '<button type="button" class="pt-layer-btn active" data-mode="full" aria-pressed="true">Volltext</button>' +
+        '<button type="button" class="pt-layer-btn active" data-mode="full" aria-pressed="true">Papertext</button>' +
         '<button type="button" class="pt-layer-btn" data-mode="ai" aria-pressed="false">LLM-Wissensdestillat</button>' +
+        '</div></div>';
+    h += '<article class="pt-reading-surface" id="pt-reading-surface" aria-label="Papertext"><div class="pt-read-inner">';
+    h += '<div class="pt-intext-bar" id="pt-intext-bar" hidden>' +
+        '<input id="pt-intext" type="search" aria-label="Im Text suchen" aria-keyshortcuts="Enter Shift+Enter" placeholder="Im Text suchen">' +
+        '<span class="pt-intext-count" id="pt-intext-count" aria-hidden="true"></span>' +
+        '<button type="button" class="pt-intext-nav" id="pt-intext-prev" aria-label="Vorheriger Treffer">&lsaquo;</button>' +
+        '<button type="button" class="pt-intext-nav" id="pt-intext-next" aria-label="Nächster Treffer">&rsaquo;</button>' +
+        (canEdit() ? '<button type="button" class="pt-btn pt-pin-hit" id="pt-pin-hit" disabled aria-describedby="pt-pin-help">Treffer anheften</button>' +
+            '<span class="pt-sr-only" id="pt-pin-help">Heftet den aktuellen Treffer als Beleg an eine Kategorie. Eine markierte Textstelle lässt sich ebenso anheften. ' +
+            'Ein Paper-Beleg setzt eine leere Kategorie auf teilweise.</span>' : '') +
         '</div>';
-    h += '<div class="pt-intext-bar">' +
-        '<input id="pt-intext" aria-label="Im Text suchen" placeholder="Im Text suchen (Enter = nächster Treffer)">' +
-        '<span class="pt-tag-mono" id="pt-intext-count"></span>' +
-        '<button class="pt-intext-nav" id="pt-intext-prev" title="vorheriger Treffer">&lsaquo;</button>' +
-        '<button class="pt-intext-nav" id="pt-intext-next" title="nächster Treffer">&rsaquo;</button>' +
-        (canEdit() ? '<button class="pt-btn pt-pin-hit" id="pt-pin-hit" disabled title="Aktuellen Treffer als Beleg anheften">Treffer anheften</button>' : '') +
-        '</div>';
-    h += '<div class="pt-search-key" id="pt-search-key" hidden><span aria-hidden="true"></span>Aktueller Suchtreffer im Lesetext</div>';
     h += '<div class="pt-layer-band" id="pt-layer-band" hidden>' + EC.escapeHtml(layerNote) + '</div>';
-    h += '<div class="pt-doc" id="pt-doc"><p class="pt-muted">Volltext lädt…</p></div>';
-    h += '</article></div></div>';
+    h += '<div class="pt-doc" id="pt-doc"><p class="pt-muted">Text lädt…</p></div>';
+    h += '</div></article></div>';
     return h;
 }
 
-// Two epistemic layers by source (M3, ADR-016): the human "Volltext" layer is the original
-// Docling full text; the LLM knowledge distillate is generated from the knowledge document.
+// Two epistemic layers by source (M3, ADR-016): the Paper layer is the original Docling
+// full text or the abstract; the LLM knowledge distillate comes from the knowledge document.
 function loadReadingInto(p) {
     const my = ++readToken;
     readingPending = true;
@@ -1721,7 +2319,7 @@ function applyReading(token, p, full, kdmd) {
         docHtmlPaper = renderMarkdown(paperBodyMarkdown(full, p));
         currentTextSource = 'raw';
     } else if (abstractUsableForReading(p)) {
-        docHtmlPaper = '<p class="pt-doc-p">' + inlineMd(p.abstract) + '</p>';
+        docHtmlPaper = '<p class="pt-doc-p">' + inlineMd(replaceGlyphNames(p.abstract)) + '</p>';
         currentTextSource = 'abstract';
     } else {
         docHtmlPaper = '';
@@ -1737,9 +2335,9 @@ function applyReading(token, p, full, kdmd) {
         applyInText(pendingInText);
         pendingInText = null;
     }
-    // re-evaluate the commit gate; #pt-record exists only in the unlocked form, which is
-    // also what an edit renders, so a paper reopened for editing is covered too
-    if (document.getElementById('pt-record')) refreshAssess();
+    // the assessment and its save gate depend on the text source, so both are
+    // re-evaluated once the text lands
+    if (canEdit()) refreshAssess(); else refreshSaveGate();
     return true;
 }
 
@@ -1748,23 +2346,23 @@ function referenceLayerAvailable() {
     return !!(docHtmlAi && paper && (acceptanceMode || (runActor !== 'agent' && curDec()[paper.id])));
 }
 
-// Converted full texts often start with publisher front matter; the reading pane opens
-// at the first heading (preferably the abstract) so the reviewer starts at the paper.
+// Converted full texts often start with publisher front matter; the reading surface
+// opens at the first heading (preferably the abstract). Only the text scrolls, so the
+// title and metadata stay in view.
 function jumpToFirstHeading(doc) {
-    const read = doc.closest('.pt-read');
-    if (!read) return;
+    const surface = doc.closest('.pt-reading-surface');
+    if (!surface) return;
     window.setTimeout(function() {
         const headings = doc.querySelectorAll('h1, h2, h3');
         let target = null;
         headings.forEach(function(h) { if (!target && /abstract|zusammenfassung|summary/i.test(h.textContent)) target = h; });
         if (!target) target = headings[0];
         if (!target) return;
-        const offset = target.getBoundingClientRect().top - read.getBoundingClientRect().top + read.scrollTop;
-        // short front matter stays in view together with title and metadata; only a long
-        // publisher preamble (longer than the pane) is skipped
-        if (offset < read.clientHeight * 0.8) return;
-        const bar = read.querySelector('.pt-intext-bar');
-        read.scrollTop = Math.max(0, offset - (bar ? bar.getBoundingClientRect().height + 12 : 12));
+        const offset = target.getBoundingClientRect().top - surface.getBoundingClientRect().top + surface.scrollTop;
+        // short front matter stays in view; only a preamble longer than the pane is skipped
+        if (offset < surface.clientHeight * 0.8) return;
+        const bar = surface.querySelector('.pt-intext-bar');
+        surface.scrollTop = Math.max(0, offset - (bar ? bar.getBoundingClientRect().height + 12 : 12));
     }, 0);
 }
 
@@ -1774,9 +2372,12 @@ function paintActiveLayer() {
     let d = document.getElementById('pt-doc'); if (!d) return;
     docHtmlCurrent = activeLayerHtml();
     if (state.readMode === 'full') jumpToFirstHeading(d);
-    d.innerHTML = docHtmlCurrent || '<div class="pt-notext"><strong>Kein lesbarer Text.</strong> ' +
-        'Für dieses Paper liegt weder Volltext noch Abstract vor. Eine am Text belegbare Bewertung ist hier nicht möglich; ' +
-        'Quelle prüfen oder als No full text ausschließen.</div>';
+    const paper = papers[state.index];
+    d.innerHTML = docHtmlCurrent || '<p class="pt-notext">Kein Papertext geladen.' +
+        (paper && normalizedSourceUrl(paper.url) ? ' Quelle über „Webseite öffnen“ prüfen.' : '') + '</p>';
+    // search and pinning exist only where there is text to search
+    const bar = document.getElementById('pt-intext-bar');
+    if (bar) bar.hidden = !docHtmlCurrent;
     const band = document.getElementById('pt-layer-band');
     if (band) band.hidden = !(state.readMode === 'ai' && docHtmlAi);
 }
@@ -1806,15 +2407,14 @@ function setReadMode(mode) {
 }
 
 function applyInText(q) {
-    let doc = document.getElementById('pt-doc'); if (!doc) return;
-    doc.innerHTML = docHtmlCurrent || '<p class="pt-muted">Kein Text.</p>';
+    let doc = document.getElementById('pt-doc'); if (!doc || !docHtmlCurrent) return;
+    doc.innerHTML = docHtmlCurrent;
     docMarks = []; docMarkIdx = 0;
     let cnt = document.getElementById('pt-intext-count');
     let pinBtn = document.getElementById('pt-pin-hit');
-    let key = document.getElementById('pt-search-key');
     q = (q || '').trim();
     appliedInTextQuery = q;
-    if (q.length < 2) { if (cnt) cnt.textContent = ''; if (pinBtn) pinBtn.disabled = true; if (key) key.hidden = true; return; }
+    if (q.length < 2) { if (cnt) cnt.textContent = ''; if (pinBtn) pinBtn.disabled = true; return; }
     const ql = q.toLowerCase();
     const walker = document.createTreeWalker(doc, NodeFilter.SHOW_TEXT, null);
     let nodes = [], n;
@@ -1832,9 +2432,11 @@ function applyInText(q) {
         node.parentNode.replaceChild(frag, node);
     });
     if (pinBtn) pinBtn.disabled = docMarks.length === 0;
-    if (key) key.hidden = docMarks.length === 0;
     if (docMarks.length) setActiveMark(0);
-    else if (cnt) cnt.textContent = '0 Treffer';
+    else {
+        if (cnt) cnt.textContent = '0 Treffer';
+        announce('0 Treffer');
+    }
 }
 
 function setActiveMark(i) {
@@ -1844,15 +2446,31 @@ function setActiveMark(i) {
     let m = docMarks[docMarkIdx];
     m.classList.add('active');
     if (typeof m.scrollIntoView === 'function') m.scrollIntoView({ block: 'center' });
+    const text = (docMarkIdx + 1) + ' von ' + docMarks.length;
     let cnt = document.getElementById('pt-intext-count');
-    if (cnt) cnt.textContent = 'Treffer ' + (docMarkIdx + 1) + ' von ' + docMarks.length;
+    if (cnt) cnt.textContent = text;
+    announce('Treffer ' + text);
 }
 
+// The snippet around a search hit is taken at the position of that hit. Looking the
+// term up again would return its first occurrence in the paragraph instead.
 function snippetAround(el, term) {
-    const ctx = el && el.parentNode ? (el.parentNode.textContent || '') : term;
-    let i = ctx.toLowerCase().indexOf(term.toLowerCase());
-    if (i === -1) return term;
-    let start = Math.max(0, i - 90), end = Math.min(ctx.length, i + term.length + 90);
+    const block = el && el.parentNode ? el.parentNode : null;
+    if (!block) return term;
+    const ctx = block.textContent || '';
+    let at = -1;
+    if (typeof document.createRange === 'function') {
+        try {
+            const range = document.createRange();
+            range.setStart(block, 0);
+            range.setEndBefore(el);
+            at = range.toString().length;
+        } catch (e) { at = -1; }
+    }
+    if (at < 0) at = ctx.toLowerCase().indexOf(String(term || '').toLowerCase());
+    if (at < 0) return term;
+    const hit = el.textContent || term;
+    let start = Math.max(0, at - 90), end = Math.min(ctx.length, at + hit.length + 90);
     return (start > 0 ? '…' : '') + ctx.slice(start, end).trim() + (end < ctx.length ? '…' : '');
 }
 
@@ -1862,7 +2480,7 @@ function snippetAround(el, term) {
 // new evidence. A paper pin starts an empty category at level 1 so evidence capture
 // cannot silently assert that the category is central.
 function pinEvidence(cat, term, snippet, origin) {
-    if (!canEdit()) return;
+    if (!canEdit() || ALL_CATS.indexOf(cat) === -1) return;
     origin = origin === 'ai' ? 'ai' : 'human';
     const sourceLayer = origin === 'ai' ? 'llm_distillate' : 'paper';
     term = (term || '').trim().slice(0, 80);
@@ -1877,6 +2495,7 @@ function pinEvidence(cat, term, snippet, origin) {
         version_id: papers[state.index] && papers[state.index].version_id
     });
     if (sourceLayer === 'paper' && catLevel(work.cats[cat]) === 0) work.cats[cat] = 1;
+    markDirty();
     refreshAssess();
 }
 
@@ -1886,23 +2505,30 @@ function unpinEvidence(cat, idx) {
         work.evidence[cat].splice(idx, 1);
         if (!work.evidence[cat].length) delete work.evidence[cat];
     }
+    markDirty();
     refreshAssess();
 }
 
-function paperEvidenceMissing(cats, evidence) {
+// A category set at teilweise or ja needs a Paper Beleg. The one exception is a level
+// taken over unchanged from the consolidated expert decision, recorded per category
+// as evidence_basis expert_assessment (ADR-042).
+function paperEvidenceMissing(cats, evidence, basis) {
     return ALL_CATS.filter(function(c) {
         if (catLevel((cats || {})[c]) === 0) return false;
+        if (basis && basis[c] === 'expert_assessment') return false;
         return !((evidence && evidence[c]) || []).some(isPaperEvidence);
     });
 }
 
-// Backward-compatible test and integration seam.
-function humanEvidenceMissing(cats, evidence) { return paperEvidenceMissing(cats, evidence); }
-
 function recordRequirements(dec) {
     if (!dec) return { ok: false, missing: ['Entscheidung'] };
-    const missing = paperEvidenceMissing(dec.categories || {}, dec.evidence || {})
+    const missing = paperEvidenceMissing(dec.categories || {}, dec.evidence || {}, dec.evidence_basis)
         .map(function(c) { return 'Paper-Beleg: ' + CAT_LABELS[c]; });
+    if (dec.decision !== finalDecisionOf(dec.categories || {}, !!dec.override))
+        missing.push('Entscheidung passt nicht zu Kategorien und Abweichung');
+    if (dec.decision === 'Exclude' && !dec.reason) missing.push('Ausschlussgrund');
+    if (dec.decision === 'Include' && dec.override && !String(dec.override_reason || '').trim())
+        missing.push('Begründung der Abweichung');
     if (dec.decision === 'Include')
         analysisRequirements(dec).missing.forEach(function(x) { missing.push(x); });
     return { ok: missing.length === 0, missing: missing };
@@ -2046,7 +2672,7 @@ function verificationEventId() {
     return 'prism-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 10);
 }
 
-const ANNOTATION_BODY_FIELDS = ['categories', 'decision', 'override', 'reason', 'override_reason', 'evidence', 'analysis', 'text_source', 'ts', 'reviewer', 'actor'];
+const ANNOTATION_BODY_FIELDS = ['categories', 'decision', 'override', 'reason', 'override_reason', 'evidence', 'evidence_basis', 'analysis', 'text_source', 'ts', 'reviewer', 'actor'];
 
 function annotationBody(record) {
     const body = {};
@@ -2105,6 +2731,8 @@ function correctedAnnotationBody(record, value) {
         return { ok: false, message: 'Eine korrigierte Exclude-Entscheidung braucht einen Ausschlussgrund.' };
     if (body.override && body.decision === 'Include' && !String(body.override_reason || '').trim())
         return { ok: false, message: 'Ein korrigierter Include-Override braucht eine Begründung.' };
+    if (body.decision !== 'Include' && body.analysis !== undefined && body.analysis !== null)
+        return { ok: false, message: 'Analysekodierung gehört nur zu einer Include-Entscheidung.' };
     const requirements = recordRequirements(body);
     if (!requirements.ok)
         return { ok: false, message: 'Die korrigierte Annotation ist unvollständig: ' + requirements.missing.join(', ') + '.' };
@@ -2165,7 +2793,6 @@ function advanceVerification(record, target, details) {
     if (!reviewer) return { ok: false, message: 'Reviewer-ID ist erforderlich.' };
     if (!activity) return { ok: false, message: 'Activity-ID ist erforderlich.' };
     if (!actors.length) return { ok: false, message: 'Mindestens eine Actor-ID ist erforderlich.' };
-    if (!note) return { ok: false, message: 'Eine fachliche Begründung ist erforderlich.' };
     if (actors.indexOf(reviewer) === -1) actors.unshift(reviewer);
 
     const from = verificationView(record).lifecycle.state;
@@ -2180,6 +2807,10 @@ function advanceVerification(record, target, details) {
         : ['approved'];
     if (allowed.indexOf(result) === -1)
         return { ok: false, message: 'Unzulässiges Prüfergebnis.' };
+    // An outcome that does not accept the record must say why; acceptance and
+    // correction speak through the record and its field-level changes (ADR-042).
+    if ((result === 'changes_requested' || result === 'rejected') && !note)
+        return { ok: false, message: 'Eine kurze Notiz ist für dieses Prüfergebnis erforderlich.' };
 
     let correction = null;
     if (result === 'corrected_and_accepted') {
@@ -2192,10 +2823,11 @@ function advanceVerification(record, target, details) {
 
     const event = {
         event_id: verificationEventId(), event_type: isVerification ? 'domain_expert_verification' : 'publication_approval',
-        from: from, to: actualTarget, result: result, note: note,
+        from: from, to: actualTarget, result: result,
         at: at, activity_id: activity, actor_ids: actors,
         annotation_id: record.active_annotation_id
     };
+    if (note) event.note = note;
     applyVerificationProvenance(record, reviewer, actors, activity, isVerification);
     if (correction) {
         const correctionId = verificationEventId();
@@ -2205,7 +2837,9 @@ function advanceVerification(record, target, details) {
             supersedes: record.active_annotation_id,
             at: at,
             actor_ids: actors,
-            reason: note,
+            // the governed contract requires a reason; without a note it names the
+            // changed fields, which is what the correction states
+            reason: note || ('In PRISM korrigiert: ' + correction.changes.map(function(change) { return change.path; }).join(', ')),
             changes: correction.changes,
             body: correction.body
         });
@@ -2280,328 +2914,384 @@ function verificationRefList(items, empty) {
     }).join('') + '</ul>';
 }
 
-function verificationPanelHtml(record) {
+function lifecycleLabel(value) { return LIFECYCLE_LABELS[value] || String(value || ''); }
+
+function dateLabel(value) {
+    const time = Date.parse(value || '');
+    if (!Number.isFinite(time)) return '';
+    const d = new Date(time);
+    return String(d.getDate()).padStart(2, '0') + '.' + String(d.getMonth() + 1).padStart(2, '0') + '.' + d.getFullYear();
+}
+
+// Provenance of a governed record, collapsed below the assessment: activities with
+// prompt and model, sources, derivations, annotations and deterministic checks.
+function provenanceHtml(record) {
     const view = verificationView(record);
-    const lifecycle = view.lifecycle, provenance = view.provenance || {}, activities = provenance.activities || [], actors = provenance.actors || [];
-    const canAdvance = ['ai-agent-reviewed', 'verified'].indexOf(lifecycle.state) !== -1 &&
-        !!LIFECYCLE_NEXT[lifecycle.state] && canEdit() && runActor === 'human';
-    const target = LIFECYCLE_NEXT[lifecycle.state];
-    let h = '<section class="pt-verification" aria-labelledby="pt-verification-title">';
-    h += '<div class="pt-verification-head"><div><span class="pt-tag-mono">PRISM-Verifikation</span><h3 id="pt-verification-title">Nachweis- und Freigabestatus</h3></div>' +
-        '<span class="pt-lifecycle-state pt-lifecycle-' + EC.escapeHtml(lifecycle.state) + '">' + EC.escapeHtml(lifecycle.state) + '</span></div>';
-    h += '<p class="pt-verification-lead">Fachliche Verifikation und öffentliche Freigabe sind getrennte, dauerhaft protokollierte Schritte.</p>';
-    h += '<dl class="pt-verification-grid"><div><dt>Baseline</dt><dd>' + verificationValue(lifecycle.baseline.state) + '</dd></div><div><dt>Baseline-Basis</dt><dd>' + verificationValue(lifecycle.baseline.basis) + '</dd></div><div><dt>Baseline-Actors</dt><dd>' + verificationValue(lifecycle.baseline.actor_ids) + '</dd></div><div><dt>Baseline-Zeit</dt><dd>' + verificationValue(lifecycle.baseline.at) + '</dd></div><div><dt>Aktueller Status</dt><dd>' + verificationValue(lifecycle.state) + '</dd></div>' +
-        '<div><dt>Annotation</dt><dd>' + verificationValue(provenance.annotation_id) + ' · ' + verificationValue(provenance.annotation_type) + '</dd></div>' +
-        '<div><dt>Actors</dt><dd>' + verificationValue(actors.map(function(actor) { return actor.id + ' (' + actor.type + '; ' + actor.roles.join(', ') + ')'; })) + '</dd></div></dl>';
-    h += '<div class="pt-verification-provenance"><h4>Ausführungsprovenienz</h4>' + (activities.length ? activities.map(function(activity) {
-        return '<div class="pt-verification-activity"><p><strong>' + EC.escapeHtml(activity.id) + '</strong> · ' + EC.escapeHtml(activity.type) + '</p><dl class="pt-verification-grid"><div><dt>Run</dt><dd>' + verificationValue(activity.run_id) + '</dd></div><div><dt>Methode</dt><dd>' + verificationValue(activity.method) + '</dd></div><div><dt>Prompt</dt><dd>' + verificationLabelValue(promptLabel(activity.prompt)) + '</dd></div><div><dt>Modell</dt><dd>' + verificationLabelValue(modelLabel(activity.model)) + '</dd></div><div><dt>Actors</dt><dd>' + verificationValue(activity.associated_actor_ids) + '</dd></div></dl></div>';
-    }).join('') : '<p class="pt-muted">Keine Aktivitätsprovenienz.</p>');
-    if (provenance.legacy_gap) h += '<p class="pt-legacy-gap"><strong>legacy_gap:</strong> ' + EC.escapeHtml(String(provenance.legacy_gap)) + '</p>';
-    h += '</div>';
-    h += '<div class="pt-verification-tracks"><h4>Quellen und abgeleitete Artefakte</h4><p><strong>Quellen:</strong></p>' + verificationRefList(provenance.used_sources, 'Keine Quellenprovenienz') + '<p><strong>Abgeleitet aus:</strong></p>' + verificationRefList(provenance.derived_from, 'Keine abgeleiteten Artefakte') + '</div>';
-    h += '<div class="pt-verification-annotations"><h4>Annotationen</h4>' + (view.annotations.length ? '<ol>' + view.annotations.map(function(annotation) {
-        const active = annotation.annotation_id === view.active_annotation_id ? ' · aktiv' : '';
-        const supersedes = annotation.supersedes ? ' · ersetzt ' + annotation.supersedes : '';
-        return '<li><strong>' + verificationValue(annotation.annotation_id) + '</strong><span>' + verificationValue(annotation.annotation_type) + active + supersedes + ' · ' + verificationValue(annotation.at) + '</span></li>';
-    }).join('') + '</ol>' : '<p class="pt-muted">Keine Annotationen dokumentiert.</p>') + '</div>';
-    h += '<div class="pt-verification-checks"><h4>Deterministische Validierungen</h4>' + (view.checks.length ? '<ol>' + view.checks.map(function(check) {
-        return '<li><strong>' + verificationValue(check.check_type) + ': ' + verificationValue(check.status) + '</strong><span>' + verificationValue(check.at) + ' · ' + verificationValue(check.actor_id) + '</span></li>';
-    }).join('') + '</ol>' : '<p class="pt-muted">Keine persistierte Validierungsquittung. Die fachliche Verifikation ersetzt diesen Check nicht.</p>') + '</div>';
-    h += '<div class="pt-verification-events"><h4>Eventverlauf</h4>' + (lifecycle.events.length ? '<ol>' + lifecycle.events.map(function(event) {
-        return '<li><strong>' + EC.escapeHtml(event.from || '?') + ' → ' + EC.escapeHtml(event.to || '?') + '</strong><span>' + verificationValue(event.event_type) + ' · ' + verificationValue(event.result) + ' · ' + verificationValue(event.at) + ' · ' + verificationValue(event.actor_ids) + '</span>' + (event.note ? '<p>' + EC.escapeHtml(event.note) + '</p>' : '') + '</li>';
-    }).join('') + '</ol>' : '<p class="pt-muted">Noch kein Verifikationsereignis dokumentiert.</p>') + '</div>';
-    if (canAdvance) {
-        const isVerification = target === 'verified';
-        const action = isVerification ? 'Fachliches Ergebnis protokollieren' : 'Öffentliche Freigabe bestätigen';
-        h += '<form class="pt-verification-action" id="pt-verification-action"><h4>' + (isVerification ? 'Fachliche Verifikation' : 'Öffentliche Freigabe') + '</h4>' +
-            '<label>Reviewer-ID<input name="reviewer_id" required autocomplete="off"></label><label>Actor-ID(s)<input name="actor_ids" required autocomplete="off" aria-describedby="pt-verification-actors"></label><span id="pt-verification-actors" class="pt-field-help">Mehrere IDs mit Leerzeichen oder Komma trennen.</span><label>Activity-ID<input name="activity_id" required autocomplete="off"></label>' +
-            (isVerification ? '<label>Prüfergebnis<select name="result"><option value="accepted">Akzeptiert</option><option value="corrected_and_accepted">Korrigiert und akzeptiert</option><option value="changes_requested">Änderungen erforderlich</option><option value="rejected">Abgelehnt</option></select></label><label class="pt-correction-editor" hidden>Korrigierte Annotation als JSON<textarea name="corrected_annotation" rows="14">' + EC.escapeHtml(JSON.stringify(annotationBody(record), null, 2)) + '</textarea><span class="pt-field-help">Die vollständige Annotation wird als neue Version gespeichert. Das Original bleibt erhalten.</span></label>' : '') +
-            '<label>Begründung<textarea name="note" rows="3" required></textarea></label>' +
-            '<button class="pt-btn pt-verification-submit" type="submit">' + action + '</button></form>';
-    } else if (lifecycle.state === 'publication-approved') {
-        h += '<p class="pt-publication-approved">Öffentliche Freigabe ist dokumentiert.</p>';
-    } else if (view.legacy) {
-        h += '<p class="pt-legacy-gap">Dieser ältere Record besitzt keinen gouvernierten AI-Agent-Review-Status. Er muss zuerst durch den aktuellen Projektionsworkflow in Schema 0.5 überführt werden.</p>';
-    } else if (runActor !== 'human') {
-        h += '<p class="pt-legacy-gap">Eine Domänenexpertin oder ein Domänenexperte muss diesen Statuswechsel im fachlichen Verifikationsmodus dokumentieren.</p>';
+    const provenance = view.provenance || {};
+    const activities = provenance.activities || [];
+    let h = '<details class="pt-provenance-details"><summary>Provenienz</summary><div class="pt-provenance-body">';
+    h += '<dl class="pt-verification-grid">' +
+        '<div><dt>Annotation</dt><dd>' + verificationValue(provenance.annotation_id) + '</dd></div>' +
+        '<div><dt>Ausgangsstand</dt><dd>' + EC.escapeHtml(lifecycleLabel(view.lifecycle.baseline.state)) +
+            (view.lifecycle.baseline.basis ? ' · ' + EC.escapeHtml(view.lifecycle.baseline.basis) : '') + '</dd></div></dl>';
+    activities.forEach(function(activity) {
+        h += '<div class="pt-verification-activity"><p>' + EC.escapeHtml(activity.type) + ' · ' + verificationValue(activity.run_id) + '</p>' +
+            '<dl class="pt-verification-grid"><div><dt>Prompt</dt><dd>' + verificationLabelValue(promptLabel(activity.prompt)) + '</dd></div>' +
+            '<div><dt>Modell</dt><dd>' + verificationLabelValue(modelLabel(activity.model)) + '</dd></div></dl></div>';
+    });
+    if (provenance.legacy_gap) h += '<p class="pt-legacy-gap">' + EC.escapeHtml(String(provenance.legacy_gap)) + '</p>';
+    h += '<p class="pt-provenance-label">Quellen</p>' + verificationRefList(provenance.used_sources, 'Keine Quellenprovenienz');
+    h += '<p class="pt-provenance-label">Abgeleitet aus</p>' + verificationRefList(provenance.derived_from, 'Keine abgeleiteten Artefakte');
+    h += '<p class="pt-provenance-label">Annotationen</p><ol class="pt-verify-refs">' + view.annotations.map(function(annotation) {
+        return '<li>' + verificationValue(annotation.annotation_id) + (annotation.supersedes ? ' · ersetzt ' + EC.escapeHtml(annotation.supersedes) : '') +
+            (annotation.annotation_id === view.active_annotation_id ? ' · aktiv' : '') + '</li>';
+    }).join('') + '</ol>';
+    h += '<p class="pt-provenance-label">Validierungen</p>' + (view.checks.length ? '<ol class="pt-verify-refs">' + view.checks.map(function(check) {
+        return '<li>' + verificationValue(check.check_type) + ': ' + verificationValue(check.status) + ' · ' + EC.escapeHtml(dateLabel(check.at)) + '</li>';
+    }).join('') + '</ol>' : verificationEmpty('Keine Validierungsquittung'));
+    return h + '</div></details>';
+}
+
+// The event history in one line, oldest first.
+function historyHtml(record) {
+    const events = verificationView(record).lifecycle.events;
+    if (!events.length) return '';
+    return '<p class="pt-history">Verlauf: ' + events.map(function(event) {
+        const result = event.result && RESULT_LABELS[event.result] && event.to === event.from
+            ? RESULT_LABELS[event.result] : lifecycleLabel(event.to);
+        return EC.escapeHtml(result) + (event.at ? ' ' + EC.escapeHtml(dateLabel(event.at)) : '');
+    }).join(' → ') + '</p>';
+}
+
+// ---- drafts: the editable copy of the current annotation ----
+
+function cleanLevels(categories) {
+    const out = {};
+    ALL_CATS.forEach(function(c) { const level = catLevel((categories || {})[c]); if (level) out[c] = level; });
+    return out;
+}
+
+function derivedFromExpert(record) {
+    const items = record && record.provenance && Array.isArray(record.provenance.derived_from) ? record.provenance.derived_from : [];
+    return items.some(function(item) { return item && item.type === 'consolidated_expert_assessment'; });
+}
+
+function seedDraft(p, subject) {
+    const w = emptyWork(p.id);
+    w.seed = subject.kind;
+    const r = subject.record;
+    if (!r) return w;
+    w.cats = cleanLevels(r.categories);
+    w.override = !!r.override;
+    w.reason = r.reason || null;
+    w.overrideReason = r.override_reason || null;
+    w.evidence = JSON.parse(JSON.stringify(r.evidence || {}));
+    w.analysis = r.analysis ? JSON.parse(JSON.stringify(r.analysis)) : undefined;
+    // an agent record keeps the text basis it was coded on; the reviewer's own records
+    // name the text shown when they are saved
+    if (subject.kind === 'agent') w.textSource = r.text_source || null;
+    if (subject.kind === 'expert') {
+        w.expertBasis = JSON.parse(JSON.stringify(w.cats));
+        w.derivedFromExpert = true;
+    } else if (subject.kind === 'own') {
+        const basis = r.evidence_basis || {};
+        const expertBasis = {};
+        Object.keys(basis).forEach(function(c) {
+            if (basis[c] === 'expert_assessment' && catLevel((r.categories || {})[c])) expertBasis[c] = catLevel(r.categories[c]);
+        });
+        if (Object.keys(expertBasis).length) w.expertBasis = expertBasis;
+        w.derivedFromExpert = derivedFromExpert(r);
     }
-    h += '<p class="pt-verification-status" id="pt-verification-status" role="status" aria-live="polite">' + EC.escapeHtml(verificationNotice) + '</p></section>';
-    return h;
+    return w;
+}
+
+// A stored draft wins only once the reviewer changed it; otherwise the draft is seeded
+// afresh, so it follows the current annotation when a folder or track loads later.
+function draftFor(p) {
+    const stored = drafts[p.id];
+    if (stored && stored.dirty) return stored;
+    const fresh = seedDraft(p, paperSubject(p));
+    drafts[p.id] = fresh;
+    return fresh;
+}
+
+function markDirty() {
+    if (!work || !work.pid) return;
+    work.dirty = true;
+    drafts[work.pid] = work;
+    saveLocal();
+}
+
+function discardDraft(p) {
+    delete drafts[p.id];
+    work = draftFor(p);
+    saveLocal();
+    refreshAssess();
+}
+
+// Categories taken over unchanged from the expert decision and without a Paper pin.
+function draftEvidenceBasis(w) {
+    const basis = {};
+    if (!w || !w.expertBasis) return basis;
+    ALL_CATS.forEach(function(c) {
+        const level = catLevel(w.cats[c]);
+        if (level && w.expertBasis[c] === level && !((w.evidence[c] || []).some(isPaperEvidence))) basis[c] = 'expert_assessment';
+    });
+    return basis;
+}
+
+function workingTextSource() {
+    return work.seed === 'agent' && work.textSource ? work.textSource : currentTextSource;
 }
 
 function workingDecisionRecord() {
     const decision = finalDecisionOf(work.cats, work.override);
-    if (decision === 'Include') work.analysis = sanitizeAnalysis(work.analysis || {}, currentTextSource);
-    return {
+    const textSource = workingTextSource();
+    if (decision === 'Include') work.analysis = sanitizeAnalysis(work.analysis || {}, textSource);
+    const record = {
         categories: work.cats,
         decision: decision,
         override: !!work.override,
+        reason: decision === 'Exclude' ? (work.reason || null) : null,
+        override_reason: work.override && decision === 'Include' ? (String(work.overrideReason || '').trim() || null) : null,
         evidence: work.evidence,
-        analysis: work.analysis,
-        text_source: currentTextSource
+        analysis: decision === 'Include' ? work.analysis : undefined,
+        text_source: textSource
     };
+    const basis = draftEvidenceBasis(work);
+    if (Object.keys(basis).length) record.evidence_basis = basis;
+    return record;
 }
 
-// ---- right: assessment (categories + evidence + derived decision + collapsed AI) ----
-function assessInnerHtml(p, dec) {
-    if (dec) return assessLockedHtml(p, dec);
-    // Verification judges the productive agent record. Without one for this paper the
-    // ordinary capture rail would invite the expert to write an own coding instead,
-    // so the rail names the missing subject and offers no capture controls.
-    if (verificationMode) return '<div class="pt-rail-head"><span class="pt-rail-title">Agentenkodierung</span></div>' +
-        '<div class="pt-rail-body"><div class="pt-rail-scroll">' +
-        '<p class="pt-muted" id="pt-verification-missing" role="status">Keine Agentenkodierung im verbundenen Arbeitsordner.</p>' +
-        referenceProposalsHtml(p, false) + '</div></div>';
-    if (!canEdit()) return '<div class="pt-rail-body"><div class="pt-rail-scroll">' + referenceProposalsHtml(p, false) + '</div></div>';
-    if (paperIdentityRequired(p) && !paperIdentityReady(p)) return '<div class="pt-rail-head"><span class="pt-rail-title">Bewertung</span></div>' +
-        '<div class="pt-rail-body"><p class="pt-muted pt-read-only-note">Dieses Paper ist noch nicht an ein Werk und eine genaue Fassung gebunden. Die Kategorien können erst nach der bibliografischen Zuordnung erfasst und gespeichert werden.</p></div>';
-    let cats = work.cats;
-    let h = '<div class="pt-rail-head"><span class="pt-rail-title">Deine Bewertung</span></div>';
-    h += '<div class="pt-rail-body"><div class="pt-rail-scroll">';
-    h += referenceProposalsHtml(p, true);
-    h += dimHtml('Gegenstand', TECH_CATS, cats, false);
-    h += dimHtml('Perspektive', SOCIAL_CATS, cats, false);
-    h += evidenceListHtml(work.evidence, false);
-    const draft = workingDecisionRecord();
-    if (draft.decision === 'Include') h += analysisPanelHtml(draft, false);
-    const showReason = finalDecisionOf(cats, work.override) === 'Exclude';
-    h += '<div class="pt-reason-block" id="pt-reason-block" style="display:' + (showReason ? 'block' : 'none') + ';">';
-    h += '<div class="pt-tag-mono pt-reason-label">Ausschlussgrund &middot; erforderlich</div><div class="pt-reason-chips">';
-    EXCLUSION_REASONS.forEach(function(r) {
-        h += '<button class="pt-reason-chip' + (work.reason === r ? ' sel' : '') + '" data-reason="' + r + '"' +
-            ' aria-pressed="' + (work.reason === r ? 'true' : 'false') + '">' + r.replace(/_/g, ' ') + '</button>';
+function paperEvidenceOnly(evidence) {
+    const out = {};
+    ALL_CATS.forEach(function(c) {
+        const items = ((evidence || {})[c] || []).filter(isPaperEvidence);
+        if (items.length) out[c] = items;
     });
-    h += '</div></div>';
-    const showOverrideJust = work.override && finalDecisionOf(cats, work.override) === 'Include';
-    h += '<div class="pt-override-block" id="pt-override-block" style="display:' + (showOverrideJust ? 'block' : 'none') + ';">';
-    h += '<div class="pt-tag-mono pt-override-label">Begruendung Override zu Include &middot; erforderlich</div>';
-    h += '<textarea id="pt-override-reason" class="pt-override-input" rows="2" placeholder="Warum einschliessen, obwohl die Regel auf Exclude steht? Wird im Record dokumentiert.">' + EC.escapeHtml(work.overrideReason || '') + '</textarea>';
-    h += '</div>';
-    h += '</div><div class="pt-action-dock">';
-    h += '<div class="pt-logic" id="pt-logic">' + logicInner(cats, work.override) + '</div>';
-    h += '<span class="pt-actions-hint" id="pt-actions-hint" role="status" aria-live="polite"></span>';
-    h += '</div></div>';
-    return h;
+    return out;
 }
 
-function assessLockedHtml(p, dec) {
-    let cats = dec.categories || {};
-    const req = recordRequirements(dec);
-    // In verification mode the rail shows the agent's coding, not the expert's own
-    // assessment; naming it and its actor keeps the authorship of what is judged explicit.
-    const agentSubject = verificationMode && dec.actor === 'agent';
-    const title = agentSubject ? 'Agentenkodierung' : (canEdit() ? 'Deine Bewertung' : 'Gespeicherte Bewertung');
-    let h = '<div class="pt-rail-head"><span class="pt-rail-title">' + title + '</span>' +
-        (agentSubject ? '<span class="pt-rail-actor mono">' + EC.escapeHtml(dec.reviewer || 'Agent') + '</span>' : '') +
-        '<span class="pt-spacer"></span><span class="pt-pill pt-pill-' + decCls(dec.decision) + ' pt-pill-lg">' + dec.decision + '</span></div>';
-    h += '<div class="pt-rail-body"><div class="pt-rail-scroll">';
-    if (dec.decision === 'Exclude' && dec.reason) h += '<div class="pt-seed-ref">Ausschlussgrund: <strong>' + EC.escapeHtml(dec.reason.replace(/_/g, ' ')) + '</strong></div>';
-    if (dec.decision === 'Include' && dec.override && dec.override_reason) h += '<div class="pt-seed-ref">Override zu Include &middot; Begruendung: <strong>' + EC.escapeHtml(dec.override_reason) + '</strong></div>';
-    h += dimHtml('Gegenstand', TECH_CATS, cats, true);
-    h += dimHtml('Perspektive', SOCIAL_CATS, cats, true);
-    h += evidenceListHtml(dec.evidence || {}, true);
-    h += analysisPanelHtml(dec, true);
-    h += referenceProposalsHtml(p, false);
-    if (verificationMode) h += verificationPanelHtml(dec);
-    h += '</div><div class="pt-action-dock pt-action-dock-locked">' +
-        '<div class="pt-record-summary"><span class="pt-tag-mono">' + (agentSubject ? 'Agentenentscheidung' : 'Gespeicherte Entscheidung') + '</span>' +
-        '<span class="pt-pill pt-pill-' + decCls(dec.decision) + '">' + dec.decision + '</span></div>' +
-        '<span class="pt-actions-hint ' + (req.ok ? 'is-complete' : 'is-required') + '" role="status">' +
-        (req.ok ? 'Vollständig erfasst.' : 'Noch erforderlich: ' + EC.escapeHtml(req.missing.join(', '))) + '</span>' +
-        '<div class="pt-actions">' + (canEdit() && !agentSubject ? '<button class="pt-revise-btn" id="pt-revise">Überarbeiten</button>' : '') + '<span class="pt-spacer"></span>' +
-        '<button class="pt-next-btn" id="pt-next"' + (canEdit() && !req.ok ? ' disabled' : '') + '>' +
-        (acceptanceMode ? 'Anderer Abnahmefall' : (state.index < papers.length - 1 ? 'Nächstes offen' : 'Zum ersten offenen')) + ' &rarr;</button></div>' +
-        '</div></div>';
-    return h;
+// The substantive content of a record, for deciding whether a draft changed it.
+function substanceOf(record) {
+    const decision = record.decision;
+    return JSON.stringify({
+        categories: cleanLevels(record.categories),
+        decision: decision,
+        override: !!record.override,
+        reason: decision === 'Exclude' ? (record.reason || null) : null,
+        override_reason: decision === 'Include' && record.override ? (String(record.override_reason || '').trim() || null) : null,
+        evidence: paperEvidenceOnly(record.evidence),
+        analysis: decision === 'Include' ? sanitizeAnalysis(record.analysis || {}, record.text_source) : null
+    });
 }
 
-function dimHtml(label, keys, cats, locked) {
-    const lvl = dimLevel(keys, cats);
-    const pillCls = lvl === 2 ? 'pt-pill-include' : (lvl === 1 ? 'pt-pill-warn' : 'pt-pill-ghost');
-    let h = '<div class="pt-dim"><div class="pt-dim-head"><span class="pt-tag-mono">' + label + '</span>' +
-        '<span class="pt-dim-rule"></span><span class="pt-pill pt-dim-pill ' + pillCls + '">' +
-        (lvl ? CAT_STATE[lvl] : 'keine') + '</span></div><div class="pt-chips">';
-    keys.forEach(function(c) { h += chipHtml(c, cats[c], locked); });
-    h += '</div></div>';
-    return h;
+// The draft as an annotation body over the agent record it corrects. Only fields the
+// reviewer changed are replaced, so an untouched draft yields the identical body.
+function draftAnnotationBody(current, w) {
+    const body = JSON.parse(JSON.stringify(current));
+    body.categories = body.categories || {};
+    ALL_CATS.forEach(function(c) {
+        const next = catLevel(w.cats[c]);
+        if (next === catLevel(body.categories[c])) return;
+        if (next) body.categories[c] = next; else delete body.categories[c];
+    });
+    if (!!w.override !== !!body.override) body.override = !!w.override;
+    const decision = finalDecisionOf(body.categories, !!body.override);
+    body.decision = decision;
+    const reason = decision === 'Exclude' ? (w.reason || null) : null;
+    if ((body.reason || null) !== reason) body.reason = reason;
+    const overrideReason = decision === 'Include' && w.override ? (String(w.overrideReason || '').trim() || null) : null;
+    if ((body.override_reason || null) !== overrideReason) body.override_reason = overrideReason;
+    const evidence = paperEvidenceOnly(w.evidence);
+    if (JSON.stringify(paperEvidenceOnly(body.evidence)) !== JSON.stringify(evidence)) body.evidence = evidence;
+    if (decision === 'Include') {
+        const analysis = sanitizeAnalysis(w.analysis || {}, body.text_source);
+        if (JSON.stringify(sanitizeAnalysis(body.analysis || {}, body.text_source)) !== JSON.stringify(analysis)) body.analysis = analysis;
+    } else if (body.analysis !== undefined) {
+        delete body.analysis;
+    }
+    return body;
 }
 
-// The category action and its definition are separate keyboard targets. The definition
-// opens in a rail- and viewport-clamped popover instead of covering adjacent controls.
-function chipHtml(cat, level, locked) {
+function agentRecordState(record) { return verificationView(record).lifecycle.state; }
+
+// What the single save action does for the open paper.
+function saveMode(p, subject) {
+    if (!canEdit() || !p) return 'none';
+    if (subject.kind === 'agent') return agentRecordState(subject.record) === 'ai-agent-reviewed' ? 'verify' : 'none';
+    if (subject.kind === 'own' && substanceOf(workingDecisionRecord()) === substanceOf(subject.record)) return 'none';
+    return 'record';
+}
+
+function draftReasons(p, subject, mode) {
+    if (mode === 'none') return [];
+    if (paperIdentityRequired(p) && !paperIdentityReady(p)) return ['Werk- oder Fassungsbindung fehlt'];
+    const reasons = [];
+    const record = workingDecisionRecord();
+    const missing = paperEvidenceMissing(record.categories, record.evidence, record.evidence_basis);
+    if (missing.length) reasons.push('Paper-Beleg fehlt: ' + missing.map(function(c) { return CAT_LABELS[c]; }).join(', '));
+    if (record.decision === 'Exclude' && !record.reason) reasons.push('Ausschlussgrund wählen');
+    if (record.decision === 'Include' && record.override && !record.override_reason) reasons.push('Abweichung begründen');
+    if (record.decision === 'Include' && !analysisRequirements(record).ok) reasons.push('Analysekodierung unvollständig');
+    if (mode === 'verify' && work.verifyResult !== 'accept' && !String(work.verifyNote || '').trim()) reasons.push('Notiz zum Prüfergebnis');
+    return reasons;
+}
+
+function storageReason() {
+    if (!state.reviewer) return 'Kürzel festlegen';
+    if (reviewerFileErrors[state.reviewer]) return 'Datei gesperrt';
+    if (!trialMode && connecting) return 'Ordner wird abgeglichen';
+    if (!trialMode && !screeningHandle) return 'Arbeitsordner verbinden';
+    if (readingPending) return 'Text lädt';
+    return '';
+}
+
+function saveGate(p) {
+    const subject = paperSubject(p);
+    const mode = saveMode(p, subject);
+    const reasons = draftReasons(p, subject, mode);
+    const storage = mode === 'none' ? '' : storageReason();
+    const label = mode === 'verify' ? 'Prüfergebnis speichern'
+        : (mode === 'none' ? (subject.kind === 'agent' ? 'Bereits geprüft' : 'Gespeichert, keine Änderung') : 'Bewertung speichern');
+    return { ok: mode !== 'none' && !storage && !reasons.length, mode: mode, storage: storage, reasons: reasons, label: label };
+}
+
+// ---- right: assessment rail ----
+
+// Shared category chip (docs/css/research.css, "Category chip (shared)"). level 0 is
+// off, 1 teilweise (aria-pressed mixed), 2 ja. The colour comes from the schema.
+function categoryChipHtml(cat, level, opts) {
+    opts = opts || {};
     const lvl = catLevel(level);
-    const stateCls = lvl === 2 ? ' on' : (lvl === 1 ? ' partial' : '');
-    const tipId = 'pt-chip-tip-' + cat;
-    return '<span class="pt-chip-wrap"><button class="pt-chip' + stateCls + '" data-cat="' + cat + '" data-level="' + lvl + '"' +
-        ' aria-label="' + EC.escapeHtml(CAT_LABELS[cat]) + ', ' + CAT_STATE[lvl] + '"' +
-        (locked ? ' disabled' : '') + '>' +
-        '<span class="pt-chip-box" aria-hidden="true"></span>' + EC.escapeHtml(CAT_LABELS[cat]) +
-        (lvl ? '<span class="pt-chip-state" aria-hidden="true">' + CAT_STATE[lvl] + '</span>' : '') +
-        '</button><button type="button" class="pt-info-btn pt-chip-info" aria-label="Definition zu ' +
-        EC.escapeHtml(CAT_LABELS[cat]) + ' anzeigen" aria-expanded="false" aria-controls="' + tipId +
-        '" aria-describedby="' + tipId + '" data-info-target="' + tipId + '">i</button><span class="pt-info-popover pt-chip-tip" role="tooltip" id="' + tipId +
-        '" hidden><b class="mono">' + cat + '</b><span>' + EC.escapeHtml(CAT_DEFS[cat] || '') + '</span></span></span>';
+    const pressed = lvl === 2 ? 'true' : (lvl === 1 ? 'mixed' : 'false');
+    const description = [CAT_DEFS[cat] || ''];
+    if (opts.expertBasis) description.push('Expert:innen-Urteil, ohne Textbeleg.');
+    return '<button type="button" class="category-chip' + (opts.compact ? ' category-chip--compact' : '') +
+        (opts.expertBasis ? ' pt-chip-expert' : '') + '" data-cat="' + EC.escapeHtml(cat) + '" data-level="' +
+        (lvl === 1 ? 'teilweise' : (lvl === 2 ? 'ja' : 'nein')) + '" aria-pressed="' + pressed + '" style="--chip-color:' +
+        EC.escapeHtml(CAT_COLOR[cat] || '') + '" title="' + EC.escapeHtml(description.join(' ').trim()) + '"' +
+        (opts.disabled ? ' disabled' : '') + '>' +
+        '<span class="chip-dot" aria-hidden="true"></span><span class="chip-label">' + EC.escapeHtml(CAT_LABELS[cat] || cat) + '</span>' +
+        (lvl === 1 && !opts.filter ? '<span class="pt-sr-only">, teilweise</span>' : '') +
+        '</button>';
 }
 
-function evidenceHeaderHtml() {
-    return '<div class="pt-evid-head"><span class="pt-tag-mono">Belege</span>' +
-        '<button type="button" class="pt-info-btn" aria-label="Hinweise zum Anheften von Belegen anzeigen" ' +
-        'aria-expanded="false" aria-controls="pt-evid-help" aria-describedby="pt-evid-help" data-info-target="pt-evid-help">i</button>' +
-        '<span class="pt-info-popover" role="tooltip" id="pt-evid-help" hidden>Markiere eine Textstelle oder suche im Papertext. ' +
-        'Hefte sie an die passende Kategorie. Ein Paper-Beleg setzt eine leere Kategorie zunächst auf teilweise; ja wählst du ausdrücklich.</span></div>';
+// Test seam kept under its former name: the panel toggle for one category.
+function chipHtml(cat, level, locked) { return categoryChipHtml(cat, level, { disabled: !!locked }); }
+
+function railEditable(p, subject) {
+    if (!canEdit() || !p) return false;
+    if (paperIdentityRequired(p) && !paperIdentityReady(p)) return false;
+    return subject.kind !== 'agent' || agentRecordState(subject.record) === 'ai-agent-reviewed';
 }
 
-function evidenceListHtml(evidence, locked) {
-    let cats = ALL_CATS.filter(function(c) { return (evidence[c] || []).length; });
-    if (!cats.length) {
-        return locked ? '' : '<div class="pt-evid pt-evid-empty">' + evidenceHeaderHtml() +
-            '<p class="pt-muted">Noch keine Belege angeheftet.</p></div>';
+function provenanceLine(p, subject) {
+    if (subject.kind === 'own') {
+        const r = subject.record;
+        let text = acceptanceMode ? 'Vorgeschlagenes Testurteil' : 'Deine Bewertung' + (r.ts ? ', gespeichert ' + dateLabel(r.ts) : '');
+        if (derivedFromExpert(r)) text += ' · aus der Expert:innen-Entscheidung';
+        return text;
     }
-    let h = '<div class="pt-evid">' + evidenceHeaderHtml();
-    cats.forEach(function(c) {
-        h += '<div class="pt-evid-cat"><div class="pt-evid-cat-h"><span class="pt-evid-dot" style="background:' +
-            ((EC.CAT_COLORS && EC.CAT_COLORS[c]) || 'var(--pt-human)') + '"></span>' + EC.escapeHtml(CAT_LABELS[c]) + '</div>';
-        (evidence[c] || []).forEach(function(ev, i) {
-            let origin = evidenceLayer(ev) === 'llm_distillate' ? 'ai' : 'human';
-            // Source layer and the actor who pinned it are separate facts (ADR-030).
-            // Without the actor mark an agent pin reads as the expert's own.
-            const byAgent = ev && ev.actor === 'agent';
-            h += '<div class="pt-evid-item">' +
-                '<span class="pt-evid-origin pt-evid-origin-' + origin + '">' + (origin === 'ai' ? 'LLM' : 'Paper') + '</span>' +
-                (byAgent ? '<span class="pt-evid-actor" title="Von einem Agenten angeheftet">Agent<span class="pt-sr-only"> hat diesen Beleg angeheftet</span></span>' : '') +
-                '<span class="pt-evid-snip">' + EC.escapeHtml(ev.snippet || ev.term) + '</span>' +
-                (locked ? '' : '<button class="pt-evid-x" data-cat="' + c + '" data-i="' + i + '" title="Beleg entfernen">&times;</button>') + '</div>';
+    if (subject.kind === 'agent') {
+        const own = ownVerificationEntries(p.id);
+        const last = own[own.length - 1];
+        let text = 'Agentenkodierung ' + (subject.reviewer || '') + ' · ' + lifecycleLabel(agentRecordState(subject.record));
+        if (last) text += ' · von dir ' + (RESULT_LABELS[last.result] || last.result) + ' ' + dateLabel(last.at);
+        return text;
+    }
+    if (subject.kind === 'expert') {
+        return 'Vorbelegt: Expert:innen-Entscheidung';
+    }
+    return 'Noch keine Bewertung';
+}
+
+function decisionBadgeHtml(record, colored) {
+    const derived = deriveDecision(record.categories || {});
+    return '<span class="pt-decision ' + (colored ? 'pt-decision-' + decCls(record.decision) : 'pt-decision-neutral') +
+        '" id="pt-decision">' + EC.escapeHtml(record.decision) + '</span>' +
+        (record.override ? '<span class="pt-derived">abgeleitet: ' + EC.escapeHtml(derived) + '</span>' : '');
+}
+
+// One row per pin; categories without a pin are summarised in one line each for the
+// expert judgement taken over without a passage and for a missing Paper Beleg.
+function evidenceRowsHtml(record, editable) {
+    const evidence = record.evidence || {};
+    const basis = record.evidence_basis || {};
+    const rows = [];
+    const expertOnly = [], missing = [];
+    const dotOf = function(c) {
+        return '<span class="chip-dot" aria-hidden="true" style="--chip-color:' + EC.escapeHtml(CAT_COLOR[c] || '') + '"></span>';
+    };
+    ALL_CATS.forEach(function(c) {
+        const pins = evidence[c] || [];
+        const level = catLevel((record.categories || {})[c]);
+        if (!pins.length && !level) return;
+        const dot = dotOf(c);
+        const label = '<span class="pt-evid-cat">' + EC.escapeHtml(CAT_LABELS[c]) + '</span>';
+        if (!pins.length) {
+            (basis[c] === 'expert_assessment' ? expertOnly : missing).push(c);
+            return;
+        }
+        pins.forEach(function(ev, i) {
+            const llm = evidenceLayer(ev) === 'llm_distillate';
+            // only deviations are marked: an LLM layer pin and a pin set by an agent
+            const mark = llm ? '<span class="pt-evid-origin">LLM</span>' : (ev && ev.actor === 'agent' ? '<span class="pt-evid-origin">Agent</span>' : '');
+            rows.push('<li class="pt-evid-row">' + dot + label + mark +
+                '<span class="pt-evid-snip" title="' + EC.escapeHtml(ev.snippet || ev.term || '') + '">' + EC.escapeHtml(ev.snippet || ev.term || '') + '</span>' +
+                (editable ? '<button type="button" class="pt-evid-x" data-cat="' + EC.escapeHtml(c) + '" data-i="' + i +
+                    '" aria-label="Beleg zu ' + EC.escapeHtml(CAT_LABELS[c]) + ' entfernen">&times;</button>' : '') + '</li>');
         });
-        h += '</div>';
     });
-    h += '</div>';
-    return h;
+    const summary = function(cats, cls, text) {
+        if (!cats.length) return;
+        rows.push('<li class="pt-evid-row pt-evid-summary ' + cls + '"><span class="pt-evid-snip">' + text + ' ' +
+            cats.map(function(c) { return '<span class="pt-evid-named">' + dotOf(c) + EC.escapeHtml(CAT_LABELS[c]) + '</span>'; }).join(' ') +
+            '</span></li>');
+    };
+    summary(expertOnly, 'is-basis', 'Expert:innen-Urteil, ohne Textbeleg:');
+    summary(missing, 'is-missing', 'Paper-Beleg fehlt:');
+    if (!rows.length) return '';
+    return '<section class="pt-evid" aria-labelledby="pt-evid-title"><h3 class="pt-sub-head" id="pt-evid-title">Belege</h3><ul class="pt-evid-list">' + rows.join('') + '</ul></section>';
 }
 
-// ---- analysis coding panel (FR-14, ADR-026) ----
-// Inline in the assessment column, beneath the decision block, and ONLY on a
-// binding Include (including an override to Include). Human capture only; every
-// value is a closed selection from the frozen vocabulary (anFields). The
-// vocabulary pins evidence keep their Fundstelle in the evidence list above; this
-// panel adds the descriptive analysis codes for the coding phase.
-function analysisPanelHtml(dec, readOnly) {
-    if (!dec || dec.decision !== 'Include') return '';
-    if (!anFields.length) {
-        return '<div class="pt-anpanel"><div class="pt-anpanel-head"><span class="pt-tag-mono">Analyse-Codierung</span></div>' +
-            '<p class="pt-muted">Analysefeld-Vokabular nicht geladen (docs/data/analysis_fields.json). ' +
-            'Build ausführen: python src/publish/build_analysis_fields.py</p></div>';
-    }
-    const rawAnalysis = readAnalysis(dec);
-    const a = sanitizeAnalysis(rawAnalysis, dec.text_source), fv = a.fields, uv = a.undecidable;
-    const req = analysisRequirements(dec);
-    let h = '<div class="pt-anpanel"><div class="pt-anpanel-head">' +
-        '<span class="pt-tag-mono">Analyse-Codierung</span>' +
-        '<span class="pt-spacer"></span><span class="pt-pill pt-pill-human">nur Include</span></div>';
-    h += '<p class="pt-anpanel-lead pt-muted">Geschlossene Auswahl aus categories.yaml v' + EC.escapeHtml(anVocabVersion) +
-        '. Studientyp und alle erforderlichen Felder schließen den Include-Record ab.</p>';
-
-    // Studientyp is required for an Include (update-protocol D) and captured here as a
-    // closed single select from study_types; no nicht-entscheidbar toggle, because its
-    // vocabulary carries Unclear itself.
-    h += anFieldHtml({ name: 'Studientyp', multi: false, values: anStudyTypes, no_undec: true }, fv.Studientyp, false, !!readOnly);
-
-    anFields.forEach(function(f) {
-        const fixed = f.name === 'AN_Coding_Basis';
-        const effective = f.name === 'AN_Harm_Types' && fv.AN_Coding_Basis === 'Fulltext'
-            ? Object.assign({}, f, { optional: false }) : f;
-        h += anFieldHtml(effective, fv[f.name], !!uv[f.name], fixed || !!readOnly, !!readOnly);
-    });
-
-    const hint = harmTypesHint(a);
-    if (hint) h += '<div class="pt-an-hint">' + EC.escapeHtml(hint) + '</div>';
-    const expectedBasis = expectedCodingBasis(dec.text_source);
-    if (!readOnly && expectedBasis && rawAnalysis.fields.AN_Coding_Basis !== expectedBasis)
-        h += '<button type="button" class="pt-btn pt-an-fix-basis">Codierbasis aus Textquelle übernehmen: ' + EC.escapeHtml(expectedBasis) + '</button>';
-    h += '<p class="pt-an-status ' + (req.ok ? 'is-complete' : 'is-required') + '" role="status">' +
-        (req.ok ? 'Analyse-Codierung vollständig.' : 'Noch erforderlich: ' + EC.escapeHtml(req.missing.join(', '))) + '</p>';
-    h += '</div>';
-    return h;
+// Test seam kept under its former name.
+function evidenceListHtml(evidence, locked) {
+    return evidenceRowsHtml({ categories: {}, evidence: evidence }, !locked);
 }
 
-function anFieldHtml(f, value, undecidable, fixed, readOnly) {
-    let h = '<div class="pt-an-field" data-an-field="' + f.name + '">';
-    h += '<div class="pt-an-field-head"><span class="pt-an-label">' + EC.escapeHtml(f.name) + '</span>';
-    if (f.optional) h += '<span class="pt-tag-mono pt-an-opt">optional</span>';
-    else if (!f.free_text) h += '<span class="pt-tag-mono pt-an-required">erforderlich</span>';
-    h += '<span class="pt-spacer"></span>';
-    if (!f.free_text && !f.no_undec && !fixed) {
-        h += '<label class="pt-an-undec"><input type="checkbox" data-an-undec="' + f.name + '"' +
-            (undecidable ? ' checked' : '') + (readOnly ? ' disabled' : '') + '> nicht entscheidbar</label>';
-    }
-    h += '</div>';
-
-    if (f.free_text) {
-        h += '<textarea class="pt-an-notes" data-an-free="' + f.name + '" rows="2" ' + (readOnly ? 'readonly ' : '') +
-            'placeholder="Begründungen, Verbatim-Strategien; Nicht-Entscheidbarkeit wird beim Export angehängt.">' +
-            EC.escapeHtml(value || '') + '</textarea>';
-        h += '</div>';
-        return h;
-    }
-
-    const sel = f.multi ? (Array.isArray(value) ? value : []) : (value ? [value] : []);
-    h += '<div class="pt-an-opts' + (undecidable ? ' pt-an-dimmed' : '') + '">';
-    (f.values || []).forEach(function(v) {
-        const on = sel.indexOf(v) !== -1;
-        h += '<button type="button" class="pt-an-opt' + (on ? ' sel' : '') + '"' +
-            ' data-an-field="' + f.name + '" data-an-value="' + v + '"' +
-            ' data-an-multi="' + (f.multi ? '1' : '0') + '"' +
-            ' aria-pressed="' + (on ? 'true' : 'false') + '"' + (fixed ? ' disabled' : '') + '>' + EC.escapeHtml(v.replace(/_/g, ' ')) + '</button>';
-    });
-    h += '</div></div>';
-    return h;
+function firstSentence(text) {
+    const value = String(text || '').trim();
+    const match = value.match(/^.+?[.!?](?=\s|$)/);
+    return match ? match[0] : value;
 }
 
-function logicInner(cats, override) {
-    const derived = deriveDecision(cats);
-    let h = '<div class="pt-logic-row">';
-    h += '<span class="pt-tag-mono">Ergebnis</span>';
-    h += '<span class="pt-pill pt-pill-' + decCls(derived) + '">' + derived + '</span>';
-    h += '<button type="button" class="pt-info-btn pt-logic-info" aria-label="Ableitungsregel anzeigen" aria-expanded="false" ' +
-        'aria-controls="pt-logic-help" aria-describedby="pt-logic-help" data-info-target="pt-logic-help">i</button>' +
-        '<span class="pt-info-popover" role="tooltip" id="pt-logic-help" hidden>' +
-        '<b class="mono">Ableitungsregel</b><span>Include: mindestens eine mit ja bewertete Kategorie in Gegenstand und Perspektive. ' +
-        'Unclear: beide Dimensionen sind mindestens teilweise belegt. Andernfalls Exclude.</span></span>';
-    h += '<span class="pt-spacer"></span>';
-    h += '<label class="pt-override"><span class="pt-switch"><input type="checkbox" id="pt-override"' +
-        (override ? ' checked' : '') + '><span class="pt-switch-track"></span></span> ' +
-        (derived === 'Include' ? 'Override zu Exclude' : 'Override zu Include') + '</label>';
-    h += '</div>';
-    return h;
-}
-
-
-// Visible references for human reviewers (ADR-038): the consolidated round-one expert
-// decision and the round-one LLM assessment. Agent runs stay reference-blind. Taking over
-// the LLM proposal only pre-sets category levels; every level still needs its own Paper
-// evidence before the record can be saved, so no model reasoning enters the record.
-function referenceProposalsHtml(p, editable) {
-    if (runActor === 'agent') return '';
-    const seed = seedDecision(p), llm = aiProposal(p);
-    if (!seed && !llm) return '';
-    let h = '<div class="pt-references" id="pt-references">';
-    if (seed) {
-        const setCats = ALL_CATS.filter(function(c) { return seed.categories[c]; });
-        h += '<div class="pt-reference-card pt-reference-human"><span class="pt-tag-mono">Expert:innen-Entscheidung, Runde 1</span>' +
-            '<strong class="pt-dec-' + decCls(seed.decision) + '">' + EC.escapeHtml(seed.decision) + '</strong>' +
-            (setCats.length ? '<div class="pt-chips-static">' + setCats.map(function(c) { return '<span class="pt-pill pt-pill-human">' + EC.escapeHtml(CAT_LABELS[c]) + '</span>'; }).join('') + '</div>' : '') +
-            '</div>';
-    }
+// References for human reviewers (ADR-038, ADR-042): the expert decision when it is not
+// the subject, and the LLM assessment, which never seeds the assessment. Taking over the
+// LLM proposal only pre-sets category levels; each still needs its own Paper Beleg.
+function referenceProposalsHtml(p, editable, subject) {
+    if (!referencesAllowed()) return '';
+    subject = subject || paperSubject(p);
+    const expert = subject.kind !== 'expert' ? expertAssessment(p) : null;
+    const llm = aiProposal(p);
+    if (!expert && !llm) return '';
+    const dots = function(cats) {
+        const set = ALL_CATS.filter(function(c) { return catLevel(cats[c]) > 0; });
+        return set.length ? '<span class="pt-ref-cats" aria-hidden="true">' + set.map(function(c) {
+            return '<span class="chip-dot" style="--chip-color:' + EC.escapeHtml(CAT_COLOR[c] || '') + '"></span>';
+        }).join('') + '</span><span class="pt-sr-only">: ' + EC.escapeHtml(set.map(function(c) { return CAT_LABELS[c]; }).join(', ')) + '</span>' : '';
+    };
+    let h = '<section class="pt-references" id="pt-references" aria-label="Referenzen">';
+    if (expert) h += '<p class="pt-ref pt-ref-expert"><span class="pt-ref-label">Expert:innen-Entscheidung</span> <strong class="pt-dec-' +
+        decCls(expert.decision) + '">' + EC.escapeHtml(expert.decision) + '</strong>' + dots(expert.categories) + '</p>';
     if (llm) {
-        const on = ALL_CATS.filter(function(c) { return llm.categories[c]; });
-        h += '<div class="pt-reference-card pt-reference-llm"><span class="pt-tag-mono"><span class="pt-llm-mark" aria-hidden="true">✦</span> LLM-Vorschlag, Runde 1</span>' +
-            '<strong class="pt-dec-' + decCls(llm.decision) + '">' + EC.escapeHtml(llm.decision) + '</strong>' +
-            (on.length ? '<div class="pt-chips-static">' + on.map(function(c) { return '<span class="pt-pill pt-pill-ai">' + EC.escapeHtml(CAT_LABELS[c]) + '</span>'; }).join('') : '<span class="pt-muted">keine Kategorie</span>') + '</div>' +
-            (llm.reasoning ? '<details class="pt-llm-reasoning"><summary>Begründung des Modells</summary><p class="pt-ai-reason">' + EC.escapeHtml(llm.reasoning) + '</p></details>' : '') +
-            (editable ? '<button type="button" class="pt-btn pt-btn-sm pt-adopt-proposal" id="pt-adopt-proposal">Vorschlag übernehmen</button>' +
-                '<span class="pt-muted">Setzt die Kategorien auf „teilweise“. Jede Kategorie braucht weiterhin einen Beleg aus dem Papertext.</span>' : '') +
-            '</div>';
+        const reasoning = firstSentence(llm.reasoning);
+        h += '<p class="pt-ref pt-ref-llm"><span class="pt-ref-label"><span class="pt-llm-mark" aria-hidden="true">✦</span> LLM-Vorschlag</span> <strong class="pt-dec-' +
+            decCls(llm.decision) + '">' + EC.escapeHtml(llm.decision) + '</strong>' + dots(llm.categories) +
+            (editable && subject.kind !== 'agent' ? ' <button type="button" class="pt-link-btn pt-adopt-proposal" id="pt-adopt-proposal">Vorschlag übernehmen</button>' : '') + '</p>';
+        if (reasoning) h += '<p class="pt-ref-reason" title="' + EC.escapeHtml(llm.reasoning) + '">' + EC.escapeHtml(reasoning) + '</p>';
     }
-    return h + '</div>';
+    return h + '</section>';
 }
 
 function adoptLlmProposal(p) {
@@ -2610,93 +3300,236 @@ function adoptLlmProposal(p) {
     ALL_CATS.forEach(function(c) {
         if (llm.categories[c] && catLevel(work.cats[c]) === 0) work.cats[c] = 1;
     });
+    markDirty();
     refreshAssess();
 }
 
+function dimHtml(label, keys, cats, editable, basis) {
+    return '<div class="pt-dim"><h3 class="pt-sub-head">' + label + '</h3><div class="category-chips">' +
+        keys.map(function(c) { return categoryChipHtml(c, cats[c], { disabled: !editable, expertBasis: !!(basis && basis[c]) }); }).join('') +
+        '</div></div>';
+}
 
+function reasonChipsHtml(record, editable) {
+    const offerExpert = work && (work.derivedFromExpert || work.seed === 'expert');
+    const reasons = EXCLUSION_REASONS.filter(function(r) {
+        return r !== EXPERT_EXCLUSION_REASON || offerExpert || record.reason === r;
+    });
+    return '<div class="pt-reason-block" id="pt-reason-block"><h3 class="pt-sub-head" id="pt-reason-title">Ausschlussgrund</h3>' +
+        '<div class="pt-reason-chips" role="group" aria-labelledby="pt-reason-title">' + reasons.map(function(r) {
+            const on = record.reason === r;
+            return '<button type="button" class="pt-reason-chip' + (on ? ' sel' : '') + '" data-reason="' + EC.escapeHtml(r) + '" aria-pressed="' + on + '"' +
+                (editable ? '' : ' disabled') + '>' + EC.escapeHtml(reasonLabel(r)) + '</button>';
+        }).join('') + '</div></div>';
+}
+
+function overrideHtml(record, editable) {
+    const derived = deriveDecision(record.categories || {});
+    let h = '<div class="pt-override-row"><label class="pt-override"><span class="pt-switch"><input type="checkbox" id="pt-override"' +
+        (record.override ? ' checked' : '') + (editable ? '' : ' disabled') + '><span class="pt-switch-track"></span></span> ' +
+        (derived === 'Include' ? 'Abweichend ausschließen' : 'Abweichend einschließen') + '</label></div>';
+    if (record.override && record.decision === 'Include') {
+        h += '<label class="pt-override-block" for="pt-override-reason"><span class="pt-sub-head">Begründung</span>' +
+            '<textarea id="pt-override-reason" class="pt-override-input" rows="2" placeholder="Warum abweichend?"' + (editable ? '' : ' readonly') + '>' +
+            EC.escapeHtml((editable ? work.overrideReason : record.override_reason) || '') + '</textarea></label>';
+    }
+    return h;
+}
+
+function verifyControlsHtml(p, subject) {
+    const current = annotationBody(subject.record);
+    const changed = annotationDiff(current, draftAnnotationBody(current, work)).length > 0;
+    let h = '<div class="pt-verify-row"><label for="pt-verify-result">Prüfergebnis</label><select id="pt-verify-result">' +
+        '<option value="accept"' + (work.verifyResult === 'accept' ? ' selected' : '') + '>' + (changed ? 'Korrigiert bestätigen' : 'Bestätigen') + '</option>' +
+        '<option value="changes_requested"' + (work.verifyResult === 'changes_requested' ? ' selected' : '') + '>Änderungen anfordern</option>' +
+        '<option value="rejected"' + (work.verifyResult === 'rejected' ? ' selected' : '') + '>Ablehnen</option></select></div>';
+    if (work.verifyResult !== 'accept')
+        h += '<label class="pt-verify-note" for="pt-verify-note"><span class="pt-sub-head">Notiz</span><textarea id="pt-verify-note" rows="2" placeholder="Was ist zu ändern?">' +
+            EC.escapeHtml(work.verifyNote || '') + '</textarea></label>';
+    return h;
+}
+
+function analysisEntryHtml(record, editable) {
+    if (record.decision !== 'Include' || !anFields.length) return '';
+    const req = analysisRequirements(record);
+    return '<div class="pt-analysis-entry"><span class="pt-sub-head">Analysekodierung</span>' +
+        '<span class="pt-analysis-state ' + (req.ok ? 'is-complete' : 'is-open') + '">' + (req.ok ? 'vollständig' : 'unvollständig') + '</span>' +
+        '<button type="button" class="pt-btn pt-btn-sm" id="pt-open-analysis">' + (editable ? 'Kodieren' : 'Ansehen') + '</button></div>';
+}
+
+function railHtml(p) {
+    const subject = paperSubject(p);
+    if (canEdit() && paperIdentityRequired(p) && !paperIdentityReady(p))
+        return '<div class="pt-rail-head"><h2 class="pt-rail-title">Bewertung</h2></div>' +
+            '<p class="pt-muted pt-read-only-note">Dieses Paper ist noch nicht an ein Werk und eine genaue Fassung gebunden. Bewerten ist erst nach der bibliografischen Zuordnung möglich.</p>';
+    if (railStep === 'analysis') return analysisStepHtml(p, subject);
+    const editable = railEditable(p, subject);
+    const record = editable ? workingDecisionRecord() : (subject.record || null);
+    let h = '<div class="pt-rail-head"><h2 class="pt-rail-title">Bewertung</h2>';
+    if (record) h += decisionBadgeHtml(record, subject.kind === 'own' || (editable && work.dirty));
+    h += '</div><p class="pt-provenance" id="pt-provenance">' + EC.escapeHtml(provenanceLine(p, subject)) +
+        (editable && work.dirty && subject.kind !== 'empty' ? ' · geändert' : '') + '</p>';
+    h += '<div class="pt-rail-body">';
+    const cats = record ? (record.categories || {}) : {};
+    const basis = record ? (record.evidence_basis || {}) : {};
+    h += dimHtml('Gegenstand', TECH_CATS, cats, editable, basis);
+    h += dimHtml('Perspektive', SOCIAL_CATS, cats, editable, basis);
+    if (record) {
+        h += overrideHtml(record, editable);
+        if (record.decision === 'Exclude') h += reasonChipsHtml(record, editable);
+        h += evidenceRowsHtml(record, editable);
+        h += analysisEntryHtml(record, editable);
+        if (subject.kind === 'agent') {
+            if (editable && saveMode(p, subject) === 'verify') h += verifyControlsHtml(p, subject);
+            h += historyHtml(subject.record);
+            if (canEdit() && agentRecordState(subject.record) === 'verified' && runActor === 'human')
+                h += '<button type="button" class="pt-btn pt-btn-sm" id="pt-approve">Freigabe erteilen</button>';
+        }
+    }
+    h += referenceProposalsHtml(p, editable, subject);
+    if (subject.kind === 'agent' || (subject.kind === 'own' && isGovernedRecord(subject.record))) h += provenanceHtml(subject.record);
+    h += '</div>';
+    h += dockHtml(p, subject, editable);
+    return h;
+}
+
+function dockHtml(p, subject, editable) {
+    let h = '<div class="pt-action-dock">';
+    if (editable) {
+        const gate = saveGate(p);
+        h += '<p class="pt-actions-hint" id="pt-actions-hint">' + EC.escapeHtml(gate.reasons.join(' · ')) + '</p>';
+    }
+    h += '<div class="pt-actions">';
+    if (editable && work.dirty) h += '<button type="button" class="pt-link-btn" id="pt-discard">Änderungen verwerfen</button>';
+    h += '<span class="pt-spacer"></span>';
+    h += '<button type="button" class="pt-next-btn" id="pt-next">' + (acceptanceMode ? 'Anderer Abnahmefall' : 'Nächstes offen') + ' &rarr;</button></div>';
+    return h + '</div>';
+}
+
+// ---- analysis coding step (FR-14, ADR-026) ----
+// The Include analysis coding is its own step of the rail, so the assessment itself
+// fits one screen. Every value is a closed selection from the frozen vocabulary; labels
+// come from docs/data/analysis_fields.json and stored values stay the controlled codes.
+
+function anValueLabel(f, value) {
+    if (f.name === 'Studientyp') return anStudyTypeLabels[value] || value;
+    return (f.value_labels && f.value_labels[value]) || value;
+}
+
+function analysisStepHtml(p, subject) {
+    const editable = railEditable(p, subject);
+    const record = editable ? workingDecisionRecord() : subject.record;
+    let h = '<div class="pt-rail-head"><h2 class="pt-rail-title">Analysekodierung</h2>' +
+        '<button type="button" class="pt-link-btn" id="pt-close-analysis">Zurück zur Bewertung</button></div>';
+    h += '<div class="pt-rail-body pt-rail-scrollable">' + analysisPanelHtml(record, !editable) + '</div>';
+    h += dockHtml(p, subject, editable);
+    return h;
+}
+
+function analysisPanelHtml(dec, readOnly) {
+    if (!dec || dec.decision !== 'Include') return '';
+    if (!anFields.length) return '<p class="pt-muted">Analysefeld-Vokabular nicht geladen.</p>';
+    const rawAnalysis = readAnalysis(dec);
+    const a = sanitizeAnalysis(rawAnalysis, dec.text_source), fv = a.fields, uv = a.undecidable;
+    const req = analysisRequirements(dec);
+    let h = '<div class="pt-anpanel">';
+    h += anFieldHtml({ name: 'Studientyp', label: 'Studientyp', multi: false, values: anStudyTypes, no_undec: true }, fv.Studientyp, false, !!readOnly);
+    anFields.forEach(function(f) {
+        if (f.name === 'AN_Coding_Basis') {
+            h += '<div class="pt-an-field" data-an-field="AN_Coding_Basis"><span class="pt-an-label">' + EC.escapeHtml(f.label || f.name) +
+                '</span> <span class="pt-an-fixed">' + EC.escapeHtml(anValueLabel(f, fv.AN_Coding_Basis) || 'keine lesbare Textquelle') + '</span></div>';
+            return;
+        }
+        const effective = f.name === 'AN_Harm_Types' && fv.AN_Coding_Basis === 'Fulltext'
+            ? Object.assign({}, f, { optional: false, hint: harmTypesHint(a) }) : f;
+        h += anFieldHtml(effective, fv[f.name], !!uv[f.name], !!readOnly);
+    });
+    const expectedBasis = expectedCodingBasis(dec.text_source);
+    if (!readOnly && expectedBasis && rawAnalysis.fields.AN_Coding_Basis !== expectedBasis)
+        h += '<button type="button" class="pt-btn pt-btn-sm pt-an-fix-basis">Kodierbasis aus Textquelle übernehmen</button>';
+    if (!req.ok) h += '<p class="pt-an-status">Offen: ' + EC.escapeHtml(req.missing.map(function(name) {
+        const f = anField(name);
+        return f ? (f.label || name) : name;
+    }).join(', ')) + '</p>';
+    return h + '</div>';
+}
+
+function anFieldHtml(f, value, undecidable, readOnly) {
+    let h = '<div class="pt-an-field" data-an-field="' + EC.escapeHtml(f.name) + '">';
+    h += '<div class="pt-an-field-head"><span class="pt-an-label" id="pt-an-label-' + EC.escapeHtml(f.name) + '">' + EC.escapeHtml(f.label || f.name) + '</span>';
+    if (f.optional) h += '<span class="pt-an-optional">optional</span>';
+    if (f.hint) h += '<span class="pt-an-hint">' + EC.escapeHtml(f.hint) + '</span>';
+    h += '</div>';
+    if (f.free_text) {
+        h += '<textarea class="pt-an-notes" data-an-free="' + EC.escapeHtml(f.name) + '" rows="2" aria-labelledby="pt-an-label-' + EC.escapeHtml(f.name) + '" ' +
+            (readOnly ? 'readonly ' : '') + 'placeholder="Notizen">' + EC.escapeHtml(value || '') + '</textarea></div>';
+        return h;
+    }
+    const sel = f.multi ? (Array.isArray(value) ? value : []) : (value ? [value] : []);
+    h += '<div class="pt-an-opts" role="group" aria-labelledby="pt-an-label-' + EC.escapeHtml(f.name) + '">';
+    (f.values || []).forEach(function(v) {
+        const on = sel.indexOf(v) !== -1;
+        const definition = f.value_definitions && f.value_definitions[v];
+        h += '<button type="button" class="pt-an-opt' + (on ? ' sel' : '') + '"' +
+            ' data-an-field="' + EC.escapeHtml(f.name) + '" data-an-value="' + EC.escapeHtml(v) + '"' +
+            ' data-an-multi="' + (f.multi ? '1' : '0') + '"' + (definition ? ' title="' + EC.escapeHtml(definition) + '"' : '') +
+            ' aria-pressed="' + (on ? 'true' : 'false') + '"' + (readOnly ? ' disabled' : '') + '>' + EC.escapeHtml(anValueLabel(f, v)) + '</button>';
+    });
+    if (!f.no_undec)
+        h += '<button type="button" class="pt-an-opt pt-an-undec' + (undecidable ? ' sel' : '') + '" data-an-undec="' + EC.escapeHtml(f.name) +
+            '" aria-pressed="' + (undecidable ? 'true' : 'false') + '"' + (readOnly ? ' disabled' : '') + '>nicht entscheidbar</button>';
+    h += '</div></div>';
+    return h;
+}
+
+// Focus survives the re-render of the rail: the element is found again by a stable key.
+function focusKey(el) {
+    if (!el || !el.closest || !el.closest('#pt-assess-col')) return null;
+    if (el.id) return '#' + el.id;
+    if (el.dataset.anUndec) return '[data-an-undec="' + el.dataset.anUndec + '"]';
+    if (el.dataset.anField && el.dataset.anValue) return '[data-an-field="' + el.dataset.anField + '"][data-an-value="' + el.dataset.anValue + '"]';
+    if (el.dataset.reason) return '[data-reason="' + el.dataset.reason + '"]';
+    if (el.dataset.cat && el.classList.contains('category-chip')) return '.category-chip[data-cat="' + el.dataset.cat + '"]';
+    return null;
+}
 
 function refreshAssess() {
-    let col = document.getElementById('pt-assess-col');
+    const col = document.getElementById('pt-assess-col');
     if (!col) return;
-    closeInfoPopover(false);
-    let p = papers[state.index];
-    const dec = displayRecord(p);
-    col.innerHTML = assessInnerHtml(p, dec);
-    bindAssess(p, dec);
-}
-
-function closeInfoPopover(restoreFocus) {
-    if (!openInfoTrigger) return;
-    const pop = document.getElementById(openInfoTrigger.dataset.infoTarget);
-    openInfoTrigger.setAttribute('aria-expanded', 'false');
-    if (pop) pop.hidden = true;
-    const trigger = openInfoTrigger;
-    openInfoTrigger = null;
-    if (restoreFocus && typeof trigger.focus === 'function') trigger.focus();
-}
-
-function openInfoPopover(trigger) {
-    if (!trigger) return;
-    if (openInfoTrigger && openInfoTrigger !== trigger) closeInfoPopover(false);
-    const pop = document.getElementById(trigger.dataset.infoTarget);
-    if (!pop) return;
-    openInfoTrigger = trigger;
-    trigger.setAttribute('aria-expanded', 'true');
-    pop.hidden = false;
-    pop.style.visibility = 'hidden';
-    const t = trigger.getBoundingClientRect();
-    const rail = trigger.closest('.pt-rail');
-    const bounds = rail ? rail.getBoundingClientRect() : { left: 8, right: window.innerWidth - 8 };
-    const width = pop.offsetWidth;
-    const left = Math.max(bounds.left + 8, Math.min(t.left, bounds.right - width - 8));
-    const below = t.bottom + 8;
-    const top = below + pop.offsetHeight <= window.innerHeight - 8
-        ? below : Math.max(8, t.top - pop.offsetHeight - 8);
-    pop.style.left = left + 'px';
-    pop.style.top = top + 'px';
-    pop.style.visibility = 'visible';
-}
-
-function bindInfoPopovers(root) {
-    root.querySelectorAll('[data-info-target]').forEach(function(trigger) {
-        trigger.addEventListener('click', function(e) {
-            e.stopPropagation();
-            if (openInfoTrigger === trigger) closeInfoPopover(false); else openInfoPopover(trigger);
-        });
-        trigger.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') { e.preventDefault(); closeInfoPopover(true); }
-        });
-    });
-    if (!infoGlobalBound) {
-        infoGlobalBound = true;
-        document.addEventListener('pointerdown', function(e) {
-            if (!openInfoTrigger) return;
-            const pop = document.getElementById(openInfoTrigger.dataset.infoTarget);
-            if (e.target !== openInfoTrigger && !(pop && pop.contains(e.target))) closeInfoPopover(false);
-        });
-        document.addEventListener('focusin', function(e) {
-            if (!openInfoTrigger) return;
-            const pop = document.getElementById(openInfoTrigger.dataset.infoTarget);
-            if (e.target !== openInfoTrigger && !(pop && pop.contains(e.target))) closeInfoPopover(false);
-        });
+    const key = focusKey(document.activeElement);
+    const p = papers[state.index];
+    col.innerHTML = railHtml(p);
+    bindAssess(p);
+    refreshSaveGate();
+    if (key) {
+        const again = col.querySelector(key);
+        if (again && typeof again.focus === 'function') again.focus();
     }
 }
 
-// Wire the analysis panel into the unsaved Include draft. The analysis remains in
-// work until the single disk action writes the complete record.
-function attachAnalysisPanel(dec, col) {
-    if (!canEdit() || !dec || dec.decision !== 'Include' || !anFields.length) return;
+// The position bar carries the save action; it is refreshed without re-rendering the list.
+function refreshSaveGate() {
+    const bar = document.querySelector('.pt-nav-tools .pt-ws-bar');
+    if (!bar) return;
+    const hadFocus = document.activeElement && document.activeElement.id === 'pt-record';
+    bar.outerHTML = positionBarHtml();
+    const record = document.getElementById('pt-record');
+    if (record) {
+        record.addEventListener('click', saveCurrent);
+        if (hadFocus) record.focus();
+    }
+}
+
+function attachAnalysisStep(col) {
+    if (!canEdit()) return;
     const panel = col.querySelector('.pt-anpanel');
     if (!panel) return;
-
     function cur() {
         const a = readAnalysis({ analysis: work.analysis });
         return { fields: JSON.parse(JSON.stringify(a.fields)), undecidable: JSON.parse(JSON.stringify(a.undecidable)) };
     }
-    function persist(next) { if (canEdit()) work.analysis = sanitizeAnalysis(next, currentTextSource); }
-    function rerender() { refreshAssess(); }
-
-    panel.querySelectorAll('.pt-an-opt').forEach(function(btn) {
+    function persist(next) { work.analysis = sanitizeAnalysis(next, workingTextSource()); markDirty(); }
+    panel.querySelectorAll('.pt-an-opt[data-an-value]').forEach(function(btn) {
         btn.addEventListener('click', function() {
             const name = btn.dataset.anField, val = btn.dataset.anValue, multi = btn.dataset.anMulti === '1';
             const st = cur();
@@ -2713,37 +3546,37 @@ function attachAnalysisPanel(dec, col) {
             } else {
                 st.fields[name] = st.fields[name] === val ? undefined : val; // single-select toggles off on re-click
             }
-            persist(st); rerender();
+            persist(st); refreshAssess();
         });
     });
-    panel.querySelectorAll('[data-an-undec]').forEach(function(cb) {
-        cb.addEventListener('change', function() {
-            const name = cb.dataset.anUndec;
+    panel.querySelectorAll('[data-an-undec]').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            const name = btn.dataset.anUndec;
             const st = cur();
-            if (cb.checked) {
-                st.undecidable[name] = true;
-                delete st.fields[name];
-            } else delete st.undecidable[name];
-            persist(st); rerender();
+            if (st.undecidable[name]) delete st.undecidable[name];
+            else { st.undecidable[name] = true; delete st.fields[name]; }
+            persist(st); refreshAssess();
         });
     });
     const fixBasis = panel.querySelector('.pt-an-fix-basis');
-    if (fixBasis) fixBasis.addEventListener('click', function() { persist(cur()); rerender(); });
+    if (fixBasis) fixBasis.addEventListener('click', function() { persist(cur()); refreshAssess(); });
     const notes = panel.querySelector('[data-an-free]');
     if (notes) notes.addEventListener('input', function() {
         const st = cur();
         st.fields[notes.dataset.anFree] = notes.value;
         persist(st); // no re-render: keep the caret in the textarea
+        refreshSaveGate();
     });
 }
 
 // ---- handlers ----
-function attachScreening(p, dec) {
+function attachScreening(p) {
     let el = surfaceEl(); if (!el) return;
 
     bindCorpusItems();
+    bindFilters();
     const recordButton = document.getElementById('pt-record');
-    if (recordButton && !dec) recordButton.addEventListener('click', commit);
+    if (recordButton) recordButton.addEventListener('click', saveCurrent);
 
     // Reading-column layer toggle (full text / knowledge distillate).
     el.querySelectorAll('.pt-layer-btn').forEach(function(b) {
@@ -2764,12 +3597,12 @@ function attachScreening(p, dec) {
         const runCorpus = debounce(function() {
             if (corpusQuery.trim() && !corpusIndex) loadCorpusIndex().then(refreshCorpusList);
             else refreshCorpusList();
+            if (corpusQuery.trim() && corpusIndex) announce(visibleRows().length + ' Ergebnisse');
         }, 150);
         cq.addEventListener('input', function() { corpusQuery = cq.value; runCorpus(); });
     }
-    refreshCorpusList();
 
-    // in-text search
+    // in-text search: Enter steps forward, Shift+Enter back
     const intext = document.getElementById('pt-intext');
     if (intext) {
         const runIntext = debounce(function() { applyInText(intext.value); }, 120);
@@ -2781,7 +3614,7 @@ function attachScreening(p, dec) {
             if (query !== appliedInTextQuery) {
                 runIntext.cancel();
                 applyInText(query);
-            } else if (docMarks.length) setActiveMark(docMarkIdx + 1);
+            } else if (docMarks.length) setActiveMark(docMarkIdx + (e.shiftKey ? -1 : 1));
         });
     }
     const prev = document.getElementById('pt-intext-prev');
@@ -2790,53 +3623,64 @@ function attachScreening(p, dec) {
     if (next) next.addEventListener('click', function() { if (docMarks.length) setActiveMark(docMarkIdx + 1); });
     const pinHit = document.getElementById('pt-pin-hit');
     if (pinHit) pinHit.addEventListener('click', function() {
-        if (!docMarks.length || dec) return;
-        let m = docMarks[docMarkIdx];
-        let term = (intext && intext.value || '').trim();
-        openPinMenu(term, snippetAround(m, term));
+        if (!docMarks.length || !railEditable(p, paperSubject(p))) return;
+        const m = docMarks[docMarkIdx];
+        openPinMenu(m.textContent, snippetAround(m, m.textContent), m);
     });
 
     // text-selection pinning in the reading column
-    let doc = document.getElementById('pt-doc');
-    if (canEdit() && doc && !dec) {
+    const doc = document.getElementById('pt-doc');
+    if (canEdit() && doc) {
         doc.addEventListener('mouseup', function() {
-            let sel = window.getSelection ? window.getSelection() : null;
+            if (!railEditable(p, paperSubject(p))) return;
+            const sel = window.getSelection ? window.getSelection() : null;
             if (!sel || sel.isCollapsed) return;
-            let text = (sel.toString() || '').trim();
+            const text = (sel.toString() || '').trim();
             if (text.length < 2 || text.length > 400) return;
-            openPinMenu(text.slice(0, 80), text);
+            const range = sel.rangeCount ? sel.getRangeAt(0) : null;
+            openPinMenu(text.slice(0, 80), text, range);
         });
     }
 
-    bindAssess(p, dec);
+    bindAssess(p);
 }
 
-function bindAssess(p, dec) {
-    let col = document.getElementById('pt-assess-col'); if (!col) return;
-    bindInfoPopovers(col);
+function bindAssess(p) {
+    const col = document.getElementById('pt-assess-col'); if (!col) return;
+    const subject = paperSubject(p);
+    const editable = railEditable(p, subject);
+    const nx = col.querySelector('#pt-next');
+    if (nx) nx.addEventListener('click', gotoNextOpen);
+    const openAnalysis = col.querySelector('#pt-open-analysis');
+    if (openAnalysis) openAnalysis.addEventListener('click', function() {
+        railStep = 'analysis'; refreshAssess();
+        const back = document.getElementById('pt-close-analysis'); if (back) back.focus();
+    });
+    const closeAnalysis = col.querySelector('#pt-close-analysis');
+    if (closeAnalysis) closeAnalysis.addEventListener('click', function() {
+        railStep = 'assess'; refreshAssess();
+        const entry = document.getElementById('pt-open-analysis'); if (entry) entry.focus();
+    });
+    const approve = col.querySelector('#pt-approve');
+    if (approve) approve.addEventListener('click', function() { approveAgentRecord(p); });
+    if (!editable) return;
+    attachAnalysisStep(col);
     const adopt = col.querySelector('#pt-adopt-proposal');
     if (adopt) adopt.addEventListener('click', function() { adoptLlmProposal(p); });
+    const discard = col.querySelector('#pt-discard');
+    if (discard) discard.addEventListener('click', function() { discardDraft(p); announce('Änderungen verworfen.'); });
 
-    if (dec) {
-        bindVerificationPanel(p, dec, col);
-        const rev = col.querySelector('#pt-revise');
-        if (rev) rev.addEventListener('click', function() { editRecord(p); });
-        let nx = col.querySelector('#pt-next');
-        if (nx) nx.addEventListener('click', gotoNextOpen);
-        return;
-    }
-
-    if (!canEdit()) return;
-
-    col.querySelectorAll('.pt-chip').forEach(function(btn) {
+    col.querySelectorAll('.pt-dim .category-chip').forEach(function(btn) {
         btn.addEventListener('click', function() {
-            if (!canEdit()) return;
-            let c = btn.dataset.cat;
+            const c = btn.dataset.cat;
             const before = deriveDecision(work.cats);
-            work.cats[c] = (catLevel(work.cats[c]) + 1) % 3; // cycle nein -> teilweise -> ja
+            // on and off; a teilweise set by a pin is raised to ja
+            const next = catLevel(work.cats[c]) === 2 ? 0 : 2;
+            if (next) work.cats[c] = next; else delete work.cats[c];
             // an override opposes the current derivation; if a step flips the derived
             // decision, the override and its justification no longer apply
             if (deriveDecision(work.cats) !== before) { work.override = false; work.overrideReason = null; }
+            markDirty();
             refreshAssess();
         });
     });
@@ -2844,208 +3688,246 @@ function bindAssess(p, dec) {
         btn.addEventListener('click', function() { unpinEvidence(btn.dataset.cat, parseInt(btn.dataset.i, 10)); });
     });
     col.querySelectorAll('.pt-reason-chip').forEach(function(btn) {
-        btn.addEventListener('click', function() { if (!canEdit()) return; work.reason = btn.dataset.reason; refreshAssess(); });
+        btn.addEventListener('click', function() { work.reason = btn.dataset.reason; markDirty(); refreshAssess(); });
     });
     const ov = col.querySelector('#pt-override');
-    if (ov) ov.addEventListener('change', function() { if (!canEdit()) return; work.override = ov.checked; if (!ov.checked) work.overrideReason = null; refreshAssess(); });
-    attachAnalysisPanel(workingDecisionRecord(), col);
-
-    let rec = document.getElementById('pt-record');
-    let hint = col.querySelector('#pt-actions-hint');
-    // A derived Exclude needs an exclusion reason; an override to Include needs a recorded
-    // justification (RAISE P3). The justification textarea updates without re-rendering so
-    // the cursor is not lost, so the commit gate is re-checked on each keystroke.
-    function syncRecord() {
-        const fin = finalDecisionOf(work.cats, work.override);
-        const needExcl = fin === 'Exclude';
-        const needJust = work.override && fin === 'Include';
-        const missingEvidence = paperEvidenceMissing(work.cats, work.evidence);
-        const missingAnalysis = fin === 'Include' ? analysisRequirements(workingDecisionRecord()).missing : [];
-        const fileError = reviewerFileErrors[state.reviewer];
-        const storageReady = (!!screeningHandle || trialMode) && !fileError;
-        const can = !!state.reviewer && storageReady && !readingPending && (!needExcl || !!work.reason) &&
-            (!needJust || !!(work.overrideReason && work.overrideReason.trim())) && !missingEvidence.length && !missingAnalysis.length;
-        if (rec) rec.disabled = !can;
-        if (hint) hint.textContent = can ? 'Bereit zum Speichern.'
-            : (!state.reviewer ? 'Vor dem Speichern Reviewer:innen-Kürzel festlegen.'
-                : (fileError ? 'Bestehende Reviewer-Datei ist nicht lesbar und wird nicht überschrieben.'
-                : (!storageReady ? 'Vor dem Speichern den lokalen Arbeitsordner verbinden.'
-                : (readingPending ? 'Der Text wird noch geladen.'
-                    : (missingEvidence.length ? 'Paper-Beleg fehlt: ' + missingEvidence.map(function(c) { return CAT_LABELS[c]; }).join(', ') + '.'
-                        : (missingAnalysis.length ? 'Analyse-Codierung unvollständig.'
-                        : (needExcl && !work.reason ? 'Bitte einen Ausschlussgrund wählen.'
-                            : (needJust && !(work.overrideReason && work.overrideReason.trim())
-                                ? 'Bitte den Override zu Include begründen.' : 'Speichern ist noch nicht möglich.'))))))));
-    }
+    if (ov) ov.addEventListener('change', function() {
+        work.override = ov.checked;
+        if (!ov.checked) work.overrideReason = null;
+        markDirty();
+        refreshAssess();
+    });
     const ovr = col.querySelector('#pt-override-reason');
-    if (ovr) ovr.addEventListener('input', function() { if (!canEdit()) return; work.overrideReason = ovr.value; syncRecord(); });
-    syncRecord();
+    if (ovr) ovr.addEventListener('input', function() { work.overrideReason = ovr.value; markDirty(); syncDockHint(p); });
+    const result = col.querySelector('#pt-verify-result');
+    if (result) result.addEventListener('change', function() { work.verifyResult = result.value; markDirty(); refreshAssess(); });
+    const note = col.querySelector('#pt-verify-note');
+    if (note) note.addEventListener('input', function() { work.verifyNote = note.value; markDirty(); syncDockHint(p); });
 }
 
-function bindVerificationPanel(p, dec, col) {
-    if (!canEdit() || !verificationMode) return;
-    const form = col.querySelector('#pt-verification-action');
-    if (!form) return;
-    const resultSelect = form.elements.result;
-    const correctionEditor = form.querySelector('.pt-correction-editor');
-    function syncCorrectionEditor() {
-        if (correctionEditor)
-            correctionEditor.hidden = !resultSelect || resultSelect.value !== 'corrected_and_accepted';
-    }
-    if (resultSelect) resultSelect.addEventListener('change', syncCorrectionEditor);
-    syncCorrectionEditor();
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-        if (!canEdit() || runActor !== 'human') return;
-        const status = col.querySelector('#pt-verification-status');
-        const subject = verificationSubject(p) || { record: dec, reviewer: state.reviewer, agent: false };
-        if (subject.agent && !state.reviewer) {
-            if (status) status.textContent = 'Vor dem Protokollieren ein Reviewer:innen-Kürzel festlegen.';
-            return;
-        }
-        // The judged annotation is the one the agent record carries now; a correction
-        // appends a later version, so the subject reference is captured beforehand.
-        const judged = verificationView(subject.record).active_annotation_id ||
-            (subject.record.provenance && subject.record.provenance.annotation_id) || null;
-        // The agent file is read-only for this session: the transition runs on a copy,
-        // and that copy becomes the display projection once the event is recorded.
-        const working = subject.agent ? JSON.parse(JSON.stringify(subject.record)) : subject.record;
-        const target = LIFECYCLE_NEXT[verificationView(working).lifecycle.state];
-        const result = advanceVerification(working, target, {
-            reviewer_id: form.elements.reviewer_id && form.elements.reviewer_id.value,
-            actor_ids: form.elements.actor_ids && form.elements.actor_ids.value,
-            activity_id: form.elements.activity_id && form.elements.activity_id.value,
-            result: resultSelect && resultSelect.value,
-            note: form.elements.note && form.elements.note.value,
-            corrected_annotation: form.elements.corrected_annotation && form.elements.corrected_annotation.value
-        });
-        if (!result.ok) {
-            if (status) status.textContent = result.message;
-            return;
-        }
-        if (subject.agent) {
-            if (!Array.isArray(verificationRecords[state.reviewer])) verificationRecords[state.reviewer] = [];
-            verificationRecords[state.reviewer].push(
-                verificationEntry(p.id, subject, judged, result.event, result.reviewer_id, result.annotation));
-            agentTrack.records[p.id] = working;
-        }
-        verificationNotice = target === 'verified'
-            ? (result.event.to === 'verified'
-                ? 'Fachliche Verifikation wurde protokolliert.'
-                : 'Das fachliche Prüfergebnis wurde ohne Statusfreigabe protokolliert.')
-            : 'Öffentliche Freigabe wurde protokolliert.';
-        if (subject.agent) verificationNotice += ' Ziel: ' + reviewerPath(state.reviewer) + '.';
-        save();
-        renderScreening();
-    });
+// Typing keeps the caret: only the hint and the save gate are refreshed.
+function syncDockHint(p) {
+    const hint = document.getElementById('pt-actions-hint');
+    if (hint) hint.textContent = saveGate(p).reasons.join(' · ');
+    refreshSaveGate();
+}
+
+// The one save action. A draft over no record, an expert prefill or an own record
+// writes the reviewer's decision record; a draft over an agent record writes a
+// verification entry into the reviewer's own file.
+function saveCurrent() {
+    const p = papers[state.index];
+    if (!p || !canEdit()) return Promise.resolve(false);
+    const gate = saveGate(p);
+    if (!gate.ok) { syncDockHint(p); announce(gate.storage || gate.reasons[0] || gate.label); return Promise.resolve(false); }
+    return gate.mode === 'verify' ? verifyAgentRecord(p) : Promise.resolve(commit());
+}
+
+function expertDerivation(p) {
+    const item = {
+        id: 'expert:' + p.id,
+        type: 'consolidated_expert_assessment',
+        reference: 'docs/data/research_vault_v2.json#' + p.id + '.human',
+        mapping: '1=ja'
+    };
+    const fingerprint = EC && EC.getCorpusFingerprint ? EC.getCorpusFingerprint() : null;
+    const hex = String(fingerprint || '').replace(/^sha256:/, '');
+    if (/^[0-9a-f]{64}$/i.test(hex)) item.sha256 = hex;
+    return item;
+}
+
+const WORK_ID_PATTERN = /^work:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/;
+const VERSION_ID_PATTERN = /^version:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/;
+
+// A human record written by PRISM carries the embedded contract of schema 0.5: who
+// screened, on which paper, derived from what, and a curated baseline without events.
+// A record seeded from the expert decision is a legacy import, never a verification.
+function attachHumanContract(record, p, seededFromExpert) {
+    const key = record.reviewer;
+    const annotationId = key + ':' + p.id;
+    const source = { id: 'paper:' + p.id, type: 'paper', reference: p.id };
+    if (WORK_ID_PATTERN.test(record.work_id || '')) source.work_id = record.work_id;
+    if (VERSION_ID_PATTERN.test(record.version_id || '')) source.version_id = record.version_id;
+    if (record.version_type) source.version_type = record.version_type;
+    record.provenance = {
+        annotation_id: annotationId,
+        annotation_type: 'screening_decision',
+        actors: [{ id: key, type: 'person', roles: ['screening'] }],
+        activities: [{
+            id: p.id + ':prism-screening', type: 'screening', run_id: sessionActivityId(),
+            method: seededFromExpert ? 'prism_confirmation_of_consolidated_expert_assessment' : 'prism_human_screening',
+            prompt: { status: 'not_applicable', value: 'not_applicable' },
+            model: { status: 'not_applicable', value: 'not_applicable' },
+            associated_actor_ids: [key]
+        }],
+        used_sources: [source],
+        derived_from: seededFromExpert ? [expertDerivation(p)] : []
+    };
+    record.annotations = [{
+        annotation_id: annotationId, annotation_type: 'screening_decision', at: record.ts,
+        actor_ids: [key], body: annotationBody(record)
+    }];
+    record.active_annotation_id = annotationId;
+    record.checks = [];
+    record.lifecycle = {
+        baseline: { state: 'curated', basis: seededFromExpert ? 'legacy_import' : 'recorded', at: record.ts, actor_ids: [key] },
+        state: 'curated',
+        events: []
+    };
+    return record;
 }
 
 function commit() {
-    if (!canEdit()) return;
-    let p = papers[state.index];
+    if (!canEdit()) return false;
+    const p = papers[state.index];
+    if (!p) return false;
     if (paperIdentityRequired(p) && !paperIdentityReady(p)) {
         setSaveStatus('error', 'Bewertung nicht gespeichert: Werk- oder Fassungsbindung fehlt.');
         renderData(document.getElementById('pt-data-inline'));
-        return;
+        return false;
     }
     if (!state.reviewer) {
-        setSaveStatus('needs-reviewer', 'Reviewer:innen-Kürzel festlegen, bevor die erste Entscheidung gespeichert wird.');
-        focusDataInline(); return;
+        setSaveStatus('needs-reviewer', 'Kürzel festlegen, bevor gespeichert wird.');
+        focusDataInline(); return false;
     }
     if (!screeningHandle && !trialMode) {
-        setSaveStatus('local', 'Lokalen Arbeitsordner verbinden, bevor die erste Entscheidung gespeichert wird.');
-        focusDataInline(); return;
+        setSaveStatus('local', 'Arbeitsordner verbinden, bevor gespeichert wird.');
+        focusDataInline(); return false;
     }
     if (!trialMode && reviewerFileErrors[state.reviewer]) {
-        setSaveStatus('error', 'Bestehende Datei ' + reviewerPath(state.reviewer) + ' ist nicht lesbar und wird nicht überschrieben.');
+        setSaveStatus('error', 'Bestehende Datei ' + reviewerPath(state.reviewer) + ' wird nicht überschrieben.');
         renderData(document.getElementById('pt-data-inline'));
-        return;
+        return false;
     }
     // the record names the text it was taken on; a commit before the reading has been
     // applied would write text_source none for a paper that has a full text
-    if (readingPending) { refreshAssess(); return; }
-    let fin = finalDecisionOf(work.cats, work.override);
-    if (fin === 'Exclude' && !work.reason) { refreshAssess(); return; }
-    if (work.override && fin === 'Include' && !(work.overrideReason && work.overrideReason.trim())) { refreshAssess(); return; }
-    if (paperEvidenceMissing(work.cats, work.evidence).length) { refreshAssess(); return; }
+    if (readingPending) { refreshAssess(); return false; }
+    const draft = workingDecisionRecord();
     // The persisted record holds only paper-layer evidence. Knowledge-distillate
     // evidence stays advisory and session-only.
-    const paperEvidence = {};
-    ALL_CATS.forEach(function(c) {
-        const items = (work.evidence[c] || []).filter(isPaperEvidence);
-        if (items.length) paperEvidence[c] = items;
-    });
     const nextRecord = {
-        categories: work.cats, decision: fin, override: !!work.override,
-        reason: fin === 'Exclude' ? work.reason : null,
-        override_reason: (work.override && fin === 'Include') ? work.overrideReason.trim() : null,
-        evidence: paperEvidence, ts: new Date().toISOString(), reviewer: state.reviewer, actor: runActor,
+        categories: work.cats, decision: draft.decision, override: !!work.override,
+        reason: draft.reason,
+        override_reason: draft.override_reason,
+        evidence: paperEvidenceOnly(work.evidence), ts: new Date().toISOString(), reviewer: state.reviewer, actor: runActor,
         text_source: currentTextSource // the paper-layer text the decision was taken on (ADR-027, trAIce M4)
     };
+    if (draft.evidence_basis) nextRecord.evidence_basis = draft.evidence_basis;
     bindRecordIdentity(nextRecord, p);
-    // FR-14: an edited Include record keeps its analysis codes across the re-commit;
-    // a decision that leaves Include drops them (coding rule 1, excluded papers carry
-    // no AN codes). A record that never had an analysis part gets no key, so a session
-    // that touches no analysis field still serializes the pre-FR-14 file body.
-    if (fin === 'Include') nextRecord.analysis = sanitizeAnalysis(work.analysis || {}, currentTextSource);
-    if (!recordRequirements(nextRecord).ok) { refreshAssess(); return; }
+    // FR-14: an Include record carries its analysis codes; a decision that leaves Include
+    // drops them (coding rule 1, excluded papers carry no AN codes).
+    if (draft.decision === 'Include') nextRecord.analysis = sanitizeAnalysis(work.analysis || {}, currentTextSource);
+    if (!recordRequirements(nextRecord).ok) { refreshAssess(); return false; }
+    if (runActor === 'human' && !trialMode && !acceptanceMode)
+        attachHumanContract(nextRecord, p, !!work.derivedFromExpert);
     curDec()[p.id] = nextRecord;
-    editingPid = null; // the edit (if any) is now re-committed
+    delete drafts[p.id];
     save();
-    if (recordRequirements(nextRecord).ok) { corpusQuery = ''; gotoNextOpen(); }
-    else renderScreening();
+    corpusQuery = '';
+    gotoNextOpen();
+    return true;
 }
 
-// "Ueberarbeiten" reopens a committed decision for editing. It rehydrates the saved
-// categories, evidence, reason, and override into the working state and marks the paper
-// as being edited; the committed record stays in curDec untouched until re-commit, so
-// abandoning the edit (navigating away) loses nothing. Only human Belege were persisted,
-// so AI-origin evidence is not restored. (Browser-agent finding: revise was data loss.)
-function editRecord(p) {
-    if (!canEdit()) return;
-    const dec = curDec()[p.id];
-    if (!dec) return;
-    work = {
-        pid: p.id,
-        cats: JSON.parse(JSON.stringify(dec.categories || {})),
-        override: !!dec.override,
-        reason: dec.reason || null,
-        overrideReason: dec.override_reason || null,
-        evidence: JSON.parse(JSON.stringify(dec.evidence || {})),
-        // FR-14: carry the analysis codes through the edit so a re-commit as Include
-        // keeps them; a record without an analysis part stays without (no key introduced)
-        analysis: dec.analysis ? JSON.parse(JSON.stringify(dec.analysis)) : undefined
-    };
-    editingPid = p.id;
+// The agent file is read-only for the session: the transition runs on a copy, and that
+// copy becomes the display projection once the event is recorded in the reviewer's file.
+function verifyAgentRecord(p) {
+    const subject = paperSubject(p);
+    if (!canEdit() || subject.kind !== 'agent' || runActor !== 'human' || !state.reviewer) return Promise.resolve(false);
+    const record = subject.record;
+    const view = verificationView(record);
+    const target = LIFECYCLE_NEXT[view.lifecycle.state];
+    if (view.lifecycle.state !== 'ai-agent-reviewed' || target !== 'verified') return Promise.resolve(false);
+    const judged = view.active_annotation_id || (record.provenance && record.provenance.annotation_id) || null;
+    const current = annotationBody(record);
+    const body = draftAnnotationBody(current, work);
+    const changed = annotationDiff(current, body).length > 0;
+    const result = work.verifyResult === 'changes_requested' || work.verifyResult === 'rejected'
+        ? work.verifyResult : (changed ? 'corrected_and_accepted' : 'accepted');
+    const working = JSON.parse(JSON.stringify(record));
+    const outcome = advanceVerification(working, target, {
+        reviewer_id: state.reviewer, actor_ids: [state.reviewer], activity_id: sessionActivityId(),
+        result: result, note: work.verifyNote, corrected_annotation: body
+    });
+    if (!outcome.ok) {
+        const hint = document.getElementById('pt-actions-hint');
+        if (hint) hint.textContent = outcome.message;
+        announce(outcome.message);
+        return Promise.resolve(false);
+    }
+    if (!Array.isArray(verificationRecords[state.reviewer])) verificationRecords[state.reviewer] = [];
+    verificationRecords[state.reviewer].push(
+        verificationEntry(p.id, subject, judged, outcome.event, outcome.reviewer_id, outcome.annotation));
+    agentTrack.records[p.id] = working;
+    delete drafts[p.id];
+    const written = save();
+    corpusQuery = '';
+    gotoNextOpen();
+    return written;
+}
+
+function approveAgentRecord(p) {
+    const subject = paperSubject(p);
+    if (!canEdit() || subject.kind !== 'agent' || runActor !== 'human' || !state.reviewer) return Promise.resolve(false);
+    if (storageReason()) { announce(storageReason()); return Promise.resolve(false); }
+    const record = subject.record;
+    if (agentRecordState(record) !== 'verified') return Promise.resolve(false);
+    const judged = verificationView(record).active_annotation_id || null;
+    const working = JSON.parse(JSON.stringify(record));
+    const outcome = advanceVerification(working, 'publication-approved', {
+        reviewer_id: state.reviewer, actor_ids: [state.reviewer], activity_id: sessionActivityId(), result: 'approved'
+    });
+    if (!outcome.ok) { announce(outcome.message); return Promise.resolve(false); }
+    if (!Array.isArray(verificationRecords[state.reviewer])) verificationRecords[state.reviewer] = [];
+    verificationRecords[state.reviewer].push(verificationEntry(p.id, subject, judged, outcome.event, outcome.reviewer_id, null));
+    agentTrack.records[p.id] = working;
+    const written = save();
     renderScreening();
+    return written;
 }
 
+// "Nächstes offen" follows the visible list: the next paper after the current one
+// that is not yet captured, wrapping around once. With nothing open it stays.
 function gotoNextOpen() {
     focusReadingOnRender = true;
-    let d = curDec();
+    const rows = visibleRows();
     if (acceptanceMode) {
-        const cases = papers.map(function(p, index) { return d[p.id] ? index : -1; }).filter(function(index) { return index >= 0; });
+        const cases = rows.map(function(row) { return row.index; });
         const current = cases.indexOf(state.index);
         if (cases.length) state.index = cases[(current + 1 + cases.length) % cases.length];
         renderScreening();
         return;
     }
-    // Visit every undecided paper, including textless ones (unlike firstEntryIndex, which
-    // only avoids opening *on* boilerplate): a paper without usable text must still be
-    // reachable so the reviewer can exclude it as No full text. Skipping it here would
-    // leave it permanently unscreened.
-    for (let i = 0; i < papers.length; i++) {
-        const j = (state.index + 1 + i) % papers.length;
-        if (!d[papers[j].id] || !recordRequirements(d[papers[j].id]).ok) { state.index = j; renderScreening(); return; }
+    const at = rows.findIndex(function(row) { return row.index === state.index; });
+    for (let k = 1; k <= rows.length; k++) {
+        const row = rows[(at + k + rows.length) % rows.length];
+        if (row && row.index !== state.index && !isCaptured(row.paper)) {
+            state.index = row.index;
+            renderScreening();
+            return;
+        }
     }
-    if (state.index < papers.length - 1) state.index++;
     renderScreening();
+    announce('Keine offenen Dokumente in dieser Auswahl.');
 }
 
 // ---- pin menu (category picker for a selected passage / search hit) ----
-// The pin menu is a modal dialog: it takes focus on open, traps Tab inside, closes
-// on Escape, and restores focus to the trigger on close (browser-agent a11y finding).
-function openPinMenu(term, snippet) {
+// The pin menu is a dialog near the passage: it takes focus on open, traps Tab inside,
+// closes on Escape and on a click outside, and restores focus to the trigger on close.
+function placePinMenu(menu, anchor) {
+    const rect = anchor && typeof anchor.getBoundingClientRect === 'function' ? anchor.getBoundingClientRect() : null;
+    menu.style.left = ''; menu.style.top = ''; menu.style.transform = '';
+    if (!rect || (!rect.width && !rect.height)) return;
+    const width = menu.offsetWidth, height = menu.offsetHeight;
+    const left = Math.max(8, Math.min(rect.left, window.innerWidth - width - 8));
+    // below the passage when it fits, above it otherwise, never covering it
+    const below = rect.bottom + 8;
+    const top = below + height <= window.innerHeight - 8 ? below : Math.max(8, rect.top - height - 8);
+    menu.style.left = left + 'px';
+    menu.style.top = top + 'px';
+    menu.style.transform = 'none';
+}
+
+function openPinMenu(term, snippet, anchor) {
     if (!canEdit()) return;
     pinTerm = term; pinSnippet = snippet;
     pinOrigin = state.readMode === 'ai' ? 'ai' : 'human'; // bind the Beleg to the layer the snippet was taken from
@@ -3055,20 +3937,18 @@ function openPinMenu(term, snippet) {
     menu.setAttribute('aria-modal', 'true');
     menu.setAttribute('aria-label', 'Beleg an eine Kategorie anheften');
     menu.setAttribute('tabindex', '-1');
-    let h = '<div class="pt-pinmenu-head"><span class="pt-tag-mono">Als Beleg anheften an</span>' +
-        '<button class="pt-pinmenu-x" id="pt-pinmenu-x" aria-label="Schließen">&times;</button></div>';
-    if (pinOrigin === 'ai') h += '<div class="pt-pinmenu-ai">Dieser Beleg stammt aus dem LLM-Wissensdestillat und wird als automatisch erzeugte Referenz markiert. Er erfüllt das Paper-Beleg-Gate nicht.</div>';
+    let h = '<div class="pt-pinmenu-head"><span class="pt-sub-head">Anheften an</span>' +
+        '<button type="button" class="pt-pinmenu-x" id="pt-pinmenu-x" aria-label="Schließen">&times;</button></div>';
+    if (pinOrigin === 'ai') h += '<p class="pt-pinmenu-ai">Aus dem LLM-Wissensdestillat. Zählt nicht als Paper-Beleg.</p>';
     h += '<div class="pt-pinmenu-snip">' + EC.escapeHtml((snippet || term).slice(0, 160)) + '</div>';
-    h += '<div class="pt-pinmenu-cats">';
-    ALL_CATS.forEach(function(c) {
-        h += '<button class="pt-pinmenu-cat" data-cat="' + c + '"><span class="pt-evid-dot" aria-hidden="true" style="background:' +
-            ((EC.CAT_COLORS && EC.CAT_COLORS[c]) || 'var(--pt-human)') + '"></span>' + EC.escapeHtml(CAT_LABELS[c]) + '</button>';
-    });
+    h += '<div class="category-chips pt-pinmenu-cats">';
+    ALL_CATS.forEach(function(c) { h += categoryChipHtml(c, 0, { compact: true, filter: true }); });
     h += '</div>';
     menu.innerHTML = h;
     menu.hidden = false;
+    placePinMenu(menu, anchor);
     menu.querySelector('#pt-pinmenu-x').addEventListener('click', closePinMenu);
-    menu.querySelectorAll('.pt-pinmenu-cat').forEach(function(btn) {
+    menu.querySelectorAll('.category-chip').forEach(function(btn) {
         btn.addEventListener('click', function() { pinEvidence(btn.dataset.cat, pinTerm, pinSnippet, pinOrigin); closePinMenu(); });
     });
     pinKeyHandler = function(e) {
@@ -3081,141 +3961,28 @@ function openPinMenu(term, snippet) {
         else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
     };
     menu.addEventListener('keydown', pinKeyHandler);
-    const firstCat = menu.querySelector('.pt-pinmenu-cat');
+    pinOutsideHandler = function(e) { if (!menu.contains(e.target)) closePinMenu(); };
+    // registered after the opening event has finished, so the selecting mouseup does not close it
+    setTimeout(function() { if (pinOutsideHandler) document.addEventListener('pointerdown', pinOutsideHandler); }, 0);
+    const firstCat = menu.querySelector('.category-chip');
     if (firstCat && typeof firstCat.focus === 'function') firstCat.focus();
     else if (typeof menu.focus === 'function') menu.focus();
 }
 
 function closePinMenu() {
     let menu = document.getElementById('pt-pinmenu');
+    if (pinOutsideHandler) { document.removeEventListener('pointerdown', pinOutsideHandler); pinOutsideHandler = null; }
     if (menu) {
         if (pinKeyHandler) { menu.removeEventListener('keydown', pinKeyHandler); pinKeyHandler = null; }
         menu.hidden = true; menu.innerHTML = '';
         ['role', 'aria-modal', 'aria-label', 'tabindex'].forEach(function(a) { menu.removeAttribute(a); });
     }
-    if (pinReturnFocus && typeof pinReturnFocus.focus === 'function') pinReturnFocus.focus();
+    if (pinReturnFocus && typeof pinReturnFocus.focus === 'function' && document.contains(pinReturnFocus)) pinReturnFocus.focus();
     pinReturnFocus = null;
 }
 
-// Report panel (flow + checklist + disclosure), rendered on demand, not in the toolbar
-
-function renderReportSurface(targetEl) {
-    let el = targetEl || surfaceEl(); if (!el) return;
-    let html = '<p class="pt-muted pt-panel-lead">Aus dem Screening erzeugt: Fluss, Checkliste und Disclosure für den Methodenteil.</p>';
-    html += '<section class="pt-rsec"><h3 class="pt-rsec-h">PRISMA-2020-Fluss (trAIce R1)</h3><div id="pt-sec-flow"></div></section>';
-    html += '<section class="pt-rsec"><h3 class="pt-rsec-h">PRISMA-trAIce Checkliste</h3><div id="pt-sec-check"></div></section>';
-    html += '<section class="pt-rsec"><h3 class="pt-rsec-h">AI-Disclosure</h3><div id="pt-sec-report"></div></section>';
-    el.innerHTML = html;
-    renderFlowInto(document.getElementById('pt-sec-flow'));
-    renderChecklistInto(document.getElementById('pt-sec-check'));
-    renderReportInto(document.getElementById('pt-sec-report'));
-}
-
-function renderFlowInto(el) {
-    if (!el) return;
-    const source = state.reviewer;
-    let f = computeFlow(source);
-    let html = '<div class="pt-flow">';
-    html += '<p class="pt-flow-source"><strong>Reviewerquelle:</strong> ' + EC.escapeHtml(source || 'keine ausgewählt') +
-        '. Ein Konsensdatensatz ist in PRISM derzeit nicht definiert; die Zahlen zeigen ausschließlich diese Reviewerdatei.</p>';
-    html += '<div class="pt-flow-box pt-flow-id"><div class="pt-flow-h">Identification</div>' +
-        '<div class="pt-flow-n">Records identified&nbsp; n = ' + f.total + '</div>' +
-        '<div class="pt-flow-sub">Seed-Korpus (Deep Research + manuell + Zotero)</div></div>';
-    html += '<div class="pt-flow-arrow">&darr;</div>';
-    html += '<div class="pt-flow-h pt-flow-stage">Screening</div>';
-    html += '<div class="pt-flow-split">';
-    html += '<div class="pt-flow-lane pt-lane-ai"><div class="pt-lane-h">KI-Tool (evaluativ)</div>' +
-        '<div class="pt-lane-n">gescreent ' + f.aiScreened + '</div><div class="pt-lane-r">Include ' + f.aiIncl +
-        ' &middot; Unclear ' + f.aiUnclear + ' &middot; Exclude ' + f.aiExcl + '</div><div class="pt-lane-note">advisory</div></div>';
-    html += '<div class="pt-flow-lane pt-lane-human"><div class="pt-lane-h">Reviewerdatei (' + EC.escapeHtml(reviewerLabel(source)) + ')</div>' +
-        '<div class="pt-lane-n">gescreent ' + f.humanScreened + '</div><div class="pt-lane-r">Include ' + f.humanIncl +
-        ' &middot; Unclear ' + f.humanUnclear + ' &middot; Exclude ' + f.humanExcl + '</div><div class="pt-lane-note">gewählte Quelle</div></div>';
-    html += '</div>';
-    if (Object.keys(f.humanReasons).length) {
-        html += '<div class="pt-flow-reasons"><strong>Ausschlussgründe (Mensch):</strong> ' +
-            Object.keys(f.humanReasons).map(function(r) { return r.replace(/_/g, ' ') + ' ' + f.humanReasons[r]; }).join(' &middot; ') + '</div>';
-    }
-    html += '<div class="pt-flow-arrow">&darr;</div>';
-    html += '<div class="pt-flow-box pt-flow-incl"><div class="pt-flow-h">Included</div>' +
-        '<div class="pt-flow-n">Reviewerdatei ' + f.humanIncl + '</div><div class="pt-flow-sub">frühere automatische Klassifikation ' + f.aiIncl + '</div></div>';
-    html += '</div>';
-    html += '<p class="pt-flow-caption">KI- und Mensch-Entscheidungen getrennt (PRISMA-trAIce R1).</p>';
-    el.innerHTML = html;
-}
-
-
-function renderChecklistInto(el) {
-    if (!el) return;
-    let html = '<p class="pt-check-intro">PRISMA-trAIce (Holst et al. 2025), 17 Items. Der Status wird projektspezifisch belegt; Werkzeugfunktionen erfüllen kein Item pauschal.</p>';
-    let lastSec = '';
-    TRAICE.forEach(function(it) {
-        if (it.sec !== lastSec) { html += '<div class="pt-check-sec">' + it.sec + '</div>'; lastSec = it.sec; }
-        let st = state.checklist[it.id] || {};
-        let status = st.status || 'open';
-        html += '<div class="pt-check-item"><div class="pt-check-row">' +
-            '<button class="pt-check-status pt-st-' + status + '" data-id="' + it.id + '">' + status + '</button>' +
-            '<span class="pt-check-id">' + it.id + '</span>' +
-            '<span class="pt-check-lvl pt-lvl-' + it.lvl.split(' ')[0] + '">' + it.lvl + '</span>' +
-            (it.auto ? '<span class="pt-check-auto">Werkzeugbezug</span>' : '') + '</div>' +
-            '<p class="pt-check-text">' + EC.escapeHtml(it.text) + '</p>' +
-            '<input class="pt-check-note" data-id="' + it.id + '" placeholder="Notiz" value="' + EC.escapeHtml(st.note || '') + '"></div>';
-    });
-    html += '<button class="pt-btn pt-check-export">Checkliste exportieren (.md)</button>';
-    el.innerHTML = html;
-    el.querySelectorAll('.pt-check-status').forEach(function(btn) {
-        btn.addEventListener('click', function() {
-            let id = btn.dataset.id;
-            const it = TRAICE.filter(function(t) { return t.id === id; })[0];
-            const cur = (state.checklist[id] && state.checklist[id].status) || 'open';
-            let nx = cur === 'open' ? 'satisfied' : cur === 'satisfied' ? 'na' : 'open';
-            state.checklist[id] = state.checklist[id] || {}; state.checklist[id].status = nx;
-            save(); renderChecklistInto(el);
-        });
-    });
-    el.querySelectorAll('.pt-check-note').forEach(function(inp) {
-        inp.addEventListener('change', function() {
-            let id = inp.dataset.id; state.checklist[id] = state.checklist[id] || {}; state.checklist[id].note = inp.value; save();
-        });
-    });
-    const exp = el.querySelector('.pt-check-export');
-    if (exp) exp.addEventListener('click', exportChecklist);
-}
-
-function exportChecklist() {
-    let lines = ['# PRISMA-trAIce checklist', ''];
-    TRAICE.forEach(function(it) {
-        let st = state.checklist[it.id] || {};
-        let status = st.status || 'open';
-        lines.push('- [' + (status === 'satisfied' ? 'x' : ' ') + '] ' + it.id + ' (' + it.lvl + '): ' + it.text + (st.note ? ' -- ' + st.note : ''));
-    });
-    download('prisma-traice-checklist.md', lines.join('\n'), 'text/markdown');
-}
-
+// Disclosure text for the report utilities (operator function, no editor surface).
 function disc(f) { return (state.disclosure[f] != null) ? state.disclosure[f] : (MODEL_DEFAULT[f] || ''); }
-
-function renderReportInto(el) {
-    if (!el) return;
-    if (state.disclosure.stage == null) state.disclosure.stage = 'Screening';
-    if (state.disclosure.conflicts == null) state.disclosure.conflicts = 'none';
-    const fields = [['name', 'Modell'], ['date', 'Datum'], ['prompt', 'Prompt-Version'], ['temperature', 'Temperature'],
-                  ['threshold', 'Confidence-Schwelle'], ['stage', 'Stage'], ['conflicts', 'Conflicts of Interest'], ['limitations', 'Limitationen']];
-    let html = '<div class="pt-report"><div class="pt-report-form">';
-    fields.forEach(function(f) {
-        const big = f[0] === 'limitations';
-        html += '<label class="pt-field"><span>' + f[1] + '</span>' +
-            (big ? '<textarea class="pt-rin" data-f="' + f[0] + '" rows="2">' + EC.escapeHtml(disc(f[0])) + '</textarea>'
-                 : '<input class="pt-rin" data-f="' + f[0] + '" value="' + EC.escapeHtml(disc(f[0])) + '">') + '</label>';
-    });
-    html += '</div><div class="pt-report-preview"><div class="pt-prev-head">Vorschau (Markdown)</div><pre class="pt-prev" id="pt-prev"></pre>' +
-        '<div class="pt-report-actions"><button class="pt-btn pt-copy">Kopieren</button><button class="pt-btn pt-exp-md">Export .md</button></div></div></div>';
-    el.innerHTML = html;
-    el.querySelectorAll('.pt-rin').forEach(function(inp) { inp.addEventListener('input', function() { state.disclosure[inp.dataset.f] = inp.value; save(); updatePreview(); }); });
-    el.querySelector('.pt-copy').addEventListener('click', function() { if (navigator.clipboard) navigator.clipboard.writeText(disclosureMarkdown()); });
-    el.querySelector('.pt-exp-md').addEventListener('click', function() { download('ai-use-disclosure.md', disclosureMarkdown(), 'text/markdown'); });
-    updatePreview();
-}
-
-function updatePreview() { const pre = document.getElementById('pt-prev'); if (pre) pre.textContent = disclosureMarkdown(); }
 
 function disclosureMarkdown() {
     let n = papers.filter(function(p) { return aiProposal(p); }).length;
@@ -3235,37 +4002,52 @@ function disclosureMarkdown() {
 
 // One-time editor setup: reviewer key and local repository folder.
 
+function reviewerKeyFormHtml(value) {
+    const rule = '2 bis 12 Zeichen, Buchstaben, Ziffern, _ oder -, Beginn mit Buchstabe.';
+    return '<form class="pt-reviewer-setup" id="pt-reviewer-setup" novalidate>' +
+        '<label for="pt-reviewer-key"><span class="pt-sr-only">Kürzel</span>' +
+        '<input id="pt-reviewer-key" name="reviewer" type="text" required minlength="2" maxlength="12" ' +
+        'pattern="[A-Za-z][A-Za-z0-9_-]{1,11}" autocomplete="off" spellcheck="false" title="' + rule + '" ' +
+        'aria-describedby="pt-reviewer-help pt-reviewer-error" placeholder="Kürzel" value="' + EC.escapeHtml(value || '') + '"></label>' +
+        '<button class="pt-btn pt-reviewer-set" type="submit">Festlegen</button>' +
+        '<span class="pt-sr-only" id="pt-reviewer-help">' + rule + '</span>' +
+        '<span class="pt-reviewer-error" id="pt-reviewer-error" role="status"></span></form>';
+}
+
+function statusLineHtml() {
+    // ready and saved states need no standing line; dirty and error states do
+    const show = ['dirty', 'error', 'saving', 'saved'].indexOf(saveStatus.kind) !== -1;
+    return '<p class="pt-save-status pt-save-' + saveStatus.kind + '" id="pt-save-status"' + (show ? '' : ' hidden') + '>' +
+        EC.escapeHtml(saveStatus.message) + '</p>';
+}
+
+let changingKey = false;
+
 function renderData(targetEl) {
     const el = targetEl || document.getElementById('pt-data-inline'); if (!el) return;
     if (acceptanceMode) {
+        el.hidden = false;
         el.innerHTML = '<div class="pt-acceptance-status"><strong>Abnahmeansicht</strong>' +
             '<span>Vorgeschlagene Testurteile. Diese Ansicht schreibt keine Forschungsdaten.</span></div>';
         return;
     }
     if (!canEdit()) { el.innerHTML = ''; el.hidden = true; return; }
     el.hidden = false;
-    if (!state.reviewer) {
-        const rule = '2–12 Zeichen: Buchstaben, Ziffern, _ oder -; Beginn mit Buchstabe. Wird klein geschrieben gespeichert.';
-        el.innerHTML = '<form class="pt-reviewer-setup" id="pt-reviewer-setup" novalidate>' +
-            '<label for="pt-reviewer-key"><span class="pt-sr-only">Reviewer:innen-Kürzel</span>' +
-            '<input id="pt-reviewer-key" name="reviewer" type="text" required minlength="2" maxlength="12" ' +
-            'pattern="[A-Za-z][A-Za-z0-9_-]{1,11}" autocomplete="off" spellcheck="false" title="' + rule + '" ' +
-            'aria-describedby="pt-reviewer-help pt-reviewer-error" placeholder="Dein Kürzel"></label>' +
-            '<button class="pt-btn pt-reviewer-set" type="submit">Kürzel festlegen</button>' +
-            '<span class="pt-reviewer-help pt-sr-only" id="pt-reviewer-help">' + rule + '</span>' +
-            '<span class="pt-reviewer-error" id="pt-reviewer-error" role="status" aria-live="polite"></span></form>' +
-            '<p class="pt-save-status pt-save-' + saveStatus.kind + '" id="pt-save-status" role="status" aria-live="polite">' +
-            EC.escapeHtml(saveStatus.message) + '</p>';
+    if (!state.reviewer || changingKey) {
+        el.innerHTML = reviewerKeyFormHtml(changingKey ? state.reviewer : '') + statusLineHtml();
         const form = el.querySelector('#pt-reviewer-setup');
         form.addEventListener('submit', function(e) {
             e.preventDefault();
             const input = el.querySelector('#pt-reviewer-key');
-            if (!selectReviewer(input.value)) {
+            const wanted = normalizedReviewerKey(input.value);
+            if (!wanted || reservedKey(wanted) || !selectReviewer(wanted)) {
                 input.setAttribute('aria-invalid', 'true');
-                el.querySelector('#pt-reviewer-error').textContent = 'Ungültiges Kürzel. ' + rule;
+                el.querySelector('#pt-reviewer-error').textContent = wanted && reservedKey(wanted)
+                    ? 'Dieses Kürzel ist vergeben.' : 'Ungültiges Kürzel.';
                 input.focus();
                 return;
             }
+            changingKey = false;
             renderData(el);
             renderScreening();
         });
@@ -3273,56 +4055,63 @@ function renderData(targetEl) {
     }
 
     const identity = '<span class="pt-sync-identity"><strong>' + EC.escapeHtml(state.reviewer) + '</strong>' +
-        '<code>' + EC.escapeHtml(reviewerPath(state.reviewer)) + '</code></span>';
+        '<code>' + EC.escapeHtml(reviewerPath(state.reviewer)) + '</code>' +
+        (trialMode ? '' : '<button type="button" class="pt-link-btn pt-change-key">Kürzel ändern</button>') + '</span>';
+    let h;
     if (trialMode) {
-        el.innerHTML = '<div class="pt-sync-ready pt-trial-ready">' + identity +
-            '<span class="pt-folder-status">Agentischer Testlauf · isolierter Browser-Zwischenstand</span>' +
-            '<p class="pt-save-status pt-save-' + saveStatus.kind + '" id="pt-save-status" role="status" aria-live="polite">' +
-            EC.escapeHtml(saveStatus.message) + '</p>' +
+        h = '<div class="pt-sync-ready pt-trial-ready">' + identity +
+            '<span class="pt-folder-status">Agentischer Testlauf · isolierter Browser-Zwischenstand</span>' + statusLineHtml() +
             '<button class="pt-btn pt-trial-export" type="button">Testdaten exportieren</button>' +
             '<span class="pt-trial-note">Keine Forschungsdaten werden geschrieben.</span></div>';
-        el.querySelector('.pt-trial-export').addEventListener('click', function() {
-            download(state.reviewer + '.json', reviewerFileText(state.reviewer), 'application/json');
-            setSaveStatus('saved', 'Testdaten als ' + state.reviewer + '.json exportiert.');
-        });
-        return;
+    } else if (screeningHandle) {
+        h = '<div class="pt-sync-ready">' + identity +
+            '<span class="pt-folder-status">Arbeitsordner: ' + EC.escapeHtml(selectedFolderLabel()) +
+            ' <button class="pt-change-folder pt-link-btn" type="button">Ordner ändern</button></span>' + statusLineHtml() + '</div>';
+    } else {
+        const actionLabel = storedHandleAvailable ? 'Arbeitsordner freigeben' : 'Arbeitsordner wählen';
+        h = '<div class="pt-folder-setup">' + identity +
+            (fsSupported() ? '<button class="pt-btn pt-folder-action" type="button">' + actionLabel + '</button>' :
+                '<span class="pt-sync-browser-note">Speichern braucht einen Chromium-basierten Browser.</span>') +
+            statusLineHtml() + '</div>';
     }
-    if (screeningHandle) {
-        el.innerHTML = '<div class="pt-sync-ready">' + identity +
-            '<span class="pt-folder-status">Arbeitsordner: ' + EC.escapeHtml(selectedFolderLabel()) + '</span>' +
-            '<p class="pt-save-status pt-save-' + saveStatus.kind + '" id="pt-save-status" role="status" aria-live="polite">' +
-            EC.escapeHtml(saveStatus.message) + '</p>' +
-            '<button class="pt-change-folder" type="button">Ordner ändern</button></div>';
-        el.querySelector('.pt-change-folder').addEventListener('click', connectRepo);
-        return;
-    }
-
-    const actionLabel = storedHandleAvailable ? 'Arbeitsordner freigeben' : 'Arbeitsordner wählen';
-    el.innerHTML = '<div class="pt-folder-setup">' + identity +
-        '<span class="pt-folder-status">Arbeitsordner: nicht verbunden</span>' +
-        (FS_SUPPORTED ? '<button class="pt-btn pt-folder-action" type="button">' + actionLabel + '</button>' :
-            '<span class="pt-sync-browser-note">Lokales Speichern benötigt einen Chromium-basierten Browser.</span>') +
-        '<p class="pt-save-status pt-save-' + saveStatus.kind + '" id="pt-save-status" role="status" aria-live="polite">' +
-        EC.escapeHtml(saveStatus.message) + '</p></div>';
+    const conflict = reviewerConflicts[state.reviewer];
+    if (conflict && !trialMode)
+        h += '<div class="pt-conflict" role="group" aria-label="Widerspruch auflösen"><span>Paper ' + EC.escapeHtml(conflict.pid) + ' unterscheidet sich in Datei und Browser.</span>' +
+            '<button type="button" class="pt-btn pt-btn-sm" data-keep="disk">Dateistand übernehmen</button>' +
+            '<button type="button" class="pt-btn pt-btn-sm" data-keep="local">Browserstand übernehmen</button></div>';
+    if (secondTabNotice && !trialMode) h += '<p class="pt-save-status pt-save-dirty">' + EC.escapeHtml(secondTabNotice) + '</p>';
+    el.innerHTML = h;
+    const exportBtn = el.querySelector('.pt-trial-export');
+    if (exportBtn) exportBtn.addEventListener('click', function() {
+        download(state.reviewer + '.json', reviewerFileText(state.reviewer), 'application/json');
+        setSaveStatus('saved', 'Testdaten als ' + state.reviewer + '.json exportiert.');
+    });
+    const change = el.querySelector('.pt-change-folder');
+    if (change) change.addEventListener('click', connectRepo);
     const folderAction = el.querySelector('.pt-folder-action');
     if (folderAction) folderAction.addEventListener('click', storedHandleAvailable ? reconnectRepo : connectRepo);
+    const changeKey = el.querySelector('.pt-change-key');
+    if (changeKey) changeKey.addEventListener('click', function() {
+        changingKey = true;
+        renderData(el);
+        const input = el.querySelector('#pt-reviewer-key');
+        if (input) { input.focus(); input.select(); }
+    });
+    el.querySelectorAll('[data-keep]').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            if (resolveReviewerConflict(state.reviewer, btn.dataset.keep)) { renderData(el); renderScreening(); }
+        });
+    });
 }
 
-function validateReviewerPayload(obj) {
+// The file-level contract: a known reviewer schema and a decisions object. Single
+// records are checked by recordProblem.
+function validateReviewerEnvelope(obj) {
     if (!obj || typeof obj !== 'object') return { ok: false, message: 'Datei enthält kein JSON-Objekt.' };
     if (!/^femprompt-prisma-reviewer\/0\.[12345]$/.test(obj.schema || ''))
         return { ok: false, message: 'unbekanntes oder fehlendes Reviewer-Schema.' };
     if (!obj.decisions || typeof obj.decisions !== 'object' || Array.isArray(obj.decisions))
         return { ok: false, message: 'Feld "decisions" fehlt oder ist ungültig.' };
-    const known = {};
-    papers.forEach(function(p) { known[p.id] = true; });
-    const badIds = Object.keys(obj.decisions).filter(function(id) { return papers.length && !known[id]; });
-    if (badIds.length) return { ok: false, message: 'unbekannte Paper-IDs: ' + badIds.slice(0, 5).join(', ') + (badIds.length > 5 ? ' …' : '') };
-    const badDecision = Object.keys(obj.decisions).find(function(id) {
-        const d = obj.decisions[id];
-        return !d || ['Include', 'Exclude', 'Unclear'].indexOf(d.decision) === -1;
-    });
-    if (badDecision) return { ok: false, message: 'ungültige Decision bei Paper ' + badDecision + '.' };
     // Additive verification layer (ADR-040): absent in every historical file, and
     // structurally checked where present so a damaged block cannot be silently kept.
     if (Object.prototype.hasOwnProperty.call(obj, 'verifications')) {
@@ -3334,13 +4123,19 @@ function validateReviewerPayload(obj) {
         });
         if (badVerification) return { ok: false, message: 'unvollständiger Verifikationseintrag im Feld "verifications".' };
     }
-    if (obj.schema === REVIEWER_SCHEMA) {
-        const badVersion = Object.keys(obj.decisions).find(function(id) {
-            const decision = obj.decisions[id], paper = papers.find(function(item) { return item.id === id; });
-            return !decision.work_id || !decision.version_id || !decision.version_type ||
-                (paper && (decision.work_id !== paper.work_id || decision.version_id !== paper.version_id));
-        });
-        if (badVersion) return { ok: false, message: 'Werk- oder Fassungsbindung fehlt bei Paper ' + badVersion + '.' };
+    return { ok: true };
+}
+
+// Strict form for imports and acceptance fixtures: every record must be usable.
+function validateReviewerPayload(obj) {
+    const envelope = validateReviewerEnvelope(obj);
+    if (!envelope.ok) return envelope;
+    const ids = Object.keys(obj.decisions);
+    const unknown = ids.filter(function(id) { return recordProblem(id, obj.decisions[id], obj.schema) === 'unbekannte Paper-ID'; });
+    if (unknown.length) return { ok: false, message: 'unbekannte Paper-IDs: ' + unknown.slice(0, 5).join(', ') + (unknown.length > 5 ? ' …' : '') };
+    for (let i = 0; i < ids.length; i++) {
+        const problem = recordProblem(ids[i], obj.decisions[ids[i]], obj.schema);
+        if (problem) return { ok: false, message: problem + ' bei Paper ' + ids[i] + '.' };
     }
     return { ok: true };
 }
@@ -3366,7 +4161,6 @@ function decisionLogCsv() {
     return rows.map(function(r) { return r.map(csvCell).join(','); }).join('\n');
 }
 
-function exportCsv() { download('prisma-decision-log.csv', decisionLogCsv(), 'text/csv'); }
 
 // Per-source counts of the current reviewer's records (trAIce M4, input data). A record
 // written before schema 0.3 carries no text_source and counts as 'unrecorded'.
@@ -3509,7 +4303,7 @@ const TEST_HOOK = {
     // decision logic
     deriveDecision: deriveDecision, finalDecisionOf: finalDecisionOf, divergent: divergent,
     abstractQuality: abstractQuality, evidenceCount: evidenceCount,
-    aiProposal: aiProposal, humanDecision: humanDecision, seedDecision: seedDecision,
+    aiProposal: aiProposal, humanDecision: humanDecision, expertAssessment: expertAssessment,
     // aggregation
     computeFlow: computeFlow,
     // parsing and rendering helpers
@@ -3536,24 +4330,39 @@ const TEST_HOOK = {
     getState: function() { return state; },
     getWork: function() { return work; },
     curDec: curDec, resetWork: resetWork, refreshAssess: refreshAssess,
-    pinEvidence: pinEvidence, unpinEvidence: unpinEvidence, commit: commit, editRecord: editRecord,
-    assessInnerHtml: assessInnerHtml, evidenceListHtml: evidenceListHtml, chipHtml: chipHtml, statusLabel: statusLabel,
+    pinEvidence: pinEvidence, unpinEvidence: unpinEvidence, commit: commit, saveCurrent: saveCurrent,
+    railHtml: railHtml, evidenceListHtml: evidenceListHtml, chipHtml: chipHtml, categoryChipHtml: categoryChipHtml,
+    statusLabel: statusLabel, listState: listState, isCaptured: isCaptured, paperSubject: paperSubject,
+    draftFor: draftFor, saveGate: saveGate, saveMode: saveMode, workDirty: function() { return !!work.dirty; },
+    setWork: function(w) { work = w; }, markDirty: markDirty, drafts: function() { return JSON.parse(JSON.stringify(drafts)); },
+    capturedCount: capturedCount, visibleRows: visibleRows, filtersHtml: filtersHtml, readFilterQuery: readFilterQuery,
+    syncUrl: syncUrl, gotoNextOpen: gotoNextOpen, renderScreening: renderScreening, workspaceBarHtml: workspaceBarHtml,
+    modeSwitchAvailable: modeSwitchAvailable, localEditingAvailable: localEditingAvailable,
+    setManifestReachable: function(value) { manifestReachable = !!value; },
+    setFsSupported: function(value) { fsOverride = value === undefined ? null : !!value; },
+    serializeAll: serializeAll, loadLocal: loadLocal, attachHumanContract: attachHumanContract,
+    draftAnnotationBody: draftAnnotationBody, verifyAgentRecord: verifyAgentRecord, approveAgentRecord: approveAgentRecord,
+    resolveReviewerConflict: resolveReviewerConflict, reviewerConflicts: function() { return JSON.parse(JSON.stringify(reviewerConflicts)); },
+    adoptVerifications: adoptVerifications, writeReviewerFile: writeReviewerFile, recordProblem: recordProblem,
+    quarantinedRecords: function() { return JSON.parse(JSON.stringify(quarantinedRecords)); },
+    bindFolder: bindFolder, reservedKey: reservedKey, replaceGlyphNames: replaceGlyphNames, snippetAround: snippetAround,
+    normalizeSearchText: normalizeSearchText, setServedAgentEnvelope: function(obj) { servedAgentEnvelope = obj; adoptAgentTrack(); },
+    sourceMarkHtml: sourceMarkHtml, versionMetaHtml: versionMetaHtml, EXPERT_EXCLUSION_REASON: EXPERT_EXCLUSION_REASON,
     corpusListHtml: corpusListHtml, corpusSearchResults: corpusSearchResults,
     setCorpusQuery: function(x) { corpusQuery = String(x || ''); },
     setCorpusIndex: function(x) { corpusIndex = x; }, isScreenable: isScreenable, firstEntryIndex: firstEntryIndex,
     startIndexForPaper: startIndexForPaper,
     evidenceLayer: evidenceLayer, isPaperEvidence: isPaperEvidence,
-    paperEvidenceMissing: paperEvidenceMissing, humanEvidenceMissing: humanEvidenceMissing,
+    paperEvidenceMissing: paperEvidenceMissing,
     recordRequirements: recordRequirements, workingDecisionRecord: workingDecisionRecord,
     // PRISM lifecycle verification (kept separate from ordinary screening commits)
     LIFECYCLE_STATES: LIFECYCLE_STATES, verificationView: verificationView, legacyBaseline: legacyBaseline,
     ensureVerificationContract: ensureVerificationContract, advanceVerification: advanceVerification,
-    verificationPanelHtml: verificationPanelHtml, actorIds: actorIds,
+    provenanceHtml: provenanceHtml, historyHtml: historyHtml, actorIds: actorIds,
     annotationBody: annotationBody, annotationDiff: annotationDiff,
     correctedAnnotationBody: correctedAnnotationBody, VERIFICATION_RESULTS: VERIFICATION_RESULTS,
     // verification subject, expert-file record and its load-time projection (ADR-040)
     VERIFICATION_SCHEMA: VERIFICATION_SCHEMA, isAgentTrackPayload: isAgentTrackPayload,
-    verificationSubject: verificationSubject, displayRecord: displayRecord,
     awaitsVerification: awaitsVerification, subjectRecordHash: subjectRecordHash,
     verificationEntry: verificationEntry, projectVerification: projectVerification,
     agentTrack: function() { return JSON.parse(JSON.stringify(agentTrack)); },
@@ -3582,7 +4391,6 @@ const TEST_HOOK = {
     readingPending: function() { return readingPending; },
     textSourceCounts: textSourceCounts, decisionLogCsv: decisionLogCsv,
     reconcileReviewers: reconcileReviewers, reconciliationText: reconciliationText,
-    renderReportSurface: renderReportSurface,
     // repo-root connect (ported from the paper lane's ADR-024 by operator decision)
     resolveScopes: resolveScopes, connectScope: function() { return connectScope; },
     screeningHandle: function() { return screeningHandle; },

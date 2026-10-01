@@ -81,6 +81,7 @@ const installFixtureRoutes = (ctx, delayPaperA = 0) => ctx.route('**/*', async (
   if (p.endsWith('/data/fulltext_index.json')) return route.fulfill({ contentType: 'application/json', body: fixture('fulltext_index.json') });
   if (p.endsWith('/data/review-cases/acceptance-2.json')) return route.fulfill({ contentType: 'application/json', body: fixture('acceptance-2.json') });
   if (p.endsWith('/data/pilot/PILOT-A.md')) return route.fulfill({ contentType: 'text/markdown', body: fixture('knowledge/PILOT-A.md') });
+  if (/\/data\/screening\//.test(p)) return route.fulfill({ contentType: 'application/json', body: '{}' });
   const m = p.match(/\/data\/fulltext\/([^/]+)\.md$/);
   if (m) {
     const id = decodeURIComponent(m[1]);
@@ -163,12 +164,14 @@ async function checkLayoutInvariants(targetPage, label) {
   await targetPage.setViewportSize({ width: 1440, height: 900 });
   await targetPage.waitForTimeout(150);
 }
+const LEVEL_NAMES = ['nein', 'teilweise', 'ja'];
 async function setChipLevel(cat, level) {
-  // chips cycle nein -> teilweise -> ja; the rail re-renders on each click, so re-query
+  // a toggle switches off and on (ja); teilweise comes from a Paper pin and is raised by a
+  // click. The rail re-renders on each click, so the toggle is queried again.
   for (let guard = 0; guard < 3; guard++) {
-    const cur = await page.getAttribute(`#pt-assess-col .pt-chip[data-cat="${cat}"]`, 'data-level');
-    if (parseInt(cur, 10) === level) return;
-    await page.click(`#pt-assess-col .pt-chip[data-cat="${cat}"]`);
+    const cur = await page.getAttribute(`#pt-assess-col .pt-dim .category-chip[data-cat="${cat}"]`, 'data-level');
+    if (cur === LEVEL_NAMES[level]) return;
+    await page.click(`#pt-assess-col .pt-dim .category-chip[data-cat="${cat}"]`);
   }
 }
 async function gotoPaper(id) {
@@ -179,8 +182,8 @@ async function screenPaper(paperSpec, decisionSpec) {
   const id = paperSpec.id;
   await gotoPaper(id);
   await page.waitForFunction(() => document.querySelector('#pt-doc') && !/Volltext lädt/.test(document.querySelector('#pt-doc').textContent), null, { timeout: 10000 });
-  const pill = await page.textContent('.pt-read-meta .pt-pill');
-  check(`${id}: source pill`, paperSpec.expected_text_source === 'raw' ? pill === 'Volltext' : pill === 'Metadaten-Abstract', pill);
+  const mark = await page.evaluate(() => document.querySelector('.pt-paper-metadata .pt-source-mark dd')?.textContent || null);
+  check(`${id}: source mark only where the Paper layer is not a full text`, paperSpec.expected_text_source === 'raw' ? mark === null : mark === 'Metadaten-Abstract', mark);
   if (!paperSpec.has_ai_layer) check(`${id}: layer toggle hidden without an AI layer`, await page.evaluate(() => { const t = document.getElementById('pt-layer-toggle'); return !t || getComputedStyle(t).display === 'none'; }));
   else check(`${id}: LLM distillate is unavailable before the independent save`, await page.evaluate(() => {
     const t = document.getElementById('pt-layer-toggle');
@@ -207,27 +210,30 @@ async function screenPaper(paperSpec, decisionSpec) {
       sourceMeta.href === paperSpec.expected_source_url && sourceMeta.text === 'Webseite öffnen' && /noopener/.test(sourceMeta.rel) &&
       sourceMeta.author === paperSpec.expected_author && !sourceMeta.body.includes(paperSpec.expected_source_url), sourceMeta);
   }
-  check(`${id}: round-one LLM reference is visible as a labelled proposal before own save (ADR-038)`, (await page.textContent('#pt-assess-col')).includes('LLM-Vorschlag, Runde 1'));
+  check(`${id}: the LLM reference is visible as a labelled proposal before own save, without round wording (ADR-038, ADR-042)`,
+    (await page.textContent('#pt-assess-col')).includes('LLM-Vorschlag') && !(await page.textContent('#pt-assess-col')).includes('Runde'));
   check(`${id}: binding copy removed from daily assessment`, !/bindend|verbindlich/.test(await page.textContent('#pt-assess-col')));
   if (paperSpec.search_term) {
     await page.fill('#pt-intext', paperSpec.search_term);
-    await page.waitForFunction(() => /^Treffer \d+ von \d+$/.test(document.querySelector('#pt-intext-count').textContent), null, { timeout: 5000 });
+    await page.waitForFunction(() => /^\d+ von \d+$/.test(document.querySelector('#pt-intext-count').textContent), null, { timeout: 5000 });
     const cnt = await page.textContent('#pt-intext-count');
-    check(`${id}: in-text search hits`, /^Treffer \d+ von \d+$/.test(cnt), cnt);
-    check(`${id}: active search hit has an explicit legend`, (await page.textContent('#pt-search-key')).includes('Aktueller Suchtreffer'));
+    check(`${id}: in-text search hits`, /^\d+ von \d+$/.test(cnt), cnt);
+    check(`${id}: the hit count is announced through the live region`, /Treffer \d+ von \d+/.test(await page.evaluate(() => new Promise((r) => setTimeout(() => r(document.getElementById('pt-live')?.textContent || ''), 80)))));
     await page.click('#pt-pin-hit');
-    await page.waitForSelector(`#pt-pinmenu .pt-pinmenu-cat[data-cat="${paperSpec.pin_category}"]`, { timeout: 5000 });
-    await page.click(`#pt-pinmenu .pt-pinmenu-cat[data-cat="${paperSpec.pin_category}"]`);
+    await page.waitForSelector(`#pt-pinmenu .category-chip[data-cat="${paperSpec.pin_category}"]`, { timeout: 5000 });
+    const menuBox = await page.evaluate(() => { const b = document.getElementById('pt-pinmenu').getBoundingClientRect(); const m = document.querySelector('mark.pt-hit.active').getBoundingClientRect(); return { overlaps: !(b.bottom <= m.top || b.top >= m.bottom || b.right <= m.left || b.left >= m.right) }; });
+    check(`${id}: the pin menu opens beside the hit without covering it`, !menuBox.overlaps, menuBox);
+    await page.click(`#pt-pinmenu .category-chip[data-cat="${paperSpec.pin_category}"]`);
     const evCount = await hook(page, `(() => { const w = window.__PRISMA_TEST__.getWork(); return (w.evidence[${JSON.stringify(paperSpec.pin_category)}] || []).length; })()`);
     check(`${id}: Beleg pinned on ${paperSpec.pin_category}`, evCount === 1, evCount);
-    const lvl = await page.getAttribute(`#pt-assess-col .pt-chip[data-cat="${paperSpec.pin_category}"]`, 'data-level');
-    check(`${id}: pinned category starts at teilweise`, lvl === '1', lvl);
+    const lvl = await page.getAttribute(`#pt-assess-col .pt-dim .category-chip[data-cat="${paperSpec.pin_category}"]`, 'data-level');
+    check(`${id}: pinned category starts at teilweise`, lvl === 'teilweise', lvl);
     if (id === 'PILOT-A') {
       await page.click(`#pt-assess-col .pt-evid-x[data-cat="${paperSpec.pin_category}"]`);
       check(`${id}: a pinned passage can be removed through the assessment UI`, await page.evaluate((cat) =>
         !(window.__PRISMA_TEST__.getWork().evidence[cat] || []).length, paperSpec.pin_category));
       await page.click('#pt-pin-hit');
-      await page.click(`#pt-pinmenu .pt-pinmenu-cat[data-cat="${paperSpec.pin_category}"]`);
+      await page.click(`#pt-pinmenu .category-chip[data-cat="${paperSpec.pin_category}"]`);
       check(`${id}: the same search passage can be attached again after correction`, await page.evaluate((cat) =>
         (window.__PRISMA_TEST__.getWork().evidence[cat] || []).length === 1, paperSpec.pin_category));
     }
@@ -247,10 +253,15 @@ async function screenPaper(paperSpec, decisionSpec) {
   }
   if (decisionSpec.expected_decision === 'Include') {
     check(`${id}: the single disk action stays blocked until analysis is complete`, await page.isDisabled('#pt-record'));
+    await page.click('#pt-open-analysis');
+    check(`${id}: the analysis coding opens as its own step with German labels`, await page.evaluate(() =>
+      !!document.getElementById('pt-close-analysis') && !document.querySelector('#pt-assess-col .pt-dim') &&
+      /Rolle des Promptings/.test(document.getElementById('pt-assess-col').textContent) &&
+      !/AN_Prompting_Role/.test(document.getElementById('pt-assess-col').textContent)));
     await page.click('[data-an-field="Studientyp"][data-an-value="Empirisch"]');
     await page.click('[data-an-field="AN_Prompting_Role"][data-an-value="Recommended_Practice"]');
     await page.click('[data-an-field="AN_Prompting_Role"][data-an-value="Learning_Content"]');
-    await page.check('[data-an-undec="AN_Prompt_Techniques"]');
+    await page.click('[data-an-undec="AN_Prompt_Techniques"]');
     await page.click('[data-an-field="AN_Bias_Axes"][data-an-value="None"]');
     if (paperSpec.expected_text_source === 'raw')
       await page.click('[data-an-field="AN_Harm_Types"][data-an-value="None"]');
@@ -267,9 +278,9 @@ async function screenPaper(paperSpec, decisionSpec) {
   const dock = await page.evaluate(() => {
     const x = document.querySelector('#pt-assess-col .pt-action-dock'), rail = document.getElementById('pt-assess-col');
     const a = x.getBoundingClientRect(), b = rail.getBoundingClientRect();
-    return { position: getComputedStyle(x).position, visible: a.bottom <= Math.min(b.bottom, innerHeight) + 1 && a.top >= b.top };
+    return { visible: a.bottom <= Math.min(b.bottom, innerHeight) + 1 && a.top >= b.top };
   });
-  check(`${id}: compact action dock stays visible in the assessment rail`, dock.position === 'sticky' && dock.visible, dock);
+  check(`${id}: the action dock stays visible at the foot of the assessment rail`, dock.visible, dock);
   await shot(page, `${id}-before-commit`);
   await page.click('#pt-record');
   const rec = await hook(page, `window.__PRISMA_TEST__.curDec()[${JSON.stringify(id)}] || null`);
@@ -293,12 +304,11 @@ async function screenPaper(paperSpec, decisionSpec) {
     check(`${id}: complete Include updates the corpus status and advances`, await page.evaluate((paperId) => {
       const T = window.__PRISMA_TEST__, papers = window.EC.getAllPapers();
       const paperIndex = papers.findIndex((paper) => paper.id === paperId);
-      return T.getState().index !== paperIndex && !!document.querySelector(`#pt-corpus-list .pt-nav-item[data-i="${paperIndex}"] .pt-dot-include`);
+      return T.getState().index !== paperIndex && !!document.querySelector(`#pt-corpus-list .pt-nav-item[data-i="${paperIndex}"] .pt-mark-erfasst`);
     }, id));
   }
   await gotoPaper(id);
-  const locked = await page.$('#pt-assess-col .pt-pill-lg');
-  check(`${id}: locked view after commit`, !!locked);
+  check(`${id}: the saved assessment names its provenance`, /^Deine Bewertung, gespeichert/.test(await page.textContent('#pt-provenance')));
   if (paperSpec.has_ai_layer) {
     const layerState = await page.evaluate(() => {
       const t = document.getElementById('pt-layer-toggle');
@@ -321,9 +331,8 @@ async function screenPaper(paperSpec, decisionSpec) {
       window.__PRISMA_TEST__.getState().readMode === 'full' && document.querySelector('.pt-layer-btn[data-mode="full"]')?.getAttribute('aria-pressed') === 'true'));
   }
   const references = await page.$('#pt-assess-col #pt-references');
-  check(`${id}: saved record keeps the round-one references visible without a collapsed comparison (ADR-038)`,
-    !!references && !(await page.$('#pt-assess-col .pt-reference-comparison')) && (await references.textContent()).includes('LLM-Vorschlag, Runde 1'));
-  check(`${id}: saved record offers no proposal takeover`, !(await page.$('#pt-assess-col #pt-adopt-proposal')));
+  check(`${id}: saved record keeps the LLM reference visible (ADR-038)`,
+    !!references && (await references.textContent()).includes('LLM-Vorschlag'));
   await shot(page, `${id}-committed`);
 }
 
@@ -337,7 +346,7 @@ try {
     const T = window.__PRISMA_TEST__;
     const shortSource = T.sourcePillHtml({ id: 'SHORT', abstract: 'Founded in 1920, the NBER is a private, non-profit, non-partisan organization.' });
     T.setEditMode(true);
-    const unboundRail = T.assessInnerHtml({ id: 'UNBOUND', title: 'Unbound source', identity_basis: 'pending' }, null);
+    const unboundRail = T.railHtml({ id: 'UNBOUND', title: 'Unbound source', identity_basis: 'pending' });
     T.setEditMode(false);
     return {
       shortSource,
@@ -349,11 +358,11 @@ try {
   check('source readiness: fragments are absent and unbound records cannot open category controls',
     /kein Papertext/.test(readinessBoundary.shortSource) &&
       /noch nicht an ein Werk/.test(readinessBoundary.unboundRail) &&
-      !/pt-chip/.test(readinessBoundary.unboundRail) &&
+      !/category-chip/.test(readinessBoundary.unboundRail) &&
       readinessBoundary.bound && !readinessBoundary.missingVersion,
     readinessBoundary);
   check('cold load: reading is available without reviewer setup or annotation controls', await page.evaluate(() =>
-    !window.__PRISMA_TEST__.canEdit() && !document.querySelector('#pt-reviewer-key, .pt-folder-action, #pt-record, #pt-pin-hit, .pt-chip') &&
+    !window.__PRISMA_TEST__.canEdit() && !document.querySelector('#pt-reviewer-key, .pt-folder-action, #pt-record, #pt-pin-hit, .pt-dim .category-chip:not([disabled])') &&
       document.querySelector('#pt-edit-mode')?.getAttribute('aria-pressed') === 'false' && !!document.querySelector('#pt-doc')));
   await page.waitForFunction(() => !window.__PRISMA_TEST__.readingPending());
   await page.fill('#pt-intext', 'social work');
@@ -376,8 +385,9 @@ try {
   await setReviewerKey(page, opt.reviewer);
   check('reviewer key: trimmed safe key persists and fixes the exact target path', await page.evaluate((key) =>
     window.__PRISMA_TEST__.getState().reviewer === key && document.querySelector('.pt-sync-identity code')?.textContent === `docs/data/screening/${key}.json`, opt.reviewer));
-  check('save gate: the disk action stays disabled until the working folder is connected', await page.evaluate(() =>
-    document.getElementById('pt-record')?.disabled && /Arbeitsordner verbinden/.test(document.getElementById('pt-actions-hint')?.textContent || '')));
+  check('save gate: the disk action stays disabled until the working folder is connected and says why', await page.evaluate(() =>
+    document.getElementById('pt-record')?.disabled && /Arbeitsordner verbinden/.test(document.getElementById('pt-save-hint')?.textContent || '') &&
+      /Arbeitsordner verbinden/.test(document.getElementById('pt-record').getAttribute('aria-label'))));
   check('folder setup: exactly one folder action is offered before connection', (await page.$$('.pt-folder-action')).length === 1);
   await connectFixtureStorage(page, opt.reviewer);
   check('daily storage: compact status replaces setup, with only the secondary folder-change affordance', await page.evaluate(() =>
@@ -402,7 +412,7 @@ try {
   check('save action: exactly one accessible disk button sits beside the paper position and none is in the rail', await page.evaluate(() => {
     const all = document.querySelectorAll('#pt-record'); const button = all[0];
     return all.length === 1 && button.closest('.pt-ws-bar') && !document.querySelector('#pt-assess-col #pt-record') &&
-      button.getAttribute('aria-label') === 'Entscheidung speichern' && button.title === 'Entscheidung speichern' && !!button.querySelector('svg');
+      /speichern/i.test(button.getAttribute('aria-label')) && button.title === button.getAttribute('aria-label') && !!button.querySelector('svg');
   }));
   const readingLayout = await page.evaluate(() => {
     const read = document.querySelector('.pt-read'), surface = document.querySelector('.pt-reading-surface');
@@ -458,56 +468,58 @@ try {
     id: document.querySelector('#pt-corpus-list .pt-nav-id')?.textContent,
     match: document.querySelector('#pt-corpus-list .pt-hit-badge')?.textContent
   }));
-  check('corpus search: exact title first with full identity and named match kind',
-    searchRow.title === 'Pilot paper A: generative models in social work education' && /2026/.test(searchRow.meta) && searchRow.id === 'ID PILOT-A' && searchRow.match === 'Exakter Titel', searchRow);
+  check('corpus search: exact title first with author, year and named match kind, without internal identifiers',
+    searchRow.title === 'Pilot paper A: generative models in social work education' && /2026/.test(searchRow.meta) && !searchRow.id && searchRow.match === 'Exakter Titel', searchRow);
   await page.fill('#pt-corpus-q', 'PILOT-B');
   await page.waitForTimeout(350);
   const idSearchRow = await page.evaluate(() => ({
     id: document.querySelector('#pt-corpus-list .pt-nav-id')?.textContent,
     match: document.querySelector('#pt-corpus-list .pt-hit-badge')?.textContent
   }));
-  check('corpus search: Paper-ID match shows the matched value even when a DOI exists',
-    idSearchRow.id === 'ID PILOT-B' && idSearchRow.match === 'Paper-ID', idSearchRow);
+  check('corpus search: a Paper-ID match is named without showing the identifier',
+    !idSearchRow.id && idSearchRow.match === 'Paper-ID', idSearchRow);
   await page.click('#pt-corpus-list .pt-nav-item');
-  await page.waitForFunction(() => Array.from(document.querySelectorAll('.pt-paper-metadata dt'))
-    .find((term) => term.textContent === 'Paper-ID')?.nextElementSibling?.textContent === 'PILOT-B');
+  await page.waitForFunction(() => window.EC.getAllPapers()[window.__PRISMA_TEST__.getState().index].id === 'PILOT-B');
+  check('URL state: list navigation updates the paper parameter', new URL(page.url()).searchParams.get('paper') === 'PILOT-B', page.url());
   check('corpus navigation: identity matches do not become meaningless in-text searches',
     (await page.inputValue('#pt-intext')) === '');
   await page.fill('#pt-corpus-q', '');
   await page.waitForFunction(() => document.querySelectorAll('#pt-corpus-list .pt-nav-item').length === 3, null, { timeout: 5000 });
   await gotoPaper('PILOT-A');
-  const info = page.locator('#pt-assess-col .pt-chip-info').first();
-  await info.focus(); await page.keyboard.press('Enter');
-  const tipBox = await page.evaluate(() => {
-    const tip = document.querySelector('#pt-assess-col .pt-chip-tip:not([hidden])');
-    const rail = document.getElementById('pt-assess-col').getBoundingClientRect();
-    const b = tip && tip.getBoundingClientRect();
-    return b && { visible: b.width <= 280 && b.left >= rail.left && b.right <= rail.right && b.top >= 0 && b.bottom <= innerHeight };
+  const toggle = page.locator('#pt-assess-col .pt-dim .category-chip[data-cat="Prompting"]');
+  check('category toggle: the definition is the accessible description, no separate info button', await page.evaluate(() => {
+    const chip = document.querySelector('#pt-assess-col .pt-dim .category-chip[data-cat="Prompting"]');
+    return chip && chip.title.length > 20 && !document.querySelector('#pt-assess-col .pt-info-btn');
+  }));
+  await toggle.focus();
+  await page.keyboard.press('Space');
+  const keyboardToggle = await page.evaluate(() => {
+    const chip = document.querySelector('#pt-assess-col .pt-dim .category-chip[data-cat="Prompting"]');
+    return { pressed: chip.getAttribute('aria-pressed'), focused: document.activeElement === chip,
+      outline: getComputedStyle(chip).outlineStyle, check: getComputedStyle(chip, '::before').content };
   });
-  check('category info: keyboard-opened popover stays inside rail and viewport', tipBox?.visible, tipBox);
-  await page.keyboard.press('Escape');
-  check('category info: Escape closes and restores trigger focus', await page.evaluate(() => !document.querySelector('#pt-assess-col .pt-chip-tip:not([hidden])') && document.activeElement?.classList.contains('pt-chip-info')));
-  const evidInfo = page.locator('#pt-assess-col [data-info-target="pt-evid-help"]');
-  await evidInfo.click();
-  check('evidence help: static instruction replaced by an accessible click popover', await page.evaluate(() => {
-    const t = document.getElementById('pt-evid-help'); return t && !t.hidden && /Paper-Beleg/.test(t.textContent);
-  }));
-  await page.keyboard.press('Escape');
-  check('decision logic: permanent dock shows only the result, not the full derivation rule', await page.evaluate(() => {
-    const logic = document.getElementById('pt-logic');
-    return !logic.querySelector('.pt-logic-term') && !/≥1 Gegenstand/.test(Array.from(logic.childNodes)
-      .filter((n) => !(n.nodeType === Node.ELEMENT_NODE && n.hidden)).map((n) => n.textContent).join(' '));
-  }));
-  await page.click('.pt-logic-info');
-  check('decision logic: accessible info popover contains the derivation rule', await page.evaluate(() => {
-    const tip = document.getElementById('pt-logic-help');
-    return !tip.hidden && /Gegenstand und Perspektive/.test(tip.textContent);
-  }));
-  await page.keyboard.press('Escape');
+  check('category toggle: the keyboard switches it, focus stays on it and is visible, the state carries a check mark',
+    keyboardToggle.pressed === 'true' && keyboardToggle.focused && keyboardToggle.outline !== 'none' && /✓/.test(keyboardToggle.check), keyboardToggle);
+  await page.keyboard.press('Enter');
+  check('category toggle: a second key press switches it off', await page.evaluate(() =>
+    document.querySelector('#pt-assess-col .pt-dim .category-chip[data-cat="Prompting"]').getAttribute('aria-pressed') === 'false'));
+  const contrast = await page.evaluate(() => {
+    const toRgb = (color) => { const cv = document.createElement('canvas'); cv.width = cv.height = 1; const ctx = cv.getContext('2d'); ctx.fillStyle = '#000'; ctx.fillStyle = color; ctx.fillRect(0, 0, 1, 1); return Array.from(ctx.getImageData(0, 0, 1, 1).data).slice(0, 3); };
+    const lum = (color) => { const c = toRgb(color).map((v) => { v /= 255; return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; }); return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2]; };
+    const host = document.createElement('div'); host.className = 'category-chips'; document.body.appendChild(host);
+    const T = window.__PRISMA_TEST__;
+    host.innerHTML = T.ALL_CATS.map((c) => T.categoryChipHtml(c, 2)).join('');
+    const out = Array.from(host.children).map((chip) => {
+      const s = getComputedStyle(chip); const a = lum(s.backgroundColor), b = lum(s.color);
+      return { cat: chip.dataset.cat, ratio: Math.round(((Math.max(a, b) + 0.05) / (Math.min(a, b) + 0.05)) * 100) / 100 };
+    });
+    host.remove();
+    return out;
+  });
+  check('category toggle: every filled colour keeps at least 4.5:1 with its text', contrast.every((c) => c.ratio >= 4.5), contrast);
+  check('decision: the panel head shows the decision', /^(Include|Exclude|Unclear)$/.test(await page.textContent('#pt-decision')));
   // the first paint may precede the full-text manifest; the pill must correct itself without navigation
-  let pillOk = true;
-  try { await page.waitForFunction(() => (document.querySelector('.pt-read-meta .pt-source-pill') || {}).textContent === 'Volltext', null, { timeout: 3000 }); } catch (_) { pillOk = false; }
-  check('cold load: source pill corrects to Volltext once the manifest resolves', pillOk, await page.textContent('.pt-read-meta .pt-pill'));
+  check('cold load: a full text carries no source mark', await page.evaluate(() => !document.querySelector('.pt-paper-metadata .pt-source-mark')));
   await shot(page, '01-cold-load');
 
   // 2, 3 screen both papers
@@ -518,7 +530,7 @@ try {
     return text ? JSON.parse(text) : null;
   }, opt.reviewer);
   check('file write: the connected reviewer file contains every completed paper under the selected key',
-    diskWrite?.schema === 'femprompt-prisma-reviewer/0.4' && diskWrite.reviewer === opt.reviewer &&
+    diskWrite?.schema === 'femprompt-prisma-reviewer/0.5' && diskWrite.reviewer === opt.reviewer &&
       manifest.papers.every((paperSpec) => !!diskWrite.decisions[paperSpec.id]),
     diskWrite && { reviewer: diskWrite.reviewer, papers: Object.keys(diskWrite.decisions) });
   const exportPath = join(outDir, `${opt.reviewer}.json`);
@@ -536,111 +548,28 @@ try {
   check('reload: saved reviewer profile still opens read-only without folder or revise controls', await page.evaluate(() =>
     !window.__PRISMA_TEST__.canEdit() && !document.querySelector('#pt-reviewer-key, .pt-folder-action, .pt-change-folder, #pt-revise, #pt-record')));
   await gotoPaper(manifest.papers[0].id);
-  check('reload: locked view for paper A', !!(await page.$('#pt-assess-col .pt-pill-lg')));
-  await page.waitForSelector('#pt-corpus-list .pt-nav-item.active .pt-dot-include');
-  check('reload: completed Include remains complete in the corpus navigator after analysis vocabulary loads',
-    !!(await page.$('#pt-corpus-list .pt-nav-item.active .pt-dot-include')));
+  check('reload: the saved assessment of paper A is shown read-only with its provenance',
+    /^Deine Bewertung/.test(await page.textContent('#pt-provenance')) && !!(await page.$('#pt-assess-col .pt-dim .category-chip[disabled]')));
+  await page.waitForSelector('#pt-corpus-list .pt-nav-item.active .pt-mark-erfasst');
+  check('reload: the captured paper keeps its mark in the corpus list', !!(await page.$('#pt-corpus-list .pt-nav-item.active .pt-mark-erfasst')));
   await enterEditing(page);
-  await page.click('#pt-revise');
   await page.waitForFunction(() => !window.__PRISMA_TEST__.readingPending());
-  check('revise: asynchronous reading refresh keeps the committed record editable',
-    !(await page.$('#pt-revise')) && !!(await page.$('#pt-assess-col .pt-chip:not([disabled])')));
+  check('edit: the own saved record opens editable in Bearbeiten, with nothing to save until it changes',
+    !!(await page.$('#pt-assess-col .pt-dim .category-chip:not([disabled])')) && await page.isDisabled('#pt-record'));
   await page.reload();
   await page.waitForFunction(() => window.__PRISMA_TEST__ && !window.__PRISMA_TEST__.readingPending());
   await gotoPaper(manifest.papers[0].id);
   await shot(page, '04-after-reload');
 
-  // Verification is a separate surface over a locked record. It may advance only
-  // through the governed verification and publication transitions and must never appear in normal screening.
-  await connectFixtureStorage(page, opt.reviewer);
+  // ADR-042: Bearbeiten is the only authoring mode. The former verification entry opens it,
+  // and an own record is never advanced through the lifecycle.
   await page.goto(base + '/prisma.html?verify=1&paper=PILOT-A');
   await waitInit();
-  check('verification mode: legacy capture is blocked until governed AI-agent review', await page.evaluate(() => {
-    const panel = document.querySelector('.pt-verification');
-    return !!panel && panel.textContent.includes('curated') && panel.textContent.includes('legacy_gap') &&
-      panel.textContent.includes('keinen gouvernierten AI-Agent-Review-Status') &&
-      !document.querySelector('#pt-verification-action');
-  }));
-  await page.evaluate(() => {
-    const T = window.__PRISMA_TEST__;
-    const r = T.curDec()['PILOT-A'];
-    r.provenance = {
-      annotation_id: 'pilot:PILOT-A', annotation_type: 'screening_decision',
-      actors: [
-        { id: 'curator-1', type: 'person', roles: ['curation'] },
-        { id: 'agent-1', type: 'ai_agent', roles: ['screening'] },
-        { id: 'ai-agent-reviewer-1', type: 'ai_agent', roles: ['ai_agent_reviewer'] }
-      ],
-      activities: [
-        { id: 'screen-1', type: 'agent_screening', run_id: 'pilot-run', method: 'agent_screening', prompt: { status: 'recorded', reference: 'prompt.md' }, model: { status: 'recorded', reference: 'model-id' }, associated_actor_ids: ['agent-1'] },
-        { id: 'ai-review-1', type: 'ai_agent_review', run_id: 'pilot-run', method: 'source_grounded_ai_agent_review', prompt: { status: 'recorded', reference: 'prompt.md' }, model: { status: 'recorded', reference: 'model-id' }, associated_actor_ids: ['ai-agent-reviewer-1'] }
-      ],
-      used_sources: [{ id: 'PILOT-A', type: 'paper', reference: 'fixtures/PILOT-A.md' }],
-      derived_from: [{ id: 'track-1', type: 'agent_track', reference: 'tracks/agent-1.json' }]
-    };
-    r.lifecycle = {
-      baseline: { state: 'curated', basis: 'controlled_intake', at: '2026-08-23T09:00:00.000Z', actor_ids: ['curator-1'] },
-      state: 'ai-agent-reviewed',
-      events: [
-        { event_id: 'screen-event-1', event_type: 'agent_annotation', from: 'curated', to: 'agent-annotated', result: 'completed', at: '2026-08-23T10:00:00.000Z', activity_id: 'screen-1', actor_ids: ['agent-1'] },
-        { event_id: 'ai-review-event-1', event_type: 'ai_agent_review', from: 'agent-annotated', to: 'ai-agent-reviewed', result: 'accepted', at: '2026-08-23T11:00:00.000Z', activity_id: 'ai-review-1', actor_ids: ['ai-agent-reviewer-1'] }
-      ]
-    };
-    T.showSurface('screening');
-  });
-  check('verification mode: a governed AI-agent-reviewed record exposes expert verification',
-    !!(await page.$('#pt-verification-action')) && (await page.textContent('.pt-lifecycle-ai-agent-reviewed')) === 'ai-agent-reviewed');
-  await page.fill('#pt-verification-action [name="reviewer_id"]', 'expert-1');
-  await page.fill('#pt-verification-action [name="actor_ids"]', 'expert-1');
-  await page.fill('#pt-verification-action [name="activity_id"]', 'expert-review-request-1');
-  await page.selectOption('#pt-verification-action [name="result"]', 'changes_requested');
-  await page.fill('#pt-verification-action [name="note"]', 'Die fachliche Einordnung muss präzisiert werden.');
-  await page.click('#pt-verification-action button[type="submit"]');
-  await page.waitForFunction(() => window.__PRISMA_TEST__.curDec()['PILOT-A']?.lifecycle?.events?.length === 3);
-  check('verification mode: changes requested are recorded without advancing authority', await page.evaluate(() => {
-    const r = window.__PRISMA_TEST__.curDec()['PILOT-A'];
-    const e = r.lifecycle?.events?.[2];
-    return r.lifecycle?.state === 'ai-agent-reviewed' && e?.event_type === 'domain_expert_verification' &&
-      e?.from === 'ai-agent-reviewed' && e?.to === 'ai-agent-reviewed' && e?.result === 'changes_requested' &&
-      !!document.querySelector('#pt-verification-action');
-  }));
-  await page.fill('#pt-verification-action [name="reviewer_id"]', 'expert-1');
-  await page.fill('#pt-verification-action [name="actor_ids"]', 'expert-1 observer-1');
-  await page.fill('#pt-verification-action [name="activity_id"]', 'expert-review-1');
-  await page.selectOption('#pt-verification-action [name="result"]', 'corrected_and_accepted');
-  await page.evaluate(() => {
-    const textarea = document.querySelector('#pt-verification-action [name="corrected_annotation"]');
-    const body = JSON.parse(textarea.value);
-    body.analysis.fields.AN_Notes = 'Von der Domänenexpertin fachlich präzisiert.';
-    textarea.value = JSON.stringify(body, null, 2);
-  });
-  await page.fill('#pt-verification-action [name="note"]', 'Belege geprüft und fachliche Einordnung präzisiert.');
-  await page.click('#pt-verification-action button[type="submit"]');
-  await page.waitForFunction(() => window.__PRISMA_TEST__.curDec()['PILOT-A']?.lifecycle?.state === 'verified');
-  check('verification mode: expert correction preserves the source annotation and advances to verified', await page.evaluate(() => {
-    const r = window.__PRISMA_TEST__.curDec()['PILOT-A'];
-    const e = r.lifecycle?.events?.[3];
-    const a = r.provenance?.activities?.find((item) => item.id === 'expert-review-1');
-    const correction = r.annotations?.[1];
-    return e?.event_type === 'domain_expert_verification' && e?.from === 'ai-agent-reviewed' && e?.to === 'verified' && e?.result === 'corrected_and_accepted' && e?.activity_id === 'expert-review-1' &&
-      Array.isArray(e.actor_ids) && e.actor_ids.join(',') === 'expert-1,observer-1' &&
-      a?.method === 'prism_domain_expert_verification' && a?.model?.status === 'not_applicable' &&
-      r.annotations?.length === 2 && correction?.annotation_type === 'domain_expert_correction' &&
-      correction?.supersedes === r.annotations[0].annotation_id && r.active_annotation_id === correction.annotation_id &&
-      correction?.changes?.some((change) => change.path === '/analysis/fields/AN_Notes') &&
-      document.body.textContent.includes('Öffentliche Freigabe bestätigen');
-  }));
-  await page.fill('#pt-verification-action [name="reviewer_id"]', 'publisher-1');
-  await page.fill('#pt-verification-action [name="actor_ids"]', 'publisher-1');
-  await page.fill('#pt-verification-action [name="activity_id"]', 'release-1');
-  await page.fill('#pt-verification-action [name="note"]', 'Für die öffentliche Projektion freigegeben.');
-  await page.click('#pt-verification-action button[type="submit"]');
-  await page.waitForFunction(() => window.__PRISMA_TEST__.curDec()['PILOT-A']?.lifecycle?.state === 'publication-approved');
-  check('verification mode: publication approval is visually distinct and retains both events', await page.evaluate(() => {
-    const r = window.__PRISMA_TEST__.curDec()['PILOT-A'];
-    return r.lifecycle?.events?.length === 5 && !!document.querySelector('.pt-publication-approved') &&
-      document.querySelector('.pt-lifecycle-publication-approved')?.textContent === 'publication-approved';
-  }));
+  check('mode: a former ?verify=1 link opens Bearbeiten with the two-state switch', await page.evaluate(() =>
+    window.__PRISMA_TEST__.canEdit() && document.querySelectorAll('.pt-mode-seg button').length === 2 &&
+      document.querySelector('#pt-edit-mode').getAttribute('aria-pressed') === 'true' && !/Verifizieren/.test(document.body.textContent)));
+  check('mode: an own record shows no lifecycle controls and no typed identifier fields', await page.evaluate(() =>
+    !document.querySelector('#pt-verify-result, #pt-approve, [name="reviewer_id"], [name="actor_ids"], [name="activity_id"], textarea[name="corrected_annotation"]')));
   // 5b The productive agent track is the subject of verification (ADR-040): the expert
   // sees it without choosing a track, and the event lands in the expert's own file while
   // the agent file stays untouched.
@@ -694,7 +623,7 @@ try {
   // PILOT-B has no full-text fixture and reads as abstract, so its 404 is the expected
   // path, not a defect; only script errors are collected here.
   expertPage.on('console', (m) => { if (m.type() === 'error' && !/Failed to load resource/.test(m.text())) expertErrors.push(m.text()); });
-  await expertPage.goto(base + '/prisma.html?verify=1&paper=PILOT-B');
+  await expertPage.goto(base + '/prisma.html?paper=PILOT-B');
   await expertPage.waitForFunction(() => window.__PRISMA_TEST__ && document.querySelector('#pt-doc'), null, { timeout: 15000 });
   await expertPage.evaluate(async (file) => {
     const T = window.__PRISMA_TEST__;
@@ -706,51 +635,59 @@ try {
         async write(value) { body = String(value); }, async close() { writes[name] = body; }
       }; } }; }
     });
+    await T.setEditMode(true);
     T.selectReviewer('ev');
     await T.loadAllReviewers();
     T.showSurface('screening');
     window.__PILOT_WRITES = writes;
   }, agentFileText);
-  await expertPage.waitForFunction(() => !!document.querySelector('#pt-verification-action'), null, { timeout: 10000 });
+  await expertPage.waitForFunction(() => !!document.querySelector('#pt-verify-result') && !window.__PRISMA_TEST__.readingPending(), null, { timeout: 10000 });
   const subjectView = await expertPage.evaluate(() => {
-    const panel = document.querySelector('.pt-verification');
+    const rail = document.getElementById('pt-assess-col');
+    const details = rail.querySelector('.pt-provenance-details');
     return {
-      railTitle: document.querySelector('#pt-assess-col .pt-rail-title')?.textContent,
-      railActor: document.querySelector('#pt-assess-col .pt-rail-actor')?.textContent,
-      summaryLabel: document.querySelector('#pt-assess-col .pt-record-summary .pt-tag-mono')?.textContent,
-      formHeading: document.querySelector('#pt-verification-action h4')?.textContent,
-      submitLabel: document.querySelector('#pt-verification-action button[type="submit"]')?.textContent,
-      revise: !!document.querySelector('#pt-revise'),
+      provenance: document.getElementById('pt-provenance')?.textContent,
+      typedIds: !!rail.querySelector('[name="reviewer_id"], [name="actor_ids"], [name="activity_id"], textarea[name="corrected_annotation"]'),
+      result: rail.querySelector('#pt-verify-result')?.value,
+      editable: !!rail.querySelector('.pt-dim .category-chip:not([disabled])'),
+      listMark: !!document.querySelector('#pt-corpus-list .pt-nav-item.active .pt-mark-agent'),
       track: window.__PRISMA_TEST__.agentTrack().reviewer,
       selectedReviewer: window.__PRISMA_TEST__.getState().reviewer,
-      panelText: panel ? panel.textContent : '',
-      sourcesText: panel ? Array.from(panel.querySelectorAll('.pt-verify-refs li')).map((li) => li.textContent).join(' | ') : '',
-      promptText: Array.from(panel ? panel.querySelectorAll('.pt-verification-activity dd') : []).map((dd) => dd.textContent).join(' | ')
+      provenanceOpen: details ? details.open : null,
+      provenanceText: details ? details.textContent : '',
+      history: rail.querySelector('.pt-history')?.textContent || ''
     };
   });
-  check('verification: the productive agent record is the subject without choosing a track',
+  check('agent record: the productive agent record is the subject without choosing a track',
     subjectView.track === 'ar2' && subjectView.selectedReviewer === 'ev', subjectView);
-  check('verification: the subject record is headed as the agent coding, not as the expert\'s own assessment',
-    subjectView.railTitle === 'Agentenkodierung' && subjectView.railActor === 'ar2' &&
-      subjectView.summaryLabel === 'Agentenentscheidung' && !subjectView.revise, subjectView);
-  check('verification: the expert controls are labelled as verification',
-    subjectView.formHeading === 'Fachliche Verifikation' && subjectView.submitLabel === 'Fachliches Ergebnis protokollieren', subjectView);
-  check('verification: provenance renders as readable text rather than [object Object]',
-    !subjectView.panelText.includes('[object Object]') &&
-      subjectView.sourcesText.includes('paper: docs/data/fulltext/PILOT-B.md') &&
-      subjectView.promptText.includes('prompts/prism-agent-reviewer-v1.1.md · v1.1'), subjectView);
-  await checkLayoutInvariants(expertPage, 'verification');
-  await expertPage.screenshot({ path: join(outDir, '05b-verification-subject.png') });
-  trace.screenshots.push('05b-verification-subject.png');
-  await expertPage.fill('#pt-verification-action [name="reviewer_id"]', 'ev');
-  await expertPage.fill('#pt-verification-action [name="actor_ids"]', 'ev');
-  await expertPage.fill('#pt-verification-action [name="activity_id"]', 'expert-verification-pilot-1');
-  await expertPage.selectOption('#pt-verification-action [name="result"]', 'accepted');
-  await expertPage.fill('#pt-verification-action [name="note"]', 'Belege am Paper geprüft, Kodierung bestätigt.');
-  await expertPage.click('#pt-verification-action button[type="submit"]');
+  check('agent record: the panel names the agent coding and its review state in one line, editable in the same panel',
+    /^Agentenkodierung ar2 · KI-geprüft/.test(subjectView.provenance) && subjectView.editable && subjectView.listMark, subjectView);
+  check('agent record: no typed identifier fields, the outcome defaults to confirmation',
+    !subjectView.typedIds && subjectView.result === 'accept', subjectView);
+  check('agent record: provenance is collapsed and renders as readable text',
+    subjectView.provenanceOpen === false && !subjectView.provenanceText.includes('[object Object]') &&
+      subjectView.provenanceText.includes('paper: docs/data/fulltext/PILOT-B.md') &&
+      subjectView.provenanceText.includes('prompts/prism-agent-reviewer-v1.1.md · v1.1') &&
+      /KI-geprüft/.test(subjectView.history), subjectView);
+  await checkLayoutInvariants(expertPage, 'agent record');
+  await expertPage.screenshot({ path: join(outDir, '05b-agent-record.png') });
+  trace.screenshots.push('05b-agent-record.png');
+  await expertPage.selectOption('#pt-verify-result', 'changes_requested');
+  check('agent record: requesting changes keeps the save blocked until a note is given',
+    await expertPage.isDisabled('#pt-record') && /Notiz/.test(await expertPage.textContent('#pt-actions-hint')));
+  await expertPage.fill('#pt-verify-note', 'Ausschlussgrund am Abstract prüfen.');
+  await expertPage.click('#pt-record');
+  await expertPage.waitForFunction(() => window.__PRISMA_TEST__.verifications('ev').length === 1);
+  await expertPage.evaluate(() => { const T = window.__PRISMA_TEST__; T.getState().index = window.EC.getAllPapers().findIndex((p) => p.id === 'PILOT-B'); T.showSurface('screening'); });
+  await expertPage.waitForFunction(() => !!document.querySelector('#pt-verify-result') && !window.__PRISMA_TEST__.readingPending());
+  check('agent record: after a change request the record stays open for review and counts as captured', await expertPage.evaluate(() =>
+    window.__PRISMA_TEST__.agentTrack().records['PILOT-B'].lifecycle.state === 'ai-agent-reviewed' &&
+      !!document.querySelector('#pt-corpus-list .pt-nav-item.active .pt-mark-erfasst')));
+  await expertPage.click('#pt-record');
   const written = await expertPage.evaluate(async (original) => {
     const deadline = Date.now() + 3000;
-    while (!window.__PILOT_WRITES['ev.json'] && Date.now() < deadline) await new Promise((r) => setTimeout(r, 10));
+    while (window.__PRISMA_TEST__.verifications('ev').length < 2 && Date.now() < deadline) await new Promise((r) => setTimeout(r, 10));
+    while (!(window.__PILOT_WRITES['ev.json'] && JSON.parse(window.__PILOT_WRITES['ev.json']).verifications.length === 2) && Date.now() < deadline) await new Promise((r) => setTimeout(r, 10));
     const T = window.__PRISMA_TEST__;
     return {
       names: Object.keys(window.__PILOT_WRITES),
@@ -759,11 +696,13 @@ try {
       projectedState: T.agentTrack().records['PILOT-B'].lifecycle.state
     };
   }, agentFileText);
-  const entry = written.expert && written.expert.verifications && written.expert.verifications[0];
-  check('verification: the event is written into the verifying expert file under the verification schema',
+  const entry = written.expert && written.expert.verifications && written.expert.verifications[1];
+  check('verification: an unchanged save is an acceptance written into the reviewer file under the verification schema',
     written.expert?.reviewer === 'ev' && written.expert?.verification_schema === 'femprompt-prisma-verification/0.1' &&
-      written.expert?.verifications?.length === 1 && entry?.paper_id === 'PILOT-B' && entry?.result === 'accepted' &&
-      entry?.reviewer_id === 'ev' && entry?.event?.event_type === 'domain_expert_verification' &&
+      written.expert?.verifications?.length === 2 && written.expert.verifications[0].result === 'changes_requested' &&
+      entry?.paper_id === 'PILOT-B' && entry?.result === 'accepted' &&
+      entry?.reviewer_id === 'ev' && entry?.actor_ids?.join(',') === 'ev' && /^prism-session-/.test(entry?.activity_id || '') &&
+      entry?.event?.event_type === 'domain_expert_verification' &&
       entry?.event?.from === 'ai-agent-reviewed' && entry?.event?.to === 'verified' &&
       entry?.subject?.reviewer === 'ar2' && entry?.subject?.annotation_id === 'ar2:PILOT-B' &&
       entry?.subject?.hash_status === 'deterministic_check_receipt', { names: written.names, entry });
@@ -786,30 +725,31 @@ try {
         async write(value) { body = String(value); }, async close() { writes[name] = body; }
       }; } }; }
     });
+    T.setEditMode(true);
     T.selectReviewer('ev');
     await T.loadAllReviewers();
+    T.getState().index = window.EC.getAllPapers().findIndex((p) => p.id === 'PILOT-B');
     T.showSurface('screening');
     const record = T.agentTrack().records['PILOT-B'];
     return {
       state: record.lifecycle.state,
       events: record.lifecycle.events.length,
       expertEvent: record.lifecycle.events[record.lifecycle.events.length - 1],
-      panelState: document.querySelector('.pt-lifecycle-verified')?.textContent,
-      railTitle: document.querySelector('#pt-assess-col .pt-rail-title')?.textContent,
+      provenance: document.getElementById('pt-provenance')?.textContent,
+      approve: !!document.getElementById('pt-approve'),
       writes: Object.keys(writes)
     };
   }, { agent: agentFileText, expert: expertFileText });
-  check('verification: a reload projects the expert file onto the untouched agent track',
-    projected.state === 'verified' && projected.events === 3 && projected.panelState === 'verified' &&
-      projected.expertEvent?.activity_id === 'expert-verification-pilot-1' &&
-      projected.railTitle === 'Agentenkodierung' && !projected.writes.length, projected);
+  check('verification: a reload projects the reviewer file onto the untouched agent track',
+    projected.state === 'verified' && projected.events === 4 && /fachlich verifiziert/.test(projected.provenance || '') &&
+      /^prism-session-/.test(projected.expertEvent?.activity_id || '') && projected.approve && !projected.writes.length, projected);
   check('verification: no script errors in the expert session', expertErrors.length === 0, expertErrors);
   await expertContext.close();
 
   await page.goto(base + '/prisma.html?paper=PILOT-A');
   await waitInit();
-  check('normal screening: lifecycle controls remain absent after a verified record reloads',
-    !(await page.$('.pt-verification, #pt-verification-action')));
+  check('read mode: no lifecycle or verification controls in reading',
+    !(await page.$('#pt-verify-result, #pt-approve, #pt-record')));
   const readProtection = await page.evaluate(async () => {
     const T = window.__PRISMA_TEST__;
     const before = JSON.stringify(T.getState().reviewers);
@@ -1100,13 +1040,13 @@ try {
     const T = window.__PRISMA_TEST__;
     const writes = {};
     const payload = {
-      schema: 'femprompt-prisma-reviewer/0.5', reviewer: 'a04', actor: 'agent', status: 'ai-agent-reviewed',
+      schema: 'femprompt-prisma-reviewer/0.5', reviewer: 'a04', actor: 'human', status: 'curated',
       ratification: { status: 'ratified', activity_id: 'ratify-1' }, run_manifest: 'runs/a04.json',
       updated: '2026-08-23T10:00:00.000Z', decisions: {
         'PILOT-A': {
-          decision: 'Exclude', categories: {}, evidence: {}, lifecycle: {
-            baseline: { state: 'agent-annotated', basis: 'agent_capture', at: '2026-08-22T10:00:00.000Z', actor_ids: ['agent-1'] },
-            state: 'ai-agent-reviewed', events: []
+          decision: 'Exclude', reason: 'Duplicate', categories: {}, evidence: {}, lifecycle: {
+            baseline: { state: 'curated', basis: 'legacy_import', at: '2026-08-22T10:00:00.000Z', actor_ids: ['a04'] },
+            state: 'curated', events: []
           }
         }
       }
@@ -1125,10 +1065,10 @@ try {
     while (!writes['a04.json'] && Date.now() < deadline) await new Promise((resolve) => setTimeout(resolve, 10));
     return writes['a04.json'] ? JSON.parse(writes['a04.json']) : null;
   });
-  check('0.5 envelope: a loaded agent file preserves schema, status, ratification, metadata, and lifecycle on write',
-    envelope05?.schema === 'femprompt-prisma-reviewer/0.5' && envelope05?.actor === 'agent' &&
-      envelope05?.status === 'ai-agent-reviewed' && envelope05?.ratification?.activity_id === 'ratify-1' &&
-      envelope05?.run_manifest === 'runs/a04.json' && envelope05?.decisions?.['PILOT-A']?.lifecycle?.baseline?.state === 'agent-annotated',
+  check('0.5 envelope: a loaded governed file preserves schema, status, ratification, metadata, and lifecycle on write',
+    envelope05?.schema === 'femprompt-prisma-reviewer/0.5' && envelope05?.actor === 'human' &&
+      envelope05?.status === 'curated' && envelope05?.ratification?.activity_id === 'ratify-1' &&
+      envelope05?.run_manifest === 'runs/a04.json' && envelope05?.decisions?.['PILOT-A']?.lifecycle?.baseline?.basis === 'legacy_import',
     envelope05);
   await page.evaluate((reviewer) => window.__PRISMA_TEST__.selectReviewer(reviewer), opt.reviewer);
 
@@ -1160,6 +1100,37 @@ try {
     malformed);
 
   check('no page errors during the session', consoleErrors.length === 0, consoleErrors);
+
+  // Editing exists only in a local project copy: without the local full-text manifest the
+  // page is read-only and offers no switch, no key field, no save and no status filter.
+  const publicContext = await browser.newContext({ viewport: { width: 1440, height: 900 } });
+  await installFixtureRoutes(publicContext);
+  await publicContext.route('**/data/fulltext_manifest.json', (route) => route.fulfill({ status: 404, body: '' }));
+  const publicPage = await publicContext.newPage();
+  await publicPage.goto(base + '/prisma.html?verify=1&paper=PILOT-B');
+  await publicPage.waitForFunction(() => window.__PRISMA_TEST__ && document.querySelector('#pt-doc'), null, { timeout: 15000 });
+  check('published copy: without the local manifest PRISM is read-only without a mode switch', await publicPage.evaluate(() =>
+    !window.__PRISMA_TEST__.canEdit() && !document.querySelector('.pt-mode-seg, #pt-reviewer-key, #pt-record, .pt-status-seg') &&
+      !!document.querySelector('.pt-cat-filter')));
+  await publicContext.close();
+  check('local copy: with the manifest and File System Access the switch is offered', await page.evaluate(() =>
+    window.__PRISMA_TEST__.localEditingAvailable() && document.querySelectorAll('.pt-mode-seg button').length === 2));
+
+  // List filters live in the URL and survive a reload; the counter ignores them.
+  const filterPage = await context.newPage();
+  await filterPage.goto(base + '/prisma.html?status=erfasst&cats=Gender');
+  await filterPage.waitForFunction(() => window.__PRISMA_TEST__ && document.querySelector('#pt-doc'), null, { timeout: 15000 });
+  const filtered = await filterPage.evaluate(() => ({
+    status: document.querySelector('.pt-status-seg [aria-pressed="true"]')?.dataset.status,
+    chip: document.querySelector('.pt-cat-filter .category-chip[data-cat="Gender"]')?.getAttribute('aria-pressed'),
+    rows: document.querySelectorAll('#pt-corpus-list .pt-nav-item').length,
+    url: location.search
+  }));
+  check('URL state: status and category filters are restored from the URL', filtered.status === 'erfasst' && filtered.chip === 'true' &&
+    /status=erfasst/.test(filtered.url) && /cats=Gender/.test(filtered.url), filtered);
+  await filterPage.click('.pt-cat-filter .category-chip[data-cat="Gender"]');
+  check('URL state: removing a filter updates the URL', !/cats=/.test(new URL(filterPage.url()).search), filterPage.url());
+  await filterPage.close();
 
   // 9 the pending-reading gate and the out-of-order load, each in a fresh profile so the
   // full-text cache is empty and the delayed route is really in flight
@@ -1201,9 +1172,9 @@ try {
     pending: window.__PRISMA_TEST__.readingPending(),
     derived: window.__PRISMA_TEST__.finalDecisionOf(window.__PRISMA_TEST__.getWork().cats, false),
     disabled: document.getElementById('pt-record').disabled,
-    hint: (document.getElementById('pt-actions-hint') || {}).textContent
+    hint: (document.getElementById('pt-save-hint') || {}).textContent
   }));
-  check('gate: an Include-deriving state cannot be committed while the text is loading', gated.pending && gated.derived === 'Include' && gated.disabled && /geladen/.test(gated.hint || ''), gated);
+  check('gate: an Include-deriving state cannot be committed while the text is loading', gated.pending && gated.derived === 'Include' && gated.disabled && /lädt/.test(gated.hint || ''), gated);
   await a.pg.waitForFunction(() => !window.__PRISMA_TEST__.readingPending(), null, { timeout: 8000 });
   const released = await a.pg.evaluate(() => ({
     disabled: document.getElementById('pt-record').disabled,

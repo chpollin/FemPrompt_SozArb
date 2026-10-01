@@ -9,6 +9,7 @@ import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { createPrismaWindow } from './prisma-window.mjs';
+import { runIntegrityChecks } from './prism-integrity.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const root = join(here, '..');
@@ -60,6 +61,15 @@ for (const [name, ok] of readinessChecks) {
   r.total++;
   if (ok) r.pass++;
   else { r.fail++; r.results.push({ name, ok: false, err: 'readiness contract failed' }); }
+}
+// Load, merge and write paths over an in-memory folder (tests/prism-integrity.mjs).
+let integrity = [];
+try { integrity = await runIntegrityChecks(root); }
+catch (e) { integrity = [{ name: 'integrity checks ran', ok: false, detail: String(e && e.stack || e) }]; }
+for (const c of integrity) {
+  r.total++;
+  if (c.ok) r.pass++;
+  else { r.fail++; r.results.push({ name: c.name, ok: false, err: JSON.stringify(c.detail) }); }
 }
 for (const c of r.results) if (!c.ok) console.log('FAIL  ' + c.name + '  >>  ' + c.err);
 console.log('\n' + (r.fail ? 'FAIL' : 'PASS') + ' ' + r.pass + '/' + r.total);
