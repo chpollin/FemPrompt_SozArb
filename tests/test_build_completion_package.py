@@ -338,6 +338,54 @@ def test_sub_question_grouping_follows_the_current_numbering():
     assert labels["AN_Mitigation_Stage x AN_Mitigation_Status"] == "SQ3, SQ4"
 
 
+def test_stale_source_review_keeps_coding_out_like_the_result_site():
+    stale = coded("A", AN_Bias_Axes=["Gender"])
+    stale["stale_source_review"] = True
+    rows, _ = completion._work_rows(registry(), [], {"A": [stale]}, {})
+    assert rows[0]["stale_source_review_record_ids"] == ["A"]
+    assert not rows[0]["analysis_eligible"]
+    assert completion._field_state(rows[0], "AN_Bias_Axes", ["Gender"]) == (
+        "stale_source_review"
+    )
+    assert all(row["work_count"] == 0 for row in completion._analysis(rows, schema()))
+    # A current alias of the same Work still carries the coding, as on the site.
+    rows, _ = completion._work_rows(
+        registry(), [], {"A": [stale], "B": [coded("B", AN_Bias_Axes=["Gender"])]}, {}
+    )
+    assert rows[0]["analysis_eligible"]
+    assert rows[0]["analysis_fields"]["AN_Bias_Axes"] == ["Gender"]
+
+
+def test_agent_records_use_the_landscape_stale_rule(tmp_path, monkeypatch):
+    from src.publish import generate_literature_landscape as landscape
+
+    calls = []
+    monkeypatch.setattr(
+        landscape,
+        "stale_source_review",
+        lambda paper_id, paper, receipt: calls.append(paper_id) or True,
+    )
+    path = tmp_path / "docs/data/screening/ar2.json"
+    path.parent.mkdir(parents=True)
+    record = {"decision": "Include", "lifecycle": {"state": "ai-agent-reviewed"}}
+    path.write_text(
+        json.dumps({"schema": "femprompt-prisma-reviewer/0.5", "decisions": {"A": record}}),
+        encoding="utf-8",
+    )
+    artifact = "docs/data/screening/ar2.json#/decisions/A"
+    accepted = {
+        "artifact": artifact,
+        "sha256": record_hash(record),
+        "result": "accepted",
+        "agent_id": "/test/reviewer",
+        "model": "test-model",
+        "reviewed_at": "2026-09-05T12:51:00Z",
+        "findings": "Fixture review.",
+    }
+    agents, _ = completion._agent_records(tmp_path, set(), {artifact: accepted})
+    assert calls == ["A"] and agents["A"][0]["stale_source_review"] is True
+
+
 def test_unresolved_negative_source_review_stays_open_and_out_of_analysis():
     record = agent("A", ["ICL"])
     record["current_ai_review_result"] = "changes_requested"

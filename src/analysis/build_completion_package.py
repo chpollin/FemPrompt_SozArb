@@ -87,6 +87,7 @@ FIELD_STATES = (
     "conflict_decision",
     "hold",
     "open_negative_review",
+    "stale_source_review",
     "invalid_code",
     "missing",
 )
@@ -311,8 +312,14 @@ def _agent_records(
     inputs: set[str],
     reviews: dict | None = None,
     latest_reviews: dict | None = None,
+    registry: dict | None = None,
 ) -> tuple[dict[str, list[dict]], list[dict]]:
+    # The landscape owns the stale-review rule; importing it here keeps one rule.
+    from src.analysis.work_versions import source_binding_for_record
+    from src.publish.generate_literature_landscape import stale_source_review
+
     reviews = reviews if reviews is not None else {}
+    registry = registry or {}
     # Retain negative-only ValidatedReviews and accept the older split-input API.
     # Choose each artifact's newest receipt before resolving its whole family.
     outcomes = {}
@@ -359,6 +366,17 @@ def _agent_records(
                 None,
             )
             body = annotation.get("body", {}) if annotation else record
+            paper = {
+                **registry.get("record_index", {}).get(record_id, {}),
+                "source_binding": source_binding_for_record(registry, record_id)
+                if registry
+                else None,
+            }
+            stale = bool(
+                receipt
+                and receipt.get("result") == "accepted"
+                and stale_source_review(record_id, paper, receipt)
+            )
             lifecycle = record.get("lifecycle", {})
             provenance = record.get("provenance", {})
             records[record_id].append(
@@ -382,6 +400,7 @@ def _agent_records(
                         outcomes.get(artifact)
                     ),
                     "applied_ai_correction": correction,
+                    "stale_source_review": stale,
                     "undecidable": body.get("analysis", {}).get("undecidable", {}),
                     "evidence_categories": sorted(body.get("evidence", {})),
                     "state": lifecycle.get("state", "unrecorded"),
@@ -626,10 +645,15 @@ def _work_rows(
             raise ValueError(
                 f"Historical resolution differs from the retained human decision: {work_id}"
             )
+        stale_reviews = sorted(
+            {row["record_id"] for row in agent_rows if row.get("stale_source_review")}
+        )
         eligible_agent_rows = [
             row
             for row in agent_rows
-            if row["decision"] == "Include" and row["state"] in STATES[3:]
+            if row["decision"] == "Include"
+            and row["state"] in STATES[3:]
+            and not row.get("stale_source_review")
         ]
         field_values, field_conflicts, field_undecidable = {}, {}, {}
         for name in sorted(
@@ -675,6 +699,8 @@ def _work_rows(
             actions.append(
                 "resolve_negative_source_review_before_using_affected_AI_coding"
             )
+        if stale_reviews:
+            actions.append("renew_source_review_for_the_current_source_binding")
         if effective == "Include" and not field_values:
             actions.append("complete_source_bound_SQ1_to_SQ4_coding")
         if work_resolution:
@@ -723,6 +749,7 @@ def _work_rows(
                     }
                 ),
                 "open_ai_source_review_record_ids": open_reviews,
+                "stale_source_review_record_ids": stale_reviews,
                 "corrected_ai_record_ids": sorted(
                     {
                         row["record_id"]
@@ -891,7 +918,11 @@ def _field_state(work: dict, name: str, allowed: list[str]) -> str:
     ):
         return "conflict_decision"
     if not work["analysis_eligible"]:
-        return "missing"
+        return (
+            "stale_source_review"
+            if work.get("stale_source_review_record_ids")
+            else "missing"
+        )
     if name in work["analysis_conflicts"]:
         return "conflict_coding"
     if name in work["analysis_undecidable"]:
@@ -1378,7 +1409,7 @@ def canonical_work_rows(
         human = list(csv.DictReader(handle))
     queue = _json(repo / "generated/agent-screening-queue.json")
     agents, issues = _agent_records(
-        repo, inputs, reviews, getattr(reviews, "latest", {})
+        repo, inputs, reviews, getattr(reviews, "latest", {}), registry
     )
     resolution = load_resolution(repo, registry, human, inputs)
     if resolution:
@@ -1655,7 +1686,7 @@ Use `sq-analysis-tables.csv` for provisional descriptive counts and `synthesis-o
 
 The analysis is a scoping-review mapping. The corpus is a curated search result and not a sample, so the tables below report counts, work IDs and the Jaccard index only, without significance tests or effect estimates.
 
-- `field-states.csv` assigns every work with a recorded Include exactly one state per analysis field, for all works and separately for the legacy-human and AI-review decision tracks. The states sum to the Include denominator. A hold or an open negative source review takes precedence over a decision conflict, which takes precedence over missing governed coding and the field-level states.
+- `field-states.csv` assigns every work with a recorded Include exactly one state per analysis field, for all works and separately for the legacy-human and AI-review decision tracks. The states sum to the Include denominator. A hold or an open negative source review takes precedence over a decision conflict, which takes precedence over a stale source review, missing governed coding and the field-level states. A stale source review accepted the coding against another source representation than the current binding, the same rule by which the result site withholds the record.
 - `sq-association-tables.csv` holds the evidence-and-gap matrices of SQ1 to SQ4, each labelled with every sub-question one of its fields serves, and the Gegenstand by Perspektive category matrix. Cells count governed coding at `ai-agent-reviewed` or higher and carry their work IDs, the works coded on both fields, the works still open and an authority breakdown derived from the contributing works. An empty cell with open works is `not_determinable`, and an empty cell after complete coding is `zero_in_complete_coding`. Neither status describes a gap in the literature.
 - `round1-category-cooccurrence.csv` describes round-one category co-occurrence for the human and the LLM track on the screened and the included records. The round-one Include requires a Gegenstand and a Perspektive category, so across-group co-occurrence among included records is selection-induced.
 - `agent-track-diagnostics.csv` reports per field the differences between the two operationally isolated agent tracks of each pooled run, the AI Agent Review outcome relative to both tracks and the later accepted AI corrections. The JSON adds run scope, blockers, lifecycle states and coding bases. Agreement between agent tracks is a workflow diagnostic and estimates neither accuracy nor inter-expert reliability.
@@ -1685,7 +1716,8 @@ This directory is an internal operator package and is not a website release inpu
 | applied_ai_correction / original_analysis | Immutable correction projection and original coding side by side; correction base artifact/hash and each field change remain auditable. |
 | ai_correction_provenance | Work-queue references to each correction, its immutable basis, hashes and correcting/reviewing agent, model and dates. |
 | open_ai_source_review_record_ids | Negative or unverifiable source reviews with no accepted correction; affected work coding is not counted in interim SQ tables. |
-| analysis_eligible | Include with AI-reviewed analysis, no within-track decision conflict, no human/AI decision divergence, no unresolved negative source review and no source-version or integrity hold. |
+| stale_source_review_record_ids | Accepted AI source reviews that target another source representation than the current binding; their coding is not counted in interim SQ tables, as on the result site. |
+| analysis_eligible | Include with AI-reviewed analysis, no within-track decision conflict, no human/AI decision divergence, no unresolved negative source review, no source-version or integrity hold, and at least one included AI-reviewed record whose review targets the current source binding. |
 | analysis_fields | Consistent coded values across Include annotations of the work; absent values remain missing. |
 | analysis_conflicts / analysis_undecidable | Conflicting or explicitly undecidable coding; excluded from that field's denominator. |
 | source_blockers / next_actions | Preparation actions for the operator, not automatic exclusion reasons. |
@@ -1703,7 +1735,7 @@ This directory is an internal operator package and is not a website release inpu
 | denominator_recorded_include_works | All works with a consistent Include decision in the selected authority track. |
 | missing_or_unresolved_included_works | Included works not represented in this field; not coded as None. |
 | authority / authority_breakdown | Derived from the works counted in the row or cell. `authority` names the weakest governed lifecycle state among them, or `no_contributing_works`. The breakdown counts coding lifecycle states, decision authority tracks and works with an accepted AI correction. |
-| analysis_field_states | Per track and field, the Include denominator and the work IDs in each of the states coded, explicit_none, undecidable, conflict_coding, conflict_decision, hold, open_negative_review, invalid_code and missing. Each work has exactly one state per field. |
+| analysis_field_states | Per track and field, the Include denominator and the work IDs in each of the states coded, explicit_none, undecidable, conflict_coding, conflict_decision, hold, open_negative_review, stale_source_review, invalid_code and missing. Each work has exactly one state per field. |
 | analysis_associations | Cross-tabulations with population, determinable and open work IDs. Cell `status` is observed, not_determinable or zero_in_complete_coding. The category matrices cover all governed screened works at level ja and at level teilweise or ja. |
 | round1_selection_check | Round-one category marginals, include-rule counts and pairwise co-occurrence with Jaccard index per track and population, counted per record as in the canonical replay. |
 | agent_track_diagnostics | Workflow diagnostics over committed agent-run packages with run scope, track differences with Cohen's kappa for decision and categories, code-level disagreements for analysis fields, AI Agent Review outcomes, accepted correction fields and blockers. Labelled `workflow_diagnostic_not_accuracy`. |
@@ -1778,6 +1810,7 @@ Controlled descriptive fields below come from `assessment/categories.yaml`. They
                 "corrected_ai_record_ids",
                 "ai_correction_provenance",
                 "open_ai_source_review_record_ids",
+                "stale_source_review_record_ids",
                 "effective_decision",
                 "analysis_eligible",
                 "analysis_conflicts",

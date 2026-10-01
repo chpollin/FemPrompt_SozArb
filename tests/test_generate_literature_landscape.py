@@ -918,6 +918,59 @@ def test_analysis_coverage_partitions_scope_and_names_withheld_reasons(
     assert (study["value"], study["not_coded"], study["withheld"]) == (2, 2, 2)
 
 
+def test_analysis_coverage_counts_category_groups_over_the_same_scope(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    from src.analysis import build_completion_package
+    from src.assess import artifact_verification
+
+    rows = [
+        _coverage_row("w1"),
+        _coverage_row("w2", integrity_hold=True, conflicts=["source_integrity_hold"]),
+        _coverage_row("w3"),
+        _coverage_row("w4", analysis_conflicts={"AN_Bias_Axes": [["Age"], ["Gender"]]}),
+    ]
+    monkeypatch.setattr(
+        build_completion_package,
+        "canonical_work_rows",
+        lambda repo, inputs, reviews: ({}, {}, None, rows, []),
+    )
+    monkeypatch.setattr(artifact_verification, "load_reviews", lambda repo: {})
+    states = {"field_states": {"Studientyp": "value"}}
+    released = [
+        {"work_id": "w1", "decision": "Include", "analysis": states,
+         "categories": [{"key": "Prompting", "level": 1}, {"key": "Gender", "level": 2}]},
+        {"work_id": "w5", "decision": "Include", "analysis": states,
+         "categories": [{"key": "Gender", "level": 2}]},
+    ]
+    groups = {"object": ["Prompting", "KI_Sonstige"], "perspective": ["Gender"]}
+
+    coverage = landscape.analysis_coverage(ROOT, released, {}, {"fields": []}, groups)
+
+    assert list(coverage["fields"]) == ["Studientyp", "object", "perspective"]
+    for group, expected in {
+        "object": {"value": 1, "none": 1, "not_coded": 2, "withheld": 1},
+        "perspective": {"value": 2, "none": 0, "not_coded": 2, "withheld": 1},
+    }.items():
+        counts = coverage["fields"][group]
+        assert {state: counts[state] for state in expected} == expected
+        assert counts["undecidable"] == counts["absent"] == 0
+        assert counts["withheld_by_reason"]["source_hold"] == 1
+        assert sum(counts[state] for state in coverage["states"]) == (
+            coverage["scope"]["work_total"]
+        )
+
+
+def test_stale_source_review_rule_compares_the_reviewed_and_current_binding() -> None:
+    current = {"source_path": "current.md", "source_sha256": "a"}
+    paper = {"source_binding": current, "work_id": "w", "version_id": "v"}
+    rule = landscape.stale_source_review
+    assert rule("P", {"source_binding": None}, None) is False
+    assert rule("P", paper, {"source_binding": dict(current)}) is False
+    assert rule("P", paper, {"source_binding": {**current, "source_sha256": "b"}}) is True
+    assert rule("P", paper, {"evidence": []}) is True
+
+
 def test_published_analysis_coverage_matches_released_records() -> None:
     data = json.loads(
         (ROOT / "docs/data/literature_landscape.json").read_text(encoding="utf-8")
@@ -931,7 +984,15 @@ def test_published_analysis_coverage_matches_released_records() -> None:
             coverage["scope"]["work_total"]
         )
         assert sum(counts["withheld_by_reason"].values()) == counts["withheld"]
+        if name in data["category_groups"]:
+            members = set(data["category_groups"][name])
+            coded = sum(
+                any(c["key"] in members for c in record["categories"]) for record in released
+            )
+            assert (counts["value"], counts["none"]) == (coded, len(released) - coded)
+            continue
         for state in ("value", "none", "undecidable", "absent"):
             assert counts[state] == sum(
                 record["analysis"]["field_states"][name] == state for record in released
             )
+    assert {"object", "perspective"} <= set(coverage["fields"])

@@ -389,9 +389,11 @@ Each released record's `analysis` carries `fields`, `field_states`, `undecidable
 }
 ```
 
+`fields` also holds the two category groups under the keys `object` and `perspective`. A released Work counts as `value` for a group when it carries at least one category of the group, which the release holds only at teilweise or ja, and as `none` otherwise. Unreleased Works take the same withholding reasons or `not_coded`, `undecidable` and `absent` stay zero, and the six states again sum to `scope.work_total`.
+
 The released states recompute from the released records, and the unreleased states derive from the completion package's canonical Work rows through `canonical_work_rows`. The object carries counts only and no content of unreleased Works. The result site and its download carry the same object. Released states are attributed AI source review, never domain-expert verification. Whether counts about unreleased Works may appear on the public result site is an open decision recorded in [[governance#Publication boundary]].
 
-The internal `generated/completion/field-states.csv` partitions the recorded Include Works alone, without the released Include Works outside that set, with a finer state set for analysis planning, described in [[methods#Descriptive mapping and process diagnostics]]. It is no release input.
+The internal `generated/completion/field-states.csv` partitions the recorded Include Works alone, without the released Include Works outside that set, with a finer state set for analysis planning, described in [[methods#Descriptive mapping and process diagnostics]]. It is no release input. One rule decides `stale_source_review` for both, the function of that name in `src/publish/generate_literature_landscape.py`. A Work whose included AI-reviewed records all carry a review of another source representation than the current binding takes that state in the completion package and contributes no coding to its SQ tables.
 
 ## Reading text source and corpus search (v4, as built)
 
