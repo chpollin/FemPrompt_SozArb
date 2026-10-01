@@ -6185,7 +6185,7 @@
         "work:fdf4e7e1-80c8-56bd-9e16-9031a45ff712"
       ],
       "population_works": 154,
-      "question": "SQ2, SQ3, SQ4",
+      "question": "SQ2, SQ3, SQ5",
       "row_field": "AN_Bias_Axes",
       "scope": "Works with a recorded Include; cells count governed (ai-agent-reviewed or higher) coding decided on both fields, explicit None included as a code."
     },
@@ -8983,7 +8983,7 @@
         "work:fdf4e7e1-80c8-56bd-9e16-9031a45ff712"
       ],
       "population_works": 154,
-      "question": "SQ1, SQ2, SQ3, SQ4",
+      "question": "SQ1, SQ2, SQ3, SQ5",
       "row_field": "AN_Population",
       "scope": "Works with a recorded Include; cells count governed (ai-agent-reviewed or higher) coding decided on both fields, explicit None included as a code."
     },
@@ -9682,7 +9682,7 @@
         "work:fdf4e7e1-80c8-56bd-9e16-9031a45ff712"
       ],
       "population_works": 154,
-      "question": "SQ3, SQ4",
+      "question": "SQ3, SQ5",
       "row_field": "AN_Mitigation_Stage",
       "scope": "Works with a recorded Include; cells count governed (ai-agent-reviewed or higher) coding decided on both fields, explicit None included as a code."
     },
@@ -11079,7 +11079,7 @@
       "serves": [
         "SQ1",
         "SQ3",
-        "SQ4"
+        "SQ5"
       ],
       "values": [
         "Recommended_Practice",
@@ -11150,7 +11150,7 @@
       "name": "AN_Mitigation_Stage",
       "serves": [
         "SQ3",
-        "SQ4"
+        "SQ5"
       ],
       "values": [
         "Pre_Processing",
@@ -17146,7 +17146,7 @@
       "denominator_recorded_include_works": 154,
       "field": "AN_Mitigation_Stage",
       "missing_or_unresolved_included_works": 135,
-      "question": "SQ4",
+      "question": "SQ5",
       "value": "Organisational_Process",
       "work_count": 17,
       "work_ids": [
@@ -17186,7 +17186,7 @@
       "denominator_recorded_include_works": 154,
       "field": "AN_Prompting_Role",
       "missing_or_unresolved_included_works": 135,
-      "question": "SQ4",
+      "question": "SQ5",
       "value": "Learning_Content",
       "work_count": 1,
       "work_ids": [
@@ -27001,11 +27001,11 @@
     "targeted_followup_search_date": "2026-09-05",
     "targeted_gap_fill_candidates": true
   },
-  "source_fingerprint": "sha256:a9ee812b3f108cc777ce15155ab3c626b6c59227be3765673c11c88635f4fc5e",
+  "source_fingerprint": "sha256:f9e98e61ee04748c32084dfddb2b5250cad7eb9d6d4edea5aed6e3c3b09ab14b",
   "sources": [
     {
       "path": "assessment/categories.yaml",
-      "sha256": "691573e7ac1079823a455c90f81a7dd797ca1c54106f64d82df0ce59d6659bd0"
+      "sha256": "0ab7b8465136b5fcfa3848e3abfc42285dc48df0fc16a243857aa58b752f7718"
     },
     {
       "path": "assessment/human_assessment.csv",
@@ -29329,7 +29329,7 @@
     },
     {
       "path": "knowledge/project.md",
-      "sha256": "5a54c6158cb696175f131832b24051eed2e80d7a8636e57e7f67aec0def5e8dd"
+      "sha256": "f8e1733221f0842cb5393ac5fb794a5f76bc3b37d55769fc5e27837dd10e06eb"
     },
     {
       "path": "research-vault/10_distillates/A+ Alliance_2024_Incubating_Feminist_AI_Executive_Summary_2021-2024.md",
@@ -29917,11 +29917,11 @@
     },
     {
       "path": "research-vault/30_assertions/debt-counselling-study-discusses-chatbot-use-prospectively-without-chatbot-data.md",
-      "sha256": "ee1b9aab2d8b60eaca9ea3b17470c7bdb9b7df92e02ac84cdb20a5712bd59e65"
+      "sha256": "5c1eec362e8e3aff91f78c6d765206a43271fd29930d1a9db7f1def6cb7bf0b0"
     },
     {
       "path": "research-vault/30_assertions/ingram-reports-expected-tensions-of-ai-assisted-recording-in-social-work.md",
-      "sha256": "905979e2813d97ec6f30a1353ae23fd7a4a4f345a331256218e82603b13e3cc4"
+      "sha256": "254ba37b76643c18770571ae91bed282b7c7bf422ab16482907621bfe62487bd"
     },
     {
       "path": "research-vault/30_assertions/kabra-et-al-transfer-reasoning-through-fine-tuning-for-bias-mitigation.md",
@@ -29953,15 +29953,15 @@
     },
     {
       "path": "research-vault/30_assertions/schroder-et-al-follow-development-of-an-ai-counselling-assistant-in-an-ngo.md",
-      "sha256": "dcc34a6f6e800c90f584eb4fb2c4ff2815f11d0665daa9389434072521097b68"
+      "sha256": "62876c70d11d5f370b819e82d530a3ad06668450b201ca4e9a60f2263dc3413f"
     },
     {
       "path": "research-vault/30_assertions/social-work-research-guidance-conditions-llm-use-on-human-validation-and-accountability.md",
-      "sha256": "a957c010b1fcb77bcffde2fd40cb6f7d1927f8c3ebcf45b1a2edafa2783ef3c0"
+      "sha256": "11b0c63f99f4cf9d8c0fd1696622a093c0a9221bdf6295087b06fddcaf7ad6fd"
     },
     {
       "path": "research-vault/30_assertions/wallengren-lynch-proposes-generated-images-as-material-for-critical-teaching.md",
-      "sha256": "1f579340e836d0289df1955d8e9ca7e888aac04899a323cda918021052910337"
+      "sha256": "30c61d80ef5dadd25e78aca7cf432f45b52ecc6d760b00ae9076d1d146e9d6f2"
     },
     {
       "path": "research-vault/40_output/paper/paper.md",
@@ -29969,7 +29969,7 @@
     },
     {
       "path": "src/analysis/build_completion_package.py",
-      "sha256": "ada3f1b57bbee99aa35fa50537cbba0fd5257233fbea8743ffb079469c4cf73f"
+      "sha256": "7596732f88c84d1a92a36aa72709da50b910bf9bb09ce0ad5f13262badfc6349"
     },
     {
       "path": "src/analysis/historical_resolution.py",
@@ -30586,7 +30586,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:9fea92e6-424e-5392-ba5c-e7341335c4a9",
@@ -30646,7 +30646,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:cb0ca879-cb67-5c4a-952a-f5d0969fe083",
@@ -30706,7 +30706,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:1bb4b1af-7508-5d41-9386-290c0f9d3d53",
@@ -30862,7 +30862,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:bf6f5024-c422-5a54-8fcf-1a948b2502cc",
@@ -31028,7 +31028,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:a4196267-e2d5-54de-a058-cbe88c637042",
@@ -31457,7 +31457,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:475ad370-82a1-5dc1-8e8b-bae300569daa",
@@ -31840,7 +31840,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:fc29fddc-76bb-5212-80b4-e6ea2697696c",
@@ -32055,7 +32055,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:20de392b-b354-5527-bcba-2f73c506c2a7",
@@ -32115,7 +32115,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:45c4ba79-e9f1-559d-9528-214f7834bbad",
@@ -32175,7 +32175,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:96febd23-a639-517d-91b9-8169623975b9",
@@ -32391,7 +32391,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:202a209b-9a67-5437-8010-848149dee938",
@@ -32451,7 +32451,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:e0132e00-9c92-5ac1-a488-4df62ba89fc0",
@@ -32521,7 +32521,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:603d1ae1-351d-5774-9749-3732b19ae57c",
@@ -32600,7 +32600,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:6f564928-31c7-562c-8ee1-017bab19c05f",
@@ -32662,7 +32662,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:b1631371-6931-59a7-a10b-6c4cd5f8a592",
@@ -32950,7 +32950,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:cdbc8e30-1194-5e81-9669-cd338627231f",
@@ -33463,7 +33463,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:37ed4ff2-3eba-593d-bba8-7afb93102265",
@@ -33948,7 +33948,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:2d26a6cc-3bf8-5307-8c3c-ef886f731030",
@@ -34457,7 +34457,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:7539a4c6-373c-575c-9062-b443f43cb3ee",
@@ -34624,7 +34624,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:6ff895ce-e9e5-5253-a9a6-12248ce31418",
@@ -34880,7 +34880,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:72bd8c02-aeea-5546-9ce4-2d4a8e1a602c",
@@ -35006,7 +35006,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:66a4d405-445e-5343-9644-59c800733f84",
@@ -35068,7 +35068,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:bb45d529-1ae6-5ee8-b23b-900caa24b437",
@@ -35186,7 +35186,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:3bfb93db-fd4b-54cf-b0c9-b8a8460a0198",
@@ -35354,7 +35354,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:3ded7397-ec94-56cf-8703-a7269908ae2e",
@@ -35462,7 +35462,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:4d915505-1aca-5f29-90d7-96e79b754292",
@@ -36210,7 +36210,7 @@
       "next_actions": [
         "retain_ai_review_tier_and_record_any_further_review_at_artifact_level",
         "renew_source_review_for_the_current_source_binding",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
@@ -36273,7 +36273,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:e2492957-f995-5e88-a188-d5353c888a95",
@@ -36333,7 +36333,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:b7d91192-4c8b-55f5-8d8b-b437184b4a1c",
@@ -36645,7 +36645,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:0b32f577-41da-5577-bf28-4ba788da6032",
@@ -36754,7 +36754,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:fb2bcf4c-e529-5b61-95ac-f89343f98edd",
@@ -36863,7 +36863,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:0ef9781d-6715-567f-9627-95cb7c340847",
@@ -37089,7 +37089,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9",
@@ -37478,7 +37478,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:d955da6b-a771-5f23-86b0-46c1a95087e3",
@@ -37597,7 +37597,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:89b9428c-6e44-5fbc-85e6-b121596a1f32",
@@ -37764,7 +37764,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:a351cf13-2fbc-530f-b085-c81667ad36d4",
@@ -38086,7 +38086,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:621621df-0e98-5d35-8853-57b671a5aa4d",
@@ -38146,7 +38146,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:561510b7-b930-59d2-92ad-b9422fd5c6fe",
@@ -38206,7 +38206,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:a8b3da9c-2847-5717-b7f6-13767b4428f1",
@@ -39102,7 +39102,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:0842bb02-839c-5e80-b2e9-a38298bb52f2",
@@ -39329,7 +39329,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:3156c17e-5cbf-5830-9a69-9c3c52dbb42d",
@@ -39389,7 +39389,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:ffdbfa4f-a3bc-505a-8a5f-4400cba2e39c",
@@ -39556,7 +39556,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:845ebb84-0c29-57eb-94b4-75f98801e7f6",
@@ -39675,7 +39675,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:095d9f8c-6a30-5f67-b67e-bf8a386c7449",
@@ -40324,7 +40324,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding",
+        "complete_source_bound_SQ1_to_SQ5_coding",
         "Keep existing canonical Work/Version IDs and rebuild the applied author/date/type/repository corrections. Resolve the true duplicate Kamruzzaman Works in an explicit identity migration with source-version and receipt audit before adding the deferred DOI. No new source review or human verification is inferred."
       ],
       "open_ai_source_review_record_ids": [],
@@ -40508,7 +40508,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:b1f3c8de-a38d-5088-a9f3-c18b41742ee8",
@@ -40797,7 +40797,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45",
@@ -40906,7 +40906,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:1788dfe7-f918-5273-9782-c0ec22cf156d",
@@ -41073,7 +41073,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
@@ -41133,7 +41133,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:d5a41d9b-1c5c-5946-b9fe-4b7f2ad79bec",
@@ -41193,7 +41193,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:c2c32fa6-26f7-55d2-8db6-ebb37aa68b12",
@@ -41745,7 +41745,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:56b93a3f-fb1b-5e99-ad40-74145084f9a9",
@@ -41808,7 +41808,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:2e650cfc-0147-5778-ab55-ed2e17a4f86b",
@@ -41869,7 +41869,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:0f436c17-fbd1-52e7-ba26-b2b9ee7f708f",
@@ -41939,7 +41939,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:f6b2dc86-3bb6-5415-b44b-17ba8801ec25",
@@ -42477,7 +42477,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:1e32bee9-ce88-5522-b3b7-80a21933e0b8",
@@ -42742,7 +42742,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:2a79670f-30f9-5f1a-b727-77c97006fd69",
@@ -42940,7 +42940,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:5a86e619-97ec-5d78-9406-796aa1e5dc65",
@@ -43678,7 +43678,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:f3ee255d-b908-5727-bc49-d56443cbd6e0",
@@ -43863,7 +43863,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:21dd0fb3-a0f1-50fd-bc2c-62e23ec1a7b6",
@@ -44093,7 +44093,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:f87509c9-2061-5906-8193-a487425fb40a",
@@ -44228,7 +44228,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:7b79b88e-3857-5a65-8cfe-94478052d8ee",
@@ -44468,7 +44468,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:8ffe17d3-3fdd-5269-a210-97597e4d2abb",
@@ -44718,7 +44718,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding",
+        "complete_source_bound_SQ1_to_SQ5_coding",
         "apply_attributed_administrative_disposition_in_completion_projection",
         "correct_registry_author_union_and_preserve_original_Zotero_metadata_provenance"
       ],
@@ -44785,7 +44785,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:e388b2e6-914d-5839-aad2-5bd47afd57d1",
@@ -44845,7 +44845,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:2490c8fb-5495-56b5-9e5d-499dd3675df4",
@@ -45012,7 +45012,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:c366bfd9-821c-599f-93e4-43e9b1f8a6e1",
@@ -45072,7 +45072,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:26c3007b-35cd-5372-8122-8cc5a433cbaa",
@@ -45180,7 +45180,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:722a5ca7-8246-54d7-b37c-c0ed71eb8b37",
@@ -45714,7 +45714,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:e84c1f71-8727-5700-b5f2-8004737385ba",
@@ -45792,7 +45792,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:31d4c15c-10dd-530b-b539-6934b297ddc5",
@@ -45950,7 +45950,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:8df6d0ac-f0b8-5427-8f89-cd8e32438327",
@@ -46106,7 +46106,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:98e7cbeb-ed0b-521e-afc3-2ba9429065f3",
@@ -46214,7 +46214,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:70aa2529-ec13-5fcc-bea0-d2d6be062d34",
@@ -46274,7 +46274,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:e0aa7ced-5f42-54d9-97c2-ae40b2e66f5b",
@@ -46456,7 +46456,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:3f383565-d0fc-5f40-a1d8-7359c6098ddb",
@@ -46519,7 +46519,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:4e6f0bea-5a84-5f88-b601-ec6e405d016b",
@@ -46804,7 +46804,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:7da5a4cf-ea10-5b9b-82c9-7c9d2c77a892",
@@ -46923,7 +46923,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:ec5bdb92-683c-5da5-a2e8-97ca5fe7df16",
@@ -47110,7 +47110,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:a516b52f-e212-5007-be56-31ad82d98bb5",
@@ -47229,7 +47229,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:a84d0810-bf88-55a6-814f-48ded4241bfc",
@@ -47337,7 +47337,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:847f6c8c-f497-5934-82ba-5292e21b8da1",
@@ -47397,7 +47397,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:5d14f904-8bae-5aae-80af-d807533bd251",
@@ -47564,7 +47564,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:f8c8b74d-c60c-5e11-b380-3cc780468765",
@@ -47934,7 +47934,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:48184406-781b-57f5-8520-3a76a58bc07c",
@@ -48248,7 +48248,7 @@
       "next_actions": [
         "reconcile_recorded_divergences_without_overwriting_human_track",
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding",
+        "complete_source_bound_SQ1_to_SQ5_coding",
         "apply_work_wide_integrity_hold_now",
         "reconcile_arxiv_v1_v2_and_unverified_ResearchGate_expression_without_inventing_a_Version_of_Record",
         "retain_withdrawal_notice_in_any_historical_discussion",
@@ -48375,7 +48375,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:60875aef-c4e1-58f7-81f8-46884525ec48",
@@ -48841,7 +48841,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:20aa2ad6-fa2b-5845-8886-faacb95676dc",
@@ -48901,7 +48901,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:87f597e4-4ea2-5c84-9e8e-da91e9acad42",
@@ -49510,7 +49510,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:be42765e-8aaf-557f-9326-0e9164a9c700",
@@ -49582,7 +49582,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:ed28aa1b-14c4-53d1-b535-2339d1ae8242",
@@ -49643,7 +49643,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:e062e7e2-fc9b-5939-874a-9db16ad5f8e0",
@@ -49703,7 +49703,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:a7439409-6801-527b-a333-df523dc8c6b6",
@@ -50882,7 +50882,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:6308aeed-c452-582e-bba9-06207e8d81d3",
@@ -50942,7 +50942,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:e23ab9bd-2354-528f-8665-308cb17e0aa9",
@@ -51210,7 +51210,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:9f457384-07b7-5d2d-a7c6-56374b2be202",
@@ -51270,7 +51270,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:a95d2f59-0433-52d2-be61-b4af47026725",
@@ -51507,7 +51507,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:be0ae248-5dd8-5796-bf3e-d40f3e69195a",
@@ -51711,7 +51711,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:92aac14b-282f-578b-8db9-12318fb69906",
@@ -52066,7 +52066,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:43fa1963-a776-5a31-8fb3-ecd43382c591",
@@ -52750,7 +52750,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:f481fbcc-5a3b-57ff-8326-7e2a3a2a5045",
@@ -53310,7 +53310,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:d22a6746-c67e-55d3-ac46-234cf65063db",
@@ -53838,7 +53838,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:4f3ebab4-b906-5b61-9971-449253d020a0",
@@ -54102,7 +54102,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:7ef9a519-4f59-5fad-aef2-53051d8a5ea3",
@@ -54221,7 +54221,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:27af1d3e-0f3f-582b-ae03-641b46ab11c0",
@@ -54678,7 +54678,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:d52044e7-6f88-57ce-9cd0-c69dfd57b5db",
@@ -54748,7 +54748,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:b767d4f8-c1b9-5240-aeb6-388643a89e12",
@@ -54809,7 +54809,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:de2241b9-7888-5aa5-8395-914b2f63fe56",
@@ -54869,7 +54869,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:59099133-cc3c-5580-b870-e3f779c20b91",
@@ -54991,7 +54991,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:c9a7b396-f86c-50ed-8808-6dc5c513627b",
@@ -55100,7 +55100,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:d0f4f1e0-8c1f-5c88-88d4-14798a564fc0",
@@ -55315,7 +55315,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:4f8a9367-dea5-57d5-9f83-1edfa7c6cd8b",
@@ -55423,7 +55423,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:329d237a-e9da-558a-bb85-1fa47b8b071f",
@@ -55483,7 +55483,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:4fdec451-c22b-503f-8213-064f6d515fac",
@@ -56120,7 +56120,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:26d8700f-ecf9-5573-967f-cb8dfc1ba7a0",
@@ -56346,7 +56346,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:acae96c2-3e6c-52be-8466-f966a02dc27c",
@@ -56502,7 +56502,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:3add42bd-ee16-5a23-8f59-c5243c6bb9f6",
@@ -56749,7 +56749,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca",
@@ -56810,7 +56810,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:302fcf28-d2ac-5694-8fe8-b76c45c0e81c",
@@ -56870,7 +56870,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:5c3b176d-e69a-5eea-812f-d7f7c1422b85",
@@ -56978,7 +56978,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:fd71ec94-14f0-513e-986d-2f518dfc58bf",
@@ -57038,7 +57038,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:d05b8a44-c2b0-5a04-9cd0-73f6b59f0518",
@@ -57108,7 +57108,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:3a40ee22-5db9-569d-b8fc-8dfbed340b11",
@@ -57229,7 +57229,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:ba0758f8-c414-5206-baf4-543b76c7490b",
@@ -57419,7 +57419,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:0e874262-87ce-5928-962b-758a55a98646",
@@ -57578,7 +57578,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:8930b950-e750-5a9b-b810-8f89a206e4d1",
@@ -57638,7 +57638,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:6fab7c95-776d-5b5b-b613-38626e788d65",
@@ -58096,7 +58096,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:bc43c4bd-7369-561e-9f60-5cbde9219634",
@@ -58205,7 +58205,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:8ab3e2cf-c398-5f9a-831a-dd93a9f60015",
@@ -58334,7 +58334,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:a81b0bad-fa22-5ced-80b2-fbd0ddfd1496",
@@ -58394,7 +58394,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:17389a55-6900-5576-8575-da09fb577910",
@@ -58771,7 +58771,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:d115eadc-8716-5c8e-9255-0c7a684d2e89",
@@ -58892,7 +58892,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:f9daf5a9-fe29-586c-a65d-5daab2a65c57",
@@ -60882,7 +60882,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:89ea4e48-d9e9-5401-bb51-7a84b0550e92",
@@ -61160,7 +61160,7 @@
       "next_actions": [
         "retain_ai_review_tier_and_record_any_further_review_at_artifact_level",
         "renew_source_review_for_the_current_source_binding",
-        "complete_source_bound_SQ1_to_SQ4_coding"
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",

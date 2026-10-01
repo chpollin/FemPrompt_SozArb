@@ -39,7 +39,11 @@
         if (!EC.findingsFor) return;
         document.querySelectorAll('#view-start .start-card[data-sq]').forEach(function (card) {
             const line = card.querySelector('.start-card-status');
-            if (line) line.textContent = findingLine(EC.findingsFor(card.dataset.sq));
+            if (!line) return;
+            const findings = EC.findingsFor(card.dataset.sq);
+            // A question without coded fields says so rather than report an empty finding count.
+            const question = (EC.questions || []).find(function (item) { return item.id === card.dataset.sq; });
+            line.textContent = question && !question.fields.length && !findings.length ? 'noch nicht codiert' : findingLine(findings);
         });
     };
 })();

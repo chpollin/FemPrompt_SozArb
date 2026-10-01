@@ -50,6 +50,9 @@ ZOTERO_SYNC = "corpus/zotero_sync.json"
 # Sub-questions of knowledge/project.md and the analysis fields that map them. The
 # grouping mirrors `serves` in assessment/categories.yaml. A field may serve several
 # questions; where a question reads only some values of a field, VALUE_SCOPE names them.
+# The numbering of 1 October 2026 keeps SQ1 to SQ3, moves the earlier SQ4 Competences
+# to SQ5 and adds SQ4 Conceptual grounding, which has no coded field until the proposed
+# codebook amendment v1.4 is adopted.
 FIELDS = {
     "SQ1": ("AN_Population", "AN_Prompting_Role"),
     "SQ2": ("AN_Bias_Axes", "AN_Harm_Types", "AN_Population"),
@@ -59,18 +62,20 @@ FIELDS = {
         "AN_Mitigation_Stage",
         "AN_Mitigation_Status",
     ),
-    "SQ4": ("AN_Mitigation_Stage", "AN_Prompting_Role"),
+    "SQ4": (),
+    "SQ5": ("AN_Mitigation_Stage", "AN_Prompting_Role"),
 }
 VALUE_SCOPE = {
     ("SQ1", "AN_Prompting_Role"): ("Recommended_Practice",),
-    ("SQ4", "AN_Mitigation_Stage"): ("Organisational_Process",),
-    ("SQ4", "AN_Prompting_Role"): ("Learning_Content",),
+    ("SQ5", "AN_Mitigation_Stage"): ("Organisational_Process",),
+    ("SQ5", "AN_Prompting_Role"): ("Learning_Content",),
 }
 QUESTION_TOPICS = {
     "SQ1": "Use",
-    "SQ2": "Risks",
-    "SQ3": "Practices",
-    "SQ4": "Competences",
+    "SQ2": "Bias forms",
+    "SQ3": "Handling of bias",
+    "SQ4": "Conceptual grounding",
+    "SQ5": "Competences",
 }
 STATES = (
     "identified",
@@ -704,7 +709,7 @@ def _work_rows(
         if stale_reviews:
             actions.append("renew_source_review_for_the_current_source_binding")
         if effective == "Include" and not field_values:
-            actions.append("complete_source_bound_SQ1_to_SQ4_coding")
+            actions.append("complete_source_bound_SQ1_to_SQ5_coding")
         if work_resolution:
             actions.extend(work_resolution.get("required_next_steps", []))
         if source_hold:
@@ -1689,7 +1694,7 @@ Use `sq-analysis-tables.csv` for provisional descriptive counts and `synthesis-o
 The analysis is a scoping-review mapping. The corpus is a curated search result and not a sample, so the tables below report counts, work IDs and the Jaccard index only, without significance tests or effect estimates.
 
 - `field-states.csv` assigns every work with a recorded Include exactly one state per analysis field, for all works and separately for the legacy-human and AI-review decision tracks. The states sum to the Include denominator. A hold or an open negative source review takes precedence over a decision conflict, which takes precedence over a stale source review, missing governed coding and the field-level states. A stale source review accepted the coding against another source representation than the current binding, the same rule by which the result site withholds the record.
-- `sq-association-tables.csv` holds the evidence-and-gap matrices of SQ1 to SQ4, each labelled with every sub-question one of its fields serves, and the Gegenstand by Perspektive category matrix. Cells count governed coding at `ai-agent-reviewed` or higher and carry their work IDs, the works coded on both fields, the works still open and an authority breakdown derived from the contributing works. An empty cell with open works is `not_determinable`, and an empty cell after complete coding is `zero_in_complete_coding`. Neither status describes a gap in the literature.
+- `sq-association-tables.csv` holds the evidence-and-gap matrices of SQ1 to SQ3 and SQ5, each labelled with every sub-question one of its fields serves, and the Gegenstand by Perspektive category matrix. Cells count governed coding at `ai-agent-reviewed` or higher and carry their work IDs, the works coded on both fields, the works still open and an authority breakdown derived from the contributing works. An empty cell with open works is `not_determinable`, and an empty cell after complete coding is `zero_in_complete_coding`. Neither status describes a gap in the literature.
 - `round1-category-cooccurrence.csv` describes round-one category co-occurrence for the human and the LLM track on the screened and the included records. The round-one Include requires a Gegenstand and a Perspektive category, so across-group co-occurrence among included records is selection-induced.
 - `agent-track-diagnostics.csv` reports per field the differences between the two operationally isolated agent tracks of each pooled run, the AI Agent Review outcome relative to both tracks and the later accepted AI corrections. The JSON adds run scope, blockers, lifecycle states and coding bases. Agreement between agent tracks is a workflow diagnostic and estimates neither accuracy nor inter-expert reliability.
 
@@ -1768,6 +1773,8 @@ Controlled descriptive fields below come from `assessment/categories.yaml`. They
         tables = [
             row for row in package["analysis_tables"] if row["question"] == question
         ]
+        if not FIELDS[question]:
+            outline += "- No coded field yet. The fields for this question are proposed in codebook amendment v1.4 and are answerable from full texts only.\n"
         for name in FIELDS[question]:
             field_rows = [row for row in tables if row["field"] == name]
             first = field_rows[0]

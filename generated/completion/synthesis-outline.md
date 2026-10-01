@@ -1,6 +1,6 @@
 # Provisional source-bound synthesis outline
 
-Source fingerprint: `sha256:a9ee812b3f108cc777ce15155ab3c626b6c59227be3765673c11c88635f4fc5e`. Deterministic internal preparation; no approval is created.
+Source fingerprint: `sha256:f9e98e61ee04748c32084dfddb2b5250cad7eb9d6d4edea5aed6e3c3b09ab14b`. Deterministic internal preparation; no approval is created.
 
 This is a writing and verification plan, not a finished synthesis. The canonical manuscript remains `research-vault/40_output/paper/paper.md`. Tables count recorded coding; the statements below are existing assertion texts with their recorded authority, not new findings.
 
@@ -11,7 +11,7 @@ This is a writing and verification plan, not a finished synthesis. The canonical
 
 Before final prose, complete missing codes, reconcile conflicts, distinguish observed study findings from proposals, and assess design limitations. Do not infer that absent coding demonstrates a literature gap.
 
-## SQ2 Risks
+## SQ2 Bias forms
 
 - `AN_Bias_Axes`: 19 coded works out of 154 works with recorded Include; 135 missing or unresolved. See the CSV for codes and contributing work IDs.
 - `AN_Harm_Types`: 19 coded works out of 154 works with recorded Include; 135 missing or unresolved. See the CSV for codes and contributing work IDs.
@@ -19,7 +19,7 @@ Before final prose, complete missing codes, reconcile conflicts, distinguish obs
 
 Before final prose, complete missing codes, reconcile conflicts, distinguish observed study findings from proposals, and assess design limitations. Do not infer that absent coding demonstrates a literature gap.
 
-## SQ3 Practices
+## SQ3 Handling of bias
 
 - `AN_Prompt_Techniques`: 19 coded works out of 154 works with recorded Include; 135 missing or unresolved. See the CSV for codes and contributing work IDs.
 - `AN_Prompting_Role`: 19 coded works out of 154 works with recorded Include; 135 missing or unresolved. See the CSV for codes and contributing work IDs.
@@ -28,7 +28,13 @@ Before final prose, complete missing codes, reconcile conflicts, distinguish obs
 
 Before final prose, complete missing codes, reconcile conflicts, distinguish observed study findings from proposals, and assess design limitations. Do not infer that absent coding demonstrates a literature gap.
 
-## SQ4 Competences
+## SQ4 Conceptual grounding
+
+- No coded field yet. The fields for this question are proposed in codebook amendment v1.4 and are answerable from full texts only.
+
+Before final prose, complete missing codes, reconcile conflicts, distinguish observed study findings from proposals, and assess design limitations. Do not infer that absent coding demonstrates a literature gap.
+
+## SQ5 Competences
 
 - `AN_Mitigation_Stage` (Organisational_Process only): 19 coded works out of 154 works with recorded Include; 135 missing or unresolved. See the CSV for codes and contributing work IDs.
 - `AN_Prompting_Role` (Learning_Content only): 19 coded works out of 154 works with recorded Include; 135 missing or unresolved. See the CSV for codes and contributing work IDs.

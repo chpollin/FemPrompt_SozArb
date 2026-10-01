@@ -29,7 +29,7 @@ In function order, not alphabetical.
 
 | Document | Function | Update rhythm |
 |---|---|---|
-| [[project]] | Project goal, main question with four sub-questions and the methodological second question, audience, scope boundaries, team and theoretical framework | rarely |
+| [[project]] | Project goal, main question with five sub-questions, publication context and the methodological second question, audience, scope boundaries, team and theoretical framework | rarely |
 | [[analysis-methods]] | The methodological basis of the literature analysis, with the mapping and synthesis frame, the answer plan per research question, the analysis tiers, statistical reservations, validation of LLM-assisted analysis, appraisal tools and open disputes | per method decision |
 | [[methods]] | How the review was conducted, from identification and text preparation through both assessment rounds, lifecycle verification, the Grounded Vault, the descriptive mapping tools and replay verification | rarely |
 | [[specification]] | Requirements, user stories, the ADR decision log and the design system of PRISM, and the specification of the public Evidence Companion | per tool iteration |
@@ -44,7 +44,7 @@ In function order, not alphabetical.
 | [[project-review-2026-09-05]] | Dated review of 2026-09-05 with the findings, the implemented remedies and the uses of the completed data | closed |
 | [[update-protocol]] | The round-two pre-registration, the analysis-field design, the pilot findings, the coding procedure, the amendment record and the RIS procedure | per protocol amendment |
 | [[analysis-divergence]] | The licensed round-one divergence analysis that the methodological part of the paper cites, decomposed and read off named replay keys | per replay change |
-| [[analysis-sq-advisory]] | The advisory interpretation of the three earlier sub-questions with their placement in SQ1 to SQ4, to be replaced by governed full-corpus analysis and domain-expert verification | per coding run |
+| [[analysis-sq-advisory]] | The advisory interpretation of the three earlier sub-questions with their placement in SQ1 to SQ5, to be replaced by governed full-corpus analysis and domain-expert verification | per coding run |
 | [[research-vault]] | The Grounded-Vault layer model, its status vocabulary and the active evidence chain | per change of the evidence chain |
 | [[guides/manual-review-checklist]] | The human-in-the-loop markdown review checklist | rarely |
 

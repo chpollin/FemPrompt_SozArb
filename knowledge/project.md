@@ -8,7 +8,7 @@ method:
   url: https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin
 status: complete
 language: en
-version: "0.6"
+version: "0.7"
 created: 2026-02-21
 updated: 2026-10-01
 authors: [Christopher Pollin]
@@ -21,7 +21,7 @@ FemPrompt SozArb is a qualitative literature review on how social work professio
 
 ## Project goal
 
-The primary goal is substantive. The review establishes what the literature shows about how social work professionals can use large language models for their tasks responsibly, constructively and productively, which risks this use carries for which groups, and which practices, competences and organisational conditions support it. The operator set this priority on 1 October 2026.
+The primary goal is substantive. The review establishes what the literature shows about how social work professionals can use large language models for their tasks responsibly, constructively and productively, which bias forms this use carries for which groups, how the literature handles them, on which understanding of gender and bias it rests, and which competences and organisational conditions support responsible use. The operator set this priority on 1 October 2026.
 
 The review delivers the evidence base, not practice recommendations of its own. It reports what the literature shows and which recommendations the literature itself makes, each with its source and evidence status. Recommendations of the project require a further step with appraisal of study quality, transfer conditions and domain-expert validation, which the planned orientation guide of the fellowship can take up ([[research-vault#Comparative synthesis scope]]).
 
@@ -33,28 +33,41 @@ The working definition of feminist AI literacies names the diversity-sensitive, 
 
 ## Research questions
 
-The main question of the literature analysis is substantive.
+The operator merged the research questions on 1 October 2026 from three sources, the grant questions of the fellowship, the grid of the team meeting and the substantive reformulation of the same day. The main question of the literature analysis is substantive.
 
-> How can social work professionals use large language models for their tasks, which risks does this carry for which groups, which practices and safeguards are proposed, demonstrated or evaluated, and which competences and organisational conditions does the literature name for responsible use?
+> How can social work professionals use large language models responsibly, constructively and productively for their tasks, which bias forms does the literature identify for which groups, how does it handle them, which understanding of gender and bias does it rest on, and which competences and organisational conditions does it name for responsible use?
 
-German short form for the interface: „Wie können Fachkräfte der Sozialen Arbeit verantwortlich mit LLMs arbeiten, und was zeigt die Literatur dazu?“
+German short form for the interface: „Wie können Fachkräfte der Sozialen Arbeit verantwortlich mit LLMs arbeiten, und welche Bias-Formen und welchen Umgang damit zeigt die Literatur?“
 
-Four sub-questions structure the answer.
+Five sub-questions structure the answer. The identifiers SQ1 to SQ5 of the knowledge base, the code and the Assertion field `research-questions` correspond one to one to the German UF1 to UF5 (Unterfrage) and to the answer pages `#view=frage&sq=1` to `sq=5`.
 
-| SQ | Question | German interface wording |
-|---|---|---|
-| SQ1 Use | For which tasks and settings of social work does the literature describe the use of LLMs, and which benefits does it report? | Für welche Aufgaben und Felder der Sozialen Arbeit beschreibt die Literatur den Einsatz von LLMs, und welchen Nutzen berichtet sie? |
-| SQ2 Risks | Which bias axes and harm types does the literature identify for the use of LLMs, and for which groups? | Welche Bias-Achsen und Schadensarten benennt die Literatur, und für welche Gruppen? |
-| SQ3 Practices | Which prompting techniques and safeguards does the literature propose, demonstrate or evaluate, for which purpose, at which stage, and with which reported effects and limitations? | Welche Prompting-Techniken und Schutzmaßnahmen werden vorgeschlagen, demonstriert oder evaluiert, zu welchem Zweck, auf welcher Stufe und mit welchen berichteten Wirkungen und Grenzen? |
-| SQ4 Competences | Which competences of professionals and which organisational conditions does the literature name for responsible use, and where does general prompt-engineering guidance fall short of the requirements of social work? | Welche Kompetenzen und organisationalen Voraussetzungen nennt die Literatur, und wo greifen allgemeine Prompting-Anleitungen für die Soziale Arbeit zu kurz? |
+| SQ | Working title | German interface wording | Source |
+|---|---|---|---|
+| SQ1 | Use | Nutzung. „Für welche Aufgaben und Felder der Sozialen Arbeit beschreibt die Literatur den Einsatz von LLMs, und welchen Nutzen berichtet sie?“ | Reformulation of 1 October 2026 |
+| SQ2 | Bias forms | Bias-Formen. „Welche Bias-Formen thematisiert die ausgewählte Literatur, mit welchen Schadensarten, für welche Gruppen, und welche Formen fehlen?“ | Grant question 1 |
+| SQ3 | Handling of bias | Umgang mit Bias. „Wie geht die Literatur mit den benannten Bias-Formen um, auf welcher Stufe, mit welchen Techniken und mit welchem Evidenzstatus?“ | Grant question 2, merged with the former practices question |
+| SQ4 | Conceptual grounding | Begriffliche Fundierung. „Definiert die Literatur Gender und Bias, welches Verständnis von Gender liegt ihr zugrunde, und auf welche Theorien stützt sie sich?“ | Grid of the team meeting |
+| SQ5 | Competences | Kompetenzen. „Welche Kompetenzen und organisationalen Voraussetzungen nennt die Literatur für einen verantwortlichen Einsatz, und wo greifen allgemeine Prompting-Anleitungen für die Soziale Arbeit zu kurz?“ | Reformulation of 1 October 2026 |
 
-The feminist perspective of the working definition runs through the main question and SQ2 as attention to groups and structural disadvantage. It is not a separate sub-question, because the eligibility category Feministisch also admits implicit feminist approaches and cannot be coded reliably as a finding.
+The numbering of the morning of 1 October 2026 maps onto the current one as follows. SQ1 Use stays SQ1, SQ2 Risks becomes SQ2 Bias forms, SQ3 Practices becomes SQ3 Handling of bias, SQ4 Competences becomes SQ5, and SQ4 Conceptual grounding is new. Assertions and generated tables follow the current numbering, except four Assertions with AI Agent Review whose field awaits remapping as listed in [[research-vault#Assertions]].
 
-The questions ask what the literature shows. SQ1 to SQ3 combine a descriptive mapping from coded fields with source-linked Assertions for benefits, effects and limitations. SQ4 is answered by framework synthesis over Assertions against the working definition above and a named external framework of general prompt guidance. [[analysis-methods#Answering the research questions]] states for each question its data, method and current limits.
+The feminist perspective of the working definition runs through the main question, SQ2 and SQ4 as attention to groups, structural disadvantage and the understanding of gender. SQ4 asks whether and how the literature defines gender and bias. The eligibility category Feministisch is not coded as a finding, because it also admits implicit feminist approaches.
+
+The questions ask what the literature shows. SQ1 to SQ3 combine a descriptive mapping from coded fields with source-linked Assertions for benefits, effects and limitations. SQ4 is answerable only from full texts and has no coded field until the [[update-protocol#Proposed codebook amendment v1.4]] is adopted, so the interface shows it as not yet coded. SQ5 is answered by framework synthesis over Assertions against the working definition above and a named external framework of general prompt guidance. [[analysis-methods#Answering the research questions]] states for each question its fields, method and current limits.
+
+The geography of the literature and the provenance of its journals are a cross-cutting attribute of the corpus. They belong to the limitations of the review and form no sub-question of their own. Findings the team meeting expected do not enter the wording of a question.
 
 The methodological question is the second question of the paper. How can LLMs and AI agents be integrated into a qualitative literature review with traceable contributions, re-executable processing, and final scholarly authority assigned to domain experts?
 
-The previous sub-questions of 2026 are absorbed as follows. The former question on prompting techniques and their evidence status becomes part of SQ3. The former mapping of bias axes and harm types to mitigations is divided between SQ2 and SQ3. The former question on social-work-specific constraints, populations, settings and guidance gaps is divided between SQ1 and SQ4. Coding vocabularies and rules remain in [[update-protocol]] until a codebook amendment is decided.
+The sub-questions of the earlier 2026 analysis design are absorbed as follows. The former question on prompting techniques and their evidence status becomes part of SQ3. The former mapping of bias axes and harm types to mitigations is divided between SQ2 and SQ3. The former question on social-work-specific constraints, populations, settings and guidance gaps is divided between SQ1 and SQ5. Coding vocabularies and rules remain in [[update-protocol]] until a codebook amendment is decided.
+
+## Publication context
+
+The paper targets the special issue "Advancing Adult Skills Through Technology, Research, and Practice" of the journal Adult Literacy Education, published by ProLiteracy. The editors accepted the project's late expression of interest on 24 September 2026. An optional draft for editorial feedback is due on 1 December 2026 and the submission on 15 February 2027.
+
+The paper frames SQ2, SQ3 and SQ5 for adult education. It asks which bias forms become relevant when generative AI is used in adult learning and which AI literacy educators and learners need. SQ4 supports the gender focus and SQ1 provides context. The main question of the project remains a social-work question, and the framing for adult education belongs to the paper.
+
+The literature was identified through AI-assisted deep research in a first round in October 2025 and a second round from July 2026, extended by a Codex web search in August and September 2026 ([[#Corpus]]). No bibliographic database search was conducted. The paper reports this as a declared deviation from PRISMA 2020 ([[standards]]).
 
 ## Target audience
 
@@ -72,7 +85,7 @@ The primary audience remains researchers with limited AI expertise.
 The substantive criteria follow the main question.
 
 - Each sub-question receives an answer that separates what the reviewed literature shows from what remains not determinable. Every map and every answer text states how many included Works are coded for the fields it uses, and an empty cell with uncoded Works never counts as a gap in the literature.
-- SQ1 to SQ3 combine evidence-and-gap maps from coded fields with source-linked Assertions on benefits, effects, conditions and limitations, retaining study conditions and contradictory evidence. SQ4 rests on framework synthesis over Assertions against the working definition above and a named external framework of general prompt guidance.
+- SQ1 to SQ3 combine evidence-and-gap maps from coded fields with source-linked Assertions on benefits, effects, conditions and limitations, retaining study conditions and contradictory evidence. SQ4 rests on full-text coding of the definitions and theories the literature uses, once its fields are adopted. SQ5 rests on framework synthesis over Assertions against the working definition above and a named external framework of general prompt guidance.
 - Recommendations found in the literature appear as recommendations of their sources, each with its evidence status.
 - The literature report and paper receive domain-expert verification of their substantive claims and interpretations. Publication follows the policy applicable to each output, and submission requires a decision over the final manuscript.
 
@@ -99,13 +112,13 @@ The methodological criteria follow the second question.
 
 ## Two strands of the project
 
-The substantive strand answers the main question through SQ1 to SQ4. Its outputs are the evidence-and-gap maps and descriptive tables, the source-linked Assertions, the literature report with its answers to the sub-questions, the paper synthesis and the public Evidence Companion, which presents the released subset along the sub-questions ([[specification#Public Evidence Companion]]). [[analysis-methods]] defines the mapping and synthesis frame. The same knowledge structure supplies a conceptual foundation for a later social-work bias benchmark.
+The substantive strand answers the main question through SQ1 to SQ5. Its outputs are the evidence-and-gap maps and descriptive tables, the source-linked Assertions, the literature report with its answers to the sub-questions, the paper synthesis and the public Evidence Companion, which presents the released subset along the sub-questions ([[specification#Public Evidence Companion]]). [[analysis-methods]] defines the mapping and synthesis frame. The same knowledge structure supplies a conceptual foundation for a later social-work bias benchmark.
 
 The methodological strand answers the second question of the paper. It develops the implemented workflow and its authority model. Its outputs are PRISM, the lifecycle and provenance schema, the governed agent-run contract, the round-one replay, the agent-track process diagnostics and the documented Grounded Vault chain.
 
 ## Corpus
 
-The initial corpus was identified via four proprietary Deep Research systems (ChatGPT, Claude, Gemini, Perplexity) plus a limited manual search and curated in a Zotero group. It covers English and German literature on feminist AI literacies, generative AI, prompting and social work. Because the identification centred on bias and gender, literature on LLM use for social-work tasks without that focus may be underrepresented. The completion target also includes the prepared 2026 intake and separately dated gap-filling candidates. Their identification does not imply a curated identity or screening inclusion. The [completion package](../generated/completion/README.md) distinguishes these populations and their current denominators. The historical benchmark, linked knowledge archive and active source-reviewed synthesis remain separate subsets.
+The initial corpus was identified in October 2025 via four proprietary Deep Research systems (ChatGPT, Claude, Gemini, Perplexity) plus a limited manual search and curated in a Zotero group. A second deep-research round followed from July 2026, and a Codex web search extended it in August and September 2026. No bibliographic database was searched, which the paper reports as a declared PRISMA deviation ([[#Publication context]]). The geography of the literature and the provenance of its journals are reported among the limitations as an attribute of the corpus. It covers English and German literature on feminist AI literacies, generative AI, prompting and social work. Because the identification centred on bias and gender, literature on LLM use for social-work tasks without that focus may be underrepresented. The completion target also includes the prepared 2026 intake and separately dated gap-filling candidates. Their identification does not imply a curated identity or screening inclusion. The [completion package](../generated/completion/README.md) distinguishes these populations and their current denominators. The historical benchmark, linked knowledge archive and active source-reviewed synthesis remain separate subsets.
 
 ## Team
 

@@ -66,16 +66,19 @@ try {
       title: width('#start-title'), status: width('#start-status'), cards: width('.start-cards'),
       titleLines: lines('#start-title'), statusLines: lines('#start-status'),
       columns: getComputedStyle(document.querySelector('.start-cards')).gridTemplateColumns.split(' ').length,
+      lastSpans: Math.round(document.querySelector('.start-cards > li:last-child').getBoundingClientRect().width) === width('.start-cards'),
     };
   });
   check('title, status line and cards share one width', layout.title === layout.cards && layout.status === layout.cards, JSON.stringify(layout));
-  check('the main question wraps on two or three lines', layout.titleLines >= 2 && layout.titleLines <= 3, JSON.stringify(layout));
+  // The main question of 1 October 2026 names bias forms and their handling, so it runs longer than before.
+  check('the main question wraps on two to four lines', layout.titleLines >= 2 && layout.titleLines <= 4, JSON.stringify(layout));
   check('the status sentence stands on one line', layout.statusLines === 1, JSON.stringify(layout));
-  check('the question cards form a two-by-two grid', layout.columns === 2 && await page.locator('.start-card').count() === 4);
+  check('the five question cards form a two-column grid whose last card spans it',
+    layout.columns === 2 && layout.lastSpans && await page.locator('.start-card').count() === 5, JSON.stringify(layout));
   check('the start view carries no buttons duplicating the navigation', await page.locator('#view-start .start-btn, #view-start .start-actions').count() === 0);
   const cardLines = await page.locator('.start-card-status').allInnerTexts();
   check('every card names its finding status',
-    cardLines.length === 4 && cardLines.every((line) => /^(\d+ KI-geprüfte?r? Befunde?|noch kein geprüfter Befund)/.test(line)), cardLines.join(' | '));
+    cardLines.length === 5 && cardLines.every((line) => /^(\d+ KI-geprüfte?r? Befunde?|noch kein geprüfter Befund|noch nicht codiert$)/.test(line)), cardLines.join(' | '));
 
   await page.locator('.start-card[data-sq="2"]').focus();
   await page.keyboard.press('Enter');
@@ -84,13 +87,18 @@ try {
     hashParams().get('sq') === '2' && await page.evaluate(() => document.activeElement.matches('#frage-root h1')));
   await page.goBack({ waitUntil: 'networkidle' });
   check('Back returns from an answer page to the start view', await visibleView() === 'view-start');
-  for (const sq of ['1', '2', '3', '4']) {
+  for (const sq of ['1', '2', '3', '4', '5']) {
     await page.goto(`${base}/index.html#view=frage&sq=${sq}`, { waitUntil: 'networkidle' });
     await page.waitForSelector(`#frage-root .answer[data-sq="${sq}"]`);
     check(`answer page ${sq} leads with the denominator and has its four parts`,
       await page.locator('#frage-root h1 + .denominator--summary').count() === 1 &&
       await page.locator('#frage-befunde, #frage-matrix, #frage-offen, #frage-werke').count() === 4);
   }
+  await page.goto(`${base}/index.html#view=frage&sq=4`, { waitUntil: 'networkidle' });
+  await page.waitForSelector('#frage-root .answer[data-sq="4"]');
+  check('the conceptual-grounding page states that it is not yet coded and shows no count',
+    (await page.locator('#frage-root h1 + .denominator--summary').innerText()).endsWith('Noch nicht codiert') &&
+    await page.locator('#frage-root .matrix-wrap').count() === 0);
   check('no navigation tab is pressed on an answer page', await page.locator('.nav-view-btn[aria-pressed="true"]').count() === 0);
 
   await page.goto(`${base}/index.html#view=literaturbild`, { waitUntil: 'networkidle' });
@@ -148,7 +156,7 @@ try {
 
   check('desktop document has no horizontal overflow', await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1));
   await page.setViewportSize({ width: 390, height: 844 });
-  for (const hash of ['#view=start', '#view=frage&sq=1', '#view=frage&sq=3', '#view=literaturbild', '#view=wissensnetz', workHref,
+  for (const hash of ['#view=start', '#view=frage&sq=1', '#view=frage&sq=3', '#view=frage&sq=4', '#view=frage&sq=5', '#view=literaturbild', '#view=wissensnetz', workHref,
     '#view=korpus', '#view=chat', '#view=vergleich']) {
     await page.goto(`${base}/about.html`, { waitUntil: 'networkidle' });
     await page.goto(`${base}/index.html${hash}`, { waitUntil: 'networkidle' });

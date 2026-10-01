@@ -2578,8 +2578,9 @@ main {
     .view-content { display: block !important; }
 }
 
-/* Start view: the main question, its status sentence and the four question cards share
-   one measure, so the question wraps on two or three lines above a two-by-two grid. */
+/* Start view: the main question, its status sentence and the five question cards share
+   one measure, so the question wraps on three or four lines above a two-column grid whose
+   last card spans the full width. */
 .start {
     max-width: 52rem;
     margin: var(--space-2xl) auto 3rem;
@@ -2615,6 +2616,8 @@ main {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--space-lg);
 }
+
+.start-cards > li:last-child:nth-child(odd) { grid-column: 1 / -1; }
 
 @media (max-width: 40rem) {
     .start-cards { grid-template-columns: 1fr; }
@@ -2664,4 +2667,5 @@ main {
 .start-card--use { --card-accent: var(--cat-soz-arb); }
 .start-card--risk { --card-accent: var(--cat-bias); }
 .start-card--practice { --card-accent: var(--cat-prompt); }
+.start-card--concept { --card-accent: var(--cat-gender); }
 .start-card--competence { --card-accent: var(--cat-ai-lit); }

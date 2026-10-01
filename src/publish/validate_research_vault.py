@@ -87,10 +87,10 @@ REQUIRED_FIELDS = {
         "updated",
     ),
 }
-# The current sub-questions of knowledge/project.md. Assertions numbered under the
-# earlier sub-questions carry values from the same range, so the check cannot
+# The current sub-questions of knowledge/project.md, numbered on 2026-10-01. Assertions
+# numbered under an earlier scheme carry values from the same range, so the check cannot
 # detect old numbering; that mapping stays an editorial decision.
-RESEARCH_QUESTIONS = ("SQ1", "SQ2", "SQ3", "SQ4")
+RESEARCH_QUESTIONS = ("SQ1", "SQ2", "SQ3", "SQ4", "SQ5")
 WIKILINK = re.compile(r"\[\[([^\]#|]+?)(?:#\^([A-Za-z0-9-]+))?(?:\|[^\]]*)?\]\]")
 BLOCK_ID = re.compile(r"\^([A-Za-z0-9-]+)\s*$")
 

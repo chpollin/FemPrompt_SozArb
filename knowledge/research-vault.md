@@ -74,12 +74,21 @@ An Assertion carries at least the following information.
 
 - stable Assertion ID and precise wording of the statement
 - references to the supporting distillate statements
-- thematic assignment and relation to the research questions SQ1 to SQ4 of [[project#Research questions]]
+- thematic assignment and relation to the research questions SQ1 to SQ5 of [[project#Research questions]]
 - marking of contradicting or qualifying evidence
 - review status with dated activity and responsible actor
 - intended output, for instance literature report, paper or both
 
-Assertions record the relation in the optional frontmatter field `research-questions`, a list of distinct values from `SQ1` to `SQ4` that the validator checks. The Assertions prepared on 1 October 2026 use the current numbering. Of the earlier Assertions, one carries values of the earlier sub-question numbering, which [[project#Research questions]] maps to the current questions, and the others carry no such field. Both numberings use the same values, so the validator cannot detect the earlier one, and the remapping of that Assertion is an editorial decision. The Assertion index exports the field as `research_questions` ([[data#Analysis vocabulary projection]]).
+Assertions record the relation in the optional frontmatter field `research-questions`, a list of distinct values from `SQ1` to `SQ5` that the validator checks. The grounded Assertions of 1 October 2026 were moved to the numbering of the merged questions, where the former SQ4 Competences became SQ5. The four Assertions with AI Agent Review were left unchanged, because editing them would invalidate their review receipts. Their remapping is an editorial decision of the operator, with the following proposals.
+
+| Assertion | Current field | Proposed field |
+|---|---|---|
+| `kabra-et-al-transfer-reasoning-through-fine-tuning-for-bias-mitigation` | `SQ1`, `SQ2` of the earlier 2026 numbering, which the result site reads as Use and Bias forms | `SQ3` |
+| `kaneko-et-al-report-cot-reduced-bias-in-specific-evaluations` | none | `SQ3` |
+| `reported-prompting-effects-vary-across-models-and-bias-categories` | none | `SQ3` |
+| `ahn-et-al-propose-integrating-ai-literacy-across-existing-core-competencies` | none | `SQ5` |
+
+Both numberings use the same values, so the validator cannot detect the earlier one. The Assertion index exports the field as `research_questions` ([[data#Analysis vocabulary projection]]).
 
 Report Assertions and paper Assertions form one body of knowledge. The field for the intended output controls which Assertions are used in which text. Methodological statements of the paper can additionally point to project artifacts such as ADRs, run manifests, tests and replay outputs.
 
@@ -105,7 +114,7 @@ The same five values form the `researchVaultState` vocabulary of the completion-
 
 The quantitative analysis uses structured annotations and Assertion metadata. These include categories, co-occurrences, evidence types, populations, practice fields, methods and gaps. Every number is produced by an executable script over the canonical data.
 
-The qualitative analysis synthesises Assertions along the sub-questions SQ1 Use, SQ2 Risks, SQ3 Practices and SQ4 Competences. [[analysis-methods#Answering the research questions]] states for each question its data, method and current limits. Topic modelling can serve as exploratory orientation over full texts, distillates, annotations, keywords and Vault relations. The scholarly interpretation of the topics takes place against the evidence-bound knowledge structure.
+The qualitative analysis synthesises Assertions along the sub-questions SQ1 Use, SQ2 Bias forms, SQ3 Handling of bias, SQ4 Conceptual grounding and SQ5 Competences. [[analysis-methods#Answering the research questions]] states for each question its data, method and current limits. Topic modelling can serve as exploratory orientation over full texts, distillates, annotations, keywords and Vault relations. The scholarly interpretation of the topics takes place against the evidence-bound knowledge structure.
 
 ### Comparative synthesis scope
 
@@ -130,7 +139,7 @@ The active folder structure, a reviewed partial holding and the project-specific
 
 These statements carry attributed AI source reviews and no domain verification. The chat reads the [released Assertion index](../docs/data/assertion_index.json). Connections in the historical Knowledge Graph rest on category co-occurrence and do not replace an evidenced scholarly relation between statements.
 
-The draft chapter [SQ1 Use](../research-vault/40_output/literature-report/sq1-use.md) of the literature report was prepared on 1 October 2026 from the active distillates. It rests on the Assertions listed in its frontmatter, which an LLM agent prepared with recorded agent and model identity. Chapter and Assertions have the status `grounded`, so their references resolve while AI Agent Review and domain-expert verification are outstanding, and they stay outside the released Assertion index. The draft finds that no Assertion over the active distillates reports an evaluated benefit of LLM use in a social-work setting, and it lists included Works without an active distillate whose titles suggest direct SQ1 content. Both statements describe the distillate set and say nothing yet about the included corpus. The operator cancelled the drafts for SQ2 to SQ4 in the same session.
+The draft chapter [SQ1 Use](../research-vault/40_output/literature-report/sq1-use.md) of the literature report was prepared on 1 October 2026 from the active distillates. It rests on the Assertions listed in its frontmatter, which an LLM agent prepared with recorded agent and model identity. Chapter and Assertions have the status `grounded`, so their references resolve while AI Agent Review and domain-expert verification are outstanding, and they stay outside the released Assertion index. The draft finds that no Assertion over the active distillates reports an evaluated benefit of LLM use in a social-work setting, and it lists included Works without an active distillate whose titles suggest direct SQ1 content. Both statements describe the distillate set and say nothing yet about the included corpus. The operator cancelled the drafts for the other sub-questions in the same session.
 
 Part of the intended Papers is neither actively distilled nor connected to Assertions nor ready for analysis. Separate measures apply to the working state.
 

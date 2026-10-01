@@ -152,7 +152,7 @@ The screening states come from `generated/completion/completion-package.json`, `
 The other distillates were read and support no SQ1 Assertion.
 
 - Distillates of Works with a recorded Exclude support no synthesis Assertion under the Research Vault contract. Among them are the randomised trial of the Emohaa mental-health chatbot (`emohaa-mental-health-chatbot`), which reports reduced mental distress for a system with a generative emotional-support component, and a study of machine-learning placement prediction in child welfare (`exrf5629-child-welfare-placement-prediction`).
-- Distillates of included Works without SQ1 content concern AI literacy and competences, frameworks, bias mechanisms or prompting techniques and belong to SQ2 to SQ4. The Hodgson et al. distillate on social-work education (`vszm7ct6-ai-social-work-education`) discusses tutoring, assessment and simulation prospectively, but records generative AI as absent and anchors no use statement.
+- Distillates of included Works without SQ1 content concern AI literacy and competences, frameworks, bias mechanisms or prompting techniques and belong to SQ2, SQ3 and SQ5 of the numbering of 1 October 2026. The Hodgson et al. distillate on social-work education (`vszm7ct6-ai-social-work-education`) discusses tutoring, assessment and simulation prospectively, but records generative AI as absent and anchors no use statement.
 - Distillates of not yet screened Works on technical bias measurement and mitigation, persona effects, image generation in workshops outside social work, stakeholder views on AI deception detection and teacher education describe no social-work task use of LLMs.
 
 [^1]: Grounded in [[30_assertions/patton-and-victor-describe-prospective-llm-uses-in-social-work-research]].

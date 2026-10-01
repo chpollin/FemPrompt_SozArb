@@ -213,10 +213,12 @@ study_types:
 # NOT eligibility criteria; eligibility content above is unchanged (v1.2). Design and rules
 # in knowledge/update-protocol.md sections B, B.1, C. Coded only for Decision = Include;
 # every field has a None code, an empty cell for an included paper is a validation error.
+# `serves` names the sub-questions SQ1 to SQ5 of knowledge/project.md (numbering of
+# 2026-10-01). SQ4 Conceptual grounding has no field until codebook amendment v1.4.
 analysis_fields:
   - name: AN_Prompting_Role
     multi: true
-    serves: [SQ1, SQ3, SQ4]  # SQ1 through Recommended_Practice, SQ4 through Learning_Content. Covers all prompting evidence, not only techniques.
+    serves: [SQ1, SQ3, SQ5]  # SQ1 through Recommended_Practice, SQ5 through Learning_Content. Covers all prompting evidence, not only techniques.
     values: [Recommended_Practice, Research_Instrument, Object_of_Critique, Learning_Content, None]
   - name: AN_Prompt_Techniques
     multi: true
@@ -236,7 +238,7 @@ analysis_fields:
     values: [Derogatory_Language, Disparate_Performance, Erasure, Exclusionary_Norms, Misrepresentation, Stereotyping, Toxicity, Direct_Discrimination, Indirect_Discrimination, None]
   - name: AN_Mitigation_Stage
     multi: true
-    serves: [SQ3, SQ4]  # SQ4 through Organisational_Process
+    serves: [SQ3, SQ5]  # SQ5 through Organisational_Process
     values: [Pre_Processing, In_Training, Intra_Processing, Post_Processing, Prompt_Practice, Organisational_Process, None]
   - name: AN_Mitigation_Status
     multi: false
