@@ -5,7 +5,7 @@
   "authority_rule": "Any human annotation covers the canonical work; duplicate records do not trigger reassessment.",
   "sources": {
     "research_vault": "docs/data/research_vault_v2.json",
-    "research_vault_sha256": "7c0d00cf927c072f91b3b7142486f431736a460c2a251c6d26d85cdaf47f39c3",
+    "research_vault_sha256": "3ffdec53e6d4c0dd2961d2e9c22dd92ab9db8725726d240423168cb64ecf5a52",
     "fulltext_manifest": "docs/data/fulltext_manifest.json",
     "fulltext_manifest_sha256": "c16a2d600de40524c224335a122cc1ffc69d6d1c38c776ca37e206cf673e49d3",
     "work_version_registry": "corpus/work_version_registry.json",
@@ -96,7 +96,7 @@
         "2RK458W2"
       ],
       "title": "Prompting Techniques for Reducing Social Bias in LLMs through System 1 and System 2 Cognitive Processes",
-      "author_year": "Mahammed Kamruzzaman (2025)",
+      "author_year": "Mahammed Kamruzzaman et al. (2025)",
       "doi": "10.26615/978-954-452-098-4-060",
       "url": "https://aclanthology.org/2025.ranlp-1.60/",
       "abstract_available": false,
@@ -207,7 +207,7 @@
         "YW3UAXFP"
       ],
       "title": "Feminist AI: Confronting Bias, Power, and the Promise of Justice-Oriented Technology",
-      "author_year": "R. Singh (2026)",
+      "author_year": "Singh (2026)",
       "doi": "10.31995/jgv.2026.v17i01",
       "url": null,
       "abstract_available": false,
@@ -264,7 +264,7 @@
         "B347MWKT"
       ],
       "title": "The Politics of Prompt Engineering",
-      "author_year": "Matthew Halm (2025)",
+      "author_year": "Halm (2025)",
       "doi": "10.1215/2834703x-12095946",
       "url": "https://read.dukeupress.edu/critical-ai/article/doi/10.1215/2834703X-12095946/406205/The-Politics-of-Prompt-Engineering",
       "abstract_available": false,
@@ -316,7 +316,7 @@
         "BX2UPC4N"
       ],
       "title": "Prompting Fairness: Integrating Causality to Debias Large Language Models",
-      "author_year": "Jingling Li (2025)",
+      "author_year": "Jingling Li et al. (2025)",
       "doi": null,
       "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/9f26a2d143a227376dff99a279f93f99-Abstract-Conference.html",
       "abstract_available": false,
@@ -372,7 +372,7 @@
         "BBSHTIMH"
       ],
       "title": "AI For Whom? Participation, Power and Educational Pathways in the Age of Artificial Intelligence",
-      "author_year": "Daniel Autenrieth (2026)",
+      "author_year": "Autenrieth et al. (2026)",
       "doi": "10.1111/ejed.70602",
       "url": "https://onlinelibrary.wiley.com/doi/10.1111/ejed.70602",
       "abstract_available": false,
@@ -463,7 +463,7 @@
         "DALR26DL"
       ],
       "title": "\"Grillz on a hijabi\": Intersectional Identities in Fostering Critical AI Literacy",
-      "author_year": "Jaemarie Solyst (2025)",
+      "author_year": "Solyst et al. (2025)",
       "doi": "10.1145/3769994.3770037",
       "url": "https://doi.org/10.1145/3769994.3770037",
       "abstract_available": true,
@@ -537,7 +537,7 @@
         "FR8Z2998"
       ],
       "title": "Patient Cognitive Bias in Large Language Model-Supported Health Consultations: Simulation-Based Comparative Study",
-      "author_year": "Yi Zuo (2026)",
+      "author_year": "Yi Zuo et al. (2026)",
       "doi": "10.2196/85770",
       "url": "https://www.jmir.org/2026/1/e85770",
       "abstract_available": false,
@@ -623,7 +623,7 @@
         "8YZKPS42"
       ],
       "title": "Beyond inclusion: feminist AI for transformative justice in STEM",
-      "author_year": "Tanja Kubes (2026)",
+      "author_year": "Kubes (2026)",
       "doi": "10.1007/s43681-026-01161-9",
       "url": "https://link.springer.com/article/10.1007/s43681-026-01161-9",
       "abstract_available": true,
@@ -697,7 +697,7 @@
         "STQU6H42"
       ],
       "title": "Persona-Assigned Large Language Models Exhibit Human-Like Motivated Reasoning",
-      "author_year": "Saloni Dash (2026)",
+      "author_year": "Saloni Dash et al. (2026)",
       "doi": "10.18653/v1/2026.findings-acl.585",
       "url": "https://aclanthology.org/2026.findings-acl.585/",
       "abstract_available": false,
@@ -769,7 +769,7 @@
         "88CFIG8R"
       ],
       "title": "Are future social workers ready for AI? Fears, barriers, and learning needs in higher education",
-      "author_year": "Sacramento Pinazo-Hernandis (2026)",
+      "author_year": "Sacramento Pinazo-Hernandis et al. (2026)",
       "doi": "10.1080/02615479.2026.2631708",
       "url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2631708",
       "abstract_available": false,
@@ -887,7 +887,7 @@
         "NJUBGV8X"
       ],
       "title": "Intersectional biases in narratives produced by open-ended prompting of generative language models",
-      "author_year": "Evan Shieh (2026)",
+      "author_year": "Shieh et al. (2026)",
       "doi": "10.1038/s41467-025-68004-9",
       "url": "https://www.nature.com/articles/s41467-025-68004-9",
       "abstract_available": true,
@@ -942,7 +942,7 @@
         "WHGCH3XS"
       ],
       "title": "Innovating social work pedagogy: generative AI for critical competency development in evidence-based practice",
-      "author_year": "Anitra P. Walker (2026)",
+      "author_year": "Anitra P. Walker et al. (2026)",
       "doi": "10.1080/02615479.2026.2617512",
       "url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2617512",
       "abstract_available": false,
@@ -997,7 +997,7 @@
         "VIHZB2CS"
       ],
       "title": "Gender Representation in Large Language Models: A Cross-Linguistic and Cross-Model Analysis",
-      "author_year": "Aleksandra Urman (2026)",
+      "author_year": "Aleksandra Urman et al. (2026)",
       "doi": "10.5117/ccr2026.2.11.urma",
       "url": "https://www.aup-online.com/content/journals/10.5117/CCR2026.2.11.URMA",
       "abstract_available": false,
@@ -1071,7 +1071,7 @@
         "QI7MDZU4"
       ],
       "title": "InsideOut: Measuring and Mitigating Insider–Outsider Bias in Interview Script Generation",
-      "author_year": "Yixin Wan (2026)",
+      "author_year": "Yixin Wan et al. (2026)",
       "doi": "10.18653/v1/2026.acl-long.1094",
       "url": "https://aclanthology.org/2026.acl-long.1094/",
       "abstract_available": false,
@@ -1198,7 +1198,7 @@
         "AZJW38MF"
       ],
       "title": "The (Un)Fair Algorithm: Socio-Technical Ethics Work for Artificial Intelligence in Social Work",
-      "author_year": "Ida Schrøder (2026)",
+      "author_year": "Ida Schrøder et al. (2026)",
       "doi": "10.1080/17496535.2026.2619945",
       "url": "https://www.tandfonline.com/doi/full/10.1080/17496535.2026.2619945",
       "abstract_available": false,
@@ -1251,7 +1251,7 @@
         "63UVG3ZU"
       ],
       "title": "Making Accurate Judgements in Child Welfare: Comparing ChatGPT With Qualified Social Workers",
-      "author_year": "David Wilkins (2025)",
+      "author_year": "David Wilkins et al. (2025)",
       "doi": "10.1111/cfs.13304",
       "url": "https://orca.cardiff.ac.uk/id/eprint/178748/",
       "abstract_available": false,
@@ -1306,7 +1306,7 @@
         "KJWMQSMN"
       ],
       "title": "Toward substantive intersectional algorithmic fairness: desiderata for a feminist approach",
-      "author_year": "Marie Mirsch (2026)",
+      "author_year": "Marie Mirsch et al. (2026)",
       "doi": "10.1007/s43681-025-00926-y",
       "url": "https://link.springer.com/article/10.1007/s43681-025-00926-y",
       "abstract_available": false,
@@ -1362,7 +1362,7 @@
         "NPFRWPAN"
       ],
       "title": "Gender bias in text-to-image generative artificial intelligence: Neglect and stereotypical presentations across three popular platforms",
-      "author_year": "Hannah Weinmann (2026)",
+      "author_year": "Weinmann et al. (2026)",
       "doi": "10.1177/14614448261435197",
       "url": "https://journals.sagepub.com/doi/abs/10.1177/14614448261435197",
       "abstract_available": false,
@@ -1419,7 +1419,7 @@
         "WUMNU3W5"
       ],
       "title": "AI literacy and its implications for prompt engineering strategies",
-      "author_year": "Nils Knoth (2024)",
+      "author_year": "Knoth et al. (2024)",
       "doi": "10.1016/j.caeai.2024.100225",
       "url": "https://linkinghub.elsevier.com/retrieve/pii/S2666920X24000262",
       "abstract_available": false,
@@ -1475,7 +1475,7 @@
         "UNGYENLB"
       ],
       "title": "Metacognitive AI literacy: going beyond the AI skills gap agenda",
-      "author_year": "H. Shapiro (2026)",
+      "author_year": "Shapiro et al. (2026)",
       "doi": "10.1080/17439884.2026.2652638",
       "url": null,
       "abstract_available": false,
@@ -1530,7 +1530,7 @@
         "ZETPJ8EC"
       ],
       "title": "Same Prompt, Different Care? Evaluating Inequities in AI-Generated Mental Health Support for Immigrant Communities",
-      "author_year": "Cheng Chow (2026)",
+      "author_year": "Cheng Chow et al. (2026)",
       "doi": "10.1086/743397",
       "url": "https://doi.org/10.1086/743397",
       "abstract_available": false,
@@ -1585,7 +1585,7 @@
         "EFMF4449"
       ],
       "title": "Teachers’ perceptions of generative AI in gender-inclusive STEM education: a grounded theory study",
-      "author_year": "Celeste Tipple (2026)",
+      "author_year": "Celeste Tipple et al. (2026)",
       "doi": "10.1007/s10639-026-13908-2",
       "url": "https://link.springer.com/article/10.1007/s10639-026-13908-2",
       "abstract_available": false,
@@ -1641,7 +1641,7 @@
         "7B6V8MN6"
       ],
       "title": "Feminist knowledges in the age of AI",
-      "author_year": "Redi Koobak (2026)",
+      "author_year": "Koobak (2026)",
       "doi": "10.1177/13505068261419933",
       "url": "https://doi.org/10.1177/13505068261419933",
       "abstract_available": true,
@@ -1729,7 +1729,7 @@
         "BKYNQZHQ"
       ],
       "title": "A Critique of Human-Centred AI: A Plea for a Feminist AI Framework (FAIF)",
-      "author_year": "Tanja Kubes (2026)",
+      "author_year": "Kubes (2026)",
       "doi": "10.1007/s00146-025-02556-8",
       "url": "https://link.springer.com/article/10.1007/s00146-025-02556-8",
       "abstract_available": true,
@@ -1784,7 +1784,7 @@
         "9AVG53AQ"
       ],
       "title": "AI-Generated Images of Social Workers in Healthcare and Implications for Professional Identity",
-      "author_year": "Helen Hickson (2026)",
+      "author_year": "Helen Hickson et al. (2026)",
       "doi": "10.1080/0312407x.2026.2627220",
       "url": "https://doi.org/10.1080/0312407X.2026.2627220",
       "abstract_available": false,
@@ -1868,7 +1868,7 @@
         "PS8KVDVS"
       ],
       "title": "Intersectional Fairness in Large Language Models",
-      "author_year": "C. Boufaied (2026)",
+      "author_year": "Boufaied et al. (2026)",
       "doi": "10.48550/arXiv.2604.20677",
       "url": null,
       "abstract_available": false,
@@ -1979,7 +1979,7 @@
         "SIHIUMFZ"
       ],
       "title": "Artificial Intelligence and Cultural Context: An Empirical Investigation of Large Language Models’ Performance on Chinese Social Work Professional Standards",
-      "author_year": "Zia Qi (2025)",
+      "author_year": "Qi et al. (2025)",
       "doi": "10.1086/735590",
       "url": "https://www.journals.uchicago.edu/doi/abs/10.1086/735590",
       "abstract_available": false,
@@ -2053,7 +2053,7 @@
         "9ZKZQM63"
       ],
       "title": "Unveiling and Mitigating Bias in Mental Health Analysis with Large Language Models",
-      "author_year": "Yuqing Wang (2024)",
+      "author_year": "Wang et al. (2024)",
       "doi": "10.48550/arxiv.2406.12033",
       "url": "https://arxiv.org/abs/2406.12033v2",
       "abstract_available": false,
@@ -2163,7 +2163,7 @@
         "ZQHP5G35"
       ],
       "title": "Data and rights in the digital welfare state: the case of Denmark",
-      "author_year": "Rikke Frank Jørgensen (2023)",
+      "author_year": "Jørgensen (2023)",
       "doi": "10.1080/1369118X.2021.1934069",
       "url": "https://doi.org/10.1080/1369118X.2021.1934069",
       "abstract_available": true,
@@ -2220,7 +2220,7 @@
         "LR8Z3YHP"
       ],
       "title": "'Meaningless work': How the datafication of health reconfigures knowledge about work and erodes professional judgement",
-      "author_year": "Klaus Hoeyer (2020)",
+      "author_year": "Hoeyer et al. (2020)",
       "doi": "10.1080/03085147.2020.1733842",
       "url": "https://doi.org/10.1080/03085147.2020.1733842",
       "abstract_available": true,
@@ -2366,7 +2366,7 @@
         "I7BQH4U4"
       ],
       "title": "Promoting AI literacy in social work education: lessons from an interdisciplinary course for social work students",
-      "author_year": "Joshua Weber (2026)",
+      "author_year": "Joshua Weber et al. (2026)",
       "doi": "10.1080/02615479.2026.2635471",
       "url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2635471",
       "abstract_available": false,
@@ -2416,7 +2416,7 @@
         "Z6QC4HW9"
       ],
       "title": "Gender Bias in LLM Hiring Decisions: Evidence from a Japanese Context and Evaluation of Mitigation Strategies",
-      "author_year": "Serena A. Hoffstedde (2026)",
+      "author_year": "Serena A. Hoffstedde et al. (2026)",
       "doi": null,
       "url": "https://arxiv.org/abs/2606.18649",
       "abstract_available": false,
@@ -2490,7 +2490,7 @@
         "XPWCK65R"
       ],
       "title": "Mitigating Cultural Bias in LLMs via Multi-Agent Cultural Debate",
-      "author_year": "Qian Tan (2026)",
+      "author_year": "Qian Tan et al. (2026)",
       "doi": "10.18653/v1/2026.findings-acl.418",
       "url": "https://aclanthology.org/2026.findings-acl.418/",
       "abstract_available": false,
@@ -2543,7 +2543,7 @@
         "5TDNQD4B"
       ],
       "title": "Bias Bytes: A Study Examining Disability Bias in ChatGPT Job Recommendation",
-      "author_year": "Claire Sharon Sullivan (2026)",
+      "author_year": "Claire Sharon Sullivan et al. (2026)",
       "doi": "10.1177/10522263261449121",
       "url": "https://journals.sagepub.com/doi/10.1177/10522263261449121",
       "abstract_available": false,
@@ -2617,7 +2617,7 @@
         "T57U8T2K"
       ],
       "title": "I Am Not Them: Persistent Outgroup Bias in Large Language Models Arising from Social Identity Persona Setting",
-      "author_year": "Wenchao Dong (2026)",
+      "author_year": "Wenchao Dong et al. (2026)",
       "doi": "10.63317/2hn5gs6yh5m2",
       "url": "https://aclanthology.org/2026.lrec-1.217/",
       "abstract_available": false,
@@ -2675,7 +2675,7 @@
         "9Y7H9WXQ"
       ],
       "title": "Ethical AI through a Feminist Lens: Challenging Power and Redefining Technology",
-      "author_year": "Eva Gengler (2025)",
+      "author_year": "Gengler et al. (2025)",
       "doi": "10.1201/9781003585527-19",
       "url": "https://www.routledge.com/Handbook-of-Global-Philosophies-on-AI-Ethics-Toward-Sustainable-Futures/Singh-Ramachandran/p/book/9781032955643",
       "abstract_available": true,
@@ -2730,7 +2730,7 @@
         "XRQE5VM2"
       ],
       "title": "IA, salud mental y género: Un mapeo sistemático de las ciencias sociales y humanas en América Latina",
-      "author_year": "Chiara Forti Dono (2026)",
+      "author_year": "Chiara Forti Dono et al. (2026)",
       "doi": "10.35362/issn.1850-0013-1259",
       "url": "https://ojs.revistacts.net/index.php/CTS/article/view/1259",
       "abstract_available": false,
@@ -2804,7 +2804,7 @@
         "J4K3XA52"
       ],
       "title": "Evaluating gender bias in large language models in long-term care",
-      "author_year": "Sam Rickman (2025)",
+      "author_year": "Rickman (2025)",
       "doi": "10.1186/s12911-025-03118-0",
       "url": "https://link.springer.com/article/10.1186/s12911-025-03118-0",
       "abstract_available": false,
@@ -2858,7 +2858,7 @@
         "MN2K9JW8"
       ],
       "title": "Verbesserung der KI-Literacy von Lehrenden im Hochschulbereich",
-      "author_year": "Stefanie Schallert-Vallaster (2025)",
+      "author_year": "Schallert-Vallaster et al. (2025)",
       "doi": "10.21240/zfhe/SH-KI-1/09",
       "url": "https://zfhe.at/index.php/zfhe/article/view/2086",
       "abstract_available": true,
@@ -2910,7 +2910,7 @@
         "AITNC2I9"
       ],
       "title": "Toward True Neutrality: Evaluating Inference-Time Debiasing Strategies for Gender Coreference Resolution in LLMs",
-      "author_year": "Arati Mohapatra (2025)",
+      "author_year": "Arati Mohapatra et al. (2025)",
       "doi": null,
       "url": "https://aclanthology.org/2025.paclic-1.19/",
       "abstract_available": false,
@@ -3017,7 +3017,7 @@
         "DL7G37W9"
       ],
       "title": "Safety guardrails in large language models and selective refusal bias",
-      "author_year": "Chisca (2026)",
+      "author_year": "Chisca et al. (2026)",
       "doi": null,
       "url": "https://aclanthology.org/2026.findings-acl.550.pdf",
       "abstract_available": false,
@@ -3102,7 +3102,7 @@
         "CCAKPEGY"
       ],
       "title": "Does being literate in AI make workplaces more equal? The mediating role of psychological capital",
-      "author_year": "A. H. Pratono (2026)",
+      "author_year": "Pratono et al. (2026)",
       "doi": "10.1108/IJSSP-02-2026-0125",
       "url": null,
       "abstract_available": false,
@@ -3176,7 +3176,7 @@
         "D267IQ4C"
       ],
       "title": "Generative AI in Youth Mental Health Apps: Rapid Review",
-      "author_year": "Helene Høgsdal (2026)",
+      "author_year": "Helene Høgsdal et al. (2026)",
       "doi": "10.2196/90589",
       "url": "https://doi.org/10.2196/90589",
       "abstract_available": false,
@@ -3248,7 +3248,7 @@
         "9EP4IC4T"
       ],
       "title": "Ethics and Fairness Considerations in AI-Based Deception Detection Technologies for Mental Health Applications: Focus Group Study",
-      "author_year": "Sayde Leya King (2026)",
+      "author_year": "Sayde Leya King et al. (2026)",
       "doi": "10.2196/86633",
       "url": "https://ai.jmir.org/2026/1/e86633/",
       "abstract_available": false,
@@ -3301,7 +3301,7 @@
         "T7FGTQF4"
       ],
       "title": "Inclusive generative AI and the dynamics of inequality: A capability-resource model of adoption disparities",
-      "author_year": "Hyelim Yang (2026)",
+      "author_year": "Hyelim Yang et al. (2026)",
       "doi": "10.1016/j.techsoc.2026.103402",
       "url": "https://www.sciencedirect.com/science/article/pii/S0160791X26001910",
       "abstract_available": false,
@@ -3430,7 +3430,7 @@
         "S2DN9CFC"
       ],
       "title": "Beyond “painting in pink”: A critical case study of all-girls generative AI workshops in a European makerspace and implications for gender equity in computing",
-      "author_year": "Qian Liu (2026)",
+      "author_year": "Qian Liu et al. (2026)",
       "doi": "10.1016/j.caeai.2026.100602",
       "url": "https://discovery.ucl.ac.uk/id/eprint/10225293/",
       "abstract_available": false,
@@ -3541,7 +3541,7 @@
         "UV9AI4X3"
       ],
       "title": "From salad bar feminism to denotative portraiture: How neoliberalism shapes feminism in AI-Generated visuals",
-      "author_year": "Catherine Bouko (2025)",
+      "author_year": "Bouko et al. (2025)",
       "doi": "10.1080/14680777.2025.2593317",
       "url": "https://www.tandfonline.com/doi/abs/10.1080/14680777.2025.2593317",
       "abstract_available": false,
@@ -3596,7 +3596,7 @@
         "SK6VDF5B"
       ],
       "title": "Existing and future use cases, and safety and ethical considerations for AI in body image, and eating disorder prevention",
-      "author_year": "Nadia Craddock (2026)",
+      "author_year": "Nadia Craddock et al. (2026)",
       "doi": "10.1016/j.bodyim.2026.102042",
       "url": "https://uwe-repository.worktribe.com/output/15715301/existing-and-future-use-cases-and-safety-and-ethical-considerations-for-ai-in-body-image-and-eating-disorder-prevention",
       "abstract_available": false,
@@ -3651,7 +3651,7 @@
         "6N9ANHXA"
       ],
       "title": "The Role of Generative AI in Transforming Social Work Practice",
-      "author_year": "Joana Guerra (2026)",
+      "author_year": "Joana Guerra et al. (2026)",
       "doi": "10.1007/978-3-032-27336-9_4",
       "url": "https://doi.org/10.1007/978-3-032-27336-9_4",
       "abstract_available": false,
@@ -3706,7 +3706,7 @@
         "D698593N"
       ],
       "title": "Prompt Engineering for Social Workers",
-      "author_year": "Moon Sun Song (2026)",
+      "author_year": "Moon Sun Song et al. (2026)",
       "doi": "10.4324/9781003755081-10",
       "url": "https://doi.org/10.4324/9781003755081-10",
       "abstract_available": false,
@@ -3816,7 +3816,7 @@
         "AJBX2WAW"
       ],
       "title": "Semantic Stability, Response Strategies, and Bias Analysis of Generative Artificial Intelligence in Psychological Health Education",
-      "author_year": "Mu Yi (2026)",
+      "author_year": "Mu Yi et al. (2026)",
       "doi": "10.16719/j.cnki.1671-6981.20260201",
       "url": "https://jps.ecnu.edu.cn/EN/10.16719/j.cnki.1671-6981.20260201",
       "abstract_available": false,
@@ -3873,7 +3873,7 @@
         "KI9GRGHB"
       ],
       "title": "Theorising algorithmic justice",
-      "author_year": "Olivera Marjanovic (2022)",
+      "author_year": "Marjanovic et al. (2022)",
       "doi": "10.1080/0960085X.2021.1934130",
       "url": "https://doi.org/10.1080/0960085X.2021.1934130",
       "abstract_available": true,
@@ -3928,7 +3928,7 @@
         "65NGEK5Q"
       ],
       "title": "Small Models Achieve Large Language Model Performance: Evaluating Reasoning-Enabled AI for Secure Child Welfare Research",
-      "author_year": "Zia Qi (2026)",
+      "author_year": "Zia Qi et al. (2026)",
       "doi": "10.1080/26408066.2026.2616711",
       "url": "https://doi.org/10.1080/26408066.2026.2616711",
       "abstract_available": false,
@@ -4052,7 +4052,7 @@
         "TFMETSCH"
       ],
       "title": "BiasFreeBench: a Benchmark for Mitigating Bias in Large Language Model Responses",
-      "author_year": "Xin Xu (2026)",
+      "author_year": "Xin Xu et al. (2026)",
       "doi": null,
       "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/71c3451f6cd6a4f82bb822db25cea4fd-Abstract-Conference.html",
       "abstract_available": false,
@@ -4126,7 +4126,7 @@
         "NN49FMDP"
       ],
       "title": "Pensar críticamente la inteligencia artificial en la escuela: un estudio de caso desde una perspectiva de género",
-      "author_year": "Maria Emilia Echeveste (2026)",
+      "author_year": "Maria Emilia Echeveste et al. (2026)",
       "doi": "10.21556/edutec.2026.96.4777",
       "url": "https://edutec.es/revista/index.php/edutec-e/article/view/4777",
       "abstract_available": false,
@@ -4198,7 +4198,7 @@
         "I355NWWT"
       ],
       "title": "Generative KI in der Beratung: Empirische Befunde mit Blick auf Nutzungsbedingungen von Chatbots",
-      "author_year": "Fabian Beloch (2026)",
+      "author_year": "Fabian Beloch et al. (2026)",
       "doi": "10.21240/dimesoz/2026/1/57",
       "url": "https://www.dime-sozial.de/index.php/dimesoz/article/view/57",
       "abstract_available": false,
@@ -4251,7 +4251,7 @@
         "Z2RSS6SH"
       ],
       "title": "Intelligence artificielle et travail social, une ressource au service des professionnels ?",
-      "author_year": "LaborIA (2026)",
+      "author_year": "LaborIA et al. (2026)",
       "doi": "10.3917/vsoc.052.0029",
       "url": "https://doi.org/10.3917/vsoc.052.0029",
       "abstract_available": false,
@@ -4484,7 +4484,7 @@
         "UWQGNPSE"
       ],
       "title": "Rethinking Prompt-based Debiasing in Large Language Model",
-      "author_year": "Xinyi Yang (2025)",
+      "author_year": "Xinyi Yang et al. (2025)",
       "doi": "10.18653/v1/2025.findings-acl.1361",
       "url": "https://aclanthology.org/2025.findings-acl.1361/",
       "abstract_available": false,
@@ -4539,7 +4539,7 @@
         "RZ8ADW94"
       ],
       "title": "Generative AI So White: Racial Biases in AI Imagery Across the United States and China",
-      "author_year": "Zituo Wang (2026)",
+      "author_year": "Zituo Wang et al. (2026)",
       "doi": "10.1177/10755470261428542",
       "url": "https://journals.sagepub.com/doi/10.1177/10755470261428542",
       "abstract_available": false,
@@ -4647,7 +4647,7 @@
         "UIBZW4IK"
       ],
       "title": "Critical Literacy in an AI World",
-      "author_year": "K. A. Mills (2025)",
+      "author_year": "Mills et al. (2025)",
       "doi": null,
       "url": "https://www.routledge.com/Critical-Literacy-in-an-AI-World/Mills-Gutierrez/p/book/9781032886985",
       "abstract_available": false,
@@ -4703,7 +4703,7 @@
         "UFTH283E"
       ],
       "title": "Large language models exhibit stigmatizing behaviour in contextual judgements of health conditions",
-      "author_year": "Xi Wang (2026)",
+      "author_year": "Xi Wang et al. (2026)",
       "doi": "10.1038/s44360-026-00164-4",
       "url": "https://www.nature.com/articles/s44360-026-00164-4",
       "abstract_available": false,
@@ -4813,7 +4813,7 @@
         "XQCZTTIK"
       ],
       "title": "Integrating diversity, equity, and inclusion in generative AI applications for healthcare education: a scoping review",
-      "author_year": "Hwayeon Danielle Shin (2026)",
+      "author_year": "Hwayeon Danielle Shin et al. (2026)",
       "doi": "10.1016/j.ijmedinf.2026.106582",
       "url": "https://www.sciencedirect.com/science/article/pii/S1386505626003229",
       "abstract_available": false,
@@ -4868,7 +4868,7 @@
         "VXDH5KWP"
       ],
       "title": "AI Literacy and Gender Bias: Comparative Perspectives from the UK and Indonesia",
-      "author_year": "Nur Afny Catur Andryani (2025)",
+      "author_year": "Andryani (2025)",
       "doi": "10.3390/educsci15091143",
       "url": "https://www.mdpi.com/2227-7102/15/9/1143",
       "abstract_available": true,
@@ -4997,7 +4997,7 @@
         "RH8MC67Z"
       ],
       "title": "New model, old risks: sociodemographic bias and adversarial hallucinations vulnerability in GPT-5",
-      "author_year": "Mahmud Omar (2026)",
+      "author_year": "Mahmud Omar et al. (2026)",
       "doi": "10.1038/s41746-026-02584-8",
       "url": "https://www.nature.com/articles/s41746-026-02584-8",
       "abstract_available": false,
@@ -5050,7 +5050,7 @@
         "IYUPQPTA"
       ],
       "title": "Black feminism and Artificial Intelligence: the possibilities and limitations of contesting discriminatory AI from a critical social theory perspective",
-      "author_year": "Laura Schelenz (2025)",
+      "author_year": "Schelenz (2025)",
       "doi": "10.3389/fsoc.2025.1602947",
       "url": "https://www.frontiersin.org/journals/sociology/articles/10.3389/fsoc.2025.1602947/full",
       "abstract_available": true,
@@ -5125,7 +5125,7 @@
         "V8SBEH4E"
       ],
       "title": "Algorithm beyond Neutrality: Feminist Approaches to Redefining Artificial Intelligence",
-      "author_year": "Manavi Shahi (2026)",
+      "author_year": "Shahi et al. (2026)",
       "doi": "10.2991/978-94-6239-618-0_20",
       "url": "https://www.atlantis-press.com/proceedings/aihle-25/126022241",
       "abstract_available": true,
@@ -5252,7 +5252,7 @@
         "WK8IJUXQ"
       ],
       "title": "Multi-Persona Thinking for Bias Mitigation in Large Language Models",
-      "author_year": "Yuxing Chen (2026)",
+      "author_year": "Yuxing Chen et al. (2026)",
       "doi": "10.18653/v1/2026.findings-acl.1389",
       "url": "https://aclanthology.org/2026.findings-acl.1389/",
       "abstract_available": false,
@@ -5305,7 +5305,7 @@
         "SV7RABKM"
       ],
       "title": "ChatGPT in Social Work? Insights from MSW Students",
-      "author_year": "Shih-Ying Cheng (2026)",
+      "author_year": "Shih-Ying Cheng et al. (2026)",
       "doi": "10.1080/10437797.2025.2594423",
       "url": "https://doi.org/10.1080/10437797.2025.2594423",
       "abstract_available": false,
@@ -5360,7 +5360,7 @@
         "T2URTGBE"
       ],
       "title": "Using ChatGPT for Qualitative Social Media Analysis: Insights for Cross-Cultural Social Work",
-      "author_year": "Michin Hong (2026)",
+      "author_year": "Michin Hong et al. (2026)",
       "doi": "10.1086/740605",
       "url": "https://doi.org/10.1086/740605",
       "abstract_available": false,
@@ -5416,7 +5416,7 @@
         "5G2VPZR8"
       ],
       "title": "AI Ethics for the Global Majority: Lessons from Decolonial Feminist Bioethics",
-      "author_year": "A. Rangel Teixeira (2026)",
+      "author_year": "Rangel Teixeira (2026)",
       "doi": "10.1007/978-3-032-07830-8_12",
       "url": "https://link.springer.com/chapter/10.1007/978-3-032-07830-8_12",
       "abstract_available": true,
@@ -5545,7 +5545,7 @@
         "A7U389P5"
       ],
       "title": "Mitigating medical bias in large language models by prompt engineering: an empirical study of effectiveness and trade-offs",
-      "author_year": "Ying Xiao (2026)",
+      "author_year": "Ying Xiao et al. (2026)",
       "doi": "10.1098/rsta.2025.0125",
       "url": "https://royalsocietypublishing.org/doi/10.1098/rsta.2025.0125",
       "abstract_available": false,
@@ -5652,7 +5652,7 @@
         "DZ5EAPXR"
       ],
       "title": "Sycophantic AI decreases prosocial intentions and promotes dependence",
-      "author_year": "Myra Cheng (2026)",
+      "author_year": "Myra Cheng et al. (2026)",
       "doi": "10.1126/science.aec8352",
       "url": "https://doi.org/10.1126/science.aec8352",
       "abstract_available": false,
@@ -5726,7 +5726,7 @@
         "UGN4TS5R"
       ],
       "title": "Implicit Gender, Racial, and Ethnic Biases in Large Language Models: An Audit Study of Automated Psychiatric Diagnoses",
-      "author_year": "Sachin R. Pendse (2026)",
+      "author_year": "Sachin R. Pendse et al. (2026)",
       "doi": "10.1016/j.mcpdig.2026.100344",
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13217584/",
       "abstract_available": false,
@@ -5779,7 +5779,7 @@
         "DENAHEUW"
       ],
       "title": "Designing a framework for ethnography-driven prompt engineering in social work",
-      "author_year": "Miroslavas Seniutis (2025)",
+      "author_year": "Miroslavas Seniutis et al. (2025)",
       "doi": "10.14254/1795-6889.2025.21-1.5",
       "url": "https://www.ht.csr-pub.eu/index.php/ht/article/view/460",
       "abstract_available": false,
@@ -5855,7 +5855,7 @@
         "Z9DNTBFF"
       ],
       "title": "Worst of Both Worlds: Biases Compound in Pre-trained Vision-and-Language Models",
-      "author_year": "Tejas Srinivasan (2022)",
+      "author_year": "Srinivasan et al. (2022)",
       "doi": "10.18653/v1/2022.gebnlp-1.10",
       "url": "https://aclanthology.org/2022.gebnlp-1.10/",
       "abstract_available": false,
@@ -5908,7 +5908,7 @@
         "EF9TQIRK"
       ],
       "title": "Unveiling gender bias in AI: A classroom reflection on media representation and AI literacy in postgraduate education",
-      "author_year": "T. Hu (2026)",
+      "author_year": "Hu (2026)",
       "doi": "10.3828/dap.2026.7",
       "url": null,
       "abstract_available": false,
@@ -5963,7 +5963,7 @@
         "8MM5BZN8"
       ],
       "title": "The Adoption of Generative AI by Social Workers in Practice: A Scoping Review",
-      "author_year": "Chuhan Bai (2026)",
+      "author_year": "Chuhan Bai et al. (2026)",
       "doi": "10.1177/10497315261469433",
       "url": "https://doi.org/10.1177/10497315261469433",
       "abstract_available": false,
@@ -6018,7 +6018,7 @@
         "KUVUZMDU"
       ],
       "title": "Addressing benchmarking gaps in large language models for health and medicine with dynamic red-teaming",
-      "author_year": "Jiazhen Pan (2026)",
+      "author_year": "Jiazhen Pan et al. (2026)",
       "doi": "10.1038/s44360-026-00152-8",
       "url": "https://www.nature.com/articles/s44360-026-00152-8",
       "abstract_available": false,
@@ -6104,7 +6104,7 @@
         "VYCF5NCB"
       ],
       "title": "Power Imbalances in Society and AI: On the Need to Expand the Feminist Approach",
-      "author_year": "Eva Gengler (2025)",
+      "author_year": "Gengler et al. (2025)",
       "doi": "10.1007/978-3-031-80119-8_6",
       "url": "https://link.springer.com/book/10.1007/978-3-031-80119-8",
       "abstract_available": true,
@@ -6159,7 +6159,7 @@
         "P285BA5N"
       ],
       "title": "GenderAlign: An Alignment Dataset for Mitigating Gender Bias in Large Language Models",
-      "author_year": "Tao Zhang (2024)",
+      "author_year": "Zhang et al. (2024)",
       "doi": "10.48550/arXiv.2406.13925",
       "url": "http://arxiv.org/abs/2406.13925",
       "abstract_available": true,
@@ -6341,7 +6341,7 @@
         "ZXVBZQGS"
       ],
       "title": "No Free Lunch in Language Model Bias Mitigation? Targeted Bias Reduction Can Exacerbate Unmitigated LLM Biases",
-      "author_year": "Shireen Chand (2026)",
+      "author_year": "Shireen Chand et al. (2026)",
       "doi": "10.3390/ai7010024",
       "url": "https://www.mdpi.com/2673-2688/7/1/24",
       "abstract_available": false,
@@ -6396,7 +6396,7 @@
         "ZFRE26IV"
       ],
       "title": "Algorithmic bias in clinical resource allocation by a large language model: a cross-sectional in-silico evaluation of 13,608 decisions",
-      "author_year": "Siddharth Gandhi (2026)",
+      "author_year": "Siddharth Gandhi et al. (2026)",
       "doi": "10.1186/s12910-026-01496-2",
       "url": "https://link.springer.com/article/10.1186/s12910-026-01496-2",
       "abstract_available": false,
@@ -6451,7 +6451,7 @@
         "DHKP5FGN"
       ],
       "title": "AI-enhanced ethical decision-making in social work: development and testing of an application-specific language model",
-      "author_year": "Jia-Lin Zhao (2026)",
+      "author_year": "Jia-Lin Zhao et al. (2026)",
       "doi": "10.1080/02650533.2026.2683352",
       "url": "https://doi.org/10.1080/02650533.2026.2683352",
       "abstract_available": false,

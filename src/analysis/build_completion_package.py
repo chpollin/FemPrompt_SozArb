@@ -623,10 +623,11 @@ def _work_rows(
                 field_values[name] = list(next(iter(sets)))
             elif len(sets) > 1:
                 field_conflicts[name] = [list(value) for value in sorted(sets)]
+            # PRISM records an undecidable field as true; a stored false withdraws it.
             undecidable = [
                 row["undecidable"][name]
                 for row in eligible_agent_rows
-                if name in row["undecidable"]
+                if row["undecidable"].get(name) is True
             ]
             if undecidable:
                 field_undecidable[name] = undecidable

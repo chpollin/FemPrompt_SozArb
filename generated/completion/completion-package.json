@@ -25145,7 +25145,7 @@
     "targeted_followup_search_date": "2026-09-05",
     "targeted_gap_fill_candidates": true
   },
-  "source_fingerprint": "sha256:507be2d3b8a89224c1f345cfd1ba44afaf76a7f8f9c7c6ed7dc061aed381d0d1",
+  "source_fingerprint": "sha256:9e3d96753ee6efb7ddfd4ed2b7a4a5ca5b56f23f8c72e64ebd7878c54bade197",
   "sources": [
     {
       "path": "assessment/categories.yaml",
@@ -25369,7 +25369,7 @@
     },
     {
       "path": "docs/data/research_vault_v2.json",
-      "sha256": "7c0d00cf927c072f91b3b7142486f431736a460c2a251c6d26d85cdaf47f39c3"
+      "sha256": "3ffdec53e6d4c0dd2961d2e9c22dd92ab9db8725726d240423168cb64ecf5a52"
     },
     {
       "path": "docs/data/screening/ar2.json",
@@ -26173,7 +26173,7 @@
     },
     {
       "path": "generated/agent-screening-queue.json",
-      "sha256": "a1d2963ccd70810695a463d4e7cde0792f4dfd2e70e5831542304cc0572213af"
+      "sha256": "31878d757af38bfe61ef0209bd5765dcc1039586e5a0c3ae253ef3579629bc7f"
     },
     {
       "path": "generated/conformance/conformance_map.yaml",
@@ -28065,7 +28065,7 @@
     },
     {
       "path": "src/analysis/build_completion_package.py",
-      "sha256": "430f3c61fe65f82c6362e495860f5c1e38371f81baa87e0dd368bffc40b55a47"
+      "sha256": "7c13bf9ea4c2651e7ddf36cce9070edeed27848a5efc421bb91f83f5fe514ba2"
     },
     {
       "path": "src/analysis/historical_resolution.py",

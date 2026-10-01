@@ -28,7 +28,10 @@ from collections.abc import Mapping, Sequence
 from pathlib import Path
 from typing import Any
 
-from src.analysis.metadata_corrections import corrected_csv_metadata
+from src.analysis.metadata_corrections import (
+    apply_metadata_corrections,
+    corrected_csv_metadata,
+)
 from src.analysis.work_versions import load_registry, lookup_by_record
 from src.file_hashing import canonical_file_bytes
 from src.publish.project_active_distillates import project_active_distillates
@@ -296,6 +299,10 @@ def corpus_metadata() -> dict[str, dict[str, Any]]:
     keys = [item["key"] for item in items]
     if len(keys) != len(set(keys)):
         raise ValueError("Duplicate Zotero record keys")
+    creators = {
+        item["key"]: item.get("creators", [])
+        for item in apply_metadata_corrections(REPO_ROOT, items)
+    }
     for item in items:
         metadata.setdefault(
             item["key"],
@@ -325,7 +332,32 @@ def corpus_metadata() -> dict[str, dict[str, Any]]:
                 "Journal": item.get("publicationTitle", ""),
             },
         )
-    return corrected_csv_metadata(REPO_ROOT, metadata)
+    metadata = corrected_csv_metadata(REPO_ROOT, metadata)
+    for key, row in metadata.items():
+        if key in creators:
+            row["_creators"] = creators[key]
+    return metadata
+
+
+def author_year_label(creators: Sequence[Mapping[str, Any]], year: int | None) -> str:
+    """Build one citation label form for every record from its Zotero creators.
+
+    The assessment sheets carried hand-made labels in several forms (full names,
+    "A & B", "(n.d.)", " (None)"), so the label is derived, never copied.
+    """
+    named = [
+        creator
+        for creator in creators
+        if creator.get("lastName") or creator.get("name")
+    ]
+    authors = [c for c in named if c.get("creatorType") == "author"] or named
+    if not authors:
+        return ""
+    first = authors[0]
+    label = str(first.get("lastName") or first.get("name")).strip()
+    if len(authors) > 1:
+        label += " et al."
+    return f"{label} ({year})" if year else label
 
 
 def corpus_assessment_rows(
@@ -440,6 +472,19 @@ def parse_llm_row(
             else:
                 knowledge_doc = f"vault/Papers/{vault_filename}"
 
+    # The full-text fallback cascade (build_fulltext.author_year_key) was calibrated on
+    # the assessment-sheet labels. Deriving it from the new label would bind further
+    # sources, which is a source-identity decision outside a label repair.
+    legacy_author = (
+        str(meta.get("Authors", "")).split(";")[0]
+        if meta.get("_metadata_correction") or not row.get("Author_Year")
+        else None
+    )
+    if legacy_author is None:
+        legacy_author_year = row["Author_Year"]
+    else:
+        legacy_author_year = f"{legacy_author} ({year})" if year else legacy_author
+
     doi = meta.get("DOI", "") or ""
     legacy_work_id, legacy_identity_basis = derive_work_identity(
         key, doi, manifest_entry
@@ -454,17 +499,15 @@ def parse_llm_row(
     return {
         "id": key,
         "title": title,
-        "author_year": (
-            f"{meta.get('Authors', '').split(';')[0]} ({year})"
-            if meta.get("_metadata_correction") or not row.get("Author_Year")
-            else row["Author_Year"]
-        ),
+        "author_year": author_year_label(meta.get("_creators", []), year),
+        "legacy_author_year": legacy_author_year,
         "authors": meta.get("Authors", ""),
         "year": year,
         "doi": doi,
         "url": meta.get("URL", "") or "",
-        "abstract": (meta.get("Abstract", "") or "")[:500],
-        "item_type": (meta.get("Item_Type", "") or "").lower(),
+        # Full abstract and Zotero item type as recorded; display caps belong to the UI.
+        "abstract": meta.get("Abstract", "") or "",
+        "item_type": meta.get("Item_Type", "") or "",
         "journal": meta.get("Journal", "") or "",
         **(
             {"ai_metadata_correction": meta["_metadata_correction"]}
@@ -783,6 +826,9 @@ def main(argv: Sequence[str] | None = None) -> None:
     # The canonical replay keys disagreements.csv by Zotero_Key since the pairing
     # correction; joining through the LLM sheet's sequential ID attached nothing.
     papers_by_id = {paper["id"]: paper for paper in papers}
+    # A human sheet row without a corpus record cannot attach to a paper. It stays
+    # visible in meta; generated/completion/unmapped-historical-records.csv holds it.
+    unmapped_human_records = sorted(set(human_by_key) - set(papers_by_id))
     unknown = sorted(set(disagreements) - set(papers_by_id))
     if unknown:
         raise ValueError(f"Disagreements without a corpus record: {unknown[:5]}")
@@ -875,6 +921,7 @@ def main(argv: Sequence[str] | None = None) -> None:
             "distinct_knowledge_docs": distinct_knowledge_docs,
             "knowledge_coverage": coverage_counts,
             "papers_with_human": papers_with_human,
+            "unmapped_human_records": unmapped_human_records,
             "benchmark_papers": metrics["decision"]["n"],
             "kappa_overall": metrics["decision"]["cohens_kappa"],
             "kappa_interpretation": metrics["decision"]["kappa_interpretation"],

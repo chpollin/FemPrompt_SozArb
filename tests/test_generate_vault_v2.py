@@ -25,3 +25,19 @@ def test_unique_filename_prevents_case_insensitive_overwrite(tmp_path: Path) -> 
 
     assert len({first.casefold(), second.casefold(), third.casefold()}) == 3
     assert all(len(name) <= 100 for name in (first, second, third))
+
+
+def test_assessments_read_case_and_human_diversity_column(tmp_path: Path) -> None:
+    generator = vault_module.VaultV2Generator(base_path=tmp_path)
+    generator.llm_csv_path = tmp_path / "llm.csv"
+    generator.human_csv_path = tmp_path / "human.csv"
+    generator.llm_csv_path.write_text(
+        "Zotero_Key,Decision,Gender\nA,Include,ja\n", encoding="utf-8")
+    generator.human_csv_path.write_text(
+        "Zotero_Key,Decision,Diversitaet / Intersektionalität\nA,Include,Ja\n",
+        encoding="utf-8")
+
+    generator._load_assessments()
+
+    assert generator.llm_assessments["A"]["categories"]["Gender"] is True
+    assert generator.human_assessments["A"]["categories"]["Diversitaet"] is True
