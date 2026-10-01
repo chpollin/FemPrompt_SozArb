@@ -27,6 +27,7 @@ OUTPUTS = (
     "docs/data/fulltext_manifest.json",
     "docs/data/literature_landscape.json",
     "docs/data/assertion_index.json",
+    "docs/data/assertions_working.json",
     "generated/agent-screening-queue.json",
     "generated/source-acquisition/codex-websearch-2026/source-readiness.json",
     "docs/downloads/vault.zip",
@@ -209,6 +210,8 @@ def build() -> None:
     ):
         _run(module)
     _run("src.publish.build_assertion_index")
+    # Reads the released index just written, so release state is never recomputed here.
+    _run("src.publish.build_assertion_map")
     _run(
         "src.publish.generate_literature_landscape",
         "--policy",

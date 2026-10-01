@@ -102,6 +102,10 @@ build/
 # Publishing publicly is a separate, rights-gated decision.
 docs/data/fulltext/
 docs/data/fulltext_manifest.json
+# Draft Assertions for the local argument map (src/publish/build_assertion_map.py).
+# Unreleased research content, so never served by Pages; the map falls back to
+# the released docs/data/assertion_index.json where this file is absent.
+docs/data/assertions_working.json
 
 # research-vault protected layers. Third-party full texts and the anchor layer that
 # embeds them. Same rights-gated rationale as docs/data/fulltext/, never pushed to the
