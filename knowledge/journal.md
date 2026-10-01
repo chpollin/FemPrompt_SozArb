@@ -24,6 +24,14 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## PRISM and the epistemic infrastructure (2026)
 
+### 2026-10-01: Codebook 1.4 adopted and piloted in a harness-agnostic run
+
+The operator adopted codebook 1.4 with an added field for the definition of bias and deferred the stage-status pairs until a validator exists. Human reviewers only screen, and the analysis fields are coded by AI agent tracks alone. `assessment/categories.yaml` now carries the four SQ4 fields, the pilot field `AN_Task`, rules and anchors for bias axes and harm types and the field state `not_collected`, which the completion package derives from the codebook version every new annotation records ([[codebook-v1.4-proposal]]). The run contract became harness-agnostic under run schema 1.4 with per-track execution environments and coding packets 0.2, and track agreement with a blind human spot check replaced the human pilot ([[update-protocol#Validation of the AI coding]]). The draft document was kept under its name and rewritten as the adopted rationale, because the protocol holds the binding rules and a rename would remove the old path.
+
+A pilot on ten included works ran as two Claude Code subagents on one LLM with a separate AI Agent Review. The tracks agreed on every decision and diverged most on harm types, and the review resolved each difference without overriding a shared value ([[update-protocol#Pilot run of 1 October 2026]]). Two defects surfaced. The protocol text still named 1.3 during the run, and the governed transfer refused the key `ar2` since ADR-044, which the transfer now avoids by running as an agent session.
+
+Open. The rule gaps the pilot found in harm types, gender understanding and theory references, the spot check of the proposed sample by the domain experts, the full run over the remaining Includes with the recoding of the works coded under 1.3, and the deletion of the obsolete `assessment/categories-v1.4.patch` lie with the operator.
+
 ### 2026-10-01: PRISMA flow per identification source
 
 The paper promises PRISMA reporting, but only round one had a reproducible flow. `src/replay/prisma_flow.py` now derives the flow for every source and lane from the committed lane records and writes `generated/prisma-flow/` in the project build. Round one is taken from the replay itself, so the two cannot diverge. The later sources are deduplicated in execution order by DOI, arXiv identifier and normalised title, and each transferred find is followed to its current Work-level decision. Multiple-finds matrices across the deep-research systems replace the meeting's "duplicates across databases". A separately written verification script, run by an independent agent without access to the generator, produced the same counts in every compared box after one correction in the generator, which had read semicolon-separated and listed DOIs of exclusion entries as a single invalid DOI.
