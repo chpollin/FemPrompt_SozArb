@@ -1482,12 +1482,91 @@ function authorDisplay(paper) {
         .replace(/[\s,;]+$/, '') || 'nicht angegeben';
 }
 
+// Docling writes &, < and > of the PDF text as HTML entities into its Markdown, and the
+// renderer escapes once more on output, which showed "&amp;" literally. The reading text
+// is decoded once here, at its entry into the reader, never in the stored file whose
+// hash binds the source. One pass, so "&amp;lt;" becomes the literal "&lt;" of the PDF.
+function decodeConverterEntities(text) {
+    return String(text || '').replace(/&(amp|lt|gt);/g, function(match, name) {
+        return { amp: '&', lt: '<', gt: '>' }[name];
+    });
+}
+
+// Publisher cover pages (Taylor & Francis download sheet, ACM Digital Library sheet)
+// precede the article in converted PDFs. Each marker is a line that occurs only on such a
+// sheet. The rule is conservative: the first marker must sit among the first lines, at
+// least three distinct markers must occur within the leading window, and everything up
+// to the last of them is skipped, together with at most three short residue lines before
+// the next heading (sponsor names, a stray glyph). The stored text stays unchanged; the
+// skip happens at render time only.
+const COVER_MARKERS = [
+    /^ISSN:\s/i,
+    /^To cite this article:/i,
+    /^To link to this article:/i,
+    /^Published online:/i,
+    /^Submit your article to this journal/i,
+    /^Article views:/i,
+    /^View related articles/i,
+    /^View Crossmark data/i,
+    /^Citing articles:/i,
+    /^CrossMark$/i,
+    /^Full Terms & Conditions of access and use/i,
+    /^Latest updates:\s*h(?:tt)?ps?:\/\/dl\.acm\.org\//i,
+    /^RESEARCH-ARTICLE$/,
+    /^Open Access Support provided by:/i,
+    /^PDF Download\b/i,
+    /^Citation in BibTeX format$/i,
+    /^Conference Sponsors:/i
+];
+const COVER_FIRST_MARKER_WITHIN = 8;   // non-empty lines from the start
+const COVER_WINDOW = 60;               // non-empty lines searched for markers
+const COVER_MIN_MARKERS = 3;
+
+function coverMarkerIndex(line) {
+    const value = String(line || '').trim().replace(/^#{1,6}\s+/, '');
+    for (let m = 0; m < COVER_MARKERS.length; m++) if (COVER_MARKERS[m].test(value)) return m;
+    return -1;
+}
+
+// Returns the line index at which the article starts, or 0 when no cover page is found.
+function publisherCoverEnd(lines) {
+    let seen = 0, last = -1, first = -1;
+    const distinct = {};
+    for (let i = 0; i < lines.length && seen < COVER_WINDOW; i++) {
+        if (!lines[i].trim()) continue;
+        seen++;
+        const m = coverMarkerIndex(lines[i]);
+        if (m === -1) continue;
+        if (first === -1) {
+            if (seen > COVER_FIRST_MARKER_WITHIN) return 0;
+            first = i;
+        }
+        distinct[m] = true;
+        last = i;
+    }
+    if (first === -1 || Object.keys(distinct).length < COVER_MIN_MARKERS) return 0;
+    let end = last + 1, residue = 0;
+    for (let k = end; k < lines.length; k++) {
+        const value = lines[k].trim();
+        if (!value) continue;
+        if (/^#{1,6}\s/.test(value) || residue >= 3 || value.length > 40) break;
+        residue++;
+        end = k + 1;
+    }
+    // residue only counts when a heading follows it; otherwise it may be the article's
+    // first paragraph and stays
+    let next = end;
+    while (next < lines.length && !lines[next].trim()) next++;
+    if (residue && !(next < lines.length && /^#{1,6}\s/.test(lines[next].trim()))) end = last + 1;
+    return end;
+}
+
 // Full-text sources vary between publisher Markdown and Docling output. Prefer an
 // explicit Abstract/Zusammenfassung heading near the document start. Otherwise only
 // remove a leading title and metadata lines that match the structured corpus record;
 // no unknown prose is discarded.
 function paperBodyMarkdown(md, paper) {
-    const clean = stripFrontmatter(md || '');
+    const clean = decodeConverterEntities(stripFrontmatter(md || ''));
     let lines = clean.split(/\r?\n/);
     const sourceUrl = normalizedSourceUrl(paper && paper.url);
     if (sourceUrl) lines = lines.filter(function(line) {
@@ -1499,6 +1578,7 @@ function paperBodyMarkdown(md, paper) {
     });
     if (abstractAt !== -1) return lines.slice(abstractAt).join('\n').trim();
 
+    lines = lines.slice(publisherCoverEnd(lines));
     while (lines.length && !lines[0].trim()) lines.shift();
     const title = normalizedLine(paper && paper.title);
     if (lines.length && title && normalizedLine(lines[0]) === title) lines.shift();
@@ -1825,7 +1905,7 @@ function readFilterQuery(query) {
     const cats = String(state.statusFilter === 'offen' ? '' : (query.get('cats') || '')).split(',').filter(function(c) { return ALL_CATS.indexOf(c) !== -1; });
     state.catFilter = cats.filter(function(c, i) { return cats.indexOf(c) === i; });
     // checked against the assignment file when the filter is applied, which loads later
-    state.assigneeFilter = normalizedReviewerKey(query.get('assignee')) || 'alle';
+    state.assigneeFilter = state.statusFilter === 'erfasst' ? 'alle' : (normalizedReviewerKey(query.get('assignee')) || 'alle');
 }
 
 function syncUrl() {
@@ -2107,9 +2187,11 @@ function baseRows() {
 }
 
 // The assignee filter exists where the status filter does and an assignment file
-// was loaded. A requested key the file does not declare falls back to all papers.
+// was loaded. A requested key the file does not declare falls back to all papers. The
+// assignment splits the open papers, so under Erfasst the control would only count
+// zeros; it is left out there and the filter does not apply.
 function assigneeFilterAvailable() {
-    return statusFilterAvailable() && !!assignment;
+    return statusFilterAvailable() && !!assignment && state.statusFilter !== 'erfasst';
 }
 
 function activeAssignee() {
@@ -2190,11 +2272,6 @@ function renderScreening() {
 
 // ---- left: corpus navigator with filters and full-text search ----
 
-function capturedCount() {
-    if (acceptanceMode) return 0;
-    return papers.reduce(function(n, p) { return n + (isDone(p) ? 1 : 0); }, 0);
-}
-
 function positionBarHtml() {
     const rows = visibleRows();
     const at = rows.findIndex(function(row) { return row.index === state.index; });
@@ -2202,7 +2279,6 @@ function positionBarHtml() {
     html += '<span class="pt-ws-pos" aria-label="Position in der Liste">' + (at === -1 ? '–' : (at + 1)) + ' / ' + rows.length + '</span>';
     if (canEdit() && !acceptanceMode) {
         const gate = saveGate(papers[state.index]);
-        html += '<span class="pt-ws-done">' + capturedCount() + ' von ' + papers.length + ' erfasst</span>';
         html += '<span class="pt-spacer"></span>';
         if (gate.storage) html += '<span class="pt-save-hint" id="pt-save-hint">' + EC.escapeHtml(gate.storage) + '</span>';
         const label = gate.ok ? gate.label : 'Speichern nicht möglich: ' + (gate.storage || gate.reasons[0] || gate.label);
@@ -2304,8 +2380,8 @@ function corpusListHtml() {
             '<span class="pt-nav-mark pt-mark-' + st + '" aria-hidden="true"></span>' +
             '<span class="pt-nav-text"><span class="pt-nav-t">' + EC.escapeHtml(p.title || '(ohne Titel)') + '</span>' +
             '<span class="pt-nav-m">' + EC.escapeHtml(p.author_year || p.authors || 'Autor:in/Jahr unbekannt') +
-            (who ? '<span class="pt-nav-assignee"> &middot; ' + EC.escapeHtml(who) + '</span>' : '') +
-            (drafts[p.id] && drafts[p.id].dirty ? '<span class="pt-nav-draft"> &middot; nicht gespeichert</span>' : '') + '</span>' +
+            (who ? '<span class="pt-nav-assignee">, ' + EC.escapeHtml(who) + '</span>' : '') +
+            (drafts[p.id] && drafts[p.id].dirty ? '<span class="pt-nav-draft">, nicht gespeichert</span>' : '') + '</span>' +
             (q && result.kind === 'DOI' && p.doi ? '<span class="pt-nav-id">DOI ' + EC.escapeHtml(p.doi) + '</span>' : '') +
             '</span>' + categoryDotsHtml(cats) + badge +
             '<span class="pt-sr-only">, ' + statusLabel(st) + (who ? ', zugeteilt: ' + EC.escapeHtml(who) : '') + (catNames.length ? ', ' + EC.escapeHtml(catNames.join(', ')) : '') + '</span>' +
@@ -2364,6 +2440,9 @@ function bindFilters() {
         btn.addEventListener('click', function() {
             state.statusFilter = btn.dataset.status;
             if (state.statusFilter === 'offen') state.catFilter = [];
+            // the hidden assignee filter is cleared, so the counts of Alle and Offen stay
+            // true for what a click on them shows
+            if (state.statusFilter === 'erfasst') state.assigneeFilter = 'alle';
             refreshCorpusList();
             syncUrl();
             const again = document.querySelector('.pt-nav [data-status="' + state.statusFilter + '"]');
@@ -2458,7 +2537,7 @@ function readingShellHtml(p) {
         '<div><dt>Autor:innen</dt><dd>' + EC.escapeHtml(authorDisplay(p)) + '</dd></div>' +
         '<div><dt>Jahr</dt><dd>' + EC.escapeHtml(p.publication_year || p.year || 'nicht angegeben') + '</dd></div>' +
         (p.journal ? '<div><dt>Publikation</dt><dd>' + EC.escapeHtml(p.journal) + '</dd></div>' : '') +
-        (doi ? '<div><dt>DOI</dt><dd class="mono"><a class="pt-doi-link" href="' + EC.escapeHtml(doiHref(doi)) +
+        (doi ? '<div class="pt-meta-doi"><dt>DOI</dt><dd class="mono"><a class="pt-doi-link" href="' + EC.escapeHtml(doiHref(doi)) +
             '" target="_blank" rel="noopener noreferrer" title="DOI ' + EC.escapeHtml(doi) + ' öffnen">' + EC.escapeHtml(doi) + '</a></dd></div>' : '') +
         (sourceUrl ? '<div><dt>Quelle</dt><dd><a class="pt-source-link" href="' + EC.escapeHtml(sourceUrl) +
             '" target="_blank" rel="noopener noreferrer">Webseite öffnen</a></dd></div>' : '') +
@@ -2471,8 +2550,8 @@ function readingShellHtml(p) {
     h += '<div class="pt-intext-bar" id="pt-intext-bar" hidden>' +
         '<input id="pt-intext" type="search" aria-label="Im Text suchen" aria-keyshortcuts="Enter Shift+Enter" placeholder="Im Text suchen">' +
         '<span class="pt-intext-count" id="pt-intext-count" aria-hidden="true"></span>' +
-        '<button type="button" class="pt-intext-nav" id="pt-intext-prev" aria-label="Vorheriger Treffer" disabled>&lsaquo;</button>' +
-        '<button type="button" class="pt-intext-nav" id="pt-intext-next" aria-label="Nächster Treffer" disabled>&rsaquo;</button>' +
+        '<button type="button" class="pt-intext-nav" id="pt-intext-prev" aria-label="Vorheriger Treffer" hidden>&lsaquo;</button>' +
+        '<button type="button" class="pt-intext-nav" id="pt-intext-next" aria-label="Nächster Treffer" hidden>&rsaquo;</button>' +
         (canEdit() ? '<button type="button" class="pt-btn pt-pin-hit" id="pt-pin-hit" disabled aria-describedby="pt-pin-help">Treffer anheften</button>' +
             '<span class="pt-sr-only" id="pt-pin-help">Heftet den aktuellen Treffer als Beleg an eine Kategorie. Eine markierte Textstelle lässt sich ebenso anheften. ' +
             'Ein Paper-Beleg setzt eine leere Kategorie auf teilweise.</span>' : '') +
@@ -2603,7 +2682,8 @@ function applyInText(q) {
     let cnt = document.getElementById('pt-intext-count');
     let pinBtn = document.getElementById('pt-pin-hit');
     const stepBtns = ['pt-intext-prev', 'pt-intext-next'].map(function(id) { return document.getElementById(id); }).filter(Boolean);
-    const setStepping = function(on) { stepBtns.forEach(function(b) { b.disabled = !on; }); };
+    // the arrows appear only when there is more than one hit to step between
+    const setStepping = function(on) { stepBtns.forEach(function(b) { b.hidden = !on; }); };
     q = (q || '').trim();
     appliedInTextQuery = q;
     if (q.length < 2) { if (cnt) cnt.textContent = ''; if (pinBtn) pinBtn.disabled = true; setStepping(false); return; }
@@ -3076,7 +3156,7 @@ function provenanceRefLabel(item) {
     const hash = hashPrefix(item.sha256 || item.hash);
     let text = item.type && label ? item.type + ': ' + label : (label || String(item.type || ''));
     if (!text) return '';
-    if (hash) text += ' · ' + hash;
+    if (hash) text += ', ' + hash;
     return text;
 }
 
@@ -3087,7 +3167,7 @@ function promptLabel(prompt) {
     const reference = String(prompt.reference || prompt.id || prompt.path || '').trim();
     const version = String(prompt.version || '').trim();
     if (!reference && !version) return null;
-    return version ? (reference ? reference + ' · v' + version : 'v' + version) : reference;
+    return version ? (reference ? reference + ', v' + version : 'v' + version) : reference;
 }
 
 function modelLabel(model) {
@@ -3130,9 +3210,9 @@ function provenanceHtml(record) {
     h += '<dl class="pt-verification-grid">' +
         '<div><dt>Annotation</dt><dd>' + verificationValue(provenance.annotation_id) + '</dd></div>' +
         '<div><dt>Ausgangsstand</dt><dd>' + EC.escapeHtml(lifecycleLabel(view.lifecycle.baseline.state)) +
-            (view.lifecycle.baseline.basis ? ' · ' + EC.escapeHtml(view.lifecycle.baseline.basis) : '') + '</dd></div></dl>';
+            (view.lifecycle.baseline.basis ? ', ' + EC.escapeHtml(view.lifecycle.baseline.basis) : '') + '</dd></div></dl>';
     activities.forEach(function(activity) {
-        h += '<div class="pt-verification-activity"><p>' + EC.escapeHtml(activity.type) + ' · ' + verificationValue(activity.run_id) + '</p>' +
+        h += '<div class="pt-verification-activity"><p>' + EC.escapeHtml(activity.type) + ', ' + verificationValue(activity.run_id) + '</p>' +
             '<dl class="pt-verification-grid"><div><dt>Prompt</dt><dd>' + verificationLabelValue(promptLabel(activity.prompt)) + '</dd></div>' +
             '<div><dt>Modell</dt><dd>' + verificationLabelValue(modelLabel(activity.model)) + '</dd></div></dl></div>';
     });
@@ -3140,11 +3220,11 @@ function provenanceHtml(record) {
     h += '<p class="pt-provenance-label">Quellen</p>' + verificationRefList(provenance.used_sources, 'Keine Quellenprovenienz');
     h += '<p class="pt-provenance-label">Abgeleitet aus</p>' + verificationRefList(provenance.derived_from, 'Keine abgeleiteten Artefakte');
     h += '<p class="pt-provenance-label">Annotationen</p><ol class="pt-verify-refs">' + view.annotations.map(function(annotation) {
-        return '<li>' + verificationValue(annotation.annotation_id) + (annotation.supersedes ? ' · ersetzt ' + EC.escapeHtml(annotation.supersedes) : '') +
-            (annotation.annotation_id === view.active_annotation_id ? ' · aktiv' : '') + '</li>';
+        return '<li>' + verificationValue(annotation.annotation_id) + (annotation.supersedes ? ', ersetzt ' + EC.escapeHtml(annotation.supersedes) : '') +
+            (annotation.annotation_id === view.active_annotation_id ? ', aktiv' : '') + '</li>';
     }).join('') + '</ol>';
     h += '<p class="pt-provenance-label">Validierungen</p>' + (view.checks.length ? '<ol class="pt-verify-refs">' + view.checks.map(function(check) {
-        return '<li>' + verificationValue(check.check_type) + ': ' + verificationValue(check.status) + ' · ' + EC.escapeHtml(dateLabel(check.at)) + '</li>';
+        return '<li>' + verificationValue(check.check_type) + ': ' + verificationValue(check.status) + ', ' + EC.escapeHtml(dateLabel(check.at)) + '</li>';
     }).join('') + '</ol>' : verificationEmpty('Keine Validierungsquittung'));
     return h + '</div></details>';
 }
@@ -3361,7 +3441,7 @@ function provenanceLine(p, subject) {
     if (subject.kind === 'own') {
         const r = subject.record;
         let text = acceptanceMode ? 'Vorgeschlagenes Testurteil' : 'Deine Bewertung' + (r.ts ? ', gespeichert ' + dateLabel(r.ts) : '');
-        if (derivedFromExpert(r)) text += ' · aus der Expert:innen-Entscheidung';
+        if (derivedFromExpert(r)) text += ', aus der Expert:innen-Entscheidung';
         return text;
     }
     if (subject.kind === 'expert') {
@@ -3374,8 +3454,24 @@ function decisionBadgeHtml(record, colored) {
     const derived = deriveDecision(record.categories || {});
     return '<span class="pt-decision ' + (colored ? 'pt-decision-' + decCls(record.decision) : 'pt-decision-neutral') +
         '" id="pt-decision">' + EC.escapeHtml(record.decision) + '</span>' +
-        (record.override ? '<span class="pt-derived">abgeleitet: ' + EC.escapeHtml(derived) + '</span>' : '');
+        (record.override && !expertAdoptedExclusion(record) ? '<span class="pt-derived">abgeleitet: ' + EC.escapeHtml(derived) + '</span>' : '');
 }
+
+// An expert Exclude taken over against the derivation rule (ADR-042 decision 3) showed
+// the same fact four times: the decision, the derived value, the switched-on override
+// and the confirmation reason. It is stated once as a sentence below the head; the
+// override and the reason stay editable behind one disclosure in Bearbeiten. The record
+// itself is unchanged.
+function expertAdoptedExclusion(record) {
+    return !!(record && record.decision === 'Exclude' && record.override && record.reason === EXPERT_EXCLUSION_REASON);
+}
+
+function verdictLineHtml(record) {
+    return '<p class="pt-verdict" id="pt-verdict">Ausgeschlossen durch Expert:innen, Kategorien ergäben ' +
+        EC.escapeHtml(deriveDecision(record.categories || {})) + '</p>';
+}
+
+let verdictEditOpenFor = null; // paper id whose disclosure the reviewer opened, kept across re-renders
 
 // One row per pin; categories without a pin are summarised in one line each for the
 // expert judgement taken over without a passage and for a missing Paper Beleg.
@@ -3501,15 +3597,23 @@ function railHtml(p) {
     if (record && !(subject.kind === 'empty' && !work.dirty)) h += decisionBadgeHtml(record, subject.kind === 'own' || (editable && work.dirty));
     const draft = drafts[p.id];
     let provenance = provenanceLine(p, subject);
-    if (editable && work.dirty) provenance = subject.kind === 'empty' ? 'Neue Bewertung, nicht gespeichert' : provenance + ' · geändert, nicht gespeichert';
-    else if (!editable && canEditAvailableDraft(draft)) provenance += ' · Änderungen in Bearbeiten nicht gespeichert';
-    h += '</div><p class="pt-provenance" id="pt-provenance">' + EC.escapeHtml(provenance) + '</p>';
+    if (editable && work.dirty) provenance = subject.kind === 'empty' ? 'Neue Bewertung, nicht gespeichert' : provenance + ', geändert, nicht gespeichert';
+    else if (!editable && canEditAvailableDraft(draft)) provenance += ', Änderungen in Bearbeiten nicht gespeichert';
+    h += '</div>';
+    const verdict = expertAdoptedExclusion(record);
+    if (verdict) h += verdictLineHtml(record);
+    h += '<p class="pt-provenance" id="pt-provenance">' + EC.escapeHtml(provenance) + '</p>';
     h += '<div class="pt-rail-body">';
     const cats = record ? (record.categories || {}) : {};
     const basis = record ? (record.evidence_basis || {}) : {};
     h += dimHtml('Gegenstand', TECH_CATS, cats, editable, basis);
     h += dimHtml('Perspektive', SOCIAL_CATS, cats, editable, basis);
-    if (record) {
+    if (record && verdict) {
+        if (editable) h += '<details class="pt-verdict-edit" id="pt-verdict-edit"' + (verdictEditOpenFor === p.id ? ' open' : '') +
+            '><summary>Ausschluss ändern</summary>' + overrideHtml(record, editable) + reasonChipsHtml(record, editable) + '</details>';
+        h += evidenceRowsHtml(record, editable);
+        h += analysisEntryHtml(record, editable);
+    } else if (record) {
         h += overrideHtml(record, editable);
         if (record.decision === 'Exclude') h += reasonChipsHtml(record, editable);
         h += evidenceRowsHtml(record, editable);
@@ -3526,7 +3630,7 @@ function dockHtml(p, subject, editable) {
     let h = '<div class="pt-action-dock">';
     if (editable) {
         const gate = saveGate(p);
-        h += '<p class="pt-actions-hint" id="pt-actions-hint">' + EC.escapeHtml(gate.reasons.join(' · ')) + '</p>';
+        h += '<p class="pt-actions-hint" id="pt-actions-hint">' + EC.escapeHtml(gate.reasons.join('. ')) + '</p>';
     }
     h += '<div class="pt-actions">';
     if (editable && work.dirty) h += '<button type="button" class="pt-link-btn" id="pt-discard">Änderungen verwerfen</button>';
@@ -3797,6 +3901,8 @@ function bindAssess(p) {
         const entry = document.getElementById('pt-open-analysis'); if (entry) entry.focus();
     });
     if (!editable) return;
+    const verdictEdit = col.querySelector('#pt-verdict-edit');
+    if (verdictEdit) verdictEdit.addEventListener('toggle', function() { verdictEditOpenFor = verdictEdit.open ? p.id : null; });
     attachAnalysisStep(col);
     const discard = col.querySelector('#pt-discard');
     if (discard) discard.addEventListener('click', function() { discardDraft(p); announce('Änderungen verworfen.'); });
@@ -3835,7 +3941,7 @@ function bindAssess(p) {
 // Typing keeps the caret: only the hint and the save gate are refreshed.
 function syncDockHint(p) {
     const hint = document.getElementById('pt-actions-hint');
-    if (hint) hint.textContent = saveGate(p).reasons.join(' · ');
+    if (hint) hint.textContent = saveGate(p).reasons.join('. ');
     refreshSaveGate();
 }
 
@@ -4160,7 +4266,7 @@ function renderData(targetEl) {
     let h;
     if (trialMode) {
         h = '<div class="pt-sync-ready pt-trial-ready">' + identity +
-            '<span class="pt-folder-status">Agentischer Testlauf · isolierter Browser-Zwischenstand</span>' + statusLineHtml() +
+            '<span class="pt-folder-status">Agentischer Testlauf, isolierter Browser-Zwischenstand</span>' + statusLineHtml() +
             '<button class="pt-btn pt-trial-export" type="button">Testdaten exportieren</button>' +
             '<span class="pt-trial-note">Keine Forschungsdaten werden geschrieben.</span></div>';
     } else if (screeningHandle) {
@@ -4414,6 +4520,7 @@ const TEST_HOOK = {
     // parsing and rendering helpers
     countOcc: countOcc, stripFrontmatter: stripFrontmatter, inlineMd: inlineMd,
     renderMarkdown: renderMarkdown, splitDocLayers: splitDocLayers, paperBodyMarkdown: paperBodyMarkdown,
+    publisherCoverEnd: publisherCoverEnd, decodeConverterEntities: decodeConverterEntities,
     readingShellHtml: readingShellHtml, normalizedDoi: normalizedDoi, doiHref: doiHref,
     normalizedSourceUrl: normalizedSourceUrl, urlOnlyLine: urlOnlyLine, sameSourceUrl: sameSourceUrl, authorDisplay: authorDisplay,
     sourcePillHtml: sourcePillHtml, paperIdentityReady: paperIdentityReady,
@@ -4442,7 +4549,7 @@ const TEST_HOOK = {
     statusLabel: statusLabel, listState: listState, isCaptured: isCaptured, isDone: isDone, paperSubject: paperSubject,
     draftFor: draftFor, saveGate: saveGate, saveMode: saveMode, workDirty: function() { return !!work.dirty; },
     setWork: function(w) { work = w; }, markDirty: markDirty, drafts: function() { return JSON.parse(JSON.stringify(drafts)); },
-    capturedCount: capturedCount, visibleRows: visibleRows, filtersHtml: filtersHtml, readFilterQuery: readFilterQuery,
+    positionBarHtml: positionBarHtml, visibleRows: visibleRows, filtersHtml: filtersHtml, readFilterQuery: readFilterQuery,
     normalizeAssignment: normalizeAssignment, loadAssignment: loadAssignment, activeAssignee: activeAssignee,
     assigneeFilterAvailable: assigneeFilterAvailable,
     setAssignment: function(obj) { assignment = normalizeAssignment(obj); },

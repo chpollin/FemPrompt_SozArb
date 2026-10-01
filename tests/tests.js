@@ -2395,7 +2395,7 @@ test('the mode switch has exactly two states and exists only with local editing 
     T.setFsSupported(undefined); T.setManifestReachable(false);
 });
 
-test('list filters: status counts, category AND filter on the current annotation, counter independent of filters', function() {
+test('list filters: status counts, category AND filter on the current annotation, no duplicate captured counter', function() {
     var papersFix = [
         { id: 'F1', title: 'a', human: { decision: 'Include', all_categories: { Prompting: 1, Gender: 1 } } },
         { id: 'F2', title: 'b', human: { decision: 'Exclude', all_categories: { Prompting: 1 } } },
@@ -2416,7 +2416,8 @@ test('list filters: status counts, category AND filter on the current annotation
     assertEqual(T.visibleRows().map(function(r) { return r.paper.id; }).join('|'), 'F1|F2', 'expert decisions of the Excel workflow count as done');
     S.statusFilter = 'offen';
     assertEqual(T.visibleRows().map(function(r) { return r.paper.id; }).join('|'), 'F3');
-    assertEqual(T.capturedCount(), 2, 'the counter ignores filters');
+    // the Erfasst facet carries the count, the position bar repeats no "n von N erfasst"
+    assertNotContains(T.positionBarHtml(), 'erfasst', 'no captured counter beside the facets');
     var filters = T.filtersHtml();
     assertContains(filters, 'data-status="offen" aria-pressed="true">Offen <span class="pt-seg-count">1</span>');
     S.statusFilter = 'alle';
@@ -2456,8 +2457,8 @@ test('assignee filter: segment counts, combination with status, list label and U
     assertNotContains(T.corpusListHtml(), 'pt-nav-assignee', 'no label while one assignee is selected');
     S.assigneeFilter = 'alle'; S.statusFilter = 'alle';
     var list = T.corpusListHtml();
-    assertContains(list, 'X 2020<span class="pt-nav-assignee"> &middot; Sabine</span>');
-    assertContains(list, 'Y 2021<span class="pt-nav-assignee"> &middot; Susi</span>');
+    assertContains(list, 'X 2020<span class="pt-nav-assignee">, Sabine</span>');
+    assertContains(list, 'Y 2021<span class="pt-nav-assignee">, Susi</span>');
     assertEqual((list.match(/pt-nav-assignee/g) || []).length, 3, 'an entry naming an undeclared reviewer shows no label');
     var abstract = 'A substantive abstract that is long enough to support category screening and records the source basis without pretending that a full text was read. This sentence keeps the fixture above the quality threshold.';
     papersFix[1].abstract = abstract; papersFix[2].abstract = abstract;
@@ -2478,6 +2479,16 @@ test('assignee filter: segment counts, combination with status, list label and U
     assertNotContains(window.location.search, 'assignee=');
     T.readFilterQuery(new URLSearchParams(''));
     assertEqual(S.assigneeFilter, 'alle');
+    // the assignment splits open papers: under Erfasst the control is left out and
+    // narrows nothing, also when a link requests an assignee there
+    S.statusFilter = 'erfasst'; S.assigneeFilter = 'sabine';
+    assertEqual(T.assigneeFilterAvailable(), false, 'no assignee filter under Erfasst');
+    assertNotContains(T.filtersHtml(), 'pt-assignee-seg', 'the Zuteilung control is not rendered under Erfasst');
+    assertEqual(T.visibleRows().map(function(r) { return r.paper.id; }).join('|'), 'A1', 'a stored assignee does not narrow the Erfasst list');
+    T.readFilterQuery(new URLSearchParams('assignee=susi&status=erfasst'));
+    assertEqual(S.assigneeFilter, 'alle', 'an assignee in an Erfasst link is dropped');
+    S.statusFilter = 'offen';
+    assertContains(T.filtersHtml(), 'pt-assignee-seg', 'the control returns under Offen');
     S.statusFilter = 'alle';
     T.setAssignment(null);
     window.history.replaceState(null, '', '/');
@@ -2583,6 +2594,90 @@ test('reading metadata shows version and review only where they change the readi
     assertContains(html, 'nicht die bevorzugte Fassung');
     assertContains(html, 'pt-meta-warn');
     assertNotContains(T.versionMetaHtml({ version_type: 'unknown', peer_review_status: 'not_established' }), '<div', 'unknown values are left out');
+});
+
+// ============================================================
+// Operator screen review of 1 October 2026 (provisional, knowledge/plan.md)
+// ============================================================
+
+test('reader: converter entities are decoded once, so "&amp;" never shows literally', function() {
+    assertEqual(T.decodeConverterEntities('Deuze &amp; Beckett, a &lt; b &gt; c'), 'Deuze & Beckett, a < b > c');
+    assertEqual(T.decodeConverterEntities('&amp;lt;'), '&lt;', 'one pass: an escaped entity of the PDF stays literal');
+    var body = T.paperBodyMarkdown('## Mark Deuze &amp; Charlie Beckett\n\nText &lt;x&gt; here.', { title: 'Other' });
+    var html = T.renderMarkdown(body);
+    assertContains(html, 'Mark Deuze &amp; Charlie Beckett</h2>', 'the ampersand is escaped exactly once');
+    assertNotContains(html, '&amp;amp;');
+    assertContains(html, 'Text &lt;x&gt; here.', 'markup characters of the PDF stay inert text');
+});
+
+test('reader: a publisher cover page at the start is skipped at render time only', function() {
+    var tandf = ['## Digital Journalism', '', 'ISSN: 2167-0811 (Print) 2167-082X (Online)', '',
+        '## Imagination, Algorithms and News', '', '## Mark Deuze &amp; Charlie Beckett', '',
+        'To cite this article: Mark Deuze &amp; Charlie Beckett (2022) Imagination ...', '', 'To link to this article:', '',
+        'Published online: 28 Sep 2022.', '', 'Submit your article to this journal', '', 'Article views: 4190', '',
+        'View related articles', '', 'View Crossmark data', '', 'Citing articles: 64 View citing articles', '', '曲', '',
+        'CrossMark', '', '## ARTICLE COMMENTARY', '', 'In this contribution, we frame the normative dimension.'].join('\n');
+    var body = T.paperBodyMarkdown(tandf, { title: 'Imagination, Algorithms and News' });
+    assert(body.indexOf('## ARTICLE COMMENTARY') === 0, 'the text opens at the first real heading');
+    ['ISSN', 'To cite this article', 'Article views', 'View Crossmark data', 'CrossMark\n'].forEach(function(marker) {
+        assertNotContains(body, marker, 'skipped: ' + marker);
+    });
+    var acm = ['Latest updates: hps://dl.acm.org/doi/10.1145/1', '', 'RESEARCH-ARTICLE', '', '## A Title', '',
+        'Open Access Support provided by: A University', '', 'Published: 20 October 2024', '', 'Citation in BibTeX format', '',
+        'Conference Sponsors:', '', 'SIGDOC', '', '## 1 Introduction', '', 'Body.'].join('\n');
+    assert(T.paperBodyMarkdown(acm, { title: 'Unrelated' }).indexOf('## 1 Introduction') === 0, 'the ACM sheet and its sponsor residue are skipped');
+    // conservative: markers deep in the text, too few markers, or prose after the last marker
+    var late = ['## Intro', 'p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'ISSN: 1', 'Published online: x', 'Article views: 3', 'Body'];
+    assertEqual(T.publisherCoverEnd(late), 0, 'a first marker below the leading lines is no cover page');
+    assertEqual(T.publisherCoverEnd(['ISSN: 1', 'Published online: x', 'Real first paragraph.']), 0, 'two markers are not enough');
+    var prose = ['ISSN: 1', 'Published online: x', 'Article views: 3', 'Short line', 'A long first paragraph of the article that is clearly prose and not residue.'];
+    assertEqual(T.publisherCoverEnd(prose), 3, 'short lines followed by prose are kept, only the marker block goes');
+    var withAbstract = '## Journal\n\nISSN: 1\n\nArticle views: 3\n\nView related articles\n\n## Abstract\nThe abstract.';
+    assert(T.paperBodyMarkdown(withAbstract, {}).indexOf('## Abstract') === 0, 'the abstract rule still wins');
+});
+
+test('panel: an expert-adopted divergent exclusion is one line, and stays editable in Bearbeiten', function() {
+    mountAssessCol();
+    var p = { id: 'VERD1', title: 'X', human: { decision: 'Exclude', all_categories: { AI_Literacies: 1, Bias_Ungleichheit: 1 } } };
+    T.setPapers([p]);
+    var S = T.getState();
+    var prevRev = S.reviewer;
+    S.reviewer = 'rV'; S.reviewers.rV = {}; S.index = 0;
+    T.setEditMode(false);
+    T.refreshAssess();
+    var col = document.getElementById('pt-assess-col');
+    assertEqual(document.getElementById('pt-verdict').textContent, 'Ausgeschlossen durch Expert:innen, Kategorien ergäben Include');
+    assertEqual(document.getElementById('pt-decision').textContent, 'Exclude', 'the decision badge stays');
+    assert(!col.querySelector('.pt-derived'), 'no separate derived value');
+    assert(!col.querySelector('#pt-override'), 'no override switch in Lesen');
+    assert(!col.querySelector('.pt-reason-chip'), 'no reason chip in Lesen');
+
+    T.setManifestReachable(true); T.setFsSupported(true);
+    T.setEditMode(true);
+    T.setWork(T.draftFor(p));
+    T.refreshAssess();
+    var edit = document.getElementById('pt-verdict-edit');
+    assert(edit && edit.tagName === 'DETAILS' && !edit.open, 'override and reason sit behind one closed disclosure');
+    assert(edit.querySelector('#pt-override') && edit.querySelector('.pt-reason-chip[data-reason="Consolidated_expert_exclusion"]'), 'both stay editable');
+    edit.querySelector('.pt-reason-chip[data-reason="Not_relevant_topic"]').click();
+    assertEqual(T.getWork().reason, 'Not_relevant_topic', 'a reason change applies');
+    assert(!document.getElementById('pt-verdict'), 'a different reason is no longer the expert statement');
+    assert(document.querySelector('#pt-assess-col .pt-derived'), 'the ordinary controls return');
+    T.setWork(T.draftFor(p)); T.getWork().reason = 'Consolidated_expert_exclusion';
+    T.refreshAssess();
+    var ov = document.querySelector('#pt-verdict-edit #pt-override');
+    ov.checked = false; ov.dispatchEvent(new window.Event('change'));
+    assertEqual(T.workingDecisionRecord().decision, 'Include', 'switching the override off follows the rule');
+    T.setEditMode(false);
+    T.setManifestReachable(false); T.setFsSupported(undefined);
+    delete S.reviewers.rV; S.reviewer = prevRev;
+});
+
+test('paper head: the DOI is shown in full and in-text arrows wait for hits', function() {
+    var html = T.readingShellHtml({ id: 'doiw', title: 'T', authors: 'A', year: 2022, doi: '10.1080/21670811.2022.2119152' }, null);
+    assertContains(html, '<div class="pt-meta-doi"><dt>DOI</dt>', 'the DOI cell is marked for wrapping');
+    assertContains(html, '>10.1080/21670811.2022.2119152</a>');
+    assert(/id="pt-intext-prev"[^>]*hidden/.test(html) && /id="pt-intext-next"[^>]*hidden/.test(html), 'arrows start hidden');
 });
 
 // ============================================================

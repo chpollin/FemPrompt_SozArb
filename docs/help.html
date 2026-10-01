@@ -114,9 +114,8 @@
             Expert:innen-Entscheidung aus dem Excel-Workflow oder eine in PRISM gespeicherte Bewertung vorliegt.
             Alle übrigen Dokumente sind offen.
             Filter und geöffnetes Dokument stehen in der URL, die Zurück-Taste des Browsers führt zum vorigen Dokument.
-            In der Liste wechseln die Pfeiltasten den Eintrag, die Eingabetaste öffnet ihn. Im Modus &bdquo;Bearbeiten&ldquo; zählt
-            &bdquo;n von N erfasst&ldquo; nach derselben Regel. Farbige Punkte am Listeneintrag zeigen die Kategorien der aktuellen
-            Annotation, eine kleine Marke den Stand.</p>
+            In der Liste wechseln die Pfeiltasten den Eintrag, die Eingabetaste öffnet ihn. Farbige Punkte am Listeneintrag
+            zeigen die Kategorien der aktuellen Annotation, eine kleine Marke den Stand.</p>
             <ul>
                 <li>Keine Marke heißt offen.</li>
                 <li>Ein grauer Haken heißt erfasst durch die Expert:innen-Entscheidung.</li>
@@ -124,8 +123,8 @@
             </ul>
             <p>Die offenen Dokumente sind zwischen Sabine und Susi aufgeteilt. Der Filter &bdquo;Zuteilung&ldquo;
             neben dem Statusfilter zeigt &bdquo;Alle&ldquo; oder nur die Dokumente einer Bearbeiterin und lässt sich
-            mit Status und Kategorien kombinieren. Unter &bdquo;Alle&ldquo; nennt jeder Listeneintrag die
-            Bearbeiterin. Als Kürzel gilt <code>sabine</code> bzw. <code>susi</code>.</p>
+            mit Status und Kategorien kombinieren. Unter &bdquo;Erfasst&ldquo; entfällt er, weil die Zuteilung nur
+            offene Dokumente betrifft. Unter &bdquo;Alle&ldquo; nennt jeder Listeneintrag die Bearbeiterin. Als Kürzel gilt <code>sabine</code> bzw. <code>susi</code>.</p>
             <p>Das Panel &bdquo;Bewertung&ldquo; zeigt die aktuelle Annotation mit einer Herkunftszeile, etwa
             &bdquo;Vorbelegt: Expert:innen-Entscheidung&ldquo;, &bdquo;Noch keine Bewertung&ldquo; oder
             &bdquo;Deine Bewertung, gespeichert &lt;Datum&gt;&ldquo;. Die Entscheidung (Include, Exclude,
@@ -142,7 +141,12 @@
                 <li>Exclude braucht einen Ausschlussgrund. Für eine bestätigte Expert:innen-Exclude-Entscheidung
                     steht &bdquo;Expert:innen-Entscheidung übernommen&ldquo; bereit. &bdquo;Abweichend
                     einschließen&ldquo; braucht eine kurze Begründung.</li>
+                <li>Haben die Expert:innen ausgeschlossen, obwohl ihre Kategorien Include ergäben, steht das als eine
+                    Zeile im Kopf des Panels. Im Modus &bdquo;Bearbeiten&ldquo; öffnet &bdquo;Ausschluss ändern&ldquo;
+                    den Schalter und die Ausschlussgründe.</li>
             </ul>
+            <p>Der Papertext beginnt nach einem Verlagsdeckblatt (etwa Taylor &amp; Francis oder ACM) beim ersten
+            Abschnitt des Artikels. Die gespeicherte Textfassung bleibt unverändert.</p>
             <p>PRISM zeigt keine KI-Vorbewertung. In PRISM vergibst du die Kategorien und entscheidest über Einschluss
             oder Ausschluss. Die Analysefelder eingeschlossener Dokumente kodieren ausschließlich KI-Agenten.</p>
             <p>Gespeichert wird mit dem Diskettensymbol neben der Dokumentposition oder mit Strg+S. Bei einer vorbelegten oder leeren

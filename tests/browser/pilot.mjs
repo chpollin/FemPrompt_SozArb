@@ -1108,6 +1108,109 @@ try {
   check('assignment: the selected assignee is restored from the URL', (await listIds()).join('|') === 'PILOT-B|AIGLDZ4C');
   await assignContext.close();
 
+  // Operator screen review of 1 October 2026 (provisional, knowledge/plan.md): a paper with
+  // a publisher cover page, a converter entity, a long DOI and an expert Exclude that the
+  // category rule would include. The extra paper and its text are overlaid on the fixture
+  // corpus for this context only.
+  const reviewContext = await browser.newContext({ viewport: { width: 1440, height: 900 }, locale: 'de-AT' });
+  await installFixtureRoutes(reviewContext);
+  const longDoi = '10.1080/21670811.2022.2119152.supplementary-material-long-suffix';
+  const reviewVault = JSON.parse(fixture('vault.json'));
+  reviewVault.papers.push({ id: 'PILOT-C', title: 'Pilot paper C: a commentary behind a publisher cover page', author_year: 'Deuze and Beckett (2022)',
+    authors: 'Deuze, Mark; Beckett, Charlie', year: 2022, doi: longDoi, url: '', abstract: '', item_type: 'journalArticle', journal: 'Pilot Journal',
+    human: { decision: 'Exclude', categories: ['AI_Literacies', 'Bias_Ungleichheit'],
+      all_categories: { AI_Literacies: 1, Generative_KI: 0, Prompting: 0, KI_Sonstige: 0, Soziale_Arbeit: 0, Bias_Ungleichheit: 1, Gender: 0, Diversitaet: 0, Feministisch: 0, Fairness: 0 } } });
+  const reviewManifest = JSON.parse(fixture('fulltext_manifest.json'));
+  reviewManifest['PILOT-C'] = { src: 'clean', chars: 900, source_file: 'pilot_c_fixture.md' };
+  const coverText = ['## Pilot Journal', '', 'ISSN: 2167-0811 (Print) 2167-082X (Online)', '', '## Pilot paper C', '',
+    '## Mark Deuze &amp; Charlie Beckett', '', 'To cite this article: Mark Deuze &amp; Charlie Beckett (2022) Pilot paper C', '',
+    'To link to this article:', '', 'Published online: 28 Sep 2022.', '', 'Submit your article to this journal', '', 'Article views: 4190', '',
+    'View related articles', '', 'View Crossmark data', '', 'Citing articles: 64 View citing articles', '', 'CrossMark', '',
+    '## ARTICLE COMMENTARY', '', 'Mark Deuze &amp; Charlie Beckett frame the normative dimension of literacy.', '',
+    'A second paragraph names literacy again, so the search has more than one hit.'].join('\n');
+  await reviewContext.route('**/data/research_vault_v2.json', (route) => route.fulfill({ contentType: 'application/json', body: JSON.stringify(reviewVault) }));
+  await reviewContext.route('**/data/fulltext_manifest.json', (route) => route.fulfill({ contentType: 'application/json', body: JSON.stringify(reviewManifest) }));
+  await reviewContext.route('**/data/fulltext/PILOT-C.md', (route) => route.fulfill({ contentType: 'text/markdown', body: coverText }));
+  await reviewContext.route('**/data/screening/assignment.json', (route) => route.fulfill({ contentType: 'application/json', body: JSON.stringify({
+    schema: 'femprompt-prisma-assignment/1.0', reviewers: [{ key: 'sabine', label: 'Sabine' }, { key: 'susi', label: 'Susi' }],
+    assigned_on: '2026-10-01', rule: 'pilot fixture', assignments: { 'PILOT-A': 'sabine', 'PILOT-B': 'susi', AIGLDZ4C: 'susi' } }) }));
+  const reviewPage = await reviewContext.newPage();
+  const reviewErrors = [];
+  reviewPage.on('pageerror', (e) => reviewErrors.push(String(e)));
+  await reviewPage.goto(base + '/prisma.html?paper=PILOT-C');
+  await reviewPage.waitForFunction(() => window.__PRISMA_TEST__ && document.querySelector('#pt-doc .pt-doc-p'), null, { timeout: 15000 });
+  const reading = await reviewPage.evaluate(() => {
+    const doc = document.getElementById('pt-doc');
+    return { first: doc.firstElementChild && doc.firstElementChild.textContent, text: doc.textContent };
+  });
+  check('cover page: the reading text opens at the first real heading after the publisher sheet',
+    reading.first === 'ARTICLE COMMENTARY' && !/ISSN|To cite this article|Submit your article|Article views|CrossMark/.test(reading.text), reading);
+  check('entities: the converter ampersand shows as "&", never as "&amp;"',
+    reading.text.includes('Mark Deuze & Charlie Beckett frame') && !reading.text.includes('&amp;'), reading.text.slice(0, 120));
+  const head = await reviewPage.evaluate((doi) => {
+    const link = document.querySelector('.pt-paper-metadata .pt-doi-link');
+    const dd = link && link.closest('dd');
+    const box = document.querySelector('.pt-paper-head').getBoundingClientRect();
+    const rects = link ? Array.from(link.getClientRects()) : [];
+    return { text: link && link.textContent, full: link && link.textContent === doi, overflow: dd ? getComputedStyle(dd).textOverflow : null,
+      clipped: dd ? dd.scrollWidth > dd.clientWidth + 1 : true, inside: rects.every((r) => r.right <= box.right + 1), lines: rects.length };
+  }, longDoi);
+  check('paper head: the DOI is shown in full and wraps instead of being cut', head.full && head.overflow !== 'ellipsis' && !head.clipped && head.inside, head);
+  const verdictRead = await reviewPage.evaluate(() => {
+    const rail = document.getElementById('pt-assess-col');
+    return { line: document.getElementById('pt-verdict')?.textContent, badge: document.getElementById('pt-decision')?.textContent,
+      derived: !!rail.querySelector('.pt-derived'), toggle: !!rail.querySelector('#pt-override'), reason: !!rail.querySelector('.pt-reason-chip') };
+  });
+  check('panel: an expert-adopted divergent exclusion reads as one line in Lesen',
+    verdictRead.line === 'Ausgeschlossen durch Expert:innen, Kategorien ergäben Include' && verdictRead.badge === 'Exclude' &&
+      !verdictRead.derived && !verdictRead.toggle && !verdictRead.reason, verdictRead);
+  const arrows = () => reviewPage.evaluate(() => ['pt-intext-prev', 'pt-intext-next'].map((id) => {
+    const b = document.getElementById(id); return !!(b && b.offsetParent !== null);
+  }));
+  const arrowsBefore = await arrows();
+  await reviewPage.fill('#pt-intext', 'literacy');
+  await reviewPage.waitForFunction(() => document.querySelectorAll('#pt-doc mark.pt-hit').length > 1);
+  const arrowsHits = await arrows();
+  await reviewPage.fill('#pt-intext', 'zzzqqq');
+  await reviewPage.waitForFunction(() => document.querySelectorAll('#pt-doc mark.pt-hit').length === 0);
+  const arrowsNone = await arrows();
+  check('in-text search: the step arrows appear only while there are hits to step through',
+    arrowsBefore.every((v) => !v) && arrowsHits.every(Boolean) && arrowsNone.every((v) => !v), { arrowsBefore, arrowsHits, arrowsNone });
+  await reviewPage.fill('#pt-intext', '');
+  await reviewPage.screenshot({ path: join(outDir, '10-review-fixes-lesen.png') });
+  trace.screenshots.push('10-review-fixes-lesen.png');
+
+  await reviewPage.getByRole('button', { name: 'Bearbeiten', exact: true }).click();
+  await reviewPage.waitForFunction(() => window.__PRISMA_TEST__.canEdit() && document.getElementById('pt-verdict-edit'));
+  const counter = await reviewPage.evaluate(() => ({ bar: document.querySelector('.pt-nav-tools .pt-ws-bar')?.textContent || '', done: !!document.querySelector('.pt-ws-done') }));
+  check('position bar: no "n von N erfasst" counter repeats the Erfasst facet', !counter.done && !/erfasst/.test(counter.bar), counter);
+  const closed = await reviewPage.evaluate(() => ({ open: document.getElementById('pt-verdict-edit').open,
+    visibleReason: !!Array.from(document.querySelectorAll('#pt-verdict-edit .pt-reason-chip')).find((b) => b.checkVisibility()) }));
+  await reviewPage.focus('#pt-verdict-edit summary');
+  await reviewPage.keyboard.press('Enter');
+  const opened = await reviewPage.evaluate(() => ({ open: document.getElementById('pt-verdict-edit').open,
+    toggle: !!document.querySelector('#pt-verdict-edit #pt-override:checked'),
+    reason: document.querySelector('#pt-verdict-edit .pt-reason-chip.sel')?.dataset.reason }));
+  check('panel: in Bearbeiten the override and the reason sit behind one keyboard-operable disclosure',
+    !closed.open && !closed.visibleReason && opened.open && opened.toggle && opened.reason === 'Consolidated_expert_exclusion', { closed, opened });
+  await reviewPage.screenshot({ path: join(outDir, '10-review-fixes-bearbeiten.png') });
+  trace.screenshots.push('10-review-fixes-bearbeiten.png');
+  await reviewPage.click('#pt-verdict-edit .pt-reason-chip[data-reason="Not_relevant_topic"]');
+  const edited = await reviewPage.evaluate(() => ({ verdict: !!document.getElementById('pt-verdict'), reason: window.__PRISMA_TEST__.getWork().reason,
+    dirty: window.__PRISMA_TEST__.workDirty(), derived: document.querySelector('#pt-assess-col .pt-derived')?.textContent }));
+  check('panel: editing the reason works and returns the ordinary controls', !edited.verdict && edited.reason === 'Not_relevant_topic' && edited.dirty &&
+    edited.derived === 'abgeleitet: Include', edited);
+
+  await reviewPage.click('.pt-status-seg [data-status="erfasst"]');
+  const underDone = await reviewPage.evaluate(() => ({ seg: !!document.querySelector('.pt-assignee-seg'), url: location.search,
+    rows: document.querySelectorAll('#pt-corpus-list .pt-nav-item').length }));
+  await reviewPage.click('.pt-status-seg [data-status="offen"]');
+  const underOpen = await reviewPage.evaluate(() => !!document.querySelector('.pt-assignee-seg'));
+  check('assignment: the Zuteilung filter is left out under Erfasst and returns under Offen',
+    !underDone.seg && underDone.rows === 1 && !/assignee=/.test(underDone.url) && underOpen, { underDone, underOpen });
+  check('review fixes: no script errors', reviewErrors.length === 0, reviewErrors);
+  await reviewContext.close();
+
   // 9 the pending-reading gate and the out-of-order load, each in a fresh profile so the
   // full-text cache is empty and the delayed route is really in flight
   const delayedContext = async () => {
