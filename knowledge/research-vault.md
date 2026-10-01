@@ -79,7 +79,7 @@ An Assertion carries at least the following information.
 - review status with dated activity and responsible actor
 - intended output, for instance literature report, paper or both
 
-Assertions record the relation in the optional frontmatter field `research-questions`, a list of distinct values from `SQ1` to `SQ5` that the validator checks. The grounded Assertions of 1 October 2026 were moved to the numbering of the merged questions, where the former SQ4 Competences became SQ5. The four Assertions with AI Agent Review were first left unchanged, because editing them invalidates their review receipts. They were remapped provisionally on 1 October 2026 as listed below, pending the operator's acceptance ([[plan#Decisions taken]]). An attributed negative receipt invalidates each earlier acceptance, and a new source review of the current bytes replaces it.
+Assertions record the relation in the optional frontmatter field `research-questions`, a list of distinct values from `SQ1` to `SQ5` that the validator checks. The grounded Assertions of 1 October 2026 were moved to the numbering of the merged questions, where the former SQ4 Competences became SQ5. The four Assertions with AI Agent Review were first left unchanged, because editing them invalidates their review receipts. They were remapped on 1 October 2026 as listed below, a remap the operator accepted the same day ([[plan#Decisions taken]]). An attributed negative receipt invalidates each earlier acceptance, and a new source review of the current bytes replaces it.
 
 | Assertion | Earlier field | Field since 1 October 2026 |
 |---|---|---|

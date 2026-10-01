@@ -65,7 +65,6 @@ The sub-questions are answered in the following order. Steps that depend on an o
 
 - Name the new completion-package blocks for field states, SQ associations, the round-one selection check and the agent-track diagnostics in the completion-package schema.
 - Build the Tier 1 analyses that [[analysis-methods#Implementation state]] names as not yet implemented.
-- Transfer the PRISMA-ScR items of [[standards#PRISMA-ScR items]] into `generated/conformance/conformance_map.yaml` and rebuild its dependent projections.
 - Fill the open fields of the round-two run record listed in [[standards#Identification and selection reporting]].
 
 ## UI development
@@ -204,7 +203,7 @@ The numbers are referenced from the steps above. The status column states how fa
 | 1 | Source-binding rule for the prepared 2026 reading texts whose converted Markdown lost its DOI, by accepting acquisition receipts as identity evidence | Taken on 1 October 2026 and implemented. Pending are the metadata corrections patch, which deletes stale knowledge-document projections, and the merge of duplicate Works | Operator confirmation of the patch and of duplicate merges |
 | 2 | Remapping of the four Assertions with AI Agent Review that carry the earlier numbering or no sub-question field ([[research-vault#Assertions]]). An edit invalidates their review receipts | Taken on 1 October 2026 and carried out as proposed, see [[#Decisions taken]] | None |
 | 3 | Switch of GitHub Pages from `docs/` to the result site in `build/site/` ([[#Deployment]]) | Open. The target was decided on 29 September 2026 | Operator authorisation |
-| 4 | PRISMA-ScR as reporting frame for the mapping layer ([[standards#Reporting decision on PRISMA-ScR]]) | Taken on 1 October 2026, adopted. The PRISMA-ScR items are mapped in [[standards#PRISMA-ScR items]] and still have to enter the machine-readable conformance map | None |
+| 4 | PRISMA-ScR as reporting frame for the mapping layer ([[standards#Reporting decision on PRISMA-ScR]]) | Taken on 1 October 2026, adopted. The PRISMA-ScR items are mapped in [[standards#PRISMA-ScR items]] and in the machine-readable conformance map | None |
 | 5 | Publication of the round-one matrix | Open | Operator decision on scope and form |
 | 6 | Article type, paper architecture and author order of the result paper for Adult Literacy Education. The Paper-Pipeline document in the personal vault still describes the methodological workflow as the main part, and the division of literature report, paper and Companion is open | Open. Venue decided | Decision by the co-author group |
 | 7 | Supplementary search for literature on LLM use in social-work tasks without a bias focus, as a dated, separately documented search layer with its own denominators, or an answer limited to the existing bias-focused corpus | Taken on 1 October 2026. No supplementary search; the answer stays limited to the existing corpus and the limit is named | None |

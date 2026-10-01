@@ -26,7 +26,7 @@
     "corpus/zotero_export.json": "sha256:a6bddc7f5da07b5d4b6a9c67ccc861658cec4eeff317c32b075068117a551b68",
     "corpus/zotero_sync.json": "sha256:a68c1242fa39cb279c830e374d5ec07d174dad2763e8773cbc2db6b8e07d272b",
     "docs/data/research_vault_v2.json": "sha256:ea22ceaf256905f81fddb3146f2679ffcee541c7715347e070237b831be26e18",
-    "generated/completion/completion-package.json": "sha256:d6dd454e1c0496387901af03cdedc1a1dd5ae2f6799f4f7630b9c5859ca5651f",
+    "generated/completion/completion-package.json": "sha256:09a3fd6e2a5d5003f98b7d361aa111901ed3d10a2cf7a27cf6db351573103bda",
     "generated/contextual-update-2026-08-24-intake-package.json": "sha256:b7266d89cd632346c67d0e4f7b09a574edfd11888a61c29731785c2c05e31a48",
     "generated/round2-intake-package.json": "sha256:b83bb42daff38d23ce3d7981797d92aabc15caf415e600c5558f03e4ef465d1a"
   },

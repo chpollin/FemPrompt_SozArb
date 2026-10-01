@@ -1,7 +1,7 @@
 # conformance_map.yaml
 #
-# Machine-readable conformance status of this review against three reporting
-# standards: PRISMA 2020, PRISMA-trAIce, and RAISE. One entry per checklist
+# Machine-readable conformance status of this review against four reporting
+# standards: PRISMA 2020, PRISMA-trAIce, RAISE, and PRISMA-ScR (mapping layer). One entry per checklist
 # item, each carrying its status and either a repository source path or a
 # named gap. This is the item-level status substrate; the standards prose,
 # item text, priority levels, and citations live in knowledge/standards.md.
@@ -382,3 +382,137 @@ raise:
     status: gap
     source_path: named gap
     notes: Not yet declared.
+
+prisma_scr:
+  - standard: PRISMA-ScR
+    item_id: "1"
+    item_short: "Title, Identify the report as a scoping review"
+    status: partial
+    source_path: "research-vault/40_output/paper/paper.md"
+    notes: "Open. The working title of research-vault/40_output/paper/paper.md names a qualitative literature review, and the article type is decision 6 in knowledge/plan.md#Open decisions"
+  - standard: PRISMA-ScR
+    item_id: "2"
+    item_short: "Abstract, Structured summary of background, objectives, eligibility, sources of evidence, charting methods, results and conclusions"
+    status: partial
+    source_path: "paper.md"
+    notes: "Open. The abstract of paper.md still describes the earlier workflow paper and waits for decision 6"
+  - standard: PRISMA-ScR
+    item_id: "3"
+    item_short: "Introduction, Rationale, including why the questions suit a scoping approach"
+    status: partial
+    source_path: "knowledge/standards.md"
+    notes: "knowledge/project.md#Project goal for the rationale and knowledge/analysis-methods.md#Mapping layer for the fit of the mapping questions with a scoping approach. The manuscript text is open"
+  - standard: PRISMA-ScR
+    item_id: "4"
+    item_short: "Introduction, Objectives with their key elements, such as population, concept and context"
+    status: reconstructable
+    source_path: "knowledge/standards.md"
+    notes: "knowledge/project.md#Research questions with the main question and SQ1 to SQ5"
+  - standard: PRISMA-ScR
+    item_id: "5"
+    item_short: "Methods, Protocol and registration"
+    status: partial
+    source_path: "knowledge/standards.md"
+    notes: "knowledge/update-protocol.md with its initial state and dated amendments for round two. No registration and no round-one protocol, the gap recorded for PRISMA 2020 items 24a-c"
+  - standard: PRISMA-ScR
+    item_id: "6"
+    item_short: "Methods, Eligibility criteria and their rationale"
+    status: reconstructable
+    source_path: "assessment/categories.yaml"
+    notes: "assessment/categories.yaml, knowledge/update-protocol.md#Eligibility and knowledge/methods.md (Stage 4)"
+  - standard: PRISMA-ScR
+    item_id: "7"
+    item_short: "Methods, Information sources and date of the most recent search"
+    status: partial
+    source_path: "corpus/source_tool_mapping.json, corpus/deep-research/round2/LAUFPROTOKOLL.md"
+    notes: "knowledge/methods.md (Stages 1 and 7), corpus/source_tool_mapping.json and corpus/deep-research/round2/LAUFPROTOKOLL.md, with the declared deviation of [[#Identification and selection reporting]]. The end date of the round-two execution window is an open operator field"
+  - standard: PRISMA-ScR
+    item_id: "8"
+    item_short: "Methods, Full search strategy for at least one database"
+    status: partial
+    source_path: "corpus/deep-research/"
+    notes: "Declared deviation, no database search. The prompts in corpus/deep-research/ stand in its place ([[#Identification and selection reporting]])"
+  - standard: PRISMA-ScR
+    item_id: "9"
+    item_short: "Methods, Selection of sources of evidence"
+    status: reconstructable
+    source_path: "knowledge/standards.md"
+    notes: "knowledge/methods.md (Stage 5), knowledge/update-protocol.md#Agent-assisted completion and ADR-043 and ADR-044 in knowledge/specification.md"
+  - standard: PRISMA-ScR
+    item_id: "10"
+    item_short: "Methods, Data charting process"
+    status: partial
+    source_path: "skills/prism-agent-review/, tests/review-cases/agent-runs/"
+    notes: "knowledge/update-protocol.md#Analysis coding, knowledge/update-protocol.md#Validation of the AI coding, skills/prism-agent-review/ and the run manifests under tests/review-cases/agent-runs/. The coding run over the included Works is open (knowledge/plan.md#Answering the research questions)"
+  - standard: PRISMA-ScR
+    item_id: "11"
+    item_short: "Methods, Data items with their definitions"
+    status: reconstructable
+    source_path: "assessment/categories.yaml"
+    notes: "The analysis fields of assessment/categories.yaml and their table in knowledge/update-protocol.md#Analysis coding"
+  - standard: PRISMA-ScR
+    item_id: "12"
+    item_short: "Methods, Critical appraisal of individual sources, optional"
+    status: not_applicable
+    source_path: "knowledge/standards.md"
+    notes: "Not performed for the mapping layer. knowledge/analysis-methods.md#Appraisal for practice recommendations assigns appraisal tools for the case that practice recommendations are derived, and knowledge/methods.md#Quality assessment records the current state"
+  - standard: PRISMA-ScR
+    item_id: "13"
+    item_short: "Methods, Methods of handling and summarising the charted data"
+    status: reconstructable
+    source_path: "generated/completion/synthesis-outline.md"
+    notes: "knowledge/analysis-methods.md#Mapping layer, knowledge/methods.md#Descriptive mapping and process diagnostics and generated/completion/synthesis-outline.md"
+  - standard: PRISMA-ScR
+    item_id: "14"
+    item_short: "Results, Selection of sources of evidence with numbers and exclusion reasons, ideally as a flow diagram"
+    status: partial
+    source_path: "generated/prisma-flow/, src/replay/prisma_flow.py"
+    notes: "generated/prisma-flow/, produced by src/replay/prisma_flow.py ([[#Identification and selection reporting]]). The paper rendering is open"
+  - standard: PRISMA-ScR
+    item_id: "15"
+    item_short: "Results, Characteristics of each source of evidence with citations"
+    status: partial
+    source_path: "generated/completion/sq-analysis-tables.csv"
+    notes: "generated/completion/sq-analysis-tables.csv as a provisional Work-level table. Complete charting waits for the coding run"
+  - standard: PRISMA-ScR
+    item_id: "16"
+    item_short: "Results, Critical appraisal within sources, optional"
+    status: not_applicable
+    source_path: "knowledge/standards.md"
+    notes: "Not performed, following item 12"
+  - standard: PRISMA-ScR
+    item_id: "17"
+    item_short: "Results, Results of individual sources of evidence relevant to the questions"
+    status: partial
+    source_path: "generated/completion/sq-analysis-tables.csv"
+    notes: "The coded fields per Work in generated/completion/sq-analysis-tables.csv. Open until the coding run"
+  - standard: PRISMA-ScR
+    item_id: "18"
+    item_short: "Results, Synthesis of results in relation to the questions"
+    status: partial
+    source_path: "research-vault/40_output/literature-report/"
+    notes: "The answer chapters under research-vault/40_output/literature-report/, with drafts for SQ1 and SQ2. SQ3 to SQ5 are open"
+  - standard: PRISMA-ScR
+    item_id: "19"
+    item_short: "Discussion, Summary of evidence and its relevance to key groups"
+    status: gap
+    source_path: "paper.md"
+    notes: "Open. Section 7 of paper.md holds a placeholder that waits for the coding run"
+  - standard: PRISMA-ScR
+    item_id: "20"
+    item_short: "Discussion, Limitations of the scoping review process"
+    status: partial
+    source_path: "paper.md"
+    notes: "Section 8 of paper.md as a draft, knowledge/methods.md#Circularity as a field condition and [[#Interpretation for this review]]. The limits of the mapping layer are open"
+  - standard: PRISMA-ScR
+    item_id: "21"
+    item_short: "Discussion, Conclusions with implications and next steps"
+    status: gap
+    source_path: "named gap"
+    notes: "Open"
+  - standard: PRISMA-ScR
+    item_id: "22"
+    item_short: "Funding, Funding of the included sources and of the review, and the role of the funders"
+    status: partial
+    source_path: "README.md"
+    notes: "The review's funding through the Elisabeth List Fellowship at the University of Graz is stated in README.md. The funding of the included sources is not charted and is open"
