@@ -221,7 +221,7 @@ test('computeFlow (reviewer perspective): exclusion reasons are aggregated', fun
     };
     var f = T.computeFlow('r1');
     assertEqual(f.humanScreened, 3, 'only methodically complete reviewer records are counted');
-    assertEqual(f.humanIncl, 0, 'an Include without evidence and analysis is not counted as complete');
+    assertEqual(f.humanIncl, 0, 'an Include without evidence is not counted as complete');
     assertEqual(f.humanExcl, 3, 'humanExcl');
     assertEqual(f.humanUnclear, 0, 'humanUnclear');
     assertEqual(f.humanReasons.Duplicate, 2, 'Duplicate count');
@@ -568,7 +568,7 @@ function addHumanEvidence(work, cats) {
     });
 }
 
-test('commit: derived Include is written only with complete analysis', function() {
+test('commit: a human Include is written without analysis coding (ADR-045)', function() {
     T.setPapers(commitFix);
     T.getState().reviewers = {};            // clean slate for the commit tests
     T.getState().reviewer = 'r1';
@@ -578,12 +578,11 @@ test('commit: derived Include is written only with complete analysis', function(
     T.getWork().cats.Gender = true;
     addHumanEvidence(T.getWork(), ['Prompting', 'Gender']);
     T.setTextSource('abstract');
-    T.commit();
-    assertEqual(T.curDec().c1, undefined, 'incomplete Include is not written');
-    T.getWork().analysis = completeAnalysis('abstract');
+    assertEqual(T.saveGate(commitFix[0]).reasons.join('|'), '', 'the save gate names no analysis coding');
     T.commit();
     var rec = T.curDec().c1;
     assert(rec, 'record exists');
+    assert(!('analysis' in rec), 'a human Include carries no analysis part');
     assertEqual(rec.decision, 'Include');
     assertEqual(rec.reason, null, 'no reason on Include');
     assertEqual(rec.override, false);
@@ -911,7 +910,7 @@ test('reviewer schema 0.1 to current: a pre-evidence file loads and is written b
     var file = JSON.parse(JSON.stringify(v01));
     S.reviewers.old = file.decisions;                              // load path
     assertEqual(T.humanDecision({ id: 'mg1' }, 'old').decision, 'Include', '0.1 decision loads');
-    assertEqual(T.computeFlow('old').humanScreened, 1, 'legacy Include remains loaded but incomplete until evidence and analysis are added');
+    assertEqual(T.computeFlow('old').humanScreened, 1, 'legacy Include remains loaded but incomplete until evidence is added');
     assertEqual(T.evidenceCount(file.decisions.mg1), 0, 'missing evidence map reads as zero, no throw');
     // a legacy Beleg without origin renders as a human pin (ADR-015 backward compatibility)
     var html = T.evidenceListHtml(file.decisions.mg2.evidence, true);
@@ -1504,6 +1503,44 @@ test('backward compatibility: a reviewer file without an analysis part loads unc
     delete S.reviewers.legacyAN;
 });
 
+test('analysis coding is required only of agent records, never of a human record (ADR-045)', function() {
+    var cats = { Prompting: 2, Gender: 2 };
+    var evidence = { Prompting: [{ term: 'p', snippet: 'p', source_layer: 'paper' }], Gender: [{ term: 'g', snippet: 'g', source_layer: 'paper' }] };
+    var human = { decision: 'Include', categories: cats, evidence: evidence, text_source: 'abstract', actor: 'human' };
+    assert(T.recordRequirements(human).ok, 'a human Include without analysis is complete');
+    var legacy = { decision: 'Include', categories: cats, evidence: evidence, text_source: 'abstract' };
+    assert(T.recordRequirements(legacy).ok, 'a record without actor counts as human');
+    var agent = { decision: 'Include', categories: cats, evidence: evidence, text_source: 'abstract', actor: 'agent' };
+    var req = T.recordRequirements(agent);
+    assert(!req.ok && req.missing.indexOf('Studientyp') !== -1, 'an agent Include still needs complete analysis coding');
+    agent.analysis = completeAnalysis('abstract');
+    assert(T.recordRequirements(agent).ok, 'an agent Include with complete analysis is complete');
+});
+test('a human session offers no analysis step and keeps an existing analysis part unchanged (ADR-045)', function() {
+    var paper = { id: 'anKeep', title: 'keep analysis' };
+    T.setPapers([paper]);
+    var S = T.getState(), prevRev = S.reviewer, wasEditing = T.canEdit();
+    var stored = { fields: { Studientyp: 'Review', AN_Bias_Axes: ['Gender'], AN_Coding_Basis: 'Fulltext', AN_Notes: 'legacy' }, undecidable: {} };
+    S.reviewer = 'rKeep'; S.index = 0;
+    S.reviewers.rKeep = { anKeep: { decision: 'Include', categories: { Prompting: 2, Gender: 2 },
+        evidence: { Prompting: [{ term: 'p', snippet: 'p', origin: 'human' }], Gender: [{ term: 'g', snippet: 'g', origin: 'human' }] },
+        analysis: JSON.parse(JSON.stringify(stored)), text_source: 'abstract', reviewer: 'rKeep', actor: 'human', ts: '2026-09-01T00:00:00Z' } };
+    T.setEditMode(true);
+    var rail = T.railHtml(paper);
+    assertNotContains(rail, 'pt-open-analysis', 'no analysis entry in a human session');
+    assertNotContains(rail, 'Analysekodierung', 'no analysis wording in a human session');
+    var w = T.draftFor(paper);
+    T.getState().index = 0;
+    T.setWork(w);
+    w.reason = null; w.evidence.Prompting.push({ term: 'p2', snippet: 'second passage', origin: 'human' });
+    T.markDirty();
+    T.setTextSource('abstract');
+    T.commit();
+    var rec = S.reviewers.rKeep.anKeep;
+    assertEqual(JSON.stringify(rec.analysis), JSON.stringify(stored), 'the stored analysis part is written back as it stands');
+    T.setEditMode(wasEditing);
+    delete S.reviewers.rKeep; S.reviewer = prevRev;
+});
 test('analysis export uses the human_assessment.csv column schema with AN columns after Notes (update-protocol D, B.1 point 7)', function() {
     var header = T.analysisCsvHeader();
     var cols = header.split(',');

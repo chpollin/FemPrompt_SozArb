@@ -74,7 +74,7 @@ It then serves `build/site/` locally and drives Chromium at 1440 by 900 pixels. 
 The automated suites cover the following contracts.
 
 - Every positive category requires Paper-layer evidence.
-- Include records require complete analysis coding under the controlled vocabulary.
+- Agent Include records require complete analysis coding under the controlled vocabulary. Human records need none and keep an existing analysis part unchanged (ADR-045).
 - Source identity conflicts fail closed before a full text can enter screening. Normalized filename collisions retain all candidates and cannot silently select an ambiguous fallback.
 - Full-text publication loads the Work-Version registry and explicit source bindings once per invocation. A later invocation reads fresh inputs.
 - Knowledge-document aliases share content only within the exact Work-Version binding, preserving existing-document precedence.

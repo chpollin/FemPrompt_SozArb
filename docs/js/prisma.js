@@ -1343,6 +1343,12 @@ function setAnalysis(pid, raw) {
     refreshCorpusList();
 }
 
+// The AN_ analysis fields are coded only by AI agents (ADR-045). A human record needs
+// none and a human session offers no analysis step; an analysis part a human record
+// already carries is loaded and written back as it stands.
+function analysisRequired(dec) { return !!dec && dec.decision === 'Include' && dec.actor === 'agent'; }
+function analysisStepOffered() { return runActor === 'agent' || acceptanceMode; }
+
 function analysisRequirements(dec) {
     if (!dec || dec.decision !== 'Include') return { ok: true, missing: [] };
     const raw = readAnalysis(dec);
@@ -2632,7 +2638,7 @@ function recordRequirements(dec) {
     if (dec.decision === 'Exclude' && !dec.reason) missing.push('Ausschlussgrund');
     if (dec.decision === 'Include' && dec.override && !String(dec.override_reason || '').trim())
         missing.push('Begründung der Abweichung');
-    if (dec.decision === 'Include')
+    if (analysisRequired(dec))
         analysisRequirements(dec).missing.forEach(function(x) { missing.push(x); });
     return { ok: missing.length === 0, missing: missing };
 }
@@ -3147,7 +3153,7 @@ function workingTextSource() {
 function workingDecisionRecord() {
     const decision = finalDecisionOf(work.cats, work.override);
     const textSource = workingTextSource();
-    if (decision === 'Include') work.analysis = sanitizeAnalysis(work.analysis || {}, textSource);
+    if (decision === 'Include' && runActor === 'agent') work.analysis = sanitizeAnalysis(work.analysis || {}, textSource);
     const record = {
         categories: work.cats,
         decision: decision,
@@ -3156,7 +3162,8 @@ function workingDecisionRecord() {
         override_reason: work.override && decision === 'Include' ? (String(work.overrideReason || '').trim() || null) : null,
         evidence: work.evidence,
         analysis: decision === 'Include' ? work.analysis : undefined,
-        text_source: textSource
+        text_source: textSource,
+        actor: runActor
     };
     const basis = draftEvidenceBasis(work);
     if (Object.keys(basis).length) record.evidence_basis = basis;
@@ -3202,7 +3209,7 @@ function draftReasons(p, subject, mode) {
     if (missing.length) reasons.push('Paper-Beleg fehlt: ' + missing.map(function(c) { return CAT_LABELS[c]; }).join(', '));
     if (record.decision === 'Exclude' && !record.reason) reasons.push('Ausschlussgrund wählen');
     if (record.decision === 'Include' && record.override && !record.override_reason) reasons.push('Abweichung begründen');
-    if (record.decision === 'Include' && !analysisRequirements(record).ok) reasons.push('Analysekodierung unvollständig');
+    if (analysisRequired(record) && !analysisRequirements(record).ok) reasons.push('Analysekodierung unvollständig');
     return reasons;
 }
 
@@ -3372,7 +3379,7 @@ function overrideHtml(record, editable) {
 }
 
 function analysisEntryHtml(record, editable) {
-    if (record.decision !== 'Include' || !anFields.length) return '';
+    if (!analysisStepOffered() || record.decision !== 'Include' || !anFields.length) return '';
     const req = analysisRequirements(record);
     return '<div class="pt-analysis-entry"><span class="pt-sub-head">Analysekodierung</span>' +
         '<span class="pt-analysis-state ' + (req.ok ? 'is-complete' : 'is-open') + '">' + (req.ok ? 'vollständig' : 'unvollständig') + '</span>' +
@@ -3384,7 +3391,7 @@ function railHtml(p) {
     if (canEdit() && paperIdentityRequired(p) && !paperIdentityReady(p))
         return '<div class="pt-rail-head"><h2 class="pt-rail-title">Bewertung</h2></div>' +
             '<p class="pt-muted pt-read-only-note">Dieses Paper ist noch nicht an ein Werk und eine genaue Fassung gebunden. Bewerten ist erst nach der bibliografischen Zuordnung möglich.</p>';
-    if (railStep === 'analysis') return analysisStepHtml(p, subject);
+    if (railStep === 'analysis' && analysisStepOffered()) return analysisStepHtml(p, subject);
     const editable = railEditable(p, subject);
     const record = editable ? workingDecisionRecord() : (subject.record || null);
     let h = '<div class="pt-rail-head"><h2 class="pt-rail-title">Bewertung</h2>';
@@ -3821,9 +3828,11 @@ function commit() {
     };
     if (draft.evidence_basis) nextRecord.evidence_basis = draft.evidence_basis;
     bindRecordIdentity(nextRecord, p);
-    // FR-14: an Include record carries its analysis codes; a decision that leaves Include
-    // drops them (coding rule 1, excluded papers carry no AN codes).
-    if (draft.decision === 'Include') nextRecord.analysis = sanitizeAnalysis(work.analysis || {}, currentTextSource);
+    // An agent Include carries its analysis codes (FR-14, ADR-045); a human Include keeps
+    // an analysis part it already had unchanged. A decision that leaves Include drops
+    // them (coding rule 1, excluded papers carry no AN codes).
+    if (draft.decision === 'Include' && runActor === 'agent') nextRecord.analysis = sanitizeAnalysis(work.analysis || {}, currentTextSource);
+    else if (draft.decision === 'Include' && work.analysis !== undefined) nextRecord.analysis = JSON.parse(JSON.stringify(work.analysis));
     if (!recordRequirements(nextRecord).ok) { refreshAssess(); return false; }
     if (runActor === 'human' && !trialMode && !acceptanceMode)
         attachHumanContract(nextRecord, p, !!work.derivedFromExpert);

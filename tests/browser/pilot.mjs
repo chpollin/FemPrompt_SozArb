@@ -255,27 +255,9 @@ async function screenPaper(paperSpec, decisionSpec) {
     await page.click(`#pt-assess-col .pt-reason-chip[data-reason="${decisionSpec.reason}"]`);
   }
   if (decisionSpec.expected_decision === 'Include') {
-    check(`${id}: the single disk action stays blocked until analysis is complete`, await page.isDisabled('#pt-record'));
-    await page.click('#pt-open-analysis');
-    check(`${id}: the analysis coding opens as its own step with German labels`, await page.evaluate(() =>
-      !!document.getElementById('pt-close-analysis') && !document.querySelector('#pt-assess-col .pt-dim') &&
-      /Rolle des Promptings/.test(document.getElementById('pt-assess-col').textContent) &&
-      !/AN_Prompting_Role/.test(document.getElementById('pt-assess-col').textContent)));
-    await page.click('[data-an-field="Studientyp"][data-an-value="Empirisch"]');
-    await page.click('[data-an-field="AN_Prompting_Role"][data-an-value="Recommended_Practice"]');
-    await page.click('[data-an-field="AN_Prompting_Role"][data-an-value="Learning_Content"]');
-    await page.click('[data-an-undec="AN_Prompt_Techniques"]');
-    await page.click('[data-an-field="AN_Bias_Axes"][data-an-value="None"]');
-    if (paperSpec.expected_text_source === 'raw')
-      await page.click('[data-an-field="AN_Harm_Types"][data-an-value="None"]');
-    await page.click('[data-an-field="AN_Mitigation_Stage"][data-an-value="None"]');
-    await page.click('[data-an-field="AN_Mitigation_Status"][data-an-value="None"]');
-    await page.click('[data-an-field="AN_Population"][data-an-value="Not_SW_Specific"]');
-    await page.fill('[data-an-free="AN_Notes"]', 'Pilot UI note.');
-    check(`${id}: analysis coding is complete before the only disk write`, await page.evaluate(() => {
-      const T = window.__PRISMA_TEST__;
-      return T.analysisRequirements(T.workingDecisionRecord()).ok && !document.getElementById('pt-record').disabled;
-    }));
+    check(`${id}: a human Include offers no analysis coding (ADR-045)`, await page.evaluate(() =>
+      !document.getElementById('pt-open-analysis') && !/Analysekodierung|Studientyp/.test(document.getElementById('pt-assess-col').textContent) &&
+      !/Analysekodierung/.test(document.getElementById('pt-save-hint')?.textContent || '')));
   }
   await page.waitForSelector('#pt-record:not([disabled])', { timeout: 5000 });
   const dock = await page.evaluate(() => {
@@ -294,12 +276,8 @@ async function screenPaper(paperSpec, decisionSpec) {
   if (paperSpec.pin_category) check(`${id}: evidence persisted in record`, rec && rec.evidence && rec.evidence[paperSpec.pin_category] && rec.evidence[paperSpec.pin_category].length === 1);
   if (decisionSpec.reason) check(`${id}: exclusion reason`, rec && rec.reason === decisionSpec.reason, rec && rec.reason);
   if (decisionSpec.expected_decision === 'Include') {
-    check(`${id}: text_source fixes coding basis`, (await hook(page, `window.__PRISMA_TEST__.curDec()[${JSON.stringify(id)}].analysis.fields.AN_Coding_Basis`)) === (paperSpec.expected_text_source === 'raw' ? 'Fulltext' : 'Abstract'));
-    check(`${id}: analysis controls persist multi-select, undecidable and notes`, await page.evaluate((paperId) => {
-      const analysis = window.__PRISMA_TEST__.curDec()[paperId].analysis;
-      return analysis.fields.AN_Prompting_Role.length === 2 && analysis.undecidable.AN_Prompt_Techniques === true &&
-        analysis.fields.AN_Notes === 'Pilot UI note.';
-    }, id));
+    check(`${id}: the human Include is written without an analysis part`, await page.evaluate((paperId) =>
+      !('analysis' in window.__PRISMA_TEST__.curDec()[paperId]), id));
     check(`${id}: the persisted Include satisfies every completion requirement`, await page.evaluate((paperId) => {
       const T = window.__PRISMA_TEST__;
       return T.recordRequirements(T.curDec()[paperId]).ok;
