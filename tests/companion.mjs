@@ -206,31 +206,32 @@ await check('nav tooltips show on focus, describe the item and hide on Escape', 
   if (!repo.getAttribute('aria-label')) throw new Error('repo icon has no accessible name');
 });
 
-await check('Literaturbild shows the joint-coding matrix under its denominators', async () => {
+await check('Literaturbild shows the evidence-and-gap map under its denominator', async () => {
   window.switchView('literaturbild');
-  await waitFor(() => doc.querySelector('#view-literaturbild #matrix-table') !== null, 'matrix');
-  const summary = doc.querySelector('#matrix-denominator > .denominator--summary');
-  if (!summary || !/\d+ von \d+ eingeschlossenen Werken/.test(summary.textContent)) throw new Error('summary line missing');
-  if (doc.querySelector('#matrix-denominator').compareDocumentPosition(doc.getElementById('matrix-table')) !== window.Node.DOCUMENT_POSITION_FOLLOWING) {
+  await waitFor(() => doc.querySelector('#view-literaturbild #lb-table') !== null, 'map');
+  const denom = doc.querySelector('#lb-denom .lb-denom-main');
+  if (!denom || !/^\d+ von \d+ identifizierten Werken auf beiden Achsen codiert$/.test(denom.textContent)) throw new Error('denominator ' + (denom && denom.textContent));
+  if (doc.getElementById('lb-denom').compareDocumentPosition(doc.getElementById('lb-table')) !== window.Node.DOCUMENT_POSITION_FOLLOWING) {
     throw new Error('denominator does not precede the table');
   }
-  if (!/Gemeinsam codiert|Werke je Code/.test(doc.querySelector('#matrix-denominator .matrix-caption').textContent)) throw new Error('caption missing');
-  const pending = Object.values((literatureLandscape.meta.analysis_coverage || {}).fields || {}).some((f) => f.not_coded + f.withheld > 0);
-  if (pending && doc.querySelector('#matrix-table td.matrix-empty[data-state="zero"]')) throw new Error('a zero stands while coding is open');
-  if (pending && !doc.querySelector('#matrix-table td.matrix-empty[data-state="undetermined"]')) throw new Error('no n. b. cell');
+  if (doc.querySelector('#view-literaturbild #matrix-table')) throw new Error('the release matrix renders in the working application');
+  if (!doc.querySelector('#lb-table button.lb-cell[data-state="gap"]')) throw new Error('no gap cell');
+  if (!doc.querySelector('#lb-table button.lb-cell[data-state="open"]')) throw new Error('no n. b. cell');
+  if (doc.querySelectorAll('#lb-table button.lb-cell[tabindex="0"]').length !== 1) throw new Error('roving tabindex');
   if (doc.querySelector('#tab-literaturbild').getAttribute('aria-pressed') !== 'true') throw new Error('tab not pressed');
 });
 
-await check('a matrix cell opens its work list and writes the hash', async () => {
-  const cell = doc.querySelector('#matrix-table button.matrix-cell[data-state="value"]');
+await check('a map cell opens its works with Korpus and PRISM links and writes the hash', async () => {
+  const cell = doc.querySelector('#lb-table button.lb-cell[data-state="value"]');
   cell.dispatchEvent(new window.MouseEvent('click', { bubbles: true }));
-  await waitFor(() => !doc.getElementById('worklist').hidden, 'work list');
+  await waitFor(() => !doc.getElementById('lb-detail').hidden, 'work list');
   const hash = new URLSearchParams(window.location.hash.slice(1));
   if (hash.get('view') !== 'literaturbild' || hash.get('cell') !== cell.dataset.row + '|' + cell.dataset.col) throw new Error('hash ' + window.location.hash);
-  if (doc.querySelectorAll('#worklist .work-item').length !== Number(cell.dataset.count)) throw new Error('work count');
-  if (doc.activeElement.id !== 'worklist-title') throw new Error('focus not on the work list');
-  if (/Eintrag|\/root\//.test(doc.getElementById('worklist').textContent)) throw new Error('internal keys in the work list');
-  if (doc.querySelector('#worklist .evidence-note')) throw new Error('coding note in the work list');
+  const items = doc.querySelectorAll('#lb-detail .lb-item');
+  if (items.length !== Number(cell.dataset.count)) throw new Error('work count ' + items.length);
+  const item = items[0];
+  if (!item.querySelector('.lb-item-title').getAttribute('href').startsWith('#view=korpus&paper=')) throw new Error('korpus link');
+  if (!item.querySelector('.lb-prism').getAttribute('href').startsWith('prisma.html?paper=')) throw new Error('prism link');
 });
 
 await check('corpus filters stay out of release view hashes and survive them', async () => {
@@ -241,18 +242,22 @@ await check('corpus filters stay out of release view hashes and survive them', a
   await waitFor(() => window.location.hash.includes('dec=Exclude'), 'korpus filter in hash');
   window.switchView('literaturbild');
   if (window.location.hash.includes('dec=')) throw new Error('corpus filter leaked: ' + window.location.hash);
-  if (!window.location.hash.includes('cell=')) throw new Error('tab did not restore the last matrix state');
+  if (!window.location.hash.includes('cell=')) throw new Error('tab did not restore the last map state');
   window.switchView('korpus');
   if (!window.location.hash.includes('dec=Exclude')) throw new Error('corpus filter lost: ' + window.location.hash);
   sel.value = 'all';
   sel.dispatchEvent(new window.Event('change', { bubbles: true }));
 });
 
-await check('a matrix deep link restores axes and cell', async () => {
-  setHash('#view=literaturbild&cols=AN_Bias_Axes&rows=perspective');
-  await waitFor(() => doc.getElementById('matrix-cols').value === 'AN_Bias_Axes', 'axes restored');
-  if (doc.getElementById('matrix-rows').value !== 'perspective') throw new Error('rows not restored');
-  if (!doc.getElementById('worklist').hidden) throw new Error('a work list is open without a cell');
+await check('a map deep link restores axes, basis and cell', async () => {
+  setHash('#view=literaturbild&rows=jahr&cols=kategorie&basis=include');
+  await waitFor(() => doc.getElementById('lb-rows').value === 'jahr', 'axes restored');
+  if (doc.getElementById('lb-cols').value !== 'kategorie') throw new Error('cols not restored');
+  if (doc.querySelector('#lb-root [data-basis="include"]').getAttribute('aria-pressed') !== 'true') throw new Error('basis not restored');
+  if (!doc.getElementById('lb-detail').hidden) throw new Error('a work list is open without a cell');
+  setHash('#view=literaturbild&rows=perspective&cols=nonsense');
+  await waitFor(() => doc.getElementById('lb-rows').value === 'kategorie', 'legacy group falls back to the category dimension');
+  if (doc.getElementById('lb-cols').value !== 'jahr') throw new Error('unknown dimension did not fall back');
 });
 
 await check('Wissensnetz shows the ego network with its table and denominator', async () => {

@@ -93,9 +93,10 @@ let currentView = 'start';
 let applyingFromUrl = false; // suppresses UI->store sync while a URL is being applied
 
 // Views rendered by the release modules (release-*.js), mapped to the names those
-// modules use. Literaturbild hosts the matrix and Wissensnetz the network; Frage and
-// Werk have no navigation button and are reached through links.
-const RELEASE_VIEWS = { literaturbild: 'matrix', wissensnetz: 'netz', frage: 'frage', werk: 'werk' };
+// modules use. Wissensnetz hosts the network; Frage and Werk have no navigation button
+// and are reached through links. Literaturbild is a working view of its own
+// (literaturbild.js); the matrix links of the answer pages still lead to it.
+const RELEASE_VIEWS = { wissensnetz: 'netz', frage: 'frage', werk: 'werk' };
 const VIEW_OF_RELEASE = { matrix: 'literaturbild', netz: 'wissensnetz', frage: 'frage', werk: 'werk' };
 // 'loading', 'ready', or the message of a failed model load.
 let releaseState = 'loading';
@@ -115,8 +116,10 @@ const DEFAULT_STATE = {
 
 // A working view with parameters of its own (kategorien.js) registers a codec
 // { keys, get, apply } here; the router serializes them as vp and stays the only writer
-// of the hash.
+// of the hash. A codec with own: true (literaturbild.js) keeps the corpus filters out
+// of its hash, as a release view does.
 const VIEW_PARAMS = {};
+function ownHash(view) { return Boolean(VIEW_PARAMS[view] && VIEW_PARAMS[view].own); }
 
 function createStore(initial) {
     let state = initial;
@@ -1105,6 +1108,7 @@ function switchView(viewId, params, ctx) {
         if (window.initializeKategorien) window.initializeKategorien();
         benchmarkInitialized = true;
     }
+    if (viewId === 'literaturbild' && window.EC.literaturbild) window.EC.literaturbild.show();
     // A hidden histogram has no width, so its labels are thinned once it shows.
     if (viewId === 'korpus') thinYearLabels();
     if (viewId === 'chat' && !chatInitialized) {
@@ -1162,16 +1166,20 @@ function releaseParseHash() {
     return Object.assign({}, s.rp, { view: RELEASE_VIEWS[s.view] || s.view });
 }
 
+// A release link into a working view (the answer pages' matrix cells into Literaturbild)
+// carries its parameters as that view's own.
 function releaseHref(params) {
     const view = VIEW_OF_RELEASE[params.view];
-    return view ? serializeState({ view: view, rp: releaseParamsOf(params) }) : '#view=start';
+    const own = releaseParamsOf(params);
+    return view ? serializeState({ view: view, rp: own, vp: VIEW_PARAMS[view] ? own : {} }) : '#view=start';
 }
 
 // Control changes push a history entry; options.replace (typing) updates the current one.
 function releaseGo(params, options) {
     const view = VIEW_OF_RELEASE[params.view];
     if (!view) return;
-    const next = Object.assign({}, store.get(), { view: view, rp: releaseParamsOf(params), paper: null });
+    const own = releaseParamsOf(params);
+    const next = Object.assign({}, store.get(), { view: view, rp: RELEASE_VIEWS[view] ? own : {}, vp: VIEW_PARAMS[view] ? own : {}, paper: null });
     applyStateToUI(next, { external: false });
     navMode = options && options.replace ? 'replace' : 'push';
     try { store.set(Object.assign({}, next, stateFromUI())); } finally { navMode = null; }
@@ -1248,8 +1256,9 @@ function applyStateToUI(s, ctx) {
     applyingFromUrl = true;
     try {
         const release = Boolean(RELEASE_VIEWS[s.view]);
-        // The hash of a release view carries no corpus filters, so the corpus keeps its state.
-        if (!release) {
+        // The hash of a release view, or of a working view with a hash of its own, carries
+        // no corpus filters, so the corpus keeps its state.
+        if (!release && !ownHash(s.view)) {
             document.getElementById('search-box').value = s.q || '';
             document.getElementById('filter-decision').value = s.dec || 'all';
             document.getElementById('filter-human').value = s.hum || 'all';
@@ -1305,6 +1314,10 @@ function serializeState(s) {
     if (s.view && s.view !== 'start') p.set('view', s.view);
     if (RELEASE_VIEWS[s.view]) {
         Object.keys(s.rp || {}).sort().forEach(function(key) { p.set(key, s.rp[key]); });
+        return '#' + p.toString();
+    }
+    if (ownHash(s.view)) {
+        VIEW_PARAMS[s.view].keys.forEach(function(key) { if (s.vp && s.vp[key]) p.set(key, s.vp[key]); });
         return '#' + p.toString();
     }
     if (s.q) p.set('q', s.q);
