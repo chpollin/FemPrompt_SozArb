@@ -1,0 +1,304 @@
+{
+  "schema": "femprompt-assertion-labels/0.1",
+  "language": "de",
+  "purpose": "Short labels of the core claim for the tiles of the Argumentkarte. A label summarises the Statement whose hash it records and carries no review or verification authority.",
+  "provenance": {
+    "agent_id": "claude-code/worktree-agent-a714c556cb448f93b",
+    "actor_type": "ai_agent",
+    "model": "Claude Opus 5.5",
+    "model_id": "claude-opus-5-5",
+    "created_at": "2026-10-01T17:49:49Z",
+    "basis": "The Statement section of each Assertion file",
+    "status": "provisional, operator acceptance pending"
+  },
+  "labels": {
+    "ahn-et-al-propose-integrating-ai-literacy-across-existing-core-competencies": {
+      "label": "KI-Literacy quer durch bestehende Kernkompetenzen",
+      "statement_sha256": "sha256:c9891bbccb855dad4455e547f4f23278b9452cdcfd31eb881c4582d17fbef32e"
+    },
+    "ai-literacy-for-social-work-framed-as-critical-understanding": {
+      "label": "KI-Literacy als technisches und kritisches Verständnis",
+      "statement_sha256": "sha256:0d6b3ddac07ba3b74e0e8e1b0c6f3474577c193d84f588072bf3ccc72bf8597a"
+    },
+    "algorithmic-decision-making-can-introduce-and-expose-structural-bias": {
+      "label": "Algorithmische Entscheidungen erzeugen und zeigen strukturellen Bias",
+      "statement_sha256": "sha256:a349a5492fc1d7887eddeb6b837ccd682bead5897fa89e078b3012ff320053dd"
+    },
+    "assigned-social-identity-personas-induced-identity-congruent-bias": {
+      "label": "Identitäts-Personas erzeugen identitätskongruenten Bias",
+      "statement_sha256": "sha256:6d586ccba8f529183f10e8b524cb8dc94dbdced2dcf3cfa47ce48f2c4e637410"
+    },
+    "beloch-and-martin-argue-ai-supported-counselling-needs-concepts-tailored-to-clients": {
+      "label": "KI-Beratung braucht klientenorientierte Beratungskonzepte",
+      "statement_sha256": "sha256:109f70bdca8278c0169c134cb42dc073da0bdbfd32d484f6ebb04464af5ae73b"
+    },
+    "bias-evaluations-name-binary-gender-operationalisation-as-limitation": {
+      "label": "Binäre Geschlechtsoperationalisierung als benannte Grenze",
+      "statement_sha256": "sha256:2cf6deba02d70656e60700829f30f57a34ac52daf6c8fb07ed9c06d07bdf6d78"
+    },
+    "biased-user-framing-reduced-llm-diagnostic-accuracy-in-a-simulation": {
+      "label": "Verzerrtes Nutzer-Framing senkt Diagnosegenauigkeit",
+      "statement_sha256": "sha256:1d6059b8b68c8052413cf68899af1e7ced368fa3156b3ef7d797e5cd3ab71f42"
+    },
+    "chain-of-thought-prompting-added-inference-overhead-in-clinical-benchmark": {
+      "label": "Chain-of-Thought erhöht Antwortlänge und Latenz",
+      "statement_sha256": "sha256:1af3d1113d415808d09a777dfd9f8416500c35f3635d655ad986bf2274a1cf7f"
+    },
+    "chain-of-thought-reduced-clinical-accuracy-gaps-most-often-but-not-universally": {
+      "label": "Chain-of-Thought verringert Genauigkeitslücken meist, nicht immer",
+      "statement_sha256": "sha256:7393d6144783c50c5fc04ee8eba4b75bea1348cc660fd111d93f00ce256bfa7f"
+    },
+    "chatterji-et-al-report-guidance-information-and-writing-dominate-consumer-chatgpt-use": {
+      "label": "ChatGPT-Nutzung: Ratschläge, Information, Schreiben",
+      "statement_sha256": "sha256:83873fbc416c6f033bd5a5b08c78186ade20574f3e5fec70d8179c264d9346d1"
+    },
+    "cheng-et-al-and-field-et-al-examine-predictive-and-nlp-tools-in-child-welfare": {
+      "label": "Prädiktive und NLP-Werkzeuge in der Kinderhilfe",
+      "statement_sha256": "sha256:ca97b1bfc01f75668cad841129b4613d63ecc2a0431892b240242f24d4ff7e79"
+    },
+    "cheng-et-al-report-smaller-disparity-for-worker-assisted-than-algorithm-only-screening": {
+      "label": "Fachkräfte mit Tool: geringere Disparität als Algorithmus",
+      "statement_sha256": "sha256:4620c92c128d0ba2038ea4fd12ed85b74783a901d3f00df6e8b5dad3e54bdf27"
+    },
+    "cheng-et-al-report-that-workers-used-context-to-compensate-for-model-limitations": {
+      "label": "Fachkräfte gleichen Modellgrenzen mit Kontextwissen aus",
+      "statement_sha256": "sha256:be8825f2caee3785cecdcc4c98b67b8ba971671530fbb8eea0583caf3194093a"
+    },
+    "child-protection-analysis-proposes-preserving-accountable-professional-discretion": {
+      "label": "Verantwortbares fachliches Ermessen im Kinderschutz bewahren",
+      "statement_sha256": "sha256:7bd7c5c8b4c6446b94f5252147bc31b000725d8c0adc2cfbb4b735368a975892"
+    },
+    "child-protection-nlp-showed-lower-name-recall-for-black-clients": {
+      "label": "NLP erkennt Namen Schwarzer Klient:innen schlechter",
+      "statement_sha256": "sha256:a17d5a3892fb09e67113f734349dca1463d87e76e7f65defd027ae65ed13dcba"
+    },
+    "child-protection-records-carry-existing-inequalities-into-algorithmic-decisions": {
+      "label": "Kinderschutzakten tragen Ungleichheiten in Algorithmen",
+      "statement_sha256": "sha256:cdea0fc6747a03a513907221ae13d24dbf658fb27a6aeaaa0cfb3c2b28fa0cfd"
+    },
+    "child-welfare-workers-showed-smaller-racial-disparity-than-algorithm": {
+      "label": "Fachkräfte zeigen geringere rassistische Disparität als Algorithmus",
+      "statement_sha256": "sha256:99fb2619ccea93cf4c030b48ab9698963df41f9efe91b08d6d32aa7f718c1e89"
+    },
+    "clinical-prompting-fairness-gains-came-from-lifting-unprivileged-groups": {
+      "label": "Fairness-Gewinne durch bessere Genauigkeit für Benachteiligte",
+      "statement_sha256": "sha256:cb095b1158f26bd131386068033950d1f08ff2156113269f4aa4d7fdf5917aed"
+    },
+    "clinician-client-focus-groups-link-fair-deployment-to-equitable-use-policies": {
+      "label": "Faire Nutzung braucht gerechte Einsatzregeln",
+      "statement_sha256": "sha256:9f024705e7e9d7960f0326e5dbc17da2b0dd0e6c13eb3ebb3e776111dafad61a"
+    },
+    "counterfactual-gender-audit-demonstrated-on-social-care-summaries": {
+      "label": "Kontrafaktischer Gender-Audit an Pflegezusammenfassungen",
+      "statement_sha256": "sha256:febd416843d8878bfa2593e53513ec74830c44ca45aeaa95f687c30b16d3807b"
+    },
+    "debt-counselling-study-discusses-chatbot-use-prospectively-without-chatbot-data": {
+      "label": "Chatbot-Beratung prospektiv diskutiert, ohne Chatbot-Daten",
+      "statement_sha256": "sha256:631bca3d1901c01ce87475e8ac90c3c17e522477a5f45d0c2e3f572e823fe363"
+    },
+    "epic-model-proposes-four-part-framework-for-integrating-ai-into-social-work": {
+      "label": "EPIC-Modell zur KI-Integration in Soziale Arbeit",
+      "statement_sha256": "sha256:220834bc1b94ed564fec891b8a77c85359ea850bba9b5d73a8020e94f6205f7c"
+    },
+    "fairness-aware-prompts-reduced-measured-disparities-in-mental-health-classification": {
+      "label": "Fairness-Prompts senken Disparitäten bei psychischer Gesundheit",
+      "statement_sha256": "sha256:fe719a55f3e888643fe6dcd7057ee639964292eeb8a570675f9c309dff03a17c"
+    },
+    "focus-groups-anticipate-misreading-of-underrepresented-clients-by-deception-detection": {
+      "label": "Täuschungserkennung könnte Unterrepräsentierte fehldeuten",
+      "statement_sha256": "sha256:79f86ee436d724c96546097659a1945a825cdb0226a043efbb269cdbf8ee6aea"
+    },
+    "gender-equity-framework-links-gender-bias-to-allocative-and-representational-harms": {
+      "label": "Gender-Bias führt zu Verteilungs- und Darstellungsschäden",
+      "statement_sha256": "sha256:c5b75719d86fdec2a4e6d98038e182d94b782a0505548fd7394743958ba00c40"
+    },
+    "gender-equity-framework-proposes-documentation-audits-and-participatory-governance": {
+      "label": "Dokumentation, Audits und partizipative Governance gegen Gender-Bias",
+      "statement_sha256": "sha256:8666c4bc2788b4c709a74112102ff1857559db46ba084573d67178f47f9921ef"
+    },
+    "gender-equity-literature-rejects-algorithmic-neutrality": {
+      "label": "Gender-Literatur weist algorithmische Neutralität zurück",
+      "statement_sha256": "sha256:3888358559d1a50c5a1b1671751e6c6dc91cac30777908ced14554b5ed603f0b"
+    },
+    "ingram-reports-expected-tensions-of-ai-assisted-recording-in-social-work": {
+      "label": "KI-Dokumentation: Entlastung gegen reflexives Schreiben",
+      "statement_sha256": "sha256:c5cccc12aab17ee29b8b00a22fc3aa9b27a8f2e5aec7a511af5221bb1cf45f37"
+    },
+    "james-et-al-propose-a-case-based-technical-critical-pedagogy": {
+      "label": "Fallbasierte technisch-kritische Pädagogik zu Algorithmen",
+      "statement_sha256": "sha256:4938ed508a3b4616d12e23beea934edea13515aab6101b82a97291156627161b"
+    },
+    "james-et-al-propose-preparing-social-workers-to-challenge-harmful-algorithmic-processes": {
+      "label": "Fachkräfte befähigen, schädliche Algorithmen anzufechten",
+      "statement_sha256": "sha256:c6b2e55c52588d92b9b6a0d2c75938663c7d8fbe3727855fdf79b28e57b29276"
+    },
+    "kabra-et-al-transfer-reasoning-through-fine-tuning-for-bias-mitigation": {
+      "label": "ReGiFT überträgt Reasoning durch Fine-Tuning",
+      "statement_sha256": "sha256:1c6d28a277c6ebe41811946fd3687b7b27f887a95336c6d120cb6d9737ee2c1e"
+    },
+    "kaneko-et-al-report-cot-reduced-bias-in-specific-evaluations": {
+      "label": "Chain-of-Thought senkt gemessenen Gender-Bias",
+      "statement_sha256": "sha256:5826636f18c04167e19d10e8a7c56091d7912441bdcf0f326bcc733015c6d058"
+    },
+    "llm-diagnosis-and-mental-health-studies-caution-against-clinical-reliance": {
+      "label": "Studien warnen vor klinischem Verlass auf LLMs",
+      "statement_sha256": "sha256:c75531abf388a1be839bb1043848bdba8f0de62122dcae2a6ef2a51be0067369"
+    },
+    "llm-generated-text-positions-cultures-asymmetrically": {
+      "label": "LLM-Texte positionieren Kulturen asymmetrisch",
+      "statement_sha256": "sha256:1b5f7d23bdf86297694bf285d7f3f9b226c9cc96e233036111571d08decc4db9"
+    },
+    "long-term-care-summaries-showed-model-dependent-gender-differences": {
+      "label": "Gender-Unterschiede in Pflegezusammenfassungen modellabhängig",
+      "statement_sha256": "sha256:a5a9855de131b9220a0578a2ae76d800a4d33af7a85aabc7a12f9c46efef1209"
+    },
+    "mental-health-classification-shows-demographic-disparities-across-language-models": {
+      "label": "Demografische Disparitäten bei psychischer Klassifikation",
+      "statement_sha256": "sha256:d2809e18787ffd8b39ac778dc6829b675024403e2f834c57e6e990b3a8a68a49"
+    },
+    "mental-health-llm-audits-advise-against-unguarded-reliance-in-consequential-decisions": {
+      "label": "Kein unbedachter LLM-Einsatz bei folgenreichen Entscheidungen",
+      "statement_sha256": "sha256:e031d145117faea2ac754a6110d2d37ed75226e2f48d6c08878865d8a2347127"
+    },
+    "multi-persona-thinking-reported-lower-benchmark-bias-than-prompting-baselines": {
+      "label": "Multi-Persona Thinking senkt Benchmark-Bias",
+      "statement_sha256": "sha256:93a4cd3112d2ce4f59570f7f2eb73f75b6962765793b2fe9cbf9470299e28e2d"
+    },
+    "participation-of-affected-groups-proposed-as-safeguard-without-reported-evaluation": {
+      "label": "Partizipation Betroffener empfohlen, nicht evaluiert",
+      "statement_sha256": "sha256:913b1af55f3f45a9ff8c3c4942b75aa74d8847fc50a245a2101af118663187d9"
+    },
+    "patton-and-victor-describe-prospective-llm-uses-in-social-work-research": {
+      "label": "Prospektive LLM-Nutzung in sozialarbeiterischer Forschung",
+      "statement_sha256": "sha256:2daa710f58cd0e51657c5c6c564710341a1046f20eec645805bf139f867fa4b6"
+    },
+    "persona-prompting-can-introduce-identity-congruent-bias": {
+      "label": "Persona-Prompting kann identitätskongruenten Bias erzeugen",
+      "statement_sha256": "sha256:4752a220864d50c2559d2c695f43df8ecbeffa49f6914fa4930bf7cf2583b925"
+    },
+    "persona-prompts-shift-llm-outputs-toward-assigned-identities": {
+      "label": "Persona-Prompts verschieben Ausgaben zur zugewiesenen Identität",
+      "statement_sha256": "sha256:4f017b1ebb61250d9f98ba734ad9f6d9109531d760e1bdb0a2fddc7177a3abc0"
+    },
+    "prompt-language-shifted-rather-than-removed-measured-cultural-bias": {
+      "label": "Promptsprache verschiebt kulturellen Bias, statt ihn aufzuheben",
+      "statement_sha256": "sha256:96decb5decd891d0fe4654474ef80fc817077a5bf2d15bc199fe316a634cc496"
+    },
+    "psychiatric-diagnosis-audit-reports-gender-and-racial-ethnic-bias": {
+      "label": "Gender- und ethnischer Bias in psychiatrischen Diagnosen",
+      "statement_sha256": "sha256:9c618e0cc4fd140104a0435359c4269eeef06e61eec54446308491045dbcfae1"
+    },
+    "rapid-review-reports-limited-evidence-for-generative-ai-in-youth-mental-health-apps": {
+      "label": "Schwache Evidenz für generative KI in Jugend-Apps",
+      "statement_sha256": "sha256:6affe04394ebb1d9598e727cddf4ed33582136dc9265eec5aaab8cf87ee89fcf"
+    },
+    "reflexive-use-of-algorithmic-decisions-can-expose-bias-without-preventing-it": {
+      "label": "Reflexive Nutzung zeigt Bias, verhindert ihn nicht",
+      "statement_sha256": "sha256:5aaa1817eb50f8c55b2d9dbed4b062aaa156ba657d14843f12fcde15722407cb"
+    },
+    "reported-prompting-effects-vary-across-models-and-bias-categories": {
+      "label": "Prompting-Effekte variieren nach Modell und Biasart",
+      "statement_sha256": "sha256:86b1fa92e85bf3c436a59cce37815a470a264642b51de36c20f2ead679d722ab"
+    },
+    "rickman-proposes-a-counterfactual-evaluation-of-gender-bias-in-generated-care-summaries": {
+      "label": "Kontrafaktische Evaluation von Gender-Bias in Pflegezusammenfassungen",
+      "statement_sha256": "sha256:d6a05ce51e7c2445516fd979474358532c08a43020ca28f5ea5df83b352d6413"
+    },
+    "rickman-tests-llm-summaries-of-social-care-notes-for-gender-bias": {
+      "label": "LLM-Zusammenfassungen von Pflegeakten auf Gender-Bias geprüft",
+      "statement_sha256": "sha256:143009922feec7a480e19218a4bcc65663368d78d8d7637a89b3a72120b9b4f4"
+    },
+    "schroder-et-al-follow-development-of-an-ai-counselling-assistant-in-an-ngo": {
+      "label": "KI-Beratungsassistent in einer NGO entwickelt",
+      "statement_sha256": "sha256:9b435ae77fde54205808edccc78d65ae07a470ee7def97d07abc2e5fce66b2b8"
+    },
+    "single-attribute-fairness-can-conceal-intersectional-unfairness": {
+      "label": "Fairness je Merkmal verdeckt intersektionale Unfairness",
+      "statement_sha256": "sha256:5eeda1d8c75f402abc93a82442523a5319d51c80b7ff6fc169aafcdd27dc0934"
+    },
+    "social-work-education-framework-uses-recorded-image-prompts-as-critique-material": {
+      "label": "Bildprompts als Kritikmaterial in der Lehre",
+      "statement_sha256": "sha256:8f7cc967b8c395cc282bee65eeaeb7ad9b4250f177d3413b18216c2c83e47775"
+    },
+    "social-work-research-guidance-conditions-llm-use-on-human-validation-and-accountability": {
+      "label": "LLM-Forschung braucht menschliche Prüfung und Verantwortung",
+      "statement_sha256": "sha256:a0b1dd34ab8d45363455cb4aa7170d0ab75f641162c9465c42d0a70073c2a374"
+    },
+    "social-work-research-guidance-proposes-disclosing-prompts-and-model-versions": {
+      "label": "Prompts und Modellversion offenlegen",
+      "statement_sha256": "sha256:e25c0f66b9dbc074766235328ce20783903bafd2790b5d4033921b8defacec78"
+    },
+    "social-work-research-guidance-requires-disclosure-of-prompts-and-models": {
+      "label": "Offenlegung von Prompts und Modellen gefordert",
+      "statement_sha256": "sha256:c7e8775ee6c5ddb0df3e2bed7fdbf6b650746418f56fbeac4da970a98a0ba985"
+    },
+    "social-work-research-guidance-requires-human-verification-of-generated-outputs": {
+      "label": "Menschliche Prüfung generierter Ergebnisse gefordert",
+      "statement_sha256": "sha256:f281646550f45bc78e8ab53e931867b174c0c71735c25e9aea1a019aae1299d7"
+    },
+    "social-work-research-guidance-requires-verification-of-and-accountability-for-ai-outputs": {
+      "label": "Prüfung und Verantwortung für KI-Ausgaben gefordert",
+      "statement_sha256": "sha256:ceb8eadb18f4a561fced4f1e6a857149181d6385d7826c4b9d91c8990770982b"
+    },
+    "social-work-sources-name-professional-judgement-as-a-capacity-to-retain-and-strengthen": {
+      "label": "Fachliches Urteil bewahren und stärken",
+      "statement_sha256": "sha256:8f1be0073268d1706fa8dbfc9958cb8b2614db21ca43430ab9401c5a9ae9d20f"
+    },
+    "sources-link-responsible-llm-use-to-attention-to-marginalised-and-misrepresented-groups": {
+      "label": "Verantwortliche Nutzung achtet auf marginalisierte Gruppen",
+      "statement_sha256": "sha256:ac83efc54554653ea8090f0abd7c31124aa384933a15eaca9ec78b5d5fa91da5"
+    },
+    "sources-locate-responsible-ai-use-in-governance-and-quality-control-structures": {
+      "label": "Verantwortung in Governance und Qualitätskontrolle verankert",
+      "statement_sha256": "sha256:73a69980931f65bc87d1eab72fff6040dec2ae8b198d2a4e59ef272fe2f63738"
+    },
+    "sources-name-participation-of-affected-communities-as-a-condition-of-equitable-ai": {
+      "label": "Partizipation Betroffener als Bedingung gerechter KI",
+      "statement_sha256": "sha256:3b0c0f8ffb486b56e3ea88329cdc36a42f571797f06ed87f2cc71786fa6bf542"
+    },
+    "sources-tie-algorithmic-decision-support-to-retained-professional-control": {
+      "label": "Entscheidungsunterstützung nur mit fachlicher Kontrolle",
+      "statement_sha256": "sha256:62d6cf7635c965b25feae885b55e315ec2fd99f30f553fa52a28dceb58fe9f79"
+    },
+    "sources-tie-fair-deployment-to-the-rights-and-power-position-of-those-subjected-to-ai": {
+      "label": "Fairer Einsatz hängt an Rechten der Betroffenen",
+      "statement_sha256": "sha256:1c6476315eb5416719870081bf1d1b713bdf898978e60b4bef740c2fc4b9d361"
+    },
+    "statistical-fairness-criteria-leave-rights-questions-in-child-protection-open": {
+      "label": "Statistische Fairness lässt Rechtsfragen offen",
+      "statement_sha256": "sha256:1eff3c51d8844a1f9d8a8ad20d2d42f3a7764fdf849ba02e32b1114845935794"
+    },
+    "switching-prompt-language-shifted-rather-than-removed-cultural-bias": {
+      "label": "Sprachwechsel verschiebt kulturellen Bias, statt ihn aufzuheben",
+      "statement_sha256": "sha256:1a5af1d0fd34cc0aa9cf7aff1e15a1af4b4058a797d32eefd98909252479376b"
+    },
+    "victor-et-al-require-knowledge-of-tool-construction-limits-and-biases": {
+      "label": "Wissen über Aufbau, Grenzen und Bias nötig",
+      "statement_sha256": "sha256:f63b506791a61fd7d208a37c06a2d906acae7c0851e50e1bb3af5eb6198aa036"
+    },
+    "vision-language-model-gender-stereotypes-override-visual-evidence": {
+      "label": "Gender-Stereotype überlagern visuelle Evidenz",
+      "statement_sha256": "sha256:4157995bd4f93a7fa7a9f164918200af338850b5154bf9da10b88d8ae83cabf2"
+    },
+    "visual-disinformation-review-identifies-compounded-risks-for-marginalised-communities": {
+      "label": "Visuelle Desinformation trifft Marginalisierte mehrfach",
+      "statement_sha256": "sha256:4c7f8b0ade452148f7353f7ca7a5e326144491e5dafdf7c7817c851ad8f8a11b"
+    },
+    "wallengren-lynch-proposes-generated-images-as-material-for-critical-teaching": {
+      "label": "Generierte Bilder als Material kritischer Lehre",
+      "statement_sha256": "sha256:5a4bdf34d4c5eded93cc8a8f3e8c7613e0f622a52415372ef144604089622597"
+    },
+    "wang-et-al-fairness-aware-prompting-reduced-mental-health-disparities": {
+      "label": "Fairness-Prompting senkt Disparitäten in Vorhersagen",
+      "statement_sha256": "sha256:d6cc813bc3bbb1c7e746928299ce1b204cc7c38b21969725d5a649b37c481823"
+    },
+    "worker-assisted-screening-showed-smaller-racial-disparity-than-algorithm-only-policy": {
+      "label": "Unterstütztes Screening mit geringerer rassistischer Disparität",
+      "statement_sha256": "sha256:09560c6f2e4843270928d4bcb70305c9decf24b76097330cd99e10a85af8e241"
+    },
+    "xiao-et-al-find-no-fair-prompting-strategy-effective-in-every-tested-scenario": {
+      "label": "Keine Fair-Prompting-Strategie wirkt überall",
+      "statement_sha256": "sha256:29236040cd8574efd4b10d2d367fe3706920a4e58788f68afe6dddbf05e7efed"
+    }
+  }
+}

@@ -19,7 +19,7 @@ const workingPath = resolve(docs, 'data', 'assertions_working.json');
 const hasWorking = existsSync(workingPath);
 const released = JSON.parse(readFileSync(resolve(docs, 'data', 'assertion_index.json'))).assertions;
 const mapItems = hasWorking ? JSON.parse(readFileSync(workingPath)).assertions : released.map((a) => ({
-  id: a.assertion_ref.split('/').pop(), research_questions: a.research_questions || [], contested_with: [], released: true,
+  id: a.assertion_ref.split('/').pop(), label: a.label || '', research_questions: a.research_questions || [], contested_with: [], released: true,
   works: [...new Set(a.evidence.map((e) => e.record_id))].map((id) => ({ record_id: id })),
 }));
 const mime = {
@@ -120,6 +120,14 @@ try {
       const item = byId[tile.dataset.id];
       return item && tile.classList.contains(item.released ? 'amap-tile--released' : 'amap-tile--draft') &&
         tile.querySelectorAll('.amap-units i').length === Math.min(item.works.length, 6);
+    });
+  }, mapItems));
+  check('a tile shows the short label of its Assertion where one exists', await page.evaluate((items) => {
+    const byId = Object.fromEntries(items.map((item) => [item.id, item]));
+    return [...document.querySelectorAll('#argument-map .amap-tile[data-id]')].every((tile) => {
+      const label = byId[tile.dataset.id].label || '';
+      const shown = tile.querySelector('.amap-label');
+      return label ? Boolean(shown) && shown.textContent === label && tile.getAttribute('aria-label').startsWith(label) : !shown;
     });
   }, mapItems));
   const placed = mapItems.filter((item) => questionOf(item).length);

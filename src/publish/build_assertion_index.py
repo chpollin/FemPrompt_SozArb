@@ -24,6 +24,7 @@ if __package__ in (None, ""):
 
 from src.analysis.work_versions import load_registry, lookup_by_record
 from src.assess.artifact_verification import SCHEMA as LEDGER_SCHEMA, validated_reviews
+from src.publish.assertion_labels import DEFAULT_LABELS, current_label, load_labels
 from src.publish.validate_research_vault import (
     Document,
     ValidationReport,
@@ -176,7 +177,9 @@ def build_index(
     policy_path: Path = DEFAULT_POLICY,
     ledger_path: Path = DEFAULT_LEDGER,
     repo: Path | None = None,
+    labels_path: Path = DEFAULT_LABELS,
 ) -> dict[str, Any]:
+    labels = load_labels(labels_path)
     policy = _read_json(policy_path) if policy_path.is_file() else {
         "allowed_states": ["publication-approved"], "public_label": "Publikationsfreigegeben"
     }
@@ -285,10 +288,12 @@ def build_index(
         topics = doc.metadata.get("topics")
         if not isinstance(topics, list) or any(not isinstance(topic, str) for topic in topics):
             raise ValueError(f"{doc.key}: topics must be text values")
+        label = current_label(labels, doc.key.rsplit("/", 1)[-1], statement)
         assertions.append({
             "id": _stable_id("A-", doc.key), "assertion_ref": doc.key,
             "title": title.group(1).strip() if title else statement,
-            "statement": statement, "topics": [topic.strip("[]") for topic in topics],
+            "statement": statement, **({"label": label} if label else {}),
+            "topics": [topic.strip("[]") for topic in topics],
             # Validated by _check_publishable; an Assertion without the field has none.
             "research_questions": sorted(doc.metadata.get("research-questions") or []),
             "status": doc.metadata["status"], "review": review,

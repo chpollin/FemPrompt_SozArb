@@ -21,6 +21,7 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 if __package__ in (None, ""):
     sys.path.insert(0, str(REPO_ROOT))
 
+from src.publish.assertion_labels import DEFAULT_LABELS, current_label, load_labels
 from src.publish.build_assertion_index import DEFAULT_OUTPUT as DEFAULT_RELEASED, _document, _section
 from src.publish.validate_research_vault import WIKILINK
 
@@ -52,7 +53,9 @@ def build_map(
     vault: Path = DEFAULT_VAULT,
     papers_path: Path = DEFAULT_PAPERS,
     released_path: Path = DEFAULT_RELEASED,
+    labels_path: Path = DEFAULT_LABELS,
 ) -> dict[str, Any]:
+    labels = load_labels(labels_path)
     papers = {
         str(paper["id"]): paper
         for paper in json.loads(papers_path.read_text(encoding="utf-8")).get("papers", [])
@@ -96,6 +99,7 @@ def build_map(
             "ref": key,
             "title": heading.group(1).strip() if heading else statement,
             "statement": statement,
+            "label": current_label(labels, short(key), statement),
             "status": str(doc.metadata.get("status") or ""),
             "released": key in released,
             "research_questions": sorted(
@@ -113,9 +117,10 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--vault", type=Path, default=DEFAULT_VAULT)
     parser.add_argument("--papers", type=Path, default=DEFAULT_PAPERS)
     parser.add_argument("--released", type=Path, default=DEFAULT_RELEASED)
+    parser.add_argument("--labels", type=Path, default=DEFAULT_LABELS)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     args = parser.parse_args(argv)
-    payload = build_map(args.vault, args.papers, args.released)
+    payload = build_map(args.vault, args.papers, args.released, args.labels)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Assertion map: {len(payload['assertions'])} assertions (local working file)")

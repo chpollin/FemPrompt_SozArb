@@ -3318,6 +3318,31 @@ main {
 .amap-tile--released .amap-units i,
 .amap-tile--verified .amap-units i { background: #fff; }
 
+.amap-tile--labelled {
+    width: 100%;
+    height: auto;
+    min-height: 2rem;
+    padding: 4px 6px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    text-align: left;
+}
+
+.amap-label {
+    min-width: 0;
+    font-size: var(--text-xs);
+    line-height: 1.3;
+    color: var(--gray-800);
+    hyphens: auto;
+    overflow-wrap: break-word;
+}
+
+.amap-tile--released .amap-label,
+.amap-tile--verified .amap-label { color: #fff; }
+
+.amap-tile--labelled .amap-units { flex: 0 0 auto; }
+
 .amap-tile:focus-visible,
 .amap-tile.is-selected {
     outline: 2px solid var(--primary-dark);
