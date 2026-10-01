@@ -79,9 +79,9 @@ An Assertion carries at least the following information.
 - review status with dated activity and responsible actor
 - intended output, for instance literature report, paper or both
 
-Assertions record the relation in the optional frontmatter field `research-questions`, a list of distinct values from `SQ1` to `SQ5` that the validator checks. The grounded Assertions of 1 October 2026 were moved to the numbering of the merged questions, where the former SQ4 Competences became SQ5. The four Assertions with AI Agent Review were left unchanged, because editing them would invalidate their review receipts. Their remapping is an editorial decision of the operator, with the following proposals.
+Assertions record the relation in the optional frontmatter field `research-questions`, a list of distinct values from `SQ1` to `SQ5` that the validator checks. The grounded Assertions of 1 October 2026 were moved to the numbering of the merged questions, where the former SQ4 Competences became SQ5. The four Assertions with AI Agent Review were first left unchanged, because editing them invalidates their review receipts. They were remapped provisionally on 1 October 2026 as listed below, pending the operator's acceptance ([[plan#Decisions taken]]). An attributed negative receipt invalidates each earlier acceptance, and a new source review of the current bytes replaces it.
 
-| Assertion | Current field | Proposed field |
+| Assertion | Earlier field | Field since 1 October 2026 |
 |---|---|---|
 | `kabra-et-al-transfer-reasoning-through-fine-tuning-for-bias-mitigation` | `SQ1`, `SQ2` of the earlier 2026 numbering, which the result site reads as Use and Bias forms | `SQ3` |
 | `kaneko-et-al-report-cot-reduced-bias-in-specific-evaluations` | none | `SQ3` |
@@ -89,6 +89,8 @@ Assertions record the relation in the optional frontmatter field `research-quest
 | `ahn-et-al-propose-integrating-ai-literacy-across-existing-core-competencies` | none | `SQ5` |
 
 Both numberings use the same values, so the validator cannot detect the earlier one. The Assertion index exports the field as `research_questions` ([[data#Analysis vocabulary projection]]).
+
+The Argumentkarte shows a German short label of each Assertion. The labels stand outside the Assertion files in `research-vault/labels/assertion-labels.json`, because an edit to a reviewed file invalidates its receipt. Each label records the hash of the Statement it summarises, and `src/publish/assertion_labels.py` drops a label whose Statement has changed. The local working file carries every label, and the released Assertion index carries only the labels of released Assertions, so a draft label never reaches a served file.
 
 Report Assertions and paper Assertions form one body of knowledge. The field for the intended output controls which Assertions are used in which text. Methodological statements of the paper can additionally point to project artifacts such as ADRs, run manifests, tests and replay outputs.
 
@@ -137,7 +139,9 @@ The active folder structure, a reviewed partial holding and the project-specific
 | [Kamruzzaman (2024), dual-process prompting](../research-vault/20_distillates/publications/kamruzzaman-2024-dual-process-prompting.md) | Together with Kaneko et al. (2024), [effects vary across models and bias categories](../research-vault/30_assertions/reported-prompting-effects-vary-across-models-and-bias-categories.md) |
 | [Kabra et al. (2025), reasoning-guided fine-tuning](../research-vault/20_distillates/publications/kabra-2025-reasoning-guided-fine-tuning.md) | [Transfer of reasoning traces through training](../research-vault/30_assertions/kabra-et-al-transfer-reasoning-through-fine-tuning-for-bias-mitigation.md), which describes the method and makes no general efficacy claim |
 
-These statements carry attributed AI source reviews and no domain verification. The chat reads the [released Assertion index](../docs/data/assertion_index.json). Connections in the historical Knowledge Graph rest on category co-occurrence and do not replace an evidenced scholarly relation between statements.
+These statements carry attributed AI source reviews and no domain verification.
+
+On 1 October 2026 every Assertion received a provisional AI Agent Review against its grounding blocks and sources, recorded in `generated/verification/assertion-reviews-2026-10-01.json`. The receipts of the grounded Assertions bind their current bytes, while their status stays `grounded`, so none of them enters the released index. Promoting an accepted Assertion changes its file and therefore needs a new receipt over the promoted bytes. Narrowed Assertions carry a proposed wording in their receipt, which has not been applied to the Statement. The chat reads the [released Assertion index](../docs/data/assertion_index.json). Connections in the historical Knowledge Graph rest on category co-occurrence and do not replace an evidenced scholarly relation between statements.
 
 The draft chapter [SQ1 Use](../research-vault/40_output/literature-report/sq1-use.md) of the literature report was prepared on 1 October 2026 from the active distillates. It rests on the Assertions listed in its frontmatter, which an LLM agent prepared with recorded agent and model identity. Chapter and Assertions have the status `grounded`, so their references resolve while AI Agent Review and domain-expert verification are outstanding, and they stay outside the released Assertion index. The draft finds that no Assertion over the active distillates reports an evaluated benefit of LLM use in a social-work setting, and it lists included Works without an active distillate whose titles suggest direct SQ1 content. Both statements describe the distillate set and say nothing yet about the included corpus. The operator cancelled the drafts for the other sub-questions in the same session.
 
