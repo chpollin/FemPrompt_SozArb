@@ -56,7 +56,7 @@
 
   --pt-nav-w: 248px;
   --pt-rail-w: 336px;
-  --pt-chrome: 110px; /* site header and page padding; workspace controls sit inside the corpus column */
+  --pt-chrome: 160px; /* shared site header (ADR-039 slim header dropped 2026-10-01) and page padding */
 }
 
 /* BASE */
@@ -69,9 +69,6 @@ body.pt-fullscreen *, body.pt-fullscreen *::before, body.pt-fullscreen *::after 
 .pt-fullscreen .mono { font-family: var(--pt-mono); }
 #prisma-root { max-width: 1760px; margin: 0 auto; padding: 0.8rem 1.25rem 0.8rem; }
 .pt-fullscreen .site-footer { border-top: 0; }
-.pt-fullscreen header::after { display: none; } /* the category spectrum bar is companion decoration */
-.pt-fullscreen header .header-top { padding-block: 0.45rem; }
-.pt-fullscreen header h1 { font-size: 1.35rem; margin: 0; }
 
 .pt-fullscreen ::-webkit-scrollbar { width: 10px; height: 10px; }
 .pt-fullscreen ::-webkit-scrollbar-thumb { background: var(--pt-border-2); border-radius: 10px; border: 2px solid transparent; background-clip: padding-box; }
