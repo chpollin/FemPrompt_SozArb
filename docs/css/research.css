@@ -1,4 +1,4 @@
-/* Rich Tooltips (JS-driven, HTML content) */
+/* Tooltips of the header navigation (docs/js/nav-tips.js) */
 .has-tip {
     cursor: help;
 }
@@ -25,130 +25,8 @@
     to { opacity: 1; transform: translateY(0); }
 }
 
-.tip-title {
-    font-weight: 600;
-    font-size: var(--text-sm);
-    color: white;
-    margin-bottom: 0.375rem;
-}
-
 .tip-text {
-    color: var(--gray-300);
-    margin-bottom: 0.375rem;
-}
-
-.tip-muted {
-    color: var(--gray-500);
-    font-style: italic;
-}
-
-.tip-section {
-    font-size: 0.625rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--gray-500);
-    margin: 0.5rem 0 0.25rem;
-}
-
-/* Mini bar charts in tooltips */
-.tip-bar-row {
-    display: flex;
-    align-items: center;
-    gap: 0.375rem;
-    margin-bottom: 0.2rem;
-}
-
-.tip-bar-label {
-    font-size: 0.625rem;
-    color: var(--gray-400);
-    min-width: 70px;
-    text-align: right;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.tip-bar {
-    flex: 1;
-    height: 6px;
-    background: var(--gray-700);
-    border-radius: 3px;
-    overflow: hidden;
-}
-
-.tip-bar-fill {
-    height: 100%;
-    background: var(--primary);
-    border-radius: 3px;
-    transition: width 0.3s;
-}
-
-.tip-bar-val {
-    font-size: 0.625rem;
-    color: var(--gray-400);
-    min-width: 24px;
-    text-align: right;
-}
-
-/* Stat grid in tooltips */
-.tip-grid {
-    display: flex;
-    gap: 0.75rem;
-    margin: 0.375rem 0;
-}
-
-.tip-stat {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.tip-stat-val {
-    font-size: var(--text-lg);
-    font-weight: 700;
-    color: white;
-    line-height: 1;
-}
-
-.tip-stat-lbl {
-    font-size: 0.5625rem;
-    color: var(--gray-500);
-    margin-top: 0.125rem;
-    text-align: center;
-}
-
-/* Pipeline visualization in tooltip */
-.tip-pipeline {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    flex-wrap: wrap;
-    margin: 0.375rem 0;
-}
-
-.tip-step {
-    font-size: 0.625rem;
-    padding: 0.125rem 0.375rem;
-    background: var(--gray-700);
-    border-radius: 3px;
-    color: var(--gray-300);
-    white-space: nowrap;
-}
-
-.tip-step small {
-    color: var(--gray-500);
-}
-
-.tip-step-hl {
-    background: var(--primary-dark);
-    color: white;
-    font-weight: 600;
-}
-
-.tip-arrow {
-    font-size: 0.5rem;
-    color: var(--gray-600);
+    color: var(--gray-200);
 }
 
 * {
@@ -1139,6 +1017,11 @@ main {
         max-width: 200px;
     }
 
+    .papers-table thead th,
+    .papers-table tbody td {
+        padding-inline: 0.5rem;
+    }
+
     .modal-content {
         width: 100vw;
         border-left: none;
@@ -1160,115 +1043,18 @@ main {
    KATEGORIEN-EXPLORER
    ========================================================================== */
 
-.spektrum-intro {
-    font-size: var(--text-sm);
-    color: var(--gray-500);
-    margin-bottom: 1rem;
-}
+#kategorie-spektrum { margin-bottom: 1.5rem; }
 
-.spektrum-groups {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 0.25rem;
-    margin-bottom: 0.25rem;
-}
-
-.spektrum-group-label {
-    font-size: 0.65rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--gray-400);
-}
-
-.spektrum-cards {
-    display: flex;
-    gap: 0;
-    margin-bottom: 1.5rem;
-    background: linear-gradient(to right, #5b8c5a, #3a7d7e, #4b7bab, #7c6fae, #b0546e, #c2694e, #d4943a, #8a7542, #a24b7a, #6a8e4e);
-    background-size: 100% 3px;
-    background-repeat: no-repeat;
-    background-position: top;
-    padding-top: 3px;
-}
-
-.kategorie-card {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.25rem;
-    padding: 0.625rem 0.25rem;
-    background: white;
-    border: 1px solid var(--gray-200);
-    border-right: none;
-    cursor: pointer;
-    transition: var(--transition-fast);
-    position: relative;
-}
-
-.kategorie-card:first-child {
-    border-radius: var(--radius-md) 0 0 var(--radius-md);
-}
-
-.kategorie-card:last-child {
-    border-right: 1px solid var(--gray-200);
-    border-radius: 0 var(--radius-md) var(--radius-md) 0;
-}
-
-.kategorie-card:hover {
-    background: var(--gray-50);
-}
-
-.kategorie-card.active {
-    background: var(--gray-50);
-    border-bottom: 3px solid var(--cat-color, var(--gray-500));
-    z-index: 1;
-}
-
-.kcard-color {
-    width: 100%;
-    height: 3px;
-    border-radius: 2px;
-    opacity: 0.6;
-}
-
-.kategorie-card.active .kcard-color {
-    opacity: 1;
-}
-
-.kcard-name {
-    font-size: 0.65rem;
-    font-weight: 500;
-    color: var(--gray-600);
-    text-align: center;
-    line-height: 1.2;
-}
-
-.kategorie-card.active .kcard-name {
-    font-weight: 700;
-    color: var(--gray-900);
-}
-
+/* The rate difference of LLM against Expert:innen inside a category chip. */
 .kcard-diff {
-    font-size: 0.6rem;
     font-weight: 600;
 }
 
 .kcard-diff.llm-more { color: #4b7bab; }
 .kcard-diff.human-more { color: #d4943a; }
 .kcard-diff.neutral { color: var(--gray-400); }
+.category-chip[aria-pressed="true"] .kcard-diff { color: inherit; }
 
-@media (max-width: 900px) {
-    .spektrum-cards {
-        flex-wrap: wrap;
-    }
-    .kategorie-card {
-        flex: 0 0 calc(20% - 0px);
-        border-right: 1px solid var(--gray-200);
-        border-radius: 0;
-    }
-}
 
 /* Detail panel */
 .kategorie-detail {
@@ -1534,10 +1320,11 @@ main {
        <span class="chip-group-sep" aria-hidden="true"></span>
        <span class="chip-group-label">Perspektive</span> ...chips...
      </div>
-     <button type="button" class="category-chip [category-chip--compact]" data-cat="KEY"
+     <button type="button" class="category-chip [category-chip--compact | category-chip--sm]" data-cat="KEY"
              aria-pressed="false|true|mixed" [data-level="teilweise"] style="--chip-color:#hex">
        <span class="chip-dot" aria-hidden="true"></span><span class="chip-label">Label</span>
      </button>
+   A static label uses the same markup on a <span> without aria-pressed.
    --chip-color is the category colour from category_schema.json, the one allowed inline
    style. Off is a white pill with the coloured dot; on (aria-pressed=true) fills the pill
    with the colour, its lightness clamped so white text keeps 4.5:1, and shows a check
@@ -1599,7 +1386,7 @@ main {
 .category-chip .chip-dot { --chip-color: inherit; background: var(--chip-color); }
 .category-chip:hover:not([disabled]) { border-color: var(--chip-color); }
 .category-chip:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
-.category-chip[disabled] { cursor: default; }
+.category-chip[disabled], span.category-chip { cursor: default; }
 
 .category-chip[aria-pressed="true"],
 .category-chip.active {
@@ -1630,7 +1417,8 @@ main {
     box-shadow: inset 0 0 0 1.5px var(--chip-color);
 }
 
-.category-chip--compact {
+.category-chip--compact,
+.category-chip--sm {
     min-height: 1.5rem;
     padding: 0.1rem 0.5rem 0.1rem 0.4rem;
     gap: 0.3rem;
@@ -2183,8 +1971,7 @@ main {
     .graph-wrapper {
         grid-template-columns: 1fr !important;
     }
-    #view-wissensnetz,
-    #view-wissensnetz .graph-wrapper {
+    .graph-wrapper {
         margin-left: 0;
         margin-right: 0;
     }
@@ -2206,17 +1993,12 @@ main {
    WISSENS-CHAT TAB
    ========================================================================== */
 
-/* Wissensnetz: full-width, break out of main constraint */
+/* Literaturbild and Wissensnetz keep the wider frame their tabs had; the matrix and the
+   network figure scroll inside it, never the document. */
+#view-literaturbild,
 #view-wissensnetz {
-    max-width: none;
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 0 1rem;
+    margin-inline: calc((100% - min(1400px, 100vw - 2rem)) / 2);
 }
-
-/* Wissensnetz has no section heading -- content starts at toolbar */
 
 /* Chat view gets more horizontal space */
 #view-chat {
@@ -2769,9 +2551,10 @@ main {
     .view-content { display: block !important; }
 }
 
-/* Start view: the main question, one coverage sentence and four equal question cards */
+/* Start view: the main question, its status sentence and the four question cards share
+   one measure, so the question wraps on two or three lines above a two-by-two grid. */
 .start {
-    max-width: 62rem;
+    max-width: 52rem;
     margin: var(--space-2xl) auto 3rem;
 }
 
@@ -2780,46 +2563,18 @@ main {
     font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.25rem);
     line-height: 1.25;
     color: var(--gray-900);
-    max-width: 30ch;
-    margin: 0 0 var(--space-lg);
+    text-wrap: balance;
+    margin: 0 0 var(--space-sm);
 }
 
 .start-status {
-    font-size: var(--text-md);
+    font-size: var(--text-xl);
     color: var(--gray-700);
-    max-width: 62ch;
     margin: 0 0 var(--space-xl);
 }
 
-.start-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-md);
-    margin-bottom: 2.5rem;
-}
+.start-status:empty { display: none; }
 
-.start-btn {
-    display: inline-block;
-    padding: 0.65rem 1.25rem;
-    border: 1px solid var(--gray-500);
-    border-radius: 8px;
-    background: var(--gray-50);
-    color: var(--gray-800);
-    font-weight: 500;
-    text-decoration: none;
-}
-
-.start-btn:hover { border-color: var(--gray-700); }
-
-.start-btn--primary {
-    background: var(--primary-dark);
-    border-color: var(--primary-dark);
-    color: #fff;
-}
-
-.start-btn--primary:hover { background: var(--secondary); border-color: var(--secondary); }
-
-.start-btn:focus-visible,
 .start-card:focus-visible {
     outline: 2px solid var(--primary-dark);
     outline-offset: 2px;
@@ -2830,8 +2585,12 @@ main {
     padding: 0;
     margin: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--space-lg);
+}
+
+@media (max-width: 40rem) {
+    .start-cards { grid-template-columns: 1fr; }
 }
 
 .start-card {
@@ -2864,6 +2623,16 @@ main {
     color: var(--gray-700);
     margin: 0;
 }
+
+/* The finding line sits at the foot of the card, whatever the length of the question. */
+.start-card .start-card-status {
+    margin-top: auto;
+    padding-top: var(--space-md);
+    font-size: var(--text-base);
+    color: var(--gray-600);
+}
+
+.start-card .start-card-status:empty { display: none; }
 
 .start-card--use { --card-accent: var(--cat-soz-arb); }
 .start-card--risk { --card-accent: var(--cat-bias); }

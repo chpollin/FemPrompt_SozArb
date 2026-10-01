@@ -419,7 +419,7 @@ EC.registerView('netz', {
         root.addEventListener('focusin', onFocusin);
         // The bipartite layout only exists at wide widths, so a resize across the query re-renders.
         wide.addEventListener('change', function () {
-            if (lastParams && !document.getElementById('view-netz').hidden) render(lastParams);
+            if (lastParams && root.getClientRects().length) render(lastParams);
         });
     },
     render: render,

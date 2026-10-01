@@ -304,7 +304,7 @@ def test_accepted_correction_resolves_review_without_mutating_history(tmp_path):
 
 
 def test_sub_question_grouping_follows_the_current_numbering():
-    """The tables follow `serves` in the codebook; SQ4 reads two values only."""
+    """The tables follow `serves` in the codebook; SQ1 and SQ4 read scoped values only."""
     serves = {}
     for field in schema()["analysis_fields"]:
         values = field.get("serves", [])
@@ -318,7 +318,7 @@ def test_sub_question_grouping_follows_the_current_numbering():
         "A",
         AN_Population=["Mental_Health"],
         AN_Mitigation_Stage=["Organisational_Process", "Prompt_Practice"],
-        AN_Prompting_Role=["Learning_Content"],
+        AN_Prompting_Role=["Learning_Content", "Recommended_Practice"],
     )
     rows, _ = completion._work_rows(registry(), [], {"A": [record]}, {})
     tables = completion._analysis(rows, schema())
@@ -329,12 +329,21 @@ def test_sub_question_grouping_follows_the_current_numbering():
     }
     assert stage[("SQ3", "Prompt_Practice")] == stage[("SQ4", "Organisational_Process")] == 1
     assert ("SQ4", "Prompt_Practice") not in stage
-    assert {row["question"] for row in tables if row["field"] == "AN_Population"} == {"SQ1"}
+    assert {row["question"] for row in tables if row["field"] == "AN_Population"} == {"SQ1", "SQ2"}
+    role = {
+        (row["question"], row["value"]): row["work_count"]
+        for row in tables
+        if row["field"] == "AN_Prompting_Role"
+    }
+    assert role[("SQ1", "Recommended_Practice")] == role[("SQ4", "Learning_Content")] == 1
+    assert ("SQ1", "Learning_Content") not in role
+    assert ("SQ4", "Recommended_Practice") not in role
     labels = {
         m["matrix"]: m["question"] for m in completion._associations(rows, schema())
     }
     assert labels["AN_Bias_Axes x AN_Harm_Types"] == "SQ2"
-    assert labels["AN_Prompt_Techniques x AN_Population"] == "SQ1, SQ3"
+    assert labels["AN_Prompt_Techniques x AN_Population"] == "SQ1, SQ2, SQ3"
+    assert labels["AN_Population x AN_Prompting_Role"] == "SQ1, SQ2, SQ3, SQ4"
     assert labels["AN_Mitigation_Stage x AN_Mitigation_Status"] == "SQ3, SQ4"
 
 

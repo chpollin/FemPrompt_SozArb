@@ -1,9 +1,9 @@
 // Headless smoke tests for the Evidence Companion modules (research-app,
-// kategorien, wissenschat). It loads the real docs/index.html into jsdom so every
-// element id exists, mocks fetch with the on-disk data JSONs, and
-// drives the render paths the refactor touched: data load, corpus table,
-// delegated row click, category explorer, chat UI, and the EC helpers. The D3
-// concept graph is out of scope here (no D3 in node); it stays a browser check.
+// kategorien, wissenschat, and the release modules hosted by research-app). It loads
+// the real docs/index.html into jsdom so every element id exists, mocks fetch with the
+// on-disk data JSONs, and drives the render paths: data load, corpus table, delegated
+// row click, category explorer, the integrated Literaturbild matrix, Wissensnetz,
+// answer and work views under the one router, chat UI, and the EC helpers.
 import { JSDOM } from 'jsdom';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
@@ -20,6 +20,7 @@ const dataFiles = {
   'data/promptotyping_v2.json': 'docs/data/promptotyping_v2.json',
   'data/literature_landscape.json': 'docs/data/literature_landscape.json',
   'data/assertion_index.json': 'docs/data/assertion_index.json',
+  'data/analysis_fields.json': 'docs/data/analysis_fields.json',
 };
 const literatureLandscape = JSON.parse(
   readFileSync(join(root, dataFiles['data/literature_landscape.json']), 'utf8'),
@@ -30,6 +31,17 @@ const dom = new JSDOM(readFileSync(join(docs, 'index.html'), 'utf8'), {
   url: 'http://localhost/',
 });
 const { window } = dom;
+
+// jsdom lacks layout and media queries; the network and the focus handling call them.
+window.matchMedia = () => ({ matches: false, addEventListener() {} });
+window.Element.prototype.scrollIntoView = function () {};
+// Counts hashchange listeners, so the test sees that research-app is the only router.
+let hashchangeListeners = 0;
+const addListener = window.addEventListener.bind(window);
+window.addEventListener = (type, ...rest) => {
+  if (type === 'hashchange') hashchangeListeners += 1;
+  return addListener(type, ...rest);
+};
 
 // fetch mock: serve the data JSONs from disk, 404 anything else (knowledge docs
 // are only fetched on a download click, which the smoke run does not exercise).
@@ -45,7 +57,8 @@ function inject(rel) {
   el.textContent = readFileSync(join(root, rel), 'utf8');
   window.document.body.appendChild(el);
 }
-['docs/js/research-app.js', 'docs/js/kategorien.js', 'docs/js/wissensnetz.js', 'docs/js/literaturbild.js', 'docs/js/wissenschat.js'].forEach(inject);
+[...readFileSync(join(docs, 'index.html'), 'utf8').matchAll(/<script (?:defer )?src="(js\/[^"]+)"><\/script>/g)]
+  .map((match) => 'docs/' + match[1]).forEach(inject);
 
 // research-app initializes on DOMContentLoaded. jsdom fires that event once after
 // these scripts are appended, so the listener runs exactly once; dispatching it
@@ -112,75 +125,146 @@ await check('EC helpers behave', async () => {
 });
 
 await check('category chip toggles active (delegation)', async () => {
-  const chip = doc.querySelector('.category-chip[data-cat]');
+  const chip = doc.querySelector('#category-chips .category-chip[data-cat]');
   if (!chip) throw new Error('no category chip');
   chip.dispatchEvent(new window.MouseEvent('click', { bubbles: true }));
-  await waitFor(() => doc.querySelector('.category-chip.active') !== null, 'chip active');
+  await waitFor(() => doc.querySelector('#category-chips .category-chip[aria-pressed="true"]') !== null, 'chip active');
+});
+
+await check('category chips share one grouped markup', async () => {
+  const labels = [...doc.querySelectorAll('#category-chips .chip-group-label')].map((n) => n.textContent);
+  if (labels.join('|') !== 'Gegenstand|Perspektive') throw new Error(labels.join('|'));
+  const chips = [...doc.querySelectorAll('#category-chips .category-chip')];
+  if (chips.some((c) => !c.style.getPropertyValue('--chip-color') || !c.hasAttribute('aria-pressed') || c.querySelector('.chip-dot[style]'))) {
+    throw new Error('chip markup deviates from the shared contract');
+  }
 });
 
 await check('category explorer initializes on view switch', async () => {
   window.switchView('vergleich');
-  await waitFor(() => doc.querySelectorAll('#kategorie-spektrum .kategorie-card').length > 0, 'spektrum cards');
-  const card = doc.querySelector('.kategorie-card[data-cat]');
+  await waitFor(() => doc.querySelectorAll('#kategorie-spektrum .category-chip').length > 0, 'spektrum cards');
+  const card = doc.querySelector('#kategorie-spektrum .category-chip[data-cat]');
   card.dispatchEvent(new window.MouseEvent('click', { bubbles: true }));
   await waitFor(() => doc.querySelector('#kategorie-detail .kdetail-header') !== null, 'detail rendered');
 });
 
-await check('literature landscape displays the current publication policy and denominators', async () => {
+await check('one router: only research-app listens to hashchange', async () => {
+  if (hashchangeListeners !== 1) throw new Error('hashchange listeners: ' + hashchangeListeners);
+  if (typeof EC.host.go !== 'function' || typeof EC.release.render !== 'function') throw new Error('host seam missing');
+  if (doc.getElementById('literaturbild-root') || doc.getElementById('graph-container')) throw new Error('old view containers remain');
+});
+
+await check('start cards open the answer pages', async () => {
+  const hrefs = [...doc.querySelectorAll('#view-start .start-card')].map((a) => a.getAttribute('href'));
+  if (hrefs.join(' ') !== '#view=frage&sq=1 #view=frage&sq=2 #view=frage&sq=3 #view=frage&sq=4') throw new Error(hrefs.join(' '));
+});
+
+await check('start view states coverage and each question card its findings', async () => {
+  await waitFor(() => doc.getElementById('start-status').textContent !== '', 'status sentence');
+  const cov = literatureLandscape.meta.analysis_coverage;
+  const coded = Math.min(...Object.entries(cov.fields).filter(([k]) => k.startsWith('AN_')).map(([, f]) => f.value + f.none + f.undecidable));
+  const expected = `Vorläufig: ${coded} von ${cov.scope.work_total} eingeschlossenen Werken codiert, `;
+  if (!doc.getElementById('start-status').textContent.startsWith(expected)) throw new Error(doc.getElementById('start-status').textContent);
+  if (doc.querySelector('#view-start .start-btn, #view-start .start-actions')) throw new Error('duplicate nav buttons remain');
+  const lines = [...doc.querySelectorAll('#view-start .start-card-status')].map((n) => n.textContent);
+  if (lines.length !== 4 || lines.some((t) => !/^(\d+ KI-geprüfte?r? Befunde?|noch kein geprüfter Befund)/.test(t))) throw new Error(lines.join(' | '));
+  const assertions = JSON.parse(readFileSync(join(root, dataFiles['data/assertion_index.json']), 'utf8')).assertions;
+  const forSq1 = assertions.filter((a) => (a.research_questions || []).includes('SQ1')).length;
+  if (forSq1 && !lines[0].startsWith(forSq1 + ' ')) throw new Error('SQ1 count ' + lines[0]);
+});
+
+await check('nav tooltips show on focus, describe the item and hide on Escape', async () => {
+  const items = [...doc.querySelectorAll('.header-nav a, .header-nav button')];
+  if (!items.length || items.some((item) => !item.dataset.tipKey)) throw new Error('nav item without tip key');
+  const button = doc.getElementById('tab-korpus');
+  const tip = doc.getElementById(button.getAttribute('aria-describedby'));
+  if (!tip || tip.getAttribute('role') !== 'tooltip' || !tip.textContent) throw new Error('no described tooltip');
+  if (/\d/.test(tip.textContent)) throw new Error('tooltip carries a count');
+  button.dispatchEvent(new window.FocusEvent('focus'));
+  if (tip.hidden) throw new Error('tooltip hidden on focus');
+  doc.dispatchEvent(new window.KeyboardEvent('keydown', { key: 'Escape' }));
+  if (!tip.hidden) throw new Error('Escape did not hide');
+  const repo = doc.querySelector('.header-nav a[data-tip-key="repo"]');
+  if (!repo.getAttribute('aria-label')) throw new Error('repo icon has no accessible name');
+});
+
+await check('Literaturbild shows the joint-coding matrix under its denominators', async () => {
   window.switchView('literaturbild');
-  await waitFor(() => doc.querySelector('#literaturbild-root .lit-viz') !== null, 'reviewed literature state');
-  const progress = doc.querySelector('#literaturbild-root .lit-progress');
-  if (!progress || !progress.textContent.includes(`${literatureLandscape.meta.annotated_total} ${literatureLandscape.source.public_label.toLocaleLowerCase('de')}`)) throw new Error('wrong public total');
-  if (!progress.textContent.includes(`${literatureLandscape.meta.source_annotated_total} bearbeitet`)) throw new Error('wrong source total');
-  if (!progress.textContent.includes(`${literatureLandscape.meta.withheld_total} zurückgehalten`)) throw new Error('wrong withheld total');
-  if (!doc.querySelector('#literaturbild-root .lit-status--provisional')) throw new Error('pending status missing');
-  if (!doc.querySelector('#literaturbild-root .lit-workspace > .lit-sidebar')) throw new Error('left control rail missing');
-  if (doc.querySelectorAll('#literaturbild-root .lit-viz').length !== 1) throw new Error('multiple visualizations visible');
-  if (doc.querySelector('#literaturbild-root .lit-stats')) throw new Error('legacy dashboard cards remain');
-  if (doc.querySelector('.header-stats')) throw new Error('standing inventory counts remain');
-  const visibleCopy = doc.querySelector('#literaturbild-root').textContent;
-  if (visibleCopy.includes('Die Ansicht verdichtet') || visibleCopy.includes('Mehrfachcodierungen sind zulässig')) {
-    throw new Error('removed explanatory copy remains visible');
+  await waitFor(() => doc.querySelector('#view-literaturbild #matrix-table') !== null, 'matrix');
+  const summary = doc.querySelector('#matrix-denominator > .denominator--summary');
+  if (!summary || !/\d+ von \d+ eingeschlossenen Werken/.test(summary.textContent)) throw new Error('summary line missing');
+  if (doc.querySelector('#matrix-denominator').compareDocumentPosition(doc.getElementById('matrix-table')) !== window.Node.DOCUMENT_POSITION_FOLLOWING) {
+    throw new Error('denominator does not precede the table');
   }
+  if (!/Gemeinsam codiert|Werke je Code/.test(doc.querySelector('#matrix-denominator .matrix-caption').textContent)) throw new Error('caption missing');
+  const pending = Object.values((literatureLandscape.meta.analysis_coverage || {}).fields || {}).some((f) => f.not_coded + f.withheld > 0);
+  if (pending && doc.querySelector('#matrix-table td.matrix-empty[data-state="zero"]')) throw new Error('a zero stands while coding is open');
+  if (pending && !doc.querySelector('#matrix-table td.matrix-empty[data-state="undetermined"]')) throw new Error('no n. b. cell');
+  if (doc.querySelector('#tab-literaturbild').getAttribute('aria-pressed') !== 'true') throw new Error('tab not pressed');
 });
 
-await check('literature landscape drill-down contains only eligible works', async () => {
+await check('a matrix cell opens its work list and writes the hash', async () => {
+  const cell = doc.querySelector('#matrix-table button.matrix-cell[data-state="value"]');
+  cell.dispatchEvent(new window.MouseEvent('click', { bubbles: true }));
+  await waitFor(() => !doc.getElementById('worklist').hidden, 'work list');
+  const hash = new URLSearchParams(window.location.hash.slice(1));
+  if (hash.get('view') !== 'literaturbild' || hash.get('cell') !== cell.dataset.row + '|' + cell.dataset.col) throw new Error('hash ' + window.location.hash);
+  if (doc.querySelectorAll('#worklist .work-item').length !== Number(cell.dataset.count)) throw new Error('work count');
+  if (doc.activeElement.id !== 'worklist-title') throw new Error('focus not on the work list');
+  if (/Eintrag|\/root\//.test(doc.getElementById('worklist').textContent)) throw new Error('internal keys in the work list');
+  if (doc.querySelector('#worklist .evidence-note')) throw new Error('coding note in the work list');
+});
+
+await check('corpus filters stay out of release view hashes and survive them', async () => {
+  window.switchView('korpus');
+  const sel = doc.getElementById('filter-decision');
+  sel.value = 'Exclude';
+  sel.dispatchEvent(new window.Event('change', { bubbles: true }));
+  await waitFor(() => window.location.hash.includes('dec=Exclude'), 'korpus filter in hash');
   window.switchView('literaturbild');
-  const cell = doc.querySelector('.lit-matrix-button:not([disabled])');
-  if (!literatureLandscape.records.length) {
-    if (cell || doc.querySelector('.lit-results .lit-paper')) throw new Error('withheld paper exposed');
-    if (!doc.querySelector('.lit-empty-state')) throw new Error('publication gate explanation missing');
-  } else if (cell) {
-    cell.dispatchEvent(new window.MouseEvent('click', { bubbles: true }));
-    const titles = new Set(literatureLandscape.records.map(record => record.title));
-    const papers = [...doc.querySelectorAll('.lit-results .lit-paper summary strong')];
-    if (!papers.length || papers.some(node => !titles.has(node.textContent))) throw new Error('drill-down is empty or exposes a withheld work');
-    doc.getElementById('lit-clear-selection').click();
-  }
+  if (window.location.hash.includes('dec=')) throw new Error('corpus filter leaked: ' + window.location.hash);
+  if (!window.location.hash.includes('cell=')) throw new Error('tab did not restore the last matrix state');
+  window.switchView('korpus');
+  if (!window.location.hash.includes('dec=Exclude')) throw new Error('corpus filter lost: ' + window.location.hash);
+  sel.value = 'all';
+  sel.dispatchEvent(new window.Event('change', { bubbles: true }));
 });
 
-await check('literature landscape keeps controls operable', async () => {
-  const profile = doc.querySelector('.lit-view-button[data-lit-view="profile"]');
-  profile.dispatchEvent(new window.MouseEvent('click', { bubbles: true }));
-  if (profile.getAttribute('aria-pressed') !== 'true') throw new Error('profile view not announced');
-  if (doc.querySelector('.lit-matrix')) throw new Error('matrix remains visible in profile view');
-  if (doc.querySelectorAll('#literaturbild-root .lit-viz').length !== 1) throw new Error('multiple profile views visible');
-  if (doc.querySelector('.lit-profile-field').hidden) throw new Error('analysis field selector hidden');
-  if (!literatureLandscape.records.length && !doc.querySelector('.lit-empty-state')) throw new Error('publication gate state lost');
+await check('a matrix deep link restores axes and cell', async () => {
+  setHash('#view=literaturbild&cols=AN_Bias_Axes&rows=perspective');
+  await waitFor(() => doc.getElementById('matrix-cols').value === 'AN_Bias_Axes', 'axes restored');
+  if (doc.getElementById('matrix-rows').value !== 'perspective') throw new Error('rows not restored');
+  if (!doc.getElementById('worklist').hidden) throw new Error('a work list is open without a cell');
 });
 
-await check('literature landscape writes and restores its URL state', async () => {
-  const profileField = doc.getElementById('lit-profile-field');
-  profileField.value = 'AN_Bias_Axes';
-  profileField.dispatchEvent(new window.Event('change', { bubbles: true }));
-  await waitFor(() => window.location.hash.includes('litProfile=AN_Bias_Axes'), 'literature profile in hash');
-  setHash('#view=literaturbild&litView=profile&litProfile=AN_Harm_Types');
-  await waitFor(() => EC.store.get().litProfile === 'AN_Harm_Types', 'literature state restored');
-  if (!doc.querySelector('.lit-view-button[data-lit-view="profile"]').classList.contains('active')) {
-    throw new Error('profile view not restored');
-  }
-  if (doc.getElementById('lit-filter-year').value !== 'all') throw new Error('empty year filter changed');
-  if (profileField.value !== 'AN_Harm_Types') throw new Error('profile field not restored');
+await check('Wissensnetz shows the ego network with its table and denominator', async () => {
+  setHash('#view=wissensnetz');
+  await waitFor(() => doc.querySelector('#view-wissensnetz #netz-list') !== null, 'network table');
+  if (!doc.querySelector('#netz-graph')) throw new Error('no network figure');
+  if (!/eingeschlossenen Werken codiert/.test(doc.querySelector('#netz-summary .denominator--summary').textContent)) throw new Error('no denominator');
+  const edge = doc.querySelector('#netz-list button.netz-show-works');
+  edge.dispatchEvent(new window.MouseEvent('click', { bubbles: true }));
+  await waitFor(() => !doc.getElementById('worklist-netz').hidden, 'edge work list');
+  if (!new URLSearchParams(window.location.hash.slice(1)).get('edge')) throw new Error('edge not in hash');
+});
+
+await check('answer page per sub-question leads with the denominator', async () => {
+  setHash('#view=frage&sq=3');
+  await waitFor(() => doc.querySelector('#frage-root .answer[data-sq="3"]') !== null, 'answer page');
+  if (!doc.querySelector('#frage-root h1 + .denominator--summary')) throw new Error('summary not under the heading');
+  if (doc.querySelectorAll('#frage-befunde, #frage-matrix, #frage-offen, #frage-werke').length !== 4) throw new Error('answer parts');
+  const cellLink = doc.querySelector('#frage-root a.matrix-cell');
+  if (cellLink && !cellLink.getAttribute('href').startsWith('#view=literaturbild&')) throw new Error('cell link ' + cellLink.getAttribute('href'));
+  if (/beantwortet/i.test(doc.getElementById('frage-root').textContent)) throw new Error('claims an answered question');
+});
+
+await check('work view opens from a work list with a collapsed review record', async () => {
+  const link = doc.querySelector('#frage-werke .work-title a');
+  if (!link.getAttribute('href').startsWith('#view=werk&id=')) throw new Error('work link ' + link.getAttribute('href'));
+  setHash(link.getAttribute('href'));
+  await waitFor(() => doc.querySelector('#werk-root .werk') !== null, 'work view');
+  if (!doc.querySelector('#werk-root .werk > details.werk-technical:last-child:not([open])')) throw new Error('review record not collapsed');
+  if (doc.querySelector('.nav-view-btn[aria-pressed="true"]')) throw new Error('a tab is pressed on the work view');
 });
 
 await check('chat UI builds without network', async () => {
@@ -208,8 +292,8 @@ await check('URL hash restores view, filter, category and paper', async () => {
   setHash('#view=korpus&dec=Include&cat=Gender&paper=' + encodeURIComponent(p0.id));
   await waitFor(() => EC.store.get().view === 'korpus' && EC.store.get().paper === p0.id, 'store restored');
   if (doc.getElementById('filter-decision').value !== 'Include') throw new Error('decision filter not applied');
-  const genderChip = doc.querySelector('.category-chip[data-cat="Gender"]');
-  if (!genderChip || !genderChip.classList.contains('active')) throw new Error('Gender chip not active');
+  const genderChip = doc.querySelector('#category-chips .category-chip[data-cat="Gender"]');
+  if (!genderChip || genderChip.getAttribute('aria-pressed') !== 'true') throw new Error('Gender chip not active');
   if (!doc.getElementById('view-korpus').classList.contains('active')) throw new Error('korpus view not active');
   if (!doc.getElementById('paper-modal').classList.contains('active')) throw new Error('paper modal not open');
   if (doc.getElementById('modal-title').textContent !== p0.title) throw new Error('wrong paper restored');
@@ -253,7 +337,7 @@ await check('unknown cat= is ignored, corpus stays populated', async () => {
   await waitFor(() => EC.store.get().view === 'korpus' && EC.store.get().cat.length === 0, 'restored');
   if (EC.store.get().cat.length !== 0) throw new Error('bogus cat kept in store: ' + EC.store.get().cat);
   if (doc.querySelectorAll('#papers-grid tr[data-idx]').length === 0) throw new Error('corpus emptied by a bogus cat');
-  if (doc.querySelector('.category-chip.active')) throw new Error('a chip is active for a bogus cat');
+  if (doc.querySelector('#category-chips .category-chip[aria-pressed="true"]')) throw new Error('a chip is active for a bogus cat');
 });
 
 // URL state: a stale/unknown paper id is cleaned out of both store and hash, not left

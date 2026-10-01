@@ -61,8 +61,6 @@ The population field records the context a Work addresses. It does not record wh
 
 The prompting-role value Recommended_Practice is coded for "Towards Substantive Equality in Artificial Intelligence: Transformative AI Policy for Gender Equality and Diversity" and for "Faires KIPrompting – Ein Leitfaden für Unternehmen" (`generated/completion/completion-package.json`, `works[].analysis_fields`). Both carry the population value Not_SW_Specific, the first additionally Social_Assistance_Admin, and neither has an active distillate. The coded map thus contains no Work in which recommended prompting practice is coded for a specific social-work setting. With 132 included Works uncoded, this is not determinable and no gap in the literature.
 
-The two generated tables still label their fields with the sub-question numbering that preceded the reformulation of 1 October 2026. `sq-analysis-tables.csv` assigns `AN_Population` to SQ3 and assigns `AN_Prompt_Techniques` and `AN_Mitigation_Status` to SQ1, and `sq-association-tables.csv` labels the matrix of prompt techniques by mitigation status as SQ1. Under the current wording in `knowledge/project.md` the population field belongs to SQ1 and the prompt techniques to SQ3.
-
 ## Tasks and reported benefits
 
 ### Social-work research
@@ -128,8 +126,7 @@ Three conditions are kept apart.
 4. The planned task field through a codebook amendment, recorded in `knowledge/analysis-methods.md` under Answering the research questions and to be defined in `knowledge/update-protocol.md` under Analysis coding. Candidate values can be drawn from the tasks the Assertions already name, case recording and documentation, summarisation of case notes, counselling, research, teaching and decision support.
 5. A supplementary search for task literature, because identification centred on bias and gender and task literature without a bias focus may be underrepresented (`knowledge/analysis-methods.md`). The tasks above indicate where such a search would start.
 6. Statement anchors in distillates where SQ1 content currently sits in unanchored sections. These include the list of research uses in the Victor et al. distillate, the uses in simulations and feedback on biased language in the Patton et al. distillate, usability and engagement in the youth mental-health review, the occupational analysis in the Chatterji et al. distillate, perceived utility in the study of social-work students' readiness for AI, and tutoring, assessment and simulation in the Hodgson et al. distillate on social-work education. The distillates on recording and on the NGO counselling assistant carry their content in a paragraph affirmed only by a generic anchored line. Adding anchors belongs to distillate maintenance under the Research Vault contract.
-7. Generator labels in `sq-analysis-tables.csv` and `sq-association-tables.csv` that follow the current sub-question numbering.
-8. AI Agent Review of the SQ1 Assertions and then domain-expert verification of the Assertions and of this chapter.
+7. AI Agent Review of the SQ1 Assertions and then domain-expert verification of the Assertions and of this chapter.
 
 ## Distillates used and their screening state
 

@@ -25,6 +25,9 @@ FONTS_PRISMA = ""
 
 FONT_AWESOME = '<link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">'
 
+# The tooltips of the shared header navigation, keyed by each item's data-tip-key.
+NAV_TIPS = '<script defer src="js/nav-tips.js"></script>'
+
 
 def asset_version(relative: str) -> str:
     """Cache-busting token derived from the file content, so a changed asset
@@ -49,8 +52,6 @@ INDEX_META = """<meta name="keywords" content="AI literacy, social work, systema
     <meta property="og:url" content="https://chpollin.github.io/FemPrompt_SozArb/">
     <meta property="og:title" content="Feministische AI Literacies -- Systematischer Review">
     <meta property="og:description" content="Interaktive Evidenz zum systematischen Literature Review zu feministischen AI Literacies im Feld der Sozialen Arbeit.">"""
-
-INDEX_SCRIPTS = '<script defer src="vendor/d3/d3.min.js"></script>'
 
 
 def head(
@@ -79,6 +80,7 @@ def head(
         parts.append(fonts)
     if scripts:
         parts.append(scripts)
+    parts.append(NAV_TIPS)
     parts.append(FONT_AWESOME)
     parts.append('<link rel="stylesheet" href="css/tokens.css">')
     parts.append('<link rel="stylesheet" href="css/research.css">')
@@ -112,7 +114,7 @@ def subpage_header(active: str, extra: str = "") -> str:
     links = ""
     for href, label, key in NAV_LINKS:
         cls = "nav-link nav-link-active" if key == active else "nav-link"
-        links += f'\n                    <a href="{href}" class="{cls}">{label}</a>'
+        links += f'\n                    <a href="{href}" class="{cls}" data-tip-key="{key}">{label}</a>'
     extra_block = f"\n            {extra}" if extra else ""
     brand = """<a href="index.html" class="brand-link">
                         <h1>Feministische AI Literacies</h1>
@@ -126,15 +128,15 @@ def subpage_header(active: str, extra: str = "") -> str:
                     {brand}
                 </div>
                 <nav class="header-nav" aria-label="Hauptnavigation">
-                    <a href="index.html#chat" class="nav-link">Wissens-Chat</a>
-                    <a href="index.html#wissensnetz" class="nav-link">Wissensnetz</a>
-                    <a href="index.html#literaturbild" class="nav-link">Literaturbild</a>
-                    <a href="index.html#vergleich" class="nav-link">Kategorien</a>
-                    <a href="index.html#korpus" class="nav-link">Korpus</a>
+                    <a href="index.html#chat" class="nav-link" data-tip-key="chat">Wissens-Chat</a>
+                    <a href="index.html#wissensnetz" class="nav-link" data-tip-key="wissensnetz">Wissensnetz</a>
+                    <a href="index.html#literaturbild" class="nav-link" data-tip-key="literaturbild">Literaturbild</a>
+                    <a href="index.html#vergleich" class="nav-link" data-tip-key="vergleich">Kategorien</a>
+                    <a href="index.html#korpus" class="nav-link" data-tip-key="korpus">Korpus</a>
                     <span class="nav-sep"></span>{links}
                     <span class="nav-sep"></span>
-                    <a href="https://github.com/chpollin/FemPrompt_SozArb" class="nav-link nav-link-ext" target="_blank" rel="noopener"><i class="fas fa-code-branch"></i></a>
-                    <a href="downloads/vault.zip" class="nav-link nav-link-ext" title="Paper-Wissenssammlung (.zip)"><i class="fas fa-download"></i></a>
+                    <a href="https://github.com/chpollin/FemPrompt_SozArb" class="nav-link nav-link-ext" target="_blank" rel="noopener" aria-label="Repository" data-tip-key="repo"><i class="fas fa-code-branch" aria-hidden="true"></i></a>
+                    <a href="downloads/vault.zip" class="nav-link nav-link-ext" aria-label="Paper-Wissenssammlung (.zip)" data-tip-key="download"><i class="fas fa-download" aria-hidden="true"></i></a>
                 </nav>
             </div>{extra_block}
         </div>
@@ -148,8 +150,11 @@ PAGES = {
         "head": head(
             "Feministische AI Literacies -- Systematischer Review",
             "Interaktive Evidenz zum systematischen Literature Review zu feministischen AI Literacies im Feld der Sozialen Arbeit. Duale Bewertung durch Expert:innen und LLM.",
-            fav=favicon("F", 60), fonts=FONTS_COMPANION, meta=INDEX_META, scripts=INDEX_SCRIPTS,
-            extra_css='<link rel="stylesheet" href="css/literaturbild.css">',
+            fav=favicon("F", 60), fonts=FONTS_COMPANION, meta=INDEX_META,
+            # The Literaturbild, Wissensnetz, answer and work views reuse the result-site
+            # modules, whose stylesheets are scoped to their view containers.
+            extra_css='<link rel="stylesheet" href="css/release.css">\n    '
+                      '<link rel="stylesheet" href="css/release-netz.css">',
         ),
         "header": None,
     },

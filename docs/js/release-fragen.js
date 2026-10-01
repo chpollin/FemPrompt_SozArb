@@ -250,6 +250,8 @@ EC.registerView('fragen', {
 
 EC.registerView('frage', {
     title: function (params) { return question(params.sq) ? question(params.sq).name : 'Fragen'; },
+    // A host can initialise the answer pages without the Fragen start page.
+    init: function (instance) { model = instance; },
     render: renderAnswer,
 });
 
@@ -259,4 +261,6 @@ EC.registerView('methode', {
 });
 
 EC.questions = QUESTIONS;
+// The start view of docs/index.html labels each question card with its findings.
+EC.findingsFor = function (id) { return model && question(String(id)) ? findingsFor(question(String(id))) : []; };
 })();

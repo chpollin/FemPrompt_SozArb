@@ -61,7 +61,6 @@ The sub-questions are answered in the following order. Steps that depend on an o
 
 ### Analysis tool follow-ups
 
-- Relabel the SQ tables to the current sub-questions in `src/analysis/build_completion_package.py`. `sq-analysis-tables.csv` still assigns `AN_Population` to SQ3 and the prompt techniques and mitigation status to SQ1, and `sq-association-tables.csv` labels its matrices by the same earlier numbering. The `serves` entries of the analysis fields in `assessment/categories.yaml` use the earlier numbering as well and change together with the generators. The assignment of fields follows the table in [[analysis-methods#Answering the research questions]]. After regeneration, the SQ1 chapter drops its note on the old labels.
 - Name the new completion-package blocks for field states, SQ associations, the round-one selection check and the agent-track diagnostics in the completion-package schema.
 - Build the Tier 1 analyses that [[analysis-methods#Implementation state]] names as not yet implemented.
 - Record PRISMA-ScR in [[standards]] as an applied reporting standard if decision 5 adds it for the mapping layer ([[standards#Open reporting decision on PRISMA-ScR]]).
@@ -77,7 +76,7 @@ The public Evidence Companion is specified in [[specification#Public Evidence Co
 5. Fix the clipped labels of the Netz view at 390 px. Its public visibility follows decision 7.
 6. Run the [[testing#Independent acceptance review of the result site]], which recomputes every displayed figure from the released data and checks display rules, keyboard operation, zoom, contrast and content fitness. Its findings are recorded in this plan. An operator review on the phone follows, and an acceptance session with the domain experts comes later.
 7. Switch Pages to `build/site/` under [[#Deployment]]. Until then Pages serves `docs/` including internal working data.
-8. Keep the internal working application `docs/index.html` local. Its Wissensnetz uses the historical concept graph ([[data#Historical concept graph and divergence classification]]) and is not part of the public site.
+8. Keep the internal working application `docs/index.html` local. Its Kategorien view still lists concepts from the historical concept graph ([[data#Historical concept graph and divergence classification]]), and the page is not part of the public site.
 
 ## Deployment
 

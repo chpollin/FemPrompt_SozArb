@@ -9,6 +9,7 @@
 const CATEGORIES = [];
 const CAT_COLORS = {};
 const CATEGORY_LABELS = {};
+let categoryGroups = {}; // schema group map, the order of the Gegenstand and Perspektive chip groups
 
 function escapeHtml(text) {
     if (!text) return '';
@@ -20,6 +21,14 @@ function escapeHtml(text) {
 // Human-readable category label from the underscore key.
 function catLabel(cat) {
     return CATEGORY_LABELS[cat] || String(cat || '').replace(/_/g, ' ');
+}
+
+// The shared category chip row (EC.categoryChipRow from public-release.js) over the
+// given keys; options(key) returns the chip options of one key.
+function categoryChips(keys, options) {
+    return window.EC.categoryChipRow(keys.map(function(key) {
+        return { category: { key: key, label: catLabel(key), color: CAT_COLORS[key] }, options: options ? options(key) : {} };
+    }), categoryGroups);
 }
 
 function normalizeSearch(text) {
@@ -66,8 +75,6 @@ let vaultMeta = {};
 let kappas = {};
 const activeCategories = new Set();
 let benchmarkInitialized = false;
-let wissensnetzInitialized = false;
-let literaturbildInitialized = false;
 let chatInitialized = true; // chat is default tab, initialized on load
 let conceptData = null;
 let divergencePatterns = null;
@@ -81,15 +88,25 @@ let renderedPapers = []; // the list currently shown in the table (for delegated
 let currentView = 'start';
 let applyingFromUrl = false; // suppresses UI->store sync while a URL is being applied
 
+// Views rendered by the release modules (release-*.js), mapped to the names those
+// modules use. Literaturbild hosts the matrix and Wissensnetz the network; Frage and
+// Werk have no navigation button and are reached through links.
+const RELEASE_VIEWS = { literaturbild: 'matrix', wissensnetz: 'netz', frage: 'frage', werk: 'werk' };
+const VIEW_OF_RELEASE = { matrix: 'literaturbild', netz: 'wissensnetz', frage: 'frage', werk: 'werk' };
+// 'loading', 'ready', or the message of a failed model load.
+let releaseState = 'loading';
+let releaseParams = {}; // parameters of the release view on screen
+const lastReleaseParams = {}; // per navigation tab, restored when the tab is chosen again
+
 // Central store for the navigational state the URL serializes: active view, corpus
-// filters, selected paper. Views write it through syncUrl and read it through
-// applyStateToUI; one subscriber mirrors it into the location hash, so any view is a
-// shareable, citable link. subscribe/set are the Observer pattern the DH-interface
-// standard prescribes for coordinated framework-free views.
+// filters, selected paper and the parameters of a release view. Views write it through
+// syncUrl or releaseGo and read it through applyStateToUI; one subscriber mirrors it
+// into the location hash, so any view is a shareable, citable link. subscribe/set are
+// the Observer pattern the DH-interface standard prescribes for coordinated
+// framework-free views. This store is the only router of the page: the release
+// modules navigate through EC.host and never listen to the hash themselves.
 const DEFAULT_STATE = {
-    view: 'start', q: '', dec: 'all', hum: 'all', year: 'all', sort: 'relevance', cat: [], paper: null,
-    litView: 'matrix', litYear: 'all', litSource: 'all', litStudy: 'all',
-    litProfile: 'AN_Prompting_Role', litSelection: null,
+    view: 'start', q: '', dec: 'all', hum: 'all', year: 'all', sort: 'relevance', cat: [], paper: null, rp: {},
 };
 
 function createStore(initial) {
@@ -116,9 +133,12 @@ window.EC = {
     download: download,
     paperStatus: paperStatus,
     CAT_COLORS: CAT_COLORS,
+    categoryGroups: function() { return categoryGroups; },
     CATEGORIES: CATEGORIES,
     // Central store (subscribe/set/get) holding the URL-serialized view state
     store: store,
+    // Router for the release modules loaded after this file (public-release.js reads it)
+    host: { go: releaseGo, href: releaseHref, parseHash: releaseParseHash },
     // State getters
     getAllPapers: function() { return allPapers; },
     getFilteredPapers: function() { return filteredPapers; },
@@ -168,13 +188,21 @@ window.exportFilteredMarkdown = function() { exportFilteredMarkdown(); };
 // Initialize
 
 document.addEventListener('DOMContentLoaded', function() {
-    loadData().then(function() {
+    // The release model loads beside the working data; its failure leaves the other
+    // views usable and is shown on the release views only.
+    const release = window.EC.release
+        ? window.EC.release.start(Object.keys(VIEW_OF_RELEASE)).then(function() { releaseState = 'ready'; }, function(error) {
+            console.error('[Evidence] release views unavailable:', error);
+            releaseState = error.message;
+        })
+        : Promise.resolve().then(function() { releaseState = 'Diese Ansicht ist auf dieser Seite nicht geladen.'; });
+    Promise.all([loadData(), release]).then(function() {
         initializeUI();
         renderCategoryChips();
         logInit();
-        initRichTooltips();
         // Chat is the default tab; initialize it up front.
         if (window.initWissensChat) window.initWissensChat();
+        if (releaseState === 'ready' && window.EC.renderStart) window.EC.renderStart(window.EC.model);
         // The hash carries view, corpus filters and selected paper. Restoring it
         // renders the table, so the standalone applyFilters is folded into this.
         initUrlState();
@@ -217,6 +245,7 @@ function loadData() {
             CAT_COLORS[category.key] = category.color;
             CATEGORY_LABELS[category.key] = category.label;
         });
+        categoryGroups = categorySchema.groups || {};
         allPapers = data.papers;
         vaultMeta = data.meta;
         kappas = data.kappa_by_category;
@@ -399,23 +428,7 @@ function initializeUI() {
 
 function renderCategoryChips() {
     let container = document.getElementById('category-chips');
-    const technik = CATEGORIES.slice(0, 4);
-    const sozial = CATEGORIES.slice(4);
-
-    function chipHtml(cat) {
-        const label = catLabel(cat);
-        let color = CAT_COLORS[cat];
-        return '<button class="category-chip" data-cat="' + cat + '">' +
-            '<span class="chip-dot" style="background:' + color + '"></span>' + label +
-        '</button>';
-    }
-
-    container.innerHTML =
-        '<span class="chip-group-label">Gegenstand</span>' +
-        technik.map(chipHtml).join('') +
-        '<span class="chip-group-sep"></span>' +
-        '<span class="chip-group-label">Perspektive</span>' +
-        sozial.map(chipHtml).join('');
+    container.innerHTML = categoryChips(CATEGORIES, function(cat) { return { pressed: activeCategories.has(cat) }; });
 
     container.addEventListener('click', function(e) {
         const chip = e.target.closest('.category-chip');
@@ -427,7 +440,7 @@ function renderCategoryChips() {
             activeCategories.add(cat);
         }
         container.querySelectorAll('.category-chip').forEach(function(c) {
-            c.classList.toggle('active', activeCategories.has(c.dataset.cat));
+            c.setAttribute('aria-pressed', String(activeCategories.has(c.dataset.cat)));
         });
         applyFilters();
     });
@@ -706,113 +719,12 @@ function setupDropdownNav() {
     });
 }
 
-// Rich Tooltips (data-driven, HTML content)
-
-function initRichTooltips() {
-    // Create tooltip container
-    const tip = document.createElement('div');
-    tip.className = 'rich-tooltip';
-    tip.style.display = 'none';
-    document.body.appendChild(tip);
-
-    // Build tooltip content from real data
-    const tipContent = buildTooltipContent();
-
-    // Attach to all .has-tip elements
-    document.querySelectorAll('.has-tip').forEach(function(el) {
-        let key = el.dataset.tipKey;
-        if (!key) return;
-
-        el.addEventListener('mouseenter', function(e) {
-            let html = tipContent[key];
-            if (!html) return;
-            tip.innerHTML = html;
-            tip.style.display = 'block';
-            positionTooltip(tip, el);
-        });
-
-        el.addEventListener('mouseleave', function() {
-            tip.style.display = 'none';
-        });
-    });
-}
-
-function positionTooltip(tip, anchor) {
-    const rect = anchor.getBoundingClientRect();
-    const tipRect = tip.getBoundingClientRect();
-    let left = rect.left + rect.width / 2 - tipRect.width / 2;
-    let top = rect.bottom + 10;
-
-    // Keep within viewport
-    if (left < 8) left = 8;
-    if (left + tipRect.width > window.innerWidth - 8) left = window.innerWidth - tipRect.width - 8;
-    if (top + tipRect.height > window.innerHeight - 8) top = rect.top - tipRect.height - 10;
-
-    tip.style.left = left + 'px';
-    tip.style.top = top + window.scrollY + 'px';
-}
-
-function buildTooltipContent() {
-    let papers = allPapers;
-
-    // Single pass over the corpus for the aggregates the view tooltips need.
-    let total = papers.length;
-    let withDecision = 0, llmInclude = 0;
-    papers.forEach(function(p) {
-        if (p.llm && p.llm.decision === 'Include') llmInclude++;
-        if (p.human && p.human.decision) withDecision++;
-    });
-
-    // --- Nav buttons ---
-    const conceptCount = (conceptData && conceptData.nodes) ? conceptData.nodes.length : null;
-    const topConcepts = (conceptData && conceptData.nodes)
-        ? conceptData.nodes.slice().sort(function(a, b) { return b.frequency - a.frequency; }).slice(0, 5)
-        : [];
-
-    const tipChat = '<div class="tip-title">Wissens-Chat</div>' +
-        '<div class="tip-text">Fragen Sie das synthetisierte Wissen. Ein LLM (Gemini 3 Flash) antwortet mit Inline-Zitationen, die direkt zum Korpus verlinken.</div>' +
-        '<div class="tip-text tip-muted">Zweifach LLM-vermittelt: Wissensextraktion + Antwortgenerierung.</div>';
-
-    let tipNetz = '<div class="tip-title">Wissensnetz</div>' +
-        '<div class="tip-text">' + (conceptCount != null ? conceptCount + ' Konzepte' : 'Konzepte') +
-        ' aus den zugeordneten Wissensdokumenten.</div>';
-    if (topConcepts.length > 0) {
-        tipNetz += '<div class="tip-section">Haeufigste Konzepte</div>';
-        topConcepts.forEach(function(c) {
-            let pct = Math.round(c.frequency / papers.length * 100);
-            tipNetz += '<div class="tip-bar-row"><span class="tip-bar-label">' + escapeHtml(c.label) + '</span>' +
-                '<div class="tip-bar"><div class="tip-bar-fill" style="width:' + pct + '%;background:var(--primary)"></div></div>' +
-                '<span class="tip-bar-val">' + c.frequency + '</span></div>';
-        });
-    }
-
-    const tipVergleich = '<div class="tip-title">Kategorien-Explorer</div>' +
-        '<div class="tip-text">10 Kategorien als interaktives Spektrum. Waehlen Sie eine Kategorie, um Human- und LLM-Raten, Divergenz-Papers und Konzepte zu explorieren.</div>' +
-        '<div class="tip-text tip-muted">Die Raten je Kategorie weichen unterschiedlich stark ab; die Auswahl zeigt Richtung und Ausmass pro Kategorie.</div>';
-
-    const tipLiteraturbild = '<div class="tip-title">Literaturbild</div>' +
-        '<div class="tip-text">Verdichtet die geprüften PRISM-Annotationen zu einer Kategorienmatrix und inhaltlichen Analyseprofilen. Jede Häufigkeit führt zu Papers und Belegstellen.</div>';
-
-    const tipKorpus = '<div class="tip-title">Korpus</div>' +
-        '<div class="tip-grid">' +
-            '<div class="tip-stat"><span class="tip-stat-val">' + total + '</span><span class="tip-stat-lbl">Papers</span></div>' +
-            '<div class="tip-stat"><span class="tip-stat-val" style="color:var(--success)">' + llmInclude + '</span><span class="tip-stat-lbl">LLM Include</span></div>' +
-            '<div class="tip-stat"><span class="tip-stat-val">' + withDecision + '</span><span class="tip-stat-lbl">Human bewertet</span></div>' +
-        '</div>' +
-        '<div class="tip-text">Durchsuchbar, filterbar, sortierbar. Detail-Panel mit Assessment-Vergleich.</div>';
-
-    return {
-        chat: tipChat,
-        wissensnetz: tipNetz,
-        literaturbild: tipLiteraturbild,
-        vergleich: tipVergleich,
-        korpus: tipKorpus
-    };
-}
-
 window.switchView = function(viewId) { switchView(viewId); };
 
-function switchView(viewId) {
+// params and ctx come from the router (applyStateToUI); a navigation button passes
+// neither, so a release view reopens with the parameters it last showed.
+function switchView(viewId, params, ctx) {
+    const changed = viewId !== currentView;
     currentView = viewId;
     // Update nav button active state
     document.querySelectorAll('.nav-view-btn').forEach(function(btn) {
@@ -833,19 +745,74 @@ function switchView(viewId) {
         if (window.initializeKategorien) window.initializeKategorien();
         benchmarkInitialized = true;
     }
-    if (viewId === 'wissensnetz' && !wissensnetzInitialized && conceptData) {
-        wissensnetzInitialized = true;
-        if (window.initWissensnetz) window.initWissensnetz(conceptData.nodes, conceptData.edges, conceptData.papers);
-    }
-    if (viewId === 'literaturbild' && !literaturbildInitialized) {
-        literaturbildInitialized = true;
-        if (window.initLiteraturbild) window.initLiteraturbild();
-    }
     if (viewId === 'chat' && !chatInitialized) {
         chatInitialized = true;
         if (window.initWissensChat) window.initWissensChat();
     }
+
+    const failed = RELEASE_VIEWS[viewId] && releaseState !== 'ready' && releaseState !== 'loading';
+    const error = document.getElementById('release-error');
+    if (error) {
+        error.textContent = failed ? releaseState : '';
+        error.hidden = !failed;
+    }
+    if (RELEASE_VIEWS[viewId]) {
+        releaseParams = params || (changed ? lastReleaseParams[viewId] : releaseParams) || {};
+        renderReleaseView(viewId, Object.assign({ changed: changed, external: false }, ctx));
+    } else {
+        releaseParams = {};
+    }
     syncUrl();
+}
+
+function hasNavButton(viewId) {
+    return Boolean(document.querySelector('.nav-view-btn[data-view="' + viewId + '"]'));
+}
+
+function renderReleaseView(viewId, ctx) {
+    if (releaseState !== 'ready') return;
+    if (hasNavButton(viewId)) lastReleaseParams[viewId] = releaseParams;
+    const name = RELEASE_VIEWS[viewId];
+    window.EC.release.render(name, Object.assign({}, releaseParams, { view: name }), {
+        root: document.getElementById('view-' + viewId),
+        changed: ctx.changed,
+        external: ctx.external,
+        // A view without a navigation button is a page of its own, so focus moves to its
+        // heading; on a tab view it stays on the tab.
+        focusHeading: urlReady && !hasNavButton(viewId),
+    });
+}
+
+// The release modules' parameters without their view name and without empty values.
+function releaseParamsOf(params) {
+    const rp = {};
+    Object.keys(params || {}).forEach(function(key) {
+        const value = params[key];
+        if (key !== 'view' && value != null && value !== '' && value !== 'all') rp[key] = String(value);
+    });
+    return rp;
+}
+
+// EC.host: the release modules navigate with their own view names (matrix, netz, frage,
+// werk); the router translates them to the views of this page.
+function releaseParseHash() {
+    const s = deserializeState(window.location.hash);
+    return Object.assign({}, s.rp, { view: RELEASE_VIEWS[s.view] || s.view });
+}
+
+function releaseHref(params) {
+    const view = VIEW_OF_RELEASE[params.view];
+    return view ? serializeState({ view: view, rp: releaseParamsOf(params) }) : '#view=start';
+}
+
+// Control changes push a history entry; options.replace (typing) updates the current one.
+function releaseGo(params, options) {
+    const view = VIEW_OF_RELEASE[params.view];
+    if (!view) return;
+    const next = Object.assign({}, store.get(), { view: view, rp: releaseParamsOf(params), paper: null });
+    applyStateToUI(next, { external: false });
+    navMode = options && options.replace ? 'replace' : 'push';
+    try { store.set(Object.assign({}, next, stateFromUI())); } finally { navMode = null; }
 }
 
 function closePaperModal() {
@@ -870,9 +837,9 @@ function highlightActiveRow(paper) {
 
 // URL State (shareable, citable views)
 
-const URL_VIEWS = ['start', 'chat', 'wissensnetz', 'literaturbild', 'vergleich', 'korpus'];
+const URL_VIEWS = ['start', 'chat', 'wissensnetz', 'literaturbild', 'vergleich', 'korpus', 'frage', 'werk'];
 
-// The navigational state read from the current DOM, categories, view and modal.
+// The navigational state read from the current DOM, categories, view, modal and release view.
 function stateFromUI() {
     return {
         view: currentView,
@@ -883,6 +850,7 @@ function stateFromUI() {
         sort: currentSort,
         cat: Array.from(activeCategories),
         paper: currentDetailPaper ? currentDetailPaper.id : null,
+        rp: releaseParams,
     };
 }
 
@@ -894,39 +862,44 @@ function syncUrl() {
 }
 
 // Apply a full state object to the DOM, categories, view and modal, then re-render.
-function applyStateToUI(s) {
+// ctx.external marks a deep link, Back or Forward, as opposed to a control change.
+function applyStateToUI(s, ctx) {
     applyingFromUrl = true;
     try {
-        document.getElementById('search-box').value = s.q || '';
-        document.getElementById('filter-decision').value = s.dec || 'all';
-        document.getElementById('filter-human').value = s.hum || 'all';
-        document.getElementById('filter-year').value = s.year || 'all';
-        currentSort = s.sort || 'relevance';
-        // A select silently ignores an unknown value, so assign directly rather than
-        // probe with querySelector (a crafted sort= would otherwise be an invalid selector).
-        const sortSel = document.getElementById('sort-by');
-        if (sortSel) sortSel.value = currentSort;
+        const release = Boolean(RELEASE_VIEWS[s.view]);
+        // The hash of a release view carries no corpus filters, so the corpus keeps its state.
+        if (!release) {
+            document.getElementById('search-box').value = s.q || '';
+            document.getElementById('filter-decision').value = s.dec || 'all';
+            document.getElementById('filter-human').value = s.hum || 'all';
+            document.getElementById('filter-year').value = s.year || 'all';
+            currentSort = s.sort || 'relevance';
+            // A select silently ignores an unknown value, so assign directly rather than
+            // probe with querySelector (a crafted sort= would otherwise be an invalid selector).
+            const sortSel = document.getElementById('sort-by');
+            if (sortSel) sortSel.value = currentSort;
 
-        activeCategories.clear();
-        (s.cat || []).forEach(function(c) { activeCategories.add(c); });
-        const chipBox = document.getElementById('category-chips');
-        if (chipBox) chipBox.querySelectorAll('.category-chip').forEach(function(c) {
-            c.classList.toggle('active', activeCategories.has(c.dataset.cat));
-        });
-
-        // Reproduce the search base the same way handleSearch does.
-        const q = s.q || '';
-        if (q.length === 0) {
-            filteredPapers = allPapers.slice();
-        } else {
-            const terms = normalizeSearch(q).split(/\s+/).filter(Boolean);
-            filteredPapers = allPapers.filter(function(paper) {
-                return terms.every(function(term) { return paper._searchText.indexOf(term) >= 0; });
+            activeCategories.clear();
+            (s.cat || []).forEach(function(c) { activeCategories.add(c); });
+            const chipBox = document.getElementById('category-chips');
+            if (chipBox) chipBox.querySelectorAll('.category-chip').forEach(function(c) {
+                c.setAttribute('aria-pressed', String(activeCategories.has(c.dataset.cat)));
             });
+
+            // Reproduce the search base the same way handleSearch does.
+            const q = s.q || '';
+            if (q.length === 0) {
+                filteredPapers = allPapers.slice();
+            } else {
+                const terms = normalizeSearch(q).split(/\s+/).filter(Boolean);
+                filteredPapers = allPapers.filter(function(paper) {
+                    return terms.every(function(term) { return paper._searchText.indexOf(term) >= 0; });
+                });
+            }
         }
 
-        switchView(s.view || 'start');
-        applyFilters();
+        switchView(s.view || 'start', release ? (s.rp || {}) : null, ctx);
+        if (!release) applyFilters();
 
         if (s.paper) {
             const paper = allPapers.find(function(p) { return p.id === s.paper; });
@@ -940,10 +913,15 @@ function applyStateToUI(s) {
     }
 }
 
-// Only the keys that differ from the defaults reach the hash, so a clean view stays a clean URL.
+// Only the keys that differ from the defaults reach the hash, so a clean view stays a
+// clean URL. A release view carries its own parameters and no corpus filters.
 function serializeState(s) {
     const p = new URLSearchParams();
     if (s.view && s.view !== 'start') p.set('view', s.view);
+    if (RELEASE_VIEWS[s.view]) {
+        Object.keys(s.rp || {}).sort().forEach(function(key) { p.set(key, s.rp[key]); });
+        return '#' + p.toString();
+    }
     if (s.q) p.set('q', s.q);
     if (s.dec && s.dec !== 'all') p.set('dec', s.dec);
     if (s.hum && s.hum !== 'all') p.set('hum', s.hum);
@@ -951,14 +929,6 @@ function serializeState(s) {
     if (s.sort && s.sort !== 'relevance') p.set('sort', s.sort);
     if (s.cat && s.cat.length) p.set('cat', s.cat.join(','));
     if (s.paper) p.set('paper', s.paper);
-    if (s.view === 'literaturbild') {
-        if (s.litView && s.litView !== 'matrix') p.set('litView', s.litView);
-        if (s.litYear && s.litYear !== 'all') p.set('litYear', s.litYear);
-        if (s.litSource && s.litSource !== 'all') p.set('litSource', s.litSource);
-        if (s.litStudy && s.litStudy !== 'all') p.set('litStudy', s.litStudy);
-        if (s.litProfile && s.litProfile !== 'AN_Prompting_Role') p.set('litProfile', s.litProfile);
-        if (s.litSelection) p.set('litSelection', s.litSelection);
-    }
     const qs = p.toString();
     return qs ? '#' + qs : '';
 }
@@ -967,12 +937,18 @@ function deserializeState(hashStr) {
     let h = String(hashStr || '').replace(/^#/, '');
     if (h && h.indexOf('=') < 0) {
         // Back-compat: a bare view hash like #korpus from about/help links.
-        return Object.assign({}, DEFAULT_STATE, { view: URL_VIEWS.indexOf(h) >= 0 ? h : 'start', cat: [] });
+        return Object.assign({}, DEFAULT_STATE, { view: URL_VIEWS.indexOf(h) >= 0 ? h : 'start', cat: [], rp: {} });
     }
     const p = new URLSearchParams(h);
-    const view = p.get('view');
+    const view = URL_VIEWS.indexOf(p.get('view')) >= 0 ? p.get('view') : 'start';
+    if (RELEASE_VIEWS[view]) {
+        // The release modules validate their own parameters against the model.
+        const rp = {};
+        p.forEach(function(value, key) { if (key !== 'view') rp[key] = value; });
+        return Object.assign({}, DEFAULT_STATE, { view: view, cat: [], rp: releaseParamsOf(rp) });
+    }
     return {
-        view: URL_VIEWS.indexOf(view) >= 0 ? view : 'start',
+        view: view,
         q: p.get('q') || '',
         dec: p.get('dec') || 'all',
         hum: p.get('hum') || 'all',
@@ -982,29 +958,26 @@ function deserializeState(hashStr) {
         // over a non-existent column would silently empty the corpus.
         cat: p.get('cat') ? p.get('cat').split(',').filter(function(c) { return CATEGORIES.indexOf(c) >= 0; }) : [],
         paper: p.get('paper') || null,
-        litView: p.get('litView') === 'profile' ? 'profile' : 'matrix',
-        litYear: p.get('litYear') || 'all',
-        litSource: p.get('litSource') || 'all',
-        litStudy: p.get('litStudy') || 'all',
-        litProfile: p.get('litProfile') || 'AN_Prompting_Role',
-        litSelection: p.get('litSelection') || null,
+        rp: {},
     };
 }
 
 // The store's one subscriber: mirror state into the location hash. A view or paper
 // change is a navigation step (pushState, so Back undoes it); filter churn updates the
-// current entry in place (replaceState, so typing never floods the history).
-let lastView = null, lastPaper = null, urlReady = false;
+// current entry in place (replaceState, so typing never floods the history). A release
+// control sets navMode explicitly, since its changes are navigation steps within a view.
+let lastView = null, lastPaper = null, urlReady = false, navMode = null, handledHash = null;
 function writeUrl(s) {
     const hash = serializeState(s);
     const url = window.location.pathname + window.location.search + hash;
     if (url === window.location.pathname + window.location.search + window.location.hash) {
         lastView = s.view; lastPaper = s.paper || null; urlReady = true;
+        handledHash = window.location.hash;
         return; // already current; also avoids appending a bare '#' to a clean URL
     }
     // Opening a paper or switching view is a navigation step (pushState, so Back
     // undoes it); clearing the paper or filter churn replaces the entry in place.
-    const navStep = urlReady && (s.view !== lastView || (s.paper && s.paper !== lastPaper));
+    const navStep = urlReady && (navMode ? navMode === 'push' : (s.view !== lastView || (s.paper && s.paper !== lastPaper)));
     try {
         if (navStep) window.history.pushState(null, '', url);
         else window.history.replaceState(null, '', url);
@@ -1012,20 +985,28 @@ function writeUrl(s) {
         // file:// or a sandboxed origin rejects history writes; URL state is a nicety.
     }
     lastView = s.view; lastPaper = s.paper || null; urlReady = true;
+    handledHash = window.location.hash;
 }
 
 function restoreFromUrl() {
+    // A traversal can report itself through both popstate and hashchange; the second
+    // report finds its hash already applied.
+    if (urlReady && window.location.hash === handledHash) return;
     const decoded = deserializeState(window.location.hash);
-    applyStateToUI(decoded);
+    applyStateToUI(decoded, { external: true });
     // Mirror what actually got applied, not the raw hash: an unknown paper closed the
     // modal and unknown categories dropped out. Presetting lastView/lastPaper makes the
     // store write a replaceState, correcting a stale hash in place without a new entry.
     const applied = Object.assign({}, decoded, stateFromUI());
     lastView = applied.view; lastPaper = applied.paper || null; urlReady = true;
     store.set(applied);
+    handledHash = window.location.hash;
 }
 
 function initUrlState() {
+    // The corpus table renders once up front, since a link can open a release view
+    // first, which leaves the corpus filters untouched.
+    applyFilters();
     store.subscribe(writeUrl);
     window.addEventListener('popstate', restoreFromUrl);
     window.addEventListener('hashchange', restoreFromUrl);
@@ -1111,10 +1092,7 @@ function buildDetailContent(paper) {
                 html += ' <span class="severity-badge severity-' + paper.benchmark.severity + '">' + paper.benchmark.severity + '</span>';
             }
             if (affectedCats.length) {
-                html += '<p class="affected-cats">Betroffene Kategorien: ' + affectedCats.map(function(c) {
-                    let color = CAT_COLORS[c] || 'var(--gray-400)';
-                    return '<span style="color:' + color + ';font-weight:600;">' + catLabel(c) + '</span>';
-                }).join(', ') + '</p>';
+                html += '<p class="affected-cats">Betroffene Kategorien ' + categoryChips(affectedCats, function() { return { small: true }; }) + '</p>';
             }
             html += '</div>';
         } else {
@@ -1172,20 +1150,11 @@ function buildDetailContent(paper) {
     return html;
 }
 
+// The categories an assessment assigns, as grouped category chips.
 function catGridColored(allCategories) {
-    let html = '<div class="category-grid-10">';
-    CATEGORIES.forEach(function(cat) {
-        let active = allCategories[cat] === 1;
-        let color = active ? CAT_COLORS[cat] : 'var(--gray-300)';
-        const textColor = active ? 'var(--gray-800)' : 'var(--gray-400)';
-        const fontWeight = active ? '600' : '400';
-        html += '<div class="cat-grid-item" style="color:' + textColor + ';font-weight:' + fontWeight + '">' +
-            '<span class="cat-dot" style="background:' + color + '"></span>' +
-            '<span>' + catLabel(cat) + '</span>' +
-        '</div>';
-    });
-    html += '</div>';
-    return html;
+    const assigned = CATEGORIES.filter(function(cat) { return allCategories[cat] === 1; });
+    return '<p class="category-chips assessment-categories">' +
+        (assigned.length ? categoryChips(assigned, function() { return { small: true }; }) : 'keine Kategorie') + '</p>';
 }
 
 // Export & Download
