@@ -452,7 +452,7 @@ function initializeUI() {
     // Delegated download from the detail panel (.md link), reads the current paper.
     document.getElementById('modal-body').addEventListener('click', function(e) {
         const dl = e.target.closest('[data-action="download-doc"]');
-        if (dl && currentDetailPaper) {
+        if (dl && currentDetailPaper && knowledgeDocShown(currentDetailPaper)) {
             e.preventDefault();
             downloadKnowledgeDoc(currentDetailPaper.knowledge_doc, currentDetailPaper.title);
         }
@@ -498,6 +498,23 @@ function humanCats(paper) {
 // sort and export, since the reviewers may open this view (ADR-044).
 function llmShown(paper) {
     return window.EC.korpusStages.decision(paper) === 'open' ? null : paper.llm;
+}
+
+// A knowledge document carries the round-one LLM decision and categories in its
+// frontmatter and assessment sections, so the panel and the exports offer it only when
+// every record linking it has a human decision. Records of one Work can share a
+// document, and one open record withholds it for all of them.
+let docRecords = null;
+function knowledgeDocShown(paper) {
+    const doc = paper.knowledge_doc;
+    if (!doc) return null;
+    if (!docRecords) {
+        docRecords = {};
+        allPapers.forEach(function(p) {
+            if (p.knowledge_doc) (docRecords[p.knowledge_doc] = docRecords[p.knowledge_doc] || []).push(p);
+        });
+    }
+    return (docRecords[doc] || [paper]).every(function(p) { return window.EC.korpusStages.decision(p) !== 'open'; }) ? doc : null;
 }
 
 function llmIncludeRank(paper) {
@@ -1441,8 +1458,14 @@ function initUrlState() {
 }
 
 function buildDetailContent(paper) {
-    const hasKnowledge = paper.knowledge && paper.knowledge.sections &&
+    const hasSections = paper.knowledge && paper.knowledge.sections &&
         Object.keys(paper.knowledge.sections).length > 0;
+    // The summaries come from the same LLM distillate as the document, which PRISM opens
+    // only after the reviewer's own record, so an open work offers no Wissen tab at all.
+    const knowledgeWithheld = hasSections && (paper.knowledge_doc
+        ? !knowledgeDocShown(paper)
+        : window.EC.korpusStages.decision(paper) === 'open');
+    const hasKnowledge = hasSections && !knowledgeWithheld;
 
     const stages = window.EC.korpusStages;
     let html = '<dl class="detail-state">' + stages.stateItems(paper).map(function(item) {
@@ -1465,7 +1488,7 @@ function buildDetailContent(paper) {
     if (paper.url && paper.url !== 'nan' && paper.url !== '' && isHttpUrl(paper.url)) {
         actions.push('<a href="' + escapeHtml(paper.url) + '" target="_blank" rel="noopener" class="detail-link">Quelle</a>');
     }
-    if (paper.knowledge_doc) {
+    if (knowledgeDocShown(paper)) {
         actions.push('<a href="#" data-action="download-doc" class="detail-link">Wissensdokument (.md)</a>');
     }
     html += '<div class="detail-actions">' + actions.join('') + '</div>';
@@ -1473,7 +1496,7 @@ function buildDetailContent(paper) {
     // Tabs
     html += '<div class="detail-tabs">';
     html += '<button class="detail-tab active" data-detail-tab="bewertung">Bewertung</button>';
-    html += '<button class="detail-tab" data-detail-tab="wissen">' + (hasKnowledge ? 'Wissensdokument' : 'Wissen') + '</button>';
+    if (!knowledgeWithheld) html += '<button class="detail-tab" data-detail-tab="wissen">' + (hasKnowledge ? 'Wissensdokument' : 'Wissen') + '</button>';
     if (text === true) html += '<button class="detail-tab" data-detail-tab="volltext">Volltext</button>';
     html += '</div>';
 
@@ -1570,7 +1593,7 @@ function buildDetailContent(paper) {
             html += '<p>' + escapeHtml(ks.hauptargumente).replace(/\n- /g, '<br>- ') + '</p>';
             html += '</div>';
         }
-        if (paper.knowledge_doc) {
+        if (knowledgeDocShown(paper)) {
             html += '<div style="margin-top:1rem;">';
             html += '<a href="#" data-action="download-doc" class="export-button"><i class="fas fa-download" aria-hidden="true"></i> Vollständiges Wissensdokument (.md)</a>';
             html += '</div>';
@@ -1634,14 +1657,11 @@ function downloadKnowledgeDoc(docPath, title) {
     });
 }
 
-// The whole corpus downloads the prebuilt archive; a selection is packed here from the
-// same knowledge documents, with the record index restricted to it.
+// The selection, the whole corpus included, is packed here with the record index
+// restricted to it. The prebuilt archive knows only the expert decisions and withholds
+// the works decided by a saved reviewer record, so it no longer stands in for the corpus.
 function downloadVaultZip() {
-    if (korpusResult.length === allPapers.length) {
-        download('FemPrompt_Paper_Wissenssammlung.zip', 'downloads/vault.zip');
-        return;
-    }
-    const withDocs = korpusResult.filter(function(p) { return p.knowledge_doc; });
+    const withDocs = korpusResult.filter(knowledgeDocShown);
     if (withDocs.length === 0) {
         alert('Keine Wissensdokumente für die aktuelle Auswahl verfügbar.');
         return;
@@ -1713,7 +1733,7 @@ function zipStored(files) {
 }
 
 function exportFilteredMarkdown() {
-    const withDocs = korpusResult.filter(function(p) { return p.knowledge_doc; });
+    const withDocs = korpusResult.filter(knowledgeDocShown);
 
     if (withDocs.length === 0) {
         alert('Keine Wissensdokumente für die aktuelle Auswahl vorhanden.');

@@ -64,13 +64,62 @@ def test_working_archive_uses_same_canonical_document_inventory():
     corpus = json.loads(
         (ROOT / "docs/data/research_vault_v2.json").read_text(encoding="utf-8")
     )
-    expected = {p["knowledge_doc"] for p in corpus["papers"] if p.get("knowledge_doc")}
+    withheld = build_downloads.withheld_documents(corpus["papers"])
+    shipped = [
+        p for p in corpus["papers"]
+        if p.get("knowledge_doc") and p["knowledge_doc"] not in withheld
+    ]
     with zipfile.ZipFile(io.BytesIO(build_downloads.build(ROOT))) as archive:
         notes = [name for name in archive.namelist() if name.startswith("Papers/")]
-        assert len(notes) == len(expected)
-        assert len(json.loads(archive.read("record-index.json"))) == sum(
-            bool(p.get("knowledge_doc")) for p in corpus["papers"]
+        assert len(notes) == len({p["knowledge_doc"] for p in shipped})
+        index = json.loads(archive.read("record-index.json"))
+        assert len(index) == len(shipped)
+        open_ids = {
+            p["id"] for p in corpus["papers"]
+            if not build_downloads.has_expert_decision(p)
+        }
+        assert open_ids and not open_ids & {entry["record_id"] for entry in index}
+
+
+def test_working_archive_withholds_documents_of_open_records(tmp_path):
+    papers = tmp_path / "docs" / "vault" / "Papers"
+    papers.mkdir(parents=True)
+    for name in ("decided", "open", "shared"):
+        (papers / f"{name}.md").write_text(
+            f"---\nllm_decision: Include\n---\n{name}", encoding="utf-8"
         )
+    decided = {"benchmark": {"has_human": True}, "human": {"decision": "Include"}}
+    undecided = {"benchmark": {"has_human": False}, "human": None}
+
+    def record(record_id, doc, state):
+        return {
+            "id": record_id, "work_id": f"work:{record_id}",
+            "version_id": f"version:{record_id}",
+            "knowledge_doc": f"vault/Papers/{doc}.md", **state,
+        }
+
+    payload = {"papers": [
+        record("A", "decided", decided),
+        record("B", "open", undecided),
+        record("C", "shared", decided),
+        record("D", "shared", undecided),
+        record("E", "decided", {"benchmark": {"has_human": True}, "human": {"decision": "Unclear"}}),
+    ]}
+    data = tmp_path / "docs" / "data"
+    data.mkdir()
+    (data / "research_vault_v2.json").write_text(json.dumps(payload), encoding="utf-8")
+
+    with zipfile.ZipFile(io.BytesIO(build_downloads.build(tmp_path))) as archive:
+        notes = sorted(n for n in archive.namelist() if n.startswith("Papers/"))
+        index = json.loads(archive.read("record-index.json"))
+    # E has no Include or Exclude, so the document it shares with A is withheld too.
+    assert notes == []
+    assert index == []
+    payload["papers"].pop()
+    (data / "research_vault_v2.json").write_text(json.dumps(payload), encoding="utf-8")
+    with zipfile.ZipFile(io.BytesIO(build_downloads.build(tmp_path))) as archive:
+        assert sorted(n for n in archive.namelist() if n.startswith("Papers/")) == ["Papers/A.md"]
+        assert [e["record_id"] for e in json.loads(archive.read("record-index.json"))] == ["A"]
 
 
 def test_working_archive_reads_long_linked_document_paths(tmp_path):
@@ -89,6 +138,8 @@ def test_working_archive_reads_long_linked_document_paths(tmp_path):
                 "work_id": "work:long",
                 "version_id": "version:long",
                 "knowledge_doc": f"vault/Papers/{filename}",
+                "benchmark": {"has_human": True},
+                "human": {"decision": "Exclude"},
             }
         ]
     }
