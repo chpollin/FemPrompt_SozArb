@@ -18,7 +18,7 @@ created: 2026-06-29
 updated: 2026-10-01
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 5.5), Codex (GPT-6)
-related: [project, analysis-methods, methods, specification, data, standards, governance, testing, verification, plan, journal, handoff, update-protocol, research-vault, analysis-divergence, analysis-sq-advisory, project-review-2026-09-05]
+related: [project, analysis-methods, methods, specification, data, standards, governance, testing, verification, plan, journal, handoff, update-protocol, codebook-v1.4-proposal, research-vault, analysis-divergence, analysis-sq-advisory, project-review-2026-09-05]
 ---
 
 FemPrompt SozArb is a qualitative literature review on how social work professionals can use large language models responsibly, with attention to bias, gender and the groups affected. The project also builds the epistemic infrastructure that makes its AI-assisted research traceable, with two review rounds, the comparative round-one benchmark, the agent-assisted round-two workflow, PRISM as governed screening and verification surface, the Grounded Vault and the public Evidence Companion. Concrete numbers live in `generated/`, `docs/data/` and their generated views.
@@ -43,6 +43,7 @@ In function order, not alphabetical.
 | [[handoff]] | Current branch state, continuation point for the next session on either machine, and checkout conditions | per session close |
 | [[project-review-2026-09-05]] | Dated review of 2026-09-05 with the findings, the implemented remedies and the uses of the completed data | closed |
 | [[update-protocol]] | The round-two pre-registration, the analysis-field design, the pilot findings, the coding procedure, the amendment record and the RIS procedure | per protocol amendment |
+| [[codebook-v1.4-proposal]] | The draft codebook amendment v1.4 for the five sub-questions, with the UF4 and task fields, sharper bias and harm rules, stage-status pairs, the not-collected state, the recoding recommendation and the pilot protocol, awaiting the operator's decision | per amendment decision |
 | [[analysis-divergence]] | The licensed round-one divergence analysis that the methodological part of the paper cites, decomposed and read off named replay keys | per replay change |
 | [[analysis-sq-advisory]] | The advisory interpretation of the three earlier sub-questions with their placement in SQ1 to SQ5, to be replaced by governed full-corpus analysis and domain-expert verification | per coding run |
 | [[research-vault]] | The Grounded-Vault layer model, its status vocabulary and the active evidence chain | per change of the evidence chain |
