@@ -14,7 +14,7 @@ updated: 2026-10-01
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 5.5)
 topics: ["[[Scoping Review]]", "[[Evidence Synthesis]]", "[[Inter-rater Reliability]]"]
-related: [methods, standards, analysis-divergence, analysis-sq-advisory, update-protocol, research-vault, governance, verification, plan]
+related: [project, methods, standards, analysis-divergence, analysis-sq-advisory, update-protocol, research-vault, governance, verification, plan]
 ---
 
 # Analysis Methods
@@ -25,11 +25,11 @@ The literature corpus is analysed in two layers, a descriptive mapping of the fi
 
 ### Mapping layer
 
-The mapping layer follows the JBI methodology for scoping reviews (Peters et al. 2020) and is reported by PRISMA-ScR (Tricco et al. 2018). JBI guidance names charting, frequency counts and tabular or graphical presentation as the analysis forms of a scoping review, with basic qualitative content analysis where categories have to be derived from text (Pollock et al. 2023). Evidence-and-gap maps present the coded Works as a matrix of two coded dimensions whose cells hold the contributing Works (Snilstveit et al. 2016; White et al. 2020). Mapping reviews, scoping reviews and evidence-and-gap maps belong to one family of reviews that describe a field instead of answering an effect question (Campbell et al. 2023).
+The mapping layer follows the JBI methodology for scoping reviews (Peters et al. 2020). Its reporting by PRISMA-ScR (Tricco et al. 2018) is proposed and awaits the operator's decision ([[standards#Open reporting decision on PRISMA-ScR]]). JBI guidance names charting, frequency counts and tabular or graphical presentation as the analysis forms of a scoping review, with basic qualitative content analysis where categories have to be derived from text (Pollock et al. 2023). Evidence-and-gap maps present the coded Works as a matrix of two coded dimensions whose cells hold the contributing Works (Snilstveit et al. 2016; White et al. 2020). Mapping reviews, scoping reviews and evidence-and-gap maps belong to one family of reviews that describe a field instead of answering an effect question (Campbell et al. 2023).
 
-The fit of this layer with the research questions is an inference from their wording. SQ1 to SQ3 ask which prompting techniques, bias axes, mitigations and social-work contexts the literature addresses and with which evidence status. These are mapping questions before they become synthesis questions.
+The fit of this layer with the research questions is an inference from their wording. SQ1 to SQ3 ask for which tasks and settings, with which bias axes and harm types, and with which prompting techniques and safeguards at which evidence status the literature addresses LLM use in social work. These are mapping questions before they become synthesis questions. SQ4 asks for competences and organisational conditions and is answered mainly in the synthesis layer ([[#Answering the research questions]]).
 
-PRISMA 2020 and PRISMA-trAIce remain the reporting basis recorded in [[standards]]. PRISMA-trAIce is formulated as an extension of PRISMA 2020, and its AI disclosure items describe tool use independently of the review type. Reporting the mapping layer by PRISMA-ScR therefore adds a checklist and keeps the recorded conformance work. [[standards]] does not yet list PRISMA-ScR as an applied standard, and the combination needs to be recorded there when the frame is adopted.
+PRISMA 2020 and PRISMA-trAIce remain the reporting basis recorded in [[standards]]. PRISMA-trAIce is formulated as an extension of PRISMA 2020, and its AI disclosure items describe tool use independently of the review type. Reporting the mapping layer by PRISMA-ScR would therefore add a checklist and keep the recorded conformance work. [[standards]] records the combination as an open reporting decision and lists PRISMA-ScR as applied only once the operator adopts it.
 
 ### Synthesis layer
 
@@ -52,10 +52,10 @@ The research questions in [[project#Research questions]] are answered in two lay
 |---|---|---|---|
 | SQ1 Use | Population or setting, prompting role (recommended practice), a task field once a codebook amendment adds it | Reported benefits with task, setting, conditions and limitations | No task field exists. Much of the coded literature is not specific to social work, which is a finding only once coding is complete. Task literature without a bias focus may be underrepresented because identification centred on bias and gender. |
 | SQ2 Risks | Bias axes, harm types and populations, jointly coded | Harm mechanisms and affected groups with their study conditions | Answerable with the current codebook. Two isolated agent tracks often disagree on harm types and bias axes, so the vocabulary needs sharper definitions and anchor examples before the full coding run. |
-| SQ3 Practices | Prompt techniques, prompting role, mitigation stage and status | Reported effects, conditions and limitations of evaluated and demonstrated practices | Mitigation status is one value per Work, so a status cannot be attributed to a single technique or stage. Intervention-status pairs require a codebook amendment. |
+| SQ3 Practices | Prompt techniques, prompting role, mitigation stage, and mitigation status as a property of the Work | Reported effects, conditions and limitations of evaluated and demonstrated practices | Mitigation status is one value per Work, so a status cannot be attributed to a single technique or stage. Intervention-status pairs require a codebook amendment. |
 | SQ4 Competences | Organisational mitigation stage and learning content as prompting role, eligibility category AI literacies | Best-fit framework synthesis against the working definition of feminist AI literacies and a named external framework of general prompt guidance | The external framework has to be named before synthesis. Comparing the corpus with the project's own prompt formula would make the gap self-referential. |
 
-Across all questions the answer is limited by the coverage of coding. Every view and every text states how many included Works are coded for the fields it uses. An empty cell with open Works is not determinable and never a gap in the literature. What the literature recommends is reported as the recommendation of its source, never as a recommendation of the project ([[project#Project goal]]).
+Across all questions the answer is limited by the coverage of coding. Every view and every text states how many included Works are coded for the fields it uses. An empty cell with open Works is not determinable and never a gap in the literature. What the literature recommends is reported as the recommendation of its source, never as a recommendation of the project ([[project#Project goal]]). The codebook changes named in the table, a task field, intervention-status pairs and sharper harm and bias definitions, are part of a proposed amendment that awaits the operator's decision ([[update-protocol#Proposed codebook amendment v1.4]]).
 
 ## Analysis plan
 
@@ -66,7 +66,7 @@ Each figure is computed at Work level from committed data by an executable scrip
 - Every table states its Work-level denominator and the lifecycle state of the contributing records. It keeps missing coding apart from coded absence, as the [completion package](../generated/completion/README.md) already does for the SQ tables.
 - The analysis fields of [[update-protocol#Analysis coding]] are charted per Work together with their coding basis.
 - Category and analysis-value prevalences are reported with Wilson score intervals (Wilson 1927), separately per producer track. The interval states the precision of a proportion under repeated sampling, an assumption the corpus satisfies only in a qualified sense (see [[#Statistical reservations]]).
-- Evidence-and-gap maps for SQ1 to SQ3 cross bias axes or harm types with mitigation stage and evidence status, and populations with prompting role. Each cell lists its contributing Works and separates the states not coded and not addressed.
+- Evidence-and-gap maps for SQ1 to SQ3 cross bias axes with harm types and with mitigation stage, and populations with prompting role or technique. Each cell lists its contributing Works and separates the states not coded and not addressed. Mitigation status is coded once per Work. A map shows it as a property of the contributing Works and never attributes it to the technique or stage that defines a cell.
 - The round-one agreement report extends the existing replay output to the confusion matrix, raw agreement, positive and negative specific agreement (Cicchetti and Feinstein 1990), the prevalence and bias indices (Byrt et al. 1993), Cohen's kappa and Krippendorff's alpha with confidence intervals (Hayes and Krippendorff 2007), and the AC1 coefficient as a sensitivity analysis (Gwet 2008). High raw agreement can coexist with a low kappa under skewed prevalence or unequal marginals (Feinstein and Cicchetti 1990), and every index rests on its own assumption about chance agreement (Zhao et al. 2013). The report describes the comparison of two documented products, the consolidated expert annotation and the LLM assessment. It reports no error rate, because round one has no inter-expert reference ([[analysis-divergence]]).
 - Best-fit framework synthesis begins on Assertions whose evidence has been checked. Each synthesis statement retains the lifecycle state of its supporting Assertions ([[update-protocol#Lifecycle and authority]]).
 
@@ -141,10 +141,12 @@ The project already implements part of this plan.
 - The round-one replay computes the decision and category matrices, Cohen's kappa, prevalence-adjusted kappa, maximum kappa and the prevalence and bias indices, together with the content-only subset and the condition contrast ([[methods#Round-one replay verification]], [[analysis-divergence]]).
 - The conformance map records the item status against PRISMA 2020, PRISMA-trAIce and RAISE ([[standards]]).
 - The completion package projects Work-level SQ tables with explicit missing coding and a provisional synthesis outline ([completion package](../generated/completion/README.md)).
-- Committed scripts derive the process diagnostics of the governed agent workflow ([[update-protocol#Process diagnostics]]).
+- The completion package also writes the Tier 1 mapping tools, a field-state report per analysis field, evidence-and-gap matrices as Work-level count tables with an authority breakdown and not-determinable cells, and a round-one category co-occurrence check that separates the screened from the included population. They report counts, Work IDs and the Jaccard index ([[methods#Descriptive mapping and process diagnostics]]). Their question labels still follow the sub-question numbering of 2026.
+- `src/assess/agent_track_diagnostics.py` derives the process diagnostics of the governed agent workflow as a workflow diagnostic without an accuracy claim ([[update-protocol#Process diagnostics]]).
 - An advisory SQ analysis over historical distillates provides hypotheses for schema refinement ([[analysis-sq-advisory]]).
+- The draft chapter on SQ1 rests on `grounded` Assertions without AI Agent Review ([[research-vault#Current implementation state]]).
 
-Not yet implemented are the interval estimates, specific agreement, Krippendorff's alpha and the AC1 coefficient, the evidence-and-gap maps, the association analyses, the blind reference mode, the estimators for partial verification and all Tier 3 analyses. Each analysis script is documented in [[methods]] when it is built.
+Not yet implemented are the interval estimates, specific agreement, Krippendorff's alpha and the AC1 coefficient, the association statistics of Tier 2, the blind reference mode, the estimators for partial verification and all Tier 3 analyses. Each analysis script is documented in [[methods]] when it is built.
 
 ## Sources
 

@@ -19,7 +19,7 @@ template:
   url: https://dhcraft.org/Promptotyping/promptotyping-document/data
   alias: https://dhcraft.org/Promptotyping/#promptotyping-document-data
 topics: ["[[Data Modelling]]"]
-related: [specification, methods, standards]
+related: [specification, methods, standards, governance, research-vault]
 ---
 
 This document describes the substrate the PRISMA screening tool consumes and produces. The canonical persisted unit is one JSON file per reviewer or consolidated agent track. Schema `femprompt-prisma-reviewer/0.5` adds embedded provenance, immutable annotation versions, deterministic check receipts, and a record-level lifecycle to the version-aware evidence and text-source fields of schema 0.4. Annotations from people and AI agents use the same structural form and retain distinct actor types and roles. The comparative round-1 corpus continues to store the consolidated expert and LLM decisions as sibling fields for replay and divergence analysis. The category schema and inclusion logic come from `assessment/categories.yaml`. What the data means lives here; what the tool does with it lives in [[specification]].
@@ -383,7 +383,9 @@ Each released record's `analysis` carries `fields`, `field_states`, `undecidable
 }
 ```
 
-The released states recompute from the released records, and the unreleased states derive from the completion package's canonical Work rows through `canonical_work_rows`. The object carries counts only and no content of unreleased Works. The result site and its download carry the same object. Released states are attributed AI source review, never domain-expert verification.
+The released states recompute from the released records, and the unreleased states derive from the completion package's canonical Work rows through `canonical_work_rows`. The object carries counts only and no content of unreleased Works. The result site and its download carry the same object. Released states are attributed AI source review, never domain-expert verification. Whether counts about unreleased Works may appear on the public result site is an open decision recorded in [[governance#Publication boundary]].
+
+The internal `generated/completion/field-states.csv` partitions the recorded Include Works alone, without the released Include Works outside that set, with a finer state set for analysis planning, described in [[methods#Descriptive mapping and process diagnostics]]. It is no release input.
 
 ## Reading text source and corpus search (v4, as built)
 
@@ -446,7 +448,7 @@ The divergence items in `promptotyping_v2.json` carry `pattern` and `justificati
 
 `schemas/` holds the JSON Schema (draft 2020-12) descriptions of the governed and generated JSON contracts. A schema documents the shape a generator already writes. It grants no authority beyond structural conformance and never replaces the canonical owner of a vocabulary, which stays with `assessment/categories.yaml`, `docs/data/work_version_contract.json` and `docs/data/screening_lifecycle_contract.json`.
 
-- `femprompt-completion-package-1.0` describes `generated/completion/completion-package.json`, the provisional preparation package joining registry, productive track, 2026 candidates, Assertions and knowledge coverage.
+- `femprompt-completion-package-1.0` describes `generated/completion/completion-package.json`, the provisional preparation package joining registry, productive track, 2026 candidates, Assertions and knowledge coverage. Its `researchVaultState` admits the Grounded Vault states `preparation`, `grounded`, `ai-agent-reviewed`, `verified` and `publication-approved` for Assertions and distillates ([[research-vault#Status and checks]]). The analysis blocks added on 1 October 2026 pass as additional properties without a constraint of their own.
 - `femprompt-prisma-reviewer-0.5` describes a productive PRISM track under `docs/data/screening/`, with embedded provenance, immutable annotation versions, check receipts and lifecycle. The optional `verification_schema` and `verifications` keys are admitted without constraining the verification record itself.
 - `femprompt-source-readiness-0.2` describes `generated/source-acquisition/codex-websearch-2026/source-readiness.json`.
 - `femprompt-source-version-bindings-0.2` describes the governed source-binding manifest `corpus/source_version_bindings.json`.

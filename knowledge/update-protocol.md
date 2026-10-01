@@ -10,11 +10,11 @@ status: active
 language: en
 version: "0.7"
 created: 2026-06-09
-updated: 2026-09-05
+updated: 2026-10-01
 authors: [Christopher Pollin]
 generated-with: Claude Code, Codex (GPT-5.6)
 topics: ["[[Pre-Registration]]", "[[Coding Scheme]]", "[[AI Agents]]"]
-related: [plan, governance, verification, data, specification, methods, standards]
+related: [plan, governance, verification, data, specification, methods, standards, project, analysis-methods]
 ---
 
 # Round-Two Update Protocol
@@ -32,7 +32,7 @@ Round-two searches ran under the initial protocol and were documented in `corpus
 1. Update the first-round corpus with literature from the defined round-two publication window.
 2. Preserve search, conversion, curation, source, prompt, model, actor, and lifecycle provenance.
 3. Apply the same eligibility dimensions across both rounds while retaining their distinct coding scales and authority structures.
-4. Capture the analysis fields required for SQ1 to SQ3 within each included round-two annotation.
+4. Capture the analysis fields of [[#Analysis coding]] within each included round-two annotation.
 5. Prepare the intended corpus agentically and present the complete result to domain experts for verification.
 6. Produce machine-readable inputs for PRISMA 2020, PRISMA-trAIce, the literature analysis, the report, and the paper.
 
@@ -40,7 +40,7 @@ Round-two searches ran under the initial protocol and were documented in `corpus
 
 The methodological question asks how LLMs and AI agents can be integrated into a qualitative literature review with traceable contributions, re-executable processing, and final scholarly authority assigned to domain experts.
 
-The literature analysis originally used three sub-questions on prompting techniques and their evidence status, on the mapping of bias axes and harm types to proposed, demonstrated or evaluated mitigations, and on social-work-specific contexts, constraints and research gaps. On 1 October 2026 the operator made the substantive question primary and reformulated the sub-questions around the tasks of social work. [[project#Research questions]] holds the current wording and the mapping from the earlier questions. The coding vocabularies below remain valid until a codebook amendment is decided.
+The literature analysis originally used three sub-questions on prompting techniques and their evidence status, on the mapping of bias axes and harm types to proposed, demonstrated or evaluated mitigations, and on social-work-specific contexts, constraints and research gaps. On 1 October 2026 the operator made the substantive question primary and reformulated the sub-questions around the tasks of social work. [[project#Research questions]] holds the current wording and the mapping from the earlier questions. The coding vocabularies below remain valid until a codebook amendment is decided. The `serves` entries of the analysis fields in `assessment/categories.yaml` and the question labels of the generated SQ tables still use the earlier numbering.
 
 ## Eligibility
 
@@ -149,7 +149,19 @@ This clarification records the interpretation used in the targeted re-review of 
 
 Each assigned stage needs its own source support. Monitoring alone does not establish an inference intervention. Inspecting an output does not establish a technical output modification. Generic fairness constraints, compensation or lifecycle language do not justify assigning every technical stage. Stage and evidence status remain separate: an explicit recommendation can identify a stage while remaining `Proposed`. The decisions and exact Paper passages for the reviewed cases are in `generated/verification/screening-review-c.json`.
 
-The existing two-dimensional eligibility rule includes non-generative algorithmic systems and social dimensions beyond a direct social-work setting. Absence of generative AI or of a direct social-work application is therefore not, by itself, a round-two exclusion. Direct practice relevance and transferability are assessed separately for SQ3. The publication medium alone does not establish quality: scholarly grey literature can contribute a conceptual inventory or teaching example when its authorship, source, relevant content and limitations are clear. A withdrawal blocks current synthesis pending an explicit integrity resolution. These clarifications do not overwrite round-one human decisions or invent a missing round-one protocol.
+The existing two-dimensional eligibility rule includes non-generative algorithmic systems and social dimensions beyond a direct social-work setting. Absence of generative AI or of a direct social-work application is therefore not, by itself, a round-two exclusion. Direct practice relevance and transferability are assessed separately for the earlier SQ3 on social-work contexts, whose content now belongs to SQ1 and SQ4. The publication medium alone does not establish quality. Scholarly grey literature can contribute a conceptual inventory or teaching example when its authorship, source, relevant content and limitations are clear. A withdrawal blocks current synthesis pending an explicit integrity resolution. These clarifications do not overwrite round-one human decisions or invent a missing round-one protocol.
+
+### Proposed codebook amendment v1.4
+
+A critical methodological review of 1 October 2026 proposed amending the codebook before the full coding run. The proposal has not been adopted. It awaits the operator's decision, and `assessment/categories.yaml` version 1.3 remains the vocabulary in force. The proposal comprises the following changes.
+
+- Optional intervention-status pairs for Works coded above `Proposed`, because `AN_Mitigation_Status` holds one value per Work and cannot attribute a status to a single technique or stage.
+- A task or activity field distinct from `AN_Population`, because SQ1 asks for tasks and the current field records the population or setting.
+- A state for fields that the coding under version 1.3 did not collect, so that Works coded before the amendment do not appear as coded absence.
+- Sharper definitions and anchor examples for `AN_Harm_Types` and `AN_Bias_Axes`, because the two operationally isolated agent tracks often disagree on these fields ([[#Process diagnostics]]).
+- Recoding of the Works already coded under version 1.3.
+
+[[analysis-methods#Answering the research questions]] names the analytical limits each change would address.
 
 ## Lifecycle and authority
 
@@ -161,7 +173,7 @@ Internal topic modelling, descriptive analysis, Assertion generation, and report
 
 ## Process diagnostics
 
-Committed scripts derive diagnostics from the stored tracks and lifecycle events.
+`src/assess/agent_track_diagnostics.py` derives diagnostics from the stored tracks and lifecycle events and writes them into the completion package ([[methods#Descriptive mapping and process diagnostics]]).
 
 - decision, category, and analysis-field differences between agent tracks
 - source-grounding corrections introduced during AI Agent Review
@@ -169,7 +181,7 @@ Committed scripts derive diagnostics from the stored tracks and lifecycle events
 - lifecycle distributions across the governed corpus
 - source-basis distributions used for annotation and analysis
 
-Round-one expert and LLM divergence remains a separate comparative analysis governed by [[analysis-divergence]].
+In the pooled runs the two tracks agree on the decisions and differ most often on harm types, bias axes and mitigation stages. The generated diagnostics hold the current values. Round-one expert and LLM divergence remains a separate comparative analysis governed by [[analysis-divergence]].
 
 ## Roles
 
@@ -197,5 +209,6 @@ Round-one expert and LLM divergence remains a separate comparative analysis gove
 | 2026-08-24 | Context-informed search supplement | Executed three dated Codex search lanes, retained the original round-two window, and prepared Tier-A candidates for Zotero curation without assigning screening decisions |
 | 2026-08-24 | Codex Websearch 2026 | Expanded the context-informed search through three deep 2026-only lanes and produced one deduplicated, audited Zotero package for the complete selected subset |
 | 2026-09-05 | Original visual reading assets | Allowed optional hash-bound, attributed CC BY 4.0 PNG representations alongside the exact Paper text; assigned reviewers must read every declared asset. Text quotation requirements, decision criteria and scholarly authority remain unchanged. Updated prompt versions repair section references and document the existing AI-review output schema. |
+| 2026-10-01 | Research questions | Made the substantive question primary and reformulated the sub-questions as SQ1 to SQ4 ([[project#Research questions]]). The coding vocabulary and the eligibility rule remain unchanged. A codebook amendment v1.4 is proposed and not adopted. |
 
 Detailed execution evidence remains in run manifests, the prompt changelog, `corpus/deep-research/round2/LAUFPROTOKOLL.md`, [[journal]], and ADR-026 through ADR-037 in [[specification]].

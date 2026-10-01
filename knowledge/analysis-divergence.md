@@ -22,7 +22,7 @@ The round-one divergence analysis compares the consolidated expert annotation wi
 
 ## Evidence basis
 
-`src/replay/replay_round1.py` re-pairs the raw assessment files by `Zotero_Key`, reproduces the canonical benchmark as a self-test, and then writes the flow and agreement outputs under `generated/benchmark-results/replay/`. The replay fails on missing, surplus, or inconsistently paired records. This mechanism replaces earlier hand-maintained figures and the incorrect sequential-row pairing discovered during the first analysis.
+`src/replay/replay_round1.py` re-pairs the raw assessment files by `Zotero_Key`, reproduces the canonical benchmark as a self-test, and then writes the flow and agreement outputs under `generated/benchmark-results/replay/`. The replay fails on missing, surplus, or inconsistently paired records. Category comparisons drop cells the expert left empty or marked `?`, so per-category denominators count coded pairs only ([[methods#Round-one replay verification]]). This mechanism replaces earlier hand-maintained figures and the incorrect sequential-row pairing discovered during the first analysis.
 
 The principal generated keys are listed below.
 
