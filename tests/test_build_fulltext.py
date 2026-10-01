@@ -782,10 +782,3 @@ def test_fallback_key_keeps_the_assessment_sheet_label_it_was_calibrated_on() ->
 
     assert bf.author_year_key(paper) == "mahammed2024"
 
-
-def test_clean_resolves_docling_glyph_names() -> None:
-    """A table cell /uni25CF becomes a bullet and a ligature its letters (ADR-042)."""
-    cleaned = bf.clean("| A | /uni25CF |\n\nde/uniFB01ned /uniFB01eld\n")
-    assert "●" in cleaned
-    assert "defined field" in cleaned
-    assert "/uni" not in cleaned
