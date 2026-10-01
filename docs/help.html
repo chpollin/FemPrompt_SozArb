@@ -76,15 +76,13 @@
             <p>Sie benoetigen einen <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">Google AI API Key</a>. Der Key bleibt bis zum Schliessen des Browser-Tabs im Sitzungsspeicher. Eine Frage und die dafuer ausgewaehlten Forschungsdaten werden beim Absenden direkt an die Google API uebertragen.</p>
 
             <h3><i class="fas fa-project-diagram"></i> Wissensnetz</h3>
-            <p>Konzepte, extrahiert aus den Wissensdokumenten. Groesse = Haeufigkeit im Korpus.
-            Verbindungslinien = gemeinsame Papers. Klick auf ein Konzept zeigt das Ego-Netzwerk
-            (Nachbarn hervorgehoben, Rest abgeblendet) mit Definition und Paper-Liste.</p>
+            <p>Die zehn Screening-Kategorien als Netz. Ein Knoten ist eine Kategorie, seine Größe folgt der Zahl der Werke mit dieser Kategorie. Eine Linie verbindet zwei Kategorien, die in denselben Werken codiert sind, und wird mit der Zahl dieser Werke dicker. Sie zeigt gemeinsame Codierung und behauptet keine Beziehung zwischen den Kategorien.</p>
             <ul>
-                <li>Farben: <strong style="color:#3a7d7e;">Technik</strong>,
-                    <strong style="color:#b0546e;">Sozial</strong>,
-                    <strong style="color:#7c6fae;">Bruecke</strong></li>
-                <li>Gestrichelte Ringe = Konzepte in Divergenz-Faellen</li>
-                <li>Divergenz-Modus: Hebt nur Divergenz-Konzepte hervor</li>
+                <li>Ein Klick auf einen Knoten, eine Linie oder eine Zeile der Tabelle wählt sie aus und listet die Werke mit Entscheidung, Link zum Korpus und zu PRISM. Escape hebt die Auswahl auf.</li>
+                <li>Die Datenbasis wechselt zwischen der Einschätzung der Expert:innen, der Codierung durch das LLM und ihrer Übereinstimmung. Unter Übereinstimmung zeigt der dunkle Strich die von beiden codierten Werke, der helle die nur von einer Seite codierten.</li>
+                <li>Entscheidung beschränkt das Netz auf Werke einer Screening-Entscheidung, die Schwelle blendet schwächere Verbindungen aus.</li>
+                <li>Mit der Tastatur wandern die Pfeiltasten durch Knoten und Linien, Enter wählt aus. Auswahl und Datenbasis stehen im Link.</li>
+                <li>Das Begriffsnetz der Analysefelder, das Netz um einen Begriff des Codebuchs, ist über den Link oben in der Ansicht erreichbar.</li>
             </ul>
 
             <h3 id="literaturbild"><i class="fas fa-chart-column"></i> Literaturbild</h3>

@@ -1,5 +1,5 @@
 // Chromium acceptance run for the working Companion docs/index.html: start view, answer
-// pages, Argumentkarte, Literaturbild matrix, Wissensnetz, work view, Landkarte lenses, legacy hashes, nav
+// pages, Argumentkarte, Literaturbild matrix, Wissensnetz and Begriffsnetz, work view, Landkarte lenses, legacy hashes, nav
 // tooltips, the Korpus workbench (sidebar, year histogram, review stages, work lists,
 // exports, stage track with next step, filter chips, detail panel actions) and reflow.
 import { chromium } from 'playwright';
@@ -368,10 +368,149 @@ try {
   check('the work view opens inside the page', workHref.startsWith('#view=werk&id=') && await visibleView() === 'view-werk');
   check('work categories use the shared chip markup', await page.locator('#werk-root .werk-categories .category-chip[data-cat]').count() > 0);
 
+  // Wissensnetz: the screening categories as a network of joint coding, recomputed here
+  // from the working data independently of wissensnetz.js.
+  const catKeys = schema.categories.map((c) => c.key);
+  const withDecision = vault.papers.filter((p) => p.human && p.human.decision);
+  const llmDone = vault.papers.filter((p) => p.llm && p.llm.assessment_status === 'assessed' && p.llm.all_categories);
+  const netCount = (works, side, set) => works.filter((p) => set.every((c) => (side === 'h' ? (p.human.all_categories || {}) : p.llm.all_categories)[c] === 1)).length;
+  const pairs = catKeys.flatMap((a, i) => catKeys.slice(i + 1).map((b) => [a, b]));
+  const expertPairs = pairs.map((set) => ({ set, n: netCount(withDecision, 'h', set) })).filter((e) => e.n > 0).sort((x, y) => y.n - x.n);
+  const nodeText = (cat) => page.locator(`#wn-graph .wn-node[data-sel="${cat}"] .wn-count`).textContent();
   await page.goto(`${base}/index.html#view=wissensnetz`, { waitUntil: 'networkidle' });
-  await page.waitForSelector('#view-wissensnetz #netz-list');
-  check('Wissensnetz shows the network of review knowledge',
-    await page.locator('#netz-graph').count() === 1 && await page.locator('#tab-wissensnetz[aria-pressed="true"]').count() === 1);
+  await page.waitForSelector('#wn-graph');
+  check('Wissensnetz shows the category network on its tab',
+    await page.locator('#tab-wissensnetz[aria-pressed="true"]').count() === 1 && await page.locator('#wn-graph .wn-node').count() === catKeys.length);
+  check('every expert node shows the works coded with its category',
+    (await Promise.all(catKeys.map(nodeText))).every((text, i) => Number(text) === netCount(withDecision, 'h', [catKeys[i]])));
+  check('every co-coded pair of categories is an edge of the figure and a row of the linked table',
+    await page.locator('#wn-graph .wn-edge').count() === expertPairs.length && await page.locator('#wn-table .wn-pick').count() === expertPairs.length);
+  const widths = await page.locator('#wn-graph .wn-edge').evaluateAll((edges) => edges.map((e) => [e.dataset.sel, Number(e.querySelector('.wn-line').getAttribute('stroke-width'))]));
+  const widthOf = Object.fromEntries(widths);
+  check('edge thickness grows with the number of works', expertPairs.every((e, i) => i === 0 || widthOf[e.set.join(',')] <= widthOf[expertPairs[i - 1].set.join(',')] + 1e-9) &&
+    widthOf[expertPairs[0].set.join(',')] > widthOf[expertPairs[expertPairs.length - 1].set.join(',')], JSON.stringify(widths.slice(0, 5)));
+  const layoutOf = () => page.locator('#wn-graph .wn-node circle.wn-hit').evaluateAll((c) => c.map((n) => n.getAttribute('cx') + ',' + n.getAttribute('cy')).join(' '));
+  const layoutBefore = await layoutOf();
+  const radii = await page.locator('#wn-graph .wn-node .wn-dot').evaluateAll((c) => c.map((n) => Number(n.getAttribute('r'))));
+  const nodeCounts = catKeys.map((c) => netCount(withDecision, 'h', [c]));
+  check('node size follows the number of works', catKeys.every((_, i) => catKeys.every((__, j) => (nodeCounts[i] <= nodeCounts[j] ? radii[i] <= radii[j] + 1e-9 : true))));
+  check('the network carries no standing prose and no middle dot', await page.evaluate(() => {
+    const root = document.getElementById('wn-root');
+    return !/·/.test(root.textContent) && root.querySelectorAll('p:not(.lk-caption):not(.lk-detail-count):not(.empty-state)').length === 0;
+  }));
+
+  const top = expertPairs[0];
+  const topSel = top.set.join(',');
+  // A curved edge's box centre need not lie on the stroke, and other edges cross it, so the
+  // pointer clicks a point of the curve where this edge is the topmost element.
+  const edgePoint = await page.evaluate((sel) => {
+    const edge = [...document.querySelectorAll('#wn-graph .wn-edge')].find((e) => e.dataset.sel === sel);
+    const path = edge.querySelector('.wn-hit');
+    for (let t = 0.5; t > 0.05; t -= 0.02) {
+      for (const at of [t, 1 - t]) {
+        const point = path.getPointAtLength(path.getTotalLength() * at).matrixTransform(path.getScreenCTM());
+        const hit = document.elementFromPoint(point.x, point.y);
+        if (hit && hit.closest('.wn-edge') === edge) return [point.x, point.y];
+      }
+    }
+    return null;
+  }, topSel);
+  check('the strongest edge can be reached with the pointer', Boolean(edgePoint));
+  await page.mouse.click(edgePoint[0], edgePoint[1]);
+  await page.waitForSelector('#wn-detail:not([hidden]) .lk-item');
+  const edgeItems = page.locator('#wn-detail .lk-item');
+  check('clicking an edge lists the works coded with both categories', await edgeItems.count() === top.n, `${await edgeItems.count()} vs ${top.n}`);
+  check('the selected edge states its exact count in the figure', (await page.locator('#wn-graph .wn-pill text').allTextContents()).includes(String(top.n)));
+  const itemLinks = await edgeItems.evaluateAll((items) => items.map((item) => [
+    item.querySelector('.lk-item-title').getAttribute('href'), item.querySelector('.wn-prism').getAttribute('href'),
+    item.querySelector('.lk-dec').textContent]));
+  const expectedIds = new Set(withDecision.filter((p) => top.set.every((c) => (p.human.all_categories || {})[c] === 1)).map((p) => p.id));
+  check('each listed work links to its Korpus detail and to PRISM and names its decision', itemLinks.every(([korpus, prism, dec]) => {
+    const id = decodeURIComponent(korpus.replace('#view=korpus&paper=', ''));
+    return expectedIds.has(id) && prism === 'prisma.html?paper=' + encodeURIComponent(id) && /^(Include|Exclude|Unclear)$/.test(dec);
+  }), JSON.stringify(itemLinks[0]));
+  check('the edge selection stands in the hash', hashParams().get('sel') === topSel && hashParams().get('view') === 'wissensnetz');
+
+  const nodeCat = 'Feministisch';
+  await page.locator(`#wn-graph .wn-node[data-sel="${nodeCat}"] .wn-hit`).click();
+  await page.waitForFunction((cat) => new URLSearchParams(location.hash.slice(1)).get('sel') === cat, nodeCat);
+  check('clicking a node lists the works coded with its category',
+    await page.locator('#wn-detail .lk-item').count() === netCount(withDecision, 'h', [nodeCat]));
+  check('a selected node restricts the linked table to its connections', await page.locator('#wn-table .wn-pick').count() ===
+    expertPairs.filter((e) => e.set.includes(nodeCat)).length);
+  await page.reload({ waitUntil: 'networkidle' });
+  await page.waitForSelector('#wn-detail:not([hidden])');
+  check('the selection survives a reload', await page.locator(`#wn-graph .wn-node[data-sel="${nodeCat}"]`).getAttribute('aria-pressed') === 'true');
+  check('the layout is the same after a reload', await layoutOf() === layoutBefore);
+  await page.goBack({ waitUntil: 'networkidle' });
+  await page.waitForFunction((sel) => new URLSearchParams(location.hash.slice(1)).get('sel') === sel, topSel);
+  check('Back restores the previous edge selection', await page.locator(`#wn-graph .wn-edge[data-sel="${topSel}"]`).getAttribute('aria-pressed') === 'true');
+  await page.goForward({ waitUntil: 'networkidle' });
+  await page.waitForFunction((cat) => new URLSearchParams(location.hash.slice(1)).get('sel') === cat, nodeCat);
+  check('Forward restores the node selection', await page.locator(`#wn-graph .wn-node[data-sel="${nodeCat}"]`).getAttribute('aria-pressed') === 'true');
+
+  const bases = await page.locator('#wn-root .wn-bases .lk-lens').evaluateAll((b) => b.map((n) => n.dataset.basis));
+  check('the basis switch offers exactly the bases with data',
+    bases.join() === ['expert', llmDone.length ? 'llm' : null, llmDone.some((p) => p.human && p.human.decision) ? 'agree' : null].filter(Boolean).join(), bases.join());
+  await page.locator('#wn-root .lk-lens[data-basis="llm"]').click();
+  await page.waitForFunction(() => new URLSearchParams(location.hash.slice(1)).get('basis') === 'llm');
+  check('the LLM basis is labelled and counts the LLM coding', (await page.locator('#wn-caption').innerText()).includes('LLM') &&
+    (await Promise.all(catKeys.map(nodeText))).every((text, i) => Number(text) === netCount(llmDone, 'l', [catKeys[i]])));
+  check('the selection is kept across the basis switch', hashParams().get('sel') === nodeCat &&
+    await page.locator('#wn-detail .lk-item').count() === netCount(llmDone, 'l', [nodeCat]));
+  await page.locator('#wn-root .lk-lens[data-basis="agree"]').click();
+  await page.waitForFunction(() => new URLSearchParams(location.hash.slice(1)).get('basis') === 'agree');
+  const netSides = await page.locator('#wn-detail .lk-item').evaluateAll((items) => items.map((i) => i.dataset.side));
+  check('under Übereinstimmung the works name the side that coded them, divergent ones first',
+    netSides.length > 0 && netSides.every((s, i) => i === 0 || ['expert', 'llm', 'both'].indexOf(s) >= ['expert', 'llm', 'both'].indexOf(netSides[i - 1])), netSides.join());
+  await page.reload({ waitUntil: 'networkidle' });
+  await page.waitForSelector('#wn-graph');
+  check('the basis survives a reload', await page.locator('#wn-root .lk-lens[data-basis="agree"]').getAttribute('aria-pressed') === 'true');
+  await page.locator('#wn-root .lk-lens[data-basis="expert"]').click();
+  await page.waitForFunction(() => !new URLSearchParams(location.hash.slice(1)).get('basis'));
+
+  await page.locator('#wn-scope').selectOption('include');
+  await page.waitForFunction(() => new URLSearchParams(location.hash.slice(1)).get('scope') === 'include');
+  check('the decision filter narrows the network to included works',
+    await page.locator('#wn-detail .lk-item').count() === withDecision.filter((p) => p.human.decision === 'Include' && (p.human.all_categories || {})[nodeCat] === 1).length &&
+    await page.locator('#wn-detail .lk-dec').evaluateAll((d) => d.every((n) => n.textContent === 'Include')));
+  await page.locator('#wn-scope').selectOption('all');
+  await page.locator('#wn-min').selectOption('50');
+  check('the threshold hides weaker connections', await page.locator('#wn-graph .wn-edge').count() === expertPairs.filter((e) => e.n >= 50).length);
+  await page.locator('#wn-min').selectOption('1');
+
+  await page.keyboard.press('Escape');
+  check('Escape clears the selection', await page.locator('#wn-detail').isHidden() && !hashParams().get('sel'));
+  await page.locator('#wn-graph .wn-item[tabindex="0"]').focus();
+  await page.keyboard.press('ArrowRight');
+  const focusedSel = await page.evaluate(() => document.activeElement.dataset.sel);
+  await page.keyboard.press('Enter');
+  check('arrow keys and Enter select an item of the figure', Boolean(focusedSel) && hashParams().get('sel') === focusedSel);
+  await page.keyboard.press('Escape');
+  const secondSel = expertPairs[1].set.join(',');
+  await page.locator(`#wn-table .wn-pick[data-sel="${secondSel}"]`).click();
+  check('the linked table selects the same edge as the figure', await page.locator(`#wn-graph .wn-edge[data-sel="${secondSel}"]`).getAttribute('aria-pressed') === 'true' &&
+    await page.evaluate(() => document.activeElement.id === 'wn-detail-title'));
+  const netWork = page.locator('#wn-detail .lk-item-title').first();
+  const netTitle = (await netWork.innerText()).trim();
+  await netWork.click();
+  await page.waitForSelector('#paper-modal.active');
+  check('a work of a connection opens its Korpus detail', await visibleView() === 'view-korpus' && (await page.locator('#modal-title').innerText()).trim() === netTitle);
+
+  await page.setViewportSize({ width: 1280, height: 800 });
+  await page.goto(`${base}/index.html#view=wissensnetz&sel=${encodeURIComponent(secondSel)}`, { waitUntil: 'networkidle' });
+  await page.waitForSelector('#wn-detail:not([hidden])');
+  check('at 1280 px the selection stands beside the figure without horizontal scrolling', await page.evaluate(() => {
+    const fig = document.getElementById('wn-figure').getBoundingClientRect();
+    const side = document.querySelector('.wn-side').getBoundingClientRect();
+    return side.left >= fig.right - 1 && document.documentElement.scrollWidth <= window.innerWidth + 1;
+  }));
+  await page.setViewportSize({ width: 1440, height: 900 });
+
+  await page.locator('#wn-root .wn-terms-link').click();
+  await page.waitForSelector('#view-begriffsnetz #netz-list');
+  check('the Begriffsnetz of the analysis fields opens from the Wissensnetz',
+    await visibleView() === 'view-begriffsnetz' && await page.locator('#netz-graph').count() === 1);
 
   // Landkarte of the Kategorien view: every lens value of every cell and header is
   // recomputed here from the working data, independently of kategorien.js.
@@ -1060,7 +1199,7 @@ try {
   check('desktop document has no horizontal overflow', await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1));
   await page.setViewportSize({ width: 390, height: 844 });
   for (const hash of ['#view=start', '#view=frage&sq=1', '#view=frage&sq=3', '#view=frage&sq=4', '#view=frage&sq=5', '#view=literaturbild', '#view=wissensnetz', workHref,
-    '#view=korpus', '#view=korpus&stage=offen', '#view=chat', '#view=vergleich']) {
+    '#view=korpus', '#view=korpus&stage=offen', '#view=chat', '#view=vergleich', '#view=begriffsnetz', '#view=wissensnetz&basis=agree&sel=Gender']) {
     await page.goto(`${base}/about.html`, { waitUntil: 'networkidle' });
     await page.goto(`${base}/index.html${hash}`, { waitUntil: 'networkidle' });
     await page.waitForTimeout(150);
@@ -1094,13 +1233,23 @@ try {
   check('at 390 px the detail panel stands below the map', await page.evaluate(() =>
     document.getElementById('landkarte-detail').getBoundingClientRect().top >= document.getElementById('landkarte-legend').getBoundingClientRect().bottom));
 
-  await page.goto(`${base}/index.html#view=wissensnetz`, { waitUntil: 'networkidle' });
+  await page.goto(`${base}/index.html#view=begriffsnetz`, { waitUntil: 'networkidle' });
   await page.waitForSelector('#netz-graph');
-  check('at 390 px the network figure and its table fit their column', await page.evaluate(() => {
+  check('at 390 px the term network figure and its table fit their column', await page.evaluate(() => {
     const figure = document.getElementById('netz-figure');
     const list = document.querySelector('.netz-list-wrap');
     return figure.scrollWidth <= figure.clientWidth + 1 && list.scrollWidth <= list.clientWidth + 1;
   }));
+  await page.goto(`${base}/index.html#view=wissensnetz`, { waitUntil: 'networkidle' });
+  await page.waitForSelector('#wn-graph');
+  check('at 390 px the linked table comes before the network figure and both fit', await page.evaluate(() => {
+    const table = document.querySelector('.wn-table-wrap').getBoundingClientRect();
+    const figure = document.getElementById('wn-figure').getBoundingClientRect();
+    return table.bottom <= figure.top && figure.right <= window.innerWidth && document.documentElement.scrollWidth <= window.innerWidth + 1;
+  }));
+  await page.locator('#wn-table .wn-pick').first().click();
+  check('at 390 px a table selection shows its works above the table', await page.evaluate(() =>
+    document.getElementById('wn-detail').getBoundingClientRect().bottom <= document.querySelector('.wn-table-wrap').getBoundingClientRect().top + 1));
   await page.goto(`${base}/index.html#view=korpus&year=2024`, { waitUntil: 'networkidle' });
   await page.waitForSelector('#year-hist .year-col');
   check('at 390 px the year histogram fits its column without scrolling the page', await page.evaluate(() => {

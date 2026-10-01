@@ -93,11 +93,12 @@ let currentView = 'start';
 let applyingFromUrl = false; // suppresses UI->store sync while a URL is being applied
 
 // Views rendered by the release modules (release-*.js), mapped to the names those
-// modules use. Wissensnetz hosts the network; Frage and Werk have no navigation button
-// and are reached through links. Literaturbild is a working view of its own
-// (literaturbild.js); the matrix links of the answer pages still lead to it.
-const RELEASE_VIEWS = { wissensnetz: 'netz', frage: 'frage', werk: 'werk' };
-const VIEW_OF_RELEASE = { matrix: 'literaturbild', netz: 'wissensnetz', frage: 'frage', werk: 'werk' };
+// modules use. Begriffsnetz hosts the term network; Frage, Werk and Begriffsnetz have
+// no navigation button and are reached through links. Literaturbild (literaturbild.js)
+// and Wissensnetz (wissensnetz.js) are working views of their own; the matrix links of
+// the answer pages still lead to the Literaturbild.
+const RELEASE_VIEWS = { begriffsnetz: 'netz', frage: 'frage', werk: 'werk' };
+const VIEW_OF_RELEASE = { matrix: 'literaturbild', netz: 'begriffsnetz', frage: 'frage', werk: 'werk' };
 // 'loading', 'ready', or the message of a failed model load.
 let releaseState = 'loading';
 let releaseParams = {}; // parameters of the release view on screen
@@ -114,7 +115,7 @@ const DEFAULT_STATE = {
     view: 'start', q: '', dec: 'all', hum: 'all', year: 'all', stage: 'all', sort: DEFAULT_SORT, cat: [], paper: null, rp: {}, vp: {},
 };
 
-// A working view with parameters of its own (kategorien.js) registers a codec
+// A working view with parameters of its own (kategorien.js, wissensnetz.js) registers a codec
 // { keys, get, apply } here; the router serializes them as vp and stays the only writer
 // of the hash. A codec with own: true (literaturbild.js) keeps the corpus filters out
 // of its hash, as a release view does.
@@ -1109,6 +1110,7 @@ function switchView(viewId, params, ctx) {
         benchmarkInitialized = true;
     }
     if (viewId === 'literaturbild' && window.EC.literaturbild) window.EC.literaturbild.show();
+    if (viewId === 'wissensnetz' && window.initializeWissensnetz) window.initializeWissensnetz();
     // A hidden histogram has no width, so its labels are thinned once it shows.
     if (viewId === 'korpus') thinYearLabels();
     if (viewId === 'chat' && !chatInitialized) {
@@ -1224,7 +1226,7 @@ function highlightActiveRow(paper) {
 
 // URL State (shareable, citable views)
 
-const URL_VIEWS = ['start', 'chat', 'wissensnetz', 'literaturbild', 'vergleich', 'korpus', 'frage', 'werk'];
+const URL_VIEWS = ['start', 'chat', 'wissensnetz', 'begriffsnetz', 'literaturbild', 'vergleich', 'korpus', 'frage', 'werk'];
 
 // The navigational state read from the current DOM, categories, view, modal and release view.
 function stateFromUI() {

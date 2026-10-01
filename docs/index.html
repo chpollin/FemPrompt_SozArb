@@ -153,8 +153,14 @@
 
         <p id="release-error" class="release-error" role="alert" hidden></p>
 
-        <!-- View: Wissensnetz, the ego network of release-netz.js -->
+        <!-- View: Wissensnetz, the screening-category network of wissensnetz.js -->
         <section class="content-section view-content release-view" id="view-wissensnetz" aria-labelledby="tab-wissensnetz" style="display:none;">
+            <div id="wn-root" class="wn-root"></div>
+        </section>
+
+        <!-- View: Begriffsnetz, the ego network of release-netz.js, reached from the Wissensnetz -->
+        <section class="content-section view-content release-view" id="view-begriffsnetz" style="display:none;">
+            <p class="wn-terms-link"><a href="#view=wissensnetz">Wissensnetz der Kategorien</a></p>
             <div id="netz-root"></div>
         </section>
 
@@ -233,6 +239,7 @@
     <script src="js/research-app.js"></script>
     <script src="js/korpus-stages.js"></script>
     <script src="js/kategorien.js"></script>
+    <script src="js/wissensnetz.js"></script>
     <script src="js/public-release.js"></script>
     <script src="js/release-model.js"></script>
     <script src="js/release-matrix.js"></script>

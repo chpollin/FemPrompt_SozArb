@@ -218,3 +218,84 @@ rect.netz-hit { fill: transparent; stroke: transparent; pointer-events: all; }
     .netz-list td { padding-inline: var(--space-xs); }
     .netz-list button { padding-inline: var(--space-xs); white-space: normal; }
 }
+
+/* Wissensnetz of the working application (wissensnetz.js): the screening categories as
+   a network of joint coding. Every rule is scoped to .wn-root, which only index.html has. */
+.wn-root .wn-controls { align-items: end; }
+.wn-root .wn-bases { margin-bottom: 0; }
+.wn-terms-link { font-size: var(--text-sm); margin: 0 0 var(--space-sm); }
+.wn-controls .wn-terms-link { margin: 0 0 0 auto; align-self: center; }
+
+.wn-layout { display: flex; flex-direction: column; gap: var(--space-xl); }
+.wn-main, .wn-side { min-width: 0; }
+/* Below the two-column width the linked table and the selection come before the figure. */
+.wn-side { order: -1; display: flex; flex-direction: column; gap: var(--space-lg); }
+
+@media (min-width: 64rem) {
+    .wn-layout { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(20rem, 1fr); align-items: start; }
+    .wn-side { order: 0; }
+}
+
+.wn-figure { max-inline-size: 46rem; }
+.wn-graph { display: block; inline-size: 100%; block-size: auto; font-family: var(--font-body); }
+.wn-bg { fill: transparent; }
+
+.wn-line { fill: none; stroke: var(--gray-500); stroke-opacity: var(--o, .5); stroke-linecap: round; transition: stroke-opacity .2s ease, stroke .2s ease; }
+.wn-line--union { stroke: var(--gray-300); stroke-opacity: .7; }
+.wn-line--both { stroke: var(--gray-700); stroke-opacity: .75; }
+.wn-hit { fill: none; stroke: transparent; pointer-events: stroke; }
+.wn-node .wn-hit { fill: transparent; pointer-events: all; }
+.wn-item { cursor: pointer; outline: none; }
+
+.wn-dot { fill: var(--node); stroke: #fff; stroke-width: 1.5; }
+.wn-dot--union { fill-opacity: .35; stroke: var(--node); }
+.wn-dot-both { fill: var(--node); }
+.wn-label { fill: var(--gray-900); font-weight: 500; }
+.wn-count { fill: var(--gray-600); font-weight: 400; font-variant-numeric: tabular-nums; }
+
+.wn-edge:hover .wn-line { stroke-opacity: 1; stroke: var(--gray-800); }
+.wn-graph.has-selection .wn-edge:not(.is-near) .wn-line,
+.wn-graph.is-preview .wn-edge:not(.is-preview-near) .wn-line { stroke-opacity: .08; }
+.wn-graph.has-selection .wn-node:not(.is-near) .wn-dot { opacity: .55; }
+.wn-edge.is-near .wn-line:not(.wn-line--union),
+.wn-edge.is-preview-near .wn-line:not(.wn-line--union) { stroke: var(--primary-dark); stroke-opacity: .85; }
+.wn-edge.is-near .wn-line--union { stroke: var(--primary-light); stroke-opacity: .45; }
+.wn-edge.is-selected .wn-line:not(.wn-line--union) { stroke: var(--primary-dark); stroke-opacity: 1; }
+.wn-node.is-selected .wn-dot { stroke: var(--gray-900); stroke-width: 3; }
+.wn-node.is-selected .wn-label { font-weight: 700; }
+
+.wn-item:focus-visible .wn-dot { stroke: var(--primary-dark); stroke-width: 4; }
+.wn-item:focus-visible .wn-hit { stroke: var(--primary); stroke-opacity: .35; }
+.wn-node:focus-visible .wn-hit { stroke: none; }
+
+.wn-pill { pointer-events: none; }
+.wn-pill rect { fill: #fff; stroke: var(--primary-dark); stroke-width: 1.2; }
+.wn-pill text { fill: var(--gray-900); font-weight: 600; font-variant-numeric: tabular-nums; }
+
+.wn-legend { display: flex; flex-wrap: wrap; gap: var(--space-xs) var(--space-lg); margin: var(--space-sm) 0 0; padding: 0; list-style: none; font-size: var(--text-xs); color: var(--gray-700); }
+.wn-legend li { display: inline-flex; align-items: center; gap: var(--space-xs); }
+.wn-legend-dot { fill: var(--gray-400); }
+.wn-legend .wn-line { stroke-opacity: .8; }
+
+.wn-detail { border-bottom: 1px solid var(--gray-200); padding-bottom: var(--space-md); }
+.wn-detail[hidden] { display: none; }
+.wn-detail-head { display: flex; align-items: start; justify-content: space-between; gap: var(--space-sm); }
+.wn-clear { flex: none; inline-size: 1.75rem; block-size: 1.75rem; border: 1px solid var(--gray-300); border-radius: var(--radius-md); background: #fff; color: var(--gray-700); font-size: 1.1rem; line-height: 1; cursor: pointer; }
+.wn-clear:hover { background: var(--gray-100); }
+.wn-list { max-height: 24rem; }
+.wn-prism { margin-inline-start: var(--space-xs); color: var(--primary-dark); }
+.wn-root .lk-mark--none { border: 1px dashed var(--gray-400); }
+
+.wn-table-wrap { max-height: 26rem; overflow: auto; }
+.wn-table { inline-size: 100%; border-collapse: collapse; font-size: var(--text-sm); }
+.wn-table caption { text-align: start; font-weight: 600; color: var(--gray-800); padding-block-end: var(--space-xs); }
+.wn-table th, .wn-table td { padding: .3rem var(--space-xs); border-bottom: 1px solid var(--gray-100); text-align: start; vertical-align: middle; }
+.wn-table thead th { position: sticky; top: 0; background: #fff; font-weight: 500; color: var(--gray-600); font-size: var(--text-xs); }
+.wn-pair { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem; font-weight: 400; }
+.wn-table tr.is-selected { background: var(--gray-100); }
+.wn-num { font-variant-numeric: tabular-nums; color: var(--gray-700); }
+.wn-pick { min-inline-size: 2.75rem; padding: .15rem .5rem; border: 1px solid var(--gray-300); border-radius: var(--radius-md); background: #fff; font: inherit; font-variant-numeric: tabular-nums; cursor: pointer; }
+.wn-pick:hover { background: var(--gray-100); }
+.wn-pick[aria-pressed="true"] { background: var(--primary-dark); border-color: var(--primary-dark); color: #fff; font-weight: 600; }
+
+@media (prefers-reduced-motion: reduce) { .wn-line { transition: none; } }

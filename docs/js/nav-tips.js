@@ -8,7 +8,7 @@
 
     const TIPS = {
         chat: 'Fragen an die geprüften Aussagen des Reviews. Ein LLM antwortet nur aus diesen Aussagen und nennt die Belege.',
-        wissensnetz: 'Begriffe des Codebuchs, die mit einem gewählten Begriff in denselben Werken codiert sind. Eine Verbindung zählt Werke und behauptet keine Beziehung.',
+        wissensnetz: 'Netz der Screening-Kategorien, die in denselben Werken codiert sind, nach Expert:innen, LLM oder Übereinstimmung. Eine Verbindung zählt Werke und behauptet keine Beziehung.',
         literaturbild: 'Evidenz- und Lückenkarte über zwei wählbare Dimensionen, mit Lücken und offenen Zellen markiert. Jede Zelle führt zu ihren Werken.',
         vergleich: 'Landkarte der Screening-Kategorien, Gegenstand gegen Perspektive, wahlweise nach Werken, Einschluss, Übereinstimmung von Expert:innen und LLM oder Aktualität. Eine Zelle zeigt ihre Werke.',
         korpus: 'Alle erfassten Werke mit ihrem Stand in Screening und Auswertung, mit Arbeitslisten, Filtern und Export der Auswahl.',
