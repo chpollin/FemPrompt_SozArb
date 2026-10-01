@@ -10,7 +10,7 @@ status: active
 language: de
 version: "0.7"
 created: 2026-02-18
-updated: 2026-09-22
+updated: 2026-10-01
 authors: [Christopher Pollin]
 generated-with: Claude Code
 related: [INDEX, plan, specification, governance, verification, handoff]
@@ -23,6 +23,14 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 ---
 
 ## PRISM and the epistemic infrastructure (2026)
+
+### 2026-10-01: Add descriptive mapping tools and agent-track diagnostics
+
+The interim analysis is set as a scoping-review mapping with evidence-and-gap matrices. Inferential statistics are deferred because governed coding covers only part of the included works and the corpus is a curated search result. The completion builder now writes a field-state report, the SQ association matrices with a Gegenstand by Perspektive category matrix, a round-one category co-occurrence check and the agent-track process diagnostics promised by [[update-protocol#Process diagnostics]]. [[methods#Descriptive mapping and process diagnostics]] describes their populations, states and labels.
+
+The SQ tables no longer assert a fixed authority tier. Each row derives an authority breakdown from its contributing works. The completion-package schema requires an `authority` string, which now names the weakest governed lifecycle state among those works. A work under an integrity hold without a separate withholding flag was still eligible for interim analysis. Eligibility now excludes it, which changes no current output. The rebuilt build manifest lacks the entries for the uncommitted local reacquisition files of 22 September, because this checkout does not hold them. A checkout that holds them adds them again on its next build.
+
+In the pooled agent runs the two tracks agree on every decision, while their differences concentrate in harm types, bias axes and mitigation stages and in the Diversitaet, Feministisch and KI_Sonstige categories. Every round-one Include in both tracks meets the category rule, and a part of the excluded records meets it as well. The completion-package schema does not yet name the new blocks, and the test-layer table in [[testing]] does not yet list the new tests.
 
 ### 2026-09-22: Referenzen sichtbar, Werkzeugleiste in der Korpusspalte, Anleitung für die Verifikationsrolle
 
