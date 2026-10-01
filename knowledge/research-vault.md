@@ -79,7 +79,7 @@ An Assertion carries at least the following information.
 - review status with dated activity and responsible actor
 - intended output, for instance literature report, paper or both
 
-Assertions record the relation in the optional frontmatter field `research-questions`, which the validator does not check against a vocabulary. The Assertions prepared on 1 October 2026 use the current numbering. Of the earlier Assertions, one carries values of the earlier sub-question numbering, which [[project#Research questions]] maps to the current questions, and the others carry no such field. The Assertion index and the result site do not yet read this field.
+Assertions record the relation in the optional frontmatter field `research-questions`, a list of distinct values from `SQ1` to `SQ4` that the validator checks. The Assertions prepared on 1 October 2026 use the current numbering. Of the earlier Assertions, one carries values of the earlier sub-question numbering, which [[project#Research questions]] maps to the current questions, and the others carry no such field. Both numberings use the same values, so the validator cannot detect the earlier one, and the remapping of that Assertion is an editorial decision. The Assertion index exports the field as `research_questions` ([[data#Analysis vocabulary projection]]).
 
 Report Assertions and paper Assertions form one body of knowledge. The field for the intended output controls which Assertions are used in which text. Methodological statements of the paper can additionally point to project artifacts such as ADRs, run manifests, tests and replay outputs.
 

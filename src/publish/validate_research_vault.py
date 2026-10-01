@@ -87,6 +87,10 @@ REQUIRED_FIELDS = {
         "updated",
     ),
 }
+# The current sub-questions of knowledge/project.md. Assertions numbered under the
+# earlier sub-questions carry values from the same range, so the check cannot
+# detect old numbering; that mapping stays an editorial decision.
+RESEARCH_QUESTIONS = ("SQ1", "SQ2", "SQ3", "SQ4")
 WIKILINK = re.compile(r"\[\[([^\]#|]+?)(?:#\^([A-Za-z0-9-]+))?(?:\|[^\]]*)?\]\]")
 BLOCK_ID = re.compile(r"\^([A-Za-z0-9-]+)\s*$")
 
@@ -196,6 +200,18 @@ def _check_metadata(document: Document, report: ValidationReport) -> None:
     for field_name in required:
         if field_name not in metadata:
             report.errors.append(f"{document.key}: missing {field_name}")
+    if document_type == "assertion" and "research-questions" in metadata:
+        questions = metadata["research-questions"]
+        if (
+            not isinstance(questions, list)
+            or not questions
+            or len(set(map(str, questions))) != len(questions)
+            or any(question not in RESEARCH_QUESTIONS for question in questions)
+        ):
+            report.errors.append(
+                f"{document.key}: research-questions must list distinct values of "
+                + ", ".join(RESEARCH_QUESTIONS)
+            )
     if document_type == "moc":
         return
     status = metadata.get("status")

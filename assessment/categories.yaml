@@ -1,6 +1,8 @@
 # Assessment Categories
 # Version: 1.3 (analysis_fields block frozen for round 2; eligibility content unchanged from v1.2)
 # Synchronized with Human-Assessment Google Sheets schema
+# The analysis_presentation block at the end holds German display labels and short
+# definitions. It is presentation only and changes no coding value, key or rule.
 
 metadata:
   project: Literature Review (AI Literacy & Bias in Social Work)
@@ -205,11 +207,11 @@ study_types:
 analysis_fields:
   - name: AN_Prompting_Role
     multi: true
-    serves: study-goal (bias impact on prompting, all prompting evidence, not only techniques)
+    serves: [SQ3, SQ4]  # SQ4 through Learning_Content. Covers all prompting evidence, not only techniques.
     values: [Recommended_Practice, Research_Instrument, Object_of_Critique, Learning_Content, None]
   - name: AN_Prompt_Techniques
     multi: true
-    serves: SQ1
+    serves: SQ3
     values: [ICL, Thought_Generation, Decomposition, Ensembling, Self_Criticism, Role_Persona, General_Guidance, None]
     note: "None is legitimate with Prompting=Ja; the concrete strategy behind General_Guidance goes verbatim to AN_Notes."
   - name: AN_Bias_Axes
@@ -225,15 +227,15 @@ analysis_fields:
     values: [Derogatory_Language, Disparate_Performance, Erasure, Exclusionary_Norms, Misrepresentation, Stereotyping, Toxicity, Direct_Discrimination, Indirect_Discrimination, None]
   - name: AN_Mitigation_Stage
     multi: true
-    serves: SQ2
+    serves: [SQ3, SQ4]  # SQ4 through Organisational_Process
     values: [Pre_Processing, In_Training, Intra_Processing, Post_Processing, Prompt_Practice, Organisational_Process, None]
   - name: AN_Mitigation_Status
     multi: false
-    serves: [SQ1, SQ2]
+    serves: SQ3
     values: [Evaluated, Demonstrated, Proposed, None]
   - name: AN_Population
     multi: true
-    serves: SQ3
+    serves: SQ1
     values: [Child_Family_Welfare, Mental_Health, Health_Care, Homelessness_Youth, Social_Assistance_Admin, Education_Professional, General_Social_Work, Not_SW_Specific]
     note: "Education_Professional restricted to professional or higher-education AI-literacy settings; general or unspecified context goes to Not_SW_Specific."
   - name: AN_Coding_Basis
@@ -242,3 +244,243 @@ analysis_fields:
     values: [Fulltext, Knowledge_Doc, Abstract]
   - name: AN_Notes
     free_text: true
+
+# Presentation metadata for PRISM and the public Evidence Companion, projected by
+# src/publish/build_analysis_fields.py into docs/data/analysis_fields.json. German
+# display labels and one-line definitions for every analysis field, every value and
+# the study types. Presentation only. The coding vocabulary and its rules remain
+# study_types, analysis_fields and knowledge/update-protocol.md (Analysis coding).
+# The projection fails when a field or value lacks an entry here or when an entry
+# names a field or value outside the vocabulary.
+analysis_presentation:
+  AN_Prompting_Role:
+    label: Rolle des Promptings
+    definition: In welcher Rolle Prompting im Werk vorkommt, unabhängig davon, ob eine Technik codierbar ist.
+    values:
+      Recommended_Practice:
+        label: Empfohlene Praxis
+        definition: Das Werk empfiehlt oder vermittelt Prompting als Vorgehen.
+      Research_Instrument:
+        label: Forschungsinstrument
+        definition: Prompts dienen dazu, Modellverhalten hervorzurufen oder zu messen, etwa als Bias-Test.
+      Object_of_Critique:
+        label: Gegenstand der Kritik
+        definition: Prompting selbst wird als Praxis analysiert oder kritisiert.
+      Learning_Content:
+        label: Lerninhalt
+        definition: Prompting ist vermittelter Inhalt von KI-Kompetenz (AI Literacy).
+      None:
+        label: Nicht behandelt
+        definition: Das Werk behandelt Prompting nicht.
+  AN_Prompt_Techniques:
+    label: Prompting-Techniken
+    definition: Im Werk benannte oder erkennbar beschriebene Prompting-Techniken, gruppiert nach den Technikfamilien des Prompt Report (Schulhoff et al. 2025).
+    values:
+      ICL:
+        label: In-Context-Learning
+        definition: Beispiele oder Demonstrationen im Prompt leiten die Antwort an.
+      Thought_Generation:
+        label: Erzeugung von Denkschritten
+        definition: Das Modell wird angeleitet, Zwischenschritte seines Lösungswegs auszuformulieren, etwa durch Chain-of-Thought.
+      Decomposition:
+        label: Zerlegung
+        definition: Eine Aufgabe wird in Teilaufgaben zerlegt, die einzeln bearbeitet werden.
+      Ensembling:
+        label: Ensembling
+        definition: Mehrere Prompts oder Antworten werden erzeugt und zu einem Ergebnis zusammengeführt.
+      Self_Criticism:
+        label: Selbstkritik
+        definition: Das Modell prüft die eigene Ausgabe und überarbeitet sie.
+      Role_Persona:
+        label: Rolle und Persona
+        definition: Der Prompt weist dem Modell eine Rolle oder Persona zu.
+      General_Guidance:
+        label: Allgemeine Anleitung
+        definition: Allgemeine Hinweise zum Prompting ohne benannte Technikfamilie, die konkrete Strategie steht in den Notizen.
+      None:
+        label: Keine Technik
+        definition: Das Werk nennt keine codierbare Technik, auch wenn es Prompting behandelt.
+  AN_Bias_Axes:
+    label: Bias-Achsen
+    definition: Soziale Achsen, entlang derer das Werk Bias ausdrücklich analysiert, nicht bloß als demografisches Merkmal nennt.
+    values:
+      Gender:
+        label: Geschlecht
+        definition: Das Werk analysiert Bias entlang des Geschlechts.
+      Race_Ethnicity:
+        label: Rassifizierung und Ethnizität
+        definition: Das Werk analysiert Bias entlang rassistischer Zuschreibung oder ethnischer Zugehörigkeit.
+      Intersectional:
+        label: Intersektional
+        definition: Das Werk behandelt mindestens zwei Achsen in ihrer Wechselwirkung, nicht bloß nebeneinander.
+      Disability:
+        label: Behinderung
+        definition: Das Werk analysiert Bias entlang von Behinderung.
+      Age:
+        label: Alter
+        definition: Das Werk analysiert Bias entlang des Alters.
+      Socioeconomic:
+        label: Sozioökonomischer Status
+        definition: Das Werk analysiert Bias entlang von Einkommen, Bildung oder sozialer Lage.
+      Language_Culture:
+        label: Sprache und Kultur
+        definition: Das Werk analysiert Bias entlang von Sprache, Sprachvarietät oder kultureller Zugehörigkeit.
+      Sexual_Orientation_Identity:
+        label: Sexuelle und geschlechtliche Identität
+        definition: Das Werk analysiert Bias entlang sexueller Orientierung oder Geschlechtsidentität.
+      Religion:
+        label: Religion
+        definition: Das Werk analysiert Bias entlang religiöser Zugehörigkeit.
+      Physical_Appearance:
+        label: Äußeres Erscheinungsbild
+        definition: Das Werk analysiert Bias entlang des äußeren Erscheinungsbilds.
+      Nationality_Migration:
+        label: Nationalität und Migration
+        definition: Das Werk analysiert Bias entlang von Staatsangehörigkeit, Herkunft oder Migration.
+      Other_Axis:
+        label: Andere Achse
+        definition: Das Werk analysiert Bias entlang einer Achse, die diese Liste nicht enthält.
+      None:
+        label: Keine Achse
+        definition: Das Werk analysiert Bias entlang keiner sozialen Achse.
+  AN_Harm_Types:
+    label: Schadensarten
+    definition: Im Werk ausdrücklich benannte oder nachgewiesene Schadensmechanismen nach der Taxonomie von Gallegos et al. (2024), verbindlich bei Volltext als Codierbasis.
+    values:
+      Derogatory_Language:
+        label: Abwertende Sprache
+        definition: Beleidigungen, Schimpfwörter oder andere Ausdrücke, die eine soziale Gruppe herabsetzen.
+      Disparate_Performance:
+        label: Ungleiche Leistung
+        definition: Das System verarbeitet oder erzeugt Sprache für verschiedene soziale Gruppen oder Sprachvarietäten unterschiedlich gut.
+      Erasure:
+        label: Unsichtbarmachung
+        definition: Sprache und Erfahrungen einer sozialen Gruppe werden ausgelassen oder unsichtbar gemacht.
+      Exclusionary_Norms:
+        label: Ausschließende Normen
+        definition: Normen der dominanten Gruppe werden verstärkt und andere Gruppen implizit ausgeschlossen oder abgewertet.
+      Misrepresentation:
+        label: Fehldarstellung
+        definition: Eine unvollständige oder nicht repräsentative Darstellung wird auf eine soziale Gruppe verallgemeinert.
+      Stereotyping:
+        label: Stereotypisierung
+        definition: Negative, als unveränderlich dargestellte Zuschreibungen an eine soziale Gruppe.
+      Toxicity:
+        label: Toxizität
+        definition: Anstößige Sprache, die eine soziale Gruppe angreift, bedroht oder zu Hass oder Gewalt aufruft.
+      Direct_Discrimination:
+        label: Unmittelbare Diskriminierung
+        definition: Ungleichbehandlung ausdrücklich wegen der Zugehörigkeit zu einer sozialen Gruppe.
+      Indirect_Discrimination:
+        label: Mittelbare Diskriminierung
+        definition: Ungleichbehandlung trotz scheinbar neutraler Kriterien, etwa über stellvertretende Merkmale.
+      None:
+        label: Keine Schadensart
+        definition: Das Werk benennt keinen Schadensmechanismus.
+  AN_Mitigation_Stage:
+    label: Stufe der Schutzmaßnahme
+    definition: Stufe, auf der eine Maßnahme gegen Bias tatsächlich ansetzt, jede vergebene Stufe braucht eigene Belege im Werk.
+    values:
+      Pre_Processing:
+        label: Datenvorbereitung
+        definition: Auswahl, Bereinigung, Anreicherung, Gewichtung oder andere Vorbereitung der Lerndaten.
+      In_Training:
+        label: Training
+        definition: Ein Eingriff, der ausdrücklich im Lernen oder Nachtrainieren des Modells ansetzt.
+      Intra_Processing:
+        label: Inferenz
+        definition: Ein bestimmter technischer Eingriff während der Modellanwendung.
+      Post_Processing:
+        label: Nachbearbeitung der Ausgabe
+        definition: Eine technische Änderung der Modellausgaben oder gelernten Repräsentationen, etwa Kalibrierung oder Filterung.
+      Prompt_Practice:
+        label: Prompting-Praxis
+        definition: Eine Änderung der Anweisungen oder des Vorgehens beim Prompting.
+      Organisational_Process:
+        label: Organisation
+        definition: Verantwortung, Beteiligung, Schulung, Governance, Audit oder menschliche Aufsicht.
+      None:
+        label: Keine Maßnahme
+        definition: Das Werk behandelt keine Maßnahme gegen Bias.
+  AN_Mitigation_Status:
+    label: Evidenzstand
+    definition: Höchste Stufe, bis zu der das Werk eine Maßnahme führt, ein Wert für das ganze Werk.
+    values:
+      Evaluated:
+        label: Evaluiert
+        definition: Eine bestimmte Maßnahme wurde abschließend geprüft und ein Ergebnis berichtet, auch ein negatives oder gemischtes.
+      Demonstrated:
+        label: Demonstriert
+        definition: Die Maßnahme wird angewendet und vorgeführt, ohne abgeschlossene Prüfung mit berichtetem Ergebnis.
+      Proposed:
+        label: Vorgeschlagen
+        definition: Die Maßnahme wird empfohlen oder vorgeschlagen, auch eine erst geplante Evaluation bleibt ein Vorschlag.
+      None:
+        label: Keine Maßnahme
+        definition: Das Werk behandelt keine Maßnahme.
+  AN_Population:
+    label: Handlungsfeld
+    definition: Handlungsfeld oder Zielgruppe, die das Werk adressiert, nicht ein bloß vermuteter Einsatzort.
+    values:
+      Child_Family_Welfare:
+        label: Kinder-, Jugend- und Familienhilfe
+        definition: Hilfen für Kinder, Jugendliche und Familien einschließlich Kinderschutz.
+      Mental_Health:
+        label: Psychische Gesundheit
+        definition: Psychosoziale Versorgung und Unterstützung bei psychischen Belastungen und Erkrankungen.
+      Health_Care:
+        label: Gesundheitsversorgung
+        definition: Medizinische und pflegerische Versorgung.
+      Homelessness_Youth:
+        label: Wohnungslosigkeit und Jugend
+        definition: Wohnungslosenhilfe und Angebote für junge Menschen in prekären Lebenslagen.
+      Social_Assistance_Admin:
+        label: Sozialleistungen und Verwaltung
+        definition: Gewährung von Sozialleistungen und Sozialverwaltung.
+      Education_Professional:
+        label: Berufliche und hochschulische Bildung
+        definition: Berufliche oder hochschulische Kontexte, in denen Fachkräfte oder Studierende den Umgang mit KI lernen.
+      General_Social_Work:
+        label: Soziale Arbeit allgemein
+        definition: Soziale Arbeit ohne Festlegung auf ein einzelnes Handlungsfeld.
+      Not_SW_Specific:
+        label: Nicht spezifisch für Soziale Arbeit
+        definition: Allgemeine oder nicht bestimmte Kontexte ohne Bezug auf ein Handlungsfeld der Sozialen Arbeit.
+  AN_Coding_Basis:
+    label: Codierbasis
+    definition: Text des Werks, auf dem die Codierung beruht.
+    values:
+      Fulltext:
+        label: Volltext
+        definition: Die Codierung beruht auf dem Volltext des Werks.
+      Knowledge_Doc:
+        label: Wissensdokument
+        definition: Die Codierung beruht auf dem Wissensdokument zum Werk.
+      Abstract:
+        label: Abstract
+        definition: Die Codierung beruht allein auf dem Abstract.
+  AN_Notes:
+    label: Notizen
+    definition: Quellengebundene Erläuterungen, die konkrete Strategie hinter einer allgemeinen Anleitung und Vermerke zu nicht entscheidbaren Feldern.
+  Studientyp:
+    label: Studientyp
+    definition: Kontrollierter Studientyp des Werks aus dem Kategorienschema des Projekts.
+    values:
+      Empirisch:
+        label: Empirisch
+        definition: Das Werk erhebt oder analysiert eigene Daten, etwa durch Befragung, Beobachtung oder Fallanalyse.
+      Experimentell:
+        label: Experimentell
+        definition: Das Werk prüft Bedingungen in einem kontrollierten Versuchsaufbau, etwa Varianten von Prompts an einem Modell.
+      Theoretisch:
+        label: Theoretisch
+        definition: Das Werk entwickelt oder diskutiert Begriffe und Argumente ohne eigene Datenerhebung.
+      Konzept:
+        label: Konzept
+        definition: Das Werk entwirft ein Rahmenwerk, ein Modell, ein Curriculum oder ein Vorgehen.
+      Literaturreview:
+        label: Literaturreview
+        definition: Das Werk fasst bestehende Literatur zusammen.
+      Unclear:
+        label: Unklar
+        definition: Der Studientyp ist aus dem Werk nicht bestimmbar.

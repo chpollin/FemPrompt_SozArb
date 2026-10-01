@@ -296,11 +296,46 @@ def test_accepted_correction_resolves_review_without_mutating_history(tmp_path):
     table = next(
         row
         for row in completion._analysis(rows, schema())
-        if row["question"] == "SQ1"
+        if row["question"] == "SQ3"
         and row["field"] == "AN_Mitigation_Status"
         and row["value"] == "None"
     )
     assert table["work_count"] == 1
+
+
+def test_sub_question_grouping_follows_the_current_numbering():
+    """The tables follow `serves` in the codebook; SQ4 reads two values only."""
+    serves = {}
+    for field in schema()["analysis_fields"]:
+        values = field.get("serves", [])
+        for question in [values] if isinstance(values, str) else values:
+            if question.startswith("SQ"):
+                serves.setdefault(question, set()).add(field["name"])
+    assert {q: set(names) for q, names in completion.FIELDS.items()} == serves
+    assert set(completion.QUESTION_TOPICS) == set(completion.FIELDS)
+
+    record = coded(
+        "A",
+        AN_Population=["Mental_Health"],
+        AN_Mitigation_Stage=["Organisational_Process", "Prompt_Practice"],
+        AN_Prompting_Role=["Learning_Content"],
+    )
+    rows, _ = completion._work_rows(registry(), [], {"A": [record]}, {})
+    tables = completion._analysis(rows, schema())
+    stage = {
+        (row["question"], row["value"]): row["work_count"]
+        for row in tables
+        if row["field"] == "AN_Mitigation_Stage"
+    }
+    assert stage[("SQ3", "Prompt_Practice")] == stage[("SQ4", "Organisational_Process")] == 1
+    assert ("SQ4", "Prompt_Practice") not in stage
+    assert {row["question"] for row in tables if row["field"] == "AN_Population"} == {"SQ1"}
+    labels = {
+        m["matrix"]: m["question"] for m in completion._associations(rows, schema())
+    }
+    assert labels["AN_Bias_Axes x AN_Harm_Types"] == "SQ2"
+    assert labels["AN_Prompt_Techniques x AN_Population"] == "SQ1, SQ3"
+    assert labels["AN_Mitigation_Stage x AN_Mitigation_Status"] == "SQ3, SQ4"
 
 
 def test_unresolved_negative_source_review_stays_open_and_out_of_analysis():

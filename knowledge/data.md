@@ -55,6 +55,12 @@ Ten three-level categories (nein/teilweise/ja = 0/1/2), split into two dimension
 
 Canonical definitions stay in `assessment/categories.yaml`. `src/publish/build_category_schema.py` publishes the frontend projection `docs/data/category_schema.json`, which contains keys, groups, labels, definitions, colours, decision options, and exclusion reasons. PRISM, its CSV converter, the Companion, and the Literature Landscape consume this projection. The repository test compares it with the canonical YAML and blocks schema drift.
 
+## Analysis vocabulary projection
+
+`src/publish/build_analysis_fields.py` projects the frozen `analysis_fields` and `study_types` of `assessment/categories.yaml` into `docs/data/analysis_fields.json`. Each field carries `name`, `multi` and `values` and, as presentation metadata, a German `label` and `definition` together with `value_labels` and `value_definitions` keyed by the controlled value. The study types remain the `study_types` list for existing consumers and additionally form a `study_type` object shaped like a field. Labels and definitions come from the `analysis_presentation` block of the YAML. They are presentation only, and stored or exported coding always uses the controlled value. The projection fails when a field or value lacks a label or definition, or when an entry names a field or value outside the vocabulary.
+
+`docs/data/assertion_index.json` carries for each released Assertion `research_questions`, the sorted sub-questions of its frontmatter field `research-questions` ([[research-vault#Assertions]]). An Assertion without the field exports an empty list.
+
 ## Screening annotation and lifecycle (per paper)
 
 The decision record is the annotation unit. Its substantive fields stay stable when later review events are appended.

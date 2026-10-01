@@ -1,6 +1,6 @@
 # Completion package
 
-Source fingerprint: `sha256:ee81532195001415527f2a207ac8f00d617559da72e7009abbdb7146fd44c795`. Deterministic internal preparation; no approval is created.
+Source fingerprint: `sha256:8cfd1126e55ef4172e1c2987fc4eb4ba062c6aeb011471c34efbbb13477fa97b`. Deterministic internal preparation; no approval is created.
 
 Scope: existing corpus plus all already identified 2026 candidates (search cutoff 2026-08-24) and the separate targeted gap-fill intake from 2026-09-05. Candidate membership does not imply inclusion. New search should address a concrete evidence gap with excellent sources.
 
@@ -62,7 +62,7 @@ Use `sq-analysis-tables.csv` for provisional descriptive counts and `synthesis-o
 The analysis is a scoping-review mapping. The corpus is a curated search result and not a sample, so the tables below report counts, work IDs and the Jaccard index only, without significance tests or effect estimates.
 
 - `field-states.csv` assigns every work with a recorded Include exactly one state per analysis field, for all works and separately for the legacy-human and AI-review decision tracks. The states sum to the Include denominator. A hold or an open negative source review takes precedence over a decision conflict, which takes precedence over missing governed coding and the field-level states.
-- `sq-association-tables.csv` holds the evidence-and-gap matrices of SQ1 to SQ3 and the Gegenstand by Perspektive category matrix. Cells count governed coding at `ai-agent-reviewed` or higher and carry their work IDs, the works coded on both fields, the works still open and an authority breakdown derived from the contributing works. An empty cell with open works is `not_determinable`, and an empty cell after complete coding is `zero_in_complete_coding`. Neither status describes a gap in the literature.
+- `sq-association-tables.csv` holds the evidence-and-gap matrices of SQ1 to SQ4, each labelled with every sub-question one of its fields serves, and the Gegenstand by Perspektive category matrix. Cells count governed coding at `ai-agent-reviewed` or higher and carry their work IDs, the works coded on both fields, the works still open and an authority breakdown derived from the contributing works. An empty cell with open works is `not_determinable`, and an empty cell after complete coding is `zero_in_complete_coding`. Neither status describes a gap in the literature.
 - `round1-category-cooccurrence.csv` describes round-one category co-occurrence for the human and the LLM track on the screened and the included records. The round-one Include requires a Gegenstand and a Perspektive category, so across-group co-occurrence among included records is selection-induced.
 - `agent-track-diagnostics.csv` reports per field the differences between the two operationally isolated agent tracks of each pooled run, the AI Agent Review outcome relative to both tracks and the later accepted AI corrections. The JSON adds run scope, blockers, lifecycle states and coding bases. Agreement between agent tracks is a workflow diagnostic and estimates neither accuracy nor inter-expert reliability.
 

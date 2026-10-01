@@ -2,12 +2,14 @@
   "meta": {
     "generated_by": "src/publish/build_analysis_fields.py",
     "source": "assessment/categories.yaml",
-    "note": "Closed vocabulary for the PRISM analysis panel (FR-14/ADR-026); the one source, do not hand-edit."
+    "note": "Closed vocabulary for the PRISM analysis panel (FR-14/ADR-026); the one source, do not hand-edit. Labels and definitions are presentation only."
   },
   "version": "1.3",
   "fields": [
     {
       "name": "AN_Prompting_Role",
+      "label": "Rolle des Promptings",
+      "definition": "In welcher Rolle Prompting im Werk vorkommt, unabhängig davon, ob eine Technik codierbar ist.",
       "multi": true,
       "values": [
         "Recommended_Practice",
@@ -15,10 +17,26 @@
         "Object_of_Critique",
         "Learning_Content",
         "None"
-      ]
+      ],
+      "value_labels": {
+        "Recommended_Practice": "Empfohlene Praxis",
+        "Research_Instrument": "Forschungsinstrument",
+        "Object_of_Critique": "Gegenstand der Kritik",
+        "Learning_Content": "Lerninhalt",
+        "None": "Nicht behandelt"
+      },
+      "value_definitions": {
+        "Recommended_Practice": "Das Werk empfiehlt oder vermittelt Prompting als Vorgehen.",
+        "Research_Instrument": "Prompts dienen dazu, Modellverhalten hervorzurufen oder zu messen, etwa als Bias-Test.",
+        "Object_of_Critique": "Prompting selbst wird als Praxis analysiert oder kritisiert.",
+        "Learning_Content": "Prompting ist vermittelter Inhalt von KI-Kompetenz (AI Literacy).",
+        "None": "Das Werk behandelt Prompting nicht."
+      }
     },
     {
       "name": "AN_Prompt_Techniques",
+      "label": "Prompting-Techniken",
+      "definition": "Im Werk benannte oder erkennbar beschriebene Prompting-Techniken, gruppiert nach den Technikfamilien des Prompt Report (Schulhoff et al. 2025).",
       "multi": true,
       "values": [
         "ICL",
@@ -29,10 +47,32 @@
         "Role_Persona",
         "General_Guidance",
         "None"
-      ]
+      ],
+      "value_labels": {
+        "ICL": "In-Context-Learning",
+        "Thought_Generation": "Erzeugung von Denkschritten",
+        "Decomposition": "Zerlegung",
+        "Ensembling": "Ensembling",
+        "Self_Criticism": "Selbstkritik",
+        "Role_Persona": "Rolle und Persona",
+        "General_Guidance": "Allgemeine Anleitung",
+        "None": "Keine Technik"
+      },
+      "value_definitions": {
+        "ICL": "Beispiele oder Demonstrationen im Prompt leiten die Antwort an.",
+        "Thought_Generation": "Das Modell wird angeleitet, Zwischenschritte seines Lösungswegs auszuformulieren, etwa durch Chain-of-Thought.",
+        "Decomposition": "Eine Aufgabe wird in Teilaufgaben zerlegt, die einzeln bearbeitet werden.",
+        "Ensembling": "Mehrere Prompts oder Antworten werden erzeugt und zu einem Ergebnis zusammengeführt.",
+        "Self_Criticism": "Das Modell prüft die eigene Ausgabe und überarbeitet sie.",
+        "Role_Persona": "Der Prompt weist dem Modell eine Rolle oder Persona zu.",
+        "General_Guidance": "Allgemeine Hinweise zum Prompting ohne benannte Technikfamilie, die konkrete Strategie steht in den Notizen.",
+        "None": "Das Werk nennt keine codierbare Technik, auch wenn es Prompting behandelt."
+      }
     },
     {
       "name": "AN_Bias_Axes",
+      "label": "Bias-Achsen",
+      "definition": "Soziale Achsen, entlang derer das Werk Bias ausdrücklich analysiert, nicht bloß als demografisches Merkmal nennt.",
       "multi": true,
       "values": [
         "Gender",
@@ -48,10 +88,42 @@
         "Nationality_Migration",
         "Other_Axis",
         "None"
-      ]
+      ],
+      "value_labels": {
+        "Gender": "Geschlecht",
+        "Race_Ethnicity": "Rassifizierung und Ethnizität",
+        "Intersectional": "Intersektional",
+        "Disability": "Behinderung",
+        "Age": "Alter",
+        "Socioeconomic": "Sozioökonomischer Status",
+        "Language_Culture": "Sprache und Kultur",
+        "Sexual_Orientation_Identity": "Sexuelle und geschlechtliche Identität",
+        "Religion": "Religion",
+        "Physical_Appearance": "Äußeres Erscheinungsbild",
+        "Nationality_Migration": "Nationalität und Migration",
+        "Other_Axis": "Andere Achse",
+        "None": "Keine Achse"
+      },
+      "value_definitions": {
+        "Gender": "Das Werk analysiert Bias entlang des Geschlechts.",
+        "Race_Ethnicity": "Das Werk analysiert Bias entlang rassistischer Zuschreibung oder ethnischer Zugehörigkeit.",
+        "Intersectional": "Das Werk behandelt mindestens zwei Achsen in ihrer Wechselwirkung, nicht bloß nebeneinander.",
+        "Disability": "Das Werk analysiert Bias entlang von Behinderung.",
+        "Age": "Das Werk analysiert Bias entlang des Alters.",
+        "Socioeconomic": "Das Werk analysiert Bias entlang von Einkommen, Bildung oder sozialer Lage.",
+        "Language_Culture": "Das Werk analysiert Bias entlang von Sprache, Sprachvarietät oder kultureller Zugehörigkeit.",
+        "Sexual_Orientation_Identity": "Das Werk analysiert Bias entlang sexueller Orientierung oder Geschlechtsidentität.",
+        "Religion": "Das Werk analysiert Bias entlang religiöser Zugehörigkeit.",
+        "Physical_Appearance": "Das Werk analysiert Bias entlang des äußeren Erscheinungsbilds.",
+        "Nationality_Migration": "Das Werk analysiert Bias entlang von Staatsangehörigkeit, Herkunft oder Migration.",
+        "Other_Axis": "Das Werk analysiert Bias entlang einer Achse, die diese Liste nicht enthält.",
+        "None": "Das Werk analysiert Bias entlang keiner sozialen Achse."
+      }
     },
     {
       "name": "AN_Harm_Types",
+      "label": "Schadensarten",
+      "definition": "Im Werk ausdrücklich benannte oder nachgewiesene Schadensmechanismen nach der Taxonomie von Gallegos et al. (2024), verbindlich bei Volltext als Codierbasis.",
       "multi": true,
       "values": [
         "Derogatory_Language",
@@ -65,11 +137,37 @@
         "Indirect_Discrimination",
         "None"
       ],
+      "value_labels": {
+        "Derogatory_Language": "Abwertende Sprache",
+        "Disparate_Performance": "Ungleiche Leistung",
+        "Erasure": "Unsichtbarmachung",
+        "Exclusionary_Norms": "Ausschließende Normen",
+        "Misrepresentation": "Fehldarstellung",
+        "Stereotyping": "Stereotypisierung",
+        "Toxicity": "Toxizität",
+        "Direct_Discrimination": "Unmittelbare Diskriminierung",
+        "Indirect_Discrimination": "Mittelbare Diskriminierung",
+        "None": "Keine Schadensart"
+      },
+      "value_definitions": {
+        "Derogatory_Language": "Beleidigungen, Schimpfwörter oder andere Ausdrücke, die eine soziale Gruppe herabsetzen.",
+        "Disparate_Performance": "Das System verarbeitet oder erzeugt Sprache für verschiedene soziale Gruppen oder Sprachvarietäten unterschiedlich gut.",
+        "Erasure": "Sprache und Erfahrungen einer sozialen Gruppe werden ausgelassen oder unsichtbar gemacht.",
+        "Exclusionary_Norms": "Normen der dominanten Gruppe werden verstärkt und andere Gruppen implizit ausgeschlossen oder abgewertet.",
+        "Misrepresentation": "Eine unvollständige oder nicht repräsentative Darstellung wird auf eine soziale Gruppe verallgemeinert.",
+        "Stereotyping": "Negative, als unveränderlich dargestellte Zuschreibungen an eine soziale Gruppe.",
+        "Toxicity": "Anstößige Sprache, die eine soziale Gruppe angreift, bedroht oder zu Hass oder Gewalt aufruft.",
+        "Direct_Discrimination": "Ungleichbehandlung ausdrücklich wegen der Zugehörigkeit zu einer sozialen Gruppe.",
+        "Indirect_Discrimination": "Ungleichbehandlung trotz scheinbar neutraler Kriterien, etwa über stellvertretende Merkmale.",
+        "None": "Das Werk benennt keinen Schadensmechanismus."
+      },
       "optional": true,
       "binding_when": "AN_Coding_Basis = Fulltext"
     },
     {
       "name": "AN_Mitigation_Stage",
+      "label": "Stufe der Schutzmaßnahme",
+      "definition": "Stufe, auf der eine Maßnahme gegen Bias tatsächlich ansetzt, jede vergebene Stufe braucht eigene Belege im Werk.",
       "multi": true,
       "values": [
         "Pre_Processing",
@@ -79,20 +177,54 @@
         "Prompt_Practice",
         "Organisational_Process",
         "None"
-      ]
+      ],
+      "value_labels": {
+        "Pre_Processing": "Datenvorbereitung",
+        "In_Training": "Training",
+        "Intra_Processing": "Inferenz",
+        "Post_Processing": "Nachbearbeitung der Ausgabe",
+        "Prompt_Practice": "Prompting-Praxis",
+        "Organisational_Process": "Organisation",
+        "None": "Keine Maßnahme"
+      },
+      "value_definitions": {
+        "Pre_Processing": "Auswahl, Bereinigung, Anreicherung, Gewichtung oder andere Vorbereitung der Lerndaten.",
+        "In_Training": "Ein Eingriff, der ausdrücklich im Lernen oder Nachtrainieren des Modells ansetzt.",
+        "Intra_Processing": "Ein bestimmter technischer Eingriff während der Modellanwendung.",
+        "Post_Processing": "Eine technische Änderung der Modellausgaben oder gelernten Repräsentationen, etwa Kalibrierung oder Filterung.",
+        "Prompt_Practice": "Eine Änderung der Anweisungen oder des Vorgehens beim Prompting.",
+        "Organisational_Process": "Verantwortung, Beteiligung, Schulung, Governance, Audit oder menschliche Aufsicht.",
+        "None": "Das Werk behandelt keine Maßnahme gegen Bias."
+      }
     },
     {
       "name": "AN_Mitigation_Status",
+      "label": "Evidenzstand",
+      "definition": "Höchste Stufe, bis zu der das Werk eine Maßnahme führt, ein Wert für das ganze Werk.",
       "multi": false,
       "values": [
         "Evaluated",
         "Demonstrated",
         "Proposed",
         "None"
-      ]
+      ],
+      "value_labels": {
+        "Evaluated": "Evaluiert",
+        "Demonstrated": "Demonstriert",
+        "Proposed": "Vorgeschlagen",
+        "None": "Keine Maßnahme"
+      },
+      "value_definitions": {
+        "Evaluated": "Eine bestimmte Maßnahme wurde abschließend geprüft und ein Ergebnis berichtet, auch ein negatives oder gemischtes.",
+        "Demonstrated": "Die Maßnahme wird angewendet und vorgeführt, ohne abgeschlossene Prüfung mit berichtetem Ergebnis.",
+        "Proposed": "Die Maßnahme wird empfohlen oder vorgeschlagen, auch eine erst geplante Evaluation bleibt ein Vorschlag.",
+        "None": "Das Werk behandelt keine Maßnahme."
+      }
     },
     {
       "name": "AN_Population",
+      "label": "Handlungsfeld",
+      "definition": "Handlungsfeld oder Zielgruppe, die das Werk adressiert, nicht ein bloß vermuteter Einsatzort.",
       "multi": true,
       "values": [
         "Child_Family_Welfare",
@@ -103,19 +235,53 @@
         "Education_Professional",
         "General_Social_Work",
         "Not_SW_Specific"
-      ]
+      ],
+      "value_labels": {
+        "Child_Family_Welfare": "Kinder-, Jugend- und Familienhilfe",
+        "Mental_Health": "Psychische Gesundheit",
+        "Health_Care": "Gesundheitsversorgung",
+        "Homelessness_Youth": "Wohnungslosigkeit und Jugend",
+        "Social_Assistance_Admin": "Sozialleistungen und Verwaltung",
+        "Education_Professional": "Berufliche und hochschulische Bildung",
+        "General_Social_Work": "Soziale Arbeit allgemein",
+        "Not_SW_Specific": "Nicht spezifisch für Soziale Arbeit"
+      },
+      "value_definitions": {
+        "Child_Family_Welfare": "Hilfen für Kinder, Jugendliche und Familien einschließlich Kinderschutz.",
+        "Mental_Health": "Psychosoziale Versorgung und Unterstützung bei psychischen Belastungen und Erkrankungen.",
+        "Health_Care": "Medizinische und pflegerische Versorgung.",
+        "Homelessness_Youth": "Wohnungslosenhilfe und Angebote für junge Menschen in prekären Lebenslagen.",
+        "Social_Assistance_Admin": "Gewährung von Sozialleistungen und Sozialverwaltung.",
+        "Education_Professional": "Berufliche oder hochschulische Kontexte, in denen Fachkräfte oder Studierende den Umgang mit KI lernen.",
+        "General_Social_Work": "Soziale Arbeit ohne Festlegung auf ein einzelnes Handlungsfeld.",
+        "Not_SW_Specific": "Allgemeine oder nicht bestimmte Kontexte ohne Bezug auf ein Handlungsfeld der Sozialen Arbeit."
+      }
     },
     {
       "name": "AN_Coding_Basis",
+      "label": "Codierbasis",
+      "definition": "Text des Werks, auf dem die Codierung beruht.",
       "multi": false,
       "values": [
         "Fulltext",
         "Knowledge_Doc",
         "Abstract"
-      ]
+      ],
+      "value_labels": {
+        "Fulltext": "Volltext",
+        "Knowledge_Doc": "Wissensdokument",
+        "Abstract": "Abstract"
+      },
+      "value_definitions": {
+        "Fulltext": "Die Codierung beruht auf dem Volltext des Werks.",
+        "Knowledge_Doc": "Die Codierung beruht auf dem Wissensdokument zum Werk.",
+        "Abstract": "Die Codierung beruht allein auf dem Abstract."
+      }
     },
     {
       "name": "AN_Notes",
+      "label": "Notizen",
+      "definition": "Quellengebundene Erläuterungen, die konkrete Strategie hinter einer allgemeinen Anleitung und Vermerke zu nicht entscheidbaren Feldern.",
       "free_text": true
     }
   ],
@@ -126,5 +292,35 @@
     "Konzept",
     "Literaturreview",
     "Unclear"
-  ]
+  ],
+  "study_type": {
+    "name": "Studientyp",
+    "multi": false,
+    "values": [
+      "Empirisch",
+      "Experimentell",
+      "Theoretisch",
+      "Konzept",
+      "Literaturreview",
+      "Unclear"
+    ],
+    "label": "Studientyp",
+    "definition": "Kontrollierter Studientyp des Werks aus dem Kategorienschema des Projekts.",
+    "value_labels": {
+      "Empirisch": "Empirisch",
+      "Experimentell": "Experimentell",
+      "Theoretisch": "Theoretisch",
+      "Konzept": "Konzept",
+      "Literaturreview": "Literaturreview",
+      "Unclear": "Unklar"
+    },
+    "value_definitions": {
+      "Empirisch": "Das Werk erhebt oder analysiert eigene Daten, etwa durch Befragung, Beobachtung oder Fallanalyse.",
+      "Experimentell": "Das Werk prüft Bedingungen in einem kontrollierten Versuchsaufbau, etwa Varianten von Prompts an einem Modell.",
+      "Theoretisch": "Das Werk entwickelt oder diskutiert Begriffe und Argumente ohne eigene Datenerhebung.",
+      "Konzept": "Das Werk entwirft ein Rahmenwerk, ein Modell, ein Curriculum oder ein Vorgehen.",
+      "Literaturreview": "Das Werk fasst bestehende Literatur zusammen.",
+      "Unclear": "Der Studientyp ist aus dem Werk nicht bestimmbar."
+    }
+  }
 }

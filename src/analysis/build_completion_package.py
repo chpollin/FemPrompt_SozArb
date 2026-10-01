@@ -47,15 +47,29 @@ FOLLOWUP = "corpus/deep-research/round2/targeted-followup-2026-09-05.json"
 MANUSCRIPT = "research-vault/40_output/paper/paper.md"
 RESIDUAL = "generated/verification/residual-resolution-2026-09-05.json"
 ZOTERO_SYNC = "corpus/zotero_sync.json"
+# Sub-questions of knowledge/project.md and the analysis fields that map them. The
+# grouping mirrors `serves` in assessment/categories.yaml. A field may serve several
+# questions; SQ4 reads only the values named in VALUE_SCOPE.
 FIELDS = {
-    "SQ1": ("AN_Prompt_Techniques", "AN_Mitigation_Status"),
-    "SQ2": (
-        "AN_Bias_Axes",
-        "AN_Harm_Types",
+    "SQ1": ("AN_Population",),
+    "SQ2": ("AN_Bias_Axes", "AN_Harm_Types"),
+    "SQ3": (
+        "AN_Prompt_Techniques",
+        "AN_Prompting_Role",
         "AN_Mitigation_Stage",
         "AN_Mitigation_Status",
     ),
-    "SQ3": ("AN_Population",),
+    "SQ4": ("AN_Mitigation_Stage", "AN_Prompting_Role"),
+}
+VALUE_SCOPE = {
+    ("SQ4", "AN_Mitigation_Stage"): ("Organisational_Process",),
+    ("SQ4", "AN_Prompting_Role"): ("Learning_Content",),
+}
+QUESTION_TOPICS = {
+    "SQ1": "Use",
+    "SQ2": "Risks",
+    "SQ3": "Practices",
+    "SQ4": "Competences",
 }
 STATES = (
     "identified",
@@ -78,12 +92,17 @@ FIELD_STATES = (
 )
 FIELD_STATE_TRACKS = ("all", "legacy_human", "ai_review")
 ASSOCIATIONS = (
-    ("SQ2", "AN_Bias_Axes", "AN_Harm_Types"),
-    ("SQ2", "AN_Bias_Axes", "AN_Mitigation_Stage"),
-    ("SQ1", "AN_Prompt_Techniques", "AN_Mitigation_Status"),
-    ("SQ1, SQ3", "AN_Prompt_Techniques", "AN_Population"),
-    ("SQ2", "AN_Mitigation_Stage", "AN_Mitigation_Status"),
+    ("AN_Bias_Axes", "AN_Harm_Types"),
+    ("AN_Bias_Axes", "AN_Mitigation_Stage"),
+    ("AN_Prompt_Techniques", "AN_Mitigation_Status"),
+    ("AN_Prompt_Techniques", "AN_Population"),
+    ("AN_Mitigation_Stage", "AN_Mitigation_Status"),
 )
+
+
+def _questions(*names: str) -> str:
+    """Label a cross-tabulation with every sub-question one of its fields serves."""
+    return ", ".join(q for q, fields in FIELDS.items() if set(names) & set(fields))
 CATEGORY_ORDER = tuple(replay_round1.CATEGORIES)
 ROUND_ONE_TRACKS = (
     ("human", "assessment/human_assessment.csv"),
@@ -657,7 +676,7 @@ def _work_rows(
                 "resolve_negative_source_review_before_using_affected_AI_coding"
             )
         if effective == "Include" and not field_values:
-            actions.append("complete_source_bound_SQ1_SQ2_SQ3_coding")
+            actions.append("complete_source_bound_SQ1_to_SQ4_coding")
         if work_resolution:
             actions.extend(work_resolution.get("required_next_steps", []))
         if source_hold:
@@ -783,6 +802,7 @@ def _analysis(rows: list[dict], schema: dict) -> list[dict]:
             definition = definitions[name]
             # YAML 1.1 can interpret a code such as None as a string; stringify explicitly.
             allowed = [str(code) for code in definition.get("values", [])]
+            scope = VALUE_SCOPE.get((question, name), allowed)
             available = [
                 row
                 for row in eligible
@@ -790,7 +810,7 @@ def _analysis(rows: list[dict], schema: dict) -> list[dict]:
                 and name not in row["analysis_undecidable"]
                 and all(value in allowed for value in row["analysis_fields"][name])
             ]
-            for value in allowed:
+            for value in [code for code in allowed if code in scope]:
                 matching = [
                     row for row in available if value in row["analysis_fields"][name]
                 ]
@@ -971,7 +991,8 @@ def _associations(rows: list[dict], schema: dict) -> list[dict]:
     included = [row for row in rows if row["effective_decision"] == "Include"]
     decided = {"coded", "explicit_none"}
     matrices = []
-    for question, row_field, column_field in ASSOCIATIONS:
+    for row_field, column_field in ASSOCIATIONS:
+        question = _questions(row_field, column_field)
         values = {
             row["work_id"]: (
                 set(row["analysis_fields"][row_field]),
@@ -1635,7 +1656,7 @@ Use `sq-analysis-tables.csv` for provisional descriptive counts and `synthesis-o
 The analysis is a scoping-review mapping. The corpus is a curated search result and not a sample, so the tables below report counts, work IDs and the Jaccard index only, without significance tests or effect estimates.
 
 - `field-states.csv` assigns every work with a recorded Include exactly one state per analysis field, for all works and separately for the legacy-human and AI-review decision tracks. The states sum to the Include denominator. A hold or an open negative source review takes precedence over a decision conflict, which takes precedence over missing governed coding and the field-level states.
-- `sq-association-tables.csv` holds the evidence-and-gap matrices of SQ1 to SQ3 and the Gegenstand by Perspektive category matrix. Cells count governed coding at `ai-agent-reviewed` or higher and carry their work IDs, the works coded on both fields, the works still open and an authority breakdown derived from the contributing works. An empty cell with open works is `not_determinable`, and an empty cell after complete coding is `zero_in_complete_coding`. Neither status describes a gap in the literature.
+- `sq-association-tables.csv` holds the evidence-and-gap matrices of SQ1 to SQ4, each labelled with every sub-question one of its fields serves, and the Gegenstand by Perspektive category matrix. Cells count governed coding at `ai-agent-reviewed` or higher and carry their work IDs, the works coded on both fields, the works still open and an authority breakdown derived from the contributing works. An empty cell with open works is `not_determinable`, and an empty cell after complete coding is `zero_in_complete_coding`. Neither status describes a gap in the literature.
 - `round1-category-cooccurrence.csv` describes round-one category co-occurrence for the human and the LLM track on the screened and the included records. The round-one Include requires a Gegenstand and a Perspektive category, so across-group co-occurrence among included records is selection-induced.
 - `agent-track-diagnostics.csv` reports per field the differences between the two operationally isolated agent tracks of each pooled run, the AI Agent Review outcome relative to both tracks and the later accepted AI corrections. The JSON adds run scope, blockers, lifecycle states and coding bases. Agreement between agent tracks is a workflow diagnostic and estimates neither accuracy nor inter-expert reliability.
 
@@ -1708,20 +1729,17 @@ Controlled descriptive fields below come from `assessment/categories.yaml`. They
         + MANUSCRIPT
         + "`. Tables count recorded coding; the statements below are existing assertion texts with their recorded authority, not new findings.\n\n"
     )
-    topics = {
-        "SQ1": "Prompting techniques and proposed, demonstrated or evaluated uses",
-        "SQ2": "Bias axes, harm types, mitigation stages and evidence status",
-        "SQ3": "Social work populations, settings, constraints and transfer limits",
-    }
-    for question, topic in topics.items():
-        outline += f"## {question}: {topic}\n\n"
+    for question, topic in QUESTION_TOPICS.items():
+        outline += f"## {question} {topic}\n\n"
         tables = [
             row for row in package["analysis_tables"] if row["question"] == question
         ]
         for name in FIELDS[question]:
             field_rows = [row for row in tables if row["field"] == name]
             first = field_rows[0]
-            outline += f"- `{name}`: {first['denominator_field_coded_works']} coded works out of {first['denominator_recorded_include_works']} works with recorded Include; {first['missing_or_unresolved_included_works']} missing or unresolved. See the CSV for codes and contributing work IDs.\n"
+            scope = VALUE_SCOPE.get((question, name))
+            label = f"`{name}` ({', '.join(scope)} only)" if scope else f"`{name}`"
+            outline += f"- {label}: {first['denominator_field_coded_works']} coded works out of {first['denominator_recorded_include_works']} works with recorded Include; {first['missing_or_unresolved_included_works']} missing or unresolved. See the CSV for codes and contributing work IDs.\n"
         outline += "\nBefore final prose, complete missing codes, reconcile conflicts, distinguish observed study findings from proposals, and assess design limitations. Do not infer that absent coding demonstrates a literature gap.\n\n"
     outline += "## Existing source-bound assertions\n\n"
     for assertion in package["assertions"]:

@@ -79,6 +79,13 @@ def test_approved_chain_exports_exact_version_and_excerpt_deterministically(tmp_
     assert source["locator"] == "discussion"
     assert source["source_url"] == "https://doi.org/10.1086/735187"
     assert source["statement_ref"].endswith("#^s1")
+    assert assertion["research_questions"] == []
+
+
+def test_research_questions_are_exported_in_order(tmp_path):
+    args = fixture(tmp_path)
+    _metadata(args["vault"] / ASSERTION, **{"research-questions": ["SQ4", "SQ1"]})
+    assert build_index(**args)["assertions"][0]["research_questions"] == ["SQ1", "SQ4"]
 
 
 def test_active_layers_only_not_legacy_claims(tmp_path):
@@ -118,6 +125,9 @@ def test_current_work_source_hold_withholds_otherwise_approved_chain(tmp_path, s
     ("grounding", ["[[../local/source#^s1]]"], "invalid grounding"),
     ("grounding", [], "no grounding"),
     ("checked", {"validation": "2026-09-05"}, "requires checked"),
+    ("research-questions", ["SQ5"], "research-questions"),
+    ("research-questions", "SQ1", "research-questions"),
+    ("research-questions", ["SQ1", "SQ1"], "research-questions"),
 ])
 def test_malformed_approved_assertions_fail_closed(tmp_path, field, value, match):
     args = fixture(tmp_path)
