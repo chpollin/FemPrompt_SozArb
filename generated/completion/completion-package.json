@@ -15973,6 +15973,224 @@
     {
       "authority_note": "Recorded AI-review state is distinct from human verification; structural grounding does not verify meaning.",
       "checked": {
+        "validation": "2026-10-01"
+      },
+      "current_ai_source_review": null,
+      "path": "research-vault/30_assertions/chatterji-et-al-report-guidance-information-and-writing-dominate-consumer-chatgpt-use.md",
+      "sources": [
+        {
+          "anchor": "^s2",
+          "anchor_present": true,
+          "current_ai_source_review": null,
+          "distillate_state": "ai-agent-reviewed",
+          "exists": true,
+          "link": "[[20_distillates/publications/bhxdu7vm-how-people-use-chatgpt#^s2]]",
+          "path": "research-vault/20_distillates/publications/bhxdu7vm-how-people-use-chatgpt.md",
+          "record_id": "BHXDU7VM",
+          "version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
+          "work_id": "work:f01ca4fe-7f9b-59f6-98d9-4e84559cd850"
+        },
+        {
+          "anchor": "^s4",
+          "anchor_present": true,
+          "current_ai_source_review": null,
+          "distillate_state": "ai-agent-reviewed",
+          "exists": true,
+          "link": "[[20_distillates/publications/bhxdu7vm-how-people-use-chatgpt#^s4]]",
+          "path": "research-vault/20_distillates/publications/bhxdu7vm-how-people-use-chatgpt.md",
+          "record_id": "BHXDU7VM",
+          "version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
+          "work_id": "work:f01ca4fe-7f9b-59f6-98d9-4e84559cd850"
+        }
+      ],
+      "state": "grounded",
+      "statement": "Chatterji et al. (2025) report that practical guidance, seeking information and writing account for most classified consumer ChatGPT conversations, based on automated LLM classification of messages whose content the research team did not inspect.",
+      "structural_grounding_complete": true,
+      "title": "Chatterji et al. report that guidance, information seeking and writing dominate consumer ChatGPT use",
+      "work_ids": [
+        "work:f01ca4fe-7f9b-59f6-98d9-4e84559cd850"
+      ]
+    },
+    {
+      "authority_note": "Recorded AI-review state is distinct from human verification; structural grounding does not verify meaning.",
+      "checked": {
+        "validation": "2026-10-01"
+      },
+      "current_ai_source_review": null,
+      "path": "research-vault/30_assertions/cheng-et-al-and-field-et-al-examine-predictive-and-nlp-tools-in-child-welfare.md",
+      "sources": [
+        {
+          "anchor": "^s1",
+          "anchor_present": true,
+          "current_ai_source_review": null,
+          "distillate_state": "ai-agent-reviewed",
+          "exists": true,
+          "link": "[[20_distillates/publications/7fefmcbz-child-welfare-worker-algorithm-disparities#^s1]]",
+          "path": "research-vault/20_distillates/publications/7fefmcbz-child-welfare-worker-algorithm-disparities.md",
+          "record_id": "7FEFMCBZ",
+          "version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
+          "work_id": "work:fdf4e7e1-80c8-56bd-9e16-9031a45ff712"
+        },
+        {
+          "anchor": "^s1",
+          "anchor_present": true,
+          "current_ai_source_review": null,
+          "distillate_state": "ai-agent-reviewed",
+          "exists": true,
+          "link": "[[20_distillates/publications/r7v99era-racial-bias-nlp-child-protective-services#^s1]]",
+          "path": "research-vault/20_distillates/publications/r7v99era-racial-bias-nlp-child-protective-services.md",
+          "record_id": "R7V99ERA",
+          "version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
+          "work_id": "work:365293c9-c8ea-54dd-9f65-2f37976f1a31"
+        }
+      ],
+      "state": "grounded",
+      "statement": "Cheng et al. (2022) and Field et al. (2023) examine algorithmic tools in county child-welfare practice, namely a predictive screening score that assists intake decisions and natural-language processing applied to administrative contact notes.",
+      "structural_grounding_complete": true,
+      "title": "Cheng et al. and Field et al. examine predictive and NLP tools in child welfare",
+      "work_ids": [
+        "work:365293c9-c8ea-54dd-9f65-2f37976f1a31",
+        "work:fdf4e7e1-80c8-56bd-9e16-9031a45ff712"
+      ]
+    },
+    {
+      "authority_note": "Recorded AI-review state is distinct from human verification; structural grounding does not verify meaning.",
+      "checked": {
+        "validation": "2026-10-01"
+      },
+      "current_ai_source_review": null,
+      "path": "research-vault/30_assertions/cheng-et-al-report-smaller-disparity-for-worker-assisted-than-algorithm-only-screening.md",
+      "sources": [
+        {
+          "anchor": "^s2",
+          "anchor_present": true,
+          "current_ai_source_review": null,
+          "distillate_state": "ai-agent-reviewed",
+          "exists": true,
+          "link": "[[20_distillates/publications/7fefmcbz-child-welfare-worker-algorithm-disparities#^s2]]",
+          "path": "research-vault/20_distillates/publications/7fefmcbz-child-welfare-worker-algorithm-disparities.md",
+          "record_id": "7FEFMCBZ",
+          "version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
+          "work_id": "work:fdf4e7e1-80c8-56bd-9e16-9031a45ff712"
+        },
+        {
+          "anchor": "^s3",
+          "anchor_present": true,
+          "current_ai_source_review": null,
+          "distillate_state": "ai-agent-reviewed",
+          "exists": true,
+          "link": "[[20_distillates/publications/7fefmcbz-child-welfare-worker-algorithm-disparities#^s3]]",
+          "path": "research-vault/20_distillates/publications/7fefmcbz-child-welfare-worker-algorithm-disparities.md",
+          "record_id": "7FEFMCBZ",
+          "version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
+          "work_id": "work:fdf4e7e1-80c8-56bd-9e16-9031a45ff712"
+        },
+        {
+          "anchor": "^s4",
+          "anchor_present": true,
+          "current_ai_source_review": null,
+          "distillate_state": "ai-agent-reviewed",
+          "exists": true,
+          "link": "[[20_distillates/publications/7fefmcbz-child-welfare-worker-algorithm-disparities#^s4]]",
+          "path": "research-vault/20_distillates/publications/7fefmcbz-child-welfare-worker-algorithm-disparities.md",
+          "record_id": "7FEFMCBZ",
+          "version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
+          "work_id": "work:fdf4e7e1-80c8-56bd-9e16-9031a45ff712"
+        }
+      ],
+      "state": "grounded",
+      "statement": "Cheng et al. (2022) report that, in one county's child-welfare intake after deployment of a screening algorithm, decisions by workers assisted by the tool showed a smaller Black-white screen-in disparity than a hypothetical algorithm-only policy, and they do not attribute the change from the earlier period to the tool.",
+      "structural_grounding_complete": true,
+      "title": "Cheng et al. report a smaller disparity for worker-assisted than for algorithm-only screening",
+      "work_ids": [
+        "work:fdf4e7e1-80c8-56bd-9e16-9031a45ff712"
+      ]
+    },
+    {
+      "authority_note": "Recorded AI-review state is distinct from human verification; structural grounding does not verify meaning.",
+      "checked": {
+        "validation": "2026-10-01"
+      },
+      "current_ai_source_review": null,
+      "path": "research-vault/30_assertions/debt-counselling-study-discusses-chatbot-use-prospectively-without-chatbot-data.md",
+      "sources": [
+        {
+          "anchor": "^s1",
+          "anchor_present": true,
+          "current_ai_source_review": null,
+          "distillate_state": "ai-agent-reviewed",
+          "exists": true,
+          "link": "[[20_distillates/publications/generative-ai-social-debt-counselling#^s1]]",
+          "path": "research-vault/20_distillates/publications/generative-ai-social-debt-counselling.md",
+          "record_id": "I355NWWT",
+          "version_id": "version:5989a776-e0b2-54c3-bd41-ecffe3d9b85b",
+          "work_id": "work:b385e0cf-739b-5592-b5f0-c9d7fd2ead0a"
+        },
+        {
+          "anchor": "^s2",
+          "anchor_present": true,
+          "current_ai_source_review": null,
+          "distillate_state": "ai-agent-reviewed",
+          "exists": true,
+          "link": "[[20_distillates/publications/generative-ai-social-debt-counselling#^s2]]",
+          "path": "research-vault/20_distillates/publications/generative-ai-social-debt-counselling.md",
+          "record_id": "I355NWWT",
+          "version_id": "version:5989a776-e0b2-54c3-bd41-ecffe3d9b85b",
+          "work_id": "work:b385e0cf-739b-5592-b5f0-c9d7fd2ead0a"
+        },
+        {
+          "anchor": "^s3",
+          "anchor_present": true,
+          "current_ai_source_review": null,
+          "distillate_state": "ai-agent-reviewed",
+          "exists": true,
+          "link": "[[20_distillates/publications/generative-ai-social-debt-counselling#^s3]]",
+          "path": "research-vault/20_distillates/publications/generative-ai-social-debt-counselling.md",
+          "record_id": "I355NWWT",
+          "version_id": "version:5989a776-e0b2-54c3-bd41-ecffe3d9b85b",
+          "work_id": "work:b385e0cf-739b-5592-b5f0-c9d7fd2ead0a"
+        }
+      ],
+      "state": "grounded",
+      "statement": "The 2026 study \"Generative KI in der Beratung\" transfers findings on digital social and debt counselling to the prospective design of chatbot-supported counselling and collected no chatbot-specific data.",
+      "structural_grounding_complete": true,
+      "title": "A debt-counselling study discusses chatbot use prospectively without chatbot data",
+      "work_ids": [
+        "work:b385e0cf-739b-5592-b5f0-c9d7fd2ead0a"
+      ]
+    },
+    {
+      "authority_note": "Recorded AI-review state is distinct from human verification; structural grounding does not verify meaning.",
+      "checked": {
+        "validation": "2026-10-01"
+      },
+      "current_ai_source_review": null,
+      "path": "research-vault/30_assertions/ingram-reports-expected-tensions-of-ai-assisted-recording-in-social-work.md",
+      "sources": [
+        {
+          "anchor": "^s1",
+          "anchor_present": true,
+          "current_ai_source_review": null,
+          "distillate_state": "ai-agent-reviewed",
+          "exists": true,
+          "link": "[[20_distillates/publications/k7nw3w34-ai-assisted-social-work-recording#^s1]]",
+          "path": "research-vault/20_distillates/publications/k7nw3w34-ai-assisted-social-work-recording.md",
+          "record_id": "K7NW3W34",
+          "version_id": "version:17e4bb2a-0324-58ef-97f3-0cc9cd352ab5",
+          "work_id": "work:677ea395-cc39-50b4-9979-496e0f17665d"
+        }
+      ],
+      "state": "grounded",
+      "statement": "Ingram (2026) reports from a mixed-method baseline evaluation of the AI-assisted recording tool Magic Note among social-work practitioners that the expected administrative relief stands in tension with reflective writing, professional judgement, relational practice, inclusion and deskilling, and ethical complexity, and derives curriculum principles from these tensions.",
+      "structural_grounding_complete": true,
+      "title": "Ingram reports expected tensions of AI-assisted recording in social work",
+      "work_ids": [
+        "work:677ea395-cc39-50b4-9979-496e0f17665d"
+      ]
+    },
+    {
+      "authority_note": "Recorded AI-review state is distinct from human verification; structural grounding does not verify meaning.",
+      "checked": {
         "ai-agent-review": "2026-09-05",
         "validation": "2026-09-05"
       },
@@ -16090,6 +16308,144 @@
     {
       "authority_note": "Recorded AI-review state is distinct from human verification; structural grounding does not verify meaning.",
       "checked": {
+        "validation": "2026-10-01"
+      },
+      "current_ai_source_review": null,
+      "path": "research-vault/30_assertions/llm-diagnosis-and-mental-health-studies-caution-against-clinical-reliance.md",
+      "sources": [
+        {
+          "anchor": "^s4",
+          "anchor_present": true,
+          "current_ai_source_review": null,
+          "distillate_state": "ai-agent-reviewed",
+          "exists": true,
+          "link": "[[20_distillates/publications/completion-9zkzqm63-bias-mental-health-llms#^s4]]",
+          "path": "research-vault/20_distillates/publications/completion-9zkzqm63-bias-mental-health-llms.md",
+          "record_id": "9ZKZQM63",
+          "version_id": "version:c517e367-0d9c-5d26-ad49-db0c2aa52ec1",
+          "work_id": "work:5aaa355e-8f65-5850-a132-43fa3458195e"
+        },
+        {
+          "anchor": "^s2",
+          "anchor_present": true,
+          "current_ai_source_review": null,
+          "distillate_state": "ai-agent-reviewed",
+          "exists": true,
+          "link": "[[20_distillates/publications/demographic-bias-psychiatric-llm-diagnoses#^s2]]",
+          "path": "research-vault/20_distillates/publications/demographic-bias-psychiatric-llm-diagnoses.md",
+          "record_id": "UGN4TS5R",
+          "version_id": "version:26f29a81-72da-5a66-8302-ba39cafbae87",
+          "work_id": "work:e62005d4-d179-5cef-af39-3aca00c24a04"
+        },
+        {
+          "anchor": "^s1",
+          "anchor_present": true,
+          "current_ai_source_review": null,
+          "distillate_state": "ai-agent-reviewed",
+          "exists": true,
+          "link": "[[20_distillates/publications/patient-bias-llm-health-consultations#^s1]]",
+          "path": "research-vault/20_distillates/publications/patient-bias-llm-health-consultations.md",
+          "record_id": "FR8Z2998",
+          "version_id": "version:8bffb8fc-6a26-5e82-a77f-1a0f5c8b7794",
+          "work_id": "work:0acf6fa2-7f5e-53c4-a1d1-30ab1ae8d310"
+        }
+      ],
+      "state": "grounded",
+      "statement": "Three studies that test LLMs for mental-health prediction, automated psychiatric diagnosis and health consultations caution against relying on the tested models in clinical decisions, although the mental-health prediction study reports encouraging predictive performance.",
+      "structural_grounding_complete": true,
+      "title": "LLM studies on diagnosis and mental-health prediction caution against clinical reliance",
+      "work_ids": [
+        "work:0acf6fa2-7f5e-53c4-a1d1-30ab1ae8d310",
+        "work:5aaa355e-8f65-5850-a132-43fa3458195e",
+        "work:e62005d4-d179-5cef-af39-3aca00c24a04"
+      ]
+    },
+    {
+      "authority_note": "Recorded AI-review state is distinct from human verification; structural grounding does not verify meaning.",
+      "checked": {
+        "validation": "2026-10-01"
+      },
+      "current_ai_source_review": null,
+      "path": "research-vault/30_assertions/patton-and-victor-describe-prospective-llm-uses-in-social-work-research.md",
+      "sources": [
+        {
+          "anchor": "^s1",
+          "anchor_present": true,
+          "current_ai_source_review": null,
+          "distillate_state": "ai-agent-reviewed",
+          "exists": true,
+          "link": "[[20_distillates/publications/completion-zitlbm8a-chatgpt-social-work-science#^s1]]",
+          "path": "research-vault/20_distillates/publications/completion-zitlbm8a-chatgpt-social-work-science.md",
+          "record_id": "ZITLBM8A",
+          "version_id": "version:c9a7b396-f86c-50ed-8808-6dc5c513627b",
+          "work_id": "work:c54f89d4-e79b-5fd8-9426-6b51b36669e2"
+        },
+        {
+          "anchor": "^s3",
+          "anchor_present": true,
+          "current_ai_source_review": null,
+          "distillate_state": "ai-agent-reviewed",
+          "exists": true,
+          "link": "[[20_distillates/publications/completion-amyzfaph-generative-ai-social-work-research#^s3]]",
+          "path": "research-vault/20_distillates/publications/completion-amyzfaph-generative-ai-social-work-research.md",
+          "record_id": "AMYZFAPH",
+          "version_id": "version:0e874262-87ce-5928-962b-758a55a98646",
+          "work_id": "work:e1ca8a4c-5cc2-5e35-b3cc-375950a07405"
+        }
+      ],
+      "state": "grounded",
+      "statement": "Two conceptual contributions on social-work research, Patton et al. (2023) and Victor et al. (2023), describe the use of large language models for research tasks as prospective assistive use, naming the generation of research questions, the development of qualitative themes, transcript editing and presentations as well as information extraction, classification and clustering in analysis.",
+      "structural_grounding_complete": true,
+      "title": "Patton et al. and Victor et al. describe prospective LLM uses in social-work research",
+      "work_ids": [
+        "work:c54f89d4-e79b-5fd8-9426-6b51b36669e2",
+        "work:e1ca8a4c-5cc2-5e35-b3cc-375950a07405"
+      ]
+    },
+    {
+      "authority_note": "Recorded AI-review state is distinct from human verification; structural grounding does not verify meaning.",
+      "checked": {
+        "validation": "2026-10-01"
+      },
+      "current_ai_source_review": null,
+      "path": "research-vault/30_assertions/rapid-review-reports-limited-evidence-for-generative-ai-in-youth-mental-health-apps.md",
+      "sources": [
+        {
+          "anchor": "^s1",
+          "anchor_present": true,
+          "current_ai_source_review": null,
+          "distillate_state": "ai-agent-reviewed",
+          "exists": true,
+          "link": "[[20_distillates/publications/generative-ai-youth-mental-health-apps#^s1]]",
+          "path": "research-vault/20_distillates/publications/generative-ai-youth-mental-health-apps.md",
+          "record_id": "D267IQ4C",
+          "version_id": "version:cd86e948-9250-5850-a227-9cb0b762cd50",
+          "work_id": "work:7eb826eb-db16-5ae7-8201-3339f108ae93"
+        },
+        {
+          "anchor": "^s2",
+          "anchor_present": true,
+          "current_ai_source_review": null,
+          "distillate_state": "ai-agent-reviewed",
+          "exists": true,
+          "link": "[[20_distillates/publications/generative-ai-youth-mental-health-apps#^s2]]",
+          "path": "research-vault/20_distillates/publications/generative-ai-youth-mental-health-apps.md",
+          "record_id": "D267IQ4C",
+          "version_id": "version:cd86e948-9250-5850-a227-9cb0b762cd50",
+          "work_id": "work:7eb826eb-db16-5ae7-8201-3339f108ae93"
+        }
+      ],
+      "state": "grounded",
+      "statement": "The 2026 rapid review \"Generative AI in Youth Mental Health Apps\" finds a small, heterogeneous evidence base dominated by chatbots and concludes that evidence for preventive or health-promoting effects of generative AI in mental-health apps for young people remains limited.",
+      "structural_grounding_complete": true,
+      "title": "A rapid review reports limited evidence for generative AI in youth mental-health apps",
+      "work_ids": [
+        "work:7eb826eb-db16-5ae7-8201-3339f108ae93"
+      ]
+    },
+    {
+      "authority_note": "Recorded AI-review state is distinct from human verification; structural grounding does not verify meaning.",
+      "checked": {
         "ai-agent-review": "2026-08-23",
         "validation": "2026-08-23"
       },
@@ -16155,6 +16511,171 @@
       "work_ids": [
         "work:7644e99b-9dd1-545f-af98-ab7fed6643e6",
         "work:843c90a1-99ba-5cbf-9c92-df165923d2b2"
+      ]
+    },
+    {
+      "authority_note": "Recorded AI-review state is distinct from human verification; structural grounding does not verify meaning.",
+      "checked": {
+        "validation": "2026-10-01"
+      },
+      "current_ai_source_review": null,
+      "path": "research-vault/30_assertions/rickman-tests-llm-summaries-of-social-care-notes-for-gender-bias.md",
+      "sources": [
+        {
+          "anchor": "^s1",
+          "anchor_present": true,
+          "current_ai_source_review": null,
+          "distillate_state": "ai-agent-reviewed",
+          "exists": true,
+          "link": "[[20_distillates/publications/completion-j4k3xa52-gender-bias-long-term-care-llms#^s1]]",
+          "path": "research-vault/20_distillates/publications/completion-j4k3xa52-gender-bias-long-term-care-llms.md",
+          "record_id": "J4K3XA52",
+          "version_id": "version:38ec2a2e-9a8f-5837-bd7d-7efad6f0f743",
+          "work_id": "work:73eda891-2e28-587a-a7fb-a950323a0dad"
+        },
+        {
+          "anchor": "^s2",
+          "anchor_present": true,
+          "current_ai_source_review": null,
+          "distillate_state": "ai-agent-reviewed",
+          "exists": true,
+          "link": "[[20_distillates/publications/completion-j4k3xa52-gender-bias-long-term-care-llms#^s2]]",
+          "path": "research-vault/20_distillates/publications/completion-j4k3xa52-gender-bias-long-term-care-llms.md",
+          "record_id": "J4K3XA52",
+          "version_id": "version:38ec2a2e-9a8f-5837-bd7d-7efad6f0f743",
+          "work_id": "work:73eda891-2e28-587a-a7fb-a950323a0dad"
+        },
+        {
+          "anchor": "^s3",
+          "anchor_present": true,
+          "current_ai_source_review": null,
+          "distillate_state": "ai-agent-reviewed",
+          "exists": true,
+          "link": "[[20_distillates/publications/completion-j4k3xa52-gender-bias-long-term-care-llms#^s3]]",
+          "path": "research-vault/20_distillates/publications/completion-j4k3xa52-gender-bias-long-term-care-llms.md",
+          "record_id": "J4K3XA52",
+          "version_id": "version:38ec2a2e-9a8f-5837-bd7d-7efad6f0f743",
+          "work_id": "work:73eda891-2e28-587a-a7fb-a950323a0dad"
+        }
+      ],
+      "state": "grounded",
+      "statement": "Rickman (2025) uses LLM summarisation of long-term-care case notes as the test task for a counterfactual gender-bias evaluation and reports that gender differences in the summaries depend on the model.",
+      "structural_grounding_complete": true,
+      "title": "Rickman tests LLM summaries of social-care notes for gender bias",
+      "work_ids": [
+        "work:73eda891-2e28-587a-a7fb-a950323a0dad"
+      ]
+    },
+    {
+      "authority_note": "Recorded AI-review state is distinct from human verification; structural grounding does not verify meaning.",
+      "checked": {
+        "validation": "2026-10-01"
+      },
+      "current_ai_source_review": null,
+      "path": "research-vault/30_assertions/schroder-et-al-follow-development-of-an-ai-counselling-assistant-in-an-ngo.md",
+      "sources": [
+        {
+          "anchor": "^s1",
+          "anchor_present": true,
+          "current_ai_source_review": null,
+          "distillate_state": "ai-agent-reviewed",
+          "exists": true,
+          "link": "[[20_distillates/publications/azjw38mf-socio-technical-ethics-work#^s1]]",
+          "path": "research-vault/20_distillates/publications/azjw38mf-socio-technical-ethics-work.md",
+          "record_id": "AZJW38MF",
+          "version_id": "version:6ff337db-5679-509b-b8db-13f9d4be1baf",
+          "work_id": "work:2c625fa2-a2f8-5d59-b6a0-f148d542c902"
+        }
+      ],
+      "state": "grounded",
+      "statement": "Schrøder et al. (2026) follow in an organisational ethnography how social workers and data engineers in one Scandinavian NGO develop an AI counselling assistant for volunteers who communicate online with children, and frame its fairness as continuing socio-technical ethics work rather than a property settled at design time.",
+      "structural_grounding_complete": true,
+      "title": "Schrøder et al. follow the development of an AI counselling assistant in an NGO",
+      "work_ids": [
+        "work:2c625fa2-a2f8-5d59-b6a0-f148d542c902"
+      ]
+    },
+    {
+      "authority_note": "Recorded AI-review state is distinct from human verification; structural grounding does not verify meaning.",
+      "checked": {
+        "validation": "2026-10-01"
+      },
+      "current_ai_source_review": null,
+      "path": "research-vault/30_assertions/social-work-research-guidance-conditions-llm-use-on-human-validation-and-accountability.md",
+      "sources": [
+        {
+          "anchor": "^s2",
+          "anchor_present": true,
+          "current_ai_source_review": null,
+          "distillate_state": "ai-agent-reviewed",
+          "exists": true,
+          "link": "[[20_distillates/publications/completion-zitlbm8a-chatgpt-social-work-science#^s2]]",
+          "path": "research-vault/20_distillates/publications/completion-zitlbm8a-chatgpt-social-work-science.md",
+          "record_id": "ZITLBM8A",
+          "version_id": "version:c9a7b396-f86c-50ed-8808-6dc5c513627b",
+          "work_id": "work:c54f89d4-e79b-5fd8-9426-6b51b36669e2"
+        },
+        {
+          "anchor": "^s1",
+          "anchor_present": true,
+          "current_ai_source_review": null,
+          "distillate_state": "ai-agent-reviewed",
+          "exists": true,
+          "link": "[[20_distillates/publications/completion-amyzfaph-generative-ai-social-work-research#^s1]]",
+          "path": "research-vault/20_distillates/publications/completion-amyzfaph-generative-ai-social-work-research.md",
+          "record_id": "AMYZFAPH",
+          "version_id": "version:0e874262-87ce-5928-962b-758a55a98646",
+          "work_id": "work:e1ca8a4c-5cc2-5e35-b3cc-375950a07405"
+        }
+      ],
+      "state": "grounded",
+      "statement": "Patton et al. (2023) and Victor et al. (2023) recommend that material produced or edited with LLMs in social-work research be validated by humans before dissemination and that researchers examine, verify and take accountability for the text and analyses these tools produce.",
+      "structural_grounding_complete": true,
+      "title": "Social-work research guidance conditions LLM use on human validation and researcher accountability",
+      "work_ids": [
+        "work:c54f89d4-e79b-5fd8-9426-6b51b36669e2",
+        "work:e1ca8a4c-5cc2-5e35-b3cc-375950a07405"
+      ]
+    },
+    {
+      "authority_note": "Recorded AI-review state is distinct from human verification; structural grounding does not verify meaning.",
+      "checked": {
+        "validation": "2026-10-01"
+      },
+      "current_ai_source_review": null,
+      "path": "research-vault/30_assertions/wallengren-lynch-proposes-generated-images-as-material-for-critical-teaching.md",
+      "sources": [
+        {
+          "anchor": "^s3",
+          "anchor_present": true,
+          "current_ai_source_review": null,
+          "distillate_state": "ai-agent-reviewed",
+          "exists": true,
+          "link": "[[20_distillates/publications/qrk7c3jk-critical-digital-literacy-social-work-ai#^s3]]",
+          "path": "research-vault/20_distillates/publications/qrk7c3jk-critical-digital-literacy-social-work-ai.md",
+          "record_id": "QRK7C3JK",
+          "version_id": "version:c2db337e-61b4-5717-bfb5-56cd6de7d117",
+          "work_id": "work:ac777aa0-e02b-5a2e-8ddd-19dfdd0110ec"
+        },
+        {
+          "anchor": "^s4",
+          "anchor_present": true,
+          "current_ai_source_review": null,
+          "distillate_state": "ai-agent-reviewed",
+          "exists": true,
+          "link": "[[20_distillates/publications/qrk7c3jk-critical-digital-literacy-social-work-ai#^s4]]",
+          "path": "research-vault/20_distillates/publications/qrk7c3jk-critical-digital-literacy-social-work-ai.md",
+          "record_id": "QRK7C3JK",
+          "version_id": "version:c2db337e-61b4-5717-bfb5-56cd6de7d117",
+          "work_id": "work:ac777aa0-e02b-5a2e-8ddd-19dfdd0110ec"
+        }
+      ],
+      "state": "grounded",
+      "statement": "Wallengren-Lynch (2026) proposes for social-work education that images generated from prompts serve as classroom material for asking who or what is missing, marginalised or misrepresented, and presents the image exercise as illustrative rather than as an analysis of bias.",
+      "structural_grounding_complete": true,
+      "title": "Wallengren-Lynch proposes generated images as material for critical teaching",
+      "work_ids": [
+        "work:ac777aa0-e02b-5a2e-8ddd-19dfdd0110ec"
       ]
     }
   ],
@@ -20455,11 +20976,12 @@
     }
   ],
   "counts": {
-    "active_assertions": 4,
+    "active_assertions": 16,
     "active_assertions_with_current_ai_source_review": 4,
     "ai_review_recorded_works": 31,
     "assertion_states": {
-      "ai-agent-reviewed": 4
+      "ai-agent-reviewed": 4,
+      "grounded": 12
     },
     "candidates_2026": 58,
     "candidates_2026_current_ready_source": 33,
@@ -20577,7 +21099,7 @@
   "knowledge_coverage": {
     "active": {
       "counts_by_type": {
-        "assertion": 4,
+        "assertion": 16,
         "distillate": 44,
         "moc": 3
       },
@@ -20913,6 +21435,31 @@
           "type": "assertion"
         },
         {
+          "path": "research-vault/30_assertions/chatterji-et-al-report-guidance-information-and-writing-dominate-consumer-chatgpt-use.md",
+          "recorded_status": "grounded",
+          "type": "assertion"
+        },
+        {
+          "path": "research-vault/30_assertions/cheng-et-al-and-field-et-al-examine-predictive-and-nlp-tools-in-child-welfare.md",
+          "recorded_status": "grounded",
+          "type": "assertion"
+        },
+        {
+          "path": "research-vault/30_assertions/cheng-et-al-report-smaller-disparity-for-worker-assisted-than-algorithm-only-screening.md",
+          "recorded_status": "grounded",
+          "type": "assertion"
+        },
+        {
+          "path": "research-vault/30_assertions/debt-counselling-study-discusses-chatbot-use-prospectively-without-chatbot-data.md",
+          "recorded_status": "grounded",
+          "type": "assertion"
+        },
+        {
+          "path": "research-vault/30_assertions/ingram-reports-expected-tensions-of-ai-assisted-recording-in-social-work.md",
+          "recorded_status": "grounded",
+          "type": "assertion"
+        },
+        {
           "path": "research-vault/30_assertions/kabra-et-al-transfer-reasoning-through-fine-tuning-for-bias-mitigation.md",
           "recorded_status": "ai-agent-reviewed",
           "type": "assertion"
@@ -20923,13 +21470,49 @@
           "type": "assertion"
         },
         {
+          "path": "research-vault/30_assertions/llm-diagnosis-and-mental-health-studies-caution-against-clinical-reliance.md",
+          "recorded_status": "grounded",
+          "type": "assertion"
+        },
+        {
+          "path": "research-vault/30_assertions/patton-and-victor-describe-prospective-llm-uses-in-social-work-research.md",
+          "recorded_status": "grounded",
+          "type": "assertion"
+        },
+        {
+          "path": "research-vault/30_assertions/rapid-review-reports-limited-evidence-for-generative-ai-in-youth-mental-health-apps.md",
+          "recorded_status": "grounded",
+          "type": "assertion"
+        },
+        {
           "path": "research-vault/30_assertions/reported-prompting-effects-vary-across-models-and-bias-categories.md",
           "recorded_status": "ai-agent-reviewed",
+          "type": "assertion"
+        },
+        {
+          "path": "research-vault/30_assertions/rickman-tests-llm-summaries-of-social-care-notes-for-gender-bias.md",
+          "recorded_status": "grounded",
+          "type": "assertion"
+        },
+        {
+          "path": "research-vault/30_assertions/schroder-et-al-follow-development-of-an-ai-counselling-assistant-in-an-ngo.md",
+          "recorded_status": "grounded",
+          "type": "assertion"
+        },
+        {
+          "path": "research-vault/30_assertions/social-work-research-guidance-conditions-llm-use-on-human-validation-and-accountability.md",
+          "recorded_status": "grounded",
+          "type": "assertion"
+        },
+        {
+          "path": "research-vault/30_assertions/wallengren-lynch-proposes-generated-images-as-material-for-critical-teaching.md",
+          "recorded_status": "grounded",
           "type": "assertion"
         }
       ],
       "recorded_status_counts": {
         "ai-agent-reviewed": 48,
+        "grounded": 12,
         "unrecorded": 3
       }
     },
@@ -25145,7 +25728,7 @@
     "targeted_followup_search_date": "2026-09-05",
     "targeted_gap_fill_candidates": true
   },
-  "source_fingerprint": "sha256:f1aab2b55f422e761d63a3876ff3962c533e561b9764f1703b29b266aaf55f48",
+  "source_fingerprint": "sha256:90e95e1961cf9453fb654ac310cd278bfb6e5f20a8b691b26659a98d9c641014",
   "sources": [
     {
       "path": "assessment/categories.yaml",
@@ -28048,6 +28631,26 @@
       "sha256": "97030c4b4049d47849421135a31e50d7cb1473814c21e2e925942e63f841df49"
     },
     {
+      "path": "research-vault/30_assertions/chatterji-et-al-report-guidance-information-and-writing-dominate-consumer-chatgpt-use.md",
+      "sha256": "4b2fcd7d6208ed5d62ec6b75f7c06c604c7bd5d666a320c3a31834e96887f3df"
+    },
+    {
+      "path": "research-vault/30_assertions/cheng-et-al-and-field-et-al-examine-predictive-and-nlp-tools-in-child-welfare.md",
+      "sha256": "c8945ba0bf2c424c88b12ef6875e1650ca6d32de2d14397b4a969c0c71dc152f"
+    },
+    {
+      "path": "research-vault/30_assertions/cheng-et-al-report-smaller-disparity-for-worker-assisted-than-algorithm-only-screening.md",
+      "sha256": "c36983a210c8b93c7c1d00042c1c34b2d971208b94f1e5ca276d50625c778616"
+    },
+    {
+      "path": "research-vault/30_assertions/debt-counselling-study-discusses-chatbot-use-prospectively-without-chatbot-data.md",
+      "sha256": "ee1b9aab2d8b60eaca9ea3b17470c7bdb9b7df92e02ac84cdb20a5712bd59e65"
+    },
+    {
+      "path": "research-vault/30_assertions/ingram-reports-expected-tensions-of-ai-assisted-recording-in-social-work.md",
+      "sha256": "905979e2813d97ec6f30a1353ae23fd7a4a4f345a331256218e82603b13e3cc4"
+    },
+    {
       "path": "research-vault/30_assertions/kabra-et-al-transfer-reasoning-through-fine-tuning-for-bias-mitigation.md",
       "sha256": "730a652c89b468bfaf3c20a06f098c9303636722cf6ca838b62c8fb89c83d486"
     },
@@ -28056,8 +28659,36 @@
       "sha256": "1273273e9c732b22da38c920b70d51b36f8776a55769dfff22fd1139bed101bf"
     },
     {
+      "path": "research-vault/30_assertions/llm-diagnosis-and-mental-health-studies-caution-against-clinical-reliance.md",
+      "sha256": "e05e63b90c836868ca3623c279a5847caa21a17fdd58a1b3ab73ed02f2b968bd"
+    },
+    {
+      "path": "research-vault/30_assertions/patton-and-victor-describe-prospective-llm-uses-in-social-work-research.md",
+      "sha256": "e01051cb62dfe34ca7bf2ed27765828a347014917d54abc97415c54dfb3ddb4d"
+    },
+    {
+      "path": "research-vault/30_assertions/rapid-review-reports-limited-evidence-for-generative-ai-in-youth-mental-health-apps.md",
+      "sha256": "1f7a5ca60186291a5a467038bec57ebb1f9a17edd43ae27a86ca2cc8cbec7b29"
+    },
+    {
       "path": "research-vault/30_assertions/reported-prompting-effects-vary-across-models-and-bias-categories.md",
       "sha256": "2d93d46185de2246740df38d5162244f4bd54d8f82573304b4fb770e1fc7d70d"
+    },
+    {
+      "path": "research-vault/30_assertions/rickman-tests-llm-summaries-of-social-care-notes-for-gender-bias.md",
+      "sha256": "ae763f456b1907d03038c13113d7f508caee935ae4e1524120a0690ebd609301"
+    },
+    {
+      "path": "research-vault/30_assertions/schroder-et-al-follow-development-of-an-ai-counselling-assistant-in-an-ngo.md",
+      "sha256": "dcc34a6f6e800c90f584eb4fb2c4ff2815f11d0665daa9389434072521097b68"
+    },
+    {
+      "path": "research-vault/30_assertions/social-work-research-guidance-conditions-llm-use-on-human-validation-and-accountability.md",
+      "sha256": "a957c010b1fcb77bcffde2fd40cb6f7d1927f8c3ebcf45b1a2edafa2783ef3c0"
+    },
+    {
+      "path": "research-vault/30_assertions/wallengren-lynch-proposes-generated-images-as-material-for-critical-teaching.md",
+      "sha256": "1f579340e836d0289df1955d8e9ca7e888aac04899a323cda918021052910337"
     },
     {
       "path": "research-vault/40_output/paper/paper.md",
