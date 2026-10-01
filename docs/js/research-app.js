@@ -486,6 +486,25 @@ function initializeUI() {
     });
 }
 
+// Human categories and the round-one LLM assessment
+
+// The categories of the human decision of the stage table; an open work has none.
+function humanCats(paper) {
+    return window.EC.korpusStages.humanCategories(paper) || [];
+}
+
+// The round-one LLM assessment exists in the Korpus only beside a human decision, as the
+// comparison it was made for. For an open work it is withheld from every row, filter,
+// sort and export, since the reviewers may open this view (ADR-044).
+function llmShown(paper) {
+    return window.EC.korpusStages.decision(paper) === 'open' ? null : paper.llm;
+}
+
+function llmIncludeRank(paper) {
+    const llm = llmShown(paper);
+    return llm && llm.decision === 'Include' ? 0 : 1;
+}
+
 // Category Chips
 
 // Only the categories that occur in the current selection are offered; a pressed one
@@ -493,7 +512,7 @@ function initializeUI() {
 function renderCategoryChips(papers) {
     const container = document.getElementById('category-chips');
     const present = CATEGORIES.filter(function(cat) {
-        return activeCategories.has(cat) || papers.some(function(p) { return p.llm.all_categories[cat] === 1; });
+        return activeCategories.has(cat) || papers.some(function(p) { return humanCats(p).indexOf(cat) >= 0; });
     });
     const active = document.activeElement;
     const focused = active && active.closest && active.closest('#category-chips .category-chip');
@@ -580,8 +599,8 @@ function sortPapers(papers, sortBy) {
     switch (sortBy) {
         case 'relevance':
             sorted.sort(function(a, b) {
-                let aInc = a.llm.decision === 'Include' ? 0 : 1;
-                let bInc = b.llm.decision === 'Include' ? 0 : 1;
+                const aInc = llmIncludeRank(a);
+                const bInc = llmIncludeRank(b);
                 if (aInc !== bInc) return aInc - bInc;
                 return (b.year || 0) - (a.year || 0);
             });
@@ -601,11 +620,7 @@ function sortPapers(papers, sortBy) {
             });
             break;
         case 'llm':
-            sorted.sort(function(a, b) {
-                let aInc = a.llm.decision === 'Include' ? 0 : 1;
-                let bInc = b.llm.decision === 'Include' ? 0 : 1;
-                return aInc - bInc;
-            });
+            sorted.sort(function(a, b) { return llmIncludeRank(a) - llmIncludeRank(b); });
             break;
         case 'human':
             sorted.sort(function(a, b) {
@@ -636,7 +651,10 @@ function applyFilters() {
     let filtered = filteredPapers.slice();
 
     if (decision !== 'all') {
-        filtered = filtered.filter(function(p) { return p.llm.decision === decision; });
+        filtered = filtered.filter(function(p) {
+            const llm = llmShown(p);
+            return Boolean(llm) && llm.decision === decision;
+        });
     }
 
     if (humanStatus === 'has_human') {
@@ -651,7 +669,8 @@ function applyFilters() {
 
     if (activeCategories.size > 0) {
         filtered = filtered.filter(function(p) {
-            return Array.from(activeCategories).every(function(cat) { return p.llm.all_categories[cat] === 1; });
+            const cats = humanCats(p);
+            return Array.from(activeCategories).every(function(cat) { return cats.indexOf(cat) >= 0; });
         });
     }
 
@@ -976,11 +995,14 @@ function authorParts(paper) {
     return m ? { name: m[1], year: m[2] } : { name: text, year: '' };
 }
 
+// The dots show the categories of the human decision; an open work has none to show.
 function catLabels(paper) {
+    const cats = window.EC.korpusStages.humanCategories(paper);
+    if (!cats) return '';
     let html = '';
     CATEGORIES.forEach(function(cat, i) {
         if (i === 4) html += '<span class="cat-dot-sep"></span>';
-        let active = paper.llm.all_categories[cat] === 1;
+        const active = cats.indexOf(cat) >= 0;
         let color = active ? CAT_COLORS[cat] : '#e0ddd9';
         html += '<span class="cat-dot-color" style="background:' + color + '" title="' + catLabel(cat) + (active ? ': Ja' : ': Nein') + '"></span>';
     });
@@ -1467,17 +1489,16 @@ function buildDetailContent(paper) {
 
     html += '<div class="detail-section"><h3>Bewertung</h3><div class="assessment-grid">';
 
-    // The round-one LLM assessment appears only beside a human decision, as the
-    // comparison it was made for; an open work shows no AI pre-assessment (ADR-044).
-    if (stages.decision(paper) !== 'open') {
-        const llmDecColor = paper.llm.decision === 'Include' ? 'var(--success)' : 'var(--gray-500)';
+    const llm = llmShown(paper);
+    if (llm) {
+        const llmDecColor = llm.decision === 'Include' ? 'var(--success)' : 'var(--gray-500)';
         html += '<div class="assessment-panel">' +
             '<div class="panel-header">LLM (Claude Haiku 4.5)</div>' +
-            '<div class="assessment-decision" style="color:' + llmDecColor + '">' + escapeHtml(paper.llm.decision) + '</div>' +
-            catGridColored(paper.llm.all_categories);
-        if (paper.llm.reasoning) {
+            '<div class="assessment-decision" style="color:' + llmDecColor + '">' + escapeHtml(llm.decision) + '</div>' +
+            catGridColored(llm.all_categories);
+        if (llm.reasoning) {
             html += '<div class="reasoning-section"><span class="reasoning-label">Begründung</span>' +
-                '<p class="reasoning-text">' + escapeHtml(paper.llm.reasoning) + '</p></div>';
+                '<p class="reasoning-text">' + escapeHtml(llm.reasoning) + '</p></div>';
         }
         html += '</div>';
     }
@@ -1590,9 +1611,10 @@ function exportFilteredPapers() {
         .concat(STAGE_COLUMNS, ['LLM_Decision', 'LLM_Categories', 'Agreement']);
     const rows = papers.map(function(p) {
         const stage = window.EC.korpusStages.csvFields(p);
+        const llm = llmShown(p);
         return [p.id, p.work_id, p.title, p.author_year, p.year, p.item_type, p.doi, p.url]
             .concat(STAGE_COLUMNS.map(function(key) { return stage[key]; }),
-                [p.llm.decision, p.llm.categories.join(';'), p.benchmark.agreement === null ? '' : p.benchmark.agreement]);
+                llm ? [llm.decision, llm.categories.join(';'), p.benchmark.agreement === null ? '' : p.benchmark.agreement] : ['', '', '']);
     });
     const csv = [headers].concat(rows).map(function(r) {
         return r.map(function(v) { return '"' + String(v == null || v === 'nan' ? '' : v).replace(/"/g, '""') + '"'; }).join(',');

@@ -46,7 +46,7 @@ let reviewers = []; // [{ key, label }] from the assignment
 const assigneeOf = {};
 const workOfRecord = {};
 const corpusRecord = {};
-// paper id -> { decision, ts, reviewer } of the newest saved human reviewer record
+// paper id -> { decision, categories, ts, reviewer } of the newest saved human reviewer record
 const humanRecord = {};
 
 function fetchJson(url) {
@@ -144,7 +144,17 @@ function addReviewerFile(key, file) {
         const known = humanRecord[pid];
         // Two reviewers on one paper: the later record is the current assessment.
         if (known && known.ts >= ts) return;
-        humanRecord[pid] = { decision: rec.decision, ts: ts, reviewer: key };
+        humanRecord[pid] = { decision: rec.decision, categories: assignedCategories(rec.categories), ts: ts, reviewer: key };
+    });
+}
+
+// The categories a reviewer record assigns, at teilweise or ja, as PRISM's catLevel reads
+// them (a legacy boolean and the numeric strings coerce like their numbers).
+function assignedCategories(cats) {
+    if (!cats || typeof cats !== 'object' || Array.isArray(cats)) return [];
+    return Object.keys(cats).filter(function (cat) {
+        const v = cats[cat];
+        return v === true || v === 1 || v === 2 || v === '1' || v === '2';
     });
 }
 
@@ -166,6 +176,17 @@ function decision(paper) {
     if (paper.human.decision === 'Include') return 'include';
     if (paper.human.decision === 'Exclude') return 'exclude';
     return 'open';
+}
+
+// The categories of the human decision that decision() reads: the saved reviewer record,
+// else the consolidated expert decision. An open work has none, so null; the round-one
+// LLM categories never stand in for them (ADR-044).
+function humanCategories(paper) {
+    const own = humanRecord[paper.id];
+    if (own) return own.categories.slice();
+    if (decision(paper) === 'open') return null;
+    const cats = paper.human.all_categories || {};
+    return Object.keys(cats).filter(function (cat) { return cats[cat] === 1; });
 }
 
 // The reviewer key of a saved record, 'expert' for the round-one decision, '' when open.
@@ -389,7 +410,7 @@ function labelOf(key) {
 }
 
 window.EC.korpusStages = {
-    load: load, decision: decision, decisionSource: decisionSource, hasUnclear: hasUnclear,
+    load: load, decision: decision, decisionSource: decisionSource, humanCategories: humanCategories, hasUnclear: hasUnclear,
     keys: keys, parse: parse, match: match, counts: counts,
     barHtml: barHtml, gapsHtml: gapsHtml, trackHtml: trackHtml, depth: depth, csvFields: csvFields,
     labelOf: labelOf, reached: reached, nextStep: nextStep, nextHtml: nextHtml, stateItems: stateItems, hasText: hasText,
