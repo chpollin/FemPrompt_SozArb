@@ -111,15 +111,14 @@
             <p>Die linke Spalte listet alle Dokumente. Der Statusfilter &bdquo;Alle | Offen | Erfasst&ldquo; und
             die Kategorie-Chips in den Kategoriefarben grenzen die Liste ein. Die Chips wirken auf die Kategorien
             der aktuellen Annotation, mehrere Chips kombinieren sich. &bdquo;Erfasst&ldquo; bedeutet, dass eine
-            Expert:innen-Entscheidung aus dem Excel-Workflow oder eine in PRISM gespeicherte Bewertung oder
-            Bestätigung vorliegt. Offen sind Dokumente nur mit Agentenkodierung und Dokumente ohne Bewertung.
+            Expert:innen-Entscheidung aus dem Excel-Workflow oder eine in PRISM gespeicherte Bewertung vorliegt.
+            Alle übrigen Dokumente sind offen.
             Filter und geöffnetes Dokument stehen in der URL. Im Modus &bdquo;Bearbeiten&ldquo; zählt
             &bdquo;n von N erfasst&ldquo; nach derselben Regel. Farbige Punkte am Listeneintrag zeigen die Kategorien der aktuellen
             Annotation, eine kleine Marke den Stand.</p>
             <ul>
-                <li>Keine Marke heißt offen und ohne Annotation.</li>
+                <li>Keine Marke heißt offen.</li>
                 <li>Ein grauer Haken heißt erfasst durch die Expert:innen-Entscheidung.</li>
-                <li>Ein gestrichelter Ring heißt Agentenkodierung, die auf Prüfung wartet.</li>
                 <li>Ein farbiger Haken heißt erfasst in PRISM.</li>
             </ul>
             <p>Die offenen Dokumente sind zwischen Sabine und Susi aufgeteilt. Der Filter &bdquo;Zuteilung&ldquo;
@@ -127,7 +126,7 @@
             mit Status und Kategorien kombinieren. Unter &bdquo;Alle&ldquo; nennt jeder Listeneintrag die
             Bearbeiterin. Als Kürzel gilt <code>sabine</code> bzw. <code>susi</code>.</p>
             <p>Das Panel &bdquo;Bewertung&ldquo; zeigt die aktuelle Annotation mit einer Herkunftszeile, etwa
-            &bdquo;Vorbelegt: Expert:innen-Entscheidung&ldquo;, &bdquo;Agentenkodierung ar2&ldquo; oder
+            &bdquo;Vorbelegt: Expert:innen-Entscheidung&ldquo;, &bdquo;Noch keine Bewertung&ldquo; oder
             &bdquo;Deine Bewertung, gespeichert &lt;Datum&gt;&ldquo;. Die Entscheidung (Include, Exclude,
             Unclear) steht im Kopf des Panels. Die zehn Kategorien sind farbige Schalter in den Gruppen Gegenstand
             und Perspektive, ihre Definition steht im Tooltip. Ein Klick setzt eine Kategorie auf ja oder schaltet
@@ -144,16 +143,10 @@
                     einschließen&ldquo; braucht eine kurze Begründung. Include verlangt zusätzlich die
                     Analysekodierung, die sich als eigener Schritt öffnet.</li>
             </ul>
-            <p>Der LLM-Vorschlag bleibt als kompakte Referenz sichtbar, mit Entscheidung, Kategoriefarben und dem
-            ersten Satz seiner Begründung. Er belegt die Bewertung nie vor. &bdquo;Vorschlag übernehmen&ldquo; setzt nur
-            die vorgeschlagenen Kategorien auf teilweise.</p>
+            <p>PRISM zeigt keine KI-Vorbewertung.</p>
             <p>Gespeichert wird mit dem Diskettensymbol neben der Dokumentposition. Bei einer vorbelegten oder leeren
-            Bewertung schreibt es deine eigene Bewertung. Bei einer Agentenkodierung schreibt es eine Bestätigung in
-            deine Datei und lässt die Agentendatei unverändert. Ungeändert gespeichert gilt sie als bestätigt, mit
-            Änderungen als korrigiert und bestätigt. &bdquo;Änderungen anfordern&ldquo; und &bdquo;Ablehnen&ldquo;
-            wählst du ausdrücklich im Panel und begründest sie kurz. Eine bestätigte Agentenkodierung erhält danach
-            separat die &bdquo;Freigabe erteilen&ldquo; für die Veröffentlichung. Nicht gespeicherte Änderungen
-            behält der Browser je Dokument.</p>
+            Bewertung schreibt es deine eigene Bewertung. Nicht gespeicherte Änderungen behält der Browser je
+            Dokument.</p>
             <p>Nach der Arbeit committest du in GitHub Desktop deine Datei
             <code>docs/data/screening/&lt;kürzel&gt;.json</code> und pushst sie. PRISM führt keine Git-Aktion aus.</p>
         </article>

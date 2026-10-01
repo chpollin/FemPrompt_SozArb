@@ -271,8 +271,7 @@ let work = emptyWork(null);
 
 function emptyWork(pid) {
     return { pid: pid, cats: {}, override: false, reason: null, overrideReason: null, evidence: {},
-        analysis: undefined, seed: null, expertBasis: null, derivedFromExpert: false,
-        verifyResult: 'accept', verifyNote: '', dirty: false };
+        analysis: undefined, seed: null, expertBasis: null, derivedFromExpert: false, dirty: false };
 }
 
 function curDec() {
@@ -415,7 +414,9 @@ function loadLocal() {
         if (o.drafts && typeof o.drafts === 'object')
             Object.keys(o.drafts).forEach(function(pid) {
                 const draft = o.drafts[pid];
-                if (draft && typeof draft === 'object' && draft.pid === pid && draft.cats && typeof draft.cats === 'object')
+                // a draft an older build seeded from an agent record carries the agent's
+                // codes and is dropped, so no AI pre-assessment reaches a human session (ADR-044)
+                if (draft && typeof draft === 'object' && draft.pid === pid && draft.cats && typeof draft.cats === 'object' && draft.seed !== 'agent')
                     drafts[pid] = Object.assign(emptyWork(pid), draft, { dirty: true });
             });
         if (state.reviewer) saveStatus = trialMode ? {
@@ -1019,8 +1020,8 @@ function adoptAgentTrack() {
     projectExpertVerifications();
 }
 
-// Read mode shows agent records without a connected folder. The served track is
-// validated like a file and never written.
+// The served agent track is read for comparison and diagnostics only; human sessions
+// never display it (ADR-044). It is validated like a file and never written.
 function loadServedAgentTracks() {
     if (runActor !== 'human' || trialMode || acceptanceMode || typeof fetch !== 'function') return Promise.resolve(null);
     return Promise.all(SERVED_AGENT_TRACKS.map(function(key) {
@@ -1953,10 +1954,11 @@ function computeFlow(persp) {
     return f;
 }
 
-// Subject of a paper (ADR-042): the annotation a paper currently carries, in the order
-// own saved record > productive agent record > consolidated expert decision > none.
-// The LLM assessment never becomes a subject. Agent runs and acceptance views see only
-// their own track.
+// Subject of a paper (ADR-042, ADR-044): the annotation a paper currently carries, in the
+// order own saved record > consolidated expert decision > none. Human reviewers see no AI
+// pre-assessment, so neither the productive agent record nor the LLM assessment becomes a
+// subject; the agent track stays loaded for comparison and diagnostics only. Agent runs
+// and acceptance views see only their own track.
 
 function referencesAllowed() { return runActor === 'human' && !trialMode && !acceptanceMode; }
 
@@ -1965,47 +1967,37 @@ function ownRecord(p) {
     return state.reviewers[state.reviewer][p.id] || null;
 }
 
-function ownVerificationEntries(paperId) {
-    if (!state.reviewer) return [];
-    return (verificationRecords[state.reviewer] || []).filter(function(entry) {
-        return entry && entry.paper_id === paperId;
-    });
-}
-
 function paperSubject(p) {
     if (!p) return { kind: 'empty', record: null };
     const own = ownRecord(p);
     if (own) return { kind: 'own', record: own };
     if (referencesAllowed()) {
-        const agent = agentTrack.records[p.id];
-        if (agent) return { kind: 'agent', record: agent, reviewer: agentTrack.reviewer };
         const expert = expertAssessment(p);
         if (expert) return { kind: 'expert', record: expert };
     }
     return { kind: 'empty', record: null };
 }
 
-// Own work: an own saved record or an own verification.
+// Own work: an own saved record. Verification entries of earlier builds still load and
+// project onto the agent track, but no longer count as screening (ADR-044).
 function isCaptured(p) {
-    return !!ownRecord(p) || (referencesAllowed() && ownVerificationEntries(p.id).length > 0);
+    return !!ownRecord(p);
 }
 
 // "Erfasst" in list, filter and counter: own work, or a decision of the consolidated
 // expert assessment (the earlier Excel workflow), which the operator counts as done.
-// Only agent-coded and unassessed papers stay open.
+// Papers with only an agent record or no assessment stay open.
 function isDone(p) {
     return isCaptured(p) || !!expertAssessment(p);
 }
 
 function listState(p) {
     if (isCaptured(p)) return 'erfasst';
-    const subject = paperSubject(p);
-    return subject.kind === 'agent' ? 'agent' : (subject.kind === 'expert' ? 'expert' : 'none');
+    return paperSubject(p).kind === 'expert' ? 'expert' : 'none';
 }
 
 const LIST_STATE_LABELS = {
     erfasst: 'erfasst',
-    agent: 'Agentenkodierung zu prüfen',
     expert: 'erfasst, Expert:innen-Entscheidung',
     none: 'offen'
 };
@@ -3098,9 +3090,6 @@ function seedDraft(p, subject) {
     w.overrideReason = r.override_reason || null;
     w.evidence = JSON.parse(JSON.stringify(r.evidence || {}));
     w.analysis = r.analysis ? JSON.parse(JSON.stringify(r.analysis)) : undefined;
-    // an agent record keeps the text basis it was coded on; the reviewer's own records
-    // name the text shown when they are saved
-    if (subject.kind === 'agent') w.textSource = r.text_source || null;
     if (subject.kind === 'expert') {
         w.expertBasis = JSON.parse(JSON.stringify(w.cats));
         w.derivedFromExpert = true;
@@ -3152,7 +3141,7 @@ function draftEvidenceBasis(w) {
 }
 
 function workingTextSource() {
-    return work.seed === 'agent' && work.textSource ? work.textSource : currentTextSource;
+    return currentTextSource;
 }
 
 function workingDecisionRecord() {
@@ -3197,40 +3186,9 @@ function substanceOf(record) {
     });
 }
 
-// The draft as an annotation body over the agent record it corrects. Only fields the
-// reviewer changed are replaced, so an untouched draft yields the identical body.
-function draftAnnotationBody(current, w) {
-    const body = JSON.parse(JSON.stringify(current));
-    body.categories = body.categories || {};
-    ALL_CATS.forEach(function(c) {
-        const next = catLevel(w.cats[c]);
-        if (next === catLevel(body.categories[c])) return;
-        if (next) body.categories[c] = next; else delete body.categories[c];
-    });
-    if (!!w.override !== !!body.override) body.override = !!w.override;
-    const decision = finalDecisionOf(body.categories, !!body.override);
-    body.decision = decision;
-    const reason = decision === 'Exclude' ? (w.reason || null) : null;
-    if ((body.reason || null) !== reason) body.reason = reason;
-    const overrideReason = decision === 'Include' && w.override ? (String(w.overrideReason || '').trim() || null) : null;
-    if ((body.override_reason || null) !== overrideReason) body.override_reason = overrideReason;
-    const evidence = paperEvidenceOnly(w.evidence);
-    if (JSON.stringify(paperEvidenceOnly(body.evidence)) !== JSON.stringify(evidence)) body.evidence = evidence;
-    if (decision === 'Include') {
-        const analysis = sanitizeAnalysis(w.analysis || {}, body.text_source);
-        if (JSON.stringify(sanitizeAnalysis(body.analysis || {}, body.text_source)) !== JSON.stringify(analysis)) body.analysis = analysis;
-    } else if (body.analysis !== undefined) {
-        delete body.analysis;
-    }
-    return body;
-}
-
-function agentRecordState(record) { return verificationView(record).lifecycle.state; }
-
 // What the single save action does for the open paper.
 function saveMode(p, subject) {
     if (!canEdit() || !p) return 'none';
-    if (subject.kind === 'agent') return agentRecordState(subject.record) === 'ai-agent-reviewed' ? 'verify' : 'none';
     if (subject.kind === 'own' && substanceOf(workingDecisionRecord()) === substanceOf(subject.record)) return 'none';
     return 'record';
 }
@@ -3245,7 +3203,6 @@ function draftReasons(p, subject, mode) {
     if (record.decision === 'Exclude' && !record.reason) reasons.push('Ausschlussgrund wählen');
     if (record.decision === 'Include' && record.override && !record.override_reason) reasons.push('Abweichung begründen');
     if (record.decision === 'Include' && !analysisRequirements(record).ok) reasons.push('Analysekodierung unvollständig');
-    if (mode === 'verify' && work.verifyResult !== 'accept' && !String(work.verifyNote || '').trim()) reasons.push('Notiz zum Prüfergebnis');
     return reasons;
 }
 
@@ -3263,8 +3220,7 @@ function saveGate(p) {
     const mode = saveMode(p, subject);
     const reasons = draftReasons(p, subject, mode);
     const storage = mode === 'none' ? '' : storageReason();
-    const label = mode === 'verify' ? 'Prüfergebnis speichern'
-        : (mode === 'none' ? (subject.kind === 'agent' ? 'Bereits geprüft' : 'Gespeichert, keine Änderung') : 'Bewertung speichern');
+    const label = mode === 'none' ? 'Gespeichert, keine Änderung' : 'Bewertung speichern';
     return { ok: mode !== 'none' && !storage && !reasons.length, mode: mode, storage: storage, reasons: reasons, label: label };
 }
 
@@ -3293,8 +3249,7 @@ function chipHtml(cat, level, locked) { return categoryChipHtml(cat, level, { di
 
 function railEditable(p, subject) {
     if (!canEdit() || !p) return false;
-    if (paperIdentityRequired(p) && !paperIdentityReady(p)) return false;
-    return subject.kind !== 'agent' || agentRecordState(subject.record) === 'ai-agent-reviewed';
+    return !(paperIdentityRequired(p) && !paperIdentityReady(p));
 }
 
 function provenanceLine(p, subject) {
@@ -3302,13 +3257,6 @@ function provenanceLine(p, subject) {
         const r = subject.record;
         let text = acceptanceMode ? 'Vorgeschlagenes Testurteil' : 'Deine Bewertung' + (r.ts ? ', gespeichert ' + dateLabel(r.ts) : '');
         if (derivedFromExpert(r)) text += ' · aus der Expert:innen-Entscheidung';
-        return text;
-    }
-    if (subject.kind === 'agent') {
-        const own = ownVerificationEntries(p.id);
-        const last = own[own.length - 1];
-        let text = 'Agentenkodierung ' + (subject.reviewer || '') + ' · ' + lifecycleLabel(agentRecordState(subject.record));
-        if (last) text += ' · von dir ' + (RESULT_LABELS[last.result] || last.result) + ' ' + dateLabel(last.at);
         return text;
     }
     if (subject.kind === 'expert') {
@@ -3371,21 +3319,14 @@ function evidenceListHtml(evidence, locked) {
     return evidenceRowsHtml({ categories: {}, evidence: evidence }, !locked);
 }
 
-function firstSentence(text) {
-    const value = String(text || '').trim();
-    const match = value.match(/^.+?[.!?](?=\s|$)/);
-    return match ? match[0] : value;
-}
-
-// References for human reviewers (ADR-038, ADR-042): the expert decision when it is not
-// the subject, and the LLM assessment, which never seeds the assessment. Taking over the
-// LLM proposal only pre-sets category levels; each still needs its own Paper Beleg.
-function referenceProposalsHtml(p, editable, subject) {
+// The one reference for human reviewers (ADR-042, ADR-044): the consolidated expert
+// decision where it is not the subject, which is a human judgement. Neither the LLM
+// assessment nor the agent record is shown before or beside the human decision.
+function referenceProposalsHtml(p, subject) {
     if (!referencesAllowed()) return '';
     subject = subject || paperSubject(p);
     const expert = subject.kind !== 'expert' ? expertAssessment(p) : null;
-    const llm = aiProposal(p);
-    if (!expert && !llm) return '';
+    if (!expert) return '';
     const dots = function(cats) {
         const set = ALL_CATS.filter(function(c) { return catLevel(cats[c]) > 0; });
         return set.length ? '<span class="pt-ref-cats" aria-hidden="true">' + set.map(function(c) {
@@ -3393,26 +3334,9 @@ function referenceProposalsHtml(p, editable, subject) {
         }).join('') + '</span><span class="pt-sr-only">: ' + EC.escapeHtml(set.map(function(c) { return CAT_LABELS[c]; }).join(', ')) + '</span>' : '';
     };
     let h = '<section class="pt-references" id="pt-references" aria-label="Referenzen">';
-    if (expert) h += '<p class="pt-ref pt-ref-expert"><span class="pt-ref-label">Expert:innen-Entscheidung</span> <strong class="pt-dec-' +
+    h += '<p class="pt-ref pt-ref-expert"><span class="pt-ref-label">Expert:innen-Entscheidung</span> <strong class="pt-dec-' +
         decCls(expert.decision) + '">' + EC.escapeHtml(expert.decision) + '</strong>' + dots(expert.categories) + '</p>';
-    if (llm) {
-        const reasoning = firstSentence(llm.reasoning);
-        h += '<p class="pt-ref pt-ref-llm"><span class="pt-ref-label"><span class="pt-llm-mark" aria-hidden="true">✦</span> LLM-Vorschlag</span> <strong class="pt-dec-' +
-            decCls(llm.decision) + '">' + EC.escapeHtml(llm.decision) + '</strong>' + dots(llm.categories) +
-            (editable && subject.kind !== 'agent' ? ' <button type="button" class="pt-link-btn pt-adopt-proposal" id="pt-adopt-proposal">Vorschlag übernehmen</button>' : '') + '</p>';
-        if (reasoning) h += '<p class="pt-ref-reason" title="' + EC.escapeHtml(llm.reasoning) + '">' + EC.escapeHtml(reasoning) + '</p>';
-    }
     return h + '</section>';
-}
-
-function adoptLlmProposal(p) {
-    const llm = aiProposal(p);
-    if (!llm || !canEdit()) return;
-    ALL_CATS.forEach(function(c) {
-        if (llm.categories[c] && catLevel(work.cats[c]) === 0) work.cats[c] = 1;
-    });
-    markDirty();
-    refreshAssess();
 }
 
 function dimHtml(label, keys, cats, editable, basis) {
@@ -3447,19 +3371,6 @@ function overrideHtml(record, editable) {
     return h;
 }
 
-function verifyControlsHtml(p, subject) {
-    const current = annotationBody(subject.record);
-    const changed = annotationDiff(current, draftAnnotationBody(current, work)).length > 0;
-    let h = '<div class="pt-verify-row"><label for="pt-verify-result">Prüfergebnis</label><select id="pt-verify-result">' +
-        '<option value="accept"' + (work.verifyResult === 'accept' ? ' selected' : '') + '>' + (changed ? 'Korrigiert bestätigen' : 'Bestätigen') + '</option>' +
-        '<option value="changes_requested"' + (work.verifyResult === 'changes_requested' ? ' selected' : '') + '>Änderungen anfordern</option>' +
-        '<option value="rejected"' + (work.verifyResult === 'rejected' ? ' selected' : '') + '>Ablehnen</option></select></div>';
-    if (work.verifyResult !== 'accept')
-        h += '<label class="pt-verify-note" for="pt-verify-note"><span class="pt-sub-head">Notiz</span><textarea id="pt-verify-note" rows="2" placeholder="Was ist zu ändern?">' +
-            EC.escapeHtml(work.verifyNote || '') + '</textarea></label>';
-    return h;
-}
-
 function analysisEntryHtml(record, editable) {
     if (record.decision !== 'Include' || !anFields.length) return '';
     const req = analysisRequirements(record);
@@ -3490,15 +3401,9 @@ function railHtml(p) {
         if (record.decision === 'Exclude') h += reasonChipsHtml(record, editable);
         h += evidenceRowsHtml(record, editable);
         h += analysisEntryHtml(record, editable);
-        if (subject.kind === 'agent') {
-            if (editable && saveMode(p, subject) === 'verify') h += verifyControlsHtml(p, subject);
-            h += historyHtml(subject.record);
-            if (canEdit() && agentRecordState(subject.record) === 'verified' && runActor === 'human')
-                h += '<button type="button" class="pt-btn pt-btn-sm" id="pt-approve">Freigabe erteilen</button>';
-        }
     }
-    h += referenceProposalsHtml(p, editable, subject);
-    if (subject.kind === 'agent' || (subject.kind === 'own' && isGovernedRecord(subject.record))) h += provenanceHtml(subject.record);
+    h += referenceProposalsHtml(p, subject);
+    if (subject.kind === 'own' && isGovernedRecord(subject.record)) h += provenanceHtml(subject.record);
     h += '</div>';
     h += dockHtml(p, subject, editable);
     return h;
@@ -3772,12 +3677,8 @@ function bindAssess(p) {
         railStep = 'assess'; refreshAssess();
         const entry = document.getElementById('pt-open-analysis'); if (entry) entry.focus();
     });
-    const approve = col.querySelector('#pt-approve');
-    if (approve) approve.addEventListener('click', function() { approveAgentRecord(p); });
     if (!editable) return;
     attachAnalysisStep(col);
-    const adopt = col.querySelector('#pt-adopt-proposal');
-    if (adopt) adopt.addEventListener('click', function() { adoptLlmProposal(p); });
     const discard = col.querySelector('#pt-discard');
     if (discard) discard.addEventListener('click', function() { discardDraft(p); announce('Änderungen verworfen.'); });
 
@@ -3810,10 +3711,6 @@ function bindAssess(p) {
     });
     const ovr = col.querySelector('#pt-override-reason');
     if (ovr) ovr.addEventListener('input', function() { work.overrideReason = ovr.value; markDirty(); syncDockHint(p); });
-    const result = col.querySelector('#pt-verify-result');
-    if (result) result.addEventListener('change', function() { work.verifyResult = result.value; markDirty(); refreshAssess(); });
-    const note = col.querySelector('#pt-verify-note');
-    if (note) note.addEventListener('input', function() { work.verifyNote = note.value; markDirty(); syncDockHint(p); });
 }
 
 // Typing keeps the caret: only the hint and the save gate are refreshed.
@@ -3823,15 +3720,14 @@ function syncDockHint(p) {
     refreshSaveGate();
 }
 
-// The one save action. A draft over no record, an expert prefill or an own record
-// writes the reviewer's decision record; a draft over an agent record writes a
-// verification entry into the reviewer's own file.
+// The one save action: a draft over no record, an expert prefill or an own record
+// writes the reviewer's decision record.
 function saveCurrent() {
     const p = papers[state.index];
     if (!p || !canEdit()) return Promise.resolve(false);
     const gate = saveGate(p);
     if (!gate.ok) { syncDockHint(p); announce(gate.storage || gate.reasons[0] || gate.label); return Promise.resolve(false); }
-    return gate.mode === 'verify' ? verifyAgentRecord(p) : Promise.resolve(commit());
+    return Promise.resolve(commit());
 }
 
 function expertDerivation(p) {
@@ -3937,63 +3833,6 @@ function commit() {
     corpusQuery = '';
     gotoNextOpen();
     return true;
-}
-
-// The agent file is read-only for the session: the transition runs on a copy, and that
-// copy becomes the display projection once the event is recorded in the reviewer's file.
-function verifyAgentRecord(p) {
-    const subject = paperSubject(p);
-    if (!canEdit() || subject.kind !== 'agent' || runActor !== 'human' || !state.reviewer) return Promise.resolve(false);
-    const record = subject.record;
-    const view = verificationView(record);
-    const target = LIFECYCLE_NEXT[view.lifecycle.state];
-    if (view.lifecycle.state !== 'ai-agent-reviewed' || target !== 'verified') return Promise.resolve(false);
-    const judged = view.active_annotation_id || (record.provenance && record.provenance.annotation_id) || null;
-    const current = annotationBody(record);
-    const body = draftAnnotationBody(current, work);
-    const changed = annotationDiff(current, body).length > 0;
-    const result = work.verifyResult === 'changes_requested' || work.verifyResult === 'rejected'
-        ? work.verifyResult : (changed ? 'corrected_and_accepted' : 'accepted');
-    const working = JSON.parse(JSON.stringify(record));
-    const outcome = advanceVerification(working, target, {
-        reviewer_id: state.reviewer, actor_ids: [state.reviewer], activity_id: sessionActivityId(),
-        result: result, note: work.verifyNote, corrected_annotation: body
-    });
-    if (!outcome.ok) {
-        const hint = document.getElementById('pt-actions-hint');
-        if (hint) hint.textContent = outcome.message;
-        announce(outcome.message);
-        return Promise.resolve(false);
-    }
-    if (!Array.isArray(verificationRecords[state.reviewer])) verificationRecords[state.reviewer] = [];
-    verificationRecords[state.reviewer].push(
-        verificationEntry(p.id, subject, judged, outcome.event, outcome.reviewer_id, outcome.annotation));
-    agentTrack.records[p.id] = working;
-    delete drafts[p.id];
-    const written = save();
-    corpusQuery = '';
-    gotoNextOpen();
-    return written;
-}
-
-function approveAgentRecord(p) {
-    const subject = paperSubject(p);
-    if (!canEdit() || subject.kind !== 'agent' || runActor !== 'human' || !state.reviewer) return Promise.resolve(false);
-    if (storageReason()) { announce(storageReason()); return Promise.resolve(false); }
-    const record = subject.record;
-    if (agentRecordState(record) !== 'verified') return Promise.resolve(false);
-    const judged = verificationView(record).active_annotation_id || null;
-    const working = JSON.parse(JSON.stringify(record));
-    const outcome = advanceVerification(working, 'publication-approved', {
-        reviewer_id: state.reviewer, actor_ids: [state.reviewer], activity_id: sessionActivityId(), result: 'approved'
-    });
-    if (!outcome.ok) { announce(outcome.message); return Promise.resolve(false); }
-    if (!Array.isArray(verificationRecords[state.reviewer])) verificationRecords[state.reviewer] = [];
-    verificationRecords[state.reviewer].push(verificationEntry(p.id, subject, judged, outcome.event, outcome.reviewer_id, null));
-    agentTrack.records[p.id] = working;
-    const written = save();
-    renderScreening();
-    return written;
 }
 
 // "Nächstes offen" follows the visible list: the next paper after the current one
@@ -4442,7 +4281,7 @@ const TEST_HOOK = {
     getWork: function() { return work; },
     curDec: curDec, resetWork: resetWork, refreshAssess: refreshAssess,
     pinEvidence: pinEvidence, unpinEvidence: unpinEvidence, commit: commit, saveCurrent: saveCurrent,
-    railHtml: railHtml, evidenceListHtml: evidenceListHtml, chipHtml: chipHtml, categoryChipHtml: categoryChipHtml,
+    railHtml: railHtml, referenceProposalsHtml: referenceProposalsHtml, evidenceListHtml: evidenceListHtml, chipHtml: chipHtml, categoryChipHtml: categoryChipHtml,
     statusLabel: statusLabel, listState: listState, isCaptured: isCaptured, isDone: isDone, paperSubject: paperSubject,
     draftFor: draftFor, saveGate: saveGate, saveMode: saveMode, workDirty: function() { return !!work.dirty; },
     setWork: function(w) { work = w; }, markDirty: markDirty, drafts: function() { return JSON.parse(JSON.stringify(drafts)); },
@@ -4455,7 +4294,6 @@ const TEST_HOOK = {
     setManifestReachable: function(value) { manifestReachable = !!value; },
     setFsSupported: function(value) { fsOverride = value === undefined ? null : !!value; },
     serializeAll: serializeAll, loadLocal: loadLocal, attachHumanContract: attachHumanContract,
-    draftAnnotationBody: draftAnnotationBody, verifyAgentRecord: verifyAgentRecord, approveAgentRecord: approveAgentRecord,
     resolveReviewerConflict: resolveReviewerConflict, reviewerConflicts: function() { return JSON.parse(JSON.stringify(reviewerConflicts)); },
     adoptVerifications: adoptVerifications, writeReviewerFile: writeReviewerFile, recordProblem: recordProblem,
     quarantinedRecords: function() { return JSON.parse(JSON.stringify(quarantinedRecords)); },

@@ -210,8 +210,11 @@ async function screenPaper(paperSpec, decisionSpec) {
       sourceMeta.href === paperSpec.expected_source_url && sourceMeta.text === 'Webseite öffnen' && /noopener/.test(sourceMeta.rel) &&
       sourceMeta.author === paperSpec.expected_author && !sourceMeta.body.includes(paperSpec.expected_source_url), sourceMeta);
   }
-  check(`${id}: the LLM reference is visible as a labelled proposal before own save, without round wording (ADR-038, ADR-042)`,
-    (await page.textContent('#pt-assess-col')).includes('LLM-Vorschlag') && !(await page.textContent('#pt-assess-col')).includes('Runde'));
+  check(`${id}: no LLM proposal, colours or takeover before the own save (ADR-044)`, await page.evaluate(() => {
+    const rail = document.getElementById('pt-assess-col');
+    return !/LLM-Vorschlag|Vorschlag übernehmen|Runde/.test(rail.textContent) &&
+      !rail.querySelector('#pt-adopt-proposal, .pt-ref-llm, .pt-llm-mark, .pt-ref-reason');
+  }));
   check(`${id}: binding copy removed from daily assessment`, !/bindend|verbindlich/.test(await page.textContent('#pt-assess-col')));
   if (paperSpec.search_term) {
     await page.fill('#pt-intext', paperSpec.search_term);
@@ -330,9 +333,8 @@ async function screenPaper(paperSpec, decisionSpec) {
     check(`${id}: paper navigation resets the active reading layer to the Paper text`, await page.evaluate(() =>
       window.__PRISMA_TEST__.getState().readMode === 'full' && document.querySelector('.pt-layer-btn[data-mode="full"]')?.getAttribute('aria-pressed') === 'true'));
   }
-  const references = await page.$('#pt-assess-col #pt-references');
-  check(`${id}: saved record keeps the LLM reference visible (ADR-038)`,
-    !!references && (await references.textContent()).includes('LLM-Vorschlag'));
+  check(`${id}: the saved record shows no LLM proposal either (ADR-044)`, await page.evaluate(() =>
+    !/LLM-Vorschlag|Vorschlag übernehmen/.test(document.getElementById('pt-assess-col').textContent)));
   await shot(page, `${id}-committed`);
 }
 
@@ -570,9 +572,9 @@ try {
       document.querySelector('#pt-edit-mode').getAttribute('aria-pressed') === 'true' && !/Verifizieren/.test(document.body.textContent)));
   check('mode: an own record shows no lifecycle controls and no typed identifier fields', await page.evaluate(() =>
     !document.querySelector('#pt-verify-result, #pt-approve, [name="reviewer_id"], [name="actor_ids"], [name="activity_id"], textarea[name="corrected_annotation"]')));
-  // 5b The productive agent track is the subject of verification (ADR-040): the expert
-  // sees it without choosing a track, and the event lands in the expert's own file while
-  // the agent file stays untouched.
+  // 5b The productive agent track is loaded but never shown to a human (ADR-044): a paper
+  // with only an agent record starts empty, its codes reach neither the rail nor the list,
+  // the own save writes the reviewer file, and the agent file stays untouched.
   const agentFile = {
     schema: 'femprompt-prisma-reviewer/0.5', reviewer: 'ar2', actor: 'agent', status: 'ai-agent-reviewed',
     updated: '2026-09-01T10:00:00.000Z',
@@ -641,109 +643,55 @@ try {
     T.showSurface('screening');
     window.__PILOT_WRITES = writes;
   }, agentFileText);
-  await expertPage.waitForFunction(() => !!document.querySelector('#pt-verify-result') && !window.__PRISMA_TEST__.readingPending(), null, { timeout: 10000 });
+  await expertPage.waitForFunction(() => !!document.querySelector('#pt-assess-col .pt-dim') && !window.__PRISMA_TEST__.readingPending(), null, { timeout: 10000 });
   const subjectView = await expertPage.evaluate(() => {
     const rail = document.getElementById('pt-assess-col');
-    const details = rail.querySelector('.pt-provenance-details');
+    const item = document.querySelector('#pt-corpus-list .pt-nav-item.active');
     return {
       provenance: document.getElementById('pt-provenance')?.textContent,
-      typedIds: !!rail.querySelector('[name="reviewer_id"], [name="actor_ids"], [name="activity_id"], textarea[name="corrected_annotation"]'),
-      result: rail.querySelector('#pt-verify-result')?.value,
+      pressed: rail.querySelectorAll('.pt-dim .category-chip[aria-pressed="true"], .pt-dim .category-chip[aria-pressed="mixed"]').length,
+      reasonSelected: !!rail.querySelector('.pt-reason-chip.sel'),
+      verifyControls: !!rail.querySelector('#pt-verify-result, #pt-verify-note, #pt-approve, .pt-history, .pt-provenance-details'),
+      llm: /LLM-Vorschlag|Vorschlag übernehmen|Agentenkodierung/.test(rail.textContent),
       editable: !!rail.querySelector('.pt-dim .category-chip:not([disabled])'),
-      listMark: !!document.querySelector('#pt-corpus-list .pt-nav-item.active .pt-mark-agent'),
+      listState: item?.dataset.state,
+      listDots: !!item?.querySelector('.pt-nav-cats'),
+      agentMark: !!document.querySelector('.pt-mark-agent'),
       track: window.__PRISMA_TEST__.agentTrack().reviewer,
-      selectedReviewer: window.__PRISMA_TEST__.getState().reviewer,
-      provenanceOpen: details ? details.open : null,
-      provenanceText: details ? details.textContent : '',
-      history: rail.querySelector('.pt-history')?.textContent || ''
+      selectedReviewer: window.__PRISMA_TEST__.getState().reviewer
     };
   });
-  check('agent record: the productive agent record is the subject without choosing a track',
-    subjectView.track === 'ar2' && subjectView.selectedReviewer === 'ev', subjectView);
-  check('agent record: the panel names the agent coding and its review state in one line, editable in the same panel',
-    /^Agentenkodierung ar2 · KI-geprüft/.test(subjectView.provenance) && subjectView.editable && subjectView.listMark, subjectView);
-  check('agent record: no typed identifier fields, the outcome defaults to confirmation',
-    !subjectView.typedIds && subjectView.result === 'accept', subjectView);
-  check('agent record: provenance is collapsed and renders as readable text',
-    subjectView.provenanceOpen === false && !subjectView.provenanceText.includes('[object Object]') &&
-      subjectView.provenanceText.includes('paper: docs/data/fulltext/PILOT-B.md') &&
-      subjectView.provenanceText.includes('prompts/prism-agent-reviewer-v1.1.md · v1.1') &&
-      /KI-geprüft/.test(subjectView.history), subjectView);
-  await checkLayoutInvariants(expertPage, 'agent record');
-  await expertPage.screenshot({ path: join(outDir, '05b-agent-record.png') });
-  trace.screenshots.push('05b-agent-record.png');
-  await expertPage.selectOption('#pt-verify-result', 'changes_requested');
-  check('agent record: requesting changes keeps the save blocked until a note is given',
-    await expertPage.isDisabled('#pt-record') && /Notiz/.test(await expertPage.textContent('#pt-actions-hint')));
-  await expertPage.fill('#pt-verify-note', 'Ausschlussgrund am Abstract prüfen.');
-  await expertPage.click('#pt-record');
-  await expertPage.waitForFunction(() => window.__PRISMA_TEST__.verifications('ev').length === 1);
-  await expertPage.evaluate(() => { const T = window.__PRISMA_TEST__; T.getState().index = window.EC.getAllPapers().findIndex((p) => p.id === 'PILOT-B'); T.showSurface('screening'); });
-  await expertPage.waitForFunction(() => !!document.querySelector('#pt-verify-result') && !window.__PRISMA_TEST__.readingPending());
-  check('agent record: after a change request the record stays open for review and counts as captured', await expertPage.evaluate(() =>
-    window.__PRISMA_TEST__.agentTrack().records['PILOT-B'].lifecycle.state === 'ai-agent-reviewed' &&
-      !!document.querySelector('#pt-corpus-list .pt-nav-item.active .pt-mark-erfasst')));
+  check('agent-only paper: the agent track is loaded for comparison but the paper starts empty for the reviewer',
+    subjectView.track === 'ar2' && subjectView.selectedReviewer === 'ev' && subjectView.provenance === 'Noch keine Bewertung' &&
+      subjectView.pressed === 0 && !subjectView.reasonSelected && subjectView.editable, subjectView);
+  check('agent-only paper: no verification controls, agent provenance or LLM proposal in the rail',
+    !subjectView.verifyControls && !subjectView.llm, subjectView);
+  check('agent-only paper: the list shows it as simply open, without agent mark or agent colours',
+    subjectView.listState === 'none' && !subjectView.listDots && !subjectView.agentMark, subjectView);
+  await checkLayoutInvariants(expertPage, 'agent-only paper');
+  await expertPage.screenshot({ path: join(outDir, '05b-agent-only-paper.png') });
+  trace.screenshots.push('05b-agent-only-paper.png');
+  await expertPage.click('#pt-assess-col .pt-reason-chip[data-reason="Not_relevant_topic"]');
+  await expertPage.waitForSelector('#pt-record:not([disabled])', { timeout: 5000 });
   await expertPage.click('#pt-record');
   const written = await expertPage.evaluate(async (original) => {
     const deadline = Date.now() + 3000;
-    while (window.__PRISMA_TEST__.verifications('ev').length < 2 && Date.now() < deadline) await new Promise((r) => setTimeout(r, 10));
-    while (!(window.__PILOT_WRITES['ev.json'] && JSON.parse(window.__PILOT_WRITES['ev.json']).verifications.length === 2) && Date.now() < deadline) await new Promise((r) => setTimeout(r, 10));
+    while (!window.__PILOT_WRITES['ev.json'] && Date.now() < deadline) await new Promise((r) => setTimeout(r, 10));
     const T = window.__PRISMA_TEST__;
     return {
       names: Object.keys(window.__PILOT_WRITES),
       expert: window.__PILOT_WRITES['ev.json'] ? JSON.parse(window.__PILOT_WRITES['ev.json']) : null,
       agentEnvelopeUnchanged: JSON.stringify(T.reviewerEnvelope('ar2')) === original,
-      projectedState: T.agentTrack().records['PILOT-B'].lifecycle.state
+      agentState: T.agentTrack().records['PILOT-B'].lifecycle.state
     };
   }, agentFileText);
-  const entry = written.expert && written.expert.verifications && written.expert.verifications[1];
-  check('verification: an unchanged save is an acceptance written into the reviewer file under the verification schema',
-    written.expert?.reviewer === 'ev' && written.expert?.verification_schema === 'femprompt-prisma-verification/0.1' &&
-      written.expert?.verifications?.length === 2 && written.expert.verifications[0].result === 'changes_requested' &&
-      entry?.paper_id === 'PILOT-B' && entry?.result === 'accepted' &&
-      entry?.reviewer_id === 'ev' && entry?.actor_ids?.join(',') === 'ev' && /^prism-session-/.test(entry?.activity_id || '') &&
-      entry?.event?.event_type === 'domain_expert_verification' &&
-      entry?.event?.from === 'ai-agent-reviewed' && entry?.event?.to === 'verified' &&
-      entry?.subject?.reviewer === 'ar2' && entry?.subject?.annotation_id === 'ar2:PILOT-B' &&
-      entry?.subject?.hash_status === 'deterministic_check_receipt', { names: written.names, entry });
-  check('verification: the agent file is never written and its loaded envelope stays byte-identical',
-    !written.names.includes('ar2.json') && written.agentEnvelopeUnchanged && written.projectedState === 'verified', written);
-  check('verification: the expert file carries no screening decision of its own for the verified paper',
-    !written.expert?.decisions || !written.expert.decisions['PILOT-B'], written.expert?.decisions);
-  // The expert file is the persistent home of the event: a reload projects it back onto
-  // the untouched agent track instead of reading it from the agent file.
-  const expertFileText = JSON.stringify(written.expert);
-  await expertPage.reload();
-  await expertPage.waitForFunction(() => window.__PRISMA_TEST__ && document.querySelector('#pt-doc'), null, { timeout: 15000 });
-  const projected = await expertPage.evaluate(async ({ agent, expert }) => {
-    const T = window.__PRISMA_TEST__;
-    const writes = {};
-    const files = [['ar2.json', agent], ['ev.json', expert]];
-    T.setScreeningHandle({
-      async *values() { for (const [name, text] of files) yield { kind: 'file', name, async getFile() { return { async text() { return text; } }; } }; },
-      async getFileHandle(name) { return { async createWritable() { let body = ''; return {
-        async write(value) { body = String(value); }, async close() { writes[name] = body; }
-      }; } }; }
-    });
-    T.setEditMode(true);
-    T.selectReviewer('ev');
-    await T.loadAllReviewers();
-    T.getState().index = window.EC.getAllPapers().findIndex((p) => p.id === 'PILOT-B');
-    T.showSurface('screening');
-    const record = T.agentTrack().records['PILOT-B'];
-    return {
-      state: record.lifecycle.state,
-      events: record.lifecycle.events.length,
-      expertEvent: record.lifecycle.events[record.lifecycle.events.length - 1],
-      provenance: document.getElementById('pt-provenance')?.textContent,
-      approve: !!document.getElementById('pt-approve'),
-      writes: Object.keys(writes)
-    };
-  }, { agent: agentFileText, expert: expertFileText });
-  check('verification: a reload projects the reviewer file onto the untouched agent track',
-    projected.state === 'verified' && projected.events === 4 && /fachlich verifiziert/.test(projected.provenance || '') &&
-      /^prism-session-/.test(projected.expertEvent?.activity_id || '') && projected.approve && !projected.writes.length, projected);
-  check('verification: no script errors in the expert session', expertErrors.length === 0, expertErrors);
+  const own = written.expert?.decisions?.['PILOT-B'];
+  check('agent-only paper: the save writes an own decision into the reviewer file, no verification entry',
+    written.expert?.reviewer === 'ev' && own?.decision === 'Exclude' && own?.reason === 'Not_relevant_topic' && own?.actor === 'human' &&
+      own?.provenance?.derived_from?.length === 0 && !written.expert.verifications, { names: written.names, own });
+  check('agent-only paper: the agent file is never written and its loaded envelope stays byte-identical',
+    !written.names.includes('ar2.json') && written.agentEnvelopeUnchanged && written.agentState === 'ai-agent-reviewed', written);
+  check('agent-only paper: no script errors in the reviewer session', expertErrors.length === 0, expertErrors);
   await expertContext.close();
 
   await page.goto(base + '/prisma.html?paper=PILOT-A');

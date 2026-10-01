@@ -47,8 +47,8 @@ The branch carries the following changes, each documented at its canonical place
 ## Decisions to preserve
 
 - The review delivers the evidence base. Recommendations found in the literature are reported as recommendations of their sources ([[project#Project goal]]).
-- Human verification may cover an individual statement or field and applies only to the named content and its evidence basis. It is accepted but not implemented, and the whole-record path of ADR-040 remains active ([[governance#Verification scope decision, 22 September 2026]]).
-- The round-one expert annotations are valid corpus decisions. The experts' scope is the 2026 intake and the agent-coded records.
+- Human verification may cover an individual statement or field and applies only to the named content and its evidence basis. It is accepted but not implemented ([[governance#Verification scope decision, 22 September 2026]]). Since ADR-044 PRISM no longer offers the whole-record verification path of ADR-040.
+- The round-one expert annotations are valid corpus decisions. The experts' scope is the 2026 intake and the agent-coded papers, which they screen without seeing the agent coding or the LLM assessment (ADR-044).
 - The public Evidence Companion is the allowlisted result site from `build/site/` ([[governance#Publication boundary]]). Deployment, push and merge remain operator-gated.
 - Additive Zotero writes are authorised under [[governance#Authorised additive Zotero import]]. Existing-item corrections need their own scoped operation.
 

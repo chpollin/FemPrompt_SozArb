@@ -1,4 +1,4 @@
-// Asynchronous persistence checks for PRISM (ADR-031, ADR-040, ADR-042). Each scenario
+// Asynchronous persistence checks for PRISM (ADR-031, ADR-040, ADR-042, ADR-044). Each scenario
 // runs in a fresh jsdom window over an in-memory folder that behaves like a File System
 // Access directory handle, so the real load, merge and write paths are exercised.
 import { readFileSync } from 'node:fs';
@@ -53,36 +53,63 @@ export async function runIntegrityChecks(root) {
   const ar2Text = readFileSync(join(root, 'docs/data/screening/ar2.json'), 'utf8');
   const ar2 = JSON.parse(ar2Text);
 
-  // 1. A session over the real productive track: confirm one agent record and correct
-  // another. The agent file is never written and stays byte-identical.
+  // 1. A human session over the real productive track (ADR-044): a paper with only an
+  // agent record starts empty, its codes never reach the list, an own save writes the
+  // reviewer file, a verification entry of an earlier build still loads, validates and
+  // survives the write, and the agent file is never written and stays byte-identical.
   {
     const { T } = tool(root, corpus);
-    const folder = memoryFolder({ 'ar2.json': ar2Text });
+    const ids = Object.keys(ar2.decisions).filter((id) => ar2.decisions[id].lifecycle.state === 'ai-agent-reviewed');
+    const agentOnly = corpus.filter((p) => ids.includes(p.id) && !(p.human && p.human.decision) &&
+      Object.values(ar2.decisions[p.id].categories || {}).some((v) => v));
+    const judged = corpus.find((p) => ids.includes(p.id) && p !== agentOnly[0]);
+    const working = JSON.parse(JSON.stringify(ar2.decisions[judged.id]));
+    const outcome = T.advanceVerification(working, 'verified', {
+      reviewer_id: 'ev', actor_ids: ['ev'], activity_id: 'prism-session-legacy', result: 'accepted'
+    });
+    const legacyEntry = T.verificationEntry(judged.id, { reviewer: 'ar2', record: ar2.decisions[judged.id] },
+      ar2.decisions[judged.id].active_annotation_id, outcome.event, 'ev', null);
+    const evFile = { schema: 'femprompt-prisma-reviewer/0.5', reviewer: 'ev', actor: 'human', updated: '2026-09-30T00:00:00.000Z',
+      decisions: {}, verification_schema: T.VERIFICATION_SCHEMA, verifications: [legacyEntry] };
+    const folder = memoryFolder({ 'ar2.json': ar2Text, 'ev.json': JSON.stringify(evFile) });
     T.setScreeningHandle(folder);
     T.selectReviewer('ev');
     await T.loadAllReviewers();
-    const ids = Object.keys(ar2.decisions).filter((id) => ar2.decisions[id].lifecycle.state === 'ai-agent-reviewed');
-    const first = corpus.find((p) => p.id === ids[0]);
-    const second = corpus.find((p) => p.id === ids[1]);
     const S = T.getState();
+    const first = agentOnly[0];
     S.index = corpus.indexOf(first);
-    T.setTextSource(ar2.decisions[first.id].text_source);
+    const subject = T.paperSubject(first);
+    const draft = T.draftFor(first);
+    check('ar2 session: an agent-only paper starts empty for a human reviewer',
+      agentOnly.length > 0 && subject.kind === 'empty' && Object.keys(draft.cats).length === 0 && !draft.reason,
+      { paper: first && first.id, kind: subject.kind, cats: draft.cats });
+    T.setCorpusQuery('');
+    S.statusFilter = 'alle'; S.catFilter = [];
+    const listHtml = T.corpusListHtml();
+    const entry = listHtml.split('<button').find((part) => part.includes('data-i="' + corpus.indexOf(first) + '"')) || '';
+    check('ar2 session: the list shows neither a mark nor category dots for the agent codes',
+      entry.includes('data-state="none"') && !entry.includes('pt-nav-cats') && !listHtml.includes('pt-mark-agent') &&
+        !listHtml.includes('Agentenkodierung'), entry.slice(0, 300));
+    check('ar2 session: an agent-only paper stays open', !T.isDone(first) && T.listState(first) === 'none');
+    check('ar2 session: a verification entry of an earlier build loads and validates',
+      !T.reviewerFileErrors().ev && T.verifications('ev').length === 1 &&
+        T.validateReviewerPayload(evFile).ok && T.agentTrack().records[judged.id].lifecycle.state === 'verified' &&
+        T.paperSubject(judged).kind !== 'agent' && !T.isCaptured(judged), T.reviewerFileErrors());
+    T.setTextSource('abstract');
     T.setWork(T.draftFor(first));
-    await T.verifyAgentRecord(first);
-    S.index = corpus.indexOf(second);
-    T.setTextSource(ar2.decisions[second.id].text_source);
-    T.setWork(T.draftFor(second));
-    T.getWork().verifyResult = 'rejected';
-    T.getWork().verifyNote = 'Fachlich nicht tragfähig.';
-    await T.verifyAgentRecord(second);
+    T.getWork().reason = 'Not_relevant_topic';
+    T.markDirty();
+    const saved = T.commit();
     await settle(T);
     const expert = JSON.parse(folder.files['ev.json'] || '{}');
+    check('ar2 session: an own save over an agent-only paper writes an own decision with no agent codes',
+      saved === true && expert.decisions?.[first.id]?.decision === 'Exclude' &&
+        Object.keys(expert.decisions[first.id].categories || {}).length === 0 &&
+        expert.decisions[first.id].provenance?.derived_from?.length === 0 &&
+        expert.verifications?.length === 1, { saved, decisions: Object.keys(expert.decisions || {}) });
     check('ar2 session: the agent file is never written and stays byte-identical',
-      folder.files['ar2.json'] === ar2Text && !folder.writes.includes('ar2.json'), folder.writes);
-    check('ar2 session: the verifications land in the reviewer file and no decision of the agent papers',
-      expert.verifications?.length === 2 && !expert.decisions?.[first.id] && !expert.decisions?.[second.id] &&
-        expert.verifications[0].subject.reviewer === 'ar2' && expert.verifications[1].result === 'rejected',
-      { verifications: expert.verifications?.map((v) => v.result), decisions: Object.keys(expert.decisions || {}) });
+      folder.files['ar2.json'] === ar2Text && !folder.writes.includes('ar2.json') &&
+        readFileSync(join(root, 'docs/data/screening/ar2.json'), 'utf8') === ar2Text, folder.writes);
     check('ar2 session: the key of the agent track cannot be chosen', T.selectReviewer('ar2') === false && S.reviewer === 'ev');
   }
 

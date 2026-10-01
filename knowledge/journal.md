@@ -24,6 +24,12 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## PRISM and the epistemic infrastructure (2026)
 
+### 2026-10-01: Human screening without AI pre-assessment
+
+The team decided in its meeting that the human reviewers work without any AI pre-assessment, because a visible model or agent judgement anchors their decision. PRISM therefore shows human sessions neither the LLM proposal nor the productive agent record. The subject of an edit is the own record, else the consolidated expert decision as prefill, else an empty draft, so a paper with only an agent record starts empty and counts as open, and list colours and the category filter follow only human annotations ([[specification#ADR-044 No AI pre-assessment in human sessions (supersedes the LLM reference of ADR-038, the human verification path of ADR-040 and the agent-record parts of ADR-042)]]). The agent track stays untouched as a separate track for the comparison of AI and human assessment in the methods paper. The human verification path was removed from the editing flow, while its data model and existing entries stay readable. The LLM-Wissensdestillat already opened only after the own record is saved and keeps that rule.
+
+Open. Whether a reference sample must also be independent of the expert prefill remains a tool decision ([[plan]], item 14).
+
 ### 2026-10-01: Bounded file names for Windows clones
 
 A clone on Windows failed with "Filename too long", because paper notes named after full titles and a few long acquisition stems pushed repository-relative paths far beyond what a deep clone root leaves under the 260-character limit. Title-derived stems now pass through one shared rule that caps them at 72 characters with a short hash of the full stem ([[data#File naming and path length]]). The legacy knowledge-document lookup uses the same rule, so links resolve from the current title as before. The existing files were moved with history preserved and recorded in a path migration. Paper notes stayed byte-identical, which keeps the hash-bound recovery contract valid with updated path fields only. A test now rejects any tracked path above 120 characters. Acquisition stems that the full-text manifest binds kept their names, since knowledge documents embed them as source identity.

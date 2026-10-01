@@ -1065,7 +1065,7 @@ test('the category toggle is the shared chip with a pressed state, a colour and 
 test('statusLabel maps the list state to a text equivalent', function() {
     assertEqual(T.statusLabel('erfasst'), 'erfasst');
     assertEqual(T.statusLabel('expert'), 'erfasst, Expert:innen-Entscheidung');
-    assertEqual(T.statusLabel('agent'), 'Agentenkodierung zu prüfen');
+    assertEqual(T.statusLabel('agent'), 'offen', 'an agent record is no list state of its own (ADR-044)');
     assertEqual(T.statusLabel('none'), 'offen');
 });
 
@@ -1180,54 +1180,52 @@ function mountAssessCol() {
     return host;
 }
 
-test('an open assessment shows the expert and LLM references without round wording (ADR-042)', function() {
+// ADR-044: human reviewers work without any AI pre-assessment. The LLM proposal, its
+// colours, its reasoning and its takeover appear nowhere in a human session.
+function assertNoLlmMarkup(html, where) {
+    ['LLM-Vorschlag', 'pt-ref-llm', 'pt-llm-mark', 'pt-adopt-proposal', 'Vorschlag übernehmen', 'pt-ref-reason', 'Model rationale'].forEach(function(needle) {
+        assertNotContains(html, needle, where + ': no ' + needle);
+    });
+}
+
+test('an open assessment in Bearbeiten shows no LLM proposal, reasoning or takeover (ADR-044)', function() {
     mountAssessCol();
-    var p = { id: 'pBlind', title: 'X', human: { decision: 'Include', all_categories: {} },
-        llm: { decision: 'Exclude', all_categories: {}, reasoning: 'Prior rationale. Second sentence.' } };
+    var p = { id: 'pBlind', title: 'X',
+        llm: { decision: 'Include', all_categories: { Feministisch: 1, Prompting: 1 }, reasoning: 'Model rationale. Second sentence.' } };
     T.setPapers([p]);
     T.getState().reviewer = 'rBlind'; T.getState().reviewers.rBlind = {}; T.getState().index = 0;
     T.resetWork(p); T.refreshAssess();
     var html = document.getElementById('pt-assess-col').innerHTML;
-    assertContains(html, 'LLM-Vorschlag');
-    assertContains(html, 'Prior rationale.', 'the first sentence of the reasoning is shown');
-    assertNotContains(html, 'Second sentence.</p>', 'the rest stays in the title');
-    assertNotContains(html, 'Runde', 'no round wording');
-    assertContains(html, 'id="pt-adopt-proposal"', 'the LLM proposal offers a takeover on an open assessment');
+    assertNoLlmMarkup(html, 'open assessment');
+    assert(!document.querySelector('#pt-assess-col #pt-references'), 'no reference block without an expert decision');
+    assert(!document.querySelector('#pt-assess-col .pt-dim .category-chip[aria-pressed="true"], #pt-assess-col .pt-dim .category-chip[aria-pressed="mixed"]'),
+        'no category is pre-set from the LLM proposal');
+    assertEqual(document.getElementById('pt-provenance').textContent, 'Noch keine Bewertung');
     assertContains(html, 'pt-action-dock');
-    assertNotContains(html, '<details class="pt-llm-reasoning"', 'the reasoning is no disclosure');
 });
 
-test('references stay visible on a saved assessment in read mode and offer no takeover (ADR-038)', function() {
+test('Lesen and a saved record show the expert reference but no LLM proposal (ADR-044)', function() {
     mountAssessCol();
     var p = { id: 'pCompare', title: 'X', human: { decision: 'Include', all_categories: { Prompting: 1, Gender: 1 } },
-        llm: { decision: 'Exclude', all_categories: {}, reasoning: 'prior rationale' } };
+        llm: { decision: 'Exclude', all_categories: { Fairness: 1 }, reasoning: 'Model rationale.' } };
     T.setPapers([p]); T.getState().reviewer = 'rCompare'; T.getState().reviewers.rCompare = {}; T.getState().index = 0;
-    T.getState().reviewers.rCompare.pCompare = { decision: 'Exclude', categories: {}, evidence: {}, reason: 'Duplicate' };
     T.setEditMode(false);
     T.refreshAssess();
+    assertNoLlmMarkup(document.getElementById('pt-assess-col').innerHTML, 'Lesen over an expert prefill');
+    assertContains(document.getElementById('pt-provenance').textContent, 'Expert:innen-Entscheidung');
+    T.getState().reviewers.rCompare.pCompare = { decision: 'Exclude', categories: {}, evidence: {}, reason: 'Duplicate' };
+    T.refreshAssess();
     var refs = document.querySelector('#pt-assess-col #pt-references');
-    assert(refs, 'reference block is rendered without any toggle');
-    assertContains(refs.innerHTML, 'Expert:innen-Entscheidung', 'the expert decision is a reference when it is not the subject');
-    assertContains(refs.innerHTML, 'LLM-Vorschlag');
-    assert(!refs.querySelector('#pt-adopt-proposal'), 'a read-only record offers no proposal takeover');
+    assert(refs, 'the expert decision stays a reference beside an own record');
+    assertContains(refs.innerHTML, 'Expert:innen-Entscheidung');
+    assertNoLlmMarkup(document.getElementById('pt-assess-col').innerHTML, 'saved record');
     assertContains(document.getElementById('pt-provenance').textContent, 'Deine Bewertung');
     T.setEditMode(true);
-});
-
-test('the LLM proposal can be adopted into an open assessment as teilweise levels only (ADR-038)', function() {
-    mountAssessCol();
-    var tech = T.TECH_CATS[0], soc = T.SOCIAL_CATS[0], other = T.TECH_CATS[1];
-    var cats = {}; cats[tech] = 1; cats[soc] = 1;
-    var p = { id: 'pAdopt', title: 'X', llm: { decision: 'Include', all_categories: cats, reasoning: 'model view' } };
-    T.setPapers([p]); T.getState().reviewer = 'rAdopt'; T.getState().reviewers.rAdopt = {}; T.getState().index = 0;
-    T.resetWork(p); T.refreshAssess();
-    var button = document.querySelector('#pt-assess-col #pt-adopt-proposal');
-    assert(button, 'adopt button is offered on an open assessment');
-    button.click();
-    var work = T.getWork();
-    assert(work.cats[tech] === 1 && work.cats[soc] === 1, 'proposed categories become teilweise');
-    assert(!work.cats[other], 'unproposed categories stay untouched');
-    assert(T.recordRequirements(T.workingDecisionRecord()).ok === false, 'adopted levels still need Paper evidence before saving');
+    T.refreshAssess();
+    assertNoLlmMarkup(document.getElementById('pt-assess-col').innerHTML, 'saved record in Bearbeiten');
+    assertEqual(T.referenceProposalsHtml({ id: 'pLlmOnly', llm: { decision: 'Include', all_categories: { Gender: 1 } } }, { kind: 'empty', record: null }), '',
+        'a paper with only an LLM assessment has no reference at all');
+    delete T.getState().reviewers.rCompare;
 });
 
 test('a toggle click switches a category on and off and re-renders the decision (ADR-042)', function() {
@@ -2165,8 +2163,8 @@ test('a lowered expert level is no longer the expert judgement and needs a Paper
     delete S.reviewers.cp;
 });
 
-test('saving over an agent record writes a verification entry and never a decision of the reviewer (ADR-040, ADR-042)', function() {
-    var p = { id: 'AG1', title: 'X' };
+test('a paper with only an agent record starts empty for a human and saves as an own record (ADR-044)', function() {
+    var p = { id: 'AG1', title: 'X', llm: { decision: 'Include', all_categories: { Feministisch: 1 } } };
     T.setPapers([p]);
     var S = T.getState();
     S.reviewer = 'ev'; S.reviewers.ev = {}; S.index = 0;
@@ -2174,61 +2172,103 @@ test('saving over an agent record writes a verification entry and never a decisi
     var envelope = agentEnvelope({ AG1: agentRecordFixture('AG1') });
     var snapshot = JSON.stringify(envelope);
     T.setServedAgentEnvelope(envelope);
-    assertEqual(T.paperSubject(p).kind, 'agent');
-    assertEqual(T.listState(p), 'agent');
+    assert(T.agentTrack().records.AG1, 'the agent track stays loaded for comparison');
+    assertEqual(T.paperSubject(p).kind, 'empty', 'the agent record is no subject of a human edit');
+    assertEqual(T.listState(p), 'none', 'the paper is simply open');
+    assert(!T.isDone(p), 'and counts as open');
+    var w = T.draftFor(p);
+    assertEqual(Object.keys(w.cats).length, 0, 'no agent or LLM category seeds the draft');
+    assertEqual(Object.keys(w.evidence).length, 0, 'no agent evidence seeds the draft');
+    assertEqual(w.seed, 'empty');
     T.setTextSource('abstract');
-    T.setWork(T.draftFor(p));
-    assertEqual(T.saveMode(p, T.paperSubject(p)), 'verify');
-    T.verifyAgentRecord(p);
-    var entries = T.verifications('ev');
-    assertEqual(entries.length, 1);
-    assertEqual(entries[0].result, 'accepted', 'an unchanged draft is accepted');
-    assertEqual(entries[0].reviewer_id, 'ev');
-    assertEqual(entries[0].actor_ids.join(','), 'ev', 'actor ids come from the key, not from typed fields');
-    assert(/^prism-session-/.test(entries[0].activity_id), 'one activity id per session');
-    assert(!entries[0].note, 'acceptance needs no note');
-    assertEqual(S.reviewers.ev.AG1, undefined, 'the agent paper never enters the reviewer decisions');
-    var file = JSON.parse(T.reviewerFileText('ev'));
-    assert(!file.decisions.AG1, 'the file holds no decision for the agent paper');
-    assertEqual(file.verifications.length, 1);
+    T.setWork(w);
+    assertEqual(T.saveMode(p, T.paperSubject(p)), 'record');
+    T.getWork().reason = 'Not_relevant_topic';
+    T.markDirty();
+    assert(T.commit(), 'the own decision saves');
+    assertEqual(S.reviewers.ev.AG1.decision, 'Exclude');
+    assertEqual(S.reviewers.ev.AG1.actor, 'human');
+    assertEqual(T.verifications('ev').length, 0, 'no verification entry is written');
     assertEqual(JSON.stringify(envelope), snapshot, 'the served agent envelope is untouched');
-    assertEqual(T.agentTrack().records.AG1.lifecycle.state, 'verified', 'the projection shows the verification');
-    assertEqual(T.listState(p), 'erfasst', 'an own verification counts as captured');
+    assertEqual(T.agentTrack().records.AG1.lifecycle.state, 'ai-agent-reviewed', 'the agent record keeps its state');
+    T.setServedAgentEnvelope(null);
+    delete S.reviewers.ev;
+});
+
+test('list dots and the category filter never show agent or LLM codes (ADR-044)', function() {
+    var papersFix = [
+        { id: 'D1', title: 'agent only', llm: { decision: 'Include', all_categories: { Gender: 1, Prompting: 1 } } },
+        { id: 'D2', title: 'expert', human: { decision: 'Include', all_categories: { Fairness: 1, Prompting: 1 } },
+            llm: { decision: 'Include', all_categories: { Gender: 1 } } }
+    ];
+    T.setPapers(papersFix);
+    var S = T.getState();
+    S.reviewer = 'ev'; S.reviewers.ev = {}; S.index = 0;
+    S.statusFilter = 'alle'; S.catFilter = []; S.assigneeFilter = 'alle';
+    T.setCorpusQuery('');
+    T.setServedAgentEnvelope(agentEnvelope({ D1: agentRecordFixture('D1'), D2: agentRecordFixture('D2') }));
+    var html = T.corpusListHtml();
+    var entries = html.split('<button').slice(1);
+    assertNotContains(entries[0], 'pt-nav-cats', 'an agent-only paper carries no dots');
+    assertContains(entries[0], 'data-state="none"');
+    assertNotContains(html, 'pt-mark-agent');
+    assertNotContains(html, 'Agentenkodierung');
+    var colour = function(cat) { return T.categoryChipHtml(cat, 2).match(/--chip-color:([^"]+)/)[1]; };
+    assertContains(entries[1], '--chip-color:' + colour('Fairness'), 'the expert codes colour their paper');
+    assertNotContains(entries[1], '--chip-color:' + colour('Gender'), 'the LLM code of the expert paper never shows');
+    S.catFilter = ['Gender'];
+    assertEqual(T.visibleRows().length, 0, 'neither the agent nor the LLM Gender code counts for the filter');
+    S.catFilter = ['Fairness'];
+    assertEqual(T.visibleRows().map(function(r) { return r.paper.id; }).join('|'), 'D2');
+    S.catFilter = [];
+    S.statusFilter = 'offen';
+    assertEqual(T.visibleRows().map(function(r) { return r.paper.id; }).join('|'), 'D1', 'the agent-only paper is open');
+    S.statusFilter = 'alle';
+    T.setServedAgentEnvelope(null);
+    delete S.reviewers.ev;
+});
+
+test('a verification entry of an earlier build still loads and serializes, without making the paper captured (ADR-044)', function() {
+    var p = { id: 'AG3', title: 'X' };
+    T.setPapers([p]);
+    var S = T.getState();
+    S.reviewer = 'ev'; S.reviewers.ev = {}; S.index = 0;
+    var envelope = agentEnvelope({ AG3: agentRecordFixture('AG3') });
+    var working = JSON.parse(JSON.stringify(envelope.decisions.AG3));
+    var outcome = T.advanceVerification(working, 'verified', { reviewer_id: 'ev', actor_ids: ['ev'], activity_id: 'prism-session-x', result: 'accepted' });
+    assert(outcome.ok, 'the verification data model still advances a copy');
+    var entry = T.verificationEntry('AG3', { reviewer: 'ar2', record: envelope.decisions.AG3 }, 'ar2:AG3', outcome.event, 'ev', null);
+    T.setVerifications('ev', [entry]);
+    T.setServedAgentEnvelope(envelope);
+    assertEqual(T.agentTrack().records.AG3.lifecycle.state, 'verified', 'the entry still projects onto the agent track');
+    assertEqual(T.paperSubject(p).kind, 'empty');
+    assert(!T.isCaptured(p), 'an old verification is no own screening');
+    var file = JSON.parse(T.reviewerFileText('ev'));
+    assertEqual(file.verifications.length, 1, 'the entry is written back unchanged');
+    assert(T.validateReviewerPayload(file).ok, 'the file with the entry validates');
     T.setVerifications('ev', []);
     T.setServedAgentEnvelope(null);
     delete S.reviewers.ev;
 });
 
-test('a changed agent draft becomes a correction; requesting changes needs a note', function() {
-    var p = { id: 'AG2', title: 'X' };
-    T.setPapers([p]);
+test('a stored draft that an older build seeded from an agent record is dropped on load (ADR-044)', function() {
     var S = T.getState();
-    S.reviewer = 'ev'; S.reviewers.ev = {}; S.index = 0;
-    T.setVerifications('ev', []);
-    T.setServedAgentEnvelope(agentEnvelope({ AG2: agentRecordFixture('AG2') }));
-    T.setTextSource('abstract');
-    T.setWork(T.draftFor(p));
-    T.getWork().verifyResult = 'changes_requested';
-    T.verifyAgentRecord(p);
-    assertEqual(T.verifications('ev').length, 0, 'changes requested without a note are refused');
-    T.getWork().verifyNote = 'Gender-Beleg prüfen.';
-    T.verifyAgentRecord(p);
-    assertEqual(T.verifications('ev')[0].result, 'changes_requested');
-    assertEqual(T.agentTrack().records.AG2.lifecycle.state, 'ai-agent-reviewed', 'the state does not advance');
-    T.setWork(T.draftFor(p));
-    T.getWork().cats.Gender = 1; // lowered by the reviewer, the agent pin remains
-    T.markDirty();
-    T.verifyAgentRecord(p);
-    var last = T.verifications('ev')[1];
-    assertEqual(last.result, 'corrected_and_accepted');
-    assert(last.annotation && last.annotation.body.categories.Gender === 1, 'the correction body comes from the draft');
-    assert(last.annotation.changes.some(function(change) { return change.path === '/categories/Gender'; }), 'with a field-level diff');
-    assertContains(last.annotation.reason, '/categories/Gender', 'a correction without a note names the changed fields');
-    assertEqual(T.agentTrack().records.AG2.lifecycle.state, 'verified');
-    assertEqual(S.reviewers.ev.AG2, undefined);
-    T.setVerifications('ev', []);
-    T.setServedAgentEnvelope(null);
-    delete S.reviewers.ev;
+    var prevReviewer = S.reviewer;
+    T.setPapers([{ id: 'DR1' }, { id: 'DR2' }]);
+    var snap = T.serializeAll();
+    snap.drafts = {
+        DR1: { pid: 'DR1', cats: { Gender: 2 }, seed: 'agent', dirty: true },
+        DR2: { pid: 'DR2', cats: { Prompting: 2 }, seed: 'empty', dirty: true }
+    };
+    var before = window.localStorage.getItem(snap.schema);
+    window.localStorage.setItem(snap.schema, JSON.stringify(snap));
+    T.loadLocal();
+    var drafts = T.drafts();
+    assert(!drafts.DR1, 'the agent-seeded draft is gone');
+    assert(drafts.DR2 && drafts.DR2.cats.Prompting === 2, 'an own draft survives');
+    if (before === null) window.localStorage.removeItem(snap.schema); else window.localStorage.setItem(snap.schema, before);
+    T.resetWork({ id: 'DR2' });
+    S.reviewer = prevReviewer;
 });
 
 test('the mode switch has exactly two states and exists only with local editing (ADR-042)', function() {
